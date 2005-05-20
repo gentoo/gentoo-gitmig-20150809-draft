@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1181 2005/05/19 17:07:06 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1182 2005/05/20 16:29:14 mcummings Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -246,6 +246,8 @@ dev-lisp/cl-ucw:aserve - use the Portable Allegro Serve web-server backend
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/ocamlsdl:noimage - Disable sdl-image support
 dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
+dev-perl/gtk-perl:applet - Enable gnome applet support
+dev-perl/gtk-perl:gnome-print - Enable gnome-print support
 dev-php/eaccelerator:inode - Enable inode-based caching.
 dev-php/php-cgi:force-cgi-redirect - Enable security check for internal server redirects.
 dev-python/bicyclerepair:vim - enable vim with bicyclerepair support
