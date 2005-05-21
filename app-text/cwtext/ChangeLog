@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cwtext
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.6 2005/05/16 07:58:44 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.7 2005/05/21 14:29:37 blubb Exp $
+
+  21 May 2005; Simon Stelling <blubb@gentoo.org> cwtext-0.94.ebuild:
+  added ~amd64 keyword
 
   16 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   cwtext-0.94.ebuild:
