@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libdsk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/ChangeLog,v 1.6 2005/04/24 11:13:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/ChangeLog,v 1.7 2005/05/21 10:45:52 blubb Exp $
+
+  21 May 2005; Simon Stelling <blubb@gentoo.org> libdsk-1.1.0.ebuild:
+  added ~amd64 keyword
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> libdsk-1.1.0.ebuild:
   Stable on ppc.

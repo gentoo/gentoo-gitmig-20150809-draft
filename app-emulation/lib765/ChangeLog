@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lib765
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lib765/ChangeLog,v 1.6 2005/05/01 16:48:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lib765/ChangeLog,v 1.7 2005/05/21 10:45:50 blubb Exp $
+
+  21 May 2005; Simon Stelling <blubb@gentoo.org> lib765-0.3.1.1.ebuild:
+  added ~amd64 keyword
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> lib765-0.3.1.1.ebuild:
   Stable on ppc.

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.12 2005/01/03 22:11:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.13 2005/05/21 10:47:33 blubb Exp $
+
+  21 May 2005; Simon Stelling <blubb@gentoo.org> fuse-0.7.0.ebuild:
+  added ~amd64 keyword
 
 *fuse-0.7.0 (04 Jan 2005)
 
