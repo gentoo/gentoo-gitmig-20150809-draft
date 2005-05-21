@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gda-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.20 2005/05/20 20:36:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.21 2005/05/21 09:31:03 slarti Exp $
+
+  21 May 2005; Tom Martin <slarti@gentoo.org> ChangeLog:
+  Marked ~amd64.
 
   20 May 2005; Peter Johanson <latexer@gentoo.org> -gda-sharp-1.9.2.ebuild,
   -gda-sharp-1.9.3.ebuild:
