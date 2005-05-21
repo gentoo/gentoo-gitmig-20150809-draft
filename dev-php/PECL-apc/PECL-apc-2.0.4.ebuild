@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/PECL-apc-2.0.4.ebuild,v 1.1 2005/02/14 08:36:53 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/PECL-apc-2.0.4.ebuild,v 1.2 2005/05/21 04:53:04 sebastian Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_PKG="APC"
@@ -13,7 +13,7 @@ IUSE=""
 DESCRIPTION="The Alternative PHP Cache"
 SLOT="0"
 LICENSE="PHP"
-KEYWORDS="~x86 ~alpha ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~alpha ~sparc ~ppc amd64"
 DEPEND="${DEPEND}
 	    !dev-php/turck-mmcache
 		!dev-php/php-accelerator
