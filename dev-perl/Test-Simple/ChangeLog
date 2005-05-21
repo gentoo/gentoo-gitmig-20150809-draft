@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Simple
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.24 2005/05/20 21:53:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.25 2005/05/21 11:33:27 luckyduck Exp $
+
+  21 May 2005; Jan Brinkmann <luckyduck@gentoo.org> Test-Simple-0.54.ebuild:
+  stable on amd64
 
 *Test-Simple-0.60 (20 May 2005)
 
