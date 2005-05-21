@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/aircrack-2.1-r1.ebuild,v 1.3 2005/05/10 14:33:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/aircrack-2.1-r1.ebuild,v 1.4 2005/05/21 21:45:52 dholm Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
