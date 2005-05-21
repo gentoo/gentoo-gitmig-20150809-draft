@@ -1,4 +1,14 @@
-MD5 a13d7157d1eba2f52df5160dbfac04c7 ikvm-bin-0.14.ebuild 674
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 747ae337b53522bece9a55f0a0887ffd ikvm-bin-0.14.ebuild 680
+MD5 c330181900ed0e686162992a2c1a7b72 ChangeLog 608
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
-MD5 b888d8d97bc90450d9372a6b6075fd2d ChangeLog 534
 MD5 21cb6b16d88ee744126c371cf1d15ebe files/digest-ikvm-bin-0.14 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCj1KHCHk4+ZoBpvsRAtawAKCxtRfdRJmvs8wOtpGLTevg2ko/DQCeLRLl
+YxiEIbWmO5erbX/VE7s2VYY=
+=PvBO
+-----END PGP SIGNATURE-----

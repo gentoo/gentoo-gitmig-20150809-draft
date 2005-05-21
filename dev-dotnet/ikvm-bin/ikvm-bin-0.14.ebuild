@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.14.ebuild,v 1.2 2005/05/19 22:24:53 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.14.ebuild,v 1.3 2005/05/21 15:23:28 slarti Exp $
 
 inherit mono
 
@@ -16,7 +16,7 @@ LICENSE="as-is"
 SLOT="0"
 S=${WORKDIR}/${MY_P}
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=dev-lang/mono-1.1
