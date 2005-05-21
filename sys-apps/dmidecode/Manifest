@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b5a65756c62538b3b6105c4ee9e0d571 dmidecode-2.5.ebuild 945
+MD5 d93e8ca86c2ed5575b5d65d2c25d352c ChangeLog 941
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 13b984546cb793947841794a09670199 ChangeLog 796
-MD5 3a065f723596878ec10a77896a29ee3d dmidecode-2.6.ebuild 951
-MD5 fa7a11967392113ce7db9fbeec2d8587 files/digest-dmidecode-2.6 65
+MD5 ddc52f93d86a9187048aae6dbf0f0c90 dmidecode-2.5.ebuild 945
+MD5 69773e9884f42067b5c27776b0451be3 dmidecode-2.6.ebuild 948
 MD5 726d1af1a9d1b6f95db131bcb57db2aa files/digest-dmidecode-2.5 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCJfH5p5vW4rUFj5oRAu+QAKCSp8q6wL+TQkLbegoxeEjflGQVZwCfSmQE
-uIcoGTsoO9MqE7M8RbK70Ok=
-=u68u
------END PGP SIGNATURE-----
+MD5 fa7a11967392113ce7db9fbeec2d8587 files/digest-dmidecode-2.6 65
