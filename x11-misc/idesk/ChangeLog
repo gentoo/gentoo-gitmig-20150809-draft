@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.21 2005/05/20 19:09:44 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.22 2005/05/21 09:11:29 blubb Exp $
+
+  21 May 2005; Simon Stelling <blubb@gentoo.org> idesk-0.5.6.ebuild:
+  stable on amd64
 
   20 May 2005; Rene Nussbaumer <killerfox@gentoo.org> idesk-0.5.6.ebuild:
   Added ~hppa; bug #93341
