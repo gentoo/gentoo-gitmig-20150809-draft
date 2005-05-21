@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/eject
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.29 2005/02/13 05:12:21 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.30 2005/05/21 03:31:03 vapier Exp $
+
+*eject-2.0.13-r2 (21 May 2005)
+
+  21 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/eject-2.0.13-close-check.patch, files/eject-2.0.13-finddev.patch,
+  +files/eject-2.0.13-fstab-error.patch,
+  +files/eject-2.0.13-no-umount.patch,
+  +files/eject-2.0.13-prefix-defaultdevice-with-dev.patch,
+  +files/eject-2.0.13-toggle.patch, +files/eject-2.0.13-xmalloc.patch,
+  +files/eject-2.0.13-xregcomp.patch, +eject-2.0.13-r2.ebuild:
+  Add toggle support by Patrik Kullman #62612 and a bunch of patches from
+  Debian #91977.
 
 *eject-2.0.13-r1 (13 Feb 2005)
 
