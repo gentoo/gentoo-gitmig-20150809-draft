@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.2.1-r3.ebuild,v 1.5 2005/05/21 08:17:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.2.1-r3.ebuild,v 1.6 2005/05/21 12:17:57 gmsoft Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.sqlite.org/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="3"
-KEYWORDS="~alpha amd64 arm ia64 ~ppc ppc64 ~ppc-macos sparc x86"
+KEYWORDS="~alpha amd64 arm ia64 ~ppc ppc64 ~ppc-macos sparc x86 hppa"
 IUSE="nothreadsafe doc"
 
 DEPEND="virtual/libc
