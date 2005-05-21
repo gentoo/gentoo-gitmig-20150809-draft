@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/vorbisgain
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.13 2004/09/15 19:41:54 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.14 2005/05/21 08:45:30 luckyduck Exp $
+
+*vorbisgain-0.36 (21 May 2005)
+
+  21 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/vorbisgain-0.32-48k.patch, -vorbisgain-0.32.ebuild,
+  -vorbisgain-0.32-r1.ebuild, vorbisgain-0.34-r1.ebuild,
+  +vorbisgain-0.36.ebuild:
+  new upstream version. corrected HOMEPAGE, fixes #93347
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   vorbisgain-0.34-r1.ebuild:
