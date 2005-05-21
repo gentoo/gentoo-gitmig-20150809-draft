@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/ikvm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.7 2005/05/18 18:07:07 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.8 2005/05/21 09:15:44 slarti Exp $
+
+  19 May 2005; Tom Martin <slarti@gentoo.org> ikvm-0.14.0.1-r1.ebuild:
+  Marked ~amd64, and also add a small multilib fix.
 
   18 May 2005; Peter Johanson <latexer@gentoo.org> ikvm-0.8.0.0.ebuild,
   ikvm-0.14.0.1.ebuild, ikvm-0.14.0.1-r1.ebuild:
