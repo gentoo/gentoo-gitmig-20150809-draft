@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.406 2005/05/15 01:42:23 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.407 2005/05/21 06:21:12 vapier Exp $
+
+*gcc-2.95.3-r9 (21 May 2005)
+
+  21 May 2005; Mike Frysinger <vapier@gentoo.org> +gcc-2.95.3-r9.ebuild:
+  Add patches from Debian/crosstool and try to make more cross-compile friendly.
 
 *gcc-4.0.1_beta20050514 (15 May 2005)
 
