@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.1 2005/05/19 09:10:56 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.2 2005/05/21 05:17:02 sebastian Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_ZENDEXT="yes"
@@ -10,7 +10,7 @@ inherit php-ext-source
 DESCRIPTION="A PHP Accelerator & Encoder."
 HOMEPAGE="http://www.eaccelerator.net/"
 SRC_URI="mirror://sourceforge/eaccelerator/${P}.tar.gz"
-IUSE="inode session"
+IUSE="apache2 inode session"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~sparc"
@@ -25,7 +25,7 @@ src_compile() {
 	# eAccelerator does not work with Zend Thread Safety (ZTS)
 	# so about if we are using Apache 2 with an MPM that would
 	# require ZTS.
-	if has_version '>=net-www/apache-2*'; then
+	if use apache2; then
 		APACHE2_MPM="`/usr/sbin/apache2 -l | egrep 'worker|perchild|leader|threadpool|prefork'|cut -d. -f1|sed -e 's/^[[:space:]]*//g;s/[[:space:]]+/ /g;'`"
 		case "${APACHE2_MPM}" in
 			*prefork*) ;;

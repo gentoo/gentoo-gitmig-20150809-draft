@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/eaccelerator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.7 2005/05/19 09:10:56 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.8 2005/05/21 05:17:02 sebastian Exp $
+
+  21 May 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  eaccelerator-0.9.3.ebuild:
+  Use apache2 USE flag.
 
 *eaccelerator-0.9.3 (19 May 2005)
 

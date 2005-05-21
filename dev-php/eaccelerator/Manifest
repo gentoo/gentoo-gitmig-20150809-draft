@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 bdcd6b09a03802d15b80766ec6a52fd3 eaccelerator-0.9.2a.ebuild 3167
-MD5 b18c1a9944f45843a035c3cc79fcebc6 eaccelerator-0.9.3.ebuild 3577
-MD5 29e91505a9677c6efff89f9e38de9bf3 ChangeLog 1314
+MD5 16b81625b6ca69b289b16f4123d8e75a eaccelerator-0.9.3.ebuild 3563
+MD5 b3e1cf729ad7d2c4766b1ff3d064b3c8 ChangeLog 1425
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 3d30ceed6d4367d313daa9c6ec007e8f files/digest-eaccelerator-0.9.2a 71
 MD5 543f0982cc0ffa866a7b03985dc77edb files/digest-eaccelerator-0.9.3 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjFg4aGfFFLhbXWkRAtEZAJwMah/JVAcLEiCSjuQeL1VwHNRFegCZAX0R
-7tqV/eJKZZ86nzkv/zRSbgQ=
-=MUZ4
+iD8DBQFCjsRuaGfFFLhbXWkRAi2SAJ9r/uCb2VELLGPkNSW8J3tJUXcG/QCfewF6
+Zbpo9SMHNY12zcHhAyHmuBo=
+=1srR
 -----END PGP SIGNATURE-----
