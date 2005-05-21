@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/svk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.7 2005/05/17 04:21:10 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.8 2005/05/21 08:44:37 blubb Exp $
+
+  21 May 2005; Simon Stelling <blubb@gentoo.org> svk-1.00.ebuild:
+  added ~amd64 keyword
 
   17 May 2005; <pclouds@gentoo.org> +files/svk-1.00-nognupgtest.patch,
   svk-1.00.ebuild:
