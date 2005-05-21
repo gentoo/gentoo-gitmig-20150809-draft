@@ -1,8 +1,8 @@
-MD5 d27680dd2a8387b99aab629ce99cd9a7 ChangeLog 4755
+MD5 bdcabe999e75e0bd9d865289c1e283d2 ChangeLog 4786
 MD5 3abee9d248f09594a7c0055005c73edd eject-2.0.13-r1.ebuild 1068
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 2964b180ad83ff32e8d171e33a70e300 eject-2.0.13.ebuild 1181
-MD5 e3744b260b441945b09d8ed7fca24b88 eject-2.0.13-r2.ebuild 1435
+MD5 925c5351d5bc1d44b2506f8a5fa76831 eject-2.0.13-r2.ebuild 1476
 MD5 a8f6893c482c2b74b0e799b6cd81e867 files/digest-eject-2.0.13 63
 MD5 a8f6893c482c2b74b0e799b6cd81e867 files/digest-eject-2.0.13-r1 63
 MD5 3f842146dbaced2c09bf45e5cf14b8c8 files/eject-2.0.13-autoclose.patch 699
@@ -18,3 +18,4 @@ MD5 4c62f46d6d72dd079fd677db6ae57059 files/eject-2.0.13-xmalloc.patch 654
 MD5 ba37ff5a9223af8de446a18e62dbe19d files/eject-2.0.13-no-umount.patch 2496
 MD5 6511dfbfe2029a7e582f958af0d41ca7 files/eject-2.0.13-xregcomp.patch 649
 MD5 31688554edc80b2d6cf1ae427a6533f7 files/eject-2.0.13-fstab-error.patch 956
+MD5 9741dfe0732a1a137742fc5302acb007 files/eject-2.0.13-pumount.patch 896
