@@ -1,6 +1,6 @@
-MD5 9952b833d9fb372bc147e9090f72b9f6 wise-2.2.0.ebuild 1647
 MD5 f5674a5af65ef1201ceb91e3db5f204a ChangeLog 476
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
+MD5 5783b4028e73cc58587cf78291d7daae wise-2.2.0.ebuild 1654
 MD5 dfe3a28949733a00d7126ed491e8b3f2 files/digest-wise-2.2.0 62
 MD5 6c1b047599122f062a65ad125739936b files/wise-api.tex.patch 2234
 MD5 7321fc88d375cef4db1411e6e6c867ab files/wise-env 40
