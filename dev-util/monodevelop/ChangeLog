@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.25 2005/05/19 17:08:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.26 2005/05/21 09:33:08 slarti Exp $
+
+  21 May 2005; Tom Martin <slarti@gentoo.org> monodevelop-0.7.ebuild:
+  Marked ~amd64.
 
 *monodevelop-0.7 (18 May 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.7.ebuild,v 1.1 2005/05/19 17:08:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.7.ebuild,v 1.2 2005/05/21 09:33:08 slarti Exp $
 
 inherit mono eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-dotnet/gtksourceview-sharp-0.10
 	boo? ( dev-lang/boo )
 	java? ( || ( >=dev-dotnet/ikvm-bin-0.14 >=dev-dotnet/ikvm-0.14.0.1-r1 ) )"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 SLOT="0"
 
 src_compile() {
