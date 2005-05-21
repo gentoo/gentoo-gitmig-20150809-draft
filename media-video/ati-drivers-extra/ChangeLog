@@ -1,9 +1,17 @@
 # ChangeLog for media-video/ati-drivers-extra
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.28 2005/04/25 05:59:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.29 2005/05/21 20:15:56 lu_zero Exp $
 
   25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
   Update herd to x11-drivers.
+
+*ati-drivers-extra-8.13.3 (21 May 2005)
+
+  21 May 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/ati-drivers-extra-8.13.3-improvements.patch.bz2,
+  +ati-drivers-extra-8.13.3.ebuild:
+  New version, thanks to Erdroh Moshan <ErDroh@gmx.de> as usual for the
+  updates to the improvements patch
 
 *ati-drivers-extra-8.12.10 (11 Apr 2005)
 
