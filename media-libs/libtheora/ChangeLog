@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.28 2005/05/21 08:26:02 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.29 2005/05/21 21:14:26 weeve Exp $
+
+  21 May 2005; Jason Wever <weeve@gentoo.org> libtheora-1.0_alpha4.ebuild:
+  Stable on SPARC.
 
   21 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
   libtheora-1.0_alpha4.ebuild:
