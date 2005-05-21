@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.30 2005/05/18 11:59:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.31 2005/05/21 11:28:56 gmsoft Exp $
+
+  21 May 2005; Guy Martin <gmsoft@gentoo.org> libgnomecanvasmm-2.6.1.ebuild:
+  Stable on hppa.
 
   18 May 2005; Markus Rothe <corsair@gentoo.org>
   libgnomecanvasmm-2.0.1.ebuild, libgnomecanvasmm-2.6.1.ebuild:
