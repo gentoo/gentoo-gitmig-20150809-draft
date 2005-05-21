@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/portaltransforms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/ChangeLog,v 1.18 2005/05/08 16:49:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/ChangeLog,v 1.19 2005/05/21 14:36:33 blubb Exp $
+
+  21 May 2005; Simon Stelling <blubb@gentoo.org>
+  portaltransforms-1.3.3.ebuild:
+  added ~amd64 keyword
 
   08 May 2005; Jason Wever <weeve@gentoo.org> portaltransforms-1.3.3.ebuild:
   Added ~sparc keyword as it was accidentily dropped in the version bump.
