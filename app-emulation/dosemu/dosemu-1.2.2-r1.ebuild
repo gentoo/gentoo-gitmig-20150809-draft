@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.2-r1.ebuild,v 1.6 2005/04/19 10:45:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.2-r1.ebuild,v 1.7 2005/05/21 13:13:56 hanno Exp $
 
 inherit flag-o-matic eutils
 
@@ -37,6 +37,7 @@ src_compile() {
 	local myflags="--sysconfdir=/etc/dosemu/ \
 	--with-mandir=/usr/share/man/"
 
+	unset KERNEL
 	use X || myflags="${myflags} --with-x=no"
 	use svga && myflags="${myflags} --enable-use-svgalib"
 	use gpm || myflags="${myflags} --without-gpm"
