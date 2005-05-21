@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dcd0b1e839c7d5d6c35b3db752812893 ChangeLog 2395
+MD5 ddf2482dc39112884596af587834e1c3 tre-0.7.2.ebuild 1162
 MD5 284f667551c0ab84a4d8511f2a217886 tre-0.7.0.ebuild 1225
+MD5 a559634b759b9afc50319487a59f7c53 ChangeLog 2489
 MD5 46ccdc06efb1c7a6f02bde76d9fdd261 metadata.xml 288
-MD5 e7d50e48daf07c416599ba3df1c7aa5d tre-0.7.2.ebuild 1227
 MD5 104643b634dfd64682eaea27ce875980 files/digest-tre-0.7.2 62
 MD5 6e56039a6668c1f9a9c58117436ae97e files/digest-tre-0.7.0 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZ/TFCHk4+ZoBpvsRAkx8AKC3Es0nPhk5ruXXom46dkfn/qLFkgCgncid
-PcFE+fw5Y2cqKSHNqHimfyY=
-=Uue8
+iD8DBQFCj2VKCHk4+ZoBpvsRAhavAKCivTKc6qJVVCwXtXaggbLPlF0dVQCfa3XH
+sOjceJB4lGaf4h5I8iqj0hI=
+=DwKD
 -----END PGP SIGNATURE-----
