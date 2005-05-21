@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.26 2005/05/21 09:33:08 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.27 2005/05/21 18:14:22 latexer Exp $
+
+  21 May 2005; Peter Johanson <latexer@gentoo.org>
+  monodevelop-0.5.1-r3.ebuild, monodevelop-0.5.1-r4.ebuild:
+  Mark 0.5.1* as needing mono-1.0.x. They really don't work with mono-1.1.x.
 
   21 May 2005; Tom Martin <slarti@gentoo.org> monodevelop-0.7.ebuild:
   Marked ~amd64.
