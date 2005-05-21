@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-0.9.9.007.ebuild,v 1.2 2005/05/20 23:05:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-0.9.9.007.ebuild,v 1.3 2005/05/21 18:50:30 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -31,6 +31,7 @@ src_compile() {
 	[[ ${PV} != "0.9.9.007" ]] && die "add back in cairo check"
 #			$(use_enable cairo cairo-x11)
 	export MY_ECONF="
+		--disable-cairo-x11
 		$(use_enable mmx cpu-mmx) \
 		$(use_enable sse cpu-mmx) \
 		$(use_enable sse cpu-sse) \
