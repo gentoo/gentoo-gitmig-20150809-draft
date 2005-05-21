@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.4 2005/05/03 10:54:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.5 2005/05/21 20:22:13 usata Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
 DESCRIPTION="An incredibly powerful, extensible text editor"
 HOMEPAGE="http://www.gnu.org/software/emacs"
-SRC_URI="mirror://gnu/emacs/${P}.tar.gz
-	leim? ( mirror://gnu/emacs/leim-21.3.tar.gz )"
+SRC_URI="mirror://gnu/emacs/${P}a.tar.gz
+	leim? ( mirror://gnu/emacs/leim-${PV}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="21"
@@ -40,8 +40,6 @@ SANDBOX_DISABLED="1"
 DFILE=emacs-${SLOT}.desktop
 
 src_unpack() {
-	# Emacs 21.4 uses leim from 21.3
-	ln -s emacs-21.4 emacs-21.3
 
 	unpack ${A}
 
@@ -139,6 +137,7 @@ src_install() {
 	find ${D} -type d |xargs chmod 755
 
 	keepdir /usr/share/emacs/${PV}/leim
+	keepdir /usr/share/emacs/site-lisp
 
 	dodoc BUGS ChangeLog README
 

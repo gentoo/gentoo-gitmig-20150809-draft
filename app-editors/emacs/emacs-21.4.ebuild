@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4.ebuild,v 1.10 2005/04/12 13:34:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4.ebuild,v 1.11 2005/05/21 20:22:13 usata Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -133,6 +133,7 @@ src_install() {
 	find ${D} -type d |xargs chmod 755
 
 	keepdir /usr/share/emacs/${PV}/leim
+	keepdir /usr/share/emacs/site-lisp
 
 	dodoc BUGS ChangeLog README
 

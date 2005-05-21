@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.62 2005/05/03 10:54:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.63 2005/05/21 20:22:13 usata Exp $
+
+  21 May 2005; Mamoru KOMACHI <usata@gentoo.org> emacs-21.4.ebuild,
+  emacs-21.4-r1.ebuild:
+  Added keepdir /usr/share/emacs/site-lisp to fix bug #93329 and use
+  leim-21.4.tar.gz to fix bug #91665.
 
   03 May 2005; Mamoru KOMACHI <usata@gentoo.org> files/emacs-21.desktop,
   files/emacs-22.0.50.desktop, -files/emacs.desktop, emacs-21.4-r1.ebuild:
