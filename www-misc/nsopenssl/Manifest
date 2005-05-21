@@ -1,0 +1,6 @@
+MD5 199d01cc2d0011083619e9ab04eeae57 nsopenssl-3.0_beta26.ebuild 1028
+MD5 1d9791d70bdade86d90d9ac359725c0c ChangeLog 446
+MD5 c5739a4a31eee314fab2948c903c1e08 metadata.xml 420
+MD5 3efcc146d52544963f9ab0fbba0cf5b2 files/Makefile-3.0_beta26.diff 1993
+MD5 7fd89363fc3b9c57c5a9a24af7943006 files/digest-nsopenssl-3.0_beta26 74
+MD5 6211fa6f58000cf12db325e8ae155af6 files/nsd.tcl.diff 4762
