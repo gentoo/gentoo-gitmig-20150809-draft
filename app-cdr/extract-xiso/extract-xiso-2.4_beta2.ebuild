@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/extract-xiso-2.4_beta2.ebuild,v 1.11 2005/04/24 10:44:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/extract-xiso-2.4_beta2.ebuild,v 1.12 2005/05/21 10:03:19 chrb Exp $
+
+inherit eutils
 
 MY_PV=${PV/_beta/b}
 DESCRIPTION="Tool for extracting and creating optimised Xbox ISO images"
@@ -19,6 +21,9 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 	sed -i -e "s:-O2:${CFLAGS}:g" ${S}/Makefile || die "sed failed"
+	cd ${S}
+	epatch ${FILESDIR}/${P}-64bitfix.patch
+	epatch ${FILESDIR}/${P}-fnamefix.patch
 }
 
 src_compile() {
