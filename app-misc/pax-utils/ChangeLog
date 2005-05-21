@@ -1,6 +1,19 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.19 2005/05/15 23:29:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.20 2005/05/21 18:57:15 solar Exp $
+
+*pax-utils-0.0.8 (21 May 2005)
+
+  21 May 2005; <solar@gentoo.org> +pax-utils-0.0.8.ebuild:
+  Makefile: include/depend fix. dumpelf: display improvments, 32/64bit phdr fix,
+  man page updates. scanelf: Two new options. The ability to display runtime
+  bindings -b/--bind and -f/--from read input stream from a filename/stdin for
+  scanelf. The -F format handling pretty much got a total rewrite for the
+  better. We used taviso@gentoo fuzz regression tool to help track down bugs
+  with malformed executables. Now the overall result is greatly improved error
+  handling for improper elf files. paxelf: Improvments in the mmap error
+  handling. README: updates to refelect changes man/*.1: updates to refelect
+  changes
 
   15 May 2005; <solar@gentoo.org> metadata.xml:
   - update metadata.xml
