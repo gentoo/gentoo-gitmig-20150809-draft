@@ -4,15 +4,17 @@ Hash: SHA1
 MD5 a9d595839a0da98d8acabad5b638759d poppler-0.3.1.ebuild 918
 MD5 d84feb81f606ed2ba254f77b583ddfc8 poppler-0.1.2.ebuild 744
 MD5 39bbd9a2538767fd1f36a1d9d4b25a74 poppler-0.3.0.ebuild 861
-MD5 f88484b7fb9948d2e43168da6dd74c6f ChangeLog 618
+MD5 ce326f1b258273563d248943ba37a549 poppler-0.3.2.ebuild 918
+MD5 aed993a42dd0037be6dd9468ff7a431e ChangeLog 738
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 48c104ee9c6569d88662f2508078a83e files/digest-poppler-0.1.2 65
 MD5 9fcae20e4d0c670e6f53602e516991aa files/digest-poppler-0.3.0 65
 MD5 b5e65c3522bb969506b2a96a3605fedf files/digest-poppler-0.3.1 65
+MD5 25675c998a475fcdd58b64313df002b5 files/digest-poppler-0.3.2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFChkQjevY57Fted3ERAqDkAJ92JhTzsEWUug6ZhwF+1jSm6WutaACfUjjJ
-+zy4CMEqF3eIgA8LfwhCBEs=
-=joCx
+iD8DBQFCj2oMevY57Fted3ERAuOgAJwKeyvz3Ksn/CgXOWV6mLdRueAD3wCeJUoF
+QOWTZkEIXLkHPWDgZY7G5e0=
+=xPoA
 -----END PGP SIGNATURE-----
