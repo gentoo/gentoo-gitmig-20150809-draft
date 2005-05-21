@@ -1,6 +1,12 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.51 2005/04/28 21:29:12 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.52 2005/05/21 18:35:51 humpback Exp $
+
+*jabberd-1.4.3-r5 (21 May 2005)
+
+  21 May 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/jabber.rc6-r8, +jabberd-1.4.3-r5.ebuild:
+  New revision to help solve a small sec problem.
 
 *jabberd-2.0.8 (28 Apr 2005)
 
