@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wmakerconf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.17 2005/03/18 06:07:53 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.18 2005/05/21 09:04:09 blubb Exp $
+
+  21 May 2005; Simon Stelling <blubb@gentoo.org> wmakerconf-2.11.ebuild:
+  added ~amd64 keyword
 
 *wmakerconf-2.11 (18 Mar 2005)
 
