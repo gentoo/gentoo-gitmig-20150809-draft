@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.13.ebuild,v 1.3 2005/05/21 04:48:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.13.ebuild,v 1.4 2005/05/21 05:48:04 vapier Exp $
 
 inherit flag-o-matic eutils distutils libtool toolchain-funcs
 
@@ -22,6 +22,9 @@ src_unpack() {
 
 	# the magic and src subdir sometimes don't get along #81974
 	sed -i -e '/^SUBDIRS/s:magic::' Makefile.in
+
+	# Rename ia64 labels (from Fedora)
+	epatch "${FILESDIR}"/${P}-ia64.patch
 
 	# This tweaks the output format for mips binaries so things like 
 	# libtool don't barf all over the place when trying to parse it.
