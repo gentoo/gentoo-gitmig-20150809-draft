@@ -5,7 +5,7 @@ afs
 acpi
 3dfx
 3dnow
-3dnowex
+3dnowext
 directfb
 avi
 emboss

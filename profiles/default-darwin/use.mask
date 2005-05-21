@@ -3,7 +3,7 @@
 # these will more than likely never work on darwin
 3dfx
 3dnow
-3dnowex
+3dnowext
 acpi
 alsa
 apm

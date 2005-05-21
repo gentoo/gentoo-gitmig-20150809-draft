@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.13 2004/11/25 03:12:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.14 2005/05/21 01:13:42 lu_zero Exp $
 
 #unknowns
 afs
@@ -61,7 +61,7 @@ mmx
 sse
 sse2
 3dnow
-3dnowex
+3dnowext
 
 # 2004/06/22 - Taken from 2004.0 profile
 # Chris PeBenito <pebenito@gentoo.org>

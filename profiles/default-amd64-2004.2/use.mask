@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.14 2004/11/25 03:12:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.15 2005/05/21 01:13:41 lu_zero Exp $
 
 # WON'T BUILD - SECTION
 
@@ -58,7 +58,7 @@ mmx2
 sse
 sse2
 3dnow
-3dnowex
+3dnowext
 
 # 2004/06/22 - Taken from 2004.0 profile
 # Chris PeBenito <pebenito@gentoo.org>

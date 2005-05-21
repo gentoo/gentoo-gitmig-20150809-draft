@@ -2,7 +2,7 @@
 # that should not be used on PPC
 afs
 3dnow
-3dnowex
+3dnowext
 avi
 icc
 icc-pgo

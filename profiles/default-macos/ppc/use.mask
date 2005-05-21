@@ -2,7 +2,7 @@
 
 # these will more than likely never work on os x
 3dnow
-3dnowex
+3dnowext
 alsa
 gpm
 jack-tmpfs

@@ -1,6 +1,6 @@
 3dfx
 3dnow
-3dnowex
+3dnowext
 acpi
 adabas
 afs
