@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.26-r2.ebuild,v 1.2 2005/05/21 08:12:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.26-r2.ebuild,v 1.3 2005/05/21 10:34:29 blubb Exp $
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils multilib
 
 OLD_PV="2.1.30"
 OLD_P="${PN}-${OLD_PV}"
@@ -111,7 +111,7 @@ pkg_setup() {
 pkg_preinst() {
 	openldap_upgrade_warning
 	enewgroup ldap 439
-	enewuser ldap 439 /bin/false /usr/lib/openldap ldap
+	enewuser ldap 439 /bin/false /usr/$(get_libdir)/openldap ldap
 }
 
 src_unpack() {
@@ -206,7 +206,7 @@ src_compile() {
 	econf \
 		--enable-static \
 		--enable-shared \
-		--libexecdir=/usr/lib/openldap \
+		--libexecdir=/usr/$(get_libdir)/openldap \
 		${myconf} || die "configure failed"
 
 	make depend || die "make depend failed"
@@ -251,7 +251,7 @@ src_install() {
 
 	# openldap modules go here
 	# TODO: write some code to populate slapd.conf with moduleload statements
-	keepdir /usr/lib/openldap/openldap/
+	keepdir /usr/$(get_libdir)/openldap/openldap/
 
 	# make state directories
 	for x in data slurp ldbm; do
@@ -266,7 +266,7 @@ src_install() {
 
 	# manually remove /var/tmp references in .la
 	# because it is packaged with an ancient libtool
-	for x in ${D}/usr/lib/lib*.la; do
+	for x in ${D}/usr/$(get_libdir)/lib*.la; do
 		sed -i -e "s:-L${S}[/]*libraries::" ${x}
 	done
 
@@ -285,6 +285,9 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/2.0/slapd slapd
 	newexe ${FILESDIR}/2.0/slurpd slurpd
+	if [ $(get_libdir) != lib ]; then
+		sed -e "s,/usr/lib/,/usr/$(get_libdir)/," -i ${D}/etc/init.d/{slapd,slurpd}
+	fi
 	insinto /etc/conf.d
 	newins ${FILESDIR}/2.0/slapd.conf slapd
 
@@ -296,7 +299,7 @@ src_install() {
 	fi
 
 	if useq kerberos ; then
-		insinto /usr/lib/openldap/openldap
+		insinto /usr/$(get_libdir)/openldap/openldap
 		doins ${S}/contrib/slapd-modules/passwd/pw-kerberos.so || \
 		die "failed to install kerberos passwd module"
 	fi
