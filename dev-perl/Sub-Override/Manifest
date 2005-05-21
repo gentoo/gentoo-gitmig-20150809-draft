@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 055d51125a4084de11079f540a7ebfd6 ChangeLog 702
-MD5 c56e586ef83ff5b30768118801bfe2bb Sub-Override-0.05.ebuild 577
+MD5 1ab7263006b0f2aeadcb3856f446f88d Sub-Override-0.05.ebuild 576
+MD5 412066212c1dc1726951fcb03950f705 ChangeLog 801
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 700a2d39c3da3cbb8285fa3170fb2533 files/digest-Sub-Override-0.05 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdRmBCHk4+ZoBpvsRAsmiAJ9+NDaVMNLjSHSIP/DdCE/9mpRm8QCffTvj
-lnWHZrktS19OTV4eacvhZLY=
-=XFj2
------END PGP SIGNATURE-----
