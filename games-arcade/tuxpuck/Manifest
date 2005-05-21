@@ -1,4 +1,14 @@
-MD5 1775fad1709700ba3c11d1acaa6db357 ChangeLog 2166
-MD5 6390a14353c0d775487d83071450dbd1 tuxpuck-0.8.2.ebuild 805
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bdac5a614b5772484c4883fd0bf6e67d tuxpuck-0.8.2.ebuild 805
+MD5 570959e1d502a9b4388b93afaf261a7a ChangeLog 2261
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 867698dbcc8f165f299e5831d376a46e files/digest-tuxpuck-0.8.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCj2uq06ebR+OMO78RAg8jAKCW6Hz+a7a8Unnl+Rq6dgqLwdfq4QCfc0wW
+oXaL2SInaJ/rLfwIGCZYFUU=
+=3h4C
+-----END PGP SIGNATURE-----
