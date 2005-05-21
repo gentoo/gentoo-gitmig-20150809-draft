@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dfd3289341253fedc541907f10fbc616 gtksourceview-sharp-0.5-r1.ebuild 1019
 MD5 5f175a577e77da62b673614b693dc5f0 ChangeLog 3470
 MD5 9168293ec8679d58fed82f459bead923 gtksourceview-sharp-0.10.ebuild 1148
@@ -8,3 +11,10 @@ MD5 c7215af52d4efdeb675091fdc61ee6b0 files/digest-gtksourceview-sharp-0.7 75
 MD5 8af6fb8343aac37fbf1f96ed916b72fc files/digest-gtksourceview-sharp-0.10 80
 MD5 099781a1b5a2aa2f4543d2e1dc9677d0 files/digest-gtksourceview-sharp-0.5-r2 75
 MD5 099781a1b5a2aa2f4543d2e1dc9677d0 files/digest-gtksourceview-sharp-0.5-r1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjv/yCHk4+ZoBpvsRAgReAJ0UzOPkzjaeOGsZ1gf10h2EQpFZVACgwUwQ
+9CjMRdOtKohZH/ZY3Wb5XlA=
+=bPTN
+-----END PGP SIGNATURE-----
