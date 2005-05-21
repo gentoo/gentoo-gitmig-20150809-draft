@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.4 2004/11/30 21:54:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.5 2005/05/21 23:19:17 mr_bones_ Exp $
 
 inherit kde games
 
@@ -13,19 +13,18 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-3.2.0
+DEPEND=">=x11-libs/qt-3.2.0
 	virtual/opengl"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
-S="${WORKDIR}/${PN}.release"
+S=${WORKDIR}/${PN}.release
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "/GAMEDATA_BASE_PATH/ s:\.:${GAMES_DATADIR}/${PN}:" \
-		src/gamedata_path.h || die "sed src/gamedata_path.h failed"
+		src/gamedata_path.h \
+		|| die "sed failed"
 }
 
 src_compile() {
