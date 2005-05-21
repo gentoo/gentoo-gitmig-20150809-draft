@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.9 2005/05/17 07:29:22 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.10 2005/05/21 08:53:55 corsair Exp $
+
+  21 May 2005; Markus Rothe <corsair@gentoo.org> libemf-1.0.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   17 May 2005; Patrick Kursawe <phosphan@gentoo.org> libemf-1.0.ebuild:
   Removing unnecessary "inherit gcc".
