@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/lrzsz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.1 2005/04/20 22:06:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.2 2005/05/21 12:35:26 corsair Exp $
+
+  21 May 2005; Markus Rothe <corsair@gentoo.org> lrzsz-0.12.20-r1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   20 Apr 2005; Alin Nastac <mrness@gentoo.org> :
   Moved from net-misc/lrzsz to net-dialup/lrzsz
