@@ -1,8 +1,18 @@
-MD5 c6173fe82ac027a4fb36defc4143a514 ChangeLog 8648
-MD5 5e508e82fa66c88cf4ad7fb1cfd2c9df lame-3.96.1.ebuild 2338
-MD5 153a99cea0e3e55e4b275ad24385274c lame-3.96.ebuild 2225
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a1601938e8cb931bd0b5eb533b9e4c74 lame-3.96.ebuild 2183
+MD5 f8b9bc40e8ca165f8524fa621fd9fb5c lame-3.96.1.ebuild 2287
+MD5 d9cae9ea95a2e25fb3ed1e2e0dda9545 ChangeLog 8786
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
-MD5 3b8e04486d3959e978f2466bdc621a59 files/digest-lame-3.96 62
-MD5 f7a856198d82691c0506cfc77fa95e87 files/digest-lame-3.96.1 64
 MD5 af03fdd6d579097e09e99b9faeaf929b files/lame-3.96-ccc.patch 658
+MD5 3b8e04486d3959e978f2466bdc621a59 files/digest-lame-3.96 62
 MD5 77956e1d8bad436bc943b5005842aa80 files/lame-3.96.1-shared-frontend.patch 945
+MD5 f7a856198d82691c0506cfc77fa95e87 files/digest-lame-3.96.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCjxjX06ebR+OMO78RAoqlAKCMmMjRdnyvM7/nJdPswjMRp1ZW/wCeNIuB
+pwCq8eg5ZAPwcoM/oOMk0Ag=
+=JZbF
+-----END PGP SIGNATURE-----

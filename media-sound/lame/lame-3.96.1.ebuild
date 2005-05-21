@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1.ebuild,v 1.14 2005/05/15 14:28:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1.ebuild,v 1.15 2005/05/21 11:17:20 luckyduck Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -16,7 +16,6 @@ IUSE="gtk debug"
 RDEPEND=">=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )"
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )
 	sys-devel/autoconf"
 
 src_unpack() {
@@ -60,7 +59,6 @@ src_compile() {
 
 	econf \
 		--enable-shared \
-		$(use_enable x86 nasm) \
 		--enable-mp3rtp \
 		${myconf} || die
 
