@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.22 2005/05/20 19:35:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.23 2005/05/21 12:46:31 corsair Exp $
+
+  21 May 2005; Markus Rothe <corsair@gentoo.org> netkit-rsh-0.17-r6.ebuild:
+  Stable on ppc64; bug #93215
 
   20 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   netkit-rsh-0.17-r6.ebuild:

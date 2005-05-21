@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 50ed4ba315a86654986606d90d6cc32d ChangeLog 4095
-MD5 7c1253c905d48aaf3f536e084bc07dfa netkit-rsh-0.17-r6.ebuild 1680
+MD5 97e5150fbfacfe9b937246d81ff5a92c ChangeLog 4201
+MD5 018bc520dd3079ec49d1e337e64db5a8 netkit-rsh-0.17-r6.ebuild 1678
 MD5 0d35953e8d20a584860aec805fb3176f netkit-rsh-0.17-r5.ebuild 1956
 MD5 5b6497e87f4d7de5851f57d8ba73d75b files/digest-netkit-rsh-0.17-r6 126
 MD5 49b955e20153259f348033f607b9cac8 files/netkit-rsh-0.10-stdarg.patch 952
@@ -37,10 +34,3 @@ MD5 47b233c663e185795193bb878b3cad32 files/netkit-rsh-0.17-sectty.patch 1454
 MD5 f1f297025fb545f4cf2dc02e6c63867f files/netkit-rsh-0.17-strip.patch 2459
 MD5 6bb199dffcf2c9f158ca571310bb5569 files/netkit-rsh-0.17-userandhost.patch 2188
 MD5 645b699bd649a22d2d0ef57b0efd9e93 files/redhat.spec 805
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCjjwcKRy60XGEcJIRAtM1AJsGdOXNw+MvCHJwynaCFvRKC+g3jgCggNZm
-FmxitrCv6XswWrgOT+EViK0=
-=SCAX
------END PGP SIGNATURE-----
