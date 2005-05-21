@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.95 2005/04/23 20:31:23 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.96 2005/05/21 06:21:57 morfic Exp $
+
+  21 May 2005; Daniel Goller <morfic@gentoo.org>
+  +files/icewm-1.2.20.iceicon.patch, +files/icewm-1.2.20.testmap.patch,
+  icewm-1.2.20.ebuild:
+  applied patches to fix FEATURES=test
 
   23 Apr 2005; Daniel Goller <morfic@gentoo.org>
   -files/icewm-1.2.19.ybutton.cc.patch, -icewm-1.2.19.ebuild,
