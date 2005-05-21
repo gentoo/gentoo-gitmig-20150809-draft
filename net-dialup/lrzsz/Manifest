@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 53e0c612e6459ac0fed57debfb46a937 ChangeLog 2422
+MD5 621613ee622fa6777c2ee98bf7102d92 ChangeLog 2525
+MD5 14ef77f626b4f9e480e943ad884588ec lrzsz-0.12.20-r1.ebuild 982
 MD5 29d92f71b5132598910e225de4e85f93 metadata.xml 364
-MD5 61b9a0ba05696552fe552ad5ea8002bf lrzsz-0.12.20-r1.ebuild 974
-MD5 bd12dbf8699043e8c2bbe12c154d4b47 files/lrzsz-makefile-smp.patch 4310
 MD5 f80a86c7ba2802ef0504f62f182bc046 files/digest-lrzsz-0.12.20-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZtJqjiC39V7gKu0RAjn9AKC6vwRX4iIHdR1T6X0eBUbR3roXEgCeP2rF
-NHZ0Kn91EDrRfOCxZCMgc8U=
-=pyQA
------END PGP SIGNATURE-----
+MD5 bd12dbf8699043e8c2bbe12c154d4b47 files/lrzsz-makefile-smp.patch 4310
