@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.0.ebuild,v 1.1 2005/05/11 07:47:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.0.ebuild,v 1.2 2005/05/21 19:34:12 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -8,7 +8,7 @@ SBCL_AF_PV=2004-10-22
 
 BV_X86=0.8.1
 BV_PPC=0.8.15
-BV_SPARC=0.7.13
+BV_SPARC=0.8.15
 BV_MIPS=0.7.10
 BV_AMD64=0.8.19
 
@@ -66,8 +66,7 @@ src_unpack() {
 		mv ${PN}-${BV_PPC}-powerpc-linux ppc-binary
 	elif use sparc; then
 		unpack ${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2
-		echo mv ${PN}-${BV_SPARC} sparc-binary || die
-		mv ${PN}-${BV_SPARC} sparc-binary || die
+		mv ${PN}-${BV_SPARC}-sparc-linux sparc-binary || die
 	elif use mips; then
 		unpack ${PN}-${BV_MIPS}-mips-linux-binary.tar.gz
 		mv ${PN}-${BV_MIPS}-mips-linux mips-binary
