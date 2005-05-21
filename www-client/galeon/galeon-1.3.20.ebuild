@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.20.ebuild,v 1.2 2005/05/06 14:55:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.20.ebuild,v 1.3 2005/05/21 19:47:40 hanno Exp $
 
 inherit gnome2 debug libtool eutils
 
@@ -33,6 +33,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.30
 	>=sys-devel/gettext-0.11"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/galeon-1.3.20-toolbar-crash.diff
+}
 
 src_compile() {
 	use firefox && myconf="--with-mozilla=firefox"
