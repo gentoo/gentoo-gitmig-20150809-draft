@@ -1,0 +1,37 @@
+diff -uprN imms-2.1.1.orig/immscore/xidle.h imms-2.1.1/immscore/xidle.h
+--- imms-2.1.1.orig/immscore/xidle.h	2005-05-21 23:00:33.000000000 +0200
++++ imms-2.1.1/immscore/xidle.h	2005-05-21 23:10:44.000000000 +0200
+@@ -4,9 +4,7 @@
+ #include "immsconf.h"
+ 
+ #include <time.h>
+-#ifdef WITH_XSCREENSAVER
+-# include <X11/Xlib.h>
+-#endif
++#include <X11/Xlib.h>
+ 
+ class XIdle
+ {
+@@ -27,11 +25,9 @@ private:
+     int active;
+     time_t last_checked;
+ 
+-#ifdef WITH_XSCREENSAVER
+     Display *display;
+     Screen *screen;
+     Window root;
+-#endif
+ 
+     unsigned int prev_mask;
+     int prev_rootX, prev_rootY;
+diff -uprN imms-2.1.1.orig/vars.mk.in imms-2.1.1/vars.mk.in
+--- imms-2.1.1.orig/vars.mk.in	2005-05-21 23:00:33.000000000 +0200
++++ imms-2.1.1/vars.mk.in	2005-05-21 23:00:55.000000000 +0200
+@@ -24,6 +24,6 @@ CXXFLAGS=@CXXFLAGS@ -fno-rtti
+ 
+ GLIB2LDFLAGS=`pkg-config glib-2.0 --libs`
+ GLIB1LDFLAGS=`pkg-config glib --libs`
+-LDFLAGS=-L. @LIBS@
++LDFLAGS=-lX11 -L. @LIBS@
+ 
+ default: all
