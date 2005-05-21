@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/cel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.10 2005/01/01 17:57:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.11 2005/05/21 18:02:14 malverian Exp $
+
+*cel-0.99_pre20050518 (21 May 2005)
+
+  21 May 2005; Philip Walls <malverian@gentoo.org> cel-0.99_pre20050518.ebuild:
+  Bumped to CVS snapshot for Planeshift
 
 *cel-0.98.2 (25 Dec 2004)
 
