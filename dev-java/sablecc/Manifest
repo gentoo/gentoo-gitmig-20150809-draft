@@ -1,5 +1,15 @@
-MD5 165fc5c679b8c8719f5617a8e057e668 ChangeLog 1062
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 852fe321a8eab2ef8bfb2223084d37eb sablecc-2.18.2.ebuild 916
+MD5 b89b68d1fe3293dd9e3d8863e219545c ChangeLog 1158
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 606202ca3331d2544f4e6a366d0da3ba sablecc-2.18.2.ebuild 913
-MD5 0ad7d919cbd78998f70716572d00e6d9 files/digest-sablecc-2.18.2 66
 MD5 fb6637bd67a315edd8425b3ee8dc9cdd files/sablecc 75
+MD5 0ad7d919cbd78998f70716572d00e6d9 files/digest-sablecc-2.18.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCj3PQ06ebR+OMO78RAtNaAJ9ctikzi/O9cfYaXYWZvffdUSvY8gCcCWBM
+8gv75pv2DoY/pJ/QkWt49z8=
+=2JkS
+-----END PGP SIGNATURE-----
