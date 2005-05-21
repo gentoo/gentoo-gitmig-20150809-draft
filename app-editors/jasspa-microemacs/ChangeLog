@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/jasspa-microemacs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.11 2005/04/18 16:49:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.12 2005/05/21 19:48:33 usata Exp $
+
+*jasspa-microemacs-20050505 (21 May 2005)
+
+  21 May 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +jasspa-microemacs-20050505.ebuild:
+  Version bumped. This closes bug #93264.
 
   18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   jasspa-microemacs-20040301-r2.ebuild:
