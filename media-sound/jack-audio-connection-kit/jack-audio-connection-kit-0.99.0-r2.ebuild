@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r2.ebuild,v 1.2 2005/05/09 13:21:42 agriffis Exp $
-
-IUSE="altivec alsa caps doc debug jack-tmpfs oss portaudio"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r2.ebuild,v 1.3 2005/05/21 15:42:58 luckyduck Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,16 +11,16 @@ SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc-macos ppc64 ~sparc ~x86"
+IUSE="altivec alsa caps doc debug jack-tmpfs oss portaudio"
 
-RDEPEND=">=media-libs/libsndfile-1.0.0
-	dev-libs/glib
+RDEPEND="dev-libs/glib
 	dev-util/pkgconfig
+	>=media-libs/libsndfile-1.0.0
 	sys-libs/ncurses
+	caps? ( sys-libs/libcap )
 	!ppc64? ( !alpha? ( !ia64? ( portaudio? ( media-libs/portaudio ) ) ) )
 	!sparc? ( alsa? ( >=media-libs/alsa-lib-0.9.1 ) )
-	caps? ( sys-libs/libcap )
 	!media-sound/jack-cvs"
-
 DEPEND="${RDEPEND}
 	!ppc-macos? ( sys-devel/autoconf )
 	doc? ( app-doc/doxygen )"
@@ -33,21 +31,24 @@ src_unpack() {
 
 	if use !ppc-macos ; then
 		# Add doc option and fix --march=pentium2 in caps test
-		epatch ${FILESDIR}/${PN}-0.98.1-configure.patch && WANT_AUTOCONF=2.5 autoconf \
-			|| die
+		epatch ${FILESDIR}/${PN}-0.98.1-configure.patch && \
+		WANT_AUTOCONF=2.5 autoconf
 	fi
+
+	# compile and install jackstart, see #92895
+	epatch ${FILESDIR}/${P}-jackstart.patch
 }
 
 src_compile() {
 	local myconf
-	local myarch
 
-	myarch=`get-flag -march`
+	sed -i "s/^CFLAGS=\$JACK_CFLAGS/CFLAGS=\"\$JACK_CFLAGS $(get-flag -march)\"/" configure
 
-	sed -i "s/^CFLAGS=\$JACK_CFLAGS/CFLAGS=\"\$JACK_CFLAGS $myarch\"/" configure
-	use doc \
-		&& myconf="--enable-html-docs --with-html-dir=/usr/share/doc/${PF}" \
-		|| myconf="--disable-html-docs"
+	if use doc; then
+		myconf="--enable-html-docs --with-html-dir=/usr/share/doc/${PF}"
+	else
+		myconf="--disable-html-docs"
+	fi
 
 	if use jack-tmpfs; then
 		myconf="${myconf} --with-default-tmpdir=/dev/shm"
@@ -55,19 +56,19 @@ src_compile() {
 		myconf="${myconf} --with-default-tmpdir=/var/run/jack"
 	fi
 
-	use caps && myconf="${myconf} --enable-capabilities --enable-stripped-jackd"
-	use debug && myconf="${myconf} --enable-debug"
-
-	myconf="${myconf} `use_enable altivec` `use_enable alsa` `use_enable oss` `use_enable portaudio`"
-
-	econf ${myconf} || die "configure failed"
+	econf \
+		$(use_enable altivec) \
+		$(use_enable alsa) \
+		$(use_enable caps capabilities) $(use_enable caps stripped-jackd) \
+		$(use_enable debug) \
+		$(use_enable oss) \
+		$(use_enable portaudio) \
+		${myconf} || die "configure failed"
 	emake || die "compilation failed"
 }
 
 src_install() {
-	make DESTDIR=${D} \
-		datadir=${D}/usr/share \
-		install || die
+	make DESTDIR=${D} datadir=${D}/usr/share install || die
 
 	if ! use jack-tmpfs; then
 		keepdir /var/run/jack
@@ -84,9 +85,3 @@ src_install() {
 
 	rm -rf ${D}/usr/share/doc/${PF}/reference
 }
-
-#pkg_postinst() {
-#	einfo "Because of some ABI changes in jack, you may need to re-emerge."
-#	einfo "packages that use jack by running the following:"
-#	einfo "  revdep-rebuild --soname libjack.so.0"
-#}
