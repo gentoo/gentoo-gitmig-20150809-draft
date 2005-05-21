@@ -1,0 +1,11 @@
+Be more explicit about what st_blocks actually represents.
+
+http://bugs.gentoo.org/93292
+
+--- man2/stat.2
++++ man2/stat.2
+@@ -113,3 +113,3 @@
+ .I st_blocks
+-gives the size of the file in 512-byte blocks.
++gives the amount of disk space that the file occupies in 512-byte blocks.
+ (This may be smaller than
