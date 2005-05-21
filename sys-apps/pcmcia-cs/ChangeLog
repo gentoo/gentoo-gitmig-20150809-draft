@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.86 2005/05/09 08:57:55 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.87 2005/05/21 16:26:47 hparker Exp $
+
+  21 May 2005; Homer Parker <hparker@gentoo.org> pcmcia-cs-3.2.8.ebuild:
+  Added ~amd64 to fix bug #90359
 
   09 May 2005; <brix@gentoo.org> files/pcmcia-cs-3.2.8-init.d:
   Start pcmcia init script after coldplug, bug #91981.
