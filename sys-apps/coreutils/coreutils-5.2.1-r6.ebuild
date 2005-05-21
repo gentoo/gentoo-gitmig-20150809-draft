@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r6.ebuild,v 1.5 2005/05/21 01:16:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r6.ebuild,v 1.6 2005/05/21 02:35:35 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -33,19 +33,18 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
-
-	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/mandrake
+	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/mandrake
 
 	# Apply the ACL patches. 
 	# WARNING: These CONFLICT with the SELINUX patches
 	if use acl ; then
-		mv ${PATCHDIR}/generic/00{2,4}* ${PATCHDIR}/excluded
-		mv ${PATCHDIR}/selinux/001_all_coreutils-noacl* ${PATCHDIR}/excluded
-		EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/acl
+		mv "${PATCHDIR}"/generic/00{2,4}* "${PATCHDIR}"/excluded
+		mv "${PATCHDIR}"/selinux/001_all_coreutils-noacl* "${PATCHDIR}"/excluded
+		EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/acl
 	else
-		mv ${PATCHDIR}/selinux/001_all_coreutils-acl* ${PATCHDIR}/excluded
+		mv "${PATCHDIR}"/selinux/001_all_coreutils-acl* "${PATCHDIR}"/excluded
 	fi
 
 	# patch to remove Stallman's su/wheel group rant (which doesn't apply,
@@ -53,13 +52,15 @@ src_unpack() {
 	# do not include su infopage, as it is not valid for the su
 	# from sys-apps/shadow that we are using.
 	# Patch to add processor specific info to the uname output
-	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/generic
-	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/extra
+	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/generic
+	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/extra
+	# Make sure test is +x #87795
+	chmod a+rx tests/sort/sort-mb-tests
 
-	use selinux && EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/selinux
+	use selinux && EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/selinux
 
 	# Sparc32 SMP bug fix -- see bug #46593
-	use sparc && echo -ne "\n\n" >> ${S}/src/pr.c
+	use sparc && echo -ne "\n\n" >> "${S}"/src/pr.c
 
 	# Since we've patched many .c files, the make process will 
 	# try to re-build the manpages by running `./bin --help`.  
