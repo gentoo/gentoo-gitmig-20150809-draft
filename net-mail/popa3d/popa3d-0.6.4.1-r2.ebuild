@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1-r2.ebuild,v 1.1 2005/04/26 18:45:14 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1-r2.ebuild,v 1.2 2005/05/21 20:56:34 port001 Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ inherit eutils
 # if you want qmail-styled ~/Mailbox you can set it
 # to "Mailbox". For the traditional (although not in
 # gentoo Maildir) set it to "Maildir".
-# 
+#
 # POPA3D_VIRTUAL_ONLY
 #
 # Set this field to "YES" if you dont want local users
@@ -36,7 +36,7 @@ inherit eutils
 #
 # Set this field to the base virtual home path. For more information
 # read the virtual guide here: http://forums.gentoo.org/viewtopic.php?t=82386
-# 
+#
 
 IUSE="pam mbox maildir"
 
@@ -44,12 +44,12 @@ DESCRIPTION="A security oriented POP3 server."
 HOMEPAGE="http://www.openwall.com/popa3d/"
 
 SRC_URI="http://www.openwall.com/popa3d/${P}.tar.gz
-	 http://www.data.is/~hhg/popa3d/popa3d-0.6.3-vname-2.diff
-	 maildir? ( http://www.data.is/~hhg/popa3d/popa3d-0.5.9-maildir-2.diff )"
+	http://www.data.is/~hhg/popa3d/popa3d-0.6.3-vname-2.diff
+	maildir? ( http://www.data.is/~hhg/popa3d/popa3d-0.5.9-maildir-2.diff )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND=">=sys-apps/sed-4
 	pam? ( >=sys-libs/pam-0.72
