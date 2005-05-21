@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/xbiso
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/ChangeLog,v 1.4 2005/01/01 12:21:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/ChangeLog,v 1.5 2005/05/21 09:45:24 chrb Exp $
+
+  21 May 2005; Chris Bainbridge <chrb@gentoo.org>
+  +files/xbiso-0.6.0-fnamecheck.patch, xbiso-0.6.0.ebuild:
+  Directory traversal fix for bug #93054
 
   16 Oct 2004; Chris Bainbridge <chrb@gentoo.org> xbiso-0.6.0.ebuild:
   mark stable

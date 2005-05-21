@@ -1,3 +1,4 @@
-MD5 e2dd36787142a9647a18c10937b191ce ChangeLog 424
-MD5 e462218494002e85453431405d492386 xbiso-0.6.0.ebuild 497
+MD5 f1d39402733e67cb455f6099d74b766f ChangeLog 569
+MD5 4ec40e1b2c466d39ce4f4f1716b4c693 xbiso-0.6.0.ebuild 579
+MD5 d928741ffaf5aaa598aad25b9c9da993 files/xbiso-0.6.0-fnamecheck.patch 691
 MD5 33080cee554b29175fc0e2cb37cf8fe2 files/digest-xbiso-0.6.0 62

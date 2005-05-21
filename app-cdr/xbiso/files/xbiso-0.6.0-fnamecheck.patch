@@ -1,0 +1,14 @@
+--- xbiso-0.6.0.orig/xbiso.c	2005-05-21 10:36:11.108385944 +0000
++++ xbiso-0.6.0/xbiso.c	2005-05-21 10:33:09.679967256 +0000
+@@ -310,6 +310,11 @@
+   memset(dirent.fname,0,dirent.fnamelen+1);
+   fread(dirent.fname, dirent.fnamelen, 1, xiso);	//filename
+ 
++  if (strstr(dirent.fname,"..") || strchr(dirent.fname, '/') || strchr(dirent.fname, '\\'))
++    {
++      printf("Filename contains invalid characters");
++      exit(1);
++    }
+ 
+   if(verb) {
+     printf("ltable offset: %i\nrtable offset: %i\nsector: %li\nfilesize: %li\nattributes: 0x%x\nfilename length: %i\nfilename: %s\n\n", dirent.ltable, dirent.rtable, dirent.sector, dirent.size, dirent.attribs, dirent.fnamelen, dirent.fname);
