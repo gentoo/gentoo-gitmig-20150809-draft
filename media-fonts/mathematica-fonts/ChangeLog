@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/mathematica-fonts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/ChangeLog,v 1.1 2005/05/03 15:13:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/ChangeLog,v 1.2 2005/05/21 21:10:12 usata Exp $
+
+  21 May 2005; Mamoru KOMACHI <usata@gentoo.org>
+  mathematica-fonts-4.2.ebuild:
+  Added an instruction to let users modify mozilla prefs.
+  Thanks to Nikolas 'Atrus' Coukouma <otto@atrus.org>; bug #93100.
 
 *mathematica-fonts-4.2 (03 May 2005)
 
