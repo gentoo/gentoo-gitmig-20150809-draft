@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.6.ebuild,v 1.1 2005/05/20 14:53:55 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.6.ebuild,v 1.2 2005/05/21 10:50:19 luckyduck Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
 SRC_URI="mirror://sourceforge/kino/${P}.tar.gz"
-RESTRICT="nomirror"
-IUSE="quicktime dvdr ffmpeg"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+IUSE="quicktime dvdr ffmpeg"
 
 DEPEND="x11-libs/gtk+
 	>=gnome-base/libglade-2
@@ -30,6 +30,17 @@ DEPEND="x11-libs/gtk+
 	ffmpeg? ( media-video/ffmpeg )
 	quicktime? ( virtual/quicktime )
 	dvdr? ( media-video/dvdauthor )"
+
+RESTRICT="primaryuri"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# some things are getting installed into the wrong location, see #90496
+	epatch ${FILESDIR}/${P}-configure.diff
+	autoconf
+}
 
 src_compile() {
 	econf \
