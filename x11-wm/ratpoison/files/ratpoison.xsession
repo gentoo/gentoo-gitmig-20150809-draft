@@ -1,2 +1,1 @@
-#!/bin/bash
-exec /usr/bin/ratpoison
+/usr/bin/ratpoison
