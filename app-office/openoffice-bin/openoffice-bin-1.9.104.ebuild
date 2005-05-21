@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.104.ebuild,v 1.2 2005/05/21 07:24:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.104.ebuild,v 1.3 2005/05/21 15:26:19 suka Exp $
 
 inherit eutils fdo-mime rpm versionator
 
@@ -96,7 +96,9 @@ src_unpack() {
 		else
 			unpack openofficeorg-${i}-${LANGSUFFIX}
 		fi
-		rpm_unpack openofficeorg-${i}-1.9.${SNV}-1.i586.rpm openofficeorg-${i}-help-1.9.${SNV}-1.i586.rpm openofficeorg-${i}-res-1.9.${SNV}-1.i586.rpm
+		rpm_unpack openofficeorg-${i}-1.9.${SNV}-1.i586.rpm
+		rpm_unpack openofficeorg-${i}-help-1.9.${SNV}-1.i586.rpm
+		rpm_unpack openofficeorg-${i}-res-1.9.${SNV}-1.i586.rpm
 	done
 }
 
