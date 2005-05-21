@@ -1,11 +1,15 @@
 # /etc/conf.d/cryptfs
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/cryptfs.confd,v 1.1 2005/03/01 23:25:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/cryptfs.confd,v 1.2 2005/05/21 06:10:25 vapier Exp $
 
 # Note regarding the syntax of this file.  This file is *almost* bash,
 # but each line is evaluated separately.  Separate swaps/mounts can be
 # specified.  The init-script which reads this file assumes that a
 # swap= or mount= line starts a new section, similar to lilo or grub
 # configuration.
+
+# Note when using gpg keys and /usr on a separate partition, you will
+# have to copy /usr/bin/gpg to /bin/gpg so that it will work properly.
+# See http://bugs.gentoo.org/90482 for more information.
 
 # Swap partitions. These should come first so that no keys make their
 # way into unencrypted swap.

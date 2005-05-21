@@ -1,7 +1,7 @@
 # /lib/rcscripts/addons/dm-crypt-start.sh
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-start.sh,v 1.4 2005/05/20 04:03:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-start.sh,v 1.5 2005/05/21 06:10:25 vapier Exp $
 
 # Setup mappings for an individual mount/swap
 #
@@ -39,7 +39,7 @@ dm-crypt-execute-checkfs() {
 		ret=$?
 		eend ${ret} "failure running cryptsetup"
 	else
-		if [[ -x /usr/bin/gpg ]] ; then
+		if type -p gpg >/dev/null ; then
 			ret=1
 			while [[ ${ret} -gt 0 ]] ; do
 				keystring=$(gpg ${gpg_options} ${key} 2>/dev/null </dev/console)
