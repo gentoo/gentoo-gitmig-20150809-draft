@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-1.61.ebuild,v 1.3 2005/04/19 06:10:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-1.61.ebuild,v 1.4 2005/05/21 16:46:06 blubb Exp $
 
 inherit eutils webapp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://websvn.tigris.org/"
 SRC_URI="http://websvn.tigris.org/files/documents/1380/14334/WebSVN_${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 IUSE="enscript"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 RDEPEND=">=dev-php/mod_php-4.1.0
 	sys-apps/sed

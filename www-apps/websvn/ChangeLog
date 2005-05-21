@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.3 2005/04/19 06:10:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.4 2005/05/21 16:46:06 blubb Exp $
+
+  21 May 2005; Simon Stelling <blubb@gentoo.org> websvn-1.61.ebuild:
+  added ~amd64 keyword
 
   19 Apr 2005; Roy Marples <uberlord@gentoo.org> websvn-1.61.ebuild:
   stable on x86
