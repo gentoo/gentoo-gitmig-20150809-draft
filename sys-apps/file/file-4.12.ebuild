@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.12.ebuild,v 1.14 2005/04/24 17:46:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.12.ebuild,v 1.15 2005/05/21 05:47:46 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils distutils libtool toolchain-funcs
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 	# The build process tries to run the compiled file ... not a good
 	# thing if file was cross compiled ;)
-	tc-is-cross-compiler && epatch ${FILESDIR}/${P}-cross-compile.patch
+	tc-is-cross-compiler && epatch ${FILESDIR}/${PN}-4.13-cross-compile.patch
 
 	# misc updates
 	cat "${FILESDIR}"/*.magic >> magic/magic.mime
