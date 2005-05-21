@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.146 2005/05/20 21:45:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.147 2005/05/21 07:00:15 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -191,12 +191,18 @@ gcc_get_s_dir() {
 #			${PN}-${PATCH_GCC_VER:-${GCC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
 #
 #	PIE_VER
-#	PIE_CORE
+#	PIE_GCC_VER
+#	obsoleted: PIE_CORE
 #			These variables control patching in various updates for the logic
 #			controlling Position Independant Executables. PIE_VER is expected
-#			to be the version of this patch, and PIE_CORE the actual filename
-#			of the patch. An example:
+#			to be the version of this patch, PIE_GCC_VER the gcc version of
+#			the patch, and PIE_CORE (obsoleted) the actual filename of the patch.
+#			An example:
 #					PIE_VER="8.7.6.5"
+#					PIE_GCC_VER="3.4.0"
+#			The resulting filename of this tarball will be:
+#			${PN}-${PIE_GCC_VER:-${GCC_RELEASE_VER}}-piepatches-v${PIE_VER}.tar.bz2
+#				old syntax (do not define PIE_CORE anymore):
 #					PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 #
 #	PP_VER
@@ -232,10 +238,11 @@ gentoo_urls() {
 }
 get_gcc_src_uri() {
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
+	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
 	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
 
 	[[ -n ${PIE_VER} ]] && \
-		PIE_CORE=${PIE_CORE:-gcc-${GCC_RELEASE_VER}-piepatches-v${PIE_VER}.tar.bz2}
+		PIE_CORE=${PIE_CORE:-${PN}-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2}
 
 	# Set where to download gcc itself depending on whether we're using a
 	# prerelease, snapshot, or release tarball.
@@ -244,7 +251,7 @@ get_gcc_src_uri() {
 	elif [[ -n ${SNAPSHOT} ]] ; then
 		GCC_SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT}.tar.bz2"
 	else
-		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/gcc-${GCC_RELEASE_VER}.tar.bz2"
+		GCC_SRC_URI="mirror://gnu/gcc/${P}/gcc-${GCC_RELEASE_VER}.tar.bz2"
 		# we want all branch updates to be against the main release
 		[[ -n ${BRANCH_UPDATE} ]] && \
 			GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls ${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2)"
@@ -270,7 +277,7 @@ get_gcc_src_uri() {
 		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls ${PN}-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2)"
 
 	# strawberry pie, Cappuccino and a Gauloises (it's a good thing)
-	[[ -n ${PIE_CORE} ]] && \
+	[[ -n ${PIE_VER} ]] && \
 		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls ${PIE_CORE})"
 
 	# gcc bounds checking patch
@@ -387,7 +394,7 @@ has_libssp() {
 want_libssp() {
 	[[ ${GCC_LIBSSP_SUPPORT} == "true" ]] || return 1
 	has_libssp || return 1
-	[[ -n ${PP_FVER} ]] || return 1
+	[[ -n ${PP_VER} ]] || return 1
 	return 0
 }
 
@@ -398,7 +405,7 @@ want_boundschecking() {
 }
 
 want_split_specs() {
-	[[ ${SPLIT_SPECS} == "true" ]] && [[ -n ${PIE_CORE} ]] && \
+	[[ ${SPLIT_SPECS} == "true" ]] && [[ -n ${PIE_VER} ]] && \
 		! want_boundschecking && return 0
 	return 1
 }
@@ -457,21 +464,24 @@ gcc-lang-supported() {
 
 #---->> specs + env.d logic <<----
 
+# defaults to enable for all hardened toolchains
+gcc_common_hard="-DEFAULT_RELRO -DEFAULT_BIND_NOW"
+
 # configure to build with the hardened GCC specs as the default
 make_gcc_hard() {
 	if hardened_gcc_works ; then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
-		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE_SSP |' \
+		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE_SSP ${gcc_common_hard} |' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 	elif hardened_gcc_works pie ; then
 		einfo "Updating gcc to use automatic PIE building ..."
 		ewarn "SSP has not been enabled by default"
-		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE |' \
+		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE ${gcc_common_hard} |' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 	elif hardened_gcc_works ssp ; then
 		einfo "Updating gcc to use automatic SSP building ..."
 		ewarn "PIE has not been enabled by default"
-		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_SSP |' \
+		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_SSP ${gcc_common_hard} |' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 	else
 		# do nothing if hardened isnt supported, but dont die either
@@ -513,7 +523,7 @@ create_hardened_specs_file() {
 		# if not using hardened, then we need to move xgcc out of the way
 		# and recompile it
 		cp Makefile Makefile.orig
-		sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE_SSP/g' Makefile
+		sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE_SSP ${gcc_common_hard}/g' Makefile
 		mv xgcc xgcc.vanilla
 		mv gcc.o gcc.o.vanilla
 		make xgcc
@@ -533,7 +543,7 @@ create_hardened_specs_file() {
 create_hardenednossp_specs_file() {
 	pushd ${WORKDIR}/build/gcc > /dev/null
 	cp Makefile Makefile.orig
-	sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE/g' Makefile
+	sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE ${gcc_common_hard}/g' Makefile
 	mv xgcc xgcc.moo
 	mv gcc.o gcc.o.moo
 	make xgcc
@@ -549,7 +559,7 @@ create_hardenednossp_specs_file() {
 create_hardenednopie_specs_file() {
 	pushd ${WORKDIR}/build/gcc > /dev/null
 	cp Makefile Makefile.orig
-	sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_SSP/g' Makefile
+	sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_SSP ${gcc_common_hard}/g' Makefile
 	mv xgcc xgcc.moo
 	mv gcc.o gcc.o.moo
 	make xgcc
@@ -1587,7 +1597,13 @@ gcc_quick_unpack() {
 		popd > /dev/null
 	fi
 
-	[[ -n ${PIE_VER} ]] && unpack ${PIE_CORE}
+	if [[ -n ${PIE_VER} ]] ; then
+		if [[ -n ${PIE_CORE} ]] ; then
+			unpack ${PIE_CORE}
+		else
+			unpack ${PN}-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2
+		fi
+	fi
 
 	# pappy@gentoo.org - Fri Oct  1 23:24:39 CEST 2004
 	want_boundschecking && \
