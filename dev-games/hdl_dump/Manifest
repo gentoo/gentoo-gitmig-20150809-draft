@@ -1,4 +1,6 @@
 MD5 711d9a6592d12733a25d67529092b901 hdl_dump-0.8.ebuild 686
 MD5 daa84cd51dd3a51bf6b625858e6ec1ff metadata.xml 220
-MD5 26ad71e93b145782fdaf24c12b3d100a ChangeLog 333
+MD5 e5fdb8e71811996c02c8ace913278823 ChangeLog 455
+MD5 23541bf7a62c06f1b3835dc70b9ca9ba hdl_dump-0.8.1.ebuild 691
 MD5 31a2f34ce721357b19b977422520f338 files/digest-hdl_dump-0.8 74
+MD5 32445457522a87fcbd559c84ed77c7f6 files/digest-hdl_dump-0.8.1 79
