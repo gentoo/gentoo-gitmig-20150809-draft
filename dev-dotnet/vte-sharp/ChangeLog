@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/vte-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.20 2005/05/20 20:38:12 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.21 2005/05/21 16:32:26 latexer Exp $
+
+  21 May 2005; Peter Johanson <latexer@gentoo.org> :
+  Digest of new diff that fixes bug #93433.
 
   20 May 2005; Peter Johanson <latexer@gentoo.org> -vte-sharp-1.9.2.ebuild,
   -vte-sharp-1.9.3.ebuild:

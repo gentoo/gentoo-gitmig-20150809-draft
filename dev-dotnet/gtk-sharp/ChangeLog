@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.38 2005/05/21 09:31:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.39 2005/05/21 16:31:45 latexer Exp $
+
+  21 May 2005; Peter Johanson <latexer@gentoo.org> :
+  Digest of new diff that fixes bug #93433.
 
   21 May 2005; Tom Martin <slarti@gentoo.org> gtk-sharp-2.5.5.ebuild:
   Marked ~amd64.
