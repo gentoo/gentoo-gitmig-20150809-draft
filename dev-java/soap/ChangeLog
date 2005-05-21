@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/soap
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/ChangeLog,v 1.3 2004/10/22 10:19:27 absinthe Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/ChangeLog,v 1.4 2005/05/21 17:53:33 luckyduck Exp $
+
+  21 May 2005; Jan Brinkmann <luckyduck@gentoo.org> soap-2.3.1.ebuild:
+  stable on amd64 and x86, introduced support for the jikes and the source
+  useflag.
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> soap-2.3.1.ebuild:
   Keywords ~amd64.
