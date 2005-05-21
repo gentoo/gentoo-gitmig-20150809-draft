@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conserver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.34 2005/05/21 23:20:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.35 2005/05/21 23:21:58 kloeri Exp $
+
+  21 May 2005; Bryan Østergaard <kloeri@gentoo.org> ChangeLog:
+  Stable on ia64.
 
   21 May 2005; Bryan Østergaard <kloeri@gentoo.org> conserver-8.1.5.ebuild:
   Stable on ia64.
