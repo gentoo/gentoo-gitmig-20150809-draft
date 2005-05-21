@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.16.ebuild,v 1.9 2005/03/22 17:50:36 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.16.ebuild,v 1.10 2005/05/21 08:51:27 corsair Exp $
 
 IUSE="nls"
 DESCRIPTION="Interactive X11 vector drawing program"
@@ -13,7 +13,7 @@ DEPEND=">=dev-python/imaging-1.1.2-r1
 RDEPEND="nls? ( sys-devel/gettext )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64 ~ppc64"
 
 src_compile() {
 	use nls && useopts="${useopts} --with-nls"
