@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-058.ebuild,v 1.1 2005/05/20 21:01:42 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-058.ebuild,v 1.2 2005/05/21 08:10:40 mr_bones_ Exp $
 
 inherit eutils
 
@@ -158,7 +158,7 @@ pkg_postinst() {
 		killall -9 udevd &>/dev/null
 	fi
 
-	# people want reminders, I'll give them reminders.  Odds are they will 
+	# people want reminders, I'll give them reminders.  Odds are they will
 	# just ignore them anyway...
 	ewarn "Note: If you are upgrading from a version of udev prior to 046"
 	ewarn "      and you rely on the output of udevinfo for anything, please"
@@ -176,7 +176,7 @@ pkg_postinst() {
 	ewarn "      functionality, please read the RELEASE-NOTES file for details"
 	ewarn "      on what has changed with this feature, and how to change your"
 	ewarn "      rules to work properly."
-	
+
 	einfo "For more information on udev on Gentoo, writing udev rules, and"
 	einfo "         fixing known issues visit: "
 	einfo "         http://www.gentoo.org/doc/en/udev-guide.xml"
