@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.114 2005/05/21 08:15:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.115 2005/05/21 11:37:30 luckyduck Exp $
+
+  21 May 2005; Jan Brinkmann <luckyduck@gentoo.org> gkrellm-2.2.5.ebuild:
+  stable on amd64
 
   21 May 2005; Markus Rothe <corsair@gentoo.org> gkrellm-2.2.5.ebuild:
   Stable on ppc64
