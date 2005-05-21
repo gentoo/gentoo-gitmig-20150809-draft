@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.6 2005/03/25 00:51:48 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.7 2005/05/21 04:56:20 ciaranm Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -32,8 +32,7 @@
 #
 # There's also:
 #     version_is_at_least             want      have
-# but it doesn't work in all cases, so only use it if you know what you're
-# doing.
+# which may be buggy, so use with caution.
 
 ECLASS=versionator
 INHERITED="$INHERITED $ECLASS"
@@ -218,103 +217,264 @@ delete_all_version_separators() {
 }
 
 # Is $2 (defaults to $PVR) at least version $1? Intended for use in eclasses
-# only. Not very reliable, doesn't understand most things, make sure you test
-# reaaaallly well before using this. Prod ciaranm if you need it to support more
-# things... WARNING: DOES NOT HANDLE 1.2b style versions. WARNING: not very well
-# tested, needs lots of work before it's totally reliable. Use with extreme
-# caution.
+# only. May not be reliable, be sure to do very careful testing before actually
+# using this. Prod ciaranm if you find something it can't handle.
 version_is_at_least() {
-	local want_s="$1" have_s="${2:-${PVR}}" want_c have_c
-	want_c=( $(get_version_components "$want_s" ) )
-	have_c=( $(get_version_components "$have_s" ) )
-
-	# Stage 1: compare the version numbers part.
-	local done_w="" done_h="" i=0
-	while [[ -z "${done_w}" ]] || [[ -z "${done_h}" ]] ; do
-		local cur_w="${want_c[$i]}" cur_h="${have_c[$i]}"
-		local my_cur_w="${cur_w//#0}" my_cur_h="${cur_h//#0}"
-		[[ -z "${my_cur_w##[^[:digit:]]*}" ]] && done_w="yes"
-		[[ -z "${my_cur_h##[^[:digit:]]*}" ]] && done_h="yes"
-		[[ -z "${done_w}" ]] || my_cur_w=0
-		[[ -z "${done_h}" ]] || my_cur_h=0
-		if [[ ${my_cur_w} -lt ${my_cur_h} ]] ; then return 0 ; fi
-		if [[ ${my_cur_w} -gt ${my_cur_h} ]] ; then return 1 ; fi
-		i=$(($i + 1))
-	done
-
-	local part
-	for part in "_alpha" "_beta" "_pre" "_rc" "_p" "-r" ; do
-		local part_w= part_h=
-
-		for (( i = 0 ; i < ${#want_c[@]} ; i = $i + 1 )) ; do
-			if [[ -z "${want_c[$i]##${part#[-._]}*}" ]] ; then
-				part_w="${want_c[$i]##${part#[-._]}}"
-				break
-			fi
-		done
-		for (( i = 0 ; i < ${#have_c[@]} ; i = $i + 1 )) ; do
-			if [[ -z "${have_c[$i]##${part#[-._]}*}" ]] ; then
-				part_h="${have_c[$i]##${part#[-._]}}"
-				break
-			fi
-		done
-
-		if [[ "${part}" == "_p" ]] || [[ "${part}" == "-r" ]] ; then
-			# if present in neither want nor have, go to the next item
-			[[ -z "${part_w}" ]] && [[ -z "${part_h}" ]] && continue
-
-			[[ -z "${part_w}" ]] && [[ -n "${part_h}" ]] && return 0
-			[[ -n "${part_w}" ]] && [[ -z "${part_h}" ]] && return 1
-
-			if [[ ${part_w} -lt ${part_h} ]] ; then return 0 ; fi
-			if [[ ${part_w} -gt ${part_h} ]] ; then return 1 ; fi
-
-		else
-			# if present in neither want nor have, go to the next item
-			[[ -z "${part_w}" ]] && [[ -z "${part_h}" ]] && continue
-
-			[[ -z "${part_w}" ]] && [[ -n "${part_h}" ]] && return 1
-			[[ -n "${part_w}" ]] && [[ -z "${part_h}" ]] && return 0
-
-			if [[ ${part_w} -lt ${part_h} ]] ; then return 0 ; fi
-			if [[ ${part_w} -gt ${part_h} ]] ; then return 1 ; fi
-		fi
-	done
-
-	return 0
+	local want_s="$1" have_s="${2:-${PVR}}" r
+	version_compare "${want_s}" "${have_s}"
+	r=$?
+	case $r in
+		1|2)
+			return 0
+			;;
+		3)
+			return 1
+			;;
+		*)
+			die "versionator compare bug [atleast, ${want_s}, ${have_s}, ${r}]"
+			;;
+	esac
 }
 
-# Test function thing. To use, source versionator.eclass and then run it.
-__versionator__test_version_is_at_least() {
-	version_is_at_least "1.2"             "1.2"         || echo "test  1 failed"
-	version_is_at_least "1.2"             "1.2.3"       || echo "test  2 failed"
-	version_is_at_least "1.2.3"           "1.2"         && echo "test  3 failed"
+# Takes two parameters (a, b) which are versions. If a is an earlier version
+# than b, returns 1. If a is identical to b, return 2. If b is later than a,
+# return 3. You probably want version_is_at_least rather than this function.
+# May not be very reliable. Test carefully before using this.
+version_compare() {
+	local ver_a=${1} ver_b=${2} parts_a parts_b cur_idx_a=0 cur_idx_b=0
+	parts_a=( $(get_all_version_components "${ver_a}" ) )
+	parts_b=( $(get_all_version_components "${ver_b}" ) )
 
-	version_is_at_least "1.2_beta1"       "1.2"         || echo "test  4 failed"
-	version_is_at_least "1.2_alpha1"      "1.2"         || echo "test  5 failed"
-	version_is_at_least "1.2_alpha1"      "1.2_beta1"   || echo "test  6 failed"
+	### compare number parts.
+	local inf_loop=0
+	while true ; do
+		inf_loop=$(( ${inf_loop} + 1 ))
+		[[ ${inf_loop} -gt 20 ]] && \
+			die "versionator compare bug [numbers, ${ver_a}, ${ver_b}]"
 
-	version_is_at_least "1.2"             "1.2_beta1"   && echo "test  7 failed"
-	version_is_at_least "1.2"             "1.2_alpha1"  && echo "test  8 failed"
-	version_is_at_least "1.2_beta1"       "1.2_alpha1"  && echo "test  9 failed"
+		# grab the current number components
+		local cur_tok_a=${parts_a[${cur_idx_a}]}
+		local cur_tok_b=${parts_b[${cur_idx_b}]}
 
-	version_is_at_least "1.2_beta1"       "1.2_beta1"   || echo "test 10 failed"
-	version_is_at_least "1.2_beta2"       "1.2_beta1"   && echo "test 11 failed"
-	version_is_at_least "1.2_beta2"       "1.2_beta3"   || echo "test 12 failed"
+		# number?
+		if [[ -n ${cur_tok_a} ]] && [[ -z ${cur_tok_a//[[:digit:]]} ]] ; then
+			cur_idx_a=$(( ${cur_idx_a} + 1 ))
+			[[ ${parts_a[${cur_idx_a}]} == "." ]] \
+				&& cur_idx_a=$(( ${cur_idx_a} + 1 ))
+		else
+			cur_tok_a=""
+		fi
 
-	version_is_at_least "1.2-r1"          "1.2"         && echo "test 13 failed"
-	version_is_at_least "1.2"             "1.2-r1"      || echo "test 14 failed"
-	version_is_at_least "1.2-r1"          "1.3"         || echo "test 15 failed"
-	version_is_at_least "1.2-r1"          "1.2-r2"      || echo "test 16 failed"
-	version_is_at_least "1.2-r3"          "1.2-r2"      && echo "test 17 failed"
+		if [[ -n ${cur_tok_b} ]] && [[ -z ${cur_tok_b//[[:digit:]]} ]] ; then
+			cur_idx_b=$(( ${cur_idx_b} + 1 ))
+			[[ ${parts_b[${cur_idx_b}]} == "." ]] \
+				&& cur_idx_b=$(( ${cur_idx_b} + 1 ))
+		else
+			cur_tok_b=""
+		fi
 
-	version_is_at_least "1.2-r1"        "1.2_beta2-r3"  && echo "test 18 failed"
-	version_is_at_least "1.2-r1"        "1.3_beta2-r3"  || echo "test 19 failed"
+		# done with number components?
+		[[ -z ${cur_tok_a} ]] && [[ -z ${cur_tok_b} ]] && break
 
-	version_is_at_least "1.002"           "1.2"         || echo "test 20 failed"
-	version_is_at_least "1.2"             "1.002"       || echo "test 21 failed"
-	version_is_at_least "1.003"           "1.2"         && echo "test 22 failed"
-	version_is_at_least "1.3"             "1.002"       && echo "test 23 failed"
-	return 0
+		# to avoid going into octal mode, strip any leading zeros. otherwise
+		# bash will throw a hissy fit on versions like 6.3.068.
+		cur_tok_a=${cur_tok_a##+(0)}
+		cur_tok_b=${cur_tok_b##+(0)}
+
+		# if a component is blank, make it zero.
+		[[ -z ${cur_tok_a} ]] && cur_tok_a=0
+		[[ -z ${cur_tok_b} ]] && cur_tok_b=0
+
+		# compare
+		[[ ${cur_tok_a} -lt ${cur_tok_b} ]] && return 1
+		[[ ${cur_tok_a} -gt ${cur_tok_b} ]] && return 3
+	done
+
+	### number parts equal. compare letter parts.
+	local letter_a=
+	letter_a=${parts_a[${cur_idx_a}]}
+	if [[ ${#letter_a} -eq 1 ]] && [[ -z ${letter_a/[a-z]} ]] ; then
+		cur_idx_a=$(( ${cur_idx_a} + 1 ))
+	else
+		letter_a="@"
+	fi
+
+	local letter_b=
+	letter_b=${parts_b[${cur_idx_b}]}
+	if [[ ${#letter_b} -eq 1 ]] && [[ -z ${letter_b/[a-z]} ]] ; then
+		cur_idx_b=$(( ${cur_idx_b} + 1 ))
+	else
+		letter_b="@"
+	fi
+
+	# compare
+	[[ ${letter_a} < ${letter_b} ]] && return 1
+	[[ ${letter_a} > ${letter_b} ]] && return 3
+
+	### letter parts equal. compare suffixes in order.
+	local suffix rule part r_lt r_gt
+	for rule in "alpha=1" "beta=1" "pre=1" "rc=1" "p=3" "r=3" ; do
+		suffix=${rule%%=*}
+		r_lt=${rule##*=}
+		[[ ${r_lt} -eq 1 ]] && r_gt=3 || r_gt=1
+
+		local suffix_a=
+		for part in ${parts_a[@]} ; do
+			[[ ${part#${suffix}} != ${part} ]] && \
+				[[ -z ${part##${suffix}*([[:digit:]])} ]] && \
+				suffix_a=${part#${suffix}}0
+		done
+
+		local suffix_b=
+		for part in ${parts_b[@]} ; do
+			[[ ${part#${suffix}} != ${part} ]] && \
+				[[ -z ${part##${suffix}*([[:digit:]])} ]] && \
+				suffix_b=${part#${suffix}}0
+		done
+
+		[[ -z ${suffix_a} ]] && [[ -z ${suffix_b} ]] && continue
+
+		[[ -z ${suffix_a} ]] && return ${r_gt}
+		[[ -z ${suffix_b} ]] && return ${r_lt}
+
+		# avoid octal problems
+		suffix_a=${suffix_a##+(0)} ; suffix_a=${suffix_a:-0}
+		suffix_b=${suffix_b##+(0)} ; suffix_b=${suffix_b:-0}
+
+		[[ ${suffix_a} -lt ${suffix_b} ]] && return 1
+		[[ ${suffix_a} -gt ${suffix_b} ]] && return 3
+	done
+
+	### no differences.
+	return 2
+}
+
+# Returns its parameters sorted, highest version last. We're using a quadratic
+# algorithm for simplicity, so don't call it with more than a few dozen items.
+# Uses version_compare, so be careful.
+version_sort() {
+	local items= left=0
+	items=( $@ )
+	while [[ ${left} -lt ${#items[@]} ]] ; do
+		local lowest_idx=${left}
+		local idx=$(( ${lowest_idx} + 1 ))
+		while [[ ${idx} -lt ${#items[@]} ]] ; do
+			version_compare "${items[${lowest_idx}]}" "${items[${idx}]}"
+			[[ $? -eq 3 ]] && lowest_idx=${idx}
+			idx=$(( ${idx} + 1 ))
+		done
+		local tmp=${items[${lowest_idx}]}
+		items[${lowest_idx}]=${items[${left}]}
+		items[${left}]=${tmp}
+		left=$(( ${left} + 1 ))
+	done
+	echo ${items[@]}
+}
+
+__versionator__test_version_compare() {
+	local lt=1 eq=2 gt=3 p q
+
+	__versionator__test_version_compare_t() {
+		version_compare "${1}" "${3}"
+		local r=$?
+		[[ ${r} -eq ${2} ]] || echo "FAIL: ${@} (got ${r} exp ${2})"
+	}
+
+	echo "
+		0             $lt 1
+		1             $lt 2
+		2             $gt 1
+		2             $eq 2
+		0             $eq 0
+		10            $lt 20
+		68            $eq 068
+		068           $gt 67
+		068           $lt 69
+
+		1.0           $lt 2.0
+		2.0           $eq 2.0
+		2.0           $gt 1.0
+
+		1.0           $gt 0.0
+		0.0           $eq 0.0
+		0.0           $lt 1.0
+
+		0.1           $lt 0.2
+		0.2           $eq 0.2
+		0.3           $gt 0.2
+
+		1.2           $lt 2.1
+		2.1           $gt 1.2
+
+		1.2.3         $lt 1.2.4
+		1.2.4         $gt 1.2.3
+
+		1.2.0         $eq 1.2
+		1.2.1         $gt 1.2
+		1.2           $lt 1.2.1
+
+		1.2b          $eq 1.2b
+		1.2b          $lt 1.2c
+		1.2b          $gt 1.2a
+		1.2b          $gt 1.2
+		1.2           $lt 1.2a
+
+		1.3           $gt 1.2a
+		1.3           $lt 1.3a
+
+		1.0_alpha7    $lt 1.0_beta7
+		1.0_beta      $lt 1.0_pre
+		1.0_pre5      $lt 1.0_rc2
+		1.0_rc2       $lt 1.0
+
+		1.0_p1        $gt 1.0
+		1.0_p1-r1     $gt 1.0_p1
+
+		1.0_alpha6-r1 $gt 1.0_alpha6
+		1.0_beta6-r1  $gt 1.0_alpha6-r2
+
+		1.0_pre1      $lt 1.0-p1
+
+		1.0p          $gt 1.0_p1
+		1.0r          $gt 1.0-r1
+		1.6.15        $gt 1.6.10-r2
+		1.6.10-r2     $lt 1.6.15
+
+	" | while read a b c ; do
+		[[ -z "${a}${b}${c}" ]] && continue;
+		__versionator__test_version_compare_t "${a}" "${b}" "${c}"
+	done
+
+
+	for q in "alpha beta pre rc=${lt};${gt}" "p r=${gt};${lt}" ; do
+		for p in ${q%%=*} ; do
+			local c=${q##*=}
+			local alt=${c%%;*} agt=${c##*;}
+			__versionator__test_version_compare_t "1.0" $agt "1.0_${p}"
+			__versionator__test_version_compare_t "1.0" $agt "1.0_${p}1"
+			__versionator__test_version_compare_t "1.0" $agt "1.0_${p}068"
+
+			__versionator__test_version_compare_t "2.0_${p}"    $alt "2.0"
+			__versionator__test_version_compare_t "2.0_${p}1"   $alt "2.0"
+			__versionator__test_version_compare_t "2.0_${p}068" $alt "2.0"
+
+			__versionator__test_version_compare_t "1.0_${p}"  $eq "1.0_${p}"
+			__versionator__test_version_compare_t "0.0_${p}"  $lt "0.0_${p}1"
+			__versionator__test_version_compare_t "666_${p}3" $gt "666_${p}"
+
+			__versionator__test_version_compare_t "1_${p}7"  $lt "1_${p}8"
+			__versionator__test_version_compare_t "1_${p}7"  $eq "1_${p}7"
+			__versionator__test_version_compare_t "1_${p}7"  $gt "1_${p}6"
+			__versionator__test_version_compare_t "1_${p}09" $eq "1_${p}9"
+		done
+	done
+
+	for p in "-r" "_p" ; do
+		__versionator__test_version_compare_t "7.2${p}1" $lt "7.2${p}2"
+		__versionator__test_version_compare_t "7.2${p}2" $gt "7.2${p}1"
+		__versionator__test_version_compare_t "7.2${p}3" $gt "7.2${p}2"
+		__versionator__test_version_compare_t "7.2${p}2" $lt "7.2${p}3"
+	done
+
 }
 
