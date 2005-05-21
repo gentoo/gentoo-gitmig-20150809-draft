@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.12 2005/03/19 17:55:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.13 2005/05/21 15:14:23 blubb Exp $
+
+  21 May 2005; Simon Stelling <blubb@gentoo.org> vdr-1.2.6-r1.ebuild:
+  added ~amd64 keyword
 
   19 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   files/vdr-1.2.6-gentoo.diff, vdr-1.2.6-r1.ebuild:
