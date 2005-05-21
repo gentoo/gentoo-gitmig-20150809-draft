@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/attr
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.48 2005/02/07 04:02:10 kumba Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.49 2005/05/21 01:35:50 vapier Exp $
+
+*attr-2.4.19-r1 (21 May 2005)
+
+  21 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/attr-2.4.19-attr_copy_file-suppress-warning.patch,
+  +attr-2.4.19-r1.ebuild:
+  Tweak the warning message #93348 by Doug Goldstein.
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> attr-2.4.19.ebuild:
   Marked stable on mips.
