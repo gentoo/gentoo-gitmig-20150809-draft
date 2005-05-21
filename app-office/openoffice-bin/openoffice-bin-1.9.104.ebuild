@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.104.ebuild,v 1.1 2005/05/20 20:38:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.104.ebuild,v 1.2 2005/05/21 07:24:06 suka Exp $
 
 inherit eutils fdo-mime rpm versionator
 
@@ -74,7 +74,7 @@ PROVIDE="virtual/ooo"
 src_unpack() {
 	unpack OOo_1.9.${SNV}_LinuxIntel_install.tar.gz
 
-	for i in core01 core02 core03 core04 core05 core06 core07 core08 calc draw impress math writer graphicfilter pyuno spellcheck testtool xsltfilter core03u core04u core05u ; do
+	for i in core01 core02 core03 core04 core05 core06 core07 core08 core09 core10 calc draw impress math writer graphicfilter pyuno spellcheck testtool xsltfilter core03u core04u core05u ; do
 		rpm_unpack ${S}/openofficeorg-${i}-1.9.${SNV}-1.i586.rpm
 	done
 
