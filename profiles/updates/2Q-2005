@@ -74,3 +74,4 @@ move media-sound/bemused app-mobilephone/bemused
 move kde-misc/kmobiletools app-mobilephone/kmobiletools
 move sys-kernel/hardened-dev-sources sys-kernel/hardened-sources
 move media-tv/mythfrontend media-tv/mythtv
+move media-fonts/erza-sil media-fonts/ezra-sil
