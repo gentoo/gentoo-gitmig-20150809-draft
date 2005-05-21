@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/rezound
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.21 2004/12/23 20:18:49 hansmi Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.22 2005/05/21 09:38:00 luckyduck Exp $
+
+*rezound-0.12.0_beta (21 May 2005)
+
+  21 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -rezound-0.10.0_beta.ebuild, rezound-0.11.1_beta.ebuild,
+  +rezound-0.12.0_beta.ebuild:
+  new upstream version. 0.11.1_beta stable on amd64 and x86. some generall
+  cleanup. sampletype now controlled by a useflag, fixes #93405
 
   23 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
   +files/undefined-functions.patch, rezound-0.11.1_beta.ebuild:

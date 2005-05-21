@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.11.1_beta.ebuild,v 1.5 2005/05/21 09:38:00 luckyduck Exp $
-
-IUSE="alsa oggvorbis jack nls oss portaudio flac soundtouch"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.0_beta.ebuild,v 1.1 2005/05/21 09:38:00 luckyduck Exp $
 
 inherit eutils
 
@@ -13,9 +11,10 @@ DESCRIPTION="Sound editor and recorder"
 HOMEPAGE="http://rezound.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc x86"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="16bittmp alsa flac jack nls oss portaudio soundtouch vorbis"
 
 RDEPEND="virtual/x11
 	=sci-libs/fftw-2*
@@ -25,10 +24,10 @@ RDEPEND="virtual/x11
 	>=media-libs/ladspa-cmt-1.15
 	alsa? ( >=media-libs/alsa-lib-1.0 )
 	flac? ( >=media-libs/flac-1.1.0 )
-	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	jack? ( media-sound/jack-audio-connection-kit )
 	portaudio? ( >=media-libs/portaudio-18 )
-	soundtouch? ( >=media-libs/libsoundtouch-1.2.1 )"
+	soundtouch? ( >=media-libs/libsoundtouch-1.2.1 )
+	vorbis? ( media-libs/libvorbis media-libs/libogg )"
 
 # optional packages (don't need to be installed during emerge):
 #
@@ -42,39 +41,40 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 src_compile() {
-	local myconf=""
-
-	# enforce minimum defaults
-	myconf="${myconf} --enable-ladspa"
-	myconf="${myconf} --enable-largefile"
-	myconf="${myconf} --enable-internal-sample-type=float"
-
-	# enable/disable depending on USE flags
-	myconf="${myconf} `use_enable nls`"
-	myconf="${myconf} `use_enable alsa`"
-	myconf="${myconf} `use_enable oss`"
-	myconf="${myconf} `use_enable jack`"
-	myconf="${myconf} `use_enable portaudio`"
-
 	# fix compilation errors on ppc, where some
 	# of the required functions aren't defined
-	test "${ARCH}" = ppc && epatch ${FILESDIR}/undefined-functions.patch
+	#test "${ARCH}" = ppc && epatch ${FILESDIR}/undefined-functions.patch
 
 	# following features can't be disabled if already installed:
 	# -> flac, oggvorbis, soundtouch
+	local sampletype=""
+	use 16bittmp && sampletype="--enable-internal-sample-type=int16"
+	use 16bittmp || sampletype="--enable-internal-sample-type=float"
 
-	econf ${myconf} || die
-	emake || die
+	econf \
+		$(use_enable alsa) \
+		$(use_enable jack) \
+		$(use_enable nls) \
+		$(use_enable oss) \
+		$(use_enable portaudio) \
+		${sampletype} \
+		--enable-ladspa \
+		--enable-largefile \
+		|| die "configure failed"
+
+	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	# remove wrong doc directory
 	rm -rf ${D}/usr/doc/${PN}
 	# install docs manually, but don't install
 	# COPYING, since this is obsolete ($LICENCE is enough)
-	dodoc ABOUT-NLS docs/{AUTHORS,*INSTALL,NEWS,README*,TODO_FOR_USERS_TO_READ,*.txt}
+	dodoc ABOUT-NLS docs/{AUTHORS,*INSTALL,NEWS,README*}
+	dodoc docs/{TODO_FOR_USERS_TO_READ,*.txt}
+
 	docinto code
 	dodoc docs/code/*
 }
