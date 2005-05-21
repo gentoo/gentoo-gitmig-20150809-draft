@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.11_p8.ebuild,v 1.2 2005/05/19 07:26:58 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.11_p8-r1.ebuild,v 1.1 2005/05/21 00:12:13 marineam Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
@@ -30,7 +30,8 @@ UNIPATCH_LIST="
 	${FILESDIR}/${MY_P}-74070.patch
 	${FILESDIR}/${MY_P}-lowmem-reserve-oops.patch
 	${FILESDIR}/${MY_P}-87913.patch
-	${FILESDIR}/${MY_P}-85795.patch"
+	${FILESDIR}/${MY_P}-85795.patch
+	${FILESDIR}/${MY_P}-92864.patch"
 
 DESCRIPTION="Full sources for the Stock Linux kernel and Con Kolivas's high performance patchset"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"

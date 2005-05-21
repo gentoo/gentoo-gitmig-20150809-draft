@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.99 2005/05/19 07:26:58 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.100 2005/05/21 00:12:12 marineam Exp $
+
+*ck-sources-2.6.11_p8-r1 (20 May 2005)
+
+  20 May 2005; Michael Marineau <marineam@gentoo.org>
+  +files/ck-sources-2.6.11-92864.patch, -ck-sources-2.6.11_p7-r1.ebuild,
+  -ck-sources-2.6.11_p8.ebuild, +ck-sources-2.6.11_p8-r1.ebuild:
+  Add 2.6.11.10 patch, fixes bug #92864
 
   19 May 2005; Micheal Marineau <marineam@gentoo.org>
   ck-sources-2.6.11_p8.ebuild:
