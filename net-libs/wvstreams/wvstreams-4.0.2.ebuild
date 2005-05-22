@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.5 2005/05/05 23:20:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.6 2005/05/22 07:36:53 mrness Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ SRC_URI="http://www.csclub.uwaterloo.ca/~ja2morri/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="gtk qt vorbis speex fam qdbm pam slp doc fftw tcltk debug"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc x86"
+IUSE="gtk qt vorbis speex fam qdbm pam slp ssl doc fftw tcltk debug"
 
 RDEPEND="virtual/libc
 	dev-libs/xplc
@@ -26,7 +26,7 @@ RDEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
 	slp? ( >=net-libs/openslp-1.0.9a )
 	>=sys-libs/zlib-1.1.4
-	dev-libs/openssl
+	ssl? ( >=dev-libs/openssl-0.9.7 )
 	doc? ( app-doc/doxygen )
 	fftw? ( sci-libs/fftw )
 	tcltk? ( >=dev-lang/tcl-8.4 dev-lang/swig )"
@@ -67,12 +67,12 @@ src_compile() {
 		`use_with qdbm` \
 		`use_with pam` \
 		`use_with fftw` \
+		`use_with ssl openssl` \
 		`use_with slp openslp` \
 		`use_with tcltk tcl` \
 		`use_enable debug` \
 		--enable-verbose \
 		--with-bdb \
-		--with-openssl \
 		--with-zlib \
 		--with-xplc \
 		|| die "configure failed"
