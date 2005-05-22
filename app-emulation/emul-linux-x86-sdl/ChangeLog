@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.9 2005/04/21 10:48:23 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.10 2005/05/22 10:14:36 blubb Exp $
+
+  22 May 2005; Simon Stelling <blubb@gentoo.org>
+  emul-linux-x86-sdl-2.1.ebuild:
+  stable on amd64
 
   21 Apr 2005; Herbie Hopkins <herbs@gentoo.org> +metadata.xml,
   -emul-linux-x86-sdl-2.0.ebuild:
