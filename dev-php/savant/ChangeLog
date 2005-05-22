@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/savant
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/savant/ChangeLog,v 1.3 2004/09/05 05:51:23 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/savant/ChangeLog,v 1.4 2005/05/22 10:40:20 stuart Exp $
+
+*savant-2.3.3 (22 May 2005)
+
+  22 May 2005; Stuart Herbert <stuart@gentoo.org> +savant-2.3.3.ebuild:
+  Version bump; thanks to Joby Walker <zorloc@imperium.org>
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> savant-1.5.2.ebuild:
   Added missing IUSE.
