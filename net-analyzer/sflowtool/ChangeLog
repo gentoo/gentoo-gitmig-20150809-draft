@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/sflowtool
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.1 2005/05/22 16:23:49 strerror Exp $
+
+*sflowtool-3.7 (22 May 2005)
+
+  22 May 2005; Benjamin Smee <strerror@gentoo.org> +metadata.xml,
+  +sflowtool-3.7.ebuild:
+  Initial Import
+
