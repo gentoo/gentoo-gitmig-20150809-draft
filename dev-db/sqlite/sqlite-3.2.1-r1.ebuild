@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.2.1-r1.ebuild,v 1.7 2005/04/24 10:27:19 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.2.1-r1.ebuild,v 1.8 2005/05/22 15:21:34 swegener Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.sqlite.org"
 #   - 20041203, Armando Di Cianno <fafhrd@gentoo.org>
 DEPEND="virtual/libc
 	!nothreadsafe? ( !ppc-macos? ( sys-libs/glibc ) )
-	doc? (dev-lang/tcl)"
+	doc? ( dev-lang/tcl )"
 SLOT="3"
 LICENSE="as-is"
 
