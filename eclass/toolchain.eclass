@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.148 2005/05/22 01:25:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.149 2005/05/22 01:28:59 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1041,8 +1041,10 @@ gcc_do_configure() {
 	if is_uclibc ; then
 		confgcc="${confgcc} --disable-__cxa_atexit --enable-sjlj-exceptions --enable-target-optspace"
 	else
-		confgcc="${confgcc} --enable-__cxa_atexit --enable-clocale=gnu"
+		confgcc="${confgcc} --enable-__cxa_atexit"
 	fi
+	[[ ${CTARGET} == *-gnu* ]] && confgcc="${confgcc} --enable-clocale=gnu"
+	[[ ${CTARGET} == *-uclibc* ]] && confgcc="${confgcc} --enable-clocale=uclibc"
 
 	# Nothing wrong with a good dose of verbosity
 	echo
