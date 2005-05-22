@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 bfe9d4548076e51a7d253391bcfa76b0 xmms-imms-2.0.3.ebuild 1338
-MD5 ac76f6974ef8f541696f9ad05c237b99 xmms-imms-2.1.1.ebuild 1363
+MD5 8d4cc393d8f801b51eea3759ed4d69f2 xmms-imms-2.1.1.ebuild 1382
 MD5 4a3f07f3a22b1b15358f8decc1e4c75e xmms-imms-2.0.2.ebuild 1338
-MD5 44755f8029f7aecfb72c3d6eab9b5155 ChangeLog 4854
+MD5 ccc0a683923211b71ce2535c1474b93a ChangeLog 5028
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 b635e4c80bb35a3474138dc317541714 files/2.1.1-xorg.patch 442
 MD5 3d1f3a0eb7144d8230e55f5968e0cd96 files/digest-xmms-imms-2.0.2 62
@@ -15,7 +15,7 @@ MD5 e5403b0fc1232e7de884fe7af6d709e0 files/2.0.3-xorg.patch 271
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCkH6k06ebR+OMO78RAnJVAJ44OZJ6vNvEhdIesZ7Spw6+axGLAgCeP3t1
-lbQScO3kaBdRv+0ccIkWEjs=
-=YLVI
+iD8DBQFCkI+x06ebR+OMO78RAnTvAJ4xCOVLuLXztHHBWEnZtUGzyLgj3wCdFcQ+
+dJzvZeXVT5WWrMgZiyTp+hs=
+=gvdA
 -----END PGP SIGNATURE-----
