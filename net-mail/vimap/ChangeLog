@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vimap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.16 2005/05/10 19:51:04 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.17 2005/05/22 19:54:23 ferdy Exp $
+
+  22 May 2005; Fernando J. Pereda <ferdy@gentoo.org> vimap-2002c-r3.ebuild:
+  pseudo-depend on mailbase +pam
 
   10 May 2005; Rene Nussbaumer <killerfox@gentoo.org> vimap-2002c-r3.ebuild:
   stable on hppa

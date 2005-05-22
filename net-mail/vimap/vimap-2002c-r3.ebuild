@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c-r3.ebuild,v 1.6 2005/05/10 19:51:04 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c-r3.ebuild,v 1.7 2005/05/22 19:54:23 ferdy Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,14 +45,13 @@ pkg_setup() {
 	fi
 	echo
 	# Warn people with pam flag deactivated.
-	if ! built_with_use net-mail/mailbase pam;
-	then
+	if ! built_with_use net-mail/mailbase pam ; then
 		echo
-		ewarn "It is recommended to have the net-mail/mailbase package"
+		ewarn "It is needed to have the net-mail/mailbase package"
 		ewarn "  built with the pam use flag activated. Please rebuild"
 		ewarn "  net-mail/mailbase with pam activated."
 		echo
-		epause 3
+		die "mailbase has to be built with use pam"
 	fi
 }
 src_unpack() {
@@ -152,15 +151,6 @@ src_install() {
 
 	docinto rfc
 	dodoc docs/rfc/*.txt
-
-	## pam.d files are provided by mailbase
-	#   unless mailbase wasn't built with pam.
-	if ! built_with_use net-mail/mailbase pam;
-	then
-		insinto /etc/pam.d
-		newins ${FILESDIR}/uw-imap.pam-system-auth imap
-		newins ${FILESDIR}/uw-imap.pam-system-auth pop
-	fi
 
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/uw-imap.xinetd  imap
