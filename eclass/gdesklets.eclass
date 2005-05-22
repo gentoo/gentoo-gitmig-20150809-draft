@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.1 2005/04/19 03:16:52 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.2 2005/05/22 03:19:42 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -75,8 +75,6 @@ gdesklets_src_install() {
 		[[ -d ${GD_INSDIR} ]] || \
 			dodir ${GD_INSDIR}
 		
-		insinto ${GD_INSDIR}
-		
 		# For each of the Display files, there may be 
 		# scripts included inline which don't necessarily
 		# follow any naming scheme.
@@ -116,9 +114,11 @@ gdesklets_src_install() {
 					-o -iname "*.jpg" -o -iname "*.gif"`)
 			
 			for G in ${GFX[@]}; do
+				
 				insinto ${GD_INSDIR}/`dirname ${G}`
 				doins ${G}
-			done
+				
+			done # for in ${GFX}
 			
 			cd ${S}
 			
@@ -141,10 +141,11 @@ gdesklets_src_install() {
 		for CTRL in ${CONTROL_INITS[@]}; do
 			
 			cd `dirname ${CTRL}`
+			addpredict /usr/lib/gdesklets # This absolutely must be fixed.
 			CTRL_NAME=$( ${GDESKLETS_INST_DIR}/gdesklets-control-getid `pwd` )
 			einfo "Installing Control ${CTRL_NAME}"
 			# This creates the subdirectory of ${CTRL_NAME} 
-           	# in the global Controls directory
+                	# in the global Controls directory
 			[[ -d ${GD_INSDIR}/${CTRL_NAME} ]] || \
 				dodir ${GD_INSDIR}/${CTRL_NAME}
 			
