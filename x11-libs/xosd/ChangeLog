@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.45 2005/05/16 11:11:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.46 2005/05/22 19:07:01 weeve Exp $
+
+  22 May 2005; Jason Wever <weeve@gentoo.org> xosd-2.2.8-r1.ebuild:
+  Stable on SPARC.
 
   16 May 2005; Heinrich Wendel <lanius@gentoo.org>
   +files/xosd-2.2.14-bmp-fixes.patch, xosd-2.2.14.ebuild:
