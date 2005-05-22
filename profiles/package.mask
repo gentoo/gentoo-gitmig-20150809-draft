@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4002 2005/05/22 13:18:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4003 2005/05/22 14:09:02 sebastian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Sebastian Bergmann <sebastian@gentoo.org> (22 May 2005)
+# Migration from Turck MMCache to eAccelerator,
+# see bug #82670.
+dev-php/turck-mmcache
 
 # Luca Barbato <lu_zero@gentoo.org> (22 May 2005)
 # Special version, masked since doesn't work standard systems.
