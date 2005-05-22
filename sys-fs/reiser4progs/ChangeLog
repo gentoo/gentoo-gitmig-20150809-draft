@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiser4progs
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.20 2005/05/15 11:45:32 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.21 2005/05/22 06:57:34 vapier Exp $
+
+  22 May 2005; Mike Frysinger <vapier@gentoo.org> reiser4progs-1.0.4.ebuild:
+  Add fix for broken libtool relinking by Simone Gotti #74817.
 
   15 May 2005; Markus Rothe <corsair@gentoo.org> reiser4progs-1.0.4.ebuild:
   Added ~ppc64 to KEYWORDS

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.4.ebuild,v 1.3 2005/05/15 11:45:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.4.ebuild,v 1.4 2005/05/22 06:57:34 vapier Exp $
 
 inherit eutils
 
@@ -18,8 +18,10 @@ DEPEND=">=sys-libs/libaal-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	cd "${S}"
+	# bundled libtool sucks, so rebuild autotools #74817
+	aclocal && libtoolize -c -f && autoconf && automake || die "autotools failed"
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 	cat << EOF > run-ldconfig
 #!/bin/sh
 true
@@ -54,7 +56,7 @@ src_install() {
 	dodir /usr/$(get_libdir)
 	local l=""
 	for l in libreiser4-minimal libreiser4 librepair ; do
-		mv ${D}/$(get_libdir)/${l}.{a,la} ${D}/usr/$(get_libdir)/
+		mv "${D}"/$(get_libdir)/${l}.{a,la} "${D}"/usr/$(get_libdir)/
 		dosym ../usr/lib/${l}.a /lib/${l}.a
 		gen_usr_ldscript ${l}.so
 	done
