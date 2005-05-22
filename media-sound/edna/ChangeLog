@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.16 2005/05/01 17:02:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.17 2005/05/22 04:19:10 nerdboy Exp $
+
+  22 May 2005; Steve Arnold <nerdboy@gentoo.org> edna-0.5-r4.ebuild:
+  bump stable on x86
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> edna-0.5-r3.ebuild:
   Stable on ppc.
