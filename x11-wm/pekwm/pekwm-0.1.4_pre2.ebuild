@@ -1,18 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-20050227.ebuild,v 1.1 2005/03/01 04:00:29 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.4_pre2.ebuild,v 1.1 2005/05/22 00:43:16 fserb Exp $
 
 inherit eutils
 
-MYPV=${PV/./-}
-MYP=${PN}-dev-${PV%.*}
+MYP=${P/_/}
 S=${WORKDIR}/${MYP}
 
 IUSE="truetype perl xinerama debug"
 
 DESCRIPTION="A small window mananger based on aewm++"
 HOMEPAGE="http://pekwm.org"
-SRC_URI="http://pekwm.org/files/${PN}-dev-${MYPV}.tar.bz2
+SRC_URI="http://pekwm.org/files/${MYP}.tar.bz2
 		mirror://gentoo/${PN}-themes.tar.bz2"
 
 LICENSE="GPL-2"

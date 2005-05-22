@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>desktop-wm</herd>
+	<maintainer><email>fserb@gentoo.org</email></maintainer>
 	<longdescription>
 		Pekwm is a window manager based on aewm++, but it no longer resembles 
 		it. It is highly configurable, rather fast, and aimed towards being 
