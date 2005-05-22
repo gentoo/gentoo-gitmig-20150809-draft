@@ -56,3 +56,7 @@ media-sound/sfc
 media-sound/supercollider
 media-sound/tapiir
 media-video/gephe
+
+# Jason Wever <weeve@gentoo.org>
+# Masking versions of libffi that don't apply to this profile
+>=dev-libs/libffi-3.4.1

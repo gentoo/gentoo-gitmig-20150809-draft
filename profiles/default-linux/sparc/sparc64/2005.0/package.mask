@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.10 2005/04/05 00:00:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.11 2005/05/22 13:57:37 weeve Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Something between 2.3.3.20040420 and 2.3.4.20040619 breaks blackdown-jdk
@@ -53,3 +53,7 @@ media-sound/sfc
 media-sound/supercollider
 media-sound/tapiir
 media-video/gephe
+
+# Jason Wever <weeve@gentoo.org>
+# Masking versions of libffi that don't apply to this profile
+>=dev-libs/libffi-3.4.1
