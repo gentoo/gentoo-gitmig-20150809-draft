@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f88a28d1160415ed9da94dfacb6cf076 vlc-0.8.1-r1.ebuild 6957
 MD5 652bc3bbeeeb343edfed07a13e2ecb7a vlc-0.6.2.ebuild 5551
 MD5 658378ba6c79c6b6f2e02ccff9bffe58 vlc-0.8.1-r3.ebuild 7228
@@ -15,3 +18,10 @@ MD5 d766f772e3e3be4f8d6cbf4d54bf2700 files/digest-vlc-0.6.2 63
 MD5 ed198b2a917f7be36174f7b05dcad8a3 files/digest-vlc-0.7.2 63
 MD5 0ee383795d543048e4d47eb58f6d36bb files/mpeg2dec-20030612-configure.in-fpic.patch 1065
 MD5 09c124e45049f615519ded3278a97376 files/0.6.2-mozilla-fix.patch 1261
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCkKZFI1lqEGTUzyQRAqvnAJ4jmVcnQ3olGgHNg0GYW5hFrnQnkQCeNB2+
+eIMvs9PpWaz9QHE4mJPGI3Q=
+=Mi10
+-----END PGP SIGNATURE-----
