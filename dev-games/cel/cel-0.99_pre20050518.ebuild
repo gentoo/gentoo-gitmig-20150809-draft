@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-0.99_pre20050518.ebuild,v 1.1 2005/05/21 18:02:14 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-0.99_pre20050518.ebuild,v 1.2 2005/05/22 14:57:09 malverian Exp $
 
 inherit eutils debug
 
@@ -23,12 +23,12 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}
 
-CRYSTAL=$(cs-config --prefix)
-CSCONFPATH=$CRYSTAL
-CRYSTAL_PREFIX=$CRYSTAL
-CEL_PREFIX=$CRYSTAL
-
 src_compile() {
+	CRYSTAL=$(cs-config --prefix)
+	CSCONFPATH=$CRYSTAL
+	CRYSTAL_PREFIX=$CRYSTAL
+	CEL_PREFIX=$CRYSTAL
+
 	local prefix=${CEL_PREFIX}
 	local my_conf=""
 

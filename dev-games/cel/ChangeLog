@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.11 2005/05/21 18:02:14 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.12 2005/05/22 14:57:09 malverian Exp $
+
+  22 May 2005; Philip Walls <malverian@gentoo.org> cel-0.99_pre20050518.ebuild:
+  Got rid of global variable that was using output of a command
 
 *cel-0.99_pre20050518 (21 May 2005)
 
