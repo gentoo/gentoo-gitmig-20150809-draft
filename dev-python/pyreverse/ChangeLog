@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyreverse
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.7 2004/12/30 23:56:37 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.8 2005/05/22 20:21:15 weeve Exp $
+
+  22 May 2005; Jason Wever <weeve@gentoo.org> pyreverse-0.4.2-r1.ebuild:
+  Added ~sparc keyword.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

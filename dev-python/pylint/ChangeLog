@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.16 2005/04/14 18:19:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.17 2005/05/22 20:16:43 weeve Exp $
+
+  22 May 2005; Jason Wever <weeve@gentoo.org> pylint-0.6.4.ebuild:
+  Added ~sparc keyword.
 
 *pylint-0.6.4 (14 Apr 2005)
 
