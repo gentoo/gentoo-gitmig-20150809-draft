@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.12.1.ebuild,v 1.1 2005/04/20 03:43:45 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.12.1.ebuild,v 1.2 2005/05/22 15:25:39 swegener Exp $
 
 inherit ruby gems
 
@@ -25,5 +25,3 @@ DEPEND="=dev-lang/ruby-1.8*
 	sqlite? ( >=dev-ruby/sqlite-ruby-2.2.2 )
 	mysql? ( >=dev-ruby/mysql-ruby-2.5 )
 	postgres? ( >=dev-ruby/ruby-postgres-0.7.1 )"
-
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.10.1.ebuild,v 1.1 2005/03/11 02:36:28 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.10.1.ebuild,v 1.2 2005/05/22 15:25:39 swegener Exp $
 
 inherit ruby gems
 
@@ -21,7 +21,7 @@ DEPEND="=dev-lang/ruby-1.8*
 	>=dev-ruby/activerecord-1.8.0
 	>=dev-ruby/actionmailer-0.7.1
 	>=dev-ruby/actionwebservice-0.6.0
-	sqlite? ( >=dev-ruby/sqlite-ruby-2.2.2)
+	sqlite? ( >=dev-ruby/sqlite-ruby-2.2.2 )
 	mysql? ( >=dev-ruby/mysql-ruby-2.5 )
 	postgres? ( >=dev-ruby/ruby-postgres-0.7.1 )"
 
@@ -31,4 +31,3 @@ pkg_postinst() {
 	einfo "upgrade to 0.10.1 please follow these instructions:"
 	einfo "http://manuals.rubyonrails.com/read/book/15"
 }
-

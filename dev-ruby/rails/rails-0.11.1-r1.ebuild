@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.11.1-r1.ebuild,v 1.3 2005/04/01 18:15:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.11.1-r1.ebuild,v 1.4 2005/05/22 15:25:39 swegener Exp $
 
 inherit ruby gems
 
@@ -35,4 +35,3 @@ pkg_postinst() {
 	einfo "If you need to upgrade an existing 0.10.* app to 0.11.1 cd to the app's"
 	einfo "directory and run 'rails . --skip'"
 }
-
