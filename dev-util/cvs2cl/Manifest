@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f8d09acbdd04b0cd381f7e753fa127cf cvs2cl-2.58.ebuild 516
 MD5 a856ff842421fdcc744c61dbbb38559a cvs2cl-2.57.ebuild 518
 MD5 4d2d7c5a24409b32b468d92a6095629b cvs2cl-2.59.ebuild 519
@@ -6,3 +9,10 @@ MD5 e894c7bf94ee57217db76f5aebaca7b5 metadata.xml 256
 MD5 98205922f409f76d1795cddfcd71602a files/digest-cvs2cl-2.57 62
 MD5 8590965f957654921cfc6d0998058e02 files/digest-cvs2cl-2.58 62
 MD5 1a964160b7817b2848375b913ac9e6cf files/digest-cvs2cl-2.59 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCkHZtEZCkKN40op4RAhuZAKCYxMJFxaTqHCBP4Pa8yvZC8A6ZHACbBOQg
++3z67IZhdoAWsklu4+12IAc=
+=+7Jn
+-----END PGP SIGNATURE-----
