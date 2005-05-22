@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.23 2005/05/17 18:40:44 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.24 2005/05/22 11:07:15 blubb Exp $
+
+  22 May 2005; Simon Stelling <blubb@gentoo.org> xsp-1.0.9.ebuild:
+  added ~amd64 keyword
 
 *xsp-1.0.9 (17 May 2005)
 
