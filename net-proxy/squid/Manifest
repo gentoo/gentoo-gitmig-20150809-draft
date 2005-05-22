@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 7050bdeeb1b696ffe75c7ed1679587d3 squid-2.5.9.ebuild 6019
 MD5 174a6f947e91e98fba28ad71547b71b7 squid-2.5.10_rc3.ebuild 6106
-MD5 832225e45762145a32534e73da6cbdbc squid-2.5.10.ebuild 6137
+MD5 7fea06e3f6f917f2b940fa6e2975eb54 squid-2.5.10.ebuild 6141
 MD5 733f7886fe1d6e22c8a90a7d820a6590 squid-2.5.9-r4.ebuild 6088
 MD5 69ec951142b2a8cbcd47d3ca6bc25390 ChangeLog 18485
 MD5 c2a21a50fca07975a99242ebc54c2f88 metadata.xml 330
@@ -23,7 +23,7 @@ MD5 208e20395de910fc529fcfb8031bfb13 files/squid.pam-include 326
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjOjTjiC39V7gKu0RAuWmAJ97vYsg2oZPYB7ImUzEfdQUJGqtOACaA3kH
-A/Wz/B3L2a3d8p01Btv7Dpw=
-=CM6y
+iD8DBQFCkIzhjiC39V7gKu0RAhH7AJoDlasrcB5kWK/CoAFGud5+0hNebgCgrMVk
+vKs12miiaWtBUDRNP4nFjYw=
+=jFLE
 -----END PGP SIGNATURE-----
