@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.244 2005/05/17 22:25:56 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.245 2005/05/22 20:57:01 nerdboy Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -59,6 +59,7 @@ dba - Enables dbm-compatible layers
 dbase - Adds support for dbase file format
 dbm - Adds support for generic DBM databases.
 dbmaker - Adds support for dbmaker database server
+dbus - Enable dbus support for anything that needs it (gpsd, gnomemeeting, etc)
 dbx - Adds database abstraction layer
 debug - Tells configure and the makefiles to build for debugging. Effects vary across packages, but generally it will at least add -g to CFLAGS. Remember to set FEATURES=nostrip too
 dedicated - Adds support for dedicated game servers
