@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.20 2005/05/02 02:34:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.21 2005/05/22 17:24:14 dertobi123 Exp $
+
+  22 May 2005; Tobias Scherbaum <dertobi123@gentoo.org> lshw-02.03b.ebuild:
+  Stable on ppc.
 
   02 May 2005; Jason Wever <weeve@gentoo.org> lshw-02.03b.ebuild:
   Stable on SPARC.
