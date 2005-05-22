@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-accelerator
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-accelerator/ChangeLog,v 1.10 2004/07/04 23:19:27 robbat2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-accelerator/ChangeLog,v 1.11 2005/05/22 10:23:22 stuart Exp $
+
+  22 May 2005; Stuart Herbert <stuart@gentoo.org>
+  php-accelerator-1.3.3-r1.ebuild:
+  Updated dependencies to require PHP4.  See bug #60443
 
   04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org>
   php-accelerator-1.3.3-r1.ebuild:

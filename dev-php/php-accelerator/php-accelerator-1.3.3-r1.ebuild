@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-accelerator/php-accelerator-1.3.3-r1.ebuild,v 1.6 2004/09/25 00:32:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-accelerator/php-accelerator-1.3.3-r1.ebuild,v 1.7 2005/05/22 10:23:22 stuart Exp $
 
 DESCRIPTION="The ionCube PHP Accelerator"
 HOMEPAGE="http://www.php-accelerator.co.uk/"
@@ -10,7 +10,8 @@ KEYWORDS="~alpha x86 ~ppc"
 IUSE=""
 RESTRICT="nomirror nostrip"
 DEPEND="!dev-php/turck-mmcache
-	    !dev-php/PECL-apc"
+	    !dev-php/PECL-apc
+		virtual-php-4*"
 
 # Detect machine type
 PHP_NO_BUILD=
