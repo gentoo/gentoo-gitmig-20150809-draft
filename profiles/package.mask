@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4003 2005/05/22 14:09:02 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4004 2005/05/22 22:39:23 nixphoeni Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,26 @@
 ##
 ##   End example
 ##
+
+# Joe Sapp <nixphoeni@gentoo.org> (22 May 2005)
+# Removing old desklets that use deprecated functionality.
+# Old -core's are also scheduled to be removed
+x11-plugins/desklet-battery
+x11-plugins/desklet-cornerxmms
+x11-plugins/desklet-goodweather
+x11-plugins/desklet-ltvariations
+x11-plugins/desklet-multitail
+x11-plugins/desklet-psidisplays
+x11-plugins/desklet-psiextras
+x11-plugins/desklet-psisensors
+x11-plugins/desklet-rhythmlet
+x11-plugins/desklet-rssgrab
+x11-plugins/desklet-sysinfo
+x11-plugins/desklet-temperature
+x11-plugins/desklet-weather
+x11-plugins/desklet-wireless
+<gnome-extra/gdesklets-core-0.33.1
+
 
 # Sebastian Bergmann <sebastian@gentoo.org> (22 May 2005)
 # Migration from Turck MMCache to eAccelerator,
