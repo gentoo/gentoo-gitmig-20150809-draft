@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sysvinit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.17 2005/01/07 15:48:19 pebenito Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.18 2005/05/22 07:33:07 vapier Exp $
+
+  22 May 2005; Mike Frysinger <vapier@gentoo.org> sysvinit-2.86.ebuild:
+  Add support for kexec #80220 by Stefan Schweizer.
 
   07 Jan 2005; Chris PeBenito <pebenito@gentoo.org> sysvinit-2.86.ebuild:
   Fix libselinux dep.  The updated SELinux patch needs 1.18.
