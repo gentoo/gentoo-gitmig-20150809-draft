@@ -1,6 +1,12 @@
 # ChangeLog for app-text/mecab
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.14 2005/05/06 14:40:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.15 2005/05/22 15:50:53 usata Exp $
+
+*mecab-0.81 (22 May 2005)
+
+  22 May 2005; Mamoru KOMACHI <usata@gentoo.org> mecab-0.79.ebuild,
+  mecab-0.80.ebuild, +mecab-0.81.ebuild:
+  Version bumped. Marked previous versions stable on x86.
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> mecab-0.78.ebuild:
   Stable on sparc
