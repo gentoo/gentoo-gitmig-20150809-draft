@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r2.ebuild,v 1.4 2005/03/22 18:40:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r2.ebuild,v 1.5 2005/05/22 15:58:40 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,12 +19,19 @@ DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	ncurses? ( sys-libs/ncurses )
 	!arm? (
-	xmms? ( media-sound/xmms )
-	esd? ( >=media-sound/esound-0.2.5
-		>=media-libs/audiofile-0.1.5 )
-	!amd64? ( gtk? ( =x11-libs/gtk+-1.2*
-		>=media-libs/imlib-1.9.10-r1 ))
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 ) )"
+		xmms? ( media-sound/xmms )
+		esd? (
+			>=media-sound/esound-0.2.5
+			>=media-libs/audiofile-0.1.5
+		)
+		!amd64? (
+			gtk? (
+				=x11-libs/gtk+-1.2*
+				>=media-libs/imlib-1.9.10-r1
+			)
+		)
+		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
+	)"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
