@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.147 2005/05/21 07:00:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.148 2005/05/22 01:25:01 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1090,9 +1090,6 @@ gcc_do_configure() {
 # Travis Tilley <lv@gentoo.org> (04 Sep 2004)
 #
 gcc_do_make() {
-	# Setup -j in MAKEOPTS
-	get_number_of_jobs
-
 	# Only build it static if we are just building the C frontend, else
 	# a lot of things break because there are not libstdc++.so ....
 	if use static && [[ ${GCC_LANG} == "c" ]] ; then
