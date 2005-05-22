@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.3.ebuild,v 1.5 2004/06/24 23:07:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.3.ebuild,v 1.6 2005/05/22 19:09:25 weeve Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~ppc sparc x86"
 
 DEPEND=">=app-doc/doxygen-1.2.16"
 

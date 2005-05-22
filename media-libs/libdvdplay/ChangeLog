@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdplay
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/ChangeLog,v 1.13 2005/03/04 21:20:51 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/ChangeLog,v 1.14 2005/05/22 19:07:56 weeve Exp $
+
+  22 May 2005; Jason Wever <weeve@gentoo.org> libdvdplay-1.0.1.ebuild:
+  Stable on SPARC.
 
   04 Mar 2005; Kito <kito@gentoo.org> libdvdplay-1.0.1.ebuild:
   ~ppc-macos keyword closes bug 73544
