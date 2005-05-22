@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.25 2005/01/01 16:28:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.26 2005/05/22 13:08:01 usata Exp $
 
 inherit libtool sgml-catalog eutils flag-o-matic gnuconfig
 
@@ -61,10 +61,9 @@ src_install() {
 	dodir /usr
 	dodir /usr/lib
 
-	make prefix=${D}/usr \
-		libdir=${D}/usr/$(get_libdir) \
-	  	datadir=${D}/usr/share/sgml/${P} \
-		install || die
+	make DESTDIR=${D} \
+		libdir=/usr/$(get_libdir) \
+		install install-man || die
 
 	dosym openjade  /usr/bin/jade
 	dosym onsgmls   /usr/bin/nsgmls
