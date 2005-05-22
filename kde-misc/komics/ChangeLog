@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/komics
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/ChangeLog,v 1.10 2005/04/06 15:17:05 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/ChangeLog,v 1.11 2005/05/22 16:03:37 dertobi123 Exp $
+
+  22 May 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  komics-1.4-r2.ebuild:
+  Stable on ppc.
 
   06 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> komics-1.4-r2.ebuild:
   Marked stable on amd64.
