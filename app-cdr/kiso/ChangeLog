@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/kiso
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.13 2005/05/07 19:09:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.14 2005/05/22 00:13:20 carlo Exp $
+
+*kiso-0.8.1 (22 May 2005)
+
+  22 May 2005; Carsten Lohrke <carlo@gentoo.org> +kiso-0.8.1.ebuild:
+  version bump
 
   07 May 2005; Carsten Lohrke <carlo@gentoo.org> kiso-0.7b.ebuild:
   dependency correction
