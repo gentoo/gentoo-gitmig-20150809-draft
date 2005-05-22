@@ -1,4 +1,15 @@
-MD5 801de13374b951b9144791bc9a513bd3 ChangeLog 962
-MD5 0f9db4a066b5eae15c004a9fc40fae65 examiner-0.5.ebuild 859
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 61a4a30e0ae1c44b6c5db2587e002744 ChangeLog 1171
+MD5 0dcea4661137874d91669613d53591ed examiner-0.5-r1.ebuild 962
 MD5 20ee07270b7eadc3659cd96a982e460f metadata.xml 230
-MD5 547b032a7f8b384988edd55eff681928 files/digest-examiner-0.5 63
+MD5 9c8083e2cacedcf0deb6bb8effa30eeb files/examiner-0.5-perl.patch 793
+MD5 547b032a7f8b384988edd55eff681928 files/digest-examiner-0.5-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCj9clmdTrptrqvGERAuaDAJ9/BQ22OdSTYvyrWEq16DO7h9/EogCfYDR7
+z4VZG30fKwGkMFXLu7UOcE8=
+=or2v
+-----END PGP SIGNATURE-----

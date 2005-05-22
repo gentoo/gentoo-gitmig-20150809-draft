@@ -1,6 +1,13 @@
 # ChangeLog for app-forensics/examiner
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.5 2005/01/01 14:22:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.6 2005/05/22 00:49:26 dragonheart Exp $
+
+*examiner-0.5-r1 (22 May 2005)
+
+  22 May 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/examiner-0.5-perl.patch, -examiner-0.5.ebuild,
+  +examiner-0.5-r1.ebuild:
+  Added perl patch thanks to DerCorny.
 
   14 Dec 2004; Daniel Black <dragonheart@gentoo.org> examiner-0.5.ebuild:
   ppc stable
