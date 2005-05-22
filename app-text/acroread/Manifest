@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e10c20c869c35e632b87dbc8b30fcb30 acroread-7.0.ebuild 2246
 MD5 5b5f9119fe3b2a9644cd0730e9ed9ded acroread-5.10.ebuild 2488
-MD5 19aa29e36930de44a02340d1144a5233 acroread-7.0.0.2-r1.ebuild 2480
+MD5 17a606af4495e98259ba326d9a2b9b9a acroread-7.0.0.2-r1.ebuild 2482
 MD5 d736bd411edf2a827d40c0982190cde2 acroread-7.0.0.2.ebuild 2194
 MD5 5b84c0dcb429f85ef2a863b0155096b1 ChangeLog 9264
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
@@ -12,10 +9,3 @@ MD5 d0981fc5a58874b78a6f2a2b73d3e43d files/digest-acroread-5.10 63
 MD5 a0a63a0ea609625aa0bfe86919510102 files/digest-acroread-7.0.0.2 79
 MD5 c54a04836864a99a8792ef5817a968c1 files/digest-acroread-7.0 73
 MD5 00414d6be2296740cc5225ca93a3d035 files/acroread-scim.patch 488
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCkKUjI1lqEGTUzyQRAnlEAJ0WTIEXymSZfCnKq55FSVwbN9IfiACfaE1W
-m2qOpujM4X7tQY8X8wAIxWY=
-=Dy+B
------END PGP SIGNATURE-----
