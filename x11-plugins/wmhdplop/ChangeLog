@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmhdplop
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.3 2004/09/04 01:15:13 s4t4n Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.4 2005/05/22 10:22:17 blubb Exp $
+
+  22 May 2005; Simon Stelling <blubb@gentoo.org> wmhdplop-0.9.6.ebuild:
+  added ~amd64 keyword
 
   04 Sep 2004; Michele Noberasco <s4t4n@gentoo.org> wmhdplop-0.9.6.ebuild:
   Stable for x86.
