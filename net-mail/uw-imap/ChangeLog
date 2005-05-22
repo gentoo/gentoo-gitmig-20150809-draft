@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.68 2005/05/21 12:41:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.69 2005/05/22 18:15:37 killerfox Exp $
+
+  22 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  uw-imap-2004c-r3.ebuild:
+  Stable on hppa
 
   21 May 2005; Markus Rothe <corsair@gentoo.org> uw-imap-2004c-r3.ebuild:
   Added ~ppc64 to KEYWORDS
