@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20.ebuild,v 1.14 2005/04/24 12:40:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20.ebuild,v 1.15 2005/05/22 15:23:47 swegener Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -26,7 +26,8 @@ RDEPEND="virtual/libc
 		|| (
 			>=net-mail/courier-imap-3.0.7
 			>=mail-mta/courier-0.46
-	))
+		)
+	)
 	java? ( virtual/jdk )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
