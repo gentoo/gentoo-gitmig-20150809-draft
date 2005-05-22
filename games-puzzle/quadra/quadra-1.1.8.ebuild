@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.9 2005/05/17 18:40:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.10 2005/05/22 13:35:53 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -10,18 +10,17 @@ SRC_URI="mirror://sourceforge/quadra/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="svga"
 
-RDEPEND="virtual/x11
+DEPEND="virtual/x11
 	>=media-libs/libpng-1.2.1
 	sys-libs/zlib
 	svga? ( media-libs/svgalib )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	[ $(gcc-major-version) == 3 ] && epatch "${FILESDIR}/${P}-gcc3.patch"
 	epatch "${FILESDIR}/libpng-1.2.5.patch"
 	use amd64 && epatch "${FILESDIR}/${P}-amd64.patch"
