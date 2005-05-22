@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.33 2005/05/22 11:04:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.34 2005/05/22 14:18:30 compnerd Exp $
+
+  22 May 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  gnu-classpath-0.15-r1.ebuild:
+  Removing jikes use flag for hard dep on jikes
 
   22 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   gnu-classpath-0.15-r1.ebuild:
