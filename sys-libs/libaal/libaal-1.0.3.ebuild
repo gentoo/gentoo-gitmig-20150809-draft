@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.3.ebuild,v 1.1 2004/12/16 17:21:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.3.ebuild,v 1.2 2005/05/22 06:44:16 vapier Exp $
 
 inherit eutils
 
@@ -33,20 +33,17 @@ src_compile() {
 	econf \
 		--enable-libminimal \
 		--enable-memory-manager \
-		--libdir=/$(get_libdir) || die "configure failed"
+		|| die "configure failed"
 	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS CREDITS ChangeLog NEWS README THANKS TODO
 
-	# move silly .a libs out of /
-	dodir /usr/$(get_libdir)
-	local l=""
-	for l in libaal libaal-minimal ; do
-		mv ${D}/$(get_libdir)/${l}.{a,la} ${D}/usr/$(get_libdir)/
-		dosym /usr/$(get_libdir)/${l}.a /$(get_libdir)/${l}.a
-		gen_usr_ldscript ${l}.so
-	done
+	# move .so into / (need for fsck)
+	dodir /$(get_libdir)
+	mv "${D}"/usr/$(get_libdir)/libaal*.so* "${D}"/$(get_libdir)/
+	gen_usr_ldscript libaal.so
+	gen_usr_ldscript libaal-minimal.so
 }
