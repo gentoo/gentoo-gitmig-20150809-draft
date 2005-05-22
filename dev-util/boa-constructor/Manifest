@@ -1,13 +1,25 @@
-MD5 2c4a37a1d4760ec3cb8af71011d72b9c boa-constructor-0.3.1_alpha.ebuild 1193
-MD5 e459554f1e32edb2a3e246f24ba2d578 boa-constructor-0.2.3_alpha.ebuild 1208
-MD5 7e8237fba7a4dfcc01d7501289d125ed metadata.xml 270
-MD5 2cc9d00736d0e9d0d94a2de3eecae447 ChangeLog 2258
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9e8e0ccabfaad4366cf1dab76a262675 ChangeLog 2438
 MD5 5a9d4c8fd9890de134744117069cb9a6 boa-constructor-0.1.0_alpha.ebuild 1228
-MD5 ba0c44f0f37467c94726eae1fd0ec420 boa-constructor-0.3.0_alpha.ebuild 1189
+MD5 e459554f1e32edb2a3e246f24ba2d578 boa-constructor-0.2.3_alpha.ebuild 1208
 MD5 91fcf1a589ec678b8142d7518af9294a boa-constructor-0.2.8_pre20040620.ebuild 1160
-MD5 023746a90d880f9f8c94118089d5d531 files/boa-constructor 387
+MD5 7e8237fba7a4dfcc01d7501289d125ed metadata.xml 270
+MD5 ba0c44f0f37467c94726eae1fd0ec420 boa-constructor-0.3.0_alpha.ebuild 1189
+MD5 2c4a37a1d4760ec3cb8af71011d72b9c boa-constructor-0.3.1_alpha.ebuild 1193
+MD5 286cf43c77600454802e9174f7c0e066 boa-constructor-0.4.0_alpha.ebuild 1256
+MD5 343cbbdca5ed6c641e11244a33a7d1bd files/boa-constructor 386
 MD5 9c8b887e6848c9222fad7eb5c252f5db files/digest-boa-constructor-0.1.0_alpha 81
-MD5 b923e7ad0c6fede07186966b20b7e428 files/digest-boa-constructor-0.3.0_alpha 75
-MD5 9ce8d0c471cb4659d5b5a0efea54f69e files/digest-boa-constructor-0.2.8_pre20040620 87
-MD5 43786ac7f036caeab3d9802a149df6a1 files/digest-boa-constructor-0.3.1_alpha 71
 MD5 e12855e2a10fb73665d3c7c2c11d66fa files/digest-boa-constructor-0.2.3_alpha 75
+MD5 9ce8d0c471cb4659d5b5a0efea54f69e files/digest-boa-constructor-0.2.8_pre20040620 87
+MD5 b923e7ad0c6fede07186966b20b7e428 files/digest-boa-constructor-0.3.0_alpha 75
+MD5 43786ac7f036caeab3d9802a149df6a1 files/digest-boa-constructor-0.3.1_alpha 71
+MD5 d0996baa9ff17ae9c1fc261fc88d051b files/digest-boa-constructor-0.4.0_alpha 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCkBjeHOCQyz1WCXYRAmkvAJ9bWnvwA7E9Hi4tcPdUrcqekRWdQwCfUpJo
+7yXNXnMiif6dT8HgKBC76Mk=
+=9vMD
+-----END PGP SIGNATURE-----
