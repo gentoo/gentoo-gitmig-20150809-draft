@@ -1,0 +1,16 @@
+Make sure the internal types match that of png.
+
+http://bugs.gentoo.org/83603
+
+--- src-IL/src/il_png.c
++++ src-IL/src/il_png.c
+@@ -284,7 +284,8 @@
+ {
+ 	ILuint		i;
+ 	png_bytepp	row_pointers = NULL;
+-	ILuint		width, height, channels;
++	ILuint		channels;
++	png_uint_32	width, height;
+ 	ILdouble	screen_gamma = 1.0, image_gamma;
+ 	ILuint		bit_depth;
+ 
