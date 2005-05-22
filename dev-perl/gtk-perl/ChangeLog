@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.36 2005/05/21 17:14:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.37 2005/05/22 15:29:21 mcummings Exp $
+
+  22 May 2005; Michael Cummings <mcummings@gentoo.org>
+  gtk-perl-0.7009-r1.ebuild:
+  unmasking for sparc
 
   21 May 2005; Michael Cummings <mcummings@gentoo.org>
   gtk-perl-0.7009-r1.ebuild:

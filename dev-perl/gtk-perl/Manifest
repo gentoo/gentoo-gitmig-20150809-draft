@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 00908ec8e76b78f08c62165a944330a0 ChangeLog 5984
+MD5 6ec9b70ea7ac3c10c9cc8465cf42b3a2 ChangeLog 6091
 MD5 74cee8ff4bbcb32c4a3612064c2948fa gtk-perl-0.7008-r10.ebuild 1128
 MD5 07483c55c61611ee18114cc68c7d73c9 gtk-perl-0.7008-r11.ebuild 1217
 MD5 1c2e1204f41734924de8f3a77ee5ffb9 gtk-perl-0.7008-r9.ebuild 1099
 MD5 679d86f34f8830d30ccbdf60061e5a5e gtk-perl-0.7009.ebuild 1229
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b9f1fde375dcec297b98c64998f4c23d gtk-perl-0.7009-r1.ebuild 1570
+MD5 006db646e55cae38deb7a89d32566705 gtk-perl-0.7009-r1.ebuild 1569
 MD5 f598a6d1d7e60c583fe4a3a7e8b40a84 files/digest-gtk-perl-0.7008-r10 67
 MD5 f598a6d1d7e60c583fe4a3a7e8b40a84 files/digest-gtk-perl-0.7008-r11 67
 MD5 f598a6d1d7e60c583fe4a3a7e8b40a84 files/digest-gtk-perl-0.7008-r9 67
@@ -18,7 +18,7 @@ MD5 40eadf71d264897f806c6ae4e84abfe9 files/gendef.patch 324
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCj222tG5z4I8BtQoRAqDLAJ9xme6+uNtkopU4sqKzJtaocI3TNwCgjpR0
-q5+9ocBBKJU3NumXCPz/yZU=
-=hoJX
+iD8DBQFCkKVItG5z4I8BtQoRAvqiAJ9GnbozqK3hffTdYWIOomyGL7mJ6ACgkZJN
+NeTmKP5/ZS8CRD2/QDGvMCE=
+=zVny
 -----END PGP SIGNATURE-----
