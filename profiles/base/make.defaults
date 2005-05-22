@@ -1,21 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.12 2005/05/03 18:45:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.13 2005/05/22 07:15:03 vapier Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
 
 # Have everyone update config.{sub,guess} by default
-FEATURES="autoconfig strict"
+FEATURES="autoconfig strict sfperms"
 
-# Env vars to expand into USE vars. Modifying this requires prior
-# discussion on gentoo-dev@gentoo.org. Flat profiles also need to
-# be updated appropriately.
+# Env vars to expand into USE vars.  Modifying this requires prior
+# discussion on gentoo-dev@gentoo.org.
 USE_EXPAND="FRITZCAPI_CARDS FCDSL_CARDS VIDEO_CARDS INPUT_DEVICES LINGUAS USERLAND KERNEL ELIBC"
 
 CONFIG_PROTECT="/etc /var/qmail/control /usr/share/config /usr/kde/2/share/config /usr/kde/3/share/config"
 CONFIG_PROTECT_MASK="/etc/gconf"
 
+# 'Sane' defaults
 ELIBC="glibc"
 KERNEL="linux"
 USERLAND="GNU"
