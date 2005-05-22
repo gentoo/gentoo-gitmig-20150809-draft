@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 08e154e38acfe60d9aacd0f5737af3b8 gtkcdlabel-1.0_pre7.ebuild 897
+MD5 95c287673dc9a1eb65f4ca693de0bad3 ChangeLog 2498
 MD5 d0c56f2c58530b89b7770658d7432c96 gtkcdlabel-1.0_pre6.ebuild 894
-MD5 6ee09162e1c3d3b3dc5d511f0f6f2c6b ChangeLog 2400
+MD5 82a2af529ff088a4f350a8cdbe99b66f gtkcdlabel-1.0_pre7.ebuild 901
 MD5 e92c22225408adf0b8a38ee7c440b2cb metadata.xml 167
 MD5 61f4ce77f924ab6c43cb682caa6e7973 files/digest-gtkcdlabel-1.0_pre6 71
 MD5 d7ee7d62014b9fa28eb2db67028e28cc files/digest-gtkcdlabel-1.0_pre7 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCeqBPI1lqEGTUzyQRAqhlAJsHrRyTtiO6IMueTeCpNnQQqfeXwACeODn3
-2MXoDT45LxlBw+2nZvvtoYQ=
-=K8Ix
------END PGP SIGNATURE-----
