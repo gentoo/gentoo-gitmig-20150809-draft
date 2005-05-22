@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1bea5897c7890001cd38f6711a3f5e05 ChangeLog 11121
+MD5 24e80fc8691535e7884a0e53967d63ea ChangeLog 11292
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 2fa8416fc9cfa49edcdc9558f1e8ad48 mythtv-0.16.ebuild 5817
 MD5 d031942485bf1c04b7b66ea1cbe191fb mythtv-0.17-r1.ebuild 7329
@@ -15,13 +12,6 @@ MD5 5938ea3584383e501674bf67a7f7e2a7 files/mythbackend.rc6 1776
 MD5 b3a4780890d53640604812b8069a8297 files/mythfilldatabase.cron 74
 MD5 8d46f5508de5d412db9e4a757db00e26 files/mythtv-0.16-cx88.patch 674
 MD5 bcfd584bc73afea9d88c8afe7d47f5be files/mythtv-0.17-qt334-dst-fix.patch 5663
-MD5 28edf0cbd31622983da735f7d599afd5 files/0.18-mythbackend.rc 1532
+MD5 946d39e6c7d43c06d11d2bc6e09d5c21 files/0.18-mythbackend.rc 1606
 MD5 4985a61b90909b7f1c926f79a3ba34bf files/0.18-mythbackend.conf 931
 MD5 67c40a05f5751719f170820c4d50c9c6 files/digest-mythtv-0.18-r2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjhomBtvusYtCZMsRAqSYAKCH9PsEENta1JcPzW0jtGrE6bIk4QCfS9yV
-mmKkrHuGOh2bnD/LEhvPOVU=
-=DzK6
------END PGP SIGNATURE-----

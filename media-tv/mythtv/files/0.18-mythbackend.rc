@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/files/0.18-mythbackend.rc,v 1.2 2005/05/14 17:10:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/files/0.18-mythbackend.rc,v 1.3 2005/05/22 22:43:19 cardoe Exp $
 
 depend() {
 	need net
@@ -9,29 +9,31 @@ depend() {
 }
 
 checkconfig() {
-	for i in $(groups "${MYTH_USER/:*/}") ; do
-		[[ "${i}" == "audio" ]] && audio="yes"
-		[[ "${i}" == "video" ]] && video="yes"
-	done
+	if [ ${MYTH_USER} != "root" ]; then
+		for i in $(groups "${MYTH_USER/:*/}") ; do
+			[[ "${i}" == "audio" ]] && audio="yes"
+			[[ "${i}" == "video" ]] && video="yes"
+		done
 
-	if [ -z "${audio}" -o -z "${video}" ] ; then
-		ewarn ""
-		[[ -z "${audio}" ]] && \
+		if [ -z "${audio}" -o -z "${video}" ] ; then
+			ewarn ""
+			[[ -z "${audio}" ]] && \
 			ewarn "${HILITE}${MYTH_USER/:*/}${NORMAL} is not in the audio group"
-		[[ -z "${video}" ]] && \
+			[[ -z "${video}" ]] && \
 			ewarn "${HILITE}${MYTH_USER/:*/}${NORMAL} is not in the video group"
-		ewarn ""
-		ewarn "insufficient permissions discovered"
-		ewarn "mythbackend may not start correctly"
-		ewarn ""
+			ewarn ""
+			ewarn "insufficient permissions discovered"
+			ewarn "mythbackend may not start correctly"
+			ewarn ""
+		fi
 	fi
 }
 
 start() {
-	checkconfig
-	[[ -z "${MYTH_USER}" ]] && MYTH_USER="nobody:nobody"
+	[[ -z "${MYTH_USER}" ]] && MYTH_USER="nobody"
 	[[ -z "${MYTH_NICE}" ]] && MYTH_NICE="0"
 	[[ -z "${MYTH_VERBOSE}" ]] && MYTH_VERBOSE="none"
+	checkconfig
 
 	HOME="/var/log/mythtv/"
 	QTDIR=/usr/qt/3
@@ -39,16 +41,17 @@ start() {
 	# Work around any strange permissions that may be on these files.
 	chown -R "${MYTH_USER}" /var/log/mythtv/
 
-	ebegin "Starting myth backend"
+	ebegin "Starting MythTV Backend"
 	start-stop-daemon --start --quiet --chuid "${MYTH_USER}" \
-		--exec /usr/bin/mythbackend --nicelevel "${MYTH_NICE}" -- \
-		--daemon --pidfile /var/run/mythbackend.pid --logfile /var/log/mythtv/mythbackend.log \
-		--verbose ${MYTH_VERBOSE}
+		--exec /usr/bin/mythbackend --nicelevel "${MYTH_NICE}" \
+		--make-pidfile --pidfile /var/run/mythbackend.pid \
+		--background -- --verbose ${MYTH_VERBOSE} \
+		--logfile /var/log/mythtv/mythbackend.log
 	eend $?
 }
 
 stop () {
-	ebegin "Stopping myth backend"
+	ebegin "Stopping MythTV Backend"
 	start-stop-daemon --stop --quiet --pidfile=/var/run/mythbackend.pid
 	eend $?
 }
