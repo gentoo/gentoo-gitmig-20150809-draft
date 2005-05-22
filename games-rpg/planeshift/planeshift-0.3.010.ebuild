@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.010.ebuild,v 1.1 2005/05/22 00:48:25 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.010.ebuild,v 1.2 2005/05/22 20:02:43 malverian Exp $
 
 inherit eutils games debug
 
@@ -65,15 +65,16 @@ src_install() {
 	rmdir "${D}/${PLANESHIFT_PREFIX}/lib"
 	rmdir "${D}/${PLANESHIFT_PREFIX}/bin"
 
-	# Symlink the cel libraries to simplify stuff
-	ln -s ${CRYSTAL_PREFIX}/lib/cel/* ${D}/${PLANESHIFT_PREFIX}/
-
 	dogamesbin ${FILESDIR}/planeshift
 	dogamesbin ${FILESDIR}/planeshift-updater
+	dogamesbin ${FILESDIR}/planeshift-setup
 	prepgamesdirs
 
 	chgrp -R games "${D}/${PLANESHIFT_PREFIX}"
 	chmod -R g+rw "${D}/${PLANESHIFT_PREFIX}"
+
+	# Make sure new files are still :games
+	find "${D}/${PLANESHIFT_PREFIX}" -type d -exec chmod g+sx {} \;
 }
 
 pkg_postinst() {
@@ -83,6 +84,8 @@ pkg_postinst() {
 	ewarn "planeshift-updater -auto"
 	ewarn
 
+	einfo "Configure your client by running 'planeshift-setup'"
+	einfo
 	einfo "Type 'planeshift' to start the Planeshift client"
 	einfo "Keep in mind, you will need to be in the games group"
 }

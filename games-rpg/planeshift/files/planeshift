@@ -2,4 +2,7 @@
 
 cd /opt/planeshift
 
+export CRYSTAL="/opt/crystal/lib/crystalspace"
+export CEL="/opt/crystal/lib/cel"
+
 ./psclient $@
