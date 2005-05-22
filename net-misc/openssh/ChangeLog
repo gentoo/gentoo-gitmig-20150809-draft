@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.119 2005/05/20 13:02:08 flameeyes Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.120 2005/05/22 01:20:37 vapier Exp $
+
+  22 May 2005; Mike Frysinger <vapier@gentoo.org> openssh-4.0_p1-r1.ebuild:
+  Add support for RSA SecurID tokens #92233 by Antti M‰kel‰.
 
   20 May 2005; Diego Petten√≤ <flameeyes@gentoo.org>
   openssh-3.9_p1-r2.ebuild, openssh-4.0_p1.ebuild, openssh-4.0_p1-r1.ebuild:

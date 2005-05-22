@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1-r1.ebuild,v 1.3 2005/05/20 13:02:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1-r1.ebuild,v 1.4 2005/05/22 01:20:38 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -15,7 +15,8 @@ SELINUX_PATCH="openssh-3.9_p1-selinux.diff"
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
-	X509? ( http://roumenpetrov.info/openssh/x509-5.1/${X509_PATCH} )"
+	X509? ( http://roumenpetrov.info/openssh/x509-5.1/${X509_PATCH} )
+	smartcard? ( http://www.omniti.com/~jesus/projects/openssh-4.0p1+SecurID_v1.3.1.patch )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -51,7 +52,9 @@ src_unpack() {
 	use skey && epatch ${FILESDIR}/openssh-3.9_p1-skey.patch.bz2
 	use chroot && epatch ${FILESDIR}/openssh-3.9_p1-chroot.patch
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}.bz2
-	use smartcard && epatch ${FILESDIR}/openssh-3.9_p1-opensc.patch.bz2
+	use smartcard \
+		&& epatch ${FILESDIR}/openssh-3.9_p1-opensc.patch.bz2 \
+		&& epatch ${DISTDIR}/openssh-4.0p1+SecurID_v1.3.1.patch
 
 	sed -i '/LD.*ssh-keysign/s:$: -Wl,-z,now:' Makefile.in || die "setuid"
 
