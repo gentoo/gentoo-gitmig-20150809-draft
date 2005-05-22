@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4001 2005/05/22 12:10:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4002 2005/05/22 13:18:46 spock Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -445,15 +445,6 @@ media-video/qce-ga
 >=gnome-extra/gal-2.4.2
 #accessibility pkgs
 #End of gnome-2.10 mask
-
-# Michal Januszewski <spock@gentoo.org> (09 Mar 2005)
-# A development version of splashutils which includes many new features
-# and can therefore be slightly broken. Feel free to test and report bugs.
-# Content from http://dev.gentoo.org/~spock/projects/gensplash/testing/
-# might be useful for testing.
->=media-gfx/splashutils-1.1
-media-gfx/splash-themes-gentoo
->=media-gfx/bootsplash-themes-20040821-r1
 
 # Sebastian Bergmann <sebastian@gentoo.org> (05 Mar 2005)
 # Segfaults on module shutdown.
