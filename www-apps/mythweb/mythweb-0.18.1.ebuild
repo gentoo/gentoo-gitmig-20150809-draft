@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.18.1.ebuild,v 1.1 2005/05/20 09:16:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.18.1.ebuild,v 1.2 2005/05/22 22:51:24 cardoe Exp $
 
 inherit webapp
 
@@ -11,8 +11,7 @@ IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 
-RDEPEND=">=dev-php/mod_php-4.2
-	~media-tv/mythtv-${PV}"
+RDEPEND=">=dev-php/mod_php-4.2"
 
 S="${WORKDIR}/mythplugins-${PV}/${PN}"
 
