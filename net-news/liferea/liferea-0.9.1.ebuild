@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-0.9.1.ebuild,v 1.3 2005/05/20 20:05:15 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-0.9.1.ebuild,v 1.4 2005/05/22 17:01:41 dertobi123 Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ppc"
 IUSE="mozilla gtkhtml"
 
 RDEPEND=">=x11-libs/gtk+-2
