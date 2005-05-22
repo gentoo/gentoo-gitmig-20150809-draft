@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r2.ebuild,v 1.13 2005/03/04 20:33:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r2.ebuild,v 1.14 2005/05/22 15:36:33 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
 	cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200204.tar.gz
-		ftp://ftp.gyve.org/pub/gs-cjk/acro5-cmaps-2001.tar.gz)"
+		ftp://ftp.gyve.org/pub/gs-cjk/acro5-cmaps-2001.tar.gz )"
 HOMEPAGE="http://www.easysw.com/"
 
 SLOT="0"

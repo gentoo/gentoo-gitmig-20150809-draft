@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.23 2005/05/16 09:46:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.24 2005/05/22 15:36:33 swegener Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with bett
 HOMEPAGE="http://www.cups.org/ghostscript.php"
 SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 	cjk? ( http://www.matsusaka-u.ac.jp/mirror/gs-cjk/adobe-cmaps-200204.tar.gz
-		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz)"
+		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz )"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"

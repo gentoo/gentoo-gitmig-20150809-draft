@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.0.2-r1.ebuild,v 1.2 2005/05/22 15:28:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.0.2-r1.ebuild,v 1.3 2005/05/22 15:34:47 swegener Exp $
 
 inherit nsplugins eutils rpm versionator
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.adobe.com/products/acrobat/"
 SRC_HEAD="ftp://ftp.adobe.com/pub/adobe/reader/unix/7x/7.0"
 SRC_FOOT="-$(replace_version_separator 3 "-").i386.rpm"
 SRC_URI="			linguas_de? ( ${SRC_HEAD}/deu/AdobeReader_deu${SRC_FOOT} )
-	!linguas_de? (  linguas_fr? ( ${SRC_HEAD}/fra/AdobeReader_fra${SRC_FOOT} ))
-	!linguas_de? ( !linguas_fr? ( ${SRC_HEAD}/enu/AdobeReader_enu${SRC_FOOT} ))"
+	!linguas_de? (  linguas_fr? ( ${SRC_HEAD}/fra/AdobeReader_fra${SRC_FOOT} ) )
+	!linguas_de? ( !linguas_fr? ( ${SRC_HEAD}/enu/AdobeReader_enu${SRC_FOOT} ) )"
 LICENSE="Adobe"
 SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
