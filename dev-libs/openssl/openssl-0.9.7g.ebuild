@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.8 2005/05/14 17:37:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.9 2005/05/22 09:12:49 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz"
 LICENSE="openssl"
 SLOT="0"
 # ia64 is ABI incompat atm, do not change the KEYWORD
-KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~m68k -mips ~ppc -ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~m68k -mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="emacs test bindist"
 
 RDEPEND=""
@@ -25,6 +25,7 @@ src_unpack() {
 
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${PN}-0.9.7g-ppc64.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7-hppa-fix-detection.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7-alpha-default-gcc.patch
@@ -56,16 +57,11 @@ src_unpack() {
 	for a in $( grep -n -e "^\"linux-" Configure ); do
 		LINE=$( echo $a | awk -F: '{print $1}' )
 		CUR_CFLAGS=$( echo $a | awk -F: '{print $3}' )
-		# for ppc64 I have to be careful given current toolchain issues
-		if [[ ${ARCH} != "ppc64" ]]; then
-			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s:-fomit-frame-pointer::" -e "s:-mcpu=[-a-z0-9]+::" -e "s:-m486::" ) $CFLAGS"
-		else
-			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s:-fomit-frame-pointer::" -e "s:-mcpu=[-a-z0-9]+::" -e "s:-m486::" ) "
+		NEW_CFLAGS=$(echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s:-fomit-frame-pointer::" -e "s:-mcpu=[-a-z0-9]+::" -e "s:-m486::")
+		# ppc64's current toolchain sucks at optimization and will break this package
+		[[ $(tc-arch) != "ppc64" ]] && NEW_CFLAGS="${NEW_CFLAGS} ${CFLAGS}"
 
-		fi
-
-		sed -i "${LINE}s:$CUR_CFLAGS:$NEW_CFLAGS:" Configure \
-		|| die "sed failed"
+		sed -i "${LINE}s:$CUR_CFLAGS:$NEW_CFLAGS:" Configure || die "sed failed"
 	done
 	IFS=$OLDIFS
 
