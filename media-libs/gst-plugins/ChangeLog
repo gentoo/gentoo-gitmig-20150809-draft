@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.104 2005/05/06 17:03:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.105 2005/05/22 12:29:06 kloeri Exp $
+
+  22 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  gst-plugins-0.8.8.ebuild:
+  Stable on alpha.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> gst-plugins-0.8.2.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.
