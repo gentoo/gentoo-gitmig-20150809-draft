@@ -1,33 +1,30 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.14.ebuild,v 1.4 2005/05/22 14:53:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.9-r3.ebuild,v 1.1 2005/05/22 14:53:40 ticho Exp $
 
-inherit gnome2 eutils mono
+inherit gnome2 eutils
 
-IUSE="doc ipv6 mono"
+IUSE="doc ipv6"
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
 SRC_URI="http://spruce.sourceforge.net/gmime/sources/v${PV%.*}/${P}.tar.gz"
 HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 amd64 ppc sparc ~alpha"
 
 RDEPEND=">=dev-libs/glib-2
 	doc? ( >=dev-util/gtk-doc-1.0 )"
 
 DEPEND="dev-util/pkgconfig
 	doc? ( app-text/docbook-sgml-utils )
-	mono? ( dev-lang/mono
-			=dev-dotnet/gtk-sharp-1.0*
-			>=dev-dotnet/gtk-sharp-1.0.6 )
 	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	#db2html should be docbook2html
-	sed -i -e 's:db2html:docbook2html -o gmime-tut:g' \
+	sed -i -e 's:db2html:docbook2html:g' \
 		docs/tutorial/Makefile.am docs/tutorial/Makefile.in \
 		|| die "sed failed (1)"
 }
@@ -35,9 +32,8 @@ src_unpack() {
 src_compile() {
 	econf \
 	    `use_enable ipv6` \
-	    `use_enable mono` \
 	    `use_enable doc gtk-doc` || die "configure failed"
-	MAKEOPTS="-j1" MONO_PATH=${S} emake || die
+	emake || die "configure failed"
 }
 
 src_install() {
