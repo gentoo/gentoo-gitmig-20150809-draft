@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrelltop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.12 2005/05/19 13:25:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.13 2005/05/22 14:14:07 weeve Exp $
+
+  22 May 2005; Jason Wever <weeve@gentoo.org> gkrelltop-2.2.4.ebuild:
+  Marked 2.2.4 stable on SPARC and removed executable permissions on
+  metadata.xml so that committing via repoman will work again.
 
 *gkrelltop-2.2.6 (19 May 2005)
 
