@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.30.09.ebuild,v 1.2 2005/05/22 02:17:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.30.09.ebuild,v 1.3 2005/05/22 15:32:12 mcummings Exp $
 
 IUSE="gtk ipv6 libwww ncurses tcltk"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://cpan/authors/id/R/RC/RCAPUTO/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 
 DEPEND="${DEPEND}
 	dev-perl/ExtUtils-AutoInstall
