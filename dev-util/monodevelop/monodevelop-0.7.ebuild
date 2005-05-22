@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.7.ebuild,v 1.2 2005/05/21 09:33:08 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.7.ebuild,v 1.3 2005/05/22 14:07:03 latexer Exp $
 
 inherit mono eutils
 
@@ -14,11 +14,11 @@ DEPEND=">=dev-dotnet/gtksourceview-sharp-0.10
 	>=dev-dotnet/gecko-sharp-0.10
 	>=dev-lang/mono-1.1.4
 	>=dev-util/monodoc-1.0
-	>=dev-dotnet/gtk-sharp-2.5.5
-	>=dev-dotnet/gnomevfs-sharp-2.5.5
-	>=dev-dotnet/gconf-sharp-2.5.5
-	>=dev-dotnet/gtkhtml-sharp-2.5.5
-	>=dev-dotnet/glade-sharp-2.5.5
+	>=dev-dotnet/gtk-sharp-1.9.5
+	>=dev-dotnet/gnomevfs-sharp-1.9.5
+	>=dev-dotnet/gconf-sharp-1.9.5
+	>=dev-dotnet/gtkhtml-sharp-1.9.5
+	>=dev-dotnet/glade-sharp-1.9.5
 	>=sys-devel/automake-1.8
 	boo? ( dev-lang/boo )
 	java? ( || ( >=dev-dotnet/ikvm-bin-0.14 >=dev-dotnet/ikvm-0.14.0.1-r1 ) )"
