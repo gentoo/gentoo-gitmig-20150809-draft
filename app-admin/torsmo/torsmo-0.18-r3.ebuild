@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.18-r3.ebuild,v 1.5 2005/05/21 09:25:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.18-r3.ebuild,v 1.6 2005/05/22 15:17:19 swegener Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/libc
 	truetype? ( >=media-libs/freetype-2 )
 	seti? ( sci-astronomy/setiathome )"
 
-DEPEND="truetype? ( >=media-libs/freetype-2)
+DEPEND="truetype? ( >=media-libs/freetype-2 )
 	virtual/x11
 	>=sys-devel/automake-1.4
 	sys-devel/autoconf
