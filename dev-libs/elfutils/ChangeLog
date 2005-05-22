@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.61 2005/05/20 18:43:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.62 2005/05/22 21:24:09 tester Exp $
+
+  22 May 2005; Olivier Crête <tester@gentoo.org> elfutils-0.108.ebuild:
+  Marking stable on x86 per security bug #91398
 
   20 May 2005; Bryan Østergaard <kloeri@gentoo.org> elfutils-0.108.ebuild:
   Stable on alpha + ia64, bug 91817.
