@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.74 2005/05/20 12:24:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.75 2005/05/22 12:07:24 flameeyes Exp $
+
+  22 May 2005; Diego Pettenò <flameeyes@gentoo.org> -files/pam.d/rexec,
+  -files/pam.d/rlogin, -files/pam.d/rsh:
+  Removed pam.d files for rexec, rlogin and rsh, as they are installed by
+  netkit-rsh.
 
   20 May 2005; Diego Pettenò <flameeyes@gentoo.org> pam-0.78.ebuild,
   pam-0.78-r1.ebuild, pam-0.78-r2.ebuild:
