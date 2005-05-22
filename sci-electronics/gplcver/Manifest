@@ -1,4 +1,6 @@
-MD5 973079138eb5b944b6369b028c8d3375 ChangeLog 642
+MD5 e02b6d125f27b466f50449535bbf1d9e ChangeLog 773
 MD5 3d07dcca5b543a8488aff383f830b95d gplcver-1.10j.ebuild 1111
+MD5 013b9bcbf1a6c575210905fabedbec9c gplcver-2.10c.ebuild 1511
 MD5 b6374e5f17f105d371223cd0e49a3e45 metadata.xml 267
 MD5 23abea83d3f6bf970f2e02f72bcc3913 files/digest-gplcver-1.10j 71
+MD5 810588c7b2fbda21196716d68155b9ad files/digest-gplcver-2.10c 71
