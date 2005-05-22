@@ -1,6 +1,13 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.35 2005/04/25 20:03:10 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.36 2005/05/22 10:21:46 humpback Exp $
+
+*skype-1.1.0.3-r1 (21 May 2005)
+
+  21 May 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/skype.debus.config, +skype-1.1.0.3-r1.ebuild:
+  New revision to fix a problem with newer dbus version, and to add the dbus
+  skype config file. Closes bug 91914
 
   25 Apr 2005; Herbie Hopkins <herbs@gentoo.org> skype-1.1.0.3.ebuild:
   Adjusted amd64 depend
