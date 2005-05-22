@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.8.ebuild,v 1.8 2005/03/07 10:37:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.8.ebuild,v 1.9 2005/05/22 15:26:50 swegener Exp $
 
 inherit flag-o-matic eutils fixheadtails
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc"
 IUSE="diet"
 
-DEPEND="diet?(dev-libs/dietlibc)
+DEPEND="diet? ( dev-libs/dietlibc )
 	!diet? ( virtual/libc )"
 
 RDEPEND="${DEPEND}
