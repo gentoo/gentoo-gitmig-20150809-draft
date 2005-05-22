@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/nologin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/ChangeLog,v 1.1 2005/05/22 20:02:59 ka0ttic Exp $
+
+*nologin-20050522 (22 May 2005)
+
+  22 May 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +nologin-20050522.ebuild:
+  Initial commit for bug 93271.
+
