@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.5 2005/05/17 18:43:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.6 2005/05/22 09:06:58 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -12,7 +12,7 @@
 #
 # ========================================================================
 
-inherit eutils confutils libtool 
+inherit flag-o-matic eutils confutils libtool
 
 ECLASS=php5-sapi-r2
 INHERITED="$INHERITED $ECLASS"
@@ -441,6 +441,12 @@ php5-sapi-r2_src_compile() {
 
 	# optimization/setting stuff
 	my_conf="${my_conf} --enable-versioning"
+
+	# fix ELF-related problems
+	if has_pic ; then
+		einfo "Enabling PIC support"
+		my_conf="${my_conf} --with-pic"
+	fi
 
 	# all done
 
