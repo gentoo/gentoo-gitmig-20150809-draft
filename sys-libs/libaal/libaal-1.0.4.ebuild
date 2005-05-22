@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.4.ebuild,v 1.2 2005/05/15 11:43:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.4.ebuild,v 1.3 2005/05/22 06:58:36 vapier Exp $
 
 inherit eutils
 
@@ -10,14 +10,14 @@ SRC_URI="ftp://ftp.namesys.com/pub/reiser4progs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~ppc64"
+KEYWORDS="amd64 ~ppc ~ppc64 -sparc x86"
 IUSE=""
 
 DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# remove stupid CFLAG hardcodes
 	sed -i \
 		-e "/GENERIC_CFLAGS/s:-O3::" \
