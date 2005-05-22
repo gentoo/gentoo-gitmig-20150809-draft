@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3_pre20041022-r1.ebuild,v 1.2 2005/05/01 23:33:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3_pre20041022-r1.ebuild,v 1.3 2005/05/22 15:43:35 swegener Exp $
 
 inherit eutils
 
@@ -25,8 +25,8 @@ DEPEND="media-libs/libpng
 	gnome? ( =gnome-base/orbit-0* )
 	directfb? ( >=dev-libs/DirectFB-0.9.9 )
 	curl?( >=net-misc/curl-7.10.2 )
-	libcaca? (media-libs/libcaca)
-	ncurses? (sys-libs/ncurses)"
+	libcaca? ( media-libs/libcaca )
+	ncurses? ( sys-libs/ncurses )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
