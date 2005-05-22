@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r3.ebuild,v 1.10 2005/05/15 02:06:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r3.ebuild,v 1.11 2005/05/22 15:55:34 swegener Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -20,14 +20,14 @@ KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="aac altivec debug doc dv dvd encode imlib mmx oggvorbis oss threads truetype v4l xvid"
 
 DEPEND="imlib? (media-libs/imlib2)
-		truetype? (>=media-libs/freetype-2)
-		sdl? (>=media-libs/libsdl-1.2.1)
-		doc? (app-text/texi2html)
-		encode? (media-sound/lame)
-		oggvorbis? (media-libs/libvorbis
-					media-libs/libogg)
+		truetype? ( >=media-libs/freetype-2 )
+		sdl? ( >=media-libs/libsdl-1.2.1 )
+		doc? ( app-text/texi2html )
+		encode? ( media-sound/lame )
+		oggvorbis? ( media-libs/libvorbis
+					media-libs/libogg )
 		!alpha? ( aac? (media-libs/faad2 media-libs/faac) )
-		dvd? (>=media-libs/a52dec-0.7.4-r4)
+		dvd? ( >=media-libs/a52dec-0.7.4-r4 )
 		xvid? ( >=media-libs/xvid-1.0 )
 		"
 
