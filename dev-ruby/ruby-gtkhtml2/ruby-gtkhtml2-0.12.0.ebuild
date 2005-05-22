@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ruby-gtkhtml2-0.12.0.ebuild,v 1.1 2005/03/14 19:43:12 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ruby-gtkhtml2-0.12.0.ebuild,v 1.2 2005/05/22 00:40:30 weeve Exp $
 
 inherit ruby ruby-gnome2
 
 DESCRIPTION="Ruby GtkHtml2 bindings"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE=""
 USE_RUBY="ruby16 ruby18 ruby19"
 DEPEND=">=x11-libs/gtk+-2
