@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3ef4561e199965f94525ac49c1e21b2e ChangeLog 2401
-MD5 7786239f9ba4d95a8005cdfd990982c1 DateManip-5.42a-r1.ebuild 651
+MD5 ed2a555f597a99b599a65dd298593852 DateManip-5.42a-r1.ebuild 655
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 1e6dcaf09bd89529c34b328fe8af367a files/digest-DateManip-5.42a-r1 67
 MD5 899138d091887a114e3a4aad538fde66 files/safe-taint-check.patch 442
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCbPVDtG5z4I8BtQoRAnK5AJ9jtrS8CCZe05D/xZeymeTT59oEqQCffTX3
-ujpOLW0xY8Wns74sGtaESFs=
-=5I0h
------END PGP SIGNATURE-----
