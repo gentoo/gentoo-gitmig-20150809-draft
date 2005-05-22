@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.70.ebuild,v 1.11 2005/05/02 18:26:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.70.ebuild,v 1.12 2005/05/22 14:27:33 weeve Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 sparc x86"
 IUSE="cddb"
 
 RDEPEND="dev-libs/popt
