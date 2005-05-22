@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4-r2.ebuild,v 1.1 2005/05/06 04:03:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4-r2.ebuild,v 1.2 2005/05/22 01:59:54 vapier Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Linux boot loader for EFI-based systems such as IA-64"
-HOMEPAGE="http://developer.intel.com/technology/efi"
+HOMEPAGE="http://elilo.sourceforge.net/"
 SRC_URI="ftp://ftp.hpl.hp.com/pub/linux-ia64/${P}.tar.gz"
 
 LICENSE="GPL-2"
