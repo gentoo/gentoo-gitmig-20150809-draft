@@ -1,0 +1,10 @@
+# ChangeLog for app-text/cabocha
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cabocha/ChangeLog,v 1.1 2005/05/22 16:54:31 usata Exp $
+
+*cabocha-0.52 (22 May 2005)
+
+  22 May 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +cabocha-0.52.ebuild:
+  Initial import.
+
