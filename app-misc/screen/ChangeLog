@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.85 2005/05/20 13:18:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.86 2005/05/22 20:02:32 swegener Exp $
+
+  22 May 2005; Sven Wegener <swegener@gentoo.org>
+  +files/4.0.2-no-libelf.patch, screen-4.0.2-r3.ebuild:
+  Removed the libelf check from configure.
 
   20 May 2005; Sven Wegener <swegener@gentoo.org> -files/screen.pam,
   screen-4.0.2-r1.ebuild, screen-4.0.2-r3.ebuild:

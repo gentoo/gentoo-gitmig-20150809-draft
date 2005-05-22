@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r3.ebuild,v 1.2 2005/05/20 13:18:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r3.ebuild,v 1.3 2005/05/22 20:02:32 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pam
 
@@ -37,6 +37,9 @@ src_unpack() {
 
 	# Don't use utempter even if it is found on the system
 	epatch "${FILESDIR}"/${PV}-no-utempter.patch
+
+	# Don't link against libelf even if it is found on the system
+	epatch "${FILESDIR}"/${PV}-no-libelf.patch
 
 	# Patch for time function on 64bit systems
 	epatch "${FILESDIR}"/${PV}-64bit-time.patch

@@ -2,13 +2,14 @@
 Hash: SHA1
 
 MD5 744ffd2e9d77b4debbaaeb4508ed94d9 screen-4.0.2-r1.ebuild 3510
-MD5 fe01c382cb41e2f9896bbf60eee08bc7 screen-4.0.2-r3.ebuild 3695
-MD5 45e7b22476baf48d83a347b6ecc47e05 ChangeLog 12695
+MD5 37f4f96d6bf2c31bc22ba2af2b50762e screen-4.0.2-r3.ebuild 3803
+MD5 34f918e111a7f0e97951f0ae406597fb ChangeLog 12845
 MD5 537c3754e8f6422e4f7025358173ef2b metadata.xml 1525
 MD5 7f5ab1c54d87ad24f0a8bafbbcf24844 files/4.0.2-no-utempter.patch 440
 MD5 35961ab00c29256e3f6d7a374387e327 files/digest-screen-4.0.2-r1 64
 MD5 35961ab00c29256e3f6d7a374387e327 files/digest-screen-4.0.2-r3 64
 MD5 839ac3a5c896513a3e3c6353a6242f53 files/screen.pam.system-auth 113
+MD5 2531444b0a51bc5ba5ea1db2d2ec1f4b files/4.0.2-no-libelf.patch 555
 MD5 1d675e8a000851f610b79049ce863ff8 files/screenrc 10433
 MD5 304be93a4c3b72f2f761f45194059287 files/screen-4.0.1-vsprintf.patch 480
 MD5 23cfd7dd1968780724e7b9a3cb406cc8 files/screen-4.0.1-int-overflow-fix.patch 930
@@ -17,7 +18,7 @@ MD5 a7f6e6bfb5647c6e69a797eaa16acf3d files/4.0.2-64bit-time.patch 298
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjeO8I1lqEGTUzyQRAll/AJ46JT5cqEz0wGEhnGBYWyj07zOybwCgsV9+
-B1fUhDviwlyNbBCNkuJimJA=
-=G3Ep
+iD8DBQFCkOV3I1lqEGTUzyQRAj8BAJ9aFF9m2lGtgMZg4ktKsLMuoqhNwwCdG8QM
+/vujHBek0rRoxsJTPfJDfPA=
+=Xjkm
 -----END PGP SIGNATURE-----
