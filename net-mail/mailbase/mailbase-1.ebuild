@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-1.ebuild,v 1.2 2005/04/29 16:37:33 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-1.ebuild,v 1.3 2005/05/22 19:32:38 ferdy Exp $
 
 DESCRIPTION="MTA layout package"
 SRC_URI=""
@@ -16,37 +16,32 @@ RDEPEND="pam? ( virtual/pam )"
 S=${WORKDIR}
 
 pkg_setup() {
-	if use pam;
-	then
-		local filestoremove=0;
-		local lineorig=`head -n 1 ${FILESDIR}/common-pamd`
-		local lineold=""
+	if use pam ; then
+		local filestoremove=0 lineold=""
+		local lineorig=$(head -n 1 ${FILESDIR}/common-pamd)
 
 		einfo "Checking for possible file collisions..."
 
-		for i in pop pop3 pop3s pops imap imap4 imap4s imaps;
-		do
-			if [[ -e ${ROOT}/etc/pam.d/${i} ]]
-			then
-				lineold="`head -n 1 ${ROOT}/etc/pam.d/${i}`"
+		for i in pop{,3}{,s} imap{,4}{,s} ; do
+			if [[ -e ${ROOT}/etc/pam.d/${i} ]] ; then
+				lineold=$(head -n 1 ${ROOT}/etc/pam.d/${i})
 
-				if [[ "${lineorig}" != "${lineold}" ]]
-				then
+				if [[ ${lineorig} != ${lineold} ]] ; then
 					ewarn "${ROOT}/etc/pam.d/${i} exists and wasn't provided by mailbase"
 					(( filestoremove++ ))
 				fi
 			fi
 		done
 
-		if [[ filestoremove -gt 0 ]]
-		then
+		if [[ filestoremove -gt 0 ]] ; then
 			echo
 			einfo "Those files listed above have to be removed in order to"
 			einfo " install this version of mailbase."
 			echo
 			ewarn "If you edited them, remember to backup and when restoring make"
 			ewarn " sure the first line in each file is:"
-			einfo ${lineorig}
+			echo
+			echo ${lineorig}
 			die "Can't be installed, files will collide"
 		else
 			einfo "... everything looks ok"
