@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 71701dcc003c46919d661f7fdc9ccf9c xml-im-exporter-1.1.ebuild 1143
-MD5 e663951f03c1a0e78461943c31d12941 ChangeLog 464
+MD5 afcbc148e0fe40d36fb462574ff64862 xml-im-exporter-1.1.ebuild 1155
+MD5 0a9e8e4961efd1a536d1191a56162396 ChangeLog 575
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d1c804735da99145375c271ac1101ae9 files/digest-xml-im-exporter-1.1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCkJa006ebR+OMO78RAvbdAJ92XPAq3HMIyry/HwEW8t+XY7n9TwCeIfIr
-vjMC16V3QXmH8RJx8GLPSO0=
-=g/sq
+iD8DBQFCkJhi06ebR+OMO78RAvkHAJsEMcOHvu3O+GNYbBAdGX/PHq3INQCeKMf+
+r7/mYYYTBy/okrIgwx8m4/c=
+=gLgU
 -----END PGP SIGNATURE-----

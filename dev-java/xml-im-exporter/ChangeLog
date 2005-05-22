@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-im-exporter
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/ChangeLog,v 1.1 2005/05/22 14:26:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/ChangeLog,v 1.2 2005/05/22 14:33:46 luckyduck Exp $
+
+  22 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  xml-im-exporter-1.1.ebuild:
+  use jikes && antflags fix
 
 *xml-im-exporter-1.1 (22 May 2005)
 
