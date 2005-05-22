@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1f22f50801c7372421af9d56f50e792f ChangeLog 2540
 MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
-MD5 21510b30e9bf9739de726f856c836135 quik-2.0.1.0-r1.ebuild 1722
-MD5 a9a81aa82be05813a089247b4ca2cc25 quik-2.0.1.0-r2.ebuild 1856
-MD5 e8d4ddb4f0e97b2846bc68bf069c9323 quik-2.0.1.0-r3.ebuild 2033
-MD5 b049280befec748d02ece88a20a8e4a5 quik-2.0.1k.ebuild 1119
-MD5 8a63d4b2ce3cd4ebfc702aedef92c190 files/digest-quik-2.0.1.0-r1 127
+MD5 eba00512ddde0d5dae061b07affb22e9 quik-2.0.1k.ebuild 1155
+MD5 b044f63e2280f18f6bc24ef2396be72a ChangeLog 2728
+MD5 b53e5b697ec3d8423681bd0e0a3480a2 quik-2.0.1.0-r2.ebuild 1904
+MD5 4ba913eee047af52a2a9ff57b2c6600f quik-2.0.1.0-r3.ebuild 2081
+MD5 0f261b370d342d53165d4bb4e7cb574d quik-2.0.1.0-r1.ebuild 1770
 MD5 8a63d4b2ce3cd4ebfc702aedef92c190 files/digest-quik-2.0.1.0-r2 127
+MD5 490acba710c1c30fda817d7e8dd9eab3 files/quik-2.0.1.0-fclose-bug.patch 221
+MD5 8a63d4b2ce3cd4ebfc702aedef92c190 files/digest-quik-2.0.1.0-r1 127
+MD5 d82779b77dcea6480025a86ce1a622d7 files/quik-2.0.1.0-gcc-321.patch 493
 MD5 8a63d4b2ce3cd4ebfc702aedef92c190 files/digest-quik-2.0.1.0-r3 127
 MD5 3325de32d341278b3ebab8702e03fdfd files/digest-quik-2.0.1k 63
-MD5 490acba710c1c30fda817d7e8dd9eab3 files/quik-2.0.1.0-fclose-bug.patch 221
-MD5 d82779b77dcea6480025a86ce1a622d7 files/quik-2.0.1.0-gcc-321.patch 493
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjEvImdTrptrqvGERAhDJAJ9ToRPpMM3sfBwV9jW/ITXzzJ5zgQCfZZTH
-wMzrZeQqzYtZ2xEeAU1CEuM=
-=EOpE
------END PGP SIGNATURE-----

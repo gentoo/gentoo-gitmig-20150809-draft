@@ -1,14 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.0.1k.ebuild,v 1.7 2004/11/06 03:57:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.0.1k.ebuild,v 1.8 2005/05/22 05:33:41 mr_bones_ Exp $
 
 inherit toolchain-funcs mount-boot eutils
 
 S="${WORKDIR}/"
 MY_PV=${PV%.*}-${PV#*.*.}
 
-HOMEPAGE=""
 DESCRIPTION="OldWorld PowerMac Bootloader"
+HOMEPAGE="http://www.xs4all.nl/~eddieb/linuxppc/"
 SRC_URI="http://www.xs4all.nl/~eddieb/linuxppc/YDL3/quik-${MY_PV}.src.rpm"
 
 SLOT="0"
