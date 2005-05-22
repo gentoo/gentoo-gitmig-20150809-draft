@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r6.ebuild,v 1.7 2005/05/22 12:04:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r7.ebuild,v 1.1 2005/05/22 12:04:06 flameeyes Exp $
 
 inherit eutils pam
 
@@ -11,11 +11,11 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~mips ppc ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam"
 
 DEPEND=">=sys-libs/ncurses-5.2
-	pam? ( >=sys-libs/pam-0.72 )"
+	pam? ( virtual/pam )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -55,9 +55,10 @@ src_install() {
 			doman ${b}/${b}.1
 			[[ ${b} != "rexec" ]] \
 				&& fperms 4711 /usr/bin/${b}
-			[[ ${b} != "rcp" ]] \
-				&& newins "${FILESDIR}"/${b}.xinetd ${b} \
-				&& newpamd "${FILESDIR}"/${b}.pamd ${b}
+			if [[ ${b} != "rcp" ]]; then
+				newins "${FILESDIR}"/${b}.xinetd ${b}
+				newpamd "${FILESDIR}/${b}.pamd-include" ${b}
+			fi
 		fi
 	done
 	dodoc  README ChangeLog BUGS

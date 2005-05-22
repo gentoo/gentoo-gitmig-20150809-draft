@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.23 2005/05/21 12:46:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.24 2005/05/22 12:04:06 flameeyes Exp $
+
+*netkit-rsh-0.17-r7 (22 May 2005)
+
+  22 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/rexec.pamd-include, +files/rlogin.pamd-include,
+  +files/rsh.pamd-include, netkit-rsh-0.17-r6.ebuild,
+  +netkit-rsh-0.17-r7.ebuild:
+  Inherit pam for newpamd function. Added new revision with include syntax for
+  OpenPAM compatibility.
 
   21 May 2005; Markus Rothe <corsair@gentoo.org> netkit-rsh-0.17-r6.ebuild:
   Stable on ppc64; bug #93215

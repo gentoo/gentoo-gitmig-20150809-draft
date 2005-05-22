@@ -1,8 +1,10 @@
-MD5 97e5150fbfacfe9b937246d81ff5a92c ChangeLog 4201
-MD5 018bc520dd3079ec49d1e337e64db5a8 netkit-rsh-0.17-r6.ebuild 1678
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 558c608150135355eacf368fd5ada024 ChangeLog 4537
 MD5 0d35953e8d20a584860aec805fb3176f netkit-rsh-0.17-r5.ebuild 1956
-MD5 5b6497e87f4d7de5851f57d8ba73d75b files/digest-netkit-rsh-0.17-r6 126
-MD5 49b955e20153259f348033f607b9cac8 files/netkit-rsh-0.10-stdarg.patch 952
+MD5 bd981932e66446785b2435f5622d68e2 netkit-rsh-0.17-r6.ebuild 1684
+MD5 ba1cb47f0c5a85e0e037270f3994918f netkit-rsh-0.17-r7.ebuild 1694
 MD5 00dc5439d1237d8da5351107131d6e28 files/digest-netkit-rsh-0.17-r5 71
 MD5 849aa086002eda305d4d6d59a94fadd8 files/rexec.pamd 457
 MD5 501cf426db7510decc4dee17b07c5ea2 files/rexec.xinetd 280
@@ -12,6 +14,8 @@ MD5 14c9e8ca2d9f8b9ae525e14fdd13df31 files/rlogind-auth.diff 260
 MD5 7b9d8d0930734500608538c166d0179a files/rsh.pamd 445
 MD5 0586a4c1829df038be6179b9be20c458 files/rsh.xinetd 279
 MD5 9b184bf125dc1c12dea5364f6aeb2f69 files/va_start.diff 569
+MD5 5b6497e87f4d7de5851f57d8ba73d75b files/digest-netkit-rsh-0.17-r6 126
+MD5 49b955e20153259f348033f607b9cac8 files/netkit-rsh-0.10-stdarg.patch 952
 MD5 97e5406e59c08d21c2b06f9de5b1731f files/netkit-rsh-0.16-jbj.patch 1105
 MD5 177a1cdcf36f1c698b8e94ac8b6abfc7 files/netkit-rsh-0.16-jbj4.patch 314
 MD5 bfd431692675af108693a643a4a7213f files/netkit-rsh-0.16-nokrb.patch 5117
@@ -34,3 +38,14 @@ MD5 47b233c663e185795193bb878b3cad32 files/netkit-rsh-0.17-sectty.patch 1454
 MD5 f1f297025fb545f4cf2dc02e6c63867f files/netkit-rsh-0.17-strip.patch 2459
 MD5 6bb199dffcf2c9f158ca571310bb5569 files/netkit-rsh-0.17-userandhost.patch 2188
 MD5 645b699bd649a22d2d0ef57b0efd9e93 files/redhat.spec 805
+MD5 5b6497e87f4d7de5851f57d8ba73d75b files/digest-netkit-rsh-0.17-r7 126
+MD5 8115f8e19b1c44ef73362ab422bc001e files/rexec.pamd-include 303
+MD5 de71a64316c629deb1587a183526cd37 files/rlogin.pamd-include 386
+MD5 d369da65b87f3866ddb93e5aca52f712 files/rsh.pamd-include 412
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCkHRYj5H05b2HAEkRAibhAKCE1KlpWpQMc52mEVB/iXoeZdslEQCgin3p
+lHk9luwa5TssKQxo8acRHXk=
+=xp8I
+-----END PGP SIGNATURE-----
