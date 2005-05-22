@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.2.0.ebuild,v 1.5 2005/04/08 12:14:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.2.0.ebuild,v 1.6 2005/05/22 14:34:43 usata Exp $
 
 inherit eutils
 
@@ -11,16 +11,13 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 alpha ppc amd64 ~sparc ppc64"
-IUSE="gnome gtk immqt immqt-bc"
+IUSE="gtk immqt immqt-bc"
 
 GTK_DEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1
 	>=dev-libs/glib-2"
 RDEPEND="virtual/x11
-	gnome? ( >=gnome-base/gconf-1.2
-		>=dev-libs/libxml2-2.5
-		>=gnome-base/orbit-2.8 )
 	gtk? ( ${GTK_DEPEND} )
 	immqt? ( ${GTK_DEPEND} )
 	immqt-bc? ( ${GTK_DEPEND} )
@@ -46,7 +43,6 @@ get_gtk_confdir() {
 }
 
 src_compile() {
-	use gnome || myconf="${myconf} --disable-config-gconf"
 	use gtk || use immqt || use immqt-bc || myconf="${myconf} --disable-panel-gtk --disable-setup-ui"
 	has_gtk || myconf="${myconf} --disable-gtk2-immodule"
 	econf ${myconf} || die

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.59 2005/05/18 07:14:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.60 2005/05/22 14:34:43 usata Exp $
+
+  22 May 2005; Mamoru KOMACHI <usata@gentoo.org> scim-1.2.0.ebuild,
+  scim-1.2.1.ebuild, scim-1.2.2.ebuild:
+  Marked 1.2.2 stable on x86. Removed gnome USE flag; bug #93281.
 
   18 May 2005; Markus Rothe <corsair@gentoo.org> scim-1.2.1.ebuild:
   Stable on ppc64
