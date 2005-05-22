@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.23 2005/05/03 01:22:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.24 2005/05/22 11:55:33 ka0ttic Exp $
+
+  22 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  traceroute-1.4_p12-r3.ebuild:
+  Add nasty hack so config.{sub,guess} is writable (and hence econf wont fail
+  to overwrite them) until bug 93363 is fixed.
 
 *traceroute-1.4_p12-r3 (03 May 2005)
 
