@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2793e471ac413c4699e1a8fb2511d16a emul-linux-x86-sdl-1.2.8-r1.ebuild 680
-MD5 41eddef2d70416d6daefcd465b3e4f43 emul-linux-x86-sdl-2.1.ebuild 595
+MD5 4cd16456555412014bbdc03eca8ee951 ChangeLog 1485
 MD5 50249a96d20836552ab420e0f66e6ac6 emul-linux-x86-sdl-1.0.ebuild 607
-MD5 5f5a0259097b8b516cbbd9dd7c2e4fb9 ChangeLog 1383
+MD5 2793e471ac413c4699e1a8fb2511d16a emul-linux-x86-sdl-1.2.8-r1.ebuild 680
+MD5 f6bd6ba62b87a9243e354a63dcd681b6 emul-linux-x86-sdl-2.1.ebuild 594
 MD5 a7f56dde8f2b221a52aa7bd2b925c4bd metadata.xml 223
-MD5 0ab366267973396b8f5bcbae06a8a884 files/digest-emul-linux-x86-sdl-1.2.8-r1 78
 MD5 6941ee95bd0d4cf8454d1f8310d0ce36 files/digest-emul-linux-x86-sdl-1.0 75
+MD5 0ab366267973396b8f5bcbae06a8a884 files/digest-emul-linux-x86-sdl-1.2.8-r1 78
 MD5 59e5d6e467e5d053b7e5538878235a7b files/digest-emul-linux-x86-sdl-2.1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZ4UI2G5bA0cA/ScRAouKAKDZ0SqpglG7KcO0nMtCtDe+VhP3ywCcDqmA
-aYRWHnjDWChdlJn/dKw59cs=
-=b1UX
------END PGP SIGNATURE-----

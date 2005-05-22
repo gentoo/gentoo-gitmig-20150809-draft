@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec651133778edbd4cea1279f354bf96d emul-linux-x86-soundlibs-1.1.ebuild 622
+MD5 5cc04ca9d1cda78d7804f7c9c883c785 ChangeLog 1429
 MD5 28bb74f0d07467af53611b60792358fa emul-linux-x86-soundlibs-1.0-r1.ebuild 827
-MD5 3cab1c54290f0e38ab6980c1e64cf59d emul-linux-x86-soundlibs-2.1.ebuild 590
-MD5 735d5b7c0e42f9f671e621bef2c20c8d ChangeLog 1322
+MD5 ec651133778edbd4cea1279f354bf96d emul-linux-x86-soundlibs-1.1.ebuild 622
+MD5 4e23c0ff8ead11e334f55e23921919a6 emul-linux-x86-soundlibs-2.1.ebuild 592
 MD5 3d107142a3ec13f947ea538fdfe0f517 metadata.xml 290
-MD5 d65450e14ac0ca2d4343137fe10d111a files/digest-emul-linux-x86-soundlibs-1.0-r1 81
 MD5 54c1f485ee555f7acd1768c9c338d10e files/aoss32 176
+MD5 d65450e14ac0ca2d4343137fe10d111a files/digest-emul-linux-x86-soundlibs-1.0-r1 81
 MD5 3a4a40c8bf7f3b0a256e998e5f1428d2 files/digest-emul-linux-x86-soundlibs-1.1 81
 MD5 4a59f5babd1b5e1dc20ce85bff838157 files/digest-emul-linux-x86-soundlibs-2.1 81
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZ4Nj2G5bA0cA/ScRAlLnAJkBTTtdchsljGQ58P8lmuPQZmWzjQCdHVTS
-ojLTcj+w3wKP/9+T+IbOaiY=
-=b7ch
------END PGP SIGNATURE-----
