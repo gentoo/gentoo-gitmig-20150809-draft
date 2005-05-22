@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythgame
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.23 2005/05/20 09:06:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.24 2005/05/22 22:48:37 cardoe Exp $
+
+  22 May 2005; Doug Goldstein <cardoe@gentoo.org> mythgame-0.18.1.ebuild:
+  fixed bug #93403. Wrong eclass function usage.
 
 *mythgame-0.18.1 (20 May 2005)
 
