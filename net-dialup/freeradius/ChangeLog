@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.34 2005/05/19 05:58:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.35 2005/05/22 14:00:28 mrness Exp $
+
+  22 May 2005; Alin Nastac <mrness@gentoo.org>
+  -files/freeradius-1.0.1-gcc34.patch, files/radius.init,
+  -freeradius-1.0.1.ebuild, freeradius-1.0.2-r5.ebuild:
+  Stop radius daemon on upgrade/removal (#93152). Remove obsolete version.
 
 *freeradius-1.0.2-r5 (19 May 2005)
 

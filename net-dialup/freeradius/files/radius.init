@@ -11,7 +11,6 @@ checkconfig() {
 		return 1
 	fi
 
-	cd /var/log/radius #set the location of startup.log
 	if [ "`/usr/sbin/check-radiusd-config >/dev/null 2>&1; echo $?`" != "0" ] ; then
 		eerror "Config not ok! (try /usr/sbin/check-radiusd-config )"
 		return 1
@@ -31,6 +30,7 @@ checkconfig() {
 }
 
 start() {
+	cd /var/log/radius #set the location of log files
 	# Comment out the following line to get faster startups
 	checkconfig || return 1
 
@@ -41,7 +41,6 @@ start() {
 
 stop () {
 	ebegin "Stopping radiusd"
-	start-stop-daemon --stop --quiet \
-		--pidfile=/var/run/radiusd/radwatch.pid
+	start-stop-daemon --stop --quiet --pidfile=/var/run/radiusd/radwatch.pid
 	eend $?
 }

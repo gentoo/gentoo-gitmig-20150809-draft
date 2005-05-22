@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2-r5.ebuild,v 1.1 2005/05/19 05:58:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2-r5.ebuild,v 1.2 2005/05/22 14:00:28 mrness Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ src_unpack() {
 src_compile() {
 	local myconf=" \
 		`use_with snmp` \
-		`use_with frascent ascend-binary` \
+		`use_with frascend ascend-binary` \
 		`use_with frxp experimental-modules` \
 		`use_with udpfromto` \
 		`use_with edirectory edir` "
@@ -127,4 +127,22 @@ src_install() {
 pkg_preinst() {
 	enewgroup radiusd
 	enewuser radiusd -1 /bin/false /var/log/radius radiusd
+}
+
+pkg_prerm() {
+	if [ -n "`${ROOT}/etc/init.d/radiusd status | grep start`" ]; then
+		${ROOT}/etc/init.d/radiusd stop
+	fi
+}
+
+pkg_postrm() {
+	if has_version ">${CATEGORY}/${PF}" || has_version "<${CATEGORY}/${PF}" ; then
+		ewarn "If radiusd service was running, it had been stopped!"
+		echo
+		ewarn "You should update the configuration files using etc-update"
+		ewarn "and start the radiusd service again by running:"
+		einfo "    /etc/init.d/radiusd start"
+
+		ebeep
+	fi
 }
