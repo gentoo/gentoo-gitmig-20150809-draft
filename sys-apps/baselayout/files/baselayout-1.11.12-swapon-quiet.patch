@@ -1,0 +1,24 @@
+Index: sbin/rc
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/sbin/rc,v
+retrieving revision 1.104.2.15
+diff -u -r1.104.2.15 rc
+--- sbin/rc
++++ sbin/rc
+@@ -374,11 +374,12 @@
+ 		fi
+ 	fi
+ 
+-	# Swap needs to be activated *after* devfs has been mounted and *after*
+-	# devfsd has been started, so that the fstab can be properly parsed
+-	# and only if the server/Gentoo box is initialized ...
++	# Swap needs to be activated *after* /dev has been fully setup so that
++	# the fstab can be properly parsed.  This first pass we send to /dev/null
++	# in case the user has swap points setup on different partitions.  We 
++	# will run swapon again in localmount and that one will report errors.
+ 	ebegin "Activating (possible) swap"
+-	/sbin/swapon -a
++	/sbin/swapon -a >& /dev/null
+ 	eend 0
+ 
+ 	# Set the console loglevel to 1 for a cleaner boot

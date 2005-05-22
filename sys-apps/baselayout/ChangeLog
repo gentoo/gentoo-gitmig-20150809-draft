@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.240 2005/05/17 22:20:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.241 2005/05/22 02:39:08 vapier Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  22 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/baselayout-1.11.12-swapon-quiet.patch,
+  baselayout-1.11.12-r1.ebuild:
+  Make initial swapon quiet #93143.
 
 *baselayout-1.11.12-r1 (17 May 2005)
 

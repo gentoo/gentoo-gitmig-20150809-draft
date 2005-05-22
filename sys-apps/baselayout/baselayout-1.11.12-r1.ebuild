@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r1.ebuild,v 1.1 2005/05/17 22:20:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r1.ebuild,v 1.2 2005/05/22 02:39:08 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -36,6 +36,8 @@ src_unpack() {
 
 	# Mount /dev with -o exec #92921
 	epatch "${FILESDIR}"/${P}-exec-dev.patch
+	# Make sure initial swapon is quiet #93143
+	epatch "${FILESDIR}"/${P}-swapon-quiet.patch
 
 	# setup unicode defaults for silly unicode users
 	if use unicode ; then
