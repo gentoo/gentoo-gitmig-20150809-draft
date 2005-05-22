@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.15-r1.ebuild,v 1.1 2005/05/21 16:50:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.15-r1.ebuild,v 1.2 2005/05/22 06:34:45 compnerd Exp $
 
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the Java programming language"
 SRC_URI="ftp://ftp.gnu.org/gnu/classpath/classpath-${PV}.tar.gz"
@@ -12,17 +12,10 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="cairo jikes gtk xml2"
 
 DEPEND="app-arch/zip
-	dev-java/jikes"
-RDEPEND="cairo? ( >=x11-libs/cairo-0.3 )
-	gtk? (
-		media-libs/gdk-pixbuf
-		>=x11-libs/gtk+-2
-		>=media-libs/libart_lgpl-2.1
-	)
-	xml2? (
-		>=dev-libs/libxml2-2.6.8
-		>=dev-libs/libxslt-1.1.11
-	)"
+		jikes? ( dev-java/jikes )"
+RDEPEND="cairo? ( >=x11-libs/cairo-0.3.0 )
+		 gtk? ( >=x11-libs/gtk+-2 >=media-libs/libart_lgpl-2.1 media-libs/gdk-pixbuf )
+		 xml2? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
 
 S=${WORKDIR}/classpath-${PV}
 
@@ -34,8 +27,7 @@ src_compile() {
 	# portage.
 	local compiler="--with-jikes"
 
-	econf \
-		${compiler} \
+	econf ${compiler} \
 		$(use_enable cairo gtk-cairo) \
 		$(use_enable gtk gtk-peer) \
 		$(use_enable xml2 xmlj) \
