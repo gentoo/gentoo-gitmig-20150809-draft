@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9b30ac905565b376bebed01874c03dba ChangeLog 848
+MD5 32b85747d9e68e28efc2b2e03e91e246 rblcheck-1.5.ebuild 648
+MD5 c29111204a90a6a73b14cf624443d547 ChangeLog 947
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 ab672d70a55da25de3e0b26aff0c9cef rblcheck-1.5.ebuild 651
 MD5 5b98f78399ffb83e1d63e1e054e8886f files/digest-rblcheck-1.5 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBYHBnI1lqEGTUzyQRAqn9AKDeVJvEGPJKBt+XjWTlAD2rI3kcwwCgoFUf
-1xdXpJ/Xu0KL0YpTe1Nq+FU=
-=oSnm
+iD8DBQFCkZj+ViELBEf1JB0RAialAJ9P1JfSH1RRnhspHrAKXsmTlSjHEwCePPnh
+j0ucwSoq7TA5jLRUEYuKzuQ=
+=6Aym
 -----END PGP SIGNATURE-----
