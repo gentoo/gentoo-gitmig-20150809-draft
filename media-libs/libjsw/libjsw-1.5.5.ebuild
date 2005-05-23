@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.5.ebuild,v 1.3 2005/04/10 03:54:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.5.ebuild,v 1.4 2005/05/23 15:46:22 herbs Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_install() {
 
 	cd "${S}"/libjsw
 	dolib.so libjsw.so.${PV} || die "dolib.so"
-	dosym libjsw.so.${PV} /usr/lib/libjsw.so
+	dosym libjsw.so.${PV} /usr/$(get_libdir)/libjsw.so
 	doman man/*
 
 	if use gtk ; then

@@ -1,5 +1,15 @@
-MD5 c8d0a1c9b921e036ef34424f3cab235e ChangeLog 853
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a7cd398ff0770a1457e150561e017f0a libjsw-1.5.5.ebuild 1486
+MD5 85ed5027fa441a85f45ba03f18cf266a ChangeLog 958
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6d31412ee2f28171ac74dd2e2a09423b libjsw-1.5.5.ebuild 1477
 MD5 31ad1236d527eb6aa9762930554c4239 files/digest-libjsw-1.5.5 65
 MD5 4ebd989ae2e416ffb4e29e25f0d4e954 files/libjsw-1.5.5-gcc33.patch 889
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCkftR2G5bA0cA/ScRAmxnAJoCGlgb/ClJ5TeXW16WjyIRAl+WkACghDVO
+bcCGIphUXfrnsoXCl8XYSHw=
+=ITdF
+-----END PGP SIGNATURE-----
