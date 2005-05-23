@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htmldoc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.25 2005/05/21 21:59:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.26 2005/05/23 15:05:35 gustavoz Exp $
+
+  23 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> htmldoc-1.8.24.ebuild:
+  Stable on sparc
 
   21 May 2005; Mamoru KOMACHI <usata@gentoo.org> -htmldoc-1.8.19.ebuild,
   -htmldoc-1.8.20.ebuild, htmldoc-1.8.24.ebuild:

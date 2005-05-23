@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.24.ebuild,v 1.3 2005/05/21 21:59:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.24.ebuild,v 1.4 2005/05/23 15:05:35 gustavoz Exp $
 
 DESCRIPTION="Convert HTML pages into a PDF document"
 SRC_URI="http://ftp.easysw.com/pub/${PN}/${PV}/${P}-source.tar.bz2"
@@ -10,7 +10,7 @@ IUSE="X ssl"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc ~alpha ~amd64"
+KEYWORDS="x86 sparc ~ppc ~alpha ~amd64"
 
 DEPEND="X? ( virtual/x11 )"
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6e )
