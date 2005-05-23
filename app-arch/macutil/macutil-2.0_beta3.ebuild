@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.7 2005/03/20 10:20:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.8 2005/05/23 07:19:34 dholm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="app-arch/sharutils"
 RDEPEND="${DEPEND}
 	>=sys-apps/sed-4"
 

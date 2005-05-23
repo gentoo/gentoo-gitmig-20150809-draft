@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/macutil
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/ChangeLog,v 1.7 2005/03/20 10:20:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/ChangeLog,v 1.8 2005/05/23 07:19:34 dholm Exp $
+
+  23 May 2005; David Holm <dholm@gentoo.org> macutil-2.0_beta3.ebuild:
+  Added missing dependency app-arch/sharutils (Bug #93478)
 
   20 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
   +files/2.0_beta3-gentoo.patch, macutil-2.0_beta3.ebuild:
