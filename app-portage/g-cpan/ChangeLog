@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.2 2005/05/01 12:53:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.3 2005/05/23 15:40:02 mcummings Exp $
+
+*g-cpan-0.13 (23 May 2005)
+
+  23 May 2005; Michael Cummings <mcummings@gentoo.org> +g-cpan-0.13.ebuild:
+  New version of g-cpan.
 
   01 May 2005; Michael Cummings <mcummings@gentoo.org> g-cpan-0.12.ebuild:
   Resetting keywords to match that of portage since Digest::MD5 isn't really a
