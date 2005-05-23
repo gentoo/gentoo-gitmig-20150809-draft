@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.12 2005/01/27 19:03:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.13 2005/05/23 08:42:56 ferdy Exp $
 
 inherit eutils
 
@@ -29,8 +29,7 @@ src_compile() {
 		-e "s:#LOCKINGTEST=/tmp:LOCKINGTEST=/tmp:" \
 		-i Makefile
 
-	if ! use mbox;
-	then
+	if ! use mbox ; then
 		echo "# Use maildir-style mailbox in user's home directory" > ${S}/procmailrc
 		echo 'DEFAULT=$HOME/.maildir/' >> ${S}/procmailrc
 		cd ${S}
@@ -39,6 +38,9 @@ src_compile() {
 		echo '# Use mbox-style mailbox in /var/spool/mail' > ${S}/procmailrc
 		echo 'DEFAULT=/var/spool/mail/$LOGNAME' >> ${S}/procmailrc
 	fi
+
+	# Do not use lazy bindings on lockfile and procmail
+	epatch "${FILESDIR}/${PN}-lazy-bindings.diff"
 
 	emake || die
 }
