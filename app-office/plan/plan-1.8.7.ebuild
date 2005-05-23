@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.8.7.ebuild,v 1.4 2005/01/01 15:40:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.8.7.ebuild,v 1.5 2005/05/23 08:22:24 dholm Exp $
 
 inherit eutils
 
@@ -27,11 +27,14 @@ src_unpack() {
 }
 
 src_compile() {
-	make linux || die "make failed"
+	make SHARE=/usr/share/plan linux || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make \
+		DESTDIR=${D} \
+		SHARE=/usr/share/plan \
+		install || die "install failed"
 	keepdir /usr/share/plan/netplan.dir
 
 	cd ${S}/..
