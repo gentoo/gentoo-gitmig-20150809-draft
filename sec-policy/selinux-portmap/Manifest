@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae67349e411e364a851f568f57c1e0a4 ChangeLog 512
 MD5 b2b30c08468f19aeb7b0ded29eb9b358 metadata.xml 373
-MD5 72760e6f83194387ff1eef32c330d4d7 selinux-portmap-20030811.ebuild 392
+MD5 71a824cb886482b8f87c85246205ac13 selinux-portmap-20030811.ebuild 393
+MD5 4f1f539206d653ddc17fbd2b06111499 ChangeLog 608
 MD5 155a50b6ebb64dbce19f7b113544574d files/digest-selinux-portmap-20030811 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBTjj3GFJQsIJWJy4RAkZzAJ0VVFI9SEkNi05Hikubgb31xjqvRgCfeJMB
-n/WibvU1EJYGD+vn1OATdwo=
-=Bheq
------END PGP SIGNATURE-----
