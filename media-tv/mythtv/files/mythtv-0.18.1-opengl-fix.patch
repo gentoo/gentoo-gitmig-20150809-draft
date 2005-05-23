@@ -1,0 +1,11 @@
+Index: libs/libmythtv/libmythtv.pro
+===================================================================
+--- libs/libmythtv/libmythtv.pro	(revision 7)
++++ libs/libmythtv/libmythtv.pro	(working copy)
+@@ -148,5 +148,6 @@
+ 
+ using_opengl_vsync {
+     CONFIG += opengl
++    DEFINES += USING_OPENGL_VSYNC
+ }
+ 
