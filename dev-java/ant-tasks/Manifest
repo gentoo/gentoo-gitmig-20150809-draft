@@ -2,8 +2,8 @@ MD5 3276ea5d11ab71e08e7ff2dc25908676 ant-tasks-1.6.2-r8.ebuild 3766
 MD5 6fba18154381ac2dd020712b0dea38bb ant-tasks-1.6.2-r10.ebuild 3843
 MD5 59454288aa430213d9cc9cb48fbceca4 ant-tasks-1.6.3-r1.ebuild 3825
 MD5 a2f8a9cfc175c45fb687004cd52900e3 ant-tasks-1.6.2-r9.ebuild 3766
-MD5 59454288aa430213d9cc9cb48fbceca4 ant-tasks-1.6.4.ebuild 3825
-MD5 50dc2215247ff4a23ca4fbdad3ddb6bf ChangeLog 9132
+MD5 c2337e4e05a06b1fbff1dff634fec1d4 ant-tasks-1.6.4.ebuild 3817
+MD5 204944d12faf03dbf125f729deb95298 ChangeLog 9249
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 76459e58a469653b3d3cfd4993b22373 files/digest-ant-tasks-1.6.4 74
 MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-tasks-1.6.2-r10 74
