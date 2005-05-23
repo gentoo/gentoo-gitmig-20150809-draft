@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 994914600d0321d557517e19f2e89524 perl-5.8.4-r4.ebuild 13221
 MD5 41209d7161da73d7712064aed0e118b3 perl-5.8.5-r5.ebuild 12862
-MD5 32e75f5309c3cc3c9d8603b351ab5806 perl-5.8.6-r4.ebuild 13056
+MD5 3ec8b13fa8ed42facb08d19dcae33ba8 perl-5.8.6-r4.ebuild 13107
 MD5 290826f9f4eb8a2c1a587948b6a93c68 perl-5.8.2-r4.ebuild 11083
 MD5 6f2e3d2ecd3234964175430e74fac3f5 ChangeLog 36008
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
@@ -46,7 +46,7 @@ MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.6-perldoc-emptydirs.patch 48
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCkb462G5bA0cA/ScRAgYXAKDkE/JkH0wbPEM+vOYS/yCLm3ELPACg0Ffi
-7/OrwWNZf3gI4zUicio18vI=
-=Y8E6
+iD8DBQFCkduw2G5bA0cA/ScRAgJZAJ4xxzLe96VicN0oChCmD5rch4nLGQCg62N+
+LHjVUowz+GGQAyISZ+l6//Y=
+=KyqL
 -----END PGP SIGNATURE-----
