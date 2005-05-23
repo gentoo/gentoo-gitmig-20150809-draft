@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.16 2005/05/21 20:56:34 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.17 2005/05/23 18:26:08 port001 Exp $
+
+  23 May 2005; Ian Leitch <port001@gentoo.org> -popa3d-0.6.4.1-r1.ebuild,
+  popa3d-0.6.4.1-r2.ebuild:
+  Patches pushed to the mirrors, SRC_URI updated - #93647. keepdir on
+  /var/empty - #93659. Removed stale revision.
 
   21 May 2005; Ian Leitch <port001@gentoo.org> popa3d-0.6.4.1-r2.ebuild:
   Stable on x86

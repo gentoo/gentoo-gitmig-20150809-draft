@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1-r2.ebuild,v 1.2 2005/05/21 20:56:34 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1-r2.ebuild,v 1.3 2005/05/23 18:26:08 port001 Exp $
 
 inherit eutils
 
@@ -44,8 +44,8 @@ DESCRIPTION="A security oriented POP3 server."
 HOMEPAGE="http://www.openwall.com/popa3d/"
 
 SRC_URI="http://www.openwall.com/popa3d/${P}.tar.gz
-	http://www.data.is/~hhg/popa3d/popa3d-0.6.3-vname-2.diff
-	maildir? ( http://www.data.is/~hhg/popa3d/popa3d-0.5.9-maildir-2.diff )"
+	mirror://gentoo/popa3d-0.6.3-vname-2.diff.gz
+	maildir? ( mirror://gentoo/popa3d-0.5.9-maildir-2.diff.gz )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -93,9 +93,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${DISTDIR}/popa3d-0.6.3-vname-2.diff
+	epatch ${DISTDIR}/popa3d-0.6.3-vname-2.diff.gz
 
-	use maildir && epatch ${DISTDIR}/popa3d-0.5.9-maildir-2.diff
+	use maildir && epatch ${DISTDIR}/popa3d-0.5.9-maildir-2.diff.gz
 }
 
 src_compile() {
@@ -156,6 +156,7 @@ src_install() {
 
 	diropts -m 755
 	dodir /var/empty
+	keepdir /var/empty
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/popa3d-initrc popa3d
