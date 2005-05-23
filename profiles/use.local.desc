@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1185 2005/05/22 20:57:01 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1186 2005/05/23 15:54:30 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -118,7 +118,6 @@ app-text/noweb:icon - Enable icon language support for noweb
 app-text/sword-modules:intl - Enable different languages
 app-text/sword:icu - Enable icu support for sword
 app-text/xpdf:nodrm - Disable the drm feature decoder.
-app-text/xpdf:nomotif - Disable motif in xpdf
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/c-jdbc:examples - Install example source code
