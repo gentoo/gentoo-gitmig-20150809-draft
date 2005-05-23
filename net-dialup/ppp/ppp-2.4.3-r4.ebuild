@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r3.ebuild,v 1.5 2005/05/23 18:16:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r4.ebuild,v 1.1 2005/05/23 18:16:42 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~ppc64"
-IUSE="activefilter atm dhcp gtk ipv6 mppe-mppc pam"
+IUSE="activefilter atm dhcp gtk ipv6 mppe-mppc pam radius"
 
 RDEPEND="virtual/libc
 	activefilter? ( virtual/libpcap )
@@ -77,6 +77,10 @@ src_unpack() {
 
 	find ${S} -type f -name Makefile.linux \
 		-exec sed -i -e '/^CC[[:space:]]*=/d' {} \;
+
+	#set the right paths in radiusclient.conf
+	sed -i -e "s:/usr/local/etc:/etc:" \
+		-e "s:/usr/local/sbin:/usr/sbin:" ${S}/pppd/plugins/radius/etc/radiusclient.conf
 }
 
 src_compile() {
@@ -144,14 +148,24 @@ src_install() {
 	doins pppd/plugins/passwordfd.so || die "passwordfd.so not build"
 	doins pppd/plugins/winbind.so || die "winbind.so not build"
 	doins pppd/plugins/rp-pppoe/rp-pppoe.so || die "rp-pppoe.so not build"
-	doins pppd/plugins/radius/radius.so || die "radius.so not build"
-	doins pppd/plugins/radius/radattr.so || die "radattr.so not build"
-	doins pppd/plugins/radius/radrealms.so || die "radrealms.so not build"
 	if use atm; then
 		doins pppd/plugins/pppoatm/pppoatm.so || die "pppoatm.so not build"
 	fi
 	if use dhcp; then
 		doins pppd/plugins/dhcp/dhcpc.so || die "dhcpc.so not build"
+	fi
+	if use radius; then
+		doins pppd/plugins/radius/radius.so || die "radius.so not build"
+		doins pppd/plugins/radius/radattr.so || die "radattr.so not build"
+		doins pppd/plugins/radius/radrealms.so || die "radrealms.so not build"
+
+		#Copy radiusclient configuration files (#92878)
+		insinto /etc/radiusclient
+		insopts -m0644
+		doins pppd/plugins/radius/etc/{dictionary*,issue,port-id-map,radiusclient.conf,realms,servers}
+
+		doman pppd/plugins/radius/pppd-radius.8
+		doman pppd/plugins/radius/pppd-radattr.8
 	fi
 
 	insinto /etc/modules.d
@@ -164,9 +178,6 @@ src_install() {
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
 	dodoc ${FILESDIR}/README.mpls
 	dohtml ${FILESDIR}/pppoe.html
-
-	doman pppd/plugins/radius/pppd-radius.8
-	doman pppd/plugins/radius/pppd-radattr.8
 
 	dosbin scripts/pon
 	dosbin scripts/poff

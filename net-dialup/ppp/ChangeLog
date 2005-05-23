@@ -1,6 +1,16 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.109 2005/05/14 09:27:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.110 2005/05/23 18:16:42 mrness Exp $
+
+*ppp-2.4.3-r4 (23 May 2005)
+*ppp-2.4.2-r11 (23 May 2005)
+
+  23 May 2005; Alin Nastac <mrness@gentoo.org> +ppp-2.4.2-r11.ebuild,
+  ppp-2.4.3-r3.ebuild, +ppp-2.4.3-r4.ebuild:
+  Add radius USE flag which controls installation of RADIUS plugins. Partially
+  solve conflicts with net-dialup/radiusclient by not installing radiusclient
+  library - ppp is statically linked with it (#92878). Install radiusclient
+  configuration files in ppp-2.4.3-r4 (#92977).
 
   14 May 2005; Alin Nastac <mrness@gentoo.org> -files/2.4.2/README.mpls,
   -files/2.4.2/cbcp-dosfix.patch, -files/2.4.2/cflags.patch,
