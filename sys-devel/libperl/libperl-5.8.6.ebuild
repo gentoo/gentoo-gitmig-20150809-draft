@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.8 2005/05/23 11:22:45 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.9 2005/05/23 13:28:50 herbs Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -234,9 +234,9 @@ src_install() {
 		# the library ...
 		local coredir="/usr/lib/perl5/${PV}/${myarch}${mythreading}/CORE"
 		dodir ${coredir}
-		dosym ../../../../${LIBPERL} ${coredir}/${LIBPERL}
-		dosym ../../../../${LIBPERL} ${coredir}/libperl.so.${PERLSLOT}
-		dosym ../../../../${LIBPERL} ${coredir}/libperl.so
+		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/${LIBPERL}
+		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl.so.${PERLSLOT}
+		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl.so
 
 		# Fix for "stupid" modules and programs
 		dodir /usr/lib/perl5/site_perl/${PV}/${myarch}${mythreading}
