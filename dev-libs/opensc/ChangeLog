@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.15 2005/04/10 16:36:09 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.16 2005/05/23 11:51:37 dragonheart Exp $
+
+*opensc-0.9.6 (23 May 2005)
+
+  23 May 2005; Daniel Black <dragonheart@gentoo.org> +opensc-0.9.6.ebuild:
+  Version bump as per bug #92290. Thanks to Andreas Jellinghaus 
+  <aFREESPAMj@leogic.com>
 
   10 Apr 2005; Marcelo Goes <vanquirius@gentoo.org>
   +files/opensc-0.9.4-gcc4.patch, opensc-0.9.4.ebuild:
