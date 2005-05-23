@@ -1,15 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0_p20040927.ebuild,v 1.4 2005/04/21 20:55:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.5.0.ebuild,v 1.1 2005/05/23 11:09:58 dragonheart Exp $
 
-MY_PV=${PV/*_p/}
 DESCRIPTION="Small device C compiler (for various microprocessors)"
 HOMEPAGE="http://sdcc.sourceforge.net/"
-SRC_URI="http://sdcc.sourceforge.net/snapshots/sdcc-src/${PN}-src-${MY_PV}.tar.gz"
+SRC_URI="mirror://sourceforge/sdcc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 
 DEPEND="virtual/libc
