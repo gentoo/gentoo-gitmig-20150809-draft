@@ -1,7 +1,17 @@
-MD5 d6d6bfe3a429110dd6d95fd02ff78f7a im-ja-1.4.ebuild 2553
-MD5 3d44fc801664ce8178c2132e0647dffe ChangeLog 6345
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 406e3725ff0b893966d0613451dd8424 ChangeLog 6439
 MD5 671f19c098650f48f938aba3ce96efd5 metadata.xml 522
+MD5 7eedeb84e417e376a04d5a98e291c838 im-ja-1.4.ebuild 2555
 MD5 fcc30819d305ede6b3dfab3bba34c114 im-ja-1.3-r1.ebuild 2553
-MD5 cf7d1a07d984d74a0f0575ad5e8b88a4 files/digest-im-ja-1.3-r1 61
-MD5 f77bff8724589c3448942bdce8a18153 files/im-ja-1.2-gtk26.patch 872
 MD5 fffebc885dbf06b698e41f70c4e570c2 files/digest-im-ja-1.4 61
+MD5 f77bff8724589c3448942bdce8a18153 files/im-ja-1.2-gtk26.patch 872
+MD5 cf7d1a07d984d74a0f0575ad5e8b88a4 files/digest-im-ja-1.3-r1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCkf4hKRy60XGEcJIRAkRrAKCcpfrHW76iSBgzCl3h+OPbmYhKiwCeMrQT
+61sHg63TLkN9hg81swJIMZU=
+=vLcW
+-----END PGP SIGNATURE-----

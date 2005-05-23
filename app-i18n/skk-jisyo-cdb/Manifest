@@ -1,8 +1,18 @@
-MD5 d0a12c414adc40108740becf4fcd7fa5 skk-jisyo-cdb-200410.ebuild 648
-MD5 2e072d2949f859661d7ecaf216614c22 skk-jisyo-cdb-200501.ebuild 653
-MD5 a422d297fe5f397a7686c7b794072148 ChangeLog 3239
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 71cbf3e8f2e2eea14e343211e14bdc6c ChangeLog 3375
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 8c8f3618d2bc8f6a9292aa3963b4da6b skk-jisyo-cdb-200504.ebuild 653
-MD5 e7d95873f36cd7835d335fc3b75b2157 files/digest-skk-jisyo-cdb-200410 73
+MD5 d0a12c414adc40108740becf4fcd7fa5 skk-jisyo-cdb-200410.ebuild 648
+MD5 de714678457dbeb068d6e0f1445e53ba skk-jisyo-cdb-200501.ebuild 655
+MD5 ca166070a87116aeb1080968beb36dca skk-jisyo-cdb-200504.ebuild 655
 MD5 06f3c6d295ff22d506e4846c56e3a992 files/digest-skk-jisyo-cdb-200501 73
+MD5 e7d95873f36cd7835d335fc3b75b2157 files/digest-skk-jisyo-cdb-200410 73
 MD5 a42a899d69d5a0799b881009079e83b1 files/digest-skk-jisyo-cdb-200504 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCkf5rKRy60XGEcJIRAjkeAJ9+eeR4DPvIk2ndAGZwprpIkY/VVACgszQ8
+Mdg0PrhKPH4WuD2S4YqVY/I=
+=ZIrX
+-----END PGP SIGNATURE-----
