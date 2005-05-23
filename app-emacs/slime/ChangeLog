@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.15 2005/05/11 06:44:16 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.16 2005/05/23 00:25:19 mkennedy Exp $
+
+  23 May 2005; <mkennedy@gentoo.org> slime-1.2.1.ebuild:
+  Keywording ~sparc
 
 *slime-1.2.1 (11 May 2005)
 
