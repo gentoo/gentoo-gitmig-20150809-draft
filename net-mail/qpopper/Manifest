@@ -1,8 +1,16 @@
-MD5 f341a073a22831f6608a678a7ab8abe5 ChangeLog 2317
-MD5 8e0f244586a405d76f08ad38091ddc82 qpopper-4.0.5-r1.ebuild 3374
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4a27d43f4a62c377836098bd36df0c61 qpopper-4.0.5-r3.ebuild 3710
+MD5 d2c056a4f17cbd8c7eede6078e266301 ChangeLog 2607
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 dd7ebbec5d45a3501ace80ef6f0983d0 qpopper-4.0.5-r2.ebuild 3481
-MD5 f5dc268b887d429c8842004f2232a385 qpopper-4.0.5.ebuild 3196
-MD5 843447464085eea5bb368ef6d5e357ba files/digest-qpopper-4.0.5-r1 131
-MD5 843447464085eea5bb368ef6d5e357ba files/digest-qpopper-4.0.5 131
-MD5 843447464085eea5bb368ef6d5e357ba files/digest-qpopper-4.0.5-r2 131
+MD5 b21d6d7fcaa29a2ce5ba908acf5cb295 files/qpopper-CAN-2005-1151.patch 4628
+MD5 51b7818b4d1bf784b783d980a9475e5d files/qpopper-CAN-2005-1152.patch 429
+MD5 843447464085eea5bb368ef6d5e357ba files/digest-qpopper-4.0.5-r3 131
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCki3VViELBEf1JB0RApSZAJ9qhJEeK1wL99WFkn60Mw4zlIH7EwCeLhpC
+PPIrU58Ekv7meUxEHCAV8gM=
+=AgWK
+-----END PGP SIGNATURE-----

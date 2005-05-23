@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r2.ebuild,v 1.2 2005/02/14 13:49:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r3.ebuild,v 1.1 2005/05/23 19:23:38 ferdy Exp $
+
+inherit eutils
 
 IUSE="debug gdbm mailbox pam ssl xinetd"
 
@@ -8,24 +10,30 @@ S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="A POP3 Server"
 SRC_URI="ftp://ftp.qualcomm.com/eudora/servers/unix/popper/${PN}${PV}.tar.gz
 		http://www.ibiblio.org/gentoo/distfiles/qpopper-files.tar.bz2"
-HOMEPAGE="http://www.qpopper.org/qpopper/"
+HOMEPAGE="http://www.eudora.com/products/unsupported/qpopper/index.html"
 
 DEPEND="virtual/mta
 	xinetd? ( virtual/inetd )
 	gdbm? ( sys-libs/gdbm )
 	!gdbm? ( sys-libs/db )
 	pam? (
-			>=sys-libs/pam-0.72
-			>=net-mail/mailbase-0.00-r8
-		)
+		>=sys-libs/pam-0.72
+		>=net-mail/mailbase-0.00-r8
+	)
 	ssl? ( dev-libs/openssl )"
 
 SLOT="0"
 LICENSE="qpopper"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="~amd64 sparc x86"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/${PN}-CAN-2005-1151.patch" || die "first patch failed"
+	epatch "${FILESDIR}/${PN}-CAN-2005-1152.patch" || die "second patch failed"
+}
 
 src_compile() {
-
 	local myconf
 
 	use pam && myconf="${myconf} --with-pam=pop3"

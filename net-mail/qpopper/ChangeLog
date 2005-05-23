@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/qpopper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.19 2005/02/14 13:49:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.20 2005/05/23 19:23:38 ferdy Exp $
+
+*qpopper-4.0.5-r3 (23 May 2005)
+
+  23 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/qpopper-CAN-2005-1151.patch, +files/qpopper-CAN-2005-1152.patch,
+  -qpopper-4.0.5.ebuild, -qpopper-4.0.5-r1.ebuild, -qpopper-4.0.5-r2.ebuild,
+  +qpopper-4.0.5-r3.ebuild:
+  security bump, wrt #90622
 
   14 Feb 2005; <plasmaroo@gentoo.org> qpopper-4.0.5-r1.ebuild,
   qpopper-4.0.5-r2.ebuild:
