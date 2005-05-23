@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.20 2005/02/17 13:08:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.21 2005/05/23 18:51:27 stuart Exp $
+
+  23 May 2005; Stuart Herbert <stuart@gentoo.org> :
+  Added missing nxprint binary; fixed up deps on other nx-packages; thanks to
+  bug #91409
 
 *nxclient-1.4.0-r4 (17 Feb 2005)
 
