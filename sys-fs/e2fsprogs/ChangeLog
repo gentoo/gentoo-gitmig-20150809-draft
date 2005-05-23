@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.55 2005/04/30 04:43:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.56 2005/05/23 11:19:29 herbs Exp $
+
+  23 May 2005; Herbie Hopkins <herbs@gentoo.org> e2fsprogs-1.37-r1.ebuild:
+  More get_libdir-ization, fixes compilation on amd64s no-lib32 profile.
 
   30 Apr 2005; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.37-r1.ebuild:
   Remove USE=diet since it causes stupid problems #81096.
