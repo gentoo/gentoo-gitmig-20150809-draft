@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.0.1.ebuild,v 1.4 2005/05/23 06:45:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.0.1.ebuild,v 1.5 2005/05/23 23:36:10 vapier Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ogre/${PN}-linux_osx-v${PV//./-}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE="cegui cg devil double-precision doc gtk opengl openexr sdl threads"
 
 RDEPEND=">=dev-libs/zziplib-0.13.36
