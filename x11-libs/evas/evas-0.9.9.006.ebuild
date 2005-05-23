@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-0.9.9.007.ebuild,v 1.4 2005/05/22 21:21:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-0.9.9.006.ebuild,v 1.1 2005/05/23 22:29:19 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -27,7 +27,7 @@ src_compile() {
 	#  --enable-scale-sample           enable sampling scaler code
 	#  --enable-scale-smooth           enable sampling scaler code
 	#  --enable-scale-trilinear        enable tri-linear scaler code
-	[[ ${PV} != "0.9.9.007" ]] && die "add back in cairo check"
+	[[ ${PV} != 0.9.9.00[67] ]] && die "add back in cairo check"
 #			$(use_enable cairo cairo-x11)
 	export MY_ECONF="
 		--disable-cairo-x11
