@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/qmail-scanner
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.17 2005/04/10 15:17:41 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.18 2005/05/23 02:27:09 anarchy Exp $
+
+  23 May 2005; <anarchy@gentoo.org> qmail-scanner-1.25-r1.ebuild:
+  restricting userpriv usersandbox bug #93447
 
 *qmail-scanner-1.25-r1 (10 Apr 2005)
 
