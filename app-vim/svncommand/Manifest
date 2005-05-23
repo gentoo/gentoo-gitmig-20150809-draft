@@ -1,6 +1,16 @@
-MD5 88cc785529966dcd174384b6648afce3 svncommand-0.2.ebuild 549
-MD5 97a9177bde450c1a6ceca4db008829b5 svncommand-1.67.3.ebuild 556
-MD5 fcfd2405f58b4c84994fdebae1dc9847 ChangeLog 938
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 985c286bd836a37f97ea739c7241b11f ChangeLog 1121
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 f4209e6c21c87c13738d8a34037caec9 svncommand-1.67.3.ebuild 611
+MD5 58605e8db7f1bf2b7513582c45d9fb18 svncommand-0.2.ebuild 604
 MD5 db4b68c7429801caa48e64135a322b27 files/digest-svncommand-0.2 65
 MD5 cdde5e4fa96bd6b25680bab4ac98f921 files/digest-svncommand-1.67.3 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCkZinLLFUmVNQ7rkRAiXpAJ0U6lA4IzZzIklD72grgCW8hZ6HjwCdGMM/
+yHnOQhnspCRi1hnH3gGuQ6w=
+=g03u
+-----END PGP SIGNATURE-----

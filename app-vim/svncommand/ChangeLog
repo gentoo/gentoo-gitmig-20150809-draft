@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/svncommand
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/svncommand/ChangeLog,v 1.5 2005/05/03 23:15:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/svncommand/ChangeLog,v 1.6 2005/05/23 08:47:24 ciaranm Exp $
+
+  23 May 2005; Ciaran McCreesh <ciaranm@gentoo.org> svncommand-0.2.ebuild,
+  svncommand-1.67.3.ebuild:
+  Conflict between vimspell and svncommand maps, so make them block. Bug #91965
 
 *svncommand-1.67.3 (03 May 2005)
 *svncommand-0.2 (03 May 2005)
