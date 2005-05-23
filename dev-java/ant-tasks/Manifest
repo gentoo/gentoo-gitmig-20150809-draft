@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3276ea5d11ab71e08e7ff2dc25908676 ant-tasks-1.6.2-r8.ebuild 3766
 MD5 6fba18154381ac2dd020712b0dea38bb ant-tasks-1.6.2-r10.ebuild 3843
 MD5 59454288aa430213d9cc9cb48fbceca4 ant-tasks-1.6.3-r1.ebuild 3825
@@ -11,3 +14,10 @@ MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-tasks-1.6.2-r8 74
 MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-tasks-1.6.2-r9 74
 MD5 4abd275148cde1e1c88e8ff4097cbcd8 files/digest-ant-tasks-1.6.3-r1 74
 MD5 8c69a473b88559829069ac80730f2f1b files/1.6.2-scp.patch 877
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCkfah/rLF9B432nYRAoToAJ4qMiWKD0cp/i4Z5uS0ibiu/dYaQQCgplUM
+j7lHAn6LKI/C+BPKifDAKyY=
+=OcPM
+-----END PGP SIGNATURE-----
