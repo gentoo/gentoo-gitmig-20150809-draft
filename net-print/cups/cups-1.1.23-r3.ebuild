@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r3.ebuild,v 1.2 2005/05/23 16:01:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r3.ebuild,v 1.3 2005/05/23 23:27:56 lanius Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -111,7 +111,7 @@ src_install() {
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/cups.xinetd cups-lpd
 
 	# allow raw printing
-	dosed "s:#application/octet-stream:application/octet-stream" /etc/cups/mime.types /etc/cups/mime.convs
+	dosed "s:#application/octet-stream:application/octet-stream:" /etc/cups/mime.types /etc/cups/mime.convs
 
 	# Let foreign charset PDF's print. (Bug: 67493)
 	dosym /etc/xpdfrc /etc/cups/pdftops.conf
