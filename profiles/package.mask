@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4004 2005/05/22 22:39:23 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4005 2005/05/23 04:16:17 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -38,7 +38,8 @@ x11-plugins/desklet-sysinfo
 x11-plugins/desklet-temperature
 x11-plugins/desklet-weather
 x11-plugins/desklet-wireless
-<gnome-extra/gdesklets-core-0.33.1
+# this breaks deps.  Work with arch teams to fix that first (mr_boens_)
+#<gnome-extra/gdesklets-core-0.33.1
 
 
 # Sebastian Bergmann <sebastian@gentoo.org> (22 May 2005)
