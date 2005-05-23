@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r8.ebuild,v 1.12 2005/05/23 15:52:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r8.ebuild,v 1.13 2005/05/23 15:55:44 lanius Exp $
 
 inherit eutils
 
@@ -102,4 +102,8 @@ install_lang() {
 	doins *.cid*
 	insinto /usr/share/xpdf/$1/CMap
 	doins CMap/*
+}
+
+pkg_postinst() {
+	use motif || einfo "If you want to compile xpdf binary you have to set USE=motif"
 }
