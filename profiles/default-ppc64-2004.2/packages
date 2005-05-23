@@ -38,6 +38,7 @@
 >=sys-process/at-3.1.8-r6
 *app-arch/bzip2
 *app-arch/cpio
+*sys-apps/coreutils
 *sys-apps/debianutils
 *virtual/dev-manager
 *sys-apps/diffutils
@@ -46,7 +47,6 @@
 *sys-apps/eject
 *sys-apps/fbset
 *sys-apps/file
-*sys-apps/fileutils
 *sys-apps/findutils
 *sys-apps/gawk
 *sys-apps/grep
@@ -68,14 +68,12 @@ sys-apps/raidtools
 sys-fs/reiserfsprogs
 *sys-apps/sed
 *sys-apps/setserial
-*sys-apps/sh-utils
 *<sys-apps/shadow-5
 *>=app-arch/sharutils-4.2.1-r6
 *sys-apps/slocate
 >=sys-apps/sysklogd-1.4.1
 *app-arch/tar
 *sys-apps/texinfo
-*sys-apps/textutils
 *sys-apps/util-linux
 *sys-apps/which
 >=sys-apps/xinetd-2.3.3-r6

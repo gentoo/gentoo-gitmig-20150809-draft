@@ -9,12 +9,12 @@ app-arch/bzip2
 sys-apps/console-data
 sys-apps/kbd
 app-arch/cpio
+sys-apps/coreutils
 sys-apps/debianutils
 sys-fs/devfsd
 sys-apps/diffutils
 sys-fs/e2fsprogs
 sys-apps/ed
-sys-apps/fileutils
 sys-apps/findutils
 sys-apps/gawk
 sys-apps/grep
@@ -33,12 +33,10 @@ sys-apps/raidtools
 sys-fs/reiserfsprogs
 sys-apps/sed
 sys-apps/setserial
-sys-apps/sh-utils
 sys-apps/shadow
 app-arch/sharutils
 sys-apps/star
 app-arch/tar
-sys-apps/textutils
 sys-apps/util-linux
 sys-fs/xfsdump
 sys-fs/xfsprogs
