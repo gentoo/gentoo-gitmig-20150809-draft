@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.6 2005/05/09 00:02:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.7 2005/05/23 08:43:25 ferdy Exp $
 
 inherit eutils gnuconfig
 
@@ -31,6 +31,9 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# Do not use lazy bindings on /usr/bin/maildrop
+	sed -i -e 's~^maildrop_LDFLAGS =~& -Wl,-z,now~g' maildrop/Makefile.in
 	use uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
 	if use gdbm ; then
 		use berkdb && einfo "Both gdbm and berkdb selected. Using gdbm."
@@ -115,12 +118,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	ewarn
-	ewarn "Due to a security bug (#91465) you should change the permissions of:"
-	use ldap && ewarn "   /etc/maildrop/maildropldap.cf"
-	use mysql && ewarn "   /etc/maildrop/maildropmysql.cf"
-	ewarn "  by running chmod 0640 on them."
-	ewarn
-	echo
+	if use ldap || use mysql ; then
+		echo
+		ewarn
+		ewarn "Due to a security bug (#91465) you should change the permissions of:"
+		use ldap && ewarn "   /etc/maildrop/maildropldap.cf"
+		use mysql && ewarn "   /etc/maildrop/maildropmysql.cf"
+		ewarn "  by running chmod 0640 on them."
+		ewarn
+		echo
+	fi
 }
