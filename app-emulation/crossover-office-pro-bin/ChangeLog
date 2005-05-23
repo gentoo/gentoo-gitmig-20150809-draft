@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/crossover-office-pro-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/ChangeLog,v 1.1 2005/04/19 22:35:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/ChangeLog,v 1.2 2005/05/23 16:32:14 herbs Exp $
+
+  23 May 2005; Herbie Hopkins <herbs@gentoo.org>
+  crossover-office-pro-bin-4.2.ebuild:
+  Marked ~amd64 wrt bug #92896.
 
 *crossover-office-pro-bin-4.2 (19 Apr 2005)
 
