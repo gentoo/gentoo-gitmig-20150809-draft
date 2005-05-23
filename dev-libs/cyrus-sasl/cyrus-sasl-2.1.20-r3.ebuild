@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20-r3.ebuild,v 1.2 2005/05/22 15:23:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20-r3.ebuild,v 1.3 2005/05/23 06:40:24 ferdy Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -248,7 +248,7 @@ src_install () {
 	dodoc saslauthd/{AUTHORS,COPYING,ChangeLog,LDAP_SASLAUTHD,NEWS,README}
 
 	newpamd "${FILESDIR}/saslauthd.pam-include" saslauthd
-	newinitd "${FILESDIR}pwcheck.rc6" pwcheck || \
+	newinitd "${FILESDIR}/pwcheck.rc6" pwcheck || \
 		die "failed to install pwcheck to /etc/init.d"
 	newinitd "${FILESDIR}/saslauthd2.rc6" saslauthd || \
 		die "failed to install saslauthd to /etc/init.d"
