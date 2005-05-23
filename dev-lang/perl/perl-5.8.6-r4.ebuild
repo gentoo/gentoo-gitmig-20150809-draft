@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r4.ebuild,v 1.6 2005/05/16 16:14:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r4.ebuild,v 1.7 2005/05/23 11:25:53 herbs Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -56,12 +56,12 @@ pkg_setup() {
 		ewarn ""
 	fi
 
-	if [ ! -f "${ROOT}/usr/lib/${LIBPERL}" ]
+	if [ ! -f "${ROOT}/usr/$(get_libdir)/${LIBPERL}" ]
 	then
 		# Make sure we have libperl installed ...
-		eerror "Cannot find ${ROOT}/usr/lib/${LIBPERL}!  Make sure that you"
+		eerror "Cannot find ${ROOT}/usr/$(get_libdir)/${LIBPERL}!  Make sure that you"
 		eerror "have sys-libs/libperl installed properly ..."
-		die "Cannot find /usr/lib/${LIBPERL}!"
+		die "Cannot find /usr/$(get_libdir)/${LIBPERL}!"
 	fi
 }
 
@@ -347,12 +347,12 @@ EOF
 
 pkg_postinst() {
 	# Make sure we do not have stale/invalid libperl.so 's ...
-	if [ -f "${ROOT}usr/lib/libperl.so" -a ! -L "${ROOT}usr/lib/libperl.so" ]
+	if [ -f "${ROOT}usr/$(get_libdir)/libperl.so" -a ! -L "${ROOT}usr/$(get_libdir)/libperl.so" ]
 	then
-		mv -f ${ROOT}usr/lib/libperl.so ${ROOT}usr/lib/libperl.so.old
+		mv -f ${ROOT}usr/$(get_libdir)/libperl.so ${ROOT}usr/$(get_libdir)/libperl.so.old
 	fi
 
-	local perllib="`readlink -f ${ROOT}usr/lib/libperl.so | sed -e 's:^.*/::'`"
+	local perllib="`readlink -f ${ROOT}usr/$(get_libdir)/libperl.so | sed -e 's:^.*/::'`"
 
 	# If we are installing perl, we need the /usr/lib/libperl.so symlink to
 	# point to the version of perl we are running, else builing something
@@ -360,12 +360,12 @@ pkg_postinst() {
 	if [ "${perllib}" != "${LIBPERL}" ]
 	then
 		# Delete stale symlinks
-		rm -f ${ROOT}usr/lib/libperl.so
-		rm -f ${ROOT}usr/lib/libperl.so.${PERLSLOT}
+		rm -f ${ROOT}usr/$(get_libdir)/libperl.so
+		rm -f ${ROOT}usr/$(get_libdir)/libperl.so.${PERLSLOT}
 		# Regenerate libperl.so.${PERLSLOT}
-		ln -snf ${LIBPERL} ${ROOT}usr/lib/libperl.so.${PERLSLOT}
+		ln -snf ${LIBPERL} ${ROOT}usr/$(get_libdir)/libperl.so.${PERLSLOT}
 		# Create libperl.so (we use the *soname* versioned lib here ..)
-		ln -snf libperl.so.${PERLSLOT} ${ROOT}usr/lib/libperl.so
+		ln -snf libperl.so.${PERLSLOT} ${ROOT}usr/$(get_libdir)/libperl.so
 	fi
 
 	INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${PV}'|etc|local|perl$/; print "$line\n" }')
