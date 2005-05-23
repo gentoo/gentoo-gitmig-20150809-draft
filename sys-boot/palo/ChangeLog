@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/palo
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.10 2004/07/29 08:18:50 gmsoft Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.11 2005/05/23 18:57:51 gmsoft Exp $
+
+*palo-1.8_pre20050523 (23 May 2005)
+
+  23 May 2005; Guy Martin <gmsoft@gentoo.org> +palo-1.8_pre20050523.ebuild:
+  Version bump.
 
   29 Jul 2004; Guy Martin <gmsoft@gentoo.org> palo-1.5_pre20040515.ebuild:
   Marking stable since it really is.
