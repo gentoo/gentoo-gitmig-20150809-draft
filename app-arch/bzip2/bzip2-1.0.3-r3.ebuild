@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.3-r3.ebuild,v 1.1 2005/05/19 22:15:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.3-r3.ebuild,v 1.2 2005/05/23 22:29:50 vapier Exp $
 
-inherit multilib toolchain-funcs flag-o-matic
+inherit eutils multilib toolchain-funcs flag-o-matic
 
 DESCRIPTION="A high-quality data compressor used extensively by Gentoo Linux"
 HOMEPAGE="http://www.bzip.org/"
@@ -66,6 +66,7 @@ src_install() {
 		for v in ${PV%%.*} ${PV%.*} ; do
 			dosym libbz2.so.${PV} /$(get_libdir)/libbz2.so.${v}
 		done
+		gen_usr_ldscript libbz2.so
 
 		dodoc README* CHANGES Y2K_INFO bzip2.txt manual.*
 	else
