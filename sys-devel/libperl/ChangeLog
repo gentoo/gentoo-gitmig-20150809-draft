@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.59 2005/03/08 23:53:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.60 2005/05/23 11:22:45 herbs Exp $
+
+  23 May 2005; Herbie Hopkins <herbs@gentoo.org> libperl-5.8.6.ebuild:
+  More get_libdir-ization, fixes compilation on amd64's no-lib32 profile.
 
   08 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   libperl-5.8.6.ebuild:

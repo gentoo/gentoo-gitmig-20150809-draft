@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.7 2005/03/14 23:46:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.8 2005/05/23 11:22:45 herbs Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -306,19 +306,19 @@ EOF
 pkg_postinst() {
 
 	# Make sure we do not have stale/invalid libperl.so 's ...
-	if [ -f "${ROOT}usr/lib/libperl.so" -a ! -L "${ROOT}usr/lib/libperl.so" ]
+	if [ -f "${ROOT}usr/$(get_libdir)/libperl.so" -a ! -L "${ROOT}usr/$(get_libdir)/libperl.so" ]
 	then
-		mv -f ${ROOT}usr/lib/libperl.so ${ROOT}usr/lib/libperl.so.old
+		mv -f ${ROOT}usr/$(get_libdir)/libperl.so ${ROOT}usr/$(get_libdir)/libperl.so.old
 	fi
 
 	# Next bit is to try and setup the /usr/lib/libperl.so symlink
 	# properly ...
-	local libnumber="`ls -1 ${ROOT}usr/lib/libperl.so.?.* | grep -v '\.old' | wc -l`"
+	local libnumber="`ls -1 ${ROOT}usr/$(get_libdir)/libperl.so.?.* | grep -v '\.old' | wc -l`"
 	if [ "${libnumber}" -eq 1 ]
 	then
 		# Only this version of libperl is installed, so just link libperl.so
 		# to the *soname* version of it ...
-		ln -snf libperl.so.${PERLSLOT} ${ROOT}usr/lib/libperl.so
+		ln -snf libperl.so.${PERLSLOT} ${ROOT}usr/$(get_libdir)/libperl.so
 	else
 		if [ -x "${ROOT}/usr/bin/perl" ]
 		then
@@ -327,7 +327,7 @@ pkg_postinst() {
 			# to that *soname* version of libperl.so ...
 			local perlversion="`${ROOT}/usr/bin/perl -V:version | cut -d\' -f2 | cut -d. -f1,2`"
 
-			cd ${ROOT}usr/lib
+			cd ${ROOT}usr/$(get_libdir)
 			# Link libperl.so to the *soname* versioned lib ...
 			ln -snf `echo libperl.so.?.${perlversion} | cut -d. -f1,2,3` libperl.so
 		else
@@ -335,12 +335,12 @@ pkg_postinst() {
 
 			# Nope, we are not so lucky ... try to figure out what version
 			# is the latest, and keep fingers crossed ...
-			for x in `ls -1 ${ROOT}usr/lib/libperl.so.?.*`
+			for x in `ls -1 ${ROOT}usr/$(get_libdir)/libperl.so.?.*`
 			do
 				latest="${x}"
 			done
 
-			cd ${ROOT}usr/lib
+			cd ${ROOT}usr/$(get_libdir)
 			# Link libperl.so to the *soname* versioned lib ...
 			ln -snf `echo ${latest##*/} | cut -d. -f1,2,3` libperl.so
 		fi
