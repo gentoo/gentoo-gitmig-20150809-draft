@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3f66738f4468a3c502bb199b4d3b6d5c netbeans-3.4.1.ebuild 3197
 MD5 8232cefa61ab77a0779af0ebea56a3ed netbeans-3.5.1.ebuild 3159
 MD5 d4d6bd7774014c083a6c4487327579fa netbeans-3.6-r1.ebuild 3161
-MD5 5f07bdb275d71b874c594b9641204a7d ChangeLog 4435
-MD5 b41a8a50a9f2671adbe2744f43e6348f netbeans-4.0.ebuild 10610
+MD5 4e91bb8870bd13d5d5068aea635efd46 ChangeLog 4537
+MD5 8395a9f8420c9d8d9ebd19ed7f0e02c7 netbeans-4.0.ebuild 10618
 MD5 e7fcbf7f5131562425fda47afe3b39b9 metadata.xml 1128
 MD5 95ab6db4dc5ed189e21f0e6ae1aa657e files/antbuild.xml.patch 957
 MD5 9c6f59bb154bdcd7242f4544b8feae6b files/netbeans-KDE.desktop 139
@@ -15,3 +18,10 @@ MD5 86a2e857f2e16af4becaa6e0e733c215 files/netbeans 786
 MD5 e04a4eefe6510679e7cf06d0377e9e18 files/netbeans.desktop 103
 MD5 eba3a44af2a04cab3a7bf00ce982130e files/digest-netbeans-3.4.1 77
 MD5 9db67cc7c38cdd884ec192a4c642e144 files/digest-netbeans-3.5.1 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCkhe506ebR+OMO78RAkzkAJ97n0VBZu5dTMzBGDxKKQiIGsHt2wCbBwvc
+S+1ikUntU0mqktJs2fDpETM=
+=rRHp
+-----END PGP SIGNATURE-----

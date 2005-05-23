@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0.ebuild,v 1.1 2005/05/17 16:29:43 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0.ebuild,v 1.2 2005/05/23 17:49:19 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -46,7 +46,7 @@ SRC_URI="${BASELOCATION}/${MAINTARBALL}
 
 LICENSE="Apache-1.1 Apache-2.0 SPL W3C sun-bcla-j2eeeditor sun-bcla-javac sun-javac as-is docbook sun-resolver"
 SLOT="4.0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="debug doc"
 
 # dev-java/xml-commons-resolver for future versions
