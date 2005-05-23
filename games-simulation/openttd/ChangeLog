@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.13 2005/05/16 15:09:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.14 2005/05/23 07:15:02 dholm Exp $
+
+*openttd-0.4.0.1 (23 May 2005)
+
+  23 May 2005; David Holm <dholm@gentoo.org> +openttd-0.4.0.1.ebuild:
+  Version bumped, and added fixes for dedicated mode submitted by Luca Spiller
+  <thelucster (at) gmail (dot) com> (Bug #93486)
 
 *openttd-0.4.0 (16 May 2005)
 
