@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20-r3.ebuild,v 1.3 2005/05/23 06:40:24 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20-r3.ebuild,v 1.4 2005/05/23 17:31:50 ferdy Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -202,19 +202,19 @@ src_install () {
 	# Install everything necessary so user can build sample client/server
 	# (bug #64733)
 	if use sample; then
-	        insinto /usr/share/${PN}-2/examples
-	        doins aclocal.m4 config.h config.status configure.in
+		insinto /usr/share/${PN}-2/examples
+		doins aclocal.m4 config.h config.status configure.in
 		dosym /usr/include/sasl /usr/share/${PN}-2/examples/include
-	        exeinto /usr/share/${PN}-2/examples
-	        doexe libtool
-	        insinto /usr/share/${PN}-2/examples/sample
-	        doins sample/*.{c,h} sample/*Makefile*
-	        insinto /usr/share/${PN}-2/examples/sample/.deps
-	        doins sample/.deps/*
+		exeinto /usr/share/${PN}-2/examples
+		doexe libtool
+		insinto /usr/share/${PN}-2/examples/sample
+		doins sample/*.{c,h} sample/*Makefile*
+		insinto /usr/share/${PN}-2/examples/sample/.deps
+		doins sample/.deps/*
 		dodir /usr/share/${PN}-2/examples/lib
-	        dosym /usr/$(get_libdir)/libsasl2.la /usr/share/${PN}-2/examples/lib/libsasl2.la
+		dosym /usr/$(get_libdir)/libsasl2.la /usr/share/${PN}-2/examples/lib/libsasl2.la
 		dodir /usr/share/${PN}-2/examples/lib/.libs
-	        dosym /usr/$(get_libdir)/libsasl2.so /usr/share/${PN}-2/examples/lib/.libs/libsasl2.so
+		dosym /usr/$(get_libdir)/libsasl2.so /usr/share/${PN}-2/examples/lib/.libs/libsasl2.so
 	fi
 
 	# Bug #60769. Default location for java classes breaks OpenOffice.
