@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/ca-certificates
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.1 2005/05/23 23:57:34 vapier Exp $
+
+*ca-certificates-20050518 (23 May 2005)
+
+  23 May 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #93520.
