@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1186 2005/05/23 15:54:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1187 2005/05/23 17:12:35 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -580,18 +580,19 @@ net-analyzer/snort:inline - Enable snort-inline for accepting packets from iptab
 net-analyzer/snort:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/snort:snortsam - patches snort for use with snortsam
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via libpcapnav
-net-dialup/drdsl:utf8 - Enable UTF8 encoding
-net-dialup/fcdsl:utf8 - Enable UTF8 encoding
-net-dialup/freeradius:edirectory - Enable Novell eDirectory integration
-net-dialup/freeradius:frascend - Enable Ascend binary mode
-net-dialup/freeradius:frnothreads - Disable thread support
-net-dialup/freeradius:frxp - Enable experimental modules
+net-dialup/drdsl:utf8 - Enables UTF8 encoding
+net-dialup/fcdsl:utf8 - Enables UTF8 encoding
+net-dialup/freeradius:edirectory - Enables Novell eDirectory integration
+net-dialup/freeradius:frascend - Enables Ascend binary mode
+net-dialup/freeradius:frnothreads - Disables thread support
+net-dialup/freeradius:frxp - Enables experimental modules
 net-dialup/freeradius:udpfromto - Compile in UDPFROMTO support
-net-dialup/ivcall:softfax - Enable soft fax support
-net-dialup/ppp:activefilter - Enable activefilter support
-net-dialup/ppp:atm - Enable support for pppoatm
-net-dialup/ppp:dhcp - Enable the dhcp plugin
-net-dialup/ppp:mppe-mppc - Enable support for mppe-mppc
+net-dialup/ivcall:softfax - Enables soft fax support
+net-dialup/ppp:activefilter - Enables activefilter support
+net-dialup/ppp:atm - Enables support for pppoatm
+net-dialup/ppp:dhcp - Enables the dhcp plugin
+net-dialup/ppp:mppe-mppc - Enables support for mppe-mppc
+net-dialup/ppp:radius - Enables RADIUS support
 net-dns/bind:bind-mysql - enables mysql support for bind (non-dlz)
 net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
 net-dns/bind:idn - enables support for Internalized Domain Names
