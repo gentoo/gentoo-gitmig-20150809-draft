@@ -10,7 +10,7 @@ MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 23c7218ace814473c88d1fe3416e8b3c baselayout-1.11.11-r3.ebuild 18761
 MD5 83173fc495d5b40d07fba4a28156bc76 baselayout-1.11.10-r7.ebuild 17390
 MD5 e0f1e8c15b2f320808de66cbfa2e7c67 baselayout-1.12.0_alpha2-r1.ebuild 18815
-MD5 3c5e92c774cedd4ed62e6371e8b9fb9a baselayout-1.11.12-r1.ebuild 18557
+MD5 d1efa571f732beeecced555fcea80f4c baselayout-1.11.12-r1.ebuild 18555
 MD5 50ccc6f432f5e941daec74f31f2d2a53 files/digest-baselayout-1.11.11-r3 70
 MD5 333c983dc00cb352f4725cacc0378fea files/baselayout-1.11.10-bridge.patch 3547
 MD5 f96ffe6b44684809b8ec0e4450093f59 files/baselayout-1.11.10-iwconfig-2.patch 925
