@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7c7b18a61728cd5800164d6ab29d5fe4 ChangeLog 3169
 MD5 2d874c26ff13956a322ec3af98c53ea6 Test-Simple-0.47-r1.ebuild 729
-MD5 d9a0114972e5b3a859610b2f1f38529d Test-Simple-0.54.ebuild 649
-MD5 26a1cfe6364c2aa9eb75f5014a4075a3 Test-Simple-0.60.ebuild 652
 MD5 53fb39a12b566255a790ca99dbe1f085 Test-Simple-0.53.ebuild 648
-MD5 ea67ff1c4711569d5ece6b4a0196e86a ChangeLog 3082
+MD5 651ae6421e7958739f198d26c7022454 Test-Simple-0.54.ebuild 644
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 26a1cfe6364c2aa9eb75f5014a4075a3 Test-Simple-0.60.ebuild 652
+MD5 6c92c841c2a87efdcbbcb3e66ec05494 files/digest-Test-Simple-0.47-r1 67
 MD5 d67588559692c2e16600d1a23dd8ab73 files/digest-Test-Simple-0.53 67
 MD5 92843a9ec74e56d38b026d35c9c5098d files/digest-Test-Simple-0.54 67
 MD5 86f4b0adac643442cd9e23c294de79c2 files/digest-Test-Simple-0.60 67
-MD5 6c92c841c2a87efdcbbcb3e66ec05494 files/digest-Test-Simple-0.47-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCjxyd06ebR+OMO78RAjVgAJ0ZbTaXWaCRRnCo8Y4DhQw+K+t/fACgjQuD
-6Foz6jaottj1MCEyJugnYnk=
-=05hO
------END PGP SIGNATURE-----
