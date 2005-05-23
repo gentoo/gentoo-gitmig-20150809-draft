@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/flute
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/flute/ChangeLog,v 1.3 2005/04/23 21:59:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/flute/ChangeLog,v 1.4 2005/05/23 21:00:25 luckyduck Exp $
+
+  23 May 2005; Jan Brinkmann <luckyduck@gentoo.org> flute-1.3.ebuild:
+  stable on amd64 and x86
 
   23 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> flute-1.3.ebuild:
   added ~amd64 to KEYWORDS
