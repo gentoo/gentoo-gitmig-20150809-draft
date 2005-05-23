@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxserver-personal
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/ChangeLog,v 1.16 2005/05/01 02:06:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/ChangeLog,v 1.17 2005/05/23 18:57:23 stuart Exp $
+
+*nxserver-personal-1.4.0-r3 (23 May 2005)
+
+  23 May 2005; Stuart Herbert <stuart@gentoo.org>
+  +nxserver-personal-1.4.0-r3.ebuild:
+  Version bump to pick up changes in eclass; adds blocker on nxserver-freenx
+  Thanks to bug #91770
 
 *nxserver-personal-1.4.0-r2 (30 Apr 2005)
 
