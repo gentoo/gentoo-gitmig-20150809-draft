@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.115 2005/05/23 13:01:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.116 2005/05/23 14:03:19 dragonheart Exp $
+
+  23 May 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.9.16.ebuild:
+  broken with keyservers. -* keyworded temporaly
 
 *gnupg-1.9.16 (23 May 2005)
 

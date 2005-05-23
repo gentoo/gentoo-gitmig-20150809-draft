@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.16.ebuild,v 1.1 2005/05/23 13:01:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.16.ebuild,v 1.2 2005/05/23 14:03:19 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,9 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="-*"
+#very broken with keyservers - will look later
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="X caps ldap nls smartcard static threads selinux"
 
 DEPEND_COMMON="
@@ -69,6 +71,9 @@ src_compile() {
 	econf \
 		--disable-agent \
 		--enable-gpg \
+		--enable-hkp \
+		--enable-mailto \
+		--enable-keyserver-helpers \
 		`use_enable smartcard scdaemon` \
 		`use_enable nls` \
 		`use_enable ldap` \
