@@ -11,7 +11,6 @@ sys-apps/coreutils
 sys-apps/debianutils
 sys-apps/diffutils
 sys-apps/file
-sys-apps/fileutils
 sys-apps/findutils
 sys-apps/gawk
 sys-apps/grep
@@ -20,7 +19,6 @@ sys-apps/net-tools
 sys-apps/portage
 sys-apps/sed
 sys-apps/texinfo
-sys-apps/textutils
 sys-devel/binutils
 sys-devel/bison
 sys-devel/flex
