@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.79 2005/05/21 20:29:01 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.80 2005/05/23 15:52:50 lanius Exp $
+
+  23 May 2005; Heinrich Wendel <lanius@gentoo.org> xpdf-3.00-r8.ebuild:
+  change nomotif use flag back to motif
 
   21 May 2005; Heinrich Wendel <lanius@gentoo.org> xpdf-3.00-r8.ebuild:
   add s390 keyword to make cups happy, this is fine since xpdf was previously

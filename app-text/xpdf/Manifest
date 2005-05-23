@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6112ca807baca0fe8e780cf460d069d3 xpdf-3.00-r8.ebuild 3526
-MD5 6254b6740af358791c96144d061634c4 ChangeLog 9607
+MD5 05362acf27a13431b91d4accc8729761 xpdf-3.00-r8.ebuild 3521
+MD5 f3e993bddd63c3ee69191ce569cdd492 ChangeLog 9720
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 8221707abac9c48b486b8c2b9bc7a7a0 files/xpdf-3.00-empty-bookmark.patch 373
 MD5 a21a0caeb7356fb3e68e5db195a505e9 files/xpdfrc.1 1587
@@ -20,7 +20,7 @@ MD5 ec978d9450f061ea49ee697b39d545bf files/digest-xpdf-3.00-r8 767
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCj56CevY57Fted3ERAhM4AJ9zjdVadxKG8VA05rXldC5Zka8MrgCdHBqC
-oZcBRTOUm+eumhkkM+x2ObI=
-=oVj+
+iD8DBQFCkfy5evY57Fted3ERAicNAJ4t48VIZjOmhn3ToH9j9/w3PmyUfQCgrX28
+CurGr72PTArqZixrcM7kv1U=
+=/PhQ
 -----END PGP SIGNATURE-----
