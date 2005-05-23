@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/vimspell-1.84-r2.ebuild,v 1.7 2005/04/24 12:22:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/vimspell-1.84-r2.ebuild,v 1.8 2005/05/23 08:53:30 ciaranm Exp $
 
 inherit eutils vim-plugin
 
@@ -20,7 +20,8 @@ VIM_PLUGIN_HELPFILES="vimspell"
 #   to aspell instead of ispell
 # 20:06 <@seemant> for the simple reason that ispell blows dogs
 # So we'll just force people to use aspell...
-RDEPEND="$RDEPEND app-text/aspell"
+# svncommand block is for a map conflict, bug #91965
+RDEPEND="$RDEPEND app-text/aspell !app-vim/svncommand"
 
 function src_unpack() {
 	unpack ${A}
