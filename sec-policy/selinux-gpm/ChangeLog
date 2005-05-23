@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-gpm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gpm/ChangeLog,v 1.5 2004/12/12 12:20:32 kaiowas Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gpm/ChangeLog,v 1.6 2005/05/23 17:02:35 spb Exp $
+
+  23 May 2005; Stephen Bennett <spb@gentoo.org> selinux-gpm-20041128.ebuild:
+  ~mips keywords.
 
 *selinux-gpm-20041128 (12 Dec 2004)
 

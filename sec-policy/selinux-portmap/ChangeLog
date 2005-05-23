@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-portmap
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-portmap/ChangeLog,v 1.5 2004/06/28 00:10:37 pebenito Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-portmap/ChangeLog,v 1.6 2005/05/23 17:04:58 spb Exp $
+
+  23 May 2005; Stephen Bennett <spb@gentoo.org>
+  selinux-portmap-20030811.ebuild:
+  ~mips keywords
 
   09 Apr 2004; Chris PeBenito <pebenito@gentoo.org>
   selinux-portmap-20030811.ebuild:
