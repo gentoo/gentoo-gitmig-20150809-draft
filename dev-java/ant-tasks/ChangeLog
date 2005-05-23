@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.24 2005/05/14 16:10:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.25 2005/05/23 15:28:08 axxo Exp $
+
+*ant-tasks-1.6.4 (23 May 2005)
+
+  23 May 2005; Thomas Matthijs <axxo@gentoo.org> +ant-tasks-1.6.4.ebuild:
+  version bump
 
 *ant-tasks-1.6.3-r1 (14 May 2005)
 *ant-tasks-1.6.2-r10 (14 May 2005)
