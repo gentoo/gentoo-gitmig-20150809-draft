@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xclip
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.6 2004/08/05 17:44:47 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.7 2005/05/23 03:55:16 agriffis Exp $
+
+  23 May 2005; Aron Griffis <agriffis@gentoo.org> xclip-0.08.ebuild:
+  add ~alpha ~ia64
 
   05 Aug 2004; Tom Martin <slarti@gentoo.org> :
   Marked ~amd64; resolves bug 58436. Thanks to Marc-Éric Dupuis

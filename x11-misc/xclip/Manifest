@@ -1,6 +1,16 @@
-MD5 0cd78efa679306e0610a14fa960f807d xclip-0.08.ebuild 717
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 23fb503bfff94d3d467e1850c3e62e65 ChangeLog 1332
 MD5 a50cda7e36be3b9785eb223f9ed302f0 xclip-0.05.ebuild 713
-MD5 361bc67e4df8c61ae1aa08b70925d993 ChangeLog 1241
 MD5 45ddf8c1878112fe4b49cac83c42f931 metadata.xml 254
-MD5 1c3181c686d2dcb3d106d690a726f415 files/digest-xclip-0.05 61
+MD5 36da93f4257861af3244aa091c0f9248 xclip-0.08.ebuild 736
 MD5 031385d1f0ed3f1468b40c9e8da41049 files/digest-xclip-0.08 61
+MD5 1c3181c686d2dcb3d106d690a726f415 files/digest-xclip-0.05 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCkVQwBXaUFmZvwyMRAjnfAJ95lx+KDttp1DSkbCtPH95jOdD4dgCeJ15V
+M7rQsGLIJ6GcqjEDHl64lSo=
+=5Bvi
+-----END PGP SIGNATURE-----
