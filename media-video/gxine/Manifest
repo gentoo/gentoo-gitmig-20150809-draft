@@ -1,21 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 feffa186e0e9f65b29b011da1fa043c0 gxine-0.4.3.ebuild 1456
-MD5 4a89cde90b8941f521faaade2170dbac ChangeLog 4153
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 cafe249a3ad39fdbb4a2e3991dc00f91 gxine-0.4.1.ebuild 1338
+MD5 327c56e3c1880b645ad4a915f38e566c ChangeLog 4542
 MD5 e7e292bd9b33c877797d54c58b4db1b1 gxine-0.3.3-r1.ebuild 1377
-MD5 0b50a3889d71fe54fb9249c53257d9d6 files/gxine-0.4.1-menu-fix.patch 873
+MD5 cafe249a3ad39fdbb4a2e3991dc00f91 gxine-0.4.1.ebuild 1338
+MD5 feffa186e0e9f65b29b011da1fa043c0 gxine-0.4.3.ebuild 1456
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 7434cb8decd5c5ecac2c08aa3d890715 gxine-0.3.3-r2.ebuild 1459
+MD5 17bf0714aca6a7b28f6b7da97339e68c gxine-0.4.1-r1.ebuild 1468
+MD5 52e8abb8c123170612e03ec8b9f13884 gxine-0.4.4.ebuild 1539
+MD5 689afd25d46e954e12a5ab290aa4c29b files/gxine-0.3.3-secfix.patch 635
 MD5 a0134d60cfc89d88f7f76826e3728379 files/digest-gxine-0.3.3-r1 64
-MD5 b18643e0d818679a729863e11852b1ac files/gxine-0.3.3-Makefile.in.patch 360
 MD5 69140a1cb8cc6acb6ffdca76e9301493 files/digest-gxine-0.4.1 64
-MD5 2a140bbbc46a7d9e1117771638ad8d60 files/gxine-0.3.3-http-overflow.patch 484
 MD5 7ddbda50741fc22459217975509408cd files/digest-gxine-0.4.3 64
+MD5 b18643e0d818679a729863e11852b1ac files/gxine-0.3.3-Makefile.in.patch 360
+MD5 2a140bbbc46a7d9e1117771638ad8d60 files/gxine-0.3.3-http-overflow.patch 484
+MD5 0b50a3889d71fe54fb9249c53257d9d6 files/gxine-0.4.1-menu-fix.patch 873
+MD5 a5dc1655a0734939aaf026899e7c97a8 files/gxine-0.4.4-secfix.patch 515
+MD5 a0134d60cfc89d88f7f76826e3728379 files/digest-gxine-0.3.3-r2 64
+MD5 69140a1cb8cc6acb6ffdca76e9301493 files/digest-gxine-0.4.1-r1 64
+MD5 bd3744a1ecbba9a89f8fb1ded2e58e30 files/digest-gxine-0.4.4 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZM1yKf2g/qXtneoRAoP+AJ9+rnTBnqyVm/QjG1c00EKtaTbKNwCfZpr/
-pcpLjzR902pTDBcRBvjESNU=
-=8w5S
+iD8DBQFCkzLPj5H05b2HAEkRAjWnAJ9KR5Tj8ebEt/KzvAZ5xkLxx37cmQCfXueW
+SzHHbSUZqip2vkVtJgjv20Q=
+=MW7+
 -----END PGP SIGNATURE-----

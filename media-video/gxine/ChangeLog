@@ -1,6 +1,16 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.32 2005/04/19 09:20:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.33 2005/05/24 14:01:03 flameeyes Exp $
+
+*gxine-0.4.4 (24 May 2005)
+*gxine-0.4.1-r1 (24 May 2005)
+*gxine-0.3.3-r2 (24 May 2005)
+
+  24 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/gxine-0.3.3-secfix.patch, +files/gxine-0.4.4-secfix.patch,
+  +gxine-0.3.3-r2.ebuild, +gxine-0.4.1-r1.ebuild, +gxine-0.4.4.ebuild:
+  Added new 0.4.4 version which was missing. Added new revisions to fix format
+  string vulnerabilities.
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.

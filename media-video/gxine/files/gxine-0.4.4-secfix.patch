@@ -1,0 +1,12 @@
+diff -ur gxine-0.4.4/src/utils.c gxine-0.4.4-secfix/src/utils.c
+--- gxine-0.4.4/src/utils.c	2005-03-17 01:55:23.000000000 +0100
++++ gxine-0.4.4-secfix/src/utils.c	2005-05-24 15:11:20.002943848 +0200
+@@ -164,7 +164,7 @@
+   va_end (ap);
+ 
+   dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_DESTROY_WITH_PARENT, type,
+-				   GTK_BUTTONS_CLOSE, msg);
++				   GTK_BUTTONS_CLOSE, "%s", msg);
+   gtk_window_set_title (GTK_WINDOW (dialog), title);
+   gtk_window_set_position (GTK_WINDOW (dialog), GTK_WIN_POS_CENTER);
+ 
