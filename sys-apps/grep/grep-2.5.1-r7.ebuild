@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r7.ebuild,v 1.6 2005/05/24 02:38:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r7.ebuild,v 1.7 2005/05/24 23:12:51 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -35,11 +35,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-restrict_arr.patch
 	epatch "${FILESDIR}"/${PV}-utf8-case.patch
 
-	# force static linking so we dont have to move it into /
-	sed -i \
-		-e 's:-lpcre:-Wl,-Bstatic -lpcre -Wl,-Bdynamic:g' \
-		configure || die "sed configure failed"
-
 	# uclibc does not suffer from this glibc bug.
 	use uclibc || epatch "${FILESDIR}"/${PV}-tests.patch
 }
@@ -55,6 +50,12 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable pcre perl-regexp) \
 		|| die "econf failed"
+
+	# force static linking so we dont have to move it into /
+	sed -i \
+		-e 's:-lpcre:-Wl,-Bstatic -lpcre -Wl,-Bdynamic:g' \
+		src/Makefile || die "sed static pcre failed"
+
 	emake || die "emake failed"
 }
 
