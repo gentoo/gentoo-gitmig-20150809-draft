@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/torsmo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.31 2005/05/23 06:35:37 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.32 2005/05/24 00:48:30 weeve Exp $
+
+  24 May 2005; Jason Wever <weeve@gentoo.org> torsmo-0.18-r3.ebuild:
+  Stable on SPARC wrt bug #93343.
 
   22 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   torsmo-0.18-r3.ebuild:
