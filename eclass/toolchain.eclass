@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.152 2005/05/24 03:57:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.153 2005/05/24 05:08:11 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1652,7 +1652,7 @@ exclude_gcc_patches() {
 }
 
 do_gcc_HTB_boundschecking_patches() {
-	want_boundschecking || return 1
+	want_boundschecking || return 0
 	# modify the bounds checking patch with a regression patch
 	epatch "${WORKDIR}/bounds-checking-${PN}-${HTB_GCC_VER}-${HTB_VER}.patch"
 	release_version="${release_version}, HTB-${HTB_GCC_VER}-${HTB_VER}"
@@ -1662,6 +1662,8 @@ do_gcc_HTB_boundschecking_patches() {
 do_gcc_SSP_patches() {
 	# PARISC has no love ... it's our stack :(
 	[[ $(tc-arch) == "hppa" ]] && return 0
+
+	want_boundschecking && [[ ${HTB_EXCLUSIVE} == "true" ]] && return 0
 
 	local ssppatch
 	local sspdocs
@@ -1728,6 +1730,8 @@ update_gcc_for_libssp() {
 
 # do various updates to PIE logic
 do_gcc_PIE_patches() {
+	want_boundschecking && [[ ${HTB_EXCLUSIVE} == "true" ]] && return 0
+
 	want_boundschecking \
 		&& rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-no.patch.bz2 \
 		|| rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-yes.patch.bz2
