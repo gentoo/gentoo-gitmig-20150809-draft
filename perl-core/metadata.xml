@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		The perl-core category contains libraries and utilities relevant to the
+		Perl programming language.
+	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie perl-core enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die 
+		Programmiersprache Perl.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría perl-core contiene librerías y utilidades referentes
+		al lenguaje de programación Perl.
+	</longdescription>
+	<longdescription lang="nl">
+		De perl-core categorie bevat bibliotheken en hulpmiddelen voor het gebruik
+		van de programmeertaal Perl.
+	</longdescription>
+	<longdescription lang="vi">
+		Nhóm perl-core chứa các thư viện và tiện ích liên quan
+		đến ngôn ngữ lập trình Perl.
+	</longdescription>
+</catmetadata>
+
