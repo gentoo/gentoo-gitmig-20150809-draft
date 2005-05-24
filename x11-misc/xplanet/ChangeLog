@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xplanet
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.43 2004/12/28 22:10:40 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.44 2005/05/24 14:03:11 rizzo Exp $
+
+  24 May 2005; Don Seiler <rizzo@gentoo.org> xplanet-1.1.1.ebuild:
+  Depending on virtual/glut, closes bug #93444.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

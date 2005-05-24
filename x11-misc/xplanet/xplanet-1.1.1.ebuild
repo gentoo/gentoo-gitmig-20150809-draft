@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.1.1.ebuild,v 1.13 2004/08/28 01:48:45 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.1.1.ebuild,v 1.14 2005/05/24 14:03:11 rizzo Exp $
 
 DESCRIPTION="A program to render images of the earth into the X root window"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -14,7 +14,7 @@ IUSE="gif jpeg X opengl truetype tiff png"
 
 RDEPEND="X? ( virtual/x11 )
 	opengl? ( virtual/opengl
-		media-libs/glut )
+		virtual/glut )
 	gif? ( media-libs/giflib
 		media-libs/libungif )
 	jpeg? ( media-libs/jpeg )
