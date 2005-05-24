@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.95 2005/05/24 20:39:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.96 2005/05/24 20:45:58 mr_bones_ Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -13,9 +13,7 @@ inherit eutils gnuconfig
 ECLASS=games
 INHERITED="$INHERITED $ECLASS"
 
-# CHECKME
-#EXPORT_FUNCTIONS pkg_preinst pkg_postinst src_compile pkg_setup
-EXPORT_FUNCTIONS pkg_postinst src_compile pkg_setup
+EXPORT_FUNCTIONS pkg_preinst pkg_postinst src_compile pkg_setup
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -126,17 +124,6 @@ prepgamesdirs() {
 			die "refusing to merge a setuid root game"
 		fi
 	done
-	# CHECKME - remove
-	for f in $(find "${D}/${GAMES_STATEDIR}" -type f -printf '%P ' 2>/dev/null) ; do
-		if [[ -e ${ROOT}/${GAMES_STATEDIR}/${f} ]] ; then
-			cp -p \
-				"${ROOT}/${GAMES_STATEDIR}/${f}" \
-				"${D}/${GAMES_STATEDIR}/${f}" \
-				|| die "cp failed"
-			# make the date match the rest of the install
-			touch "${D}/${GAMES_STATEDIR}/${f}"
-		fi
-	done
 	chmod 750 "${D}/${GAMES_BINDIR}"/* &> /dev/null
 }
 
@@ -175,21 +162,20 @@ games_src_compile() {
 	[ -e [Mm]akefile ] && { emake || die "emake failed"; }
 }
 
-# CHECKME
-#games_pkg_preinst() {
-#	local f
-#
-#	for f in $(find "${IMAGE}/${GAMES_STATEDIR}" -type f -printf '%P ' 2>/dev/null) ; do
-#		if [[ -e ${ROOT}/${GAMES_STATEDIR}/${f} ]] ; then
-#			cp -p \
-#				"${ROOT}/${GAMES_STATEDIR}/${f}" \
-#				"${IMAGE}/${GAMES_STATEDIR}/${f}" \
-#				|| die "cp failed"
-#			# make the date match the rest of the install
-#			touch "${IMAGE}/${GAMES_STATEDIR}/${f}"
-#		fi
-#	done
-#}
+games_pkg_preinst() {
+	local f
+
+	for f in $(find "${IMAGE}/${GAMES_STATEDIR}" -type f -printf '%P ' 2>/dev/null) ; do
+		if [[ -e ${ROOT}/${GAMES_STATEDIR}/${f} ]] ; then
+			cp -p \
+				"${ROOT}/${GAMES_STATEDIR}/${f}" \
+				"${IMAGE}/${GAMES_STATEDIR}/${f}" \
+				|| die "cp failed"
+			# make the date match the rest of the install
+			touch "${IMAGE}/${GAMES_STATEDIR}/${f}"
+		fi
+	done
+}
 
 # pkg_postinst function ... create env.d entry and warn about games group
 games_pkg_postinst() {
