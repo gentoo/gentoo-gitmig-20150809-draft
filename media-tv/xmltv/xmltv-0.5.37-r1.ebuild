@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.37-r1.ebuild,v 1.3 2005/05/12 06:24:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.37-r1.ebuild,v 1.4 2005/05/24 14:28:31 mcummings Exp $
 
 inherit perl-module
 
@@ -139,7 +139,7 @@ if [ -z "${XMLTV_OPTS}" ] || has tv_check ${XMLTV_OPTS} ; then
 fi
 
 if [ -z "${XMLTV_OPTS}" ] || has tv_pick_cgi ${XMLTV_OPTS} ; then
-	newdepend dev-perl/CGI
+	newdepend perl-core/CGI
 fi
 
 if [ -z "${XMLTV_OPTS}" ] || has tv_grab_se_swedb ${XMLTV_OPTS} ; then

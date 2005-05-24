@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.32 2005/05/12 06:24:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.33 2005/05/24 14:28:31 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> xmltv-0.5.34.ebuild,
+  xmltv-0.5.37-r1.ebuild, xmltv-0.5.39.ebuild:
+  dev-perl/CGI => perl-core/CGI
 
 *xmltv-0.5.39 (12 May 2005)
 
