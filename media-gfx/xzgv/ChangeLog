@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xzgv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.17 2005/05/21 03:04:49 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.18 2005/05/24 22:04:37 josejx Exp $
+
+  24 May 2005; Joseph Jezak <josejx@gentoo.org> xzgv-0.8-r1.ebuild:
+  Marked ppc stable for bug #93132.
 
   21 May 2005; Jose Luis Rivero <yoswink@gentoo.org> xzgv-0.8-r1.ebuild:
   Keyworded ~alpha
