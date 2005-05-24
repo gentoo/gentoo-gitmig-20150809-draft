@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.1.ebuild,v 1.3 2005/05/10 13:35:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.1.ebuild,v 1.4 2005/05/24 21:50:06 cryos Exp $
 
-inherit 64-bit fortran
+inherit fortran toolchain-funcs
 
 IUSE="blas X tcltk gnome zlib bzlib pcre"
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
@@ -33,17 +33,17 @@ DEPEND="virtual/libc
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 sparc ~ppc ppc64 amd64"
-64-bit || FORTRAN="g77" # No f2c on 64-bit archs anymore.
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	#sed -e 's/^#define NeedFunctionPrototypes 0/#define NeedFunctionPrototypes 1/' \
-	#-i src/modules/X11/dataentry.c || die "sed failed"
-}
 
 src_compile() {
-	#addwrite "/var/cache/fonts"
+	# Test for a 64 bit architecture - f2c won't work on 64 bit archs with R.
+	# Thanks to vapier for providing the test.
+	echo 'int main(){}' > test.c
+	$(tc-getCC) -c test.c -o test.o
+	if file test.o | grep -qs 64-bit ; then
+		einfo "64 bit architecture detected, using g77."
+		FORTRAN="g77"
+	fi
+
 	local myconf="--enable-static --enable-R-profiling --enable-R-shlib --with-readline"
 
 	use zlib || myconf="${myconf} --with-zlib"		#default disabled

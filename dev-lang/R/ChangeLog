@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.44 2005/05/10 13:35:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.45 2005/05/24 21:50:06 cryos Exp $
+
+  24 May 2005; Marcus D. Hanwell <cryos@gentoo.org> R-2.0.1.ebuild:
+  Updated 64 bit detection code.
 
   10 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> R-2.0.1.ebuild:
   Stable on sparc
