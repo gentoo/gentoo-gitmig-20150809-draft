@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.394 2005/05/24 07:49:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.395 2005/05/24 19:10:49 spyderous Exp $
+
+  24 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r2.ebuild, xorg-x11-6.8.99.8.ebuild:
+  (#89852) Ebuild changes for Gentoo/FreeBSD. Set MAKE, use wheel group
+  instead of root, exclude 0700_all_4.2.0-sessreg-highuid.patch on OpenBSD and
+  FreeBSD; the patch allows for high UIDs in a non-portable way. A suitably
+  motivated person could fix it.
 
   24 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r2.ebuild:

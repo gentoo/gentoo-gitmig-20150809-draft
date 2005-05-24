@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.8.ebuild,v 1.2 2005/05/24 07:34:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.8.ebuild,v 1.3 2005/05/24 19:10:49 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -930,6 +930,11 @@ patch_setup() {
 		else
 			patch_exclude 5851
 		fi
+
+		# Glibc-specific patches to exclude for non-glibc systems
+		if use elibc_FreeBSD || use elibc_OpenBSD; then
+			patch_exclude 0700
+		fi
 	einfo "Done excluding patches."
 }
 
@@ -976,11 +981,11 @@ build() {
 		FAST=1 ${S}/config/util/makeg.sh World WORLDOPTS="" \
 			|| die "debug make World failed"
 	else
-		FAST=1 emake World WORLDOPTS="" || die "make World failed"
+		FAST=1 emake World WORLDOPTS="" MAKE="make" || die "make World failed"
 	fi
 
 	if use nls; then
-		emake -C ${S}/nls || die "nls build failed"
+		emake -C ${S}/nls MAKE="make" || die "nls build failed"
 	fi
 }
 
@@ -995,29 +1000,29 @@ install_everything() {
 	# gcc3 related fix.  Do this during install, so that our
 	# whole build will not be compiled without mmx instructions.
 	if [ "$(gcc-version)" != "2.95" ] && use x86; then
-		make install DESTDIR=${D} \
+		make install MAKE="make" DESTDIR=${D} \
 		|| make CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
 			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
-			install DESTDIR=${D} || die "install failed"
+			install MAKE="make" DESTDIR=${D} || die "install failed"
 	else
-		make install DESTDIR=${D} || die "install failed"
+		make install MAKE="make" DESTDIR=${D} || die "install failed"
 	fi
 
 	if use sdk; then
 		einfo "Installing X.org X11 SDK..."
-		make install.sdk DESTDIR=${D} || die "sdk install failed"
+		make install.sdk MAKE="make" DESTDIR=${D} || die "sdk install failed"
 	fi
 
 	if ! use minimal; then
 		einfo "Installing man pages..."
-		make install.man DESTDIR=${D} || die "man page install failed"
+		make install.man MAKE="make" DESTDIR=${D} || die "man page install failed"
 		einfo "Compressing man pages..."
 		prepman /usr
 	fi
 
 	if use nls; then
 		cd ${S}/nls
-		make DESTDIR=${D} install || die "nls install failed"
+		make MAKE="make" DESTDIR=${D} install || die "nls install failed"
 	fi
 	dodoc ${S}/RELNOTES
 }
@@ -1957,7 +1962,7 @@ setup_tmp_files() {
 			mkdir -p ${x}
 		fi
 
-		chown root:root ${x}
+		chown root:wheel ${x}
 		chmod 1777 ${x}
 	done
 }
