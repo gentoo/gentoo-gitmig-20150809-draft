@@ -1,6 +1,6 @@
 MD5 fbed3db97387bad4540ee834b61d7e6f ChangeLog 5314
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 f720ee139ef604ad4da8120b7f0ac616 raidtools-1.00.3-r5.ebuild 1650
+MD5 e5925e14a9189114c4aac437b92ed49a raidtools-1.00.3-r5.ebuild 1689
 MD5 dd0b355eb26c0915dea409062a9d8fc3 raidtools-1.00.3-r4.ebuild 1760
 MD5 0fa91a341c38be56295db45f2a73aade files/raidtools-1.00.3-gcc33.patch 3044
 MD5 effa29906fa5b9b7755ac3f16442c07f files/raidtools-1.00.3-raidstop.patch 2921
