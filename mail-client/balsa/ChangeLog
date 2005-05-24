@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.27 2005/05/23 13:41:35 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.28 2005/05/24 16:03:36 allanonjl Exp $
+
+*balsa-2.2.6-r2 (24 May 2005)
+
+  24 May 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +files/balsa-sqlite3-fix.patch, +balsa-2.2.6-r2.ebuild:
+  fixes bug #93511, backport patch from cvs to fix compilation issue with
+  sqlite3.
 
 *balsa-2.2.6-r1 (23 May 2005)
 
