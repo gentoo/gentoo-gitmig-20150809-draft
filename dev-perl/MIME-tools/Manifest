@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e58a3a3bea7d19bf139a303418e69368 ChangeLog 3014
-MD5 5ac92192652b323c4b695e9878f86cec MIME-tools-5.417.ebuild 741
-MD5 caa0e94db15e275ff520ca9a2189f11c MIME-tools-5.415.ebuild 733
-MD5 ccaa5df7086a4e6d8dcc34a90abed415 MIME-tools-5.416.ebuild 741
+MD5 3c9cecb63e9177eb50680dd0c3fd48e7 ChangeLog 3193
+MD5 5008ff61357cbd45b953f0c846a3af35 MIME-tools-5.417.ebuild 742
+MD5 90acb708f7d08ce7c2eb8b0c167fbd7f MIME-tools-5.415.ebuild 736
+MD5 b813a3bc54f7e6014d0748aa462611ce MIME-tools-5.416.ebuild 742
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 305cee6270d79087582794066b7129d3 files/digest-MIME-tools-5.417 68
 MD5 102e5bbb02994f63b2087054f46da6c8 files/digest-MIME-tools-5.415 68
 MD5 76d65045d01f5330cd063a67be7def08 files/digest-MIME-tools-5.416 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcRqbtG5z4I8BtQoRAmPtAKCO9vg3lxz63TnhZ7Oi+hJBydygzQCgkoEL
-Yz3Z/MSze3yfkFwAzqmqk/U=
-=HFw1
------END PGP SIGNATURE-----

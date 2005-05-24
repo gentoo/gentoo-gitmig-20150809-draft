@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7e4a974f830e5f84880d29a1a5255da ChangeLog 1295
-MD5 1f63fd47b679ee9ec1a5f7f59ee012f2 OpenCA-REQ-0.9.52.ebuild 596
+MD5 71b1e9e250b8b6f3dff370cda0cbec4a ChangeLog 1428
 MD5 0e32190ddf0577c2e2d9a66053967f83 OpenCA-REQ-0.7.35-r1.ebuild 538
+MD5 f42018dcbd81a47c0a84afcabf5a69fc OpenCA-REQ-0.9.52.ebuild 600
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 cd36c820388cb710294e460ff9d0c945 files/digest-OpenCA-REQ-0.9.52 67
 MD5 ee904ee49e8eb8e7b738f3441902aabb files/digest-OpenCA-REQ-0.7.35-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdR0lCHk4+ZoBpvsRAvqAAJ9dR5pNsHMn5l222v/dBuZj8ZUfawCfSUer
-eiM54m4fMsrFAhg3HCvGBHk=
-=2hoV
------END PGP SIGNATURE-----
+MD5 cd36c820388cb710294e460ff9d0c945 files/digest-OpenCA-REQ-0.9.52 67
