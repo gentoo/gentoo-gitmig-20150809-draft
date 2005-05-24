@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110-r1.ebuild,v 1.5 2005/04/24 03:31:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110-r1.ebuild,v 1.6 2005/05/24 05:08:39 vapier Exp $
 
 MAN_VER="3.4.3"
 PATCH_VER="1.2"
@@ -11,6 +11,7 @@ PP_VER="3.4.3.20050110"
 PP_FVER="${PP_VER//_/.}-0"
 HTB_VER="1.00"
 HTB_GCC_VER="3.4.2"
+HTB_EXCLUSIVE="true"
 
 GCC_LIBSSP_SUPPORT="true"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.22 2005/03/01 02:32:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.23 2005/05/24 05:08:39 vapier Exp $
 
 MAN_VER="3.3.5"
 #BRANCH_UPDATE="20041025"
@@ -11,6 +11,7 @@ PP_VER="3_3_2"
 PP_FVER="${PP_VER//_/.}-3"
 HTB_VER="1.00"
 #HTB_GCC_VER=""
+HTB_EXCLUSIVE="true"
 
 ETYPE="gcc-compiler"
 
