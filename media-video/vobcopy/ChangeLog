@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vobcopy
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.13 2004/11/22 06:55:48 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.14 2005/05/24 11:15:27 corsair Exp $
+
+  24 May 2005; Markus Rothe <corsair@gentoo.org> vobcopy-0.5.14.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *vobcopy-0.5.14 (21 Nov 2004)
 
