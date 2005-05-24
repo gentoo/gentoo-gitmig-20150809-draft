@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.8.ebuild,v 1.1 2005/05/24 07:30:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.8.ebuild,v 1.2 2005/05/24 07:34:24 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1980,6 +1980,8 @@ print_info() {
 	einfo "Option \"ColorTiling\" \"false\""
 	einfo "The Mesa in these developmental snapshots is out of date."
 	echo
+	einfo "Binary drivers may be broken in >=6.8.99.8."
+	einfo "See https://bugs.freedesktop.org/show_bug.cgi?id=3066."
 
 	# (#76985)
 	einfo "Visit http://www.gentoo.org/doc/en/index.xml?catid=desktop"
