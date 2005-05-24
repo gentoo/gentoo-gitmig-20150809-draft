@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp/mod_lisp-2.42.ebuild,v 1.2 2005/04/16 20:59:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp/mod_lisp-2.42.ebuild,v 1.3 2005/05/24 16:16:04 mkennedy Exp $
 
 inherit apache-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.fractalconcept.com/asp/sdataQIceRsMvtN9fDM==/sdataQuvY9x3g$
 SRC_URI="mirror://gentoo/${P}.c"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc"
 IUSE=""
 
 DEPEND=""
