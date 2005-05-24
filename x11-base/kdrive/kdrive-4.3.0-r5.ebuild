@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.14 2004/11/26 00:39:54 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.15 2005/05/24 05:10:05 vapier Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -230,9 +230,6 @@ src_unpack() {
 
 src_compile() {
 
-	# Set MAKEOPTS to have proper -j? option ..
-	get_number_of_jobs
-
 	# If a user defines the MAKE_OPTS variable in /etc/make.conf instead of
 	# MAKEOPTS, they'll redefine an internal X11 Makefile variable and the
 	# X11 build will silently die. This is tricky to track down, so I'm
@@ -294,9 +291,9 @@ src_install() {
 
 	# Install man pages
 	if [ "`best_version virtual/x11`" ] ; then
-		doman -x11 ${MANDIR}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
+		doman ${MANDIR}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
 	else
-		doman -x11 ${MANDIR}/${S}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
+		doman ${MANDIR}/${S}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
 	fi
 }
 
