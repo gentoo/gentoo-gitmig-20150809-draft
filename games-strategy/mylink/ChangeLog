@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/mylink
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mylink/ChangeLog,v 1.4 2005/05/09 15:16:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mylink/ChangeLog,v 1.5 2005/05/24 15:52:57 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> mylink-0.93.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
   09 May 2005; David Holm <dholm@gentoo.org> mylink-0.93.ebuild:
   Added to ~ppc.

@@ -1,5 +1,15 @@
-MD5 72a021319e4585e865977fcc36308840 ChangeLog 572
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 33c5ceaf85e2f67219dc4357a3531d0e ChangeLog 698
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 26739085973b30c664adfed2ff7597f6 mylink-0.93.ebuild 1380
+MD5 5a28c6ea2af3c76b9ffcda252a65ae04 mylink-0.93.ebuild 1385
 MD5 1e1d9ef1965d5fde083472a0d28c616d files/0.93-path.patch 605
 MD5 e4ea537bc07ee435b059ad298ebd653e files/digest-mylink-0.93 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCk03xtG5z4I8BtQoRAsMGAJ9v8TeUGQvrmFD9yK2CyKJUyfwv7gCfUYZU
+qvojK7IFwr/6w4pVjJmX21I=
+=XXDz
+-----END PGP SIGNATURE-----
