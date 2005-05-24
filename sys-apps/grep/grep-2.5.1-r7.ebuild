@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r7.ebuild,v 1.5 2005/04/26 01:15:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r7.ebuild,v 1.6 2005/05/24 02:38:10 vapier Exp $
 
-inherit flag-o-matic eutils multilib
+inherit flag-o-matic eutils
 
 DESCRIPTION="GNU regular expression matcher"
 HOMEPAGE="http://www.gnu.org/software/grep/grep.html"
@@ -34,6 +34,12 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-oi.patch.bz2
 	epatch "${FILESDIR}"/${P}-restrict_arr.patch
 	epatch "${FILESDIR}"/${PV}-utf8-case.patch
+
+	# force static linking so we dont have to move it into /
+	sed -i \
+		-e 's:-lpcre:-Wl,-Bstatic -lpcre -Wl,-Bdynamic:g' \
+		configure || die "sed configure failed"
+
 	# uclibc does not suffer from this glibc bug.
 	use uclibc || epatch "${FILESDIR}"/${PV}-tests.patch
 }
@@ -44,25 +50,11 @@ src_compile() {
 		append-ldflags -static
 	fi
 
-	local myconf
-	if use uclibc ; then
-		myconf="${myconf} --without-included-regex"
-	else
-		myconf="${myconf} $(use_enable pcre perl-regexp)"
-	fi
 	econf \
 		--bindir=/bin \
 		$(use_enable nls) \
-		${myconf} \
+		$(use_enable pcre perl-regexp) \
 		|| die "econf failed"
-
-	if use pcre && ! use uclibc ; then
-		sed -i \
-			-e "s:-lpcre:/usr/$(get_libdir)/libpcre.a:g" \
-			{lib,src}/Makefile \
-			|| die "sed Makefile failed"
-	fi
-
 	emake || die "emake failed"
 }
 
