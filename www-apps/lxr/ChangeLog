@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/lxr
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.4 2004/09/08 13:08:40 rl03 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.5 2005/05/24 14:48:49 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> lxr-0.3.1.ebuild:
+  dev-perl/DB_File => perl-core/DB_File
 
   08 Sep 2004; Renat Lumpau <rl03@gentoo.org> metadata.xml:
   Fixed herd name

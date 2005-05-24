@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.3.1.ebuild,v 1.2 2004/09/03 17:17:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.3.1.ebuild,v 1.3 2005/05/24 14:48:49 mcummings Exp $
 
 inherit webapp
 
@@ -19,7 +19,7 @@ IUSE=""
 # Glimpse is actually optional, but since there is no USE flag, require it
 RDEPEND="app-misc/glimpse
 	     dev-lang/perl
-		 >=dev-perl/DB_File-1.807"
+		 >=perl-core/DB_File-1.807"
 DEPEND=${RDEPEND}
 
 src_compile() {
