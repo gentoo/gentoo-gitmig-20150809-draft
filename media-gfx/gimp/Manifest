@@ -9,7 +9,7 @@ MD5 23321eb2aa740463c9181ddcacb2c9bd gimp-2.0.6.ebuild 3247
 MD5 5d4b90226e53b44304dab5e6d9f27cac gimp-2.2.7.ebuild 4362
 MD5 555c54d2b6919e76f10110879f24e490 gimp-2.2.6-r1.ebuild 4225
 MD5 7652258638398ee9817fba2d8560ecf1 ChangeLog 16688
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
 MD5 7878202fbf35cdba9a2907b735cbf90c gimp-2.0.5.ebuild 3216
 MD5 be326cb198ec1f1f6c21a5a5a1460415 files/gimp-2.0.0-gcc34.patch 1148
 MD5 f2b58299eceabecfe5df955198c267d6 files/psd_save.c 49151
