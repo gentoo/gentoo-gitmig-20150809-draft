@@ -1,0 +1,9 @@
+# ChangeLog for net-proxy/vultureng
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/ChangeLog,v 1.1 2005/05/24 21:04:36 dams Exp $
+
+*vultureng-0.6 (24 May 2005)
+
+  24 May 2005; <dams@gentoo.org> +metadata.xml, +vultureng-0.6.ebuild:
+  version 0.6, first ebuild
+
