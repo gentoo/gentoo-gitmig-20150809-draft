@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.0_rc4.ebuild,v 1.5 2005/04/12 11:22:00 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.0_rc4.ebuild,v 1.6 2005/05/24 14:30:23 mcummings Exp $
 
 inherit eutils webapp
 
@@ -23,7 +23,7 @@ IUSE="apache2"
 RDEPEND=">=dev-db/mysql-3.23.41
 	>=dev-lang/perl-5.6.0
 	>=dev-perl/AppConfig-1.52
-	>=dev-perl/CGI-2.93
+	>=perl-core/CGI-2.93
 	>=dev-perl/TimeDate-1.11
 	>=dev-perl/DBI-1.36
 	>=dev-perl/DBD-mysql-2.1010
