@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.42 2005/03/30 16:29:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.43 2005/05/24 22:55:44 spyderous Exp $
+
+  24 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/pdflib-6-compat.patch, gnuplot-4.0-r1.ebuild:
+  (#86008) Add pdflib-6-compat.patch to fix compilation against >=pdflib-6.
+  PDF_open_fp suddenly disappeared, so switch to PDF_open_file.
 
   30 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> gnuplot-4.0-r1.ebuild:
   Stable on ppc.
