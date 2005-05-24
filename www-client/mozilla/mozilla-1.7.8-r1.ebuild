@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.8-r1.ebuild,v 1.2 2005/05/16 19:30:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.8-r1.ebuild,v 1.3 2005/05/24 21:10:56 herbs Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -290,6 +290,9 @@ EOF
 	insinto /etc/env.d
 	doins ${FILESDIR}/10mozilla
 	dodoc LEGAL LICENSE README/mozilla/README*
+
+	# Set correct libdir in env.d file
+	dosed "s:/usr/lib:/usr/$(get_libdir):" /etc/env.d/10mozilla
 
 	# Install rebuild script
 	exeinto /usr/$(get_libdir)/mozilla/
