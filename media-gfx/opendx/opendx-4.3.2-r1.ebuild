@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/opendx-4.3.2-r1.ebuild,v 1.5 2004/12/29 00:12:42 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/opendx-4.3.2-r1.ebuild,v 1.6 2005/05/24 23:01:41 spyderous Exp $
 
 # Set SMP="no" to force disable of SMP compilation.
 # Set SMP="yes" to force enable of SMP compilation.
@@ -84,6 +84,9 @@ src_compile() {
 	# with gcc 3.3.2 I had an infinite loop on src/exec/libdx/zclipQ.c
 	append-flags -fno-strength-reduce
 
+	# (#82672)
+	filter-flags -finline-functions
+	replace-flags -O3 -O2
 
 	local GENTOOARCH="${ARCH}"
 	# opendx uses this variable
