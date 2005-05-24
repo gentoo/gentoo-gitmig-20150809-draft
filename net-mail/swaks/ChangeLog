@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/swaks
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.1 2005/04/29 01:00:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.2 2005/05/24 15:58:53 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org>
+  swaks-20040404.1.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
 *swaks-20040404.1 (29 Apr 2005)
 

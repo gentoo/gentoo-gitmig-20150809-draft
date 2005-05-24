@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.26 2005/05/08 18:33:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.27 2005/05/24 15:59:14 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> yosucker-69.ebuild,
+  yosucker-71.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
 *yosucker-71 (08 May 2005)
 

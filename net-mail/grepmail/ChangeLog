@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/grepmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.18 2005/04/20 21:40:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.19 2005/05/24 15:57:35 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> grepmail-4.91.ebuild,
+  grepmail-5.30.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
   20 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> grepmail-5.30.ebuild:
   Stable on ppc.
