@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1e3327a52c6b478af7e4d8ab84f8060f AxKit-1.5.2-r1.ebuild 1067
 MD5 c109739eb935f9fa399e8fa98fe8009c AxKit-1.6-r1.ebuild 1077
 MD5 ce41af3a6e9cecdd733653ccd232fa97 AxKit-1.6-r2.ebuild 1124
@@ -11,3 +14,10 @@ MD5 67281027c1b40bcb89dd38285e084c44 files/digest-AxKit-1.6-r2 61
 MD5 0a88a5c00b9b9b0262587ce82d9cde15 files/digest-AxKit-1.6.1 63
 MD5 3c31fe175ce3f998c1724be46b2c38bf files/digest-AxKit-1.6.2 63
 MD5 90031157da075816689bc0d214197ebe files/httpd.axkit 318
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCk0uitG5z4I8BtQoRAoS8AJ43bPJAZtdZFgPEF7iYyR9o+ItkPgCfUhMs
+Z99SV6AqwzDrlSE5AQ/Se+I=
+=kSdx
+-----END PGP SIGNATURE-----

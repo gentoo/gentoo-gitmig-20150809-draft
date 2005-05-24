@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3127e6ec3ba29329b8a2597dc4193601 ChangeLog 2058
 MD5 77fe2ada46a9a92b963be966738e60a4 Digest-HMAC-1.01-r1.ebuild 643
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 fb519af8a24a31991f82a11b89adc41d files/digest-Digest-HMAC-1.01-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCk0witG5z4I8BtQoRAqpHAJ4+dZY9WJXp/m+AUdpoeR2dZZD68ACgjjdY
+cEUUnVkwHbidjJXIhV/7P7Y=
+=wSyA
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c2d0ab90fda89d009c137e38adccbdff ChangeLog 974
 MD5 95a667141e168b346a0671143dcde49c adocman-0.10.ebuild 857
 MD5 3e2ecf3cee39c3b094beeeadf826e0e5 adocman-0.12.ebuild 888
@@ -6,3 +9,10 @@ MD5 affb5014847528d025e0248bd6463761 adocman-0.13.ebuild 895
 MD5 23bf9a4344d34652e1222b455d6aaa8f files/digest-adocman-0.10 63
 MD5 e08483169596c01f7b5b35ebcb8c3324 files/digest-adocman-0.12 63
 MD5 5bc24ed68835c463a0340dcac0b2619f files/digest-adocman-0.13 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCk00QtG5z4I8BtQoRAuhgAJ91RjUVvZ2/1/2egg3dzsEKCw+AYACfcdnd
+S/NXW2E4SZ+iq/yFqvHikf0=
+=0w37
+-----END PGP SIGNATURE-----

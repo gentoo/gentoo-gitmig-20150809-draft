@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e85fac2d3e56894a7a39dcb7307f21c6 ChangeLog 1321
 MD5 e75835f8ce65ffbdeeda4e7362608d76 convert-ascii-armour-1.4.ebuild 708
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 ccc56068024f57a08d8c33763704d468 files/digest-convert-ascii-armour-1.4 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCk00itG5z4I8BtQoRArwyAJ9amz4AJEF0Nc/Aci/p21UAherSkgCfdvrA
+/aNrc2yTgm11DWBQzC1bI4A=
+=8LxQ
+-----END PGP SIGNATURE-----
