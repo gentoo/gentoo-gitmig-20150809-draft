@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.7.ebuild,v 1.4 2005/05/24 02:22:52 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.7.ebuild,v 1.5 2005/05/24 11:17:31 allanonjl Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives
 
@@ -130,6 +130,7 @@ src_compile() {
 		`use_with aalib aa` \
 		`use_enable lcms` \
 		`use_enable gtkhtml` \
+		`use_enable svg` \
 		`use_enable debug` || die
 
 	# X isn't optional (#58003) atm
