@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.14 2005/05/21 18:00:31 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.15 2005/05/24 13:23:36 dholm Exp $
+
+  24 May 2005; David Holm <dholm@gentoo.org>
+  crystalspace-0.99_pre20050518.ebuild:
+  Readded to ~ppc. Please don't remove it without filing a proper bug report.
 
 *crystalspace-0.99_pre20050518 (21 May 2005)
 
