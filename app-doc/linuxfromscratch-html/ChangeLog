@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/linuxfromscratch-html
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/ChangeLog,v 1.12 2005/01/01 13:14:45 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/ChangeLog,v 1.13 2005/05/24 00:13:44 vapier Exp $
+
+*linuxfromscratch-html-6.0 (24 May 2005)
+
+  24 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +linuxfromscratch-html-6.0.ebuild:
+  Version bump #93594 by Marcus Furlong.
 
   19 Dec 2004; Jason Huebel <jhuebel@gentoo.org>
   linuxfromscratch-html-3.3.ebuild, linuxfromscratch-html-4.0.ebuild:

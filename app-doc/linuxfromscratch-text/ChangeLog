@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/linuxfromscratch-text
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-text/ChangeLog,v 1.10 2005/01/01 13:14:58 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-text/ChangeLog,v 1.11 2005/05/24 00:17:23 vapier Exp $
+
+*linuxfromscratch-text-6.0 (24 May 2005)
+
+  24 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +linuxfromscratch-text-6.0.ebuild:
+  Version bump #93594 by Marcus Furlong.
 
   19 Dec 2004; Jason Huebel <jhuebel@gentoo.org>
   linuxfromscratch-text-3.3.ebuild, linuxfromscratch-text-4.0.ebuild:
