@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20050518.ebuild,v 1.1 2005/05/23 23:57:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20050518.ebuild,v 1.2 2005/05/24 22:00:23 vapier Exp $
 
 inherit eutils
 
@@ -26,4 +26,11 @@ src_unpack() {
 src_install() {
 	cd "${D}"
 	tar zxf "${S}"/data.tar.gz || die "installing data failed"
+	find "${D}"/usr/share/ca-certificates -name '*.crt' -printf '%P\n' \
+		| sort > etc/ca-certificates.conf
+}
+
+pkg_postinst() {
+	[[ ${ROOT} != "/" ]] && return 0
+	update-ca-certificates
 }
