@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q.ebuild,v 1.5 2005/04/30 06:50:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q.ebuild,v 1.6 2005/05/24 23:23:03 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -78,6 +78,12 @@ src_unpack() {
 
 	# swapon gets confused by symlinks in /dev #69162
 	epatch ${FILESDIR}/${PN}-2.12p-swapon-check-symlinks.patch
+
+	# fix simple buffer overflow (from Debian)
+	epatch ${FILESDIR}/${PN}-2.12q-debian-10cfdisk.patch
+
+	# don't build fdisk on m68k
+	epatch ${FILESDIR}/${PN}-2.12q-no-m68k-fdisk.patch
 
 	# Enable random features
 	local mconfigs="MCONFIG"
