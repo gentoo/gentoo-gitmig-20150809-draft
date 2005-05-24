@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6.ebuild,v 1.3 2005/05/16 16:13:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6.ebuild,v 1.4 2005/05/24 21:23:25 herbs Exp $
+
+inherit multilib
 
 MISCSPLASH="miscsplashutils-0.1.3"
 GENTOOSPLASH="splashutils-gentoo-0.1.10"
@@ -139,7 +141,7 @@ src_compile() {
 	emake -j1 MISCINCS="${miscincs}" || die "failed to build splashutils"
 
 	cd ${SM}
-	emake || die "failed to build miscsplashutils"
+	emake LIB=$(get_libdir) || die "failed to build miscsplashutils"
 }
 
 src_install() {
