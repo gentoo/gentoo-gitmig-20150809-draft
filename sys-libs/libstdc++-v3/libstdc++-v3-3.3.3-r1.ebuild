@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.34 2005/02/07 08:25:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.35 2005/05/24 05:10:25 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -215,9 +215,6 @@ src_compile() {
 		${myconf} || die
 
 	touch ${S}/gcc/c-gperf.h
-
-	# Setup -j in MAKEOPTS
-	get_number_of_jobs
 
 	einfo "Compiling libstdc++..."
 	S="${WORKDIR}/build" \
