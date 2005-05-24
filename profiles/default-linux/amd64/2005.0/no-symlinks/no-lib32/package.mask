@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.17 2005/03/26 18:04:37 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.18 2005/05/24 23:28:48 herbs Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -10,7 +10,7 @@
 <dev-db/postgresql-7.4.6
 <dev-db/sqlite-2.8.16
 =dev-db/sqlite-3.0*
-<dev-lang/perl-5.8.6-r3
+<dev-lang/perl-5.8.6-r4
 <dev-lang/python-python-2.4-r2
 <dev-lang/tcl-8.4.6-r1
 <dev-lang/tk-8.4.6-r1
@@ -26,7 +26,7 @@
 <net-fs/samba-3.0.11
 <net-libs/courier-authlib-0.52
 <net-libs/liblockfile-1.03-r2
-<www-client/mozilla-1.7.5-r1
+<www-client/mozilla-1.7.8-r1
 <sys-apps/dbus-0.23-r2
 <sys-apps/iproute2-2.6.10.20050112
 <sys-devel/flex-2.5.4a-r6
@@ -36,3 +36,5 @@
 <www-client/mozilla-firefox-1.0.1
 <dev-libs/libxml2-2.6.18
 <dev-libs/libxslt-1.1.13-r1
+<sys-fs/e2fsprogs-1.37-r1
+<media-gfx/splashutils-1.1.9.6
