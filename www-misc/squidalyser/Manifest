@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a66dc8342c89f11387d4800248d7796 squidalyser-0.2.55.ebuild 2694
-MD5 6b1d80fbcd3f198cdfd69579bbf861e3 ChangeLog 1735
+MD5 f4e417f3329f6c689c71a2ff20fbf431 ChangeLog 1854
 MD5 d7dd06078d4f3a44b46709294cc7bc21 metadata.xml 249
+MD5 f90f9bb32b94cd5cf855a5ed9e8ca4ac squidalyser-0.2.55.ebuild 2698
 MD5 4f1639f87240e891fee9650bce40b831 files/digest-squidalyser-0.2.55 145
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCaVKOjiC39V7gKu0RAvYbAJ40DAulN6iR2A0sszoVLWRjEWXc8QCgwEvL
-X5KZ+6B4yLalhYw3iyX5wlY=
-=tTq5
+iD8DBQFCkzqjtG5z4I8BtQoRAoOCAJ9rJ4CakYoYZH8UW9LRj5GHv4OARQCfeEzU
+EUc/iLcbkpgGN1l5ib8Eeh4=
+=dMvk
 -----END PGP SIGNATURE-----
