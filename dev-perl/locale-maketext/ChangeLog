@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/locale-maketext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext/ChangeLog,v 1.22 2005/05/15 17:28:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext/ChangeLog,v 1.23 2005/05/24 18:05:22 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org>
+  locale-maketext-1.09.ebuild:
+  dev-perl/i18n-langtags => perl-core/i18n-langtags migration
 
   15 May 2005; Joseph Jezak <josejx@gentoo.org> locale-maketext-1.09.ebuild:
   Marked ppc stable.
