@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.7.ebuild,v 1.1 2005/05/24 01:06:16 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.7.ebuild,v 1.2 2005/05/24 01:22:55 vapier Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
-LICENSE="GPL-2"
 
 P_HELP="gimp-help-2-0.8"
 S_HELP="$WORKDIR/${P_HELP}"
 SRC_URI="mirror://gimp/v2.2/${P}.tar.bz2
 	doc? ( mirror://gimp/help/testing/${P_HELP}.tar.gz )"
 
+LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64 ~ppc64"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aalib altivec debug doc gtkhtml gimpprint hardened jpeg lcms mmx mng png
 python scanner smp sse svg tiff wmf"
 
@@ -145,20 +145,19 @@ src_compile() {
 }
 
 src_install() {
-
 	# Workaround portage variable leakage
 	local AA=
 
 	# create these dirs to make the makefile installs these items correctly
 	dodir /usr/share/{applications,application-registry,mime-info}
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS README*
 
 	if use doc; then
 		cd ${S_HELP}
-		make DESTDIR=${D} install || die
+		make DESTDIR="${D}" install || die
 	fi
 
 	# Create the gimp-remote link, see bug #36648

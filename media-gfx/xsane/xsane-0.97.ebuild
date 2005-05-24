@@ -1,21 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.97.ebuild,v 1.2 2005/04/30 09:17:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.97.ebuild,v 1.3 2005/05/24 01:22:02 vapier Exp $
 
 DESCRIPTION="graphical scanning frontend"
-SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.xsane.org/"
+SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64 ~alpha"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gtk2 nls jpeg png tiff"
 
 DEPEND="media-gfx/sane-backends
-	|| (
-		gtk2? ( >=x11-libs/gtk+-2.0 )
-		=x11-libs/gtk+-1.2*
-	)
+	gtk2? ( >=x11-libs/gtk+-2.0 )
+	!gtk2? ( =x11-libs/gtk+-1.2* )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )"
@@ -23,11 +21,11 @@ DEPEND="media-gfx/sane-backends
 
 src_compile() {
 	econf \
-		`use_enable nls` \
-		`use_enable jpeg` \
-		`use_enable png` \
-		`use_enable tiff` \
-		`use_enable gtk2` \
+		$(use_enable nls) \
+		$(use_enable jpeg) \
+		$(use_enable png) \
+		$(use_enable tiff) \
+		$(use_enable gtk2) \
 		|| die
 	emake || die
 }
