@@ -1,4 +1,5 @@
-MD5 590852f099c606d60e4e949d84c1fc0a ChangeLog 1428
+MD5 a717a19832af838a33a88c8159cf80f9 ChangeLog 1606
+MD5 5cf06a0ca03ea44a9ba48272a8feea45 bombermaze-0.6.6.ebuild 1069
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6109dd939dd5719ec7c953529eff2695 bombermaze-0.6.6.ebuild 973
 MD5 dc0ab4d1a401a11e130c325d259c45e1 files/digest-bombermaze-0.6.6 68
+MD5 faee577061ad012fa54f267d5ee81d56 files/bombermaze-0.6.6-gcc.patch 372
