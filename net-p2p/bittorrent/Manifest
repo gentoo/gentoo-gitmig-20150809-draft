@@ -1,12 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 af5ece777155d0349001e81c5817c47d bittorrent-4.1.0.ebuild 2044
 MD5 81883a0c7c9a093e28ed9cd7924cfb75 bittorrent-3.4.1a.ebuild 1719
 MD5 bde98fabb85c0924b5aa43fcf1e053bb bittorrent-3.4.2-r2.ebuild 1922
 MD5 490ca1d61ac06527477ef2275919dd7f bittorrent-4.0.1.ebuild 1963
 MD5 946ef3f106eb094bbf4ff6808eb3b5db bittorrent-3.4.2-r1.ebuild 1874
 MD5 5602721fd34f1815337baf7be96e9984 bittorrent-4.0.0.ebuild 1964
-MD5 1dbf3145d91c8a33a95f41244215d576 ChangeLog 6893
+MD5 310080e5b4047cbdbe2b6ed3275248a1 ChangeLog 7114
 MD5 304b3a3544c70f9d8544fdec1e4b6cd2 bittorrent-3.4.2.ebuild 1683
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 7779a7eaf51eb9f84da8a588050f53fa files/favicon.ico 1406
@@ -14,14 +15,16 @@ MD5 041cb026a6f1c38c3ceef68e3a3001de files/digest-bittorrent-3.4.1a 66
 MD5 13f6b888eed806a8d4ce9cea22a7bacc files/digest-bittorrent-3.4.2-r1 65
 MD5 13f6b888eed806a8d4ce9cea22a7bacc files/digest-bittorrent-3.4.2-r2 65
 MD5 8254615ee527cd608123c83de2616ede files/bttrack.rc 631
+MD5 21ec89d06de83ddcc4cf6d6616355190 files/bittorrent-4.1.0-fix-all.patch 2483
 MD5 a94d4e97cceef0143a1a5c8784b6f70c files/bttrack.conf 728
 MD5 13f6b888eed806a8d4ce9cea22a7bacc files/digest-bittorrent-3.4.2 65
 MD5 b0a4d9f4ad2e4c256b262e11f10b03a4 files/digest-bittorrent-4.0.0 68
 MD5 6f633b4e59571e537f1888c9237573ad files/digest-bittorrent-4.0.1 68
+MD5 d1d7e07d2e93a5ccb96f1018b93511fa files/digest-bittorrent-4.1.0 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCeqv9I1lqEGTUzyQRAu4eAJ46bnW/K7VIIN1nO9H5R/MYBv+RfwCfZtQ4
-OTp3V0XE4qAduWmPlZuKGN0=
-=23tc
+iD8DBQFCk4rJZ/iYVBmujdURApQAAJ9ARU0qmKmLUCrydF6+t42J2vQmUACfeeWi
+OrfovAxyL1g0i1KhqIOViDI=
+=Ie+J
 -----END PGP SIGNATURE-----

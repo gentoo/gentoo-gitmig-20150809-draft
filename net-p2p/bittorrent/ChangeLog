@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.46 2005/05/05 23:27:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.47 2005/05/24 18:18:32 sekretarz Exp $
+
+*bittorrent-4.1.0 (24 May 2005)
+
+  24 May 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/bittorrent-4.1.0-fix-all.patch, +bittorrent-4.1.0.ebuild:
+  Version bump, bug #93148. Thanks to Johannes Weiner for patch.
 
   05 May 2005; Sven Wegener <swegener@gentoo.org> bittorrent-3.4.1a.ebuild,
   bittorrent-3.4.2.ebuild, bittorrent-3.4.2-r1.ebuild,
