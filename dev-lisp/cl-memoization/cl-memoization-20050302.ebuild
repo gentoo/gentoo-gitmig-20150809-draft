@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-memoization/cl-memoization-20050302.ebuild,v 1.2 2005/04/16 20:50:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-memoization/cl-memoization-20050302.ebuild,v 1.3 2005/05/24 18:48:34 mkennedy Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://packages.debian.org/unstable/libs/cl-memoization"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-memoization/${PN}_${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"

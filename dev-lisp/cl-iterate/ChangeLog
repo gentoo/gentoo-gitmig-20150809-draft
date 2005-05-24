@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-iterate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-iterate/ChangeLog,v 1.8 2005/05/11 04:55:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-iterate/ChangeLog,v 1.9 2005/05/24 18:48:33 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> cl-iterate-1.3_pre1.ebuild,
+  cl-iterate-1.4.ebuild:
+  Keywording ~sparc
 
 *cl-iterate-1.4 (11 May 2005)
 

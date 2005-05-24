@@ -1,5 +1,5 @@
 MD5 9575a7c8dc64d23d3b03d296ab2520f0 ChangeLog 1168
-MD5 30205e60626deb5bc4a6a88e174f6214 cl-binary-types-0.90.ebuild 1115
+MD5 8ede48e6fc8127651fe6b496049bb54c cl-binary-types-0.90.ebuild 1122
 MD5 93e7240d3c8c6922eb70826957c8ccb3 metadata.xml 977
 MD5 8f3c1d60ae809cff1a251722d6d4c4c0 files/0.90-gentoo.patch 763
 MD5 ceae9eb783b7b8411acb49548a988ac3 files/binary-types.asd 429

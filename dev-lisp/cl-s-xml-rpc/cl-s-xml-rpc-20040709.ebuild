@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-s-xml-rpc/cl-s-xml-rpc-20040709.ebuild,v 1.4 2005/04/17 00:43:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-s-xml-rpc/cl-s-xml-rpc-20040709.ebuild,v 1.5 2005/05/24 18:48:35 mkennedy Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.common-lisp.net/project/s-xml-rpc/"
 SRC_URI="mirrors://gentoo/s-xml-rpc-20040709.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lisp/cl-s-xml
 	dev-lisp/cl-aserve"

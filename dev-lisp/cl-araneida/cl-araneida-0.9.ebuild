@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-araneida/cl-araneida-0.9.ebuild,v 1.4 2005/04/15 17:22:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-araneida/cl-araneida-0.9.ebuild,v 1.5 2005/05/24 18:48:32 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cliki.net/Araneida"
 SRC_URI="http://www-jcsu.jesus.cam.ac.uk/ftp/pub/cclan/araneida_${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lisp/cl-split-sequence
 	dev-lisp/cl-net-telent-date"

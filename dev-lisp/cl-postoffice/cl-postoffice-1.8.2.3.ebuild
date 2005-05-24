@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-postoffice/cl-postoffice-1.8.2.3.ebuild,v 1.3 2005/04/17 00:06:50 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-postoffice/cl-postoffice-1.8.2.3.ebuild,v 1.4 2005/05/24 18:48:34 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-postoffice/cl-postoffice_${
 	http://ftp.debian.org/debian/pool/main/c/cl-postoffice/cl-postoffice_${PV}-${DEB_PV}.diff.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="dev-lisp/cl-acl-compat"

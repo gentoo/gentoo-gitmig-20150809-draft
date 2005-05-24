@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/cl-ucw-0.3.9.ebuild,v 1.1 2005/05/18 22:24:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/cl-ucw-0.3.9.ebuild,v 1.2 2005/05/24 18:48:36 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://common-lisp.net/project/ucw/index.html"
 SRC_URI="ftp://ftp.common-lisp.net/pub/project/ucw/ucw_${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="mod_lisp araneida aserve doc"
 
 DEPEND=">=dev-lisp/cl-iterate-1.4

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-log4cl/cl-log4cl-20050421.ebuild,v 1.1 2005/04/21 22:06:11 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-log4cl/cl-log4cl-20050421.ebuild,v 1.2 2005/05/24 18:48:34 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://common-lisp.net/project/log4cl/index.html"
 SRC_URI="mirror://gentoo/log4cl-${PV}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lisp/cl-plus"
 

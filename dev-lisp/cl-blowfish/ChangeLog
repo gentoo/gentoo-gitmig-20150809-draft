@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-blowfish
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-blowfish/ChangeLog,v 1.8 2005/04/15 18:56:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-blowfish/ChangeLog,v 1.9 2005/05/24 18:48:32 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> cl-blowfish-0.6.ebuild:
+  Keywording ~sparc
 
   15 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
   -cl-blowfish-0.3.ebuild, -cl-blowfish-0.3-r1.ebuild,

@@ -1,5 +1,5 @@
 MD5 810cd7f38f211063bd5a03a7ac0d6ae3 ChangeLog 1320
-MD5 e3f2418c2367d479c5a1fa0edb483524 cl-linedit-0.15.12.ebuild 1067
+MD5 ef1b9ef147be517ac069ac8c9938fd1b cl-linedit-0.15.12.ebuild 1074
 MD5 6310c8b01587b6100d7a50443ee27454 metadata.xml 820
 MD5 8484e646d6628ae40d929863632d4e8e files/0.15.12-Makefile 164
 MD5 ee56fce7c691fe30856c12305f71d6ac files/0.15.12-linedit.asd-uffi-glue-gentoo.patch 2937

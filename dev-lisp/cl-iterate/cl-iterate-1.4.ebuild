@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-iterate/cl-iterate-1.4.ebuild,v 1.1 2005/05/11 04:55:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-iterate/cl-iterate-1.4.ebuild,v 1.2 2005/05/24 18:48:33 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://common-lisp.net/project/iterate/
 SRC_URI="http://common-lisp.net/project/iterate/releases/iterate_${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="doc"
 
 DEPEND="virtual/commonlisp

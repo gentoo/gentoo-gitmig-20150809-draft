@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-statistics
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-statistics/ChangeLog,v 1.5 2005/04/17 00:52:47 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-statistics/ChangeLog,v 1.6 2005/05/24 18:48:35 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> cl-statistics-1.0.0.2-r1.ebuild:
+  Keywording ~sparc
 
   17 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
   -cl-statistics-1.0.0.1.ebuild, -cl-statistics-1.0.0.2.ebuild,

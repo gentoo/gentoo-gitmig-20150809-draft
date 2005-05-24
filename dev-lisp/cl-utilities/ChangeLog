@@ -1,6 +1,16 @@
 # ChangeLog for dev-lisp/cl-utilities
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-utilities/ChangeLog,v 1.1 2005/05/10 07:26:41 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-utilities/ChangeLog,v 1.2 2005/05/24 18:48:36 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> -cl-utilities-1.0.ebuild,
+  +cl-utilities-1.0.2.ebuild:
+  Keywording ~sparc
+
+*cl-utilities-1.0.2 (24 May 2005)
+
+  24 May 2005; <mkennedy@gentoo.org> -cl-utilities-1.0.ebuild,
+  +cl-utilities-1.0.2.ebuild:
+  New upstream version.
 
 *cl-utilities-1.0 (10 May 2005)
 

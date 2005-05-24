@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-xmls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xmls/ChangeLog,v 1.8 2005/04/17 00:39:15 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xmls/ChangeLog,v 1.9 2005/05/24 18:48:37 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> cl-xmls-1.2.ebuild:
+  Keywording ~sparc
 
   17 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
   -files/1.1-gentoo.patch, -cl-xmls-0.5.ebuild, -cl-xmls-1.0.ebuild,

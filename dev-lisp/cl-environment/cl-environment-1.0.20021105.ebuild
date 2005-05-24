@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-environment/cl-environment-1.0.20021105.ebuild,v 1.5 2005/04/15 20:12:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-environment/cl-environment-1.0.20021105.ebuild,v 1.6 2005/05/24 18:48:33 mkennedy Exp $
 
 inherit common-lisp
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://packages.debian.org/unstable/devel/cl-environment"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-environment/cl-environment_${MY_PV}+cvs.${CVS_PV}.orig.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"

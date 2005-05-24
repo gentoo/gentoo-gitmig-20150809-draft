@@ -1,5 +1,5 @@
 MD5 c8d45b84dbedef7643d9d9da9015aa76 ChangeLog 996
-MD5 3aefd620a6b015fd0ffd35d7b75801cf cl-series-2.2.8.ebuild 802
+MD5 7a6ba8cbf53c8d13337de52d4e47bf76 cl-series-2.2.8.ebuild 809
 MD5 e4df73cef0575435a1a5905d418379b2 metadata.xml 673
 MD5 181e9c54ab93583e5ab095a12011fa5b files/2.2.8-sbcl-gentoo.patch 1181
 MD5 02812c874a74d1a2094d38372ebf325e files/digest-cl-series-2.2.8 65

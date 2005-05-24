@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-asdf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.20 2005/04/15 18:40:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.21 2005/05/24 18:48:32 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> cl-asdf-1.86-r1.ebuild:
+  Keywording ~sparc
 
   15 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> -cl-asdf-1.73b.ebuild,
   -cl-asdf-1.77.2.ebuild, -cl-asdf-1.78.ebuild, -cl-asdf-1.81.ebuild,

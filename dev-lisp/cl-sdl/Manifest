@@ -1,5 +1,5 @@
 MD5 75d78199d155b714cb610931c4b2e97d ChangeLog 1160
-MD5 071e1ffab2de7e80bd9992ffd3a3e74d cl-sdl-0.2.2-r1.ebuild 2064
+MD5 75eb0d42f3e4f58d35612be4ad4fa4e0 cl-sdl-0.2.2-r1.ebuild 2071
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 eb99992a3fab31005b911962e7e6f116 files/cl-sdl-0.2.1-gentoo.patch 4044
 MD5 a530a1847e5e59ff886cfa0c1ab14f32 files/digest-cl-sdl-0.2.2-r1 64

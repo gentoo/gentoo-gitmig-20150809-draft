@@ -1,5 +1,5 @@
 MD5 26218ad500f7eb60ae1b04511d01b6bf ChangeLog 820
-MD5 1049d1077277357f555b8e1c905663b3 cl-regex-1-r1.ebuild 962
+MD5 ffe4332b045c4ad174bb419810592346 cl-regex-1-r1.ebuild 969
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 39d0e291421accded6fc3d9689985e6f files/1-macs.lisp-gentoo.patch 892
 MD5 47bae7c3e79929f06cf61b0e673bc756 files/digest-cl-regex-1-r1 66

@@ -1,5 +1,5 @@
 MD5 de423f56bbc23768e6d33911c1b1571e ChangeLog 2272
-MD5 4b99e49ada22b7b36098654ac69f0749 cl-mcclim-0.9.1.ebuild 2183
+MD5 88d3981bf7e9b649081e5fe28bd5378c cl-mcclim-0.9.1.ebuild 2190
 MD5 c8d8979589a5ef6d1310a74961af2636 metadata.xml 1191
 MD5 bc6e14687a93af759c7a8084ae0c892e files/0.9.1-mcclim.asd-cmucl.patch 1018
 MD5 6c70574406d341f011851b22c49acb4a files/50mcclim-gentoo.el 103

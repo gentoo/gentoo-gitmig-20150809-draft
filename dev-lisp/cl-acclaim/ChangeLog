@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-acclaim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acclaim/ChangeLog,v 1.4 2005/05/12 17:55:24 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acclaim/ChangeLog,v 1.5 2005/05/24 18:48:32 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> cl-acclaim-0.25.ebuild,
+  cl-acclaim-0.25-r1.ebuild:
+  Keywording ~sparc
 
 *cl-acclaim-0.25-r1 (12 May 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-cldict/cl-org-davep-cldict-1.1.ebuild,v 1.3 2005/04/16 22:24:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-cldict/cl-org-davep-cldict-1.1.ebuild,v 1.4 2005/05/24 18:48:34 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.davep.org/lisp/"
 SRC_URI="http://www.davep.org/lisp/${P#cl-}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lisp/cl-org-davep-dict
 	dev-lisp/cl-ppcre

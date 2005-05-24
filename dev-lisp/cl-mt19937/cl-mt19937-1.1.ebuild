@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mt19937/cl-mt19937-1.1.ebuild,v 1.1 2005/05/18 23:49:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mt19937/cl-mt19937-1.1.ebuild,v 1.2 2005/05/24 18:48:34 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cliki.net/MT19937"
 SRC_URI="mirror://gentoo/mt19937-${PV}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/commonlisp

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.42.20050220.ebuild,v 1.3 2005/04/15 17:13:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.42.20050220.ebuild,v 1.4 2005/05/24 18:48:32 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://portableaserve.sourceforge.net/
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-portable-aserve/cl-portable-aserve_${MY_PV}+cvs.${CVS_PV}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="=dev-lisp/cl-acl-compat-${PV}*
 	=dev-lisp/cl-htmlgen-${PV}*"

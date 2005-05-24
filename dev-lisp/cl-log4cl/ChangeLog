@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-log4cl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-log4cl/ChangeLog,v 1.1 2005/04/21 22:06:11 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-log4cl/ChangeLog,v 1.2 2005/05/24 18:48:34 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> cl-log4cl-20050421.ebuild:
+  Keywording ~sparc
 
 *cl-log4cl-20050421 (21 Apr 2005)
 

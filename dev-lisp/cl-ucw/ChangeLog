@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-ucw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/ChangeLog,v 1.1 2005/05/18 22:24:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/ChangeLog,v 1.2 2005/05/24 18:48:36 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> cl-ucw-0.3.9.ebuild:
+  Keywording ~sparc
 
 *cl-ucw-0.3.9 (18 May 2005)
 

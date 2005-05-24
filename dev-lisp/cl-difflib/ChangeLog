@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-difflib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-difflib/ChangeLog,v 1.3 2005/04/15 20:07:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-difflib/ChangeLog,v 1.4 2005/05/24 18:48:33 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> cl-difflib-0.1.ebuild:
+  Keywording ~sparc
 
   15 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-difflib-0.1.ebuild:
   Keywording x86, ~ppc

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-elephant/cl-elephant-0.2.1.ebuild,v 1.3 2005/04/15 20:09:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-elephant/cl-elephant-0.2.1.ebuild,v 1.4 2005/05/24 18:48:33 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -9,11 +9,11 @@ HOMEPAGE="http://common-lisp.net/project/elephant/"
 SRC_URI="http://common-lisp.net/project/elephant/elephant-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="doc"
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
-	=sys-libs/db-4*
+	=sys-libs/db-4.2*
 	dev-lisp/cl-uffi
 	doc? ( sys-apps/texinfo )"
 

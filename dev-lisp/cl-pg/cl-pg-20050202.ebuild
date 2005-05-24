@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pg/cl-pg-20050202.ebuild,v 1.3 2005/04/16 23:01:48 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pg/cl-pg-20050202.ebuild,v 1.4 2005/05/24 18:48:34 mkennedy Exp $
 
 inherit common-lisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://common-lisp.net/project/pg/
 SRC_URI="mirror://gentoo/${PN}_${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"

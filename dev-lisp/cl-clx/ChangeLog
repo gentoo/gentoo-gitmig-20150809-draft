@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-clx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/ChangeLog,v 1.6 2005/05/12 17:57:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/ChangeLog,v 1.7 2005/05/24 18:48:32 mkennedy Exp $
+
+  24 May 2005; <mkennedy@gentoo.org> cl-clx-0.6.1.ebuild,
+  cl-clx-0.7.0.ebuild:
+  Keywording ~sparc
 
 *cl-clx-0.7.0 (12 May 2005)
 
