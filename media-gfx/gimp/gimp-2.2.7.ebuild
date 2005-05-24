@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.7.ebuild,v 1.2 2005/05/24 01:22:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.7.ebuild,v 1.3 2005/05/24 01:58:01 allanonjl Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives
 
@@ -164,7 +164,9 @@ src_install() {
 	dosym gimp-remote-2.2 /usr/bin/gimp-remote
 
 	# if use scanner, create the symlink see bug #93018
-	dosym /usr/bin/xscanimage /usr/lib/gimp/2.0/plug-ins/
+	if use scanner; then
+		dosym /usr/bin/xscanimage /usr/lib/gimp/2.0/plug-ins/
+	fi
 }
 
 pkg_postinst() {
