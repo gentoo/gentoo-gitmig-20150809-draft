@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.3 2005/05/24 14:29:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.4 2005/05/24 16:00:30 mcummings Exp $
 
 inherit perl-module
 
@@ -25,7 +25,7 @@ DEPEND="
 	>=perl-core/CGI-2.56
 	>=dev-perl/GD-2.07
 	dev-perl/DBI
-	dev-perl/Digest-MD5
+	perl-core/Digest-MD5
 	dev-perl/Text-Shellwords
 	dev-perl/libwww-perl
 	dev-perl/XML-Parser

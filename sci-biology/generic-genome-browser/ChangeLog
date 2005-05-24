@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/generic-genome-browser
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/ChangeLog,v 1.3 2005/05/24 14:29:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/generic-genome-browser/ChangeLog,v 1.4 2005/05/24 16:00:30 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org>
+  generic-genome-browser-1.58.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org>
   generic-genome-browser-1.58.ebuild:

@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 34a7ff9498e8949aa0fd385975ad352e ChangeLog 860
-MD5 0221ca8ed77ce8fa6cc03e548e0e86cc generic-genome-browser-1.58.ebuild 2055
+MD5 37b54cae1468fa4ace8d1c68b83ea7e9 ChangeLog 1000
+MD5 5eb4c52b578d372a4840c7df19a5adda generic-genome-browser-1.58.ebuild 2056
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
 MD5 a46a3f4a12816bb198f2f532a605ba11 files/digest-generic-genome-browser-1.58 80
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCkzpdtG5z4I8BtQoRAgRlAJoCH+boMcplS0+YoPv3GuMSpQHPfQCfQ7hN
-qEWXM3iJjUsKXtTtt0uADrI=
-=1xK/
+iD8DBQFCk0+0tG5z4I8BtQoRAobdAJwLLROb8HhthVX5ZuoIIO4Dt8IspACaAyd4
+sZK4vGFc9YpxgJxNNJAQbHw=
+=r47Q
 -----END PGP SIGNATURE-----
