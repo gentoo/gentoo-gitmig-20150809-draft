@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-text/linuxfromscratch-text-6.0.ebuild,v 1.2 2005/05/24 00:18:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-text/linuxfromscratch-text-6.0.ebuild,v 1.3 2005/05/24 00:20:51 vapier Exp $
 
 MY_P="LFS-BOOK-${PV}.txt"
 DESCRIPTION="The Linux From Scratch Book"
@@ -15,6 +15,6 @@ IUSE=""
 S=${WORKDIR}
 
 src_install() {
-	insinto /usr/share/doc/linuxfromscratch-${PV}/text
+	insinto /usr/share/doc/linuxfromscratch-${PV}
 	doins -r * || die "doins failed"
 }
