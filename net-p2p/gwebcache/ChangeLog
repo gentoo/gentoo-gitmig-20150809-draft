@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gwebcache
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gwebcache/ChangeLog,v 1.3 2004/10/18 17:18:34 squinky86 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gwebcache/ChangeLog,v 1.4 2005/05/24 14:28:55 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> gwebcache-1.0.0.ebuild:
+  dev-perl/CGI => perl-core/CGI
 
   18 Oct 2004; Jon Hood <squinky86@gentoo.org> gwebcache-1.0.0.ebuild:
   Stable on x86.

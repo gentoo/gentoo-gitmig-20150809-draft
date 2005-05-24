@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/perlgcache
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/perlgcache/ChangeLog,v 1.6 2004/11/23 21:03:41 squinky86 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/perlgcache/ChangeLog,v 1.7 2005/05/24 14:29:09 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org>
+  perlgcache-0.8.3.ebuild:
+  dev-perl/CGI => perl-core/CGI
 
   23 Nov 2004; Jon Hood <squinky86@gentoo.org> -perlgcache-0.7.9.ebuild,
   -perlgcache-0.8.2-r1.ebuild, perlgcache-0.8.3.ebuild:

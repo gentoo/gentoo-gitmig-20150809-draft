@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/perlgcache/perlgcache-0.8.3.ebuild,v 1.3 2004/11/23 21:03:41 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/perlgcache/perlgcache-0.8.3.ebuild,v 1.4 2005/05/24 14:29:09 mcummings Exp $
 
 inherit webapp
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc"
 DEPEND=">=sys-apps/sed-4"
 RDEPEND=">=net-www/apache-1.3.24-r1
 	>=dev-lang/perl-5.6.0
-	>=dev-perl/CGI-2.93"
+	>=perl-core/CGI-2.93"
 
 S=${WORKDIR}
 
