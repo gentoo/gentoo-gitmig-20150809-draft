@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.14 2005/05/24 03:29:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.15 2005/05/24 07:46:52 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -768,7 +768,6 @@ host_def_setup() {
 		# with USE="X doc' circular dep w/ virtual/ghostscript
 		# echo "#define HasGhostScript ${DOC}" >> ${HOSTCONF}
 		# Caused issues, basic docs aren't installed
-		use_build doc BuildLinuxDocText
 		use_build doc BuildLinuxDocPS
 		use_build doc BuildSpecsDocs
 		use_build doc BuildHtmlManPages
@@ -1834,7 +1833,7 @@ font_setup() {
 	if [ -x ${ROOT}/usr/bin/ttmkfdir ]; then
 		ebegin "Creating fonts.scale files"
 			local x
-			for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1); do
+			for x in $(find ${ROOT}/usr/share/fonts/* -maxdepth 1 -type d); do
 				[ -z "$(ls ${x}/)" ] && continue
 				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 
@@ -1874,7 +1873,7 @@ font_setup() {
 	fi
 
 	ebegin "Generating fonts.dir files"
-		for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1); do
+		for x in $(find ${ROOT}/usr/share/fonts/* -maxdepth 1 -type d); do
 			[ -z "$(ls ${x}/)" ] && continue
 			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 
@@ -1889,7 +1888,7 @@ font_setup() {
 	eend 0
 
 	ebegin "Generating Xft cache"
-		for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1); do
+		for x in $(find ${ROOT}/usr/share/fonts/* -maxdepth 1 -type d); do
 			[ -z "$(ls ${x}/)" ] && continue
 			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 
