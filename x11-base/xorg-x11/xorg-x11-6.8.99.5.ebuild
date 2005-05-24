@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.5.ebuild,v 1.6 2005/05/24 02:28:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.5.ebuild,v 1.7 2005/05/24 02:34:32 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -45,7 +45,7 @@ inherit eutils flag-o-matic toolchain-funcs x11 linux-info multilib
 RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
-IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server hardened
+IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server
 	insecure-drivers ipv6 minimal mmx nls opengl pam sdk sse static
 	truetype-fonts type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
@@ -357,7 +357,7 @@ cflag_setup() {
 		# according to ciaranm
 		# And hardened compiler must be softened. -- fmccor, 20.viii.04
 		sparc)	filter-flags "-fomit-frame-pointer" "-momit-leaf-frame-pointer"
-			if use hardened && ! use dlloader; then
+			if has_hardened && ! use dlloader; then
 				einfo "Softening gcc for sparc."
 				ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-pie -fno-PIE"
 				append-flags -fno-pie -fno-PIE
@@ -415,6 +415,11 @@ check_use_combos() {
 		if use sdk; then
 			die "The static USE flag is incompatible with the sdk USE flag."
 		fi
+	fi
+
+	# (#77949)
+	if use minimal && use doc; then
+		die "The minimal and doc USE flags are temporarily incompatible and result in a dead build."
 	fi
 
 	# (#77949)
@@ -633,7 +638,7 @@ host_def_setup() {
 			if use dlloader; then
 				einfo "Setting MakeDllModules to YES."
 				echo "#define MakeDllModules    YES" >> ${HOSTCONF}
-				if use hardened; then
+				if has_hardened; then
 					echo "#define HardenedGccSpecs YES" >> ${HOSTCONF}
 				fi
 			else
@@ -740,7 +745,7 @@ host_def_setup() {
 			suntcx sunbw2 glint mga tdfx ati savage vesa vga fbdev \
 			XF86OSCardDrivers XF86ExtraCardDrivers \
 			DevelDrivers" >> ${HOSTCONF}
-			if use hardened && ! use dlloader; then
+			if has_hardened && ! use dlloader; then
 				einfo "Softening the assembler so cfb modules will play nice with sunffb."
 				echo "#define AsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}
 				echo "#define ModuleAsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}
