@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.5.ebuild,v 1.7 2005/05/24 02:34:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.5.ebuild,v 1.8 2005/05/24 02:38:03 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -539,6 +539,8 @@ host_def_setup() {
 		echo "#define ManDirectoryRoot /usr/share/man" >> ${HOSTCONF}
 		echo "#define DocDir /usr/share/doc/${PF}" >> ${HOSTCONF}
 		echo "#define FontDir /usr/share/fonts" >> ${HOSTCONF}
+		# Single quotes so FONTDIR doesn't get run
+		echo '#define FontEncDir $(FONTDIR)/encodings' >> ${HOSTCONF}
 		echo "#define BinDir /usr/bin" >> ${HOSTCONF}
 		echo "#define IncRoot /usr/include" >> ${HOSTCONF}
 		# This breaks the case when $(SYSTEMUSRINCDIR) = $(INCDIR)
