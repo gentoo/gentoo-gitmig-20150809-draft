@@ -1,21 +1,23 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.14 2005/05/06 11:10:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.15 2005/05/24 23:42:10 eradicator Exp $
 
-IUSE="emul-linux-x86"
+IUSE=""
 
 S=${WORKDIR}
 
 DESCRIPTION="us1, us2, and us3 mbrola voice libraries for Festival TTS"
 HOMEPAGE="http://tcts.fpms.ac.be/synthesis/mbrola.html"
-SRC_URI="${URL}/bin/pclinux/mbr301h.zip
-	 ${URL}/dba/us1/us1-980512.zip
-	 ${URL}/dba/us2/us2-980812.zip
-	 ${URL}/dba/us3/us3-990208.zip"
+
+SRC_URI_BASE="http://tcts.fpms.ac.be/synthesis/mbrola"
+SRC_URI="${SRC_URI_BASE}/bin/pclinux/mbr301h.zip
+	 ${SRC_URI_BASE}/dba/us1/us1-980512.zip
+	 ${SRC_URI_BASE}/dba/us2/us2-980812.zip
+	 ${SRC_URI_BASE}/dba/us3/us3-990208.zip"
 
 DEPEND=">=app-accessibility/festival-1.4.2
 	app-arch/unzip
-	emul-linux-x86? ( app-emulation/emul-linux-x86-glibc )"
+	amd64? ( app-emulation/emul-linux-x86-glibc )"
 
 SLOT="0"
 LICENSE="MBROLA"

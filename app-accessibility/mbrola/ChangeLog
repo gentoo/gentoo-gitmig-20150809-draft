@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.13 2005/05/06 11:10:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.14 2005/05/24 23:42:10 eradicator Exp $
+
+  24 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  mbrola-3.0.1h-r1.ebuild:
+  Fixed SRC_URI.
 
   06 May 2005; Markus Rothe <corsair@gentoo.org> mbrola-3.0.1h-r1.ebuild:
   Added ~ppc64 to KEYWORDS
