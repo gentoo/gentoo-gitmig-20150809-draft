@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0.ebuild,v 1.2 2005/05/23 17:49:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0.ebuild,v 1.3 2005/05/24 05:43:39 compnerd Exp $
 
 inherit eutils java-pkg
 
@@ -207,6 +207,9 @@ src_compile() {
 	# The build will attempt to display graphical
 	# dialogs for the licence agreements if this is set.
 	unset DISPLAY
+
+	# Sun JDK doesnt like that very much, so lets pleasure them too ;-)
+	export ANT_OPTS="${ANT_OPTS} -Djava.awt.headless=true"
 
 	# The location of the main build.xml file
 	cd ${S}/nbbuild

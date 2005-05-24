@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.28 2005/05/23 17:49:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.29 2005/05/24 05:43:39 compnerd Exp $
+
+  24 May 2005; Saleem Abdulrasool <compnerd@gentoo.org> netbeans-4.0.ebuild:
+  Adding patch to please the SUN JDKs.  Resolves Bug #93617.  Patch from
+  Betelgeuse.
 
   23 May 2005; Jan Brinkmann <luckyduck@gentoo.org> netbeans-4.0.ebuild:
   added ~amd64 to KEYWORDS
