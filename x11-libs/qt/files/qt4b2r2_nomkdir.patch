@@ -1,0 +1,19 @@
+--- configure.orig	2005-05-23 15:24:37.059065896 -0500
++++ configure	2005-05-23 15:26:33.888305152 -0500
+@@ -1065,16 +1065,6 @@
+ [ -z "$QT_INSTALL_TRANSLATIONS" ] && QT_INSTALL_TRANSLATIONS=$QT_INSTALL_PREFIX/translations #default
+ QT_INSTALL_TRANSLATIONS=`$relpath/config.tests/unix/makeabs "$QT_INSTALL_TRANSLATIONS"`
+ 
+-#settings
+-if [ "$PLATFORM_MAC" = "yes" ]; then
+-   [ -z "$QT_INSTALL_SETTINGS" ] && QT_INSTALL_SETTINGS=/Library/Preferences/Qt #default
+-else
+-   [ -z "$QT_INSTALL_SETTINGS" ] && QT_INSTALL_SETTINGS=/etc/xdg #default
+-fi
+-if mkdir -p "$QT_INSTALL_SETTINGS" >/dev/null 2>&1; then
+-  QT_INSTALL_SETTINGS=`(cd "$QT_INSTALL_SETTINGS"; /bin/pwd)` #absolute
+-fi
+-
+ #-------------------------------------------------------------------------------
+ # generate qconfig.cpp
+ #-------------------------------------------------------------------------------
