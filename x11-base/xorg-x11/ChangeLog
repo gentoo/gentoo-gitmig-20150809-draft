@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.393 2005/05/24 07:46:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.394 2005/05/24 07:49:36 spyderous Exp $
+
+  24 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r2.ebuild:
+  Backports from 6.8.99.x, continued: Depend on opengl-update-2.2 for fixed
+  --use-old.
 
   24 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r2.ebuild:

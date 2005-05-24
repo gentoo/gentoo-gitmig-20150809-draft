@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.15 2005/05/24 07:46:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.16 2005/05/24 07:49:36 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -98,7 +98,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=dev-libs/expat-1.95.3
 	>=media-libs/freetype-2.1.8
 	>=media-libs/fontconfig-2.1-r1
-	opengl? ( >=x11-base/opengl-update-2.1.1 )
+	opengl? ( >=x11-base/opengl-update-2.2.0 )
 	>=x11-misc/ttmkfdir-3.0.9-r2
 	>=sys-apps/sed-4
 	sys-apps/util-linux
@@ -115,7 +115,7 @@ RDEPEND="
 		>=dev-libs/expat-1.95.3
 		>=media-libs/freetype-2.1.8
 		>=media-libs/fontconfig-2.1-r1
-		opengl? ( >=x11-base/opengl-update-2.1.1 )
+		opengl? ( >=x11-base/opengl-update-2.2.0 )
 		>=x11-misc/ttmkfdir-3.0.9-r2
 		media-libs/libpng
 		>=sys-libs/ncurses-5.1
@@ -1923,11 +1923,7 @@ switch_opengl_implem() {
 		# OpenGL interface ...
 		echo
 		local opengl_implem="$(${ROOT}/usr/sbin/opengl-update --get-implementation)"
-		if [ "${opengl_implem}" = "xfree" -o -z "${opengl_implem}" ]; then
-			${ROOT}/usr/sbin/opengl-update ${PN}
-		else
-			${ROOT}/usr/sbin/opengl-update ${opengl_implem}
-		fi
+		${ROOT}/usr/sbin/opengl-update --use-old ${PN}
 }
 
 remove_old_compose_files() {
