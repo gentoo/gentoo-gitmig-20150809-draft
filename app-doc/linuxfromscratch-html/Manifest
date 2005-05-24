@@ -1,4 +1,6 @@
-MD5 84bbc13ce2fe5363ef49c8c8c96a5568 ChangeLog 1055
+MD5 4602bd753f2e83106ee2b70c032e0d7d ChangeLog 1222
+MD5 4086790eef711648ec0006e0196b00bc linuxfromscratch-html-6.0.ebuild 685
 MD5 bf543d0cf4ef5891ef3fecb08a050cf1 linuxfromscratch-html-4.0.ebuild 890
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 c0d9fadee5093759a96b78eb3dcbf03c files/digest-linuxfromscratch-html-6.0 70
 MD5 8c490688fad91f35fddf804c3eac4f3a files/digest-linuxfromscratch-html-4.0 70
