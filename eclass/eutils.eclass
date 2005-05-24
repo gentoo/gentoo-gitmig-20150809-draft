@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.172 2005/05/20 02:09:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.173 2005/05/24 03:17:19 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -127,6 +127,8 @@ EPATCH_OPTS="-g0 --no-backup-if-mismatch"
 EPATCH_EXCLUDE=""
 # Change the printed message for a single patch.
 EPATCH_SINGLE_MSG=""
+# Change the printed message for multiple patches.
+EPATCH_MULTI_MSG="Applying various patches (bugfixes/updates) ..."
 # Force applying bulk patches even if not following the style:
 #
 #   ??_${ARCH}_foo.${EPATCH_SUFFIX}
@@ -240,7 +242,7 @@ epatch() {
 
 	if [ "${SINGLE_PATCH}" = "no" ]
 	then
-		einfo "Applying various patches (bugfixes/updates) ..."
+		einfo "${EPATCH_MULTI_MSG}"
 	fi
 	for x in ${EPATCH_SOURCE}
 	do
