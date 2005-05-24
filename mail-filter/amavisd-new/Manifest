@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f0bbe9bf73ec48a39a7725b97e3bfd98 ChangeLog 10213
 MD5 27493c160e2443ee208d87807e764395 amavisd-new-2.2.1.ebuild 4807
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
@@ -14,3 +17,10 @@ MD5 a9c49eb16b5fa7dfecd54a436bc07200 files/amavisd-new-2.3.0-amavisd.conf-gentoo
 MD5 20d1361125dc21db61b44dec3a13dea2 files/digest-amavisd-new-2.3.0 69
 MD5 1ec247b48d1de4fdbc2a57fc9b338681 files/digest-amavisd-new-2.2.1-r2 69
 MD5 d7ee87336e865f363c430fc60f105d44 files/digest-amavisd-new-2.3.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCk05ktG5z4I8BtQoRAtToAJsGi49qGIpYLYYZuGQxx+0teby06QCdGZLd
+OK4lmFDwHXw8WQJka+Kw0xg=
+=w6hP
+-----END PGP SIGNATURE-----
