@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.10 2005/05/13 02:50:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.11 2005/05/24 22:06:35 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -50,6 +50,8 @@ src_install() {
 	if use build ; then
 		rm -r "${D}"/usr
 	else
+		dodir /usr/bin
+		dosym /bin/tar /usr/bin/gtar
 		dodoc AUTHORS ChangeLog* NEWS README* PORTS THANKS
 		doman "${FILESDIR}"/tar.1
 		mv "${D}"/usr/sbin/backup{,-tar}
