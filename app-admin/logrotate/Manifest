@@ -1,19 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 ce6cc3c8473d2b7a00b4078d1cf02e91 logrotate-3.7.1.ebuild 1726
 MD5 098cc168fade54d752abb4316bf4860f logrotate-3.7.ebuild 1679
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 c91000d75cded213bc6dc76306f5e24c ChangeLog 4544
 MD5 67f6426c285df9fc96384c47d68ae3a6 logrotate-3.6.5-r1.ebuild 1730
+MD5 e0045388b2875ed4503ed3206191a40c ChangeLog 5572
+MD5 c7533062993ae53a9a32d0a58416cd84 metadata.xml 216
+MD5 81c68aeb06c91c02ebbea3c42123fb38 files/logrotate-3.7.1-manpage-fixes.patch 15470
+MD5 d268cc741e71398dc2a14bcdc0bcfeb2 files/logrotate-3.7.1-ignore-hidden.patch 517
+MD5 b6b2dec981e0b573366f5d0e74783b5b files/logrotate-3.7.1-taboo-to-debug.patch 517
+MD5 8d4271dd12289c4da96b3e4f1fbd0868 files/logrotate-3.7.1-datehack.patch 516
 MD5 ef1405c48d23249f97330709d1d2a093 files/logrotate-3.6.5-selinux.diff.bz2 1440
-MD5 bdf48119e016d4ee8b829da9e83959bf files/digest-logrotate-3.6.5-r1 71
-MD5 cf1ca2cfa810abaefc504a76ca38b52a files/logrotate.cron 52
-MD5 5692e613153f372df5b7510b39ba9c5c files/logrotate.conf 731
 MD5 4942e4ea3f05b91d9d24504c4ddbc776 files/digest-logrotate-3.7 69
+MD5 bdf48119e016d4ee8b829da9e83959bf files/digest-logrotate-3.6.5-r1 71
+MD5 8259bf9cd3b5bc37dd4cdda62cc9c2de files/logrotate-3.7.1-dateext-maxage.patch 14282
+MD5 5692e613153f372df5b7510b39ba9c5c files/logrotate.conf 731
+MD5 cf1ca2cfa810abaefc504a76ca38b52a files/logrotate.cron 52
+MD5 746e982f984139e917c7d7ee39af40fa files/digest-logrotate-3.7.1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZNeRjUHll2nfF60RAhFZAKDF+ZjTVblooNsCKsZGIzZ9/3w9yQCePGAC
-aKjdp90JbX6X7PNU7s09Bkk=
-=fbT2
+iD8DBQFCk5e/omPajV0RnrERAmykAJ9nk9rm6zHHEfHg8SpJZ1UiP1HlGQCfUm0v
+Mf/3XgUz30j//QqbhAuBXSs=
+=T/WR
 -----END PGP SIGNATURE-----

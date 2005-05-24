@@ -1,6 +1,34 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.33 2005/01/02 03:56:46 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.34 2005/05/24 21:08:00 dang Exp $
+
+*logrotate-3.7.1 (24 May 2005)
+
+  24 May 2005; <dang@gentoo.org>
+  +files/logrotate-3.7.1-dateext-maxage.patch,
+  +files/logrotate-3.7.1-datehack.patch,
+  +files/logrotate-3.7.1-ignore-hidden.patch,
+  +files/logrotate-3.7.1-manpage-fixes.patch,
+  +files/logrotate-3.7.1-taboo-to-debug.patch, metadata.xml,
+  +logrotate-3.7.1.ebuild:
+
+  Taking over as maintainer.
+
+  New version of logrotate from upstream.
+  Fixes from upstream:
+  - Rotated files now have correct ownership and permissions
+  Fixes from Debian 3.7-3:
+  - Manpage fixes
+  - Improved datehack fix for bug in old versions of logrotate
+  - Make printing of messages related to skipped logroate.d files DEBUG
+    messages rather than ERROR messages
+  Fixes from Suse:
+  - dateext - Enable usage of the rotation date as the file extension,
+    rather than sequential numbering
+  - maxage - Enable deletion of rotated files older than a certain age
+  Local fixes:
+  - Ignore dotfiles in logrotate.d/ directory, to keep emerges from
+    breaking logrotate via ._cfg* files
 
   01 Jan 2005; Chris PeBenito <pebenito@gentoo.org> logrotate-3.7.ebuild:
   SELinux code is now integrated in 3.7.  Adjust ebuild accordingly.
