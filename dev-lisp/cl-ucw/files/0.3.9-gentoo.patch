@@ -18,7 +18,7 @@ diff -ur ucw_0.3.9.orig/bin/start.lisp ucw_0.3.9/bin/start.lisp
 -                                                 (list :up "logs"))
 -                              :defaults *load-truename*)
 -               +info+)
-+(setup-loggers #p"/var/logs/ucw/" +info+)
++(setup-loggers #p"/var/log/ucw/" +info+)
  
  ;;;; ** Site Specific initialization/configuration
  

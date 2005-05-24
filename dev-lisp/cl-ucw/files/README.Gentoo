@@ -17,14 +17,14 @@ be located in the same directory.
 
 Gentoo installs a default TAL root in /var/lib/ucw/wwwroot/
 
-Gentoo installs a default logger path at /var/logs/ucw/
+Gentoo installs a default logger path at /var/log/ucw/
 
 The start.lisp included in the Gentoo distribution of UCW makes use of the
 above paths by default (see the sections 3. TAL root and section 4. Setup
 loggers in start.lisp).  If you wish to change the details of a web-server
 backend, you'll need to change utils.lisp.
 
-You will need to adjust the permissions of /var/logs/ucw/ to suit whatever
+You will need to adjust the permissions of /var/log/ucw/ to suit whatever
 system user ID you intend to run UCW under.  Alternatively you could set the
 path passed to SETUP-LOGGERS to your own choice in logging directory.
 
