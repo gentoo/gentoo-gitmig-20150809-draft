@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a93c48b94614ea4cf631c31b620ffa9e ChangeLog 1902
 MD5 7f7e2906a56b1343d0f8911b6e8268c5 Chart-Math-Axis-0.3.ebuild 626
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 2a7e71f307cddad9738628a3d6a7bc98 files/digest-Chart-Math-Axis-0.3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCk2odtG5z4I8BtQoRApBbAKCFOSIpbZ8spBmtxSoU3tCMe+R10ACfWUwT
+qAqUZtgSub9TSB2Q6Lcdtj8=
+=pFFq
+-----END PGP SIGNATURE-----
