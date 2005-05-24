@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eda315c848d35b99a9dd66c1699e90a1 ChangeLog 12432
+MD5 e26054b66010e195227c0c72740d482b ChangeLog 12591
 MD5 1d05f0436f1c273d7862099f309afe4d metadata.xml 156
 MD5 2fb7b5e7eae12c620daac22b93a73b7f pam-0.77-r1.ebuild 7495
 MD5 3b1d1f6ef3ed651ef694116e48ec5d39 pam-0.77-r2.ebuild 7779
@@ -28,12 +28,12 @@ MD5 21390b7acb42d4c22215492782e98f5e files/digest-pam-0.78-r1 200
 MD5 60bb8c0caa8b7926facda9fc2c9e860a files/digest-pam-0.78-r2 264
 MD5 69f8cfad7f241eb669085eaa753cd9dd files/pam-0.77-console-reset.patch 1826
 MD5 652f6b0ebdc63b0aa9ca6e1783c468a1 files/pam_env.conf 2980
-MD5 344d17a865edc40adebe07797853c839 files/pam.d/other 198
-MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth 491
+MD5 2d840b9afde7319bc8a8f7676582af11 files/pam.d/other 139
+MD5 33d9efd092b6999143ea42c99a59bfb1 files/pam.d/system-auth 365
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCkHUXj5H05b2HAEkRAqmtAJ4wfiuktmHrIDsAjzXksCI3ZP379gCeIhzy
-a1qCfeTwMiBGsIi53MMduaQ=
-=KV2b
+iD8DBQFCk6E4j5H05b2HAEkRAnxXAJ0Sbx/Lg1q4fuMAYcAuzyIZPNWrkgCgpRT5
+E/UJTTI8MZVGnLgxNqjXUPM=
+=elSb
 -----END PGP SIGNATURE-----

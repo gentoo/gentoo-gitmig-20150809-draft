@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.75 2005/05/22 12:07:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.76 2005/05/24 21:52:33 flameeyes Exp $
+
+  24 May 2005; Diego Pettenò <flameeyes@gentoo.org> files/pam.d/other,
+  files/pam.d/system-auth:
+  Removed full path from pam.d files, to fix AMD64 issues.
 
   22 May 2005; Diego Pettenò <flameeyes@gentoo.org> -files/pam.d/rexec,
   -files/pam.d/rlogin, -files/pam.d/rsh:
