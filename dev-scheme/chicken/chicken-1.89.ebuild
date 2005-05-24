@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-1.89.ebuild,v 1.2 2005/04/09 08:48:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-1.89.ebuild,v 1.3 2005/05/24 13:45:37 dholm Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.call-with-current-continuation.org/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=""
