@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.151 2005/05/24 02:20:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.152 2005/05/24 03:57:13 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -239,6 +239,7 @@ gentoo_urls() {
 get_gcc_src_uri() {
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
 	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
+	export PP_GCC_VER=${PP_GCC_VER:-${GCC_RELEASE_VER}}
 	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
 
 	[[ -n ${PIE_VER} ]] && \
@@ -846,11 +847,11 @@ gcc_src_unpack() {
 
 	cd ${S:=$(gcc_get_s_dir)}
 
-	[[ -n ${PATCH_VER}  ]] && epatch "${WORKDIR}"/patch
-	[[ -n ${UCLIBC_VER} ]] && epatch "${WORKDIR}"/uclibc
+	[[ -n ${PATCH_VER}  ]] && EPATCH_MULTI_MSG="Applying Gentoo patches ..." epatch "${WORKDIR}"/patch
+	[[ -n ${UCLIBC_VER} ]] && EPATCH_MULTI_MSG="Applying uClibc patches ..." epatch "${WORKDIR}"/uclibc
+	[[ -n ${HTB_VER}    ]] && do_gcc_HTB_boundschecking_patches
 	[[ -n ${PP_VER}     ]] && do_gcc_SSP_patches
 	[[ -n ${PIE_VER}    ]] && do_gcc_PIE_patches
-	[[ -n ${HTB_VER}    ]] && do_gcc_HTB_boundschecking_patches
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
@@ -1727,14 +1728,19 @@ update_gcc_for_libssp() {
 
 # do various updates to PIE logic
 do_gcc_PIE_patches() {
+	want_boundschecking \
+		&& rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-no.patch.bz2 \
+		|| rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-yes.patch.bz2
+
 	# corrects startfile/endfile selection and shared/static/pie flag usage
+	EPATCH_MULTI_MSG="Applying upstream pie patches ..." \
 	epatch ${WORKDIR}/piepatch/upstream
 	# adds non-default pie support (rs6000)
+	EPATCH_MULTI_MSG="Applying non-default pie patches ..." \
 	epatch ${WORKDIR}/piepatch/nondef
 	# adds default pie support (rs6000 too) if DEFAULT_PIE[_SSP] is defined
+	EPATCH_MULTI_MSG="Applying default pie patches ..." \
 	epatch ${WORKDIR}/piepatch/def
-	# disable relro/now
-	#is_uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-norelro.patch
 
 	# we want to be able to control the pie patch logic via something other
 	# than ALL_CFLAGS...
