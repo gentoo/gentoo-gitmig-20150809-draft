@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r5.ebuild,v 1.3 2005/02/09 23:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r5.ebuild,v 1.4 2005/05/24 05:13:09 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,15 +12,13 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.4/${
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="nocxx python static"
 
 #patch is in recent 2.2 kernels so it works there
-DEPEND="virtual/libc
-	virtual/os-headers
+DEPEND="virtual/os-headers
 	!nocxx? ( python? ( >=virtual/python-2.2.1 >=dev-lang/swig-1.3.10 ) )"
-RDEPEND="!nocxx? ( python? ( >=virtual/python-2.2.1 ) )
-	virtual/libc"
+RDEPEND="!nocxx? ( python? ( >=virtual/python-2.2.1 ) )"
 
 src_unpack() {
 	unpack ${A}
