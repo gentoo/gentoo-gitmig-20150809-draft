@@ -80,3 +80,4 @@ move dev-perl/DB_File perl-core/DB_File
 move dev-perl/digest-base perl-core/digest-base
 move dev-perl/Digest-MD5 perl-core/Digest-MD5
 move dev-perl/Test perl-core/Test
+move dev-perl/Math-BigInt perl-core/Math-BigInt
