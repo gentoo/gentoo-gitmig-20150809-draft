@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.2.6.ebuild,v 1.1 2005/05/10 18:36:02 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.2.7.ebuild,v 1.1 2005/05/24 11:40:21 ka0ttic Exp $
 
 inherit eutils bash-completion
 
