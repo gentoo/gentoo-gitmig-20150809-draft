@@ -1,25 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3902fac6587eb8d06f716b1752f5191e swt-3.1_pre5.ebuild 4283
-MD5 25ede423575048b79da0f2c310e43c66 swt-3.0-r2.ebuild 3084
-MD5 75071fc4c1a7ffd6beb2dc87a5a1a105 swt-3.1_pre2.ebuild 4245
-MD5 39de7935a662313cbc1aaae1144bfe54 swt-3.0.ebuild 3081
-MD5 ad887ee17423be97002117a0949781fb swt-3.0-r1.ebuild 3084
-MD5 f7860e7aa37f655ecb046869cefabd56 ChangeLog 2324
+MD5 112bc8edcaecb6213047b62c9cb208fa swt-3.1_pre5-r1.ebuild 5230
+MD5 d6fa78121766d3e80af72a67939ddb3b ChangeLog 2848
 MD5 4dcb6dd494f5e369aed5a367e303aef4 metadata.xml 433
-MD5 bb07a2eb9c04e5f3190e6743705062d7 files/build-3.1_pre2.xml 437
-MD5 bb07a2eb9c04e5f3190e6743705062d7 files/build-3.1_pre5.xml 437
-MD5 9932fd2bc009c4a3fce8b5cc57214297 files/digest-swt-3.0-r1 67
-MD5 9932fd2bc009c4a3fce8b5cc57214297 files/digest-swt-3.0-r2 67
-MD5 bb07a2eb9c04e5f3190e6743705062d7 files/build-3.0.xml 437
-MD5 9932fd2bc009c4a3fce8b5cc57214297 files/digest-swt-3.0 67
-MD5 4f82f20829e012ee55c8ecf16261d5e8 files/digest-swt-3.1_pre2 144
-MD5 bd191dfc71013927ffb09f1e464399e8 files/digest-swt-3.1_pre5 147
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCeLer06ebR+OMO78RAkckAJ95hTQdz4SsZEaQ256sCza52cBc8gCdED7Z
-mjlGq14nxrzza4q/UG52wsw=
-=Rw2S
------END PGP SIGNATURE-----
+MD5 bd191dfc71013927ffb09f1e464399e8 files/digest-swt-3.1_pre5-r1 147
+MD5 bb61f479853836959ad766e10161e80a files/build.xml 2106
+MD5 f33d8fd0bacf2ed4f835b70f6f7836b4 files/cairo.patch 302
