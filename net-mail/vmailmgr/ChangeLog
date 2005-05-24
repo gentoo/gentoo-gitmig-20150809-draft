@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/vmailmgr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.19 2005/05/16 10:01:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.20 2005/05/24 05:23:11 mrness Exp $
+
+*vmailmgr-0.96.9-r3 (24 May 2005)
+
+  24 May 2005; Alin Nastac <mrness@gentoo.org>
+  -files/vmailmgr-0.96.9-gentoo-r1.diff, -vmailmgr-0.96.9-r1.ebuild,
+  +files/vmailmgr-0.96.9-gentoo-r3.patch, +vmailmgr-0.96.9-r3.ebuild:
+  Fix installation path of vmail.inc (#40324). Remove obsolete version.
 
   16 May 2005; Andrej Kacian <ticho@gentoo.org> vmailmgr-0.96.9-r1.ebuild,
   vmailmgr-0.96.9-r2.ebuild:

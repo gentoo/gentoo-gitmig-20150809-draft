@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.25 2005/05/16 10:01:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r3.ebuild,v 1.1 2005/05/24 05:23:11 mrness Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,31 +10,31 @@ HOMEPAGE="http://www.vmailmgr.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc"
 RDEPEND=">=sys-apps/ucspi-unix-0.34
 	>=mail-mta/qmail-1.03-r7
-	>=net-mail/qmail-autoresponder-0.95"
+	>=net-mail/qmail-autoresponder-0.95
+	!>=net-mail/courier-imap-4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo-r1.diff || die "-gentoo-r1 patch failed"
+	epatch ${FILESDIR}/${P}-gentoo-${PR}.patch
+
+	if [ `gcc-major-version` -eq 3 ] && [ `gcc-minor-version` -ge 3 ]; then
+		epatch ${FILESDIR}/${P}-gcc3.3.patch
+	fi
 }
 
 src_compile() {
 	export CXX=g++
 
-	if [ "`gcc-major-version`" = "3" ]; then
+	if [ `gcc-major-version` -eq 3 ]; then
 		export LIBS="-lcrypt -lsupc++"
-		if [ `gcc-minor-version` -ge 3 ]; then
-			epatch ${FILESDIR}/${P}-gcc3.3.patch
-		fi
-	fi
-
-	if [ "`gcc-major-version`" = "2" ]; then
+	elif [ `gcc-major-version` -eq 2 ]; then
 		export LIBS="-lcrypt"
 	fi
 
