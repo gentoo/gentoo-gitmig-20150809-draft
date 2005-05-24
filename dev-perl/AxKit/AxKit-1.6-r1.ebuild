@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6-r1.ebuild,v 1.13 2005/05/10 00:19:32 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6-r1.ebuild,v 1.14 2005/05/24 15:43:06 mcummings Exp $
 
 inherit perl-module
 
@@ -23,7 +23,7 @@ DEPEND=">=www-apache/libapreq-0.31
 	>=dev-perl/XML-LibXSLT-1.31
 	>=www-apache/libapreq-1.0
 	>=dev-perl/XML-Sablot-0.50
-	>=dev-perl/Digest-MD5-2.09"
+	>=perl-core/Digest-MD5-2.09"
 
 src_unpack() {
 	unpack ${A}

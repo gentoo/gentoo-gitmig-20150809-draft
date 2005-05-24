@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.22 2005/04/27 13:51:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.23 2005/05/24 15:45:43 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> Inline-0.44-r1.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
   27 Apr 2005; Michael Cummings <mcummings@gentoo.org> -Inline-0.43-r1.ebuild,
   -Inline-0.43.ebuild, Inline-0.44-r1.ebuild:

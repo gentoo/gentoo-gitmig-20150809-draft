@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.25.ebuild,v 1.5 2005/04/29 19:23:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.25.ebuild,v 1.6 2005/05/24 15:51:43 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND="dev-perl/Math-GMP
 		dev-perl/string-crc32
 		dev-perl/math-pari
-		dev-perl/Digest-MD5
+		perl-core/Digest-MD5
 		dev-perl/Digest-SHA1
 		dev-perl/Digest-HMAC
 		dev-perl/crypt-dh

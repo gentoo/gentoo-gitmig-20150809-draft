@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-HMAC
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.19 2005/05/24 14:57:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.20 2005/05/24 15:45:06 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Digest-HMAC-1.01-r1.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org>
   Digest-HMAC-1.01-r1.ebuild:

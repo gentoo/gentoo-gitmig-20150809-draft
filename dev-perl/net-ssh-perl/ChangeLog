@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-ssh-perl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.6 2005/04/29 19:23:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.7 2005/05/24 15:51:43 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org>
+  net-ssh-perl-1.25.ebuild, net-ssh-perl-1.27.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
 *net-ssh-perl-1.27 (29 Apr 2005)
 

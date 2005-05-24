@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/adocman
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/adocman/ChangeLog,v 1.6 2005/05/17 13:45:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/adocman/ChangeLog,v 1.7 2005/05/24 15:49:11 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> adocman-0.10.ebuild,
+  adocman-0.12.ebuild, adocman-0.13.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
   17 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> adocman-0.13.ebuild:
   Keyworded ~sparc

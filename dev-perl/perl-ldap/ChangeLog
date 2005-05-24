@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perl-ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.26 2005/04/29 19:37:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.27 2005/05/24 15:52:09 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> perl-ldap-0.31.ebuild,
+  perl-ldap-0.33.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
 *perl-ldap-0.33 (29 Apr 2005)
 

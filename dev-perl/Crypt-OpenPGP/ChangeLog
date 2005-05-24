@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenPGP
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/ChangeLog,v 1.3 2005/05/06 14:31:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/ChangeLog,v 1.4 2005/05/24 15:43:46 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Crypt-OpenPGP-1.03.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> Crypt-OpenPGP-1.03.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

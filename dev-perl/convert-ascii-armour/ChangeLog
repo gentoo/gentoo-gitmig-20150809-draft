@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/convert-ascii-armour
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-ascii-armour/ChangeLog,v 1.9 2005/04/29 16:56:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-ascii-armour/ChangeLog,v 1.10 2005/05/24 15:49:29 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org>
+  convert-ascii-armour-1.4.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   convert-ascii-armour-1.4.ebuild:

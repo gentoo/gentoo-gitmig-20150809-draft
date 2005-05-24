@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-ascii-armour/convert-ascii-armour-1.4.ebuild,v 1.12 2005/04/29 16:56:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-ascii-armour/convert-ascii-armour-1.4.ebuild,v 1.13 2005/05/24 15:49:29 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,5 @@ KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ~mips ~ppc64"
 IUSE=""
 
 DEPEND="dev-perl/Compress-Zlib
-	dev-perl/Digest-MD5
+	perl-core/Digest-MD5
 	dev-perl/MIME-Base64"

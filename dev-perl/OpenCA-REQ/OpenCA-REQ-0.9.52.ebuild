@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-REQ/OpenCA-REQ-0.9.52.ebuild,v 1.7 2005/05/01 18:16:45 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-REQ/OpenCA-REQ-0.9.52.ebuild,v 1.8 2005/05/24 15:48:51 mcummings Exp $
 
 inherit perl-module
 DESCRIPTION="The perl OpenCA::REQ Module"
@@ -17,4 +17,4 @@ SRC_TEST="do"
 export OPTIMIZE="${CFLAGS}"
 
 DEPEND="dev-perl/X500-DN
-	dev-perl/Digest-MD5"
+	perl-core/Digest-MD5"
