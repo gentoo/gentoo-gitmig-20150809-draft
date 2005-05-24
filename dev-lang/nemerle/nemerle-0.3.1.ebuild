@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/nemerle-0.3.1.ebuild,v 1.1 2005/05/08 03:37:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/nemerle-0.3.1.ebuild,v 1.2 2005/05/24 23:36:38 latexer Exp $
 
 inherit mono eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nemerle.org/download/${P}.tar.bz2"
 
 LICENSE="nemerle"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=dev-lang/mono-1.0
 		>=dev-lang/python-2.3
