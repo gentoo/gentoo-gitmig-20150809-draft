@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/tedia2sql-1.2.8.ebuild,v 1.5 2005/01/01 15:41:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tedia2sql/tedia2sql-1.2.8.ebuild,v 1.6 2005/05/24 15:32:51 mcummings Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="doc"
 
 DEPEND=">=dev-lang/perl-5.8
 	>=dev-perl/XML-DOM-1.43
-	>=dev-perl/Digest-MD5-2.24"
+	>=perl-core/Digest-MD5-2.24"
 
 S=${WORKDIR}/${PN}
 
