@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r1.ebuild,v 1.7 2005/04/12 01:04:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r1.ebuild,v 1.8 2005/05/24 22:48:32 strerror Exp $
 
-inherit kernel-mod
+inherit linux-info
 
 DESCRIPTION="Tool to setup encrypted devices with dm-crypt"
 HOMEPAGE="http://www.saout.de/misc/dm-crypt/"
@@ -18,12 +18,27 @@ DEPEND=">=sys-fs/device-mapper-1.00.07-r1
 
 S=${WORKDIR}/${PN}-${PV}
 
-pkg_setup() {
-	if ! kernel-mod_configoption_present DM_CRYPT ; then
-		ewarn "dm-crypt is not enabled in /usr/src/linux/.config"
-		ewarn "please see $HOMEPAGE"
-		ewarn "for details on how to enable dm-crypt for your kernel"
+dm-crypt_check() {
+	ebegin "Checking for dm-crypt support"
+	linux_chkconfig_present DM_CRYPT
+	eend $?
+
+	if [[ $? -ne 0 ]] ; then
+		eerror "cryptsetup requires dm-crypt support!"
+		eerror "Please enable dm-crypt support in your kernel config, found at:"
+		eerror "(for 2.6 kernels)"
+		eerror
+		eerror "  Device Drivers"
+		eerror "    Multi-Device Support"
+		eerror "      [*] Crypt Target Support"
+		eerror "and recompile your kernel..."
+		die "dm-crypt support not detected!"
 	fi
+}
+
+pkg_setup() {
+	linux-info_pkg_setup
+	dm-crypt_check;
 }
 
 src_compile() {
