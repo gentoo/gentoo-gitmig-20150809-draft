@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysqltool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.22 2005/04/24 12:27:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.23 2005/05/24 14:28:02 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org>
+  mysqltool-0.95-r1.ebuild, mysqltool-0.95-r2.ebuild,
+  mysqltool-0.95-r3.ebuild:
+  dev-perl/CGI => perl-core/CGI
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   mysqltool-0.95-r2.ebuild:
