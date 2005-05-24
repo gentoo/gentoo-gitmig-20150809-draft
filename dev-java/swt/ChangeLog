@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.15 2005/05/24 19:23:53 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.16 2005/05/24 20:49:05 compnerd Exp $
+
+*swt-3.1_pre7 (24 May 2005)
+
+  24 May 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/build-3.1_pre7.xml, +files/SWTMessages.properties,
+  +swt-3.1_pre7.ebuild:
+  New version upstream, version bumping.  Added ~ppc
 
   24 May 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   swt-3.1_pre5-r1.ebuild:
