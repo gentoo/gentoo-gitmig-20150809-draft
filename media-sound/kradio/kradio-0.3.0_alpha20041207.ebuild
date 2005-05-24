@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-0.3.0_alpha20041207.ebuild,v 1.1 2004/12/07 08:29:31 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-0.3.0_alpha20041207.ebuild,v 1.2 2005/05/24 09:46:16 phosphan Exp $
 
 inherit kde
 
