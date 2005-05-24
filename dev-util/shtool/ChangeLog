@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/shtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.12 2005/04/01 05:40:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.13 2005/05/24 23:02:56 ka0ttic Exp $
+
+*shtool-2.0.1-r1 (24 May 2005)
+
+  24 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/shtool-2.0.1-fix-insecure-tmp-creation.diff,
+  -shtool-1.5.1-r2.ebuild, -shtool-2.0.0.ebuild, +shtool-2.0.1-r1.ebuild:
+  Revision bump for security bug 93782; tidy old vulnerable versions.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> shtool-2.0.1.ebuild:
   stable on ia64
