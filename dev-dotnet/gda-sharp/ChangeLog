@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/gda-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.23 2005/05/22 14:39:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.24 2005/05/24 17:38:57 latexer Exp $
+
+*gda-sharp-1.0.10 (24 May 2005)
+*gda-sharp-1.0.8-r1 (24 May 2005)
+
+  24 May 2005; Peter Johanson <latexer@gentoo.org>
+  +gda-sharp-1.0.8-r1.ebuild, +gda-sharp-1.0.10.ebuild:
+  Revision bump to force out pkg-config fix, and bump to latest 1.0.x release.
 
   22 May 2005; Simon Stelling <blubb@gentoo.org> gda-sharp-1.0.8.ebuild:
   added ~amd64 keyword
