@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.96 2005/05/24 20:45:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.97 2005/05/24 20:58:59 mr_bones_ Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -128,7 +128,7 @@ prepgamesdirs() {
 }
 
 gamesenv() {
-	cat << EOF > /etc/env.d/${GAMES_ENVD}
+	cat << EOF > "${ROOT}"/etc/env.d/${GAMES_ENVD}
 LDPATH="${GAMES_LIBDIR}"
 PATH="${GAMES_BINDIR}"
 EOF
