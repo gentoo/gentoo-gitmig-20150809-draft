@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1187 2005/05/23 17:12:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1188 2005/05/24 01:02:28 allanonjl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -409,6 +409,7 @@ media-gfx/blender:blender-game - Adds game engine support to blender
 media-gfx/blender:fmod - Adds mod support to blender
 media-gfx/gimageview:mplayer - Enable mplayer support
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
+media-gfx/gimp:smp - Enable support for multiprocessors
 media-gfx/gnuplot:xemacs - Add lisp files for emacs
 media-gfx/graphicsmagick:gs - enable ghostscript support
 media-gfx/graphicsmagick:jbig - enable jbig support
