@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.15.ebuild,v 1.1 2005/04/19 14:31:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.15.ebuild,v 1.2 2005/05/24 22:51:01 vapier Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://alpha.gnu.org/pub/gnu/libidn/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="java doc nls"
+IUSE="java doc nls emacs"
 
 DEPEND="java? ( virtual/jdk )"
 RDEPEND="java? ( virtual/jre )"
@@ -30,15 +30,19 @@ src_compile() {
 		check_java_config
 	fi
 
-	econf $(use_enable nls) \
-	      $(use_enable java) || die
+	econf \
+		$(use_enable nls) \
+		$(use_enable java) \
+		|| die
 
 	emake || die
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	make install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog FAQ NEWS README THANKS TODO
+
+	use emacs || rm -r "${D}"/usr/share/emacs
 
 	if use doc; then
 		dohtml -r doc/reference/html/*
