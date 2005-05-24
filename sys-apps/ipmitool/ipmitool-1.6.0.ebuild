@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ipmitool-1.6.0.ebuild,v 1.2 2005/03/01 08:16:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ipmitool-1.6.0.ebuild,v 1.3 2005/05/24 14:26:27 slarti Exp $
 
 DESCRIPTION="Utility for controlling IPMI enabled devices."
 HOMEPAGE="http://${PN}.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
 
 RDEPEND="virtual/libc

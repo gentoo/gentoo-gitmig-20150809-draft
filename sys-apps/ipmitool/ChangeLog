@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ipmitool
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.1 2005/03/01 08:15:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.2 2005/05/24 14:26:27 slarti Exp $
+
+  24 May 2005; Tom Martin <slarti@gentoo.org> ipmitool-1.6.0.ebuild:
+  Marked ~amd64 for tigger^.
 
 *ipmitool-1.6.0 (01 Mar 2005)
 
