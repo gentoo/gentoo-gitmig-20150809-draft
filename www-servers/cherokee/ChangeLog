@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.10 2005/05/16 19:09:32 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.11 2005/05/24 22:54:31 bass Exp $
+
+*cherokee-0.4.23 (25 May 2005)
+ 16 May 2005; J.Alberto S.L. <bass@gentoo.org> +cherokee-0.4.23.ebuild:
+ Bump Version. Must fix pcc problems.
 
 *cherokee-0.4.22 (16 May 2005)
  16 May 2005; J.Alberto S.L. <bass@gentoo.org> +cherokee-0.4.22.ebuild:
