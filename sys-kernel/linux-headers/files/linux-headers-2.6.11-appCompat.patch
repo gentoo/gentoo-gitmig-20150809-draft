@@ -398,7 +398,7 @@ diff -ur linux-2.6.0/include/linux/types.h linux-2.6.0/include/linux.gentoo/type
  #endif /* __KERNEL__ */
  
  #if defined(__GNUC__) && !defined(__STRICT_ANSI__)
-@@ -176,16 +157,16 @@
+@@ -176,16 +157,22 @@
  typedef __u16 __bitwise __be16;
  typedef __u32 __bitwise __le32;
  typedef __u32 __bitwise __be32;
@@ -414,6 +414,12 @@ diff -ur linux-2.6.0/include/linux/types.h linux-2.6.0/include/linux.gentoo/type
  	char			f_fname[6];
  	char			f_fpack[6];
  };
++#endif
++
++/* Fix bad upstream jojo in XEmacs; bug #82690. Temporary fix only warning until upstream fixes
++   things... */
++#ifdef register
++#undef register
 +#endif
  
  #endif /* _LINUX_TYPES_H */
@@ -1047,8 +1053,16 @@ diff -ur linux-2.6.8.1/include/linux/compiler.h linux-2.6.8.1-gentoo/include/lin
  /*
   * Allow us to mark functions as 'deprecated' and have gcc emit a nice
   * warning for each use, in hopes of speeding the functions removal.
-@@ -124,4 +139,10 @@
- #define noinline
+@@ -137,12 +134,14 @@
+ # define __attribute_const__	/* unimplemented */
+ #endif
+ 
+-#ifndef noinline
+-#define noinline
+-#endif
+-
+ #ifndef __always_inline
+ #define __always_inline inline
  #endif
  
 +#ifdef __cplusplus
@@ -2039,16 +2053,11 @@ diff -urp linux-2.6.10/include/linux/types.h linux-2.6.10-gentoo/include/linux/t
 diff -urp linux-2.6.10/include/asm-i386/thread_info.h linux-2.6.10-gentoo/include/asm-i386/thread_info.h
 --- linux-2.6.10/include/asm-i386/thread_info.h	2005-02-08 21:30:49.000000000 +0000
 +++ linux-2.6.10-gentoo/asm-i386/thread_info.h	2005-02-08 21:27:03.000000000 +0000
-@@ -7,8 +7,12 @@
+@@ -7,8 +7,7 @@
  #ifndef _ASM_THREAD_INFO_H
  #define _ASM_THREAD_INFO_H
  
 -#ifdef __KERNEL__
-+/* Fix bad upstream jojo in XEmacs; bug #82690. Temporary fix only warning until upstream fixes
-+   things... */
-+#ifdef register
-+#undef register
-+#endif
  
  #include <linux/config.h>
  #include <linux/compiler.h>
@@ -2540,3 +2549,14 @@ diff -ur linux-2.6.11/include/asm-ia64/thread_info.h linux-2.6.11-gentoo/include
  #define ELF_ARCH	EM_CRIS
  
  #define USE_ELF_CORE_DUMP
+--- linux-2.6.11/include/linux/i2c-dev.h	2005-04-28 22:30:29.000000000 +0100
++++ linux-2.6.11-gentoo/include/linux/i2c-dev.h	2005-05-24 14:48:01.000000000 +0100
+@@ -24,6 +24,8 @@
+ #ifndef _LINUX_I2C_DEV_H
+ #define _LINUX_I2C_DEV_H
+ 
++#include <linux/compiler.h>
++#include <linux/i2c.h>
+ #include <linux/types.h>
+ 
+ /* Some IOCTL commands are defined in <linux/i2c.h> */
