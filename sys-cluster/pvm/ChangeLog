@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/pvm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.18 2005/04/01 17:11:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.19 2005/05/24 23:06:13 spyderous Exp $
+
+  24 May 2005; Donnie Berkholz <spyderous@gentoo.org>; pvm-3.4.5.ebuild:
+  (#86959) Try unsetting PVM_ARCH in src_compile() to get around problem with
+  switching arch names and an /etc/env.d file screwing things up.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> pvm-3.4.4-r3.ebuild:
   stable on ia64
