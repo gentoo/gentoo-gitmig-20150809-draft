@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.113 2005/05/21 08:10:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.114 2005/05/24 01:06:16 allanonjl Exp $
+
+*gimp-2.2.7 (24 May 2005)
+
+  24 May 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +files/gimp-2.2.7-configure-fix.patch, +gimp-2.2.7.ebuild:
+  fixes bug #51263, bug #61581, bug #92176, bug #41885, bug #76050, bug
+  #76974, bug #92008, bug #93018, bug #92498, updated help, use alternatives
+  eclass, and various other changes.
 
   21 May 2005; Markus Rothe <corsair@gentoo.org> gimp-2.2.6-r1.ebuild:
   Stable on ppc64
