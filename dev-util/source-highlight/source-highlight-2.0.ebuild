@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.0_rc1.ebuild,v 1.1 2004/12/22 16:43:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.0.ebuild,v 1.1 2005/05/24 16:03:08 ka0ttic Exp $
 
 inherit bash-completion versionator
 
