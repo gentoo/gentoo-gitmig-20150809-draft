@@ -1,12 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-9999.ebuild,v 1.6 2005/04/10 03:22:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-9999.ebuild,v 1.7 2005/05/24 00:37:40 vapier Exp $
 
-EHACKAUTOGEN=yes
 inherit enlightenment
 
 DESCRIPTION="core event abstraction layer and X abstraction layer (nice convenience library)"
-HOMEPAGE="http://www.enlightenment.org/pages/ecore.html"
 
 IUSE="X fbcon opengl"
 
