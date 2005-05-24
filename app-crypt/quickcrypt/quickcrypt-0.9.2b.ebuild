@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quickcrypt/quickcrypt-0.9.2b.ebuild,v 1.14 2005/05/06 03:17:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quickcrypt/quickcrypt-0.9.2b.ebuild,v 1.15 2005/05/24 15:32:22 mcummings Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ KEYWORDS="x86 sparc ppc alpha amd64 ia64 hppa ~mips"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6
-	dev-perl/Digest-MD5"
+	perl-core/Digest-MD5"
 
 src_install() {
 	dobin quickcrypt || die
