@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.3-r1.ebuild,v 1.1 2005/05/20 05:22:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.3-r1.ebuild,v 1.2 2005/05/24 19:43:12 blubb Exp $
 
 inherit kde versionator
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://klibido.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="debug"
 
 DEPEND="dev-libs/uulib
