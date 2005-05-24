@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnupod
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.10 2005/04/21 20:02:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.11 2005/05/24 15:33:37 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> gnupod-0.97.ebuild,
+  gnupod-0.98.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> gnupod-0.97.ebuild:
   stable on amd64
