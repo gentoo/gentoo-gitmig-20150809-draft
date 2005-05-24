@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.149 2005/05/22 01:28:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.150 2005/05/24 00:42:59 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -89,32 +89,32 @@ else
 	GCC_TARGET_NO_MULTILIB=${GCC_TARGET_NO_MULTILIB:-false}
 fi
 
-PREFIX=${PREFIX:-/usr}
+PREFIX=${TOOLCHAIN_PREFIX:-/usr}
 
 if [[ ${GCC_VAR_TYPE} == "versioned" ]] ; then
 	if version_is_at_least 3.4.0 ; then
 		# GCC 3.4 no longer uses gcc-lib.
-		LIBPATH=${LIBPATH:-${PREFIX}/lib/gcc/${CTARGET}/${GCC_CONFIG_VER}}
+		LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc/${CTARGET}/${GCC_CONFIG_VER}}
 	else
-		LIBPATH=${LIBPATH:-${PREFIX}/lib/gcc-lib/${CTARGET}/${GCC_CONFIG_VER}}
+		LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc-lib/${CTARGET}/${GCC_CONFIG_VER}}
 	fi
-	INCLUDEPATH=${INCLUDEPATH:-${LIBPATH}/include}
-	BINPATH=${BINPATH:-${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
-	DATAPATH=${DATAPATH:-${PREFIX}/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}}
+	INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${LIBPATH}/include}
+	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
+	DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}}
 	# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 	# We will handle /usr/include/g++-v3/ with gcc-config ...
-	STDCXX_INCDIR=${STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VER/\.*/}}
+	STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VER/\.*/}}
 elif [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
 	# using non-versioned directories to install gcc, like what is currently
 	# done for ppc64 and 3.3.3_pre, is a BAD IDEA. DO NOT do it!! However...
 	# setting up variables for non-versioned directories might be useful for
 	# specific gcc targets, like libffi. Note that we dont override the value
 	# returned by get_libdir here.
-	LIBPATH=${LIBPATH:-${PREFIX}/$(get_libdir)}
-	INCLUDEPATH=${INCLUDEPATH:-${PREFIX}/include}
-	BINPATH=${BINPATH:-${PREFIX}/bin/}
-	DATAPATH=${DATAPATH:-${PREFIX}/share/}
-	STDCXX_INCDIR=${STDCXX_INCDIR:-${PREFIX}/include/g++-v3/}
+	LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/$(get_libdir)}
+	INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${PREFIX}/include}
+	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/bin/}
+	DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/}
+	STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${PREFIX}/include/g++-v3/}
 fi
 
 XGCC="${WORKDIR}/build/gcc/xgcc -B${WORKDIR}/build/gcc"
@@ -282,7 +282,7 @@ get_gcc_src_uri() {
 
 	# gcc bounds checking patch
 	if [[ -n ${HTB_VER} ]] ; then
-		 local HTBFILE="bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
+		local HTBFILE="bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
 		GCC_SRC_URI="${GCC_SRC_URI}
 			boundschecking? (
 				mirror://sourceforge/boundschecking/${HTBFILE}
@@ -405,9 +405,7 @@ want_boundschecking() {
 }
 
 want_split_specs() {
-	[[ ${SPLIT_SPECS} == "true" ]] && [[ -n ${PIE_VER} ]] && \
-		! want_boundschecking && return 0
-	return 1
+	[[ ${SPLIT_SPECS} == "true" ]]
 }
 
 # This function checks whether or not glibc has the support required to build
@@ -471,17 +469,17 @@ gcc_common_hard="-DEFAULT_RELRO -DEFAULT_BIND_NOW"
 make_gcc_hard() {
 	if hardened_gcc_works ; then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
-		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE_SSP ${gcc_common_hard} |' \
+		sed -e "s|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE_SSP ${gcc_common_hard} |" \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 	elif hardened_gcc_works pie ; then
 		einfo "Updating gcc to use automatic PIE building ..."
 		ewarn "SSP has not been enabled by default"
-		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE ${gcc_common_hard} |' \
+		sed -e "s|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE ${gcc_common_hard} |" \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 	elif hardened_gcc_works ssp ; then
 		einfo "Updating gcc to use automatic SSP building ..."
 		ewarn "PIE has not been enabled by default"
-		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_SSP ${gcc_common_hard} |' \
+		sed -e "s|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_SSP ${gcc_common_hard} |" \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 	else
 		# do nothing if hardened isnt supported, but dont die either
@@ -523,7 +521,7 @@ create_hardened_specs_file() {
 		# if not using hardened, then we need to move xgcc out of the way
 		# and recompile it
 		cp Makefile Makefile.orig
-		sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE_SSP ${gcc_common_hard}/g' Makefile
+		sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE_SSP ${gcc_common_hard}/g" Makefile
 		mv xgcc xgcc.vanilla
 		mv gcc.o gcc.o.vanilla
 		make xgcc
@@ -543,7 +541,7 @@ create_hardened_specs_file() {
 create_hardenednossp_specs_file() {
 	pushd ${WORKDIR}/build/gcc > /dev/null
 	cp Makefile Makefile.orig
-	sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE ${gcc_common_hard}/g' Makefile
+	sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE ${gcc_common_hard}/g" Makefile
 	mv xgcc xgcc.moo
 	mv gcc.o gcc.o.moo
 	make xgcc
@@ -559,12 +557,28 @@ create_hardenednossp_specs_file() {
 create_hardenednopie_specs_file() {
 	pushd ${WORKDIR}/build/gcc > /dev/null
 	cp Makefile Makefile.orig
-	sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_SSP ${gcc_common_hard}/g' Makefile
+	sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_SSP ${gcc_common_hard}/g" Makefile
 	mv xgcc xgcc.moo
 	mv gcc.o gcc.o.moo
 	make xgcc
 	einfo "Creating a hardened no-pie gcc specs file"
 	./xgcc -dumpspecs > ${WORKDIR}/build/hardenednopie.specs
+	# restore everything to normal
+	mv gcc.o.moo gcc.o
+	mv xgcc.moo xgcc
+	mv Makefile.orig Makefile
+	popd > /dev/null
+}
+
+create_hardenednopiessp_specs_file() {
+	pushd ${WORKDIR}/build/gcc > /dev/null
+	cp Makefile Makefile.orig
+	sed -i -e "s/^HARD_CFLAGS.*/HARD_CFLAGS = ${gcc_common_hard}/g" Makefile
+	mv xgcc xgcc.moo
+	mv gcc.o gcc.o.moo
+	make xgcc
+	einfo "Creating a hardened no-pie no-ssp gcc specs file"
+	./xgcc -dumpspecs > ${WORKDIR}/build/hardenednopiessp.specs
 	# restore everything to normal
 	mv gcc.o.moo gcc.o
 	mv xgcc.moo xgcc
@@ -816,11 +830,9 @@ gcc-compiler_src_unpack() {
 	# the necessary support
 	[[ -n ${PIE_VER} ]] && use hardened && glibc_have_pie
 
-	if ! want_boundschecking ; then
-		if use hardened ; then
-			einfo "updating configuration to build hardened GCC"
-			make_gcc_hard || die "failed to make gcc hard"
-		fi
+	if use hardened ; then
+		einfo "updating configuration to build hardened GCC"
+		make_gcc_hard || die "failed to make gcc hard"
 	fi
 }
 gcc-library_src_unpack() {
@@ -834,15 +846,11 @@ gcc_src_unpack() {
 
 	cd ${S:=$(gcc_get_s_dir)}
 
-	[[ -n ${PATCH_VER} ]] && epatch ${WORKDIR}/patch
-	[[ -n ${UCLIBC_VER} ]] && epatch ${WORKDIR}/uclibc
-
-	if ! want_boundschecking ; then
-		[[ -n ${PP_VER} ]] && do_gcc_SSP_patches
-		[[ -n ${PIE_VER} ]] && do_gcc_PIE_patches
-	else
-		[[ -n ${HTB_VER} ]] && do_gcc_HTB_boundschecking_patches
-	fi
+	[[ -n ${PATCH_VER}  ]] && epatch "${WORKDIR}"/patch
+	[[ -n ${UCLIBC_VER} ]] && epatch "${WORKDIR}"/uclibc
+	[[ -n ${PP_VER}     ]] && do_gcc_SSP_patches
+	[[ -n ${PIE_VER}    ]] && do_gcc_PIE_patches
+	[[ -n ${HTB_VER}    ]] && do_gcc_HTB_boundschecking_patches
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
@@ -1120,6 +1128,9 @@ gcc_do_make() {
 	# profiledbootstrap target, as collisions in profile collecting may occur.
 	[[ ${GCC_MAKE_TARGET} == "profiledbootstrap" ]] && export MAKEOPTS="${MAKEOPTS} -j1"
 
+	# boundschecking seems to introduce parallel build issues
+	want_boundschecking && export MAKEOPTS="${MAKEOPTS} -j1"
+
 	if [[ ${GCC_MAKE_TARGET} == "all" ]] ; then
 		STAGE1_CFLAGS=${STAGE1_CFLAGS-"${CFLAGS}"}
 	else
@@ -1360,6 +1371,7 @@ gcc-compiler_src_install() {
 		if hardened_gcc_works || hardened_gcc_works ssp ; then
 			create_gcc_env_entry hardenednopie
 		fi
+		create_gcc_env_entry hardenednopiessp
 
 		cp ${WORKDIR}/build/*.specs "${D}"${LIBPATH}
 	fi
@@ -1567,6 +1579,7 @@ gcc_movelibs() {
 gcc_quick_unpack() {
 	pushd ${WORKDIR} > /dev/null
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
+	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
 	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
 
 	if [[ -n ${PRERELEASE} ]] ; then
