@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.2.2-r1.ebuild,v 1.1 2004/12/24 16:49:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.2.2-r1.ebuild,v 1.2 2005/05/24 22:01:20 spyderous Exp $
+
+inherit fortran
 
 DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 HOMEPAGE="http://www.mpqc.org/"
