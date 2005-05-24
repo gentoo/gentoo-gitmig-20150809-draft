@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1190 2005/05/24 17:54:36 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1191 2005/05/24 22:21:38 mholzer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -670,6 +670,12 @@ net-mail/gnubiff:password - Enable save passwords to connect mail servers in use
 net-mail/hotwayd:smtp - Build SMTP proxy (hotsmtpd)
 net-mail/lbdb:abook - Enables app-misc/abook support
 net-mail/lbdb:finger - Enables finger support
+net-mail/mailman:postfix - Build with delivery options for postfix
+net-mail/mailman:sendmail - Build with delivery options for sendmail
+net-mail/mailman:qmail - Build with delivery options for qmail
+net-mail/mailman:courier - Build with delivery options for courier
+net-mail/mailman:exim - Build with delivery options for exim
+net-mail/mailman:xmail - Build with delivery options for xmail
 net-mail/poppassd_ceti:cracklib - Support for cracklib strong password checking
 net-mail/qpopper:mailbox - Enables mail spool file is in home directory ~/Mailbox
 net-mail/qpopper:xinetd - If you want inetd version instead of standalone
