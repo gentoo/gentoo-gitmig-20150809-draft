@@ -1,5 +1,5 @@
-MD5 112bc8edcaecb6213047b62c9cb208fa swt-3.1_pre5-r1.ebuild 5230
-MD5 d6fa78121766d3e80af72a67939ddb3b ChangeLog 2848
+MD5 5e58ddd732765aa23433a53dd039326b swt-3.1_pre5-r1.ebuild 5228
+MD5 c0880d580a37fce930632907dfcd4fd3 ChangeLog 2959
 MD5 4dcb6dd494f5e369aed5a367e303aef4 metadata.xml 433
 MD5 bd191dfc71013927ffb09f1e464399e8 files/digest-swt-3.1_pre5-r1 147
 MD5 bb61f479853836959ad766e10161e80a files/build.xml 2106

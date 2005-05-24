@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.14 2005/05/24 17:52:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.15 2005/05/24 19:23:53 compnerd Exp $
+
+  24 May 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  swt-3.1_pre5-r1.ebuild:
+  Fixing incorrect slotting
 
 *swt-3.1_pre5-r1 (24 May 2005)
 
