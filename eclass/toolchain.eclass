@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.150 2005/05/24 00:42:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.151 2005/05/24 02:20:03 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1651,6 +1651,7 @@ exclude_gcc_patches() {
 }
 
 do_gcc_HTB_boundschecking_patches() {
+	want_boundschecking || return 1
 	# modify the bounds checking patch with a regression patch
 	epatch "${WORKDIR}/bounds-checking-${PN}-${HTB_GCC_VER}-${HTB_VER}.patch"
 	release_version="${release_version}, HTB-${HTB_GCC_VER}-${HTB_VER}"
