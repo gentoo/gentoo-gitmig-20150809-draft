@@ -1,5 +1,5 @@
-MD5 4fb1966938fa4926d2ff9b455872dc52 ChangeLog 965
-MD5 d78c0c20f3949b79261540085e4dd719 cl-elephant-0.2.1.ebuild 1184
+MD5 34bf695de8ea80026333e5bd3582d617 ChangeLog 965
+MD5 f1c761fdcc55edc647ed7c31aee1a69d cl-elephant-0.2.1.ebuild 1184
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 8614b09d6ab0cae71d88b798e5bfbe53 files/0.2.1-gentoo.patch 2479
 MD5 f075f24f2067f7ac5bd38ab56415cfcc files/digest-cl-elephant-0.2.1 66

@@ -1,5 +1,5 @@
-MD5 6fac81eed7457442dd5f499c99eee2b9 ChangeLog 1354
-MD5 7408ae6b8ae943ab35fbbf8e648f1e41 cl-odcl-1.3.5.ebuild 1214
+MD5 7eebfa1f813fbad198eac029f5c14249 ChangeLog 1435
+MD5 3ea5290d7bb5e73302712f2eadc6a88b cl-odcl-1.3.5.ebuild 1214
 MD5 2fbabdd1de915ec0c6cae311c1c0a33e metadata.xml 596
 MD5 5f8bc1dbfab84820f07552e937c266fa files/1.3.5-gentoo.patch 2449
 MD5 8dc619bd165d3aec6e97a0e5e2a4231f files/1.3.5-package-lock-gentoo.patch 807

@@ -1,5 +1,5 @@
-MD5 7b700beb0b564e147b54e0ff7f15955c ChangeLog 1499
-MD5 4058ea263d0a76c771628d5db55b1cfc cl-md5-1.8.5.ebuild 749
+MD5 86a3623038b8fd7ba01c3df7f0e522bd ChangeLog 1578
+MD5 726d5d7f31dc30e9feba721684d88ed6 cl-md5-1.8.5.ebuild 749
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 d17b2d00be00fa73b6ec7dd2b9ecef5c files/digest-cl-md5-1.8.5 67
 MD5 80b61a38a6790b6c5de4059239069aff files/md5-1.8-mai-gentoo.patch 3116

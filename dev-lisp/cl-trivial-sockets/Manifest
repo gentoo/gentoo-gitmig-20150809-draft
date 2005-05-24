@@ -1,5 +1,5 @@
-MD5 da58f28e183895e22b862cb388766bfc ChangeLog 887
-MD5 2b502fcdab6ef783c83f8d4f8fae9e7e cl-trivial-sockets-0.2.ebuild 912
+MD5 112ebe07fb39bc3ca7162072d831428c ChangeLog 976
+MD5 a94c3671992b349a8ab894cb8288a96d cl-trivial-sockets-0.2.ebuild 912
 MD5 30342eac64da7401df8b5eb3fff7bd7f metadata.xml 407
 MD5 477c8cde2e97d937fba1e082cbc9276a files/0.2-asdf-depends-gentoo.patch 468
 MD5 60cf13adb9e901bd8df2cf844fde2fd8 files/digest-cl-trivial-sockets-0.2 70
