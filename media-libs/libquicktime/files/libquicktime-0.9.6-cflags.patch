@@ -1,0 +1,52 @@
+diff -aur work2/libquicktime-0.9.6/configure.ac work1/libquicktime-0.9.6/configure.ac
+--- work2/libquicktime-0.9.6/configure.ac	2005-05-21 00:23:38.000000000 +0200
++++ work1/libquicktime-0.9.6/configure.ac	2005-05-24 18:50:23.510715056 +0200
+@@ -32,7 +32,6 @@
+ AC_LIBTOOL_DLOPEN
+ AM_PROG_LIBTOOL
+ 
+-AC_PROG_CC
+ AC_LANG_C
+ 
+ AC_C_BIGENDIAN
+@@ -613,25 +612,6 @@
+ AC_DEFINE_UNQUOTED(PLUGIN_DIR, ["$plugin_dir"])
+ AC_SUBST(PLUGIN_DIR)
+ 
+-dnl Build CFLAGS
+-
+-COMMON_CFLAGS=" -finline-functions -Wall -Winline"
+-PROFILE_CFLAGS=" -pg -fprofile-arcs -ftest-coverage"
+-DEBUG_CFLAGS=" -g3"
+-
+-dnl Optimizing flags
+-
+-OPTIMIZE_CFLAGS="-O3"
+-
+-AC_TRY_CFLAGS([-funroll-all-loops],   [OPTIMIZE_CFLAGS="$OPTIMIZE_CFLAGS -funroll-all-loops"])
+-AC_TRY_CFLAGS([-fomit-frame-pointer], [OPTIMIZE_CFLAGS="$OPTIMIZE_CFLAGS -fomit-frame-pointer"])
+-AC_TRY_CFLAGS([-falign-loops=2],      [OPTIMIZE_CFLAGS="$OPTIMIZE_CFLAGS -falign-loops=2"])
+-AC_TRY_CFLAGS([-falign-jumps=2],      [OPTIMIZE_CFLAGS="$OPTIMIZE_CFLAGS -falign-jumps=2"])
+-AC_TRY_CFLAGS([-falign-functions=2],  [OPTIMIZE_CFLAGS="$OPTIMIZE_CFLAGS -falign-functions=2"])
+-
+-# -Wno-unused-variable -Wno-unused-parameter
+-# -std=gnu99 
+-
+ have_debug=false
+ have_profile=false
+ compile_mode="optimize"
+@@ -664,11 +644,13 @@
+ fi
+ 
+ case $compile_mode in
+-"optimize") CFLAGS="$OPTIMIZE_CFLAGS $COMMON_CFLAGS"; AC_DEFINE(NDEBUG);;
++"optimize") CFLAGS="$CFLAGS"; AC_DEFINE(NDEBUG);;
+ "debug") CFLAGS="$DEBUG_CFLAGS $COMMON_CFLAGS" ;;
+ "profile") CFLAGS="$PROFILE_CFLAGS $COMMON_CFLAGS"; AC_DEFINE(NDEBUG);;
+ esac
+ 
++AC_PROG_CC
++
+ # -L is required so that linker can find libquicktime when DESTDIR is used.
+ # libtool bug, documented at: http://www.geocrawler.com/mail/thread.php3?subject=install+phase+fails&list=404
+ # MODULE_LIBADD="-L$prefix/lib ../../src/libquicktime.la"
