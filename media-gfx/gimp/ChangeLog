@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.114 2005/05/24 01:06:16 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.115 2005/05/24 02:22:52 allanonjl Exp $
+
+  24 May 2005; John N. Laliberte <allanonjl@gentoo.org> gimp-2.2.7.ebuild:
+  re-enable support for mips due to masking of scanner use flag
 
 *gimp-2.2.7 (24 May 2005)
 
