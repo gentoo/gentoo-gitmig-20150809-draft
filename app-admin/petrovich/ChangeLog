@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/petrovich
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/ChangeLog,v 1.10 2005/01/01 11:17:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/ChangeLog,v 1.11 2005/05/24 15:31:48 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> petrovich-1.0.0.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> petrovich-1.0.0.ebuild,
   +metadata.xml:
