@@ -1,5 +1,51 @@
+--- balsa-2.2.6/libbalsa/address-book-gpe.h	2004-08-27 04:54:24.000000000 -0400
++++ balsa-2.2.6.new/libbalsa/address-book-gpe.h	2005-05-24 11:03:37.000000000 -0400
+@@ -29,7 +29,11 @@
+ 
+ #ifdef HAVE_SQLITE
+ 
++#ifdef HAVE_SQLITE3
++#include <sqlite3.h>
++#else                           /* HAVE_SQLITE3 */
+ #include <sqlite.h>
++#endif                          /* HAVE_SQLITE3 */
+ 
+ #include "address-book.h"
+ 
+@@ -44,7 +48,11 @@
+ 
+ struct _LibBalsaAddressBookGpe {
+     LibBalsaAddressBook parent;
++#ifdef HAVE_SQLITE3
++    sqlite3 *db;
++#else                           /* HAVE_SQLITE3 */
+     sqlite *db;
++#endif                          /* HAVE_SQLITE3 */
+ };
+ 
+ struct _LibBalsaAddressBookGpeClass {
+--- balsa-2.2.6/configure.in	2004-11-19 17:23:40.000000000 -0500
++++ balsa-2.2.6.new/configure.in	2005-05-24 13:50:12.000000000 -0400
+@@ -350,10 +350,13 @@
+ AC_MSG_CHECKING(whether to use SQLite)
+ if test x$with_sqlite != xno ; then
+ 	AC_MSG_RESULT([yes])
+-        PKG_CHECK_MODULES(SQLITE, [
+-        sqlite >= 2.8
+-        ])
+-        AC_DEFINE(HAVE_SQLITE,1,[If defined, enable GPE address book support.])
++     if $PKG_CONFIG --exists sqlite3 ; then
++      	         PKG_CHECK_MODULES(SQLITE, [sqlite3])
++   	         AC_DEFINE(HAVE_SQLITE3,1,[If defined, use sqlite3 api.])
++     else
++        PKG_CHECK_MODULES(SQLITE, [sqlite >= 2.8])
++     fi
++     AC_DEFINE(HAVE_SQLITE,1,[If defined, enable GPE address book support.])
+         BALSA_CFLAGS="$BALSA_CFLAGS $SQLITE_CFLAGS"
+         BALSA_LIBS="$BALSA_LIBS $SQLITE_LIBS"
+ else
 --- balsa-2.2.6/libbalsa/address-book-gpe.c	2004-11-07 14:41:58.000000000 -0500
-+++ balsa-2.2.6.new/libbalsa/address-book-gpe.c	2005-05-24 10:16:18.000000000 -0400
++++ balsa-2.2.6.new/libbalsa/address-book-gpe.c	2005-05-24 15:30:37.000000000 -0400
 @@ -166,7 +166,11 @@
  libbalsa_address_book_gpe_close_db(LibBalsaAddressBookGpe * ab)
  {
@@ -346,7 +392,31 @@
      const gchar *prefix;
      gchar **new_prefix;
      GList *res;
-@@ -601,6 +780,16 @@
+@@ -540,7 +719,14 @@
+     LibBalsaAddress * a= libbalsa_address_new();
+     guint uid = atoi(argv[0]);
+     gchar *tag = argv[1];
+-
++#ifdef HAVE_SQLITE3
++    gchar *sql;
++     /* follow read_entry_data. FIXME: error reporting */
++     sql = sqlite3_mprintf("select tag,value from contacts where urn=%d",
++                           uid);
++     sqlite3_exec(gc->db, sql, gpe_read_attr, a, NULL);
++     sqlite3_free(sql);
++#else
+     /* follow read_entry_data. FIXME: error reporting */
+     if(strstr(tag, "EMAIL") != NULL) { /* be extra cautious - return just one address */
+         sqlite_exec_printf
+@@ -555,6 +741,7 @@
+                             "select tag,value from contacts where urn=%d",
+                             gpe_read_attr, a, NULL, uid);
+     }
++#endif
+     if(!a->address_list) { /* entry without address: ignore! */
+         g_object_unref(a);
+         return 0;
+@@ -601,6 +788,16 @@
      gcc.prefix = prefix;
      gcc.new_prefix = new_prefix;
      gcc.res = NULL;
@@ -363,7 +433,7 @@
      if(prefix)
          r = sqlite_exec_printf(gpe_ab->db, query,
                                 gpe_read_completion, &gcc, &err,
-@@ -608,6 +797,7 @@
+@@ -608,6 +805,7 @@
      else
          r = sqlite_exec(gpe_ab->db, "select distinct urn from contacts_urn",
                          gpe_read_completion, &gcc, &err);
@@ -371,49 +441,3 @@
      if(err) {
          printf("r=%d err=%s\n", r, err);
          free(err);
---- balsa-2.2.6/libbalsa/address-book-gpe.h	2004-08-27 04:54:24.000000000 -0400
-+++ balsa-2.2.6.new/libbalsa/address-book-gpe.h	2005-05-24 11:03:37.000000000 -0400
-@@ -29,7 +29,11 @@
- 
- #ifdef HAVE_SQLITE
- 
-+#ifdef HAVE_SQLITE3
-+#include <sqlite3.h>
-+#else                           /* HAVE_SQLITE3 */
- #include <sqlite.h>
-+#endif                          /* HAVE_SQLITE3 */
- 
- #include "address-book.h"
- 
-@@ -44,7 +48,11 @@
- 
- struct _LibBalsaAddressBookGpe {
-     LibBalsaAddressBook parent;
-+#ifdef HAVE_SQLITE3
-+    sqlite3 *db;
-+#else                           /* HAVE_SQLITE3 */
-     sqlite *db;
-+#endif                          /* HAVE_SQLITE3 */
- };
- 
- struct _LibBalsaAddressBookGpeClass {
---- balsa-2.2.6/configure.in	2004-11-19 17:23:40.000000000 -0500
-+++ balsa-2.2.6.new/configure.in	2005-05-24 11:27:17.000000000 -0400
-@@ -350,10 +350,13 @@
- AC_MSG_CHECKING(whether to use SQLite)
- if test x$with_sqlite != xno ; then
- 	AC_MSG_RESULT([yes])
--        PKG_CHECK_MODULES(SQLITE, [
--        sqlite >= 2.8
--        ])
--        AC_DEFINE(HAVE_SQLITE,1,[If defined, enable GPE address book support.])
-+     if $PKG_CONFIG --exists sqlite3 ; then
-+      	         PKG_CHECK_MODULES(SQLITE, [sqlite3])
-+   	         AC_DEFINE(HAVE_SQLITE3,1,[If defined, use sqlite3 api.])
-+     else
-+        PKG_CHECK_MODULES(SQLITE, [sqlite >= 2.8])
-+	AC_DEFINE(HAVE_SQLITE,1,[If defined, enable GPE address book support.])
-+     fi
-         BALSA_CFLAGS="$BALSA_CFLAGS $SQLITE_CFLAGS"
-         BALSA_LIBS="$BALSA_LIBS $SQLITE_LIBS"
- else
