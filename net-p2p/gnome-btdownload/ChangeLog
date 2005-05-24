@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/gnome-btdownload
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnome-btdownload/ChangeLog,v 1.6 2004/11/23 21:13:18 squinky86 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnome-btdownload/ChangeLog,v 1.7 2005/05/24 19:26:14 sekretarz Exp $
+
+*gnome-btdownload-0.0.20 (24 May 2005)
+
+  24 May 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +gnome-btdownload-0.0.20.ebuild:
+  Version bump
 
 *gnome-btdownload-0.0.17 (23 Nov 2004)
 
