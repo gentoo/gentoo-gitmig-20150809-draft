@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 45c0e804ffb9aefe3e1581d5556bdf70 swaks-20040404.1.ebuild 851
-MD5 443623a7902a48d6887ff4e301ac7a37 ChangeLog 414
+MD5 bb13e53c637d2eebab0cefaae214511c ChangeLog 547
 MD5 a03aed363a1775343da51293c48c2186 metadata.xml 327
+MD5 7ef78e2c5fe0d8dad9c1c1b72592f340 swaks-20040404.1.ebuild 856
 MD5 ee7202c1b9d50ea55ff11de6a9e547c7 files/digest-swaks-20040404.1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcYc7QlM6RnzZP+IRAv1KAJoD02DYHd/MiQqxjJ/WYlIvShvw2ACeP6ig
-7nxnmBKyCu0wClA+7SQV2mw=
-=nbM+
------END PGP SIGNATURE-----
