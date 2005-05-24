@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 21371415175785c1b05168ec56c7d0c0 ChangeLog 2664
 MD5 8debf9b25aa41d6e34a924dc826e0e82 grepmail-4.91.ebuild 702
 MD5 7e85f896fc15c4d52e67d071df17abc1 grepmail-5.30.ebuild 716
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 3ced88d2bb1bcefcdfc7b3b7a2114d12 files/digest-grepmail-4.91 65
 MD5 701ca93f31d9210219c045bedcf86e66 files/digest-grepmail-5.30 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCk08HtG5z4I8BtQoRAoDQAJ42J/7ldva41ceuu6xpGNqrtQpyMACeJEHG
+wgq+R93hVCOUXPF1kT798Zc=
+=muB6
+-----END PGP SIGNATURE-----
