@@ -1,41 +1,25 @@
-Nick Hadaway
-raker@gentoo.org
-10/27/2003
-Setting up clamav-milter on Gentoo Linux
+Nick Hadaway <raker@gentoo.org>
+Updated by Andrea Barisani <lcars@gentoo.org>
+18/05/2004
 
+Setting up clamav-milter on Gentoo Linux
 
 Step 1 - Configure clamd
 
-	mv /etc/clamav.conf /etc/clamav.conf.dist
-	nano -w /etc/clamav.conf
+Check /etc/clamd.conf, default values should work out of the box but 
+read and understand all the options especially if you are going to
+use it on production boxes.
 
-	# This is my /etc/clamav.conf
-	LogFile /tmp/clamd.log
-	LogFileMaxSize 16M
-	LogTime
-	LogSyslog
-	PidFile /var/run/clamd.pid
-	DataDirectory /usr/share/clamav
-	LocalSocket /var/run/clamd.sock
-	StreamSaveToDisk
-	MaxDirectoryRecursion 15
-	ScanMail
-	ScanArchive
-	ArchiveMaxFileSize 10M
-	ArchiveMaxRecursion 5
-	ArchiveMaxFiles 1000
-
-Step 2 - Tell the init script to start clamd as well as freshclam
+Step 2 - Tell the init script to start clamd as well as freshclam and the
+         milter itself.
 
 	nano -w /etc/conf.d/clamd
 
 	START_CLAMD=yes
+	START_FRESHCLAM=yes
+	START_MILTER=yes
 
-Step 3 - Start clamd
-
-	/etc/init.d/clamd start
-
-Step 4 - Edit sendmail.mc
+Step 3 - Edit sendmail.mc
 
 	Add these lines to sendmail.mc before any any other 
 	INPUT_MAIL_FILTER lines and before MAILER(local)
@@ -43,18 +27,18 @@ Step 4 - Edit sendmail.mc
 	will be discarded due to the use of confINPUT_MAIL_FILTERS
 	Make this your first mail filter. :)
 
-	INPUT_MAIL_FILTER(`clmilter',`S=local:/var/run/clmilter.sock, F=, T=S:4m;R:4m')dnl
+	INPUT_MAIL_FILTER(`clmilter',`S=local:/var/run/clamav/clmilter.sock, F=, T=S:4m;R:4m')dnl
 	define(`confINPUT_MAIL_FILTERS', `clmilter')dnl
 
-Step 5 - Rebuild sendmail.cf
+Step 4 - Rebuild sendmail.cf
 
 	cd /etc/mail
 	m4 sendmail.mc > sendmail.cf
 
-Step 6 - Start clamav-milter
+Step 5 - Start clamad
 
-	/usr/sbin/clamav-milter -blo /var/run/clmilter.sock
+	/etc/init.d/clamd start
 
-Step 7 - Restart sendmail
+Step 6 - Restart sendmail
 
 	/etc/init.d/sendmail restart

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85.1.ebuild,v 1.2 2005/05/24 02:01:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85.1-r1.ebuild,v 1.1 2005/05/24 02:01:36 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,7 +27,7 @@ PROVIDE="virtual/antivirus"
 
 pkg_setup() {
 	if use milter; then
-		if ! built_with_use mail-mta/sendmail milter; then
+		if [ ! -e /usr/lib/libmilter.a ] ; then
 			ewarn "In order to enable milter support, clamav needs sendmail with enabled milter"
 			ewarn "USE flag. Either recompile sendmail with milter USE flag enabled, or disable"
 			ewarn "this flag for clamav as well to disable milter support."
@@ -58,8 +58,8 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS BUGS NEWS README ChangeLog FAQ INSTALL
-	newinitd ${FILESDIR}/clamd.rc.new clamd
 	newconfd ${FILESDIR}/clamd.conf clamd
+	newinitd ${FILESDIR}/clamd.rc.new clamd
 	dodoc ${FILESDIR}/clamav-milter.README.gentoo
 
 	dodir /var/run/clamav
@@ -85,13 +85,22 @@ src_install() {
 		-e "s:^\#\(LogFile\) .*:\1 /var/log/freshclam.log:" \
 		-e "s:^\#\(LogTime\).*:\1:" \
 		${D}/etc/freshclam.conf
+
+	if use milter ; then
+		echo "START_MILTER=yes" \
+			>> ${D}/etc/conf.d/clamd
+		echo "MILTER_SOCKET=\"/var/run/clamav/clmilter.sock\"" \
+			>>${D}/etc/conf.d/clamd
+		echo "MILTER_OPTS=\"-m 10\"" \
+			>>${D}/etc/conf.d/clamd
+	fi
 }
 
 pkg_postinst() {
 	echo
 	ewarn "As of 0.85-r1, all settings from /etc/conf.d/clamd are ignored, except for"
-	ewarn "START_CLAMD and START_FRESHCLAM. All settings are read from /etc/clamd.conf"
-	ewarn "and /etc/freshclam.conf, so double-check these two files."
+	ewarn "START_CLAMD, START_FRESHCLAM and MILTER related options. All settings are"
+	ewarn "read from /etc/clamd.conf and /etc/freshclam.conf, so double-check these two files."
 	echo
 	ewarn "Warning: clamd and/or freshclam have not been restarted."
 	ewarn "You should restart them with: /etc/init.d/clamd restart"
@@ -99,7 +108,7 @@ pkg_postinst() {
 	if use milter ; then
 		einfo "For simple instructions howto setup the clamav-milter..."
 		einfo ""
-		einfo "less /usr/share/doc/${PF}/clamav-milter.README.gentoo.gz"
+		einfo "zless /usr/share/doc/${PF}/clamav-milter.README.gentoo.gz"
 		echo
 	fi
 }
