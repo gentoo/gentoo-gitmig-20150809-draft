@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.23-r2.ebuild,v 1.3 2005/02/18 01:11:15 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.23-r2.ebuild,v 1.4 2005/05/24 14:47:52 mcummings Exp $
 
 inherit fixheadtails gcc eutils
 
@@ -19,7 +19,7 @@ KEYWORDS="~x86 ~sparc ~ppc"
 DEPEND=">=dev-lang/perl-5.6.1-r1
 	>=dev-perl/Time-HiRes-01.20-r2
 	>=net-mail/tnef-1.1.1
-	>=dev-perl/DB_File-1.803-r2
+	>=perl-core/DB_File-1.803-r2
 	>=net-mail/ripmime-1.3.0.4
 	|| (
 	>=mail-mta/qmail-1.03-r8
