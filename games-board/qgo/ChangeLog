@@ -1,6 +1,10 @@
 # ChangeLog for games-board/qgo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.10 2005/03/31 17:36:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.11 2005/05/24 20:54:34 mr_bones_ Exp $
+
+  24 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/0.2.2-gcc.patch, -qgo-0.2.2.ebuild, -qgo-1.0.0.ebuild:
+  clean older ebuilds
 
 *qgo-1.0.1 (31 Mar 2005)
 
