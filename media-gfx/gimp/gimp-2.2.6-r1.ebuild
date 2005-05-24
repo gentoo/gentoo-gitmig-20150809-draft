@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.6-r1.ebuild,v 1.7 2005/05/21 08:10:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.6-r1.ebuild,v 1.8 2005/05/24 01:17:42 vapier Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
-LICENSE="GPL-2"
 
 P_HELP="gimp-help-2-0.7" #gimp-help-2-{version}
 S_HELP="$WORKDIR/${P_HELP}"
 SRC_URI="mirror://gimp/v2.2/${P}.tar.bz2
 	doc? ( mirror://gimp/help/testing/${P_HELP}.tar.gz )"
 
+LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 #IUSE="X aalib altivec debug doc gimpprint jpeg mmx mng png python sse svg tiff wmf"
 IUSE="aalib altivec debug doc gtkhtml gimpprint jpeg mmx mng png python sse svg tiff wmf"
 
