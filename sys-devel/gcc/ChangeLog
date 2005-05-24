@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.408 2005/05/22 03:40:17 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.409 2005/05/24 04:33:46 vapier Exp $
+
+*gcc-3.4.4 (24 May 2005)
+
+  24 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/3.4.4/gcc-3.4.4-cross-compile.patch, +gcc-3.4.4.ebuild:
+  Version bumpage.
+
+*gcc-3.3.6 (24 May 2005)
+
+  24 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +gcc-3.3.6.ebuild:
+  Version bumpage.
 
 *gcc-4.0.1_beta20050521 (22 May 2005)
 
