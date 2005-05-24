@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.173 2005/05/24 03:17:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.174 2005/05/24 05:10:19 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -368,87 +368,6 @@ epatch() {
 	if [ "${SINGLE_PATCH}" = "no" ]
 	then
 		einfo "Done with patching"
-	fi
-}
-
-# This function check how many cpu's are present, and then set
-# -j in MAKEOPTS accordingly.
-#
-# Thanks to nall <nall@gentoo.org> for this.
-#
-get_number_of_jobs() {
-	local jobs=0
-
-	if [ ! -r /proc/cpuinfo ]
-	then
-		return 1
-	fi
-
-	# This bit is from H?kan Wessberg <nacka-gentoo@refug.org>, bug #13565.
-	if [ "`egrep "^[[:space:]]*MAKEOPTS=" /etc/make.conf | wc -l`" -gt 0 ]
-	then
-		ADMINOPTS="`egrep "^[[:space:]]*MAKEOPTS=" /etc/make.conf | cut -d= -f2 | sed 's/\"//g'`"
-		ADMINPARAM="`echo ${ADMINOPTS} | gawk '{match($0, /-j *[0-9]*/, opt); print opt[0]}'`"
-		ADMINPARAM="${ADMINPARAM/-j}"
-	fi
-
-	export MAKEOPTS="`echo ${MAKEOPTS} | sed -e 's:-j *[0-9]*::g'`"
-
-	if [ "${ARCH}" = "amd64" -o "${ARCH}" = "x86" -o "${ARCH}" = "hppa" -o \
-		"${ARCH}" = "arm" -o "${ARCH}" = "mips" -o "${ARCH}" = "ia64" ]
-	then
-		# these archs will always have "[Pp]rocessor"
-		jobs="$((`grep -c ^[Pp]rocessor /proc/cpuinfo` * 2))"
-
-	elif [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]
-	then
-		# sparc always has "ncpus active"
-		jobs="$((`grep "^ncpus active" /proc/cpuinfo | sed -e "s/^.*: //"` * 2))"
-
-	elif [ "${ARCH}" = "alpha" ]
-	then
-		# alpha has "cpus active", but only when compiled with SMP
-		if [ "`grep -c "^cpus active" /proc/cpuinfo`" -eq 1 ]
-		then
-			jobs="$((`grep "^cpus active" /proc/cpuinfo | sed -e "s/^.*: //"` * 2))"
-		else
-			jobs=2
-		fi
-
-	elif [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
-	then
-		# ppc has "processor", but only when compiled with SMP
-		if [ "`grep -c "^processor" /proc/cpuinfo`" -eq 1 ]
-		then
-			jobs="$((`grep -c ^processor /proc/cpuinfo` * 2))"
-		else
-			jobs=2
-		fi
-	elif [ "${ARCH}" = "s390" ]
-	then
-		# s390 has "# processors    : "
-		jobs="$((`grep "^\# processors" /proc/cpuinfo | sed -e "s/^.*: //"` * 2))"
-	else
-		jobs="$((`grep -c ^cpu /proc/cpuinfo` * 2))"
-		die "Unknown ARCH -- ${ARCH}!"
-	fi
-
-	# Make sure the number is valid ...
-	if [ "${jobs}" -lt 1 ]
-	then
-		jobs=1
-	fi
-
-	if [ -n "${ADMINPARAM}" ]
-	then
-		if [ "${jobs}" -gt "${ADMINPARAM}" ]
-		then
-			einfo "Setting make jobs to \"-j${ADMINPARAM}\" to ensure successful merge ..."
-			export MAKEOPTS="${MAKEOPTS} -j${ADMINPARAM}"
-		else
-			einfo "Setting make jobs to \"-j${jobs}\" to ensure successful merge ..."
-			export MAKEOPTS="${MAKEOPTS} -j${jobs}"
-		fi
 	fi
 }
 
