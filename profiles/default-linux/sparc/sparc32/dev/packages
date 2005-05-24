@@ -1,0 +1,6 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/dev/packages,v 1.1 2005/05/24 03:39:26 weeve Exp $
+
+*>=sys-devel/gcc-3.4.3-r1
+

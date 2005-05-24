@@ -1,0 +1,2 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/dev/24headers/package.mask,v 1.1 2005/05/24 03:39:26 weeve Exp $
+-<sys-boot/silo-1.4.9

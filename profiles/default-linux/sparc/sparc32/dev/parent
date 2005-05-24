@@ -1,0 +1,7 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/dev/parent,v 1.1 2005/05/24 03:39:26 weeve Exp $
+
+# This file describes the parent profile to this.  In most cases this will
+# just be the name of the parent directory
+..
