@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/poppassd_ceti-1.8.5.ebuild,v 1.1 2005/05/17 14:16:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/poppassd_ceti-1.8.5-r1.ebuild,v 1.1 2005/05/24 16:56:50 cryos Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs pam
 
 MY_PN="poppassd"
 MY_P="${MY_PN}-${PV}"
@@ -17,8 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cracklib"
 
-DEPEND="virtual/libc
-	>=sys-libs/pam-0.75-r8"
+DEPEND="virtual/pam"
 
 RDEPEND="${DEPEND}
 	sys-apps/xinetd
@@ -32,9 +31,11 @@ src_compile() {
 src_install() {
 	dodoc README
 
-	insinto /etc/pam.d
-	newins ${FILESDIR}/poppassd.pam poppassd
-	use cracklib && sed -i -e 's|#password|password|' ${D}/etc/pam.d/poppassd
+	pamd_mimic_system poppassd auth account password
+	if use cracklib; then
+		echo -e "password\trequired\tpam_cracklib.so retry=3" >> \
+			${D}/etc/pam.d/poppassd
+	fi
 
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/poppassd.xinetd poppassd
