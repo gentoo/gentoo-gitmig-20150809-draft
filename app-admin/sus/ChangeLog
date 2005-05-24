@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/ChangeLog,v 1.7 2005/01/01 11:28:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/ChangeLog,v 1.8 2005/05/24 21:45:41 wormo Exp $
+
+  24 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> sus-2.0.6.ebuild:
+  mark ~ppc
 
 *sus-2.0.6 (14 Sep 2004)
 
