@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.8.ebuild,v 1.6 2005/05/10 00:21:00 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.8.ebuild,v 1.7 2005/05/24 14:38:40 mcummings Exp $
 
 inherit perl-module
 
@@ -21,7 +21,7 @@ DEPEND="${DEPEND}
 	>=dev-perl/ImageInfo-1.04-r2
 	>=dev-perl/ImageSize-2.99-r1
 	dev-perl/Image-Imlib2
-	>=dev-perl/CGI-2.78-r3
+	>=perl-core/CGI-2.78-r3
 	>=dev-perl/CGI-FastTemplate-1.09
 	>=dev-perl/Parse-RecDescent-1.80-r3
 	dev-perl/URI
