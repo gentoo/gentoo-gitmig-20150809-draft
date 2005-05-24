@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-1.ebuild,v 1.2 2005/04/18 09:34:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.ebuild,v 1.1 2005/05/24 12:38:29 ferringb Exp $
 
 DESCRIPTION="emerge-webrsync using patches to minimize bandwidth"
 HOMEPAGE="http://dev.gentoo.org/~ferringb/"
@@ -21,4 +21,7 @@ src_compile() { :; }
 
 src_install() {
 	newbin ${DISTDIR}/${P} ${PN} || die "failed copying ${P}"
+	dodir /var/delta-webrsync
+	fowners root:portage /var/delta-webrsync
+	fperms 0770 /var/delta-webrsync
 }
