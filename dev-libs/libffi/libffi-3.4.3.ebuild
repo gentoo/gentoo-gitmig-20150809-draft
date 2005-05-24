@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.3.ebuild,v 1.6 2005/05/22 14:00:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.3.ebuild,v 1.7 2005/05/24 05:09:33 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -149,9 +149,6 @@ src_compile() {
 		${myconf} || die
 
 	touch ${S}/gcc/c-gperf.h
-
-	# Setup -j in MAKEOPTS
-	get_number_of_jobs
 
 	einfo "Compiling libffi..."
 	S="${WORKDIR}/build" \
