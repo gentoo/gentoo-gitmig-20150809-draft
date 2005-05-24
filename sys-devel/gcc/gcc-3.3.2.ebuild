@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2.ebuild,v 1.23 2005/01/18 06:15:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2.ebuild,v 1.24 2005/05/24 04:28:09 vapier Exp $
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -306,9 +306,6 @@ src_compile() {
 	then
 		find ${S} -name '*.[17]' -exec touch {} \; || :
 	fi
-
-	# Setup -j in MAKEOPTS
-	get_number_of_jobs
 
 	einfo "Building GCC..."
 	# Only build it static if we are just building the C frontend, else

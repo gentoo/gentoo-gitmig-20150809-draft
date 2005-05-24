@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.17 2005/03/01 01:48:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.18 2005/05/24 04:28:09 vapier Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened uclibc n32 n64 emul-linux-x86"
 
@@ -672,9 +672,6 @@ src_compile() {
 	then
 		find ${WORKDIR}/build -name '*.[17]' -exec touch {} \; || :
 	fi
-
-	# Setup -j in MAKEOPTS
-	get_number_of_jobs
 
 	einfo "Building GCC..."
 	# Only build it static if we are just building the C frontend, else
