@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 71bf9419d82b2d1a996ea97e22c80220 ChangeLog 2144
+MD5 e706dff64d9dbfd06bfe1f07dec80873 digest-base-1.05.ebuild 589
+MD5 701cbbd74352384826bad67bece1df88 digest-base-1.08.ebuild 645
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 a5a026fa704626ebafc717e5480fff57 digest-base-1.10.ebuild 645
+MD5 35900ffbfad8f86b1af3a6ad4e16018e files/digest-digest-base-1.05 61
+MD5 824966168d7aa40d2879cf23686d97df files/digest-digest-base-1.08 61
+MD5 3d509a58b2378e7d62f5163a5e58c508 files/digest-digest-base-1.10 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCk0DEtG5z4I8BtQoRApM7AJ0dS64BLnII3nQeaHQ9t2DpCsDh6wCeOHoj
+uGqaCHAWxUkmdF1LdLtMA7k=
+=KBfi
+-----END PGP SIGNATURE-----
