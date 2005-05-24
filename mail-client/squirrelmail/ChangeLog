@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.22 2005/04/20 01:43:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.23 2005/05/24 14:46:56 mcummings Exp $
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org>
+  squirrelmail-1.4.4.ebuild:
+  dev-perl/DB_File => perl-core/DB_File
 
   19 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   squirrelmail-1.4.4.ebuild:
