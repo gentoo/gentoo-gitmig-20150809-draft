@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f1ec86f53625d05f2c93e7d469623bf7 CGI-FastTemplate-1.09.ebuild 570
+MD5 ce165485fec5a843819991b869b34b4c ChangeLog 1092
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 d1d8850cb9941ed02bfe3c7e5444f96c CGI-FastTemplate-1.09.ebuild 569
-MD5 c82a570348972d363d4af48c305420a0 ChangeLog 972
 MD5 fa862c6a0eea85fd337837fc73f66576 files/digest-CGI-FastTemplate-1.09 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCa7TjtG5z4I8BtQoRAsNPAJ4geP2/LCpMDLsMbtvbcfxWvIgWHACfXn+X
-xmmb42RHPek2D8EN8R0x32c=
-=ns2y
------END PGP SIGNATURE-----
