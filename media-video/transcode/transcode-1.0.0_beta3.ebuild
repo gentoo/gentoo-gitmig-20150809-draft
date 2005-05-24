@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.0_beta3.ebuild,v 1.3 2005/05/07 14:19:51 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.0_beta3.ebuild,v 1.4 2005/05/24 09:29:42 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -43,7 +43,8 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	truetype? ( >=media-libs/freetype-2 )
 	pvm? ( >=sys-cluster/pvm-3.4 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r3 )
-	|| ( sys-libs/glibc dev-libs/libiconv )"
+	|| ( sys-libs/glibc dev-libs/libiconv )
+	>=media-libs/libmpeg2-0.4.0b"
 
 DEPEND="${RDEPEND}
 	=sys-devel/gcc-3*"
@@ -132,9 +133,7 @@ src_compile() {
 }
 
 src_install () {
-	make \
-		DESTDIR=${D} \
-		install || die
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS ChangeLog README TODO
 }

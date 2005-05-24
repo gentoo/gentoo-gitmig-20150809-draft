@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.108 2005/05/15 02:10:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.109 2005/05/24 09:29:42 flameeyes Exp $
+
+  24 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  transcode-1.0.0_beta3.ebuild:
+  Added dependency over libmpeg2 as per bug #93436. Reported by Gustavo Michels.
 
   15 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   transcode-0.6.11.ebuild, transcode-0.6.12-r1.ebuild,
