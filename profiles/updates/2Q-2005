@@ -76,3 +76,4 @@ move sys-kernel/hardened-dev-sources sys-kernel/hardened-sources
 move media-tv/mythfrontend media-tv/mythtv
 move media-fonts/erza-sil media-fonts/ezra-sil
 move dev-perl/CGI perl-core/CGI
+move dev-perl/DB_File perl-core/DB_File
