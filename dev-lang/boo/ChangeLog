@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.2 2005/05/21 09:19:01 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.3 2005/05/24 02:04:31 latexer Exp $
+
+*boo-0.5.4.1629 (24 May 2005)
+
+  24 May 2005; Peter Johanson <latexer@gentoo.org> +boo-0.5.4.1629.ebuild:
+  Bump.
 
   19 May 2005; Tom Martin <slarti@gentoo.org> boo-0.5.3.1544.ebuild:
   Marked ~amd64.

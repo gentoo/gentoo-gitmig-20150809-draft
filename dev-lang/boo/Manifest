@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b52acd65246932d473ff9553d891b7db ChangeLog 449
-MD5 3df553e94423a0075a61a43a56dc6726 metadata.xml 256
 MD5 a04defa7030d43d593bafbc609d3c757 boo-0.5.3.1544.ebuild 785
+MD5 3df553e94423a0075a61a43a56dc6726 metadata.xml 256
+MD5 82831e8bb698315bcc832c08919f08ad ChangeLog 565
+MD5 ff4a81e4a8fc1781063e4e3e4a3f987a boo-0.5.4.1629.ebuild 1004
 MD5 d8e8a5727bdfb8086ded71c915d905da files/digest-boo-0.5.3.1544 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjv0bCHk4+ZoBpvsRAj+HAKCrhJOnP0x7vN/ojptS7nvxeNqScACgxrHj
-TdYZF2+wf48v61smiqOfLTw=
-=utHS
------END PGP SIGNATURE-----
+MD5 60be7aea7d4d4e9141c3043c9defef93 files/digest-boo-0.5.4.1629 72
