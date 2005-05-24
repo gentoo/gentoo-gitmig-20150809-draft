@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.6 2005/04/01 09:54:38 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.7 2005/05/24 20:29:36 herbs Exp $
 
 inherit flag-o-matic libtool eutils toolchain-funcs
 
@@ -33,10 +33,17 @@ src_unpack() {
 src_compile() {
 	replace-cpu-flags k6 k6-2 k6-3 i586
 	econf --enable-shared --enable-static || die "econf failed"
+
 	if use ppc-macos; then
 		cd ${S}
 		sed -i -e 's:LIBTOOL = libtool:LIBTOOL = /usr/bin/glibtool:' Makefile
 	fi
+
+	# The configure script seems to ignore the --libdir option..
+	# set this here to fix libdir path in libtool file
+	sed -i -e "s:^libdir.*:libdir = \$(exec_prefix)/$(get_libdir):" \
+		${S}/Makefile || die
+
 	emake \
 		CC="$(tc-getCC)" \
 		AR="$(tc-getAR) rc" \
