@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bd66dc50bd5d402adfa8a05cd4e7d51d ChangeLog 4469
+MD5 5dfb4f2ffb3c701616b0a4b49c6405d5 DB_File-1.811.ebuild 598
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 2259e73a14e4f2c7bd63215dba073b10 files/config.in 3121
+MD5 1900638402c237ae141b03ef26fe6933 files/digest-DB_File-1.811 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCkzwwtG5z4I8BtQoRAnceAJ9BMyexFYyEF3jLIIkMT+ZYJJaNuwCeKrGA
+kOyfhr3E+QQppi4VKPweSnM=
+=CRmB
+-----END PGP SIGNATURE-----
