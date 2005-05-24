@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/clusterssh
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/ChangeLog,v 1.5 2004/10/29 07:50:16 voxus Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/ChangeLog,v 1.6 2005/05/24 23:32:30 spyderous Exp $
+
+  24 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  clusterssh-2.17.ebuild:
+  (#91192) Stable on x86.
 
 *clusterssh-2.17 (29 Oct 2004)
 
