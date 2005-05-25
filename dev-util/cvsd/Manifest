@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23d4d436ce24dddc6456cfc480288329 cvsd-1.0.7.ebuild 1110
+MD5 8e051c670e357a7b5771d9f16473ffc8 cvsd-1.0.7.ebuild 1109
 MD5 a91c8abd271d9610537e53c5628f7286 cvsd-1.0.2.ebuild 1104
 MD5 a8a049e9a05d19114cb396aa248fc095 cvsd-1.0.6.ebuild 1105
 MD5 000cb0bbb776567cd1b52917667a8b43 cvsd-1.0.3.ebuild 1102
-MD5 ace1d9bfbc6b7b8075ac143fc97a8843 ChangeLog 2131
+MD5 a1ba32bce503270381e0121ea87c9f17 ChangeLog 2217
 MD5 e894c7bf94ee57217db76f5aebaca7b5 metadata.xml 256
 MD5 1895b0d094b69acb00b56334067416b3 files/digest-cvsd-1.0.2 62
 MD5 44d4ac75b42c79116333e9ba5562e821 files/digest-cvsd-1.0.3 62
 MD5 82bccee1b9707bed0c806347028e80ba files/digest-cvsd-1.0.6 62
 MD5 22391acc549ef1ba673204c6c7fe839d files/digest-cvsd-1.0.7 62
 MD5 99100bc796c1afe0cc7887b61038020b files/cvsd.rc6 477
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfncc2G5bA0cA/ScRAvccAKDjLszpqjSucnM+2wwJFFBSJNCqxwCgiFuc
-MfLzs0pv2MTLCJfvylkDpQc=
-=jZBq
------END PGP SIGNATURE-----

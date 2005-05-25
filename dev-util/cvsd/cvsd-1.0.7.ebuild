@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/cvsd-1.0.7.ebuild,v 1.2 2005/05/08 20:30:22 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/cvsd-1.0.7.ebuild,v 1.3 2005/05/25 12:14:21 ka0ttic Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://tiefighter.et.tudelft.nl/~arthur/cvsd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="tcpd"
 
 DEPEND="virtual/libc
