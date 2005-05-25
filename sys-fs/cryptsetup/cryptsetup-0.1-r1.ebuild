@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r1.ebuild,v 1.8 2005/05/24 22:48:32 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r1.ebuild,v 1.9 2005/05/25 19:51:10 herbs Exp $
 
-inherit linux-info
+inherit linux-info multilib
 
 DESCRIPTION="Tool to setup encrypted devices with dm-crypt"
 HOMEPAGE="http://www.saout.de/misc/dm-crypt/"
@@ -45,10 +45,10 @@ src_compile() {
 	econf --bindir=/bin --disable-nls || die
 
 	sed -i \
-		-e 's|-lgcrypt|/usr/lib/libgcrypt.a|' \
-		-e 's|-lgpg-error|/usr/lib/libgpg-error.a|' \
+		-e "s|-lgcrypt|/usr/$(get_libdir)/libgcrypt.a|" \
+		-e "s|-lgpg-error|/usr/$(get_libdir)/libgpg-error.a|" \
 		Makefile src/Makefile
-	sed -i -e 's|-lpopt|/usr/lib/libpopt.a|' src/Makefile
+	sed -i -e "s|-lpopt|/usr/$(get_libdir)/libpopt.a|" src/Makefile
 
 	emake || die
 }

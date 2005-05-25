@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.12 2005/05/24 22:48:32 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.13 2005/05/25 19:51:10 herbs Exp $
+
+  25 May 2005; Herbie Hopkins <herbs@gentoo.org> cryptsetup-0.1-r1.ebuild:
+  Multilib fixes.
 
   24 May 2005; Benjamin Smee <strerror@gentoo.org> metadata.xml,
   cryptsetup-0.1-r1.ebuild:
