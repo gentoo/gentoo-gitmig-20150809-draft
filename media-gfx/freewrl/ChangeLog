@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.4 2005/05/24 15:56:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.5 2005/05/25 14:25:09 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> freewrl-1.06.ebuild:
+  dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org> freewrl-1.06.ebuild:
   dev-perl/Digest-MD5 => perl-core/Digest-MD5
