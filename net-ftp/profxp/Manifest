@@ -1,3 +1,13 @@
-MD5 5f454f988cd9af1f32b812823de6f696 ChangeLog 432
-MD5 344e2330a04f4c0843c921c68d185b90 profxp-3_pre2.ebuild 1009
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ed9085da199844a327c902228475af38 ChangeLog 566
+MD5 6565ffba22ffbc69dbf75a08276bc0a1 profxp-3_pre2.ebuild 1010
 MD5 227e64da69bc22bd4bf75ff7e5775bc4 files/digest-profxp-3_pre2 121
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClJqftG5z4I8BtQoRAuYlAJ42e3ezhbRvV3VA8MVFDMkDAb1jVwCeMr8U
+KBhyctQesv8LQPcSEr+ZxnQ=
+=b3cV
+-----END PGP SIGNATURE-----
