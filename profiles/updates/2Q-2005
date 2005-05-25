@@ -86,3 +86,4 @@ move dev-perl/File-Spec perl-core/File-Spec
 move dev-perl/File-Temp perl-core/File-Temp
 move dev-perl/Getopt-Long perl-core/Getopt-Long
 move dev-perl/MIME-Base64 perl-core/MIME-Base64
+move dev-perl/Memoize perl-core/Memoize
