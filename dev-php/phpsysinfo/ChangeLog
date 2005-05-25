@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.32 2005/04/13 04:45:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.33 2005/05/25 12:29:22 corsair Exp $
+
+  25 May 2005; Markus Rothe <corsair@gentoo.org> phpsysinfo-2.3-r2.ebuild:
+  Moved phpsysinfo-2.3-xss-and-path.patch from http source to files/, as I was
+  now able to prevent cvs from chaning the lines in the patch using 'cvs add
+  -ko'.
 
   13 Apr 2005; Markus Rothe <corsair@gentoo.org> -phpsysinfo-2.1.ebuild,
   -phpsysinfo-2.1-r1.ebuild, -phpsysinfo-2.1-r2.ebuild,
