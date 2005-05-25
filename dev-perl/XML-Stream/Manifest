@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a9452c4d0a5e8b5725c361cac6798c4f ChangeLog 1110
+MD5 718c23ed24a1954b84e5c318ad85fb50 ChangeLog 1249
 MD5 73cfdfa126b9f5cac5b9b408faa55653 XML-Stream-1.21.ebuild 631
-MD5 ac8856aea5480f15d588d88bf920ef1e XML-Stream-1.22.ebuild 625
+MD5 26f3783b28564db3efae7bad25cc5abf XML-Stream-1.22.ebuild 627
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 725aa2934ebd6f37450c6cd0883b8f6a files/digest-XML-Stream-1.21 66
 MD5 9c2ad8f24d7f25c2a5a9f302e566d07b files/digest-XML-Stream-1.22 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClIjXtG5z4I8BtQoRAgN9AJ0Zwl8FPxBTYEAzF1324fCgAxiL0QCgjVxt
-ZzxAaTHmrEqzmobdjkKYu44=
-=mePq
------END PGP SIGNATURE-----

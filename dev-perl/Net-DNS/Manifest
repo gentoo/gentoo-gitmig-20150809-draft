@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf14f276b3c2902ea5ead057ce29629d ChangeLog 5559
+MD5 cc37bc6bd2d2148e9fd8b495f46a08d6 ChangeLog 5694
 MD5 2b084931cd40763fad22fbbff08b7d17 Net-DNS-0.49.ebuild 717
-MD5 b4ad99c4b18cced46bd5fb12d75ffaf7 Net-DNS-0.38.ebuild 709
+MD5 ec86d2ad8e20059d38b3b008ed336621 Net-DNS-0.38.ebuild 710
 MD5 9ca4a2e19841f8d3b9402a23e9d4f5b9 Net-DNS-0.40.ebuild 706
 MD5 b2a6795774faa7190a92dae78a6cd7c6 Net-DNS-0.47.ebuild 711
 MD5 8aeb6f319d4d5e4cd047b08c2e888bab Net-DNS-0.48.ebuild 710
@@ -13,10 +10,3 @@ MD5 a07001dc60cc3db07fabb9838eb9f247 files/digest-Net-DNS-0.38 63
 MD5 e619c1fd3e468fba677cd8bd8d2a9245 files/digest-Net-DNS-0.40 63
 MD5 5fa474bc662ca4a2574ca8dcd755a843 files/digest-Net-DNS-0.47 63
 MD5 fe491e837d717cae39abbdd563f8c68d files/digest-Net-DNS-0.48 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClIe1tG5z4I8BtQoRAqImAJ9YzkWqDVT7HZYlKtRAk8vKTl71DACeIq1s
-prx74GwjEOgB9rjYOV54RFQ=
-=f76i
------END PGP SIGNATURE-----
