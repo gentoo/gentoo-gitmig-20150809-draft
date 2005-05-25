@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.1.ebuild,v 1.4 2005/05/24 14:30:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.1.ebuild,v 1.5 2005/05/25 13:47:06 mcummings Exp $
 
 inherit webapp
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-db/mysql-3.23.41
 	>=dev-perl/TimeDate-1.11
 	>=dev-perl/DBI-1.36
 	>=dev-perl/DBD-mysql-2.1010
-	>=dev-perl/File-Spec-0.8.2
+	>=perl-core/File-Spec-0.8.2
 	>=dev-perl/Template-Toolkit-2.08
 	>=dev-perl/Text-Tabs+Wrap-2001.0131
 	>=dev-perl/Chart-2.3
