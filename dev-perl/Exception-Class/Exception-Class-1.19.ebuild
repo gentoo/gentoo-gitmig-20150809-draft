@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.19.ebuild,v 1.5 2005/04/25 15:02:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.19.ebuild,v 1.6 2005/05/25 15:07:03 mcummings Exp $
 
 myconf='INSTALLDIRS=vendor'
 inherit perl-module
@@ -17,6 +17,6 @@ SRC_TEST="do"
 DEPEND="${DEPEND}
 	>=dev-perl/Class-Data-Inheritable-0.02
 	>=dev-perl/Devel-StackTrace-1.11
-	>=dev-perl/Test-Simple-0.47"
+	>=perl-core/Test-Simple-0.47"
 
 export OPTIMIZE="$CFLAGS"
