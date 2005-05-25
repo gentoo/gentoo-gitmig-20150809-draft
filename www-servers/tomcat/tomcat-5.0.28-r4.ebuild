@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.3 2005/05/20 14:50:45 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.4 2005/05/25 15:26:37 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -196,8 +196,8 @@ src_install() {
 
 	# copy over the directories	
 	chmod -R 750 conf/*
-	chown -R tomcat:tomcat webapps/*
-	cp -R conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
+	chown -R tomcat:tomcat webapps/* conf/*
+	cp -pR conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
 	cp -R bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
 	# if the useflag is set, copy over the examples
