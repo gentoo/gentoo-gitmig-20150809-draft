@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.124 2005/05/25 14:55:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.125 2005/05/25 14:55:52 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> perl-5.8.6-r4.ebuild:
+  dev-perl/Test-Simple => perl-core/Test-Simple migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> perl-5.8.5-r5.ebuild:
   dev-perl/Test-Simple => perl-core/Test-Simple migration
