@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dc0e9a7ef8a935d49396304da1a67606 Carp-Assert-0.18.ebuild 507
-MD5 ec2158d689c6803b3ae170147d55be52 ChangeLog 590
+MD5 f4362c1d50b4ef4555a67a0c4e88bfee Carp-Assert-0.18.ebuild 509
+MD5 0d62b80fb7b0d7c6f6571630ede1b868 ChangeLog 732
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 c8a0706f0f099fb4811439c9f8d7b6e8 files/digest-Carp-Assert-0.18 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCiguIKRy60XGEcJIRApTMAJ9ARXssM6Tjql1j7pupsZFqTBQl5ACgoywh
-xQrVS6hk69SlrAYFExM9jhU=
-=foTM
------END PGP SIGNATURE-----

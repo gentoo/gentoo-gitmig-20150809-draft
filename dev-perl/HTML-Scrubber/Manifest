@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 76b3ffa89d950d26a163151f72f6e75d HTML-Scrubber-0.08.ebuild 626
-MD5 e154682cdb9b244f2a0942ec35558952 ChangeLog 885
+MD5 4d523f25b936af1cdb6e87efca3cd182 ChangeLog 1029
+MD5 e1f974dc9c2dbcd3f20a28c6c07f20e3 HTML-Scrubber-0.08.ebuild 628
 MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
 MD5 1e8728175dcab0eea2b97b60032f1ef6 files/digest-HTML-Scrubber-0.08 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbZ6zKRy60XGEcJIRAgW8AJ9RqEm3UDl0loUumiTdYPLfp67nZgCcDu0K
-eWyq/5FddFhgnz9CjPIun4Q=
-=XTqU
------END PGP SIGNATURE-----
