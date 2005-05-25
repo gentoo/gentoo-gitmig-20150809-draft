@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.13 2005/01/16 08:27:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/ChangeLog,v 1.14 2005/05/25 15:21:48 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> mon-0.99.2-r1.ebuild:
+  dev-perl/Time-HiRes => perl-core/Time-HiRes migration
 
   16 Jan 2005; Daniel Black <dragonheart@gentoo.org> files/mon.rc6:
   Added 'after logger' to init script as per bug #77609. Thanks to Maurice

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.18 2005/01/01 11:13:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.19 2005/05/25 15:21:48 mcummings Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ KEYWORDS="ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-perl/Mon-0.9
-	>=dev-perl/Time-HiRes-01.20
+	>=perl-core/Time-HiRes-01.20
 	>=dev-perl/Period-1.20-r2"
 
 src_compile() {
