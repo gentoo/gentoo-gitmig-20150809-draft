@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Autouse
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/ChangeLog,v 1.16 2005/05/25 15:00:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/ChangeLog,v 1.17 2005/05/25 15:00:22 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Class-Autouse-1.17.ebuild:
+  dev-perl/Test-Simple => perl-core/Test-Simple migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   Class-Autouse-1.12.ebuild:
