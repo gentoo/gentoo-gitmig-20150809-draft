@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-2.12.ebuild,v 1.10 2005/05/25 14:42:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-2.12.ebuild,v 1.11 2005/05/25 15:16:40 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ SRC_TEST="do"
 
 DEPEND="${DEPEND}
 	perl-core/Storable
-	dev-perl/Test-Simple
+	perl-core/Test-Simple
 	dev-perl/XML-SAX
 	dev-perl/XML-NamespaceSupport
 	>=dev-perl/XML-Parser-2.30"
