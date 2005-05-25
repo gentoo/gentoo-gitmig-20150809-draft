@@ -1,9 +1,17 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.241 2005/05/22 02:39:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.242 2005/05/25 10:01:42 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.12-r2 (25 May 2005)
+
+  25 May 2005; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.11.12-ifconfig-cidr.patch,
+  +baselayout-1.11.12-r2.ebuild:
+  updated ESSID variables example in wireless.example - fixes #92469
+  fix ifconfig to understand CIDR addresses - bug #93237
 
   22 May 2005; Mike Frysinger <vapier@gentoo.org>
   +files/baselayout-1.11.12-swapon-quiet.patch,

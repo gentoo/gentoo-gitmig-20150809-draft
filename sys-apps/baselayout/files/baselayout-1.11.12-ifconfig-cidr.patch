@@ -1,0 +1,42 @@
+--- lib/rcscripts/net.modules.d/ifconfig  23 Mar 2005 14:39:11 -0000
++++ lib/rcscripts/net.modules.d/ifconfig  24 May 2005 14:33:00 -0000
+@@ -318,6 +318,12 @@
+		# Support iproute2 style config where possible
+		config=( "${config[@]//brd/broadcast}" )
+		config=( "${config[@]//peer/pointtopoint}" )
++
++               local cidr="${config[0]##*/}" ip="${config[0]%%/*}"
++               if [[ -n ${cidr} && ${cidr} != ${ip} ]]; then
++                   local netmask=$( cidr2netmask "${cidr}" )
++                   config[0]="${ip} netmask ${netmask}"
++               fi
+	fi
+
+	ifconfig ${iface} ${config[@]} &>${devnull}
+--- etc/conf.d/wireless.example	19 Apr 2005 16:28:46 -0000	1.11.2.6
++++ etc/conf.d/wireless.example	25 May 2005 09:16:05 -0000
+@@ -27,9 +27,10 @@
+ # becomes
+ #      #key_My_NET="s:passkey"
+ # Notice that the space has changed to an underscore - do the same with all
+-# characters not in a-z A-Z (english alphabet) 0-9.
++# characters not in a-z A-Z (english alphabet) 0-9. This only applies to
++# variables and not values.
+ #
+-# Any ESSID's in quotes like essid_eth0="My NET" may need to be escaped
++# Any ESSID's in values like essid_eth0="My NET" may need to be escaped
+ # This means placing the character \ before the character
+ # \" need to be escaped for example
+ # So if your ESSID is
+@@ -39,6 +40,11 @@
+ # for example
+ #      #essid_eth0="My\"\\NET"
+ #
++# So using the above we can use
++#      #dns_domain_My____NET="My\"\\NET"
++# which is an invalid dns domain, but shows the how to use the variable
++# structure
++#
+ # As a final note, most users will just need to set the following options
+ # key_ESSID1="s:yourkeyhere enc open" # s: means a text key
+ # key_ESSID2="aaaa-bbbb-cccc-dd"      # no s: means a hex key
