@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/filer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.10 2005/03/14 21:16:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.11 2005/05/25 13:48:54 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> filer-0.0.6.ebuild:
+  dev-perl/File-Temp => perl-core/File-Temp migration
 
 *filer-0.0.8 (14 Mar 2005)
 
