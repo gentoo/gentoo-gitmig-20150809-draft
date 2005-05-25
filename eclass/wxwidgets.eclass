@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.9 2005/05/11 23:45:18 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.10 2005/05/25 15:19:16 herbs Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
@@ -19,6 +19,7 @@
 #   Arguments: (wxGTK 2.6) gtk-ansi gtk2-ansi unicode base-ansi base-unicode mac-ansi mac-unicode
 #   Note: Don't call this function directly from ebuilds
 
+inherit multilib
 ECLASS=wxwidgets
 INHERITED="$INHERITED $ECLASS"
 
@@ -58,7 +59,7 @@ set-wxconfig() {
 	debug-print-function $FUNCNAME $*
 
 	if [ "${WX_GTK_VER}" = "2.6" ] ; then
-		wxconfig_prefix="/usr/lib/wx/config"
+		wxconfig_prefix="/usr/$(get_libdir)/wx/config"
 		wxconfig_name="${1}-release-${WX_GTK_VER}"
 		wxconfig="${wxconfig_prefix}/${wxconfig_name}"
 		wxconfig_debug_name="${1}-debug-${WX_GTK_VER}"
