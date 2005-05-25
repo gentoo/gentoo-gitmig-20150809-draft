@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.30.09.ebuild,v 1.3 2005/05/22 15:32:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.30.09.ebuild,v 1.4 2005/05/25 14:40:17 mcummings Exp $
 
 IUSE="gtk ipv6 libwww ncurses tcltk"
 
@@ -23,7 +23,7 @@ DEPEND="${DEPEND}
 	>=dev-perl/Event-1.00
 	>=dev-perl/Time-HiRes-1.59
 	>=dev-perl/Compress-Zlib-1.33
-	>=dev-perl/Storable-2.12
+	>=perl-core/Storable-2.12
 	>=dev-perl/IO-Tty-1.02
 	dev-perl/Filter
 	dev-perl/FreezeThaw
