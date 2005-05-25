@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Parse-RecDescent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.22 2005/04/28 18:41:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.23 2005/05/25 15:21:41 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Parse-RecDescent-1.94.ebuild:
+  dev-perl/Text-Balanced => perl-core/Text-Balanced migration
 
   28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Parse-RecDescent-1.80-r2.ebuild, -Parse-RecDescent-1.80-r3.ebuild,
