@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-DBI
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.20 2005/04/24 13:17:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.21 2005/05/25 14:57:43 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> Apache-DBI-0.94.ebuild:
+  dev-perl/Test-Simple => perl-core/Test-Simple migration
 
   24 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Apache-DBI-0.89.ebuild, -Apache-DBI-0.91.ebuild, -Apache-DBI-0.92.ebuild:
