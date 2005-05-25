@@ -1,9 +1,12 @@
-MD5 3c1dfcc6af33872314a8cc92eff6f90e ChangeLog 36144
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e374209e22600fc1b6b6b707f43ffc0c ChangeLog 36540
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 c1e2ae209df9cac86171e3c7067c7590 perl-5.8.2-r4.ebuild 11084
-MD5 994914600d0321d557517e19f2e89524 perl-5.8.4-r4.ebuild 13221
-MD5 41209d7161da73d7712064aed0e118b3 perl-5.8.5-r5.ebuild 12862
-MD5 3ec8b13fa8ed42facb08d19dcae33ba8 perl-5.8.6-r4.ebuild 13107
+MD5 c904f394a6304920b932858d5c526c84 perl-5.8.4-r4.ebuild 13222
+MD5 2330fc8c4fe27031d93c88f482923185 perl-5.8.5-r5.ebuild 12863
+MD5 50fadb43fe2b65b1f06bc797f6201cc0 perl-5.8.6-r4.ebuild 13112
 MD5 bd75f0242e3b7791803d089c38a3f920 files/CAN-2005-0156-suid.patch 703
 MD5 2bd41aec5e22962224dc9376e27bdde3 files/CAN-2005-0448-rmtree.patch 7629
 MD5 8381e239056a7895edf8f3c6c05c835c files/digest-perl-5.8.2-r4 64
@@ -40,3 +43,10 @@ MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.6-reorder-INC.patch 2211
 MD5 c5cc36940b2488a37c3dc2287f6e672c files/perl-5.8.6-tempfiles.patch 2115
 MD5 2e12f5128439c83b3c5a3615253f4d8f files/perl-cleaner 8606
 MD5 803b7c028f59008ea1e6d577e5c0bab0 files/stat.t 8884
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClH+9tG5z4I8BtQoRAhcfAJ48PACmzOokCsBYayooTDKSspxLqACfapta
+T+ip8VUSsK/QnKq4pBA3VaI=
+=7jKq
+-----END PGP SIGNATURE-----
