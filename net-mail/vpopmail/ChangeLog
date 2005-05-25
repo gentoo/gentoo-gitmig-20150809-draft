@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.57 2005/05/25 19:02:31 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.58 2005/05/25 22:51:07 anarchy Exp $
+
+  25 May 2005; Jory A. Pratt <anarchy@gentoo.org> vpopmail-5.4.9-r2.ebuild,
+  vpopmail-5.5.0.ebuild:
+  updated to copy compile file from automake-1.6, also removed all keywords
+  for 5.5.0
 
   25 May 2005; Jory A. Pratt <anarchy@gentoo.org>
   +files/vpopmail-fPIC.patch, +vpopmail-5.4.9-r2.ebuild:

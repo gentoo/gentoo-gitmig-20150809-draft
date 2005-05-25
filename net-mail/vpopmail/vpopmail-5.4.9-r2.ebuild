@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r2.ebuild,v 1.4 2005/05/25 19:04:00 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r2.ebuild,v 1.5 2005/05/25 22:51:07 anarchy Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -123,7 +123,11 @@ src_compile() {
 	# TCPRULES for relaying is now considered obsolete, use relay-ctrl instead
 	#--enable-tcprules-prog=/usr/bin/tcprules --enable-tcpserver-file=/etc/tcp.smtp \
 	#--enable-roaming-users=y --enable-relay-clear-minutes=60 \
-	#--disable-rebuild-tcpserver-file \	
+	#--disable-rebuild-tcpserver-file \
+
+	# Copy compile from automake-1.6 
+	cp /usr/share/automake-1.6/compile ./ || die "failed to copy file"
+
 	emake || die "Make failed."
 }
 
