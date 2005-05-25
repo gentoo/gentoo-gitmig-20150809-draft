@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Trigger
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.7 2005/04/24 17:30:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.8 2005/05/25 15:02:24 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Class-Trigger-0.08.ebuild:
+  dev-perl/Test-Simple => perl-core/Test-Simple migration
 
 *Class-Trigger-0.09 (24 Apr 2005)
 
