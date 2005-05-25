@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/Test-ClassAPI-1.02.ebuild,v 1.3 2005/05/25 13:43:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/Test-ClassAPI-1.02.ebuild,v 1.4 2005/05/25 15:13:46 mcummings Exp $
 
 inherit perl-module
 
@@ -14,6 +14,6 @@ KEYWORDS="~x86 ~amd64 ~alpha ~hppa ~mips ~ppc ~sparc"
 IUSE=""
 
 DEPEND=">=perl-core/File-Spec-0.83
-		dev-perl/Test-Simple
+		perl-core/Test-Simple
 		>=dev-perl/Class-Inspector-1.06
 		dev-perl/Config-Tiny"

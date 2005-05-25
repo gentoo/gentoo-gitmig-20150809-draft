@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Builder-Tester/Test-Builder-Tester-1.01.ebuild,v 1.9 2005/05/10 16:14:50 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Builder-Tester/Test-Builder-Tester-1.01.ebuild,v 1.10 2005/05/25 15:13:15 mcummings Exp $
 
 inherit perl-module
 
@@ -12,5 +12,5 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha ppc64"
 
-DEPEND=">=dev-perl/Test-Simple-0.47
+DEPEND=">=perl-core/Test-Simple-0.47
 		dev-perl/module-build"
