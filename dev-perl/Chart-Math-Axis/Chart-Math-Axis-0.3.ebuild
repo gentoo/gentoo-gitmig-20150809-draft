@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart-Math-Axis/Chart-Math-Axis-0.3.ebuild,v 1.10 2005/05/25 09:09:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart-Math-Axis/Chart-Math-Axis-0.3.ebuild,v 1.11 2005/05/25 14:59:28 mcummings Exp $
 
 inherit perl-module
 
@@ -17,4 +17,4 @@ SRC_TEST="do"
 
 DEPEND=">=perl-core/Math-BigInt-1.70
 	dev-perl/Clone
-	dev-perl/Test-Simple"
+	perl-core/Test-Simple"

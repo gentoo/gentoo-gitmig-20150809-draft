@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Array-Window
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Window/ChangeLog,v 1.9 2005/04/24 14:19:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Window/ChangeLog,v 1.10 2005/05/25 14:58:36 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Array-Window-0.4.ebuild:
+  dev-perl/Test-Simple => perl-core/Test-Simple migration
 
   24 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Array-Window-0.1.ebuild:
