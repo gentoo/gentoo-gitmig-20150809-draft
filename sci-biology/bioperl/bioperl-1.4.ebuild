@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.4.ebuild,v 1.6 2005/05/25 13:56:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.4.ebuild,v 1.7 2005/05/25 14:47:23 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -21,7 +21,7 @@ DEPEND="
 	dev-perl/IO-String
 	dev-perl/IO-stringy
 	dev-perl/SOAP-Lite
-	dev-perl/Storable
+	perl-core/Storable
 	dev-perl/XML-DOM
 	dev-perl/XML-Parser
 	dev-perl/XML-Writer
