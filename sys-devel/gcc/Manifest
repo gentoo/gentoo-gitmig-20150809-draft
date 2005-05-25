@@ -5,7 +5,7 @@ MD5 37f3db1694d592dc3a3db07507390b76 gcc-3.1.1-r2.ebuild 9270
 MD5 3196c90905902891b12b4d08372c0eb5 gcc-2.95.3-r9.ebuild 7524
 MD5 37ae28535bb42708bc729e53512ad369 gcc-3.3.2-r5.ebuild 21306
 MD5 3e3bc1c3e3953428824c0fd3f206c48b gcc-3.3.2-r7.ebuild 21757
-MD5 d4951444d2cee14710960f2319df0ff5 gcc-3.3.6.ebuild 2850
+MD5 cfaa9a52d9630bb289bd301d96945302 gcc-3.3.6.ebuild 2850
 MD5 db8f65e7648911fb9d8484c13e77676e gcc-3.3.2.ebuild 16816
 MD5 2db26494ddce8e007dbfb8b7eb1bc1f5 gcc-3.3.5-r1.ebuild 3733
 MD5 240c9f26c319c0f305822d43d6daee5e gcc-3.4.3.20050110-r2.ebuild 5188
@@ -21,7 +21,7 @@ MD5 71b180bed94dca00dddf253f7bd6508f gcc-3.2.3-r4.ebuild 19841
 MD5 b8b548680eb8d38969c65b0be505a095 gcc-4.0.0.ebuild 1709
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
-MD5 5239bde880ec2b4b0fc23fc477f7613f files/digest-gcc-3.3.6 384
+MD5 18b9535a343359e167a98b9dad4596e4 files/digest-gcc-3.3.6 384
 MD5 a570da9000df56c70620ec2e36e864a3 files/digest-gcc-2.95.3-r8 137
 MD5 0d683280daf95e6bb9712549352a200c files/digest-gcc-3.1.1-r2 140
 MD5 40e6872c09149a81973f01a78c80bbb7 files/digest-gcc-3.2.3-r4 279
@@ -89,6 +89,10 @@ MD5 d9ae122db2768f8e504dfef256d4991f files/3.3.2/gcc332-gentoo-branding.patch 87
 MD5 9e7ed6184a1cdcb69db29f1de26c2d18 files/3.3.2/gcc332-altivec-fix.patch 1607
 MD5 f8c48b2e721c21d83582f5884bfb79c7 files/awk/fixlafiles.awk 7830
 MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
+MD5 57bc3a63ac4125a3dd90864462d57053 files/stubs/gcc-3.4-htb-stub.patch 702
+MD5 cb27bc36a5b9a1175a5f3bdf38647814 files/stubs/gcc-3.3-ssp-stub.patch 1735
+MD5 00f16b0da434ce80fd4dbd6e88ba5fbd files/stubs/gcc-3.4-ssp-stub.patch 1125
+MD5 0f8035bc5ae6126fd9380ba9dcdcc271 files/stubs/gcc-3.3-htb-stub.patch 2195
 MD5 cd87c02e4896f47bf6029eef0dc29468 files/3.3.3/gcc333-gentoo-branding.patch 874
 MD5 0e8d94bbc14fbb3fbad1df4f404b39ef files/3.3.3/gcc333-ssp-3.3_7-fixup.patch 2616
 MD5 4b249bff27ab6328436e6289ac9f9cfc files/3.3.3/gcc333_pre20040215-gentoo-branding.patch 839
