@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-tomcat-jasper/jakarta-tomcat-jasper-2.ebuild,v 1.1 2005/05/16 14:30:20 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-tomcat-jasper/jakarta-tomcat-jasper-2.ebuild,v 1.2 2005/05/25 15:10:03 luckyduck Exp $
 
 inherit eutils java-pkg
 
-TOMCAT_PN="5.0.28"
-DESCRIPTION="Servlet API 5 from jakarta.apache.org"
-HOMEPAGE="http://jakarta.apache.org/"
-SRC_URI="mirror://apache/jakarta/tomcat-5/v5.0.28/src/jakarta-tomcat-${TOMCAT_PN}-src.tar.gz"
+TOMCAT_PV="5.0.28"
+DESCRIPTION="Jasper 2 is the Tomcat JSP Engine"
+HOMEPAGE="http://jakarta.apache.org/tomcat"
+SRC_URI="mirror://apache/jakarta/tomcat-5/v${TOMCAT_PV}/src/jakarta-tomcat-${TOMCAT_PV}-src.tar.gz"
 
-LICENSE="Apache-1.1"
-SLOT="2.4"
+LICENSE="Apache-2.0"
+SLOT="2"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc jikes source"
 
@@ -29,7 +29,7 @@ RDEPEND=">=virtual/jdk-1.4
 	dev-java/commons-logging
 	dev-java/commons-launcher"
 
-S=${WORKDIR}/jakarta-tomcat-${TOMCAT_PN}-src/${PN}/jasper2
+S=${WORKDIR}/jakarta-tomcat-${TOMCAT_PV}-src/${PN}/jasper2
 
 src_unpack() {
 	unpack ${A}
