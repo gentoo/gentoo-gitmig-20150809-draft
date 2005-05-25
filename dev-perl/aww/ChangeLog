@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/aww
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.5 2005/05/07 04:00:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.6 2005/05/25 14:00:17 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> aww-0.33.ebuild:
+  dev-perl/Getopt-Long => perl-core/Getopt-Long migration
 
   07 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> aww-0.33.ebuild,
   aww-0.34.ebuild:
