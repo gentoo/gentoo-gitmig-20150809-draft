@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/razor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.23 2005/05/25 15:41:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.24 2005/05/25 15:41:48 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> razor-2.67.ebuild:
+  dev-perl/net-ping => perl-core/net-ping migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> razor-2.66.ebuild:
   dev-perl/net-ping => perl-core/net-ping migration
