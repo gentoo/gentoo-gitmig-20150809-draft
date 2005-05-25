@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.155 2005/05/25 03:24:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.156 2005/05/25 22:09:07 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -863,7 +863,6 @@ gcc_src_unpack() {
 
 	[[ -n ${PATCH_VER}  ]] && EPATCH_MULTI_MSG="Applying Gentoo patches ..." epatch "${WORKDIR}"/patch
 	[[ -n ${UCLIBC_VER} ]] && EPATCH_MULTI_MSG="Applying uClibc patches ..." epatch "${WORKDIR}"/uclibc
-	[[ -n ${HTB_VER}    ]] && 
 	do_gcc_HTB_boundschecking_patches
 	do_gcc_SSP_patches
 	do_gcc_PIE_patches
@@ -1599,7 +1598,10 @@ gcc_quick_unpack() {
 	export PP_GCC_VER=${PP_GCC_VER:-${GCC_RELEASE_VER}}
 	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
 
-	if [[ -n ${PRERELEASE} ]] ; then
+	if [[ -n ${GCC_A_FAKEIT} ]] ; then
+		unpack ${GCC_A_FAKEIT}.tar.bz2
+		mv ${GCC_A_FAKEIT} "${S}"
+	elif [[ -n ${PRERELEASE} ]] ; then
 		unpack gcc-${PRERELEASE}.tar.bz2
 	elif [[ -n ${SNAPSHOT} ]] ; then
 		unpack gcc-${SNAPSHOT}.tar.bz2
