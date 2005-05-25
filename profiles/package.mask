@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4008 2005/05/23 20:03:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4009 2005/05/25 11:58:31 ka0ttic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -329,11 +329,6 @@ dev-lang/gpc
 # Carsten Lohrke <carlo@gentoo.org> (07 April 2005)
 # Mask development versions.
 >media-video/kmplayer-0.8.9
-
-# Aaron Walker <ka0ttic@gentoo.org> (06 Apr 2005)
-# Masked until I can figure out why specifying multiple input files
-# causes a segfault.
-=dev-util/source-highlight-2.0_rc1
 
 # Gustavo Zacarias <gustavoz@gentoo.org> (04 Apr 2005)
 # Needs python 2.4
