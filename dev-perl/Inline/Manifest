@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 28a1bce8dbe110544823d3994200bead ChangeLog 2427
 MD5 72c436a60e6c47b9265f7f0d88bd4eb5 Inline-0.44-r1.ebuild 886
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 5e2c4ec7945547fc645cb1531c8936a2 files/digest-Inline-0.44-r1 62
 MD5 b30be5c5ea4ca37f930a17cb8e279201 files/gtk2-patch.diff 907
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClIDjtG5z4I8BtQoRArlHAJ9OIsqhe/Myamvs8pddLMGCaYScMwCgirHl
+fLpWbxqGIf8oesiImaX7MyU=
+=RlxB
+-----END PGP SIGNATURE-----
