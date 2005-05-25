@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.60a-r1.ebuild,v 1.7 2005/03/30 23:09:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.60a-r1.ebuild,v 1.8 2005/05/25 14:13:15 mcummings Exp $
 
 IUSE="jabber ssl"
 
@@ -32,7 +32,7 @@ DEPEND="${DEPEND}
 	dev-perl/libwww-perl
 	dev-perl/libnet
 	dev-perl/MIME-Lite
-	dev-perl/MIME-Base64
+	perl-core/MIME-Base64
 	ssl? ( dev-perl/Crypt-SSLeay )
 	jabber? ( dev-perl/Net-Jabber )
 	ssl? ( dev-perl/IO-Socket-SSL )
