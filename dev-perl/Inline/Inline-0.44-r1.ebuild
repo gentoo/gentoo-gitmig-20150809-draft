@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44-r1.ebuild,v 1.16 2005/05/24 15:45:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44-r1.ebuild,v 1.17 2005/05/25 13:42:39 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
 IUSE="gtk2"
 
 DEPEND="perl-core/Digest-MD5
-	dev-perl/File-Spec
+	perl-core/File-Spec
 	dev-perl/Parse-RecDescent
 	dev-perl/Test-Harness"
 
