@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.2.ebuild,v 1.10 2005/05/24 14:48:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.2.ebuild,v 1.11 2005/05/25 14:24:30 mcummings Exp $
 
 inherit perl-module
 
@@ -17,7 +17,7 @@ IUSE="berkdb qmail ssl doc"
 
 DEPEND=">=dev-lang/perl-5.8.2-r1
 	>=dev-perl/PodParser-1.22
-	dev-perl/MIME-Base64
+	perl-core/MIME-Base64
 	>=dev-perl/HTML-Parser-3.31
 	>=dev-perl/Net-DNS-0.34
 	dev-perl/Digest-SHA1

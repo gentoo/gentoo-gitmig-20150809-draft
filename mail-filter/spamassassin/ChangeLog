@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.43 2005/05/25 14:24:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.44 2005/05/25 14:24:52 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  spamassassin-3.0.3.ebuild:
+  dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   spamassassin-3.0.2.ebuild:
