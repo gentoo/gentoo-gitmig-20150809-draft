@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r2.ebuild,v 1.3 2005/05/25 19:02:31 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r2.ebuild,v 1.4 2005/05/25 19:04:00 anarchy Exp $
 
-inherit eutils gnuconfig fixheadtails flag-o-matic
+inherit eutils gnuconfig fixheadtails
 
 # TODO: all ldap, sybase support
 #MY_PV=${PV/_/-}
@@ -97,8 +97,6 @@ src_compile() {
 	use clearpasswd \
 		&& myopts="${myopts} --enable-clear-passwd=y" \
 		|| myopts="${myopts} --enable-clear-passwd=n"
-
-	use amd64 && append-flags -fPIC
 
 	econf \
 		${myopts} \
