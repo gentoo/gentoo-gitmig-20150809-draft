@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/psmon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.6 2005/01/01 11:20:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.7 2005/05/25 13:58:13 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> psmon-1.0.4.ebuild:
+  dev-perl/Getopt-Long => perl-core/Getopt-Long migration
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> psmon-1.0.4.ebuild:
   Masked psmon-1.0.4.ebuild stable for ppc
