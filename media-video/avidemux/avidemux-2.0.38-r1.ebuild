@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38-r1.ebuild,v 1.1 2005/05/18 12:38:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38-r1.ebuild,v 1.2 2005/05/25 15:26:08 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,6 +45,12 @@ filter-flags "-funroll-all-loops"
 filter-flags "-fforce-addr"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	if ! ( use oss || use arts || use alsa ); then
+		die "You must select at least one between oss, arts and alsa audio output."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
