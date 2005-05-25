@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r2.ebuild,v 1.9 2005/05/14 16:21:40 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r2.ebuild,v 1.10 2005/05/25 04:03:16 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tcpdump/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha ~arm hppa ia64 amd64 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="ssl ipv6"
 
 DEPEND="virtual/libpcap
