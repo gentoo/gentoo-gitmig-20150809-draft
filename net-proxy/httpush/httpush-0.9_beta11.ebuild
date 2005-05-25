@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/httpush/httpush-0.9_beta11.ebuild,v 1.1 2005/04/22 19:15:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/httpush/httpush-0.9_beta11.ebuild,v 1.2 2005/05/25 14:28:07 mcummings Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 IUSE="xml2"
 
 RDEPEND="dev-perl/URI
-	dev-perl/MIME-Base64
+	perl-core/MIME-Base64
 	dev-perl/libwww-perl
 	dev-perl/Net-SSLeay
 	dev-perl/Crypt-SSLeay
