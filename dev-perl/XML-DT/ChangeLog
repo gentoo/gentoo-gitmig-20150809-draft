@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.29 2005/05/22 17:54:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.30 2005/05/25 14:56:13 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> XML-DT-0.24.1.ebuild:
+  dev-perl/Test-Simple => perl-core/Test-Simple migration
 
 *XML-DT-0.40 (22 May 2005)
 
