@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.24 2005/05/25 13:42:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.25 2005/05/25 14:50:36 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> Inline-0.44-r1.ebuild:
+  dev-perl/Test-Harness => perl-core/Test-Harness migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> Inline-0.44-r1.ebuild:
   dev-perl/File-Spec => perl-core/File-Spec migration

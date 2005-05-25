@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.24 2005/04/25 11:46:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.25 2005/05/25 14:49:44 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> DBD-Pg-1.41.ebuild:
+  dev-perl/Test-Harness => perl-core/Test-Harness migration
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org> DBD-Pg-1.13-r1.ebuild,
   -DBD-Pg-1.13.ebuild, DBD-Pg-1.22.ebuild, DBD-Pg-1.31.ebuild,

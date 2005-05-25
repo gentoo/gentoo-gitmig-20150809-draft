@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44-r1.ebuild,v 1.17 2005/05/25 13:42:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44-r1.ebuild,v 1.18 2005/05/25 14:50:36 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -16,7 +16,7 @@ IUSE="gtk2"
 DEPEND="perl-core/Digest-MD5
 	perl-core/File-Spec
 	dev-perl/Parse-RecDescent
-	dev-perl/Test-Harness"
+	perl-core/Test-Harness"
 
 src_unpack() {
 	unpack ${P}.tar.gz
