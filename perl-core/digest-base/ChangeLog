@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/digest-base
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.1 2005/05/24 14:56:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.2 2005/05/25 14:17:48 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  digest-base-1.08.ebuild:
+  dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
 
 *digest-base-1.10 (24 May 2005)
 
