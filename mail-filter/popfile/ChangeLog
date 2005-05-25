@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/popfile
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.6 2005/05/24 15:56:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.7 2005/05/25 14:23:07 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> popfile-0.20.1.ebuild:
+  dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org> popfile-0.21.1.ebuild:
   dev-perl/Digest-MD5 => perl-core/Digest-MD5
