@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.16-r1.ebuild,v 1.3 2005/05/25 00:30:22 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.17.ebuild,v 1.1 2005/05/25 00:30:22 liquidx Exp $
 
 IUSE="gtk alsa cups pcmcia dbus"
 
@@ -12,9 +12,9 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-RDEPEND=">=net-wireless/bluez-libs-2.16
+RDEPEND=">=net-wireless/bluez-libs-2.17
 	!net-wireless/bluez-pan
 	dev-libs/libusb
 	gtk? ( >=dev-python/pygtk-2.2 )
