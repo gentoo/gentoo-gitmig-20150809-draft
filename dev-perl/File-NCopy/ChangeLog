@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-NCopy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.8 2005/04/25 15:49:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.9 2005/05/25 13:40:15 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> File-NCopy-0.34.ebuild:
+  dev-perl/File-Spec => perl-core/File-Spec migration
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org> File-NCopy-0.34.ebuild:
   cleaning
