@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/Test-Class-0.11.ebuild,v 1.3 2005/05/20 21:47:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/Test-Class-0.11.ebuild,v 1.4 2005/05/25 14:42:04 mcummings Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND=">=dev-perl/Storable-2
+DEPEND=">=perl-core/Storable-2
 		dev-perl/module-build
 		dev-perl/Test-Builder-Tester
 		dev-perl/Test-Differences
