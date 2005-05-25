@@ -1,3 +1,13 @@
-MD5 5495581dc558016647cdedbad8bdd467 w3mir-1.0.10.ebuild 570
-MD5 e1f6f98ee17e7321e26748f2168cbed1 ChangeLog 844
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e63cd5e85419fead0e7a9e3910dcccf3 ChangeLog 981
+MD5 c754e3bde6b68b1a8df804ead37dcc3c w3mir-1.0.10.ebuild 573
 MD5 53d0463cf57f91017c262b35c525d597 files/digest-w3mir-1.0.10 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClIudtG5z4I8BtQoRAoNLAKCDU98/SdfS2PLTl61tsI9wroHlQQCfc/vG
+JXslOhn40rYZQgXX4lP+rk4=
+=Hs7I
+-----END PGP SIGNATURE-----

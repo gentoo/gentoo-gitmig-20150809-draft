@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3mir
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.2 2005/03/18 16:30:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.3 2005/05/25 14:28:25 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> w3mir-1.0.10.ebuild:
+  dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
 
 *w3mir-1.0.10 (18 Mar 2005)
 

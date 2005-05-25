@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/w3mir-1.0.10.ebuild,v 1.1 2005/03/18 16:17:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/w3mir-1.0.10.ebuild,v 1.2 2005/05/25 14:28:25 mcummings Exp $
 
 inherit perl-module
 
@@ -16,4 +16,4 @@ KEYWORDS="x86 ppc ~sparc alpha"
 DEPEND="${DEPEND}
 	>=dev-perl/URI-1.0.9
 	>=dev-perl/libwww-perl-5.64-r1
-	>=dev-perl/MIME-Base64-2.12"
+	>=perl-core/MIME-Base64-2.12"
