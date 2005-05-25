@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/Locale-PO-0.12.ebuild,v 1.6 2005/05/01 18:05:42 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/Locale-PO-0.12.ebuild,v 1.7 2005/05/25 04:17:51 vapier Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ DEPEND="${DEPEND}
 RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ppc sparc alpha ~s390 ~ppc64"
+KEYWORDS="alpha amd64 ppc ~ppc64 s390 sparc x86"
 IUSE=""
 
 SRC_TEST="do"
