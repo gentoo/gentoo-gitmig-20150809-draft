@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e199ae360bca464caf6ba4478810e7c ChangeLog 2243
 MD5 99cf8e0f0a92c1c7c42efefce2f61bde Date-ICal-1.72.ebuild 718
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 5aabffbbc857bac0438ced3e230198c7 files/digest-Date-ICal-1.72 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClJRJtG5z4I8BtQoRAlt1AKCPWz47XfV43nIAD/CXix3isfkjpwCgk18G
+rsro83w+/U61pMe+6ObcM70=
+=ZkQ5
+-----END PGP SIGNATURE-----
