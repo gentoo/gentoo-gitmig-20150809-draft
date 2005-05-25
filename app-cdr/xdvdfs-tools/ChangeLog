@@ -1,6 +1,15 @@
 # ChangeLog for app-cdr/xdvdfs-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xdvdfs-tools/ChangeLog,v 1.8 2005/05/21 11:21:36 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xdvdfs-tools/ChangeLog,v 1.9 2005/05/25 23:16:32 chrb Exp $
+
+*xdvdfs-tools-2.1-r1 (26 May 2005)
+
+  26 May 2005; Chris Bainbridge <chrb@gentoo.org> -xdvdfs-tools-1.0.ebuild,
+  +xdvdfs-tools-2.1-r1.ebuild:
+  Revision bump for security fix.
+
+  22 May 2005; Chris Bainbridge <chrb@gentoo.org> -xdvdfs-tools-1.0.ebuild:
+  Removing insecure 1.0 ebuild.
 
 *xdvdfs-tools-2.1 (21 May 2005)
 

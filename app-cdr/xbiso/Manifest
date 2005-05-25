@@ -1,4 +1,6 @@
-MD5 f1d39402733e67cb455f6099d74b766f ChangeLog 569
+MD5 d5d3761bce899eec0375f18911b403d1 ChangeLog 709
+MD5 4ec40e1b2c466d39ce4f4f1716b4c693 xbiso-0.6.0-r1.ebuild 579
 MD5 4ec40e1b2c466d39ce4f4f1716b4c693 xbiso-0.6.0.ebuild 579
+MD5 33080cee554b29175fc0e2cb37cf8fe2 files/digest-xbiso-0.6.0-r1 62
 MD5 01f701ccc3910ac690c296beb6747f61 files/xbiso-0.6.0-fnamecheck.patch 1466
 MD5 33080cee554b29175fc0e2cb37cf8fe2 files/digest-xbiso-0.6.0 62
