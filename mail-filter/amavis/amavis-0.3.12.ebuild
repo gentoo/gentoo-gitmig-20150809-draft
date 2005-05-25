@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/amavis-0.3.12.ebuild,v 1.8 2004/07/13 23:23:55 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/amavis-0.3.12.ebuild,v 1.9 2005/05/25 14:20:20 mcummings Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND="dev-lang/perl
 	dev-perl/IO-stringy
 	dev-perl/Unix-Syslog
 	dev-perl/MailTools
-	dev-perl/MIME-Base64
+	perl-core/MIME-Base64
 	>=dev-perl/MIME-tools-5.313
 	>dev-perl/Convert-UUlib-0.2
 	>=dev-perl/Convert-TNEF-0.06
