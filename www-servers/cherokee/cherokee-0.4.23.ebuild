@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.23.ebuild,v 1.1 2005/05/24 22:54:31 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.23.ebuild,v 1.2 2005/05/25 02:54:18 dang Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND=">=sys-devel/automake-1.7.5
 	ssl? ( dev-libs/openssl )
 	${RDEPEND}"
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 SLOT="0"
 IUSE="ipv6 ssl gnutls pic static"
 
