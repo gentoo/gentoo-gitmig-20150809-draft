@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1e26a195b805d41d49deb2c1be6e0b61 ChangeLog 1039
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
 MD5 850b2853d2a9dca0fc0079e0b15717ba Bio-Das-1.00.ebuild 623
 MD5 d79a95f4b1a4eae8c9100b5e053aeb08 files/digest-Bio-Das-1.00 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClIcDtG5z4I8BtQoRAnc0AKCKguOpshLiIr4WUTDjbbXPvqNgmwCdFuED
+PbU9/IbQmBHIGs1iurGOiVQ=
+=Sbif
+-----END PGP SIGNATURE-----
