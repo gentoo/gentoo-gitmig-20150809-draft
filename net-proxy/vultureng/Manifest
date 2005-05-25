@@ -1,4 +1,14 @@
-MD5 20e9ad232685d4f72d217e5c7cacda67 vultureng-0.6.ebuild 1982
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8275264c6c1ea8fe1f2e4b7856a8f28c vultureng-0.6.ebuild 1997
+MD5 a21d5732538da362ec06f1bba53aecb0 ChangeLog 538
 MD5 00207fef1008248ad0690a78cd626978 metadata.xml 221
-MD5 40001b63bf42bcecc8ebab42a69274cd ChangeLog 427
 MD5 6befc587a6fc87175425a4999570270b files/digest-vultureng-0.6 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFClMe4I1lqEGTUzyQRAqRQAKCGw6TXUQjzMt7eMGFor8H8wynbnACeM9pb
+I5LDAIbl6eg6g7J1cPNplio=
+=x0tg
+-----END PGP SIGNATURE-----

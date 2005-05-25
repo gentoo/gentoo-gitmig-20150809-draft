@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/vultureng-0.6.ebuild,v 1.2 2005/05/25 09:23:58 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/vultureng-0.6.ebuild,v 1.3 2005/05/25 18:44:45 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,7 +23,7 @@ dev-perl/Apache-Session
 dev-perl/DBD-Pg
 dev-perl/libwww-perl
 net-www/mod_security
->=mod_perl-1.99
+>=www-apache/mod_perl-1.99
 >=net-www/apache-2.0.52
 dev-php/mod_php
 dev-php/PECL-sqlite
