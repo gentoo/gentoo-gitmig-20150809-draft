@@ -1,0 +1,41 @@
+diff -urpN avrdude-orig/doc/Makefile.am avrdude-4.4.0/doc/Makefile.am
+--- avrdude-orig/doc/Makefile.am	2003-03-13 04:59:09.000000000 +0100
++++ avrdude-4.4.0/doc/Makefile.am	2005-05-25 00:09:52.000000000 +0200
+@@ -30,9 +30,15 @@ info_TEXINFOS = avrdude.texi
+ all-local: info html ps pdf
+ 
+ html: 
+-	mkdir -p avrdude-html
+ 	texi2html -split_node $(srcdir)/$(info_TEXINFOS)
+-	mv *.html avrdude-html
++	if [ -e ./avrdude.html ]; then \
++	 mkdir -p avrdude-html; \
++	 mv *.html avrdude-html ; \
++	else \
++	 rm -rf avrdude-html; \
++	 mv avrdude avrdude-html; \
++	fi;
++	
+ 
+ clean-local:
+ 	rm -rf avrdude-html *.info
+diff -urpN avrdude-orig/doc/Makefile.in avrdude-4.4.0/doc/Makefile.in
+--- avrdude-orig/doc/Makefile.in	2004-07-19 08:17:15.000000000 +0200
++++ avrdude-4.4.0/doc/Makefile.in	2005-05-25 00:09:52.000000000 +0200
+@@ -425,9 +425,14 @@ uninstall-am: uninstall-info-am uninstal
+ all-local: info html ps pdf
+ 
+ html: 
+-	mkdir -p avrdude-html
+ 	texi2html -split_node $(srcdir)/$(info_TEXINFOS)
+-	mv *.html avrdude-html
++	if [ -e ./avrdude.html ]; then \
++	 mkdir -p avrdude-html; \
++	 mv *.html avrdude-html ; \
++	else \
++	 rm -rf avrdude-html; \
++	 mv avrdude avrdude-html; \
++	fi;
+ 
+ clean-local:
+ 	rm -rf avrdude-html *.info
