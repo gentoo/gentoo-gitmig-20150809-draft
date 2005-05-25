@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-ISO
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/ChangeLog,v 1.17 2005/04/25 13:40:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/ChangeLog,v 1.18 2005/05/25 14:29:58 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> Date-ISO-1.30.ebuild:
+  dev-perl/Memoize => perl-core/Memoize migration
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Date-ISO-1.28-r1.ebuild, -Date-ISO-1.28.ebuild, Date-ISO-1.30.ebuild:
