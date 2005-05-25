@@ -1,6 +1,9 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.18 2005/05/11 13:49:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.19 2005/05/25 15:37:30 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> awstats-6.3-r2.ebuild:
+  dev-perl/Time-Local => perl-core/Time-Local migration
 
   11 May 2005; Aaron Walker <ka0ttic@gentoo.org> awstats-6.3-r2.ebuild,
   awstats-6.4.ebuild:
