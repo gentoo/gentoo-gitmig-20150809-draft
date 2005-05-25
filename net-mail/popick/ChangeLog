@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/popick
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/ChangeLog,v 1.2 2005/03/07 17:58:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/ChangeLog,v 1.3 2005/05/25 14:04:12 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> popick-0.1.ebuild:
+  dev-perl/Getopt-Long => perl-core/Getopt-Long migration
 
   07 Mar 2005; Andrej Kacian <ticho@gentoo.org> popick-0.1.ebuild:
   Stable on x86.
