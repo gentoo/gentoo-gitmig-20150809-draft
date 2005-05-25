@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/emerge-delta-webrsync
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.4 2005/05/24 12:38:29 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.5 2005/05/25 07:55:56 ferringb Exp $
+
+  25 May 2005; Brian Harring <ferringb@gentoo.org> emerge-delta-webrsync-3-r1.ebuild:
+  revbump, with exit fix for initial download.
 
 *emerge-delta-webrsync-3: May 24 2005
 
