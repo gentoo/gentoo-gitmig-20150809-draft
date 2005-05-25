@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-0.5.4.ebuild,v 1.1 2005/02/02 10:13:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-0.5.4.ebuild,v 1.2 2005/05/25 14:07:21 mcummings Exp $
 
 DESCRIPTION="Simple Perl/Tk GUI to manage a small certification authority"
 HOMEPAGE="http://tinyca.sm-zone.net/"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.6i
 	dev-perl/Locale-gettext
-	>=dev-perl/MIME-Base64-2.12
+	>=perl-core/MIME-Base64-2.12
 	>=dev-perl/perl-tk-800.024"
 
 S=${WORKDIR}/TinyCA
