@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7c31e169ba48d7aaa921b887295c852c ChangeLog 1614
 MD5 3107432f1430644028e19ee9c66a395d Locale-PO-0.11.ebuild 573
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 41249c9411cfad0321c5c3e67c1fab86 Locale-PO-0.12.ebuild 577
 MD5 f1f6c75307ffa748308bc38488cdc8ea Locale-PO-0.14.ebuild 586
-MD5 3e3101369aa5c6c2d65b3f47383fedb1 Locale-PO-0.12.ebuild 578
+MD5 f49b92c770470c3a6029cef2b6947c04 files/digest-Locale-PO-0.11 65
 MD5 f0c01faa1c187b238efdf5bd3b199813 files/digest-Locale-PO-0.12 65
 MD5 20f75464cc4cf5cb41f945cc4d0956c2 files/digest-Locale-PO-0.14 65
-MD5 f49b92c770470c3a6029cef2b6947c04 files/digest-Locale-PO-0.11 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdRqOCHk4+ZoBpvsRAgnPAJ9gpohMQld8jMhHan8JHCSE6bee7ACaA6HC
-XWVzLM4RuvQdu6cvWftQKcE=
-=MgZr
------END PGP SIGNATURE-----
