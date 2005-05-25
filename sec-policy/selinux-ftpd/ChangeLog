@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-ftpd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ftpd/ChangeLog,v 1.5 2005/05/07 06:50:22 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ftpd/ChangeLog,v 1.6 2005/05/25 18:48:45 kaiowas Exp $
+
+*selinux-ftpd-20050525 (25 May 2005)
+
+  25 May 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-ftpd-20050211.ebuild, +selinux-ftpd-20050525.ebuild:
+  fix for #93935, removed obsolete inetd ifdefs
 
   07 May 2005; petre rodan <kaiowas@gentoo.org>
   -selinux-ftpd-20041120.ebuild, selinux-ftpd-20050408.ebuild:
