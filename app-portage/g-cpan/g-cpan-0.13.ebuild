@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.13.ebuild,v 1.2 2005/05/25 12:08:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.13.ebuild,v 1.3 2005/05/25 12:12:57 mcummings Exp $
 
 DESCRIPTION="g-cpan: generate and install CPAN modules using portage"
 HOMEPAGE="http://dev.gentoo.org/~mcummings/"
-SRC_URI="mirorr://gentoo/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
