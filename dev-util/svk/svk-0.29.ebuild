@@ -22,7 +22,7 @@ DEPEND="${DEPEND}
 	>=dev-perl/PerlIO-via-dynamic-0.11
 	>=dev-perl/PerlIO-via-symlink-0.02
 	>=dev-perl/Data-Hierarchy-0.21
-	>=dev-perl/File-Temp-0.14
+	>=perl-core/File-Temp-0.14
 	dev-perl/Algorithm-Annotate
 	dev-perl/Algorithm-Diff
 	dev-perl/yaml
