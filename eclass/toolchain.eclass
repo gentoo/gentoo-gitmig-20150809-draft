@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.153 2005/05/24 05:08:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.154 2005/05/25 00:27:12 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -406,7 +406,7 @@ want_boundschecking() {
 }
 
 want_split_specs() {
-	[[ ${SPLIT_SPECS} == "true" ]]
+	[[ ${SPLIT_SPECS} == "true" ]] && [[ -n ${PIE_VER} ]]
 }
 
 # This function checks whether or not glibc has the support required to build
@@ -593,6 +593,7 @@ split_out_specs_files() {
 		create_vanilla_specs_file
 		create_hardenednossp_specs_file
 		create_hardenednopie_specs_file
+		create_hardenednopiessp_specs_file
 	elif hardened_gcc_works pie ; then
 		create_vanilla_specs_file
 		create_hardenednossp_specs_file
@@ -842,6 +843,8 @@ gcc-library_src_unpack() {
 gcc_src_unpack() {
 	local release_version="Gentoo ${PVR}"
 
+	[[ -z ${UCLIBC_VER} ]] && is_uclibc && die "Sorry, this version does not support uClibc"
+
 	gcc_quick_unpack
 	exclude_gcc_patches
 
@@ -849,9 +852,10 @@ gcc_src_unpack() {
 
 	[[ -n ${PATCH_VER}  ]] && EPATCH_MULTI_MSG="Applying Gentoo patches ..." epatch "${WORKDIR}"/patch
 	[[ -n ${UCLIBC_VER} ]] && EPATCH_MULTI_MSG="Applying uClibc patches ..." epatch "${WORKDIR}"/uclibc
-	[[ -n ${HTB_VER}    ]] && do_gcc_HTB_boundschecking_patches
-	[[ -n ${PP_VER}     ]] && do_gcc_SSP_patches
-	[[ -n ${PIE_VER}    ]] && do_gcc_PIE_patches
+	[[ -n ${HTB_VER}    ]] && 
+	do_gcc_HTB_boundschecking_patches
+	do_gcc_SSP_patches
+	do_gcc_PIE_patches
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
@@ -1651,8 +1655,29 @@ exclude_gcc_patches() {
 	done
 }
 
+# Try to apply some stub patches so that gcc won't error out when
+# passed parameters like -fstack-protector but no ssp is found
+do_gcc_stub() {
+	local v stub_patch=""
+	for v in ${GCC_RELEASE_VER} ${GCC_BRANCH_VER} ; do
+		stub_patch=${FILESDIR}/stubs/gcc-${v}-$1-stub.patch
+		if [[ -e ${stub_patch} ]] ; then
+			EPATCH_SINGLE_MSG="Applying stub patch for $1 ..." \
+			epatch "${stub_patch}"
+			return 0
+		fi
+	done
+}
+
 do_gcc_HTB_boundschecking_patches() {
-	want_boundschecking || return 0
+	if [[ -z ${HTB_VER} ]] || \
+	   ! want_boundschecking || \
+	   ([[ -n ${PP_VER} ]] && [[ ${HTB_EXCLUSIVE} == "true" ]])
+	then
+		do_gcc_stub htb
+		return 0
+	fi
+
 	# modify the bounds checking patch with a regression patch
 	epatch "${WORKDIR}/bounds-checking-${PN}-${HTB_GCC_VER}-${HTB_VER}.patch"
 	release_version="${release_version}, HTB-${HTB_GCC_VER}-${HTB_VER}"
@@ -1661,9 +1686,13 @@ do_gcc_HTB_boundschecking_patches() {
 # patch in ProPolice Stack Smashing protection
 do_gcc_SSP_patches() {
 	# PARISC has no love ... it's our stack :(
-	[[ $(tc-arch) == "hppa" ]] && return 0
-
-	want_boundschecking && [[ ${HTB_EXCLUSIVE} == "true" ]] && return 0
+	if [[ $(tc-arch) == "hppa" ]] || \
+	   [[ -z ${PP_VER} ]] || \
+	   (want_boundschecking && [[ ${HTB_EXCLUSIVE} == "true" ]])
+	then
+		do_gcc_stub ssp
+		return 0
+	fi
 
 	local ssppatch
 	local sspdocs
@@ -1683,7 +1712,7 @@ do_gcc_SSP_patches() {
 		ssppatch="${S}/protector.dif"
 		sspdocs="no"
 	else
-		die "gcc version not supported by do_gcc_SSP_patches"
+		die "Sorry, SSP is not supported in this version"
 	fi
 
 	epatch ${ssppatch}
@@ -1730,7 +1759,11 @@ update_gcc_for_libssp() {
 
 # do various updates to PIE logic
 do_gcc_PIE_patches() {
-	want_boundschecking && [[ ${HTB_EXCLUSIVE} == "true" ]] && return 0
+	if [[ -z ${PIE_VER} ]] || \
+	   (want_boundschecking && [[ ${HTB_EXCLUSIVE} == "true" ]])
+	then
+		return 0
+	fi
 
 	want_boundschecking \
 		&& rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-no.patch.bz2 \
