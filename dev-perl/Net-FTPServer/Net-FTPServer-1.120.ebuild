@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.120.ebuild,v 1.7 2005/05/24 15:47:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.120.ebuild,v 1.8 2005/05/25 13:50:24 mcummings Exp $
 
 inherit perl-module
 
@@ -19,7 +19,7 @@ DEPEND="dev-perl/Archive-Zip
 		dev-perl/BSD-Resource
 		dev-perl/Compress-Zlib
 		perl-core/Digest-MD5
-		dev-perl/File-Temp
+		perl-core/File-Temp
 		dev-perl/Getopt-Long
 		dev-perl/libnet
 		dev-perl/File-Sync
