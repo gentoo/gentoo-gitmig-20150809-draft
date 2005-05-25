@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.6.2.ebuild,v 1.1 2005/05/05 11:35:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.6.2.ebuild,v 1.2 2005/05/25 11:57:27 flameeyes Exp $
+
+inherit eutils
 
 DESCRIPTION="LibTorrent is a BitTorrent library written in C++ for *nix."
 HOMEPAGE="http://libtorrent.rakshasa.no/"
@@ -15,6 +17,15 @@ RDEPEND=">=dev-libs/libsigc++-2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.11"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-fbsd.patch
+
+	./autogen.sh
+}
 
 src_compile() {
 	econf \

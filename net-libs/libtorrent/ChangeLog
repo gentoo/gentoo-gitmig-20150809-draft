@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.7 2005/05/05 11:35:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.8 2005/05/25 11:57:27 flameeyes Exp $
+
+  25 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libtorrent-0.6.2-fbsd.patch, libtorrent-0.6.2.ebuild:
+  Added Gentoo/FreeBSD compatibility patch, now libtorrent compile and works
+  there.
 
 *libtorrent-0.6.2 (05 May 2005)
 
