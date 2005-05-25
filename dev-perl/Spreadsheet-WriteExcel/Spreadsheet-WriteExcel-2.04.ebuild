@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/Spreadsheet-WriteExcel-2.04.ebuild,v 1.7 2005/04/29 13:19:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/Spreadsheet-WriteExcel-2.04.ebuild,v 1.8 2005/05/25 13:51:33 mcummings Exp $
 
 inherit perl-module
 
@@ -12,6 +12,6 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~x86 ppc"
 
-DEPEND="dev-perl/File-Temp
+DEPEND="perl-core/File-Temp
 	dev-perl/Parse-RecDescent"
 IUSE=""

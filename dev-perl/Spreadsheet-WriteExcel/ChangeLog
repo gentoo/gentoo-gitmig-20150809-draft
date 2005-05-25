@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Spreadsheet-WriteExcel
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/ChangeLog,v 1.9 2005/05/25 13:51:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/ChangeLog,v 1.10 2005/05/25 13:51:50 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Spreadsheet-WriteExcel-2.11.ebuild:
+  dev-perl/File-Temp => perl-core/File-Temp migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   Spreadsheet-WriteExcel-2.04.ebuild:
