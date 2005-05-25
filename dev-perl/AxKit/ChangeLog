@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AxKit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.35 2005/05/25 14:36:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.36 2005/05/25 14:37:00 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> AxKit-1.6-r2.ebuild:
+  dev-perl/Storable => perl-core/Storable migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> AxKit-1.6-r1.ebuild:
   dev-perl/Storable => perl-core/Storable migration
