@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d65d6b49441385ad12a261359c691f52 eclair-9999.ebuild 455
-MD5 b7ed4a4367606e2b94ab13ca88bacde4 ChangeLog 353
+MD5 78fef707b5518809015be910d6347ac4 eclair-9999.ebuild 480
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+MD5 b7ed4a4367606e2b94ab13ca88bacde4 ChangeLog 353
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eclair-9999 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcTCOI1lqEGTUzyQRAuWyAJ49G0kZTrV5eJwVjWY7PWdUOd9nCQCgrPj3
-LT/a9C2pNXkXJkAgyiSUdDI=
-=cqYa
------END PGP SIGNATURE-----
