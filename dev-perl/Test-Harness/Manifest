@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 fc39392a2f1a9e866fe2c34815330676 ChangeLog 4714
+MD5 fd3dce82b7f211c53483d6066885a72d Test-Harness-2.30.ebuild 650
 MD5 e8631a2ac76de45a7132da715c7c4964 Test-Harness-2.42.ebuild 558
-MD5 7ed63260770c7fd1fa07712be7cd8faf ChangeLog 4576
-MD5 5e6971369aafc708b307f66c4e8d77d1 Test-Harness-2.30.ebuild 646
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 0a02516f5c2671f44dfbadefb6d3f1a1 files/digest-Test-Harness-2.30 68
 MD5 7fcf6195e61ac31b053354603b6dcd65 files/digest-Test-Harness-2.42 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCb85tI1lqEGTUzyQRArhUAKC9bRKm7MXiu84Ej9Ux1FjDDKbpOgCbBwj/
-1cFYKDgs1uLv2svBNYOQ158=
-=2oqz
------END PGP SIGNATURE-----
