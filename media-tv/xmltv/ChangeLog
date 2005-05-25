@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.35 2005/05/25 14:31:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.36 2005/05/25 14:31:47 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> xmltv-0.5.37-r1.ebuild:
+  dev-perl/Memoize => perl-core/Memoize migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> xmltv-0.5.39.ebuild:
   dev-perl/Memoize => perl-core/Memoize migration
