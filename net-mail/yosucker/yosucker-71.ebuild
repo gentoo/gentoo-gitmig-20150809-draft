@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/yosucker-71.ebuild,v 1.2 2005/05/24 15:59:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/yosucker-71.ebuild,v 1.3 2005/05/25 14:27:16 mcummings Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="dev-lang/perl
 		dev-perl/TermReadKey
 		perl-core/Digest-MD5
 		dev-perl/IO-Socket-SSL
-		dev-perl/MIME-Base64"
+		perl-core/MIME-Base64"
 
 RDEPEND=""
 
