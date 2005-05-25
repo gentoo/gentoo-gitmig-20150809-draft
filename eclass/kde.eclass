@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.118 2005/05/25 16:26:40 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.119 2005/05/25 19:52:35 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -40,7 +40,6 @@ kde_pkg_setup() {
 }
 
 kde_src_unpack() {
-
 	debug-print-function $FUNCNAME $*
 	
 	# call base_src_unpack, which implements most of the functionality and has sections,
@@ -62,12 +61,11 @@ kde_src_unpack() {
 		debug-print "$FUNCNAME: touching .ui files..."
 		touch $UIFILES
 	fi
-
-	# Visibility support is broken in KDE. Disable it when present until
-	# upstream finds a way to get it working properly. Bug 86898.
+	
+	# Visiblity stuff is way broken! Just disable it when it's present
+	# until upstream finds a way to have it working right.
 	if grep HAVE_GCC_VISIBILITY configure &> /dev/null || ! [[ -f configure ]]; then
-		find ${S} -name configure.in.in | xargs sed -i -e \
-			's:KDE_ENABLE_HIDDEN_VISIBILITY::g'
+		find ${S} -name configure.in.in | xargs sed -i -e 's:KDE_ENABLE_HIDDEN_VISIBILITY::g'
 		rm -f configure
 	fi
 }

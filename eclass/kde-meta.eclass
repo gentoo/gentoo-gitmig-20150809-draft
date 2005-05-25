@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.32 2005/05/25 16:27:06 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.33 2005/05/25 19:52:35 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -57,17 +57,20 @@ if [ "$KDEBASE" = "true" ]; then
 	# Does anyone really want to make this code generic based on $TARBALLVER above?
 	case "$PV" in
 		3.4.0_beta1)	XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
-						XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta"
-						;;
+				XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta"
+				;;
 		3.4.0_beta2)	XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
-						XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta"
-						;;
-		3.4.0_rc1)		XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
-						XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta unstable/3.4.0-rc1/src/$KMNAME-3.3.92-3.4.0-rc1.tar.xdelta"
-						;;
-		3.4.0)			;; # xdeltas break off at first stable version, since most people
-							# don't have prerelease tarballs handy
-		*)				;;
+				XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta"
+				;;
+		3.4.0_rc1)	XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
+				XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta unstable/3.4.0-rc1/src/$KMNAME-3.3.92-3.4.0-rc1.tar.xdelta"
+				;;
+		3.4.0)		;; 	# xdeltas break off at first stable version, since most people
+					# don't have prerelease tarballs handy
+		3.4.1)		XDELTA_BASE="stable/3.4.0/src/$KMNAME-3.4.0.tar.bz2"
+				XDLELTA_DELTA="stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta"
+				;;			
+		*)		;;
 	esac	
 
 elif [ "$KMNAME" == "koffice" ]; then
@@ -343,9 +346,9 @@ function kde-meta_src_unpack() {
 		if [ "$KMNAME" == "kdebase" ]; then
 			sed -i -e s:"bin_SCRIPTS = startkde"::g ${S}/Makefile.am.in
 		fi
-
-		# Visibility support is broken in KDE. Disable it when present until
-		# upstream finds a way to get it working properly. Bug 86898.
+		
+		# Visiblity stuff is way broken! Just disable it when it's present
+		# until upstream finds a way to have it working right.
 		if grep HAVE_GCC_VISIBILITY configure &> /dev/null || ! [[ -f configure ]]; then
 			find ${S} -name configure.in.in | xargs sed -i -e \
 				's:KDE_ENABLE_HIDDEN_VISIBILITY::g'
