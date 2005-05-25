@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e.ebuild,v 1.2 2005/01/24 04:40:26 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e.ebuild,v 1.3 2005/05/25 00:11:04 spyderous Exp $
 
 IUSE="X"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}
 DESCRIPTION="Program for performing molecular dynamics simulations."
 SRC_URI="ftp://ftp.earth.ox.ac.uk/pub/${P}.tar.gz"
 #For lack of a better homepage
-HOMEPAGE="http://sal.kachinatech.com/Z/2/MOLDY.html"
+HOMEPAGE="http://www.earth.ox.ac.uk/~keithr/moldy.html"
 
 LICENSE="GPL-2"
 SLOT="0"
