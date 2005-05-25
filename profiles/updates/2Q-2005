@@ -92,3 +92,4 @@ move dev-perl/Storable perl-core/Storable
 move dev-perl/Test-Harness perl-core/Test-Harness
 move dev-perl/Test-Simple perl-core/Test-Simple
 move dev-perl/Text-Balanced perl-core/Text-Balanced
+move dev-perl/Time-HiRes perl-core/Time-HiRes
