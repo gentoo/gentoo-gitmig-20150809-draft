@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/pop-before-smtp-1.36.ebuild,v 1.2 2004/12/13 23:16:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/pop-before-smtp-1.36.ebuild,v 1.3 2005/05/25 15:32:43 mcummings Exp $
 
 DESCRIPTION="a simple daemon to allow email relay control based on successful POP or IMAP logins"
 HOMEPAGE="http://popbsmtp.sourceforge.net"
