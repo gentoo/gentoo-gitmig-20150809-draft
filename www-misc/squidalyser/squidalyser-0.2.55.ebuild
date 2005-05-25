@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/squidalyser/squidalyser-0.2.55.ebuild,v 1.6 2005/05/24 14:30:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/squidalyser/squidalyser-0.2.55.ebuild,v 1.7 2005/05/25 15:33:55 mcummings Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="net-proxy/squid
 	dev-perl/DBI
 	dev-perl/DBD-mysql
 	dev-perl/Time-modules
-	dev-perl/Time-HiRes
+	perl-core/Time-HiRes
 	dev-perl/GD
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil
