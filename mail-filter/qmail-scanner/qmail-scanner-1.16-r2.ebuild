@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.16-r2.ebuild,v 1.4 2005/05/24 14:47:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.16-r2.ebuild,v 1.5 2005/05/25 15:28:30 mcummings Exp $
 
 DESCRIPTION="E-Mail virus scanner for qmail."
 HOMEPAGE="http://qmail-scanner.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qmail-scanner/${P}.tgz"
 
 DEPEND=">=dev-lang/perl-5.6.1-r1
-	>=dev-perl/Time-HiRes-01.20-r2
+	>=perl-core/Time-HiRes-01.20-r2
 	>=net-mail/tnef-1.1.1
 	>=mail-filter/maildrop-1.3.9
 	>=perl-core/DB_File-1.803-r2
