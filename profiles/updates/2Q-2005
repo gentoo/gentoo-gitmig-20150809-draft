@@ -90,3 +90,4 @@ move dev-perl/Memoize perl-core/Memoize
 move dev-perl/Safe perl-core/Safe
 move dev-perl/Storable perl-core/Storable
 move dev-perl/Test-Harness perl-core/Test-Harness
+move dev-perl/Test-Simple perl-core/Test-Simple
