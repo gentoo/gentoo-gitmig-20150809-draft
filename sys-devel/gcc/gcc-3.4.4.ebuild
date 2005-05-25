@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4.ebuild,v 1.1 2005/05/24 04:33:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4.ebuild,v 1.2 2005/05/25 03:29:09 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.0"
 UCLIBC_VER="1.0"
 PIE_VER="8.7.8"
-PP_VER=""
-PP_FVER=""
+PP_VER="1.0"
 HTB_VER="1.00"
 HTB_GCC_VER="3.4.4_pre"
 
