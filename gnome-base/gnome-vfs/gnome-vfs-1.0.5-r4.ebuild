@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.9 2005/05/16 12:37:24 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.10 2005/05/25 03:56:15 vapier Exp $
 
 inherit eutils libtool toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.0/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1"
-KEYWORDS="x86 ppc sparc alpha ~hppa amd64 ~ia64 mips ppc64 ~arm"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="doc ssl nls"
 
 RDEPEND="=gnome-base/gconf-1.0*
