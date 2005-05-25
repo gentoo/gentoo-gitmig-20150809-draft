@@ -1,9 +1,10 @@
-MD5 4a142e2eed687a7113d4cd00274d0d33 ChangeLog 6283
+MD5 93e74da18f5e6544e5314e2b8f0381cc ChangeLog 6445
 MD5 c7ae74d80c4fd172fc83b5f41de30ea4 bzip2-1.0.2-r5.ebuild 2203
 MD5 cc2e9e810cc6b1cf37fd567e1699df91 bzip2-1.0.3-r3.ebuild 2295
 MD5 2bced66d4d3c68070477627caa87f172 bzip2-1.0.3.ebuild 2021
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 328d582d46b23f945a883dd946d975a2 bzip2-1.0.3-r2.ebuild 2213
+MD5 8ba714af581ba34afae6c1b219f471cc bzip2-1.0.3-r4.ebuild 2300
 MD5 9c63b399f71b03f2a58b061c1e038d0c files/bzip2-1.0.2-saneso.patch 457
 MD5 f413035bf75710d87670f302692e1233 files/digest-bzip2-1.0.3 63
 MD5 5f7a98f0aaaed6554126d30e28383ee0 files/bzip2-1.0.2-progress.patch 6141
@@ -14,4 +15,4 @@ MD5 be84e51b1bd56731f5d7762980e3ad47 files/bzip2-1.0.3-makefile-CFLAGS.patch 489
 MD5 d1cf85cb43e35c9ecba9954295318ab8 files/bzip2-1.0.3-saneso.patch 323
 MD5 a0833247f0c02ccb65cceb33ea521457 files/bzip2-1.0.2-chmod.patch 2780
 MD5 f413035bf75710d87670f302692e1233 files/digest-bzip2-1.0.3-r2 63
-MD5 f413035bf75710d87670f302692e1233 files/digest-bzip2-1.0.3-r3 63
+MD5 f413035bf75710d87670f302692e1233 files/digest-bzip2-1.0.3-r4 63
