@@ -88,3 +88,4 @@ move dev-perl/Getopt-Long perl-core/Getopt-Long
 move dev-perl/MIME-Base64 perl-core/MIME-Base64
 move dev-perl/Memoize perl-core/Memoize
 move dev-perl/Safe perl-core/Safe
+move dev-perl/Storable perl-core/Storable
