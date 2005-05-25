@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/ubh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/ubh/ChangeLog,v 1.3 2005/05/16 16:43:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/ubh/ChangeLog,v 1.4 2005/05/25 14:27:51 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> ubh-2.5.ebuild:
+  dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
 
   16 May 2005; Sven Wegener <swegener@gentoo.org> ubh-2.5.ebuild:
   Added error checking to src_install.

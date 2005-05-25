@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c433657d0092be509e1dfed59d8e4836 ubh-2.5.ebuild 799
-MD5 69f480228af17baccd6a852deac1459f ChangeLog 792
+MD5 5a547caa08da63feca6d80c446aac073 ChangeLog 923
 MD5 6c9b25c9beb7c85e06060bfb93f81d75 metadata.xml 289
+MD5 64951f9b3cabbde3d9613ccd2e4646d6 ubh-2.5.ebuild 801
 MD5 bd527c8aa86e8984f3685bfdea693cd3 files/digest-ubh-2.5 58
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCiM3aI1lqEGTUzyQRAj0JAKCqrcPFohZEt1t0/F4+pLHEMzWi5wCeMcFX
-DWJiMtnYinCKXd3SdGwqDHg=
-=Na3b
+iD8DBQFClIt7tG5z4I8BtQoRAueAAJ9aAhoRMvnc7/15i57ZRQMM3xYyPwCeMU/N
+D/eu0v85a9I/6ElcFekxkKU=
+=UH5L
 -----END PGP SIGNATURE-----
