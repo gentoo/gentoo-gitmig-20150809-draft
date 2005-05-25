@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewcvs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.14 2005/05/24 02:34:59 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.15 2005/05/25 09:56:54 ferringb Exp $
+
+  25 May 2005; Brian Harring <ferringb@gentoo.org>, viewcvs-0.9.3.ebuild:
+  mirror://mirror://sourceforge.net isn't valid :)
 
 *viewcvs-1.0_pre20050523 (24 May 2005)
 *viewcvs-0.9.3 (24 May 2005)
