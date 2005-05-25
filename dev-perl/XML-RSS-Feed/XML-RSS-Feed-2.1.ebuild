@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/XML-RSS-Feed-2.1.ebuild,v 1.2 2005/05/24 15:41:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/XML-RSS-Feed-2.1.ebuild,v 1.3 2005/05/25 15:23:55 mcummings Exp $
 
 inherit perl-module
 
@@ -18,6 +18,6 @@ SRC_TEST="do"
 DEPEND="dev-perl/HTML-Parser
 		dev-perl/XML-RSS
 		dev-perl/Clone
-		dev-perl/Time-HiRes
+		perl-core/Time-HiRes
 		dev-perl/URI
 		perl-core/Digest-MD5"
