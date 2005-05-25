@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8a3c1ceb11b9a261919ee32f8f8896e9 ChangeLog 1114
+MD5 77b46eca599e6a4ce8efcdab047d08f6 ChangeLog 1257
 MD5 dff37aca76094f6c2fa77e91da6ef4a5 Class-Trigger-0.08.ebuild 602
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 276cf95139ff7b2c993393b8e3d2e3fb Class-Trigger-0.09.ebuild 602
+MD5 82dac0f04c5fb60586d318ab1f876a2b Class-Trigger-0.09.ebuild 603
 MD5 22e89d2dcd3cd0759a5ece96b61d3b14 files/digest-Class-Trigger-0.08 68
 MD5 a7f6280909a0b774207a5375e8d9e6b8 files/digest-Class-Trigger-0.09 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClJOVtG5z4I8BtQoRAs2lAJ9dvuP4wnbYd35Rh0Vt/ugky0neeACcD3Dy
-Y2lgu1C8pAc9YoPuWAJ3wSk=
-=YqEx
------END PGP SIGNATURE-----
