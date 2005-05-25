@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 654bcb288b9a0116183b35c9a7c432bc ChangeLog 3572
-MD5 d23742676c0608264004e7f5e78acdfb bioperl-1.0.2.ebuild 1497
-MD5 9422648527e3fcc03eac4777f752b00f bioperl-1.2.2.ebuild 2190
-MD5 d19b346dc7e0c4aca8400c9db19cb4f2 bioperl-1.2.3.ebuild 2075
-MD5 f949bc00bb3ba2d50f370f77f62a9754 bioperl-1.2.ebuild 1546
-MD5 2b2b2ac946533a4d06fe5fdd70f27f28 bioperl-1.4.ebuild 1184
+MD5 5628246587e4cc2c397c78b19a5f38ac ChangeLog 4218
+MD5 c44b6ccac0ada674a2f60a1548501c97 bioperl-1.0.2.ebuild 1498
+MD5 d7add320cb4f5b6a66670e93c3a05a9b bioperl-1.2.2.ebuild 2191
+MD5 c2a6a77e7c16db7aec048d40e61d00b5 bioperl-1.2.3.ebuild 2076
+MD5 8ac8ebff13d4c264846a621cb94c794a bioperl-1.2.ebuild 1547
+MD5 2803b3543a67e3759e847001e64628fd bioperl-1.4.ebuild 1185
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
 MD5 8f6c3beb108aaa2b78b0b4f8d218187a files/biodbgff-enable-1.2.2.patch 3355
 MD5 8f6c3beb108aaa2b78b0b4f8d218187a files/biodbgff-enable-1.2.3.patch 3355
@@ -20,7 +20,7 @@ MD5 08539f1d1fed6d673140cdc221ae13e6 files/domanpages-1.2.2.patch 412
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFClIQZtG5z4I8BtQoRAvH0AJ0fIbcFy6cROAhNcDiA4fzWoiufrACgkZx+
-eH+PEHWfADILMeL6C5F+4kE=
-=cdTT
+iD8DBQFClJAQtG5z4I8BtQoRAtSJAKCLtKgXFFUoBW9Y+HGMx/bOFXiKrwCfaklF
+TTDDrD3LDfIp+vbu12tIIYA=
+=0x6t
 -----END PGP SIGNATURE-----

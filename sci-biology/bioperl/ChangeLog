@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bioperl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.10 2005/05/25 13:56:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.11 2005/05/25 14:46:11 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> bioperl-1.0.2.ebuild:
+  dev-perl/Storable => perl-core/Storable migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> bioperl-1.4.ebuild:
   dev-perl/File-Temp => perl-core/File-Temp migration
