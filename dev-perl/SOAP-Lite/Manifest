@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 050b81749bb5256edafcd532b339eb06 ChangeLog 2654
 MD5 00ab0a5302a42bfdda149073ccdd2750 SOAP-Lite-0.55.ebuild 815
 MD5 dcebd7ebfc7145432af408fd5ccd0d6b SOAP-Lite-0.60a-r1.ebuild 1544
@@ -7,3 +10,10 @@ MD5 0c6fe7b828190ad115d346daf86d4c67 files/SOAP-Lite-0.60.a.patch 652
 MD5 a28ac4a4bb16719e4bd3ce3c6ab5e08b files/digest-SOAP-Lite-0.55 66
 MD5 6d49bd1e5b967a5a203500df88e8c738 files/digest-SOAP-Lite-0.60a 67
 MD5 6d49bd1e5b967a5a203500df88e8c738 files/digest-SOAP-Lite-0.60a-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClIgQtG5z4I8BtQoRAsqOAJwJx01/DxTgESxEzz6nnVrWzhzuwQCgikzT
+QKjx3EJwFVN93bAxbRgL3zk=
+=veRb
+-----END PGP SIGNATURE-----
