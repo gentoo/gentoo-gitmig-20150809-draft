@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b74ec9eea9609952b4a02cd7be59b6c5 soap-2.3.1.ebuild 1205
-MD5 8712b1ed05cd62b65ba23fcfa6eee6c4 ChangeLog 787
+MD5 760a55b32f4e31be762b07a4dfbb732e soap-2.3.1.ebuild 1199
+MD5 6d3610c11489f4cb7088267fbba82663 ChangeLog 910
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 d6f2be463e8fcbbd0ec4b546ca02a649 files/digest-soap-2.3.1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCj3W406ebR+OMO78RAmckAJoC/gtD2noXcbZJiLss5slOxlVJpgCfez5B
-o+oGb6aoE2H3jpMkMow0HLs=
-=Bvmb
+iD8DBQFClMd606ebR+OMO78RApFKAJ9vnKOBCSoMsgqDJHeiqKidUREx0gCfYCJk
+71GSstnKwRc6L/qtotzZgX4=
+=7Dfp
 -----END PGP SIGNATURE-----
