@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4.ebuild,v 1.2 2005/05/25 03:29:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4.ebuild,v 1.3 2005/05/25 22:34:17 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.0"
@@ -90,9 +90,8 @@ src_unpack() {
 		#epatch ${FILESDIR}/3.4.3/libffi-nogcj-lib-path-fix.patch
 	fi
 
-	# hack around some ugly 32bit sse2 wrong-code bugs
-	epatch "${FILESDIR}"/3.4.2/gcc34-m32-no-sse2.patch
-	epatch "${FILESDIR}"/3.4.2/gcc34-fix-sse2_pinsrw.patch
+	# Grab fixes for remaining SSE wrong-code bugs
+	epatch "${FILESDIR}"/3.4.4/gcc-3.4.4-fix-sse2-pinsrw.patch
 
 	# Fix cross-compiling
 	epatch "${FILESDIR}"/3.4.4/gcc-3.4.4-cross-compile.patch
