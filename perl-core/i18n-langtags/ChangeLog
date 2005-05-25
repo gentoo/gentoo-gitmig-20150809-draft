@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/i18n-langtags
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/i18n-langtags/ChangeLog,v 1.1 2005/05/24 18:05:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/i18n-langtags/ChangeLog,v 1.2 2005/05/25 12:46:03 nigoro Exp $
+
+  25 May 2005; Yuta SATOH <nigoro@gentoo.org> i18n-langtags-0.35.ebuild:
+  Stable on ppc64
 
 *i18n-langtags-0.35 (24 May 2005)
 
