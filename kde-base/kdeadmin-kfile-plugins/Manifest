@@ -1,4 +1,6 @@
+MD5 5e0dd0a061707fa86bd41c8826099525 kdeadmin-kfile-plugins-3.4.1.ebuild 434
 MD5 153069f89bc9ef8db41cc9b722f4f390 ChangeLog 1487
-MD5 8c1b8df6f5fac2918e06e0cd56ecef42 kdeadmin-kfile-plugins-3.4.0.ebuild 453
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 8c1b8df6f5fac2918e06e0cd56ecef42 kdeadmin-kfile-plugins-3.4.0.ebuild 453
 MD5 dff739018360a0997224c39ad20e83fb files/digest-kdeadmin-kfile-plugins-3.4.0 68
+MD5 1cb65d0cd53f98bee616cc898332d89a files/digest-kdeadmin-kfile-plugins-3.4.1 136

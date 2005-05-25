@@ -1,4 +1,6 @@
-MD5 87323defb5e5738a4333def69435cdcb ChangeLog 1277
 MD5 7a763ddede33deb905795d551a756dbf kspy-3.4.0.ebuild 457
+MD5 47d7dddc54eab5d7eaf480926c6f5d36 kspy-3.4.1.ebuild 438
+MD5 87323defb5e5738a4333def69435cdcb ChangeLog 1277
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-kspy-3.4.0 66
+MD5 b194fcd7223ef7a351a7a27c1c004a67 files/digest-kspy-3.4.1 132

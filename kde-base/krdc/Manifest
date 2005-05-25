@@ -1,4 +1,6 @@
-MD5 3e1596e9720ceef35c0f61d5d61129ff ChangeLog 1380
+MD5 02c1b508b5a83edc3457062fea126010 krdc-3.4.1.ebuild 610
 MD5 b436d170eda43a34da274a13430e5cc1 krdc-3.4.0.ebuild 629
+MD5 3e1596e9720ceef35c0f61d5d61129ff ChangeLog 1380
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 622d3497792334fa87e483e249da693d files/digest-krdc-3.4.0 70
+MD5 424d12c41c520ebf8fbeb204ee93e5aa files/digest-krdc-3.4.1 140

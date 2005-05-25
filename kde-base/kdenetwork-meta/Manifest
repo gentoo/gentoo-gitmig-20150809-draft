@@ -1,4 +1,6 @@
-MD5 bc12a5845287f57b515853262fb0a633 ChangeLog 1698
 MD5 7ebbe51d03e9a18f9c36952e1d25dd24 kdenetwork-meta-3.4.0.ebuild 1266
+MD5 358c6057c079b853c169239cdf4fbdb7 kdenetwork-meta-3.4.1.ebuild 1247
+MD5 bc12a5845287f57b515853262fb0a633 ChangeLog 1698
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.4.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.4.1 0

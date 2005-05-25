@@ -1,4 +1,6 @@
-MD5 f8af2fd756adfc89de6acff48d2882bb ChangeLog 1562
+MD5 fd7c318fe8a2dc9c4a1d67a31364ddae libkcddb-3.4.1.ebuild 377
 MD5 ce14c629658c3ae7e036db9192f6a059 libkcddb-3.4.0.ebuild 396
+MD5 f8af2fd756adfc89de6acff48d2882bb ChangeLog 1562
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-libkcddb-3.4.0 73
+MD5 b00ef893ed158f45f57b92ec02a66007 files/digest-libkcddb-3.4.1 146

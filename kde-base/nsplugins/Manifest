@@ -1,4 +1,6 @@
+MD5 50cc1f9b099ca2b95f141714a4d8e72d nsplugins-3.4.1.ebuild 394
+MD5 f6eca22d15dce7d49cd286daff225215 nsplugins-3.4.0.ebuild 413
 MD5 8b729c08386af60ab1b77f134d037b1c ChangeLog 1444
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 f6eca22d15dce7d49cd286daff225215 nsplugins-3.4.0.ebuild 413
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-nsplugins-3.4.0 68
+MD5 2ed3f0976007ee8a8406f3f6422d66bf files/digest-nsplugins-3.4.1 136

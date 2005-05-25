@@ -1,4 +1,6 @@
-MD5 ea121626d1a8a2e17e89df29e4b3961b ChangeLog 1380
+MD5 306232daa99e42f882b7bec6e4988432 kxkb-3.4.1.ebuild 387
 MD5 4af23bc52017e691d436285a4a64e14c kxkb-3.4.0.ebuild 406
+MD5 ea121626d1a8a2e17e89df29e4b3961b ChangeLog 1380
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kxkb-3.4.0 68
+MD5 2ed3f0976007ee8a8406f3f6422d66bf files/digest-kxkb-3.4.1 136

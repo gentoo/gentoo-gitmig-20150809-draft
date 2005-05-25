@@ -1,4 +1,6 @@
-MD5 f7517fa5a4a8aabd5f61afb6bf23d1e2 ChangeLog 1520
+MD5 c019496d41b5ec4a8b86fca4f8948475 libkpimexchange-3.4.1.ebuild 942
 MD5 9ddc252431b25da0809199a9e23246ad libkpimexchange-3.4.0.ebuild 961
+MD5 f7517fa5a4a8aabd5f61afb6bf23d1e2 ChangeLog 1520
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-libkpimexchange-3.4.0 67
+MD5 7e3e5fdc63982b39b9df921e916f246a files/digest-libkpimexchange-3.4.1 134

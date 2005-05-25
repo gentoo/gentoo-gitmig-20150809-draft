@@ -1,4 +1,6 @@
-MD5 6d2caf791b8827b66347d688161c37c3 ChangeLog 1312
 MD5 78ee989ca47c45ccf9d99432d6a110c6 kcminit-3.4.0.ebuild 430
+MD5 5b437e0d1b36e65eaac9af5f8c2d6c5f kcminit-3.4.1.ebuild 411
+MD5 6d2caf791b8827b66347d688161c37c3 ChangeLog 1312
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kcminit-3.4.0 68
+MD5 2ed3f0976007ee8a8406f3f6422d66bf files/digest-kcminit-3.4.1 136

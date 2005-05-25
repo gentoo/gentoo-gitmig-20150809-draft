@@ -1,4 +1,6 @@
-MD5 60eaaa6d5aaffda7d8f4822aa6fcddb6 ChangeLog 1444
+MD5 b9237f78433e71329cab62736471737f kvoctrain-3.4.1.ebuild 391
 MD5 39590f2fea5d14ffb4e9b9634fc9f545 kvoctrain-3.4.0.ebuild 410
+MD5 60eaaa6d5aaffda7d8f4822aa6fcddb6 ChangeLog 1444
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-kvoctrain-3.4.0 67
+MD5 bbf1580cea58dcec6628f8ff15615c94 files/digest-kvoctrain-3.4.1 134

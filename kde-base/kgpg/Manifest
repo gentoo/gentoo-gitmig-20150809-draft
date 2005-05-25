@@ -1,4 +1,6 @@
-MD5 a7e2fbc5df6884714150b90974246350 ChangeLog 1402
+MD5 0aec75c48b5f5533e4a7372bcad7df56 kgpg-3.4.1.ebuild 404
 MD5 0142b7ed256f1d7fdd8dce0c4470d630 kgpg-3.4.0.ebuild 423
+MD5 a7e2fbc5df6884714150b90974246350 ChangeLog 1402
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 dbade662a75a6b44c890deef5400485f files/digest-kgpg-3.4.0 68
+MD5 b0a10acbeb1561abc6b84728e8b8c9bc files/digest-kgpg-3.4.1 136

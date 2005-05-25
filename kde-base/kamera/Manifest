@@ -1,4 +1,6 @@
-MD5 9df5d892a35e6bdd80a8834fb11f9d55 ChangeLog 1428
+MD5 ea6212939d327d133ee9b687ac67df2b kamera-3.4.1.ebuild 404
 MD5 8c15eaa007682012431c2d66560ca27f kamera-3.4.0.ebuild 423
+MD5 821923e87864ae95f3e0191ffa045944 ChangeLog 1645
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kamera-3.4.0 71
+MD5 48990bd99d6f4ecf50edb4305eb6c099 files/digest-kamera-3.4.1 142

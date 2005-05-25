@@ -1,4 +1,6 @@
-MD5 8813918581f28df63cc58c7323e9df1e ChangeLog 1336
+MD5 6d4b615324020fef860b9a499ff7354e kmathtool-3.4.1.ebuild 408
 MD5 c2a127c3a849e0343d3ba9f135c44f81 kmathtool-3.4.0.ebuild 427
+MD5 8813918581f28df63cc58c7323e9df1e ChangeLog 1336
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-kmathtool-3.4.0 67
+MD5 bbf1580cea58dcec6628f8ff15615c94 files/digest-kmathtool-3.4.1 134

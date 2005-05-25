@@ -1,4 +1,6 @@
-MD5 909e44d56ce71139cd692015f7b1dfe2 ChangeLog 1744
 MD5 a872fd2ca4673aadc4053a51a19e1014 kaudiocreator-3.4.0.ebuild 1008
+MD5 528d56a3c86788694da108c7d3611e6f ChangeLog 1975
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 d8f335ebe847f0115dc74721278c2270 kaudiocreator-3.4.1.ebuild 989
 MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-kaudiocreator-3.4.0 73
+MD5 b00ef893ed158f45f57b92ec02a66007 files/digest-kaudiocreator-3.4.1 146

@@ -1,4 +1,6 @@
+MD5 48f751c87f839ce9cc4f9bb296d00bb8 kmilo-3.4.1.ebuild 479
 MD5 5fb3d7e36a70bbebe8a77e622fcffb02 ChangeLog 1392
 MD5 3595159d5f0414b0a7feb9747cf0dd52 kmilo-3.4.0.ebuild 498
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 dbade662a75a6b44c890deef5400485f files/digest-kmilo-3.4.0 68
+MD5 b0a10acbeb1561abc6b84728e8b8c9bc files/digest-kmilo-3.4.1 136

@@ -1,4 +1,6 @@
-MD5 d2ee2810fb628c327bf0be0a360f1532 ChangeLog 1415
 MD5 0f554ce5f14eb4d76dbfc876acc61e37 kdict-3.4.0.ebuild 410
+MD5 2c295540976cb568b09b9164893adc7b kdict-3.4.1.ebuild 391
+MD5 d2ee2810fb628c327bf0be0a360f1532 ChangeLog 1415
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 622d3497792334fa87e483e249da693d files/digest-kdict-3.4.0 70
+MD5 424d12c41c520ebf8fbeb204ee93e5aa files/digest-kdict-3.4.1 140

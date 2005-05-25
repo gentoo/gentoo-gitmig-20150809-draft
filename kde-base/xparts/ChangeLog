@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/xparts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/ChangeLog,v 1.8 2005/03/23 16:17:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/ChangeLog,v 1.9 2005/05/25 21:23:15 danarmak Exp $
+
+*xparts-3.4.1 (25 May 2005)
+
+  25 May 2005; Dan Armak <danarmak@gentoo.org> +xparts-3.4.1.ebuild:
+  Ebuilds for KDE 3.4.1. These are package.masked until 3.4.1 is actually
+  released. You can't get the tarballs yet.
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> xparts-3.3.1.ebuild,
   xparts-3.4.0.ebuild:

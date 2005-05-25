@@ -1,4 +1,6 @@
-MD5 0b90321cca3482724a837f7fcbda4d32 ChangeLog 1456
 MD5 3aaefbdf5b5e86a1b70c1873d8f7e814 korganizer-3.4.0.ebuild 1782
+MD5 4c04135a441899affbe1630485e8ea5f korganizer-3.4.1.ebuild 1763
+MD5 0b90321cca3482724a837f7fcbda4d32 ChangeLog 1456
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-korganizer-3.4.0 67
+MD5 7e3e5fdc63982b39b9df921e916f246a files/digest-korganizer-3.4.1 134

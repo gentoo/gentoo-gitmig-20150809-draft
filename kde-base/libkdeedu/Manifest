@@ -1,4 +1,6 @@
-MD5 2ed089e09016eaf8b7d6c5658695cb82 ChangeLog 1336
 MD5 1bf7e95ba5ba883c4e9dab9dd8f9aec9 libkdeedu-3.4.0.ebuild 414
+MD5 2ed089e09016eaf8b7d6c5658695cb82 ChangeLog 1336
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 4b5386ac5fb34b927ddb1b4b03784ebd libkdeedu-3.4.1.ebuild 395
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-libkdeedu-3.4.0 67
+MD5 bbf1580cea58dcec6628f8ff15615c94 files/digest-libkdeedu-3.4.1 134

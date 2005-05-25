@@ -1,4 +1,6 @@
-MD5 3ccc65b4d004a2124ab42b1b6019229f ChangeLog 1471
+MD5 9311e24c08232a1a03985fd690c7671e ksplashml-3.4.1.ebuild 438
 MD5 442302dca65b02e361acb629a9401095 ksplashml-3.4.0.ebuild 457
+MD5 3ccc65b4d004a2124ab42b1b6019229f ChangeLog 1471
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-ksplashml-3.4.0 68
+MD5 2ed3f0976007ee8a8406f3f6422d66bf files/digest-ksplashml-3.4.1 136

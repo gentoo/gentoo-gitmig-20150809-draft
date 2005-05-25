@@ -1,4 +1,6 @@
-MD5 9ed4ce9d721878c5f0509806dd4ed258 ChangeLog 2093
 MD5 c3f2297cc63d059853144169b0b5f317 ksysguard-3.4.0.ebuild 445
+MD5 8c8739352cf38d62caabff1f90d2060b ksysguard-3.4.1.ebuild 426
+MD5 9ed4ce9d721878c5f0509806dd4ed258 ChangeLog 2093
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-ksysguard-3.4.0 68
+MD5 2ed3f0976007ee8a8406f3f6422d66bf files/digest-ksysguard-3.4.1 136

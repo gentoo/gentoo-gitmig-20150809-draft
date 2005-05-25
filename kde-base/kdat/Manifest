@@ -1,4 +1,6 @@
-MD5 5b4d2c0a63417c4e5b18cca4d95aa211 ChangeLog 1402
+MD5 9722119afa98c381675a208216c9d217 kdat-3.4.1.ebuild 378
 MD5 8b66ecb72463209efd773f5b2fff462b kdat-3.4.0.ebuild 397
+MD5 5b4d2c0a63417c4e5b18cca4d95aa211 ChangeLog 1402
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 dff739018360a0997224c39ad20e83fb files/digest-kdat-3.4.0 68
+MD5 1cb65d0cd53f98bee616cc898332d89a files/digest-kdat-3.4.1 136

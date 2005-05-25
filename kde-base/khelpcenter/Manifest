@@ -1,4 +1,6 @@
+MD5 11992fc452290b742256bd5b1d83bee6 khelpcenter-3.4.1.ebuild 379
 MD5 da1646e09b020991da16fcb39a5a59ae ChangeLog 1468
-MD5 78a8a6536143f0d998ddb63021fe259e khelpcenter-3.4.0.ebuild 398
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 78a8a6536143f0d998ddb63021fe259e khelpcenter-3.4.0.ebuild 398
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-khelpcenter-3.4.0 68
+MD5 2ed3f0976007ee8a8406f3f6422d66bf files/digest-khelpcenter-3.4.1 136

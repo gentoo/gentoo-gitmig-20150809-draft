@@ -1,4 +1,6 @@
-MD5 5a489ceaef3d83725fe01a6bfaaf7c9b ChangeLog 1444
 MD5 adf955197abc87f50de7bcc157a5c580 ksnapshot-3.4.0.ebuild 398
+MD5 a3abfb44ced5516cf532546f2c3b0d1e ksnapshot-3.4.1.ebuild 379
+MD5 5a489ceaef3d83725fe01a6bfaaf7c9b ChangeLog 1444
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-ksnapshot-3.4.0 71
+MD5 48990bd99d6f4ecf50edb4305eb6c099 files/digest-ksnapshot-3.4.1 142

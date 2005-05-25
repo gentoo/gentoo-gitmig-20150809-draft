@@ -1,4 +1,6 @@
+MD5 b5f74924a6a82280ae127e7b4d0a8952 kandy-3.4.1.ebuild 541
 MD5 b4269df2301c9f355e0f2a5d8d684551 ChangeLog 1415
 MD5 6f03863fd185741c69bc678224dcebd7 kandy-3.4.0.ebuild 560
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kandy-3.4.0 67
+MD5 7e3e5fdc63982b39b9df921e916f246a files/digest-kandy-3.4.1 134

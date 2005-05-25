@@ -1,4 +1,6 @@
-MD5 fc713875a3a0c8d375299193aef91662 ChangeLog 1659
 MD5 33030fdb4ab38ca7325d3f2eb660cf36 kdemultimedia-kioslaves-3.4.0.ebuild 1096
+MD5 f715fe3eb62e1b1b4de63334d2ff30f3 kdemultimedia-kioslaves-3.4.1.ebuild 1077
+MD5 fc713875a3a0c8d375299193aef91662 ChangeLog 1659
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-kdemultimedia-kioslaves-3.4.0 73
+MD5 b00ef893ed158f45f57b92ec02a66007 files/digest-kdemultimedia-kioslaves-3.4.1 146

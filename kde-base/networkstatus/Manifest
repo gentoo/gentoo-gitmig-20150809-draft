@@ -1,4 +1,6 @@
+MD5 d94cd7dd69e3903712a1f3f63248ab38 networkstatus-3.4.1.ebuild 406
+MD5 96c43e212d8c56f6dc98fe5503bc4db6 networkstatus-3.4.0.ebuild 425
 MD5 656dc7c38939e872b725f5a6efa8fb51 ChangeLog 1143
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 96c43e212d8c56f6dc98fe5503bc4db6 networkstatus-3.4.0.ebuild 425
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-networkstatus-3.4.0 67
+MD5 7e3e5fdc63982b39b9df921e916f246a files/digest-networkstatus-3.4.1 134

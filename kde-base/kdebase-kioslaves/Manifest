@@ -1,4 +1,6 @@
+MD5 de753facde73baff5bdf34e01c9aa295 kdebase-kioslaves-3.4.1.ebuild 927
 MD5 e3002fd51a32aa5a5e9c2925d5681fca kdebase-kioslaves-3.4.0.ebuild 946
 MD5 9bc3033c16000ef27ada20265799c3d1 ChangeLog 2096
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kdebase-kioslaves-3.4.0 68
+MD5 2ed3f0976007ee8a8406f3f6422d66bf files/digest-kdebase-kioslaves-3.4.1 136

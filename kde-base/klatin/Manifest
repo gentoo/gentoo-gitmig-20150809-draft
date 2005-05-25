@@ -1,4 +1,6 @@
-MD5 e011f9d55e9ab563056359f48a5c04bc ChangeLog 1404
+MD5 01772bb3affbf7be4bc4c440ed3a190b klatin-3.4.1.ebuild 564
 MD5 37f15a0b22eff12e0c02d8d8e16670d2 klatin-3.4.0.ebuild 583
+MD5 e011f9d55e9ab563056359f48a5c04bc ChangeLog 1404
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-klatin-3.4.0 67
+MD5 bbf1580cea58dcec6628f8ff15615c94 files/digest-klatin-3.4.1 134

@@ -1,4 +1,6 @@
-MD5 7a0441ff363b1fcac633b20cf0a0d33c ChangeLog 1706
+MD5 30c190b832dfe8587e08c97e4301b56d kate-plugins-3.4.1.ebuild 487
 MD5 1ca4cb372e3aff4bd9943b066f2c8e12 kate-plugins-3.4.0.ebuild 506
+MD5 7a0441ff363b1fcac633b20cf0a0d33c ChangeLog 1706
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 231586b7509d98416a3043180cebfe60 files/digest-kate-plugins-3.4.0 69
+MD5 7358ade938bf135b83f7e821872dac84 files/digest-kate-plugins-3.4.1 138

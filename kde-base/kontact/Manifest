@@ -1,4 +1,6 @@
-MD5 5b48f2acc58565c94ea58c15dd3a041a ChangeLog 1546
+MD5 9ed593f5533031e00e20909d39fd8b3b kontact-3.4.1.ebuild 1027
 MD5 8477b08d7194783457aad09997cd420d kontact-3.4.0.ebuild 1046
+MD5 5b48f2acc58565c94ea58c15dd3a041a ChangeLog 1546
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kontact-3.4.0 67
+MD5 7e3e5fdc63982b39b9df921e916f246a files/digest-kontact-3.4.1 134

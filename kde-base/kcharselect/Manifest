@@ -1,4 +1,6 @@
-MD5 16edc9652efbb113c8af8277e0156efc ChangeLog 1358
+MD5 6126ba7125f4bd22a476534aa0c213fc kcharselect-3.4.1.ebuild 418
 MD5 3f97376a215bafef24c1268786cb71c7 kcharselect-3.4.0.ebuild 437
+MD5 16edc9652efbb113c8af8277e0156efc ChangeLog 1358
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 dbade662a75a6b44c890deef5400485f files/digest-kcharselect-3.4.0 68
+MD5 b0a10acbeb1561abc6b84728e8b8c9bc files/digest-kcharselect-3.4.1 136

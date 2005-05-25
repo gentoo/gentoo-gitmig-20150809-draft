@@ -1,4 +1,6 @@
-MD5 38e19aabdbcdff99e561aebd256379e2 ChangeLog 1415
+MD5 7f05cbb7479853b27b700f46050462ce kcalc-3.4.1.ebuild 360
 MD5 953da385261c2ad47c3ede7f64fba254 kcalc-3.4.0.ebuild 379
+MD5 38e19aabdbcdff99e561aebd256379e2 ChangeLog 1415
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 dbade662a75a6b44c890deef5400485f files/digest-kcalc-3.4.0 68
+MD5 b0a10acbeb1561abc6b84728e8b8c9bc files/digest-kcalc-3.4.1 136

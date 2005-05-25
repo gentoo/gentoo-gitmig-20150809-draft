@@ -1,4 +1,6 @@
-MD5 59ef56339ac49484229384f2ebd4ed03 ChangeLog 1299
+MD5 7de94edcc1135c4f9dd86429961881a2 librss-3.4.1.ebuild 365
 MD5 bf59e7dafe2afa150d6adac937fd2ae2 librss-3.4.0.ebuild 384
+MD5 59ef56339ac49484229384f2ebd4ed03 ChangeLog 1299
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 622d3497792334fa87e483e249da693d files/digest-librss-3.4.0 70
+MD5 424d12c41c520ebf8fbeb204ee93e5aa files/digest-librss-3.4.1 140

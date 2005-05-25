@@ -1,0 +1,43 @@
+diff -Nur kdebase-3.4.0.orig/startkde kdebase-3.4.0/startkde
+--- kdebase-3.4.0.orig/startkde	2005-03-04 12:20:04.000000000 +0100
++++ kdebase-3.4.0/startkde	2005-05-11 14:56:43.000000000 +0200
+@@ -14,6 +14,39 @@
+ 	exit 1
+ fi
+ 
++# Gentoo part:
++export PATH="/usr/kde/3.4/bin:${PATH}"
++
++cd ${HOME}
++if [ -L .kde -o ! -d .kde ]; then
++	# handle ~/.kde* dirs - separate ones for separate KDEs
++	rm -f .kde
++	if [ ! -e .kde3.4 ]; then
++		# migrate old config files
++		if [ -e .kde3.3 ]; then
++			cp -r .kde3.3 .kde3.4
++		elif [ -e .kde3.2 ]; then
++			cp -r .kde3.2 .kde3.4
++		else
++			mkdir .kde3.4
++		fi
++		cd .kde3.4
++		for file in share/apps/kdevdocumentation/search/htdig.conf \
++			    share/apps/kalarmd/clients \
++			    share/config/kresources/calendar/stdrc \
++			    share/config/*rc; do
++			if [ -e "${file}" ]; then
++				sed -i -e "s:$HOME/\.kde3\.[23]:$HOME/\.kde3\.4:g" \
++				       -e 's:$HOME/\.kde3\.[23]:$HOME/\.kde3\.4:g' \
++				       -e 's:/usr/kde/3\.[23]/:/usr/kde/3\.4/:g' \
++					"${file}"
++			fi
++		done
++	fi
++	ln -sf .kde3.4 .kde
++fi
++# Gentoo part ends
++
+ # Set the background to plain grey.
+ # The standard X background is nasty, causing moire effects and exploding
+ # people's heads. We use colours from the standard KDE palette for those with

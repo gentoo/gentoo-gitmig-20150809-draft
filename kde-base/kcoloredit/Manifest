@@ -1,4 +1,6 @@
-MD5 21b931f41ef0e6c0a2f57fd6d8f5c83b ChangeLog 1484
 MD5 88aa73c6fe7df79aeb4446449ad1e71c kcoloredit-3.4.0.ebuild 403
+MD5 21b931f41ef0e6c0a2f57fd6d8f5c83b ChangeLog 1484
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 ebe992c67c87021d8e15a80cbe28be16 kcoloredit-3.4.1.ebuild 384
 MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kcoloredit-3.4.0 71
+MD5 48990bd99d6f4ecf50edb4305eb6c099 files/digest-kcoloredit-3.4.1 142

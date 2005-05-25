@@ -1,4 +1,6 @@
-MD5 f2edf7cb5cd5f7f41fbf60bef2987a9d ChangeLog 1468
+MD5 e9144848c7c4482d06af3e9ef9cab567 kpovmodeler-3.4.1.ebuild 455
 MD5 0e105584c2e09ce7c922e4258e981f1f kpovmodeler-3.4.0.ebuild 474
+MD5 efb519e77700b52d3457245d0e8c752f ChangeLog 1695
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kpovmodeler-3.4.0 71
+MD5 48990bd99d6f4ecf50edb4305eb6c099 files/digest-kpovmodeler-3.4.1 142

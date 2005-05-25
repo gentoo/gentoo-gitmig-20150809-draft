@@ -1,4 +1,6 @@
-MD5 1360b4c2b55096ef88e799c4ec67b813 ChangeLog 1392
 MD5 774091bd0446ead2ebbe68079d75b732 kwin4-3.4.0.ebuild 538
+MD5 c75a7ee906f061a7a0d1709f2c61e6ed kwin4-3.4.1.ebuild 519
+MD5 1360b4c2b55096ef88e799c4ec67b813 ChangeLog 1392
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-kwin4-3.4.0 68
+MD5 cbb1fb83afd4a84cb95577b4cd0a08bd files/digest-kwin4-3.4.1 136

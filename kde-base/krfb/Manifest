@@ -1,4 +1,6 @@
-MD5 43f486ba8f8eb3009aba64d5439d0a3a ChangeLog 1380
 MD5 9edc484c6456670c5a03c81b98d7c31b krfb-3.4.0.ebuild 522
+MD5 37fd9ff5516a772a77fa52c3ec93ae8d krfb-3.4.1.ebuild 503
+MD5 43f486ba8f8eb3009aba64d5439d0a3a ChangeLog 1380
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 622d3497792334fa87e483e249da693d files/digest-krfb-3.4.0 70
+MD5 424d12c41c520ebf8fbeb204ee93e5aa files/digest-krfb-3.4.1 140

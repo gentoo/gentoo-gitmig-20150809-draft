@@ -1,4 +1,6 @@
-MD5 f40baf3bcc0cccec699789544296786a ChangeLog 1689
 MD5 55ab8c15c5fd073ad306eea0f9fc2a6c kdegraphics-kfile-plugins-3.4.0.ebuild 708
+MD5 b68143ad689b3c3124c0ac973d5b02d2 kdegraphics-kfile-plugins-3.4.1.ebuild 689
+MD5 f40baf3bcc0cccec699789544296786a ChangeLog 1689
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kdegraphics-kfile-plugins-3.4.0 71
+MD5 48990bd99d6f4ecf50edb4305eb6c099 files/digest-kdegraphics-kfile-plugins-3.4.1 142

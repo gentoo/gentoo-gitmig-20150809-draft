@@ -1,4 +1,6 @@
+MD5 3bf5fdb280a1f000a7afd1b607f48c27 kicker-applets-3.4.1.ebuild 622
 MD5 2ef895a2d8dcdebb64b0981eea1a790c ChangeLog 1600
-MD5 224ae88ea4223d0040cd3446e48f63ae kicker-applets-3.4.0.ebuild 641
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 224ae88ea4223d0040cd3446e48f63ae kicker-applets-3.4.0.ebuild 641
 MD5 231586b7509d98416a3043180cebfe60 files/digest-kicker-applets-3.4.0 69
+MD5 7358ade938bf135b83f7e821872dac84 files/digest-kicker-applets-3.4.1 138

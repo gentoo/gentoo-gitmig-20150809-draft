@@ -1,4 +1,6 @@
-MD5 691c89e52d041b0e923b61575dabfdc7 ChangeLog 1444
 MD5 6206e9807e3b1b9bf2b28439770dbb14 kmahjongg-3.4.0.ebuild 540
+MD5 2d94e7e1571fc5c7a8f85e3c1f04e1b1 kmahjongg-3.4.1.ebuild 521
+MD5 691c89e52d041b0e923b61575dabfdc7 ChangeLog 1444
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-kmahjongg-3.4.0 68
+MD5 cbb1fb83afd4a84cb95577b4cd0a08bd files/digest-kmahjongg-3.4.1 136

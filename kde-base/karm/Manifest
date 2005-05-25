@@ -1,4 +1,6 @@
-MD5 ebcb841a96dda3769a77c38713488354 ChangeLog 1402
+MD5 d3adeafede01727a104e013ea296b01b karm-3.4.1.ebuild 728
 MD5 8a2ccc6bfe444c98b65b3936e225b244 karm-3.4.0.ebuild 747
+MD5 ebcb841a96dda3769a77c38713488354 ChangeLog 1402
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-karm-3.4.0 67
+MD5 7e3e5fdc63982b39b9df921e916f246a files/digest-karm-3.4.1 134

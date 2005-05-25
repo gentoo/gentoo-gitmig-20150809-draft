@@ -1,4 +1,6 @@
-MD5 10e7709542b7aa102fae529cda198b6b ChangeLog 1416
+MD5 01451d92240429dec0ffa83f81240388 klipper-3.4.1.ebuild 400
 MD5 abda96a0236e0238c0184f33e24d0eb0 klipper-3.4.0.ebuild 419
+MD5 10e7709542b7aa102fae529cda198b6b ChangeLog 1416
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-klipper-3.4.0 68
+MD5 2ed3f0976007ee8a8406f3f6422d66bf files/digest-klipper-3.4.1 136

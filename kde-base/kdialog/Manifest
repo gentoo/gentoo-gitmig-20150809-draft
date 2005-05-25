@@ -1,4 +1,6 @@
-MD5 fa9173efde370d1f6a91d9e471d91abd ChangeLog 1312
+MD5 80bde40faf096fc43e36a20c75cea532 kdialog-3.4.1.ebuild 429
 MD5 d73081cfc81c79f88299ac98094e3566 kdialog-3.4.0.ebuild 448
+MD5 fa9173efde370d1f6a91d9e471d91abd ChangeLog 1312
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kdialog-3.4.0 68
+MD5 2ed3f0976007ee8a8406f3f6422d66bf files/digest-kdialog-3.4.1 136

@@ -1,4 +1,6 @@
+MD5 302237d1d1fe53907a68e0e1dc08226e keduca-3.4.1.ebuild 393
 MD5 d15998e5c1eb571846d6d353311ce17c ChangeLog 1428
 MD5 c440a60411c620bc1d0b5c00a680abfc keduca-3.4.0.ebuild 412
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-keduca-3.4.0 67
+MD5 bbf1580cea58dcec6628f8ff15615c94 files/digest-keduca-3.4.1 134

@@ -1,4 +1,6 @@
+MD5 d4db8e5d004dcaebbb644f75b9d03cee kodo-3.4.1.ebuild 400
 MD5 ca58cef80d0c81b9a7e8bf01bb6e82f6 ChangeLog 1380
-MD5 d28f597a3c1a5bf6c1e812f8efc88027 kodo-3.4.0.ebuild 419
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 d28f597a3c1a5bf6c1e812f8efc88027 kodo-3.4.0.ebuild 419
 MD5 5b4e3adba5796dc0f4ac34763f6e0bff files/digest-kodo-3.4.0 67
+MD5 7638be7e98aa22bf0dbf0df376337913 files/digest-kodo-3.4.1 134

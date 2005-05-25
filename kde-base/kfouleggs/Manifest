@@ -1,4 +1,6 @@
-MD5 80f2622629fcec70d76b2668c40685f5 ChangeLog 1471
+MD5 35527dd6144d8c19428b88bccbf68a30 kfouleggs-3.4.1.ebuild 691
 MD5 ec3246c4fc77f6efcbeaee4a291bda05 kfouleggs-3.4.0.ebuild 710
+MD5 80f2622629fcec70d76b2668c40685f5 ChangeLog 1471
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-kfouleggs-3.4.0 68
+MD5 cbb1fb83afd4a84cb95577b4cd0a08bd files/digest-kfouleggs-3.4.1 136

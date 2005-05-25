@@ -1,4 +1,6 @@
-MD5 696693fc21c60bc01f8b20921c273804 ChangeLog 1389
 MD5 1efbb35f82482faaed3d3e9eb9d73248 kdf-3.4.0.ebuild 388
+MD5 696693fc21c60bc01f8b20921c273804 ChangeLog 1389
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 af2da7f75a700905f3e8723a7cca044b kdf-3.4.1.ebuild 369
 MD5 dbade662a75a6b44c890deef5400485f files/digest-kdf-3.4.0 68
+MD5 b0a10acbeb1561abc6b84728e8b8c9bc files/digest-kdf-3.4.1 136

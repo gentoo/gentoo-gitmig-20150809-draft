@@ -1,4 +1,6 @@
+MD5 4706d5238936aeef89fceb632a7c834f renamedlg-audio-3.4.1.ebuild 456
 MD5 f5ca8d83ecaa02445e6c039be35ffc18 ChangeLog 1520
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 82e8e450e194a92ddd0027705bc3db1b renamedlg-audio-3.4.0.ebuild 475
 MD5 231586b7509d98416a3043180cebfe60 files/digest-renamedlg-audio-3.4.0 69
+MD5 7358ade938bf135b83f7e821872dac84 files/digest-renamedlg-audio-3.4.1 138

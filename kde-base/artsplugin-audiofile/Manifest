@@ -1,4 +1,6 @@
-MD5 cfa10773ddc80b792836224c2cfaf4c6 ChangeLog 1444
+MD5 925261bad5707c0b59e003deed9de642 artsplugin-audiofile-3.4.1.ebuild 619
 MD5 9691386ceda29c31e04ebe1a7687e74a artsplugin-audiofile-3.4.0.ebuild 638
+MD5 4df72a4c5b4639233d0bd3776954f9ca ChangeLog 1691
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-artsplugin-audiofile-3.4.0 73
+MD5 b00ef893ed158f45f57b92ec02a66007 files/digest-artsplugin-audiofile-3.4.1 146

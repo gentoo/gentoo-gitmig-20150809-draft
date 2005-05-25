@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kontact-specialdates
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.8 2005/04/27 19:19:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.9 2005/05/25 21:23:09 danarmak Exp $
+
+*kontact-specialdates-3.4.1 (25 May 2005)
+
+  25 May 2005; Dan Armak <danarmak@gentoo.org>
+  +kontact-specialdates-3.4.1.ebuild:
+  Ebuilds for KDE 3.4.1. These are package.masked until 3.4.1 is actually
+  released. You can't get the tarballs yet.
 
   27 Apr 2005; Markus Rothe <corsair@gentoo.org>
   kontact-specialdates-3.4.0.ebuild:

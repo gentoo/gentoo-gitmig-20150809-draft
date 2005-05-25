@@ -1,4 +1,6 @@
 MD5 e18dbb40abb5bbf5a62790dd3a9247ad kitchensync-3.4.0.ebuild 900
+MD5 19496f33e296f8b7d3f724c649caaf79 kitchensync-3.4.1.ebuild 881
 MD5 72aaa16bc549441b9cc80faee431eb98 ChangeLog 1810
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kitchensync-3.4.0 67
+MD5 7e3e5fdc63982b39b9df921e916f246a files/digest-kitchensync-3.4.1 134

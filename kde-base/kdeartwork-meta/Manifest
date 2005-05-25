@@ -1,4 +1,6 @@
-MD5 2eeb68b3b50eec34233535e78d66d330 ChangeLog 1698
+MD5 527a2642e0f7acd1eb5f7be8974283b3 kdeartwork-meta-3.4.1.ebuild 977
 MD5 2849bba2767c8c32191a031ddfc26e01 kdeartwork-meta-3.4.0.ebuild 996
+MD5 2eeb68b3b50eec34233535e78d66d330 ChangeLog 1698
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.1 0

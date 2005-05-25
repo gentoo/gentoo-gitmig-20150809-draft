@@ -1,4 +1,6 @@
-MD5 6c1461ed6d7deac53d0d4727bfd9883f ChangeLog 1404
 MD5 7bd0d87a00a4eb609da346640114da17 ktimer-3.4.0.ebuild 376
+MD5 6c1461ed6d7deac53d0d4727bfd9883f ChangeLog 1404
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 0af3067344c1ae01069ffee37d380db6 ktimer-3.4.1.ebuild 357
 MD5 dbade662a75a6b44c890deef5400485f files/digest-ktimer-3.4.0 68
+MD5 b0a10acbeb1561abc6b84728e8b8c9bc files/digest-ktimer-3.4.1 136

@@ -1,4 +1,6 @@
-MD5 14dedacb43dcf04735fba0d9a7b1d41c ChangeLog 1404
 MD5 a65436fdb167522a94dbb66a28ab2688 klines-3.4.0.ebuild 589
+MD5 49622ff5a1d96d3df3dfe0c61876705f klines-3.4.1.ebuild 570
+MD5 14dedacb43dcf04735fba0d9a7b1d41c ChangeLog 1404
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-klines-3.4.0 68
+MD5 cbb1fb83afd4a84cb95577b4cd0a08bd files/digest-klines-3.4.1 136

@@ -1,4 +1,6 @@
-MD5 5e3a19359c1ab2ba8a3ec0dd4f88e739 ChangeLog 1428
+MD5 08a64e3f8b2e0ec4988d22884f971b09 kdebase-data-3.4.1.ebuild 621
 MD5 5ac3542a4f37f59831016b9778f632a6 kdebase-data-3.4.0.ebuild 640
+MD5 5e3a19359c1ab2ba8a3ec0dd4f88e739 ChangeLog 1428
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kdebase-data-3.4.0 68
+MD5 2ed3f0976007ee8a8406f3f6422d66bf files/digest-kdebase-data-3.4.1 136

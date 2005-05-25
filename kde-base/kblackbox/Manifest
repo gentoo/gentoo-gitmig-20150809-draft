@@ -1,4 +1,6 @@
-MD5 2f7ce6c6dc56e066ebb475cd6f6848cc ChangeLog 1471
+MD5 51aa78b5a587ab4efe7645460445bbde kblackbox-3.4.1.ebuild 522
 MD5 4c63ef298e742186fb62f3886bcc2bff kblackbox-3.4.0.ebuild 541
+MD5 2f7ce6c6dc56e066ebb475cd6f6848cc ChangeLog 1471
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-kblackbox-3.4.0 68
+MD5 cbb1fb83afd4a84cb95577b4cd0a08bd files/digest-kblackbox-3.4.1 136

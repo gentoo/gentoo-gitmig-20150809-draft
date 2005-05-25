@@ -1,4 +1,6 @@
-MD5 199a763b4cad59902fd7db66be0574d1 ChangeLog 1380
+MD5 a33a74069bc036e19e8aa5007e10a813 kregexpeditor-3.4.1.ebuild 398
 MD5 baddeec5baa33ccdfa77b48736320242 kregexpeditor-3.4.0.ebuild 417
+MD5 199a763b4cad59902fd7db66be0574d1 ChangeLog 1380
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 dbade662a75a6b44c890deef5400485f files/digest-kregexpeditor-3.4.0 68
+MD5 b0a10acbeb1561abc6b84728e8b8c9bc files/digest-kregexpeditor-3.4.1 136

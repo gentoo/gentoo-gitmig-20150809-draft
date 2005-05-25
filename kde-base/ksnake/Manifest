@@ -1,4 +1,6 @@
+MD5 1ab611f47c1f26c38342fbd2944fd917 ksnake-3.4.1.ebuild 518
 MD5 44f4816814c4e5160996a5e0e6b96b66 ChangeLog 1404
-MD5 775e7976cdd39ce8dd628af069f17a52 ksnake-3.4.0.ebuild 537
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 775e7976cdd39ce8dd628af069f17a52 ksnake-3.4.0.ebuild 537
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-ksnake-3.4.0 68
+MD5 cbb1fb83afd4a84cb95577b4cd0a08bd files/digest-ksnake-3.4.1 136

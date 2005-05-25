@@ -1,4 +1,6 @@
-MD5 a01b95a3caa3aab9f717688586bd6908 ChangeLog 1468
 MD5 2c84cc4c76a34acb440df14cc1af28c6 knewsticker-3.4.0.ebuild 547
+MD5 b81c93bea6b8a342479e4fdf7d285775 knewsticker-3.4.1.ebuild 528
+MD5 a01b95a3caa3aab9f717688586bd6908 ChangeLog 1468
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 622d3497792334fa87e483e249da693d files/digest-knewsticker-3.4.0 70
+MD5 424d12c41c520ebf8fbeb204ee93e5aa files/digest-knewsticker-3.4.1 140

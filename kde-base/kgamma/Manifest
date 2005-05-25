@@ -1,4 +1,6 @@
+MD5 48786d0db2565b715976c382c2a4dd68 kgamma-3.4.1.ebuild 391
 MD5 bf411c5ce4fa6bc7af80587b4b83a685 ChangeLog 1428
-MD5 1dd9637d7b2f07e850b0227584b59218 kgamma-3.4.0.ebuild 410
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 1dd9637d7b2f07e850b0227584b59218 kgamma-3.4.0.ebuild 410
 MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kgamma-3.4.0 71
+MD5 48990bd99d6f4ecf50edb4305eb6c099 files/digest-kgamma-3.4.1 142

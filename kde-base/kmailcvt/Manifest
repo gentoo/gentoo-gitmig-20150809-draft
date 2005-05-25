@@ -1,4 +1,6 @@
-MD5 6fab5575548a64d64b1530078274b764 ChangeLog 1428
 MD5 090771171d8694e642c5184145ff32df kmailcvt-3.4.0.ebuild 391
+MD5 2d9ebec125e917380d03307aeb0ca09c kmailcvt-3.4.1.ebuild 372
+MD5 6fab5575548a64d64b1530078274b764 ChangeLog 1428
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kmailcvt-3.4.0 67
+MD5 7e3e5fdc63982b39b9df921e916f246a files/digest-kmailcvt-3.4.1 134

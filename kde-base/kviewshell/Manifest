@@ -1,4 +1,6 @@
+MD5 6ffd6c46ee46b1afc9d58edfa74a3de4 kviewshell-3.4.1.ebuild 405
 MD5 0622996ac8cbc671f1c2686f54642dc3 ChangeLog 1456
-MD5 e2974268bc893481cd8134062463ce24 kviewshell-3.4.0.ebuild 424
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 e2974268bc893481cd8134062463ce24 kviewshell-3.4.0.ebuild 424
 MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kviewshell-3.4.0 71
+MD5 48990bd99d6f4ecf50edb4305eb6c099 files/digest-kviewshell-3.4.1 142

@@ -1,4 +1,6 @@
-MD5 261a4520016bb922e295dc7db9cf262c ChangeLog 1392
+MD5 f111a925f1e1a62f0b66599404e78bfc kiten-3.4.1.ebuild 385
 MD5 e4353a7c3134cff7f169a401961f72c0 kiten-3.4.0.ebuild 404
+MD5 261a4520016bb922e295dc7db9cf262c ChangeLog 1392
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-kiten-3.4.0 67
+MD5 bbf1580cea58dcec6628f8ff15615c94 files/digest-kiten-3.4.1 134

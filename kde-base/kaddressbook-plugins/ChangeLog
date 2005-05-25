@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kaddressbook-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook-plugins/ChangeLog,v 1.7 2005/04/27 21:53:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook-plugins/ChangeLog,v 1.8 2005/05/25 21:23:00 danarmak Exp $
+
+*kaddressbook-plugins-3.4.1 (25 May 2005)
+
+  25 May 2005; Dan Armak <danarmak@gentoo.org>
+  +kaddressbook-plugins-3.4.1.ebuild:
+  Ebuilds for KDE 3.4.1. These are package.masked until 3.4.1 is actually
+  released. You can't get the tarballs yet.
 
   27 Apr 2005; Markus Rothe <corsair@gentoo.org>
   kaddressbook-plugins-3.4.0.ebuild:

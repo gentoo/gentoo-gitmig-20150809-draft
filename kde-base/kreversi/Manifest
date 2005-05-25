@@ -1,4 +1,6 @@
-MD5 b5f6c4201198b03355a69b407f6fbee9 ChangeLog 1428
 MD5 07b9dbe92eebdfd9420189e0d42d1117 kreversi-3.4.0.ebuild 536
+MD5 3f21dd11ff5ad850d8ac87c56dad8220 kreversi-3.4.1.ebuild 517
+MD5 b5f6c4201198b03355a69b407f6fbee9 ChangeLog 1428
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-kreversi-3.4.0 68
+MD5 cbb1fb83afd4a84cb95577b4cd0a08bd files/digest-kreversi-3.4.1 136

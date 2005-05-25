@@ -1,4 +1,6 @@
+MD5 6f04798279c9e74f27f3432601867bc7 ktnef-3.4.1.ebuild 395
 MD5 dafddf1b27249d99019bda53530b217c ChangeLog 1704
-MD5 422834649fb1bcffce0e8c4dfea24c67 ktnef-3.4.0.ebuild 414
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 422834649fb1bcffce0e8c4dfea24c67 ktnef-3.4.0.ebuild 414
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-ktnef-3.4.0 67
+MD5 7e3e5fdc63982b39b9df921e916f246a files/digest-ktnef-3.4.1 134
