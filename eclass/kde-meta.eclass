@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.31 2005/03/09 20:14:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.32 2005/05/25 16:27:06 cryos Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -342,6 +342,14 @@ function kde-meta_src_unpack() {
 		# kdebase: Remove the installation of the "startkde" script.
 		if [ "$KMNAME" == "kdebase" ]; then
 			sed -i -e s:"bin_SCRIPTS = startkde"::g ${S}/Makefile.am.in
+		fi
+
+		# Visibility support is broken in KDE. Disable it when present until
+		# upstream finds a way to get it working properly. Bug 86898.
+		if grep HAVE_GCC_VISIBILITY configure &> /dev/null || ! [[ -f configure ]]; then
+			find ${S} -name configure.in.in | xargs sed -i -e \
+				's:KDE_ENABLE_HIDDEN_VISIBILITY::g'
+			rm -f configure
 		fi
 
 		# for ebuilds with extended src_unpack
