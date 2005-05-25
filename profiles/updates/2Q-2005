@@ -84,3 +84,4 @@ move dev-perl/Math-BigInt perl-core/Math-BigInt
 move dev-perl/i18n-langtags perl-core/i18n-langtags
 move dev-perl/File-Spec perl-core/File-Spec
 move dev-perl/File-Temp perl-core/File-Temp
+move dev-perl/Getopt-Long perl-core/Getopt-Long
