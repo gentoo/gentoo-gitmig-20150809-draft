@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.34 2005/05/17 05:12:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.35 2005/05/25 17:57:50 herbs Exp $
+
+  25 May 2005; Herbie Hopkins <herbs@gentoo.org>
+  mozilla-firefox-1.0.4.ebuild:
+  Use correct libdir in env.d file.
 
   17 May 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   mozilla-firefox-1.0.4.ebuild:

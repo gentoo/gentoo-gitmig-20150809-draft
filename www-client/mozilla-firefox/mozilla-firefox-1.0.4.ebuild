@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.4.ebuild,v 1.12 2005/05/17 05:12:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.4.ebuild,v 1.13 2005/05/25 17:57:50 herbs Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -180,6 +180,9 @@ EOF
 chmod 0755 ${D}/usr/bin/firefox
 	insinto /etc/env.d
 	doins ${FILESDIR}/10MozillaFirefox
+
+	# Set correct libdir in env.d file
+	dosed "s:/usr/lib:/usr/$(get_libdir):" /etc/env.d/10MozillaFirefox
 
 	# Fix icons to look the same everywhere
 	insinto /usr/$(get_libdir)/MozillaFirefox/icons
