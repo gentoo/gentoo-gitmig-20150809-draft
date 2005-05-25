@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.30.ebuild,v 1.4 2005/01/04 14:11:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.30.ebuild,v 1.5 2005/05/25 14:56:31 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,7 @@ SRC_TEST="do"
 DEPEND="${DEPEND}
 	dev-perl/libwww-perl
 	dev-perl/XML-LibXML
-	dev-perl/Test-Simple
+	perl-core/Test-Simple
 	>=dev-perl/XML-Parser-2.31"
 
 src_compile() {
