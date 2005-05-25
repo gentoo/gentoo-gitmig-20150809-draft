@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.397 2005/05/24 22:50:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.398 2005/05/25 00:06:20 spyderous Exp $
+
+  25 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.99.8.ebuild:
+  Patchset 0.1.3. (#93864, #90672#c18) Add missing comma. This fixes a parse
+  error in ATIDRIScreenInit in atidri.c.
 
   24 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.99.8.ebuild:
