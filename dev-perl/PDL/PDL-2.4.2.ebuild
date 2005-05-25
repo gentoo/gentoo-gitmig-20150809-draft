@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2.ebuild,v 1.7 2005/05/25 13:43:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2.ebuild,v 1.8 2005/05/25 15:20:18 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	|| ( perl-core/File-Spec >=dev-lang/perl-5.8.0-r12 )
 	dev-perl/Inline
 	>=dev-perl/ExtUtils-F77-1.13
-	dev-perl/Text-Balanced
+	perl-core/Text-Balanced
 	opengl? ( virtual/opengl virtual/glu )
 	dev-perl/Term-ReadLine-Perl
 	>=sys-apps/sed-4"
