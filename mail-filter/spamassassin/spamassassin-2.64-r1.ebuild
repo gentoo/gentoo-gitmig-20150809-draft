@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-2.64-r1.ebuild,v 1.3 2005/05/24 14:48:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-2.64-r1.ebuild,v 1.4 2005/05/25 13:45:14 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,7 @@ IUSE="berkdb ssl"
 
 DEPEND="|| ( >=dev-lang/perl-5.8.2-r1
 	( >=dev-perl/ExtUtils-MakeMaker-6.11-r1
-	>=dev-perl/File-Spec-0.8
+	>=perl-core/File-Spec-0.8
 	dev-perl/Time-Local
 	dev-perl/Getopt-Long
 	) )
