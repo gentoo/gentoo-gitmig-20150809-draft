@@ -1,21 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b0b736bb79e8c3a96dbd8c90e16a5a83 ChangeLog 1702
-MD5 73e118166106218945e84883b04da67a caps-plugins-0.1.10.ebuild 714
-MD5 f55e267fada271f3cf74d0d7d2878f45 caps-plugins-0.1.5.ebuild 618
+MD5 a6252268bb6106a9e6e26150e940d52a caps-plugins-0.2.1-r1.ebuild 787
+MD5 7474604a3ad15e35c7d8124da2f9b0f1 ChangeLog 1926
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 aab5acc53f7100fba2c50ffaeb18a213 caps-plugins-0.2.1.ebuild 713
-MD5 d9be7200cf06126bda0fdda60ed65acb caps-plugins-0.2.1-r1.ebuild 794
-MD5 e3bed48f33adc69fe401b245dca8a2a2 files/digest-caps-plugins-0.1.10 63
-MD5 3ce9657a31ddfb46eb62af12277639c3 files/digest-caps-plugins-0.1.5 62
-MD5 e6f951f4aa31c9482b8cafafa280cde6 files/caps-plugins-0.1.10-fpic.patch 293
-MD5 7d9315ae31052c00fdbc6759716b1575 files/digest-caps-plugins-0.2.1 62
 MD5 7d9315ae31052c00fdbc6759716b1575 files/digest-caps-plugins-0.2.1-r1 62
+MD5 e6f951f4aa31c9482b8cafafa280cde6 files/caps-plugins-0.1.10-fpic.patch 293
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCbqabvpz1081QvMkRArwDAJ9tE/h8OwDmEMqmZYe229QMozQraACZARPe
-0nIulXTkFweEMyRsy1aj9Wc=
-=9EF4
+iD8DBQFClKKA06ebR+OMO78RAh/dAJ9jpspCDFXG4ppNTtk/7I8Hsi5RgACdHYC5
+ncd+XBToCD3iWG3NvFP3Qv0=
+=8j9h
 -----END PGP SIGNATURE-----
