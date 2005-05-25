@@ -1,0 +1,47 @@
+# ChangeLog for dev-perl/Text-Balanced
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.1 2005/05/25 15:18:43 mcummings Exp $
+
+*Text-Balanced-1.95 (25 May 2005)
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Text-Balanced-1.95.ebuild:
+  dev-perl => perl-core migration
+
+  28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Text-Balanced-1.95.ebuild:
+  Cleaning up for mirror
+
+  10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Text-Balanced-1.95.ebuild:
+  Stable on ppc.
+
+  02 Apr 2005; Yuta SATOH <nigoro@gentoo.org> Text-Balanced-1.95.ebuild:
+  Stable on ppc64
+
+  24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Text-Balanced-1.95.ebuild:
+  added ~ppc64
+
+  14 Apr 2004; Stephen P. Becker <geoman@gentoo.org>
+  Text-Balanced-1.95.ebuild:
+  Stable on mips.
+
+  07 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  Text-Balanced-1.95.ebuild:
+  Added ~mips keyword.
+
+  07 Jan 2004; <gustavoz@gentoo.org> Text-Balanced-1.95.ebuild:
+  stable for sparc, needed for PDL 2.3.4+
+
+  24 Jun 2003; Aron Griffis <agriffis@gentoo.org> Text-Balanced-1.95.ebuild:
+  Mark stable on alpha
+
+*Text-Balanced-1.95 (31 May 2003)
+
+  03 Jul 2003; Guy Martin <gmsoft@gentoo.org> Text-Balanced-1.95.ebuild :
+  Added hppa to KEYWORDS.
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org>
+  Text-Balanced-1.95.ebuild:
+  Initial import, satisfies deps in PDL
+
