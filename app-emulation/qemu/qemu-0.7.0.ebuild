@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.7 2005/05/18 23:44:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.8 2005/05/25 20:41:48 lu_zero Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -55,13 +55,15 @@ src_unpack() {
 	cd ${S}/kqemu
 	epatch ${FILESDIR}/kqemu-sysfs.patch
 	fi
-
-#	if use qvm86; then
+	#	if use qvm86; then
 #		mv ${WORKDIR}/qvm86 ${S}
 #		cd ${S}
 #		epatch qvm86/patch.qvm86
 #	fi
 	cd ${S}
+	#Fix errno mismatch on glibc-2.3.5
+	epatch ${FILESDIR}/${P}-errno.patch
+
 	# Alter target makefiles to accept CFLAGS set via flag-o.
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target tests/Makefile

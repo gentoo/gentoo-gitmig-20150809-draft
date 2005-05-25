@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.34 2005/05/18 23:44:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.35 2005/05/25 20:41:48 lu_zero Exp $
+
+  25 May 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/qemu-0.7.0-errno.patch, qemu-0.7.0.ebuild:
+  Fix for the errno issues in helper2.c
 
   18 May 2005; Luca Barbato <lu_zero@gentoo.org> qemu-0.7.0.ebuild:
   Add a notice about the qemu group, thanks to Leung Ki Chi 
