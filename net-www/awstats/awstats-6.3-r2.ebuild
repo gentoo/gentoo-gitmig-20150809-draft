@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.3-r2.ebuild,v 1.4 2005/05/11 13:49:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.3-r2.ebuild,v 1.5 2005/05/25 15:37:30 mcummings Exp $
 
 inherit eutils webapp versionator
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6.1
 	>=media-libs/libpng-1.2
-	dev-perl/Time-Local
+	perl-core/Time-Local
 	net-www/apache"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
