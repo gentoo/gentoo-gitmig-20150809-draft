@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.1.ebuild,v 1.4 2005/05/24 21:50:06 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.1.ebuild,v 1.5 2005/05/25 05:42:17 lu_zero Exp $
 
 inherit fortran toolchain-funcs
 
@@ -32,7 +32,7 @@ DEPEND="virtual/libc
 			>=media-libs/audiofile-0.2.1 )"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 sparc ~ppc ppc64 amd64"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 
 src_compile() {
 	# Test for a 64 bit architecture - f2c won't work on 64 bit archs with R.
