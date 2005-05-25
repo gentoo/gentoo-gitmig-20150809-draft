@@ -1,6 +1,13 @@
 # ChangeLog for media-video/dvgrab
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.8 2005/01/22 12:53:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.9 2005/05/25 18:27:46 luckyduck Exp $
+
+*dvgrab-1.8 (25 May 2005)
+
+  25 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -files/dvgrab_gcc34_fix,
+  -dvgrab-1.5.ebuild, dvgrab-1.7.ebuild, +dvgrab-1.8.ebuild:
+  1.7 stable on amd64 and x86, fixes #93821. new stable upstream version
+  added, fixes #92904
 
   22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> dvgrab-1.7.ebuild:
   updated dependency. fixes #79073

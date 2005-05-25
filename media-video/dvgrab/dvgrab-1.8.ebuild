@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.5.ebuild,v 1.6 2005/01/20 13:44:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.8.ebuild,v 1.1 2005/05/25 18:27:46 luckyduck Exp $
 
 inherit eutils
 
 DESCRIPTION="Digital Video (DV) grabber for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
-SRC_URI="http://kino.schirmacher.de/filemanager/download/20/${P}.tar.gz"
-LICENSE="GPL-2"
-IUSE="jpeg quicktime"
+SRC_URI="mirror://sourceforge/kino/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
+IUSE="jpeg quicktime"
 
 DEPEND="sys-libs/libavc1394
-	<=media-libs/libdv-0.102
+	>=media-libs/libdv-0.102
 	jpeg? ( media-libs/jpeg )
 	quicktime? ( media-libs/libquicktime )"
 
@@ -23,15 +23,7 @@ DEPEND="sys-libs/libavc1394
 # (-ldl -lglib)
 #	quicktime? ( virtual/quicktime )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/dvgrab_gcc34_fix || die
-}
-
 src_install () {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS COPYING ChangeLog README INSTALL TODO NEWS \
-		|| die "dodoc failed"
+	dodoc AUTHORS ChangeLog README INSTALL TODO NEWS || die "dodoc failed"
 }
