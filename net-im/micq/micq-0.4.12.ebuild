@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/micq-0.4.12.ebuild,v 1.6 2005/04/30 09:15:47 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/micq-0.4.12.ebuild,v 1.7 2005/05/25 12:48:33 tester Exp $
 
 IUSE="tcltk ssl"
 
-SRC_URI="ftp://www.micq.org/pub/micq/source/${P}.tgz
-	http://www.micq.org/source/${P}.tgz"
+SRC_URI="http://www.micq.org/source/${P}.tgz"
 DESCRIPTION="ICQ text-mode client with many features"
 HOMEPAGE="http://www.micq.org/"
 LICENSE="GPL-2"
