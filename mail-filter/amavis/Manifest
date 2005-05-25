@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5d5335e2c04ec9db45d30feca6357b0 ChangeLog 4275
-MD5 eb37c2acc1a7ec81680be04b64249aab amavis-0.3.12.ebuild 3059
+MD5 7297656b3e298029f8b15cc3393958bc ChangeLog 4415
+MD5 93e846b3d2507b5bc762afc82ed6ec24 amavis-0.3.12.ebuild 3060
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 4b7995ee8c84a5efa4fe98f4dd070987 amavis-0.3.12-r1.ebuild 3061
 MD5 c21bb514e50b3103fbf00d4e877018f9 files/0.3.12-postfix.diff 969
 MD5 dd107599b6f61744ffb5e84f36a2a93d files/digest-amavis-0.3.12 65
 MD5 dd107599b6f61744ffb5e84f36a2a93d files/digest-amavis-0.3.12-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZgIMQlM6RnzZP+IRApZ3AJ4vsC2XQLWDI1BYIfLuFF2Dha0xxgCgpNU6
-S+SpE+ZCYENM1CB0QdmGjuc=
-=H2w+
------END PGP SIGNATURE-----
