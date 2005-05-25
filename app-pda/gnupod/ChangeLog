@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gnupod
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.12 2005/05/25 13:58:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.13 2005/05/25 13:58:47 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> gnupod-0.98.ebuild:
+  dev-perl/Getopt-Long => perl-core/Getopt-Long migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> gnupod-0.97.ebuild:
   dev-perl/Getopt-Long => perl-core/Getopt-Long migration
