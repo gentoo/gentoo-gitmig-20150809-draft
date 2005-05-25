@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Scrubber
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Scrubber/ChangeLog,v 1.6 2005/04/26 01:51:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Scrubber/ChangeLog,v 1.7 2005/05/25 15:08:44 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  HTML-Scrubber-0.08.ebuild:
+  dev-perl/Test-Simple => perl-core/Test-Simple migration
 
   26 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   HTML-Scrubber-0.08.ebuild:

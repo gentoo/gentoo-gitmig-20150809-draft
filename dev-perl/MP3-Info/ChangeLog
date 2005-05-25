@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MP3-Info
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.22 2005/05/05 16:46:03 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.23 2005/05/25 15:10:17 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  MP3-Info-1.02-r1.ebuild:
+  dev-perl/Test-Simple => perl-core/Test-Simple migration
 
   05 May 2005; Yuta SATOH <nigoro@gentoo.org> MP3-Info-1.02-r1.ebuild:
   Stable on ppc64
