@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/mplay-0.68.ebuild,v 1.5 2005/04/19 16:03:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/mplay-0.68.ebuild,v 1.6 2005/05/25 16:32:14 mcummings Exp $
 
 IUSE=""
 
@@ -24,7 +24,7 @@ DEPEND="dev-lang/perl
 	dev-perl/TermReadKey
 	dev-perl/MP3-Info
 	dev-perl/Term-ANSIScreen
-	dev-perl/Time-HiRes
+	perl-core/Time-HiRes
 	media-video/mplayer"
 
 src_unpack() {
