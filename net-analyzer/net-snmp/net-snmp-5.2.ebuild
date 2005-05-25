@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.ebuild,v 1.12 2005/04/08 17:58:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.ebuild,v 1.13 2005/05/25 16:54:59 mcummings Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="virtual/libc
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	perl? (
 		>=sys-devel/libperl-5.8.0
-		>=dev-perl/ExtUtils-MakeMaker-6.11-r1
+		>=perl-core/ExtUtils-MakeMaker-6.11-r1
 	)
 	lm_sensors? (
 		x86?   ( sys-apps/lm_sensors )
