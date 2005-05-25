@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/metadot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.7 2005/05/25 14:47:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.8 2005/05/25 15:33:36 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> metadot-6.1.6.ebuild:
+  dev-perl/Time-HiRes => perl-core/Time-HiRes migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> metadot-6.1.6.ebuild:
   dev-perl/Storable => perl-core/Storable migration

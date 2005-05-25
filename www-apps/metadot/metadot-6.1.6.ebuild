@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.1.6.ebuild,v 1.7 2005/05/25 14:47:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.1.6.ebuild,v 1.8 2005/05/25 15:33:36 mcummings Exp $
 
 inherit webapp
 MY_P=${P/-/}
@@ -36,7 +36,7 @@ RDEPEND="
 	dev-perl/AppConfig
 	dev-perl/ImageSize
 	dev-perl/Template-Toolkit
-	dev-perl/Time-HiRes
+	perl-core/Time-HiRes
 	dev-perl/Lingua-EN-NameParse
 	dev-perl/Number-Format
 	dev-perl/XML-Simple
