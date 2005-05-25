@@ -32,7 +32,7 @@
 
 *dev-lang/perl
 *dev-libs/popt
-*dev-perl/ExtUtils-MakeMaker
+*perl-core/ExtUtils-MakeMaker
 
 >=sys-apps/apmd-3.0.1-r6
 >=sys-process/at-3.1.8-r6
