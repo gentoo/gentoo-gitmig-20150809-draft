@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.39 2005/05/25 13:43:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.40 2005/05/25 13:43:18 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> PDL-2.4.2.ebuild:
+  dev-perl/File-Spec => perl-core/File-Spec migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> PDL-2.4.0-r2.ebuild:
   dev-perl/File-Spec => perl-core/File-Spec migration
