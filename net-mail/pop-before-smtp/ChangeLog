@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/pop-before-smtp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/ChangeLog,v 1.10 2005/05/25 15:32:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/ChangeLog,v 1.11 2005/05/25 15:33:01 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  pop-before-smtp-1.36.ebuild:
+  dev-perl/Time-HiRes => perl-core/Time-HiRes migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   pop-before-smtp-1.34.ebuild:
