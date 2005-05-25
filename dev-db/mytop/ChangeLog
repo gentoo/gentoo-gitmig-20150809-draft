@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.6 2005/01/23 15:37:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.7 2005/05/25 13:59:05 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> mytop-1.4.ebuild:
+  dev-perl/Getopt-Long => perl-core/Getopt-Long migration
 
   23 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> mytop-1.4.ebuild:
   stable on amd64, fixes #72953

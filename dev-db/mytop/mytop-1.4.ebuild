@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.7 2005/01/23 15:37:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.8 2005/05/25 13:59:05 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-perl/DBD-mysql
-	dev-perl/Getopt-Long
+	perl-core/Getopt-Long
 	dev-perl/TermReadKey
 	dev-perl/Term-ANSIColor
 	dev-perl/Time-HiRes
