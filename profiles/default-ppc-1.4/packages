@@ -29,7 +29,7 @@
 *app-shells/sash
 *dev-lang/perl
 *dev-libs/popt
-*dev-perl/ExtUtils-MakeMaker
+*perl-core/ExtUtils-MakeMaker
 *net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/iputils
