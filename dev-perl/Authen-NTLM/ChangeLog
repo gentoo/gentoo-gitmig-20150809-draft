@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Authen-NTLM
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/ChangeLog,v 1.5 2005/04/22 12:31:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/ChangeLog,v 1.6 2005/05/25 14:08:30 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Authen-NTLM-1.02.ebuild:
+  dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> Authen-NTLM-1.02.ebuild:
   stable on amd64

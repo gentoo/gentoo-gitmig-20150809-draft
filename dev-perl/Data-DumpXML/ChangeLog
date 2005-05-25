@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-DumpXML
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/ChangeLog,v 1.2 2005/04/08 12:57:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/ChangeLog,v 1.3 2005/05/25 14:09:39 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Data-DumpXML-1.06.ebuild:
+  dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
 
   08 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   Data-DumpXML-1.06.ebuild:

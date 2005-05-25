@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/Crypt-OpenPGP-1.03.ebuild,v 1.5 2005/05/24 15:43:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/Crypt-OpenPGP-1.03.ebuild,v 1.6 2005/05/25 14:09:22 mcummings Exp $
 
 inherit perl-module
 
@@ -25,7 +25,7 @@ SRC_TEST="do"
 # URI-Escape
 
 RDEPEND=">=dev-perl/data-buffer-0.04
-		dev-perl/MIME-Base64
+		perl-core/MIME-Base64
 		>=dev-perl/math-pari-2.010603
 		dev-perl/Compress-Zlib
 		dev-perl/libwww-perl

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/Audio-CD-disc-cover-0.05.ebuild,v 1.9 2005/05/24 15:42:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/Audio-CD-disc-cover-0.05.ebuild,v 1.10 2005/05/25 14:08:12 mcummings Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 
 DEPEND="${DEPEND}
-	>=dev-perl/MIME-Base64-2.12
+	>=perl-core/MIME-Base64-2.12
 	>=dev-perl/URI-1.10
 	>=dev-perl/HTML-Parser-3.15
 	>=perl-core/Digest-MD5-2.12
