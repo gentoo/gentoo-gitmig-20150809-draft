@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.16 2005/04/18 06:30:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.17 2005/05/25 10:20:11 corsair Exp $
+
+  25 May 2005; Markus Rothe <corsair@gentoo.org> crossdev-0.9.6.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *crossdev-0.9.6 (18 Apr 2005)
 
