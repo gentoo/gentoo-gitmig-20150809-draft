@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 758f02ce715d5aaa0bdf562144558225 ChangeLog 1390
 MD5 aa3af81808bbce7b6cdd8ad9ea0f319b metadata.xml 325
 MD5 32041f8c5a88bdfeb03c3133005dd57f swatch-3.0.8.ebuild 540
@@ -6,3 +9,10 @@ MD5 e123aa1c5625b969e50c716459fea7d0 swatch-3.1.ebuild 558
 MD5 e5376f12b545cf2fa24afc0819859935 files/digest-swatch-3.0.8 63
 MD5 2572c31206ee1269837e07c8139100cb files/digest-swatch-3.1 61
 MD5 deb35d56ce849b9feb9012b91d2dfd1d files/digest-swatch-3.1.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClJhWtG5z4I8BtQoRAjePAJ0exeA9AFwP29RMvucOKl5Ft5hkqwCdF7fh
+OkSkkvQczL1elEMA0f1j7PM=
+=pFHa
+-----END PGP SIGNATURE-----
