@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/crypt-rsa-1.50.ebuild,v 1.10 2005/04/22 12:52:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/crypt-rsa-1.50.ebuild,v 1.11 2005/05/25 09:09:06 mcummings Exp $
 
 inherit perl-module
 
@@ -22,7 +22,7 @@ DEPEND="dev-perl/math-pari
 	dev-perl/Crypt-Blowfish
 	dev-perl/Sort-Versions
 	dev-perl/Digest-SHA1
-	dev-perl/Digest-MD5
+	perl-core/Digest-MD5
 	dev-perl/class-loader
 	dev-perl/digest-md2
 	dev-perl/convert-ascii-armour
