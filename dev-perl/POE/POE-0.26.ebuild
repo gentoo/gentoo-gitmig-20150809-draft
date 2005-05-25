@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.10 2005/05/25 14:39:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.11 2005/05/25 15:25:44 mcummings Exp $
 
 IUSE="gtk ipv6 libwww ncurses tcltk"
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 amd64 ppc sparc alpha"
 DEPEND="${DEPEND}
 	dev-perl/ExtUtils-AutoInstall
 	dev-perl/Event
-	dev-perl/Time-HiRes
+	perl-core/Time-HiRes
 	dev-perl/Compress-Zlib
 	perl-core/Storable
 	dev-perl/IO-Tty
