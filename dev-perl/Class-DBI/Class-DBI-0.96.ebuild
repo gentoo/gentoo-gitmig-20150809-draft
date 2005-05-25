@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-0.96.ebuild,v 1.8 2005/01/30 00:21:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-0.96.ebuild,v 1.9 2005/05/25 13:49:30 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND="dev-perl/Class-Data-Inheritable
 		dev-perl/Class-Accessor
 		dev-perl/Class-Trigger
-		dev-perl/File-Temp
+		perl-core/File-Temp
 		dev-perl/Storable
 		dev-perl/Test-Simple
 		dev-perl/Ima-DBI
