@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bb2b4acc75b3297486caa7f92a51fc89 ChangeLog 4888
-MD5 874793785406d48d1e01dcd3a5c8418b bugzilla-2.18.0_rc1.ebuild 1722
-MD5 6e9c34ad01eb5511751bbaa27b9c9037 bugzilla-2.18.0_rc2.ebuild 1885
-MD5 926599cc820101e116b04d4795bce346 bugzilla-2.18.0_rc3.ebuild 1885
-MD5 134a755b442c9c67cc5a17c349182c95 bugzilla-2.18.0_rc4.ebuild 2016
+MD5 7c07ad652c1aa66fc95eb4d07ad6c490 ChangeLog 5582
+MD5 170c293979e22f30ae1fd668725173e5 bugzilla-2.18.0_rc1.ebuild 1723
+MD5 c2f8989b40e7b39f16828b13b25d1649 bugzilla-2.18.0_rc2.ebuild 1886
+MD5 4932347146979b81e62787ca0a3e2ad9 bugzilla-2.18.0_rc3.ebuild 1886
+MD5 37a0f36337a34771a3fb361eb7081e3e bugzilla-2.18.0_rc4.ebuild 2017
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 0aba3427dba5f1d9f5c74a3efc76765e bugzilla-2.18.1.ebuild 1859
+MD5 19231162fe7fb31d407015276d70a5e8 bugzilla-2.18.1.ebuild 1860
 MD5 084e450d86a5a25f20a6ecd617b1a7b4 files/CAN-2004-1061.patch 2203
 MD5 4a9b1a263f16b2a53b44bce45350b373 files/bugzilla.conf 148
 MD5 0be5a588dc7fdfc9e4898a855bd32361 files/bugzilla.cron.daily 115
@@ -31,7 +31,7 @@ MD5 23beb9ca60294343070078f9649dbc03 files/2.18.0_rc4/reconfig 3208
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCkzqTtG5z4I8BtQoRAgWaAJ9V6vLyVJ4Rq5CMfeR+XVmt/VubDACeJ0kv
-zXhyOyCBuouuEPK+p4tRH6U=
-=dZ5i
+iD8DBQFClIHutG5z4I8BtQoRAqzdAJ0SbAMWKYBeb21TTEkrou31F0exXgCggxwX
+00rfcjYsl7gVIKtLOZfDEC0=
+=C41H
 -----END PGP SIGNATURE-----
