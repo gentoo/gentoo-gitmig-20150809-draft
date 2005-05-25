@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/filewatcher
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.1 2005/04/28 18:54:55 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.2 2005/05/25 21:27:23 swegener Exp $
+
+  25 May 2005; Sven Wegener <swegener@gentoo.org> filewatcher-2.4.0.ebuild:
+  Fixed copyright header and removed unneeded inherit eutils.
 
 *filewatcher-2.4.0 (28 Apr 2005)
 

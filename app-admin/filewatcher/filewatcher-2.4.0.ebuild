@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation, Inc.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/filewatcher-2.4.0.ebuild,v 1.1 2005/04/28 18:54:55 beu Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/filewatcher-2.4.0.ebuild,v 1.2 2005/05/25 21:27:23 swegener Exp $
 
 DESCRIPTION="This is a configuration file control system and IDS"
 HOMEPAGE="http://www.willingminds.com/resources/filewatcher.html"
@@ -23,7 +21,7 @@ src_install() {
 	doman filewatcher.1 || die "could not install filewatcher manpage"
 
 	insinto /etc
-	doins ${FILESDIR}/filewatcher.conf || \
+	doins "${FILESDIR}"/filewatcher.conf || \
 		die "could not install basic filewatcher config"
 }
 
