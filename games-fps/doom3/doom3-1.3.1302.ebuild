@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302.ebuild,v 1.3 2005/05/25 17:01:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302.ebuild,v 1.4 2005/05/25 18:00:40 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -74,9 +74,6 @@ src_install() {
 		einfo "Copying files from Disk 3..."
 		doins ${CDROM_ROOT}/Setup/Data/base/pak00* \
 			|| die "copying pak003 and pak004"
-		einfo "Copying pak000.pk4 to d3xp for RoE support..."
-		insinto ${dir}/d3xp
-		doins ${Ddir}/base/pak000.pk4 || die "Could not copy pak000.pk4"
 	fi
 
 	games_make_wrapper doom3 ./doom.x86 ${dir}
