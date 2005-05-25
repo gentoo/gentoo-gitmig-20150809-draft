@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.11.ebuild,v 1.1 2005/05/24 00:29:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.11.ebuild,v 1.2 2005/05/25 00:22:52 vapier Exp $
 
 inherit flag-o-matic
 
@@ -18,6 +18,11 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	if [[ ${CTARGET:-${CHOST}} == *-freebsd* ]] ; then
+		epatch ${FILESDIR}/${P}-fbsd.patch
+		aclocal && autoconf && automake || die "autotools failed"
+	fi
 
 	# Remove some obsolete ia64-related hacks from the strace source
 	# (08 Feb 2005 agriffis)

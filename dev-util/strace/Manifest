@@ -1,6 +1,6 @@
 MD5 4c547d03b7565c0b33b27f0926afd36d ChangeLog 7232
 MD5 c9d8ca6c43099729a9c981ed49e94ce3 strace-4.5.9.ebuild 1429
-MD5 e6881c47e314c52a911f876d8a5cbba2 strace-4.5.11.ebuild 1430
+MD5 f3283c424c4d5d35e5ce6a677749b7f6 strace-4.5.11.ebuild 1584
 MD5 85f383eadb2ed8c50c1a494e679bd2a2 strace-4.5.1.ebuild 1294
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 7a45d471b2608afbcfac7b22f86726ce strace-4.5.7.ebuild 1139
@@ -10,6 +10,7 @@ MD5 4cab7a7a05a80b3cc46421302239ab92 files/digest-strace-4.5.9 65
 MD5 38e4a65d3a6a6e39695752ba68b2db78 files/digest-strace-4.5.1 65
 MD5 b7c93d383818fc6aa8ac330514b866e0 files/strace-4.5.1-2.6.patch 5756
 MD5 fdb191f71c367e18de7f236b17d51401 files/digest-strace-4.5.11 66
+MD5 3eb9b0a09aef20e2fd45e7f6e73557d1 files/strace-4.5.11-fbsd.patch 4767
 MD5 332b30ad46b6f4ee72387a779580f321 files/digest-strace-4.5.7 65
 MD5 b2d46a601a4bd117795f40178cf40612 files/digest-strace-4.5.2 65
 MD5 3d30271a2e23ac6401b2b54f99b91e5c files/strace-4.5.2-s390-april2004.diff 11986
