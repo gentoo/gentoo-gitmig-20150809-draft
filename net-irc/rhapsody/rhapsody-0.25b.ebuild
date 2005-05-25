@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/rhapsody-0.24b.ebuild,v 1.1 2005/03/16 18:45:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/rhapsody-0.25b.ebuild,v 1.1 2005/05/25 18:13:31 swegener Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="IRC client intended to be displayed on a text console"
 HOMEPAGE="http://rhapsody.sourceforge.net/"
@@ -15,7 +17,7 @@ DEPEND=">=sys-libs/ncurses-5.0"
 
 src_compile() {
 	./configure -i /usr/share/rhapsody || die "configure failed"
-	emake LOCALFLAGS="${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" LOCALFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
