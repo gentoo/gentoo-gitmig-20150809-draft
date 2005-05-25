@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/grace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.29 2005/03/23 16:17:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.30 2005/05/25 00:32:12 spyderous Exp $
+
+*grace-5.1.18 (25 May 2005)
+
+  25 May 2005; Donnie Berkholz <spyderous@gentoo.org>; +grace-5.1.18.ebuild:
+  (#73898) Version bump. Highlights include PDF-1.4 support, pdflib-6
+  compatibility, better TrueType font support.
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> grace-5.1.10-r1.ebuild,
   grace-5.1.12-r1.ebuild, grace-5.1.13.ebuild, grace-5.1.14.ebuild:
