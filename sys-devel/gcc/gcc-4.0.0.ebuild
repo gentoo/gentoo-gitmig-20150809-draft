@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0.ebuild,v 1.2 2005/05/10 18:10:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0.ebuild,v 1.3 2005/05/25 22:25:34 vapier Exp $
+
+HTB_VER="1.00"
 
 ETYPE="gcc-compiler"
 
@@ -12,8 +14,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="-*"
 
-RDEPEND="virtual/libc
-	>=sys-devel/gcc-config-1.3.1
+RDEPEND=">=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
 	!uclibc? (
@@ -41,15 +42,14 @@ DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.875
 	>=sys-devel/binutils-2.15.97"
 
-PDEPEND="sys-devel/gcc-config
-	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
+PDEPEND="sys-devel/gcc-config"
 
 src_unpack() {
 	gcc_src_unpack
-
-	cd ${S}
-	for x in $(cat /tmp/gcc4/list); do
-		[[ -f /tmp/gcc4/${x} ]] && epatch "/tmp/gcc4/${x}"
+	cd "${S}"
+	[[ ! -e /root/gcc4/list ]] && return 0
+	for x in $(</root/gcc4/list) ; do
+		[[ -f /root/gcc4/${x} ]] && epatch "/root/gcc4/${x}"
 	done
 }
 
