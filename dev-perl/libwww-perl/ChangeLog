@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.48 2005/05/24 15:51:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.49 2005/05/25 14:18:25 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  libwww-perl-5.69-r2.ebuild:
+  dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org>
   libwww-perl-5.69-r2.ebuild, libwww-perl-5.79.ebuild,
