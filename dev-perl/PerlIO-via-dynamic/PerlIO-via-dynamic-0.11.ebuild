@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/PerlIO-via-dynamic-0.11.ebuild,v 1.5 2005/04/25 22:56:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/PerlIO-via-dynamic-0.11.ebuild,v 1.6 2005/05/25 13:51:16 mcummings Exp $
 
 inherit perl-module
 
@@ -14,4 +14,4 @@ SRC_TEST="do"
 KEYWORDS="x86 sparc ~amd64 ~alpha ~ppc"
 IUSE=""
 
-DEPEND=">=dev-perl/File-Temp-0.14"
+DEPEND=">=perl-core/File-Temp-0.14"

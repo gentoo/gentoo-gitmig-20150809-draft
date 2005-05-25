@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PerlIO-via-dynamic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.7 2005/04/25 22:56:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.8 2005/05/25 13:51:16 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  PerlIO-via-dynamic-0.11.ebuild:
+  dev-perl/File-Temp => perl-core/File-Temp migration
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   PerlIO-via-dynamic-0.02.ebuild, PerlIO-via-dynamic-0.11.ebuild:
