@@ -82,3 +82,4 @@ move dev-perl/Digest-MD5 perl-core/Digest-MD5
 move dev-perl/Test perl-core/Test
 move dev-perl/Math-BigInt perl-core/Math-BigInt
 move dev-perl/i18n-langtags perl-core/i18n-langtags
+move dev-perl/File-Spec perl-core/File-Spec
