@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 02f0faab9c684bb9631546a748173e9b ac-archive-0.5.57.ebuild 756
-MD5 55c98ab146157232ca6b165be8d8be8b ac-archive-0.5.63.ebuild 775
-MD5 030e2decd98599e96c6819e7becbbd2e ChangeLog 850
+MD5 a5978addaa1579bd0a47577406db891c ac-archive-0.5.63.ebuild 774
+MD5 48eececd9a4fd5086881590de09557d6 ChangeLog 943
 MD5 1fba9ec2e00f12eebab29e7b126af1f8 metadata.xml 608
 MD5 ac9d7aa98a803fad73610d51fd658c97 files/digest-ac-archive-0.5.57 70
 MD5 64c826fdff2358653311b3d75124caed files/digest-ac-archive-0.5.63 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCajMrEZCkKN40op4RAgw/AJ0em4zofY5aqm2s/cZsGasxi/D8gACdErH4
-CpjEgE+3Z64pR8ecgbZY0Zw=
-=GPF4
+iD8DBQFClGsmEZCkKN40op4RAo3GAKCgUyvOCasbU+0ojivXrYDLz+QykACfcORZ
+Ysy9HNzuykILi7AXIR8e5dc=
+=QquO
 -----END PGP SIGNATURE-----
