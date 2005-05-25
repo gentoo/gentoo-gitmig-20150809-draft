@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/vultureng-0.6.ebuild,v 1.1 2005/05/24 21:04:36 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/vultureng-0.6.ebuild,v 1.2 2005/05/25 09:23:58 dams Exp $
 
 inherit flag-o-matic eutils
 
-DESCRIPTION="INTRINsec traffic control and advanced routing management console"
+DESCRIPTION="INTRINsec Reverse Proxy"
 HOMEPAGE="http://vulture.open-source.fr"
 SRC_URI="http://vulture.open-source.fr/download/VultureNG-${PV}.tar.gz"
 S=${WORKDIR}/VultureNG-${PV}
@@ -12,12 +12,11 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~x86"
-IUSE="apache2 sqlite"
+#IUSE="apache2 sqlite"
 
 INTRINsec_HOME="/opt/INTRINsec"
 
-RDEPEND="dev-php/sqlite-php
-dev-perl/CGI
+RDEPEND="dev-lang/perl
 dev-perl/perl-ldap
 dev-perl/Apache-Session
 =dev-perl/DBD-SQLite-0.31
@@ -33,20 +32,16 @@ net-www/mod_ssl
 dev-libs/openssl"
 
 DEPEND="dev-libs/openssl
-dev-db/sqlite"
-
-src_unpack() {
-	echo "$PWD"
-	unpack ${A} || die
-}
+dev-db/sqlite
+dev-lang/perl"
 
 src_compile() {
-	perl -pe 's|/opt/INTRINsec/VultureNG|/opt/INTRINsec/vultureng|g'\
-		-i www/WEB-INF/phpmvc-config.xml sql/sqlite.dump
-	echo "executing sqlite sql/db < sql/sqlite.dump"
+	sed -i -e 's|/opt/INTRINsec/VultureNG|/opt/INTRINsec/vultureng|g'\
+		www/WEB-INF/phpmvc-config.xml sql/sqlite.dump
 	sqlite sql/db < sql/sqlite.dump
 	rm -f lib/Vulture/Makefile
-	make OPT=LIB=${D}/usr/lib
+	libpath=`perl -MConfig -e 'print $Config{sitelib}'`
+	make OPT=LIB=${D}/${libpath}
 }
 
 src_install () {
@@ -59,9 +54,10 @@ src_install () {
 	doins ebuild/config.php
 	insinto ${INTRINsec_HOME}/${PN}/sql
 	doins sql/db
-	insinto /etc/init.d
-	insopts -m0750 -o root -g root
-	newins ebuild/VultureNG.init vultureng
+#	insinto /etc/init.d
+#	insopts -m0750 -o root -g root
+#	newins ebuild/VultureNG.init vultureng
+	newinitd ebuild/VultureNG.init vultureng
 }
 
 pkg_postinst() {
