@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-ssh-perl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.7 2005/05/24 15:51:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.8 2005/05/25 14:19:19 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  net-ssh-perl-1.25.ebuild:
+  dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org>
   net-ssh-perl-1.25.ebuild, net-ssh-perl-1.27.ebuild:
