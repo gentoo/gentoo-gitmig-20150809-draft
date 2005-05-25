@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-0.15-r1.ebuild,v 1.10 2005/05/01 13:37:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-0.15-r1.ebuild,v 1.11 2005/05/25 14:30:35 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE=""
 
-DEPEND="dev-perl/Memoize
+DEPEND="perl-core/Memoize
 	dev-perl/Test-Simple"
 
 S=${WORKDIR}/${MY_P}
