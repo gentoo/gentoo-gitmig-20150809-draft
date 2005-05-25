@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.314 2005/05/16 22:31:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.315 2005/05/25 21:47:51 herbs Exp $
+
+  25 May 2005; Herbie Hopkins <herbs@gentoo.org> mplayer-1.0_pre7.ebuild:
+  Multilib fix, bad path to libxmms.
 
   16 May 2005; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre6-r6.ebuild,
   mplayer-1.0_pre7.ebuild:

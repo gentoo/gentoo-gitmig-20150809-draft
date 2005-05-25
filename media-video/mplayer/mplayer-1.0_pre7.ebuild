@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.12 2005/05/16 22:31:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.13 2005/05/25 21:47:51 herbs Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -455,6 +455,8 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-linux-devfs"
 	fi
+
+	use xmms && myconf="${myconf} --with-xmmslibdir=/usr/$(get_libdir)"
 
 	use live && myconf="${myconf} --with-livelibdir=/usr/$(get_libdir)/live"
 
