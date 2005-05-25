@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.36-r1.ebuild,v 1.5 2005/05/25 15:30:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.36-r1.ebuild,v 1.6 2005/05/25 15:40:36 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc ~alpha ~amd64"
 
 RDEPEND="dev-lang/perl
 	dev-perl/Net-DNS
-	dev-perl/net-ping
+	perl-core/net-ping
 	perl-core/Time-HiRes
 	dev-perl/Digest-SHA1
 	dev-perl/URI
