@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/reportmagic-2.21.ebuild,v 1.10 2005/05/25 13:36:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/reportmagic-2.21.ebuild,v 1.11 2005/05/25 13:48:35 mcummings Exp $
 
 DESCRIPTION="Makes usable statistics from your web site log file analysis"
 HOMEPAGE="http://www.reportmagic.org/"
@@ -22,7 +22,7 @@ DEPEND="sys-libs/zlib
 	dev-perl/HTML-Tagset
 	dev-perl/HTML-Parser
 	dev-perl/GDGraph
-	dev-perl/File-Temp
+	perl-core/File-Temp
 	dev-perl/GD-Graph3d"
 
 S="${WORKDIR}/rmagic-${PV}"
