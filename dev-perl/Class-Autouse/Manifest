@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7665c49732adb53919919a3284a47232 ChangeLog 1933
 MD5 6055806a0602a70dce9675fba861ac6f Class-Autouse-1.03.ebuild 576
 MD5 d064fe7d5d05b2257d12cbe24cbabb6b Class-Autouse-1.12.ebuild 648
@@ -6,3 +9,10 @@ MD5 2b6cefb9465c2dc71e58bbf72849d6b0 Class-Autouse-1.17.ebuild 615
 MD5 9dc670611810300b6533a904bb57c265 files/digest-Class-Autouse-1.03 69
 MD5 c71169c7dcd7e74a58b7412569fe4dd2 files/digest-Class-Autouse-1.12 69
 MD5 42ac8b07b7aca4aa4b49d15d03b32853 files/digest-Class-Autouse-1.17 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClJL3tG5z4I8BtQoRAj8QAJ9oFWdhlNM8aCIkJ/ucNxcdtCHjRACaA1Wt
+2nuJkMbDTlU78AAqABvNa+E=
+=HXXX
+-----END PGP SIGNATURE-----
