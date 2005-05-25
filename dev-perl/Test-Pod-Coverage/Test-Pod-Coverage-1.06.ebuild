@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/Test-Pod-Coverage-1.06.ebuild,v 1.8 2005/04/07 20:50:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/Test-Pod-Coverage-1.06.ebuild,v 1.9 2005/05/25 15:15:30 mcummings Exp $
 
 inherit perl-module
 
@@ -12,6 +12,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha amd64"
 
-DEPEND=">=dev-perl/Test-Simple-0.47
+DEPEND=">=perl-core/Test-Simple-0.47
 		dev-perl/Pod-Coverage
 		dev-perl/Test-Builder-Tester"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/Test-Memory-Cycle-0.02.ebuild,v 1.1 2004/12/05 13:36:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/Test-Memory-Cycle-0.02.ebuild,v 1.2 2005/05/25 15:15:12 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,5 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/Devel-Cycle
-		dev-perl/Test-Simple
+		perl-core/Test-Simple
 		dev-perl/Test-Builder-Tester"
