@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/svk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.9 2005/05/25 13:52:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.10 2005/05/25 13:52:49 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> svk-0.29.ebuild:
+  dev-perl/File-Temp => perl-core/File-Temp migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> svk-0.26.ebuild:
   dev-perl/File-Temp => perl-core/File-Temp migration
