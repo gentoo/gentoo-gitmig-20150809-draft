@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.12 2005/01/01 15:15:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.13 2005/05/25 15:22:58 mcummings Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="dev-perl/Time-HiRes"
+DEPEND="perl-core/Time-HiRes"
 
 src_compile() {
 	epatch ${FILESDIR}/${PN}-gentoo.diff
