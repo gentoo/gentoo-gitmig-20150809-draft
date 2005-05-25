@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkservice/checkservice-1.2.0.ebuild,v 1.2 2004/10/10 02:36:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkservice/checkservice-1.2.0.ebuild,v 1.3 2005/05/25 14:04:30 mcummings Exp $
 
 DESCRIPTION="Check the status of services running on local/remote machines"
 HOMEPAGE="http://www.linvision.com/checkservice/"
@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND=">=dev-lang/perl-5.8
 	>=dev-perl/MailTools-1.58
 	>=dev-perl/File-Find-Rule-0.26
-	>=dev-perl/Getopt-Long-2.34"
+	>=perl-core/Getopt-Long-2.34"
 
 src_unpack() {
 	unpack ${A}

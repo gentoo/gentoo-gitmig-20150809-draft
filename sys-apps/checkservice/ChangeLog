@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/checkservice
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkservice/ChangeLog,v 1.1 2004/10/10 02:35:07 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkservice/ChangeLog,v 1.2 2005/05/25 14:04:30 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  checkservice-1.2.0.ebuild:
+  dev-perl/Getopt-Long => perl-core/Getopt-Long migration
 
 *checkservice-1.2.0 (09 Oct 2004)
 
