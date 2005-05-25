@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/grace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.31 2005/05/25 00:33:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.32 2005/05/25 00:36:45 spyderous Exp $
+
+  25 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/grace-5.1.10-t1lib-fix-gentoo.patch,
+  -files/grace-5.1.12-t1lib-fix-gentoo.patch, -grace-5.1.7-r2.ebuild,
+  -grace-5.1.10-r1.ebuild, -grace-5.1.12-r1.ebuild:
+  Pull old versions.
 
   25 May 2005; Donnie Berkholz <spyderous@gentoo.org>; grace-5.1.14.ebuild:
   Stable on x86.
