@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.154 2005/05/25 00:27:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.155 2005/05/25 03:24:18 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -206,9 +206,15 @@ gcc_get_s_dir() {
 #					PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 #
 #	PP_VER
-#	PP_FVER
+#	PP_GCC_VER
+#	obsoleted: PP_FVER
 #			These variables control patching in stack smashing protection
 #			support. They both control the version of ProPolice to download.
+#
+#		PP_VER / PP_GCC_VER
+#			Used to roll our own custom tarballs of ssp.
+#		PP_FVER / PP_VER
+#			Used for mirroring ssp straight from IBM.
 #			PP_VER sets the version of the directory in which to find the
 #			patch, and PP_FVER sets the version of the patch itself. For
 #			example:
@@ -259,10 +265,15 @@ get_gcc_src_uri() {
 	fi
 
 	# propolice aka stack smashing protection
-	[[ -n ${PP_VER} ]] && \
-		GCC_SRC_URI="${GCC_SRC_URI}
-			http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz
-			$(gentoo_urls protector-${PP_FVER}.tar.gz )"
+	if [[ -n ${PP_VER} ]] ; then
+		if [[ -n ${PP_FVER} ]] ; then
+			GCC_SRC_URI="${GCC_SRC_URI}
+				http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz
+				$(gentoo_urls protector-${PP_FVER}.tar.gz )"
+		else
+			GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${PP_GCC_VER}-ssp-${PP_VER}.tar.bz2)"
+		fi
+	fi
 
 	# uclibc lovin
 	[[ -n ${UCLIBC_VER} ]] && \
@@ -1585,6 +1596,7 @@ gcc_quick_unpack() {
 	pushd ${WORKDIR} > /dev/null
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
 	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
+	export PP_GCC_VER=${PP_GCC_VER:-${GCC_RELEASE_VER}}
 	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
 
 	if [[ -n ${PRERELEASE} ]] ; then
@@ -1608,10 +1620,14 @@ gcc_quick_unpack() {
 		unpack ${PN}-${PATCH_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
 
 	if [[ -n ${PP_VER} ]] ; then
-		# The gcc 3.4 propolice versions are meant to be unpacked to ${S}
-		pushd ${S:-$(gcc_get_s_dir)} > /dev/null
-		unpack protector-${PP_FVER}.tar.gz
-		popd > /dev/null
+		if [[ -n ${PP_FVER} ]] ; then
+			# The gcc 3.4 propolice versions are meant to be unpacked to ${S}
+			pushd ${S:-$(gcc_get_s_dir)} > /dev/null
+			unpack protector-${PP_FVER}.tar.gz
+			popd > /dev/null
+		else
+			unpack gcc-${PP_GCC_VER}-ssp-${PP_VER}.tar.bz2
+		fi
 	fi
 
 	if [[ -n ${PIE_VER} ]] ; then
@@ -1697,24 +1713,32 @@ do_gcc_SSP_patches() {
 	local ssppatch
 	local sspdocs
 
-	# Etoh keeps changing where files are and what the patch is named
-	if version_is_at_least 3.4.1 ; then
-		# >3.4.1 uses version in patch name, and also includes docs
-		ssppatch="${S}/gcc_${PP_VER}.dif"
-		sspdocs="yes"
-	elif version_is_at_least 3.4.0 ; then
-		# >3.4 put files where they belong and 3_4 uses old patch name
-		ssppatch="${S}/protector.dif"
-		sspdocs="no"
-	elif version_is_at_least 3.2.3 ; then
-		# earlier versions have no directory structure or docs
-		mv ${S}/protector.{c,h} ${S}/gcc
-		ssppatch="${S}/protector.dif"
-		sspdocs="no"
+	if [[ -n ${PP_FVER} ]] ; then
+		# Etoh keeps changing where files are and what the patch is named
+		if version_is_at_least 3.4.1 ; then
+			# >3.4.1 uses version in patch name, and also includes docs
+			ssppatch="${S}/gcc_${PP_VER}.dif"
+			sspdocs="yes"
+		elif version_is_at_least 3.4.0 ; then
+			# >3.4 put files where they belong and 3_4 uses old patch name
+			ssppatch="${S}/protector.dif"
+			sspdocs="no"
+		elif version_is_at_least 3.2.3 ; then
+			# earlier versions have no directory structure or docs
+			mv ${S}/protector.{c,h} ${S}/gcc
+			ssppatch="${S}/protector.dif"
+			sspdocs="no"
+		fi
 	else
-		die "Sorry, SSP is not supported in this version"
+		# Just start packaging the damn thing ourselves
+		mv "${WORKDIR}"/ssp/protector.{c,h} "${S}"/gcc/
+		ssppatch=${WORKDIR}/ssp/gcc-${PP_GCC_VER}-ssp.patch
+		# allow boundschecking and ssp to get along
+		(want_boundschecking && [[ -e ${WORKDIR}/ssp/htb-ssp.patch ]]) \
+			&& patch -s "${ssppatch}" "${WORKDIR}"/ssp/htb-ssp.patch
 	fi
 
+	[[ -z ${ssppatch} ]] && die "Sorry, SSP is not supported in this version"
 	epatch ${ssppatch}
 
 	if [[ ${PN} == "gcc" && ${sspdocs} == "no" ]] ; then
@@ -1732,7 +1756,7 @@ do_gcc_SSP_patches() {
 		use build && epatch ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
 	fi
 
-	release_version="${release_version}, ssp-${PP_FVER}"
+	release_version="${release_version}, ssp-${PP_FVER:-${PP_GCC_VER}-${PP_VER}}"
 	if want_libssp ; then
 		update_gcc_for_libssp
 	else
