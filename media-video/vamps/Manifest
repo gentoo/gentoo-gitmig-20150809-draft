@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 09f54651c1573b603794acc5c7fb79d3 vamps-0.95.ebuild 1038
-MD5 6bbf55c4be81608a5939d50fdfdbb543 vamps-0.97.ebuild 784
-MD5 82f47542c67eef8050a51dd67adc578f ChangeLog 863
+MD5 229aebcba0e2228d60c76a5bcf618f87 ChangeLog 996
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 52c97bbeb7a0f2490bee691046dae4f4 vamps-0.95.ebuild 1039
+MD5 6bbf55c4be81608a5939d50fdfdbb543 vamps-0.97.ebuild 784
 MD5 4074dcfe6a6c275f86b5dcf75fca97ed files/digest-vamps-0.95 57
+MD5 49b7850d2043759367f52d8594d8d69b files/vamps-0.95-amd64.patch 398
 MD5 b532e6287e57b9915b1e2b9a0bf74efb files/digest-vamps-0.97 61
 MD5 b08ef3771051017031df6fc8d4061db1 files/vamps-0.97-amd64.patch 340
-MD5 49b7850d2043759367f52d8594d8d69b files/vamps-0.95-amd64.patch 398
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCaQ+H06ebR+OMO78RApb+AJ9ab8MsiMx4ysL3+7hreIYqOKRgeQCfajXm
-C1rMcbFOwZioMr91lrYVWH8=
-=XuHT
+iD8DBQFClIWstG5z4I8BtQoRApWsAJwOr+he+Mfri0QLnyMp/DT3D3u8tACfTDb7
+smlA5U+r3mLTw0D6IVB/544=
+=/AmC
 -----END PGP SIGNATURE-----
