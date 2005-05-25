@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tk-TableMatrix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/ChangeLog,v 1.19 2005/05/25 16:51:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/ChangeLog,v 1.20 2005/05/25 16:51:48 mcummings Exp $
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Tk-TableMatrix-1.2.ebuild:
+  dev-perl/ExtUtils-MakeMaker => perl-core/ExtUtils-MakeMaker migration
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   Tk-TableMatrix-1.1.ebuild:
