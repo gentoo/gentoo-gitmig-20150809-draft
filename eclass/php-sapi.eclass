@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.64 2005/05/22 22:59:48 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.65 2005/05/25 21:56:41 vapier Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib libtool
 
 DESCRIPTION="PHP generic SAPI ebuild"
 ECLASS=php-sapi
@@ -261,6 +261,7 @@ php-sapi_src_unpack() {
 	# ensure correct perms on configure
 	chmod 755 configure
 
+	uclibctoolize
 
 	# no longer needed and breaks pear - Tal, 20031223
 	
