@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.6.3-r2.ebuild,v 1.6 2005/04/19 10:47:07 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.6.3-r2.ebuild,v 1.7 2005/05/25 15:21:31 latexer Exp $
 
 inherit gnome2 mono eutils
 
@@ -37,6 +37,7 @@ RDEPEND=">=dev-lang/mono-1.0
 	>=gnome-base/gconf-2.0.0
 	>=gnome-base/gnome-vfs-2.0.0
 	>=x11-libs/gtk+-2.0.0
+	>=dev-util/intltool-0.29
 	media-libs/flac"
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.17 2005/05/06 13:29:43 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.18 2005/05/25 15:21:31 latexer Exp $
+
+  25 May 2005; Peter Johanson <latexer@gentoo.org> muine-0.6.3-r2.ebuild,
+  muine-0.6.3-r3.ebuild, muine-0.8.2.ebuild, muine-0.8.3.ebuild:
+  Add dep on new enough intltool. See bug #93705.
 
 *muine-0.8.3 (06 May 2005)
 
