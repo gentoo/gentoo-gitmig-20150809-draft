@@ -1,6 +1,9 @@
 # ChangeLog for net-im/micq
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.32 2005/05/25 12:48:33 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.33 2005/05/26 18:31:28 luckyduck Exp $
+
+  26 May 2005; Jan Brinkmann <luckyduck@gentoo.org> micq-0.5.0.1.ebuild:
+  stable on amd64
 
   25 May 2005; Olivier Crête <tester@gentoo.org> micq-0.4.12.ebuild,
   micq-0.5.ebuild, micq-0.5.0.1.ebuild, micq-0.5.0.3.ebuild:
