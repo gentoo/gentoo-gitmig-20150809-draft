@@ -16,7 +16,7 @@ MD5 72eca9b8637e868d730399e0becc045d files/digest-kdenetwork-3.2.3 70
 MD5 f8624841efe576b99f71c604af307bbf files/kdenetwork-3.4.0-kopete-spaces.patch 8084
 MD5 7f7cb8ecd40f9a5a0a6a76599e445227 files/kdenetwork-3.4.0-kopete-tabbed-windows.patch 1029
 MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
-MD5 951c58d6946b14199c13f9c59ed8be18 files/kdenetwork-3.3.2-kopete-msn.patch 63592
+MD5 cb87d2a81f7430f823e9173c3f478523 files/kdenetwork-3.3.2-kopete-msn.patch 34696
 MD5 732cc856c1e48585781d79173f5d271b files/lisa 538
 MD5 a32555833318266feb7ea1f68742fdf7 files/yahoo-fix-connect-062404.patch 1139
 MD5 8dae5eac25d478ebf23279132c4a0ead files/digest-kdenetwork-3.3.2-r1 70
