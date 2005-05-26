@@ -1,4 +1,14 @@
-MD5 e39e2b76571253a1472cdf873bc79b59 metadata.xml 368
-MD5 a2a45fc433c670d336478c61b2f2ddd6 ChangeLog 426
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 66412490eca4e94e378b9ce96fbc83b6 rtorrent-0.2.2.ebuild 803
+MD5 9d2b4d1d6ee4893bba8128d2823fec4c ChangeLog 528
+MD5 dc4336d6e768b550ef6da8f6c965d234 metadata.xml 374
 MD5 a7fbf9f684955a67ccd3c2218c4c26f1 files/digest-rtorrent-0.2.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFClilcI1lqEGTUzyQRArDoAJ46IkPF7jm6hhUPQFaojhm9JKOzxQCgnIVh
+OHCEkD6/zLXEvyFbgQibMOI=
+=JrRP
+-----END PGP SIGNATURE-----

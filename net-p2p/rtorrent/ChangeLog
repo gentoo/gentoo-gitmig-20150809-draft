@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.1 2005/05/05 11:35:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.2 2005/05/26 19:53:37 swegener Exp $
+
+  26 May 2005; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  'no-herd' instead of empty herd tag
 
 *rtorrent-0.2.2 (05 May 2005)
 

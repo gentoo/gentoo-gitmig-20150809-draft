@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd></herd>
+<herd>no-herd</herd>
 <maintainer>
 <email>flameeyes@gentoo.org</email>
 <name>Diego Pettenò</name>
@@ -10,4 +10,3 @@
 Console BitTorrent client using ncurses based on libtorrent written in C++.
 </longdescription>
 </pkgmetadata>
-
