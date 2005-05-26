@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r4.ebuild,v 1.1 2005/05/23 18:16:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r5.ebuild,v 1.1 2005/05/26 18:29:12 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -78,9 +78,15 @@ src_unpack() {
 	find ${S} -type f -name Makefile.linux \
 		-exec sed -i -e '/^CC[[:space:]]*=/d' {} \;
 
-	#set the right paths in radiusclient.conf
-	sed -i -e "s:/usr/local/etc:/etc:" \
-		-e "s:/usr/local/sbin:/usr/sbin:" ${S}/pppd/plugins/radius/etc/radiusclient.conf
+	use radius && {
+		#set the right paths in radiusclient.conf
+		sed -i -e "s:/usr/local/etc:/etc:" \
+			-e "s:/usr/local/sbin:/usr/sbin:" ${S}/pppd/plugins/radius/etc/radiusclient.conf
+		#set config dir to /etc/ppp/radius
+		sed -i -e "s:/etc/radiusclient:/etc/ppp/radius:g" \
+			${S}/pppd/plugins/radius/{*.8,*.c,*.h} \
+			${S}/pppd/plugins/radius/etc/*
+	}
 }
 
 src_compile() {
@@ -96,6 +102,14 @@ src_compile() {
 		emake -f Makefile.linux || die "failed to build pppgetpass"
 	else
 		emake pppgetpass.vt || die "failed to build pppgetpass"
+	fi
+}
+
+pkg_preinst() {
+	if use radius && [ -d ${ROOT}/etc/radiusclient ] && has_version "<${CATEGORY}/${PN}-2.4.3-r5"; then
+		ebegin "Copy /etc/radiusclient to /etc/ppp/radius"
+		cp -ar ${ROOT}/etc/radiusclient ${ROOT}/etc/ppp/radius
+		eend $?
 	fi
 }
 
@@ -160,7 +174,7 @@ src_install() {
 		doins pppd/plugins/radius/radrealms.so || die "radrealms.so not build"
 
 		#Copy radiusclient configuration files (#92878)
-		insinto /etc/radiusclient
+		insinto /etc/ppp/radius
 		insopts -m0644
 		doins pppd/plugins/radius/etc/{dictionary*,issue,port-id-map,radiusclient.conf,realms,servers}
 
@@ -201,14 +215,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ ! -e ${ROOT}dev/.devfsd ] && [ ! -e ${ROOT}dev/.udev ]
-	then
-		if [ ! -e ${ROOT}dev/ppp ]; then
-			mknod ${ROOT}dev/ppp c 108 0
-		fi
+	if [ ! -e ${ROOT}dev/.devfsd ] && [ ! -e ${ROOT}dev/.udev ] && [ ! -e ${ROOT}dev/ppp ]; then
+		mknod ${ROOT}dev/ppp c 108 0
 	fi
-	if [ "$ROOT" = "/" ]
-	then
+	if [ "$ROOT" = "/" ]; then
 		/sbin/update-modules
 	fi
 	ewarn "To enable kernel-pppoe read html/pppoe.html in the doc-directory."
@@ -221,4 +231,11 @@ pkg_postinst() {
 
 	# lib name has changed
 	sed -i -e "s:^pppoe.so:rp-pppoe.so:" ${ROOT}etc/ppp/options
+
+	if use radius && has_version "<${CATEGORY}/${PN}-2.4.3-r5"; then
+		echo
+		ewarn "As of ${PN}-2.4.3-r5, the RADIUS configuration files have moved from"
+		ewarn "   /etc/radiusclient to /etc/ppp/radius."
+		einfo "For your convenience, radiusclient directory was copied to the new location."
+	fi
 }
