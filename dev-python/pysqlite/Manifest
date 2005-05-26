@@ -1,16 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 323a995da2dce8a8ee49f631c8109097 pysqlite-1.0.1.ebuild 857
-MD5 e87f96fab6577e1f41684f47015ce404 pysqlite-0.4.3.ebuild 758
-MD5 99bc7f2b0ff3c58e29e88266556acb5c pysqlite-0.5.0.ebuild 863
+MD5 a32cee08bfcbac1b3848eb415eb43726 ChangeLog 3494
+MD5 cbf50bf8715ee814bc0ea9488d3d71d4 pysqlite-2.0.2.ebuild 980
 MD5 70f1ee8adca743aca4b5ffaa004c9e9e pysqlite-0.5.1.ebuild 881
-MD5 b77bdc36c55c82036015526d30d1ddd7 ChangeLog 3162
-MD5 cee42d93ef2517457e953c2b6688ee6d pysqlite-0.4.1.ebuild 759
-MD5 f5afe78018a5987ed385f8c31286fc78 pysqlite-0.3.1.ebuild 752
-MD5 c066e6bb150d97f490e358963d08cc8d pysqlite-1.0.ebuild 855
-MD5 8474697be6f1f182b2e727ae06f3714c files/digest-pysqlite-1.0.1 65
-MD5 2358ec1e5d6c50a9b165a50d31c0e5a8 files/digest-pysqlite-0.4.1 65
-MD5 70e932b18b2876df44c7257bf34ab066 files/digest-pysqlite-0.3.1 65
+MD5 bf62f8a3cb564a2ecf5ec4aabf7113c6 pysqlite-1.0.1.ebuild 858
+MD5 10663b4cc513c17728dfb9e4d98e72b1 files/digest-pysqlite-2.0.2 65
 MD5 c27bf7af6842480285e9a1bc6422480a files/digest-pysqlite-0.5.1 65
-MD5 e22e181d47f5ba13aea53db0690bb08e files/digest-pysqlite-0.5.0 65
-MD5 0ea822314660e8462fb5eeb937ce2310 files/digest-pysqlite-0.4.3 65
-MD5 0ffd3bbfbe737e320096bfae3390425e files/digest-pysqlite-1.0 63
+MD5 8474697be6f1f182b2e727ae06f3714c files/digest-pysqlite-1.0.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFClfU9xtZcznfol0URAgCiAJ9CuZPQcluH1I6MRJo+hp74OPS6sQCeM3YA
+kjOdNDFqqb5FbMlbpE2pby8=
+=pnOE
+-----END PGP SIGNATURE-----
