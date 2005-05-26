@@ -1,4 +1,14 @@
-MD5 de76c7fd6c508b7562101524434cb4d1 ChangeLog 1341
-MD5 099fd51e47572697c39c3220c41b9d08 cidr-2.3.1-r1.ebuild 689
-MD5 0214de5ab88bfffe5c4759a5600b8e3b files/cidr-2.3.1.patch 841
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 015081595120e2ff50ce6d23c2384844 cidr-2.3.1-r1.ebuild 700
+MD5 1cc2462f4d88f803e83a4da881b40989 ChangeLog 1461
 MD5 9b40c019a40f162c064b5d51eb73dd85 files/digest-cidr-2.3.1-r1 63
+MD5 0214de5ab88bfffe5c4759a5600b8e3b files/cidr-2.3.1.patch 841
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClaW306ebR+OMO78RAv6wAJ9wBGNDdbqrja17cTdKhsiEs4mHWgCcD4vT
+/MVUmBCY9rLkwCTEhKYcwq8=
+=MYYo
+-----END PGP SIGNATURE-----
