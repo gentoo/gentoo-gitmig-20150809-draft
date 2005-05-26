@@ -1,7 +1,7 @@
 diff -Nur kdebase-3.4.0.orig/startkde kdebase-3.4.0/startkde
 --- kdebase-3.4.0.orig/startkde	2005-03-04 12:20:04.000000000 +0100
-+++ kdebase-3.4.0/startkde	2005-05-11 14:56:43.000000000 +0200
-@@ -14,6 +14,39 @@
++++ kdebase-3.4.0/startkde	2005-05-26 02:04:35.000000000 +0200
+@@ -14,6 +14,40 @@
  	exit 1
  fi
  
@@ -33,6 +33,7 @@ diff -Nur kdebase-3.4.0.orig/startkde kdebase-3.4.0/startkde
 +					"${file}"
 +			fi
 +		done
++		cd ${HOME}
 +	fi
 +	ln -sf .kde3.4 .kde
 +fi
