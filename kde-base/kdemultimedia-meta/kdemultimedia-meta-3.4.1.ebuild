@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/kdemultimedia-meta-3.4.1.ebuild,v 1.1 2005/05/25 21:23:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/kdemultimedia-meta-3.4.1.ebuild,v 1.2 2005/05/26 16:09:22 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -10,12 +10,12 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="3.4"
 KEYWORDS="~x86 ~amd64"
-IUSE="arts"
+IUSE="arts xine"
 
 RDEPEND="arts? ( $(deprange $PV $MAXKDEVER kde-base/artsplugin-audiofile)
 		$(deprange $PV $MAXKDEVER kde-base/artsplugin-mpeglib)
 		$(deprange $PV $MAXKDEVER kde-base/artsplugin-mpg123)
-		$(deprange $PV $MAXKDEVER kde-base/artsplugin-xine)
+		xine? ( $(deprange $PV $MAXKDEVER kde-base/artsplugin-xine) )
 		$(deprange $PV $MAXKDEVER kde-base/juk)
 		$(deprange $PV $MAXKDEVER kde-base/kaboodle)
 		$(deprange $PV $MAXKDEVER kde-base/kaudiocreator)
