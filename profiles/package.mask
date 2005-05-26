@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4013 2005/05/26 17:49:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4014 2005/05/26 22:39:06 karltk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Karl Trygve Kalleberg <karltk@gentoo.org> (1 May 2005)
+# Needs cleaning
+=dev-lang/icc-8.1.030
 
 # Marcelo Goes <vanquirius@gentoo.org> (26 May 2005)
 # Needs testing
