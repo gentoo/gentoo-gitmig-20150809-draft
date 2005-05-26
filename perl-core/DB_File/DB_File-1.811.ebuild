@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/DB_File-1.811.ebuild,v 1.1 2005/05/24 14:37:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/DB_File-1.811.ebuild,v 1.2 2005/05/26 12:15:27 herbs Exp $
 
-inherit perl-module
+inherit perl-module multilib
 
 DESCRIPTION="A Berkeley DB Support Perl Module"
 HOMEPAGE="http://www.cpan.org/modules/by-module/DB_File/${P}.readme"
@@ -18,3 +18,11 @@ DEPEND="sys-libs/db"
 SRC_TEST="do"
 
 mydoc="Changes"
+
+src_unpack() {
+	unpack ${A}
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e "s:^LIB.*:LIB = /usr/$(get_libdir):" \
+		${S}/config.in || die
+	fi
+}
