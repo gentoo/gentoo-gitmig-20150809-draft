@@ -1,0 +1,15 @@
+--- wifi/kcmwifi/kwifimanager_kcmodule.cpp.orig	2004-12-29 12:24:06.913280791 +0100
++++ wifi/kcmwifi/kwifimanager_kcmodule.cpp	2004-12-29 12:31:06.760903347 +0100
+@@ -406,10 +406,10 @@
+   QString kdedir = finder.findResourceDir ("data", "kwifimanager/config/");
+   if (kdedir.isEmpty()) {
+     kdedir = finder.findResourceDir("data", "kwifimanager");
+-    kdedir+="kwifimanager" + QDir::separator();
++    kdedir += QString("kwifimanager") + QDir::separator();
+     QDir(kdedir).mkdir("config");
+     } else {
+-    kdedir += "kwifimanager" + QDir::separator();
++    kdedir += QString("kwifimanager") + QDir::separator();
+   }
+   KSimpleConfig *conffile =
+     new KSimpleConfig (kdedir + "config/kwifimanagerrc", false);
