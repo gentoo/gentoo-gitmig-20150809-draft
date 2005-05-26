@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.25.ebuild,v 1.7 2005/05/01 18:12:10 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.25.ebuild,v 1.8 2005/05/26 11:47:05 herbs Exp $
 
-inherit perl-module
+inherit perl-module multilib
 
 MY_P=${PN/-/_}.pm-${PV}
 S=${WORKDIR}/${MY_P}
@@ -20,3 +20,11 @@ DEPEND="dev-libs/openssl"
 export OPTIMIZE="$CFLAGS"
 
 myconf="${myconf} /usr"
+
+src_unpack() {
+	unpack ${A}
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e "s:openssl_path/lib:openssl_path/$(get_libdir):" \
+		${S}/Makefile.PL || die
+	fi
+}
