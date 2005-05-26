@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-samba
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-samba/ChangeLog,v 1.6 2004/11/23 17:17:17 kaiowas Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-samba/ChangeLog,v 1.7 2005/05/26 12:06:22 kaiowas Exp $
+
+*selinux-samba-20050526 (26 May 2005)
+
+  26 May 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-samba-20040406.ebuild, -selinux-samba-20041016.ebuild,
+  +selinux-samba-20050526.ebuild:
+  merge with upstream policy to support smbfs (un)mounting
 
   23 Nov 2004; petre rodan <kaiowas@gentoo.org>
   selinux-samba-20041117.ebuild:
