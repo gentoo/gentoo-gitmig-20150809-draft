@@ -1,5 +1,5 @@
 # /etc/bash.bashrc:
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/files/bashrc,v 1.5 2004/09/28 11:50:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/files/bashrc,v 1.6 2005/05/26 22:07:59 vapier Exp $
 # 
 # This file is sourced by all *interactive* bash shells on startup,
 # including some apparently interactive shells such as scp and rcp
@@ -9,7 +9,7 @@
 # Test for an interactive shell.  There is no need to set anything
 # past this point for scp and rcp, and it's important to refrain from
 # outputting anything in those cases.
-if [[ $- != *i* ]]; then
+if [[ $- != *i* ]] ; then
 	# Shell is non-interactive.  Be done now
 	return
 fi
@@ -27,20 +27,22 @@ shopt -s checkwinsize
 use_color=false
 safe_term=${TERM//[^[:alnum:]]/.}	# sanitize TERM
 
-if [[ -f /etc/DIR_COLORS ]]; then
+if [[ -f /etc/DIR_COLORS ]] ; then
 	grep -q "^TERM ${safe_term}" /etc/DIR_COLORS && use_color=true
-elif dircolors --print-database | grep -q "^TERM ${safe_term}"; then
-	use_color=true
+elif type -p dircolors >/dev/null ; then
+	if dircolors --print-database | grep -q "^TERM ${safe_term}" ; then
+		use_color=true
+	fi
 fi
 
-if ${use_color}; then
-	if [[ $EUID == 0 ]]; then
+if ${use_color} ; then
+	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\]\h \[\033[01;34m\]\W \$ \[\033[00m\]'
 	else
 		PS1='\[\033[01;32m\]\u@\h \[\033[01;34m\]\w \$ \[\033[00m\]'
 	fi
 else
-	if [[ $EUID == 0 ]]; then
+	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
 		PS1='\u@\h \W \$ '
 	else

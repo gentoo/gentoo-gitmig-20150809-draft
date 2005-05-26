@@ -11,7 +11,7 @@ MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 189
 MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
 MD5 582fb9ed0ca44627978ce6836a5000dc files/config-top.h.diff 487
 MD5 4383b25cd54b24b9f459e338f06d096c files/bash-2.05b-parallel-build.patch 459
-MD5 8b60985cf48da400708c055ba06888dc files/bashrc 1574
+MD5 3a15c63dcc58cecd09b00ae08524322c files/bashrc 1627
 MD5 4a3ebcb995491c2730d156b314cbab0b files/bash-3.0-etc-inputrc.patch 1223
 MD5 28c9d7407d5332c29dddb656a4a1f1ce files/bash-3.0-invisible.patch 705
 MD5 0392b634a7a02302d24ccc4a4b349423 files/bash-3.0-local-array.patch 275
