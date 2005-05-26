@@ -3,9 +3,9 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>xtv@gentoo.org</email>
-<name>Thomas Veith</name>
-<description>avenj asked me to take over</description>
+<email>karltk@gentoo.org</email>
+<name>Karl Trygve Kalleberg</name>
+<description>Also, bug Kugelfang.</description>
 </maintainer>
 </pkgmetadata>
 
