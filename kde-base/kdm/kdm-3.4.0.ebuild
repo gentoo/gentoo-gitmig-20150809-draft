@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.4.0.ebuild,v 1.4 2005/04/27 19:13:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.4.0.ebuild,v 1.5 2005/05/26 14:38:50 greg_g Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -16,7 +16,7 @@ KMEXTRACTONLY="libkonq/konq_defaults.h
 	    kioslave/thumbnail/configure.in.in" # for the HAVE_LIBART test
 KMCOMPILEONLY="kcontrol/background"
 DEPEND="$DEPEND
-	pam? ( sys-libs/pam ~kde-base/kdebase-pam-4 )
+	pam? ( kde-base/kdebase-pam )
 	$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
 	# Requires the desktop background settings and kdm modules,
 	# so until we separate the kcontrol modules into separate ebuilds :-),
