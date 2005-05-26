@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/elm-2.4_rc100-r1.ebuild,v 1.5 2005/01/03 08:13:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/elm-2.4_rc100-r1.ebuild,v 1.6 2005/05/26 16:52:26 ticho Exp $
 
 DESCRIPTION="a classic mail client enhanced by Michael Elkins"
 HOMEPAGE="http://www.ozone.fmi.fi/KEH/"
@@ -15,7 +15,8 @@ IUSE="spell"
 DEPEND="virtual/libc
 	>=net-mail/mailbase-0.00-r5
 	dev-libs/openssl
-	spell? ( app-text/ispell )"
+	spell? ( app-text/ispell )
+	!net-mail/mailutils"
 
 S=${WORKDIR}/elm2.4.ME+.100
 

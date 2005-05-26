@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/elm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/ChangeLog,v 1.12 2005/01/03 16:12:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/ChangeLog,v 1.13 2005/05/26 16:52:26 ticho Exp $
+
+  26 May 2005; Andrej Kacian <ticho@gentoo.org> elm-2.4_rc100-r1.ebuild:
+  Added block on net-mail/mailutils, due to conflicting (incompatible) files.
 
   03 Jan 2005; Andrej Kacian <ticho@gentoo.org> -elm-2.4_rc100.ebuild:
   Old ebuild cleanup.
