@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.16 2005/05/24 20:49:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.17 2005/05/26 18:10:12 compnerd Exp $
+
+  26 May 2005; Saleem Abdulrasool <compnerd@gentoo.org> swt-3.1_pre7.ebuild:
+  Fixing the extraction for amd64
 
 *swt-3.1_pre7 (24 May 2005)
 
