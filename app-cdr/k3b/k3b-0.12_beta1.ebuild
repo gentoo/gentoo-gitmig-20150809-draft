@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12_beta1.ebuild,v 1.2 2005/05/13 09:02:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12_beta1.ebuild,v 1.3 2005/05/26 09:15:10 greg_g Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/k3b/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86"
-IUSE="css dvdr encode ffmpeg flac hal kde mad musepack vorbis"
+IUSE="css dvdr encode ffmpeg flac hal kde mp3 musepack vorbis"
 
 DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 	hal? ( =sys-apps/dbus-0.23*
@@ -24,7 +24,7 @@ DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 	>=media-sound/cdparanoia-3.9.8
 	ffmpeg? ( media-video/ffmpeg )
 	flac? ( media-libs/flac )
-	mad? ( media-libs/libmad )
+	mp3? ( media-libs/libmad )
 	musepack? ( >=media-libs/libmusepack-1.1 )
 	vorbis? ( media-libs/libvorbis )"
 
@@ -77,12 +77,12 @@ src_compile() {
 	local myconf="--enable-libsuffix= --with-external-libsamplerate \
 			--without-resmgr --with-musicbrainz \
 			$(use_with kde k3bsetup)	\
-			$(use_with hal )		\
+			$(use_with hal)			\
 			$(use_with encode lame)		\
 			$(use_with ffmpeg)		\
 			$(use_with flac)		\
 			$(use_with vorbis oggvorbis)	\
-			$(use_with mad libmad)		\
+			$(use_with mp3 libmad)		\
 			$(use_with musepack)"
 
 
