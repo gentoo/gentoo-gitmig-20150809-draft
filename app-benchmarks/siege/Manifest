@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 468f3f0295db6d702ff50cd0ec18de3a siege-2.63_beta2.ebuild 1380
 MD5 c8390cbc140a9b92aa12c49879d70e42 siege-2.60.ebuild 1230
-MD5 bee956a4c2cec64b05943416c203888f ChangeLog 2972
+MD5 692f947e5dc76c3cfa41ae75cc19b3a2 siege-2.63_beta3.ebuild 1380
+MD5 052c8d127bc9bf230291ece8182a8cb3 ChangeLog 3125
 MD5 15d8ee1460109dffd23fe7d243b750bd metadata.xml 257
 MD5 f4221cddc50d287c8892c0750b646e5c siege-2.61.ebuild 1236
-MD5 a468dd1fac841b67cf0b348c8dd0415e files/digest-siege-2.63_beta2 64
+MD5 1bb8e0418515255d53fd5966fcd2731b files/digest-siege-2.63_beta3 64
 MD5 9e437904b960c0cab42d691c8678774b files/siege-2.60-gentoo.diff 1740
 MD5 16fc2e7263b085c5c027844be0fdc63f files/siege.bash-completion 783
 MD5 1185a0d2d8ac987001f575f8eb302327 files/digest-siege-2.60 62
@@ -14,7 +14,7 @@ MD5 777c4d7f0fca11bdfc849cb76422dde9 files/digest-siege-2.61 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCdNVjEZCkKN40op4RAv+GAJ9QC7jpeC2M+a0HJGS5TdYgxbnoIwCcDVmA
-5pOOvF4RZMB76IAPT6PwXsw=
-=znyy
+iD8DBQFClbRaEZCkKN40op4RAi8pAKCYW55unHffjOacDNwVDiOHhV38lACgl9rf
+Um+znhPtL+lefMiIh+7jO8Y=
+=W6gt
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.63_beta2.ebuild,v 1.1 2005/05/01 13:10:32 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.63_beta3.ebuild,v 1.1 2005/05/26 15:33:15 ka0ttic Exp $
 
 inherit eutils bash-completion
 
