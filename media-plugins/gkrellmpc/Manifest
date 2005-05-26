@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 0e6d0fde597bf73c682688c32b2e3c57 gkrellmpc-0.1_beta9.ebuild 637
-MD5 f530f20e3c2a276e0936ba889e4d0fee ChangeLog 842
-MD5 1f9b03126824e5fbd69fbabdee25e4af metadata.xml 351
+MD5 ab22d157b5ff39686c847b6f964df328 ChangeLog 951
+MD5 d23a6055111fcbd0ce73cc2cdc638af3 metadata.xml 345
 MD5 296239fe187d75c0164e3795cdea1b11 files/digest-gkrellmpc-0.1_beta9 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCiQv9QlM6RnzZP+IRAksvAKC7tNZmFNjh08b4LF4SygiEDbS3ogCeK513
-zW9k/mifAZWXLWEKnGjXA0I=
-=bXuT
+iD4DBQFClis3I1lqEGTUzyQRAryZAJdlShV8L1QV66QSyD0/j9hZaJ5nAJ0TLy44
+pKA7KGWsSx1dpzaK15GVYA==
+=wZhT
 -----END PGP SIGNATURE-----
