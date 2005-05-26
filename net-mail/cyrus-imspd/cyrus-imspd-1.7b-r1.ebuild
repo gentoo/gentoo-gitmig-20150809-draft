@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.9 2005/05/26 12:20:17 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b-r1.ebuild,v 1.1 2005/05/26 12:20:17 ferdy Exp $
 
 inherit eutils gnuconfig ssl-cert
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${PN}-v${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="kerberos ldap ssl"
 
 RDEPEND=">=sys-libs/db-3.2
@@ -62,6 +62,11 @@ src_compile() {
 		--without-krb \
 		--with-auth=unix \
 		${myconf} || die "econf failed"
+
+	# Fix some malloc definitions
+	sed -i -e \
+		's~extern char \*malloc()~extern void *malloc()~g' imsp/*.c
+
 	emake || die "compile problem"
 }
 

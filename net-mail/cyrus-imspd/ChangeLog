@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/cyrus-imspd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.8 2004/06/24 23:21:06 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.9 2005/05/26 12:20:17 ferdy Exp $
+
+*cyrus-imspd-1.8 (26 May 2005)
+*cyrus-imspd-1.7b-r1 (26 May 2005)
+
+  26 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/cyrus-imspd-1.8-gentoo.patch, +cyrus-imspd-1.7b-r1.ebuild,
+  +cyrus-imspd-1.8.ebuild:
+  fix malloc definitions, wrt #93776. version bump to 1.8
 
   10 Jun 2004; Aron Griffis <agriffis@gentoo.org> cyrus-imspd-1.7b.ebuild:
   Fix use invocation

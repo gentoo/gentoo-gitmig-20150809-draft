@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.9 2005/05/26 12:20:17 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.8.ebuild,v 1.1 2005/05/26 12:20:17 ferdy Exp $
 
 inherit eutils gnuconfig ssl-cert
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${PN}-v${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="kerberos ldap ssl"
 
 RDEPEND=">=sys-libs/db-3.2
@@ -21,7 +21,6 @@ RDEPEND=">=sys-libs/db-3.2
 	ssl? ( >=net-misc/stunnel-4 )"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	>=sys-devel/autoconf-2.58
 	sys-devel/automake
 	sys-devel/libtool
@@ -31,47 +30,36 @@ S="${WORKDIR}/${PN}-v${PV}"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
-	epatch "${FILESDIR}/cyrus-imspd-db4.patch"
-	epatch "${FILESDIR}/cyrus-imspd-gentoo.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 
 	# Cyrus 2.2.x has an extra library.
 	if [ "`best_version '=dev-libs/cyrus-imap-dev-2.2*'`" ] ; then
-		sed -e "s:-lcyrus:-lcyrus -lcyrus_min:" \
-			-i "${S}/imsp/Makefile.in" \
-			-i "${S}/cmulocal/libcyrus.m4" || die "sed failed"
+		sed -i -e "s:-lcyrus:-lcyrus -lcyrus_min:" \
+			"${S}/imsp/Makefile.in" \
+			"${S}/cmulocal/libcyrus.m4" || die "sed failed"
 	fi
-
-	export WANT_AUTOCONF=2.5
-	touch config.{guess,sub}
-	gnuconfig_update
-
-	# Recreate configure.
-	ebegin "Recreating configure"
-	rm -f configure acconfig.h
-	aclocal -I cmulocal && autoheader && autoconf || \
-		die "recreate configure failed"
-	eend $?
 }
 
 src_compile() {
-	local myconf
-	myconf="${myconf} `use_with ldap ldap ldap`"
-	myconf="${myconf} `use_enable kerberos gssapi`"
-
 	econf \
+		$(use_with ldap) \
+		$(use_enable kerberos gssapi) \
 		--without-krb \
-		--with-auth=unix \
-		${myconf} || die "econf failed"
+		--with-auth=unix || \
+			die "econf failed"
+
+	# Fix some malloc definitions
+	sed -i -e \
+		's~extern char \*malloc()~extern void *malloc()~g' imsp/*.c
+
 	emake || die "compile problem"
 }
 
 src_install() {
 	newsbin imsp/cyrus-imspd imspd
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/imspd.rc6" imspd
-	insinto /etc/conf.d
-	newins "${FILESDIR}/imspd.conf" imspd
+	newinitd "${FILESDIR}/imspd.rc6" imspd
+	newconfd "${FILESDIR}/imspd.conf" imspd
 
 	keepdir /var/imsp{,/user}
 
