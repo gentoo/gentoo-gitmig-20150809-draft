@@ -1,4 +1,16 @@
-MD5 f89acd47503fc6413f34b4b95061829b ChangeLog 804
-MD5 55250371bd861e7d9a5ebc8cd1770914 cvsps-2.0_rc1.ebuild 633
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 61ede9071aee35ee31f7f3bc137e5c57 cvsps-2.0_rc1.ebuild 592
+MD5 717cb4f5cb99b793f8a7b84950a87f46 ChangeLog 941
 MD5 e894c7bf94ee57217db76f5aebaca7b5 metadata.xml 256
+MD5 27d5ab3a0a786c2d9af415f2978fd77b cvsps-2.1.ebuild 591
+MD5 9e321a30353a8f2875e90d73a0c51a60 files/digest-cvsps-2.1 60
 MD5 c13b48bb296203492d5ecbedcb85bd92 files/digest-cvsps-2.0_rc1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFClhe1EZCkKN40op4RApAXAJ9wC2PqgSJY71UWAb5RBRY4xsBkbQCeJU/b
+tapeHH1oirjPYEP1wP0vHpE=
+=GpCs
+-----END PGP SIGNATURE-----
