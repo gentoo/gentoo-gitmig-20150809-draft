@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.114 2005/05/21 10:34:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.115 2005/05/26 00:01:05 herbs Exp $
+
+  26 May 2005; Herbie Hopkins <herbs@gentoo.org> openldap-2.2.26-r2.ebuild:
+  more multilib fixes..
 
   21 May 2005; Simon Stelling <blubb@gentoo.org> openldap-2.2.26-r2.ebuild:
   fixed multilib-strict issues

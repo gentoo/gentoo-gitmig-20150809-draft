@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.26-r2.ebuild,v 1.3 2005/05/21 10:34:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.26-r2.ebuild,v 1.4 2005/05/26 00:01:05 herbs Exp $
 
-inherit toolchain-funcs eutils multilib
+inherit flag-o-matic toolchain-funcs eutils multilib
 
 OLD_PV="2.1.30"
 OLD_P="${PN}-${OLD_PV}"
@@ -203,6 +203,10 @@ src_compile() {
 	myconf="${myconf} `use_enable tcpd wrappers`"
 	myconf="${myconf} `use_with ssl tls` `use_with samba lmpasswd`"
 
+	if [ $(get_libdir) != "lib" ] ; then
+		append-ldflags -L/usr/$(get_libdir)
+	fi
+
 	econf \
 		--enable-static \
 		--enable-shared \
@@ -224,7 +228,7 @@ src_compile() {
 	cd ${OLD_S} && \
 	econf \
 		--enable-static --enable-shared \
-		--libexecdir=/usr/lib/openldap \
+		--libexecdir=/usr/$(get_libdir)/openldap \
 		--disable-slapd --disable-aci --disable-cleartext --disable-crypt \
 		--disable-lmpasswd --disable-spasswd --enable-modules \
 		--disable-phonetic --disable-rewrite --disable-rlookups --disable-slp \
