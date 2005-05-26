@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/elmo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/ChangeLog,v 1.15 2005/05/12 18:13:05 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/ChangeLog,v 1.16 2005/05/26 13:28:39 ferdy Exp $
+
+  26 May 2005; Fernando J. Pereda <ferdy@gentoo.org> elmo-1.3.2-r1.ebuild:
+  alpha stable
 
   12 May 2005; Fernando J. Pereda <ferdy@gentoo.org> elmo-1.3.2-r1.ebuild:
   keyworded ~alpha
