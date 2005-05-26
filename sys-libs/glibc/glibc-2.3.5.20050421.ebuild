@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.11 2005/05/17 22:33:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.12 2005/05/26 04:01:32 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -509,7 +509,7 @@ toolchain-glibc_src_install() {
 	for x in date env ls true uname ; do
 		x=$(type -p ${x})
 		[[ -z ${x} ]] && continue
-		striptest=$(file ${x} 2>/dev/null)
+		striptest=$(file -L ${x} 2>/dev/null)
 		[[ -z ${striptest} ]] && continue
 		[[ ${striptest/statically linked} != "${striptest}" ]] && continue
 		"${D}"/$(get_libdir)/ld-*.so \
