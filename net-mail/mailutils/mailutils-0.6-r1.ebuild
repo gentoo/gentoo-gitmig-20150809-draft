@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.5.ebuild,v 1.8 2005/05/14 23:35:59 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.6-r1.ebuild,v 1.1 2005/05/26 16:31:37 ferdy Exp $
 
 inherit eutils
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
@@ -8,11 +8,12 @@ HOMEPAGE="http://www.gnu.org/software/mailutils/mailutils.html"
 SRC_URI="http://ftp.gnu.org/gnu/mailutils/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~ppc x86"
+KEYWORDS="~ppc ~sparc x86"
 IUSE="mailwrapper nls pam mysql postgres gdbm"
 PROVIDE="virtual/mailx"
 DEPEND="!virtual/mailx
 	!mail-client/nmh
+	!mail-client/elm
 	dev-util/guile
 	gdbm? ( sys-libs/gdbm )
 	mysql? ( dev-db/mysql )
@@ -40,6 +41,9 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-mh-Makefile.in.patch
+	epatch ${FILESDIR}/${PN}-IDEF0954-IDEF0955.patch
+	epatch ${FILESDIR}/${PN}-IDEF0956.patch
+	epatch ${FILESDIR}/${PN}-IDEF0957.patch
 }
 
 src_compile() {
