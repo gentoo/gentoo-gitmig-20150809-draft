@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.104 2005/05/18 01:53:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.105 2005/05/26 17:25:03 dang Exp $
+
+*control-center-2.10.1-r1 (26 May 2005)
+
+  26 May 2005; <dang@gentoo.org> +files/control-center-2.10.1-pathfix.patch,
+  +control-center-2.10.1-r1.ebuild:
+  change hardcoded tar/gzip/bzip2 paths in gnome-theme-installer to use
+  g_find_program_in_path(). Bug #84997
 
   18 May 2005; Jason Wever <weeve@gentoo.org> control-center-2.8.2.ebuild:
   Stable on SPARC.

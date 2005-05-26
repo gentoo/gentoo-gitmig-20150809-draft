@@ -1,0 +1,232 @@
+diff -u -ruN control-center-2.10.1.orig/capplets/theme-switcher/gnome-theme-installer.c control-center-2.10.1/capplets/theme-switcher/gnome-theme-installer.c
+--- control-center-2.10.1.orig/capplets/theme-switcher/gnome-theme-installer.c	2005-02-08 17:42:10.000000000 -0500
++++ control-center-2.10.1/capplets/theme-switcher/gnome-theme-installer.c	2005-05-26 12:17:39.000000000 -0400
+@@ -139,19 +139,30 @@
+ transfer_done_targz_idle_cb (gpointer data)
+ {
+ 	int status;
+-	gchar *command, *filename;
++	gchar *command, *filename, *gzip, *tar;
+ 	theme_properties *theme_props = data;
+ 		
++	if (!(gzip = g_find_program_in_path("gzip"))) {
++		return FALSE;
++	}
++	if (!(tar = g_find_program_in_path("tar"))) {
++		g_free(gzip);
++		return FALSE;
++	}
+ 	/* this should be something more clever and nonblocking */
+ 	filename = g_shell_quote(theme_props->filename);
+-	command = g_strdup_printf ("sh -c 'cd \"%s\"; /bin/gzip -d -c < \"%s\" | /bin/tar xf - '",
+-				    theme_props->target_tmp_dir, filename);
++	command = g_strdup_printf ("sh -c 'cd \"%s\"; %s -d -c < \"%s\" | %s xf - '",
++				    theme_props->target_tmp_dir, gzip, filename, tar);
+ 	g_free(filename);
+ 	if (g_spawn_command_line_sync (command, NULL, NULL, &status, NULL) && status == 0) {
+ 		g_free (command);
++		g_free(gzip);
++		g_free(tar);
+ 		return TRUE;
+ 	} else {	
+ 		g_free (command);
++		g_free(gzip);
++		g_free(tar);
+ 		return FALSE;
+ 	}
+ }
+@@ -171,18 +182,29 @@
+ transfer_done_tarbz2_idle_cb (gpointer data)
+ {
+ 	int status;
+-	gchar *command, *filename;
++	gchar *command, *filename, *bzip2, *tar;
+ 	theme_properties *theme_props = data;
+ 	
++	if (!(bzip2 = g_find_program_in_path("bzip2"))) {
++		return FALSE;
++	}
++	if (!(tar = g_find_program_in_path("tar"))) {
++		g_free(bzip2);
++		return FALSE;
++	}
+ 	filename = g_shell_quote(theme_props->filename);
+ 	/* this should be something more clever and nonblocking */
+-	command = g_strdup_printf ("sh -c 'cd \"%s\"; /usr/bin/bzip2 -d -c < \"%s\" | /bin/tar xf - '",
+-				   theme_props->target_tmp_dir, filename);
++	command = g_strdup_printf ("sh -c 'cd \"%s\"; %s -d -c < \"%s\" | %s xf - '",
++				   theme_props->target_tmp_dir, bzip2, filename, tar);
+ 	g_free (filename);
+ 	if (g_spawn_command_line_sync (command, NULL, NULL, &status, NULL) && status == 0) {
++		g_free(bzip2);
++		g_free(tar);
+ 		g_free (command);
+ 		return TRUE;
+ 	} else {
++		g_free(bzip2);
++		g_free(tar);
+ 		g_free (command);
+ 		return FALSE;
+ 	}
+@@ -193,7 +215,7 @@
+ {
+ 	GtkWidget *dialog;
+ 	int len = strlen (path);
+-	gchar *command,**dir, *first_line, *filename;
++	gchar *command,**dir, *first_line, *filename, *gzip, *bzip2, *tar;
+ 	int status,theme_type;
+ 	theme_properties *theme_props;
+ 	GnomeVFSURI *theme_source_dir, *theme_dest_dir;
+@@ -206,17 +228,20 @@
+ 				 			g_get_home_dir(), 
+ 							g_random_int());
+ 		
++	gzip = g_find_program_in_path("gzip");
++	bzip2 = g_find_program_in_path("bzip2");
++	tar = g_find_program_in_path("tar");
+ 	
+-	if (path && len > 7 && ( (!strcmp (path + len - 7, ".tar.gz")) || (!strcmp (path + len - 4, ".tgz")) )) {
++	if (tar && gzip && path && len > 7 && ( (!strcmp (path + len - 7, ".tar.gz")) || (!strcmp (path + len - 4, ".tgz")) )) {
+ 		filename = g_shell_quote (path);
+-		command = g_strdup_printf ("sh -c '/bin/gzip -d -c < \"%s\" | /bin/tar ft -  | head -1'",
+-					    filename);
++		command = g_strdup_printf ("sh -c '%s -d -c < \"%s\" | %s ft -  | head -1'",
++					    gzip, filename, tar);
+ 		theme_props->filetype=TARGZ;
+ 		g_free (filename);
+-	} else if (path && len > 8 && !strcmp (path + len - 8, ".tar.bz2")) {
++	} else if (tar && bzip2 && path && len > 8 && !strcmp (path + len - 8, ".tar.bz2")) {
+ 		filename = g_shell_quote (path);
+-		command = g_strdup_printf ("sh -c '/usr/bin/bzip2 -d -c < \"%s\" | /bin/tar ft - | head -1'",
+-					    filename);
++		command = g_strdup_printf ("sh -c '%s -d -c < \"%s\" | %s ft - | head -1'",
++					    bzip2, filename, tar);
+ 		theme_props->filetype=TARBZ;
+ 		g_free (filename);
+ 	} else {
+@@ -230,6 +255,9 @@
+ 		gnome_vfs_unlink(path);		
+ 		g_free (theme_props->target_tmp_dir);
+ 		g_free (theme_props);
++		g_free(gzip);
++		g_free(bzip2);
++		g_free(tar);
+ 		return;	
+ 	}
+ 	
+@@ -247,6 +275,9 @@
+ 		g_free (command);
+ 		g_free (theme_props->target_tmp_dir);
+ 		g_free (theme_props);
++		g_free(gzip);
++		g_free(bzip2);
++		g_free(tar);
+ 		return;	
+ 	}
+ 	
+@@ -254,7 +285,7 @@
+ 	theme_props->filename=g_strdup(path);
+ 	
+ 	if (theme_props->filetype == TARBZ ) {
+-		if (!g_file_test ("/usr/bin/bzip2", G_FILE_TEST_EXISTS)) {
++		if (!bzip2) {
+ 			GtkWidget *dialog;
+ 				
+ 			dialog = gtk_message_dialog_new (NULL,
+@@ -269,6 +300,9 @@
+ 			g_free (theme_props->target_tmp_dir);
+ 			g_free (theme_props->filename);
+ 			g_free (theme_props);
++			g_free(gzip);
++			g_free(bzip2);
++			g_free(tar);
+ 			return;	
+ 		}
+ 		
+@@ -287,12 +321,15 @@
+ 			g_free (theme_props->filename);
+ 			g_free (theme_props);
+ 			g_free (command);
++			g_free(gzip);
++			g_free(bzip2);
++			g_free(tar);
+ 			return;	
+ 		}
+ 	}
+ 	
+ 	if (theme_props->filetype == TARGZ ) {
+-		if (!g_file_test ("/bin/gzip", G_FILE_TEST_EXISTS)) {
++		if (!gzip) {
+ 			GtkWidget *dialog;
+ 
+ 			dialog = gtk_message_dialog_new (NULL,
+@@ -307,6 +344,9 @@
+ 			g_free (theme_props->target_tmp_dir);
+ 			g_free (theme_props->filename);
+ 			g_free (theme_props);
++			g_free(gzip);
++			g_free(bzip2);
++			g_free(tar);
+ 			return;	
+ 		}
+ 		if (!transfer_done_targz_idle_cb(theme_props)) {
+@@ -324,6 +364,9 @@
+ 			g_free (theme_props->filename);
+ 			g_free (theme_props);
+ 			g_free (command);
++			g_free(gzip);
++			g_free(bzip2);
++			g_free(tar);
+ 			return;	
+ 		}	
+ 	}
+@@ -363,6 +406,9 @@
+ 			g_free (theme_props->theme_tmp_dir);
+ 			g_free (theme_props);
+ 			g_free (command);
++			g_free(gzip);
++			g_free(bzip2);
++			g_free(tar);
+ 			return;	
+ 		} else {
+ 			GtkWidget *dialog;
+@@ -379,6 +425,9 @@
+                         g_free (theme_props->theme_tmp_dir);
+                         g_free (theme_props);
+ 			g_free (command);
++			g_free(gzip);
++			g_free(bzip2);
++			g_free(tar);
+ 			return;	
+ 		}
+ 		/* Move the Dir to the target dir */
+@@ -407,6 +456,9 @@
+ 			g_free (theme_props->user_message);
+                         g_free (theme_props);
+ 			g_free (command);
++			g_free(gzip);
++			g_free(bzip2);
++			g_free(tar);
+ 			return;	
+ 		} else {
+ 			GtkWidget *dialog;
+@@ -426,6 +478,9 @@
+ 			g_free (theme_props->user_message);
+                         g_free (theme_props);
+ 			g_free (command);
++			g_free(gzip);
++			g_free(bzip2);
++			g_free(tar);
+ 			return;	
+ 		}
+ 		
+@@ -434,6 +489,9 @@
+ 	g_free (theme_props->target_tmp_dir);
+ 	g_free (theme_props->filename);
+ 	g_free (theme_props);
++	g_free(gzip);
++	g_free(bzip2);
++	g_free(tar);
+ }
+ 
+ static void
