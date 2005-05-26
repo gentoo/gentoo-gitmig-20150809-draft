@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaudiocreator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/ChangeLog,v 1.10 2005/05/25 21:23:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/ChangeLog,v 1.11 2005/05/26 08:54:41 greg_g Exp $
+
+  26 May 2005; Gregorio Guidi <greg_g@gentoo.org>
+  kaudiocreator-3.4.1.ebuild:
+  Change flag 'oggvorbis' into 'vorbis' (#89592).
 
 *kaudiocreator-3.4.1 (25 May 2005)
 
