@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d7c0a572bd33a87e62c7b2cea0fbd408 gtklife-2.2.ebuild 1089
-MD5 28a219cd244d9ed00eecb52877b9ccda gtklife-4.0.ebuild 1178
-MD5 0326cf20f65fcd9fba3458fb75316fff ChangeLog 718
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 06ee7fca0bbc714655d3c98655be9e92 files/digest-gtklife-2.2 63
-MD5 9c434f7d9b2233f3eeadb14ee102e3b9 files/digest-gtklife-4.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBwv54CHk4+ZoBpvsRAgMtAJ92dFl3+lV2kAGzctB5XefGqErHewCgxfoA
-ry9+mmEIIM+kWGgV18xwEDk=
-=sY6e
------END PGP SIGNATURE-----
+MD5 2d55b291e05c5855372ed05211cfe835 gtklife-4.1.ebuild 1144
+MD5 2a8e030d1ecd9490b709554947a763f6 ChangeLog 905
+MD5 33df39b44b7840a0ef66fbd21adc3420 files/digest-gtklife-4.1 63

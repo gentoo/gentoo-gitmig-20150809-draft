@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/gtklife-2.2.ebuild,v 1.3 2004/06/24 22:57:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/gtklife-4.1.ebuild,v 1.1 2005/05/26 05:18:30 mr_bones_ Exp $
 
 inherit games
 
@@ -10,18 +10,18 @@ SRC_URI="http://www.igs.net/~tril/gtklife/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="=x11-libs/gtk+-1.2*"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="=x11-libs/gtk+-1.2*"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
-		-e "/install/s:\$\(.*DIR\):\$(DESTDIR)/&:" Makefile \
+		-e "/install/s:\$\(.*DIR\):\$(DESTDIR)/&:" \
+		-e "/rm/s:\$\(.*DIR\):\$(DESTDIR)/&:" \
+		-e "/cp/s:\$\(.*DIR\):\$(DESTDIR)/&:" Makefile \
 		|| die "sed failed"
 }
 
