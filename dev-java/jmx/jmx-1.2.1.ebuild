@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.15 2005/04/26 01:30:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.16 2005/05/26 09:53:12 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -9,12 +9,12 @@ HOMEPAGE="http://java.sun.com/products/JavaManagement/index.jsp"
 SRC_URI="${PN}-${PV//./_}-scsl.zip"
 LICENSE="sun-csl"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64 sparc ppc64"
-IUSE="jikes doc"
+KEYWORDS="x86 ppc amd64 sparc ppc64"
+IUSE="doc examples jikes source"
 DEPEND=">=virtual/jdk-1.4
-		app-arch/unzip
-		sys-apps/sed
-		jikes? ( dev-java/jikes )"
+	app-arch/unzip
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 RESTRICT="fetch"
 
@@ -43,13 +43,17 @@ pkg_nofetch() {
 
 src_compile() {
 	local antflags="jar"
-	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} examples"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "compile problem"
 }
 
 src_install() {
 	java-pkg_dojar lib/*.jar
 	use doc && java-pkg_dohtml -r docs/*
-	use doc && dohtml -f examples/*
+	if use examples; then
+		dodir /usr/share/doc/${PF}/examples
+		cp -r examples/* ${D}/usr/share/doc/${PF}/examples
+	fi
+	use source && java-pkg_dosrc src/jmxri/*
 }
