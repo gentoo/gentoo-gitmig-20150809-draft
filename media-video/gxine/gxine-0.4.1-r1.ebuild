@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.1-r1.ebuild,v 1.1 2005/05/24 14:01:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.1-r1.ebuild,v 1.2 2005/05/26 03:47:12 weeve Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -19,7 +19,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 IUSE="nls lirc mozilla"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 sparc ~x86"
 
 SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
 
