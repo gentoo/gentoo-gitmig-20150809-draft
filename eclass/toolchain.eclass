@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.156 2005/05/25 22:09:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.157 2005/05/26 02:42:02 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -126,8 +126,11 @@ if [[ ${ETYPE} == "gcc-library" ]] ; then
 	IUSE="nls build uclibc"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
-	IUSE="static nls bootstrap build multislot multilib gcj gtk fortran nocxx objc hardened uclibc n32 n64 ip28 altivec"
-	[[ -n ${HTB_VER} ]] && IUSE="${IUSE} boundschecking"
+	IUSE="static nls bootstrap build multislot multilib gcj gtk fortran nocxx objc hardened n32 n64 ip28 altivec"
+	[[ -n ${UCLIBC_VER} ]] && IUSE="${IUSE} uclibc"
+	[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
+	[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
+	[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
 	# Support upgrade paths here or people get pissed
 	if use multislot ; then
 		SLOT="${CTARGET}-${GCC_CONFIG_VER}"
@@ -268,8 +271,10 @@ get_gcc_src_uri() {
 	if [[ -n ${PP_VER} ]] ; then
 		if [[ -n ${PP_FVER} ]] ; then
 			GCC_SRC_URI="${GCC_SRC_URI}
-				http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz
-				$(gentoo_urls protector-${PP_FVER}.tar.gz )"
+				!nossp? (
+					http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz
+					$(gentoo_urls protector-${PP_FVER}.tar.gz)
+				)"
 		else
 			GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${PP_GCC_VER}-ssp-${PP_VER}.tar.bz2)"
 		fi
@@ -290,7 +295,7 @@ get_gcc_src_uri() {
 
 	# strawberry pie, Cappuccino and a Gauloises (it's a good thing)
 	[[ -n ${PIE_VER} ]] && \
-		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls ${PIE_CORE})"
+		GCC_SRC_URI="${GCC_SRC_URI} !nopie? ( $(gentoo_urls ${PIE_CORE}) )"
 
 	# gcc bounds checking patch
 	if [[ -n ${HTB_VER} ]] ; then
@@ -318,7 +323,7 @@ SRC_URI=$(get_gcc_src_uri)
 # 3) SSP by default
 hardened_gcc_works() {
 	if [[ $1 == "pie" ]] ; then
-		[[ -z ${PIE_VER} ]] && return 1
+		want_pie || return 1
 		hardened_gcc_is_stable pie && return 0
 		if has ~$(tc-arch) ${ACCEPT_KEYWORDS} ; then
 			hardened_gcc_check_unsupported pie && return 1
@@ -410,14 +415,18 @@ want_libssp() {
 	return 0
 }
 
-want_boundschecking() {
-	[[ -z ${HTB_VER} ]] && return 1
-	use boundschecking && return 0
+_want_stuff() {
+	local var=$1 flag=$2
+	[[ -z ${!var} ]] && return 1
+	use ${flag} && return 0
 	return 1
 }
+want_boundschecking() { _want_stuff HTB_VER boundschecking ; }
+want_pie() { _want_stuff PIE_VER !nopie ; }
+want_ssp() { _want_stuff PP_VER !nossp ; }
 
 want_split_specs() {
-	[[ ${SPLIT_SPECS} == "true" ]] && [[ -n ${PIE_VER} ]]
+	[[ ${SPLIT_SPECS} == "true" ]] && want_pie
 }
 
 # This function checks whether or not glibc has the support required to build
@@ -841,7 +850,7 @@ gcc-compiler_pkg_postrm() {
 gcc-compiler_src_unpack() {
 	# fail if using pie patches, building hardened, and glibc doesnt have
 	# the necessary support
-	[[ -n ${PIE_VER} ]] && use hardened && glibc_have_pie
+	want_pie && use hardened && glibc_have_pie
 
 	if use hardened ; then
 		einfo "updating configuration to build hardened GCC"
@@ -1621,7 +1630,7 @@ gcc_quick_unpack() {
 	[[ -n ${UCLIBC_VER} ]] && \
 		unpack ${PN}-${PATCH_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
 
-	if [[ -n ${PP_VER} ]] ; then
+	if want_ssp ; then
 		if [[ -n ${PP_FVER} ]] ; then
 			# The gcc 3.4 propolice versions are meant to be unpacked to ${S}
 			pushd ${S:-$(gcc_get_s_dir)} > /dev/null
@@ -1632,7 +1641,7 @@ gcc_quick_unpack() {
 		fi
 	fi
 
-	if [[ -n ${PIE_VER} ]] ; then
+	if want_pie ; then
 		if [[ -n ${PIE_CORE} ]] ; then
 			unpack ${PIE_CORE}
 		else
@@ -1688,9 +1697,8 @@ do_gcc_stub() {
 }
 
 do_gcc_HTB_boundschecking_patches() {
-	if [[ -z ${HTB_VER} ]] || \
-	   ! want_boundschecking || \
-	   ([[ -n ${PP_VER} ]] && [[ ${HTB_EXCLUSIVE} == "true" ]])
+	if ! want_boundschecking || \
+	   (want_ssp && [[ ${HTB_EXCLUSIVE} == "true" ]])
 	then
 		do_gcc_stub htb
 		return 0
@@ -1705,7 +1713,7 @@ do_gcc_HTB_boundschecking_patches() {
 do_gcc_SSP_patches() {
 	# PARISC has no love ... it's our stack :(
 	if [[ $(tc-arch) == "hppa" ]] || \
-	   [[ -z ${PP_VER} ]] || \
+	   ! want_ssp || \
 	   (want_boundschecking && [[ ${HTB_EXCLUSIVE} == "true" ]])
 	then
 		do_gcc_stub ssp
@@ -1785,7 +1793,7 @@ update_gcc_for_libssp() {
 
 # do various updates to PIE logic
 do_gcc_PIE_patches() {
-	if [[ -z ${PIE_VER} ]] || \
+	if ! want_pie || \
 	   (want_boundschecking && [[ ${HTB_EXCLUSIVE} == "true" ]])
 	then
 		return 0
