@@ -1,28 +1,28 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.1.ebuild,v 1.1 2005/05/25 21:22:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.1.ebuild,v 1.2 2005/05/26 08:25:23 greg_g Exp $
 
 inherit kde flag-o-matic eutils
 set-qtdir 3
 set-kdedir 3.4
 
-MY_PV=1.4.1
+MY_PV=${PV/#3/1}
 S=${WORKDIR}/${PN}-${MY_PV}
 
 DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manager"
 HOMEPAGE="http://multimedia.kde.org/"
-SRC_URI="mirror://kde/stable/3.4/src/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.4"
-KEYWORDS="~x86 ~amd64"
-IUSE="alsa oggvorbis esd artswrappersuid jack mad hardened"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~ppc64 ~ia64"
+IUSE="alsa esd artswrappersuid jack mp3 hardened vorbis"
 
 DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
-	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
+	vorbis? ( media-libs/libvorbis media-libs/libogg )
 	esd? ( media-sound/esound )
 	jack? ( media-sound/jack-audio-connection-kit )
-	mad? ( media-libs/libmad media-libs/libid3tag )
+	mp3? ( media-libs/libmad )
 	media-libs/audiofile
 	>=dev-libs/glib-2
 	>=x11-libs/qt-3.3"
@@ -47,7 +47,7 @@ src_compile() {
 	#fix bug 41980
 	use sparc && filter-flags -fomit-frame-pointer
 
-	myconf="$myconf $(use_enable alsa) $(use_enable oggvorbis vorbis) $(use_enable mad libmad) $(use_enable jack)"
+	myconf="$myconf $(use_enable alsa) $(use_enable vorbis) $(use_enable mp3 libmad) $(use_enable jack)"
 
 	kde_src_compile
 }

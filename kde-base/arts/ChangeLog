@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.160 2005/05/25 21:22:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.161 2005/05/26 08:25:23 greg_g Exp $
+
+  26 May 2005; Gregorio Guidi <greg_g@gentoo.org> arts-3.4.1.ebuild:
+  Change flag 'oggvorbis' into 'vorbis' (#89592), 'mad' into 'mp3' (#94045).
 
 *arts-3.4.1 (25 May 2005)
 
