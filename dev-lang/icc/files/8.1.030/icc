@@ -1,0 +1,4 @@
+#!/bin/sh
+export INTEL_LICENSE_FILE="/opt/intel/compiler80/licenses"
+export LD_LIBRARY_PATH="/opt/intel/compiler80/lib"
+/opt/intel/compiler80/bin/iccbin $*
