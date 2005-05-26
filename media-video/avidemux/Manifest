@@ -1,21 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 991492c60f6dfb4b69e7995847e6db49 ChangeLog 15768
+MD5 ff50f13e8a5c341913e0b43d082ab1cd ChangeLog 15941
 MD5 ee5806b95c2dcfc5b397bcf7b64fc053 avidemux-2.0.24.ebuild 2486
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
 MD5 d80cf399435b7b8c6b7eff979d7612ee avidemux-2.0.38-r1.ebuild 2735
 MD5 dac6310c09045540cf8c8ef4518167a4 avidemux-2.0.38.ebuild 2732
 MD5 7ff6a23ad501e8c2fdc37fb6fca5276d avidemux-2.0.40.ebuild 2865
+MD5 248d212658d8705d168b297f98c64002 avidemux-2.0.40-r1.ebuild 2651
 MD5 4b0dc1a0f1e81197582e817410f8d180 files/2.0.38_rc2-fix-faad.patch 759
 MD5 03b785183df3226642178240a15f5a25 files/digest-avidemux-2.0.24 68
 MD5 cc1b60c4a9838d713cf334342af96a78 files/digest-avidemux-2.0.38 138
 MD5 2e4c3410be3348fc36b780e6bd9f8683 files/digest-avidemux-2.0.38-r1 138
 MD5 0e47e20e917b79428c097e2920683db3 files/digest-avidemux-2.0.40 138
+MD5 6ea8ee74b4d5e069dea6a4ba9dd8fb33 files/digest-avidemux-2.0.40-r1 138
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClJgxj5H05b2HAEkRApE3AJ0Y1WbLhGzA852wUPraMiSLF0O2sACePL2V
-bycqZv/8YYl68snhCx4lpY0=
-=1ldv
+iD8DBQFCla0oj5H05b2HAEkRArW/AJ45RVZMq4l7+U4kyfhxJzzslYVD+QCdHmFN
+LH9e1Ym0acZ0tYT1GJELUXU=
+=TxMT
 -----END PGP SIGNATURE-----
