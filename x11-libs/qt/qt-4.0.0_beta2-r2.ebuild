@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2-r2.ebuild,v 1.2 2005/05/24 13:01:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2-r2.ebuild,v 1.3 2005/05/26 15:03:53 herbs Exp $
 
 inherit eutils flag-o-matic
 
@@ -95,6 +95,8 @@ src_compile() {
 
 	myconf="${myconf} $(qt_use accessibility) $(qt_use cups) $(qt_use xinerama)"
 	myconf="${myconf} $(qt_use opengl) $(qt_use nis)"
+
+	[ $(get_libdir) != "lib" ] && myconf="${myconf} -L/usr/$(get_libdir)"
 
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif" || myconf="${myconf} -no-gif"
