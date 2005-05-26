@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.33 2005/05/25 19:52:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.34 2005/05/26 22:02:04 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -349,7 +349,7 @@ function kde-meta_src_unpack() {
 		
 		# Visiblity stuff is way broken! Just disable it when it's present
 		# until upstream finds a way to have it working right.
-		if grep HAVE_GCC_VISIBILITY configure &> /dev/null || ! [[ -f configure ]]; then
+		if grep KDE_ENABLE_HIDDEN_VISIBILITY configure.in &> /dev/null || ! [[ -f configure ]]; then
 			find ${S} -name configure.in.in | xargs sed -i -e \
 				's:KDE_ENABLE_HIDDEN_VISIBILITY::g'
 			rm -f configure
