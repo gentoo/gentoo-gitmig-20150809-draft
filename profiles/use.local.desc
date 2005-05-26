@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1191 2005/05/24 22:21:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1192 2005/05/26 01:43:48 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -830,13 +830,14 @@ sys-devel/binutils:multislot - Allow for multiple versions of binutils to be eme
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
 sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checking (disables PIE and SSP building in gcc)
-sys-devel/gcc:fortran - Build support for the fortran language
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
 sys-devel/gcc:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
 sys-devel/gcc:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
 sys-devel/gcc:n64 - Enable n64 ABI support on mips
 sys-devel/gcc:nomultilib - Disables multilib support in gcc
+sys-devel/gcc:nopie - Disable PIE support (NOT FOR GENERAL USE)
+sys-devel/gcc:nossp - Disable SSP support (NOT FOR GENERAL USE)
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
