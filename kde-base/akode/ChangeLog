@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/ChangeLog,v 1.10 2005/05/25 21:22:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/ChangeLog,v 1.11 2005/05/26 08:47:36 greg_g Exp $
+
+  26 May 2005; Gregorio Guidi <greg_g@gentoo.org> akode-3.4.1.ebuild:
+  Change flag 'oggvorbis' into 'vorbis' (#89592), 'mad' into 'mp3' (#94045).
 
 *akode-3.4.1 (25 May 2005)
 

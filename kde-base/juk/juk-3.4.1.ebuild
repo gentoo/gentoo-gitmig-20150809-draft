@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.4.1.ebuild,v 1.1 2005/05/25 21:23:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.4.1.ebuild,v 1.2 2005/05/26 08:51:21 greg_g Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -9,7 +9,7 @@ inherit kde-meta eutils
 
 DESCRIPTION="Jukebox and music manager for KDE"
 KEYWORDS="~x86 ~amd64"
-IUSE="flac gstreamer mad oggvorbis"
+IUSE="flac gstreamer mp3 vorbis"
 
 DEPEND="media-libs/taglib
 	media-libs/tunepimp
@@ -18,8 +18,8 @@ DEPEND="media-libs/taglib
 
 RDEPEND="${DEPEND}
 	gstreamer? ( >=media-libs/gst-plugins-0.8
-		     mad? ( >=media-plugins/gst-plugins-mad-0.8 )
-		     oggvorbis? ( >=media-plugins/gst-plugins-ogg-0.8
+		     mp3? ( >=media-plugins/gst-plugins-mad-0.8 )
+		     vorbis? ( >=media-plugins/gst-plugins-ogg-0.8
 				  >=media-plugins/gst-plugins-vorbis-0.8 )
 		     flac? ( >=media-plugins/gst-plugins-flac-0.8 ) )"
 
