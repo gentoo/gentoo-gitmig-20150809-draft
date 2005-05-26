@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4.ebuild,v 1.2 2005/05/21 21:52:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4.ebuild,v 1.3 2005/05/26 02:59:06 weeve Exp $
 
 inherit elisp
 
@@ -14,7 +14,7 @@ SRC_URI="http://emacs-w3m.namazu.org/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~sparc ~ppc"
+KEYWORDS="~alpha ~ppc sparc x86"
 
 DEPEND="virtual/w3m"
 
