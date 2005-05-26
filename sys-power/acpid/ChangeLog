@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/acpid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.7 2005/05/23 19:19:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.8 2005/05/26 12:43:41 brix Exp $
+
+  26 May 2005; <brix@gentoo.org> -acpid-1.0.1.ebuild,
+  -acpid-1.0.2-r1.ebuild, -acpid-1.0.4.ebuild:
+  Pruned old ebuilds.
 
   23 May 2005; <brix@gentoo.org> acpid-1.0.4-r1.ebuild:
   Stable on x86.
