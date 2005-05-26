@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ifc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.14 2004/06/24 22:50:51 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.15 2005/05/26 22:50:39 kugelfang Exp $
+
+*ifc-8.1.026 (27 May 2005)
+
+  27 May 2005; Danny van Dyk <kugelfang@gentoo.org> metadata.xml,
+  +ifc-8.1.026.ebuild, +ifc-8.1.027.ebuild:
+  Taking over maintainership. Added ifc-8.1.02{6,7} for testing purpose. (still
+  package.mask'ed)
 
   21 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; :
   Fix ChangeLog entry by root.

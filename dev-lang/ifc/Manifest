@@ -1,16 +1,30 @@
-MD5 62bd5268a813f91ebaf5fa29ed4fc193 ifc-7.0.064.ebuild 3173
-MD5 c2f643edf75f352e7ac711fb59012de9 ifc-6.0.ebuild 2707
-MD5 cac0c696bfa533fe3b407229ea817649 ifc-7.1.008.ebuild 2866
-MD5 f07b82258cd9569c9ffc13b8107cc3de ChangeLog 1914
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 7af87c23dad660d9aaf3b2d4d969c4e0 ifc-7.0.064-r1.ebuild 3422
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 22a23b7a2417a3c1335feb7081a9ce61 ChangeLog 2153
+MD5 993851e0ce21d9de4e6fed3800778e78 ifc-6.0.ebuild 2708
+MD5 ed3d8c7aeaff488a0037060ca4c04267 ifc-7.0.064-r1.ebuild 3423
+MD5 66942cb4bcd7d34157d4249b0f543eb0 ifc-7.0.064.ebuild 3174
+MD5 e4d33baa61b2a37c600e84564a9a2546 ifc-7.1.008.ebuild 2867
+MD5 28752edd8018d353738d45910d4707eb metadata.xml 246
+MD5 2295fb7209357afbb775313acc7a42a4 ifc-8.1.026.ebuild 2219
+MD5 b0a4c9ae583d130cc6f7781419065a5a ifc-8.1.027.ebuild 2209
 MD5 0e550038b4a16719d30d2c5298ee4a9b files/digest-ifc-6.0 65
-MD5 5edab4cd21580d1e9a97206e9bfcdeab files/digest-ifc-7.0.064-r1 65
 MD5 5edab4cd21580d1e9a97206e9bfcdeab files/digest-ifc-7.0.064 65
+MD5 5edab4cd21580d1e9a97206e9bfcdeab files/digest-ifc-7.0.064-r1 65
 MD5 5910af4ecc62e7a88a980242c3b09f00 files/digest-ifc-7.1.008 65
+MD5 14e49f3d39895d95b854524aeb95f82d files/digest-ifc-8.1.026 69
+MD5 7760fde0aa81f20ef0f50710c47a4637 files/digest-ifc-8.1.027 70
 MD5 b10d5f0e2cf2393977007cf31b6d413a files/6.0/05icc-ifc 225
-MD5 a3b9072faee233848ad6fbd111240a8f files/7.0.064-r1/ifc 155
-MD5 f498ef092cdd40c2b20d4a80a93d7437 files/7.0.064-r1/05icc-ifc 225
 MD5 f498ef092cdd40c2b20d4a80a93d7437 files/7.0.064/05icc-ifc 225
-MD5 a3b9072faee233848ad6fbd111240a8f files/7.1.008/ifc 155
+MD5 f498ef092cdd40c2b20d4a80a93d7437 files/7.0.064-r1/05icc-ifc 225
+MD5 a3b9072faee233848ad6fbd111240a8f files/7.0.064-r1/ifc 155
 MD5 8da5731b7a6c2e6bf1ff90fbd47b9266 files/7.1.008/05icc-ifc 148
+MD5 a3b9072faee233848ad6fbd111240a8f files/7.1.008/ifc 155
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCllNv5mJXAu5GbtIRAm65AJsHjV1at6WJTnzAy4KM6sbTHYP5ZQCfa886
+40qhLOntnMO5OBWA2R2NPXc=
+=LERk
+-----END PGP SIGNATURE-----

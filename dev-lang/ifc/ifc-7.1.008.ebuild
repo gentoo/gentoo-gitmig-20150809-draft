@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.1.008.ebuild,v 1.2 2004/06/24 22:50:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.1.008.ebuild,v 1.3 2005/05/26 22:50:39 kugelfang Exp $
 
 inherit rpm
 
