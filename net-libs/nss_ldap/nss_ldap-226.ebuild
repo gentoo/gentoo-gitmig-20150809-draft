@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-226.ebuild,v 1.6 2005/04/16 08:04:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-226.ebuild,v 1.7 2005/05/26 06:24:30 gmsoft Exp $
 
 inherit fixheadtails eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.padl.com/download/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 sparc amd64 ppc ~hppa ~alpha -ppc64"
+KEYWORDS="x86 sparc amd64 ppc hppa ~alpha -ppc64"
 
 DEPEND=">=net-nds/openldap-1.2.11"
 
