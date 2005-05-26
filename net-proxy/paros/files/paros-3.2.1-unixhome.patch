@@ -1,0 +1,200 @@
+diff -uNr paros.orig/src/org/parosproxy/paros/Constant.java paros/src/org/parosproxy/paros/Constant.java
+--- paros.orig/src/org/parosproxy/paros/Constant.java	2005-05-06 23:30:32.000000000 +0200
++++ paros/src/org/parosproxy/paros/Constant.java	2005-05-25 09:17:49.000000000 +0200
+@@ -21,6 +21,11 @@
+  */
+ package org.parosproxy.paros;
+ 
++import org.apache.commons.logging.Log;
++import org.apache.commons.logging.LogFactory;
++import java.io.*;
++import java.nio.channels.*;
++
+ /**
+  *
+  * To change the template for this generated type comment go to
+@@ -31,13 +36,18 @@
+ 	public static final String PROGRAM_VERSION = "3.2.1";
+ 	public static final String PROGRAM_TITLE = PROGRAM_NAME + " " + PROGRAM_VERSION;
+ 	
+-	public static final String FILE_OPTIONS = "xml/options.xml";
++	public static final String FILE_OPTIONS_DEFAULT = "xml/options.xml";
++	public String FILE_OPTIONS = "options.xml";
+ 	public static final String FOLDER_PLUGIN = "plugin";
+ 	public static final String FOLDER_FILTER = "filter";
+-	public static final String FOLDER_SESSION = "session";
+-    public static final String DBNAME_TEMPLATE = "db/parosdb";
+-	public static final String DBNAME_UNTITLED = FOLDER_SESSION + "/untitled";
++	public static final String FOLDER_SESSION_DEFAULT = "session";
++	public String FOLDER_SESSION = "session";
++	public static final String DBNAME_TEMPLATE = "db/parosdb";
++	public String DBNAME_UNTITLED = FOLDER_SESSION + "/untitled";
++	public String ACCEPTED_LICENSE = "AcceptedLicense";
+ 
++	static private Constant instance = null;
++	
+ 	public static final int MAX_HOST_CONNECTION = 5;
+ 	public static final String USER_AGENT = PROGRAM_NAME + "/" + PROGRAM_VERSION;
+ 
+@@ -60,5 +70,57 @@
+ 	    return staticSP;
+ 	}
+ 
+-	
++	public static void copyFile(File in, File out) throws Exception {
++		if (!in.exists()) 
++			throw new IOException("Source file does not exist");
++/*		FileChannel sourceChannel = new FileInputStream(in).getChannel();
++		FileChannel destinationChannel = new FileOutputStream(out).getChannel();
++		sourceChannel.transferTo(0, in.length(), destinationChannel);
++		sourceChannel.close();
++		destinationChannel.close();*/
++		FileReader inf = new FileReader(in);
++		FileWriter outf = new FileWriter(out);
++		int c;
++		while ((c=inf.read()) != -1)
++			outf.write(c);
++		inf.close();
++		outf.close();
++	}
++
++	public Constant() {
++		String userhome = System.getProperty("user.home") + System.getProperty("file.separator")+".paros";
++		File f = new File(userhome);
++		userhome += System.getProperty("file.separator");
++		FILE_OPTIONS=userhome+FILE_OPTIONS;
++		FOLDER_SESSION=userhome+FOLDER_SESSION;
++		DBNAME_UNTITLED=userhome+DBNAME_UNTITLED;
++		ACCEPTED_LICENSE=userhome+ACCEPTED_LICENSE;
++		try {
++    			Log log = LogFactory.getLog(Constant.class);
++			if (!f.isDirectory()) {
++				log.info("Creating directory "+userhome);
++				f.mkdir();
++			}
++			f=new File(FILE_OPTIONS);
++			if (!f.isFile()) {
++				log.info("Copying defaults from "+FILE_OPTIONS_DEFAULT+" to "+FILE_OPTIONS);
++				copyFile(new File(FILE_OPTIONS_DEFAULT),f);
++			}
++			f=new File(FOLDER_SESSION);
++			if (!f.isDirectory()) {
++				log.info("Creating directory "+FOLDER_SESSION);
++				f.mkdir();
++			}
++		} catch (Exception e) {
++			System.err.println("Unable to initialize home directory! " + e.getMessage());
++			e.printStackTrace(System.err);
++			System.exit(1);
++		}
++	}
++
++	public static Constant getInstance() {
++		if (instance==null)
++			instance=new Constant();
++		return instance;
++	}
+ }
+diff -uNr paros.orig/src/org/parosproxy/paros/Paros.java paros/src/org/parosproxy/paros/Paros.java
+--- paros.orig/src/org/parosproxy/paros/Paros.java	2005-05-06 00:05:48.000000000 +0200
++++ paros/src/org/parosproxy/paros/Paros.java	2005-05-25 08:32:21.000000000 +0200
+@@ -169,7 +169,7 @@
+ 	}
+ 	
+ 	private void showLicense() {
+-	    if (!(new File("license/AcceptedLicense")).exists()){
++	    if (!(new File(Constant.getInstance().ACCEPTED_LICENSE)).exists()){
+ 	        
+ 	        LicenseFrame license = new LicenseFrame();
+ 	        license.setVisible(true);
+@@ -181,7 +181,7 @@
+ 	    }
+ 	    
+ 	    try{
+-	        FileWriter fo = new FileWriter("license/AcceptedLicense");
++	        FileWriter fo = new FileWriter(Constant.getInstance().ACCEPTED_LICENSE);
+ 	        fo.close();
+ 	    }catch (IOException ie){
+ 	        JOptionPane.showMessageDialog(new JFrame(), "Unknown Error. Please report to the author.");
+diff -uNr paros.orig/src/org/parosproxy/paros/control/Control.java paros/src/org/parosproxy/paros/control/Control.java
+--- paros.orig/src/org/parosproxy/paros/control/Control.java	2005-04-08 00:17:28.000000000 +0200
++++ paros/src/org/parosproxy/paros/control/Control.java	2005-05-25 08:31:01.000000000 +0200
+@@ -62,7 +62,7 @@
+ 		loadExtension();
+ 
+ 		try {
+-                model.getOptionsParam().readAndParseFile(Constant.FILE_OPTIONS);
++                model.getOptionsParam().readAndParseFile(Constant.getInstance().FILE_OPTIONS);
+ 		} catch (Exception e) {}
+ 		
+         getProxy();
+diff -uNr paros.orig/src/org/parosproxy/paros/control/MenuToolsControl.java paros/src/org/parosproxy/paros/control/MenuToolsControl.java
+--- paros.orig/src/org/parosproxy/paros/control/MenuToolsControl.java	2004-11-08 20:30:46.000000000 +0100
++++ paros/src/org/parosproxy/paros/control/MenuToolsControl.java	2005-05-25 08:30:48.000000000 +0200
+@@ -59,7 +59,7 @@
+ 	    dialog.initParam(model.getOptionsParam());
+ 		int result = dialog.showDialog(false);
+ 		if (result == JOptionPane.OK_OPTION) {
+-		    model.getOptionsParam().saveFile(Constant.FILE_OPTIONS);
++		    model.getOptionsParam().saveFile(Constant.getInstance().FILE_OPTIONS);
+ 		    control.getProxy().stopServer();
+ 		    control.getProxy().startServer();
+ 		}
+diff -uNr paros.orig/src/org/parosproxy/paros/model/Model.java paros/src/org/parosproxy/paros/model/Model.java
+--- paros.orig/src/org/parosproxy/paros/model/Model.java	2005-01-17 22:36:38.000000000 +0100
++++ paros/src/org/parosproxy/paros/model/Model.java	2005-05-25 08:30:31.000000000 +0200
+@@ -40,7 +40,7 @@
+     private static Model model = null;
+ 
+     private static final String DBNAME_TEMPLATE = Constant.DBNAME_TEMPLATE;
+-    private static final String DBNAME_UNTITLED = Constant.DBNAME_UNTITLED;
++    private String DBNAME_UNTITLED = Constant.getInstance().DBNAME_UNTITLED;
+ 	private static int DBNAME_COPY = 1;
+ 	
+     private Session session = null;
+@@ -93,7 +93,7 @@
+ 	    
+ 	    createAndOpenUntitledDb();
+ 		HistoryReference.setTableHistory(getDb().getTableHistory());
+-		getOptionsParam().readAndParseFile(Constant.FILE_OPTIONS);
++		getOptionsParam().readAndParseFile(Constant.getInstance().FILE_OPTIONS);
+ 	}
+ 
+ 	
+diff -uNr paros.orig/src/org/parosproxy/paros/model/Session.java paros/src/org/parosproxy/paros/model/Session.java
+--- paros.orig/src/org/parosproxy/paros/model/Session.java	2005-01-20 22:56:44.000000000 +0100
++++ paros/src/org/parosproxy/paros/model/Session.java	2005-05-25 08:28:52.000000000 +0200
+@@ -313,7 +313,7 @@
+     public String getSessionFolder() {
+         String result = "";
+         if (fileName.equals("")) {
+-            result = Constant.FOLDER_SESSION;
++            result = Constant.getInstance().FOLDER_SESSION;
+         } else {
+             File file = new File(fileName);
+             result = file.getParent();
+diff -uNr paros.orig/src/xml/log4j.properties paros/src/xml/log4j.properties
+--- paros.orig/src/xml/log4j.properties	2004-11-09 00:20:36.000000000 +0100
++++ paros/src/xml/log4j.properties	2005-05-25 08:26:28.000000000 +0200
+@@ -1,8 +1,12 @@
+-log4j.rootLogger=info, R
++log4j.rootLogger=info, stdout
+ 
++log4j.appender.stdout=org.apache.log4j.ConsoleAppender
++log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
++#log4j.appender.stdout.layout.ConversionPattern=%d [%-5t] %-5p %c{1} - %m%n
++log4j.appender.stdout.layout.ConversionPattern=%d %-5p %c{1} - %m%n
+ 
+ log4j.appender.R=org.apache.log4j.RollingFileAppender
+-log4j.appender.R.File=log/paros.message.txt
++log4j.appender.R.File=/tmp/paros.message.txt
+ 
+ log4j.appender.R.MaxFileSize=2048KB
+ # Keep one backup file
+@@ -13,4 +17,4 @@
+ log4j.appender.R.layout.ConversionPattern=%d %-5p %c{1} - %m%n
+ 
+ log4j.logger.org.parosproxy.paros=INFO
+-log4j.logger.org.apache.commons.httpclient=ERROR
+\ No newline at end of file
++log4j.logger.org.apache.commons.httpclient=ERROR

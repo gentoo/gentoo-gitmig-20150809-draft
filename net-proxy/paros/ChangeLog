@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/paros
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/ChangeLog,v 1.3 2005/05/05 05:13:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/ChangeLog,v 1.4 2005/05/26 05:16:52 mrness Exp $
+
+*paros-3.2.1 (26 May 2005)
+
+  26 May 2005; Alin Nastac <mrness@gentoo.org>
+  +files/paros-3.2.1-unixhome.patch, +paros-3.2.1.ebuild:
+  Version bump. The new version is compiled from source and it could be
+  launched by regular users, thanks to a patch submitted by Stefan Schlott
+  <stefan.schlott@informatik.uni-ulm.de> (#93893).
 
   05 May 2005; Alin Nastac <mrness@gentoo.org> paros-3.2.0.ebuild:
   Fix dependencies (#91407) and mark it stable on x86.
