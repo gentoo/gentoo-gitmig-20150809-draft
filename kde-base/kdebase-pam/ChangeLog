@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.10 2005/05/25 21:17:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.11 2005/05/26 14:31:52 greg_g Exp $
+
+*kdebase-pam-5 (26 May 2005)
+
+  26 May 2005; Gregorio Guidi <greg_g@gentoo.org> +files/kde-np.pam-5,
+  +files/kde.pam-5, +kdebase-pam-5.ebuild:
+  New version, needed for Gentoo/FBSD (#93179).
 
   25 May 2005; Dan Armak <danarmak@gentoo.org> kdebase-pam-4.ebuild:
   Added missing HOMEPAGE ebuild variable.
