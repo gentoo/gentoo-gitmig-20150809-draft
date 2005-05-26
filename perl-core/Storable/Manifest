@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ed9ba3c67f85f18831cd085029aaf078 ChangeLog 4814
 MD5 b4325334d4c3c3c0ee7b8b3370cab23e Storable-2.07-r1.ebuild 581
 MD5 f9c36e3a194728c1f27e468ecd78097d Storable-2.13.ebuild 531
+MD5 257d02ce636e244d2dc4ce0857d171bb ChangeLog 4814
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 f779c9ba3bd801bd1783ec7e97f162e2 files/digest-Storable-2.13 65
 MD5 02de96e5539723f410332029029a9924 files/digest-Storable-2.07-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClJX+tG5z4I8BtQoRAlVNAJ9orJS9/Ok9M0wlFdNPMwNVmh/KZwCcCBqB
-NUy43iHRc1SBlssw8UUjKEk=
-=XCMR
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 105b2e83ffb9c1f3775b6180b8f532ad ChangeLog 1445
 MD5 d942884e935390ef042bdf45864cf775 Getopt-Long-2.34.ebuild 574
+MD5 ed79c36e7d2e8e3d87e828f549700b04 ChangeLog 1445
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 ef72aad0758beb5a213eecdce43e9835 files/digest-Getopt-Long-2.34 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClIR3tG5z4I8BtQoRAlzaAJ954ftytF3sVvpNxLJAhM7rnX/vtgCeJ/iG
-0SWy0AD2XM/1Bh1wC/mkDJ8=
-=hyZC
------END PGP SIGNATURE-----

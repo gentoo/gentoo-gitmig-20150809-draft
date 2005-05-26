@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d213db7bb0afe6179744c1ae4d75fd0 ChangeLog 7440
-MD5 bbb5fa761442abb898b753e888bd9720 ExtUtils-MakeMaker-6.05-r4.ebuild 3255
-MD5 6564275cfbfbbab8de5046ea90e3b68c ExtUtils-MakeMaker-6.05-r5.ebuild 3257
-MD5 1ece84699ff9c557d1cb5fb1c41dc557 ExtUtils-MakeMaker-6.05-r6.ebuild 3556
 MD5 b6101e2a012512d477e09c0e1a895f84 ExtUtils-MakeMaker-6.20.ebuild 2610
+MD5 1ece84699ff9c557d1cb5fb1c41dc557 ExtUtils-MakeMaker-6.05-r6.ebuild 3556
+MD5 6564275cfbfbbab8de5046ea90e3b68c ExtUtils-MakeMaker-6.05-r5.ebuild 3257
 MD5 52ef41a4aa529ec12d6ee5cadb63148e ExtUtils-MakeMaker-6.21.ebuild 2665
+MD5 3b3e38cb886a76f0caa2f4640394617a ChangeLog 7440
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 bbb5fa761442abb898b753e888bd9720 ExtUtils-MakeMaker-6.05-r4.ebuild 3255
 MD5 2cc7445bb2472696df202d4f1eccae98 files/digest-ExtUtils-MakeMaker-6.05-r4 75
 MD5 2cc7445bb2472696df202d4f1eccae98 files/digest-ExtUtils-MakeMaker-6.05-r5 75
 MD5 2cc7445bb2472696df202d4f1eccae98 files/digest-ExtUtils-MakeMaker-6.05-r6 75
 MD5 9076228369ef3b268a01f2f48a45524a files/digest-ExtUtils-MakeMaker-6.20 75
 MD5 a144b0676694d7282d1ffba23685c004 files/digest-ExtUtils-MakeMaker-6.21 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClKyttG5z4I8BtQoRAunvAKCUF33CCf8Rfno+s6zQDJPXjhHzvACePAIY
-tmU8lPUl3mrcfSH9gGQ8tCE=
-=W8OK
------END PGP SIGNATURE-----
