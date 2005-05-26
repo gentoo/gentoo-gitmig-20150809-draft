@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050523.ebuild,v 1.1 2005/05/24 02:34:59 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050523.ebuild,v 1.2 2005/05/26 18:43:27 ramereth Exp $
 
 inherit webapp
 
@@ -13,10 +13,10 @@ LICENSE="viewcvs"
 KEYWORDS="~x86"
 IUSE="cvsgraph enscript"
 
-RDEPEND="|| ( ( >=app-text/rcs-5.7
-				>=dev-util/cvs-1.11 )
+RDEPEND="|| ( ( >=dev-util/cvs-1.11 )
 				dev-util/subversion )
 			dev-lang/python
+			>=app-text/rcs-5.7
 			sys-apps/diffutils
 			cvsgraph? dev-util/cvsgraph
 			enscript? app-text/enscript

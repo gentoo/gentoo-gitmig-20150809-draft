@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/viewcvs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.15 2005/05/25 09:56:54 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.16 2005/05/26 18:43:27 ramereth Exp $
+
+  26 May 2005; Lance Albertson <ramereth@gentoo.org> viewcvs-0.9.3.ebuild,
+  viewcvs-1.0_pre20050523.ebuild:
+  Fixed RCS dep from being conditional to being needed no matter what
 
   25 May 2005; Brian Harring <ferringb@gentoo.org>, viewcvs-0.9.3.ebuild:
   mirror://mirror://sourceforge.net isn't valid :)
