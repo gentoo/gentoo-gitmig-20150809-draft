@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3dfbce242c415a6937b5e582252bfe31 libgeotiff-1.2.0.ebuild 1211
 MD5 1aab1653c560533eda5806eef5aca2f5 libgeotiff-1.2.1-r1.ebuild 994
 MD5 328706e097ab03d19bb82af093755389 libgeotiff-1.2.1.ebuild 957
@@ -6,3 +9,10 @@ MD5 3cd06cd3d8efbe532cd128301ca23678 metadata.xml 219
 MD5 e77842442c89596a723f6ce5745cfd4d files/digest-libgeotiff-1.2.0 68
 MD5 0acd02f68bfcde1cc5f3f9db8992c99b files/digest-libgeotiff-1.2.1 68
 MD5 0acd02f68bfcde1cc5f3f9db8992c99b files/digest-libgeotiff-1.2.1-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFClimxI1lqEGTUzyQRAjGlAJ4uSkTw99ZKKGzQwLrqrKtV+9AIMQCbBecA
+9EdnGBdPG2h8e5AYsm4AUcE=
+=d8OU
+-----END PGP SIGNATURE-----
