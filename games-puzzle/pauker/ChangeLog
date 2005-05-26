@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/pauker
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.3 2005/05/06 15:07:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.4 2005/05/26 05:34:10 mr_bones_ Exp $
+
+*pauker-1.4 (26 May 2005)
+
+  26 May 2005; Michael Sterrett <mr_bones_@gentoo.org> +pauker-1.4.ebuild:
+  version bump
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> pauker-1.3.3.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.
