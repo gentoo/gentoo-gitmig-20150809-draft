@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.46 2005/05/12 23:43:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.47 2005/05/26 10:26:28 flameeyes Exp $
+
+*faad2-2.0-r7 (26 May 2005)
+
+  26 May 2005; Diego Pettenò <flameeyes@gentoo.org> +faad2-2.0-r7.ebuild:
+  Revbump for the the API change, that was causing major headaches to apps
+  linking to faad2.
 
   12 May 2005; Olivier Crête <tester@gentoo.org>
   +files/faad2-2.0-amd64.patch, faad2-2.0-r6.ebuild:
