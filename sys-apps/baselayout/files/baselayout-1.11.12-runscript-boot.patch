@@ -1,0 +1,16 @@
+Index: sbin/runscript.sh
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/sbin/runscript.sh,v
+retrieving revision 1.44.2.10
+diff -u -B -r1.44.2.10 runscript.sh
+--- sbin/runscript.sh	17 May 2005 00:40:41 -0000	1.44.2.10
++++ sbin/runscript.sh	26 May 2005 13:07:46 -0000
+@@ -45,7 +45,7 @@
+ # has completed
+ if [[ ${NETSERVICE} == "yes" && ${IFACE} != "lo" ]] ; then
+ 	if [[ -z ${mylevel} || ${mylevel} == ${BOOTLEVEL} ]] ; then
+-		eerror "$0: cannot start until the runlevel "${BOOTLEVEL}" has completed"
++		eerror "${myservice}: cannot start until the runlevel ${BOOTLEVEL} has completed"
+ 		exit 1
+ 	fi
+ fi
