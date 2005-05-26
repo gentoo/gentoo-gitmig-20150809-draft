@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e46b5c6d5171641e92385a16e4e22908 ChangeLog 1964
+MD5 cc37f87756a24c69a1e58d5752c67e01 ChangeLog 2069
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 3c50efeb74d67763e47a8a6768335557 shtool-2.0.1-r1.ebuild 806
 MD5 c1cde8b78e5c9adfa7e35cc9800a4cfe shtool-2.0.1.ebuild 700
+MD5 791880e548bfc5f83c5c786e8ec8453f shtool-2.0.1-r1.ebuild 803
 MD5 681bcf27698f4267818a267ff35134fa files/digest-shtool-2.0.1-r1 63
-MD5 681bcf27698f4267818a267ff35134fa files/digest-shtool-2.0.1 63
 MD5 d68648661d4a5703763bc4d4d9a889e3 files/shtool-2.0.1-fix-insecure-tmp-creation.diff 509
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFClInqKRy60XGEcJIRAuDSAJ0fKgBlBbjXrIdZxXsbTbXjVQJFFQCcD7JI
-2AVt0Egel92tufeuDyb4dV0=
-=4kH1
------END PGP SIGNATURE-----
+MD5 681bcf27698f4267818a267ff35134fa files/digest-shtool-2.0.1 63
