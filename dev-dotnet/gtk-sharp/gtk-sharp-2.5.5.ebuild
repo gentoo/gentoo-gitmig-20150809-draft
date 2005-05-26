@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.5.5.ebuild,v 1.2 2005/05/21 09:31:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.5.5.ebuild,v 1.3 2005/05/26 23:32:37 herbs Exp $
 
 inherit eutils mono
 
@@ -30,6 +30,10 @@ src_unpack() {
 	epatch ${WORKDIR}/${P}-configurable.diff
 	#fixes support with pkgconfig-0.17, bug #92503
 	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' configure.in
+
+	# Use correct libdir in pkgconfig files
+	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
+		${S}/*/{,GConf}/*.pc.in || die
 
 	export WANT_AUTOMAKE="1.8"
 	aclocal || die
@@ -61,7 +65,7 @@ src_compile() {
 }
 
 src_install () {
-	make GACUTIL_FLAGS="/root ${D}/usr/lib /gacdir /usr/lib /package ${PN}-2.0" \
+	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}-2.0" \
 		DESTDIR=${D} install || die
 
 	dodoc README* ChangeLog
