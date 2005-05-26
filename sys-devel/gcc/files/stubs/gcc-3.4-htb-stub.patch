@@ -17,13 +17,14 @@
  Recognize built-in functions
 --- gcc-3.4.4/gcc/c-opts.c
 +++ gcc-3.4.4/gcc/c-opts.c
-@@ -708,6 +708,11 @@ c_common_handle_option (size_t scode, co
+@@ -708,6 +708,12 @@ c_common_handle_option (size_t scode, co
        flag_no_asm = !value;
        break;
  
 +    case OPT_fbounds_checking:
 +    case OPT_fbc_strings_only:
-+      warning ("htb stub: bounds checking is not supported");
++      if (value)
++        warning ("htb stub: bounds checking is not supported");
 +      break;
 +
      case OPT_fbuiltin:
