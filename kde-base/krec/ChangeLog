@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krec
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/ChangeLog,v 1.9 2005/05/25 21:23:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/ChangeLog,v 1.10 2005/05/26 09:10:36 greg_g Exp $
+
+  26 May 2005; Gregorio Guidi <greg_g@gentoo.org> krec-3.4.1.ebuild:
+  Change flag 'oggvorbis' into 'vorbis' (#89592).
 
 *krec-3.4.1 (25 May 2005)
 

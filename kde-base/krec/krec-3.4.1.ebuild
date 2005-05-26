@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/krec-3.4.1.ebuild,v 1.1 2005/05/25 21:23:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/krec-3.4.1.ebuild,v 1.2 2005/05/26 09:10:36 greg_g Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -9,13 +9,13 @@ inherit kde-meta eutils
 
 DESCRIPTION="KDE sound recorder"
 KEYWORDS="~x86 ~amd64"
-IUSE="oggvorbis encode"
+IUSE="vorbis encode"
 OLDDEPEND="
 	~kde-base/kdemultimedia-arts-$PV
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	encode? ( media-sound/lame )"
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/kdemultimedia-arts)
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	encode? ( media-sound/lame )"
 
 KMCOPYLIB="libartsgui_kde arts/gui/kde/
@@ -32,7 +32,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	use oggvorbis && myconf="$myconf --with-vorbis=/usr" || myconf="$myconf --without-vorbis"
+	use vorbis && myconf="$myconf --with-vorbis=/usr" || myconf="$myconf --without-vorbis"
 	use encode && myconf="$myconf --with-lame=/usr" || myconf="$myconf --without-lame"
 	kde-meta_src_compile
 }
