@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-bind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bind/ChangeLog,v 1.11 2005/05/07 06:44:06 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bind/ChangeLog,v 1.12 2005/05/26 10:07:59 kaiowas Exp $
+
+*selinux-bind-20050526 (26 May 2005)
+
+  26 May 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-bind-20050219.ebuild, +selinux-bind-20050526.ebuild:
+  fix from Daniel Thaler for chrooted environment #92312
 
   07 May 2005; petre rodan <kaiowas@gentoo.org>
   selinux-bind-20050408.ebuild:
