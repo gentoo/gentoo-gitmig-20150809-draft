@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.07.ebuild,v 1.3 2005/04/30 15:21:16 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.07.ebuild,v 1.4 2005/05/26 12:47:02 brix Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.suspend2.net/downloads/all/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 
 IUSE=""
 
