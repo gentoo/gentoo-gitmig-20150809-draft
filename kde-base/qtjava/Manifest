@@ -1,6 +1,6 @@
 MD5 be6ae9de13610751d4b751c0a6e438ba qtjava-3.3.2.ebuild 943
 MD5 2c856ca24e145bc6e48777813407e869 qtjava-3.4.0.ebuild 946
-MD5 0b1a64b1211f41d303950f142452253d qtjava-3.4.1.ebuild 955
+MD5 8a258200290f7e90fa0bb472a14683d1 qtjava-3.4.1.ebuild 955
 MD5 486abcceabff34e349d978db2d943af9 ChangeLog 2248
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
