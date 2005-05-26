@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.1.ebuild,v 1.1 2005/05/25 21:23:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.1.ebuild,v 1.2 2005/05/26 08:37:45 greg_g Exp $
 
-inherit kde eutils flag-o-matic
+inherit kde flag-o-matic
 set-qtdir 3
 set-kdedir 3.4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.4"
-KEYWORDS="~x86 ~amd64" # ppc64, see comment about bug 63529 patch below
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~ppc64 ~ia64"
 IUSE="alsa arts cups doc jpeg2k kerberos openexr spell ssl tiff zeroconf"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
@@ -44,19 +44,12 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	sys-devel/gettext"
 
-src_unpack() {
-	kde_src_unpack
-
-	# see bug #63529.
-	# Doesn't apply in 3.4.1 - ppc64 people please look
-	# epatch ${FILESDIR}/${PN}-3.3.2-ppc64.patch
-}
-
 src_compile() {
-	myconf="--with-distribution=Gentoo --enable-libfam --enable-dnotify"
-	myconf="${myconf} $(use_with alsa) $(use_with arts)"
-	myconf="${myconf} $(use_with tiff) $(use_with jpeg2k jasper) $(use_with openexr)"
-	myconf="${myconf} $(use_enable cups) $(use_enable zeroconf dnssd)"
+	myconf="--with-distribution=Gentoo
+	        --enable-libfam $(use_enable kernel_linux dnotify)
+	        $(use_with alsa) $(use_with arts)
+	        $(use_with tiff) $(use_with jpeg2k jasper) $(use_with openexr)
+	        $(use_enable cups) $(use_enable zeroconf dnssd)"
 
 	use ssl && myconf="${myconf} --with-ssl-dir=/usr" || myconf="${myconf} --without-ssl"
 
