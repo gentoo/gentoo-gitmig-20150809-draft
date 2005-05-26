@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstreams
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstreams/ChangeLog,v 1.3 2005/05/19 20:46:58 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstreams/ChangeLog,v 1.4 2005/05/26 19:52:26 swegener Exp $
+
+  26 May 2005; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  'no-herd' instead of empty herd tag
 
 *libstreams-24.1 (19 May 2005)
 

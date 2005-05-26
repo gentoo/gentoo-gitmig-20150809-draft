@@ -1,6 +1,16 @@
-MD5 d0e172fe9d86bfb284275c37fdaf6f4f ChangeLog 538
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b4fdf681a6df48bbf17e49ca1fae34c8 libstreams-23.ebuild 1058
 MD5 5b07c74f948cbba45ebff500b2cfc3fa libstreams-24.1.ebuild 1062
-MD5 65d0ad2167dd016e2981b7a3df82cc50 metadata.xml 212
-MD5 589cbe62f6794d45d8f383a80db2971d files/digest-libstreams-23 64
+MD5 ac116f540be9dfd53bf0332ce5559591 ChangeLog 645
+MD5 e526e84277cb8eb1bcf73840117ff45a metadata.xml 220
 MD5 afd14bf665cba4b8ea473a70c0d3a257 files/digest-libstreams-24.1 66
+MD5 589cbe62f6794d45d8f383a80db2971d files/digest-libstreams-23 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFClikVI1lqEGTUzyQRAknSAKDC2HujyzCi7tkH3LIPszfShRTpFwCfUcFj
+2puaNDUy1zB+Hdf4LSRZ2Wg=
+=jKtA
+-----END PGP SIGNATURE-----
