@@ -1,6 +1,6 @@
-# ChangeLog for dev-perl/net-ping
+# ChangeLog for perl-core/net-ping
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/net-ping/ChangeLog,v 1.1 2005/05/25 15:40:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/net-ping/ChangeLog,v 1.2 2005/05/26 20:25:02 swegener Exp $
 
 *net-ping-2.31 (25 May 2005)
 

@@ -1,6 +1,6 @@
-# ChangeLog for dev-perl/MIME-Base64
+# ChangeLog for perl-core/MIME-Base64
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.1 2005/05/25 14:05:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.2 2005/05/26 20:13:18 swegener Exp $
 
 *MIME-Base64-2.20 (25 May 2005)
 

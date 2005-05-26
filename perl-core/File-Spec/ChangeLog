@@ -1,6 +1,6 @@
-# ChangeLog for dev-perl/File-Spec
+# ChangeLog for perl-core/File-Spec
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.1 2005/05/25 13:36:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.2 2005/05/26 20:11:27 swegener Exp $
 
 *File-Spec-3.06 (25 May 2005)
 

@@ -1,6 +1,6 @@
-# ChangeLog for dev-perl/locale-maketext
+# ChangeLog for perl-core/locale-maketext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/ChangeLog,v 1.1 2005/05/25 15:38:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/ChangeLog,v 1.2 2005/05/26 20:24:20 swegener Exp $
 
 *locale-maketext-1.09 (25 May 2005)
 

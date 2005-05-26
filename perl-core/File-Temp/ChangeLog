@@ -1,6 +1,6 @@
-# ChangeLog for dev-perl/File-Temp
+# ChangeLog for perl-core/File-Temp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.1 2005/05/25 13:48:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.2 2005/05/26 20:12:00 swegener Exp $
 
 *File-Temp-0.14 (25 May 2005)
 

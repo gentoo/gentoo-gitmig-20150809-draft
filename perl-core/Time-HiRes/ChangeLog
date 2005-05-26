@@ -1,6 +1,6 @@
-# ChangeLog for dev-perl/Time-HiRes
+# ChangeLog for perl-core/Time-HiRes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.1 2005/05/25 15:21:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.2 2005/05/26 20:20:29 swegener Exp $
 
 *Time-HiRes-1.66 (25 May 2005)
 
