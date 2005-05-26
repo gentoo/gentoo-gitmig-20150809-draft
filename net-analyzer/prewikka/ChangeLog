@@ -1,0 +1,12 @@
+# ChangeLog for net-analyzer/prewikka
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.1 2005/05/26 10:40:45 dragonheart Exp $
+
+*prewikka-0.9.0_rc5 (26 May 2005)
+
+  26 May 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/prewikka-0.9.0_rc5-pathfix.patch, +metadata.xml,
+  +prewikka-0.9.0_rc5.ebuild:
+  Initial version as per bug #87617. Request by Marcelo Goes and assisted by
+  jacobs
+

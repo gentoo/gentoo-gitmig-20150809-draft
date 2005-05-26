@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c97ed3fb5ec8ff8ab3529d72c831f8d9 prewikka-0.9.0_rc5.ebuild 808
+MD5 1f20164b91a69e77f00b809a5f7fa04b metadata.xml 218
+MD5 2e59d8e5c942623d52c10291ce718497 ChangeLog 483
+MD5 a415c070bfb6371991d3847aa9b7853a files/digest-prewikka-0.9.0_rc5 70
+MD5 3dbc2b447f2bf163cb2ba075405411f2 files/prewikka-0.9.0_rc5-pathfix.patch 1249
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFClafGmdTrptrqvGERApFnAJ9Sl709fzSTOxvF3Pkp0g2uJwaneQCeIRgF
+jUCJ1BrENB/czD5OcS6EIX8=
+=7Y5u
+-----END PGP SIGNATURE-----
