@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 af429000e08293ed602b751e91f15ddc Text-Balanced-1.95.ebuild 563
 MD5 78b4871e7ec425572af826a6e41aac61 ChangeLog 1459
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 40bc19dc4e7572e6180a139ad6f6043a files/digest-Text-Balanced-1.95 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCli+CI1lqEGTUzyQRAsPXAJ4jO7VHMGYu0cvwAiSnLbGZZ0jw6QCfaGXc
+DC3bqux4FVMidwsI/Am4iwY=
+=jMkK
+-----END PGP SIGNATURE-----

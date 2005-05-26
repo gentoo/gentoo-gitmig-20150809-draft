@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 710a29c227d7957ac6fbfe6f4adac394 MIME-Base64-2.20.ebuild 527
 MD5 e4248e9463a73ac3f8ab0466dc728e3b MIME-Base64-2.12-r1.ebuild 514
 MD5 2c4f77f3e831943252d5db539f08aff8 MIME-Base64-3.01.ebuild 566
@@ -12,3 +15,10 @@ MD5 afe4122fbb2110dd01ef4ff79e07c187 files/digest-MIME-Base64-2.20 67
 MD5 46ed8c04abebefdc68776750cc9f2417 files/digest-MIME-Base64-3.00 67
 MD5 2c356a9c0e53e1db84e16cb3a8ff7f20 files/digest-MIME-Base64-3.01 67
 MD5 01872381846a3e2bb2f49d330dc3fbfc files/digest-MIME-Base64-3.05 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCli36I1lqEGTUzyQRAji0AJ94ya+yIaxtTHo9JL3auhfp0blA3gCgoVVi
+yvZipZGXWoKFqeb4YAhwyjQ=
+=Sjad
+-----END PGP SIGNATURE-----
