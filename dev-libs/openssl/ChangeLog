@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.118 2005/05/14 17:37:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.119 2005/05/26 09:39:10 corsair Exp $
+
+  26 May 2005; Markus Rothe <corsair@gentoo.org> openssl-0.9.7e-r1.ebuild:
+  Stable on ppc64
 
   11 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> openssl-0.9.7g.ebuild:
   Back to ~sparc wrt #92075
