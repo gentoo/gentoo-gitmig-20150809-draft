@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a8ba0e922db9574f510b60932e1e56e3 tuxpaint-0.9.14.ebuild 1480
+MD5 73afd13b7524ba3667324a418c35839c ChangeLog 2623
 MD5 60d69ee439da76dbf4d88951ef86236a metadata.xml 648
-MD5 afdc2ada69ebce7dd39c776bdc2c3f46 ChangeLog 2525
-MD5 5145c4efbe206fa8c8b881a15ee3e6d2 tuxpaint-0.9.14.ebuild 1478
 MD5 b12d971848124691a60da9265ecb86ba files/tuxpaint-0.9.14-gentoo.patch 4511
 MD5 6c694aa3e9399a07cdaa7f82a162b222 files/digest-tuxpaint-0.9.14 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFClhqW06ebR+OMO78RAou0AJ0Tcc8AZI9Q5fa0XTeZQm4fOg2/2ACeLRZx
+ufnOQJl9YgbWkc/XKdQExwk=
+=tNY3
+-----END PGP SIGNATURE-----
