@@ -18,9 +18,10 @@ MD5 33e19bc99f4cafa78e00f93fbee5befe gcc-4.0.1_beta20050521.ebuild 1519
 MD5 c392a44ca903757861e82537248eecf0 gcc-3.4.3.20050110-r1.ebuild 5262
 MD5 6042b09e83d1b96d7a210d9b190edda8 gcc-3.3.5.20050130-r2.ebuild 3171
 MD5 71b180bed94dca00dddf253f7bd6508f gcc-3.2.3-r4.ebuild 19841
-MD5 48c5f0cc5e5d2f210cf000a2d5d06749 gcc-4.0.0.ebuild 1673
+MD5 42c5a3e7932037566fd006feede86609 gcc-4.0.0.ebuild 1743
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
+MD5 8b1c64514ddf33d26914a58dc6ed11c2 files/digest-gcc-4.0.0 380
 MD5 a570da9000df56c70620ec2e36e864a3 files/digest-gcc-2.95.3-r8 137
 MD5 0d683280daf95e6bb9712549352a200c files/digest-gcc-3.1.1-r2 140
 MD5 40e6872c09149a81973f01a78c80bbb7 files/digest-gcc-3.2.3-r4 279
@@ -43,7 +44,6 @@ MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
 MD5 07b57d62aa1a8cd4d1cd37984ebe2053 files/scan_libgcc_linked_ssp.sh 861
 MD5 a98425f9d4389f8df683d7f809563d8d files/digest-gcc-3.4.3.20050110-r2 616
 MD5 9e216fb231a24884fe548b31864296b8 files/digest-gcc-3.3.5.20050130-r2 620
-MD5 b7c17968ee47ce9a39ad8e0669eb3bc6 files/digest-gcc-4.0.0 149
 MD5 4ecf0f5cb735c81ca4b61a9c6db74269 files/digest-gcc-2.95.3-r9 139
 MD5 1bb392684e6482aa2cd940f1f12aea11 files/digest-gcc-3.3.6 453
 MD5 50f1f564c568b9e28231c592d4df2f36 files/3.4.4/gcc-3.4.4-cross-compile.patch 1728
@@ -90,10 +90,12 @@ MD5 d9ae122db2768f8e504dfef256d4991f files/3.3.2/gcc332-gentoo-branding.patch 87
 MD5 9e7ed6184a1cdcb69db29f1de26c2d18 files/3.3.2/gcc332-altivec-fix.patch 1607
 MD5 f8c48b2e721c21d83582f5884bfb79c7 files/awk/fixlafiles.awk 7830
 MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
-MD5 57bc3a63ac4125a3dd90864462d57053 files/stubs/gcc-3.4-htb-stub.patch 702
+MD5 053b213d6994cef2ad995aa516ed937a files/stubs/gcc-3.4-htb-stub.patch 722
 MD5 cb27bc36a5b9a1175a5f3bdf38647814 files/stubs/gcc-3.3-ssp-stub.patch 1735
-MD5 00f16b0da434ce80fd4dbd6e88ba5fbd files/stubs/gcc-3.4-ssp-stub.patch 1125
+MD5 37e756238508fe9f9e2b9ba6a7ca67ca files/stubs/gcc-4.0-htb-stub.patch 722
+MD5 d71c91009df788366867cb67fc875d6d files/stubs/gcc-3.4-ssp-stub.patch 1068
 MD5 0f8035bc5ae6126fd9380ba9dcdcc271 files/stubs/gcc-3.3-htb-stub.patch 2195
+MD5 d71c91009df788366867cb67fc875d6d files/stubs/gcc-4.0-ssp-stub.patch 1068
 MD5 cd87c02e4896f47bf6029eef0dc29468 files/3.3.3/gcc333-gentoo-branding.patch 874
 MD5 0e8d94bbc14fbb3fbad1df4f404b39ef files/3.3.3/gcc333-ssp-3.3_7-fixup.patch 2616
 MD5 4b249bff27ab6328436e6289ac9f9cfc files/3.3.3/gcc333_pre20040215-gentoo-branding.patch 839
