@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.35 2005/05/26 03:47:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.36 2005/05/26 10:26:31 luckyduck Exp $
+
+  26 May 2005; Jan Brinkmann <luckyduck@gentoo.org> gxine-0.4.1-r1.ebuild:
+  stable on x86 wrt #93532
 
   26 May 2005; Jason Wever <weeve@gentoo.org> gxine-0.4.1-r1.ebuild:
   Stable on SPARC wrt security bug #93532.
