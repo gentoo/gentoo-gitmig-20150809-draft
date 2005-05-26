@@ -1,6 +1,6 @@
 MD5 1efbb35f82482faaed3d3e9eb9d73248 kdf-3.4.0.ebuild 388
 MD5 365694cd6250ccaa1c8c9429f2f051db ChangeLog 1601
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 c6c25cd73c972d013a5e0e0072f2db49 kdf-3.4.1.ebuild 370
+MD5 04b395d53d8bb3e9952aeb175d55892a kdf-3.4.1.ebuild 389
 MD5 dbade662a75a6b44c890deef5400485f files/digest-kdf-3.4.0 68
 MD5 b0a10acbeb1561abc6b84728e8b8c9bc files/digest-kdf-3.4.1 136

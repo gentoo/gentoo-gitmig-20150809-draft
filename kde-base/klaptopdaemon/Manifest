@@ -1,6 +1,6 @@
 MD5 ac7da959d557373815b319a1830750f6 klaptopdaemon-3.4.0.ebuild 448
 MD5 4329ae3c15b29b8ffceb4233ee6fcecb ChangeLog 1749
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 e1e6736686ca9623e24b8f7c4ff3dd6d klaptopdaemon-3.4.1.ebuild 430
+MD5 c2d5283db8f3a2dd6332e2573c499ca5 klaptopdaemon-3.4.1.ebuild 449
 MD5 dbade662a75a6b44c890deef5400485f files/digest-klaptopdaemon-3.4.0 68
 MD5 b0a10acbeb1561abc6b84728e8b8c9bc files/digest-klaptopdaemon-3.4.1 136

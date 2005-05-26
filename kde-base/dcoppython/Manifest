@@ -1,6 +1,6 @@
 MD5 653d1afabd01f420553772eef2f0143a dcoppython-3.4.0.ebuild 718
 MD5 aa7cfb47c40b615833da94ef9e90d964 dcoppython-3.3.1-r1.ebuild 701
-MD5 bc9b9fa3aae84edf5b3ffac8ffc52650 dcoppython-3.4.1.ebuild 722
+MD5 f210fe9c8361d9ffe2939521420aa7ee dcoppython-3.4.1.ebuild 727
 MD5 fa25c7f0209156268b51ba39effff353 ChangeLog 2185
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
