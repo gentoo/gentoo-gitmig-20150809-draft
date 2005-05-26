@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kommander
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kommander/ChangeLog,v 1.10 2005/05/25 21:23:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kommander/ChangeLog,v 1.11 2005/05/26 16:03:56 danarmak Exp $
+
+  26 May 2005; Dan Armak <danarmak@gentoo.org> kommander-3.4.1.ebuild:
+  Remove patch included upstream in 3.4.1.
 
 *kommander-3.4.1 (25 May 2005)
 
