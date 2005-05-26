@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/quik
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.8 2005/05/22 05:33:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.9 2005/05/26 15:15:26 josejx Exp $
+
+*quik-2.1.6 (26 May 2005)
+
+  26 May 2005; Joseph Jezak <josejx@gentoo.org>
+  -files/quik-2.0.1.0-fclose-bug.patch, -files/quik-2.0.1.0-gcc-321.patch,
+  +files/md-fix.diff, -quik-2.0.1.0-r1.ebuild, -quik-2.0.1.0-r2.ebuild,
+  -quik-2.0.1.0-r3.ebuild, -quik-2.0.1k.ebuild, +quik-2.1.6.ebuild:
+  Added latest version and removed old versions.
 
   22 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
   quik-2.0.1.0-r1.ebuild, quik-2.0.1.0-r2.ebuild, quik-2.0.1.0-r3.ebuild,
