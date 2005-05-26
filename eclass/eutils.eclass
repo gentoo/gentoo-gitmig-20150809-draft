@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.177 2005/05/26 15:13:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.178 2005/05/26 22:09:26 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -251,7 +251,7 @@ epatch() {
 		#   ???_arch_foo.patch
 		#
 		if [ -f ${x} ] && \
-		   ([ "${SINGLE_PATCH}" = "yes" -o "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ] || \
+		   ([ "${SINGLE_PATCH}" = "yes" -o "${x/_all_}" != "${x}" -o "${x/_${ARCH}_}" != "${x}" ] || \
 		    [ "${EPATCH_FORCE}" = "yes" ])
 		then
 			local count=0
@@ -1452,12 +1452,12 @@ set_arch_to_kernel() {
 	done
 	export EUTILS_ECLASS_PORTAGE_ARCH="${ARCH}"
 	case ${ARCH} in
-		x86)	export ARCH="i386";;
-		amd64)	export ARCH="x86_64";;
-		hppa)	export ARCH="parisc";;
-		mips)	export ARCH="mips";;
-		sparc)	export ARCH="$(tc-arch-kernel)";; # Yeah this is ugly, but it's even WORSE if you don't do this.  linux-info.eclass's set_arch_to_kernel is fixed, but won't get used over this one!
-		*)	export ARCH="${ARCH}";;
+		x86)    export ARCH="i386";;
+		amd64)  export ARCH="x86_64";;
+		hppa)   export ARCH="parisc";;
+		mips)   export ARCH="mips";;
+		sparc)  export ARCH="$(tc-arch-kernel)";; # Yeah this is ugly, but it's even WORSE if you don't do this.  linux-info.eclass's set_arch_to_kernel is fixed, but won't get used over this one!
+		*)      export ARCH="${ARCH}";;
 	esac
 }
 
