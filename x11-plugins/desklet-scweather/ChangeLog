@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/desklet-scweather
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-scweather/ChangeLog,v 1.1 2005/05/26 03:00:40 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-scweather/ChangeLog,v 1.2 2005/05/26 03:27:16 nixphoeni Exp $
+
+*desklet-scweather-0.1-r1 (26 May 2005)
+
+  26 May 2005; Joe Sapp <nixphoeni@gentoo.org>
+  +desklet-scweather-0.1-r1.ebuild:
+  Fixed the problem with gdesklets-core-0.35rc1 (and presumably future versions)
 
 *desklet-scweather-0.1 (26 May 2005)
 
