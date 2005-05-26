@@ -1,0 +1,13 @@
+--- src/http/modules/ngx_http_proxy_module.c	Sat May 21 18:49:18 2005
++++ src/http/modules/ngx_http_proxy_module.c	Mon May 23 16:22:30 2005
+@@ -1576,6 +1576,10 @@
+ 
+         *name = src[i].key;
+ 
++        if (src[i].value.len == 0) {
++            continue;
++        }
++
+         if (ngx_http_script_variables_count(&src[i].value) == 0) {
+             copy = ngx_array_push_n(conf->headers_set_len,
+                                     sizeof(ngx_http_script_copy_code_t));

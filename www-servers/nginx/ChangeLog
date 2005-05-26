@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.25 2005/05/24 09:26:08 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.26 2005/05/26 16:00:17 voxus Exp $
+
+*nginx-0.1.33 (26 May 2005)
+
+  26 May 2005; Konstantin Arkhipov <voxus@gentoo.org> +nginx-0.1.33-r1.ebuild,
+  +files/nginx-0.1.33-large_ssi_includes.patch,
+  +files/nginx-0.1.33-set_header_range.patch, -nginx-0.1.33.ebuild:
+  Fix against infinitive cycle in large ssi includes and ability to set Range
+  header. Patches provided by author.
 
   24 May 2005; Konstantin Arkhipov <voxus@gentoo.org> -nginx-0.1.29-r2.ebuild,
   -nginx-0.1.30-r1.ebuild, -nginx-0.1.31.ebuild, -nginx-0.1.32.ebuild,
