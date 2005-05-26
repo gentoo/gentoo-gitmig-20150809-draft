@@ -1,10 +1,22 @@
-MD5 9592d941f193c7485c5da98901573fdc ChangeLog 3976
-MD5 9db9dca79d0867f61570cdeb7c8d7862 libcdio-0.64.ebuild 600
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 9276ebf133096b17b42459071ff9557a libcdio-0.69.ebuild 807
-MD5 a4f6c3f80890696765a72ff20a86b20c libcdio-0.70.ebuild 1053
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b731c95e764b11c7714bc7b17c7bf0e8 libcdio-0.73.ebuild 1548
-MD5 8276d2edab3e451a5639073967339ebb files/digest-libcdio-0.69 65
+MD5 9276ebf133096b17b42459071ff9557a libcdio-0.69.ebuild 807
+MD5 9db9dca79d0867f61570cdeb7c8d7862 libcdio-0.64.ebuild 600
+MD5 a4f6c3f80890696765a72ff20a86b20c libcdio-0.70.ebuild 1053
+MD5 c766773a44868d3d568eafedebdd652d libcdio-0.74.ebuild 1606
+MD5 9e4da5e006ce5c97a5427a2d2f9d42ed ChangeLog 4121
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 0165911115603b51b34b8ae19ab71e2a files/digest-libcdio-0.64 65
+MD5 8276d2edab3e451a5639073967339ebb files/digest-libcdio-0.69 65
 MD5 29744769327f1087e4de0f7c5d8e9fbb files/digest-libcdio-0.70 65
 MD5 c6110cfe0ed9c90901a77e77d3a308e5 files/digest-libcdio-0.73 65
+MD5 c4a757d92ae8d58de0538803b4650900 files/digest-libcdio-0.74 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCle/Y06ebR+OMO78RAgG7AJ4mOusc59K/2n/2jMoFW755qeTA1gCbBn4W
+tzhk9F8jU1llL1vwcSvpUHc=
+=EdCA
+-----END PGP SIGNATURE-----
