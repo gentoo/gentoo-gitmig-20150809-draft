@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.32 2005/04/26 01:20:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.33 2005/05/26 04:09:44 flameeyes Exp $
+
+*a52dec-0.7.4-r5 (26 May 2005)
+
+  26 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +a52dec-0.7.4-r5.ebuild:
+  Added new revision which installs a52_internal.h header (needed by xine-lib
+  to build with external a52dec support).
 
   26 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   a52dec-0.7.4-r4.ebuild:
