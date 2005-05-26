@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.56 2005/05/08 05:45:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.57 2005/05/26 21:43:45 flameeyes Exp $
+
+  26 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/4.2.0.20040617-freebsd.patch, ntp-4.2.0.20040617-r2.ebuild:
+  Added patch to compile on Gentoo/FreeBSD. Closes bug #94038.
 
 *ntp-4.2.0.20040617-r2 (08 May 2005)
 

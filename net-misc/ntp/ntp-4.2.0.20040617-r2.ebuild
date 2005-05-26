@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617-r2.ebuild,v 1.1 2005/05/08 05:45:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617-r2.ebuild,v 1.2 2005/05/26 21:43:45 flameeyes Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="parse-clocks nodroproot selinux ssl ipv6 openntpd debug"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
-	!nodroproot? ( sys-libs/libcap )
+	linux_kernel? ( !nodroproot? ( sys-libs/libcap ) )
 	!openntpd? ( !net-misc/openntpd )
 	ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )"
@@ -52,6 +52,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-errno-fix.patch
 	epatch "${FILESDIR}"/${PV}-ipv6-fixes.patch
 	epatch "${FILESDIR}"/${PV}-debug-fix.patch
+	epatch "${FILESDIR}"/${PV}-freebsd.patch
 
 	#GCC 4 compile fixes
 	epatch "${FILESDIR}"/ntp-4.2.0-gcc4.patch
