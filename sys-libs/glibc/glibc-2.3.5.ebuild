@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.18 2005/05/26 04:01:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.19 2005/05/26 22:38:16 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -169,61 +169,57 @@ toolchain-glibc_src_unpack() {
 
 	unpack ${PN}-${GLIBC_RELEASE_VER}.tar.bz2
 
-	cd ${S}
+	cd "${S}"
 	unpack ${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
 	unpack ${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2
 
-	if [[ -n ${CSTUBS_TARBALL} ]] ; then
-		unpack ${CSTUBS_TARBALL}
-	fi
-
-	if [[ -n ${FEDORA_TARBALL} ]] ; then
-		unpack ${FEDORA_TARBALL}
-	fi
+	[[ -n ${CSTUBS_TARBALL} ]] && unpack ${CSTUBS_TARBALL}
+	[[ -n ${FEDORA_TARBALL} ]] && unpack ${FEDORA_TARBALL}
 
 	if [[ -n ${PATCH_VER} ]] ; then
-		cd ${WORKDIR}
+		cd "${WORKDIR}"
 		unpack ${PN}-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
 	fi
 
-	if [[ ${GLIBC_MANPAGE_VERSION} != "none" ]] ; then
-		cd ${WORKDIR}
-		unpack ${PN}-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
-	fi
-
-	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
-		cd ${S}
-		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
-	fi
-
+	# XXX: We should do the branchupdate, before extracting the manpages and
+	# infopages else it does not help much (mtimes change if there is a change
+	# to them with branchupdate)
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
-		cd ${WORKDIR}
+		cd "${WORKDIR}"
 		unpack ${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
-	fi
 
-	cd ${S}
-
-	if [[ -n ${BRANCH_UPDATE} ]] ; then
-		epatch ${WORKDIR}/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch
+		cd "${S}"
+		epatch "${WORKDIR}"/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch
 
 		# Snapshot date patch
 		einfo "Patching version to display snapshot date ..."
 		sed -i -e "s:\(#define RELEASE\).*:\1 \"${BRANCH_UPDATE}\":" version.h
 	fi
 
+	if [[ ${GLIBC_MANPAGE_VERSION} != "none" ]] ; then
+		cd "${WORKDIR}"
+		unpack ${PN}-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
+	fi
+
+	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
+		cd "${S}"
+		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
+	fi
+
+	# XXX: do not package ssp up into tarballs, leave it in FILESDIR
+	cd "${S}"
+	cp "${FILESDIR}"/2.3.5/ssp.c sysdeps/unix/sysv/linux/ || die "could not find ssp.c"
+	rm -f "${WORKDIR}"/patches/2*
+	epatch "${FILESDIR}"/2.3.3/glibc-2.3.2-propolice-guard-functions-v3.patch
+	epatch "${FILESDIR}"/2.3.3/glibc-2.3.3-frandom-detect.patch
+
 	if [[ -n ${PATCH_VER} ]] ; then
-		EPATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE}"
-		EPATCH_SUFFIX="patch"
-		OLD_ARCH="${ARCH}"
-		ARCH="$(tc-arch)"
-
-		einfo "Applying Gentoo Glibc Patches: ${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-${PATCH_VER}"
-		epatch ${WORKDIR}/patches
-
-		ARCH="${OLD_ARCH}"
-		unset EPATCH_EXCLUDE
-		unset EPATCH_SUFFIX
-		unset OLD_ARCH
+		cd "${S}"
+		EPATCH_MULTI_MSG="Applying Gentoo Glibc Patchset ${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-${PATCH_VER} ..." \
+		EPATCH_EXCLUDE=${GLIBC_PATCH_EXCLUDE} \
+		EPATCH_SUFFIX="patch" \
+		ARCH=$(tc-arch) \
+		epatch "${WORKDIR}"/patches
 	fi
 }
 
