@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.0_rc4.ebuild,v 1.2 2005/05/17 21:53:10 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.0_rc5.ebuild,v 1.1 2005/05/26 18:27:33 ka0ttic Exp $
 
 inherit flag-o-matic versionator
 
@@ -17,7 +17,7 @@ IUSE="doc debug xml dbx"
 RDEPEND="virtual/libc
 	!dev-libs/libprelude-cvs
 	!app-admin/prelude-manager-cvs
-	dev-libs/libprelude
+	>=dev-libs/libprelude-0.9.0_rc5
 	dev-libs/openssl
 	doc? ( dev-util/gtk-doc )
 	xml? ( dev-libs/libxml )
