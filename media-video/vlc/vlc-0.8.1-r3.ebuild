@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r3.ebuild,v 1.3 2005/05/22 15:33:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r3.ebuild,v 1.4 2005/05/26 08:43:15 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -17,7 +17,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi gtk2 sdl ssl"
+IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mp3 xv bidi gtk2 sdl ssl"
 
 RDEPEND="hal? ( =sys-apps/hal-0.4* )
 		cdio? ( >=dev-libs/libcdio-0.70 )
@@ -30,7 +30,7 @@ RDEPEND="hal? ( =sys-apps/hal-0.4* )
 		esd? ( media-sound/esound )
 		ogg? ( media-libs/libogg )
 		matroska? ( >=media-libs/libmatroska-0.7.3-r1 )
-		mad? ( media-libs/libmad )
+		mp3? ( media-libs/libmad )
 		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )
 		a52? ( media-libs/a52dec )
 		dts? ( media-libs/libdts )
@@ -183,7 +183,7 @@ src_compile () {
 		$(use_enable lirc) \
 		$(use_enable joystick) \
 		$(use_enable live livedotcom) $(use_with live livedotcom-tree /usr/lib/live) \
-		$(use_enable mad) \
+		$(use_enable mp3) \
 		$(use_enable ffmpeg) \
 		$(use_enable aac faad) \
 		$(use_enable a52) \

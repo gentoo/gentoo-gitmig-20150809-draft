@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.88 2005/05/22 19:10:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.89 2005/05/26 08:43:15 flameeyes Exp $
+
+  26 May 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r3.ebuild:
+  Renamed mad flag into mp3 for latest version.
 
   22 May 2005; Jason Wever <weeve@gentoo.org> vlc-0.8.1-r1.ebuild:
   Stable on SPARC.
