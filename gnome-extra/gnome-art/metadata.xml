@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>desktop-misc@gentoo.org</herd>
+	<herd>desktop-misc</herd>
 	<maintainer>
 		<email>blubb@gentoo.org</email>
 		<name>Simon Stelling</name>

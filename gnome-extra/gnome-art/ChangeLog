@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-art
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-art/ChangeLog,v 1.3 2005/05/22 00:21:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-art/ChangeLog,v 1.4 2005/05/26 19:49:25 swegener Exp $
+
+  26 May 2005; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  Herd name is desktop-misc not desktop-misc@@gentoo.org
 
   22 May 2005; Jason Wever <weeve@gentoo.org> gnome-art-0.2.ebuild:
   Added ~sparc keyword.
