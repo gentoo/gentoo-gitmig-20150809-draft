@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 b885f8d8ea2622ce2741fcdc7de48b5e mailutils-0.6-r1.ebuild 2774
-MD5 5f41971bb0f2df9b1aa619e13f6c3064 ChangeLog 2316
+MD5 fdcfd9dc8b9341a8045bacfc82436191 ChangeLog 2512
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 5506f2c85d65395b8e6ebd712e308303 files/mailutils-IDEF0954-IDEF0955.patch 1952
 MD5 57cb849f954ba9a185a41751d998d0fd files/mailutils-0.6-mh-Makefile.in.patch 536
@@ -13,7 +13,7 @@ MD5 ac9d32bbb54e8d1d2ea52039bea81c29 files/digest-mailutils-0.6-r1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClfodViELBEf1JB0RAhtCAJ9ug2KKrjfgwtpGe4m/gswXy1OL1ACeOwUO
-iVMp0vJIp7tKiBO443MWCZ0=
-=hBYj
+iD8DBQFClfptViELBEf1JB0RAikzAJ9V6E2fElIN/SUQLoECMEiqq8A8/gCaArDe
+kcsJttFKPB6y5PJufLnJ9Fc=
+=Elei
 -----END PGP SIGNATURE-----
