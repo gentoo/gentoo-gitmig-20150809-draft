@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 616641dd379413765b984ef140a1cf49 dpkg-1.10.27.ebuild 1141
-MD5 b16bd28faa2e211425deeca985770c22 ChangeLog 3615
+MD5 be6fbbcf4a7b19244e83a7cc54a0ef39 dpkg-1.10.27.ebuild 1149
+MD5 fe98413cdd1c9d7eb825da2571d6e27d ChangeLog 3724
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 094be1e966193d5a48b0a18ac2fa949b dpkg-1.10.26.ebuild 1018
 MD5 feb5a11111cc715877cc527c979ef699 files/dpkg-1.10.26.patch 840
 MD5 3a89ac1e794696a143c8c6665b00cc1d files/digest-dpkg-1.10.26 65
 MD5 6316065ab6ab9c129918866cc0c7eec9 files/digest-dpkg-1.10.27 65
 MD5 74ab726dd6bc09fdb24cac5bb933f2f9 files/dpkg-1.10.27.gcc4.patch 1284
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCemOPevY57Fted3ERAubuAJ4gwR5CojKnCRJFwQccrmD+wmABygCffpQt
-OglbIuGL8T7W5HlGL+6chpA=
-=1IYT
------END PGP SIGNATURE-----
