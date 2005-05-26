@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/pypanel
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.18 2004/12/17 14:29:19 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.19 2005/05/26 16:36:13 fserb Exp $
+
+*pypanel-2.3 (26 May 2005)
+
+  26 May 2005; Fernando Serboncini <fserb@gentoo.org> +pypanel-2.3.ebuild:
+  Version bump. Closes #75256.
 
   17 Dec 2004; Tom Martin <slarti@gentoo.org> pypanel-2.0.ebuild:
   Marked ~amd64, resolves bug 47300.
