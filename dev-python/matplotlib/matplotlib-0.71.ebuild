@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.71.ebuild,v 1.3 2005/03/22 15:51:44 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.71.ebuild,v 1.4 2005/05/26 14:14:09 fserb Exp $
 
 inherit distutils virtualx
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 IUSE="doc gtk"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="as-is"
 
 DEPEND="virtual/python

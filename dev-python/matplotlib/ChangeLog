@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.8 2005/04/23 12:56:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.9 2005/05/26 14:14:08 fserb Exp $
+
+  26 May 2005; Fernando Serboncini <fserb@gentoo.org>
+  -matplotlib-0.64.ebuild, -matplotlib-0.65.ebuild, matplotlib-0.71.ebuild:
+  Removed old version.
+  Marked 0.71 as stable.
 
   23 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> matplotlib-0.64.ebuild,
   matplotlib-0.65.ebuild:

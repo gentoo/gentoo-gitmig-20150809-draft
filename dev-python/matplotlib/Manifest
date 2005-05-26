@@ -1,22 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 146e71a07c2f2a16c0a139427f63af69 ChangeLog 1437
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 f69d996d233a5305188c75d037b52225 ChangeLog 1615
+MD5 491c0eab778ca3c4081a32465ac56383 matplotlib-0.71.ebuild 1008
 MD5 83c6067a034ad2bafe918740733bdd7b matplotlib-0.73.1.ebuild 1022
-MD5 c7aaf376b6f3f3a3ef4c8bdc9c2fe3c8 matplotlib-0.65.ebuild 1010
-MD5 f36bfa3845917d19f6d535070684519c matplotlib-0.71.ebuild 1009
 MD5 d876f23e265d0f6c4c89a345367ddd36 matplotlib-0.80.ebuild 1017
-MD5 e371d8a577a5650a3c318e027ebacfd2 matplotlib-0.64.ebuild 1003
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 c114d2c51202eda7d4a722513e7dbaa4 files/digest-matplotlib-0.71 68
 MD5 29e58690d4283dec939607bc0cc32e44 files/digest-matplotlib-0.73.1 70
 MD5 c0167eaa6285560f9d7be0cefac5b7c3 files/digest-matplotlib-0.80 68
-MD5 0ca8fafc829fa8440e2e63023cc9b2fc files/digest-matplotlib-0.65 68
-MD5 cd423139ef7e6085b17b6a145259e4c3 files/digest-matplotlib-0.64 68
-MD5 c114d2c51202eda7d4a722513e7dbaa4 files/digest-matplotlib-0.71 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCakX7Kf2g/qXtneoRAsDdAKC0eaX2ALrv10X/+GhwPE0CwY5n5gCeJ0OF
-Hpqtvl2KQuc5uaFu4YPGz6w=
-=UF3g
+iD8DBQFCldnVxtZcznfol0URAhGRAJ4zicVshJgJ2xew3dlIefUeENaDzgCg8qQi
+jFsudH9q3wyiov+JFSk0UpE=
+=sBxd
 -----END PGP SIGNATURE-----
