@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/esmart/esmart-0.9.0.003.ebuild,v 1.1 2005/05/20 03:20:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/esmart/esmart-0.9.0.002.ebuild,v 1.3 2005/05/27 02:24:25 vapier Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment flag-o-matic
