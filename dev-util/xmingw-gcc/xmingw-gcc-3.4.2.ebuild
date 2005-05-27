@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.2.ebuild,v 1.3 2005/03/08 17:41:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.2.ebuild,v 1.4 2005/05/27 17:33:38 cretin Exp $
 
 MY_P=${P/xmingw-/}
 S=${WORKDIR}/${MY_P}
@@ -17,7 +17,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${MY_P}/${MY_P}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="fortran gcj debug"
 
 DEPEND="dev-util/xmingw-binutils"
