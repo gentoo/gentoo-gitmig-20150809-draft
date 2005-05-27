@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-3.4.1.ebuild,v 1.2 2005/05/26 17:14:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-3.4.1.ebuild,v 1.3 2005/05/27 17:03:25 greg_g Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -28,6 +28,9 @@ KMEXTRACTONLY="
 KMEXTRA="
 	kfile-plugins/palm-databases
 	kontact/plugins/kpilot/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of this programs deps.
+
+# Last minute fix. Applied for 3.4.2.
+PATCHES1="${FILESDIR}/kdepim-3.4.1-kpilot-fix.patch"
 
 src_compile() {
 	# needed to detect pi-notepad.h, used by the kpilot notepad conduit.
