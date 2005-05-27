@@ -1,5 +1,5 @@
-MD5 76b84365d4552f3da0a59532dffa26bc pcmcia-cs-modules-3.2.8.ebuild 2913
-MD5 eca1d6612fcbbd341d38409d878a9f36 ChangeLog 589
+MD5 dcc5e3fdd9535b2deb7a4b5e770bdf29 pcmcia-cs-modules-3.2.8.ebuild 2912
+MD5 e950da8acb6c874ac1f248b25cf7b87c ChangeLog 672
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 6e7a371dbbc428966bcfda0029a7b6ef files/pcmcia-cs-3.2.8-modules-only.patch 1165
 MD5 29a2be33a201c160660048fb2f119915 files/digest-pcmcia-cs-modules-3.2.8 131
