@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.49 2005/05/17 15:31:29 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.50 2005/05/27 16:00:40 slarti Exp $
+
+*msmtp-1.4.1-r1 (27 May 2005)
+*msmtp-1.4.1 (27 May 2005)
+
+  27 May 2005; Tom Martin <slarti@gentoo.org> +msmtp-1.4.1.ebuild,
+  +msmtp-1.4.1-r1.ebuild:
+  Version bump. The -r1 is committed at the same time -- it's the
+  package.masked variant with mailer.eclass support.
 
   08 May 2005; Tom Martin <slarti@gentoo.org> -msmtp-1.3.2-r1.ebuild:
   One more version purge.
