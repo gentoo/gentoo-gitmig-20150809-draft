@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandygmail/desklet-sidecandygmail-0.4.2.ebuild,v 1.1 2005/05/27 00:08:52 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandygmail/desklet-sidecandygmail-0.4.2.ebuild,v 1.2 2005/05/27 00:12:43 nixphoeni Exp $
 
 inherit gdesklets
 
@@ -39,7 +39,5 @@ src_install() {
 	gdesklets_src_install
 
 	dohtml -r ${S}/icons-readme
-	#dohtml icons-readme/Readme.htm
-	#dohtml -r icons-readme/Readme_Files
 
 }
