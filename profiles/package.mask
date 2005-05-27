@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4016 2005/05/27 08:42:59 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4017 2005/05/27 09:31:07 leonardop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Leonardo Boshell <leonardop@gentoo.org> (27 May 2005)
+# No maintainer, going to the to-be-removed pile now.
+app-editors/gnome-chord
 
 # Danny van Dyk <kugelfang@gentoo.org> (27 May 2005)
 # Needs some testing and love before going gold
