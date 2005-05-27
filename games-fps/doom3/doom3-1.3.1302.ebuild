@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302.ebuild,v 1.4 2005/05/25 18:00:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302.ebuild,v 1.5 2005/05/27 15:51:09 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -8,7 +8,8 @@ DESCRIPTION="Doom III - 3rd installment of the classic id 3D first-person shoote
 HOMEPAGE="http://www.doom3.com/"
 SRC_URI="mirror://3dgamers/3dgamers/games/${PN}/${PN}-linux-${PV}.x86.run
 	ftp://ftp.idsoftware.com/idstuff/${PN}/linux/${PN}-linux-${PV}.x86.run
-	ftp://dl.xs4all.nl/pub/mirror/idsoftware/idstuff/${PN}/linux/${PN}-linux-${PV}.x86.run"
+	ftp://dl.xs4all.nl/pub/mirror/idsoftware/idstuff/${PN}/linux/${PN}-linux-${PV}.x86.run
+	http://zerowing.idsoftware.com/linux/doom3.png"
 
 LICENSE="DOOM3"
 SLOT="0"
@@ -81,7 +82,7 @@ src_install() {
 
 	use cdinstall && find ${Ddir} -exec touch '{}' \;
 
-	doicon doom3.png || die "Copying icon"
+	doicon ${DISTDIR}/doom3.png || die "Copying icon"
 
 	prepgamesdirs
 	make_desktop_entry doom3 "Doom III" doom3.png
