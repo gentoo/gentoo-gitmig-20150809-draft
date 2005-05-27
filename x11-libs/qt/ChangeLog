@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.217 2005/05/26 15:03:52 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.218 2005/05/27 13:51:10 caleb Exp $
+
+*qt-3.3.4-r4 (27 May 2005)
+
+  27 May 2005; Caleb Tennis <caleb@gentoo.org>
+  +files/0001-dnd_optimization.patch,
+  +files/0002-dnd_active_window_fix.patch,
+  +files/0037-dnd-timestamp-fix.patch,
+  +files/0038-dragobject-dont-prefer-unknown.patch, +qt-3.3.4-r4.ebuild:
+  New revision.  Adding some drag and drop patches (bug #93467),
+  now installing msg2qm utility (bug #91666) and removing the
+  direct linkage of -lpthread from the configure line (bug #93930).
 
   26 May 2005; Herbie Hopkins <herbs@gentoo.org> qt-3.3.4-r3.ebuild,
   qt-4.0.0_beta2-r2.ebuild:
