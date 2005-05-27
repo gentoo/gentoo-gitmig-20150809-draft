@@ -1,4 +1,4 @@
-MD5 df8f0ac6c48556650518b16cf088bcdd ChangeLog 56308
+MD5 dd4b3483d6d57f04aa0705b079d1784b ChangeLog 56428
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 dca2cf7245292428f62f1ef4f20dd3d9 baselayout-1.11.11.ebuild 18466
 MD5 b43b02e2955a9d3be867e08e5b180d2d baselayout-1.11.9-r1.ebuild 16921
@@ -22,7 +22,7 @@ MD5 87842ac605d85289eba63ac1c2e16142 files/baselayout-1.11.10-wireless.patch 321
 MD5 ee24c3f2b233c4b4bb286e3fa8c833ed files/baselayout-1.11.12-exec-dev.patch 545
 MD5 f971d810119eb7f33deba5e540cab2e1 files/baselayout-1.11.12-is-net-fs.patch 903
 MD5 6d37e93641eee6754b93dde3324ae23b files/baselayout-1.11.11-wpa_supplicant.patch 1223
-MD5 90b3f340e3636ccc9dde42fb3a09b23c files/baselayout-1.11.12-profile.patch 2265
+MD5 8c41758aa0253a1621b8133215ee0aae files/baselayout-1.11.12-profile.patch 2244
 MD5 8ab5b01cfcad4c79d822ff31296000be files/baselayout-1.11.12-ifconfig-cidr.patch 1740
 MD5 67882892030fed7383fe01d89f9539bd files/baselayout-1.11.12-runscript-boot.patch 670
 MD5 cac88e2e2f73778a4a4e79447d857c64 files/baselayout-1.11.12-swapon-quiet.patch 899
