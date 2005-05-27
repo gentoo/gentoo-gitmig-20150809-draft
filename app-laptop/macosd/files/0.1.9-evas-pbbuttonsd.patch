@@ -1,0 +1,91 @@
+diff -Naur ./PBBEvas.cc macosd/PBBEvas.cc
+--- ./PBBEvas.cc	2004-09-10 13:34:23.000000000 -0400
++++ macosd/PBBEvas.cc	2005-04-12 07:22:31.000000000 -0400
+@@ -517,15 +517,17 @@
+ 			      ButtonPressMask |
+ 			      ButtonReleaseMask | PointerMotionMask, &ev))
+ 	{
++	  Evas_Button_Flags flags = EVAS_BUTTON_NONE;
++	  /* FIXME - Add flags for double & triple click! */
+ 	  switch (ev.type)
+ 	    {
+ 	    case ButtonPress:
+ 	      evas->EventFeedMouseMove (ev.xbutton.x, ev.xbutton.y);
+- 	      evas->EventFeedMouseDown (ev.xbutton.button);
++ 	      evas->EventFeedMouseDown (ev.xbutton.button, flags);
+ 	      break;
+ 	    case ButtonRelease:
+ 	      evas->EventFeedMouseMove (ev.xbutton.x, ev.xbutton.y);
+- 	      evas->EventFeedMouseUp (ev.xbutton.button);
++ 	      evas->EventFeedMouseUp (ev.xbutton.button, flags);
+ 	      break;
+ 	    case MotionNotify:
+ 	      evas->EventFeedMouseMove (ev.xmotion.x, ev.xmotion.y);
+diff -Naur ./configure macosd/configure
+--- ./configure	2004-09-10 13:34:23.000000000 -0400
++++ macosd/configure	2005-04-12 07:26:57.000000000 -0400
+@@ -34,7 +34,7 @@
+ "Pbbuttonsd is not installed on your system."
+ 
+ pkgcheck xosd -config XOSD atleast 2.2.0
+-pkgcheck evas -config EVAS atleast 1.0.0
++pkgcheck evas -config EVAS atleast 0.9.9
+ 
+ if [ "$WITHXOSD" = 0 -a "$WITHEVAS" = 0 ] ; then
+ 	status_error \
+diff -Naur ./gfx/include/EvasHelper.hh macosd/gfx/include/EvasHelper.hh
+--- ./gfx/include/EvasHelper.hh	2004-04-24 11:00:21.000000000 -0400
++++ macosd/gfx/include/EvasHelper.hh	2005-04-12 07:16:53.000000000 -0400
+@@ -128,17 +128,17 @@
+   };
+   */
+   
+-  void EventFeedMouseDown      (int b) {
+-    evas_event_feed_mouse_down (ob, b);
++  void EventFeedMouseDown      (int b, Evas_Button_Flags flags) {
++    evas_event_feed_mouse_down (ob, b, flags, NULL);
+   };
+-  void EventFeedMouseUp        (int b) {
+-    evas_event_feed_mouse_up (ob, b);
++  void EventFeedMouseUp        (int b, Evas_Button_Flags flags) {
++    evas_event_feed_mouse_up (ob, b, flags, NULL);
+   };
+   void EventFeedMouseMove      (int x, int y) {
+-    evas_event_feed_mouse_move (ob, x, y);
++    evas_event_feed_mouse_move (ob, x, y, NULL);
+   };
+   void EventFeedmouseIn        () {
+-    evas_event_feed_mouse_in (ob);
++    evas_event_feed_mouse_in (ob, NULL);
+   };
+   
+   /*
+@@ -147,11 +147,11 @@
+   void EventFeedKeyUpData      (const char *keyname, const void *data) {
+   };
+   */
+-  void EventFeedKeyDown        (const char *keyname) {
+-    evas_event_feed_key_down (ob, keyname);
++  void EventFeedKeyDown        (const char *keyname, const char *keysymbol, const char *key_compose) {
++    evas_event_feed_key_down (ob, keyname, keysymbol, key_compose, NULL, NULL);
+   };
+-  void EventFeedKeyUp          (const char *keyname) {
+-    evas_event_feed_key_up (ob, keyname);
++  void EventFeedKeyUp          (const char *keyname, const char *keysymbol, const char *key_compose) {
++    evas_event_feed_key_up (ob, keyname, keysymbol, key_compose, NULL, NULL);
+   };
+ 
+   
+diff -Naur ./PBB.cc macosd/PBB.cc
+--- ./PBB.cc	2005-04-11 17:04:13.000000000 -0400
++++ macosd/PBB.cc	2004-03-30 05:20:27.000000000 -0500
+@@ -44,7 +44,7 @@
+ {
+   using namespace std;
+   
+-  int rc = ipc_init (LIBMODE_CLIENT, 1);
++  int rc = ipc_init ("macosd", LIBMODE_CLIENT, 1);
+   if (rc != 0) {
+     switch (rc) {
+     case E_NOSERVER:
+
