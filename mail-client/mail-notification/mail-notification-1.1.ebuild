@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-1.1.ebuild,v 1.1 2005/04/23 10:55:23 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-1.1.ebuild,v 1.2 2005/05/27 21:42:00 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ Maildir, IMAP, Sylpheed, POP3, Gmail. Authenticates via apop, ssl, sasl."
 HOMEPAGE="http://www.nongnu.org/mailnotify/"
 SRC_URI="http://savannah.nongnu.org/download/mailnotify/${P}.tar.gz"
 
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
