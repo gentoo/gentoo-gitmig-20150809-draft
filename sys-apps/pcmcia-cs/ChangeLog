@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.88 2005/05/27 15:38:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.89 2005/05/27 19:20:16 brix Exp $
+
+  27 May 2005; <brix@gentoo.org> pcmcia-cs-3.2.8.ebuild:
+  Stable on x86.
 
   27 May 2005; Joseph Jezak <josejx@gentoo.org> pcmcia-cs-3.2.8.ebuild:
   Marked ~ppc for bug #90359.

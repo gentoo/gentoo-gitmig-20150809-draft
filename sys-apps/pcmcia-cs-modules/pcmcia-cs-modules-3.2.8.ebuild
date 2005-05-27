@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/pcmcia-cs-modules-3.2.8.ebuild,v 1.2 2005/05/04 09:41:51 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/pcmcia-cs-modules-3.2.8.ebuild,v 1.3 2005/05/27 19:21:07 brix Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/pcmcia-cs/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="cardbus"
 DEPEND="virtual/linux-sources
