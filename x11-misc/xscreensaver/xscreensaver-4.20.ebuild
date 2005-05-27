@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.20.ebuild,v 1.10 2005/05/25 14:55:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.20.ebuild,v 1.11 2005/05/27 20:19:36 killerfox Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 LICENSE="BSD"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
 SLOT="0"
 
 # NOTE: ignore app-games/fortune-mod as a dep. it is pluggable and won't
