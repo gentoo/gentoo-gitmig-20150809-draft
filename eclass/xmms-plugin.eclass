@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.16 2005/03/16 05:54:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.17 2005/05/27 04:55:23 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 
@@ -30,6 +30,7 @@ inherit eutils
 ECLASS=xmms-plugin
 INHERITED="${INHERITED} ${ECLASS}"
 DESCRIPTION="Xmms Plugin: ${PN}"
+HOMEPAGE="http://www.xmms.org"
 LICENSE="GPL-2"
 
 SRC_URI="http://www.xmms.org/files/1.2.x/xmms-${PV}.tar.bz2
