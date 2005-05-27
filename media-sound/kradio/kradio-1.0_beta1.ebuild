@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-1.0_beta1.ebuild,v 1.1 2005/05/24 09:46:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-1.0_beta1.ebuild,v 1.2 2005/05/27 14:03:18 phosphan Exp $
 
 inherit kde
 
@@ -16,12 +16,15 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="lirc encode vorbis ogg"
 
-DEPEND="lirc? ( app-misc/lirc )
+RDEPEND="lirc? ( app-misc/lirc )
 	media-libs/libsndfile
-	kde-base/unsermake
 	encode? ( media-sound/lame )
 	vorbis? ( media-libs/libvorbis )
 	ogg? ( media-libs/libogg )"
+
+DEPEND="${RDEPEND}
+	>=kde-base/unsermake-0.3.1.4319.0"
+
 need-kde 3.2
 
 src_compile() {
