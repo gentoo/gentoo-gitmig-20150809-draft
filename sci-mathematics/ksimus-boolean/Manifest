@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c950750caa891941bea9338143d60e45 ksimus-boolean-0.3.6.ebuild 540
-MD5 88ef14bea88a67c8003aa390dca6df7a ChangeLog 1024
+MD5 a105e429a0b78143d712e613cc98f977 ksimus-boolean-0.3.6.ebuild 721
+MD5 5261db24a12f065a3031ef4599436d92 ChangeLog 1181
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 481210bbaa9d4fa6b636bdec64bcfc5a files/digest-ksimus-boolean-0.3.6 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0b49I1lqEGTUzyQRAlztAKCMs5nqSgGrf0W3FBntyhQo6T6jwwCcCY5Y
-LRfh0XyYPgj32XdrgRdCHEY=
-=NjrB
------END PGP SIGNATURE-----
+MD5 884b53979f4ac4324f30e58810af7f43 files/digest-ksimus-boolean-0.3.6 158
