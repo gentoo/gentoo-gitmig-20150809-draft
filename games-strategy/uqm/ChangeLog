@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/uqm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.11 2005/05/27 04:12:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.12 2005/05/27 13:24:50 wolf31o2 Exp $
+
+  27 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/digest-uqm-0.4.0, Manifest:
+  Fixing diget for bug #94165.
 
 *uqm-0.4.0 (27 May 2005)
 
