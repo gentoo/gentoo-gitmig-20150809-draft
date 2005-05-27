@@ -1,40 +1,46 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.1.1.ebuild,v 1.2 2005/02/08 11:51:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.1.1.ebuild,v 1.3 2005/05/27 13:56:16 greg_g Exp $
 
 inherit eutils kde-functions
 
 S="${WORKDIR}/${PN}-x11-free-${PV}"
-DESCRIPTION="QSA version ${PV}, Qt Script for Application is a ECMAScript based language
-to provide a scripting engine to applications developped with Qt"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+
+DESCRIPTION="Qt Script for Applications, a ECMAScript based scripting toolkit for making customizable Qt/C++ applications."
 SRC_URI="ftp://ftp.trolltech.com/qsa/source/${PN}-x11-free-${PV}.tar.gz"
 HOMEPAGE="http://www.trolltech.com/"
-DEPEND=">=x11-libs/qt-3.1.2-r3"
-IUSE="threads examples ide doc"
+LICENSE="GPL-2"
 
-set-qtdir 3.1
+SLOT="0"
+KEYWORDS="~x86 ~amd64"
+IUSE="doc examples ide threads"
+
+need-qt 3
 
 src_compile() {
-	QSACONFOPT=""
+	local myconf="-prefix ${D}${QTDIR}"
 
-	use thread && QSACONFOPT="-thread"
-	! use ide && QSACONFOPT="${QSACONFOPT} -no-ide" && epatch ${FILESDIR}/${P}-without-examples-using-ide.diff
-	use examples && einfo "Building QSA with examples" && epatch ${FILESDIR}/${P}-with-examples.diff && epatch ${FILESDIR}/${P}-example-enums.pro.diff || (einfo "Building QSA without examples" && epatch ${FILESDIR}/${P}-without-examples.diff)
+	use threads && myconf="${myconf} -thread"
+
+	if ! use ide; then
+		myconf="${myconf} -no-ide"
+		epatch ${FILESDIR}/${P}-without-examples-using-ide.diff
+	fi
+
+	if use examples; then
+		epatch ${FILESDIR}/${P}-with-examples.diff
+		epatch ${FILESDIR}/${P}-example-enums.pro.diff
+	else
+		epatch ${FILESDIR}/${P}-without-examples.diff
+	fi
 
 	epatch ${FILESDIR}/${P}-sandbox-fix.diff
 
-	einfo "Configure QSA with ${QSACONFOPT} in Root dir: ${QTDIR} (command: ./configure -prefix ${QTDIR} ${QSACONFOPT})"
-	./configure -prefix ${D}${QTDIR} ${QSACONFOPT} || die
+	./configure ${myconf} || die
 	emake || die
 }
 
 src_install() {
-
-	sed -e "s:${S}:${QTBASE}:g" ${S}/.qmake.cache > ${D}/${QTBASE}/.qmake.cache
-
 	into ${QTDIR}
 
 	#includes
@@ -52,11 +58,9 @@ src_install() {
 	doins src/qsa/qsinputdialogfactory.h
 	doins src/ide/qsworkbench.h
 
-
 	#QSA mkspec feature
 	insinto ${QTDIR}/mkspecs/${QMAKESPEC}
 	doins src/qsa/qsa.prf
-
 
 	#libs
 	dolib lib/libqsa.so.1.1.1
@@ -68,52 +72,42 @@ src_install() {
 	insinto ${QTDIR}/lib
 	doins lib/libqsa.prl
 
-
 	#QSA plugin (SEditor) for Qt designer 
 	insinto ${QTDIR}/plugins/designer
 	doins plugins/designer/libqseditorplugin.so
 
-
-	DIR4DOC=/usr/share/doc/${PF}
-
 	#documentation
 	if use doc; then
-	    dohtml -r doc/html/*
-	    insinto ${DIR4DOC}/html
-	    doins doc/html/qsa.dcf
-	    doins doc/html/extensions.dcf
-	    doins doc/html/language.dcf
-	    doins doc/html/qtscripter.dcf
-	    doins doc/html/qt-script-for-applications.dcf
+		dohtml -A dcf -r doc/html/*
 	fi
 
 	#examples
 	if use examples; then
-	    cp -R examples ${D}${DIR4DOC}/examples
+		insinto /usr/share/doc/${PF}
+		doins -r examples
 	fi
 
-	insinto ${DIR4DOC}
-	doins INSTALL README LICENSE.GPL changes-1.1.1
+	dodoc README changes-1.1.1
 }
 
 pkg_postinst(){
-	if use doc; then
-	    #include QSA Documentation content file into assistant
-	    assistant -addContentFile /usr/share/doc/${PF}/html/qsa.dcf
-	    assistant -addContentFile /usr/share/doc/${PF}/html/extensions.dcf
-	    assistant -addContentFile /usr/share/doc/${PF}/html/language.dcf
-	    assistant -addContentFile /usr/share/doc/${PF}/html/qtscripter.dcf
-	    assistant -addContentFile /usr/share/doc/${PF}/html/qt-script-for-applications.dcf
+	if use doc && [ "${ROOT}" = "/" ]; then
+		#include QSA Documentation content file into assistant
+		assistant -addContentFile /usr/share/doc/${PF}/html/qsa.dcf
+		assistant -addContentFile /usr/share/doc/${PF}/html/extensions.dcf
+		assistant -addContentFile /usr/share/doc/${PF}/html/language.dcf
+		assistant -addContentFile /usr/share/doc/${PF}/html/qtscripter.dcf
+		assistant -addContentFile /usr/share/doc/${PF}/html/qt-script-for-applications.dcf
 	fi
 }
 
 pkg_prerm(){
-	if use doc; then
-	    #remove QSA Documentation content file into assistant
-	    assistant -removeContentFile /usr/share/doc/${PF}/html/qsa.dcf
-	    assistant -removeContentFile /usr/share/doc/${PF}/html/extensions.dcf
-	    assistant -removeContentFile /usr/share/doc/${PF}/html/language.dcf
-	    assistant -removeContentFile /usr/share/doc/${PF}/html/qtscripter.dcf
-	    assistant -removeContentFile /usr/share/doc/${PF}/html/qt-script-for-applications.dcf
+	if use doc && [ "${ROOT}" = "/" ]; then
+		#remove QSA Documentation content file into assistant
+		assistant -removeContentFile /usr/share/doc/${PF}/html/qsa.dcf
+		assistant -removeContentFile /usr/share/doc/${PF}/html/extensions.dcf
+		assistant -removeContentFile /usr/share/doc/${PF}/html/language.dcf
+		assistant -removeContentFile /usr/share/doc/${PF}/html/qtscripter.dcf
+		assistant -removeContentFile /usr/share/doc/${PF}/html/qt-script-for-applications.dcf
 	fi
 }
