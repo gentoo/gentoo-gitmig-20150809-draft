@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.38 2005/05/24 20:13:01 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.39 2005/05/27 22:38:13 luckyduck Exp $
+
+*libquicktime-0.9.6-r1 (27 May 2005)
+
+  27 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -libquicktime-0.9.6.ebuild, +libquicktime-0.9.6-r1.ebuild:
+  create a symlink to avoid breaking apps which rely on the old layout, fixes
+  #94218 and #94061
 
 *libquicktime-0.9.6 (21 May 2005)
 
