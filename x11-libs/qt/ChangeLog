@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.219 2005/05/27 14:59:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.220 2005/05/27 15:46:55 flameeyes Exp $
+
+  27 May 2005; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.4-r4.ebuild:
+  Improved rpath fixes to work on every platform.
 
   27 May 2005; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.4-r4.ebuild:
   Added patch to allow compilation of qt on non-linux systems (specifically

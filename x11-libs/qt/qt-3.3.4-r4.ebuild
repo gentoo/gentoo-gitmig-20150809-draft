@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.2 2005/05/27 14:59:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.3 2005/05/27 15:46:55 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -82,8 +82,8 @@ src_unpack() {
 
 	sed -i -e 's:read acceptance:acceptance=yes:' configure
 
-	epatch ${FILESDIR}/qt-no-rpath-uic.patch
-	epatch ${FILESDIR}/qt-no-rpath.patch
+	find ${S}/mkspecs -name qmake.conf | xargs \
+		sed -i -e 's:QMAKE_RPATH.*:QMAKE_RPATH =:'
 
 	# fix freeze caused by bad interaction with kde klipper (kde bug 80072)
 	epatch ${FILESDIR}/${P}-qclipboard-hack.patch
