@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.46 2005/04/27 03:26:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.47 2005/05/27 02:20:52 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -95,6 +95,7 @@ enlightenment_src_unpack() {
 		unpack ${A}
 	fi
 	gettext_modify
+	[[ -s gendoc ]] && chmod a+rx gendoc
 }
 
 enlightenment_src_compile() {
