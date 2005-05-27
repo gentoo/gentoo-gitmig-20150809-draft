@@ -31,6 +31,7 @@ MD5 a1b5b72d1285487654685fc497aa81b5 files/saslauthd.pam-include 160
 MD5 52645b3330ddad9ce06f2a0eebb8d345 files/saslauthd-2.1.19.conf 906
 MD5 41c1024f02bc0725406a23eeff93edd5 files/saslauthd-2.1.20.conf 906
 MD5 cb4a5c5160219818e04196847ba9f7a1 files/cyrus-sasl-2.1.17-db4.patch 1451
+MD5 4717e635830a067d9abb83da6b2700cb files/saslauthd-2.1.21.conf 906
 MD5 7b24e99c21a5924543fe82cd82a1d741 files/saslauthd.pam 223
 MD5 c38995773eff23cf7f05b23fe7fba6d3 files/saslauthd.rc6 525
 MD5 4144a6962acfd7983cc292259375149d files/cyrus-sasl-2.1.19-configdir.patch 8231
@@ -52,7 +53,7 @@ MD5 6e3a4b0f3a097e9aadfe5ac4efe8a7bf files/digest-cyrus-sasl-2.1.21 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClCGrViELBEf1JB0RAhytAJ9EgSwcBGehbT162XlY2fu9+fTVcQCfTJL/
-2IhNNXrZUiZDhI4CLaQRjUk=
-=0Nt+
+iD8DBQFClmlQ5FrxP71izLARAibmAKDX2Sd0Youh1Cs8nsMcU2x3A++1QgCgnekA
+jD76keqQ5x+prKefWMtD/Vo=
+=Ak2K
 -----END PGP SIGNATURE-----
