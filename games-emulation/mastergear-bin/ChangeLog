@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/mastergear-bin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/ChangeLog,v 1.1 2005/05/27 17:00:11 mr_bones_ Exp $
+
+*mastergear-bin-2.0 (27 May 2005)
+
+  27 May 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +mastergear-bin-2.0.ebuild:
+  initial commit - ebuild provided by Jesús Pérez via bug #89103
+
