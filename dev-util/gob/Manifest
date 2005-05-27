@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 06f0b9e651d64370356221dddefa6a62 ChangeLog 3805
-MD5 3c218bdddbbfaae7ee645d367838efc8 gob-1.0.12.ebuild 658
+MD5 f56ca5f93029321081efa17b35b2c7ce ChangeLog 3897
 MD5 34373cc9de79bae25508c08ddc9f9caf gob-2.0.9.ebuild 688
+MD5 3c218bdddbbfaae7ee645d367838efc8 gob-1.0.12.ebuild 658
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 6da096c68d3ac1d1e57e630f0830023b gob-2.0.11.ebuild 694
-MD5 a78e56617e86837c5bd694044ddc070a files/digest-gob-1.0.12 62
+MD5 2fdfcca9254e536b6ec06e232b433fb1 gob-2.0.11.ebuild 694
 MD5 69cc2e2c3652b2d96ff87ce2cf96df55 files/digest-gob-2.0.9 62
+MD5 a78e56617e86837c5bd694044ddc070a files/digest-gob-1.0.12 62
 MD5 af1045825b434f2c59e89e0ed157e085 files/digest-gob-2.0.11 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFClJDwKRy60XGEcJIRAsHeAJ0a4Y6aib62svciqrKY/9EAkDoDvACeOAOh
-/DFXzfJeFnWdTsZeYluVYRw=
-=OwrZ
------END PGP SIGNATURE-----
