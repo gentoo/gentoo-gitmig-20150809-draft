@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/xmingw-w32api
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.10 2005/02/09 12:58:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.11 2005/05/27 17:35:55 cretin Exp $
+
+*xmingw-w32api-3.2 (27 May 2005)
+
+  27 MAy 2005; Stefan Jones <cretin@gentoo.org>:
+  New version
 
   09 Feb 2005; Simon Stelling <blubb@gentoo.org> xmingw-w32api-3.1.ebuild:
   added ~amd64
