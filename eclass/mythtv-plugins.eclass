@@ -1,9 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.1 2005/05/20 02:39:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.2 2005/05/27 23:24:09 eradicator Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org
 #
+
+inherit multilib
 
 ECLASS=mythtv-plugins
 INHERITED="${INHERITED} ${ECLASS} debug"
@@ -32,6 +34,11 @@ mythtv-plugins_src_unpack() {
 	-i 'settings.pro' || die "ciaranm sucks"
 	#sed -e "/^QMAKE_CFLAGS_RELEASE/s!= .*!= ${CFLAGS}!"
 	#-i 'settings.pro' || die "Fixing Qmake's CFLAGS failed"
+
+	find ${S} -name '*.pro' -exec sed -i \
+		-e "s:\$\${PREFIX}/lib/:\$\${PREFIX}/$(get_libdir)/:g" \
+		-e "s:\$\${PREFIX}/lib$:\$\${PREFIX}/$(get_libdir):g" \
+	{} \;
 }
 
 mythtv-plugins_src_compile() {
