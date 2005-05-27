@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.8.ebuild,v 1.3 2005/05/02 00:24:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.8.ebuild,v 1.4 2005/05/27 21:14:55 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Lightweight Jabber client for GNOME"
 HOMEPAGE="http://gossip.imendio.org/"
@@ -32,3 +32,14 @@ G2CONF="${G2CONF} --disable-dbus"
 DOCS="AUTHORS README COPYING ChangeLog INSTALL NEWS README"
 
 USE_DESTDIR="1"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-find_xss.patch
+
+	autoconf || die
+
+}
