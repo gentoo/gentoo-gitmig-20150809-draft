@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-8.1.030.ebuild,v 1.1 2005/05/26 22:39:47 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-8.1.030.ebuild,v 1.2 2005/05/27 05:14:22 mr_bones_ Exp $
 
 inherit rpm
 
@@ -20,21 +20,21 @@ S="${WORKDIR}/l_cc_pc_${PV}"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S} || die 
+	cd ${S} || die
 
-        # Only use our architecture
-        if [ "$ARCH" = "x86" ]
-        then
-                rm -f intel-*.ia64.rpm
-        else
-                rm -f intel-*.i386.rpm
-        fi
+	# Only use our architecture
+	if [ "$ARCH" = "x86" ]
+	then
+		rm -f intel-*.ia64.rpm
+	else
+		rm -f intel-*.i386.rpm
+	fi
 
-        for x in *.rpm
-        do
-                # WORKDIR must be set properly for rpm_unpack()
-                rpm_unpack ${S}/${x}
-        done
+	for x in *.rpm
+	do
+		# WORKDIR must be set properly for rpm_unpack()
+		rpm_unpack ${S}/${x}
+	done
 
 	mv ${WORKDIR}/opt ${S}/
 
