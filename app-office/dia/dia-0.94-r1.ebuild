@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r1.ebuild,v 1.8 2005/05/21 08:57:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r1.ebuild,v 1.9 2005/05/27 07:23:15 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -24,7 +24,8 @@ RDEPEND=">=x11-libs/gtk+-2
 	gnome? ( >=gnome-base/libgnome-2.0
 		>=gnome-base/libgnomeui-2.0 )
 	python? ( >=dev-lang/python-1.5.2
-		>=dev-python/pygtk-1.99 )"
+		>=dev-python/pygtk-1.99 )
+	=app-text/docbook-xml-dtd-4.2*"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21
