@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.18.1.ebuild,v 1.2 2005/05/20 09:07:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.18.1.ebuild,v 1.3 2005/05/27 17:12:39 cardoe Exp $
 
 inherit mythtv-plugins flag-o-matic toolchain-funcs eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 	>=media-libs/libvorbis-1.0
 	>=media-libs/libcdaudio-0.99.6
 	>=media-libs/flac-1.1.0
-	aac? ( >=media-libs/faad2-2.0-r6 )
+	aac? ( >=media-libs/faad2-2.0-r7 )
 	fftw? ( =sci-libs/fftw-2* )
 	opengl? ( virtual/opengl =sci-libs/fftw-2* )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
