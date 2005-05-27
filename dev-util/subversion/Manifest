@@ -1,8 +1,8 @@
-MD5 74b34d84e0ebdd5d4fa1746074a97458 ChangeLog 27602
+MD5 a8039e04e19fb36989521846ee25fa08 ChangeLog 27814
 MD5 8fbcd267012fd1eef74d5161888cc7b8 metadata.xml 222
 MD5 a2e298f0596fa2fdb58b6ce9e498fcde subversion-1.0.9.ebuild 9523
 MD5 c60d28f0f833c15ac51412e104163f4b subversion-1.1.1-r3.ebuild 10930
-MD5 2defc9e5515f8aaf76d0088bb6cf541f subversion-1.2.0.ebuild 10406
+MD5 621ece0fed1bc78a1d09c5f1f6848b86 subversion-1.2.0.ebuild 10490
 MD5 4d04ccc1b8acfef398e6041cba214ea1 subversion-1.1.4-r1.ebuild 10382
 MD5 3f83683d616c92808b7199860bea02fd subversion-1.1.3-r1.ebuild 10164
 MD5 d5bdcb0f0a0e607798bd6ee426d8acc2 subversion-1.1.3.ebuild 11118
@@ -21,3 +21,4 @@ MD5 9f06ce72de714decff8fad3a674fb64d files/svnserve.xinetd 334
 MD5 505f961a65fe6223d0c8c688aa4c01d0 files/digest-subversion-1.2.0 70
 MD5 1c207179f5bf0b148528312cbc37632d files/digest-subversion-1.1.3 70
 MD5 1c207179f5bf0b148528312cbc37632d files/digest-subversion-1.1.3-r1 70
+MD5 dd98f7a8bef9519fb3ed4096a0b41c1f files/vc-svn.el.20050527 19264

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.0.ebuild,v 1.1 2005/05/25 20:09:06 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.0.ebuild,v 1.2 2005/05/27 08:55:03 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -65,6 +65,8 @@ src_unpack() {
 	(cd apr; autoconf)
 	(cd apr-util; autoconf)
 	sed -i -e 's,\(subversion/svnversion/svnversion.*\)\(>.*svn-revision.txt\),echo "exported" \2,' Makefile.in
+
+	use emacs && cp ${FILESDIR}/vc-svn.el.20050527 ${S}/contrib/client-side/vc-svn.el
 }
 
 src_compile() {
