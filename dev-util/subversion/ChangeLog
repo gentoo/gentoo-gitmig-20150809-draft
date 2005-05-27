@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.161 2005/05/27 08:55:03 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.162 2005/05/27 13:17:16 pauldv Exp $
+
+  27 May 2005; <pauldv@gentoo.org> +files/vc-svn.el,
+  -files/vc-svn.el.20050527, subversion-1.2.0.ebuild:
+  Use the vc-svn.el from the 1.1.4 version of subversion. The new one 
+  doesn't work with current emacs.
 
   27 May 2005; <pauldv@gentoo.org> +files/vc-svn.el.20050527,
   subversion-1.2.0.ebuild:
