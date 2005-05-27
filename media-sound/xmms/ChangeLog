@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.174 2005/05/22 17:20:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.175 2005/05/27 02:26:02 eradicator Exp $
+
+*xmms-1.2.10-r15 (27 May 2005)
+
+  27 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r13.ebuild, xmms-1.2.10-r14.ebuild, +xmms-1.2.10-r15.ebuild:
+  Version bump updates xmms with various bugfixes in upstream cvs. Also
+  pulling in xmms-mpg123 even when we have USE=mad because it's just better...
 
   22 May 2005; Guy Martin <gmsoft@gentoo.org> :
   Stable on hppa.

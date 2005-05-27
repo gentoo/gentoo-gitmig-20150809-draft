@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r13.ebuild,v 1.11 2005/04/09 12:33:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r13.ebuild,v 1.12 2005/05/27 02:26:02 eradicator Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -43,7 +43,7 @@ PDEPEND="lirc? ( media-plugins/xmms-lirc )
 	 flac? ( media-libs/flac )
 	 mikmod? ( media-plugins/xmms-mikmod )
 	 mp3? ( mad? ( >=media-plugins/xmms-mad-0.7 )
-	        !mad? ( >=media-plugins/xmms-mpg123-1.2.10-r1 ) )
+	        >=media-plugins/xmms-mpg123-1.2.10-r1 )
 	 oggvorbis? ( >=media-plugins/xmms-vorbis-1.2.10-r1 )
 	 sndfile? ( media-plugins/xmms-sndfile )
 
