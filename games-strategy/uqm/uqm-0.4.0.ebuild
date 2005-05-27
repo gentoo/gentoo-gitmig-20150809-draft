@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.4.0.ebuild,v 1.1 2005/05/27 04:12:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.4.0.ebuild,v 1.2 2005/05/27 16:47:11 mr_bones_ Exp $
 
 inherit games
 
@@ -61,7 +61,6 @@ src_unpack() {
 	sed -i \
 		-e "s/-O3/${CFLAGS}/" build/unix/build.config \
 		|| die "sed build.config failed"
-EOF
 }
 
 src_compile() {
