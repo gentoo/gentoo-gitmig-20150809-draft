@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/ksimus-datarecorder
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ksimus-datarecorder/ChangeLog,v 1.2 2004/12/28 20:15:22 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ksimus-datarecorder/ChangeLog,v 1.3 2005/05/27 13:01:39 phosphan Exp $
+
+  27 May 2005; Patrick Kursawe <phosphan@gentoo.org>
+  ksimus-datarecorder-0.3.6.ebuild:
+  Fixing namespace related stuff, bug #88370
 
 *ksimus-datarecorder-0.3.6 (28 Dec 2004)
 
