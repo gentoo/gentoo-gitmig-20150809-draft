@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.3-r1.ebuild,v 1.2 2005/04/08 16:45:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.3-r1.ebuild,v 1.3 2005/05/27 10:04:05 leonardop Exp $
 
 inherit eutils elisp-common gnome.org
 
 DESCRIPTION="GTK+ Documentation Generator"
-HOMEPAGE="http://www.gtk.org/"
+HOMEPAGE="http://www.gtk.org/gtk-doc/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
 IUSE="emacs"
 
 DEPEND=">=app-text/openjade-1.3.1
