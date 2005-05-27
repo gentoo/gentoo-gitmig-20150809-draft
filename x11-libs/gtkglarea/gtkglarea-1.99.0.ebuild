@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.25 2005/04/11 18:34:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.26 2005/05/27 13:59:10 herbs Exp $
 
 inherit gnome2 gnuconfig multilib
 
@@ -19,6 +19,16 @@ RDEPEND="virtual/libc
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if [ $(get_libdir) != "lib" ] ; then
+		libtoolize --copy --force || die "libtoolize failed"
+		aclocal || die "aclocal failed"
+		autoconf || die "autoconf failed"
+	fi
+}
 
 src_compile() {
 	gnuconfig_update
