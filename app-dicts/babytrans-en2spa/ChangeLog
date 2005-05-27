@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/babytrans-en2spa
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2spa/ChangeLog,v 1.1 2005/05/27 18:47:03 angusyoung Exp $
+
+*babytrans-en2spa-0.1 (27 May 2005)
+
+  27 May 2005; Otavio Piske <angusyoung@gentoo.org> +metadata.xml,
+  +babytrans-en2spa-0.1.ebuild:
+  English to Spanish dictionary for babytrans. Initial release. Closes bug
+  #92835.
+
