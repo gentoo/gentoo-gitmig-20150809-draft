@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmi-interface/jmi-interface-1.0.ebuild,v 1.1 2005/05/03 17:10:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmi-interface/jmi-interface-1.0.ebuild,v 1.2 2005/05/27 15:46:04 luckyduck Exp $
 
 inherit java-pkg
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags=""
+	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "Failed to compile"
