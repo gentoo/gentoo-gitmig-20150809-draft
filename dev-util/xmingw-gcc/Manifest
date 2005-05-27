@@ -5,4 +5,4 @@ MD5 d5a08b81c465636d4c7fd5286c6e6e00 metadata.xml 225
 MD5 8f19d88fb59c78e728862642831634ab files/gcc-3.4.1-includefix.diff 682
 MD5 b78de3c2650dcbee69d9197a2c518e01 files/digest-xmingw-gcc-3.4.2 281
 MD5 a04fdd426a92bfc7c5f621be7c095eca files/digest-xmingw-gcc-3.4.2-r1 281
-MD5 5b2fa879ce2dd3367cbadf3ccca814d1 files/05xmingw 71
+MD5 6bc5f9fc08e5d56d7e7da8e47796753e files/05xmingw 96
