@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.24 2005/05/26 19:24:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.25 2005/05/27 20:30:47 gustavoz Exp $
+
+  27 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> gmime-2.1.14.ebuild:
+  Stable on sparc
 
   26 May 2005; Andrej Kacian <ticho@gentoo.org> gmime-2.1.9-r3.ebuild,
   gmime-2.1.14.ebuild:
