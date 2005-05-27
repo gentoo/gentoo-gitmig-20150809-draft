@@ -1,9 +1,21 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.243 2005/05/26 13:52:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.244 2005/05/27 16:02:46 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.12-r4 (27 May 2005)
+
+  27 May 2005; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.11.12-is-net-fs.patch,
+  +files/baselayout-1.11.12-profile.patch, +baselayout-1.11.12-r4.ebuild:
+  fix is_net_up to work with what was mounted and not what will be mounted
+  fixes #53104
+  
+  gfs is now a recognised network fs - fixes #93911
+  
+  removed bashisms from /etc/profile
 
 *baselayout-1.11.12-r3 (26 May 2005)
 

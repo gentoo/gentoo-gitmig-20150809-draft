@@ -1,0 +1,26 @@
+--- sbin/functions.sh	2005-05-15 21:00:31.000000000 +0100
++++ sbin/functions.sh	2005-05-27 15:54:57.000000000 +0100
+@@ -597,7 +597,7 @@
+ # Network filesystems list for common use in rc-scripts.
+ # This variable is used in is_net_fs and other places such as
+ # localmount.
+-NET_FS_LIST="afs cifs coda ncpfs nfs nfs4 shfs smbfs"
++NET_FS_LIST="afs cifs coda gfs ncpfs nfs nfs4 shfs smbfs"
+ 
+ # bool is_net_fs(path)
+ #
+@@ -606,7 +606,13 @@
+ #   EXAMPLE:  if is_net_fs / ; then ...
+ #
+ is_net_fs() {
+-	local fstype=$(mount -o remount -fv "$1" | awk '{print $(NF-1)}')
++	local fstype
++	# /proc/mounts is always accurate but may not always be available
++	if [[ -e /proc/mounts ]]; then
++		fstype=$( sed -n -e '/^rootfs/!s:.* '"$1"' \([^ ]*\).*:\1:p' /proc/mounts )
++	else
++		fstype=$( mount | sed -n -e 's:.* on '"$1"' type \([^ ]*\).*:\1:p' )
++	fi
+ 	[[ " ${NET_FS_LIST} " == *" ${fstype} "* ]]
+ 	return $?
+ }

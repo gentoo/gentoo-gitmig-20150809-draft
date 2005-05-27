@@ -1,4 +1,4 @@
-MD5 b92d4967e5377d2422a94cbbf308aa66 ChangeLog 55916
+MD5 df8f0ac6c48556650518b16cf088bcdd ChangeLog 56308
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 dca2cf7245292428f62f1ef4f20dd3d9 baselayout-1.11.11.ebuild 18466
 MD5 b43b02e2955a9d3be867e08e5b180d2d baselayout-1.11.9-r1.ebuild 16921
@@ -9,6 +9,7 @@ MD5 23c7218ace814473c88d1fe3416e8b3c baselayout-1.11.11-r3.ebuild 18761
 MD5 d1efa571f732beeecced555fcea80f4c baselayout-1.11.12-r1.ebuild 18555
 MD5 8cedd162fde1c3be0b1adc5ed3070390 baselayout-1.11.12-r2.ebuild 18656
 MD5 a625569a71bae566e1e92d469dc42a35 baselayout-1.11.12-r3.ebuild 18795
+MD5 70fae2f49651c26f942ab58df1ad717b baselayout-1.11.12-r4.ebuild 18986
 MD5 3e593bad04336cf49c1e7978ce5c103f baselayout-1.12.0_alpha2.ebuild 18459
 MD5 e0f1e8c15b2f320808de66cbfa2e7c67 baselayout-1.12.0_alpha2-r1.ebuild 18815
 MD5 c1996677fc298d37f0b92281ab134d90 baselayout-1.9.4-r6.ebuild 16997
@@ -19,7 +20,9 @@ MD5 df9f21385df40467a0bff0b3d1e5285f files/baselayout-1.11.10-selinux-udev.patch
 MD5 a08355653536117877945359de784f6b files/baselayout-1.11.10-iwconfig.patch 724
 MD5 87842ac605d85289eba63ac1c2e16142 files/baselayout-1.11.10-wireless.patch 3215
 MD5 ee24c3f2b233c4b4bb286e3fa8c833ed files/baselayout-1.11.12-exec-dev.patch 545
+MD5 f971d810119eb7f33deba5e540cab2e1 files/baselayout-1.11.12-is-net-fs.patch 903
 MD5 6d37e93641eee6754b93dde3324ae23b files/baselayout-1.11.11-wpa_supplicant.patch 1223
+MD5 90b3f340e3636ccc9dde42fb3a09b23c files/baselayout-1.11.12-profile.patch 2265
 MD5 8ab5b01cfcad4c79d822ff31296000be files/baselayout-1.11.12-ifconfig-cidr.patch 1740
 MD5 67882892030fed7383fe01d89f9539bd files/baselayout-1.11.12-runscript-boot.patch 670
 MD5 cac88e2e2f73778a4a4e79447d857c64 files/baselayout-1.11.12-swapon-quiet.patch 899
@@ -37,6 +40,7 @@ MD5 50ccc6f432f5e941daec74f31f2d2a53 files/digest-baselayout-1.11.11-r3 70
 MD5 ba767b33145b4614cf9b760516c51895 files/digest-baselayout-1.11.12-r1 70
 MD5 ba767b33145b4614cf9b760516c51895 files/digest-baselayout-1.11.12-r2 70
 MD5 ba767b33145b4614cf9b760516c51895 files/digest-baselayout-1.11.12-r3 70
+MD5 ba767b33145b4614cf9b760516c51895 files/digest-baselayout-1.11.12-r4 70
 MD5 45a6a081214e662ab8de935ae12a255e files/digest-baselayout-1.12.0_alpha2 69
 MD5 45a6a081214e662ab8de935ae12a255e files/digest-baselayout-1.12.0_alpha2-r1 69
 MD5 7b2f5e48c4d9056df539620299c20641 files/rc-scripts-1.4.16-splash.patch 11251

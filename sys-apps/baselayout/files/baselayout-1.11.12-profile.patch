@@ -1,0 +1,53 @@
+--- profile	2005-04-29 04:34:01.000000000 +0100
++++ /local/rc-scripts-stable/etc/profile	2005-05-20 23:06:12.000000000 +0100
+@@ -1,12 +1,12 @@
+ # /etc/profile:
+-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/files/baselayout-1.11.12-profile.patch,v 1.1 2005/05/27 16:02:46 uberlord Exp $
++# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/files/baselayout-1.11.12-profile.patch,v 1.1 2005/05/27 16:02:46 uberlord Exp $
+ #
+ # That this file is used by any Bourne-shell derivative to setup the
+ # environment for login shells.
+ 
+ # Load environment settings from profile.env, which is created by
+ # env-update from the files in /etc/env.d
+-if [[ -e /etc/profile.env ]] ; then
++if [ -e /etc/profile.env ] ; then
+ 	. /etc/profile.env
+ fi
+ 
+@@ -21,7 +21,7 @@
+ # It is intentional in the following line to use || instead of -o.
+ # This way the evaluation can be short-circuited and calling whoami is
+ # avoided.
+-if [[ "$EUID" == 0 ]] || [[ "$USER" == "root" ]] ; then
++if [ "$EUID" = "0" ] || [ "$USER" = "root" ] ; then
+ 	PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${ROOTPATH}"
+ else
+ 	PATH="/usr/local/bin:/usr/bin:/bin:${PATH}"
+@@ -30,15 +30,15 @@
+ unset ROOTPATH
+ 
+ # Extract the value of EDITOR
+-[[ -z $EDITOR ]] && EDITOR=$(. /etc/rc.conf 2>/dev/null; echo $EDITOR)
+-[[ -z $EDITOR ]] && EDITOR="/bin/nano"
++[ -z $EDITOR ] && EDITOR="`. /etc/rc.conf 2>/dev/null; echo $EDITOR`"
++[ -z $EDITOR ] && EDITOR="/bin/nano"
+ export EDITOR
+ 
+-if [[ -n ${BASH_VERSION} ]] ; then
++if [ -n "${BASH_VERSION}" ] ; then
+ 	# Newer bash ebuilds include /etc/bash/bashrc which will setup PS1
+ 	# including color.  We leave out color here because not all
+ 	# terminals support it.
+-	if [[ -f /etc/bash/bashrc ]] ; then
++	if [ -f /etc/bash/bashrc ] ; then
+ 		# Bash login shells run only /etc/profile
+ 		# Bash non-login shells run only /etc/bash/bashrc
+ 		# Since we want to run /etc/bash/bashrc regardless, we source it 
+@@ -54,5 +54,5 @@
+ 	# Setup a bland default prompt.  Since this prompt should be useable
+ 	# on color and non-color terminals, as well as shells that don't
+ 	# understand sequences such as \h, don't put anything special in it.
+-	PS1="$(whoami)@$(uname -n | cut -f1 -d.) \$ "
++	PS1="`whoami`@`uname -n | cut -f1 -d.` \$ "
+ fi
