@@ -2,9 +2,11 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 3e5f9d9151b0e949e220754c4466d29c kdebase-3.3.2-r1.ebuild 3843
 MD5 771fb9eceec5b0d9c5bae83af47b7882 kdebase-3.2.3-r3.ebuild 3476
 MD5 f93f6f327b300509d077b23fd30b3332 kdebase-3.4.0.ebuild 3470
-MD5 c039190f11025f4488b7907e7f95617c ChangeLog 35109
+MD5 6b11c4e9b457c390b50bb18cbcb50de4 kdebase-3.4.1.ebuild 3636
+MD5 31c4016e0bb2c340753fb944eba5299a ChangeLog 35274
 MD5 3f1deb74d1f1de330bf7acfaccaf4ead kdebase-3.3.2-r2.ebuild 3627
 MD5 0f2f33973ed5a7183c9eb24339ee57e5 kdebase-3.4.0-r1.ebuild 3639
+MD5 f7875ce8a2e0dde4822449ec3deac74e files/digest-kdebase-3.4.1 68
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
 MD5 473c39b9f37a35e244d5718bf0006716 files/digest-kdebase-3.3.2-r2 68
 MD5 473c39b9f37a35e244d5718bf0006716 files/digest-kdebase-3.3.2-r1 68
@@ -17,6 +19,7 @@ MD5 bd3cde92164bce3a560d0e62a5895757 files/post-3.2.3-kdebase-smb.diff 496
 MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-3.4.0-r1-startkde-gentoo.patch 1284
 MD5 78fb451ad534b71fc3e541e9e5759dac files/kde.desktop 3910
 MD5 7c8b44c0407c6051b0c41301c90fac74 files/kdebase-3.4.0-startkde-gentoo.patch 1319
+MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-3.4.1-startkde-gentoo.patch 1284
 MD5 c6866e71fa56d6d12a18e96499716d2c files/post-3.3.2-kdebase-htmlframes2.patch 1342
 MD5 a60fd1628607d4abdeb930662d126171 files/post-3.2.3-kdebase-htmlframes.patch 6728
 MD5 32b1688a08fad29a985e0d300828ccc8 files/post-3.2.3-kdebase-htmlframes2.patch 1414
