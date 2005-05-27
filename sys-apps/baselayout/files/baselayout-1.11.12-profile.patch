@@ -1,12 +1,6 @@
 --- etc/profile	2005-04-29 04:34:01.000000000 +0100
 +++ etc/profile	2005-05-20 23:06:12.000000000 +0100
-@@ -1,12 +1,12 @@
- # /etc/profile:
--# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/files/baselayout-1.11.12-profile.patch,v 1.2 2005/05/27 17:08:13 uberlord Exp $
-+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/files/baselayout-1.11.12-profile.patch,v 1.2 2005/05/27 17:08:13 uberlord Exp $
- #
- # That this file is used by any Bourne-shell derivative to setup the
- # environment for login shells.
+@@ -1,7 +1,7 @@
  
  # Load environment settings from profile.env, which is created by
  # env-update from the files in /etc/env.d
