@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20050314.ebuild,v 1.1 2005/05/19 22:51:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20050314.ebuild,v 1.2 2005/05/27 18:01:02 cretin Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha"
+KEYWORDS="x86 amd64 ppc alpha"
 IUSE=""
 
 DEPEND=">=dev-libs/elfutils-0.100
