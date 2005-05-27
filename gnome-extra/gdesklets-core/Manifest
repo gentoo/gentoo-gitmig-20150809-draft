@@ -1,7 +1,8 @@
 MD5 9f6b8d849cbbf9cb6cfaf6a1a166e773 gdesklets-core-0.35_rc1.ebuild 2095
 MD5 7e51921ee4c07e4fa9fbc277cd1d3d6b gdesklets-core-0.34.3.ebuild 2142
 MD5 7d317df024bb6183640d3d333695ee18 gdesklets-core-0.26.2.ebuild 1876
-MD5 1687d9637aed16da8fa07fa3c4e708c6 ChangeLog 5967
+MD5 691edd1ab85f3afe8053de054a4aebce gdesklets-core-0.35.ebuild 2101
+MD5 2a4fa26df15c5041afbd27d830322bbf ChangeLog 6095
 MD5 81bf4f817cbe8580ed9cfc1663b55ca8 gdesklets-core-0.33.1.ebuild 2423
 MD5 84678aa8329ed7cbd239468ab3f7ee1a gdesklets-core-0.26.1.ebuild 1875
 MD5 a175a96fb7e85b152ade748dbd2360e0 metadata.xml 213
@@ -12,6 +13,7 @@ MD5 312fdc938b56dedf0fab04efe6266cb1 files/digest-gdesklets-core-0.33.1 131
 MD5 8293012469f5859ebfb450e81f87a165 files/digest-gdesklets-core-0.34.3 131
 MD5 ac3a171744ef9b36bed102088be244a9 files/digest-gdesklets-core-0.35_rc1 132
 MD5 ac425079423c7c93f931c3f4df0dc598 files/digest-gdesklets-core-0.32 67
+MD5 66ab1d1c9445bb382edafdb15eee161d files/digest-gdesklets-core-0.35 129
 MD5 653dab9b954037352e3fe6e7eec83bce files/gdesklets-control-getid 815
 MD5 8e873c3bd94ee7756f3caf1c0f5b9398 files/dst-fix-0.34.3.patch 1269
 MD5 01751d3aa9192793a33c02d2126192c1 files/gdesklets-displays.desktop 230
