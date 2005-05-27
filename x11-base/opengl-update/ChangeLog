@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.93 2005/05/15 14:57:54 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.94 2005/05/27 06:49:38 josejx Exp $
+
+  27 May 2005; Joseph Jezak <josejx@gentoo.org> opengl-update-2.2.1.ebuild:
+  Marked ppc stable.
 
   15 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
   opengl-update-2.2.1.ebuild:
