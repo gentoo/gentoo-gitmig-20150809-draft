@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/xmingw-binutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-binutils/ChangeLog,v 1.6 2005/02/07 19:24:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-binutils/ChangeLog,v 1.7 2005/05/27 17:32:05 cretin Exp $
+
+*xmingw-binutils-2.15.94.20050118.1 (27 May 2005)
+
+  27 May 2005; Stefan Jones <cretin@gentoo.org>
+  New version
 
   07 Feb 2005; Simon Stelling <blubb@gentoo.org>
   xmingw-binutils-2.15.90.0.2.ebuild:

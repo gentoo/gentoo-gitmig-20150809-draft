@@ -1,30 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-binutils/xmingw-binutils-2.14.90.0.6.ebuild,v 1.5 2005/02/07 19:24:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-binutils/xmingw-binutils-2.15.94.20050118.1.ebuild,v 1.1 2005/05/27 17:32:05 cretin Exp $
 
 inherit eutils
 
-MY_P=${P/xmingw-/}
+MY_P=binutils-2.15.94-20050118-1
 S=${WORKDIR}/${MY_P}
-MINGW_PATCH=binutils-2.14.90-20030807-1-src.diff.gz
 
 DESCRIPTION="Tools necessary to build Win32 programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
-SRC_URI="mirror://kernel/linux/devel/binutils/${MY_P}.tar.bz2
-		mirror://sourceforge/mingw/${MINGW_PATCH}"
+SRC_URI="mirror://sourceforge/mingw/${MY_P}-src.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=""
-
-src_unpack() {
-	unpack ${MY_P}.tar.bz2
-	cd ${S}
-	epatch "${DISTDIR}/${MINGW_PATCH}"
-}
 
 src_compile() {
 	./configure \
