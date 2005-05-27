@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.157 2005/05/26 02:42:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.158 2005/05/27 23:41:54 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -123,11 +123,10 @@ XGCC="${WORKDIR}/build/gcc/xgcc -B${WORKDIR}/build/gcc"
 
 #---->> SLOT+IUSE logic <<----
 if [[ ${ETYPE} == "gcc-library" ]] ; then
-	IUSE="nls build uclibc"
+	IUSE="nls build"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
 	IUSE="static nls bootstrap build multislot multilib gcj gtk fortran nocxx objc hardened n32 n64 ip28 altivec"
-	[[ -n ${UCLIBC_VER} ]] && IUSE="${IUSE} uclibc"
 	[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
 	[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
 	[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
@@ -900,8 +899,8 @@ gcc_src_unpack() {
 	gcc_version_patch "${version_string}"
 
 	# Misdesign in libstdc++ (Redhat)
-	if [[ ${GCCMAJOR} -ge 3 ]] ; then
-		cp -pPR ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
+	if [[ ${GCCMAJOR} -ge 3 ]] && [[ -e ${S}/libstdc++-v3/config/cpu/i486/atomicity.h ]] ; then
+		cp -pPR "${S}"/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 	fi
 
 	# disable --as-needed from being compiled into gcc specs
@@ -1137,12 +1136,13 @@ gcc_do_make() {
 	# Set make target to $1 if passed
 	[[ -n $1 ]] && GCC_MAKE_TARGET="$1"
 	# default target
-	if is_crosscompile; then
+	if is_crosscompile ; then
 		# 3 stage bootstrapping doesnt quite work when you cant run the
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-all}
-	elif [[ $(tc-arch) == "x86" || $(tc-arch) == "amd64" ]] || use ppc64 \
-	     && [[ ${GCC_BRANCH_VER} != "3.3" ]] ; then
+	elif [[ $(tc-arch) == "x86" || $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ]] \
+	     && [[ ${GCCMAJOR} -gt 3 || ${GCCMAJOR} -eq 3 && ${GCCMINOR} -gt 2 ]]
+	then
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-profiledbootstrap}
 	else
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-bootstrap-lean}
@@ -1221,23 +1221,25 @@ gcc_do_filter_flags() {
 	# it is safe.  This is especially true for gcc 3.3 + 3.4
 	replace-flags -O? -O2
 
-	# ...sure, why not?
+	# ... sure, why not?
 	strip-unsupported-flags
 
 	# dont want to funk ourselves
 	filter-flags '-mabi*' -m32 -m64
 
 	case ${GCC_BRANCH_VER} in
-	3.3)
+	3.2|3.3)
 		case $(tc-arch) in
-			x86|amd64) filter-flags '-mtune=*';;
+			x86)   filter-flags '-mtune=*';;
+			amd64) filter-flags '-mtune=*'
+			       replace-cpu-flags k8 athlon64 opteron i686;;
 		esac
-	;;
+		;;
 	3.4|4.*)
 		case $(tc-arch) in
 			x86|amd64) filter-flags '-mcpu=*';;
 		esac
-	;;
+		;;
 	esac
 
 	# Compile problems with these (bug #6641 among others)...
@@ -1261,7 +1263,7 @@ gcc_do_filter_flags() {
 	# BOOT_CFLAGS (not used in creating a crosscompile gcc):
 	#   used by xgcc for building stage2/3 compiler
 
-	if is_crosscompile; then
+	if is_crosscompile ; then
 		# Set this to something sane for both native and target
 		CFLAGS="-O2 -pipe"
 
@@ -2013,7 +2015,7 @@ is_multilib() {
 
 is_uclibc() {
 	[[ ${GCCMAJOR} -lt 3 ]] && return 1
-	use uclibc || [[ ${CTARGET} == *-uclibc ]]
+	[[ ${CTARGET} == *-uclibc ]]
 }
 
 is_cxx() {
