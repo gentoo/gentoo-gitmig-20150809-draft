@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyreverse
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.8 2005/05/22 20:21:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.9 2005/05/27 17:42:50 liquidx Exp $
+
+*pyreverse-0.5.1 (27 May 2005)
+
+  27 May 2005; Alastair Tse <liquidx@gentoo.org> +pyreverse-0.5.1.ebuild:
+  version bump
 
   22 May 2005; Jason Wever <weeve@gentoo.org> pyreverse-0.4.2-r1.ebuild:
   Added ~sparc keyword.

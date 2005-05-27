@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.16 2005/05/22 20:16:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.17 2005/05/27 17:40:13 liquidx Exp $
+
+*logilab-common-0.10.0 (27 May 2005)
+
+  27 May 2005; Alastair Tse <liquidx@gentoo.org>
+  -logilab-common-0.4.4.ebuild, -logilab-common-0.9.0.ebuild,
+  -logilab-common-0.9.1.ebuild, logilab-common-0.9.3.ebuild,
+  +logilab-common-0.10.0.ebuild:
+  version bump
 
   22 May 2005; Jason Wever <weeve@gentoo.org> logilab-common-0.9.3.ebuild:
   Added ~sparc keyword.
