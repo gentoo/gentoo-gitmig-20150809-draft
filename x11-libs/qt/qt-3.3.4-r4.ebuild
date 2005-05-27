@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.1 2005/05/27 13:51:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.2 2005/05/27 14:59:14 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -49,15 +49,30 @@ pkg_setup() {
 
 	export QTDIR=${S}
 
-	if useq ppc-macos ; then
-		export PLATFORM=darwin-g++
-		export DYLD_LIBRARY_PATH="${QTDIR}/lib:/usr/X11R6/lib:${DYLD_LIBRARY_PATH}"
-		export INSTALL_ROOT=""
-	else
-		# probably this should be 'linux-g++-64' for 64bit archs
-		# in a fully multilib environment (no compatibility symlinks)
-		export PLATFORM=linux-g++
+	PLATCXX="notsupported"
+	CXX=$(tc-getCXX)
+	if [[ ${CXX/g++/} != ${CXX} ]]; then
+		PLATCXX="g++"
+	elif [[ ${CXX/icc/} != ${CXX} ]]; then
+		PLATCXX="icc"
 	fi
+
+	PLATNAME="notsupported"
+	if use kernel_linux; then
+		PLATNAME="linux"
+	elif use kernel_FreeBSD && use elibc_FreeBSD; then
+		PLATNAME="freebsd"
+	elif use ppc-macos; then
+		PLATNAME=macx
+#		export DYLD_LIBRARY_PATH="${QTDIR}/lib:/usr/X11R6/lib:${DYLD_LIBRARY_PATH}"
+#		export INSTALL_ROOT=""
+	elif use kernel_Darwin && use elibc_Darwin; then
+		PLATNAME="darwin"
+	fi
+
+	# probably this should be '*-64' for 64bit archs
+	# in a fully multilib environment (no compatibility symlinks)
+	export PLATFORM="${PLATNAME}-${PLATCXX}"
 }
 
 src_unpack() {
@@ -65,8 +80,7 @@ src_unpack() {
 
 	cd ${S}
 
-	cp configure configure.orig
-	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
+	sed -i -e 's:read acceptance:acceptance=yes:' configure
 
 	epatch ${FILESDIR}/qt-no-rpath-uic.patch
 	epatch ${FILESDIR}/qt-no-rpath.patch
@@ -287,9 +301,10 @@ src_install() {
 	sed -e "s:${S}:${QTBASE}:g" \
 		${S}/.qmake.cache > ${D}${QTBASE}/.qmake.cache
 
+	sed -i -e "s:linux-g++:${PLATFORM}:" ${D}/etc/env.d/45qt3
+
 	if use ppc-macos ; then
-		dosed "s:linux-g++:${PLATFORM}:" /etc/env.d/45qt3 \
-			"s:\$(QTBASE):\$(QTDIR):g" ${QTBASE}/mkspecs/${PLATFORM}/qmake.conf \
+		dosed "s:\$(QTBASE):\$(QTDIR):g" ${QTBASE}/mkspecs/${PLATFORM}/qmake.conf \
 			"s:${S}:${QTBASE}:g" ${QTBASE}/mkspecs/${PLATFORM}/qmake.conf ${QTBASE}/lib/libqt-mt.la || die
 	fi
 
