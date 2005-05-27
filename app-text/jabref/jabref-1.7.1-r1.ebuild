@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.7.1.ebuild,v 1.1 2005/04/11 19:09:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.7.1-r1.ebuild,v 1.1 2005/05/27 21:03:33 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -53,4 +53,7 @@ src_install() {
 	echo '$(java-config -J) -classpath $(java-config -p commons-httpclient,commons-logging,antlr,jgoodies-forms,jgoodies-looks-1.2,spin,jabref) net.sf.jabref.JabRef "$@"' >> ${PN}
 
 	dobin ${PN}
+
+	newicon src/images/JabRef-icon.png JabRef-icon.png
+	make_desktop_entry jabref JabRef JabRef-icon.png Office
 }
