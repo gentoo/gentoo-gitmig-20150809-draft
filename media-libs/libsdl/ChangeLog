@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.78 2005/04/25 01:10:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.79 2005/05/27 06:30:00 josejx Exp $
+
+  27 May 2005; Joseph Jezak <josejx@gentoo.org> libsdl-1.2.8-r1.ebuild:
+  Marked ppc stable.
 
   25 Apr 2005; Martin Schlemmer <azarah@gentoo.org> +files/1.2.8-gcc4.patch,
   libsdl-1.2.8-r1.ebuild:
