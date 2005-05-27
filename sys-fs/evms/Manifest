@@ -1,18 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b0eb2aef1b8cc4459657b6fa59c29277 ChangeLog 7807
+MD5 681ab467a145502369043cf7f4e66475 ChangeLog 7954
 MD5 6f3337a11ad0aaa0602e5c120248c7ec evms-1.2.1-r1.ebuild 1953
-MD5 cc073f839a78a15108a784b378e0f741 evms-2.5.2.ebuild 2154
 MD5 59d559390ca6a6d365a5d6c3012c0343 metadata.xml 387
+MD5 de8c164ad9b8d2218813f6fbfaebd022 evms-2.5.2.ebuild 2288
 MD5 cd670e457535a10c1c329aea559f7696 files/digest-evms-1.2.1-r1 63
-MD5 996ea6d43e86cc65954540da80e56061 files/digest-evms-2.5.2 63
+MD5 5eb632aa94b0537e1983f935e3706d74 files/evms2-start.sh 382
 MD5 8f95e61903246ea287b1025913864ad9 files/evms-init 1000
 MD5 bef1ae81a93d9fe33c78e7883409a889 files/evms2-init 379
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCXFgpArHZZzCEUG0RAj0kAJ9BDAZehmztSGQ/w4GE3hhL1EwGvgCfakgU
-fR9+0KqgrwqdKt07qwgMsAQ=
-=Ey1z
------END PGP SIGNATURE-----
+MD5 996ea6d43e86cc65954540da80e56061 files/digest-evms-2.5.2 63

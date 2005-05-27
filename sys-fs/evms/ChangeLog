@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/evms
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.31 2005/04/12 23:22:05 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.32 2005/05/27 03:07:46 vapier Exp $
+
+  27 May 2005; Mike Frysinger <vapier@gentoo.org> +files/evms2-start.sh,
+  evms-2.5.2.ebuild:
+  Add basic evms2 start addon #50711 by Asbjorn Sannes.
 
   12 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
   -evms-2.3.4-r1.ebuild:
