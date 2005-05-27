@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/dvd-slideshow-0.7.0.ebuild,v 1.1 2005/02/22 18:33:49 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/dvd-slideshow-0.7.0.ebuild,v 1.2 2005/05/27 16:21:57 luckyduck Exp $
 
 MY_P="${PN}_${PV}"
 
 DESCRIPTION="DVD Slideshow - Turn your pictures into a dvd with menus!"
 HOMEPAGE="http://dvd-slideshow.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dvd-slideshow/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND=">=media-video/dvdauthor-0.6.9
@@ -21,7 +21,8 @@ DEPEND=">=media-video/dvdauthor-0.6.9
 	media-video/transcode
 	media-video/ffmpeg
 	media-sound/lame
-	media-sound/toolame"
+	media-sound/toolame
+	media-gfx/jhead"
 
 S="${WORKDIR}/${MY_P}"
 
