@@ -3,8 +3,8 @@ MD5 5659184e067dbf68af9e9251837332c5 alsa-lib-0.9.8.ebuild 1584
 MD5 255565a888541274148ccb6e1b226eb5 alsa-lib-1.0.7.ebuild 2051
 MD5 c840b6d57683f228d3db41a4091e78a5 alsa-lib-1.0.2.ebuild 1609
 MD5 a3d1c43422ec257a1003e0a1d5004269 alsa-lib-1.0.9_rc3.ebuild 1747
-MD5 63b0d80c22b838e49c3f4100c4aec950 alsa-lib-1.0.9.ebuild 1745
-MD5 4ba5fe2d3bacbb0938c21dca7930f3f4 ChangeLog 17363
+MD5 007bfdda90288092146e568615cf1f7a alsa-lib-1.0.9.ebuild 1740
+MD5 3c9226195acf2372bd5a601e9b33a2d8 ChangeLog 17362
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 afc44aabeb36448990c19eaa9b3dfce0 files/alsa-lib-mixer.patch 264
 MD5 190a6c4ffe2eef20e3095ab70ea34941 files/configure.diff 586
