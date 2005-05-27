@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.16 2005/05/27 15:32:10 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.17 2005/05/27 22:17:40 weeve Exp $
+
+  27 May 2005; Jason Wever <weeve@gentoo.org> wordpress-1.5.1.2.ebuild:
+  Stable on SPARC wrt security bug #88926.
 
   27 May 2005; Aaron Kulbe <superlag@gentoo.org> wordpress-1.5.1.2.ebuild:
   Since this is a security release, marking stable on amd64 and x86
