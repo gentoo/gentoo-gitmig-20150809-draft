@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-crypto
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.12 2005/03/29 13:40:51 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.13 2005/05/27 00:02:46 luckyduck Exp $
+
+  27 May 2005; Jan Brinkmann <luckyduck@gentoo.org> gnu-crypto-2.0.1.ebuild:
+  stable on ppc
 
   29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> gnu-crypto-2.0.1.ebuild:
   stable on amd64
