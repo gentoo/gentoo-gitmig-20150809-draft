@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4562b1e4fa84c38ab6dda7bc7f2f14b2 vnet-0.03.ebuild 564
+MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
+MD5 6f2e974683139025454c289781d6a017 ChangeLog 331
+MD5 ec41c5cccfd91f18dd09b00c755e4283 files/digest-vnet-0.03 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCls+EmPFBzbX68WERAhnWAJ46FKau0qhWcqGncXHpqzOCcr776gCePh7N
+MyXGu8CsyboOUoZMgF69rzM=
+=fXAj
+-----END PGP SIGNATURE-----
