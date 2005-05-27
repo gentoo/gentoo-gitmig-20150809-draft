@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.160 2005/05/12 16:06:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.161 2005/05/27 08:54:31 greg_g Exp $
+
+*kdegraphics-3.4.1 (27 May 2005)
+
+  27 May 2005; Gregorio Guidi <greg_g@gentoo.org> +kdegraphics-3.4.1.ebuild:
+  New version.
 
   12 May 2005; Aron Griffis <agriffis@gentoo.org> kdegraphics-3.4.0.ebuild:
   add ~ia64

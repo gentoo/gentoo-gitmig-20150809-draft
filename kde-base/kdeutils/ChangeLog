@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.114 2005/05/10 22:36:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.115 2005/05/27 08:57:16 greg_g Exp $
+
+*kdeutils-3.4.1 (27 May 2005)
+
+  27 May 2005; Gregorio Guidi <greg_g@gentoo.org> +kdeutils-3.4.1.ebuild:
+  New version.
 
   10 May 2005; Aron Griffis <agriffis@gentoo.org> kdeutils-3.4.0.ebuild:
   add ~ia64

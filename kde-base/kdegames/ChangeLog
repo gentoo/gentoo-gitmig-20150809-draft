@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.116 2005/05/10 23:02:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.117 2005/05/27 08:53:30 greg_g Exp $
+
+*kdegames-3.4.1 (27 May 2005)
+
+  27 May 2005; Gregorio Guidi <greg_g@gentoo.org> +kdegames-3.4.1.ebuild:
+  New version.
 
   10 May 2005; Aron Griffis <agriffis@gentoo.org> kdegames-3.4.0.ebuild:
   add ~ia64
