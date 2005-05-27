@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 15c4260b39deda579a3563c58aae5f36 zinf-2.2.5-r1.ebuild 2301
+MD5 7f151bc2b0ae9f3d0b90ae239aca8dbb ChangeLog 4995
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 ce9ba9ecef011c48da0402ddb61681f9 zinf-2.2.5-r1.ebuild 2310
-MD5 d79ad4983bed2742cf2dfe9e2d25755d ChangeLog 4788
-MD5 e4ec1ffc5f5099848c9d55df07d85d5a files/digest-zinf-2.2.5-r1 63
-MD5 fe732feaa32b4d6a4f23daa309056288 files/zinf-2.2.3-id3.patch.bz2 12466
-MD5 2a5b9b0fb8d24a260c166417a2b2fd95 files/zinf-2.2.4-pref.patch 483
 MD5 5f73b5d7a0fb9346d25c7f59e71509b8 files/zinf-2.2.5-cdplay.patch 1042
+MD5 e4ec1ffc5f5099848c9d55df07d85d5a files/digest-zinf-2.2.5-r1 63
+MD5 2a5b9b0fb8d24a260c166417a2b2fd95 files/zinf-2.2.4-pref.patch 483
+MD5 fe732feaa32b4d6a4f23daa309056288 files/zinf-2.2.3-id3.patch.bz2 12466
 MD5 ab18405737d54fde371a5e1ceb8dc3e7 files/zinf-2.2.5-configure.patch 3782
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdfThArHZZzCEUG0RAg1+AJ9ZmCWeQ52kBChmDFVV3inAcQ3mjgCfVgaA
-hhBAdOuVttJ+UtKf07qP58g=
-=EXke
------END PGP SIGNATURE-----

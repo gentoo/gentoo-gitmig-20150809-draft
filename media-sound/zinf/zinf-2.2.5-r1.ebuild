@@ -1,40 +1,43 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.8 2004/10/07 03:06:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.9 2005/05/27 15:13:05 luckyduck Exp $
 
 inherit kde-functions eutils flag-o-matic
 
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support, previously called FreeAmp"
 HOMEPAGE="http://www.zinf.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 -sparc"
-IUSE="debug esd X gtk oggvorbis gnome arts alsa nls ipv6"
+KEYWORDS="amd64 x86 -sparc"
+IUSE="alsa arts debug esd gnome gtk ipv6 nls vorbis xosd X"
+
+RESTRICT="primaryuri"
 
 RDEPEND=">=dev-libs/glib-2.0.0
 	sys-libs/gdbm
 	sys-libs/zlib
 	>=sys-libs/ncurses-5.2
 	>=media-libs/musicbrainz-1.0.1
-	X? ( virtual/x11 )
-	esd? ( media-sound/esound )
-	gtk? ( >=x11-libs/gtk+-2.0.0 )
-	gnome? ( =gnome-base/orbit-0* )
-	oggvorbis? ( media-libs/libvorbis )
 	alsa? ( >=media-libs/alsa-lib-0.9.8 )
-	arts? ( kde-base/arts )"
+	arts? ( kde-base/arts )
+	esd? ( media-sound/esound )
+	gnome? ( =gnome-base/orbit-0* )
+	gtk? ( >=x11-libs/gtk+-2.0.0 )
+	vorbis? ( media-libs/libvorbis )
+	xosd? ( x11-libs/xosd )
+	X? ( virtual/x11 )"
 
 # When updating next, check boost to see if the newer versions fix compilation
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )
-	nls? ( sys-devel/gettext )
-	>=media-libs/id3lib-3.8.0
-	dev-libs/boost
 	dev-db/metakit
+	dev-lang/perl
+	dev-libs/boost
+	>=media-libs/id3lib-3.8.0
 	>=sys-devel/automake-1.7
-	dev-lang/perl"
+	nls? ( sys-devel/gettext )
+	x86? ( dev-lang/nasm )"
 
 src_unpack() {
 	unpack ${A}
@@ -58,20 +61,12 @@ src_unpack() {
 	ebegin "Running autoconf (${WANT_AUTOCONF})"
 	autoconf
 	eend $?
+
+	# fix #94149
+	libtoolize --copy --force
 }
 
 src_compile() {
-	local myconf="--enable-cmdline"
-
-	use x86 || myconf="${myconf} --disable-x86opts"
-
-	myconf="${myconf} `use_enable debug`"
-	myconf="${myconf} `use_enable esd`"
-	myconf="${myconf} `use_enable arts`"
-	myconf="${myconf} `use_enable alsa`"
-	myconf="${myconf} `use_enable gnome corba`"
-	myconf="${myconf} `use_enable ipv6`"
-
 	if use amd64; then
 		replace-flags -O? -O
 		append-flags -frerun-cse-after-loop
@@ -82,8 +77,17 @@ src_compile() {
 		export ARTSCCONFIG="$KDEDIR/bin/artsc-config"
 	fi
 
-	econf ${myconf} || die
-	make || die
+	econf \
+		$(use_enable alsa) \
+		$(use_enable arts) \
+		$(use_enable debug) \
+		$(use_enable esd) \
+		$(use_enable ipv6) \
+		$(use_enable gnome corba) \
+		$(use_enable x86 x86opts) \
+		$(use_enable xosd) \
+		--enable-cmdline || die "configure failed"
+	make || die "make failed"
 }
 
 src_install() {

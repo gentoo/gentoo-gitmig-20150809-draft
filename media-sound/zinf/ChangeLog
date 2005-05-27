@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/zinf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.31 2004/10/20 05:17:11 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.32 2005/05/27 15:13:05 luckyduck Exp $
+
+  27 May 2005; Jan Brinkmann <luckyduck@gentoo.org> zinf-2.2.5-r1.ebuild:
+  added libtoolize call, fixes #94149. also introduced support for the xosd
+  useflag, fixes #94143. cleaned up the ebuild generally
 
   19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> -zinf-2.2.3.ebuild,
   -zinf-2.2.4.ebuild:
