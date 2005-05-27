@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/knetload
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.24 2005/05/08 09:46:05 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.25 2005/05/27 16:36:40 flameeyes Exp $
+
+  27 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  knetload-3.0_alpha2.ebuild:
+  Remove configure file to force redoing all the auto* stuff which seems to
+  break on some systems.
 
   08 May 2005; Gregorio Guidi <greg_g@gentoo.org>
   knetload-3.0_alpha2.ebuild:

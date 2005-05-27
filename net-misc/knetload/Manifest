@@ -1,6 +1,16 @@
-MD5 64e213d0db015eb97e16b31ec6e748c3 metadata.xml 254
-MD5 70d8270ec2b560311170afe3e111baa7 knetload-3.0_alpha2.ebuild 757
-MD5 36e596aef9576c29e8cacdffe4aa2275 ChangeLog 3441
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 00296a39b3b8379b7df25835c9d3b6a5 ChangeLog 3629
 MD5 42dbc9370b5644dad6c4e7f5e420dac0 knetload-2.3.ebuild 484
-MD5 bd89b61f8ce47d33f95143bdfbce4738 files/digest-knetload-3.0_alpha2 68
+MD5 52401b08e2060f8805d661b657e25af8 knetload-3.0_alpha2.ebuild 813
+MD5 64e213d0db015eb97e16b31ec6e748c3 metadata.xml 254
 MD5 fcd58fb6225a7442b0149f0fbb921970 files/digest-knetload-2.3 65
+MD5 bd89b61f8ce47d33f95143bdfbce4738 files/digest-knetload-3.0_alpha2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCl0uqj5H05b2HAEkRAnvOAJ9QcPzfnrtH0JhzYyyva6yS4M1zugCbBhR6
+4zRpH+W4zKspAmEE8eZjhcI=
+=8AWu
+-----END PGP SIGNATURE-----
