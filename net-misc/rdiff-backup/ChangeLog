@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdiff-backup
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.34 2005/05/02 23:04:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.35 2005/05/27 07:50:58 pylon Exp $
+
+  27 May 2005; Lars Weiler <pylon@gentoo.org> rdiff-backup-0.13.4.ebuild:
+  Stable on ppc.
 
   02 May 2005; Heinrich Wendel <lanius@gentoo.org>
   rdiff-backup-0.12.7.ebuild, rdiff-backup-0.13.4.ebuild:
