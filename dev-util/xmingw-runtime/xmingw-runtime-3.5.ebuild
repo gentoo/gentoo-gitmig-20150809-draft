@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-runtime/xmingw-runtime-3.5.ebuild,v 1.2 2005/02/09 17:13:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-runtime/xmingw-runtime-3.5.ebuild,v 1.3 2005/05/27 17:34:59 cretin Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mingw/${MY_P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 DEPEND="dev-util/xmingw-binutils
 		dev-util/xmingw-gcc
