@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.8 2005/05/25 21:23:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.9 2005/05/27 14:43:23 carlo Exp $
+
+  27 May 2005; Carsten Lohrke <carlo@gentoo.org> +files/kdeeject-3.4.0,
+  +files/kdeeject-3.4.1, kdialog-3.4.0.ebuild, kdialog-3.4.1.ebuild:
+  install kdeeject with kdialog, #89867
 
 *kdialog-3.4.1 (25 May 2005)
 
