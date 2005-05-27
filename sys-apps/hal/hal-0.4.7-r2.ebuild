@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7-r2.ebuild,v 1.3 2005/05/23 20:34:55 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7-r2.ebuild,v 1.4 2005/05/27 21:51:21 foser Exp $
 
 inherit eutils python linux-info versionator flag-o-matic
 
@@ -10,11 +10,11 @@ SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~ppc64"
+KEYWORDS="x86 ~amd64 ~ia64 ~ppc ~ppc64"
 IUSE="debug pcmcia doc livecd"
 
 RDEPEND=">=dev-libs/glib-2.4
-	>=sys-apps/dbus-0.22-r1
+	=sys-apps/dbus-0.23*
 	dev-libs/expat
 	sys-fs/udev
 	sys-apps/hotplug
@@ -33,10 +33,16 @@ DEPEND="${RDEPEND}
 # We need to run at least a 2.6.10 kernel, this is a
 # way to ensure that to some extent
 pkg_setup() {
+
 	use livecd && return
-	linux-info_pkg_setup
-	kernel_is ge 2 6 10 \
-		|| die "You need a 2.6.10 or newer kernel to build this package"
+
+	if get_version; then
+		kernel_is ge 2 6 10 && return
+	elif get_running_version; then
+		kernel_is ge 2 6 10 && return
+	fi
+
+	die "You need to run a 2.6.10 or newer kernel to build & use this pack"
 
 }
 
