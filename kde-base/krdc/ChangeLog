@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krdc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.9 2005/05/25 21:23:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.10 2005/05/28 10:43:47 greg_g Exp $
+
+  28 May 2005; Gregorio Guidi <greg_g@gentoo.org> krdc-3.4.1.ebuild:
+  Depend on rdesktop >= 1.4.1 (#94036).
 
 *krdc-3.4.1 (25 May 2005)
 

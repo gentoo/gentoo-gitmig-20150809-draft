@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-3.4.1.ebuild,v 1.2 2005/05/26 17:14:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-3.4.1.ebuild,v 1.3 2005/05/28 10:43:47 greg_g Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -13,7 +13,7 @@ IUSE="rdesktop slp"
 DEPEND=">=dev-libs/openssl-0.9.6b
 	slp? ( net-libs/openslp )"
 RDEPEND="${DEPEND}
-	rdesktop? ( >=net-misc/rdesktop-1.3.1-r1 )"
+	rdesktop? ( >=net-misc/rdesktop-1.4.1 )"
 
 src_compile() {
 	myconf="$myconf `use_enable slp`"
