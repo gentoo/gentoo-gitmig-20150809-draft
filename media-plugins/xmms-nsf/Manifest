@@ -1,6 +1,16 @@
-MD5 1b52064d24e6651db0a8630dc4889d55 ChangeLog 1199
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6799259b954706436a735b5d699c4868 xmms-nsf-0.0.3.ebuild 927
+MD5 6941a5f7e5b0aa076f9b990521b97a87 ChangeLog 1322
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 315e77c11f6a67eb4e22cda5edd54407 xmms-nsf-0.0.3.ebuild 990
+MD5 8b5a150abf181904c2075418e276dc27 files/xmms-nsf-0.0.3-PIC.patch 1109
 MD5 97224410e57c687737a5624e6ca43faa files/digest-xmms-nsf-0.0.3 66
 MD5 a4b5f9490c67aee61044efdc53229a3d files/xmms-nsf-0.0.3-gcc3.patch 19364
-MD5 8b5a150abf181904c2075418e276dc27 files/xmms-nsf-0.0.3-PIC.patch 1109
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCmQAk06ebR+OMO78RAvPrAJ9s3BTUA3Oh+Ja8KADPNjh/Cs77vwCfQBPl
+jeS3mz6B3wwxnYeH8XjZZg8=
+=aeNC
+-----END PGP SIGNATURE-----

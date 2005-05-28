@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nsf/xmms-nsf-0.0.3.ebuild,v 1.13 2005/03/11 14:23:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nsf/xmms-nsf-0.0.3.ebuild,v 1.14 2005/05/28 23:34:47 luckyduck Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -27,14 +27,11 @@ src_unpack() {
 	gnuconfig_update
 
 	export WANT_AUTOMAKE=1.4
-	export WANT_AUTOCONF=2.5
-	aclocal || die
 	automake || die
-	autoconf || die
 	elibtoolize
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
