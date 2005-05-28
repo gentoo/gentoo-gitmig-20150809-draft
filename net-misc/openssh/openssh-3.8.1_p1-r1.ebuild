@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.17 2005/05/02 21:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.18 2005/05/28 01:28:26 vapier Exp $
 
-inherit eutils flag-o-matic ccc gnuconfig
+inherit eutils flag-o-matic ccc
 
 # Make it more portable between straight releases
 # and _p? releases.
@@ -10,37 +10,37 @@ PARCH=${P/_/}
 
 X509_PATCH="${PARCH}+x509h.diff.gz"
 SELINUX_PATCH="openssh-3.7.1_p1-selinux.diff"
+LDAP_PATCH="${PARCH/-/-lpk-}-0.3.4.patch"
 
-S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
+	ldap? ( http://www.opendarwin.org/en/projects/openssh-lpk/files/${LDAP_PATCH} )
 	X509? ( http://roumenpetrov.info/openssh/x509h/${X509_PATCH} )"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
-IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap smartcard uclibc"
+IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap smartcard nocxx"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
-RDEPEND="virtual/libc
-	pam? ( >=sys-libs/pam-0.73
-		>=sys-apps/shadow-4.0.2-r2 )
-	!mips? ( kerberos? ( virtual/krb5 ) )
+RDEPEND="pam? ( >=sys-libs/pam-0.73 )
+	kerberos? ( virtual/krb5 )
 	selinux? ( sys-libs/libselinux )
-	!ppc64? ( skey? ( >=app-admin/skey-1.1.5-r1 ) )
+	skey? ( >=app-admin/skey-1.1.5-r1 )
+	ldap? ( net-nds/openldap )
 	>=dev-libs/openssl-0.9.6d
 	>=sys-libs/zlib-1.1.4
 	x86? ( smartcard? ( dev-libs/opensc ) )
 	!ppc64? ( tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) )"
 DEPEND="${RDEPEND}
 	virtual/os-headers
-	dev-lang/perl
-	!uclibc? ( sys-apps/groff )
-	>=sys-apps/sed-4
+	!nocxx? ( sys-apps/groff )
 	sys-devel/autoconf"
 PROVIDE="virtual/ssh"
+
+S=${WORKDIR}/${PARCH}
 
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
@@ -53,18 +53,29 @@ src_unpack() {
 	use chroot && epatch ${FILESDIR}/${P}-chroot.patch.bz2
 	use X509 && epatch ${DISTDIR}/${X509_PATCH}
 	use smartcard && epatch ${FILESDIR}/${P}-opensc.patch.bz2
+	if use ldap ; then
+		if use X509 ; then
+			ewarn "Sorry, x509 and ldap don't get along"
+		else
+			epatch ${DISTDIR}/${LDAP_PATCH}
+		fi
+	fi
+
+	autoconf || die "autoconf failed"
 }
 
 src_compile() {
 	addwrite /dev/ptmx
-	gnuconfig_update
 
 	# make sure .sbss is large enough
 	use skey && use alpha && append-ldflags -mlarge-data
-	use ldap && filter-flags -funroll-loops
-	use selinux && append-flags "-DWITH_SELINUX"
+	if use ldap ; then
+		filter-flags -funroll-loops
+		append-ldflags -lldap -llber
+		append-flags -DWITH_LDAP_PUBKEY
+	fi
+	use selinux && append-flags -DWITH_SELINUX
 	use static && append-ldflags -static
-	export LDFLAGS
 
 	autoconf
 

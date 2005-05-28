@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.120 2005/05/22 01:20:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.121 2005/05/28 01:28:26 vapier Exp $
+
+  28 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-4.0_p1-smartcard-ldap-happy.patch,
+  openssh-3.8.1_p1-r1.ebuild, openssh-3.9_p1-r2.ebuild,
+  openssh-4.0_p1-r1.ebuild:
+  Add support for LDAP and make it mutually exclusive from x509 since they
+  conflict #58579.
 
   22 May 2005; Mike Frysinger <vapier@gentoo.org> openssh-4.0_p1-r1.ebuild:
   Add support for RSA SecurID tokens #92233 by Antti Mäkelä.

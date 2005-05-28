@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r2.ebuild,v 1.4 2005/05/20 13:02:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r2.ebuild,v 1.5 2005/05/28 01:28:26 vapier Exp $
 
-inherit eutils flag-o-matic ccc gnuconfig pam
+inherit eutils flag-o-matic ccc pam
 
 # Make it more portable between straight releases
 # and _p? releases.
@@ -11,11 +11,12 @@ PARCH=${P/_/}
 SFTPLOG_PATCH_VER="1.2"
 X509_PATCH="${PARCH}+x509h.diff.gz"
 SELINUX_PATCH="openssh-3.9_p1-selinux.diff"
+LDAP_PATCH="${PARCH/-/-lpk-}-0.3.4.patch"
 
-S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
+	ldap? ( http://www.opendarwin.org/en/projects/openssh-lpk/files/${LDAP_PATCH} )
 	X509? ( http://roumenpetrov.info/openssh/x509h/${X509_PATCH} )"
 
 LICENSE="as-is"
@@ -27,6 +28,7 @@ RDEPEND="pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 )
 	kerberos? ( virtual/krb5 )
 	selinux? ( sys-libs/libselinux )
 	skey? ( >=app-admin/skey-1.1.5-r1 )
+	ldap? ( net-nds/openldap )
 	>=dev-libs/openssl-0.9.6d
 	>=sys-libs/zlib-1.1.4
 	smartcard? ( dev-libs/opensc )
@@ -36,6 +38,8 @@ DEPEND="${RDEPEND}
 	!nocxx? ( sys-apps/groff )
 	sys-devel/autoconf"
 PROVIDE="virtual/ssh"
+
+S=${WORKDIR}/${PARCH}
 
 src_unpack() {
 	unpack ${PARCH}.tar.gz
@@ -56,6 +60,13 @@ src_unpack() {
 	use X509 && epatch ${DISTDIR}/${X509_PATCH}
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}.bz2
 	use smartcard && epatch ${FILESDIR}/${P}-opensc.patch.bz2
+	if use ldap ; then
+		if use X509 ; then
+			ewarn "Sorry, x509 and ldap don't get along"
+		else
+			epatch ${DISTDIR}/${LDAP_PATCH}
+		fi
+	fi
 
 	autoconf || die "autoconf failed"
 }
@@ -64,11 +75,14 @@ src_compile() {
 	local myconf
 
 	addwrite /dev/ptmx
-	gnuconfig_update
 
 	# make sure .sbss is large enough
 	use skey && use alpha && append-ldflags -mlarge-data
-	use ldap && filter-flags -funroll-loops
+	if use ldap ; then
+		filter-flags -funroll-loops
+		append-ldflags -lldap -llber
+		append-flags -DWITH_LDAP_PUBKEY
+	fi
 	use selinux && append-flags "-DWITH_SELINUX"
 
 	if use static ; then
