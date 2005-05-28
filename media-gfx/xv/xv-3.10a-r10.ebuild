@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r10.ebuild,v 1.10 2005/05/16 15:29:54 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r10.ebuild,v 1.11 2005/05/28 03:01:30 j4rg0n Exp $
 
 inherit ccc flag-o-matic eutils
 
@@ -49,6 +49,9 @@ src_unpack() {
 }
 
 src_compile() {
+	if use ppc-macos; then
+		filter-flags -ffast-math
+	fi
 	if use jpeg; then
 		append-flags -DDOJPEG
 	else

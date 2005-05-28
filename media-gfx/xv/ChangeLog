@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.60 2005/05/16 15:29:54 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.61 2005/05/28 03:01:30 j4rg0n Exp $
+
+  27 May 2005; Lina Pezzella <j4rg0n@gentoo.org> xv-3.10a-r10.ebuild:
+  Fixed Bug with -ffast-math flag on OSX
 
   16 May 2005; Rene Nussbaumer <killerfox@gentoo.org> xv-3.10a-r10.ebuild:
   Stable on hppa; bug #83686
