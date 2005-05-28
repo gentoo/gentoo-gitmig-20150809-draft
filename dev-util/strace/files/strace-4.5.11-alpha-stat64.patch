@@ -1,0 +1,37 @@
+Hack around an ugly issue.  The only arch to provide the st_flags and st_gen 
+members of the stat structure is alpha.  However, alpha only provides it for 
+stat and not stat64.  So the autoconf script checks the stat structure for 
+all the relevant members but does not check stat64, thus setting up defines 
+that say these two members are present.  To make matters worse, glibc defines 
+(via sys/stat.h -> bits/stat.h) both stat and stat64 with the st_flags and 
+st_gen members.  Since file.c makes sure to hide the glibc defines and use the 
+kernel defines, even if we tried to detect stat64.st_flags and stat64.st_gen 
+in the autoconf script, the glibc headers would be parsed thereforce providing 
+false positives.
+
+--- file.c
++++ file.c
+@@ -997,13 +997,6 @@
+ 		tprintf("st_atime=%s, ", sprinttime(statbuf.st_atime));
+ 		tprintf("st_mtime=%s, ", sprinttime(statbuf.st_mtime));
+ 		tprintf("st_ctime=%s", sprinttime(statbuf.st_ctime));
+-#if HAVE_STRUCT_STAT_ST_FLAGS
+-		tprintf(", st_flags=");
+-		if (statbuf.st_flags) {
+-			printflags(fileflags, statbuf.st_flags);
+-		} else
+-			tprintf("0");
+-#endif
+ #if HAVE_STRUCT_STAT_ST_ACLCNT
+ 		tprintf(", st_aclcnt=%d", statbuf.st_aclcnt);
+ #endif
+@@ -1014,9 +1007,6 @@
+ 		tprintf(", st_fstype=%.*s",
+ 			(int) sizeof statbuf.st_fstype, statbuf.st_fstype);
+ #endif
+-#if HAVE_STRUCT_STAT_ST_GEN
+-		tprintf(", st_gen=%u", statbuf.st_gen);
+-#endif
+ 		tprintf("}");
+ 	}
+ 	else
