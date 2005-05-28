@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.21 2005/05/17 05:19:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.22 2005/05/28 08:28:17 vapier Exp $
 
 if [[ ${ROOT:-/} != "/" ]] ; then
 	echo "Sorry, but crossdev does not support ROOT."
@@ -90,14 +90,16 @@ parse_target() {
 		      ${CROSSDEV} -t dvp || exit 1
 		      exit 0;;
 		ee*)  TARCH=${HARCH}; CPOST="";
-		      KPKG="[none]"; BVER="2.14";
+		      KPKG="[none]"
+		      GVER="3.2.2"; BVER="2.14";
+		      STAGE="1";
 		      GUSE="-fortran -gtk -gcj -objc";;
 		iop*) TARCH=${HARCH}; CPOST="";
-		      BVER="2.14";
+		      GVER="3.2.2"; BVER="2.14";
 		      STAGE="1";
 		      GUSE="-fortran -gtk -gcj -objc";;
 		dvp*) TARCH=${HARCH}; CPOST="";
-		      BVER="2.14";
+		      GVER="3.2.2"; BVER="2.14";
 		      STAGE="0";;
 
 		#######################
@@ -320,6 +322,7 @@ doemerge() {
 		&& logfile=${logfile}-$1.log \
 		|| logfile=${logfile}-$2.log
 
+	einfo "Logging output to ${logfile}"
 	ebegin "Emerging cross-${2:-$1}"
 	if [[ ${UOPTS/-v} != ${UOPTS} ]] ; then
 		emerge cross-${CTARGET}/$1 ${EOPTS} \

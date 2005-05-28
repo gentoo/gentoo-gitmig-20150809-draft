@@ -1,5 +1,5 @@
 MD5 2b1bd50f039aaaa4151f543c96958df0 ChangeLog 3510
-MD5 a55c5e64370e0ff833988197984df443 crossdev-0.9.6.ebuild 562
 MD5 e91cdaf464f515f3528da02cf06e54a1 metadata.xml 222
-MD5 54821b021e1fa3b4a467aeb639a65a15 files/crossdev 10417
+MD5 a55c5e64370e0ff833988197984df443 crossdev-0.9.6.ebuild 562
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-crossdev-0.9.6 0
+MD5 6cc20ca4fd9f98247048d2646a0b4c5b files/crossdev 10523
