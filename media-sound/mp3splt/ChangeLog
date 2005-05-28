@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3splt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.13 2005/04/15 03:35:13 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.14 2005/05/28 12:06:02 luckyduck Exp $
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org> mp3splt-2.1.ebuild:
+  Dont make use of the deprecated oggvorbis useflag any longer, see #94254.
 
   15 Apr 2005; Stephen P. Becker <geoman@gentoo.org> mp3splt-1.9.ebuild,
   mp3splt-2.0.ebuild, mp3splt-2.1.ebuild:
