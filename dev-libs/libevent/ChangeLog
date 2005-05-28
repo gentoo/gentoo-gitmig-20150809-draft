@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.34 2005/05/11 01:46:36 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.35 2005/05/28 12:29:28 ka0ttic Exp $
+
+*libevent-1.1 (28 May 2005)
+
+  28 May 2005; Aaron Walker <ka0ttic@gentoo.org> +libevent-1.1.ebuild:
+  Version bump for bug 94230.
 
   11 May 2005; Aaron Walker <ka0ttic@gentoo.org> libevent-1.0e.ebuild:
   Fix keywords.
