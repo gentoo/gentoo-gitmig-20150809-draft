@@ -1,28 +1,24 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.5.ebuild,v 1.2 2004/12/19 05:58:35 eradicator Exp $
-
-IUSE="alsa oss esd mad oggvorbis gpm"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.5.ebuild,v 1.3 2005/05/28 13:19:01 luckyduck Exp $
 
 inherit eutils
 
 DESCRIPTION="Music Player For Console"
 HOMEPAGE="http://mpfc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 sparc ~ppc x86"
+IUSE="alsa esd gpm mad ogg oss"
 
 RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9.0 )
 	esd? ( >=media-sound/esound-0.2.22 )
+	gpm? ( >=sys-libs/gpm-1.19.3 )
 	mad? ( media-libs/libmad )
-	oggvorbis? ( media-libs/libvorbis )
-	gpm? ( >=sys-libs/gpm-1.19.3 )"
-
-DEPEND="${RDEPEND}
-	sys-apps/findutils
-	sys-apps/grep
-	sys-apps/sed"
+	ogg? ( media-libs/libogg
+		media-libs/libvorbis )"
 
 src_unpack() {
 	unpack ${A}
@@ -36,20 +32,21 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="
+	econf \
 		$(use_enable alsa) \
-		$(use_enable oss) \
 		$(use_enable esd) \
-		$(use_enable mad mp3) \
-		$(use_enable oggvorbis ogg) \
 		$(use_enable gpm) \
-		--sysconfdir=/etc"
-	econf ${myconf} || die
+		$(use_enable mad mp3) \
+		$(use_enable ogg) \
+		$(use_enable oss) \
+		--sysconfdir=/etc \
+		|| die "configure failed"
+
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	insinto /etc
 	doins mpfcrc
