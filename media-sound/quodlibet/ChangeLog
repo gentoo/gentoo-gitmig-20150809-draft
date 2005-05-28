@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.7 2005/05/14 03:10:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.8 2005/05/28 15:22:03 luckyduck Exp $
+
+*quodlibet-0.11 (28 May 2005)
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -quodlibet-0.3.ebuild,
+  -quodlibet-0.4.ebuild, quodlibet-0.8.1.ebuild, +quodlibet-0.11.ebuild:
+  Dont make use of the deprecated oggvorbis useflag any longer, see #94254.
+  Added new upstream release, fixes #88463. Updated HOMEPAGE.
 
   14 May 2005; Jason Wever <weeve@gentoo.org> quodlibet-0.8.1.ebuild:
   Added ~sparc keyword.
@@ -16,10 +23,6 @@
 
   12 Feb 2005; Patrick Dawson <pkdawson@gentoo.org> +quodlibet-0.8.1.ebuild:
   Version bump.
-
-  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  quodlibet-0.4.ebuild:
-  Added to -amd64 and ~sparc.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   quodlibet-0.4.ebuild:
