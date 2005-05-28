@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ehcache
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.1 2005/03/11 14:46:41 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.2 2005/05/28 23:43:21 luckyduck Exp $
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org> ehcache-1.1.ebuild:
+  dont install a versioned jar any longer. fixes #93529.
 
 *ehcache-1.1 (11 Mar 2005)
 
