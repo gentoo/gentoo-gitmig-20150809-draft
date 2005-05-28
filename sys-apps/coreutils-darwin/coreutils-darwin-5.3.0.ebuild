@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/coreutils-darwin-5.3.0.ebuild,v 1.4 2005/05/28 19:16:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/coreutils-darwin-5.3.0.ebuild,v 1.5 2005/05/28 19:31:54 josejx Exp $
 
 inherit eutils
 
@@ -32,10 +32,11 @@ EXISTINGUSR="basename chgrp cksum comm cut dirname \
 	tsort tty uname unexpand uniq users wc who whoami yes"
 EXISTINGBIN="cat chmod cp date dd df echo expr ln ls mkdir \
 			 mv pwd rm rmdir sleep stty sync test"
-EXISTINGUSBIN="chown chroot"
+EXISTINGUSBIN="chown chroot groups uptime"
 EXISTINGSBIN="mknod"
 DONTLINK="[ kill hostname"
-TENFOUR="link unlink csplit nl pathchk"
+TENFOURBIN="link unlink csplit nl"
+TENFOURUSBIN="pathchk readlink"
 
 src_compile() {
 	cd ${S}
@@ -60,11 +61,12 @@ src_install() {
 	dodir /usr/bin
 	rm -rf usr/lib
 
-	cd bin
 	if [ "$MACOSX_DEPLOYMENT_TARGET" == "10.4" ]; then
-		rm ${TENFOUR}
+		rm bin/${TENFOURBIN}
+		rm usr/bin/${TENFOURUSBIN}
 	fi
 
+	cd bin
 	rm ${EXISTINGBIN} ${EXISTINGUSR} ${EXISTINGUSBIN} ${EXISTINGSBIN} ${DONTLINK}
 
 	# Move the non-critical pacakges to /usr/bin

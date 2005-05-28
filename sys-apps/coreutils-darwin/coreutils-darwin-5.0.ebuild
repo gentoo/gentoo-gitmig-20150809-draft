@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/coreutils-darwin-5.0.ebuild,v 1.2 2005/05/12 06:22:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/coreutils-darwin-5.0.ebuild,v 1.3 2005/05/28 19:31:54 josejx Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ EXISTINGUSR="basename chgrp cksum comm cut dirname \
 	printf sort split stat sum tail tee touch tr true \
 	tsort tty uname unexpand uniq users wc who whoami yes"
 EXISTINGBIN="cat chmod cp date dd df echo expr ln ls mkdir mv pwd rm rmdir sleep stty sync test"
-EXISTINGUSBIN="chown chroot"
+EXISTINGUSBIN="chown chroot uptime"
 EXISTINGSBIN="mknod"
 
 src_unpack() {
