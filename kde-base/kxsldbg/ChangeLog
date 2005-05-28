@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kxsldbg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.8 2005/05/28 17:23:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.9 2005/05/28 20:46:49 corsair Exp $
+
+  28 May 2005; Markus Rothe <corsair@gentoo.org> kxsldbg-3.4.0.ebuild,
+  kxsldbg-3.4.1.ebuild:
+  Added ~ppc64
 
   28 May 2005; Jason Wever <weeve@gentoo.org> kxsldbg-3.4.0.ebuild,
   kxsldbg-3.4.1.ebuild:

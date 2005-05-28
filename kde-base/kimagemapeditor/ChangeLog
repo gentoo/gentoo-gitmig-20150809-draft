@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kimagemapeditor
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.8 2005/05/28 17:20:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.9 2005/05/28 20:45:41 corsair Exp $
+
+  28 May 2005; Markus Rothe <corsair@gentoo.org>
+  kimagemapeditor-3.4.0.ebuild, kimagemapeditor-3.4.1.ebuild:
+  Added ~ppc64
 
   28 May 2005; Jason Wever <weeve@gentoo.org> kimagemapeditor-3.4.0.ebuild,
   kimagemapeditor-3.4.1.ebuild:
