@@ -1,17 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 699daef30d9563bc1e8c1a60e7cf2215 waif-0.59.7.ebuild 1393
-MD5 555c4db843785cb5a576a142927ba1c3 ChangeLog 3395
+MD5 74201d44bc392f165d27d2df0bc9595c waif-0.59.7.ebuild 1362
+MD5 af834cc258ae24354e7ecb715e8b874e ChangeLog 3584
 MD5 aa0bfeeaf772ac88a10eaadfcec3936f metadata.xml 250
-MD5 937fbe2447f9d6b954c6f95596d7c4b6 waif-0.59.6.ebuild 1311
-MD5 fbdc57553cb2209c0b024afb096509c1 files/digest-waif-0.59.6 119
 MD5 b672105be7c357165e12fd4963e9a54d files/digest-waif-0.59.7 119
-MD5 3b3e0a6ef4724b594fc78b9b0dfd9c5e files/LICENSE 146
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD4DBQFB4RGvI1lqEGTUzyQRAk0EAKDejoSRvACxqz9OfqdZn4s5va51bACYvjpB
-Pd1dwpMxtidJmcW8k6Q6JA==
-=dDLc
+iD8DBQFCmKxt06ebR+OMO78RAoB5AJ0WvQ9CMRW31JcgK59IUPMEMjLcIgCfSdX1
+d7Uni0P6yimpV19Ywl48Xx8=
+=tEJn
 -----END PGP SIGNATURE-----
