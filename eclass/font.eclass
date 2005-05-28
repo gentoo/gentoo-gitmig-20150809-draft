@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.10 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.11 2005/05/28 18:38:17 foser Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -26,8 +26,8 @@ DOCS="" # Docs to install
 IUSE="${IUSE} X"
 
 DEPEND="${DEPEND} \
-		X? ( virtual/x11 ) \
-		media-libs/fontconfig"
+	X? ( virtual/x11 ) \
+	media-libs/fontconfig"
 
 # 
 # Public functions
@@ -36,8 +36,7 @@ DEPEND="${DEPEND} \
 font_xfont_config() {
 
 	# create Xfont files
-	if use X ;
-	then
+	if use X ; then
 		einfo "Creating fonts.scale & fonts.dir ..."
 		mkfontscale "${D}/usr/share/fonts/${PN}"
 		mkfontdir \
@@ -45,8 +44,7 @@ font_xfont_config() {
 			-e /usr/share/fonts/encodings/large \
 			-e /usr/X11R6/$(get_libdir)/X11/fonts/encodings \
 			"${D}/usr/share/fonts/${PN}"
-		if [ -e "${FONT_S}/fonts.alias" ] ;
-		then
+		if [ -e "${FONT_S}/fonts.alias" ] ; then
 			doins "${FONT_S}/fonts.alias"
 		fi
 	fi
@@ -86,9 +84,8 @@ font_src_install() {
 	cd "${S}"
 	# try to install some common docs
 	DOCS="${DOCS} COPYRIGHT README NEWS"
-	for f in ${DOCS}; do
-		[[ -e "${f}" ]] && dodoc "${f}"
-	done
+	dodoc ${DOCS}
+
 }
 
 EXPORT_FUNCTIONS src_install
