@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.1.ebuild,v 1.2 2005/05/27 02:45:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.1.ebuild,v 1.3 2005/05/28 09:25:24 vapier Exp $
 
 inherit eutils games
 
@@ -11,15 +11,13 @@ SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="alsa debug flac mp3 oggvorbis sdl zlib"
+IUSE="alsa debug flac mp3 ogg vorbis sdl zlib"
 RESTRICT="maketest"  # it only looks like there's a test there #77507
 
 RDEPEND=">=media-libs/libsdl-1.2.2
 	>media-libs/libmpeg2-0.3.1
-	oggvorbis? (
-		media-libs/libogg
-		media-libs/libvorbis
-	)
+	ogg? ( media-libs/libogg media-libs/libvorbis )
+	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	mp3? ( media-libs/libmad )
 	flac? ( media-libs/flac )
@@ -38,8 +36,9 @@ src_compile() {
 
 	use debug \
 		|| myconf="${myconf} --disable-debug"
-	use oggvorbis \
-		|| myconf="${myconf} --disable-mpeg2"
+	(use vorbis || use ogg) \
+		&& myconf="${myconf} --enable-vorbis" \
+		|| myconf="${myconf} --disable-vorbis --disable-mpeg2"
 
 	# NOT AN AUTOCONF SCRIPT SO DONT CALL ECONF
 	# mpeg2 support needs vorbis (bug #79149) so turn it off if -oggvorbis
@@ -47,7 +46,6 @@ src_compile() {
 		$(use_enable alsa) \
 		$(use_enable mp3 mad) \
 		$(use_enable flac) \
-		$(use_enable oggvorbis vorbis) \
 		$(use_enable zlib) \
 		$(use_enable x86 nasm) \
 		${myconf} \
