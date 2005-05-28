@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 1d5b3e4627586694c01fee8e48bf0fc5 ChangeLog 543
-MD5 028681f293cbf07363631b8f3beef379 wefts-0.99c.ebuild 863
-MD5 7c5372f040edc68ac55c917fe359dc95 files/digest-wefts-0.99c 66
+MD5 33e7cefd756ea37b0555c80d66dcdc43 ChangeLog 865
+MD5 bd58f640fd646eb1b47ba694b33e7806 metadata.xml 230
+MD5 c943c94dc6591c11692bf6d416b54f40 wefts-0.99c-r1.ebuild 1365
 MD5 86220ba170f6600578c478f1d5ebd9fc files/wefts-errno.patch 347
+MD5 5036540a346f143db4c4af79f2520ec5 files/wefts-m_ret.patch 562
+MD5 07099538d23499dca275238d44e054ac files/wefts-order.patch 5853
+MD5 919e80cc73f4c304d2c6fc008a6fb7fd files/testsuite.h 3282
+MD5 7c5372f040edc68ac55c917fe359dc95 files/digest-wefts-0.99c-r1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZNy7jUHll2nfF60RAlUzAKCJD7kTjAcohwnuepQYmzfdMAW2iACgqAHd
-eufYc60KdbJYpL/5UFcxFHM=
-=SMmO
+iD8DBQFCmGRpj5H05b2HAEkRAtOSAKCY5ioNYFOgyY687Ji57drGXUo0LwCdGlG4
+j1pFnfeMNFXe1yx/ikm7PHk=
+=y9N0
 -----END PGP SIGNATURE-----
