@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.63 2005/05/20 12:23:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.64 2005/05/28 00:44:22 flameeyes Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -21,6 +21,7 @@ virtual/cron				sys-process/vixie-cron
 virtual/dev-manager			sys-fs/devfsd
 virtual/dhcpc				net-misc/dhcpcd
 virtual/editor				app-editors/nano
+virtual/eject				sys-apps/eject
 virtual/emacs				app-editors/emacs
 virtual/fam					app-admin/fam
 virtual/flim				app-emacs/flim
