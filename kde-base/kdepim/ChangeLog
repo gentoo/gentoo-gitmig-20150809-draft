@@ -1,10 +1,10 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.149 2005/05/27 17:02:03 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.150 2005/05/28 08:34:50 greg_g Exp $
 
   27 May 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/kdepim-3.4.1-kpilot-fix.patch, kdepim-3.4.1.ebuild:
-  Add last minute fix for critical kpilot bug.
+  Add last minute fix for critical kpilot bug (kde bug 106324).
 
 *kdepim-3.4.1 (27 May 2005)
 
