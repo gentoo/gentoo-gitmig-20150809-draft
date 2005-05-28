@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1193 2005/05/27 13:04:08 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1194 2005/05/28 09:43:13 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -629,7 +629,6 @@ net-im/ejabberd:mod_pubsub - Pubsub support in ejabberd
 net-im/ejabberd:web - Web support in ejabberd
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
-net-im/gaim:gnutls - Use GnuTLS for SSL support
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gaim:xscreensaver - Enables xscreensaver support for status
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
@@ -653,7 +652,6 @@ net-irc/xchat:xchattext - Enables the text/console front end to XChat
 net-libs/gecko-sdk:moznomail - Do not compile mail
 net-libs/gecko-sdk:moznoxft - Disable XFT support
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
-net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
 net-libs/openh323:noaudio - Disable audio codecs
