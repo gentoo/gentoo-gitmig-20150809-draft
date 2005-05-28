@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.2.ebuild,v 1.8 2005/05/13 20:58:05 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.2.ebuild,v 1.9 2005/05/28 02:58:16 j4rg0n Exp $
 
 inherit eutils
 
@@ -23,7 +23,10 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --without-x || die "econf failed"
+	local myconf
+	myconf="--without-x"
+	use ppc-macos && myconf=" --disable-cxx"
+	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
