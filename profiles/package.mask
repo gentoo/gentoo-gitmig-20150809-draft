@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4020 2005/05/27 19:13:08 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4021 2005/05/28 00:25:16 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Daniel Black <dragonheart@gentoo.org> (28 May 2005)
+# not working with security bug 91466. to be removed soon
+net-analyzer/piwi
 
 # Leonardo Boshell <leonardop@gentoo.org> (27 May 2005)
 # No maintainer, going to the to-be-removed pile now.
