@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mhonarc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.4 2004/08/21 20:43:39 kumba Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.5 2005/05/28 04:25:42 kumba Exp $
+
+*mhonarc-2.6.10 (28 May 2005)
+
+  28 May 2005; Joshua Kinard <kumba@gentoo.org> mhonarc-2.6.10.ebuild,
+  +mhonarc-2.6.11.ebuild, -mhonarc-2.6.8-r1.ebuild:
+  Version bump and fix to SRC_URI to download the source properly. Removed older
+  2.6.8 version. Closes bugs #94074 and #93929.
 
   21 Aug 2004; Joshua Kinard <kumba@gentoo.org> :
   (long overdue) Revision bump.
