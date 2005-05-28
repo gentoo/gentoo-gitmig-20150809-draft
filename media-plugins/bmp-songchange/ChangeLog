@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/bmp-songchange
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-songchange/ChangeLog,v 1.1 2005/05/28 20:51:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-songchange/ChangeLog,v 1.2 2005/05/28 22:42:56 luckyduck Exp $
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  bmp-songchange-0.0.2.ebuild:
+  added ~amd64 and ~x86 to keywords
 
 *bmp-songchange-0.0.2 (28 May 2005)
 

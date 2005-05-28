@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8d318479cfbfd5d6fe1ef4c7ce423f27 bmp-songchange-0.0.2.ebuild 677
+MD5 ee9fd8a556d3f3e8b1341ae802f54e13 bmp-songchange-0.0.2.ebuild 723
+MD5 ce98e360f324f8d53260fb0bcfe4990f ChangeLog 580
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 feb71459bbd00722924f4e230ec2f8e6 ChangeLog 459
 MD5 79c52f3d7edd40d36c92528312affee9 files/digest-bmp-songchange-0.0.2 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCmNlMp5vW4rUFj5oRAlAHAJwIojfTM3pkQCS/qHgC0WCFBoX7ewCgwn8x
-uiXF9MQpHBScs7+elzwVPxc=
-=d+K0
+iD8DBQFCmPQB06ebR+OMO78RAuXhAKCFjP/Ym7Vnq2T8YsFQS0cQr+VGSwCfZDwV
+LgW02numOS1x4zY0lqoldFY=
+=JKGH
 -----END PGP SIGNATURE-----
