@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.400 2005/05/27 06:11:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.401 2005/05/28 03:48:07 spyderous Exp $
+
+  28 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.99.8.ebuild:
+  (#90672) Add die for combo of USE="sdk -dlloader," pending a fix.
 
   27 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xorg-x11-6.8.99.3.ebuild:

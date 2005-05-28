@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.8.ebuild,v 1.7 2005/05/27 06:06:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.8.ebuild,v 1.8 2005/05/28 03:48:07 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -415,6 +415,14 @@ check_use_combos() {
 		if use sdk; then
 			die "The static USE flag is incompatible with the sdk USE flag."
 		fi
+	fi
+
+	# (#90672)
+	if use sdk && ! use dlloader; then
+		MSG="The sdk and -dlloader USE flags are temporarily incompatible and result in a dead build."
+		einfo ${MSG}
+		einfo "See http://bugs.gentoo.org/show_bug.cgi?id=90672."
+		die ${MSG}
 	fi
 
 	# (#77949)
