@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.3 2005/05/27 15:46:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.4 2005/05/28 12:15:32 greg_g Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,8 +14,8 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
 	immqt? ( http://freedesktop.org/~daisuke/${IMMQT_P}.diff.bz2 )
 	immqt-bc? ( http://freedesktop.org/~daisuke/${IMMQT_P}.diff.bz2 )"
 #	ppc-macos? ( http://dev.gentoo.org/~usata/distfiles/${P}-darwin-fink.patch.gz )"
-
 LICENSE="|| ( QPL-1.0 GPL-2 )"
+
 SLOT="3"
 KEYWORDS="~x86 ~amd64 ~hppa ~mips ~ppc64 ~sparc ~ia64 ~ppc ~alpha"
 IUSE="cups debug doc examples firebird gif ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt immqt-bc"
@@ -82,6 +82,7 @@ src_unpack() {
 
 	sed -i -e 's:read acceptance:acceptance=yes:' configure
 
+	# Do not link with -rpath. See bug #75181.
 	find ${S}/mkspecs -name qmake.conf | xargs \
 		sed -i -e 's:QMAKE_RPATH.*:QMAKE_RPATH =:'
 
