@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/gnu-crypto
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.13 2005/05/27 00:02:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.14 2005/05/28 23:58:01 luckyduck Exp $
+
+*gnu-crypto-2.0.1-r1 (28 May 2005)
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/gnu-crypto-2.0.1-jdk15.patch, +gnu-crypto-2.0.1-r1.ebuild:
+  Added patch to enable compilation with a 1.5 jdk, fixes #94065. Thanks to
+  Mikael Cluseau <nwrk-public@altern.org>.
 
   27 May 2005; Jan Brinkmann <luckyduck@gentoo.org> gnu-crypto-2.0.1.ebuild:
   stable on ppc
