@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.5.ebuild,v 1.11 2005/05/24 03:29:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.5.ebuild,v 1.12 2005/05/28 07:02:25 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -591,13 +591,15 @@ host_def_setup() {
 				fi
 
 				if [ "$(gcc-minor-version)" -eq "4" ]; then
-					#to fix #57602 for now, thanks Spanky (broken sse2)
-					if test_flag -mno-sse2; then
-						append-flags -mno-sse2
-					fi
-					# (#75067) broken sse3
-					if test_flag -mno-sse3; then
-						append-flags -mno-sse3
+					if [ "$(gcc-micro-version)" -le "4" ]; then
+						#to fix #57602 for now, thanks Spanky (broken sse2)
+						if test_flag -mno-sse2; then
+							append-flags -mno-sse2
+						fi
+						# (#75067) broken sse3
+						if test_flag -mno-sse3; then
+							append-flags -mno-sse3
+						fi
 					fi
 				fi
 
