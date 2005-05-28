@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/raidtools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/ChangeLog,v 1.20 2005/05/19 22:16:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/ChangeLog,v 1.21 2005/05/28 21:36:14 vapier Exp $
+
+*raidtools-1.00.3-r6 (28 May 2005)
+
+  28 May 2005; Mike Frysinger <vapier@gentoo.org>
+  files/raidtools-1.00.3-PIC.patch, +raidtools-1.00.3-r6.ebuild:
+  Update the lseek patch to fix mkraid issues on amd64 #93694 by Radek "rush"
+  Senfeld.
 
 *raidtools-1.00.3-r5 (19 May 2005)
 
