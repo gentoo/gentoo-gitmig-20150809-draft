@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.5.ebuild,v 1.3 2005/05/27 17:21:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.5.ebuild,v 1.4 2005/05/28 01:09:13 flameeyes Exp $
 
 inherit perl-module eutils
 
@@ -38,7 +38,7 @@ RDEPEND="${DEPEND}
 	fping? ( >=net-analyzer/fping-2.3 )
 	ogg? ( >=media-sound/ogmtools-1.000 )
 	subtitles? ( media-video/subtitleripper )
-	sys-apps/eject
+	virtual/eject
 	dev-perl/libintl-perl"
 
 pkg_setup() {
@@ -48,7 +48,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's:cc :$(CC) :' src/Makefile || die "sed failed"
+	sed -i -e 's:cc :$(CC) :' src/Makefile || die "sed failed"
 }
 
 src_install() {
