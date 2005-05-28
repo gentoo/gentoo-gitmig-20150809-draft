@@ -1,6 +1,12 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.36 2005/05/22 10:21:46 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.37 2005/05/28 20:19:29 humpback Exp $
+
+*skype-1.1.0.13 (28 May 2005)
+
+  28 May 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +skype-1.1.0.13.ebuild:
+  Credits to Bruno in bug #94108 for the small patch.
 
 *skype-1.1.0.3-r1 (21 May 2005)
 
