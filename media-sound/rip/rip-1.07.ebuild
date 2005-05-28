@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/rip-1.07.ebuild,v 1.13 2005/04/08 17:26:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/rip-1.07.ebuild,v 1.14 2005/05/28 01:17:28 flameeyes Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 DEPEND=""
 
 RDEPEND="media-sound/cdparanoia
-	sys-apps/eject
+	virtual/eject
 	dev-lang/perl
 	>=dev-perl/CDDB_get-2.10
 	>=dev-perl/MP3-Info-0.91"
