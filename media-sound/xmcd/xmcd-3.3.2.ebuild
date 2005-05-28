@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.9 2004/09/30 01:36:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.10 2005/05/28 17:57:47 luckyduck Exp $
 
 inherit eutils
 
-IUSE="alsa encode oggvorbis"
+IUSE="alsa encode vorbis"
 
 SUPPLIB="cddb2supplib"
 DESCRIPTION="Xmcd is a full-featured CD Player and Ripper software package."
@@ -16,12 +16,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc amd64"
 
+# block media-libs/libcddb for now, see bug #90945
 DEPEND="virtual/x11
 	x11-libs/openmotif
 	media-libs/flac
+	!media-libs/libcddb
 	alsa? ( media-libs/alsa-lib )
 	encode? ( >=media-sound/lame-3.93.1 )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
+	vorbis? ( >=media-libs/libvorbis-1.0 )"
 
 src_unpack() {
 
@@ -31,7 +33,7 @@ src_unpack() {
 
 	if use x86
 	then
-		ebegin "Unpacking Gracenote CDDB² support package"
+		ebegin "Unpacking Gracenote CDDBÂ² support package"
 			unpack ${SUPPLIB}.tar.gz > /dev/null
 		eend 0
 	fi
@@ -110,7 +112,7 @@ src_install() {
 
 	if use x86
 	then
-		ebegin "Adding Gracenote CDDB² support"
+		ebegin "Adding Gracenote CDDBÂ² support"
 			exeinto /usr/X11R6/$(get_libdir)/X11/xmcd/lib-Linux-i686
 			doexe ${WORKDIR}/${P}/cddb_d/libcddb.so.1
 			dosym libcddb.so.1 /usr/X11R6/$(get_libdir)/X11/xmcd/lib-Linux-i686/libcddb.so

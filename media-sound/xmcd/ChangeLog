@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmcd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/ChangeLog,v 1.13 2004/09/30 01:36:11 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/ChangeLog,v 1.14 2005/05/28 17:57:47 luckyduck Exp $
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/xmcd-3.2.1-gentoo.patch, -xmcd-3.2.1-r1.ebuild, xmcd-3.3.2.ebuild:
+  Dont make use of the deprecated oggvorbis useflag any longer, see #94254.
 
   29 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> xmcd-3.3.2.ebuild:
   Fixed patch to be correct version... see bug #65787.
