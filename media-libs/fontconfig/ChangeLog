@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.63 2005/02/17 16:31:02 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.64 2005/05/28 22:43:11 foser Exp $
+
+*fontconfig-2.3.2 (29 May 2005)
+
+  29 May 2005; foser <foser@gentoo.org> fontconfig-2.3.2.ebuild :
+  New release (#84757)
 
   17 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> fontconfig-2.2.3.ebuild:
   Stable ppc-macos
