@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.3-r1.ebuild,v 1.19 2005/05/21 08:25:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.3-r1.ebuild,v 1.20 2005/05/28 00:21:34 vapier Exp $
 
 IUSE="readline tcltk berkdb"
 
@@ -19,7 +19,6 @@ DEPEND="virtual/libc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
 	berkdb? ( >=sys-libs/db-3 )
 	tcltk? ( >=dev-lang/tk-8.0 )"
-RDEPEND="$DEPEND"
 
 # The dev-python/python-fchksum RDEPEND is needed to that this python provides
 # the functionality expected from previous pythons.

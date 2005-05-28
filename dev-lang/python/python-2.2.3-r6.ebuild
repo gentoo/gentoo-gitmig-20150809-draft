@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r6.ebuild,v 1.1 2005/02/07 04:28:20 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r6.ebuild,v 1.2 2005/05/28 00:21:34 vapier Exp $
 
 inherit flag-o-matic eutils python
-
-IUSE="berkdb bootstrap build doc gdbm ncurses readline ssl tcltk"
 
 PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
@@ -12,11 +10,12 @@ PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 
 S="${WORKDIR}/Python-${PV}"
 DESCRIPTION="A really great language"
+HOMEPAGE="http://www.python.org"
 SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tgz"
 
-HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.2"
 KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64"
+IUSE="berkdb bootstrap build doc gdbm ncurses readline ssl tcltk nocxx"
 
 DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
@@ -85,7 +84,7 @@ src_compile() {
 
 	local myopts
 	#if we are creating a new build image, we remove the dependency on g++
-	if use build && ! use bootstrap
+	if use build && ! use bootstrap || use nocxx
 	then
 		myopts="--with-cxx=no"
 	fi
