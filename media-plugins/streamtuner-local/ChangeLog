@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/streamtuner-local
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.12 2004/12/19 05:25:26 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.13 2005/05/28 18:55:16 luckyduck Exp $
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -streamtuner-local-0.2.1.ebuild, streamtuner-local-0.4.0.ebuild:
+  Dont make use of the deprecated oggvorbis useflag any longer, see #94254.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   streamtuner-local-0.4.0.ebuild:
