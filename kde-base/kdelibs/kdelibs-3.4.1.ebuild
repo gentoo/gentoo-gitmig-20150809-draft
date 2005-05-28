@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.1.ebuild,v 1.3 2005/05/26 17:14:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.1.ebuild,v 1.4 2005/05/28 20:41:52 corsair Exp $
 
 inherit kde flag-o-matic
 set-qtdir 3
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.4"
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc64 ~ppc ~sparc"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa arts cups doc jpeg2k kerberos openexr spell ssl tiff zeroconf"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
@@ -57,8 +57,10 @@ src_compile() {
 
 	use x86 && myconf="${myconf} --enable-fast-malloc=full"
 
-	# fix bug 58179, 85593
-	use ppc64 && append-flags "-fno-gcse"
+	# fix bug 58179, bug 85593
+	# kdelibs-3.4.0 needed -fno-gcse; 3.4.1 needs -mminimal-toc; this needs a
+	# closer look... - corsair
+	use ppc64 && append-flags "-mminimal-toc"
 
 	kde_src_compile
 
