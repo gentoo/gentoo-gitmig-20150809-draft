@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.1.ebuild,v 1.2 2005/01/29 14:01:37 luckyduck Exp $
-
-IUSE="ncurses gtk debug"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.1.ebuild,v 1.3 2005/05/28 13:51:02 luckyduck Exp $
 
 inherit eutils
 
@@ -13,9 +11,10 @@ DESCRIPTION="Multiple Streaming Engine, an icecast source streamer"
 SRC_URI="ftp://ftp.dyne.org/muse/releases/${MY_P}.tar.gz"
 HOMEPAGE="http://muse.dyne.org/"
 
-KEYWORDS="~ppc sparc x86 ~amd64"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~ppc sparc x86 amd64"
+IUSE="ncurses gtk debug"
 
 DEPEND="media-sound/lame
 	media-libs/libvorbis
@@ -36,21 +35,24 @@ src_unpack() {
 
 src_compile() {
 	econf \
-	`use_with gtk x` \
-	`use_with ncurses rubik` \
-	`use_enable debug` || die "econf failed"
+		$(use_enable debug) \
+		$(use_with gtk x) \
+		$(use_with ncurses rubik) \
+		|| die "econf failed"
 
-	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS} -fpermissive" || die "emake failed"
+	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS} -fpermissive" \
+		|| die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 	rm -rf ${D}/usr/doc
 	dodoc AUTHORS ChangeLog NEWS README TODO KNOWN-BUGS USAGE
 }
 
 pkg_postinst() {
 	einfo
-	einfo "You may want to have a look at /usr/share/doc/${PF}/README.gz for more info."
+	einfo "You may want to have a look at /usr/share/doc/${PF}/README.gz"
+	einfo "for more info."
 	einfo
 }
