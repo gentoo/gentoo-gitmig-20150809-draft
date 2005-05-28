@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 60503633287f5c357c3350b08b4a9999 ChangeLog 909
+MD5 b4f96360d8c814b1f169a460135d852a ChangeLog 1046
 MD5 4b2e94b92c84896e0204d9e7710f9c6a metadata.xml 420
-MD5 af339a9195ede94b4b3530e2fa598a78 boinc-4.32.ebuild 2371
-MD5 96584a8f8f3579a547b8dd61b50c1efb boinc-4.19.ebuild 2275
+MD5 669c8624ca2c1937806beebc678ba767 boinc-4.32.ebuild 2372
+MD5 e5cf11d1f7bf5bbb7680499f1bcaac35 boinc-4.19.ebuild 2276
 MD5 b8461876cf4db83859fbd94562dfc3b4 files/digest-boinc-4.19 80
 MD5 5dc63ab398e7b399eaa9e1fdab388453 files/digest-boinc-4.32 80
 MD5 87e5c7b66fd1b782ab5b01bae9cbc94e files/boinc.conf 441
@@ -14,7 +14,7 @@ MD5 25cfc5918b31da56263edfee7a5fa682 files/boinc-4.32_socket_close_fix.patch 120
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCk1kNntT9W3vfTuoRAvEbAJ9WQp9m74U71Q/wSQ1ghNnaKKV72ACgkSyJ
-v4lP/ac/Oe9I4aNcirhW0/A=
-=3ePg
+iD8DBQFCmGkOntT9W3vfTuoRAqhsAJ4xy34rSSPv+7pLXce2adKa949yOwCdHAp5
+lg2fTbtxnkq/bbCh4m1hwec=
+=yvey
 -----END PGP SIGNATURE-----
