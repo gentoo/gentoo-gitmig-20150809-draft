@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17-r1.ebuild,v 1.2 2005/04/18 02:34:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17-r1.ebuild,v 1.3 2005/05/28 00:20:46 carlo Exp $
 
 inherit myth flag-o-matic eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 amd64"
+KEYWORDS="x86 amd64"
 IUSE="alsa arts dvb lcd lirc nvidia cle266 opengl xv mmx" # ieee1394"
 
 DEPEND=">=media-libs/freetype-2.0
