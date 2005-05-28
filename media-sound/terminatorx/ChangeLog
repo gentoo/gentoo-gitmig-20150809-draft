@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/terminatorx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.15 2005/02/20 15:35:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.16 2005/05/28 17:08:23 luckyduck Exp $
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/terminatorx-3.80.GNOMEpresent.patch,
+  -files/terminatorx-3.80.fixGnomeMakefile.patch, terminatorx-3.81.ebuild,
+  terminatorx-3.82.ebuild:
+  Dont make use of the deprecated oggvorbis useflag any longer, see #94254.
+  Marked 3.82 stable on amd64 and x86. Removed unnecessary patches.
 
 *terminatorx-3.82 (20 Feb 2005)
 

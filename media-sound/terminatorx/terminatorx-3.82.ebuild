@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.1 2005/02/20 15:35:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.2 2005/05/28 17:08:24 luckyduck Exp $
 
 inherit gnome2
 
@@ -12,12 +12,12 @@ SRC_URI="http://www.terminatorx.cx/dist/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc"
-IUSE="3dnow alsa mad oggvorbis sox"
+KEYWORDS="x86 amd64 ~sparc"
+IUSE="3dnow alsa mad vorbis sox"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	mad? ( media-sound/madplay )
-	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )
+	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	sox? ( media-sound/sox )
 	>=x11-libs/gtk+-2.2.0
 	>=dev-libs/glib-2.2.0
@@ -40,15 +40,16 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		`use_enable 3dnow` \
-		`use_enable alsa` \
-		`use_enable mad` \
-		`use_enable vorbis` \
-		`use_enable sox` \
+		$(use_enable 3dnow) \
+		$(use_enable alsa) \
+		$(use_enable mad) \
+		$(use_enable vorbis) \
+		$(use_enable sox) \
 		|| die "econf failed"
-	emake || die
+
+	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR=${D} install || die "make install failed"
 }

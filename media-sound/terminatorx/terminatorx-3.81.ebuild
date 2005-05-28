@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.13 2005/02/20 15:35:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.14 2005/05/28 17:08:24 luckyduck Exp $
 
 inherit gnome2
 
@@ -13,11 +13,11 @@ SRC_URI="http://www.terminatorx.cx/dist/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 sparc"
-IUSE="3dnow alsa mpeg oggvorbis oss sox"
+IUSE="3dnow alsa mpeg vorbis oss sox"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	mpeg? ( media-sound/madplay )
-	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )
+	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	sox? ( media-sound/sox )
 	>=x11-libs/gtk+-2.2.0
 	>=dev-libs/glib-2.2.0
@@ -51,7 +51,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-mad" \
 		|| myconf="${myconf} --disable-mad" \
 		|| myconf="${myconf} --disable-mpg123"
-	use oggvorbis \
+	use vorbis \
 		&& myconf="${myconf} --enable-vorbis" \
 		|| myconf="${myconf} --disable-vorbis" \
 		|| myconf="${myconf} --disable-ogg123"
