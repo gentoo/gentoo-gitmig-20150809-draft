@@ -62,3 +62,4 @@ virtual/gnustep-back    gnustep-base/gnustep-back-art
 virtual/psviewer	app-text/gv
 virtual/pdfviewer	app-text/xpdf
 virtual/motif          x11-libs/openmotif
+virtual/eject				sys-apps/eject

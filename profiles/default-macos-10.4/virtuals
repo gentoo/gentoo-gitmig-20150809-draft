@@ -5,6 +5,7 @@ virtual/commonlisp	dev-lisp/sbcl
 virtual/cron	    	sys-process/vixie-cron
 virtual/dhcpc		net-misc/dhcpcd
 virtual/editor		app-editors/nano
+virtual/eject				sys-apps/eject
 virtual/emacs	   	app-editors/emacs
 virtual/inetd		sys-apps/xinetd
 virtual/kernel	 	sys-libs/libsystems

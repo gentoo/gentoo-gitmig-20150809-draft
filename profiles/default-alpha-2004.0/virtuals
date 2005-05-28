@@ -16,6 +16,7 @@ virtual/jre				dev-java/compaq-jre
 virtual/imapd			net-mail/courier-imap
 virtual/blackbox		x11-wm/blackbox
 virtual/emacs			app-editors/emacs
+virtual/eject				sys-apps/eject
 virtual/cron			sys-process/dcron
 virtual/xemacs			app-editors/xemacs
 virtual/sylpheed		mail-client/sylpheed

@@ -10,6 +10,7 @@ virtual/cron			sys-process/dcron
 virtual/dev-manager		sys-fs/devfsd
 virtual/dhcpc			net-misc/dhcpcd
 virtual/editor			app-editors/nano
+virtual/eject				sys-apps/eject
 virtual/emacs			app-editors/emacs
 virtual/flim			app-emacs/flim
 virtual/ghc			dev-lang/ghc-bin
