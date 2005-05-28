@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6c.ebuild,v 1.2 2005/05/10 03:27:01 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6c.ebuild,v 1.3 2005/05/28 16:33:08 ramereth Exp $
 
 DESCRIPTION="Cactid is a poller for Cacti that primarily strives to be as fast
 as possible"
@@ -15,7 +15,7 @@ IUSE=""
 DEPEND="net-analyzer/net-snmp
 		net-analyzer/rrdtool
 		dev-db/mysql
-		sys-devel/autoconf"
+		>=sys-devel/autoconf-2.53"
 RDEPEND="net-analyzer/cacti"
 
 src_unpack() {
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	WANT_AUTOCONF=2.53
+	export WANT_AUTOCONF=2.53
 	aclocal || die "aclocal failed"
 	autoconf || die "autoconf failed"
 	econf || die "econf failed"

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti-cactid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/ChangeLog,v 1.6 2005/05/15 22:49:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/ChangeLog,v 1.7 2005/05/28 16:33:08 ramereth Exp $
+
+  28 May 2005; Lance Albertson <ramereth@gentoo.org>
+  cacti-cactid-0.8.6c.ebuild, cacti-cactid-0.8.6d-r1.ebuild:
+  fix the autoconf preference so it will actually work
 
   15 May 2005; Joseph Jezak <josejx@gentoo.org>
   cacti-cactid-0.8.6d-r1.ebuild:
