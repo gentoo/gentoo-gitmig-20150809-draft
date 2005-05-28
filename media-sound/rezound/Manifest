@@ -2,16 +2,14 @@
 Hash: SHA1
 
 MD5 a841e6c0957f141b53a3831799860a4a rezound-0.12.0_beta.ebuild 2204
-MD5 a0d9010752c8c6f00866e34e0347edeb rezound-0.11.1_beta.ebuild 2217
-MD5 f50bc3aaa2dd76a544ed44a50ed1bbb7 ChangeLog 4105
+MD5 1b1682f99710a71a6e3b4651656d6791 ChangeLog 4265
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 e91a09314efa10c88b5ad68c8ced9be7 files/digest-rezound-0.11.1_beta 71
 MD5 3bc1175bcfa6d88bbe86f84556db560c files/undefined-functions.patch 1084
 MD5 eaabd57938c6ccc9beb2a34516dd6da6 files/digest-rezound-0.12.0_beta 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCl1OZ06ebR+OMO78RAmpVAKCAoX0p4R0L3iYqJ9XQkE5vS1cVVQCfewFa
-zCA9aMYCAM8Inwjvf99QTyI=
-=MEAn
+iD8DBQFCmI3t06ebR+OMO78RAt30AJ9UzfHO6SxMOE5LW95rTL2ahHNDVgCgltc2
+D7o15dE7HXxDJwFKboRdVWc=
+=qIbF
 -----END PGP SIGNATURE-----
