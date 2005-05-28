@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcut
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/ChangeLog,v 1.2 2005/03/28 21:37:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/ChangeLog,v 1.3 2005/05/28 18:30:32 agriffis Exp $
+
+  28 May 2005; Aron Griffis <agriffis@gentoo.org> xcut-0.2.ebuild:
+  stable everywhere
 
   28 Mar 2005; Aron Griffis <agriffis@gentoo.org> xcut-0.2.ebuild:
   Add ~alpha ~amd64 ~ia64
