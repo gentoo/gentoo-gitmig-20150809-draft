@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.3.ebuild,v 1.2 2005/05/05 23:59:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.3.ebuild,v 1.3 2005/05/28 16:20:33 luckyduck Exp $
 
 inherit eutils
 
@@ -10,18 +10,18 @@ SRC_URI="http://www.metadecks.org/software/sweep/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
-IUSE="oggvorbis alsa nls"
+KEYWORDS="x86 ~ppc ~sparc ~alpha amd64"
+IUSE="alsa nls vorbis"
 
-DEPEND=">=media-libs/libsndfile-1.0
-		>=x11-libs/gtk+-1.2
-		>=media-sound/madplay-0.14.2b
-		dev-libs/tdb
-		media-libs/libsamplerate
-		media-libs/speex
-		oggvorbis? ( media-libs/libogg media-libs/libvorbis )
-		alsa? ( media-libs/alsa-lib )
-		nls? ( sys-devel/gettext )"
+DEPEND="dev-libs/tdb
+	media-libs/libsamplerate
+	>=media-libs/libsndfile-1.0
+	media-libs/speex
+	>=media-sound/madplay-0.14.2b
+	>=x11-libs/gtk+-1.2
+	alsa? ( media-libs/alsa-lib )
+	nls? ( sys-devel/gettext )
+	vorbis? ( media-libs/libogg media-libs/libvorbis )"
 
 src_unpack() {
 	unpack ${A}
@@ -30,21 +30,17 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	myconf=""
+	econf \
+		$(use_enable alsa) \
+		$(use_enable nls) \
+		$(use_enable vorbis oggvorbis) \
+		|| die "econf failed"
 
-	# --enable-experimental       Add to myconf if you want this stuff 
-
-	use oggvorbis || myconf="${myconf} --disable-oggvorbis"
-	use alsa && myconf="${myconf} --enable-alsa"
-	use nls  || myconf="${myconf} --disable-nls"
-
-	econf ${myconf} || die "econf failed"
-	emake
+	emake || die "make failed"
 }
 
 src_install() {
-	einstall
+	einstall || die "make install failed"
 }
 
 pkg_postinst() {
