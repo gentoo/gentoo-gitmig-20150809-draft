@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4021 2005/05/28 00:25:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4022 2005/05/28 00:58:51 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -40,12 +40,6 @@ app-editors/gnome-chord
 # Marcelo Goes <vanquirius@gentoo.org> (26 May 2005)
 # Needs testing
 =sys-fs/encfs-1.2.2.2
-
-# Diego Pettenò <flameeyes@gentoo.org> (26 May 2005)
-# xine-lib which works on Gentoo/FreeBSD and required a52dec.
-# Needs quite a bit of testing before going into ~arch.
-=media-libs/a52dec-0.7.4-r5
-=media-libs/xine-lib-1.0.1-r2
 
 # Dan Armak <danarmak@gentoo.org> (25 May 2005)
 # KDE 3.4.1 - in testing - this has not been released yet and the tarballs are not available.
