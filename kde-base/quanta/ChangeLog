@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/quanta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.9 2005/05/26 16:29:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.10 2005/05/28 17:24:48 weeve Exp $
+
+  28 May 2005; Jason Wever <weeve@gentoo.org> quanta-3.4.0-r1.ebuild,
+  quanta-3.4.1.ebuild:
+  Added ~sparc keyword.
 
   26 May 2005; Dan Armak <danarmak@gentoo.org> quanta-3.4.1.ebuild:
   Remove patch included upstream in 3.4.1.
