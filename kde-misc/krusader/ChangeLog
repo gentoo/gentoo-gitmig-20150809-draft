@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.17 2005/05/26 14:03:23 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.18 2005/05/28 01:30:15 flameeyes Exp $
+
+  28 May 2005; Diego Pettenò <flameeyes@gentoo.org> krusader-1.60.0.ebuild:
+  Suggest installing virtual/eject instead of sys-apps/eject.
 
   26 May 2005; Gregorio Guidi <greg_g@gentoo.org> krusader-1.60.0.ebuild:
   Stable on x86.

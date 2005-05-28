@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.60.0.ebuild,v 1.2 2005/05/26 14:03:23 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.60.0.ebuild,v 1.3 2005/05/28 01:30:15 flameeyes Exp $
 
 inherit kde
 
@@ -35,7 +35,7 @@ pkg_postinst() {
 	einfo "- KDiff3  (app-misc/kdiff3)"
 	einfo "- XXdiff  (dev-util/xxdiff)"
 	einfo "- KRename (app-misc/krename)"
-	einfo "- Eject   (sys-apps/eject)"
+	einfo "- Eject   (virtual/eject)"
 	einfo ""
 	einfo "It supports also quite a few archive formats, including:"
 	einfo "- app-arch/arj"
