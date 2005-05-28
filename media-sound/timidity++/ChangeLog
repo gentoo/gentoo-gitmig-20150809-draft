@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.49 2005/04/05 01:47:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.50 2005/05/28 17:23:33 luckyduck Exp $
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  timidity++-2.13.2.ebuild, timidity++-2.13.2-r2.ebuild:
+  Dont make use of the deprecated oggvorbis useflag any longer, see #94254.
 
 *timidity++-2.13.2-r2 (05 Apr 2005)
 
