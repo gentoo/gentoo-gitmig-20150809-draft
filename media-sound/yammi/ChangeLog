@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/yammi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.24 2005/05/15 10:32:26 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.25 2005/05/28 18:47:01 luckyduck Exp $
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org> yammi-1.0-r1.ebuild,
+  yammi-1.2.ebuild:
+  Dont make use of the deprecated oggvorbis useflag any longer, see #94254.
 
   15 May 2005; Gregorio Guidi <greg_g@gentoo.org> yammi-1.2.ebuild:
   Stable on x86.
