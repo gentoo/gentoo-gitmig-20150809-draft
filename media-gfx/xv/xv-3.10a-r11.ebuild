@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r11.ebuild,v 1.10 2005/04/19 00:15:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r11.ebuild,v 1.11 2005/05/28 03:54:48 j4rg0n Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/png-mng/${P}-jumbo-patches-${JUMBOV}.tar.bz2 ftp:/
 
 LICENSE="xv"
 SLOT="0"
-KEYWORDS="amd64 x86 sparc ppc ppc64 alpha ia64"
+KEYWORDS="amd64 x86 sparc ppc ppc64 alpha ia64 ppc-macos"
 IUSE="jpeg tiff png"
 
 DEPEND="virtual/x11
@@ -31,6 +31,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-bmpfix.patch.bz2 || die
 	epatch ${FILESDIR}/${P}-yaos.dif.bz2 || die
 
+	if use ppc-macos; then
+		epatch ${FILESDIR}/${PF}-xv-osx.patch
+		epatch ${FILESDIR}/${P}-vdcomp-osx.patch
+	fi
+
 	sed -i	-e 's/\(^JPEG.*\)/#\1/g' \
 			-e 's/\(^PNG.*\)/#\1/g' \
 			-e 's/\(^TIFF.*\)/#\1/g' \
@@ -42,7 +47,11 @@ src_unpack() {
 }
 
 src_compile() {
-	append-flags -DUSE_GETCWD -DLINUX -DUSLEEP
+	if use ppc-macos; then
+		append-flags -DUSE_GETCWD -DUSLEEP
+	else
+		append-flags -DUSE_GETCWD -DLINUX -DUSLEEP
+	fi
 
 	einfo "Enabling Optional Features..."
 	if use jpeg; then
