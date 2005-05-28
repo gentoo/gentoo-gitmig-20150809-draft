@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/kbiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/kbiff/ChangeLog,v 1.13 2005/01/14 23:42:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/kbiff/ChangeLog,v 1.14 2005/05/28 15:38:19 weeve Exp $
+
+  28 May 2005; Jason Wever <weeve@gentoo.org> kbiff-3.7.1.ebuild:
+  Stable on SPARC.
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> kbiff-3.6.3.ebuild,
   kbiff-3.7.1.ebuild, kbiff-3.7.ebuild:
