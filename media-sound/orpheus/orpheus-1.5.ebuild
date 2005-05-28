@@ -1,8 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.5.ebuild,v 1.10 2004/10/30 10:58:27 eradicator Exp $
-
-IUSE="oggvorbis"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.5.ebuild,v 1.11 2005/05/28 14:05:44 luckyduck Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,12 +8,13 @@ DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://konst.org.ua/en/orpheus"
 SRC_URI="http://konst.org.ua/download/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~alpha amd64 ~ppc sparc x86"
+IUSE="ogg"
 
 DEPEND=">=sys-libs/ncurses-5.2
-	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )
+	ogg? ( >=media-libs/libvorbis-1.0_beta1 )
 	virtual/mpg123
 	media-sound/vorbis-tools
 	gnome-base/libghttp"
@@ -43,11 +42,12 @@ src_compile() {
 	#use nas || myconf="${myconf} --disable-nas"
 	myconf="${myconf}"
 
-	econf ${myconf} || die
-	make CC="$(tc-getCC) ${CFLAGS}" CXX="$(tc-getCXX) ${CXXFLAGS}" || die
+	econf ${myconf} || die "configure failed"
+	make CC="$(tc-getCC) ${CFLAGS}" CXX="$(tc-getCXX) ${CXXFLAGS}" \
+		|| die "make failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }

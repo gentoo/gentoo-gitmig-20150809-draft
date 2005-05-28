@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 16e6bd3801e38c12820d10a34d9b6fbf ChangeLog 2098
+MD5 78328706e10403972e1edfe3b8e1b4db orpheus-1.5.ebuild 1408
+MD5 885a7960decc4b969ffa0c1e3dac43bb ChangeLog 2246
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 a07bb19c8bdeb46c80ce2e09bca83fc5 orpheus-1.5.ebuild 1363
 MD5 fa0df30aebd90a38b5816d42237e0372 files/digest-orpheus-1.5 63
 MD5 8a5d258c9488ec265c5b8005714062a3 files/1.5-gcc34.patch 1505
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBg3PsArHZZzCEUG0RAkEtAJ4r/O5Rw/3vyijQjuEURFR6wm6l0wCdE2KZ
-w4emQ23P2ha+dO5SvUXzJCo=
-=zDsS
+iD8DBQFCmHrQ06ebR+OMO78RArufAKCQq8xbxr9qhnai5DdJl+vAgBM+LgCeI7Yf
+ef7w5p9o0g+bvikaA9iyEkk=
+=d4XI
 -----END PGP SIGNATURE-----
