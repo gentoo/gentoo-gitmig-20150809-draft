@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.4 2005/05/28 12:15:32 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.5 2005/05/28 15:36:00 greg_g Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -49,15 +49,15 @@ pkg_setup() {
 
 	export QTDIR=${S}
 
-	PLATCXX="notsupported"
 	CXX=$(tc-getCXX)
 	if [[ ${CXX/g++/} != ${CXX} ]]; then
 		PLATCXX="g++"
 	elif [[ ${CXX/icc/} != ${CXX} ]]; then
 		PLATCXX="icc"
+	else
+		die || "Unknown platform."
 	fi
 
-	PLATNAME="notsupported"
 	if use kernel_linux; then
 		PLATNAME="linux"
 	elif use kernel_FreeBSD && use elibc_FreeBSD; then
@@ -68,6 +68,8 @@ pkg_setup() {
 #		export INSTALL_ROOT=""
 	elif use kernel_Darwin && use elibc_Darwin; then
 		PLATNAME="darwin"
+	else
+		die "Unknown platform."
 	fi
 
 	# probably this should be '*-64' for 64bit archs
@@ -77,7 +79,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
 
 	sed -i -e 's:read acceptance:acceptance=yes:' configure
@@ -112,14 +113,12 @@ src_unpack() {
 		epatch ${T}/${P}-darwin-fink.patch
 	fi
 
-	cd mkspecs/${PLATFORM}
 	# set c/xxflags and ldflags
 	strip-flags
 	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
-		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
-		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
-		qmake.conf || die
-	cd ${S}
+	       -e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
+	       -e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
+		${S}/mkspecs/${PLATFORM}/qmake.conf || die
 }
 
 src_compile() {
@@ -185,6 +184,7 @@ src_install() {
 	# binaries
 	into ${QTBASE}
 	dobin bin/*
+	dobin tools/msg2qm/msg2qm
 
 	# libraries
 	if use ppc-macos; then
@@ -222,10 +222,10 @@ src_install() {
 
 	# plugins
 	cd ${S}
-	plugins=`find plugins -name "lib*.so" -print`
-	for x in $plugins; do
-		exeinto ${QTBASE}/`dirname $x`
-		doexe $x
+	local plugins=$(find plugins -name "lib*.so" -print)
+	for x in ${plugins}; do
+		exeinto ${QTBASE}/$(dirname ${x})
+		doexe ${x}
 	done
 
 	# Past this point just needs to be done once
@@ -237,77 +237,60 @@ src_install() {
 	cp include/* ${D}/${QTBASE}/include/
 	cp include/private/* ${D}/${QTBASE}/include/private/
 
-	# misc
-	insinto /etc/env.d
-	doins ${FILESDIR}/{45qt3,50qtdir3}
-
 	# List all the multilib libdirs
 	local libdirs
 	for libdir in $(get_all_libdirs); do
 		libdirs="${libdirs}:${QTBASE}/${libdir}"
 	done
-	dosed "s~^LDPATH=.*$~LDPATH=${libdirs:1}~" /etc/env.d/45qt3
+
+	# environment variables
+	cat <<EOF > ${T}/45qt3
+PATH=${QTBASE}/bin
+ROOTPATH=${QTBASE}/bin
+LDPATH=${libdirs:1}
+QMAKESPEC=${PLATFORM}
+MANPATH=${QTBASE}/doc/man
+EOF
+	cat <<EOF > ${T}/50qtdir3
+QTDIR=${QTBASE}
+EOF
+	insinto /etc/env.d
+	doins ${T}/45qt3 ${T}/50qtdir3
 
 	if [ "${SYMLINK_LIB}" = "yes" ]; then
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) ${QTBASE}/lib
 	fi
 
-	dodir ${QTBASE}/tools/designer/templates
-	cd ${S}
-	cp tools/designer/templates/* ${D}/${QTBASE}/tools/designer/templates
+	insinto ${QTBASE}/tools/designer
+	doins -r tools/designer/templates
 
-	dodir ${QTBASE}/translations
-	cd ${S}
-	cp translations/* ${D}/${QTBASE}/translations
+	insinto ${QTBASE}
+	doins -r translations
 
-	dodir ${QTBASE}/etc
 	keepdir ${QTBASE}/etc/settings
 
-	dodir ${QTBASE}/doc
-
 	if use doc; then
-		cp -r ${S}/doc ${D}/${QTBASE}
+		insinto ${QTBASE}
+		doins -r ${S}/doc
 	fi
 
 	if use examples; then
-		cd ${S}/examples
-		find . -name Makefile | while read MAKEFILE
-		do
-			cp ${MAKEFILE} ${MAKEFILE}.old
-			sed -e "s:${S}:${QTBASE}:g" ${MAKEFILE}.old > ${MAKEFILE}
-			rm -f ${MAKEFILE}.old
-		done
+		find ${S}/examples ${S}/tutorial -name Makefile | \
+			xargs sed -i -e "s:${S}:${QTBASE}:g"
 
-		cp -r ${S}/examples ${D}/${QTBASE}
-
-		cd ${S}/tutorial
-		find . -name Makefile | while read MAKEFILE
-		do
-			cp ${MAKEFILE} ${MAKEFILE}.old
-			sed -e "s:${S}:${QTBASE}:g" ${MAKEFILE}.old > ${MAKEFILE}
-			rm -f ${MAKEFILE}.old
-		done
-
-		cp -r ${S}/tutorial ${D}/${QTBASE}
-	fi
-
-	if use immqt || use immqt-bc ; then
-		dodoc ${S}/README.immodule
+		cp -r ${S}/examples ${D}${QTBASE}/
+		cp -r ${S}/tutorial ${D}${QTBASE}/
 	fi
 
 	# misc build reqs
-	dodir ${QTBASE}/mkspecs
-	cp -R ${S}/mkspecs/${PLATFORM} ${D}/${QTBASE}/mkspecs/
+	insinto ${QTBASE}/mkspecs
+	doins -r ${S}/mkspecs/${PLATFORM}
 
 	sed -e "s:${S}:${QTBASE}:g" \
 		${S}/.qmake.cache > ${D}${QTBASE}/.qmake.cache
 
-	sed -i -e "s:linux-g++:${PLATFORM}:" ${D}/etc/env.d/45qt3
-
-	if use ppc-macos ; then
-		dosed "s:\$(QTBASE):\$(QTDIR):g" ${QTBASE}/mkspecs/${PLATFORM}/qmake.conf \
-			"s:${S}:${QTBASE}:g" ${QTBASE}/mkspecs/${PLATFORM}/qmake.conf ${QTBASE}/lib/libqt-mt.la || die
+	dodoc FAQ README README-QT.TXT changes*
+	if use immqt || use immqt-bc ; then
+		dodoc ${S}/README.immodule
 	fi
-
-	cp ${S}/tools/msg2qm/msg2qm ${D}/${QTBASE}/bin
 }
