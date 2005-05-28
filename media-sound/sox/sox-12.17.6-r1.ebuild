@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.6-r1.ebuild,v 1.3 2005/02/18 16:51:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.6-r1.ebuild,v 1.4 2005/05/28 16:08:31 luckyduck Exp $
 
-IUSE="oggvorbis mad encode alsa"
+IUSE="ogg mad encode alsa"
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -16,7 +16,7 @@ LICENSE="LGPL-2.1"
 
 DEPEND="virtual/libc
 	encode? ( media-sound/lame )
-	oggvorbis? ( media-libs/libvorbis )
+	ogg? ( media-libs/libvorbis )
 	mad? ( media-sound/madplay )
 	alsa? ( media-libs/alsa-lib )"
 
@@ -39,7 +39,7 @@ src_compile () {
 	# Fixes wav segfaults. See Bug #35745.
 	append-flags -fsigned-char
 
-	myconf="${myconf} `use_enable oggvorbis ogg-vorbis`"
+	myconf="${myconf} `use_enable ogg ogg-vorbis`"
 	myconf="${myconf} `use_enable mad`"
 	myconf="${myconf} `use_enable encode lame`"
 #	myconf="${myconf} `use_enable oss oss-dsp`"
