@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4-r1.ebuild,v 1.5 2005/05/21 17:50:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4-r1.ebuild,v 1.6 2005/05/28 21:28:44 vapier Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -44,7 +44,7 @@ src_compile() {
 	sed -i \
 		-e "/DOOMWADDIR/s:\".*\":\"${GAMES_DATADIR}/doom-data\":" config.h \
 		|| die "sed failed"
-	if use opengl ; then
+	if ! use opengl ; then
 		sed -i \
 			-e '/GL_DOOM/s:.*::' config.h \
 			|| die "sed failed"
