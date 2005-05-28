@@ -1,4 +1,6 @@
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c932f7c31efcd009b3f44e6691e96ae5 sdparm-0.91.ebuild 876
-MD5 62d3ab893e2fdaaebb5a0f98986dd7a7 ChangeLog 436
+MD5 6926988178f736504569b6cf97e9ac10 ChangeLog 550
+MD5 8e25f5c5bcdf948dad7acc1c019972aa sdparm-0.92.ebuild 876
 MD5 acdb60c4b5bbc94e30f3342b5faeb233 files/digest-sdparm-0.91 60
+MD5 faf17c28aaf75ea4d17a22fb13fc95e2 files/digest-sdparm-0.92 60
