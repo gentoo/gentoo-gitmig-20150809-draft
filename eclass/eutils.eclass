@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.178 2005/05/26 22:09:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.179 2005/05/28 05:50:29 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -411,7 +411,7 @@ emktemp() {
 #
 # egetent(database, key)
 egetent() {
-	if useq ppc-macos ; then
+	if [[ "${USERLAND}" == "Darwin" ]] ; then
 		case "$2" in
 		  *[!0-9]*) # Non numeric
 			nidump $1 . | awk -F":" "{ if (\$1 ~ /^$2$/) {print \$0;exit;} }"
@@ -420,7 +420,7 @@ egetent() {
 			nidump $1 . | awk -F":" "{ if (\$3 == $2) {print \$0;exit;} }"
 			;;
 		esac
-	elif useq x86-fbsd ; then
+	elif [[ "${USERLAND}" == "BSD" ]] ; then
 		local action
 		if [ "$1" == "passwd" ]
 		then
@@ -509,9 +509,10 @@ enewuser() {
 			die "${eshell} does not exist"
 		fi
 	else
-		if [ "${USERLAND}" == "BSD" ]
-		then
+		if [[ "${USERLAND}" == "Darwin" ]]; then
 			eshell="/usr/bin/false"
+		elif [[ "${USERLAND}" == "BSD" ]]; then
+			eshell="/usr/sbin/nologin"
 		else
 			eshell="/bin/false"
 		fi
@@ -568,7 +569,7 @@ enewuser() {
 	local eextra="$@"
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if useq ppc-macos
+	if [[ "${USERLAND}" == "Darwin" ]]
 	then
 		### Make the user
 		if [ -z "${eextra}" ]
@@ -591,7 +592,7 @@ enewuser() {
 			einfo "eextra: ${eextra}"
 			die "Required function missing"
 		fi
-	elif use x86-fbsd ; then
+	elif [[ "${USERLAND}" == "BSD" ]] ; then
 		if [ -z "${eextra}" ]
 		then
 			pw useradd ${euser} ${opts} \
@@ -661,7 +662,7 @@ enewgroup() {
 		then
 			if [ -z "`egetent group ${egid}`" ]
 			then
-				if useq ppc-macos ; then
+				if [[ "${USERLAND}" == "Darwin" ]]; then
 					opts="${opts} ${egid}"
 				else
 					opts="${opts} -g ${egid}"
@@ -685,10 +686,10 @@ enewgroup() {
 	# add the group
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if useq ppc-macos ; then
+	if [[ "${USERLAND}" == "Darwin" ]]; then
 		if [ ! -z "${eextra}" ];
 		then
-			einfo "Extra options are not supported on macos yet"
+			einfo "Extra options are not supported on Darwin/OS X yet"
 			einfo "Please report the ebuild along with the info below"
 			einfo "eextra: ${eextra}"
 			die "Required function missing"
@@ -703,7 +704,7 @@ enewgroup() {
 		esac
 		dscl . create /groups/${egroup} gid ${egid}
 		dscl . create /groups/${egroup} passwd '*'
-	elif use x86-fbsd ; then
+	elif [[ "${USERLAND}" == "BSD" ]] ; then
 		case ${egid} in
 			*[!0-9]*) # Non numeric
 				for egid in `jot 898 101`; do
