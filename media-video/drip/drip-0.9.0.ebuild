@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0.ebuild,v 1.4 2005/03/30 21:05:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0.ebuild,v 1.5 2005/05/28 01:14:07 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -25,7 +25,7 @@ RDEPEND="gnome-base/gnome-libs
 	media-gfx/imagemagick
 	media-libs/gdk-pixbuf
 	dev-libs/libxml2
-	sys-apps/eject
+	virtual/eject
 	>=sys-devel/gcc-3"
 DEPEND="${RDEPEND}
 	dev-lang/nasm
