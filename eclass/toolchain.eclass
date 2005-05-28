@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.158 2005/05/27 23:41:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.159 2005/05/28 21:26:35 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1141,7 +1141,7 @@ gcc_do_make() {
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-all}
 	elif [[ $(tc-arch) == "x86" || $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ]] \
-	     && [[ ${GCCMAJOR} -gt 3 || ${GCCMAJOR} -eq 3 && ${GCCMINOR} -gt 2 ]]
+	     && [[ ${GCCMAJOR} -gt 3 || ${GCCMAJOR} -eq 3 && ${GCCMINOR} -gt 3 ]]
 	then
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-profiledbootstrap}
 	else
