@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.11 2005/05/28 18:38:17 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.12 2005/05/28 19:01:24 foser Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -88,4 +88,12 @@ font_src_install() {
 
 }
 
-EXPORT_FUNCTIONS src_install
+font_pkg_setup() {
+
+	# make sure we get no colissions
+	# setup is not the nicest place, but preinst doesn't cut it
+	rm "/usr/share/fonts/${PN}/fonts.cache-1"
+
+}
+
+EXPORT_FUNCTIONS src_install pkg_setup
