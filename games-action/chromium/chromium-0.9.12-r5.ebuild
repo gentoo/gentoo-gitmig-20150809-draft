@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.10 2005/03/14 05:33:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.11 2005/05/28 09:19:46 vapier Exp $
 
 inherit flag-o-matic eutils games
 
@@ -12,18 +12,17 @@ SRC_URI="http://www.reptilelabour.com/software/files/chromium/chromium-src-${PV}
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
-IUSE="oggvorbis qt sdl"
+IUSE="vorbis qt sdl"
 
-DEPEND="virtual/libc
+DEPEND="virtual/x11
 	|| (
 		sdl? ( media-libs/libsdl
 			media-libs/smpeg )
 		virtual/glut
 	)
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	qt? ( x11-libs/qt )
-	media-libs/openal
-	virtual/x11"
+	media-libs/openal"
 
 S="${WORKDIR}/Chromium-0.9"
 
@@ -56,7 +55,7 @@ src_compile() {
 		export ENABLE_SDL="no"
 		export ENABLE_SMPEG="no"
 	fi
-	use oggvorbis \
+	use vorbis \
 		&& export ENABLE_VORBIS="yes" \
 		|| export ENABLE_VORBIS="no"
 	if use qt ; then
