@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.10.0.ebuild,v 1.4 2005/05/08 22:06:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.10.0.ebuild,v 1.5 2005/05/28 15:45:53 luckyduck Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.burtonini.com/blog/computers/sound-juicer/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64 ~ia64"
-IUSE="oggvorbis flac"
+IUSE="vorbis flac"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2.6
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=media-libs/musicbrainz-2.0.1
 	=media-libs/gstreamer-0.8*
 	=media-plugins/gst-plugins-cdparanoia-0.8*
-	oggvorbis? ( =media-plugins/gst-plugins-vorbis-0.8*
+	vorbis? ( =media-plugins/gst-plugins-vorbis-0.8*
 		=media-plugins/gst-plugins-ogg-0.8* )
 	flac? ( =media-plugins/gst-plugins-flac-0.8* )"
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
+DOCS="AUTHORS ChangeLog INSTALL NEWS README TODO"
 
 # needed to get around some sandboxing checks
 export GST_INSPECT=/bin/true

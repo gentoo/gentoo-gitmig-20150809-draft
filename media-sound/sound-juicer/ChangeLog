@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.33 2005/05/08 22:06:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.34 2005/05/28 15:45:53 luckyduck Exp $
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  sound-juicer-0.5.15.ebuild, sound-juicer-2.10.0.ebuild:
+  Dont make use of the deprecated oggvorbis useflag any longer, see #94254.
+  Marked 0.5.15 stable on amd64.
 
   08 May 2005; Aron Griffis <agriffis@gentoo.org> sound-juicer-2.10.0.ebuild:
   add ~ia64
