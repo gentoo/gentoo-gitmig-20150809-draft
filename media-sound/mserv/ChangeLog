@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mserv
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.8 2004/09/15 16:34:23 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.9 2005/05/28 13:35:50 luckyduck Exp $
+
+  28 May 2005; Jan Brinkmann <luckyduck@gentoo.org> mserv-0.35.ebuild:
+  Dont make use of the deprecated oggvorbis useflag any longer, see #94254.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> mserv-0.35.ebuild:
   Stable amd64, sparc.

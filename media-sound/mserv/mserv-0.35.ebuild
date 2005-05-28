@@ -1,25 +1,24 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.8 2004/09/15 16:34:23 eradicator Exp $
-
-IUSE="oggvorbis"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.9 2005/05/28 13:35:50 luckyduck Exp $
 
 inherit webapp-apache eutils
 
 DESCRIPTION="Jukebox-style music server"
 HOMEPAGE="http://www.mserv.org"
 SRC_URI="mirror://sourceforge/mserv/${P}.tar.gz"
-LICENSE="mserv"
 
+LICENSE="mserv"
 SLOT="0"
 KEYWORDS="x86 sparc amd64"
+IUSE="vorbis"
 
 DEPEND="virtual/libc"
 RDEPEND=">=dev-lang/perl-5.6.1
 	 virtual/mpg123
 	 media-sound/sox
 	 net-www/apache
-	 oggvorbis? ( media-sound/vorbis-tools )"
+	 vorbis? ( media-sound/vorbis-tools )"
 
 pkg_setup() {
 	enewgroup mserv > /dev/null || die
@@ -39,8 +38,8 @@ src_unpack() {
 src_compile() {
 	webapp-detect
 
-	econf || die
-	emake || die
+	econf || die "configure failed"
+	emake || die "make failed"
 
 	# Optional suid wrapper
 	cd ${S}/support
@@ -50,10 +49,10 @@ src_compile() {
 src_install() {
 	webapp-detect
 
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "make install failed"
 
 	dobin support/mservedit support/mservripcd support/mservplay
-	dodoc AUTHORS COPYING ChangeLog docs/quick-start.txt
+	dodoc AUTHORS ChangeLog docs/quick-start.txt
 
 	# Web client
 	exeinto ${HTTPD_CGIBIN}/mserv
