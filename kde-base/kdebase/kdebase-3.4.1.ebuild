@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.1.ebuild,v 1.1 2005/05/27 08:45:06 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.1.ebuild,v 1.2 2005/05/28 01:26:55 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -26,7 +26,7 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 
 RDEPEND="${DEPEND}
 	java? ( || ( virtual/jdk virtual/jre ) )
-	sys-apps/eject"
+	virtual/eject"
 
 src_unpack() {
 	kde_src_unpack

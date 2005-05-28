@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.198 2005/05/27 08:45:06 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.199 2005/05/28 01:26:55 flameeyes Exp $
+
+  28 May 2005; Diego Pettenò <flameeyes@gentoo.org> kdebase-3.4.1.ebuild:
+  Moved dependency to virtual/eject.
 
 *kdebase-3.4.1 (27 May 2005)
 
