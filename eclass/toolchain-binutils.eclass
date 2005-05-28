@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.36 2005/05/04 01:12:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.37 2005/05/28 05:51:09 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -60,9 +60,20 @@ tc-binutils_unpack() {
 tc-binutils_apply_patches() {
 	cd "${S}"
 
-	[[ -n ${PATCHVER} ]] && epatch "${WORKDIR}"/patch
+	if [[ -n ${PATCHVER} ]] ; then
+		EPATCH_SOURCE=${WORKDIR}/patch
+		[[ -n $(ls "${EPATCH_SOURCE}"/*.bz2 2>/dev/null) ]] \
+			&& EPATCH_SUFFIX="patch.bz2" \
+			|| EPATCH_SUFFIX="patch"
+		epatch
+	fi
 	if [[ -n ${UCLIBC_PATCHVER} ]] ; then
-		epatch "${WORKDIR}"/uclibc-patches
+		EPATCH_SOURCE=${WORKDIR}/uclibc-patches
+		[[ -n $(ls "${EPATCH_SOURCE}"/*.bz2 2>/dev/null) ]] \
+			&& EPATCH_SUFFIX="patch.bz2" \
+			|| EPATCH_SUFFIX="patch"
+		EPATCH_MULTI_MSG="Applying uClibc fixes ..." \
+		epatch
 	elif [[ ${CTARGET} == *-uclibc ]] ; then
 		die "sorry, but this binutils doesn't yet support uClibc :("
 	fi
