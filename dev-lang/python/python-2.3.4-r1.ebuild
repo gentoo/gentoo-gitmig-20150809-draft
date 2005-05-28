@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4-r1.ebuild,v 1.6 2005/05/28 00:21:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4-r1.ebuild,v 1.7 2005/05/28 00:30:08 vapier Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -9,8 +9,8 @@
 
 inherit eutils flag-o-matic python
 
-PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
-PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
+PYVER_MAJOR=$(get_major_version)
+PYVER_MINOR=$(get_version_component_range 2)
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 
 S="${WORKDIR}/Python-${PV}"
@@ -23,8 +23,7 @@ SLOT="2.3"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86 ppc64"
 IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X uclibc nocxx"
 
-DEPEND="virtual/libc
-	>=sys-libs/zlib-1.1.3
+DEPEND=">=sys-libs/zlib-1.1.3
 	!build? (
 		X? ( tcltk? ( >=dev-lang/tk-8.0 ) )
 		ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )

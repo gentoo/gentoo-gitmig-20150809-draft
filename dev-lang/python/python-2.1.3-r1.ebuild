@@ -1,21 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.3-r1.ebuild,v 1.20 2005/05/28 00:21:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.3-r1.ebuild,v 1.21 2005/05/28 00:30:08 vapier Exp $
 
-IUSE="readline tcltk berkdb"
-
-PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
-PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
+PYVER_MAJOR=$(get_major_version)
+PYVER_MINOR=$(get_version_component_range 2)
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 S=${WORKDIR}/Python-${PV}
+
 DESCRIPTION="A really great language"
+HOMEPAGE="http://www.python.org"
 SRC_URI="http://www.python.org/ftp/python/${PV}/Python-${PV}.tgz"
 
-HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.1.1"
+SLOT="2.1"
 KEYWORDS="x86 sparc alpha ia64 ppc"
+IUSE="readline tcltk berkdb"
 
-DEPEND="virtual/libc >=sys-libs/zlib-1.1.3
+DEPEND=">=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
 	berkdb? ( >=sys-libs/db-3 )
 	tcltk? ( >=dev-lang/tk-8.0 )"
@@ -24,7 +25,6 @@ DEPEND="virtual/libc >=sys-libs/zlib-1.1.3
 # the functionality expected from previous pythons.
 
 PROVIDE="virtual/python"
-SLOT="2.1"
 
 src_compile() {
 	export OPT="$CFLAGS"

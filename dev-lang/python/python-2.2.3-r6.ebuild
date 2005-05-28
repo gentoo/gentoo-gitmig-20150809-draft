@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r6.ebuild,v 1.2 2005/05/28 00:21:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r6.ebuild,v 1.3 2005/05/28 00:30:08 vapier Exp $
 
 inherit flag-o-matic eutils python
 
-PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
-PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
+PYVER_MAJOR=$(get_major_version)
+PYVER_MINOR=$(get_version_component_range 2)
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 
 S="${WORKDIR}/Python-${PV}"
@@ -14,11 +14,11 @@ HOMEPAGE="http://www.python.org"
 SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tgz"
 
 LICENSE="PSF-2.2"
+SLOT="2.2"
 KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64"
 IUSE="berkdb bootstrap build doc gdbm ncurses readline ssl tcltk nocxx"
 
-DEPEND="virtual/libc
-	>=sys-libs/zlib-1.1.3
+DEPEND=">=sys-libs/zlib-1.1.3
 	!build? ( 	tcltk? ( >=dev-lang/tk-8.0 )
 				ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
 				berkdb? ( >=sys-libs/db-3 )
@@ -34,8 +34,6 @@ RDEPEND="${DEPEND} dev-python/python-fchksum"
 # the functionality expected from previous pythons.
 
 PROVIDE="virtual/python"
-
-SLOT="2.2"
 
 src_unpack() {
 	unpack ${A}

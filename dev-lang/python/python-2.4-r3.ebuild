@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4-r3.ebuild,v 1.4 2005/05/28 00:21:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4-r3.ebuild,v 1.5 2005/05/28 00:30:08 vapier Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -9,23 +9,21 @@
 
 inherit eutils flag-o-matic python multilib
 
-PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
-PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
+PYVER_MAJOR=$(get_major_version)
+PYVER_MINOR=$(get_version_component_range 2)
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 MY_P="Python-${PV}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="A really great language"
+HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PYVER}/${MY_P}.tar.bz2"
-HOMEPAGE="http://www.python.org"
 
-IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X uclibc nocxx"
 LICENSE="PSF-2.2"
 SLOT="2.4"
-
 KEYWORDS="~x86 ~ppc ~sparc ~arm ~hppa ~amd64 ~s390 ~alpha ~ia64 ~mips"
+IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X uclibc nocxx"
 
-DEPEND="virtual/libc
-	>=sys-libs/zlib-1.1.3
+DEPEND=">=sys-libs/zlib-1.1.3
 	!build? (
 		X? ( tcltk? ( >=dev-lang/tk-8.0 ) )
 		ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
