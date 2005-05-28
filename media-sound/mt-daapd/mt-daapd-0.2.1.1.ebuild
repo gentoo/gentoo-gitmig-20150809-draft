@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.1.1.ebuild,v 1.2 2005/05/25 18:38:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.1.1.ebuild,v 1.3 2005/05/28 13:41:25 luckyduck Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,8 +18,8 @@ IUSE="debug howl vorbis"
 DEPEND="sys-libs/zlib
 	media-libs/libid3tag
 	sys-libs/gdbm
-	howl? ( >=net-misc/howl-0.9.2 )
 	debug? ( dev-util/efence )
+	howl? ( >=net-misc/howl-0.9.2 )
 	vorbis? ( media-libs/libvorbis )"
 
 src_compile() {
@@ -38,10 +38,9 @@ src_compile() {
 		myconf="--disable-howl"
 	fi
 
-	# vorbis support?
-	use vorbis && myconf="${myconf} --enable-oggvorbis"
-
-	econf ${myconf} || die "configure failed"
+	econf \
+		$(use_enable vorbis oggvorbis) \
+		${myconf} || die "configure failed"
 	emake || die "make failed"
 }
 
