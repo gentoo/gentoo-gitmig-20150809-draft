@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils-darwin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/ChangeLog,v 1.4 2005/05/13 18:51:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/ChangeLog,v 1.5 2005/05/28 19:16:23 josejx Exp $
+
+  28 May 2005; Joseph Jezak <josejx@gentoo.org>
+  coreutils-darwin-5.3.0.ebuild:
+  Fixed su issue.
 
   13 May 2005; Joseph Jezak <josejx@gentoo.org>
   coreutils-darwin-5.3.0.ebuild:
