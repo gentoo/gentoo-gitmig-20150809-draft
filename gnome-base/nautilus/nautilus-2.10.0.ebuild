@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.0.ebuild,v 1.9 2005/05/06 10:30:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.0.ebuild,v 1.10 2005/05/28 08:08:46 foser Exp $
 
 inherit gnome2 eutils
 
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=media-libs/libexif-0.5.12
 	dev-libs/popt
 	virtual/fam
-	sys-apps/eject
+	virtual/eject
 	!gstreamer? ( oggvorbis? ( media-sound/vorbis-tools ) )
 	gstreamer? (
 		>=media-libs/gstreamer-0.8

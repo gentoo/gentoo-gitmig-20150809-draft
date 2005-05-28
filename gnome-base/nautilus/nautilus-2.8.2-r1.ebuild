@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.8.2-r1.ebuild,v 1.11 2005/04/02 04:43:51 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.8.2-r1.ebuild,v 1.12 2005/05/28 08:08:46 foser Exp $
 
 inherit gnome2 eutils
 
@@ -31,7 +31,7 @@ RDEPEND=">=dev-libs/glib-2.3
 	>=x11-libs/startup-notification-0.5
 	dev-libs/popt
 	virtual/fam
-	sys-apps/eject
+	virtual/eject
 	cups? ( net-print/libgnomecups
 		net-print/gnome-cups-manager )
 	!gstreamer? ( oggvorbis? ( media-sound/vorbis-tools ) )
