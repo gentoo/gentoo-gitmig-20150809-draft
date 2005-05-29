@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.0_rc5.ebuild,v 1.1 2005/05/26 10:40:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.0_rc5.ebuild,v 1.2 2005/05/29 12:20:52 dragonheart Exp $
 
 inherit versionator distutils eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.prelude-ids.org/download/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
