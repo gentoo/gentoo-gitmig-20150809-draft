@@ -1,4 +1,16 @@
-MD5 f2f06192583227db6a1d7545ac5184a3 ChangeLog 421
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9be099d3135dbeaf14a465f7ddb02fe3 ChangeLog 533
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 ac726639b197b5d150514b61a431899d skkfep-0.86c.ebuild 1139
+MD5 d2b56b2e0bb5b529b3135d694f948f40 skkfep-0.87.ebuild 1217
 MD5 48df17230bebc2d2ccb335f709694d2b files/digest-skkfep-0.86c 135
+MD5 f31dd088a47f54614f6d167e9f803bea files/digest-skkfep-0.87 135
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCmSsBVWNWqTUmv+0RAm8eAJsHa7pD027jgtCyuCd/G8ruRRBvjACfYrp7
+5o5yNebB+yptQ/Zh+9OMsCw=
+=LRIq
+-----END PGP SIGNATURE-----
