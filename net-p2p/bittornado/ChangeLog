@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.36 2005/05/05 23:24:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.37 2005/05/29 21:45:13 mholzer Exp $
+
+  29 May 2005; Martin Holzer <mholzer@gentoo.org> bittornado-0.3.12.ebuild:
+  stable on amd64 and x86
 
   05 May 2005; Sven Wegener <swegener@gentoo.org> bittornado-0.3.1.ebuild,
   bittornado-0.3.6.ebuild, bittornado-0.3.7.ebuild:
