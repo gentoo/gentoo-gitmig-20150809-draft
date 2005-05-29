@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.13 2005/05/21 12:36:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.14 2005/05/29 11:40:57 mrness Exp $
 
 inherit eutils
 
@@ -22,7 +22,9 @@ src_unpack() {
 	cd ${S}
 	# solar@gentoo.org (Mar 24 2004)
 	# propolice/ssp caught minicom going out of bounds here.
-	epatch ${FILESDIR}/${PN}-2.1-memcpy-bounds.diff
+	epatch ${FILESDIR}/${P}-memcpy-bounds.diff
+
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {

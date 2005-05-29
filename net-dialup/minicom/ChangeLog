@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.28 2005/05/21 12:36:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.29 2005/05/29 11:40:57 mrness Exp $
+
+  29 May 2005; Alin Nastac <mrness@gentoo.org>
+  +files/minicom-2.1-gcc4.patch, minicom-2.1-r1.ebuild:
+  Apply patch from upstream CVS to allow compiling with gcc-4.0 (#93120).
 
   21 May 2005; Markus Rothe <corsair@gentoo.org> minicom-2.1-r1.ebuild:
   Added ~ppc64 to KEYWORDS
