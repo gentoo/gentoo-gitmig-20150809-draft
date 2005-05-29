@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-codec
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.14 2005/04/22 15:48:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.15 2005/05/29 15:37:52 corsair Exp $
+
+  29 May 2005; Markus Rothe <corsair@gentoo.org> commons-codec-1.3.ebuild:
+  Added ~ppc64
 
   22 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> commons-codec-1.3.ebuild:
   disabled junit tests, fixes #89784. marked stable on amd64
