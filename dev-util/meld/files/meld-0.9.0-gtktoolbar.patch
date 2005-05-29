@@ -1,9 +1,0 @@
---- meldapp.py.old	2003-10-28 13:23:43.000000000 +0000
-+++ meldapp.py	2003-10-28 13:23:50.000000000 +0000
-@@ -461,5 +461,5 @@
-         if self.toolbar_style == 0:
-             style = self._gconf.get_string('/desktop/gnome/interface/toolbar_style')
--            style = {"both":gtk.TOOLBAR_BOTH, "both_horiz":gtk.TOOLBAR_BOTH_HORIZ,
-+            style = {"both":gtk.TOOLBAR_BOTH, "both-horiz":gtk.TOOLBAR_BOTH_HORIZ,
-                      "icon":gtk.TOOLBAR_ICONS, "icons":gtk.TOOLBAR_ICONS,
-                      "text":gtk.TOOLBAR_TEXT}[style]
