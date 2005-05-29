@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4025 2005/05/29 05:18:50 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4026 2005/05/29 12:13:51 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -28,10 +28,6 @@
 # Aaron Walker <ka0ttic@gentoo.org> (28 May 2005)
 # masked for testing
 >=app-portage/herdstat-1.1.1_rc1
-
-# Daniel Black <dragonheart@gentoo.org> (28 May 2005)
-# not working with security bug 91466. to be removed soon
-net-analyzer/piwi
 
 # Leonardo Boshell <leonardop@gentoo.org> (27 May 2005)
 # No maintainer, going to the to-be-removed pile now.
