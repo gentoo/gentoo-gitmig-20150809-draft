@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.37 2005/05/23 00:42:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.38 2005/05/29 12:53:16 cryos Exp $
+
+  29 May 2005; Marcus D. Hanwell <marcus@gentoo.org> lvm2-2.01.09.ebuild:
+  Stable on amd64, bug 92427.
 
   23 May 2005; Jason Wever <weeve@gentoo.org> lvm2-2.01.09.ebuild:
   Stable on SPARC.
