@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/supybot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.10 2005/02/04 05:09:27 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.11 2005/05/29 15:43:33 swegener Exp $
+
+  29 May 2005; Sven Wegener <swegener@gentoo.org>
+  -files/supybot-0.77.2-cvsadditions-2004-06-10.patch,
+  supybot-0.77.2.ebuild:
+  Moved large patch from files/ to mirrors.
 
 *supybot-0.80.1 (04 Feb 2005)
 
