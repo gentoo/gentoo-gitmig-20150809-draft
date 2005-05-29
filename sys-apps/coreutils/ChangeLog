@@ -1,25 +1,6 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.129 2005/04/26 20:21:53 kloeri Exp $
-
-  26 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
-  coreutils-5.2.1-r5.ebuild:
-  Stable on alpha.
-
-  20 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
-  coreutils-5.2.1-r5.ebuild:
-  Stable on ppc.
-
-  12 Apr 2005; Daniel Ostrow <dostrow@gentoo.org> coreutils-5.2.1-r5.ebuild,
-  coreutils-5.2.1-r6.ebuild:
-  Changes for ppc64 hardened
-
-  09 Apr 2005; Markus Rothe <corsair@gentoo.org> coreutils-5.2.1-r5.ebuild:
-  Stable on ppc64
-
-  04 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
-  coreutils-5.2.1-r5.ebuild:
-  Stable on sparc
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.130 2005/05/29 08:26:15 vapier Exp $
 
 *coreutils-5.2.1-r6 (02 Apr 2005)
 
@@ -34,24 +15,9 @@
   +coreutils-5.2.1-r5.ebuild:
   Add fix for bug #84564.
 
-  04 Mar 2005; Daniel Goller <morfic@gentoo.org> coreutils-5.2.1-r4.ebuild:
-  Stable on ppc
-
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   coreutils-5.2.1-r3.ebuild, coreutils-5.2.1-r4.ebuild:
-  Fix dep mess made by epkgmove
-
-  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
-  coreutils-5.2.1-r3.ebuild:
   Dependency update: sys-apps/at -> sys-process/at.
-
-  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
-  coreutils-5.2.1-r4.ebuild:
-  Dependency update: sys-apps/at -> sys-process/at.
-
-  07 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org>
-  coreutils-5.2.1-r4.ebuild:
-  Stable on sparc
 
 *coreutils-5.2.1-r4 (09 Jan 2005)
 
@@ -60,14 +26,6 @@
   Fix tail -f behavior #57477 by rob holland. Have the progress bar use normal
   spaces #76903 by Nikolai Weibull. Fix chown --dereference #53750 by Georgi
   Georgiev. Fix test running #75932 / #76089.
-
-  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
-  coreutils-5.2.1-r2.ebuild:
-  Stable on amd64.
-
-  22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org>
-  coreutils-5.2.1-r2.ebuild:
-  Stable on sparc
 
 *coreutils-5.2.1-r3 (21 Dec 2004)
 
@@ -107,13 +65,6 @@
   reported by: qube99@hotmail.com in bug #39515, and fixed by: Sven Wegener
   <swegener@gentoo.org>
 
-  18 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
-  coreutils-5.2.1-r1.ebuild:
-  Stable on sparc
-
-  17 Aug 2004; Aron Griffis <agriffis@gentoo.org> coreutils-5.2.1-r1.ebuild:
-  stable on alpha and ia64
-
   15 Aug 2004; Travis Tilley <lv@gentoo.org>
   +files/003_all_coreutils-gentoo-uname.patch, coreutils-5.2.1-r1.ebuild,
   coreutils-5.2.1.ebuild:
@@ -138,15 +89,6 @@
   regular uname patch. Finally, fix the selinux-noacl patch, thanks to Chris
   PeBenito <pebenito@gentoo.org> via e-mail.
 
-  03 Jul 2004; Guy Martin <gmsoft@gentoo.org> coreutils-5.2.1.ebuild:
-  Marked stable on hppa.
-
-  03 Jul 2004; Joshua Kinard <kumba@gentoo.org> coreutils-5.2.1.ebuild:
-  Marked stable on mips.
-
-  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> coreutils-5.2.1.ebuild:
-  stable on x86, alpha, ia64
-
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org> coreutils-5.0-r6.ebuild,
   coreutils-5.0.91-r3.ebuild, coreutils-5.0.91-r4.ebuild:
   QA - fix use invocation
@@ -157,18 +99,12 @@
   uclibc not dependant on sys-apps/help2man thanks to Peter S. Mazinger
   <ps.m@gmx.net>. Changed dev.gentoo.org SRC_URI to mirror://gentoo/.
 
-  02 Jun 2004; Travis Tilley <lv@gentoo.org> coreutils-5.2.1.ebuild:
-  stable on amd64
-
   31 May 2004; Tom Gall <tgall@gentoo.org> coreutils-5.0.91-r4.ebuild:
   added coreutils-5.0.91-ppc64-1.patch which fixes bug #52617
 
   17 May 2004; Mike Frysinger <vapier@gentoo.org> coreutils-5.2.1.ebuild:
   Fixes for uname: no more segfaults for unknown archs #36190, integrate the
   broken out s390 patch, and add support arm support.
-
-  17 May 2004; Jon Portnoy <avenj@gentoo.org> coreutils-5.2.0-r2.ebuild :
-  Stable on AMD64
 
   16 May 2004; Seemant Kulleen <seemant@gentoo.org> coreutils-5.2.1.ebuild:
   fixed the progress bar patch for acl enabled coreutils. Thanks to: Aaron
@@ -186,12 +122,6 @@
   16 May 2004; Seemant Kulleen <seemant@gentoo.org> coreutils-5.2.0-r2.ebuild:
   Change dependency to autoconf-2.58 or above. This finally fixes the reconf bug
   #49137
-
-  15 May 2004; Joshua Kinard <kumba@gentoo.org> coreutils-5.2.0-r2.ebuild:
-  Marked stable on mips.
-
-  13 May 2004; Mike Frysinger <vapier@gentoo.org> coreutils-5.2.0-r2.ebuild:
-  Stable on x86/ppc/hppa
 
   12 May 2004; Seemant Kulleen <seemant@gentoo.org> coreutils-5.2.0-r2.ebuild:
   set autoconf explicitly to 2.5. Should solve bug #49137 by Matt Davis
@@ -216,15 +146,6 @@
 
   18 Apr 2004; Michael McCabe <randy@gentoo.org> +coreutils-5.2.0-r1.ebuild:
   Adding s390 specific fixes to close bug 47965
-
-  09 Apr 2004; Travis Tilley <lv@gentoo.org> coreutils-5.2.0.ebuild:
-  stable on amd64
-
-  23 Mar 2004; Jason Wever <weeve@gentoo.org> coreutils-5.2.0.ebuild:
-  Stable on sparc.
-
-  07 Mar 2004; Joshua Kinard <kumba@gentoo.org> coreutils-5.0.91-r4.ebuild:
-  Marked stable on mips.
 
   05 Mar 2004; Seemant Kulleen <seemant@gentoo.org> coreutils-5.2.0.ebuild:
   added a don't worry blurb to the reconf section
@@ -255,9 +176,6 @@
   15 Jan 2004; Seemant Kulleen <seemant@gentoo.org>
   coreutils-5.0.91-r4.ebuild :
   symlink bin/install to usr/bin/install for Brad House
-
-  15 Jan 2004; Aron Griffis <agriffis@gentoo.org> coreutils-5.0.91-r4.ebuild:
-  stable on alpha and ia64
 
   14 Jan 2004; Guy Martin <gmsoft@gentoo.org> coreutils-5.0.91-r4.ebuild :
   Marked stable on hppa to have a working g++ again.
@@ -390,9 +308,6 @@
   Bump to update SELinux patch. The old patch had a rare segfault/hang problem
   in ls. Otherwise, same as -r0.
 
-  04 Nov 2003; Brad House <brad_mssw@gentoo.org> coreutils-5.0.91.ebuild:
-  mark stable on amd64
-
   03 Nov 2003; Daniel Robbins <drobbins@gentoo.org> all of 'em: added missing
   RDEPEND so they don't default to DEPEND.
   
@@ -477,9 +392,6 @@
 
 *coreutils-5.0-r3 (26 Aug 2003)
 
-  28 Aug 2003; Guy Martin <gmsoft@gentoo.org> coreutils-5.0-r3.ebuild :
-  Marked stable on hppa.
-
   26 Aug 2003; Martin Schlemmer <azarah@gentoo.org> Manifest,
   coreutils-5.0-r3.ebuild:
   Fix issues with gcc-2.95.3, bug #27329, thanks to patch from TGL
@@ -495,12 +407,6 @@
   adds a patch to display a progress bar for mv and cp (when invoked with the -g
   option). Thanks to Haukkari in #gentoo for passing this on to us. The patch
   was authored by: Miika Pekkarinen <miipekk@ihme.org>
-
-  11 Aug 2003; Aron Griffis <agriffis@gentoo.org> coreutils-5.0-r1.ebuild:
-  Mark stable on alpha
-
-  04 Aug 2003; Joshua Kinard <kumba@gentoo.org> coreutils-5.0-r1.ebuild:
-  Changed ~mips to mips in KEYWORDS
 
   03 Aug 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-5.0-r1.ebuild,
   coreutils-5.0.ebuild, files/coreutils-5.0-confdir3.patch:
