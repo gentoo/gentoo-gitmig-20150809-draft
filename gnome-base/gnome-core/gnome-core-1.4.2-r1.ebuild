@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.2-r1.ebuild,v 1.12 2004/07/14 15:08:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.2-r1.ebuild,v 1.13 2005/05/29 22:29:30 halcy0n Exp $
 
 IUSE="kde nls cups"
 
-inherit libtool gnome.org
+inherit libtool gnome.org eutils
 
 DESCRIPTION="Core components of the GNOME desktop environment"
 HOMEPAGE="http://www.gnome.org/"
@@ -38,6 +38,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	# >=gcc 3.4 compile fix; bug #79307
+	epatch "${FILESDIR}"/"${P}"-gcc34.patch
 
 	# libpng-1.2.5 fix
 	cp configure.in configure.in.old
