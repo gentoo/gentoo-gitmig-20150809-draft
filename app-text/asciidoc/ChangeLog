@@ -1,0 +1,10 @@
+# ChangeLog for app-text/asciidoc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.1 2005/05/29 04:06:20 usata Exp $
+
+*asciidoc-6.0.3 (29 May 2005)
+
+  29 May 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +asciidoc-6.0.3.ebuild:
+  Initial import. Thanks to Brandon Philips <brandon@ifup.org>; bug #91096.
+
