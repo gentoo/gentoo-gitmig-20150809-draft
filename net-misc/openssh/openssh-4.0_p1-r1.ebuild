@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1-r1.ebuild,v 1.5 2005/05/28 01:28:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1-r1.ebuild,v 1.6 2005/05/29 10:14:00 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -93,6 +93,7 @@ src_compile() {
 	use ipv6 || myconf="${myconf} --with-ipv4-default"
 
 	econf \
+		--with-ldflags="${LDFLAGS}" \
 		--disable-strip \
 		--sysconfdir=/etc/ssh \
 		--libexecdir=/usr/$(get_libdir)/misc \

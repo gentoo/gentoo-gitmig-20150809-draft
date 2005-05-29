@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.18 2005/05/28 01:28:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.19 2005/05/29 10:14:00 vapier Exp $
 
 inherit eutils flag-o-matic ccc
 
@@ -89,6 +89,7 @@ src_compile() {
 		myconf="${myconf} --without-kerberos5"
 
 	econf \
+		--with-ldflags="${LDFLAGS}" \
 		--disable-strip \
 		--sysconfdir=/etc/ssh \
 		--libexecdir=/usr/lib/misc \
