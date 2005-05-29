@@ -1,57 +1,41 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r6.ebuild,v 1.14 2005/03/15 14:28:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r8.ebuild,v 1.1 2005/05/29 14:23:03 leonardop Exp $
 
-inherit sgml-catalog
+inherit python sgml-catalog
 
-SRC_URI="mirror://sourceforge/sgmltools-lite/${P}.tar.gz
-		 mirror://sourceforge/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
+DESCRIPTION="Python interface to SGML software in a DocBook/OpenJade env"
 HOMEPAGE="http://sgmltools-lite.sourceforge.net/"
-LICENSE="GPL-2"
-DESCRIPTION="Python interface to SGML software specifically in a
-DocBook/OpenJade environment.  Provides sgml2{html,txt,rtf,dvi,ps}"
+SRC_URI="mirror://sourceforge/sgmltools-lite/${P}.tar.gz
+	mirror://sourceforge/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
-KEYWORDS="x86 ppc sparc alpha amd64"
+KEYWORDS="~alpha ~arm ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="tetex"
 
 DEPEND="virtual/python
 	app-text/sgml-common
 	~app-text/docbook-sgml-dtd-3.1
 	app-text/docbook-dsssl-stylesheets
-	app-text/jadetex
 	app-text/openjade
-	www-client/lynx"
+	tetex? ( app-text/jadetex )"
 
-src_compile() {
-	./configure 	\
-		--prefix=/usr \
-		--exec-prefix=/usr	\
-		--bindir=/usr/bin	\
-		--sbindir=/usr/sbin	\
-		--datadir=/usr/share	\
-		--mandir=/usr/share/man	|| die
-
-	make || die
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 
 	#remove CVS directories from the tree
-	for dirs in bin doc dsssl dtd man python rpm
-	do
-		rm -rf ${dirs}/CVS
-	done
+	find . -name CVS | xargs rm -rf
+}
 
+src_compile() {
+	econf || die
+	emake || die
 }
 
 src_install() {
-	make	\
-		prefix=${D}/usr	\
-		exec-prefix=${D}/usr	\
-		datadir=${D}/usr/share	\
-		bindir=${D}/usr/bin	\
-		sysconfdir=${D}/etc	\
-		mandir=${D}/usr/share/man	\
-		etcdir=${D}/etc/sgml	\
-		install || die
+	einstall etcdir=${D}/etc/sgml || die
 
 	dodoc COPYING ChangeLog POSTINSTALL README*
 	dohtml -r .
@@ -66,11 +50,19 @@ src_install() {
 
 	rm ${D}/etc/sgml/catalog.{suse,rh62}
 
+	# Remove the backends that require tetex
+	use tetex || \
+		rm ${D}/usr/share/sgml/misc/sgmltools/python/backends/{Dvi,Ps,Pdf,JadeTeX}.py
+
+	# The list of backends to alias with sgml2* 
+	BACKENDS="html rtf txt"
+	use tetex && BACKENDS="${BACKENDS} ps dvi pdf"
+
 	# Create simple alias scripts that people are used to
 	# And make the manpages for those link to the sgmltools-lite manpage
 	mandir=${D}/usr/share/man/man1
 	ScripTEXT="#!/bin/sh\n/usr/bin/sgmltools --backend="
-	for back in html ps dvi rtf txt
+	for back in ${BACKENDS}
 	do
 		echo -e ${ScripTEXT}${back} '$*' > sgml2${back}
 		exeinto /usr/bin
@@ -80,7 +72,16 @@ src_install() {
 		ln -sf sgmltools-lite.1.gz sgml2${back}.1.gz
 		cd ${S}
 	done
+}
 
+pkg_postinst() {
+	python_mod_optimize ${ROOT}usr/share/sgml/misc/sgmltools/python
+	sgml-catalog_pkg_postinst
+}
+
+pkg_postrm() {
+	python_mod_cleanup ${ROOT}usr/share/sgml/misc/sgmltools/python
+	sgml-catalog_pkg_postrm
 }
 
 sgml-catalog_cat_include "/etc/sgml/sgml-lite.cat" \
