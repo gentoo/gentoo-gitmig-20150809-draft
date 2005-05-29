@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 25f6c1d5dbee23fbd791e2225c3e1546 bash-completion-20050121-r9.ebuild 1874
 MD5 6eeb1d7aba8dbb67d3909a7f2f35da08 bash-completion-20050121-r1.ebuild 2695
 MD5 540f31303c0debeb2cfae4d2e5b5670d ChangeLog 20905
@@ -16,3 +19,10 @@ MD5 ffcc2a25851c78eed228d5bf9a34a471 files/20050121/03_all_timidity.diff 844
 MD5 49c5f3ad15cbf56b194b4fa56bbe8342 files/20050121/06_all_tar.diff 347
 MD5 a68ebcc5af6af06535fcc9895b6066b3 files/20050121/04_all_mplayer.diff 974
 MD5 bb517a3e3dea3755291f4629330481f2 files/20050121/09_all_command.diff 492
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCmjzbntT9W3vfTuoRAjRwAJ4q5890qPlUqKzRx9AsarNDcIjCeACggnBW
+mzW5c1xXeBqA0I1sggV8TB4=
+=83+L
+-----END PGP SIGNATURE-----
