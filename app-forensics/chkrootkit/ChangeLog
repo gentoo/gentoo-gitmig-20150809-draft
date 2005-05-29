@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.26 2005/05/27 06:19:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.27 2005/05/29 13:01:10 cryos Exp $
+
+  29 May 2005; Marcus D. Hanwell <marcus@gentoo.org> chkrootkit-0.45.ebuild:
+  Stable on amd64.
 
   27 May 2005; Joseph Jezak <josejx@gentoo.org> chkrootkit-0.45.ebuild:
   Marked ppc stable.
