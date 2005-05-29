@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.26.ebuild,v 1.7 2005/01/12 02:09:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.26.ebuild,v 1.8 2005/05/29 22:28:33 vapier Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/kernel virtual/os-headers"
-KEYWORDS="-*"
+KEYWORDS="-* m68k"
 IUSE=""
 
 DEPEND="!virtual/os-headers"
