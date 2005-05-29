@@ -97,3 +97,4 @@ move dev-perl/Time-Local perl-core/Time-Local
 move dev-perl/locale-maketext perl-core/locale-maketext
 move dev-perl/net-ping perl-core/net-ping
 move dev-perl/ExtUtils-MakeMaker perl-core/ExtUtils-MakeMaker
+move net-analyzer/piwi net-analyzer/prewikka
