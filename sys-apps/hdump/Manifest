@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bdc8835850a01712d90306e95c23d5ec hdump-1.12.ebuild 598
 MD5 7dc3255c70b0dbdf78264e43d160e80b ChangeLog 395
-MD5 b569bfa4bf7e5a21b59def541bb4ae83 metadata.xml 369
+MD5 71da003bb2109fed15aff6635287c6a6 metadata.xml 222
 MD5 38a6be2660becd7da052413f02d558e7 files/digest-hdump-1.12 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCmeTwI1lqEGTUzyQRAsgRAJ0X8KtEj00aPaIywrIuzQgDNYhtUwCgote+
+skta5uNU6HJUcSiO2v2kcAY=
+=rSgL
+-----END PGP SIGNATURE-----
