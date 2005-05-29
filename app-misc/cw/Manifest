@@ -1,4 +1,16 @@
-MD5 fda10f9797e17c4521a011dec72fec04 ChangeLog 521
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4a4f8946287841215844d1f52d08200b cw-1.0.10.ebuild 1548
+MD5 0c0ce8b7f69c79f0e5770efbad8df628 cw-1.0.12.ebuild 1551
+MD5 a8fd8ddc5dadaed0bfc8c33a9aa28838 ChangeLog 634
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 5e16ced7c98c0fca8ca67d04bdd8f7b0 files/digest-cw-1.0.10 61
+MD5 8363eafebe4115d55d24c7c04e6adf5d files/digest-cw-1.0.12 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCmQckEZCkKN40op4RAqh2AKCtR6vxnEU4A+U3mfgNsXbOWCZ79QCfdCqG
+kgXCQEqhb8NhaACRk+3lgm0=
+=Ysvu
+-----END PGP SIGNATURE-----
