@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1-r1.ebuild,v 1.7 2005/05/29 10:47:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1-r1.ebuild,v 1.8 2005/05/29 22:23:24 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -60,7 +60,11 @@ src_unpack() {
 	if ! use X509 ; then
 		use smartcard && epatch ${DISTDIR}/${SECURID_PATCH}
 		use smartcard && use ldap && epatch ${FILESDIR}/openssh-4.0_p1-smartcard-ldap-happy.patch
-		use ldap && epatch ${DISTDIR}/${LDAP_PATCH}
+		if use sftplogging ; then
+			ewarn "Sorry, sftplogging and ldap don't get along"
+		else
+			use ldap && epatch ${DISTDIR}/${LDAP_PATCH}
+		fi
 	elif use smartcard || use ldap ; then
 		ewarn "Sorry, x509 and smartcard/ldap don't get along"
 	fi
