@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/zphoto
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.11 2005/04/23 06:31:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.12 2005/05/29 18:54:22 usata Exp $
+
+  29 May 2005; Mamoru KOMACHI <usata@gentoo.org> zphoto-1.2-r1.ebuild:
+  Stable on x86.
 
 *zphoto-1.2-r1 (23 Apr 2005)
 
