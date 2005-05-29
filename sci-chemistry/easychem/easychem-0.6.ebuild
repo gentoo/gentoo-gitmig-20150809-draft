@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/easychem-0.6.ebuild,v 1.1 2005/05/10 09:46:43 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/easychem-0.6.ebuild,v 1.2 2005/05/29 16:31:00 wormo Exp $
 
 DESCRIPTION="Chemical structure drawing program - focused on presentation."
 HOMEPAGE="http://easychem.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/easychem/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.4.1
