@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/quantlib-0.3.9.ebuild,v 1.1 2005/05/08 20:33:02 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/quantlib-0.3.9.ebuild,v 1.2 2005/05/29 20:04:57 ferdy Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="sys-devel/libtool
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~alpha ~ppc ~sparc ~x86"
 
 src_install(){
 	einstall || die "einstall failed"

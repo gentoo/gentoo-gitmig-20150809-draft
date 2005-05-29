@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.53 2005/05/12 17:31:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.54 2005/05/29 20:03:52 ferdy Exp $
+
+  29 May 2005; Fernando J. Pereda <ferdy@gentoo.org> boost-1.32.0-r4.ebuild:
+  marked ~alpha, wrt #91936
 
   12 May 2005; Aron Griffis <agriffis@gentoo.org> boost-1.32.0-r4.ebuild:
   add ~ia64
