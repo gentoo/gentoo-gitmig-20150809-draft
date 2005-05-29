@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.19.ebuild,v 1.2 2005/03/03 20:09:39 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.19.ebuild,v 1.3 2005/05/29 08:32:32 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -15,8 +15,8 @@ SRC_URI="http://zarquon.twobit.net/gentoo/portage/${PF}.tar.bz2 http://gentoo.tw
 RESTRICT="nosandbox sandbox primaryuri multilib-pkg-force"
 
 # Contact carpaski with a reason before you modify any of these please.
-KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
-#KEYWORDS="  ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="  alpha  amd64  arm  hppa  ia64  m68k  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
+#KEYWORDS="  ~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"

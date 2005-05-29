@@ -1,25 +1,23 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r1.ebuild,v 1.1 2005/05/18 15:57:12 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r1.ebuild,v 1.2 2005/05/29 08:32:32 vapier Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="The Portage Package Management System. The primary package management and distribution system for Gentoo."
 HOMEPAGE="http://www.gentoo.org/"
-
 SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2 http://dev.gentoo.org/~jstubbs/releases/${PN}-${PV}.tar.bz2"
+
 LICENSE="GPL-2"
-
 SLOT="0"
-#KEYWORDS=" alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
-
+#KEYWORDS=" alpha  amd64  arm  hppa  ia64  m68k  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="build selinux"
+
 DEPEND=""
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) !x86-fbsd? ( !ppc-macos? ( sys-apps/sandbox ) ) selinux? ( >=dev-python/python-selinux-2.15 )"
 
 S=${WORKDIR}/${PN}-${PV}
-
 
 python_has_lchown() {
 	[ "$(python -c 'import os; print "lchown" in dir(os)')" = "True" ]
@@ -27,31 +25,31 @@ python_has_lchown() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	patch -p1 < ${FILESDIR}/2.0.51.22-fixes.patch
 }
 
 src_compile() {
 	python -O -c "import compileall; compileall.compile_dir('${S}/pym')"
 
-	cd ${S}/src
+	cd "${S}"/src
 	$(tc-getCC) ${CFLAGS} -o tbz2tool tbz2tool.c
 
 	if ! use ppc-macos && ! python_has_lchown; then
-		cd ${S}/src/python-missingos
+		cd "${S}"/src/python-missingos
 		chmod +x setup.py
 		./setup.py build || die "Failed to build missingos module"
 	fi
 
 	if use x86-fbsd; then
-		cd ${S}/src/bsd-flags
+		cd "${S}"/src/bsd-flags
 		chmod +x setup.py
 		./setup.py build || die "Failed to install bsd-chflags module"
 	fi
 }
 
 src_install() {
-	cd ${S}/cnf
+	cd "${S}"/cnf
 	insinto /etc
 	doins etc-update.conf dispatch-conf.conf make.globals
 	if [ -f "make.conf.${ARCH}" ]; then
@@ -65,29 +63,29 @@ src_install() {
 	fi
 
 	if ! use ppc-macos && ! python_has_lchown; then
-		cd ${S}/src/python-missingos
+		cd "${S}"/src/python-missingos
 		./setup.py install --root ${D} || die "Failed to install missingos module"
 	fi
 
 	if use x86-fbsd; then
-		cd ${S}/src/bsd-flags
+		cd "${S}"/src/bsd-flags
 		./setup.py install --root ${D} || die "Failed to install bsd-chflags module"
 	fi
 
 	dodir /usr/lib/portage/bin
 	exeinto /usr/lib/portage/bin
-	cd ${S}/bin
+	cd "${S}"/bin
 	doexe *
-	doexe ${S}/src/tbz2tool
+	doexe "${S}"/src/tbz2tool
 	dosym newins /usr/lib/portage/bin/donewins
 
 	dodir /usr/lib/portage/pym
 	insinto /usr/lib/portage/pym
-	cd ${S}/pym
+	cd "${S}"/pym
 	doins *
 
-	doman ${S}/man/*.[0-9]
-	dodoc ${S}/ChangeLog
+	doman "${S}"/man/*.[0-9]
+	dodoc "${S}"/ChangeLog
 
 	dodir /usr/bin /usr/sbin
 	dosym ../lib/portage/bin/emerge /usr/bin/emerge
