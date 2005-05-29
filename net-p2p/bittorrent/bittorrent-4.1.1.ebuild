@@ -1,33 +1,36 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.4.1a.ebuild,v 1.7 2005/05/05 23:27:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.1.ebuild,v 1.1 2005/05/29 22:02:58 sekretarz Exp $
 
 inherit distutils
 
 MY_P="${P/bittorrent/BitTorrent}"
-MY_P="${MY_P/\.0/}"
+#MY_P="${MY_P/}"
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="BitTorrent is a tool for distributing files via a distributed network of nodes"
-HOMEPAGE="http://bitconjurer.org/BitTorrent"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
-RESTRICT="nomirror"
-SLOT="0"
-LICENSE="MIT"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
+DESCRIPTION="tool for distributing files via a distributed network of nodes"
+HOMEPAGE="http://www.bittorrent.com/"
+SRC_URI="mirror://sourceforge/${MY_P}.tar.gz"
 
+LICENSE="BitTorrent"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~x86 ~sparc ~alpha"
 IUSE="X"
 
-RDEPEND="X? ( <dev-python/wxpython-2.5 )
-	>=dev-lang/python-2.1
+RDEPEND="X? (
+		>=x11-libs/gtk+-2.4
+		>=dev-python/pygtk-2.4
+	)
+	>=dev-lang/python-2.3
 	!virtual/bittorrent"
 DEPEND="${RDEPEND}
-	app-arch/unzip
-	>=sys-apps/sed-4.0.5"
+	app-arch/gzip
+	>=sys-apps/sed-4.0.5
+	dev-python/dnspython"
 PROVIDE="virtual/bittorrent"
 
-
 DOCS="credits.txt"
+PYTHON_MODULE="BitTorrent"
 
 src_install() {
 	distutils_src_install
@@ -54,9 +57,19 @@ src_install() {
 		# get rid of any reference to the not-installed gui version
 		sed -i '/btdownloadgui/d' ${D}/etc/mailcap
 	fi
+
+	insinto /usr/share/bittorrent
+	doins ${FILESDIR}/favicon.ico
+
+	insinto /etc/conf.d
+	newins ${FILESDIR}/bttrack.conf bttrack
+
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/bttrack.rc bttrack
 }
 
 pkg_postinst() {
-	einfo "unofficial feature additions. If you would like statistics, please"
-	einfo "install net-p2p/bittorrent-stats."
+	einfo "BitTorrent has changed to the BitTorrent Open Source License"
+	einfo ">> http://www.bittorrent.com/license/"
+	distutils_pkg_postinst
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.0.1.ebuild,v 1.2 2005/05/05 23:27:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.0.1.ebuild,v 1.3 2005/05/29 22:02:58 sekretarz Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.bittorrent.com/dl/${MY_P}.tar.gz"
 
 LICENSE="BitTorrent"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~sparc ~alpha"
+KEYWORDS="amd64 ~ppc ~x86 ~sparc ~alpha"
 IUSE="X"
 
 RDEPEND="X? (
