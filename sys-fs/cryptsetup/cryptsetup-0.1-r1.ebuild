@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r1.ebuild,v 1.9 2005/05/25 19:51:10 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r1.ebuild,v 1.10 2005/05/29 10:10:40 vapier Exp $
 
 inherit linux-info multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.saout.de/misc/dm-crypt/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ia64 ppc s390 sparc x86 ~alpha"
+KEYWORDS="~alpha amd64 arm hppa ia64 ppc s390 sparc x86"
 IUSE=""
 
 DEPEND=">=sys-fs/device-mapper-1.00.07-r1
@@ -30,7 +30,8 @@ dm-crypt_check() {
 		eerror
 		eerror "  Device Drivers"
 		eerror "    Multi-Device Support"
-		eerror "      [*] Crypt Target Support"
+		eerror "      Device mapper support"
+		eerror "        [*] Crypt Target Support"
 		eerror "and recompile your kernel..."
 		die "dm-crypt support not detected!"
 	fi
