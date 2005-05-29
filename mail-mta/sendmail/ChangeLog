@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.30 2005/04/29 18:55:32 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.31 2005/05/29 16:17:49 ferdy Exp $
+
+  29 May 2005; Fernando J. Pereda <ferdy@gentoo.org> files/site.config.m4:
+  fix site.config.m4 wrt #94287
 
   29 Apr 2005; Grant Goodyear <g2boojum@gentoo.org> files/site.config.m4:
   New site.config.m4 file that prevents the 'lazy binding' QA warnings when
