@@ -3,9 +3,4 @@ MD5 ab240be59f24a6af0177b8937cd2a346 ChangeLog 5223
 MD5 822f3c821527e6a34f23a6a92a884766 metadata.xml 220
 MD5 b4e5149fed4a89f9561a32a8245dd1a7 files/digest-nginx-0.1.34 64
 MD5 d8f7e621e098b58848a6b5fb045c49c3 files/nginx 994
-MD5 97d5db2450a9a9c85ff02614b9352b9b files/nginx-0.1.33-large_ssi_includes.patch 949
-MD5 a7b2073cd531459fc68972b181018465 files/nginx-0.1.29-500_bytes_long.patch 402
-MD5 f836e5e56bd706ef144644e345f35c8a files/nginx-0.1.33-set_header_range.patch 473
-MD5 148b61099c94cfc02add671522699a48 files/nginx-0.1.28-bad_backend_header.patch 656
 MD5 fecedd05099122b1f8169152e5bc9462 files/nginx.conf 1400
-MD5 c7b08f10d672ae9fa9f09c4b7439b5be files/nginx-0.1.29-ignore_invalid_headers.patch 3579
