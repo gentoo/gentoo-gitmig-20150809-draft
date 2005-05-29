@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4026 2005/05/29 12:13:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4027 2005/05/29 23:06:53 fvdpol Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Frank van de Pol <fvdpol@gentoo.org> (30 May 2005)
+# masked for testing (linuxsampler still fails on my systems)
+=media-sound/qsampler-0.1.0
+=media-sound/linuxsampler-0.3.1
+=media-libs/libgig-2.0.0
+=media-libs/liblscp-0.2.9
 
 # Harald van Dĳk <truedfx@gentoo.org> (29 May 2005)
 # masked for testing
