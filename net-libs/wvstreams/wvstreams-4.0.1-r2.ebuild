@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.1-r2.ebuild,v 1.11 2005/05/22 07:36:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.1-r2.ebuild,v 1.12 2005/05/29 10:53:32 mrness Exp $
 
 inherit eutils
 
@@ -11,14 +11,13 @@ SRC_URI="http://people.nit.ca/~sfllaw/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc sparc x86"
-IUSE="gtk qt oggvorbis speex fam qdbm pam slp ssl doc fftw tcltk debug"
+IUSE="gtk qt vorbis speex fam qdbm pam slp ssl doc fftw tcltk debug"
 
 RDEPEND="virtual/libc
 	dev-libs/xplc
 	gtk? ( >=x11-libs/gtk+-2.2.0 )
 	qt? ( =x11-libs/qt-3* )
-	oggvorbis? ( >=media-libs/libogg-1.0
-		>=media-libs/libvorbis-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
 	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
 	fam? ( virtual/fam )
 	>=sys-libs/db-3
@@ -60,8 +59,8 @@ src_compile() {
 	fi
 	econf ${myconf} \
 		`use_with gtk` \
-		`use_with oggvorbis ogg` \
-		`use_with oggvorbis vorbis` \
+		`use_with vorbis ogg` \
+		`use_with vorbis` \
 		`use_with speex` \
 		`use_with fam` \
 		`use_with qdbm` \

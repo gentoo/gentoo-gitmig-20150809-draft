@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.7 2005/05/22 19:38:49 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.8 2005/05/29 10:53:32 mrness Exp $
 
 inherit eutils
 
@@ -17,8 +17,7 @@ RDEPEND="virtual/libc
 	dev-libs/xplc
 	gtk? ( >=x11-libs/gtk+-2.2.0 )
 	qt? ( =x11-libs/qt-3* )
-	vorbis? ( >=media-libs/libogg-1.0
-		>=media-libs/libvorbis-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
 	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
 	fam? ( virtual/fam )
 	>=sys-libs/db-3
