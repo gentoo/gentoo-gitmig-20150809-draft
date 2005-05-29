@@ -1,0 +1,11 @@
+# ChangeLog for app-text/dvipng
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.1 2005/05/29 05:07:05 usata Exp $
+
+*dvipng-1.5 (29 May 2005)
+
+  29 May 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +dvipng-1.5.ebuild:
+  Initial import. Ebuild submitted by Marti Raudsepp <integor@gmail.com>;
+  bug #76046.
+
