@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r3.ebuild,v 1.11 2005/05/26 15:03:53 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r3.ebuild,v 1.12 2005/05/29 01:36:29 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,7 +39,13 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 QTBASE=/usr/qt/3
 
 pkg_setup() {
-	if use immqt ; then
+	if use immqt && use immqt-bc ; then
+		ewarn
+		ewarn "immqt and immqt-bc are exclusive. You cannot set both."
+		ewarn "Please specify either immqt or immqt-bc."
+		ewarn
+		die
+	elif use immqt ; then
 		ewarn
 		ewarn "You are going to compile binary imcompatible immodule for Qt. This means"
 		ewarn "you have to recompile everything depending on Qt after you install it."
