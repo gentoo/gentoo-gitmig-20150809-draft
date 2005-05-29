@@ -43,3 +43,4 @@ xemacs
 
 afs
 tcltk
+ldap

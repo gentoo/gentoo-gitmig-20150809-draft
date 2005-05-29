@@ -71,3 +71,4 @@ pam_console
 
 emacs
 xemacs
+ldap
