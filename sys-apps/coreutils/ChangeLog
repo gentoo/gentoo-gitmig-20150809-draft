@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.130 2005/05/29 08:26:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.131 2005/05/29 08:39:38 josejx Exp $
+
+  29 May 2005; Joseph Jezak <josejx@gentoo.org> coreutils-5.2.1-r6.ebuild:
+  Marked ppc stable.
 
 *coreutils-5.2.1-r6 (02 Apr 2005)
 
