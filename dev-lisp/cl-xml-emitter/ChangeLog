@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-xml-emitter
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xml-emitter/ChangeLog,v 1.1 2005/05/29 15:38:41 mkennedy Exp $
+
+*cl-xml-emitter-1.0 (29 May 2005)
+
+  29 May 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/1.0-clisp-gentoo.patch, +metadata.xml, +cl-xml-emitter-1.0.ebuild:
+  Initial port. Ebuild contributed by <mkennedy@gentoo.org>
+
