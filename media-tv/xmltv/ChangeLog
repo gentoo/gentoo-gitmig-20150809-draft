@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.39 2005/05/25 14:44:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.40 2005/05/29 20:35:49 cardoe Exp $
+
+  29 May 2005; Doug Goldstein <cardoe@gentoo.org> xmltv-0.5.39.ebuild:
+  Lock down the version of Class-MethodMaker to under 2.0 since it 
+  apparently doesn't work. There is a report that pre-2.0.5 works as well, 
+  but none of those exist in the tree.
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> xmltv-0.5.37-r1.ebuild:
   dev-perl/Storable => perl-core/Storable migration

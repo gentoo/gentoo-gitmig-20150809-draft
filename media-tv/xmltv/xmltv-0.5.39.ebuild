@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.39.ebuild,v 1.4 2005/05/25 14:44:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.39.ebuild,v 1.5 2005/05/29 20:35:49 cardoe Exp $
 
 inherit perl-module
 
@@ -60,6 +60,7 @@ RDEPEND=">=dev-perl/libwww-perl-5.65
 	dev-perl/Compress-Zlib
 	dev-perl/Unicode-String
 	dev-perl/TermReadKey
+	<dev-perl/Class-MethodMaker-2
 	>=dev-lang/perl-5.6.1"
 
 DEPEND="${RDEPEND}
