@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 45c83b5182b08896cd114822af50f5f0 gentoo-bashcomp-20050516.ebuild 1040
-MD5 a7b3aab7e719d35a1347d89c005bfdc8 ChangeLog 1864
+MD5 cbdf824092bd60cc628064541eedd57b gentoo-bashcomp-20050516.ebuild 1041
+MD5 efb94112bbd3f9f09dc3497a4c765bc2 ChangeLog 1974
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 a6ed2eaa63a38c869700f182a0a17459 files/digest-gentoo-bashcomp-20050516 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmHtmEZCkKN40op4RApgfAJ4n0nCmPXEf7MJm7rzOIWTqErn/+QCfSKDO
-dADPHa+s0WZXOK96Xm2kjNE=
-=lyr/
------END PGP SIGNATURE-----
