@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.09.ebuild,v 1.4 2005/01/06 14:54:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.14.ebuild,v 1.1 2005/05/29 20:14:52 usata Exp $
 
 DESCRIPTION="A clean fixed font for the console and X11"
 HOMEPAGE="http://www.is-vn.bg/hamster/jimmy-en.html"
 SRC_URI="http://www.is-vn.bg/hamster/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ~ppc64"
 IUSE="X"
 
 DEPEND="sys-apps/gawk
@@ -17,11 +17,11 @@ RDEPEND="X? ( virtual/x11 )"
 
 src_compile() {
 	./configure \
-		--prefix=${D}/usr \
-		--psfdir=${D}/usr/share/consolefonts \
-		--acmdir=${D}/usr/share/consoletrans \
-		--unidir=${D}/usr/share/consoletrans \
-		--x11dir=${D}/usr/share/fonts/terminus
+		--prefix=/usr \
+		--psfdir=/usr/share/consolefonts \
+		--acmdir=/usr/share/consoletrans \
+		--unidir=/usr/share/consoletrans \
+		--x11dir=/usr/share/fonts/terminus
 
 	make psf txt || die
 
@@ -32,11 +32,11 @@ src_compile() {
 }
 
 src_install() {
-	make install-psf install-acm install-uni install-ref || die
+	make DESTDIR=${D} install-psf install-acm install-ref || die
 
 	# If user wants fonts for X11
 	if use X; then
-		make install-pcf || die
+		make DESTDIR=${D} install-pcf || die
 		mkfontdir ${D}/usr/share/fonts/terminus
 	fi
 
