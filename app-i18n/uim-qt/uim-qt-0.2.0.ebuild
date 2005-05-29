@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.2.0.ebuild,v 1.3 2005/03/05 07:20:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.2.0.ebuild,v 1.4 2005/05/29 05:26:38 usata Exp $
 
 inherit eutils
 
@@ -15,6 +15,13 @@ IUSE=""
 
 DEPEND=">=app-i18n/uim-0.4.4
 	>=x11-libs/qt-3.3.3-r1"
+
+pkg_setup() {
+	einfo
+	einfo "UimQt is now part of uim distribution since uim-0.4.6. Please consider"
+	einfo "switching to >=uim-0.4.6 (set immqt or immqt-bc in your USE)."
+	einfo
+}
 
 src_compile() {
 	addwrite /usr/qt/3/etc/settings

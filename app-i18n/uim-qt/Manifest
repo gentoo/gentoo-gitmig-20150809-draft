@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 eaf0e87587b61152ed3ac75423b4a638 uim-qt-0.1.7.ebuild 1746
-MD5 ac1c138713bcaa988f58c154e71788c3 ChangeLog 1465
-MD5 f04163d7eeea39898e56f73cd2c7d9d7 uim-qt-0.2.0.ebuild 1479
-MD5 f25e7d996a501e01443a0f31caf33284 files/digest-uim-qt-0.1.7 63
+MD5 d8af8cf2dceb143f96106e2f1dc520b6 ChangeLog 1584
+MD5 66ca6be90d593dfac71c1b1940e065cf uim-qt-0.2.0.ebuild 1661
 MD5 fc9f430e80b37971d16d0aecf15d8957 files/uim-qt-0.1.7-thread.diff 293
 MD5 d4775a2045a127b335be4f1b8778ec05 files/digest-uim-qt-0.2.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (Darwin)
-
-iD8DBQFCKV3EVWNWqTUmv+0RAlVlAJ9/h1qCVx/uafcP4UgDKN5Pj+2vQgCfdu0G
-XqaFecjDUtvF8zHxgspj9bM=
-=rVwN
------END PGP SIGNATURE-----
