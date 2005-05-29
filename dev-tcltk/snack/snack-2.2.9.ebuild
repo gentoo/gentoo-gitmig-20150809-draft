@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.9.ebuild,v 1.1 2005/04/02 23:39:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.9.ebuild,v 1.2 2005/05/29 00:57:17 matsuu Exp $
 
 inherit eutils
 
@@ -11,12 +11,12 @@ SRC_URI="http://www.speech.kth.se/~kare/${PN}${PV}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64"
 SLOT="0"
-IUSE="alsa oggvorbis python threads"
+IUSE="alsa ogg python threads"
 
 DEPEND=">dev-lang/tcl-8.4.3
 	>dev-lang/tk-8.4.3
 	alsa? ( media-libs/alsa-lib )
-	oggvorbis? ( media-libs/libogg media-libs/libvorbis )
+	ogg? ( media-libs/libogg media-libs/libvorbis )
 	python? ( virtual/python )"
 
 S="${WORKDIR}/${PN}${PV}"
@@ -27,8 +27,8 @@ src_compile() {
 	use alsa && myconf="${myconf} --enable-alsa"
 	use threads && myconf="${myconf} --enable-threads"
 
-	if use oggvorbis ; then
-		myconf="${myconf} --with-ogg-include=/usr/include/ogg"
+	if use ogg; then
+		myconf="${myconf} --with-ogg-include=/usr/include"
 		myconf="${myconf} --with-ogg-lib=/usr/$(get_libdir)"
 	fi
 
