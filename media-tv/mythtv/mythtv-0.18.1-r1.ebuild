@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r1.ebuild,v 1.1 2005/05/23 06:50:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r1.ebuild,v 1.2 2005/05/29 17:59:13 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -27,15 +27,13 @@ DEPEND=">=media-libs/freetype-2.0
 	nvidia? ( media-video/nvidia-glx )
 	oggvorbis? ( media-libs/libvorbis )
 	opengl? ( virtual/opengl )
-	ieee1394? ( >=sys-libs/libraw1394-1.2.0 )
+	ieee1394? (	>=sys-libs/libraw1394-1.2.0
+			>=sys-libs/libavc1394-0.4.1 )
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
 	!x11-base/xfree
 	!<x11-base/xorg-x11-6.8"
 
 # ieee1394 also needs >=sys-libs/libiec61883-1.0.0
-
-RDEPEND="${DEPEND}
-	!media-tv/mythfrontend"
 
 pkg_setup() {
 
@@ -53,8 +51,10 @@ pkg_setup() {
 	fi
 
 	einfo
-	einfo "Please note, this ebuild does not use your CFLAGS and CXXFLAGS. It determines"
-	einfo "a sane set and uses those. Please do not attempt to override this behavior."
+	einfo "This ebuild now uses a heavily stripped down version of your CFLAGS"
+	einfo "Don't complain because your -momfg-fast-speed CFLAG is being stripped"
+	einfo "Only additional CFLAG issues that will be addressed are for binary"
+	einfo "package building."
 	einfo
 }
 
@@ -101,6 +101,26 @@ src_compile() {
 	else
 		myconf="${myconf} --compile-type=release"
 	fi
+
+	## CFLAG cleaning so it compiles
+	MARCH=$(get-flag "march")
+	MTUNE=$(get-flag "mtune")
+	MCPU=$(get-flag "mcpu")
+	strip-flags
+	filter-flags "-march=*" "-mtune=*" "-mcpu=*"
+	filter-flags "-O" "-O?"
+
+	if [[ -n "${MARCH}" ]]; then
+		myconf="${myconf} --arch=${MARCH}"
+	fi
+	if [[ -n "${MTUNE}" ]]; then
+		myconf="${myconf} --tune=${MTUNE}"
+	fi
+	if [[ -n "${MCPU}" ]]; then
+		myconf="${myconf} --cpu=${MCPU}"
+	fi
+
+	myconf="${myconf} --extra-cflags=${CFLAGS}"
 
 	hasq distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
 	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
