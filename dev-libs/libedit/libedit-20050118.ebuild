@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20050118.ebuild,v 1.1 2005/01/19 00:41:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20050118.ebuild,v 1.2 2005/05/29 22:29:28 vapier Exp $
 
 inherit eutils
 
@@ -10,19 +10,18 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ia64 ppc s390 x86 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh x86"
 IUSE=""
 
-DEPEND="sys-libs/ncurses
-	virtual/libc"
+DEPEND="sys-libs/ncurses"
 
 S=${WORKDIR}/netbsd-cvs
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	mv ${WORKDIR}/glibc-*/*.c .
-	epatch ${FILESDIR}/20031222-debian-to-gentoo.patch
+	cd "${S}"
+	mv "${WORKDIR}"/glibc-*/*.c .
+	epatch "${FILESDIR}"/20031222-debian-to-gentoo.patch
 }
 
 src_compile() {
