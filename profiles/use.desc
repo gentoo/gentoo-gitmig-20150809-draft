@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.245 2005/05/22 20:57:01 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.246 2005/05/29 02:47:18 nerdboy Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -185,7 +185,7 @@ mailwrapper - Adds mailwrapper support to allow multiple MTAs to be installed
 matroska - Adds support for the matroska container format
 matrox - Adds Matrox MGA support to mplayer
 mbox - Adds support for mbox (/var/spool/mail) style mail spools
-mcal - Adds support for MCAL calender system
+mcal - Adds support for MCAL calendar system
 mcve - Support for the MCVE credit card payment system
 memlimit - Adds memory usage limiting in supporting programs
 mhash - Adds support for the mhash library
