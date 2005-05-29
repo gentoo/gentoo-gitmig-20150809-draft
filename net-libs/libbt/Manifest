@@ -1,5 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 39f4ee27c1a15e860b2e328dd53bd6cc libbt-1.03.ebuild 908
-MD5 b1713ca247a36930af8ed91a25baa347 ChangeLog 978
+MD5 36586c4014caa3ef1d15e2fe35fa2134 libbt-1.04.ebuild 833
+MD5 eb1ef505ee6d0e0be2ce02ab34ba84ea ChangeLog 1125
 MD5 8abcb326775f027b2e13f23344036e34 metadata.xml 224
 MD5 7e115d3287520d67751b36e03744a51d files/digest-libbt-1.03 62
+MD5 f1acd2b6045b1bc76d993f0337e6e199 files/digest-libbt-1.04 62
 MD5 5565843b8d8ecd0caa963e6509efef05 files/libbt-headerfix.patch 1485
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCmlliZ/iYVBmujdURAthbAJ9UJmotY1ZYKdbeDVAhvM5qqbIwDACg4ZMV
+BeYEJ95khqLouPI0AZlKsiU=
+=AHtV
+-----END PGP SIGNATURE-----

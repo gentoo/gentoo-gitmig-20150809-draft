@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libbt
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/ChangeLog,v 1.7 2004/08/14 00:46:09 squinky86 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/ChangeLog,v 1.8 2005/05/29 22:13:16 sekretarz Exp $
+
+*libbt-1.04 (30 May 2005)
+
+  30 May 2005; Karol Wojtaszek <sekretarz@gentoo.org> +libbt-1.04.ebuild:
+  Version bump, bug #94300. ~amd64 keyworded
 
   13 Aug 2004; Jon Hood <squinky86@gentoo.org> -libbt-1.01.ebuild,
   libbt-1.03.ebuild:
