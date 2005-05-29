@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.0-r1.ebuild,v 1.1 2005/02/18 05:16:41 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.0-r1.ebuild,v 1.2 2005/05/29 02:01:45 nerdboy Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://my.unidata.ucar.edu/content/software/netcdf/index.html"
 LICENSE="UCAR-Unidata"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~sparc ~amd64 ~alpha ~ia64 ~ppc ~mips ~hppa"
+KEYWORDS="x86 sparc ~amd64 ~alpha ~ia64 ~ppc ~mips ~hppa"
 
 S=${WORKDIR}/${PN}-${MY_PV}/src
 
