@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0.ebuild,v 1.10 2005/04/26 14:06:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0.ebuild,v 1.11 2005/05/29 15:47:29 corsair Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jakarta.apache.org/commons/el.html"
 SRC_URI="mirror://apache/jakarta/commons/el/source/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ~sparc amd64 ~ppc ~ppc64"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
 IUSE="jikes source"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.5

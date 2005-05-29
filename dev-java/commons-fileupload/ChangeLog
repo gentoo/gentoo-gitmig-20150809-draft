@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-fileupload
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.18 2005/04/22 08:20:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.19 2005/05/29 15:41:05 corsair Exp $
+
+  29 May 2005; Markus Rothe <corsair@gentoo.org>
+  commons-fileupload-1.0.ebuild:
+  Stable on ppc64
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org>
   commons-fileupload-1.0.ebuild:
