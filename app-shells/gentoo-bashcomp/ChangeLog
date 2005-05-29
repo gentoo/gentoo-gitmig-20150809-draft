@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/gentoo-bashcomp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.9 2005/05/29 14:16:42 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.10 2005/05/29 22:05:29 cryos Exp $
+
+  29 May 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  gentoo-bashcomp-20050516.ebuild:
+  Stable on amd64.
 
   29 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
   gentoo-bashcomp-20050516.ebuild:
