@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/nwutil-1.4.ebuild,v 1.1 2005/03/06 00:50:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/nwutil-1.4.ebuild,v 1.2 2005/05/29 03:54:59 vapier Exp $
 
 inherit eutils
 
@@ -21,21 +21,20 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${PN}_${PV}-${DEB_VER}.diff
-	epatch ${FILESDIR}/${PV}-errno.patch
-	epatch ${FILESDIR}/${PV}-rename-debug.patch
-	mv {,nw}debug.c; mv {,nw}debug.8
+	cd "${S}"
+	epatch "${WORKDIR}"/${PN}_${PV}-${DEB_VER}.diff
+	epatch "${FILESDIR}"/${PV}-errno.patch
+	epatch "${FILESDIR}"/${PV}-rename-debug.patch
+	mv {,nw}debug.c
+	mv {,nw}debug.8
 }
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" || die "emake main failed"
-	cd flashlogo
-	emake || die "emake flashlogo failed"
+	emake -C flashlogo || die "emake flashlogo failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install main failed"
-	cd flashlogo
-	make DESTDIR=${D} install || die "install flashlogo failed"
+	make DESTDIR="${D}" install || die "install main failed"
+	make DESTDIR="${D}" install -C flashlogo || die "install flashlogo failed"
 }
