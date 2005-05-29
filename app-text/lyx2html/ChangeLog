@@ -1,0 +1,10 @@
+# ChangeLog for app-text/lyx2html
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/lyx2html/ChangeLog,v 1.1 2005/05/29 04:31:55 usata Exp $
+
+*lyx2html-0.2 (29 May 2005)
+
+  29 May 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +lyx2html-0.2.ebuild:
+  Initial import. Thanks to Samir van de Sand <s.vandesand@web.de>; bug #14750.
+
