@@ -1,6 +1,13 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.26 2005/05/22 00:17:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.27 2005/05/29 14:45:03 greg_g Exp $
+
+*kmymoney2-0.7.1-r1 (29 May 2005)
+
+  29 May 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kmymoney2-0.7.1-csv-export.patch, +kmymoney2-0.7.1-r1.ebuild:
+  Correct libofx dependency. Add patch for bug #94379, thanks to
+  <le.petit.fou@gmx.de>.
 
 *kmymoney2-0.7.1 (22 May 2005)
 
