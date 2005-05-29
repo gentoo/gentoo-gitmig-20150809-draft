@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/beaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.12 2005/03/17 17:29:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.13 2005/05/29 18:48:51 yoswink Exp $
+
+  29 May 2005; Jose Luis Rivero <yoswink@gentoo.org> beaver-0.2.6.ebuild:
+  Keyworded ~alpha due to #94396
 
   17 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> beaver-0.2.6.ebuild:
   added ~amd64 to KEYWORDS, fixes #85505
