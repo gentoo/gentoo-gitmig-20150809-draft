@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.54 2005/05/09 13:18:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.55 2005/05/29 15:02:32 chainsaw Exp $
+
+*beep-media-player-0.9.7-r6 (29 May 2005)
+
+  29 May 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/0.9.7-bogus-songinfo.patch, +beep-media-player-0.9.7-r6.ebuild:
+  Add patch to resolve bogus song information exported through infopipe.
+  Closes bug #87049, patch by Frank Groeneveld <frankgroeneveld@gmail.com>.
 
   09 May 2005; Aron Griffis <agriffis@gentoo.org>
   beep-media-player-0.9.7-r4.ebuild:

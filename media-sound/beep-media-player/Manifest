@@ -1,14 +1,27 @@
-MD5 c62deaa89427a1af38bad2bb5b78374d beep-media-player-0.9.7-r5.ebuild 2723
-MD5 d97bb9a054319e3e6869617ad517f15b ChangeLog 9834
-MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3bef7c491ede84c567d5e3aa4767e5f3 beep-media-player-0.9.7-r4.ebuild 2609
-MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
-MD5 32c2097467512370b951158b88abbeda files/0.9.7-hidden-window.patch 658
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r4 62
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r5 62
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+MD5 6a360f97c6bc3db174bcdf3f046a46e3 ChangeLog 10148
+MD5 c62deaa89427a1af38bad2bb5b78374d beep-media-player-0.9.7-r5.ebuild 2723
+MD5 ef1adaa6191d709900dcafb0ec3a501f beep-media-player-0.9.7-r6.ebuild 2728
 MD5 d14dde91067c784f210c19e1e4024650 files/0.9.7-desktop-icon.patch 535
-MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
-MD5 539d031b4930b4ce080fbe0804edfc28 files/0.9.7-window-focus.patch 850
+MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r5 62
+MD5 07dd84987f30f2cbb9ca16ec80cb6962 files/0.9.7-playlist-deadfile-delete.patch 540
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r4 62
 MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
 MD5 893b0d5bce79831b0f71aae51af7440d files/0.9.7-vorbis-date.patch 637
-MD5 07dd84987f30f2cbb9ca16ec80cb6962 files/0.9.7-playlist-deadfile-delete.patch 540
+MD5 32c2097467512370b951158b88abbeda files/0.9.7-hidden-window.patch 658
+MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
+MD5 539d031b4930b4ce080fbe0804edfc28 files/0.9.7-window-focus.patch 850
+MD5 4fe36295e02a77ccc81d9f710ebcc9fb files/0.9.7-bogus-songinfo.patch 517
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCmdhHp5vW4rUFj5oRAo/uAJ0RDTbTUwJhV9uqwR4wn8Yza1M/IACeJkxY
+kTQTxp2WEu9svk+6asX6DFA=
+=Yk4j
+-----END PGP SIGNATURE-----
