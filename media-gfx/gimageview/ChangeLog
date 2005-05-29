@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimageview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/ChangeLog,v 1.16 2005/04/08 19:59:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/ChangeLog,v 1.17 2005/05/29 02:31:07 usata Exp $
+
+  29 May 2005; Mamoru KOMACHI <usata@gentoo.org> -gimageview-0.2.25.ebuild,
+  -gimageview-0.2.26.ebuild, gimageview-0.2.27-r1.ebuild:
+  Cleaned gtk2 USE flag. This closes bug #92164.
 
   08 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org>
   gimageview-0.2.27-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r1.ebuild,v 1.6 2005/04/08 19:59:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r1.ebuild,v 1.7 2005/05/29 02:31:07 usata Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 ppc amd64 ppc64"
 # mng, xine, and mplayer are local flags
 IUSE="gnome nls gtk gtk2 imlib wmf mng svg xine mplayer"
 
+# gtk USE flag is correct; it's there only because of gtk2 USE flag semantics
 DEPEND="virtual/x11
 	media-libs/libpng
 	nls?  ( sys-devel/gettext )
@@ -24,10 +25,8 @@ DEPEND="virtual/x11
 	mplayer? ( >=media-video/mplayer-0.92 )
 	gtk? ( gtk2? ( =x11-libs/gtk+-2* )
 		!gtk2? ( =x11-libs/gtk+-1.2* ) )
-	!gtk? ( || (
-		imlib? ( media-libs/imlib )
-		media-libs/gdk-pixbuf
-		) )"
+	!gtk? ( =x11-libs/gtk+-1.2*
+		imlib? ( media-libs/imlib ) )"
 
 src_unpack() {
 	unpack ${A}
@@ -39,10 +38,10 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	if ! use gtk2 && use imlib; then
+	if use gtk && use gtk2 ; then
+		myconf="--with-gtk2"
+	elif ! use gtk && use imlib; then
 		myconf="--disable-gdk-pixbuf"
-	else
-		myconf="--disable-imlib"
 	fi
 
 	econf \
@@ -52,7 +51,6 @@ src_compile() {
 		$(use_with svg librsvg) \
 		$(use_with xine) \
 		$(use_enable mplayer) \
-		$(use_with gtk2) \
 		${myconf} --enable-splash || die
 
 	emake || die
