@@ -42,3 +42,4 @@ emacs
 xemacs
 
 afs
+tcltk
