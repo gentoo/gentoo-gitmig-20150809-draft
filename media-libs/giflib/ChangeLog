@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/giflib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.21 2005/04/08 18:57:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.22 2005/05/29 03:26:15 usata Exp $
+
+*giflib-4.1.3-r1 (29 May 2005)
+
+  29 May 2005; Mamoru KOMACHI <usata@gentoo.org> +giflib-4.1.3-r1.ebuild:
+  Removed gif USE flag to reduce confusion; see bug #63814 and bug #85720.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> giflib-4.1.3.ebuild:
   Stable on ppc64
