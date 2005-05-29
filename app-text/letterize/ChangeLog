@@ -1,0 +1,11 @@
+# ChangeLog for app-text/letterize
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/letterize/ChangeLog,v 1.1 2005/05/29 19:33:54 usata Exp $
+
+*letterize-1.2 (29 May 2005)
+
+  29 May 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +letterize-1.2.ebuild:
+  Initial import. Ebuild submitted by Ryan Finnie
+  <gentoo-bugzilla@arrrrrr.com>; bug #79308.
+
