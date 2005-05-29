@@ -1,7 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.3.ebuild,v 1.1 2005/04/17 16:05:17 luckyduck Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.3.ebuild,v 1.2 2005/05/29 00:24:07 luckyduck Exp $
 
 inherit eutils
 
@@ -11,7 +10,7 @@ SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc amd64 ~ppc64"
 IUSE=""
 
 DEPEND="sys-apps/sed"
@@ -26,7 +25,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}/bin
-	for binary in gnump3d-index gnump3d2; do
+	for binary in gnump3d-index gnump3d-top gnump3d2; do
 		sed -i "s,#!/usr/bin/perl,#!/usr/bin/perl -I${LIBDIR},g" $binary
 	done
 }
@@ -77,3 +76,5 @@ Please edit your /etc/gnump3d/gnump3d.conf before running
 
 EOF
 }
+
+src_test() { :; }
