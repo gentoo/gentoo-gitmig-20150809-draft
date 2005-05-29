@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.1_p1.ebuild,v 1.2 2005/05/29 22:23:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.1_p1.ebuild,v 1.3 2005/05/29 22:29:07 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -24,13 +24,14 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap smartcard nocxx sftplogging"
+IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap smartcard nocxx sftplogging libedit"
 
 RDEPEND="pam? ( virtual/pam )
 	kerberos? ( virtual/krb5 )
 	selinux? ( sys-libs/libselinux )
 	skey? ( >=app-admin/skey-1.1.5-r1 )
 	ldap? ( net-nds/openldap )
+	libedit? ( dev-libs/libedit )
 	>=dev-libs/openssl-0.9.6d
 	>=sys-libs/zlib-1.1.4
 	smartcard? ( dev-libs/opensc )
@@ -109,6 +110,7 @@ src_compile() {
 		--with-privsep-path=/var/empty \
 		--with-privsep-user=sshd \
 		--with-md5-passwords \
+		$(use_with libedit) \
 		$(use_with kerberos kerberos5 /usr) \
 		$(use_with tcpd tcp-wrappers) \
 		$(use_with skey) \

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.122 2005/05/29 10:48:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.123 2005/05/29 22:29:07 vapier Exp $
+
+  29 May 2005; Mike Frysinger <vapier@gentoo.org> openssh-4.0_p1-r1.ebuild,
+  openssh-4.1_p1.ebuild:
+  Add USE=libedit support #94410 by Joe Wells.
 
 *openssh-4.1_p1 (29 May 2005)
 
