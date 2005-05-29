@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.5 2005/04/27 08:29:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.6 2005/05/29 16:16:49 corsair Exp $
 
 inherit flag-o-matic multilib
 
@@ -14,7 +14,7 @@ DEPEND="mpi? ( >=sys-cluster/lam-mpi-6.5.6 )"
 SLOT="2.1"
 LICENSE="GPL-2"
 
-KEYWORDS="x86 ppc sparc alpha amd64 ~ppc64"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 #this one is reported to cause trouble on pentium4 m series
 filter-mfpmath "sse"
