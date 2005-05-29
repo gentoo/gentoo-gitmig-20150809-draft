@@ -1,0 +1,18 @@
+# ChangeLog for sci-geosciences/gpsd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.1 2005/05/29 00:53:30 nerdboy Exp $
+
+*gpsd-2.25 (28 May 2005)
+
+  28 May 2005; Steve Arnold <nerdboy@gentoo.org> +files/40-usb-serial.rules,
+  +files/gpsd-2.25-y-format.patch, +files/gpsd.conf, +files/gpsd.init,
+  +metadata.xml, +gpsd-2.25.ebuild:
+  added esr's patch for Y format messages, updated the einfo, and cleaned
+  up the arch stuff a bit
+
+*gpsd-2.25 (28 May 2005)
+
+  28 May 2005; Steve Arnold <nerdboy@gentoo.org> +files/40-usb-serial.rules,
+  +files/gpsd.conf, +files/gpsd.init, +metadata.xml, +gpsd-2.25.ebuild:
+  adding current version of gpsd (most other gps daemons are dead now)
+

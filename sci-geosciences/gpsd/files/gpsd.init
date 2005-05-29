@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/files/gpsd.init,v 1.1 2005/05/29 00:53:30 nerdboy Exp $
+
+# You can use this init script to manage a serial port GPS or other
+# non-hotplug device (or any device for that matter).  By design,
+# USB devices should use the hotplug script instead.
+
+depend() {
+	after serial hotplug
+}
+
+checkconfig() {
+	if [ -z "${GPS_DEV}" ]; then
+		eerror "You must define GPS_DEV in /etc/conf.d/gpsd."
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting gpsd"
+	touch /var/run/gpsd.pid
+	# comment the device parameter to use with a hot-pluggable device
+	/usr/sbin/gpsd ${GPSD_OPTS} -p ${GPS_DEV}
+	eend $? "Failed to start gpsd"
+}
+
+stop() {
+	ebegin "Stopping gpsd"
+	killall -q gpsd >/dev/null
+	eend $? "Failed to stop gpsd"
+	rm -f /var/run/gpsd.pid /var/run/gpsd.sock
+}
