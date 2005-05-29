@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.6.2.ebuild,v 1.2 2005/05/25 11:57:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.6.2.ebuild,v 1.3 2005/05/29 22:26:24 flameeyes Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-fbsd.patch
+	epatch ${FILESDIR}/${P}-warns.patch
 
 	./autogen.sh
 }
@@ -31,8 +32,8 @@ src_compile() {
 	econf \
 		$(use_enable debug) \
 		--disable-dependency-tracking \
-		|| die
-	emake || die
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
