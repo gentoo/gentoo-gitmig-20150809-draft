@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.97 2005/05/24 20:58:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.98 2005/05/29 09:01:27 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -37,11 +37,11 @@ egamesconf() {
 	local myconf
 	if [[ -x ./configure ]] ; then
 		gnuconfig_update
-		[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
 		[[ -n ${CTARGET} ]] && myconf="${myconf} --target=${CTARGET}"
 		echo \
 		./configure \
 			--prefix="${GAMES_PREFIX}" \
+			--build=${CBUILD:-${CHOST}} \
 			--host=${CHOST} \
 			--mandir=/usr/share/man \
 			--infodir=/usr/share/info \
@@ -53,6 +53,7 @@ egamesconf() {
 			${EXTRA_ECONF}
 		./configure \
 			--prefix="${GAMES_PREFIX}" \
+			--build=${CBUILD:-${CHOST}} \
 			--host=${CHOST} \
 			--mandir=/usr/share/man \
 			--infodir=/usr/share/info \
@@ -153,6 +154,7 @@ games_pkg_setup() {
 
 	# Dear portage team, we are so sorry.  Lots of love, games team.
 	# See Bug #61680
+	[[ ${USERLAND} != "GNU" ]] && return 0
 	[[ $(getent passwd "${GAMES_USER_DED}" | cut -f7 -d:) == "/bin/false" ]] \
 		&& usermod -s /bin/bash "${GAMES_USER_DED}"
 }
