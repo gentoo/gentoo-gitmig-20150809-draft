@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.98 2005/05/29 09:01:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.99 2005/05/29 09:09:47 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -185,7 +185,10 @@ games_pkg_postinst() {
 	ewarn "Remember, in order to play games, you have to"
 	ewarn "be in the '${GAMES_GROUP}' group."
 	echo
-	einfo "See the -a option in the gpasswd(1) manpage for more information."
+	case ${USERLAND} in
+		GNU)    einfo "Just run 'gpasswd -a <USER> ${GAMES_GROUP}'";;
+		DARWIN) einfo "Just run 'niutil -appendprop / /groups/games users <USER>'";;
+	esac
 	echo
 }
 
