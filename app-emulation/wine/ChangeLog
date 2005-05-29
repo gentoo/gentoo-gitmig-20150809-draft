@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.96 2005/05/26 00:51:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.97 2005/05/29 03:48:40 vapier Exp $
+
+  29 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/wine-20050524-alsa-headers.patch, wine-20041019-r3.ebuild,
+  wine-20050111-r1.ebuild, wine-20050211.ebuild, wine-20050310-r1.ebuild,
+  wine-20050419.ebuild, wine-20050524.ebuild:
+  Re-order ALSA includes so they dont conflict with wine headers #94272 by
+  Ernst de Haan.
 
 *wine-20050524 (26 May 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050111-r1.ebuild,v 1.4 2005/03/29 01:35:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050111-r1.ebuild,v 1.5 2005/05/29 03:48:40 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -36,6 +36,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack Wine-${PV}.tar.gz
 	cd "${S}"
+	epatch "${FILESDIR}"/wine-20050524-alsa-headers.patch
 
 	epatch "${FILESDIR}"/${P}-upstream-registry-fix.patch.bz2 #85387
 
