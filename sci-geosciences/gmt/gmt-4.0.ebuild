@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.0.ebuild,v 1.1 2005/02/23 14:16:37 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.0.ebuild,v 1.2 2005/05/29 23:12:03 cryos Exp $
 
 inherit multilib
 
@@ -24,7 +24,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE="gmtsuppl gmtfull gmthigh gmttria doc"
 
 RDEPEND=">=sci-libs/netcdf-3.5.0"
