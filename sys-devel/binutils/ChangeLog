@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.212 2005/05/28 22:19:06 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.213 2005/05/29 12:15:15 kloeri Exp $
+
+  29 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  binutils-2.14.90.0.8-r3.ebuild:
+  Stable on alpha, bug 91398.
 
   28 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
   binutils-2.15.92.0.2-r10.ebuild:
