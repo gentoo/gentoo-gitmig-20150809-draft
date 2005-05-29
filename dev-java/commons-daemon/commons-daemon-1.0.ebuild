@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.ebuild,v 1.12 2005/05/14 18:08:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.ebuild,v 1.13 2005/05/29 15:31:46 corsair Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ DEPEND=">=virtual/jdk-1.4
 	virtual/libc
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
-KEYWORDS="x86 amd64 ~ppc64 ~ppc ~sparc"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
 IUSE="jikes doc"
 
 S=${WORKDIR}/daemon-${PV}-Alpha
