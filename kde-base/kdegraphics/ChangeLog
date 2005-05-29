@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.161 2005/05/27 08:54:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.162 2005/05/29 11:33:12 carlo Exp $
+
+  29 May 2005; Carsten Lohrke <carlo@gentoo.org> kdegraphics-3.4.0.ebuild,
+  kdegraphics-3.4.1.ebuild:
+  corrected gphoto2 dependency
 
 *kdegraphics-3.4.1 (27 May 2005)
 

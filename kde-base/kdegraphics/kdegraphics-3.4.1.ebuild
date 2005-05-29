@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.1.ebuild,v 1.1 2005/05/27 08:54:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.1.ebuild,v 1.2 2005/05/29 11:33:12 carlo Exp $
 
 inherit kde-dist
 
@@ -10,7 +10,7 @@ KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~ia64"
 IUSE="gphoto2 imlib nodrm opengl povray scanner tetex"
 
 DEPEND="~kde-base/kdebase-${PV}
-	gphoto2? ( media-gfx/gphoto2 )
+	gphoto2? ( media-libs/libgphoto2 )
 	scanner? ( media-gfx/sane-backends )
 	media-libs/libart_lgpl
 	media-libs/lcms

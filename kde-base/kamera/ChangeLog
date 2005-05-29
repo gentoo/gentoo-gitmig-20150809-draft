@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kamera
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kamera/ChangeLog,v 1.9 2005/05/25 21:23:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kamera/ChangeLog,v 1.10 2005/05/29 11:34:09 carlo Exp $
+
+  29 May 2005; Carsten Lohrke <carlo@gentoo.org> kamera-3.4.0.ebuild,
+  kamera-3.4.1.ebuild:
+  corrected gphoto2 dependency
 
 *kamera-3.4.1 (25 May 2005)
 
