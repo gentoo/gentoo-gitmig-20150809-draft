@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20050220.ebuild,v 1.3 2005/05/27 02:47:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20050220.ebuild,v 1.4 2005/05/29 08:47:11 vapier Exp $
 
 ECVS_MODULE="evidence"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/evidence"
@@ -10,7 +10,7 @@ DESCRIPTION="GTK2 file-manager"
 HOMEPAGE="http://evidence.sourceforge.net/"
 
 LICENSE="GPL-2"
-IUSE="X debug gnome kde mp3 oggvorbis perl truetype xine avi mpeg"
+IUSE="X debug gnome kde oggvorbis perl truetype xine avi mpeg"
 
 DEPEND=">=dev-util/pkgconfig-0.5
 	=x11-libs/gtk+-2*
@@ -18,7 +18,6 @@ DEPEND=">=dev-util/pkgconfig-0.5
 		media-libs/libogg )
 	perl? ( dev-libs/libpcre )
 	X? ( virtual/x11 )
-	mp3? ( media-sound/madplay )
 	truetype? ( =media-libs/freetype-2* )
 	kde? ( kde-base/kdelibs )
 	xine? ( >=media-libs/xine-lib-1_rc1 )
@@ -52,7 +51,6 @@ src_compile() {
 		$(use_enable mpeg thumbnailer-mpeg3)
 		$(use_enable perl pcre)
 		$(use_enable X x)
-		$(use_enable mp3 libmad)
 		$(use_enable oggvorbis plugin-vorbis)
 		$(use_enable truetype plugin-ttf)
 		$(use_enable debug)
