@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.29 2005/04/29 01:15:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.30 2005/05/29 22:47:14 halcy0n Exp $
 
 inherit eutils libtool multilib
 
@@ -30,6 +30,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-m4.patch
 	# Correct problems with documentation. See bug #44439.
 	epatch "${FILESDIR}"/${P}-gtkdoc_fixes.patch
+	# Fix compilation with GCC4 ; bug #94321
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
 
 src_compile() {
