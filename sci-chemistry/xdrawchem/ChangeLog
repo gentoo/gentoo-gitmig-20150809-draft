@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/xdrawchem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.10 2005/05/10 13:37:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.11 2005/05/29 20:09:36 wormo Exp $
+
+  29 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  xdrawchem-1.9.5.ebuild:
+  mark ~ppc, fixes bug #94178
 
   10 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   xdrawchem-1.9.4.ebuild:
