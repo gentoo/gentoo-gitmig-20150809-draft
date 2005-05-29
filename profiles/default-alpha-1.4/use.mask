@@ -93,3 +93,6 @@ ifc
 
 # Mask vpopmail until net-mail/vpopmail goes out of package.mask
 vpopmail
+
+# Mask pyste until gccxml / elementtree work on alpha
+pyste
