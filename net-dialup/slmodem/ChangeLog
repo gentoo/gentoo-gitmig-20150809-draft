@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.43 2005/05/14 13:02:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.44 2005/05/29 12:35:33 mrness Exp $
+
+  29 May 2005; Alin Nastac <mrness@gentoo.org>
+  +files/slmodem-2.9.9b-gcc4.patch, slmodem-2.9.9b.ebuild,
+  slmodem-2.9.9d.ebuild:
+  Fix gcc-4.0 compile error (#94279).
 
 *slmodem-2.9.9d (14 May 2005)
 

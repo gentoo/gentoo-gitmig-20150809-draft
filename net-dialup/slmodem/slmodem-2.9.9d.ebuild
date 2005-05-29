@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9d.ebuild,v 1.1 2005/05/14 13:02:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9d.ebuild,v 1.2 2005/05/29 12:35:33 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -32,7 +32,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
 	cd ${S}
+	epatch ${FILESDIR}/${PN}-2.9.9b-gcc4.patch
 
 	convert_to_m drivers/Makefile
 }
