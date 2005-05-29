@@ -2,17 +2,18 @@
 Hash: SHA1
 
 MD5 f14a4d480a0e027ac820f59f90c529a0 honeyd-0.8.ebuild 1954
-MD5 0db0c60bfcfc41139150fd8b05e6c481 ChangeLog 2688
+MD5 96ca2c83a4d5e0cb6fa60329c92783af ChangeLog 2835
 MD5 fef2fd2afe9a195bdc62e5628a5fd501 metadata.xml 259
-MD5 186b41de635d2185288bd6ae8c72ce81 honeyd-1.0.ebuild 1779
+MD5 f4c1d13cc545b81ee8e06842eaa46500 honeyd-1.0.ebuild 1871
+MD5 0f51773734c0ac0e902fc0eea15f9647 files/honeyd-1.0-gcc4.diff 674
 MD5 05aa030ef5d390514cee9da3fa910690 files/honeyd.confd 429
 MD5 1f9cce4545bcf9f1e0b47486617da5a0 files/honeyd.initd 1459
 MD5 96be4ce17e233507825dbc39127ee9f3 files/digest-honeyd-0.8 129
 MD5 857b8d8953a80aae5035664b1bc984a7 files/digest-honeyd-1.0 129
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCHyFnEZCkKN40op4RAmd0AJ474FetaURPIpKjI1W+FgXI0bOlfQCgs8a1
-X76T0ZE2mbgwUN3QqCAa/fs=
-=Z3pD
+iD8DBQFCmSovEZCkKN40op4RAopJAJ9kvM8cSFOxJaUXVhN9GrfthPlQwACgnHCp
+mFDzL0x1XrNsNZgE5JHTtQ0=
+=Yeak
 -----END PGP SIGNATURE-----

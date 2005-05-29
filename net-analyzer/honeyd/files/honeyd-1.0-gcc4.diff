@@ -1,0 +1,23 @@
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN honeyd-1.0.orig/dhcpclient.c honeyd-1.0/dhcpclient.c
+--- honeyd-1.0.orig/dhcpclient.c	2005-05-28 22:22:21.000000000 -0400
++++ honeyd-1.0/dhcpclient.c	2005-05-28 22:25:10.000000000 -0400
+@@ -472,7 +472,8 @@
+ 
+ 	memset(buf, 0, sizeof(buf));
+ 
+-	eth = (struct eth_hdr *)p = buf;
++	p = buf;
++	eth = (struct eth_hdr *)p;
+ 	eth_pack_hdr(eth, ETH_ADDR_BROADCAST, req->ea, ETH_TYPE_IP);
+ 
+ 	restlen -= ETH_HDR_LEN;
+@@ -524,7 +525,8 @@
+ 
+ 	memset(buf, 0, sizeof(buf));
+ 
+-	eth = (struct eth_hdr *)p = buf;
++	p = buf;
++	eth = (struct eth_hdr *)p;
+ 	eth_pack_hdr(eth, req->server_ea, req->ea, ETH_TYPE_IP);
+ 
+ 	restlen -= ETH_HDR_LEN;
