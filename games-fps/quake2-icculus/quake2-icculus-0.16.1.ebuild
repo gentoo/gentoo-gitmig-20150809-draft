@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.4 2005/04/30 06:14:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.5 2005/05/29 22:51:10 vapier Exp $
 
 inherit eutils games
 
@@ -17,13 +17,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="arts svga sdl aalib dedicated opengl noqmax rogue xatrix ipv6 joystick X"
 
-# default to X11 if svga/opengl/sdl/aalib/dedicated are not in USE
 RDEPEND="opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
 	sdl? ( media-libs/libsdl )
 	aalib? ( media-libs/aalib )
 	X? ( virtual/x11 )
-	!svga? ( !opengl? ( !sdl? ( !aalib? ( !dedicated? ( virtual/x11 ) ) ) ) )
 	arts? ( kde-base/arts )"
 DEPEND="${RDEPEND}
 	rogue? ( app-arch/sharutils )
@@ -80,9 +78,6 @@ yesno() {
 }
 
 src_compile() {
-	BUILD_X11=$(yesno X)
-	use sdl || use opengl || use svga || use aalib || BUILD_X11=YES
-
 	# xatrix fails to build
 	# rogue fails to build
 	for BUILD_QMAX in YES NO ; do
@@ -91,7 +86,7 @@ src_compile() {
 		emake -j1 build_release \
 			BUILD_SDLQUAKE2=$(yesno sdl) \
 			BUILD_SVGA=$(yesno svga) \
-			BUILD_X11=${BUILD_X11} \
+			BUILD_X11=$(yesno X) \
 			BUILD_GLX=$(yesno opengl) \
 			BUILD_SDL=$(yesno sdl) \
 			BUILD_SDLGL=$(yesno sdl opengl) \
