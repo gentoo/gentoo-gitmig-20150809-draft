@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.40-r1.ebuild,v 1.1 2005/05/26 11:08:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.40-r1.ebuild,v 1.2 2005/05/29 18:22:32 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
 MY_P=${P/_/}
-PATCHLEVEL="6"
+PATCHLEVEL="7"
 
 DESCRIPTION="Great Video editing/encoding tool"
 HOMEPAGE="http://fixounet.free.fr/avidemux/"
@@ -88,6 +88,11 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	dodoc AUTHORS ChangeLog History README TODO
+
+	insinto /usr/share/icons/hicolor/64x64/apps
+	newins ${WORKDIR}/${PV}/avidemux_icon.png avidemux.png
+
+	make_desktop_entry avidemux2 "Avidemux2" avidemux
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.83 2005/05/26 11:08:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.84 2005/05/29 18:22:32 flameeyes Exp $
+
+  29 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  avidemux-2.0.40-r1.ebuild:
+  Now install icon and .desktop file for Avidemux2.
 
 *avidemux-2.0.40-r1 (26 May 2005)
 
