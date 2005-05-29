@@ -96,7 +96,7 @@ diff -Naurp Python-2.4.orig/Modules/Setup.dist Python-2.4/Modules/Setup.dist
  # This require zlib 1.1.3 (or later).
  # See http://www.gzip.org/zlib/
 -#zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz
-+zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/@@GENTOO_LIBDIR@@ -lz
++#zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/@@GENTOO_LIBDIR@@ -lz
  
  # Interface to the Expat XML parser
  #
