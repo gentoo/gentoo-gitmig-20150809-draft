@@ -2560,3 +2560,42 @@ diff -ur linux-2.6.11/include/asm-ia64/thread_info.h linux-2.6.11-gentoo/include
  #include <linux/types.h>
  
  /* Some IOCTL commands are defined in <linux/i2c.h> */
+--- linux-2.6.11/include/asm-arm/thread_info.h	2005-03-02 07:38:08.000000000 +0000
++++ linux-2.6.11-gentoo/include/asm-arm/thread_info.h	2005-05-29 23:42:31.000000000 +0100
+@@ -10,8 +10,6 @@
+ #ifndef __ASM_ARM_THREAD_INFO_H
+ #define __ASM_ARM_THREAD_INFO_H
+ 
+-#ifdef __KERNEL__
+-
+ #include <asm/fpstate.h>
+ 
+ #ifndef __ASSEMBLY__
+@@ -143,5 +141,4 @@
+  */
+ #define _TIF_WORK_MASK		0x000000ff
+ 
+-#endif /* __KERNEL__ */
+ #endif /* __ASM_ARM_THREAD_INFO_H */
+--- linux-2.6.11/include/asm-arm/types.h	2005-03-02 07:37:31.000000000 +0000
++++ linux-2.6.11-gentoo/include/asm-arm/types.h	2005-05-29 23:42:46.000000000 +0100
+@@ -19,7 +19,7 @@
+ typedef __signed__ int __s32;
+ typedef unsigned int __u32;
+ 
+-#if defined(__GNUC__) && !defined(__STRICT_ANSI__)
++#if defined(__GNUC__)
+ typedef __signed__ long long __s64;
+ typedef unsigned long long __u64;
+ #endif
+--- linux-2.6.11/include/linux/unistd.h	2005-05-24 14:58:11.000000000 +0100
++++ linux-2.6.11-gentoo/include/linux/unistd.h	2005-05-29 23:45:34.000000000 +0100
+@@ -1,7 +1,7 @@
+ #ifndef _LINUX_UNISTD_H_
+ #define _LINUX_UNISTD_H_
+ 
+-extern int errno;
++#include <errno.h>
+ 
+ /*
+  * Include machine specific syscallX macros
