@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.30 2005/04/18 16:21:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.31 2005/05/29 23:44:20 flameeyes Exp $
+
+  29 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kaffeine-0.6-formats.patch, kaffeine-0.6-r1.ebuild:
+  Added patch for format strings warnings. Could fix problems with HTTP
+  streams on 64-bit systems.
 
   18 Apr 2005; Carsten Lohrke <carlo@gentoo.org> kaffeine-0.6.ebuild,
   kaffeine-0.6-r1.ebuild:
