@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.6 2005/05/29 01:36:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.7 2005/05/29 10:48:26 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -61,7 +61,7 @@ pkg_setup() {
 	elif [[ ${CXX/icc/} != ${CXX} ]]; then
 		PLATCXX="icc"
 	else
-		die || "Unknown platform."
+		die "Unknown compiler ${CXX}."
 	fi
 
 	if use kernel_linux; then
