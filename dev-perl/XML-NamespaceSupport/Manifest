@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 60165d8a03387213b81bc140ff006928 ChangeLog 2577
-MD5 b69614ac1bda0de02809fb4ad0b61a93 XML-NamespaceSupport-1.08.ebuild 589
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 e851b5d338ab92a20c214810c936e123 ChangeLog 2679
+MD5 abdddf2c3b46b7a83de73052f77061fe XML-NamespaceSupport-1.08.ebuild 589
 MD5 1098fa583fddd18627cf82e57d65cfa5 XML-NamespaceSupport-1.09.ebuild 611
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 76f23443775274572d2a867ac9cd093f files/digest-XML-NamespaceSupport-1.08 75
 MD5 2f50b6f2ae06fea42964e30e94665878 files/digest-XML-NamespaceSupport-1.09 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCkMrjtG5z4I8BtQoRAvp3AJ47mv+B/Ps4/FkYSTDs2ePJvvmoBwCfZoJ/
-O0SUKUKJMq+v3n8XFpmyPZ4=
-=W3sk
------END PGP SIGNATURE-----

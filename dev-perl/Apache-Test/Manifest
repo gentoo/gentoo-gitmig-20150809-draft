@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7f6662842c93fef2b0daddd51545a5e3 Apache-Test-1.23.ebuild 780
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 9bc3712861385952d0900821e129fdb5 ChangeLog 2724
-MD5 4a4c7b76091d0f66cbf3ecbac9a135e5 Apache-Test-1.22.ebuild 787
-MD5 7181e228e50923f791bd6725c87b932f Apache-Test-1.15.ebuild 774
 MD5 c44307d19c5c80bc828048ac1d343c8e Apache-Test-1.03.ebuild 765
-MD5 f63ddebaf06de3d9772484b7636bc8a7 files/digest-Apache-Test-1.15 68
-MD5 6ea272a71ab8ac04028b394d8c026fee files/digest-Apache-Test-1.23 68
-MD5 2283477345e9f82053c0430dec28b16e files/digest-Apache-Test-1.22 68
+MD5 7181e228e50923f791bd6725c87b932f Apache-Test-1.15.ebuild 774
+MD5 98f3b13f42b9519c6c7ece99d1ce9051 Apache-Test-1.22.ebuild 784
+MD5 7f6662842c93fef2b0daddd51545a5e3 Apache-Test-1.23.ebuild 780
+MD5 f1db858cb396a65a6f7a9360f2385dfc ChangeLog 2821
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 6a84fba1190e8a3bbf4bcf1f5d143121 files/digest-Apache-Test-1.03 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCf6iKjUHll2nfF60RAqLoAJ9curkiz2twDzKfWRqTtWJ2gx8UkwCfUzNo
-Y9iwBAb4b/ryHjPIMl16lPg=
-=bV5T
------END PGP SIGNATURE-----
+MD5 f63ddebaf06de3d9772484b7636bc8a7 files/digest-Apache-Test-1.15 68
+MD5 2283477345e9f82053c0430dec28b16e files/digest-Apache-Test-1.22 68
+MD5 6ea272a71ab8ac04028b394d8c026fee files/digest-Apache-Test-1.23 68
