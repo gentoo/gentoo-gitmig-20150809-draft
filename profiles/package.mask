@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4027 2005/05/29 23:06:53 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4028 2005/05/30 16:29:28 lanius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Heinrich Wendel <lanius@gentooorg> (30 May 2005)
+# dependencies are masked (python-2.4 and gnome-menus-2.10.1)
+=x11-misc/smeg-0.7
 
 # Frank van de Pol <fvdpol@gentoo.org> (30 May 2005)
 # masked for testing (linuxsampler still fails on my systems)
