@@ -1,4 +1,6 @@
 MD5 a748413c931d02446300bd1151d6d117 qingy-0.5.3.ebuild 1793
-MD5 a2a5ba0561909fb25b43eaefc799a014 ChangeLog 3260
+MD5 e426a2c9a39b47fbc761a31e2717bbc2 ChangeLog 3399
 MD5 40051d4be23df0dc23c2dadbaa168415 metadata.xml 258
+MD5 2c139ac24505bb8006fefcdd1e91c8f1 qingy-0.6.0.ebuild 1868
 MD5 1e14b167f302dedd5250acc1d233fad6 files/digest-qingy-0.5.3 64
+MD5 f207760d2b2235e1b53324b87f21962a files/digest-qingy-0.6.0 64
