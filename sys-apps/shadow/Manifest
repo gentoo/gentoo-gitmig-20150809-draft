@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1406e810bd64ab17f882f8d8f194a863 shadow-4.0.6-r1.ebuild 5635
 MD5 adb53ffca50148c8d901a1a995c8d1a6 shadow-4.0.4.1-r4.ebuild 5955
 MD5 8524e4f28fd78ee92c165a3e41fe210a shadow-4.0.5-r3.ebuild 5509
@@ -42,3 +45,12 @@ MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth-1.1 491
 MD5 a1c7fb84c2dc309db86ba7b8d3dfae76 files/pam.d/passwd 214
 MD5 60d44a6f43aafcb9ca35858ab2534a49 files/pam.d/shadow 227
 MD5 51b0337bd261f6ed5e53af5dc196431a files/pam.d/system-auth 499
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iQCVAwUBQpp90J4WFLgrx1GWAQIRwAQAxbY/CXy72EY2gsqRgGmb6VSL2CHtRSch
+GtAgrSYxn8k5de3DrEYE5o02tad0f7e6bz/s1OThvWgQj8Es0QICZ0bFO68e9vsA
+/2a0FSQKytmmjmuJ7upWfdXEPD1qGW0OaVE9F1Y39S8lVC0FfeKzk+A6Bpj07AyZ
+o90fRavEzSM=
+=GruQ
+-----END PGP SIGNATURE-----

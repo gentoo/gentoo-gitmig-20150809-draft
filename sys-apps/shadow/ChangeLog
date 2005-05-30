@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.100 2005/03/23 15:25:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.101 2005/05/30 02:43:14 solar Exp $
+
+  29 May 2005; <solar@gentoo.org> shadow-4.0.4.1-r4.ebuild:
+  - update sys-apps/shadow to use libc expanded variable elibc_uclibc vs uclibc
+  so USE=-* works
 
   23 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org> files/securetty:
   Added hvc0 to securetty for ppc64 serial console.
