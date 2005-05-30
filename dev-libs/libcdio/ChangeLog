@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.35 2005/05/30 10:41:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.36 2005/05/30 17:16:41 stkn Exp $
+
+  30 May 2005; Stefan Knoblich <stkn@gentoo.org> libcdio-0.74.ebuild:
+  Added missing backslash in src_compile.
 
   30 May 2005; Diego Pettenò <flameeyes@gentoo.org> libcdio-0.74.ebuild:
   Doesn't build cd-paranoia if minimal flag is specified; change name of
