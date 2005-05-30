@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.38 2005/05/02 22:02:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.39 2005/05/30 02:35:15 solar Exp $
+
+  29 May 2005; <solar@gentoo.org> iputils-021109-r3.ebuild:
+  echangelog - update package to use libc expanded variable elibc_uclibc vs
+  uclibc so USE=-* works
 
   02 May 2005; Mike Frysinger <vapier@gentoo.org>
   +files/iputils-021109-bindnow.patch, -files/021109-gcc34.patch,
