@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.83.1.ebuild,v 1.5 2005/01/24 06:00:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.83.1.ebuild,v 1.6 2005/05/30 18:39:05 swegener Exp $
 
-inherit flag-o-matic gcc eutils games
+inherit flag-o-matic toolchain-funcs eutils games
 
 TARGET="${PN}"
 
