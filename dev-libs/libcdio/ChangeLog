@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.34 2005/05/27 20:43:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.35 2005/05/30 10:41:41 flameeyes Exp $
+
+  30 May 2005; Diego Pettenò <flameeyes@gentoo.org> libcdio-0.74.ebuild:
+  Doesn't build cd-paranoia if minimal flag is specified; change name of
+  cd-paranoia to libcdio-paranoia to avoid conflicts with
+  media-sound/cdparanoia.
 
   27 May 2005; Jason Wever <weeve@gentoo.org> libcdio-0.73.ebuild:
   Stable on SPARC.
