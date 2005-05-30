@@ -18,30 +18,43 @@ checktundevice() {
 start() {
 	checktundevice || return 1
 	
-	cd $VPNDIR
+	cd ${VPNDIR}
 	for VPN in *
 	do
-		if [ -d $VPN ] && [ -e $VPN/local.conf ]; then
-			ebegin "Starting openvpn for $VPN"
-				start-stop-daemon --start --pidfile /var/run/openvpn-$VPN.pid --startas /usr/sbin/openvpn -- --config $VPN/local.conf --writepid /var/run/openvpn-$VPN.pid --daemon --cd $VPN
-			eend $?
+		if [ -d ${VPN} ] && [ -e ${VPN}/local.conf ]; then
+			if [ -f ${VPN}/onlinecheck ]; then
+				ping -c 3 `head -n 1 ${VPN}/onlinecheck` >& /dev/null
+			else
+				false
+			fi
+			
+			if [ $? -gt 0 ]; then
+				ebegin "Starting openvpn for ${VPN}"
+					start-stop-daemon --start --pidfile /var/run/openvpn-${VPN}.pid \
+						  	  --startas /usr/sbin/openvpn -- --config ${VPN}/local.conf \
+						  				 	--writepid /var/run/openvpn-${VPN}.pid \
+										 	--daemon --cd ${VPN}
+				eend $?
+			else
+				einfo "Connection ${VPN} already online. Skipping..."
+			fi
 		else
-			ewarn "Expected $VPNDIR/$VPN to be a directory containing a local.conf."
+			ewarn "Expected ${VPNDIR}/${VPN} to be a directory containing a local.conf."
 		fi
 	done
 }
 
 stop() {
-	cd $VPNDIR
+	cd ${VPNDIR}
 	for VPN in *
 	do
-		if [ -e /var/run/openvpn-$VPN.pid ]; then
-			ebegin "Stopping openvpn for $VPN"
-				start-stop-daemon --oknodo --stop --pidfile /var/run/openvpn-$VPN.pid
-				rm /var/run/openvpn-$VPN.pid
+		if [ -e /var/run/openvpn-${VPN}.pid ]; then
+			ebegin "Stopping openvpn for ${VPN}"
+				start-stop-daemon --oknodo --stop --pidfile /var/run/openvpn-${VPN}.pid
+				rm /var/run/openvpn-${VPN}.pid
 			eend 0
 		else
-			ewarn "$VPN has no pidfile!"
+			ewarn "${VPN} has no pidfile!"
 		fi
 	done
 	return 0

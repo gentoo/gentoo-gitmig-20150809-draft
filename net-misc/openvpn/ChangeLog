@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.30 2005/05/28 17:02:41 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.31 2005/05/30 13:17:50 luckyduck Exp $
+
+*openvpn-2.0-r1 (30 May 2005)
+
+  30 May 2005; Jan Brinkmann <luckyduck@gentoo.org> files/openvpn,
+  +openvpn-2.0-r1.ebuild:
+  make use of our initscript again, fixes #94350. the initscript now supports
+  checking if a connection is already online, see #92369 for details. thanks
+  to Christian Hesse <mail@earthworm.de> for the suggestion.
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org> openvpn-2.0.ebuild:
   stable on amd64, ppc and x86
