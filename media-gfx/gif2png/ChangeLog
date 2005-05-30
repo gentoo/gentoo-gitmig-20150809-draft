@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gif2png
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.9 2005/04/26 13:10:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.10 2005/05/30 19:45:50 gustavoz Exp $
+
+  30 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> gif2png-2.5.1.ebuild:
+  Stable on sparc
 
   26 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> gif2png-2.5.1.ebuild:
   Keyworded ~sparc wrt #90192

@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 263a1f8240e02f854e2bf0bdd392733b ChangeLog 1167
+MD5 3095d7af1ae93cfd261376f5f832ae8a ChangeLog 1263
 MD5 02920a6093a3b22a5b58e1c66808d5ea gif2png-2.4.6.ebuild 612
 MD5 2dbec4d5dfc91973aa25040e1cb787f6 gif2png-2.4.7.ebuild 663
-MD5 e69b8e5bb6f1d8335e79e7514fed758a gif2png-2.5.1.ebuild 684
+MD5 1403f48fc30782cc3354b1e681180932 gif2png-2.5.1.ebuild 683
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
 MD5 0fdbb3630cf8118323c7a743ffa524cc files/digest-gif2png-2.4.6 64
 MD5 85a26ab79ebca9833924eddc58ef5952 files/digest-gif2png-2.4.7 65
@@ -12,7 +12,7 @@ MD5 4fc0f6cac09879cc1e97b2a16ce32daf files/digest-gif2png-2.5.1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCbj3YKRy60XGEcJIRAtYmAKCV8ub46v9NXM8DzErjG6ktx1rGjwCfRt/X
-Ke/GfZHKBFi3AJQ1X/UEslA=
-=wqhy
+iD8DBQFCm22EKRy60XGEcJIRAsq+AJ9OIXQ4tFKjoEW59AaxVxEJwrEozwCgpCev
+0O11kMI55/q/FCdRImJwVNo=
+=T7cI
 -----END PGP SIGNATURE-----
