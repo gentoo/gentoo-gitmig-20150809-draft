@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.7 2005/05/23 08:43:25 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.8 2005/05/30 03:05:08 solar Exp $
 
 inherit eutils gnuconfig
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies: ~arm ~s390 ~ppc64
 KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86"
-IUSE="mysql ldap gdbm berkdb uclibc debug postgres"
+IUSE="mysql ldap gdbm berkdb debug postgres"
 
 PROVIDE="virtual/mda"
 
@@ -34,7 +34,7 @@ src_unpack() {
 
 	# Do not use lazy bindings on /usr/bin/maildrop
 	sed -i -e 's~^maildrop_LDFLAGS =~& -Wl,-z,now~g' maildrop/Makefile.in
-	use uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
+	use elibc_uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
 	if use gdbm ; then
 		use berkdb && einfo "Both gdbm and berkdb selected. Using gdbm."
 	else
