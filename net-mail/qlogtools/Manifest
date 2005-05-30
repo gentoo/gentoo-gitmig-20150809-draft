@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 023c0353e5d11980091d2bb8c059e438 qlogtools-3.1.ebuild 1021
 MD5 e25685f1ee671397f415e80a103e68e1 ChangeLog 708
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 2df904dc305771de6a4c777478ec8712 files/digest-qlogtools-3.1 64
 MD5 691cfa100503c2769d798b04b47dba04 files/qlogtools-3.1-errno.patch 348
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCm2PNI1lqEGTUzyQRAsdLAKCzd4oGYlxJNUNucWDuNaHRYunT2ACbBXIz
+/d+wSThdGkLLThxUiAJ2VkM=
+=OEvs
+-----END PGP SIGNATURE-----

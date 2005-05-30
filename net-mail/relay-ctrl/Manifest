@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 de7e6a8d97d335214c0d0a4cf3fb66c8 relay-ctrl-3.1.1-r2.ebuild 2175
 MD5 44c9f1beebb08584d64b2bcc7e641003 relay-ctrl-3.1.1.ebuild 928
 MD5 daf993e1659d623970233bac81e1c5dd relay-ctrl-3.1.1-r1.ebuild 2062
@@ -7,3 +10,10 @@ MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1-r1 67
 MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1-r2 67
 MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1 67
 MD5 8e4e552c2f7216d5303b739cc99e51e9 files/authenticated.c-relayfixup.diff 702
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCm2RhI1lqEGTUzyQRAkoPAJ9CTWTl4JshZ1ChU/9YMCBvQDAkiwCfaiCH
+5JMlMbuQgVCC2yagg+rq0z0=
+=oQy+
+-----END PGP SIGNATURE-----

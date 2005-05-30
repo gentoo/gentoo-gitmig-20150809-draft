@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a5397e6275ae5b2c78849eb5fd74133e queue-fix-1.4-r2.ebuild 1067
 MD5 82e1b23c777dbdf2190e796c466ae1ff queue-fix-1.4-r1.ebuild 935
 MD5 85833e79702cc8a6170c40d0f6021046 ChangeLog 1523
 MD5 0f68a43285a6e05a1845bd3292552d6a metadata.xml 579
 MD5 a35babdacffe4d387b623febfb88db5a files/digest-queue-fix-1.4-r1 127
 MD5 a35babdacffe4d387b623febfb88db5a files/digest-queue-fix-1.4-r2 127
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCm2QJI1lqEGTUzyQRAtFlAJ0Vm6ZcNxjP83ffqF47T9wnLSqolQCgzhqc
+31pmbsh1LeCwDOq+qT/AfHk=
+=FLci
+-----END PGP SIGNATURE-----
