@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/xtraceroute
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/ChangeLog,v 1.16 2005/04/29 15:17:17 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/ChangeLog,v 1.17 2005/05/30 00:12:38 cryos Exp $
+
+  30 May 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  xtraceroute-0.9.1.ebuild:
+  Stable on amd64.
 
   29 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> -xtraceroute-0.9.0.ebuild:
   Removing old ebuild.
