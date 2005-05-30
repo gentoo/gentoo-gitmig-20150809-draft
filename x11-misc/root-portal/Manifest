@@ -3,15 +3,17 @@ Hash: SHA1
 
 MD5 5ce8627ad1d92f868e2d96fb6a50a1a9 root-portal-0.5.0.ebuild 780
 MD5 d97f919dcbe1752eec2ffaf9a85bd9ad root-portal-0.4.11.ebuild 1853
-MD5 30926632325f0572e73a414089b231d0 ChangeLog 1985
+MD5 5afc160ff85c0288ca5c7922e8d48259 root-portal-0.5.2.ebuild 780
+MD5 f7b42f5707b8af82cf155f1439f4cfaf ChangeLog 2118
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 8a6d14539df2b912f17d1f78a54a1e4b files/0.4.11-gcc3.patch 2455
 MD5 f9d2acb2ede1a736f915ef1ed10020e2 files/digest-root-portal-0.5.0 69
+MD5 f5cee693cdd1bc354e2acaa5d3434a79 files/digest-root-portal-0.5.2 69
 MD5 c2474198f20ec00a050dd0b6adcac40e files/digest-root-portal-0.4.11 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjIusI1lqEGTUzyQRAueYAKCi/jlZM7EecBLH2pFmbb4vCScZNQCghkIz
-CxyPDt7ynFiauSn8wcOLFTQ=
-=rSxL
+iD8DBQFCm0xvjiC39V7gKu0RAkP3AJ4umMszxOOnARxI1RalUMLQK/tXKACghRZ5
+zW41fMkpTFlqW0y3zg4Vv4U=
+=Bw+g
 -----END PGP SIGNATURE-----

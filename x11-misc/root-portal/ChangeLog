@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/root-portal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.16 2005/05/17 16:37:13 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.17 2005/05/30 17:24:37 mrness Exp $
+
+*root-portal-0.5.2 (30 May 2005)
+
+  30 May 2005; Alin Nastac <mrness@gentoo.org> +root-portal-0.5.2.ebuild:
+  Version bump (#86833).
 
   17 May 2005; Markus Nigbur <pyrania@gentoo.org> root-portal-0.5.0.ebuild:
   Fixed libxml dependency, version 2 is not yet supported.
