@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/pgperl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/ChangeLog,v 1.4 2005/05/06 18:35:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/ChangeLog,v 1.5 2005/05/30 19:34:58 gustavoz Exp $
+
+  30 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> pgperl-2.0.2.ebuild:
+  Stable on sparc
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> pgperl-2.0.2.ebuild:
   To ~sparc
