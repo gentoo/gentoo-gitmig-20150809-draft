@@ -1,8 +1,20 @@
-MD5 42730fd7f02020927792bae7110e0e64 ChangeLog 7146
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0c951d26ed871bea94b4e1c05a0bc5f4 ChangeLog 7312
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 2eb75e19c28d1a94dc57af8e7700201a libwww-perl-5.69-r2.ebuild 1392
 MD5 60e2485f2ef5af9a6de6851b346cbcc5 libwww-perl-5.79.ebuild 833
 MD5 43b6c78840ff339fee27918aec1feb8a libwww-perl-5.800.ebuild 858
+MD5 e2b95a3572dd7269930ddedb756b617c libwww-perl-5.803.ebuild 868
+MD5 fd75df1eab601ba9d953ab70f9196d07 files/digest-libwww-perl-5.803 69
+MD5 addab4081dd22418ead48ed701bfd6d7 files/digest-libwww-perl-5.69-r2 68
 MD5 c91b25c42b7cc429f2008e230801c2d1 files/digest-libwww-perl-5.79 68
 MD5 47777f0e64db12c588bc86937fabafac files/digest-libwww-perl-5.800 69
-MD5 addab4081dd22418ead48ed701bfd6d7 files/digest-libwww-perl-5.69-r2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCmycrtG5z4I8BtQoRAmAtAKCKaAqtZAL5gCDAaAGQJ23RmrFubQCbBfFx
+jSS8CBqet72XLH01J75w9VY=
+=l9x3
+-----END PGP SIGNATURE-----
