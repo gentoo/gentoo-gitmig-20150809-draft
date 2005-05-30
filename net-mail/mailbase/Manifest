@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d5b004fb1c539c147780c7bc7c86629e mailbase-0.00-r9.ebuild 2434
+MD5 3f3a2900370119cc8475ed3ccb811e2b mailbase-0.00-r9.ebuild 2433
 MD5 78fc96c16b9dc1d4902c62927e664ce9 mailbase-0.00-r4.ebuild 773
 MD5 d70889cf9ee474b30325789a31c253a9 mailbase-0.00-r6.ebuild 902
 MD5 9199352cf76278406a943618dd4a54ef mailbase-0.00-r8.ebuild 2262
 MD5 18187be20c66b663f9f95a457a8a281e mailbase-1.ebuild 2436
 MD5 f224d58950c57b4f07888966ad00cd9a mailbase-0.00-r5.ebuild 877
 MD5 a5d2b893cb09235e3c253d9d0c50f3fa mailbase-0.00-r7.ebuild 1922
-MD5 0139aae4a8ec58d1fcdf8d97ee4c88a1 ChangeLog 5928
+MD5 810061a028c73a68fcc187f003711f86 ChangeLog 6025
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 e75c39fbdac8eec750d84a7183ac6721 files/common-pamd 417
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r4 0
@@ -24,7 +24,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-1 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCkN52ViELBEf1JB0RAo4SAJkBiy1m821q4/vqcUXRlbDzlvNO8gCeOCJ6
-wT/7iLHBewzo6wvdN/GN+OQ=
-=b1pD
+iD8DBQFCm1NRViELBEf1JB0RAiYAAJ0ez7SXfT+uedyiWy8sahDj2qUxZQCcD69h
+n2/BLhx4ZaZ1enIips5RZWw=
+=6CqE
 -----END PGP SIGNATURE-----

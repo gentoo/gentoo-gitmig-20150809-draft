@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.46 2005/05/22 19:32:38 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.47 2005/05/30 17:53:58 ferdy Exp $
+
+  30 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  mailbase-0.00-r9.ebuild:
+  Stable on x86
 
   22 May 2005; Fernando J. Pereda <ferdy@gentoo.org> mailbase-1.ebuild:
   bit of cleanup
