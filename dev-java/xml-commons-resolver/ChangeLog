@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-commons-resolver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.12 2005/05/18 11:08:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/ChangeLog,v 1.13 2005/05/30 19:06:25 gustavoz Exp $
+
+  30 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  xml-commons-resolver-1.1.ebuild:
+  Stable on sparc
 
   18 May 2005; Markus Rothe <corsair@gentoo.org>
   xml-commons-resolver-1.1.ebuild:
