@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.7.ebuild,v 1.7 2005/05/27 06:32:05 josejx Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.7.ebuild,v 1.8 2005/05/30 23:43:23 vapier Exp $
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="library that allows you to use TrueType fonts in SDL applications"
@@ -18,13 +16,7 @@ DEPEND="X? ( virtual/x11 )
 	>=media-libs/libsdl-1.2.4
 	>=media-libs/freetype-2.0.1"
 
-S="${WORKDIR}/${MY_P}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	gnuconfig_update
-}
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	econf \
