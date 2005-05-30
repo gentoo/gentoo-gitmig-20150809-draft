@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-jttl_sound/mupen64-jttl_sound-1.2.ebuild,v 1.4 2005/04/24 07:53:30 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-jttl_sound/mupen64-jttl_sound-1.2.ebuild,v 1.5 2005/05/30 18:36:36 swegener Exp $
 
-inherit games gcc eutils libtool
+inherit games eutils libtool
 
 IUSE="sdl"
 
@@ -47,4 +47,3 @@ src_install() {
 
 	prepgamesdirs
 }
-

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r2.ebuild,v 1.3 2005/04/24 19:55:58 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r2.ebuild,v 1.4 2005/05/30 18:35:12 swegener Exp $
 
-inherit games gcc eutils libtool
+inherit games eutils libtool
 
 DESCRIPTION="A Nintendo 64 (N64) emulator"
 HOMEPAGE="http://mupen64.emulation64.com/"
