@@ -1,0 +1,27 @@
+diff -ur libtorrent-0.6.3/configure.ac libtorrent-0.6.3-fbsd/configure.ac
+--- libtorrent-0.6.3/configure.ac	2005-05-30 21:20:48.000000000 +0200
++++ libtorrent-0.6.3-fbsd/configure.ac	2005-05-30 21:34:13.650583392 +0200
+@@ -54,6 +54,8 @@
+ 
+ AC_DEFINE(HAVE_CONFIG_H, 1, true if config.h was included)
+ 
++AC_CHECK_HEADERS([malloc.h])
++
+ AC_OUTPUT([
+ 	libtorrent.pc
+ 	Makefile
+Only in libtorrent-0.6.3-fbsd/: configure.ac.orig
+diff -ur libtorrent-0.6.3/src/utils/sha_fast.cc libtorrent-0.6.3-fbsd/src/utils/sha_fast.cc
+--- libtorrent-0.6.3/src/utils/sha_fast.cc	2005-05-30 21:19:53.000000000 +0200
++++ libtorrent-0.6.3-fbsd/src/utils/sha_fast.cc	2005-05-30 21:34:16.219192904 +0200
+@@ -35,7 +35,10 @@
+ 
+ #include "config.h"
+ 
++#ifdef HAVE_MALLOC_H
+ #include <malloc.h>
++#endif
++
+ #include <memory.h>
+ #include "sha_fast.h"
+ 
