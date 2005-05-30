@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.16 2005/05/04 18:58:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.17 2005/05/30 18:10:28 swegener Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="RadioShack TRS80 Emulator, inc. FreeWare ROM & LDOS Image"
 HOMEPAGE="http://www.tim-mann.org/trs80.html"
@@ -29,7 +29,7 @@ src_unpack() {
 
 src_compile() {
 	use ppc && echo "ENDIAN = -Dbig_endian" >> Makefile.local
-	emake DEBUG="${CFLAGS}" CC="$(gcc-getCC)" || die "emake failed"
+	emake DEBUG="${CFLAGS}" CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
