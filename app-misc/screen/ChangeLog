@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.86 2005/05/22 20:02:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.87 2005/05/30 02:31:28 solar Exp $
+
+  29 May 2005; <solar@gentoo.org> screen-4.0.2-r1.ebuild:
+  echangelog - update package to use libc expanded variable elibc_uclibc vs
+  uclibc so USE=-* works
 
   22 May 2005; Sven Wegener <swegener@gentoo.org>
   +files/4.0.2-no-libelf.patch, screen-4.0.2-r3.ebuild:

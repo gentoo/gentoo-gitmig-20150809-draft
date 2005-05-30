@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r1.ebuild,v 1.3 2005/05/20 13:18:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r1.ebuild,v 1.4 2005/05/30 02:31:28 solar Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/screen/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
-IUSE="pam nethack uclibc"
+IUSE="pam nethack"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	pam? ( >=sys-libs/pam-0.75 )"
@@ -32,7 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/screen-4.0.1-vsprintf.patch
 
 	# uclibc doesnt have sys/stropts.h
-	use uclibc && epatch "${FILESDIR}"/${PV}-no-pty.patch
+	use elibc_uclibc && epatch "${FILESDIR}"/${PV}-no-pty.patch
 
 	# Don't use utempter even if it is found on the system
 	epatch "${FILESDIR}"/${PV}-no-utempter.patch

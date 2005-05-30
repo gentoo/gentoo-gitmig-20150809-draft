@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 744ffd2e9d77b4debbaaeb4508ed94d9 screen-4.0.2-r1.ebuild 3510
+MD5 658eab9b529aacb435aeb69195b8171b screen-4.0.2-r1.ebuild 3506
 MD5 37f4f96d6bf2c31bc22ba2af2b50762e screen-4.0.2-r3.ebuild 3803
-MD5 34f918e111a7f0e97951f0ae406597fb ChangeLog 12845
+MD5 2d48bfe6d960e747d63e8fc700398d47 ChangeLog 13002
 MD5 537c3754e8f6422e4f7025358173ef2b metadata.xml 1525
 MD5 7f5ab1c54d87ad24f0a8bafbbcf24844 files/4.0.2-no-utempter.patch 440
 MD5 35961ab00c29256e3f6d7a374387e327 files/digest-screen-4.0.2-r1 64
@@ -16,9 +16,11 @@ MD5 23cfd7dd1968780724e7b9a3cb406cc8 files/screen-4.0.1-int-overflow-fix.patch 9
 MD5 bebe7dbe3fee13c1251a9bd30535b245 files/4.0.2-no-pty.patch 392
 MD5 a7f6e6bfb5647c6e69a797eaa16acf3d files/4.0.2-64bit-time.patch 298
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCkOV3I1lqEGTUzyQRAj8BAJ9aFF9m2lGtgMZg4ktKsLMuoqhNwwCdG8QM
-/vujHBek0rRoxsJTPfJDfPA=
-=Xjkm
+iQCVAwUBQpp7CZ4WFLgrx1GWAQIaXAP/Zji+poHOVcNAbMePBpCdztycHdr1E415
+lXhf/dg90vndkhE+9ulxMw19XtTtJblx+kvBwcGJQx4E61yivhE/DYg7fcQVmUUf
+66rQViTM7HDgWE+uEtfxr1YcVvR/w51MFQfM7P4TbcKsX09pSxvyLmaGz3lsFyzv
+asIyPs3Ud14=
+=1QWW
 -----END PGP SIGNATURE-----
