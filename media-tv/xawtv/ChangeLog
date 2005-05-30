@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.20 2005/04/09 11:57:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.21 2005/05/30 00:33:11 cardoe Exp $
+
+*xawtv-3.94-r2 (30 May 2005)
+
+  30 May 2005; Doug Goldstein <cardoe@gentoo.org> -xawtv-3.94.ebuild,
+  +xawtv-3.94-r2.ebuild:
+  Fixes bug #88105, compat with bug #88102, bug #72141, bug #38444, bug
+  #40063, bug #80895, bug #88103, bug #75271 Other fixes and clean ups as well
+  Many much credit to Octavio Ruiz (tacvbo@tacvbo.net) for most of the work
 
   09 Apr 2005; Simon Stelling <blubb@gentoo.org> xawtv-3.94-r1.ebuild:
   fixed #88102
