@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/webcpp-0.8.4.ebuild,v 1.1 2004/08/15 17:37:20 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/webcpp-0.8.4.ebuild,v 1.2 2005/05/30 18:32:10 swegener Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 S=${WORKDIR}/${P}-src
 DESCRIPTION="converts source code into HTML file using a customizable syntax highlighting engine and colour schemes"
