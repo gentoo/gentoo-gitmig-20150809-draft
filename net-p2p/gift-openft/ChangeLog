@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/gift-openft
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.27 2005/04/07 16:47:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.28 2005/05/30 21:35:40 sekretarz Exp $
+
+*gift-openft-0.2.1.6 (30 May 2005)
+
+  30 May 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +gift-openft-0.2.1.6.ebuild:
+  Version bump, bug #93628
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> gift-openft-0.2.1.4.ebuild:
   stable on amd64
