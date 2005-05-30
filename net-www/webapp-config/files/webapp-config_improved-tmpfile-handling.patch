@@ -1,0 +1,35 @@
+diff -Nup -Nrup webapp-config-1.10-r11.orig/sbin/webapp-config webapp-config-1.10-r11.patched-2/sbin/webapp-config
+--- webapp-config-1.10-r11.orig/sbin/webapp-config	2003-07-21 15:52:49.000000000 +0100
++++ webapp-config-1.10-r11.patched-2/sbin/webapp-config	2005-05-09 05:36:20.000000000 +0100
+@@ -2444,9 +2444,15 @@ fn_remove_dir ()
+ 
+ fn_remove_emptylines ()
+ {
+-	egrep -v '^$' "$1" > /tmp/$$
+-	cat /tmp/$$ > "$1"
+-	rm -f /tmp/$$
++	local tfile=`mktemp /tmp/webapp-config.XXXXXXXXXX`
++	if [ $? -ne 0 ]; then
++	  rm -f $tfile
++	  libsh_edie "mktemp failed"
++	fi
++
++	egrep -v '^$' "$1" > $tfile
++	cat $tfile > "$1"
++	rm -f $tfile
+ }
+ 
+ # ------------------------------------------------------------------------
+@@ -2714,7 +2720,11 @@ fn_show_postinst ()
+ 		return
+ 	fi
+ 
+-	local my_file="/tmp/$$.postinst.txt"
++	local my_file=`mktemp /tmp/webapp-config.postinstall.XXXXXXXXXX`
++	if [ $? -ne 0 ]; then
++	  rm -f $my_file
++	  libsh_edie "mktemp failed"
++	fi
+ 
+ 	fn_run_vars
+ 
