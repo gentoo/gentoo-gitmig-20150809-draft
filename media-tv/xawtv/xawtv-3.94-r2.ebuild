@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r2.ebuild,v 1.2 2005/05/30 00:34:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r2.ebuild,v 1.3 2005/05/30 06:53:45 cardoe Exp $
 
-inherit eutils font
+inherit virtualx eutils font
 
 IUSE="aalib alsa dv lirc mmx motif nls opengl quicktime X xv zvbi"
 
@@ -64,7 +64,7 @@ src_compile() {
 	emake || die "Make failed"
 
 	cd ${WORKDIR}/${MY_FONT}
-	emake || die "tvfonts failed"
+	DISPLAY="" Xmake || die "tvfonts failed"
 }
 
 src_install() {
