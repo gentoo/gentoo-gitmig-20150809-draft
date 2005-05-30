@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.10.ebuild,v 1.2 2005/02/02 16:56:09 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.10.ebuild,v 1.3 2005/05/30 22:25:47 sekretarz Exp $
 
 inherit eutils
 
@@ -15,10 +15,10 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 DEPEND="virtual/libc
 	dev-util/pkgconfig
-	app-arch/bzip2"
+	app-arch/bzip2
+	sys-libs/zlib"
 
-RDEPEND=">=net-p2p/gift-0.11.6
-	>=sys-libs/zlib-1.1.4"
+RDEPEND=">=net-p2p/gift-0.11.6"
 
 src_compile() {
 	econf || die "failed to configure"
