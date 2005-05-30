@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.3.ebuild,v 1.4 2005/04/30 00:08:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.3.ebuild,v 1.5 2005/05/30 14:18:49 gustavoz Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-libs/libxml2-2.6.0
 	>=gnome-base/libgnomecanvas-2.4
 	>=gnome-base/libgnomeprint-2.4
 	>=gnome-base/libgnomeprintui-2.4
-	>=x11-libs/cairo-0.1.23-r1
+	~x11-libs/cairo-0.1.23
 	>=x11-libs/gtksourceview-1.0"
 
 src_unpack() {

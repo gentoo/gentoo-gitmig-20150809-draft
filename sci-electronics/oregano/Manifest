@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 094feecf938a18ae513ca73fd8349552 oregano-0.23-r1.ebuild 801
-MD5 4032f76bf1838c73acaca09123671d79 oregano-0.40.3.ebuild 1342
-MD5 aec982ff4370af7b6f614e4eb0c306c1 ChangeLog 3080
+MD5 9c900962bf447e4f3fcf6de8cd669907 ChangeLog 3189
 MD5 7c9a9f37fb95537238315acdeef31d38 metadata.xml 219
-MD5 e5b01bf49e6a6d6c7a773fdf1137d8ef files/digest-oregano-0.40.3 67
+MD5 094feecf938a18ae513ca73fd8349552 oregano-0.23-r1.ebuild 801
+MD5 f61f096d995ec22e161fe2b01e811bef oregano-0.40.3.ebuild 1338
 MD5 f3ddc8c90aea4f16cd65023a60af1a0b files/digest-oregano-0.23-r1 64
+MD5 e5b01bf49e6a6d6c7a773fdf1137d8ef files/digest-oregano-0.40.3 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCcsyBKRy60XGEcJIRAtafAJ9BIiFSsPf2ibHfTf/qOdZMiHfCDgCggAJF
-Qv7pu5VpMKZ2BKSvjEi0t+A=
-=361I
+iD8DBQFCmyDbKRy60XGEcJIRAn1HAJ0fCGZZ6tjrbk8SReXE36kKPsykMgCeJoH+
+cimFKb0uvkjYEjoc3Y+9kNI=
+=C0Tv
 -----END PGP SIGNATURE-----
