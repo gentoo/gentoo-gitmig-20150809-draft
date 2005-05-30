@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.13 2005/05/20 22:44:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.14 2005/05/30 00:07:41 chainsaw Exp $
+
+*xchat-xsys-2.0.2 (30 May 2005)
+
+  30 May 2005; Tony Vroon <chainsaw@gentoo.org> +xchat-xsys-2.0.2.ebuild:
+  Version bump. Buttons near nicklist now optional.
 
 *xchat-xsys-2.0.0-r1 (20 May 2005)
 
