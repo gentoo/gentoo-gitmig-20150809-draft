@@ -1,6 +1,9 @@
 # ChangeLog for app-text/7plus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/7plus/ChangeLog,v 1.3 2005/01/01 16:01:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/7plus/ChangeLog,v 1.4 2005/05/30 18:15:07 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org> 7plus-2.25.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
 
 *7plus-2.25 (18 Nov 2003)
 

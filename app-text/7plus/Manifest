@@ -1,3 +1,13 @@
-MD5 c5f9ff00f931e276bed8e4acc0be85d5 7plus-2.25.ebuild 818
-MD5 b0b28f9d715eddd18129d2ea655f74c2 ChangeLog 378
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10bd994ccfed7257f1fb622afb2d7a01 ChangeLog 509
+MD5 542955b1f541700a75f3d275eb84045a 7plus-2.25.ebuild 827
 MD5 8aef3052d4a5659b67a2709c1c1c0de3 files/digest-7plus-2.25 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCm1hFI1lqEGTUzyQRAq3FAKDdHDS36LG50j5CwEqt2ZcxhfiAlACgttgU
+omTKuamQb5g4yFPafgyhzKo=
+=zUcA
+-----END PGP SIGNATURE-----
