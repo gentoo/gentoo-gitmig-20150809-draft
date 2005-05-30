@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvdrtools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.18 2005/04/21 17:54:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.19 2005/05/30 18:46:42 pylon Exp $
+
+  30 May 2005; Lars Weiler <pylon@gentoo.org> dvdrtools-0.1.6.ebuild,
+  dvdrtools-0.2.1.ebuild:
+  Removed gcc.eclass; deprecated and not used in this ebuild.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> dvdrtools-0.1.6.ebuild:
   stable on amd64
