@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 13609c643b3e8e514a1e0c431c0069b3 styleclock-0.5.1.ebuild 607
 MD5 2422bcd42b58446594dc453012dbb2c5 ChangeLog 395
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 87d92f3b975e6bdf2e94b5f60dbe1421 files/digest-styleclock-0.5.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCml0XntT9W3vfTuoRApCYAJ91oSlcgkeJssYZj5ePM4EK5JeR+QCeInU3
+aR3LSp9OflIYfAzbzHkBGA0=
+=ataH
+-----END PGP SIGNATURE-----
