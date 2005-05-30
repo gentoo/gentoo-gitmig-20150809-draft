@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.91.ebuild,v 1.1 2005/05/02 23:20:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.91.ebuild,v 1.2 2005/05/30 18:56:19 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -28,7 +28,9 @@ src_unpack() {
 	# fix up the locale install location
 	if use nls ; then
 		sed -i \
-			-e "/^datadir/s:=.*:= /usr/share:" po/Makefile.in.in \
+			-e "/^datadir/s:=.*:= /usr/share:" \
+			po/Makefile.in.in \
+			src/Makefile.am \
 			|| die "sed failed"
 	fi
 

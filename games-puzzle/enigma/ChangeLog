@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.18 2005/05/02 23:20:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.19 2005/05/30 18:56:19 mr_bones_ Exp $
+
+  30 May 2005; Michael Sterrett <mr_bones_@gentoo.org> enigma-0.91.ebuild:
+  fix nls support (bug #94502) - patch from ockham@gmx.net
 
 *enigma-0.91 (02 May 2005)
 
