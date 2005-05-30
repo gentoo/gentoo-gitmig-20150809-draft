@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.4 2004/12/16 09:47:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.5 2005/05/30 18:48:19 swegener Exp $
 
 IUSE=""
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 MY_P=${PN}.${PV}
 S=${WORKDIR}/${MY_P}
