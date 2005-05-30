@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.41 2005/05/18 10:58:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.42 2005/05/30 04:43:16 nerdboy Exp $
+
+  30 May 2005; Steve Arnold <nerdboy@gentoo.org> graphviz-1.12.ebuild,
+  graphviz-1.12-r1.ebuild, graphviz-1.16.ebuild:
+  updating for doxygen; all 1.x versions work fine on x86 and sparc
 
 *graphviz-2.2.1 (18 May 2005)
 
