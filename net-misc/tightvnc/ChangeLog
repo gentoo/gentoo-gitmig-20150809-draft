@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.48 2005/04/27 15:07:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.49 2005/05/30 20:02:40 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org>
+  tightvnc-1.3_alpha5.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
 
   27 Apr 2005; Simon Stelling <blubb@gentoo.org> tightvnc-1.2.9-r1.ebuild:
   stable on amd64
