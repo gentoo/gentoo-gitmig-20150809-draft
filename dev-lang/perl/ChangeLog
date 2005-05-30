@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.130 2005/05/30 02:52:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.131 2005/05/30 13:41:04 mcummings Exp $
+
+  30 May 2005; Michael Cummings <mcummings@gentoo.org> files/perl-cleaner,
+  perl-5.8.2-r4.ebuild, perl-5.8.4-r4.ebuild, perl-5.8.5-r5.ebuild,
+  perl-5.8.6-r4.ebuild:
+  Updated perl-cleaner to remove the emptied dirs after a .ph purge
 
   29 May 2005; <solar@gentoo.org> perl-5.8.2-r4.ebuild, perl-5.8.4-r4.ebuild,
   perl-5.8.5-r5.ebuild, perl-5.8.6-r4.ebuild:

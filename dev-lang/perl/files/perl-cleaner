@@ -68,13 +68,19 @@ function ph_clean() {
          done
       fi
    done
+   for DIR in $INC; do
+	 for empty in $(find $DIR -type d); do
+		# Silently remove those dirs that we just emptied
+	 	rmdir $empty  >/dev/null 2>&1
+   	 done
+   done
 }
 
 # Generate ph files; this is useful if we've upgraded packages with headers so that perl knows the new info
 function ph_update() {
    echo "$(date) : Updating ph files" | tee -a $LOG
-   cd /usr/include; h2ph * sys/* arpa/* netinet/* bits/* security/* asm/* gnu/* linux/*>>$LOG
-   cd /usr/include/linux; h2ph * >>$LOG
+   cd /usr/include; h2ph * sys/* arpa/* netinet/* bits/* security/* asm/* gnu/* linux/* | tee -a $LOG
+   cd /usr/include/linux; h2ph * | tee -a $LOG
 }
 
 # Build a list of modules installed under older perls - only valid if the module was an ebuild :)

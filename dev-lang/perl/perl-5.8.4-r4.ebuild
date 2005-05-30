@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r4.ebuild,v 1.9 2005/05/30 02:52:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r4.ebuild,v 1.10 2005/05/30 13:41:04 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -388,6 +388,14 @@ pkg_postinst() {
 					einfo "<< $file"
 				done
 			fi
+		done
+		# Silently remove the now empty dirs
+		for DIR in $INC; do
+		   if [ -d ${ROOT}/$DIR ]; then
+		       for $empty in $(find ${ROOT}/$DIR -type d); do
+			   		rmdir $empty >/dev/null 2>&1
+			   done
+		   fi
 		done
 		ebegin "Converting C header files to the corresponding Perl format"
 		cd /usr/include;
