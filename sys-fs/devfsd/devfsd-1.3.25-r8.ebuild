@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.17 2005/02/06 23:24:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.18 2005/05/30 02:45:55 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.atnf.csiro.au/pub/people/rgooch/linux/daemons/devfsd/devfsd-v
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="uclibc"
+IUSE=""
 
 DEPEND="virtual/libc"
 PROVIDE="virtual/dev-manager"
@@ -26,7 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-pic.patch
 	epatch "${FILESDIR}"/${P}-no-nis.patch
 
-	use uclibc || append-flags -DHAVE_NIS
+	use elibc_uclibc || append-flags -DHAVE_NIS
 	sed -i \
 		-e "s:-O2:${CFLAGS}:g" \
 		-e 's:/usr/man:/usr/share/man:' \
@@ -35,7 +35,7 @@ src_unpack() {
 		-e 'DEFINES	:= -DLIBNSL="\\"/lib/libnsl.so.1\\""' \
 		-e 's:install -s:install:' \
 		GNUmakefile
-	use uclibc && sed -e 's|libnsl.so.1|libnsl.so.0|' -i GNUmakefile
+	use elibc_uclibc && sed -e 's|libnsl.so.1|libnsl.so.0|' -i GNUmakefile
 	tc-export CC
 }
 
