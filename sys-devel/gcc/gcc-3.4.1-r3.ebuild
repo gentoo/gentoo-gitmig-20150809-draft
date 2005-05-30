@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.18 2005/05/24 04:28:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.19 2005/05/30 03:35:06 solar Exp $
 
-IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened uclibc n32 n64 emul-linux-x86"
+IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened n32 n64 emul-linux-x86"
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -22,10 +22,6 @@ KEYWORDS="-* ~amd64 mips ppc64 ~x86 -hppa ppc s390"
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
 DEPEND="virtual/libc
-	!s390? ( !uclibc? (
-		>=sys-libs/glibc-2.3.3_pre20040420-r1
-		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
-	) )
 	!sys-devel/hardened-gcc
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )
@@ -41,10 +37,6 @@ DEPEND="virtual/libc
 		nls? ( sys-devel/gettext )
 	)"
 RDEPEND="virtual/libc
-	!s390? ( !uclibc? (
-		>=sys-libs/glibc-2.3.3_pre20040420-r1
-		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
-	) )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -52,7 +44,7 @@ RDEPEND="virtual/libc
 
 PDEPEND="sys-devel/gcc-config"
 [ "${ABI}" != "n32" ] && [ "${ABI}" != "n64" ] && PDEPEND="${PDEPEND}
-	!n32? ( !n64? ( !s390? ( !uclibc? ( sys-libs/libstdc++-v3 ) ) ) )"
+	!n32? ( !n64? ( !s390? ( !elibc_uclibc? ( sys-libs/libstdc++-v3 ) ) ) )"
 
 
 # <<--------------------SRC_URI variables-------------------->>
@@ -261,7 +253,7 @@ glibc_have_ssp() {
 		&& local libc_prefix="/lib64/" \
 		|| local libc_prefix="/lib/"
 
-	use uclibc \
+	use elibc_uclibc \
 		&& local libc_file="libc.so.0" \
 		|| local libc_file="libc.so.6"
 
@@ -382,7 +374,7 @@ do_patch_tarball() {
 		# the uclibc patches need autoconf to be run
 		# for build stage we need the updated files though
 		use build || ( cd ${S}/libstdc++-v3; autoconf; cd ${S} )
-		#use build && use uclibc && ewarn "uclibc in build stage is not supported yet" && exit 1
+		#use build && use elibc_uclibc && ewarn "uclibc in build stage is not supported yet" && exit 1
 
 	elif use multilib && [ "${ARCH}" = "amd64" ]
 	then
@@ -406,7 +398,7 @@ do_piessp_patches() {
 		# adds default pie support (rs6000 too) if DEFAULT_PIE[_SSP] is defined
 		epatch ${WORKDIR}/piepatch/def
 		# disable relro/now
-		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-norelro.patch
+		use elibc_uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-norelro.patch
 	fi
 
 	# non-default SSP support.
@@ -603,7 +595,7 @@ src_compile() {
 	# uclibc uses --enable-clocale=uclibc (autodetected)
 	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
 
-	if ! use uclibc
+	if ! use elibc_uclibc
 	then
 		# it's getting close to a time where we are going to need USE=glibc, uclibc, bsdlibc -solar
 		myconf="${myconf} --enable-__cxa_atexit --enable-clocale=gnu"

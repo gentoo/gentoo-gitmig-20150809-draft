@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0.ebuild,v 1.4 2005/05/26 02:46:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0.ebuild,v 1.5 2005/05/30 03:35:06 solar Exp $
 
 MAN_VER=""
 PATCH_VER="1.0"
@@ -22,7 +22,7 @@ KEYWORDS="-*"
 RDEPEND=">=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
-	!uclibc? (
+	!elibc_uclibc? (
 		>=sys-libs/glibc-2.3.3_pre20040420-r1
 		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
 	)

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130.ebuild,v 1.15 2005/05/24 05:08:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130.ebuild,v 1.16 2005/05/30 03:35:06 solar Exp $
 
 MAN_VER="3.3.5"
 PATCH_VER="1.2"
@@ -47,7 +47,7 @@ RDEPEND="virtual/libc
 	>=sys-devel/gcc-config-1.3.10
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
-	!uclibc? ( >=sys-libs/glibc-2.3.2-r9 )
+	!elibc_uclibc? ( >=sys-libs/glibc-2.3.2-r9 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
@@ -77,7 +77,7 @@ src_unpack() {
 	sed -e 's/3\.3\.6/3.3.5/' -i ${S}/gcc/version.c
 
 
-	if [ -n "${PATCH_VER}" ] && use uclibc ; then
+	if [ -n "${PATCH_VER}" ] && use elibc_uclibc ; then
 		mv ${S}/gcc-3.3.2/libstdc++-v3/config/os/uclibc ${S}/libstdc++-v3/config/os/ || die
 		mv ${S}/gcc-3.3.2/libstdc++-v3/config/locale/uclibc ${S}/libstdc++-v3/config/locale/ || die
 		epatch ${FILESDIR}/3.3.3/gcc-uclibc-3.3-loop.patch

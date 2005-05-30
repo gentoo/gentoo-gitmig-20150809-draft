@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.36 2005/05/24 05:08:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.37 2005/05/30 03:35:06 solar Exp $
 
 MAN_VER="3.4.3"
 BRANCH_UPDATE="20041125"
@@ -50,7 +50,7 @@ RDEPEND="virtual/libc
 	>=sys-devel/gcc-config-1.3.6-r4
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
-	!uclibc? (
+	!elibc_uclibc? (
 		>=sys-libs/glibc-2.3.3_pre20040420-r1
 		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
 	)
@@ -74,7 +74,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
 PDEPEND="sys-devel/gcc-config
-	!nocxx? ( !mips? ( !ia64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
+	!nocxx? ( !mips? ( !ia64? ( !elibc_uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
 
 src_unpack() {
 	gcc_src_unpack
