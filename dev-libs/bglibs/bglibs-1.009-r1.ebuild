@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.009-r1.ebuild,v 1.8 2004/07/02 04:33:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.009-r1.ebuild,v 1.9 2005/05/30 18:22:57 swegener Exp $
 
-inherit fixheadtails gcc
+inherit fixheadtails toolchain-funcs
 
 DESCRIPTION="Bruce Guenters Libraries Collection"
 HOMEPAGE="http://untroubled.org/bglibs/"
@@ -26,8 +26,8 @@ src_unpack() {
 
 src_compile() {
 	echo "${D}/usr/lib/bglibs" > conf-home
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	emake -j1 || die
 }
 

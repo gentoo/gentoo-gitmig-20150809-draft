@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djb/djb-0.5.2.ebuild,v 1.5 2004/07/14 14:16:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djb/djb-0.5.2.ebuild,v 1.6 2005/05/30 18:24:46 swegener Exp $
 
-inherit gcc fixheadtails
+inherit toolchain-funcs fixheadtails
 
 DESCRIPTION="library created from code by Dan Bernstein"
 HOMEPAGE="http://www.fefe.de/djb/"
@@ -21,8 +21,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	ht_fix_file */Makefile.static
-	for cc in */conf-cc ; do echo "$(gcc-getCC) ${CFLAGS}" > ${cc} ; done
-	for ld in */conf-ld ; do echo "$(gcc-getCC) ${LDFLAGS}" > ${ld} ; done
+	for cc in */conf-cc ; do echo "$(tc-getCC) ${CFLAGS}" > ${cc} ; done
+	for ld in */conf-ld ; do echo "$(tc-getCC) ${LDFLAGS}" > ${ld} ; done
 }
 
 src_compile() {

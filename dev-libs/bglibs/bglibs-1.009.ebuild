@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.009.ebuild,v 1.6 2004/07/02 04:33:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.009.ebuild,v 1.7 2005/05/30 18:22:57 swegener Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="Bruce Guenters Libraries Collection"
 HOMEPAGE="http://untroubled.org/bglibs/"
@@ -17,7 +17,7 @@ DEPEND="virtual/libc"
 
 src_compile() {
 	echo "${D}/usr/lib/bglibs" > conf-home
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	emake -j1 || die
 }
 

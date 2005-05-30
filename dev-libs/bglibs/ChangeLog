@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.22 2005/04/09 20:51:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.23 2005/05/30 18:22:57 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org> bglibs-1.001.ebuild,
+  bglibs-1.009.ebuild, bglibs-1.009-r1.ebuild, bglibs-1.011.ebuild,
+  bglibs-1.017.ebuild, bglibs-1.019.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
 
   09 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> bglibs-1.017.ebuild:
   Stable on ppc.
