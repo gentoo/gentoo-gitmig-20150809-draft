@@ -5,7 +5,7 @@ MD5 c0b56fa3d375ac5feba0107b90cdb2b5 ChangeLog 3973
 MD5 67bd4c482479738a34057710a43b70de libusb-0.1.7-r1.ebuild 917
 MD5 ecc4ed6c771b98aea70ec6f3955f569f libusb-0.1.8.ebuild 1361
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 b32c4c4e2e8c38b0a0226509a53365e4 libusb-0.1.10a.ebuild 1288
+MD5 00bde751a3c5d7c0fb98eb28b92feedd libusb-0.1.10a.ebuild 1287
 MD5 9cb49945879f78000d198c898d197e54 files/digest-libusb-0.1.7-r1 64
 MD5 edf695ba0c7ee442c501401384faaa94 files/digest-libusb-0.1.8 64
 MD5 13b0f271f94755b89f904270daa0659d files/libusb-0.1.8-amd64-fPIC.patch 268
@@ -13,7 +13,7 @@ MD5 9b71253641038ba3d13b833a85cdcf76 files/digest-libusb-0.1.10a 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCieF8TM53OX+9xmMRAhSOAKCjDgR4SUszrfNyLLzh6eP2aYro6ACfYpex
-3gKgOLwEkVcTRx05gGep1uo=
-=CI0U
+iD8DBQFCmzXjTM53OX+9xmMRAkKRAJ4nu2+xp300rmjjQjjLYVm+ZJ8wfwCgjKgt
+ECphrnjO+k9hoQ1wtTjWw9Q=
+=Y+TU
 -----END PGP SIGNATURE-----
