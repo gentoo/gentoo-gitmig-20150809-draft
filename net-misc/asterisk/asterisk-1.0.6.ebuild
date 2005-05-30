@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.6.ebuild,v 1.3 2005/05/05 15:52:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.6.ebuild,v 1.4 2005/05/30 03:17:48 solar Exp $
 
-IUSE="alsa doc gtk mmx mysql pri zaptel uclibc debug postgres vmdbmysql vmdbpostgres bri hardened speex"
+IUSE="alsa doc gtk mmx mysql pri zaptel debug postgres vmdbmysql vmdbpostgres bri hardened speex"
 
 inherit eutils
 
@@ -33,7 +33,6 @@ DEPEND="dev-libs/newt
 	alsa? ( media-libs/alsa-lib )
 	mysql? ( dev-db/mysql )
 	speex? ( media-libs/speex )
-	uclibc? ( sys-libs/uclibc )
 	zaptel? ( >=net-misc/zaptel-1.0.3 )
 	postgres? ( dev-db/postgresql )
 	vmdbmysql? ( dev-db/mysql )
@@ -147,7 +146,7 @@ src_unpack() {
 	#
 	# uclibc patch
 	#
-	if use uclibc; then
+	if use elibc_uclibc; then
 		einfo "Patching asterisk for uclibc..."
 		epatch ${FILESDIR}/1.0.0/${PN}-1.0.5-uclibc-dns.diff
 	fi

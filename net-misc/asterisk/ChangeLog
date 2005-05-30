@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.54 2005/05/15 21:46:23 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.55 2005/05/30 03:17:48 solar Exp $
+
+  29 May 2005; <solar@gentoo.org> asterisk-1.0.1.ebuild,
+  asterisk-1.0.2.ebuild, asterisk-1.0.3-r1.ebuild, asterisk-1.0.3.ebuild,
+  asterisk-1.0.5-r1.ebuild, asterisk-1.0.5.ebuild, asterisk-1.0.6.ebuild,
+  asterisk-1.0.7-r1.ebuild, asterisk-1.0.7.ebuild:
+  - update asterisk to use libc expanded variable elibc_uclibc vs uclibc so
+  USE=-* works
 
   15 May 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/1.0.0/asterisk-1.0.7-initgroups.diff, files/1.0.0/asterisk.confd.sec,

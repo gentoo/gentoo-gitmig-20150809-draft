@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.3-r1.ebuild,v 1.2 2005/01/31 18:47:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.3-r1.ebuild,v 1.3 2005/05/30 03:17:48 solar Exp $
 
-IUSE="alsa doc gtk mmx mysql pri zaptel uclibc resperl"
+IUSE="alsa doc gtk mmx mysql pri zaptel resperl"
 
 inherit eutils
 
@@ -28,7 +28,6 @@ DEPEND="dev-libs/newt
 	pri? ( >=net-libs/libpri-1.0.3 )
 	alsa? ( media-libs/alsa-lib )
 	mysql? ( dev-db/mysql )
-	uclibc? ( sys-libs/uclibc )
 	zaptel? ( >=net-misc/zaptel-1.0.3 )
 	resperl? ( dev-lang/perl
 		   >=net-misc/zaptel-1.0.3 )"
@@ -109,7 +108,7 @@ src_unpack() {
 	#
 	# uclibc patch
 	#
-	if use uclibc; then
+	if use elibc_uclibc; then
 		einfo "Patching asterisk for uclibc..."
 		epatch ${FILESDIR}/1.0.0/asterisk-uclibc-dns.diff
 	fi
