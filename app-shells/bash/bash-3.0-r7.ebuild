@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r7.ebuild,v 1.5 2005/05/14 18:55:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r7.ebuild,v 1.6 2005/05/30 02:32:07 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -24,7 +24,7 @@ SRC_URI="mirror://gnu/bash/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="nls build uclibc"
+IUSE="nls build"
 
 # we link statically with ncurses
 DEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -120,7 +120,7 @@ src_install() {
 	dosym bash /bin/sh
 	dosym bash /bin/rbash
 
-	use uclibc && rm -f ${D}/usr/bin/bashbug ${D}/usr/share/man*/bashbug*
+	use elibc_uclibc && rm -f ${D}/usr/bin/bashbug ${D}/usr/share/man*/bashbug*
 
 	insinto /etc/bash
 	doins ${FILESDIR}/bashrc
