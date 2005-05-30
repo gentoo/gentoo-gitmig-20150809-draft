@@ -1,6 +1,9 @@
 # ChangeLog for app-text/duconv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duconv/ChangeLog,v 1.10 2005/01/01 16:11:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/duconv/ChangeLog,v 1.11 2005/05/30 07:55:34 wormo Exp $
+
+  30 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> duconv-1.1.ebuild:
+  mark ~ppc
 
   21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Add metadata (shell-tools)
