@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.42 2005/02/07 02:01:03 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.43 2005/05/30 18:57:52 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org> openafs-1.2.10-r2.ebuild,
+  openafs-1.2.11.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
 
   06 Feb 2005; <rphillips@gentoo.org> :
   Added PROVIDE for virtual/afs
