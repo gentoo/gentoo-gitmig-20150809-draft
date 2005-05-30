@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.3 2005/05/18 19:29:49 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.4 2005/05/30 02:36:02 solar Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/${P}-e2fsprogs.patch.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="debug uclibc static savedconfig netboot floppyboot make-symlinks"
+IUSE="debug static savedconfig netboot floppyboot make-symlinks"
 
 DEPEND=""
 

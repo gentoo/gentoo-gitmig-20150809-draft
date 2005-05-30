@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.67 2005/05/18 19:29:49 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.68 2005/05/30 02:36:02 solar Exp $
+
+  29 May 2005; <solar@gentoo.org> busybox-1.00-r1.ebuild,
+  busybox-1.00-r2.ebuild, busybox-1.00-r3.ebuild, busybox-1.00-r4.ebuild:
+  echangelog - update package to use libc expanded variable elibc_uclibc vs
+  uclibc so USE=-* works
 
   18 May 2005; <solar@gentoo.org> busybox-1.00-r4.ebuild:
   - reenable a few useful default applets

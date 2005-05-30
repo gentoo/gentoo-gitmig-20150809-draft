@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.54 2005/05/06 01:35:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.55 2005/05/30 02:36:42 solar Exp $
+
+  29 May 2005; <solar@gentoo.org> gawk-3.1.3-r2.ebuild:
+  echangelog - update package to use libc expanded variable elibc_uclibc vs
+  uclibc so USE=-* works
 
   06 May 2005; Mike Frysinger <vapier@gentoo.org>
   files/filefuncs/filefuncs.c, gawk-3.1.4-r4.ebuild:
