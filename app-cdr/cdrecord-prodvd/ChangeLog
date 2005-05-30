@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrecord-prodvd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.18 2005/04/21 17:53:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.19 2005/05/30 03:01:42 solar Exp $
+
+  29 May 2005; <solar@gentoo.org> cdrecord-prodvd-2.01.01-r1.ebuild,
+  cdrecord-prodvd-2.01_pre20041012.ebuild:
+  - update cdrecord-prodvd to use libc expanded variable elibc_uclibc vs uclibc
+  so USE=-* works
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org>
   cdrecord-prodvd-2.01.01-r1.ebuild:
