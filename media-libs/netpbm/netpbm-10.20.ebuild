@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20.ebuild,v 1.15 2005/02/13 06:37:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20.ebuild,v 1.16 2005/05/30 18:53:36 swegener Exp $
 
-inherit flag-o-matic gcc
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
 HOMEPAGE="http://netpbm.sourceforge.net/"
@@ -58,7 +58,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -j1 CC="$(gcc-getCC)" CXX="$(gcc-getCXX)" || die "emake failed"
+	emake -j1 CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die "emake failed"
 }
 
 src_install() {
