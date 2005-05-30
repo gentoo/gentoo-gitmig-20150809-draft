@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r2.ebuild,v 1.12 2005/05/21 01:16:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r2.ebuild,v 1.13 2005/05/30 02:56:44 solar Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="nls build acl selinux static uclibc"
+IUSE="nls build acl selinux static"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl sys-apps/attr )
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.8.3
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/m4-1.4-r1
-	!uclibc? ( sys-apps/help2man )"
+	!elibc_uclibc? ( sys-apps/help2man )"
 
 src_unpack() {
 	unpack ${A}
