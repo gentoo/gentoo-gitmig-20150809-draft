@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.24 2005/05/20 03:17:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.25 2005/05/30 07:55:51 cardoe Exp $
+
+  30 May 2005; Doug Goldstein <cardoe@gentoo.org>
+  -files/mythvideo-0.16-gcc34.patch, -mythvideo-0.16.ebuild,
+  -mythvideo-0.18.ebuild, mythvideo-0.18.1.ebuild:
+  stable on x86. clean up old ebuilds.
 
 *mythvideo-0.18.1 (20 May 2005)
 
