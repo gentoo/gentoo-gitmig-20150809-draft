@@ -1,3 +1,13 @@
-MD5 f21c92d92a1717ee35e8e9fc98fbc695 ChangeLog 585
-MD5 86907ae8409712731d96ca9820fe13e2 datapipe-1.0.ebuild 696
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cedd0312a322fdcda6bbd7b43c2d082f ChangeLog 716
+MD5 34bc8eaaffc9fa8be81acca5353c1404 datapipe-1.0.ebuild 711
 MD5 3f69b400f9989e1c1af8f8b59a510daa files/digest-datapipe-1.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCm1/Q5mJXAu5GbtIRAgVSAJ41+Wf/GJOpeyNrwJn/8CNIBosTQQCdHMiF
+tdtChXN6enxim4QKzj7VjCI=
+=fPhJ
+-----END PGP SIGNATURE-----
