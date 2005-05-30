@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/esekeyd/ChangeLog,v 1.1 2005/05/30 05:15:00 tester Exp $
+
+*esekeyd-1.2.1 (30 May 2005)
+
+  30 May 2005; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +esekeyd-1.2.1.ebuild:
+  New package, thanks to kandian for the tip
+

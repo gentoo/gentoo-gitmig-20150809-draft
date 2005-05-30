@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 491d8b3e96181c390bc5b7ee42356ffa ChangeLog 380
+MD5 3e22c883db32384466af4a4db61aca02 metadata.xml 222
+MD5 db1bb661598fd4989e53f7c986cf1dac esekeyd-1.2.1.ebuild 546
+MD5 c0036814b4daee11094ee813cce56737 files/digest-esekeyd-1.2.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCmqFjmOfEJZHYOKcRAhuVAKCz3VhCmjwz0zhsZz12S23Ud7roVgCeIoIt
+GtTsHNfcF2Db7hA5sgfZJQ0=
+=/tiP
+-----END PGP SIGNATURE-----
