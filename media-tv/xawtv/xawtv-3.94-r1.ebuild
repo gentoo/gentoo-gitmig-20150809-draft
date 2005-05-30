@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r1.ebuild,v 1.2 2005/04/09 11:57:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r1.ebuild,v 1.3 2005/05/30 00:50:55 cardoe Exp $
 
 inherit virtualx eutils multilib
 
@@ -16,7 +16,7 @@ SRC_URI="http://dl.bytesex.org/releases/xawtv/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
