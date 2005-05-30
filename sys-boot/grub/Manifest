@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 138bf4b71e6daf1c47dd24c453f5faeb grub-0.94-r1.ebuild 3595
+MD5 774d3294eb6bd4722df2a9fadaedd73f grub-0.94-r1.ebuild 3605
 MD5 29e9d933de6944d32ec6178ad64af8db grub-0.96-r2.ebuild 5162
 MD5 4d29f5270056c5be9c385ead759c2084 grub-0.96-r1.ebuild 5085
-MD5 3b7a994ffe338fd8de16df033684e924 grub-0.92-r1.ebuild 2519
-MD5 b992ca57dedad689b4e2514062cd58c8 grub-0.96.ebuild 4173
-MD5 6f64ad4c1842218eafe2ebdd908fcc85 grub-0.94-r2.ebuild 3711
-MD5 75c9d32db872bb5d09e2f43d90610dc2 ChangeLog 13274
+MD5 b92fdfe0bf28aa2e4963bb15577d9c12 grub-0.92-r1.ebuild 2533
+MD5 bffbfdbcb1ede1797c60cf43ac411d37 grub-0.96.ebuild 4170
+MD5 ffc7d940854b3789738f79ada45c9a94 grub-0.94-r2.ebuild 3721
+MD5 a9c3555754f5e0f54d038cb79e9459a9 ChangeLog 13503
 MD5 adcde4d1dce3d1e2ef2c466f860c6875 grub-0.93.20030118.ebuild 2539
 MD5 b0eacbb6edb031d87f33ed0b08f5916d metadata.xml 226
-MD5 a0f235ac986f99960ed542e2982c3640 grub-0.95.20040823.ebuild 4185
+MD5 4e4f4dcc9750d0d0ae6d3fd3310a01d5 grub-0.95.20040823.ebuild 4179
 MD5 2170f54e53dea24426369c0154d46fc0 files/digest-grub-0.96 140
 MD5 3a653f86b731c2a17482d25f57b2d041 files/digest-grub-0.95.20040823 149
 MD5 5c12894c0a8cfd4a46a67e631dd45804 files/grub-0.96-netboot-pic.patch 446
@@ -35,7 +35,7 @@ MD5 9c1ec8bfdc5f20ce965c2d2167a43162 files/grub-0.95.20040823-warnings.patch 252
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCmbxEntT9W3vfTuoRAtEKAKCpSA/YhDUWQiq5L4HWH3Glt0P+igCeN/SH
-96yqcBr33etGgbJpnnXIvvU=
-=UPGD
+iD8DBQFCm3B5I1lqEGTUzyQRAj54AKDePNJTzZmmCsGoJoOg0U6xseC7EACgtsSp
+BzngQwR/FUd5SQjTgRMdteM=
+=VZJ+
 -----END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96.ebuild,v 1.5 2005/04/05 21:41:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96.ebuild,v 1.6 2005/05/30 19:58:21 swegener Exp $
 
-inherit mount-boot eutils flag-o-matic gcc gnuconfig toolchain-funcs
+inherit mount-boot eutils flag-o-matic gnuconfig toolchain-funcs
 
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
