@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d9d50a5a446f7892c512d6ca74aec718 ChangeLog 661
-MD5 394be69b10cdbe9b98be3dd381dc086b mdf2iso-0.2.1.ebuild 663
 MD5 54a10aba12f903d191069cf36c6966b3 metadata.xml 381
+MD5 291dbba16b1026fb625b9feb88db2442 ChangeLog 768
+MD5 1ddb20a68fa272a1344659de28a87486 mdf2iso-0.2.1.ebuild 670
 MD5 21c7873a3387ed12e7d9ddd8eeb024ca files/digest-mdf2iso-0.2.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCW+/l06ebR+OMO78RAsv4AJ0fjF+FsVaTw2xcLM1m0DfDhaJvHgCfX+wp
-c/+4wp5eCFI5P7NUXz5VxSY=
-=SHox
------END PGP SIGNATURE-----
