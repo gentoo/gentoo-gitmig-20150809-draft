@@ -44,3 +44,4 @@ xemacs
 afs
 tcltk
 ldap
+slang
