@@ -1,4 +1,14 @@
-MD5 7409c0a51ed1db9aa8af47c80e9d06f7 ChangeLog 718
-MD5 a5446423598155923b58231e7e61c2a1 PerlIO-eol-0.13.ebuild 529
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 47820711f21507823dd88ffcb8937e82 ChangeLog 820
+MD5 d7dd0ebcfac773724683a1a36d8d3fdb PerlIO-eol-0.13.ebuild 531
 MD5 1e7dded402e236d45bd25a38c70c995c metadata.xml 223
 MD5 fdf62b226521ee6a7785675bb47a35bd files/digest-PerlIO-eol-0.13 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCm2tGKRy60XGEcJIRAtXrAJ9hqhTdgI2YDLA/htxT+gF9jNVIRwCfZmOm
+QZzWzCTR5JkHBnu+NnHQ3tg=
+=lbPR
+-----END PGP SIGNATURE-----
