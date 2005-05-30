@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.13.ebuild,v 1.7 2005/05/24 01:20:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.13.ebuild,v 1.8 2005/05/30 13:03:48 phosphan Exp $
 
 DESCRIPTION="Scanner Access Now Easy"
 HOMEPAGE="http://www.sane-project.org"
@@ -28,12 +28,9 @@ src_compile() {
 src_install() {
 	einstall datadir=${D}/usr/share/misc || die
 	if use gimp; then
-		local gimpshortversion=$(best_version media-gfx/gimp \
-						| cut -f 1,2 -d "." | cut -f 3 -d "-")
-		einfo "Setting plugin link for GIMP version	${gimpshortversion}.x"
+		einfo "Setting plugin link for GIMP version	$(gimptool --version)"
 
-		gimpplugindir=$(/usr/bin/gimptool-${gimpshortversion} \
-						--gimpplugindir)/plug-ins
+		gimpplugindir=$(/usr/bin/gimptool --gimpplugindir)/plug-ins
 
 		dodir ${gimpplugindir}
 		dosym /usr/bin/xscanimage ${gimpplugindir}/xscanimage
