@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/esekeyd/esekeyd-1.2.1.ebuild,v 1.1 2005/05/30 05:33:32 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/esekeyd/esekeyd-1.2.1.ebuild,v 1.2 2005/05/30 12:54:53 tester Exp $
 
-DESCRIPTION="e"
+DESCRIPTION="Multimedia key daemon that uses the Linux event interface"
 HOMEPAGE="http://www.majdom.com/~einstein/#esekeydaemon"
 LICENSE="GPL-2"
 
