@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10_rc3.ebuild,v 1.7 2005/05/12 23:16:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10_rc3.ebuild,v 1.8 2005/05/30 03:40:37 solar Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/${S_PP}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~mips"
-IUSE="pam ldap ssl sasl snmp debug uclibc selinux underscores logrotate customlog zero-penalty-hit"
+IUSE="pam ldap ssl sasl snmp debug selinux underscores logrotate customlog zero-penalty-hit"
 
 RDEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
@@ -60,7 +60,7 @@ src_unpack() {
 
 src_compile() {
 	# Support for uclibc #61175
-	if use uclibc; then
+	if use elibc_uclibc; then
 		local basic_modules="getpwnam,NCSA,SMB,MSNT,multi-domain-NTLM,winbind"
 	else
 		local basic_modules="getpwnam,YP,NCSA,SMB,MSNT,multi-domain-NTLM,winbind"
@@ -87,7 +87,7 @@ src_compile() {
 	fi
 
 	# Support for uclibc #61175
-	if use uclibc; then
+	if use elibc_uclibc; then
 		myconf="${myconf} --enable-storeio='ufs,diskd,aufs,null' "
 		myconf="${myconf} --disable-async-io "
 	else
