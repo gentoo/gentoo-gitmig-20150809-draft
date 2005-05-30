@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 54a14c9c27d8f996ae2745c4480cb142 ChangeLog 2972
 MD5 6eba2cd72cfdd6bd15f4ce2c29b57d73 gtkglarea-1.2.3-r1.ebuild 902
-MD5 61697ada237027feee786523d35955c7 gtkglarea-1.99.0.ebuild 991
-MD5 bdaaa01de1f92a353eb0680fb27be150 ChangeLog 2831
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 85fca3ae767a7224cd7a48ad38c69370 gtkglarea-1.99.0.ebuild 947
 MD5 0cf1a1b6421616a534c50a4410c7f2d8 files/digest-gtkglarea-1.2.3-r1 67
 MD5 f49438c0f88d925df7289b2314a02362 files/digest-gtkglarea-1.99.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFClyhQ2G5bA0cA/ScRAr6FAKDrI/CL2RuvC2ON0gCFN7VLmwZdEQCfaFDm
-eEZHbljzEemGVMXm3/13eUE=
-=myhH
------END PGP SIGNATURE-----
