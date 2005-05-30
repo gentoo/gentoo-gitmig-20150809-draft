@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libiec61883
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.1 2005/05/30 05:58:00 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.2 2005/05/30 07:13:55 cardoe Exp $
+
+  30 May 2005; Doug Goldstein <cardoe@gentoo.org> libiec61883-1.0.0.ebuild:
+  verified it comes on amd64... that's it... need it for QA/repoman
 
 *libiec61883-1.0.0 (30 May 2005)
 
