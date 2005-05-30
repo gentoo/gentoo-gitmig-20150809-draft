@@ -1,0 +1,24 @@
+diff -ur rtorrent-0.2.3/src/core/curl_get.h rtorrent-0.2.3-fix/src/core/curl_get.h
+--- rtorrent-0.2.3/src/core/curl_get.h	2005-05-30 21:21:16.000000000 +0200
++++ rtorrent-0.2.3-fix/src/core/curl_get.h	2005-05-30 21:51:24.813822752 +0200
+@@ -33,6 +33,8 @@
+ 
+ namespace core {
+ 
++class CurlStack;
++
+ class CurlGet : public torrent::Http {
+  public:
+   friend class CurlStack;
+diff -ur rtorrent-0.2.3/src/core/curl_stack.h rtorrent-0.2.3-fix/src/core/curl_stack.h
+--- rtorrent-0.2.3/src/core/curl_stack.h	2005-05-30 21:21:16.000000000 +0200
++++ rtorrent-0.2.3-fix/src/core/curl_stack.h	2005-05-30 21:51:37.805847664 +0200
+@@ -27,6 +27,8 @@
+ 
+ namespace core {
+ 
++class CurlGet;
++
+ class CurlStack {
+  public:
+   friend class CurlGet;
