@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4.ebuild,v 1.12 2005/01/01 13:32:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4.ebuild,v 1.13 2005/05/30 18:07:02 swegener Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="multi-purpose text editor for the X Window System"
 HOMEPAGE="http://nedit.org/"
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 	x11-libs/openmotif"
 
 src_compile() {
-	make CC=$(gcc-getCC) linux || die
+	make CC=$(tc-getCC) linux || die
 }
 
 src_install() {

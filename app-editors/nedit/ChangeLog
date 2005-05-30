@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.38 2005/03/27 11:26:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.39 2005/05/30 18:07:02 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org> nedit-5.4.ebuild,
+  nedit-5.5.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
 
   27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> nedit-5.5.ebuild:
   Stable on ppc.
