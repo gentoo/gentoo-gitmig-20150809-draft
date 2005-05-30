@@ -1,0 +1,48 @@
+diff -NurdB libsoup-1.99.28/libsoup/soup-gnutls.c libsoup-1.99.28-patched/libsoup/soup-gnutls.c
+--- libsoup-1.99.28/libsoup/soup-gnutls.c	2003-03-31 17:32:48.000000000 -0500
++++ libsoup-1.99.28-patched/libsoup/soup-gnutls.c	2005-05-30 00:20:21.000000000 -0500
+@@ -76,8 +76,9 @@
+ 	}
+ 
+ 	if (status & GNUTLS_CERT_INVALID ||
++#ifdef GNUTLS_CERT_NOT_TRUSTED
+ 	    status & GNUTLS_CERT_NOT_TRUSTED ||
+-	    status & GNUTLS_CERT_CORRUPTED ||
++#endif
+ 	    status & GNUTLS_CERT_REVOKED)
+ 	{
+ 		g_warning ("The certificate is not trusted.");
+@@ -328,31 +329,19 @@
+ static gboolean
+ init_dh_params (void)
+ {
+-	gnutls_datum prime, generator;
+-
+ 	if (gnutls_dh_params_init (&dh_params) != 0)
+ 		goto THROW_CREATE_ERROR;
+ 
+-	if (gnutls_dh_params_generate (&prime, &generator, DH_BITS) != 0)
+-		goto THROW_CREATE_ERROR;
+-
+-	if (gnutls_dh_params_set (dh_params, prime, generator, DH_BITS) != 0)
++	if (gnutls_dh_params_generate2 (dh_params, DH_BITS) != 0)
+ 		goto THROW_CREATE_ERROR;
+ 
+-	free (prime.data);
+-	free (generator.data);
+-
+ 	return TRUE;
+ 
+-    THROW_CREATE_ERROR:
++THROW_CREATE_ERROR:
+ 	if (dh_params) {
+ 		gnutls_dh_params_deinit (dh_params);
+ 		dh_params = NULL;
+ 	}
+-	if (prime.data)
+-		free (prime.data);
+-	if (generator.data)
+-		free (generator.data);
+ 	return FALSE;
+ }
+ 
