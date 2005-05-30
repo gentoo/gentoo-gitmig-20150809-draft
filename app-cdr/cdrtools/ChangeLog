@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.118 2005/05/30 18:42:48 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.119 2005/05/30 21:00:00 pylon Exp $
+
+*cdrtools-2.01.01_alpha01-r2 (30 May 2005)
+*cdrtools-2.01-r3 (30 May 2005)
+
+  30 May 2005; Lars Weiler <pylon@gentoo.org> +cdrtools-2.01-r1.ebuild,
+  +cdrtools-2.01-r3.ebuild, +cdrtools-2.01.01_alpha01-r2.ebuild:
+  Version bump due to security bug #86649.
 
   30 May 2005; Lars Weiler <pylon@gentoo.org> cdrtools-2.01.ebuild:
   Changed to toolchain-funcs; bug #92745.
