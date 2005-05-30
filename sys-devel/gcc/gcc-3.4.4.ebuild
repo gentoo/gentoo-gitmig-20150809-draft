@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4.ebuild,v 1.4 2005/05/28 07:33:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4.ebuild,v 1.5 2005/05/30 04:05:05 vapier Exp $
 
 MAN_VER=""
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 UCLIBC_VER="1.0"
 PIE_VER="8.7.8"
 PP_VER="1.0"
@@ -88,9 +88,6 @@ src_unpack() {
 		epatch "${FILESDIR}"/3.4.3/libffi-without-libgcj.patch
 		#epatch ${FILESDIR}/3.4.3/libffi-nogcj-lib-path-fix.patch
 	fi
-
-	# Grab fixes for remaining SSE wrong-code bugs
-	epatch "${FILESDIR}"/3.4.4/gcc-3.4.4-fix-sse2-pinsrw.patch
 
 	# Fix cross-compiling
 	epatch "${FILESDIR}"/3.4.4/gcc-3.4.4-cross-compile.patch
