@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.9-r2.ebuild,v 1.2 2005/05/18 12:08:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.9-r2.ebuild,v 1.3 2005/05/30 18:40:06 pylon Exp $
 
-inherit flag-o-matic eutils gcc
+inherit flag-o-matic eutils
 
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 HOMEPAGE="http://cdrdao.sourceforge.net/"

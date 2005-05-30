@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.62 2005/05/18 12:08:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.63 2005/05/30 18:40:06 pylon Exp $
+
+  30 May 2005; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.9.ebuild,
+  cdrdao-1.1.9-r2.ebuild:
+  Removed gcc.eclass; deprecated and not used in this ebuild.
 
   18 May 2005; Markus Rothe <corsair@gentoo.org> cdrdao-1.1.9-r2.ebuild:
   Stable on ppc64
