@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r1.ebuild,v 1.3 2005/05/30 07:15:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r1.ebuild,v 1.4 2005/05/30 07:43:09 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -10,8 +10,8 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-IUSE="alsa altivec arts debug dvb frontendonly ieee1394 jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome xv"
+KEYWORDS="x86 ~amd64"
+IUSE="alsa altivec arts debug dvb frontendonly jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome xv"
 
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -27,8 +27,6 @@ DEPEND=">=media-libs/freetype-2.0
 	nvidia? ( media-video/nvidia-glx )
 	oggvorbis? ( media-libs/libvorbis )
 	opengl? ( virtual/opengl )
-	ieee1394? (	>=sys-libs/libraw1394-1.2.0
-			>=media-libs/libiec61883-1.0.0 )
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
 	!x11-base/xfree
 	!<x11-base/xorg-x11-6.8"
@@ -54,6 +52,7 @@ pkg_setup() {
 	einfo "Only additional CFLAG issues that will be addressed are for binary"
 	einfo "package building."
 	einfo
+	einfo "To get ieee1394 support (firewire) you must use mythtv-0.18.1-r2"
 }
 
 src_unpack() {
@@ -84,7 +83,6 @@ src_compile() {
 		$(use_enable oggvorbis vorbis)
 		$(use_enable nvidia xvmc)
 		$(use_enable xv)
-		$(use_enable ieee1394 firewire)
 		--disable-directfb
 		--enable-x11
 		--enable-proc-opt"
