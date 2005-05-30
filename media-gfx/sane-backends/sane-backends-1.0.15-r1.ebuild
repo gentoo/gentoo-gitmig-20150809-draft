@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.15-r1.ebuild,v 1.2 2005/05/10 21:25:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.15-r1.ebuild,v 1.3 2005/05/30 07:11:35 phosphan Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DEPEND=">=media-libs/jpeg-6b
 	x86? ( sys-libs/libieee1284 )
 	=sys-apps/sed-4*
 	usb? ( dev-libs/libusb )
-	gphoto2? ( media-gfx/gphoto2 )"
+	gphoto2? ( media-libs/libgphoto2 )"
 
 BROTHERMFCDRIVER="sane-backends-1.0.15-brothermfc.patch"
 
