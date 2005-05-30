@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.55.20050320.ebuild,v 1.1 2005/03/21 11:09:45 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.55.20050320.ebuild,v 1.2 2005/05/30 03:08:02 solar Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -13,7 +13,7 @@ S="${WORKDIR}/${P%%_pre}"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~ppc64"
-IUSE="postgres ldap mysql berkdb gdbm pam crypt uclibc debug"
+IUSE="postgres ldap mysql berkdb gdbm pam crypt debug"
 RESTRICT="nouserpriv"
 
 DEPEND="virtual/libc
@@ -41,7 +41,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -e"s|^chk_file .* |&\${DESTDIR}|g" -i.orig authmigrate.in
-	use uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
+	use elibc_uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
 	if ! use gdbm ; then
 		epatch ${FILESDIR}/configure-db4.patch
 		export WANT_AUTOCONF="2.5"
