@@ -1,15 +1,25 @@
-MD5 f21349f57263b76d2fc2eda60b21b0a1 ChangeLog 3798
-MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4d73cdf2b94eac6ad3868c1d4d7d2a10 blam-1.6.0-r1.ebuild 899
+MD5 284df599b60d21f80250bed729912ea7 blam-1.6.1-r2.ebuild 996
+MD5 0bed2eba786a033ed2c79b496308de1a blam-1.8.0.ebuild 1070
 MD5 086a263aa213f617c1b6ff089c00de03 blam-1.6.1.ebuild 816
 MD5 6968a0e969f62cad10eede8dcc4f65b3 blam-1.6.1-r1.ebuild 993
-MD5 284df599b60d21f80250bed729912ea7 blam-1.6.1-r2.ebuild 996
-MD5 b6c266401ef450578aad2bd7ce2de7fa blam-1.8.0.ebuild 824
+MD5 3866675499a9273b73d15f5ad4ba70c4 ChangeLog 3884
+MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+MD5 bc93c8091228ce883de5381bcd35c801 files/blam-1.6.1-mono-1.1.7-compat-v2.diff 768
 MD5 00f43721ad68695ca3870578cce4a220 files/blam-1.6.0-gecko-fix.diff 614
 MD5 6d0aaf91ad9d6efc35a2f33b25d9a079 files/digest-blam-1.6.0-r1 62
-MD5 687962557e8232ff8b5f5b6f93d2c0f6 files/digest-blam-1.6.1 62
-MD5 4d50c34081dae158dfee08c8f011571a files/blam-1.6.1-mono-1.1.7-compat.diff 609
 MD5 687962557e8232ff8b5f5b6f93d2c0f6 files/digest-blam-1.6.1-r1 62
-MD5 bc93c8091228ce883de5381bcd35c801 files/blam-1.6.1-mono-1.1.7-compat-v2.diff 768
 MD5 687962557e8232ff8b5f5b6f93d2c0f6 files/digest-blam-1.6.1-r2 62
+MD5 687962557e8232ff8b5f5b6f93d2c0f6 files/digest-blam-1.6.1 62
 MD5 b12739b8bb161809852551f6f26d3af1 files/digest-blam-1.8.0 62
+MD5 4d50c34081dae158dfee08c8f011571a files/blam-1.6.1-mono-1.1.7-compat.diff 609
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCm5uc2G5bA0cA/ScRAgoOAJ4qyHVTkpdxhRK5Et2R6U+chSVAtgCg6IGx
+VkY1q5mjsIAvuYZwyMzWau0=
+=VdU1
+-----END PGP SIGNATURE-----
