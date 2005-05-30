@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 56f6023376f1db669729b3922c08239a mupen64-0.4-r2.ebuild 2776
 MD5 a6bc7901444221adfc23a1c449f47133 ChangeLog 3043
 MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
@@ -13,3 +16,10 @@ MD5 e2b006764c1bac03ac2667ad60a66101 files/mupen64-gcc3.patch 3662
 MD5 638046a5841774d744611e9f38751bcc files/mupen64-noasm.patch 229
 MD5 87053b50f759d8d4b65a2369fe42338a files/mupen64-rice-confdir.patch 1208
 MD5 8a58a3ce196f2d69b21339244722e957 files/mupen64-makefiles.patch 2052
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCm1z6I1lqEGTUzyQRAqK4AJ48I7RgIGgOJzOtXp3PA2V3ZqMtjQCdHSa8
+XrtTp9YNtevPVzTeKs130pI=
+=wVHo
+-----END PGP SIGNATURE-----
