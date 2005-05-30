@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 952017d9165b65d7786b75dbf44a10e2 erlang-9c-r1.ebuild 1686
-MD5 35370c11adb22a885d520f6def404aed erlang-10.2.0.ebuild 2378
+MD5 34c0e056c8174a645a278a6025e7dcc5 erlang-10.2.0.ebuild 2393
 MD5 f947170e5f0fef952a0efc7dcc947f37 erlang-8b.ebuild 1178
-MD5 8a1b11a0e2851447db1e4629fd725bc3 erlang-9c-r3.ebuild 1808
+MD5 92087ace1ec7f4f5fafb31419db5fafa erlang-9c-r3.ebuild 1822
 MD5 888709019e83eac37f3e95c7739de933 erlang-9c.ebuild 1505
-MD5 537a0139e4027538cb161c021d456847 erlang-9c-r2.ebuild 1796
-MD5 58cdcad4cae44644cd16cc0c7f4ab9c7 ChangeLog 2937
+MD5 4df8bcb2597f95b5d00f898f0dbc9e96 erlang-9c-r2.ebuild 1808
+MD5 4b06b5a116b6f4bad57998712431422e ChangeLog 3120
 MD5 b6c3d6f665c823117549728127487f4e metadata.xml 383
 MD5 f3de2b6ca821b977f0e1811a1f0a1409 files/digest-erlang-10.2.0 67
 MD5 e61c0249e23b7e44ef3629ea5dc5997a files/9c.patch 2005
@@ -21,7 +21,7 @@ MD5 e88b4d733b41026e691a981320ac7806 files/erlang-9c.patch.gz 1503
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCaAcI2G5bA0cA/ScRAq3bAJ9iXy4A9DqcwKpNk6UHUO4v5hmjqgCfZglE
-wSGCJYhwAwvGQMATiWLb5JQ=
-=s3sl
+iD8DBQFCm1ljI1lqEGTUzyQRAtxnAJ9cjuPhMBZV4roRI6VjNjYIHyIHiwCcCtIA
+WDckV52VHxSmQiPqfNtyfqk=
+=aYEB
 -----END PGP SIGNATURE-----

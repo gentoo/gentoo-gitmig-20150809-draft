@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.0.ebuild,v 1.4 2005/04/21 20:02:49 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.0.ebuild,v 1.5 2005/05/30 18:19:43 swegener Exp $
 
-inherit eutils gcc flag-o-matic elisp-common
+inherit eutils toolchain-funcs flag-o-matic elisp-common
 
 #erlang uses a really weird versioning scheme which caused quite a few problems already
 #Thus we do a slight modification converting all letters to digits to make it more sane (see e.g. #26420)

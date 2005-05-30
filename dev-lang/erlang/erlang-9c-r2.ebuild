@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r2.ebuild,v 1.5 2004/06/24 22:48:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r2.ebuild,v 1.6 2005/05/30 18:19:43 swegener Exp $
 
-inherit eutils gcc flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic
 
 MY_P=otp_src_R9C-0
 DESCRIPTION="Erlang programming language, runtime environment, and large collection of libraries"

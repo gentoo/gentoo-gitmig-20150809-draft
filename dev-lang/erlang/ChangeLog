@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.17 2005/04/21 20:02:49 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.18 2005/05/30 18:19:43 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org> erlang-9c-r2.ebuild,
+  erlang-9c-r3.ebuild, erlang-10.2.0.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
 
   21 Apr 2005; Herbie Hopkins <herbs@gentoo.org> erlang-10.2.0.ebuild:
   Small multilib issue, fixes bug #89938
