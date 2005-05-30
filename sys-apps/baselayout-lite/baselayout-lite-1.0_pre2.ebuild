@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre2.ebuild,v 1.2 2005/03/18 01:28:16 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre2.ebuild,v 1.3 2005/05/30 03:40:13 solar Exp $
 
-IUSE="build bootstrap uclibc"
+IUSE="build bootstrap"
 
 DESCRIPTION="Baselayout for embedded systems"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/embedded/"
@@ -25,7 +25,7 @@ src_install() {
 	find ${D} -name CVS -exec rm -rf {} \;
 
 	[ -f $ROOT/proc/cpuinfo ] && rm -f ${D}/proc/.keep
-	use uclibc && rm -f ${D}/etc/nsswitch.conf
+	use elibc_uclibc && rm -f ${D}/etc/nsswitch.conf
 	chmod 755 ${D}/etc/init.d/*
 
 	# compile the few things that need to be

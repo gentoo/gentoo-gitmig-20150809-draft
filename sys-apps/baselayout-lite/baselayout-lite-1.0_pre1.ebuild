@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.6 2005/03/01 23:58:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.7 2005/05/30 03:40:13 solar Exp $
 
-IUSE="build bootstrap uclibc"
+IUSE="build bootstrap"
 
 DESCRIPTION="Baselayout for embedded systems"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/embedded/"
@@ -30,7 +30,7 @@ src_install() {
 	doins ${S}/{fstab,group,nsswitch.conf,passwd,profile.env,protocols,shells}
 	doins ${S}/init/inittab
 
-	use uclibc && rm -f ${D}/etc/nsswitch.conf
+	use elibc_uclibc && rm -f ${D}/etc/nsswitch.conf
 
 	exeinto /etc/init.d
 	doexe ${S}/init/rc[SK]
