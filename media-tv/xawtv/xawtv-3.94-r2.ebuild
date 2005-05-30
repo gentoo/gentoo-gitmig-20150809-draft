@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r2.ebuild,v 1.1 2005/05/30 00:33:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r2.ebuild,v 1.2 2005/05/30 00:34:30 cardoe Exp $
 
 inherit eutils font
 
@@ -40,6 +40,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-allow-xlibs-in-normal-search-path.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 	cd ${S}
 	autoreconf || "reconf failed"
 }

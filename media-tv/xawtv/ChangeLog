@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.21 2005/05/30 00:33:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.22 2005/05/30 00:34:30 cardoe Exp $
+
+  30 May 2005; Doug Goldstein <cardoe@gentoo.org> xawtv-3.94-r2.ebuild:
+  gcc4 fixes from  Flameeyes
 
 *xawtv-3.94-r2 (30 May 2005)
 
