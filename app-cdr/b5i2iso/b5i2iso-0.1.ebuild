@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/b5i2iso/b5i2iso-0.1.ebuild,v 1.1 2005/01/08 14:27:40 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/b5i2iso/b5i2iso-0.1.ebuild,v 1.2 2005/05/30 18:00:16 swegener Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="BlindWrite image to ISO image file converter"
 HOMEPAGE="http://developer.berlios.de/projects/b5i2iso/"
@@ -16,7 +16,7 @@ DEPEND="virtual/libc"
 S=${WORKDIR}/${PN}
 
 src_compile() {
-	$(gcc-getCC) src/${PN}.c -o ${PN} ${CFLAGS} || die "compile failed"
+	$(tc-getCC) src/${PN}.c -o ${PN} ${CFLAGS} || die "compile failed"
 }
 
 src_install() {

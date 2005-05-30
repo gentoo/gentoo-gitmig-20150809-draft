@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/b5i2iso
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/b5i2iso/ChangeLog,v 1.1 2005/01/08 14:27:40 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/b5i2iso/ChangeLog,v 1.2 2005/05/30 18:00:16 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org> b5i2iso-0.1.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass.
 
 *b5i2iso-0.1 (08 Jan 2005)
 
