@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.4.2.ebuild,v 1.3 2005/05/04 15:19:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.4.2.ebuild,v 1.4 2005/05/30 10:02:17 flameeyes Exp $
 
 inherit eutils wxwidgets
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-libs/libebml-0.7.3
 	media-libs/libvorbis
 	dev-libs/expat
 	sys-libs/zlib
-	wxwindows? ( >=x11-libs/wxGTK-2.4.2-r2 )
+	wxwindows? ( =x11-libs/wxGTK-2.4* )
 	flac? ( >=media-libs/flac-1.1.0 )
 	bzip2? ( app-arch/bzip2 )
 	lzo? ( dev-libs/lzo )"

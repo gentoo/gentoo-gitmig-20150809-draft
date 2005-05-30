@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-0.9.7-r1.ebuild,v 1.2 2005/01/29 13:44:05 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-0.9.7-r1.ebuild,v 1.3 2005/05/30 10:02:17 flameeyes Exp $
 
 inherit eutils wxwidgets
 
@@ -16,7 +16,7 @@ IUSE="gtk2 X oggvorbis"
 DEPEND=">=dev-libs/libebml-0.7.2
 	>=media-libs/libmatroska-0.7.4
 	oggvorbis? ( media-libs/libogg media-libs/libvorbis media-libs/flac )
-	X? ( >=x11-libs/wxGTK-2.4.2-r2 )
+	X? ( =x11-libs/wxGTK-2.4* )
 	dev-libs/expat
 	app-arch/bzip2
 	sys-libs/zlib
