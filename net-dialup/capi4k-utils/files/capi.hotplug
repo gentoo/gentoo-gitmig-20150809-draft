@@ -1,29 +1,32 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.6 2005/05/16 08:49:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.7 2005/05/30 18:52:09 genstef Exp $
 
 . /etc/conf.d/capi
 
 [ "$CAPI_HOTPLUG_USB" = "yes" ] || exit 0
 
-# syslog output
+# Syslog output
 syslog() {  # <msg>
 	/usr/bin/logger -t "capi-usb" "$1"
 }
 
+# OK beep
 beep_ok() {
 	[ "$CAPI_HOTPLUG_BEEP" = "yes" ] && echo -en "\033[10;1200]\a\033[10;262]" > /dev/console
 }
 
+# Error beep
 beep_error() {
 	[ "$CAPI_HOTPLUG_BEEP" = "yes" ] && echo -en "\033[10;300]\a\033[10;262]" > /dev/console
 }
 
-# driver lookup
+# Driver lookup
 cardinfo() {  # <driver>
 	# /proc/capi/controller: <controller> <drivername> <state> <cardname> <controllerinfo>
-	/bin/sed 2>/dev/null -n "s:^\([1-9][0-9]*\) \+${1} \+\([^ ]\+\) \+\([^ ]\+\) \+\([^ ]\+\):\1 \3 \2 \4:p" /proc/capi/controller
+	/bin/sed -n "s:^\([1-9][0-9]*\) \+${1} \+\([^ ]\+\) \+\([^ ]\+\) \+\([^ ]\+\):\1 \3 \2 \4:p" \
+		/proc/capi/controller 2>/dev/null
 }
 
 # AVM firmware loader
@@ -31,28 +34,47 @@ avmusb() {  # <driver> <usbdev> <firmware>
 	local CARD NAME STATUS TYPE VER DEV FIRMWARE
 	while read CARD NAME STATUS TYPE VER DEV; do  # AVM cardinfo
 		if [ "${STATUS}" = "detected" -a ${DEV} -eq ${2} ]; then
-			syslog "loading firmware '${3}' into controller ${CARD} (${NAME})"
-			/usr/sbin/avmcapictrl load "/lib/firmware/${3}" "${CARD}"
+			syslog "loading firmware '${3}' onto controller ${CARD} (${NAME})"
+			/usr/sbin/avmcapictrl load "/lib/firmware/${3}" "${CARD}" || return 1
 			break
 		fi
 	done < <(cardinfo "${1}")
+	return 0
 }
 
-# normalize and split product code
-# only needed, because coldplug gives other results than hotplug :-/
-IFS="/" read _A _B _C < <(echo "${PRODUCT}")
-read VENDOR DEVID PCLASS < <(/usr/bin/printf "%04x %04x %04x" "0x${_A}" "0x${_B}" "0x${_C}")
-VENDID="${VENDOR}/${DEVID}"
-DEVTMP="${DEVICE##/proc/bus/usb/}"
-USBBUS="${DEVTMP%%/*}"
-USBDEV="${DEVTMP##*/}"
+# Split and normalize product code and device
+IFS="/"
+_D=(${DEVICE})
+_P=(${PRODUCT})
+_N=($(printf "%04x/%04x/%04x" 0x${_P[0]} 0x${_P[1]} 0x${_P[2]}))
+unset IFS
 
-# create/check lockfile
-LOCK="/tmp/.capi-usb-${USBBUS}-${USBDEV}"
-/bin/ln 2>/dev/null -sn $$ ${LOCK} || exit 0
+# Setup variables
+VENDID="${_N[0]}/${_N[1]}"
+USBBUS="${_D[4]}"
+USBDEV="${_D[5]}"
+
+# Make sure we're not running multiple instances at once.
+# Try twice to lock, otherwise give up.
+LOCK="/var/run/capi-usb-${USBBUS}-${USBDEV}"
+for ((i = 0; i < 2; i = i + 1)); do
+	/bin/ln 2>/dev/null -sn $$ ${LOCK} && break
+	LOCKPID=$(/bin/readlink 2>/dev/null ${LOCK}) || continue
+	[[ $(</proc/${LOCKPID}/cmdline) == $(</proc/$$/cmdline) ]] 2>/dev/null && exit 0
+	/bin/rm -f ${LOCK}
+done
+
+# Check to make sure locking was successful
+if [ ! -L "${LOCK}" ]; then
+	syslog "could not create lock ${LOCK}"
+	beep_error
+	exit 1
+fi
+
+# Set a trap to remove the lockfile when we're finished
 trap "/bin/rm -f ${LOCK}" 0 1 2 3 15
 
-# select driver and firmware
+# Select driver and firmware
 LOADER=""
 DRIVER=""
 FIRMWARE=""
@@ -124,7 +146,10 @@ case "$ACTION" in
 				sleep 0.5; : $((CNT++))
 			done
 			if [ -f "/lib/firmware/${FIRMWARE}" ]; then
-				$LOADER $DRIVER $USBDEV $FIRMWARE
+				if ! $LOADER $DRIVER $USBDEV $FIRMWARE; then
+					syslog "could not load firmware!"
+					beep_error; exit 1
+				fi
 			else
 				syslog "firmware ${FIRMWARE} not found!"
 				beep_error; exit 1
@@ -132,7 +157,8 @@ case "$ACTION" in
 		fi
 
 		# loading capidrv (should be loaded *after* card driver)
-		if ! ( [ -f /proc/capi/capidrv -o "$CAPI_LOAD_CAPIDRV" != "yes" ] || /sbin/modprobe -sq capidrv ); then
+		if ! ( [ -f /proc/capi/capidrv -o "$CAPI_LOAD_CAPIDRV" != "yes" ] \
+			|| /sbin/modprobe -sq capidrv ); then
 			syslog "could not load CAPIDRV!"
 		fi
 		
