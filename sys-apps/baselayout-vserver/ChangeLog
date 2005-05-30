@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout-vserver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.4 2005/05/21 08:21:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.5 2005/05/30 03:22:26 solar Exp $
+
+  29 May 2005; <solar@gentoo.org> baselayout-vserver-1.0.ebuild:
+  - update baselayout-vserver to use libc expanded variable elibc_uclibc vs
+  uclibc so USE=-* works
 
   21 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
   baselayout-vserver-1.0.ebuild:
