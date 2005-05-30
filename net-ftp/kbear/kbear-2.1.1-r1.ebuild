@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/kbear-2.1.1-r1.ebuild,v 1.1 2005/03/28 18:20:24 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/kbear-2.1.1-r1.ebuild,v 1.2 2005/05/30 00:15:01 cryos Exp $
 
 inherit kde flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 IUSE="gnome"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~amd64"
+KEYWORDS="amd64 ~ppc sparc x86"
 S=${WORKDIR}/kbear-2.1
 
 need-kde 3
