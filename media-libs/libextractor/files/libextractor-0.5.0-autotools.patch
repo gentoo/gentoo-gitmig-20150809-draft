@@ -31,3 +31,14 @@ diff -Naur libextractor-0.5.0.orig/src/main/Makefile.am libextractor-0.5.0/src/m
  	python libextractor_python_setup.py $(libdir) build
 -	python libextractor_python_setup.py $(libdir) install --prefix=$(PYTHON_PREFIX)
 +	python libextractor_python_setup.py $(libdir) install --prefix=$(DESTDIR)$(PYTHON_PREFIX)
+
+--- libextractor-0.5.0.orig/src/main/libextractor_python_setup.py	2005-05-13 00:45:03.000000000 +0200
++++ libextractor-0.5.0/src/main/libextractor_python_setup.py	2005-05-31 00:23:56.614163440 +0200
+@@ -5,7 +5,6 @@
+ sys.argv = sys.argv[1:]
+ 
+ cmod = Extension("extractor",["libextractor_python.c"],
+-                 libraries=["extractor"],
+                  include_dirs=["../include"],
+                  library_dirs=[path])
+ 
