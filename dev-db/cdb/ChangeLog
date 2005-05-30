@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.14 2005/04/24 02:49:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.15 2005/05/30 18:16:19 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org> cdb-0.75.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> cdb-0.75.ebuild:
   Stable on ppc.

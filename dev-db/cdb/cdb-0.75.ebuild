@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.20 2005/04/24 02:49:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.21 2005/05/30 18:16:19 swegener Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="fast, reliable, simple package for creating and reading constant databases"
 HOMEPAGE="http://cr.yp.to/cdb.html"
@@ -29,8 +29,8 @@ src_unpack() {
 }
 
 src_compile() {
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(gcc-getCC)" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC)" > conf-ld
 	echo "/usr" > conf-home
 	emake || die "emake failed"
 }
