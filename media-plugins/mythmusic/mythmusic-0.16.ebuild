@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.16.ebuild,v 1.5 2005/01/20 08:20:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.16.ebuild,v 1.6 2005/05/30 18:55:03 swegener Exp $
 
-inherit myth gcc flag-o-matic
+inherit myth toolchain-funcs flag-o-matic
 
 DESCRIPTION="Music player module for MythTV."
 HOMEPAGE="http://www.mythtv.org/"
