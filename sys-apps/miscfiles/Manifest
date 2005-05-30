@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a61e00d65653ddebe5a27e4f5f0968e6 miscfiles-1.3-r1.ebuild 1068
 MD5 9570b538ef5286d41b40d9caa41ba84c miscfiles-1.4.2.ebuild 942
 MD5 0a4ff42c9bab57ff09afb9c913cd0a99 ChangeLog 3074
@@ -6,3 +9,12 @@ MD5 cc5af235da130a9164ae2f57983988ad files/digest-miscfiles-1.4.2 68
 MD5 ec9de3db6293b9d8525a93a994a31c65 files/miscfiles-1.3-Makefile.diff 637
 MD5 9ca20c5ad8736bbbf7c38e651604a913 files/tasks.info.diff 317
 MD5 f4085cc5ea37dfbbe329ec7e3784cc9d files/digest-miscfiles-1.3-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iQCVAwUBQpp9e54WFLgrx1GWAQIpWQP+JvnuFrw3PcAGTFq3BkbbAKmRNiw2/+96
+steEV7Hk0vAjAFLLpHWEuHnp9M843Gahs+Q6U9s54XYbIqUrr/IMiyAf0dzGFIGM
+K99xV16oLd/Rw7H/hkP2lunEKDHizO9HGGt30Pjgt4eEfsuV1tWZFivztTI5CGhK
+g4vGGirKCS4=
+=5NJF
+-----END PGP SIGNATURE-----
