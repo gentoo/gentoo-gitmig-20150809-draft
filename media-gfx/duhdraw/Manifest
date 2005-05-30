@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c73805ef5f2d4d3e1624e313553fd63 ChangeLog 576
-MD5 09cd96793b6772dace415a58e1c9b5e8 duhdraw-2.8.12.ebuild 619
+MD5 ea5f37511407e0ae559f726736ebd9bc duhdraw-2.8.12.ebuild 627
+MD5 5973d3aeb3f3d401086444f67145c091 ChangeLog 710
 MD5 f5c613c6ba0e95bfbc2e828b96191f50 files/digest-duhdraw-2.8.12 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBpJfQmdTrptrqvGERAjXoAJ4zLRERfWIGKFTwYVK9Et/OotEdZACfX6go
-cZrpSLdas4wdIjuhIe6FvUI=
-=YFtp
------END PGP SIGNATURE-----
