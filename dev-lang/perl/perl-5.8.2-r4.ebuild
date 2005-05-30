@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2-r4.ebuild,v 1.8 2005/05/25 16:49:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2-r4.ebuild,v 1.9 2005/05/30 02:52:00 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -17,9 +17,9 @@ SLOT="0"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
 KEYWORDS="x86 amd64 sparc ppc alpha mips hppa ia64 ppc64"
-IUSE="berkdb debug doc gdbm ithreads perlsuid uclibc"
+IUSE="berkdb debug doc gdbm ithreads perlsuid"
 
-DEPEND="!uclibc? ( sys-apps/groff )
+DEPEND="!elibc_uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-devel/libperl-${PV}
@@ -108,7 +108,7 @@ src_unpack() {
 
 src_compile() {
 	# Perl has problems compiling with -Os in your flags with glibc
-	use uclibc || replace-flags "-Os" "-O2"
+	use elibc_uclibc || replace-flags "-Os" "-O2"
 	# This flag makes compiling crash in interesting ways
 	filter-flags -malign-double
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r4.ebuild,v 1.11 2005/05/25 16:50:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r4.ebuild,v 1.12 2005/05/30 02:52:00 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -18,10 +18,10 @@ LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="berkdb debug doc gdbm ithreads perlsuid uclibc"
+IUSE="berkdb debug doc gdbm ithreads perlsuid"
 PERL_OLDVERSEN="5.8.0 5.8.2 5.8.4 5.8.5"
 
-DEPEND="!uclibc? ( sys-apps/groff )
+DEPEND="!elibc_uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )
 	>=sys-devel/libperl-${PV}
@@ -138,7 +138,7 @@ src_configure() {
 	use ppc && replace-flags -O? -O1
 	use ia64 && replace-flags -O? -O1
 	# Perl has problems compiling with -Os in your flags with glibc
-	use uclibc || replace-flags "-Os" "-O2"
+	use elibc_uclibc || replace-flags "-Os" "-O2"
 	# This flag makes compiling crash in interesting ways
 	filter-flags -malign-double
 
@@ -248,7 +248,7 @@ src_compile() {
 }
 
 src_test() {
-	use uclibc && export MAKEOPTS="${MAKEOPTS} -j1"
+	use elibc_uclibc && export MAKEOPTS="${MAKEOPTS} -j1"
 	emake -i test CCDLFLAGS= || die "test failed"
 }
 
