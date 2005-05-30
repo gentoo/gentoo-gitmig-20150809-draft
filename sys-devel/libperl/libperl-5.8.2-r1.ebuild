@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.2-r1.ebuild,v 1.10 2005/02/05 19:29:59 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.2-r1.ebuild,v 1.11 2005/05/30 02:44:56 solar Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -52,12 +52,12 @@
 #
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
-IUSE="berkdb debug gdbm ithreads uclibc"
+IUSE="berkdb debug gdbm ithreads"
 
 inherit eutils flag-o-matic
 
 # Perl has problems compiling with -Os in your flags
-use uclibc || replace-flags "-Os" "-O2"
+use elibc_uclibc || replace-flags "-Os" "-O2"
 # This flag makes compiling crash in interesting ways
 filter-flags "-malign-double"
 
@@ -84,7 +84,7 @@ LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
 KEYWORDS="~amd64 ~x86 ~sparc ~ppc ~alpha ~mips ~hppa ~ia64 ~ppc64"
 
-DEPEND="!uclibc? ( sys-apps/groff )
+DEPEND="!elibc_uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
