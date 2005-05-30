@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cli-crypt/cli-crypt-1.0.ebuild,v 1.15 2005/04/21 18:00:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cli-crypt/cli-crypt-1.0.ebuild,v 1.16 2005/05/30 18:05:10 swegener Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="Command-line interface to crypt(3)"
 HOMEPAGE="http://freshmeat.net/projects/cli-crypt/"
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_compile() {
-	emake CC="$(gcc-getCC)" CFLAGS="${CFLAGS} -lcrypt" || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -lcrypt" || die
 }
 
 src_install() {

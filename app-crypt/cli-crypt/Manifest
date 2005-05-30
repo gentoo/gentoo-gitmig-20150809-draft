@@ -1,3 +1,13 @@
-MD5 15700053f8993b53fdafcae57ed80ae3 ChangeLog 1240
-MD5 6556f7efd13cb251e2e5aa665428919d cli-crypt-1.0.ebuild 595
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a83e9bfd4b5a61d31f88d45efcf6f9b7 cli-crypt-1.0.ebuild 609
+MD5 97621890b594516c0cb7da0459641ab7 ChangeLog 1367
 MD5 42d3bc916b6cbffeb9c5c77a4739ecd6 files/digest-cli-crypt-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCm1XwI1lqEGTUzyQRAlsaAKC/ohMMKW51yUApFEqXgdQQR6Si8wCfV7dg
+dhZCdjiCUkLLW4Re2gXOVig=
+=digy
+-----END PGP SIGNATURE-----
