@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b6c992126d581f4c1012e3f73a46c84f abook-0.5.3.ebuild 789
+MD5 c17bc0424fb24059df01afab6f781a88 abook-0.5.3.ebuild 787
 MD5 361d3acdeae0930e61ba0790c3035682 abook-0.5.2-r1.ebuild 816
-MD5 c3300e010337567f922a563e59f1da4d ChangeLog 2459
+MD5 a8ae8602c7a5f439133df6a7e8c6b507 ChangeLog 2559
 MD5 25356f2e3484c4ec50ff363f2dad8570 metadata.xml 363
 MD5 a5475e3fbe94b0d082dff30e637ebd48 files/digest-abook-0.5.3 63
 MD5 882e53be58a3a05f24a7c29f49e998cb files/digest-abook-0.5.2-r1 63
@@ -11,7 +11,7 @@ MD5 9d6404a56098175050b0c50331519bc8 files/abook-0.5.2-filter.diff 939
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFChynjViELBEf1JB0RArTIAJ0ZhgLpblnzzUf1Gs0q6K2auvG1UwCfZyBY
-ZJ5P+8tKdjc94cme4k83/Gk=
-=U/Vs
+iD8DBQFCm01NViELBEf1JB0RAoicAJ9QuGOcMoAXZNschOW0OR6+67uj2wCeJkUu
++cyBk2Ayiknm+9FZVpIB+KE=
+=VYEM
 -----END PGP SIGNATURE-----
