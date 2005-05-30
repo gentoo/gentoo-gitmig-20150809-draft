@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.57 2005/05/30 06:31:59 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.58 2005/05/30 08:13:24 leonardop Exp $
+
+*libsoup-2.2.3-r1 (30 May 2005)
+
+  30 May 2005; Leonardo Boshell <leonardop@gentoo.org> libsoup-2.2.3-r1.ebuild:
+  New revision. Implements the 'static' USE flag. Remove useless 'ipv6'
+  flag. Don't inherit from eutils since it's not necessary.
+
+*libsoup-1.99.28-r1 (30 May 2005)
+
+  30 May 2005; Leonardo Boshell <leonardop@gentoo.org> libsoup-1.99.28.ebuild:
+  New revision. Implements the 'static' USE flag.
 
   30 May 2005; Leonardo Boshell <leonardop@gentoo.org> libsoup-1.99.28.ebuild,
   files/libsoup-1.99.28-gnutls.patch:
