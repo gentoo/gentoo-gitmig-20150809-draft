@@ -1,20 +1,7 @@
 # ChangeLog for games-arcade/ceferino
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.3 2005/05/30 05:07:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.4 2005/05/30 15:51:54 blubb Exp $
 
-*ceferino-0.95 (30 May 2005)
-
-  30 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
-  +ceferino-0.95.ebuild:
-  version bump
-
-  10 May 2005; Tobias Scherbaum <dertobi123@gentoo.org>
-  ceferino-0.94.ebuild:
-  Added ~ppc keyword, #92129
-
-*ceferino-0.94 (09 May 2005)
-
-  09 May 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
-  +ceferino-0.94.ebuild:
-  initial commit - ebuild submitted by TGL via bug #90888
+  30 May 2005; Simon Stelling <blubb@gentoo.org> ceferino-0.95.ebuild:
+  added ~amd64 keyword
 
