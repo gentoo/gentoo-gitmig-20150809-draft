@@ -1,6 +1,6 @@
-# Copyright 1999 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblscp/liblscp-0.2.9.ebuild,v 1.2 2005/05/30 19:51:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblscp/liblscp-0.2.9.ebuild,v 1.3 2005/05/30 19:52:18 mr_bones_ Exp $
 
 inherit eutils
 
