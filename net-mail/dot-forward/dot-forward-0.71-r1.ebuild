@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r1.ebuild,v 1.12 2004/07/01 22:31:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r1.ebuild,v 1.13 2005/05/30 19:02:52 swegener Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="reads sendmail's .forward files under qmail"
 HOMEPAGE="http://cr.yp.to/dot-forward.html"
@@ -22,8 +22,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-errno.patch
 	epatch ${FILESDIR}/${PV}-head-1.patch
 
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(gcc-getCC)" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC)" > conf-ld
 }
 
 src_compile() {

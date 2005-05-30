@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/qlogtools-3.1.ebuild,v 1.4 2004/07/01 22:33:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/qlogtools-3.1.ebuild,v 1.5 2005/05/30 19:04:18 swegener Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Qmail Log processing tools"
 HOMEPAGE="http://untroubled.org/qlogtools/"
@@ -22,8 +22,8 @@ src_unpack() {
 }
 
 src_compile() {
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "${D}/usr/bin" > conf-bin
 	echo "${D}/usr/share/man/" > conf-man
 	emake || die

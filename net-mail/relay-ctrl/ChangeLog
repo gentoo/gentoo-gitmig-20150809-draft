@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/relay-ctrl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/ChangeLog,v 1.21 2005/03/03 18:31:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/ChangeLog,v 1.22 2005/05/30 19:06:46 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org>
+  relay-ctrl-3.1.1-r2.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   relay-ctrl-3.1.1-r1.ebuild:
