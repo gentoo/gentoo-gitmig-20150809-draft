@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 db3eac80e53d9da9e201f9022b87277e ChangeLog 4292
-MD5 bec94149899ec6cc9d70d755445b50cd metadata.xml 263
+MD5 a5ef11ab7d497359276ae4520ed4f3bf xpad-2.6.ebuild 659
 MD5 682a9191a39ddf9c2c61f4ba72ed1fe6 xpad-1.13.ebuild 722
-MD5 8e55023d25424002b68ed6c1177d4ee7 xpad-2.6.ebuild 663
-MD5 d0f0a44ba012c5a3d6863afb093890d7 files/digest-xpad-1.13 62
+MD5 f45976f44045509e0d6778836fe1e287 ChangeLog 4375
+MD5 bec94149899ec6cc9d70d755445b50cd metadata.xml 263
 MD5 116f1b1db749a9f8d0b7c8d075e5759d files/digest-xpad-2.6 61
+MD5 d0f0a44ba012c5a3d6863afb093890d7 files/digest-xpad-1.13 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCiOHXKRy60XGEcJIRAqF3AJ0d9z0YVJ6o9Rxw95fSywWGYbN3lACfZW49
-N6V6aBSitbBWePzU942xzTU=
-=8Sab
+iD8DBQFCm0tdViELBEf1JB0RAu+lAJoDzurshrY/hYDEGDMST9281lqNlQCeNGgw
+mRO8V+tJN9eYbLBrgjrlF0M=
+=ap1a
 -----END PGP SIGNATURE-----

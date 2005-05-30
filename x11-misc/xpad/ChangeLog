@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.30 2005/05/16 18:09:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.31 2005/05/30 17:19:37 ferdy Exp $
+
+  30 May 2005; Fernando J. Pereda <ferdy@gentoo.org> xpad-2.6.ebuild:
+  alpha stable
 
   16 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> xpad-2.6.ebuild:
   Stable on sparc
