@@ -1,9 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.11 2005/04/21 08:25:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.12 2005/05/30 07:46:58 cardoe Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
+
+#########################
+########################
+DO NOT USE THIS FOR MYTHTV STUFF
+#####################
+#####################
 
 inherit multilib versionator toolchain-funcs
 
