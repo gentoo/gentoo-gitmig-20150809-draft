@@ -1,0 +1,15 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/esekeyd/ChangeLog,v 1.1 2005/05/30 05:33:32 tester Exp $
+
+  30 May 2005; Olivier Crête <tester@gentoo.org>
+  +files/digest-esekeyd-1.2.1:
+  Moved to app-misc.. not a x11 app.. should not be in the rsync tree yet, so
+  no updates file ...
+
+*esekeyd-1.2.1 (30 May 2005)
+
+  30 May 2005; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +esekeyd-1.2.1.ebuild:
+  New package, thanks to kandian for the tip
+
