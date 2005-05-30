@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.11.ebuild,v 1.1 2005/05/23 17:32:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.8.ebuild,v 1.5 2005/05/30 16:47:42 lanius Exp $
 
 inherit distutils
 
