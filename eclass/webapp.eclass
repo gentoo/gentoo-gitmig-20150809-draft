@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.30 2005/05/10 22:55:17 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.31 2005/05/30 21:44:17 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -23,7 +23,7 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-DEPEND="$DEPEND >=net-www/webapp-config-1.10-r14 app-portage/gentoolkit"
+DEPEND="$DEPEND net-www/webapp-config app-portage/gentoolkit"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install pkg_prerm
 
@@ -154,7 +154,7 @@ function webapp_hook_script ()
 # @param	$2 - the file to install
 # ------------------------------------------------------------------------
 
-function webapp_postinst_txt
+function webapp_postinst_txt ()
 {
 	webapp_checkfileexists "$2"
 
@@ -165,24 +165,34 @@ function webapp_postinst_txt
 # ------------------------------------------------------------------------
 # EXPORTED FUNCTION - FOR USE IN EBUILDS
 #
-# Identify a script file (usually, but not always PHP or Perl) which is
+# Install a text file containing post-upgrade instructions.
 #
-# Files in this list may be modified to #! the required CGI engine when
-# installed by webapp-config tool in the future.
-#
-# @param	$1 - the cgi engine to use
-# @param	$2 - the script file that could run under a cgi-bin
-#
+# @param	$1 - language code (use 'en' for now)
+# @param	$2 - the file to install
 # ------------------------------------------------------------------------
+
+function webapp_postupgrade_txt ()
+{
+	webapp_checkfileexists "$2"
+
+	einfo "(rtfm) $2 (lang: $1)"
+	cp "$2" "${D}${MY_APPDIR}/postupgrade-$1.txt"
+}
+
+# ------------------------------------------------------------------------
+# DEPRECATED FUNCTION
+#
+# It never worked anyway
 
 function webapp_runbycgibin ()
 {
-	webapp_checkfileexists "$2" "$D"
-	local MY_FILE="`webapp_strip_appdir \"$2\"`"
-	MY_FILE="`webapp_strip_cwd \"$MY_FILE\"`"
+	if [ -n "$WARN_RUNBYCGIBIN" ] ; then
+		return
+	fi
 
-	einfo "(cgi-bin) $1 - $MY_FILE"
-	echo "\"$1\" \"$MY_FILE\"" >> "${D}${WA_RUNBYCGIBINLIST}"
+	ewarn "This ebuild uses webapp.eclass's webapp_runbycgibin, which is now"
+	ewarn "deprecated.  Please file a bug about this in Bugzilla."
+	WARN_RUNBYCGIBIN=1
 }
 
 # ------------------------------------------------------------------------
@@ -280,10 +290,12 @@ function webapp_sqlscript ()
 		# yes we are
 		einfo "($1) upgrade script from ${PN}-${PVR} to $3"
 		cp "$2" "${D}${MY_SQLSCRIPTSDIR}/$1/${3}_to_${PVR}.sql"
+		chmod 600 "${D}${MY_SQLSCRIPTSDIR}/$1/${3}_to_${PVR}.sql"
 	else
 		# no, we are not
 		einfo "($1) create script for ${PN}-${PVR}"
 		cp "$2" "${D}${MY_SQLSCRIPTSDIR}/$1/${PVR}_create.sql"
+		chmod 600 "${D}${MY_SQLSCRIPTSDIR}/$1/${PVR}_create.sql"
 	fi
 }
 
