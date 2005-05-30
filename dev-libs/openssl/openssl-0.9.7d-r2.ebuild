@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r2.ebuild,v 1.16 2005/05/14 17:37:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r2.ebuild,v 1.17 2005/05/30 02:34:32 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,14 +14,14 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz
 LICENSE="openssl"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="emacs uclibc"
+IUSE="emacs"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	sys-apps/diffutils
 	>=dev-lang/perl-5
 	>=sys-apps/sed-4
-	!uclibc? ( sys-devel/bc )"
+	!elibc_uclibc? ( sys-devel/bc )"
 
 S=${WORKDIR}
 

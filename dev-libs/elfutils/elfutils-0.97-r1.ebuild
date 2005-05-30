@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.97-r1.ebuild,v 1.2 2005/05/15 12:22:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.97-r1.ebuild,v 1.3 2005/05/30 02:33:52 solar Exp $
 
 inherit eutils
 
@@ -11,12 +11,12 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="OpenSoftware"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sparc ~x86"
-IUSE="nls uclibc"
+IUSE="nls"
 
 # This pkg does not actually seem to compile currently in a uClibc
 # environment (xrealloc errs), but we need to ensure that glibc never
 # gets pulled in as a dep since this package does not respect virtual/libc
-DEPEND="!uclibc? ( >=sys-libs/glibc-2.3.2 )
+DEPEND="!elibc_uclibc? ( >=sys-libs/glibc-2.3.2 )
 	sys-devel/gettext
 	>=sys-devel/binutils-2.14.90.0.6
 	>=sys-devel/gcc-3.2.1-r6

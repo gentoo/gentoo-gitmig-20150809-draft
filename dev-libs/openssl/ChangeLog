@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.119 2005/05/26 09:39:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.120 2005/05/30 02:34:32 solar Exp $
+
+  29 May 2005; <solar@gentoo.org> openssl-0.9.7d-r2.ebuild,
+  openssl-0.9.7e.ebuild:
+  echangelog - update package to use libc expanded variable elibc_uclibc vs
+  uclibc so USE=-* works
 
   26 May 2005; Markus Rothe <corsair@gentoo.org> openssl-0.9.7e-r1.ebuild:
   Stable on ppc64
