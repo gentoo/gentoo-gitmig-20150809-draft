@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.61 2005/05/29 17:59:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.62 2005/05/30 07:15:53 cardoe Exp $
+
+  30 May 2005; Doug Goldstein <cardoe@gentoo.org> mythtv-0.18.1-r1.ebuild:
+  Firewire support!!! Hoorah!
 
   29 May 2005; Doug Goldstein <cardoe@gentoo.org> mythtv-0.18.1-r1.ebuild:
   Changed build to use some of the user's CFLAGS, stripping out all the 

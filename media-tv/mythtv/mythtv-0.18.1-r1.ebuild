@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r1.ebuild,v 1.2 2005/05/29 17:59:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r1.ebuild,v 1.3 2005/05/30 07:15:53 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -28,12 +28,10 @@ DEPEND=">=media-libs/freetype-2.0
 	oggvorbis? ( media-libs/libvorbis )
 	opengl? ( virtual/opengl )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
-			>=sys-libs/libavc1394-0.4.1 )
+			>=media-libs/libiec61883-1.0.0 )
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
 	!x11-base/xfree
 	!<x11-base/xorg-x11-6.8"
-
-# ieee1394 also needs >=sys-libs/libiec61883-1.0.0
 
 pkg_setup() {
 
@@ -86,6 +84,7 @@ src_compile() {
 		$(use_enable oggvorbis vorbis)
 		$(use_enable nvidia xvmc)
 		$(use_enable xv)
+		$(use_enable ieee1394 firewire)
 		--disable-directfb
 		--enable-x11
 		--enable-proc-opt"
@@ -124,9 +123,6 @@ src_compile() {
 
 	hasq distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
 	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
-
-	# depends on bug # 89799
-	# $(use_enable ieee1394 firewire)
 
 	if use frontendonly; then
 		##Backend Removal
