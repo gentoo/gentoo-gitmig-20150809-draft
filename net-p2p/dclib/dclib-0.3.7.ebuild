@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.3.7.ebuild,v 1.2 2005/05/14 08:18:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.3.7.ebuild,v 1.3 2005/05/30 20:01:36 swegener Exp $
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 DESCRIPTION="DirectConnect client library"
 HOMEPAGE="http://dcgui.berlios.de/"

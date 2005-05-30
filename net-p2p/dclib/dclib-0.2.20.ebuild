@@ -1,12 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.2.20.ebuild,v 1.10 2005/01/30 04:46:17 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.2.20.ebuild,v 1.11 2005/05/30 20:01:36 swegener Exp $
 
 IUSE=""
 
-IUSE=""
-
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 DESCRIPTION="DirectConnect client library"
 HOMEPAGE="http://dc.ketelhot.de/"

@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.59 2005/05/14 08:18:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.60 2005/05/30 20:01:36 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org> dclib-0.2.20.ebuild,
+  dclib-0.2.21.ebuild, dclib-0.3.0.ebuild, dclib-0.3.3.ebuild,
+  dclib-0.3.3-r1.ebuild, dclib-0.3.5.ebuild, dclib-0.3.7.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
 
   14 May 2005; Markus Rothe <corsair@gentoo.org> dclib-0.3.7.ebuild:
   Added ~ppc64 to KEYWORDS
