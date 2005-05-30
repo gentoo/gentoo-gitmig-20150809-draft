@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.13 2005/05/16 05:57:27 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.14 2005/05/30 07:47:45 wormo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian/pool/main/m/mmv/${P/-/_}.orig.tar.gz
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE=""
 
 S="${WORKDIR}/${P}.orig"
