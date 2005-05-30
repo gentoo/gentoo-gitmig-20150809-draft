@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5b33d1f91cb7d90e4d0d125905b8dfbb openssl-0.9.7d-r2.ebuild 8970
 MD5 aa6f82913db25a660c1e472864f6920d openssl-0.9.7e-r1.ebuild 8518
 MD5 b006190dcd671619b4028aa5ad2e994c openssl-0.9.7e.ebuild 7842
@@ -32,3 +35,12 @@ MD5 cebd09d1819c07b0fab14ad90b0da884 files/openssl-0.9.6m-gentoo.diff 1591
 MD5 90fac5947e771433132723442dc90ab0 files/openssl-0.9.7g-no-fips.patch 333
 MD5 744b358cd3b68b2ca6561c214c541fc0 files/addppc64support.diff 1327
 MD5 b901850df9952252974316e78775673b files/openssl-0.9.6-mips.diff 1487
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iQCVAwUBQpp7v54WFLgrx1GWAQJTPQP/VpyWgbImDZNHJtDkBBGgQ9B5Ie9pUaeK
+AMDk7cV4mpZ/rFb1KfmMwbeV4mujB6BtWt2k4sb6MR4GAnlzixO8t4xDH4CGwAp2
+jFa/LvdbQTBTW0hm+J+B7fTxnqzIo8g/akweDWG/WyZvxqqMb65XEboCdnh0W6XE
+6jOj4Bce7WY=
+=kRPl
+-----END PGP SIGNATURE-----
