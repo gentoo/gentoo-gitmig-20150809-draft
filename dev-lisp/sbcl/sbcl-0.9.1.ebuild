@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.1.ebuild,v 1.1 2005/05/30 08:28:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.1.ebuild,v 1.2 2005/05/30 08:29:31 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -47,7 +47,7 @@ must use gcc-config to select a profile with non-hardened features
 (the "vanilla" profile) and "source /etc/profile" before continuing.
 
 EOF
-	    die
+		die
 	fi
 
 	# FIXME Maybe something should be done in the case where a user requests
@@ -77,7 +77,7 @@ src_unpack() {
 
 	unpack ${P}-source.tar.bz2
 	epatch ${MY_WORK}/sbcl-gentoo.patch || die
-    sed -i "s,/lib,/$(get_libdir),g" ${S}/install.sh
+	sed -i "s,/lib,/$(get_libdir),g" ${S}/install.sh
 
 	cp ${MY_WORK}/customize-target-features.lisp-prefix \
 		${S}/customize-target-features.lisp
