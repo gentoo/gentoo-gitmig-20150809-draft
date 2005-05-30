@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1.ebuild,v 1.8 2005/05/29 08:36:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1.ebuild,v 1.9 2005/05/30 02:33:02 solar Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -23,7 +23,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2"
 LICENSE="PSF-2.2"
 SLOT="2.4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~s390 ~sparc ~x86"
-IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X uclibc nocxx"
+IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X nocxx"
 
 DEPEND=">=sys-libs/zlib-1.1.3
 	!dev-python/cjkcodecs
@@ -169,7 +169,7 @@ src_install() {
 	if use build ; then
 		rm -rf ${D}/usr/lib/python${PYVER}/{test,encodings,email,lib-tk,bsddb/test}
 	else
-		use uclibc && rm -rf ${D}/usr/lib/python${PYVER}/{test,bsddb/test}
+		use elibc_uclibc && rm -rf ${D}/usr/lib/python${PYVER}/{test,bsddb/test}
 		use berkdb || rm -rf ${D}/usr/lib/python${PYVER}/bsddb
 		( use !X || use !tcltk ) && rm -rf ${D}/usr/lib/python${PYVER}/lib-tk
 	fi
