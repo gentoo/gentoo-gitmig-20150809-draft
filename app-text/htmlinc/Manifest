@@ -1,4 +1,6 @@
-MD5 0c77aaa47a5532e43c8f8daf452ab41e ChangeLog 870
+MD5 0084de128b83bd90ba4655779b5c6dcd ChangeLog 1025
+MD5 7b5d989ba37d36b1435ff20561deffc4 htmlinc-1.0_beta1-r1.ebuild 664
 MD5 0fb4012c37a2135b0f05308bd0277009 htmlinc-1.0_beta1.ebuild 646
 MD5 1987c5074e9ade268654c3d872e5e99c files/digest-htmlinc-1.0_beta1 58
 MD5 a090e8e4585f069da8d32a89a9ac77ab files/htmlinc-gcc3-gentoo.patch 3601
+MD5 1987c5074e9ade268654c3d872e5e99c files/digest-htmlinc-1.0_beta1-r1 58
