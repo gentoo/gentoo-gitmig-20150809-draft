@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.9-r1.ebuild,v 1.8 2005/04/15 16:13:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.9-r1.ebuild,v 1.9 2005/05/30 02:55:12 solar Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="bootstrap build static uclibc"
+IUSE="bootstrap build static"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
@@ -271,7 +271,7 @@ src_install() {
 	cp -r "${S}"/rc-lists "${D}"/usr/share/baselayout
 
 	# uclibc doesn't need nsswitch.conf... added by solar
-	use uclibc && rm -f ${D}/etc/nsswitch.conf
+	use elibc_uclibc && rm -f ${D}/etc/nsswitch.conf
 
 	# rc-scripts version for testing of features that *should* be present
 	echo "Gentoo Base System version ${SV}" > ${D}/etc/gentoo-release
