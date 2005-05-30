@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.2.ebuild,v 1.2 2005/05/30 04:23:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3.ebuild,v 1.1 2005/05/30 04:23:40 nerdboy Exp $
 
 inherit eutils
 
@@ -10,14 +10,15 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 sparc x86 ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~ppc-macos"
 IUSE="doc qt tetex"
 
-DEPEND="media-gfx/graphviz
+RDEPEND="media-gfx/graphviz
 	qt? ( x11-libs/qt )
 	doc? ( tetex? ( virtual/tetex )
-	virtual/ghostscript )
-	>=sys-apps/sed-4"
+	virtual/ghostscript )"
+DEPEND=">=sys-apps/sed-4
+	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -26,6 +27,7 @@ src_unpack() {
 	sed -i.orig -e "s:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= ${CFLAGS}:" \
 		-e "s:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= ${CXXFLAGS}:" \
 		tmake/lib/linux-g++/tmake.conf
+	epatch ${FILESDIR}/${P}-cp1251.patch
 	use ppc-macos && epatch ${FILESDIR}/bsd-configure.patch
 }
 
