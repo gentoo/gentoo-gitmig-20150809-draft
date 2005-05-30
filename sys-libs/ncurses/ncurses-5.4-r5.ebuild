@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.24 2005/05/03 04:48:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.25 2005/05/30 02:47:17 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="gpm build bootstrap debug doc uclibc unicode nocxx"
+IUSE="gpm build bootstrap debug doc unicode nocxx"
 
 DEPEND="gpm? ( sys-libs/gpm )"
 
@@ -162,7 +162,7 @@ src_install() {
 			TERMINFO=${D}/usr/share/terminfo \
 			${D}/usr/bin/tic ${FILESDIR}/xterm-debian.ti
 
-		if use uclibc ; then
+		if use elibc_uclibc ; then
 			cp ${D}/usr/share/terminfo/x/xterm-debian ${D}/etc/terminfo/x/
 			rm -rf ${D}/usr/share/terminfo/*
 		fi

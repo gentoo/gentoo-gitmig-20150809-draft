@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.95 2005/05/10 01:01:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.96 2005/05/30 02:47:17 solar Exp $
+
+  29 May 2005; <solar@gentoo.org> ncurses-5.4-r5.ebuild:
+  - update sys-libs/ncurses to use libc expanded variable elibc_uclibc vs uclibc
+  so USE=-* works
 
   10 May 2005; Mike Frysinger <vapier@gentoo.org>
   ncurses-5.4.20050319.ebuild:
