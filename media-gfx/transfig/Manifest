@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 49fe10083e271086f0ec1c08564ac3ff transfig-3.2.3d-r1.ebuild 1081
 MD5 f3b35d3b6e246dca0ce894f763cbe8f8 transfig-3.2.4-r1.ebuild 1291
 MD5 6c5a3fd5b94a6efcb8d55d0ba73c89bd ChangeLog 2856
@@ -9,3 +12,10 @@ MD5 f9974d3952eb7a7aaef9145c8970f371 files/digest-transfig-3.2.4-r1 66
 MD5 ff90232bbf79ef8dcf25771dcd286a0a files/digest-transfig-3.2.4-r2 144
 MD5 71a0fff063c73b598780da48ef56b943 files/transfig-3.2.4-gcc-3.3.patch 1895
 MD5 4649eef8f14275cfba64c077532d6aad files/transfig-3.2.3d.patch 1532
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCm2ANI1lqEGTUzyQRAmIVAJ9wTvMPgcBOJJfzI7w8xcQCsTytYgCffIge
+aNC8Jk2dBA1uBj1JJNYFRl4=
+=Z4Br
+-----END PGP SIGNATURE-----
