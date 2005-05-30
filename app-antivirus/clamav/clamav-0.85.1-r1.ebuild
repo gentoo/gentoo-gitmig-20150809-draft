@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85.1-r1.ebuild,v 1.1 2005/05/24 02:01:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85.1-r1.ebuild,v 1.2 2005/05/30 20:22:46 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -87,7 +87,7 @@ src_install() {
 		${D}/etc/freshclam.conf
 
 	if use milter ; then
-		echo "START_MILTER=yes" \
+		echo "START_MILTER=no" \
 			>> ${D}/etc/conf.d/clamd
 		echo "MILTER_SOCKET=\"/var/run/clamav/clmilter.sock\"" \
 			>>${D}/etc/conf.d/clamd

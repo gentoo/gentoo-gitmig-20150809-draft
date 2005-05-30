@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.69 2005/05/24 02:01:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.70 2005/05/30 20:22:46 ticho Exp $
+
+  30 May 2005; Andrej Kacian <ticho@gentoo.org> clamav-0.85.1.ebuild,
+  clamav-0.85.1-r1.ebuild:
+  Changed default value of START_MILTER to "yes" in conf.d file. 0.85.1 stable
+  on x86.
 
 *clamav-0.85.1-r1 (24 May 2005)
 
