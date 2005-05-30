@@ -1,0 +1,18 @@
+--- xmms-crossfade-0.3.8.orig/configure.c	2005-05-30 19:42:02.000000000 +0200
++++ xmms-crossfade-0.3.8/configure.c	2005-05-30 19:40:35.000000000 +0200
+@@ -131,6 +131,7 @@
+ 
+ static void update_plugin_config(gchar **config_string, gchar *name,
+ 				 plugin_config_t *pc, gboolean save);
++static void config_plugin_cb(GtkWidget *widget, gint index);
+ 
+ 
+ /*****************************************************************************/
+@@ -696,6 +697,7 @@
+ {
+   SET_PAGE("output_notebook", 1);
+   cfg->output_method = OUTPUT_METHOD_PLUGIN;
++  config_plugin_cb(NULL, op_index);
+ }
+ 
+ void on_output_none_radio_toggled(GtkToggleButton *togglebutton, gpointer user_data)
