@@ -1,6 +1,11 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.46 2005/01/01 16:35:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.47 2005/05/30 03:04:29 leonardop Exp $
+
+  29 May 2005; Leonardo Boshell <leonardop@gentoo.org>
+  scrollkeeper-0.3.14.ebuild, files/scrollkeeper-0.3.14-gentoo.patch:
+  Modified patch to avoid failure with 'collision-protect' feature; thanks
+  to Harald van Dijk. Resolves bug #74105.
 
   01 Jul 2004; Tom Gall <tgall@gentoo.org> scrollkeeper-0.3.14.ebuild:
   stable on ppc64 bug #54799
@@ -28,10 +33,11 @@
   change descriptions (#41393)
 
   12 Feb 2004; L. Boshell <leonardop@gentoo.org> scrollkeeper-0.3.14.ebuild,
-  files/scrollkeeper-0.3.14-gcc2_fix.patch :
+  files/scrollkeeper-0.3.14-gcc2_fix.patch:
   Added patch to make it compile under gcc-2.
   
-  10 Feb 2004; foser <foser@gentoo.org> scrollkeeper-0.3.14.ebuild, metadata.xml :
+  10 Feb 2004; foser <foser@gentoo.org> scrollkeeper-0.3.14.ebuild,
+  metadata.xml:
   Dep on intltool-0.29 and up for XML-Parser dep (#41096)
   Add metadata.xml, add to gnome herd for now
 

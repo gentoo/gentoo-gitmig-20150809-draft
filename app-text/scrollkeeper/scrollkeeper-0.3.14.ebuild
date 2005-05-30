@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14.ebuild,v 1.17 2005/01/30 05:11:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14.ebuild,v 1.18 2005/05/30 03:04:29 leonardop Exp $
 
 inherit libtool eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.patch
 	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 }
 
