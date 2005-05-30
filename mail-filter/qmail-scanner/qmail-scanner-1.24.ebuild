@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.24.ebuild,v 1.4 2005/05/25 15:29:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.24.ebuild,v 1.5 2005/05/30 18:44:44 swegener Exp $
 
-inherit fixheadtails gcc eutils
+inherit fixheadtails toolchain-funcs eutils
 
 Q_S_DATE=20041101
 DESCRIPTION="E-Mail virus scanner for qmail."
@@ -71,7 +71,7 @@ src_compile () {
 
 	# build for qmail-scanner-queue wrapper, so we don't need suidperl
 	cd contrib
-	`gcc-getCC` ${CFLAGS} -o qmail-scanner-queue qmail-scanner-queue.c || die
+	`tc-getCC` ${CFLAGS} -o qmail-scanner-queue qmail-scanner-queue.c || die
 }
 
 src_install () {
