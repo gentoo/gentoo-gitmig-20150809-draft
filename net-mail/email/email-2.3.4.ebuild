@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/email-2.3.4.ebuild,v 1.4 2005/05/14 22:24:17 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/email-2.3.4.ebuild,v 1.5 2005/05/30 17:25:10 ferdy Exp $
 
 DESCRIPTION="Advanced CLI tool for sending email."
 HOMEPAGE="http://email.cleancode.org"
@@ -8,7 +8,7 @@ SRC_URI="http://email.cleancode.org/download/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~alpha amd64 x86"
+KEYWORDS="alpha amd64 x86"
 IUSE=""
 
 DEPEND="virtual/libc"
