@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.1.ebuild,v 1.1 2005/05/29 22:02:58 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.1.ebuild,v 1.2 2005/05/30 14:57:25 sekretarz Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="tool for distributing files via a distributed network of nodes"
 HOMEPAGE="http://www.bittorrent.com/"
-SRC_URI="mirror://sourceforge/${MY_P}.tar.gz"
+SRC_URI="http://www.bittorrent.com/dl/${MY_P}.tar.gz"
 
 LICENSE="BitTorrent"
 SLOT="0"
