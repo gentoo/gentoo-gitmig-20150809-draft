@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/lopster
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.18 2005/05/14 21:42:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.19 2005/05/30 22:02:54 sekretarz Exp $
+
+  30 May 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  lopster-1.2.2-r1.ebuild:
+  Added WANT_AUTOCONF=2.5 to fix problems with autoconf
 
   14 May 2005; Jan Brinkmann <luckyduck@gentoo.org> lopster-1.2.2.ebuild:
   stable on amd64
