@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.2.ebuild,v 1.9 2005/03/27 20:34:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.2.ebuild,v 1.10 2005/05/30 19:53:28 swegener Exp $
 
-inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
+inherit makeedit flag-o-matic nsplugins eutils mozconfig mozilla-launcher multilib
 
 S=${WORKDIR}/mozilla
 
