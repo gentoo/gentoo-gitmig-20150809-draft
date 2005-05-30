@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arj
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.14 2005/01/01 22:12:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.15 2005/05/30 17:50:47 swegener Exp $
+
+  30 May 2005; Sven Wegener <swegener@gentoo.org> arj-3.10.21.ebuild:
+  Moved from gcc.eclass to toolchain-funcs.eclass.
 
   01 Jan 2005; Daniel Ahlberg <aliz@gentoo.org> arj-3.10.21.ebuild:
   Borrowed some gcc checking code from openoffice to automatically use gcc-3.3

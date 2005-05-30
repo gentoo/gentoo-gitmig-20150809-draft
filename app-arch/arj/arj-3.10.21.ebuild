@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.21.ebuild,v 1.5 2005/01/19 00:55:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.21.ebuild,v 1.6 2005/05/30 17:50:47 swegener Exp $
 
-inherit gnuconfig eutils gcc
+inherit gnuconfig eutils toolchain-funcs
 
 DESCRIPTION="Utility for opening arj archives"
 HOMEPAGE="http://arj.sourceforge.net/"
