@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.2.20050224.ebuild,v 1.4 2005/03/21 11:14:15 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.2.20050224.ebuild,v 1.5 2005/05/30 03:06:26 solar Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies: ~arm ~s390 ~ppc64
 KEYWORDS="~x86 ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc"
-IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite uclibc mailwrapper fam"
+IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite mailwrapper fam"
 
 PROVIDE="virtual/mta
 	 virtual/mda
@@ -56,7 +56,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use norewrite && epatch ${FILESDIR}/norewrite.patch
-	use uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
+	use elibc_uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
 }
 
 src_compile() {
