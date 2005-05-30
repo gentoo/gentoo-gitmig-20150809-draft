@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.122 2005/05/29 22:06:06 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.123 2005/05/30 06:16:29 joker Exp $
+
+  30 May 2005; Christian Birchinger <joker@gentoo.org>
+  bash-completion-20050121-r9.ebuild:
+  Added sparc stable keyword
 
   29 May 2005; Marcus D. Hanwell <marcus@gentoo.org>
   bash-completion-20050121-r9.ebuild:
