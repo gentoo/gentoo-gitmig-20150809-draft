@@ -1,6 +1,17 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.62 2005/05/21 19:34:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.63 2005/05/30 08:28:30 mkennedy Exp $
+
+*sbcl-0.9.1 (30 May 2005)
+
+  30 May 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.9.1/README.Gentoo,
+  +files/0.9.1/customize-target-features.lisp-prefix,
+  +files/0.9.1/customize-target-features.lisp-suffix,
+  +files/0.9.1/install-clc.lisp, +files/0.9.1/sbcl.sh,
+  +files/0.9.1/sbcl-gentoo.patch, +files/0.9.1/sbclrc, +sbcl-0.9.1.ebuild:
+  New upstream version; Handle hardened GCC configurations (see Bug #88399);
+  Correct lib path using get_libdir (see Bug #87849)
 
   21 May 2005; Matthew Kennedy <mkennedy@gentoo.org> sbcl-0.9.0.ebuild:
   Use most recent SBCL SPARC/Linux binary.
