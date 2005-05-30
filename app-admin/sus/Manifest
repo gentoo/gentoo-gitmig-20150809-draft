@@ -1,7 +1,17 @@
-MD5 ca74571e3982e5ea0647966174330326 ChangeLog 1180
-MD5 d7e09e6e30269771510815189637b2a6 sus-2.0.2-r1.ebuild 1399
-MD5 43582d40ad1bbb413d780d891647a131 sus-2.0.6.ebuild 1260
-MD5 37ab627480600ea8a18055974761eb3c files/digest-sus-2.0.2-r1 60
-MD5 ba3748fd03f0aa5d0fb0db4afa83ffe1 files/digest-sus-2.0.6 60
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e3e7f25f184a2ea15df567282c0b63bd sus-2.0.2-r1.ebuild 1415
+MD5 f8ee87e2a2f125aafe399325fdd1ab37 sus-2.0.6.ebuild 1274
+MD5 5fcda8392beaeac20615239f323dc33b ChangeLog 1356
 MD5 01f6c4974f79047b74718f27c22b2ae5 files/sus-2.0.2-syslog-vuln-fix.patch 406
 MD5 e551ecc3164caa7ab831c58f5f7244a5 files/susers.cpp 988
+MD5 37ab627480600ea8a18055974761eb3c files/digest-sus-2.0.2-r1 60
+MD5 ba3748fd03f0aa5d0fb0db4afa83ffe1 files/digest-sus-2.0.6 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCm1HrI1lqEGTUzyQRApV6AKCynea8XAD8LBprw/FcIn11KVNM7ACgxUfP
+HVYkCHfmpT5+Fz/hZ5CM6MI=
+=47fX
+-----END PGP SIGNATURE-----

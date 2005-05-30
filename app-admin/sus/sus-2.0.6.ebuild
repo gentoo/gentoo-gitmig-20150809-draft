@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/sus-2.0.6.ebuild,v 1.3 2005/05/24 21:45:41 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/sus-2.0.6.ebuild,v 1.4 2005/05/30 17:47:59 swegener Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="allows certain users to run commands as root or other users"
 HOMEPAGE="http://pdg.uow.edu.au/sus/"
@@ -25,7 +25,7 @@ src_compile() {
 	myconf="${myconf} -DPROMISCUOUS -DUSE_SHADOW \
 		-DSUSERS=\\\"/etc/susers.cpp\\\""
 	make \
-		CC=$(gcc-getCC) \
+		CC=$(tc-getCC) \
 		CFLAGS="${CFLAGS} ${myconf}" \
 		LFLAGS="${lflags}" \
 		sus || die
