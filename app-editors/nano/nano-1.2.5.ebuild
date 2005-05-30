@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.5.ebuild,v 1.2 2005/05/22 02:06:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.5.ebuild,v 1.3 2005/05/30 05:03:56 vapier Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="nls build spell justify debug slang ncurses"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	nls? ( sys-devel/gettext )
-	slang? ( sys-libs/slang )"
+	!ncurses? ( slang? ( sys-libs/slang ) )"
 PROVIDE="virtual/editor"
 
 S=${WORKDIR}/${MY_P}
