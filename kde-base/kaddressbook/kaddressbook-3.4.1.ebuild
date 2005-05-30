@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-3.4.1.ebuild,v 1.2 2005/05/26 17:14:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-3.4.1.ebuild,v 1.3 2005/05/30 14:41:06 carlo Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -31,14 +31,13 @@ KMEXTRACTONLY="
 	libkdepim/
 	libkdenetwork/
 	libkcal/
-	libical/
 	certmanager/
 	kontact/interfaces/
 	akregator
 	kmail/kmailIface.h"
 KMCOMPILEONLY="
-	libical/src/libical/
-	libical/src/libicalss/
+	libkcal/libical/src/libical/
+	libkcal/libical/src/libicalss/
 	akregator/src/librss"
 	# We add them here because they are standard plugins and programs related to kaddressbook but not a dep of any other kdepim program, so they will be lost if noone install them
 KMEXTRA="
@@ -49,9 +48,9 @@ KMEXTRA="
 src_compile() {
 	export DO_NOT_COMPILE="libical" && kde-meta_src_compile myconf configure
 	# generate "ical.h"
-	cd ${S}/libical/src/libical && make ical.h
+	cd ${S}/libkcal/libical/src/libical && make ical.h
 	# generate "icalss.h"
-	cd ${S}/libical/src/libicalss && make icalss.h
+	cd ${S}/libkcal/libical/src/libicalss && make icalss.h
 
 	kde-meta_src_compile "make"
 }

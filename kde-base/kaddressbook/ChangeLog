@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.9 2005/05/25 21:23:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.10 2005/05/30 14:41:06 carlo Exp $
+
+  30 May 2005; Carsten Lohrke <carlo@gentoo.org> kaddressbook-3.4.0.ebuild,
+  kaddressbook-3.4.1.ebuild:
+  corrected libical path
 
 *kaddressbook-3.4.1 (25 May 2005)
 
