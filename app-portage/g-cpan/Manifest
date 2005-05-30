@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 30959ab439c03125ddd175bde8d6acff ChangeLog 1634
 MD5 0e113485988d104cd921ccd5e3ab5cc5 g-cpan-0.12.ebuild 1178
-MD5 1700933eaee6584200f19dcb29306ba5 metadata.xml 420
+MD5 8eb22d9b395c50cde6775c7c4395f2cb ChangeLog 1777
+MD5 66fccb40813e1118582573d87c7a7481 g-cpan-0.13-r1.ebuild 1101
 MD5 dd13fd5be707a7a111bc136514ea3b14 g-cpan-0.13.ebuild 1098
+MD5 1700933eaee6584200f19dcb29306ba5 metadata.xml 420
+MD5 97e8dd112a205671bb5a8764bb8554f1 files/digest-g-cpan-0.13 62
 MD5 bdf27604ec34f22b22d6351dd576caaa files/digest-g-cpan-0.12 61
-MD5 bffcaeff338ede70a2d365f7f880515e files/digest-g-cpan-0.13 62
+MD5 97e8dd112a205671bb5a8764bb8554f1 files/digest-g-cpan-0.13-r1 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClGvetG5z4I8BtQoRAr1OAJ48mGd6Yh73JDtSnT43CT49yFbETQCePM9J
-yFmZ6n5kZF4gEQHNnjcAOUc=
-=dYso
+iD8DBQFCmx8KtG5z4I8BtQoRArRCAJ9H6iQbbbHRk4FKhVsj33XFGakT+wCdHV3Z
+ccN9xWrdyZtlBssWVTk4KMw=
+=RVBP
 -----END PGP SIGNATURE-----
