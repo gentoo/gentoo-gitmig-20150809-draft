@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/etherwake
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/etherwake/ChangeLog,v 1.8 2004/07/01 20:59:21 squinky86 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/etherwake/ChangeLog,v 1.9 2005/05/30 18:36:16 kugelfang Exp $
+
+  30 May 2005; Danny van Dyk <kugelfang@gentoo.org> etherwake-1.09.ebuild:
+  Fixed deprecated usage of gcc.eclass. (BUG #92745)
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> etherwake-1.09.ebuild:
   change virtual/glibc to virtual/libc, add IUSE

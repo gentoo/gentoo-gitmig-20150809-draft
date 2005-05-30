@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/etherwake/etherwake-1.09.ebuild,v 1.4 2004/07/01 20:59:21 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/etherwake/etherwake-1.09.ebuild,v 1.5 2005/05/30 18:36:16 kugelfang Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 IUSE=""
 DESCRIPTION="This program generates and transmits a Wake-On-LAN (WOL) \"Magic Packet\", used for restarting machines that have been soft-powered-down (ACPI D3-warm state)."
@@ -18,7 +18,7 @@ KEYWORDS="x86 ppc sparc alpha ~amd64"
 DEPEND="virtual/libc"
 
 src_compile() {
-	$(gcc-getCC) ${CFLAGS} -o etherwake ether-wake.c || die "Compile failed"
+	$(tc-getCC) ${CFLAGS} -o etherwake ether-wake.c || die "Compile failed"
 }
 
 src_install() {
