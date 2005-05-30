@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.54 2005/05/18 13:08:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.55 2005/05/30 21:15:47 kloeri Exp $
+
+  30 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  python-docs-2.3.5.ebuild:
+  Stable on alpha.
 
   18 May 2005; Markus Rothe <corsair@gentoo.org> python-docs-2.3.5.ebuild:
   Added ~ppc64 to KEYWORDS
