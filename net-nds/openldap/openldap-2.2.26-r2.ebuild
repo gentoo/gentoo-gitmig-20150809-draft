@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.26-r2.ebuild,v 1.5 2005/05/30 04:42:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.26-r2.ebuild,v 1.6 2005/05/31 14:48:19 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -215,8 +215,8 @@ src_compile() {
 
 	make depend || die "make depend failed"
 	make || die "make failed"
-	
-	# special kerberos stuff	
+
+	# special kerberos stuff
 	tc-export CC
 	if useq kerberos ; then
 		cd ${S}/contrib/slapd-modules/passwd/ && \
