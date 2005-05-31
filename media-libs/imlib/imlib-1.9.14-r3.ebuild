@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r3.ebuild,v 1.9 2005/04/29 00:03:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r3.ebuild,v 1.10 2005/05/31 06:48:43 leonardop Exp $
 
 inherit gnome.org libtool eutils
 
-DESCRIPTION="general image loading and rendering library"
-HOMEPAGE="http://developer.gnome.org/arch/imaging/imlib.html"
+DESCRIPTION="Image loading and rendering library"
+HOMEPAGE="http://www.enlightenment.org/Libraries/Imlib.html"
 
 LICENSE="GPL-2"
 SLOT="0"
