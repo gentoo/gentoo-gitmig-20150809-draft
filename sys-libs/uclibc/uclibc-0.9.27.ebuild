@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.16 2005/05/17 22:13:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.17 2005/05/31 21:54:35 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -37,7 +37,7 @@ LICENSE="LGPL-2"
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
 KEYWORDS="arm m68k mips ppc sh sparc x86"
-IUSE="alsa build debug hardened ipv6 static" # nls is not supported yet
+IUSE="wordexp build debug hardened ipv6 static" # nls is not supported yet
 RESTRICT="nostrip"
 
 DEPEND="virtual/os-headers"
@@ -184,7 +184,7 @@ src_unpack() {
 	use ipv6 && sed -i -e "s:# UCLIBC_HAS_IPV6 is not set:UCLIBC_HAS_IPV6=y:" .config
 
 	# uncomment if you miss wordexp (alsa-lib)
-	use alsa && sed -i -e "s:# UCLIBC_HAS_WORDEXP is not set:UCLIBC_HAS_WORDEXP=y:" .config
+	use wordexp && sed -i -e "s:# UCLIBC_HAS_WORDEXP is not set:UCLIBC_HAS_WORDEXP=y:" .config
 
 	# we need to do it independently of hardened to get ssp.c built into libc
 	sed -i -e "s:# UCLIBC_SECURITY.*:UCLIBC_SECURITY=y:" .config

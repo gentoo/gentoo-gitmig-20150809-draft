@@ -1,5 +1,5 @@
 MD5 ea76446f3ea63868e45e08d419fdbc86 ChangeLog 8595
 MD5 e96b4dfc373a1cdf7735aeae52c4cf7e metadata.xml 999
-MD5 0e223e0b3bcafd9897ab3f736fc3f7bb uclibc-0.9.27.ebuild 10490
+MD5 2220455da94d59bc25b6bda4ce02d33c uclibc-0.9.27.ebuild 10496
 MD5 684def72ebc0da73cb8b6d1c53e7e8fb files/getent 1112
 MD5 8801c8a97f025fb426cba64a5b9a4501 files/digest-uclibc-0.9.27 229
