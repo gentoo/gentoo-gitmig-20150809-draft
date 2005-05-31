@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.64 2005/05/30 07:45:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.65 2005/05/31 13:43:20 dholm Exp $
+
+  31 May 2005; David Holm <dholm@gentoo.org> mythtv-0.18.1-r2.ebuild:
+  Added to ~ppc.
 
   30 May 2005; Doug Goldstein <cardoe@gentoo.org>
   -files/mythtv-0.16-cx88.patch, files/mythfilldatabase.cron,
