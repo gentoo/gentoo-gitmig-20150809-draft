@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0.ebuild,v 1.1 2005/05/31 16:58:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0.ebuild,v 1.2 2005/05/31 19:25:53 luckyduck Exp $
 
 inherit java-pkg
 
@@ -21,10 +21,10 @@ S=${WORKDIR}/activation-${PV}
 
 src_compile() {
 	econf || die "configure failed"
-	emake || die "make failed"
+	make || die "make failed"
 
 	if use doc; then
-		emake javadoc || die "failed to create javadoc"
+		make javadoc || die "failed to create javadoc"
 	fi
 }
 
