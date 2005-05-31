@@ -1,0 +1,25 @@
+A small patch to work around cases where people did not properly `etc-update`.  
+This is not meant to be kept around for long, just to ease stable upgrades.
+
+This should be dropped once we've been stable for a while.
+
+--- sbin/functions.sh
++++ sbin/functions.sh
+@@ -681,7 +681,7 @@
+ start_volumes() {
+ 	local x=
+ 
+-	for x in ${RC_VOLUME_ORDER}; do
++	for x in ${RC_VOLUME_ORDER-raid evms lvm dm}; do
+ 		start_addon "${x}"
+ 	done
+ 
+@@ -705,7 +705,7 @@
+ stop_volumes() {
+ 	local x=
+ 
+-	for x in $(reverse_list ${RC_VOLUME_ORDER}); do
++	for x in $(reverse_list ${RC_VOLUME_ORDER-raid evms lvm dm}); do
+ 		stop_addon "${x}"
+ 	done
+ 

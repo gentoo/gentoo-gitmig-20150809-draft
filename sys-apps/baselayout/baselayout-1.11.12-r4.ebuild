@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r4.ebuild,v 1.2 2005/05/31 22:52:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r4.ebuild,v 1.3 2005/05/31 23:02:34 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -47,6 +47,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-is-net-fs.patch
 	# Remove bashisms from /etc/profile
 	epatch "${FILESDIR}"/${P}-profile.patch
+	# Help people who don't `etc-update` properly
+	epatch "${FILESDIR}"/${P}-volume-order-etc-update.patch
 
 	# setup unicode defaults for silly unicode users
 	if use unicode ; then
