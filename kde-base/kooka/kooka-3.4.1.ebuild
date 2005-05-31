@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.4.1.ebuild,v 1.2 2005/05/26 17:14:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.4.1.ebuild,v 1.3 2005/05/31 21:33:44 greg_g Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -15,3 +15,6 @@ OLDDEPEND="~kde-base/libkscan-$PV"
 
 KMCOPYLIB="libkscan libkscan"
 KMEXTRACTONLY="libkscan"
+
+# Fix detection of gocr (kde bug 90082).
+PATCHES1="${FILESDIR}/kdegraphics-3.4.1-gocr.patch"

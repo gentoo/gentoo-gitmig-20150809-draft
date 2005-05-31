@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kooka
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/ChangeLog,v 1.8 2005/05/25 21:23:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/ChangeLog,v 1.9 2005/05/31 21:33:44 greg_g Exp $
+
+  31 May 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdegraphics-3.4.1-gocr.patch, kooka-3.4.1.ebuild:
+  Fix detection of gocr (#92779).
 
 *kooka-3.4.1 (25 May 2005)
 

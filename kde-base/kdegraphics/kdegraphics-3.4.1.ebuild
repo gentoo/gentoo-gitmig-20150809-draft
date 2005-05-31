@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.1.ebuild,v 1.2 2005/05/29 11:33:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.1.ebuild,v 1.3 2005/05/31 21:32:29 greg_g Exp $
 
-inherit kde-dist
+inherit kde-dist eutils
 
 DESCRIPTION="KDE graphics-related apps"
 
@@ -28,6 +28,13 @@ RDEPEND="${DEPEND}
 	     app-text/ptex
 	     app-text/cstetex
 	     app-text/dvipdfm ) )"
+
+src_unpack() {
+	kde_src_unpack
+
+	# Fix detection of gocr (kde bug 90082).
+	epatch "${FILESDIR}/${P}-gocr.patch"
+}
 
 src_compile() {
 	if use gphoto2; then
