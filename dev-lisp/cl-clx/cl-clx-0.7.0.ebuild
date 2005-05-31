@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/cl-clx-0.7.0.ebuild,v 1.2 2005/05/24 18:48:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/cl-clx-0.7.0.ebuild,v 1.3 2005/05/31 02:41:36 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -25,7 +25,8 @@ src_install() {
 		doins ${S}/${i}/*.lisp
 	done
 	insinto /usr/share/common-lisp/source/clx
-	doins clx.asd NEWS CHANGES README README-R5
+	doins clx.asd NEWS CHANGES README README-R5 \
+		excl* sock*
 	insinto /usr/share/common-lisp/source/manual
 	doins manual/clx.texinfo
 	common-lisp-system-symlink
