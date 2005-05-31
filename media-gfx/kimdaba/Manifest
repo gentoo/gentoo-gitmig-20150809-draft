@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0dc36e92a25734cb4f6b88b7bdcbc5e7 kimdaba-2.0.ebuild 534
 MD5 898bbf6eed174d47dd8edfc45733a76b kimdaba-1.1.ebuild 432
 MD5 3f929289da44b962d8d5cb07590e5344 kimdaba-2.1.ebuild 703
@@ -8,3 +11,10 @@ MD5 a0c23d1c1a7d12d827d49be92dd64d14 files/digest-kimdaba-1.1 65
 MD5 068b53375139f12577924c84d3bd43be files/digest-kimdaba-2.0 65
 MD5 740491e5fe1d75d66eea3600a5a676d4 files/digest-kimdaba-2.1 66
 MD5 f7537f536c58778617d45603885dea95 files/digest-kimdaba-1.0.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCnPDIntT9W3vfTuoRAprHAJ457hj3Z9JeBpiuwYpaLsqm2BC+QACfdX1h
+uPtCdU4paB+ERGr2LONip04=
+=DtQL
+-----END PGP SIGNATURE-----
