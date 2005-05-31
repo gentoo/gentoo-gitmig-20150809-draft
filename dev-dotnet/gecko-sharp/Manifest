@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 0838e32f39f7c948308616bb420f521f gecko-sharp-0.7-r1.ebuild 1221
 MD5 b066a0a800c3aa974941a7c76abc2c57 gecko-sharp-0.5-r2.ebuild 747
 MD5 d27402ee4b50cb8f1dc0b545c1694b04 gecko-sharp-0.6.ebuild 892
-MD5 d4a4ee28f96990fefffbf9d3c8e814f5 gecko-sharp-0.10.ebuild 1351
+MD5 78064d7fec0828e184e83b4a2b9b82e5 gecko-sharp-0.10.ebuild 1286
 MD5 a23fed44e980c33f3c407d9a75898c9e gecko-sharp-0.7.ebuild 990
 MD5 477b6d1cdaf90cdc1375a9adb1d8be55 ChangeLog 4332
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
@@ -17,7 +17,7 @@ MD5 e1474f95b8a6ffc1af4ec208a4bab724 files/digest-gecko-sharp-0.10 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCnFX82G5bA0cA/ScRAgMNAJ9eUtg4qzMrly6BIIuYp+YE6N6EugCgqXNH
-H6eybJxAsuzPuB6Zc1VUw+E=
-=5zfQ
+iD8DBQFCnFi42G5bA0cA/ScRAqVeAJwNX04lEEGygTIUEQ03YJNm7PwSPACffiLl
+GT9o1SLV0LysRtGvdMR01gQ=
+=rqa0
 -----END PGP SIGNATURE-----

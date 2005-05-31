@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.10.ebuild,v 1.4 2005/05/31 12:14:57 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.10.ebuild,v 1.5 2005/05/31 12:26:37 herbs Exp $
 
 inherit mono multilib
 
@@ -27,10 +27,7 @@ src_unpack() {
 		sed -i -e 's:^libdir.*:libdir=@libdir@:' \
 			-e 's:${prefix}/lib:${libdir}:' \
 			-e 's:$(prefix)/lib:$(libdir):' \
-			${S}/{Makefile.*,*.pc.in} || die
-		sed -i -e "s:GACUTIL_FLAGS=.*:GACUTIL_FLAGS=\'/root \$(DESTDIR)\$(libdir) \
-				/package gecko-sharp-2.0 /gacdir \$(DESTDIR)\$(libdir)\':" \
-			${S}/configure* || die
+			${S}/Makefile.{in,am} ${S}/*.pc.in || die
 	fi
 }
 
@@ -40,7 +37,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}-2.0" \
+		DESTDIR=${D} install || die
 
 	mv ${D}/usr/bin/webshot ${D}/usr/bin/webshot-2.0
 	sed -i -e "s:nailer:nailer-2.0:" ${D}/usr/bin/webshot-2.0
