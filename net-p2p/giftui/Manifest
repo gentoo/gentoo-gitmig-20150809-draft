@@ -3,16 +3,16 @@ Hash: SHA1
 
 MD5 dd3bc4fe83394e7333d7308204cde842 giftui-0.3.1.ebuild 539
 MD5 1ad004218726c1522d6e2ecc8c58775c giftui-0.4.1.ebuild 974
-MD5 2f7eecfc97297e5c70cf639d51435bce ChangeLog 2242
+MD5 51aa9d3056b12ca6e711f650b2bcd930 ChangeLog 2368
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 40bfcba195763791682cf11aef06f32a files/0.4.1-gentoo.patch 580
+MD5 37bc65e41fc80a329a7ace5b3718d2ad files/0.4.1-gentoo.patch 1769
 MD5 99a230235e2682c6f55c7b129bf8d395 files/digest-giftui-0.3.1 65
 MD5 50756165a3e142ab3ee5f305751f126e files/digest-giftui-0.4.1 65
 MD5 36442a789cd241e3147198c3a1076c08 files/main.c.diff 503
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB6CrpcAgAdbxYsnERAixQAKCTLh4EOhWqc7bjtKS9udLq/gFBxgCfaiyU
-Vtds6BqCcsYF0T++EebN8OQ=
-=FB/n
+iD8DBQFCnNO+Z/iYVBmujdURAuTAAJsHu6pEsZeTJxfY3R9SWpVfpZ6nfQCfft7T
+/wU5eDK0ohk2UOuXdCyZwig=
+=ptdZ
 -----END PGP SIGNATURE-----
