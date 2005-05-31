@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/avr-libc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.9 2005/05/25 10:20:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.10 2005/05/31 20:00:51 gustavoz Exp $
+
+  31 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/avr-libc-macros.patch, avr-libc-1.2.3.ebuild:
+  Compile fix wrt #94660
 
   25 May 2005; Markus Rothe <corsair@gentoo.org> avr-libc-1.2.3.ebuild:
   Added ~ppc64 to KEYWORDS
