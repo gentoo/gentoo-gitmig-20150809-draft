@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r4.ebuild,v 1.4 2005/05/31 15:36:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r4.ebuild,v 1.5 2005/05/31 16:55:29 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -30,10 +30,11 @@ src_unpack() {
 
 	cd "${S}"
 	sed -i \
-		-e "s:-O2:${CFLAGS}:g" \
+		-e "/^CFLAGS/ s:-O2:${CFLAGS}:g" \
+		-e "/^LDFLAGS/ s:-s:${LDFLAGS}:" \
 		-e "s:install -s:install:" \
-		-e "s:LDFLAGS = -s:LDFLAGS = :" \
-		src/Makefile.in
+		src/Makefile.in \
+		openvt/Makefile
 
 	# Other patches from RH
 	epatch "${FILESDIR}"/${PN}-1.08-terminal.patch
