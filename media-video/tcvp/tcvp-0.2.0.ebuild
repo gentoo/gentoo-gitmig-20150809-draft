@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/tcvp-0.2.0.ebuild,v 1.8 2005/05/28 07:48:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/tcvp-0.2.0.ebuild,v 1.9 2005/05/31 15:18:14 mr_bones_ Exp $
 
 DESCRIPTION="A modular player and encoder/transcoder for music and video."
 HOMEPAGE="http://tcvp.sourceforge.net/"
@@ -39,7 +39,7 @@ src_compile() {
 	use mad || myconf="${myconf} --disable-mad"
 	use mpeg || myconf="${myconf} --disable-mpeg2"
 	if ! use vorbis
-	then 
+	then
 	myconf="${myconf} --disable-vorbis"
 	use ogg || myconf="${myconf} --disable-ogg"
 	fi
