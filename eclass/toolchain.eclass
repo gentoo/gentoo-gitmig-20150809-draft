@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.159 2005/05/28 21:26:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.160 2005/05/31 23:12:01 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -859,6 +859,11 @@ gcc-compiler_src_unpack() {
 gcc-library_src_unpack() {
 	:
 }
+guess_patch_type_in_dir() {
+	[[ -n $(ls "$1"/*.bz2 2>/dev/null) ]] \
+		&& EPATCH_SUFFIX="patch.bz2" \
+		|| EPATCH_SUFFIX="patch"
+}
 gcc_src_unpack() {
 	local release_version="Gentoo ${PVR}"
 
@@ -869,8 +874,16 @@ gcc_src_unpack() {
 
 	cd ${S:=$(gcc_get_s_dir)}
 
-	[[ -n ${PATCH_VER}  ]] && EPATCH_MULTI_MSG="Applying Gentoo patches ..." epatch "${WORKDIR}"/patch
-	[[ -n ${UCLIBC_VER} ]] && EPATCH_MULTI_MSG="Applying uClibc patches ..." epatch "${WORKDIR}"/uclibc
+	if [[ -n ${PATCH_VER}  ]] ; then
+		guess_patch_type_in_dir "${WORKDIR}"/patch
+		EPATCH_MULTI_MSG="Applying Gentoo patches ..." \
+		epatch "${WORKDIR}"/patch
+	fi
+	if [[ -n ${UCLIBC_VER} ]] ; then
+		guess_patch_type_in_dir "${WORKDIR}"/uclibc
+		EPATCH_MULTI_MSG="Applying uClibc patches ..." \
+		epatch "${WORKDIR}"/uclibc
+	fi
 	do_gcc_HTB_boundschecking_patches
 	do_gcc_SSP_patches
 	do_gcc_PIE_patches
@@ -1805,15 +1818,17 @@ do_gcc_PIE_patches() {
 		&& rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-no.patch.bz2 \
 		|| rm -f "${WORKDIR}"/piepatch/*/*-boundschecking-yes.patch.bz2
 
+	guess_patch_type_in_dir "${WORKDIR}"/piepatch/upstream
+
 	# corrects startfile/endfile selection and shared/static/pie flag usage
 	EPATCH_MULTI_MSG="Applying upstream pie patches ..." \
-	epatch ${WORKDIR}/piepatch/upstream
+	epatch "${WORKDIR}"/piepatch/upstream
 	# adds non-default pie support (rs6000)
 	EPATCH_MULTI_MSG="Applying non-default pie patches ..." \
-	epatch ${WORKDIR}/piepatch/nondef
+	epatch "${WORKDIR}"/piepatch/nondef
 	# adds default pie support (rs6000 too) if DEFAULT_PIE[_SSP] is defined
 	EPATCH_MULTI_MSG="Applying default pie patches ..." \
-	epatch ${WORKDIR}/piepatch/def
+	epatch "${WORKDIR}"/piepatch/def
 
 	# we want to be able to control the pie patch logic via something other
 	# than ALL_CFLAGS...
