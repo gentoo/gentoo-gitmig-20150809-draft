@@ -1,6 +1,9 @@
 # ChangeLog for games-action/nighthawk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.8 2005/03/09 17:22:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.9 2005/05/31 09:32:09 cryos Exp $
+
+  31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> nighthawk-2.2.ebuild:
+  Stable on amd64.
 
   09 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> nighthawk-2.2.ebuild:
   added ~amd64 KEYWORD, fixes #84325
