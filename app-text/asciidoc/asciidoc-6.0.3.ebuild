@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-6.0.3.ebuild,v 1.1 2005/05/29 04:06:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-6.0.3.ebuild,v 1.2 2005/05/31 15:19:43 mr_bones_ Exp $
 
 DESCRIPTION="AsciiDoc is a text document format for writing short documents,
 articles, books and UNIX man pages."
@@ -23,7 +23,7 @@ src_install() {
 	doins *.conf
 	doins -r filters
 
-	dodoc BUGS CHANGELOG COPYRIGHT README 
+	dodoc BUGS CHANGELOG COPYRIGHT README
 	dodir /usr/share/doc/${PF}/examples
 	cp -r ${S}/examples ${D}/usr/share/doc/${PF}
 	doman ${S}/doc/asciidoc.1
