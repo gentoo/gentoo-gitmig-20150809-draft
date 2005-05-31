@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5-r1.ebuild,v 1.6 2005/01/01 16:26:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5-r1.ebuild,v 1.7 2005/05/31 21:06:30 wormo Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Motif PostScript viewer loosely based on Ghostview"
 SRC_URI="http://www.trends.net/~mu/srcs/${P}.tar.gz"
 HOMEPAGE="http://www.trends.net/~mu/mgv.html"
 
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
