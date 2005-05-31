@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/htmlgen
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.5 2004/12/30 21:56:18 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.6 2005/05/31 23:44:28 wormo Exp $
+
+  31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  htmlgen-2.2.2.ebuild:
+  mark ~ppc
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
