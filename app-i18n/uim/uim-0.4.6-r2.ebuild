@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r2.ebuild,v 1.1 2005/05/30 21:51:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r2.ebuild,v 1.2 2005/05/31 15:21:03 mr_bones_ Exp $
 
 inherit eutils kde-functions
 
@@ -70,7 +70,7 @@ src_compile() {
 		$(use_with m17n-lib m17nlib)
 		$(use_with canna)
 		$(use_with qt)"
-	
+
 	autoreconf
 	libtoolize --copy --force
 
