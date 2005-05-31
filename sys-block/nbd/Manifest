@@ -1,6 +1,6 @@
 MD5 e15a3f3b52c8e7b7646f4824fdf1aae0 ChangeLog 2208
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 459306acb9adebae600448a4dbed9254 nbd-2.7.3.ebuild 954
+MD5 6ccc31f89d7cbc4f2b959a6b4047014c nbd-2.7.3.ebuild 951
 MD5 dfb4b0cbd303a764e3f261b0e8d31d63 nbd-2.7.2.ebuild 991
 MD5 fd3fb561bafa4b382526a90c675be601 files/digest-nbd-2.7.3 127
 MD5 55671361131ffc00d6ab74e8bebbecbd files/digest-nbd-2.7.2 127
