@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwdata-knoppix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.19 2005/03/29 18:41:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.20 2005/05/31 20:35:17 wolf31o2 Exp $
+
+  31 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -hwdata-knoppix-0.8.ebuild, -hwdata-knoppix-0.95.ebuild:
+  Cleaning up older ebuilds.
 
   29 Mar 2005; Markus Rothe <corsair@gentoo.org>
   hwdata-knoppix-0.107-r1.ebuild:
