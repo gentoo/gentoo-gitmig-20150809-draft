@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.50 2005/05/31 18:52:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.51 2005/05/31 20:05:59 killerfox Exp $
+
+  31 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  mailbase-0.00-r9.ebuild:
+  Stable on hppa.
 
   31 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
   mailbase-0.00-r9.ebuild:
