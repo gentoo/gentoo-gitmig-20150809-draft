@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1199 2005/05/31 21:28:15 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1200 2005/05/31 21:47:19 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -123,8 +123,8 @@ dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/hk_classes:sqlite3 - Enable sqlite3 plugin.
 dev-db/mysql:cluster - Add support for NDB clustering.
-dev-db/mysql:geometry - Add support for geometry data.
 dev-db/mysql:extraengine - Add support for alternative storage engines.
+dev-db/mysql:geometry - Add support for geometry data.
 dev-db/mysql:utf8 - Use UTF8 encoding instead of LATIN1.
 dev-db/pgcluster:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgis:geos - Add the GEOS library for exact topological tests.
@@ -190,9 +190,9 @@ dev-java/quartz:jta - Enable jta support
 dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
+dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/swt:cairo - Enable Cairo rendering backend
 dev-java/swt:firefox - Build the Mozilla Embeded Component against firefox rather than mozilla
-dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/velocity:j2ee - Add j2ee support
 dev-lang/R:blas - Use the blas library. (virtual/blas)
 dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
@@ -223,11 +223,14 @@ dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:v4l2 - Enable video4linux2 support
 dev-libs/qsa:ide - enable the qsa ide
 dev-libs/wx-xmingw:debug_gdb - Enable gdb debugging
-dev-libs/wx-xmingw:shared - Enable shared libs
 dev-libs/wx-xmingw:monolithic - Build a monolithic lib
 dev-libs/wx-xmingw:mslu - Enable mslu support
+dev-libs/wx-xmingw:shared - Enable shared libs
 dev-libs/wxbase:dmalloc - Enable support for the Debug Malloc Library
 dev-lisp/cl-sql:sqlite3 - build support for sqlite3
+dev-lisp/cl-ucw:araneida - use the Araneida web-server backend
+dev-lisp/cl-ucw:aserve - use the Portable Allegro Serve web-server backend
+dev-lisp/cl-ucw:mod_lisp - use the mod_lisp web-server backend
 dev-lisp/cmucl:nosource - don't include source code for CMUCL in installation
 dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl-cvs:dlopen - build a GCL which uses dlopen for linking
@@ -238,9 +241,6 @@ dev-lisp/gcl:dlopen - build a GCL which uses dlopen for linking
 dev-lisp/gcl:gprof - build a GCL with profiling support
 dev-lisp/sbcl:ldb - include support for the SBCL low level debugger
 dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
-dev-lisp/cl-ucw:araneida - use the Araneida web-server backend
-dev-lisp/cl-ucw:mod_lisp - use the mod_lisp web-server backend
-dev-lisp/cl-ucw:aserve - use the Portable Allegro Serve web-server backend
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/ocamlsdl:noimage - Disable sdl-image support
 dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
@@ -505,12 +505,12 @@ media-video/mkvtoolnix:bzip2 - Enables support for bzip2 compression
 media-video/mkvtoolnix:lzo - Enables support for lzo compression
 media-video/motiontrack:libgd - Enables gd library support for debug purposes
 media-video/motiontrack:multiprocess - Enables multi-proccess support (SMP/cluster) for motiontrack programs
-media-video/mpeg4ip:v4l2 - Enable video4linux2 support
-media-video/mpeg4ip:mpeg2 - Support mpeg2 in the player
-media-video/mpeg4ip:lame - Support LAME mp3 encoding in the server/mp4live
 media-video/mpeg4ip:id3 - Support ID3 in the player
-media-video/mpeg4ip:player - Build the player
+media-video/mpeg4ip:lame - Support LAME mp3 encoding in the server/mp4live
 media-video/mpeg4ip:mp4live - Build the live streaming/encoding software
+media-video/mpeg4ip:mpeg2 - Support mpeg2 in the player
+media-video/mpeg4ip:player - Build the player
+media-video/mpeg4ip:v4l2 - Enable video4linux2 support
 media-video/mplayer:3dnowext - Enables 3dnow extensions in mplayer
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cpudetection - Enables runtime cpudetection
@@ -644,11 +644,11 @@ net-im/silc-toolkit:server - Enables silc server
 net-irc/bitchx:cdrom - Enables CD-ROM support
 net-irc/srvx:bahamut - Choose bahamut protocol over p10 protocol
 net-irc/unrealircd:hub - Enable hub support
-net-irc/xchat-xsys:uptimed - Enables optional uptime records through uptimed
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
 net-irc/xchat-xsys:buttons - Enables the buttons near the nickname list
+net-irc/xchat-xsys:uptimed - Enables optional uptime records through uptimed
 net-libs/gecko-sdk:moznomail - Do not compile mail
 net-libs/gecko-sdk:moznoxft - Disable XFT support
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
@@ -666,11 +666,11 @@ net-mail/gnubiff:password - Enable save passwords to connect mail servers in use
 net-mail/hotwayd:smtp - Build SMTP proxy (hotsmtpd)
 net-mail/lbdb:abook - Enables app-misc/abook support
 net-mail/lbdb:finger - Enables finger support
-net-mail/mailman:postfix - Build with delivery options for postfix
-net-mail/mailman:sendmail - Build with delivery options for sendmail
-net-mail/mailman:qmail - Build with delivery options for qmail
 net-mail/mailman:courier - Build with delivery options for courier
 net-mail/mailman:exim - Build with delivery options for exim
+net-mail/mailman:postfix - Build with delivery options for postfix
+net-mail/mailman:qmail - Build with delivery options for qmail
+net-mail/mailman:sendmail - Build with delivery options for sendmail
 net-mail/mailman:xmail - Build with delivery options for xmail
 net-mail/poppassd_ceti:cracklib - Support for cracklib strong password checking
 net-mail/qpopper:mailbox - Enables mail spool file is in home directory ~/Mailbox
@@ -887,8 +887,8 @@ www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vp
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/nut:cgi - Add CGI script support
 www-apps/swish-e:pdf - enable support for exporting to pdf
-www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the repository
 www-apps/viewcvs:cvsgraph - Add cvsgraph support to show graphical views of revisions and branches
+www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the repository
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
 www-client/elinks:lua - enable lua support
 www-client/galeon:firefox - build against firefox instead of mozilla
