@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.27.ebuild,v 1.4 2005/05/31 00:04:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.27.ebuild,v 1.5 2005/05/31 00:08:42 vapier Exp $
 
 inherit eutils
 
@@ -20,10 +20,11 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5"
 
 src_unpack() {
-	unpack ${A} && cd ${S} || die "unpack failed"
+	unpack ${A}
+	cd "${S}"
 	ln -s ../archtable main/archtable
-	epatch ${FILESDIR}/${PN}-1.10.26.patch
-	epatch ${FILESDIR}/${PN}-1.10.27.gcc4.patch
+	epatch "${FILESDIR}"/${PN}-1.10.26.patch
+	epatch "${FILESDIR}"/${PN}-1.10.27.gcc4.patch
 }
 
 src_compile() {
@@ -32,10 +33,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	rm -f ${D}/usr/sbin/install-info
-	rm -f ${D}/usr/bin/md5sum
-	mv ${D}/usr/etc ${D}/
+	make DESTDIR="${D}" install || die
+	rm -f "${D}"/usr/sbin/{install-info,start-stop-daemon}
+	rm -f "${D}"/usr/bin/md5sum
+	mv "${D}"/usr/etc "${D}"/
 	dodoc ChangeLog INSTALL THANKS TODO
 	keepdir /usr/lib/db/methods/{mnt,floppy,disk}
 	keepdir /usr/lib/db/{alternatives,info,methods,parts,updates}

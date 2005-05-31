@@ -1,6 +1,6 @@
 MD5 fe98413cdd1c9d7eb825da2571d6e27d ChangeLog 3724
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 37a33a0ac0727046179c269d1a88b63e dpkg-1.10.27.ebuild 1142
+MD5 c7ed5b9da7812eaea7246641ad1296c1 dpkg-1.10.27.ebuild 1153
 MD5 74ab726dd6bc09fdb24cac5bb933f2f9 files/dpkg-1.10.27.gcc4.patch 1284
 MD5 6316065ab6ab9c129918866cc0c7eec9 files/digest-dpkg-1.10.27 65
 MD5 feb5a11111cc715877cc527c979ef699 files/dpkg-1.10.26.patch 840
