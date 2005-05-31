@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.10.ebuild,v 1.3 2005/05/21 09:31:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.10.ebuild,v 1.4 2005/05/31 12:14:57 herbs Exp $
 
-inherit mono
+inherit mono multilib
 
 MY_P="${P/${PN}/${PN}-2.0}"
 
@@ -21,6 +21,19 @@ DEPEND=">=dev-lang/mono-1.0
 	>=dev-dotnet/gtk-sharp-1.9.2
 	www-client/mozilla"
 
+src_unpack() {
+	unpack ${A}
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e 's:^libdir.*:libdir=@libdir@:' \
+			-e 's:${prefix}/lib:${libdir}:' \
+			-e 's:$(prefix)/lib:$(libdir):' \
+			${S}/{Makefile.*,*.pc.in} || die
+		sed -i -e "s:GACUTIL_FLAGS=.*:GACUTIL_FLAGS=\'/root \$(DESTDIR)\$(libdir) \
+				/package gecko-sharp-2.0 /gacdir \$(DESTDIR)\$(libdir)\':" \
+			${S}/configure* || die
+	fi
+}
+
 src_compile() {
 	econf || die "./configure failed!"
 	emake -j1 || die "emake failed"
@@ -32,6 +45,6 @@ src_install() {
 	mv ${D}/usr/bin/webshot ${D}/usr/bin/webshot-2.0
 	sed -i -e "s:nailer:nailer-2.0:" ${D}/usr/bin/webshot-2.0
 
-	mv ${D}/usr/lib/gecko-sharp/WebThumbnailer.exe \
-		${D}/usr/lib/gecko-sharp/WebThumbnailer-2.0.exe
+	mv ${D}/usr/$(get_libdir)/gecko-sharp/WebThumbnailer.exe \
+		${D}/usr/$(get_libdir)/gecko-sharp/WebThumbnailer-2.0.exe
 }

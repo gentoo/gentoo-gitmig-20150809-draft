@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.6.ebuild,v 1.11 2005/05/16 20:13:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.6.ebuild,v 1.12 2005/05/31 12:14:57 herbs Exp $
 
 inherit mono
 
@@ -16,6 +16,14 @@ IUSE=""
 DEPEND=">=dev-lang/mono-1.0
 	=dev-dotnet/gtk-sharp-1.0*
 	www-client/mozilla"
+
+src_unpack() {
+	unpack ${A}
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e 's:^libdir.*:libdir=@libdir@:' \
+			${S}/*.pc.in || die
+	fi
+}
 
 src_compile() {
 	econf || die "./configure failed!"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.7-r1.ebuild,v 1.2 2005/05/17 15:21:20 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.7-r1.ebuild,v 1.3 2005/05/31 12:14:57 herbs Exp $
 
 inherit mono eutils
 
@@ -23,6 +23,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-1.9.3-compat.diff
+
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e 's:^libdir.*:libdir=@libdir@:' \
+			${S}/*.pc.in || die
+	fi
 }
 
 src_compile() {
@@ -36,6 +41,6 @@ src_install() {
 	mv ${D}/usr/bin/webshot ${D}/usr/bin/webshot-2.0
 	sed -i -e "s:nailer:nailer-2.0:" ${D}/usr/bin/webshot-2.0
 
-	mv ${D}/usr/lib/gecko-sharp/WebThumbnailer.exe \
-		${D}/usr/lib/gecko-sharp/WebThumbnailer-2.0.exe
+	mv ${D}/usr/$(get_libdir)/gecko-sharp/WebThumbnailer.exe \
+		${D}/usr/$(get_libdir)/gecko-sharp/WebThumbnailer-2.0.exe
 }
