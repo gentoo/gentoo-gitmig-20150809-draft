@@ -1,6 +1,13 @@
 # ChangeLog for app-text/enscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.30 2005/02/06 17:56:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.31 2005/05/31 23:42:32 lanius Exp $
+
+*enscript-1.6.4 (31 May 2005)
+
+  31 May 2005; Heinrich Wendel <lanius@gentoo.org>
+  +files/enscript-1.6.3-language.patch, +metadata.xml,
+  +enscript-1.6.4.ebuild:
+  version bump, fix bug #62794
 
   06 Feb 2005; <solar@gentoo.org> -enscript-1.6.3-r1.ebuild,
   -enscript-1.6.3.ebuild:
