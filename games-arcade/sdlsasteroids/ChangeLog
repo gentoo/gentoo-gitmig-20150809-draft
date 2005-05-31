@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/sdlsasteroids
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/ChangeLog,v 1.5 2005/04/14 17:57:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/ChangeLog,v 1.6 2005/05/31 20:58:23 cryos Exp $
+
+  31 May 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  sdlsasteroids-3.0.1.ebuild:
+  Stable on amd64.
 
 *sdlsasteroids-3.0.1 (14 Apr 2005)
 
