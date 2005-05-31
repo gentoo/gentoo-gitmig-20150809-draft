@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.3 2005/05/11 23:22:04 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.4 2005/05/31 23:31:53 stkn Exp $
 
 IUSE="devfs26 bri florz"
 
 inherit toolchain-funcs eutils linux-mod
 
-BRI_VERSION="0.2.0-RC8d"
+BRI_VERSION="0.2.0-RC8g"
 FLORZ_VERSION="0.2.0-RC8a_florz-6"
 
 DESCRIPTION="Drivers for Digium and ZapataTelephony cards"
