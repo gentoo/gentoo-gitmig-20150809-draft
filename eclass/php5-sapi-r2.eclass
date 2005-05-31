@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.7 2005/05/31 21:14:25 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.8 2005/05/31 21:45:13 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -49,6 +49,7 @@ DEPEND="$DEPEND
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( dev-libs/gmp )
 	imap? ( virtual/imap-c-client )
+	iodbc? ( dev-db/libiodbc )
 	jpeg? ( >=media-libs/jpeg-6b )
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
@@ -152,15 +153,9 @@ php5-sapi-r2_check_awkward_uses() {
 		die "recode broken, upstream bug"
 	fi
 
-	# iodbc not available; upstream web site down
+	# iodbc support added by Tim Haynes <gentoo@stirfried.vegetable.org.uk>
 	if useq iodbc ; then
-		eerror
-		eerror "We have not been able to add iodbc support to Gentoo yet, as we"
-		eerror "have experienced difficulties in reaching www.iodbc.org."
-		eerror 
-		eerror "For now, please use the 'odbc' USE flag instead."
-		eerror
-		die "iodbc support incomplete; gentoo bug"
+		enable_extension_with "iodbc" "iodbc" 0 /usr
 	fi
 
 	# Sanity check for Oracle
@@ -358,6 +353,9 @@ php5-sapi-r2_src_unpack() {
 	# hardenedphp support
 
 	use hardenedphp && [ -n "$HARDENEDPHP_PATCH" ] && epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
+
+	# iodbc support
+	use iodbc && epatch ${FILESDIR}/with-iodbc.diff
 
 	# fix configure scripts to recognize uClibc
 	uclibctoolize
