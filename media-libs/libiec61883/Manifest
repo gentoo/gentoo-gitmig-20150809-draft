@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b66d2fd5a69bd155e39cadc3eaf1d7e ChangeLog 589
-MD5 d3f781696d7dfa68ffa08e7f4383efd9 libiec61883-1.0.0.ebuild 766
+MD5 7746cf42c7434a5d9989f908099d6348 ChangeLog 677
+MD5 49c40db903a629fa32441df1b29c9077 libiec61883-1.0.0.ebuild 770
 MD5 71a61d1dff4ca5190061f3c9393d483a metadata.xml 526
 MD5 e56152cf06abdf284d45e397b8d7ec46 files/digest-libiec61883-1.0.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmr1ABtvusYtCZMsRAhK1AJkBpH4nyTgAyN9kBBS4MegjPhbvWQCfamy/
-wQOmpMpQ8Wl99bsryg4YMVQ=
-=1gk/
------END PGP SIGNATURE-----
