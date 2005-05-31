@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/lbdb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.20 2005/05/30 17:31:07 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.21 2005/05/31 11:51:39 ferdy Exp $
+
+  31 May 2005; Fernando J. Pereda <ferdy@gentoo.org> lbdb-0.30.ebuild:
+  Replace gnome with evo use flag (fixes bug #94603) and fix
+  evolution-addressbook-export checking (fixes bug #94602). Thanks to Samuel
+  Tardieu <sam@rfc1149.net>. Stable on alpha
 
   30 May 2005; Fernando J. Pereda <ferdy@gentoo.org> lbdb-0.30.ebuild:
   Stable on x86
