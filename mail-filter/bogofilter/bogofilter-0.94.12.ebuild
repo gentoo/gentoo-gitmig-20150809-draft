@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.12.ebuild,v 1.1 2005/05/18 08:31:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.12.ebuild,v 1.2 2005/05/31 12:02:11 tove Exp $
 
 inherit eutils
 
@@ -14,13 +14,10 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 #KEYWORDS="${KEYWORDS} ~arm ~mips" # missing, see bug #74046
 IUSE="doc gsl"
 
-RDEPEND="virtual/libc
+DEPEND="virtual/libc
 	>=sys-libs/db-3.2
 	gsl? ( sci-libs/gsl )"
 #	app-arch/pax" # only needed for bf_tar
-
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_compile() {
 	local myconf=""

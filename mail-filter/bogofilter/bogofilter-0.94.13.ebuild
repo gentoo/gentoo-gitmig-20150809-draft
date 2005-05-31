@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.11.ebuild,v 1.1 2005/05/11 05:43:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.13.ebuild,v 1.1 2005/05/31 12:02:11 tove Exp $
 
 inherit eutils
 
@@ -12,20 +12,36 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 #KEYWORDS="${KEYWORDS} ~arm ~mips" # missing, see bug #74046
-IUSE="doc gsl"
+IUSE="doc iconv gsl berkdb sqlite"
 
-RDEPEND="virtual/libc
-	>=sys-libs/db-3.2
+DEPEND="virtual/libc
+	iconv? || (
+		sys-libs/glibc
+		dev-libs/libiconv
+	)
+	|| (
+		berkdb? ( >=sys-libs/db-3.2 )
+		sqlite? ( >=dev-db/sqlite-3.2 )
+				  >=sys-libs/db-3.2
+	)
 	gsl? ( sci-libs/gsl )"
 #	app-arch/pax" # only needed for bf_tar
 
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
-
 src_compile() {
 	local myconf=""
-	use !gsl && myconf="--with-included-gsl" # 'without-' doesn't work
+	useq !gsl && myconf="${myconf} --with-included-gsl" # 'without-' doesn't work
 #	myconf="$(use_with !gsl included-gsl)"
+	myconf="${myconf} $(use_enable iconv)"
+
+	# determine backend: berkdb *is* default
+	if useq berkdb && useq sqlite ; then
+		einfo "Both berkdb and sqlite are in USE."
+		einfo "Choosing berkdb as default database backend."
+	elif useq sqlite ; then
+		myconf="${myconf} --with-database=sqlite"
+	elif ! useq berkdb ; then
+		einfo "Using berkdb as database backend."
+	fi
 
 	econf ${myconf} || die "could not configure"
 	emake || die "emake failed"
@@ -44,7 +60,7 @@ src_install() {
 
 	dodoc AUTHORS COPYING INSTALL NEWS README
 	dodoc RELEASE.NOTES* TODO doc/integrating-with-*
-	dodoc GETTING.STARTED doc/README.db
+	dodoc GETTING.STARTED doc/README.{db,sqlite}
 
 	dodir /usr/share/doc/${PF}/samples
 	mv ${D}/etc/* ${D}/usr/share/doc/${PF}/samples/
@@ -57,16 +73,12 @@ src_install() {
 	fi
 }
 
-
 pkg_postinst() {
 	ewarn ""
 	ewarn "Incompatible changes in bogofilter-0.93 and -0.94:"
-	ewarn "Please read the documentation (RELEASE.NOTES, README.db)!"
+	ewarn "Please read the documentation (RELEASE.NOTES)!"
 	ewarn ""
 	einfo ""
 	einfo "If you need ${ROOT}usr/bin/bf_tar please install app-arch/pax."
-	einfo ""
-	einfo "Contributed tools and documentation is in ${ROOT}usr/share/${PN}/contrib"
-	einfo "beside documentation in ${ROOT}usr/share/doc/${PF}."
 	einfo ""
 }
