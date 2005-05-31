@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1-r1.ebuild,v 1.9 2005/05/29 22:29:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1-r1.ebuild,v 1.10 2005/05/31 03:23:50 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -84,7 +84,7 @@ src_compile() {
 	use skey && use alpha && append-ldflags -mlarge-data
 	if use ldap ; then
 		filter-flags -funroll-loops
-		append-ldflags -lldap -llber
+		append-ldflags -lldap
 		append-flags -DWITH_LDAP_PUBKEY
 	fi
 	use selinux && append-flags "-DWITH_SELINUX"
