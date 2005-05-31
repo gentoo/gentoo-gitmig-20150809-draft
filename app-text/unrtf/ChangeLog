@@ -1,6 +1,10 @@
 # ChangeLog for app-text/unrtf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.18 2005/04/21 20:33:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.19 2005/05/31 00:04:36 robbat2 Exp $
+
+  31 May 2005; Robin H. Johnson <robbat2@gentoo.org> unrtf-0.19.0.ebuild,
+  unrtf-0.19.3.ebuild, unrtf-0.19.3-r1.ebuild:
+  Bug #93909 - GNU mirrors seem weird lately, go to gentoo mirrors instead.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> unrtf-0.19.3-r1.ebuild:
   stable on amd64
