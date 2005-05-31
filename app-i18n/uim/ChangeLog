@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.94 2005/05/30 21:51:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.95 2005/05/31 18:33:25 gustavoz Exp $
+
+  31 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> uim-0.4.6-r2.ebuild:
+  Stable on sparc
 
 *uim-0.4.6-r2 (30 May 2005)
 
