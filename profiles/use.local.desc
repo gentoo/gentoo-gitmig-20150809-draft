@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1197 2005/05/31 20:16:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1198 2005/05/31 20:30:14 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -796,7 +796,6 @@ sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/checkpolicy:mls - Add experimental multi level security policy support
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
-sys-apps/kudzu-knoppix:minimal - Builds only libkudzu and updfstab
 sys-apps/lm_sensors:rrdtool - Builds sensord (Needs RRDTool).
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
