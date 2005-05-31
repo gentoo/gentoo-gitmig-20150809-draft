@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 a4d07ec36c63b82b5acf778907e370c7 libgig-2.0.0.ebuild 1007
+MD5 a171cd65cde573cad211dceb82b157ad libgig-2.0.0.ebuild 1010
 MD5 8caf287cba1a431848f2f3ec92357aa0 ChangeLog 286
 MD5 b9775023f1a01bb8d6f08f22e0b02fab files/digest-libgig-2.0.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmk2xvpz1081QvMkRAjLuAJ9ICC0kd2UPOG1xJb1iJTZzAZMOEgCZAbZ5
-al5G152stFpTj95wCP/QItI=
-=a1Xn
------END PGP SIGNATURE-----
