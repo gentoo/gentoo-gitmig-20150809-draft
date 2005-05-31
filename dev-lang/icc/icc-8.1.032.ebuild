@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-8.1.030.ebuild,v 1.3 2005/05/31 19:17:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-8.1.032.ebuild,v 1.1 2005/05/31 19:17:51 karltk Exp $
 
 inherit rpm
 

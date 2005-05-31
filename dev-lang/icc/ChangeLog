@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.24 2005/05/26 22:39:47 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.25 2005/05/31 19:17:51 karltk Exp $
+
+*icc-8.1.032 (31 May 2005)
+
+  31 May 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  files/8.1.030/05icc-ifc, files/8.1.030/icpc, files/8.1.030/icc,
+  +files/8.1.032/05icc-ifc, +files/8.1.032/icc, +files/8.1.032/iccifc.conf,
+  +files/8.1.032/icpc, icc-8.1.030.ebuild, +icc-8.1.032.ebuild:
+  New upstream release. Minor path modifications to script files and 
+  old 8.1.x ebuilds: 8.1 now lives in /opt/intel/compiler81
 
 *icc-8.1.030 (26 May 2005)
 
