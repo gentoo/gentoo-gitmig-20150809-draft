@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.107-r1.ebuild,v 1.4 2005/03/29 18:41:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.107-r1.ebuild,v 1.5 2005/05/31 20:41:02 wolf31o2 Exp $
 
 inherit eutils
 
@@ -24,8 +24,6 @@ src_unpack() {
 
 src_install() {
 	dodoc debian/README.build debian/changelog debian/control debian/copyright debian/mergepcitable
-	dodir /usr/X11R6/lib/X11/
-	ln -s ../../../share/hwdata/Cards ${D}/usr/X11R6/lib/X11/Cards
 	insinto /usr/share/hwdata
 	doins debian/pcitable-knoppix CardMonitorCombos Cards MonitorsDB pci.ids pcitable upgradelist usb.ids
 }
