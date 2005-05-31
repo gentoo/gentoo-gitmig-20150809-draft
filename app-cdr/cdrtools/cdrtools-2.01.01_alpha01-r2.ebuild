@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r2.ebuild,v 1.1 2005/05/30 21:00:00 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r2.ebuild,v 1.2 2005/05/31 10:48:19 pylon Exp $
 
 inherit eutils gnuconfig toolchain-funcs
 
@@ -92,12 +92,11 @@ src_install() {
 	doins include/scg/*.h
 
 	cd ${S}
-	dodoc ABOUT Changelog README README.{ATAPI,audio,cdplus,cdrw,cdtext,cdclone,copy,DiskT@2,linux,linux-shm,multi,parallel,raw,rscsi,sony,verify} START
+	dodoc ABOUT Changelog README README.{ATAPI,audio,cdplus,cdrw,cdtext,clone,copy,DiskT@2,linux,linux-shm,multi,parallel,raw,rscsi,sony,verify} START
 	doman */*.1
 	doman */*.8
 
 	cd ${S}/doc
-	dodoc cdrecord-1.8.1_de-doc_0.1.tar
 	docinto print
 	dodoc *.ps
 }
