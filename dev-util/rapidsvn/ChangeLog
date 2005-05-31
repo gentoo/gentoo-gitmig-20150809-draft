@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.14 2005/03/17 09:54:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.15 2005/05/31 03:55:55 nerdboy Exp $
+
+*rapidsvn-0.6.0-r1 (31 May 2005)
+
+  31 May 2005; Steve Arnold <nerdboy@gentoo.org>
+  +files/svncpp_0.6.1_link.patch, metadata.xml, -rapidsvn-0.6.0.ebuild,
+  +rapidsvn-0.6.0-r1.ebuild:
+  stable x86 was broken and this fixes it (closes bug 55569)
+  dev-tools herd is also adopting this package (but feel free to keep
+  working on stuff or assign bugs to me)
 
 *rapidsvn-0.7.1 (17 Mar 2005)
 
