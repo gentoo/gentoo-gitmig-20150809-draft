@@ -23,7 +23,7 @@
  cat ${SNDHOME}/vm-isunavail.gsm >> ${VMHOME}/${context}/${mailbox}/unavail.gsm
  cat ${SNDHOME}/vm-isonphone.gsm >> ${VMHOME}/${context}/${mailbox}/busy.gsm
 +echo "Changing permissions..."
-+chmod -R asterisk:asterisk ${VMHOME}/${context}
++chown -R asterisk:asterisk ${VMHOME}/${context}
 +chmod    u=rwX,g=rX,o=     ${VMHOME}/${context}/${mailbox}/*.gsm
  echo "Complete."
  

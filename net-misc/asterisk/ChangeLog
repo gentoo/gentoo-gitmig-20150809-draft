@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.55 2005/05/30 03:17:48 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.56 2005/05/31 23:19:56 stkn Exp $
+
+*asterisk-1.0.5-r2 (01 Jun 2005)
+
+  01 Jun 2005; Stefan Knoblich <stkn@gentoo.org>
+  files/1.0.0/asterisk-1.0.7-scripts.diff, files/1.0.0/asterisk.confd.sec,
+  files/1.0.0/asterisk.rc6.sec, +asterisk-1.0.5-r2.ebuild,
+  +asterisk-1.0.6-r1.ebuild, asterisk-1.0.7-r1.ebuild:
+  Minor fixes, non-root changes backported to 1.0.5 and 1.0.6 (still in use)
+  and bristuff update (1.0.7-r1).
 
   29 May 2005; <solar@gentoo.org> asterisk-1.0.1.ebuild,
   asterisk-1.0.2.ebuild, asterisk-1.0.3-r1.ebuild, asterisk-1.0.3.ebuild,

@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.7 2005/05/31 23:19:56 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.6-r1.ebuild,v 1.1 2005/05/31 23:19:56 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 
 inherit eutils perl-module
 
-ADDONS_VERSION="1.0.7"
-BRI_VERSION="0.2.0-RC8g"
+ADDONS_VERSION="1.0.6"
+BRI_VERSION="0.2.0-RC7k"
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
@@ -28,18 +28,18 @@ DEPEND="dev-libs/newt
 	media-sound/sox
 	doc? ( app-doc/doxygen )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	pri? ( >=net-libs/libpri-1.0.7-r1 )
-	bri? ( >=net-libs/libpri-1.0.7-r1
-		>=net-misc/zaptel-1.0.7-r1 )
+	pri? ( >=net-libs/libpri-1.0.3 )
+	bri? ( >=net-libs/libpri-1.0.6
+		>=net-misc/zaptel-1.0.6 )
 	alsa? ( media-libs/alsa-lib )
 	mysql? ( dev-db/mysql )
 	speex? ( media-libs/speex )
-	zaptel? ( >=net-misc/zaptel-1.0.7-r1 )
+	zaptel? ( >=net-misc/zaptel-1.0.3 )
 	postgres? ( dev-db/postgresql )
 	vmdbmysql? ( dev-db/mysql )
 	vmdbpostgres? ( dev-db/postgresql )
 	resperl? ( dev-lang/perl
-		   >=net-misc/zaptel-1.0.7-r1 )"
+		   >=net-misc/zaptel-1.0.3 )"
 
 pkg_setup() {
 	local n
@@ -83,17 +83,12 @@ pkg_setup() {
 		(( n-- ))
 	done
 
-	#
-	# Regular checks
-	#
 	einfo "Running some pre-flight checks..."
 	if use resperl; then
 		# res_perl pre-flight check...
-		if ! $(perl -V | grep -q "usemultiplicity=define") ||\
-		   ! built_with_use perl ithreads || ! built_with_use libperl ithreads
-		then
-			eerror "Embedded perl add-on needs Perl and libperl with built-in threads support"
-			eerror "(rebuild perl and libperl with ithreads use-flag enabled)"
+		if ! $(perl -V | grep -q "usemultiplicity=define"); then
+			eerror "Embedded perl add-on needs Perl with built-in threads support"
+			eerror "(rebuild perl with ithreads use-flag enabled)"
 			die "Perl w/o threads support..."
 		fi
 		einfo "Perl with ithreads support found"
@@ -171,9 +166,11 @@ src_unpack() {
 		epatch ${S_ADDONS}/res_perl/astmake.diff
 
 		# create necessary .c file
-		/usr/bin/perl -MExtUtils::Embed -e xsinit || die "Could not create perlxsi.c"
+		perl -MExtUtils::Embed -e xsinit || die "Could not create perlxsi.c"
 
 		cd ${S_ADDONS}
+		# asterisk-1.0.6 changed two channel functions
+		epatch ${FILESDIR}/1.0.0/${P}-resperl.diff
 
 		# fix perl path, source location and remove res_musiconhold
 		sed -i -e "s:/usr/local/bin/perl:/usr/bin/perl:" \
@@ -183,10 +180,6 @@ src_unpack() {
 		sed -i -e "s:^ASTSRC.*:ASTSRC = ${S}:" \
 			-e "s:\$(ASTLIBDIR)/modules/res_musiconhold.so::" \
 			res_perl/Makefile
-
-		if use bri; then
-			epatch ${FILESDIR}/1.0.0/res_perl-1.0.7-bristuff-0.2.0.diff
-		fi
 
 		cd ${S}
 	fi
@@ -205,6 +198,9 @@ src_unpack() {
 
 	# asterisk-config
 	epatch ${FILESDIR}/1.0.0/${PN}-1.0.5-astcfg-0.0.2.diff
+
+	# fix include path for speex >= 1.1.0
+	epatch ${FILESDIR}/1.0.0/${PN}-1.0.5-speex.diff
 
 	#
 	# database voicemail support
@@ -250,7 +246,6 @@ src_unpack() {
 	if use bri; then
 		cd ${S}
 		einfo "Patching asterisk w/ BRI stuff"
-
 		epatch ${WORKDIR}/bristuff-${BRI_VERSION}/patches/asterisk.patch
 	fi
 
@@ -269,12 +264,12 @@ src_unpack() {
 		Makefile
 
 	# fix contrib scripts for non-root
-	epatch ${FILESDIR}/1.0.0/${P}-scripts.diff
+	epatch ${FILESDIR}/1.0.0/${PN}-1.0.7-scripts.diff
 
 	# add initgroups support to asterisk, this is needed
 	# to support supplementary groups for the asterisk
 	# user (start-stop-daemons --chguid breaks realtime priority support)
-	epatch ${FILESDIR}/1.0.0/${P}-initgroups.diff
+	epatch ${FILESDIR}/1.0.0/${PN}-1.0.7-initgroups.diff
 }
 
 src_compile() {
@@ -283,9 +278,9 @@ src_compile() {
 	cd ${S}
 	emake -j1 || die "Make failed"
 
-	# create api docs
+	# documentation
 	use doc && \
-		emake -j1 progdocs
+		emake -j1 DESTDIR=${D} progdocs
 
 	#
 	# add-ons
@@ -318,10 +313,7 @@ src_install() {
 	keepdir /var/run/asterisk
 
 	# install standard docs...
-	dodoc BUGS CREDITS LICENSE ChangeLog HARDWARE README README.fpm
-	dodoc SECURITY doc/CODING-GUIDELINES doc/linkedlists.README
-	dodoc doc/README.*
-	dodoc doc/*.txt
+	dodoc BUGS CREDITS LICENSE ChangeLog HARDWARE README README.fpm SECURITY
 
 	docinto scripts
 	dodoc contrib/scripts/*
@@ -362,7 +354,7 @@ src_install() {
 		dodir ${VENDOR_LIB}/AstAPIBase
 		for x in AstAPI.pm AstConfig.pm LoadFile.pm PerlSwitch.pm WebServer.pm; do
 			mv ${D}/etc/asterisk/perl/${x} ${D}${VENDOR_LIB}/AstAPI
-			dosed "s/^use[\t ]\+${x/.pm/};/use AstAPI::${x/.pm/};/" /etc/asterisk/perl/asterisk_init.pm
+			dosed "s/^use[\t ]\+${x/.pm/};/use AstAPI::${x/.pm/};/" /etc/asterisk/perl/asterisk_i$
 		done
 		mv ${D}/etc/asterisk/perl/AstAPIBase.pm ${D}${VENDOR_LIB}/AstAPIBase
 		dosed "s/^use[\t ]\+AstAPI;/use AstAPI::AstAPI;/" /etc/asterisk/perl/asterisk_init.pm
