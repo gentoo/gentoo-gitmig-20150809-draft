@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a837d78e95acf8438909ee54cd21059d ChangeLog 1760
+MD5 31638e6b1d04002b474484a0dabc878a ChangeLog 1849
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 bb67d4ff8944fefc796a5be2fcc5977c mythbrowser-0.16.ebuild 700
 MD5 c80a6f56a7f9f0caeac956b9b26f4782 mythbrowser-0.17.ebuild 694
 MD5 33b4fa92c4e816f1c883bfbb34d84357 mythbrowser-0.18.ebuild 1102
-MD5 2133698a27228ec16a0066793d58c834 mythbrowser-0.18.1.ebuild 695
+MD5 9375b2fdbecf87bf51957a1f0eff6d5c mythbrowser-0.18.1.ebuild 699
 MD5 4f2d856645933a3dec782390afa2b4ee files/digest-mythbrowser-0.16 68
 MD5 f833bcdead06b848c384b7e585f0193f files/digest-mythbrowser-0.17 68
 MD5 e994e3c11d65c5762c760d5bb22021da files/digest-mythbrowser-0.18 70
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythbrowser-0.18.1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjaf3BtvusYtCZMsRAnZtAJ9pqAxjsh57TxRSLtoE1pE8YnDwygCfa8ne
-ZdrV9925N0x8M5H3cPwG+GY=
-=sAYR
------END PGP SIGNATURE-----
