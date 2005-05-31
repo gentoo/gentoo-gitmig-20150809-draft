@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ae748a3b35faacb4a3f06cf46941d850 kbd-1.12-r3.ebuild 2237
 MD5 7e57a684b278159a4e52b5c0e20e5580 kbd-1.12-r5.ebuild 2611
 MD5 0bf5e137da932d6f2b13c565427d0bc8 kbd-1.12-r4.ebuild 2381
@@ -15,3 +18,10 @@ MD5 58617e4171ee3357153c9793be062524 files/kbd-1.12-it-euro-map.patch 501
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r3 118
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r4 118
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r5 118
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCnISeI1lqEGTUzyQRAs0bAJ9aVymWF77DUcNC8TPFfwWRtNX8awCeMv9Y
+9ybGsTsNuFYGNzUaeLjPU2A=
+=a70m
+-----END PGP SIGNATURE-----
