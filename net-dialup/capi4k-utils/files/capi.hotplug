@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.7 2005/05/30 18:52:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.8 2005/05/31 19:41:48 genstef Exp $
 
 . /etc/conf.d/capi
 
@@ -151,7 +151,7 @@ case "$ACTION" in
 					beep_error; exit 1
 				fi
 			else
-				syslog "firmware ${FIRMWARE} not found!"
+				syslog "firmware ${FIRMWARE} not found in /lib/firmware!"
 				beep_error; exit 1
 			fi
 		fi
