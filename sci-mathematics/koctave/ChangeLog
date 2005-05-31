@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/koctave
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.5 2005/04/24 14:57:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.6 2005/05/31 04:32:25 cryos Exp $
+
+  31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> koctave-0.65.ebuild:
+  Update homepage and download locations.
 
   24 Apr 2005; Jason Wever <weeve@gentoo.org> koctave-0.65.ebuild:
   Added ~sparc keyword.
