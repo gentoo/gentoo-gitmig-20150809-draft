@@ -1,6 +1,11 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.80 2005/05/11 03:29:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.81 2005/05/31 10:54:14 flameeyes Exp $
+
+  31 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xine-ui-0.99.3-r1.ebuild:
+  Added patch to test for execinfo.h before using it and not depending on just
+  Linux for that (GLIBC on other systems for example). Closes #94572.
 
   11 May 2005; Jason Wever <weeve@gentoo.org> xine-ui-0.99.2.ebuild:
   Stable on SPARC wrt bug #91092.
