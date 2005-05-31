@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.176 2005/05/27 20:25:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.177 2005/05/31 21:37:20 eradicator Exp $
+
+  31 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.8-r4.ebuild, xmms-1.2.10-r13.ebuild, xmms-1.2.10-r14.ebuild,
+  xmms-1.2.10-r15.ebuild:
+  Switch to vorbis USE flag instead of deprecated oggvorbis one.
 
   27 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-1.2.10-r15.ebuild:

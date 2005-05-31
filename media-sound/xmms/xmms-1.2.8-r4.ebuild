@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.22 2005/04/12 03:17:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.23 2005/05/31 21:37:20 eradicator Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="mips"
-IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk gtk2 alsa"
+IUSE="xml nls esd gnome opengl mmx vorbis 3dnow mikmod directfb ipv6 cjk gtk2 alsa"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
@@ -24,7 +24,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	!gtk2? ( gnome? ( <gnome-base/gnome-panel-1.5.0 ) )
 	opengl? ( virtual/opengl )
 	alsa? ( >=media-libs/alsa-lib-0.9.0 )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
+	vorbis? ( >=media-libs/libvorbis-1.0 )"
 
 RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
@@ -120,9 +120,9 @@ src_compile() {
 		--with-dev-dsp=/dev/sound/dsp \
 		--with-dev-mixer=/dev/sound/mixer \
 		`use_with gnome` \
-		`use_enable oggvorbis vorbis` \
-		`use_enable oggvorbis oggtest` \
-		`use_enable oggvorbis vorbistest` \
+		`use_enable vorbis vorbis` \
+		`use_enable vorbis oggtest` \
+		`use_enable vorbis vorbistest` \
 		`use_enable esd` \
 		`use_enable esd esdtest` \
 		`use_enable mikmod` \
