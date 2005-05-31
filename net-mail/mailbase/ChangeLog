@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.49 2005/05/31 07:26:19 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.50 2005/05/31 18:52:52 ticho Exp $
 
   31 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
   mailbase-0.00-r9.ebuild:
@@ -98,7 +98,7 @@
   23 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> mailbase-0.00-r6.ebuild:
   Added to macos.
 
-  07 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> mailbase-0.00-r6.ebuild:
+  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> mailbase-0.00-r6.ebuild:
   Stable on alpha.
 
   01 Apr 2004; <randy@gentoo.org> mailbase-0.00-r6.ebuild:
