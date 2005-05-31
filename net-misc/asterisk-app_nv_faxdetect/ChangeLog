@@ -1,0 +1,13 @@
+# ChangeLog for net-misc/asterisk-app_nv_faxdetect
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_nv_faxdetect/ChangeLog,v 1.1 2005/05/31 13:39:16 stkn Exp $
+
+*asterisk-app_nv_faxdetect-1.0.6 (31 May 2005)
+
+  31 May 2005; Stefan Knoblich <stkn@gentoo.org> +metadata.xml,
+  +files/app_nv_faxdetect-1.0.6-astcfg.diff,
+  +files/app_nv_faxdetect-1.0.6-aststable.diff,
+  +asterisk-app_nv_faxdetect-1.0.6.ebuild:
+  Initial import. Thanks to Josef, Joe Stroller and of course
+  Justin Newman (Newmantelecom).
+
