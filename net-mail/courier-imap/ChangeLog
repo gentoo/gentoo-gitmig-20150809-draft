@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.117 2005/04/09 12:44:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.118 2005/05/31 21:59:58 robbat2 Exp $
+
+*courier-imap-4.0.1-r2 (31 May 2005)
+
+  31 May 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +courier-imap-4.0.1-r2.ebuild:
+  Bug #79240, courier-imap should not provide files for /etc/pam.d/.
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org>
   courier-imap-4.0.1-r1.ebuild:
