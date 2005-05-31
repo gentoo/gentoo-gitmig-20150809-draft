@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.13.ebuild,v 1.1 2005/05/31 12:02:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.13.ebuild,v 1.2 2005/05/31 18:33:57 tove Exp $
 
 inherit eutils
 
@@ -15,9 +15,11 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc iconv gsl berkdb sqlite"
 
 DEPEND="virtual/libc
-	iconv? || (
-		sys-libs/glibc
-		dev-libs/libiconv
+	iconv? (
+		|| (
+			sys-libs/glibc
+			dev-libs/libiconv
+		)
 	)
 	|| (
 		berkdb? ( >=sys-libs/db-3.2 )
