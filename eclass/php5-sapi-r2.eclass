@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.9 2005/05/31 22:00:59 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.10 2005/05/31 22:03:56 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -191,9 +191,12 @@ php5-sapi-r2_check_awkward_uses() {
 
 	enable_extension_with 	"jpeg-dir" 		"jpeg" 		0 "/usr"
 	if useq gd-external ; then
-		enable_extension_with 	"gd" 			"gd-external" 1 "/usr"
+		enable_extension_with	"freetype-dir"	"truetype"	0 "/usr"
+		enable_extension_with	"t1lib"			"truetype"	0 "/usr"
+		enable_extension_enable	"gd-native-ttf"	"truetype" 	0
 		enable_extension_enable	"gd-jis-conf"	"nls" 		0
 		enable_extension_enable	"gd-native-ttf"	"truetype" 	0
+		enable_extension_with 	"gd" 			"gd-external" 1 "/usr"
 	else
 		enable_extension_with	"freetype-dir"	"truetype"	0 "/usr"
 		enable_extension_with	"t1lib"			"truetype"	0 "/usr"
