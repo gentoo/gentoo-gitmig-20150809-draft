@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.65 2005/05/30 19:59:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.66 2005/05/31 15:40:49 swegener Exp $
+
+  31 May 2005; Sven Wegener <swegener@gentoo.org> hdparm-5.7-r1.ebuild,
+  hdparm-5.9.ebuild, hdparm-6.1.ebuild:
+  Let portage handle the stripping of binaries.
 
   30 May 2005; Sven Wegener <swegener@gentoo.org> hdparm-5.7-r1.ebuild:
   Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.

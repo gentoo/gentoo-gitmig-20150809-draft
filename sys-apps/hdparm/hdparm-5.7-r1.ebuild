@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.7-r1.ebuild,v 1.12 2005/05/30 19:59:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.7-r1.ebuild,v 1.13 2005/05/31 15:40:49 swegener Exp $
 
 inherit toolchain-funcs eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	sed -i \
 		-e "/^CC/s:gcc:$(tc-getCC):" \
 		-e "/^CFLAGS/s:-O2:${CFLAGS}:" \
+		-e "/^LDFLAGS/ s:-s:${LDFLAGS}:" \
 		Makefile || die
 }
 

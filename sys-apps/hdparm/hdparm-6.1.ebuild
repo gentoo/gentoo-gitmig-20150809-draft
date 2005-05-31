@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-6.1.ebuild,v 1.2 2005/05/08 23:24:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-6.1.ebuild,v 1.3 2005/05/31 15:40:49 swegener Exp $
 
 inherit toolchain-funcs
 
@@ -18,7 +18,10 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e "/^CFLAGS/s:-O2:${CFLAGS}:" Makefile || die "sed"
+	sed -i \
+		-e "/^CFLAGS/ s:-O2:${CFLAGS}:" \
+		-e "/^LDFLAGS/ s:-s:${LDFLAGS}:" \
+		Makefile || die "sed"
 }
 
 src_compile() {
