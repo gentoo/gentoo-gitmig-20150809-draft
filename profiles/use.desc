@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.246 2005/05/29 02:47:18 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.247 2005/05/31 21:56:44 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -62,7 +62,7 @@ dbmaker - Adds support for dbmaker database server
 dbus - Enable dbus support for anything that needs it (gpsd, gnomemeeting, etc)
 dbx - Adds database abstraction layer
 debug - Tells configure and the makefiles to build for debugging. Effects vary across packages, but generally it will at least add -g to CFLAGS. Remember to set FEATURES=nostrip too
-dedicated - Adds support for dedicated game servers
+dedicated - Adds support for dedicated game servers (some packages do not provide clients and servers at the same time)
 dga - Adds DGA Support (Xfree86) (DGA=Direct Graphic Access)
 diet - Compile and link with dietlibc
 dio - Adds direct i/o support
