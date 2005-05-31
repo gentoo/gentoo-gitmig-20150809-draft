@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.10 2005/04/12 23:49:35 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.11 2005/05/31 09:48:40 gmsoft Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://pari.math.u-bordeaux.fr/pub/pari/unix/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa mips ppc x86"
+KEYWORDS="alpha amd64 hppa mips ppc x86"
 IUSE="doc emacs"
 
 DEPEND="doc? ( virtual/tetex )"
@@ -36,14 +36,19 @@ src_compile() {
 	addwrite "/usr/share/texmf"
 	addwrite "/var/cache/fonts"
 
+	if use hppa
+	then
+		mymake=DLLD\=/usr/bin/gcc\ DLLDFLAGS\=-shared\ -Wl,-soname=\$\(LIBPARI_SONAME\)\ -lm
+	fi
+
 	# Shared libraries should be PIC on ALL architectures.
 	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/31
 	# Fixes BUG #49583
 	einfo "Building shared library..."
 	cd Olinux-* || die "Bad directory. File a BUG!"
-	emake CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" lib-dyn || die "Building shared library failed!"
+	emake ${mymake} CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" lib-dyn || die "Building shared library failed!"
 	einfo "Building executables..."
-	emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building executables failed!"
+	emake ${mymake} CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building executables failed!"
 
 	use doc || rm -rf doc/*.tex
 	use doc && emake doc
