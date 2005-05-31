@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kimdaba
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/ChangeLog,v 1.10 2005/05/15 19:40:47 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/ChangeLog,v 1.11 2005/05/31 23:18:03 cryos Exp $
+
+  31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> kimdaba-2.0.ebuild:
+  Stable on amd64.
 
   15 May 2005; Dominik Stadler <centic@gentoo.org> kimdaba-2.1.ebuild:
   Add fix for translations, see the Bug at
