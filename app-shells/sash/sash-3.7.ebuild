@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.21 2005/04/09 18:47:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.22 2005/05/31 15:23:41 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,10 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="readline"
 
 DEPEND=">=sys-libs/zlib-1.1.4
-	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
+	readline? (
+		>=sys-libs/readline-4.1
+		>=sys-libs/ncurses-5.2
+	)"
 RDEPEND=""
 
 src_unpack() {
@@ -27,7 +30,7 @@ src_unpack() {
 
 	sed -i \
 		-e "s:-O3:${CFLAGS}:" \
-		-e "/^LDFLAGS /s:$: ${LDFLAGS}:" \
+		-e "/^LDFLAGS /s: -s$: ${LDFLAGS}:" \
 		Makefile || die "sed failed"
 }
 
