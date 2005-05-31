@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r1.ebuild,v 1.6 2005/03/01 14:21:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r1.ebuild,v 1.7 2005/05/31 15:31:55 swegener Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -21,10 +21,15 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
 	# cdda_paranoia.h should include cdda_interface_h, else most configure
 	# scripts testing for support fails (gnome-vfs, etc).
 	epatch ${FILESDIR}/${P}-include-cdda_interface_h.patch
 	epatch ${FILESDIR}/${PV}-gcc34.patch
+
+	# Let portage handle the stripping of binaries
+	sed -i -e "/strip cdparanoia/d" Makefile.in
+
 	ln -s configure.guess config.guess
 	ln -s configure.sub config.sub
 	gnuconfig_update

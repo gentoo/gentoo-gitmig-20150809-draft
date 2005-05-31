@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r2.ebuild,v 1.8 2005/05/20 19:57:56 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r2.ebuild,v 1.9 2005/05/31 15:31:55 swegener Exp $
 
 IUSE=""
 
@@ -32,6 +32,9 @@ src_unpack() {
 	# if libdir is specified, cdparanoia causes sandbox violations, and using
 	# einstall doesnt work around it. so lets patch in DESTDIR support
 	epatch ${FILESDIR}/${P}-use-destdir.patch
+
+	# Let portage handle the stripping of binaries
+	sed -i -e "/strip cdparanoia/d" Makefile.in
 
 	ln -s configure.guess config.guess
 	ln -s configure.sub config.sub
