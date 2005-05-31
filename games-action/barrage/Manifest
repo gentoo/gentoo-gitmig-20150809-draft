@@ -1,4 +1,14 @@
-MD5 148e0e2f4d35f3d64b4106672cd6da80 ChangeLog 785
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ce191c7bc3e0bdc20627fd9176b637b5 barrage-1.0.2.ebuild 751
+MD5 a777822d1c5969d03750612308a4181e ChangeLog 876
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a281f82567917f06c6303ce1fd96ace3 barrage-1.0.2.ebuild 756
 MD5 bfef76d7f6301651f1f908f180fa5fa5 files/digest-barrage-1.0.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCnCoGntT9W3vfTuoRAsv/AKCkXytcnMibpuh9PUvtzy4n/PuWuACfZ9z7
+f/6jvfMrFCKf/wePwObEx1g=
+=3uLO
+-----END PGP SIGNATURE-----
