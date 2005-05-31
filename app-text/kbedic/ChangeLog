@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kbedic
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.16 2005/04/15 18:02:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.17 2005/05/31 20:58:47 wormo Exp $
+
+  31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> kbedic-4.0.ebuild:
+  mark ~ppc
 
   15 Apr 2005; Simon Stelling <blubb@gentoo.org> kbedic-4.0.ebuild:
   added ~amd64

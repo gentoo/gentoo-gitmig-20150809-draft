@@ -1,5 +1,5 @@
-MD5 3fa0b93bc7e466b77e2924a0bd964f77 ChangeLog 1914
-MD5 d8d876173658a7d79a94af0e77ba893a kbedic-4.0.ebuild 804
+MD5 ae8cf8b7edfc62a60da7620b1f340745 ChangeLog 2006
+MD5 7604b481859e30eab1a8523f69b66449 kbedic-4.0.ebuild 809
 MD5 2f4ed555da56ae2056e929aba043fde3 metadata.xml 345
 MD5 1b395c5dbddbb7f8c6d2db891b80c3cd files/digest-kbedic-4.0 63
 MD5 dc706f56c46025d45cdf6918bde9fd7e files/kbedic-3.1-gcc3.diff 4009
