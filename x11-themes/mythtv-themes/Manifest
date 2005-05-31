@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a12f98a0fbbe0b9d34ee855bc304d789 ChangeLog 3016
+MD5 841949bd9f998407bb867ca7450958f6 ChangeLog 3101
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 eba645b6a48523272e2a10c6c10886cb mythtv-themes-0.13.ebuild 918
 MD5 9153bf44efc332f62805b4b474512a05 mythtv-themes-0.14.ebuild 868
 MD5 e1dab26889cbe768ca1b4a505db9eeae mythtv-themes-0.15.ebuild 998
 MD5 3f80b2b5ec4fec9e87210ce91c704df5 mythtv-themes-0.17.ebuild 1070
-MD5 151f8af0ebefa7fcf3854312260d778a mythtv-themes-0.18.ebuild 1206
+MD5 84304bf2a782a1ffe0670380cac90482 mythtv-themes-0.18.ebuild 1206
 MD5 8c28d8f082436ae543dc01e0de623419 files/digest-mythtv-themes-0.13 243
 MD5 c7057af4f93c32381e0dfda2bec77ada files/digest-mythtv-themes-0.14 185
 MD5 2baaf5e3f278a24d6403838398c7a633 files/digest-mythtv-themes-0.15 310
 MD5 61db6a17e02f6745a87351bbff2f5215 files/digest-mythtv-themes-0.17 446
 MD5 91b50884e2d65048eeb0d7a135578861 files/digest-mythtv-themes-0.18 515
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCYxyPArHZZzCEUG0RAnRYAJ45jyRXWa3VyAiH6vlSzZiXtFKi8ACfUQXB
-oH+4lhGoyU3h9BLeXnXfy+w=
-=bIFA
------END PGP SIGNATURE-----
