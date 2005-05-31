@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c97b4f642915a0eeaf8ca16bbadd33fa kbd-1.12-r4.ebuild 2343
-MD5 f8fa2f5a2ca5150da98d2fb72303fc3f ChangeLog 6602
-MD5 63c7eb210ae073232511598003383e51 kbd-1.12-r3.ebuild 2200
-MD5 7fd11a6094a1e7b5e3255cfd0d5f40e4 kbd-1.12-r5.ebuild 2573
+MD5 ae748a3b35faacb4a3f06cf46941d850 kbd-1.12-r3.ebuild 2237
+MD5 7e57a684b278159a4e52b5c0e20e5580 kbd-1.12-r5.ebuild 2611
+MD5 0bf5e137da932d6f2b13c565427d0bc8 kbd-1.12-r4.ebuild 2381
+MD5 b3a10d6a10c074d5fc6c87cf9a820205 ChangeLog 6765
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3e2652f1b8451784488b743b6e0dd556 files/kbd-1.12-find-map-fix.patch 957
-MD5 58617e4171ee3357153c9793be062524 files/kbd-1.12-it-euro-map.patch 501
-MD5 d03cdb6117cda1a23cb90b91ab133c3e files/kbd-1.12-alias.patch 1129
-MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r5 118
 MD5 5f28051ad309ee4e481ef3b2b9cc9714 files/kbd-1.12-kbd_repeat-v2.patch 809
-MD5 590a77d26b0b25a4217435ffa8bcd18a files/kbd-1.12-debian.patch 2628
-MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r4 118
-MD5 fa826e223fa8177a8faff98b798cf601 files/kbd-1.12-Meta_utf8.patch 344
+MD5 d03cdb6117cda1a23cb90b91ab133c3e files/kbd-1.12-alias.patch 1129
 MD5 ff84eec635b7a1578ef1284b994f779b files/kbd-1.12-setfont-man.patch 629
-MD5 6e007f04a80358ea81b27c80498a4808 files/kbd-1.08-terminal.patch 925
 MD5 2fff8da17e566c258df2888fbc599c23 files/kbd-1.12-cz-qwerty-map.patch 5821
+MD5 3e2652f1b8451784488b743b6e0dd556 files/kbd-1.12-find-map-fix.patch 957
+MD5 6e007f04a80358ea81b27c80498a4808 files/kbd-1.08-terminal.patch 925
+MD5 590a77d26b0b25a4217435ffa8bcd18a files/kbd-1.12-debian.patch 2628
+MD5 fa826e223fa8177a8faff98b798cf601 files/kbd-1.12-Meta_utf8.patch 344
+MD5 58617e4171ee3357153c9793be062524 files/kbd-1.12-it-euro-map.patch 501
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r3 118
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjKL81ZcsMnZjRyIRAk6CAKCBdd6Ste7QHB0ijQbsh1vZbkYuVACfe5Xt
-blBZnqjEBIx5OMOsfVzmr3E=
-=x5Uw
------END PGP SIGNATURE-----
+MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r4 118
+MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r5 118
