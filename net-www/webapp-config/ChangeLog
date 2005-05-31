@@ -1,6 +1,11 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.82 2005/05/30 22:04:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.83 2005/05/31 08:58:06 stuart Exp $
+
+  31 May 2005; Stuart Herbert <stuart@gentoo.org>
+  webapp-config-1.10-r12.ebuild, webapp-config-1.10-r14.ebuild:
+  Urgh - seeing as -r14 just won't go away, I've removed the broken patches
+  from it (effectively making it the same as -r12)
 
   30 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   +files/webapp-config_fixperms.patch,

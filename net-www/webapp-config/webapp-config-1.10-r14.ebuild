@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r14.ebuild,v 1.11 2005/05/30 22:04:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r14.ebuild,v 1.12 2005/05/31 08:58:06 stuart Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 	# Have webapp-config fixup permissions on site and document root directories
 	# that are/have previously been installed with mode 777 (word-writable).
 	# Bugs #88831 and #87708.
-	epatch ${FILESDIR}/webapp-config_fixperms.patch
+	# epatch ${FILESDIR}/webapp-config_fixperms.patch
 
 	# Improve temporary file handling code with the use of mktemp(1), bug
 	# #91785.
