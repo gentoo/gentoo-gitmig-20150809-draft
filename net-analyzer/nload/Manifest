@@ -1,4 +1,14 @@
-MD5 170e43e985e30afe914dcdcb3956978b nload-0.6.0.ebuild 631
-MD5 8fdcb97c1c663fe7b0c6ab7d96f0a5af ChangeLog 2601
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3ad4869b2ae472e48f9e875b36db8841 nload-0.6.0.ebuild 626
+MD5 7a806729fbf89a71dacaedd455d66838 ChangeLog 2689
 MD5 973561a9f8af7319f312cc6cc86873fb metadata.xml 342
 MD5 87062647c5d50c2924833ed2e4cff7a4 files/digest-nload-0.6.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCnPGHntT9W3vfTuoRAjMJAKC2Bwi242rkBklF4ZXzcirGzs3GFwCeNW/H
+4N7S/gaITOzlcYiE0YoZIHQ=
+=lwfr
+-----END PGP SIGNATURE-----
