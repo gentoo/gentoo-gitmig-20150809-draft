@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.15 2005/05/31 03:55:55 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.16 2005/05/31 06:28:27 nerdboy Exp $
+
+*rapidsvn-0.8.0 (31 May 2005)
+
+  31 May 2005; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.7.0.ebuild,
+  rapidsvn-0.7.1.ebuild, +rapidsvn-0.8.0.ebuild:
+  all newer versions fixed (really fixes bug 62724) and version bump (bug 90895)
+  time to start stablizin'!
 
 *rapidsvn-0.6.0-r1 (31 May 2005)
 
