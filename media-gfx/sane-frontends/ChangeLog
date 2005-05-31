@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-frontends
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.27 2005/05/30 13:03:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.28 2005/05/31 05:57:46 phosphan Exp $
+
+  31 May 2005; Patrick Kursawe <phosphan@gentoo.org>
+  sane-frontends-1.0.13.ebuild:
+  Fixing yesterday's fix.
 
   30 May 2005; Patrick Kursawe <phosphan@gentoo.org>
   -sane-frontends-1.0.11.ebuild, -sane-frontends-1.0.12.ebuild,
