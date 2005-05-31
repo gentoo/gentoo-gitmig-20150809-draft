@@ -1,6 +1,9 @@
 # ChangeLog for games-action/xpilot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/ChangeLog,v 1.7 2005/03/06 15:07:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/ChangeLog,v 1.8 2005/05/31 09:21:49 cryos Exp $
+
+  31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> xpilot-4.5.4.ebuild:
+  Stable on amd64.
 
   06 Mar 2005; Danny van Dyk <kugelfang@gentoo.org> xpilot-4.5.4.ebuild:
   Marked ~amd64.
