@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.94 2005/05/27 06:49:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.95 2005/05/31 18:59:42 wolf31o2 Exp $
+
+  31 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/opengl-update-2.2.1:
+  Added livecd check from spyderous. Since this only affects livecd users, the
+  version/revision has not been changed.
 
   27 May 2005; Joseph Jezak <josejx@gentoo.org> opengl-update-2.2.1.ebuild:
   Marked ppc stable.

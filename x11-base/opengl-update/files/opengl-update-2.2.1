@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.2.1,v 1.2 2005/04/27 21:45:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.2.1,v 1.3 2005/05/31 18:59:42 wolf31o2 Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -31,9 +31,18 @@ check_user() {
 }
 
 check_version() {
-	if ! portageq has_version / '>=x11-base/xorg-x11-6.8.0-r4'; then
-		eerror "This version requires >=x11-base/xorg-x11-6.8.0-r4"
-		exit 1
+	# Don't die if we're booting from CD, since we probably lack portageq
+	for opt in $(</proc/cmdline); do
+		case ${opt} in
+			cdroot) local cdroot="true" ;;
+		esac
+	done
+
+	if [[ -z "${cdroot}" ]]; then
+		if ! portageq has_version / '>=x11-base/xorg-x11-6.8.0-r4'; then
+			eerror "This version requires >=x11-base/xorg-x11-6.8.0-r4"
+			exit 1
+		fi
 	fi
 }
 
