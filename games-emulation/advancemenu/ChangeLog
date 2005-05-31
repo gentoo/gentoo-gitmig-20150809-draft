@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/advancemenu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.16 2005/05/25 22:29:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.17 2005/05/31 19:08:11 mr_bones_ Exp $
+
+  31 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  advancemenu-2.4.9.ebuild:
+  fix install with fb or svga (bug #94313)
 
 *advancemenu-2.4.9 (25 May 2005)
 

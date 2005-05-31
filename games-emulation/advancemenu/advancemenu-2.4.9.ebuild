@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.9.ebuild,v 1.1 2005/05/25 22:29:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.9.ebuild,v 1.2 2005/05/31 19:08:11 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -56,10 +56,11 @@ src_compile() {
 
 src_install() {
 	dogamesbin advmenu || die "dogamesbin failed"
-	if use fbcon || use svga ; then
-		dogamesbin advcfg advv || die "dogamesbin failed"
-		doman doc/{advcfg,advv}.1
-	fi
+	# I think it will work like this eventually...(bug #94313)
+	#if use fbcon || use svga ; then
+		#dogamesbin advcfg advv || die "dogamesbin failed"
+		#doman doc/{advcfg,advv}.1
+	#fi
 	dodoc HISTORY README RELEASE doc/*.txt
 	doman doc/{advmenu,advdev}.1
 	dohtml doc/*.html
