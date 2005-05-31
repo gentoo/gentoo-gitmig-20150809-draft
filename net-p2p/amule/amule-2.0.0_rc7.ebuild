@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc7.ebuild,v 1.2 2005/03/12 15:18:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc7.ebuild,v 1.3 2005/05/31 21:26:01 sekretarz Exp $
 
-inherit wxwidgets
+inherit wxwidgets eutils
 
 MY_P=${P/m/M}
 MY_P=${MY_P/_/}
@@ -50,6 +50,13 @@ pkg_setup() {
 			need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
 		fi
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-wxgtk.patch
 }
 
 src_compile() {
