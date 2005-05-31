@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1200 2005/05/31 21:47:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1201 2005/05/31 21:55:15 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -870,6 +870,7 @@ sys-libs/pam:pam_chroot - Builds the pam_chroot module (enables per-user chroots
 sys-libs/pam:pam_console - Builds the pam_console module (enables per-user device permissions for console user)
 sys-libs/pam:pam_timestamp - Builds the pam_timestamp module (enables recent successful attempt authentication)
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
+sys-libs/uclibc:wordexp - add support for word expansion (wordexp.h)
 sys-libs/uclibc:xattr - enables extended attributes
 sys-power/apcupsd:cgi - Add CGI script support
 sys-process/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
