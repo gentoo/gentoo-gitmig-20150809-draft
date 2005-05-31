@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pylize
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.6 2005/01/02 22:43:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.7 2005/05/31 23:42:49 wormo Exp $
+
+  31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  pylize-1.1b.ebuild:
+  mark ~ppc, install README file
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
