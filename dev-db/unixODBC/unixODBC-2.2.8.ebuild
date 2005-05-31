@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.18 2005/05/28 22:59:27 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.19 2005/05/31 15:18:56 mr_bones_ Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -45,7 +45,7 @@ src_compile() {
 
 	# Fix multilib-strict BUG #94262
 	myconf="${myconf} --libdir=\${exec_prefix}/$(get_libdir)"
-	
+
 	# Detect mips systems properly
 	gnuconfig_update
 
