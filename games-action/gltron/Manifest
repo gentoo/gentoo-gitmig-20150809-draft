@@ -1,4 +1,14 @@
-MD5 e958e05c04edbc7036f6a1efaaa55441 ChangeLog 1982
-MD5 224fad5f72702d919f789c9eb791f5e9 gltron-0.70.ebuild 713
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d129a128e2bf47e99838dec084e05b5e ChangeLog 2073
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 9c560e56d6af2e49b9efdc50635985a6 gltron-0.70.ebuild 708
 MD5 e609d589da3c307eeae20a7b515cb920 files/digest-gltron-0.70 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCnI4untT9W3vfTuoRAv1zAJ9FTvN68ysu9kbz4y761id2swPFwgCgnDBt
+m2OjlsYn9FypGl4MVFfpqeA=
+=cpEV
+-----END PGP SIGNATURE-----
