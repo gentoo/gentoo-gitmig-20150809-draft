@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 01890f75628fc527c3ea97f7a1e46932 ChangeLog 1093
+MD5 e8a2bae31b0aa908cbb788752d0efa76 ChangeLog 1180
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 d6660ef12c48f83da964d4f1069a311b mythphone-0.16.ebuild 739
 MD5 23182c4cb930e22179a4bda7403a768d mythphone-0.17.ebuild 656
 MD5 b7bfb724675487036102961c438cbe07 mythphone-0.18.ebuild 707
-MD5 52528f2b934c49baead26b6bdc4e076f mythphone-0.18.1.ebuild 566
+MD5 5966a75926da27526937b4f1a6c5a9c3 mythphone-0.18.1.ebuild 570
 MD5 bf30357411353ae10a9bafe9186a9fe8 files/digest-mythphone-0.16 67
+MD5 c8a5b3151324b04836f22f4d9586c498 files/mythphone-0.16-include.patch 242
 MD5 f817c793f79edc3d5ab358874d1ebe74 files/digest-mythphone-0.17 67
 MD5 e994e3c11d65c5762c760d5bb22021da files/digest-mythphone-0.18 70
-MD5 c8a5b3151324b04836f22f4d9586c498 files/mythphone-0.16-include.patch 242
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythphone-0.18.1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjalPBtvusYtCZMsRAmtMAKCC6B2GFJZFEYrTUnM5hrfIbnnJyACfc0bb
-HoTy+or+8hkUTxam/SSvtDY=
-=Oerc
------END PGP SIGNATURE-----
