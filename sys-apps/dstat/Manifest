@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 f12be370199a4beb6b44d52209e8634a dstat-0.6.0.ebuild 1058
 MD5 11a26aa053bed39cd5afe832318250a0 dstat-0.5.10.ebuild 856
-MD5 b0a07db3e8a5e5e6cfdc2bb88f3d72e2 ChangeLog 1682
+MD5 b711e5163ca245a9aadfb02d0dfce9d0 ChangeLog 1798
 MD5 ffa68eb3467e3f5612b56c42288a9fb6 metadata.xml 876
+MD5 848b9935dac0ed2a49a059a7a870bb19 files/digest-dstat-0.6.0 63
 MD5 cb6a0edb301cf08a210b0ec03094eac4 files/digest-dstat-0.5.10 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFCiNnJI1lqEGTUzyQRAhYCAJiABX/Ok0w2ZXhgYsAcZh/B4QKHAKClL9jF
-Xcl9r8XRtvlDsoqYkYgSFg==
-=GAlX
+iD8DBQFCnNgmI1lqEGTUzyQRAsWJAJ9GEhjyh+umhMjq22kawGaJ94lrgQCg3r9f
+wgiN5ZjTdN5AWiooHfXZyLc=
+=M7Et
 -----END PGP SIGNATURE-----
