@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.27 2005/03/13 08:11:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.28 2005/05/31 15:18:54 swegener Exp $
+
+  31 May 2005; Sven Wegener <swegener@gentoo.org> unzip-5.50-r2.ebuild,
+  unzip-5.52.ebuild:
+  Let portage handle the stripping of binaries.
 
 *unzip-5.52 (13 Mar 2005)
 
