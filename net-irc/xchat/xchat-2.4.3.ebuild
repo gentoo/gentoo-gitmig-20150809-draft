@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.3.ebuild,v 1.8 2005/05/11 07:47:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.3.ebuild,v 1.9 2005/05/31 18:32:25 herbs Exp $
 
 inherit flag-o-matic eutils versionator
 
@@ -37,6 +37,12 @@ src_unpack() {
 	cd ${S}
 
 	use xchatdccserver && epatch ${DISTDIR}/xchat-dccserver-0.4.patch
+
+	# use libdir/xchat/plugins as the plugin directory
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e 's:${prefix}/lib/xchat:${libdir}/xchat:' \
+			${S}/configure{,.in} || die
+	fi
 }
 
 src_compile() {
