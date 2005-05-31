@@ -24,6 +24,7 @@ interbase
 
 i8x0
 xvmc
+nvidia
 
 # Unmask our instruction sets
 -altivec
