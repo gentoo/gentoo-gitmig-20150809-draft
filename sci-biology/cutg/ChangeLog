@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/cutg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.11 2005/05/10 01:50:33 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.12 2005/05/31 02:37:16 j4rg0n Exp $
+
+  31 May 2005; Lina Pezzella <j4rg0n@gentoo.org> cutg-145.ebuild:
+  Stable ppc-macos
 
 *cutg-146 (10 May 2005)
 
