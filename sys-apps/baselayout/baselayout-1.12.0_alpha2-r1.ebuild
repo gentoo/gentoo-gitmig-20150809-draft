@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_alpha2-r1.ebuild,v 1.5 2005/05/30 02:55:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_alpha2-r1.ebuild,v 1.6 2005/05/31 22:52:32 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="bootstrap build static"
+IUSE="bootstrap build static unicode"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
@@ -24,14 +24,15 @@ IUSE="bootstrap build static"
 RDEPEND=">=sys-apps/sysvinit-2.84
 	!build? ( !bootstrap? (
 		>=sys-libs/readline-5.0-r1
-		>=app-shells/bash-3.0-r7
+		>=app-shells/bash-3.0-r10
+		>=sys-apps/coreutils-5.2.1
 	) )"
 DEPEND="virtual/os-headers"
 PROVIDE="virtual/baselayout"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Moved to sys-apps/util-linux
 	rm -f etc/conf.d/crypto-loop init.d/crypto-loop
@@ -43,6 +44,11 @@ src_unpack() {
 	# Bring net-scripts upto CVS 2005-04-26
 	# This fixes a few things, but mainly adds support for wpa_supplicant-0.4.0
 	epatch ${FILESDIR}/baselayout-1.12.0-alpha2-netscripts-1.patch
+
+	# setup unicode defaults for silly unicode users
+	if use unicode ; then
+		sed -i -e '/^UNICODE=/s:no:yes:' etc/rc.conf
+	fi
 
 	# Fix Sparc specific stuff
 	if [[ $(tc-arch) == "sparc" ]] ; then
@@ -173,14 +179,14 @@ src_install() {
 	kdir ${rcscripts_dir}/sh
 	kdir ${rcscripts_dir}/net.modules.d
 	kdir ${rcscripts_dir}/net.modules.d/helpers.d
-	kdir /mnt
-	# Only install floppy and cdrom when first installing - fixes 88835
+	# Only install /mnt stuff at bootstrap time #88835 / #90022
 	if use build ; then
+		kdir /mnt
 		kdir -m 0700 /mnt/cdrom
 		kdir -m 0700 /mnt/floppy
 	fi
 	kdir /opt
-	kdir -o root -g uucp -m0755 /var/lock
+	kdir -o root -g uucp -m0775 /var/lock
 	kdir /proc
 	kdir -m 0700 /root
 	kdir /sbin
@@ -196,7 +202,7 @@ src_install() {
 	kdir /usr/local/share/doc
 	kdir /usr/local/share/man
 	kdir /usr/local/src
-	kdir /usr/portage
+	kdir ${PORTDIR}
 	kdir /usr/sbin
 	kdir /usr/share/doc
 	kdir /usr/share/info
@@ -259,8 +265,6 @@ src_install() {
 	doins ${S}/etc/modules.autoload.d/*
 	insinto /etc/modules.d
 	doins ${S}/etc/modules.d/*
-	insinto /etc/skel
-	find ${S}/etc/skel -maxdepth 1 -type f -print0 | xargs --null doins
 
 	# Special-case uglyness... For people updating from lib32 -> lib amd64
 	# profiles, keep lib32 in the search path while it's around
@@ -280,9 +284,6 @@ src_install() {
 
 	# Stash the rc-lists for use during pkg_postinst
 	cp -r "${S}"/rc-lists "${D}"/usr/share/baselayout
-
-	# uclibc doesn't need nsswitch.conf... added by solar
-	use elibc_uclibc && rm -f ${D}/etc/nsswitch.conf
 
 	# rc-scripts version for testing of features that *should* be present
 	echo "Gentoo Base System version ${SV}" > ${D}/etc/gentoo-release
