@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.22 2005/05/28 07:02:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.23 2005/05/31 05:51:33 joker Exp $
+
+  31 May 2005; Christian Birchinger <joker@gentoo.org>
+  pax-utils-0.0.7.ebuild:
+  Added sparc stable keyword
 
 *pax-utils-0.0.9 (28 May 2005)
 

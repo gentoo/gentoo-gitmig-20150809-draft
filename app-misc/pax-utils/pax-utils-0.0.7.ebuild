@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.0.7.ebuild,v 1.2 2005/05/15 22:21:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.0.7.ebuild,v 1.3 2005/05/31 05:51:33 joker Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/pax-utils-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~mips ~sparc ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE="caps"
 
 DEPEND="virtual/libc
