@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7.ebuild,v 1.2 2005/02/07 22:06:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7.ebuild,v 1.3 2005/05/31 22:49:41 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="pam selinux nls skey"
 
 RDEPEND=">=sys-libs/cracklib-2.7-r3
