@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.6 2005/05/22 09:06:58 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.7 2005/05/31 21:14:25 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -32,7 +32,7 @@ if [ "${PHP_PACKAGE}" = 1 ]; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hardenedphp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="$DEPEND
@@ -58,7 +58,8 @@ DEPEND="$DEPEND
 	mime? ( sys-apps/file )
 	ming? ( media-libs/ming )
 	mssql? ( dev-db/freetds )
-	mysql? ( >=dev-db/mysql-3.23.26 )
+	mysql? ( =dev-db/mysql-4.0* )
+	mysqli? ( >=dev-db/mysql-4.1.12 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
@@ -84,7 +85,7 @@ DEPEND="$DEPEND
 	zlib? ( sys-libs/zlib ) "
 
 # this would be xml2?, but PEAR requires XML support
-# and we always want to build PEAR.
+# this can become a USE flag when Gentoo bug #2272 has been resolved
 DEPEND="$DEPEND
 		dev-libs/libxml2"
 
@@ -97,6 +98,19 @@ PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install"
 
 PHP_INI_DIR="/etc/php/${PHPSAPI}-php5"
 PHP_INI_FILE="php.ini"
+
+# ========================================================================
+# Hardened-PHP Support
+# ========================================================================
+#
+# I've done it like this so that we can support different versions of
+# the patch for different versions of PHP
+
+case "$PV" in
+	5.0.4) HARDENEDPHP_PATCH="hardened-php-$PV-0.2.7.patch.gz" ;;
+esac
+
+[ -n "$HARDENEDPHP_PATCH" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/$HARDENEDPHP_PATCH )"
 
 # ========================================================================
 
@@ -118,15 +132,16 @@ php5-sapi-r2_check_awkward_uses() {
 		die "snmp support doesn't compile"
 	fi
 
-	# mysqli support isn't possible yet
+	# mysqli support is enabled for now, but if it proves a problem,
+	# I'm switching it off again
 
-	if useq mysqli ; then
-		eerror
-		eerror "We currently do not support the mysqli extension"
-		eerror "Support will be added once MySQL 4.1 has been added to Portage"
-		eerror
-		die "mysqli not supported yet"
-	fi
+	# if useq mysqli ; then
+	#	eerror
+	#	eerror "We currently do not support the mysqli extension"
+	#	eerror "Support will be added once MySQL 4.1 has been added to Portage"
+	#	eerror
+	#	die "mysqli not supported yet"
+	# fi
 
 	# recode not available in 5.0.0; upstream bug
 	if useq recode && [ "$PHP_PV" == "5.0.0" ]; then
@@ -242,11 +257,11 @@ php5-sapi-r2_check_awkward_uses() {
 	fi
 
 	if useq mysql; then
-		enable_extension_with		"mysql"			"mysql"			1 
+		enable_extension_with		"mysql"			"mysql"			1 "/usr/lib/mysql"
 		enable_extension_with		"mysql-sock"	"mysql"			0 "/var/run/mysqld/mysqld.sock"
 	fi
 	if useq mysqli; then
-		enable_extension_with		"mysqli"		"mysqli"		1
+		enable_extension_with		"mysqli"		"mysqli"		1 "/usr/bin/mysql_config"
 	fi
 
 	# QDBM doesn't play nicely with GDBM _or_ DBM
@@ -339,6 +354,10 @@ php5-sapi-r2_src_unpack() {
 	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
 		sed -i.orig -e 's,-i -a -n php5,-i -n php5,g' $i
 	done
+
+	# hardenedphp support
+
+	use hardenedphp && [ -n "$HARDENEDPHP_PATCH" ] && epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
 
 	# fix configure scripts to recognize uClibc
 	uclibctoolize
