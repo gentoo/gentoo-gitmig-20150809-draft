@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.6 2005/02/21 02:43:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.7 2005/06/01 00:41:01 lanius Exp $
 
 inherit eutils
 
@@ -88,7 +88,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "You might want to emerge app-admin/mtools for photo-card support."
+	einfo "You might want to emerge sys-fs/mtools for photo-card support."
 	echo
 	einfo "You might want to emerge net-print/hpijs for better printing quality."
 	echo
