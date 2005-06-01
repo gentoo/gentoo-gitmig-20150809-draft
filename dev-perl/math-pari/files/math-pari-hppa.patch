@@ -1,0 +1,12 @@
+diff -uNr Math-Pari-2.010603.old/utils/Math/PariBuild.pm Math-Pari-2.010603/utils/Math/PariBuild.pm
+--- Math-Pari-2.010603.old/utils/Math/PariBuild.pm	2005-06-01 09:54:01.000000000 +0200
++++ Math-Pari-2.010603/utils/Math/PariBuild.pm	2005-06-01 09:54:33.000000000 +0200
+@@ -712,6 +712,8 @@
+   } elsif ($os eq 'linux') {
+     chomp($machine = `uname -m`);
+     $machine = 'sparcv9' if $machine eq 'sparc64';
++    $machine = 'hppa' if $machine eq 'parisc';
++    $machine = 'hppa' if $machine eq 'parisc64';
+     if (-e '/proc/cpuinfo') {
+       open IN, '/proc/cpuinfo' or die "open /proc/cpuinfo: $!";
+       local $/ = undef;		# Needed?

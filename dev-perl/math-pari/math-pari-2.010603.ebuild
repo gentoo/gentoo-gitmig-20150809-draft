@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010603.ebuild,v 1.3 2005/05/18 17:19:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010603.ebuild,v 1.4 2005/06/01 08:28:27 gmsoft Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 MY_P="Math-Pari-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/I/IL/ILYAZ/modules/${MY_P}.tar.gz
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha ~hppa ~amd64 ~mips"
+KEYWORDS="x86 ~ppc ~alpha hppa ~amd64 ~mips"
 IUSE=""
 
 SRC_TEST="do"
@@ -23,3 +23,8 @@ SRC_TEST="do"
 # it does need to be the same version as is installed, hence the hard
 # DEPEND below
 DEPEND="~sci-mathematics/pari-2.1.6"
+
+src_unpack () {
+	unpack ${A}
+	epatch ${FILESDIR}/${PN}-hppa.patch
+}
