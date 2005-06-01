@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.1.ebuild,v 1.1 2005/05/27 08:59:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.1.ebuild,v 1.2 2005/06/01 09:07:23 greg_g Exp $
 
 inherit kde
 
@@ -34,6 +34,10 @@ pkg_setup() {
 		echo
 		die
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
 }
 
 src_compile() {
