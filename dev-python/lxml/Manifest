@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d5b2ada2082a9e859dab7a9b7d6d9726 ChangeLog 376
+MD5 937de478dd8126a7e01b5a4c5f6444f6 lxml-0.6.ebuild 1101
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 415567e1fbba918281e869680c0d4b58 files/digest-lxml-0.6 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCngLH2jLqHNfbg2URAtdbAJ9DZSu4x/ivFOpLNGweu1Se5sQz3ACg1Rbt
+XyBE0FJqHiw5aX5UXiUxrkk=
+=Eq+t
+-----END PGP SIGNATURE-----
