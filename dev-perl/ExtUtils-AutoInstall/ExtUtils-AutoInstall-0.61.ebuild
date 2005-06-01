@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ExtUtils-AutoInstall-0.61.ebuild,v 1.4 2005/05/01 17:21:05 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ExtUtils-AutoInstall-0.61.ebuild,v 1.5 2005/06/01 21:08:14 mcummings Exp $
 
 IUSE=""
 
@@ -14,7 +14,8 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ~ppc sparc alpha"
 
-SRC_TEST="do"
+# TESTS BAD. Wants to write to cpan's config on the live system
+#SRC_TEST="do"
 
 DEPEND="dev-perl/Sort-Versions"
 
