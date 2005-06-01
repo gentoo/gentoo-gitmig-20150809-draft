@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.10 2005/05/31 22:03:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.11 2005/06/01 21:01:49 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -136,13 +136,13 @@ php5-sapi-r2_check_awkward_uses() {
 	# mysqli support is enabled for now, but if it proves a problem,
 	# I'm switching it off again
 
-	# if useq mysqli ; then
-	#	eerror
-	#	eerror "We currently do not support the mysqli extension"
-	#	eerror "Support will be added once MySQL 4.1 has been added to Portage"
-	#	eerror
-	#	die "mysqli not supported yet"
-	# fi
+	if useq mysqli ; then
+		eerror
+		eerror "We currently do not support the mysqli extension"
+		eerror "Support will be added once MySQL 4.1 is no longer package-masked"
+		eerror
+		die "mysqli not supported yet"
+	 fi
 
 	# recode not available in 5.0.0; upstream bug
 	if useq recode && [ "$PHP_PV" == "5.0.0" ]; then
