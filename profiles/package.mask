@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4038 2005/06/01 18:10:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4039 2005/06/01 19:58:13 trapni Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Christian Parpart <trapni@gentoo.org> (1 Jun 2005)
+# Masked for testing
+>www-apps/trac-0.8.2
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (1 Jun 2005)
 # Masked for testing
