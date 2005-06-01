@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1201 2005/05/31 21:55:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1202 2005/06/01 00:43:58 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -27,7 +27,6 @@ app-arch/pdv:nomotif - Disable motif frontend.
 app-cdr/k3b:css - Enables ripping of encrypted dvds
 app-cdr/k3b:musepack - Enable support for musepack files
 app-cdr/ogmrip:subp - Subtitle ripping preliminary support
-app-crypt/gnupg:bzip2 - use transparent bzip2 compression
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gpgme:smime - Add smime support
@@ -320,7 +319,6 @@ games-strategy/wesnoth:lite - Lite install
 games-strategy/wesnoth:nomusic - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
-games-util/xqf:bzip2 - use bzip2 for data compression
 gnome-extra/evolution-data-server:nntp - Add suppoort fot nntp
 gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
@@ -501,7 +499,6 @@ media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telep
 media-video/kmplayer:koffice-plugin - Install KOffice part
 media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
-media-video/mkvtoolnix:bzip2 - Enables support for bzip2 compression
 media-video/mkvtoolnix:lzo - Enables support for lzo compression
 media-video/motiontrack:libgd - Enables gd library support for debug purposes
 media-video/motiontrack:multiprocess - Enables multi-proccess support (SMP/cluster) for motiontrack programs

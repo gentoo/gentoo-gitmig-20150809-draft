@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.247 2005/05/31 21:56:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.248 2005/06/01 00:43:58 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -38,7 +38,7 @@ bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
 bootstrap - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during original system bootstrapping
 boundschecking - add bounds checking patch by Haj Ten Brugge, this will DISABLE the hardened PIE+SSP patches
 build - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used for creating build images and the first half of bootstrapping.
-bzlib - Use bzlib compression library
+bzip2 - Use the bzlib compression library
 calendar - Adds support for calendars (not using mcal!)
 canna - Adds support for the Canna kana to kanji conversion engine
 caps - Use Linux capabilities library to control privileges.
