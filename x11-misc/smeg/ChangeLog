@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/smeg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/smeg/ChangeLog,v 1.1 2005/05/30 16:30:59 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/smeg/ChangeLog,v 1.2 2005/06/01 16:31:23 lanius Exp $
+
+*smeg-0.7.1 (01 Jun 2005)
+
+  01 Jun 2005; Heinrich Wendel <lanius@gentoo.org> -smeg-0.7.ebuild,
+  +smeg-0.7.2.ebuild:
+  version bump
 
 *smeg-0.7 (30 May 2005)
 
