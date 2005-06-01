@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.403 2005/05/30 06:06:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.404 2005/06/01 10:16:50 spyderous Exp $
+
+  01 Jun 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r1.ebuild, xorg-x11-6.8.2-r2.ebuild,
+  xorg-x11-6.8.99.5.ebuild, xorg-x11-6.8.99.8.ebuild:
+  Use '-lt' instead of '-le' for sse tests, so we don't do them on gcc-3.4.4.
 
   30 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r2.ebuild, xorg-x11-6.8.99.8.ebuild:
