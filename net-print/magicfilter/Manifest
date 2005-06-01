@@ -1,6 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dca5f5d1a8e53690767956c35a2d4566 magicfilter-1.2-r4.ebuild 1803
+MD5 5417d74bf51df0f5794dbc40f9043120 magicfilter-2.3d.ebuild 1205
 MD5 c3493352cded44fc930c189f1370c414 magicfilter-2.3a.ebuild 1049
-MD5 eeccaec453eef9e6e3459c2f5a65b969 ChangeLog 1922
+MD5 4a0f5f86a2106610a8bacf0fc393da3d ChangeLog 2062
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 26efbd8f84469a663084eb5e8936bcaa files/digest-magicfilter-1.2-r4 140
 MD5 ac79bc23460701eeae5aa35d42802ca8 files/digest-magicfilter-2.3a 69
+MD5 e0430cfceae46b301c627a714e0f5ecb files/digest-magicfilter-2.3d 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCnQCSevY57Fted3ERAqjLAJ4voehGtxgL1V7B1LOgkRX98G+mtQCdGqn6
+O2QlGFxbseC6JZN3CvNNWCY=
+=7/zg
+-----END PGP SIGNATURE-----
