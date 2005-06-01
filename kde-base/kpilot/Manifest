@@ -4,4 +4,4 @@ MD5 e443f3f492ca9ec881787fd300705c75 kpilot-3.4.0.ebuild 1181
 MD5 8098aa2e974c5a990216e99e4af8d39d kpilot-3.4.1.ebuild 1274
 MD5 0324965cf9c67cc4750d7a14cec3ef1f files/kdepim-3.4.1-kpilot-fix.patch 4635
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kpilot-3.4.0 67
-MD5 7e3e5fdc63982b39b9df921e916f246a files/digest-kpilot-3.4.1 134
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kpilot-3.4.1 208
