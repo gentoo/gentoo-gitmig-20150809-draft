@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r1.ebuild,v 1.4 2005/05/30 07:43:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r1.ebuild,v 1.5 2005/06/01 00:39:10 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -83,6 +83,7 @@ src_compile() {
 		$(use_enable oggvorbis vorbis)
 		$(use_enable nvidia xvmc)
 		$(use_enable xv)
+		--disable-firewire
 		--disable-directfb
 		--enable-x11
 		--enable-proc-opt"
