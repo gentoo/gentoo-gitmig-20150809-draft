@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0_pre.ebuild,v 1.2 2005/04/15 00:00:16 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0_pre.ebuild,v 1.3 2005/06/01 12:29:50 anarchy Exp $
 
 inherit eutils mozilla flag-o-matic
 
@@ -26,8 +26,8 @@ src_unpack() {
 	cd ${S}
 	# Fix those darn directories!  Make something more "standard"
 	# That can extend to future versions with much more ease. - Chris
-	epatch ${FILESDIR}/nvu-0.50-dir.patch
-	epatch ${FILESDIR}/nvu-0.50-freetype-compile.patch
+	epatch ${FILESDIR}/nvu-0.50-dir.patch | die "failed to apply dir. patch"
+	epatch ${FILESDIR}/nvu-0.50-freetype-compile.patch || die "failed to patch for freetype"
 
 	# I had to manually edit the mozconfig.linux file as it
 	# has some quirks... just copy the darn thing over :) - Chris
@@ -59,7 +59,7 @@ src_compile() {
 	filter-flags '-O*'
 	# epatch ${FILESDIR}/nvu-0.80-mozconfig.patch
 
-	make -f client.mk build_all
+	make -f client.mk build_all || die "Make failed"
 }
 
 src_install() {

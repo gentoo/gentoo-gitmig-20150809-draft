@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.6 2005/04/29 23:15:25 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.7 2005/06/01 12:29:50 anarchy Exp $
+
+  01 Jun 2005; Jory A. Pratt <anarchy@gentoo.org> nvu-1.0_pre.ebuild:
+  modified ebuild to include die if patches or make fails
 
   29 Apr 2005; Tom Martin <slarti@gentoo.org> nvu-0.90-r1.ebuild:
   Marked stable on amd64 and sparc, resolves bug 90773.
