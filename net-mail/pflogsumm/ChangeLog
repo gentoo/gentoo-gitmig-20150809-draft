@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pflogsumm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pflogsumm/ChangeLog,v 1.4 2005/04/10 04:46:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pflogsumm/ChangeLog,v 1.5 2005/06/01 18:51:29 ticho Exp $
+
+  01 Jun 2005; Andrej Kacian <ticho@gentoo.org> pflogsumm-1.1.0.ebuild:
+  Stable on amd64.
 
   10 Apr 2005; Andrej Kacian <ticho@gentoo.org> pflogsumm-1.1.0.ebuild:
   Added ~amd64 keyword.
