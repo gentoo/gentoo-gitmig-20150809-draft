@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.44 2005/05/31 15:22:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.45 2005/06/01 22:29:23 ticho Exp $
+
+  01 Jun 2005; Andrej Kacian <ticho@gentoo.org> amavisd-new-2.3.0.ebuild,
+  amavisd-new-2.3.1.ebuild:
+  Display a warning if <=spamassassin-3 is installed. Closes bug #94778, by
+  Christian Zuckschwerdt <zany@triq.net>.
 
   31 May 2005; Andrej Kacian <ticho@gentoo.org> amavisd-new-2.3.0.ebuild:
   Stable on x86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.0.ebuild,v 1.10 2005/05/31 15:22:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.0.ebuild,v 1.11 2005/06/01 22:29:23 ticho Exp $
 
 inherit eutils
 
@@ -53,6 +53,13 @@ RDEPEND="${DEPEND}
 AMAVIS_ROOT=/var/amavis
 
 src_unpack() {
+	if ! $(has_version ">=mail-filter/spamassassin-3.0.0") ; then
+		echo
+		ewarn "WARNING: Amavisd-new will not work with SpamAssassin older than 3.0.0."
+		ewarn "         Consider upgrading your SpamAssassin installation."
+		ebeep 3
+		sleep 5
+	fi
 	unpack ${A}
 	cd ${S}
 	if $(has_version mail-mta/courier) ; then
@@ -166,6 +173,7 @@ pkg_postinst() {
 	fi
 	echo
 	ewarn "Adjusting permissions for /etc/amavisd.conf (0 for world, owner root:amavis)"
+	echo
 	chmod o-rwx /etc/amavisd.conf
 	chown root:amavis /etc/amavisd.conf
 }
