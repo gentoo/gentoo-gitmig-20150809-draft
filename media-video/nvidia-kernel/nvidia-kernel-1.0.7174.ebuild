@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.7174.ebuild,v 1.3 2005/05/22 15:40:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.7174.ebuild,v 1.4 2005/06/01 16:10:10 dsd Exp $
 
 inherit eutils linux-mod
 
@@ -34,9 +34,6 @@ IUSE=""
 DEPEND="virtual/linux-sources"
 export _POSIX2_VERSION="199209"
 
-MODULE_NAMES="nvidia(video:${S})"
-BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} SYSOUT=${KV_OUT_DIR}"
-
 mtrr_check() {
 	ebegin "Checking for MTRR support"
 	linux_chkconfig_present MTRR
@@ -56,7 +53,9 @@ mtrr_check() {
 
 pkg_setup() {
 	linux-mod_pkg_setup
-	mtrr_check;
+	MODULE_NAMES="nvidia(video:${S})"
+	BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} SYSOUT=${KV_OUT_DIR}"
+	mtrr_check
 }
 
 src_unpack() {
