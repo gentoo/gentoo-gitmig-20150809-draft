@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.107 2005/06/01 14:05:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.108 2005/06/01 14:53:04 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -466,13 +466,13 @@ src_compile() {
 	# Note: If USE=gpm, then ncurses will still be required. See bug #93970
 	# for the reasons behind the USE flag change.
 	if version_is_at_least "6.3.075" ; then
-		use ncurses \
-			&& myconf="${myconf} --with-tlib=ncurses" \
-			|| myconf="${myconf} --with-tlib=termcap"
-	else
 		use termcap-compat \
 			&& myconf="${myconf} --with-tlib=termcap" \
 			|| myconf="${myconf} --with-tlib=ncurses"
+	else
+		use ncurses \
+			&& myconf="${myconf} --with-tlib=ncurses" \
+			|| myconf="${myconf} --with-tlib=termcap"
 	fi
 
 	use selinux \
