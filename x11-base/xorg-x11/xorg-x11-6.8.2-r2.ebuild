@@ -1,13 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.22 2005/06/01 10:22:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.23 2005/06/01 10:25:57 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
-
-# What to use for migration from /usr/X11R6 to /usr -- mv, rsync or tar.
-# By default it uses 'rsync'.
-#MIGRATE_METHOD="rsync"
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -144,7 +140,6 @@ pkg_setup() {
 	FILES_DIR="${WORKDIR}/files"
 	PATCHDIR="${WORKDIR}/patch"
 	EXCLUDED="${PATCHDIR}/excluded"
-	${MIGRATE_METHOD:+einfo Migration method is ${MIGRATE_METHOD}.}
 
 	# Set up CFLAG-related things
 	cflag_setup
@@ -1386,10 +1381,7 @@ fix_opengl_symlinks() {
 #
 # Takes two arguments -- starting location and ending location
 migrate() {
-	MIGRATE_METHOD="${MIGRATE_METHOD:-rsync}"
-
 	einfo "Migrating from ${1} to ${2}..."
-	einfo "Migration method is ${MIGRATE_METHOD}."
 
 	# Strip trailing slash
 	if [ -z "${1##*/}" ]; then
@@ -1401,18 +1393,6 @@ migrate() {
 		if [ ! -L ${ROOT}${1} ]; then
 			einfo "  ${1} isn't a symlink, migrating..."
 			# Move everything
-			case "${MIGRATE_METHOD}" in
-				mv)
-					mv -f \
-						${ROOT}${1}/* \
-						${ROOT}${1}/.* \
-						${ROOT}${2} > ${T}/migrate-${1//\//-}.log 2>&1
-
-					check_migrate_return
-					# Don't do remove_migrated_files here because this isn't a
-					# copy
-					;;
-				rsync)
 					rsync \
 						--archive \
 						--update \
@@ -1426,33 +1406,6 @@ migrate() {
 
 					check_migrate_return
 					remove_migrated_files ${1}
-					;;
-				tar)
-					# Clearly we can't redirect stdout for the first half,
-					# because that's where the tar file is being sent.
-					tar \
-						-C ${ROOT}${1} \
-						--create \
-						--verbose \
-						. 2> ${T}/migrate-${1//\//-}.log \
-						|
-					tar \
-						-C ${ROOT}${2} \
-						--extract \
-						--verbose \
-						--preserve-permissions \
-						--atime-preserve \
-						--same-owner >> ${T}/migrate-${1//\//-}.log 2>&1
-						# Doesn't work properly
-						# --keep-newer-files
-
-					check_migrate_return
-					remove_migrated_files ${1}
-					;;
-				*)
-					die "MIGRATE_METHOD unspecified. Set it to mv, rsync or tar."
-					;;
-			esac
 
 			if [ -e "${ROOT}${1}" ]; then
 				# Remove any floating .keep files so we can run rmdir
@@ -1474,9 +1427,9 @@ migrate() {
 check_migrate_return() {
 	MIGRATE_RETURN="$?"
 	if [ "${MIGRATE_RETURN}" -eq "0" ]; then
-		einfo "${MIGRATE_METHOD} successful!"
+		einfo "rsync successful!"
 	else
-		die "${MIGRATE_METHOD} failed. Exit code: ${MIGRATE_RETURN}."
+		die "rsync failed. Exit code: ${MIGRATE_RETURN}."
 	fi
 
 	# Migration fubars lib symlinks -- eradicator
