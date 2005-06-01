@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1202 2005/06/01 00:43:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1203 2005/06/01 02:08:23 tercel Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -257,6 +257,8 @@ dev-python/numeric:lapack - enable lapack library support
 dev-python/pycairo:numeric - enable Numeric support
 dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
 dev-python/soya:ode - include support for Open Dynamics Engine
+dev-python/visual:numarray - enable support for numarray
+dev-python/visual:numeric - enable support for numeric
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-scheme/bigloo-lib:ipcs - enable ipcs support
