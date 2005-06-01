@@ -1,3 +1,5 @@
 MD5 f0d9e011f2c404c509d7367b31455e9e autoconf-archive-2005.04.18.ebuild 882
-MD5 78e9d051978cd50930e5890868f7dd67 ChangeLog 381
+MD5 6b8557d5fca6775d99729d69c4fdbadf ChangeLog 554
+MD5 9e1573f0a9c30b5ea3cdaa8d38e0e814 autoconf-archive-2005.05.31.ebuild 882
 MD5 b85611ba16b0e6db771b88430aeb3024 files/digest-autoconf-archive-2005.04.18 80
+MD5 66c2d3c224321d588b36daff5299fc73 files/digest-autoconf-archive-2005.05.31 80
