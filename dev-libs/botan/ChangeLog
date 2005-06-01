@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/botan
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.4 2004/12/09 14:16:52 gustavoz Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.5 2005/06/01 00:53:16 vapier Exp $
+
+  01 Jun 2005; Mike Frysinger <vapier@gentoo.org> botan-1.4.3.ebuild,
+  botan-1.4.4.ebuild:
+  Change USE=bzlib to USE=bzip2.
 
   09 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> botan-1.4.4.ebuild:
   Stable on sparc wrt #71760, fixed the whole sparc mess too

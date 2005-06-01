@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.3 2004/12/09 14:16:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.4 2005/06/01 00:53:16 vapier Exp $
 
 # Comments/fixes to lloyd@randombit.net (author)
 
@@ -13,13 +13,13 @@ SRC_URI="http://botan.randombit.net/files/Botan-${PV}.tgz"
 KEYWORDS="x86 ppc sparc"
 SLOT="0"
 LICENSE="BSD"
-IUSE="bzlib zlib gmp ssl debug"
+IUSE="bzip2 zlib gmp ssl debug"
 
 S="${WORKDIR}/Botan-${PV}"
 
 # FIXME: libstdc++ here?
 RDEPEND="virtual/libc
-	bzlib? ( >=app-arch/bzip2-1.0.1 )
+	bzip2? ( >=app-arch/bzip2-1.0.1 )
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	gmp? ( >=dev-libs/gmp-4.1.2 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )"
@@ -39,7 +39,7 @@ src_compile() {
 	# Modules that should work under any semi-recent Unix
 	local modules="alloc_mmap,es_egd,es_ftw,es_unix,fd_unix,ml_unix,tm_unix,mux_pthr"
 
-	if useq bzlib; then modules="$modules,comp_bzip2"; fi
+	if useq bzip2; then modules="$modules,comp_bzip2"; fi
 	if useq zlib; then modules="$modules,comp_zlib"; fi
 	if useq gmp; then modules="$modules,eng_gmp"; fi
 	if useq ssl; then modules="$modules,eng_ossl"; fi
