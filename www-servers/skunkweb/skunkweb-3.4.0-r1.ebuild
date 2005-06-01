@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0-r1.ebuild,v 1.2 2005/03/12 23:58:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.0-r1.ebuild,v 1.3 2005/06/01 14:44:11 satya Exp $
 
 inherit eutils apache-module
 
@@ -58,8 +58,8 @@ src_install() {
 	apache-module_src_install
 
 	# dirs --------------------------------------------------------------
-	keepdir ${D}/var/{lib,log}/${PN}
-	keepdir ${D}/var/lib/${PN}/run
+	keepdir /var/{lib,log}/${PN}
+	keepdir /var/lib/${PN}/run
 	chown -R skunkweb:skunkweb ${D}/var/{lib,log}/${PN}
 	# scripts------------------------------------------------------------
 	exeinto /etc/init.d
