@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.11 2005/06/01 21:01:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.12 2005/06/01 22:12:30 vapier Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -32,13 +32,13 @@ if [ "${PHP_PACKAGE}" = 1 ]; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hardenedphp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hardenedphp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="$DEPEND
 	!<=dev-php/php-4.99.99
 	berkdb? ( =sys-libs/db-4* )
-	bzlib? ( app-arch/bzip2 )
+	bzip2? ( app-arch/bzip2 )
 	cpdflib? ( >=media-libs/clibpdf-2 )
 	crypt? ( >=dev-libs/libmcrypt-2.4 )
 	curl? ( >=net-misc/curl-7.10.5 )
@@ -378,7 +378,7 @@ php5-sapi-r2_src_compile() {
 
 	#							extension		USE flag		shared support?
 	enable_extension_enable		"bcmath"		"bcmath"		1
-	enable_extension_with		"bz2"			"bzlib"			1
+	enable_extension_with		"bz2"			"bzip2"			1
 	enable_extension_enable		"calendar"		"calendar"		1
 	enable_extension_with		"cpdflib"		"cpdflib"		1 # depends on jpeg
 	enable_extension_disable	"ctype"			"ctype"			0
