@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.4.12.ebuild,v 1.1 2005/05/07 19:37:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.4.12.ebuild,v 1.2 2005/06/01 00:52:40 vapier Exp $
 
 inherit fox
 
 LICENSE="LGPL-2.1"
 SLOT="1.4"
 KEYWORDS="~x86 ~amd64 ~alpha ~hppa ~ppc ~ppc64 ~sparc"
-IUSE="bzlib cups jpeg opengl png threads tiff truetype zlib"
+IUSE="bzip2 cups jpeg opengl png threads tiff truetype zlib"
 
 RDEPEND="virtual/x11
 	x11-libs/fox-wrapper
-	bzlib? ( >=app-arch/bzip2-1.0.2 )
+	bzip2? ( >=app-arch/bzip2-1.0.2 )
 	cups? ( net-print/cups )
 	jpeg? ( >=media-libs/jpeg-6b )
 	opengl? ( virtual/opengl )
@@ -21,7 +21,7 @@ RDEPEND="virtual/x11
 		virtual/xft )
 	zlib? ( >=sys-libs/zlib-1.1.4 )"
 
-FOXCONF="$(use_enable bzlib bz2lib) \
+FOXCONF="$(use_enable bzip2 bz2lib) \
 	$(use_enable cups) \
 	$(use_enable jpeg) \
 	$(use_with opengl) \

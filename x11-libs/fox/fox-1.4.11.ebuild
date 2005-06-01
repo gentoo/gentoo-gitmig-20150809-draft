@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.4.11.ebuild,v 1.4 2005/04/09 15:50:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.4.11.ebuild,v 1.5 2005/06/01 00:52:40 vapier Exp $
 
-IUSE="cups debug truetype opengl X tiff png jpeg zlib bzlib"
+IUSE="cups debug truetype opengl X tiff png jpeg zlib bzip2"
 DESCRIPTION="C++ based Toolkit for developing Graphical User Interfaces easily and effectively"
 SRC_URI="http://www.fox-toolkit.org/ftp/${P}.tar.gz"
 HOMEPAGE="http://www.fox-toolkit.org"
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	zlib? ( sys-libs/zlib )
-	bzlib? ( app-arch/bzip2 )"
+	bzip2? ( app-arch/bzip2 )"
 
 
 src_compile() {
@@ -34,7 +34,7 @@ src_compile() {
 		`use_enable jpeg` \
 		`use_enable png` \
 		`use_enable zlib` \
-		`use_enable bzlib bz2lib` \
+		`use_enable bzip2 bz2lib` \
 		`use_with truetype xft` \
 		`use_with X xshm` `use_with X xcursor` \
 		${myconf} || die "Configuration Failed"
