@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.25 2005/06/01 10:34:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.26 2005/06/01 10:56:26 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -11,26 +11,17 @@
 # libxkbfile.so, libxkbui.so
 
 # TODO
-# 24 January 2005 <spyderous@gentoo.org>
-#   TARGET: 6.8.1.903
+# 1 June 2005 <spyderous@gentoo.org>
+#   TARGET: none
+#		Consider building shared libraries only, when both are provided
 #		Combine find loops for "Creating fonts.scale files," "Generating
 #			fonts.dir files and "Generating Xft cache"
 #		<Mr_Bones_> the loop in pkg_postinst for removing Compose can probably
 #			be one line of bash expansion like rm -f ${ROOT}/usr/$(get_libdir)/
 #			X11/locale/{ja*|ko*|zh*}/Compose
-#		Move /usr/X11R6/include to /usr/include/X11
-#			- find imake define for this
-#		Move /usr/X11R6/bin to /usr/bin
 #		Clean up migration function
-#			- generalize to take arguments like:
-#				`migrate /usr/X11R6/lib /usr/lib` so we can use for bin, include
 #			- loop through lib* instead of repetition
-#			- consider alternate to 'mv', which dies when dirs exist in both
-#				- cpio, rsync, tar suggested
-#					- cpio dereferences symlinks, tar wastes time
 #		Fix direction of lib -> libdir symlink
-#		Functionalize ebuild more cleanly -- only call subfunctions in primary
-#			ebuild functions, no direct code, no functions of more than 60 lines
 #		Generalize any functions that make sense to generalize (i.e., anything
 #			that might realistically see use elsewhere, or repetitively here)
 inherit eutils flag-o-matic toolchain-funcs x11 linux-info multilib
