@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.63 2005/05/30 02:33:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.64 2005/06/01 12:42:10 solar Exp $
+
+  01 Jun 2005; <solar@gentoo.org> +metadata.xml,
+  -files/elfutils-0.101-portability.patch,
+  -files/elfutils-0.94-alpha-mips-atime.diff,
+  -files/elfutils-sections-heap-overflow.diff, -elfutils-0.101-r1.ebuild,
+  -elfutils-0.101.ebuild, -elfutils-0.94-r1.ebuild, -elfutils-0.94-r2.ebuild,
+  -elfutils-0.97-r1.ebuild, -elfutils-0.97.ebuild:
+  - Remove old ebuilds.
+  - Added a metadata.xml (assigned to toolchain@) for now.
+  - Ready for GLSA.
 
   29 May 2005; <solar@gentoo.org> elfutils-0.101-r1.ebuild,
   elfutils-0.101.ebuild, elfutils-0.108.ebuild, elfutils-0.94-r1.ebuild,

@@ -1,33 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 aaf03f25389788478179212c671260bf elfutils-0.94-r1.ebuild 1840
-MD5 800486f96d469126bfdf6353f6e9a4df elfutils-0.101-r1.ebuild 1586
-MD5 ec826a959ab321bced360a3bba8b91f3 elfutils-0.97-r1.ebuild 1474
-MD5 1420983491efc4af34532df42fd94eb6 elfutils-0.101.ebuild 1529
-MD5 6715520538959dc97fd6a8110f22f33e elfutils-0.97.ebuild 1416
 MD5 d2a84c8e03ae9899b291a057355e117a elfutils-0.108.ebuild 1744
-MD5 69a300766e86938d082801d9445b8872 elfutils-0.94-r2.ebuild 1904
-MD5 87b984bed836e0aa3a212bb07a1211fe ChangeLog 8080
-MD5 25da57fec6a38ed0c69ec6682b595398 files/elfutils-0.94-alpha-mips-atime.diff 699
+MD5 7f1eebb8cb121aeae67f8a70363270e0 ChangeLog 8525
+MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 1e6460efdb609828aa57b5874813972a files/elfutils-0.101-bswap.patch 849
-MD5 40321e776b95020f2e51e5f481b3486e files/elfutils-0.101-portability.patch 6052
-MD5 98e005817217428fef7c200faec78382 files/digest-elfutils-0.94-r1 65
-MD5 98e005817217428fef7c200faec78382 files/digest-elfutils-0.94-r2 65
-MD5 696196044decee0b8d782d08b3e907aa files/digest-elfutils-0.97-r1 65
-MD5 696196044decee0b8d782d08b3e907aa files/digest-elfutils-0.97 65
 MD5 a5bda0a1599fd2232fb0d2cf5f3269a7 files/elfutils-0.108-robustify2.patch 12832
 MD5 41c5834ecf3d28e43b7fbe3b927e582a files/elfutils-0.108-portability.patch 18453
-MD5 68f794575cd890d5131853a4ca7ee9f3 files/digest-elfutils-0.101-r1 66
-MD5 68f794575cd890d5131853a4ca7ee9f3 files/digest-elfutils-0.101 66
 MD5 12294cbe7395c8366308d2a424d1d7ae files/digest-elfutils-0.108 143
-MD5 51c01230a938c5b39a545e0611170b0f files/elfutils-sections-heap-overflow.diff 574
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iQCVAwUBQpp7lZ4WFLgrx1GWAQLblQP6ArJBuJpOZD6EncjDDQ5Vw0Qkx6VCHYM2
-3QAe2XxlyiVme8xabwayAS/CreWBXg1pyioaqG3R0qDrB5yfb3ueph4cUz6Qql1k
-JaAIWEIU6eSPq9YdaulJ4P3m02emR/YOrFr4VtUriZWWp+pduxwPsWYfN4dAmhZp
-4APWek2iV24=
-=edpo
+iQCVAwUBQp2tlp4WFLgrx1GWAQKwiAP/WHjX2+QEB/cbwJ0K2qlhJTXBqKhYKWN0
+edi9UMkymVbZ4cTsXcWp0RDDMIuvzsJ2TUqIbBjl9UHhOe7Kz9rjX4/2PCodAivq
+FGcPe6/8LUfsRNCPgWTSuS70jLZPNXCudjQJmYdLp4FaoZgZcu8GnJIzbkRZSgzr
+AIuHutgkvIQ=
+=8Jff
 -----END PGP SIGNATURE-----
