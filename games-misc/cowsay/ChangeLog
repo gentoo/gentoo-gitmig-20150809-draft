@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/cowsay
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.9 2005/02/06 14:37:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.10 2005/06/01 17:14:09 spb Exp $
+
+  01 Jun 2005; Stephen Bennett <spb@gentoo.org> cowsay-3.03.ebuild:
+  ~mips keywords
 
   06 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> +files/cowsay.bashcomp,
   cowsay-3.03.ebuild:
