@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.1.ebuild,v 1.3 2005/06/01 16:33:25 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.1.ebuild,v 1.4 2005/06/01 16:36:49 tercel Exp $
 
 inherit distutils
 
@@ -40,7 +40,7 @@ src_compile() {
 	if ! useq numeric && ! useq numarray; then
 		einfo "Support for Numeric or Numarray was not specified."
 		einfo "Building with Numeric support"
-		myconf=${myconf/--without-numarray}
+		myconf=${myconf/--without-numeric}
 	fi
 	echo
 
