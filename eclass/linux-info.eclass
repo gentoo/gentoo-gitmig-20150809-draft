@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.25 2005/04/24 10:55:04 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.26 2005/06/01 21:25:50 wolf31o2 Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -81,12 +81,12 @@ qout() {
 	type=${1}
 	shift
 	outputmsg="${@}"
-    case "${EBUILD_PHASE}" in
-        depend)  unset outputmsg;;
-        clean)   unset outputmsg;;
-        preinst) unset outputmsg;;
-    esac
-    [ -n "${outputmsg}" ] && ${type} "${outputmsg}"
+	case "${EBUILD_PHASE}" in
+		depend)  unset outputmsg;;
+		clean)   unset outputmsg;;
+		preinst) unset outputmsg;;
+	esac
+	[ -n "${outputmsg}" ] && ${type} "${outputmsg}"
 }
 
 qeinfo() { qout einfo "${@}" ; }
