@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.7 2005/05/29 10:48:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.8 2005/06/01 15:46:24 herbs Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -125,6 +125,11 @@ src_unpack() {
 	       -e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
 	       -e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
 		${S}/mkspecs/${PLATFORM}/qmake.conf || die
+
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e "s:/lib$:/$(get_libdir):" \
+			${S}/mkspecs/${PLATFORM}/qmake.conf || die
+	fi
 }
 
 src_compile() {
