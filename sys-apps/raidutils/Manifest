@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 6b2a95b826d212207a259717f1c7c6e2 metadata.xml 643
-MD5 857b77e242cedc801a63d9282e758296 raidutils-0.0.5.ebuild 793
-MD5 dbac3067bc791bc978f99e54e0c3b54f ChangeLog 976
-MD5 d412cf17a83c6edb339bf111fbcc3a8e raidutils-0.0.6.ebuild 793
+MD5 2317a595cb0ee3201204264c2a9128d9 raidutils-0.0.5.ebuild 759
+MD5 b10de6b10232d2961de92b382b90522a ChangeLog 1101
+MD5 fc303540b646edb17f354cae777e7f80 raidutils-0.0.6.ebuild 759
 MD5 4099a4c6960a610930541d55d9bb4e5d files/raidutils-0.0.5-i2octl-fixpath.patch 1597
 MD5 2e881a5176df7cf66a9c291521480d9b files/digest-raidutils-0.0.5 68
 MD5 ba1b41b51ca66f21326f777218441336 files/digest-raidutils-0.0.6 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZnCsgMUyd/cdjWsRAifCAJsEBFewug9CaLzpjQy6J6jvtMR0VQCeMn7+
-yzE0d+uWF8HIz2vUIaIfdJw=
-=uY8G
+iD8DBQFCnXbRgMUyd/cdjWsRAvBJAJ98z22NzuQ+2zfSt9ye47ck4QwS6ACgg8I4
+TmKtyT9TIx06TildEEabY7o=
+=fjjn
 -----END PGP SIGNATURE-----
