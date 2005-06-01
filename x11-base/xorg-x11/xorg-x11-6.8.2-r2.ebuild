@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.21 2005/06/01 10:16:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.22 2005/06/01 10:22:43 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1453,57 +1453,6 @@ migrate() {
 					die "MIGRATE_METHOD unspecified. Set it to mv, rsync or tar."
 					;;
 			esac
-
-#			# Move everything
-#			if [ "${MIGRATE_METHOD}" = "mv" ]; then
-#				mv -f \
-#					${ROOT}${1}/* \
-#					${ROOT}${1}/.* \
-#					${ROOT}${2} > ${T}/migrate-${1//\//-}.log 2>&1
-#
-#				check_migrate_return
-#				# Don't do remove_migrated_files here because this isn't a copy
-#
-#			elif [ "${MIGRATE_METHOD}" = "rsync" ]; then
-#				rsync \
-#					--archive \
-#					--update \
-#					--links \
-#					--hard-links \
-#					--ignore-existing \
-#					--stats \
-#					--progress \
-#					--verbose \
-#					${ROOT}${1}/ ${ROOT}${2} > ${T}/migrate-${1//\//-}.log 2>&1
-#
-#				check_migrate_return
-#				remove_migrated_files ${1}
-#
-#			elif [ "${MIGRATE_METHOD}" = "tar" ]; then
-#				# Clearly we can't redirect stdout for the first half, because
-#				# that's where the tar file is being sent.
-#				tar \
-#					-C ${ROOT}${1} \
-#					--create \
-#					--verbose \
-#					. 2> ${T}/migrate-${1//\//-}.log \
-#					|
-#				tar \
-#					-C ${ROOT}${2} \
-#					--extract \
-#					--verbose \
-#					--preserve-permissions \
-#					--atime-preserve \
-#					--same-owner >> ${T}/migrate-${1//\//-}.log 2>&1
-#					# Doesn't work properly
-#					# --keep-newer-files
-#
-#				check_migrate_return
-#				remove_migrated_files ${1}
-#
-#			else
-#				die "MIGRATE_METHOD unspecified. Set it to mv, rsync or tar."
-#			fi
 
 			if [ -e "${ROOT}${1}" ]; then
 				# Remove any floating .keep files so we can run rmdir
