@@ -1,5 +1,137 @@
+--- dhcpconfig.c.orig	2005-06-01 11:30:15.141614117 +0100
++++ dhcpconfig.c	2005-06-01 13:14:09.131020527 +0100
+@@ -52,6 +52,7 @@
+ extern	int			ReplResolvConf;
+ extern	int			ReplNISConf;
+ extern	int			ReplNTPConf;
++extern  int			RouteMetric;
+ extern	int			IfName_len,IfNameExt_len;
+ extern	char			*IfName,*IfNameExt,*Cfilename,*ConfigDir;
+ extern	char			**ProgramEnviron;
+@@ -157,7 +158,7 @@
+ #else
+   rtent.rt_dev		=	IfNameExt;
+ #endif
+-rtent.rt_metric	        =	1;
++rtent.rt_metric	        =	RouteMetric;
+ rtent.rt_window		=	Window;
+ rtent.rt_flags	        =	RTF_UP|RTF_GATEWAY|(Window ? RTF_WINDOW : 0);
+ if ( ioctl(dhcpSocket,SIOCADDRT,&rtent) == -1 )
+@@ -179,7 +180,7 @@
+ #else
+ 	rtent.rt_dev		=	IfNameExt;
+ #endif
+-	rtent.rt_metric     =	  0;
++	rtent.rt_metric     =	  RouteMetric;
+ 	rtent.rt_flags      =	  RTF_UP|RTF_HOST;
+ 	if ( ioctl(dhcpSocket,SIOCADDRT,&rtent) == 0 )
+ 	  {
+@@ -198,7 +199,7 @@
+ #else
+ 	    rtent.rt_dev	=	IfNameExt;
+ #endif
+-	    rtent.rt_metric	=	1;
++	    rtent.rt_metric	=	RouteMetric;
+ 	    rtent.rt_window	=	Window;
+ 	    rtent.rt_flags	=	RTF_UP|RTF_GATEWAY|(Window ? RTF_WINDOW : 0);
+ 	    if ( ioctl(dhcpSocket,SIOCADDRT,&rtent) == -1 )
+@@ -260,8 +261,11 @@
+   if ( ioctl(dhcpSocket,SIOCSIFBRDADDR,&ifr) == -1 ) /* setting broadcast address */
+     syslog(LOG_ERR,"dhcpConfig: ioctl SIOCSIFBRDADDR: %m\n");
+ 
+-  /* setting local route - not needed on later kernels  */
+-#ifdef OLD_LINUX_VERSION
++  /* 
++   * setting local route
++   * need to delete kernel added route on newer kernels
++   */
++#ifndef OLD_LINUX_VERSION
+   memset(&rtent,0,sizeof(struct rtentry));
+   p			=	(struct sockaddr_in *)&rtent.rt_dst;
+   p->sin_family		=	AF_INET;
+@@ -276,9 +280,26 @@
+   rtent.rt_dev		=	IfName;
+   rtent.rt_metric     	=	1;
+   rtent.rt_flags      	=	RTF_UP;
++  if ( ioctl(dhcpSocket,SIOCDELRT,&rtent) )
++    syslog(LOG_ERR,"dhcpConfig: ioctl SIOCDELRT: %m\n");
++#endif
++  
++  memset(&rtent,0,sizeof(struct rtentry));
++  p			=	(struct sockaddr_in *)&rtent.rt_dst;
++  p->sin_family		=	AF_INET;
++  memcpy(&p->sin_addr.s_addr,DhcpOptions.val[subnetMask],4);
++  p->sin_addr.s_addr	&=	DhcpIface.ciaddr;
++  p			=	(struct sockaddr_in *)&rtent.rt_gateway;
++  p->sin_family		=	AF_INET;
++  p->sin_addr.s_addr	=	0;
++  p			=	(struct sockaddr_in *)&rtent.rt_genmask;
++  p->sin_family		=	AF_INET;
++  memcpy(&p->sin_addr.s_addr,DhcpOptions.val[subnetMask],4);
++  rtent.rt_dev		=	IfName;
++  rtent.rt_metric     	=	RouteMetric;
++  rtent.rt_flags      	=	RTF_UP;
+   if ( ioctl(dhcpSocket,SIOCADDRT,&rtent) )
+     syslog(LOG_ERR,"dhcpConfig: ioctl SIOCADDRT: %m\n");
+-#endif
+ 
+   for (i=0;i<DhcpOptions.len[staticRoute];i+=8)
+     {  /* setting static routes */
+@@ -303,7 +324,7 @@
+ #else
+       rtent.rt_dev	      =	  IfNameExt;
+ #endif
+-      rtent.rt_metric     =	  1;
++      rtent.rt_metric     =	  RouteMetric;
+       if ( ioctl(dhcpSocket,SIOCADDRT,&rtent) )
+ 	syslog(LOG_ERR,"dhcpConfig: ioctl SIOCADDRT: %m\n");
+     }
+--- dhcpcd.c.orig	2005-06-01 11:38:08.987350330 +0100
++++ dhcpcd.c	2005-06-01 13:13:44.174087798 +0100
+@@ -57,6 +57,7 @@
+ int		ReplResolvConf	=	1;
+ int		ReplNISConf	=	1;
+ int		ReplNTPConf	=	1;
++int		RouteMetric	=	1;
+ int		SetDomainName	=	0;
+ int		SetHostName	=	0;
+ int             BroadcastResp   =       0;
+@@ -138,6 +139,23 @@
+ 	    s++;
+ 	    killFlag=SIGHUP;
+ 	    goto prgs;
++	  case 'm':
++	    if ( argc[i][s+1] ) goto usage;
++	    i++;
++	    if ( ! argc[i] ) goto usage;
++	    char *tmp;
++	    errno = 0;
++	    long m=strtol(argc[i], &tmp, 0);
++	    if (argc[i][0] == '\0' || *tmp != '\0' ) goto usage;
++	    if ((errno == ERANGE &&
++			(m == LONG_MAX || m == LONG_MIN )) ||
++		    (m > INT_MAX || m < INT_MIN))
++		goto usage;
++	    RouteMetric=m;
++	    if (RouteMetric < INT_MAX) RouteMetric++;
++	    i++;
++	    s=1;
++	    break;
+ 	  case 'n':
+ 	    s++;
+ 	    killFlag=SIGALRM;
+@@ -336,7 +353,8 @@
+ 	    fprintf(stderr,
+ "Usage: dhcpcd [-dknorzBCDHNRSTY] [-l leasetime] [-h hostname] [-t timeout]\n\
+        [-i vendorClassID] [-I ClientID] [-c filename] [-s [ipaddr]]\n\
+-       [-w windowsize] [-L ConfigDir] [-G [gateway]] [interface]\n");
++       [-w windowsize] [-L ConfigDir] [-G [gateway]] [-m routemetric]\n\
++       [interface]\n");
+ 	    exit(1);
+ 	}
+     else
 --- dhcpcd.8.orig	2005-06-01 13:28:30.899167422 +0100
-+++ dhcpcd.8	2005-06-01 13:41:53.027864771 +0100
++++ dhcpcd.8	2005-06-01 13:31:39.003123246 +0100
 @@ -20,6 +20,7 @@
  \%[\-G\ [gateway]]
  \%[\-w\ <windowsize>]
@@ -8,13 +140,13 @@
  \%[interface]
  .in -.5i
  .SH DESCRIPTION
-@@ -230,6 +231,9 @@
- .B dhcpcd
- will return exit code 1 to the parent process.
+@@ -108,6 +109,9 @@
+ .B without
+ destroying the dhcpcd cache.
  .TP
 +.BI \-m \ <routemetric>
 +routes will be added with the given metric. The default is 0.
 +.TP
- .BI \-c \ <ExecFilePath>
- .B dhcpcd
- will try to execute 
+ .BI \-n
+ Sends
+ .B SIGALRM

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r8.ebuild,v 1.1 2005/06/01 15:24:58 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r9.ebuild,v 1.1 2005/06/01 17:36:52 uberlord Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -47,13 +47,14 @@ src_unpack() {
 	# man page buglet caused by drobbins patch - fixes #78839
 	epatch "${FILESDIR}"/${P}-man.patch
 
-	# Allow dhcpcd to use the FQDN option - fixes #64307 thanks to
-	# Kevin F. Quinn
+	# Allow dhcpcd to use the FQDN option
+	# fixes #64307 thanks to Kevin F. Quinn
 	epatch "${FILESDIR}"/${P}-optionFQDN.patch
 }
 
 src_compile() {
 	use static && append-flags -static
+	append-flags -DDRAFT_OPTION_FQDN
 	econf --prefix=/ || die
 	emake || die
 }
