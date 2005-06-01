@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>web-apps</herd>
 <maintainer>
-  <email>web-apps@gentoo.org</email>
+  <email>superlag@gentoo.org</email>
+  <name>Aaron Kulbe</name>
 </maintainer>
 </pkgmetadata>
