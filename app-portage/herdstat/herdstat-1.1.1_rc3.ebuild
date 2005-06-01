@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_rc2.ebuild,v 1.1 2005/05/29 14:52:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_rc3.ebuild,v 1.1 2005/06/01 15:22:18 ka0ttic Exp $
 
 inherit bash-completion toolchain-funcs
 
@@ -11,10 +11,9 @@ SRC_URI="http://download.berlios.de/herdstat/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~hppa"
-IUSE="debug doc unicode zlib"
+IUSE="debug doc unicode"
 
-RDEPEND="zlib? ( sys-libs/zlib )
-	unicode? ( >=dev-cpp/libxmlpp-2.8.0-r1 )
+RDEPEND="unicode? ( >=dev-cpp/libxmlpp-2.8.0-r1 )
 	!unicode? ( >=dev-libs/xmlwrapp-0.5.0 )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
@@ -25,7 +24,6 @@ src_compile() {
 	econf \
 		$(use_enable debug) \
 		$(use_enable unicode) \
-		$(use_with zlib) \
 		|| die "econf failed"
 	emake || die "emake failed"
 
@@ -35,16 +33,20 @@ src_compile() {
 }
 
 src_install() {
-	keepdir /var/lib/herdstat
 	make DESTDIR="${D}" install || die "make install failed"
 	dobashcompletion bashcomp
 	dodoc AUTHORS ChangeLog README TODO NEWS doc/*.txt
 	use doc && dohtml doc/*
+
+	keepdir /var/lib/herdstat
+	fowners root:portage /var/lib/herdstat
+	fperms 0775 /var/lib/herdstat
 }
 
 pkg_postinst() {
-	chown root:portage /var/lib/herdstat
-	chmod 0775 /var/lib/herdstat
+	# remove any previous caches, as it's possible that the internal
+	# format has changed, and may cause bugs.
+	rm -f ${ROOT}var/lib/herdstat/*cache*
 
 	einfo
 	einfo "You must be in the portage group to use herdstat."
