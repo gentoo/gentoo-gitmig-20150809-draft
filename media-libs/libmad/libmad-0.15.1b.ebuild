@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.21 2005/04/14 15:07:53 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.22 2005/06/01 13:44:00 herbs Exp $
 
 inherit eutils
 
@@ -47,4 +47,8 @@ src_install() {
 	dodir /usr/$(get_libdir)/pkgconfig
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins ${FILESDIR}/mad.pc
+
+	# Use correct libdir in pkgconfig file
+	dosed "s:^libdir.*:libdir=/usr/$(get_libdir):" \
+		/usr/$(get_libdir)/pkgconfig/mad.pc
 }
