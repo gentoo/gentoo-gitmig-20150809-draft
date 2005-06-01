@@ -69,5 +69,6 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	insinto /lib/rcscripts/addons
+	newconfd ${FILESDIR}/cryptfs.confd cryptfs
 	doins "${FILESDIR}"/dm-crypt-{start,stop}.sh
 }
