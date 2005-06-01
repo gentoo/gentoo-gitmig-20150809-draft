@@ -1,0 +1,11 @@
+--- dhcpcd.8.orig	2005-06-01 14:15:16.506055236 +0100
++++ dhcpcd.8		2005-06-01 14:17:50.878717049 +0100
+@@ -307,7 +307,7 @@
+ .SH FILES
+ .PD 0
+ .TP
++.BI /var/lib/dhcpc
+-.BI /etc/dhcpc
+ Default 
+ .I <ConfigDir>
+ directory used for storing files
