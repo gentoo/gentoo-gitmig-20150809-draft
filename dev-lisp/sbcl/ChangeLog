@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.63 2005/05/30 08:28:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.64 2005/06/01 03:24:45 mkennedy Exp $
+
+  31 May 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  files/0.9.1/README.Gentoo, sbcl-0.9.1.ebuild:
+  No longer supporting callbacks in USE; Removed old ebuilds.
 
 *sbcl-0.9.1 (30 May 2005)
 

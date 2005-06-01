@@ -1,4 +1,4 @@
--*- outline -*- $Id: README.Gentoo,v 1.1 2005/04/07 02:58:58 mkennedy Exp $
+-*- outline -*- $Id: README.Gentoo,v 1.2 2005/06/01 03:24:45 mkennedy Exp $
 
 Gentoo GNU/Linux specific notes for SBCL
 ----------------------------------------
@@ -23,21 +23,6 @@ This is the README.Gentoo file from /usr/share/doc/@PF@/ directory.
 
   * If "ldb" is in your USE flags, then support for the SBCL low-level debugger
     will be included.
-
-  * If "callbacks" is in your USE flags, then support for foreign callbacks will
-    be included.  This is useful for libraries such as Lambda-GTK.  
- 
-    NOTE: callback support is implemented using Thomas Burdick's SBCL-AF patch
-    which is distributed outside of SBCL.  This will NOT be the final API SBCL
-    uses.  See also:
-
-        http://article.gmane.org/gmane.lisp.steel-bank.devel/4279
-        http://article.gmane.org/gmane.lisp.steel-bank.devel/4341
-
-    Ports which require callbacks in SBCL:
-
-        cl-zeroconf
-	lambda-gtk
 
 If you encounter any problems or have suggestions, use http://bugs.gentoo.org.
 Please don't bother the upstream authors unless you are absolutely certain it is
