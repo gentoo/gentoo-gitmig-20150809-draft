@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r8.ebuild,v 1.1 2005/05/31 22:47:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r8.ebuild,v 1.2 2005/06/01 22:24:15 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -24,7 +24,7 @@ pkg_setup() {
 		eerror "The 'slocate' group has been renamed to 'locate'."
 		eerror "You seem to already have a 'slocate' group."
 		eerror "Please rename it:"
-		eerror "sed -i s/^slocate:/locate:/ /etc/group"
+		eerror "groupmod -n locate slocate"
 		die "Change 'slocate' to 'locate'"
 	fi
 	enewgroup locate
