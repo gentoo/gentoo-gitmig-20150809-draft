@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/qfile/qfile-0.0.1.ebuild,v 1.1 2005/05/10 12:41:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/qfile/qfile-0.0.2.ebuild,v 1.1 2005/06/01 11:05:56 solar Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="very small and fast c implementation of portage query file tool"
+DESCRIPTION="A very small and fast c implementation of misc portage helper tools"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 
@@ -17,13 +17,15 @@ DEPEND="virtual/libc"
 S=${WORKDIR}
 
 src_compile() {
-	cd ${S}
-	$(tc-getCC) ${CFLAGS} -o qfile  \
+	$(tc-getCC) ${CFLAGS} -DPORTDIR=\"${PORTDIR}\" -o ${S}/q  \
 		${FILESDIR}/qfile.c ${LDFLAGS} || die "compile"
 }
 
 src_install() {
 	dodir /usr/bin
 	exeinto /usr/bin
-	newexe ${S}/qfile ${PN} || die
+	newexe ${S}/q q || die
+	for applet in q{file,search,use,list}; do
+		dosym /usr/bin/q /usr/bin/${applet} || die "symlinking $applet"
+	done
 }
