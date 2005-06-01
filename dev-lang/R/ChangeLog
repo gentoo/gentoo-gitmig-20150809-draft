@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.48 2005/05/25 22:02:23 cryos Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.49 2005/06/01 00:54:07 vapier Exp $
+
+  01 Jun 2005; Mike Frysinger <vapier@gentoo.org> R-1.9.0-r1.ebuild,
+  R-2.0.1.ebuild:
+  Change USE=bzlib to USE=bzip2.
 
 *R-1.9.0-r1 (25 May 2005)
 

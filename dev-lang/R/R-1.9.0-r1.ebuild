@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0-r1.ebuild,v 1.16 2005/05/25 22:02:23 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0-r1.ebuild,v 1.17 2005/06/01 00:54:07 vapier Exp $
 
 inherit 64-bit
 
-IUSE="blas X tcltk gnome zlib bzlib pcre f2c"
+IUSE="blas X tcltk gnome zlib bzip2 pcre f2c"
 
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 
@@ -26,7 +26,7 @@ DEPEND="virtual/libc
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )
 		pcre? ( dev-libs/libpcre )
-		bzlib? ( app-arch/bzip2 )
+		bzip2? ( app-arch/bzip2 )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.4
 			>=gnome-base/libglade-0.17
 			>=dev-libs/libxml-1.8.16
@@ -71,7 +71,7 @@ src_compile() {
 	local myconf="--enable-static --enable-R-profiling --enable-R-shlib --with-readline"
 
 	use zlib || myconf="${myconf} --with-zlib"   #default disabled
-	use bzlib || myconf="${myconf} --with-bzlib"   #default disabled
+	use bzip2 || myconf="${myconf} --with-bzlib"   #default disabled
 	use pcre || myconf="${myconf} --with-pcre"   #default disabled
 
 	# Using the blas USE flag now instead atlas, as atlas now
