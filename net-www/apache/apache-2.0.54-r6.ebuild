@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r6.ebuild,v 1.2 2005/06/01 10:06:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r6.ebuild,v 1.3 2005/06/01 19:17:58 urilith Exp $
 
 inherit eutils gnuconfig
 
@@ -394,10 +394,10 @@ select_mpms() {
 	if [ "x${mpm}" = "x" ]; then
 		if useq threads; then
 			einfo "Threads specified without a mpm-specification, using mpm-worker."
-			mpms="worker"
+			mpm="worker"
 		else
 			einfo "No MPM style was specified, defaulting to mpm-prefork."
-			mpms="prefork"
+			mpm="prefork"
 		fi
 	fi
 }
