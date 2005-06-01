@@ -1,6 +1,13 @@
 # ChangeLog for app-text/silvercity
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/ChangeLog,v 1.5 2005/05/01 02:48:29 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/ChangeLog,v 1.6 2005/06/01 15:57:02 ka0ttic Exp $
+
+*silvercity-0.9.5-r1 (01 Jun 2005)
+
+  01 Jun 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +silvercity-0.9.5-r1.ebuild:
+  Revision bump for security bug 93558. Also fixed a CR/LF issue. Thanks to
+  Jürgen Hötzel <gentoo@hoetzel.info> for the patch.
 
   01 May 2005; Christian Parpart <trapni@gentoo.org>
   silvercity-0.9.5.ebuild:

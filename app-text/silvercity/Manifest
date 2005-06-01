@@ -1,4 +1,16 @@
-MD5 a9265fb7b54b332ae7a146e5718e4ab6 ChangeLog 706
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7274982e8edcc3cb3a7d2e82764bc43c silvercity-0.9.5.ebuild 572
+MD5 a93c51e357c2cccdaaca8f648a51da70 silvercity-0.9.5-r1.ebuild 899
+MD5 661fd6da25e46bfddfbf485bf5946c2d ChangeLog 955
 MD5 4f723686129a68a7dcb5ce4e21c775ad metadata.xml 223
+MD5 712defea7eee794d4e5337ce64fe9452 files/digest-silvercity-0.9.5-r1 68
 MD5 712defea7eee794d4e5337ce64fe9452 files/digest-silvercity-0.9.5 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCndrkEZCkKN40op4RAko0AJ4kFHaMFjm2JsqT/XaHDqrdEzLpvQCgou/p
+vgZUFHOtYxFVVuQJoMhwTbQ=
+=EHRz
+-----END PGP SIGNATURE-----
