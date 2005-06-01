@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.25 2005/05/30 16:47:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.26 2005/06/01 15:49:19 lanius Exp $
+
+*pyxdg-0.13 (01 Jun 2005)
+
+  01 Jun 2005; Heinrich Wendel <lanius@gentoo.org> +pyxdg-0.13.ebuild:
+  version bump
 
 *pyxdg-0.8 (30 May 2005)
 
