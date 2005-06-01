@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r6.ebuild,v 1.3 2005/06/01 19:17:58 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r6.ebuild,v 1.4 2005/06/01 21:21:47 urilith Exp $
 
 inherit eutils gnuconfig
 
@@ -61,6 +61,7 @@ big_fat_warnings() {
 
 pkg_setup() {
 	big_fat_warnings
+	select_mpms
 }
 
 src_unpack() {
@@ -142,12 +143,6 @@ src_compile() {
 	if useq debug ; then
 		myconf="${myconf} --enable-maintainer-mode"
 	fi
-
-	select_mpms
-
-	# now we build each mpm
-	# clean up
-	cd server; make clean; cd ..
 
 	./configure --with-mpm=${mpm} ${myconf} || die "bad ./configure please submit bug report to bugs.gentoo.org. Include your config.layout and config.log"
 
@@ -363,10 +358,11 @@ setup_apache_vars() {
 	einfo "USERDIR is set to: ${USERDIR}"
 }
 
-mpm_warn() {
-	echo
-	ewarn "More than one MPM was specified.  Defaulting to ${mpm}."
-	echo
+mpm_die() {
+	eerror "You attempted to specify the MPM $1, but MPM $2 was already specified."
+	eerror "The apache ebuilds no longer support multiple MPM installations.  Please choose"
+	eerror "one MPM and reinstall."
+	die "More than one MPM was specified."
 }
 
 try_mpm() {
@@ -377,8 +373,7 @@ try_mpm() {
 	fi
 
 	if [ -n "${mpm}" ]; then
-		mpm_warn
-		return 0
+		mpm_die ${nmpm} ${mpm}
 	fi
 
 	mpm="${nmpm}"

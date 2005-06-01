@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.373 2005/06/01 19:17:58 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.374 2005/06/01 21:21:47 urilith Exp $
+
+  01 Jun 2005; Michael Tindal <urilith@gentoo.org> apache-2.0.54-r6.ebuild:
+  Bail if more than one MPM is specified.
 
   01 Jun 2005; Michael Tindal <urilith@gentoo.org> apache-2.0.54-r6.ebuild:
   Fix the ebuild not selecting a default MPM if no MPM use flags are present.
