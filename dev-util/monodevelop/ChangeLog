@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.29 2005/05/23 18:00:14 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.30 2005/06/01 01:44:19 latexer Exp $
+
+  01 Jun 2005; Peter Johanson <latexer@gentoo.org> monodevelop-0.6.ebuild:
+  Fix the deps to pull in a version of gtk-sharp that actually works. See bug
+  #93472.
 
   23 May 2005; Peter Johanson <latexer@gentoo.org> monodevelop-0.6.ebuild,
   monodevelop-0.7.ebuild:
