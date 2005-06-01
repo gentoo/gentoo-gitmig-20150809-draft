@@ -1,0 +1,10 @@
+# ChangeLog for games-sports/miniracer
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/ChangeLog,v 1.1 2005/06/01 03:44:06 mr_bones_ Exp $
+
+*miniracer-1.04 (01 Jun 2005)
+
+  01 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +miniracer-1.04.ebuild:
+  initial commit - ebuild submitted by Matija Suklje via bug #93056
+
