@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.2 2005/05/31 13:43:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.3 2005/06/01 11:28:11 herbs Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -61,6 +61,17 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-opengl-fix.patch
+
+	# Add support for amd64 --arch options, bug 94664
+	use amd64 && epatch ${FILESDIR}/${P}-x86_64-configure.patch
+
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e "s:\$\${PREFIX}/lib/:\$\${PREFIX}/$(get_libdir)/:g" \
+			-e "s:\$\${PREFIX}/lib$:\$\${PREFIX}/$(get_libdir):g" \
+			${S}/{filters,libs}/*/*.pro || die
+		sed -i -e "s:/lib/mythtv/:/$(get_libdir)/mythtv/:" \
+			${S}/libs/libmyth/mythcontext.cpp || die
+	fi
 
 #	# Fix bugs 40964 and 42943.
 #	filter-flags -fforce-addr -fPIC -momit-leaf-frame-pointer

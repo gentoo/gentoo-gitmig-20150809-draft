@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.66 2005/06/01 00:39:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.67 2005/06/01 11:28:11 herbs Exp $
+
+  01 Jun 2005; Herbie Hopkins <herbs@gentoo.org>
+  +files/mythtv-0.18.1-x86_64-configure.patch, mythtv-0.18.1-r2.ebuild:
+  Fixed bug 94664, support amd64 --arch options. Fixed multilib-strict issue.
 
   01 Jun 2005; Doug Goldstein <cardoe@gentoo.org> mythtv-0.18.1-r1.ebuild:
   explictly add --disable-firewire because the test fails for someone
