@@ -1,6 +1,10 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.18 2005/04/21 20:34:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.19 2005/06/01 00:57:37 wormo Exp $
+
+  31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  vilistextum-2.6.7.ebuild:
+  mark ~ppc
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> vilistextum-2.6.7.ebuild:
   stable on amd64
