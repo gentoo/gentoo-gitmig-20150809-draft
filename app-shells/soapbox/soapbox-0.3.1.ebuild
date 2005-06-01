@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/soapbox/soapbox-0.3.1.ebuild,v 1.1 2005/05/31 03:46:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/soapbox/soapbox-0.3.1.ebuild,v 1.2 2005/06/01 02:39:08 mr_bones_ Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://dag.wieers.com/home-made/soapbox/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="" 
+IUSE=""
 
 DEPEND=""
 
@@ -35,4 +35,3 @@ src_install() {
 	newbin soapbox.sh soapbox || die "soapbox"
 	dodoc AUTHORS BUGS ChangeLog README THANKS TODO
 }
-
