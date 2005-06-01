@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/livecd-specs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-specs/ChangeLog,v 1.2 2005/04/15 02:21:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-specs/ChangeLog,v 1.3 2005/06/01 20:12:21 wolf31o2 Exp $
+
+  01 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  livecd-specs-2005.0.ebuild:
+  Marking stable on all arches for catalyst 1.1.9 to be stable. Thanks to
+  swegener for pointing it out to me.
 
   15 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   livecd-specs-2005.0.ebuild:
