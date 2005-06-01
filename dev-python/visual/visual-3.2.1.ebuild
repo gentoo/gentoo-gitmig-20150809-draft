@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.1.ebuild,v 1.4 2005/06/01 16:36:49 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.1.ebuild,v 1.5 2005/06/01 17:46:57 tercel Exp $
 
 inherit distutils
 
@@ -22,8 +22,6 @@ DEPEND=">=dev-lang/python-2.3
 		numeric? ( dev-python/numeric )
 		numarray? ( >=dev-python/numarray-1.0 )
 		!numeric? ( !numarray? (dev-python/numeric) )"
-
-RESTRICT="nomirror"
 
 src_compile() {
 	local myconf="--without-numarray --without-numeric"
