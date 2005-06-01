@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.6 2005/06/01 21:10:18 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.7 2005/06/01 22:54:45 urilith Exp $
 ECLASS=apache-module
 INHERITED="$INHERITED $ECLASS"
 
@@ -333,19 +333,14 @@ apache2_pkg_postinst() {
 
 	if [ -n "${APACHE2_SAFE_MPMS}" ]; then
 
-		INSTALLED_MPMS=$(ls ${ROOT}/usr/sbin/apache2.*)
+		INSTALLED_MPM="$(apxs2 -q MPM_NAME)"
 
-		for mpm in ${INSTALLED_MPMS}; do
-			# strip everything up to and including 'apache2.' from ${mpm}
-			mpm=${mpm#*apache2.}
-
-			if ! hasq ${mpm} ${APACHE2_SAFE_MPMS} ; then
-				INSTALLED_MPM_UNSAFE="${INSTALLED_MPM_UNSAFE} ${mpm}"
-			else
-				INSTALLED_MPM_SAFE="${INSTALLED_MPM_SAFE} ${mpm}"
-			fi
-		done
-
+		if ! hasq ${INSTALLED_MPM} ${APACHE2_SAFE_MPMS} ; then
+			INSTALLED_MPM_UNSAFE="${INSTALLED_MPM_UNSAFE} ${mpm}"
+		else
+			INSTALLED_MPM_SAFE="${INSTALLED_MPM_SAFE} ${mpm}"
+		fi
+		
 		if [ -n "${INSTALLED_MPM_UNSAFE}" ] ; then
 			ewarn "You have one or more MPMs installed that will not work with"
 			ewarn "this module (${PN}). Please make sure that you only enable"
