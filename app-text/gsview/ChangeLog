@@ -1,6 +1,12 @@
 # ChangeLog for app-text/gsview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.12 2005/04/21 20:21:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.13 2005/06/01 00:01:06 lanius Exp $
+
+*gsview-4.6-r1 (01 Jun 2005)
+
+  01 Jun 2005; Heinrich Wendel <lanius@gentoo.org> -gsview-4.5.ebuild,
+  gsview-4.6.ebuild, +gsview-4.6-r1.ebuild:
+  bug #71400, mark stable on x86
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> gsview-4.6.ebuild:
   stable on amd64

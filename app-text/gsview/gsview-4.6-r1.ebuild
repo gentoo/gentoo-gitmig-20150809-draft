@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.5.ebuild,v 1.7 2005/01/01 16:17:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.6-r1.ebuild,v 1.1 2005/06/01 00:01:06 lanius Exp $
 
 MY_PV="${PV/.}"
 DESCRIPTION="gsView PostScript and PDF viewer"
@@ -10,9 +10,10 @@ HOMEPAGE="http://www.cs.wisc.edu/~ghost/gsview/"
 IUSE="doc"
 SLOT="0"
 LICENSE="Aladdin"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 RDEPEND="=x11-libs/gtk+-1.2*
+	app-text/epstool
 	virtual/ghostscript"
 DEPEND="app-arch/unzip"
 
@@ -28,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/gsview bin/epstool
+	dobin bin/gsview
 
 	insinto /usr/share/applications
 	newins srcunx/gvxhelp.txt gview
