@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.106 2005/03/26 19:34:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.107 2005/06/01 14:05:28 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -47,7 +47,13 @@ ECLASS=vim
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack pkg_setup
 
-IUSE="$IUSE selinux ncurses nls acl"
+IUSE="$IUSE selinux nls acl"
+
+if version_is_at_least "6.3.075" ; then
+	IUSE="${IUSE} termcap-compat"
+else
+	IUSE="${IUSE} ncurses"
+fi
 
 if [[ "${MY_PN}" == "vim-core" ]] ; then
 	IUSE="$IUSE livecd"
@@ -122,19 +128,28 @@ LICENSE="vim"
 # Portage dependancy is for use_with/use_enable.
 # ctags dependancy allows help tags to be rebuilt properly, along
 # with detection of exuberant-ctags by configure.
-DEPEND="$DEPEND 
+DEPEND="$DEPEND
 	>=sys-apps/portage-2.0.45-r3
 	>=sys-apps/sed-4
 	sys-devel/autoconf
-	ncurses?  ( >=sys-libs/ncurses-5.2-r2 )
-	!ncurses? ( sys-libs/libtermcap-compat )
-	dev-util/ctags
-	"
-RDEPEND="$RDEPEND 
-	ncurses?  ( >=sys-libs/ncurses-5.2-r2 )
-	!ncurses? ( sys-libs/libtermcap-compat )
-	dev-util/ctags
-	"
+	dev-util/ctags"
+RDEPEND="$RDEPEND dev-util/ctags"
+
+if version_is_at_least "6.3.075" ; then
+	DEPEND="$DEPEND
+		!termcap-compat?  ( >=sys-libs/ncurses-5.2-r2 )
+		termcap-compat?   ( sys-libs/libtermcap-compat )"
+	RDEPEND="$RDEPEND
+		!termcap-compat?  ( >=sys-libs/ncurses-5.2-r2 )
+		termcap-compat?   ( sys-libs/libtermcap-compat )"
+else
+	DEPEND="$DEPEND
+		ncurses?  ( >=sys-libs/ncurses-5.2-r2 )
+		!ncurses? ( sys-libs/libtermcap-compat )"
+	RDEPEND="$RDEPEND
+		ncurses?  ( >=sys-libs/ncurses-5.2-r2 )
+		!ncurses? ( sys-libs/libtermcap-compat )"
+fi
 
 apply_vim_patches() {
 	local p
@@ -448,10 +463,17 @@ src_compile() {
 		myconf="${myconf} `use_enable nls` `use_enable acl`"
 	fi
 
-	# Note: If USE=gpm, then ncurses will still be required
-	use ncurses \
-		&& myconf="${myconf} --with-tlib=ncurses" \
-		|| myconf="${myconf} --with-tlib=termcap"
+	# Note: If USE=gpm, then ncurses will still be required. See bug #93970
+	# for the reasons behind the USE flag change.
+	if version_is_at_least "6.3.075" ; then
+		use ncurses \
+			&& myconf="${myconf} --with-tlib=ncurses" \
+			|| myconf="${myconf} --with-tlib=termcap"
+	else
+		use termcap-compat \
+			&& myconf="${myconf} --with-tlib=termcap" \
+			|| myconf="${myconf} --with-tlib=ncurses"
+	fi
 
 	use selinux \
 		|| myconf="${myconf} --disable-selinux"
