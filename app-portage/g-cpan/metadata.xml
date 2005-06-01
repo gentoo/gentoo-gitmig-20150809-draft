@@ -8,7 +8,7 @@
 	</maintainer>
 	<maintainer>
 		<email>perl@gentoo.org</email>
-		<description>Primary Maintainer</description>
+		<description>Secondary Maintainer</description>
 	</maintainer>
 	<longdescription></longdescription>
 </pkgmetadata>
