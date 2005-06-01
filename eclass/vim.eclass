@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.108 2005/06/01 14:53:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.109 2005/06/01 15:16:53 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -487,7 +487,18 @@ src_compile() {
 		emake tools || die "emake tools failed"
 		rm -f src/vim
 	else
-		emake || die "emake failed"
+		if version_is_at_least "6.3.075" ; then
+			if ! emake ; then
+				eerror "If the above messages seem to be talking about perl"
+				eerror "and undefined references, please try re-emerging both"
+				eerror "perl and libperl with the same USE flags. For more"
+				eerror "information, see:"
+				eerror "    https://bugs.gentoo.org/show_bug.cgi?id=18129"
+				die "emake failed"
+			fi
+		else
+			emake || die "emake failed"
+		fi
 	fi
 
 	[[ $(get_major_version ) -ge 7 ]] && [[ -f src/kvim ]] && mv src/{k,g}vim
