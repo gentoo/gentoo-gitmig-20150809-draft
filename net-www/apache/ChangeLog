@@ -1,6 +1,12 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.371 2005/05/21 11:27:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.372 2005/06/01 09:03:03 urilith Exp $
+
+*apache-2.0.54-r6 (01 Jun 2005)
+
+  01 Jun 2005; Michael Tindal <urilith@gentoo.org> +apache-2.0.54-r6.ebuild:
+  Removed multiple MPM support from apache due to problems it was causing
+  external modules. Revision bumped from r5 to r6.
 
   21 May 2005; Jan Brinkmann <luckyduck@gentoo.org> apache-2.0.54-r4.ebuild:
   stable on amd64
