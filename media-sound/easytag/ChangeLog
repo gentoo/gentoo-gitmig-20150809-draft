@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.60 2005/05/02 21:13:07 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.61 2005/06/01 17:08:11 dsd Exp $
+
+  01 Jun 2005; Daniel Drake <dsd@gentoo.org> easytag-1.1.ebuild,
+  -easytag-1.99.3.ebuild:
+  1.1 stable on x86
 
 *easytag-1.1 (02 May 2005)
 
