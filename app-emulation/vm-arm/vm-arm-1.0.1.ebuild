@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vm-arm/vm-arm-1.0.1.ebuild,v 1.1 2005/05/25 04:27:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vm-arm/vm-arm-1.0.1.ebuild,v 1.2 2005/06/01 22:18:59 vapier Exp $
 
 inherit eutils rpm
 
@@ -46,6 +46,7 @@ src_install() {
 	for x in opt/virtera/vm-arm-se-${PV}/bin/* ; do
 		dosym /${x} /opt/bin/${x##*/}
 	done
+	find "${D}" -type d -exec chmod a+rx {} \;
 }
 
 pkg_postinst() {
