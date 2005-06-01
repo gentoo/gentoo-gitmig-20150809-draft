@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.165 2005/05/23 10:19:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.166 2005/06/01 15:33:20 ciaranm Exp $
+
+*vim-6.3.075 (01 Jun 2005)
+
+  01 Jun 2005; Ciaran McCreesh <ciaranm@gentoo.org> +vim-6.3.075.ebuild:
+  Update to upstream 6.3.075 and runtime snapshot as of 20050601. Include
+  improved sh.vim keyword list, thanks to Ian Leitch in bug #93983. Include
+  (more) fstab syntax highlighting fixes, bug #92263. Switch to using ncurses
+  by default (with termcap-compat local USE flag for those who really want it)
+  to keep *BSD happy, bug #93970.
 
 *vim-6.3.074 (23 May 2005)
 
