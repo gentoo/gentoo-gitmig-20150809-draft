@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.47 2005/05/27 02:20:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.48 2005/06/01 22:13:02 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -107,6 +107,12 @@ enlightenment_src_compile() {
 			USER=blah \
 			./autogen.sh \
 			|| enlightenment_die "autogen failed"
+		# symlinked files will cause sandbox violation
+		for x in config.{guess,sub} ; do
+			[[ ! -L ${x} ]] && continue
+			rm -f ${x}
+			touch ${x}
+		done
 		if [[ ! -z ${EHACKLIBLTDL} ]] ; then
 			cd libltdl
 			autoconf || enlightenment_die "autogen in libltdl failed"
