@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.1.ebuild,v 1.2 2005/05/30 08:29:31 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.1.ebuild,v 1.3 2005/06/01 03:24:45 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
-
-SBCL_AF_PV=2004-10-22
 
 BV_X86=0.8.1
 BV_PPC=0.8.15
@@ -20,14 +18,13 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-powerpc-linux-binary.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
 	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )
-	amd64? ( mirror://sourceforge/sbcl/${PN}-${BV_AMD64}-x86-64-linux-binary.tar.bz2 )
-	callbacks? ( http://pinhead.music.uiuc.edu/~hkt/sbcl-af-${SBCL_AF_PV}.tgz )"
+	amd64? ( mirror://sourceforge/sbcl/${PN}-${BV_AMD64}-x86-64-linux-binary.tar.bz2 )"
 
 LICENSE="MIT"
 SLOT="0"
 
 KEYWORDS="x86 ~ppc ~sparc ~mips ~amd64"
-IUSE="threads doc nosource unicode ldb callbacks"
+IUSE="threads doc nosource unicode ldb"
 
 DEPEND="=dev-lisp/common-lisp-controller-4*
 	>=dev-lisp/cl-asdf-1.84
@@ -99,12 +96,6 @@ src_unpack() {
 	find ${S} -type f -name .cvsignore -exec rm -f '{}' \;
 	find ${S} -depth -type d -name CVS	-exec rm -rf '{}' \;
 	find ${S} -type f -name \*.c -exec chmod 644 '{}' \;
-
-	if use callbacks; then
-		einfo "You have specified the \"callbacks\" USE flag.  Callbacks may only work for x86."
-		einfo "Please refer to README.Gentoo for more information."
-		unpack sbcl-af-${SBCL_AF_PV}.tgz
-	fi
 }
 
 src_compile() {
@@ -173,19 +164,6 @@ src_install() {
 
 pkg_postinst() {
 	standard-impl-postinst sbcl
-	if use callbacks; then
-		mv /usr/$(get_libdir)/sbcl/sbcl.core /usr/$(get_libdir)/sbcl/sbcl-nocallbacks.core || die
-		pushd ${WORKDIR}/sbcl-af
-		sbcl --core /usr/$(get_libdir)/sbcl/sbcl-nocallbacks.core \
-			--load 'system' \
-			--eval "(sb-ext:save-lisp-and-die \"/usr/$(get_libdir)/sbcl/sbcl.core\")" || die
-		popd
-	fi
-# Image Summary
-# -------------
-# /usr/$(get_libdir)/sbcl/sbcl-dist.core		  - Plain SBCL image
-# /usr/$(get_libdir)/sbcl/sbcl-nocallbacks.core - CLC (Common Lisp Controller) image
-# /usr/$(get_libdir)/sbcl/sbcl.core			  - CLC image w/ callbacks support
 }
 
 pkg_postrm() {
