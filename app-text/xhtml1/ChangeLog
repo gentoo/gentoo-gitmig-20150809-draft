@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xhtml1
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.11 2005/01/01 16:43:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.12 2005/06/01 01:07:36 wormo Exp $
+
+  31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  xhtml1-20020801-r2.ebuild:
+  mark ~ppc
 
 *xhtml1-20020801-r2 (06 Nov 2004)
 

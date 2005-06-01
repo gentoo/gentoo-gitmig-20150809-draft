@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801-r2.ebuild,v 1.2 2005/01/01 16:43:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801-r2.ebuild,v 1.3 2005/06/01 01:07:36 wormo Exp $
 
 inherit sgml-catalog eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.w3.org/TR/xhtml1/xhtml1.tgz"
 LICENSE="W3C"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="app-text/sgml-common
