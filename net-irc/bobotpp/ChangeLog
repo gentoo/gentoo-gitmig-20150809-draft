@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/bobotpp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/ChangeLog,v 1.8 2005/05/01 18:06:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/ChangeLog,v 1.9 2005/06/01 18:40:09 swegener Exp $
+
+*bobotpp-2.1.7 (01 Jun 2005)
+
+  01 Jun 2005; Sven Wegener <swegener@gentoo.org>
+  +files/2.1.7-ifdef-scripts-fix.patch, bobotpp-2.1.6.ebuild,
+  +bobotpp-2.1.7.ebuild:
+  Version bump.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> bobotpp-2.1.6.ebuild:
   Stable on ppc.

@@ -1,0 +1,13 @@
+--- bobotpp-2.1.7/source/Bot.C.orig	2005-06-01 18:30:21.118726574 +0000
++++ bobotpp-2.1.7/source/Bot.C	2005-06-01 18:30:39.549118930 +0000
+@@ -79,8 +79,9 @@
+     receivedUserhostID(0),
+     logFileName(DEFAULT_LOGFILENAME),
+     logs_dir (DEFAULT_LOGDIR),
+-    configFileName (filename),
++    configFileName (filename)
+ #ifdef USESCRIPTS
++    ,
+     scriptLogFileName(DEFAULT_SCRIPTLOGFILENAME),
+     autoexecFileName(DEFAULT_AUTOEXECFILENAME)
+ #endif

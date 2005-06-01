@@ -1,4 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 28c4e3cd3c5839456b9b775c2bb45489 bobotpp-2.1.6.ebuild 1194
+MD5 b8cde6edd6787bc468bedd18bbf55cfc ChangeLog 1359
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 0df232bce91c36939aa85ff802d6eed3 bobotpp-2.1.6.ebuild 1190
-MD5 94855f513f0e39f694b6b6d21a75164f ChangeLog 1173
+MD5 71c3c2ce65ad60544df9b3017a5dcd47 bobotpp-2.1.7.ebuild 1307
 MD5 50c917808fc70d1bdf66c88c169ef853 files/digest-bobotpp-2.1.6 65
+MD5 470cb884861677a99c3b453a331b8c30 files/digest-bobotpp-2.1.7 65
+MD5 1c03e827030d1211151ffcc7fa9d5261 files/2.1.7-ifdef-scripts-fix.patch 452
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCngEmI1lqEGTUzyQRAie6AKCTiJpy/e5+c3txc2tjUfsPoH5JRwCdGQo+
+aQbSrB0L5C5jdZum/sexhJI=
+=Uq7p
+-----END PGP SIGNATURE-----
