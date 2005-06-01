@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libast
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.16 2005/04/18 23:52:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.17 2005/06/01 04:14:59 vapier Exp $
+
+*libast-0.6.1-r1 (01 Jun 2005)
+
+  01 Jun 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/libast-0.6.1-config-warning.patch, +libast-0.6.1-r1.ebuild:
+  Fix bogus version warnings with patch from upstream CVS #94479 by Alexander
+  Jenisch.
 
 *libast-9999 (18 Apr 2005)
 
