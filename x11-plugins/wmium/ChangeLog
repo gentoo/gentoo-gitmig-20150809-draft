@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmium
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.11 2004/08/12 09:44:17 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.12 2005/06/01 11:30:55 dragonheart Exp $
+
+  01 Jun 2005; Daniel Black <dragonheart@gentoo.org> -wmium-1.0.7.ebuild,
+  -wmium-1.0.8.ebuild:
+  old version cleanout
 
   12 Aug 2004; Daniel Black <dragonheart@gentoo.org> wmium-1.0.9.ebuild:
   x86 stable
