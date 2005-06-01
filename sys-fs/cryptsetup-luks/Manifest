@@ -1,0 +1,6 @@
+MD5 403bd1041c224d31e68c69c5198c78f7 ChangeLog 459
+MD5 d6f13139e3dab7b44caaa555d42d2324 cryptsetup-luks-1.0.ebuild 1844
+MD5 6c788beeca78bd11e5cd6e759e52fadc metadata.xml 228
+MD5 8370f3be193a25f18b189ca1e3232bb5 files/dm-crypt-start.sh 3944
+MD5 f254479b9a12868d43ab10e4658fab51 files/digest-cryptsetup-luks-1.0 72
+MD5 a3bb6598f67c8922ccb6576ff256ced0 files/dm-crypt-stop.sh 1297

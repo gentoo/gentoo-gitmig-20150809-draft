@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/cryptsetup-luks
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.1 2005/06/01 23:10:17 strerror Exp $
+
+*cryptsetup-luks-1.0 (02 Jun 2005)
+
+  02 Jun 2005; Benjamin Smee <strerror@gentoo.org> +files/dm-crypt-start.sh,
+  +files/dm-crypt-stop.sh, +metadata.xml, +cryptsetup-luks-1.0.ebuild:
+  Initial import. Based on ebuild by Fruhwirth Clemens
+
