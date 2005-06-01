@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.1.ebuild,v 1.2 2005/06/01 02:21:00 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.1.ebuild,v 1.3 2005/06/01 16:33:25 tercel Exp $
 
 inherit distutils
 
@@ -23,15 +23,24 @@ DEPEND=">=dev-lang/python-2.3
 		numarray? ( >=dev-python/numarray-1.0 )
 		!numeric? ( !numarray? (dev-python/numeric) )"
 
+RESTRICT="nomirror"
+
 src_compile() {
+	local myconf="--without-numarray --without-numeric"
+
 	echo
 	if useq numeric; then
 		einfo "Building with Numeric support"
-	elif useq numarray; then
+		myconf=${myconf/--without-numeric}
+	fi
+	if useq numarray; then
 		einfo "Building with Numarray support"
-	else
+		myconf=${myconf/--without-numarray}
+	fi
+	if ! useq numeric && ! useq numarray; then
 		einfo "Support for Numeric or Numarray was not specified."
 		einfo "Building with Numeric support"
+		myconf=${myconf/--without-numarray}
 	fi
 	echo
 
@@ -40,6 +49,7 @@ src_compile() {
 	--with-example-dir=/usr/share/doc/${PF}/examples \
 	$(use_enable doc docs ) \
 	$(use_enable examples ) \
+	${myconf} \
 	|| die "configure failed"
 
 	emake || die "emake failed"
