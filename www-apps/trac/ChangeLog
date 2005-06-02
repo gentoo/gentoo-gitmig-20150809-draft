@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.13 2005/06/01 19:59:32 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.14 2005/06/02 19:10:59 trapni Exp $
+
+  02 Jun 2005; Christian Parpart <trapni@gentoo.org> trac-0.8.2.ebuild:
+  fixing postinst documentation problem
 
 *trac-0.8.2 (01 Jun 2005)
 
