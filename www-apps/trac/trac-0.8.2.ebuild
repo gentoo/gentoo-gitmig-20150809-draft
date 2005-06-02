@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.8.2.ebuild,v 1.2 2005/06/02 19:10:59 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.8.2.ebuild,v 1.3 2005/06/02 19:19:18 trapni Exp $
 
 inherit distutils webapp
 
@@ -26,6 +26,9 @@ POSTINST_PV="0.8.1"
 # need choice between enscript/silvercity/nothing
 # need choice between sqlite-3 + pysqlite-1.1 / sqlite-2.8 + pysqlite-1.0
 # need choice between mod_python/nothing
+#
+# NOTE: could someone please enlight me in why ${who} wrote those notes above?
+# What's been ${who}'s goals? -- trapni (2005-06-02 07:17 UTC)
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL MANIFEST.in PKG-INFO README README.tracd RELEASE THANKS UPGRADE"
 
