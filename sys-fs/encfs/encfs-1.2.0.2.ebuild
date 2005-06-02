@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.2.0.2.ebuild,v 1.2 2005/04/16 15:11:59 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.2.0.2.ebuild,v 1.3 2005/06/02 20:45:10 vanquirius Exp $
 
 inherit versionator eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Encrypted Filesystem module for Linux"
 SRC_URI="http://arg0.net/users/vgough/download/${PN}-$(replace_version_separator 3 '-').tgz"
 HOMEPAGE="http://arg0.net/users/vgough/encfs.html"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 IUSE=""
 
