@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 5ee7dc11f503f75c3dac6d234792bc1f ChangeLog 1349
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 7baf7ca7ac9603e8fa4e4eedd9d8b824 ChangeLog 1249
 MD5 50042a523ce8428e3e06a4645f82c730 xmlstarlet-1.0.0.ebuild 815
-MD5 a061a37d4762f1bb7edc9ed4f7392759 xmlstarlet-1.0.1.ebuild 815
+MD5 d0a0345b9fe7dff935262a70a7e66149 xmlstarlet-1.0.1.ebuild 820
 MD5 087fae86c52296a3b9080621e6b742be files/digest-xmlstarlet-1.0.0 68
 MD5 be4d4795d51e4066aad360f3a3c66cb8 files/digest-xmlstarlet-1.0.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCYTnbVWNWqTUmv+0RAk74AJ9zt/ui51EVb/lnKAWuw2U7cw8dpwCgj9Is
-9CrY7ex2rGWReDntPvAqyuM=
-=/mK9
------END PGP SIGNATURE-----
