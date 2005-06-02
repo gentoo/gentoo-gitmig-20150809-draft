@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/profuse-0.22.0.ebuild,v 1.2 2005/06/02 15:07:01 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/profuse-0.22.0.ebuild,v 1.3 2005/06/02 16:54:58 dams Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ DEPEND="dev-lang/perl
 dev-perl/TermReadKey
 >=dev-util/libconf-0.39.16
 gtk? ( >=dev-perl/gtk2-fu-0.07 )
-ncurses? ( dev-perl/Curses-UI )"
+!ppc4? ( ncurses? ( dev-perl/Curses-UI ) )"
 
 src_compile() {
 	emake || die "make failed"
