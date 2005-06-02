@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.24 2005/06/02 16:54:58 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.25 2005/06/02 23:10:34 dams Exp $
+
+  02 Jun 2005; <dams@gentoo.org> profuse-0.22.0.ebuild:
+  depends on gtk2-fu-0.0.8, because of the progressbar
 
 *profuse-0.14 (02 Jun 2005)
 
