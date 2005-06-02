@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.48 2005/05/29 22:02:58 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.49 2005/06/02 17:19:21 sekretarz Exp $
+
+  02 Jun 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  bittorrent-3.4.2-r2.ebuild, bittorrent-4.0.1.ebuild,
+  bittorrent-4.0.2.ebuild, bittorrent-4.1.0.ebuild, bittorrent-4.1.1.ebuild:
+  Renamed PYTHON_MODULE to PYTHON_MODNAME, so that python modules can be
+  compiled/cleaned, bug #78905
 
 *bittorrent-4.1.1 (29 May 2005)
 *bittorrent-4.0.2 (29 May 2005)

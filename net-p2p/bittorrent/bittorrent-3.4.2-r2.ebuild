@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.4.2-r2.ebuild,v 1.7 2005/05/05 23:27:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.4.2-r2.ebuild,v 1.8 2005/06/02 17:19:21 sekretarz Exp $
 
 inherit distutils
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/bittorrent"
 
 DOCS="credits.txt"
-PYTHON_MODULE="BitTorrent"
+PYTHON_MODNAME="BitTorrent"
 
 src_install() {
 	distutils_src_install
