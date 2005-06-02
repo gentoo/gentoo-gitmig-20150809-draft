@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.4.1.ebuild,v 1.2 2005/05/28 10:41:29 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.4.1.ebuild,v 1.3 2005/06/02 09:59:04 greg_g Exp $
 
 inherit kde-dist
 
@@ -11,7 +11,7 @@ IUSE="rdesktop slp ssl wifi"
 
 DEPEND="~kde-base/kdebase-${PV}
 	slp? ( net-libs/openslp )
-	wifi? ( net-wireless/wireless-tools )"
+	wifi? ( <=net-wireless/wireless-tools-28_pre6 )"
 
 RDEPEND="${DEPEND}
 	rdesktop? ( >=net-misc/rdesktop-1.4.1 )
