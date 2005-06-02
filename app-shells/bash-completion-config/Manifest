@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78e06af59f6b0b14fd9b64694daf3976 bash-completion-config-0.8-r1.ebuild 1304
-MD5 11db45bbec40f85c7e6bc6e8e92f8a1d bash-completion-config-0.7.ebuild 1197
-MD5 66997ce7987242f37ac4e87215008302 bash-completion-config-0.8-r2.ebuild 1399
-MD5 932d903630332f7037198ecd31388eca ChangeLog 5641
+MD5 cd9acf7867bf78b82977cea6b21c3efd ChangeLog 5756
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
-MD5 7350eb647c4ed74167513478041f538f files/digest-bash-completion-config-0.7 72
-MD5 4867900c2f58751082d053b8519e359f files/digest-bash-completion-config-0.8-r1 72
+MD5 78e06af59f6b0b14fd9b64694daf3976 bash-completion-config-0.8-r1.ebuild 1304
+MD5 51581845a1050dc2d9ede2ef24d78c26 bash-completion-config-0.8-r2.ebuild 1397
+MD5 11db45bbec40f85c7e6bc6e8e92f8a1d bash-completion-config-0.7.ebuild 1197
+MD5 6c6a3d1b8b03c9858723d66578596562 files/bashcomp 3183
 MD5 4867900c2f58751082d053b8519e359f files/digest-bash-completion-config-0.8-r2 72
 MD5 13f8fe753a2d860406d6cf48d6603acc files/0.8-fix-all.diff 913
-MD5 6c6a3d1b8b03c9858723d66578596562 files/bashcomp 3183
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFChzYnEZCkKN40op4RAnW8AKCgKKdV6f7QzqiYSyoc+sevsBCiaACfeyPA
-sB5x99O8EAAHuQLriIMcK6U=
-=xDn8
------END PGP SIGNATURE-----
+MD5 4867900c2f58751082d053b8519e359f files/digest-bash-completion-config-0.8-r1 72
+MD5 7350eb647c4ed74167513478041f538f files/digest-bash-completion-config-0.7 72
