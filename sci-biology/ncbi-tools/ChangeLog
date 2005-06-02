@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.14 2005/05/16 21:22:11 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.15 2005/06/02 15:25:12 ribosome Exp $
+
+  02 Jun 2005; Olivier Fisette <ribosome@gentoo.org> ChangeLog:
+  Use "virtual/motif" instead of "x11-libs/openmotif".
 
   16 May 2005; Olivier Fisette <ribosome@gentoo.org>
   ncbi-tools-20050429.ebuild:

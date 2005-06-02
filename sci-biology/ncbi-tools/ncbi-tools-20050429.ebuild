@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050429.ebuild,v 1.2 2005/05/16 21:22:11 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050429.ebuild,v 1.3 2005/06/02 15:25:12 ribosome Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="app-shells/tcsh
 	dev-lang/perl
 	media-libs/libpng
 	X? ( virtual/x11
-		x11-libs/openmotif
+		virtual/motif
 	)"
 
 S="${WORKDIR}/ncbi"
