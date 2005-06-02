@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/kmobiletools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.1 2005/05/16 18:04:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.2 2005/06/02 18:43:18 cryos Exp $
+
+  02 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  kmobiletools-0.4.3.1.ebuild:
+  Marked ~amd64, closes bug 94845.
 
   16 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
   Moved from kde-misc/kmobiletools to app-mobilephone/kmobiletools.
