@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.51 2005/05/22 11:09:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.52 2005/06/02 15:46:32 josejx Exp $
 
-  22 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  02 Jun 2005; Joseph Jezak <josejx@gentoo.org> nessus-plugins-2.2.4.ebuild:
+  Marked ppc stable.
+
+  22 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   nessus-plugins-2.2.4.ebuild:
   Stable on alpha.
 
@@ -28,7 +31,7 @@
   nessus-plugins-2.2.4.ebuild:
   Removing ebuild clutter, marking 2.2.4 x86 stable.
 
-  31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  31 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   nessus-plugins-2.2.0.ebuild:
   Stable on alpha.
 
@@ -65,7 +68,7 @@
 
   12 Jan 2005; Daniel Black <dragonheart@gentoo.org>
   +nessus-plugins-2.3.0.ebuild:
-  Version bump as per bug #73780. Thanks to Holger Hoffst�tte <holger@wizards.de>
+  Version bump as per bug #73780. Thanks to Holger Hoffstätte <holger@wizards.de>
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -82,7 +85,7 @@
   28 Aug 2004; Eldad Zack <eldad@gentoo.org> nessus-plugins-2.1.1.ebuild:
   x86 stable
 
-  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  13 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   nessus-plugins-2.0.12.ebuild:
   Stable on alpha, bug 58014.
 
@@ -133,7 +136,7 @@
   nessus-plugins-2.0.10a.ebuild:
   marked x86 stable
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  05 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   nessus-plugins-2.0.10a.ebuild:
   Stable on alpha.
 
