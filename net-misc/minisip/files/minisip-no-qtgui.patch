@@ -1,0 +1,31 @@
+diff -Nura minisip-0.7.0/configure minisip-0.7.0.noqt/configure
+--- minisip-0.7.0/configure	2005-02-21 17:14:10.000000000 -0300
++++ minisip-0.7.0.noqt/configure	2005-06-01 11:00:18.000000000 -0300
+@@ -10534,7 +10534,7 @@
+ 
+ 
+ 
+-                                                                                                                                                                                                                            ac_config_files="$ac_config_files codecs/Makefile codecs/ilbc/Makefile codecs/g711/Makefile minisip/Makefile minisip/contactdb/Makefile minisip/ipprovider/Makefile minisip/gui/Makefile minisip/gui/qtgui/Makefile minisip/gui/gtkgui/Makefile minisip/gui/textui/Makefile rtp/Makefile sip/Makefile soundcard/Makefile spaudio/Makefile stun/Makefile ipsec/Makefile sdp/Makefile p2t/Makefile mediahandler/Makefile video/Makefile debian/Makefile Makefile"
++                                                                                                                                                                                                                            ac_config_files="$ac_config_files codecs/Makefile codecs/ilbc/Makefile codecs/g711/Makefile minisip/Makefile minisip/contactdb/Makefile minisip/ipprovider/Makefile minisip/gui/Makefile minisip/gui/gtkgui/Makefile minisip/gui/textui/Makefile rtp/Makefile sip/Makefile soundcard/Makefile spaudio/Makefile stun/Makefile ipsec/Makefile sdp/Makefile p2t/Makefile mediahandler/Makefile video/Makefile debian/Makefile Makefile"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+@@ -11182,7 +11182,6 @@
+   "minisip/contactdb/Makefile" ) CONFIG_FILES="$CONFIG_FILES minisip/contactdb/Makefile" ;;
+   "minisip/ipprovider/Makefile" ) CONFIG_FILES="$CONFIG_FILES minisip/ipprovider/Makefile" ;;
+   "minisip/gui/Makefile" ) CONFIG_FILES="$CONFIG_FILES minisip/gui/Makefile" ;;
+-  "minisip/gui/qtgui/Makefile" ) CONFIG_FILES="$CONFIG_FILES minisip/gui/qtgui/Makefile" ;;
+   "minisip/gui/gtkgui/Makefile" ) CONFIG_FILES="$CONFIG_FILES minisip/gui/gtkgui/Makefile" ;;
+   "minisip/gui/textui/Makefile" ) CONFIG_FILES="$CONFIG_FILES minisip/gui/textui/Makefile" ;;
+   "rtp/Makefile" ) CONFIG_FILES="$CONFIG_FILES rtp/Makefile" ;;
+diff -Nura minisip-0.7.0/configure.ac minisip-0.7.0.noqt/configure.ac
+--- minisip-0.7.0/configure.ac	2005-02-21 17:12:54.000000000 -0300
++++ minisip-0.7.0.noqt/configure.ac	2005-06-01 10:17:05.000000000 -0300
+@@ -445,7 +445,6 @@
+                  minisip/contactdb/Makefile
+                  minisip/ipprovider/Makefile
+                  minisip/gui/Makefile
+-                 minisip/gui/qtgui/Makefile
+                  minisip/gui/gtkgui/Makefile
+                  minisip/gui/textui/Makefile
+                  rtp/Makefile

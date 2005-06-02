@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/minisip
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minisip/ChangeLog,v 1.1 2005/06/02 01:25:39 gustavoz Exp $
+
+*minisip-0.7.0 (02 Jun 2005)
+
+  02 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/minisip-no-qtgui.patch, +metadata.xml, +minisip-0.7.0.ebuild:
+  Initial import of minisip, thanks to ingenius for pointing me at this software
+
