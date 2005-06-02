@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.18 2005/05/04 20:51:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.19 2005/06/02 20:12:46 genstef Exp $
+
+*fcdsl-2.6.20.7-r5 (02 Jun 2005)
+
+  02 Jun 2005; Stefan Schweizer <genstef@gentoo.org> -files/fcdslslusb.diff,
+  -fcdsl-2.6.20.7-r4.ebuild, +fcdsl-2.6.20.7-r5.ebuild:
+  Removing the fcdslslusb patch as it turned out to be malicious, revision
+  bump and removing old ebuild.
 
   04 May 2005; Stefan Schweizer <genstef@gentoo.org>
   fcdsl-2.6.20.7-r4.ebuild:
