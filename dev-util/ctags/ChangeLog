@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.38 2005/04/08 16:41:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.39 2005/06/02 13:50:07 ciaranm Exp $
+
+*ctags-5.5.4-r2 (02 Jun 2005)
+
+  02 Jun 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/ctags-5.5.4-ruby-classes.patch, +ctags-5.5.4-r2.ebuild:
+  Add patch to make Ruby class names in the form Foo::Bar work
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> ctags-5.5.4-r1.ebuild:
   Stable on ppc64
