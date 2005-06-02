@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-6.08-r1.ebuild,v 1.2 2005/04/24 13:18:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-6.08-r1.ebuild,v 1.3 2005/06/02 15:33:19 ribosome Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 
 DEPEND="virtual/libc
-	!qt? ( x11-libs/openmotif )
+	!qt? ( virtual/motif )
 	qt? ( >=x11-libs/qt-3.1 )"
 
 src_unpack() {
