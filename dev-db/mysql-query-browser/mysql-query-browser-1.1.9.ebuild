@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.6.ebuild,v 1.1 2005/03/04 18:30:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.9.ebuild,v 1.1 2005/06/02 15:17:51 swegener Exp $
 
 inherit gnome2
 
@@ -25,23 +25,23 @@ DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.11"
 
 src_compile() {
-	cd ${S}/mysql-gui-common
-	econf --with-commondirname=common-query-browser || die "econf failed"
-	emake -j1 || die "emake failed"
+	cd "${S}"/mysql-gui-common
+	econf --with-commondirname=common/query-browser || die "econf failed"
+	emake || die "emake failed"
 
-	cd ${S}/mysql-query-browser
-	econf --with-commondirname=common-query-browser || die "econf failed"
-	emake -j1 || die "emake failed"
+	cd "${S}"/mysql-query-browser
+	econf --with-commondirname=common/query-browser || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	USE_DESTDIR=1
 
-	cd ${S}/mysql-gui-common
+	cd "${S}"/mysql-gui-common
 	gnome2_src_install || die "gnome2_src_install failed"
 
-	cd ${S}/mysql-query-browser
+	cd "${S}"/mysql-query-browser
 	gnome2_src_install || die "gnome2_src_install failed"
 
-	dohtml -r ${S}/mysql-query-browser/doc/ || die "dohtml failed"
+	dohtml -r "${S}"/mysql-query-browser/doc/ || die "dohtml failed"
 }
