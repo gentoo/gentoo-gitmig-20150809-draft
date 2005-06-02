@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/acerhk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.10 2005/04/21 07:10:52 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.11 2005/06/02 19:16:13 sekretarz Exp $
+
+*acerhk-0.5.22-r1 (02 Jun 2005)
+
+  02 Jun 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +acerhk-0.5.22-r1.ebuild:
+  acerhk-0.5.22 stable on x86. Added ebuild that is compliant with portage-cvs
 
   21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   acerhk-0.5.18-r1.ebuild, acerhk-0.5.18.ebuild, acerhk-0.5.20.ebuild,
