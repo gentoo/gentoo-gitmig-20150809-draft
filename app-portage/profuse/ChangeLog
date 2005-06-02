@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.27 2005/06/02 23:30:08 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.28 2005/06/02 23:40:41 dams Exp $
+
+  02 Jun 2005; <dams@gentoo.org> profuse-0.22.0.ebuild,
+  profuse-0.22.0-r1.ebuild:
+  masking broken versions
 
 *profuse-0.22.1 (02 Jun 2005)
 
