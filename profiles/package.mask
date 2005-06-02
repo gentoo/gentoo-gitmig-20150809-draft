@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4039 2005/06/01 19:58:13 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4040 2005/06/02 00:10:54 tove Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -317,10 +317,6 @@ sci-misc/boinc
 # John N. Laliberte <allanonjl@gentoo.org> (21 Apr 2005)
 # Masked because some deps are masked for gnome 2.10
 =dev-util/glade-2.10.0
-
-# Torsten Veller <tove@gentoo.org> (21 Apr 2005)
-# pre-relase snapshot - alpha version
-x11-wm/wmii
 
 # Mamoru KOMACHI <usata@gentoo.org>
 # No fix available for bug #87906
