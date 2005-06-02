@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 83b8b63f11cd0b04ee6d88af8830f611 minisip-0.7.0.ebuild 1288
+MD5 d5453572110e5b5464be119920ec40bd ChangeLog 444
+MD5 d620cd424e6c6553736cc5304899deae metadata.xml 253
+MD5 66f9e462eae33c5d64ba4ccefa07cc5c files/minisip-no-qtgui.patch 2868
+MD5 e6ba36dc5f1ea211ef790b0deb4e0c6a files/digest-minisip-0.7.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCnmAhKRy60XGEcJIRAnTdAJ0Tp8xveHmOcL0kzDfvU5+06/yyqQCghmYc
+72XJyfntnUusbo46oPTDSGs=
+=sSWR
+-----END PGP SIGNATURE-----

@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/libmutil
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libmutil/ChangeLog,v 1.1 2005/06/02 01:13:19 gustavoz Exp $
+
+*libmutil-0.3.0 (02 Jun 2005)
+
+  02 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> +metadata.xml,
+  +libmutil-0.3.0.ebuild:
+  Imported support library for minisip
+
