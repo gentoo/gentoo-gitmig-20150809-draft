@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/wmii
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.5 2005/05/14 20:16:47 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.6 2005/06/02 00:06:00 tove Exp $
+
+*wmii-1 (01 Jun 2005)
+
+  01 Jun 2005; Torsten Veller <tove@gentoo.org> -wmii-0.20050510.ebuild,
+  +wmii-1.ebuild:
+  First Relese. Removed cairo support because it's really broken.
 
   14 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
   wmii-0.20050510.ebuild:
