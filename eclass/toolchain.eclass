@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.161 2005/06/02 15:01:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.162 2005/06/02 23:46:41 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 RESTRICT="nostrip"
 
 #---->> eclass stuff <<----
-inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
+inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib fixheadtails
 
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
@@ -890,6 +890,12 @@ gcc_src_unpack() {
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
+	fix_files=""
+	for x in contrib/test_summary libstdc++-v3/scripts/check_survey.in ; do
+		[[ -e ${x} ]] && fix_files="${fix_files} ${x}"
+	done
+	ht_fix_file ${fix_files} */configure *.sh
+
 	if ! is_crosscompile && is_multilib && \
 	   [[ $(tc-arch) == "amd64" && -z ${SKIP_MULTILIB_HACK} ]] ; then
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
@@ -1088,7 +1094,8 @@ gcc_do_configure() {
 		confgcc="${confgcc} --enable-__cxa_atexit"
 	fi
 	[[ ${CTARGET} == *-gnu* ]] && confgcc="${confgcc} --enable-clocale=gnu"
-	[[ ${CTARGET} == *-uclibc* ]] && confgcc="${confgcc} --enable-clocale=uclibc"
+	[[ ${CTARGET} == *-uclibc* ]] && [[ ${GCCMAJOR}.${GCCMAJOR} > 3.3 ]] \
+		&& confgcc="${confgcc} --enable-clocale=uclibc"
 
 	# Nothing wrong with a good dose of verbosity
 	echo
@@ -1154,7 +1161,7 @@ gcc_do_make() {
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-all}
 	elif [[ $(tc-arch) == "x86" || $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ]] \
-	     && [[ ${GCCMAJOR} -gt 3 || ${GCCMAJOR} -eq 3 && ${GCCMINOR} -gt 3 ]]
+	     && [[ ${GCCMAJOR}.${GCCMAJOR} > 3.3 ]]
 	then
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-profiledbootstrap}
 	else
@@ -1841,10 +1848,7 @@ do_gcc_PIE_patches() {
 
 should_we_gcc_config() {
 	# we only want to switch compilers if installing to / or /tmp/stage1root
-	if [ "${ROOT}" = "/" ] || [ "${ROOT}" = "/tmp/stage1root" ]
-	then
-		return 1
-	fi
+	[[ ${ROOT} == "/" || ${ROOT} == "/tmp/stage1root" ]] && return 1
 
 	# we always want to run gcc-config if we're bootstrapping, otherwise
 	# we might get stuck with the c-only stage1 compiler
