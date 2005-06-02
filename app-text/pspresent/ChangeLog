@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pspresent
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.10 2005/03/22 09:32:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.11 2005/06/02 05:59:30 wormo Exp $
+
+  02 Jun 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  pspresent-1.2.ebuild:
+  mark ~ppc
 
   22 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> pspresent-1.2.ebuild:
   Stable on x86.

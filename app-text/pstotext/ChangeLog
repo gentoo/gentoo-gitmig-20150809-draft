@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pstotext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.10 2005/02/06 23:34:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.11 2005/06/02 06:00:57 wormo Exp $
+
+  02 Jun 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  pstotext-1.8g.ebuild:
+  mark ~ppc
 
   07 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> pstotext-1.8g.ebuild:
   added ~amd64 to KEYWORDS. fixes #81023
