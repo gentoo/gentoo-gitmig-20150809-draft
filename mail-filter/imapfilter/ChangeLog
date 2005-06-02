@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/imapfilter
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.7 2004/08/10 20:35:01 rizzo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.8 2005/06/02 23:31:40 ticho Exp $
+
+*imapfilter-1.0.1 (02 Jun 2005)
+
+  02 Jun 2005; Andrej Kacian <ticho@gentoo.org> +imapfilter-1.0.1.ebuild:
+  Version bump. Closes #79848, by Holger Hoffstätte <holger@wizards.de>.
 
   10 Aug 2004; Don Seiler <rizzo@gentoo.org> imapfilter-1.0.ebuild:
   Stable on x86, thanks to rajiv for reminding me.
