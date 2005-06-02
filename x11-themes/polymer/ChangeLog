@@ -1,0 +1,11 @@
+# ChangeLog for x11-themes/polymer
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/ChangeLog,v 1.1 2005/06/02 00:07:58 cryos Exp $
+
+*polymer-0.3.1 (02 Jun 2005)
+
+  02 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> +metadata.xml,
+  +polymer-0.3.1.ebuild:
+  Version bump, and name change from x11-misc/plastique to x11-misc/polymer. 
+  Closes bug 93832.
+
