@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.14 2005/05/29 11:40:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.15 2005/06/02 02:50:51 vapier Exp $
 
 inherit eutils
 
@@ -19,12 +19,11 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# solar@gentoo.org (Mar 24 2004)
 	# propolice/ssp caught minicom going out of bounds here.
-	epatch ${FILESDIR}/${P}-memcpy-bounds.diff
-
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-memcpy-bounds.diff
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
 
 src_compile() {
@@ -36,7 +35,12 @@ src_install() {
 	einstall || die "einstall failed"
 	dodoc doc/minicom.FAQ
 	insinto /etc/minicom
-	doins ${FILESDIR}/minirc.dfl
+	doins "${FILESDIR}"/minirc.dfl
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
+}
+
+pkg_preinst() {
+	[[ -s /etc/minicom/minirc.dfl ]] \
+		&& rm -f "${IMAGE}"/etc/minicom/minirc.dfl
 }
