@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.1.0.13.ebuild,v 1.1 2005/05/28 20:19:29 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.1.0.13.ebuild,v 1.2 2005/06/02 17:26:04 humpback Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ RESTRICT="nomirror"
 AVATARV="1.0"
 DESCRIPTION="${PN} is a P2P-VoiceIP client."
 HOMEPAGE="http://www.${PN}.com/"
-SRC_URI="http://www.gentoo-pt.org/~humpback/skype-avatars-${AVATARV}.tgz
+SRC_URI="http://dev.gentoo.org/~humpback/skype-avatars-${AVATARV}.tgz
 		!static? ( http://download.skype.com/linux/${P}.tar.bz2 )
 		static? ( http://download.skype.com/linux/${PN}_staticQT-${PV}.tar.bz2 )"
 LICENSE="skype-eula"
