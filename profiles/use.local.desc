@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1204 2005/06/01 14:07:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1205 2005/06/02 00:06:23 cryos Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -970,6 +970,7 @@ x11-terms/rxvt:linuxkeys - Define LINUX_KEYS (changes Home/End key)
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/xterm:toolbar - Enable the xterm toolbar to be built.
 x11-themes/plastique:sse2 - Enables sse2 support.
+x11-themes/polymer:sse2 - Enables sse2 support.
 x11-wm/enlightenment:nothemes - Don't include the standard E themes
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fluxbox:bigger-fonts - Force the supplied themes to use at least 10pt fonts
