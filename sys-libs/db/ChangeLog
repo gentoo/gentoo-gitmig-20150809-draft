@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.121 2005/05/29 10:46:36 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.122 2005/06/02 09:16:54 pauldv Exp $
+
+  02 Jun 2005; <pauldv@gentoo.org> db-4.2.52_p2.ebuild, db-4.3.27.ebuild:
+  Fix bug #94692, that is caused by use of gcc --version together with a 
+  crappy version detection script. Use a sed script to change the use of 
+  gcc --version to gcc -dumpversion
 
   29 May 2005; Paul de Vrieze <pauldv@gentoo.org> db-4.2.52_p2.ebuild:
   Mark 4.2 stable.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.27.ebuild,v 1.2 2005/05/29 14:15:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.27.ebuild,v 1.3 2005/06/02 09:16:54 pauldv Exp $
 
 inherit eutils gnuconfig db
 
@@ -47,6 +47,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-4.3.27-fix-dep-link.patch
 
 	gnuconfig_update "${S}/../dist"
+
+	sed -i -e "s,\(ac_compiler\|\${MAKEFILE_CC}\|\${MAKEFILE_CXX}\|\$CC\)\( *--version\),\1 -dumpversion,g" ${S}/../dist/configure
 }
 
 src_compile() {
