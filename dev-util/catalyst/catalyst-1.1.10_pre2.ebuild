@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10_pre1.ebuild,v 1.1 2005/06/01 16:30:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10_pre2.ebuild,v 1.1 2005/06/02 15:52:16 wolf31o2 Exp $
 
 inherit eutils
 
@@ -18,7 +18,11 @@ RDEPEND="dev-lang/python
 	sys-apps/portage
 	amd64? ( sys-apps/linux32 )
 	ccache? ( dev-util/ccache )
-	cdr? ( virtual/cdrtools app-misc/zisofs-tools >=sys-fs/squashfs-tools-2.1 )
+	cdr? (
+		virtual/cdrtools
+		app-misc/zisofs-tools
+		!mips? (
+			>=sys-fs/squashfs-tools-2.1 ) )
 	examples? ( dev-util/livecd-kconfigs dev-util/livecd-specs )"
 
 pkg_setup() {
@@ -64,9 +68,8 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "You can find more information about catalyst by checking out the
-catalyst"
-	einfo "project page at:"
+	einfo "You can find more information about catalyst by checking out the"
+	einfo "catalyst project page at:"
 	einfo "http://www.gentoo.org/proj/en/releng/catalyst/index.xml"
 	echo
 }
