@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.6 2005/04/06 22:21:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.7 2005/06/02 23:43:55 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -23,6 +23,7 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	use amd64 || return 0
+	export ABI=x86
 	if has_m32 ; then
 		append-flags -m32
 		append-ldflags -m elf_i386
