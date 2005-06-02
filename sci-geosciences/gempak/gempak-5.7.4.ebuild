@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.4.ebuild,v 1.2 2005/05/15 21:38:10 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.4.ebuild,v 1.3 2005/06/02 15:43:01 ribosome Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DESCRIPTION="GEMPAK Meteorological Plotting and Analysis Package"
 HOMEPAGE="http://www.unidata.ucar.edu/packages/gempak"
 SRC_URI="${MY_P}.tar.gz"
 LICENSE="as-is"
-DEPEND="x11-libs/openmotif
+DEPEND="virtual/motif
 	!x11-libs/lesstif"
 SLOT="0"
 IUSE=""
