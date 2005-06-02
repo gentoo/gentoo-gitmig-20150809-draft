@@ -1,0 +1,301 @@
+diff -NuarwbB nullmailer-1.00.orig/doc/nullmailer-send.8 nullmailer-1.00/doc/nullmailer-send.8
+--- nullmailer-1.00.orig/doc/nullmailer-send.8	2005-06-01 20:47:27.000000000 -0700
++++ nullmailer-1.00/doc/nullmailer-send.8	2005-06-01 20:47:59.000000000 -0700
+@@ -3,6 +3,7 @@
+ nullmailer-send \- Send queued messages
+ .SH SYNOPSIS
+ .B nullmailer-send
++.RB [ \-\-daemon ]\ [ \-\-syslog ]
+ .SH DESCRIPTION
+ This program is responsible for coordinating the transmission of
+ messages that have been queued by
+@@ -37,6 +38,15 @@
+ sleeps for a number of seconds specified by
+ .B pausetime
+ before retrying sending the contents of the queue.
++.SH OPTIONS
++.TP
++.BR \-d ,\  \-\-daemon
++Fork into the background, implies --syslog.
++.TP
++.BR \-s ,\  \-\-syslog
++Use syslog for error and log messages.
++With --daemon, syslog will be used exclusively, without --daemon,
++syslog will be used additionally.
+ .SH CONTROL FILES
+ All the control files are reread each time the queue is run.
+ .TP
+diff -NuarwbB nullmailer-1.00.orig/protocols/protocol.cc nullmailer-1.00/protocols/protocol.cc
+--- nullmailer-1.00.orig/protocols/protocol.cc	2005-06-01 20:47:27.000000000 -0700
++++ nullmailer-1.00/protocols/protocol.cc	2005-06-01 20:52:54.000000000 -0700
+@@ -22,11 +22,15 @@
+ #include <config.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <sys/syslog.h>
+ #include "connect.h"
+ #include "errcodes.h"
+ #include "protocol.h"
+ #include "cli++.h"
+ 
++static int use_syslog = 0;
++static int daemonize  = 0;
++
+ const char* cli_help_suffix = "";
+ const char* cli_args_usage = "remote-address < mail-file";
+ const int cli_args_min = 1;
+@@ -36,23 +40,35 @@
+     "Set the port number on the remote host to connect to", 0 },
+   { 'a', "auth", cli_option::string, 0, &auth,
+     "Set the user and password for authentication (user,pass)", 0 },
++  { 'd', "daemon", cli_option::flag, 1, &daemonize,  "use syslog exclusively ", 0 },
++  { 's', "syslog", cli_option::flag, 1, &use_syslog, "use syslog additionally", 0 },
+   {0, 0, cli_option::flag, 0, 0, 0, 0}
+ };
+ 
+ void protocol_fail(int e, const char* msg)
+ {
++  if (use_syslog)
++    syslog(LOG_ERR, "%s: Failed: %s", cli_program, msg);
++  if (!daemonize)
+   ferr << cli_program << ": Failed: " << msg << endl;
+   exit(e);
+ }
+ 
+ void protocol_succ(const char* msg)
+ {
++  if (use_syslog)
++    syslog(LOG_ERR, "%s: Succeeded: %s", cli_program, msg);
++  if (!daemonize)
+   ferr << cli_program << ": Succeeded: " << msg << endl;
+   exit(0);
+ }
+ 
+ int cli_main(int, char* argv[])
+ {
++  if (daemonize)
++    use_syslog = 1;
++  if (use_syslog)
++    openlog("nullmailer", LOG_CONS | LOG_PID, LOG_MAIL);
+   const char* remote = argv[0];
+   fdibuf in(0, true);
+   protocol_prep(&in);
+diff -NuarwbB nullmailer-1.00.orig/src/Makefile.in nullmailer-1.00/src/Makefile.in
+--- nullmailer-1.00.orig/src/Makefile.in	2005-02-28 09:39:50.000000000 -0800
++++ nullmailer-1.00/src/Makefile.in	2005-06-01 20:51:15.000000000 -0700
+@@ -65,7 +65,7 @@
+ nullmailer_queue_DEPENDENCIES = ../lib/libnullmailer.a
+ am_nullmailer_send_OBJECTS = send.$(OBJEXT)
+ nullmailer_send_OBJECTS = $(am_nullmailer_send_OBJECTS)
+-nullmailer_send_DEPENDENCIES = ../lib/libnullmailer.a
++nullmailer_send_DEPENDENCIES = ../lib/cli++/libcli++.a ../lib/libnullmailer.a
+ am_sendmail_OBJECTS = sendmail.$(OBJEXT)
+ sendmail_OBJECTS = $(am_sendmail_OBJECTS)
+ sendmail_DEPENDENCIES = ../lib/cli++/libcli++.a ../lib/libnullmailer.a
+@@ -173,13 +173,13 @@
+ #noinst_PROGRAMS = address
+ INCLUDES = -I../lib -I../lib/cli++
+ mailq_SOURCES = mailq.cc
+-mailq_LDADD = ../lib/libnullmailer.a
++mailq_LDADD = ../lib/cli++/libcli++.a ../lib/libnullmailer.a
+ nullmailer_inject_SOURCES = inject.cc
+ nullmailer_inject_LDADD = ../lib/cli++/libcli++.a ../lib/libnullmailer.a
+ nullmailer_queue_SOURCES = queue.cc
+ nullmailer_queue_LDADD = ../lib/libnullmailer.a
+ nullmailer_send_SOURCES = send.cc
+-nullmailer_send_LDADD = ../lib/libnullmailer.a
++nullmailer_send_LDADD = ../lib/cli++/libcli++.a ../lib/libnullmailer.a
+ sendmail_SOURCES = sendmail.cc
+ sendmail_LDADD = ../lib/cli++/libcli++.a ../lib/libnullmailer.a
+ all: all-am
+diff -NuarwbB nullmailer-1.00.orig/src/send.cc nullmailer-1.00/src/send.cc
+--- nullmailer-1.00.orig/src/send.cc	2005-02-28 09:48:54.000000000 -0800
++++ nullmailer-1.00/src/send.cc	2005-06-01 20:47:59.000000000 -0700
+@@ -27,6 +27,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/stat.h>
++#include <sys/syslog.h>
+ #include <sys/types.h>
+ #include <sys/wait.h>
+ #include <unistd.h>
+@@ -38,11 +39,27 @@
+ #include "hostname.h"
+ #include "itoa.h"
+ #include "list.h"
++#include "cli++/cli++.h"
+ 
+ typedef list<mystring> slist;
+ 
+-#define fail(MSG) do { ferr << MSG << endl; return false; } while(0)
+-#define fail_sys(MSG) do{ ferr << MSG << strerror(errno) << endl; return false; }while(0)
++static int use_syslog = 0;
++static int daemonize  = 0;
++
++const char* cli_program     = "nullmailer-send";
++const char* cli_help_prefix = "nullmailer daemon\n";
++const char* cli_help_suffix = "";
++const char* cli_args_usage  = "";
++const int cli_args_min = 0;
++const int cli_args_max = 0;
++cli_option cli_options[] = {
++  { 'd', "daemon", cli_option::flag, 1, &daemonize,  "daemonize , implies --syslog", 0 },
++  { 's', "syslog", cli_option::flag, 1, &use_syslog, "use syslog", 0 },
++  { 0, 0, cli_option::flag, 0, 0, 0, 0 }
++};
++
++#define fail(MSG) do { if (use_syslog) syslog(LOG_ERR, "%s", MSG); if (!daemonize) ferr << MSG << endl; return false; } while (0)
++#define fail_sys(MSG) do { if (use_syslog) syslog(LOG_ERR, "%s %s", MSG, strerror(errno)); if (!daemonize) ferr << MSG << strerror(errno) << endl; return false; } while (0)
+ 
+ struct remote
+ {
+@@ -141,6 +158,9 @@
+ bool load_files()
+ {
+   reload_files = false;
++  if (use_syslog)
++    syslog(LOG_INFO, "Rescanning queue.");
++  if (!daemonize)
+   fout << "Rescanning queue." << endl;
+   DIR* dir = opendir(".");
+   if(!dir)
+@@ -159,12 +179,19 @@
+ 
+ void exec_protocol(int fd, remote& remote)
+ {
+-  if(close(0) == -1 || dup2(fd, 0) == -1 || close(fd) == -1)
++  if (!daemonize && close(STDIN_FILENO) < 0)
++    return;
++  if (fd != STDIN_FILENO)
++    if (dup2(fd, STDIN_FILENO) < 0 || close(fd) < 0)
+     return;
+   mystring program = PROTOCOL_DIR + remote.proto;
+-  const char* args[3+remote.options.count()];
++  const char* args[5+remote.options.count()];
+   unsigned i = 0;
+   args[i++] = program.c_str();
++  if (daemonize)
++    args[i++] = "-d";
++  if (use_syslog)
++    args[i++] = "-s";
+   for(slist::const_iter opt(remote.options); opt; opt++)
+     args[i++] = strdup((*opt).c_str());
+   args[i++] = remote.host.c_str();
+@@ -173,8 +200,8 @@
+ }
+ 
+ #undef fail
+-#define fail(MSG) do { fout << MSG << endl; return false; } while(0)
+-#define fail2(MSG1,MSG2) do{ fout << MSG1 << MSG2 << endl; return false; }while(0)
++#define fail(MSG) do { if (use_syslog) syslog(LOG_ERR, "%s", MSG); if (!daemonize) fout << MSG << endl; return false; } while (0)
++#define fail2(MSG1,MSG2) do { if (use_syslog) syslog(LOG_ERR, "%s %s", MSG1, MSG2); if (!daemonize) fout << MSG1 << MSG2 << endl; return false; } while (0)
+ 
+ bool catchsender(pid_t pid)
+ {
+@@ -187,6 +214,9 @@
+       if(status)
+ 	fail2("Sending failed: ", errorstr[status]);
+       else {
++	if (use_syslog)
++	  syslog(LOG_INFO, "Sent file.");
++	if (!daemonize)
+ 	fout << "Sent file." << endl;
+ 	return true;
+       }
+@@ -200,9 +230,16 @@
+ {
+   int fd = open(filename.c_str(), O_RDONLY);
+   if(fd == -1) {
++    if (use_syslog)
++      syslog(LOG_ERR, "Can't open file '%s'", filename.c_str());
++    if (!daemonize)
+     fout << "Can't open file '" << filename << "'" << endl;
+     return false;
+   }
++  if (use_syslog)
++    syslog(LOG_INFO, "Starting delivery: protocol: %s host: %s file: %s",
++      remote.proto.c_str(), remote.host.c_str(), filename.c_str());
++  if (!daemonize)
+   fout << "Starting delivery: protocol: " << remote.proto
+        << " host: " << remote.host
+        << " file: " << filename << endl;
+@@ -231,6 +268,9 @@
+     fail("No remote hosts listed for delivery");
+   if(files.count() == 0)
+     return true;
++  if (use_syslog)
++    syslog(LOG_INFO, "Starting delivery, %d message(s) in queue.", files.count());
++  if (!daemonize)
+   fout << "Starting delivery, "
+        << itoa(files.count()) << " message(s) in queue." << endl;
+   for(rlist::iter remote(remotes); remote; remote++) {
+@@ -242,6 +282,9 @@
+ 	file++;
+     }
+   }
++  if (use_syslog)
++    syslog(LOG_INFO, "Delivery complete, %d message(s) remain.", files.count());
++  if (!daemonize)
+   fout << "Delivery complete, "
+        << itoa(files.count()) << " message(s) remain." << endl;
+   return true;
+@@ -287,6 +330,9 @@
+   int s = select(trigger+1, &readfds, 0, 0,
+ 		 (files.count() == 0) ? 0 : &timeout);
+   if(s == 1) {
++    if (use_syslog)
++      syslog(LOG_INFO, "Trigger pulled.");
++    if (!daemonize)
+     fout << "Trigger pulled." << endl;
+     read_trigger();
+     reload_files = true;
+@@ -300,21 +346,46 @@
+   return true;
+ }
+ 
+-int main(int, char*[])
++int cli_main(int, char*[])
+ {
+   mystring hh;
++  pid_t pid;
++
++  if (daemonize)
++    use_syslog = 1;
++  if (use_syslog)
++    openlog("nullmailer", LOG_CONS | LOG_PID, LOG_MAIL);
+ 
+   read_hostnames();
+   if (!config_read("helohost", hh)) hh = me;
+   setenv("HELOHOST", hh.c_str(), 1);
+   
+-  if(!open_trigger())
++  if(!open_trigger()) {
++    if (use_syslog)
++      syslog(LOG_CRIT, "Could not open trigger.");
++    if (!daemonize)
++      ferr << "Could not open trigger." << endl;
+     return 1;
++  }
+   if(chdir(QUEUE_MSG_DIR) == -1) {
+-    fout << "Could not chdir to queue message directory." << endl;
++    if (use_syslog)
++      syslog(LOG_CRIT, "Could not chdir to queue message directory.");
++    if (!daemonize)
++      ferr << "Could not chdir to queue message directory." << endl;
+     return 1;
+   }
+   
++  if (daemonize) {
++    if ((pid = fork()) < 0) {
++      syslog(LOG_CRIT, "Could not fork.");
++      return 1;
++    }
++    if (pid)
++      return 0;
++    close(STDIN_FILENO);
++    close(STDOUT_FILENO);
++    close(STDERR_FILENO);
++  }
+   signal(SIGALRM, catch_alrm);
+   signal(SIGHUP, SIG_IGN);
+   load_config();

@@ -1,6 +1,7 @@
-# Format is: HOST PROTOCOL
+# Format is: HOST PROTOCOL [OPTIONS]
 # HOST = IP or DNS
 # PROTOCOL = smtp | qmtp
+# OPTIONS = [--port=NUMBER] [--auth=user,pass]
 #
 # Examples:
 # A standard SMTP server:
@@ -11,3 +12,6 @@
 #
 # A nonstandard SMTP server setup:
 # someotherserver.domain.com smtp --port=2525
+#
+# As of 1.00, nullmailer also supports SMTP AUTH
+# mailserver smtp --auth=user,pass
