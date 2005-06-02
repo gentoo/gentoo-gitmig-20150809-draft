@@ -1,0 +1,15 @@
+# ChangeLog for net-proxy/http-replicator
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.1 2005/06/02 06:33:24 griffon26 Exp $
+
+  02 Jun 2005; Maurice van der Pot <griffon26@gentoo.org> ChangeLog:
+  +files/http-replicator-3.0-callrepcacheman-0.1,
+  +files/http-replicator-3.0-repcacheman-0.21,
+  +files/http-replicator-3.0-repcacheman-0.33,
+  +files/http-replicator-3.0.conf, +files/http-replicator-3.0.init,
+  +metadata.xml, +http-replicator-3.0.ebuild:
+  Initial import of http-replicator, a caching proxy that can be used 
+  for distfile mirroring on a LAN. 
+  Http-replicator by Gertjan van Zwieten <gertjanvanzwieten@fastmail.fm>
+  Ebuild and cache manager by Tom Poplawski <poplawtm@earthlink.net>
+
