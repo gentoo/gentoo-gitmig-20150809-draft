@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.1.ebuild,v 1.2 2005/05/31 21:26:01 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.1.ebuild,v 1.3 2005/06/02 18:30:30 sekretarz Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~ppc64 ~sparc ~alpha"
-IUSE="amuled debug gtk2 nls remote stats unicode hardened"
+IUSE="amuled debug gtk2 nls remote stats unicode"
 
 
 DEPEND=">=x11-libs/wxGTK-2.6.0
@@ -56,8 +56,8 @@ src_compile() {
 		`use_enable stats alcc` \
 		|| die
 	# we filter ssp until bug #74457 is closed to build on hardened
-	if use hardened; then
-	fiter-flags -fstack-protector -fstack-protector-all
+	if has_hardened; then
+	filter-flags -fstack-protector -fstack-protector-all
 	fi
 	emake -j1 || die
 }
