@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sysutils
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysutils/ChangeLog,v 1.6 2004/09/03 21:03:24 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysutils/ChangeLog,v 1.7 2005/06/02 16:45:48 dang Exp $
+
+  02 Jun 2005; <dang@gentoo.org> sysutils-0.1.0.ebuild:
+  Added ~amd64
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   sysutils-0.1.0.ebuild:
