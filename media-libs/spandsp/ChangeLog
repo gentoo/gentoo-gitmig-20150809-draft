@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/spandsp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.2 2005/03/21 18:35:53 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.3 2005/06/02 01:36:10 gustavoz Exp $
+
+*spandsp-0.0.2_pre18 (02 Jun 2005)
+
+  02 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  -spandsp-0.0.2_pre4.ebuild, +spandsp-0.0.2_pre18.ebuild:
+  New upstream version and cleanup old pre4
 
 *spandsp-0.0.2_pre10 (21 Mar 2005)
 
