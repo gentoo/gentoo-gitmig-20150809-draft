@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/POE
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.33 2005/05/25 15:26:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.34 2005/06/02 08:33:30 mcummings Exp $
+
+  02 Jun 2005; Michael Cummings <mcummings@gentoo.org> POE-0.30.09.ebuild,
+  POE-0.31.01.ebuild:
+  Bug 94741
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> POE-0.31.01.ebuild:
   dev-perl/Time-HiRes => perl-core/Time-HiRes migration
