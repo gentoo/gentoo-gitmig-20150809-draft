@@ -10,14 +10,15 @@ http://bugs.gentoo.org/show_bug.cgi?id=85780
 
 --- libjsw/string.cpp
 +++ libjsw/string.cpp
-@@ -28,3 +28,5 @@
+@@ -30,3 +30,5 @@
  #endif
 +#ifndef _GNU_SOURCE
  char *strcasestr(const char *haystack, const char *needle);
 +#endif
  int strpfx(const char *s, const char *pfx);
-@@ -217,3 +219,4 @@
- */
+@@ -218,4 +220,5 @@
+  *	needle in haystack if found or NULL on no match.
+  */
 +#ifndef _GNU_SOURCE
  char *strcasestr(const char *haystack, const char *needle)
  {
