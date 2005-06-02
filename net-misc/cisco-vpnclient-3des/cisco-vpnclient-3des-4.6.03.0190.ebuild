@@ -1,17 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.02.0030.ebuild,v 1.2 2005/06/02 14:32:11 wolf31o2 Exp $
-
-inherit eutils kernel-mod
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.03.0190.ebuild,v 1.1 2005/06/02 14:32:11 wolf31o2 Exp $
 
 MY_PV=${PV}-k9
 DESCRIPTION="Cisco VPN Client (3DES)"
 HOMEPAGE="http://cco.cisco.com/en/US/products/sw/secursw/ps2308/index.html"
-SRC_URI="vpnclient-linux-${MY_PV}.tar.gz"
+SRC_URI="vpnclient-linux-x86_64-${MY_PV}.tar.gz"
 
 LICENSE="cisco-vpn-client"
 SLOT="${KV}"
-KEYWORDS="-* x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 RESTRICT="fetch"
 
@@ -27,18 +25,6 @@ pkg_nofetch() {
 	einfo "Please visit:"
 	einfo " ${HOMEPAGE}"
 	einfo "and download ${A} to ${DISTDIR}"
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# Patch to allow use of alternate CC.  Patch submitted to bug #33488 by
-	# Jesse Becker <jbecker@speakeasy.net>
-	epatch ${FILESDIR}/driver_build_CC.patch
-	# Patch submitted to bug #69870 by James Ward <jennyandjamesward@yahoo.com>
-	# fixed to work on 4.6.02.0030 <sfs@steflo.dk>
-	epatch ${FILESDIR}/${PV}-supported_device.patch
 }
 
 src_compile () {
@@ -68,11 +54,7 @@ src_install() {
 	dosym /opt/cisco-vpnclient/bin/vpnclient /usr/bin/vpnclient
 
 	insinto /lib/modules/${KV}/CiscoVPN
-	if kernel-mod_is_2_6_kernel; then
-		doins cisco_ipsec.ko
-	else
-		doins cisco_ipsec
-	fi
+	doins cisco_ipsec*
 
 	insinto ${VPNDIR}
 	doins vpnclient.ini
@@ -83,10 +65,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "You must run \`/etc/init.d/vpnclient start\` before using the client."
-	echo
+	echo ""
 	ewarn "Configuration directory has moved to ${VPNDIR}!"
-	echo
-	ewarn "If you are experiencing problems keeping a connection alive, please"
-	ewarn "check bug #90693 for more information about disabling rp_filter."
-	echo
+	echo ""
 }
