@@ -1,5 +1,15 @@
-MD5 36dc7c994d826560cf1ff4dc39a5e107 ChangeLog 701
-MD5 503542c6767cbd63c5fefdd19bbf504e cdecl-2.5-r1.ebuild 878
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 25fae67b0c2d4a2d2dc2788872bb88d8 cdecl-2.5-r1.ebuild 884
+MD5 0e0d7f181c9e162b4d30d3c42a3abe28 ChangeLog 770
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
-MD5 4cfcbfaea827c2ce9f6c5ebd297a64df files/cdecl-2.5.patch 736
 MD5 78064d7ba6746c4ca40c6078594dd9fb files/digest-cdecl-2.5-r1 60
+MD5 4cfcbfaea827c2ce9f6c5ebd297a64df files/cdecl-2.5.patch 736
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCnydZomPajV0RnrERAipiAJ4h7n6r9VKvdzflP7uofTpznS95ewCcC3DN
+CVyP6ySeU/Q0Njrbfd9Uczk=
+=VPMl
+-----END PGP SIGNATURE-----
