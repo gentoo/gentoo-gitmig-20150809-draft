@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.15 2005/04/24 13:01:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.16 2005/06/02 11:46:53 ka0ttic Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	fi
 
 	epatch ${FILESDIR}/${P}-64bit-fixes.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {

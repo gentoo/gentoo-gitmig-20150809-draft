@@ -2,16 +2,17 @@
 Hash: SHA1
 
 MD5 bce1b5050738944235bd23778813bf71 ltrace-0.3.36.ebuild 935
-MD5 29825b902e6238fbe4f6e03ec783c244 ltrace-0.3.31.ebuild 1180
-MD5 1fdad2f07c61f1415a466e9e18bf7ccf ChangeLog 2594
+MD5 7623bb078f82b35608ca65e326a9e9fd ltrace-0.3.31.ebuild 1217
+MD5 e9693bc3af18b2e126fb5ef46db741e7 ChangeLog 2748
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 bdd8f496365cbecd525f682a272b724b files/digest-ltrace-0.3.31 136
 MD5 3bd65602468de146eb305f7b9bfe160e files/digest-ltrace-0.3.36 136
 MD5 f196bc8262608da52e8a9cb90dbac6e5 files/ltrace-0.3.31-64bit-fixes.patch 5964
+MD5 922241bfe160b7f8d4c34753b0192308 files/ltrace-0.3.31-gcc4.patch 408
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClGu/EZCkKN40op4RAlDPAKCqXdj6wNQaU/YPsi5mos9sBwH5RwCePzR7
-4SLegaSSRjGFPcXvKo0Bces=
-=Qml6
+iD8DBQFCnvIHEZCkKN40op4RAlX0AKCHIdnIEaX3LoUb8DV/CHA4jLqJIACeNYlb
+/xCVC+irO2L7BGHWvP0e9ic=
+=5/aT
 -----END PGP SIGNATURE-----
