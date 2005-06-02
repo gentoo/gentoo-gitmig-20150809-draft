@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9052c336a8bc83c20177151c34bdf560 pam-syntax-20030818.ebuild 544
 MD5 c11a16dbdfef0ae89b73162208c69f45 ChangeLog 759
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 2ae3deb0cd56e5c3165430a293b50e53 pam-syntax-20030818.ebuild 549
 MD5 2037b48ba8829dca2ec7c1617804821a files/digest-pam-syntax-20030818 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmkP8ntT9W3vfTuoRAs9hAJ47PfLEC+dQkm6t+UpPbsfsBljDwQCgqQgD
-PPloFnA3E9FJSTccS/CLTFc=
-=tn5L
------END PGP SIGNATURE-----
