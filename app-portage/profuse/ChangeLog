@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.21 2005/05/13 17:24:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.22 2005/06/02 14:36:33 dams Exp $
+
+*profuse-0.22.0 (02 Jun 2005)
+
+  02 Jun 2005; <dams@gentoo.org> +profuse-0.22.0.ebuild:
+  new version, search feature in ncurses
 
   13 May 2005; Sven Wegener <swegener@gentoo.org> profuse-0.21.0.ebuild:
   Fixed invalid atoms in *DEPEND.
