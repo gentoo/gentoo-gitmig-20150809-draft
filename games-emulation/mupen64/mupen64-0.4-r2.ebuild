@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r2.ebuild,v 1.4 2005/05/30 18:35:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r2.ebuild,v 1.5 2005/06/02 23:02:27 mr_bones_ Exp $
 
-inherit games eutils libtool
+inherit eutils games
 
 DESCRIPTION="A Nintendo 64 (N64) emulator"
 HOMEPAGE="http://mupen64.emulation64.com/"
@@ -13,8 +13,8 @@ SRC_URI="http://mupen64.emulation64.com/files/${PV}/mupen64_src-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
-IUSE="avi gtk2 asm"
+KEYWORDS="~amd64 x86"
+IUSE="asm avi gtk2"
 
 RDEPEND="sys-libs/zlib
 	media-libs/libsdl
@@ -28,30 +28,30 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	>=games-emulation/mupen64-glN64-0.4.1_rc2-r1"
 
-
 S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-makefiles.patch" || die "patch failed"
-	epatch "${FILESDIR}/${PN}-confdir.patch" || die "patch failed"
+	epatch "${FILESDIR}/${PN}-makefiles.patch"
+	epatch "${FILESDIR}/${PN}-confdir.patch"
 	# gtk2 breaks some configuration dialogs (bug 56195 #35)
 	if use gtk2; then
-		epatch "${FILESDIR}/${PN}-gtk2-makefile.patch" || die "patch failed"
+		epatch "${FILESDIR}/${PN}-gtk2-makefile.patch"
 	fi
 	if use avi; then
-		epatch "${FILESDIR}/${PN}-gentoo-avi.patch" || die "patch failed"
+		epatch "${FILESDIR}/${PN}-gentoo-avi.patch"
 	fi
 
 	if ! use asm ; then
-		epatch "${FILESDIR}/${PN}-noasm.patch" || die "patch failed"
+		epatch "${FILESDIR}/${PN}-noasm.patch"
 	fi
 	sed -i \
 		-e "s:CFLAGS.*=\(.*\):CFLAGS=\1 -fPIC ${CFLAGS}:" \
 		-e "s:CXXFLAGS.*=\(.*\):CXXFLAGS=\1 -fPIC ${CXXFLAGS}:" \
-		*/Makefile || die "sed failed"
+		*/Makefile \
+		|| die "sed failed"
 }
 
 src_compile() {
