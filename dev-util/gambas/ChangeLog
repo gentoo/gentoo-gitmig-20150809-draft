@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gambas
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.28 2005/04/23 13:00:03 genone Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.29 2005/06/02 00:13:53 vapier Exp $
+
+*gambas-1.0.6 (02 Jun 2005)
+
+  02 Jun 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gambas-1.0.6-configure-CFLAGS.patch, +gambas-1.0.6.ebuild:
+  Version bump.
 
 *gambas-1.0.5 (23 Apr 2005)
 
