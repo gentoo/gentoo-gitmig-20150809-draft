@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.7-r1.ebuild,v 1.1 2005/05/26 22:55:30 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.7-r1.ebuild,v 1.2 2005/06/03 14:52:07 latexer Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/sources/mono-${PV:0:3}/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2 X11)"
 SLOT="0"
-KEYWORDS="~x86 -ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="nptl icu X"
 
 DEPEND="virtual/libc
@@ -38,6 +38,9 @@ src_unpack() {
 
 	# Fix for linking to ICU
 	epatch ${FILESDIR}/${PN}-1.1.5-icu-linking.diff || die
+
+	# Fix building on PPC
+	epatch ${FILESDIR}/${P}-ppc-tls.diff || die
 
 	# Fix MONO_CFG_DIR for signing
 	sed -i \
