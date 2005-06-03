@@ -1,10 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 69eee83b60a0818c2c54c623ffb26b13 gtetrinet-0.7.9.ebuild 1527
 MD5 2991c859700ebb3aed2fa6125716df4c gtetrinet-0.7.4.ebuild 1434
 MD5 df93930c42a88aa1678a14ebbe0b300f gtetrinet-0.7.8.ebuild 1531
 MD5 8908482225f399bef07d8d970b92b32c gtetrinet-0.7.5.ebuild 1519
 MD5 7a58a6e8fbfabfeb04d651f2c311126b gtetrinet-0.7.7.ebuild 1527
-MD5 e51135ff8e195ec4b06c92dada35ca3d ChangeLog 3721
+MD5 7b430e600362bafdeff2622cc780322f ChangeLog 3839
 MD5 ced740229799575e35487154e4bc3c7b metadata.xml 652
 MD5 068602da69e46138504760c11850a4f7 files/digest-gtetrinet-0.7.4 143
 MD5 cd9f875bc7b09e6f41dea9e0f9004919 files/digest-gtetrinet-0.7.5 143
 MD5 28baac0d4fdcd05afefc657e27785734 files/digest-gtetrinet-0.7.7 143
 MD5 b8ffa6af6ed9e325f9fbe7b327086186 files/digest-gtetrinet-0.7.8 143
+MD5 cc4bb567009396c6013ba18cb4d79307 files/digest-gtetrinet-0.7.9 143
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCoGTm/rLF9B432nYRAr2/AKCWHesZR+Yf6K0ETmbv9QlSEOEPCgCfV1Pg
+SyRpBb6Xod0j1haZ5KHaLno=
+=aPVD
+-----END PGP SIGNATURE-----
