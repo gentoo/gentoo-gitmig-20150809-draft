@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.67 2005/05/04 09:01:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.68 2005/06/03 13:10:58 dragonheart Exp $
+
+*gnutls-1.2.4 (03 Jun 2005)
+
+  03 Jun 2005; Daniel Black <dragonheart@gentoo.org> +gnutls-1.2.4.ebuild:
+  Version bump - thanks tigger
 
 *gnutls-1.2.3-r1 (04 May 2005)
 
