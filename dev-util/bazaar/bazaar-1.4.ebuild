@@ -1,21 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.3.2.ebuild,v 1.4 2005/06/03 10:49:10 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.4.ebuild,v 1.1 2005/06/03 10:49:10 arj Exp $
 
 inherit eutils
 
 S="${WORKDIR}/${P}/src/=build"
 DESCRIPTION="Bazaar is a user-interface branch of tla"
 SRC_URI="http://bazaar.canonical.com/releases/src/bazaar_${PV}.tar.gz
-	http://dev.gentoo.org/~arj/baz.1.gz"
+	http://dev.gentoo.org/~arj/baz.1.4.gz"
 HOMEPAGE="http://bazaar.canonical.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
-DIR="thelove@canonical.com---dists--bazaar--1.3"
+DIR="thelove@canonical.com---dists--bazaar--1.4"
 
 DEPEND="sys-apps/coreutils
 	sys-apps/diffutils
@@ -31,7 +31,7 @@ DEPEND="sys-apps/coreutils
 
 src_unpack() {
 	unpack bazaar_${PV}.tar.gz
-	unpack baz.1.gz
+	unpack baz.1.4.gz
 	mv ${DIR} ${P}
 	mkdir "${P}/src/=build"
 	cd ${P}
