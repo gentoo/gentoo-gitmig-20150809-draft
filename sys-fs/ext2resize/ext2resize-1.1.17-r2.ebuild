@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.17-r2.ebuild,v 1.3 2004/06/30 17:09:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.17-r2.ebuild,v 1.4 2005/06/03 19:27:21 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	# Fix broken source for non-''old'' GCCs
 	sed -e 's/printf(__FUNCTION__ \"\\n\");/printf(\"%s\\n\", __FUNCTION__);/g' -i src/*.c
 	epatch ${FILESDIR}/${P}-gcc3.3.patch
+	epatch ${FILESDIR}/${P}-linux26.patch
 }
 
 src_compile() {
