@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libpcap-ringbuffer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/ChangeLog,v 1.3 2005/03/24 00:56:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/ChangeLog,v 1.4 2005/06/03 08:37:21 dragonheart Exp $
+
+*libpcap-ringbuffer-1.0.20050129-r1 (03 Jun 2005)
+
+  03 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/libpcap-ringbuffer-1.0.20050129-mmap-exec.patch,
+  +libpcap-ringbuffer-1.0.20050129-r1.ebuild:
+  hardened fix for bug #94896
 
 *libpcap-ringbuffer-1.0.20050129 (23 Mar 2005)
 

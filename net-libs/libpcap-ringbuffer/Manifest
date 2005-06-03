@@ -1,6 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e49089ecce4e38b96d3be7d3c959a898 ChangeLog 997
 MD5 3518cc7e500dab348a9a4aee5972d7c8 libpcap-ringbuffer-1.0.20041001.ebuild 1659
-MD5 0de5bced2c0d3a42143d82a65be94120 libpcap-ringbuffer-1.0.20050129.ebuild 1659
-MD5 fd751ae1adf37aa9b40df610dad41720 ChangeLog 757
 MD5 c14eecc39f9e4d6b37b94f4e81df755d metadata.xml 257
+MD5 0de5bced2c0d3a42143d82a65be94120 libpcap-ringbuffer-1.0.20050129.ebuild 1659
+MD5 47c5cd5700c22ccfc2baf90fb00c6966 libpcap-ringbuffer-1.0.20050129-r1.ebuild 1711
 MD5 a515448deadd95cb78cacf175a0aeba4 files/digest-libpcap-ringbuffer-1.0.20041001 72
 MD5 88de1c13f5c2a764d4613cd7070766c6 files/digest-libpcap-ringbuffer-1.0.20050129 72
+MD5 88de1c13f5c2a764d4613cd7070766c6 files/digest-libpcap-ringbuffer-1.0.20050129-r1 72
+MD5 2801bbe6917277fe63e0115dac7648b5 files/libpcap-ringbuffer-1.0.20050129-mmap-exec.patch 728
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCoBbWmdTrptrqvGERAje/AJ9z60J1os5yGnLgl7Kq/WPXKeJSLgCdEFCr
+G6pGCRDKXEXrxzRKNhaRMDI=
+=xS9t
+-----END PGP SIGNATURE-----
