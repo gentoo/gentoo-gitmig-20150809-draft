@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21.ebuild,v 1.1 2005/05/25 06:56:05 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21.ebuild,v 1.2 2005/06/03 17:54:19 langthang Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -231,13 +231,15 @@ src_install () {
 	fi
 
 	# Generate an empty sasldb2 with correct permissions.
-	LD_OLD="${LD_LIBRARY_PATH}"
-	export LD_LIBRARY_PATH="${D}/usr/$(get_libdir)" SASL_PATH="${D}/usr/$(get_libdir)/sasl2"
-	echo "p" | "${D}/usr/sbin/saslpasswd2" -f "${D}/etc/sasl2/sasldb2" -p login
-	"${D}/usr/sbin/saslpasswd2" -f "${D}/etc/sasl2/sasldb2" -d login
-	export LD_LIBRARY_PATH="${LD_OLD}"
-	chown root:mail "${D}/etc/sasl2/sasldb2"
-	chmod 0640 "${D}/etc/sasl2/sasldb2"
+	if use berkdb || use gdbm; then
+		LD_OLD="${LD_LIBRARY_PATH}"
+		export LD_LIBRARY_PATH="${D}/usr/$(get_libdir)" SASL_PATH="${D}/usr/$(get_libdir)/sasl2"
+		echo "p" | "${D}/usr/sbin/saslpasswd2" -f "${D}/etc/sasl2/sasldb2" -p login
+		"${D}/usr/sbin/saslpasswd2" -f "${D}/etc/sasl2/sasldb2" -d login
+		export LD_LIBRARY_PATH="${LD_OLD}"
+		chown root:mail "${D}/etc/sasl2/sasldb2"
+		chmod 0640 "${D}/etc/sasl2/sasldb2"
+	fi
 
 	docinto ""
 	dodoc AUTHORS COPYING ChangeLog NEWS README doc/TODO doc/*.txt
