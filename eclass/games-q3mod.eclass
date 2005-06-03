@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.25 2005/01/13 18:28:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.26 2005/06/03 23:08:27 vapier Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ DESCRIPTION="Quake III - ${MOD_DESC}"
 
 SLOT="0"
 KEYWORDS="-* x86 amd64"
-IUSE="opengl X dedicated emul-linux-x86"
+IUSE="opengl X dedicated"
 
 DEPEND="app-arch/unzip"
 RDEPEND="virtual/libc
@@ -46,17 +46,21 @@ games-q3mod_src_install() {
 		mv ${S}/* ${D}/${mdir}/
 	fi
 
-	games-q3mod_make_q3ded_exec
-	newgamesbin ${T}/q3${MOD_NAME}-ded.bin q3${MOD_BINS}-ded
+	if use dedicated; then
+		games-q3mod_make_q3ded_exec
+		newgamesbin ${T}/q3${MOD_NAME}-ded.bin q3${MOD_BINS}-ded
+	fi
 	games-q3mod_make_quake3_exec
 	newgamesbin ${T}/quake3-${MOD_NAME}.bin quake3-${MOD_BINS}
 
-	games-q3mod_make_init.d
-	exeinto /etc/init.d
-	newexe ${T}/q3${MOD_NAME}-ded.init.d q3${MOD_BINS}-ded
-	games-q3mod_make_conf.d
-	insinto /etc/conf.d
-	newins ${T}/q3${MOD_NAME}-ded.conf.d q3${MOD_BINS}-ded
+	if use dedicated; then
+		games-q3mod_make_init.d
+		exeinto /etc/init.d
+		newexe ${T}/q3${MOD_NAME}-ded.init.d q3${MOD_BINS}-ded
+		games-q3mod_make_conf.d
+		insinto /etc/conf.d
+		newins ${T}/q3${MOD_NAME}-ded.conf.d q3${MOD_BINS}-ded
+	fi
 
 	dodir ${GAMES_SYSCONFDIR}/quake3
 
