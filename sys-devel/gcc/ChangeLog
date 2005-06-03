@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.412 2005/06/01 15:43:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.413 2005/06/03 02:23:23 halcy0n Exp $
+
+*gcc-4.0.1_beta20050602 (03 Jun 2005)
+
+  03 Jun 2005; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.0.1_beta20050526.ebuild, +gcc-4.0.1_beta20050602.ebuild:
+  GCC4 snapshot bump
 
   01 Jun 2005; Markus Rothe <corsair@gentoo.org> gcc-3.4.4.ebuild:
   Added ~ppc64 to KEYWORDS

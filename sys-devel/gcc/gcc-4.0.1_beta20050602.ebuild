@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1_beta20050526.ebuild,v 1.2 2005/05/30 03:35:06 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1_beta20050602.ebuild,v 1.1 2005/06/03 02:23:24 halcy0n Exp $
 
 ETYPE="gcc-compiler"
 
