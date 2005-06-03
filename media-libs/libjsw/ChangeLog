@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libjsw
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.8 2005/05/23 15:46:22 herbs Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.9 2005/06/03 00:49:16 vapier Exp $
+
+  03 Jun 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/libjsw-1.5.5-liborder.patch, libjsw-1.5.5.ebuild:
+  Make sure we search custom lib paths before system paths so broken libs dont
+  screw us #94867 by ferret.
 
   23 May 2005; Herbie Hopkins <herbs@gentoo.org> libjsw-1.5.5.ebuild:
   Fixed multilib issue, bug #93672

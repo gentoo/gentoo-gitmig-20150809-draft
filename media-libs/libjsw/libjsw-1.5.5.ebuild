@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.5.ebuild,v 1.4 2005/05/23 15:46:22 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.5.ebuild,v 1.5 2005/06/03 00:49:16 vapier Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	bunzip2 libjsw/man/* jscalibrator/jscalibrator.1.bz2 || die "bunzip failed"
 	cd jscalibrator
 	epatch "${FILESDIR}"/${P}-gcc33.patch
+	epatch "${FILESDIR}"/${P}-liborder.patch
 }
 
 src_compile() {
