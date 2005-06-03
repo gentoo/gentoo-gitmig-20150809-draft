@@ -13,7 +13,7 @@ MD5 be85068e1f8dd9340882814ae10e1763 mysql-4.0.23-r1.ebuild 9160
 MD5 528858502563f62b550e45c8ea3948f2 mysql-4.1.12.ebuild 15567
 MD5 f26f6906248f45f5f0d23248a39c03a4 mysql-4.0.24.ebuild 9816
 MD5 8756cd65136ad04b5b8368583ca0b29a ChangeLog 31828
-MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
+MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
 MD5 a755fb5a3ed724046a4f83fafd819c77 files/mysql-test-myisam-geometry.patch 1217
