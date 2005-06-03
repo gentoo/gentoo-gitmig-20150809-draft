@@ -1,0 +1,19 @@
+--- configure.orig	2005-06-03 13:38:58.316152040 -0500
++++ configure	2005-06-03 13:39:36.673320864 -0500
+@@ -1071,16 +1071,6 @@
+ [ -z "$QT_INSTALL_TRANSLATIONS" ] && QT_INSTALL_TRANSLATIONS=$QT_INSTALL_PREFIX/translations #default
+ QT_INSTALL_TRANSLATIONS=`$relpath/config.tests/unix/makeabs "$QT_INSTALL_TRANSLATIONS"`
+ 
+-#settings
+-if [ "$PLATFORM_MAC" = "yes" ]; then
+-   [ -z "$QT_INSTALL_SETTINGS" ] && QT_INSTALL_SETTINGS=/Library/Preferences/Qt #default
+-else
+-   [ -z "$QT_INSTALL_SETTINGS" ] && QT_INSTALL_SETTINGS=/etc/xdg #default
+-fi
+-if mkdir -p "$QT_INSTALL_SETTINGS" >/dev/null 2>&1; then
+-  QT_INSTALL_SETTINGS=`(cd "$QT_INSTALL_SETTINGS"; /bin/pwd)` #absolute
+-fi
+-
+ #examples
+ [ -z "$QT_INSTALL_EXAMPLES" ] && QT_INSTALL_EXAMPLES=$QT_INSTALL_PREFIX/examples #default
+ QT_INSTALL_EXAMPLES=`$relpath/config.tests/unix/makeabs "$QT_INSTALL_EXAMPLES"`
