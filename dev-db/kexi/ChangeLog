@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/kexi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kexi/ChangeLog,v 1.6 2005/01/01 17:34:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kexi/ChangeLog,v 1.7 2005/06/03 14:51:55 greg_g Exp $
+
+  03 Jun 2005; Gregorio Guidi <greg_g@gentoo.org> kexi-0.1_beta3.ebuild,
+  kexi-0.1_beta4.ebuild:
+  Add blockers on koffice.
 
   11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> kexi-0.1_beta4.ebuild:
   Added amd64 keyword, closing #62064.
