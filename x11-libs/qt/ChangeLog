@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.222 2005/06/01 15:46:24 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.223 2005/06/03 18:31:48 caleb Exp $
+
+  03 Jun 2005; Caleb Tennis <caleb@gentoo.org> -qt-3.3.3.ebuild,
+  qt-3.3.3-r1.ebuild:
+  Remove 3.3.3, and remove giflib/libungif dependency in 3.3.3-r1
 
   01 Jun 2005; Herbie Hopkins <herbs@gentoo.org> qt-3.3.4-r4.ebuild:
   Use correct libdir in qmake.conf.

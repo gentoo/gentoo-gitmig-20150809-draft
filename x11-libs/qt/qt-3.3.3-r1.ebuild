@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3-r1.ebuild,v 1.9 2005/01/08 10:36:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3-r1.ebuild,v 1.10 2005/06/03 18:31:48 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,7 +23,6 @@ IUSE="cups debug doc firebird gif icc ipv6 mysql nas odbc opengl postgres sqlite
 DEPEND="virtual/x11 virtual/xft
 	media-libs/libpng media-libs/jpeg media-libs/libmng
 	>=media-libs/freetype-2
-	gif? ( media-libs/giflib media-libs/libungif )
 	nas? ( >=media-libs/nas-1.5 )
 	odbc? ( dev-db/unixODBC )
 	mysql? ( dev-db/mysql )
