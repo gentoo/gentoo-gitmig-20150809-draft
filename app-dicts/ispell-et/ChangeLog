@@ -1,0 +1,8 @@
+# ChangeLog for app-dicts/ispell-es
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-et/ChangeLog,v 1.1 2005/06/03 11:08:15 arj Exp $
+
+*ispell-et-20030602 (03 Jun 2005)
+
+  03 Jun 2005; Anders Rune Jensen <arj@gentoo.org> ispell-et-20030602.ebuild:
+  Initial commit.
