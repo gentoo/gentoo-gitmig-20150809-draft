@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.1.ebuild,v 1.2 2005/06/01 09:07:23 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.1.ebuild,v 1.3 2005/06/03 12:01:38 greg_g Exp $
 
 inherit kde
 
@@ -57,7 +57,7 @@ src_install() {
 	local _S=${S}
 	for dir in `ls ${WORKDIR}`; do
 		cd ${WORKDIR}/${dir}
-		make DESTDIR=${D} install
+		make DESTDIR=${D} install || die
 	done
 	S=${_S}
 }
