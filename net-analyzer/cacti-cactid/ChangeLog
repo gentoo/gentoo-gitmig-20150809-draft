@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/cacti-cactid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/ChangeLog,v 1.8 2005/05/28 17:01:55 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/ChangeLog,v 1.9 2005/06/03 20:41:04 ramereth Exp $
+
+  03 Jun 2005; Lance Albertson <ramereth@gentoo.org>
+  -cacti-cactid-0.9_pre20050528.ebuild:
+  Removing cvs snapshot per request of upstream. Basically, the main branch
+  doesn't work with any of the current stable releases. Instead of trying to
+  maintain both a cactid and cacti cvs snapshot ebuild, just going to axe this
+  one.
 
 *cacti-cactid-0.9_pre20050528 (28 May 2005)
 
