@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooqstart-gnome/ooqstart-gnome-0.8.3.ebuild,v 1.6 2005/04/10 18:41:25 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooqstart-gnome/ooqstart-gnome-0.8.3.ebuild,v 1.7 2005/06/03 22:36:21 halcy0n Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/gnome2update.patch.bz2
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_install() {
