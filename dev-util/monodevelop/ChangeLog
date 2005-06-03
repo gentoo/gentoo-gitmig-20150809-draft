@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.30 2005/06/01 01:44:19 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.31 2005/06/03 14:28:56 latexer Exp $
+
+  03 Jun 2005; Peter Johanson <latexer@gentoo.org> monodevelop-0.7.ebuild:
+  Fix problem with shared mime info getting corrupted after an install.
 
   01 Jun 2005; Peter Johanson <latexer@gentoo.org> monodevelop-0.6.ebuild:
   Fix the deps to pull in a version of gtk-sharp that actually works. See bug

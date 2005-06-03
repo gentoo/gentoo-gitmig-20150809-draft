@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.7.ebuild,v 1.4 2005/05/23 18:00:14 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.7.ebuild,v 1.5 2005/06/03 14:28:56 latexer Exp $
 
-inherit mono eutils
+inherit mono eutils fdo-mime
 
 DESCRIPTION="MonoDevelop is a project to port SharpDevelop to Gtk#"
 SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.gz"
@@ -28,7 +28,12 @@ KEYWORDS="~x86 ~amd64"
 SLOT="0"
 
 src_compile() {
-	econf $(use_enable boo) $(use_enable java) || die
+	econf \
+		$(use_enable boo) \
+		$(use_enable java) \
+		--disable-update-mimedb \
+		--disable-update-desktopdb \
+		|| die
 	emake -j1 || die
 }
 
@@ -43,6 +48,9 @@ src_install () {
 }
 
 pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+
 	echo
 	ewarn "${P} is affected by a bug in gtk-sharp which makes it"
 	ewarn "crash horribly when loading any project referencing the"
