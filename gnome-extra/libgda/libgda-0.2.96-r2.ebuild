@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96-r2.ebuild,v 1.18 2005/02/01 14:45:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96-r2.ebuild,v 1.19 2005/06/03 06:20:25 leonardop Exp $
+
+inherit eutils
 
 IUSE="odbc postgres mysql"
 
@@ -37,11 +39,12 @@ DEPEND="${RDEPEND}
 	sys-apps/which"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-gentoo.patch || die "Patch for gcc-3.1 failed"
 
+	epatch ${FILESDIR}/${P}-gentoo.patch
+	# Fix compilation issues. See bug #94768.
+	epatch ${FILESDIR}/${P}-gcc3.4.patch
 }
 
 src_compile() {
