@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 18f4e1644abd10899297585884ae3631 ChangeLog 1235
+MD5 eb314adc6548b2fb56438de85c873842 ChangeLog 1322
 MD5 cda6915dcb7383b4a690f04c23bf1fcb ikvm-0.8.0.0.ebuild 682
-MD5 39e5e04d77616fd65d6f9b0495980485 ikvm-0.14.0.1.ebuild 930
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
-MD5 7b145e504d7411ce6d3d1e3f948f3060 ikvm-0.14.0.1-r1.ebuild 1076
-MD5 11d8b925e6c32a7c4adf28e967c4b05e files/ikvm.pc.in 255
+MD5 39e5e04d77616fd65d6f9b0495980485 ikvm-0.14.0.1.ebuild 930
+MD5 0ecab761af2e63d0469b7d644a90a4c7 ikvm-0.14.0.1-r1.ebuild 1080
 MD5 e80b63a8abf009a70f69a4d4037345fe files/digest-ikvm-0.8.0.0 65
-MD5 00c7d35cf8e7897b6bd3cc9fb54bcffc files/digest-ikvm-0.14.0.1-r1 130
 MD5 00c7d35cf8e7897b6bd3cc9fb54bcffc files/digest-ikvm-0.14.0.1 130
 MD5 4663f47604a2844330031fbdad711339 files/script-template 53
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjvxYCHk4+ZoBpvsRAhz8AJ9hzJ3/jhM/dyVSZVqDTFkU7MYE3wCguN2t
-RKZA90qATlfwt8Ux0DVUkas=
-=DWSj
------END PGP SIGNATURE-----
+MD5 00c7d35cf8e7897b6bd3cc9fb54bcffc files/digest-ikvm-0.14.0.1-r1 130
+MD5 11d8b925e6c32a7c4adf28e967c4b05e files/ikvm.pc.in 255
