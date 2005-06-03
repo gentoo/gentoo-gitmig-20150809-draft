@@ -1,7 +1,7 @@
 /*
  * Copyright 2005 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/app-portage/qfile/files/qfile.c,v 1.2 2005/06/01 11:05:56 solar Exp $
+ * $Header: /var/cvsroot/gentoo-x86/app-portage/qfile/files/qfile.c,v 1.3 2005/06/03 01:24:36 solar Exp $
  *
  * 2005 Ned Ludd <solar@gentoo.org>
  *
@@ -23,6 +23,19 @@
  *
  */
 
+/*
+
+gcc qfile.c -o q -Wall -W -Wcast-qual -Wcast-align -Wbad-function-cast \
+ -Wsign-compare -Wshadow -Wwrite-strings -Wnested-externs -Winline \
+ -Wredundant-decls -Waggregate-return -Wno-format-y2k \
+ -Wno-format-extra-args -Wformat-nonliteral -Wformat-security -Wformat=2 \
+ -Wdisabled-optimization -Werror -Wpointer-arith -Wconversion \
+ -Wmissing-declarations -Wmissing-prototypes 
+
+// -Wunreachable-code
+
+*/
+
 #define _GNU_SOURCE
 
 #include <stdio.h>
@@ -31,30 +44,34 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/stat.h>
+#include <time.h>
+#include <ctype.h>
 #include <dirent.h>
 #include <getopt.h>
 #include <regex.h>
 #include <errno.h>
 #include <libgen.h>
 
-#ifndef PORTDIR
-# define PORTDIR (getenv("PORTDIR") ? getenv("PORTDIR") : "/var/cvsroot/gentoo-x86")
-#endif
 
 typedef int (*Function) ();
 
 Function lookup_applet(char *);
 
-void initialize_ebuild_flat(void);
-void reinitialize_ebuild_flat(void);
-int rematch(char *, char *);
+int rematch(char *, char *, int);
+char *rmspace(char *);
 void qfile(char *, char *);
 
+char *initialize_portdir(void);
+void initialize_ebuild_flat(void);
+void reinitialize_ebuild_flat(void);
+void reinitialize_as_needed(void);
+
+/* applet prototypes */
 int q_main(int, char **);
 int qsearch_main(int, char **);
 int quse_main(int, char **);
-int qfile_main(int, char **);
 int qlist_main(int, char **);
+int qfile_main(int, char **);
 
 #ifdef EBUG
 # define DBG(a)  a
@@ -62,14 +79,16 @@ int qlist_main(int, char **);
 # define DBG(a)			/* nothing */
 #endif				/* EBUG */
 
-/* static const char *rcsid = "$Id: qfile.c,v 1.2 2005/06/01 11:05:56 solar Exp $"; */
+/* static const char *rcsid = "$Id: qfile.c,v 1.3 2005/06/03 01:24:36 solar Exp $"; */
 
-int color = 1;
-int exact = 0;
-int found = 0;
+static char color = 1;
+static char exact = 0;
+static int found = 0;
+static char reinitialize = 0;
+
+static char portdir[_POSIX_PATH_MAX] = "/usr/portage";
 
 /* *INDENT-OFF* */
-
 struct applet_t {
 	const char *name;
 	/* int *func; */
@@ -78,8 +97,8 @@ struct applet_t {
 } applets[] = {
 	{"q", (Function) q_main, "<function> <args>"}, /* q must always be the first applet */
 	{"qfile", (Function)qfile_main, "<filename>"},
-	{"qlist", (Function)qlist_main, "<str>"},
-	{"qsearch", (Function)qsearch_main, "<regexp>"},
+	{"qlist", (Function)qlist_main, "<pkgname>"},
+	{"qsearch", (Function)qsearch_main, "<regex>"},
 	{"quse", (Function)quse_main, "<useflag>"}
 };
 /* *INDENT-ON* */
@@ -108,12 +127,12 @@ Function lookup_applet(char *applet)
    return 0;
 }
 
-int rematch(char *regex, char *match)
+int rematch(char *regex, char *match, int cflags)
 {
    regex_t preg;
    int ret;
 
-   ret = regcomp(&preg, regex, REG_EXTENDED);
+   ret = regcomp(&preg, regex, cflags);
    if (ret) {
       char err[256];
       if (regerror(ret, &preg, err, sizeof(err)))
@@ -128,15 +147,63 @@ int rematch(char *regex, char *match)
    return ret;
 }
 
+char *rmspace(char *s)
+{
+   register char *p;
+   /* wipe end of string */
+   for (p = s + strlen(s) - 1; ((isspace(*p)) && (p >= s)); p--);
+   if (p != s + strlen(s) - 1)
+      *(p + 1) = 0;
+   for (p = s; ((isspace(*p)) && (*p)); p++);
+   if (p != s)
+      strcpy(s, p);
+   return (char *) s;
+}
+
+char *initialize_portdir(void)
+{
+   FILE *fp;
+   char buf[_POSIX_PATH_MAX + 8];
+   char *p = getenv("PORTDIR");
+   size_t i;
+
+   if (p) {
+      if (strlen(p) < sizeof(portdir)) {
+	 strncpy(portdir, p, sizeof(portdir));
+	 return portdir;
+      }
+   }
+   if ((fp = fopen("/etc/make.conf", "r")) != NULL) {
+      while ((fgets(buf, sizeof(buf), fp)) != NULL) {
+	 if (*buf != 'P')
+	    continue;
+	 if (strncmp(buf, "PORTDIR=", 8) != 0)
+	    continue;
+	 // Sorry don't understand bash variables.
+	 if ((strchr(buf, '$')) != NULL)
+	    continue;
+
+	 for (i = 8; i < strlen(buf); i++)
+	    if ((buf[i] == '"') || (buf[i] == '\''))
+	       buf[i] = ' ';
+
+	 rmspace(&buf[8]);
+	 strncpy(portdir, buf + 8, sizeof(portdir));
+      }
+      fclose(fp);
+   }
+   return portdir;
+}
+
 void qfile(char *path, char *fname)
 {
    FILE *fp;
    DIR *dir;
    struct dirent *dentry;
-   char *p, *newp;
+   char *p, *ptr;
    size_t flen = strlen(fname);
    int base = 0;
-   char buffer[1024];
+   char buf[1024];
 
    if (chdir(path) != 0 || (dir = opendir(path)) == NULL)
       return;
@@ -146,9 +213,9 @@ void qfile(char *path, char *fname)
    else
       base = 0;
 
-   readdir(dir);
-   readdir(dir);		/* skip . & .. */
    while ((dentry = readdir(dir))) {
+      if (*dentry->d_name == '.')
+	 continue;
       if ((asprintf(&p, "%s/%s/CONTENTS", path, dentry->d_name)) == (-1))
 	 continue;
       if ((fp = fopen(p, "r")) == NULL) {
@@ -156,18 +223,19 @@ void qfile(char *path, char *fname)
 	 continue;
       }
       free(p);
-      while ((fgets(buffer, sizeof(buffer), fp)) != NULL) {
-	 if ((p = strchr(buffer, ' ')) == NULL)
+      while ((fgets(buf, sizeof(buf), fp)) != NULL) {
+	 // FIXME: Need to port portage_versions.py to c to do this properly.
+	 if ((p = strchr(buf, ' ')) == NULL)
 	    continue;
 	 *p++;
-	 newp = strdup(p);
-	 if (!newp)
+	 ptr = strdup(p);
+	 if (!ptr)
 	    continue;
-	 if ((p = strchr(newp, ' ')) != NULL)
+	 if ((p = strchr(ptr, ' ')) != NULL)
 	    *p++ = 0;
-	 if (strncmp(base ? basename(newp) : newp, fname, flen) != 0
-	     || strlen(base ? basename(newp) : newp) != flen) {
-	    free(newp);
+	 if (strncmp(base ? basename(ptr) : ptr, fname, flen) != 0
+	     || strlen(base ? basename(ptr) : ptr) != flen) {
+	    free(ptr);
 	    continue;
 	 }
 	 /* If the d_name is something like foo-3DVooDoo-0.0-r0 doing non
@@ -188,7 +256,7 @@ void qfile(char *path, char *fname)
 	       /* and repeat the first p strchr matching */
 	       char *q = strdup(p);
 	       if (!q) {
-		  free(newp);
+		  free(ptr);
 		  continue;
 	       }
 	       if ((p = strchr(q, '-')) != NULL) {
@@ -208,11 +276,11 @@ void qfile(char *path, char *fname)
 
 	 if (color)
 	    printf("\e[0;01m%s/\e[36;01m%s\e[0m (%s)\n", basename(path),
-		   dentry->d_name, newp);
+		   dentry->d_name, ptr);
 	 else
-	    printf("%s/%s (%s)\n", basename(path), dentry->d_name, newp);
+	    printf("%s/%s (%s)\n", basename(path), dentry->d_name, ptr);
 
-	 free(newp);
+	 free(ptr);
 	 fclose(fp);
 	 closedir(dir);
 	 found++;
@@ -265,7 +333,8 @@ int qsearch_main(int argc, char **argv)
 		     break;
 		  q = buf + 13;
 		  if (argc > 1) {
-		     if ((rematch(argv[1], q)) == 0) {
+		     if ((rematch(argv[1], q, REG_EXTENDED | REG_ICASE)) ==
+			 0) {
 			fprintf(stdout, "%s %s\n", p, q);
 		     }
 		  } else {
@@ -275,9 +344,11 @@ int qsearch_main(int argc, char **argv)
 	       }
 	    }
 	    fclose(newfp);
-	 } else
-	    fprintf(stderr, "Error: opening %s %s\n", ebuild,
+	 } else {
+	    fprintf(stderr, "Error: opening %s : %s\n", ebuild,
 		    strerror(errno));
+	    reinitialize = 1;
+	 }
       }
       free(str);
    }
@@ -288,9 +359,9 @@ int qsearch_main(int argc, char **argv)
 int quse_main(int argc, char **argv)
 {
    FILE *fp;
+   char *p;
    char buf[_POSIX_PATH_MAX];
    char ebuild[_POSIX_PATH_MAX];
-   char *p;
 
    DBG((fprintf
 	(stderr, "Enter %s argc=%d argv[0]=%s argv[1]=%s\n",
@@ -311,9 +382,15 @@ int quse_main(int argc, char **argv)
 	       if ((p = strrchr(&buf[6], '"')) != NULL)
 		  *p = 0;
 	       if (argc > 1) {
-		  if ((rematch(argv[1], &buf[6])) == 0) {
-		     fprintf(stdout, "%s %s\n", ebuild, &buf[6]);
+		  int i, ok = 0;
+		  for (i = 1; i < argc; i++) {
+		     if ((rematch(argv[i], &buf[6], REG_NOSUB)) != 0) {
+			ok = 1;
+			break;
+		     }
 		  }
+		  if (ok == 0)
+		     fprintf(stdout, "%s %s\n", ebuild, &buf[6]);
 	       } else {
 		  fprintf(stdout, "%s %s\n", ebuild, &buf[6]);
 	       }
@@ -322,8 +399,9 @@ int quse_main(int argc, char **argv)
 	 }
 	 fclose(newfp);
       } else {
-	 fprintf(stderr, "Error: opening %s %s\n", ebuild,
+	 fprintf(stderr, "Error: opening %s : %s\n", ebuild,
 		 strerror(errno));
+	 reinitialize = 1;
       }
    }
    fclose(fp);
@@ -348,9 +426,9 @@ int qfile_main(int argc, char **argv)
       return 0;
    }
    if ((chdir(path) == 0) && ((dir = opendir(path)))) {
-      readdir(dir);
-      readdir(dir);		/* skip . & .. */
       while ((dentry = readdir(dir))) {
+	 if (*dentry->d_name == '.')
+	    continue;
 	 for (i = 1; i < argc; i++) {
 	    if (argv[i][0] != '-') {
 	       if ((asprintf(&p, "%s/%s", path, dentry->d_name)) != (-1)) {
@@ -380,6 +458,7 @@ int qlist_main(int argc, char **argv)
    char *cat, *p, *q;
    const char *path = "/var/db/pkg";
    struct stat st;
+   size_t len = 0;
    char buf[_POSIX_PATH_MAX];
    char buf2[_POSIX_PATH_MAX];
 
@@ -392,14 +471,15 @@ int qlist_main(int argc, char **argv)
    if (chdir(path) != 0 || (dir = opendir(path)) == NULL)
       return 1;
 
-   readdir(dir);
-   readdir(dir);		/* skip . & .. */
-
    p = q = cat = NULL;
 
-   if (argc > 1)
+   if (argc > 1) {
       cat = strchr(argv[1], '/');
+      len = strlen(argv[1]);
+   }
    while ((dentry = readdir(dir))) {
+      if (*dentry->d_name == '.')
+	 continue;
       if ((strchr((char *) dentry->d_name, '-')) == 0)
 	 continue;
       stat(dentry->d_name, &st);
@@ -408,17 +488,19 @@ int qlist_main(int argc, char **argv)
       chdir(dentry->d_name);
       if ((dirp = opendir(".")) == NULL)
 	 continue;
-      readdir(dirp);
-      readdir(dirp);		/* skip . & .. */
       while ((de = readdir(dirp))) {
+	 if (*de->d_name == '.')
+	    continue;
 	 if (argc > 1) {
 	    if (cat != NULL) {
 	       snprintf(buf, sizeof(buf), "%s/%s", dentry->d_name,
 			de->d_name);
-	       if ((strstr(buf, argv[1])) == 0)
+	       //if ((rematch(argv[1], buf, REG_EXTENDED)) != 0)
+	       if ((strncmp(argv[1], buf, len)) != 0)
 		  continue;
 	    } else {
-	       if ((strstr(de->d_name, argv[1])) == 0)
+	       // if ((rematch(argv[1], de->d_name, REG_EXTENDED)) != 0)
+	       if ((strncmp(argv[1], de->d_name, len)) != 0)
 		  continue;
 	    }
 	 }
@@ -434,11 +516,11 @@ int qlist_main(int argc, char **argv)
 	       if ((p = strchr(buf, ' ')) == NULL)
 		  continue;
 	       ++p;
-	       switch (buf[0]) {
+	       switch (*buf) {
 		  case '\n':	// newline
 		     break;
 		  case 'd':	// dir
-		     printf("%s", p);
+		     // printf("%s", p);
 		     break;
 		  case 'o':	// obj
 		  case 's':	// sym
@@ -446,6 +528,8 @@ int qlist_main(int argc, char **argv)
 		     if ((p = strchr(buf2, ' ')) != NULL)
 			*p = 0;
 		     printf("%s\n", buf2);
+		     break;
+		  default:
 		     break;
 	       }
 	    }
@@ -460,33 +544,102 @@ int qlist_main(int argc, char **argv)
    return 0;
 }
 
+
 void initialize_ebuild_flat(void)
 {
-   if ((chdir(PORTDIR)) != 0) {
+   DIR *dir[3];
+   struct dirent *dentry[3];
+   FILE *fp;
+   time_t start;
+
+   if ((chdir(portdir)) != 0) {
       fprintf(stderr,
 	      "Error: unable chdir to what I think is your PORTDIR '%s' : %s\n",
-	      PORTDIR, strerror(errno));
+	      portdir, strerror(errno));
       return;
    }
 
    /* assuming --sync is used with --delete this will get recreated after every merged */
-   if (access(".ebuild.x", R_OK) != 0) {
-      FILE *fp;
-      fprintf(stderr, "Updating ebuild quick cache\n");
-      if ((fp = fopen(".ebuild.x", "w")) == NULL) {
-	 fprintf(stderr, "Error opening %s/.ebuild.x %s\n", PORTDIR,
-		 strerror(errno));
-	 return;
-      }
-      fclose(fp);
-      /* we use system() here for it's ability to allow for bash globbing */
-      system("echo *-*/*/*.ebuild | tr ' ' '\n' > .ebuild.x");
-      fputs("done..\n", stderr);
+   if (access(".ebuild.x", W_OK) == 0)
+      return;
+
+   fprintf(stderr, "Updating ebuild cache.. ");
+
+   unlink(".ebuild.x");
+   if (errno != ENOENT) {
+      fprintf(stderr, "Error: unlinking %s/%s : %s\n", portdir,
+	      ".ebuild.x", strerror(errno));
+      return;
    }
+
+   if ((fp = fopen(".ebuild.x", "w")) == NULL) {
+      fprintf(stderr, "Error opening %s/.ebuild.x %s\n", portdir,
+	      strerror(errno));
+      return;
+   }
+
+   start = time(0);
+   if ((dir[0] = opendir(".")) == NULL)
+      return;
+
+   while ((dentry[0] = readdir(dir[0]))) {
+      struct stat st;
+      stat(dentry[0]->d_name, &st);
+
+      if (*dentry[0]->d_name == '.')
+	 continue;
+
+      if (!(S_ISDIR(st.st_mode)))
+	 continue;
+
+      if ((strchr(dentry[0]->d_name, '-')) == NULL)
+	 continue;
+
+      if ((dir[1] = opendir(dentry[0]->d_name)) == NULL)
+	 continue;
+
+      while ((dentry[1] = readdir(dir[1]))) {
+	 char de[_POSIX_PATH_MAX];
+	 if (*dentry[1]->d_name == '.')
+	    continue;
+
+	 snprintf(de, sizeof(de), "%s/%s", dentry[0]->d_name,
+		  dentry[1]->d_name);
+
+	 stat(de, &st);
+	 if (!(S_ISDIR(st.st_mode)))
+	    continue;
+
+	 if ((dir[2] = opendir(de)) == NULL)
+	    continue;
+
+	 while ((dentry[2] = readdir(dir[2]))) {
+	    char *p;
+	    if (*dentry[2]->d_name == '.')
+	       continue;
+	    if ((p = rindex(dentry[2]->d_name, '.')) != NULL)
+	       if (strcmp(p, ".ebuild") == 0) {
+		  fprintf(fp, "%s/%s/%s\n", dentry[0]->d_name,
+			  dentry[1]->d_name, dentry[2]->d_name);
+	       }
+	 }
+	 closedir(dir[2]);
+      }
+      closedir(dir[1]);
+   }
+   closedir(dir[0]);
+   fclose(fp);
+   fprintf(stderr, "Finished in %lu seconds\n", time(0) - start);
 }
 
 void reinitialize_ebuild_flat(void)
 {
+   if ((chdir(portdir)) != 0) {
+      fprintf(stderr,
+	      "Error: unable chdir to what I think is your PORTDIR '%s' : %s\n",
+	      portdir, strerror(errno));
+      return;
+   }
    unlink(".ebuild.x");
    initialize_ebuild_flat();
 }
@@ -542,7 +695,15 @@ int q_main(int argc, char **argv)
    return (func) (argc - 1, ++argv);
 }
 
+void reinitialize_as_needed(void)
+{
+   if (reinitialize)
+      reinitialize_ebuild_flat();
+}
+
 int main(int argc, char **argv)
 {
+   initialize_portdir();
+   atexit(reinitialize_as_needed);
    return q_main(argc, argv);
 }
