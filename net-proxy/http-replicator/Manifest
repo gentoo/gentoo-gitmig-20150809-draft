@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3d5c492fcd268eb47d592a846bf92a40 http-replicator-3.0.ebuild 1884
+MD5 ab71caa13bdef4f659ef363dc9a1ddb4 ChangeLog 900
+MD5 6da485a4b9c1f8dbb5698f6049ad10b8 http-replicator-3.0.ebuild 1885
 MD5 7f864f339d692405288113afa5f26752 metadata.xml 225
-MD5 825984f3f917b05ab19d1c792df2bbcc ChangeLog 803
-MD5 ba1bdb64c5a2a89f25600f0d02104876 files/http-replicator-3.0.conf 1703
-MD5 b33593510641bdee7731d17d5788d521 files/http-replicator-3.0.init 778
+MD5 322c5051fc17850a386f30fc56c752ce files/digest-http-replicator-3.0 70
 MD5 1ebb63eb67b5ce575bb5e353973ed225 files/http-replicator-3.0-callrepcacheman-0.1 86
 MD5 ba5c3e1ca90a9ce2906848f1610f57bb files/http-replicator-3.0-repcacheman-0.21 6207
 MD5 5782ef4e5e91ea204e7507aa162bf04d files/http-replicator-3.0-repcacheman-0.33 6227
-MD5 322c5051fc17850a386f30fc56c752ce files/digest-http-replicator-3.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCnqhIMGnpIbeahxwRAkQvAJ4owli7+0WpoiTopms3L0Y61qgb1gCglXqX
-kdPcfJm/hg9CavQx1se5AdE=
-=mlF6
------END PGP SIGNATURE-----
+MD5 ba1bdb64c5a2a89f25600f0d02104876 files/http-replicator-3.0.conf 1703
+MD5 b33593510641bdee7731d17d5788d521 files/http-replicator-3.0.init 778

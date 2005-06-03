@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/http-replicator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.1 2005/06/02 06:33:24 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.2 2005/06/03 18:32:50 pylon Exp $
+
+  03 Jun 2005; Lars Weiler <pylon@gentoo.org> http-replicator-3.0.ebuild:
+  Added ~ppc; bug #94936.
 
   02 Jun 2005; Maurice van der Pot <griffon26@gentoo.org> ChangeLog:
   +files/http-replicator-3.0-callrepcacheman-0.1,
