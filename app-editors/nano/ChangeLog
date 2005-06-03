@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.71 2005/05/18 02:58:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.72 2005/06/03 05:28:10 josejx Exp $
+
+  03 Jun 2005; Joseph Jezak <josejx@gentoo.org> nano-1.3.7.ebuild:
+  Marked ppc stable.
 
 *nano-1.2.5 (18 May 2005)
 
