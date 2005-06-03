@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.90 2005/05/20 11:57:50 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.91 2005/06/03 12:21:21 foser Exp $
+
+  03 Jun 2005; foser <foser@gentoo.org> gnumeric-1.4.{2,3}.ebuild :
+  Fix libgsf dep to =1.10 , it won't work with newer or older versions (#94890)
 
   20 May 2005; Fernando J. Pereda <ferdy@gentoo.org> gnumeric-1.4.2.ebuild:
   alpha stable
