@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2-r3.ebuild,v 1.1 2005/06/03 21:03:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2-r3.ebuild,v 1.2 2005/06/03 22:36:49 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -163,7 +163,7 @@ src_install() {
 	ln -s $(qt_mkspecs_dir) default
 	cd ${S}
 
-	if use doc; then 
+	if use doc; then
 		make INSTALL_ROOT=${D} install_htmldocs || die
 	fi
 
