@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/eclair/eclair-9999.ebuild,v 1.2 2005/05/25 00:05:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/eclair/eclair-9999.ebuild,v 1.3 2005/06/03 21:59:51 vapier Exp $
 
 inherit enlightenment
 
@@ -13,6 +13,7 @@ RDEPEND="media-libs/taglib
 	media-libs/emotion
 	x11-libs/esmart
 	=gnome-base/libglade-2*
+	>=gnome-base/libglade-2.2
 	=x11-libs/gtk+-2*"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
