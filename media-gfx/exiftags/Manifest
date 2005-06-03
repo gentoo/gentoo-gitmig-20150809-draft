@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7cabd66b64cbfb89995ed2efbe3852b2 ChangeLog 1051
-MD5 4394578b73ca26cc2d724704f536bf7c metadata.xml 223
+MD5 940a9fd66de6e3f1d471914f52375baf metadata.xml 222
 MD5 f1584975ce477740017d2d653b8e83f2 exiftags-1.00.ebuild 630
 MD5 92fdbf3349c44a7faac5d6d56582114b exiftags-0.99.1.ebuild 631
-MD5 740013c9c097d469094b0ee9b33f7ef3 files/digest-exiftags-0.99.1 66
+MD5 367927a13fe04398a6acca23b035b366 ChangeLog 1130
 MD5 b0724bdfb6b0b8334a312690f9e95fed files/digest-exiftags-1.00 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZmRzTM53OX+9xmMRAoSqAJ47hpzDJSvk+Y8cxLaXdl1XWK/cZwCgzMw4
-8tL93fKbHJ47XvrHJJCXS9k=
-=9fGU
------END PGP SIGNATURE-----
+MD5 740013c9c097d469094b0ee9b33f7ef3 files/digest-exiftags-0.99.1 66
