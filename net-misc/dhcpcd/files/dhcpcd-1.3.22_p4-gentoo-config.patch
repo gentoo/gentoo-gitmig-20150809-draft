@@ -1,0 +1,389 @@
+--- client.c.orig	2005-06-02 23:26:17.293931424 +0100
++++ client.c	2005-06-02 23:53:14.186126448 +0100
+@@ -75,6 +75,13 @@
+ extern	char		*InitialHostName,*InitialDomainName;
+ extern	int		DownIfaceOnStop;
+ 
++extern	char		resolv_file[128];
++extern	char		resolv_file_sv[128];
++extern	char		ntp_file[128];
++extern	char		ntp_file_sv[128];
++extern	char		nis_file[128];
++extern	char		nis_file_sv[128];
++
+ #if 0
+ extern	unsigned char	ClientMACaddr[ETH_ALEN];
+ extern	int		ClientMACaddr_ind;
+@@ -1183,11 +1190,11 @@
+ tsc:
+   close(dhcpSocket);
+   if ( resolv_renamed )
+-    rename(""RESOLV_CONF".sv",RESOLV_CONF);
++    rename(resolv_file_sv, resolv_file);
+   if ( yp_renamed )
+-    rename(""NIS_CONF".sv",NIS_CONF);
++    rename(nis_file_sv, nis_file);
+   if ( ntp_renamed )
+-    rename(""NTP_CONF".sv",NTP_CONF);
++    rename(ntp_file_sv, ntp_file);
+   execute_on_change("down");
+   return &dhcpStart;
+ }
+--- dhcpcd.8.orig	2005-06-02 23:34:18.549769416 +0100
++++ dhcpcd.8	2005-06-02 23:38:53.617952696 +0100
+@@ -22,6 +22,7 @@
+ \%[\-w\ <windowsize>]
+ \%[\-L\ <ConfigDir>]
+ \%[\-m\ <routemetric>]
++\%[\-e\ <etcDir>]
+ \%[interface]
+ .in -.5i
+ .SH DESCRIPTION
+@@ -207,21 +208,21 @@
+ Prevents
+ .B dhcpcd
+ from replacing existing
+-.I /etc/resolv.conf
++.I <etcDir>/resolv.conf
+ file.
+ .TP
+ .BI \-Y
+ Prevents
+ .B dhcpcd
+ from replacing existing
+-.I /etc/yp.conf
++.I <etcDir>/yp.conf
+ file. Domainname is not updated unless \fB-D\fP is specified.
+ .TP
+ .BI \-N
+ Prevents
+ .B dhcpcd
+ from replacing existing
+-.I /etc/ntp.conf
++.I <etcDir>/ntp.conf
+ file.
+ .TP
+ .BI \-T
+@@ -328,6 +329,12 @@
+ .BI \-w \ <windowsize>
+ Specifies the window size for the gateway route. Default = 32768.
+ .TP
++.TP
++.NI \-e \ <etcDir>
++Specifies where
++.B dhcpcd
++should create resolv.conf, ntp.conf and yp.conf. Default is the /etc
++directory.
+ .BI interface
+ Specifies the network interface name (eth0, eth1, etc.).
+ .B dhcpcd
+@@ -400,38 +407,38 @@
+ .B dhcpcd
+ is attached.
+ .TP
+-.BI /etc/resolv.conf
++.BI <etcDir>/resolv.conf
+ file created by
+ .B dhcpcd
+ when the client receives DNS and domain name options.
+ The old
+-.B /etc/resolv.conf
++.B <etcDir>/resolv.conf
+ file is renamed to
+-.B /etc/resolv.conf.sv
++.B <etcDir>/resolv.conf.sv
+ and will be restored back when
+ .B dhcpcd
+ exits for any reason.
+ .TP
+-.BI /etc/yp.conf
++.BI <etcDir>/yp.conf
+ file created by
+ .B dhcpcd
+ when the client receives NIS options.
+ The old
+-.B /etc/yp.conf
++.B <etcDir>/yp.conf
+ file is renamed to
+-.B /etc/yp.conf.sv
++.B <etcDir>/yp.conf.sv
+ and is restored back when
+ .B dhcpcd
+ exits for any reason.
+ .TP
+-.BI /etc/ntp.conf
++.BI <etcDir>/ntp.conf
+ file created by
+ .B dhcpcd
+ when the client receives NTP options.
+ The old
+-.B /etc/ntp.conf
++.B <etcDir>/ntp.conf
+ file is renamed to
+-.B /etc/ntp.conf.sv
++.B <etcDir>/ntp.conf.sv
+ and is restored back when
+ .B dhcpcd
+ exits for any reason.
+--- dhcpcd.c.orig	2005-06-02 22:59:57.597081848 +0100
++++ dhcpcd.c	2005-06-02 23:48:04.753167408 +0100
+@@ -76,6 +76,15 @@
+ unsigned char	ClientMACaddr[ETH_ALEN];
+ int		ClientMACaddr_ind =	0;
+ #endif
++
++char		*etcDir		=	ETC_DIR;
++char		resolv_file[128];
++char		resolv_file_sv[128];
++char		nis_file[128];
++char		nis_file_sv[128];
++char		ntp_file[128];
++char		ntp_file_sv[128];
++
+ #ifdef DRAFT_OPTION_FQDN
+ int		SetFQDNHostName	=	FQDNdisable;
+ #endif
+@@ -216,6 +225,13 @@
+ 	    if ( ConfigDir == NULL || ConfigDir[0] != '/' ) goto usage;
+ 	    s=1;
+ 	    break;
++	  case 'e':
++	    if (argc[i][s+1] ) goto usage;
++	    i++;
++	    etcDir=argc[i++];
++	    if (etcDir == NULL || etcDir[0] != '/' ) goto usage;
++	    s=1;
++	    break;
+ #if 0
+ 	  case 'M':
+ 	    if ( argc[i][s+1] ) goto usage;
+@@ -379,13 +395,13 @@
+ "Usage: dhcpcd [-dknorzBCDHNRSTY] [-l leasetime] [-h hostname] [-t timeout]\n\
+        [-i vendorClassID] [-I ClientID] [-c filename] [-s [ipaddr]]\n\
+        [-w windowsize] [-L ConfigDir] [-G [gateway]] [-m routemetric]\n\
+-       [interface]\n");
++       [-e etcDir] [interface]\n");
+ #else
+ 	    fprintf(stderr,
+ "Usage: dhcpcd [-dknorzBCDHNRSTY] [-l leasetime] [-h hostname] [-t timeout]\n\
+        [-i vendorClassID] [-I ClientID] [-c filename] [-s [ipaddr]]\n\
+        [-w windowsize] [-L ConfigDir] [-G [gateway]] [-m routemetric]\n\
+-       [-F none|ptr|both] [interface]\n");
++       [-e etcDir] [-F none|ptr|both] [interface]\n");
+ #endif
+ 	    exit(1);
+ 	}
+@@ -423,6 +439,18 @@
+       syslog(LOG_ERR,"mkdir(\"%s\",0): %m\n",ConfigDir);
+       exit(1);
+     }
++  if ( mkdir(etcDir,S_IRUSR|S_IWUSR|S_IXUSR|S_IRGRP|S_IXGRP|S_IROTH|S_IXOTH) && errno != EEXIST )
++    {
++      syslog(LOG_ERR,"mkdir(\"%s\",0): %m\n", etcDir);
++      exit(1);
++    }
++  snprintf(resolv_file, sizeof(resolv_file), RESOLV_FILE, etcDir);
++  snprintf(resolv_file_sv, sizeof(resolv_file_sv), ""RESOLV_FILE"-%s.sv", etcDir, IfName);
++  snprintf(nis_file, sizeof(nis_file), NIS_FILE, etcDir);
++  snprintf(nis_file_sv, sizeof(nis_file_sv), ""NIS_FILE"-%s.sv", etcDir, IfName);
++  snprintf(ntp_file, sizeof(ntp_file), NTP_FILE, etcDir);
++  snprintf(ntp_file_sv, sizeof(ntp_file_sv), ""NTP_FILE"-%s.sv", etcDir, IfName);
++
+   magic_cookie = htonl(MAGIC_COOKIE);
+   dhcpMsgSize = htons(sizeof(dhcpMessage));
+   nleaseTime = htonl(LeaseTime);
+--- dhcpconfig.c.orig	2005-06-02 22:57:14.614858912 +0100
++++ dhcpconfig.c	2005-06-02 23:52:15.702017384 +0100
+@@ -62,6 +62,13 @@
+ extern	dhcpOptions		DhcpOptions;
+ extern	const dhcpMessage	*DhcpMsgRecv;
+ 
++extern	char			resolv_file[128];
++extern	char			resolv_file_sv[128];
++extern	char			ntp_file[128];
++extern	char			ntp_file_sv[128];
++extern	char			nis_file[128];
++extern	char			nis_file_sv[128];
++
+ #ifdef DRAFT_OPTION_FQDN
+ extern	int			SetFQDNHostName;
+ #endif
+@@ -363,46 +370,30 @@
+   /* In the case where machine dies for some reason, resolv.conf.sv would
+    * not have been restored to original glory
+    */
+-  if ( 1+rename(""RESOLV_CONF".sv",RESOLV_CONF) ) {
++  if ( 1+rename(resolv_file_sv, resolv_file) ) {
+     if ( DebugFlag ) syslog (LOG_DEBUG, "Restored resolv.conf.sv from improper shutdown");
+   } else {
+     if ( DebugFlag ) syslog (LOG_DEBUG, "No resolv.conf.sv to restore");
+   }
+ 
+-  if ( ReplResolvConf )
++  if ( ReplResolvConf && (DhcpOptions.len[domainName] || DhcpOptions.len[dns]))
+     {
+-      resolv_renamed=1+rename(RESOLV_CONF,""RESOLV_CONF".sv");
+-      f=fopen(RESOLV_CONF,"w");
++      resolv_renamed=1+rename(resolv_file, resolv_file_sv);
++      f=fopen(resolv_file, "w");
+       if ( f )
+ 	{
++	  fprintf(f, "# Generated by dhcpcd for interface %s\n", IfName);
+ 	  int i;
+-#if 0
+-	  if ( DhcpOptions.len[nisDomainName] )
+-	    fprintf(f,"domain %s\n",(char *)DhcpOptions.val[nisDomainName]);
+-	  else
+-	    if ( DhcpOptions.len[domainName] )
+-	      fprintf(f,"domain %s\n",(char *)DhcpOptions.val[domainName]);
+-#endif
++	  if ( DhcpOptions.len[domainName] )
++	    fprintf(f,"domain %s\n",(char *)DhcpOptions.val[domainName]);
++	  
+ 	  for (i=0;i<DhcpOptions.len[dns];i+=4)
+ 	    fprintf(f,"nameserver %u.%u.%u.%u\n",
+ 	    ((unsigned char *)DhcpOptions.val[dns])[i],
+ 	    ((unsigned char *)DhcpOptions.val[dns])[i+1],
+ 	    ((unsigned char *)DhcpOptions.val[dns])[i+2],
+ 	    ((unsigned char *)DhcpOptions.val[dns])[i+3]);
+-#if 0
+-	  if ( DhcpOptions.len[nisDomainName] + DhcpOptions.len[domainName] )
+-	    {
+-	      fprintf(f,"search");
+-	      if ( DhcpOptions.len[nisDomainName] )
+-	        fprintf(f," %s",(char *)DhcpOptions.val[nisDomainName]);
+-	      if ( DhcpOptions.len[domainName] )
+-	        fprintf(f," %s",(char *)DhcpOptions.val[domainName]);
+-	      fprintf(f,"\n");
+-	    }
+-#else
+-	  if ( DhcpOptions.len[domainName] )
+-	    fprintf(f,"search %s\n",(char *)DhcpOptions.val[domainName]);
+-#endif
++	  
+ 	  fclose(f);
+ 	}
+       else
+@@ -416,37 +407,47 @@
+     * because the resolver won't notice the change in resolv.conf */
+       (void)res_init();
+     }
+-  if ( ReplNISConf )
++  if ( ReplNISConf && (DhcpOptions.len[nisDomainName] || DhcpOptions.len[nisServers]))
+     {
+-      yp_renamed=1+rename(NIS_CONF,""NIS_CONF".sv");
+-      f=fopen(NIS_CONF,"w");
++      yp_renamed=1+rename(nis_file, nis_file_sv);
++      f=fopen(nis_file, "w");
+       if ( f )
+ 	{
++	  fprintf(f, "# Generated by dhcpcd for interface %s\n", IfName);
+ 	  int i;
+-	  char *domain=NULL;
+-	  if ( DhcpOptions.len[nisDomainName] )
+-	    domain=(char *)DhcpOptions.val[nisDomainName];
++	  char *prefix=NULL;
++	  if ( DhcpOptions.len[nisDomainName] ) {
++	      if ( DhcpOptions.len[nisServers] ) {
++		prefix=(char *)malloc(DhcpOptions.len[nisDomainName] + 15);
++		sprintf(prefix, "domain %s server", (char *)DhcpOptions.val[nisDomainName]);
++	      }
++	      else
++		fprintf(f, "domain %s broadcast\n", (char *)DhcpOptions.val[nisDomainName]);
++	  }
+ 	  else
+-	    domain=(char *)DhcpOptions.val[domainName];
++	      prefix=strdup("ypserver");
++
+ 	  for (i=0;i<DhcpOptions.len[nisServers];i+=4)
+-	    fprintf(f,"domain %s server %u.%u.%u.%u\n",(domain?domain:"localdomain"),
++	    fprintf(f, "%s %u.%u.%u.%u\n", prefix,
+ 	    ((unsigned char *)DhcpOptions.val[nisServers])[i],
+ 	    ((unsigned char *)DhcpOptions.val[nisServers])[i+1],
+ 	    ((unsigned char *)DhcpOptions.val[nisServers])[i+2],
+ 	    ((unsigned char *)DhcpOptions.val[nisServers])[i+3]);
+-	  if ( !DhcpOptions.len[nisServers] )
+-	    fprintf(f,"domain %s broadcast\n", (domain?domain:"localdomain"));
++	  
+ 	  fclose(f);
++
++	  if (prefix) free(prefix);
+ 	}
+       else
+ 	syslog(LOG_ERR,"dhcpConfig: fopen: %m\n");
+     }
+-  if ( ReplNTPConf )
++  if ( ReplNTPConf && DhcpOptions.len[ntpServers]>=4 )
+     {
+-      ntp_renamed=1+rename(NTP_CONF,""NTP_CONF".sv");
+-      f=fopen(NTP_CONF,"w");
++      ntp_renamed=1+rename(ntp_file, ntp_file_sv);
++      f=fopen(ntp_file, "w");
+       if ( f )
+  	{
++	  fprintf(f, "# Generated by dhcpcd for interface %s\n", IfName);
+  	  int net, mask;
+  	  memcpy(&mask,DhcpOptions.val[subnetMask],4);
+  	  net = DhcpIface.ciaddr & mask;
+@@ -454,17 +455,7 @@
+  	  /* Note: Revise drift/log file names and stratum for local clock */
+  	  fprintf(f,"restrict default noquery notrust nomodify\n");
+  	  fprintf(f,"restrict 127.0.0.1\n");
+- 	  fprintf(f,"restrict %u.%u.%u.%u mask %u.%u.%u.%u\n",
+- 		  ((unsigned char *)&net)[0],
+- 		  ((unsigned char *)&net)[1],
+- 		  ((unsigned char *)&net)[2],
+- 		  ((unsigned char *)&net)[3],
+- 		  ((unsigned char *)&mask)[0],
+- 		  ((unsigned char *)&mask)[1],
+- 		  ((unsigned char *)&mask)[2],
+- 		  ((unsigned char *)&mask)[3]);
+- 	  if ( DhcpOptions.len[ntpServers]>=4 )
+-	    {
++  
+ 	      int i;
+ 	      char addr[4*3+3*1+1];
+ 	      for (i=0;i<DhcpOptions.len[ntpServers];i+=4)
+@@ -474,15 +465,10 @@
+ 		  ((unsigned char *)DhcpOptions.val[ntpServers])[i+1],
+ 		  ((unsigned char *)DhcpOptions.val[ntpServers])[i+2],
+ 		  ((unsigned char *)DhcpOptions.val[ntpServers])[i+3]);
+-		  fprintf(f,"restrict %s\nserver %s\n",addr,addr);
++		  fprintf(f,"restrict %s nomodify notrap noquery\nserver %s\n",addr,addr);
+ 		}
+- 	    }
+-	  else
+-	    {		/* No servers found, use local clock */
+-	      fprintf(f, "fudge 127.127.1.0 stratum 3\n");
+- 	      fprintf(f, "server 127.127.1.0\n");
+-	    }
+- 	  fprintf(f, "driftfile /var/lib/ntp/ntp.drift\n");
++ 	  
++	  fprintf(f, "driftfile /var/lib/ntp/ntp.drift\n");
+  	  fprintf(f, "logfile /var/log/ntp.log\n");
+  	  fclose(f);
+  	}
+--- pathnames.h.orig	2005-06-02 23:27:39.011508464 +0100
++++ pathnames.h	2005-06-02 23:29:32.415268472 +0100
+@@ -34,15 +34,15 @@
+ #define EXEC_ON_CHANGE		"%s/"PROGRAM_NAME".exe"
+ 
+ #ifdef EMBED
++#define ETC_DIR			"/etc/config"
+ #define CONFIG_DIR		"/etc/config/dhcpc"
+-#define RESOLV_CONF		"/etc/config/resolv.conf"
+-#define NIS_CONF		"/etc/config/yp.conf"
+-#define NTP_CONF		"/etc/config/ntp.conf"
+ #else
++#define ETC_DIR			"/etc"
+ #define CONFIG_DIR		"/var/lib/dhcpc"
+-#define RESOLV_CONF		"/etc/resolv.conf"
+-#define NIS_CONF		"/etc/yp.conf"
+-#define NTP_CONF		"/etc/ntp.conf"
+ #endif
+ 
++#define RESOLV_FILE		"%s/resolv.conf"
++#define NIS_FILE		"%s/yp.conf"
++#define NTP_FILE		"%s/ntp.conf"
++
+ #endif

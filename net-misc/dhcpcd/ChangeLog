@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.42 2005/06/01 17:36:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.43 2005/06/03 09:02:54 uberlord Exp $
+
+*dhcpcd-1.3.22_p4-r10 (03 Jun 2005)
+
+  03 Jun 2005; Roy Marples <uberlord@gentoo.org>
+  +files/dhcpcd-1.3.22_p4-gentoo-config.patch, +dhcpcd-1.3.22_p4-r10.ebuild:
+  dhcpcd now writes a more sane /etc/{resolv,ntp,yp}.conf
+  It also doesn't clobber those files anymore if there is no need to based on
+  the DHCP response.
+  dhcpcd now supports the -e option to change where it stores
+  {resolv,ntp,yp}.conf - default is /etc.
+  dhcpcd now inserts the interface name into the .sv files incase dhcpcd runs on
+  more than one interface.
 
 *dhcpcd-1.3.22_p4-r9 (01 Jun 2005)
 
