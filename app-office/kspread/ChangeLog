@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kspread
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.5 2005/05/03 13:33:21 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.6 2005/06/03 15:18:19 greg_g Exp $
+
+*kspread-1.4.0_rc1 (03 Jun 2005)
+
+  03 Jun 2005; Gregorio Guidi <greg_g@gentoo.org> +kspread-1.4.0_rc1.ebuild:
+  Release candidate for new version of KOffice.
 
   03 May 2005; Herbie Hopkins <herbs@gentoo.org> kspread-1.3.5.ebuild:
   Marked ~amd64.

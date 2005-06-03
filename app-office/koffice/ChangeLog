@@ -1,6 +1,12 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.98 2005/01/29 14:48:52 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.99 2005/06/03 15:19:58 greg_g Exp $
+
+*koffice-1.4.0_rc1 (03 Jun 2005)
+
+  03 Jun 2005; Gregorio Guidi <greg_g@gentoo.org> +koffice-1.4.0_rc1.ebuild:
+  Release candidate for new version of KOffice. Introduces two new
+  applications: kexi and krita.
 
   29 Jan 2005; Simone Gotti <motaboy@gentoo.org> koffice-1.3.5-r1.ebuild,
   koffice-1.3.5-r2.ebuild:
