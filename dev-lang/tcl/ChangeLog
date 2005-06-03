@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.54 2005/05/27 07:27:46 josejx Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.55 2005/06/03 23:52:01 vapier Exp $
+
+  03 Jun 2005; Mike Frysinger <vapier@gentoo.org> tcl-8.4.9.ebuild:
+  Touchup ROOT / libdir usage to get rid of all the // gremlins.
 
   27 May 2005; Joseph Jezak <josejx@gentoo.org> tcl-8.4.9.ebuild:
   Marked ppc stable.

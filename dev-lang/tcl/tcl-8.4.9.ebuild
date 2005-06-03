@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.9.ebuild,v 1.8 2005/05/27 07:27:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.9.ebuild,v 1.9 2005/06/03 23:52:01 vapier Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Tool Command Language"
 HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
@@ -32,8 +32,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-8.4.6-multilib.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-8.4.6-multilib.patch
 }
 
 src_compile() {
@@ -57,28 +57,30 @@ src_install() {
 	S= make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install || die
 
 	# fix the tclConfig.sh to eliminate refs to the build directory
+	[[ ${ROOT:0-1} != "/" ]] && ROOT=${ROOT}/
+	local mylibdir=$(get_libdir) ; mylibdir=${mylibdir//\/}
 	sed -i \
-		-e "s,^TCL_BUILD_LIB_SPEC='-L.*/unix,TCL_BUILD_LIB_SPEC='-L${ROOT}/usr/$(get_libdir)," \
-		-e "s,^TCL_SRC_DIR='.*',TCL_SRC_DIR='${ROOT}/usr/$(get_libdir)/tcl${v1}/include'," \
-		-e "s,^TCL_BUILD_STUB_LIB_SPEC='-L.*/unix,TCL_BUILD_STUB_LIB_SPEC='-L${ROOT}/usr/$(get_libdir)," \
-		-e "s,^TCL_BUILD_STUB_LIB_PATH='.*/unix,TCL_BUILD_STUB_LIB_PATH='${ROOT}/usr/$(get_libdir)," \
+		-e "s,^TCL_BUILD_LIB_SPEC='-L.*/unix,TCL_BUILD_LIB_SPEC='-L${ROOT}usr/${mylibdir}," \
+		-e "s,^TCL_SRC_DIR='.*',TCL_SRC_DIR='${ROOT}usr/${mylibdir}/tcl${v1}/include'," \
+		-e "s,^TCL_BUILD_STUB_LIB_SPEC='-L.*/unix,TCL_BUILD_STUB_LIB_SPEC='-L${ROOT}usr/${mylibdir}," \
+		-e "s,^TCL_BUILD_STUB_LIB_PATH='.*/unix,TCL_BUILD_STUB_LIB_PATH='${ROOT}usr/${mylibdir}," \
 		-e "s,^TCL_LIB_FILE='libtcl8.4..TCL_DBGX..so',TCL_LIB_FILE=\"libtcl8.4\$\{TCL_DBGX\}.so\"," \
-		-e "s,^TCL_CC_SEARCH_FLAGS='\(.*\)',TCL_CC_SEARCH_FLAGS='\1:/usr/$(get_libdir)'," \
-		-e "s,^TCL_LD_SEARCH_FLAGS='\(.*\)',TCL_LD_SEARCH_FLAGS='\1:/usr/$(get_libdir)'," \
-		${D}/usr/$(get_libdir)/tclConfig.sh
+		-e "s,^TCL_CC_SEARCH_FLAGS='\(.*\)',TCL_CC_SEARCH_FLAGS='\1:/usr/${mylibdir}'," \
+		-e "s,^TCL_LD_SEARCH_FLAGS='\(.*\)',TCL_LD_SEARCH_FLAGS='\1:/usr/${mylibdir}'," \
+		${D}/usr/${mylibdir}/tclConfig.sh
 
 	# install private headers
-	dodir /usr/$(get_libdir)/tcl${v1}/include/unix
-	install -c -m0644 ${S}/unix/*.h ${D}/usr/$(get_libdir)/tcl${v1}/include/unix
-	dodir /usr/$(get_libdir)/tcl${v1}/include/generic
-	install -c -m0644 ${S}/generic/*.h ${D}/usr/$(get_libdir)/tcl${v1}/include/generic
-	rm -f ${D}/usr/$(get_libdir)/tcl${v1}/include/generic/tcl.h
-	rm -f ${D}/usr/$(get_libdir)/tcl${v1}/include/generic/tclDecls.h
-	rm -f ${D}/usr/$(get_libdir)/tcl${v1}/include/generic/tclPlatDecls.h
+	dodir /usr/${mylibdir}/tcl${v1}/include/unix
+	install -c -m0644 ${S}/unix/*.h ${D}/usr/${mylibdir}/tcl${v1}/include/unix
+	dodir /usr/${mylibdir}/tcl${v1}/include/generic
+	install -c -m0644 ${S}/generic/*.h ${D}/usr/${mylibdir}/tcl${v1}/include/generic
+	rm -f ${D}/usr/${mylibdir}/tcl${v1}/include/generic/tcl.h
+	rm -f ${D}/usr/${mylibdir}/tcl${v1}/include/generic/tclDecls.h
+	rm -f ${D}/usr/${mylibdir}/tcl${v1}/include/generic/tclPlatDecls.h
 
 	# install symlink for libraries
-	dosym /usr/$(get_libdir)/libtcl${v1}.so /usr/$(get_libdir)/libtcl.so
-	dosym /usr/$(get_libdir)/libtclstub${v1}.a /usr/$(get_libdir)/libtclstub.a
+	dosym /usr/${mylibdir}/libtcl${v1}.so /usr/${mylibdir}/libtcl.so
+	dosym /usr/${mylibdir}/libtclstub${v1}.a /usr/${mylibdir}/libtclstub.a
 
 	ln -sf tclsh${v1} ${D}/usr/bin/tclsh
 
