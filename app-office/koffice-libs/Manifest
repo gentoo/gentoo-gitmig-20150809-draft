@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8d92d6f8b329692c2f419291f07682c5 koffice-libs-1.3.5.ebuild 1005
-MD5 2d1c64cbdba8c1c002fba33daa1efe82 ChangeLog 547
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+MD5 b77214ea919551e5e97c972e64a4239b ChangeLog 720
+MD5 7a3790613b1b896fe383ddeca05f2b9f koffice-libs-1.4.0_rc1.ebuild 1169
+MD5 8d92d6f8b329692c2f419291f07682c5 koffice-libs-1.3.5.ebuild 1005
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-koffice-libs-1.3.5 211
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFCd3vQ2G5bA0cA/ScRAs7LAJ4yFN+k3hJIZ4/WL+dT4LTLFrCF8wCXSs6r
-WbGiTav0lyNbr29ioV5fjg==
-=f3fG
------END PGP SIGNATURE-----
+MD5 115a377f43af7c4116229b38631f80bc files/digest-koffice-libs-1.4.0_rc1 69

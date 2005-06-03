@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7841f02946a3593f5e8c79bf85766075 kword-1.3.5.ebuild 1371
-MD5 f22094dbbbcfa19e82d0bec2d93934ac ChangeLog 505
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-MD5 6ee3768e50296eb2a8158093ee518133 files/CAN-2005-0064.patch 829
-MD5 77399be6733ffca4ed1142ab319c1453 files/koffice_1_3_xpdf_buffer_overflow.diff 1808
+MD5 9f6854e5e52dd2c8ec32f2d0b5b94a61 kword-1.4.0_rc1.ebuild 1209
+MD5 424c16b0f0212e36a95d401fa27a92f8 ChangeLog 662
+MD5 7841f02946a3593f5e8c79bf85766075 kword-1.3.5.ebuild 1371
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-kword-1.3.5 211
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCd3wX2G5bA0cA/ScRAmm9AJ9efWDeuV9Zv4G5wS4EfFF325MWswCdFEox
-y3yweI3uko4MdzM7lh2VJeM=
-=uftC
------END PGP SIGNATURE-----
+MD5 6ee3768e50296eb2a8158093ee518133 files/CAN-2005-0064.patch 829
+MD5 115a377f43af7c4116229b38631f80bc files/digest-kword-1.4.0_rc1 69
+MD5 77399be6733ffca4ed1142ab319c1453 files/koffice_1_3_xpdf_buffer_overflow.diff 1808

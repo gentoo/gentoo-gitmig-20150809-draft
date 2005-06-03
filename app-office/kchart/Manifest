@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cd286c9e3d22b8f378a6e3a6accbc8bf kchart-1.3.5.ebuild 913
-MD5 4e0c8eea90e5e3a9e7da452c9bb83064 ChangeLog 511
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+MD5 a923b5183ab20c8341b35760538220f1 kchart-1.4.0_rc1.ebuild 914
+MD5 617b04ee96e552797e99994fcdfd77bb ChangeLog 670
+MD5 cd286c9e3d22b8f378a6e3a6accbc8bf kchart-1.3.5.ebuild 913
+MD5 115a377f43af7c4116229b38631f80bc files/digest-kchart-1.4.0_rc1 69
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-kchart-1.3.5 211
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCd3yv2G5bA0cA/ScRApOIAJ4p3sGdxOQLzDufbgKax0EJNzOYugCePWLr
-1eKnzhuS7R1KVZGyPlvlax0=
-=T7HT
------END PGP SIGNATURE-----
