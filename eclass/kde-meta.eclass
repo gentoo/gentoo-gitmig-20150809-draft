@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.35 2005/05/31 16:14:17 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.36 2005/06/03 14:39:20 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -27,6 +27,12 @@ case "$PV" in
 	3.4.0_rc1)		TARBALLDIRVER="3.4.0"; TARBALLVER="3.4.0-rc1" ;;
 	*)				TARBALLDIRVER="$PV"; TARBALLVER="$PV" ;;
 esac
+if [ "${KMNAME}" = "koffice" ]; then
+	case "$PV" in
+		1.4.0_rc1)	TARBALLDIRVER="1.3.98"; TARBALLVER="1.3.98" ;;
+	esac
+fi
+
 TARBALL="$KMNAME-$TARBALLVER.tar.bz2"
 
 # BEGIN adapted from kde-dist.eclass, code for older versions removed for cleanness
@@ -77,12 +83,19 @@ elif [ "$KMNAME" == "koffice" ]; then
 	SRC_PATH="mirror://kde/stable/koffice-$PV/src/koffice-$PV.tar.bz2"
 	case $PV in
 		1.3.4)
+			SRC_PATH="mirror://kde/stable/koffice-$PV/src/koffice-$PV.tar.bz2"
 			XDELTA_BASE=""
 			XDELTA_DELTA=""
 			;;	
 		1.3.5)
+			SRC_PATH="mirror://kde/stable/koffice-$PV/src/koffice-$PV.tar.bz2"
 			XDELTA_BASE="stable/koffice-1.3.4/src/koffice-1.3.4.tar.bz2"
 			XDELTA_DELTA="stable/koffice-1.3.5/src/koffice-1.3.4-1.3.5.tar.xdelta"
+			;;
+		1.4.0_rc1)
+			SRC_PATH="mirror://kde/unstable/koffice-1.4-rc1/src/koffice-1.3.98.tar.bz2"
+			XDELTA_BASE=""
+			XDELTA_DELTA=""
 			;;
 	esac
 fi
@@ -107,9 +120,13 @@ DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
 # END adapted from kde-dist.eclass
 
 # Add a blocking dep on the package we're derived from
-DEPEND="$DEPEND !=$(get-parent-package $CATEGORY/$PN)-$SLOT*"
-RDEPEND="$RDEPEND !=$(get-parent-package $CATEGORY/$PN)-$SLOT*"
-
+if [ "${KMNAME}" != "koffice" ]; then
+	DEPEND="${DEPEND} !=$(get-parent-package ${CATEGORY}/${PN})-${SLOT}*"
+	RDEPEND="${RDEPEND} !=$(get-parent-package ${CATEGORY}/${PN})-${SLOT}*"
+else
+	DEPEND="${DEPEND} !$(get-parent-package ${CATEGORY}/${PN})"
+	RDEPEND="${RDEPEND} !$(get-parent-package ${CATEGORY}/${PN})"
+fi
 
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
 
@@ -316,7 +333,7 @@ function kde-meta_src_unpack() {
 		fi
 		
 		# Default $S is based on $P not $myP; rename the extracted dir to fit $S
-		mv $KMNAME-$TARBALLDIRVER $P
+		mv $KMNAME-$TARBALLDIRVER $P || die
 		S=$WORKDIR/$P
 		
 		# Copy over KMCOPYLIB items
