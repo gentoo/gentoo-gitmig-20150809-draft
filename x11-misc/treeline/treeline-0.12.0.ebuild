@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.12.0.ebuild,v 1.1 2005/06/03 16:03:10 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.12.0.ebuild,v 1.2 2005/06/03 19:28:01 mr_bones_ Exp $
 
 inherit eutils python
 
@@ -26,7 +26,7 @@ src_compile() {
 		/usr/lib/treeline > ${T}/treeline
 	sed -i -e "s#\(helpFilePath = \)None#\1'/usr/lib/treeline'#g" \
 		-e "s#\(iconPath = \)None#\1'/usr/share/icons/treeline'#g" \
-			${S}/source/treeline.py || die 
+			${S}/source/treeline.py || die
 }
 
 src_install() {
