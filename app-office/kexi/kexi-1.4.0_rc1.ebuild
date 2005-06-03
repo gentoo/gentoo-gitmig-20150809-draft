@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.4.0_rc1.ebuild,v 1.1 2005/06/03 15:16:15 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.4.0_rc1.ebuild,v 1.2 2005/06/03 15:52:20 greg_g Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -40,3 +40,8 @@ KMEXTRACTONLY="lib/"
 
 need-kde 3.3
 
+src_compile() {
+	local myconf="$(use_enable mysql) $(use_enable postgres pgsql)"
+
+	kde-meta_src_compile
+}
