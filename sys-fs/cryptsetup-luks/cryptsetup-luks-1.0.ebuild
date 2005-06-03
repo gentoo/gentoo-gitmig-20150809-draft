@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.ebuild,v 1.3 2005/06/03 04:51:18 mr_bones_ Exp $
 
 inherit linux-info eutils multilib flag-o-matic
 
