@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.7 2005/06/03 13:55:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.8 2005/06/03 22:15:55 vapier Exp $
 
 inherit eutils
 
@@ -133,10 +133,13 @@ busybox_set_cross_compiler() {
 src_compile() {
 	busybox_set_cross_compiler
 	#emake -j1 CROSS="${CROSS}" include/config.h busybox || die
-	emake -j1 CROSS="${CROSS}" busybox || die
+	emake -j1 CROSS="${CROSS}" busybox || die "build failed"
 	if ! use static ; then
 		mv busybox{,.bak}
-		emake -j1 LDFLAGS="${LDFLAGS} -static" CROSS="${CROSS}" busybox || die
+		emake -j1 \
+			LDFLAGS="${LDFLAGS} -static" \
+			CROSS="${CROSS}" \
+			busybox || die "static build failed"
 		mv busybox bb
 		mv busybox{.bak,}
 	fi
@@ -148,8 +151,8 @@ src_install() {
 	into /
 	dobin busybox
 	use static \
-		|| dobin bb \
-		|| dosym busybox /bin/bb
+		&& dosym busybox /bin/bb \
+		|| dobin bb
 
 	if use make-symlinks ; then
 		if [[ ! ${VERY_BRAVE_OR_VERY_DUMB} == "yes" ]] && [[ ${ROOT} == "/" ]] ; then
