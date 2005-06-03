@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.35 2005/05/30 10:02:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.36 2005/06/03 10:55:45 flameeyes Exp $
+
+*mkvtoolnix-1.4.2-r1 (03 Jun 2005)
+
+  03 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +mkvtoolnix-1.4.2-r1.ebuild:
+  Added new revision which uses wxGTK 2.6 instead of 2.4. Added an huge patch
+  to fix format string mismatch for 64-bit arches.
 
   30 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   mkvtoolnix-0.9.7-r1.ebuild, mkvtoolnix-1.0.1.ebuild,
