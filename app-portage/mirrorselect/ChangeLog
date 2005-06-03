@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.26 2005/04/19 22:27:40 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.27 2005/06/03 00:42:39 tercel Exp $
+
+  03 Jun 2005; <colin@gentoo.org> metadata.xml:
+  updating maintainer info in metadata.xml
 
 *mirrorselect-0.89 (19 Apr 2005)
 
