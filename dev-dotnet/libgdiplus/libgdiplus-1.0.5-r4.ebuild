@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.5.ebuild,v 1.5 2005/05/19 08:48:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.0.5-r4.ebuild,v 1.1 2005/06/03 22:00:37 latexer Exp $
 
 inherit libtool eutils
 
@@ -12,17 +12,15 @@ SRC_URI="http://www.go-mono.com/archive/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="tiff gif jpeg png"
 
 DEPEND="sys-devel/libtool
-		sys-devel/automake
-		sys-devel/autoconf
 		virtual/x11
 		=x11-libs/cairo-0.3.0*
 		tiff? ( media-libs/tiff )
-		gif? ( media-libs/giflib )
+		gif? ( media-libs/libungif )
 		jpeg? ( media-libs/jpeg )
 		png? ( media-libs/libpng )"
 
@@ -31,18 +29,19 @@ RDEPEND=">=dev-lang/mono-${PV}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.1.4-included-cairo-fix.diff || die
-	epatch ${FILESDIR}/${PN}-1.1.4-giflib.diff || die
-	epatch ${FILESDIR}/${P}-nogif.diff || die
-	libtoolize --copy --force || die "libtoolize failed"
-	autoheader || die "autoheader failed"
+
+	epatch ${FILESDIR}/${P}-cairo-0.3.0-compat.diff || die "epatch failed"
+	epatch ${FILESDIR}/${PN}-1.0.6-giflib.diff || die "epatch failed"
+
+	# See bug #55916
+	einfo "Fixing a libtool problem"
 	aclocal || die "aclocal failed"
 	autoconf || die "autoconf failed"
-	automake || die "automake failed"
+	libtoolize --force --copy || die "libtoolize failed"
 }
 
 src_compile() {
-	local myconf="--with-cairo=installed"
+	local myconf="--with-cairo=installed --disable-glitz"
 	use tiff ||  myconf="--without-libtiff ${myconf}"
 	use gif ||  myconf="--without-libgif ${myconf}"
 	use jpeg ||  myconf="--without-libjpeg ${myconf}"

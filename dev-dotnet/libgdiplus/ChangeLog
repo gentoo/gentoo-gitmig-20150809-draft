@@ -1,6 +1,19 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.33 2005/06/03 14:51:32 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.34 2005/06/03 22:00:37 latexer Exp $
+
+*libgdiplus-1.1.7-r1 (03 Jun 2005)
+*libgdiplus-1.0.6-r3 (03 Jun 2005)
+*libgdiplus-1.0.5-r4 (03 Jun 2005)
+
+  03 Jun 2005; Peter Johanson <latexer@gentoo.org>
+  -libgdiplus-1.0.5-r1.ebuild, -libgdiplus-1.0.5-r2.ebuild,
+  +libgdiplus-1.0.5-r4.ebuild, -libgdiplus-1.0.6-r1.ebuild,
+  +libgdiplus-1.0.6-r3.ebuild, -libgdiplus-1.1.4.ebuild,
+  -libgdiplus-1.1.4-r1.ebuild, -libgdiplus-1.1.5.ebuild,
+  +libgdiplus-1.1.7-r1.ebuild:
+  Add revision bumps that use the internal cairo, and remove the cairo
+  dependancy. Prune some older versions.
 
   03 Jun 2005; Peter Johanson <latexer@gentoo.org> libgdiplus-1.1.7.ebuild:
   Re-add ~ppc at dholm's request, now that we have a working mono-1.1.x
