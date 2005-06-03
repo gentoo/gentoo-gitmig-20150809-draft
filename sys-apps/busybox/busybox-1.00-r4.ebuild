@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.6 2005/06/02 01:46:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.7 2005/06/03 13:55:21 solar Exp $
 
 inherit eutils
 
@@ -136,7 +136,7 @@ src_compile() {
 	emake -j1 CROSS="${CROSS}" busybox || die
 	if ! use static ; then
 		mv busybox{,.bak}
-		emake -j1 LDFLAGS="${LDFLAGS} -static" CROSS="${CROSS}" busybox 2>/dev/null || die
+		emake -j1 LDFLAGS="${LDFLAGS} -static" CROSS="${CROSS}" busybox || die
 		mv busybox bb
 		mv busybox{.bak,}
 	fi
