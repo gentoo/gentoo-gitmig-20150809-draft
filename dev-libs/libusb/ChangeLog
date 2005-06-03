@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.34 2005/06/02 20:47:23 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.35 2005/06/03 05:31:23 josejx Exp $
+
+  03 Jun 2005; Joseph Jezak <josejx@gentoo.org> libusb-0.1.10a.ebuild:
+  Marked ppc stable.
 
   02 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> libusb-0.1.10a.ebuild:
   Stable on hppa.
