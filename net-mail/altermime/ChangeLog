@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/altermime
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.6 2004/12/21 17:28:34 ticho Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.7 2005/06/04 09:29:36 tove Exp $
+
+*altermime-0.3.6 (04 Jun 2005)
+
+  04 Jun 2005; Torsten Veller <tove@gentoo.org> +altermime-0.3.6.ebuild:
+  New Version.
+  Thanks to Igor Golubev (#89657) and Sune Kloppenborg Jeppesen (#51299).
 
   21 Dec 2004; Andrej Kacian <ticho@gentoo.org> :
   Stable on x86.
