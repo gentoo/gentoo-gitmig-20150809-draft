@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0.ebuild,v 1.4 2005/06/04 16:02:53 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0-r1.ebuild,v 1.1 2005/06/04 16:02:53 luckyduck Exp $
 
 inherit eutils java-pkg
 
