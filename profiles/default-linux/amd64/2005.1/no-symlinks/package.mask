@@ -1,0 +1,11 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-symlinks/package.mask,v 1.1 2005/06/04 21:20:09 eradicator Exp $
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Don't use packages which do ugly symlink hackery for lib/lib64
+<x11-base/opengl-update-2.1_pre1
+=x11-libs/qt-2.3.2-r1
+~x11-libs/qt-3.2.3
+~x11-libs/qt-3.3.1
+~x11-libs/qt-3.3.2
+=x11-libs/qt-3.3.3
+=x11-libs/qt-3.3.3-r1
