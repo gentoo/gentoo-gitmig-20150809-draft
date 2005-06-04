@@ -1,0 +1,6 @@
+MD5 a14b530f02673ba9fce5ab2f2fed33b5 thrulay-0.6.ebuild 702
+MD5 530bc6f887d53e53940230d6d00359ef ChangeLog 446
+MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+MD5 22c6b7ad0b49aeb367c0160abcb9d894 files/thrulayd-init.d 674
+MD5 0df0073ca802c6d7e563f1d6976c1b76 files/digest-thrulay-0.6 62
+MD5 e4de7b3550ee143566a9226eac80b630 files/thrulayd-conf.d 366
