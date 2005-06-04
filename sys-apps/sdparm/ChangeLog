@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.3 2005/05/28 21:26:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.4 2005/06/04 06:12:22 kumba Exp $
+
+*sdparm-0.93 (04 Jun 2005)
+
+  04 Jun 2005; Joshua Kinard <kumba@gentoo.org> +sdparm-0.93.ebuild:
+  Version Bump.
 
   28 May 2005; <dang@gentoo.org> sdparm-0.92.ebuild:
   Marking ~amd64
