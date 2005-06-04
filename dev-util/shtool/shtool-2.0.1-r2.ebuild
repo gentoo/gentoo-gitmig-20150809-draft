@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/shtool-2.0.1-r2.ebuild,v 1.2 2005/05/31 19:54:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/shtool-2.0.1-r2.ebuild,v 1.3 2005/06/04 09:08:50 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnu.org/software/shtool/shtool.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ia64 ~ppc sparc x86"
+KEYWORDS="ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6"

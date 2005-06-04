@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/shtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.17 2005/05/31 19:54:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.18 2005/06/04 09:08:50 kloeri Exp $
+
+  04 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> shtool-2.0.1-r2.ebuild:
+  Stable on ia64, bug 93782.
 
   31 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   shtool-2.0.1-r2.ebuild:
