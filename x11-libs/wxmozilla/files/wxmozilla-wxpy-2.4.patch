@@ -1,0 +1,17 @@
+--- configure.in.orig	2005-05-17 00:12:11.000000000 +0200
++++ configure.in	2005-05-19 10:22:40.320053344 +0200
+@@ -241,12 +241,8 @@
+     
+     AC_MSG_CHECKING([for wxPython directory])
+ 
+-    if test "$wxrelease" = 2.4 ; then
+-        WXPYTHONDIR="$pythondir"
+-    else
+-        wxpyvername=`$PYTHON -c "from wx.build.config import getExtraPath; print getExtraPath(addOpts=1)"`
+-        WXPYTHONDIR="$pythondir/$wxpyvername"
+-    fi
++    wxpyvername=`$PYTHON -c "from wx.build.config import getExtraPath; print getExtraPath(addOpts=1)"`
++    WXPYTHONDIR="$pythondir/$wxpyvername"
+     
+     AC_SUBST(WXPYTHONDIR)
+     AC_MSG_RESULT([$WXPYTHONDIR])

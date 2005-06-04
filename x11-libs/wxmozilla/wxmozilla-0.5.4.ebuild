@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.3.ebuild,v 1.5 2005/06/04 13:43:22 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/wxmozilla-0.5.4.ebuild,v 1.1 2005/06/04 13:43:22 fserb Exp $
 
 inherit eutils libtool
 
@@ -12,11 +12,17 @@ HOMEPAGE="http://wxmozilla.sourceforge.net/"
 
 DEPEND=">=www-client/mozilla-1.3
 	python? ( dev-lang/python >=dev-python/wxpython-2.4 )
-	<=x11-libs/wxGTK-2.5"
+	>=x11-libs/wxGTK-2.4"
 
 SLOT="0"
 LICENSE="wxWinLL-3"
 KEYWORDS="~x86"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/wxmozilla-wxpy-2.4.patch
+}
 
 pkg_setup() {
 	# make sure gtk{1,2} setting of Mozilla and wxGTK is same

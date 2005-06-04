@@ -1,4 +1,17 @@
-MD5 928423e7df3dbd8efc6b367194348612 ChangeLog 744
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c62f9e74bd91037a2e40c4471342e222 ChangeLog 1024
+MD5 933ae6a8c006fa6a4833dc9d5000f7cb wxmozilla-0.5.3.ebuild 1485
 MD5 499f4ffa169e7c6cddc64e949def6746 metadata.xml 277
-MD5 31ec29e1a774c44daa16471b8faf8fbf wxmozilla-0.5.3.ebuild 1487
+MD5 2164aa3f320eb1d9f44ce37ab0c1787b wxmozilla-0.5.4.ebuild 1570
 MD5 cd769d652989e37dddd923b336b2fbb3 files/digest-wxmozilla-0.5.3 67
+MD5 555c54c0caac0b754eafddcd01a6447a files/digest-wxmozilla-0.5.4 67
+MD5 bce8d22f670249f683712e09c151477b files/wxmozilla-wxpy-2.4.patch 648
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCobAhxtZcznfol0URAqrJAKDH8q/HxXSRJHl6TwtqeFiEXDcRmACbBBnp
+zqmqopA7ecjpZSLXXzMKZqM=
+=sITK
+-----END PGP SIGNATURE-----
