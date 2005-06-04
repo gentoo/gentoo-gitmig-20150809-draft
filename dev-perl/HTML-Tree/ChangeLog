@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Tree
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.18 2005/05/15 15:12:09 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.19 2005/06/04 04:18:12 mcummings Exp $
+
+  04 Jun 2005; Michael Cummings <mcummings@gentoo.org>
+  HTML-Tree-3.17.ebuild, HTML-Tree-3.18.ebuild:
+  Tested on raq2, bumping for mips
 
   15 May 2005; Rene Nussbaumer <killerfox@gentoo.org> HTML-Tree-3.18.ebuild:
   added ~hppa
