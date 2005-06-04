@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/dante
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.3 2005/05/16 16:58:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.4 2005/06/04 12:30:59 mrness Exp $
+
+*dante-1.1.15-r2 (04 Jun 2005)
+
+  04 Jun 2005; Alin Nastac <mrness@gentoo.org> files/dante-sockd-init,
+  +files/sockd.conf, +files/sockd.conf-with-libwrap.patch,
+  +files/sockd.conf-with-pam.patch, +files/socks.conf,
+  +dante-1.1.15-r2.ebuild:
+  Added default configuration files in /etc/socks. Create sockd user, used in
+  user.* parameters of the sockd daemon. Improve init script.
 
   16 May 2005; Alin Nastac <mrness@gentoo.org> dante-1.1.15-r1.ebuild:
   Remove unused inheritance of gcc eclass (#92745).
