@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.8.2.ebuild,v 1.6 2005/05/18 01:54:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.8.2.ebuild,v 1.7 2005/06/04 17:57:09 leonardop Exp $
 
 # FIXME : the engines in here should probably be disabled and done in seperate ebuilds
 
@@ -16,7 +16,7 @@ IUSE="accessibility"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=x11-themes/gtk-engines-2.2.0
-	!x11-themes/gtk-engines-thinice
+	!>=x11-themes/gtk-engines-thinice-2
 	!x11-themes/gtk-engines-lighthouseblue
 	!x11-themes/gtk-engines-crux
 	!x11-themes/gtk-engines-mist
