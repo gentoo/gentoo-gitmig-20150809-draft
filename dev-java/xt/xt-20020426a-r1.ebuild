@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20020426a.ebuild,v 1.7 2005/04/17 15:13:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20020426a-r1.ebuild,v 1.1 2005/06/04 16:02:36 luckyduck Exp $
 
 inherit java-pkg
 
@@ -31,7 +31,7 @@ src_unpack() {
 	cd lib
 	java-pkg_jar-from xml-commons xml-apis.jar
 	java-pkg_jar-from xp
-	java-pkg_jar-from servletapi-2.3 servletapi-2.3.jar servlets.jar
+	java-pkg_jar-from servletapi-2.3 servlet.jar servlets.jar
 }
 
 src_compile() {

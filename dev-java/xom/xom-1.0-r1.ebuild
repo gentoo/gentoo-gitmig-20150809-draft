@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0.ebuild,v 1.2 2005/04/28 19:19:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r1.ebuild,v 1.1 2005/06/04 16:02:48 luckyduck Exp $
 
 inherit java-pkg
 
@@ -16,15 +16,15 @@ IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
-	>=dev-java/xerces-2.6.2-r1
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
+RDEPEND=">=virtual/jre-1.3
+	=dev-java/xerces-2.6*
 	dev-java/xalan
 	dev-java/junit
 	dev-java/icu4j
 	dev-java/tagsoup
-	=dev-java/servletapi-2.3*
-	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jdk-1.3"
+	=dev-java/servletapi-2.3*"
 
 S=${WORKDIR}/XOM
 
@@ -37,7 +37,7 @@ src_unpack() {
 	java-pkg_jar-from junit
 	java-pkg_jar-from xalan
 	java-pkg_jar-from xerces-2
-	java-pkg_jar-from servletapi-2.3 servletapi-2.3.jar servlet.jar
+	java-pkg_jar-from servletapi-2.3
 	java-pkg_jar-from icu4j icu4j.jar normalizer.jar
 	java-pkg_jar-from tagsoup
 }
