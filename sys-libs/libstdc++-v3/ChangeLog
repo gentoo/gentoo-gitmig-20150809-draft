@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.32 2005/05/11 10:33:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.33 2005/06/04 12:33:26 kugelfang Exp $
+
+  04 Jun 2005; Danny van Dyk <kugelfang@gentoo.org>
+  libstdc++-v3-3.3.4.ebuild:
+  Fixed multilib handling, both triggers (has_multilib_profile) and
+  directories (lib64 instead lib).
 
   11 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   libstdc++-v3-3.3.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.13 2005/05/24 05:10:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.14 2005/06/04 12:33:26 kugelfang Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -130,7 +130,7 @@ HOMEPAGE="http://gcc.gnu.org/libstdc++/"
 LICENSE="GPL-2 LGPL-2.1"
 
 KEYWORDS="amd64 ~x86 ~mips ppc64 ppc ~sparc"
-IUSE="nls"
+IUSE="nls multilib"
 
 # 3.2.3 -> 3.3.x install .so.5, so lets slot to 5
 if [ "${CHOST}" == "${CCHOST}" ]
@@ -165,7 +165,12 @@ src_unpack() {
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
 
-	use amd64 && epatch ${FILESDIR}/libstdc++_amd64_multilib_hack.patch
+	if (has_multilib_profile || use multilib) ; then
+		sed -i \
+			-e 's:\(MULTILIB_OSDIRNAMES = \).*:\1../lib64 ../lib32:' \
+			${S}/gcc/config/i386/t-linux64 \
+			|| die "sed failed!"
+	fi
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
@@ -185,7 +190,7 @@ src_compile() {
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
 
-	use amd64 && myconf="${myconf} --disable-multilib"
+	(has_multlib_profile || use multilib) || myconf="${myconf} --disable-multilib"
 
 	do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
