@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/Curses-UI-0.95.ebuild,v 1.2 2005/06/02 15:03:40 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/Curses-UI-0.95.ebuild,v 1.3 2005/06/04 03:13:25 weeve Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://search.cpan.org/~marcus/${P}/"
 SRC_URI="mirror://cpan/authors/id/M/MA/MARCUS/${P}.tar.gz"
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
