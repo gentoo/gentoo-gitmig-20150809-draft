@@ -1,9 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation, Inc.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/nsopenssl/nsopenssl-3.0_beta26.ebuild,v 1.1 2005/05/21 21:12:38 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/nsopenssl/nsopenssl-3.0_beta26.ebuild,v 1.2 2005/06/04 20:32:23 swegener Exp $
 
-inherit eutils
-inherit aolserver
+inherit eutils aolserver
 
 MY_P=${P/_/}
 
@@ -14,9 +13,8 @@ SRC_URI="mirror://sourceforge/aolserver/${MY_P}-src.tar.gz"
 KEYWORDS="~x86"
 
 DEPEND=">=dev-libs/openssl-0.9.6"
-RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 MAKE_FLAGS="OPENSSL_LIB='/usr/lib' OPENSSL_INCLUDE='/usr/include/openssl'"
 TCL_MODS="https.tcl"
@@ -26,10 +24,10 @@ src_unpack() {
 
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/Makefile-${PV}.diff
-	epatch ${FILESDIR}/nsd.tcl.diff
+	epatch "${FILESDIR}"/Makefile-${PV}.diff
+	epatch "${FILESDIR}"/nsd.tcl.diff
 
 	mv nsd.tcl sample-config.tcl
 }
