@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.3-r1.ebuild,v 1.11 2005/06/04 16:02:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.3-r2.ebuild,v 1.1 2005/06/04 16:02:01 luckyduck Exp $
 
 inherit java-pkg
 
