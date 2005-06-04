@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0.3-r1.ebuild,v 1.2 2005/05/19 20:21:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0.3-r1.ebuild,v 1.3 2005/06/04 02:53:46 halcy0n Exp $
 
 PHPSAPI="cli"
 MY_P="${PN}-${PV}"
@@ -21,6 +21,8 @@ src_unpack() {
 	[ "${ARCH}" == "sparc" ] && epatch ${FILESDIR}/stdint.diff
 	epatch ${FILESDIR}/${P}-missing-arches.patch
 	epatch ${FILESDIR}/libmbfl-headers.patch
+	#GCC4 compilation patch ; bug #94282
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile () {
