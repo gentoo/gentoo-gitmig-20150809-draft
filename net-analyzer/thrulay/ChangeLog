@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/thrulay
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.1 2005/06/04 19:28:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.2 2005/06/04 20:17:14 swegener Exp $
+
+  04 Jun 2005; Sven Wegener <swegener@gentoo.org> thrulay-0.6.ebuild:
+  Added cross-compile support and error checking.
 
 *thrulay-0.6 (04 Jun 2005)
 
