@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1.ebuild,v 1.8 2005/05/18 11:29:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r1.ebuild,v 1.1 2005/06/04 16:02:23 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 		rm *.jar
-		java-pkg_jar-from servletapi-2.3 servletapi-2.3.jar servlet.jar
+		java-pkg_jar-from servletapi-2.3
 	cd ..
 	sed -i -r \
 		-e "s/etc\/sysconfig/etc\/conf.d/g" \
