@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r1.ebuild,v 1.1 2005/06/04 15:53:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5-r1.ebuild,v 1.2 2005/06/04 16:40:46 swegener Exp $
 
 inherit eutils python
 
@@ -63,9 +63,9 @@ src_install() {
 
 	insinto /etc/logrotate.d
 	newins ${FILESDIR}/capisuite.logrotated capisuite
-	
+
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
-	
+
 	exeinto /etc/cron.daily
 	doexe capisuite.cron
 
