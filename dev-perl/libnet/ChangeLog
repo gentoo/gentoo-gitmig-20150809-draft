@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/ChangeLog,v 1.35 2005/05/01 18:33:21 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/ChangeLog,v 1.36 2005/06/04 05:34:42 mcummings Exp $
+
+  04 Jun 2005; Michael Cummings <mcummings@gentoo.org> libnet-1.19.ebuild:
+  Tested on raq2, bumping for mips
 
   01 May 2005; Tom Martin <slarti@gentoo.org> libnet-1.19.ebuild:
   Stable on amd64.
