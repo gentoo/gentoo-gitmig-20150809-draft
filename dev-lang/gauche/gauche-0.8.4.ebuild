@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/gauche-0.8.ebuild,v 1.3 2005/04/01 04:00:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/gauche-0.8.4.ebuild,v 1.1 2005/06/04 10:23:37 hattya Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://gauche.sf.net/"
 SRC_URI="mirror://sourceforge/gauche/${MY_P}.tgz"
 
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gdbm-gentoo.diff
-	epatch ${FILESDIR}/${PN}-extract-1.13.diff
+	epatch ${FILESDIR}/${PN}-aclocal.m4-cc.diff
 	autoconf
 
 }
@@ -41,8 +41,6 @@ src_compile() {
 	else
 		myconf="${myconf} --enable-multibyte=euc-jp"
 	fi
-
-	sed -i -e "67s/\$(LIB_INSTALL_DIR)/\$(DISTDIR)\$(LIB_INSTALL_DIR)/" src/Makefile.in
 
 	strip-flags
 

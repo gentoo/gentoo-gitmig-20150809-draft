@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gauche
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/ChangeLog,v 1.13 2005/05/04 06:40:31 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/ChangeLog,v 1.14 2005/06/04 10:23:37 hattya Exp $
+
+*gauche-0.8.4 (04 Jun 2005)
+
+  04 Jun 2005; Akinori Hattori <hattya@gentoo.org>
+  -files/gauche-extract-1.13.diff, +files/gauche-aclocal.m4-cc.diff,
+  -gauche-0.8.ebuild, -gauche-0.8.1.ebuild, +gauche-0.8.4.ebuild:
+  new upstream release.
 
   04 May 2005; Akinori Hattori <hattya@gentoo.org>
   files/gauche-aclocal.m4-1.31.diff:
