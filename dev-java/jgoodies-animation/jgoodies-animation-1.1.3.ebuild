@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/jgoodies-animation-1.1.3.ebuild,v 1.3 2005/05/18 19:05:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/jgoodies-animation-1.1.3.ebuild,v 1.4 2005/06/04 21:11:41 luckyduck Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jgoodies.com/download/libraries/animation-${MY_V}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4
