@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.6 2005/04/29 22:26:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.7 2005/06/04 15:06:58 centic Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment
 
 MY_P=${P/_/-}
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
-HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
+HOMEPAGE="http://www.enlightenment.org/Libraries/Imlib2.html"
 
 IUSE="X gif jpeg mmx png tiff"
 
