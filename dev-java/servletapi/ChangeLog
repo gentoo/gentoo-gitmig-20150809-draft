@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.31 2005/06/04 16:02:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.32 2005/06/04 22:04:46 luckyduck Exp $
+
+  04 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  servletapi-2.4-r2.ebuild:
+  fixed problem with the doc useflag, thanks to StudiesInWords
 
 *servletapi-2.4-r2 (04 Jun 2005)
 *servletapi-2.3-r2 (04 Jun 2005)

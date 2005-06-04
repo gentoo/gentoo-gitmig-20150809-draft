@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r2.ebuild,v 1.1 2005/06/04 16:02:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r2.ebuild,v 1.2 2005/06/04 22:04:46 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -49,6 +49,7 @@ src_install () {
 		mv examples ${S}/docs/jsp/examples
 	fi
 
+	cd ${S}
 	java-pkg_dojar *.jar
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc jsr{152,154}/src/share/javax
