@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.9 2005/06/04 03:39:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.10 2005/06/04 23:26:08 vapier Exp $
 
 inherit eutils
 
@@ -59,6 +59,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/1.00/sum.patch
 	epatch "${FILESDIR}"/1.00/bb.patch
 	epatch "${WORKDIR}"/${P}-e2fsprogs.patch
+	epatch "${FILESDIR}"/1.00/gcc4.patch
 
 	# Don't let KBUILD_OUTPUT mess us up #88088
 	unset KBUILD_OUTPUT
