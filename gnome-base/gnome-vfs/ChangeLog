@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.148 2005/05/16 12:37:24 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.149 2005/06/04 11:47:32 foser Exp $
+
+*gnome-vfs-2.10.0-r2 (04 Jun 2005)
+*gnome-vfs-2.10.1-r1 (04 Jun 2005)
+
+  04 Jun 2005; Marinus Schraal <foser@gentoo.org> gnome-vfs-2.10.{0-r2,1-r1}.ebuild :
+  Add patch to fix date/time stamps (#92740)
 
   16 May 2005; John N. Laliberte <allanonjl@gentoo.org>
   gnome-vfs-1.0.5-r3.ebuild, gnome-vfs-1.0.5-r4.ebuild:

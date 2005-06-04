@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.10.0.ebuild,v 1.2 2005/03/21 23:16:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.10.0-r2.ebuild,v 1.1 2005/06/04 11:47:32 foser Exp $
 
 inherit gnome2 eutils
 
@@ -69,6 +69,10 @@ src_unpack() {
 
 	# reiser4 patch, c'mon (#57756)
 	epatch ${FILESDIR}/${PN}-2.8.3-reiser4_support.patch
+	# CAN-2005-0706 (#84936)
+	epatch ${FILESDIR}/${PN}-2-CAN-2005-0706.patch
+	# fix date/time stamp
+	epatch ${FILESDIR}/${PN}-2.10.1-date_time_stamp.patch
 
 }
 
