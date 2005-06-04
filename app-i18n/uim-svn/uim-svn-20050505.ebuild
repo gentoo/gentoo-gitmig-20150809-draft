@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20050505.ebuild,v 1.1 2005/05/05 15:00:02 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20050505.ebuild,v 1.2 2005/06/04 15:03:37 hattya Exp $
 
 inherit flag-o-matic kde-functions multilib subversion
 
@@ -8,7 +8,7 @@ IUSE="X canna dict eb fep gtk immqt qt m17n-lib nls"
 
 ESVN_REPO_URI="svn://svn.utyuuzin.net/uim/trunk"
 ESVN_BOOTSTRAP="./autogen.sh -V"
-ESVN_PATCHES="*.diff"
+#ESVN_PATCHES="*.diff"
 
 DESCRIPTION="a simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
@@ -132,4 +132,4 @@ pkg_postrm() {
 
 }
 
-# $Id: uim-svn-20050505.ebuild,v 1.1 2005/05/05 15:00:02 hattya Exp $
+# $Id: uim-svn-20050505.ebuild,v 1.2 2005/06/04 15:03:37 hattya Exp $

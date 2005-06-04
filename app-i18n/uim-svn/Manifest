@@ -1,5 +1,4 @@
-MD5 cd1a8c63a9bf0d3763facc603717a663 ChangeLog 2356
+MD5 d54f606d7bf9e2903d2824bf12601352 ChangeLog 2530
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 e4b1440a05eb03679590b7c4766d3164 uim-svn-20050505.ebuild 2891
+MD5 c028d9254597e8d2022aa465e4e3570b uim-svn-20050505.ebuild 2892
 MD5 224fb1ad2d4fafabab78a7aee65c0c9f files/digest-uim-svn-20050505 65
-MD5 a62d7626d662b5071bfe32c9bc28e513 files/uim-svn-configure-fix.diff 496

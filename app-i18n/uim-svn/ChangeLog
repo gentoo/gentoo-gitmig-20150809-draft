@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim-svn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.16 2005/05/05 15:00:02 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.17 2005/06/04 15:03:37 hattya Exp $
+
+  04 Jun 2005; Akinori Hattori <hattya@gentoo.org>
+  -files/uim-svn-configure-fix.diff, uim-svn-20050505.ebuild:
+  remove a patch. this is fixed in the upstream repository.
 
 *uim-svn-20050505 (05 May 2005)
 
