@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1.ebuild,v 1.13 2005/04/24 02:48:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1.ebuild,v 1.14 2005/06/04 12:45:11 pyrania Exp $
 
 inherit eutils
 
 DESCRIPTION="MGM, the Moaning Goat Meter, is the ultimate sixty-ton cast iron lawn ornament for the desktops of today's hacker set: A gorgeous, highly configurable load and status meter written entirely in Perl. Serious pink-flamingo territory. For evil geniuses only."
-HOMEPAGE="http://www.xiph.org/mgm/index.html"
-SRC_URI="http://www.xiph.org/mgm/${P}.tgz"
+HOMEPAGE="http://www.linuxmafia.com/mgm/index.html"
+SRC_URI="http://www.linuxmafia.com/mgm/${P}.tgz"
 
 KEYWORDS="x86 sparc ~amd64 ppc"
 SLOT="0"
