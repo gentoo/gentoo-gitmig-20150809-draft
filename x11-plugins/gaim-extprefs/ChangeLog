@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/gaim-extprefs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-extprefs/ChangeLog,v 1.8 2005/03/30 21:43:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-extprefs/ChangeLog,v 1.9 2005/06/04 07:42:46 tester Exp $
+
+*gaim-extprefs-0.4-r1 (04 Jun 2005)
+
+  04 Jun 2005; Olivier Crête <tester@gentoo.org>
+  +files/gaim-extprefs-0.4-64bitfix.patch, +gaim-extprefs-0.4-r1.ebuild:
+  Fixed building with libtool >1.5.14 and on amd64, thanks to Joe Bormolini
+  <lordjoe@bigfoot.com> from bug #93962 and to Ian Kumlien <pomac@vapor.com>
+  from bug #94687
 
   30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gaim-extprefs-0.4.ebuild:

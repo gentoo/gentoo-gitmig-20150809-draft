@@ -1,0 +1,66 @@
+diff -ruN extendedprefs-0.4/src/extendedprefs.c extendedprefs-0.4.pom/src/extendedprefs.c
+--- extendedprefs-0.4/src/extendedprefs.c	2004-12-14 05:38:46.000000000 +0100
++++ extendedprefs-0.4.pom/src/extendedprefs.c	2005-06-01 00:47:09.000000000 +0200
+@@ -337,7 +337,7 @@
+ 	blist_taskbar_update(NULL, 0, NULL, NULL);
+ 	blist_shrink_update(NULL, 0, NULL, NULL);
+ 
+-	if (gaim_prefs_get_bool(pref_blist_autohide) && (gboolean)data == TRUE) {
++	if (gaim_prefs_get_bool(pref_blist_autohide) && data != NULL) {
+ 		gtk_widget_hide(gtkblist->window);
+ 		logging_in = TRUE;
+ 
+@@ -437,28 +437,28 @@
+ 
+ 	/* Conversations */
+ 	gaim_gtk_prefs_labeled_spin_button(vbox, "_Conversations:",
+-									   pref_conv_size,
++									   (char *)pref_conv_size,
+ 									   KSTANGE_EP_SIZE_MIN,
+ 									   KSTANGE_EP_SIZE_MAX,
+ 									   sg);
+ 
+ 	/* Log Viewer Size */
+ 	gaim_gtk_prefs_labeled_spin_button(vbox, "Log _Viewer:",
+-									   pref_log_size,
++									   (char *)pref_log_size,
+ 									   KSTANGE_EP_SIZE_MIN,
+ 									   KSTANGE_EP_SIZE_MAX,
+ 									   sg);
+ 
+ 	/* Popup Dialogs */
+ 	gaim_gtk_prefs_labeled_spin_button(vbox, "Information _Dialogs:",
+-									   pref_popup_size,
++									   (char *)pref_popup_size,
+ 									   KSTANGE_EP_SIZE_MIN,
+ 									   KSTANGE_EP_SIZE_MAX,
+ 									   sg);
+ 
+ 	/* Buddy List Size */
+ 	gaim_gtk_prefs_labeled_spin_button(vbox, "Budd_y List:",
+-									   pref_blist_size,
++									   (char *)pref_blist_size,
+ 									   KSTANGE_EP_SIZE_MIN,
+ 									   KSTANGE_EP_SIZE_MAX,
+ 									   sg);
+@@ -497,7 +497,7 @@
+ 
+ 	/* Tooltip Delay */
+ 	gaim_gtk_prefs_labeled_spin_button(vbox, "_Tooltip reveal delay (ms):",
+-									   pref_tooltip_delay,
++									   (char *)pref_tooltip_delay,
+ 									   KSTANGE_EP_BLIST_TIP_MIN,
+ 									   KSTANGE_EP_BLIST_TIP_MAX,
+ 									   NULL);
+diff -ruN extendedprefs-0.4/src/Makefile extendedprefs-0.4.pom/src/Makefile
+--- extendedprefs-0.4/src/Makefile	2004-12-14 05:38:46.000000000 +0100
++++ extendedprefs-0.4.pom/src/Makefile	2005-06-01 00:48:32.000000000 +0200
+@@ -52,7 +52,7 @@
+ 	cp $(EP).so $(LIB_INSTALL_DIR)
+ 
+ $(EP).so: $(EP).c
+-	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $< -o tmp$@.lo $(GAIM_CFLAGS) $(GTK_CFLAGS) -DHAVE_CONFIG_H -DEP_VERSION=\\\"$(EP_VERSION)\\\"
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $< -o tmp$@.lo $(GAIM_CFLAGS) $(GTK_CFLAGS) -DHAVE_CONFIG_H -DEP_VERSION=\"$(EP_VERSION)\"
+ 	$(LIBTOOL) --mode=link    $(CC) $(CFLAGS) -o libtmp$@.la -rpath $(GAIM_LIBDIR) tmp$@.lo $(GAIM_LIBS) $(GTK_LIBS) -module -avoid-version
+ 	rm -f tmp$@.lo tmp$@.o libtmp$@.la
+ 	cp .libs/libtmp$@.so* $@

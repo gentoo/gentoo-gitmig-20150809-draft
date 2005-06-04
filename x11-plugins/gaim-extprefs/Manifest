@@ -1,14 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1f07e2cd46e00b153d100b856e347799 ChangeLog 1121
-MD5 ada0fe081e6b55460c3ab3af792f3f86 gaim-extprefs-0.4.ebuild 837
 MD5 4e1932633984524faebd0664288510b9 metadata.xml 458
+MD5 ada0fe081e6b55460c3ab3af792f3f86 gaim-extprefs-0.4.ebuild 837
+MD5 731add91bf725d985194c9b91cd1e018 ChangeLog 1451
+MD5 a7149db71a3af1b560e26fcacc25608c gaim-extprefs-0.4-r1.ebuild 975
 MD5 8208e6ff994eddc392fee60515f96f43 files/digest-gaim-extprefs-0.4 68
+MD5 22d0ed82c098cff251a1abc3064b0a1b files/gaim-extprefs-0.4-64bitfix.patch 2611
+MD5 8208e6ff994eddc392fee60515f96f43 files/digest-gaim-extprefs-0.4-r1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSx1/KRy60XGEcJIRAuPzAJoC5VaVk4Dewgg5/cuCOgUUSByY2wCfYbbm
-pxhxDt3bpdtd98qQWEmqtHQ=
-=/jXG
+iD8DBQFCoVu3mOfEJZHYOKcRArGkAJ4mo2dP5LeaDypywEgAM1aw3hgqWACg3uNR
+pHEfF3BJYAnb7PXczLfgH1I=
+=zLqr
 -----END PGP SIGNATURE-----
