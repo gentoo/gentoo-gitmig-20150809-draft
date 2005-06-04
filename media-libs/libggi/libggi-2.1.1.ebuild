@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.1 2005/06/04 11:30:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.2 2005/06/04 20:03:51 luckyduck Exp $
 
 inherit eutils libtool
 
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/libgii-0.9.0
 	X? ( virtual/x11 )
 	svga? ( >=media-libs/svgalib-1.4.2 )
 	aalib? ( >=media-libs/aalib-1.2-r1 )
-	dga? (virtual/x11)"
+	dga? ( virtual/x11 )"
 
 src_compile() {
 	elibtoolize
