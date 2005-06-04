@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.18 2005/05/15 15:30:40 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.19 2005/06/04 15:08:44 blubb Exp $
 
 # UNKNOWN - SECTION
 
@@ -10,6 +10,11 @@ drac
 # WON'T WORK - SECTION
 
 asm
+
+# 2005/06/04
+# dev-util/xdelta doesn't work as expected by this use flag, it can only use
+# xdelta-files made on a 64bit system
+kdexdeltas
 
 # 2005/03/18 - Danny van Dyk <kugelfang@gentoo.org>
 # net-libs/openslp doesn't pass make check. Security BUG #85347.
