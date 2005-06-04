@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b6e7ba0006fcc41f3a2b1e1cee91abf9 ChangeLog 12612
-MD5 8c7644002ef28f69b872d7d48b24cae1 gnumeric-1.4.3.ebuild 2516
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 a3e4efa9c0b3cb8e55bcc732bf658542 ChangeLog 12713
 MD5 4efb73ab43f974bc41253cede90fa6ad gnumeric-1.4.2.ebuild 2536
-MD5 2bff8e6c3d41ceae3d04783899915363 files/digest-gnumeric-1.4.3 69
+MD5 2b5d1ded065d258d57b8a650350851d9 gnumeric-1.4.3.ebuild 2517
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f7eb652589a8e0103264b9d828cf4046 files/digest-gnumeric-1.4.2 69
+MD5 2bff8e6c3d41ceae3d04783899915363 files/digest-gnumeric-1.4.3 69
 MD5 b1c7dc9c30396b4fad208b985e9ade9d files/gnumeric-1.4.2-sheet_object_scroll.patch 3295
 MD5 403a9f34b1159b636dec6156951e023d files/gnumeric-1.4.3-makejobs.patch 1591
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCoJsEKRy60XGEcJIRAu2dAJ9uJi08HpL/dmNiDcEAyAWkgKnvwQCfcCYp
-lVAHsYFX07sC6lqVV53Vqsg=
-=gdR9
------END PGP SIGNATURE-----
