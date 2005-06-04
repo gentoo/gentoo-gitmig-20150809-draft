@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1207 2005/06/04 23:36:40 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1208 2005/06/04 23:40:30 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -617,10 +617,10 @@ net-ftp/frox:clamav - ClamAV antivirus support on proxy
 net-ftp/proftpd:sendfile - Enable support for sendfile()
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:softquota - Enable support for the mod_quotatab
+net-ftp/proftpd:authunix - Enable support for auth-unix module
+net-ftp/proftpd:authfile - Enable support for auth-file module
+net-ftp/proftpd:xinetd - Enable support for starting from xinetd
 net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risc)
-net-ftp/pure-ftpd:authunix - Enable support for auth-unix module
-net-ftp/pure-ftpd:authfile - Enable support for auth-file module
-net-ftp/pure-ftpd:xinetd - Enable support for starting from xinetd
 net-im/bitlbee:flood - Enable flood protection support
 net-im/bitlbee:openssl - Use OpenSSL for SSL support in MSN and Jabber.
 net-im/centericq:gg - Enable support for the Gadu-Gadu IM protocol
