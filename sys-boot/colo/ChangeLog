@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/colo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.12 2005/03/21 03:00:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.13 2005/06/04 07:29:44 redhatter Exp $
+
+*colo-1.19 (04 Jun 2005)
+  04 Jun 2005; Stuart Longland <redhatter@gentoo.org> +colo-1.19.ebuild:
+  Version bump of unstable to v1.19 as per bug #72161
 
 *colo-1.16 (20 Mar 2005)
 
