@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/oops
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.5 2005/05/04 13:36:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.6 2005/06/04 14:38:03 mrness Exp $
+
+  04 Jun 2005; Alin Nastac <mrness@gentoo.org> -oops-1.5.23.ebuild:
+  Remove obsolete version.
 
   04 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   oops-1.5.24_pre20050503.ebuild:

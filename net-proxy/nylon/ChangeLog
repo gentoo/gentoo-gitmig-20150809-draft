@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/nylon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/ChangeLog,v 1.3 2005/05/01 18:03:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/ChangeLog,v 1.4 2005/06/04 14:34:36 mrness Exp $
+
+  04 Jun 2005; Alin Nastac <mrness@gentoo.org> -nylon-1.2-r1.ebuild:
+  Remove obsolete version.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> nylon-1.2-r2.ebuild:
   Stable on ppc.
