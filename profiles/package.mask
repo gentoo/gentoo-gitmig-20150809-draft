@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4046 2005/06/03 19:02:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4047 2005/06/04 16:47:09 luckyduck Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -660,12 +660,6 @@ dev-lisp/cl-imho
 # nagios-*2 is still beta
 >=net-analyzer/nagios-core-2.0b_p1
 >=net-analyzer/nagios-2.0b_p1
-
-# <compnerd@gentoo.org> (24 Jan 2005)
-# Masked as it has security holes. We (Java Herd) recommend that you use
-# sun-jdk instead of this deprecated package.  This will be removed unless
-# someone wishes to touch this (it has an evil license btw). (bug #78854)
-dev-java/sun-j2sdk
 
 # Marius Mauch <genone@gentoo.org> (22 Jan 2005)
 # Segfaulting all over the place, pending tests with gtk2 version
