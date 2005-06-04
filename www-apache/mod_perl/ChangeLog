@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.4 2005/05/29 16:06:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.5 2005/06/04 18:15:28 beu Exp $
+
+*mod_perl-2.0.0 (04 Jun 2005)
+
+  04 Jun 2005; Elfyn McBratney <beu@gentoo.org> +mod_perl-2.0.0.ebuild:
+  Version bump; this revision is for current-stable apache _only_, and
+  _will_ not work with the 'refreshed' apache versions in testing - -r1
+  will shortly follow for that.
 
   29 May 2005; Markus Rothe <corsair@gentoo.org> mod_perl-1.29.ebuild,
   mod_perl-1.99.17-r1.ebuild:
