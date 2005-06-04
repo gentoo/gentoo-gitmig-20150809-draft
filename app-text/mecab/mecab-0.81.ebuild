@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.81.ebuild,v 1.1 2005/05/22 15:50:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.81.ebuild,v 1.2 2005/06/04 09:41:29 hattya Exp $
 
 inherit eutils
 
@@ -29,7 +29,11 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_with unicode charset utf8) || die
+	local myconf
+
+	use unicode && myconf="${myconf} --with-charset=utf8"
+
+	econf ${myconf} || die
 	emake || die
 }
 
