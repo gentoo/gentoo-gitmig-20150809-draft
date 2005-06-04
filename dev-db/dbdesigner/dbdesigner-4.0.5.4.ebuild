@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/dbdesigner-4.0.5.4.ebuild,v 1.6 2005/01/01 17:30:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/dbdesigner-4.0.5.4.ebuild,v 1.7 2005/06/04 02:35:28 allanonjl Exp $
 
 DESCRIPTION="DBDesigner 4 is a visual database design system that integrates database design, modeling, creation and maintenance into a single, seamless environment."
 HOMEPAGE="http://www.fabforce.net/dbdesigner4/"
@@ -21,7 +21,7 @@ pkg_setup() {
 	ewarn
 	ewarn "Note that I might not have all the dependencies worked"
 	ewarn "out.  If you have problems, file a report at"
-	ewarn "http://bugs.gentoo.org and assign them to rizzo@gentoo.org"
+	ewarn "http://bugs.gentoo.org and assign them to allanonjl@gentoo.org"
 	ewarn
 }
 
