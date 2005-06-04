@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0.ebuild,v 1.2 2005/06/03 18:32:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0.ebuild,v 1.3 2005/06/04 01:51:17 yoswink Exp $
 
 DESCRIPTION="Proxy cache for Gentoo packages"
 HOMEPAGE="http://gertjan.freezope.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://gertjan.freezope.org/replicator/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~alpha"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3"

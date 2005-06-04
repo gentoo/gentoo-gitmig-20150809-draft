@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/http-replicator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.2 2005/06/03 18:32:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.3 2005/06/04 01:51:17 yoswink Exp $
+
+  04 Jun 2005; Jose Luis Rivero <yoswink@gentoo.org>
+  http-replicator-3.0.ebuild:
+  Added ~alpha; bug #94936.
 
   03 Jun 2005; Lars Weiler <pylon@gentoo.org> http-replicator-3.0.ebuild:
   Added ~ppc; bug #94936.
