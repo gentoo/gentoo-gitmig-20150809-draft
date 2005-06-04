@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.8 2005/06/04 17:59:27 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.9 2005/06/04 18:13:05 vericgar Exp $
 ECLASS=apache-module
 INHERITED="$INHERITED $ECLASS"
 
@@ -235,13 +235,11 @@ apache2_pkg_setup() {
 
 	if [ -n "${APACHE2_SAFE_MPMS}" ]; then
 
-		INSTALLED_MPM="$(apxs2 -q MPM_NAME)"
+		INSTALLED_MPM="$(${ROOT}/usr/sbin/apxs2 -q MPM_NAME)"
 
-                if ! hasq ${INSTALLED_MPM} ${APACHE2_SAFE_MPMS} ; then
-                        INSTALLED_MPM_UNSAFE="yes"
-                else
-                        INSTALLED_MPM_SAFE="yes"
-                fi
+		if hasq ${INSTALLED_MPM} ${APACHE2_SAFE_MPMS} ; then
+			INSTALLED_MPM_SAFE="yes"
+		fi
 
 		if [ -z "${INSTALLED_MPM_SAFE}" ] ; then
 			eerror "The module you are trying to install (${PN})"
@@ -334,7 +332,7 @@ apache2_pkg_postinst() {
 
 	if [ -n "${APACHE2_SAFE_MPMS}" ]; then
 
-		INSTALLED_MPM="$(apxs2 -q MPM_NAME)"
+		INSTALLED_MPM="$(${ROOT}/usr/sbin/apxs2 -q MPM_NAME)"
 
 		if ! hasq ${INSTALLED_MPM} ${APACHE2_SAFE_MPMS} ; then
 			INSTALLED_MPM_UNSAFE="${INSTALLED_MPM_UNSAFE} ${mpm}"
