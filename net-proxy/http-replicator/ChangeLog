@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/http-replicator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.3 2005/06/04 01:51:17 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.4 2005/06/04 10:55:35 luckyduck Exp $
+
+  04 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  http-replicator-3.0.ebuild:
+  added ~amd64 to KEYWORDS wrt #94936
 
   04 Jun 2005; Jose Luis Rivero <yoswink@gentoo.org>
   http-replicator-3.0.ebuild:
