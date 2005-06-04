@@ -1,7 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_passwdqc/pam_passwdqc-0.7.4.ebuild,v 1.5 2005/03/04 00:02:51 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_passwdqc/pam_passwdqc-1.0.2.ebuild,v 1.1 2005/06/04 19:12:56 flameeyes Exp $
 
+inherit pam
 
 DESCRIPTION="Password strength checking for PAM aware password changing programs"
 HOMEPAGE="http://www.openwall.com/passwdqc/"
@@ -9,22 +10,16 @@ SRC_URI="http://www.openwall.com/pam/modules/pam_passwdqc/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 
-DEPEND=">=sys-libs/pam-0.72"
-
-src_unpack() {
-	unpack ${P}.tar.gz
-	cd ${S}
-}
+DEPEND="virtual/pam"
 
 src_compile() {
-	emake || die "problem in compile"
+	emake || die "emake failed"
 }
 
 src_install() {
-	exeinto /lib/security
-	doexe pam_passwdqc.so
+	dopammod pam_passwdqc.so
 
 	doman pam_passwdqc.8
 	dodoc README
