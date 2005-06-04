@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclectic/eclectic-0.9.3.ebuild,v 1.3 2005/05/17 16:29:09 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclectic/eclectic-0.9.3.ebuild,v 1.4 2005/06/04 19:01:01 spb Exp $
 
 inherit bash-completion
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/eclectic/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE="doc"
 
 RESTRICT="primaryuri"
