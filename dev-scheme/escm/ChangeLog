@@ -1,0 +1,10 @@
+# ChangeLog for dev-scheme/escm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/ChangeLog,v 1.1 2005/06/04 10:37:39 hattya Exp $
+
+*escm-1.1 (04 Jun 2005)
+
+  04 Jun 2005; Akinori Hattori <hattya@gentoo.org> +metadata.xml,
+  +escm-1.1.ebuild:
+  Initial revision. fixes bug #30253.
+
