@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.6.99.ebuild,v 1.1 2005/05/09 23:06:54 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.6.99.ebuild,v 1.2 2005/06/04 20:43:27 swegener Exp $
 
 IUSE=""
 ETYPE="sources"
-inherit kernel-2
-inherit subversion
+inherit kernel-2 subversion
 detect_version
 
 # rsbac versions
