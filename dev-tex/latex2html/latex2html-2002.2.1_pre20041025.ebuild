@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025.ebuild,v 1.8 2005/04/21 19:04:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025.ebuild,v 1.9 2005/06/04 08:58:25 usata Exp $
 
 inherit eutils
 
@@ -29,8 +29,7 @@ DEPEND="virtual/ghostscript
 	virtual/tetex
 	media-libs/netpbm
 	dev-lang/perl
-	gif? ( media-libs/giflib
-		media-libs/libungif )
+	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )"
 
 #src_unpack() {
