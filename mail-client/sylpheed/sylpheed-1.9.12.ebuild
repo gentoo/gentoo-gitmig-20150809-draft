@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-1.9.9-r1.ebuild,v 1.1 2005/05/05 14:08:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-1.9.12.ebuild,v 1.1 2005/06/04 10:01:46 hattya Exp $
 
 inherit eutils
 
