@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6.ebuild,v 1.7 2005/06/02 23:53:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6.ebuild,v 1.8 2005/06/04 03:42:42 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.2"
@@ -34,7 +34,8 @@ inherit toolchain eutils
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
-KEYWORDS="-* ~alpha ~amd64 ~hppa ~x86"
+# ia64 - broken static handling; USE=static emerge busybox
+KEYWORDS="-* ~alpha ~amd64 ~hppa -ia64 ~x86"
 
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
