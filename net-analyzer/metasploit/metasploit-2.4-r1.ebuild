@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-2.4.ebuild,v 1.1 2005/05/12 01:19:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-2.4-r1.ebuild,v 1.1 2005/06/04 23:09:49 vanquirius Exp $
 
 MY_P="${P/metasploit/framework}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="The Metasploit Framework is an advanced open-source platform for developing, testing, and using vulnerability exploit code."
 HOMEPAGE="http://www.metasploit.org/"
-SRC_URI="http://metasploit.com/tools/${MY_P}.tar.gz"
+SRC_URI="http://metasploit.com/tools/${MY_P}-snapshot.tar.gz"
+# Note: the suffix snapshot might not exist in the next release
 
 LICENSE="GPL-2 Artistic"
 SLOT="0"

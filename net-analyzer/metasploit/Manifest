@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0bd259ecdcb31386b685f2a489c8db2a metasploit-2.3-r2.ebuild 1238
-MD5 bb685320565092916832ea0cecfa935d metasploit-2.4.ebuild 1235
-MD5 8a9c3728214a7f0891568ee638981e42 ChangeLog 1300
+MD5 b73c9266bf85035a2bd91c41f2f32d01 metasploit-2.4-r1.ebuild 1314
+MD5 a5a1ca298330dc2ebfe9d183bc91d65c ChangeLog 1588
 MD5 5c7feb9f12264fd99f3f435216e82f26 metadata.xml 926
-MD5 247faac29c95bc571a1ff89c6664d487 files/digest-metasploit-2.4 66
 MD5 38b31ffed97d630a113365424ecd9655 files/digest-metasploit-2.3-r2 66
+MD5 7c5925473a91fd206f147647c94c9b42 files/digest-metasploit-2.4-r1 75
 MD5 60ed26ce3c2cba88b12d53ffe7b7d4c8 files/msfweb.confd 273
 MD5 ee718583da001cce2972ed8f9c51c72e files/msfweb.initd 528
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCgq9AEZCkKN40op4RAtO3AJ4mlnquKJA+URf/xZSg947OjZUbiQCfQUOt
-Y2ayG0xojzn1KQCWW2PvO5c=
-=8DrF
------END PGP SIGNATURE-----

@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.7 2005/05/12 01:19:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.8 2005/06/04 23:09:49 vanquirius Exp $
+
+*metasploit-2.4-r1 (04 Jun 2005)
+
+  04 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> -metasploit-2.4.ebuild,
+  +metasploit-2.4-r1.ebuild:
+  Revision bump. CA certificate changed, preventing use of msfupdate -u. Fixes
+  bug 95048. Thanks to H D Moore <gentoospam@digitaloffense.net>.
 
 *metasploit-2.4 (11 May 2005)
 
