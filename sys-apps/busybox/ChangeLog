@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.69 2005/06/03 13:55:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.70 2005/06/04 03:39:34 vapier Exp $
+
+  04 Jun 2005; Mike Frysinger <vapier@gentoo.org> busybox-1.00-r4.ebuild:
+  Dont abort if user has a known broken glibc wrt to static compilation #94879.
 
   03 Jun 2005; <solar@gentoo.org> busybox-1.00-r4.ebuild:
   - remove redirection of stderr to null when static linking. This will make the

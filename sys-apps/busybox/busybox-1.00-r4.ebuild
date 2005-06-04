@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.8 2005/06/03 22:15:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.9 2005/06/04 03:39:34 vapier Exp $
 
 inherit eutils
 
@@ -136,11 +136,22 @@ src_compile() {
 	emake -j1 CROSS="${CROSS}" busybox || die "build failed"
 	if ! use static ; then
 		mv busybox{,.bak}
+		local failed=0
 		emake -j1 \
 			LDFLAGS="${LDFLAGS} -static" \
 			CROSS="${CROSS}" \
-			busybox || die "static build failed"
-		mv busybox bb
+			busybox || failed=1
+		if [[ ${failed} == 1 ]] ; then
+			if has_version '<sys-libs/glibc-2.3.5' ; then
+				eerror "Your glibc sucks, ignorning static build failure."
+				eerror "See http://bugs.gentoo.org/show_bug.cgi?id=94879"
+				cp busybox.bak bb
+			else
+				die "static build failed"
+			fi
+		else
+			mv busybox bb
+		fi
 		mv busybox{.bak,}
 	fi
 }
