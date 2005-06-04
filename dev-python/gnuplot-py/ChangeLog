@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/gnuplot-py
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.7 2005/06/02 00:40:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.8 2005/06/04 15:18:26 fserb Exp $
+
+*gnuplot-py-1.7-r1 (04 Jun 2005)
+
+  04 Jun 2005; Fernando Serboncini <fserb@gentoo.org>
+  +files/gnuplot-py-1.7-mousesupport.patch, gnuplot-py-1.7.ebuild,
+  +gnuplot-py-1.7-r1.ebuild:
+  Added mouse support patch. Closes #69250.
+  Marked 1.7 stable on x86.
 
   02 Jun 2005; Luca Barbato <lu_zero@gentoo.org> gnuplot-py-1.7.ebuild:
   Marked ppc
