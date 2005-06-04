@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 37ec93bf17adfcc5c21172cf0ca22436 nylon-1.2-r2.ebuild 598
-MD5 9ee7b253997ec052855e9d045d4a5e27 ChangeLog 1622
+MD5 065468d315ea4b6aa5bed90ba4ad7dbf ChangeLog 1622
 MD5 5500cbc8c13db0c26fb2aa44f54cbaef metadata.xml 347
 MD5 c8195e54353697d4474c894f75253d47 files/nylon.conf 784
 MD5 22a594eabd498de17bc5eedb3aa641b9 files/nylon.init 508
 MD5 259a9a863cc3aad90a374ea0bc18f864 files/digest-nylon-1.2-r2 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCobwTjiC39V7gKu0RAscgAJ9LxYvrmDLskncLoUN9WmIPad3lKwCfXocg
+HbcbWwj4yasHFYHLWQZeykI=
+=F4Sv
+-----END PGP SIGNATURE-----
