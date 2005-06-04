@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.19 2005/06/03 21:03:12 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.20 2005/06/04 15:31:23 cryos Exp $
+
+  04 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> ipython-0.6.13.ebuild:
+  Stable on amd64, bug 94750.
 
 *ipython-0.6.15 (03 Jun 2005)
 
