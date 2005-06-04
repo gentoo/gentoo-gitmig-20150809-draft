@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.22 2004/12/16 11:03:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.23 2005/06/04 02:47:11 halcy0n Exp $
 
-inherit gnome.org libtool gnuconfig
+inherit gnome.org libtool gnuconfig eutils
 
 DESCRIPTION="A set of language and system independent CORBA interfaces"
 HOMEPAGE="http://www.gnome.org/"
@@ -20,6 +20,13 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	nls? ( sys-devel/gettext
 	>=dev-util/intltool-0.11 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc4.patch
+}
 
 src_compile() {
 	#libtoolize to fix relink bug

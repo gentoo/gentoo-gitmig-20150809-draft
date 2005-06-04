@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/bonobo
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/ChangeLog,v 1.21 2004/12/16 11:03:46 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/ChangeLog,v 1.22 2005/06/04 02:47:11 halcy0n Exp $
+
+  04 Jun 2005; <halcyon@gentoo.org> +files/bonobo-1.0.22-gcc4.patch,
+  bonobo-1.0.22.ebuild:
+  Patch to fix compilation with GCC4
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> bonobo-1.0.22.ebuild:
   Stable on ppc64
