@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 698e4ae58dccaecaf3299d7479a52b55 wmii-1.ebuild 1897
-MD5 64827c5ec747ad9c5fa84b383cf52add ChangeLog 1200
+MD5 01e53f321d5d6ab0061bcbefffc4fe89 ChangeLog 1304
 MD5 f5ba35e50e57b9e6df75d700acc82da8 metadata.xml 700
-MD5 48b2aadadc04fa539467a05f3afa031e files/wmii.desktop 174
+MD5 282852aa6089fbab5705754e48a4150a wmii-1.ebuild 1906
 MD5 8a7a9c0fee724824de19a9dfbcf8d701 files/digest-wmii-1 58
+MD5 48b2aadadc04fa539467a05f3afa031e files/wmii.desktop 174
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCnk13V3J2n04EauwRAorsAKCYvYEERW+EorUeBsUIXxrwfm/xNQCgyWXh
-Uj9wd6TnsjIXmPU1mazLmo0=
-=uxS5
+iD8DBQFCogyjmOfEJZHYOKcRAnOEAJ9OBtwi+cLVAJDeGKML2FxqFMt4jgCg5hMH
+mJIOYhrVnN0lvk6voOQeHrw=
+=swrO
 -----END PGP SIGNATURE-----

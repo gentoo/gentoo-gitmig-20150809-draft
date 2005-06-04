@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-1.ebuild,v 1.1 2005/06/02 00:06:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-1.ebuild,v 1.2 2005/06/04 20:17:27 tester Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://wmi.modprobe.de/download/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~hppa"
+KEYWORDS="~amd64 ~hppa ~x86"
 #IUSE="python cairo"
 IUSE="python"
 
