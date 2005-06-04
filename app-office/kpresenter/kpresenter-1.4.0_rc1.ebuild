@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/kpresenter-1.4.0_rc1.ebuild,v 1.1 2005/06/03 15:17:55 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/kpresenter-1.4.0_rc1.ebuild,v 1.2 2005/06/04 07:21:54 greg_g Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=${PV}
@@ -25,7 +25,6 @@ KMCOPYLIB="
 	libkofficeui lib/kofficeui
 	libkopainter lib/kopainter
 	libkoscript lib/koscript
-	libkospell lib/kospell
 	libkotext lib/kotext
 	libkwmf lib/kwmf
 	libkowmf lib/kwmf
