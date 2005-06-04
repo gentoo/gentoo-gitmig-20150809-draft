@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2-r3.ebuild,v 1.2 2005/06/03 22:36:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2-r3.ebuild,v 1.3 2005/06/04 12:18:48 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -107,8 +107,6 @@ src_compile() {
 	myconf="${myconf} $(qt_use accessibility) $(qt_use cups) $(qt_use xinerama)"
 	myconf="${myconf} $(qt_use opengl) $(qt_use nis)"
 
-	[ $(get_libdir) != "lib" ] && myconf="${myconf} -L/usr/$(get_libdir)"
-
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif" || myconf="${myconf} -no-gif"
 	use png		&& myconf="${myconf} -system-libpng" || myconf="${myconf} -qt-libpng"
@@ -131,9 +129,6 @@ src_compile() {
 		-sysconfdir ${QTSYSCONFDIR} -translationdir ${QTTRANSDIR} ${myconf} || die
 
 	emake sub-tools-all-ordered || die
-#	if use examples; then
-#		emake sub-demos sub-examples sub-tutorial || die
-#	fi
 }
 
 src_install() {
@@ -171,6 +166,9 @@ src_install() {
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.prl
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
 	sed -i -e "s:${S}:${QTBASEDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
+
+	# Don't need to install stray linguist files
+	rm -rf ${D}/${DATADIR}/phrasebooks/linguist
 
 	# List all the multilib libdirs
 	local libdirs
