@@ -1,6 +1,6 @@
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 MD5 a411f94c7f0b287cc220ddae5f4bf11c kpresenter-1.3.5.ebuild 1191
-MD5 16c884e86b79e653668745500f8d52ea kpresenter-1.4.0_rc1.ebuild 1093
+MD5 d25da26ac4c1aa47837902d9801bdba7 kpresenter-1.4.0_rc1.ebuild 1069
 MD5 05ff452318e16359409d0dfaded08257 ChangeLog 704
 MD5 115a377f43af7c4116229b38631f80bc files/digest-kpresenter-1.4.0_rc1 69
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-kpresenter-1.3.5 211
