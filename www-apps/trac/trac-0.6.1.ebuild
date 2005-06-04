@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.6.1.ebuild,v 1.2 2004/09/03 17:17:21 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.6.1.ebuild,v 1.3 2005/06/04 20:55:26 swegener Exp $
 
-inherit webapp
+inherit webapp distutils
 
 DESCRIPTION="Trac is a minimalistic web-based project management, wiki and bug/issue tracking system."
 HOMEPAGE="http://trac.edgewall.com/"
@@ -11,8 +11,6 @@ SRC_URI="http://ftp.edgewall.com/pub/trac/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ppc"
 IUSE=""
-
-inherit distutils
 
 DEPEND="$DEPEND
 	>=dev-lang/python-2.1
