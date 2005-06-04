@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.64.ebuild,v 1.4 2005/03/08 18:34:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.64.ebuild,v 1.5 2005/06/04 19:54:52 ribosome Exp $
 
 inherit flag-o-matic
 

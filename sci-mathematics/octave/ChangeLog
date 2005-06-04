@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.5 2005/04/21 21:05:41 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.6 2005/06/04 19:54:52 ribosome Exp $
+
+  04 Jun 2005; Olivier Fisette <ribosome@gentoo.org>
+  -octave-2.1.36-r1.ebuild, -octave-2.1.50.ebuild, -octave-2.1.57.ebuild:
+  Removed obsolete versions. Fixed header.
 
 *octave-2.1.69 (21 Apr 2005)
 
