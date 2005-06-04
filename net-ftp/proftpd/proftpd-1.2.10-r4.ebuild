@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r4.ebuild,v 1.1 2005/06/04 13:28:02 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r4.ebuild,v 1.2 2005/06/04 23:42:23 humpback Exp $
 
 inherit flag-o-matic eutils
 
-IUSE="hardened ipv6 ldap mysql pam postgres shaper softquota ssl tcpd 
+IUSE="hardened ipv6 ldap mysql pam postgres shaper softquota ssl tcpd
 	selinux sendfile authunix authfile ncurses xinetd"
 
 MY_P=${P/_/}
