@@ -17,12 +17,13 @@ MD5 d9fb4f2a1d8f5d4653af732dd6504f7f files/0.8-postinst-en.txt 1242
 MD5 e48341b7627ee627a13e0ea41a0ef826 files/digest-trac-0.6.1 62
 MD5 94e075de9e02819d253096d0527de6d8 files/digest-trac-0.7.1 62
 MD5 ab4ca7142e33b94cdd025ce1c67f0e01 files/digest-trac-0.8.1 62
+MD5 ba2d3ff29f0357234fd123f84c210ec3 files/digest-trac-0.8.2 62
 MD5 d9fb4f2a1d8f5d4653af732dd6504f7f files/0.8.1-postinst-en.txt 1242
 MD5 76a6e6911b2d58e07f08566da7298f3f files/postinst-en.txt 631
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCohVaI1lqEGTUzyQRAvbyAKDWAu9KlxwpAWZzbw81V7qEdfZ2zQCcD0i2
-Y/SHpKL8WGilBtdKcRx6DvU=
-=pUy2
+iD8DBQFCoiHQI1lqEGTUzyQRAkPzAKCsT9emDA8w/UWul8CI5K8hilfR8ACg1ouG
+gpql5v7KgDX2fcTePiXlsis=
+=AzTp
 -----END PGP SIGNATURE-----
