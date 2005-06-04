@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.11.ebuild,v 1.1 2005/05/28 15:22:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.11-r1.ebuild,v 1.1 2005/06/04 11:09:29 luckyduck Exp $
 
 inherit virtualx
 
@@ -22,9 +22,10 @@ DEPEND=">=virtual/python-2.3
 
 src_compile() {
 	Xemake || die "make failed"
+	Xemake extensions || die "make extensions failed"
 }
 
 src_install() {
-	Xmake DESTDIR=${D} install || die "make install failed"
+	Xmake PREFIX=/usr DESTDIR=${D} install || die "make install failed"
 	dodoc TODO README NEWS
 }

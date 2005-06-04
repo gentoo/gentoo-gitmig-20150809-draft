@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.8 2005/05/28 15:22:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.9 2005/06/04 11:09:29 luckyduck Exp $
+
+*quodlibet-0.11-r1 (04 Jun 2005)
+
+  04 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> -quodlibet-0.11.ebuild,
+  +quodlibet-0.11-r1.ebuild:
+  Install files into correct prefix and generate extensions, fixes #92423.
 
 *quodlibet-0.11 (28 May 2005)
 
