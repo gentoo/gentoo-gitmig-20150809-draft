@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 15ca7106e2c7487bf99854c9ebff9e72 nsopenssl-3.0_beta26.ebuild 1003
 MD5 fa01479ea16d5a48831d367a841989ab ChangeLog 562
 MD5 c5739a4a31eee314fab2948c903c1e08 metadata.xml 420
 MD5 3efcc146d52544963f9ab0fbba0cf5b2 files/Makefile-3.0_beta26.diff 1993
 MD5 7fd89363fc3b9c57c5a9a24af7943006 files/digest-nsopenssl-3.0_beta26 74
 MD5 6211fa6f58000cf12db325e8ae155af6 files/nsd.tcl.diff 4762
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCog/1I1lqEGTUzyQRAqFXAJ0eIGfm2h2bdwNtBUGUh81VATrAmwCglNGP
+oQPUk0x0IMPm6mMksoQsl6I=
+=Z8+q
+-----END PGP SIGNATURE-----
