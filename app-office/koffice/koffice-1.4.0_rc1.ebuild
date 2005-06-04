@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.0_rc1.ebuild,v 1.1 2005/06/03 15:19:58 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.0_rc1.ebuild,v 1.2 2005/06/04 07:09:21 greg_g Exp $
 
 inherit kde eutils
 
@@ -51,12 +51,16 @@ src_compile() {
 	local myconf="$(use_enable mysql) $(use_enable postgres pgsql)"
 
 	kde_src_compile
-	use doc && make apidox || die
+	if use doc; then
+		make apidox || die
+	fi
 }
 
 src_install() {
 	kde_src_install
-	use doc && make install-apidox || die
+	if use doc; then
+		make DESTDIR="${D}" install-apidox || die
+	fi
 
 	dodoc changes-*
 }
