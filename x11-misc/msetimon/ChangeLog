@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/msetimon
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/msetimon/ChangeLog,v 1.7 2004/06/24 22:29:29 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/msetimon/ChangeLog,v 1.8 2005/06/04 12:38:37 pyrania Exp $
+
+*msetimon-2.78 (04 Jun 2005)
+
+  04 Jun 2005; Markus Nigbur <pyrania@gentoo.org> +msetimon-2.78.ebuild:
+  Version bump. Does also fix bug #63039.
 
   19 Jun 2004; <pyrania@gentoo.org> msetimon-2.07.ebuild:
   Added IUSE.
