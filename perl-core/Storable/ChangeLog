@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Storable
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Storable/ChangeLog,v 1.3 2005/05/26 20:16:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Storable/ChangeLog,v 1.4 2005/06/04 03:40:32 mcummings Exp $
+
+  04 Jun 2005; Michael Cummings <mcummings@gentoo.org> Storable-2.13.ebuild:
+  Tested on raq2, bumping for mips
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   Storable-2.07-r1.ebuild:

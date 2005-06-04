@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test/ChangeLog,v 1.4 2005/05/26 20:17:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test/ChangeLog,v 1.5 2005/06/04 03:39:07 mcummings Exp $
+
+  04 Jun 2005; Michael Cummings <mcummings@gentoo.org> Test-1.25.ebuild:
+  Tested on raq2, bumping for mips
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> Test-1.25.ebuild:
   dev-perl/Test-Harness => perl-core/Test-Harness migration
