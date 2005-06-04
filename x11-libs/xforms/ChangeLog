@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.26 2005/05/29 12:42:31 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.27 2005/06/04 17:00:40 dertobi123 Exp $
+
+  04 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  xforms-1.0-r1.ebuild:
+  Stable on ppc.
 
   29 May 2005; Marcus D. Hanwell <marcus@gentoo.org> xforms-1.0-r1.ebuild:
   Stable on amd64.
