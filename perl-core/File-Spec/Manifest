@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d9829b9f5dff560f623d4decc56344c3 ChangeLog 3375
-MD5 5081ac797edca2c2428292468783d8ac File-Spec-0.84-r1.ebuild 646
-MD5 a833b5431687f44167bd37d59a32d1c0 File-Spec-0.87.ebuild 628
+MD5 6f6d288b34a97bbee06578841e0c1c28 ChangeLog 3491
 MD5 24aa63fc8db1ae9616cba4285022c7eb metadata.xml 596
+MD5 5081ac797edca2c2428292468783d8ac File-Spec-0.84-r1.ebuild 646
+MD5 88e24bd3fca83c683dcfc132ecff7977 File-Spec-0.87.ebuild 627
 MD5 84bbeaa4289f4f671c01f41598a21427 File-Spec-3.01.ebuild 680
 MD5 9ada0be0e378dc47a7549c71e5188cef File-Spec-3.06.ebuild 680
 MD5 144ba852cf94f6d50b9e39e953c5936a files/digest-File-Spec-0.84-r1 65
 MD5 e8c2b2625d8031840c76c7fd1fdafcad files/digest-File-Spec-0.87 65
 MD5 5ef01c0e76ba047775421be5b11033c6 files/digest-File-Spec-3.01 65
 MD5 690e170d12aed701e762e1eda88e2535 files/digest-File-Spec-3.06 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCnsPftG5z4I8BtQoRAoSLAJ9pIOzAyMHT7oQt+crEmZnEX03wJwCdFqBS
-Zw+4JElz3PrDQv59Dl9FaaI=
-=idon
------END PGP SIGNATURE-----
