@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.28 2005/06/05 08:48:29 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.29 2005/06/05 12:03:46 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  terminus-font-4.12.ebuild:
+  Stable on ppc.
 
   05 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org>
   terminus-font-4.12.ebuild:
