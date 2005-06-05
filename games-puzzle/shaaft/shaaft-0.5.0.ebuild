@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.4 2004/07/01 05:24:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.5 2005/06/05 16:27:11 luckyduck Exp $
 
-inherit games
+inherit eutils games
 
 S="${WORKDIR}/${P/s/S}"
 DESCRIPTION="A falling block game similar to Blockout"
@@ -32,6 +32,8 @@ src_unpack() {
 	sed -i \
 		-e 's:DATA_DIR:"'${GAMES_DATADIR}'\/'${PN/s/S}\/'":g' game/main.cpp \
 			|| die "sed main.cpp failed"
+
+	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 src_install() {

@@ -1,4 +1,15 @@
-MD5 5c8f38a34837fc8cf048f6e9080e4ef5 shaaft-0.5.0.ebuild 973
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 88c54165d367e6b2e533ce539314818f shaaft-0.5.0.ebuild 1018
+MD5 56a0856338e98456e5d91b9a0d33f3c1 ChangeLog 585
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 84804eb6c5c4deb81810cd731e5823e2 ChangeLog 403
+MD5 ee787c086ea75ca819d582f8be04f0bf files/shaaft-0.5.0-gcc34.patch 544
 MD5 3b94f9a4427c26cf66ebcff72c849efc files/digest-shaaft-0.5.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCoyf406ebR+OMO78RAn06AJ40kDUooE1vQ2pWtjUeh6WcLaHn9wCfYCbu
+2ysEQSI64leLvQjzWJa0fBA=
+=6XSV
+-----END PGP SIGNATURE-----
