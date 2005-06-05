@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f3df6a36f36900344678552707c72f35 imapfilter-1.0.1.ebuild 799
-MD5 bf85ab7ae6324e630c3333c54ace42f1 imapfilter-1.0.ebuild 768
-MD5 9ebe3248b3b495c829cade82e28c0ccf ChangeLog 1825
 MD5 3d78381f877d4cd46f4d605ddf2fbc7c metadata.xml 224
+MD5 a05c85bf7b0e57c6c4bec1ab0b6db9c0 ChangeLog 1921
+MD5 1e65715ff28011f4530bb35e88bda4e5 imapfilter-1.0.ebuild 768
 MD5 9828bc0a6addcce9ac4657f8884e189f files/digest-imapfilter-1.0 66
 MD5 04e3fa07062998e90e706ecdcf958ad0 files/digest-imapfilter-1.0.1 68
 MD5 35e578391a3859a4ea8d568ab5227125 files/imapfilter-1.0.patch 405
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCn5b4QlM6RnzZP+IRAk1DAJ4uUlFP1dfQ0cjY214xO7v5e9t2AQCgnx/l
-MHLUTzucTarUYHB/w+gkg3I=
-=vQLV
------END PGP SIGNATURE-----

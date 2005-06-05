@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c511cf4af1c160e3405be84594045c34 ChangeLog 574
+MD5 77564f6564722898a2883f14d45ffdb4 mapson-3.0.ebuild 946
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 27e75f2de0379ad7ef3d45dd7cdea3ff mapson-3.0.ebuild 946
+MD5 774a05196d7939591fdbfdbbf30e8e4b ChangeLog 666
 MD5 cac715815f8f0186f774802fe05b0d7a files/digest-mapson-3.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBhqju10xuJSrg3/sRAsxpAJ473rJRifYCb2vuerQOUngTw03JjgCeOBQV
-X5pGgVJmIAv2tXghuSjJI7s=
-=WTYq
------END PGP SIGNATURE-----
