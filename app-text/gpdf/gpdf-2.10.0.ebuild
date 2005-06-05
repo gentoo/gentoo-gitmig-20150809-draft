@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-2.10.0.ebuild,v 1.3 2005/05/20 16:03:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-2.10.0.ebuild,v 1.4 2005/06/05 19:09:35 foser Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~ppc64"
+KEYWORDS="x86 ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~ppc64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.5.4
