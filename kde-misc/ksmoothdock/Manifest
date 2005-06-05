@@ -1,5 +1,5 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 8d53d7142b10a250b5d65e59e5aa693d ksmoothdock-3.5.1.ebuild 606
-MD5 57aef6c0ec30be2efad953bdc8db63b5 ChangeLog 2018
+MD5 96e195c9bf652820da8fda61b11ab9c9 ChangeLog 2119
+MD5 e95e0dd7dd8494cc093ddf0c0be3f85a ksmoothdock-3.5.1.ebuild 606
 MD5 41352f1db4f71f715446f4ed052bf758 files/digest-ksmoothdock-3.5.1 69
 MD5 c43e0faa7bfc58b5cf69228ee3d0695a files/ksmoothdock-3.5.1-configure-arts.patch 3567
