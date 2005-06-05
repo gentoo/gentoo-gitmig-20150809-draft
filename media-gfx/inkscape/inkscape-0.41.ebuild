@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.41.ebuild,v 1.4 2005/05/21 08:58:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.41.ebuild,v 1.5 2005/06/05 12:02:12 corsair Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
 IUSE="gnome mmx perl python bonobo inkjar doc plugin"
 
 RDEPEND=">=x11-libs/gtk+-2.4.1
