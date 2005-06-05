@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.104.ebuild,v 1.4 2005/06/05 21:03:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.104.ebuild,v 1.5 2005/06/05 21:32:16 suka Exp $
 
 inherit eutils fdo-mime rpm versionator
 
@@ -86,19 +86,19 @@ src_unpack() {
 
 	strip-linguas en af bg cs cy da de en_GB es et fi fr hu it ja km ko nb nl nn ns pt_BR sk sl sv tn xh zh_CN zh_TW zu
 
-	export LINGUAS_OOO="${LINGUAS/en }"
-
-	for i in ${LINGUAS_OOO}; do
+	for i in ${LINGUAS}; do
 		i="${i/_/-}"
-		if [ -e ${DISTDIR}/${LANGPACK}_${i}.sh ] ; then
-			tail -n +159 ${DISTDIR}/${LANGPACK}_${i}.sh > ${S}/${LANGPACK}_${i}.tar.gz || die
-			tar -xvf ${S}/${LANGPACK}_${i}.tar.gz || die
-		else
-			unpack openofficeorg-${i}-${LANGSUFFIX}
+		if [ ${i} != "en" ] ; then
+			if [ -e ${DISTDIR}/${LANGPACK}_${i}.sh ] ; then
+				tail -n +159 ${DISTDIR}/${LANGPACK}_${i}.sh > ${S}/${LANGPACK}_${i}.tar.gz || die
+				tar -xvf ${S}/${LANGPACK}_${i}.tar.gz || die
+			else
+				unpack openofficeorg-${i}-${LANGSUFFIX}
+			fi
+			rpm_unpack openofficeorg-${i}-1.9.${SNV}-1.i586.rpm
+			rpm_unpack openofficeorg-${i}-help-1.9.${SNV}-1.i586.rpm
+			rpm_unpack openofficeorg-${i}-res-1.9.${SNV}-1.i586.rpm
 		fi
-		rpm_unpack openofficeorg-${i}-1.9.${SNV}-1.i586.rpm
-		rpm_unpack openofficeorg-${i}-help-1.9.${SNV}-1.i586.rpm
-		rpm_unpack openofficeorg-${i}-res-1.9.${SNV}-1.i586.rpm
 	done
 }
 

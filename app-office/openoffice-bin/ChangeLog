@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.80 2005/05/21 07:24:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.81 2005/06/05 21:32:16 suka Exp $
+
+  05 Jun 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-bin-1.9.104.ebuild:
+  Make the LINGUAS-stuff a little bit smarter to not break en_GB, closes bug
+  #93826
 
   21 May 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-bin-1.9.104.ebuild:
