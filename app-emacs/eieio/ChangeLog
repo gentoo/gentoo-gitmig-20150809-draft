@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/eieio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/eieio/ChangeLog,v 1.6 2005/01/01 13:43:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/eieio/ChangeLog,v 1.7 2005/06/05 11:34:33 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> eieio-0.17.ebuild:
+  Stable on ppc.
 
   23 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> eieio-0.17.ebuild:
   Blocks app-emacs/cedet.

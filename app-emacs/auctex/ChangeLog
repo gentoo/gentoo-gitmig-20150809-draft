@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.31 2005/05/26 02:57:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.32 2005/06/05 11:33:03 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> auctex-11.55.ebuild:
+  Stable on ppc.
 
   26 May 2005; Jason Wever <weeve@gentoo.org> auctex-11.55.ebuild:
   Stable on SPARC.
