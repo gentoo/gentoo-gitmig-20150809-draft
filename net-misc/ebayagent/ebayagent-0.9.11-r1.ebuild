@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r1.ebuild,v 1.2 2005/06/05 23:01:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r1.ebuild,v 1.3 2005/06/05 23:03:16 mcummings Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ebayagent/eBayAgent-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="tcltk"
 KEYWORDS="x86"
 
 DEPEND="dev-lang/perl
