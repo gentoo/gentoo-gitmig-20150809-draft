@@ -1,4 +1,14 @@
-MD5 59b0ed184e4eed5e92978b7dce35d44d ChangeLog 3901
-MD5 cbd2f05705c0e8fac5e8f680304ca28e commons-collections-3.1.ebuild 1159
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f3d611ed675a5fdb378f147b5deb0959 commons-collections-3.1.ebuild 1209
+MD5 513255c8822b0e5213120982264d3100 ChangeLog 4053
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d6999c3ed2ac2f04284b7b49641afcc9 files/digest-commons-collections-3.1 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCovuf06ebR+OMO78RApZdAJ9WWA4VfupeFDBX3FFaI5Uc9BjUMgCeJtD+
+B4xOXfyTaO9zBnGnBB9F85o=
+=9WYi
+-----END PGP SIGNATURE-----
