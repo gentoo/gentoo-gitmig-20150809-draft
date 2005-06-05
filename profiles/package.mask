@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4047 2005/06/04 16:47:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4048 2005/06/05 19:38:15 foser Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -480,44 +480,8 @@ media-video/qce-ga
 
 # Joe McCann <joem@gentoo.org> (30 April 2005)
 #Gnome-2.10.1 mask
->=www-client/epiphany-extensions-1.6.3
->=www-client/epiphany-1.6.3
 =gnome-base/gnome-2.10.1_pre0
 >=gnome-base/gnome-light-2.10.1
->=gnome-base/gnome-volume-manager-1.2.1
->=gnome-base/gnome-vfs-2.10.1
->=gnome-base/control-center-2.10.1
->=gnome-base/eel-2.10.1
->=gnome-base/nautilus-2.10.1
->=gnome-extra/gnome-media-2.10.2
->=media-gfx/eog-2.10.0
->=app-arch/file-roller-2.10.3
->=gnome-extra/gcalctool-5.5.42
->=app-editors/gedit-2.10.2
->=gnome-base/gnome-desktop-2.10.1
->=gnome-base/gnome-applets-2.10.1
->=gnome-base/gnome-panel-2.10.1
->=gnome-base/gnome-menus-2.10.1
->=x11-themes/gtk-engines-2.6.3
->=x11-themes/gnome-themes-2.10.1
->=gnome-base/libgnomeprint-2.10.3
->=gnome-base/libgnomeprintui-2.10.2
->=gnome-extra/gnome-utils-2.10.1
->=gnome-extra/gnome-games-2.10.1
->=gnome-base/libgtop-2.10.1
->=gnome-extra/gnome-system-monitor-2.10.1
->=x11-wm/metacity-2.10.1
->=x11-libs/vte-0.11.13
->=gnome-extra/nautilus-cd-burner-2.10.1
->=x11-themes/gnome-backgrounds-2.10.1
->=gnome-base/gnome-menus-2.10.1
-#evolution mask
->=gnome-extra/evolution-data-server-2.2.2
->=mail-client/evolution-2.2.2
->=gnome-extra/evolution-webcal-2.2.2
->=gnome-extra/gal-2.4.2
-#accessibility pkgs
-#End of gnome-2.10 mask
 
 # Sebastian Bergmann <sebastian@gentoo.org> (05 Mar 2005)
 # Segfaults on module shutdown.
@@ -924,11 +888,6 @@ dev-lisp/cl-rsm-genetic-alg
 # <squinky86@gentoo.org> (01 May 2004)
 # accessibility testing for development purposes
 app-accessibility/speechd-up
-
-# <obz@gentoo.org> (11 Dec 2004)
-# gnome meta update tracker for 2.8.2 and 2.8.3
-=gnome-base/gnome-2.8.2_pre*
-=gnome-base/gnome-2.8.3_pre*
 
 # <klasikahl@gentoo.org> (09 Apr 2004)
 # Still in the testing phase.
