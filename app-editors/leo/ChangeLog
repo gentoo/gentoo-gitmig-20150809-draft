@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/leo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.4 2005/05/07 17:48:16 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.5 2005/06/05 11:31:42 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> leo-4.2.ebuild:
+  Stable on ppc.
 
   07 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> leo-4.2.ebuild:
   mark ~ppc

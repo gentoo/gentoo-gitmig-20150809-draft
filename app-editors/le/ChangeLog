@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/le
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.5 2005/05/07 07:25:30 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.6 2005/06/05 11:31:15 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> le-1.9.2.ebuild:
+  Stable on ppc.
 
   07 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> le-1.9.2.ebuild:
   mark ~ppc
