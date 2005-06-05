@@ -1,12 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.1.1.ebuild,v 1.2 2005/03/15 08:08:50 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.9.11.ebuild,v 1.1 2005/06/05 19:17:35 genone Exp $
 
 IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir xface kde" # mbox
 
 inherit eutils
-
-CVS_VERSION=1.0.1cvs1.3
 
 # setting up plugin related variables
 GS_VERSION="ghostscript-viewer-0.8"
@@ -15,14 +13,11 @@ MAILDIR_VERSION="maildir-0.7"
 
 DESCRIPTION="Bleeding edge version of Sylpheed"
 HOMEPAGE="http://sylpheed-claws.sf.net"
-SRC_URI="http://colin.pclinux.fr/${PN}-gtk2-${CVS_VERSION}.tar.bz2"
-#SRC_URI="mirror://gentoo/${P}.tar.bz2 http://dev.gentoo.org/~genone/distfiles/${P}.tar.bz2"
-
-S=${WORKDIR}/${PN}-${CVS_VERSION}
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 
 COMMONDEPEND=">=x11-libs/gtk+-2.4
 	pda? ( >=app-pda/jpilot-0.99 )
@@ -52,19 +47,6 @@ RDEPEND="${COMMONDEPEND}
 #		 mbox? ( =mail-client/${PN}-${MBOX_VERSION} )"
 
 PROVIDE="virtual/sylpheed"
-
-pkg_setup() {
-	einfo "Using the GTK2 branch"
-	echo
-	ewarn "This branch is still a testing version. Some USE flags might not"
-	ewarn "work when used together with gtk2 and could generate compile errors."
-	ewarn "It will most likely have bugs, so please note that it is"
-	ewarn "      COMPLETELY UNSUPPORTED BY GENTOO"
-	echo
-	ewarn "External plugins need specially adjusted versions, see the "
-	ewarn "relevant package.mask entry for the available gtk2 versions."
-	echo
-}
 
 src_unpack() {
 	unpack ${A}
@@ -143,10 +125,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "The GTK2 branch is still a testing version. Some USE flags might not"
-	ewarn "work when used together with gtk2 and could generate compile errors."
-	ewarn "It will most likely have bugs, so please note that it is"
-	ewarn "      COMPLETELY UNSUPPORTED BY GENTOO"
+	echo
+	ewarn "External plugins need specially adjusted versions, see the "
+	ewarn "relevant package.mask entry for the available gtk2 versions."
+	ewarn "Some plugins may not have a gtk2 version available."
 	echo
 	einfo "For safety reasons this version will use the alternate configuration"
 	einfo "directory ~/.sylpheed-claws instead of ~/.sylpheed, so you have to"
