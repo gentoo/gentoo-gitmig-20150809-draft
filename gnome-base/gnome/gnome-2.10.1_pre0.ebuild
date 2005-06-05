@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10.1_pre0.ebuild,v 1.2 2005/05/06 12:09:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10.1_pre0.ebuild,v 1.3 2005/06/05 22:05:19 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -121,13 +121,13 @@ RDEPEND="!gnome-base/gnome-core
 
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.1
-		>=gnome-base/gail-1.8.2
+		>=gnome-base/gail-1.8.3
 		>=gnome-extra/at-spi-1.6.3
 		>=app-accessibility/dasher-3.2.15
 		>=app-accessibility/gnome-mag-0.12
 		>=app-accessibility/gnome-speech-0.3.6
-		>=app-accessibility/gok-1.0.2
-		>=app-accessibility/gnopernicus-0.10.4 )"
+		>=app-accessibility/gok-1.0.3
+		>=app-accessibility/gnopernicus-0.10.6 )"
 
 # unrelated
 # scrollkeeper
