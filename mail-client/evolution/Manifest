@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5018266764ddcdcc623f83c606e9100c evolution-2.2.1.1.ebuild 4356
+MD5 499c27bb809481e0f58c0f29a37768d0 evolution-2.2.1.1.ebuild 4353
 MD5 536ab7e8f8a48d425ca9ce4c31d61c29 evolution-1.2.4.ebuild 6258
 MD5 aa8d23c5d4fcb00ca4a53b0a4ef17505 evolution-2.0.3.ebuild 3970
 MD5 f07a9a4d695a564a899a6d81669230f3 evolution-2.0.3-r1.ebuild 4018
@@ -39,10 +36,3 @@ MD5 66cb81c792d948e4f84a47bb0247a403 files/digest-evolution-2.2.0 70
 MD5 dc2deff6647a30a151572ec5d6e11c77 files/evolution-2.0.1-camel.patch 457
 MD5 4df81c3442025403034c53975ba663b1 files/evolution-gcc34.patch 3044
 MD5 8909b7f2d3483d55036f21ca2780e4a3 files/evolution-1.1.90-sharedldap.patch 370
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCi6NYViELBEf1JB0RAm45AJ4hVYfdjjreiK3hPCHDH1pJAcgMZACfTZfw
-d4GsscQN6IFg+kQaFySZJkc=
-=93ly
------END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/sylpheed-claws-pgpinline-0.5-r1.ebuild,v 1.2 2005/05/18 12:18:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/sylpheed-claws-pgpinline-0.5-r1.ebuild,v 1.3 2005/06/05 19:16:23 genone Exp $
 
 MY_P="${P##sylpheed-claws-}"
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha ~ppc64"
 IUSE=""
-DEPEND="=mail-client/sylpheed-claws-1.0.1.1
+DEPEND=">=mail-client/sylpheed-claws-1.9
 		=app-crypt/gpgme-0.3.14-r1"
 
 S="${WORKDIR}/${MY_P}"
