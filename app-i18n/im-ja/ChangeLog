@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.45 2005/05/23 16:00:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.46 2005/06/05 11:44:17 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> im-ja-1.4.ebuild:
+  Stable on ppc.
 
   23 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> im-ja-1.4.ebuild:
   Stable on sparc
