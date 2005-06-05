@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-2.10.1.ebuild,v 1.1 2005/04/12 17:08:45 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-2.10.1.ebuild,v 1.2 2005/06/05 14:24:19 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A library that provides top functionality to applications"
 HOMEPAGE="http://www.gnome.org/"
@@ -21,3 +21,15 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 USE_DESTDIR="1"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}/sysdeps/linux
+	# fix arches compile (#92973)
+	epatch ${FILESDIR}/${PN}-2.10.0-siglist.patch
+
+}
+
+
