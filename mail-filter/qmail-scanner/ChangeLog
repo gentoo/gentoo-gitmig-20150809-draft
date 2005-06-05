@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/qmail-scanner
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.26 2005/05/30 18:44:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.27 2005/06/05 16:58:35 anarchy Exp $
+
+  05 Jun 2005; Jory A. Pratt <anarchy@gentoo.org>
+  qmail-scanner-1.25-r1.ebuild:
+  added addpredict /opt/bdc/plugins.htm
 
   30 May 2005; Sven Wegener <swegener@gentoo.org>
   qmail-scanner-1.23-r2.ebuild, qmail-scanner-1.23-r3.ebuild,
