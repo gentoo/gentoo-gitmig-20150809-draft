@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mapson/mapson-3.0.ebuild,v 1.4 2004/11/01 21:21:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mapson/mapson-3.0.ebuild,v 1.5 2005/06/05 11:59:08 hansmi Exp $
 
 DESCRIPTION="A challenge/response-based white-list spam filter"
 HOMEPAGE="http://mapson.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mapson/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 
 IUSE="debug"
 DEPEND="virtual/libc

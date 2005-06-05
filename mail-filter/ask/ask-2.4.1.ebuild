@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/ask/ask-2.4.1.ebuild,v 1.4 2004/09/25 17:42:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/ask/ask-2.4.1.ebuild,v 1.5 2005/06/05 11:53:47 hansmi Exp $
 
 DESCRIPTION="Active Spam Killer: A program to filter spam"
 HOMEPAGE="http://www.paganini.net/ask/index.html"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/a-s-k/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 
 IUSE="procmail"
 RDEPEND=">=dev-lang/python-2.2

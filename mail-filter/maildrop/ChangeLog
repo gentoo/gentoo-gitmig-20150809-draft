@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.31 2005/05/30 03:05:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.32 2005/06/05 11:57:47 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  maildrop-1.8.0-r3.ebuild:
+  Stable on ppc.
 
   29 May 2005; <solar@gentoo.org> maildrop-1.8.0-r3.ebuild:
   - update maildrop to use libc expanded variable elibc_uclibc vs uclibc so

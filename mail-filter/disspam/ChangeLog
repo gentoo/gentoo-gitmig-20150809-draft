@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/disspam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/ChangeLog,v 1.8 2005/02/08 13:36:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/ChangeLog,v 1.9 2005/06/05 11:54:33 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> disspam-0.14.ebuild:
+  Stable on ppc.
 
   08 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> disspam-0.14.ebuild:
   Stable on sparc

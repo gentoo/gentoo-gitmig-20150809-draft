@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/ask
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/ask/ChangeLog,v 1.4 2004/09/25 17:42:23 ticho Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/ask/ChangeLog,v 1.5 2005/06/05 11:53:47 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> ask-2.4.1.ebuild:
+  Stable on ppc.
 
   25 Sep 2004; Andrej Kacian <ticho@gentoo.org> ask-2.4.1.ebuild:
   Stable on x86.

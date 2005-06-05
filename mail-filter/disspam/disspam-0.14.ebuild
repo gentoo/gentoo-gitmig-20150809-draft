@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/disspam-0.14.ebuild,v 1.3 2005/02/08 13:36:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/disspam/disspam-0.14.ebuild,v 1.4 2005/06/05 11:54:33 hansmi Exp $
 
 DESCRIPTION="A Perl script that removes spam from POP3 mailboxes based on RBLs."
 HOMEPAGE="http://www.topfx.com/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.topfx.com/dist/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~ppc sparc ~hppa ~alpha ~mips"
+KEYWORDS="~alpha ~hppa ~mips ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.1
