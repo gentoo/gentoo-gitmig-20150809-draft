@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/gst-plugins-pitfdll-0.8.1-r1.ebuild,v 1.1 2005/04/28 23:50:23 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/gst-plugins-pitfdll-0.8.1-r1.ebuild,v 1.2 2005/06/05 18:55:47 foser Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ PVP=(${PV//[-\._]/ })
 SLOT=${PVP[0]}.${PVP[1]}
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
