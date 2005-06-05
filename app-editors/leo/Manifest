@@ -1,5 +1,5 @@
-MD5 c9fe60ade51ab79146d089165227e689 ChangeLog 590
-MD5 7c0021afdf29c3a72255a852018d16bd leo-4.2.ebuild 1047
+MD5 c42580c5d8b3725562e4038a2429d9b0 leo-4.2.ebuild 1047
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+MD5 c0bcb92ab84901c1dfaf1240242ee001 ChangeLog 679
 MD5 786b8586255990e3d34ad8d5bee99fe3 files/digest-leo-4.2 63
 MD5 dcdd115f9803c5e4040bf247775f760e files/leoConfig.py.patch 904
