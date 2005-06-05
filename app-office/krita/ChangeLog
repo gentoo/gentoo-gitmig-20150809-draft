@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.1 2005/06/03 15:21:18 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.2 2005/06/05 19:41:53 cryos Exp $
+
+  05 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> krita-1.4.0_rc1.ebuild:
+  Marked ~amd64, bug 95128.
 
 *krita-1.4.0_rc1 (03 Jun 2005)
 

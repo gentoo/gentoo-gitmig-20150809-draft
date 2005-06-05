@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.4.0_rc1.ebuild,v 1.2 2005/06/04 07:22:26 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.4.0_rc1.ebuild,v 1.3 2005/06/05 19:41:53 cryos Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="javascript"
 
 RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
