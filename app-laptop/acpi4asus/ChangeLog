@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/acpi4asus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.6 2005/05/07 18:43:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.7 2005/06/05 10:32:48 genstef Exp $
+
+  05 Jun 2005; Stefan Schweizer <genstef@gentoo.org> acpi4asus-0.29.ebuild:
+  Fix typo thanks to MAL <mal@komcept.com> in bug 95105
 
 *acpi4asus-0.29 (07 May 2005)
 

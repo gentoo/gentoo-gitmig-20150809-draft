@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/acpi4asus-0.29.ebuild,v 1.1 2005/05/07 18:43:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/acpi4asus-0.29.ebuild,v 1.2 2005/06/05 10:32:48 genstef Exp $
 
 inherit linux-mod
 
@@ -48,6 +48,6 @@ pkg_postinst() {
 	linux-mod_pkg_postinst
 	einfo
 	einfo "Don't forget to create your ~/.asus_acpi,"
-	einfo "see /ush/share/doc/${PF}/README.gz for details"
+	einfo "see /usr/share/doc/${PF}/README.gz for details"
 	einfo
 }
