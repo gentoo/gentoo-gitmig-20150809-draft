@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b44460640541ae3eb2234edc728b76a sfftobmp-3.0.ebuild 815
-MD5 e8256f1ce67df447de77fe3b406530cc ChangeLog 668
 MD5 7a501e3b6f3edc070e7d0098e586d0b1 metadata.xml 217
+MD5 8ca6b902d837ac50fc749b7830c03e12 ChangeLog 762
+MD5 cfb3672b11f7d9b9d8e9865894113b5e sfftobmp-3.0.ebuild 815
 MD5 d19f2c6f8a72637aa493632722596753 files/digest-sfftobmp-3.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZqeJ2G5bA0cA/ScRAsuOAKDGWVd1zigiX4WxB/nuNJ7w+NgnMQCdF/w6
-Dnf9Mx04LBgeiBNjqdAHEp8=
-=P5T/
------END PGP SIGNATURE-----

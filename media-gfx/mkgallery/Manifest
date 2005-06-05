@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e35b0a7d823fd5a88e7457e35dda2dc2 mkgallery-1.1.ebuild 577
-MD5 a5c8449d380c664e8dba8c5fb3c7bf2a ChangeLog 656
+MD5 531d13172bde7b31e7a23878be070d5a mkgallery-1.1.ebuild 576
+MD5 545f3550ab68148b1fb581bc143dd5fc ChangeLog 750
 MD5 a9c6def331b5cc3157fa080c5739e338 files/digest-mkgallery-1.1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBMy1SCHk4+ZoBpvsRAp/mAJoDm1P6CGkfzcThKGCtyC3XsR/6wQCgkcrS
-wEvvlYiviLpUban3lYbW9B4=
-=fDtt
------END PGP SIGNATURE-----

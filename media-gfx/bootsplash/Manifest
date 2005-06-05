@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e82fa0ea2fa87ab46e6c42f200791134 bootsplash-0.6-r16.ebuild 6690
-MD5 d3a1426eae6bd6e484a1cb6305ad72a0 bootsplash-0.6.1-r7.ebuild 3235
-MD5 a93cb3db61c532b39e8c461c713a25f8 bootsplash-0.6.1-r4.ebuild 2973
-MD5 6febc407ff21e854d6e99e73d85f92bd ChangeLog 11944
-MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 01b612a01dc3cb3bbf01a16c6ead3930 bootsplash-0.6.1-r6.ebuild 3076
-MD5 3f2697605cd4c22d7ec6a8a56e562da4 files/digest-bootsplash-0.6.1-r4 232
-MD5 00168dc069b71a54b9a8fcb10e0c4752 files/digest-bootsplash-0.6.1-r6 232
-MD5 00168dc069b71a54b9a8fcb10e0c4752 files/digest-bootsplash-0.6.1-r7 232
-MD5 e07733044709e48e34df036d69dc9f3a files/digest-bootsplash-0.6-r16 71
+MD5 a93cb3db61c532b39e8c461c713a25f8 bootsplash-0.6.1-r4.ebuild 2973
+MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+MD5 01dfc98e2b6dcd453785a77e52adfaf5 ChangeLog 12047
+MD5 e82fa0ea2fa87ab46e6c42f200791134 bootsplash-0.6-r16.ebuild 6690
+MD5 e69c477baeb2fde1ce0b76bd640efda9 bootsplash-0.6.1-r7.ebuild 3235
 MD5 62e182a70b6535d721dffdf34051c48e files/0.6.1-r7-default_theme.patch 406
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdiRDchej4aZK9/cRAlXFAJ4xNR7kGD0qnsgnmgRC0TwUyWX6/QCfXOns
-jA4Yho3GPX+qIg/e2TWEdr8=
-=sEWt
------END PGP SIGNATURE-----
+MD5 3f2697605cd4c22d7ec6a8a56e562da4 files/digest-bootsplash-0.6.1-r4 232
+MD5 e07733044709e48e34df036d69dc9f3a files/digest-bootsplash-0.6-r16 71
+MD5 00168dc069b71a54b9a8fcb10e0c4752 files/digest-bootsplash-0.6.1-r7 232
+MD5 00168dc069b71a54b9a8fcb10e0c4752 files/digest-bootsplash-0.6.1-r6 232
