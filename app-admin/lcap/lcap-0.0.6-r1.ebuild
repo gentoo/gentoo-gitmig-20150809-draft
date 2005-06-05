@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6-r1.ebuild,v 1.9 2005/04/23 22:14:49 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6-r1.ebuild,v 1.10 2005/06/05 11:27:10 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/l/lcap/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE="lids"
 
 RDEPEND="virtual/libc"
