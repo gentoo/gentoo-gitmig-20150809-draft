@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77-r2.ebuild,v 1.22 2005/06/05 17:19:16 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.79.ebuild,v 1.1 2005/06/05 17:19:16 leonardop Exp $
 
 inherit sgml-catalog
 
@@ -8,11 +8,11 @@ MY_P=${P/-stylesheets/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="DSSSL Stylesheets for DocBook."
 HOMEPAGE="http://docbook.sourceforge.net/projects/dsssl/index.html"
-SRC_URI="mirror://sourceforge/docbook/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/docbook/${MY_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
 IUSE=""
 
 RDEPEND="app-text/sgml-common"
@@ -25,7 +25,7 @@ sgml-catalog_cat_include "/etc/sgml/sgml-docbook.cat" \
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cp ${FILESDIR}/${P}.Makefile Makefile
+	cp ${FILESDIR}/${PN}-1.77.Makefile Makefile
 }
 
 src_compile() {
@@ -52,4 +52,6 @@ src_install() {
 
 	dosym /usr/share/sgml/docbook/dsssl-stylesheets-${PV} \
 		/usr/share/sgml/stylesheets/dsssl/docbook
+
+	dodoc BUGS ChangeLog README RELEASE-NOTES.txt WhatsNew
 }
