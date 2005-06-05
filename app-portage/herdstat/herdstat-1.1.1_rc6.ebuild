@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_rc6.ebuild,v 1.1 2005/06/05 14:31:01 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_rc6.ebuild,v 1.2 2005/06/05 15:13:19 ka0ttic Exp $
 
 inherit bash-completion toolchain-funcs
 
@@ -60,7 +60,8 @@ pkg_postinst() {
 	einfo "for a sleu of examples on using herdstat."
 	einfo
 	einfo "As of 1.1.1_rc6, ${PN} supports configuration files."
-	einfo "See /usr/share/doc/${PF}/herdstatrc.example for more information."
+	einfo "See /usr/share/doc/${PF}/herdstatrc.example.gz"
+	einfo "for more information."
 	einfo
 	if ! use unicode ; then
 		einfo "NOTE: since you have not enabled unicode support via"
