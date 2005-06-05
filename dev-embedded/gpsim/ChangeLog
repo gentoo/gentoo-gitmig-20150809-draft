@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.16 2005/05/30 18:18:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.17 2005/06/05 12:20:51 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> gpsim-0.21.2.ebuild:
+  Stable on ppc.
 
   30 May 2005; Sven Wegener <swegener@gentoo.org> gpsim-0.20.14-r1.ebuild:
   Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
