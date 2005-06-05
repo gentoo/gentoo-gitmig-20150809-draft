@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.6.ebuild,v 1.2 2005/06/05 10:42:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.7.ebuild,v 1.1 2005/06/05 10:42:09 mrness Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic linux-info
 
 DESCRIPTION="a client that plugs into your handphone"
 HOMEPAGE="http://www.gnokii.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnokii.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls X bluetooth irda sms postgres mysql"
 
 RDEPEND="X? ( =x11-libs/gtk+-1.2* )
@@ -23,14 +23,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-devel/autoconf"
 
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	sed -i -e 's:/usr/local/:/usr/:g' Docs/sample/gnokiirc && \
-		epatch ${FILESDIR}/${P}-nounix98pty.patch || \
-		die "something has changed in this package"
-}
+CONFIG_CHECK="UNIX98_PTYS"
 
 src_compile() {
 	append-ldflags "-Wl,-z,now" #avoid QA notices
@@ -39,6 +32,7 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_with X x) \
 	    --enable-security \
+		--disable-unix98test \
 		|| die "configure failed"
 
 	emake -j1 || die "make failed"
