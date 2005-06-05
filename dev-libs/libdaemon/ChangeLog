@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.15 2005/04/09 20:53:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.16 2005/06/05 10:28:41 ka0ttic Exp $
+
+*libdaemon-0.8 (04 Jun 2005)
+
+  04 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> +libdaemon-0.8.ebuild:
+  Version bump.
 
   09 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> libdaemon-0.7.ebuild:
   Stable on ppc.
