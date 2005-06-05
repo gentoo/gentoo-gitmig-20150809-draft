@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20050108-r3.ebuild,v 1.1 2005/05/14 14:22:40 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20050108-r3.ebuild,v 1.2 2005/06/05 03:44:34 josejx Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/fte/${P}-src.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 IUSE="gpm slang X"
 S=${WORKDIR}/${PN}
 
