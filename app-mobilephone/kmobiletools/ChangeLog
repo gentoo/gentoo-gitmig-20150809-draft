@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/kmobiletools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.2 2005/06/02 18:43:18 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kmobiletools/ChangeLog,v 1.3 2005/06/05 11:48:14 mrness Exp $
+
+  05 Jun 2005; Alin Nastac <mrness@gentoo.org> kmobiletools-0.4.3.1.ebuild:
+  Stable on x86.
 
   02 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org>
   kmobiletools-0.4.3.1.ebuild:
