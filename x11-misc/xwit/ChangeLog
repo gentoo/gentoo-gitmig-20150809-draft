@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xwit
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/ChangeLog,v 1.3 2004/06/24 22:46:44 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/ChangeLog,v 1.4 2005/06/05 14:18:13 pyrania Exp $
+
+  05 Jun 2005; Markus Nigbur <pyrania@gentoo.org> +files/malloc.patch,
+  xwit-3.4.ebuild:
+  Fixed bug #82626.
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> xwit-3.4.ebuild:
   Marked stable.
