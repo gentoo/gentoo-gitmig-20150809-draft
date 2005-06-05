@@ -1,4 +1,16 @@
-MD5 3161daae216f3aaf5fb3fd43de1357a8 gtkdialog-0.58.8.ebuild 658
-MD5 14dff48ea254c1c32a16bef1a73b3772 ChangeLog 562
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4276c38ea528273135a69eb2446e7ce9 ChangeLog 739
+MD5 e18fab649d0be0fac049806b1ecb8833 gtkdialog-0.59.4.ebuild 689
 MD5 427e58a2a402d09cdf22976c7d733f46 metadata.xml 685
+MD5 3161daae216f3aaf5fb3fd43de1357a8 gtkdialog-0.58.8.ebuild 658
 MD5 4e38c83d2f7eaaf236626b8c69eac20e files/digest-gtkdialog-0.58.8 68
+MD5 0fd87623295843316131184e1c4f4957 files/digest-gtkdialog-0.59.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCou6uI7fK2cqeyXkRAmkUAJ95TFOpA3ZdK/t2YG3xsIwlkGnTHQCeNKaw
+aWLd92N2GeilHvRHCmD8KDQ=
+=hU+6
+-----END PGP SIGNATURE-----
