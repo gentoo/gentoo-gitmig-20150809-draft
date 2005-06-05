@@ -1,6 +1,10 @@
 # ChangeLog for games-util/loki_setupdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/ChangeLog,v 1.4 2005/04/11 12:27:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/ChangeLog,v 1.5 2005/06/05 11:33:29 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  loki_setupdb-20050109.ebuild:
+  Stable on ppc.
 
   11 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   -loki_setupdb-20040916.ebuild:

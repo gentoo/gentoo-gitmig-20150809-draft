@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/agistudio-1.2.1.ebuild,v 1.3 2004/11/11 19:45:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/agistudio-1.2.1.ebuild,v 1.4 2005/06/05 11:31:26 hansmi Exp $
 
 inherit kde
 need-qt 3.1
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/agistudio/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 S="${WORKDIR}/${P}/src"
