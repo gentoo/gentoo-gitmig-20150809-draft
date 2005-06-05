@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.1.ebuild,v 1.8 2005/06/05 13:17:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.1.ebuild,v 1.9 2005/06/05 14:08:50 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -31,7 +31,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_newjar build/${P}.jar ${PN}.jar
-	
+
 	dodoc README.txt
 	java-pkg_dohtml *.html
 	use doc && java-pkg_dohtml -r build/docs/apidocs
