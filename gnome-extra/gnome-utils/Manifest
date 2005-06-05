@@ -3,7 +3,7 @@ MD5 ec3c2978b395559f9004937abed4523f gnome-utils-2.8.1.ebuild 1043
 MD5 8f7c980708dd4c2819c8f2e42ca793ae gnome-utils-2.10.1.ebuild 1185
 MD5 62292c35e7929905ad1e54d64faf457f gnome-utils-1.4.1.2.ebuild 1770
 MD5 7ee7b90f752d9f748a2e3a914d899c33 gnome-utils-2.8.0.ebuild 1046
-MD5 c7a87ced25efc3072c21ae97c5ee7c46 gnome-utils-2.10.0.ebuild 1182
+MD5 4a063a4bcb8ccaf4aa34431b2199fd03 gnome-utils-2.10.0.ebuild 1178
 MD5 2bc4f51da30d75ca2f2d74b64f5e4af1 ChangeLog 10126
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 7f6c4dde21c087f0af77c8374ca6da31 files/gnome-utils-2.6.2-gfloppymajor.patch 933
