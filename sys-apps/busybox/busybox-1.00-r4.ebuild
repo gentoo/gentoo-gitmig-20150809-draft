@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.10 2005/06/04 23:26:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.11 2005/06/05 07:50:43 vapier Exp $
 
 inherit eutils
 
@@ -34,6 +34,8 @@ busybox_config_option() {
 	case $1 in
 		y) sed -i -e "s:.*CONFIG_$2.*set:CONFIG_$2=y:g" .config;;
 		n) sed -i -e "s:CONFIG_$2=y:# CONFIG_$2 is not set:g" .config;;
+		Y) echo "CONFIG_$2=y" >> .config;;
+		N) echo "CONFIG_$2=n" >> .config;;
 		*) use $1 \
 		       && busybox_config_option y $2 \
 		       || busybox_config_option n $2
@@ -111,6 +113,10 @@ src_unpack() {
 
 	busybox_config_option static STATIC
 	busybox_config_option debug DEBUG
+	use debug \
+		&& busybox_config_option Y NO_DEBUG_LIB \
+		&& busybox_config_option N DMALLOC \
+		&& busybox_config_option N EFENCE
 
 	# 1.00-pre5 uses the old selinux api which is no longer maintained
 	#busybox_config_option selinux SELINUX
@@ -144,7 +150,7 @@ src_compile() {
 			busybox || failed=1
 		if [[ ${failed} == 1 ]] ; then
 			if has_version '<sys-libs/glibc-2.3.5' ; then
-				eerror "Your glibc sucks, ignorning static build failure."
+				eerror "Your glibc has broken static support, ignorning static build failure."
 				eerror "See http://bugs.gentoo.org/show_bug.cgi?id=94879"
 				cp busybox.bak bb
 			else

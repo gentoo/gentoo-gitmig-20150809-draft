@@ -3,7 +3,7 @@ MD5 bb8e7d385422646c5c1de481e9ebe3d7 busybox-1.00-r2.ebuild 6186
 MD5 65f9d58ae4d54a1521081a2e15f3b66b busybox-1.00-r1.ebuild 6082
 MD5 1fe139692f8bffc43b4d01249289b358 busybox-1.00-r3.ebuild 6473
 MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
-MD5 6b6e656324f7eb8675cbe1c33d1eeb01 busybox-1.00-r4.ebuild 6838
+MD5 09f65dbab34c1dc53b3d7d7c5ff2ae55 busybox-1.00-r4.ebuild 7064
 MD5 335f1c2b99e52e880f3a490df9be39da files/digest-busybox-1.00-r2 66
 MD5 335f1c2b99e52e880f3a490df9be39da files/digest-busybox-1.00-r3 66
 MD5 8eca6aae55dad92090e0136b58a9fcf7 files/digest-busybox-1.00-r4 142
