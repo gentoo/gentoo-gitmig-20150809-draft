@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.162 2005/06/02 23:46:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.163 2005/06/05 22:48:32 dsd Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1848,7 +1848,7 @@ do_gcc_PIE_patches() {
 
 should_we_gcc_config() {
 	# we only want to switch compilers if installing to / or /tmp/stage1root
-	[[ ${ROOT} == "/" || ${ROOT} == "/tmp/stage1root" ]] && return 1
+	[[ ${ROOT} == "/" || ${ROOT} == "/tmp/stage1root" ]] || return 1
 
 	# we always want to run gcc-config if we're bootstrapping, otherwise
 	# we might get stuck with the c-only stage1 compiler
