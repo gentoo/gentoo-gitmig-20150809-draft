@@ -1,5 +1,5 @@
-MD5 3a8f97cb0ab9fc1b1dd05b0a1dc002e1 ChangeLog 569
-MD5 a29a39cc000792c61018058b041c2a1e eieio-0.17.ebuild 831
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 8d16652b13339bb80b3d429575da067f ChangeLog 656
+MD5 93721a81dca6b8380b82df73e085722a eieio-0.17.ebuild 826
 MD5 f4eefde13edb2a51c1662d13dd70d2cf files/60eieio-gentoo.el 140
 MD5 729f88a612c0de55df9d18f9e931efb6 files/digest-eieio-0.17 62
