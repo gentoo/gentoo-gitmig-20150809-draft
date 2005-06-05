@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/wavbreaker
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.9 2004/07/21 00:55:23 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.10 2005/06/05 20:10:01 luckyduck Exp $
+
+*wavbreaker-0.6.1 (05 Jun 2005)
+
+  05 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/wavbreaker-0.4-gcc2_fix.patch, -wavbreaker-0.3.ebuild,
+  -wavbreaker-0.4.ebuild, +wavbreaker-0.6.1.ebuild:
+  New upstream release, fixes #95036. Added ~amd64 back to KEYWORDS.
 
 *wavbreaker-0.5 (20 Jul 2004)
 
