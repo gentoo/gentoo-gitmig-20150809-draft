@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/abook
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.24 2005/05/30 21:50:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.25 2005/06/05 11:47:48 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> abook-0.5.3.ebuild:
+  Stable on ppc.
 
   30 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> abook-0.5.3.ebuild:
   Stable on sparc

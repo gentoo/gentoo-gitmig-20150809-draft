@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.4 2005/05/29 00:04:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.5 2005/06/05 11:49:45 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> cw-1.0.10.ebuild:
+  Stable on ppc.
 
 *cw-1.0.12 (29 May 2005)
 

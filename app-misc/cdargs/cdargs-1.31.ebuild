@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/cdargs-1.31.ebuild,v 1.3 2005/05/09 01:11:44 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/cdargs-1.31.ebuild,v 1.4 2005/06/05 11:48:45 hansmi Exp $
 
 DESCRIPTION="Bookmarks and browser for the shell builtin cd command"
 HOMEPAGE="http://www.skamphausen.de/software/cdargs"
@@ -8,7 +8,7 @@ SRC_URI="http://www.skamphausen.de/software/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE="emacs"
 
 DEPEND="sys-libs/ncurses"

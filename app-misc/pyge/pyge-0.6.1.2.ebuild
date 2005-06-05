@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pyge/pyge-0.6.1.2.ebuild,v 1.8 2005/05/11 05:01:02 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pyge/pyge-0.6.1.2.ebuild,v 1.9 2005/06/05 11:55:35 hansmi Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://pyge.sourceforge.net"
 SRC_URI="mirror://sourceforge/pyge/${MY_P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 DEPEND=">=dev-lang/python-2.1
 	=dev-python/wxpython-2.4*"

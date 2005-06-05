@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pyge
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pyge/ChangeLog,v 1.9 2005/05/11 05:01:02 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pyge/ChangeLog,v 1.10 2005/06/05 11:55:35 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> pyge-0.6.1.2.ebuild:
+  Stable on ppc.
 
   10 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   pyge-0.6.1.2.ebuild:
