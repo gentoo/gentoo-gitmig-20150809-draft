@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.6.1.ebuild,v 1.5 2005/05/19 11:01:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.6.1.ebuild,v 1.6 2005/06/05 11:20:48 hansmi Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="http://mielke.cc/brltty/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="gpm X usb"
 
 DEPEND="virtual/libc
