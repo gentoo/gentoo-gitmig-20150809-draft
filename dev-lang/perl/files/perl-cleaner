@@ -46,9 +46,15 @@ function postclean {
 
    done
 
-   echo
-   echo "For a complete log, please read $LOG"
-   echo
+   if [ -s $LOG ]; then
+     echo
+     echo "For a complete log, please read $LOG"
+     echo
+   else
+      if [ -f $LOG ]; then
+	rm -f $LOG
+      fi
+   fi
 }
 
 # This is to clean out the old .ph files generated in our last perl install

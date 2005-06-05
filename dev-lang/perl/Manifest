@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c4c373d2579f3dc2ca3292256b018b07 ChangeLog 38132
+MD5 cd4f8dd2b7dd785a4748697d83f316e4 ChangeLog 38282
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 389056a5cf253d17388307cc4cad6c8b perl-5.8.2-r4.ebuild 11306
 MD5 38510f237c4c3477731b5c4ffe2bfe61 perl-5.8.4-r4.ebuild 13450
@@ -24,7 +24,7 @@ MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.2-prelink-lpthread.patch 476
 MD5 ce442db939c59218a16be167f793b817 files/perl-5.8.2-uclibc.patch 573
 MD5 01af75daf3d222a668059e90d78a1f9d files/perl-5.8.4-nonblock.patch 400
 MD5 076dcbef37263d6dd7af719b55cfc2de files/perl-5.8.4-noksh.patch 611
-MD5 29f5bb46e077f7ef9481455fa8a04dfc files/perl-cleaner 8787
+MD5 c2612d59f380ad6e0c2de4d941e83dfd files/perl-cleaner 8879
 MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.4-perldoc-emptydirs.patch 489
 MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-5.8.4-picdl.patch 250
 MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.4-prelink-lpthread.patch 476
@@ -46,7 +46,7 @@ MD5 803b7c028f59008ea1e6d577e5c0bab0 files/stat.t 8884
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCmxfUtG5z4I8BtQoRAhCHAJ4zRB9ZpVh71x0pL+1RMFZ8ipTtGwCeIov3
-N6KgyDbiXqQuf5LykYIyeDA=
-=r2wf
+iD8DBQFCowCNtG5z4I8BtQoRAkvLAJ4yuTPFnOfLphFbZJfPiSMJLb41ggCfVweu
+NyQg3mCBiiD3nRAsTvfx3Sw=
+=6nJG
 -----END PGP SIGNATURE-----
