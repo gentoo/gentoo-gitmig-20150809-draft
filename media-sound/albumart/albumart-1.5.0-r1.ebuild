@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.5.0.ebuild,v 1.1 2005/04/18 19:54:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.5.0-r1.ebuild,v 1.1 2005/06/05 21:29:19 eradicator Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ DEPEND=">=dev-python/PyQt-3.0
 	>=dev-python/imaging-1.0.0"
 
 src_compile() {
-	einfo "nothing to compile"
+	cd ${S}/lib/albumart
+	emake || die "Failed to compile python UIs."
 }
 
 src_install() {
