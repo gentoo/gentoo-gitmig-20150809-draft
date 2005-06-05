@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_rc5.ebuild,v 1.1 2005/06/03 15:08:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_rc6.ebuild,v 1.1 2005/06/05 14:31:01 ka0ttic Exp $
 
 inherit bash-completion toolchain-funcs
 
@@ -35,7 +35,8 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dobashcompletion bashcomp
-	dodoc AUTHORS ChangeLog README TODO NEWS doc/*.txt
+	dodoc AUTHORS ChangeLog README TODO NEWS doc/*.txt \
+		doc/herdstatrc.example
 	use doc && dohtml doc/*
 
 	keepdir /var/lib/herdstat
@@ -53,11 +54,13 @@ pkg_postinst() {
 	einfo
 	if use doc ; then
 		einfo "See /usr/share/doc/${PF}/html/examples.html"
-		einfo "for a sleu of examples"
 	else
 		einfo "See /usr/share/doc/${PF}/examples.txt.gz"
-		einfo "for a sleu of examples"
 	fi
+	einfo "for a sleu of examples on using herdstat."
+	einfo
+	einfo "As of 1.1.1_rc6, ${PN} supports configuration files."
+	einfo "See /usr/share/doc/${PF}/herdstatrc.example for more information."
 	einfo
 	if ! use unicode ; then
 		einfo "NOTE: since you have not enabled unicode support via"
