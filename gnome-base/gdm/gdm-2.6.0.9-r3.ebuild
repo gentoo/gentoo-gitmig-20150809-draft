@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.9-r1.ebuild,v 1.1 2005/06/03 22:14:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.9-r3.ebuild,v 1.1 2005/06/05 15:05:46 foser Exp $
 
 inherit gnome2 eutils pam
 
@@ -55,6 +55,10 @@ src_unpack() {
 	cd ${S}
 	# remove unneeded linker directive for selinux (#41022)
 	epatch ${FILESDIR}/${PN}-2.4.4-selinux_remove_attr.patch
+	# fix ipv6 config
+	epatch ${FILESDIR}/${P}-ipv6_config.patch
+
+	autoconf || die
 
 }
 
