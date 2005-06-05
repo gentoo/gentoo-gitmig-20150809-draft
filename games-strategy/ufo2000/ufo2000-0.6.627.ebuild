@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.6.627.ebuild,v 1.2 2005/03/04 04:38:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.6.627.ebuild,v 1.3 2005/06/05 11:30:58 hansmi Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SRC_URI="http://ufo2000.lxnt.info/files/${P}-src.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~ppc x86"
+KEYWORDS="-* ppc x86"
 IUSE="oggvorbis"
 
 RDEPEND="virtual/libc

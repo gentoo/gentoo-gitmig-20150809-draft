@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freelords
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/ChangeLog,v 1.15 2005/04/16 20:12:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/ChangeLog,v 1.16 2005/06/05 11:27:06 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  freelords-0.3.4.ebuild:
+  Stable on ppc.
 
 *freelords-0.3.5 (16 Apr 2005)
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/kpictorial
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/kpictorial/ChangeLog,v 1.4 2005/03/09 15:34:51 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/kpictorial/ChangeLog,v 1.5 2005/06/05 11:28:23 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  kpictorial-0.9.1.ebuild:
+  Stable on ppc.
 
   09 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> kpictorial-0.9.1.ebuild:
   Stable on x86.
