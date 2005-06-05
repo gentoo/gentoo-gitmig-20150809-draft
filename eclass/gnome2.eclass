@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.47 2005/05/27 23:25:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.48 2005/06/05 16:33:18 foser Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -55,7 +55,6 @@ gnome2_src_install() {
 		einstall "scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/" "$@"
 	else
 		make DESTDIR=${D} \
-			scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper \
 		   	"$@" install
 	fi
 
