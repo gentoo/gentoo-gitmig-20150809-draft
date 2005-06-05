@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9dd2e50dc83a84f395ea49d77562ca65 nbsmtp-0.99-r1.ebuild 1356
-MD5 3382c19d527239abb8d0aca0c99b10f5 nbsmtp-0.99.ebuild 880
-MD5 9db0ce5b6beca3c19bc11fb82690b871 ChangeLog 4671
 MD5 2fc9863fa18fa7e25fedaa87a92a3c43 metadata.xml 259
-MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99-r1 64
+MD5 146ea4496355ecd4efc8e1e13bddcdb2 nbsmtp-0.99.ebuild 877
+MD5 06f71168de81bd0b17095ea928e25d97 ChangeLog 4764
+MD5 9dd2e50dc83a84f395ea49d77562ca65 nbsmtp-0.99-r1.ebuild 1356
 MD5 02906beafefaf79dd565570de5541a06 files/mailer.conf 348
+MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99-r1 64
 MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCm09EViELBEf1JB0RAmLCAJ9rwVMTQDaPcSAoMJsNnoWYJPY+dACePAvM
-lxFMl24NM2lq2FYNI7vLgeU=
-=F+yN
------END PGP SIGNATURE-----

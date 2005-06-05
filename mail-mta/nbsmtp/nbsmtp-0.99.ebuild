@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-0.99.ebuild,v 1.4 2005/05/10 15:35:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-0.99.ebuild,v 1.5 2005/06/05 12:03:00 hansmi Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a relayhost"
 SRC_URI="http://www.gentoo-es.org/~ferdy/${P}.tar.bz2"
@@ -8,7 +8,7 @@ SRC_URI="http://www.gentoo-es.org/~ferdy/${P}.tar.bz2"
 HOMEPAGE="http://nbsmtp.ferdyx.org"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc hppa ~amd64 sparc alpha"
+KEYWORDS="alpha ~amd64 hppa ppc sparc x86"
 LICENSE="GPL-2"
 IUSE="ssl ipv6 debug"
 
