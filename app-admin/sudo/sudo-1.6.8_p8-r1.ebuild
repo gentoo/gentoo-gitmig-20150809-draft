@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r1.ebuild,v 1.1 2005/06/05 20:14:53 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r1.ebuild,v 1.2 2005/06/05 20:26:24 taviso Exp $
 
 inherit eutils pam
 
@@ -44,6 +44,7 @@ src_compile() {
 
 	# why not use grep? variable might be expanded from other variables 
 	# declared in that file, and would have to eval the result anyway.
+	# cannot just source the file, could override any variables already set.
 	eval `PS4= bash -x /etc/profile.env 2>&1 | \
 		while read -a line; do
 			case $line in

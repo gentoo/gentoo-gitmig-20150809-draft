@@ -1,6 +1,6 @@
 MD5 1830dd653b9b5b92fa5cc86823e06d65 sudo-1.6.7_p5-r2.ebuild 1438
 MD5 02183c2e7efaad18b10b0d04801ebacc sudo-1.6.7_p5-r4.ebuild 1491
-MD5 17434a167144f15c80201c6e07f8281a sudo-1.6.8_p8-r1.ebuild 2211
+MD5 02ce84f6f5068b034cb887a71b1d9f9b sudo-1.6.8_p8-r1.ebuild 2285
 MD5 fd194364c65996b305201f91e0098a22 ChangeLog 5585
 MD5 a5463236fbb98e4ee6b1a0faba8c9c52 files/sudo 135
 MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r2 64
