@@ -27,8 +27,7 @@ Defaults	env_reset
 # * GIVING SUDO ACCESS TO USERS ALLOWS THEM TO RUN THE SPECIFIED *
 # * COMMANDS WITH ELEVATED PRIVILEGES.                           *
 # *                                                              *
-# * ONLY PERMIT SUDO ACCESS SPARINGLY, AND NEVER ALLOW ACCESS TO *
-# * UNTRUSTED USERS.                                             *
+# * NEVER PERMIT UNTRUSTED USERS TO ACCESS SUDO.                 *
 # ****************************************************************
 
 # User privilege specification

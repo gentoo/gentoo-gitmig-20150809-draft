@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p2.ebuild,v 1.4 2005/05/20 12:37:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8.ebuild,v 1.1 2005/06/05 19:46:28 taviso Exp $
 
 inherit eutils pam
 
@@ -14,9 +14,8 @@ SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
 
 LICENSE="Sudo"
 SLOT="0"
-KEYWORDS="-*"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="pam skey"
+KEYWORDS="~x86"
+IUSE="pam skey offensive"
 
 DEPEND="pam? ( >=sys-libs/pam-0.73-r1 )
 	skey? ( >=app-admin/skey-1.1.5-r1 )"
@@ -31,13 +30,30 @@ src_unpack() {
 }
 
 src_compile() {
+	local line ROOTPATH
+
+	# secure_path must be compiled into sudo, so find the current setting
+	# of ROOTPATH. This is not perfect, but until it is available as a
+	# sudoers setting this will do.
+	einfo "Setting secure_path..."
+
+	# why not use grep? variable might be expanded other variables declared
+	# in that file, and would have to eval the result anyway.
+	eval `PS4= bash -x /etc/profile.env 2>&1 | \
+		while read -a line; do
+			case $line in
+				ROOTPATH=*) echo $line; break;;
+				*) continue;;
+			esac
+		done` || ewarn "failed to find secure_path, please report this"
+
 	econf \
-		--with-all-insults \
-		--disable-path-info \
+		--with-secure-path="/bin:/sbin:/usr/bin:/usr/sbin:${ROOTPATH:-/usr/local/bin}" \
 		--with-env-editor \
+		`use_with offensive all-insults`\
 		`use_with pam` \
 		`use_with skey` \
-		|| die "econf failed"
+		|| die
 	emake || die
 }
 
@@ -45,10 +61,12 @@ src_install() {
 	einstall || die
 	dodoc BUGS CHANGES HISTORY PORTING README RUNSON TODO \
 		TROUBLESHOOTING UPGRADE sample.*
-	dopamd ${FILESDIR}/sudo
+
+	use pam && dopamd ${FILESDIR}/sudo
 
 	insinto /etc
 	doins ${FILESDIR}/sudoers
+
 	fperms 0440 /etc/sudoers
 }
 
