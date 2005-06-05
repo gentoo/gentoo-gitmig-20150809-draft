@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r3.ebuild,v 1.1 2005/05/23 19:23:38 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r3.ebuild,v 1.2 2005/06/05 18:04:06 langthang Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.eudora.com/products/unsupported/qpopper/index.html"
 DEPEND="virtual/mta
 	xinetd? ( virtual/inetd )
 	gdbm? ( sys-libs/gdbm )
-	!gdbm? ( sys-libs/db )
+	!gdbm? ( ~sys-libs/db-1.85 )
 	pam? (
 		>=sys-libs/pam-0.72
 		>=net-mail/mailbase-0.00-r8
@@ -69,13 +69,18 @@ EOF
 		cat $$PEM1 >  cert.pem
 		echo ""    >> cert.pem
 		cat $$PEM2 >> cert.pem
-		make || die
+		#make || die
 		rm $$PEM1 $$PEM2
 		umask 022
 
 	fi
 
-	emake || die
+	if ! use gdbm; then
+		sed -i -e 's|#define HAVE_GDBM_H|//#define HAVE_GDBM_H|g' ${S}/config.h || \
+			die "sed failed"
+	fi
+
+	emake -j1 || die
 }
 
 src_install() {
