@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xbsql
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/ChangeLog,v 1.6 2005/04/21 20:47:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/ChangeLog,v 1.7 2005/06/05 12:19:40 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> xbsql-0.11.ebuild:
+  Stable on ppc.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> xbsql-0.11.ebuild:
   stable on amd64
