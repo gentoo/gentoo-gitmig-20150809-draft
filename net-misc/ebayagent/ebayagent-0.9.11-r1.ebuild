@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r1.ebuild,v 1.1 2005/06/05 22:51:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r1.ebuild,v 1.2 2005/06/05 23:01:49 mcummings Exp $
+
+inherit eutils
 
 DESCRIPTION="ebay bidding Perl-Script"
 HOMEPAGE="http://ebayagent.sf.net"
@@ -22,6 +24,8 @@ DEPEND="dev-lang/perl
 S=${WORKDIR}/eBayAgent-${PV}
 
 src_compile() {
+	epatch ${FILESDIR}/ebayagent.patch
+
 	sed -i -e "s|PREFIX=/usr|PREFIX=${D}${DESTTREE}|" ${S}/Makefile
 	emake || die "emake failed"
 }
