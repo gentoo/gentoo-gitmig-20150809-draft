@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.31 2005/06/03 14:28:56 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.32 2005/06/05 19:39:58 dholm Exp $
+
+  05 Jun 2005; David Holm <dholm@gentoo.org> monodevelop-0.7.ebuild:
+  Added to ~ppc.
 
   03 Jun 2005; Peter Johanson <latexer@gentoo.org> monodevelop-0.7.ebuild:
   Fix problem with shared mime info getting corrupted after an install.
