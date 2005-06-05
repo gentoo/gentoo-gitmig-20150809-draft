@@ -1,6 +1,9 @@
 # ChangeLog for app-text/c2ps
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/c2ps/ChangeLog,v 1.8 2005/05/14 00:52:00 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/c2ps/ChangeLog,v 1.9 2005/06/05 11:59:51 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> c2ps-4.0.ebuild:
+  Stable on ppc.
 
   13 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> c2ps-4.0.ebuild:
   Add ~ppc

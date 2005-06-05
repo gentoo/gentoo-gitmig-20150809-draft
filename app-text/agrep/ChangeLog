@@ -1,6 +1,9 @@
 # ChangeLog for app-text/agrep
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.16 2005/05/30 07:50:00 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.17 2005/06/05 11:59:30 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> agrep-2.04.ebuild:
+  Stable on ppc.
 
   30 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> agrep-2.04.ebuild:
   mark ~ppc

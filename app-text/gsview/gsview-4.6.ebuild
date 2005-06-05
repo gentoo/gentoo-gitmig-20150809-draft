@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.6.ebuild,v 1.8 2005/06/01 00:01:06 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.6.ebuild,v 1.9 2005/06/05 12:02:21 hansmi Exp $
 
 MY_PV="${PV/.}"
 DESCRIPTION="gsView PostScript and PDF viewer"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cs.wisc.edu/~ghost/gsview/"
 IUSE="doc"
 SLOT="0"
 LICENSE="Aladdin"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	virtual/ghostscript"
