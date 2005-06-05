@@ -1,6 +1,6 @@
 # ChangeLog for app-mobilephone/gtkesms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gtkesms/ChangeLog,v 1.1 2005/05/15 19:07:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gtkesms/ChangeLog,v 1.2 2005/06/05 12:01:43 mrness Exp $
 
   15 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
   Moved from net-misc/gtkesms to app-mobilephone/gtkesms.
@@ -22,8 +22,8 @@
   01 Jun 2002; Bruce A. Locke <blocke@shivan.org> gtkems-0.0.4.ebuild:
   GTK+ dependency fix
 
-  26 May 2002; J.Alberto S.L. <bass@gentoo.org> gtkesms-0.0.4.ebuild:
-  First relase.
-
   31 May 2002;  J.Alberto S.L. <bass@gentoo.org> gtkesms-0.0.4.ebuild:
   Fixed problem with gtk.
+
+  26 May 2002; J.Alberto S.L. <bass@gentoo.org> gtkesms-0.0.4.ebuild:
+  First relase.

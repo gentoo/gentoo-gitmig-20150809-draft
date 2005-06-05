@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gtkesms/gtkesms-0.0.4.ebuild,v 1.1 2005/05/15 19:07:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gtkesms/gtkesms-0.0.4.ebuild,v 1.2 2005/06/05 12:01:43 mrness Exp $
 
 DESCRIPTION="GTK GUI for esms"
 SRC_URI="mirror://sourceforge/esms/${P}.tar.gz"
 HOMEPAGE="http://esms.sourceforge.net"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 IUSE=""
 DEPEND="=x11-libs/gtk+-1.2*
 		dev-perl/gtk-perl
