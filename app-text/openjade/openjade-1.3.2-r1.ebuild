@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.26 2005/05/22 13:08:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.27 2005/06/05 08:42:51 blubb Exp $
 
-inherit libtool sgml-catalog eutils flag-o-matic gnuconfig
+inherit libtool sgml-catalog eutils flag-o-matic gnuconfig multilib
 
 DESCRIPTION="Jade is an implementation of DSSSL - an ISO standard for formatting SGML and XML documents"
 HOMEPAGE="http://openjade.sourceforge.net"
@@ -59,7 +59,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr
-	dodir /usr/lib
+	dodir /usr/$(get_libdir)
 
 	make DESTDIR=${D} \
 		libdir=/usr/$(get_libdir) \
