@@ -1,7 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.165 2005/05/18 02:08:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.166 2005/06/05 16:58:28 foser Exp $
 
+  05 Jun 2005; Marinus Schraal <foser@gentoo.org> gnome-2.10.0.ebuild :
+  A few more dep fixes
+  
   18 May 2005; Jason Wever <weeve@gentoo.org> gnome-2.8.3-r1.ebuild:
   Stable on SPARC.
 

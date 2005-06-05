@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10.ebuild,v 1.3 2005/05/09 03:04:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10.ebuild,v 1.4 2005/06/05 16:58:28 foser Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -29,6 +29,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-libs/audiofile-0.2.6-r1
 	>=media-sound/esound-0.2.34
 	>=gnome-base/gnome-mime-data-2.4.2
+	>=x11-misc/shared-mime-info-0.16
 	>=media-libs/libart_lgpl-2.3.17
 
 	>=dev-libs/libIDL-0.8.5
@@ -36,7 +37,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=gnome-base/gconf-2.10
 	>=gnome-base/gnome-keyring-0.4.2
-	>=gnome-base/gnome-vfs-2.10.0
+	>=gnome-base/gnome-vfs-2.10.0-r2
 
 	>=gnome-base/libbonobo-2.8.1
 	>=gnome-base/libbonoboui-2.8.1
@@ -62,7 +63,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=app-arch/file-roller-2.10-r1
 	>=gnome-extra/gcalctool-5.5.41
 	>=gnome-extra/gconf-editor-2.10
-	>=gnome-base/gdm-2.6.0.7
+	>=gnome-base/gdm-2.6.0.9-r2
 	>=app-editors/gedit-2.10
 
 	>=app-text/ggv-2.8.3
@@ -117,7 +118,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=net-misc/vino-2.10
 
-	>=app-admin/gnome-system-tools-1.2.0
+	>=app-admin/gnome-system-tools-1.2.0-r1
 
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.1
