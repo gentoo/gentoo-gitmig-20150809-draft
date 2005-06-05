@@ -1,4 +1,4 @@
-MD5 7d33a5af74a079791cc778e0117436fa ChangeLog 73450
+MD5 1e53426a13eda8c97d9ae73600481bbd ChangeLog 73647
 MD5 45b53d55a7990f579c81cc9698091b8b glibc-2.2.5-r10.ebuild 4454
 MD5 41a105e32ad4b0a4a8a2129645eed295 glibc-2.3.2-r12.ebuild 22301
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
@@ -6,10 +6,10 @@ MD5 9cd3a1c402f77d135d95a8ae80338c6d glibc-2.3.5.ebuild 39698
 MD5 aeaeffc56ce8fedabbb5682693320b6b glibc-2.3.3.20040420-r2.ebuild 21685
 MD5 e44a41af599672120302813550b65a61 glibc-2.3.4.20040619-r2.ebuild 21356
 MD5 d632e9decc4779b48f4ab4f44d0e1af5 glibc-2.3.5.20050421.ebuild 40445
-MD5 0380f919bd3dd8b3996bcd80b37f7f85 glibc-2.3.4.20041102-r1.ebuild 33940
+MD5 c8706ef0b979c4e34874fedf97f79d50 glibc-2.3.4.20041102-r1.ebuild 34013
 MD5 7946da1bf84f19ad3896a61428c7a05a glibc-2.3.4.20040808-r1.ebuild 27705
 MD5 f657c3015509b40205f9eefa49d12c89 glibc-2.3.4.20050125-r1.ebuild 38637
-MD5 ee442d9b608306c5d87dff3248cb17ea glibc-2.3.4.20041102.ebuild 32976
+MD5 d86de5e7a8193469732cc7489bd9494f glibc-2.3.4.20041102.ebuild 33049
 MD5 3622860499eecaced6dda4562aeb1b65 glibc-2.3.4.20050125.ebuild 35394
 MD5 8d58079469aedb014a800101ef60558f files/nsswitch.conf 503
 MD5 bed7cbcac1e8582deda43664e5b3f19c files/digest-glibc-2.2.5-r10 290
@@ -147,3 +147,4 @@ MD5 8d43dc97fe220048ade220f23e84f006 files/2.3.4/glibc-2.3.4-mips-rtld_deepbind-
 MD5 1185022e9a50560d1bf9116a0461e011 files/2.3.4/glibc-2.3.4-mips-sysdep-cancel.diff 2402
 MD5 039f62650037a4a15cef3066b26d27c9 files/2.3.4/glibc-2.3.4-mips-update-__throw.patch 1975
 MD5 b80890f83185acef8aeff622a1574e0b files/2.3.4/glibc-2.3.4-fix-_dl_next_tls_modid-assert.patch 9140
+MD5 ee692cfc6e7c810a2785093948638bbc files/2.3.4/glibc234-alpha-xstat.patch 7653

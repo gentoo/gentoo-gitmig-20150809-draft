@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.13 2005/05/27 07:55:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.14 2005/06/05 08:55:42 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -363,6 +363,9 @@ do_arch_alpha_patches() {
 	# 2.3.2 additions.
 	# <taviso@gentoo.org> (14 Jun 2003).
 	epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-decc-compaq.patch
+
+	# Fix xstat stuff
+	epatch ${FILESDIR}/2.3.4/glibc234-alpha-xstat.patch
 
 	# Fix compilation with >=gcc-3.2.3 (01 Nov 2003 agriffis)
 #	epatch ${FILESDIR}/2.3.2/${LOCAL_P}-alpha-pwrite.patch
