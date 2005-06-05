@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.019-r1.ebuild,v 1.1 2005/06/05 00:30:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.019-r1.ebuild,v 1.2 2005/06/05 02:15:23 swegener Exp $
 
 inherit fixheadtails toolchain-funcs
 
@@ -47,7 +47,7 @@ src_install () {
 	#make backwards compatible symlinks
 	dosym /usr/lib/bglibs /usr/lib/bglibs/lib
 	dosym /usr/include/bglibs /usr/lib/bglibs/include
-	
+
 	dodoc ANNOUNCEMENT NEWS README ChangeLog TODO VERSION
 	dohtml doc/html/*
 	docinto latex
