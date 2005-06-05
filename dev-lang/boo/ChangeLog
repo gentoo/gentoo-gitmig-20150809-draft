@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.4 2005/05/31 11:41:14 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.5 2005/06/05 19:37:34 dholm Exp $
+
+  05 Jun 2005; David Holm <dholm@gentoo.org> boo-0.5.5.1651.ebuild:
+  Added to ~ppc.
 
 *boo-0.5.5.1651 (31 May 2005)
 
