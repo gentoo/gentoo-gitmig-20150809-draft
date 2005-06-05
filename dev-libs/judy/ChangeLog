@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/judy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.7 2004/10/24 16:58:51 blubb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.8 2005/06/05 12:26:14 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  judy-20020627-r1.ebuild:
+  Stable on ppc.
 
   24 Oct 2004; Simon Stelling <blubb@gentoo.org> judy-1.0.0.ebuild:
   added ~amd64

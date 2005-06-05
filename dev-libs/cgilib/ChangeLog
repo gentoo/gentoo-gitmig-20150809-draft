@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cgilib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.6 2005/06/03 22:56:17 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.7 2005/06/05 12:23:34 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> cgilib-0.5.ebuild:
+  Stable on ppc.
 
   03 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> cgilib-0.5.ebuild:
   Marked x86 stable. Fixes bug 94960. Thanks to Daniel Webert <rockoo@gmail.com>.
