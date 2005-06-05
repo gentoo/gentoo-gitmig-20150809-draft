@@ -8,7 +8,7 @@ MD5 dec660df21be20d7f05aa2e2d3874248 gconf-2.8.0.1.ebuild 1980
 MD5 7998f0e3fab48622265a6b5277bf28ed gconf-1.0.8-r5.ebuild 1872
 MD5 b14e4fe291038b54ef676c1601aa7bd3 gconf-2.6.0.ebuild 1962
 MD5 2ceab5cdd7fdf22bebcfd9b75a6af6dc ChangeLog 13724
-MD5 14a8191f20eb8da578e2d762dcda633e gconf-2.10.0.ebuild 1950
+MD5 70cfb53ae8d98e1fa9ddd7333f487765 gconf-2.10.0.ebuild 1950
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e0039d2fbc5336c9d29fb96332422161 gconf-2.6.2.ebuild 1952
 MD5 8cfc79bc2dbac8f93a77df81c0a90bca files/digest-gconf-2.10.0 66

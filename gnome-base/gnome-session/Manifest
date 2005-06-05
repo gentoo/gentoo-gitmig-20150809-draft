@@ -4,7 +4,7 @@ MD5 a296d97782aadce09cdecb58dc7bcbb2 gnome-session-2.8.0.ebuild 1539
 MD5 83f24762bbd25b6828aa7ca32cc4e800 gnome-session-2.4.2.ebuild 1312
 MD5 9523f2e7bcc615cb830ea1f3ac7587cd ChangeLog 11800
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 aff175f5a75a41baf94508844f8a07eb gnome-session-2.10.0.ebuild 1529
+MD5 5a12fb88824cd41f03acbe1bbe5aa2aa gnome-session-2.10.0.ebuild 1529
 MD5 b10dbd1b6388f5fdf9feee0e56525ea5 files/Gnome 2464
 MD5 f02a80d3f1435547a479312c15cc1030 files/gnome-splash.png 78064
 MD5 b6e2c49cdafa0d5d8fe9ab4e28f5fc3d files/gnome-session-2.8.1-hide_splash.patch 1469
