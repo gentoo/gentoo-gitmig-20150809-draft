@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kaptain
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kaptain/ChangeLog,v 1.7 2005/03/15 09:49:51 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kaptain/ChangeLog,v 1.8 2005/06/05 11:42:22 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> kaptain-0.72.ebuild:
+  Stable on ppc.
 
   15 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> kaptain-0.72.ebuild:
   Stable on x86.

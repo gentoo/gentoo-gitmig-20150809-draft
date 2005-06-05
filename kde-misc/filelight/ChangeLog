@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/filelight
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.7 2005/01/21 17:25:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.8 2005/06/05 11:41:54 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  filelight-1.0_beta6.ebuild:
+  Stable on ppc.
 
   21 Jan 2005; Carsten Lohrke <carlo@gentoo.org> filelight-1.0_beta6.ebuild:
   stable on x86

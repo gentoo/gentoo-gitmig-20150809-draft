@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kleds
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kleds/ChangeLog,v 1.4 2005/05/11 21:06:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kleds/ChangeLog,v 1.5 2005/06/05 11:44:48 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> kleds-0.8.0.ebuild:
+  Stable on ppc.
 
   11 May 2005; Marcus D. Hanwell <cryos@gentoo.org> kleds-0.8.0.ebuild:
   Stable on amd64.
