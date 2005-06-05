@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.2.ebuild,v 1.2 2005/06/05 01:59:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.4.ebuild,v 1.1 2005/06/05 01:59:16 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://l7-filter.sourceforge.net"
 SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 SLOT="${KV}"
 S=${WORKDIR}/${MY_P}
@@ -31,23 +31,23 @@ src_unpack() {
 	local PATCH
 	if kernel_is 2 4
 	then
-		PATCH=for_older_kernels/kernel-${KV_MAJOR}.${KV_MINOR}-layer7-0.9.1.patch
+		PATCH=kernel-${KV_MAJOR}.${KV_MINOR}-layer7-${PV}.patch
 	elif kernel_is ge 2 6 9
 	then
 		if kernel_is ge 2 6 11
 		then
 			PATCH=kernel-2.6.11-layer7-${PV}.patch
 		else
-			PATCH=for_older_kernels/kernel-2.6.9-2.6.10-layer7-${PV}.patch
+			PATCH=for_older_kernels/kernel-2.6.9-2.6.10-layer7-1.2.patch
 		fi
 	else
 		# 2.6.0-2.6.8.1
-		PATCH=for_older_kernels/kernel-2.6.0-2.6.8.1-layer7-0.9.1.patch
+		PATCH=for_older_kernels/kernel-2.6.0-2.6.8.1-layer7-0.9.2.patch
 	fi
 
 	if [ ! -f ${PATCH} ];
 	then
-		die "Kernel version ${KV_FULL} not supported"
+		die "Patch ${PATCH} fpr Kernel version ${KV_FULL} not supported"
 	fi
 
 	# create needed directories
