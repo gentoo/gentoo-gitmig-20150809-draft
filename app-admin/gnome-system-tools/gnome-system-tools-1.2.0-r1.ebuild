@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-1.2.0.ebuild,v 1.7 2005/05/08 22:46:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-1.2.0-r1.ebuild,v 1.1 2005/06/05 16:09:08 foser Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gst/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64 ~sparc ~ppc64 ~ia64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64 ~ia64"
 IUSE="nfs samba"
 
 RDEPEND="net-misc/openssh
@@ -25,6 +25,7 @@ RDEPEND="net-misc/openssh
 	samba? ( >=net-fs/samba-3 )"
 
 DEPEND="${RDEPEND}
+	app-text/scrollkeeper
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.29"
 
@@ -33,8 +34,15 @@ DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
 USE_DESTDIR="1"
 
 # --enable-disks is not (still) supported for Gentoo
-G2CONF="${G2CONF} --enable-boot --enable-services"
+G2CONF="${G2CONF} --enable-boot --enable-services --disable-network"
 
 if ! use nfs && ! use samba; then
 	G2CONF="${G2CONF} --disable-shares"
 fi
+
+src_compile() {
+
+	# fix sandboxing (#92920)
+	gnome2_src_compile scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
+
+}
