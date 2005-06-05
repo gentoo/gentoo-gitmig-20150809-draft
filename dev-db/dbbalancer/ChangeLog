@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/dbbalancer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/ChangeLog,v 1.7 2005/01/01 17:30:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/ChangeLog,v 1.8 2005/06/05 18:40:17 leonardop Exp $
+
+  05 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
+  dbbalancer-0.4.4.ebuild:
+  Fix docbook-dsssl-stylesheets dependency.
 
   19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   dbbalancer-0.4.4.ebuild:

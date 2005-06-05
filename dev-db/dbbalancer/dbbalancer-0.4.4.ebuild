@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.12 2005/01/01 17:30:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.13 2005/06/05 18:40:17 leonardop Exp $
 
 DESCRIPTION="Load balancing multithreaded PostgreSQL connection pool.
 Also has a replication mode to keep in sync the load balanced backend
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=">=dev-db/postgresql-7.2.3-r1
 	>=dev-libs/ace-5.2.4-r1
 	>=app-text/openjade-1.3.1-r5
-	=app-text/docbook-dsssl-stylesheets-1.77"
+	>=app-text/docbook-dsssl-stylesheets-1.77"
 
 S="${WORKDIR}/DBBalancer"
 
@@ -40,7 +40,7 @@ src_compile() {
 		--with-pq=/usr \
 		--with-pq-include=/usr/include/postgresql \
 		--with-jade=/usr/bin/jade \
-		--with-docbook=/usr/share/sgml/docbook/dsssl-stylesheets-1.77 \
+		--with-docbook=/usr/share/sgml/stylesheets/dsssl/docbook \
 			|| die "./configure failed"
 	emake || die "emake failed"
 	export SANDBOX_DISABLED=1
