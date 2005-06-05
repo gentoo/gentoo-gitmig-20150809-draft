@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-morestate
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-morestate/ChangeLog,v 1.7 2004/07/07 21:22:47 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-morestate/ChangeLog,v 1.8 2005/06/05 15:54:31 luckyduck Exp $
+
+  05 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  xmms-morestate-1.2.ebuild:
+  Fixed bad header, cosmetic changes.
 
   07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-morestate-1.2.ebuild:
