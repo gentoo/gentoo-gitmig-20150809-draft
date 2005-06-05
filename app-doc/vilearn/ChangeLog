@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/vilearn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/ChangeLog,v 1.7 2005/04/21 22:39:03 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/ChangeLog,v 1.8 2005/06/05 11:30:47 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> vilearn-1.0.ebuild:
+  Stable on ppc.
 
   21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   vilearn-1.0.ebuild:
