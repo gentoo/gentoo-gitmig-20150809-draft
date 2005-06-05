@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/gtklife
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/ChangeLog,v 1.7 2005/05/31 22:47:58 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/ChangeLog,v 1.8 2005/06/05 05:33:57 mr_bones_ Exp $
+
+*gtklife-4.2 (05 Jun 2005)
+
+  05 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org> +gtklife-4.2.ebuild:
+  version bump
 
   31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> gtklife-4.1.ebuild:
   Stable on amd64.
