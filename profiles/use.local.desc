@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1208 2005/06/04 23:40:30 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1209 2005/06/05 04:57:26 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -46,11 +46,11 @@ app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nano:wsconvert - Turn on whitespace highlighting feature
 app-editors/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
 app-editors/scite:lua - Enable Lua scripting support
+app-editors/vim-core:termcap-compat - Use libtermcap-compat rather than ncurses (not generally recommended)
 app-editors/vim:mzscheme - Include support for the mzscheme interpreter
 app-editors/vim:termcap-compat - Use libtermcap-compat rather than ncurses (not generally recommended)
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links
 app-editors/vim:vim-with-x - Enables linking the console vim against X libs to enable some features in xterms
-app-editors/vim-core:termcap-compat - Use libtermcap-compat rather than ncurses (not generally recommended)
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
 app-editors/xemacs:lucid - Chooses the lucid widget set (default, deprecated)
@@ -303,6 +303,7 @@ games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pac
 games-fps/quake2-icculus:xatrix - Build support for the 'The Reckoning' Mission Pack (xatrix)
 games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
 games-kids/gcompris:editor - Build the optional editor program.
+games-mud/mmucl:mccp - adds support for the Mud Client Compression Protocol
 games-rpg/eternal-lands:mapeditor - Install the mapeditor as well as the game
 games-rpg/eternal-lands:nomusic - Disable install of music files
 games-rpg/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
@@ -614,11 +615,11 @@ net-fs/samba:quotas - Add support for user quotas
 net-fs/samba:winbind - Add support for the winbind auth daemon
 net-fs/shfs:amd - Enable automounter support
 net-ftp/frox:clamav - ClamAV antivirus support on proxy
+net-ftp/proftpd:authfile - Enable support for auth-file module
+net-ftp/proftpd:authunix - Enable support for auth-unix module
 net-ftp/proftpd:sendfile - Enable support for sendfile()
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:softquota - Enable support for the mod_quotatab
-net-ftp/proftpd:authunix - Enable support for auth-unix module
-net-ftp/proftpd:authfile - Enable support for auth-file module
 net-ftp/proftpd:xinetd - Enable support for starting from xinetd
 net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risc)
 net-im/bitlbee:flood - Enable flood protection support
@@ -649,11 +650,11 @@ net-im/silc-toolkit:server - Enables silc server
 net-irc/bitchx:cdrom - Enables CD-ROM support
 net-irc/srvx:bahamut - Choose bahamut protocol over p10 protocol
 net-irc/unrealircd:hub - Enable hub support
+net-irc/xchat-xsys:buttons - Enables the buttons near the nickname list
+net-irc/xchat-xsys:uptimed - Enables optional uptime records through uptimed
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
-net-irc/xchat-xsys:buttons - Enables the buttons near the nickname list
-net-irc/xchat-xsys:uptimed - Enables optional uptime records through uptimed
 net-libs/gecko-sdk:moznomail - Do not compile mail
 net-libs/gecko-sdk:moznoxft - Disable XFT support
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
