@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.24 2005/05/19 03:37:20 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.25 2005/06/05 15:24:05 hansmi Exp $
 
-inherit toolchain-funcs eutils fixheadtails
+inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
 IUSE="ssl noauthcram notlsbeforeauth selinux"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
@@ -244,6 +244,9 @@ src_unpack() {
 	else
 		einfo "Enabling AUTHCRAM support"
 	fi
+
+	# Bug 92742
+	append-ldflags -Wl,-z,now
 
 	echo -n "$(tc-getCC) ${LDFLAGS}" > ${S}/conf-ld
 	echo -n "500" > ${S}/conf-spawn
