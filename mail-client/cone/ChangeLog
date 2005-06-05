@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/cone
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.10 2005/04/09 22:49:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.11 2005/06/05 11:50:01 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> cone-0.63.ebuild:
+  Stable on ppc.
 
 *cone-0.64 (09 Apr 2005)
 

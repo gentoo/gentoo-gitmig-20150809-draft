@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/pinepgp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pinepgp/ChangeLog,v 1.4 2004/07/17 22:08:37 aliz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pinepgp/ChangeLog,v 1.5 2005/06/05 11:52:19 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  pinepgp-0.18.0-r1.ebuild:
+  Stable on ppc.
 
   04 Jun 2004; David Holm <dholm@gentoo.org> pinepgp-0.18.0-r1.ebuild:
   Added to ~ppc.
