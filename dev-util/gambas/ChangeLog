@@ -1,12 +1,12 @@
 # ChangeLog for dev-util/gambas
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.30 2005/06/02 00:14:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.31 2005/06/05 19:00:37 genone Exp $
 
 *gambas-1.0.6 (02 Jun 2005)
 
-  02 Jun 2005; Marius Mauch <genone@gentoo.org>
+  02 Jun 2005; Mike Frysinger <vapier@gentoo.org>
   +files/gambas-1.0.6-configure-CFLAGS.patch, +gambas-1.0.6.ebuild:
-  Version bump.
+  Version bump, adding bzip2 USE flag.
 
 *gambas-1.0.5 (23 Apr 2005)
 

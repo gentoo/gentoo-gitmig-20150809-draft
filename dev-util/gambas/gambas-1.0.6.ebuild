@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.6.ebuild,v 1.2 2005/06/02 00:14:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.6.ebuild,v 1.3 2005/06/05 19:00:37 genone Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gambas/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* -amd64"
+KEYWORDS="~x86 -amd64"
 IUSE="postgres mysql sdl doc curl sqlite xml xsl zlib kde bzip2"
 
 RDEPEND=">=x11-libs/qt-3.2
@@ -25,6 +25,7 @@ RDEPEND=">=x11-libs/qt-3.2
 	zlib? ( sys-libs/zlib )
 	bzip2? ( app-arch/bzip2 )"
 DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.59
 	>=sys-devel/automake-1.7.5"
 
 src_unpack() {
