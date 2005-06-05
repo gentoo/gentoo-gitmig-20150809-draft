@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.39 2005/05/19 19:03:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.40 2005/06/05 15:21:17 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> +files/dot_qmail-log,
+  qmail-1.03-r16.ebuild:
+  Updated qregex-starttls-2way-auth patch (Bug 88746), added a sample .qmail-log
+  file (Bug 90631), fixed bug 92742.
 
   19 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   -files/1.03-r10/99qmail, -files/1.03-r10/defaultdelivery,

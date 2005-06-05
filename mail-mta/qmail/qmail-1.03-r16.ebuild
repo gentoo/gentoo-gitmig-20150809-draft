@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.17 2005/05/01 12:46:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.18 2005/06/05 15:21:17 hansmi Exp $
 
-inherit toolchain-funcs eutils fixheadtails
+inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
-IUSE="ssl noauthcram notlsbeforeauth selinux logmail"
+IUSE="ssl noauthcram notlsbeforeauth selinux logmail mailwrapper"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
 HOMEPAGE="http://www.qmail.org/
 	http://members.elysium.pl/brush/qmail-smtpd-auth/
@@ -23,7 +23,7 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-date-localtime.patch.txt
 	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-limit-bounce-size.patch.txt
 	http://www.ckdhr.com/ckd/qmail-103.patch
-	http://www.arda.homeunix.net/store/qmail/qregex-starttls-2way-auth-20041230.patch
+	http://www.arda.homeunix.net/store/qmail/qregex-starttls-2way-auth-20050523.patch
 	http://www.soffian.org/downloads/qmail/qmail-remote-auth-patch-doc.txt
 	mirror://gentoo/qmail-gentoo-1.03-r16-badrcptto-morebadrcptto-accdias.diff.bz2
 	http://www.dataloss.nl/software/patches/qmail-popupnofd2close.patch
@@ -39,7 +39,7 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 	mirror://gentoo/qmail-1.03-r16-logrelay.diff
 	http://www.finnie.org/software/qmail-bounce-encap/qmail-bounce-encap-20040210.patch
 	"
-# broken stuffs
+# broken stuff
 #http://www.qcc.ca/~charlesc/software/misc/nullenvsender-recipcount.patch
 
 LICENSE="as-is"
@@ -83,12 +83,7 @@ src_unpack() {
 	# this patch merges a few others already
 	EPATCH_SINGLE_MSG="Adding SMTP AUTH (2 way), Qregex and STARTTLS support" \
 	EPATCH_OPTS="${EPATCH_OPTS} -F 3" \
-	epatch ${DISTDIR}/qregex-starttls-2way-auth-20041230.patch
-	#epatch ${DISTDIR}/qregex-starttls-2way-auth.patch
-	# bug #30570
-	#EPATCH_SINGLE_MSG="Fixing a memory leak in Qregex support" \
-	# TODO hansmi, 2005-01-06: no longer required
-	#epatch ${FILESDIR}/${MY_PVR}/qmail-1.03-qregex-memleak-fix.patch
+	epatch ${DISTDIR}/qregex-starttls-2way-auth-20050523.patch
 
 	# Fixes a problem when utilizing "morercpthosts"
 	# TODO hansmi, 2005-01-06: no longer required
@@ -294,6 +289,9 @@ src_unpack() {
 	else
 		einfo "Enabling CRAM_MD5 support"
 	fi
+
+	# Bug 92742
+	append-ldflags -Wl,-z,now
 
 	echo -n "$(tc-getCC) ${LDFLAGS}" > ${S}/conf-ld
 	echo -n "500" > ${S}/conf-spawn
@@ -592,6 +590,14 @@ pkg_config() {
 	done
 
 	buildtcprules
+
+	if use logmail; then
+		qmaillog=/var/qmail/alias/.qmail-log
+		if [[ ! -f ${qmaillog} ]]; then
+			einfo "Setting up sample file for logging (${qmaillog})"
+			cp ${FILESDIR}/dot_qmail-log ${qmaillog}
+		fi
+	fi
 
 	if use ssl; then
 		${ROOT}etc/cron.hourly/qmail-genrsacert.sh

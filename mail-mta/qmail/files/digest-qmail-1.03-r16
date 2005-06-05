@@ -12,7 +12,7 @@ MD5 413be7bb5b407c2964c3275c4d596947 qmail-maildir++.patch 43512
 MD5 d566e8bd99b33efee0194e855b8d6995 qmail-date-localtime.patch.txt 2603
 MD5 1c4518f780d231bde9745cdd0fa313b2 qmail-limit-bounce-size.patch.txt 1753
 MD5 9140ad2b03017145cd7963c84bb24f16 qmail-103.patch 2104
-MD5 bd4ac5850a50d0c002cb1a13b1885b60 qregex-starttls-2way-auth-20041230.patch 97384
+MD5 7179268db349cf3e40b4a45e4a83f81d qregex-starttls-2way-auth-20050523.patch 100009
 MD5 1d8b89607d35bfa409f8cfe6d23bc554 qmail-remote-auth-patch-doc.txt 1287
 MD5 750183fbd36b0fe7bf3e2edf9ec9ca2f qmail-gentoo-1.03-r16-badrcptto-morebadrcptto-accdias.diff.bz2 4736
 MD5 58d912de1ede57062fa8a3e2e0e75abf qmail-popupnofd2close.patch 401

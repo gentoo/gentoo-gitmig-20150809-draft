@@ -1,0 +1,9 @@
+# Be sure to read those links before enabling anything in here:
+#   http://cr.yp.to/qmail/faq/admin.html#copies
+#   http://www.cyber-sentry.com/index.php?id=35
+#
+# Copy all mails to ~alias/.maildir/
+#./maildir/
+#
+# Pipe all mails trough logmail.sh
+#|/usr/local/bin/logmail.sh
