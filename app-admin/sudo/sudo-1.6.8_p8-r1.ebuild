@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8.ebuild,v 1.1 2005/06/05 19:46:28 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r1.ebuild,v 1.1 2005/06/05 20:14:53 taviso Exp $
 
 inherit eutils pam
 
@@ -17,15 +17,20 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="pam skey offensive"
 
-DEPEND="pam? ( >=sys-libs/pam-0.73-r1 )
-	skey? ( >=app-admin/skey-1.1.5-r1 )"
+DEPEND="pam? ( >=sys-libs/pam-0.73-r1 ) skey? ( >=app-admin/skey-1.1.5-r1 )"
 
 S=${WORKDIR}/${P/_/}
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
+	# disallow lazy bindings
 	epatch ${FILESDIR}/${PN}-1.6.8_p1-suid_fix.patch
+
+	# disallow shellopts variable if user has disabled reset_env.
+	epatch ${FILESDIR}/sudo-strip-shellopts.diff
+
+	# compatability fix.
 	use skey && epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
 }
 
@@ -37,8 +42,8 @@ src_compile() {
 	# sudoers setting this will do.
 	einfo "Setting secure_path..."
 
-	# why not use grep? variable might be expanded other variables declared
-	# in that file, and would have to eval the result anyway.
+	# why not use grep? variable might be expanded from other variables 
+	# declared in that file, and would have to eval the result anyway.
 	eval `PS4= bash -x /etc/profile.env 2>&1 | \
 		while read -a line; do
 			case $line in

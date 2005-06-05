@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5-r1.ebuild,v 1.4 2005/05/20 12:37:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5-r4.ebuild,v 1.1 2005/06/05 20:14:53 taviso Exp $
 
 inherit eutils pam
 
@@ -17,13 +17,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="pam skey"
 
-DEPEND="pam? ( >=sys-libs/pam-0.73-r1 ) skey? ( >=app-admin/skey-1.1.5-r1 )"
+DEPEND="pam? ( virtual/pam )
+	skey? ( >=app-admin/skey-1.1.5-r1 )"
 
 S=${WORKDIR}/${P/_/}
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A}; cd ${S}
 	use skey && epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
+	epatch ${FILESDIR}/${P}-strip-bash-functions.diff
+	epatch ${FILESDIR}/${PN}-strip-shellopts.diff
 }
 
 src_compile() {
@@ -31,8 +34,8 @@ src_compile() {
 		--with-all-insults \
 		--disable-path-info \
 		--with-env-editor \
-		`use_with pam` \
-		`use_with skey` \
+		$(use_with pam) \
+		$(use_with skey) \
 		|| die "econf failed"
 	emake || die
 }
@@ -41,7 +44,12 @@ src_install() {
 	einstall || die
 	dodoc BUGS CHANGES HISTORY PORTING README RUNSON TODO \
 		TROUBLESHOOTING UPGRADE sample.*
+
 	dopamd ${FILESDIR}/sudo
+
+	insinto /etc
+	doins ${FILESDIR}/sudoers
+	fperms 0440 /etc/sudoers
 }
 
 pkg_postinst() {

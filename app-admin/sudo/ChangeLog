@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.41 2005/06/05 19:46:28 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.42 2005/06/05 20:14:53 taviso Exp $
+
+*sudo-1.6.8_p8-r1 (05 Jun 2005)
+
+  05 Jun 2005; Tavis Ormandy <taviso@gentoo.org>
+  +files/sudo-strip-shellopts.diff, +sudo-1.6.7_p5-r4.ebuild,
+  +sudo-1.6.8_p8-r1.ebuild, -sudo-1.6.8_p8.ebuild:
+  start stripping shellopts as well.
+  also remove stale ebuilds.
 
   05 Jun 2005; Tavis Ormandy <taviso@gentoo.org> sudo-1.6.8_p8.ebuild:
   enabling secure_path, which currently extracts the value from profile.env,
