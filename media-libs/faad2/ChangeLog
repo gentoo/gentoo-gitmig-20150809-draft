@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.47 2005/05/26 10:26:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.48 2005/06/05 22:30:35 hanno Exp $
+
+  05 Jun 2005; Hanno Boeck <hanno@gentoo.org>
+  +files/faad2-gcc4-warnings-and-errors.patch.gz, faad2-2.0-r7.ebuild:
+  Fix for gcc4.
 
 *faad2-2.0-r7 (26 May 2005)
 
