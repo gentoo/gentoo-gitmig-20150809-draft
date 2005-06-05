@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.104.ebuild,v 1.3 2005/05/21 15:26:19 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.104.ebuild,v 1.4 2005/06/05 21:03:32 suka Exp $
 
 inherit eutils fdo-mime rpm versionator
 
@@ -86,7 +86,7 @@ src_unpack() {
 
 	strip-linguas en af bg cs cy da de en_GB es et fi fr hu it ja km ko nb nl nn ns pt_BR sk sl sv tn xh zh_CN zh_TW zu
 
-	export LINGUAS_OOO="${LINGUAS/en}"
+	export LINGUAS_OOO="${LINGUAS/en }"
 
 	for i in ${LINGUAS_OOO}; do
 		i="${i/_/-}"
