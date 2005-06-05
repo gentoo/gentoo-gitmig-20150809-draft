@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.23 2005/05/30 18:22:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.24 2005/06/05 00:30:08 robbat2 Exp $
+
+*bglibs-1.019-r1 (05 Jun 2005)
+
+  05 Jun 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +bglibs-1.019-r1.ebuild:
+  Bug #90674, move include files out of /usr/lib/bglibs/include and use
+  symlinks to make life sane instead.
 
   30 May 2005; Sven Wegener <swegener@gentoo.org> bglibs-1.001.ebuild,
   bglibs-1.009.ebuild, bglibs-1.009-r1.ebuild, bglibs-1.011.ebuild,
