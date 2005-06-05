@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/flexbackup
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/ChangeLog,v 1.17 2005/04/24 06:21:29 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/ChangeLog,v 1.18 2005/06/05 11:29:45 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  flexbackup-1.2.1.ebuild:
+  Stable on ppc.
 
   23 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   flexbackup-1.2.1.ebuild:
