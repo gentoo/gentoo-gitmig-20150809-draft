@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.13-r1.ebuild,v 1.1 2005/01/10 05:19:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.13-r1.ebuild,v 1.2 2005/06/05 01:04:01 vapier Exp $
 
 inherit eutils games
 
@@ -13,11 +13,11 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
-RDEPEND="sys-libs/ncurses
+RDEPEND="!games-misc/wtf
+	sys-libs/ncurses
 	sys-apps/miscfiles
 	sys-apps/less
-	sys-devel/flex
-	>=sys-apps/sed-4"
+	sys-devel/flex"
 DEPEND="${RDEPEND}
 	sys-devel/bison"
 
