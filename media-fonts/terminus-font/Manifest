@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 820a0838cc9bf4525973ece5eb18a5a2 terminus-font-4.11.ebuild 1091
 MD5 60676cf60fca62bfc640fe1c60912b0d terminus-font-4.07.ebuild 1096
-MD5 5f394ae3a2e549bbb98d4694dde59e42 terminus-font-4.12.ebuild 1101
-MD5 a6657d474374e49df20512a4d72a7873 terminus-font-4.14.ebuild 1104
-MD5 a2b95019503508a0e21a5ef9caad3db9 ChangeLog 3563
+MD5 9d34810d87ccb4054876cf5e6b1e3312 ChangeLog 3669
+MD5 13a21afbc6e8a369168a6dc931996aeb terminus-font-4.12.ebuild 1104
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
-MD5 92f73aafe5535cf0996be1b810ab7c9b files/digest-terminus-font-4.07 70
-MD5 675b78bea73e2d292d68944a6c455e73 files/digest-terminus-font-4.11 70
-MD5 604792fcc99234081b4cce8320970e91 files/digest-terminus-font-4.12 70
+MD5 a6657d474374e49df20512a4d72a7873 terminus-font-4.14.ebuild 1104
 MD5 bc7d84257a5dc86feed158e475c255f7 files/digest-terminus-font-4.14 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCm+NTntT9W3vfTuoRAnwPAJ9P6sgRv85OPwXhLkZ92h11yLl4yQCfccLZ
-gD2vGCKN5L/msTfwPP7AzxQ=
-=L7iJ
------END PGP SIGNATURE-----
+MD5 92f73aafe5535cf0996be1b810ab7c9b files/digest-terminus-font-4.07 70
+MD5 604792fcc99234081b4cce8320970e91 files/digest-terminus-font-4.12 70
+MD5 675b78bea73e2d292d68944a6c455e73 files/digest-terminus-font-4.11 70
