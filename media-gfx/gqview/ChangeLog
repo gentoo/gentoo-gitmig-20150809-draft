@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gqview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.64 2005/06/03 16:17:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.65 2005/06/05 12:12:36 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> gqview-2.0.0.ebuild:
+  Stable on ppc.
 
   03 Jun 2005; Luca Barbato <lu_zero@gentoo.org> metadata.xml:
   Metadata fix

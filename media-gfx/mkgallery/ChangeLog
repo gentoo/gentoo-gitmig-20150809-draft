@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mkgallery
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mkgallery/ChangeLog,v 1.6 2004/08/30 13:35:26 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mkgallery/ChangeLog,v 1.7 2005/06/05 12:17:28 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> mkgallery-1.1.ebuild:
+  Stable on ppc.
 
   30 Aug 2004; Tom Martin <slarti@gentoo.org> mkgallery-1.1.ebuild:
   Marked ~amd64.

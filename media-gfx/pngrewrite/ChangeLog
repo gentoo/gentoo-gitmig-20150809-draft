@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pngrewrite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngrewrite/ChangeLog,v 1.7 2005/04/23 20:25:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngrewrite/ChangeLog,v 1.8 2005/06/05 12:18:56 hansmi Exp $
+
+  05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  pngrewrite-1.2.1.ebuild:
+  Stable on ppc.
 
   23 Apr 2005; Ciaran McCreesh <ciaranm@gentoo.org> pngrewrite-1.2.1.ebuild:
   Add unzip dep, bug #90103

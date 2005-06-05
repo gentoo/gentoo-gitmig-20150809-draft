@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/epix/epix-1.0.0.ebuild,v 1.3 2005/05/09 17:33:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/epix/epix-1.0.0.ebuild,v 1.4 2005/06/05 12:06:53 hansmi Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://mathcs.holycross.edu/~ahwang/epix/${P}_complete.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/tetex"
