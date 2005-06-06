@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.14 2005/05/08 19:34:30 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.15 2005/06/06 20:00:39 radek Exp $
+
+  06 Jun 2005; Radoslaw Stachowiak <radek@gentoo.org> -zodb-3.2.5.ebuild,
+  zodb-3.2.8.ebuild, zodb-3.3.1.ebuild:
+  removed old 3.2.5 ebuild
+  stable on x86 for 3.2.8 and 3.3.1
 
 *zodb-3.2.8 (08 May 2005)
 
