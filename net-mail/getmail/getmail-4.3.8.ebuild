@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.3.8.ebuild,v 1.1 2005/05/06 17:53:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.3.8.ebuild,v 1.2 2005/06/06 12:37:26 ticho Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://pyropus.ca/software/getmail/old-versions/${P}.tar.gz"
 
 SLOT="4"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 
 DEPEND=">=dev-lang/python-2.3.3"
 
