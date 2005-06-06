@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.7 2005/06/06 11:57:24 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.8 2005/06/06 14:12:43 taviso Exp $
 
 inherit eutils pam
 
@@ -26,8 +26,22 @@ src_unpack() {
 	use skey && epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
 
 	# additional variables to disallow, should user disable env_reset.
-	# NOTE: this is not a supported mode of operation, and should be avoided.
 
+	# NOTE: this is not a supported mode of operation, these variables
+	#       are added to the blacklist as a convenience to administrators
+	#       who fail to heed the warnings of allowing untrusted users
+	#       to access sudo.
+	#
+	#       there is *no possible way* to foresee all attack vectors in
+	#       all possible applications that could potentially be used via
+	#       sudo, these settings will just delay the inevitable.
+	#
+	#       that said, I will accept suggestions for variables that can
+	#       be misused in _common_ interpreters or libraries, such as 
+	#       perl, bash, python, ruby, etc., in the hope of dissuading
+	#       a casual attacker.
+
+	einfo "blacklisting variables..."
 	sudo_bad_var SHELLOPTS            # bash, change shoptions.
 	sudo_bad_var PERLIO_DEBUG         # perl, write debug to file.
 	sudo_bad_var PERL5LIB             # perl, change search path.
@@ -39,6 +53,7 @@ src_unpack() {
 	sudo_bad_var PS3                  # sh, prompt for select.
 	sudo_bad_var GLOBIGNORE           # bash, glob paterns to ignore.
 	sudo_bad_var PERL5OPT             # perl, set options
+	einfo "...done."
 }
 
 src_compile() {
@@ -47,7 +62,7 @@ src_compile() {
 	# secure_path must be compiled into sudo, so find the current setting
 	# of ROOTPATH. This is not perfect, but until it is available as a
 	# sudoers setting this will do.
-	einfo "setting secure_path..."
+	ebegin "setting secure_path..."
 
 	# why not use grep? variable might be expanded from other variables 
 	# declared in that file, and would have to eval the result anyway.
@@ -59,6 +74,7 @@ src_compile() {
 				*) continue;;
 			esac
 		done` || ewarn "failed to find secure_path, please report this"
+	eend $?
 
 	econf --with-secure-path="/bin:/sbin:/usr/bin:/usr/sbin:${ROOTPATH:-/usr/local/bin}" --with-env-editor \
 		`use_with offensive insults` \
@@ -87,8 +103,10 @@ src_install() {
 sudo_bad_var() {
 	local target='env.c' marker='\*initial_badenv_table\[\]'
 
-	# add ${1} to initial_badenv_table[].
-	sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",\n#' ${S}/${target}
+	# add $1 to initial_badenv_table[].
+	ebegin "	$1"
+		sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",\n#' ${S}/${target}
+	eend $?
 }
 
 pkg_postinst() {
