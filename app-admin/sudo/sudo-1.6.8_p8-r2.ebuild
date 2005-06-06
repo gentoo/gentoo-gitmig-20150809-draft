@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.13 2005/06/06 17:34:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.14 2005/06/06 18:10:05 taviso Exp $
 
 inherit eutils pam
 
@@ -43,22 +43,24 @@ src_unpack() {
 	# XXX: perl should be using suid_perl.
 	# XXX: <?> = probably safe in most circumstances.
 
-	einfo "Blacklisting common variables..."
+	einfo "Blacklisting common variables (!env_reset)..."
 		sudo_bad_var 'SHELLOPTS'      # bash, change shoptions.
 		sudo_bad_var 'PERLIO_DEBUG'   # perl, write debug to file.
 		sudo_bad_var 'PERL5LIB'       # perl, change search path.
+		sudo_bad_var 'PERLLIB'        # perl, change search path.
 #		sudo_bad_var 'PERL_HASH_SEED' # perl, change seed. <?>
 #		sudo_bad_var 'PERL_HASH_SEED_DEBUG' # perl, disclose seed. <?>
 #		sudo_bad_var 'PERL_SIGNALS'   # perl, use deferred signals. <?>
 		sudo_bad_var 'FPATH'          # ksh, search path for functions.
 #		sudo_bad_var 'PS4'            # sh, in case set -x is used. <?>
-#		sudo_bad_var 'NULLCMD'        # zsh, command on null-pipe. <?>
-#		sudo_bad_var 'READNULLCMD'    # zsh, command on null-redir. <?>
+		sudo_bad_var 'NULLCMD'        # zsh, command on null-redir. <?>
+		sudo_bad_var 'READNULLCMD'    # zsh, command on null-redir. <?>
 #		sudo_bad_var 'TMPPREFIX'      # zsh, prefix for tmp files. <?>
 		sudo_bad_var 'GLOBIGNORE'     # bash, glob paterns to ignore. <?>
 		sudo_bad_var 'PERL5OPT'       # perl, set options.
 		sudo_bad_var 'PYTHONHOME'     # python, module search path.
-		sudo_bad_var 'PYTHONPATH'     # python, module search path.
+		sudo_bad_var 'PYTHONPATH'     # python, search path.
+		sudo_bad_var 'PYTHONINSPECT'  # python, allow inspection.
 		sudo_bad_var 'RUBYLIB'        # ruby, lib load path.
 		sudo_bad_var 'RUBYOPT'        # ruby, cl options.
 #		sudo_bad_var 'RUBYPATH'       # ruby, script search path. <?>
