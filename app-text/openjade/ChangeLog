@@ -1,6 +1,9 @@
 # ChangeLog for app-text/openjade
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.42 2005/06/05 08:42:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.43 2005/06/06 20:29:09 leonardop Exp $
+
+  06 Jun 2005; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
+  Adding metadata.xml
 
   05 Jun 2005; Simon Stelling <blubb@gentoo.org> openjade-1.3.2-r1.ebuild:
   fully multilibified openjade
