@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/sun-jaf-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaf-bin/ChangeLog,v 1.8 2005/01/26 20:54:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaf-bin/ChangeLog,v 1.9 2005/06/06 18:07:50 axxo Exp $
+
+*sun-jaf-bin-1.0.2.2 (06 Jun 2005)
+
+  06 Jun 2005; Thomas Matthijs <axxo@gentoo.org>
+  +sun-jaf-bin-1.0.2.2.ebuild:
+  version bump, directly to stable because sun no longer has the old file
+  downloadable and the license forbits mirroring -- will be replaces by
+  gnu-jaf soon.
 
   26 Jan 2005; Markus Rothe <corsair@gentoo.org> sun-jaf-bin-1.0.2.ebuild:
   Stable on ppc64
