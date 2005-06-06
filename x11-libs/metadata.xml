@@ -11,5 +11,9 @@
 		Die Kategorie x11-libs enthält verschiedene Bibliotheken für
 		die X11-Programmierung.
 	</longdescription>
+	<longdescription lang="nl">
+		De x11-libs categorie bevat verschillende bibliotheken gerelateerd
+		aan X11.
+	</longdescription>
 </catmetadata>
 
