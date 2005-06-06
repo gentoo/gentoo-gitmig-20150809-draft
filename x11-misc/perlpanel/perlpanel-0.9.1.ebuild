@@ -1,21 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/perlpanel-0.9.0.ebuild,v 1.2 2005/06/06 08:40:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/perlpanel-0.9.1.ebuild,v 1.1 2005/06/06 08:40:44 mcummings Exp $
 
 MY_P="PerlPanel-${PV}"
 DESCRIPTION="PerlPanel is a useable, lean panel program (like Gnome's gnome-panel & KDE's Kicker) in Perl, using the Gtk2-Perl libraries."
 HOMEPAGE="http://jodrell.net/projects/perlpanel"
-SRC_URI="http://jodrell.net/files/${PN}/${MY_P}.tar.gz"
-IUSE=""
+SRC_URI="http://jodrell.net/files/perlpanel/dist/${PV}/${MY_P}.tar.gz"
+IUSE="xmms"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=x11-libs/gtk+-2.4.0
 	>=dev-perl/XML-Simple-2
 	>=dev-perl/XML-Parser-2
 	>=dev-perl/DateManip-5.42a-r1
-	>=dev-perl/Xmms-Perl-0.12
+	xmms? ( >=dev-perl/Xmms-Perl-0.12 )
 	>=dev-perl/glib-perl-1.042
 	>=dev-perl/gtk2-perl-1.042
 	>=dev-perl/gnome2-wnck-0.04

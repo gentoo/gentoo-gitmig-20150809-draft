@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/perlpanel
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/ChangeLog,v 1.8 2004/12/20 10:30:21 mcummings Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/ChangeLog,v 1.9 2005/06/06 08:40:44 mcummings Exp $
+
+*perlpanel-0.9.1 (06 Jun 2005)
+
+  06 Jun 2005; Michael Cummings <mcummings@gentoo.org>
+  +perlpanel-0.9.1.ebuild:
+  Bug 91824, version bump. Thanks for keeping track Rockoo
 
 *perlpanel-0.9.0 (20 Dec 2004)
 
