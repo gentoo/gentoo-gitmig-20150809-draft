@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.3 2005/06/06 09:30:43 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.4 2005/06/06 09:50:53 taviso Exp $
 
 inherit eutils pam
 
@@ -45,6 +45,7 @@ src_unpack() {
 	sudo_bad_var FPATH                # sh, search path for functions.
 	sudo_bad_var PS3                  # sh, prompt for select.
 	sudo_bad_var GLOBIGNORE           # bash, glob paterns to ignore.
+	sudo_bad_var PERL5OPT             # perl, set options
 }
 
 src_compile() {
