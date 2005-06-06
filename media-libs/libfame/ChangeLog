@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.34 2005/05/15 16:19:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.35 2005/06/06 10:05:49 corsair Exp $
+
+  06 Jun 2005; Markus Rothe <corsair@gentoo.org> libfame-0.9.1-r1.ebuild:
+  Stable on ppc64
 
   15 May 2005; Diego Pettenò <flameeyes@gentoo.org> libfame-0.9.1.ebuild,
   libfame-0.9.1-r1.ebuild:

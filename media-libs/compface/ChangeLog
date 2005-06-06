@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/compface
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.24 2005/06/05 12:26:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.25 2005/06/06 10:14:18 corsair Exp $
+
+  06 Jun 2005; Markus Rothe <corsair@gentoo.org> compface-1.5.1.ebuild:
+  Stable on ppc64
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> compface-1.5.1.ebuild:
   Stable on ppc.

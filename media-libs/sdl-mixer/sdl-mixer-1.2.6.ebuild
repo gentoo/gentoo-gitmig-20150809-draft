@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.6.ebuild,v 1.2 2005/06/05 07:34:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.6.ebuild,v 1.3 2005/06/06 10:10:02 corsair Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.libsdl.org/projects/SDL_mixer/release/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~mips ~ppc ppc64 ~sparc x86"
 IUSE="mpeg mikmod oggvorbis"
 
 DEPEND=">=media-libs/libsdl-1.2.5
