@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 458b21505f3309d3613a3127efbaf31a ChangeLog 6252
-MD5 8f413fa2cd1bd4b050e48043f28479ad sudo-1.6.7_p5-r4.ebuild 1501
+MD5 aacc2f00cf9ce9e2f1bcab35a02ae8fa sudo-1.6.8_p8-r2.ebuild 4644
 MD5 1830dd653b9b5b92fa5cc86823e06d65 sudo-1.6.7_p5-r2.ebuild 1438
-MD5 465d43cfe90dc6e7fcf65f064b398c8e sudo-1.6.8_p8-r2.ebuild 4635
-MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r4 64
-MD5 0c8a06b3d3d86e988a826c8d9e86dbbf files/digest-sudo-1.6.8_p8-r2 64
-MD5 6c08a6d5527a45278ebc165df7f0031d files/sudo-1.6.8_p8 223
-MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r2 64
-MD5 b1fc3dd8440dc02690820c01190106a3 files/sudo-strip-shellopts.diff 316
+MD5 8f413fa2cd1bd4b050e48043f28479ad sudo-1.6.7_p5-r4.ebuild 1501
+MD5 458b21505f3309d3613a3127efbaf31a ChangeLog 6252
 MD5 a5463236fbb98e4ee6b1a0faba8c9c52 files/sudo 135
-MD5 b906eb71f7564707384cfa9fc80c1b5f files/sudo-1.6.7_p5-strip-bash-functions.diff 1101
-MD5 46618a1b8f9dd4b3d35476c1e63217b0 files/sudo-1.6.8_p1-suid_fix.patch 434
+MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r2 64
+MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r4 64
+MD5 6c08a6d5527a45278ebc165df7f0031d files/sudo-1.6.8_p8 223
+MD5 0c8a06b3d3d86e988a826c8d9e86dbbf files/digest-sudo-1.6.8_p8-r2 64
 MD5 0b50aabedf9bb326893b5f1c333e46b2 files/sudo-skeychallengeargs.diff 567
-MD5 4362800877ccb8e27de5437707d8a954 files/sudo-strip-bash-functions.diff 1335
 MD5 d8444174d148ea0ad28b01b1ef50b2de files/sudoers 1244
+MD5 46618a1b8f9dd4b3d35476c1e63217b0 files/sudo-1.6.8_p1-suid_fix.patch 434
+MD5 b906eb71f7564707384cfa9fc80c1b5f files/sudo-1.6.7_p5-strip-bash-functions.diff 1101
+MD5 b1fc3dd8440dc02690820c01190106a3 files/sudo-strip-shellopts.diff 316
 MD5 774b75e759fe13c7334c523b1db8ab2e files/sudo_include 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCpJw5KRy60XGEcJIRAiKrAJ9BKe4585IOkt8Nbvlw73dvLS8xJgCeOGjj
-+DKVxGtE/jeOn/OuBuT2aVA=
-=B/Bw
------END PGP SIGNATURE-----
+MD5 4362800877ccb8e27de5437707d8a954 files/sudo-strip-bash-functions.diff 1335
