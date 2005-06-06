@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.4 2005/06/06 09:50:53 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.5 2005/06/06 10:51:14 taviso Exp $
 
 inherit eutils pam
 
@@ -37,7 +37,7 @@ src_unpack() {
 
 	sudo_bad_var SHELLOPTS            # bash, change shoptions.
 	sudo_bad_var PERLIO_DEBUG         # perl, write debug to file.
-	sudo_bad_var PERL5LIB	          # perl, change search path.
+	sudo_bad_var PERL5LIB             # perl, change search path.
 	sudo_bad_var PERL_HASH_SEED       # perl, change seed.
 	sudo_bad_var PERL_HASH_SEED_DEBUG # perl, disclose seed.
 	sudo_bad_var PERL_SIGNALS         # perl, use deferred signals.
