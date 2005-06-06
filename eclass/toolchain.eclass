@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.163 2005/06/05 22:48:32 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.164 2005/06/06 03:59:50 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1094,7 +1094,7 @@ gcc_do_configure() {
 		confgcc="${confgcc} --enable-__cxa_atexit"
 	fi
 	[[ ${CTARGET} == *-gnu* ]] && confgcc="${confgcc} --enable-clocale=gnu"
-	[[ ${CTARGET} == *-uclibc* ]] && [[ ${GCCMAJOR}.${GCCMAJOR} > 3.3 ]] \
+	[[ ${CTARGET} == *-uclibc* ]] && [[ ${GCCMAJOR}.${GCCMINOR} > 3.3 ]] \
 		&& confgcc="${confgcc} --enable-clocale=uclibc"
 
 	# Nothing wrong with a good dose of verbosity
@@ -1161,7 +1161,7 @@ gcc_do_make() {
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-all}
 	elif [[ $(tc-arch) == "x86" || $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ]] \
-	     && [[ ${GCCMAJOR}.${GCCMAJOR} > 3.3 ]]
+	     && [[ ${GCCMAJOR}.${GCCMINOR} > 3.3 ]]
 	then
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-profiledbootstrap}
 	else
