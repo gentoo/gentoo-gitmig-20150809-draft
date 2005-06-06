@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.4.ebuild,v 1.8 2005/05/18 20:19:07 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.4.ebuild,v 1.9 2005/06/06 13:47:35 foser Exp $
 
 inherit eutils gnome2 flag-o-matic alternatives
 
@@ -122,6 +122,12 @@ src_compile() {
 	gnome2_src_configure ${G2CONF} ${myconf}
 
 	emake || make || die "make failed"
+}
+
+src_install() {
+
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
+
 }
 
 pkg_postinst() {
