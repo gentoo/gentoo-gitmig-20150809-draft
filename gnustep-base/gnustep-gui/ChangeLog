@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.30 2005/05/05 17:49:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.31 2005/06/06 04:59:50 fafhrd Exp $
+
+  06 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  gnustep-gui-0.9.5.ebuild:
+  Stabilizations and bumps for core gnustep ebuilds.
 
   05 May 2005; Sven Wegener <swegener@gentoo.org> gnustep-gui-0.9.4.ebuild,
   gnustep-gui-0.9.4-r1.ebuild, gnustep-gui-0.9.4-r2.ebuild,

@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-back-xlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.14 2005/04/15 04:30:33 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.15 2005/06/06 05:00:28 fafhrd Exp $
+
+*gnustep-back-xlib-0.9.6 (06 Jun 2005)
+
+  06 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  gnustep-back-xlib-0.9.5.ebuild, +gnustep-back-xlib-0.9.6.ebuild:
+  Stabilizations and bumps for core gnustep ebuilds.
 
 *gnustep-back-xlib-0.9.5 (15 Apr 2005)
 

@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d7d2fa880ea111250fd7af44a2b40287 gnustep-gui-0.9.5_pre20050312.ebuild 1654
 MD5 038a3bb187c3b3b0d242a371733eb709 gnustep-gui-0.9.5_pre20050312-r1.ebuild 1787
 MD5 de5d3181f5ef6ae8fe67aef361fd2338 gnustep-gui-0.9.4-r1.ebuild 1549
-MD5 e26ff010a59e759ba7116cf999989d7b gnustep-gui-0.9.5.ebuild 1457
+MD5 04d7a01b951bbef87d51043dda7569fa gnustep-gui-0.9.5.ebuild 1456
 MD5 a49795f97062e3f4df1246ad3bad4301 gnustep-gui-0.9.4-r2.ebuild 1631
 MD5 0b4bae626bbf9a394953a68de811b387 ChangeLog 8138
 MD5 649db105cbe2e9ffcca068143f88926f metadata.xml 1355
@@ -19,10 +16,3 @@ MD5 689d09b413cf86371215ff560ee74009 files/digest-gnustep-gui-0.9.5 70
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-gui-0.9.5_pre20050312 0
 MD5 de8a4d2ff2308aaa042177ee1bcec78b files/gui-gsspell.patch 650
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-gui-0.9.5_pre20050312-r1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe0GLI1lqEGTUzyQRApJQAKDVDQm4IR0k5c3YwyXFaIqJhwolcgCffnvN
-oSvOiNoYZenDheuLmc19LJc=
-=81M2
------END PGP SIGNATURE-----

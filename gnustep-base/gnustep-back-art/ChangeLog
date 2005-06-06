@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.25 2005/05/05 18:05:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.26 2005/06/06 05:00:12 fafhrd Exp $
+
+*gnustep-back-art-0.9.6 (06 Jun 2005)
+
+  06 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  gnustep-back-art-0.9.5.ebuild, +gnustep-back-art-0.9.6.ebuild:
+  Stabilizations and bumps for core gnustep ebuilds.
 
   05 May 2005; Sven Wegener <swegener@gentoo.org>
   gnustep-back-art-0.9.4.ebuild, gnustep-back-art-0.9.4-r1.ebuild,
