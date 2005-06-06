@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.8.4.ebuild,v 1.7 2005/05/18 01:50:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.8.4.ebuild,v 1.8 2005/06/06 12:42:38 foser Exp $
 
 inherit gnome2 eutils
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 src_install() {
 
-	gnome2_src_install
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 	dobin ${FILESDIR}/rpm2cpio-file-roller
 
 }

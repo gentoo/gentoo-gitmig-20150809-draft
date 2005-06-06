@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.10.2.ebuild,v 1.4 2005/05/09 02:50:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.10.3.ebuild,v 1.1 2005/06/06 12:42:38 foser Exp $
 
 inherit gnome2 eutils
 
@@ -37,17 +37,16 @@ src_unpack() {
 
 	# Use absolute path to GNU tar since star doesn't have the same
 	# options.  On Gentoo, star is /usr/bin/tar, GNU tar is /bin/tar
-	epatch ${FILESDIR}/${PN}-2.10.2-use_bin_tar.patch
+	epatch ${FILESDIR}/${PN}-2.10.3-use_bin_tar.patch
 	# use a local rpm2cpio script to avoid the dep
 	epatch ${FILESDIR}/${PN}-2.10-use_fr_rpm2cpio.patch
-	# fix unrar #89531
-	epatch ${FILESDIR}/${PN}-2.10.2-fix_unrar.patch
 
 }
 
 src_install() {
 
-	gnome2_src_install
+	# workaround #92920 FIXME
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 	dobin ${FILESDIR}/rpm2cpio-file-roller
 
 }
