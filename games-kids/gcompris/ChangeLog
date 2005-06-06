@@ -1,6 +1,12 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.13 2005/03/17 07:01:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.14 2005/06/06 18:17:28 mr_bones_ Exp $
+
+*gcompris-6.5.3 (06 Jun 2005)
+
+  06 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +gcompris-6.5.3.ebuild:
+  version bump (bug #90351)
 
   17 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> gcompris-6.5.ebuild:
   don't install the editor desktop file if editor wasn't installed
