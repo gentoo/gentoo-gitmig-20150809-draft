@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.8 2005/06/06 14:12:43 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.9 2005/06/06 14:22:31 taviso Exp $
 
 inherit eutils pam
 
@@ -105,7 +105,7 @@ sudo_bad_var() {
 
 	# add $1 to initial_badenv_table[].
 	ebegin "	$1"
-		sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",\n#' ${S}/${target}
+		sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",#' ${S}/${target}
 	eend $?
 }
 
