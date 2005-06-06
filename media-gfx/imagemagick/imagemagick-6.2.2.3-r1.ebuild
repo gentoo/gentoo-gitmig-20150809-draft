@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.2.3-r1.ebuild,v 1.2 2005/05/19 13:14:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.2.2.3-r1.ebuild,v 1.3 2005/06/06 16:10:13 sekretarz Exp $
 
 inherit libtool flag-o-matic eutils perl-module
 
@@ -49,6 +49,7 @@ src_unpack() {
 	cd ${S}
 
 	chmod +x config.sub
+	epatch ${FILESDIR}/imagemagick-perlmagick.patch
 }
 
 src_compile() {

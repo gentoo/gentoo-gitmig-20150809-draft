@@ -1,0 +1,23 @@
+diff -Naur ImageMagick-6.2.2.orig/PerlMagick/Makefile.PL.in ImageMagick-6.2.2/PerlMagick/Makefile.PL.in
+--- ImageMagick-6.2.2.orig/PerlMagick/Makefile.PL.in	2005-05-08 22:42:15.000000000 +0200
++++ ImageMagick-6.2.2/PerlMagick/Makefile.PL.in	2005-06-05 22:46:03.615750560 +0200
+@@ -53,16 +53,16 @@
+    'CCFLAGS'     => "$Config{'ccflags'} @CFLAGS@",
+ 
+    # Linker flags for building an executable
+-   'LDFLAGS'    =>  "-L@MAGICKLIBDIR@ $Config{'ldflags'}",
++   'LDFLAGS'    =>  "-L@MAGICKLIBDIR@ -L@top_srcdir@ -L@top_srcdir@/magick/.libs $Config{'ldflags'}",
+ 
+    # Linker flags for building a dynamically loadable module
+-   'LDDLFLAGS'  => "-L@MAGICKLIBDIR@ $Config{'lddlflags'}",
++   'LDDLFLAGS'  => "-L@MAGICKLIBDIR@ -L@top_srcdir@ -L@top_srcdir@/magick/.libs $Config{'lddlflags'}",
+ 
+    # Install PerlMagick binary into ImageMagick bin directory
+    'INSTALLBIN'	=> '@BIN_DIR@',
+ 
+    # Library specification
+-   'LIBS'	=> ['-L@MAGICKLIBDIR@ -lMagick @LDFLAGS@ @MAGICK_DEP_LIBS@'],
++   'LIBS'	=> ['-L@MAGICKLIBDIR@ -L@top_srcdir@ -L@top_srcdir@/magick/.libs -lMagick @LDFLAGS@ @MAGICK_DEP_LIBS@'],
+ 
+    # Perl binary name (if a Perl binary is built)
+    'MAP_TARGET'	=> 'PerlMagick',
