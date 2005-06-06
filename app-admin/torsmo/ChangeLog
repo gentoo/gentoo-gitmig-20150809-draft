@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/torsmo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.32 2005/05/24 00:48:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.33 2005/06/06 11:58:36 dragonheart Exp $
+
+*torsmo-0.18-r4 (06 Jun 2005)
+
+  06 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/torsmo-0.18.i2c.patch, +torsmo-0.18-r4.ebuild:
+  i2c patch as per bug 95114 thanks to mrbelh. Patch thanks to Bartosz
+  Zapalowski
 
   24 May 2005; Jason Wever <weeve@gentoo.org> torsmo-0.18-r3.ebuild:
   Stable on SPARC wrt bug #93343.
