@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.10.0.ebuild,v 1.1 2005/04/19 01:47:06 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.10.0.ebuild,v 1.2 2005/06/06 13:01:47 foser Exp $
 
 inherit gnome2 eutils
 
@@ -38,5 +38,12 @@ src_unpack() {
 	cd ${S}
 	# build fix without jpeg support
 	epatch ${FILESDIR}/${PN}-2.8.0-jpeg_build.patch
+
+}
+
+src_install() {
+
+	# fix #92920 FIXME
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 
 }
