@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.164 2005/06/06 03:59:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.165 2005/06/06 04:40:54 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1855,18 +1855,13 @@ should_we_gcc_config() {
 	use bootstrap && return 0
 	use build && return 0
 
-	# If we're cross-compiling, only run gcc-config the first time
-	if is_crosscompile; then
-		return $([[ ! -e ${ROOT}/etc/env.d/gcc/config-${CTARGET} ]])
-	fi
-
 	# if the current config is invalid, we definitely want a new one
-	env -i gcc-config -c >&/dev/null || return 0
+	env -i gcc-config -c ${CTARGET} >&/dev/null || return 0
 
 	# if the previously selected config has the same major.minor (branch) as 
 	# the version we are installing, then it will probably be uninstalled
 	# for being in the same SLOT, make sure we run gcc-config.
-	local curr_config_ver=$(env -i gcc-config -c | awk -F - '{ print $5 }')
+	local curr_config_ver=$(env -i gcc-config -c ${CTARGET} | awk -F - '{ print $5 }')
 	local curr_branch_ver=$(get_version_component_range 1-2 ${curr_config_ver})
 
 	# If we're using multislot, just run gcc-config if we're installing
