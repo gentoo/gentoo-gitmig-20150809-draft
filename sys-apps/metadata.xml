@@ -16,5 +16,9 @@
 		als auch Applikationen die noch nicht in eine der anderen sys- Kategorien eingeordnet
 		wurden.
 	</longdescription>
+	<longdescription lang="nl">
+		De sys-apps categorie bevat kerenbestanddelen van het systeem, en bepaalde
+		niet-kern toepassingen die nog niet in andere categorien zijn geplaatst.
+	</longdescription>
 </catmetadata>
 
