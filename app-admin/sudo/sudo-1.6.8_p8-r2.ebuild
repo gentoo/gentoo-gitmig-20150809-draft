@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.9 2005/06/06 14:22:31 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.10 2005/06/06 14:23:44 taviso Exp $
 
 inherit eutils pam
 
@@ -41,7 +41,7 @@ src_unpack() {
 	#       perl, bash, python, ruby, etc., in the hope of dissuading
 	#       a casual attacker.
 
-	einfo "blacklisting variables..."
+	einfo "Blacklisting variables..."
 	sudo_bad_var SHELLOPTS            # bash, change shoptions.
 	sudo_bad_var PERLIO_DEBUG         # perl, write debug to file.
 	sudo_bad_var PERL5LIB             # perl, change search path.
@@ -62,7 +62,7 @@ src_compile() {
 	# secure_path must be compiled into sudo, so find the current setting
 	# of ROOTPATH. This is not perfect, but until it is available as a
 	# sudoers setting this will do.
-	ebegin "setting secure_path..."
+	ebegin "Setting secure_path..."
 
 	# why not use grep? variable might be expanded from other variables 
 	# declared in that file, and would have to eval the result anyway.
