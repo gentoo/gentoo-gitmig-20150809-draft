@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-pdf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.16 2005/05/10 16:03:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.17 2005/06/06 22:38:50 lanius Exp $
+
+  06 Jun 2005; Heinrich Wendel <lanius@gentoo.org> -cups-pdf-1.5.2.ebuild,
+  -cups-pdf-1.6.4.ebuild, cups-pdf-1.7.0a.ebuild:
+  mark 1.7.0a stable, remove old versions
 
 *cups-pdf-1.7.0a (10 May 2005)
 
