@@ -2,7 +2,7 @@ MD5 a2e83a190daa54639e35166db5f1acf0 file-roller-2.8.3.ebuild 1254
 MD5 9218252831e0fdddb923a875d01ea2d7 file-roller-2.10.3.ebuild 1345
 MD5 b986e172d90f3d97c7985405950bd0a6 file-roller-2.6.1.ebuild 1259
 MD5 be2eff9bfb03d405bfb0afdca0c208b7 file-roller-2.8.4.ebuild 1254
-MD5 6a793d387b553faa18187f951464acaf file-roller-2.10.0-r1.ebuild 1420
+MD5 2de776189430c90c9c2a10686c167be1 file-roller-2.10.0-r1.ebuild 1475
 MD5 e9d680fdd4e8270e3ca1fc0f01a704c5 ChangeLog 13584
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 762daf169c908a33e04b670097c4a4fc files/file-roller-2.6-use_fr_rpm2cpio.patch 949
