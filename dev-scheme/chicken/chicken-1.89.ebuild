@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-1.89.ebuild,v 1.3 2005/05/24 13:45:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-1.89.ebuild,v 1.4 2005/06/06 22:33:27 mkennedy Exp $
 
 inherit multilib
 
@@ -19,7 +19,7 @@ src_compile() {
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
-		--libdir=/usr/$(get_libdir)
+		--libdir=/usr/$(get_libdir) \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man || die "./configure failed"
 	make || die
