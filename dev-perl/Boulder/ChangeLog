@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Boulder
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Boulder/ChangeLog,v 1.1 2005/06/06 19:46:51 mcummings Exp $
+
+*Boulder-1.30 (06 Jun 2005)
+
+  06 Jun 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Boulder-1.30.ebuild:
+  Dep for flowscan for strerror
+
