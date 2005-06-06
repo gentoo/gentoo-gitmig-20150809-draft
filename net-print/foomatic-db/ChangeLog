@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-db
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.25 2005/04/09 12:50:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.26 2005/06/06 22:31:57 lanius Exp $
+
+  06 Jun 2005; Heinrich Wendel <lanius@gentoo.org>
+  -foomatic-db-20031018.ebuild, -foomatic-db-20031231.ebuild,
+  -foomatic-db-20040916.ebuild, foomatic-db-20041220.ebuild:
+  cleanups, mark 20041220 stable on all arches, this are only ppd and xml files
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org>
   foomatic-db-20040302.ebuild, foomatic-db-20040916.ebuild,
