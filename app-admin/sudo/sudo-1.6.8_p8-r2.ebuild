@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.6 2005/06/06 11:43:16 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.7 2005/06/06 11:57:24 taviso Exp $
 
 inherit eutils pam
 
@@ -20,7 +20,7 @@ DEPEND="pam? ( >=sys-libs/pam-0.73-r1 )
 S=${WORKDIR}/${P/_/}
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A}; cd ${S}
 
 	# compatability fix.
 	use skey && epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
@@ -47,7 +47,7 @@ src_compile() {
 	# secure_path must be compiled into sudo, so find the current setting
 	# of ROOTPATH. This is not perfect, but until it is available as a
 	# sudoers setting this will do.
-	einfo "Setting secure_path..."
+	einfo "setting secure_path..."
 
 	# why not use grep? variable might be expanded from other variables 
 	# declared in that file, and would have to eval the result anyway.
@@ -61,12 +61,12 @@ src_compile() {
 		done` || ewarn "failed to find secure_path, please report this"
 
 	econf --with-secure-path="/bin:/sbin:/usr/bin:/usr/sbin:${ROOTPATH:-/usr/local/bin}" --with-env-editor \
-		`use_with offensive insults`\
-		`use_with offensive all-insults`\
+		`use_with offensive insults` \
+		`use_with offensive all-insults` \
 		`use_with pam` \
 		`use_with skey` \
 		`use_with ldap` || die
-	
+
 	# disallow lazy bindings
 	emake SUDO_LDFLAGS="-Wl,-z,now" || die
 }
