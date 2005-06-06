@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.24 2005/05/05 16:44:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.25 2005/06/06 04:58:56 fafhrd Exp $
 
 inherit gnustep-funcs eutils flag-o-matic
 
@@ -47,7 +47,7 @@ DOC_DEPEND="doc? ( virtual/tetex
 	=dev-tex/latex2html-2002*
 	=app-text/texi2html-1.6* )"
 GNUSTEP_CORE_DEPEND="virtual/libc
-	>=sys-devel/gcc-3.0.4
+	>=sys-devel/gcc-3.3.5
 	${DOC_DEPEND}"
 ##########################################
 # Armando Di Cianno <fafhrd@gentoo.org>
