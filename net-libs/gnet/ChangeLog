@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.42 2005/04/25 06:15:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.43 2005/06/06 10:58:26 corsair Exp $
+
+  06 Jun 2005; Markus Rothe <corsair@gentoo.org> gnet-2.0.7.ebuild:
+  Stable on ppc64
 
   25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> gnet-2.0.7.ebuild:
   Stable on alpha.
