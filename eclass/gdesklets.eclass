@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.3 2005/06/06 01:45:33 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.4 2005/06/06 02:00:12 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -111,7 +111,8 @@ gdesklets_src_install() {
 			# come up with for now...
 			GFX=(`find . \
 					-iname "*.png" -o -iname "*.svg" \
-					-o -iname "*.jpg" -o -iname "*.gif"`)
+					-o -iname "*.jpg" -o -iname "*.gif" \
+					-o -iname "*.xcf"`)
 			
 			for G in ${GFX[@]}; do
 				
@@ -163,7 +164,8 @@ gdesklets_src_install() {
 	
 	GFX=$(find . -maxdepth 1 \
 		-iname "*.png" -o -iname "*.svg" \
-		-o -iname "*.jpg" -o -iname "*.gif")
+		-o -iname "*.jpg" -o -iname "*.gif" \
+		-o -iname "*.xcf")
 	
 	if [[ -n "${GFX}" ]]; then
 		# Install to the Displays directory of the Desklet
