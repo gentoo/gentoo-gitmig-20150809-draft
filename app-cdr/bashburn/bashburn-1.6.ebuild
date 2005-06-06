@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.6.ebuild,v 1.1 2005/05/09 21:37:46 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.6.ebuild,v 1.2 2005/06/06 18:36:13 sekretarz Exp $
 
 DESCRIPTION="cd burning shell script"
 HOMEPAGE="http://bashburn.sourceforge.net"
@@ -19,7 +19,7 @@ DEPEND="virtual/libc
 	media-sound/vorbis-tools
 	media-sound/normalize
 	media-libs/flac
-	sys-apps/eject"
+	virtual/eject"
 
 RDEPEND="app-shells/bash"
 
