@@ -10,5 +10,8 @@
 	<longdescription lang="de">
 		Die Kategorie x11-base enthält verschiedene X11 Implementierungen.
 	</longdescription>
+	<longdescription lang="nl">
+		De x11-base categorie bevat verschillende implementaties van X11.
+	</longdescription>
 </catmetadata>
 
