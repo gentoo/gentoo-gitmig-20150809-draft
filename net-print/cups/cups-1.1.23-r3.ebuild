@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r3.ebuild,v 1.3 2005/05/23 23:27:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r3.ebuild,v 1.4 2005/06/06 11:24:01 lanius Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -120,6 +120,11 @@ src_install() {
 	exeinto /usr/lib/cups/filter/
 	newexe ${DISTDIR}/pdftops.pl pdftops
 	dosed "s:/usr/local:/usr:" /usr/lib/cups/filter/pdftops
+}
+
+pkg_postrm() {
+	# cleanups
+	rm -fR /usr/share/doc/${MY_PV}
 }
 
 pkg_postinst() {
