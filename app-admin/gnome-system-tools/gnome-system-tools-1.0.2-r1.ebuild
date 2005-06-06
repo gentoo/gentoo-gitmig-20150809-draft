@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-1.0.2-r1.ebuild,v 1.10 2005/04/02 04:06:47 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-1.0.2-r1.ebuild,v 1.11 2005/06/06 13:33:40 foser Exp $
 
 inherit gnome2 eutils
 
@@ -39,5 +39,11 @@ src_unpack() {
 	# it after this revision. bug #71235.
 	# <obz@gentoo.org>
 	epatch ${FILESDIR}/${P}-ntp.patch
+
+}
+
+src_install() {
+
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 
 }
