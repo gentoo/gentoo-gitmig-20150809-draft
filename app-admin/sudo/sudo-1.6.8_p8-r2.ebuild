@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.10 2005/06/06 14:23:44 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.11 2005/06/06 14:52:11 taviso Exp $
 
 inherit eutils pam
 
@@ -41,18 +41,23 @@ src_unpack() {
 	#       perl, bash, python, ruby, etc., in the hope of dissuading
 	#       a casual attacker.
 
-	einfo "Blacklisting variables..."
-	sudo_bad_var SHELLOPTS            # bash, change shoptions.
-	sudo_bad_var PERLIO_DEBUG         # perl, write debug to file.
-	sudo_bad_var PERL5LIB             # perl, change search path.
-	sudo_bad_var PERL_HASH_SEED       # perl, change seed.
-	sudo_bad_var PERL_HASH_SEED_DEBUG # perl, disclose seed.
-	sudo_bad_var PERL_SIGNALS         # perl, use deferred signals.
-	sudo_bad_var FIGNORE              # sh, set glob mask.
-	sudo_bad_var FPATH                # sh, search path for functions.
-	sudo_bad_var PS3                  # sh, prompt for select.
-	sudo_bad_var GLOBIGNORE           # bash, glob paterns to ignore.
-	sudo_bad_var PERL5OPT             # perl, set options
+	einfo "Blacklisting common variables..."
+		sudo_bad_var SHELLOPTS      # bash, change shoptions.
+		sudo_bad_var PERLIO_DEBUG   # perl, write debug to file.
+		sudo_bad_var PERL5LIB       # perl, change search path.
+		sudo_bad_var PERL_HASH_SEED # perl, change seed.
+		sudo_bad_var PERL_HASH_SEED_DEBUG # perl, disclose seed.
+		sudo_bad_var PERL_SIGNALS   # perl, use deferred signals.
+		sudo_bad_var FIGNORE        # sh, set glob mask.
+		sudo_bad_var FPATH          # sh, search path for functions.
+		sudo_bad_var PS3            # sh, prompt for select.
+		sudo_bad_var GLOBIGNORE     # bash, glob paterns to ignore.
+		sudo_bad_var PERL5OPT       # perl, set options.
+		sudo_bad_var PYTHONHOME     # python, module search path.
+		sudo_bad_var PYTHONPATH     # python, module search path.
+		sudo_bad_var RUBYLIB        # ruby, lib load path.
+		sudo_bad_var RUBYOPT        # ruby, cl options.
+		sudo_bad_var RUBYPATH       # ruby, script search path.
 	einfo "...done."
 }
 
