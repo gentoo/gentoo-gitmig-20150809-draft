@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.2 2005/05/22 03:19:42 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.3 2005/06/06 01:45:33 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -141,8 +141,7 @@ gdesklets_src_install() {
 		for CTRL in ${CONTROL_INITS[@]}; do
 			
 			cd `dirname ${CTRL}`
-			addpredict /usr/lib/gdesklets # This absolutely must be fixed.
-			CTRL_NAME=$( ${GDESKLETS_INST_DIR}/gdesklets-control-getid `pwd` )
+			CTRL_NAME=$( PYTHON_DONTCOMPILE=1 ${GDESKLETS_INST_DIR}/gdesklets-control-getid `pwd` )
 			einfo "Installing Control ${CTRL_NAME}"
 			# This creates the subdirectory of ${CTRL_NAME} 
                 	# in the global Controls directory
