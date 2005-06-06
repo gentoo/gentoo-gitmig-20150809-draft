@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.8.1-r1.ebuild,v 1.8 2005/04/02 04:11:44 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.8.1-r1.ebuild,v 1.9 2005/06/06 08:19:09 foser Exp $
 
 inherit gnome2 eutils
 
@@ -30,7 +30,7 @@ RDEPEND=">=x11-libs/gtk+-2.3
 	dev-libs/libxml2
 	media-sound/esound
 	>=x11-wm/metacity-2.8.6-r1
-	>=x11-libs/libxklavier-1.02
+	=x11-libs/libxklavier-1.0*
 	!arm? ( alsa? ( >=media-libs/alsa-lib-0.9 ) )
 	gstreamer? ( >=media-libs/gst-plugins-0.8 )
 	!gnome-extra/fontilus
