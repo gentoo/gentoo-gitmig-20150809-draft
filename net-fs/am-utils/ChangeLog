@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/am-utils
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.10 2004/11/05 10:24:09 mr_bones_ Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.11 2005/06/06 23:31:21 vapier Exp $
+
+  06 Jun 2005; Mike Frysinger <vapier@gentoo.org> am-utils-6.0.9-r1.ebuild:
+  Disable parallel build since it doesnt work #67136.
 
   05 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
   am-utils-6.0.9-r1.ebuild:

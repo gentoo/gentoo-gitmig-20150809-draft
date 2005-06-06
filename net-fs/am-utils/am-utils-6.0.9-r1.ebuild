@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.0.9-r1.ebuild,v 1.11 2005/06/06 23:27:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.0.9-r1.ebuild,v 1.12 2005/06/06 23:31:21 vapier Exp $
 
 inherit eutils
 
@@ -32,7 +32,8 @@ src_compile() {
 		$(use_with ldap) \
 		--sysconfdir=/etc/amd \
 		|| die "configure failed"
-	emake || die "make failed"
+	# does not build in parallel #67136
+	emake -j1 || die "make failed"
 }
 
 src_install() {

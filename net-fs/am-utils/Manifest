@@ -1,5 +1,5 @@
-MD5 96e6032aebe7042f88086fff3010ef5d ChangeLog 1350
-MD5 f463a76705bad1ee88aa5af2eb92c81f am-utils-6.0.9-r1.ebuild 1009
+MD5 6a01dd8f79030594454e91155bc7f98e ChangeLog 1478
+MD5 fa659c8f7e566979ef1f007f83684f43 am-utils-6.0.9-r1.ebuild 1050
 MD5 a3dd8511b8874ce1b494dce2472c709c metadata.xml 159
 MD5 711232de603b2f30af85608b0ba43ca7 files/am-utils-gdbm.patch 1578
 MD5 04ee491d48ffa52a449c447af3c8fbce files/amd.conf 770
