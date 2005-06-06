@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4051 2005/06/06 05:08:18 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4052 2005/06/06 10:50:20 lanius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Heinrich Wendel <lanius@gentoo.org> (06 Jun 2005)
+# this is a beta version
+=media-sound/amarok-1.3_beta1
 
 # Armando Di Cianno <fafhrd@gentoo.org> (06 Jun 2005)
 # Masking ebuild that is incorrectly newer, but still ~arch key'd anyway;
