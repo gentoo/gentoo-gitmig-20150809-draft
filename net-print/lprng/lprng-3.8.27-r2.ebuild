@@ -1,36 +1,44 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27.ebuild,v 1.12 2005/03/03 17:12:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27-r2.ebuild,v 1.1 2005/06/06 22:53:22 lanius Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="nls"
+IUSE="nls kerberos"
 
 MY_PN=LPRng
 
 S=${WORKDIR}/${MY_PN}-${PV}
 DESCRIPTION="Extended implementation of the Berkeley LPR print spooler"
 HOMEPAGE="http://www.lprng.com/"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
 SRC_URI="ftp://ftp.lprng.com/pub/${MY_PN}/${MY_PN}/${MY_PN}-${PV}.tgz"
 
 PROVIDE="virtual/lpr"
 
 DEPEND="virtual/libc
 	sys-process/procps
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	kerberos? ( virtual/krb5 )"
 
 RDEPEND="virtual/libc
 	sys-process/procps
-	!virtual/lpr"
+	!virtual/lpr
+	foomaticdb? ( net-print/foomatic )"
 
 LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-certs.diff
+}
+
 src_compile() {
 	local myconf
 	use nls && myconf="--enable-nls"
-
+	use kerberos && myconf="--enable-kerberos"
 	# wont compile with -O3, needs -O2
 	replace-flags -O[3-9] -O2
 
@@ -70,6 +78,7 @@ src_install() {
 
 	insinto /etc/lprng
 	doins ${FILESDIR}/printcap lpd.conf lpd.perms
+	dosym /etc/lprng/printcap /etc/printcap
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/lprng-init lprng
 }
