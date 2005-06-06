@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.66 2005/05/31 21:24:57 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.67 2005/06/06 00:18:55 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -499,10 +499,16 @@ php-sapi_src_compile() {
 	myconf="${myconf} \
 		--with-config-file-path=${PHPINIDIRECTORY}" 
 
-	php-sapi_is_providerbuild || myconf="${myconf} --without-pear"
-
 	myconf="${myconf} --libdir=/usr/${libdir}/php"
-	myconf="${myconf} --with-pear=/usr/lib/php"
+
+	# only provide pear is we are a provider build, and if we do, put it in
+	# /usr/lib/php.
+	if php-sapi_is_providerbuild; then
+		myconf="${myconf} --with-pear=/usr/lib/php"
+	else
+		myconf="${myconf} --without-pear"
+	fi
+
 
 	# fix ELF-related problems
 	if has_pic ; then
