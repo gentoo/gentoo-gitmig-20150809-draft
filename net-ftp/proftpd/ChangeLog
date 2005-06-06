@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.91 2005/06/06 11:05:38 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.92 2005/06/06 20:06:41 corsair Exp $
+
+  06 Jun 2005; Markus Rothe <corsair@gentoo.org> proftpd-1.2.10-r3.ebuild:
+  Stable on ppc64; bug #93484
 
   06 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>;
   proftpd-1.2.10-r4.ebuild:
