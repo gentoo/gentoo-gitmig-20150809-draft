@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r3.ebuild,v 1.1 2005/05/30 21:00:00 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r3.ebuild,v 1.2 2005/06/06 14:59:16 pylon Exp $
 
 inherit eutils gnuconfig versionator toolchain-funcs
 
@@ -9,15 +9,15 @@ MY_CRYPT_VERS="$(get_version_component_range 1-2 )-encrypt-1.0rc1"
 DESCRIPTION="A set of tools for CD recording, including cdrecord"
 HOMEPAGE="http://cdrecord.berlios.de/old/private/cdrecord.html"
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/${P}.tar.bz2
-	crypt? ( http://burbon04.gmxhome.de/linux/files/${PN}-${MY_CRYPT_VERS}.diff.gz )"
+	on-the-fly-crypt? ( http://burbon04.gmxhome.de/linux/files/${PN}-${MY_CRYPT_VERS}.diff.gz )"
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ia64 m68k ppc s390 sh sparc x86"
-IUSE="crypt unicode"
+IUSE="on-the-fly-crypt unicode"
 
 DEPEND="!app-cdr/dvdrtools"
-RDEPEND="crypt? ( sys-fs/cryptsetup )"
+RDEPEND="on-the-fly-crypt? ( sys-fs/cryptsetup )"
 PROVIDE="virtual/cdrtools"
 
 S=${WORKDIR}/${PN}-2.01
@@ -36,7 +36,7 @@ src_unpack() {
 
 	# Add support for On-The-Fly AES encryption
 	# http://burbon04.gmxhome.de/linux/CDREncryption.html
-	if use crypt; then
+	if use on-the-fly-crypt; then
 		epatch ${DISTDIR}/${PN}-${MY_CRYPT_VERS}.diff.gz || die "Can't apply encryption patch"
 	fi
 
@@ -113,6 +113,8 @@ pkg_postinst() {
 		einfo ""
 	else
 	echo
-	einfo "The command line option 'dev=ATAPI:' should be used for IDE CD writers."
+	einfo "The command line option 'dev=/dev/hdX' (X is the name of your drive)"
+	einfo "should be used for IDE CD writers.  And make sure that the permissions"
+	einfo "on this device are set properly and your user is in the correct groups."
 	fi
 }

@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.120 2005/05/31 10:48:19 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.121 2005/06/06 14:59:16 pylon Exp $
+
+  06 Jun 2005; Lars Weiler <pylon@gentoo.org> cdrtools-2.01-r3.ebuild,
+  cdrtools-2.01.01_alpha01-r2.ebuild:
+  Renamed the ‘crypt’ USE-flag into ‘on-the-fly-crypt’ so that livecds
+  with catalyst could be built, even when crypt is enabled. Otherwise it would
+  fail with an unconfigured kernel error. Now the remaining architectures,
+  which can't build the dependent cryptsetup can mask that single USE-flag and
+  step forward with a newer version.
 
   31 May 2005; Lars Weiler <pylon@gentoo.org>
   cdrtools-2.01.01_alpha01-r2.ebuild:
