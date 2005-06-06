@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.ebuild,v 1.5 2005/06/06 13:44:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.ebuild,v 1.6 2005/06/06 13:46:12 seemant Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -42,9 +42,9 @@ src_compile() {
 		$(use_enable ipv6) \
 		$(use_enable static) \
 		--enable-shared \
-		--with-system-et --with-system-ss --with-system-db \
-		--enable-dns-for-realm \
-		|| die
+		--with-system-et --with-system-ss \
+		--with-system-db \
+		--enable-dns-for-realm || die
 
 	MAKEOPTS=-j1 emake || die
 
