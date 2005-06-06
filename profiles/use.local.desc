@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1210 2005/06/06 08:08:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1211 2005/06/06 10:56:16 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -616,7 +616,7 @@ net-fs/samba:winbind - Add support for the winbind auth daemon
 net-fs/shfs:amd - Enable automounter support
 net-ftp/frox:clamav - ClamAV antivirus support on proxy
 net-ftp/proftpd:authfile - Enable support for auth-file module
-net-ftp/proftpd:authunix - Enable support for auth-unix module
+net-ftp/proftpd:noauthunix - Disable support for auth-unix module
 net-ftp/proftpd:sendfile - Enable support for sendfile()
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:softquota - Enable support for the mod_quotatab
