@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.109 2005/06/05 08:42:32 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.110 2005/06/06 09:22:14 corsair Exp $
+
+  06 Jun 2005; Markus Rothe <corsair@gentoo.org> sylpheed-1.0.4-r1.ebuild:
+  Stable on ppc64
 
   05 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org>
   sylpheed-1.0.4-r1.ebuild:
