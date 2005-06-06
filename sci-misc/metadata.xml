@@ -14,5 +14,9 @@
 		La categoría sci-misc contiene varias aplicaciones relacionadas con la
 		ciencia que no encajan en las otras categorías sci-*.
 	</longdescription>
+	<longdescription lang="nl">
+		De sci-misc categorie bevat pakketten die niet in een andere
+		sci-* categorie passen.
+	</longdescription>
 </catmetadata>
 
