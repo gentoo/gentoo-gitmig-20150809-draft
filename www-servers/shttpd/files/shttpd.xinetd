@@ -1,0 +1,13 @@
+service shttpd
+{
+	socket_type     = stream
+	type			= UNLISTED
+	wait            = no
+	port			= 81
+	server          = /usr/sbin/shttpd
+# change these lines
+	server_args		= -d /var/www/localhost/htdocs -I -l /var/log/shttpd_access.log -e /var/log/shttpd_error.log
+	user            = root
+	group			= root
+	disable         = yes
+}

@@ -1,0 +1,12 @@
+# ChangeLog for www-servers/shttpd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.1 2005/06/06 14:17:42 ka0ttic Exp $
+
+*shttpd-1.21 (06 Jun 2005)
+
+  06 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> +files/shttpd.confd,
+  +files/shttpd.initd, +files/shttpd.xinetd, +metadata.xml,
+  +shttpd-1.21.ebuild:
+  Initial commit. Ebuild based on one submitted by Lukas Zapletal
+  <lzap@seznam.cz> in bug 94154.
+

@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/files/shttpd.initd,v 1.1 2005/06/06 14:17:42 ka0ttic Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	local opts
+	ebegin "Starting shttpd"
+
+	[[ -n "${SHTTPD_PORT}" ]] && opts="${opts} -p ${SHTTPD_PORT}"
+	[[ -n "${SHTTPD_USER}" ]] && opts="${opts} -u ${SHTTPD_USER}"
+	[[ -n "${SHTTPD_DOCROOT}" ]] && opts="${opts} -d ${SHTTPD_DOCROOT}"
+	[[ -n "${SHTTPD_LOG}" ]] && opts="${opts} -l ${SHTTPD_LOG}"
+	[[ -n "${SHTTPD_ERROR}" ]] && opts="${opts} -e ${SHTTPD_ERROR}"
+	[[ -n "${SHTTPD_INDECIS}" ]] && opts="${opts} -i ${SHTTPD_INDECIS}"
+	[[ -n "${SHTTPD_CGIEXT}" ]] && opts="${opts} -c ${SHTTPD_CGIEXT}"
+	[[ -n "${SHTTPD_DOMAIN}" ]] && opts="${opts} -N ${SHTTPD_DOMAIN}"
+	[[ -n "${SHTTPD_MIME}" ]] && opts="${opts} -m ${SHTTPD_MIME}"
+	[[ -n "${SHTTPD_EXTRAOPTS}" ]] && opts="${opts} ${SHTTPD_EXTRAOPTS}"
+
+	start-stop-daemon --background --make-pidfile --start --quiet \
+		--pidfile /var/run/shttpd.pid --startas /usr/sbin/shttpd -- \
+		${opts}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping shttpd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/shttpd.pid
+	eend $?
+}
