@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.28 2005/06/06 05:25:48 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.29 2005/06/06 21:39:03 tercel Exp $
+
+*mirrorselect-1.0.1 (06 Jun 2005)
+
+  06 Jun 2005; <colin@gentoo.org> +mirrorselect-1.0.1.ebuild:
+  bugfix for fbsd applied to testing version.
 
   06 Jun 2005; <colin@gentoo.org> ChangeLog:
   added new version. this is a complete rewrite, so it is under package.mask
