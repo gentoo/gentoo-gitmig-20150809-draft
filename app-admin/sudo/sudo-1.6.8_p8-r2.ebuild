@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.2 2005/06/06 09:09:49 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.3 2005/06/06 09:30:43 taviso Exp $
 
 inherit eutils pam
 
@@ -33,17 +33,18 @@ src_unpack() {
 	use skey && epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
 
 	# additional variables to disallow, should user disable env_reset.
-
 	# NOTE: this is not a supported mode of operation, and should be avoided.
+
 	sudo_bad_var SHELLOPTS            # bash, change shoptions.
 	sudo_bad_var PERLIO_DEBUG         # perl, write debug to file.
 	sudo_bad_var PERL5LIB	          # perl, change search path.
 	sudo_bad_var PERL_HASH_SEED       # perl, change seed.
 	sudo_bad_var PERL_HASH_SEED_DEBUG # perl, disclose seed.
 	sudo_bad_var PERL_SIGNALS         # perl, use deferred signals.
-	sudo_bad_var FIGNORE              # ksh, set glob mask.
-	sudo_bad_var FPATH                # ksh, search path for functions.
-	sudo_bad_var PS3                  # bash/ksh/etc, prompt for select.
+	sudo_bad_var FIGNORE              # sh, set glob mask.
+	sudo_bad_var FPATH                # sh, search path for functions.
+	sudo_bad_var PS3                  # sh, prompt for select.
+	sudo_bad_var GLOBIGNORE           # bash, glob paterns to ignore.
 }
 
 src_compile() {
