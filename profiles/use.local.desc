@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1212 2005/06/06 15:06:52 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1213 2005/06/06 22:37:02 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -28,6 +28,7 @@ app-cdr/cdrtools:on-the-fly-crypt - On the fly AES encryption for CD-Rs.
 app-cdr/k3b:css - Enables ripping of encrypted dvds
 app-cdr/k3b:musepack - Enable support for musepack files
 app-cdr/ogmrip:subp - Subtitle ripping preliminary support
+app-cdr/pxlinux:gnuplot - enable gnuplot support
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gpgme:smime - Add smime support
