@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.6.3.ebuild,v 1.5 2005/04/24 10:03:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.6.3.ebuild,v 1.6 2005/06/06 17:32:25 foser Exp $
 
 inherit gnome2
 
@@ -38,5 +38,11 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
+
+src_install() {
+
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
+
+}
 
 USE_DESTDIR="1"
