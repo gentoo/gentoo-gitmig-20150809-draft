@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.14.ebuild,v 1.4 2005/05/09 19:36:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.20.ebuild,v 1.1 2005/06/06 20:11:34 radek Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 x86 ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="static"
 
 S=${WORKDIR}/${PN}_${PV}
@@ -18,7 +18,7 @@ S=${WORKDIR}/${PN}_${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use static && epatch ${FILESDIR}/p7zip-4.14_x86_static.patch
+	use static && epatch ${FILESDIR}/p7zip-4.16_x86_static.patch
 	sed -i \
 		-e "/^CXX=/s:g++:$(tc-getCXX):" \
 		-e "/^CC=/s:gcc:$(tc-getCC):" \
