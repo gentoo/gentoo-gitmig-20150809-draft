@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audiotag
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.10 2005/03/11 22:08:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.11 2005/06/06 22:49:17 eradicator Exp $
+
+  06 Jun 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  audiotag-0.12.ebuild, audiotag-0.13.ebuild, audiotag-0.14.ebuild:
+  Use vorbis and mp3 USE flags.
 
 *audiotag-0.14 (11 Mar 2005)
 

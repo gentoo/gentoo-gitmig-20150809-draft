@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 94dee29024ce5e8ec0c350ebed34660a audiotag-0.12.ebuild 693
-MD5 75c853a0d0dec3386a9736727fcd1ee2 audiotag-0.14.ebuild 716
-MD5 8469c5d769bd4afe077aa654bbbd3a68 audiotag-0.13.ebuild 710
-MD5 0a6284f54ae589d2e25a1b825198a347 ChangeLog 1394
+MD5 c886da2d09178c0f5627da89e1e846b3 ChangeLog 1553
+MD5 0e5969533962eb89964baf160251adcd audiotag-0.12.ebuild 705
+MD5 b9a4ddb98f53c0c71f0130a81c9a86c1 audiotag-0.13.ebuild 722
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 c53e6e40ae3872d6ecc26014ae39c856 audiotag-0.14.ebuild 726
 MD5 a226e76d5dc4582827fff8bc0f544130 files/digest-audiotag-0.12 64
 MD5 ed2c6c9a7a7d74e9f03f15a3558a03d0 files/digest-audiotag-0.13 64
 MD5 e7bf3e2cef0276efbd35cd77c6c8bcd3 files/digest-audiotag-0.14 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMhbq06ebR+OMO78RAuFQAJ40MS8LaoLmMgLhkXttUSw8RwY8GwCfbMXi
-Vfplp+n1Oftdv1nzgUt7lvQ=
-=jeJC
+iD8DBQFCpNMCArHZZzCEUG0RAgMXAKCGwBrX570SAP8kK0AuufJzTLv+GQCfSofE
+lwbwdPBsIqGkBltKxHUY7iI=
+=jxD3
 -----END PGP SIGNATURE-----
