@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.6.8.ebuild,v 1.8 2005/05/13 23:02:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.6.8.ebuild,v 1.9 2005/06/06 16:13:05 foser Exp $
 
 inherit eutils gnome2
 
@@ -37,3 +37,9 @@ G2CONF="${G2CONF} `use_enable gnome` `use_enable gnomedb gnome-db`"
 
 DOCS="AUTHORS FAQ INSTALL NEWS README TODO"
 USE_DESTDIR="1"
+
+src_install() {
+
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
+
+}
