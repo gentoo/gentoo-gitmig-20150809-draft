@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r4.ebuild,v 1.2 2005/06/04 23:42:23 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r4.ebuild,v 1.3 2005/06/06 11:05:38 humpback Exp $
 
 inherit flag-o-matic eutils
 
 IUSE="hardened ipv6 ldap mysql pam postgres shaper softquota ssl tcpd
-	selinux sendfile authunix authfile ncurses xinetd"
+	selinux sendfile noauthunix authfile ncurses xinetd"
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -109,7 +109,7 @@ src_compile() {
 		--enable-autoshadow \
 		--enable-ctrls \
 		--with-modules=${modules} \
-		$(use_enable authunix auth-unix) \
+		$(use_enable noauthunix auth-unix) \
 		$(use_enable authfile auth-file) \
 		$(use_enable ncurses) \
 		$(use_enable ipv6) \
