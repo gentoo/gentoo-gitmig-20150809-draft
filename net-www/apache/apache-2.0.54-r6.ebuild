@@ -1,18 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r6.ebuild,v 1.4 2005/06/01 21:21:47 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r6.ebuild,v 1.5 2005/06/06 04:04:56 vericgar Exp $
 
 inherit eutils gnuconfig
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050601"
+GENTOO_PATCHSTAMP="20050605"
+GENTOO_DEVSPACE="vericgar"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 DESCRIPTION="The Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://httpd.apache.org/"
 SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
-	http://dev.gentoo.org/~urilith/dist/apache-patches/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2"
+	http://dev.gentoo.org/~${GENTOO_DEVSPACE}/dist/apache/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="2"
