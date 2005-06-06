@@ -1,11 +1,8 @@
 MD5 a1e5f8b8fb9566f795d36754e8075eb8 gcc-config-1.3.10-r2.ebuild 1428
 MD5 725a521f55a7cd15204c51bed9f29da5 ChangeLog 18100
-MD5 012868b502a874cc4f1abfa862bafb8a gcc-config-1.3.8-r4.ebuild 1429
 MD5 856d159682acb2dca11e43b8bbe42b70 gcc-config-1.4.0.ebuild 1896
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 106edaabe4dcbc34c50e9f5e4c18e2bf gcc-config-1.3.10-r1.ebuild 1431
-MD5 873937dbee2ea344378cd348b7a6d5ee files/gcc-config-1.3.8 12822
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.8-r4 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.4.0 0
 MD5 35bfdc34bf7a621fc41de516b13cb4ea files/gcc-config-1.4.0 14923
 MD5 4c31f7f5f8723588a4401dd102061301 files/gcc-config-1.3.10 13549
@@ -13,4 +10,3 @@ MD5 3b96d761f411a1befda4f334da8fea03 files/wrapper-1.4.6.c 10526
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.10-r2 0
 MD5 e3203a5aa6df669ffa479aeeb7605029 files/wrapper-1.4.5.c 10671
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.10-r1 0
-MD5 ab755343b8f0faa0b78f9adee67935cc files/wrapper-1.4.3.c 7549
