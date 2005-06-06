@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.12 2005/06/06 17:11:27 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.13 2005/06/06 17:34:04 taviso Exp $
 
 inherit eutils pam
 
@@ -50,11 +50,8 @@ src_unpack() {
 #		sudo_bad_var 'PERL_HASH_SEED' # perl, change seed. <?>
 #		sudo_bad_var 'PERL_HASH_SEED_DEBUG' # perl, disclose seed. <?>
 #		sudo_bad_var 'PERL_SIGNALS'   # perl, use deferred signals. <?>
-		sudo_bad_var 'FPATH'          # sh, search path for functions.
-		sudo_bad_var 'PS3'            # sh, prompt for select.
-		sudo_bad_var 'PROMPT3'        # zsh, like PS3.
+		sudo_bad_var 'FPATH'          # ksh, search path for functions.
 #		sudo_bad_var 'PS4'            # sh, in case set -x is used. <?>
-#		sudo_bad_var 'PROMPT*'        # zsh, like PS*. <?>
 #		sudo_bad_var 'NULLCMD'        # zsh, command on null-pipe. <?>
 #		sudo_bad_var 'READNULLCMD'    # zsh, command on null-redir. <?>
 #		sudo_bad_var 'TMPPREFIX'      # zsh, prefix for tmp files. <?>
