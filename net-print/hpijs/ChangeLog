@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hpijs
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.35 2004/12/31 11:26:09 lanius Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.36 2005/06/06 22:29:50 lanius Exp $
+
+  06 Jun 2005; Heinrich Wendel <lanius@gentoo.org> -hpijs-1.4.1.ebuild,
+  -hpijs-1.6.1.ebuild, hpijs-1.7.1.ebuild:
+  cleanups, mark 1.7.1 stable
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
