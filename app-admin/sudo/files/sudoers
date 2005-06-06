@@ -15,11 +15,15 @@
 
 # Reset environment by default
 Defaults	env_reset
-# Uncomment to allow people in group wheel to export variables
+
+# Uncomment to allow users in group wheel to export variables
 # Defaults:%wheel	!env_reset
 
-# Allow people in group users to export specific variables
+# Allow users in group users to export specific variables
 # Defaults:%users	env_keep=TZ
+
+# Allow specific user to bypass env_delete for TERMCAP
+# Defaults:user     env_delete-=TERMCAP
 
 # Runas alias specification
 

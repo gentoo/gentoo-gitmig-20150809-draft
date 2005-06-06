@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.15 2005/06/06 19:35:49 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.16 2005/06/06 22:57:30 taviso Exp $
 
 inherit eutils pam
 
@@ -41,9 +41,10 @@ src_unpack() {
 	#       a casual attacker.
 
 	# XXX: perl should be using suid_perl.
+	# XXX: users can remove/add more via env_delete and env_check.
 	# XXX: <?> = probably safe enough for most circumstances.
 
-	einfo "Blacklisting common variables (!env_reset)..."
+	einfo "Blacklisting common variables (env_delete)..."
 		sudo_bad_var 'SHELLOPTS'      # bash, change shoptions.
 		sudo_bad_var 'PERLIO_DEBUG'   # perl, write debug to file.
 		sudo_bad_var 'PERL5LIB'       # perl, change search path.

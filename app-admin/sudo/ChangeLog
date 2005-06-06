@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.46 2005/06/06 18:55:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.47 2005/06/06 22:57:30 taviso Exp $
+
+  06 Jun 2005; Tavis Ormandy <taviso@gentoo.org>
+  -files/sudo-1.6.8_p1-suid_fix.patch, files/sudoers, sudo-1.6.8_p8-r2.ebuild:
+  remove stale patch.
 
   06 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   sudo-1.6.7_p5-r4.ebuild:
