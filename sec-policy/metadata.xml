@@ -13,5 +13,9 @@
 		Die Kategorie sec-policy enthält Sicherheitsrichtlinien für 
 		Zugriffskontrollsysteme wie SELinux.
 	</longdescription>
+	<longdescription lang="nl">
+		De sec-policy categorie bevat beveilingsrichtlijnen voor toegangscontrole-
+		systemen als SELinux. 
+	</longdescription>
 </catmetadata>
 
