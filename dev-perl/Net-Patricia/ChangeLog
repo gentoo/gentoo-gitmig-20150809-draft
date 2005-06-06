@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Net-Patricia
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/ChangeLog,v 1.1 2005/06/06 20:42:55 mcummings Exp $
+
+*Net-Patricia-1.010 (06 Jun 2005)
+
+  06 Jun 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Net-Patricia-1.010.ebuild:
+  Dep for flowscan for strerror
+
