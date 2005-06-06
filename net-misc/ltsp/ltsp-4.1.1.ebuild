@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1.1.ebuild,v 1.1 2005/04/29 11:30:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1.1.ebuild,v 1.2 2005/06/06 12:48:46 lanius Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ DEPEND="app-arch/tar
 RDEPEND="X? ( virtual/x11 )
 	virtual/tftp
 	sys-apps/xinetd
-	net-misc/dhcp
+	|| ( net-misc/dhcp net-misc/dnsmasq )
 	net-fs/nfs-utils
 	net-nds/portmap
 	dev-perl/libwww-perl"
