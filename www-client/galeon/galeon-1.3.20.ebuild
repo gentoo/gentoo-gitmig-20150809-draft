@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.20.ebuild,v 1.3 2005/05/21 19:47:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.20.ebuild,v 1.4 2005/06/06 21:41:26 hanno Exp $
 
 inherit gnome2 debug libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/galeon/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 IUSE="firefox"
-KEYWORDS="~x86 ~ppc ~alpha sparc ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64 ~ia64"
 SLOT="0"
 
 S=${WORKDIR}/${P}
@@ -27,6 +27,7 @@ RDEPEND="virtual/x11
 	>=gnome-base/libbonoboui-2.1.1
 	>=gnome-base/libgnomeui-2.5.2
 	>=gnome-base/gnome-vfs-2
+	>=gnome-base/gnome-desktop-2.10.0
 	>=gnome-base/libglade-2.3.1
 	app-text/scrollkeeper"
 DEPEND="${RDEPEND}
