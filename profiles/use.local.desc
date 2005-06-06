@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1209 2005/06/05 04:57:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1210 2005/06/06 08:08:22 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -988,4 +988,3 @@ x11-wm/metisse:freetype - Enable freetype font support
 x11-wm/openbox:pango - Enable pango support
 x11-wm/openbox:startup-notification - Enable application startup notification
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
-x11-wm/windowmaker:vdesktop - Enable NEWTWM style virtual desktop support.
