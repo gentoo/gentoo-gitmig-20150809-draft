@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18-r1.ebuild,v 1.7 2005/01/01 14:58:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.19.ebuild,v 1.1 2005/06/06 16:35:25 ka0ttic Exp $
 
 inherit eutils gnuconfig bash-completion flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://swapoff.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips alpha ~hppa ~amd64 ~ia64 s390"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2
@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${PN}-0.1.18-gcc4.diff
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	gnuconfig_update
 }
@@ -27,16 +28,20 @@ src_unpack() {
 src_compile() {
 	einfo "Running autoreconf"
 	autoreconf -f -i || die "autoreconf failed"
-	replace-flags -O? -O1
+	replace-flags -O[23] -O1
 	econf --sysconfdir=/etc/devtodo || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS ChangeLog QuickStart README TODO doc/scripts.sh \
-	doc/scripts.tcsh doc/todorc.example contrib/tdrec || die "dodoc failed"
-	dobashcompletion ${FILESDIR}/${PN}.bash-completion ${PN}
+	dodoc AUTHORS ChangeLog QuickStart README doc/scripts.sh \
+	doc/scripts.tcsh doc/todorc.example || die "dodoc failed"
+
+	dobashcompletion contrib/${PN}.bash-completion ${PN}
+	rm contrib/${PN}.bash-completion
+	docinto contrib
+	dodoc contrib/*
 }
 
 pkg_postinst() {

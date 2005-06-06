@@ -1,6 +1,18 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.43 2005/04/08 12:22:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.44 2005/06/06 16:35:25 ka0ttic Exp $
+
+*devtodo-0.1.19 (06 Jun 2005)
+
+  06 Jun 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/devtodo-0.1.18-gcc4.diff, +files/devtodo-0.1.19-gentoo.diff,
+  -files/devtodo.patch, -files/devtodo-fix-TERM-sigabrt.patch,
+  -files/devtodo-fix-cd-builtin.patch, -devtodo-0.1.17-r2.ebuild,
+  -devtodo-0.1.18-r1.ebuild, devtodo-0.1.18-r2.ebuild,
+  +devtodo-0.1.19.ebuild:
+  Version bump; not many changes. most upstream changes are already present in
+  0.1.18-r2. Added gcc-4 patch which is applicable for both 0.1.18-r2 and
+  0.1.19. Tidy'd old ebuilds and patches.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> devtodo-0.1.18-r2.ebuild:
   Stable on ppc64

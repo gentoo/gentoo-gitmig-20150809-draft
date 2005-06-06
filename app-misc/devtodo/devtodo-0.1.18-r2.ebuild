@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18-r2.ebuild,v 1.12 2005/04/08 12:22:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18-r2.ebuild,v 1.13 2005/06/06 16:35:25 ka0ttic Exp $
 
 inherit eutils gnuconfig bash-completion flag-o-matic
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gcc4.diff
 	gnuconfig_update
 }
 

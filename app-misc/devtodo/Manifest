@@ -1,13 +1,20 @@
-MD5 c9e689275cbd4902645488318b23a866 ChangeLog 6294
-MD5 7682710f31d259c52a0dd3f11cfca558 devtodo-0.1.17-r2.ebuild 1667
-MD5 da5d37350b247346d077883105398d7c devtodo-0.1.18-r1.ebuild 1345
-MD5 4685485a53ddc908f6d69b148bdd06e3 devtodo-0.1.18-r2.ebuild 1348
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 09cf4262be1e0bfc3de7f9f36b91c7cb devtodo-0.1.18-r2.ebuild 1383
+MD5 4395564b1aa37ea2e2bd6639e61f17f4 devtodo-0.1.19.ebuild 1447
+MD5 883e65c095d935cd1137bc935fcd8732 ChangeLog 6850
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
-MD5 d2457f597a941172dfdc9e12d13ce605 files/devtodo-0.1.18-gentoo.diff 4853
-MD5 404d78d738ead3b99865b3f9cb33177d files/devtodo-fix-TERM-sigabrt.patch 758
-MD5 68c51e9b769e87f037a34aa64bbc911f files/devtodo-fix-cd-builtin.patch 303
-MD5 fb4916ad754050b018e360663a1f3497 files/devtodo.bash-completion 1546
-MD5 48d3c0943acaae812475061a16fe6eb9 files/devtodo.patch 2359
-MD5 cb4cff0cd869696d1207553de89551c1 files/digest-devtodo-0.1.17-r2 66
-MD5 e254b7fe4623f6fb5dfb4c9169e75ef7 files/digest-devtodo-0.1.18-r1 66
+MD5 07ddb19b677965f01eb612985e082441 files/digest-devtodo-0.1.19 66
 MD5 e254b7fe4623f6fb5dfb4c9169e75ef7 files/digest-devtodo-0.1.18-r2 66
+MD5 d2457f597a941172dfdc9e12d13ce605 files/devtodo-0.1.18-gentoo.diff 4853
+MD5 30a6fe495de6d0a0aaf435d52f83e254 files/devtodo-0.1.18-gcc4.diff 225
+MD5 fb4916ad754050b018e360663a1f3497 files/devtodo.bash-completion 1546
+MD5 d4832a9a5c0f6bd3d6a400be666a60d4 files/devtodo-0.1.19-gentoo.diff 4623
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCpHtsEZCkKN40op4RAjcaAKCVnWLk0qqpKEWaUZkpp5ZcelBYLwCggUuX
+kDgmMHQi+6OQ6BMxufKTheA=
+=0BiS
+-----END PGP SIGNATURE-----
