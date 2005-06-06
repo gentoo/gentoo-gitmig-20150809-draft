@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.5.42.ebuild,v 1.2 2005/05/06 11:52:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.5.42.ebuild,v 1.3 2005/06/06 13:52:46 foser Exp $
 
 inherit gnome2 eutils
 
@@ -27,7 +27,7 @@ DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO MAINTAINERS"
 
 src_install() {
 
-	gnome2_src_install
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 
 	# remove symlink that conflicts with <2.3 gnome-utils
 	rm -f ${D}/usr/bin/gnome-calculator
