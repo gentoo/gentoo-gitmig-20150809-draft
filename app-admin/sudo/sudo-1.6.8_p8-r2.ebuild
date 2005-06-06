@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r1.ebuild,v 1.2 2005/06/05 20:26:24 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r2.ebuild,v 1.1 2005/06/06 09:08:22 taviso Exp $
 
 inherit eutils pam
 
@@ -15,9 +15,11 @@ SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
 LICENSE="Sudo"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="pam skey offensive"
+IUSE="pam skey offensive ldap"
 
-DEPEND="pam? ( >=sys-libs/pam-0.73-r1 ) skey? ( >=app-admin/skey-1.1.5-r1 )"
+DEPEND="pam? ( virtual/pam )
+	skey? ( >=app-admin/skey-1.1.5-r1 )
+	ldap? ( >=net-nds/openldap-2.1.30-r1 )"
 
 S=${WORKDIR}/${P/_/}
 
@@ -27,11 +29,21 @@ src_unpack() {
 	# disallow lazy bindings
 	epatch ${FILESDIR}/${PN}-1.6.8_p1-suid_fix.patch
 
-	# disallow shellopts variable if user has disabled reset_env.
-	epatch ${FILESDIR}/sudo-strip-shellopts.diff
-
 	# compatability fix.
 	use skey && epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
+
+	# additional variables to disallow, should user disable env_reset.
+
+	# NOTE: this is not a supported mode of operation, and should be avoided.
+	sudo_bad_var SHELLOPTS            # bash, change shoptions.
+	sudo_bad_var PERLIO_DEBUG         # perl, write debug to file.
+	sudo_bad_var PERL5LIB	          # perl, change search path.
+	sudo_bad_var PERL_HASH_SEED       # perl, change seed.
+	sudo_bad_var PERL_HASH_SEED_DEBUG # perl, disclose seed.
+	sudo_bad_var PERL_SIGNALS         # perl, use deferred signals.
+	sudo_bad_var FIGNORE              # ksh, set glob mask.
+	sudo_bad_var FPATH                # ksh, search path for functions.
+	sudo_bad_var PS3                  # bash/ksh/etc, prompt for select.
 }
 
 src_compile() {
@@ -59,6 +71,7 @@ src_compile() {
 		`use_with offensive all-insults`\
 		`use_with pam` \
 		`use_with skey` \
+		`use_with ldap` \
 		|| die
 	emake || die
 }
@@ -74,6 +87,13 @@ src_install() {
 	doins ${FILESDIR}/sudoers
 
 	fperms 0440 /etc/sudoers
+}
+
+sudo_bad_var() {
+	local target='env.c' marker='\*initial_badenv_table\[\]'
+
+	# add ${1} to initial_badenv_table[].
+	sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",\n#' ${S}/${target}
 }
 
 pkg_postinst() {
