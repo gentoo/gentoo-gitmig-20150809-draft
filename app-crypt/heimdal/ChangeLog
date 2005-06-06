@@ -1,6 +1,25 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.68 2005/04/28 18:54:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.69 2005/06/06 20:01:26 seemant Exp $
+
+*heimdal-0.6.4-r1 (06 Jun 2005)
+
+  06 Jun 2005; Seemant Kulleen <seemant@gentoo.org>
+  +heimdal-0.6.4-r1.ebuild:
+  revision bump to fix several bugs: 1. bug #45682 by Andrea Cerrito
+  <is@gentestrana.net> which means neither heimdal nor mit-krb5 will overwrite
+  libss or com_err, which are separated out of e2fsprogs anyway. 2. bug #68039
+  by Jose Gonzalez Gomez <jgonzalez.openinput@gmail.com> which should solve
+  the kadmind initscript not actually starting kadmind -- I took
+  start-stop-daemon out of the process to start the daemon, it only stops it
+  now. 3. bug #81844 by Dmitry <dmitry@dgap.mipt.ru>, which properly renames
+  su, login and the rcp and all that stuff. Also, changed the second
+  elibtoolize to libtoolize --force --copy instead, from that same bug. 4. bug
+  #87411 by Vlastimil Holer <xholer@fi.muni.cz> who provided a patch to repair
+  maketest. This inspired me to fix up maketest properly for this package. 5.
+  bug #89074 by Spooky Ghost <spookyghost@blueyonder.co.uk>, which means there
+  is know a password checker, linked to cracklib. The krb5.conf sample has its
+  usage in there.
 
   28 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/heimdal-0.6.3-berkdb.patch.bz2,
