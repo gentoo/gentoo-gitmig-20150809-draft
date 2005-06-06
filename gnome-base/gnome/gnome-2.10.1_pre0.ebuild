@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10.1_pre0.ebuild,v 1.3 2005/06/05 22:05:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10.1_pre0.ebuild,v 1.4 2005/06/06 09:22:12 gmsoft Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -21,8 +21,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-libs/gtk+-2.6.7
 	>=x11-libs/pango-1.8
 
-	hppa? ( >=dev-libs/libxml2-2.6.9 )
-	!hppa? ( >=dev-libs/libxml2-2.6.17 )
+	>=dev-libs/libxml2-2.6.17
 	>=dev-libs/libxslt-1.1.12
 
 	>=x11-libs/libxklavier-2.0
@@ -58,7 +57,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-sound/sound-juicer-2.10
 
 	>=media-gfx/eog-2.10
-	!hppa? ( !mips? ( >=www-client/epiphany-1.6.3 ) )
+	!mips? ( >=www-client/epiphany-1.6.3 )
 	>=app-arch/file-roller-2.10.2
 	>=gnome-extra/gcalctool-5.5.42
 	>=gnome-extra/gconf-editor-2.10

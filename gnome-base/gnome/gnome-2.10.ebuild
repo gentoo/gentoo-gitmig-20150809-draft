@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10.ebuild,v 1.5 2005/06/05 19:34:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10.ebuild,v 1.6 2005/06/06 09:22:12 gmsoft Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -58,7 +58,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-sound/sound-juicer-2.10
 
 	>=media-gfx/eog-2.8.0
-	!hppa? ( !mips? ( >=www-client/epiphany-1.6.0-r3 ) )
+	!mips? ( >=www-client/epiphany-1.6.0-r3 )
 	>=app-arch/file-roller-2.10-r1
 	>=gnome-extra/gcalctool-5.5.41
 	>=gnome-extra/gconf-editor-2.10
