@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.17.ebuild,v 1.1 2005/02/11 07:28:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.17.ebuild,v 1.2 2005/06/06 08:49:30 cardoe Exp $
 
 inherit myth kde-functions
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=sys-apps/sed-4
 	>=kde-base/kdelibs-3.1
-	|| ( ~media-tv/mythtv-${PV} ~media-tv/mythfrontend-${PV} )"
+	~media-tv/mythtv-${PV}"
 
 setup_pro() {
 	set-kdedir
