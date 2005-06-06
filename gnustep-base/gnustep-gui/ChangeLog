@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.32 2005/06/06 18:25:38 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.33 2005/06/06 18:27:17 fafhrd Exp $
+
+  06 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  +files/digest-gnustep-gui-0.9.5, Manifest:
+  CVS-removed digest accidentally; removed/readding to fix things
 
   06 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org>
   -gnustep-gui-0.9.5_pre20050312.ebuild:
