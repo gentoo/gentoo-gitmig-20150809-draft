@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 205c9b88dcccd2824f79de2465b87b6e mythtv-0.17-r1.ebuild 7323
-MD5 455cac96bf7d43f76fc1695835a15d30 mythtv-0.18.1-r1.ebuild 4493
-MD5 a35d400589bd8832dd6dcd8bab6e921f ChangeLog 12701
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
-MD5 022a6e020e531643a746c21424db6bf7 mythtv-0.18.1-r2.ebuild 4941
-MD5 946d39e6c7d43c06d11d2bc6e09d5c21 files/0.18-mythbackend.rc 1606
-MD5 b288872f9393adf2b30f40b6ee01eac5 files/digest-mythtv-0.18.1-r1 67
-MD5 b288872f9393adf2b30f40b6ee01eac5 files/digest-mythtv-0.18.1-r2 67
+MD5 5e5edd016bcae56a7f6a525c1e7a47a8 ChangeLog 12866
+MD5 205c9b88dcccd2824f79de2465b87b6e mythtv-0.17-r1.ebuild 7323
+MD5 393d04db13b2c4fecfefbe8952370331 mythtv-0.18.1-r2.ebuild 5112
+MD5 8351d73450276e5d0cf4836cc4541ec3 mythtv-0.18.1-r1.ebuild 4676
 MD5 590c9a6a89442b347c3a5f52d1781351 files/digest-mythtv-0.17-r1 66
 MD5 2623cb1c902bf07fca69b846e7a0915a files/mythbackend.conf 1186
-MD5 fde2b2886b037b199cc815dbcb12617e files/mythtv-0.18.1-x86_64-configure.patch 631
-MD5 4985a61b90909b7f1c926f79a3ba34bf files/0.18-mythbackend.conf 931
 MD5 5938ea3584383e501674bf67a7f7e2a7 files/mythbackend.rc6 1776
-MD5 bcfd584bc73afea9d88c8afe7d47f5be files/mythtv-0.17-qt334-dst-fix.patch 5663
-MD5 340e376a796fcc134e37222f01d705b3 files/mythtv-0.18.1-opengl-fix.patch 304
 MD5 3632cf0ce1fad88f806ae8801316a6fc files/mythfilldatabase.cron 73
+MD5 bcfd584bc73afea9d88c8afe7d47f5be files/mythtv-0.17-qt334-dst-fix.patch 5663
+MD5 b288872f9393adf2b30f40b6ee01eac5 files/digest-mythtv-0.18.1-r1 67
+MD5 946d39e6c7d43c06d11d2bc6e09d5c21 files/0.18-mythbackend.rc 1606
+MD5 4985a61b90909b7f1c926f79a3ba34bf files/0.18-mythbackend.conf 931
+MD5 340e376a796fcc134e37222f01d705b3 files/mythtv-0.18.1-opengl-fix.patch 304
+MD5 b288872f9393adf2b30f40b6ee01eac5 files/digest-mythtv-0.18.1-r2 67
+MD5 fde2b2886b037b199cc815dbcb12617e files/mythtv-0.18.1-x86_64-configure.patch 631
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCnZyQ2G5bA0cA/ScRAkEbAJwK3gI53F4qat7QMZ1SZtKiYNWqXQCcCGUA
-7YVuOgEXPMY8NRlpqzWY7Bk=
-=KwnS
+iD4DBQFCpCDdBtvusYtCZMsRAvGXAJ9vjWbVC5X1hSK482KE6eEnOHuurgCXalMu
+tg5Gfk9cale9Dl7N9KbqIg==
+=DLKs
 -----END PGP SIGNATURE-----

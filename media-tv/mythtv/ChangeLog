@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.67 2005/06/01 11:28:11 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.68 2005/06/06 10:10:00 cardoe Exp $
+
+  06 Jun 2005; Doug Goldstein <cardoe@gentoo.org> mythtv-0.18.1-r1.ebuild,
+  mythtv-0.18.1-r2.ebuild:
+  clean the amd64 stank off. fix frontendonly. fix xv usage.
 
   01 Jun 2005; Herbie Hopkins <herbs@gentoo.org>
   +files/mythtv-0.18.1-x86_64-configure.patch, mythtv-0.18.1-r2.ebuild:
