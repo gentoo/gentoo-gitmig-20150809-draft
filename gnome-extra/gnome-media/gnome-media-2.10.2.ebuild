@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.10.2.ebuild,v 1.2 2005/05/06 11:28:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.10.2.ebuild,v 1.3 2005/06/06 13:28:38 foser Exp $
 
 inherit gnome2
 
@@ -42,3 +42,10 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 G2CONF="${G2CONF} $(use_enable ipv6) --disable-esdtest"
 
 USE_DESTDIR="1"
+
+src_install() {
+
+	# fix #92920 FIXME
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
+
+}
