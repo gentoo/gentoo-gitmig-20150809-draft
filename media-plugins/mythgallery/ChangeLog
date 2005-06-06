@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythgallery
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.28 2005/05/31 14:11:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.29 2005/06/06 08:57:54 cardoe Exp $
+
+  06 Jun 2005; Doug Goldstein <cardoe@gentoo.org> -mythgallery-0.16.ebuild,
+  -mythgallery-0.17.ebuild, mythgallery-0.17-r1.ebuild,
+  -mythgallery-0.18.ebuild:
+  Fixed deps for removed mythfrontend
 
   31 May 2005; David Holm <dholm@gentoo.org> mythgallery-0.18.1.ebuild:
   Added to ~ppc.
