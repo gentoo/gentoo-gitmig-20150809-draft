@@ -10,5 +10,6 @@ MD5 0b50aabedf9bb326893b5f1c333e46b2 files/sudo-skeychallengeargs.diff 567
 MD5 d8444174d148ea0ad28b01b1ef50b2de files/sudoers 1244
 MD5 46618a1b8f9dd4b3d35476c1e63217b0 files/sudo-1.6.8_p1-suid_fix.patch 434
 MD5 b906eb71f7564707384cfa9fc80c1b5f files/sudo-1.6.7_p5-strip-bash-functions.diff 1101
+MD5 b1fc3dd8440dc02690820c01190106a3 files/sudo-strip-shellopts.diff 316
 MD5 774b75e759fe13c7334c523b1db8ab2e files/sudo_include 67
 MD5 4362800877ccb8e27de5437707d8a954 files/sudo-strip-bash-functions.diff 1335
