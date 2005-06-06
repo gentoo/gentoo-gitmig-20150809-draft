@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.40 2005/01/02 19:22:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.41 2005/06/06 18:59:21 kugelfang Exp $
+
+  06 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> opencdk-0.5.5.ebuild:
+  Marked ~s390.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -20,12 +23,6 @@
 
   09 Aug 2004; Guy Martin <gmsoft@gentoo.org> opencdk-0.5.5.ebuild:
   Stable on hppa.
-
-  08 Aug 2004; Luca Barbato <lu_zero@gentoo.org> opencdk-0.5.5.ebuild:
-  Marked ppc
-
-  08 Aug 2004; Luca Barbato <lu_zero@gentoo.org> opencdk-0.5.5.ebuild:
-  Marked ppc
 
   08 Aug 2004; Luca Barbato <lu_zero@gentoo.org> opencdk-0.5.5.ebuild:
   Marked ppc
