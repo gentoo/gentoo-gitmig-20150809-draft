@@ -1,9 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 98e83b9616561dbb866d55ed5cfaa769 libinklevel-0.6.4.ebuild 584
+MD5 fd5b0f209f79e3816af4c566f0450d26 libinklevel-0.6.4.ebuild 586
 MD5 dee3dc9e6a9c39595d4e92861afdf0af libinklevel-0.6.3.ebuild 583
-MD5 303f11323b2069e790d17c7bc81e2654 libinklevel-0.6.ebuild 568
 MD5 ec27c78613e5d8f556b6632066daad30 ChangeLog 1599
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 20f52131c54c7afab8cd4a10e3f9e761 files/digest-libinklevel-0.6.3 68
@@ -11,7 +10,7 @@ MD5 c0b767fae98bad97f60a0cd79ca1c13c files/digest-libinklevel-0.6.4 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCpNIgevY57Fted3ERAgP8AKCQ9ayAq9FIFF9V4kredgdfyGrdVQCdEPEV
-FvyCNrwkSFCYismZrb2eOaY=
-=Ex+7
+iD8DBQFCpNMfevY57Fted3ERAmg4AKCKv3W/x0IJB6uo+Gktac2IKdRR7ACgsuWx
+TJEu6Q1NpTe3fBjYve8QVDE=
+=3QO6
 -----END PGP SIGNATURE-----
