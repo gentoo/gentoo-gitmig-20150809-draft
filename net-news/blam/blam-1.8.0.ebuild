@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.0.ebuild,v 1.5 2005/05/31 11:59:51 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.0.ebuild,v 1.6 2005/06/06 08:22:48 dholm Exp $
 
 inherit mono eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.imendio.com/pub/imendio/${PN}/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 DEPEND=">=dev-lang/mono-1.1.4
