@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/clipbook/clipbook-0.6.0.7.1.ebuild,v 1.1 2005/04/15 04:35:27 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/clipbook/clipbook-0.6.0.7.1.ebuild,v 1.2 2005/06/06 07:12:21 fafhrd Exp $
 
 inherit gnustep
 
@@ -10,7 +10,7 @@ DESCRIPTION="A clipboard for GNUstep that can hold things for later copy and pas
 HOMEPAGE="http://www.gnustep.it/enrico/gworkspace/"
 SRC_URI="http://www.gnustep.it/enrico/gworkspace/gworkspace-${PV/0.6.}.tar.gz"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 

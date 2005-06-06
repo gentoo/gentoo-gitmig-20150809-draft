@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gwnet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/ChangeLog,v 1.7 2005/04/15 04:35:42 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/ChangeLog,v 1.8 2005/06/06 07:12:48 fafhrd Exp $
+
+  06 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org> gwnet-0.1.0.7.1.ebuild:
+  Stabilization for GNUstep GWorkspace related ebuilds
 
 *gwnet-0.1.0.7.1 (15 Apr 2005)
 
