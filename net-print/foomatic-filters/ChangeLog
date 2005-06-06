@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.27 2005/06/06 13:05:25 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.28 2005/06/06 14:23:09 swegener Exp $
+
+  06 Jun 2005; Sven Wegener <swegener@gentoo.org>
+  foomatic-filters-3.0.2.ebuild:
+  Changed the sub || DEPEND to one toplevel || DEPEND. Trim trailing whitespace.
 
   06 Jun 2005; Heinrich Wendel <lanius@gentoo.org>
   foomatic-filters-3.0.2.ebuild:

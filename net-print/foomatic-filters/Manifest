@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 29c3373bcf4f90a14438e7945b91c08f foomatic-filters-3.0.0.20031018.ebuild 982
 MD5 041f97d5a15bc6687d557a547690c8bb foomatic-filters-3.0.0.ebuild 917
-MD5 a3b79cd74a28a7d865a78a675e55db75 foomatic-filters-3.0.2.ebuild 964
+MD5 ea3b5951cf82f60405360a194c3abbbe foomatic-filters-3.0.2.ebuild 957
 MD5 c40ff9b148d3a399c0c44504845c4589 foomatic-filters-3.0.1.ebuild 876
-MD5 7fec6fe52245d2248d6851605b4c2017 ChangeLog 3386
+MD5 1f71b31dd7ef2fb9505a83475ae29919 ChangeLog 3553
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 badc1853d836e649505d05c126752c7c files/digest-foomatic-filters-3.0.0.20031018 81
 MD5 d91b0c83a21bba83a5b118587aa03afc files/digest-foomatic-filters-3.0.0 74
@@ -14,7 +14,7 @@ MD5 15989d79c05dd0a31c3c93e4a8d41a30 files/digest-foomatic-filters-3.0.2 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCpEo6evY57Fted3ERAjr+AJ957nKiZX0PhEEgSe1WzSo1aSZPmgCgrw9p
-34CeX2rnmFNZLaFCYGtBS6c=
-=l+LN
+iD8DBQFCpFxnI1lqEGTUzyQRAnVgAKCUQOvgzRmlLErjhaUBMZCBYmx15gCeIgJJ
+E8DdzV5DXbj1p5bIIew2Uwc=
+=cDRH
 -----END PGP SIGNATURE-----
