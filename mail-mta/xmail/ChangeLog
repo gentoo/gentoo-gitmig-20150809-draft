@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/xmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.11 2005/06/06 13:22:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.12 2005/06/06 13:25:38 ticho Exp $
+
+  06 Jun 2005; Andrej Kacian <ticho@gentoo.org> -xmail-1.16.ebuild:
+  Removed 1.16.
 
   06 Jun 2005; Andrej Kacian <ticho@gentoo.org> files/xmail.initd:
   Fixed sed command in the initscript. Bug #91141, by <quinox_san_ at
