@@ -1,6 +1,12 @@
 # ChangeLog for net-print/gtklp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.16 2005/01/05 16:12:45 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.17 2005/06/06 22:44:36 lanius Exp $
+
+*gtklp-1.0d (06 Jun 2005)
+
+  06 Jun 2005; Heinrich Wendel <lanius@gentoo.org> -gtklp-0.9m.ebuild,
+  +gtklp-1.0d.ebuild:
+  version bump
 
   05 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org> gtklp-0.9p.ebuild:
   Added to ~amd64, bug #76247
