@@ -12,6 +12,7 @@ caps
 directfb
 divx4linux
 djbfft
+emul-linux-x86
 fbcon
 fdftk
 fmod
@@ -50,6 +51,7 @@ mikmod
 mono
 mzscheme
 nas
+on-the-fly-crypt
 qdbm
 socks5
 xmms
@@ -84,7 +86,6 @@ postgres
 # masked until the missing dylib extension is fixed
 pcre
 
-emul-linux-x86
 
 # breaks clisp builds
 fastcgi
