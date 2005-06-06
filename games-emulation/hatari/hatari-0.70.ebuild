@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.70.ebuild,v 1.1 2005/06/06 20:40:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.70.ebuild,v 1.2 2005/06/06 21:07:08 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/hatari/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 RDEPEND="games-emulation/emutos
@@ -30,15 +30,14 @@ src_unpack() {
 }
 
 src_compile() {
-	cd src
-	emake -j1 || die "emake failed"
+	emake -C src -j1 || die "emake failed"
 }
 
 src_install() {
-	dogamesbin "${S}/src/hatari"
+	dogamesbin "${S}/src/hatari" || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins src/gui-sdl/font5x8.bmp
-	doins src/gui-sdl/font10x16.bmp
+	doins src/gui-sdl/font5x8.bmp src/gui-sdl/font10x16.bmp \
+		|| die "doins failed"
 	dodoc readme.txt doc/*.txt
 	dohtml -r doc/
 	prepgamesdirs
