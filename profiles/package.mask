@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4055 2005/06/06 15:05:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4056 2005/06/06 18:20:14 fafhrd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -26,9 +26,13 @@
 =media-sound/amarok-1.3_beta1
 
 # Armando Di Cianno <fafhrd@gentoo.org> (06 Jun 2005)
-# Masking ebuild that is incorrectly newer, but still ~arch key'd anyway;
-# saving it for a rainy day
+# Masking ebuilds that are incorrectly newer, but still ~arch key'd anyway;
+# saving for a rainy day
 =gnustep-base/gnustep-make-1.10.1_pre20050312-r1
+=gnustep-base/gnustep-base-1.10.2_pre20050312
+=gnustep-base/gnustep-gui-0.9.5_pre20050312-r1
+=gnustep-base/gnustep-back-xlib-0.9.5_pre20050312
+=gnustep-base/gnustep-back-art-0.9.5_pre20050312
 
 # Colin Kingsley <tercel@gentoo.org> (06 June 2005)
 # Masked for testing
