@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5f17860504f278d1f57876fab79fb934 mod_auth_pgsql-2.0.2-r2.ebuild 1000
+MD5 859b35ce1de5d671b724cd84c30e4578 mod_auth_pgsql-2.0.2-r2.ebuild 1007
+MD5 a0da823d6a9401b681f1b2fa83a7ff8c mod_auth_pgsql-0.9.12-r1.ebuild 1181
+MD5 20f18f3420681a38968260b5e0b053ac ChangeLog 2877
 MD5 86abe018bcaf60e139c4574121c2f0a5 metadata.xml 183
-MD5 aa31c48c9897f4e7ca6494c6653cff8e ChangeLog 2671
-MD5 9edbf9cd20f79903fab55f4ca4632ef0 mod_auth_pgsql-0.9.12-r1.ebuild 1174
-MD5 63b5c7102406941433202d64b840179b mod_auth_pgsql-0.9.12.ebuild 1477
-MD5 50dbd8d75c5521278d4eea6598d7c797 mod_auth_pgsql-2.0.2-r1.ebuild 1090
-MD5 33aa974738c1fa067c57329de84f8f98 files/digest-mod_auth_pgsql-0.9.12-r1 72
-MD5 d62d220e5910e2eefec77ad861d2d040 files/80_mod_auth_pgsql.conf 147
-MD5 dd3e63a5a1b40ae7f562b1d6cb79b5b0 files/digest-mod_auth_pgsql-2.0.2-r2 73
+MD5 c4af4458f6312bcb5cb685714f5a859a mod_auth_pgsql-2.0.2-r1.ebuild 1097
+MD5 8ef7647411999ebd16a01f08fa158100 mod_auth_pgsql-0.9.12.ebuild 1484
 MD5 33aa974738c1fa067c57329de84f8f98 files/digest-mod_auth_pgsql-0.9.12 72
 MD5 dd3e63a5a1b40ae7f562b1d6cb79b5b0 files/digest-mod_auth_pgsql-2.0.2-r1 73
-MD5 c7576a76e457b6ae681019a0325dc4f8 files/2.0.2-r2/80_mod_auth_pgsql.conf 142
+MD5 dd3e63a5a1b40ae7f562b1d6cb79b5b0 files/digest-mod_auth_pgsql-2.0.2-r2 73
+MD5 d62d220e5910e2eefec77ad861d2d040 files/80_mod_auth_pgsql.conf 147
+MD5 33aa974738c1fa067c57329de84f8f98 files/digest-mod_auth_pgsql-0.9.12-r1 72
 MD5 c7576a76e457b6ae681019a0325dc4f8 files/0.9.12-r1/80_mod_auth_pgsql.conf 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdS2MjUHll2nfF60RAqp8AKC0MLdE90EwV/Eda1aYzxmt4Fo5jQCeNpId
-tqWHfW8TqsA2bDQ1cq5ahpU=
-=+7d2
------END PGP SIGNATURE-----
+MD5 c7576a76e457b6ae681019a0325dc4f8 files/2.0.2-r2/80_mod_auth_pgsql.conf 142
