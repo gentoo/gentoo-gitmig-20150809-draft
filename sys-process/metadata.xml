@@ -14,5 +14,9 @@
 		Die Kategorie sys-process enthält Pakete für das Arbeiten mit Prozessen.
 		Auch die Cron-Daemons sind in dieser Kategorie enthalten.
 	</longdescription>
+	<longdescription lang="nl">
+		De sys-process categorie bevat pakketten voor de omgang met processen. Ook
+		de verschillende cron-daemons behoren tot deze categorie.
+	</longdescription>
 </catmetadata>
 
