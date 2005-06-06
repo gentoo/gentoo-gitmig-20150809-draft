@@ -12,5 +12,8 @@
 		Die Kategorie sys-boot enthält Bootloader sowie damit in 
 		Zusammenhang stehende Programme.
 	</longdescription>
+	<longdescription lang="nl">
+		De sys-boot categorie bevat bootloaders en bijbehorende gereedschappen. 
+	</longdescription>
 </catmetadata>
 
