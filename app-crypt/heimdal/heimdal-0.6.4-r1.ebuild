@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.4-r1.ebuild,v 1.2 2005/06/06 20:02:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.4-r1.ebuild,v 1.3 2005/06/06 21:51:25 seemant Exp $
 
 inherit libtool eutils virtualx toolchain-funcs
 
@@ -76,7 +76,7 @@ src_compile() {
 	# Compile the added password checker:
 	cd ${S}/lib/kadm5
 	tc-export CC
-	${CC} -shared -fPIC ${CFLAGS} \
+	${CC} -shared -fPIC ${CFLAGS} -I${S}/include \
 		-o sample_passwd_check.so sample_passwd_check.c -lcrack || \
 		die "Failed to compile password checker"
 
