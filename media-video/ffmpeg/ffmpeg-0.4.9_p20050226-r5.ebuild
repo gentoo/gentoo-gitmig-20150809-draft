@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r5.ebuild,v 1.8 2005/05/22 15:55:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r5.ebuild,v 1.9 2005/06/06 10:42:35 corsair Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # ~alpha need to test aac useflag
 # ~ia64 ~arm ~mips ~hppa 
-KEYWORDS="amd64 ppc ~ppc64 sparc x86 ~ia64"
+KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="aac altivec debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss threads truetype v4l xvid dts network zlib sdl"
 
 # Theora support has switch but there's no oggtheora.c sourcefile...
