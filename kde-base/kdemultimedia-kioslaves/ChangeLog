@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-kioslaves
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.10 2005/05/26 09:02:19 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.11 2005/06/07 15:35:04 greg_g Exp $
+
+  07 Jun 2005; Gregorio Guidi <greg_g@gentoo.org>
+  kdemultimedia-kioslaves-3.4.1.ebuild:
+  Correct dependencies.
 
   26 May 2005; Gregorio Guidi <greg_g@gentoo.org>
   kdemultimedia-kioslaves-3.4.1.ebuild:
