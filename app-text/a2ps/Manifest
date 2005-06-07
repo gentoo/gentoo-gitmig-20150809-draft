@@ -1,4 +1,7 @@
-MD5 0c7edcf0a08aa935ceb7b5d3c086bc7a a2ps-4.13c-r2.ebuild 1986
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bcf79b34d9acde4ba5f4c6cc40d9bd5a a2ps-4.13c-r2.ebuild 1986
 MD5 11fd1053faff66872b3c10e654ab7db5 ChangeLog 5859
 MD5 26dba0307103de2d599fe832e219de72 metadata.xml 178
 MD5 5a02e00e2362711886e28f0d28b299dd files/a2ps-4.13-stdout.diff 462
@@ -9,3 +12,10 @@ MD5 adde8c4bf7673c1b4a07aa8aa62cb273 files/digest-a2ps-4.13c-r2 63
 MD5 b62538dbd828d995bdc3ce36188b0768 files/a2ps-4.13-select-freebsd.patch 1582
 MD5 d68d0bfab547ef1ce70576c7a5570f13 files/a2ps-4.13c-psmandup.diff 569
 MD5 449b2445dc0949a990a2b29cab89dc59 files/4.13c-gcc34.patch 348
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCpdwWevY57Fted3ERAm0TAKC8e5JjNp5p2GwvYT/lXThcTpEeggCg2gID
+bhMUzfRg31jrcrrJo6XjW58=
+=oMyB
+-----END PGP SIGNATURE-----
