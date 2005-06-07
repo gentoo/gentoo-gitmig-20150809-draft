@@ -65,7 +65,7 @@ smartcard
 
 # get to this later
 bash-completion
-crypt
+on-the-fly-crypt
 doc
 pam_console
 
