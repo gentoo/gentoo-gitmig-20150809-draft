@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b244578766fe146baea3e7f0064ca3df netris-0.52.ebuild 843
-MD5 82832d72e06b88c6f7ccb47ed8d302ef ChangeLog 727
+MD5 6b8a21f3a09f7947f7e120e81472a7a1 ChangeLog 848
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 502dbe54c4544a8cd71a5210e784d437 files/netris-time.patch 340
+MD5 ad4aba56c19752a8ac5582626e2f8a07 netris-0.52.ebuild 853
 MD5 e1563bb4d53b0f0c5edba1d530b934f8 files/digest-netris-0.52 126
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCnOY7ntT9W3vfTuoRAlfoAJ9b5G5mqLeS7OnWUa37AjorlPg/6ACgi5v9
-Ey23neMaK2YYJ1afOiL/65U=
-=Q3n+
------END PGP SIGNATURE-----
+MD5 502dbe54c4544a8cd71a5210e784d437 files/netris-time.patch 340
