@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.7.1.ebuild,v 1.3 2005/06/06 22:29:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.7.1.ebuild,v 1.4 2005/06/07 17:05:23 lanius Exp $
 
 inherit eutils gnuconfig
 
@@ -73,4 +73,7 @@ pkg_postinst() {
 	einfo
 	einfo "The hpijs ebuild no longer creates the ppds automatically, please use"
 	einfo "foomatic to do so or remerge hpijs with the ppds use flag."
+	echo
+	einfo "net-print/hpijs is deprecated, please use net-print/hplip"
+	echo
 }

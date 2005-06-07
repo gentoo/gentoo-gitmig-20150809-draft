@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.8 2005/06/07 15:04:06 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.9 2005/06/07 17:04:58 lanius Exp $
 
 inherit eutils
 
@@ -99,5 +99,7 @@ pkg_postinst() {
 	einfo "If you are upgrading from a previous version, re-run ptal-init setup"
 	einfo "as the format of	the connection has changed again and your previously"
 	einfo "installed hpoj-device will not be recognized."
+	echo
+	einfo "net-print/hpoj is deprecated, please use net-print/hplip"
 	echo
 }
