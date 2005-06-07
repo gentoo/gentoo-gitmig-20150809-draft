@@ -1,0 +1,16 @@
+# ChangeLog for app-text/gnu-ghostscript
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.1 2005/06/07 11:22:37 genstef Exp $
+
+*ghostscript-gnu-8.16 (07 Jun 2005)
+
+  07 Jun 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +ghostscript-gnu-8.16.ebuild:
+  Moved from app-text/gnu-ghostscript to app-text/ghostscript-gnu
+
+*gnu-ghostscript-8.16 (30 May 2005)
+
+  30 May 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +gnu-ghostscript-8.16.ebuild:
+  New ebuild thanks to Didier Link <didier.link@wanadoo.fr> in bug 92941
+
