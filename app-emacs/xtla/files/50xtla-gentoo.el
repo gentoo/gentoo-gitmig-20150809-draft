@@ -1,3 +1,5 @@
 
 (add-to-list 'load-path "@SITELISP@")
-(require 'xtla-autoloads)
+(if (featurep 'xtla)
+    (tla-reload)
+    (require 'xtla-autoloads))
