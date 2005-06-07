@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.7-r1.ebuild,v 1.11 2005/05/01 18:16:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.7-r1.ebuild,v 1.12 2005/06/07 04:22:45 redhatter Exp $
 
 DESCRIPTION="Another (RFC1413 compliant) ident daemon"
 HOMEPAGE="http://dev.ojnk.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc alpha arm amd64 ia64 hppa ppc"
+KEYWORDS="x86 sparc alpha arm amd64 ia64 hppa ppc ~mips"
 IUSE="ipv6"
 
 DEPEND="virtual/libc"

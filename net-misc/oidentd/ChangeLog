@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.24 2005/05/01 18:16:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.25 2005/06/07 04:22:45 redhatter Exp $
+
+  07 Jun 2005; Stuart Longland <redhatter@gentoo.org> oidentd-2.0.7-r1.ebuild:
+  Added ~mips as per bug #67602.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   oidentd-2.0.7-r1.ebuild:
