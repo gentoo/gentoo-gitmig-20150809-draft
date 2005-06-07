@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r8.ebuild,v 1.14 2005/06/07 09:25:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r9.ebuild,v 1.1 2005/06/07 09:25:02 lanius Exp $
 
 inherit eutils
 
@@ -21,13 +21,16 @@ SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~mips ~s390"
-IUSE="motif nodrm"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~mips ~s390"
+IUSE="motif nodrm truetype"
 
 DEPEND="motif? ( !s390? ( virtual/x11
 	x11-libs/openmotif ) )
-	>=media-libs/freetype-2.0.5
-	>=media-libs/t1lib-1.3"
+	truetype? (
+		>=media-libs/freetype-2.0.5
+		media-libs/t1lib
+		virtual/ghostscript
+	)"
 
 RDEPEND="${DEPEND}
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
@@ -48,8 +51,8 @@ PROVIDE="virtual/pdfviewer"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/xpdf-3.00-truetype-new.diff.gz
-	epatch ${FILESDIR}/xpdf-3.00-freetype-2.1.7.patch
+	use truetype && epatch ${FILESDIR}/xpdf-3.00-truetype-new.diff.gz
+	use truetype && epatch ${FILESDIR}/xpdf-3.00-freetype-2.1.7.patch
 	epatch ${FILESDIR}/xpdf-3.00-empty-bookmark.patch
 	epatch ${FILESDIR}/xpdf-3.00-core.patch.bz2
 	epatch ${FILESDIR}/xpdf-3.00-overflow.patch.bz2
@@ -59,13 +62,18 @@ src_unpack() {
 	epatch ${FILESDIR}/xpdf-3.00-scroll-opts.patch.bz2
 	epatch ${FILESDIR}/xpdf-3.00-pl2.patch
 	epatch ${FILESDIR}/xpdf-3.00-pl3.patch
+	epatch ${FILESDIR}/xpdf-3.00-fonts.patch
 	autoconf
 }
 
 src_compile() {
+	use truetype \
+		&& myconf="--enable-freetype2 --with-freetype2-includes=/usr/include/freetype2" \
+		|| myconf="--disable-freetype2"
+
 	econf \
-		--enable-freetype2 \
-		--with-freetype2-includes=/usr/include/freetype2 || die
+		${myconf} \
+		--enable-opi || die
 
 	emake || die
 }
