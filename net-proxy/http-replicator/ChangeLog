@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/http-replicator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.4 2005/06/04 10:55:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.5 2005/06/07 21:35:26 griffon26 Exp $
+
+  07 Jun 2005; Maurice van der Pot <griffon26@gentoo.org>
+  files/http-replicator-3.0-repcacheman-0.21,
+  files/http-replicator-3.0-repcacheman-0.33, http-replicator-3.0.ebuild:
+  A few cosmetic fixes and changed HTTP_PROXY to capitals closing bug #95321.
 
   04 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org>
   http-replicator-3.0.ebuild:

@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3336e24923dea91ca8d8a21736bfd5cd http-replicator-3.0.ebuild 1911
-MD5 efcf708cc7a73657b587a3320f1cce75 ChangeLog 1137
 MD5 eae37ad8073b8190842199931528eecc metadata.xml 227
-MD5 ba1bdb64c5a2a89f25600f0d02104876 files/http-replicator-3.0.conf 1703
+MD5 b930d85638423073a41dcecc0a512e0d http-replicator-3.0.ebuild 1914
+MD5 ff17e62ff17a7e95cf97fc9b2e34b6b1 ChangeLog 1394
 MD5 b33593510641bdee7731d17d5788d521 files/http-replicator-3.0.init 778
 MD5 1ebb63eb67b5ce575bb5e353973ed225 files/http-replicator-3.0-callrepcacheman-0.1 86
-MD5 ba5c3e1ca90a9ce2906848f1610f57bb files/http-replicator-3.0-repcacheman-0.21 6207
-MD5 5782ef4e5e91ea204e7507aa162bf04d files/http-replicator-3.0-repcacheman-0.33 6227
 MD5 322c5051fc17850a386f30fc56c752ce files/digest-http-replicator-3.0 70
+MD5 ba1bdb64c5a2a89f25600f0d02104876 files/http-replicator-3.0.conf 1703
+MD5 20a9fbec924f5e4ade7b3e98009e3560 files/http-replicator-3.0-repcacheman-0.33 6225
+MD5 839e5906b6eb7f21380e836321dd5739 files/http-replicator-3.0-repcacheman-0.21 6205
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCpff0jiC39V7gKu0RAghQAKDcezsfKBtoBl/3PD/qeVYnNr/X+ACgzJwc
-DWeT1rnRcBohQDZQRxcuvik=
-=iUBR
+iD8DBQFCphMrMGnpIbeahxwRAtkKAKCGkBwkTZWGjGNJbtN0cCirLhqU8wCaAgo1
+CjqiWjZcR6liGkvS/2XhaNE=
+=upEt
 -----END PGP SIGNATURE-----

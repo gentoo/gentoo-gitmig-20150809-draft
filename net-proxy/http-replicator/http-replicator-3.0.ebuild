@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0.ebuild,v 1.6 2005/06/07 19:39:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0.ebuild,v 1.7 2005/06/07 21:35:26 griffon26 Exp $
 
 DESCRIPTION="Proxy cache for Gentoo packages"
 HOMEPAGE="http://gertjan.freezope.org/replicator/"
@@ -51,7 +51,7 @@ pkg_postinst() {
 	einfo "Before starting http-replicator, please follow the next few steps:"
 	einfo "- modify /etc/conf.d/http-replicator if required"
 	einfo "- run /usr/bin/repcacheman to set up the cache"
-	einfo "- add http_proxy=\"http://serveraddress:8080\" to make.conf on"
+	einfo "- add HTTP_PROXY=\"http://serveraddress:8080\" to make.conf on"
 	einfo "  the server as well as on the client machines"
 	einfo "- make sure GENTOO_MIRRORS in /etc/make.conf starts with several"
 	einfo "  good http mirrors"
