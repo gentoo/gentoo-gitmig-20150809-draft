@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.10-r1.ebuild,v 1.7 2005/05/19 20:23:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.10-r1.ebuild,v 1.8 2005/06/07 22:02:24 vericgar Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -54,7 +54,7 @@ inherit php-sapi eutils apache-module flag-o-matic
 DESCRIPTION="Apache module for PHP"
 
 DEPEND_EXTRA=">=net-www/apache-1.3.33-r2
-			  apache2? ( >=net-www/apache-2.0.54-r5 )"
+			  apache2? ( >=net-www/apache-2.0.54-r10 )"
 DEPEND="${DEPEND} ${DEPEND_EXTRA}"
 RDEPEND="${RDEPEND} ${DEPEND_EXTRA}"
 IUSE="${IUSE} debug"
