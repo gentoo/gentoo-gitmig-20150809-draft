@@ -5,7 +5,7 @@
          strcat(dirname, "/");
  
 -      printf(" %8i  %s%s\n",
-+      printf(" %8li  %s%s\n",
++      printf(" %8zi  %s%s\n",
            unshield_file_size(unshield, i),
            dirname,
            unshield_file_name(unshield, i)); 
