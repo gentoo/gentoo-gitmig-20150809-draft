@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.30.ebuild,v 1.4 2005/05/31 11:51:39 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.30.ebuild,v 1.5 2005/06/07 09:13:53 ferdy Exp $
 
 inherit eutils
 
@@ -24,7 +24,16 @@ RDEPEND="pda? ( dev-perl/p5-Palm )
 	ldap? ( dev-perl/perl-ldap )"
 
 src_compile() {
-	useq evo && M_PATH="/usr/libexec/evolution/2.0/:${PATH}" ||	M_PATH=${PATH}
+	local evoversion
+
+	if useq evo ; then
+		evoversion=$(best_version mail-client/evolution)
+		evoversion=${evoversion##mail-client/evolution-}
+		M_PATH="/usr/libexec/evolution/${evoversion:0:3}/:${PATH}"
+	else
+		M_PATH=${PATH}
+	fi
+
 	PATH=${M_PATH} econf $(use_with finger) \
 		$(use_with abook) \
 		$(use_with nis ypcat) \
