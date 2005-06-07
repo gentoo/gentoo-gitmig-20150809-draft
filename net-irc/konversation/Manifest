@@ -8,11 +8,11 @@ MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 064c41bdd3cfe4c97923e235a49194c0 konversation-0.17.ebuild 553
 MD5 16524313d45151786b72dee746cc8804 files/digest-konversation-0.15.1 73
 MD5 c1371c333bb8d481fd2d8416a2b7669b files/digest-konversation-0.17 71
-MD5 8ebaa778138e87ae53e8f5bb3246bfab files/digest-konversation-0.18 71
+MD5 f2c8957a5d97179e302ff2660560d146 files/digest-konversation-0.18 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCpbr6I1lqEGTUzyQRAqxAAJ9A6GZyP82P/Qhd121rDJj37N7OqwCfTbrr
-yf8iXczrDusjyjIV7UHKZUA=
-=hcVq
+iD8DBQFCpjTTI1lqEGTUzyQRAgpHAKDZlm3GcbPUcM0Q8IrwTcs2q323MQCcCzX7
+myKZREt4Phmj553aNn94cMw=
+=9sGF
 -----END PGP SIGNATURE-----
