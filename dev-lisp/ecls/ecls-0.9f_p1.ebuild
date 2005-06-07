@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9f_p1.ebuild,v 1.2 2005/05/30 08:18:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9f_p1.ebuild,v 1.3 2005/06/07 01:44:37 mkennedy Exp $
 
 inherit eutils
 
@@ -23,6 +23,8 @@ DEPEND="X? ( virtual/x11 )
 #	dev-libs/boehm-gc
 
 IUSE="X"
+
+PROVIDE="virtual/commonlisp"
 
 S=${WORKDIR}/ecl-${PV:0:4}
 
@@ -54,4 +56,7 @@ src_install () {
 		docdir=${D}/usr/share/doc/${PF} install || true
 	dohtml doc/*.html
 	dodoc ANNOUNCEMENT Copyright LGPL
+
+	insinto /usr/share/doc/${PF}/
+	doins ${FILESDIR}/{clc-lite.lisp,README.Gentoo}
 }
