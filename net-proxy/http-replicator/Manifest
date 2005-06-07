@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4d0efe1c69ae9effd99129399ea9d9a9 http-replicator-3.0.ebuild 1901
+MD5 3336e24923dea91ca8d8a21736bfd5cd http-replicator-3.0.ebuild 1911
 MD5 efcf708cc7a73657b587a3320f1cce75 ChangeLog 1137
 MD5 eae37ad8073b8190842199931528eecc metadata.xml 227
 MD5 ba1bdb64c5a2a89f25600f0d02104876 files/http-replicator-3.0.conf 1703
@@ -13,7 +13,7 @@ MD5 322c5051fc17850a386f30fc56c752ce files/digest-http-replicator-3.0 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCoblpjiC39V7gKu0RAuolAJoDB5gjUzl4KBB7kYRgMXPchCIZNwCeLr/4
-CYIqt4C485Mu4tJ37PI3b5U=
-=2o2G
+iD8DBQFCpff0jiC39V7gKu0RAghQAKDcezsfKBtoBl/3PD/qeVYnNr/X+ACgzJwc
+DWeT1rnRcBohQDZQRxcuvik=
+=iUBR
 -----END PGP SIGNATURE-----
