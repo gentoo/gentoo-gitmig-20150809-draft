@@ -1,4 +1,6 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 7c47e4ea083a70208dbd3af0fd5762ea wesnoth-0.9.1.ebuild 1526
-MD5 c4afefb7fa58ff15ca28a6530a2a8b37 ChangeLog 6851
+MD5 4b93ddb0ca056a1a9aac88523df4d970 wesnoth-0.9.2.ebuild 1527
+MD5 09de40c312acfe7c996c4736e9b39c6e ChangeLog 6978
 MD5 d311e24bad645f1e02171305e415574c files/digest-wesnoth-0.9.1 139
+MD5 c2e828026f26a0373ee5546086427c60 files/digest-wesnoth-0.9.2 139
