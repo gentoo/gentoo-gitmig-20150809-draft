@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.69 2005/06/06 20:01:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.70 2005/06/07 18:04:42 seemant Exp $
+
+  07 Jun 2005; Seemant Kulleen <seemant@gentoo.org> heimdal-0.6.4-r1.ebuild:
+  Thanks to AZ for fixing this even better -- the tests should work, and we
+  have the X use flag thanks to Anthony- in #gentoo-apache, of all places. Az
+  fixed the virtualx eclass earlier to make X an optional dep too.
 
 *heimdal-0.6.4-r1 (06 Jun 2005)
 

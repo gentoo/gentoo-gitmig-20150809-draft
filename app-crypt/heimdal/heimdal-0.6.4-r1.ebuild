@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.4-r1.ebuild,v 1.3 2005/06/06 21:51:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.4-r1.ebuild,v 1.4 2005/06/07 18:04:42 seemant Exp $
 
 inherit libtool eutils virtualx toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.pdc.kth.se/pub/heimdal/src/${P}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~sparc ~ppc ~x86"
-IUSE="ssl berkdb ipv6 krb4 ldap"
+IUSE="ssl berkdb ipv6 krb4 ldap X"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
@@ -66,6 +66,7 @@ src_compile() {
 		$(use_with berkdb berkeley-db) \
 		$(use_with ssl openssl) \
 		$(use_with krb4) \
+		$(use_with X x) \
 		--enable-shared \
 		--includedir=/usr/include/heimdal \
 		--libexecdir=/usr/sbin \
@@ -85,7 +86,12 @@ src_compile() {
 src_test() {
 	addpredict /proc/fs/openafs/afs_ioctl
 	addpredict /proc/fs/nnpfs/afs_ioctl
-	Xmake check || die
+
+	if use X ; then
+		KRB5_CONFIG=${S}/krb5.conf Xmake check || die
+	else
+		KRB5_CONFIG=${S}/krb5.conf make check || die
+	fi
 }
 
 src_install() {
