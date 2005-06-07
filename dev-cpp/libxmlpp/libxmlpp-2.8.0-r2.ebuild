@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.8.0-r1.ebuild,v 1.6 2005/06/04 17:41:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.8.0-r2.ebuild,v 1.1 2005/06/07 13:58:42 ka0ttic Exp $
 
 inherit gnome2 eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-use-correct-callback.diff
+	epatch ${FILESDIR}/${P}-fix-errant-semicolon.diff
 
 	# don't waste time building the examples
 	sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || \
