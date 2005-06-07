@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.415 2005/06/05 05:54:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.416 2005/06/07 21:18:43 lu_zero Exp $
+
+  07 Jun 2005; Luca Barbato <lu_zero@gentoo.org> gcc-3.4.4.ebuild:
+  Marked ~ppc
 
 *gcc-4.1.0_beta20050604 (05 Jun 2005)
 
