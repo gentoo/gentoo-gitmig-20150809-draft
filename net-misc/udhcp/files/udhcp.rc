@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/files/udhcp.rc,v 1.1 2005/06/07 00:10:54 vapier Exp $
+
+depend() {
+	use net logger
+}
+
+checkconfig() {
+	if [[ ! -f /etc/udhcpd.conf ]] ; then
+		eerror "No /etc/udhcpd.conf file exists"
+		return 1
+	fi
+
+	if [[ ! -e /var/lib/misc/udhcpd.leases ]] ; then
+		ebegin "Creating udhcpd.leases"
+		touch /var/lib/misc/udhcpd.leases || return 1
+		eend $?
+	fi
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting udhcpd"
+	udhcpd > /dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping udhcpd"
+	start-stop-daemon --stop --pidfile /var/run/udhcpd.pid
+	eend $?
+}

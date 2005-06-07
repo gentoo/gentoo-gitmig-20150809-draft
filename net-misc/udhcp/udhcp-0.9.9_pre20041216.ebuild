@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.9_pre20041216.ebuild,v 1.1 2004/12/17 04:27:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.9_pre20041216.ebuild,v 1.2 2005/06/07 00:10:54 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,13 +24,16 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake CROSS_COMPILE=${CHOST}- STRIP=true SYSLOG=1 || die
+	emake \
+		CROSS_COMPILE=${CHOST}- \
+		STRIP=true \
+		UDHCP_SYSLOG=1 \
+		|| die
 }
 
 src_install() {
 	make STRIP=true install DESTDIR="${D}" || die
-	dodir /sbin
-	dosym /usr/sbin/udhcpc /sbin/udhcpc
+	newinitd "${FILESDIR}"/udhcp.rc udhcp
 	insinto /etc
 	doins samples/udhcpd.conf
 	dodoc AUTHORS ChangeLog README* TODO

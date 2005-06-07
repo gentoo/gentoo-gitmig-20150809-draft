@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/udhcp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.15 2004/12/17 04:27:29 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.16 2005/06/07 00:10:54 vapier Exp $
+
+  07 Jun 2005; Mike Frysinger <vapier@gentoo.org> +files/udhcp.rc,
+  udhcp-0.9.9_pre20041216.ebuild:
+  Add an init.d script #95130 by Samuel Penn.
 
 *udhcp-0.9.9_pre20041216 (16 Dec 2004)
 
