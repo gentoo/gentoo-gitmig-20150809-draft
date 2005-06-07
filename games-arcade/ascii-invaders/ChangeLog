@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/ascii-invaders
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ascii-invaders/ChangeLog,v 1.11 2005/05/31 20:55:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ascii-invaders/ChangeLog,v 1.12 2005/06/07 04:03:21 redhatter Exp $
+
+  07 Jun 2005; Stuart Longland <redhatter@gentoo.org> ascii-invaders-0.1b.ebuild:
+  Added ~mips keyword as per bug #67602.
 
   31 May 2005; Marcus D. Hanwell <marcus@gentoo.org>
   ascii-invaders-0.1b.ebuild:
