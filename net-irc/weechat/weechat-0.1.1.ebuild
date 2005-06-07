@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.1.1.ebuild,v 1.1 2005/04/10 11:56:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.1.1.ebuild,v 1.2 2005/06/07 15:47:56 swegener Exp $
 
 DESCRIPTION="Portable and multi-interface IRC client."
 HOMEPAGE="http://weechat.flashtux.org/"
@@ -25,10 +25,10 @@ src_compile() {
 		${myconf} \
 		|| die "Configure failed"
 	# Bad configure script is forcing CFLAGS, so we pass our own
-	emake CFLAGS="${CFLAGS}" || die "Make failed"
+	emake || die "Make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Install failed"
+	make DESTDIR="${D}" install || die "Install failed"
 	dodoc AUTHORS BUGS ChangeLog FAQ NEWS README TODO || die "dodoc failed"
 }
