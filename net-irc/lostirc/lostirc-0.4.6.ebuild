@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.4.5.ebuild,v 1.1 2005/05/14 17:09:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.4.6.ebuild,v 1.1 2005/06/07 12:54:31 swegener Exp $
 
 inherit base
 
