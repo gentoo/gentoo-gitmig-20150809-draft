@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/shttpd-1.21.ebuild,v 1.1 2005/06/06 14:17:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/shttpd-1.21.ebuild,v 1.2 2005/06/07 10:08:35 dholm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.c"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="ssl"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )"
