@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.14 2005/05/12 18:50:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.15 2005/06/07 22:11:26 vericgar Exp $
 ECLASS=depend.apache
 INHERITED="$INHERITED $ECLASS"
 
@@ -91,7 +91,7 @@ APACHE2_MODULESDIR="${APACHE2_BASEDIR}/modules"
 ##     - currently not possible - bug #4315 -- vericgar (Jan 21 2005)
 ####
 APACHE1_DEPEND="=net-www/apache-1*"
-APACHE2_DEPEND=">=net-www/apache-2.0.54-r5"
+APACHE2_DEPEND=">=net-www/apache-2.0.54-r10"
 
 
 ####
