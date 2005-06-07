@@ -1,4 +1,16 @@
-MD5 551230dd61e5d36180b107bb5aab130a ChangeLog 1117
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 05bccc6ff316e68dcdb1eb1cd654a721 apsfilter-7.2.5.ebuild 1177
+MD5 a208da87f8401881317f6749d001f7f9 ChangeLog 1238
+MD5 e96b91a8dd44bed1b4498b13f26ce82f apsfilter-7.2.6.ebuild 1179
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 c66ba22f3f09fd2d8a86a033651a22b3 files/digest-apsfilter-7.2.5 68
+MD5 2cb9514ca9112452dcb9d68bc33f20cc files/digest-apsfilter-7.2.6 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCpWwQevY57Fted3ERAmXgAJ9T1Eea8aIXrYKs2lptcDPlyNsxjACg1f7g
+JUTLFAcYzaX9zdPNgXGq1Pc=
+=dy8L
+-----END PGP SIGNATURE-----

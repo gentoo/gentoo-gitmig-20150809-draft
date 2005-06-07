@@ -1,6 +1,11 @@
 # ChangeLog for net-print/gqueue
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gqueue/ChangeLog,v 1.5 2005/05/01 18:20:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gqueue/ChangeLog,v 1.6 2005/06/07 09:38:41 lanius Exp $
+
+*gqueue-0.99.1 (07 Jun 2005)
+
+  07 Jun 2005; Heinrich Wendel <lanius@gentoo.org> +gqueue-0.99.1.ebuild:
+  version bump
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> gqueue-0.8.ebuild:
   Stable on ppc.

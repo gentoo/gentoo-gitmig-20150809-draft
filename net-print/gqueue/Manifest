@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dfd979bd3da4b0b3a7e3c7db1d0bdc31 gqueue-0.8.ebuild 634
+MD5 58b928469199339037838ec716373a9e gqueue-0.99.1.ebuild 639
+MD5 427ecaaa4f40c58b1362b9f0643f363e ChangeLog 733
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 fc537d4cb7573c153ec95b69747d2d6c ChangeLog 613
+MD5 632b98a97c7ddb62d538efa6b076f28a files/digest-gqueue-0.99.1 65
 MD5 191bc3824a31fb5e1d3dddaf3e3d4f90 files/digest-gqueue-0.8 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCpWsyevY57Fted3ERAnXEAJ9FM9RFEIMYEOBmOyzeqOSbCxJHYQCg3exW
+AwZf6cKli+QP2DINOKp3H74=
+=FOeY
+-----END PGP SIGNATURE-----
