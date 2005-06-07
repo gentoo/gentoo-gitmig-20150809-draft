@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.11 2005/05/09 14:08:38 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.12 2005/06/07 20:16:57 nakano Exp $
+
+  07 Jun 2005; Masatomo Nakano <nakano@gentoo.org> kazehakase-0.2.7.ebuild:
+  Marked stable on x86
 
   09 May 2005; Masatomo Nakano <nakano@gentoo.org> kazehakase-0.2.6.ebuild:
   Marked stable on x86/ppc.
