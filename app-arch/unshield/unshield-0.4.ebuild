@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/unshield-0.4.ebuild,v 1.4 2005/06/05 20:37:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/unshield-0.4.ebuild,v 1.5 2005/06/07 09:52:09 blubb Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/zlib-1.1.4"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/unshield-gcc-3.4.patch
+	use amd64 && epatch ${FILESDIR}/unshield-gcc-3.4.patch
 }
 
 src_compile() {
