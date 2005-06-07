@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.15 2005/06/06 19:21:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.16 2005/06/07 02:25:35 mr_bones_ Exp $
+
+  07 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  gcompris-6.5.3.ebuild:
+  disable editor for now since it doesn't build for me.
 
   06 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org>
   gcompris-6.5.3.ebuild:
