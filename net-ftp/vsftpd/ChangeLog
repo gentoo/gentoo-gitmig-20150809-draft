@@ -1,6 +1,17 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.51 2005/03/13 14:44:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.52 2005/06/07 18:34:17 uberlord Exp $
+
+*vsftpd-2.0.3 (07 Jun 2005)
+
+  07 Jun 2005; Roy Marples <uberlord@gentoo.org> files/vsftpd.init.d,
+  +files/vsftpd.pam-include, files/vsftpd.xinetd, files/vsftpd.xinetd.ipv6,
+  metadata.xml, +vsftpd-2.0.3.ebuild:
+  init.d script now checks for listen=YES or listen_ipv6=YES - fixes #54228
+  xinetd USE flag added to make support of it optional - fixes #75892
+  USERID removed from xinetd files - fixes #78764
+  init.d script now does a "killall vsftpd" when stopping - fixes #81819
+  cleaner ebuild - fixes #84733 thanks to Diego Petteno <flameeyes@gentoo.org>
 
 *vsftpd-2.0.2 (13 Mar 2005)
 

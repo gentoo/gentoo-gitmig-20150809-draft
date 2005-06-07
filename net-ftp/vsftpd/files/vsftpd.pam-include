@@ -1,0 +1,7 @@
+#%PAM-1.0
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.pam-include,v 1.1 2005/06/07 18:34:17 uberlord Exp $
+auth     required	pam_listfile.so item=user sense=deny file=/etc/vsftpd/ftpusers onerr=succeed
+auth     include	system-auth
+auth     required	pam_shells.so
+account  include	system-auth
+session  include	system-auth
