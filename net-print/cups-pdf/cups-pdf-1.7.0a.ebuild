@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-1.7.0a.ebuild,v 1.2 2005/06/06 22:38:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-1.7.0a.ebuild,v 1.3 2005/06/07 20:56:27 lanius Exp $
 
 DESCRIPTION="Provides a virtual printer for CUPS to produce PDF files."
 HOMEPAGE="http://cip.physik.uni-wuerzburg.de/~vrbehr/cups-pdf/"
@@ -17,9 +17,6 @@ DEPEND="net-print/cups
 
 src_compile() {
 	cd src
-	sed -i -e "s:CPLOGTYPE 3:CPLOGTYPE 2:" \
-		   -e "s:CPSH \"-s /bin/sh\":CPSH \"\":" \
-		   -e "s:nobody:lp:" cups-pdf.h
 	gcc ${CFLAGS} -o cups-pdf cups-pdf.c || die "Compilation failed."
 }
 
