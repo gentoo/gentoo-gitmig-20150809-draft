@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/stepmania
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.3 2005/05/21 05:39:10 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.4 2005/06/07 23:38:27 malc Exp $
+
+  07 Jun 2005; Malcolm Lashley <malc@gentoo.org> stepmania-3.9_rc3.ebuild:
+  ~amd64 - closes bug #94997
 
 *stepmania-3.9_rc3 (21 May 2005)
 
