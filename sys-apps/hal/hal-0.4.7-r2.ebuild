@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7-r2.ebuild,v 1.5 2005/06/06 12:24:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7-r2.ebuild,v 1.6 2005/06/07 19:33:11 beu Exp $
 
 inherit eutils python linux-info versionator flag-o-matic
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.4
 	sys-libs/libcap
 	dev-libs/popt
 	>=sys-apps/util-linux-2.12i
-	|| ( >=sys-kernel/linux-headers-2.6 sys-kernel/linux26-headers )"
+	>=sys-kernel/linux-headers-2.6"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
