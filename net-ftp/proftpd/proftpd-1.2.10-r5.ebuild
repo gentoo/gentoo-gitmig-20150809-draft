@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r4.ebuild,v 1.3 2005/06/06 11:05:38 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r5.ebuild,v 1.1 2005/06/07 23:10:19 humpback Exp $
 
 inherit flag-o-matic eutils
 
@@ -101,6 +101,12 @@ src_compile() {
 	use hardened && echo > lib/libcap/cap_sys.c
 	has_pic && echo > lib/libcap/cap_sys.c
 
+	if use noauthunix ; then
+		myconf="${myconf} --disable-auth-unix"
+	else
+		myconf="${myconf} --enable-auth-unix"
+	fi
+
 	econf \
 		--sbindir=/usr/sbin \
 		--localstatedir=/var/run \
@@ -109,7 +115,6 @@ src_compile() {
 		--enable-autoshadow \
 		--enable-ctrls \
 		--with-modules=${modules} \
-		$(use_enable noauthunix auth-unix) \
 		$(use_enable authfile auth-file) \
 		$(use_enable ncurses) \
 		$(use_enable ipv6) \
