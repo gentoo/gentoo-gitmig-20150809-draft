@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/netris
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/ChangeLog,v 1.6 2005/05/31 22:32:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/ChangeLog,v 1.7 2005/06/07 04:16:55 redhatter Exp $
+
+  07 Jun 2005; Stuart Longland <redhatter@gentoo.org> netris-0.52.ebuild:
+  Adding ~mips keyword as per bug #67602.
 
   31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> netris-0.52.ebuild:
   Stable on amd64.
