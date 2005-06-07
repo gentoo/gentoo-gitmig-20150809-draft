@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.3.ebuild,v 1.1 2005/06/07 17:02:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.3.ebuild,v 1.2 2005/06/07 18:10:16 swegener Exp $
 
 inherit eutils
 
@@ -21,11 +21,16 @@ DEPEND="dev-lang/python
 
 RDEPEND="virtual/ghostscript
 	>=dev-lang/python-2.2.0
-	scanner? ( >=media-gfx/sane-backends-1.0.9 )
-	scanner? ( || ( X? ( >=media-gfx/xsane-0.89 ) >=media-gfx/sane-frontends-1.0.9 ) )
+	scanner? (
+		>=media-gfx/sane-backends-1.0.9
+		|| (
+			X? ( >=media-gfx/xsane-0.89 )
+			>=media-gfx/sane-frontends-1.0.9
+		)
+	)
 	qt? ( >=dev-python/PyQt-3.11 x11-libs/qt )
-	usb?     ( dev-libs/libusb sys-apps/hotplug )
-	foomaticdb? ( >=net-print/foomatic )
+	usb? ( dev-libs/libusb sys-apps/hotplug )
+	foomaticdb? ( net-print/foomatic )
 	cups? ( net-print/cups )
 	${DEPEND}"
 

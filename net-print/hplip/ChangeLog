@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.1 2005/06/07 17:02:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.2 2005/06/07 18:10:16 swegener Exp $
+
+  07 Jun 2005; Sven Wegener <swegener@gentoo.org> hplip-0.9.3.ebuild:
+  Fixed invalid atoms in *DEPEND. Use scanner? once in *DEPEND.
 
 *hplip-0.9.3 (07 Jun 2005)
 
