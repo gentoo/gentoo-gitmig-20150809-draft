@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.3.2.ebuild,v 1.1 2005/05/21 17:02:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.3.2.ebuild,v 1.2 2005/06/07 09:23:23 lanius Exp $
 
 DESCRIPTION="Poppler is a PDF rendering library based on the xpdf-3.0 code base."
 HOMEPAGE="http://poppler.freedesktop.org"
@@ -15,6 +15,7 @@ IUSE="gtk qt"
 
 DEPEND=">=media-libs/freetype-2.0.5
 	>=media-libs/t1lib-1.3
+	media-libs/fontconfig
 	virtual/ghostscript
 	dev-util/pkgconfig
 	gtk? ( =x11-libs/gtk+-2* )

@@ -1,10 +1,16 @@
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 d84feb81f606ed2ba254f77b583ddfc8 poppler-0.1.2.ebuild 744
-MD5 4d266f3c13de1e4a7894c74b92b5ec1a ChangeLog 832
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3945b3295f0b1cace249a1e3da8b3caf poppler-0.3.0.ebuild 860
-MD5 ce326f1b258273563d248943ba37a549 poppler-0.3.2.ebuild 918
-MD5 a9d595839a0da98d8acabad5b638759d poppler-0.3.1.ebuild 918
-MD5 25675c998a475fcdd58b64313df002b5 files/digest-poppler-0.3.2 65
-MD5 b5e65c3522bb969506b2a96a3605fedf files/digest-poppler-0.3.1 65
-MD5 48c104ee9c6569d88662f2508078a83e files/digest-poppler-0.1.2 65
+MD5 0f47305adf0da4f94dc6ef03291cd175 poppler-0.3.2.ebuild 941
+MD5 b0d92cb2b89b432de3221ba4b193e074 ChangeLog 965
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 9fcae20e4d0c670e6f53602e516991aa files/digest-poppler-0.3.0 65
+MD5 25675c998a475fcdd58b64313df002b5 files/digest-poppler-0.3.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCpWftevY57Fted3ERAm4aAJ9y8dSM8ovqisyayymZ5OdKKkJl+QCfTUrA
+e5qlR8fvsgZVHq9u2XP3JbA=
+=bIPY
+-----END PGP SIGNATURE-----
