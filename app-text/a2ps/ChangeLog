@@ -1,6 +1,10 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.39 2005/02/22 12:57:17 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.40 2005/06/07 17:21:24 lanius Exp $
+
+  07 Jun 2005; Heinrich Wendel <lanius@gentoo.org>
+  +files/a2ps-4.13-acroread.patch, a2ps-4.13c-r2.ebuild:
+  fix sandbox violation, bug #79012
 
   22 Feb 2005; Rob Holland <tigger@gentoo.org> a2ps-4.13c-r2.ebuild:
   fix typo
