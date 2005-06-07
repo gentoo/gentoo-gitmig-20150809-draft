@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.120 2005/05/26 22:02:04 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.121 2005/06/07 12:56:44 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -144,9 +144,13 @@ kde_src_compile() {
 					myconf="${myconf} --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib"
 				fi
 
+				# Use libsuffix instead of libdir to keep kde happy
+				if [ $(get_libdir) != "lib" ] ; then
+					myconf="${myconf} --enable-libsuffix=$(get_libdir | sed s/lib//)"
+				fi
+
 				./configure \
 					${myconf} \
-					--libdir="\${exec_prefix}/$(get_libdir)" \
 					|| die "died running ./configure, $FUNCNAME:configure"
 					
 				# Seems ./configure add -O2 by default but hppa don't want that but we need -ffunction-sections
