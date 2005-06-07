@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.7 2005/06/01 00:41:01 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.8 2005/06/07 15:04:06 lanius Exp $
 
 inherit eutils
 
@@ -40,6 +40,8 @@ src_compile() {
 	use scanner \
 	&& myconf="${myconf} --with-sane-packend=/usr" \
 	|| myconf="${myconf} --without-sane"
+
+	libtoolize --copy --force
 
 	econf ${myconf} || die "econf failed"
 	emake || die "compilation failed"
