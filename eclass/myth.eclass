@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.13 2005/05/30 07:52:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.14 2005/06/07 05:48:54 mr_bones_ Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
 
 #########################
 ########################
-ewarn "${ECLASS}.eclass : DO NOT USE THIS FOR MYTHTV STUFF. Use mythtv-plugins.eclass"
+# DO NOT USE THIS FOR MYTHTV STUFF. Use mythtv-plugins.eclass
 #####################
 #####################
 
