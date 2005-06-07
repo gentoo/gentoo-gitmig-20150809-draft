@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-symlinks/no-lib32/package.mask,v 1.1 2005/06/04 21:20:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-symlinks/no-lib32/package.mask,v 1.2 2005/06/07 16:02:28 herbs Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -33,9 +33,18 @@
 <sys-devel/libperl-5.8.6
 <sys-libs/pam-0.77-r7
 <sys-libs/pwdb-0.62-r1
-<www-client/mozilla-firefox-1.0.1
+<www-client/mozilla-firefox-1.0.4
 <dev-libs/libxml2-2.6.18
 <dev-libs/libxslt-1.1.13-r1
 <sys-fs/e2fsprogs-1.37-r1
 <media-gfx/splashutils-1.1.9.6
 <sys-libs/pam_passwdqc-1.0.2
+<media-video/mplayer-1.0_pre7
+<net-nds/openldap-2.2.26-r2
+<kde-base/kdelibs-3.4.1-r1
+<kde-base/arts-3.4.1-r1
+<x11-base/xorg-x11-6.8.2-r2
+<sys-apps/shadow-4.0.7-r2
+<gnome-base/gdm-2.6.0.9-r3
+<net-ftp/proftpd-1.2.10-r4
+<net-p2p/azureus-bin-2.3.0.0
