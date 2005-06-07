@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.245 2005/05/28 20:41:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.246 2005/06/07 12:59:02 greg_g Exp $
+
+*kdelibs-3.4.1-r1 (07 Jun 2005)
+
+  07 Jun 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdelibs-3.4.1-configure.patch, +kdelibs-3.4.1-r1.ebuild:
+  Add patch to properly respect USE flags (#81966). Fix #82220. Better support
+  for amd64 multilib (#94872).
 
   28 May 2005; Markus Rothe <corsair@gentoo.org> kdelibs-3.4.1.ebuild:
   switched from -fno-gcse to -mminimal-toc, to let this compile on ppc64
