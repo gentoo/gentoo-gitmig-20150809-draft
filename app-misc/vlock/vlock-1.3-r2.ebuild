@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/vlock-1.3-r2.ebuild,v 1.1 2005/05/20 13:12:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/vlock-1.3-r2.ebuild,v 1.2 2005/06/07 19:15:02 ka0ttic Exp $
 
 inherit pam
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/pam"
+DEPEND="sys-libs/pam"
 
 src_compile() {
 	emake RPM_OPT_FLAGS="${CFLAGS}" || die "emake failed"
