@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.2 2005/05/08 01:13:59 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.3 2005/06/07 14:28:22 phosphan Exp $
 
 inherit fortran toolchain-funcs
 
@@ -73,6 +73,8 @@ src_install() {
 	cd ${D}/usr/bin/
 	rm R
 	dosym ../$(get_libdir)/R/bin/R /usr/bin/R
+	dodir /etc/env.d
+	echo > ${D}/etc/env.d/99R "LDPATH=/usr/$(get_libdir)/R/lib"
 	cd ${S}
 
 	dodoc AUTHORS BUGS COPYING* ChangeLog FAQ *NEWS README \

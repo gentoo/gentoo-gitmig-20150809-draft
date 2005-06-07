@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.49 2005/06/01 00:54:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.50 2005/06/07 14:28:22 phosphan Exp $
+
+  07 Jun 2005; Patrick Kursawe <phosphan@gentoo.org> R-2.0.1.ebuild,
+  R-2.1.0-r1.ebuild:
+  Added LDPATH to R libs, bug #90601
 
   01 Jun 2005; Mike Frysinger <vapier@gentoo.org> R-1.9.0-r1.ebuild,
   R-2.0.1.ebuild:
