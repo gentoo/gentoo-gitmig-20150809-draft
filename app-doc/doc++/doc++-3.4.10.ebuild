@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/doc++-3.4.10.ebuild,v 1.10 2005/04/21 18:16:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/doc++-3.4.10.ebuild,v 1.11 2005/06/07 08:10:31 dragonheart Exp $
 
 DESCRIPTION="Documentation system for C, C++, IDL and Java"
 HOMEPAGE="http://docpp.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/docpp/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
