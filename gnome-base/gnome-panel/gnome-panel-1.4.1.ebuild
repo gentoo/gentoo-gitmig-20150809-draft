@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.1.ebuild,v 1.18 2005/01/08 23:20:28 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.1.ebuild,v 1.19 2005/06/07 16:30:49 leonardop Exp $
 
 IUSE="kde nls"
 
@@ -21,6 +21,8 @@ RDEPEND="=gnome-base/control-center-1.4*
 
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.2
+	=sys-devel/automake-1.4*
+	sys-devel/autoconf
 	nls? ( sys-devel/gettext
 	>=dev-util/intltool-0.11 )"
 
@@ -31,7 +33,7 @@ src_unpack() {
 	# Libtoolize
 	elibtoolize
 	aclocal -I macros
-	automake --add-missing
+	WANT_AUTOMAKE=1.4 automake --add-missing
 	autoconf
 }
 
