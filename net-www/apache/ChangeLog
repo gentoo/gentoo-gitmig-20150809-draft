@@ -1,6 +1,18 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.374 2005/06/01 21:21:47 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.375 2005/06/07 21:31:15 vericgar Exp $
+
+*apache-2.0.54-r10 (07 Jun 2005)
+
+  07 Jun 2005; Michael Stewart <vericgar@gentoo.org> +apache-2.0.54-r10.ebuild:
+  New tarball: Made it easier to enable /server-info for troubleshooting
+  New style will now always be > -r10 until it's marked stable
+
+*apache-2.0.54-r7 (07 Jun 2005)
+
+  07 Jun 2005; Michael Stewart <vericgar@gentoo.org> +apache-2.0.54-r7.ebuild:
+  Fix installation of configuration so that it's now owned by root instead of
+  apache
 
   01 Jun 2005; Michael Tindal <urilith@gentoo.org> apache-2.0.54-r6.ebuild:
   Bail if more than one MPM is specified.
