@@ -1,0 +1,22 @@
+diff --exclude='*~' -Naur links-2.1pre17.utf8/auth.c links-2.1pre17.utf8.auth/auth.c
+--- links-2.1pre17.utf8/auth.c	2005-06-07 17:54:34.000000000 -0300
++++ links-2.1pre17.utf8.auth/auth.c	2005-06-07 17:55:31.000000000 -0300
+@@ -62,6 +62,7 @@
+ 		h = get_host_name(url);
+ 		if (h) return h;
+ 		return stracpy("");
++	if (casecmp(h, "Basic", 5)) return NULL;
+ 	}
+ 	q = strchr(h, '"');
+ 	if (!q) {
+diff --exclude='*~' -Naur links-2.1pre17.utf8/objreq.c links-2.1pre17.utf8.auth/objreq.c
+--- links-2.1pre17.utf8/objreq.c	2005-06-07 17:54:34.000000000 -0300
++++ links-2.1pre17.utf8.auth/objreq.c	2005-06-07 17:56:12.000000000 -0300
+@@ -234,6 +234,7 @@
+ 		}
+ 		if (stat->ce && rq->state == O_WAITING && (stat->ce->http_code == 401 || stat->ce->http_code == 407)) {
+ 			unsigned char *realm = get_auth_realm(rq->url, stat->ce->head, stat->ce->http_code == 407);
++			if (!realm) goto xx;
+ 			if (stat->ce->http_code == 401 && !find_auth(rq->url, realm)) {
+ 				mem_free(realm);
+ 				if (rq->redirect_cnt++ >= MAX_REDIRECTS) goto maxrd;
