@@ -99,3 +99,4 @@ move dev-perl/net-ping perl-core/net-ping
 move dev-perl/ExtUtils-MakeMaker perl-core/ExtUtils-MakeMaker
 move net-analyzer/piwi net-analyzer/prewikka
 move x11-themes/plastique x11-themes/polymer
+move app-text/ghostscript-gnu app-text/gnu-ghostscript
