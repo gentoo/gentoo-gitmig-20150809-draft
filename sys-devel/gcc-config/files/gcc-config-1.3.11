@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.11,v 1.1 2005/06/06 03:58:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.11,v 1.2 2005/06/07 00:39:09 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -514,13 +514,28 @@ if [[ -z ${CC_COMP} ]] ; then
 	fi
 fi
 
-if [[ ${DOIT} != "get_current_profile" ]] ; then
-	GCC_LIB=$(source "${GCC_ENV_D}/${CC_COMP}"
-		cmd_setup
-		echo ${LDPATH} | ${AWK} -F/ '{ print  "/"$2"/"$3"/"$4"/" }')
+chop_gcc_ver() {
+	echo "$@" | awk -F- '{
+		gccver=""
+		for (i=NF; i > 0; --i) {
+			if ($i ~ /^[[:digit:].]+$/)
+				gccver=$i"-"gccver
+			else
+				break
+		}
+		print substr(gccver,0,length(gccver)-1)
+	}'
+}
 
-	CC_COMP_TARGET=$(echo ${CC_COMP} | awk -F- '{ print $1"-"$2"-"$3"-"$4 }')
-	CC_COMP_VERSION=${CC_COMP/${CC_COMP_TARGET}-/}
+if [[ ${DOIT} != "get_current_profile" ]] ; then
+	GCC_LIB=$(
+		source "${GCC_ENV_D}/${CC_COMP}"
+		cmd_setup
+		echo ${LDPATH} | ${AWK} -F/ '{ print  "/"$2"/"$3"/"$4"/" }'
+	)
+
+	CC_COMP_VERSION=$(chop_gcc_ver ${CC_COMP})
+	CC_COMP_TARGET=${CC_COMP:0:${#CC_COMP}-${#CC_COMP_VERSION}-1}
 
 	if [[ ! -d ${ROOT}/${GCC_LIB}/${CC_COMP_TARGET}/${CC_COMP_VERSION} ]]; then
 		CC_COMP_VERSION=${CC_COMP_VERSION%-*}
@@ -538,7 +553,8 @@ if [[ ${CHECK_CHOST} == "yes" ]] ; then
 	# Chosen CHOST are not the same as the real CHOST according to
 	# make.conf, and --use-portage-chost option was given, so do nothing
 	get_real_chost
-	CC_COMP_TARGET=$(echo ${CC_COMP} | awk -F- '{ print $1"-"$2"-"$3"-"$4 }')
+	CC_COMP_VERSION=$(chop_gcc_ver ${CC_COMP})
+	CC_COMP_TARGET=${CC_COMP:0:${#CC_COMP}-${#CC_COMP_VERSION}-1}
 	[[ ${CC_COMP_TARGET} != ${REAL_CHOST} ]] && exit 0
 fi
 
