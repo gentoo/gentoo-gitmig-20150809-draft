@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.31.ebuild,v 1.3 2005/04/22 14:44:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.31.ebuild,v 1.4 2005/06/07 19:20:15 luckyduck Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="gnome"
 S=${WORKDIR}/${MY_P}
 
 RDEPEND="virtual/x11
-	>=x11-libs/wxGTK-2.4.2
+	=x11-libs/wxGTK-2.4*
 	>=media-video/mjpegtools-1.6.2
 	>=media-video/dvdauthor-0.6.10
 	gnome? ( >=gnome-base/libgnomeui-2.0 )
