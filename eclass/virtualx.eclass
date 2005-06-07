@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.19 2004/11/04 10:53:14 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.20 2005/06/07 14:26:03 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -8,7 +8,7 @@
 
 ECLASS=virtualx
 INHERITED="$INHERITED $ECLASS"
-DEPEND="virtual/x11"
+DEPEND="X? ( virtual/x11 )"
 
 DESCRIPTION="Based on the $ECLASS eclass"
 
@@ -17,18 +17,20 @@ DESCRIPTION="Based on the $ECLASS eclass"
 # do not disable the sandbox during the depend phase.
 # ebuilds shouldn't touch the fs during depend phase, nor screw with the sandbox.
 #
-if [ "${EBUILD_PHASE/depend}" == "${EBUILD_PHASE}" ]; then
-	[ -z "${SANDBOX_DISABLED}" ] && export SANDBOX_DISABLED="0" || :
+if [[ ${EBUILD_PHASE/depend} == "${EBUILD_PHASE}" ]] ; then
+	[[ -z ${SANDBOX_DISABLED} ]] && export SANDBOX_DISABLED="0" || :
 fi
 
 virtualmake() {
 	local retval=0
 	local OLD_SANDBOX_DISABLED="${SANDBOX_DISABLED}"
+	local XVFB=$(type -p Xvfb)
+	local XHOST=$(type -p xhost)
 
-	#If $DISPLAY is not set, or xhost cannot connect to an X
-	#display, then do the Xvfb hack.
-	if [ -z "$DISPLAY" ] || ! (/usr/X11R6/bin/xhost &>/dev/null)
-	then
+	# If $DISPLAY is not set, or xhost cannot connect to an X
+	# display, then do the Xvfb hack.
+	if [[ -n ${XVFB} && -n ${XHOST} ]] && \
+	   ( [[ -z ${DISPLAY} ]] || ! (${XHOST} &>/dev/null) ) ; then
 		export XAUTHORITY=
 		# The following is derived from Mandrake's hack to allow
 		# compiling without the X display
@@ -39,7 +41,7 @@ virtualmake() {
 		export SANDBOX_DISABLED="1"
 		
 		local i=0
-		XDISPLAY=$(i=0; while [ -f /tmp/.X${i}-lock ] ; do i=$((${i}+1));done; echo ${i})
+		XDISPLAY=$(i=0; while [[ -f /tmp/.X${i}-lock ]] ; do i=$((${i}+1));done; echo ${i})
 		
 		# If we are in a chrooted environment, and there is already a
 		# X server started outside of the chroot, Xvfb will fail to start
@@ -54,21 +56,20 @@ virtualmake() {
 		#
 		# Sven Wegener <swegener@gentoo.org> - 22 Aug 2004
 		#
-		/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x24 &>/dev/null &
+		${XVFB} :${XDISPLAY} -screen 0 800x600x24 &>/dev/null &
 		sleep 2
 		
 		local start=${XDISPLAY}
-		while [ ! -f /tmp/.X${XDISPLAY}-lock ]
-		do
+		while [[ ! -f /tmp/.X${XDISPLAY}-lock ]] ; do
 			# Stop trying after 15 tries
-			if [ $((${XDISPLAY} - ${start})) -gt 15 ]; then
+			if [[ $((${XDISPLAY} - ${start})) -gt 15 ]] ; then
 
 				eerror ""
 				eerror "Unable to start Xvfb."
 				eerror ""
 				eerror "'/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x24' returns:"
 				eerror ""
-				/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x24
+				${XVFB} :${XDISPLAY} -screen 0 800x600x24
 				eerror ""
 				eerror "If possible, correct the above error and try your emerge again."
 				eerror ""
@@ -76,7 +77,7 @@ virtualmake() {
 			fi
 
 			XDISPLAY=$((${XDISPLAY}+1))
-			/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x24 &>/dev/null &
+			${XVFB} :${XDISPLAY} -screen 0 800x600x24 &>/dev/null &
 			sleep 2
 		done
 
@@ -99,7 +100,7 @@ virtualmake() {
 		retval=$?
 	fi
 
-	return $retval
+	return ${retval}
 }
 
 #Same as "make", but setup the Xvfb hack if needed
