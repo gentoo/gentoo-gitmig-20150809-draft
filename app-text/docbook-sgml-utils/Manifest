@@ -1,7 +1,10 @@
-MD5 e030976f0c6feedde92bf62f85165d3d ChangeLog 6003
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cb84cec80fdadc524b90e9f0c69e2414 ChangeLog 6113
 MD5 1c12fcaba1ff4caf845ed0df27c06459 docbook-sgml-utils-0.6.12-r2.ebuild 1641
 MD5 6194036bf8f9ff9c6e106e1e91849fe1 docbook-sgml-utils-0.6.12.ebuild 1243
-MD5 1ad1e282aa9c3c01da3aecb6b70cb341 docbook-sgml-utils-0.6.14.ebuild 1614
+MD5 e4c5a06f3956eb9cf0b881d83f015d80 docbook-sgml-utils-0.6.14.ebuild 1614
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 162814a2342da5479a18dc8e9f74182a files/digest-docbook-sgml-utils-0.6.12 72
 MD5 162814a2342da5479a18dc8e9f74182a files/digest-docbook-sgml-utils-0.6.12-r2 72
@@ -10,3 +13,10 @@ MD5 7d5c4302c83e4d132570f155cfe00020 files/docbook-sgml-utils-0.6.14-backend.pat
 MD5 2e82c6e8e331d7a3a8858d18c3711862 files/docbook-sgml-utils-backend.patch 515
 MD5 a52142a3e1462a0e62a1d4b0e4b9e685 files/docbook-sgml-utils-frontend.patch 455
 MD5 f38af9b0090827606a87754c15de3470 files/docbook-sgml-utils-head-jw.patch 379
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCpcKnKRy60XGEcJIRAkPYAJwP7k97IEVcVvGP+jeof1NdtJd3PQCdE0Xt
+wg7Pmr9PSdYmm3tM/NtqFEE=
+=z3zD
+-----END PGP SIGNATURE-----

@@ -1,10 +1,13 @@
-MD5 55e035a29d759331d27686850a1730b5 ChangeLog 5033
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6e02b70432fc08288860115fcc85ed34 ChangeLog 5139
 MD5 c24a0b52e8787bc13c5a2751b39b5b44 docbook-sgml-dtd-3.0-r2.ebuild 1049
 MD5 829cf3c20e14182995935141d52f4094 docbook-sgml-dtd-3.1-r2.ebuild 1049
 MD5 c849eeb4128f8d31055e43bc72990555 docbook-sgml-dtd-4.0-r2.ebuild 1048
 MD5 d17f25f3dc24e0d04fa5d5b5b3d441ea docbook-sgml-dtd-4.1-r2.ebuild 1048
 MD5 fbf88b7e68317f90d0034613b4d951ee docbook-sgml-dtd-4.2-r1.ebuild 1063
-MD5 f09653aa6fd9cde385b665432376621f docbook-sgml-dtd-4.3-r1.ebuild 1057
+MD5 77f48c33d6d199ee659806bdf3e60b84 docbook-sgml-dtd-4.3-r1.ebuild 1055
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 76d53f45afb968ea0724d75ed2e83afb files/digest-docbook-sgml-dtd-3.0-r2 55
 MD5 850c55e93dee03c8286d4ef44de9cc1b files/digest-docbook-sgml-dtd-3.1-r2 55
@@ -18,3 +21,10 @@ MD5 35d694d581e6f4a9bfaf171255d2cb5e files/docbook-sgml-dtd-4.0-catalog.diff 251
 MD5 b7d89004561264c5299e7d2d0947eac2 files/docbook-sgml-dtd-4.1-catalog.diff 2518
 MD5 2d9d2574f3c330b971bb59d7050b703a files/docbook-sgml-dtd-4.2-catalog.diff 2496
 MD5 a241deeadd491695c185d9d75713e6ac files/docbook-sgml-dtd-4.3-catalog.diff 2439
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCpcMDKRy60XGEcJIRAqxEAJ4kbpn6wwCKg5becsUxz+uFRdwJXACeILc5
+Vwdi7ZnPmTMG9HgUrfgFwxM=
+=Iknc
+-----END PGP SIGNATURE-----
