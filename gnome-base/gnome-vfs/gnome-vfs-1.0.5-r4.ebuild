@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.10 2005/05/25 03:56:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.11 2005/06/07 12:06:30 s4t4n Exp $
 
 inherit eutils libtool toolchain-funcs
 
@@ -17,6 +17,8 @@ RDEPEND="=gnome-base/gconf-1.0*
 	>=gnome-base/gnome-libs-1.4.1.2
 	>=gnome-base/gnome-mime-data-1.0.1
 	>=app-arch/bzip2-1.0.2
+	>=dev-libs/libxml-1.8.17-r2
+	>=gnome-base/oaf-0.6.10
 	ssl? ( dev-libs/openssl )"
 
 
