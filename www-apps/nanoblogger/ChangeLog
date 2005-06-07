@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/nanoblogger
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.9 2005/05/26 23:26:28 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.10 2005/06/07 14:53:08 ka0ttic Exp $
+
+*nanoblogger-3.2 (07 Jun 2005)
+
+  07 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> +nanoblogger-3.2.ebuild:
+  Version bump.
 
   26 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   nanoblogger-3.1-r3.ebuild:
