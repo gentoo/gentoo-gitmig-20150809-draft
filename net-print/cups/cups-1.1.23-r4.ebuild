@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r4.ebuild,v 1.2 2005/06/07 09:59:59 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r4.ebuild,v 1.3 2005/06/07 10:45:59 lanius Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -63,15 +63,14 @@ src_compile() {
 	use ssl && \
 		myconf="${myconf} $(use_enable gnutls) $(use_enable !gnutls openssl)"
 
-	CUPS_REQUESTS="/var/spool/cups" \
 	econf \
 		--with-cups-user=lp \
 		--with-cups-group=lp \
+		--localstatedir=/var \
 		$(use_enable pam) \
 		$(use_enable ssl) \
 		$(use_enable slp) \
 		$(use_enable nls) \
-		--with-logdir=/var/log/cups \
 		${myconf} \
 		|| die "econf failed"
 
