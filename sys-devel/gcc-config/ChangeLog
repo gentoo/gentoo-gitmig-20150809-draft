@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.91 2005/06/07 00:39:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.92 2005/06/07 22:42:28 vapier Exp $
+
+*gcc-config-1.3.11-r2 (07 Jun 2005)
+
+  07 Jun 2005; Mike Frysinger <vapier@gentoo.org> files/gcc-config-1.3.11,
+  -gcc-config-1.3.11-r1.ebuild, +gcc-config-1.3.11-r2.ebuild:
+  Make sure we support funky version strings (beta823942) and custom specs
+  (hardened).
 
 *gcc-config-1.3.11-r1 (07 Jun 2005)
 
