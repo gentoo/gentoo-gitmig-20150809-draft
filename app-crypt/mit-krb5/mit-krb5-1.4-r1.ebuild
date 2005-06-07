@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.ebuild,v 1.6 2005/06/06 13:46:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4-r1.ebuild,v 1.1 2005/06/07 17:27:35 seemant Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -79,6 +79,22 @@ src_install() {
 			|| dodoc doc/api/*.ps
 
 	fi
+
+	for i in {telnetd,ftpd}
+	do
+		mv ${D}/usr/share/man/man8/${i}.8 ${D}/usr/share/man/man8/k${i}.8
+		mv ${D}/usr/sbin/${i} ${D}/usr/sbin/k${i}
+	done
+
+	for i in {rcp,rsh,telnet,ftp}
+	do
+		mv ${D}/usr/share/man/man1/${i}.1 ${D}/usr/share/man/man1/k${i}.1
+		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
+	done
+
+
+
+
 
 	newinitd ${FILESDIR}/mit-krb5kadmind.initd mit-krb5kadmind
 	newinitd ${FILESDIR}/mit-krb5kdc.initd mit-krb5kdc
