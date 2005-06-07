@@ -1,6 +1,6 @@
 /*
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/2.3.5/ssp.c,v 1.2 2005/05/27 22:12:17 vapier Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/2.3.5/ssp.c,v 1.3 2005/06/07 01:38:58 vapier Exp $
  *
  * This is a modified version of Hiroaki Etoh's stack smashing routines
  * implemented for glibc.
@@ -20,9 +20,9 @@
 # include <config.h>
 #endif
 
-//#ifdef __SSP__
-//# error ssp.c has to be built w/ -fno-stack-protector
-//#endif
+#ifdef __SSP__
+# error ssp.c has to be built w/ -fno-stack-protector
+#endif
 
 #include <stdio.h>
 #include <string.h>
@@ -60,13 +60,13 @@ extern int __libc_close(int fd);
 # define __libc_open(file, flags) __open(file, flags)
 # define __libc_read(fd, buf, count) __read(fd, buf, count)
 # define __libc_close(fd) __close(fd)
+# define __libc_write(fd, buf, count) __write(fd, buf, count)
 #endif
 
 void __guard_setup(void) __attribute__ ((constructor));
 void __guard_setup(void)
 {
 	size_t size;
-	struct timeval tv;
 
 	if (__guard != 0UL)
 		return;
@@ -111,9 +111,11 @@ void __guard_setup(void)
 
 	/* Everything failed? Or we are using a weakened model of the 
 	 * terminator canary */
-
-	gettimeofday(&tv, NULL);
-	__guard ^= tv.tv_usec ^ tv.tv_sec;
+	{
+		struct timeval tv;
+		__gettimeofday(&tv, NULL);
+		__guard ^= tv.tv_usec ^ tv.tv_sec;
+	}
 }
 
 void __stack_smash_handler(char func[], int damaged __attribute__ ((unused)));
@@ -130,8 +132,17 @@ void __stack_smash_handler(char func[], int damaged)
 	sigprocmask(SIG_BLOCK, &mask, NULL);	/* except SSP_SIGTYPE */
 
 	/* Print error message to stderr and syslog */
+#if 1 /* syslog() causes issues with glibc #94325 */
+	__libc_write(STDERR_FILENO, __progname, strlen(__progname));
+	__libc_write(STDERR_FILENO, message, strlen(message));
+	__libc_write(STDERR_FILENO, func, strlen(func));
+	__libc_write(STDERR_FILENO, "()\n", 3);
+	//_syscall3(int, _ssp_syslog, int, type, char *, bufp, int, len)
+	//_ssp_syslog(LOG_INFO,
+#else
 	fprintf(stderr, "%s%s%s()\n", __progname, message, func);
 	syslog(LOG_INFO, "%s%s%s()", __progname, message, func);
+#endif
 
 	/* Make the default handler associated with the signal handler */
 	memset(&sa, 0, sizeof(struct sigaction));

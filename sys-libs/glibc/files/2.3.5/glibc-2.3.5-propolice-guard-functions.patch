@@ -1,0 +1,40 @@
+--- glibc-2.3.5/sysdeps/generic/libc-start.c
++++ glibc-2.3.5/sysdeps/generic/libc-start.c
+@@ -188,6 +188,9 @@
+     GLRO(dl_debug_printf) ("\ntransferring control: %s\n\n", argv[0]);
+ #endif
+ 
++  /* call the __guard_setup to set up the random __guard value */
++  __guard_setup ();	/* pappy@gentoo.org (pappy rules) */
++
+ #ifdef HAVE_CLEANUP_JMP_BUF
+   /* Memory for the cancellation buffer.  */
+   struct pthread_unwind_buf unwind_buf;
+--- glibc-2.3.5/sysdeps/unix/sysv/linux/Dist
++++ glibc-2.3.5/sysdeps/unix/sysv/linux/Dist
+@@ -1,3 +1,4 @@
++ssp.c
+ bits/initspin.h
+ cmsg_nxthdr.c
+ dl-brk.c
+--- glibc-2.3.5/sysdeps/unix/sysv/linux/Makefile
++++ glibc-2.3.5/sysdeps/unix/sysv/linux/Makefile
+@@ -1,5 +1,6 @@
+ ifeq ($(subdir),csu)
+-sysdep_routines += errno-loc
++sysdep_routines += errno-loc ssp
++CFLAGS-ssp.c += -fno-stack-protector
+ endif
+ 
+ ifeq ($(subdir),assert)
+--- glibc-2.3.5/sysdeps/unix/sysv/linux/Versions
++++ glibc-2.3.5/sysdeps/unix/sysv/linux/Versions
+@@ -108,6 +108,8 @@
+   GLIBC_2.3.2 {
+     # New kernel interfaces.
+     epoll_create; epoll_ctl; epoll_wait;
++    # global objects and functions for the propolice patch in gcc - moved from libgcc by pappy@gentoo.org
++    __guard; __guard_setup; __stack_smash_handler;
+   }
+   GLIBC_2.3.3 {
+     gnu_dev_major; gnu_dev_minor; gnu_dev_makedev;

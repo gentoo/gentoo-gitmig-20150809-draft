@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.23 2005/06/06 04:51:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.24 2005/06/07 01:38:58 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -210,7 +210,7 @@ toolchain-glibc_src_unpack() {
 	cd "${S}"
 	cp "${FILESDIR}"/2.3.5/ssp.c sysdeps/unix/sysv/linux/ || die "could not find ssp.c"
 	rm -f "${WORKDIR}"/patches/2*
-	epatch "${FILESDIR}"/2.3.3/glibc-2.3.2-propolice-guard-functions-v3.patch
+	epatch "${FILESDIR}"/2.3.5/glibc-2.3.5-propolice-guard-functions.patch
 	epatch "${FILESDIR}"/2.3.5/glibc-2.3.5-frandom-detect.patch
 
 	if [[ -n ${PATCH_VER} ]] ; then
