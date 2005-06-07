@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r2.ebuild,v 1.4 2005/06/07 17:21:24 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r2.ebuild,v 1.5 2005/06/07 17:24:01 lanius Exp $
 
 inherit gnuconfig eutils
 
@@ -41,7 +41,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fixps.patch
 	epatch ${FILESDIR}/${P}-psmandup.diff
 
-	has_version app-text/acroread && epatch ${FILESDIR}/${P}-acroread.patch
+	has_version app-text/acroread && epatch ${FILESDIR}/a2ps-4.13-acroread.patch
 
 	gnuconfig_update || die "gnuconfig_update failed"
 	libtoolize --copy --force || die "libtoolize failed"
