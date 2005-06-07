@@ -5,5 +5,8 @@
 		<email>uberlord@gentoo.org</email>
 		<name>Roy Marples</name>
 	</maintainer>
-	<longdescription>Very Secure FTP Daemon</longdescription>
+	<longdescription>
+		Very Secure FTP Daemon written with speed, size and security
+		in mind
+	</longdescription>
 </pkgmetadata>
