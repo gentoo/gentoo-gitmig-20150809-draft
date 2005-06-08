@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.10.ebuild,v 1.1 2005/05/05 13:21:08 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.10.ebuild,v 1.2 2005/06/08 20:39:05 griffon26 Exp $
 
 inherit eutils
 
 IUSE="kerberos"
 
 DESCRIPTION="Coda is an advanced networked filesystem developed at Carnegie Mellon Univ."
-HOMEPAGE="http://www.coda.cs.cmu.edu"
-SRC_URI="ftp://ftp.coda.cs.cmu.edu/pub/coda/src/${P}.tar.gz"
+HOMEPAGE="http://www.coda.cs.cmu.edu/"
+SRC_URI="http://www.coda.cs.cmu.edu/pub/coda/src/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -227,6 +227,12 @@ pkg_config () {
 
 	# Start coda server
 	/etc/init.d/codasrv start || exit 1
+
+	# Workaround to increase the likelihood that the coda server finished
+	# starting up. Once there is a nicer way to detect this, it should 
+	# probably be added to the codasrv init script.
+	# See http://www.coda.cs.cmu.edu/maillists/codalist/codalist-2004/6954.html
+	sleep 5
 
 	einfo "Creating root volume..."
 	# Create root volume

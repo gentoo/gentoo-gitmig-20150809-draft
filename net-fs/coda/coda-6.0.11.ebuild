@@ -1,24 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.7.ebuild,v 1.5 2005/02/05 14:36:20 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.11.ebuild,v 1.1 2005/06/08 20:39:05 griffon26 Exp $
 
 inherit eutils
 
 IUSE="kerberos"
 
 DESCRIPTION="Coda is an advanced networked filesystem developed at Carnegie Mellon Univ."
-HOMEPAGE="http://www.coda.cs.cmu.edu"
-SRC_URI="ftp://ftp.coda.cs.cmu.edu/pub/coda/src/${P}.tar.gz"
+HOMEPAGE="http://www.coda.cs.cmu.edu/"
+SRC_URI="http://www.coda.cs.cmu.edu/pub/coda/src/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 # partly based on the deps suggested by Mandrake's RPM, and/or on my current versions
 # Also, definely needs coda.h from linux-headers.
-DEPEND=">=sys-libs/lwp-1.12
-	>=net-libs/rpc2-1.23
-	>=sys-libs/rvm-1.10
+DEPEND=">=sys-libs/lwp-2.0
+	>=net-libs/rpc2-1.27
+	>=sys-libs/rvm-1.11
 	>=sys-libs/db-3
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
@@ -29,13 +29,9 @@ DEPEND=">=sys-libs/lwp-1.12
 	sys-apps/grep
 	virtual/os-headers"
 
-#	>=sys-apps/sed-4
-#	net-fs/coda-kernel
-
-
-RDEPEND=">=sys-libs/lwp-1.12
-	>=net-libs/rpc2-1.23
-	>=sys-libs/rvm-1.10
+RDEPEND=">=sys-libs/lwp-2.0
+	>=net-libs/rpc2-1.27
+	>=sys-libs/rvm-1.11
 	>=sys-libs/db-3
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
@@ -74,7 +70,7 @@ src_install () {
 		oldincludedir=${D}/usr/include server-install || die
 		infodir=${D}/usr/share/info \
 
-	dodoc README* ChangeLog CREDITS LICENSE
+	dodoc README* ChangeLog CREDITS
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/${PV}/venus
@@ -85,9 +81,6 @@ src_install () {
 	# We may use a conf.d/coda file at some point ?
 #	insinto /etc/conf.d
 #	newins ${FILESDIR}/coda.conf.d coda
-
-	# I am not sure why coda misplaces this file...
-	mv -f ${D}/etc/server.conf.ex ${D}/etc/coda/server.conf.ex
 
 	sed -i -e "s,^#vicedir=/.*,vicedir=/var/lib/vice," \
 		${D}/etc/coda/server.conf.ex
@@ -124,7 +117,6 @@ pkg_config () {
 
 	# Set of default configuration values 
 	local CODA_ROOT_DIR="/var/lib/vice"
-	local CODA_ROOT_VOLUME="codarootvol"
 	local CODA_TEST_VOLUME="codatestvol"
 	local CODA_TEST_VOLUME_MOUNTPOINT="test"
 	local CODA_ADMIN_UID="6000"
@@ -196,7 +188,7 @@ pkg_config () {
 	einfo "- a coda SCM (System Control Machine)"
 	einfo "- a coda administrator '${CODA_ADMIN_NAME}' with coda uid ${CODA_ADMIN_UID} and password 'changeme'"
 	einfo "- a coda root volume available at /mnt/coda/${FQDN}"
-	einfo "- a writable coda volume available at ${CODA_MOUNTPOINT}/${FQDN}/${CODA_TEST_VOLUME_MOUNTPOINT}"
+	einfo "- a test volume mounted at ${CODA_MOUNTPOINT}/${FQDN}/${CODA_TEST_VOLUME_MOUNTPOINT}"
 	echo
 	einfon "Are you sure you want to do this? (y/n) "
 	read answer
@@ -214,7 +206,6 @@ pkg_config () {
 	${AUTH2_AUTHENTICATION_TOKEN}
 	${VOLUTIL_AUTHENTICATION_TOKEN}
 	1
-	${CODA_ROOT_VOLUME}
 	${CODA_ADMIN_UID}
 	${CODA_ADMIN_NAME}
 	yes
@@ -226,24 +217,31 @@ pkg_config () {
 	${CODA_STORAGE_DIR}/${VICE_PARTITION}
 	y
 	2M
+	n
 	EOF
 
 	# Start coda server
 	/etc/init.d/codasrv start || exit 1
 
+	# Workaround to increase the likelihood that the coda server finished
+	# starting up. Once there is a nicer way to detect this, it should 
+	# probably be added to the codasrv init script.
+	# See http://www.coda.cs.cmu.edu/maillists/codalist/codalist-2004/6954.html
+	sleep 5
+
 	einfo "Creating root volume..."
 	# Create root volume
-	createvoloutput=`createvol_rep ${CODA_ROOT_VOLUME} ${FQDN} 2>&1 <<- EOF
+	createvoloutput=`createvol_rep / ${FQDN} 2>&1 <<- EOF
 	n
 	EOF`
-	if ! volutil info ${CODA_ROOT_VOLUME} &> /dev/null
+	if ! volutil info / &> /dev/null
 	then
 		eerror "Unable to create root volume, output of createvol_rep follows"
 		echo "$createvoloutput"
 		exit 1
 	fi
 
-	einfo "Creating writable volume..."
+	einfo "Creating test volume..."
 	# Create test volume
 	createvoloutput=`createvol_rep ${CODA_TEST_VOLUME} ${FQDN} 2>&1 <<- EOF
 	n
@@ -259,7 +257,7 @@ pkg_config () {
 
 	/etc/init.d/venus start
 
-	einfo "Mounting coda volume at ${CODA_MOUNTPOINT}/${FQDN}/${CODA_TEST_VOLUME_MOUNTPOINT}"
+	einfo "Mounting test volume at ${CODA_MOUNTPOINT}/${FQDN}/${CODA_TEST_VOLUME_MOUNTPOINT}"
 	clog ${CODA_ADMIN_NAME}@${FQDN} > /dev/null <<- EOF
 	changeme
 	EOF

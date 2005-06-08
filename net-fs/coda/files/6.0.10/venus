@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/venus,v 1.4 2004/07/26 17:50:21 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/6.0.10/venus,v 1.1 2005/06/08 20:39:05 griffon26 Exp $
 
 depend() {
 	need net
@@ -19,7 +19,7 @@ start() {
 	checkconfig || return 1
 
 	ebegin "Starting venus"
-	start-stop-daemon --start --quiet --exec /usr/sbin/venus --background
+	start-stop-daemon --start --quiet --exec /usr/sbin/venus > /dev/null
 	eend $?
 }
 
