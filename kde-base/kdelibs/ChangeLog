@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.246 2005/06/07 12:59:02 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.247 2005/06/08 11:53:29 flameeyes Exp $
+
+  08 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  kdelibs-3.4.1-r1.ebuild:
+  Use virtual/utempter instead of sys-apps/utempter else Gentoo/FreeBSD fails
+  to get dependencies.
 
 *kdelibs-3.4.1-r1 (07 Jun 2005)
 
