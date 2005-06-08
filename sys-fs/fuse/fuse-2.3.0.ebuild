@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.3.0.ebuild,v 1.1 2005/06/03 15:40:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.3.0.ebuild,v 1.2 2005/06/08 17:32:55 hansmi Exp $
 
 inherit linux-mod eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="An interface for filesystems implemented in userspace."
 HOMEPAGE="http://fuse.sourceforge.net"
 SRC_URI="mirror://sourceforge/fuse/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 S=${WORKDIR}/${MY_P}
 
