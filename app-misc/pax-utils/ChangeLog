@@ -1,6 +1,24 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.24 2005/06/05 11:54:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.25 2005/06/08 16:19:17 solar Exp $
+
+*pax-utils-0.1.0 (08 Jun 2005)
+
+  08 Jun 2005; <solar@gentoo.org> -pax-utils-0.0.8.ebuild,
+  -pax-utils-0.0.9.ebuild, +pax-utils-0.1.0.ebuild:
+  * scanelf options: -N matches a given lib. -T will print the cause of 
+  the ELF text relocation (-T based on code from Kevin Quinn.. 10x thanks) 
+  -F format modifiers were added for printing the base file name and base 
+  file name with search paths removed, this is ideal for scripting with 
+  use of automated q/a systems so we don't have to re-parse a the string 
+  to get desired output. All format modifiers now accept # in place of % 
+  but # is quiet where % is verbose. Also new to the format handling is 
+  the %x modifier now prints PT_PAX_FLAGS and falls back to EI_PAX if no 
+  PaX flags were found in the program header.
+  
+  * The suite should work on OSX. 
+  * Minor touch ups to Makefile/pspax/dumpelf.
+  * Lots of typecasting fixes for improved portability.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   pax-utils-0.0.7.ebuild:
