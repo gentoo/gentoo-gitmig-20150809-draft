@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.10 2005/05/30 20:04:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.11 2005/06/08 07:06:01 flameeyes Exp $
+
+*libtorrent-0.6.4 (08 Jun 2005)
+
+  08 Jun 2005; <flame@gentoo.org> -libtorrent-0.3.5.ebuild,
+  -libtorrent-0.3.7.ebuild, -libtorrent-0.4.1.ebuild,
+  +libtorrent-0.6.4.ebuild:
+  Added latest upstream version. Removed pre-split versions.
 
 *libtorrent-0.6.3 (30 May 2005)
 
