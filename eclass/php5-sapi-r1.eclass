@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.7 2005/06/01 22:12:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.8 2005/06/08 17:38:47 robbat2 Exp $
 #
-# eclass/php5-sapi.eclass
+# eclass/php5-sapi-r1.eclass
 #               Eclass for building different php5 SAPI instances
 #
 #               Based on robbat2's work on the php4 sapi eclass
@@ -14,7 +14,7 @@
 
 inherit eutils confutils libtool 
 
-ECLASS=php5-sapi
+ECLASS=php5-sapi-r1
 INHERITED="$INHERITED $ECLASS"
 
 # set MY_P in the ebuild
@@ -97,7 +97,7 @@ EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack pkg_postinst
 # INTERNAL FUNCTIONS
 # ========================================================================
 
-php5-sapi_check_awkward_uses() {
+php5-sapi-r1_check_awkward_uses() {
 
 	# snmp support seems broken, haven't looked into a fix for it yet
 
@@ -304,14 +304,14 @@ php5-sapi_check_awkward_uses() {
 # EXPORTED FUNCTIONS
 # ========================================================================
 
-php5-sapi_pkg_setup() {
+php5-sapi-r1_pkg_setup() {
 	# let's do all the USE flag testing before we do anything else
 	# this way saves a lot of time
 
-	php5-sapi_check_awkward_uses
+	php5-sapi-r1_check_awkward_uses
 }
 
-php5-sapi_src_unpack() {
+php5-sapi-r1_src_unpack() {
 	unpack ${A}
 	# Fix for HTTP auth bug, #59755 
 	[ "x${PV}" == "x5.0.0" ] && epatch ${FILESDIR}/php-5.0.0-httpauthfix.patch
@@ -341,7 +341,7 @@ php5-sapi_src_unpack() {
 	epatch ${FILESDIR}/${P}-missing-arches.patch
 }
 
-php5-sapi_src_compile() {
+php5-sapi-r1_src_compile() {
 	confutils_init
 
 	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR}"
@@ -418,7 +418,7 @@ php5-sapi_src_compile() {
 	enable_extension_with		"zlib"			"zlib"			1
 	enable_extension_enable		"debug"			"debug"			0
 
-	php5-sapi_check_awkward_uses
+	php5-sapi-r1_check_awkward_uses
 
 	# DBA support
 	enable_extension_enable		"dba"		"dba" 1
@@ -438,7 +438,7 @@ php5-sapi_src_compile() {
 	emake || die "make failed"
 }
 
-php5-sapi_src_install() {
+php5-sapi-r1_src_install() {
 	addpredict /usr/share/snmp/mibs/.index
 	
 	useq sharedext && PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules"
@@ -492,7 +492,7 @@ php5-sapi_src_install() {
 	fi
 }
 
-php5-sapi_pkg_postinst() {
+php5-sapi-r1_pkg_postinst() {
 	ewarn "If you have additional third party PHP extensions (such as"
 	ewarn "dev-php/eaccelerator) you may need to recompile them now."
 
