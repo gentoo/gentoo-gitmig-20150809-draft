@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 bb15b2e9ef05ef812dbc7b0564856ee6 wavbreaker-0.5.ebuild 745
-MD5 a81e9dcfc8bec44e336bec6f5b984127 ChangeLog 1668
+MD5 9747b6bb89f5e05a5aed8dd1d9b46749 ChangeLog 1796
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 f874bf80cc3caed676e24dd00f7d9b5c wavbreaker-0.6.1.ebuild 641
+MD5 d540cadb6f687696e87261a432584b5b wavbreaker-0.6.1.ebuild 648
 MD5 380ba426e2f4b94a3bfd979a0d5f464f files/digest-wavbreaker-0.5 65
 MD5 0f7681a3b39a9d551e83a1a758a0d0cb files/digest-wavbreaker-0.6.1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCo1w706ebR+OMO78RAq3tAJ4k0JgSeyWMkf4bdgVDx9FmwFNz/QCfdfZ8
-Dfnku7HyEpbPoc6k5qXQPE0=
-=in44
+iD8DBQFCpw0706ebR+OMO78RAhM2AJkBf+YS3T8vTEw9IEBvGdz9r4/YKQCfZhi4
+UvVuA4iVtFUxH6IXT69P8LU=
+=5liM
 -----END PGP SIGNATURE-----

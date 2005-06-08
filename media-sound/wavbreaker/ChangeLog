@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/wavbreaker
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.10 2005/06/05 20:10:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.11 2005/06/08 15:22:10 luckyduck Exp $
+
+  08 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> wavbreaker-0.6.1.ebuild:
+  readded -sparc keyword, see #95036 for details.
 
 *wavbreaker-0.6.1 (05 Jun 2005)
 
