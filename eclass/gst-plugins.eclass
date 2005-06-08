@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.24 2005/06/08 11:03:59 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.25 2005/06/08 21:41:24 zaheerm Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -34,7 +34,7 @@ MY_P=gst-plugins-${PV}
 # gstreamer 0.6
 my_gst_plugins="dxr3 oss qcam v4l v4l2 vcd vga cdrom xvideo a52dec aalib aalibtest alsa arts artstest artsc audiofile avifile cdparanoia dvdread dvdnav esd esdtest flac ffmpeg gnome_vfs gsm hermes http jack jpeg ladspa lame lcs libdv libfame libfametest libpng mad mikmod libmikmodtest mjpegtools mpeg2dec openquicktime raw1394 rtp sdl sdltest shout shout2 shout2test sidplay smoothwave snapshot swfdec tarkin vorbis vorbistest xmms libmmx atomic tests examples" 
 # gstreamer 0.8
-my_gst_plugins="${my_gst_plugins} divx faad gdk_pixbuf ogg sndfile x pango speex xvid mpeg2enc mplex musicbrainz nas librfb libcaca ivorbis faac theora kio osx_audio osx_video sunaudio artsc dts libvisual dirac libmng opengl gst_v4l gst_v4l2 libmms musepack directfb polyp cairo spc wavpack cdio"
+my_gst_plugins="${my_gst_plugins} divx faad gdk_pixbuf ogg sndfile x pango speex xvid mpeg2enc mplex musicbrainz nas librfb libcaca ivorbis faac theora kio osx_audio osx_video sunaudio artsc dts libvisual dirac libmng opengl gst_v4l gst_v4l2 libmms musepack directfb polyp cairo spc wavpack cdio amrnb"
 
 # Extract the plugin to build from the ebuild name
 # May be set by an ebuild and contain more than one indentifier, space seperated
