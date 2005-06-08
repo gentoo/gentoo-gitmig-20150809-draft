@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1bf49418f34e8527d352cdfad7d98c76 gst-plugins-musepack-0.8.8.ebuild 345
 MD5 174d230335d59e61ad10449956f7a1b0 gst-plugins-musepack-0.8.7.ebuild 333
-MD5 1100a0222020cbcdf678a3318b22ab54 ChangeLog 877
+MD5 1bf49418f34e8527d352cdfad7d98c76 gst-plugins-musepack-0.8.9.ebuild 345
+MD5 602d5604b177a33e30cb657f6d627e64 ChangeLog 990
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-musepack-0.8.7 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-musepack-0.8.8 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCb40j06ebR+OMO78RArmbAJ9m564/OMon5ZP42d3R3ouJ/eW71wCdFUKS
-UN9j6ttx/UX85wG6CN5pr7o=
-=GZ8b
------END PGP SIGNATURE-----
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-musepack-0.8.9 71
