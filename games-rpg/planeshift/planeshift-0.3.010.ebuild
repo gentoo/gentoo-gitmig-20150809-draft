@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.010.ebuild,v 1.2 2005/05/22 20:02:43 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.010.ebuild,v 1.3 2005/06/08 18:35:11 mr_bones_ Exp $
 
 inherit eutils games debug
 
@@ -78,6 +78,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
+	echo
 	ewarn "Before you can use Planeshift, you will need to update"
 	ewarn "all of the art files. This can be done by typing:"
 	ewarn
