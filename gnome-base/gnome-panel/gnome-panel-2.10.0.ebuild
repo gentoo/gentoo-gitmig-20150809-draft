@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.10.0.ebuild,v 1.7 2005/06/05 19:34:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.10.0.ebuild,v 1.8 2005/06/08 16:13:05 leonardop Exp $
 
 inherit gnome2 eutils
 
@@ -56,10 +56,20 @@ pkg_postinst() {
 
 	gnome2_pkg_postinst
 
-	einfo "setting panel gconf defaults..."
-	GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
-	${ROOT}/usr/bin/gconftool-2 --direct --config-source ${GCONF_CONFIG_SOURCE} --load=/etc/gconf/schemas/panel-default-setup.entries
-	rm /etc/gconf/schemas/panel-default-setup.entries
+	local entries="/etc/gconf/schemas/panel-default-setup.entries"
+	if [ -e "$entries" ]; then
+		einfo "setting panel gconf defaults..."
+		GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
+		${ROOT}/usr/bin/gconftool-2 --direct --config-source \
+			${GCONF_CONFIG_SOURCE} --load=${entries}
+		rm -f ${entries}
+	fi
+
+	local updater=`which gtk-update-icon-cache`
+	if [ -x "$updater" ]; then
+		einfo "Updating icon cache"
+		$updater -qf ${ROOT}/usr/share/icons/hicolor
+	fi
 
 }
 
