@@ -1,26 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c1f62462db8986aecafdea52dc12087e rpc2-1.13.ebuild 744
-MD5 e572e9c6d618524ef431aca0fba08dcf rpc2-1.19.ebuild 661
-MD5 37e5cd7561872f2e498208d585451318 rpc2-1.20.ebuild 661
-MD5 5dd2718edcb3cf739b73f87261eaf58d rpc2-1.22.ebuild 777
 MD5 fdd307ea78fc900a01e57b8151f34d4e metadata.xml 224
-MD5 57f004cd7fcae5b2a3aff3ffe4dd2456 rpc2-1.23.ebuild 698
-MD5 4b11f2f05d6b31264aa76c0384d5dfe8 rpc2-1.25.ebuild 698
-MD5 3e84772e79284515cc61ebad1e78a2a8 rpc2-1.27.ebuild 710
-MD5 555d5ee86f6059a7be7cfb7f6100f8a0 ChangeLog 2448
-MD5 e3c50809d3e54b4d013336bf1e329b39 files/digest-rpc2-1.13 61
-MD5 12009762c86de3ff906fcca81f0e3bb9 files/digest-rpc2-1.19 61
-MD5 17e93e185c8a2907a59a3bb35a8dfb60 files/digest-rpc2-1.20 61
-MD5 264bb3c7383cd6b22ef681dca4bfc734 files/digest-rpc2-1.22 61
-MD5 20b2b65bd7a2073db7c65df7e53166b8 files/digest-rpc2-1.23 61
+MD5 2c1971926f6e952f6c2eb36548ba6fda rpc2-1.25.ebuild 685
+MD5 77b9f926653a1f535f9c5318df1228fa rpc2-1.27.ebuild 697
+MD5 59f32b825a02699923bd2351e656ca64 ChangeLog 2713
 MD5 afd955627beb0c85e99173637166065a files/digest-rpc2-1.25 61
 MD5 d76f83c7ea459ced23c70f97e5d8dc3f files/digest-rpc2-1.27 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCeh1vMGnpIbeahxwRAiFjAJ0crTEOnBTu0f4BMHNst1yUzL3KigCfUHfh
-ppmXCXtBc4jSliys0xRkIXs=
-=rT+S
+iD8DBQFCp0SZMGnpIbeahxwRAg4DAKDN4hhGknI3GU00izZMorDWUffBWgCeNIvo
+0Pma2a2nJRrvSIXzMfJlMdk=
+=oknC
 -----END PGP SIGNATURE-----
