@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/amanda
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.32 2005/04/21 14:09:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.33 2005/06/08 20:45:13 robbat2 Exp $
+
+*amanda-2.4.5 (08 Jun 2005)
+
+  08 Jun 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/amanda-2.4.5-4tb-holding-disk.patch,
+  +files/amanda-2.4.5-amverify-loop-detect.patch,
+  +files/amanda-2.4.5-samba-printf.patch, +amanda-2.4.5.ebuild:
+  Amanda version bump to 2.4.5. Fixed bugs 91084, 83829, 51370.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> amanda-2.4.4_p3.ebuild:
   stable on amd64
