@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.9.2.ebuild,v 1.1 2005/06/07 05:08:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.9.2.ebuild,v 1.2 2005/06/08 16:51:59 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -29,6 +29,9 @@ src_unpack() {
 	else
 		unpack ${P}.tar.gz
 	fi
+	# Fix error in packaging (bug #95466)
+	cd "${S}"
+	find . -name stamp-po -exec rm -f '{}' \;
 }
 
 src_compile() {
