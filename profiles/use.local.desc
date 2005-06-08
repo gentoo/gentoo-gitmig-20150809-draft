@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1216 2005/06/08 09:04:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1217 2005/06/08 11:22:55 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -548,10 +548,13 @@ media-video/transcode:sse2 - Enables sse2 support
 media-video/vlc:cdda - Enables libcdda cd audio playback support
 media-video/vlc:cddb - Enables libcddb database support for indentifying cd's
 media-video/vlc:cdio - Enables libcdio support for cd interaction
+media-video/vlc:corba - Enables corba interface support
+media-video/vlc:daap - Enables DAAP shares services discovery support
 media-video/vlc:dts - Enables DTS audio support
 media-video/vlc:freetype - Enables freetype font support
 media-video/vlc:httpd - Enables a web based interface for vlc
 media-video/vlc:live - Enables LIVE.com support
+media-video/vlc:screen - Enables screen capture support
 media-video/vlc:stream - Enables vlc to stream video
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
 media-video/winki:css - Enables ripping of encrypted dvds
