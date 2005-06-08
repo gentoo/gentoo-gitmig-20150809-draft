@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/easyedit-1.4.6.ebuild,v 1.14 2005/03/05 22:01:45 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/easyedit-1.4.6.ebuild,v 1.15 2005/06/08 04:46:57 redhatter Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mahon.cwx.net/"
 SRC_URI="http://mahon.cwx.net/sources/${MY_P}.src.tgz"
 
 LICENSE="Artistic"
-KEYWORDS="x86 ppc64 sparc ia64 ppc-macos ppc ~amd64"
+KEYWORDS="x86 ppc64 sparc ia64 ppc-macos ppc ~amd64 ~mips"
 SLOT="0"
 
 DEPEND=">=sys-libs/ncurses-5.0"
