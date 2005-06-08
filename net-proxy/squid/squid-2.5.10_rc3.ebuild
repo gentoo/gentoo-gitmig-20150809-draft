@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10_rc3.ebuild,v 1.8 2005/05/30 03:40:37 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10_rc3.ebuild,v 1.9 2005/06/08 00:49:35 redhatter Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/${S_PP}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~mips"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 mips"
 IUSE="pam ldap ssl sasl snmp debug selinux underscores logrotate customlog zero-penalty-hit"
 
 RDEPEND="virtual/libc
