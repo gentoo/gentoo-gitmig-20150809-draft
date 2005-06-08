@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.9 2005/06/07 17:04:58 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.10 2005/06/08 10:08:57 lanius Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="qt?      ( >=x11-libs/qt-3.1.0-r1 )
 	scanner? ( || ( X? ( >=media-gfx/xsane-0.89 ) >=media-gfx/sane-frontends-1.0.9 ) )
 	snmp?    ( net-analyzer/net-snmp )
 	cups?    ( >=net-print/cups-1.1.18-r2 )
-	usb?     ( dev-libs/libusb sys-apps/hotplug )"
+	usb?     ( >=dev-libs/libusb-0.1.10a sys-apps/hotplug )"
 
 src_compile() {
 	epatch ${FILESDIR}/udev.patch
