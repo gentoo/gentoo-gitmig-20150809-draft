@@ -1,43 +1,45 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3_beta1.ebuild,v 1.1 2005/06/06 11:18:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3_beta1.ebuild,v 1.2 2005/06/08 13:48:30 greg_g Exp $
 
 inherit kde eutils
 
 MY_P=${P/_/-}
 
-DESCRIPTION="amaroK - the audio player for KDE"
+DESCRIPTION="amaroK - the audio player for KDE."
 HOMEPAGE="http://amarok.kde.org/"
 SRC_URI="mirror://sourceforge/amarok/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc -sparc ~x86"
-IUSE="arts flac gstreamer kde mad mysql noamazon oggvorbis opengl xine xmms visualization postgres"
+IUSE="arts flac gstreamer kde mp3 mysql noamazon opengl postgres xine xmms visualization vorbis"
 # kde: enables compilation of the konqueror sidebar plugin
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
+DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	 arts? ( kde-base/arts
 		 || ( ( kde-base/kdemultimedia-arts kde-base/akode )
 		 	kde-base/kdemultimedia ) )
-	 opengl? ( virtual/opengl )
-	 xmms? ( >=media-sound/xmms-1.2 )
 	 xine? ( >=media-libs/xine-lib-1_rc4 )
+	 gstreamer? ( >=media-libs/gstreamer-0.8.8 )
 	 >=media-libs/tunepimp-0.3.0
 	 >=media-libs/taglib-1.3.1
-	 gstreamer? ( >=media-libs/gst-plugins-0.8.6
-	 	      mad? ( >=media-plugins/gst-plugins-mad-0.8.6 )
-		      oggvorbis? ( >=media-plugins/gst-plugins-ogg-0.8.6
-				   >=media-plugins/gst-plugins-vorbis-0.8.6 )
-		      flac? ( >=media-plugins/gst-plugins-flac-0.8.6 ) )
 	 mysql? ( >=dev-db/mysql-4 )
+	 postgres? ( dev-db/postgresql )
+	 opengl? ( virtual/opengl )
+	 xmms? ( >=media-sound/xmms-1.2 )
 	 visualization? ( media-libs/libsdl
-			  >=media-plugins/libvisual-plugins-0.2 )
-	 postgres? ( dev-db/postgresql )"
+			  >=media-plugins/libvisual-plugins-0.2 )"
 
-DEPEND="${RDEPEND}
+RDEPEND="${DEPEND}
+	gstreamer? ( mp3? ( >=media-plugins/gst-plugins-mad-0.8.6 )
+	             vorbis? ( >=media-plugins/gst-plugins-ogg-0.8.6
+	                       >=media-plugins/gst-plugins-vorbis-0.8.6 )
+	             flac? ( >=media-plugins/gst-plugins-flac-0.8.6 ) )"
+
+DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.9.0"
 
 need-kde 3.4
@@ -66,9 +68,11 @@ src_compile() {
 	# it must be installed in the KDE install directory.
 	PREFIX="`kde-config --prefix`"
 
-	myconf="$(use_with arts) $(use_with xine)
-		$(use_with gstreamer) $(use_enable mysql)
-		$(use_with opengl) $(use_enable !noamazon amazon)"
+	local myconf="$(use_with arts) $(use_with xine) $(use_with gstreamer)
+	              $(use_enable mysql) $(use_enable postgres postgresql)
+	              $(use_with opengl) $(use_with xmms)
+	              $(use_with visualization libvisual)
+	              $(use_enable !noamazon amazon)"
 
 	kde_src_compile
 }
