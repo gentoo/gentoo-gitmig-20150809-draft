@@ -7,7 +7,7 @@ MD5 b5a4d76b79fb532661274491c7eec60a binutils-2.14.90.0.8-r2.ebuild 366
 MD5 779755665878f5e4b9142a0e7d13985b binutils-2.15.90.0.1.1-r5.ebuild 343
 MD5 2e261446fbcca34bb1c71bf8b098e78f binutils-2.15.90.0.1.1-r4.ebuild 343
 MD5 999a4670392b99d3cd40e753275ac2bc binutils-2.15.90.0.3-r5.ebuild 327
-MD5 27ca77d60bdfcf0597424d058c52f915 binutils-2.16.ebuild 673
+MD5 eff144b874bb93b18c4589d3967139b8 binutils-2.16.ebuild 649
 MD5 b9605df500d38a4427e73a656ccfa313 binutils-2.16.90.0.3.ebuild 349
 MD5 999040d0946ce2ddded79675cebda795 binutils-2.15.92.0.2-r8.ebuild 370
 MD5 ea15e7e289eb1db7c2b55838feff3529 binutils-2.15.90.0.3-r4.ebuild 325
