@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 24581214fef0aac47435af5c67fb2c05 freeciv-2.0.1.ebuild 4565
-MD5 adabe022b7cab99fe3b4f67d7304d577 freeciv-1.14.2.ebuild 2069
 MD5 930a1e97e5a827304ff9af55ba329c2d freeciv-1.14.1.ebuild 2146
-MD5 9f418604d5bf88014eca21e2e67b063a ChangeLog 4577
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a596b071c160a0a1dd5d5c315f21a2f7 files/digest-freeciv-1.14.1 131
-MD5 439e954e20f13b112d572ff57700ce00 files/digest-freeciv-1.14.2 131
+MD5 c31bb9f790b877e782e47d3cecbecd3f ChangeLog 4675
+MD5 580cc4c07c09faa75f5399365708eb5a freeciv-2.0.1.ebuild 4567
+MD5 adabe022b7cab99fe3b4f67d7304d577 freeciv-1.14.2.ebuild 2069
 MD5 ccdab22189a2316efa2eaedb5b536b9c files/digest-freeciv-2.0.1 130
+MD5 439e954e20f13b112d572ff57700ce00 files/digest-freeciv-1.14.2 131
+MD5 a596b071c160a0a1dd5d5c315f21a2f7 files/digest-freeciv-1.14.1 131
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCo40YntT9W3vfTuoRAu3lAKCfrL5Jss8MMBRBWZ4Mtlo59YeD3gCeJy5+
-+Pu8P8b9haA4kDtj9i4hBo0=
-=GTQk
+iD8DBQFCpwFDKRy60XGEcJIRAnKlAJ9UrDuNQvfSkrFj4y3WnV63JV5cqgCfQDJS
+KNx0VdIgh0nhIoU6ddq0BD8=
+=INfQ
 -----END PGP SIGNATURE-----
