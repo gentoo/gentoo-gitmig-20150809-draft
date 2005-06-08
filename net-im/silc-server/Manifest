@@ -1,20 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 002a7849448a24be8cd795dbf246cca4 silc-server-0.9.19.ebuild 2089
-MD5 c4f37b1c8f05537c7d299426e5b3b918 silc-server-0.9.18.ebuild 1512
-MD5 ce1bd124e0bcee76c5189b10eeb8e820 ChangeLog 1352
+MD5 ef6c532bedbf92c222ac6dcc3852a4df silc-server-1.0.ebuild 1785
+MD5 1e4aacdf746cb72edac611fa8ead78db ChangeLog 1683
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 4614d32e0ab4be376c9510aed8076198 silc-server-0.9.21.ebuild 1767
-MD5 1d6f438fd4db0224ebc00a4aedbf03b8 files/silcd.rc6 516
-MD5 35c2cb3f96d044d2fa789fdaee59b960 files/digest-silc-server-0.9.18 72
-MD5 daa76cd2004c198217562515888c3bd6 files/digest-silc-server-0.9.19 74
-MD5 da6c0f6df31ae15bfb1c1cb0eea16c08 files/digest-silc-server-0.9.21 71
-MD5 98a0c24ebb4913a10047dc242aa60a3a files/silc-server.rc6 541
+MD5 bc8dbf4b64aee6fb4265bc1834e8fc6f files/1.0-banlist-fix.patch 428
+MD5 e6e284a15d071cfdf8df8a2b7bff775a files/silcd.rc6 519
+MD5 16f7bf5863b8fe1ce3293e158882ee35 files/digest-silc-server-1.0 68
+MD5 1d2c979312a0f446a2c84f2b3a98f76b files/1.0-fPIC.patch 296
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfQF7I1lqEGTUzyQRAhgUAJ4wZUT38YWrFmOEaexhR2zL7ZSRzACg2iLB
-j97XlcvRY12WBGiRwzcjOYw=
-=d4Zu
+iD8DBQFCp2AJI1lqEGTUzyQRAj2/AJwML7fuT5rnx6f/eZ7scJFGpr6gPwCfYi3m
+RWe2kwmtnekupUXJplI8TMQ=
+=BmmN
 -----END PGP SIGNATURE-----

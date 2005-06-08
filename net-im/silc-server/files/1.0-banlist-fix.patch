@@ -1,0 +1,11 @@
+--- silc-server-1.0/lib/silcutil/unix/silcunixutil.c	2005-04-30 17:31:27.000000000 +0200
++++ silc-server-test/lib/silcutil/unix/silcunixutil.c	2005-05-24 21:23:08.035680920 +0200
+@@ -98,7 +98,7 @@
+   regex_t preg;
+   int ret = FALSE;
+   
+-  if (regcomp(&preg, regex, REG_NOSUB | REG_EXTENDED) < 0)
++  if (regcomp(&preg, regex, REG_NOSUB | REG_EXTENDED) != 0)
+     return FALSE;
+ 
+   if (regexec(&preg, string, 0, NULL, 0) == 0)
