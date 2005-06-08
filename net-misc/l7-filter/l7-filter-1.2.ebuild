@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.2.ebuild,v 1.2 2005/06/05 01:59:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.2.ebuild,v 1.3 2005/06/08 14:34:31 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~ppc x86"
 IUSE=""
 SLOT="${KV}"
 S=${WORKDIR}/${MY_P}
-DEPEND=""
+RDEPEND="net-misc/l7-protocols"
 
 src_unpack() {
 
