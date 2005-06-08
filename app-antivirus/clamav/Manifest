@@ -1,28 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 34a649543043b4506c5ecdca94ddad41 clamav-0.85.ebuild 2314
-MD5 bf2cf15ce5fddd93fffa28e8b0a3f50f clamav-0.84.ebuild 2314
-MD5 7457f697e2ee459ce0a4aac046bef3bf clamav-0.85.1-r1.ebuild 3572
-MD5 921a56174bc3634808df37537d77ea1d clamav-0.85.1.ebuild 3326
-MD5 689c7676f16b3126b2c3f9271f7c2a1e clamav-0.85-r1.ebuild 3290
-MD5 59ab7c6d8d9fd0162c1d7be6f8cd0b7c ChangeLog 15407
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 MD5 6ea55388f51845c2f815589dfed047a4 clamav-0.83.ebuild 2332
-MD5 0bd0d31062475433335752e126830799 files/digest-clamav-0.85-r1 64
-MD5 08f7b320461c04bbb88555e389c2e544 files/clamav-milter.README.gentoo 1124
-MD5 102cc388dbea3446ba249cfc2e80cff3 files/digest-clamav-0.85.1 66
-MD5 9bbf2754f8178fd5164875d784aa9ffa files/digest-clamav-0.83 64
-MD5 3e9877b8901f604bd65ea89ff18833b6 files/digest-clamav-0.84 64
+MD5 689c7676f16b3126b2c3f9271f7c2a1e clamav-0.85-r1.ebuild 3290
+MD5 34a649543043b4506c5ecdca94ddad41 clamav-0.85.ebuild 2314
+MD5 b5ea92dfe4d1500a805f05884c7bf1ad clamav-0.85.1-r1.ebuild 3574
+MD5 6427d3465afcaaa3f4d7dfab064375ce ChangeLog 15510
+MD5 bf2cf15ce5fddd93fffa28e8b0a3f50f clamav-0.84.ebuild 2314
+MD5 921a56174bc3634808df37537d77ea1d clamav-0.85.1.ebuild 3326
 MD5 0bd0d31062475433335752e126830799 files/digest-clamav-0.85 64
-MD5 f6bf5b894e60e8686cb5a36ba240e1ef files/clamd.rc.new 2032
+MD5 102cc388dbea3446ba249cfc2e80cff3 files/digest-clamav-0.85.1 66
+MD5 3e9877b8901f604bd65ea89ff18833b6 files/digest-clamav-0.84 64
 MD5 102cc388dbea3446ba249cfc2e80cff3 files/digest-clamav-0.85.1-r1 66
+MD5 08f7b320461c04bbb88555e389c2e544 files/clamav-milter.README.gentoo 1124
+MD5 0bd0d31062475433335752e126830799 files/digest-clamav-0.85-r1 64
 MD5 e29ee77ca9bfe28ed18dbf67a9c90e75 files/clamd.conf 193
+MD5 f6bf5b894e60e8686cb5a36ba240e1ef files/clamd.rc.new 2032
+MD5 9bbf2754f8178fd5164875d784aa9ffa files/digest-clamav-0.83 64
 MD5 1b3268d3723e003ad99bf706e6bf4312 files/clamd.rc 1444
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCpEhoQlM6RnzZP+IRAowXAKCmVPx2YW6WDWpoJNhI5gP4INqu2QCguIm1
-nOHP4iiKIFgJkFYlxtPoJEo=
-=37VQ
+iD8DBQFCpu/fKRy60XGEcJIRAk68AJ9DB8VeKMjAPl0U7kkxBIs6KiurNgCfSnSJ
+1cKk/gTRcuS2nOpUsnz8SsY=
+=h/Eh
 -----END PGP SIGNATURE-----
