@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.2 2005/05/27 23:24:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.3 2005/06/08 23:17:05 cardoe Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org
 #
@@ -26,14 +26,10 @@ mythtv-plugins_src_unpack() {
 	-i 'settings.pro' || die "fixing PREFIX to /usr failed"
 	
 	sed -e "s!QMAKE_CXXFLAGS_RELEASE = -O3 -march=pentiumpro -fomit-frame-pointer!QMAKE_CXXFLAGS_RELEASE = ${CXXFLAGS}!" \
-	-i 'settings.pro' || die "ciarnam sucks"
-	#sed -e "/^QMAKE_CXXFLAGS_RELEASE/s!= .*!= ${CXXFLAGS}!" \
-	#-i 'settings.pro' || die "Fixing QMake's CXXFLAGS failed"
+	-i 'settings.pro' || die "Fixing QMake's CXXFLAGS failed"
 	
 	sed -e "s!QMAKE_CFLAGS_RELEASE = \$\${QMAKE_CXXFLAGS_RELEASE}!QMAKE_CFLAGS_RELEASE = ${CFLAGS}!" \
-	-i 'settings.pro' || die "ciaranm sucks"
-	#sed -e "/^QMAKE_CFLAGS_RELEASE/s!= .*!= ${CFLAGS}!"
-	#-i 'settings.pro' || die "Fixing Qmake's CFLAGS failed"
+	-i 'settings.pro' || die "Fixing Qmake's CFLAGS failed"
 
 	find ${S} -name '*.pro' -exec sed -i \
 		-e "s:\$\${PREFIX}/lib/:\$\${PREFIX}/$(get_libdir)/:g" \
@@ -49,7 +45,8 @@ mythtv-plugins_src_compile() {
 		-i 'settings.pro' || die "switching to debug build failed"
 	fi
 	
-	if ( use x86 && ! use mmx ) || ! use amd64; then
+#	if ( use x86 && ! use mmx ) || ! use amd64 ; then
+	if ( ! use mmx ); then
 		sed -e 's!DEFINES += HAVE_MMX!DEFINES -= HAVE_MMX!' \
 		-i 'settings.pro' || die "disabling MMX failed"
 	fi
