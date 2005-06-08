@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.95.ebuild,v 1.4 2005/05/03 09:33:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.95.ebuild,v 1.5 2005/06/08 13:41:47 wolf31o2 Exp $
 
 inherit games eutils
 
 DESCRIPTION="clone of Super Mario World"
-HOMEPAGE="http://smclone.arturh.com/"
+HOMEPAGE="http://smclone.sourceforge.net/"
 SRC_URI="mirror://sourceforge/smclone/SMC_${PV}.zip
 	mirror://sourceforge/smclone/music_2.0_RC_1.zip"
 
