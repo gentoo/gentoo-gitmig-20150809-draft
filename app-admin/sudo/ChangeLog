@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.49 2005/06/08 12:53:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.50 2005/06/08 19:29:17 killerfox Exp $
+
+  08 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  sudo-1.6.7_p5-r4.ebuild:
+  Stable on hppa.
 
 *sudo-1.6.8_p8-r3 (08 Jun 2005)
 
