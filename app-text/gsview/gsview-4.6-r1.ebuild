@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.6-r1.ebuild,v 1.1 2005/06/01 00:01:06 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.6-r1.ebuild,v 1.2 2005/06/08 10:52:42 lanius Exp $
 
 MY_PV="${PV/.}"
 DESCRIPTION="gsView PostScript and PDF viewer"
@@ -22,7 +22,9 @@ src_compile() {
 	ln -s srcunx/unx.mak Makefile
 
 	## respect CFLAGS
+	echo ${P}
 	sed -i -e "s:^CFLAGS=-O :CFLAGS=${CFLAGS} :g" Makefile
+	sed -i -e "s:GSVIEW_DOCPATH:\"/usr/share/doc/${PF}/html/\":" srcunx/gvx.c
 
 	## run Makefile
 	make || die "Error compiling files."
@@ -31,15 +33,13 @@ src_compile() {
 src_install() {
 	dobin bin/gsview
 
-	insinto /usr/share/applications
-	newins srcunx/gvxhelp.txt gview
-
 	doman srcunx/gsview.1
 
 	dodoc gsview.css cdorder.txt regorder.txt LICENCE
 
 	if use doc
 	then
+		dobin ${FILESDIR}/gsview-help
 		dohtml *.htm bin/*.htm
 	fi
 
