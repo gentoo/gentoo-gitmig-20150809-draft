@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.13.ebuild,v 1.1 2005/06/06 01:20:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.13.ebuild,v 1.2 2005/06/08 18:51:08 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -25,6 +25,7 @@ pkg_setup() {
 		eerror "dev-games/guichan needs to be built with USE=sdl"
 		die "please re-emerge guichan with USE=sdl"
 	fi
+	games_pkg_setup
 }
 
 src_unpack() {
@@ -34,7 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-	egamesconf $(use_enable opengl) || die
+	egamesconf $(use_with opengl) || die
 	emake || die
 }
 
