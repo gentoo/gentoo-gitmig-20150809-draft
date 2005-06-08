@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/rlocate-0.3.0.ebuild,v 1.3 2005/05/31 22:45:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/rlocate-0.3.0.ebuild,v 1.4 2005/06/08 02:47:53 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,11 @@ src_unpack() {
 	rm -f rlocate-scripts/Makefile
 	sed -i \
 		-e '/groupadd/d' \
-		rlocate-scripts/Makefile.in
+		-e '/chown/s/root:$(rlocate)/root:locate/g' \
+		Makefile.in rlocate-scripts/Makefile.in
+	sed -i \
+		-e '/DRLOCATE_GRP/s:$(rlocate):locate:' \
+		rlocate-daemon/Makefile.in
 }
 
 src_compile() {
