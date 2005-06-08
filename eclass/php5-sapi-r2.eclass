@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.13 2005/06/03 08:42:10 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.14 2005/06/08 17:39:16 robbat2 Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -150,11 +150,6 @@ php5-sapi-r2_check_awkward_uses() {
 		eerror "See http://bugs.php.net/bug.php?id=28700 for details"
 		eerror
 		die "recode broken, upstream bug"
-	fi
-
-	# iodbc support added by Tim Haynes <gentoo@stirfried.vegetable.org.uk>
-	if useq iodbc ; then
-		enable_extension_with "iodbc" "iodbc" 0 /usr
 	fi
 
 	# Sanity check for Oracle
@@ -399,6 +394,8 @@ php5-sapi-r2_src_compile() {
 	enable_extension_with		"informix"		"informix"		1
 	enable_extension_with		"ingres"		"ingres"		1
 	enable_extension_with		"interbase"		"firebird"		1
+	# iodbc support added by Tim Haynes <gentoo@stirfried.vegetable.org.uk>
+	enable_extension_with 		"iodbc" 		"iodbc" 		0 "/usr"
 	# ircg extension not supported on Gentoo at this time
 	enable_extension_with		"kerberos"		"kerberos"		0 "/usr"
 	enable_extension_disable	"libxml"		"xml2"			0
@@ -446,7 +443,7 @@ php5-sapi-r2_src_compile() {
 	enable_extension_with		"zlib"			"zlib"			1
 	enable_extension_enable		"debug"			"debug"			0
 
-	php5-sapi-r1_check_awkward_uses
+	php5-sapi-r2_check_awkward_uses
 
 	# DBA support
 	enable_extension_enable		"dba"		"dba" 1
@@ -514,7 +511,6 @@ php5-sapi-r2_src_install() {
 
 	# PEAR-Installer and phpconfig install the following, so we
 	# don't have to
-
 	rm -rf ${D}/usr/bin/{php,phpextdist,phpize,php-config,pear}
 	rm -rf ${D}/usr/lib/php/build
 	rm -rf ${D}/usr/include/php
