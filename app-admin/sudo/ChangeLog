@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.47 2005/06/06 22:57:30 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.48 2005/06/08 12:39:48 flameeyes Exp $
+
+*sudo-1.6.7_p5-r5 (08 Jun 2005)
+
+  08 Jun 2005; <flame@gentoo.org> +sudo-1.6.7_p5-r5.ebuild:
+  New revision bump to have it working on Gentoo/FreeBSD.
 
   06 Jun 2005; Tavis Ormandy <taviso@gentoo.org>
   -files/sudo-1.6.8_p1-suid_fix.patch, files/sudoers, sudo-1.6.8_p8-r2.ebuild:
