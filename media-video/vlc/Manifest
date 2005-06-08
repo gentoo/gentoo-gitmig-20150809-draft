@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9bcebad398c00c2af7397eafb6c31bd4 ChangeLog 18022
+MD5 965960925000231d84ddacf031f31be2 ChangeLog 18391
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 2fbab31179d6bdf6dafb6aa263fe492f vlc-0.6.2-r1.ebuild 6503
 MD5 652bc3bbeeeb343edfed07a13e2ecb7a vlc-0.6.2.ebuild 5551
@@ -9,6 +9,7 @@ MD5 c4bb9e3867d1992d598670b74551ebf5 vlc-0.7.2.ebuild 6014
 MD5 ce0ead5f060f1a70fe6e867bc3ed231e vlc-0.8.1-r1.ebuild 6953
 MD5 82c6363b6853c66488c9ab0cb2bc2ef2 vlc-0.8.1-r2.ebuild 7164
 MD5 f306a59771d93bddb6e26489886355f8 vlc-0.8.1-r3.ebuild 7229
+MD5 d7cb6a27e7245ff2219e550fd2008197 vlc-0.8.2_beta2.ebuild 8987
 MD5 09c124e45049f615519ded3278a97376 files/0.6.2-mozilla-fix.patch 1261
 MD5 d766f772e3e3be4f8d6cbf4d54bf2700 files/digest-vlc-0.6.2 63
 MD5 cc5d4fb953ad7bd0ee3e14076811a1d4 files/digest-vlc-0.6.2-r1 202
@@ -18,10 +19,11 @@ MD5 74246bab222d2b95ef62223ce754e6f6 files/digest-vlc-0.8.1-r2 127
 MD5 c5c0f3cdd6b2afd05a3090dfc55074e0 files/glide.patch 744
 MD5 0ee383795d543048e4d47eb58f6d36bb files/mpeg2dec-20030612-configure.in-fpic.patch 1065
 MD5 1047cf43de2ff9156978d79e7a7bab05 files/digest-vlc-0.8.1-r3 127
+MD5 915c15104b6669e74032924f7c633f48 files/digest-vlc-0.8.2_beta2 138
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClYs0j5H05b2HAEkRApxwAJ9hDaVMPJYdF1lz3EkKxzunsZUTGwCfb7Bi
-/Ys2SdWVFC/Wh1lN8ghpje8=
-=PxaL
+iD8DBQFCpuPVj5H05b2HAEkRAoGKAJ9yKBVgkocLAoSiEvCRq4vc3d1tUQCfWFyw
+fZVO76uQrmzVS010ZiKx0ng=
+=l+iU
 -----END PGP SIGNATURE-----
