@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/baekmuk-fonts
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.21 2004/11/14 09:26:38 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.22 2005/06/08 15:27:48 geoman Exp $
+
+  08 Jun 2005; Stephen P. Becker <geoman@gentoo.org>
+  baekmuk-fonts-2.2.ebuild:
+  stable on mips
 
   14 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> baekmuk-fonts-2.2.ebuild:
   Stable on ppc-macos.
