@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/gkismet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/ChangeLog,v 1.5 2005/01/17 11:40:20 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/ChangeLog,v 1.6 2005/06/08 15:55:17 brix Exp $
+
+*gkismet-0.0.10 (08 Jun 2005)
+
+  08 Jun 2005; <brix@gentoo.org> +gkismet-0.0.10.ebuild:
+  Version bump.
 
   17 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> gkismet-0.0.9.ebuild:
   Fixed DEPEND issue.
