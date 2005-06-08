@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/libdockapp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.18 2004/12/22 11:03:29 s4t4n Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.19 2005/06/08 12:56:58 s4t4n Exp $
+
+*libdockapp-0.6.0 (08 Jun 2005)
+
+  08 Jun 2005; Michele Noberasco <s4t4n@gentoo.org> libdocapp-0.6.0.ebuild:
+  Version bump, with updated installation paths patch, and a new one to
+  add legacy support for existing dockapps. Closes #95040.
+  libdocapp-0.6.0.ebuild, libdocapp-0.5.0-r1.ebuild:
+  Edited pkg_postinst() and pkg_postrm(), pointing user to the right config
+  file if he/she/it be using XFree86 or xorg-x11...
 
   22 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> libdockapp-0.4.0.ebuild,
   libdockapp-0.4.0-r1.ebuild, libdockapp-0.5.0.ebuild:

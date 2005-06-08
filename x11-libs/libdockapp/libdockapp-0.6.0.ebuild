@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.5.0-r1.ebuild,v 1.4 2005/06/08 12:56:58 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.0.ebuild,v 1.1 2005/06/08 12:56:58 s4t4n Exp $
 
 inherit eutils
 
@@ -12,20 +12,21 @@ HOMEPAGE="http://solfertje.student.utwente.nl/~dalroi/libdockapp/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc amd64 ppc ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 DEPEND="virtual/x11"
-S=${WORKDIR}/${PN/lib/}
+S=${WORKDIR}/${P/lib/}
 FONTDIR="/usr/share/fonts/${PN}-fonts"
 
 src_unpack()
 {
 	unpack ${A}
-
-	# Remove non existing targets from makefile.in
-	# sanitize fonts installation path
-	# sanitize examples install. path
 	cd ${S}
-	epatch ${FILESDIR}/install-paths.patch-0.5.0-r1
+
+	# sanitize fonts installation path
+	epatch ${FILESDIR}/install-paths.patch-${PV}
+
+	# add legacy support for older dockapps
+	epatch ${FILESDIR}/legacy.patch-${PV}
 }
 
 src_compile()
