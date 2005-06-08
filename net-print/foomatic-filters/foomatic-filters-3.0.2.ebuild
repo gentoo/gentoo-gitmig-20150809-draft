@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.2.ebuild,v 1.10 2005/06/06 14:23:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.2.ebuild,v 1.11 2005/06/08 10:01:15 lanius Exp $
 
 DESCRIPTION="Foomatic wrapper scripts"
-HOMEPAGE="http://www.linuxprinting.org/foomatic"
+HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
 SRC_URI="http://www.linuxprinting.org/download/foomatic/${P}.tar.gz"
 
 LICENSE="GPL-2"
