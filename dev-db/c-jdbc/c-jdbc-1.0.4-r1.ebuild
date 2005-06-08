@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.3 2005/05/06 15:07:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.4 2005/06/08 19:25:08 mr_bones_ Exp $
 
 inherit java-pkg eutils
 
@@ -12,7 +12,7 @@ SLOT="1"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc jikes examples"
 DEPEND=">=virtual/jdk-1.3
-	jikes?( >=dev-java/jikes-1.21 )"
+	jikes? ( >=dev-java/jikes-1.21 )"
 RDEPEND=">=virtual/jre-1.3
 	dev-java/ant
 	=dev-java/commons-cli-1*
