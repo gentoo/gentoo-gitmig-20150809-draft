@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/vserver/packages.build,v 1.1 2005/04/20 17:44:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/vserver/packages.build,v 1.2 2005/06/08 09:28:44 hollow Exp $
 
 # This file describes the packages needed to build a stage 1 based on this
 # profile

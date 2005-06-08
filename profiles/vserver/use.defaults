@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/vserver/use.defaults,v 1.1 2005/04/20 17:44:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/vserver/use.defaults,v 1.2 2005/06/08 09:28:44 hollow Exp $
 
 # Use this to add linux specific architecture independent USE flags, to
 # extend the base profile's USE mappings
