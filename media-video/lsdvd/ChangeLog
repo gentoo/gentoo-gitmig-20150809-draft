@@ -1,6 +1,12 @@
 # ChangeLog for media-video/lsdvd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.14 2005/05/01 17:06:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.15 2005/06/08 14:12:15 luckyduck Exp $
+
+*lsdvd-0.15 (08 Jun 2005)
+
+  08 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> -lsdvd-0.7.ebuild,
+  lsdvd-0.10.ebuild, +lsdvd-0.15.ebuild:
+  New upstream version, fixes #95183.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> lsdvd-0.10.ebuild:
   Stable on ppc.
