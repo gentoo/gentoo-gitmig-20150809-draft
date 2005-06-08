@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre2.ebuild,v 1.3 2005/05/30 03:40:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre2.ebuild,v 1.4 2005/06/08 17:51:26 solar Exp $
+
+inherit toolchain-funcs
 
 IUSE="build bootstrap"
 
@@ -30,7 +32,7 @@ src_install() {
 
 	# compile the few things that need to be
 	cd ${S}/src
-	make || die "failed to compile the bits and pieces"
+	emake CC="$(tc-getCC)" || die "failed to compile the bits and pieces"
 	into /
 	dosbin rc runscript
 
@@ -40,10 +42,10 @@ src_install() {
 
 	MAKEDEV std
 	mknod -m 0600 console c 5 1
-
 	for i in 0 1 2 3 4; do
 		mknod -m 0660 hda${i/0} b 3 ${i}
 		mknod -m 0660 sda${i/0} b 8 ${i}
+		mknod -m 0660 cfa${i/0} b 13 ${i}
 		chown root:disk hda${i/0} sda${i/0}
 		mknod -m 0600 tty${i} c 4 ${i}
 		chown root:tty tty${i}
