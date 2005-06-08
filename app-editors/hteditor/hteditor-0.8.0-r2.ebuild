@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.8.0-r2.ebuild,v 1.3 2005/05/05 15:03:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.8.0-r2.ebuild,v 1.4 2005/06/08 11:58:26 dragonheart Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ KEYWORDS="ppc x86 ~amd64"
 IUSE=""
 
 RDEPEND="virtual/libc
-	virtual/x11
 	sys-libs/ncurses"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.4

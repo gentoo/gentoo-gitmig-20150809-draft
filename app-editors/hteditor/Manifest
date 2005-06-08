@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d9398a1e989bc71acbb239f093cefb9c ChangeLog 2841
+MD5 dfa8bb3b9de9d33ff9b5eed84ff6f500 ChangeLog 3006
 MD5 5e83aa40741c7ae458653fb9ed8b7805 metadata.xml 230
-MD5 1aafa2354692a6ce1df956b2c5cea1b1 hteditor-0.8.0-r2.ebuild 998
-MD5 fd66b74e917911177644c0d2c86d01e3 hteditor-0.9.0.ebuild 851
+MD5 7eb158519c9ebdc936cbc8cd27a3e1fa hteditor-0.8.0-r2.ebuild 990
+MD5 078089e78f9e721576ac5840bea48ba3 hteditor-0.9.0.ebuild 838
 MD5 2b7fc3bf96772b9a2f845ce7473e54b8 files/digest-hteditor-0.9.0 61
 MD5 a21e729e2e4f8eb73a1fd9a7a2e4b6ec files/digest-hteditor-0.8.0-r2 134
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCptwOmdTrptrqvGERAjkWAKCQbCnl+J3gO3JDkKySOsVNFRJDBQCfadtQ
-PatUjQTOs5iHUl/3AVtV8/o=
-=epJm
+iD8DBQFCpt16mdTrptrqvGERAriqAKCK4X8LwzsPJzmrIQ9lHrOqKKQgNwCbBFle
+TT227QYjW0QEhxOs2evPvhU=
+=d5zq
 -----END PGP SIGNATURE-----
