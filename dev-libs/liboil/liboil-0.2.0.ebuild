@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.2.0.ebuild,v 1.4 2004/11/19 23:45:15 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.2.0.ebuild,v 1.5 2005/06/08 15:38:58 zaheerm Exp $
 
 inherit eutils
 DESCRIPTION="Liboil is a library of simple functions that are optimized for various CPUs."
