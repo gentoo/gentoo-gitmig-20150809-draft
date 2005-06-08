@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.17 2005/05/05 15:03:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.18 2005/06/08 11:52:23 dragonheart Exp $
+
+*hteditor-0.9.0 (08 Jun 2005)
+
+  08 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/hteditor-0.8.0-mallocboundcheck.patch, metadata.xml,
+  -hteditor-0.7.4.ebuild, -hteditor-0.8.0.ebuild, -hteditor-0.8.0-r1.ebuild,
+  +hteditor-0.9.0.ebuild:
+  Version bump. old version cleanout. I'm pretending to maintain this now
 
   05 May 2005; Olivier Crête <tester@gentoo.org> hteditor-0.8.0-r2.ebuild:
   Stable on x86 per bug #91569

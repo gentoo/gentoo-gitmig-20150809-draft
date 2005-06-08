@@ -1,21 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 474a7acbf7f185b0c050806a3f404314 hteditor-0.8.0.ebuild 848
-MD5 a3967faa2e53b980b44cbe19a2a1d6a6 hteditor-0.7.4.ebuild 722
-MD5 2ffbedac2a1052be2124e41bf03398c9 hteditor-0.8.0-r1.ebuild 961
+MD5 d9398a1e989bc71acbb239f093cefb9c ChangeLog 2841
+MD5 5e83aa40741c7ae458653fb9ed8b7805 metadata.xml 230
 MD5 1aafa2354692a6ce1df956b2c5cea1b1 hteditor-0.8.0-r2.ebuild 998
-MD5 42af3222b4ecf2e583ccb5aeab534fa0 ChangeLog 2512
-MD5 376145af92012f30281eeeafc0abf98a files/hteditor-0.8.0-mallocboundcheck.patch 10239
-MD5 62f3c11a4b0b8fe29f1a412386c66d5c files/digest-hteditor-0.8.0 61
-MD5 62f3c11a4b0b8fe29f1a412386c66d5c files/digest-hteditor-0.8.0-r1 61
+MD5 fd66b74e917911177644c0d2c86d01e3 hteditor-0.9.0.ebuild 851
+MD5 2b7fc3bf96772b9a2f845ce7473e54b8 files/digest-hteditor-0.9.0 61
 MD5 a21e729e2e4f8eb73a1fd9a7a2e4b6ec files/digest-hteditor-0.8.0-r2 134
-MD5 44f3316a45dc74c201dd2513928e3a20 files/digest-hteditor-0.7.4 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCejXxmOfEJZHYOKcRArDYAJ42mNkrHnHYLJFfCgKMS1bvs2qvbwCeMeBK
-xAfWjb6nK8qyQdjETum1kgo=
-=hVZ/
+iD8DBQFCptwOmdTrptrqvGERAjkWAKCQbCnl+J3gO3JDkKySOsVNFRJDBQCfadtQ
+PatUjQTOs5iHUl/3AVtV8/o=
+=epJm
 -----END PGP SIGNATURE-----
