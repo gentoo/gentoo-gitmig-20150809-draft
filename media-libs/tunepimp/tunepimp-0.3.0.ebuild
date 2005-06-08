@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0.ebuild,v 1.21 2005/02/22 08:49:11 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0.ebuild,v 1.22 2005/06/08 13:22:03 greg_g Exp $
 
 inherit eutils distutils perl-module
 
@@ -11,12 +11,12 @@ SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/lib${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~mips"
-IUSE="flac mad oggvorbis readline python perl"
+IUSE="flac mad vorbis readline python perl"
 
 RDEPEND="dev-libs/expat"
 DEPEND="${RDEPEND}
 	flac? ( media-libs/flac )
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	readline? ( sys-libs/readline )
 	mad? ( media-libs/libmad )
 	>=media-libs/musicbrainz-2.1.0
