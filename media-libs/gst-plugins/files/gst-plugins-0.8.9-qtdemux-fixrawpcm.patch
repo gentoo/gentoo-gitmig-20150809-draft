@@ -1,0 +1,16 @@
+Index: qtdemux.c
+===================================================================
+RCS file: /cvs/gstreamer/gst-plugins/gst/qtdemux/qtdemux.c,v
+retrieving revision 1.80.2.10
+diff -u -r1.80.2.10 qtdemux.c
+--- qtdemux.c	3 Jun 2005 13:43:58 -0000	1.80.2.10
++++ qtdemux.c	8 Jun 2005 11:14:53 -0000
+@@ -2877,7 +2877,7 @@
+       _codec ("Raw 8-bit PCM audio");
+       /* FIXME */
+       return gst_caps_from_string ("audio/x-raw-int, "
+-          "width = (int) 8, " "depth = (int) 8, " "signed = (boolean) true");
++          "width = (int) 8, " "depth = (int) 8, " "signed = (boolean) false");
+     case GST_MAKE_FOURCC ('t', 'w', 'o', 's'):
+       _codec ("Raw 16-bit PCM audio");
+       /* FIXME */
