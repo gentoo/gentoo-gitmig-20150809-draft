@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.12-r4.ebuild,v 1.1 2005/06/08 09:06:21 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.12-r4.ebuild,v 1.2 2005/06/08 14:45:43 hollow Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -34,9 +34,6 @@ PROVIDE="virtual/baselayout"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# Remove bashisms from /etc/profile
-	epatch "${FILESDIR}"/${P}-profile.patch
 
 	# setup unicode defaults for silly unicode users
 	if use unicode ; then
