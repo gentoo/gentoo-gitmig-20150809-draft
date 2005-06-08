@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.18.1.ebuild,v 1.5 2005/05/31 14:55:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.18.1.ebuild,v 1.6 2005/06/08 20:08:16 cardoe Exp $
 
 inherit mythtv-plugins flag-o-matic toolchain-funcs eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 	fi
 
 	mythtv-plugins_src_unpack || die "unpack failed"
+	epatch ${FILESDIR}/${PN}-${PV}-sample_rate_type.patch || die "faad2 patch failed"
 }
 
 MTVCONF="$(use_enable aac) $(use_enable fftw) $(use_enable opengl) $(use_enable sdl)"

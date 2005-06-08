@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.39 2005/06/06 09:13:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.40 2005/06/08 20:08:16 cardoe Exp $
+
+  08 Jun 2005; Doug Goldstein <cardoe@gentoo.org>
+  +files/mythmusic-0.18.1-sample_rate_type.patch, mythmusic-0.18.1.ebuild:
+  faad2 fix back in since it was taken out of faad2
 
   06 Jun 2005; Doug Goldstein <cardoe@gentoo.org> mythmusic-0.17-r2.ebuild:
   Fixed deps for removed mythfrontend
