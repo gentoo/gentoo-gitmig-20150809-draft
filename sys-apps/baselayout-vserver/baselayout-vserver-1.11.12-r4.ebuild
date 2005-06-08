@@ -1,23 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.0.ebuild,v 1.5 2005/05/30 03:22:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.12-r4.ebuild,v 1.1 2005/06/08 09:06:21 hollow Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
-SV=1.7.0		# rc-scripts version
+SV=1.6.12		# rc-scripts version
 SVREV=			# rc-scripts rev
 
-S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
-
-DESCRIPTION="Filesystem baselayout and init scripts for use in Linux-VServer"
-HOMEPAGE="http://dev.gentoo.org/~hollow/vserver/baselayout"
-SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2
-		 mirror://gentoo/rc-scripts-${SV}${SVREV}-vserver.patch"
+S="${WORKDIR}/rc-scripts-${SV}${SVREV}-vserver"
+DESCRIPTION="Filesystem baselayout and init scripts for Linux-VServer"
+HOMEPAGE="http://www.gentoo.org/"
+SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}-vserver.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="bootstrap build static"
+KEYWORDS="~x86"
+IUSE="bootstrap build static unicode fakelog"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
@@ -25,17 +23,25 @@ IUSE="bootstrap build static"
 RDEPEND=">=sys-apps/sysvinit-2.84
 	!build? ( !bootstrap? (
 		>=sys-libs/readline-5.0-r1
-		>=app-shells/bash-3.0-r7
+		>=app-shells/bash-3.0-r10
+		>=sys-apps/coreutils-5.2.1
 	) )
-	!sys-apps/baselayout"
+	!sys-apps/baselayout
+	!sys-apps/baselayout-lite"
 DEPEND="virtual/os-headers"
 PROVIDE="virtual/baselayout"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${DISTDIR}/rc-scripts-1.7.0-vserver.patch
+	# Remove bashisms from /etc/profile
+	epatch "${FILESDIR}"/${P}-profile.patch
+
+	# setup unicode defaults for silly unicode users
+	if use unicode ; then
+		sed -i -e '/^UNICODE=/s:no:yes:' etc/rc.conf
+	fi
 
 	# Fix Sparc specific stuff
 	if [[ $(tc-arch) == "sparc" ]] ; then
@@ -48,13 +54,6 @@ src_compile() {
 
 	make -C ${S}/src CC="$(tc-getCC)" LD="$(tc-getCC) ${LDFLAGS}" \
 		CFLAGS="${CFLAGS}" || die
-}
-
-# ${PATH} should include where to get MAKEDEV when calling this
-# function
-create_dev_nodes() {
-	einfo "Using generic-vserver to make ${ARCH} device nodes..."
-	MAKEDEV generic-vserver
 }
 
 # This is a temporary workaround until bug 9849 is completely solved
@@ -116,7 +115,7 @@ src_install() {
 	: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
 
 	# This should be /lib/rcscripts, but we have to support old profiles too.
-	if [ "${SYMLINK_LIB}" = "yes" ]; then
+	if [[ ${SYMLINK_LIB} == "yes" ]]; then
 		rcscripts_dir="/$(get_abi_LIBDIR ${DEFAULT_ABI})/rcscripts"
 	else
 		rcscripts_dir="/lib/rcscripts"
@@ -125,10 +124,8 @@ src_install() {
 	einfo "Creating directories..."
 	kdir /usr
 	kdir /usr/local
-	kdir /boot
 	kdir /dev
 	kdir /dev/pts
-	kdir /dev/shm
 	kdir /etc/conf.d
 	kdir /etc/cron.daily
 	kdir /etc/cron.hourly
@@ -142,7 +139,7 @@ src_install() {
 	kdir ${rcscripts_dir}/awk
 	kdir ${rcscripts_dir}/sh
 	kdir /opt
-	kdir -o root -g uucp -m0755 /var/lock
+	kdir -o root -g uucp -m0775 /var/lock
 	kdir /proc
 	kdir -m 0700 /root
 	kdir /sbin
@@ -158,7 +155,7 @@ src_install() {
 	kdir /usr/local/share/doc
 	kdir /usr/local/share/man
 	kdir /usr/local/src
-	kdir /usr/portage
+	kdir ${PORTDIR}
 	kdir /usr/sbin
 	kdir /usr/share/doc
 	kdir /usr/share/info
@@ -201,7 +198,7 @@ src_install() {
 	#
 	insopts -m0644
 	insinto /etc
-	find ${S}/etc -maxdepth 1 -type f -print0 | xargs --null doins
+	doins -r "${S}"/etc/*
 
 	# Install some files to /usr/share/baselayout instead of /etc to keep from
 	# (1) overwriting the user's settings, (2) screwing things up when
@@ -211,13 +208,14 @@ src_install() {
 	mv ${D}/etc/{passwd,shadow,group,hosts,issue.devfix} ${D}/usr/share/baselayout
 
 	cp -P ${S}/init.d/* ${D}/etc/init.d
+	if use fakelog; then
+		cp ${FILESDIR}/fakelog.initd ${D}/etc/init.d
+	fi
 	chmod a+x ${D}/etc/init.d/*
 	insinto /etc/conf.d
 	doins ${S}/etc/conf.d/*
 	insinto /etc/env.d
 	doins ${S}/etc/env.d/*
-	insinto /etc/skel
-	find ${S}/etc/skel -maxdepth 1 -type f -print0 | xargs --null doins
 
 	# Special-case uglyness... For people updating from lib32 -> lib amd64
 	# profiles, keep lib32 in the search path while it's around
@@ -233,14 +231,10 @@ src_install() {
 
 	# As of baselayout-1.10-1-r1, sysvinit is its own package again, and
 	# provides the inittab itself
-	## We provide our own inittab for vserver
-	#rm -f "${D}"/etc/inittab
+	rm -f "${D}"/etc/inittab
 
 	# Stash the rc-lists for use during pkg_postinst
 	cp -r "${S}"/rc-lists "${D}"/usr/share/baselayout
-
-	# uclibc doesn't need nsswitch.conf... added by solar
-	use elibc_uclibc && rm -f ${D}/etc/nsswitch.conf
 
 	# rc-scripts version for testing of features that *should* be present
 	echo "Gentoo Base System version ${SV}" > ${D}/etc/gentoo-release
@@ -307,7 +301,6 @@ src_install() {
 		docinto /
 		dodoc ${FILESDIR}/copyright
 		dodoc ${S}/ChangeLog
-		dodoc ${FILESDIR}/vserver-changes
 	fi
 
 	#
@@ -356,7 +349,7 @@ pkg_postinst() {
 	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
 	# new users do not update them properly...  see src_install() for why they
 	# are in /usr/share/baselayout/
-	for x in passwd shadow group fstab ; do
+	for x in passwd shadow group; do
 		if [[ -e ${ROOT}/etc/${x} ]] ; then
 			touch "${ROOT}/etc/${x}"
 		else
@@ -366,14 +359,14 @@ pkg_postinst() {
 
 	# Under what circumstances would mtab be a symlink?  It would be
 	# nice if there were an explanatory comment here
-	#if [[ -L ${ROOT}/etc/mtab ]]; then
-	#	rm -f "${ROOT}/etc/mtab"
-	#	if [[ ${ROOT} == / ]]; then
-	#		cp /proc/mounts "${ROOT}/etc/mtab"
-	#	else
-	#		touch "${ROOT}/etc/mtab"
-	#	fi
-	#fi
+	if [[ -L ${ROOT}/etc/mtab ]]; then
+		rm -f "${ROOT}/etc/mtab"
+		if [[ ${ROOT} == / ]]; then
+			cp /proc/mounts "${ROOT}/etc/mtab"
+		else
+			touch "${ROOT}/etc/mtab"
+		fi
+	fi
 
 	# We should only install empty files if these files don't already exist.
 	[[ -e ${ROOT}/var/log/lastlog ]] || \
@@ -418,8 +411,5 @@ pkg_postinst() {
 	einfo "to accomplish this:"
 	einfo
 	einfo "  # etc-update"
-	echo
-	einfo "This release of baselayout-vserver supports experimental"
-	einfo "plain init style, gentoo init style will work as expected"
 	echo
 }
