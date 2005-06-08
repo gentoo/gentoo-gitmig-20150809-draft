@@ -1,22 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b67592b95ec68fa3ef79f00a070c981 rvm-1.9.ebuild 686
 MD5 fdd307ea78fc900a01e57b8151f34d4e metadata.xml 224
-MD5 1d9cc4b53b945fd21b15d5b7fac7889b rvm-1.6.ebuild 579
-MD5 f9a6c4faa1af5826fb9e6dc593ba8bf6 rvm-1.8.ebuild 590
-MD5 49f697731f2535c7e1d1af799336e89b rvm-1.10.ebuild 683
-MD5 c014eb86b23c86682c5cac76b80a5898 rvm-1.11.ebuild 668
-MD5 b95ee8f8a66822632f62c1476cf36502 ChangeLog 1866
-MD5 66d27ec697ba896c737799e068c75361 files/digest-rvm-1.6 59
-MD5 25190750ecf16a7616342163819c5cd3 files/digest-rvm-1.8 59
-MD5 176a28b73c0a9c2a42ef5ff70dbb7aad files/digest-rvm-1.9 59
+MD5 476ddea543caee1b6fb5ac2ee61c62eb rvm-1.10.ebuild 659
+MD5 3f11fda8d99143a4d0880fa6c19bd39a rvm-1.11.ebuild 641
+MD5 62954974b7737b9447ba8550dfd45de2 ChangeLog 2079
 MD5 f99c4ac6bf72cfd1de8017f3ed45c823 files/digest-rvm-1.10 60
 MD5 ab7a0893e657a22aee60e1bf9e5ead5f files/digest-rvm-1.11 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCeh2iMGnpIbeahxwRAvi+AJ0ewJCvNDdK/KhiQBxm+ugRucr3igCgg8nf
-WOtAQqs1Z9BF3pK+3X+J2C0=
-=3qi9
------END PGP SIGNATURE-----
