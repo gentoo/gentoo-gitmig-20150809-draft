@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.6.ebuild,v 1.10 2004/12/30 23:13:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.6.ebuild,v 1.11 2005/06/08 02:14:47 solar Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P="${PN}-v${PV}"
 
@@ -19,9 +19,7 @@ S="${WORKDIR}/${MY_P}"
 DEPEND="virtual/libc"
 
 src_compile() {
-	# this needs to be here, otherwise einstall below will fail with
-	# sandbox violation
-	emake || die "emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_unpack() {
