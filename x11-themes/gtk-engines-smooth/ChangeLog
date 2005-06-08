@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-smooth
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/ChangeLog,v 1.11 2004/09/15 13:08:34 gustavoz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/ChangeLog,v 1.12 2005/06/08 20:00:43 sekretarz Exp $
+
+*gtk-engines-smooth-0.6.0.1 (08 Jun 2005)
+
+  08 Jun 2005; <sekretarz@gentoo.org> gtk-engines-smooth-0.5.8.ebuild,
+  +gtk-engines-smooth-0.6.0.1.ebuild:
+  Version bump, bug #76817. Added missing depend on media-libs/gdk-pixbuf, bug
+  #48036. Block x11-themes/gnome-themes, which already contains
+  gtk-engines-smooth, bug #74792
 
   15 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gtk-engines-smooth-0.5.8.ebuild:
