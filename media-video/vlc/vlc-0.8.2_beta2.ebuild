@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2_beta2.ebuild,v 1.1 2005/06/08 12:30:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2_beta2.ebuild,v 1.2 2005/06/08 19:37:53 flameeyes Exp $
 
 # Missing USE-flags due to missing deps:
 # media-video/vlc:dirac - Enables experimental dirac codec
@@ -163,20 +163,16 @@ src_compile () {
 		myconf="${myconf} --enable-ffmpeg"
 
 		built_with_use media-video/ffmpeg aac \
-			&& myconf="${myconf} --with-ffmpeg-aac" \
-			|| myconf="${myconf} --without-ffmpeg-aac"
+			&& myconf="${myconf} --with-ffmpeg-aac"
 
 		built_with_use media-video/ffmpeg dts \
-			&& myconf="${myconf} --with-ffmpeg-dts" \
-			|| myconf="${myconf} --without-ffmpeg-dts"
+			&& myconf="${myconf} --with-ffmpeg-dts"
 
 		built_with_use media-video/ffmpeg zlib \
-			&& myconf="${myconf} --with-ffmpeg-zlib" \
-			|| myconf="${myconf} --without-ffmpeg-zlib"
+			&& myconf="${myconf} --with-ffmpeg-zlib"
 
 		built_with_use media-video/ffmpeg encode \
-			&& myconf="${myconf} --with-ffmpeg-mp3lame" \
-			|| myconf="${myconf} --without-ffmpeg-mp3lame"
+			&& myconf="${myconf} --with-ffmpeg-mp3lame"
 
 	else
 		myconf="${myconf} --disable-ffmpeg"
