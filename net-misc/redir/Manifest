@@ -1,4 +1,14 @@
-MD5 9e9f6f96cf9a368fef21a337c3439e81 ChangeLog 843
-MD5 2649854d26a76bbef06885d50af3c780 redir-2.2.1.ebuild 589
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 49d64f193575d7ce222f165bba3da495 metadata.xml 328
+MD5 ff3c39d788d2daa7b10ab770b4cc0cef ChangeLog 948
+MD5 d28a7783c6430beeca322e8dbfb0dc2d redir-2.2.1.ebuild 590
 MD5 06b729711ab6883796d9c46b6ca3a61c files/digest-redir-2.2.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCpwgeKRy60XGEcJIRAta2AJ4xGFfWc43fae0CxlS8g/gGjuWIoQCfaGzt
+lfeWLu9N2gI+4TyJs0EmB30=
+=8CRQ
+-----END PGP SIGNATURE-----
