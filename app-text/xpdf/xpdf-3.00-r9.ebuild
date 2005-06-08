@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r9.ebuild,v 1.1 2005/06/07 09:25:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r9.ebuild,v 1.2 2005/06/08 10:08:16 lanius Exp $
 
 inherit eutils
 
@@ -63,6 +63,7 @@ src_unpack() {
 	epatch ${FILESDIR}/xpdf-3.00-pl2.patch
 	epatch ${FILESDIR}/xpdf-3.00-pl3.patch
 	epatch ${FILESDIR}/xpdf-3.00-fonts.patch
+	epatch ${FILESDIR}/xpdf-3.00-gcc41.patch
 	autoconf
 }
 
