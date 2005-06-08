@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r1.ebuild,v 1.5 2005/05/16 15:59:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r1.ebuild,v 1.6 2005/06/08 16:00:13 swegener Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -49,9 +49,10 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "As of 2.4.5 the images will be installed seperately and will not be included"
-	einfo "in the binary. The images have been installed in /usr/share/xchat-systray"
+	einfo "The icons have been installed in /usr/share/xchat-systray"
 	einfo
-	einfo "Please update your settings accordingly!"
+	einfo "The icons path is a per-user setting and you need to set it or the icons"
+	einfo "will not show up in the menu. Please go to 'Systray settings' and set"
+	einfo "'Select icons path' to /usr/share/xchat-systray to set the icons path."
 	einfo
 }
