@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1217 2005/06/08 11:22:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1218 2005/06/08 12:26:04 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -554,6 +554,7 @@ media-video/vlc:dts - Enables DTS audio support
 media-video/vlc:freetype - Enables freetype font support
 media-video/vlc:httpd - Enables a web based interface for vlc
 media-video/vlc:live - Enables LIVE.com support
+media-video/vlc:mod - Enables Mod demux support
 media-video/vlc:screen - Enables screen capture support
 media-video/vlc:stream - Enables vlc to stream video
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
