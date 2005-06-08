@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.1 2005/06/08 12:53:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.2 2005/06/08 23:58:29 taviso Exp $
 
 inherit eutils pam
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="pam skey offensive ldap"
 
-DEPEND="pam? ( virtual/pam )
-	skey? ( >=app-admin/skey-1.1.5-r1 )
+DEPEND="pam? ( virtual/pam ) skey? ( >=app-admin/skey-1.1.5-r1 )
 	ldap? ( >=net-nds/openldap-2.1.30-r1 )"
 S=${WORKDIR}/${P/_/}
 
@@ -55,8 +54,8 @@ src_unpack() {
 #		sudo_bad_var 'PERL_SIGNALS'   # perl, use deferred signals. <?>
 		sudo_bad_var 'FPATH'          # ksh, search path for functions.
 		sudo_bad_var 'PS4'            # sh, in case set -x is used. <?>
-#		sudo_bad_var 'NULLCMD'        # zsh, command on null-redir. <?>
-#		sudo_bad_var 'READNULLCMD'    # zsh, command on null-redir. <?>
+		sudo_bad_var 'NULLCMD'        # zsh, command on null-redir. <?>
+		sudo_bad_var 'READNULLCMD'    # zsh, command on null-redir. <?>
 #		sudo_bad_var 'TMPPREFIX'      # zsh, prefix for tmp files. <?>
 		sudo_bad_var 'GLOBIGNORE'     # bash, glob paterns to ignore. <?>
 		sudo_bad_var 'PERL5OPT'       # perl, set options.
@@ -76,21 +75,25 @@ src_compile() {
 	# FIXME: secure_path is a compile time setting. using ROOTPATH
 	# is not perfect, env-update may invalidate this, but until it
 	# is available as a sudoers setting this will have to do.
-	ebegin "Setting secure_path..."
+	einfo "Setting secure_path..."
 
-	# why not use grep? variable might be expanded from other variables
-	# declared in that file. cannot just source the file, would override
-	# any variables already set.
-	eval `PS4= bash -x /etc/profile.env 2>&1 | \
-		while read line; do
-			case $line in
-				ROOTPATH=*) echo $line; break;;
-				*) continue;;
-			esac
-		done` || ewarn "failed to find secure_path, please report this"
-	eend $?
+		# why not use grep? variable might be expanded from other variables
+		# declared in that file. cannot just source the file, would override
+		# any variables already set.
+		eval `PS4= bash -x /etc/profile.env 2>&1 | \
+			while read line; do
+				case $line in
+					ROOTPATH=*) echo $line; break;;
+					*) continue;;
+				esac
+			done`  && einfo "	Found ROOTPATH..." || \
+				ewarn "	Failed to find ROOTPATH, please report this."
 
-	econf --with-secure-path="/bin:/sbin:/usr/bin:/usr/sbin:${ROOTPATH:-/usr/local/bin}" --with-env-editor \
+		# remove any duplicate entries
+		ROOTPATH=`cleanpath /bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin${ROOTPATH:+:${ROOTPATH}}`
+	einfo "...done."
+
+	econf --with-secure-path="${ROOTPATH}" --with-env-editor \
 		$(use_with offensive insults) \
 		$(use_with offensive all-insults) \
 		$(use_with pam) \
@@ -114,10 +117,24 @@ src_install() {
 	fperms 0440 /etc/sudoers
 }
 
+# remove duplicate path entries from $1
+cleanpath() {
+	local i=1 x n IFS=:
+	local -a paths;	paths=($1)
+
+	for ((n=${#paths[*]}-1;i<=n;i++)); do
+		for ((x=0;x<i;x++)); do
+			test "${paths[i]}" == "${paths[x]}" && {
+				einfo "	Duplicate entry ${paths[i]} removed..." 1>&2
+				unset paths[i]; continue 2; }
+		done
+	done; echo "${paths[*]}"
+}
+
+# add $1 to default env_delete list.
 sudo_bad_var() {
 	local target='env.c' marker='\*initial_badenv_table\[\]'
 
-	# add $1 to initial_badenv_table[].
 	ebegin "	$1"
 		sed -i 's#\(^.*'${marker}'.*$\)#\1\n\t"'${1}'",#' ${S}/${target}
 	eend $?
