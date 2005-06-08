@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/powiedz-1.0.ebuild,v 1.8 2005/01/01 10:51:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/powiedz-1.0.ebuild,v 1.9 2005/06/08 19:05:34 sekretarz Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://kadu.net/download/additions/powiedz-1.0.tgz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="~x86 ~ppc amd64 ~sparc"
 
 RDEPEND="esd? ( media-sound/esound )
 	arts? ( kde-base/arts )"
