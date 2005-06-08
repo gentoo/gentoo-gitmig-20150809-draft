@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/nstx
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.1 2005/06/08 19:49:03 robbat2 Exp $
+
+*nstx-1.1_beta6 (08 Jun 2005)
+
+  08 Jun 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +nstx-1.1_beta6.ebuild:
+  Bug #74322. Based on initial submission by Andre Kloth
+  <bugs-gentoo@blubbmon.de>.
+
