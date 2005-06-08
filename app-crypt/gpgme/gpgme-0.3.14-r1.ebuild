@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.16 2005/05/21 00:26:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.17 2005/06/08 14:15:44 dragonheart Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gpgme/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0.3"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 # smime once post gnupg-1.9+ gets unmasked
 
