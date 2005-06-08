@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-    <email>rizzo@gentoo.org</email>
-    <name>Don Seiler</name>
+    <email>zaheerm@gentoo.org</email>
+    <name>Zaheer Abbas Merali</name>
 </maintainer>
 <longdescription lang="C">
     Swfdec is a library for rendering Flash&#xAE; animations and games.
