@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-xvideo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/ChangeLog,v 1.26 2005/05/09 04:22:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/ChangeLog,v 1.27 2005/06/08 15:29:40 zaheerm Exp $
+
+*gst-plugins-xvideo-0.8.9 (08 Jun 2005)
+
+  08 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +gst-plugins-xvideo-0.8.9.ebuild:
+  version bump
 
   09 May 2005; Aron Griffis <agriffis@gentoo.org>
   gst-plugins-xvideo-0.8.8.ebuild:
