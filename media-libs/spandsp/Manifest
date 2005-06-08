@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb2f7ed94703002ad3d4b245911ea4d4 spandsp-0.0.2_pre10.ebuild 702
-MD5 eb1fb58e96e68fa4eff9e54b65814b7c spandsp-0.0.2_pre18.ebuild 706
-MD5 d375aeabc3327486cf2815a990dae9e2 ChangeLog 946
+MD5 dff6dde19a15e14c5fc29a01cfaf5a85 ChangeLog 1034
 MD5 d620cd424e6c6553736cc5304899deae metadata.xml 253
-MD5 53b061a920e87b15b999b62794ee0cfa files/digest-spandsp-0.0.2_pre18 71
+MD5 fb2f7ed94703002ad3d4b245911ea4d4 spandsp-0.0.2_pre10.ebuild 702
+MD5 73880307460ff90aa42dea184219ea2c spandsp-0.0.2_pre18.ebuild 708
 MD5 f5d7dc7c62eb4f7a1b4eb2301abe4d91 files/digest-spandsp-0.0.2_pre10 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCnmKXKRy60XGEcJIRAh05AJwKLc9U9XeUa4sw4+ogCpTFA8rIBwCdGJGz
-/P8gON1hp0OR27aLYaL4jx8=
-=G6ru
------END PGP SIGNATURE-----
+MD5 53b061a920e87b15b999b62794ee0cfa files/digest-spandsp-0.0.2_pre18 71
