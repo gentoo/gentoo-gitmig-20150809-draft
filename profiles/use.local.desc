@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1215 2005/06/07 18:29:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1216 2005/06/08 09:04:39 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -802,6 +802,7 @@ sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 t
 sci-mathematics/scilab:atlas - Add support for the atlas library
 sci-misc/boinc:server - Enable compilation of server
 sys-apps/baselayout:ibm - adds support for hvc consoles
+sys-apps/baselayout-vserver:fakelog - install a fake logger init script
 sys-apps/busybox:floppyboot - builds a busybox binary for use on floppy drives.
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
