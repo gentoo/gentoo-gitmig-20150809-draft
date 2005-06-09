@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4066 2005/06/09 11:45:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4067 2005/06/09 15:50:45 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -104,6 +104,7 @@ sys-libs/nss-mysql
 # Tim Yamin <plasmaroo@gentoo.org> (3 Jun 2005)
 # Masked for testing
 >dev-util/catalyst-1.1.9
+>app-misc/livecd-tools-1.0.20
 >sys-kernel/genkernel-3.1.9
 
 # Henrik Brix Andersen <brix@gentoo.org> (31 May 2005)
