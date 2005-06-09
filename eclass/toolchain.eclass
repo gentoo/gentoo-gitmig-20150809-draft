@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.165 2005/06/06 04:40:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.166 2005/06/09 02:44:10 halcy0n Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -240,7 +240,8 @@ gcc_get_s_dir() {
 #			which is useful for individual library targets.
 #
 gentoo_urls() {
-	local devspace="HTTP~lv/GCC/URI HTTP~eradicator/gcc/URI HTTP~vapier/dist/URI"
+	local devspace="HTTP~lv/GCC/URI HTTP~eradicator/gcc/URI HTTP~vapier/dist/URI
+	HTTP~halcy0n/patches/URI"
 	devspace=${devspace//HTTP/http:\/\/dev.gentoo.org\/}
 	echo mirror://gentoo/$1 ${devspace//URI/$1}
 }
