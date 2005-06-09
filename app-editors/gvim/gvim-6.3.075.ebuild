@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.3.075.ebuild,v 1.1 2005/06/01 15:35:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.3.075.ebuild,v 1.2 2005/06/09 14:09:48 ka0ttic Exp $
 
 inherit vim
 
@@ -14,7 +14,8 @@ SRC_URI="${SRC_URI}
 	ftp://ftp.vim.org/pub/vim/unix/vim-${VIM_VERSION}.tar.bz2
 	nls? ( ftp://ftp.vim.org/pub/vim/extra/vim-${VIM_VERSION}-lang.tar.gz )
 	mirror://gentoo/${VIM_GENTOO_PATCHES}
-	mirror://gentoo/${VIM_ORG_PATCHES}"
+	mirror://gentoo/${VIM_ORG_PATCHES}
+	mirror://gentoo/${VIM_RUNTIME_SNAP}"
 
 S=${WORKDIR}/vim${VIM_VERSION/.}
 DESCRIPTION="GUI version of the Vim text editor"
