@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r2.ebuild,v 1.1 2005/06/07 21:13:09 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r2.ebuild,v 1.2 2005/06/09 01:14:43 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -39,7 +39,7 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	!ppc-macos? ( livecd?
 		( >=media-libs/jpeg-6b
 		>=media-libs/libpng-1.2.1
-		sys-libs/gpm ))
+		sys-libs/gpm ) )
 	sys-libs/zlib
 	virtual/libc
 	sys-libs/ncurses"
