@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.8 2005/03/05 13:30:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.9 2005/06/09 20:36:38 wolf31o2 Exp $
 
 inherit games
 
 IUSE="nocd videos"
 DESCRIPTION="Descent 3 - 3-Dimensional indoor/outdoor spaceship combat"
 HOMEPAGE="http://www.lokigames.com/products/descent3/"
-SRC_URI="ftp://ftp.planetmirror.com/pub/lokigames/updates/descent3/descent3-1.4.0a-x86.run
+SRC_URI="ftp://ftp.planetmirror.com/pub/lokigames/updates/${PN}/${PN}-1.4.0a-x86.run
 	ftp://ftp.planetmirror.com/pub/lokigames/updates/descent3/${P}-x86.run"
 
 LICENSE="LOKI-EULA"
@@ -15,9 +15,8 @@ SLOT="0"
 KEYWORDS="x86"
 RESTRICT="nostrip"
 
-DEPEND="virtual/libc"
-RDEPEND="${DEPEND}
-	virtual/opengl"
+DEPEND="games-util/loki_patch"
+RDEPEND="virtual/opengl"
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
@@ -49,47 +48,46 @@ src_install() {
 	dodir ${dir}
 	einfo "Copying files... this may take a while..."
 	exeinto ${dir}
-	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/{descent3,nettest}
+	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/{${PN},nettest} \
+		|| die "copying executables"
 	insinto ${dir}
-
-	cp ${CDROM_ROOT}/{FAQ.txt,README,README.mercenary,d3.hog,icon.{bmp,xpm}} \
-		${Ddir}
+	doins ${CDROM_ROOT}/{FAQ.txt,README{,.mercenary},d3.hog,icon.{bmp,xpm}} \
+		|| die "copying files"
 
 	cd ${Ddir}
-
 	tar xzf ${CDROM_ROOT}/data.tar.gz || die "uncompressing data"
 	tar xzf ${CDROM_ROOT}/shared.tar.gz || die "uncompressing shared"
 
-	use nocd && cp ${CDROM_ROOT}/missions/* ${Ddir}/missions
+	if use nocd; then
+		doins -r ${CDROM_ROOT}/missions || die "copying missions"
+	fi
 
 	if use videos ; then
 		cdrom_load_next_cd
-		cp ${CDROM_ROOT}/movies/* ${Ddir}/movies || die "copying movies"
+		doins -r ${CDROM_ROOT}/movies || die "copying movies"
 	fi
 
 	cd ${S}/a
-	bin/Linux/x86/loki_patch --verify patch.dat
-	bin/Linux/x86/loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
+	loki_patch --verify patch.dat
+	loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
 	cd ${S}/b
-	bin/Linux/x86/loki_patch --verify patch.dat
-	bin/Linux/x86/loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
+	loki_patch --verify patch.dat
+	loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
 
-	dogamesbin ${FILESDIR}/descent3
-	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/descent3
-	insinto /usr/share/pixmaps
-	newins ${CDROM_ROOT}/icon.xpm descent3.xpm
+	games_make_wrapper ${PN} ./${PN} ${dir}
+	newicon ${CDROM_ROOT}/icon.xpm ${PN}.xpm
 
 	# Fix for 2.6 kernel crash
 	cd ${Ddir}
 	ln -sf ppics.hog PPics.Hog
 
 	prepgamesdirs
-	make_desktop_entry descent3 "Descent 3" "descent3.xpm"
+	make_desktop_entry ${PN} "Descent 3" ${PN}
 }
 
 pkg_postinst() {

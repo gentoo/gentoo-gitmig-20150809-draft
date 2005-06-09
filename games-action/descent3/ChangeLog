@@ -1,6 +1,10 @@
 # ChangeLog for games-action/descent3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.8 2005/03/05 13:30:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.9 2005/06/09 20:36:38 wolf31o2 Exp $
+
+  09 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> -files/descent3,
+  descent3-1.4.0b.ebuild:
+  Updated to use newer functions added since this ebuild was created.
 
   05 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   descent3-1.4.0b.ebuild:
