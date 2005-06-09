@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.180 2005/06/03 21:58:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.181 2005/06/09 15:25:56 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -13,7 +13,8 @@ inherit multilib
 ECLASS=eutils
 INHERITED="$INHERITED $ECLASS"
 
-DEPEND="!bootstrap? ( sys-devel/patch )"
+DEPEND="!bootstrap? ( sys-devel/patch userland_GNU? ( sys-apps/shadow ) )"
+# sys-apps/shadow is needed for useradd, etc, bug #94745.
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
