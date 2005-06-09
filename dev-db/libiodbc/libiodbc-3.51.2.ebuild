@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.51.2.ebuild,v 1.5 2005/01/01 17:35:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.51.2.ebuild,v 1.6 2005/06/09 18:07:19 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.iodbc.org/downloads/iODBC/${P}.tar.gz"
 
 LICENSE="LGPL-2 BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~hppa ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~hppa ~alpha ~amd64 ~sparc"
 IUSE="gtk"
 
 DEPEND="virtual/libc
