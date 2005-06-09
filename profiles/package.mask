@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4069 2005/06/09 18:50:37 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4070 2005/06/09 22:54:16 chainsaw Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -272,10 +272,6 @@ gnome-extra/power-applet
 # Masatomo Nakano <nakano@gentoo.org> (08 May 2005)
 # Masked for testing.
 dev-db/libpq
-
-# Tony Vroon <chainsaw@gentoo.org> (08 May 2005)
-# Unversioned perlscript, unresponsive upstream. Pending removal from the tree.
-media-sound/ogg2mp3
 
 # Ryan Phillips <rphillips@gentoo.org> (07 May 2005)
 # New fox layout.  In testing
