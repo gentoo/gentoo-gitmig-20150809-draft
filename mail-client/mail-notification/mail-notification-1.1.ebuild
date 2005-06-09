@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-1.1.ebuild,v 1.2 2005/05/27 21:42:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-1.1.ebuild,v 1.3 2005/06/09 01:09:28 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -29,7 +29,7 @@ DEPEND=">=x11-libs/gtk+-2.4
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	mime? ( >=dev-libs/gmime-2.1 )
 	gmail? ( >=net-libs/libsoup-2.2
-		gmailtimestamps? ( >=dev-libs/icu-2.6 ))"
+		gmailtimestamps? ( >=dev-libs/icu-2.6 ) )"
 
 G2CONF="${G2CONF} $(use_enable ssl)"
 G2CONF="${G2CONF} $(use_enable sasl)"
