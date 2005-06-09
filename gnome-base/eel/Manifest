@@ -1,15 +1,25 @@
-MD5 ec8ec4a7df799a8e3e45d8fd4e71c908 ChangeLog 10576
-MD5 3a3d6f15ca39ac8335433820d89b0934 eel-1.0.2-r3.ebuild 1053
-MD5 eff8f9fe10af982e985e4dfdb69bf69b eel-2.10.0.ebuild 911
-MD5 8f09e2519135589740f66724d7c1c7ce eel-2.10.1.ebuild 910
-MD5 fb52119aa3b98ef00a889d825007a47d eel-2.6.2.ebuild 819
-MD5 623cbf8e99056a785e8c1f4ef6597923 eel-2.8.0.ebuild 868
-MD5 940f3b645c8c9f19800a29a4bef29650 eel-2.8.2.ebuild 944
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e9ca657315586ad1c4ec439b9ad57cf6 eel-2.10.0.ebuild 911
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 623cbf8e99056a785e8c1f4ef6597923 eel-2.8.0.ebuild 868
+MD5 8f09e2519135589740f66724d7c1c7ce eel-2.10.1.ebuild 910
+MD5 64964e28c65445480ebdd1f9e9354738 ChangeLog 10669
+MD5 940f3b645c8c9f19800a29a4bef29650 eel-2.8.2.ebuild 944
+MD5 fb52119aa3b98ef00a889d825007a47d eel-2.6.2.ebuild 819
+MD5 3a3d6f15ca39ac8335433820d89b0934 eel-1.0.2-r3.ebuild 1053
+MD5 264fd59008cfedede385a11935e73c63 files/digest-eel-2.8.2 62
+MD5 5b6a818e2977e84150d8da4535200dac files/digest-eel-2.8.0 62
 MD5 c884c4a35910537301a9beec39b4d3ce files/digest-eel-1.0.2-r3 61
 MD5 89f62dff205403c2cdd39f793f3833d4 files/digest-eel-2.10.0 63
 MD5 d29cf83b3200c45a68efc08a64b9fdef files/digest-eel-2.10.1 63
-MD5 4db4dce6c2cb4828230a59ca6f8591da files/digest-eel-2.6.2 62
-MD5 5b6a818e2977e84150d8da4535200dac files/digest-eel-2.8.0 62
-MD5 264fd59008cfedede385a11935e73c63 files/digest-eel-2.8.2 62
 MD5 6c2c05d297ba2e0923fa995020e278f2 files/eel-2.8.2-amd64.patch 788
+MD5 4db4dce6c2cb4828230a59ca6f8591da files/digest-eel-2.6.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCqKLaKRy60XGEcJIRAgCmAKCjwYPNgpM2kIae97P++sXeUMB5BACfa0cA
+l0sI3K0vsT5KVHbFC2heVLg=
+=ZTA1
+-----END PGP SIGNATURE-----
