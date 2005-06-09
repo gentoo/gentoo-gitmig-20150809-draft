@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.14 2005/06/07 22:03:37 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.15 2005/06/09 01:08:49 mr_bones_ Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="ssl apache2 berkdb python emacs perl java nls"
 
 # Presently subversion doesn't build with swig-1.3.22, bug 65424
-RDEPEND="apache2? ( >=net-www/apache-2.0.48 !>=net-www/apache-2.0.54-r10)
+RDEPEND="apache2? ( >=net-www/apache-2.0.48 !>=net-www/apache-2.0.54-r10 )
 	!apache2? ( !>=net-www/apache-2 )
 	!dev-libs/apr
 	python? ( =dev-lang/swig-1.3.21 >=dev-lang/python-2.0 )
@@ -26,7 +26,7 @@ RDEPEND="apache2? ( >=net-www/apache-2.0.48 !>=net-www/apache-2.0.54-r10)
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.59"
 # Does not work because jikes is broken
-#	jikes? (dev-java/jikes)"
+#	jikes? ( dev-java/jikes )"
 
 S=${WORKDIR}/${P/_rc/-rc}
 
