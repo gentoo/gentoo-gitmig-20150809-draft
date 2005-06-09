@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.35 2005/05/28 12:29:28 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.36 2005/06/09 13:54:06 ka0ttic Exp $
+
+  09 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> libevent-1.1.ebuild:
+  Add some ewarns mentioning the need to run revdep-rebuild.  Closes bug 94419.
 
 *libevent-1.1 (28 May 2005)
 
