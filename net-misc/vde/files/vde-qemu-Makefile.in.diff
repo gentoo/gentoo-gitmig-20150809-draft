@@ -1,0 +1,13 @@
+--- qemu/Makefile.in	2005-04-11 14:23:25.000000000 +0200
++++ qemu/Makefile.in.new	2005-06-09 22:56:26.000000000 +0200
+@@ -448,8 +448,8 @@
+ 
+ 
+ install-exec-hook:
+-	rm -f $(bindir)/vdeqemu
+-	ln -s $(bindir)/vdeq $(bindir)/vdeqemu
++	rm -f $(DESTDIR)$(bindir)/vdeqemu
++	ln -s $(bindir)/vdeq $(DESTDIR)$(bindir)/vdeqemu
+ 
+ uninstall-local:
+ 	rm -f $(bindir)/vdeqemu

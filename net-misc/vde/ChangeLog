@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.1 2005/02/07 02:19:57 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.2 2005/06/09 22:21:11 rphillips Exp $
+
+*vde-1.5.8 (09 Jun 2005)
+
+  09 Jun 2005; <rphillips@gentoo.org> +files/vde-qemu-Makefile.in.diff,
+  +vde-1.5.8.ebuild:
+  version bump. Thanks to Nico Baggus. Fixes #95611
 
 *vde-1.5.7 (06 Feb 2005)
 
