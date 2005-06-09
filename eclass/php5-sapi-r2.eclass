@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.14 2005/06/08 17:39:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.15 2005/06/09 21:41:54 gustavoz Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -359,7 +359,7 @@ php5-sapi-r2_src_unpack() {
 	# Just in case ;-)
 	chmod 755 configure
 
-	[ "${ARCH}" == "sparc" ] && epatch ${FILESDIR}/php-5.0-stdint.diff
+	# [ "${ARCH}" == "sparc" ] && epatch ${FILESDIR}/php-5.0-stdint.diff
 	# epatch ${FILESDIR}/${MY_PHP_P}-missing-arches.patch
 }
 
