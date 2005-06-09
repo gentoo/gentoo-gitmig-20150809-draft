@@ -1,4 +1,4 @@
-MD5 4b8f400428a5d3810822a791a64bacd8 ChangeLog 57095
+MD5 2dda1a0592b8ce10671ac0d5e7977c4e ChangeLog 57206
 MD5 acae82dc219e7456dceac35b798444e8 baselayout-1.11.9-r1.ebuild 16917
 MD5 63063133efc82df82db512614030ba19 baselayout-1.9.4-r6.ebuild 16993
 MD5 451f8ce496238c2fd0fa9fa2852ad16c baselayout-1.9.4-r7.ebuild 17999
@@ -7,7 +7,7 @@ MD5 7d6f28f70034d87817939d447d40d39e baselayout-1.11.11-r3.ebuild 18759
 MD5 780b52b2381f6d7374dd63d2746864f7 baselayout-1.11.10-r7.ebuild 17388
 MD5 3635847518d28266335ffcb3d50584bd baselayout-1.12.0_alpha2-r1.ebuild 18776
 MD5 a625569a71bae566e1e92d469dc42a35 baselayout-1.11.12-r3.ebuild 18795
-MD5 0139e79190cb0800171d0984be27cd58 baselayout-1.11.12-r4.ebuild 19087
+MD5 a60bccbccd4c77565689bd80a4d98d16 baselayout-1.11.12-r4.ebuild 19131
 MD5 50ccc6f432f5e941daec74f31f2d2a53 files/digest-baselayout-1.11.11-r3 70
 MD5 333c983dc00cb352f4725cacc0378fea files/baselayout-1.11.10-bridge.patch 3547
 MD5 f96ffe6b44684809b8ec0e4450093f59 files/baselayout-1.11.10-iwconfig-2.patch 925
