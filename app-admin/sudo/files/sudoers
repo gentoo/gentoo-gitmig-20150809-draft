@@ -25,6 +25,9 @@ Defaults	env_reset
 # Allow specific user to bypass env_delete for TERMCAP
 # Defaults:user     env_delete-=TERMCAP
 
+# Set default EDITOR to vi, and do not allow visudo to use EDITOR/VISUAL.
+# Defaults	editor=/usr/bin/vim, !env_editor
+
 # Runas alias specification
 
 # *** REMEMBER ***************************************************
@@ -42,6 +45,10 @@ root	ALL=(ALL) ALL
 
 # Same thing without a password
 # %wheel	ALL=(ALL)	NOPASSWD: ALL
+
+# Users in group www are allowed to  edit httpd.conf and ftpd.conf
+# using sudoedit, or sudo -e, without a password.
+# %www		ALL=(ALL)	NOPASSWD: sudoedit /etc/httpd.conf, /etc/ftpd.conf
 
 # Samples
 # %users  ALL=/sbin/mount /cdrom,/sbin/umount /cdrom

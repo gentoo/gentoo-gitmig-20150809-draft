@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.4 2005/06/09 00:56:14 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.5 2005/06/09 09:10:18 taviso Exp $
 
 inherit eutils pam
 
@@ -146,7 +146,7 @@ sudo_bad_var() {
 
 pkg_postinst() {
 	use skey && use pam && {
-		 ewarn "Sudo will not use skey authentication when compiled with"
+		 ewarn "sudo will not use skey authentication when compiled with"
 		 ewarn "pam support."
 		 ewarn "To allow users to authenticate with one time passwords,"
 		 ewarn "you should unset the pam USE flag for sudo."
