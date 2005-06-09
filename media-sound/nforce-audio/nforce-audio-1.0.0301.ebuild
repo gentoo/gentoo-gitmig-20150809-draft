@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0301.ebuild,v 1.2 2005/03/30 19:26:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0301.ebuild,v 1.3 2005/06/09 13:37:06 swegener Exp $
 
 inherit eutils linux-mod
 
@@ -11,8 +11,8 @@ AMD64_NV_PACKAGE="NFORCE-Linux-x86_64-${NV_V}"
 
 DESCRIPTION="Linux kernel module for the NVIDIA's nForce SoundStorm audio chipset"
 HOMEPAGE="http://www.nvidia.com/"
-SRC_URI="x86? (http://download.nvidia.com/XFree86/nforce/${NV_V}/${X86_NV_PACKAGE}-${PKG_V}.run)
-	amd64? (http://download.nvidia.com/XFree86/nforce/amd64/${NV_V}/${AMD64_NV_PACKAGE}-${PKG_V}.run)"
+SRC_URI="x86? (http://download.nvidia.com/XFree86/nforce/${NV_V}/${X86_NV_PACKAGE}-${PKG_V}.run )
+	amd64? (http://download.nvidia.com/XFree86/nforce/amd64/${NV_V}/${AMD64_NV_PACKAGE}-${PKG_V}.run )"
 
 if use x86; then
 	NV_PACKAGE="${X86_NV_PACKAGE}"
