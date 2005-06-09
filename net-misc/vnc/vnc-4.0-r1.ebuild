@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.8 2005/05/18 04:18:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.9 2005/06/09 15:07:20 omkhar Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,14 +18,15 @@ SRC_URI="http://www.realvnc.com/dist/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc amd64 ~alpha ~ia64"
+KEYWORDS="~x86 ~sparc ~ppc amd64 ~alpha ~ia64 ppc64"
 IUSE="server"
 
 DEPEND="sys-libs/zlib
-	!net-misc/tightvnc
 	media-libs/freetype
+	!virtual/vnc
 	x11-base/xorg-x11"
 
+PROVIDE="virtual/vnc"
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
@@ -52,6 +53,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${P}/imake-tmpdir.patch
 
 		epatch ${FILESDIR}/xc.patch-cfbglblt8.patch
+		epatch ${FILESDIR}/xc.patch-eieio.patch
 		epatch xc.patch
 
 		echo "#define CcCmd $(tc-getCC)" >> ${S}/xc/config/cf/vnc.def

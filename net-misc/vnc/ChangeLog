@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.35 2005/05/18 04:18:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.36 2005/06/09 15:07:20 omkhar Exp $
+
+  09 Jun 2005; <omkhar@gentoo.org> +files/xc.patch-eieio.patch,
+  vnc-4.0-r1.ebuild:
+  fix for eieio compile error with 2.6 headers and vnc server on ppc64
 
   18 May 2005; Michael Sterrett <mr_bones_@gentoo.org> vnc-4.0.ebuild,
   vnc-4.0-r1.ebuild:
