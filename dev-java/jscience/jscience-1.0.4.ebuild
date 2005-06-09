@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/jscience-1.0.4.ebuild,v 1.1 2005/04/16 21:42:28 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/jscience-1.0.4.ebuild,v 1.2 2005/06/09 00:50:41 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ IUSE="doc jikes source"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-core-1.4
 	app-arch/unzip
-	jikes?( >=dev-java/jikes-1.21 )
+	jikes? ( >=dev-java/jikes-1.21 )
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jdk-1.3
 	~dev-java/javolution-2.2.4"

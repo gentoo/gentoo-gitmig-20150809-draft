@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.18.ebuild,v 1.9 2005/05/27 00:03:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.18.ebuild,v 1.10 2005/06/09 00:51:04 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,7 @@ DEPEND=">=virtual/jdk-1.4
 	>=dev-java/jzlib-1.0.3
 	app-arch/unzip
 	jikes? ( >=dev-java/jikes-1.17 )
-	!sparc?( dev-java/gnu-crypto )"
+	!sparc? ( dev-java/gnu-crypto )"
 RDEPEND=">=virtual/jdk-1.4"
 
 src_compile() {

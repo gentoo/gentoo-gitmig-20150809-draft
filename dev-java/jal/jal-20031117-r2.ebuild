@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/jal-20031117-r2.ebuild,v 1.1 2005/04/16 17:33:00 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/jal-20031117-r2.ebuild,v 1.2 2005/06/09 00:52:04 mr_bones_ Exp $
 
 inherit eutils java-pkg
 
@@ -15,7 +15,7 @@ IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
-	jikes?( >=dev-java/jikes-1.21 )
+	jikes? ( >=dev-java/jikes-1.21 )
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/fastutil-3.1"

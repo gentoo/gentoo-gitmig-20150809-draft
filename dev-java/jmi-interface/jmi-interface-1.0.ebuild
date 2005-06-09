@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmi-interface/jmi-interface-1.0.ebuild,v 1.2 2005/05/27 15:46:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmi-interface/jmi-interface-1.0.ebuild,v 1.3 2005/06/09 00:57:02 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -15,8 +15,8 @@ IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
-	jikes? (dev-java/jikes)
-	source? (app-arch/zip)"
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}
