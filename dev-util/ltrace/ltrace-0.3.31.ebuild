@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.16 2005/06/02 11:46:53 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.17 2005/06/09 13:34:05 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="ltrace shows runtime library call information for dynamically linked executables"
 HOMEPAGE="http://packages.debian.org/unstable/utils/ltrace.html"
 SRC_URI="mirror://debian/pool/main/l/ltrace/${PN}_${PV}.tar.gz
-	amd64?( http://gentoo.tamperd.net/distfiles/ltrace-0.3.26-x86_64.tar.bz2
+	amd64? ( http://gentoo.tamperd.net/distfiles/ltrace-0.3.26-x86_64.tar.bz2
 		mirror://gentoo/ltrace-0.3.26-x86_64.tar.bz2 )"
 
 LICENSE="GPL-2"
