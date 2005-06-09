@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.93 2005/06/03 22:14:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.94 2005/06/09 19:26:04 gustavoz Exp $
+
+  09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> gdm-2.6.0.9-r2.ebuild:
+  Stable on sparc
 
 *gdm-2.6.0.9-r1 (04 Jun 2005)
 
