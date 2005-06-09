@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.10 2005/04/24 11:43:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.11 2005/06/09 13:31:09 swegener Exp $
 
 DESCRIPTION="a collection of modules for the sword project"
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -19,14 +19,14 @@ SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/KJV.zip
 	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Packard.zip
 	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Vulgate.zip
 	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Josephus.zip
-	offensive? (mirror://gentoo/BoM.zip
+	offensive? ( mirror://gentoo/BoM.zip
 		mirror://gentoo/Jasher.zip
-		mirror://gentoo/Quran.zip)
-	intl? (http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerElb.zip
+		mirror://gentoo/Quran.zip )
+	intl? ( http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerElb.zip
 		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerElb1871.zip
 		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerLut.zip
 		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerLut1545.zip
-		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerSch.zip)"
+		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerSch.zip )"
 # must wait for the betamodules to return.
 #	http://www.crosswire.org/ftpmirror/pub/sword/betamodules/win/QuranShakir.zip
 

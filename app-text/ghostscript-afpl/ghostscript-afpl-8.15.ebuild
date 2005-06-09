@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.15.ebuild,v 1.6 2005/04/24 11:35:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.15.ebuild,v 1.7 2005/06/09 13:27:05 swegener Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ CUPS_PV=1.1.20
 
 SRC_URI="mirror://sourceforge/ghostscript/${MY_P}.tar.gz
 	cjk? ( http://www.matsusaka-u.ac.jp/mirror/gs-cjk/adobe-cmaps-200204.tar.gz
-		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz)
+		http://www.matsusaka-u.ac.jp/mirror/gs-cjk/acro5-cmaps-2001.tar.gz )
 	cups? ( mirror://gentoo/cups-${CUPS_PV}-source.tar.bz2 )"
 
 LICENSE="Aladdin"

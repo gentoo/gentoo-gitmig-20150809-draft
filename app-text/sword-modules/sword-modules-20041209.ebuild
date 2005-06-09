@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.2 2005/01/01 16:37:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.3 2005/06/09 13:31:09 swegener Exp $
 
 CROSSWIREFTP="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip"
 DESCRIPTION="a collection of modules for the sword project"
@@ -22,17 +22,17 @@ SRC_URI="${CROSSWIREFTP}/KJV.zip
 	${CROSSWIREFTP}/Josephus.zip
 	${CROSSWIREFTP}/Jubilee2000.zip
 	${CROSSWIREFTP}/MHC.zip
-	offensive? (mirror://gentoo/BoM.zip
+	offensive? ( mirror://gentoo/BoM.zip
 		mirror://gentoo/Jasher.zip
-		mirror://gentoo/Quran.zip)
-	intl? (${CROSSWIREFTP}/GerElb.zip
+		mirror://gentoo/Quran.zip )
+	intl? ( ${CROSSWIREFTP}/GerElb.zip
 		${CROSSWIREFTP}/GerElb1871.zip
 		${CROSSWIREFTP}/GerLut.zip
 		${CROSSWIREFTP}/GerLut1545.zip
 		${CROSSWIREFTP}/GerSch.zip
 		${CROSSWIREFTP}/SpaRV.zip
 		${CROSSWIREFTP}/FreLSG.zip
-		${CROSSWIREFTP}/ItaRive.zip)"
+		${CROSSWIREFTP}/ItaRive.zip )"
 # must wait for the betamodules to return.
 #	http://www.crosswire.org/ftpmirror/pub/sword/betamodules/win/QuranShakir.zip
 
