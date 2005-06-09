@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 3bfa04841c0f8c4c04e4e280593cdd48 ChangeLog 18522
+MD5 fd7f473d696e48654b7c94af2cdcfe4a ChangeLog 18648
 MD5 c6b400456b9e96b064ff3d445034754e spamassassin-2.64-r1.ebuild 2524
-MD5 77ac0d7df7af55d62ddaa9ef4bbf90c2 spamassassin-3.0.2-r1.ebuild 5781
+MD5 0dc3669ecd2b16304953702f296131fe spamassassin-3.0.2-r1.ebuild 5786
 MD5 b2e1c1869a28e383f102d68857f260ff spamassassin-3.0.3.ebuild 5941
 MD5 2c3751bc9b3d8e498c2d7406f23aceef spamassassin-3.0.4.ebuild 5933
 MD5 1951dd84955cce642d59c03780a5fb6f files/3.0.0-spamd.conf 932
@@ -18,7 +18,7 @@ MD5 4783482f6c574067f3c8fa48e3202fae files/digest-spamassassin-3.0.4 76
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCqF/9tG5z4I8BtQoRAlqhAJ94ioK+ghyJMmPj2hzSB93rUa44ZwCfZHlQ
-JSaGomiI7coSmJYWx6f0Sm0=
-=kXM0
+iD8DBQFCqHCltG5z4I8BtQoRAuPpAJ94FNQPf2PQnRRDr8q9ttrNa7E5+gCdEtlU
+qg1YCb5p3ZJ9BS24yvs0LIc=
+=MbpY
 -----END PGP SIGNATURE-----
