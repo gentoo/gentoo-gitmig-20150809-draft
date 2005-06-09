@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.2.1-r1.ebuild,v 1.2 2005/06/09 11:52:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.2.3.ebuild,v 1.1 2005/06/09 11:52:57 foser Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ximian.com/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~ppc64"
+KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~ppc64"
 IUSE="doc ldap mozilla ssl ipv6 nntp kerberos"
 
 RDEPEND=">=dev-libs/glib-2
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2
 	ldap? ( >=net-nds/openldap-2.0 )
 	ssl? ( mozilla? ( www-client/mozilla )
 		  !mozilla? ( >=dev-libs/nspr-4.4
-					  >=dev-libs/nss-3.9 )
+				  >=dev-libs/nss-3.9 )
 		   )
 	kerberos? ( virtual/krb5 )"
 
@@ -42,13 +42,18 @@ MAKEOPTS="${MAKEOPTS} -j1"
 USE_DESTDIR=1
 
 src_unpack() {
+
 	unpack ${A}
+
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.2.0-gentoo_etc_services.patch
-	epatch ${FILESDIR}/${P}-local-provider.patch
+	# fix local mailfolders (#87043)
+	epatch ${FILESDIR}/${PN}-1.2.1-local-provider.patch
+
 }
 
 src_compile() {
+
 	cd ${S}/libdb/dist
 	./s_config || die
 
