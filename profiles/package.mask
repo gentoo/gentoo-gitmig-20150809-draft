@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4070 2005/06/09 22:54:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4071 2005/06/09 23:19:03 gustavoz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -429,10 +429,6 @@ dev-lang/gpc
 # Carsten Lohrke <carlo@gentoo.org> (07 April 2005)
 # Mask development versions.
 >media-video/kmplayer-0.8.9
-
-# Gustavo Zacarias <gustavoz@gentoo.org> (04 Apr 2005)
-# Needs python 2.4
-=dev-python/pyparted-1.6.9-r1
 
 # <axxo@gentoo.org> (03 Apr 2005)
 # broken
