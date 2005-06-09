@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sendEmail
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.4 2004/09/10 10:04:27 humpback Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.5 2005/06/09 20:32:43 humpback Exp $
+
+*sendEmail-1.52 (09 Jun 2005)
+
+  09 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +sendEmail-1.52.ebuild:
+  Version bump. Closes bug #92228 , thanks to wolf3d for bringing this to our
+  attention.
 
   10 Sep 2004; Gustavo Felisberto <humpback@gentoo.org>;
   sendEmail-1.42.ebuild:
