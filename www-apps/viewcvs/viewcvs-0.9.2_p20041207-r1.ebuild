@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.2_p20041207-r1.ebuild,v 1.4 2005/06/06 18:44:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.2_p20041207-r1.ebuild,v 1.5 2005/06/09 13:10:43 swegener Exp $
 
 inherit eutils
 
@@ -15,9 +15,13 @@ KEYWORDS="ppc ~sparc x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( ( >=app-text/rcs-5.7
-	>=dev-util/cvs-1.11 )
-	dev-util/subversion )
+RDEPEND="|| (
+		(
+			>=app-text/rcs-5.7
+			>=dev-util/cvs-1.11
+		)
+		dev-util/subversion
+	)
 	sys-apps/diffutils
 	net-www/apache"
 S=${WORKDIR}/${PN}
