@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.3.5.ebuild,v 1.9 2005/04/24 11:17:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.3.5.ebuild,v 1.10 2005/06/09 13:19:10 swegener Exp $
 
 inherit kde
 
@@ -26,11 +26,11 @@ BASEDIR="mirror://kde/stable/koffice-${PV}/src/"
 
 for pkg in $LANGS
 do
-	SRC_URI="$SRC_URI linguas_${pkg}? ( $BASEDIR/koffice-i18n-${pkg}-${PV}.tar.bz2)"
+	SRC_URI="${SRC_URI} linguas_${pkg}? ( $BASEDIR/koffice-i18n-${pkg}-${PV}.tar.bz2 )"
 done
 
-if [ -z "$SRC_URI" ]; then
-	SRC_URI="$BASEDIR/koffice-i18n-${PV}.tar.bz2"
+if [ -z "${SRC_URI}" ]; then
+	SRC_URI="${BASEDIR}/koffice-i18n-${PV}.tar.bz2"
 fi
 
 src_unpack() {
