@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r1.ebuild,v 1.5 2005/05/18 20:11:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r1.ebuild,v 1.6 2005/06/09 13:16:06 swegener Exp $
 
 inherit eutils
 
@@ -16,11 +16,13 @@ KEYWORDS="x86 amd64 ppc alpha -sparc -mips ppc64"
 IUSE="livecd nls"
 
 RDEPEND="!livecd? ( dev-libs/newt )"
-DEPEND="$RDEPEND
-	!livecd? ( sys-devel/gettext )
-	!livecd? ( sys-libs/slang )
+DEPEND="${RDEPEND}
+	!livecd? (
+		sys-devel/gettext
+		sys-libs/slang
+		>=dev-libs/dietlibc-0.20
+	)
 	sys-apps/pciutils
-	!livecd? ( >=dev-libs/dietlibc-0.20 )
 	!sys-apps/kudzu"
 
 src_unpack() {
