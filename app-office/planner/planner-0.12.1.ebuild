@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12.1.ebuild,v 1.8 2005/04/01 22:12:22 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12.1.ebuild,v 1.9 2005/06/09 00:31:54 mr_bones_ Exp $
 
 inherit gnome2 fdo-mime
 
@@ -30,7 +30,7 @@ RDEPEND=">=x11-libs/gtk+-2.0.5
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	dev-util/intltool
-	doc?( >=dev-util/gtk-doc-0.10 )"
+	doc? ( >=dev-util/gtk-doc-0.10 )"
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL README"
 

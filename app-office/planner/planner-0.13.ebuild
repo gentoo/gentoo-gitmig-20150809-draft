@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.13.ebuild,v 1.1 2005/06/04 18:37:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.13.ebuild,v 1.2 2005/06/09 00:31:54 mr_bones_ Exp $
 
 inherit gnome2 fdo-mime
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	app-text/scrollkeeper
 	dev-util/intltool
-	doc?( >=dev-util/gtk-doc-0.10 )"
+	doc? ( >=dev-util/gtk-doc-0.10 )"
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL README"
 
