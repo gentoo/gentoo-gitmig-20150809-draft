@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games-extra-data
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.17 2005/06/09 08:41:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.18 2005/06/09 21:29:04 gustavoz Exp $
+
+  09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-games-extra-data-2.10.0.ebuild:
+  Stable on sparc
 
   09 Jun 2005; Markus Rothe <corsair@gentoo.org>
   gnome-games-extra-data-2.10.0.ebuild:
