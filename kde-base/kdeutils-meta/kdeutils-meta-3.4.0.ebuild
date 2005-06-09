@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/kdeutils-meta-3.4.0.ebuild,v 1.5 2005/04/27 22:16:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/kdeutils-meta-3.4.0.ebuild,v 1.6 2005/06/09 12:26:48 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -12,7 +12,6 @@ SLOT="3.4"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ppc64"
 IUSE="crypt lirc"
 
-# We don't add kcardtools because it needs a libksmartcard from kdelibs that it's not alway installed"
 RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/ark)
 	$(deprange $PV $MAXKDEVER kde-base/kcalc)
