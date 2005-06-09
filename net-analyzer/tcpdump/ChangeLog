@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.44 2005/05/16 01:08:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.45 2005/06/09 21:43:25 vanquirius Exp $
+
+*tcpdump-3.8.3-r3 (09 Jun 2005)
+
+  09 Jun 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/tcpdump-3.8.3-bgp-infinite-loop2.patch, +tcpdump-3.8.3-r3.ebuild:
+  Adding patch for security bug 95349.
 
   15 May 2005; Marcelo Goes <vanquirius@gentoo.org> tcpdump-3.8.3-r1.ebuild:
   Use toolchain-funcs.eclass instead of gcc.eclass. See bug 92745.
