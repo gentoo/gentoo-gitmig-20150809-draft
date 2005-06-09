@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0-r1.ebuild,v 1.1 2005/05/30 13:17:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0-r1.ebuild,v 1.2 2005/06/09 06:14:50 luckyduck Exp $
 
-inherit gnuconfig
+inherit eutils gnuconfig
 
 DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application compatible with many OSes."
 SRC_URI="http://openvpn.net/release/openvpn-${PV}.tar.gz"
