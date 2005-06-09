@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+# starts Armagetron Advanced from the installation directory
+
+GAMES_LIBDIR=/usr/games/lib/armagetronad
+GAMES_DATADIR=/usr/share/games
+GAMES_SYSCONFDIR=/etc/games
+PN=armagetronad
+if test ! -r $HOME/.armagetronad ; then
+   mkdir $HOME/.armagetronad
+
+   if test -r $HOME/.ArmageTronrc ; then
+       #migrage very old configuration
+       echo "Porting very old configuration..."
+       mkdir $HOME/.armagetronad/var
+       mv $HOME/.ArmageTronrc $HOME/.armagetronad/var/user.cfg
+   fi
+fi
+
+if test ! -r $HOME/.armagetronad/var ; then
+    #migrate old configuration
+    files=$( find $HOME/.armagetronad -type f -maxdepth 1 )
+
+    mkdir $HOME/.armagetronad/var
+       
+    test "$files" != "" && echo "Porting old configuration..." && mv $files $HOME/.armagetronad/var
+fi
+
+if test  "x$1" = "x-h" ; then
+    echo -e "\n\nTo uninstall Armagetron Advanced, type armagetronad --uninstall."
+fi
+
+if test  "x$1" = "x--uninstall"  ; then
+    emerge unmerge armagetronad
+else
+	$GAMES_LIBDIR/$PN --datadir $GAMES_DATADIR/$PN --configdir $GAMES_SYSCONFDIR/$PN \
+	--userdatadir $HOME/.armagetronad $*
+fi
+

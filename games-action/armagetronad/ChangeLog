@@ -1,0 +1,11 @@
+# ChangeLog for games-action/armagetronad
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.1 2005/06/09 17:11:20 wolf31o2 Exp $
+
+*armagetronad-0.2.7.1 (09 Jun 2005)
+
+  09 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> +files/armagetronad,
+  +files/armagetronad-ded, +metadata.xml, +armagetronad-0.2.7.1.ebuild:
+  Initial import. This ebuild is based off the ebuild submitted to bug #53123
+  by Donald R. Gray Jr <donaldgray@dslextreme.com>. Closing bug #65931.
+
