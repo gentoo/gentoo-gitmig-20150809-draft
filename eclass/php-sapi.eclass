@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.67 2005/06/06 00:18:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.68 2005/06/09 15:32:06 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -620,7 +620,7 @@ php-sapi_src_install() {
 	# This is where we install header files that PHP itself doesn't install,
 	# but which PECL packages depend on
 	if php-sapi_is_providerbuild; then
-		for x in ext/mbstring/libmbfl/mbfl/mbfilter.h ext/mbstring/libmbfl/mbfl/mbfl_defs.h ext/mbstring/libmbfl/mbfl/mbfl_consts.h ext/mbstring/libmbfl/mbfl/mbfl_allocators.h ext/mbstring/libmbfl/mbfl/mbfl_encoding.h ext/mbstring/libmbfl/mbfl/mbfl_language.h ext/mbstring/libmbfl/mbfl/mbfl_string.h ext/mbstring/libmbfl/mbfl/mbfl_convert.h ext/mbstring/libmbfl/mbfl/mbfl_ident.h ext/mbstring/libmbfl/mbfl/mbfl_memory_device.h; do
+		for x in ext/gd/gdcache.h ext/gd/gdttf.h ext/gd/php_gd.h ext/gd/libgd/gd.h ext/gd/libgd/gd_io.h ext/gd/libgd/gdcache.h ext/gd/libgd/gdfontg.h ext/gd/libgd/gdfontl.h ext/gd/libgd/gdfontmb.h ext/gd/libgd/gdfonts.h ext/gd/libgd/gdfontt.h ext/gd/libgd/gdhelpers.h ext/gd/libgd/jisx0208.h ext/gd/libgd/wbmp.h ext/mbstring/libmbfl/mbfl/mbfilter.h ext/mbstring/libmbfl/mbfl/mbfl_defs.h ext/mbstring/libmbfl/mbfl/mbfl_consts.h ext/mbstring/libmbfl/mbfl/mbfl_allocators.h ext/mbstring/libmbfl/mbfl/mbfl_encoding.h ext/mbstring/libmbfl/mbfl/mbfl_language.h ext/mbstring/libmbfl/mbfl/mbfl_string.h ext/mbstring/libmbfl/mbfl/mbfl_convert.h ext/mbstring/libmbfl/mbfl/mbfl_ident.h ext/mbstring/libmbfl/mbfl/mbfl_memory_device.h; do
 			my_headerdir="/usr/include/php/`dirname $x`"
 			#echo "$my_headerdir"
 			if [ ! -d "${D}$my_headerdir" ]; then
