@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.159 2005/06/08 17:47:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.160 2005/06/09 10:46:59 robbat2 Exp $
+
+*php-5.0.4-r1 (09 Jun 2005)
+
+  09 Jun 2005; Robin H. Johnson <robbat2@gentoo.org> +php-5.0.4-r1.ebuild:
+  Testing ebuild for Stuart.
 
   08 Jun 2005; Robin H. Johnson <robbat2@gentoo.org> php-5.0.4.ebuild:
   Bug #95431: make it actaully install properly.
