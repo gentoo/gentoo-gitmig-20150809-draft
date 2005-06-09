@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.3.ebuild,v 1.1 2005/05/19 01:53:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.3.ebuild,v 1.2 2005/06/09 00:30:39 mr_bones_ Exp $
 
 inherit eutils multilib
 
@@ -42,7 +42,7 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	sys-devel/autoconf
 	sys-devel/automake
-	player?( x86? ( mmx? ( >=dev-lang/nasm-0.98.19 ) ) )"
+	player? ( x86? ( mmx? ( >=dev-lang/nasm-0.98.19 ) ) )"
 
 
 pkg_setup() {
