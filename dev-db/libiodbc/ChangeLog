@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.9 2005/06/09 18:07:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.10 2005/06/09 18:55:45 corsair Exp $
+
+  09 Jun 2005; Markus Rothe <corsair@gentoo.org> libiodbc-3.51.2.ebuild:
+  added ~ppc64
 
   09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   libiodbc-3.51.2.ebuild:
