@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8.ebuild,v 1.6 2005/05/27 19:20:16 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8.ebuild,v 1.7 2005/06/09 01:11:43 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -18,8 +18,8 @@ DEPEND="virtual/linux-sources
 RDEPEND="X? ( virtual/x11
 			gtk? ( gtk2? ( =x11-libs/gtk+-2*
 						   dev-util/pkgconfig )
-				    !gtk2? ( =x11-libs/gtk+-1* ))
-			xforms? ( x11-libs/xforms ))"
+				    !gtk2? ( =x11-libs/gtk+-1* ) )
+			xforms? ( x11-libs/xforms ) )"
 
 
 pkg_setup() {
