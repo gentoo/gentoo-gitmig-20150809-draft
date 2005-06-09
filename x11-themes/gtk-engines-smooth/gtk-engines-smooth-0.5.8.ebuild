@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/gtk-engines-smooth-0.5.8.ebuild,v 1.5 2005/06/08 20:00:43 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/gtk-engines-smooth-0.5.8.ebuild,v 1.6 2005/06/09 13:07:24 swegener Exp $
 
 inherit gtk-engines2
 
@@ -18,7 +18,7 @@ S=${WORKDIR}/${MY_P}
 
 DEPEND="${DEPEND}
 	!x11-themes/gnome-themes
-	gtk? (media-libs/gdk-pixbuf)"
+	gtk? ( media-libs/gdk-pixbuf )"
 
 src_compile() {
 	local myconf
