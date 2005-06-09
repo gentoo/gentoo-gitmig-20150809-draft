@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fbba8d77e8712b6026b0815967281540 php-4.3.10.ebuild 1137
 MD5 3344ef8d8bb858f7c19f58be2147e397 php-5.0.3-r1.ebuild 867
 MD5 a477b4bbabe5481c1f3ce596a407201a php-5.0.1.ebuild 540
@@ -32,8 +35,15 @@ MD5 11f305b98b753ee023da8503a360762a files/digest-php-5.0.0 63
 MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-php-5.0.1 63
 MD5 4792b645fe6b66cd3f1b1ec88d4d20e8 files/digest-php-5.0.2 63
 MD5 89a3a3b437e24b7ccc044376843d8446 files/digest-php-5.0.3 63
-MD5 457955f18cb41f31bab803aac779573c files/digest-php-5.0.4 140
+MD5 31708f113837cfa71a1be2265e1d851d files/digest-php-5.0.4 63
 MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
 MD5 8c692a66d1aeba1f84a35386e6bec47e files/digest-php-4.3.10 210
 MD5 e1385dbdad960ad1d13116d33814dacd files/digest-php-4.3.11 210
 MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCqEcMI1lqEGTUzyQRAut9AJ9lIdriIjDfOMO/DWAWeTCZp2rz7wCbBy4O
+GDtj7K6nrAPW8ZNDWg7QPOQ=
+=WXTa
+-----END PGP SIGNATURE-----
