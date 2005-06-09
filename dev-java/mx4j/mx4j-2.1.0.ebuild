@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0.ebuild,v 1.3 2005/05/19 13:36:42 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0.ebuild,v 1.4 2005/06/09 00:50:16 mr_bones_ Exp $
 
 inherit eutils java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.6
 	jikes?( >=dev-java/jikes-1.21)
-	source?( app-arch/zip )"
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/commons-logging-1.0.4
 	>=dev-java/sun-jaf-bin-1.0.2
