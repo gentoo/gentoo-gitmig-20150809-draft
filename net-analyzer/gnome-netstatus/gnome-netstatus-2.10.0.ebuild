@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.10.0.ebuild,v 1.2 2005/06/05 19:39:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.10.0.ebuild,v 1.3 2005/06/09 21:05:47 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~amd64 ~alpha ~ia64 ~mips ~hppa ~ppc64"
+KEYWORDS="x86 ~ppc sparc ~amd64 ~alpha ~ia64 ~mips ~hppa ~ppc64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.3.1
