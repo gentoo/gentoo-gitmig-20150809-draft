@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.11 2005/06/05 07:50:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.12 2005/06/09 04:23:36 vapier Exp $
 
 inherit eutils
 
@@ -29,6 +29,12 @@ S=${WORKDIR}/${MY_P}
 
 # <pebenito> then eventually turning on selinux would mean
 # adding a dep: selinux? ( sys-libs/libselinux )
+
+busybox_set_env() {
+	type -p ${CHOST}-ar && export CROSS=${CHOST}-
+	# Don't let KBUILD_OUTPUT mess us up #88088
+	unset KBUILD_OUTPUT
+}
 
 busybox_config_option() {
 	case $1 in
@@ -62,9 +68,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/1.00/bb.patch
 	epatch "${WORKDIR}"/${P}-e2fsprogs.patch
 	epatch "${FILESDIR}"/1.00/gcc4.patch
-
-	# Don't let KBUILD_OUTPUT mess us up #88088
-	unset KBUILD_OUTPUT
 
 	#bunzip
 	#ftp://ftp.simtreas.ru/pub/my/bb/new/find.c.gz
@@ -133,13 +136,10 @@ src_unpack() {
 	make oldconfig > /dev/null
 }
 
-busybox_set_cross_compiler() {
-	type -p ${CHOST}-ar && export CROSS=${CHOST}-
-}
-
 src_compile() {
-	busybox_set_cross_compiler
-	#emake -j1 CROSS="${CROSS}" include/config.h busybox || die
+	busybox_set_env
+	#emake -j1 CROSS="${CROSS}" depend || die "depend failed"
+	#emake CROSS="${CROSS}" busybox || die "build failed"
 	emake -j1 CROSS="${CROSS}" busybox || die "build failed"
 	if ! use static ; then
 		mv busybox{,.bak}
@@ -164,7 +164,7 @@ src_compile() {
 }
 
 src_install() {
-	busybox_set_cross_compiler
+	busybox_set_env
 
 	into /
 	dobin busybox
