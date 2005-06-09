@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.0.ebuild,v 1.2 2005/05/29 23:12:03 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.0.ebuild,v 1.3 2005/06/09 13:38:01 swegener Exp $
 
 inherit multilib
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://gmt.soest.hawaii.edu/pub/gmt/${MAINV}/GMT${PV}_progs.tar.bz2
 	ftp://gmt.soest.hawaii.edu/pub/gmt/${MAINV}/GMT${PV}_scripts.tar.bz2
 	ftp://gmt.soest.hawaii.edu/pub/gmt/${MAINV}/GMT${PV}_man.tar.bz2
 	doc? ( ftp://gmt.soest.hawaii.edu/pub/gmt/${MAINV}/GMT${PV}_pdf.tar.bz2 )
-	gmtsuppl? ( ftp://gmt.soest.hawaii.edu/pub/gmt/${MAINV}/GMT${PV}_suppl.tar.bz2)
+	gmtsuppl? ( ftp://gmt.soest.hawaii.edu/pub/gmt/${MAINV}/GMT${PV}_suppl.tar.bz2 )
 	gmtfull? ( ftp://gmt.soest.hawaii.edu/pub/gmt/${MAINV}/GMT_full.tar.bz2 )
 	gmthigh? ( ftp://gmt.soest.hawaii.edu/pub/gmt/${MAINV}/GMT_high.tar.bz2 )
 	gmttria? ( ftp://gmt.soest.hawaii.edu/pub/gmt/${MAINV}/triangle.tar.bz2 )"
