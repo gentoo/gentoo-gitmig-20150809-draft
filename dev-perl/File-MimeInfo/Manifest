@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ff4a4ffd077a4efa1815dcff52867d5d ChangeLog 1226
+MD5 72a110d7e99271a64d4f49372227c21c File-MimeInfo-0.11.ebuild 598
 MD5 2142a3c849f7a19acb9e3a5ed70f3188 File-MimeInfo-0.10.ebuild 589
+MD5 ff4a4ffd077a4efa1815dcff52867d5d ChangeLog 1226
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 556b25cd85e1512d5c3841ec304c7679 File-MimeInfo-0.11.ebuild 591
 MD5 c13ab58d6a628b17059931f1b13a790e files/digest-File-MimeInfo-0.10 69
 MD5 a12598ee4d7fe759b6116a118aaa9c4a files/digest-File-MimeInfo-0.11 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCbRF1tG5z4I8BtQoRAlMbAJ97IZMu/ftd0xUG/NUz7r1Ql2FJ0ACfcYQc
-gH/61pnXhRPtpzeLo6/Jqp8=
-=Vkab
------END PGP SIGNATURE-----
