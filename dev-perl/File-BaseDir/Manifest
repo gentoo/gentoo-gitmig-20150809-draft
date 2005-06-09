@@ -1,4 +1,14 @@
-MD5 92bd0ada856cb393f75e75525efbae51 File-BaseDir-0.02.ebuild 529
-MD5 989a6689df501baadb2a27ca38e0a016 ChangeLog 1232
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 46055e9fbddf5cee4f9605b79b0d027c File-BaseDir-0.02.ebuild 524
+MD5 efc18e138da235f908a8d291e6876a75 ChangeLog 1303
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 1c20725eea76b06eaf3c925a6066b26f files/digest-File-BaseDir-0.02 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCqIwqomPajV0RnrERAhQjAJ9yf5n1G9pWKKM2wUCqwe+vqFSodgCeLfTx
+vuzG3lXnqvGNX87JjWkW19k=
+=LWzS
+-----END PGP SIGNATURE-----
