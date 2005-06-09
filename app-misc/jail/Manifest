@@ -1,9 +1,19 @@
-MD5 fd987f816a6913706dd92e367a196ff4 ChangeLog 1967
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9d437d033dbc6d4254663a3ad49eb7f3 jail-1.9-r1.ebuild 1988
-MD5 65e627d704fab7691d39a6787eff6241 jail-1.9-r2.ebuild 2284
+MD5 fe15d96e558a84d4ab256246f16bc625 ChangeLog 2063
 MD5 7cb2052e33c36db6bd09152de8166065 metadata.xml 750
+MD5 161c60f4f82d4daf12ab21ce5a17e0a5 jail-1.9-r2.ebuild 2283
 MD5 e06c54745344bca0608e4ec56dfd0ed0 files/digest-jail-1.9-r1 59
 MD5 e06c54745344bca0608e4ec56dfd0ed0 files/digest-jail-1.9-r2 59
 MD5 0f9cdbda612ae4e1df19de25b045bf2d files/jail-gentoo.diff 3256
-MD5 c73e8af5993b3d8fda4852dde897b1f0 files/multiuser-rsa.patch 844
 MD5 c3db70e66c86804965b502d3eb50dd2c files/wrongshell.patch 472
+MD5 c73e8af5993b3d8fda4852dde897b1f0 files/multiuser-rsa.patch 844
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCqLwgKRy60XGEcJIRAu9lAJ974Zo144SRIRd23KXnTZqeo7chQQCgqQww
+K4wj9j9vI0EvJ1a1JJuU06E=
+=EZXB
+-----END PGP SIGNATURE-----

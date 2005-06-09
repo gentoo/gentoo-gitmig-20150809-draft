@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.18 2005/04/21 19:19:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.19 2005/06/09 22:00:49 gustavoz Exp $
+
+  09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> jail-1.9-r2.ebuild:
+  Stable on sparc
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> jail-1.9-r1.ebuild:
   stable on amd64
