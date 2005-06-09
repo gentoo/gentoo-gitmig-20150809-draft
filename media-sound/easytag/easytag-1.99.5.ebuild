@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.99.4.ebuild,v 1.1 2005/05/02 20:59:23 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.99.5.ebuild,v 1.1 2005/06/09 22:03:12 dsd Exp $
 
 inherit eutils gnuconfig
 
