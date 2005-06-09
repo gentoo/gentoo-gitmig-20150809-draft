@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.19 2005/06/05 11:56:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.20 2005/06/09 14:23:09 sekretarz Exp $
+
+  09 Jun 2005; <sekretarz@gentoo.org> pstoedit-3.40.ebuild:
+  Stable on amd64
 
   05 Jun 2005; Markus Rothe <corsair@gentoo.org> pstoedit-3.40.ebuild:
   Stable on ppc64; dependency for bug #92995
