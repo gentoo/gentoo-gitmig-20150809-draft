@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.0.4.ebuild,v 1.1 2005/04/21 16:03:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.0.4.ebuild,v 1.2 2005/06/09 13:35:34 swegener Exp $
 
 inherit kde
 
@@ -14,7 +14,7 @@ DOC="krename-3.0.3.pdf"
 DESCRIPTION="KRename - a very powerful batch file renamer"
 HOMEPAGE="http://www.krename.net/"
 SRC_URI="mirror://sourceforge/krename/${MY_P}.tar.bz2
-	doc? ( mirror://sourceforge/krename/${DOC})"
+	doc? ( mirror://sourceforge/krename/${DOC} )"
 
 SLOT="0"
 LICENSE="GPL-2"
