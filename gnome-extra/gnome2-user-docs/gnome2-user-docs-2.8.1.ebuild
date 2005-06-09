@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-2.8.1.ebuild,v 1.10 2005/05/06 11:21:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-2.8.1.ebuild,v 1.11 2005/06/09 09:44:44 corsair Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="FDL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sparc x86 ~ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND=">=app-text/scrollkeeper-0.3.11"
