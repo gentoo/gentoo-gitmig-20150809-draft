@@ -1,4 +1,14 @@
-MD5 bce39a83b11852912f946048aa54bb5d ChangeLog 1007
-MD5 2c63aac17154680ec80d9edf4b2ec996 gnome-doc-utils-0.1.3.ebuild 829
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 e5ad2ed50e986e4d1c3752efab03f824 ChangeLog 1113
+MD5 d0a898d45581c4353c0b43ec5a89e95d gnome-doc-utils-0.1.3.ebuild 830
 MD5 187390057c80dbdb9582ea4ce9332100 files/digest-gnome-doc-utils-0.1.3 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCqI/oKRy60XGEcJIRAmROAJ4iIdAztuikY/6bBrozkNom5oMIcQCgkYnX
+uUcv9eiPNztsvtPdG5BaxQw=
+=qomF
+-----END PGP SIGNATURE-----
