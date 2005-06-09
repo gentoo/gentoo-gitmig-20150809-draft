@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.14.ebuild,v 1.1 2005/06/09 07:31:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.14.ebuild,v 1.2 2005/06/09 19:41:15 tove Exp $
 
 inherit eutils
 
@@ -21,11 +21,9 @@ DEPEND="virtual/libc
 			dev-libs/libiconv
 		)
 	)
-	|| (
-		berkdb? ( >=sys-libs/db-3.2 )
-		sqlite? ( >=dev-db/sqlite-3.2 )
-				  >=sys-libs/db-3.2
-	)
+	berkdb?  ( >=sys-libs/db-3.2 )
+	!berkdb? ( sqlite? ( >=dev-db/sqlite-3.2 ) )
+	!berkdb? ( !sqlite? ( >=sys-libs/db-3.2 ) )
 	gsl? ( sci-libs/gsl )"
 #	app-arch/pax" # only needed for bf_tar
 
