@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.1.ebuild,v 1.5 2005/06/01 17:46:57 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.1.ebuild,v 1.6 2005/06/09 01:03:19 mr_bones_ Exp $
 
 inherit distutils
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-lang/python-2.3
 		>=dev-libs/boost-1.31
 		numeric? ( dev-python/numeric )
 		numarray? ( >=dev-python/numarray-1.0 )
-		!numeric? ( !numarray? (dev-python/numeric) )"
+		!numeric? ( !numarray? ( dev-python/numeric ) )"
 
 src_compile() {
 	local myconf="--without-numarray --without-numeric"
