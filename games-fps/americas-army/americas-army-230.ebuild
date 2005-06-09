@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.4 2005/05/11 21:32:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.5 2005/06/09 17:26:18 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -57,8 +57,7 @@ src_install() {
 	dodoc README.linux
 	insinto ${dir}
 	doins ArmyOps.xpm README.linux ArmyOps${PV}_EULA.txt || die "doins failed"
-	insinto /usr/share/pixmaps
-	doins ArmyOps.xpm || die "doins failed"
+	newicon ArmyOps.xpm armyops.xpm || die "doins failed"
 	exeinto ${dir}
 	doexe bin/armyops || die "doexe failed"
 
@@ -71,7 +70,7 @@ src_install() {
 	games_make_wrapper armyops ./armyops ${dir}
 
 	prepgamesdirs
-	make_desktop_entry armyops "America's Army" ArmyOps.xpm
+	make_desktop_entry armyops "America's Army" armyops.xpm
 }
 
 pkg_postinst() {
