@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.03-r2.ebuild,v 1.3 2005/06/09 05:23:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.03-r2.ebuild,v 1.4 2005/06/09 06:00:51 mrness Exp $
 
 inherit eutils
 
@@ -46,10 +46,10 @@ src_install () {
 }
 
 pkg_preinst() {
-	local NVMDIR=/etc/${PN}/nvm
+	local NVMDIR="${ROOT}/etc/${PN}/nvm"
 	if [ -d "${NVMDIR}" ]; then
 		einfo "Cleaning ${NVMDIR}..."
-		rm -rf ${ROOT}/etc/${NVMDIR}
+		rm -rf "${NVMDIR}"
 		eend
 	fi
 }
