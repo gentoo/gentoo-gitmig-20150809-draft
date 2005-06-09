@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 2e378d24e7b65a23163b540a7dd4ae26 ghc-bin-6.2.2.ebuild 1381
-MD5 9d0e22b034ffd768804547b2809dd776 ghc-bin-6.4.ebuild 966
+MD5 bd035e01d258ca710b2bf89a0d0c72e3 ghc-bin-6.4.ebuild 968
 MD5 6adfc4c53f5ab4efcdcfd6d3fb7e2a22 ghc-bin-6.2.2-r1.ebuild 923
 MD5 c02506789223046ac719ef24f918fab9 ghc-bin-6.2.1.ebuild 1640
 MD5 87f638e52cf614305933dde23f040a8c ghc-bin-5.04.3.ebuild 1500
@@ -21,7 +21,7 @@ MD5 f64499ed763439c3d4eb3b404c86a6c7 files/digest-ghc-bin-6.4 136
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjekukyZuKN4EQ6YRAtCeAJ9aLzqZKmLOCR6O71UvbHYD23k9+ACeJTzy
-01VNe9euY7A7ywb8Oq2mt2Y=
-=q9Lj
+iD8DBQFCqEUJI1lqEGTUzyQRAgQoAJ95Mlab7y74M7kWS4x4qx8JJXb/UQCgm6K+
+LN+e2Hyog9konT8mcjWbrl8=
+=PEJp
 -----END PGP SIGNATURE-----
