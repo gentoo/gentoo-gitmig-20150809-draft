@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.9 2005/05/29 09:31:55 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.10 2005/06/09 19:18:40 killerfox Exp $
+
+  09 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  netcdf-3.6.0-r1.ebuild:
+  Stable on hppa; bug #82431.
 
   29 May 2005; Marcus D. Hanwell <marcus@gentoo.org> netcdf-3.6.0-r1.ebuild:
   Stable on amd64, bug 82431.
