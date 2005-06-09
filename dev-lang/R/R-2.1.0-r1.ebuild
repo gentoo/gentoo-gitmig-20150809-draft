@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.3 2005/06/07 14:28:22 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.4 2005/06/09 00:58:23 mr_bones_ Exp $
 
 inherit fortran toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://cran.r-project.org/src/base/R-2/${P}.tar.gz"
 HOMEPAGE="http://www.r-project.org/"
 DEPEND="virtual/libc
 		>=dev-lang/perl-5.6.1-r3
-		readline? (>=sys-libs/readline-4.1-r3)
+		readline? ( >=sys-libs/readline-4.1-r3 )
 		jpeg? ( >=media-libs/jpeg-6b-r2 )
 		png? ( >=media-libs/libpng-1.2.1 )
 		blas? ( virtual/blas )
