@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.30.09.ebuild,v 1.7 2005/06/02 08:33:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.30.09.ebuild,v 1.8 2005/06/09 01:05:58 mr_bones_ Exp $
 
 IUSE="gtk ipv6 libwww ncurses tcltk"
 
@@ -34,7 +34,7 @@ DEPEND="${DEPEND}
 	tcltk? ( >=dev-perl/perl-tk-800.027 )
 	gtk? ( >=dev-perl/gtk-perl-0.7009 )
 	libwww? ( >=dev-perl/libwww-perl-5.79
-		>=dev-perl/URI-1.30)
+		>=dev-perl/URI-1.30 )
 	ncurses? ( >=dev-perl/Curses-1.08 )"
 
 mymake="/usr"
