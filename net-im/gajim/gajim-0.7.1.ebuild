@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.7.1.ebuild,v 1.2 2005/06/06 14:29:56 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.7.1.ebuild,v 1.3 2005/06/09 13:03:32 swegener Exp $
 
 inherit virtualx
 
@@ -16,7 +16,7 @@ IUSE="nls spell"
 DEPEND=">=dev-python/pygtk-2.4.0
 	>=dev-lang/python-2.3.0
 	>=x11-libs/gtk+-2.4
-	spell? ( >=app-text/gtkspell-2.0.4)"
+	spell? ( >=app-text/gtkspell-2.0.4 )"
 
 src_compile() {
 	targets="idle trayicon"
