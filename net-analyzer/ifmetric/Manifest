@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ba1a43573ff58753a2c16328e02bde9a ChangeLog 366
+MD5 68396ccbb17dad85b881dae76850c9a4 ChangeLog 454
 MD5 b12305fb89f104c432d327c2ed02eae0 metadata.xml 253
-MD5 6dbdeddbdeba53ce15a20db51df2aea2 ifmetric-0.3.ebuild 905
+MD5 b4c60dbcbfc074666654217c8377e6aa ifmetric-0.3.ebuild 904
 MD5 7dcb64bff9131b23f743136cf12017b0 files/digest-ifmetric-0.3 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb4B4EZCkKN40op4RAqIQAKCT5nalqlzn2YXJXMi2h9kos2nhKQCeNvLB
-9A3ZMQhKB3+TPKqWxbur1Vw=
-=Lssd
+iD8DBQFCqFB6EZCkKN40op4RAgWLAJ90R2q9ioJ38Xj9YjlSqgX4MrJx5QCgqgvL
+5/1dnJhu8Z4QxWYh04ELS20=
+=FkXi
 -----END PGP SIGNATURE-----

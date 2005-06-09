@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ifmetric
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ChangeLog,v 1.1 2005/04/27 12:06:14 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ChangeLog,v 1.2 2005/06/09 14:20:11 ka0ttic Exp $
+
+  09 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> ifmetric-0.3.ebuild:
+  Stable on x86.
 
 *ifmetric-0.3 (27 Apr 2005)
 
