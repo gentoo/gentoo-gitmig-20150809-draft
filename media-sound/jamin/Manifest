@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a019ac1fe1ab362549fb78e5537f610d ChangeLog 1964
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 dc942642f2bb9315d891ebc9efd8475c jamin-0.9.0-r1.ebuild 972
+MD5 918ee668996d88860284ea1fbf90b047 jamin-0.95.0-r1.ebuild 879
 MD5 727e5990ff79aed5d2e48aab16c4c4f6 jamin-0.95.0.ebuild 840
-MD5 abcef0a3fd7b662ed18dd893ce26b3fe jamin-0.95.0-r1.ebuild 874
+MD5 dc942642f2bb9315d891ebc9efd8475c jamin-0.9.0-r1.ebuild 972
+MD5 a019ac1fe1ab362549fb78e5537f610d ChangeLog 1964
 MD5 e4c7f947b6008bcea0a8d4643548232f files/digest-jamin-0.95.0 65
-MD5 831ad9b4be45cbf00053c4254f64a055 files/jamin-0.9.0-scenes.patch 666
 MD5 31f727fa79944e6a60ea0330aefad397 files/jamin-0.9.0-geq.patch 674
 MD5 a9a10dbf44f9cf0902bde6113cbb305f files/digest-jamin-0.9.0-r1 63
-MD5 ef5d979eb9bd22e6d049ac3d034975e1 files/jamin-0.9.0-jack99.patch 7535
 MD5 e4c7f947b6008bcea0a8d4643548232f files/digest-jamin-0.95.0-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbrXIvpz1081QvMkRAg0AAKCe5gvIGv84LRRvR02Fjh0EdmxahwCfTbL0
-Nx97IayW84yfHByga1zVLjc=
-=RANF
------END PGP SIGNATURE-----
+MD5 831ad9b4be45cbf00053c4254f64a055 files/jamin-0.9.0-scenes.patch 666
+MD5 ef5d979eb9bd22e6d049ac3d034975e1 files/jamin-0.9.0-jack99.patch 7535
