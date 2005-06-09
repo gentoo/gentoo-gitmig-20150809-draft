@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.3 2005/06/09 00:26:20 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.4 2005/06/09 00:56:14 taviso Exp $
 
 inherit eutils pam
 
@@ -94,7 +94,11 @@ src_compile() {
 
 	einfo "...done."
 
-	econf --with-secure-path="${ROOTPATH}" --with-env-editor \
+	# XXX: --disable-path-info closes an info leak, but may be confusing.
+	# XXX: /bin/vi may not be available, make nano visudo's default.
+	econf --with-secure-path="${ROOTPATH}" \
+		--with-editor=/bin/nano \
+		--with-env-editor \
 		$(use_with offensive insults) \
 		$(use_with offensive all-insults) \
 		$(use_with pam) \
@@ -114,7 +118,6 @@ src_install() {
 
 	insinto /etc
 	doins ${FILESDIR}/sudoers
-
 	fperms 0440 /etc/sudoers
 }
 
