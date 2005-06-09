@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2102118dc5cf3abce4344bf8077b3429 yosucker-71.ebuild 1027
-MD5 0fbfa8c595e22a04b93d2b31c5ce46c8 yosucker-69.ebuild 1030
-MD5 bbc272962165c829f1ebfd0dccb1d8b4 ChangeLog 4844
 MD5 7f8bbdab0fe46ee3810ffeb3c67b3efa metadata.xml 483
+MD5 e41132cff2afef33bdf35f4dd0ca999f ChangeLog 4982
+MD5 0fbfa8c595e22a04b93d2b31c5ce46c8 yosucker-69.ebuild 1030
+MD5 f38fd7455e22be12b3ca4fab00872c33 yosucker-71.ebuild 1027
 MD5 2becf6f4c1360409202a109b2a0fe85e files/sputnik.patch 1173
 MD5 c80a8bac90b2d1186412529e4c8d5c4b files/digest-yosucker-69 64
 MD5 2ebd58c77bf0031ce84e49bc738eda12 files/digest-yosucker-71 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCpBqFQlM6RnzZP+IRAmdtAJ9bJwfz1Qh6xFl5E3NzSN3Q/XTVvwCfV78Y
-LOPxoe50t33VMCW8lXdbD6c=
-=k3oM
+iD8DBQFCp57WmOfEJZHYOKcRAotMAJ9szVKN4JdNSyoU/mhZ9vtmnhhatACgw0i1
+s7kiVs6T2ZfOJkAiNaEfSFc=
+=R5+r
 -----END PGP SIGNATURE-----
