@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3-r1.ebuild,v 1.9 2005/05/18 02:08:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3-r1.ebuild,v 1.10 2005/06/09 00:54:27 mr_bones_ Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -117,7 +117,7 @@ RDEPEND="!gnome-base/gnome-core
 		>=gnome-extra/libgail-gnome-1.1
 		>=gnome-base/gail-1.8.2
 		>=gnome-extra/at-spi-1.6.2
-		!ia64?( >=app-accessibility/dasher-3.2.13 )
+		!ia64? ( >=app-accessibility/dasher-3.2.13 )
 		>=app-accessibility/gnome-mag-0.11.14
 		>=app-accessibility/gnome-speech-0.3.6
 		>=app-accessibility/gok-0.11.17
