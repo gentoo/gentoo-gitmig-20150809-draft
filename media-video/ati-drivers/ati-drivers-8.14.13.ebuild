@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13.ebuild,v 1.1 2005/06/09 17:14:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13.ebuild,v 1.2 2005/06/09 18:09:54 swegener Exp $
 
 IUSE="opengl"
 
@@ -79,9 +79,9 @@ src_unpack() {
 	then
 	cp -af ${WORKDIR}/fglrx/x680/* ${WORKDIR}
 	fi
-	
+
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
-	
+
 #	if kernel_is 2 6
 #	then
 #		epatch ${FILESDIR}/fglrx-2.6-pagetable.patch
