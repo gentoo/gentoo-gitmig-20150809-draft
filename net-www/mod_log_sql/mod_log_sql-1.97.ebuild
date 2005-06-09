@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.97.ebuild,v 1.9 2005/01/30 14:03:20 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.97.ebuild,v 1.10 2005/06/09 15:50:24 swegener Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=dev-db/mysql-3.23.15
 	apache2? ( =net-www/apache-2* )
-	!apache2? ( >=net-www/apache-1* )"
+	!apache2? ( =net-www/apache-1* )"
 
 detectapache() {
 	local domsg=
