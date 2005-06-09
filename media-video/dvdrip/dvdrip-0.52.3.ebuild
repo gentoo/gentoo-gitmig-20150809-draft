@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.3.ebuild,v 1.5 2005/05/25 14:45:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.3.ebuild,v 1.6 2005/06/09 01:01:52 mr_bones_ Exp $
 
 inherit perl-module eutils
 
@@ -20,22 +20,22 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="cdr gnome xvid rar mplayer ogg fping"
 
-DEPEND=" gnome? (gnome-extra/libgtkhtml)
-	cdr? (>=media-video/vcdimager-0.7.19
+DEPEND=" gnome? ( gnome-extra/libgtkhtml )
+	cdr? ( >=media-video/vcdimager-0.7.19
 		>=app-cdr/cdrdao-1.1.7
 		virtual/cdrtools
-		>=media-video/mjpegtools-1.6.0)
-	xvid? (media-video/xvid4conf)
-	rar? (app-arch/rar)
-	mplayer? (media-video/mplayer)
+		>=media-video/mjpegtools-1.6.0 )
+	xvid? ( media-video/xvid4conf )
+	rar? ( app-arch/rar )
+	mplayer? ( media-video/mplayer )
 	>=media-video/transcode-0.6.14
 	>=media-gfx/imagemagick-5.5.3
 	dev-perl/gtk-perl
 	perl-core/Storable
 	dev-perl/Event"
 RDEPEND="${DEPEND}
-	fping? (>=net-analyzer/fping-2.3)
-	ogg? (>=media-sound/ogmtools-1.000)
+	fping? ( >=net-analyzer/fping-2.3 )
+	ogg? ( >=media-sound/ogmtools-1.000 )
 	sys-apps/eject
 	dev-perl/libintl-perl"
 

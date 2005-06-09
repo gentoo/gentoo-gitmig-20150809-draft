@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.2.1.ebuild,v 1.1 2005/03/30 17:14:02 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.2.1.ebuild,v 1.2 2005/06/09 01:00:47 mr_bones_ Exp $
 
 inherit wxwidgets flag-o-matic
 
@@ -26,7 +26,7 @@ DEPEND="jpeg? ( media-libs/jpeg )
 	truetype? ( >=media-libs/freetype-2.1 )
 	xml2? ( >=dev-libs/libxml2-2.6.0 )
 	xvid? ( >=media-libs/xvid-1.0.1 )
-	sdl? (media-libs/libsdl)"
+	sdl? ( media-libs/libsdl )"
 
 src_unpack() {
 	unpack ${A}
