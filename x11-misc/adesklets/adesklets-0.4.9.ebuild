@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.4.9.ebuild,v 1.1 2005/06/06 13:24:13 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.4.9.ebuild,v 1.2 2005/06/09 01:02:48 mr_bones_ Exp $
 
 DESCRIPTION="An interactive Imlib2 console for the X Window system"
 HOMEPAGE="http://adesklets.sf.net/"
@@ -14,8 +14,8 @@ IUSE="X python"
 DEPEND="virtual/libc
 	>=sys-libs/readline-4.3-r5
 	>=media-libs/imlib2-1.2.0-r2
-	X? (virtual/x11)
-	python? (>=dev-lang/python-2.3.4-r1)"
+	X? ( virtual/x11 )
+	python? ( >=dev-lang/python-2.3.4-r1 )"
 
 src_compile()
 {
