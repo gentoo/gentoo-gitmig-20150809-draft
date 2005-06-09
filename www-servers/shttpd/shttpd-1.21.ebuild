@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/shttpd-1.21.ebuild,v 1.2 2005/06/07 10:08:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/shttpd-1.21.ebuild,v 1.3 2005/06/09 11:46:30 ka0ttic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,6 +15,8 @@ KEYWORDS="~ppc ~x86"
 IUSE="ssl"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )"
+RDEPEND="${DEPEND}
+	app-misc/mime-types"
 
 src_unpack() {
 	mkdir ${S}
