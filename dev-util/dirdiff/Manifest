@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 78c89bbcabe58b4cdfdda4d909861304 dirdiff-1.6.ebuild 785
-MD5 c291f0ea465be4835a9a47ef1ee85b0f dirdiff-2.1.ebuild 787
+MD5 435601e3059536c8aaf964e5a875d748 dirdiff-2.1.ebuild 785
 MD5 0d8154b034391cb6f5ec5b89a3b75ad7 ChangeLog 1273
 MD5 b3be53e56cb7f6130855f11239c05bd8 metadata.xml 290
 MD5 fa3fef9af93e43c88bf0c6ef1911cda4 files/digest-dirdiff-1.6 62
@@ -10,7 +10,7 @@ MD5 19ad010295e75ee77b72bb8ef9b99deb files/digest-dirdiff-2.1 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCqJKsZ/iYVBmujdURAra0AKDxFGnlRePwHbYM2vmdmufQnxTW7wCbBFuC
-aUny/H52w7lykxZmSpqZHAM=
-=CU08
+iD8DBQFCqIXLI1lqEGTUzyQRAlCcAJ9m0y/LzzkLfjTHMe8Kal0aYDza1gCfd0Ns
+ubEy8JMBDsWbAblqWBeqaKc=
+=74r7
 -----END PGP SIGNATURE-----
