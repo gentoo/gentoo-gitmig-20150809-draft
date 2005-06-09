@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 997656d27152fae00f8dc23fe261a2ca leafnode-1.11.3.ebuild 1534
 MD5 9a23fa7fbfec05cb1d1fdb1bfdad18f6 leafnode-1.11.2.ebuild 1532
 MD5 36f8bc4449f422bf8ac40549098ad318 leafnode-2.0.0_alpha20050422.ebuild 2169
@@ -11,3 +14,10 @@ MD5 ee50839a364965911fa700d599b16d7a files/digest-leafnode-1.11.3 72
 MD5 c26d4b571aa7c3964a7e9fa0a10a3c90 files/moderators 29
 MD5 59412928960b9a534953f96d0b80e8e4 files/digest-leafnode-2.0.0_alpha20050422 82
 MD5 72cc5e849b413ec0cf288a65980dd3b5 files/texpire.cron 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCp40UI1lqEGTUzyQRApIoAJ91PsZ+p2OTNelejfoGvm7rVPiZ7wCgsYEG
+FF6mBnhsv21j8vSUycp52Y8=
+=3qHX
+-----END PGP SIGNATURE-----
