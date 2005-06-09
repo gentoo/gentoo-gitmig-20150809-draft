@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.0.1.ebuild,v 1.1 2005/01/28 19:59:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.0.1.ebuild,v 1.2 2005/06/09 01:08:50 mr_bones_ Exp $
 
 inherit games
 
@@ -29,7 +29,7 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	doc? ( >=app-doc/doxygen-1.3.8
-		>=media-gfx/graphviz-1.10)"
+		>=media-gfx/graphviz-1.10 )"
 
 src_unpack() {
 	OPTIONS="OPTIONS=-DDATA_DIR="\\\\\"${GAMES_DATADIR}/${PN}/\\\\\"" "
