@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dirdiff
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.5 2004/08/14 15:11:59 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.6 2005/06/09 17:08:22 sekretarz Exp $
+
+  09 Jun 2005; <sekretarz@gentoo.org> dirdiff-1.6.ebuild:
+  dirdiff respects user CFLAGS now, some clean up in ebuild, bug #66869
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Corrected metadata.xml to match DTD.
