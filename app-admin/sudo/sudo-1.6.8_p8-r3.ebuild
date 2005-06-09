@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.2 2005/06/08 23:58:29 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.3 2005/06/09 00:26:20 taviso Exp $
 
 inherit eutils pam
 
@@ -90,7 +90,8 @@ src_compile() {
 				ewarn "	Failed to find ROOTPATH, please report this."
 
 		# remove any duplicate entries
-		ROOTPATH=`cleanpath /bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin${ROOTPATH:+:${ROOTPATH}}`
+		ROOTPATH=`cleanpath /bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin${ROOTPATH:+:${ROOTPATH}}`
+
 	einfo "...done."
 
 	econf --with-secure-path="${ROOTPATH}" --with-env-editor \
@@ -127,7 +128,7 @@ cleanpath() {
 			test "${paths[i]}" == "${paths[x]}" && {
 				einfo "	Duplicate entry ${paths[i]} removed..." 1>&2
 				unset paths[i]; continue 2; }
-		done
+		done; # einfo "	Adding ${paths[i]}..." 1>&2
 	done; echo "${paths[*]}"
 }
 
@@ -142,8 +143,9 @@ sudo_bad_var() {
 
 pkg_postinst() {
 	use skey && use pam && {
-		 ewarn "sudo will not use skey authentication when compiled with"
-		 ewarn "pam support. to allow users to authenticate with one time"
-		 ewarn "passwords, you should unset the pam USE flag for sudo."
+		 ewarn "Sudo will not use skey authentication when compiled with"
+		 ewarn "pam support."
+		 ewarn "To allow users to authenticate with one time passwords,"
+		 ewarn "you should unset the pam USE flag for sudo."
 	}
 }
