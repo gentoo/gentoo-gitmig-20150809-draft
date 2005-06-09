@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/bygfoot-1.8.1.ebuild,v 1.2 2005/06/08 20:42:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/bygfoot-1.8.1.ebuild,v 1.3 2005/06/09 09:03:18 dholm Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 # Other depends would be (and why not listed):
 # * pkgconfig > 0.9.0 - Oldest ebuild is 0.12.0
