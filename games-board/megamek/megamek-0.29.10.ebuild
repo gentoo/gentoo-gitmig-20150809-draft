@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.29.10.ebuild,v 1.1 2005/06/08 21:17:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.29.10.ebuild,v 1.2 2005/06/09 08:39:56 dholm Exp $
 # Nonofficial ebuild by Ycarus. For new version look here : http://gentoo.zugaina.org/
 
 inherit eutils games
@@ -12,7 +12,7 @@ HOMEPAGE="http://megamek.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 RESTRICT="nomirror"
 
