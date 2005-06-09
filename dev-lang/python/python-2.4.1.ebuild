@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1.ebuild,v 1.9 2005/05/30 02:33:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1.ebuild,v 1.10 2005/06/09 19:34:03 herbs Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -103,8 +103,9 @@ src_configure() {
 src_compile() {
 	filter-flags -malign-double
 
+	# Seems to no longer be necessary
+	#[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
-	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=50309
 	if is-flag -O3; then
@@ -148,6 +149,9 @@ src_install() {
 	# install our own custom python-config
 	exeinto /usr/bin
 	newexe ${FILESDIR}/python-config-${PYVER} python-config
+
+	# Use correct libdir in python-config
+	dosed "s:/usr/lib/:/usr/$(get_libdir)/:" /usr/bin/python-config
 
 	# The stuff below this line extends from 2.1, and should be deprecated
 	# in 2.3, or possibly can wait till 2.4
