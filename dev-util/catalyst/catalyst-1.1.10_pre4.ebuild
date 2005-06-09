@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10_pre3.ebuild,v 1.1 2005/06/03 15:34:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10_pre4.ebuild,v 1.1 2005/06/09 15:49:09 wolf31o2 Exp $
 
 inherit eutils
 
@@ -58,7 +58,7 @@ src_install() {
 	if use doc;	then
 		DOCDESTTREE="." dohtml -A spec,msg,example -r examples files
 	fi
-	dodoc TODO README ChangeLog ChangeLog.old AUTHORS COPYING REMARKS
+	dodoc README ChangeLog ChangeLog.old AUTHORS COPYING
 	doman files/catalyst.1
 }
 
