@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3-r2.ebuild,v 1.5 2005/05/11 21:54:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3-r2.ebuild,v 1.6 2005/06/09 09:31:51 corsair Exp $
 
 IUSE="doc"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.cstr.ed.ac.uk/download/festival/1.4.3/${MY_P}-release.tar.gz
 
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86 ~ppc64 ~ia64"
+KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
