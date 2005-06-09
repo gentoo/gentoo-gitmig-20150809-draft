@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.100 2005/05/21 00:12:12 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.101 2005/06/09 20:28:13 marineam Exp $
+
+*ck-sources-2.6.11_p9 (09 Jun 2005)
+
+  09 Jun 2005; Michael Marineau <marineam@gentoo.org>
+  +ck-sources-2.6.11_p9.ebuild:
+  Bump to ck9 and start using the base gentpatches for security and bugfix
+  updates.
 
 *ck-sources-2.6.11_p8-r1 (20 May 2005)
 
