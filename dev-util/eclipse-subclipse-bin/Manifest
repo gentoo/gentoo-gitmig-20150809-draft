@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 007f2dc94bc3ce1c07223d6afe606925 eclipse-subclipse-bin-0.9.31.ebuild 1783
+MD5 1e95db2774dd383f0ddbb82f85d45d03 ChangeLog 487
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 9ed798289b59c79ae0e9c1e053f7ce47 files/digest-eclipse-subclipse-bin-0.9.31 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCqDTx06ebR+OMO78RAnmkAJ4rwYLJnBWjgHIDnem4lQ1ncplHRgCeL57O
+QMOTwRrbgoRFS5gGqDg8QFQ=
+=U4B6
+-----END PGP SIGNATURE-----

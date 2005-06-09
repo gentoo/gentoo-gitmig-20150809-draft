@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/eclipse-subclipse-bin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-subclipse-bin/ChangeLog,v 1.1 2005/06/09 12:23:02 luckyduck Exp $
+
+*eclipse-subclipse-bin-0.9.31 (09 Jun 2005)
+
+  09 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +eclipse-subclipse-bin-0.9.31.ebuild:
+  Initial import, ebuild contributed by Toralf Förster
+  <toralf.foerster@gmx.de>. Fixes #93681.
+
