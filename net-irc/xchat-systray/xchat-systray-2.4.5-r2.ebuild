@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r2.ebuild,v 1.1 2005/06/09 16:37:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r2.ebuild,v 1.2 2005/06/09 16:38:22 swegener Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -46,14 +46,4 @@ src_install() {
 	doins -r src/images/{GTKTray,Menu} || die "doins failed"
 
 	dodoc Docs/{ChangeLog,README,TODO} || die "dodoc failed"
-}
-
-pkg_postinst() {
-	einfo
-	einfo "The icons have been installed in /usr/share/xchat-systray"
-	einfo
-	einfo "The icons path is a per-user setting and you need to set it or the icons"
-	einfo "will not show up in the menu. Please go to 'Systray settings' and set"
-	einfo "'Select icons path' to /usr/share/xchat-systray to set the icons path."
-	einfo
 }
