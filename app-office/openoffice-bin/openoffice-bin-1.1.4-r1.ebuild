@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4-r1.ebuild,v 1.3 2005/04/13 02:28:34 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4-r1.ebuild,v 1.4 2005/06/09 13:23:20 swegener Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="OpenOffice productivity suite"
 
 SRC_URI="x86? ( mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz )
-	amd64? (mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz )
+	amd64? ( mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz )
 	mirror://openoffice/contrib/rc/1.1.4secpatch/libsot645li.so"
 
 HOMEPAGE="http://www.openoffice.org/"
