@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20050422.ebuild,v 1.1 2005/04/22 16:26:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20050422.ebuild,v 1.2 2005/06/09 00:27:49 swegener Exp $
 
 inherit flag-o-matic
 
@@ -37,21 +37,21 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
-	rm -rf ${D}/var/spool
+	rm -rf "${D}"/var/spool
 	keepdir /var/lock/news
 
 	insinto /etc/leafnode
-	doins ${FILESDIR}/{local.groups,moderators} || die "doins failed"
+	doins "${FILESDIR}"/{local.groups,moderators} || die "doins failed"
 
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/leafnode.xinetd leafnode-nntp || die "newins failed"
+	newins "${FILESDIR}"/leafnode.xinetd leafnode-nntp || die "newins failed"
 
 	exeinto /etc/cron.hourly
-	doexe ${FILESDIR}/fetchnews.cron || die "doexe failed"
+	doexe "${FILESDIR}"/fetchnews.cron || die "doexe failed"
 	exeinto /etc/cron.daily
-	doexe ${FILESDIR}/texpire.cron || die "doexe failed"
+	doexe "${FILESDIR}"/texpire.cron || die "doexe failed"
 
 	dodoc \
 		AUTHORS COPYING* CREDITS ChangeLog DEBUGGING ENVIRONMENT FAQ \
@@ -60,15 +60,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	mkdir -p ${ROOT}/var/spool/news/{leaf.node,failed.postings,interesting.groups,out.going}
-	mkdir -p ${ROOT}/var/spool/news/message.id/{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}
+	mkdir -p "${ROOT}"/var/spool/news/{leaf.node,failed.postings,interesting.groups,out.going}
+	mkdir -p "${ROOT}"/var/spool/news/message.id/{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}
 
-	chown -R news:news ${ROOT}/var/spool/news
-	find ${ROOT}/var/spool/news -type d -exec chmod 02775 {} \;
+	chown -R news:news "${ROOT}"/var/spool/news
+	find "${ROOT}"/var/spool/news -type d -exec chmod 02775 {} \;
 
-	zcat ${ROOT}/usr/share/doc/${PF}/README_FIRST.gz | while read line
+	zcat "${ROOT}"/usr/share/doc/${PF}/README_FIRST.gz | while read line
 	do
-		einfo $line
+		einfo "${line}"
 	done
 
 	einfo
