@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.2 2005/06/09 22:21:11 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.3 2005/06/09 22:34:46 rphillips Exp $
+
+  09 Jun 2005; <rphillips@gentoo.org> +files/vde.init.d, vde-1.5.8.ebuild:
+  Added init script from Nico Baggus
 
 *vde-1.5.8 (09 Jun 2005)
 
