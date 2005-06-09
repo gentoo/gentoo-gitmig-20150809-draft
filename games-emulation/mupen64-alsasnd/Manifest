@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 39e4e5950bf769acd08f79c73e81a7e0 mupen64-alsasnd-0.4.ebuild 1415
-MD5 f6a55d4d96b921ec8a360e8ddcde3ee8 ChangeLog 899
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 658b03e564090a62ea13902273e73ae4 files/digest-mupen64-alsasnd-0.4 70
+MD5 694a67f80016c70a5104b49cb0c2335e mupen64-alsasnd-0.4.ebuild 1420
+MD5 f6a55d4d96b921ec8a360e8ddcde3ee8 ChangeLog 899
 MD5 49a9052e77c664f4a2c6b092c62b39f6 files/0.4-gentoo.patch 560
 MD5 15dd3b6cd3a33e7fcba000b2b38b9bd2 files/0.4-gtk.patch 1203
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD4DBQFCZaFTUpKYMelfdYERAqYNAJ9mdBY90xPnhxClD43Bm0amRGM9cgCXeCMC
-iwvM6DAKFweB6QscMOUYGg==
-=q+cl
------END PGP SIGNATURE-----
+MD5 658b03e564090a62ea13902273e73ae4 files/digest-mupen64-alsasnd-0.4 70

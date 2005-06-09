@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4.ebuild,v 1.10 2005/04/20 00:28:43 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4.ebuild,v 1.11 2005/06/09 00:57:50 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -15,8 +15,8 @@ IUSE="qt gtk gtk2"
 
 DEPEND=">=media-libs/alsa-lib-0.9.0
 	|| (
-		gtk? ( !gtk2? (=x11-libs/gtk+-1* )
-		gtk2? ( =x11-libs/gtk+-2* ) )
+		gtk? ( !gtk2? ( =x11-libs/gtk+-1* )
+			gtk2? ( =x11-libs/gtk+-2* ) )
 		qt? ( >=x11-libs/qt-3 )
 		=x11-libs/gtk+-2*
 	)"
