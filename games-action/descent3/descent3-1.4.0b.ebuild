@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.9 2005/06/09 20:36:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.10 2005/06/09 20:40:10 wolf31o2 Exp $
 
-inherit games
+inherit eutils games
 
 IUSE="nocd videos"
 DESCRIPTION="Descent 3 - 3-Dimensional indoor/outdoor spaceship combat"
