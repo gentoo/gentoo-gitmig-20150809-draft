@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.13.ebuild,v 1.2 2005/05/31 18:33:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.14.ebuild,v 1.1 2005/06/09 07:31:27 tove Exp $
 
 inherit eutils
 
