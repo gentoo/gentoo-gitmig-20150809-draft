@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f6b13c809b881333684caf19d2684cd6 afterstep-2.00.05.ebuild 3358
+MD5 d6c3cad8f9e500b622dd5dac00cdd83f afterstep-2.00.05.ebuild 3358
 MD5 61ac082c6563be2e5790a287988a4674 afterstep-1.8.11-r2.ebuild 1543
 MD5 ee92461f26ba5338a6a1333c1e5f14a1 afterstep-2.00.02.ebuild 3692
 MD5 849422948d5fed5843fccb8a0732e80c afterstep-2.00.04.ebuild 3358
 MD5 8424c9368cf00500faf961341cc53fc7 afterstep-2.1.0.ebuild 3357
-MD5 67f5b8d73ec026d171fedd3b57a681bf ChangeLog 5567
+MD5 dc7330ad6bd325f8de130c85b38d7766 ChangeLog 5669
 MD5 5fcb6c5011c265ab4d4268662ee0dac9 metadata.xml 353
 MD5 fca9d0ef8f9ab0142654d2cf85544310 afterstep-2.00.01.ebuild 3673
 MD5 9735d9a9bce29bcbd35792c0c4064ea0 files/digest-afterstep-1.8.11-r2 70
@@ -23,7 +23,7 @@ MD5 6fd5efab342e44e4d18dc1d98b940093 files/digest-afterstep-2.1.0 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCqFMKEZCkKN40op4RArJlAKCN5Rblukfj+AqxkiuDbNWeneNjpgCgqyjL
-0YThIECjCSIxpDsgsY8Og8o=
-=dfPf
+iD8DBQFCqMvzKRy60XGEcJIRAi1FAJ9/xIwxkROBlUSVfkslykJ/0+83GACgr+ML
+wPT93H6gX/LUx20Wn+OSSY4=
+=nNrU
 -----END PGP SIGNATURE-----
