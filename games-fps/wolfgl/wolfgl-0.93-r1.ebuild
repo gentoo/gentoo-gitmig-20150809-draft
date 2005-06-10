@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.3 2004/06/24 22:50:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.4 2005/06/10 13:08:55 dholm Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/wolfgl"
 #ECVS_MODULE="wolfgl"
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tbz2
 #	mirror://sourceforge/wolfgl/wolfglx-wl6-${PV}.zip
 #	mirror://sourceforge/wolfgl/wolfglx-sod-${PV}.zip
 
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
