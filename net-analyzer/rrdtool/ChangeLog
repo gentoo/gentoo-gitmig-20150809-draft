@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.63 2005/06/05 17:01:33 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.64 2005/06/10 13:44:28 strerror Exp $
+
+*rrdtool-1.2.6-r1 (10 Jun 2005)
+
+  10 Jun 2005; Benjamin Smee <strerror@gentoo.org> +rrdtool-1.2.6-r1.ebuild:
+  Fixed inappropriate doc placemente as per bug 95665.
 
   05 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> rrdtool-1.2.6.ebuild:
   Stable on hppa.
