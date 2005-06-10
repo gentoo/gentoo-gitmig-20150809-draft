@@ -1,0 +1,24 @@
+--- lib/mc.ext.in.old	2003-01-30 17:48:33.000000000 +0200
++++ lib/mc.ext.in	2004-10-25 13:53:49.475582536 +0300
+@@ -167,6 +167,11 @@
+ 	Open=nroff @MAN_FLAGS@ -ms %f | %var{PAGER:more}
+ 	View=%view{ascii,nroff} nroff @MAN_FLAGS@ -ms %f
+ 
++# 7-Zip, Needs to be before manual page definitions
++regex/\.(7z|7Z)$
++	View=%view{ascii} 7z l %f
++	Open=%cd %p#u7z
++
+ # Manual page - compressed
+ regex/([^0-9]|^[^\.]*)\.([1-9][a-z]?|n)\.g?[Zz]$
+ 	Open=gzip -dc %f | nroff @MAN_FLAGS@ @MANDOC@ | %var{PAGER:more}
+--- vfs/extfs/extfs.ini.old	2002-12-09 16:16:33.000000000 +0200
++++ vfs/extfs/extfs.ini	2004-10-25 13:56:04.555047336 +0300
+@@ -7,6 +7,7 @@
+ ulha
+ urar
+ uha
++u7z
+ # For arj usage you need a special patch to unarj (see unarj.diff)
+ uarj
+ 
