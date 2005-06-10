@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af669d9e6e0070e8ba421ce299c25af1 tcpdump-3.8.3-r1.ebuild 1103
-MD5 fe629396dc496e580b890d8e7c8fd501 tcpdump-3.8.3-r3.ebuild 1301
-MD5 242382ca8731683cff6b6e21a0fa3ca9 ChangeLog 6467
+MD5 993ee2bc424f902367b99b8fe1bc6856 tcpdump-3.8.3-r3.ebuild 1297
 MD5 1465cdeb961745379a8ae1402b3e51ab metadata.xml 268
+MD5 53addd3e51bdff6444c11da4276cec5d ChangeLog 6563
 MD5 8dc0b8f2b666a8fdad1d4a12b882ac1b tcpdump-3.8.3-r2.ebuild 1243
-MD5 373e9bba235a67d1de8eb1356151f32c files/tcpdump-3.8.3-gcc4.patch 3162
-MD5 d285bb203f9e48fc23492e4c72d61a94 files/digest-tcpdump-3.8.3-r1 65
+MD5 af669d9e6e0070e8ba421ce299c25af1 tcpdump-3.8.3-r1.ebuild 1103
 MD5 d285bb203f9e48fc23492e4c72d61a94 files/digest-tcpdump-3.8.3-r2 65
-MD5 d285bb203f9e48fc23492e4c72d61a94 files/digest-tcpdump-3.8.3-r3 65
+MD5 d285bb203f9e48fc23492e4c72d61a94 files/digest-tcpdump-3.8.3-r1 65
 MD5 f02e63da753d8b83de7f47d3de976e95 files/tcpdump-3.8.3-bgp-infinite-loop2.patch 556
+MD5 373e9bba235a67d1de8eb1356151f32c files/tcpdump-3.8.3-gcc4.patch 3162
+MD5 d285bb203f9e48fc23492e4c72d61a94 files/digest-tcpdump-3.8.3-r3 65
 MD5 4d0df7aa1535098ccef25ba7e86e5e95 files/tcpdump-3.8.3-gentoo.patch 4002
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCqbxi06ebR+OMO78RAriiAKCFwi/9y7ovA5iNQE7NJgbXNTXDjwCfR6GQ
-x858ZngzRsiFegq+AGqPfuc=
-=d4nK
------END PGP SIGNATURE-----
