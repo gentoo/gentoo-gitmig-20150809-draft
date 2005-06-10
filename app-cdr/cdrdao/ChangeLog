@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.63 2005/05/30 18:40:06 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.64 2005/06/10 19:26:12 pylon Exp $
+
+  10 Jun 2005; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.9-r2.ebuild:
+  Delete the generation of the .desktop-file, as the application installs one
+  itself; bug #92380.
 
   30 May 2005; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.9.ebuild,
   cdrdao-1.1.9-r2.ebuild:

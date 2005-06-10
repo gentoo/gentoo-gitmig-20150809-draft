@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.9-r2.ebuild,v 1.3 2005/05/30 18:40:06 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.9-r2.ebuild,v 1.4 2005/06/10 19:26:12 pylon Exp $
 
 inherit flag-o-matic eutils
 
@@ -69,13 +69,6 @@ src_install() {
 	einstall || die "could not install"
 
 	cd ${S}
-
-	# Desktop Icon
-	if use gnome; then
-		insinto /usr/share/icons/hicolor/48x48/apps
-		newins xdao/stock/gcdmaster.png gcdmaster.png
-		make_desktop_entry gcdmaster "Gnome CD Master" gcdmaster "AudioVideo;DiscBurning"
-	fi
 
 	# Documentation
 	dodoc AUTHORS CREDITS ChangeLog NEWS README*
