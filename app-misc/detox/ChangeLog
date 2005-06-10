@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/detox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.5 2005/05/03 10:27:53 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.6 2005/06/10 13:22:05 ka0ttic Exp $
+
+*detox-1.1.1-r1 (10 Jun 2005)
+
+  10 Jun 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/detox-1.1.1-use-correct-type.diff, +detox-1.1.1-r1.ebuild:
+  Revision bump; upstream uses a char (and assumes it's unsigned on top of it)
+  where they should've used an int - bug 95628.
 
   03 May 2005; Herbie Hopkins <herbs@gentoo.org> detox-1.1.1.ebuild:
   Marked ~amd64 wrt bug #91274.
