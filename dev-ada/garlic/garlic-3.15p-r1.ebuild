@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.7 2005/05/01 17:19:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.8 2005/06/10 09:50:26 dholm Exp $
 
 inherit gnat
 
@@ -10,7 +10,7 @@ SRC_URI="http://gd.tuwien.ac.at/languages/ada/gnat/3.15p/glade/glade-${PV}-src.t
 
 HOMEPAGE="http://www.gnat.com/"
 LICENSE="GMGPL"
-DEPEND="<dev-lang/gnat-5.0"
+DEPEND="<dev-lang/gnat-3.40"
 RDEPEND=""
 SLOT="0"
 IUSE=""
