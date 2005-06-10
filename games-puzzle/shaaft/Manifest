@@ -1,5 +1,5 @@
+MD5 4221068d86ebec050831d41aa9bb933e ChangeLog 665
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 763d35ea5f3b06f38c996516bc6a2c75 shaaft-0.5.0.ebuild 963
-MD5 56a0856338e98456e5d91b9a0d33f3c1 ChangeLog 585
+MD5 e365bb96dee6a41e947cb79da991bc8f shaaft-0.5.0.ebuild 964
 MD5 3b94f9a4427c26cf66ebcff72c849efc files/digest-shaaft-0.5.0 65
 MD5 ee787c086ea75ca819d582f8be04f0bf files/shaaft-0.5.0-gcc34.patch 544
