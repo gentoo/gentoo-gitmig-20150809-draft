@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-curl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-curl/ChangeLog,v 1.1 2005/06/10 04:45:43 mkennedy Exp $
+
+*cl-curl-20050609 (10 Jun 2005)
+
+  10 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-curl-20050609.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
