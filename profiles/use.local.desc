@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1219 2005/06/10 10:34:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1220 2005/06/10 20:47:00 pylon Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -24,6 +24,7 @@ app-arch/dar:dar64 - Enables --enable-mode=64 option, which replace infinint by 
 app-arch/kdar:dar32 - Support libdar32.so to use.
 app-arch/kdar:dar64 - Support libdar64.so to use.
 app-arch/pdv:nomotif - Disable motif frontend.
+app-cdr/cdrdao:pccts - Use dev-util/pccts instead of the built-in substitution.
 app-cdr/cdrtools:on-the-fly-crypt - On the fly AES encryption for CD-Rs.
 app-cdr/k3b:css - Enables ripping of encrypted dvds
 app-cdr/k3b:musepack - Enable support for musepack files
