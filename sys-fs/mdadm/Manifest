@@ -1,4 +1,4 @@
-MD5 413df39ab44d4cadc06a9bd4df3fe883 ChangeLog 3695
+MD5 6742ff66483349aef8521daada293e5f ChangeLog 3842
 MD5 e5d8985daa1f94c686edafe8c516f970 mdadm-1.11.0.ebuild 1190
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 20b9b3a52ce14274220c5482dec60c28 mdadm-1.9.0-r1.ebuild 1229
@@ -6,5 +6,5 @@ MD5 29424204ff8bad1b89969061398f354e files/digest-mdadm-1.11.0 64
 MD5 77fed3360e9b6bdfd0721b77c495b750 files/mdadm.rc 849
 MD5 1e1df57960f4ac52fb4ca327048bbcaa files/raid-stop.sh 805
 MD5 c0f39d9acef8dee3159359691bf76b94 files/mdadm-1.9.0-dont-make-man.patch 260
-MD5 1d4e1a38ab9d9bd8e60e1e6c87637240 files/raid-start.sh 1390
+MD5 b29646ea704acba09b98ff59f87ebff3 files/raid-start.sh 1518
 MD5 94803322fcea6ec0f31f730af32df156 files/digest-mdadm-1.9.0-r1 59
