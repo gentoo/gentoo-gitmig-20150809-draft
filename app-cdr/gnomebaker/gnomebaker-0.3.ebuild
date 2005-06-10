@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.3.ebuild,v 1.2 2005/06/10 20:35:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.3.ebuild,v 1.3 2005/06/10 20:41:05 swegener Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -13,16 +13,16 @@ SLOT="0"
 IUSE="dvdr nls mp3 sox vorbis"
 KEYWORDS="~ppc ~sparc ~x86"
 
+DEPEND=">=gnome-base/libglade-2.0
+	>=gnome-base/libgnomeui-2.0
+	media-libs/libvorbis"
+
 RDEPEND="${DEPEND}
 	mp3? ( media-sound/mpg123 )
 	sox? ( media-sound/sox )
 	vorbis? ( media-sound/vorbis-tools )
-	virtual/cdrtools
-	dvdr? ( app-cdr/dvd+rw-tools )"
-
-DEPEND=">=gnome-base/libglade-2.0
-	>=gnome-base/libgnomeui-2.0
-	media-libs/libvorbis"
+	dvdr? ( app-cdr/dvd+rw-tools )
+	virtual/cdrtools"
 
 src_install() {
 	gnome2_src_install \
