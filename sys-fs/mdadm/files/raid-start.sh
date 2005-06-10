@@ -1,7 +1,7 @@
 # /lib/rcscripts/addons/raid-start.sh:  Setup raid volumes at boot
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/files/raid-start.sh,v 1.3 2005/05/19 22:15:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/files/raid-start.sh,v 1.4 2005/06/10 02:09:28 vapier Exp $
 
 [[ -f /proc/mdstat ]] || exit 0
 
@@ -11,11 +11,16 @@ MAJOR=9
 
 # Try to make sure the devices exist before we use them
 create_devs() {
-	local d
-	for d in $@ ; do
-		d=${d/\/dev\/}
-		[[ -e /dev/${d} ]] && continue
-		mknod /dev/${d} b ${MAJOR} ${d##*md} >& /dev/null
+	local node dir minor
+	for node in $@ ; do
+		[[ ${node} != /dev/* ]] && node=/dev/${node}
+		[[ -e ${node} ]] && continue
+
+		dir=${node%/*}
+		[[ ! -d ${dir} ]] && mkdir -p "${dir}"
+
+		minor=${node##*/}
+		mknod "${node}" b ${MAJOR} ${minor##*md} &> /dev/null
 	done
 }
 
