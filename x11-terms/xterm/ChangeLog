@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.87 2005/06/10 15:08:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.88 2005/06/10 15:40:36 fmccor Exp $
+
+  10 Jun 2005; Ferris McCormick <fmccor@gentoo.org> xterm-200-r2.ebuild:
+  Stable for sparc; security Bug 91453.
 
 *xterm-202-r1 (10 Jun 2005)
 *xterm-200-r2 (10 Jun 2005)
