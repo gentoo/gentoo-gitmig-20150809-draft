@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.81 2005/06/10 10:34:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.82 2005/06/10 18:43:23 lanius Exp $
+
+  10 Jun 2005; Heinrich Wendel <lanius@gentoo.org>
+  files/mc-4.6.0-7zip.patch:
+  fix 7zip support
 
 *mc-4.6.0-r14 (06 Jun 2005)
 
