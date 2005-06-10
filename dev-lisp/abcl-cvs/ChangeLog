@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/abcl-cvs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/abcl-cvs/ChangeLog,v 1.1 2005/06/10 15:26:53 mkennedy Exp $
+
+*abcl-cvs-0 (10 Jun 2005)
+
+  10 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> +files/abcl, +files/j,
+  +abcl-cvs-0.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

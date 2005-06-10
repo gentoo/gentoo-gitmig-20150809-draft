@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>common-lisp</herd>
+<longdescription>
+Armed Bear Common Lisp (ABCL) is a Common Lisp implementation which runs on the
+Java Virtual Machine (JVM). It includes a compiler to Java bytecode and allows
+access to Java libraries from Common Lisp.
+</longdescription>
+</pkgmetadata>

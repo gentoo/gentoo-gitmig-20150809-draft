@@ -1,0 +1,6 @@
+#!/bin/sh
+
+exec `java-config -J` \
+    -Djava.library.path=/usr/lib/abcl \
+    -cp `java-config -p abcl-cvs` \
+    Main "$@"
