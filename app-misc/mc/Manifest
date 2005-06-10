@@ -21,14 +21,14 @@ MD5 9f528fa7b6b4d2c202ce5f4e3a5173ba files/chdir-4.6.0.gentoo 159
 MD5 3f426ce18f8bf82d9e9c3347525d75e8 files/mc-4.6.0-utf8.patch.bz2 30359
 MD5 7fadf4867e255f1d7254181267759775 files/mc.ini 43
 MD5 3bb3f2fa14fdb654e1352bdd406d848f files/mc-4.6.0-largefile.patch 5751
-MD5 b6b59089acfab83fb909586ea683d17b files/mc-4.6.0-7zip.patch 619
+MD5 d157d2a6836514f758dc3ae9149ae178 files/mc-4.6.0-7zip.patch 631
 MD5 2a6c3ed30597eadaa19a6dbdd3ce168d files/mc-4.6.0-cpan-2003-1023.patch 475
 MD5 33aafc4a9c8134eb13d62fed6b81888e files/ebuild.syntax 2588
 MD5 99fd5760d0ddfc08292de6a62b573e73 files/mc-4.6.0-ftp.patch 285
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCqeDAevY57Fted3ERAgtSAKCsIqDXE9VMPBjmYOOUMNgBDOOSAQCfT25d
-IGnq3bQtYN9XkPxK2OyerOE=
-=M/Zd
+iD8DBQFCqeULevY57Fted3ERArUuAKCSHFMyPxtvqAUMXS5MZzEcNRCj4wCdGg11
+kGJ1MCpjOnI648uHsaFe7EE=
+=2oAi
 -----END PGP SIGNATURE-----

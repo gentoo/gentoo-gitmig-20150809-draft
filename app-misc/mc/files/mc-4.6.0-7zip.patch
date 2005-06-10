@@ -6,7 +6,7 @@
  
 +# 7-Zip, Needs to be before manual page definitions
 +regex/\.(7z|7Z)$
-+	View=%view{ascii} 7za l %f
++	View=%view{ascii} 7za l %f 2>/dev/null
 +	Open=%cd %p#u7z
 +
 +
