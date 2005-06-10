@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-ppcre
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.39 2005/05/24 18:48:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.40 2005/06/10 14:54:11 mkennedy Exp $
+
+*cl-ppcre-1.2.8 (10 Jun 2005)
+
+  10 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> +cl-ppcre-1.2.8.ebuild:
+  New upstream version.
 
   24 May 2005; <mkennedy@gentoo.org> cl-ppcre-1.2.7.ebuild:
   Keywording ~sparc
