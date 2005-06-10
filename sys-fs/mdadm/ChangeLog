@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.5 2005/04/11 22:46:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.6 2005/06/10 01:35:55 vapier Exp $
+
+  10 Jun 2005; Mike Frysinger <vapier@gentoo.org> +files/raid-stop.sh,
+  mdadm-1.9.0-r1.ebuild, mdadm-1.11.0.ebuild:
+  Add a raid-stop script by Milan Holzäpfel #95594.
 
 *mdadm-1.11.0 (11 Apr 2005)
 

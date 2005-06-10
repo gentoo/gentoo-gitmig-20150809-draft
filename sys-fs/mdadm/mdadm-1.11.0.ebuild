@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-1.11.0.ebuild,v 1.1 2005/04/11 22:46:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-1.11.0.ebuild,v 1.2 2005/06/10 01:35:55 vapier Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	exeinto /$(get_libdir)/rcscripts/addons
-	doexe "${FILESDIR}"/raid-start.sh || die "addon failed"
+	doexe "${FILESDIR}"/raid-{start,stop}.sh || die "addon failed"
 	dodoc INSTALL TODO "ANNOUNCE-${PV}"
 
 	insinto /etc
