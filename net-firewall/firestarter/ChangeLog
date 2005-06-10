@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/firestarter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.21 2005/05/10 05:43:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.22 2005/06/10 16:28:18 mr_bones_ Exp $
+
+  10 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  firestarter-1.0.3.ebuild:
+  stable for x86
 
 *firestarter-1.0.3 (10 May 2005)
 
