@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.0.1_p6.ebuild,v 1.2 2005/06/10 20:13:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.0.1_p6.ebuild,v 1.3 2005/06/10 21:29:40 swegener Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -32,7 +32,7 @@ src_unpack() {
 
 	# Is this one needed??
 	#	-e "s|\(PBS_DEFAULT_SERVER=\)\(@PBS_DEFAULT_SERVER@\)|\1\${D}\2|" \
-	
+
 	# Tries to use absolute /tmp/ for tempfiles which fails miserably.
 	sed -i -e "s|/tmp/|\${TMPDIR}/|g" makedepend-sh || die "Failed TMPDIR change"
 }
