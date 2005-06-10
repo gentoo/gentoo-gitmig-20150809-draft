@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 83a4ad50d2574b952705c2640217465c dirac-0.5.2.ebuild 1076
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 337f052023408dbbdaf5bfa79a272917 ChangeLog 595
+MD5 75a42cb31d27cafec5f65b4289a303d1 files/dirac-0.5.2-doc.patch 2300
+MD5 dda7e7b65c9d20118346c4beef33b6a7 files/digest-dirac-0.5.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCqO/kj5H05b2HAEkRAgWeAJ0RIzfc5DmOoe7mTRJ4sQbadSaamACfeiUj
+iCLziJo+j+Vz+ru7/fprv0I=
+=f4jL
+-----END PGP SIGNATURE-----
