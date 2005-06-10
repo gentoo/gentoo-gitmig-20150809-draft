@@ -1,22 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20050312.ebuild,v 1.2 2005/05/05 15:44:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20050606.ebuild,v 1.1 2005/06/10 21:06:24 fafhrd Exp $
 
-ECVS_CVS_COMMAND="cvs -q"
-ECVS_SERVER="Sophos.ca:/opt/cvsroot"
-ECVS_USER="anoncvs"
-ECVS_PASS="anoncvs"
-ECVS_AUTH="pserver"
-ECVS_MODULE="${PN/gnum/GNUM}"
-ECVS_CO_OPTS="-P -D ${PV/*_pre}"
-ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/Sophos.ca-collaborationworld"
-inherit gnustep cvs
+inherit gnustep
 
-S=${WORKDIR}/${ECVS_MODULE}
+S=${WORKDIR}/${P/gnum/GNUM}
 
 DESCRIPTION="A fully featured mail application for GNUstep"
 HOMEPAGE="http://www.collaboration-world.com/gnumail/"
+SRC_URI="mirror://gentoo/${P/gnum/GNUM}.tar.bz2"
 
 KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
@@ -33,11 +25,6 @@ RDEPEND="${GS_RDEPEND}
 
 egnustep_install_domain "Local"
 
-src_unpack() {
-	cvs_src_unpack
-	cd ${S}
-	epatch ${FILESDIR}/Emoticon-dont-break-C.patch
-}
 src_compile() {
 	egnustep_env
 	egnustep_make
