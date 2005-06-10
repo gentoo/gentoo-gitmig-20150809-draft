@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.49 2005/06/10 20:38:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.50 2005/06/10 21:39:05 killerfox Exp $
+
+  10 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> ettercap-0.7.3.ebuild:
+  Stable on hppa. bug #94474
 
   10 Jun 2005; Aron Griffis <agriffis@gentoo.org> ettercap-0.7.3.ebuild:
   stable on alpha #94474
