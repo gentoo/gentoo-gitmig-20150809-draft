@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.16 2005/01/22 17:37:26 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.17 2005/06/10 00:06:11 vapier Exp $
+
+*openntpd-3.7_p1 (10 Jun 2005)
+
+  10 Jun 2005; Mike Frysinger <vapier@gentoo.org> +openntpd-3.7_p1.ebuild:
+  Version bump #95407 by Gabriel Devenyi.
 
   22 Jan 2005; petre rodan <kaiowas@gentoo.org> openntpd-0.20040824p.ebuild,
   openntpd-3.6.1_p1-r1.ebuild, openntpd-3.6_p1.ebuild:
