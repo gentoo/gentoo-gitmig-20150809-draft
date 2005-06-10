@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dd3e5a6efeaf854ca443bf891b46b8e9 gaim-1.3.1.ebuild 4304
-MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
+MD5 8734eaeddee5f441ca8d51b6391f2665 gaim-1.3.1.ebuild 4301
 MD5 0762c69a46371204be4f4088d4c8ecef gaim-1.2.1.ebuild 4142
-MD5 578c3877d2f8261297ff3792c1773b81 ChangeLog 50369
+MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
+MD5 c2448d50c04dddb2535b1cc785d0fb29 ChangeLog 50458
 MD5 831d89fb1055ed3b3495add3c78f55d1 gaim-1.3.0.ebuild 4300
+MD5 ccd9c297b39c84ce83df7011a542900b files/digest-gaim-1.2.1 64
+MD5 7eeaeb97528ef69941cf3fa3d04dea3e files/gaim-1.3.0-silc-ft.patch 567
+MD5 cbf619d060172da33caaee6ece99ceac files/digest-gaim-1.3.0 64
 MD5 34466df05198ffffaa36d5469babd2aa files/digest-gaim-1.3.1 64
 MD5 afc682711efed5d09a9229bd06a7a13b files/gaim-0.76-xinput.patch 644
-MD5 cbf619d060172da33caaee6ece99ceac files/digest-gaim-1.3.0 64
-MD5 7eeaeb97528ef69941cf3fa3d04dea3e files/gaim-1.3.0-silc-ft.patch 567
-MD5 ccd9c297b39c84ce83df7011a542900b files/digest-gaim-1.2.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCqY7dKRy60XGEcJIRArCDAJ9GLm0cNojHzCRAm5vRkiLH0FnsyQCfV5kR
-JrTv2aAob7prTLzAYYXRx5E=
-=St1w
------END PGP SIGNATURE-----
