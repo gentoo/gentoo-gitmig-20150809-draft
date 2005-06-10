@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.1-r1.ebuild,v 1.2 2005/06/09 07:54:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.1-r1.ebuild,v 1.3 2005/06/10 15:24:45 greg_g Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -37,6 +37,7 @@ KMEXTRACTONLY="kicker/core/kicker.h
 	    kioslave/thumbnail/configure.in.in" # for the HAVE_LIBART test
 
 KMCOMPILEONLY="kicker/share" # for kickerSettings.h
+KMEXTRA="doc/kinfocenter"
 
 src_compile() {
 	myconf="$myconf `use_with ssl` `use_with arts` `use_with opengl gl`
