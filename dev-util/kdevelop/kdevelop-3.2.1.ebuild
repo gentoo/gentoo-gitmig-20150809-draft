@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.2.1.ebuild,v 1.1 2005/05/27 09:01:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.2.1.ebuild,v 1.2 2005/06/10 05:13:52 flameeyes Exp $
 
 inherit kde
 
@@ -19,6 +19,13 @@ DEPEND="dev-lang/perl
 	subversion? ( dev-util/subversion )"
 
 need-kde 3.3
+
+src_unpack() {
+	kde_src_unpack
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc4.patch
+}
 
 src_compile() {
 	myconf="--with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs"
