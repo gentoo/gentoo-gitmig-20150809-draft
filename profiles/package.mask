@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4071 2005/06/09 23:19:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4072 2005/06/10 01:49:33 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (10 Jun 2005)
+# Future dependency of VLC +dirac
+media-video/dirac
 
 # Robin Johnson <robbat2@gentoo.org> (09 Jun 2005)
 # Testing brokenness
