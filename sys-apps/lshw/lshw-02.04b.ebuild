@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.04b.ebuild,v 1.3 2005/06/04 23:09:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.04b.ebuild,v 1.4 2005/06/10 00:51:51 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="gtk"
 
-DEPEND="gtk? ( >=x11-libs/gtk+-2 )"
+DEPEND="gtk? ( >=x11-libs/gtk+-2 )
+	>=sys-devel/binutils-2.15"
 
 S=${WORKDIR}/${MY_P}
 
