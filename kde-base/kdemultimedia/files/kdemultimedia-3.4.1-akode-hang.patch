@@ -1,0 +1,19 @@
+diff -Nur juk-3.4.1.orig/akode/lib/player.cpp juk-3.4.1/akode/lib/player.cpp
+--- juk-3.4.1.orig/akode/lib/player.cpp	2005-06-04 07:47:43.471249680 -0600
++++ juk-3.4.1/akode/lib/player.cpp	2005-06-04 07:48:11.235028944 -0600
+@@ -360,6 +360,7 @@ void Player::play() {
+         m_data->in_decoder = 0;
+         m_data->decoder    = 0;
+         m_data->buffer     = 0;
++    	setState(Loaded);
+     }
+ }
+ 
+@@ -369,6 +370,7 @@ void Player::stop() {
+     if (state() == Paused) resume();
+ 
+     if (m_data->running) {
++	m_data->buffer->release();
+         m_data->halt = true;
+         pthread_join(m_data->player_thread, 0);
+         m_data->running = false;

@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.159 2005/05/27 08:45:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.160 2005/06/10 14:54:14 greg_g Exp $
+
+*kdemultimedia-3.4.1-r1 (10 Jun 2005)
+
+  10 Jun 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdemultimedia-3.4.1-akode-hang.patch,
+  +kdemultimedia-3.4.1-r1.ebuild:
+  Fix regression: juk hangs with akode engine (#95022).
 
 *kdemultimedia-3.4.1 (27 May 2005)
 
