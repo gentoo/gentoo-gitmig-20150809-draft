@@ -1,0 +1,7 @@
+MD5 4802892d5988ca1e36a50e5e8a2c7292 webcdwriter-2.6.8.ebuild 3029
+MD5 cfe975200ea41b14081dcb465baaf0c4 metadata.xml 656
+MD5 687847099199386d902212aee676eab6 ChangeLog 478
+MD5 8f8f44c42ee38330ea3a7b9e559aaab3 files/configure.patch 397
+MD5 825a17dfddef56176d77713efd969aec files/webcdwriter.rc 803
+MD5 5be299cc59fc9d258fe669c9f3ab8dc6 files/digest-webcdwriter-2.6.8 70
+MD5 de11fda53f812cf8a6bccc2f4df4cff5 files/config-root.patch 260
