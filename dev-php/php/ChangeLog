@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.161 2005/06/09 18:57:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.162 2005/06/10 23:45:29 stuart Exp $
+
+*php-5.0.4 (11 Jun 2005)
+
+  11 Jun 2005; Stuart Herbert <stuart@gentoo.org> php-5.0.4-r1.ebuild,
+  php-5.0.4.ebuild:
+  Finished the ebuild; now installs the cli correctly
 
   09 Jun 2005; Markus Rothe <corsair@gentoo.org> php-5.0.4.ebuild,
   php-5.0.4-r1.ebuild:
@@ -23,6 +29,11 @@
   04 Jun 2005; Mark Loeser <halcy0n@gentoo.org> +files/php-5.0.3-gcc4.patch,
   php-5.0.3-r1.ebuild:
   Patch to fix compilation with GCC4 ; bug #94282
+
+*php-5.0.4 (22 May 2005)
+
+  22 May 2005; Stuart Herbert <stuart@gentoo.org> +php-5.0.4.ebuild:
+  Version bump; now uses the latest eclass
 
   19 May 2005; Robin H. Johnson <robbat2@gentoo.org> php-5.0.2-r1.ebuild,
   php-5.0.3.ebuild, php-5.0.3-r1.ebuild:
