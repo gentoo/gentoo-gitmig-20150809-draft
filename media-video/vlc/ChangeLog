@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.91 2005/06/08 19:37:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.92 2005/06/10 17:29:24 flameeyes Exp $
+
+  10 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r3.ebuild,
+  vlc-0.8.2_beta2.ebuild:
+  Fixed mp3/mad params for 0.8.1 and 0.8.2_beta2. Added patch to compile clean
+  with latest GCC 4.0.1 for 0.8.2_beta2.
 
   08 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.2_beta2.ebuild:
   Fixed checks for ffmpeg features.

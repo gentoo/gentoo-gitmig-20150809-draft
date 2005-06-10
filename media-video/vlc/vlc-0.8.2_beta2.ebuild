@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2_beta2.ebuild,v 1.2 2005/06/08 19:37:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2_beta2.ebuild,v 1.3 2005/06/10 17:29:24 flameeyes Exp $
 
 # Missing USE-flags due to missing deps:
-# media-video/vlc:dirac - Enables experimental dirac codec
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
 # media-video/vlc:tarkin - Enables experimental tarkin codec
 # media-video/vlc:h264 - Enables H264 encoding support with libx264
+
+# Missing USE-flags due to needed testing
+# media-video/vlc:dirac - Enables experimental dirac codec
 
 inherit libtool toolchain-funcs eutils wxwidgets
 
@@ -14,7 +16,7 @@ inherit libtool toolchain-funcs eutils wxwidgets
 TESTSNAPSHOT="20050607"
 TEST_PV="${PN}-snapshot-${TESTSNAPSHOT}"
 
-PATCHLEVEL="3"
+PATCHLEVEL="4"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 # This is a test version, so a snapshot, use the alternative SRC_URI
@@ -190,8 +192,7 @@ src_compile () {
 		$(use_enable v4l) \
 		$(use_enable cdda) $(use_enable cdda cddax)\
 		$(use_enable vcd) $(use_enable vcd vcdx) \
-		$(use_enable dvb) \
-		$(use_enable dvb pvr) \
+		$(use_enable dvb) $(use_enable dvb pvr) \
 		$(use_enable ogg) \
 		$(use_enable matroska mkv) \
 		$(use_enable flac) \
@@ -218,7 +219,7 @@ src_compile () {
 		$(use_enable lirc) \
 		$(use_enable joystick) \
 		$(use_enable live livedotcom) $(use_with live livedotcom-tree /usr/lib/live) \
-		$(use_enable mp3) \
+		$(use_enable mp3 mad) \
 		$(use_enable aac faad) \
 		$(use_enable a52) \
 		$(use_enable dts) \

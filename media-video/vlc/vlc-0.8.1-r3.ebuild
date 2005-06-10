@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r3.ebuild,v 1.4 2005/05/26 08:43:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r3.ebuild,v 1.5 2005/06/10 17:29:24 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -183,7 +183,7 @@ src_compile () {
 		$(use_enable lirc) \
 		$(use_enable joystick) \
 		$(use_enable live livedotcom) $(use_with live livedotcom-tree /usr/lib/live) \
-		$(use_enable mp3) \
+		$(use_enable mp3 mad) \
 		$(use_enable ffmpeg) \
 		$(use_enable aac faad) \
 		$(use_enable a52) \
