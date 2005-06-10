@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.14 2005/06/01 05:02:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.15 2005/06/10 19:42:34 pylon Exp $
+
+  10 Jun 2005; Lars Weiler <pylon@gentoo.org> graveman-0.3.11.ebuild,
+  graveman-0.3.12.ebuild, graveman-0.3.12_p2.ebuild,
+  graveman-0.3.12_p3.ebuild, graveman-0.3.12_p4.ebuild:
+  Changing mad->mp3; bug #94045.
 
 *graveman-0.3.12_p4 (01 Jun 2005)
 

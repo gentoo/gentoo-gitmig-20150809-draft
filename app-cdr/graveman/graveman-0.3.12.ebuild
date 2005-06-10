@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12.ebuild,v 1.2 2005/05/17 19:39:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12.ebuild,v 1.3 2005/06/10 19:42:34 pylon Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="http://graveman.tuxfamily.org/sources/${PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86 ~amd64"
-IUSE="debug doc dvdr flac mad nls oggvorbis sox"
+IUSE="debug doc dvdr flac mp3 nls oggvorbis sox"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.4
@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-util/intltool-0.22
 	flac? ( >=media-libs/flac-1.1.0 )
 	nls? ( sys-devel/gettext )
-	mad? ( >=media-libs/libid3tag-0.15
+	mp3? ( >=media-libs/libid3tag-0.15
 		>=media-libs/libmad-0.15 )
 	oggvorbis? ( >=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )"
@@ -32,7 +32,7 @@ RDEPEND="${DEPEND}
 
 G2CONF="${G2CONF} \
 	$(use_enable flac) \
-	$(use_enable mad mp3) \
+	$(use_enable mp3) \
 	$(use_enable oggvorbis ogg) \
 	$(use_enable debug)"
 
