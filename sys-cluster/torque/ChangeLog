@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.9 2005/03/15 21:59:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.10 2005/06/10 20:13:41 robbat2 Exp $
+
+  10 Jun 2005; Robin H. Johnson <robbat2@gentoo.org> torque-1.0.1_p6.ebuild,
+  torque-1.2.0_p1.ebuild:
+  Add DEPEND on sys-apps/ed, and make sure makedepend-sh uses $TMPDIR.
 
 *torque-1.0.1_p6 (15 Mar 2005)
 
