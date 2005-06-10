@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.82 2005/06/06 10:42:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.83 2005/06/10 17:46:26 flameeyes Exp $
+
+  10 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  ffmpeg-0.4.9_p20050226-r5.ebuild:
+  Use memalign hack on FreeBSD.
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org>
   ffmpeg-0.4.9_p20050226-r5.ebuild:
