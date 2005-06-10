@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Technologies, Inc.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.6.8.ebuild,v 1.1 2005/06/10 18:24:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.6.8.ebuild,v 1.2 2005/06/10 19:59:32 swegener Exp $
 
 inherit eutils java-pkg
 
@@ -18,9 +18,9 @@ DEPEND="java? ( virtual/jdk dev-java/jnlp-bin )"
 RDEPEND="
 	app-cdr/cdrdao
 	app-cdr/cdrtools
-	mp3? media-sound/mpg123
-	sox? media-sound/sox
-	oggvorbis? media-sound/vorbis-tools"
+	mp3? ( media-sound/mpg123 )
+	sox? ( media-sound/sox )
+	oggvorbis? ( media-sound/vorbis-tools )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -78,7 +78,7 @@ src_install() {
 	done
 
 	insinto /var/CDWserver/http/rcdrecord
-	
+
 	cd ${S}/rcdrecord
 	for name in `find -name '*.html'`
 	do
@@ -109,10 +109,10 @@ src_install() {
 	dosym /usr/sbin/CDWserver /usr/sbin/CDWuseradd
 	dosym /usr/bin/rcdrecord /usr/bin/files2cd
 	dosym /usr/bin/rcdrecord /usr/bin/image2cd
-	
+
 	insinto /var/CDWserver/export/Server/tools
 	doins ${S}/MD5Verify/MD5Verify.jar
-	
+
 	dodoc COPYING ChangeLog README CREDITS
 	dohtml *.html
 }
