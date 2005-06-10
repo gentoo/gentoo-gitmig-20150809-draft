@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13.ebuild,v 1.2 2005/06/09 18:09:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13.ebuild,v 1.3 2005/06/10 11:49:27 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -245,12 +245,6 @@ pkg_postinst() {
 	einfo "To switch to ATI OpenGL, run \"opengl-update ati\""
 	einfo "To change your XF86Config you can use the bundled \"fglrxconfig\""
 	echo
-	ewarn "***"
-	ewarn "If you are experiencing problems with memory allocation try to add"
-	ewarn "this line to in your X11 configuration file:"
-	ewarn "		Option \"KernelModuleParm\"  \"agplock=0\" "
-	ewarn "That should solve the hangups you could have with Neverwinter Nights"
-	ewarn "***"
 	if use !opengl ; then
 	ewarn "You don't have the opengl useflag enabled, you won't be able to build"
 	ewarn "opengl applications nor use opengl driver features, if that isn't"
