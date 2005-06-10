@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/construo-0.2.2.ebuild,v 1.6 2005/04/04 00:08:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/construo-0.2.2.ebuild,v 1.7 2005/06/10 13:44:30 dholm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://freesoftware.fsf.org/download/construo/construo.pkg/${PV}/${P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="virtual/x11
