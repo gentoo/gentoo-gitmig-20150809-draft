@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/stickers-0.1.3-r1.ebuild,v 1.5 2004/12/03 08:19:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/stickers-0.1.3-r1.ebuild,v 1.6 2005/06/10 13:21:54 dholm Exp $
 
 DESCRIPTION="Stickers Book for small children"
 HOMEPAGE="http://users.powernet.co.uk/kienzle/stickers/"
@@ -8,7 +8,7 @@ SRC_URI="http://users.powernet.co.uk/kienzle/stickers/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="nls"
 
 DEPEND="virtual/x11
