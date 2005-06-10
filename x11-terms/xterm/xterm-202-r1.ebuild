@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-202-r1.ebuild,v 1.1 2005/06/10 15:08:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-202-r1.ebuild,v 1.2 2005/06/10 15:09:01 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -71,7 +71,7 @@ src_install() {
 	# Fix for bug #91453 at Thomas Dickey's suggestion:
 	echo "*allowWindowOps: 	false" > ${D}/etc/X11/app-defaults/XTerm
 	echo "*allowWindowOps: 	false" > ${D}/etc/X11/app-defaults/UXTerm
-	
+
 }
 
 pkg_preinst() {
