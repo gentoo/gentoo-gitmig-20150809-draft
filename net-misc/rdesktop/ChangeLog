@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.58 2005/06/05 01:07:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.59 2005/06/10 17:50:48 wolf31o2 Exp $
+
+  10 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  rdesktop-1.4.0-r1.ebuild, rdesktop-1.4.1.ebuild:
+  Added openssl to DEPEND unconditionally and closing bug #92457.
 
   05 Jun 2005; Joseph Jezak <josejx@gentoo.org> rdesktop-1.4.1.ebuild:
   Marked ppc stable.

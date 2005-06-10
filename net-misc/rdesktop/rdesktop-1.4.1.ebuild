@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.4.1.ebuild,v 1.7 2005/06/05 01:07:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.4.1.ebuild,v 1.8 2005/06/10 17:50:48 wolf31o2 Exp $
 
 inherit eutils
 
@@ -11,29 +11,19 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ppc ppc-macos ppc64 sparc x86"
-IUSE="ssl debug ipv6 oss"
+IUSE="debug ipv6 oss"
 
 DEPEND="virtual/x11
-	ssl? ( >=dev-libs/openssl-0.9.6b )"
+	>=dev-libs/openssl-0.9.6b"
 
 src_compile() {
-	local myconf
-	if use ssl
-	then
-		myconf="--with-openssl=/usr"
-	else
-		myconf="--without-openssl"
-	fi
-
 	sed -i -e '/-O2/c\' -e 'cflags="$cflags ${CFLAGS}"' configure
-
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
+	econf \
+		--with-openssl=/usr \
 		`use_with debug` \
 		`use_with ipv6` \
 		`use_with oss sound` \
-		${myconf} || die
+		|| die
 
 	emake || die
 }
