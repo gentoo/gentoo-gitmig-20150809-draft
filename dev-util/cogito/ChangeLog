@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cogito
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.5 2005/06/04 17:08:46 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.6 2005/06/10 17:43:45 r3pek Exp $
+
+*cogito-0.11.3 (10 Jun 2005)
+
+  10 Jun 2005; Carlos Silva <r3pek@gentoo.org> +cogito-0.11.3.ebuild:
+  Version Bump
 
 *cogito-0.11.1 (04 Jun 2005)
 
