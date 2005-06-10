@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/ogmrip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ChangeLog,v 1.2 2005/03/30 13:51:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ChangeLog,v 1.3 2005/06/10 19:23:45 pylon Exp $
+
+*ogmrip-0.8.2 (10 Jun 2005)
+
+  10 Jun 2005; Lars Weiler <pylon@gentoo.org> +ogmrip-0.8.2.ebuild:
+  Version bump.  Thanks to the contributors in bug #83900.
 
   30 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> ogmrip-0.6.2.ebuild:
   added ~amd64 to KEYWORDS, fixes #87204
