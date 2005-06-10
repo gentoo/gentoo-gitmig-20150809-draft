@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-5.0.ebuild,v 1.11 2005/05/12 11:34:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-5.0.ebuild,v 1.12 2005/06/10 20:40:29 j4rg0n Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 	# position-independent code must used for all shared objects.
 	append-flags -fPIC
-	elibtoolize
+	use ppc-macos || elibtoolize
 	epunt_cxx
 }
 

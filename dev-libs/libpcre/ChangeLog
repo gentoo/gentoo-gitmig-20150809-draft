@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.57 2005/04/18 17:01:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.58 2005/06/10 20:40:29 j4rg0n Exp $
+
+  10 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org> libpcre-5.0.ebuild:
+  Removed elibtoolize for ppc-macos. Fixes Bug #95384. Thanks to kito and
+  Fabian Groffen for contributing to the fix.
 
   18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> libpcre-5.0.ebuild:
   Stable on ppc.
