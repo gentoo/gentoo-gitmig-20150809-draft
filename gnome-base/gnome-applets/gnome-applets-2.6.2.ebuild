@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.6.2.ebuild,v 1.11 2005/06/05 13:45:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.6.2.ebuild,v 1.12 2005/06/10 15:04:01 foser Exp $
 
 inherit gnome2 eutils
 
@@ -45,7 +45,7 @@ src_unpack() {
 
 src_install () {
 
-	gnome2_src_install
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 
 	for BLERHG  in accessx-status battstat cdplayer charpick drivemount geyes gkb-new gtik gweather mailcheck mini-commander mixer modemlights multiload screen-exec stickynotes wireless; do
 			docinto ${BLERHG}
