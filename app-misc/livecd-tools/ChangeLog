@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.48 2005/06/09 15:52:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.49 2005/06/10 13:18:13 wolf31o2 Exp $
+
+*livecd-tools-1.0.21_pre4 (10 Jun 2005)
+
+  10 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -livecd-tools-1.0.21_pre3.ebuild, +livecd-tools-1.0.21_pre4.ebuild:
+  Bumped to testing version 1.0.21_pre4, which should resolve the problem with
+  INIT on LiveCD boot.
 
 *livecd-tools-1.0.21_pre3 (09 Jun 2005)
 
