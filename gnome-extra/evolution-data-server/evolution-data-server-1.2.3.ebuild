@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.2.3.ebuild,v 1.1 2005/06/09 11:52:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.2.3.ebuild,v 1.2 2005/06/10 02:27:15 halcy0n Exp $
 
 inherit eutils gnome2
 
@@ -49,6 +49,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.2.0-gentoo_etc_services.patch
 	# fix local mailfolders (#87043)
 	epatch ${FILESDIR}/${PN}-1.2.1-local-provider.patch
+	# upstream gcc4 fix
+	epatch ${FILESDIR}/${PN}-1.2.3-gcc4.patch
 
 }
 
