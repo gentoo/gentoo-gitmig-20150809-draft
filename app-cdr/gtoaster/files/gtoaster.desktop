@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Gnome Toaster
-Comment=GNOME Frontend for creating Data, Audio and Mixed Mode CD
-Exec=gtoaster
-Icon=gtoaster.png
-Terminal=0
-Type=Application
