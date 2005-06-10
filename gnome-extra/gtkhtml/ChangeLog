@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gtkhtml
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.42 2004/08/25 06:39:22 sekretarz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.43 2005/06/10 02:23:59 halcy0n Exp $
+
+  10 Jun 2005; Mark Loeser <halcy0n@gentoo.org> +files/gtkhtml-gcc4.patch,
+  gtkhtml-1.1.10-r1.ebuild:
+  Patch to fix compilation with GCC4
 
   25 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   gtkhtml-1.1.10-r1.ebuild:

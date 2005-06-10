@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10-r1.ebuild,v 1.6 2004/08/25 06:39:22 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10-r1.ebuild,v 1.7 2005/06/10 02:23:59 halcy0n Exp $
 
 inherit gnome.org libtool eutils
 
@@ -36,6 +36,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${PN}-gcc34.patch
+	epatch ${FILESDIR}/${PN}-gcc4.patch
 }
 
 src_compile() {
