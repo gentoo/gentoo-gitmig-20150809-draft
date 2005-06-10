@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4072 2005/06/10 01:49:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4073 2005/06/10 06:38:37 sebastian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -166,12 +166,6 @@ x11-plugins/desklet-wireless
 #<gnome-extra/gdesklets-core-0.33.1
 #x11-plugins/desklet-psidisplays
 #x11-plugins/desklet-psisensors
-
-
-# Sebastian Bergmann <sebastian@gentoo.org> (22 May 2005)
-# Migration from Turck MMCache to eAccelerator,
-# see bug #82670.
-dev-php/turck-mmcache
 
 # Luca Barbato <lu_zero@gentoo.org> (22 May 2005)
 # Special version, masked since doesn't work standard systems.
