@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.60 2005/06/09 16:38:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.61 2005/06/10 11:44:48 mcummings Exp $
+
+  10 Jun 2005; Michael Cummings <mcummings@gentoo.org>
+  files/3.0.0-spamd.init:
+  init addition for pidfile location
 
   09 Jun 2005; Michael Cummings <mcummings@gentoo.org>
   spamassassin-3.0.2-r1.ebuild:
