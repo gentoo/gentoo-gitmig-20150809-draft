@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.25 2005/06/08 16:19:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.26 2005/06/10 19:20:19 solar Exp $
+
+  10 Jun 2005; <solar@gentoo.org> :
+  - Bugfixes: only report the source of textrels when the executable actually
+  contains DT_TEXTREL. Only enable -Wdeclaration-after-statement -Wextra if the
+  compiler supports it
 
 *pax-utils-0.1.0 (08 Jun 2005)
 
