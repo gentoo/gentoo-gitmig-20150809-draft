@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/schedutils/schedutils-1.3.5.ebuild,v 1.1 2005/03/03 16:17:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/schedutils/schedutils-1.3.5.ebuild,v 1.2 2005/06/10 01:04:17 vapier Exp $
 
 DESCRIPTION="Utilities for manipulating kernel schedular parameters"
 HOMEPAGE="http://tech9.net/rml/schedutils"
-KEYWORDS="~x86 amd64 ~ppc"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 LICENSE="GPL-2"
 
