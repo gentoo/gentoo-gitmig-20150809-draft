@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.14 2005/06/06 10:07:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.15 2005/06/10 13:51:20 wolf31o2 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils gnuconfig
 
@@ -79,7 +79,7 @@ src_compile() {
 		strip-flags -funroll-all-loops -fpeel-loops -fomit-frame-pointer # more bug #74608 and also bug #82618
 	fi
 	if use x86 ; then
-		filter-flags -fforce-addr #87077
+		filter-flags -fforce-addr -msse2 #87077 and #94377
 		use pic || myconf="${myconf} $(use_enable x86 nasm)"
 	fi
 	use noaudio && myconf="${myconf} --disable-audio"
