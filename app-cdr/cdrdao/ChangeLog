@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.64 2005/06/10 19:26:12 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.65 2005/06/10 20:57:31 pylon Exp $
+
+  10 Jun 2005; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.9-r2.ebuild:
+  Added local useflag pccts. Without it cdrdao will build with the internal
+  pccts stack. Thanks to Fabio Rossi in bug #90844 for this enhancement.
 
   10 Jun 2005; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.9-r2.ebuild:
   Delete the generation of the .desktop-file, as the application installs one
