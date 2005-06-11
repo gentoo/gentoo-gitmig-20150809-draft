@@ -4,7 +4,7 @@ MD5 dceed980602910f4b477dfec8d31bc68 php-cgi-4.3.9_rc1.ebuild 860
 MD5 b0699992939c804bbc6e2382978bbe1f php-cgi-4.3.8-r1.ebuild 767
 MD5 bd43248eeca41df5712a8cd1d8fad2b1 php-cgi-4.3.9_rc1-r1.ebuild 878
 MD5 a2364c381c6ecc36e77343399d311f8f php-cgi-4.3.8.ebuild 749
-MD5 74fb43dc32597538fb77c9813c1929c9 php-cgi-5.0.4.ebuild 1103
+MD5 cade387fb57f171844da95b279835389 php-cgi-5.0.4.ebuild 1087
 MD5 a4c7d82cf8fe5d4b82eff5a4b283d882 php-cgi-4.3.9-r1.ebuild 808
 MD5 0027de1560a23faca547c7531eebce2f php-cgi-4.3.9.ebuild 790
 MD5 46aebfa8a26be82c3c0a32aab969f492 php-cgi-4.3.10.ebuild 921

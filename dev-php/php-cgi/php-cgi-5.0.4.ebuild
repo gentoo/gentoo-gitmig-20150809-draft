@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.4.ebuild,v 1.1 2005/06/11 00:19:34 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.4.ebuild,v 1.2 2005/06/11 13:21:06 stuart Exp $
 
 PHPSAPI="cgi"
 MY_PHP_P="php-${PV}"
@@ -14,7 +14,7 @@ LICENSE="PHP"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 DEPEND="$DEPEND"
 RDEPEND="$RDEPEND"
-PROVIDE="virtual/php-cgi virtual/php-httpd"
+PROVIDE="virtual/httpd-php"
 SLOT="0"
 
 PHP_INSTALLTARGETS="install"
