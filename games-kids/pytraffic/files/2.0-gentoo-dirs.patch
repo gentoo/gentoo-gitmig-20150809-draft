@@ -1,0 +1,40 @@
+diff -u -r pytraffic-2.0-orig/pytraffic pytraffic-2.0/pytraffic
+--- pytraffic-2.0-orig/pytraffic	2005-06-11 14:44:32.000000000 -0300
++++ pytraffic-2.0/pytraffic	2005-06-11 14:44:43.000000000 -0300
+@@ -1 +1 @@
+-exec python /usr/share/pytraffic2/Game.py 
++exec python /usr/share/games/pytraffic2/Game.py 
+diff -u -r pytraffic-2.0-orig/pytraffic.desktop pytraffic-2.0/pytraffic.desktop
+--- pytraffic-2.0-orig/pytraffic.desktop	2005-06-11 14:44:32.000000000 -0300
++++ pytraffic-2.0/pytraffic.desktop	2005-06-11 14:45:04.000000000 -0300
+@@ -4,7 +4,7 @@
+ X-Desktop-File-Install-Version=0.2
+ Name=PyTraffic
+ Description=A Python version of the board game Rush Hour created by Binary Arts Coporation.
+-Exec=/usr/bin/pytraffic
++Exec=pytraffic
+ Terminal=0
+ Type=Application
+-Icon=/usr/share/pytraffic2/ICNS/carNred64x64.png
++Icon=/usr/share/games/pytraffic2/ICNS/carNred64x64.png
+diff -u -r pytraffic-2.0-orig/setup.py pytraffic-2.0/setup.py
+--- pytraffic-2.0-orig/setup.py	2005-06-11 14:44:32.000000000 -0300
++++ pytraffic-2.0/setup.py	2005-06-11 14:45:50.000000000 -0300
+@@ -47,7 +47,7 @@
+                         'install_lib' :  "c:\\"+version.install_leaf}
+     options['build_ext']={'compiler' : 'mingw32'}
+ else:
+-    options['install']={'home' : "/usr/share/"+version.install_leaf,
++    options['install']={'home' : "/usr/share/games/"+version.install_leaf,
+                        'install_lib' : '$base',
+                        'install_data' : '$base'}
+     options['build_ext']={'compiler' : 'unix'}
+@@ -60,7 +60,7 @@
+ 
+ def main_command():
+     if os.name=='posix':
+-        return [("/usr/bin",['pytraffic'])]
++        return [("/usr/games/bin",['pytraffic'])]
+     else:
+         return [(".",["WinGame.pyw"])]
+ 

@@ -1,5 +1,18 @@
-MD5 d32c588b53d7654c5a55dfabaf1fc426 ChangeLog 453
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2741cd5f30627769c6053052fdf4921d ChangeLog 609
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 99d00a17633bbfb2c97ebcd11dec6e9a pytraffic-1.2.1.ebuild 992
+MD5 d2854cb4e5018061111f4f50048c64d4 pytraffic-2.0.ebuild 926
 MD5 435a1b2a65ae7fc35c83fbeb7397d829 files/1.2.1-gentoo-dirs.patch 1730
 MD5 23d02af40cdc1e4ebd9234573e05b7c2 files/digest-pytraffic-1.2.1 67
+MD5 7be5b74960df3f7159e4914d8d10d3ba files/digest-pytraffic-2.0 65
+MD5 3a461a8258af9efb5d7772db7e2e8267 files/2.0-gentoo-dirs.patch 1735
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCqyeNxtZcznfol0URAlxoAKCgBD1+IZIE01w0HEdEqmf2905EoACgqcPf
+13eXkpvJ/X0SSkGJkMzai64=
+=rC5Z
+-----END PGP SIGNATURE-----
