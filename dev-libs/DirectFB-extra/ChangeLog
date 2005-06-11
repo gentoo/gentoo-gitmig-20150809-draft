@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB-extra
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.9 2005/05/06 00:38:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.10 2005/06/11 20:31:48 dholm Exp $
+
+  11 Jun 2005; David Holm <dholm@gentoo.org>
+  +files/DirectFB-extra-0.9.22-endian.patch, DirectFB-extra-0.9.22.ebuild:
+  Added patch to fix compilation on big endian.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org>
   DirectFB-extra-0.9.16.ebuild, DirectFB-extra-0.9.22.ebuild:

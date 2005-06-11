@@ -1,16 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 324957f50f5d82e1ae657c871823e43e ChangeLog 1700
 MD5 0c23eca883173230c3eca65d2780e350 DirectFB-extra-0.9.16.ebuild 987
-MD5 cbb254d67d5d6d65b404f637a98a7394 DirectFB-extra-0.9.22.ebuild 1346
-MD5 006adf8bb588c91b6e41189842631be7 ChangeLog 1533
+MD5 6a2e6e9097dd61bb54e7f46e43c44bdb DirectFB-extra-0.9.22.ebuild 1381
+MD5 3389250bcdcd13d1544c47b6ba17274c files/0.9.16-newdirectfb.patch 673
 MD5 b4187a358ee9b76d28e5f01418a1533b files/digest-DirectFB-extra-0.9.16 73
 MD5 4764b89a0dac1c7f661126716d2950c9 files/digest-DirectFB-extra-0.9.22 73
-MD5 3389250bcdcd13d1544c47b6ba17274c files/0.9.16-newdirectfb.patch 673
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCerx9I1lqEGTUzyQRAmG4AKCLeoYs3nQ0RUjXe8YTrUcoGKxeawCdGxED
-ofcMRiFFPD9zixeJCId3mIw=
-=2XYB
------END PGP SIGNATURE-----
+MD5 b804351af34354ecbb2ce74008df47ad files/DirectFB-extra-0.9.22-endian.patch 707

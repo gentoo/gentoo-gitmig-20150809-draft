@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.22.ebuild,v 1.2 2005/05/06 00:38:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.22.ebuild,v 1.3 2005/06/11 20:31:48 dholm Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	sed -i \
 		-e 's:libmpeg3\.h:libmpeg3/libmpeg3.h:g' \
 		configure interfaces/IDirectFBVideoProvider/idirectfbvideoprovider_libmpeg3.c
+	epatch ${FILESDIR}/${P}-endian.patch
 }
 
 src_compile() {
