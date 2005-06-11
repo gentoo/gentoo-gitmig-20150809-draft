@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.0_rc1.ebuild,v 1.3 2005/06/05 19:45:16 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.0_rc1.ebuild,v 1.4 2005/06/11 09:55:59 corsair Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kde/unstable/koffice-1.4-rc1/src/koffice-${MY_PV}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="doc javascript mysql postgres"
 
 RDEPEND=">=media-gfx/imagemagick-5.5.2
