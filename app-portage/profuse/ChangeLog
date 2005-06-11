@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.29 2005/06/06 08:10:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.30 2005/06/11 14:17:39 dams Exp $
+
+  11 Jun 2005; <dams@gentoo.org> profuse-0.20.3.ebuild,
+  profuse-0.22.1.ebuild:
+  added ~amd64 and removed it from broken ebuild
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> profuse-0.22.1.ebuild:
   Added ~ppc64
