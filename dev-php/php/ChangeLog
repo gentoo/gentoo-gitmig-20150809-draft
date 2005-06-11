@@ -1,9 +1,14 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.164 2005/06/11 13:27:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.165 2005/06/11 14:28:01 stuart Exp $
 
   11 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> php-5.0.4-r1.ebuild:
   Add ~ia64 and ~alpha keywords.
+
+*php-5.1.0_beta (11 Jun 2005)
+
+  11 Jun 2005; Stuart Herbert <stuart@gentoo.org> +php-5.1.0_beta.ebuild:
+  Added php-5.1.0-beta1
 
   11 Jun 2005; Stuart Herbert <stuart@gentoo.org> -php-5.0.0-r1.ebuild,
   -php-5.0.0.ebuild, -php-5.0.1.ebuild, -php-5.0.2-r1.ebuild,
