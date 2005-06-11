@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.4.ebuild,v 1.2 2005/06/11 13:21:06 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.4.ebuild,v 1.3 2005/06/11 13:26:14 kloeri Exp $
 
 PHPSAPI="cgi"
 MY_PHP_P="php-${PV}"
@@ -11,7 +11,7 @@ inherit php5-sapi-r2 eutils
 
 DESCRIPTION="PHP Shell Interpreter"
 LICENSE="PHP"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 DEPEND="$DEPEND"
 RDEPEND="$RDEPEND"
 PROVIDE="virtual/httpd-php"
