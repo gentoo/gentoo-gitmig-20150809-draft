@@ -1,6 +1,12 @@
 # ChangeLog for games-action/armagetron
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.8 2004/12/28 23:50:47 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.9 2005/06/11 22:05:17 vapier Exp $
+
+*armagetron-0.2.6.1 (11 Jun 2005)
+
+  11 Jun 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/armagetron-0.2.6.1.sh, +armagetron-0.2.6.1.ebuild:
+  Version bump #81634.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
