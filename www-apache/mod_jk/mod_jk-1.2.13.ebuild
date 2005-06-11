@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.13.ebuild,v 1.1 2005/06/01 19:42:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.13.ebuild,v 1.2 2005/06/11 09:23:47 luckyduck Exp $
 
 inherit apache-module
 
@@ -39,7 +39,7 @@ src_compile() {
 		--with-apxs=${apxs} \
 		--with-apr-config=/usr/bin/apr-config \
 		|| die "econf failed"
-	emake LIBTOOL="/bin/sh `pwd`/libtool --silent" || die "make failed"
+	emake LIBTOOL="/bin/sh $(pwd)/libtool --silent" || die "make failed"
 }
 
 src_install() {
