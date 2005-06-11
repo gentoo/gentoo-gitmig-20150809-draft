@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.235 2005/06/11 08:53:33 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.236 2005/06/11 13:15:14 stuart Exp $
+
+  11 Jun 2005; Stuart Herbert <stuart@gentoo.org> :
+  Added php-5.1.0 beta 1
 
   11 Jun 2005; Stuart Herbert <stuart@gentoo.org>
   -files/mod_php-5.0.3-missing-arches.patch,
