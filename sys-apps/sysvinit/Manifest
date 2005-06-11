@@ -1,6 +1,6 @@
 MD5 114f05f8eff7263f3aa6cb89da6c058b ChangeLog 2712
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3fb8797c2264d8a09e0c9a7fae59fddf sysvinit-2.86.ebuild 2247
+MD5 326b480bf151f3dd0c6134717f8b27e9 sysvinit-2.86.ebuild 2250
 MD5 4bb35af95759582d45324cdf3bc237b7 sysvinit-2.85-r1.ebuild 2545
 MD5 89c112138ee2f33829ad80c3dcc18328 files/digest-sysvinit-2.86 132
 MD5 5f94105e0b503a39fda5fb65d885e16c files/2.86-gentoo.patch 641

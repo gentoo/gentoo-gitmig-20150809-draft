@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86.ebuild,v 1.9 2005/06/10 00:50:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86.ebuild,v 1.10 2005/06/11 00:01:48 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -42,7 +42,7 @@ src_compile() {
 	# refrain from building sulogin, but that isn't a good option.
 	# (09 Jul 2004 agriffis)
 	emake -C src \
-		CC=$(tc-getCC) \
+		CC="$(tc-getCC)" \
 		DISTRO="Gentoo" \
 		LCRYPT="-lcrypt" \
 		|| die
