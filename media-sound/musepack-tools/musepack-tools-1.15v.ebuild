@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.1 2005/03/19 14:06:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.2 2005/06/11 16:14:05 flameeyes Exp $
 
 IUSE="static 16bit esd"
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="media-sound/esound
+RDEPEND="esd? ( media-sound/esound )
 	 media-libs/id3lib"
 
 DEPEND="${RDEPEND}
@@ -33,9 +33,10 @@ src_unpack() {
 	sed -i 's/#define USE_IRIX_AUDIO/#undef USE_IRIX_AUDIO/' mpp.h
 
 	if ! use esd ; then
-		sed -i 's/#define USE_ESD_AUDIO/#undef USE_ESD_AUDIO/' mpp.h
+		sed -i -e 's/#define USE_ESD_AUDIO/#undef USE_ESD_AUDIO/' mpp.h
+		sed -i -e 's:esd-config:true:' Makefile
 	else
-		sed -i 's/#LDADD   += -lesd/LDADD   += -lesd/' Makefile
+		sed -i -e 's/#LDADD   += -lesd/LDADD   += -lesd/' Makefile
 	fi
 
 	if ! use x86 ; then
@@ -49,7 +50,7 @@ src_compile() {
 	filter-flags "-fprefetch-loop-arrays"
 	filter-flags "-mfpmath=sse" "-mfpmath=sse,387"
 	use static && export BLD_STATIC=1
-	ARCH= emake mppenc mppdec replaygain || die
+	ARCH= emake LDADD=-lm mppenc mppdec replaygain || die
 }
 
 src_install() {
