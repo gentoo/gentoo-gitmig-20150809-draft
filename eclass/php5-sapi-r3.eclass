@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.1 2005/06/11 09:19:47 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.2 2005/06/11 13:42:26 stuart Exp $
 #
 # ########################################################################
 #
@@ -19,7 +19,7 @@
 
 inherit flag-o-matic eutils confutils libtool
 
-ECLASS=php5-sapi-r2
+ECLASS=php5-sapi-r3
 INHERITED="$INHERITED $ECLASS"
 
 # set MY_PHP_P in the ebuild
@@ -123,7 +123,7 @@ EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack pkg_postinst
 # INTERNAL FUNCTIONS
 # ========================================================================
 
-php5-sapi-r2_check_awkward_uses() {
+php5-sapi-r3_check_awkward_uses() {
 
 	# disabled hardenedphp after many reports of problems w/ apache
 	# need to look into this at some point
@@ -334,14 +334,14 @@ php5-sapi-r2_check_awkward_uses() {
 # EXPORTED FUNCTIONS
 # ========================================================================
 
-php5-sapi-r2_pkg_setup() {
+php5-sapi-r3_pkg_setup() {
 	# let's do all the USE flag testing before we do anything else
 	# this way saves a lot of time
 
-	php5-sapi-r2_check_awkward_uses
+	php5-sapi-r3_check_awkward_uses
 }
 
-php5-sapi-r2_src_unpack() {
+php5-sapi-r3_src_unpack() {
 	if [ "${PHP_PACKAGE}" == 1 ]; then
 		unpack ${A}
 	fi
@@ -378,7 +378,7 @@ php5-sapi-r2_src_unpack() {
 	# epatch ${FILESDIR}/${MY_PHP_P}-missing-arches.patch
 }
 
-php5-sapi-r2_src_compile() {
+php5-sapi-r3_src_compile() {
 	cd ${PHP_S}
 	confutils_init
 
@@ -452,7 +452,7 @@ php5-sapi-r2_src_compile() {
 	enable_extension_with		"zlib"			"zlib"			1
 	enable_extension_enable		"debug"			"debug"			0
 
-	php5-sapi-r2_check_awkward_uses
+	php5-sapi-r3_check_awkward_uses
 
 	# DBA support
 	enable_extension_enable		"dba"		"dba" 1
@@ -478,7 +478,7 @@ php5-sapi-r2_src_compile() {
 	emake || die "make failed"
 }
 
-php5-sapi-r2_src_install() {
+php5-sapi-r3_src_install() {
 	cd ${PHP_S}
 	addpredict /usr/share/snmp/mibs/.index
 	
@@ -523,7 +523,7 @@ php5-sapi-r2_src_install() {
 	# this does mean that the packages are in conflict for now
 }
 
-php5-sapi-r2_pkg_postinst() {
+php5-sapi-r3_pkg_postinst() {
 	ewarn "If you have additional third party PHP extensions (such as"
 	ewarn "dev-php/eaccelerator) you may need to recompile them now."
 
