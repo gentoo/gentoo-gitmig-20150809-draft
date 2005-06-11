@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mpqc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.4 2005/05/24 22:01:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.5 2005/06/11 16:24:38 corsair Exp $
+
+  11 Jun 2005; Markus Rothe <corsair@gentoo.org> mpqc-2.2.3.ebuild:
+  Added ~ppc64 and solved bug #62124: ppc64 needs --enable-shared
 
   24 May 2005; Donnie Berkholz <spyderous@gentoo.org>; mpqc-2.2.2-r1.ebuild,
   mpqc-2.2.3.ebuild:
