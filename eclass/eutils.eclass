@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.181 2005/06/09 15:25:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.182 2005/06/11 00:02:26 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -451,16 +451,14 @@ egetent() {
 # extra:	comment of 'added by portage for ${PN}'
 enewuser() {
 	# get the username
-	local euser="$1"; shift
-	if [ -z "${euser}" ]
-	then
+	local euser=$1; shift
+	if [[ -z ${euser} ]] ; then
 		eerror "No username specified !"
 		die "Cannot call enewuser without a username"
 	fi
 
 	# lets see if the username already exists
-	if [ "${euser}" == "`egetent passwd \"${euser}\" | cut -d: -f1`" ]
-	then
+	if [[ ${euser} == $(egetent passwd "${euser}" | cut -d: -f1) ]] ; then
 		return 0
 	fi
 	einfo "Adding user '${euser}' to your system ..."
@@ -469,13 +467,10 @@ enewuser() {
 	local opts=
 
 	# handle uid
-	local euid="$1"; shift
-	if [ ! -z "${euid}" ] && [ "${euid}" != "-1" ]
-	then
-		if [ "${euid}" -gt 0 ]
-		then
-			if [ ! -z "`egetent passwd ${euid}`" ]
-			then
+	local euid=$1; shift
+	if [[ ! -z ${euid} ]] && [[ ${euid} != "-1" ]] ; then
+		if [[ ${euid} -gt 0 ]] ; then
+			if [[ ! -z $(egetent passwd ${euid}) ]] ; then
 				euid="next"
 			fi
 		else
@@ -485,80 +480,69 @@ enewuser() {
 	else
 		euid="next"
 	fi
-	if [ "${euid}" == "next" ]
-	then
+	if [[ ${euid} == "next" ]] ; then
 		local pwrange
-		if [ "${USERLAND}" == "BSD" ] ; then
-			pwrange="`jot 898 101`"
+		if [[ ${USERLAND} == "BSD" ]] ; then
+			pwrange=$(jot 898 101)
 		else
-			pwrange="`seq 101 999`"
+			pwrange=$(seq 101 999)
 		fi
 		for euid in ${pwrange} ; do
-			[ -z "`egetent passwd ${euid}`" ] && break
+			[[ -z $(egetent passwd ${euid}) ]] && break
 		done
 	fi
 	opts="${opts} -u ${euid}"
 	einfo " - Userid: ${euid}"
 
 	# handle shell
-	local eshell="$1"; shift
-	if [ ! -z "${eshell}" ] && [ "${eshell}" != "-1" ]
-	then
-		if [ ! -e "${eshell}" ]
-		then
+	local eshell=$1; shift
+	if [[ ! -z ${eshell} ]] && [[ ${eshell} != "-1" ]] ; then
+		if [[ ! -e ${eshell} ]] ; then
 			eerror "A shell was specified but it does not exist !"
 			die "${eshell} does not exist"
 		fi
 	else
-		if [[ "${USERLAND}" == "Darwin" ]]; then
-			eshell="/usr/bin/false"
-		elif [[ "${USERLAND}" == "BSD" ]]; then
-			eshell="/usr/sbin/nologin"
-		else
-			eshell="/bin/false"
-		fi
+		case ${USERLAND} in
+			Darwin) eshell="/usr/bin/false";;
+			BSD)    eshell="/usr/sbin/nologin";;
+			*)      eshell="/bin/false";;
+		esac
 	fi
 	einfo " - Shell: ${eshell}"
 	opts="${opts} -s ${eshell}"
 
 	# handle homedir
-	local ehome="$1"; shift
-	if [ -z "${ehome}" ] || [ "${ehome}" == "-1" ]
-	then
+	local ehome=$1; shift
+	if [[ -z ${ehome} ]] || [[ ${ehome} == "-1" ]] ; then
 		ehome="/dev/null"
 	fi
 	einfo " - Home: ${ehome}"
 	opts="${opts} -d ${ehome}"
 
 	# handle groups
-	local egroups="$1"; shift
-	if [ ! -z "${egroups}" ]
-	then
-		local oldifs="${IFS}"
+	local egroups=$1; shift
+	if [[ ! -z ${egroups} ]] ; then
+		local oldifs=${IFS}
 		local defgroup="" exgroups=""
 
 		export IFS=","
-		for g in ${egroups}
-		do
-			export IFS="${oldifs}"
-			if [ -z "`egetent group \"${g}\"`" ]
-			then
+		for g in ${egroups} ; do
+			export IFS=${oldifs}
+			if [[ -z $(egetent group "${g}") ]] ; then
 				eerror "You must add group ${g} to the system first"
 				die "${g} is not a valid GID"
 			fi
-			if [ -z "${defgroup}" ]
-			then
-				defgroup="${g}"
+			if [[ -z ${defgroup} ]] ; then
+				defgroup=${g}
 			else
 				exgroups="${exgroups},${g}"
 			fi
 			export IFS=","
 		done
-		export IFS="${oldifs}"
+		export IFS=${oldifs}
 
 		opts="${opts} -g ${defgroup}"
-		if [ ! -z "${exgroups}" ]
-		then
+		if [[ ! -z ${exgroups} ]] ; then
 			opts="${opts} -G ${exgroups:1}"
 		fi
 	else
@@ -567,56 +551,54 @@ enewuser() {
 	einfo " - Groups: ${egroups}"
 
 	# handle extra and add the user
-	local eextra="$@"
-	local oldsandbox="${SANDBOX_ON}"
+	local oldsandbox=${SANDBOX_ON}
 	export SANDBOX_ON="0"
-	if [[ "${USERLAND}" == "Darwin" ]]
-	then
+	case ${USERLAND} in
+	Darwin)
 		### Make the user
-		if [ -z "${eextra}" ]
-		then
+		if [[ -z $@ ]] ; then
 			dscl . create /users/${euser} uid ${euid}
 			dscl . create /users/${euser} shell ${eshell}
 			dscl . create /users/${euser} home ${ehome}
 			dscl . create /users/${euser} realname "added by portage for ${PN}"
 			### Add the user to the groups specified
-			local oldifs="${IFS}"
+			local oldifs=${IFS}
 			export IFS=","
-			for g in ${egroups}
-			do
+			for g in ${egroups} ; do
 				dscl . merge /groups/${g} users ${euser}
 			done
-			export IFS="${oldifs}"
+			export IFS=${oldifs}
 		else
-			einfo "Extra options are not supported on macos yet"
+			einfo "Extra options are not supported on Darwin yet"
 			einfo "Please report the ebuild along with the info below"
-			einfo "eextra: ${eextra}"
+			einfo "eextra: $@"
 			die "Required function missing"
 		fi
-	elif [[ "${USERLAND}" == "BSD" ]] ; then
-		if [ -z "${eextra}" ]
-		then
+		;;
+	BSD)
+		if [[ -z $@ ]] ; then
 			pw useradd ${euser} ${opts} \
 				-c "added by portage for ${PN}" \
 				die "enewuser failed"
 		else
-			einfo " - Extra: ${eextra}"
+			einfo " - Extra: $@"
 			pw useradd ${euser} ${opts} \
-				-c ${eextra} || die "enewuser failed"
+				"$@" || die "enewuser failed"
 		fi
-	else
-		if [ -z "${eextra}" ]
-		then
+		;;
+	*)
+		if [[ -z $@ ]] ; then
 			useradd ${opts} ${euser} \
 				-c "added by portage for ${PN}" \
 				|| die "enewuser failed"
 		else
-			einfo " - Extra: ${eextra}"
-			useradd ${opts} ${euser} ${eextra} \
+			einfo " - Extra: $@"
+			useradd ${opts} ${euser} "$@" \
 				|| die "enewuser failed"
 		fi
-	fi
-	export SANDBOX_ON="${oldsandbox}"
+		;;
+	esac
+	export SANDBOX_ON=${oldsandbox}
 
 	if [ ! -e "${ehome}" ] && [ ! -e "${D}/${ehome}" ]
 	then
