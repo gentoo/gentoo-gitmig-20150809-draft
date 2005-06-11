@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/libpcap-ringbuffer-1.0.20050129-r2.ebuild,v 1.1 2005/06/11 08:27:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/libpcap-ringbuffer-1.0.20050129-r2.ebuild,v 1.2 2005/06/11 13:41:09 dholm Exp $
 
 inherit toolchain-funcs linux-info multilib eutils
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="ipv6"
 
 DEPEND="virtual/libc

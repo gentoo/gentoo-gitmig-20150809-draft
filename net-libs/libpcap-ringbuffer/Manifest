@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5fc0ab4c1e9443c79d3d591ffd6968d6 ChangeLog 1393
+MD5 86f63db5e73fe57db9fd26ab62ef90f1 ChangeLog 1495
 MD5 3518cc7e500dab348a9a4aee5972d7c8 libpcap-ringbuffer-1.0.20041001.ebuild 1659
 MD5 c14eecc39f9e4d6b37b94f4e81df755d metadata.xml 257
-MD5 ab63fee2d2f06f8c8341ca779098c7d6 libpcap-ringbuffer-1.0.20050129-r2.ebuild 1703
+MD5 b70b78302675b24cc17b4242cc3d4030 libpcap-ringbuffer-1.0.20050129-r2.ebuild 1702
 MD5 a515448deadd95cb78cacf175a0aeba4 files/digest-libpcap-ringbuffer-1.0.20041001 72
-MD5 13baa2560936dddce623fc3b2d207aa9 files/libpcap-ringbuffer-1.0.20050129-makefile.patch 2426
 MD5 2801bbe6917277fe63e0115dac7648b5 files/libpcap-ringbuffer-1.0.20050129-mmap-exec.patch 728
 MD5 88de1c13f5c2a764d4613cd7070766c6 files/digest-libpcap-ringbuffer-1.0.20050129-r2 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCqqCUmdTrptrqvGERAsZVAKCHZ3YOqSQxkHp8ejsX/E2+SVxKcwCcCcv0
-9c0G8uePucs2gsrU2+0Xjas=
-=YoHl
------END PGP SIGNATURE-----
+MD5 13baa2560936dddce623fc3b2d207aa9 files/libpcap-ringbuffer-1.0.20050129-makefile.patch 2426
