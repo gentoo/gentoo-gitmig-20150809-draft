@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.72 2005/05/31 19:59:05 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.73 2005/06/11 02:18:05 nerdboy Exp $
+
+  11 Jun 2005; Steve Arnold <nerdboy@gentoo.org>
+  +files/doxygen-1.4.3-nls.patch, +doxygen-1.4.3-r1.ebuild
+  -doxygen-1.4.3.ebuild:
+  added patch for ChrisWhite's obscure Japanese beetle (bug 95627)
+  thanks!  removed previous ~arch
 
   31 May 2005; Rene Nussbaumer <killerfox@gentoo.org> doxygen-1.4.2.ebuild:
   Stable on hppa.

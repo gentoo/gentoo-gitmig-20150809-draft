@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3.ebuild,v 1.1 2005/05/30 04:23:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.1 2005/06/11 02:18:05 nerdboy Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 		-e "s:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= ${CXXFLAGS}:" \
 		tmake/lib/linux-g++/tmake.conf
 	epatch ${FILESDIR}/${P}-cp1251.patch
+	epatch ${FILESDIR}/${P}-nls.patch
 	use ppc-macos && epatch ${FILESDIR}/bsd-configure.patch
 }
 
