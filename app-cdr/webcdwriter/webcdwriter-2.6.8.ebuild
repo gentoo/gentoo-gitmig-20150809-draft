@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.6.8.ebuild,v 1.2 2005/06/10 19:59:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.6.8.ebuild,v 1.3 2005/06/11 11:45:34 dholm Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="http://joerghaeger.de/webCDwriter/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="java pam mp3 sox oggvorbis"
 
 DEPEND="java? ( virtual/jdk dev-java/jnlp-bin )"
