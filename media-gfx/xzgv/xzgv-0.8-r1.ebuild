@@ -1,20 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8-r1.ebuild,v 1.9 2005/05/24 22:04:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8-r1.ebuild,v 1.10 2005/06/11 06:38:48 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="An X image viewer."
-SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X/${P}.tar.gz"
+DESCRIPTION="An X image viewer"
 HOMEPAGE="http://rus.members.beeb.net/xzgv.html"
+SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc amd64 ~ppc64 ~hppa ~alpha"
+SLOT="0"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11
-	sys-apps/gawk
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
@@ -66,5 +65,5 @@ src_install() {
 
 	cd ${S}
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README* TODO
 }
