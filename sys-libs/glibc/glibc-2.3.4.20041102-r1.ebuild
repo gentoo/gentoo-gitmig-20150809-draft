@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.14 2005/06/05 08:55:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.15 2005/06/11 04:37:24 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -894,13 +894,14 @@ src_install() {
 		mkdir -p ${D}/nptl ${D}/usr/include/nptl
 		make install_root=${D}/nptl install-headers PARALLELMFLAGS="${MAKEOPTS}"
 		pushd ${D}/nptl/usr/include > /dev/null
-			for i in `find . -type f`; do
-				if ! [ -f ${D}/usr/include/$i ] \
-					|| ! cmp -s $i ${D}/usr/include/$i; then
+		for i in `find . -type f`; do
+			if ! [ -f ${D}/usr/include/$i ] \
+			   || ! cmp -s $i ${D}/usr/include/$i; then
 				mkdir -p ${D}/usr/include/nptl/`dirname $i`
 				cp -a $i ${D}/usr/include/nptl/$i
 			fi
 		done
+		popd > /dev/null
 		rm -rf ${D}/nptl
 	fi
 

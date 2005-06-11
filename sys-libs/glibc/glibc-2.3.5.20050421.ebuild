@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.15 2005/06/06 05:09:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.16 2005/06/11 04:37:24 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -378,13 +378,14 @@ toolchain-glibc_src_install() {
 		mkdir -p ${D}/nptl ${D}$(alt_headers)/nptl
 		make install_root=${D}/nptl install-headers PARALLELMFLAGS="${MAKEOPTS} -j1"
 		pushd ${D}/nptl/$(alt_headers) > /dev/null
-			for i in `find . -type f`; do
-				if ! [ -f ${D}$(alt_headers)/$i ] \
-					|| ! cmp -s $i ${D}$(alt_headers)/$i; then
+		for i in `find . -type f`; do
+			if ! [ -f ${D}$(alt_headers)/$i ] \
+			   || ! cmp -s $i ${D}$(alt_headers)/$i; then
 				mkdir -p ${D}$(alt_headers)/nptl/`dirname $i`
 				cp -a $i ${D}$(alt_headers)/nptl/$i
 			fi
 		done
+		popd > /dev/null
 		rm -rf ${D}/nptl
 	fi
 
