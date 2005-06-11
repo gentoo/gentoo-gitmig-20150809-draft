@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.4.0.ebuild,v 1.1 2005/06/10 19:43:18 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.4.0.ebuild,v 1.2 2005/06/11 12:05:40 dholm Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://zope.org/Products/ZODB3.4"
 SRC_URI="http://zope.org/Products/${MY_P}3.4/${MY_P}%20${PV}/${MY_P}3-${PV}.tgz"
 LICENSE="ZPL"
 SLOT="3.4"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3.5"
