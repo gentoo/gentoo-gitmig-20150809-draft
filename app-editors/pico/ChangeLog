@@ -1,23 +1,8 @@
 # ChangeLog for app-editors/pico
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/pico/ChangeLog,v 1.10 2005/01/01 13:33:07 eradicator Exp $
-
-  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
-  pico-0.0.1.ebuild:
-  QA - IUSE fix
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/pico/ChangeLog,v 1.11 2005/06/11 20:48:40 vapier Exp $
 
 *pico-0.0.1 (09 June 2002)
 
   06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> pico-0.0.1.ebuild :
-
   PROVIDE virtual/editor
-
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
-
-  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
-  Updated keywords, * is depreciated
-
-  09 June 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
-
-  Initial import, closes bug #3464.
-  ebuild submitted by Maik Schreiber <bZ@iq-computing.de>
