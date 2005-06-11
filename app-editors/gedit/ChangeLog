@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.104 2005/06/11 10:24:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.105 2005/06/11 10:34:20 kloeri Exp $
+
+  11 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> gedit-2.10.3.ebuild:
+  Stable on alpha, bug 93352.
 
   11 Jun 2005; Markus Rothe <corsair@gentoo.org> gedit-2.10.3.ebuild:
   Stable on ppc64; bug #93352
