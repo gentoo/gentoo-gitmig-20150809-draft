@@ -1,10 +1,20 @@
-MD5 0bc31ef59b062767f5dbc848aeab00c6 ChangeLog 5729
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc78d921da502c3bf97295a036884823 ChangeLog 5901
 MD5 908661e58c7ceecef6b9669a134f4a5c ettercap-0.7.2.ebuild 1704
+MD5 7908168b78926215299ac14cf2ffc592 ettercap-0.7.3.ebuild 1559
 MD5 af0d7d60afd50554f602c2680adcf481 ettercap-0.7.0.ebuild 1691
-MD5 6649f04e318cfbe2bd20942448a807cb ettercap-0.7.3.ebuild 1555
 MD5 790244e0adb9c28e0c3607cfc46af7e4 ettercap-0.7.1.ebuild 1703
 MD5 61da3c68a3ae57136cdc2a17fbaedfaf metadata.xml 223
-MD5 137f9af8e37b29a7035cc143186523e4 files/digest-ettercap-0.7.2 70
-MD5 fb19d64e65aa26fde0e7fe78ef8147c5 files/digest-ettercap-0.7.3 70
 MD5 6dc46b78f823aea675d64411673851a2 files/digest-ettercap-0.7.0 70
+MD5 fb19d64e65aa26fde0e7fe78ef8147c5 files/digest-ettercap-0.7.3 70
 MD5 2dfc113de5700233c282ca6a0d7c8ea0 files/digest-ettercap-0.7.1 70
+MD5 137f9af8e37b29a7035cc143186523e4 files/digest-ettercap-0.7.2 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCqkU6mdTrptrqvGERAnaSAJ98/WA/ny8N7F3UpwOFKz+asIpFKQCgluiI
+GbSC5JbiHPGPiMSNbH0xFkU=
+=zXP3
+-----END PGP SIGNATURE-----
