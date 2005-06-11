@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20050422.ebuild,v 1.2 2005/06/09 00:27:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20050514.ebuild,v 1.1 2005/06/11 14:18:08 swegener Exp $
 
 inherit flag-o-matic
 
@@ -55,7 +55,7 @@ src_install() {
 
 	dodoc \
 		AUTHORS COPYING* CREDITS ChangeLog DEBUGGING ENVIRONMENT FAQ \
-		INSTALL NEWS TODO README README_FIRST UPDATING || die "dodoc failed"
+		INSTALL NEWS TODO README || die "dodoc failed"
 	dohtml README.html || die "dohtml failed"
 }
 
