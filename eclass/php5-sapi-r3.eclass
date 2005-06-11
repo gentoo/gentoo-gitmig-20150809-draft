@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.3 2005/06/11 14:55:17 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.4 2005/06/11 15:29:33 stuart Exp $
 #
 # ########################################################################
 #
@@ -125,6 +125,15 @@ EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack pkg_postinst
 # ========================================================================
 
 php5-sapi-r3_check_awkward_uses() {
+
+	# unfortunately, libedit support is broken atm
+
+	if useq libedit ; then
+		eerror
+		eerror "php-5.1-beta doesn't link successfully if you use libedit"
+		eerror "Please switch to using readline instead for now."
+		die "libedit support broken"
+	fi
 
 	# disabled hardenedphp after many reports of problems w/ apache
 	# need to look into this at some point
