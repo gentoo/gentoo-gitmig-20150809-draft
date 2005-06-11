@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.35 2005/06/09 19:50:49 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.36 2005/06/11 12:27:34 josejx Exp $
+
+  11 Jun 2005; Joseph Jezak <josejx@gentoo.org> mirrorselect-1.0.2.ebuild:
+  Marked ~ppc for bug #95270.
 
   09 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org>
   mirrorselect-1.0.2.ebuild:
