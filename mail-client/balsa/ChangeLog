@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.30 2005/06/05 11:49:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.31 2005/06/11 12:20:59 allanonjl Exp $
+
+*balsa-2.2.6-r4 (11 Jun 2005)
+
+  11 Jun 2005; John N. Laliberte <allanonjl@gentoo.org> -balsa-2.2.6.ebuild,
+  -balsa-2.2.6-r1.ebuild, -balsa-2.2.6-r2.ebuild, +balsa-2.2.6-r4.ebuild:
+  scrollkeeper violation fix as reported in #92920, cleanup old ebuilds.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   balsa-2.0.15-r2.ebuild:
