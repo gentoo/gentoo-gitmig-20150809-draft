@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.0.ebuild,v 1.1 2005/06/11 18:03:06 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.0.ebuild,v 1.2 2005/06/11 18:18:57 fserb Exp $
 
 inherit distutils eutils games
 
 DESCRIPTION="Python version of the board game Rush Hour"
 HOMEPAGE="http://alpha.uhasselt.be/Research/Algebra/Members/pytraffic/"
 SRC_URI="http://alpha.uhasselt.be/Research/Algebra/Members/pytraffic/${P}.tar.gz"
-
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,8 +19,8 @@ DEPEND="dev-python/pygame
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gentoo-dirs.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-gentoo-dirs.patch"
 }
 
 src_compile() {
