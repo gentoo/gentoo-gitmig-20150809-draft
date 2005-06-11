@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.25 2005/06/10 16:29:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.26 2005/06/11 10:28:58 corsair Exp $
+
+  11 Jun 2005; Markus Rothe <corsair@gentoo.org> inkscape-0.41-r1.ebuild:
+  Stable on ppc64; bug #92995
 
   10 Jun 2005; Joseph Jezak <josejx@gentoo.org> inkscape-0.41-r1.ebuild:
   Marked ppc stable.
