@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.4 2005/06/11 15:29:33 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.5 2005/06/11 15:44:03 stuart Exp $
 #
 # ########################################################################
 #
@@ -16,6 +16,8 @@
 #				<stuart@gentoo.org>
 #
 # ========================================================================
+
+CONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix msession msql oci8 oracle7 ovrimos pfpro sapdb solid sybase sybase-ct"
 
 inherit flag-o-matic eutils confutils libtool
 

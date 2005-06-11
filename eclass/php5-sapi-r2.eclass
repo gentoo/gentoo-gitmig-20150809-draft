@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.17 2005/06/11 09:09:00 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.18 2005/06/11 15:44:03 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -11,6 +11,11 @@
 #				<stuart@gentoo.org>
 #
 # ========================================================================
+
+# a list of the USE flags which PHP supports, but which we don't have
+# required packages in the tree
+
+CONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix ingres mnogosearch msession msql oci8 oracle7 ovrimos pfpro sapdb solid sybase sybase-ct"
 
 inherit flag-o-matic eutils confutils libtool
 
