@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4078 2005/06/11 10:51:27 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4079 2005/06/11 14:46:58 stuart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,17 @@
 ##
 ##   End example
 ##
+
+# Stuart Herbert <stuart@gentoo.org> (11 Jun 2005)
+# Masked until php5 is no longer masked
+dev-php/PECL-apd
+dev-php/PEAR-PHPUnit2
+dev-php/creole
+dev-php/jargon
+dev-php/phing
+dev-php/propel
+dev-php/propel-generator
+dev-php/propel-runtime
 
 # Stuart Herbert <stuart@gentoo.org> (10 Jun 2005)
 # Masked until the eclass is finished, and the PECL packages are done
