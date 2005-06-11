@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 9f8df92cb4d9037647baedfec76e7ab4 ChangeLog 392
 MD5 dd068133bd54bcb0e2d32191cc97a088 metadata.xml 355
-MD5 bcbd70fdc4c02e68eddfe234bd559307 obby-0.1.0.ebuild 768
+MD5 a7fa52a6b2cade0cd8280722e68f4ad2 obby-0.1.0.ebuild 760
 MD5 b77071ad6bce4de65b637205851b7cce files/digest-obby-0.1.0 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCq0W68zY1VwezZiERAvK/AJ4ieAwhQZHwfZMf027fTLiSiPOwHACfZgGL
-x25UrWbRJqfwbOmJyyYzrPs=
-=uLqi
+iD8DBQFCq0iL8zY1VwezZiERAsFCAJsEpm6zJQvcRDsx2hZuCNib9x+ieACeK0tv
+RuXSCRb/FIBgiaUQGpd9GFc=
+=McvP
 -----END PGP SIGNATURE-----
