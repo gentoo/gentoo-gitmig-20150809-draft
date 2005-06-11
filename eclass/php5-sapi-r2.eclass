@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.15 2005/06/09 21:41:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.16 2005/06/11 00:17:28 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -132,8 +132,7 @@ php5-sapi-r2_check_awkward_uses() {
 		die "snmp support doesn't compile"
 	fi
 
-	# mysqli support is enabled for now, but if it proves a problem,
-	# I'm switching it off again
+	# mysqli support is disabled; see bug #53886
 
 	if useq mysqli ; then
 		eerror
@@ -476,11 +475,6 @@ php5-sapi-r2_src_install() {
 	useq sharedext && PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules"
 	make INSTALL_ROOT=${D} $PHP_INSTALLTARGETS || die "install failed"
 
-	# annoyingly, we have to install the CLI by hand
-	if [ "$PHPSAPI" = "cli" ]; then
-		dobin sapi/cli/php
-	fi
-
 	# get the extension dir
 	PHPEXTDIR="`${D}/usr/bin/php-config --extension-dir`"
 
@@ -511,16 +505,12 @@ php5-sapi-r2_src_install() {
 
 	# PEAR-Installer and phpconfig install the following, so we
 	# don't have to
-	rm -rf ${D}/usr/bin/{php,phpextdist,phpize,php-config,pear}
+	rm -rf ${D}/usr/bin/{phpextdist,phpize,php-config,pear}
 	rm -rf ${D}/usr/lib/php/build
 	rm -rf ${D}/usr/include/php
 
 	# we let each SAPI install the man page
 	# this does mean that the packages are in conflict for now
-
-	if [ "$PHPSAPI" != "cli" ]; then
-		rm -rf ${D}/usr/share/man/man1/php.1*
-	fi
 }
 
 php5-sapi-r2_pkg_postinst() {
