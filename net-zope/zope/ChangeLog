@@ -1,6 +1,15 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.68 2005/05/21 09:33:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.69 2005/06/11 11:56:33 radek Exp $
+
+*zope-2.8.0 (11 Jun 2005)
+
+  11 Jun 2005; Radoslaw Stachowiak <radek@gentoo.org>
+  -files/2.7.3/zope.initd, -zope-2.7.3.ebuild, -zope-2.7.4.ebuild,
+  zope-2.7.6.ebuild, +zope-2.8.0.ebuild:
+  added zope-2.8.0 (downgraded all arches to ~)
+  removed obsolete 2.7.3 and 2.7.4 ebuilds
+  marked stable 2.7.6 on x86
 
   21 May 2005; Simon Stelling <blubb@gentoo.org> zope-2.7.5.ebuild:
   stable on amd64

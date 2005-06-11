@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.4.ebuild,v 1.4 2005/02/25 01:10:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.0.ebuild,v 1.1 2005/06/11 11:56:33 radek Exp $
 
 inherit eutils
 
 DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
 HOMEPAGE="http://www.zope.org"
-SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-0.tgz"
+SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-final.tar.gz"
 LICENSE="ZPL"
 SLOT="${PV}"
 
-KEYWORDS="x86 sparc ~ppc ~alpha ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
 IUSE="unicode"
 
 RDEPEND="=dev-lang/python-2.3*"
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 virtual/libc
 >=sys-apps/sed-4.0.5"
 
-S="${WORKDIR}/Zope-${PV}-0"
+S="${WORKDIR}/Zope-${PV}-final"
 ZUID=zope
 ZGID=zope
 ZS_DIR=${ROOT%/}/usr/lib
@@ -52,6 +52,7 @@ src_install() {
 	dodoc README.txt
 	dodoc doc/*.txt
 	docinto PLATFORMS ; dodoc doc/PLATFORMS/*
+	docinto ZEO ; dodoc doc/ZEO/*
 
 	# Patched StructuredText will accept source text formatted in utf-8 encoding, 
 	# apply all formattings and output utf-8 encoded text.
@@ -72,7 +73,8 @@ src_install() {
 	 	einfo "import sys"
 		einfo "sys.setdefaultencoding('utf8')"
 		cd ${S}/lib/python/StructuredText/
-		epatch ${FILESDIR}/${PV}/i18n-1.0.0.patch
+		epatch ${FILESDIR}/2.7.6/i18n-1.0.0.patch
+		sleep 15
 		cd ${S}
 	fi
 
