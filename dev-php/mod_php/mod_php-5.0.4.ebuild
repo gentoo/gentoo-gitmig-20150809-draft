@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.4.ebuild,v 1.3 2005/05/19 20:23:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.4.ebuild,v 1.4 2005/06/11 08:53:33 stuart Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -50,13 +50,21 @@ src_unpack() {
 	# if we're not using threads, we need to force them to be switched
 	# off by patching php's configure script
 	cd ${S}
-	pwd
 	if ! useq threads ; then
 		epatch ${FILESDIR}/php5-prefork.patch || die "Unable to patch for prefork support"
 		einfo "Rebuilding configure script"
 		WANT_AUTOCONF=2.5 \
 		autoconf -W no-cross || die "Unable to regenerate configure script"
 	fi
+
+	#########################################################################
+	# DO NOT ADD PATCHES HERE UNLESS THEY ARE UNIQUE TO MOD_PHP
+	#
+	# Please add your patches to the eclass, where they belong ;-)
+	#
+	# Best regards,
+	# Stu
+	#########################################################################
 }
 
 src_compile() {
