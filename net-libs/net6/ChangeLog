@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/net6
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/ChangeLog,v 1.1 2005/06/11 19:06:40 humpback Exp $
+
+*net6-1.0.1 (11 Jun 2005)
+
+  11 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>; +metadata.xml,
+  +net6-1.0.1.ebuild:
+  Initial import for deps for gobby. Ebuild done by original developers.
+
