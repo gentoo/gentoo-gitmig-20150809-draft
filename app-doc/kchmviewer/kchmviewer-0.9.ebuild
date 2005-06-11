@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-0.9.ebuild,v 1.1 2005/06/09 12:48:33 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-0.9.ebuild,v 1.2 2005/06/11 13:32:45 centic Exp $
 
-inherit kde-functions eutils
+inherit kde eutils
 
 DESCRIPTION="Qt-based feature rich CHM file viewer."
 HOMEPAGE="http://kchmviewer.sourceforge.net/"
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/automake"
 
-need-qt 3.3
+need-kde 3.3
 
 src_unpack() {
 	unpack ${A}
@@ -34,14 +34,14 @@ src_unpack() {
 	perl am_edit || die
 }
 
-src_compile() {
-	set-kdedir 3
+#src_compile() {
+#	set-kdedir 3
+#
+#	econf $(use_with kde) || die
+#	emake || die
+#}
 
-	econf $(use_with kde) || die
-	emake || die
-}
-
-src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc ChangeLog
-}
+#src_install() {
+#	make DESTDIR="${D}" install || die
+#	dodoc ChangeLog
+#}
