@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.76 2005/05/19 05:23:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.77 2005/06/11 20:50:28 kumba Exp $
+
+*mips-sources-2.4.31 (11 Jun 2005)
+
+  11 Jun 2005; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.4.28-r2.ebuild, +mips-sources-2.4.31.ebuild,
+  -mips-sources-2.6.10-r3.ebuild, +mips-sources-2.6.10-r4.ebuild,
+  -mips-sources-2.6.12_rc2-r2.ebuild, -mips-sources-2.6.12_rc3-r1.ebuild,
+  +mips-sources-2.6.12_rc6.ebuild:
+  New ebuilds: dropped 2.4.28 due to age and replaced it with 2.4.31 for IP22
+  systems only. revbumped 2.6.10 to plug some security holes (CAN-2005-1041,
+  CAN-2005-1265, CAN-2005-1589, etc..), and added a new ebuild for 2.6.12-rc6.
 
   19 May 2005; Joshua Kinard <kumba@gentoo.org> mips-sources-2.6.10-r3.ebuild,
   mips-sources-2.6.12_rc2-r2.ebuild, mips-sources-2.6.12_rc3-r1.ebuild:
