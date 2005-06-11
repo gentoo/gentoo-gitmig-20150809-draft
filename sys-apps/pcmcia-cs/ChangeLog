@@ -1,13 +1,13 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.90 2005/06/11 12:05:48 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.91 2005/06/11 12:11:06 brix Exp $
 
 *pcmcia-cs-3.2.8-r1 (11 Jun 2005)
 
   11 Jun 2005; <brix@gentoo.org> +pcmcia-cs-3.2.8-r1.ebuild:
   Introduce USE="vanilla" for using the original network script instead of the
-  Gentoo specific one, thanks to Kelly Price. This fixes bug #1990, bug #95072
-  and bug #68908. Also add debugging output for Configure arguments.
+  Gentoo specific one, thanks to Kelly Price. This fixes bug #1990 and bug #95072.
+  Also add debugging output for Configure arguments.
 
   27 May 2005; <brix@gentoo.org> pcmcia-cs-3.2.8.ebuild:
   Stable on x86.
