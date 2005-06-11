@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1b2e99455c4dd0259c3bec20b4917f11 eruby-syntax-2.0.ebuild 515
+MD5 1012430c8bb1eb09c5f9bfb2aa6d1da5 ChangeLog 410
+MD5 34acc0250b08e4f3f0b5044e1294aa22 metadata.xml 250
+MD5 fc1242555bc9b8ef91bd7fbbde5d8d91 files/digest-eruby-syntax-2.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCq3kFEZCkKN40op4RAsNeAJ9iPaJDumotSQIi8uQjUn2DBR3aLwCgvwTp
+EV5MQv60G1pAt89nhK+yZhQ=
+=at0K
+-----END PGP SIGNATURE-----
