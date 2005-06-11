@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.16 2005/06/11 00:17:28 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.17 2005/06/11 09:09:00 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -121,6 +121,19 @@ EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack pkg_postinst
 # ========================================================================
 
 php5-sapi-r2_check_awkward_uses() {
+
+	# disabled hardenedphp after many reports of problems w/ apache
+	# need to look into this at some point
+
+	if useq hardenedphp ; then
+		eerror
+		eerror "hardenedphp is reported to break php for some users."
+		eerror "We've disabled this feature for now until it has been"
+		eerror "thoroughly investigated."
+		eerror
+		eerror "Please disable the hardenedphp USE flag"
+		die "hardenedphp support disabled"
+	fi
 
 	# snmp support seems broken, haven't looked into a fix for it yet
 
