@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.166 2005/06/09 02:44:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.167 2005/06/11 06:03:31 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -613,7 +613,6 @@ split_out_specs_files() {
 		create_vanilla_specs_file
 		create_hardenednossp_specs_file
 		create_hardenednopie_specs_file
-		create_hardenednopiessp_specs_file
 	elif hardened_gcc_works pie ; then
 		create_vanilla_specs_file
 		create_hardenednossp_specs_file
@@ -621,6 +620,7 @@ split_out_specs_files() {
 		create_vanilla_specs_file
 		create_hardenednopie_specs_file
 	fi
+	create_hardenednopiessp_specs_file
 }
 
 create_gcc_env_entry() {
