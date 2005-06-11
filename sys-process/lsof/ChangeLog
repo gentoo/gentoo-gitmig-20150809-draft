@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/lsof
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.5 2005/04/09 13:22:43 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.6 2005/06/11 00:52:13 vapier Exp $
+
+*lsof-4.75 (11 Jun 2005)
+
+  11 Jun 2005; Mike Frysinger <vapier@gentoo.org> +lsof-4.75.ebuild:
+  Version bump #95676 by Andrej Kacian.
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> lsof-4.73.ebuild:
   Stable on ppc64
