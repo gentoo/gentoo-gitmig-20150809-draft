@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/libpcap-ringbuffer-1.0.20050129-r1.ebuild,v 1.1 2005/06/03 08:37:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/libpcap-ringbuffer-1.0.20050129-r2.ebuild,v 1.1 2005/06/11 08:27:44 dragonheart Exp $
 
 inherit toolchain-funcs linux-info multilib eutils
 
@@ -31,11 +31,12 @@ src_unpack() {
 	cd ${S}
 	sed -i 's:@CFLAGS@:@CFLAGS@ -fPIC:' Makefile.in || die "fPIC patch failed."
 	epatch ${FILESDIR}/${P}-mmap-exec.patch
+	epatch ${FILESDIR}/${P}-makefile.patch
 }
 
 src_compile() {
 	cd ${S}
-	econf `use_enable ipv6` || die "bad configure"
+	econf `use_enable ipv6` --with-pcap=ring || die "bad configure"
 	emake || die "compile problem"
 
 	# no provision for this in the Makefile, so...
@@ -48,15 +49,8 @@ src_install() {
 	dodir /usr/$(get_libdir)
 	emake DESTDIR=${D} install || die "install problem"
 	dodoc CREDITS CHANGES FILES README* VERSION
-
-	dolib libpcap.so.${PV:0:3}
-
-	doins /usr/$(get_libdir)
-
-	for link in "" .0 .0.7 .0.8
-	do
-		dosym libpcap.so.${PV:0:3} libpcap.so${link}
-	done
+	mv libpcap.so.${PV:0:3} libpcap.so.${PV:0:3}.0
+	dolib libpcap.so.${PV:0:3}.0
 }
 
 pkg_postinst() {
