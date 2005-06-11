@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.0.ebuild,v 1.9 2005/01/31 03:25:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.0.ebuild,v 1.10 2005/06/11 22:04:32 vapier Exp $
 
 inherit flag-o-matic eutils games
 
@@ -26,7 +26,6 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	set > /tmp/emerge-env.txt
 	cd "${S}"
 	# Uses $SYNC which which conflicts with emerge
 	sed -i \
