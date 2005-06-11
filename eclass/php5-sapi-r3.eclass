@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.2 2005/06/11 13:42:26 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.3 2005/06/11 14:55:17 stuart Exp $
 #
 # ########################################################################
 #
@@ -62,7 +62,8 @@ DEPEND="$DEPEND
 	mime? ( sys-apps/file )
 	ming? ( media-libs/ming )
 	mssql? ( dev-db/freetds )
-	mysql? ( =dev-db/mysql-4.0* )
+	mysql? ( dev-db/mysql )
+	mysqli? ( >=dev-php/mysql-4.1* )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
@@ -149,14 +150,14 @@ php5-sapi-r3_check_awkward_uses() {
 	fi
 
 	# mysqli support is disabled; see bug #53886
-
-	if useq mysqli ; then
-		eerror
-		eerror "We currently do not support the mysqli extension"
-		eerror "Support will be added once MySQL 4.1 is no longer package-masked"
-		eerror
-		die "mysqli not supported yet"
-	 fi
+	#
+	# if useq mysqli ; then
+	#	eerror
+	#	eerror "We currently do not support the mysqli extension"
+	#	eerror "Support will be added once MySQL 4.1 is no longer package-masked"
+	#	eerror
+	#	die "mysqli not supported yet"
+	# fi
 
 	# recode not available in 5.0.0; upstream bug
 	if useq recode && [ "$PHP_PV" == "5.0.0" ]; then
@@ -266,9 +267,7 @@ php5-sapi-r3_check_awkward_uses() {
 		enable_extension_with		"mysql"			"mysql"			1 "/usr/lib/mysql"
 		enable_extension_with		"mysql-sock"	"mysql"			0 "/var/run/mysqld/mysqld.sock"
 	fi
-	if useq mysqli; then
-		enable_extension_with		"mysqli"		"mysqli"		1 "/usr/bin/mysql_config"
-	fi
+	enable_extension_with		"mysqli"		"mysqli"		    1 "/usr/bin/mysql_config"
 
 	# QDBM doesn't play nicely with GDBM _or_ DBM
 	confutils_use_conflict "qdbm" "gdbm" "dbm"
