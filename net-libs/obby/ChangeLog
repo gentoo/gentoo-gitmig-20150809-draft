@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/obby
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.1 2005/06/11 20:14:11 humpback Exp $
+
+*obby-0.1.0 (11 Jun 2005)
+
+  11 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>; +metadata.xml,
+  +obby-0.1.0.ebuild:
+  Initial import. Ebuild done by upstream developers. Dep for gobby.
+
