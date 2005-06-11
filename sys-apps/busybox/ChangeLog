@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.70 2005/06/04 03:39:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.71 2005/06/11 13:53:43 solar Exp $
+
+  11 Jun 2005; <solar@gentoo.org> busybox-1.00-r4.ebuild:
+  - ifup/ifdown need run-parts. #95190
 
   04 Jun 2005; Mike Frysinger <vapier@gentoo.org> busybox-1.00-r4.ebuild:
   Dont abort if user has a known broken glibc wrt to static compilation #94879.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.13 2005/06/11 00:49:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.14 2005/06/11 13:53:43 solar Exp $
 
 inherit eutils
 
@@ -128,7 +128,7 @@ src_unpack() {
 	# default a bunch of uncommon options to off
 	for opt in LOCALE_SUPPORT TFTP FTP{GET,PUT} IPCALC TFTP HUSH \
 		LASH MSH INETD DPKG RPM2CPIO RPM FOLD LOGNAME OD CRONTAB \
-		UUDECODE UUENCODE RUN_PARTS SULOGIN DC
+		UUDECODE UUENCODE SULOGIN DC
 	do
 		busybox_config_option n ${opt}
 	done
