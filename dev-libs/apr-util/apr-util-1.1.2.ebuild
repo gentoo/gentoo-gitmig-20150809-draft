@@ -1,7 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.1.2.ebuild,v 1.2 2005/04/24 08:41:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.1.2.ebuild,v 1.3 2005/06/11 22:07:59 kloeri Exp $
 
+inherit multilib
 
 DESCRIPTION="Apache Portable Runtime Library"
 HOMEPAGE="http://apr.apache.org/"
@@ -29,13 +30,17 @@ src_compile() {
 
 	if use berkdb; then
 		if has_version '=sys-libs/db-4.2*'; then
-			myconf="${myconf} --with-dbm=db42 --with-berkely-db=/usr"
+			myconf="${myconf} --with-dbm=db42
+			--with-berkeley-db=/usr/include/db4.2:/usr/$(get_libdir)"
 		elif has_version '=sys-libs/db-4*'; then
-			myconf="${myconf} --with-dbm=db4 --with-berkely-db=/usr"
+			myconf="${myconf} --with-dbm=db4
+			--with-berkeley-db=/usr/include/db4:/usr/$(get_libdir)"
 		elif has_version '=sys-libs/db-3*'; then
-			myconf="${myconf} --with-dbm=db3 --with-berkely-db=/usr"
+			myconf="${myconf} --with-dbm=db3
+			--with-berkeley-db=/usr/include/db3:/usr/$(get_libdir)"
 		elif has_version '=sys-libs/db-2'; then
-			myconf="${myconf} --with-dbm=db2 --with-berkely-db=/usr"
+			myconf="${myconf} --with-dbm=db2
+			--with-berkely-db=/usr/include/db2:/usr/$(get_libdir)"
 		fi
 	fi
 

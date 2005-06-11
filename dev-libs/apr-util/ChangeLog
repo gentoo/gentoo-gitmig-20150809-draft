@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.20 2005/05/10 23:54:36 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.21 2005/06/11 22:07:58 kloeri Exp $
+
+  11 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
+  apr-util-0.9.6-r2.ebuild, apr-util-1.1.2.ebuild:
+  Fix g/bsd compatibility, bug 95468.
 
 *apr-util-0.9.6-r2 (10 May 2005)
 *apr-util-0.9.5-r1 (10 May 2005)
