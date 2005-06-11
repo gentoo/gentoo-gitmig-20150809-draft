@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12_beta2.ebuild,v 1.3 2005/06/05 04:48:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12_beta2.ebuild,v 1.4 2005/06/11 17:59:34 josejx Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.k3b.org/"
 SRC_URI="mirror://sourceforge/k3b/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="css dvdr encode ffmpeg flac hal kde mp3 musepack vorbis"
 
 DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
