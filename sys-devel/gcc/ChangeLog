@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.418 2005/06/11 00:48:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.419 2005/06/11 23:04:22 halcy0n Exp $
+
+*gcc-4.1.0_beta20050611 (11 Jun 2005)
+
+  11 Jun 2005; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.1.0_beta20050604.ebuild, +gcc-4.1.0_beta20050611.ebuild:
+  Bump to new GCC 4.1 snapshot
 
   11 Jun 2005; Luca Barbato <lu_zero@gentoo.org> gcc-3.4.4.ebuild:
   BAD typo in gcc-3.4.4 . It is stable, but got wrongly marked stable before
