@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13.ebuild,v 1.3 2005/06/10 11:49:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13.ebuild,v 1.4 2005/06/11 11:27:24 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -9,9 +9,10 @@ inherit eutils multilib linux-info linux-mod toolchain-funcs
 DESCRIPTION="Ati precompiled drivers for r350, r300, r250 and r200 chipsets"
 HOMEPAGE="http://www.ati.com"
 SRC_URI="x86? (
-http://www2.ati.com/drivers/linux/ati-driver-installer-${PV}-IA32.run )
+http://www2.ati.com/drivers/linux/ati-driver-installer-${PV}.run )
 	 amd64? (
-	 http://www2.ati.com/drivers/linux/64bit/ati-driver-installer-${PV}-x86_64.run )"
+	 http://www2.ati.com/drivers/linux/64bit/ati-driver-installer-${PV}.run
+	 )"
 
 LICENSE="ATI"
 KEYWORDS="-* ~amd64 ~x86"
