@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gstreamripper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/ChangeLog,v 1.9 2005/06/12 12:13:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/ChangeLog,v 1.10 2005/06/12 15:06:26 dertobi123 Exp $
+
+  12 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  gstreamripper-0.2.ebuild:
+  Stable on ppc.
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> gstreamripper-0.2.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.
