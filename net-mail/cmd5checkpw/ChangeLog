@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cmd5checkpw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.27 2005/06/10 03:05:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.28 2005/06/12 12:14:03 kloeri Exp $
+
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
+  cmd5checkpw-0.22-r3.ebuild:
+  Stable on alpha.
 
   10 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   cmd5checkpw-0.22-r3.ebuild:
