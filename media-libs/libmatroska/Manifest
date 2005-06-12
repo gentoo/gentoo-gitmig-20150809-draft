@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 65f8d0e35b8781b0aeaff644e8865791 libmatroska-0.5.2.ebuild 798
 MD5 fa73ad87e4bd7e3ed0fe57002307ce0e ChangeLog 7473
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
@@ -24,3 +27,10 @@ MD5 c95f16fd10678062af97f9f35ac7fd5f files/libmatroska-shared.patch 2513
 MD5 a517d15638be5ee91357b70059040e06 files/digest-libmatroska-0.5.2 68
 MD5 a37de967f24a547a9f51018af01ccd30 files/digest-libmatroska-0.6.2 68
 MD5 e876907179da59e732df35668dd6e656 files/digest-libmatroska-0.7.4 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrMu2Kf2g/qXtneoRAr+pAJ472WU+RmGljybONRtVIALW+gzkAgCfVzmR
+PL7g8qJGx9fDryEriRPNfRI=
+=d/ai
+-----END PGP SIGNATURE-----
