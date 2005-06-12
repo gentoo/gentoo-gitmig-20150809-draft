@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.8 2005/06/06 15:32:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.9 2005/06/12 15:19:03 kloeri Exp $
+
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> cronbase-0.3.2.ebuild:
+  Stable on alpha.
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> cronbase-0.3.2.ebuild:
   Stable on ppc64
