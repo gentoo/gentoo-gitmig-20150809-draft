@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6-r1.ebuild,v 1.10 2005/02/07 01:47:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6-r1.ebuild,v 1.11 2005/06/12 12:11:44 swegener Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
 	gnome? ( gnome-base/gnome-libs )
-	qt? ( >=x11-libs/qt-3.0* )"
+	qt? ( >=x11-libs/qt-3.0 )"
 
 # the configure.in patch is required for 'use qt'
 src_unpack() {
