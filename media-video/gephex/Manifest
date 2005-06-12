@@ -1,6 +1,9 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5058c9b00a8344a3f43b2a200f7718bd gephex-0.0.4.ebuild 1159
 MD5 2a49038c50ecad6d0d355dea425bbb88 gephex-0.4.ebuild 1045
-MD5 a3ab0263bda68b2d053aa1c5ba512a02 gephex-0.4.3.ebuild 1559
+MD5 d585817c0481b1a12477d14c6628a43c gephex-0.4.3.ebuild 1559
 MD5 97485f32eaf67df967b6119bb6939693 ChangeLog 1088
 MD5 cf4e2f004c3253d8274ad74ded3ba2c0 gephex-0.4.1.ebuild 1158
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
@@ -13,3 +16,10 @@ MD5 fc047dc0d3d92510ae3f30e10856ad7c files/digest-gephex-0.4.3 67
 MD5 d0c894eccb6239538b954cb1d6680c5d files/0.0.4-makefile.in.patch 873
 MD5 1eefed026f973fc48b260ef40cecad56 files/digest-gephex-0.4.1 66
 MD5 4fe4a3b7c2fad145df1bbedc08e914db files/digest-gephex-0.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCq+/BpNOQ4DjaQW0RAnTnAKCne3NwYCo6aV7bFUo0+rndm3sJwACfXuDA
+JcEh9T9Cwh4SyDH6hO+yl/w=
+=9MNY
+-----END PGP SIGNATURE-----
