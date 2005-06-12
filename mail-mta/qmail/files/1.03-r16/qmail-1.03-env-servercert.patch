@@ -1,0 +1,33 @@
+diff -Nru qmail-1.03.orig/qmail-smtpd.c qmail-1.03/qmail-smtpd.c
+--- qmail-1.03.orig/qmail-smtpd.c	2005-06-06 00:32:59.000000000 +0300
++++ qmail-1.03/qmail-smtpd.c	2005-06-06 08:18:58.051312616 +0300
+@@ -1314,6 +1314,11 @@
+   stralloc saciphers = {0};
+   X509_STORE *store;
+   X509_LOOKUP *lookup;
++  const char *servercert;
++
++  /* if set, use servercert selected through SMTP_SERVERCERT env var */
++  servercert = env_get("SMTP_SERVERCERT");
++  if (!servercert) servercert = SERVERCERT;
+ 
+   SSL_library_init();
+ 
+@@ -1321,7 +1326,7 @@
+   ctx = SSL_CTX_new(SSLv23_server_method());
+   if (!ctx) { tls_err("unable to initialize ctx"); return; }
+ 
+-  if (!SSL_CTX_use_certificate_chain_file(ctx, SERVERCERT))
++  if (!SSL_CTX_use_certificate_chain_file(ctx, servercert))
+     { SSL_CTX_free(ctx); tls_err("missing certificate"); return; }
+   SSL_CTX_load_verify_locations(ctx, CLIENTCA, NULL);
+ 
+@@ -1343,7 +1348,7 @@
+   if (!myssl) { tls_err("unable to initialize ssl"); return; }
+ 
+   /* this will also check whether public and private keys match */
+-  if (!SSL_use_RSAPrivateKey_file(myssl, SERVERCERT, SSL_FILETYPE_PEM))
++  if (!SSL_use_RSAPrivateKey_file(myssl, servercert, SSL_FILETYPE_PEM))
+     { SSL_free(myssl); tls_err("no valid RSA private key"); return; }
+ 
+   ciphers = env_get("TLSCIPHERS");

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.18 2005/06/05 15:21:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.19 2005/06/12 19:53:55 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -253,13 +253,16 @@ src_unpack() {
 	# TODO Should be fixed with new TLS-patch
 	#epatch ${FILESDIR}/${PVR}/starttls-recordio.patch
 
-	# Add double-bounce-trim-patch from bug 45782
+	# Add double-bounce-trim-patch from bug 67810
 	EPATCH_SINGLE_MSG="Adding double-bounce-trim-patch" \
 	epatch ${FILESDIR}/${PVR}/double-bounce-trim.patch
 
 	# Fix bug 49971
 	EPATCH_SINGLE_MSG="Applying fix for a special case with courier-imapd" \
 	epatch ${FILESDIR}/${PVR}/famd-dnotify.patch
+
+	# See bug 94257
+	epatch ${FILESDIR}/${PVR}/qmail-1.03-env-servercert.patch
 
 	# See bug #90631
 	if use logmail; then
