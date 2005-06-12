@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.1.ebuild,v 1.7 2005/01/01 13:31:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.1.ebuild,v 1.8 2005/06/12 12:10:31 swegener Exp $
 
 DESCRIPTION="Minimum Profit: A text editor for programmers"
 HOMEPAGE="http://www.triptico.com/software/mp.html"
@@ -13,7 +13,7 @@ IUSE="ncurses gtk"
 
 DEPEND="virtual/libc
 		ncurses? ( sys-libs/ncurses )
-		gtk? ( >=x11-libs/gtk+-1.2* )
+		gtk? ( >=x11-libs/gtk+-1.2 )
 		!gtk? ( sys-libs/ncurses )"
 RDEPEND="${DEPEND}
 		dev-lang/perl"
