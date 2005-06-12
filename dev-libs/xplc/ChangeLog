@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xplc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.15 2005/06/08 15:17:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.16 2005/06/12 16:00:28 ferdy Exp $
+
+  12 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> xplc-0.3.11.ebuild:
+  marked alpha, wrt bug #95090
 
   08 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> xplc-0.3.11.ebuild:
   Stable on sparc

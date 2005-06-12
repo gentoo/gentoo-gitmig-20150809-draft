@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bc58991d4e2229da7b7b6e8113941c70 metadata.xml 341
-MD5 de31d1ae0659c8da5b0fb598b95c3601 xplc-0.3.11.ebuild 752
-MD5 e09b6ad96cd940aa9421ff3ae58e2080 ChangeLog 1707
+MD5 6eaa851e5c68dd0cedb80f73236ec762 xplc-0.3.11.ebuild 748
 MD5 ac5b4b1de3fd8b21d6f17f98d2139c9d xplc-0.3.10.ebuild 660
+MD5 cf29d82cc0144ea61549a17296ab1714 ChangeLog 1809
+MD5 bc58991d4e2229da7b7b6e8113941c70 metadata.xml 341
 MD5 8fd0e44d58b89a352fc8ac2880ce33ec files/digest-xplc-0.3.10 63
 MD5 33758b3956338dd872212b9ed9b69b8a files/digest-xplc-0.3.11 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCpwv6KRy60XGEcJIRAl04AJ9qeONOLzlSFThpANc2vnhXCVofigCgtMsh
-ktIgHUg+ympZfyuYt7pmG3g=
-=QcgT
+iD8DBQFCrFxDViELBEf1JB0RAgyqAJ4vkKQLeCu9tI7GxBsAuPWNJ3HRxACfUnF/
+d5vc7bg1LZkBPwXtgsZeHq8=
+=w9U1
 -----END PGP SIGNATURE-----
