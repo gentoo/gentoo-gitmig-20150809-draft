@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/cputnik/cputnik-0.1.1.ebuild,v 1.2 2004/07/13 08:19:40 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/cputnik/cputnik-0.1.1.ebuild,v 1.3 2005/06/12 19:24:11 josejx Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://clay.ll.pl/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 
 DEPEND="virtual/x11"
 
