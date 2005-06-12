@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gsmlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/ChangeLog,v 1.1 2005/05/15 20:19:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/ChangeLog,v 1.2 2005/06/12 15:13:14 pylon Exp $
+
+  12 Jun 2005; Lars Weiler <pylon@gentoo.org> gsmlib-1.11_pre030826.ebuild:
+  Stable on ppc.
 
   15 May 2005; Alin Nastac <mrness@gentoo.org>
   -files/gsmlib-1.10-fd-leak-fix.patch, -files/gsmlib-1.10-include-fix.patch,
