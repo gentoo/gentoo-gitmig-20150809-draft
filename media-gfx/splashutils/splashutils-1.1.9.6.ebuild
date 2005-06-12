@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6.ebuild,v 1.4 2005/05/24 21:23:25 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6.ebuild,v 1.5 2005/06/12 13:40:40 spock Exp $
 
 inherit multilib
 
@@ -49,14 +49,6 @@ pkg_setup() {
 		ewarn "with 'hardened' GCC flags. As a workaround, the package will be compiled with"
 		ewarn "-fno-stack-protector. Hardened GCC features will not be used while building"
 		ewarn "the fbsplash kernel helper."
-	else
-		if [[ -n "`echo ${GCC_SPECS} | grep hardened`" ]]; then
-			ewarn "It appears that you're using a hardened gcc, even though the 'hardened'"
-			ewarn "USE flag is not set. This is a common source of compilation problems with"
-			ewarn "splashutils. Please use 'gcc-config' to set a non-hardened profile and"
-			ewarn "make sure the environment is up-to-date (especially, that the GCC_SPECS"
-			ewarn "env. variable is set correctly)."
-		fi
 	fi
 }
 
@@ -115,10 +107,8 @@ src_unpack() {
 	fi
 
 	# This should make splashutils compile on hardened systems.
-	if use hardened; then
-		sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
-		sed -e 's@CFLAGS  =@CFLAGS  = -fno-stack-protector@' -i ${S}/libs/klibc-${V_KLIBC}/klibc/MCONFIG
-	fi
+	sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
+	sed -e 's@CFLAGS  =@CFLAGS  = -fno-stack-protector@' -i ${S}/libs/klibc-${V_KLIBC}/klibc/MCONFIG
 
 	mkdir ${S}/kernel
 

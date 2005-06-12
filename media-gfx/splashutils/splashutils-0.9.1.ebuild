@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9.1.ebuild,v 1.6 2005/06/05 12:24:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9.1.ebuild,v 1.7 2005/06/12 13:40:40 spock Exp $
 
 MISCSPLASH="miscsplashutils-0.1.2"
 GENTOOSPLASH="splashutils-gentoo-0.1.4"
@@ -63,10 +63,8 @@ src_unpack() {
 	fi
 
 	# this should make this version of splashutils compile with hardened systems
-	if use hardened; then
-		sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
-		sed -e 's@CFLAGS  =@CFLAGS  = -fno-stack-protector@' -i ${S}/libs/klibc-${KLIBC_VERSION}/klibc/MCONFIG
-	fi
+	sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
+	sed -e 's@CFLAGS  =@CFLAGS  = -fno-stack-protector@' -i ${S}/libs/klibc-${KLIBC_VERSION}/klibc/MCONFIG
 }
 
 src_compile() {
