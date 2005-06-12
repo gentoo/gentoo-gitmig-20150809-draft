@@ -3,8 +3,9 @@ Hash: SHA1
 
 MD5 1c784be45b571bfad5f6d6a78b9ed335 rt-3.2.1.ebuild 4204
 MD5 dd6a33bba8dd5f5259eda8bc59204109 rt-3.4.2.ebuild 3705
-MD5 182905dd8d40249de44d57df5bb5bc91 ChangeLog 1615
+MD5 ac1e8b630530a3b2f3d6c3dbf169dc91 ChangeLog 1726
 MD5 224c312cc23d02aa06c26a4da3cc1f90 metadata.xml 221
+MD5 4dcfdbf63b882b398473d975b34fa23e files/config.layout-gentoo 616
 MD5 15fc088b37155656e008679f3c07eea7 files/postinstall-en.txt 1648
 MD5 f10e5a91df99b3628925509bad35efe0 files/postinstall-en-3.4.2.txt 689
 MD5 85b9344f8e24073b64ab0ecc09033691 files/rt_apache.conf 406
@@ -15,7 +16,7 @@ MD5 0706d6edcd1c4e23f526d611c9c6b531 files/reconfig 1170
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrJUwEzitwsaoONoRAnIqAJ4rMQ/4Tyi8EVKu7lue9o3GfM/UUwCeLb+c
-E1dd7mw1PiV4EGvYgPBO6Do=
-=Iahk
+iD8DBQFCrMRHEzitwsaoONoRAiwBAJ4wRPNcSehX0igqxTAC/++DuAqwCQCcCVhE
+bg2pIU7mYt4kv5CoqYFyLlk=
+=XNXk
 -----END PGP SIGNATURE-----
