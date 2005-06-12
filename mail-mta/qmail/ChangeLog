@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.42 2005/06/08 19:23:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.43 2005/06/12 19:35:43 hansmi Exp $
+
+  12 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  files/qmail-genrsacert.sh:
+  The cronjob now also generated the Diffie-Hellman Parameters.
 
   08 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   files/qmail-genrsacert.sh:
