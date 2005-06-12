@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.21 2005/05/18 18:10:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.22 2005/06/12 18:47:30 luckyduck Exp $
+
+  12 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> -batik-1.5.ebuild,
+  -batik-1.5.1.ebuild, -batik-1.5.1-r3.ebuild, batik-1.5.1-r4.ebuild:
+  Added xml-commons dependency, xml-apis.jar doesnt belong to xerces. See #82561.
 
   18 May 2005; Jan Brinkmann <luckyduck@gentoo.org> batik-1.5.1-r4.ebuild:
   stable on amd64, ppc and x86
