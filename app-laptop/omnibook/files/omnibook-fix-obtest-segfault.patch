@@ -1,0 +1,54 @@
+This patch was written by Andrew D. Keyser (aka Legoguy) <andrewdk@sbcglobal.net>
+to fix the segfaulting problem described in http://bugs.gentoo.org/86335
+Description:
+Don't know why this even worked before, but the 'q' variable was never set in
+the case of -r, -c, -k, -i, or -s flags - but it was still operated on after
+the switch, so that caused a segfault. Moved the iopl check above the switch
+and moved the operations on q into the switch. 
+Fixes problem.
+
+diff -urp omnibook-2005-02-17.orig/misc/obtest/obtest.c omnibook-2005-02-17/misc/obtest/obtest.c
+--- omnibook-2005-02-17.orig/misc/obtest/obtest.c	2005-06-12 18:09:07.000000000 +0200
++++ omnibook-2005-02-17/misc/obtest/obtest.c	2005-06-12 18:09:35.000000000 +0200
+@@ -297,13 +297,18 @@ int main(int argc, char *argv[])
+ 	if (sw[0] != '-')
+ 		usage(argv[0]);
+ 
++	if (iopl(3)) {
++		perror("iopl");
++		exit (1);
++	}
++
+ 	switch (sw[1]) {
+ 		case 'r':
+ 		case 'c':
+ 		case 'k':
+ 		case 'i':
+ 		case 's':
+-			if (argc == 3)	
++			if (argc == 3)
+ 				p = argv[2];
+ 			else
+ 				usage(argv[0]);
+@@ -313,6 +318,7 @@ int main(int argc, char *argv[])
+ 			if (argc == 4) {
+ 				p = argv[2];
+ 				q = argv[3];
++				data = ntoi(q);
+ 			} else
+ 				usage(argv[0]);
+ 			break;
+@@ -320,13 +326,7 @@ int main(int argc, char *argv[])
+ 			usage(argv[0]);
+ 	}
+ 
+-	if (iopl(3)) {
+-		perror("iopl");
+-		exit (1);
+-	}
+-
+ 	a = ntoi(p);
+-	data = ntoi(q);
+ 
+ 	switch (sw[1]) {
+ 		case 'w':

@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/omnibook
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.7 2005/05/10 17:21:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.8 2005/06/12 16:28:33 genstef Exp $
+
+*omnibook-20050217-r1 (12 Jun 2005)
+
+  12 Jun 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/omnibook-fix-obtest-segfault.patch, +omnibook-20050217-r1.ebuild:
+  Fix obtest segfault thanks to Andrew D. Keyser (aka Legoguy)
+  <andrewdk@sbcglobal.net> in bug 86335
 
   10 May 2005; Stefan Schweizer <genstef@gentoo.org>
   -omnibook-20040916.ebuild, omnibook-20050217.ebuild:
