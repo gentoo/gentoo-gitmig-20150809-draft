@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c64b13095e643105b360a440b8124d35 gtk-chtheme-0.3.1.ebuild 593
 MD5 95b99392db5f83012b4d5c08de94eb44 ChangeLog 1051
 MD5 09d3293038c3ef6ba2ff98ef6609680a metadata.xml 252
 MD5 085c6483b4a82f9f3a21b86ff8a77216 files/digest-gtk-chtheme-0.3.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrCexI1lqEGTUzyQRAuyRAJ9NKeRrhcKnp1iBwQwHzR9778wYJwCgu2pZ
+kEKymXR9KXa/kBqn0lINiOA=
+=xOF3
+-----END PGP SIGNATURE-----
