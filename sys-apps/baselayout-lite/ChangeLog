@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout-lite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/ChangeLog,v 1.8 2005/06/08 17:51:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/ChangeLog,v 1.9 2005/06/12 13:32:56 iggy Exp $
+
+  12 Jun 2005; Brian Jackson <iggy@gentoo.org>
+  -baselayout-lite-1.0_pre2.ebuild:
+  removing pre2 ebuild since that branch is no longer actively developed
 
   08 Jun 2005; <solar@gentoo.org> baselayout-lite-1.0_pre2.ebuild:
   - update baselayout-lite to be cross compile aware
