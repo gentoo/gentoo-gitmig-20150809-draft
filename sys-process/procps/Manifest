@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 814bb8cdaee78c5e87244c92220f85c4 procps-3.2.5.ebuild 1856
 MD5 30b4dd632f1763409c02351fc7ffab81 ChangeLog 17527
 MD5 b634dee52a3696de89de82a4eb20098c procps-3.2.4-r2.ebuild 1961
@@ -16,3 +19,10 @@ MD5 eb892816cc3a56418f4157eb67e18fa6 files/3.2.5-top-sort.patch 1384
 MD5 a26e86ab1efcb58809f0f46aa735ef07 files/digest-procps-3.2.4-r2 64
 MD5 f4e5ac4b1eaf4acdbf0dc9573cdf5438 files/digest-procps-3.2.5 64
 MD5 7ba1d9bd2f1c46766282250643ab9ebd files/procps-mips-define-pagesize.patch 1028
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrFI3Kf2g/qXtneoRAmX6AKCc9oQSZO8kti/BlLKn0XUg/Si4sACgrOO9
+iHh1Og0mFgp0KnzznSQDQy8=
+=OTTB
+-----END PGP SIGNATURE-----
