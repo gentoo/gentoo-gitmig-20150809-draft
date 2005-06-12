@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cgilib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.9 2005/06/10 01:28:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.10 2005/06/12 16:54:12 kloeri Exp $
+
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> cgilib-0.5.ebuild:
+  Stable on alpha.
 
   10 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> cgilib-0.5.ebuild:
   Stable on sparc
