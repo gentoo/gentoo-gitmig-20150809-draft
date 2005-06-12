@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/gentoo-bugger
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-bugger/ChangeLog,v 1.1 2005/06/12 01:57:25 mcummings Exp $
+
+*gentoo-bugger-0.09.2 (12 Jun 2005)
+
+  12 Jun 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +gentoo-bugger-0.09.2.ebuild:
+  Initial import. Bug 94620 - thanks rockoo ;)
+
