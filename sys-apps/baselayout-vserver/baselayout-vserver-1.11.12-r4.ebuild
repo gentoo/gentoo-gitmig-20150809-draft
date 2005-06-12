@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.12-r4.ebuild,v 1.2 2005/06/08 14:45:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.12-r4.ebuild,v 1.3 2005/06/12 08:24:22 hollow Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -30,21 +30,6 @@ RDEPEND=">=sys-apps/sysvinit-2.84
 	!sys-apps/baselayout-lite"
 DEPEND="virtual/os-headers"
 PROVIDE="virtual/baselayout"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# setup unicode defaults for silly unicode users
-	if use unicode ; then
-		sed -i -e '/^UNICODE=/s:no:yes:' etc/rc.conf
-	fi
-
-	# Fix Sparc specific stuff
-	if [[ $(tc-arch) == "sparc" ]] ; then
-		sed -i -e 's:KEYMAP="us":KEYMAP="sunkeymap":' ${S}/etc/rc.conf || die
-	fi
-}
 
 src_compile() {
 	use static && append-ldflags -static
@@ -204,13 +189,20 @@ src_install() {
 	fperms 0600 /etc/shadow
 	mv ${D}/etc/{passwd,shadow,group,hosts,issue.devfix} ${D}/usr/share/baselayout
 
-	cp -P ${S}/init.d/* ${D}/etc/init.d
-	if use fakelog; then
-		cp ${FILESDIR}/fakelog.initd ${D}/etc/init.d
-	fi
-	chmod a+x ${D}/etc/init.d/*
+	insopts -m0755
+	insinto /etc/init.d
+	doins ${S}/init.d/*
+	use fakelog && newins ${FILESDIR}/fakelog.initd fakelog
+
+	# link dummy init scripts
+	cd ${D}/etc/init.d
+	for i in checkfs checkroot clock consolefont localmount modules net.lo net.eth0 netmount; do
+		ln -sf dummy $i
+	done
+
 	insinto /etc/conf.d
 	doins ${S}/etc/conf.d/*
+
 	insinto /etc/env.d
 	doins ${S}/etc/env.d/*
 
@@ -228,7 +220,8 @@ src_install() {
 
 	# As of baselayout-1.10-1-r1, sysvinit is its own package again, and
 	# provides the inittab itself
-	rm -f "${D}"/etc/inittab
+	# <hollow@gentoo.org> We need our own inittab for vservers here
+	#rm -f "${D}"/etc/inittab
 
 	# Stash the rc-lists for use during pkg_postinst
 	cp -r "${S}"/rc-lists "${D}"/usr/share/baselayout
