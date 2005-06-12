@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/pgn-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/pgn-syntax/ChangeLog,v 1.4 2005/04/06 18:30:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pgn-syntax/ChangeLog,v 1.5 2005/06/12 11:19:59 dholm Exp $
+
+  12 Jun 2005; David Holm <dholm@gentoo.org> pgn-syntax-1.0.ebuild:
+  Added to ~ppc.
 
   06 Apr 2005; Markus Rothe <corsair@gentoo.org> pgn-syntax-1.0.ebuild:
   Stable on ppc64
