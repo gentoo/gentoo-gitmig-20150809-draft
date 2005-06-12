@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmium
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.12 2005/06/01 11:30:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.13 2005/06/12 12:16:32 swegener Exp $
+
+  12 Jun 2005; Sven Wegener <swegener@gentoo.org> wmium-1.0.9.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   01 Jun 2005; Daniel Black <dragonheart@gentoo.org> -wmium-1.0.7.ebuild,
   -wmium-1.0.8.ebuild:
