@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.6 2005/05/06 21:33:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.7 2005/06/12 17:58:25 j4rg0n Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/sed/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 m68k mips ppc ppc64 ~ppc-macos s390 sh sparc x86"
+KEYWORDS="alpha arm amd64 hppa ia64 m68k mips ppc ppc64 ppc-macos s390 sh sparc x86"
 IUSE="nls static build bootstrap"
 
 RDEPEND=""
@@ -73,10 +73,6 @@ src_install() {
 	rm -f "${D}"/usr/bin/sed
 	if use ppc-macos || use x86-fbsd ; then
 		cd "${D}"
-		local x
-		for x in $(find . -name 'sed*' -print) ; do
-			mv "$x" "${x//sed/gsed}"
-		done
 		dosym /bin/gsed /usr/bin/gsed
 		rm "${D}"/usr/lib/charset.alias "${D}"/usr/share/locale/locale.alias
 	else
