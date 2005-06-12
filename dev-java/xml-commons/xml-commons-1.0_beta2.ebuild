@@ -1,20 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.11 2005/05/18 10:56:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.12 2005/06/12 18:47:02 luckyduck Exp $
 
 inherit eutils java-pkg
 
 DESCRIPTION="Jakarta project for for XML bindings for java"
 HOMEPAGE="http://xml.apache.org/commons/"
-SRC_URI="mirror://apache/xml/commons/xml-commons-1.0.b2.tar.gz"
+SRC_URI="mirror://apache/xml/commons/${PN}-1.0.b2.tar.gz"
+
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc64 ~ppc sparc"
-IUSE="doc jikes"
+KEYWORDS="x86 amd64 ppc64 ppc sparc"
+IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
-	jikes? ( >=dev-java/jikes-1.21 )"
+	jikes? ( >=dev-java/jikes-1.21 )
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/xml-commons-1.0.b2
@@ -28,7 +30,6 @@ src_unpack() {
 
 src_compile() {
 	local antflags="jar"
-
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadocs"
 
@@ -44,4 +45,5 @@ src_install() {
 
 	dodoc README.html
 	use doc && java-pkg_dohtml -r java/build/docs/*
+	use source && java-pkg_dosrc java/src/org
 }
