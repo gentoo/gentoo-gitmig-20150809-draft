@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.63 2005/06/12 07:59:04 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.64 2005/06/12 08:03:24 chriswhite Exp $
+
+  12 Jun 2005; Chris White <chriswhite@gentoo.org> :
+  Patch reversion until compile error I just found gets fixed...
 
 *flac-1.1.2-r2 (12 Jun 2005)
 

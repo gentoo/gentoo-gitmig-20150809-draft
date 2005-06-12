@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 67e3eef6d421987077e1bd1307dafe81 ChangeLog 8272
+MD5 d66596e93383075c2aa5f90d73707a6e ChangeLog 8391
 MD5 67683a1745142256ab2198a061ac85e0 flac-1.1.2-r2.ebuild 1961
 MD5 038e7f5da79649a9aec46a9b894325e5 flac-1.1.0-r2.ebuild 1380
 MD5 8a5f0b8e9adfd2c0b322c917dae6b379 flac-1.1.0.ebuild 1550
@@ -27,7 +27,7 @@ MD5 c1f9ecf4351858a72b4767313277455c files/flac-1.1.2-noogg.patch 807
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCq+toFdQwWVoAgN4RAr5QAKCdBEuo1X5OkWVEwwTgYrM7hngblACgoI8W
-FHvzDxx4KnaumwX34urDQxM=
-=XFwy
+iD8DBQFCq+xpFdQwWVoAgN4RAj9ZAJ9HMnqxLBg0wMnpFOyW1iizxGwp6QCg9ZRl
+L1P5PmJhjsvIbRtRdOo+VIo=
+=Hbhx
 -----END PGP SIGNATURE-----
