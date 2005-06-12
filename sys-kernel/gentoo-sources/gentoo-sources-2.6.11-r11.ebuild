@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.11-r10.ebuild,v 1.1 2005/06/04 15:41:47 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.11-r11.ebuild,v 1.1 2005/06/12 17:47:33 dsd Exp $
 
 ETYPE="sources"
 IUSE="ultra1"
@@ -9,17 +9,17 @@ detect_version
 detect_arch
 
 #version of gentoo patchset
-GPV="11.13"
-GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
-	 mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
+GPV="11-14"
+GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.base.tar.bz2
+	 mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.extras.tar.bz2"
 
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 
 HOMEPAGE="http://dev.gentoo.org/~dsd/gentoo-sources"
 
-UNIPATCH_LIST="${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
-	       ${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
-UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}/0000_README"
+UNIPATCH_LIST="${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.base.tar.bz2
+	       ${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.extras.tar.bz2"
+UNIPATCH_DOCS="${WORKDIR}/patches/${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}/0000_README"
 
 DESCRIPTION="Full sources including the gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 SRC_URI="${KERNEL_URI} ${GPV_SRC} ${ARCH_URI}"
