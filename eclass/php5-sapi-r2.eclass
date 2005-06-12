@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.18 2005/06/11 15:44:03 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.19 2005/06/12 18:33:57 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -37,7 +37,7 @@ if [ "${PHP_PACKAGE}" = 1 ]; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hardenedphp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hardenedphp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mkconfig mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="$DEPEND
@@ -523,6 +523,33 @@ php5-sapi-r2_src_install() {
 
 	# PEAR-Installer and phpconfig install the following, so we
 	# don't have to
+	#
+	# if 'mkconfig' USE flag is set, we create the phpconfig
+	# source tarball ... this makes it easy for us to bump the
+	# phpconfig package whenever we bump php
+
+	if useq mkconfig ; then
+		CONFIG_NAME=phpconfig-$PV
+		CONFIG_DESTDIR=${T}/${CONFIG_NAME}
+
+		einfo "Building source tarball for ${CONFIG_NAME}"
+
+		mkdir -p ${CONFIG_DESTDIR}/usr/bin
+		cp ${D}/usr/bin/{phpextdist,phpize,php-config} ${CONFIG_DESTDIR}/usr/bin/
+
+		mkdir -p ${CONFIG_DESTDIR}/usr/lib/php
+		cp -r ${D}/usr/lib/php/build ${CONFIG_DESTDIR}/usr/lib/php
+
+		mkdir -p ${CONFIG_DESTDIR}/usr/include
+		cp -r ${D}/usr/include/php ${CONFIG_DESTDIR}/usr/include
+
+		cd ${T}
+		tar -cf - ${CONFIG_NAME} | bzip2 -9 > ${CONFIG_NAME}.tar.bz2
+		cd -
+
+		einfo "Done; tarball is ${T}/${CONFIG_NAME}.tar.bz2"
+	fi
+
 	rm -rf ${D}/usr/bin/{phpextdist,phpize,php-config,pear}
 	rm -rf ${D}/usr/lib/php/build
 	rm -rf ${D}/usr/include/php
