@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0-r2.ebuild,v 1.9 2005/05/05 22:38:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0-r2.ebuild,v 1.10 2005/06/12 12:08:17 swegener Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 ~alpha"
 IUSE="nls"
 
-DEPEND=">=x11-libs/gtk+-2.0*
+DEPEND=">=x11-libs/gtk+-2.0
 	>=app-crypt/gnupg-1.2
 	>=app-crypt/gpgme-0.9.0-r1
 	nls? ( sys-devel/gettext )"
