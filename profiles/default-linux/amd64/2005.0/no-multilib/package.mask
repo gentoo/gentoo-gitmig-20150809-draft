@@ -1,8 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.15 2005/04/24 20:56:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.16 2005/06/12 12:39:44 kugelfang Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
 app-benchmarks/cpuburn
+app-cdr/cdrecord-prodvd
 app-emulation/cedaga
 app-emulation/crossover-office-bin
 app-emulation/winex-transgaming
