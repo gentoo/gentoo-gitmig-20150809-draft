@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c3683632186f08860347127a809e4bac Module-Refresh-0.06.ebuild 492
 MD5 1f82946e5ced6fe8340f057e3f2b8c5c ChangeLog 400
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 7a1ae71abd5b9e8d3a89020ff7bdd531 files/digest-Module-Refresh-0.06 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrI9aEzitwsaoONoRAixPAKC/oke7HyhXY/dOOaI4yf+Ofr/ICgCeIBSy
+q++RIB5+gE6ZxR99yS2tuUw=
+=lpAY
+-----END PGP SIGNATURE-----
