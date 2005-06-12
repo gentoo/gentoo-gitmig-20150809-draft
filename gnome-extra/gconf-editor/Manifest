@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5a8652c1301a1a5e845fdae51a6f401 gconf-editor-2.10.0.ebuild 716
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 12f39d10e3d472a7f457ef13486b509a gconf-editor-2.6.1.ebuild 628
-MD5 dc321fef8956eb35804439f3ec535bf7 gconf-editor-2.4.0.ebuild 692
-MD5 f2a895d2a52f28d78267a1cd6c84a564 gconf-editor-2.8.0.ebuild 695
 MD5 36d595a64e4a5ad529017f80a8e0d9f8 ChangeLog 6377
+MD5 ccb94822819576b0cdb8a610bca0de26 gconf-editor-2.10.0.ebuild 715
+MD5 dc321fef8956eb35804439f3ec535bf7 gconf-editor-2.4.0.ebuild 692
 MD5 9309216b0addd1f74348cc5ad1989d7d gconf-editor-2.6.0.ebuild 859
+MD5 12f39d10e3d472a7f457ef13486b509a gconf-editor-2.6.1.ebuild 628
 MD5 9ad48f878bc5f7176450b307c177ab28 gconf-editor-2.6.2.ebuild 626
+MD5 f2a895d2a52f28d78267a1cd6c84a564 gconf-editor-2.8.0.ebuild 695
 MD5 e4aa9d6ef39937d97a1324819c0ccc1d gconf-editor-2.8.2.ebuild 687
-MD5 8866f71c7c4162fc9ed59f0f60bdfe6c files/digest-gconf-editor-2.6.1 71
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 99070c44d83be5df6ca3a275c4cc3b13 files/digest-gconf-editor-2.10.0 72
 MD5 a2b72e9cea80bfd300183397a4487a72 files/digest-gconf-editor-2.4.0 71
 MD5 e1005344b4be9e39de4829d91f0c2aba files/digest-gconf-editor-2.6.0 71
+MD5 8866f71c7c4162fc9ed59f0f60bdfe6c files/digest-gconf-editor-2.6.1 71
 MD5 6b1fcd04a46411dda1c62bd9df47e431 files/digest-gconf-editor-2.6.2 71
 MD5 dc5bba44c0b64bae5537992930ccd9d0 files/digest-gconf-editor-2.8.0 71
 MD5 1a02c71e7fe8df4aeb8b35a48667c2b9 files/digest-gconf-editor-2.8.2 71
-MD5 99070c44d83be5df6ca3a275c4cc3b13 files/digest-gconf-editor-2.10.0 72
-MD5 d82811e98599090bb20b4e7173356556 files/gconf-editor-2.6.0-revert_escape_cjk.patch 3887
 MD5 37d0c602679587424d11f7b6363421a8 files/gconf-editor-2.4.0-gtk+-2.4.patch 1528
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCqKNuKRy60XGEcJIRAiUkAJ4gsHrM6D+IcD2jd94LOWtvrBoxLgCgrUgA
-qj+bbkig0iAiLVNdnuwcHJE=
-=zHln
------END PGP SIGNATURE-----
+MD5 d82811e98599090bb20b4e7173356556 files/gconf-editor-2.6.0-revert_escape_cjk.patch 3887

@@ -2,7 +2,7 @@ MD5 a983b3ce9ab92e8e266fe4ae9ca93709 ChangeLog 5225
 MD5 9dd60399ad4b721ce042e6fbfb1ab8f2 libgail-gnome-1.0.4.ebuild 721
 MD5 5f48e7fee113263df958f7fecb89c5ad libgail-gnome-1.1.0-r1.ebuild 768
 MD5 cca7c932dc0e37257d38f1de4c1ffd7e libgail-gnome-1.1.0.ebuild 718
-MD5 b5ad15fd8e780fefd8109ee3abf6b73a libgail-gnome-1.1.1.ebuild 777
+MD5 53a7a9c5fab6f7ebf643bd4c7016f2c8 libgail-gnome-1.1.1.ebuild 776
 MD5 72e62f4df8c037e6ea57309ac6d81d77 metadata.xml 174
 MD5 f67181804296c5735b6753b4a286b109 files/digest-libgail-gnome-1.0.4 72
 MD5 13a26d372ce164353caa9a4d9b328702 files/digest-libgail-gnome-1.1.0 72
