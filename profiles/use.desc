@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.248 2005/06/01 00:43:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.249 2005/06/12 06:17:05 mrness Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -260,6 +260,7 @@ python - Adds support/bindings for the Python language
 qdbm - Adds support for the qdbm library
 qt - Adds support for the Qt library.
 quicktime - Adds support for OpenQuickTime
+radius - Adds support for RADIUS
 readline - enables support for libreadline, a GNU line-editing library that most everyone wants.
 recode - enables support for the GNU recode library
 ruby - Adds support/bindings for the Ruby language

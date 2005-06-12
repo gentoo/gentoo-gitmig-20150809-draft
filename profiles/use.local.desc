@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1224 2005/06/11 20:09:49 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1225 2005/06/12 06:17:05 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -602,7 +602,6 @@ net-dialup/ppp:activefilter - Enables activefilter support
 net-dialup/ppp:atm - Enables support for pppoatm
 net-dialup/ppp:dhcp - Enables the dhcp plugin
 net-dialup/ppp:mppe-mppc - Enables support for mppe-mppc
-net-dialup/ppp:radius - Enables RADIUS support
 net-dns/bind:bind-mysql - enables mysql support for bind (non-dlz)
 net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
 net-dns/bind:idn - enables support for Internalized Domain Names
@@ -709,7 +708,6 @@ net-misc/curl:ares - Enabled c-ares dns support
 net-misc/drivel:rhythmbox - Enables support for currently playing song in rhythmbox
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
 net-misc/gnugk:accounting - Enables call logging (accounting)
-net-misc/gnugk:radius - Enables radius support
 net-misc/gwget:epiphany - Build epiphany extensions
 net-misc/hylafax:faxonly - Don't depend on mgetty-fax
 net-misc/hylafax:mgetty - Adds support for mgetty and vgetty
