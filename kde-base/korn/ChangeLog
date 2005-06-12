@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/korn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.10 2005/05/25 21:23:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.11 2005/06/12 21:35:35 carlo Exp $
+
+  12 Jun 2005; Carsten Lohrke <carlo@gentoo.org> korn-3.4.0.ebuild,
+  korn-3.4.1.ebuild:
+  corrected dependencies, #95801
 
 *korn-3.4.1 (25 May 2005)
 
