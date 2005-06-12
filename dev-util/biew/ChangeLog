@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/biew
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.13 2005/01/12 00:10:31 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.14 2005/06/12 12:37:03 spock Exp $
+
+  12 Jun 2005; Michał Januszewski <spock@gentoo.org> biew-5.6.2.ebuild:
+  Merged patch from bug #94863. It should now be possible to compile and use
+  biew on non-x86 arches. Please test.
 
   12 Jan 2005; Michal Januszewski <spock@gentoo.org> biew-5.6.2.ebuild:
   Stable on x86.
