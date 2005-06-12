@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r1.ebuild,v 1.3 2005/06/05 23:03:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ebayagent-0.9.11-r2.ebuild,v 1.1 2005/06/12 20:20:34 mcummings Exp $
 
 inherit eutils
 
@@ -24,19 +24,35 @@ DEPEND="dev-lang/perl
 S=${WORKDIR}/eBayAgent-${PV}
 
 src_compile() {
-	epatch ${FILESDIR}/ebayagent.patch
-
 	sed -i -e "s|PREFIX=/usr|PREFIX=${D}${DESTTREE}|" ${S}/Makefile
+
+	# BUG: 95144 fix path for perl-tk app XeBayAgent.pl to point to eBayAgent 
+	sed -i -e "s|X_eBayAgentLocation\ \=>\ \"\",|X_eBayAgentLocation\ \=>\ \"${ROOT}\/usr\/bin\/eBayAgent\",|"	${S}/XeBayAgent.pl
+
+	# patching repebay and runrepebay
+	epatch ${FILESDIR}/ebayagent.patch
 	emake || die "emake failed"
 }
 
 src_install() {
 	einstall || die "einstall failed"
-	dobin ${S}/Tools/repebay ${S}/Tools/runrepebay ${S}/Tools/eBayAgent_Skript
 	dosym /usr/bin/eBayAgent /usr/bin/eBayAgent.pl
+
+	dobin ${S}/Tools/repebay ${S}/Tools/runrepebay ${S}/Tools/eBayAgent_Skript
 	doman ${S}/Tools/repebay.1 ${S}/Tools/runrepebay.1 ${S}/eBayAgent.1
 	newdoc ${S}/Tools/README_First.txt README_First_Tools.txt
 	newdoc ${S}/Tools/README.Debian README_Tools.Debian
+
+	# perl-tk (disable XeBayAgent.pl)
+	if ! use tcltk ; then
+		rm -rf ${D}/usr/bin/XeBayAgent
+	fi
+
+	# prepare manpages (prepallman won´t do that)
+	for mpage in $(find ${D} -name '*.1'|grep man);do
+		gzip $mpage
+	done
+
 	dodoc COPYING INSTALL
 	prepalldocs
 }
