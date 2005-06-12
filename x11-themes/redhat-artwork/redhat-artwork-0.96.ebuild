@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.16 2005/04/10 18:40:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.17 2005/06/12 12:16:53 swegener Exp $
 
 inherit eutils rpm kde-functions
 
@@ -24,7 +24,7 @@ DEPEND=">=sys-devel/autoconf-2.58
 			=x11-libs/gtk+-1.2* )
 	kde? (	>=x11-libs/qt-3.0.5
 		|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.0.2 ) )
-	gtk2? ( >=x11-libs/gtk+-2* )
+	gtk2? ( >=x11-libs/gtk+-2 )
 	dev-util/intltool"
 # Because one may only want to use the theme with kde OR gtk OR Metacity
 # OR gdm, we don't want either as run-time dependencies...

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.61 2005/05/16 00:02:34 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.62 2005/06/12 12:16:53 swegener Exp $
+
+  12 Jun 2005; Sven Wegener <swegener@gentoo.org>
+  redhat-artwork-0.96.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   14 May 2005; Simon Stelling <blubb@gentoo.org>
   redhat-artwork-0.122.1-r1.ebuild:
