@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 28e7317bf4a62118bb703e001698fc43 arts-3.4.0.ebuild 2542
 MD5 75e0ac21d8f15a07268c3236aad6bba9 arts-1.2.3.ebuild 2821
 MD5 97a02b6079e36488c0d0f4d1606cf934 ChangeLog 21174
@@ -22,3 +25,10 @@ MD5 0756f4b60219058bac587ef4688d4b11 files/digest-arts-3.4.1-r2 63
 MD5 2e274d4c1c743a9783cb4ed64910ee64 files/digest-arts-3.4.0 64
 MD5 c0838be4fcac1f2a9f9efd922b4b6d8d files/arts-3.4.1-configure.patch 4429
 MD5 ac0526184e3193af65a2a8aa7fd5feab files/digest-arts-1.2.3 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrMTsKf2g/qXtneoRAss6AJ4haJ7i2Vx7gbQnH0v5Asi8Er9wegCfSwv9
+znMKjklepYfCiRduZYmT7Ts=
+=0gpp
+-----END PGP SIGNATURE-----
