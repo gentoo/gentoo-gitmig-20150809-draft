@@ -1,0 +1,11 @@
+# ChangeLog for dev-php/phpconfig
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpconfig/ChangeLog,v 1.1 2005/06/12 15:16:17 stuart Exp $
+
+*phpconfig-5.1.0_beta (12 Jun 2005)
+
+  12 Jun 2005; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +phpconfig-4.3.10.ebuild, +phpconfig-5.0.4.ebuild,
+  +phpconfig-5.1.0_beta.ebuild:
+  Initial release
+
