@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-3.4.1.ebuild,v 1.4 2005/05/26 17:14:25 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-3.4.1.ebuild,v 1.5 2005/06/12 10:08:06 greg_g Exp $
 
 KMMODULE=kscreensaver
 KMNAME=kdeartwork
@@ -16,7 +16,7 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/kscreensaver)
 	xscreensaver? ( x11-misc/xscreensaver )"
 
 # Fix compilation with --without-gl and detection of arts.
-# See kde bug 89387 and 102398.
+# See kde bug 89387 and 102398. Applied for 3.4.2.
 PATCHES1="${FILESDIR}/kdeartwork-3.4.1-configure.patch"
 
 src_compile() {

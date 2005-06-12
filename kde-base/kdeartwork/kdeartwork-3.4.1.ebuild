@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.4.1.ebuild,v 1.1 2005/05/27 08:51:57 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.4.1.ebuild,v 1.2 2005/06/12 10:07:14 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -17,7 +17,7 @@ src_unpack() {
 	kde_src_unpack
 
 	# Fix compilation with --without-gl and detection of arts.
-	# See kde bug 89387 and 102398.
+	# See kde bug 89387 and 102398. Applied for 3.4.2.
 	epatch ${FILESDIR}/${P}-configure.patch
 
 	make -f admin/Makefile.common
