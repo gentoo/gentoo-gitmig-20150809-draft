@@ -1,10 +1,20 @@
-MD5 4573197f19dce5a1ff7afb29cb71d143 ChangeLog 4575
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 54c4a346190fcf1a594053bad1d62c93 scilab-2.7-r3.ebuild 4026
-MD5 fdfaaa941f0429feb15fe35e67082c19 scilab-3.0.ebuild 5075
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 921dc326fe60a36eb4c95b7ffa9bb9eb scilab-3.0-r1.ebuild 5305
-MD5 f8e77491ef5140fe63fbe21ca1964377 files/digest-scilab-2.7-r3 135
-MD5 a485d7f0600472c5f79d8c78a09deb6a files/digest-scilab-3.0 68
+MD5 b0d45776d59954c103ba72a5da53dbe6 scilab-3.0.ebuild 5075
+MD5 54c4a346190fcf1a594053bad1d62c93 scilab-2.7-r3.ebuild 4026
+MD5 2769143c4b28e46bacf84c3b418cbd02 ChangeLog 4703
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 814dd511c89a14982a5d6c60b09c1709 files/scilab-2.7-configure.patch 1702
-MD5 a485d7f0600472c5f79d8c78a09deb6a files/digest-scilab-3.0-r1 68
 MD5 5cf78e1831ce7d7539c2c26b9efb79b8 files/scilab-3.0-initialization.patch 430
+MD5 a485d7f0600472c5f79d8c78a09deb6a files/digest-scilab-3.0 68
+MD5 f8e77491ef5140fe63fbe21ca1964377 files/digest-scilab-2.7-r3 135
+MD5 a485d7f0600472c5f79d8c78a09deb6a files/digest-scilab-3.0-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrCd2I1lqEGTUzyQRAk7uAJ991YnI3tHQSIRS6GHdCawWk/tgOQCgrm/C
+QPu2conx4ov9ROx4Y6+NSn8=
+=boli
+-----END PGP SIGNATURE-----

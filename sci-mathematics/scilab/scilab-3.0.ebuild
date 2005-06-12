@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.0.ebuild,v 1.3 2005/03/08 18:49:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.0.ebuild,v 1.4 2005/06/12 12:15:28 swegener Exp $
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Scilab/distributions/${P}.src.tar.gz"
@@ -20,8 +20,8 @@ RDEPEND="virtual/x11
 		media-libs/jpeg
 		media-libs/libpng
 		sys-libs/zlib
-		gtk2? ( >=x11-libs/gtk+-2*
-			>=x11-libs/libzvt-2*
+		gtk2? ( >=x11-libs/gtk+-2
+			>=x11-libs/libzvt-2
 			=gnome-extra/libgtkhtml-2*
 		)
 		!gtk2? ( =x11-libs/gtk+-1.2* )
