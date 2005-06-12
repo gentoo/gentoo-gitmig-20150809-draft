@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.8.1.ebuild,v 1.9 2005/04/02 05:02:07 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.8.1.ebuild,v 1.10 2005/06/12 13:49:53 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -40,6 +40,10 @@ src_unpack() {
 	# fix gfloppy compile problem
 	epatch ${FILESDIR}/${PN}-2.6.2-gfloppymajor.patch
 
+}
+
+src_install() {
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 }
 
 USE_DESTDIR="1"
