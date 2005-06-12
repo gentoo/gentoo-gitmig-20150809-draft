@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.88 2005/04/25 06:50:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.89 2005/06/12 23:17:35 j4rg0n Exp $
+
+  12 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org> gettext-0.14.4.ebuild:
+  Stable ppc-macos
 
   25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   gettext-0.14.1-r1.ebuild:
