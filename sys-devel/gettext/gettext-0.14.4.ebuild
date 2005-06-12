@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.6 2005/05/24 23:07:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.7 2005/06/12 23:01:04 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
@@ -51,7 +51,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	# Build with --without-included-gettext (on glibc systems)
-	if has_version sys-libs/glibc ; then
+	if use elibc_glibc ; then
 		myconf="${myconf} --without-included-gettext $(use_enable nls)"
 	else
 		myconf="${myconf} --with-included-gettext --enable-nls"
@@ -72,8 +72,7 @@ src_install() {
 	dobin gettext-tools/misc/gettextize || die "gettextize"
 
 	# remove stuff that glibc handles
-	if has_version sys-libs/glibc ; then
-		# Mac OS X does not provide these files.
+	if use elibc_glibc ; then
 		rm -f "${D}"/usr/include/libintl.h
 		rm -f "${D}"/usr/$(get_libdir)/libintl.*
 	fi
