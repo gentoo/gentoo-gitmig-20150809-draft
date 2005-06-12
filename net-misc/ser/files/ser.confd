@@ -1,0 +1,11 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/files/ser.confd,v 1.1 2005/06/12 15:48:26 stkn Exp $
+
+# Additional options to start SER with
+#
+# see "ser -h" for a list of options
+#
+# default: run SER as user:group = ser:ser
+#
+SER_OPTS="-u ser -g ser"

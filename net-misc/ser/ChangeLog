@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/ser
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.9 2004/12/25 17:24:52 ticho Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.10 2005/06/12 15:48:26 stkn Exp $
+
+*ser-0.9.0 (12 Jun 2005)
+
+  12 Jun 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/ethz-1.0-ser-0.9.0.diff, +files/ldap-1.0-ser-0.9.0.diff,
+  +files/ldaps-1.0-ser-0.9.0.diff, +files/silomail-1.0-ser-0.9.0.diff,
+  +files/ser.confd, +files/ser.rc6, +ser-0.9.0.ebuild:
+  Version bump and enhancements.
 
 *ser-0.8.14 (25 Dec 2004)
 
