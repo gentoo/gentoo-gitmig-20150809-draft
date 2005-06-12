@@ -1,9 +1,9 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.6 2004/12/29 08:50:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.7 2005/06/12 07:48:16 spyderous Exp $
 
 DESCRIPTION="Provide access to Internet using the AOL/Compuserve network."
-HOMEPAGE="http://www.peng.apinc.org/eng/"
+HOMEPAGE="None available"
 SRC_URI="ftp://ftp.penggy.org/birdy57/penggy/sources/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
