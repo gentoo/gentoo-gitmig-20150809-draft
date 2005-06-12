@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5ee4f3f57c18aad3ceece869d567c9c8 ntp-4.1.2.ebuild 3167
 MD5 9e231c3e524329ec5123aee1eaae1d39 ChangeLog 9087
 MD5 aa73d5edf312beeab44fa9d58a603ad4 metadata.xml 636
@@ -29,3 +32,10 @@ MD5 5bd3924f5720b97837969ec4ec4d5e09 files/ntp.conf 1451
 MD5 83dde3b948b28c278d496252494c935f files/ntpd.confd 393
 MD5 abb390de7ada49ef21ae18598b5eddb2 files/4.2.0.20040617-errno-fix.patch 685
 MD5 0c3a6df816f448a870e070797c22f72e files/4.2.0.20040617-hostname.patch 8476
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrFsEKf2g/qXtneoRAmySAJ92AFhZ/HCo9GdHUJjF6mTdXy97gACfaROw
+lt+3KRldq9o+iyt2FoiUheg=
+=PvEn
+-----END PGP SIGNATURE-----
