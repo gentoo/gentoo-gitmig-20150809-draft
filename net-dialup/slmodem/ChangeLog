@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.44 2005/05/29 12:35:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.45 2005/06/12 07:41:20 spyderous Exp $
+
+  12 Jun 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Remove myself from metadata since my laptop is broken.
 
   29 May 2005; Alin Nastac <mrness@gentoo.org>
   +files/slmodem-2.9.9b-gcc4.patch, slmodem-2.9.9b.ebuild,

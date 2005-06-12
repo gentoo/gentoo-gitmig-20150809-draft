@@ -7,11 +7,6 @@
 	<name>Net-dialup herd</name>
 </maintainer>
 <maintainer>
-	<email>spyderous@gentoo.org</email>
-	<name>Donnie Berkholz</name>
-	<description>Has PCI hardware for non ebuild/compile errors</description>
-</maintainer>
-<maintainer>
 	<email>dragonheart@gentoo.org</email>
 	<name>Daniel Black</name>
 	<description>Will fix ebuild/script errors</description>
