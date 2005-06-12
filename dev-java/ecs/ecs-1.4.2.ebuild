@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.1-r1.ebuild,v 1.6 2005/06/12 18:27:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.2.ebuild,v 1.1 2005/06/12 18:27:52 luckyduck Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Java library to generate markup language text such as HTML and XML"
 HOMEPAGE="http://jakarta.apache.org/ecs"
-SRC_URI="http://jakarta.apache.org/builds/jakarta-ecs/release/v${PV}/${P}.tar.gz"
+SRC_URI="mirror://apache/jakarta/ecs/source/${P}-src.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.3
@@ -20,6 +20,8 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/jakarta-regexp-1.3*
 	=dev-java/xerces-2.6*"
+
+S=${WORKDIR}/${P}-src
 
 src_unpack() {
 	unpack ${A}
@@ -37,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar bin/*.jar
+	java-pkg_newjar bin/${P}.jar ${PN}.jar
 
 	dodoc AUTHORS ChangeLog INSTALL README
 	use doc && java-pkg_dohtml -r docs/*
