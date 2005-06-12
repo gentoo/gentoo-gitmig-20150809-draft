@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.7 2005/04/23 00:09:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.8 2005/06/12 14:29:29 swegener Exp $
+
+  12 Jun 2005; Sven Wegener <swegener@gentoo.org> exo-0.2.0-r1.ebuild,
+  exo-0.3.0_pre1.ebuild, exo-0.3.0.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   23 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> exo-0.2.0-r1.ebuild:
   Stable on ppc.

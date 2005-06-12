@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-showdesktop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-showdesktop/ChangeLog,v 1.20 2005/02/13 11:47:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-showdesktop/ChangeLog,v 1.21 2005/06/12 14:25:16 swegener Exp $
+
+  12 Jun 2005; Sven Wegener <swegener@gentoo.org>
+  xfce4-showdesktop-0.4.0.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   xfce4-showdesktop-0.4.0-r1.ebuild:
