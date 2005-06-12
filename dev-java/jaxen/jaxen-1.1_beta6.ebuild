@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta6.ebuild,v 1.1 2005/06/12 12:58:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta6.ebuild,v 1.2 2005/06/12 18:12:01 weeve Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P/_beta6/-beta-6}-src.ta
 
 LICENSE="jaxen"
 SLOT="1.1"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.3

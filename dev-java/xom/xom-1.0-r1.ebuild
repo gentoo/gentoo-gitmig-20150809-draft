@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r1.ebuild,v 1.1 2005/06/04 16:02:48 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r1.ebuild,v 1.2 2005/06/12 18:11:04 weeve Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="http://cafeconleche.org/XOM/${XOMVER}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.3

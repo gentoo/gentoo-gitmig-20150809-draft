@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.14 2005/06/12 12:58:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.15 2005/06/12 18:12:01 weeve Exp $
+
+  12 Jun 2005; Jason Wever <weeve@gentoo.org> jaxen-1.1_beta6.ebuild:
+  Added ~sparc keyword wrt bug #95859.
 
 *jaxen-1.1_beta6 (12 Jun 2005)
 
