@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtksourceview-sharp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/ChangeLog,v 1.24 2005/05/21 09:31:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/ChangeLog,v 1.25 2005/06/12 20:31:10 latexer Exp $
+
+  12 Jun 2005; Peter Johanson <latexer@gentoo.org>
+  gtksourceview-sharp-0.10.ebuild:
+  Fix deps.
 
   21 May 2005; Tom Martin <slarti@gentoo.org>
   gtksourceview-sharp-0.10.ebuild:
