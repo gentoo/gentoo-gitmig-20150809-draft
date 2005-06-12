@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.57 2005/06/03 16:16:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.58 2005/06/12 21:50:13 cryos Exp $
+
+  12 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> blender-2.36-r1.ebuild:
+  Stable on amd64.
 
   03 Jun 2005; Luca Barbato <lu_zero@gentoo.org> metadata.xml:
   Metadata fix
