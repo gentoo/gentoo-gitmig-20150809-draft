@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.5.ebuild,v 1.2 2005/01/01 16:42:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.5.ebuild,v 1.3 2005/06/12 22:33:27 solar Exp $
 
 inherit eutils flag-o-matic elisp-common
 
-IUSE="cjk libwww lesstif motif neXt  Xaw3d emacs"
+IUSE="cjk libwww lesstif motif neXt Xaw3d emacs"
 
 XDVIK_JP="${P}-20041106-jp"
 
