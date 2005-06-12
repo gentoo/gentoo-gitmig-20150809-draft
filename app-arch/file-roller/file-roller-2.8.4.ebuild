@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.8.4.ebuild,v 1.8 2005/06/06 12:42:38 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.8.4.ebuild,v 1.9 2005/06/12 12:06:01 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
-	>=x11-libs/gtk+-2.4*
+	>=x11-libs/gtk+-2.4
 	>=gnome-base/libgnome-2.1
 	>=gnome-base/libgnomeui-2.1
 	>=gnome-base/gnome-vfs-2.2
