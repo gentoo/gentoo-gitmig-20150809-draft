@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.10.0.ebuild,v 1.1 2005/03/22 21:58:33 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.10.0.ebuild,v 1.2 2005/06/12 12:15:20 swegener Exp $
 
 inherit wxwidgets eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 
 IUSE="nls gtk2 debug"
 
-DEPEND=">=x11-libs/wxGTK-2.4*
+DEPEND=">=x11-libs/wxGTK-2.4
 	nls? ( sys-devel/gettext )
 	>=sys-libs/zlib-1.2.1
 	!net-p2p/amule
