@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.111 2005/05/26 18:29:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.112 2005/06/12 07:39:48 mrness Exp $
+
+*ppp-2.4.3-r6 (12 Jun 2005)
+*ppp-2.4.2-r12 (12 Jun 2005)
+
+  12 Jun 2005; Alin Nastac <mrness@gentoo.org> -ppp-2.4.2-r11.ebuild,
+  +ppp-2.4.2-r12.ebuild, -ppp-2.4.3-r3.ebuild, -ppp-2.4.3-r5.ebuild,
+  +ppp-2.4.3-r6.ebuild:
+  Create {pap,chap}-secrets files based on example files (#95402). Remove old
+  test versions.
 
 *ppp-2.4.3-r5 (26 May 2005)
 

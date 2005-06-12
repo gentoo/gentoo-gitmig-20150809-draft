@@ -1,10 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 882e85fabc75a4917d0b774452a5356d ppp-2.4.2-r11.ebuild 6472
-MD5 8ac8019ba04fc2340ef5b7f32461bd60 ppp-2.4.3-r3.ebuild 6046
-MD5 7718d56aca3bf4786bed5a12c3f1b47d ppp-2.4.3-r5.ebuild 7156
-MD5 b9c3020d1a57bc420b23ec90412e3948 ChangeLog 20382
+MD5 6d1d01ee15404d24bfa2e96964d75a36 ppp-2.4.2-r12.ebuild 6934
+MD5 9bc31d2cc95400804e46ac0355f95d94 ppp-2.4.3-r6.ebuild 7640
+MD5 335b82bd6e27354b61e58364e81e9620 ChangeLog 20699
 MD5 e6fdfdc4317d7fe324c50bd0477ca3f8 metadata.xml 295
 MD5 fc56767c28bef6332decb0a5c48cad83 ppp-2.4.2-r10.ebuild 6209
 MD5 4e62cdeb360ca0a22becbd2deb6f2dac files/pon 957
@@ -16,11 +15,10 @@ MD5 054b3958fe0cfda4ac1420846fcc7a4b files/ip-up 1081
 MD5 44cc662ba9aa61dd9add3ddd4c5ded57 files/pon.1 3607
 MD5 c9117abf5fed623d5290779446e9855e files/confd.ppp0 2775
 MD5 d90deeaef8dbdfcd18d1567681d03559 files/digest-ppp-2.4.2-r10 271
-MD5 d90deeaef8dbdfcd18d1567681d03559 files/digest-ppp-2.4.2-r11 271
+MD5 d90deeaef8dbdfcd18d1567681d03559 files/digest-ppp-2.4.2-r12 271
 MD5 fa2a5b8df496922fa2fb592115953b6b files/options-pppoe 53
 MD5 2f3f8eb46b9d97a435a8694683f84651 files/net.ppp0 4408
-MD5 4afa8dd77ad811492789477df07e47da files/digest-ppp-2.4.3-r3 195
-MD5 4afa8dd77ad811492789477df07e47da files/digest-ppp-2.4.3-r5 195
+MD5 4afa8dd77ad811492789477df07e47da files/digest-ppp-2.4.3-r6 195
 MD5 1fd88dda7f4996799c69a9501d42cc23 files/README.mpls 530
 MD5 5d83af7b897082a0b1ecd70a2cc2a0c7 files/modules.ppp 268
 MD5 5a554e2a04b9e11bb5bea839213bf97c files/ip-down 931
@@ -28,7 +26,7 @@ MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/pppoe.html 7605
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClhWWjiC39V7gKu0RAr8dAJ9Zev04xcKoAP5rgRAr60hF1J+e6wCfT4G8
-x5bZrXFlfCWVEXABCRGSgtU=
-=GtW1
+iD8DBQFCq+bWjiC39V7gKu0RAp9RAJ9mColsB7T4mjXkhoiFWqBY3tQJcgCgwyv8
+3URaEG56oLYf0H7O0CkThag=
+=uW7e
 -----END PGP SIGNATURE-----

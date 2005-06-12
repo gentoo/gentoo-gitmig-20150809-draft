@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r5.ebuild,v 1.1 2005/05/26 18:29:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r6.ebuild,v 1.1 2005/06/12 07:39:49 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -22,6 +22,15 @@ RDEPEND="virtual/libc
 	gtk? ( =x11-libs/gtk+-1* )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+
+pkg_setup() {
+	if ! use radius; then
+		echo
+		ewarn "RADIUS plugins installation is now controled by radius useflag!"
+		ewarn "If you need them, hit Ctrl-C now!"
+		ebeep
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -124,6 +133,7 @@ src_install() {
 
 	dosbin pppd/plugins/rp-pppoe/pppoe-discovery
 
+	dodir /etc/ppp/peers
 	insinto /etc/ppp
 	insopts -m0600
 	newins etc.ppp/pap-secrets pap-secrets.example
@@ -215,12 +225,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ ! -e ${ROOT}dev/.devfsd ] && [ ! -e ${ROOT}dev/.udev ] && [ ! -e ${ROOT}dev/ppp ]; then
-		mknod ${ROOT}dev/ppp c 108 0
+	if [ ! -e ${ROOT}/dev/.devfsd ] && [ ! -e ${ROOT}/dev/.udev ] && [ ! -e ${ROOT}/dev/ppp ]; then
+		mknod ${ROOT}/dev/ppp c 108 0
 	fi
 	if [ "$ROOT" = "/" ]; then
 		/sbin/update-modules
 	fi
+	#create *-secrets files if not exists
+	[ -f "${ROOT}/etc/ppp/pap-secrets" ] || \
+		cp -a "${ROOT}/etc/ppp/pap-secrets.example" "${ROOT}/etc/ppp/pap-secrets"
+	[ -f "${ROOT}/etc/ppp/chap-secrets" ] || \
+		cp -a "${ROOT}/etc/ppp/chap-secrets.example" "${ROOT}/etc/ppp/chap-secrets"
+
 	ewarn "To enable kernel-pppoe read html/pppoe.html in the doc-directory."
 	ewarn "Note: the library name has changed from pppoe.so to rp-pppoe.so."
 	ewarn "Pon, poff and plog scripts have been supplied for experienced users."
