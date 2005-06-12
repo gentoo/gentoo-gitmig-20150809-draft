@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d0c57ce50e880834f9c24e229ac26232 vte-0.11.11-r3.ebuild 1074
+MD5 e54dca345e236f70180abde2c33f1f77 vte-0.11.12.ebuild 900
+MD5 45bf68fb3e414c4aa1ecd909a6e9e884 ChangeLog 7933
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 be50b56fc887eee4097a419c79362398 ChangeLog 7842
+MD5 d0c57ce50e880834f9c24e229ac26232 vte-0.11.11-r3.ebuild 1074
 MD5 ddd6e7926bc9e07a4cda867cbae55525 vte-0.11.11-r2.ebuild 881
-MD5 e84f8586725ed068c90d7f7561436e8d vte-0.11.12.ebuild 903
-MD5 a7aa4ac7847db18d6ffa62fd957f152e files/vte-0.11.11-vtemodule.patch 445
 MD5 3805528034f3d01fa27e24f600618c0d files/vte-line-scroll.patch 2234
-MD5 e88adf7f30513086f097d4940e99d03e files/vte-0.11.11-row_fix.patch 697
 MD5 76c3c0d2bc006fe4de452fd3f0c26e45 files/digest-vte-0.11.11-r3 64
 MD5 76c3c0d2bc006fe4de452fd3f0c26e45 files/digest-vte-0.11.11-r2 64
-MD5 18e062a775ab3d1b9bb67830755399e4 files/digest-vte-0.11.12 64
 MD5 38c957d83d560c18819204fe28c3c1ae files/vte-0.11.11-spaces.patch 15370
+MD5 a7aa4ac7847db18d6ffa62fd957f152e files/vte-0.11.11-vtemodule.patch 445
+MD5 e88adf7f30513086f097d4940e99d03e files/vte-0.11.11-row_fix.patch 697
+MD5 18e062a775ab3d1b9bb67830755399e4 files/digest-vte-0.11.12 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCqJGMKRy60XGEcJIRAiiLAJ98toBtR8w6NJegLs+L5JeIvjG0TwCgp4FK
-7Cm3aWNrXMI4+IHXWTpNlDE=
-=QBe7
+iD8DBQFCrDIwKf2g/qXtneoRAkaGAJ46MCZNO7BBgs5rwNWjq+mNWfYnoQCfXdvm
+o9g6iGnta9Lt9Y+cKnpr+2g=
+=uREP
 -----END PGP SIGNATURE-----
