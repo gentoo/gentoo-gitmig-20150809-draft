@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/jxtray
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.6 2005/05/14 21:57:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.7 2005/06/12 18:08:19 luckyduck Exp $
+
+  12 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> jxtray-0.5.ebuild:
+  cosmetic changes
 
   14 May 2005; Jan Brinkmann <luckyduck@gentoo.org> jxtray-0.5.ebuild:
   stable on amd64 and x86, added ~ppc to KEYWORDS
