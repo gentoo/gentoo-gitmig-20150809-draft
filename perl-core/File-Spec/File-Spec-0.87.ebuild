@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/File-Spec-0.87.ebuild,v 1.3 2005/06/04 03:41:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/File-Spec-0.87.ebuild,v 1.4 2005/06/12 12:26:34 kloeri Exp $
 
 myconf='INSTALLDIRS=vendor'
 inherit perl-module
@@ -11,7 +11,7 @@ SRC_URI="mirror://cpan/authors/id/K/KW/KWILLIAMS/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 mips ~ppc ppc64 ~s390 sparc x86"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 mips ~ppc ppc64 ~s390 sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/module-build"
