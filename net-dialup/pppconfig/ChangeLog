@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/pppconfig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.12 2005/05/27 06:38:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.13 2005/06/12 12:07:53 mrness Exp $
+
+*pppconfig-2.3.11-r1 (12 Jun 2005)
+
+  12 Jun 2005; Alin Nastac <mrness@gentoo.org> -pppconfig-2.1.ebuild,
+  -pppconfig-2.3.9.ebuild, +pppconfig-2.3.11-r1.ebuild:
+  Install locale messages for languages selectable by user through LINGUAS
+  variable (empty/undefined means all available languages will be installed);
+  this functionality is enabled through nls useflag (#95402).
 
   27 May 2005; Joseph Jezak <josejx@gentoo.org> pppconfig-2.3.11.ebuild:
   Marked ppc stable.
