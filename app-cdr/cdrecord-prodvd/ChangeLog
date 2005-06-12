@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrecord-prodvd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.19 2005/05/30 03:01:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.20 2005/06/12 12:53:05 kugelfang Exp $
+
+  12 Jun 2005; Danny van Dyk <kugelfang@gentoo.org>
+  -cdrecord-prodvd-2.01_pre20041012.ebuild,
+  cdrecord-prodvd-2.01.01-r1.ebuild:
+  Removed outdated version for amd64 only. Fixed BUG #90843.
 
   29 May 2005; <solar@gentoo.org> cdrecord-prodvd-2.01.01-r1.ebuild,
   cdrecord-prodvd-2.01_pre20041012.ebuild:
