@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/gauche-gtk-0.3.2.ebuild,v 1.2 2004/07/11 09:05:38 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/gauche-gtk-0.3.2.ebuild,v 1.3 2005/06/12 14:28:34 swegener Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ S="${WORKDIR}/${MY_P}"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-RDEPEND=">=x11-libs/gtk+-2*
+RDEPEND=">=x11-libs/gtk+-2
 	>=dev-lang/gauche-0.7.3
 	opengl? ( >=x11-libs/gtkglext-0.6.0 )"
 

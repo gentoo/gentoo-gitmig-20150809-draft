@@ -1,10 +1,20 @@
-MD5 9eb63071785c610b7b4a24633cc1e6e4 ChangeLog 2131
-MD5 1a12aa5f62d81b0854b76fe3b476e196 gauche-gtk-0.3.1.ebuild 1344
-MD5 ed154fbdf457ba458bec1cb8e0b7fbf4 gauche-gtk-0.3.2.ebuild 1323
-MD5 f7311f1e0017298908b4db4959c4e666 gauche-gtk-0.4.1.ebuild 1681
-MD5 a7a65acb19e65e9491dd6d01285482c9 gauche-gtk-0.4.ebuild 1674
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0164b6424827312225982d3e01b06e8e gauche-gtk-0.4.ebuild 1675
+MD5 b9d115bbe75ab3fef5817b7747906e1c gauche-gtk-0.3.1.ebuild 1345
+MD5 d8d3392fba65a5f4ea1992669731a9b9 gauche-gtk-0.4.1.ebuild 1682
+MD5 6a53a4a47d6265096ba75a633c5291b3 ChangeLog 2339
 MD5 e4a585426caa56a65128b6504cab7d4d metadata.xml 312
+MD5 ae0ede3ab54ce7521f21ed01f209affb gauche-gtk-0.3.2.ebuild 1324
 MD5 bd8bbfa0aae1a2c053ecfca70fdcd682 files/digest-gauche-gtk-0.3.1 65
 MD5 923c01868e508cefb39569847a3a0ecf files/digest-gauche-gtk-0.3.2 65
-MD5 c00557c3f8ab697553606421240cab68 files/digest-gauche-gtk-0.4 63
 MD5 9ddaabebaa15b0092351bc8b0775726b files/digest-gauche-gtk-0.4.1 65
+MD5 c00557c3f8ab697553606421240cab68 files/digest-gauche-gtk-0.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrEaqI1lqEGTUzyQRAlpnAKCHqXZsDZO94t28YK+BPg0gzdRxiQCfWXnB
+sY1IVIhxz6o04IX63znJ2Uw=
+=ot+T
+-----END PGP SIGNATURE-----

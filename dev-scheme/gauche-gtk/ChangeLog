@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/gauche-gtk
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/ChangeLog,v 1.5 2004/08/19 12:21:49 hattya Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/ChangeLog,v 1.6 2005/06/12 14:28:34 swegener Exp $
+
+  12 Jun 2005; Sven Wegener <swegener@gentoo.org> gauche-gtk-0.3.1.ebuild,
+  gauche-gtk-0.3.2.ebuild, gauche-gtk-0.4.ebuild, gauche-gtk-0.4.1.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   19 Aug 2004; Akinori Hattori <hattya@gentoo.org> gauche-gtk-0.4.1.ebuild:
   stable on x86.
