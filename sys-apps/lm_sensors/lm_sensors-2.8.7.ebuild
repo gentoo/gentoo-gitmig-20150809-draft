@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.8.7.ebuild,v 1.4 2005/03/01 20:11:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.8.7.ebuild,v 1.5 2005/06/12 07:42:27 brix Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ DESCRIPTION="Hardware Sensors Monitoring by lm_sensors"
 SRC_URI="http://www.lm-sensors.nu/archive/${P}.tar.gz"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
-SLOT="${KV}"
+SLOT="0"
 
 KEYWORDS="-ppc -sparc x86 amd64"
 IUSE="rrdtool"
