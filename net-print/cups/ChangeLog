@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.134 2005/06/07 09:59:59 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.135 2005/06/12 13:07:18 lanius Exp $
+
+  12 Jun 2005; Heinrich Wendel <lanius@gentoo.org> cups-1.1.23-r3.ebuild,
+  cups-1.1.23-r4.ebuild:
+  bug #95852
 
   07 Jun 2005; Heinrich Wendel <lanius@gentoo.org> +files/pdftops.pl,
   cups-1.1.23-r4.ebuild:

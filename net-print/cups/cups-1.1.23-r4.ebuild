@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r4.ebuild,v 1.3 2005/06/07 10:45:59 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r4.ebuild,v 1.4 2005/06/12 13:07:18 lanius Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -134,7 +134,7 @@ src_install() {
 
 pkg_postrm() {
 	# cleanups
-	rm -fR /usr/share/doc/${MY_PV}
+	rm -fR /usr/share/doc/${PF}
 }
 
 pkg_postinst() {
