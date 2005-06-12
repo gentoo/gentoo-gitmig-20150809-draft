@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.19 2005/06/12 19:53:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.20 2005/06/12 20:03:54 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -39,8 +39,6 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 	mirror://gentoo/qmail-1.03-r16-logrelay.diff
 	http://www.finnie.org/software/qmail-bounce-encap/qmail-bounce-encap-20040210.patch
 	"
-# broken stuff
-#http://www.qcc.ca/~charlesc/software/misc/nullenvsender-recipcount.patch
 
 LICENSE="as-is"
 SLOT="0"
@@ -65,7 +63,6 @@ RDEPEND="!virtual/mta
 PROVIDE="virtual/mta
 	 virtual/mda"
 
-#MY_PVR=${PVR}
 MY_PVR=${PV}-r14
 
 TCPRULES_DIR=/etc/tcprules.d
@@ -84,10 +81,6 @@ src_unpack() {
 	EPATCH_SINGLE_MSG="Adding SMTP AUTH (2 way), Qregex and STARTTLS support" \
 	EPATCH_OPTS="${EPATCH_OPTS} -F 3" \
 	epatch ${DISTDIR}/qregex-starttls-2way-auth-20050523.patch
-
-	# Fixes a problem when utilizing "morercpthosts"
-	# TODO hansmi, 2005-01-06: no longer required
-	#epatch ${FILESDIR}/${MY_PVR}/smtp-auth-close3.patch
 
 	# patch so an alternate queue processor can be used
 	# i.e. - qmail-scanner
@@ -142,15 +135,6 @@ src_unpack() {
 	# Apply patch to trim large bouncing messages down greatly reduces traffic
 	# when multiple bounces occur (As in with spam)
 	epatch ${DISTDIR}/qmail-limit-bounce-size.patch.txt
-
-	# Apply patch to add ESMTP SIZE support to qmail-smtpd
-	# This helps your server to be able to reject excessively large messages
-	# "up front", rather than waiting the whole message to arrive and then
-	# bouncing it because it exceeded your databytes setting
-	#
-	# hansmi, 2005-01-05: no longer needed as this patch is now included
-	# in qregex-starttls-2way-auth
-	#epatch ${FILESDIR}/${MY_PVR}/qmail-smtpd-esmtp-size-gentoo.patch
 
 	#TODO TEST
 	# Reject some bad relaying attempts
@@ -249,10 +233,6 @@ src_unpack() {
 	EPATCH_OPTS="${EPATCH_OPTS} -F 3" \
 	epatch ${DISTDIR}/qmail-bounce-encap-20040210.patch
 
-	# Fixes bug 40521
-	# TODO Should be fixed with new TLS-patch
-	#epatch ${FILESDIR}/${PVR}/starttls-recordio.patch
-
 	# Add double-bounce-trim-patch from bug 67810
 	EPATCH_SINGLE_MSG="Adding double-bounce-trim-patch" \
 	epatch ${FILESDIR}/${PVR}/double-bounce-trim.patch
@@ -301,11 +281,6 @@ src_unpack() {
 
 	# fix coreutils messup
 	ht_fix_file ${S}/Makefile
-
-	# fix bug #74124
-	# TODO hansmi, 2005-01-06: should not be required anymore
-	#EPATCH_SINGLE_MSG="fixing stderr logging for checkpassword to enable qmail-queue to continue logging" \
-	#epatch ${FILESDIR}/${PVR}/gentoo-qmail-1.03-r16-logging-with-smtpauth.patch
 }
 
 src_compile() {

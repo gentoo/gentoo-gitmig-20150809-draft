@@ -1,14 +1,11 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.44 2005/06/12 19:53:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.45 2005/06/12 20:03:54 hansmi Exp $
 
   12 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03-r16.ebuild,
-  +files/qmail-1.03-env-servercert.patch:
-  Fixed bug 95637, added patch from bug 94257.
-
-  12 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
-  files/qmail-genrsacert.sh:
-  The cronjob now also generated the Diffie-Hellman Parameters.
+  +files/qmail-1.03-env-servercert.patch, files/qmail-genrsacert.sh::
+  Fixed bug 95637, added patch from bug 94257. Cleaned the ebuild. The cronjob
+  now also generated the Diffie-Hellman Parameters.
 
   08 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   files/qmail-genrsacert.sh:
