@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.207.ebuild,v 1.3 2005/06/12 09:43:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.207.ebuild,v 1.4 2005/06/12 10:58:32 hollow Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_install() {
 	# install conf.d files
 	insinto /etc/conf.d
 	newins ${FILESDIR}/0.30.205/vservers.confd vservers
-	
+
 	# Under some conditions there is a race between two vshelpers and the vps
 	# stop doesn't end. So we add a cheap workaround to bypass this until
 	# this is fixed in util-vserver itself

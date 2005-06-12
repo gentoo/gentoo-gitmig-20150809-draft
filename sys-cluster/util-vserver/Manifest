@@ -7,7 +7,7 @@ MD5 3d6eec0e3d10c7a6e4a95e448c03a06e util-vserver-0.30.196.ebuild 1268
 MD5 5eb10d9678fd96a1f56d1eb157b3994a util-vserver-0.30.204.ebuild 1285
 MD5 48ce588c1f3255fa31e1a4cee82c1d27 util-vserver-0.30.205-r1.ebuild 1763
 MD5 5460093cd5050c0938518baa9a56cb55 util-vserver-0.30.205.ebuild 1284
-MD5 b8e0067abd2887f7b0fad00d9a10fb21 util-vserver-0.30.207.ebuild 2288
+MD5 85072d17078116476bbf1d4a642c1231 util-vserver-0.30.207.ebuild 2287
 MD5 7bae473a0bf1ad73103118220c3fa924 files/vservers.confd 1739
 MD5 8de53dd957127f3ba125f733c1b7389b files/vservers.initd 1792
 MD5 0f34731a7d8119fc5e3f9322bf727521 files/digest-util-vserver-0.30.196 74
@@ -22,7 +22,7 @@ MD5 16d2c34a9a86dbb4ffa033a2969c6c39 files/0.30.205/vshelper-shutdown-hack 12
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrAQfmPFBzbX68WERAg1zAJ9MFEodF7PyjT3BBOgM/3c/4Xi6zwCfaTVu
-ut3vpcIc4v8CZxsUPZduAiU=
-=FlZP
+iD8DBQFCrBWgmPFBzbX68WERAvQnAJwIkZQID4/WPAYgBl6+q8RObZnZfwCeNr/n
+KrERyVfaVnhpPdrCxAH8vQw=
+=AkRL
 -----END PGP SIGNATURE-----
