@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.20 2005/01/09 10:42:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.21 2005/06/12 22:41:46 solar Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha amd64"
-IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna  athena neXt Xaw3d"
+IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna athena neXt Xaw3d"
 
 # esound is know to cause problems in XEmacs
 #esd? ( media-sound/esound )
