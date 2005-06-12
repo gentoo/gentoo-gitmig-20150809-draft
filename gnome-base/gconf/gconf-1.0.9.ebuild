@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.16 2005/01/08 23:26:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.17 2005/06/12 21:30:03 tester Exp $
 
 inherit libtool gnome.org eutils gnuconfig
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 mips ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 mips ppc ppc64 ~sparc x86"
 IUSE="nls"
 
 DEPEND="dev-util/indent
