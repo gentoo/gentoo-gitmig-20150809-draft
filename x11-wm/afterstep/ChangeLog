@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.37 2005/06/09 23:08:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.38 2005/06/12 09:09:58 ka0ttic Exp $
+
+*afterstep-2.1.1 (12 Jun 2005)
+
+  12 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> -files/as2-gnome.diff,
+  -files/afterstep-2.00.01-fix-makefile.diff, -files/as2-gnome-r1.diff,
+  -afterstep-2.00.01.ebuild, -afterstep-2.00.02.ebuild,
+  +afterstep-2.1.1.ebuild:
+  Version bump; tidy'd old ebuilds/patches.
 
   09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   afterstep-2.00.05.ebuild:
