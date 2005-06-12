@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e3c90352c4c3fbc8a0e343b54ce68e6a ChangeLog 1556
-MD5 4947ebb6ec8d86caf11db3b648b545b4 metadata.xml 226
 MD5 362802d08a50735dacc44422c6bf47eb vdk-2.0.2-r1.ebuild 912
+MD5 2ea14caf55b0e34c189ce4a7cfa7219c vdk-2.4.0.ebuild 1667
 MD5 b3b9904376a77d65cd3050cc74b40e72 vdk-2.0.2.ebuild 885
-MD5 c760f5a77f88cb12bf340553503485ef vdk-2.4.0.ebuild 1668
+MD5 12060455296349aee3c9330f4aec5298 ChangeLog 1680
+MD5 4947ebb6ec8d86caf11db3b648b545b4 metadata.xml 226
 MD5 99848ddbdb27f9085a04d4be864953c8 files/digest-vdk-2.0.2 61
-MD5 99848ddbdb27f9085a04d4be864953c8 files/digest-vdk-2.0.2-r1 61
 MD5 8bbcc0a70a6e499bd8539275f40e574a files/digest-vdk-2.4.0 62
-MD5 ce2f3ecb79a589ce3ac4bbd88f7bc2fd files/vdk-2.0.2-makefile.in.patch 445
+MD5 99848ddbdb27f9085a04d4be864953c8 files/digest-vdk-2.0.2-r1 61
 MD5 c3617790721213fc5725772e45f7b02b files/vdk-2.4.0-gcc3.4.patch 4695
+MD5 ce2f3ecb79a589ce3ac4bbd88f7bc2fd files/vdk-2.0.2-makefile.in.patch 445
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCX8pGKRy60XGEcJIRArK9AKCadOw/GvtJD2o7JSNFuKnE4a9lmgCeLKoP
-+kqpeDy7LkeLfOIsrIWDxhQ=
-=AZd0
+iD8DBQFCrCaSI1lqEGTUzyQRAhTrAKDUh4s08NE6kZpKETjdkROszGkLvgCff4ph
+AUH+dRc72xaFlSjQFpuCTdY=
+=zIK5
 -----END PGP SIGNATURE-----
