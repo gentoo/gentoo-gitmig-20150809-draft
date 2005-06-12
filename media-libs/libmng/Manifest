@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f383100879a3356001fed2867cba2999 libmng-1.0.5.ebuild 940
 MD5 b3c1ceb2b042a9f0427c052d94f7a5ab ChangeLog 3537
 MD5 bba5cb736760fe9caeea13a9956c9d72 libmng-1.0.7.ebuild 971
@@ -12,3 +15,10 @@ MD5 4b5d9148a72ba9bca32dc6e27a86378c files/digest-libmng-1.0.3 64
 MD5 e54a953532ee82caa95fc0ea5fe0e498 files/digest-libmng-1.0.4 64
 MD5 f14cb8c3ba7ee37dff6203db2f0a2259 files/digest-libmng-1.0.8 64
 MD5 f628f6ff3a3af16da957bf57ba7c2fdb files/digest-libmng-1.0.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrHS6Kf2g/qXtneoRAs56AKCUQD7+2MuZwx1SrNHN9bElSoqqFACgqohQ
+ErTAlQZhcGCvttzZaAMk/iE=
+=O45V
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7f079469132865bdd25780277639f098 libsdl-1.2.7-r3.ebuild 3960
 MD5 c85e585d3d6d7ccb32d8b43a6b962155 ChangeLog 12774
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
@@ -24,3 +27,10 @@ MD5 4ce5ec18eafcf0b1c6caf31c9f67cb1d files/digest-libsdl-1.2.8-r1 62
 MD5 358c3d6380bf0b6ba3e78ce47c5ec578 files/libsdl-1.2.8-gcc2.patch.bz2 2639
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.7-nobuggy-X.patch 568
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.6-nobuggy-X.patch 568
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrHUAKf2g/qXtneoRAoFXAKDFsCn6uG3u+yHS3PKL25vn4RpTTACgvmLX
+j2kgUO1N9zvJx9Xx9oZ12gM=
+=EUMn
+-----END PGP SIGNATURE-----
