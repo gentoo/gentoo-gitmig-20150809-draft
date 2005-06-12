@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 99f9752783bc8c4cc41c72ea1e465fec metadata.xml 294
-MD5 360f9d69363de3917e819d27e0e23658 ChangeLog 13617
 MD5 8f9c099f3a13c95bf5eb36e814cf7e3a xterm-200-r1.ebuild 1903
-MD5 0dc185546142fa5513a3a4e345cbb1da xterm-202.ebuild 2298
-MD5 dc647f3b09730723b76a0f6f187376e0 xterm-200-r2.ebuild 2244
+MD5 99f9752783bc8c4cc41c72ea1e465fec metadata.xml 294
 MD5 fbef9698628550a847dc76cd497738a9 xterm-202-r1.ebuild 2353
-MD5 7b7d35cfdf6b4601d1079f1aca757ab5 files/digest-xterm-200-r1 58
-MD5 201c212a3232d830f73261ea29e14f66 files/xterm-no-toolbar-by-default.patch 380
+MD5 fccd0229e8a80244a341c2ccc8dcc423 ChangeLog 13711
+MD5 0dc185546142fa5513a3a4e345cbb1da xterm-202.ebuild 2298
+MD5 5ae198fe18a5e4f90b7d1810c5fae190 xterm-200-r2.ebuild 2243
 MD5 5b73666ce15842c6f2bd6cc83e9dd9f2 files/digest-xterm-202 58
 MD5 7b7d35cfdf6b4601d1079f1aca757ab5 files/digest-xterm-200-r2 58
 MD5 5b73666ce15842c6f2bd6cc83e9dd9f2 files/digest-xterm-202-r1 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCqqKW60LfUIagIAkRAvlvAKCa4EIJjQM35uoTucK4YWiHRoWLAQCgnwPd
-0vF9wvFa+eMc4YfWjYX03kI=
-=y65W
------END PGP SIGNATURE-----
+MD5 201c212a3232d830f73261ea29e14f66 files/xterm-no-toolbar-by-default.patch 380
+MD5 7b7d35cfdf6b4601d1079f1aca757ab5 files/digest-xterm-200-r1 58
