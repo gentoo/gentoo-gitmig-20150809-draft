@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.1.ebuild,v 1.1 2005/06/11 11:28:20 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.1.ebuild,v 1.2 2005/06/12 07:45:41 brix Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -112,6 +112,9 @@ pkg_postinst() {
 	einfo "  /usr/sbin/sensors-detect"
 	einfo "to detect the I2C hardware of your system and create the file:"
 	einfo "  /etc/conf.d/lm_sensors"
+	einfo
+	einfo "You will need to run the above command even if you're just upgrading,"
+	einfo "as the needed entries in /etc/conf.d/lm_sensors has changed."
 	einfo
 	einfo "Be warned, the probing of hardware in your system performed by"
 	einfo "sensors-detect could freeze your system. Also make sure you read"
