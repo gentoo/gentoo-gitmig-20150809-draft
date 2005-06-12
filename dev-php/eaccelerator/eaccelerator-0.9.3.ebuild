@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.4 2005/06/12 10:02:57 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.5 2005/06/12 17:24:29 weeve Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_ZENDEXT="yes"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/eaccelerator/${P}.tar.gz"
 IUSE="apache2 inode session"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~sparc"
+KEYWORDS="amd64 sparc x86"
 
 DEPEND="$DEPEND
 		!dev-php/ioncube_loaders
