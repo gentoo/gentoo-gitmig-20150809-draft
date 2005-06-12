@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.64 2005/06/12 08:03:24 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.65 2005/06/12 09:21:51 chriswhite Exp $
+
+  12 Jun 2005; Chris White <chriswhite@gentoo.org>
+  files/flac-1.1.2-noogg.patch:
+  Fixed the patch _again_ and made sure it worked 3 times over. This will
+  still fail I bet...
 
   12 Jun 2005; Chris White <chriswhite@gentoo.org> :
   Patch reversion until compile error I just found gets fixed...
