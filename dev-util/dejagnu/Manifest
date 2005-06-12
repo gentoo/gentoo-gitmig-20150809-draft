@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 df668e9424f05e5a01ae10d92d0a1e50 ChangeLog 1610
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 a8615e28350714f1bf5adac7440358da dejagnu-1.4.4-r1.ebuild 932
+MD5 dfef9c4f7f281eb6f00807d493a6616f dejagnu-1.4.4-r1.ebuild 938
 MD5 413508443b9ee3853180b1e2b8ba5875 files/dejagnu-ignore-libwarning.patch 1129
 MD5 93db6813e2b5581355a1dc6951391f50 files/digest-dejagnu-1.4.4-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB71YTroRuSHgZdywRAuTBAJwOB4r5zWtZe04Gduo7B6D2QYFinQCfVanJ
-oJ9Avl+fFJ+jjmMvMyCwFr0=
-=UVu1
------END PGP SIGNATURE-----
