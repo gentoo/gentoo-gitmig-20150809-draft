@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 df842c066409be69bb6d746ba9658d95 gstreamripper-0.2.ebuild 719
 MD5 373c9981c78c8eabd0201c086b3f54bc ChangeLog 1230
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 f2f7863467789259db6c78fff9fe410d files/digest-gstreamripper-0.2 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrCcVI1lqEGTUzyQRArG2AJ9unazUz2kVXClUdvmjD965EDQ3nACfa9a1
+ZM9Xy2UoaOw+HHtUK1SLEHI=
+=QZYo
+-----END PGP SIGNATURE-----
