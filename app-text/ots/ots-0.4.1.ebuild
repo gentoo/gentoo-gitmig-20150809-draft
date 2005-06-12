@@ -1,16 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.4.1.ebuild,v 1.7 2005/04/24 03:26:18 hansmi Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.4.1.ebuild,v 1.8 2005/06/12 04:48:36 mr_bones_ Exp $
 
 DESCRIPTION="Open source Text Summarizer, as used in newer releases of abiword and kword."
-HOMEPAGE="http://libots.sourcefourge.net/"
+HOMEPAGE="http://libots.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libots/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~mips amd64"
+IUSE="doc"
 
 
 RDEPEND="=dev-libs/glib-2*
@@ -22,21 +21,14 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.9 )"
 
 src_compile() {
-
-	econf `use_enable doc gtk-doc` || die
-
+	econf $(use_enable doc gtk-doc) || die
 	make || die
-
 }
 
 src_install() {
-
 	einstall || die
-
-	rm -rf ${D}/usr/share/doc/libots
-
-	dodoc AUTHORS BUGS COPYING ChangeLog HACKING INSTALL NEWS README TODO
-
-	cd ${S}/doc/html
+	rm -rf "${D}"/usr/share/doc/libots
+	dodoc AUTHORS BUGS ChangeLog HACKING INSTALL NEWS README TODO
+	cd "${S}"/doc/html
 	dohtml -r ./
 }

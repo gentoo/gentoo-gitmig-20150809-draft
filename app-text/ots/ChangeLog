@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ots
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.8 2005/04/24 03:26:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.9 2005/06/12 04:48:36 mr_bones_ Exp $
+
+  12 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org> ots-0.4.1.ebuild:
+  fix typo in HOMEPAGE (bug #95715); tidy
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> ots-0.4.1.ebuild:
   Stable on ppc.
