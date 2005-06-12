@@ -1,0 +1,36 @@
+#!/bin/bash
+if [ $1 = "install" ]; then
+	# fix location
+	cd ${VHOST_ROOT}/${P}
+	sed -e "s|${MY_HOSTROOTDIR}/${P}|${VHOST_ROOT}/${P}|g
+		s|${MY_HTDOCSDIR}|${MY_INSTALLDIR}|g" -i bin/* lib/RT.pm sbin/*
+
+	# fix Apache config
+	sed -e "s|WEBMUX|${VHOST_ROOT}/${P}/bin/webmux.pl|" -i ${MY_SERVERCONFIGDIR}/apache1-rt_apache.conf
+
+	# fix permissions
+	chown -R  ${VHOST_SERVER_GID}:${VHOST_SERVER_UID} ${VHOST_ROOT}/${P}/var
+
+	# check for upgrades
+	cd ${VHOST_ROOT}/${P}/upgrade
+	echo "You may need to update your database."
+	echo "For each item in the output below"
+	echo "whose name is greater than your previously installed RT version,"
+	echo "rt-setup-database --action schema --datadir ${VHOST_ROOT}/${P}/upgrade/<version>"
+	echo "rt-setup-database --action acl --datadir ${VHOST_ROOT}/${P}/upgrade/<version>"
+	echo "rt-setup-database --action insert --datadir ${VHOST_ROOT}/${P}/upgrade/<version>"
+	echo "Don't forget to read the online installation guide for more details"
+	ls
+
+elif [ $1 = "clean" ]; then
+	# braindead - set ${P}
+	MY_PV=$(basename $(dirname ${MY_HOSTROOTDIR}))
+	MY_PN=$(basename $(dirname $(dirname ${MY_HOSTROOTDIR})))
+	MY_P="${MY_PN}-${MY_PV}"
+
+	if [ ! "${VHOST_ROOT}${MY_P}a" = "a" ]; then 
+		rm -rf ${VHOST_ROOT}/${MY_P}/bin ${VHOST_ROOT}/${MY_P}/lib/RT.pm ${VHOST_ROOT}/${MY_P}/sbin
+	else
+		echo "Variables not set!"
+	fi
+fi

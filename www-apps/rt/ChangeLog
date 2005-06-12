@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.7 2005/05/10 00:24:12 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.8 2005/06/12 20:03:35 rl03 Exp $
+
+*rt-3.4.2 (12 Jun 2005)
+
+  12 Jun 2005; Renat Lumpau <rl03@gentoo.org> +files/reconfig-3.4.2,
+  +files/postinstall-en-3.4.2.txt, +files/rt_apache.conf, +rt-3.4.2.ebuild:
+  Version bump (bug #67686, #81257). Use custom Gentoo layout instead of sed.
+  Fix MasonLocalComponentDir (#74680). General clean-up.
 
   10 May 2005; Elfyn McBratney <beu@gentoo.org> rt-3.2.1.ebuild:
   dev-perl/libapreq{,2} -> www-apache
