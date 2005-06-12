@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.4.5.ebuild,v 1.4 2004/12/19 06:47:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.4.5.ebuild,v 1.5 2005/06/12 12:14:14 swegener Exp $
 
 DESCRIPTION="A Midi Controllable Audio Sampler"
 HOMEPAGE="http://www.gazuga.net"
@@ -18,7 +18,7 @@ DEPEND="media-sound/jack-audio-connection-kit
 	media-libs/libsndfile
 	media-libs/phat
 	dev-libs/libxml2
-	>x11-libs/gtk+-2*
+	>x11-libs/gtk+-2
 	gnome-base/libgnomecanvas
 	ladcca? ( media-libs/ladcca )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/gstreamripper-0.2.ebuild,v 1.8 2004/12/19 05:48:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/gstreamripper-0.2.ebuild,v 1.9 2005/06/12 12:13:49 swegener Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 
-DEPEND=">=x11-libs/gtk+-2.4*
+DEPEND=">=x11-libs/gtk+-2.4
 	>=media-sound/streamripper-1.60.5"
 
 src_install() {
