@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6528f91d231227b7d44375246c82d438 gentoo-bugger-0.09.2.ebuild 597
-MD5 07b0c25e28c5eaf2f9dddfd1b33cd640 ChangeLog 409
+MD5 ff3008d4e197e061e99f7189c65f2dac ChangeLog 497
+MD5 26c214e5e507bfb464cffc920cf85906 gentoo-bugger-0.09.2.ebuild 598
 MD5 c8ea960a74b7d45fe928837fbd074756 metadata.xml 313
 MD5 63995274b01b80a823d0119087202acd files/digest-gentoo-bugger-0.09.2 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCq6bzI1lqEGTUzyQRAnW1AKDei1bnx2VKC+bjZB8EGuoR/9ipugCglPdL
-mg7FoyiCiU39H/Wgbm/yMAU=
-=nsSJ
------END PGP SIGNATURE-----
