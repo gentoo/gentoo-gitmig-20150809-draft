@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 79c5606529dd8cd2201e6e92fb00c48d ChangeLog 439
+MD5 ce491715b5c55c8351287fa78744f686 gobby-0.1.1.ebuild 776
+MD5 08b59cdb7488971fc1ab89cfc860eee9 metadata.xml 287
+MD5 430dcccb6cc929a0851b1b7bfa53c9d0 files/digest-gobby-0.1.1 63
+MD5 e35d10904c6f4ce67f5d497121f5b49d files/gobby.desktop 349
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCq4sw8zY1VwezZiERAvnYAJ4s0Q6dk3RuvLykLW42j82iAxl1XQCeLzbR
+RBL6sYVqP0j/+bBMpwof4YY=
+=hi6f
+-----END PGP SIGNATURE-----

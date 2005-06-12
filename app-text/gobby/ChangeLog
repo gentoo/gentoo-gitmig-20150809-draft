@@ -1,0 +1,11 @@
+# ChangeLog for app-text/gobby
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gobby/ChangeLog,v 1.1 2005/06/12 01:11:47 humpback Exp $
+
+*gobby-0.1.1 (12 Jun 2005)
+
+  12 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/gobby.desktop, +metadata.xml, +gobby-0.1.1.ebuild:
+  Initial import, based on ebuild's by upstream devs with changes to handle
+  locale bug.
+
