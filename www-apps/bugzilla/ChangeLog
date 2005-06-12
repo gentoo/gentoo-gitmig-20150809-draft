@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.22 2005/05/25 13:47:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.23 2005/06/12 17:49:42 weeve Exp $
+
+  12 Jun 2005; Jason Wever <weeve@gentoo.org> bugzilla-2.18.1.ebuild:
+  Stable on SPARC.
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> bugzilla-2.18.1.ebuild:
   dev-perl/File-Spec => perl-core/File-Spec migration
