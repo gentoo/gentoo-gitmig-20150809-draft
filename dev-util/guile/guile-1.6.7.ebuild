@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.7.ebuild,v 1.7 2005/06/12 13:24:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.7.ebuild,v 1.8 2005/06/12 18:35:08 tester Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/guile/"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc-macos"
+KEYWORDS="x86 ppc sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~s390 ~ppc-macos"
 IUSE=""
 
 # Problems with parallel builds (#34029), so I'm taking the safer route
