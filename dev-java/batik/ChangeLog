@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.22 2005/06/12 18:47:30 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.23 2005/06/12 20:06:00 luckyduck Exp $
+
+*batik-1.5 (12 Jun 2005)
+
+  12 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> +batik-1.5.ebuild:
+  Readded 1.5
 
   12 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> -batik-1.5.ebuild,
   -batik-1.5.1.ebuild, -batik-1.5.1-r3.ebuild, batik-1.5.1-r4.ebuild:
