@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.55 2005/05/19 13:17:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.56 2005/06/12 23:56:24 kloeri Exp $
+
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
+  libmatroska-0.7.6.ebuild:
+  Add ~alpha keyword.
 
   19 May 2005; Guy Martin <gmsoft@gentoo.org> libmatroska-0.7.6.ebuild:
   Stable on hppa.
