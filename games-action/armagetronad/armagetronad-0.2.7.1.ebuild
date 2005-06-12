@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1.ebuild,v 1.2 2005/06/11 22:08:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1.ebuild,v 1.3 2005/06/12 21:23:03 vapier Exp $
 
 
 inherit flag-o-matic eutils games
@@ -41,18 +41,17 @@ src_compile() {
 }
 
 src_install() {
-	dodoc COPYING.txt
 	dohtml doc/*.html
 	docinto html/net
 	dohtml doc/net/*.html
 	newicon tron.ico ${PN}.ico
-	insinto "${GAMES_LIBDIR}/${PN}"
+	exeinto "${GAMES_LIBDIR}/${PN}"
 	if use dedicated && ! use opengl; then
-		doins src/tron/${PN}-dedicated || die "copying files"
+		doexe src/tron/${PN}-dedicated || die "copying files"
 	else
-		doins src/tron/${PN} || die "copying files"
+		doexe src/tron/${PN} || die "copying files"
 	fi
-	doins src/network/armagetronad-* || die "copying files"
+	doexe src/network/armagetronad-* || die "copying files"
 	insinto "${GAMES_DATADIR}/${PN}"
 	if use dedicated && ! use opengl; then
 		doins -r log language || die "copying files"
