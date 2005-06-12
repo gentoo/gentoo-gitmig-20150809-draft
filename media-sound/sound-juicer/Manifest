@@ -1,7 +1,17 @@
-MD5 bd40cb38acc0af736cf1028dc64bde80 ChangeLog 5525
-MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c7448f55042d39cfbb8cbdc85ac6e5cc sound-juicer-0.5.15.ebuild 1325
-MD5 d3186dbbd23fe0ac7b7f06986ebeac7c sound-juicer-2.10.0.ebuild 1136
-MD5 0c3b719daba6a6fe9fe4fdaaadaa7a08 files/digest-sound-juicer-0.5.15 71
-MD5 f44188763900af17645591111e1bfdb5 files/digest-sound-juicer-2.10.0 72
+MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
+MD5 1159724e49160230b541182873aaa4f5 ChangeLog 5620
+MD5 4ab11b86f281bdf58cadb8f1144f904b sound-juicer-2.10.0.ebuild 1132
 MD5 115a35bafe7355d75465f90e24d193d4 files/sound-juicer-0.5.15-fix_hal_build.patch 702
+MD5 f44188763900af17645591111e1bfdb5 files/digest-sound-juicer-2.10.0 72
+MD5 0c3b719daba6a6fe9fe4fdaaadaa7a08 files/digest-sound-juicer-0.5.15 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrInHmOfEJZHYOKcRAqzpAJ43oxgiYcDDzL9nKjqaHFT1g6hFAQCg0V+P
+2dV1juEO99GAZ7CVgif2qCM=
+=+AjS
+-----END PGP SIGNATURE-----
