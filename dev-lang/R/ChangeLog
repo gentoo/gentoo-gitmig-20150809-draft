@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.51 2005/06/11 18:19:41 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.52 2005/06/12 18:23:28 cryos Exp $
+
+  12 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> -R-1.9.0-r1.ebuild:
+  Removing old version. Closes bug 91512.
 
   11 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> R-2.1.0-r1.ebuild:
   Stable on amd64 and x86.
