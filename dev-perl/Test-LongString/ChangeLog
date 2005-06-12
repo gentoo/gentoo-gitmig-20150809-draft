@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-LongString
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/ChangeLog,v 1.1 2005/06/12 19:41:29 rl03 Exp $
+
+*Test-LongString-0.07 (12 Jun 2005)
+
+  12 Jun 2005; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +Test-LongString-0.07.ebuild:
+  Initial ebuild. www-apps/rt dependency. Okd by beu.
+

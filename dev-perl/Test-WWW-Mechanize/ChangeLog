@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-WWW-Mechanize
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/ChangeLog,v 1.1 2005/06/12 19:46:14 rl03 Exp $
+
+*Test-WWW-Mechanize-1.04 (12 Jun 2005)
+
+  12 Jun 2005; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +Test-WWW-Mechanize-1.04.ebuild:
+  Initial ebuild. www-apps/rt dependency. Okd by beu.
+
