@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.0.9.ebuild,v 1.4 2005/01/01 15:00:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.0.9.ebuild,v 1.5 2005/06/12 12:10:28 swegener Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="nls"
 
-DEPEND=">=x11-libs/gtk+-2.4*"
+DEPEND=">=x11-libs/gtk+-2.4"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.6 2005/01/01 15:00:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.7 2005/06/12 12:10:28 swegener Exp $
+
+  12 Jun 2005; Sven Wegener <swegener@gentoo.org> emelfm2-0.0.9.ebuild,
+  emelfm2-0.0.9-r1.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   03 Dec 2004; Tom Martin <slarti@gentoo.org> emelfm2-0.0.9-r1.ebuild:
   Marked ~amd64, resolves bug 72632.
