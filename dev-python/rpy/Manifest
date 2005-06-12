@@ -1,20 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2c813bfbd89bfade2564f77c7f8d5d6b ChangeLog 1366
+MD5 b6ec177d6d308609f1e7f7a376420b6c ChangeLog 1525
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 ee0c895db6c252dde73cbf7c41014beb rpy-0.3.5.ebuild 738
 MD5 d9e70c7d46182aa2708bdbe343ff971e rpy-0.3.5-r1.ebuild 1071
 MD5 8f05933a41fd0b74ff73496e73b4e349 rpy-0.4.1.ebuild 673
-MD5 179eb32e38a74c76d927b363d99e7327 files/digest-rpy-0.3.5 60
 MD5 581447dc98908d7d7babd7d3671a18a1 files/digest-rpy-0.3.5-r1 121
-MD5 176085f9bd98993ed545abef3a2e3ed6 files/rpy-0.3.5-cvs_backport.patch 42962
 MD5 cba240ff421fed6562ae8d4bfa8d1ea4 files/digest-rpy-0.4.1 61
+MD5 176085f9bd98993ed545abef3a2e3ed6 files/rpy-0.3.5-cvs_backport.patch 42962
 MD5 2790be0dc37abd8a240661c8e9b4d4fe files/90rpy 21
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbl4oTM53OX+9xmMRAj9oAJ9w+9KiQb7NpKfnewzfPpKBu0nWBgCgowcc
-xtvY05EbaSHXeP1cXxkzuz4=
-=sCgL
+iD8DBQFCrH0DKf2g/qXtneoRAo1YAJ9SgAMtiWdNDjrOBVVaH8N0STXCwQCgh/iy
+QvpNyYnOb6HwZJ7eKlFcrk8=
+=0Mty
 -----END PGP SIGNATURE-----
