@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/matchbox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/ChangeLog,v 1.4 2005/05/10 09:19:54 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/ChangeLog,v 1.5 2005/06/12 04:51:19 mr_bones_ Exp $
+
+  12 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  matchbox-0.7.1.ebuild:
+  fix HOMEPAGE (bug #92701)
 
   10 May 2005; David Holm <dholm@gentoo.org> matchbox-0.7.1.ebuild:
   Added to ~ppc.

@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.4 2005/05/10 09:19:54 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.5 2005/06/12 04:51:19 mr_bones_ Exp $
 
 IUSE="jpeg png nls debug"
 
 DESCRIPTION="Light weight WM designed for use on PDA computers"
-HOMEPAGE="http://handhelds.org/~mallum/matchbox/"
+HOMEPAGE="http://projects.o-hand.com/matchbox/"
 SRC_URI="http://handhelds.org/~mallum/downloadables/${P}.tar.gz"
 
 SLOT="0"
