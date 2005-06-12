@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.60 2005/06/09 00:56:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.61 2005/06/12 15:55:23 kloeri Exp $
+
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
+  ntp-4.2.0.20040617-r2.ebuild:
+  Stable on alpha.
 
   09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   ntp-4.2.0.20040617-r2.ebuild:
