@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.84 2005/06/12 13:47:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.85 2005/06/12 18:32:11 tester Exp $
+
+  12 Jun 2005; Olivier Crête <tester@gentoo.org>
+  gnome-themes-2.10.0.ebuild:
+  Stable on amd64
 
   12 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-themes-2.10.0.ebuild:
