@@ -1,9 +1,19 @@
-MD5 4e27988d2fbe7265ea88bdd79333936a ChangeLog 2076
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d7f90e0d8347493b76fad3613ccd4c91 nvidia-settings-1.0.7167.ebuild 1322
+MD5 230d885c5f928254a3791e8f7b2bcc17 nvidia-settings-1.0.6629.ebuild 1128
+MD5 9eac091ac0195501ee3e4a9ffddb213a ChangeLog 2284
 MD5 b48738468061c96675a782947951d3d8 metadata.xml 300
-MD5 df86a2c2a57763560af3893e92089bf7 nvidia-settings-1.0.6111.ebuild 1127
-MD5 b34b1504ffbf1a2b9b158c22286e243e nvidia-settings-1.0.6629.ebuild 1127
-MD5 c8dbfa97638d295899d3289bcd6f4f5c nvidia-settings-1.0.7167.ebuild 1321
-MD5 ce276d6edd87a8f9f2bfc81f2d4fcfed files/digest-nvidia-settings-1.0.7167 76
-MD5 d15804c20077d1318d338ec3db0ac495 files/digest-nvidia-settings-1.0.6111 76
+MD5 9df89547cf34bfb5ffa1177e2ce00c00 nvidia-settings-1.0.6111.ebuild 1128
 MD5 92faa535f9924a7ef5a2578d13d43fb3 files/libXNVCtrl.a.bz2 2797
+MD5 d15804c20077d1318d338ec3db0ac495 files/digest-nvidia-settings-1.0.6111 76
 MD5 0a39b5babdda1f3d78fee4db5b053b0a files/digest-nvidia-settings-1.0.6629 76
+MD5 ce276d6edd87a8f9f2bfc81f2d4fcfed files/digest-nvidia-settings-1.0.7167 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrCdrI1lqEGTUzyQRAtz0AKDP+eFZRlKDKku6xH5hi5dDNPdW6ACeM766
+l9UMQ3a7v5jWbetyNAn1L4U=
+=Mo/G
+-----END PGP SIGNATURE-----
