@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-xmlbeans
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.8 2005/05/16 00:11:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.9 2005/06/12 12:59:31 luckyduck Exp $
+
+  12 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  xml-xmlbeans-20041217.ebuild:
+  Updated dev-java/jaxen dependency.
 
   16 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   xml-xmlbeans-20041217.ebuild:

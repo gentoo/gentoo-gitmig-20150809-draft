@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.7 2005/05/16 00:11:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.8 2005/06/12 12:59:31 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -18,7 +18,7 @@ DEPEND=">=virtual/jdk-1.4
 	!junit? ( >=dev-java/ant-core-1.6.2 )
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
-	=dev-java/jaxen-1.1_beta2*
+	=dev-java/jaxen-1.1*
 	junit? ( >=dev-java/junit-3.8 )"
 
 S=${WORKDIR}/${P}/v1
