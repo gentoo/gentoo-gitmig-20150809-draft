@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 1eece64fd6a9e9879809e8c95c81cbc9 gconf-2.9.91.ebuild 1950
-MD5 2ebbe63ee3d6d2fe128d2cb325f75bff gconf-1.0.9.ebuild 1866
+MD5 60612133e89c152301f9203f8a78c01d gconf-1.0.9.ebuild 1865
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 7998f0e3fab48622265a6b5277bf28ed gconf-1.0.8-r5.ebuild 1872
 MD5 6d364f24ec487a9d9134abe5b12b1d2f gconf-2.8.1-r1.ebuild 2101
 MD5 b14e4fe291038b54ef676c1601aa7bd3 gconf-2.6.0.ebuild 1962
 MD5 4218926ede4a6d271b19270ed10b57c6 gconf-2.6.1.ebuild 2110
-MD5 bd1ddea8e56b65058e54f5e9f9fb409a ChangeLog 14092
+MD5 f291ee7fdaa9ad15f48cdd6fbf0a8507 ChangeLog 14181
 MD5 dec660df21be20d7f05aa2e2d3874248 gconf-2.8.0.1.ebuild 1980
 MD5 b2d4c37fdd546858de8a30cf2157e0d9 gconf-2.4.0.1.ebuild 1944
 MD5 ac7cff50ecafeb03d9e4f489cbbf037f gconf-1.0.8-r3.ebuild 1707
@@ -32,7 +32,7 @@ MD5 2d8f912a900d7e0525c34c4dd6eb3fc1 files/digest-gconf-2.8.1-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrHx1mOfEJZHYOKcRAvl2AJ9Ib425XYBu+/mW5xLyf5Ncavn++QCgvUEK
-Evk3jzEY4AH7g0Md6g0KBAg=
-=N4Ga
+iD8DBQFCrKlmmOfEJZHYOKcRAleHAJ45zParFOPZKzHbZKNyAiSDsvx9QACffb43
+Beo5AiCqpWf+FBIxCcpY1xs=
+=BHsm
 -----END PGP SIGNATURE-----
