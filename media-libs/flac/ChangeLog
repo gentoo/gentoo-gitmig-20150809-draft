@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.65 2005/06/12 09:21:51 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.66 2005/06/12 09:27:15 chriswhite Exp $
+
+  12 Jun 2005; Chris White <chriswhite@gentoo.org> flac-1.1.2-r2.ebuild:
+  And now we add the pkg-config dep...
 
   12 Jun 2005; Chris White <chriswhite@gentoo.org>
   files/flac-1.1.2-noogg.patch:

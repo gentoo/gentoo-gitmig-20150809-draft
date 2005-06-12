@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r2.ebuild,v 1.1 2005/06/12 07:59:04 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r2.ebuild,v 1.2 2005/06/12 09:27:15 chriswhite Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -18,7 +18,8 @@ RDEPEND="ogg? ( >=media-libs/libogg-1.0_rc2 )
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	sys-apps/gawk
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
