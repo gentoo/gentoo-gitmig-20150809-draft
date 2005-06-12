@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/files/0.30.205/vservers.confd,v 1.1 2005/04/07 14:23:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/files/0.30.205/vservers.confd,v 1.2 2005/06/12 09:43:54 hollow Exp $
 
 # A space-delimited list of vserver MARKS to start. 
 # Identification of vservers happens by

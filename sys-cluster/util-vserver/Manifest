@@ -1,27 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f22606a0669159d984a2aeb308a4e489 ChangeLog 3397
+MD5 cfb26bc3d642e861226c0ba046394f44 ChangeLog 3553
 MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
 MD5 3d6eec0e3d10c7a6e4a95e448c03a06e util-vserver-0.30.196.ebuild 1268
 MD5 5eb10d9678fd96a1f56d1eb157b3994a util-vserver-0.30.204.ebuild 1285
+MD5 48ce588c1f3255fa31e1a4cee82c1d27 util-vserver-0.30.205-r1.ebuild 1763
 MD5 5460093cd5050c0938518baa9a56cb55 util-vserver-0.30.205.ebuild 1284
-MD5 ffa3b0d66e0441fd8868b1c668acf50f util-vserver-0.30.205-r1.ebuild 1762
-MD5 79b21ee42f1c59c4dce8c765fc6a860f util-vserver-0.30.207.ebuild 1805
+MD5 b8e0067abd2887f7b0fad00d9a10fb21 util-vserver-0.30.207.ebuild 2288
+MD5 7bae473a0bf1ad73103118220c3fa924 files/vservers.confd 1739
 MD5 8de53dd957127f3ba125f733c1b7389b files/vservers.initd 1792
-MD5 3d9c604f30a2de02a9fc6e99b4b9aefd files/vservers.confd 1738
 MD5 0f34731a7d8119fc5e3f9322bf727521 files/digest-util-vserver-0.30.196 74
 MD5 12cd58b1dedc5d8f583cf66aad57ac51 files/digest-util-vserver-0.30.204 74
 MD5 4bd7088cb72bd60e8ed7b7e562f3ea95 files/digest-util-vserver-0.30.205-r1 74
 MD5 4bd7088cb72bd60e8ed7b7e562f3ea95 files/digest-util-vserver-0.30.205 74
 MD5 e9f396453e3aeb9f364489b7baec4238 files/digest-util-vserver-0.30.207 74
-MD5 f9ebb7b968fe2b8e12d28dbf1e388870 files/0.30.205/vservers.confd 1568
-MD5 acd935ab2632dfa0f2213d11b0025f97 files/0.30.205/vservers.initd 1701
 MD5 4096356a4cb49d0ec50eee25c925d24f files/0.30.205/vprocunhide 579
+MD5 30d0e165963778b642e6b52a6fd8a341 files/0.30.205/vservers.confd 1569
+MD5 acd935ab2632dfa0f2213d11b0025f97 files/0.30.205/vservers.initd 1701
+MD5 16d2c34a9a86dbb4ffa033a2969c6c39 files/0.30.205/vshelper-shutdown-hack 12
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCildumPFBzbX68WERAscdAJ9ZyGWNZTiJcnJM6hs9sLlz7RKMtQCeNuhd
-5x1/xW8jpi6hmPoB+5sTgtQ=
-=uAFv
+iD8DBQFCrAQfmPFBzbX68WERAg1zAJ9MFEodF7PyjT3BBOgM/3c/4Xi6zwCfaTVu
+ut3vpcIc4v8CZxsUPZduAiU=
+=FlZP
 -----END PGP SIGNATURE-----
