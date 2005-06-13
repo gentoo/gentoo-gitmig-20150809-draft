@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.168 2005/06/13 04:46:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.169 2005/06/13 23:26:03 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1792,8 +1792,10 @@ do_gcc_SSP_patches() {
 	# if gcc in a stage3 defaults to ssp, is version 3.4.0 and a stage1 is built
 	# the build fails building timevar.o w/:
 	# cc1: stack smashing attack in function ix86_split_to_parts()
-	if gcc -dumpspecs | grep -q "fno-stack-protector:" && version_is_at_least 3.4.0 && ! version_is_at_least 4.0.0 && [[ -f ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch ]] ; then
-		use build && epatch ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
+	if use build && version_is_at_least 3.4.0 ; then
+		if gcc -dumpspecs | grep -q "fno-stack-protector:" ; then
+			epatch ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
+		fi
 	fi
 
 	release_version="${release_version}, ssp-${PP_FVER:-${PP_GCC_VER}-${PP_VER}}"
