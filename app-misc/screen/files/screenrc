@@ -1,4 +1,4 @@
-# Copyright 1999-2004 Gentoo Foundation  
+# Copyright 1999-2005 Gentoo Foundation  
 # Distributed under the terms of the GNU General Public License v2  
 # 
 # /etc/screenrc
@@ -144,7 +144,7 @@ bufferfile            $HOME/.screen_exchange
   termcapinfo xterm* be
 
 # Do not use xterm's alternative window buffer, it breaks scrollback (see bug #61195)
-  termcapinfo xterm|xterms|xs ti=\E7\E[?47l
+  termcapinfo xterm|xterms|xs ti@:te=\E[2J
 
 # WYSE TERMINALS
 # ===============================================================

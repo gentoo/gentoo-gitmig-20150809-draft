@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.88 2005/06/07 13:00:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.89 2005/06/13 19:03:30 swegener Exp $
+
+  13 Jun 2005; Sven Wegener <swegener@gentoo.org> files/screenrc:
+  Changed the xterm scrollback tweak to clear the screen after detaching and
+  exiting screen.
 
 *screen-4.0.2-r4 (07 Jun 2005)
 
