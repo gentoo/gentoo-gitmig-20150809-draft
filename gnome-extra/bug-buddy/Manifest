@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8ecb0e87c2c9edbad22604deb1f42537 bug-buddy-2.6.1.ebuild 907
 MD5 0ec1de2b3e815b16d15b77b2a593e66c ChangeLog 7959
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -12,3 +15,10 @@ MD5 5ff5b1cd644e2fdbfe7d4162e09da84e files/digest-bug-buddy-2.4.2 68
 MD5 6efd76f3f75693ab65bc3daf4b284bf5 files/digest-bug-buddy-2.8.0 68
 MD5 bb4fc864ea6a7c9fc9c17ad8ddc05c53 files/digest-bug-buddy-2.6.0 68
 MD5 b30fe1faa0c77120d080a56e6475283a files/digest-bug-buddy-2.6.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrVjlKf2g/qXtneoRApvOAJwN6XV3Q07TI4WY0ygAXTI5B6GYjwCgr2MJ
+YPKXE5FfTukVpraKba8KKnA=
+=3JNz
+-----END PGP SIGNATURE-----
