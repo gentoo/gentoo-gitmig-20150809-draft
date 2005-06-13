@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4084 2005/06/13 04:55:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4085 2005/06/13 14:34:12 hansmi Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+
+# <hansmi@gentoo.org> (13 Jun 2005)
+# Masked for testing
+=mail-mta/qmail-1.03-r17
 
 # Paul Varner <fuzzyray@gentoo.org> (12 Jun 2005)
 # Masked for arch testing of new revdep-rebuild
@@ -688,10 +693,6 @@ media-video/cinelerra
 # appears to be dead / not responding to emails. So this package is 
 # now marked as removal pending. See bug #74703 for more details.
 net-p2p/napshare
-
-# <hansmi@gentoo.org> (02 Jan 2005)
-# Masked for testing
-=mail-mta/qmail-1.03-r16
 
 # <chriswhite@gentoo.org> (30 Dec 2004)
 # Junkie being masked per security bug #74696
