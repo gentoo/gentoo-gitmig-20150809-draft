@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r4.ebuild,v 1.4 2005/06/09 02:46:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r4.ebuild,v 1.5 2005/06/13 05:32:29 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -51,6 +51,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-volume-order-etc-update.patch
 	# Been moved to cryptfs
 	rm -f etc/conf.d/cryptfs
+	# Moved to ppp package
+	rm -r etc/ppp
 
 	# setup unicode defaults for silly unicode users
 	if use unicode ; then
