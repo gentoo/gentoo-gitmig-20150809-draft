@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.6.ebuild,v 1.1 2005/04/30 05:21:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.6-r1.ebuild,v 1.1 2005/06/13 19:26:45 kumba Exp $
 
 inherit eutils
 
 MY_P="${P/-/_}"
-ARCVER="1.0"		# Version of the arcboot patch ball
+ARCVER="1.1"		# Version of the arcboot patch ball
 
 DESCRIPTION="ARCS Bootloader for SGI Machines (IP22, IP32)"
 HOMEPAGE="http://packages.qa.debian.org/a/arcboot.html"
@@ -67,8 +67,8 @@ src_unpack() {
 	#
 	# Second is a clean up of bits in onion's patch to make it
 	# compile against our headers.
-	epatch ${WORKDIR}/patches/${P}-onion.patch
-	epatch ${WORKDIR}/patches/${P}-gentoo.patch
+	epatch ${WORKDIR}/patches/${P}-makefile.patch
+	epatch ${WORKDIR}/patches/${P}-segaddr.patch
 }
 
 src_compile() {
