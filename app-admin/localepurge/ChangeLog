@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.8 2005/01/02 19:14:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.9 2005/06/13 12:11:46 bass Exp $
+
+*localepurge-0.2-r2 (13 Jun 2005)
+
+  13 Jun 2005; J. Alberto Suárez López <bass@gentoo.org> localepurge-0.2-r2.ebuild:
+  More locales added. Thanks Mr Bones :)
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
