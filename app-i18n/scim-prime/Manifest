@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 446cb94698528ff46c00e9e8b58192cf scim-prime-0.2.6.ebuild 936
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 53a1a94a435cd7de2f2bb8e736576fc5 ChangeLog 1327
@@ -5,3 +8,10 @@ MD5 7005b8549a10c465e5ffafcb63fa7118 scim-prime-0.2.1.ebuild 935
 MD5 92fce5120be2d782fd7d88e0973e7c98 scim-prime-0.2.5.ebuild 935
 MD5 6ef12a17378cbeb30708592b20456bc6 files/digest-scim-prime-0.2.6 68
 MD5 da2fb0dcb60c48928fa0aa52648156e3 files/digest-scim-prime-0.2.5 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrQ2FVWNWqTUmv+0RAjUWAKCCdQ0ZO7BwIpV8pVtgdMrebBe5pQCgolU0
+gU7WeYzdEeh97vnw4uDrQPA=
+=FMPw
+-----END PGP SIGNATURE-----
