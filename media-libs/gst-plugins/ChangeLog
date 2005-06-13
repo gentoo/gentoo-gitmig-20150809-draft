@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.110 2005/06/12 18:45:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.111 2005/06/13 21:32:42 zaheerm Exp $
+
+*gst-plugins-0.8.9-r2 (13 Jun 2005)
+
+  13 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gst-plugins-0.8.9-riffmedia-isompeg4.patch,
+  +gst-plugins-0.8.9-r2.ebuild:
+  add fix to support ISO mpeg4 in avi's
 
   12 Jun 2005; Olivier Crête <tester@gentoo.org>
   gst-plugins-0.8.8-r2.ebuild:

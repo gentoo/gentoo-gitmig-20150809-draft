@@ -1,0 +1,30 @@
+===================================================================
+RCS file: /cvs/gstreamer/gst-plugins/gst-libs/gst/riff/Attic/riff-media.c,v
+rcsdiff: /cvs/gstreamer/gst-plugins/gst-libs/gst/riff/Attic/riff-media.c,v: warning: Unknown phrases like `commitid ...;' are present.
+retrieving revision 1.42.2.1
+retrieving revision 1.42.2.2
+diff -u -r1.42.2.1 -r1.42.2.2
+--- riff-media.c	2005/04/02 12:24:52	1.42.2.1
++++ riff-media.c	2005/06/09 09:47:22	1.42.2.2
+@@ -250,6 +250,13 @@
+         *codec_name = g_strdup ("Microsoft MPEG-4 4.3");
+       break;
+ 
++    case GST_MAKE_FOURCC ('M', '4', 'S', '2'):
++      caps = gst_caps_new_simple ("video/mpeg",
++          "mpegversion", G_TYPE_INT, 4, NULL);
++      if (codec_name)
++        *codec_name = g_strdup ("Microsoft ISO MPEG-4 1.1");
++      break;
++
+     case GST_MAKE_FOURCC ('3', 'I', 'V', '1'):
+     case GST_MAKE_FOURCC ('3', 'I', 'V', '2'):
+       caps = gst_caps_new_simple ("video/x-3ivx", NULL);
+@@ -644,6 +651,7 @@
+     GST_MAKE_FOURCC ('D', 'I', 'B', ' '),
+     GST_MAKE_FOURCC ('X', 'x', 'a', 'n'),
+     GST_MAKE_FOURCC ('I', 'V', '5', '0'),
++    GST_MAKE_FOURCC ('M', '4', 'S', '2'),
+     /* FILL ME */
+     0
+   };
