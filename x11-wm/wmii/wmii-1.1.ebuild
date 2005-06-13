@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-1.ebuild,v 1.2 2005/06/04 20:17:27 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-1.1.ebuild,v 1.1 2005/06/13 17:15:28 tove Exp $
 
 inherit toolchain-funcs
 
@@ -25,8 +25,8 @@ src_unpack() {
 	unpack "${A}"
 
 	sed -i \
-		-e "/^CFLAGS/ s/-O0 -g/${CFLAGS}/" \
-		-e "/^LDFLAGS/ s/-g/${LDFLAGS}/" \
+		-e "/^CFLAGS/ s/-O0/${CFLAGS}/" \
+		-e "/^LDFLAGS/ s/-g/-g ${LDFLAGS}/" \
 		"${S}"/config.mk
 
 # removed because cairo backend crashes much too often
@@ -62,8 +62,10 @@ src_install() {
 		python setup.py install --root="${D}" || die "python install failed."
 	fi
 
+	insinto /usr/share/"${PN}"/contrib
+	doins "${S}"/contrib/README || die "contrib README failed."
 	exeinto /usr/share/"${PN}"/contrib
-	doexe "${S}"/contrib/* || die "contrib failed."
+	doexe "${S}"/contrib/*.{py,rb,sh} || die "contrib failed."
 
 	echo -e "#!/bin/sh\n/usr/bin/wmii" > "${T}"/"${PN}"
 	exeinto /etc/X11/Sessions
