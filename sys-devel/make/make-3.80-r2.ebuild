@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80-r2.ebuild,v 1.2 2005/05/03 11:03:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80-r2.ebuild,v 1.3 2005/06/13 23:18:39 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -36,7 +36,11 @@ src_compile() {
 
 src_install() {
 	if use build ; then
-		dobin make || die "dobin"
+		if [[ ${USERLAND} == "GNU" ]] ; then
+			dobin make || die "dobin"
+		else
+			newbin make gmake || die "newbin failed"
+		fi
 	else
 		make DESTDIR="${D}" install || die "make install failed"
 		dodoc AUTHORS ChangeLog NEWS README*

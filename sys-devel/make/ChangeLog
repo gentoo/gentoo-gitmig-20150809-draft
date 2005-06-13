@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.24 2005/05/03 11:03:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.25 2005/06/13 23:18:39 vapier Exp $
+
+  13 Jun 2005; Mike Frysinger <vapier@gentoo.org> make-3.80-r2.ebuild:
+  Make sure we dont kill make on non-GNU systems with USE=build #95942 by
+  Diego Pettenò.
 
   03 May 2005; Diego PettenÃ² <flameeyes@gentoo.org> make-3.80-r2.ebuild:
   Readded keywords to -r2 and closed the bug.
