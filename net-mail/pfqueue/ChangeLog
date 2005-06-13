@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pfqueue
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/ChangeLog,v 1.18 2005/06/09 19:14:41 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/ChangeLog,v 1.19 2005/06/13 23:28:58 ticho Exp $
+
+  13 Jun 2005; Andrej Kacian <ticho@gentoo.org> pfqueue-0.3.8.ebuild:
+  Stable on x86 and amd64.
 
 *pfqueue-0.4.0 (09 Jun 2005)
 
