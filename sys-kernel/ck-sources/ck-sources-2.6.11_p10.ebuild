@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.11_p9.ebuild,v 1.1 2005/06/09 20:28:13 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.11_p10.ebuild,v 1.1 2005/06/13 02:07:56 marineam Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
@@ -27,17 +27,16 @@ else
 fi
 
 #version of gentoo patchset
-GPV="11.13"
-GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2"
+GPV="11-14"
+GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.base.tar.bz2"
 
 UNIPATCH_LIST="
 	${DISTDIR}/${CK_PATCH}
-	${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2"
+	${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.base.tar.bz2"
 UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE}
-	1315_alpha-sysctl-uac.patch
 	10" #All of the 2.6.x.y patches (already in ck) start with 10
 
-UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}/0000_README"
+UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}/0000_README"
 
 DESCRIPTION="Full sources for the Stock Linux kernel and Con Kolivas's high performance patchset"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
