@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xplanet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.45 2005/05/24 14:06:50 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.46 2005/06/13 20:23:51 rizzo Exp $
+
+*xplanet-1.1.2 (13 Jun 2005)
+
+  13 Jun 2005; Don Seiler <rizzo@gentoo.org> metadata.xml,
+  +xplanet-1.1.2.ebuild:
+  Version bump
 
   24 May 2005; Don Seiler <rizzo@gentoo.org> xplanet-1.1.1.ebuild:
   Removing dependency on libungif, should only use giflib from now on. Closes
