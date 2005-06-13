@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.11,v 1.4 2005/06/07 22:49:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.11,v 1.5 2005/06/13 04:57:03 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -484,10 +484,10 @@ for x in "$@" ; do
 				else
 					# User gave us a full HOST-gccver
 					x=${x##*/}
-					if [[ ${DOIT} != "get_current_profile" ]] && \
-					   [[ ! -f ${GCC_ENV_D}/${x} ]]
+					if [[ ${DOIT} == "get_current_profile" && -z $(ls "${GCC_ENV_D}"/${x}-* 2>/dev/null) ]] || \
+					   [[ ${DOIT} != "get_current_profile" && ! -f ${GCC_ENV_D}/${x} ]]
 					then
-						eerror "$0: Could not locate '$x' in '${GCC_ENV_D}/'!"
+						eerror "$0: Could not locate '$x' in '${GCC_ENV_D}/' !"
 						exit 1
 					fi
 					CC_COMP="${x}"
