@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-1.0.10_p7.ebuild,v 1.3 2005/04/20 02:48:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-1.0.10_p7.ebuild,v 1.4 2005/06/13 00:10:56 vapier Exp $
 
 inherit eutils games
 
 DATAVERSION="${PV/_p?/}"
 SOURCEVERSION="${PV/_p/-r}"
 DESCRIPTION="Cross-platform 3D realtime strategy game"
-HOMEPAGE="http://www.stud.uni-karlsruhe.de/~uxsm/glest/"
+HOMEPAGE="http://www.glest.org/"
 SRC_URI="http://www.stud.uni-karlsruhe.de/~uxsm/glest-${SOURCEVERSION}-source.tar.bz2
 	http://www.stud.uni-karlsruhe.de/~unatc/glest/glest-${DATAVERSION}-data.tar.bz2
 	linguas_de? ( http://www.stud.uni-karlsruhe.de/~uxsm/german.lng )
@@ -35,6 +35,7 @@ S=${WORKDIR}/${PN}-${DATAVERSION}
 src_unpack() {
 	unpack glest-${SOURCEVERSION}-source.tar.bz2 glest-${DATAVERSION}-data.tar.bz2
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-fake-checkGlCaps.patch
 	# sometimes they package configure, sometimes they dont
 	if [[ ! -e configure ]] ; then
 		./autogen.sh || die "autogen failed"
