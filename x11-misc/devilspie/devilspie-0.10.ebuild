@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.10.ebuild,v 1.1 2005/06/13 13:49:55 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.10.ebuild,v 1.2 2005/06/13 14:03:12 brix Exp $
 
 inherit eutils
 
@@ -40,7 +40,9 @@ src_install() {
 	emake DESTDIR=${D} install || die "emake install failed"
 
 	dodoc AUTHORS ChangeLog README NEWS TODO \
-		devilspie-reference.html sample-config.xml devilspie.dtd
+		sample-config.xml devilspie.dtd
+
+	dohtml devilspie-reference.html
 }
 
 pkg_postinst() {

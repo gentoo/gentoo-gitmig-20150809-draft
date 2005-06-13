@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/devilspie
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/ChangeLog,v 1.10 2005/06/13 13:49:55 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/ChangeLog,v 1.11 2005/06/13 14:03:12 brix Exp $
+
+  13 Jun 2005; <brix@gentoo.org> devilspie-0.10.ebuild:
+  Use dohtml for the html doc.
 
 *devilspie-0.10 (13 Jun 2005)
 
