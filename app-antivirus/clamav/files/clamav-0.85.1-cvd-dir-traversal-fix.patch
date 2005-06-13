@@ -1,0 +1,18 @@
+diff -bur clamav-0.85.1/libclamav/cvd.c clamav-0.85.1-fixed/libclamav/cvd.c
+--- clamav-0.85.1/libclamav/cvd.c	2005-05-11 03:43:10.000000000 +0200
++++ clamav-0.85.1-fixed/libclamav/cvd.c	2005-06-13 20:07:34.000000000 +0200
+@@ -77,6 +77,14 @@
+ 
+ 	    strncpy(name, block, 100);
+ 	    name[100] = '\0';
++
++	    if(strchr(name, '/')) {
++		    cli_errmsg("Slash separators are not allowed in CVD.\n");
++		    free(fullname);
++		    gzclose(infile);
++		    return -1;
++	    }
++
+ 	    strcpy(fullname, destdir);
+ 	    strcat(fullname, "/");
+ 	    strcat(fullname, name);
