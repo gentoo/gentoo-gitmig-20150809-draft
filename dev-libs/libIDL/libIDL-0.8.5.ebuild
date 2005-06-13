@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.5.ebuild,v 1.8 2005/06/06 08:41:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.5.ebuild,v 1.9 2005/06/13 23:43:34 vapier Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="CORBA tree builder"
 HOMEPAGE="http://www.gnome.org/"
@@ -19,3 +19,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS BUGS ChangeLog NEWS README"
+
+src_unpack() {
+	unpack ${A}
+	epunt_cxx
+}
