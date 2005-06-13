@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <maintainer>
-    <email>gaim-bugs@gentoo.org</email>
+    <email>anarchy@gentoo.org</email>
 </maintainer>
 <longdescription>
 Advanced message filter for gaim, Allows you to specify what is filtered.
