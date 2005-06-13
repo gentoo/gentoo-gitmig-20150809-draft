@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.16 2005/06/13 13:25:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.17 2005/06/13 15:30:23 killerfox Exp $
+
+  13 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> freeglut-2.2.0.ebuild:
+  Stable on hppa. bug #95920
 
   13 Jun 2005; Joseph Jezak <josejx@gentoo.org> freeglut-2.2.0.ebuild:
   Marked ppc stable for bug #95920.
