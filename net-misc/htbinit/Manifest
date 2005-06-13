@@ -1,4 +1,7 @@
-MD5 0e8c1dea1f5115c4d50305bfc4af700c htbinit-0.8.5.ebuild 1353
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 84b4cb4635154c5b9524f35333605c54 htbinit-0.8.5.ebuild 1356
 MD5 3fc8d203fb9a11d78fc04cc59bf0b2bd ChangeLog 1212
 MD5 b925a5b9bc267a3aafc044ddee491850 metadata.xml 548
 MD5 ac0fdaaf350b066a127f6ccefae30972 htbinit-0.8.4.ebuild 1327
@@ -6,3 +9,10 @@ MD5 04685986bc5af0b6724b8927f07a7657 files/digest-htbinit-0.8.4 59
 MD5 80d9fd88306b65d2338fddaf126a8916 files/digest-htbinit-0.8.5 59
 MD5 e9d322349aedc729948e23b4dfac59ac files/htb.sysconfig 7137
 MD5 d99c34e95e0cdece47da262a84e0bc74 files/rc_htbinit 1079
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCradyI1lqEGTUzyQRAkgRAKCHSNLI+S0ptY0TvQmvOpAC0w1JtQCeI50n
+8BrCAItJeCrlSUP7Xnd/Y40=
+=ar81
+-----END PGP SIGNATURE-----
