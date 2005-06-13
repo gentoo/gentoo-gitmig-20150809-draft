@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ncpufreqd-1.8.ebuild,v 1.1 2005/05/12 15:16:02 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ncpufreqd-1.8.ebuild,v 1.2 2005/06/13 19:12:43 sekretarz Exp $
 
 DESCRIPTION="Daemon controlling CPU speed and temperature"
 HOMEPAGE="http://fatcat.ftj.agh.edu.pl/~nelchael/"
@@ -8,7 +8,7 @@ SRC_URI="http://fatcat.ftj.agh.edu.pl/~nelchael/files/ncpufreqd/${P}.tar.bz2"
 LICENSE="ZLIB"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
