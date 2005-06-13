@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.31 2005/06/13 14:43:25 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.32 2005/06/13 14:48:47 brix Exp $
+
+*hostapd-0.3.9-r1 (13 Jun 2005)
+
+  13 Jun 2005; <brix@gentoo.org> +files/hostapd-0.3.9-conf.d,
+  +files/hostapd-0.3.9-init.d, +hostapd-0.3.9-r1.ebuild:
+  Backported 0.4.x ebuild fixes to 0.3.9.
 
 *hostapd-0.4.2 (13 Jun 2005)
 
