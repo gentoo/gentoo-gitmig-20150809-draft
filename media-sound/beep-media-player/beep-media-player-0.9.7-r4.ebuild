@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r4.ebuild,v 1.8 2005/05/09 13:18:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r4.ebuild,v 1.9 2005/06/13 19:58:10 swegener Exp $
 
 IUSE="nls gnome mp3 oggvorbis alsa oss esd mmx old-eq"
 
@@ -54,6 +54,8 @@ src_unpack() {
 src_compile() {
 	# Bug #42893
 	replace-flags "-Os" "-O2"
+	# Bug #86689
+	is-flag "-O*" || append-flags -O
 
 	econf \
 		--with-dev-dsp=/dev/sound/dsp \
