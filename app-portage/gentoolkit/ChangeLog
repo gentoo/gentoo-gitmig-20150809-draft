@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.38 2005/06/13 00:33:40 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.39 2005/06/13 03:35:29 kingtaco Exp $
+
+  13 Jun 2005; Mike Doty <kingtaco@gentoo.org> gentoolkit-0.2.1_pre3.ebuild:
+  ~amd64 added, bug 62644
 
 *gentoolkit-0.2.1_pre3 (12 Jun 2005)
 
