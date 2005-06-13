@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.21.ebuild,v 1.3 2005/05/11 22:36:56 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.21.ebuild,v 1.4 2005/06/13 21:43:29 ticho Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/perl-5.6.0
 	>=sys-libs/db-4.1
 	>=mail-mta/postfix-2.1.0"
 
-KEYWORDS="~x86 ~amd64 ~alpha"
+KEYWORDS="x86 amd64 ~alpha"
 
 pkg_setup() {
 	enewgroup postgrey
