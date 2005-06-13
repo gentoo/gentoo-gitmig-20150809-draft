@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.116 2005/06/12 18:56:33 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.117 2005/06/13 09:43:12 kloeri Exp $
+
+  13 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
+  file-roller-2.10.0-r1.ebuild:
+  Add ~alpha keyword.
 
   12 Jun 2005; Olivier Crête <tester@gentoo.org>
   file-roller-2.10.0-r1.ebuild:
