@@ -1,6 +1,10 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.3 2005/06/05 23:54:12 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.4 2005/06/13 16:48:47 ferdy Exp $
+
+  13 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> asciidoc-6.0.3.ebuild,
+  asciidoc-6.0.3-r1.ebuild:
+  marked ~alpha as a cogito dependency
 
 *asciidoc-6.0.3-r1 (05 Jun 2005)
 
