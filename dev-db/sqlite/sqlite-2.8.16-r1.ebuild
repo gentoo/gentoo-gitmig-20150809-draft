@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r1.ebuild,v 1.7 2005/05/22 15:21:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r1.ebuild,v 1.8 2005/06/13 23:36:17 vapier Exp $
 
 inherit eutils toolchain-funcs
 
+DESCRIPTION="SQLite: An SQL Database Engine in a C Library"
+HOMEPAGE="http://www.sqlite.org/"
+SRC_URI="http://www.sqlite.org/${P}.tar.gz"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 sparc x86"
 IUSE="nls doc tcltk"
 
-DESCRIPTION="SQLite: An SQL Database Engine in a C Library."
-SRC_URI="http://www.sqlite.org/${P}.tar.gz"
-HOMEPAGE="http://www.sqlite.org"
-DEPEND="virtual/libc
-	doc? ( dev-lang/tcl )
+DEPEND="doc? ( dev-lang/tcl )
 	tcltk? ( dev-lang/tcl )"
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha ~arm ~mips ~hppa ppc64 amd64 ~ppc-macos"
 
 src_unpack() {
 	unpack ${A}
@@ -22,6 +22,8 @@ src_unpack() {
 	use hppa && epatch ${FILESDIR}/${PN}-2.8.15-alignement-fix.patch
 
 	epatch ${FILESDIR}/${P}-multilib.patch
+
+	epunt_cxx
 
 	if use nls; then
 		ENCODING=${ENCODING-"UTF8"}
