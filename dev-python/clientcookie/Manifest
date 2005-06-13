@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 4e30f7fc30da9f70912bb92dddd86372 ChangeLog 1334
+MD5 73a30d6641f650dbf87c43bbe832b22d clientcookie-0.4.18.ebuild 675
+MD5 6310e369ed7b13bbb321ea86d55a00b1 clientcookie-0.4.4a.ebuild 675
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 15436ccada1efcb497ac1c69287789d5 clientcookie-0.4.19.ebuild 670
 MD5 b9decc077e66fb593f69dcc2b1149c19 clientcookie-1.0.2.ebuild 669
-MD5 8ef06adf9b7351f4f6a73c28dea0b6c7 ChangeLog 1183
-MD5 6310e369ed7b13bbb321ea86d55a00b1 clientcookie-0.4.4a.ebuild 675
-MD5 73a30d6641f650dbf87c43bbe832b22d clientcookie-0.4.18.ebuild 675
-MD5 c39901948959299ce686212166b5d4be files/digest-clientcookie-1.0.2 70
-MD5 d12ea916436682e8423819ec56fade59 files/digest-clientcookie-0.4.19 71
-MD5 df9071fd270dce926f984de95213a1fe files/digest-clientcookie-0.4.4a 70
+MD5 ba41c9e2ad8f0540913bac06d3492bde clientcookie-1.0.3.ebuild 673
 MD5 b6e7f493690e1fa8df7a8126312da11f files/digest-clientcookie-0.4.18 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCDepWugEuf3OQ0akRAvkoAJ9ULRF8stm0avX76xW1by5UmDrDYwCffWcO
-0xcJkp8AAlTcgdJoliMSqTU=
-=buts
------END PGP SIGNATURE-----
+MD5 df9071fd270dce926f984de95213a1fe files/digest-clientcookie-0.4.4a 70
+MD5 d12ea916436682e8423819ec56fade59 files/digest-clientcookie-0.4.19 71
+MD5 c39901948959299ce686212166b5d4be files/digest-clientcookie-1.0.2 70
+MD5 a9f132bcbdbf1ea5b99060373d37b3bb files/digest-clientcookie-1.0.3 70
