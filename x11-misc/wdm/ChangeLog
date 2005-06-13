@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wdm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.9 2004/08/17 19:40:58 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.10 2005/06/13 23:11:25 smithj Exp $
+
+  13 Jun 2005; Jonathan Smith <smithj@gentoo.org> -wdm-1.22.ebuild:
+  ebuild cleanup and fix to #93186
 
   17 Aug 2004; Aron Griffis <agriffis@gentoo.org> wdm-1.26.ebuild:
   add ~alpha #60071
