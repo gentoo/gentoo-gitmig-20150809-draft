@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.25 2005/05/05 13:47:53 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.26 2005/06/13 22:41:26 smithj Exp $
+
+  13 Jun 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml,
+  -pork-0.99.1.ebuild, -pork-0.99.5.ebuild:
+  cleaned up old ebuilds and added self as maintainer (with approval from net-im)
 
 *pork-0.99.8.1 (05 May 2005)
 
