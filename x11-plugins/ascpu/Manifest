@@ -1,6 +1,6 @@
 MD5 1d65da6b11a68e52735f61282de42725 ascpu-1.9.ebuild 689
 MD5 8e7389fd213d5d6314b269ca32099a29 ascpu-1.10.ebuild 708
-MD5 9e2a2926bc1053abf0162e59879b3c08 ChangeLog 1425
+MD5 76ce20132aebe1a649e0c6dea7e34aeb ChangeLog 1425
 MD5 477586a3ede65c312df804aea35d1a30 metadata.xml 163
 MD5 d8501577130cd99a4eb4543995c90c2f files/ascpu-1.9-gentoo.patch 763
 MD5 a566b5b5a9c4e940161813e32d9673a6 files/digest-ascpu-1.10 61
