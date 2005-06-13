@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asmon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.10 2004/11/14 19:37:18 kloeri Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.11 2005/06/13 13:16:51 ka0ttic Exp $
+
+  13 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Added metadata.xml (afterstep herd).
 
   14 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> asmon-0.64.ebuild:
   Stable on alpha.
