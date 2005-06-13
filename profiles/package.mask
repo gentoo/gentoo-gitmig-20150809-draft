@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4087 2005/06/13 20:11:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4088 2005/06/13 21:48:27 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+
+# Andrej Kacian <ticho@gentoo.org> (13 Jun 2005)
+# Masked, as requeuing doesn't work
+=net-mail/pfqueue-0.4.0
 
 # <hansmi@gentoo.org> (13 Jun 2005)
 # Masked for testing
