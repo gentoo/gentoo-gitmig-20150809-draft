@@ -1,0 +1,12 @@
+# ChangeLog for mail-filter/p3scan
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.1 2005/06/13 15:49:12 ticho Exp $
+
+*p3scan-2.1 (13 Jun 2005)
+
+  13 Jun 2005; Andrej Kacian <ticho@gentoo.org> +files/p3scan.init,
+  +metadata.xml, +p3scan-2.1.ebuild:
+  Initial import. Closes bug #86216, by Zhenzhi <zzzzzz at singnet.com.sg>.
+  Ebuild and initscript provided by Christian Zoffoli <xmerlin at gentoo.org>,
+  modified by me.
+
