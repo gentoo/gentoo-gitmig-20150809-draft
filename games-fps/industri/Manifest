@@ -1,6 +1,5 @@
-MD5 72259eafed6f23926c668e7e9ac12be8 industri-1.01.ebuild 1451
 MD5 4d022ffdc36f8c015a33c5b7b953491a ChangeLog 430
+MD5 1fdcbe2e8b4a91306cca265a469ddea5 industri-1.01.ebuild 1600
 MD5 97d0c324ee72786e94f04f1bc052cc63 metadata.xml 669
 MD5 c85d9088fac1afff8639c4e07123c098 files/digest-industri-1.01 138
 MD5 5c2c277e6fc318889a5bc2bf4f26c473 files/industri.pretty 42
-MD5 a49d2e91753fb140005919f4de2eb3c6 files/1.01-nvidia-opengl.patch 1078
