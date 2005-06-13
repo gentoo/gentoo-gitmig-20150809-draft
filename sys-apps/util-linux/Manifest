@@ -1,8 +1,9 @@
-MD5 d38728e06e8316c6dc9f8695e8382426 ChangeLog 17623
+MD5 612c360bed155592aadebf39410bfe9d ChangeLog 17789
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 756af6a79fdf6371ee07ccbc9ca0153b util-linux-2.12i-r1.ebuild 3821
 MD5 ff9ff35124110104cec062d7b263baed util-linux-2.12q.ebuild 4807
 MD5 3ce3a57f1a507ce364c232d5d7b6ff02 util-linux-2.12p-r1.ebuild 4418
+MD5 ec205b8566d21aca0295046fb27292e8 util-linux-2.12q-r1.ebuild 4853
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
 MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
 MD5 a43d2b8c70c5f40a195721dc536abace files/util-linux-2.12-swapon-unistd.patch 289
@@ -27,4 +28,5 @@ MD5 519d6757067c4ee7c634c8b60f9abeb3 files/util-linux-2.12p-swapon-check-symlink
 MD5 33ddd96078cf91030b80f73eb70f5371 files/util-linux-2.12i-swapon-check-symlinks.patch 875
 MD5 28b1a8ed38823851eafadacef8ce11ec files/util-linux-2.12q-no-m68k-fdisk.patch 239
 MD5 bc90959c4718e7dc5d53dcddac1172f5 files/util-linux-2.12q-debian-10cfdisk.patch 1888
+MD5 4b00906276e8aae2c222622471d6a366 files/digest-util-linux-2.12q-r1 292
 MD5 cfa3960fd97ca16c85b0d1b87e6ba226 files/digest-util-linux-2.12i-r1 156
