@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.37 2005/06/11 12:34:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.38 2005/06/13 17:22:38 ferdy Exp $
+
+  13 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> herdstat-1.0.3.ebuild:
+  alpha stable
 
 *herdstat-1.1.1_rc8 (11 Jun 2005)
 
