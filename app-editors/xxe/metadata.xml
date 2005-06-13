@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>rizzo@gentoo.org</email>
-  <name>Don Seiler</name>
-  <description>I use this app and so am de facto maintainer.</description>
-</maintainer>
 </pkgmetadata>
