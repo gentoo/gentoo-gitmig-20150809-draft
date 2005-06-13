@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.2 2005/04/03 19:14:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.3 2005/06/13 04:51:12 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -190,6 +190,8 @@ uninstall_target() {
 		rm -f "${ROOT}"/usr/${TARGET}/include/${x}
 	done
 	rm -f "${ROOT}"/usr/${TARGET}/lib/ldscripts
+	rmdir "${ROOT}"/usr/${TARGET}/{bin,include,lib} "${ROOT}"/usr/${TARGET} 2>/dev/null
+	rmdir "${ROOT}"/var/db/pkg/cross-${TARGET} 2>/dev/null
 
 	rm -f "${ENV_D}"/${TARGET}-*
 }
@@ -279,7 +281,7 @@ while [[ $# -gt 0 ]] ; do
 			exit 0
 			;;
 		-v|--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.2 2005/04/03 19:14:33 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.3 2005/06/13 04:51:12 vapier Exp $"
 			cvsver=${cvsver##*binutils-config-}
 			echo "binutils-config-${cvsver%%,v *}"
 			exit 0
