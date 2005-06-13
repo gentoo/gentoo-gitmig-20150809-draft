@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.11.ebuild,v 1.11 2005/05/07 11:34:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.11.ebuild,v 1.12 2005/06/13 19:14:37 blubb Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -41,8 +41,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 
-	replace-flags -O3 -O
-	replace-flags -O2 -O
+	replace-flags -O? -O
 
 	# Fix gcc-3.4 segfault #49238
 	#[ "`gcc-version`" == "3.4" ] && append-flags -fno-unroll-loops

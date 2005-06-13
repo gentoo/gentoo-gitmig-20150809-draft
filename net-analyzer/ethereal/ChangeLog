@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.124 2005/05/07 11:04:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.125 2005/06/13 19:14:37 blubb Exp $
+
+  13 Jun 2005; Simon Stelling <blubb@gentoo.org> ethereal-0.10.11.ebuild:
+  replacing -Os with -O too, fixes bug 91660
 
   07 May 2005; Daniel Black <dragonheart@gentoo.org>
   ethereal-0.10.11.ebuild:

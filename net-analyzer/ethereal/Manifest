@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 0b0b0b93a2e1b6e2f80da2efb8dd95bc ChangeLog 9345
+MD5 c197a642ecd8faf1ac997c497a965b3b ethereal-0.10.11.ebuild 3478
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
-MD5 5b71d7f000726a2b255015d03cdd58ab ChangeLog 9231
-MD5 3f7b9c873e8c631da0cb3b1919509b4a ethereal-0.10.11.ebuild 3506
 MD5 5f6da5f1fabdf39da22bbb5ea224fab1 files/digest-ethereal-0.10.11 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfKfZmdTrptrqvGERAqkPAJ4z7DzwJN6+1DXd5CLWLN3LiMGA6gCeLqk0
-K4Rms4vACC3EwvT6yM6pA0I=
-=xTXP
------END PGP SIGNATURE-----
