@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13.ebuild,v 1.4 2005/06/11 11:27:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13.ebuild,v 1.5 2005/06/13 21:14:53 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -219,8 +219,11 @@ src_install-libs() {
 
 	exeinto ${X11_LIB_DIR}/modules/drivers
 	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/drivers/fglrx_drv.o
+
 	exeinto ${X11_LIB_DIR}/modules/dri
 	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/dri/fglrx_dri.so
+	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/dri/atiogl_a_dri.so
+
 	exeinto ${X11_LIB_DIR}/modules/linux
 	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.a
 	cp -a ${WORKDIR}/usr/X11R6/${pkglibdir}/libfglrx_gamma.* \
@@ -228,9 +231,6 @@ src_install-libs() {
 	#Not the best place
 	insinto ${X11_DIR}/include/X11/extensions
 	doins ${WORKDIR}/usr/X11R6/include/X11/extensions/fglrx_gamma.h
-
-	exeinto ${X11_LIB_DIR}/modules/dri
-	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/dri/fglrx_dri.so
 }
 
 
