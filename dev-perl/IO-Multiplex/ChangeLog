@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Multiplex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.3 2005/05/11 22:34:00 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.4 2005/06/13 21:39:22 ticho Exp $
+
+  13 Jun 2005; Andrej Kacian <ticho@gentoo.org> IO-Multiplex-1.08.ebuild:
+  Stable on x86 and amd64, as dependencies for mail-filter/postgrey.
 
   11 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
   IO-Multiplex-1.08.ebuild:
