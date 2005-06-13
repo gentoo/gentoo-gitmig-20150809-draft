@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.38 2005/06/13 10:18:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.39 2005/06/13 15:01:41 lu_zero Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -237,8 +237,7 @@ toolchain-binutils_pkg_postinst() {
 }
 
 toolchain-binutils_pkg_postrm() {
-	local choice=$(binutils-config -l | grep ${CTARGET} | grep -v ${CTARGET}-${PV})
-	choice=${choice/\* }
+	local current_profile=$(binutils-config -c ${CTARGET})
 
 	# If no other versions exist, then uninstall for this 
 	# target ... otherwise, switch to the newest version
@@ -246,7 +245,10 @@ toolchain-binutils_pkg_postrm() {
 	#       rerun binutils-config if this is a remerge, as
 	#       we want the mtimes on the symlinks updated (if
 	#       it is the same as the current selected profile)
-	if [[ ! -e ${BINPATH}/ld ]] ; then
+	if [[ ! -e ${BINPATH}/ld ]] && [[ ${current_profile} == ${CTARGET}-${PV} ]] ; then
+		local choice=$(binutils-config -l | grep ${CTARGET} | awk '{print $2}')
+		choice=${choice//$'\n'/ }
+		choice=${choice/* }
 		if [[ -z ${choice} ]] ; then
 			binutils-config -u ${CTARGET}
 		else
