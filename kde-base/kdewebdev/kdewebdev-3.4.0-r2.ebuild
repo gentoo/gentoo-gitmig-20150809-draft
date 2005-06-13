@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/kdewebdev-3.4.0-r2.ebuild,v 1.1 2005/05/02 23:13:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/kdewebdev-3.4.0-r2.ebuild,v 1.2 2005/06/13 07:31:05 vapier Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE web development - Quanta"
 
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc tidy"
 
 DEPEND="~kde-base/kdebase-${PV}
