@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 92b773ee557b69a3d2c3ab05cf130806 HTTP-Server-Simple-Mason-0.05.ebuild 555
-MD5 b9d0ac4c9e89255dba4eca08d316d3bd ChangeLog 440
+MD5 4b35b5aeac80025c108a7731874f7962 ChangeLog 544
+MD5 5c99ce1c0dbeaaf649d8f2c9f130e794 HTTP-Server-Simple-Mason-0.05.ebuild 561
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 84a2f35792ea49fbdd31e9bbee8c19ae files/digest-HTTP-Server-Simple-Mason-0.05 80
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrI5jEzitwsaoONoRAjciAKCQTHyQKE3rO4ui0aT/jZGBclSjngCeOeMp
-HsAFLXbvLnfHTAWp2WW4kV8=
-=Jj2J
------END PGP SIGNATURE-----
