@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_rc1.ebuild,v 1.1 2005/06/10 12:56:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_rc1.ebuild,v 1.2 2005/06/13 15:21:49 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -159,6 +159,8 @@ src_install() {
 	ln -s $(qt_mkspecs_dir) default
 	cd ${S}
 
+	mkdir -p ${QTSYSCONFDIR}
+
 	if use doc; then
 		make INSTALL_ROOT=${D} install_htmldocs || die
 	fi
@@ -176,6 +178,9 @@ src_install() {
 	for libdir in $(get_all_libdirs); do
 		libdirs="${libdirs}:/usr/${libdir}/qt4"
 	done
+
+	mkdir -p ${D}/etc/env.d
+
 	cat > ${D}/etc/env.d/44qt4 << EOF
 PATH=${QTBINDIR}
 ROOTPATH=${QTBINDIR}

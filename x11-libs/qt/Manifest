@@ -5,7 +5,7 @@ MD5 98c2c897d6bb5fd3f7c6af49cd8decb7 qt-3.3.4-r2.ebuild 8565
 MD5 e5e1f28d1973386abc7d593bd7330d62 qt-3.3.4-r4.ebuild 9306
 MD5 11d47711796ef09fe379bab3879852f9 ChangeLog 37477
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
-MD5 2568554dabc1aa815e78ba74ece966dc qt-4.0.0_rc1.ebuild 6066
+MD5 8f2547c202bd0bba58375eafa8d53697 qt-4.0.0_rc1.ebuild 6120
 MD5 74acd4c098f2c4bd70bdea585f0cb096 files/qt-no-rpath.patch 352
 MD5 8ffca1b1b7523339af04fd24b4595ce4 files/0001-dnd_optimization.patch 5623
 MD5 0cc401186f490faf55906cd458280db8 files/0037-dnd-timestamp-fix.patch 2138
