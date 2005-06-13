@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 42cef2da59c81f792584c3f9048a1930 metadata.xml 250
-MD5 c86ad9ee5763973a091881dccc2987b7 xchat-xsys-2.0.0-r1.ebuild 1009
-MD5 f10753781ec694d91b4d35d00859f393 ChangeLog 3331
-MD5 409509e5312a334bb459709268d2e524 xchat-xsys-1.9.3-r1.ebuild 1005
 MD5 461f66d4febb1217bd8aaeb7ddd65d63 xchat-xsys-2.0.2.ebuild 992
 MD5 5a0fe2777d80bf3a1ab0b520632b784d xchat-xsys-2.0.4.ebuild 992
-MD5 7b22417f0db8f05a4e5e01a465577c2b xchat-xsys-2.0.5.ebuild 992
+MD5 c86ad9ee5763973a091881dccc2987b7 xchat-xsys-2.0.0-r1.ebuild 1009
+MD5 409509e5312a334bb459709268d2e524 xchat-xsys-1.9.3-r1.ebuild 1005
+MD5 712d39762bde7b5287fe12a0a6698b2c ChangeLog 3428
+MD5 685f57879795b892131f7b456efcd987 xchat-xsys-2.0.5.ebuild 996
+MD5 42cef2da59c81f792584c3f9048a1930 metadata.xml 250
 MD5 6a0d14cce311c0075599544fd3a107c1 files/digest-xchat-xsys-1.9.3-r1 62
-MD5 43e7dc494b9615bbc75b6444664d8ffd files/1.9.3-ppc-support.patch 1528
-MD5 d741c852e1ee3fcc0d4fbc5ba8025234 files/digest-xchat-xsys-2.0.0-r1 62
-MD5 c0f1338214a6804b08666fa5c5a05bce files/1.9.3-sysfs-instead-of-lspci-2.patch 3712
 MD5 e12f6271ad83cfb1691a0b8fc619b593 files/digest-xchat-xsys-2.0.2 62
 MD5 b99e516eb8f8f5630e6cc9adbeb7f3f0 files/digest-xchat-xsys-2.0.4 62
 MD5 c4b3f86959972270bb4a3c32ce850dd9 files/digest-xchat-xsys-2.0.5 62
+MD5 c0f1338214a6804b08666fa5c5a05bce files/1.9.3-sysfs-instead-of-lspci-2.patch 3712
+MD5 d741c852e1ee3fcc0d4fbc5ba8025234 files/digest-xchat-xsys-2.0.0-r1 62
+MD5 43e7dc494b9615bbc75b6444664d8ffd files/1.9.3-ppc-support.patch 1528
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrd26p5vW4rUFj5oRAqpvAJ9zLSzvHu9wLN2zg4DFT8D4pZcJFwCaA4pQ
-VGLrBQIUeCKGixSexcDuQvw=
-=HyiQ
+iD8DBQFCre48ViELBEf1JB0RArhFAJwLwTGssODysX1iyP+KyaiEP4MVWACePDVk
+ASlpr/1383Idowb9RwQnXrk=
+=ljOW
 -----END PGP SIGNATURE-----
