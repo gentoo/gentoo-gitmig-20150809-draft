@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>rizzo@gentoo.org</email>
-  <name>Don Seiler</name>
-</maintainer>
 <longdescription> SWF Tools is a collection of SWF manipulation and generation utilities written by Rainer Böhme and Matthias Kramm.</longdescription>
 </pkgmetadata>
