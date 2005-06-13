@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 44e73d88e69d04a7c6b0e02639e3c384 ChangeLog 19257
+MD5 bbe4541e8b385a38bfca67af9c3aaf59 ChangeLog 19443
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 685c33f8a3f1980105944ab3c23a346c openssl-0.9.6m.ebuild 3074
 MD5 e59c3cc3221269d3ae08609d821b6b21 openssl-0.9.7c-r1.ebuild 7019
@@ -16,7 +16,7 @@ MD5 897d293325315cdeeb390745ed5cdd1b files/digest-openssl-0.9.7d-r2 134
 MD5 acab4ad88a6c249a7cde0511a0961a2c files/digest-openssl-0.9.7e 134
 MD5 acab4ad88a6c249a7cde0511a0961a2c files/digest-openssl-0.9.7e-r1 134
 MD5 1a7aabb860415c7be612863579d67b4d files/digest-openssl-0.9.7g 67
-MD5 0a4e4848787cfb664d90dfda89a76211 files/gentoo.config-0.9.7g 2243
+MD5 ca0e3dff69bd36267d8e889e3a39613b files/gentoo.config-0.9.7g 2220
 MD5 b901850df9952252974316e78775673b files/openssl-0.9.6-mips.diff 1487
 MD5 cebd09d1819c07b0fab14ad90b0da884 files/openssl-0.9.6m-gentoo.diff 1591
 MD5 f8ff492f66404c732e4661cc4443a2e8 files/openssl-0.9.7-alpha-default-gcc.patch 533
@@ -38,7 +38,7 @@ MD5 be045f45d974ec215ec4986c6c7b6ffb files/openssl-0.9.7g-ppc64.patch 856
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrXa1j5H05b2HAEkRAhu2AKCHSoJLTjfntozDJt6F87dEA/KtNQCfYxQz
-Dh60jNBI6Thcb9SL6CeCz1Y=
-=r0a/
+iD8DBQFCrZk1j5H05b2HAEkRAkX4AJ9RkxDX9aGGcscZZiuimnpvUP6vhQCfYTwj
+C646LdQ/qQTFoFPlkx+EZCk=
+=dix1
 -----END PGP SIGNATURE-----

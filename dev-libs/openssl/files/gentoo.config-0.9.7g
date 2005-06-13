@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.7g,v 1.3 2005/06/13 12:05:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.7g,v 1.4 2005/06/13 14:32:58 flameeyes Exp $
 
 # Openssl doesn't play along nicely with cross-compiling 
 # like autotools based projects, so let's teach it new tricks.
@@ -11,7 +11,7 @@
 
 
 case ${CHOST} in
-	*-uclibc-*)  system="linux";;
+	*-uclibc*)  system="linux";;
 	*-gnu*)      system="linux";;
 	*-freebsd*)  system="FreeBSD";;
 esac
@@ -21,7 +21,8 @@ if [[ ${CC} == "ccc" ]] ; then
 	compiler=${CC}
 fi
 
-if [[ ${system} == "linux" ]]; then
+case ${system} in
+linux)
 	machine=""
 	case ${CHOST} in
 		alphaev56*)   machine=alpha+bwx-${compiler};;
@@ -60,7 +61,8 @@ if [[ ${system} == "linux" ]]; then
 		s390*)        machine=s390;;
 		x86_64*)      machine=x86_64;;
 	esac
-elif [[ "${system}" == "FreeBSD" ]]; then
+;;
+FreeBSD)
 	machine=""
 	case ${CHOST} in
 		sparc64*)     machine=sparc64;;
@@ -68,7 +70,11 @@ elif [[ "${system}" == "FreeBSD" ]]; then
 		alpha*)       machine=alpha;;
 		*)            machine=elf;;
 	esac
-fi
+;;
+*)
+	exit 0
+;;
+esac
 
 if [ -n "${machine}" ] ; then
 	echo ${system}-${machine}
