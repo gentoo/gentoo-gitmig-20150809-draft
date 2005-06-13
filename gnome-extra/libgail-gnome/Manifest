@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 72e62f4df8c037e6ea57309ac6d81d77 metadata.xml 174
-MD5 5f48e7fee113263df958f7fecb89c5ad libgail-gnome-1.1.0-r1.ebuild 768
 MD5 e14de796b2ff115d27e88cb8751b3a42 ChangeLog 5504
+MD5 5f48e7fee113263df958f7fecb89c5ad libgail-gnome-1.1.0-r1.ebuild 768
 MD5 9dd60399ad4b721ce042e6fbfb1ab8f2 libgail-gnome-1.0.4.ebuild 721
 MD5 088fe5cbeb77202238d0979ad3fa9ee5 libgail-gnome-1.1.1.ebuild 788
-MD5 cca7c932dc0e37257d38f1de4c1ffd7e libgail-gnome-1.1.0.ebuild 718
-MD5 13a26d372ce164353caa9a4d9b328702 files/digest-libgail-gnome-1.1.0 72
+MD5 72e62f4df8c037e6ea57309ac6d81d77 metadata.xml 174
 MD5 13a26d372ce164353caa9a4d9b328702 files/digest-libgail-gnome-1.1.0-r1 72
 MD5 1029a121e1d0f339918f5dc9f0048c98 files/digest-libgail-gnome-1.1.1 72
 MD5 f67181804296c5735b6753b4a286b109 files/digest-libgail-gnome-1.0.4 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrIy0mOfEJZHYOKcRAkXlAKDmLirGJYcdqncjzUZP/PLURiC9lQCgxC0R
-dixy51Z0DNdn/kcgfqk58BE=
-=NlIh
------END PGP SIGNATURE-----
