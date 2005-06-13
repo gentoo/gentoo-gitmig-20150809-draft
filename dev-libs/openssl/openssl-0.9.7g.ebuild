@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.9 2005/05/22 09:12:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.10 2005/06/13 12:05:45 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -86,6 +86,8 @@ src_compile() {
 	use bindist && confopts="no-idea no-rc5 no-mdc2 -no-ec"
 
 	local sslout=$(./gentoo.config)
+	einfo "Use configuration ${sslout}"
+
 	local config="Configure"
 	[[ -z ${sslout} ]] && config="config"
 	./${config} \
