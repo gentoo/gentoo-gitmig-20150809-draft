@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-200-r2.ebuild,v 1.6 2005/06/12 10:44:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-200-r3.ebuild,v 1.1 2005/06/13 11:16:07 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -63,8 +63,8 @@ src_install() {
 	sed -i "s:blue2$:blue:" ${D}/etc/X11/app-defaults/XTerm-color
 
 	# Fix for bug #91453 at Thomas Dickey's suggestion:
-	echo "*allowWindowOps: 	false" > ${D}/etc/X11/app-defaults/XTerm
-	echo "*allowWindowOps: 	false" > ${D}/etc/X11/app-defaults/UXTerm
+	echo "*allowWindowOps: 	false" >> ${D}/etc/X11/app-defaults/XTerm
+	echo "*allowWindowOps: 	false" >> ${D}/etc/X11/app-defaults/UXTerm
 }
 
 pkg_preinst() {

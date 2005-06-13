@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.92 2005/06/12 10:44:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.93 2005/06/13 11:16:07 seemant Exp $
+
+*xterm-202-r2 (13 Jun 2005)
+*xterm-200-r3 (13 Jun 2005)
+
+  13 Jun 2005; Seemant Kulleen <seemant@gentoo.org> -xterm-200-r2.ebuild,
+  +xterm-200-r3.ebuild, -xterm-202.ebuild, +xterm-202-r2.ebuild:
+  append, not overwrite. Sorry for this. Thanks to: Dan Foster
+  <dsf@globalcrossing.net> in bug #95858
 
   12 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> xterm-200-r2.ebuild:
   Stable on hppa.
