@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.24 2005/05/24 01:06:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.25 2005/06/13 22:32:26 smithj Exp $
+
+*idesk-0.7.2 (13 Jun 2005)
+
+  13 Jun 2005; Jonathan Smith <smithj@gentoo.org> +idesk-0.7.2.ebuild:
+  Major version bump to close #79208
 
   24 May 2005; Jason Wever <weeve@gentoo.org> idesk-0.5.6.ebuild:
   Stable on SPARC wrt bug #93341.
