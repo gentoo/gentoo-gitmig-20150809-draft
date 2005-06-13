@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.15 2005/06/06 18:49:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.16 2005/06/13 19:35:02 chainsaw Exp $
+
+*xchat-xsys-2.0.5 (13 Jun 2005)
+
+  13 Jun 2005; Tony Vroon <chainsaw@gentoo.org> +xchat-xsys-2.0.5.ebuild:
+  Version bump. PCI parser probes higher bus numbers for ppc64. Experimental
+  support for ppc64, ia64 & hppa architectures. Please test.
 
 *xchat-xsys-2.0.4 (06 Jun 2005)
 
