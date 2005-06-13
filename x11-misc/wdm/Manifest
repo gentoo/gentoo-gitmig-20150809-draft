@@ -1,8 +1,18 @@
-MD5 1b508d1d3b550566561561fc593fde00 ChangeLog 1186
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 836f0b79afa8eeb95137ad5e46ebb107 ChangeLog 1306
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 4ceb90112ae1de0821379b86b0b50589 wdm-1.26.ebuild 1035
-MD5 14ebd2aa33680372a6475bbdd9b5c216 wdm-1.26-r1.ebuild 974
+MD5 c069ae7e9e29dafc74aa97681214eb81 wdm-1.26-r1.ebuild 981
 MD5 4bede5980b6b67ab4393b2a1903464b2 files/digest-wdm-1.26 61
 MD5 2d6e9593eae8b7cc30202c7a86074f5d files/wdm 381
-MD5 0473a4ba1eb62b9338c008266cb20a20 files/wdm-include 210
 MD5 4bede5980b6b67ab4393b2a1903464b2 files/digest-wdm-1.26-r1 61
+MD5 0473a4ba1eb62b9338c008266cb20a20 files/wdm-include 210
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrhQxj5H05b2HAEkRAtBJAKCFtiYNLVFq+S/P6GMJS9ioUdc3pQCdHO2O
+tRn3oBpn+/ZL5ouBg5XiIv8=
+=ME4Y
+-----END PGP SIGNATURE-----
