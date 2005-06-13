@@ -100,3 +100,4 @@ move dev-perl/ExtUtils-MakeMaker perl-core/ExtUtils-MakeMaker
 move net-analyzer/piwi net-analyzer/prewikka
 move x11-themes/plastique x11-themes/polymer
 move app-text/gnu-ghostscript app-text/ghostscript-gnu
+move app-admin/eclectic app-admin/eselect
