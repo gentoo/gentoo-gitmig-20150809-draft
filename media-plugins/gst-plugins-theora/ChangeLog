@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-theora
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.17 2005/06/09 20:57:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.18 2005/06/13 09:49:47 kloeri Exp $
+
+  13 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
+  gst-plugins-theora-0.8.9.ebuild:
+  Add ~alpha keyword.
 
   09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gst-plugins-theora-0.8.8.ebuild:
