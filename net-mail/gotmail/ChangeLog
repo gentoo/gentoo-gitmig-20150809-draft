@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/gotmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.27 2005/06/12 12:42:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.28 2005/06/13 02:01:05 ticho Exp $
+
+  13 Jun 2005; Andrej Kacian <ticho@gentoo.org> files/digest-gotmail-0.8.3,
+  Manifest:
+  Fixed distfile digest for 0.8.3, since upstream changed the tarball.
 
 *gotmail-0.8.3 (12 Jun 2005)
 
