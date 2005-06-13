@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-im</herd>
-<maintainer>
-    <email>gaim-bugs@gentoo.org</email>
-</maintainer>
 <longdescription>
     Gaim is a multi-protocol instant messaging client for Linux, BSD, MacOS X, and Windows. It is compatible with AIM (Oscar and TOC protocols), ICQ, MSN Messenger, Yahoo, IRC, Jabber, Gadu-Gadu, and Zephyr networks. 
 </longdescription>
