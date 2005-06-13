@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-skk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/ChangeLog,v 1.5 2005/05/29 21:17:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/ChangeLog,v 1.6 2005/06/13 04:37:34 usata Exp $
+
+  13 Jun 2005; Mamoru KOMACHI <usata@gentoo.org> -scim-skk-0.1.2.ebuild,
+  scim-skk-0.2.0.ebuild, scim-skk-0.2.1.ebuild:
+  Added skk-jisyo to RDEPEND. Thanks to Seiji Kumagai
+  <skumagai@ic.sunysb.edu>; bug #95790.
 
 *scim-skk-0.2.1 (29 May 2005)
 
