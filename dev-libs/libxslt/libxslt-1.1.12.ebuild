@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.12.ebuild,v 1.8 2005/04/09 07:40:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.12.ebuild,v 1.9 2005/06/13 23:57:31 vapier Exp $
 
 inherit libtool gnome.org eutils python
 
@@ -22,6 +22,7 @@ src_unpack() {
 	# we still require the 1.1.8 patch for the .m4 file, to add
 	# the CXXFLAGS defines <obz@gentoo.org>
 	epatch "${FILESDIR}"/libxslt.m4-${PN}-1.1.8.patch
+	epunt_cxx
 	elibtoolize
 }
 
@@ -34,6 +35,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README NEWS TODO
 }

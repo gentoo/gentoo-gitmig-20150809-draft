@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.13-r1.ebuild,v 1.3 2005/03/26 15:43:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.13-r1.ebuild,v 1.4 2005/06/13 23:57:31 vapier Exp $
 
 inherit libtool gnome.org eutils python
 
@@ -18,17 +18,18 @@ DEPEND=">=dev-libs/libxml2-2.6.17
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# we still require the 1.1.8 patch for the .m4 file, to add
 	# the CXXFLAGS defines <obz@gentoo.org>
-	epatch ${FILESDIR}/libxslt.m4-${PN}-1.1.8.patch
+	epatch "${FILESDIR}"/libxslt.m4-${PN}-1.1.8.patch
 
 	# patch for xslt missing dictionary, see:
 	# http://bugs.gentoo.org/show_bug.cgi?id=86327 and
 	# http://bugzilla.gnome.org/show_bug.cgi?id=170533
 	# <obz@gentoo.org>
-	epatch ${FILESDIR}/${P}-xslt.patch
+	epatch "${FILESDIR}"/${P}-xslt.patch
 
+	epunt_cxx
 	elibtoolize
 }
 
@@ -41,7 +42,7 @@ src_compile() {
 	# Patching the Makefiles to respect get_libdir
 	# Fixes BUG #86756, please keep this.
 	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
-	for x in $(find ${S} -name "Makefile") ; do
+	for x in $(find "${S}" -name "Makefile") ; do
 		sed \
 			-e "s|^\(PYTHON_SITE_PACKAGES\ =\ \/usr\/\).*\(\/python.*\)|\1$(get_libdir)\2|g" \
 			-i ${x} \
@@ -52,6 +53,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README NEWS TODO
 }
