@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r8.ebuild,v 1.1 2005/06/12 22:23:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r8.ebuild,v 1.2 2005/06/13 23:17:16 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-restrict_arr.patch
 	epatch "${FILESDIR}"/${PV}-utf8-case.patch
 	epatch "${FILESDIR}"/${P}-perl-segv.patch #95495
+	epatch "${FILESDIR}"/${P}-libintl.patch #92586
 
 	# uclibc does not suffer from this glibc bug.
 	use elibc_uclibc || epatch "${FILESDIR}"/${PV}-tests.patch
