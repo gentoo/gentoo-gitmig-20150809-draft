@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4089 2005/06/13 22:07:38 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4090 2005/06/13 23:45:40 dsd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,6 +24,7 @@
 # Daniel Drake <dsd@gentoo.org> (13 Jun 2005)
 # Obseleted by ALSA, pending removal, bug 94954
 media-sound/emu10k1
+media-sound/sbconf
 
 # Andrej Kacian <ticho@gentoo.org> (13 Jun 2005)
 # Masked, as requeuing doesn't work
