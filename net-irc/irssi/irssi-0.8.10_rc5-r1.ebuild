@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.9 2005/05/19 20:52:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.10 2005/06/13 19:35:27 swegener Exp $
 
-inherit perl-module eutils
+inherit perl-module eutils flag-o-matic
 
 MY_P="${P//_/-}"
 
@@ -44,6 +44,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Irssi uses extern inlines and that needs at least -O
+	is-flag "-O*" || append-flags -O
+
 	if use ssl
 	then
 		myconf="--with-openssl-include=/usr --with-openssl-libs=/usr"

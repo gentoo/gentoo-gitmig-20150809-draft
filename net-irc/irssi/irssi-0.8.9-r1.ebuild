@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.10 2005/05/19 20:52:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.11 2005/06/13 19:35:27 swegener Exp $
 
-inherit perl-module eutils
+inherit perl-module eutils flag-o-matic
 
 DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
@@ -38,6 +38,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Irssi uses extern inlines and that needs at least -O
+	is-flag "-O*" || append-flags -O
+
 	# Note: there is an option to build a GUI for irssi, but according
 	# to the website the GUI is no longer developed, so that option is
 	# not used here.

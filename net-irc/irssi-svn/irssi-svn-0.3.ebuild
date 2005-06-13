@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.4 2005/05/19 20:54:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.5 2005/06/13 19:37:30 swegener Exp $
 
 inherit subversion perl-module
 
@@ -26,6 +26,9 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
 src_compile() {
+	# Irssi uses extern inlines and that needs at least -O
+	is-flag "-O*" || append-flags -O
+
 	export WANT_AUTOCONF=2.5
 
 	econf \

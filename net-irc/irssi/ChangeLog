@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.65 2005/05/19 20:52:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.66 2005/06/13 19:35:27 swegener Exp $
+
+  13 Jun 2005; Sven Wegener <swegener@gentoo.org> irssi-0.8.9-r1.ebuild,
+  irssi-0.8.10_rc5-r1.ebuild:
+  Irssi uses extern inlines and that needs at least -O in CFLAGS.
 
   19 May 2005; Sven Wegener <swegener@gentoo.org> irssi-0.8.9-r1.ebuild,
   irssi-0.8.10_rc5-r1.ebuild:
