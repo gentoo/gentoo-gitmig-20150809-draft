@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kweather
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.9 2005/05/25 21:23:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.10 2005/06/13 00:22:16 carlo Exp $
+
+*kweather-3.4.1-r1 (13 Jun 2005)
+
+  13 Jun 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/kweather-3.4.1-fix-icon-size.diff, +kweather-3.4.1-r1.ebuild:
+  taskbar icon size fix, #95286
 
 *kweather-3.4.1 (25 May 2005)
 
