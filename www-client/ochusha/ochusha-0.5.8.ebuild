@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.5.ebuild,v 1.2 2005/01/01 16:55:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.ebuild,v 1.1 2005/06/13 04:26:21 usata Exp $
 
 inherit flag-o-matic
 
@@ -9,11 +9,11 @@ use debug && FEATURES="nostrip"
 
 DESCRIPTION="Ochusha - 2ch viewer for GTK+"
 HOMEPAGE="http://ochusha.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/10122/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge.jp/${PN}/15140/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ppc64"
+KEYWORDS="~x86 ~ppc ~ppc64"
 
 DEPEND="virtual/xft
 	>=x11-libs/gtk+-2.2.4
@@ -28,8 +28,8 @@ src_compile() {
 
 	use debug && append-flags -g
 
-	econf `use_enable nls` \
-		`use_with ssl` \
+	econf $(use_enable nls) \
+		$(use_with ssl) \
 		--enable-regex \
 		--disable-shared \
 		--enable-static \
@@ -39,7 +39,7 @@ src_compile() {
 
 src_install() {
 
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	dodoc ABOUT-NLS ACKNOWLEDGEMENT AUTHORS BUGS \
 		ChangeLog INSTALL* NEWS README TODO
