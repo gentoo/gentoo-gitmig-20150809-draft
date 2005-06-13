@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.15 2005/06/13 12:22:39 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.16 2005/06/13 13:25:25 josejx Exp $
+
+  13 Jun 2005; Joseph Jezak <josejx@gentoo.org> freeglut-2.2.0.ebuild:
+  Marked ppc stable for bug #95920.
 
   13 Jun 2005; Ferris McCormick <fmccor@gentoo.org> freeglut-2.2.0.ebuild:
   Stable for sparc, Bug 95920.  Builds fine and runs my tests.
