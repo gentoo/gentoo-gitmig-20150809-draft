@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.26-r1.ebuild,v 1.2 2005/06/13 23:17:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.26-r1.ebuild,v 1.3 2005/06/13 23:23:09 smithj Exp $
 
 inherit eutils pam
 
@@ -20,7 +20,7 @@ RDEPEND=">=x11-wm/windowmaker-0.65.1
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
-	
+
 src_compile() {
 	econf \
 		--exec-prefix=/usr \

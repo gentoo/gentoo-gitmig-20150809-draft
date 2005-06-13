@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wdm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.11 2005/06/13 23:17:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.12 2005/06/13 23:23:09 smithj Exp $
+
+  13 Jun 2005; Jonathan Smith <smithj@gentoo.org> wdm-1.26-r1.ebuild:
+  trailing whitespace fix for wdm-1.26-r1.ebuild
 
   13 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> wdm-1.26-r1.ebuild:
   Inherit pam eclass for newpamd function.
