@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/coccinella
+# ChangeLog for net-im/coccinella
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/ChangeLog,v 1.1 2005/06/13 13:44:15 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/ChangeLog,v 1.2 2005/06/13 14:56:38 swegener Exp $
 
 *coccinella-0.95.7 (13 Jun 2005)
   13 Jun 2005; J. Alberto Suarez L. <bass@gentoo.org> coccinella-0.95.7.ebuild:
