@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.20 2005/05/29 20:01:39 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.21 2005/06/13 09:56:55 kloeri Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -91,3 +91,6 @@ vpopmail
 
 # Mask pyste until gccxml / elementtree work on alpha
 pyste
+
+# Mask mono for further testing
+mono
