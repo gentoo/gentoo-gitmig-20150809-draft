@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.13.2.ebuild,v 1.1 2005/04/27 14:45:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.13.2.ebuild,v 1.2 2005/06/14 00:24:46 vapier Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -33,6 +33,11 @@ _curl_has_old_ver() {
 	else
 		return 1
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	epunt_cxx
 }
 
 src_compile() {
