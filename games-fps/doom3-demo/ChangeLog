@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-demo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.10 2005/04/18 15:18:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.11 2005/06/14 14:59:04 wolf31o2 Exp $
+
+  14 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/digest-doom3-demo-1.1.1286:
+  Changed digest to match new doom3 icon and closing bug #95844.
 
   18 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   doom3-demo-1.1.1286.ebuild:
