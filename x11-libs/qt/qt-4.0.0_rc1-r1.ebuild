@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_rc1-r1.ebuild,v 1.1 2005/06/14 18:48:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_rc1-r1.ebuild,v 1.2 2005/06/14 20:28:40 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -74,7 +74,7 @@ src_unpack() {
 
 	cd mkspecs/$(qt_mkspecs_dir)
 	# set c/xxflags and ldflags
-	
+
 	# Don't let the user go too overboard with flags.  If you really want to, uncomment
 	# out the line below and give 'er a whirl.
 	strip-flags
