@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.81 2005/06/07 22:41:40 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.82 2005/06/14 21:57:18 plasmaroo Exp $
+
+*genkernel-3.2.0_pre4 (14 Jun 2005)
+
+  14 Jun 2005; <plasmaroo@gentoo.org> -genkernel-3.2.0_pre3.ebuild,
+  +genkernel-3.2.0_pre4.ebuild:
+  Add rocket's unionfs patch and linuxrc cleanup; fix Pegasos with regard to
+  initramfs.
 
 *genkernel-3.2.0_pre3 (07 Jun 2005)
 
