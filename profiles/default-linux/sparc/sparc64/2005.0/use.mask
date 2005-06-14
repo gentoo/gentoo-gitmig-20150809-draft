@@ -1,4 +1,6 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/use.mask,v 1.4 2005/04/04 17:31:25 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/use.mask,v 1.5 2005/06/14 14:07:49 gustavoz Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Don't allow alsa in sparc64 because of broken snd-ioctl32
