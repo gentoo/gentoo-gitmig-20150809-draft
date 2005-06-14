@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-theora
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.18 2005/06/13 09:49:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.19 2005/06/14 10:23:10 zaheerm Exp $
+
+  14 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  gst-plugins-theora-0.8.8.ebuild, gst-plugins-theora-0.8.9.ebuild:
+  hard dep on alpha3 coz alpha4 causes segfaults and alpha2 doesnt build
 
   13 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
   gst-plugins-theora-0.8.9.ebuild:
