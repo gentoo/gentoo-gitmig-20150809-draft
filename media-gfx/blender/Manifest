@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 b024660fd2067edc9a0415547d5f5406 blender-2.35.ebuild 2802
-MD5 07b803b7c385eea684af19e042ab2088 blender-2.37.ebuild 3384
+MD5 ea59778ab68849d46564ecc8c63c46b0 blender-2.37.ebuild 3390
 MD5 8a390c3a50c2abbcfa3fbbb7b87a8c54 blender-2.36-r1.ebuild 3309
 MD5 66a5b30c7230910dfe5d35c16ee19763 blender-2.34.ebuild 2819
 MD5 99ad2f8fe7c190a54f498946071a613b blender-2.36.ebuild 2929
 MD5 d319a736c17f64760fe7cfcfaf4d9ba5 blender-2.34-r1.ebuild 2931
-MD5 5aca09a988f0738a7ae0601094fa07ff ChangeLog 8362
+MD5 c0a672cfc77cd2c505cff3084002927c ChangeLog 8907
 MD5 493f38fb63d60a1ce275fdd2ea43d6e9 metadata.xml 587
 MD5 d95ef10fee53b71576c6da6c8163e748 files/blender.png 2119
 MD5 b5356307d35d0bfe73149428cafe23ff files/configure-fix.patch 754
@@ -24,7 +24,7 @@ MD5 705b95605426ad9d562457fdbbff5460 files/blender-2.32.patch 2562
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrK5rntT9W3vfTuoRApDBAJ9d4zP/U5EuJCGssK0hPT3hv9miFwCdEzVm
-zuH1v2TzShmBPbk0zeUsZ2Y=
-=eiBj
+iD8DBQFCrvgbI1lqEGTUzyQRArQ3AJ9a0uMPuiMTbrXY39cwsFYt4pXLkACfQmQF
+641Wv8OcfVg7zGJMoXsmNCo=
+=GqQI
 -----END PGP SIGNATURE-----
