@@ -1,18 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_rc1.ebuild,v 1.3 2005/06/14 18:48:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_rc1-r1.ebuild,v 1.1 2005/06/14 18:48:48 caleb Exp $
 
 inherit eutils flag-o-matic
 
 SRCTYPE="opensource-desktop"
-#SNAPSHOT="20050603"
-SNAPSHOT=""
+SNAPSHOT="20050614"
+#SNAPSHOT=""
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
 
-#SRC_URI="ftp://ftp.trolltech.com/qt/snapshots/qt-x11-${SRCTYPE}-${PV}-snapshot-${SNAPSHOT}.tar.bz2"
-SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV/_rc1/-rc1}.tar.bz2"
-S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV/_rc1/-rc1}
+SRC_URI="ftp://ftp.trolltech.com/qt/snapshots/qt-x11-${SRCTYPE}-${PV/_rc1/}-snapshot-${SNAPSHOT}.tar.bz2"
+#SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV/_rc1/-rc1}.tar.bz2"
+#S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV/_rc1/-rc1}
+S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV/_rc1/}-snapshot-${SNAPSHOT}
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
@@ -73,11 +74,10 @@ src_unpack() {
 
 	cd mkspecs/$(qt_mkspecs_dir)
 	# set c/xxflags and ldflags
+	
+	# Don't let the user go too overboard with flags.  If you really want to, uncomment
+	# out the line below and give 'er a whirl.
 	strip-flags
-
-	# Qt4 moc does not work with -O3, unfortunately.
-	replace-flags -O3 -O2
-	filter-flags -finline-functions
 
 	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
 		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
@@ -86,7 +86,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/qt4-rpath.patch
-	epatch ${FILESDIR}/qt4b2r3_nomkdir.patch
+	epatch ${FILESDIR}/qt4rc1_nomkdir.patch
 
 	sed -i -e "s:CFG_REDUCE_EXPORTS=auto:CFG_REDUCE_EXPORTS=no:" configure
 }
@@ -149,9 +149,14 @@ src_install() {
 		cp -a ${S}/demos/* ${D}/${QTDATADIR}/demos
 	fi
 
-	#install -c ${S}/bin/qmake ${D}${QTBINDIR}/qmake
 	make INSTALL_ROOT=${D} install_qmake || die
 	make INSTALL_ROOT=${D} install_mkspecs || die
+
+	# The QtDesigner and QtAssistant header files aren't installed..not sure why
+	cp -a ${S}/include/QtDesigner ${D}/${QTHEADERDIR}/QtDesigner
+	rm -rf ${D}/${QTHEADERDIR}/QtDesigner/private
+
+	cp -a ${S}/include/QtAssistant ${D}/${QTHEADERDIR}/QtAssistant
 
 	# Fix symlink
 	cd ${D}/${QTDATADIR}/mkspecs
