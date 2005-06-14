@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ser
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.11 2005/06/12 21:57:41 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.12 2005/06/14 03:25:50 weeve Exp $
+
+  14 Jun 2005; Jason Wever <weeve@gentoo.org> ser-0.9.0.ebuild:
+  Added ~sparc keyword.
 
   12 Jun 2005; Stefan Knoblich <stkn@gentoo.org> ser-0.9.0.ebuild:
   Removed -* keyword, files are on gentoo mirrors now.
