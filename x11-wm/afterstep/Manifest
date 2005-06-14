@@ -6,8 +6,8 @@ MD5 61ac082c6563be2e5790a287988a4674 afterstep-1.8.11-r2.ebuild 1543
 MD5 c5406c903c743a0659fe929cc914f05c afterstep-2.1.1.ebuild 3357
 MD5 849422948d5fed5843fccb8a0732e80c afterstep-2.00.04.ebuild 3358
 MD5 8424c9368cf00500faf961341cc53fc7 afterstep-2.1.0.ebuild 3357
-MD5 399ab8b4724afeaf963ae0662c05dd7e ChangeLog 5972
-MD5 5fcb6c5011c265ab4d4268662ee0dac9 metadata.xml 353
+MD5 6bb0aaef1aa74cc607952f7cca83e221 ChangeLog 6060
+MD5 1c6c852859111b4dd81b012693cd9ca5 metadata.xml 355
 MD5 9735d9a9bce29bcbd35792c0c4064ea0 files/digest-afterstep-1.8.11-r2 70
 MD5 720723e9a9846b9d6a7e64a25b1adbbc files/afterstep 29
 MD5 7d3868b85f7325c35e5165a8c10ce77d files/afterstep-1.8.11-gentoo.diff 1321
@@ -18,7 +18,7 @@ MD5 63287632615c6757362d18ec54ef615d files/digest-afterstep-2.1.1 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCq/v8EZCkKN40op4RAodeAJ9XoRyiP0dMxO+J/NJWsIHVvRO9igCfUojv
-DgDGu7ugmiL/WHFYgKFusYU=
-=Ipnd
+iD8DBQFCrjAXEZCkKN40op4RAirlAJ9+3oEOt0EXnIeYumWeqgnz5LyBHgCffHhE
+R8V0IaMry+AB5JlXpjQson8=
+=RJci
 -----END PGP SIGNATURE-----
