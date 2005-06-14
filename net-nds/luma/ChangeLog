@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/luma
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.18 2005/05/22 21:12:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.19 2005/06/14 11:28:08 carlo Exp $
+
+  14 Jun 2005; Carsten Lohrke <carlo@gentoo.org> luma-2.1.3.ebuild:
+  stable on x86
 
   22 May 2005; Jason Wever <weeve@gentoo.org> luma-2.1.3.ebuild:
   Added ~sparc keyword.
