@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.1.ebuild,v 1.12 2005/02/24 19:19:04 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.1.ebuild,v 1.13 2005/06/14 02:55:02 smithj Exp $
 
 DESCRIPTION="An automatic X screen-locker/screen-saver."
 SRC_URI="http://www.ibiblio.org/pub/Linux/X11/screensavers/${P}.tgz"
@@ -10,7 +10,8 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc ~amd64"
 IUSE=""
 
-DEPEND="virtual/x11"
+DEPEND="virtual/x11
+	x11-misc/xlockmore"
 
 src_compile() {
 	xmkmf || die
