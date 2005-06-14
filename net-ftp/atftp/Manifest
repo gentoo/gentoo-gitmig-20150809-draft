@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 24b4560658454c401915fc6514424261 ChangeLog 2616
 MD5 a8c1eb8d7148ed58420b5586a1296350 atftp-0.6-r3.ebuild 988
-MD5 d101b19c29d3d4b6c378d2277e6f41ae atftp-0.7.ebuild 903
 MD5 6f53cf043ccea8c37c9bba4d68703c16 atftp-0.6.2.ebuild 1039
-MD5 d2f59a56fd65fcbebf240bacc251520f ChangeLog 2533
-MD5 401c2182f70ea502b2b13567dee9daf9 files/digest-atftp-0.7 61
-MD5 6edbe26f81fbd488b6fbffd1bbd27ca9 files/digest-atftp-0.6-r3 61
-MD5 f3d1e03f8ce70ea8ed775de7407304f3 files/atftp.init 437
-MD5 e14c6bca387e9af7d2734fb9f08a67ee files/digest-atftp-0.6.2 63
+MD5 d297f02eaf99dfebea7958dff76cdee7 atftp-0.7.ebuild 911
 MD5 ef1244d13cccdfbe2dff44442e0c3d1f files/atftp-0.6-security.patch 1019
 MD5 0adc9648a64aa6a05a55bf822eec7265 files/atftp-0.7-gcc.patch 540
 MD5 939f5bfbb9b7a728330cc124175c39e3 files/atftp.confd 105
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCakcZI1lqEGTUzyQRApubAJ44Ov8jqrdrfm5uuAteIW4ddRdUKgCgrmgA
-x4Ej3n6nZxZuQMqwwGq0C54=
-=Nebj
------END PGP SIGNATURE-----
+MD5 f3d1e03f8ce70ea8ed775de7407304f3 files/atftp.init 437
+MD5 6edbe26f81fbd488b6fbffd1bbd27ca9 files/digest-atftp-0.6-r3 61
+MD5 e14c6bca387e9af7d2734fb9f08a67ee files/digest-atftp-0.6.2 63
+MD5 401c2182f70ea502b2b13567dee9daf9 files/digest-atftp-0.7 61

@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/atftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.9 2005/04/23 13:00:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.10 2005/06/14 10:13:56 corsair Exp $
+
+  14 Jun 2005; Markus Rothe <corsair@gentoo.org> atftp-0.7.ebuild:
+  added ~ppc64
 
   21 Feb 2005; Simon Stelling <blubb@gentoo.org> :
   added ~amd64
