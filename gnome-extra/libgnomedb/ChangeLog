@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.33 2005/06/13 23:33:49 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.34 2005/06/14 05:23:51 leonardop Exp $
+
+  13 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
+  libgnomedb-1.0.1.ebuild, libgnomedb-1.0.4.ebuild:
+  Make libgda dependency specific to 1.0.x to avoid problems with renamed
+  symbols. See bug #95827.
 
   13 Jun 2005; Leonardo Boshell <leonardop@gentoo.org> libgnomedb-1.2.1.ebuild:
   Stable on x86.
