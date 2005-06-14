@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0.ebuild,v 1.2 2005/04/25 11:47:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0.ebuild,v 1.3 2005/06/14 16:06:36 greg_g Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,7 +18,7 @@ IUSE="kde sse 3dnow openal xscreensaver"
 DEPEND="virtual/x11
 	virtual/opengl
 	>=media-gfx/imagemagick-5.5.7
-	kde? ( || ( kde-base/kscreensaver kde-base/kdeartwork ) )
+	kde? ( || ( kde-base/kdeartwork-kscreensaver kde-base/kdeartwork ) )
 	!kde? ( x11-misc/xscreensaver )
 	openal? ( media-libs/openal )"
 
@@ -26,8 +26,9 @@ pkg_setup() {
 	if use kde && use xscreensaver ; then
 		if ! built_with_use kde-base/kdeartwork-kscreensaver xscreensaver && \
 		   ! built_with_use kde-base/kdeartwork xscreensaver ; then
-			eerror "rss-glx wont work nicely with kde unless you"
-			eerror "emerge kscreensaver with USE=xscreensaver"
+			eerror "rss-glx wont work nicely with kde unless you emerge"
+			eerror "kde-base/kdeartwork or kde-base/kdeartwork-kscreensaver"
+			eerror "with USE=xscreensaver."
 			eerror "See http://bugs.gentoo.org/show_bug.cgi?id=88212"
 			die "Please re-emerge your KDE with USE=xscreensaver"
 		fi
