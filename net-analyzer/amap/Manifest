@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bf0cd3ae53ef3b3f2ef5bab3e309c44b amap-5.1.ebuild 1545
 MD5 701ffa0a03c07892f770bf5419333da4 amap-4.7.ebuild 1393
 MD5 44e2be0bf7faf3e254623622502ff55b amap-4.8-r1.ebuild 1470
@@ -13,3 +16,10 @@ MD5 b078c53b085eba48231c7df7123766b5 files/amap-5.0-gcc4.patch 15883
 MD5 cc27dde4b08677a49290c397dc162be8 files/amap-4.8-gcc4.patch 2460
 MD5 a11774428cb7e97a81107a22682d1798 files/4.8-system-pcre.patch 1232
 MD5 36fabda09cbfbb3c4c9eab818e99a501 files/amap-4.8-fix-icky-lvalue-casts.diff 7058
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrubfEZCkKN40op4RAgsXAJ456HJ4vU/WAhtcUImamzSYfXjXGACfZMVE
+/OODPqdmLZPWikKiC2XuspQ=
+=hVeI
+-----END PGP SIGNATURE-----
