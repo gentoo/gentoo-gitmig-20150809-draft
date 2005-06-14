@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.58 2005/06/12 21:50:13 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.59 2005/06/14 13:56:53 fmccor Exp $
+
+  14 Jun 2005; Ferris McCormick <fmccor@gentoo.org> blender-2.37.ebuild:
+  Add ~sparc keyword.  Blender builds on sparc without incident, and
+  appears to run.  In the past, there have been endian problems with
+  blender and loading .blend files, and I have not tested this.  I
+  built blender in response to a (non-sparc) user question regarding
+  the necessity of emerging mesa as a separate package in order to
+  build blender.  (1) You don't have to; (2) blender does build and
+  run on sparc, and it's a nice program.  Hence, the ~sparc.
 
   12 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> blender-2.36-r1.ebuild:
   Stable on amd64.
