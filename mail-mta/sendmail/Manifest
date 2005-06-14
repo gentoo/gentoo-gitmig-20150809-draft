@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3cb655cf9af25ff8de3232afc850c7bd sendmail-8.13.3.ebuild 5952
-MD5 50e814379c50db0570cb6ab678be1691 sendmail-8.13.1-r1.ebuild 5923
-MD5 01569c8ed1454c6c197f5343be395a89 sendmail-8.13.4.ebuild 5816
-MD5 b083f54dfbe11167b938fd8560160af7 ChangeLog 11150
+MD5 6ae9741a6ccd4bd751bb6b69fa4b69a9 sendmail-8.13.3.ebuild 5991
+MD5 c77f180f8a2e154ffd41becf19407a59 sendmail-8.13.1-r1.ebuild 5962
+MD5 e119771544ced11719abdea0aac6b2de sendmail-8.13.4.ebuild 5853
+MD5 08afb1af459776d1b2e0383f5d8a011c ChangeLog 11341
 MD5 07aa1897fda73805b9d68a2b82090e5f metadata.xml 218
 MD5 9cf5b1a30908c5f96f258b835f430865 files/sendmail.cf 39312
 MD5 1a9fedeb2f17b9a7de4f0f8da6c06d63 files/sendmail.mc 299
@@ -24,7 +24,7 @@ MD5 4b37f61de2fd8de372a4bd8ab6f92edf files/sendmail-8.12.2-smrsh-paths.patch 562
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCmetGViELBEf1JB0RAsqAAJ0Zry/MALQsCKYWHuYm+DBvhRLWZQCff9KE
-F9mSQr3JhJ9AOXB39d+SqXg=
-=UhLg
+iD8DBQFCrt7WViELBEf1JB0RAj43AJ49A22Gy3ufgw7SUYIS1neVpwzopACeNfB/
+iw0LLJ7A0g4jF1AW0NoreTY=
+=y8ui
 -----END PGP SIGNATURE-----

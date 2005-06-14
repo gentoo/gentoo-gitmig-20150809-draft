@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.1-r1.ebuild,v 1.8 2005/02/19 18:59:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.1-r1.ebuild,v 1.9 2005/06/14 13:42:05 ferdy Exp $
 
 inherit eutils
 
@@ -137,7 +137,8 @@ src_install () {
 	else
 		newins ${FILESDIR}/sendmail-procmail.mc sendmail.mc
 	fi
-	m4 ${D}/etc/mail/sendmail.mc > ${D}/etc/mail/sendmail.cf
+	m4 ${D}/usr/share/sendmail-cf/m4/cf.m4 ${D}/etc/mail/sendmail.mc \
+		> ${D}/etc/mail/sendmail.cf
 	echo "# local-host-names - include all aliases for your machine here" \
 		> ${D}/etc/mail/local-host-names
 	cat << EOF > ${D}/etc/mail/trusted-users
