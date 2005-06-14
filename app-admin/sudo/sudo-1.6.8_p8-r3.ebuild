@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.5 2005/06/09 09:10:18 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.6 2005/06/14 16:27:02 taviso Exp $
 
 inherit eutils pam
 
@@ -16,6 +16,8 @@ IUSE="pam skey offensive ldap"
 
 DEPEND="pam? ( virtual/pam ) skey? ( >=app-admin/skey-1.1.5-r1 )
 	ldap? ( >=net-nds/openldap-2.1.30-r1 )"
+RDEPEND="${DEPEND} ldap? ( dev-lang/perl )"
+
 S=${WORKDIR}/${P/_/}
 
 src_unpack() {
@@ -90,7 +92,7 @@ src_compile() {
 				ewarn "	Failed to find ROOTPATH, please report this."
 
 		# remove any duplicate entries
-		ROOTPATH=`cleanpath /bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin${ROOTPATH:+:${ROOTPATH}}`
+		ROOTPATH=$(cleanpath /bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin${ROOTPATH:+:${ROOTPATH}})
 
 	einfo "...done."
 
@@ -113,6 +115,11 @@ src_install() {
 	einstall || die
 	dodoc BUGS CHANGES HISTORY PORTING README RUNSON TODO \
 		TROUBLESHOOTING UPGRADE sample.*
+
+	use ldap && {
+		dodoc README.LDAP
+		dosbin sudoers2ldif
+	}
 
 	pamd_mimic_system sudo auth account password session
 
