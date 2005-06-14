@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.42 2005/06/13 22:54:18 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.43 2005/06/14 03:14:05 fuzzyray Exp $
+
+  14 Jun 2005; Paul Varner <fuzzyray@gentoo.org>
+  gentoolkit-0.2.1_pre3.ebuild:
+  Removed -* from KEYWORDS, due to potential confusion from end-users
 
   13 Jun 2005; Jose Luis Rivero <yoswink@gentoo.org>
   gentoolkit-0.2.1_pre3.ebuild:
