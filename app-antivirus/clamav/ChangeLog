@@ -1,6 +1,14 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.77 2005/06/13 18:55:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.78 2005/06/14 00:58:01 ticho Exp $
+
+*clamav-0.86_rc1 (14 Jun 2005)
+
+  14 Jun 2005; Andrej Kacian <ticho@gentoo.org>
+  -files/clamav-0.85.1-cvd-dir-traversal-fix.patch,
+  -clamav-0.85.1-r2.ebuild, +clamav-0.86_rc1.ebuild:
+  Version bump - a release candidate. Removed 0.85.1-r2, since the directory
+  traversal fix is contained in this rc1.
 
 *clamav-0.85.1-r2 (13 Jun 2005)
 

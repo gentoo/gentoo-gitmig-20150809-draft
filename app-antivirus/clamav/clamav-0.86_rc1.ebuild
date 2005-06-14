@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85.1-r2.ebuild,v 1.1 2005/06/13 18:55:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.86_rc1.ebuild,v 1.1 2005/06/14 00:58:01 ticho Exp $
 
 inherit eutils flag-o-matic
 
+MY_P=${P/_/}
 DESCRIPTION="Clam Anti-Virus Scanner"
 HOMEPAGE="http://www.clamav.net/"
-SRC_URI="mirror://sourceforge/clamav/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/clamav/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,6 +26,8 @@ RDEPEND="${DEPEND}
 	sys-apps/grep"
 PROVIDE="virtual/antivirus"
 
+S=${WORKDIR}/${MY_P}
+
 pkg_setup() {
 	if use milter; then
 		if [ ! -e /usr/lib/libmilter.a ] ; then
@@ -37,12 +40,6 @@ pkg_setup() {
 	enewgroup clamav
 	enewuser clamav -1 /bin/false /dev/null clamav
 	pwconv || die
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-cvd-dir-traversal-fix.patch || die "epatch failed"
 }
 
 src_compile() {
