@@ -101,3 +101,4 @@ move net-analyzer/piwi net-analyzer/prewikka
 move x11-themes/plastique x11-themes/polymer
 move app-text/gnu-ghostscript app-text/ghostscript-gnu
 move app-admin/eclectic app-admin/eselect
+move dev-python/menumaker x11-misc/menumaker
