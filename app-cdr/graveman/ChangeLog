@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.15 2005/06/10 19:42:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.16 2005/06/14 20:54:47 dertobi123 Exp $
+
+  14 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  graveman-0.3.11.ebuild, -graveman-0.3.12.ebuild,
+  -graveman-0.3.12_p2.ebuild, -graveman-0.3.12_p3.ebuild,
+  graveman-0.3.12_p4.ebuild:
+  Clean up.
+  Fixed libglade dependency. graveman requires libglade >=2.4,
+  as reported by Martin Grosshauser in #96085.
 
   10 Jun 2005; Lars Weiler <pylon@gentoo.org> graveman-0.3.11.ebuild,
   graveman-0.3.12.ebuild, graveman-0.3.12_p2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p4.ebuild,v 1.2 2005/06/10 19:42:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p4.ebuild,v 1.3 2005/06/14 20:54:47 dertobi123 Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ IUSE="debug doc dvdr flac mp3 nls oggvorbis sox"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.4
-	>=gnome-base/libglade-2.0
+	>=gnome-base/libglade-2.4
 	>=dev-util/intltool-0.22
 	flac? ( >=media-libs/flac-1.1.0 )
 	nls? ( sys-devel/gettext )
