@@ -1,8 +1,18 @@
-MD5 d4c8b46f106b5227d676a585a0f84063 metadata.xml 255
-MD5 36a92050d7539c9b1e66aabe8c7cd4c4 ChangeLog 2698
-MD5 4f2dfbbbe171fcdf14add4de3d19932d http-fetcher-1.0.2.ebuild 743
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a472bc73fddc7018d09adfcdfd0705af http-fetcher-1.0.3.ebuild 759
-MD5 a073f625e908dd04e59a0d694ded3d50 http-fetcher-1.1.0.ebuild 879
-MD5 66353698efa4a7df0b6f6834299152aa files/digest-http-fetcher-1.0.3 70
+MD5 4f2dfbbbe171fcdf14add4de3d19932d http-fetcher-1.0.2.ebuild 743
+MD5 79d06a0f5d87748dcf79b2c6f66f4855 http-fetcher-1.1.0.ebuild 877
+MD5 2462d793a0d2c26cb4dfe70b6c70bc6e ChangeLog 2798
+MD5 d4c8b46f106b5227d676a585a0f84063 metadata.xml 255
 MD5 eac0ac4773ed1cbe44374680c329353f files/digest-http-fetcher-1.0.2 70
+MD5 66353698efa4a7df0b6f6834299152aa files/digest-http-fetcher-1.0.3 70
 MD5 d180063664e90028ec3453192662c0fb files/digest-http-fetcher-1.1.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrrTDViELBEf1JB0RArCdAJsELGAHzmkQN669DXUGJnyVQ/Sj1QCeNGbl
+mG6ipx16CbIySLcTTJnRfUM=
+=ktAR
+-----END PGP SIGNATURE-----
