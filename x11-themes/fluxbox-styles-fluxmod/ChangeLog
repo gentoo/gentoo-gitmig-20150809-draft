@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/fluxbox-styles-fluxmod
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.23 2005/05/19 21:32:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.24 2005/06/14 10:33:08 ferdy Exp $
+
+  14 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  fluxbox-styles-fluxmod-20050128.ebuild:
+  alpha tasty, wrt bug #93210
 
   19 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   fluxbox-styles-fluxmod-20050128.ebuild:
