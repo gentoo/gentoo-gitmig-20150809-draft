@@ -1,24 +1,23 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.26-r1.ebuild,v 1.4 2005/06/14 13:19:48 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28.ebuild,v 1.1 2005/06/14 13:19:48 smithj Exp $
 
 inherit eutils pam
 
-IUSE="truetype pam png jpeg gif tiff"
+IUSE="truetype pam selinux"
 
 DESCRIPTION="WINGs Display Manager"
 HOMEPAGE="http://voins.program.ru/wdm/"
 SRC_URI="http://voins.program.ru/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~alpha"
+KEYWORDS="~x86 ~amd64 ~alpha"
 LICENSE="GPL-2"
 
-RDEPEND=">=x11-wm/windowmaker-0.65.1
+RDEPEND=">=x11-wm/windowmaker-0.70.0
 	virtual/x11
 	truetype? ( virtual/xft )
-	pam? ( sys-libs/pam )"
-
+	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
@@ -27,10 +26,8 @@ src_compile() {
 		--exec-prefix=/usr \
 		--with-wdmdir=/etc/X11/wdm \
 		$(use_enable pam)\
-		$(use_enable png)\
-		$(use_enable jpeg)\
-		$(use_enable gif)\
-		$(use_enable tiff) || die "econf failed"
+		$(use_enable selinux) \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
