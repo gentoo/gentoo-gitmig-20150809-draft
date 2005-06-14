@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xchm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.27 2005/06/14 00:43:43 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.28 2005/06/14 12:07:43 smithj Exp $
+
+  14 Jun 2005; Jonathan Smith <smithj@gentoo.org> xchm-1.0-r1.ebuild:
+  updated dependency on 1.0-r1 for #96032
 
 *xchm-1.0-r1 (14 Jun 2005)
 

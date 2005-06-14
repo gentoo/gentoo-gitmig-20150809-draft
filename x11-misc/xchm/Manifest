@@ -1,8 +1,18 @@
-MD5 0ec98130480b26087ce5af84fbb51fa6 ChangeLog 4971
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 87e02c06b5e7a73e6b2d72b4a45a4824 ChangeLog 5084
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
 MD5 8b8727a304ea575b3bf6b6c9309fe74f xchm-0.9.6.ebuild 718
 MD5 ba76b5174f8b32140aba54f384ac0dad xchm-0.9.8.ebuild 721
-MD5 d9dc658d7c76654c307e3c1df44e812f xchm-1.0-r1.ebuild 2209
+MD5 da69d5a062b6650f9ee584c7f6a77638 xchm-1.0-r1.ebuild 2209
 MD5 1333608642124dbc0be70c60e627fd9c files/digest-xchm-0.9.6 127
 MD5 37082eeb0165e41ee380fd13e8b0882a files/digest-xchm-0.9.8 128
 MD5 42e73319b72a6c0c603afa32025bc888 files/digest-xchm-1.0-r1 124
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCrsiql5AvwDPiUowRAlEsAJ9DcZ/OsAq0RhjXiHOtXoZ39zU3OACfaAjH
+yC/2JymrvRO+X9TNt/QG54g=
+=eGsu
+-----END PGP SIGNATURE-----
