@@ -1,11 +1,14 @@
 # ChangeLog for x11-misc/ntodo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ChangeLog,v 1.9 2005/06/14 22:00:44 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ChangeLog,v 1.10 2005/06/14 22:27:08 pyrania Exp $
+
+  14 Jun 2005; Markus Nigbur <pyrania@gentoo.org> ntodo-1.1.ebuild:
+  Added PN to SRC_URI. Repoman issues fixed. :)
 
 *ntodo-1.1 (14 Jun 2005)
 
   14 Jun 2005; Markus Nigbur <pyrania@gentoo.org> +ntodo-1.1.ebuild:
-  Version bump
+  Version bump.
 
   29 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> ntodo-1.0.ebuild:
   mark ~ppc
