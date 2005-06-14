@@ -1,8 +1,16 @@
-MD5 e03854426c39c4f2521824db6fe33950 ChangeLog 1355
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aad4716116d4c77ad157b9eff8250650 ChangeLog 1544
 MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
 MD5 ab41b98a81b360cfa373a620eff6dd49 regexxer-0.6.ebuild 850
-MD5 ca538753224908357e33b3aad5c24630 regexxer-0.5.ebuild 760
-MD5 4ad26f7ae35f8a7a954983e5d8ce9816 regexxer-0.4.ebuild 617
-MD5 3ac12c5f2b8e2e58b961252d400f2c9b files/digest-regexxer-0.4 64
-MD5 76d865f39afa1066c7a923808c9e058c files/digest-regexxer-0.5 64
+MD5 546f9a4e9181660d7a8b16e7e957fc12 regexxer-0.8.ebuild 1304
 MD5 b4cafef08f3ba8c3ec97e302a3902662 files/digest-regexxer-0.6 64
+MD5 44e2df1763cce65f4a99cfd093f201ef files/digest-regexxer-0.8 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCryOil5AvwDPiUowRAmkLAJ9zWQwwsYFczPLEveWzsyhuiqMktQCgseSw
+Qo6trgRBabne0RPrTDdLeeQ=
+=7vNz
+-----END PGP SIGNATURE-----
