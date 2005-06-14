@@ -1,0 +1,36 @@
+# ChangeLog for dev-python/menumaker
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/menumaker/ChangeLog,v 1.1 2005/06/14 01:29:48 smithj Exp $
+
+  14 Jun 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml,
+  +menumaker-0.12.ebuild, +menumaker-0.15.ebuild, +menumaker-0.17.ebuild:
+  Moved from dev-python/menumaker to x11-misc/menumaker.
+
+  24 Apr 2005; Simon Stelling <blubb@gentoo.org> menumaker-0.17.ebuild:
+  stable on amd64
+
+  07 Aug 2004; Malcolm Lashley <malc@gentoo.org> menumaker-0.17.ebuild:
+  ~amd64 closes bug #58432
+
+*menumaker-0.17 (03 Jun 2004)
+
+  03 Jun 2004; David Holm <dholm@gentoo.org> menumaker-0.17.ebuild:
+  Added to ~ppc.
+
+  01 Jun 2004; Grant Goodyear <g2boojum@gentoo.org> :
+  Version bump.  Thanks to teedog@myrealbox.com (Bug # 51692).
+
+*menumaker-0.12 (29 Dec 2003)
+
+  29 Dec 2003; Grant Goodyear <g2boojum@gentoo.org> menumaker-0.12.ebuild,
+  menumaker-0.15.ebuild:
+  Marked all ebuilds as x86.
+
+*menumaker-0.15 (25 Nov 2003)
+
+  25 Nov 2003; Alastair Tse <liquidx@gentoo.org> menumaker-0.15.ebuild:
+  version bump (#34230)
+
+  29 Jul 2003; Grant Goodyear <g2boojum@gentoo.org> :
+  New package.
+
