@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.182 2005/06/11 00:02:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.183 2005/06/14 17:56:15 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1363,6 +1363,11 @@ cdrom_locate_file_on_cd() {
 			fi
 			einfo "Press return to scan for the cd again"
 			einfo "or hit CTRL+C to abort the emerge."
+			echo
+			einfo "If you are having trouble with the detection"
+			einfo "of your CD, it is possible that you do not have"
+			einfo "Joliet support enabled in your kernel.  Please"
+			einfo "check that CONFIG_JOLIET is enabled in your kernel."
 			read
 		fi
 	done
