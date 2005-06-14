@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.12.ebuild,v 1.9 2005/06/12 19:00:36 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.12.ebuild,v 1.10 2005/06/14 01:34:28 leonardop Exp $
 
 inherit gnome2 eutils
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS README HACKING INSTALL NEWS TODO ChangeLog"
+G2CONF="${G2CONF} $(use_enable python)"
 
 src_unpack() {
 
