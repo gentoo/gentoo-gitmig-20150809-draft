@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.14 2005/04/08 17:57:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.15 2005/06/14 14:12:32 ka0ttic Exp $
+
+*hydra-4.7 (14 Jun 2005)
+
+  14 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> +hydra-4.7.ebuild:
+  Version bump for bug 95955; updated libssh dep to 0.11 as this new release
+  requires it.
 
   08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> hydra-4.4.ebuild:
   Stable on ppc.
