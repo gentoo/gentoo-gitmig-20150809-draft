@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfm/xfm-1.4.3.ebuild,v 1.3 2004/06/24 22:40:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfm/xfm-1.4.3.ebuild,v 1.4 2005/06/14 14:44:11 smithj Exp $
 
 DESCRIPTION="A classic X11 file manager"
 HOMEPAGE="http://www.musikwissenschaft.uni-mainz.de/~ag/xfm/"
@@ -15,6 +15,11 @@ RDEPEND="virtual/x11
 	x11-libs/Xaw3d"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-malloc.patch
+}
 
 src_compile() {
 	sed -i \
