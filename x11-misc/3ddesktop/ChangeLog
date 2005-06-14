@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/3ddesktop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.23 2005/02/05 10:55:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.24 2005/06/14 12:29:25 smithj Exp $
+
+*3ddesktop-0.2.8 (14 Jun 2005)
+
+  14 Jun 2005; Jonathan Smith <smithj@gentoo.org> -3ddesktop-0.2.4.ebuild,
+  -3ddesktop-0.2.5-r1.ebuild, -3ddesktop-0.2.6.ebuild,
+  +3ddesktop-0.2.8.ebuild:
+  version bump for #78156 and old ebuild cleanout
 
   05 Feb 2005; Simon Stelling <blubb@gentoo.org> 3ddesktop-0.2.7.ebuild:
   added ~amd64
