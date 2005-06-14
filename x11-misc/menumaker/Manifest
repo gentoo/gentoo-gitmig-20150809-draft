@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cd15707a18836282f30b7a7b4ff1cee4 ChangeLog 1193
-MD5 4d256c8c043cc294a393c4a530715c5d menumaker-0.15.ebuild 862
 MD5 f65a5eaf3a9674fe5843d727e4802e06 menumaker-0.17.ebuild 873
+MD5 f9d05d1f2306287478f6c6b6e2859ac8 ChangeLog 1193
 MD5 bada00384caec9e5b91a569dcb73aaf1 metadata.xml 219
+MD5 4d256c8c043cc294a393c4a530715c5d menumaker-0.15.ebuild 862
 MD5 6a3fc76ad9653565f816fe96a6a8fac1 files/digest-menumaker-0.15 65
 MD5 f0e9faabb2fbec02ec804f065c975fa9 files/digest-menumaker-0.17 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrsvEl5AvwDPiUowRAoalAKCD9KfMz/MkeygEFTU4MM1y8aSpcQCdHdUG
-+ozJnkkK5nfeZQ+p263NqfE=
-=HxNO
+iD8DBQFCrs/II1lqEGTUzyQRAukJAKDVegOAol10oXCOf6ThRHylaSk6NACg0nSr
+s4cmw9Bvp2/MhWzDFL7ZR1c=
+=mNqp
 -----END PGP SIGNATURE-----
