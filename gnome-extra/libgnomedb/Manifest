@@ -1,11 +1,21 @@
-MD5 b67cb97a1559de4b3b337385dae3b619 ChangeLog 5672
-MD5 3ed748096034360d7d5adf6bb8575ab7 libgnomedb-1.0.1.ebuild 1259
-MD5 50b9f2e2206f369480f0233b8efaeced libgnomedb-1.2.1.ebuild 1082
-MD5 c26c40435b6eca92889cb925f261b7e8 libgnomedb-1.0.4.ebuild 1543
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 5cd64f762a82a44123610969ca055ed7 files/digest-libgnomedb-1.0.1 69
-MD5 e91ab2cfd3b938f9c09d5587f8653cf6 files/digest-libgnomedb-1.0.4 69
+MD5 b19012aad82693f9b301d22657cda689 ChangeLog 5772
+MD5 65fd30e4615e074080dc90b6f7160914 libgnomedb-1.2.1.ebuild 1088
+MD5 3ed748096034360d7d5adf6bb8575ab7 libgnomedb-1.0.1.ebuild 1259
+MD5 c26c40435b6eca92889cb925f261b7e8 libgnomedb-1.0.4.ebuild 1543
 MD5 23a9e466fd3a5b35ebc66463564821b0 files/libgnomedb-1.0.3-gcc34.patch 656
-MD5 fa2e6e3b60ec75a5aca6665636c10540 files/libgnomedb-1.0.3-gtkdoc_fix.patch 1472
+MD5 5cd64f762a82a44123610969ca055ed7 files/digest-libgnomedb-1.0.1 69
 MD5 37d21bd238913942c2c2815c0ae80041 files/libgnomedb-1.0.4-selector.patch 803
 MD5 8c7a790741756b8c568406f1ad6af8d0 files/digest-libgnomedb-1.2.1 69
+MD5 e91ab2cfd3b938f9c09d5587f8653cf6 files/digest-libgnomedb-1.0.4 69
+MD5 fa2e6e3b60ec75a5aca6665636c10540 files/libgnomedb-1.0.3-gtkdoc_fix.patch 1472
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCryHBKRy60XGEcJIRAlccAJ9l7NbVqKRrS5/q5Jqw3o4/1QYVNQCfcYXy
+MqAMEeeq4Yg0hEq9CPVHW/o=
+=V4mF
+-----END PGP SIGNATURE-----
