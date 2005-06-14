@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4aa851ef1608710e6360a07375e1d1e1 ChangeLog 894
-MD5 8e54ca22c8b7e8dd51011f31b805b412 jaffm-0.9.7.ebuild 518
-MD5 1b5c1134ab6f7b7311a92d076ff1f513 jaffm-1.0.ebuild 516
+MD5 a91dd619e13af5bdaefb4c175bc3c018 ChangeLog 1062
 MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167
-MD5 342ed8c527db78452b9c10b3e6c23b66 files/digest-jaffm-0.9.7 62
+MD5 5c220953d1d4799ae9bab119bff9fda4 jaffm-1.0.ebuild 512
+MD5 b14f85aa653bbff581b3a84f7847e7d5 jaffm-1.2.1.ebuild 531
 MD5 d7dd08e0d28c3ed259b52711b75f7054 files/digest-jaffm-1.0 60
+MD5 ab6eed4d0bdff0b036654ebd179f6144 files/digest-jaffm-1.2.1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCc7RTz2gxt1z4IGYRAmqBAKC0j669Xd4Slb7m5zRFCNIVKgGA6gCfVmdv
-M2+mpPX7SnaiTLEHsuwDL0Q=
-=NY7v
+iD8DBQFCrvNAl5AvwDPiUowRAq47AKDb+ngi5Xwf9fiGlSsWjXp8ikEoiQCgwZZr
+DmxZXK33KVFm1CuitcaZ3ng=
+=2OGo
 -----END PGP SIGNATURE-----
