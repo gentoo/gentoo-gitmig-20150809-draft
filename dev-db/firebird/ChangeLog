@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.30 2005/03/01 15:02:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.31 2005/06/14 17:15:04 sekretarz Exp $
+
+  14 Jun 2005; <sekretarz@gentoo.org> files/70firebird,
+  firebird-1.5.1.ebuild, firebird-1.5.2.ebuild:
+  Fixed path in ebuild to install /etc/env.d/70firebird correctly, bug #95731
 
   01 Mar 2005; Carsten Lohrke <carlo@gentoo.org> firebird-1.5.1.ebuild,
   firebird-1.5.2.ebuild:

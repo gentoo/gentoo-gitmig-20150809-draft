@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.1.ebuild,v 1.9 2005/03/01 15:02:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.1.ebuild,v 1.10 2005/06/14 17:15:04 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -72,7 +72,7 @@ src_install() {
 		insinto /etc/conf.d ; newins ${FILESDIR}/firebird.conf.d firebird
 		fperms 640 /etc/conf.d/firebird
 	fi
-	insinto /etc/env.d ; newins ${FILESDIR}/70${P} 70firebird
+	insinto /etc/env.d ; newins ${FILESDIR}/70${PN} 70firebird
 
 	# Following is adapted from postinstall.sh
 

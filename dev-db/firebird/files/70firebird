@@ -1,3 +1,2 @@
-INTERBASE=/opt/interbase
-PATH=/opt/interbase/bin
-ROOTPATH=/opt/interbase/bin
+PATH=/opt/firebird/bin
+ROOTPATH=/opt/firebird/bin
