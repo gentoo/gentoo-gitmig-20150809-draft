@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.18.ebuild,v 1.1 2005/06/13 23:35:35 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.18.ebuild,v 1.2 2005/06/14 03:56:29 smithj Exp $
 
 inherit gnuconfig eutils pam
 
@@ -23,15 +23,6 @@ DEPEND="virtual/x11
 	motif? ( x11-libs/openmotif )
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/XLock.ad.patch
-
-	gnuconfig_update
-}
-
 src_compile() {
 
 	local myconf
@@ -40,7 +31,7 @@ src_compile() {
 	use opengl || myconf="${myconf} --without-opengl --without-gltt --without-mesa"
 
 	econf \
-		--sharedstatedir=/usr/share/xlockmore \
+		--sharedstatedir=${D}/usr/share/xlockmore \
 		--enable-vtlock \
 		$(use_enable pam) \
 		$(use_with truetype ttf) \
@@ -56,11 +47,10 @@ src_compile() {
 }
 
 src_install() {
-	make install \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man/man1 \
+	einstall \
 		xapploaddir=${D}/etc/X11/app-defaults \
-		|| die "Install failed"
+		mandir=${D}/usr/share/man/man1 \
+		|| die "einstall failed"
 
 	#Install pam.d file and unset setuid root
 	pamd_mimic_system xlock auth
