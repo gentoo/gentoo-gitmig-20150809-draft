@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.18 2005/05/12 20:01:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.19 2005/06/14 16:27:12 wolf31o2 Exp $
+
+*hwsetup-1.0-r3 (14 Jun 2005)
+
+  14 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/hwsetup-1.0-alsa.patch, +files/hwsetup-1.0-dyn_blacklist.patch,
+  +files/hwsetup-1.0-fastprobe.patch, files/hwsetup-1.0-gentoo.patch,
+  +hwsetup-1.0-r3.ebuild:
+  Added blacklist patch from Islam Amer <pharon@gmail.com> and closing bug
+  #90639.
 
   12 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   -hwsetup-1.0-r1.ebuild, hwsetup-1.0-r2.ebuild:
