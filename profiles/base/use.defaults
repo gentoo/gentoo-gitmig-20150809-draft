@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.20 2005/05/01 13:40:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.21 2005/06/14 09:45:04 lanius Exp $
 
 aalib				media-libs/aalib
 adns				net-libs/adns
@@ -43,6 +43,7 @@ junit				dev-java/junit
 kde					kde-base/kdebase
 ldap				net-nds/openldap
 libwww				net-libs/libwww
+lirc				app-misc/lirc
 mad					media-libs/libmad
 mcal				dev-libs/libmcal
 mikmod				media-libs/libmikmod
