@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-pitfdll
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/ChangeLog,v 1.3 2005/04/28 23:50:23 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/ChangeLog,v 1.4 2005/06/14 10:52:38 zaheerm Exp $
+
+  14 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gst-plugins-pitfdll-0.8.1-gcc4.patch,
+  gst-plugins-pitfdll-0.8.1-r1.ebuild:
+  gcc4 fix (bug #92712)
 
 *gst-plugins-pitfdll-0.8.1-r1 (29 Apr 2005)
 
