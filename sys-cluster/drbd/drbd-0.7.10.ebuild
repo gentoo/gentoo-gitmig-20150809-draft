@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.10.ebuild,v 1.4 2005/03/09 17:41:45 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.10.ebuild,v 1.5 2005/06/14 09:34:21 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.drbd.org"
 IUSE=""
 
 DEPEND="virtual/linux-sources"
-RDEPEND=">=sys-cluster/heartbeat-1.0.4"
+RDEPEND=""
 SLOT="0"
 
 src_unpack() {
