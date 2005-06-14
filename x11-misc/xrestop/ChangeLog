@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrestop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.8 2005/04/05 15:27:58 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.9 2005/06/14 12:18:05 smithj Exp $
+
+  14 Jun 2005; Jonathan Smith <smithj@gentoo.org> xrestop-0.3.ebuild:
+  fixed homepage for #93132 and marked 0.3 stable
 
   05 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> xrestop-0.2.ebuild:
   Marked amd64, closes bug 87938.
