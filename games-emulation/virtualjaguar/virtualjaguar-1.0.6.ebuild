@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.6.ebuild,v 1.6 2004/12/12 06:49:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.6.ebuild,v 1.7 2005/06/15 18:36:43 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -42,7 +42,7 @@ src_compile() {
 
 src_install() {
 	dogamesbin vj "${T}/virtualjaguar" || die "dogamesbin failed"
-	dodoc INSTALL docs/{README,TODO,WHATSNEW}
+	dodoc docs/{README,TODO,WHATSNEW}
 	prepgamesdirs
 }
 

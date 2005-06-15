@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.62.ebuild,v 1.4 2004/11/11 00:57:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.62.ebuild,v 1.5 2005/06/15 18:32:57 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -49,6 +49,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS
+	dodoc AUTHORS ChangeLog NEWS README THANKS
 	prepgamesdirs
 }

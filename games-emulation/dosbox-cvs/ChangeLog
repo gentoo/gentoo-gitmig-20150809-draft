@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox-cvs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.9 2004/07/26 05:56:46 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.10 2005/06/15 18:32:11 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  dosbox-cvs-20030809.ebuild:
+  Removed INSTALL file.
 
   25 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   dosbox-cvs-20030809.ebuild:

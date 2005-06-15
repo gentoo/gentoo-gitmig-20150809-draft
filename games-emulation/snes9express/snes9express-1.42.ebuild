@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/snes9express-1.42.ebuild,v 1.5 2004/11/07 20:39:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/snes9express-1.42.ebuild,v 1.6 2005/06/15 18:35:21 wolf31o2 Exp $
 
 inherit eutils
 
@@ -28,6 +28,6 @@ src_compile() {
 
 src_install () {
 	emake DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README || \
+	dodoc AUTHORS ChangeLog NEWS README || \
 		die "Installation of docs failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-1.4.ebuild,v 1.6 2005/05/16 17:31:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-1.4.ebuild,v 1.7 2005/06/15 18:33:32 wolf31o2 Exp $
 
 inherit games eutils toolchain-funcs
 
@@ -36,6 +36,6 @@ src_install() {
 	dogamesbin fbzx || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}/${PN}/roms"
 	doins roms/* || die "doins failed"
-	dodoc CAPABILITIES FAQ INSTALL PORTS README* TODO VERSIONS
+	dodoc CAPABILITIES FAQ PORTS README* TODO VERSIONS
 	prepgamesdirs
 }

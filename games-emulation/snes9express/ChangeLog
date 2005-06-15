@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/snes9express
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/ChangeLog,v 1.4 2004/11/07 20:39:10 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/ChangeLog,v 1.5 2005/06/15 18:35:21 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  snes9express-1.42.ebuild:
+  Removed INSTALL file.
 
   07 Nov 2004; Simon Stelling <blubb@gentoo.org> snes9express-1.42.ebuild:
   fixed the compilation error and added ~amd64

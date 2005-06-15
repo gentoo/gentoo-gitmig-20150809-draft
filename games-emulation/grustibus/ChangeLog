@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/grustibus
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/grustibus/ChangeLog,v 1.7 2004/12/29 00:00:41 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/grustibus/ChangeLog,v 1.8 2005/06/15 18:34:10 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  grustibus-0.43-r4.ebuild:
+  Removed INSTALL file.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

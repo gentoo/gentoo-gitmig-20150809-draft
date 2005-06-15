@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.2 2004/11/22 20:37:06 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.3 2005/06/15 18:37:22 wolf31o2 Exp $
 
 inherit eutils games flag-o-matic
 
@@ -48,6 +48,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL NEWS README README-win.txt
+	dodoc AUTHORS ChangeLog NEWS README README-win.txt
 	prepgamesdirs
 }

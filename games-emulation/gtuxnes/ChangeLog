@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gtuxnes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gtuxnes/ChangeLog,v 1.4 2005/02/27 04:32:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gtuxnes/ChangeLog,v 1.5 2005/06/15 18:34:47 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> gtuxnes-0.75.ebuild:
+  Removed INSTALL file.
 
   26 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> +files/0.75-rc.patch,
   gtuxnes-0.75.ebuild:

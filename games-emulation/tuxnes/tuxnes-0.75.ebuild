@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.5 2005/05/06 02:07:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.6 2005/06/15 18:36:00 wolf31o2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -40,5 +40,5 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	insinto /usr/share/pixmaps
 	doins tuxnes.xpm tuxnes2.xpm
-	dodoc AUTHORS BUGS ChangeLog CHANGES INSTALL NEWS README THANKS
+	dodoc AUTHORS BUGS ChangeLog CHANGES NEWS README THANKS
 }

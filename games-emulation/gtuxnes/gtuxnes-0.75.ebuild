@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gtuxnes/gtuxnes-0.75.ebuild,v 1.6 2005/02/27 04:32:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gtuxnes/gtuxnes-0.75.ebuild,v 1.7 2005/06/15 18:34:47 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -29,6 +29,6 @@ src_unpack() {
 
 src_install() {
 	dogamesbin gtuxnes || die "dogamesbin failed"
-	dodoc AUTHORS CHANGES INSTALL README TODO
+	dodoc AUTHORS CHANGES README TODO
 	prepgamesdirs
 }
