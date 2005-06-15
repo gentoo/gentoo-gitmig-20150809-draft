@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1228 2005/06/13 06:50:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1229 2005/06/15 08:19:46 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -200,9 +200,7 @@ dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Po
 dev-java/swt:cairo - Enable Cairo rendering backend
 dev-java/swt:firefox - Build the Mozilla Embeded Component against firefox rather than mozilla
 dev-java/velocity:j2ee - Add j2ee support
-dev-lang/R:blas - Use the blas library. (virtual/blas)
 dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
-dev-lang/R:lapack - Use the lapack library. (virtual/lapack)
 dev-lang/mono:icu - Enable internationalization support via ICU lib.
 dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
