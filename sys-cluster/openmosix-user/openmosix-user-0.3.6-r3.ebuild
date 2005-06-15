@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.6-r3.ebuild,v 1.1 2005/04/17 11:59:23 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.6-r3.ebuild,v 1.2 2005/06/15 21:05:51 robbat2 Exp $
 
 inherit toolchain-funcs
 
@@ -43,6 +43,9 @@ INSTALLDIR=/usr
 CFLAGS=-I/m/include -I./ -I/usr/include -I\${OPENMOSIX}/include -I${S}/moslib ${CFLAGS}
 INSTALL=/usr/bin/install
 EOF
+
+	# fix compile on gcc-3.4, because of goto labels
+	sed -e "s|breakargv:|breakargv: ;|" -i ${S}/mps/mtop.c || die "failed to fix label stuff"
 }
 
 src_compile() {
