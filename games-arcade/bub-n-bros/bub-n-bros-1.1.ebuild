@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.1.ebuild,v 1.8 2005/05/06 10:02:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.1.ebuild,v 1.9 2005/06/15 17:42:41 wolf31o2 Exp $
 
 inherit games
 
@@ -45,7 +45,6 @@ src_install() {
 	dogamesbin ${FILESDIR}/bubnbros-server
 	dosed "s:GENTOO_DIR:${dir}/bubbob/:" ${GAMES_BINDIR}/bubnbros-server
 
-	dodoc INSTALL.txt
 	dohtml *.html
 
 	find ${D}/${dir} -name CVS -type d -exec rm -rf '{}' \; 2> /dev/null
