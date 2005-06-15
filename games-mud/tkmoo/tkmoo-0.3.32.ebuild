@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.10 2005/05/01 17:03:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.11 2005/06/15 18:57:58 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -41,7 +41,7 @@ src_install() {
 		TKMOO_BIN_DIR="${D}/${GAMES_BINDIR}" \
 		install \
 		|| die "make install failed"
-	dodoc README INSTALL.unix dot.tkmoolightrc bugsmail.txt
+	dodoc README dot.tkmoolightrc bugsmail.txt
 	dosym tkMOO-lite "${GAMES_BINDIR}/tkmoo"
 	prepgamesdirs
 }
