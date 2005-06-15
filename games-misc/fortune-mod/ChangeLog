@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.15 2005/02/03 23:18:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.16 2005/06/15 18:42:23 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  fortune-mod-1.99.1-r1.ebuild:
+  Removed INSTALL file.
 
   03 Feb 2005; Mike Frysinger <vapier@gentoo.org>
   -files/fortune-mod-1.99.1-gentoo.diff,

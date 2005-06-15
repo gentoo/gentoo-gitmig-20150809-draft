@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.10 2005/01/10 05:19:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.11 2005/06/15 18:41:42 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  bsd-games-2.13-r1.ebuild:
+  Removed INSTALL file.
 
 *bsd-games-2.13-r1 (10 Jan 2005)
 

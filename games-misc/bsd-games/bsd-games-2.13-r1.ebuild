@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.13-r1.ebuild,v 1.2 2005/06/05 01:04:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.13-r1.ebuild,v 1.3 2005/06/15 18:41:42 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -58,7 +58,7 @@ src_install() {
 	dodir ${GAMES_BINDIR} ${GAMES_STATEDIR} /usr/share/man/man{1,6}
 	make DESTDIR=${D} install-strip || die "make install-strip failed"
 
-	dodoc AUTHORS BUGS ChangeLog ChangeLog.0 INSTALL \
+	dodoc AUTHORS BUGS ChangeLog ChangeLog.0 \
 		README PACKAGING SECURITY THANKS TODO YEAR2000
 
 	# special subdirs
