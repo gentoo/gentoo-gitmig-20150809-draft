@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/cl-ucw-0.3.9.ebuild,v 1.4 2005/06/09 01:07:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/cl-ucw-0.3.9.ebuild,v 1.5 2005/06/15 20:31:53 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -19,6 +19,7 @@ DEPEND=">=dev-lisp/cl-iterate-1.4
 	dev-lisp/cl-icu
 	mod_lisp? ( || ( www-apache/mod_lisp www-apache/mod_lisp2 ) )
 	araneida? ( dev-lisp/cl-araneida )
+	!araneida? ( dev-lisp/cl-puri )
 	aserve? ( dev-lisp/cl-aserve )
 	|| ( app-emacs/slime app-emacs/slime-cvs )
 	doc? ( virtual/tetex )"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-ucw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/ChangeLog,v 1.3 2005/05/24 18:53:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/ChangeLog,v 1.4 2005/06/15 20:31:53 mkennedy Exp $
+
+  15 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-ucw-0.3.9.ebuild:
+  If araneida is not in USE, then dev-lisp/cl-puri should be a dependency;
+  Resolves Bug #96141
 
   24 May 2005; <mkennedy@gentoo.org> cl-ucw-0.3.9.ebuild:
   Keywording ~sparc
