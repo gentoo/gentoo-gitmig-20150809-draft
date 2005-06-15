@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.9 2005/06/12 23:24:46 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.10 2005/06/15 13:25:49 dholm Exp $
+
+  15 Jun 2005; David Holm <dholm@gentoo.org> rt-3.4.2.ebuild:
+  Added to ~ppc.
 
   12 Jun 2005; Renat Lumpau <rl03@gentoo.org> +files/config.layout-gentoo:
   Add missing config.layout-gentoo
