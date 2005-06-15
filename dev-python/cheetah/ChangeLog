@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.14 2005/05/17 21:09:00 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.15 2005/06/15 01:03:03 pythonhead Exp $
+
+*cheetah-0.9.17 (15 Jun 2005)
+
+  15 Jun 2005; Rob Cakebread <pythonhead@gentoo.org>
+  -cheetah-0.9.17_rc1.ebuild, +cheetah-0.9.17.ebuild:
+  Version bump. This is simply a version rename - no code changed according to
+  upstream. Thanks Tavis.
 
 *cheetah-0.9.17_rc1 (17 May 2005)
 
