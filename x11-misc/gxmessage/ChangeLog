@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/gxmessage
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.5 2004/10/01 12:27:37 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.6 2005/06/15 15:21:47 smithj Exp $
+
+*gxmessage-2.4.4 (15 Jun 2005)
+
+  15 Jun 2005; Jonathan Smith <smithj@gentoo.org> +gxmessage-2.4.4.ebuild:
+  version bump for #89020
 
   01 Oct 2004; <pyrania@gentoo.org> gxmessage-2.0.11.ebuild:
   Marked stable on x86.
