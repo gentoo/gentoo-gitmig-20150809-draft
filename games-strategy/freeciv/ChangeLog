@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.24 2005/06/08 14:31:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.25 2005/06/15 19:11:15 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> freeciv-1.14.1.ebuild,
+  freeciv-1.14.2.ebuild, freeciv-2.0.1.ebuild:
+  Removed INSTALL file.
 
   08 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> freeciv-2.0.1.ebuild:
   Stable on sparc

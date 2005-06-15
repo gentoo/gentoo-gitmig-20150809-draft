@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.1.ebuild,v 1.6 2005/06/08 14:31:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.1.ebuild,v 1.7 2005/06/15 19:11:15 wolf31o2 Exp $
 
 inherit games
 
@@ -162,7 +162,7 @@ src_install() {
 		rm -f "${D}/${GAMES_BINDIR}/civmanual"
 	fi
 
-	dodoc ChangeLog INSTALL NEWS \
+	dodoc ChangeLog NEWS \
 		doc/{BUGS,CodingStyle,HACKING,HOWTOPLAY,PEOPLE,README*,TODO}
 
 	prepgamesdirs

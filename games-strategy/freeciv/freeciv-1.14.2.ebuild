@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.2.ebuild,v 1.3 2005/05/16 21:59:21 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.2.ebuild,v 1.4 2005/06/15 19:11:15 wolf31o2 Exp $
 
 inherit games
 
@@ -72,7 +72,7 @@ src_install() {
 	insinto /usr/X11R6/lib/X11/app-defaults
 	doins data/Freeciv || die "doins failed"
 
-	dodoc ChangeLog INSTALL NEWS \
+	dodoc ChangeLog NEWS \
 		doc/{BUGS,CodingStyle,HACKING,HOWTOPLAY,PEOPLE,README*,TODO} \
 			|| die "dodoc failed"
 	# install sounds

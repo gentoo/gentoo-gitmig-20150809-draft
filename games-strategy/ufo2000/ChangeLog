@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/ufo2000
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.10 2005/06/05 11:30:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.11 2005/06/15 19:13:18 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ufo2000-0.6.627.ebuild:
+  Removed INSTALL file.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   ufo2000-0.6.627.ebuild:

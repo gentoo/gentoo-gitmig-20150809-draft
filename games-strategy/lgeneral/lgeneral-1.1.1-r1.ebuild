@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.1.1-r1.ebuild,v 1.6 2005/01/26 02:33:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.1.1-r1.ebuild,v 1.7 2005/06/15 19:12:45 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -36,7 +36,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL README TODO
+	dodoc AUTHORS ChangeLog README TODO
 	cd ${WORKDIR}/${DATA}
 	make DESTDIR=${D} install || die "make install failed (data)"
 	prepgamesdirs

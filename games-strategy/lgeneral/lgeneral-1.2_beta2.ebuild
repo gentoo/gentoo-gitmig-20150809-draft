@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta2.ebuild,v 1.4 2004/12/29 13:40:57 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta2.ebuild,v 1.5 2005/06/15 19:12:45 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -49,6 +49,6 @@ src_install() {
 		-d "${D}/${GAMES_DATADIR}/lgeneral" \
 		|| die "Failed to generate scenario data."
 
-	dodoc AUTHORS ChangeLog INSTALL README.lgeneral README.lgc-pg TODO
+	dodoc AUTHORS ChangeLog README.lgeneral README.lgc-pg TODO
 	prepgamesdirs
 }
