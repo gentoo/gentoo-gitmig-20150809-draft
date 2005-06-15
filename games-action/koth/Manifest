@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9cdd71197af50cc9ec86f9023d5c40dd koth-0.7.7.ebuild 742
-MD5 a0c5af1ec7d1a914285118fa40b0fbe4 koth-0.8.0.ebuild 848
-MD5 4ec8d9b13e1a2e35f22039241351683b ChangeLog 1732
+MD5 d00b2fc967a184a73ca725e812d78e13 ChangeLog 1854
+MD5 07c05970ee0041d51a573b1832d21e22 koth-0.7.7.ebuild 734
+MD5 148056f798956f7512a3bfb3c6680d46 koth-0.8.0.ebuild 843
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 74ab215bb3829c3e46c82a7607b6fa55 files/digest-koth-0.7.7 63
 MD5 639b4734a76c78db41e4ef7db6587fd1 files/digest-koth-0.8.0 63
 MD5 8ad7c4c5d637f02056ba07416f3696a0 files/koth-0.8.0-gcc-3.4.patch 612
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCnBmxntT9W3vfTuoRAp5xAJ0UeJIdLIkEgtrVVvHfGsPjhXT6xwCfVtuU
-sl32Ejcj1m2DdfeF+MgTaGY=
-=Ot29
------END PGP SIGNATURE-----
