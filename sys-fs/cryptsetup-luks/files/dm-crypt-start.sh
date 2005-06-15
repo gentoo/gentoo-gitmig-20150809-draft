@@ -1,7 +1,7 @@
 # /lib/rcscripts/addons/dm-crypt-start.sh
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/files/dm-crypt-start.sh,v 1.1 2005/06/01 23:10:17 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/files/dm-crypt-start.sh,v 1.2 2005/06/15 09:53:25 strerror Exp $
 
 # Setup mappings for an individual mount/swap
 #
@@ -34,11 +34,17 @@ dm-crypt-execute-checkfs() {
 
 	splash svc_input_begin checkfs
 	ebegin "dm-crypt map ${target}"
-	if [[ -z ${key} ]] ; then
+	if [[ -z ${key} ]] && [[ -z ${type} ]] ; then
 		/bin/cryptsetup ${options} create ${target} ${source} >/dev/console </dev/console
 		ret=$?
 		eend ${ret} "failure running cryptsetup"
-	else
+	elif [[ -n ${type} ]] ; then
+		einfo "/bin/cryptsetup ${options} luksOpen ${source} ${target}" 
+		/bin/cryptsetup ${options} luksOpen ${source} ${target} >/dev/console </dev/console
+		#/bin/cryptsetup ${options} luksOpen ${source} ${target} 
+		ret=$?
+		eend ${ret} "failure running cryptsetup-luks"
+	elif [[ -n ${key} ]] ; then
 		if type -p gpg >/dev/null ; then
 			ret=1
 			while [[ ${ret} -gt 0 ]] ; do
@@ -52,7 +58,7 @@ dm-crypt-execute-checkfs() {
 			done
 			eend ${ret}
 		else
-			einfo "You have to install app-crypt/gpg first"
+			einfo "You have to install app-crypt/gnupg first"
 		fi
 	fi
 	splash svc_input_end checkfs
@@ -101,7 +107,7 @@ dm-crypt-execute-localmount() {
 }
 
 local cryptfs_status=0 
-local gpg_options key loop_file mount mountline options pre_mount post_mount source swap
+local gpg_options key loop_file mount mountline options pre_mount post_mount source swap type
 
 if [[ -f /etc/conf.d/cryptfs ]] && [[ -x /bin/cryptsetup ]] ; then
 	ebegin "Setting up dm-crypt mappings"
@@ -117,10 +123,10 @@ if [[ -f /etc/conf.d/cryptfs ]] && [[ -x /bin/cryptsetup ]] ; then
 				dm-crypt-execute-${myservice}
 
 				# Prepare for the next mount/swap by resetting variables
-				unset gpg_options key loop_file mount options pre_mount post_mount source swap
+				unset gpg_options key loop_file mount options pre_mount post_mount source swap type
 				;;
 
-			gpg_options=*|key=*|loop_file=*|options=*|pre_mount=*|post_mount=*|source=*)
+			gpg_options=*|key=*|loop_file=*|options=*|pre_mount=*|post_mount=*|source=*|type=*)
 				if [[ -z ${mount} && -z ${swap} ]] ; then
 					ewarn "Ignoring setting outside mount/swap section: ${mountline}"
 					continue

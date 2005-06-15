@@ -1,5 +1,5 @@
 # /etc/conf.d/cryptfs
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/files/cryptfs.confd,v 1.1 2005/06/01 23:39:59 strerror Exp $
+# $Header: 
 
 # Note regarding the syntax of this file.  This file is *almost* bash,
 # but each line is evaluated separately.  Separate swaps/mounts can be
@@ -16,14 +16,21 @@
 # If no options are given, they will default to: -c aes -h sha1 -d /dev/urandom
 # If no makefs is given then mkswap will be assumed
 #swap=crypt-swap
-#source='/dev/main/swap'
+#source='/dev/mapper/swap'
 
 # Mounts
 # If no options are given, they will default to: -c aes -h sha1
 # No mkfs is run unless you specify a makefs option
+# NOTE: if you are using cryptsetup-luks and want to use its features
+# then you must add a type=luks line otherwise it will be treated like
+# the original cryptsetup
+
+# dm-crypt example
+
 #mount=crypt-tmp
-#source='/dev/main/tmp'
-#options='-d /dev/urandom'
+#source='/dev/mapper/tmp'
+#type=luks
+#options='-d /root/keyfile'
 #pre_mount='/sbin/mkreiserfs -f -f ${dev}'
 #post_mount='chown root:root ${mount_point}; chmod 1777 ${mount_point}'
 
