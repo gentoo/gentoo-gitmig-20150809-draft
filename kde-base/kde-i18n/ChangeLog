@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.67 2005/06/11 09:54:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.68 2005/06/15 18:00:22 carlo Exp $
+
+  15 Jun 2005; Carsten Lohrke <carlo@gentoo.org> kde-i18n-3.4.1.ebuild:
+  pt_BR: don't build kommander docs, #96143
 
   11 Jun 2005; Markus Rothe <corsair@gentoo.org> kde-i18n-3.4.0.ebuild,
   kde-i18n-3.4.1.ebuild:

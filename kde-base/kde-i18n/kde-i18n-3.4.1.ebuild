@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.1.ebuild,v 1.4 2005/06/11 09:54:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.1.ebuild,v 1.5 2005/06/15 18:00:22 carlo Exp $
 
 inherit kde
 
@@ -38,13 +38,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	# work around bug 96143
+	if [ -e ${WORKDIR}/kde-i18n-pt_BR-3.4.1 ] ; then
+		sed -i -e "s:kommander::" ${WORKDIR}/kde-i18n-pt_BR-3.4.1/docs/kdewebdev/Makefile.in
+	fi
 }
 
 src_compile() {
 	local _S=${S}
 	for dir in `ls ${WORKDIR}`; do
 		S=${WORKDIR}/${dir}
-
 		kde_src_compile myconf
 		myconf="${myconf} --prefix=${KDEDIR}"
 		kde_src_compile configure
