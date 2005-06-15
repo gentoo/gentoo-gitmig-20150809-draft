@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 62eb1b73c8210ca88f1fc17d7005cf95 ChangeLog 333
+MD5 d58e8e5ac2937ea7048bf9da6b4a0e8e ChangeLog 415
+MD5 d29bbd0c6708759e9d124fe70ce2d166 iconbox-0.2.ebuild 814
 MD5 d823b91768c432c519e541378b43f9c9 metadata.xml 632
-MD5 914154e03f3916d9ded43de7c8cc1dee iconbox-0.2.ebuild 810
 MD5 9516e3e4a0d7ac21916c24b0d849484e files/digest-iconbox-0.2 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCr3BYl5AvwDPiUowRAuTjAKCQlqbz1arwytTDL4wYZXvl9xqa1QCg3EHv
-n5DvB28Ah0YkKzOW3oAeb7A=
-=7Uy3
------END PGP SIGNATURE-----
