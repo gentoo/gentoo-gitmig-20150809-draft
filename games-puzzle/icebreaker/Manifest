@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d6a330147add073a6023be3e18f136 icebreaker-1.9.5.ebuild 913
-MD5 b447e3646c4a49cb89147a692fda02c7 ChangeLog 1429
+MD5 f1cb25baca53a6ce8b1e8ed5065f3f20 ChangeLog 1534
+MD5 1f405a8f89e78d9bb6f81bcc48fbeb7e icebreaker-1.9.5.ebuild 904
 MD5 3f11aaf297b2fe67404a96cda13e9bfe metadata.xml 251
 MD5 2e4eb9a1d330d9d3c16bd0b3945963b9 files/digest-icebreaker-1.9.5 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCoz+h06ebR+OMO78RArepAJwJfyhhAzDr69+eMFglccwR9AeGkACfdxkY
-+/UMlMr0jk4SoOGaR6kB/RU=
-=m5+6
------END PGP SIGNATURE-----
