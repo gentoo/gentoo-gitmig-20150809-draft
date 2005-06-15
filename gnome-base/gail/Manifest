@@ -1,10 +1,20 @@
-MD5 dfbab8a40b598a24a3a071b9f19362f9 ChangeLog 8279
-MD5 c550a42f38592a76c5e66335ee00b6b5 gail-1.6.6.ebuild 625
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9ea50be68962ad331ca926cbf5f714ef gail-1.8.2-r1.ebuild 706
-MD5 c9f26fd93232e8d54140837dedfffbfc gail-1.8.3.ebuild 711
 MD5 fa390c5d79274a7d4e1e4bc3e945058f metadata.xml 714
-MD5 4ddc979ebdf3fb73f840f3e3fb385eb6 gail-1.8.4.ebuild 717
-MD5 679447c005b945335f3c631313a04f1b files/digest-gail-1.6.6 63
+MD5 3a0d87001df892ad7cc120a47c52539c gail-1.8.4.ebuild 715
+MD5 bd8163838ba47796003bdc99fc856114 ChangeLog 8370
+MD5 c9f26fd93232e8d54140837dedfffbfc gail-1.8.3.ebuild 711
+MD5 c550a42f38592a76c5e66335ee00b6b5 gail-1.6.6.ebuild 625
 MD5 fb6c14265875e38923519f11ec4f0341 files/digest-gail-1.8.2-r1 63
 MD5 163336ce7298b831b827993e985c33aa files/digest-gail-1.8.3 63
 MD5 6879c3a5683682c41708b230927f69b2 files/digest-gail-1.8.4 63
+MD5 679447c005b945335f3c631313a04f1b files/digest-gail-1.6.6 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCsEJsKRy60XGEcJIRAj4lAJ4z7iuwdjPGxzmf4Ur1Ji97w5iaHgCgjW2j
+Txj2oI3i2B8RElHlaV7UoVs=
+=Rzam
+-----END PGP SIGNATURE-----
