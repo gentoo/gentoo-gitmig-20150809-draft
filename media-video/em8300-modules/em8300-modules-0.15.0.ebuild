@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.0.ebuild,v 1.1 2005/06/03 11:34:33 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.0.ebuild,v 1.2 2005/06/15 13:38:16 dholm Exp $
 
 inherit eutils linux-info
 
@@ -13,7 +13,7 @@ DEPEND="virtual/linux-sources"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 src_unpack () {
