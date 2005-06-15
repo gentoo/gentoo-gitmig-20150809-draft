@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pysol
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.5 2004/11/20 03:51:27 mr_bones_ Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.6 2005/06/15 18:31:16 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> pysol-4.82.ebuild:
+  Removed INSTALL file.
 
   19 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> pysol-4.82.ebuild:
   old tarball went away upstream.

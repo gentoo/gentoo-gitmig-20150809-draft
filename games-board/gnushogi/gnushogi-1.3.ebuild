@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.9 2005/04/24 03:12:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.10 2005/06/15 18:29:48 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -49,6 +49,6 @@ src_install() {
 		dogamesbin xshogi/xshogi      || die "dogamesbin failed (X)"
 	fi
 	dogameslib gnushogi/gnushogi.bbk  || die "dogameslib failed"
-	dodoc INSTALL README NEWS CONTRIB
+	dodoc README NEWS CONTRIB
 	prepgamesdirs
 }

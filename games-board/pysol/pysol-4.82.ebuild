@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82.ebuild,v 1.9 2004/11/20 03:51:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82.ebuild,v 1.10 2005/06/15 18:31:16 wolf31o2 Exp $
 
 DESCRIPTION="An exciting collection of more than 200 solitaire card games"
 HOMEPAGE="http://www.oberhumer.com/opensource/pysol/"
@@ -38,8 +38,8 @@ src_install () {
 
 	dobin pysol || die "dobin failed"
 	make prefix="${D}/usr" install-data
-	insinto /usr/X11R6/include/X11/pixmaps
+	insinto /usr/include/X11/pixmaps
 	doins data/pysol.xpm
 	doman pysol.6
-	dodoc INSTALL NEWS README
+	dodoc NEWS README
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.6.ebuild,v 1.2 2005/04/03 08:42:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.6.ebuild,v 1.3 2005/06/15 18:29:19 wolf31o2 Exp $
 
 inherit games
 
@@ -22,6 +22,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	prepgamesdirs
 }
