@@ -1,33 +1,39 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.11 2005/06/08 07:06:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.12 2005/06/15 21:37:03 flameeyes Exp $
+
+*libtorrent-0.6.5 (15 Jun 2005)
+
+  15 Jun 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  +libtorrent-0.6.5.ebuild:
+  New upstream version.
 
 *libtorrent-0.6.4 (08 Jun 2005)
 
-  08 Jun 2005; <flame@gentoo.org> -libtorrent-0.3.5.ebuild,
-  -libtorrent-0.3.7.ebuild, -libtorrent-0.4.1.ebuild,
-  +libtorrent-0.6.4.ebuild:
+  08 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -libtorrent-0.3.5.ebuild, -libtorrent-0.3.7.ebuild,
+  -libtorrent-0.4.1.ebuild, +libtorrent-0.6.4.ebuild:
   Added latest upstream version. Removed pre-split versions.
 
 *libtorrent-0.6.3 (30 May 2005)
 
-  30 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  30 May 2005; Diego PettenÃ² <flameeyes@gentoo.org>
   +files/libtorrent-0.6.3-fbsd.patch, +libtorrent-0.6.3.ebuild:
   Updated to latest upstream version. Removed -warns patch as it's applied
   upstream, updated -fbsd patch to apply on this version. Close #94531.
 
-  29 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  29 May 2005; Diego PettenÃ² <flameeyes@gentoo.org>
   +files/libtorrent-0.6.2-warns.patch, libtorrent-0.6.2.ebuild:
   Added patch to fix warnings (errors) about integer/pointer mismatch.
 
-  25 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  25 May 2005; Diego PettenÃ² <flameeyes@gentoo.org>
   +files/libtorrent-0.6.2-fbsd.patch, libtorrent-0.6.2.ebuild:
   Added Gentoo/FreeBSD compatibility patch, now libtorrent compile and works
   there.
 
 *libtorrent-0.6.2 (05 May 2005)
 
-  05 May 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  05 May 2005; Diego PettenÃ² <flameeyes@gentoo.org> metadata.xml,
   +libtorrent-0.6.2.ebuild:
   New upstream version, close #86259. Now the rtorrent console client is in
   net-p2p/rtorrent.
@@ -61,6 +67,6 @@
   18 Aug 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
   +files/0.3.2-rtorrent.patch, +files/libtorrent-0.3.1-client.patch,
   +libtorrent-0.3.2.ebuild:
-  Initial import, thanks to Jos� Romildo Malaquias <romildo@uber.com.br> for the
+  Initial import, thanks to José Romildo Malaquias <romildo@uber.com.br> for the
   initial ebuild and Rakshasa <jaris@ifi.uio.no> for the updates, #60674.
 
