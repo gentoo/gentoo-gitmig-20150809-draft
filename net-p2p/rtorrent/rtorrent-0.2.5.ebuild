@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.2.4.ebuild,v 1.2 2005/06/15 21:38:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.2.5.ebuild,v 1.1 2005/06/15 21:38:15 flameeyes Exp $
 
 inherit eutils
 
@@ -13,17 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
-DEPEND="~net-libs/libtorrent-0.6.4
+DEPEND="~net-libs/libtorrent-0.6.5
 	>=dev-libs/libsigc++-2.0
 	>=net-misc/curl-7.12
 	sys-libs/ncurses"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/${PN}-0.2.3-fix.patch
-}
 
 src_compile() {
 	econf \

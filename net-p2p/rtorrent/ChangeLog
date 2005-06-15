@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.5 2005/06/08 07:06:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.6 2005/06/15 21:38:15 flameeyes Exp $
+
+*rtorrent-0.2.5 (15 Jun 2005)
+
+  15 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> rtorrent-0.2.2.ebuild,
+  rtorrent-0.2.3.ebuild, rtorrent-0.2.4.ebuild, +rtorrent-0.2.5.ebuild:
+  New upstream version. Also make all rtorrent version depend on the
+  libtorrent version they are released with.
 
 *rtorrent-0.2.4 (08 Jun 2005)
 
