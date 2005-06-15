@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/asterisk-app_icd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_icd/ChangeLog,v 1.1 2005/06/15 23:42:46 stkn Exp $
+
+*asterisk-app_icd-1.0.0 (16 Jun 2005)
+
+  16 Jun 2005; Stefan Knoblich <stkn@gentoo.org> +metadata.xml,
+  +files/asterisk-app_icd-1.0.0-bristuff.diff,
+  +files/asterisk-app_icd-1.0.0-gentoo.diff, +asterisk-app_icd-1.0.0.ebuild:
+  Initial import, -* masked because some issues need to be resolved.
+
