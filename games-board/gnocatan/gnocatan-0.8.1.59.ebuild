@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/gnocatan-0.8.1.59.ebuild,v 1.2 2005/05/05 23:48:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/gnocatan-0.8.1.59.ebuild,v 1.3 2005/06/15 18:22:18 wolf31o2 Exp $
 
 inherit eutils gnome2 debug
 
@@ -37,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	DOCS="AUTHORS ChangeLog README COPYING INSTALL TODO NEWS"
+	DOCS="AUTHORS ChangeLog README TODO NEWS"
 	if use X ; then
 		gnome2_src_install
 	else
