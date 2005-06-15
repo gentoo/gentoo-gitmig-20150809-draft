@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-systray
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systray/ChangeLog,v 1.49 2005/05/18 03:07:00 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systray/ChangeLog,v 1.50 2005/06/15 07:59:14 corsair Exp $
+
+  15 Jun 2005; Markus Rothe <corsair@gentoo.org> xfce4-systray-4.2.0.ebuild:
+  Stable on ppc64
 
 *xfce4-systray-4.2.2 (18 May 2005)
 
