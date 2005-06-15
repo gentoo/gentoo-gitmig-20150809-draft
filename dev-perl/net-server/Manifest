@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7f518e0e22eaa659b1446300b006c66d net-server-0.87.ebuild 593
-MD5 0ad03d293d2f2833ed54d20e715f434c net-server-0.87-r1.ebuild 592
-MD5 bf6c5bffc6cba2ccb6456d7d4a2697cd ChangeLog 1664
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 8ebfa90fd7ffc63ff01a1ff25bd56f63 net-server-0.85.ebuild 605
-MD5 8fc233c7ca183bb3aedc37e423b3fc8b files/digest-net-server-0.87-r1 66
-MD5 792d1ec217d44781e9d154e69f665156 files/digest-net-server-0.85 66
+MD5 7f518e0e22eaa659b1446300b006c66d net-server-0.87.ebuild 593
+MD5 22fba163760f94f5772c470888ccbb70 ChangeLog 1769
+MD5 e0fe5c47abb1a571b0418d5e55c51bea net-server-0.87-r1.ebuild 594
 MD5 8fc233c7ca183bb3aedc37e423b3fc8b files/digest-net-server-0.87 66
+MD5 792d1ec217d44781e9d154e69f665156 files/digest-net-server-0.85 66
+MD5 8fc233c7ca183bb3aedc37e423b3fc8b files/digest-net-server-0.87-r1 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCrf3AQlM6RnzZP+IRAsbyAJ95yR5TbtzkP4z3NKfFoTquOM0o+gCfXdJA
-umjsFRA3NsLHHcG1/Czitnc=
-=+8S8
+iD8DBQFCsGcZKRy60XGEcJIRAnl3AKCnZmhmoqyDSEyFMMgaNnqSpJGIogCfYili
+tXRsoO3yYxkeO7/gB0JuV14=
+=Vwri
 -----END PGP SIGNATURE-----
