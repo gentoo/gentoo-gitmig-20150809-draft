@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/sfs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.9 2004/07/01 22:15:33 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.10 2005/06/15 20:02:39 griffon26 Exp $
+
+  15 Jun 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +files/sfs-0.7.2-gcc3.patch.bz2, sfs-0.7.2.ebuild:
+  Fixed compilation errors reported in bug #56958 by Lonnie Olson 
+  <gentoo@myfungus.net>.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> sfs-0.7.2.ebuild:
   virtual/glibc -> virtual/libc

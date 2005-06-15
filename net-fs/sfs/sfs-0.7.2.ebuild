@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.12 2004/09/24 00:04:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.13 2005/06/15 20:02:39 griffon26 Exp $
 
 inherit eutils
 
@@ -36,6 +36,8 @@ src_unpack() {
 	# the next version. See bug #22791
 	cd ${S}
 	sed -i~ 's/-Werror//g' configure
+
+	epatch ${FILESDIR}/${P}-gcc3.patch.bz2
 }
 
 src_compile() {
