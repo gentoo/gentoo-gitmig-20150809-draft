@@ -1,19 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fe3522ef39be2507c626bdc8eb9ace12 gnome2-wnck-0.04-r1.ebuild 868
-MD5 43d2873b43698a9e088b1956b3b9465c gnome2-wnck-0.04.ebuild 758
-MD5 f6f6209bec197b6c79c3957605d0a362 gnome2-wnck-0.10.ebuild 874
-MD5 0cff661d2a3fc97cb2e88a038c4e1edb ChangeLog 1744
+MD5 030e5a7c4244443d312419008d29f65e ChangeLog 1965
+MD5 df64e68e2ffb22231dfdce900792b22c gnome2-wnck-0.04-r1.ebuild 873
+MD5 fd2eef773ba7fac01d48d35f97c6c523 gnome2-wnck-0.10.ebuild 874
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 df16ecdd4f7f9ec07c6a5b2dbfc7295b files/digest-gnome2-wnck-0.04 67
+MD5 df16ecdd4f7f9ec07c6a5b2dbfc7295b files/digest-gnome2-wnck-0.04-r1 67
 MD5 7a1c36cf9892603a54849ddef2d48c57 files/digest-gnome2-wnck-0.10 67
 MD5 bbf0dd5120c2b7645abecf57d81dcb48 files/window_close_patch 465
-MD5 df16ecdd4f7f9ec07c6a5b2dbfc7295b files/digest-gnome2-wnck-0.04-r1 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCqLsyKRy60XGEcJIRAowAAJ448CM0ko37vI63H523uoJlxee+rACbB9qx
-60vOMBdI8uQna6qzL88TuV8=
-=hYRF
+iD8DBQFCsATBtG5z4I8BtQoRAvpPAJ4mHJ9X6nQbPulyc7/x8PTZ/LgMawCghPFK
+TGkNw0pQr8K2tkTIoNRlcaE=
+=adeu
 -----END PGP SIGNATURE-----
