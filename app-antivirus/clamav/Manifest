@@ -1,20 +1,30 @@
-MD5 4d1b69e427a63d86ecd242cfa070acee ChangeLog 16332
-MD5 6ea55388f51845c2f815589dfed047a4 clamav-0.83.ebuild 2332
-MD5 bf2cf15ce5fddd93fffa28e8b0a3f50f clamav-0.84.ebuild 2314
-MD5 689c7676f16b3126b2c3f9271f7c2a1e clamav-0.85-r1.ebuild 3290
-MD5 db2b7a078be60bb8227de5624893edd9 clamav-0.85.1-r1.ebuild 3570
-MD5 921a56174bc3634808df37537d77ea1d clamav-0.85.1.ebuild 3326
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 34a649543043b4506c5ecdca94ddad41 clamav-0.85.ebuild 2314
-MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
+MD5 bf2cf15ce5fddd93fffa28e8b0a3f50f clamav-0.84.ebuild 2314
+MD5 74b910b2ed573d919a2acc735352b600 clamav-0.85.1-r1.ebuild 3567
+MD5 921a56174bc3634808df37537d77ea1d clamav-0.85.1.ebuild 3326
+MD5 689c7676f16b3126b2c3f9271f7c2a1e clamav-0.85-r1.ebuild 3290
 MD5 da756bc75182c5c3772a6d12af33a835 clamav-0.86_rc1.ebuild 3610
+MD5 b4b3658d23160b9cf978d76a9451e458 ChangeLog 16429
+MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
+MD5 6ea55388f51845c2f815589dfed047a4 clamav-0.83.ebuild 2332
+MD5 0bd0d31062475433335752e126830799 files/digest-clamav-0.85-r1 64
 MD5 08f7b320461c04bbb88555e389c2e544 files/clamav-milter.README.gentoo 1124
-MD5 e29ee77ca9bfe28ed18dbf67a9c90e75 files/clamd.conf 193
-MD5 1b3268d3723e003ad99bf706e6bf4312 files/clamd.rc 1444
-MD5 f6bf5b894e60e8686cb5a36ba240e1ef files/clamd.rc.new 2032
+MD5 9807ac686d54e104f1c86fc1b0cbf23d files/digest-clamav-0.86_rc1 67
+MD5 102cc388dbea3446ba249cfc2e80cff3 files/digest-clamav-0.85.1 66
 MD5 9bbf2754f8178fd5164875d784aa9ffa files/digest-clamav-0.83 64
 MD5 3e9877b8901f604bd65ea89ff18833b6 files/digest-clamav-0.84 64
 MD5 0bd0d31062475433335752e126830799 files/digest-clamav-0.85 64
-MD5 0bd0d31062475433335752e126830799 files/digest-clamav-0.85-r1 64
-MD5 102cc388dbea3446ba249cfc2e80cff3 files/digest-clamav-0.85.1 66
+MD5 f6bf5b894e60e8686cb5a36ba240e1ef files/clamd.rc.new 2032
 MD5 102cc388dbea3446ba249cfc2e80cff3 files/digest-clamav-0.85.1-r1 66
-MD5 9807ac686d54e104f1c86fc1b0cbf23d files/digest-clamav-0.86_rc1 67
+MD5 e29ee77ca9bfe28ed18dbf67a9c90e75 files/clamd.conf 193
+MD5 1b3268d3723e003ad99bf706e6bf4312 files/clamd.rc 1444
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCsG3lViELBEf1JB0RAlYkAJ9Q3QyO+GgNxVMyaT/DeJi2cBp2YgCfSQzj
+PTyYbcnmPiyy9gWssVi0bFs=
+=HLGN
+-----END PGP SIGNATURE-----
