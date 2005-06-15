@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.8 2005/05/25 21:23:12 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.9 2005/06/15 16:06:23 lanius Exp $
+
+  15 Jun 2005; Heinrich Wendel <lanius@gentoo.org>
+  +files/kdeaccessibility-3.4.0-noarts.patch, kttsd-3.4.1.ebuild:
+  add gstreamer patch, same as in kdeaccessibility
 
 *kttsd-3.4.1 (25 May 2005)
 
