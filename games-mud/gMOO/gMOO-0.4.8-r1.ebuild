@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/gMOO-0.4.8-r1.ebuild,v 1.9 2004/12/28 17:11:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gMOO/gMOO-0.4.8-r1.ebuild,v 1.10 2005/06/15 18:53:46 wolf31o2 Exp $
 
 DESCRIPTION="GTK+ Based MOO client"
 HOMEPAGE="http://www.nowmoo.demon.nl/"
@@ -37,5 +37,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc README INSTALL VERSION NEWS TODO ChangeLog || die "dodoc failed"
+	dodoc README VERSION NEWS TODO ChangeLog || die "dodoc failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.94.9.ebuild,v 1.1 2005/05/25 19:19:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.94.9.ebuild,v 1.2 2005/06/15 18:57:03 wolf31o2 Exp $
 
 inherit games
 
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_install () {
 	dogamesbin tt++ || die "dobin failed"
-	dodoc ../{BUGS,CREDITS,FAQ,INSTALL,README,TODO,docs/*}
+	dodoc ../{BUGS,CREDITS,FAQ,README,TODO,docs/*}
 	prepgamesdirs
 }
 

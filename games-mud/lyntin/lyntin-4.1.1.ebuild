@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.1.1.ebuild,v 1.4 2005/02/22 12:01:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.1.1.ebuild,v 1.5 2005/06/15 18:54:40 wolf31o2 Exp $
 
 inherit games distutils
 
@@ -15,7 +15,7 @@ IUSE="tcltk"
 
 DEPEND=">=dev-lang/python-2.2.3"
 
-DOCS="COMMANDS INSTALL PKG-INFO HACKING README"
+DOCS="COMMANDS PKG-INFO HACKING README"
 
 pkg_setup() {
 	if ! built_with_use dev-lang/python tcltk ; then
