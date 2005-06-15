@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.24 2005/01/01 11:21:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.25 2005/06/15 17:26:18 wolf31o2 Exp $
+
+*pwgen-2.04 (15 Jun 2005)
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> +pwgen-2.04.ebuild:
+  Version bumped to 2.04 and closing bug #96182.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
