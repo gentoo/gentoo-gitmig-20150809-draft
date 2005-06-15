@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20040303.ebuild,v 1.2 2004/06/24 22:24:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20040303.ebuild,v 1.3 2005/06/15 11:09:06 dholm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.caps-project.org/files/ipfdevlib_linux.tgz
 DEPEND="app-arch/unzip"
 LICENSE="CAPS"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 RESTRICT="nostrip"
 
