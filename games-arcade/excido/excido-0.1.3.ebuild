@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.3.ebuild,v 1.7 2004/06/24 22:04:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.3.ebuild,v 1.8 2005/06/15 18:10:07 wolf31o2 Exp $
 
 inherit games
 
@@ -40,7 +40,7 @@ src_install() {
 	dogamesbin excido
 	dodir ${GAMES_DATADIR}/${PN}
 	cp helmetr.ttf data/*.{wav,png} ${D}${GAMES_DATADIR}/${PN}
-	dodoc BUGS CHANGELOG HACKING INSTALL README RELNOTES* TODO \
+	dodoc BUGS CHANGELOG HACKING README RELNOTES* TODO \
 		keyguide.txt data/CREDITS data/*.txt
 	prepgamesdirs
 }
