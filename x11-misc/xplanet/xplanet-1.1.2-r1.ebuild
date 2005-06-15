@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.1.2.ebuild,v 1.1 2005/06/13 20:23:51 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.1.2-r1.ebuild,v 1.1 2005/06/15 16:33:43 smithj Exp $
 
 DESCRIPTION="A program to render images of the earth into the X root window"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -32,16 +32,16 @@ src_compile() {
 	local myconf
 
 	use X \
-		&& myconf="$myconf --with-x" \
-		|| myconf="$myconf --with-x=no"
+		&& myconf="${myconf} --with-x" \
+		|| myconf="${myconf} --with-x=no"
 
 	use opengl \
-		&& myconf="--with-gl --with-glut --with-animation" \
-		|| myconf="--with-gl=no --with-glut=no --with-animation=no"
+		&& myconf="${myconf} --with-gl --with-glut --with-animation" \
+		|| myconf="${myconf} --with-gl=no --with-glut=no --with-animation=no"
 
 	use gif \
-		&& myconf="$myconf --with-gif" \
-		|| myconf="$myconf --with-gif=no"
+		&& myconf="${myconf} --with-gif" \
+		|| myconf="${myconf} --with-gif=no"
 
 	use jpeg \
 		&& myconf="${myconf} --with-jpeg" \
@@ -66,7 +66,6 @@ src_compile() {
 }
 
 src_install () {
-	einstall || die
-
+	einstall || die "einstall failed"
 	dodoc AUTHORS README COPYING INSTALL NEWS ChangeLog TODO
 }
