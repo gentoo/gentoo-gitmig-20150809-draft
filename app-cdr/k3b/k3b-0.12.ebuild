@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.ebuild,v 1.1 2005/06/15 16:16:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.ebuild,v 1.2 2005/06/15 21:09:42 swegener Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -54,10 +54,10 @@ LANGS="bg br bs ca cs cy da de el en_GB es et fr ga hi is it lt mk nb nl nn pl p
 MAKE_LANGS=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
 MAKE_lANGS=${MAKE_lANGS/sr/sr sr@Latn}
 
- for X in $LANGS; do
- 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
- done
- 
+for X in ${LANGS}; do
+	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
+done
+
 pkg_setup() {
 	use hal && if ! built_with_use dbus qt ; then
 		eerror "You are trying to compile ${CATEGORY}/${P} with the \"hal\" USE flag enabled,"
@@ -67,7 +67,7 @@ pkg_setup() {
 }
 
 src_compile() {
- 	local _S=${S}
+	local _S=${S}
 	local myconf="--enable-libsuffix= --with-external-libsamplerate \
 			--without-resmgr --with-musicbrainz \
 			$(use_with kde k3bsetup)	\
@@ -83,12 +83,12 @@ src_compile() {
 	kde_src_compile
 
 	# Build process of K3B-i18n, select LINGUAS elements
- 	S=${WORKDIR}/${I18N}
- 	if [ -n "${LINGUAS}" -a -d "${S}" ] ; then
- 		sed -i -e "s:^SUBDIRS = .*:SUBDIRS = ${MAKE_LANGS}:" ${S}/Makefile.in
- 		kde_src_compile
- 	fi
- 	S=${_S}
+	S=${WORKDIR}/${I18N}
+	if [ -n "${LINGUAS}" -a -d "${S}" ] ; then
+		sed -i -e "s:^SUBDIRS = .*:SUBDIRS = ${MAKE_LANGS}:" ${S}/Makefile.in
+		kde_src_compile
+	fi
+	S=${_S}
 }
 
 src_install() {
@@ -96,17 +96,16 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog COPYING FAQ INSTALL KNOWNBUGS PERMISSIONS README TODO
 
- 	if [ -n "${LINGUAS}" -a -d "${WORKDIR}/${I18N}" ]; then
- 		cd ${WORKDIR}/${I18N}
- 		make DESTDIR=${D} install || die
- 	fi
+	if [ -n "${LINGUAS}" -a -d "${WORKDIR}/${I18N}" ]; then
+		cd ${WORKDIR}/${I18N}
+		make DESTDIR=${D} install || die
+	fi
 
 	# install menu entry
 	if use kde; then
 		mv ${D}/usr/share/applnk/Settings/System/k3bsetup2.desktop ${D}/usr/share/applications
 	fi
 	rm -fR ${D}/usr/share/applnk/
-	
 }
 
 pkg_postinst() {
