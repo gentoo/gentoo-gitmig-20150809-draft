@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/pvm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.20 2005/06/06 16:32:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.21 2005/06/15 21:20:01 robbat2 Exp $
+
+  15 Jun 2005; Robin H. Johnson <robbat2@gentoo.org> pvm-3.4.5.ebuild:
+  Add support for ssh instead of rsh.
 
   06 Jun 2005; Donnie Berkholz <spyderous@gentoo.org>; pvm-3.4.5.ebuild:
   (#86959) Stable on x86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5.ebuild,v 1.3 2005/06/06 16:32:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5.ebuild,v 1.4 2005/06/15 21:20:01 robbat2 Exp $
 
 inherit eutils
 
@@ -32,9 +32,16 @@ src_unpack() {
 # s390 should go in this list if there is ever interest
 # Patch the 64bit def files to look in lib64 dirs as well for libraries.
 	for I in 64 PPC64; do
-		sed -i -e "s|ARCHDLIB	=|ARCHDLIB	= -L/usr/lib64 -L/usr/X11R6/lib64 |" conf/LINUX${I}.def
-		sed -i -e "s|ARCHLIB	=|ARCHLIB	= -L/usr/lib64 -L/usr/X11R6/lib64 |" conf/LINUX${I}.def
+		sed -i -e "s|ARCHDLIB	=|ARCHDLIB	= -L/usr/lib64 -L/usr/X11R6/lib64 |" conf/LINUX${I}.def || die "Failed to fix 64-bit"
+		sed -i -e "s|ARCHLIB	=|ARCHLIB	= -L/usr/lib64 -L/usr/X11R6/lib64 |" conf/LINUX${I}.def || die "Failed to fix 64-bit"
 	done
+
+	if use ssh; then
+		for i in ${S}/conf/LINUX*def; do
+			sed -i.orig -e '/^ARCHCFLAGS/s~/usr/bin/rsh~/usr/bin/ssh~' "${i}" || die "Failed to set ssh"
+		done
+	fi
+
 }
 
 src_compile() {
