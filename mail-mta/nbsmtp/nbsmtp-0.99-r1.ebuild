@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-0.99-r1.ebuild,v 1.1 2005/05/02 23:43:45 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-0.99-r1.ebuild,v 1.2 2005/06/15 09:28:04 ferdy Exp $
 
-inherit mailer
+inherit eutils mailer
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a relayhost"
 SRC_URI="http://www.gentoo-es.org/~ferdy/${P}.tar.bz2"
@@ -18,6 +18,8 @@ DEPEND="virtual/libc
 
 src_compile() {
 	local myconf
+
+	epatch ${FILESDIR}/${PN}-CRAM-MD5.diff
 
 	econf $(use_enable ssl) \
 		$(use_enable debug) \
