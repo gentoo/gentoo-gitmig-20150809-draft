@@ -1,4 +1,16 @@
-MD5 710eb79c1105dfb6092a5246760eca71 ChangeLog 850
-MD5 396489b6f1da40e2868244e103f30ce2 metadata.xml 296
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 23512f28d5a1779d936281267f0268f6 ChangeLog 976
 MD5 2c12cf58b5e427c18fcebe03370bf35f xdiskusage-1.46.ebuild 765
+MD5 6549a3938146f4a797c0044da217dec4 xdiskusage-1.48.ebuild 768
+MD5 396489b6f1da40e2868244e103f30ce2 metadata.xml 296
 MD5 1853a7ed9d290b77adfb1fb172179841 files/digest-xdiskusage-1.46 63
+MD5 a59c5a641ce70122426e1b770900589c files/digest-xdiskusage-1.48 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCr/EYI7fK2cqeyXkRAnGVAJ9I+EaFd2htVEvfR6M6BiGdDvqzUgCfTpTH
+D7QlQoLc5KdBqx3p0LxD0Dg=
+=34tP
+-----END PGP SIGNATURE-----
