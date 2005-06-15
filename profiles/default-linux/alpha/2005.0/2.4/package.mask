@@ -1,2 +1,0 @@
-# >glibc-2.3.2-r12 breaks on missing __NR_stat64 on 2.4 profiles
->sys-libs/glibc-2.3.2-r12
