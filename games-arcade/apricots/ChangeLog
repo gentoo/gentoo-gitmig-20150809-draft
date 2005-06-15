@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/apricots
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/ChangeLog,v 1.6 2005/06/02 13:36:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/ChangeLog,v 1.7 2005/06/15 17:32:25 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> apricots-0.2.6.ebuild:
+  Removed INSTALL file.
 
   02 Jun 2005; Joseph Jezak <josejx@gentoo.org> apricots-0.2.6.ebuild:
   Marked ppc stable.

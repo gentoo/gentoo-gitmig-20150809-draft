@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6.ebuild,v 1.6 2005/06/02 13:36:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6.ebuild,v 1.7 2005/06/15 17:32:25 wolf31o2 Exp $
 
 inherit games
 
@@ -35,7 +35,7 @@ src_unpack() {
 }
 
 src_install() {
-	dodoc AUTHORS INSTALL README TODO ChangeLog
+	dodoc AUTHORS README TODO ChangeLog
 	dohtml apricots.html
 	cd ${PN}
 	dogamesbin apricots || die "dogamesbin failed"
