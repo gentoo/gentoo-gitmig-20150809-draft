@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21.ebuild,v 1.1 2005/04/16 14:28:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21.ebuild,v 1.2 2005/06/15 22:05:16 mrness Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://linecontrol.srf.ch/down/${P}.src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~sparc x86"
 # if someone disables pam but wants user authentication
 # to be supported, then crypt is needed.
 IUSE="pam mysql crypt"
@@ -65,9 +65,10 @@ src_install() {
 	newdoc ${FILESDIR}/linesrv.conf linesrv.conf.sample
 	docinto complete_syntax ; dodoc server/config/complete_syntax/*
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/linesrv.rc6 linesrv
+	newinitd ${FILESDIR}/linesrv.rc6 linesrv
 	if use pam ; then
-		insinto /etc/pam.d ; newins ${FILESDIR}/linecontrol.pam linecontrol
-		insinto /etc/pam.d ; newins ${FILESDIR}/lcshutdown.pam lcshutdown
+		insinto /etc/pam.d
+		newins ${FILESDIR}/linecontrol.pam linecontrol
+		newins ${FILESDIR}/lcshutdown.pam lcshutdown
 	fi
 }
