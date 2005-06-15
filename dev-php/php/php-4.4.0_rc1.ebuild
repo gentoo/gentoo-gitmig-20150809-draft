@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.4.0_rc1.ebuild,v 1.2 2005/06/15 03:54:40 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.4.0_rc1.ebuild,v 1.3 2005/06/15 04:10:45 sebastian Exp $
 
 PHPSAPI="cli"
 SRC_URI_BASE="http://qa.php.net/~derick"
@@ -14,9 +14,6 @@ IUSE=""
 src_unpack() {
 	php-sapi_src_unpack
 	[ "${ARCH}" == "amd64" ] && epatch ${FILESDIR}/php-4.3.4-amd64hack.diff
-
-	# Bug 88795
-	use gmp && epatch ${FILESDIR}/php-4.3.11-gmp.patch
 }
 
 src_compile() {

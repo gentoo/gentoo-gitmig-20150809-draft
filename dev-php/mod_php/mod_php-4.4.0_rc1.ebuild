@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.4.0_rc1.ebuild,v 1.2 2005/06/15 03:57:46 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.4.0_rc1.ebuild,v 1.3 2005/06/15 04:09:15 sebastian Exp $
 
 SRC_URI_BASE="http://qa.php.net/~derick"
 IUSE="${IUSE} apache2"
@@ -89,9 +89,6 @@ src_unpack() {
 	# bug fix for security problem - bug #39952
 	# second revision as the apache2 stuff was resolved upstream
 	epatch ${FILESDIR}/mod_php-4.3.5-apache1security.diff
-
-	# Bug 88795
-	use gmp && epatch ${FILESDIR}/php-4.3.11-gmp.patch
 
 	# stop php from activing the apache config, as we will do that ourselves
 	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4; do

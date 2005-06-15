@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.4.0_rc1.ebuild,v 1.2 2005/06/15 03:56:16 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.4.0_rc1.ebuild,v 1.3 2005/06/15 04:12:43 sebastian Exp $
 
 SRC_URI_BASE="http://qa.php.net/~derick"
 PHPSAPI="cgi"
@@ -17,9 +17,6 @@ PROVIDE="${PROVIDE} virtual/httpd-php"
 
 src_unpack() {
 	php-sapi_src_unpack
-
-	# Bug 88795
-	use gmp && epatch ${FILESDIR}/php-4.3.11-gmp.patch
 }
 
 src_compile() {
