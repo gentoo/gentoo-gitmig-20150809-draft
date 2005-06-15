@@ -2,17 +2,15 @@
 Hash: SHA1
 
 MD5 b31c52bbe42dc44764c2791f5611e97e gigaset-isdn-0.4.1.ebuild 1416
-MD5 cd8c188864c3be10548ccf5a560be62b gigaset-isdn-0.4.0.ebuild 1416
-MD5 4bfd18ca200707b1e05583a69d312df7 gigaset-isdn-0.4.2.ebuild 1419
-MD5 af81aab2639171fcae28af099eec7e40 ChangeLog 1067
+MD5 6aea5b57ad577da0cda4fc460ce0b8c4 gigaset-isdn-0.4.2.ebuild 1418
+MD5 8902b0490b8bc33a71b7df87f0ce65c0 ChangeLog 1209
 MD5 bcb8da102fb210674bba37f6ae00d38f metadata.xml 271
-MD5 a283ea44b003b4bf0c6fd0dfcb336b22 files/digest-gigaset-isdn-0.4.0 66
 MD5 a5ebb69a302558697c41dd4dd2a72d29 files/digest-gigaset-isdn-0.4.1 66
 MD5 3ea0e6f486261c8852a0ad119dbf8e43 files/digest-gigaset-isdn-0.4.2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCXs4DjiC39V7gKu0RAmYGAJwMPsAQuOJjhCKWiFUJ5zawuPeKEQCfejbV
-aPsINaiJCQOZ6HB3Ao3vjMw=
-=5+23
+iD8DBQFCsJigjiC39V7gKu0RAoNzAJ9uz5ZUJX1H3sb25ZdZk5M+sFNNigCgkZ0z
+ydPuLbRm8wIyUhlSCD1uRf0=
+=/Kyd
 -----END PGP SIGNATURE-----
