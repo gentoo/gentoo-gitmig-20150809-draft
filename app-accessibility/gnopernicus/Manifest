@@ -1,13 +1,23 @@
-MD5 d2e91833f8bb3f82e1c4067b101a8a3f ChangeLog 8143
-MD5 45b4f862799d20ddc112cfdb57851c16 gnopernicus-0.10.7.ebuild 1194
-MD5 6c7fa7456175eaa5ce48ec4fd0dc1087 gnopernicus-0.8.4.ebuild 1337
-MD5 05f0150a2976669923467be8bcac492b gnopernicus-0.10.5.ebuild 1189
-MD5 30bd6990ec841be6c8682dc3469e6227 gnopernicus-0.10.9.ebuild 1207
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 23203f2adcbb58f6091eb7ba079f86da gnopernicus-0.9.19.ebuild 1186
+MD5 05f0150a2976669923467be8bcac492b gnopernicus-0.10.5.ebuild 1189
 MD5 2bd8b2cae4ff1f77d73a72dc79ebc75d metadata.xml 728
-MD5 1476ea4cc726c356413fda3d01d871d4 files/digest-gnopernicus-0.10.7 72
+MD5 6c7fa7456175eaa5ce48ec4fd0dc1087 gnopernicus-0.8.4.ebuild 1337
+MD5 2f2e7356b1f3fccb24874394e1181675 ChangeLog 8244
+MD5 45b4f862799d20ddc112cfdb57851c16 gnopernicus-0.10.7.ebuild 1194
+MD5 8e3cd913f573da8627775e46d18a1015 gnopernicus-0.10.9.ebuild 1205
 MD5 df31bc647038837aab027f60a528368d files/digest-gnopernicus-0.8.4 71
 MD5 c29f3ddc2ae4e709298fbd15877af6ba files/digest-gnopernicus-0.10.5 72
 MD5 6243a2f17f72037185664042ab0aab40 files/digest-gnopernicus-0.10.9 72
-MD5 aa3486e74c8e99a9e8dfd1740455acce files/digest-gnopernicus-0.9.19 72
 MD5 f3449243298d17bbb40ca57928445e62 files/gnopernicus-0.8.4-brltty_fix.patch 649
+MD5 1476ea4cc726c356413fda3d01d871d4 files/digest-gnopernicus-0.10.7 72
+MD5 aa3486e74c8e99a9e8dfd1740455acce files/digest-gnopernicus-0.9.19 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCsEQ8KRy60XGEcJIRAkAGAJ0dDTB8JunWGftgfTiKlc1jt3xttACfZ8B1
+AjtbtFa0jKPH0Nv8i+6IzpM=
+=MZM5
+-----END PGP SIGNATURE-----
