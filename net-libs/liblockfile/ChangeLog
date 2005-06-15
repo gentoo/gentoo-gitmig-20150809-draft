@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.19 2005/06/10 16:44:35 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.20 2005/06/15 18:07:39 gustavoz Exp $
+
+  15 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  liblockfile-1.06.ebuild:
+  Stable on sparc
 
   10 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org>
   liblockfile-1.06.ebuild:
