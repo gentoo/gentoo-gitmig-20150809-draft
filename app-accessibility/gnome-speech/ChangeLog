@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.28 2005/06/13 21:26:18 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.29 2005/06/15 14:58:08 gustavoz Exp $
+
+  15 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-speech-0.3.7.ebuild:
+  Stable on sparc
 
   13 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
   gnome-speech-0.3.7.ebuild:
