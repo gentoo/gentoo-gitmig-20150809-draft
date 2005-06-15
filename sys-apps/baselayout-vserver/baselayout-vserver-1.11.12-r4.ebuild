@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.12-r4.ebuild,v 1.4 2005/06/13 19:59:47 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.12-r4.ebuild,v 1.5 2005/06/15 18:05:04 hollow Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -197,7 +197,7 @@ src_install() {
 
 	# link dummy init scripts
 	cd ${D}/etc/init.d
-	for i in checkfs checkroot clock consolefont localmount modules net.lo net.eth0 netmount; do
+	for i in checkfs checkroot clock consolefont localmount modules net netmount; do
 		ln -sf dummy $i
 	done
 
