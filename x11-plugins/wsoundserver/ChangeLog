@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wsoundserver
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wsoundserver/ChangeLog,v 1.1 2005/06/15 09:26:09 s4t4n Exp $
+
+*wsoundserver-0.4.1 (15 Jun 2005)
+
+  15 Jun 2005; Michele Noberasco <s4t4n@gentoo.org> wsoundserver-0.4.1.ebuild:
+  Initial import. Closes bug #51063.
+
