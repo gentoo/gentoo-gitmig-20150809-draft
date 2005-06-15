@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/powwow-1.2.5.ebuild,v 1.4 2005/05/17 18:37:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/powwow-1.2.5.ebuild,v 1.5 2005/06/15 18:56:17 wolf31o2 Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -37,7 +37,7 @@ src_install () {
 	newgamesbin movie movie_play
 	dosym movie_play "${GAMES_BINDIR}/movie2ascii"
 	insinto "${POWWOWDIR}"
-	doins powwow.help COPYING || die "doins failed"
+	doins powwow.help || die "doins failed"
 	dodoc README.* powwow.doc powwow-1.2.5.lsm Compile.how \
 		Hacking Config.demo Changelog
 	prepgamesdirs
