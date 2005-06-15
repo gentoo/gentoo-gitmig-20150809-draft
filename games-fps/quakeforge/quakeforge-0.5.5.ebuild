@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.5 2005/05/05 03:02:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.6 2005/06/15 18:39:23 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -100,7 +100,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
 	mv ${D}/${GAMES_PREFIX}/include ${D}/usr/
-	dodoc ChangeLog INSTALL NEWS TODO doc/*
+	dodoc ChangeLog NEWS TODO doc/*
 	prepgamesdirs
 }
 
