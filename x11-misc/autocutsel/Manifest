@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 79b47822975d309581fbc2bdd4b1dbb8 ChangeLog 916
+MD5 f0d610ec436feb059b67737870aa0adb ChangeLog 1064
+MD5 8a4fc5ff6848c056c2598ed013ac7ee7 autocutsel-0.8.0.ebuild 695
 MD5 a7eca5490acf38f85e2d0c20d5237f5a autocutsel-0.6.2.ebuild 690
 MD5 0cdb4c69359b060120620a4c94c236a0 metadata.xml 341
 MD5 d93bb1c3ddbeb0132994cac76764c509 files/digest-autocutsel-0.6.2 67
+MD5 fa6cc17dc301ffc1976f11d754bdacc5 files/digest-autocutsel-0.8.0 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBXszKI1lqEGTUzyQRAkgjAJ9PuVvnrSxf8GG242B4cOgLZMI9mQCgkvB6
-R02BnT2tmHFmNMmf8r39SUg=
-=/kXw
+iD8DBQFCr/NTI7fK2cqeyXkRAo2cAKDiUrjTjBy+2my4V5OvEu8I1O8iewCeO+Iw
+kpgjLwiLe9wRAoY2Qgo38ZM=
+=q48q
 -----END PGP SIGNATURE-----
