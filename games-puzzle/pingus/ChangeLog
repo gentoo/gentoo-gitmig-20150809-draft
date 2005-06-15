@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/pingus
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.7 2004/09/30 11:28:28 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.8 2005/06/15 19:01:34 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  pingus-0.6.0-r1.ebuild:
+  Removed INSTALL file.
 
   30 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> pingus-0.6.0-r1.ebuild:
   work around brief bug in bash3 (bug #65729)

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.12 2005/03/02 02:38:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.13 2005/06/15 19:01:34 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -40,7 +40,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS INSTALL NEWS README TODO
+	dodoc AUTHORS NEWS README TODO
 	# pos install process ... FIXME
 	mv "${D}/usr/games/games" "${D}/usr/games/bin"
 	cd "${D}/usr/share/games"

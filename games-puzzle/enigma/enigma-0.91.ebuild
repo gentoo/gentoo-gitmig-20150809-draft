@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.91.ebuild,v 1.2 2005/05/30 18:56:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.91.ebuild,v 1.3 2005/06/15 18:59:56 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -54,7 +54,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	mv "${D}/${GAMES_PREFIX}/share/"* "${D}/usr/share/"
 	rm -r "${D}/${GAMES_PREFIX}/share"
-	dodoc NEWS README AUTHORS INSTALL ChangeLog \
+	dodoc NEWS README AUTHORS ChangeLog \
 		doc/{TODO,CREATING-LEVELS,HACKING}
 	dohtml -r doc/*
 	doman doc/enigma.6

@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/icebreaker
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.7 2005/06/05 18:08:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.8 2005/06/15 19:00:38 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  icebreaker-1.9.5.ebuild:
+  Removed INSTALL file.
 
   05 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> icebreaker-1.9.5.ebuild:
   stable on amd64

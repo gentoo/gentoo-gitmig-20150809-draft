@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.19 2005/05/30 18:56:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.20 2005/06/15 18:59:56 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> enigma-0.81.ebuild,
+  enigma-0.91.ebuild:
+  Removed INSTALL file.
 
   30 May 2005; Michael Sterrett <mr_bones_@gentoo.org> enigma-0.91.ebuild:
   fix nls support (bug #94502) - patch from ockham@gmx.net
