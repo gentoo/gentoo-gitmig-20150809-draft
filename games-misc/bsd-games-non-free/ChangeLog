@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games-non-free
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/ChangeLog,v 1.9 2005/04/05 15:56:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/ChangeLog,v 1.10 2005/06/15 18:40:53 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  bsd-games-non-free-2.13.ebuild:
+  Removed COPYING and INSTALL files.
 
   05 Apr 2005; Simon Stelling <blubb@gentoo.org>
   bsd-games-non-free-2.13.ebuild:
