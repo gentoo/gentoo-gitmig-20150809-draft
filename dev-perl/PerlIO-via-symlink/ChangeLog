@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PerlIO-via-symlink
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-symlink/ChangeLog,v 1.6 2005/05/16 15:36:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-symlink/ChangeLog,v 1.7 2005/06/15 17:38:28 gustavoz Exp $
+
+  15 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  PerlIO-via-symlink-0.05.ebuild:
+  Stable on sparc
 
   16 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   PerlIO-via-symlink-0.05.ebuild:

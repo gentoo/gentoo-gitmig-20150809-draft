@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Proc-Simple
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.10 2005/05/16 19:24:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.11 2005/06/15 17:44:07 gustavoz Exp $
+
+  15 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  Proc-Simple-1.21.ebuild:
+  Stable on sparc
 
   16 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   Proc-Simple-1.21.ebuild:
