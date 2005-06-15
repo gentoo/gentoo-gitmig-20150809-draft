@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.1 2005/06/09 04:35:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.2 2005/06/15 19:02:21 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -48,6 +48,6 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	keepdir "${GAMES_DATADIR}/${PN}/games"
-	dodoc AUTHORS ChangeLog FULLSCREEN.howto INSTALL NEWBIE NEWS README
+	dodoc AUTHORS ChangeLog FULLSCREEN.howto NEWBIE NEWS README
 	prepgamesdirs
 }
