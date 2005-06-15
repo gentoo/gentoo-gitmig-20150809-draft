@@ -1,20 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0dfcc7c4f6ab5558b68d7d9a2b745591 cvsgraph-1.4.1.ebuild 1037
-MD5 7a4d1c2c7b4478eff07f6dc032bd7b9a cvsgraph-1.3.0.ebuild 961
+MD5 e9f09b5af5f1d7390ed2a4c68c487e08 cvsgraph-1.5.2.ebuild 1008
 MD5 b6efa4678f12d01fef400e8856477918 cvsgraph-1.5.1.ebuild 1008
-MD5 5be2f660d4a4fdd7929a8886cfebc806 cvsgraph-1.4.0.ebuild 981
-MD5 6d06853e5f2e3e0207450db25cb5285a ChangeLog 1352
+MD5 052f94ee09a0656aca0ff1797dd406cd ChangeLog 1565
 MD5 e5e0dc1b17b1dd57e95178b9554c0b60 metadata.xml 163
-MD5 48388df6aa6e24fe218206cc91e1a9dd files/digest-cvsgraph-1.3.0 65
-MD5 1623ea5becc9e60c232612119c1cd425 files/digest-cvsgraph-1.4.0 65
-MD5 a24a6e90f14a4972ca26a3ba7009b2a9 files/digest-cvsgraph-1.4.1 65
 MD5 2086afa850eeaa80b59e22475144d46b files/digest-cvsgraph-1.5.1 66
+MD5 14797959b956fab083b69c516d2681be files/digest-cvsgraph-1.5.2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbNfZEZCkKN40op4RAmKXAKCFLn0VwaOTEfxMs5W1jHc7//VWBgCgmudJ
-NvnrCDtL/mn2h6BARMI4wWE=
-=NBc3
+iD8DBQFCsBevEZCkKN40op4RAoYRAJ9bwMzFVMJ6Lwc+zmKrHQ77U1NqLQCfeblG
+jKtkN4Mj1tFpdTFvpp7WaJw=
+=+Dou
 -----END PGP SIGNATURE-----
