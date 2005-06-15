@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5aa6609d59b5c669d2b83d9766a8ff44 ChangeLog 349
-MD5 a7e47e98f261ba676c331c90a4f8291b ggz-sdl-games-0.0.9.ebuild 722
+MD5 526aeed7994d80208b04f4f40c9ce212 ChangeLog 460
+MD5 a9d0b018a24f222ff7980e1a389c8272 ggz-sdl-games-0.0.9.ebuild 716
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 438e74c650e378de6fec33c558f5b3b2 files/digest-ggz-sdl-games-0.0.9 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBz1TUroRuSHgZdywRAmXjAJ93tk5uLUL2gtkqZvCaItqB0oXhGQCeJ9n/
-8i9xJoONSsQKQxHvg912Fyc=
-=rd4U
------END PGP SIGNATURE-----
