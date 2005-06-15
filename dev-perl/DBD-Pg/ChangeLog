@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.29 2005/05/25 15:04:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.30 2005/06/15 10:59:58 mcummings Exp $
+
+*DBD-Pg-1.42 (15 Jun 2005)
+
+  15 Jun 2005; Michael Cummings <mcummings@gentoo.org> +DBD-Pg-1.42.ebuild:
+  Bug 93988, bug fixes and memory leaks
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> DBD-Pg-1.41.ebuild:
   dev-perl/Test-Simple => perl-core/Test-Simple migration
