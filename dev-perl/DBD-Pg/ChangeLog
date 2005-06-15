@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.30 2005/06/15 10:59:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.31 2005/06/15 11:00:49 mcummings Exp $
+
+  15 Jun 2005; Michael Cummings <mcummings@gentoo.org> :
+  Correction: Bug 95658
 
 *DBD-Pg-1.42 (15 Jun 2005)
 
@@ -58,7 +61,7 @@
   files/DBD-Pg-1.32-versparse.patch:
   new version of module, please test
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> DBD-Pg-1.31.ebuild:
+  26 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> DBD-Pg-1.31.ebuild:
   Stable on alpha.
 
   16 Apr 2004; Michael Cummings <mcummings@gentoo.org> DBD-Pg-1.31.ebuild:
