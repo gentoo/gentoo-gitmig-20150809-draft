@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 89386a4d50cf650afe5521d4e6e4dda9 potamus-20040414.ebuild 1040
+MD5 ba27d1949e5085e9b92cb2e48b64b4ae potamus-20040414.ebuild 1046
+MD5 8cd63794cb854e19c7dedf955303efab ChangeLog 592
 MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
-MD5 24d9fb915899564012ea201f99ff811c ChangeLog 499
 MD5 384c4c31d9fdeb5727b00cee662bb66f files/digest-potamus-20040414 72
 MD5 6a0ea475de529a2747659da0580a1477 files/potamus-Makefile.patch 734
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB3MmJFdQwWVoAgN4RArtYAKCh6Z7Ju1uLpB+BGE01bHCZyBaWPwCeJtB3
-Aq/E0VXUZvnXRBzl9DkMF8M=
-=N+X8
+iD8DBQFCsJzQZ/iYVBmujdURAqy8AKDXnkdgva2OhPp6Ofly3nq5o9X95wCfVsmt
+3RCz94/BNBHu9O1Kz9mrmog=
+=FIPQ
 -----END PGP SIGNATURE-----
