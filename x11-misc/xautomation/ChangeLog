@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xautomation
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/ChangeLog,v 1.7 2005/04/28 23:47:08 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/ChangeLog,v 1.8 2005/06/15 09:03:02 pyrania Exp $
+
+*xautomation-0.96 (15 Jun 2005)
+
+  15 Jun 2005; Markus Nigbur <pyrania@gentoo.org> +xautomation-0.96.ebuild:
+  Version bump.
 
   28 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   xautomation-0.93.ebuild:
