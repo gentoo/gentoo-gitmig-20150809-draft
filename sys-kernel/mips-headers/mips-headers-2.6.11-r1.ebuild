@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.11.ebuild,v 1.4 2005/04/19 20:27:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.11-r1.ebuild,v 1.1 2005/06/15 22:28:31 kumba Exp $
 
 # Eclass bits
 ETYPE="headers"
@@ -13,7 +13,7 @@ detect_version
 OKV=${PV/_/-}
 CVSDATE="20050314"                      # Date of diff between kernel.org and lmo CVS
 GENPATCHVER="1.7"                       # Tarball version for generic patches
-HEAPATCHVER="1.0"
+HEAPATCHVER="1.1"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 
 # INCLUDED:
