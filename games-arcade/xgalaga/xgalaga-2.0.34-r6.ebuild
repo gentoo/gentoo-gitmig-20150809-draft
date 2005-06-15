@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.0.34-r6.ebuild,v 1.1 2005/05/15 20:54:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.0.34-r6.ebuild,v 1.2 2005/06/15 18:15:10 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -38,7 +38,7 @@ src_compile() {
 
 src_install() {
 	dogamesbin xgalaga xgal.sndsrv.linux || die "dogamesbin failed"
-	dodoc README README.SOUND CHANGES INSTALL
+	dodoc README README.SOUND CHANGES
 	newman xgal.6x xgal.6
 
 	insinto "${GAMES_DATADIR}/${PN}/sounds"

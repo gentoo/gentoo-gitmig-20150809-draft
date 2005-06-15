@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.0.ebuild,v 1.9 2005/01/18 04:35:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.0.ebuild,v 1.10 2005/06/15 18:07:23 wolf31o2 Exp $
 
 inherit games
 
@@ -41,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc AUTHORS Changelog INSTALL NEWS README
+	dodoc AUTHORS Changelog NEWS README
 	make DESTDIR=${D} install || die
 	dosym ${GAMES_BINDIR}/pinball ${GAMES_BINDIR}/emilia-pinball
 	rm -rf ${D}/${GAMES_PREFIX}/include

@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/missile
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/missile/ChangeLog,v 1.7 2005/05/31 20:52:41 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/missile/ChangeLog,v 1.8 2005/06/15 18:11:24 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> missile-1.0.1.ebuild:
+  Removed INSTALL file.
 
   31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> missile-1.0.1.ebuild:
   Stable on amd64.

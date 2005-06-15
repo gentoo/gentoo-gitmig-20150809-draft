@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/emilia-pinball
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.9 2005/01/18 04:35:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.10 2005/06/15 18:07:23 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  emilia-pinball-0.3.0.ebuild, emilia-pinball-0.3.1.ebuild:
+  Removed INSTALL file.
 
   17 Jan 2005; Jason Wever <weeve@gentoo.org> emilia-pinball-0.3.1.ebuild:
   Added ~sparc keyword.
