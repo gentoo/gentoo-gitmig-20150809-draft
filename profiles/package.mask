@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4094 2005/06/15 19:36:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4095 2005/06/15 21:17:43 smithj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jonathan Smith <smithj@gentoo.org> (15 Jun 2005)
+# Seems to be broken... see #96212
+=x11-misc/xlockmore-5.18
 
 # Andrej Kacian <ticho@gentoo.org> (15 Jun 2005)
 # Deprecated in favor of mail-filter/p3scan, to be removed soon
