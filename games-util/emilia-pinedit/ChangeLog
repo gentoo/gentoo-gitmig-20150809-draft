@@ -1,6 +1,10 @@
 # ChangeLog for games-util/emilia-pinedit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/ChangeLog,v 1.5 2005/06/05 11:32:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/ChangeLog,v 1.6 2005/06/15 19:23:49 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  emilia-pinedit-0.3.1.ebuild:
+  Removed INSTALL file.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   emilia-pinedit-0.3.1.ebuild:

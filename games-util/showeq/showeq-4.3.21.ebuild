@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-4.3.21.ebuild,v 1.3 2005/03/08 23:18:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-4.3.21.ebuild,v 1.4 2005/06/15 19:24:21 wolf31o2 Exp $
 
 inherit games
 
@@ -50,7 +50,7 @@ src_unpack() {
 src_install() {
 	egamesinstall || die
 	doman showeq.1
-	dodoc BUGS CHANGES FAQ INSTALL README* ROADMAP TODO doc/*.{doc,txt}
+	dodoc BUGS CHANGES FAQ README* ROADMAP TODO doc/*.{doc,txt}
 	dohtml doc/*
 	prepgamesdirs
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.10 2005/06/05 11:32:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.11 2005/06/15 19:23:49 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -43,7 +43,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc AUTHORS INSTALL NEWS README
+	dodoc AUTHORS NEWS README
 	make DESTDIR=${D} install || die "make install failed"
 	rm -rf ${D}/${GAMES_PREFIX}/{include,lib}
 	prepgamesdirs
