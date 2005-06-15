@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ggz-txt-client-0.0.9.ebuild,v 1.1 2004/12/26 23:10:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ggz-txt-client-0.0.9.ebuild,v 1.2 2005/06/15 18:20:53 wolf31o2 Exp $
 
 DESCRIPTION="The textbased client for GGZ Gaming Zone"
 HOMEPAGE="http://ggz.sourceforge.net/"
@@ -24,5 +24,5 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog INSTALL NEWS QuickStart.GGZ README* TODO
+	dodoc AUTHORS ChangeLog NEWS QuickStart.GGZ README* TODO
 }

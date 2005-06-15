@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/gnuchess-5.07.ebuild,v 1.5 2004/07/01 11:10:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/gnuchess-5.07.ebuild,v 1.6 2005/06/15 18:24:04 wolf31o2 Exp $
 
 inherit games
 
@@ -25,6 +25,6 @@ src_compile() {
 }
 src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL NEWS TODO doc/README || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS TODO doc/README || die "dodoc failed"
 	prepgamesdirs
 }

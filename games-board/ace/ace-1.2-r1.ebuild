@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.2-r1.ebuild,v 1.12 2005/01/03 03:27:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.2-r1.ebuild,v 1.13 2005/06/15 18:16:34 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 	dohtml docs/*
 	prepgamesdirs
 }

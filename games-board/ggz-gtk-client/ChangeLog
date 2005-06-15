@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-gtk-client
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.6 2004/12/28 23:53:24 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.7 2005/06/15 18:18:54 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ggz-gtk-client-0.0.9.ebuild:
+  Removed INSTALL file.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
