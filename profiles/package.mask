@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4092 2005/06/15 09:59:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4093 2005/06/15 16:19:12 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -262,10 +262,6 @@ net-irc/irssi-svn
 # Masked for testing with eclectic. Subject to major changes.
 =sci-libs/blas-atlas-3.7.10
 =sci-libs/lapack-atlas-3.7.10
-
-# Carsten Lohrke <carlo@gentoo.org< (12 May 2005)
-# early bird stuff
->=app-cdr/k3b-0.12_beta1
 
 # Danny van Dyk <kugelfang@gentoo.org> (11 May 2005)
 # Masked and scheduled for removal. Won't be removed before new versions hit
