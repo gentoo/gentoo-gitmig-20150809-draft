@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.4 2005/06/02 15:41:24 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.5 2005/06/15 08:22:01 nerdboy Exp $
+
+*grass-6.0.0 (15 Jun 2005)
+
+  15 Jun 2005; Steve Arnold <nerdboy@gentoo.org> +files/99grass-6,
+  metadata.xml, +grass-6.0.0.ebuild:
+  modified version of user-submitted ebuild (bug 72353 and 84862).
+  The former bug is not being closed just yet...
 
   02 Jun 2005; Olivier Fisette <ribosome@gentoo.org> grass-5.0.2.ebuild,
   grass-5.0.3.ebuild:
