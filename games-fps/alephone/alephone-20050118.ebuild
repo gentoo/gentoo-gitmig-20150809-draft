@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20050118.ebuild,v 1.1 2005/02/23 05:45:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20050118.ebuild,v 1.2 2005/06/15 18:38:53 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	keepdir "${GAMES_DATADIR}/AlephOne/"{Images,Map,Shapes,Sounds}
-	dodoc AUTHORS INSTALL.Unix README docs/Cheat_Codes
+	dodoc AUTHORS README docs/Cheat_Codes
 	dohtml docs/MML.html
 	prepgamesdirs
 }

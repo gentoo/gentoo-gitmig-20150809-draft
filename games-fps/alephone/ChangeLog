@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alephone
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.2 2005/02/23 05:45:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.3 2005/06/15 18:38:53 wolf31o2 Exp $
+
+  15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  alephone-20050118.ebuild:
+  Removed INSTALL.Unix file.
 
 *alephone-20050118 (23 Feb 2005)
 
