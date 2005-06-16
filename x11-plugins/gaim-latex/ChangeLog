@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gaim-latex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-latex/ChangeLog,v 1.1 2005/05/10 14:59:23 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-latex/ChangeLog,v 1.2 2005/06/16 13:49:15 rizzo Exp $
+
+*gaim-latex-0.3 (16 Jun 2005)
+
+  16 Jun 2005; Don Seiler <rizzo@gentoo.org> +gaim-latex-0.3.ebuild:
+  Version bump, closes Bug #94995.  Thanks to Claessens Xavier
 
 *gaim-latex-0.2 (10 May 2005)
 
