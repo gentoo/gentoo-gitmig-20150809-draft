@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.50 2005/06/11 04:37:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.51 2005/06/16 12:06:52 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -388,15 +388,19 @@ toolchain-glibc_src_install() {
 		rm -rf ${D}/nptl
 	fi
 
-	# now, strip everything but the thread libs #46186
+	# Now, strip everything but the thread libs #46186, as well as the dynamic
+	# linker, else we cannot set breakpoints in shared libraries.
+	# Fix for ld-* by Lonnie Princehouse.
 	mkdir -p ${T}/thread-backup
-	mv -f ${D}$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
-	# Also, don't strip the dynamic linker, else we cannot set breakpoints
-	# in shared libraries.  Fix by Lonnie Princehouse.
-	mv -f ${D}/$(get_libdir)/ld-* ${T}/thread-backup/
+	for x in ${D}$(alt_libdir)/lib{pthread,thread_db}* \
+	         ${D}$(alt_libdir)/ld-* ; do
+		[[ -f ${x} ]] && mv -f ${x} ${T}/thread-backup/
+	done
 	if want_linuxthreads && want_nptl ; then
 		mkdir -p ${T}/thread-backup/tls
-		mv -f ${D}$(alt_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
+		for x in ${D}$(alt_libdir)/tls/lib{pthread,thread_db}* ; do
+			[[ -f ${x} ]] && mv -f ${T}/thread-backup/tls
+		done
 	fi
 	env -uRESTRICT CHOST=${CTARGET} prepallstrip
 	cp -a -- ${T}/thread-backup/* ${D}$(alt_libdir)/ || die

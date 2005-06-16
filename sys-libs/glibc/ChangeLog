@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.350 2005/06/14 22:56:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.351 2005/06/16 12:06:52 azarah Exp $
+
+  16 June 2005; Martin Schlemmer <azarah@gentoo.org>
+  glibc-2.3.4.20050125-r1.ebuild, glibc-2.3.5.20050421.ebuild:
+  Do not backup symlinks for the 'do not strip thread/ld.so libs' action, as
+  it causes issues (basically the 'mv -f' followed the symlink instead of
+  it ...).
 
   14 Jun 2005; Mike Frysinger <vapier@gentoo.org> files/nscd:
   Add a permission check to nscd init.d #96108 by Paul Ortyl.
