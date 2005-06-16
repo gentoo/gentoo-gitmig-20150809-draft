@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r2.ebuild,v 1.2 2005/06/09 13:16:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r2.ebuild,v 1.3 2005/06/16 16:54:46 wolf31o2 Exp $
 
 inherit eutils
 
@@ -43,17 +43,17 @@ src_compile() {
 	perl -pi -e 's|/etc/modutils/kudzu|/etc/modules.d/kudzu|g' *.*
 
 	if use livecd; then
-		emake libkudzu.a || die
+		emake libkudzu.a RPM_OPT_FLAGS="${CFLAGS}" || die
 	elif use minimal; then
-		emake updfstab || die
+		emake updfstab RPM_OPT_FLAGS="${CFLAGS}" || die
 	else
-		emake || die
+		emake RPM_OPT_FLAGS="${CFLAGS}" || die
 	fi
 
 	if use x86 || use ppc; then
 		if ! use livecd && ! use minimal; then
 			cd ddcprobe || die
-			emake || die
+			emake RPM_OPT_FLAGS="${CFLAGS}" || die
 		fi
 	fi
 }
