@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.103 2005/06/10 15:18:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.104 2005/06/16 09:50:55 flameeyes Exp $
+
+  16 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  files/pam.d/system-auth-1.1, files/pam.d-include/system-auth-1.1,
+  files/pam.d/login, files/pam.d/other, files/pam.d/passwd,
+  files/pam.d/shadow, files/pam.d/su, files/pam.d/system-auth:
+  Make all pam.d files use just the modules' filenames instead of full path to
+  fix multilib setups.
 
   10 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> files/securetty:
   Added vc/0 tty0 for uml.  Blame rocket.

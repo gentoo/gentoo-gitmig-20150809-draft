@@ -1,12 +1,12 @@
 #%PAM-1.0
 
-auth       required	/lib/security/pam_securetty.so
-auth       required	/lib/security/pam_stack.so service=system-auth
-auth       required	/lib/security/pam_nologin.so
+auth       required	pam_securetty.so
+auth       required	pam_stack.so service=system-auth
+auth       required	pam_nologin.so
 
-account    required	/lib/security/pam_stack.so service=system-auth
+account    required	pam_stack.so service=system-auth
 
-password   required	/lib/security/pam_stack.so service=system-auth
+password   required	pam_stack.so service=system-auth
 
-session    required	/lib/security/pam_stack.so service=system-auth
-session    optional	/lib/security/pam_console.so
+session    required	pam_stack.so service=system-auth
+session    optional	pam_console.so
