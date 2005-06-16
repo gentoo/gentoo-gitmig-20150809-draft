@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/syslinux
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.15 2005/01/25 23:53:42 solar Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.16 2005/06/16 23:00:12 vapier Exp $
+
+*syslinux-3.08 (16 Jun 2005)
+
+  16 Jun 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/syslinux-3.08-nossp.patch, +syslinux-3.08.ebuild:
+  Version bump #96260 by Jesse Adelman.
 
   25 Jan 2005; <solar@gentoo.org> +files/syslinux-3.07-nossp.patch,
   syslinux-3.07.ebuild:
