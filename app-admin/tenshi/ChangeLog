@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.8 2005/05/15 16:05:43 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.9 2005/06/16 10:09:30 tigger Exp $
+
+*tenshi-0.3.4 (16 Jun 2005)
+
+  16 Jun 2005; Rob Holland <tigger@gentoo.org> +tenshi-0.3.4.ebuild:
+  version bump.
 
   15 May 2005; Konstantin Arkhipov <voxus@gentoo.org> tenshi-0.3.3.ebuild:
   Added ~amd64 keyword wrt bug #71740.
