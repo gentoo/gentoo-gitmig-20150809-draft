@@ -1,21 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7f52bbd66845629478afc32e9f0753e3 openoffice-bin-1.9.109.ebuild 5858
 MD5 506e205d7acdff08907fdca2b8f80332 openoffice-bin-1.9.104.ebuild 5610
 MD5 1a091dd047f09cc05d99f025c6a65fff openoffice-bin-1.1.1.ebuild 5855
 MD5 c304ae0ed4c510372ff5272a6bb4eefb openoffice-bin-1.1.4-r1.ebuild 5006
-MD5 06c9fee8dad0f86da652ed94689e3e9a ChangeLog 14114
+MD5 92854e9e513dac908ef1887eb5547a46 ChangeLog 14386
 MD5 7134ec08f56019fc5db7f3e84acea4df metadata.xml 460
 MD5 753fd14ec632a7fe71ab9abef357f93f files/digest-openoffice-bin-1.1.4-r1 141
 MD5 2b70af485f57d1db6983b006f16a0587 files/digest-openoffice-bin-1.1.1 171
 MD5 0f86c01ade990aa2607bcb973db780b5 files/digest-openoffice-bin-1.9.104 2554
+MD5 5df38e0d97a641ef5f53c45bf4cbd87b files/digest-openoffice-bin-1.9.109 2724
 MD5 1a7afed026065dd18f0fc20030fb6496 files/1.9/ooffice-wrapper-1.9 2734
+MD5 387701c9958c7bb67787d8449600969e files/1.9/ooo-wrapper2 4878
 MD5 4b2f3102e273ff72e281ed0d481b1526 files/1.1.1/ooffice-wrapper-1.3 9166
 MD5 4045e7a45d5209ff0ac93c5c5db0114b files/1.1.4/ooffice-wrapper-1.3 6659
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCqELfI1lqEGTUzyQRAtktAJ0Q0Hm/B91xagbN6+HDmNlvFdIU+gCgolaf
-vo2y/cHHoi8bnuLZcRt4udI=
-=dUdZ
------END PGP SIGNATURE-----

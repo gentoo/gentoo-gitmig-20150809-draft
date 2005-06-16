@@ -1,0 +1,150 @@
+#!/usr/bin/perl -w
+#*****************************************************************************
+# 
+#  ooffice - Wrapper script for OpenOffice.org
+# 
+#  Based on the Mandrake work.
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License version 2, as
+#  published by the Free Software Foundation.
+# 
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+# 
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+# 
+#*****************************************************************************
+
+use strict;
+use IO::Handle;
+use Fcntl ':flock';
+
+my $Debug = $ENV{OOO_DEBUG};
+my $DebugRH = $ENV{OOO_RH_DEBUG};
+
+# Define the vendor of this particular OOo pacakge
+my $VendorName = 'Gentoo';
+# Define system installation directory
+# Autoconf totally sucks for @libdir@ type substitution
+my $SystemInstallDir = '/opt/OpenOffice.org';
+# Suffix for parallel installable versioning
+my $BinSuffix = '2';
+# ooo-build version
+my $OOO_BUILDVERSION = 'PV';
+# Debugging
+
+if ( $DebugRH ) {
+	$Debug = 1;
+	$VendorName = "RedHat";
+}
+if ($Debug && $BinSuffix =~ /^\@/) {
+    $SystemInstallDir = "/usr/lib/ooo-1.9";
+    $BinSuffix = '1.9';
+}
+
+#=============================================================================
+# Main
+#=============================================================================
+
+# Parse command line arguments
+my @ooo_argv;
+my $session_quickstart;
+my $icons_set;
+my $widgets_set;
+while ($ARGV[0]) {
+    $_ = shift;
+    if (m/^--session-quickstart/) {
+	$session_quickstart = 1;
+    } elsif (m/^--icons-set/) {
+	$icons_set = shift;
+	(defined $icons_set) || die "Error: The option --icons-set requires a value\n" .
+	                            "For example: --icons-set kde\n";
+    } elsif (m/^--widgets-set/) {
+	$widgets_set = shift;
+	(defined $widgets_set) || die "Error: The option --widgets-set requires a value\n" .
+	                            "For example: --widgets-set gtk\n";
+    } elsif (m/^--version/) {
+	print "This is OpenOffice.org built with ooo-build-$OOO_BUILDVERSION\n";
+	exit 0;
+    } else {
+        push @ooo_argv, $_;
+    }
+}
+
+if (!@ooo_argv) {
+    my $arg;
+    if ($0 =~ m/\/oo(calc|draw|impress|math|web|writer|base)$BinSuffix$/) {
+        $arg = "-$1";
+    } elsif ($0 =~ m/\/oofromtemplate$BinSuffix$/) {
+        $arg = "slot:5500";
+    }
+
+    if ($arg) {
+        push @ooo_argv, "$arg";
+        $Debug && print "Append arg: $arg\n";
+    }
+} else {
+    $Debug && print "Ignoring type - since have filenames\n";
+}
+
+if (defined $widgets_set) {
+    $ENV{SAL_USE_VCLPLUGIN} = $widgets_set;
+}
+
+# select the preferred icons set by the running windowmanager
+unless (defined $icons_set) {
+    if ((exists $ENV{GNOME_DESKTOP_SESSION_ID}) && (-d "$SystemInstallDir/program/resource.gnome")) {
+        $icons_set="gnome";
+    } elsif ((exists $ENV{KDE_FULL_SESSION}) && (-d "$SystemInstallDir/program/resource.kde")) {
+	$icons_set="kde";
+    }
+
+    if (not defined $icons_set) {
+        if ((exists $ENV{WINDOWMANAGER}) && (-d "$SystemInstallDir/program/resource.kde") &&
+            ("$ENV{WINDOWMANAGER}" =~ ".*kde\$")) {
+                $icons_set="kde";
+        } elsif ((exists $ENV{WINDOWMANAGER}) && (-d "$SystemInstallDir/program/resource.gnome") &&
+            ("$ENV{WINDOWMANAGER}" =~ ".*gnome\$")) {
+                $icons_set="gnome";
+        } elsif (-d "$SystemInstallDir/program/resource.default") {
+            $icons_set="default";
+        } elsif (-d "$SystemInstallDir/program/resource.kde") {
+            $icons_set="kde";
+        } elsif (-d "$SystemInstallDir/program/resource.gnome") {
+            $icons_set="gnome";
+        } else {
+            $icons_set="default";
+        }
+    }
+}
+
+# FIXME - re-enable for icon .zip files in due course
+# if (defined $icons_set) {
+#    if (-d "$SystemInstallDir/program/resource.$icons_set") {
+#	$ENV{OOO_PREFERRED_RESOURCE_PATH} = "$SystemInstallDir/program/resource.$icons_set";
+#    } else {
+#	print STDERR "\n\n --- Warning - Your installation of OpenOffice.org does not provide\n";
+#	print STDERR "               the selected icons set \"$icons_set\". ---\n\n\n";
+#    }
+# }
+
+if (defined $widgets_set) {
+    $ENV{SAL_USE_VCLPLUGIN} = $widgets_set;
+}
+
+if ($session_quickstart) {
+    $Debug && print "Execute quickstarter\n";
+    push @ooo_argv, '-quickstart';
+}
+
+if (!(-f '/proc/version')) {
+    print STDERR "\n\n --- Warning - OO.o will not work without a mounted /proc filesystem --- \n\n\n";
+}
+
+# And here we go.
+exec "$SystemInstallDir/program/soffice", @ooo_argv
