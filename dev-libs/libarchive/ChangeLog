@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libarchive
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.1 2005/06/16 03:12:40 flameeyes Exp $
+
+*libarchive-1.02.027 (16 Jun 2005)
+
+  16 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +libarchive-1.02.027.ebuild:
+  First revision. libarchive is needed by bsdtar which is its primary interface.
+
