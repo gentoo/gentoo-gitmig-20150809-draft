@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20041129.ebuild,v 1.1 2004/12/05 01:01:09 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20050320.ebuild,v 1.1 2005/06/16 21:08:59 smithj Exp $
 
 IUSE=""
 

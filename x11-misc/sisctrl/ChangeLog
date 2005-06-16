@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/sisctrl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.6 2004/12/05 01:01:09 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.7 2005/06/16 21:08:59 smithj Exp $
+
+*sisctrl-0.0.20050320 (16 Jun 2005)
+
+  16 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  -sisctrl-0.0.20041129.ebuild, +sisctrl-0.0.20050320.ebuild:
+  version bump for #81705
 
 *sisctrl-0.0.20041129 (05 Dec 2004)
 
