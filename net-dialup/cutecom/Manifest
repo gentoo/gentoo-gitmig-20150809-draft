@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0dceeefd425f3a127e159cb8248ed791 cutecom-0.13.2.ebuild 831
-MD5 7abd3f0cb87d2aaa632af7940e9c2d0d cutecom-0.13.1.ebuild 720
+MD5 29d2cd1c0a8714daf1f75d808511fb07 ChangeLog 1000
 MD5 4a10bbb359afe0886696cfe9129bbcae cutecom-0.12.0.ebuild 680
-MD5 a3fa85d16c887efe46da6e5587a2af3b ChangeLog 915
+MD5 7abd3f0cb87d2aaa632af7940e9c2d0d cutecom-0.13.1.ebuild 720
 MD5 7660ada5608343368008e79f6b562969 metadata.xml 228
+MD5 c0c38c90299db8068aecb1d872aeebb2 cutecom-0.13.2.ebuild 835
 MD5 949bebbe2a4ce9e7429475bfa947381b files/digest-cutecom-0.12.0 65
 MD5 fd1117e58a928e7e489d70ac4e07bcfb files/digest-cutecom-0.13.1 65
 MD5 fbd7184dc8e77185b75d5511b0936700 files/digest-cutecom-0.13.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsJOcjiC39V7gKu0RAks3AJ0RwUaCg3FtH161AioWLHX7IULUZACeOyVd
-ueRogzDEvEzOtfFxZCe7qgE=
-=orie
------END PGP SIGNATURE-----
