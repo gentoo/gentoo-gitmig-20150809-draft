@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.30 2005/06/14 09:34:21 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.31 2005/06/16 23:35:05 xmerlin Exp $
+
+*drbd-0.7.11 (17 Jun 2005)
+
+  17 Jun 2005; Christian Zoffoli <xmerlin@gentoo.org> +drbd-0.7.11.ebuild:
+  drbd-0.7.11 added to portage.
 
   14 Jun 2005; Christian Zoffoli <xmerlin@gentoo.org> drbd-0.7.10.ebuild:
   removed heartbeat runtime dependency. Closed bug #95660.
