@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.83 2005/06/15 18:52:20 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.84 2005/06/16 18:49:29 plasmaroo Exp $
+
+*genkernel-3.2.0_pre7 (16 Jun 2005)
+
+  16 Jun 2005; <plasmaroo@gentoo.org> -genkernel-3.2.0_pre5.ebuild,
+  +genkernel-3.2.0_pre7.ebuild:
+  Fix LOCALVERSION (#88987) and add sleep timeout for loop module detection;
+  thanks rocket.
 
 *genkernel-3.2.0_pre5 (15 Jun 2005)
 
