@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 79fbc3d41ff1fea0f9ee1fcacaf25f5e xdrawchem-1.9.5.ebuild 915
+MD5 d5d83b9652a113cea256f9b9da684dbd ChangeLog 7637
 MD5 48badc561a12a33c147502cbafb41498 xdrawchem-1.9.4.ebuild 906
 MD5 ed8141def989de43929b6287a2e4099f xdrawchem-1.9.6.ebuild 917
-MD5 fe8183dc264315afac85eb79e9bd6716 xdrawchem-1.9.5.ebuild 916
-MD5 9491cb7820d130511dde45b7b30f5ca2 ChangeLog 7538
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 498da237913312065a68e2ad63daf0fb files/digest-xdrawchem-1.9.4 68
-MD5 b91307b158c81f4550e6103553f4d024 files/digest-xdrawchem-1.9.5 67
 MD5 fff76abd1dffe8c52d85f0fabb8304d0 files/digest-xdrawchem-1.9.6 67
+MD5 b91307b158c81f4550e6103553f4d024 files/digest-xdrawchem-1.9.5 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCsZc6KRy60XGEcJIRAlYPAKCl3oBpSv04w+SdRqCgRwW2+GTXEACeLtPm
+KrD41SahNjzq4Mm3AlcERTM=
+=JOSo
+-----END PGP SIGNATURE-----
