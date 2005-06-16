@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/basket
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.5 2004/09/29 05:23:45 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.6 2005/06/16 20:37:45 smithj Exp $
+
+  16 Jun 2005; Jonathan Smith <smithj@gentoo.org> basket-0.4.0d.ebuild:
+  updated homepage
 
   29 Sep 2004; <pyrania@gentoo.org> basket-0.4.0d.ebuild:
   Stable on x86.

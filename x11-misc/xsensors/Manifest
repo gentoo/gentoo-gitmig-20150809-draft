@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 43babb8e789051c65f4757e69e175353 xsensors-0.46.ebuild 582
-MD5 2d4df2158df55f5278035b552cf535a4 xsensors-0.20.ebuild 583
 MD5 f1f5e1ef58a1cf2fea683abefd23c02b ChangeLog 1087
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 2d4df2158df55f5278035b552cf535a4 xsensors-0.20.ebuild 583
+MD5 43babb8e789051c65f4757e69e175353 xsensors-0.46.ebuild 582
+MD5 95abf30446deddc67c16453e8b056f65 xsensors-0.47.ebuild 584
 MD5 fcb6c1c144df09e70f1f715e0520b63a files/digest-xsensors-0.20 65
 MD5 464cf221aef6ab1e576c77a59778a694 files/digest-xsensors-0.46 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIeHlI1lqEGTUzyQRAoD0AJ0Wbu18bV+R40a3cn2zrk3NQn+QvQCfaBDS
-Z7B6UgqFrZPMGjtOI6YeSzI=
-=T1Rq
------END PGP SIGNATURE-----
+MD5 e46ca33955a44ab6e75bd1e306997a21 files/digest-xsensors-0.47 65
