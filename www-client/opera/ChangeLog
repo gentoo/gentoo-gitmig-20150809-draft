@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.11 2005/06/01 00:03:06 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.12 2005/06/16 14:36:27 lanius Exp $
+
+*opera-8.01 (16 Jun 2005)
+
+  16 Jun 2005; Heinrich Wendel <lanius@gentoo.org> +opera-8.01.ebuild:
+  security bump, bug #96273, stable on x86 and amd64
 
   01 Jun 2005; Heinrich Wendel <lanius@gentoo.org> opera-8.00.ebuild:
   stable on x86
