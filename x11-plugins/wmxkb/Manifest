@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7404938a1499a3d7bfa1487154368def wmxkb-1.2.0.ebuild 677
-MD5 cf4fa0d1ae48f3f66894885c89903995 ChangeLog 533
 MD5 6a5e00e645b2e73634a9b9fa02448d2d wmxkb-1.2.2.ebuild 677
-MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+MD5 cf4fa0d1ae48f3f66894885c89903995 ChangeLog 533
+MD5 3926e20e1166bb22e2fa4c570adbff44 metadata.xml 173
 MD5 6a130f569c76b42786942f4b50b73082 files/digest-wmxkb-1.2.0 63
 MD5 a533fe57cfea3d25bb400d5f91ae1f60 files/digest-wmxkb-1.2.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCr+/+I7fK2cqeyXkRAnOFAKC7zYKxVlM9YimBTL141SEBoFkjQwCfVqLv
-qMSmaNYY8M89fPqhno9kzPY=
-=OJtY
------END PGP SIGNATURE-----
