@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsensors
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.8 2005/02/27 12:27:12 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.9 2005/06/16 20:43:00 augustus Exp $
+
+  16 Jun 2005; <augustus@gentoo.org> Manifest:
+  New xsensors release.
 
   27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org> xsensors-0.46.ebuild:
   Dependency update: sys-apps/lm-sensors -> sys-apps/lm_sensors.
