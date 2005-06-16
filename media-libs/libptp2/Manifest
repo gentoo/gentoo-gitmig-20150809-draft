@@ -1,4 +1,18 @@
-MD5 90937ee647f76ae36570711fc2a74d9f ChangeLog 833
-MD5 d14123b7f4d04874615aa527d58441d0 libptp2-1.0.1.ebuild 909
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 df0c4e3c054f1496afede819ee11f992 libptp2-1.0.1.ebuild 984
+MD5 6a6740b139056a14d7ee16c3699a7fd3 ChangeLog 1151
+MD5 69401846d90a5010dfda5be44e941ab2 libptp2-1.0.2.ebuild 991
 MD5 20edc79b41d07fe8e2db6a2448c7e2cf files/digest-libptp2-1.0.1 65
+MD5 a6f70bf32535c44ad3f82a74e5232021 files/digest-libptp2-1.0.2 65
+MD5 1ceef90a5e44b56ab54b1e8634695d6c files/libptp2-1.0.2-libusbversion.patch 495
+MD5 8138ffc75e460e62c0818880936a84af files/libptp2-1.0.1-libusbversion.patch 470
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCsYkQmdTrptrqvGERArj9AJ9TP0gI/+kPLj1Y69zESk4qb+aLygCgnehX
+mMwuOK+Pz7P1K3/pLbAkN8E=
+=+9mr
+-----END PGP SIGNATURE-----

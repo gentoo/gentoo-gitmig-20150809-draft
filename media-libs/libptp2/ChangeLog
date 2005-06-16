@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libptp2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.5 2005/01/26 20:11:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.6 2005/06/16 14:13:12 dragonheart Exp $
+
+*libptp2-1.0.2 (16 Jun 2005)
+
+  16 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/libptp2-1.0.1-libusbversion.patch,
+  +files/libptp2-1.0.2-libusbversion.patch, libptp2-1.0.1.ebuild,
+  +libptp2-1.0.2.ebuild:
+  patch to make work with libusb-0.1.10a (bug #95545) thanks to Jon White.
+  Version bump also
 
   26 Jan 2005; Markus Rothe <corsair@gentoo.org> libptp2-1.0.1.ebuild:
   Stable on ppc64
