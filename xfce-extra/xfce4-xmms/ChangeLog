@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-xmms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xmms/ChangeLog,v 1.3 2005/01/07 01:49:40 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xmms/ChangeLog,v 1.4 2005/06/16 23:42:39 bcowan Exp $
+
+*xfce4-xmms-0.3.1 (16 Jun 2005)
+
+  16 Jun 2005; Brad Cowan <bcowan@gentoo.org> +xfce4-xmms-0.3.1.ebuild:
+  Version bump.
 
 *xfce4-xmms-0.1.1-r1 (06 Jan 2005)
 
