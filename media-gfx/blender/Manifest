@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b024660fd2067edc9a0415547d5f5406 blender-2.35.ebuild 2802
-MD5 ea59778ab68849d46564ecc8c63c46b0 blender-2.37.ebuild 3390
-MD5 8a390c3a50c2abbcfa3fbbb7b87a8c54 blender-2.36-r1.ebuild 3309
-MD5 66a5b30c7230910dfe5d35c16ee19763 blender-2.34.ebuild 2819
-MD5 99ad2f8fe7c190a54f498946071a613b blender-2.36.ebuild 2929
-MD5 d319a736c17f64760fe7cfcfaf4d9ba5 blender-2.34-r1.ebuild 2931
-MD5 c0a672cfc77cd2c505cff3084002927c ChangeLog 8907
 MD5 493f38fb63d60a1ce275fdd2ea43d6e9 metadata.xml 587
-MD5 d95ef10fee53b71576c6da6c8163e748 files/blender.png 2119
-MD5 b5356307d35d0bfe73149428cafe23ff files/configure-fix.patch 754
-MD5 ef66b38c216b9ab1d78968353025116f files/digest-blender-2.34-r1 66
+MD5 d319a736c17f64760fe7cfcfaf4d9ba5 blender-2.34-r1.ebuild 2931
+MD5 99ad2f8fe7c190a54f498946071a613b blender-2.36.ebuild 2929
+MD5 8a390c3a50c2abbcfa3fbbb7b87a8c54 blender-2.36-r1.ebuild 3309
+MD5 b024660fd2067edc9a0415547d5f5406 blender-2.35.ebuild 2802
+MD5 1c05b0353b0755a5bd402b6c2e588d62 blender-2.37.ebuild 3344
+MD5 c58e8f9bce5660ef08b3ae3d2e90d6c4 ChangeLog 9022
+MD5 66a5b30c7230910dfe5d35c16ee19763 blender-2.34.ebuild 2819
+MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36 65
 MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36-r1 65
 MD5 ef66b38c216b9ab1d78968353025116f files/digest-blender-2.34 66
-MD5 2fbf0a94ba625bce0c2af487d90cf7f5 files/digest-blender-2.35 66
-MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36 65
-MD5 2ba439f544d1a154d6ab27d68cd059fc files/digest-blender-2.37 65
-MD5 b8e304980dc2bfd9a7157037d6ead44b files/blender.desktop 197
+MD5 b5356307d35d0bfe73149428cafe23ff files/configure-fix.patch 754
 MD5 ee3557021be75082093de0d643b32260 files/blender-2.36-dirs.patch 1970
-MD5 bcc3b86202d4c6bb85ef9cef08bfcf9e files/blender-2.37-dirs.patch 725
+MD5 ef66b38c216b9ab1d78968353025116f files/digest-blender-2.34-r1 66
+MD5 b8e304980dc2bfd9a7157037d6ead44b files/blender.desktop 197
+MD5 2fbf0a94ba625bce0c2af487d90cf7f5 files/digest-blender-2.35 66
+MD5 d95ef10fee53b71576c6da6c8163e748 files/blender.png 2119
+MD5 2ba439f544d1a154d6ab27d68cd059fc files/digest-blender-2.37 65
 MD5 705b95605426ad9d562457fdbbff5460 files/blender-2.32.patch 2562
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrvgbI1lqEGTUzyQRArQ3AJ9a0uMPuiMTbrXY39cwsFYt4pXLkACfQmQF
-641Wv8OcfVg7zGJMoXsmNCo=
-=GqQI
------END PGP SIGNATURE-----
+MD5 bcc3b86202d4c6bb85ef9cef08bfcf9e files/blender-2.37-dirs.patch 725
