@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-2.2.3.ebuild,v 1.1 2005/06/05 16:30:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-2.2.3.ebuild,v 1.2 2005/06/16 13:36:10 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.novell.com/products/desktop/features/evolution.html"
 LICENSE="GPL-2"
 
 SLOT="2.0"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE="debug doc"
 
 RDEPEND=">=mail-client/evolution-2.2
