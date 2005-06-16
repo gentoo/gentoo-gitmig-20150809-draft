@@ -1,0 +1,13 @@
+diff -Nur mysql-query-browser-1.1.11.orig/mysql-query-browser/source/linux/MQWorkArea.cc mysql-query-browser-1.1.11/mysql-query-browser/source/linux/MQWorkArea.cc
+--- mysql-query-browser-1.1.11.orig/mysql-query-browser/source/linux/MQWorkArea.cc	2005-06-02 03:19:03.000000000 +0000
++++ mysql-query-browser-1.1.11/mysql-query-browser/source/linux/MQWorkArea.cc	2005-06-16 16:26:15.800899738 +0000
+@@ -275,9 +275,6 @@
+     _mainw->set_status(ufmt(_("Default schema not set. You must select one in the File menu before executing any query.")));
+ 
+   update_toolbar_sensitivity();
+-  
+-  if (!_dispatcher->check_version(5,0,1))
+-    _xml->get_widget("make_view_btn")->set_sensitive(false);
+ }
+ 
+ 

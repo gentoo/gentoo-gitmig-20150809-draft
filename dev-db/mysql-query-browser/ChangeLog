@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-query-browser
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/ChangeLog,v 1.17 2005/06/16 16:16:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/ChangeLog,v 1.18 2005/06/16 16:34:14 swegener Exp $
+
+  16 Jun 2005; Sven Wegener <swegener@gentoo.org>
+  +files/1.1.11-no-unkown-widgets.patch, mysql-query-browser-1.1.11.ebuild:
+  Added a patch that removes references to unknown widgets.
 
 *mysql-query-browser-1.1.11 (16 Jun 2005)
 
