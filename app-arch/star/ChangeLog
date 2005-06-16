@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.19 2005/04/14 03:03:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.20 2005/06/16 17:42:05 slarti Exp $
+
+*star-1.5_alpha50 (16 Jun 2005)
+
+  16 Jun 2005; Tom Martin <slarti@gentoo.org> +metadata.xml,
+  +star-1.5_alpha50.ebuild:
+  Version bump, and take over as maintainer. Lots of cleanups.
 
   13 Apr 2005; Tom Gall <tgall@gentoo.org> 
   star-1.5_alpha46.ebuild:
