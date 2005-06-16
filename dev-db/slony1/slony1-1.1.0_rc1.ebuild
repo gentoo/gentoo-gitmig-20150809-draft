@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-1.1.0_rc1.ebuild,v 1.1 2005/06/15 14:53:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-1.1.0_rc1.ebuild,v 1.2 2005/06/16 08:05:17 dholm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://developer.postgresql.org/~wieck/slony1/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="dev-db/postgresql"
 
