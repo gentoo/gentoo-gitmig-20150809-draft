@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.6 2005/06/14 16:27:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.7 2005/06/16 22:00:39 taviso Exp $
 
 inherit eutils pam
 
@@ -24,7 +24,8 @@ src_unpack() {
 	unpack ${A}; cd ${S}
 
 	# compatability fix.
-	use skey && epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
+	epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
+	epatch ${FILESDIR}/${P}-ldap-tls_cacert.diff
 
 	# additional variables to disallow, should user disable env_reset.
 
@@ -69,6 +70,9 @@ src_unpack() {
 #		sudo_bad_var 'RUBYPATH'       # ruby, script search path. <?>
 		sudo_bad_var 'ZDOTDIR'        # zsh, path to search for dotfiles.
 	einfo "...done."
+
+	# prevent binaries from being stripped.
+	sed -i 's/-s \([(sudo|visudo)]\)/\1/g' ${S}/Makefile.in
 }
 
 src_compile() {

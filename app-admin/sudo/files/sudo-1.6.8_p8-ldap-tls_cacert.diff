@@ -1,0 +1,10 @@
+--- ldap.c.orig	2005-06-16 22:55:41.047152568 +0100
++++ ldap.c	2005-06-16 22:56:49.707714576 +0100
+@@ -539,6 +539,7 @@
+     else MATCH_S("ssl",     ldap_conf.ssl)
+     else MATCH_B("tls_checkpeer",   ldap_conf.tls_checkpeer)
+     else MATCH_S("tls_cacertfile",  ldap_conf.tls_cacertfile)
++    else MATCH_S("tls_cacert",      ldap_conf.tls_cacertfile)
+     else MATCH_S("tls_cacertdir",   ldap_conf.tls_cacertdir)
+     else MATCH_S("tls_randfile",    ldap_conf.tls_random_file)
+     else MATCH_S("tls_ciphers",     ldap_conf.tls_cipher_suite)
