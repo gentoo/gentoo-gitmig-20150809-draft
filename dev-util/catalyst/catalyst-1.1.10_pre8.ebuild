@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10_pre8.ebuild,v 1.1 2005/06/15 21:34:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10_pre8.ebuild,v 1.2 2005/06/16 13:27:14 wolf31o2 Exp $
 
 inherit eutils
 
@@ -37,8 +37,6 @@ src_install() {
 	doins modules/* || die "copying modules/*"
 	insinto /usr/lib/${PN}/livecd/cdtar
 	doins livecd/cdtar/* || die "copying cdtar/*"
-	exeinto /usr/lib/${PN}/livecd/isogen
-	doexe livecd/isogen/* || die "copying isogen/*"
 	exeinto /usr/lib/${PN}/livecd/runscript
 	doexe livecd/runscript/* || die "copying runscript/*"
 	exeinto /usr/lib/${PN}/livecd/runscript-support
