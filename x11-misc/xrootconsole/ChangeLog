@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/xrootconsole
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.17 2005/03/08 16:58:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.18 2005/06/16 23:55:59 smithj Exp $
+
+*xrootconsole-0.6 (16 Jun 2005)
+
+  16 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/xrootconsole-0.6.makefile.patch,
+  +files/xrootconsole-0.6.manpage.patch,
+  +files/xrootconsole-0.6.noversion.patch, -xrootconsole-0.4.ebuild,
+  +xrootconsole-0.6.ebuild:
+  version bump for #84271
 
   08 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   xrootconsole-0.4-r1.ebuild:

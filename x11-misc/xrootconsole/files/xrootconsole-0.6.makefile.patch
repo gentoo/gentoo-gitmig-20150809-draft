@@ -1,0 +1,12 @@
+--- Makefile.orig	2005-03-06 16:46:36.325616480 +0900
++++ Makefile	2005-03-06 16:46:55.140756144 +0900
+@@ -76,5 +76,7 @@
+ 	rm -f $(EXEC) *.o core *~
+ 
+ install: $(EXEC)
+-	cp $(EXEC) $(BINDIR)
+-	cp $(MANFILE) $(MANDIR)
++	install -d $(BINDIR)
++	install -d $(MANDIR)
++	install $(EXEC) $(BINDIR)
++	install $(MANFILE) $(MANDIR)
