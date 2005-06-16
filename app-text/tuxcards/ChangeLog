@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tuxcards
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.10 2005/06/05 12:09:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.11 2005/06/16 15:11:34 ticho Exp $
+
+  16 Jun 2005; Andrej Kacian <ticho@gentoo.org> -tuxcards-1.1.ebuild,
+  tuxcards-1.2.ebuild:
+  Build with qt3. Closes bug #96201, by Christian Hesse <mail at
+  earthworm.de>. Removed ebuild for 1.1.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> tuxcards-1.2.ebuild:
   Stable on ppc.

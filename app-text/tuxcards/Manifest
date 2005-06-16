@@ -1,6 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 00c4ea8d5a23ab3572c4e3e421c009b0 tuxcards-1.2.ebuild 1042
+MD5 546b76ddd600c29c3232d356bf0be972 ChangeLog 1645
 MD5 7dbb92cd2f9678d8a28634c532431cf4 metadata.xml 254
-MD5 75c52c34f735f562bb963dd246015032 ChangeLog 1446
-MD5 7833b5a279dc97ed5d79bc9512d92390 tuxcards-1.1.ebuild 838
-MD5 276b418e4f98cc44e1da673d1ccde249 tuxcards-1.2.ebuild 1035
-MD5 7496f3cc8989aa48c37967ab36dcd0af files/digest-tuxcards-1.1 64
 MD5 210b415d2d1cd19da5aecd13de112a99 files/digest-tuxcards-1.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCsZbqQlM6RnzZP+IRAuH/AJ40d4vDREfuSkuox72zAfWqKCn4KwCgs2pA
+ChmSqJMG+IdPYzsb97vIm4Q=
+=j4lW
+-----END PGP SIGNATURE-----
