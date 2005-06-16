@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.11.ebuild,v 1.1 2005/04/04 18:54:32 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.11.ebuild,v 1.2 2005/06/16 20:47:36 foser Exp $
 
 inherit gnome2 eutils
 
@@ -40,8 +40,10 @@ pkg_setup() {
 }
 
 src_install() {
-	gnome2_src_install
+
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 	rm -rf ${D}/usr/share/gramps.desktop
+
 }
 
 USE_DESTDIR="1"
