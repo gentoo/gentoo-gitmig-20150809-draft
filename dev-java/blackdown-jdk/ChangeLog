@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.83 2005/06/16 09:37:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.84 2005/06/16 17:27:33 axxo Exp $
+
+  16 Jun 2005; Thomas Matthijs <axxo@gentoo.org>
+  files/digest-blackdown-jdk-1.4.2.02, Manifest:
+  fix digest
 
 *blackdown-jdk-1.4.2.02 (16 Jun 2005)
 
