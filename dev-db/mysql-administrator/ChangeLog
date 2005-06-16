@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-administrator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/ChangeLog,v 1.18 2005/04/13 08:11:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/ChangeLog,v 1.19 2005/06/16 16:04:13 swegener Exp $
+
+*mysql-administrator-1.0.22a (16 Jun 2005)
+
+  16 Jun 2005; Sven Wegener <swegener@gentoo.org>
+  -files/1.0.19-crontab.patch, -mysql-administrator-1.0.19-r1.ebuild,
+  mysql-administrator-1.0.20.ebuild, +mysql-administrator-1.0.22a.ebuild:
+  Version bump.
 
 *mysql-administrator-1.0.20 (13 Apr 2005)
 
