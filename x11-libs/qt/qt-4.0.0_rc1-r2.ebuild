@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_rc1-r1.ebuild,v 1.2 2005/06/14 20:28:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_rc1-r2.ebuild,v 1.1 2005/06/16 15:52:53 caleb Exp $
 
 inherit eutils flag-o-matic
 
 SRCTYPE="opensource-desktop"
-SNAPSHOT="20050614"
+SNAPSHOT="20050616"
 #SNAPSHOT=""
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -35,15 +35,17 @@ DEPEND="virtual/x11 virtual/xft >=media-libs/freetype-2
 
 pkg_setup() {
 	QTBASEDIR=/usr/$(get_libdir)/qt4
-	QTPREFIXDIR=${S}
+	QTPREFIXDIR=/usr/$(get_libdir)/qt4
 	QTBINDIR=/usr/bin
 	QTLIBDIR=/usr/$(get_libdir)/qt4
-	QTDOCDIR=/usr/share/qt4/doc
 	QTDATADIR=/usr/share/qt4
+	QTDOCDIR=${QTDATADIR}/doc
 	QTHEADERDIR=/usr/include/qt4
-	QTPLUGINDIR=/usr/$(get_libdir)/qt4/plugins
+	QTPLUGINDIR=${QTLIBDIR}/plugins
 	QTSYSCONFDIR=/etc/qt4
-	QTTRANSDIR=/usr/share/qt4/translations
+	QTTRANSDIR=${QTDATADIR}/translations
+	QTEXAMPLESDIR=${QTDATADIR}/examples
+	QTDEMOSDIR=${QTDATADIR}/demos
 
 	PLATFORM=$(qt_mkspecs_dir)
 }
@@ -78,6 +80,7 @@ src_unpack() {
 	# Don't let the user go too overboard with flags.  If you really want to, uncomment
 	# out the line below and give 'er a whirl.
 	strip-flags
+	replace-flags -O3 -O2
 
 	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
 		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
@@ -127,9 +130,13 @@ src_compile() {
 		-platform ${PLATFORM} -xplatform ${PLATFORM} \
 		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR} -datadir ${QTDATADIR} \
 		-docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR} -plugindir ${QTPLUGINDIR} \
-		-sysconfdir ${QTSYSCONFDIR} -translationdir ${QTTRANSDIR} ${myconf} || die
+		-sysconfdir ${QTSYSCONFDIR} -translationdir ${QTTRANSDIR} \
+		-examplesdir ${QTEXAMPLESDIR} -demosdir ${QTDEMOSDIR} ${myconf} || die
 
 	emake sub-tools-all-ordered || die
+	if use examples; then
+		emake sub-examples-all-ordered || die
+	fi
 }
 
 src_install() {
@@ -143,20 +150,21 @@ src_install() {
 
 	make INSTALL_ROOT=${D} sub-tools-install_subtargets-ordered || die
 	if use examples; then
-		dodir ${QTDATADIR}/examples
-		cp -a ${S}/examples/* ${D}/${QTDATADIR}/examples
-		dodir ${QTDATADIR}/demos
-		cp -a ${S}/demos/* ${D}/${QTDATADIR}/demos
+		make INSTALL_ROOT=${D} sub-examples-install_subtargets
+		# dodir ${QTDATADIR}/examples
+		# cp -a ${S}/examples/* ${D}/${QTDATADIR}/examples
+		# dodir ${QTDATADIR}/demos
+		# cp -a ${S}/demos/* ${D}/${QTDATADIR}/demos
 	fi
 
 	make INSTALL_ROOT=${D} install_qmake || die
 	make INSTALL_ROOT=${D} install_mkspecs || die
 
 	# The QtDesigner and QtAssistant header files aren't installed..not sure why
-	cp -a ${S}/include/QtDesigner ${D}/${QTHEADERDIR}/QtDesigner
-	rm -rf ${D}/${QTHEADERDIR}/QtDesigner/private
+	#cp -a ${S}/include/QtDesigner ${D}/${QTHEADERDIR}/QtDesigner
+	#rm -rf ${D}/${QTHEADERDIR}/QtDesigner/private
 
-	cp -a ${S}/include/QtAssistant ${D}/${QTHEADERDIR}/QtAssistant
+	#cp -a ${S}/include/QtAssistant ${D}/${QTHEADERDIR}/QtAssistant
 
 	# Fix symlink
 	cd ${D}/${QTDATADIR}/mkspecs

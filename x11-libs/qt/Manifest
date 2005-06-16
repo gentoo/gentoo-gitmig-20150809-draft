@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c70df8ab5924eceef30f1a659840bc40 qt-4.0.0_rc1-r1.ebuild 6427
 MD5 32ad8d8bffefcdf4d7885199b7c55890 qt-4.0.0_beta2-r3.ebuild 5983
 MD5 4f8e5fad7ce7529afc9f924f618ae0f0 qt-3.3.4-r3.ebuild 8950
 MD5 88875c77c2482de25169850cfc19faf5 qt-3.3.3-r1.ebuild 7987
 MD5 98c2c897d6bb5fd3f7c6af49cd8decb7 qt-3.3.4-r2.ebuild 8565
+MD5 75ce8582791a0d174df19da9843fafb9 qt-4.0.0_rc1-r2.ebuild 6711
 MD5 e5e1f28d1973386abc7d593bd7330d62 qt-3.3.4-r4.ebuild 9306
-MD5 69933beab25922542e51c88c0f4d0001 ChangeLog 37652
+MD5 a5ac51c2e026de2007ab0beb7181198e ChangeLog 37822
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 d9f916370f1950762a23b8f04dd22232 qt-4.0.0_rc1.ebuild 6125
 MD5 74acd4c098f2c4bd70bdea585f0cb096 files/qt-no-rpath.patch 352
@@ -15,7 +12,7 @@ MD5 8ffca1b1b7523339af04fd24b4595ce4 files/0001-dnd_optimization.patch 5623
 MD5 0cc401186f490faf55906cd458280db8 files/0037-dnd-timestamp-fix.patch 2138
 MD5 8b3da5dae8babfcbdee3be465579d6c2 files/0002-dnd_active_window_fix.patch 7289
 MD5 c7f65a0625242eccf159e2b8ee74976d files/45qt3 109
-MD5 11541658104ec9ed59f7b6036a8e3942 files/digest-qt-4.0.0_rc1-r1 104
+MD5 efa1381655dae2c9afb77ac85fa6ef09 files/digest-qt-4.0.0_rc1-r2 104
 MD5 b9689fa9461944ba25ebf0acde5fb70b files/qt-3.3.4-flickerfree_qiconview_buffered.patch 3347
 MD5 99d57476c4605ca076db91f8f086a326 files/digest-qt-4.0.0_beta2-r3 100
 MD5 4122542a37b787efb9476b0fb1fdafc0 files/qt-3.3.4-0047-fix-kmenu-widget.diff 992
@@ -41,10 +38,3 @@ MD5 471c09f2792eec732d715a983b7f7244 files/qt-3.3.3-immodule-20040819-event-inve
 MD5 eb6eb6b68c8f747b12a3a53efc4b6480 files/0038-dragobject-dont-prefer-unknown.patch 2551
 MD5 e0a483959b1d3dad0fc58adc242624c1 files/qt-3.3.3-amd64-fullscreen.patch 1220
 MD5 fff1c03b4a3ad38904a30d1b2de88a07 files/qt4b2r3_nomkdir.patch 866
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrz4YI1lqEGTUzyQRAh91AKDDr6/HyZ6ybvu8mmaNRMRXG4HDnwCeJXEA
-HJfDLQnfg1X0NYirtlehY2A=
-=ANE6
------END PGP SIGNATURE-----
