@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.23 2005/05/16 16:09:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.24 2005/06/16 21:36:27 wolf31o2 Exp $
+
+*ut2004-3355-r1 (16 Jun 2005)
+
+  16 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +ut2004-3355-r1.ebuild:
+  Added amd64 patch from icculus and closing bug #94397.
 
   16 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> -ut2004-3339.ebuild,
   ut2004-3355.ebuild:
