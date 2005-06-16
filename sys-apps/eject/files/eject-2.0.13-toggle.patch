@@ -81,10 +81,10 @@ or the 4th and 5th hunks will fail.
  
 +	/* handle -T option */
 +	if (T_option) {
++		struct timeval tv, tv2;
 +		if (v_option)
 +			printf(_("%s: trying to eject\n"), programName);
 +		fd = OpenDevice(deviceName);
-+		struct timeval tv, tv2;
 +		gettimeofday(&tv, NULL);
 +		EjectCdrom(fd);
 +		gettimeofday(&tv2, NULL);
