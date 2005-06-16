@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.14.ebuild,v 1.6 2005/05/27 20:30:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.14.ebuild,v 1.7 2005/06/16 20:34:02 herbs Exp $
 
 inherit gnome2 eutils mono
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64 sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 
 RDEPEND=">=dev-libs/glib-2
 	doc? ( >=dev-util/gtk-doc-1.0 )"
@@ -30,6 +30,9 @@ src_unpack() {
 	sed -i -e 's:db2html:docbook2html -o gmime-tut:g' \
 		docs/tutorial/Makefile.am docs/tutorial/Makefile.in \
 		|| die "sed failed (1)"
+	# Use correct libdir in pkgconfig file
+	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
+		mono/gmime-sharp.pc.in || die "sed failed (2)"
 }
 
 src_compile() {
