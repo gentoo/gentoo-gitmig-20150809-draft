@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r3.ebuild,v 1.2 2005/05/22 11:55:33 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r3.ebuild,v 1.3 2005/06/16 13:25:48 ka0ttic Exp $
 
 inherit eutils flag-o-matic
 
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/traceroute-1.4a5-llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch.patch
 	epatch "${FILESDIR}"/traceroute-1.4a5-secfix.patch
 	epatch "${FILESDIR}"/traceroute-1.4a5-unaligned.patch
+	epatch "${FILESDIR}"/traceroute-1.4-emptylabel.patch
 
 	# assume linux by default #26699
 	sed -i '/^t=/s:generic:linux:' configure
