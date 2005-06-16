@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mambo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.10 2005/06/02 14:08:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.11 2005/06/16 12:26:25 rl03 Exp $
+
+*mambo-4.5.2.3 (16 Jun 2005)
+
+  16 Jun 2005; Renat Lumpau <rl03@gentoo.org> +mambo-4.5.2.3.ebuild:
+  Version bump (bug #96183).
 
 *mambo-4.5.2.2 (02 Jun 2005)
 
