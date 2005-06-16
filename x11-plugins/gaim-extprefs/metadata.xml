@@ -2,5 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-im</herd>
-<longdescription>Gaim Extended Preferences is a plugin that takes advantage of existing gaim functionality to provide preferences that are often desired but not are not considered worthy of inclusion in Gaim itself.</longdescription>
+<longdescription>A plugin that takes advantage of existing gaim functionality to provide preferences that are often desired but are not included in gaim.</longdescription>
 </pkgmetadata>
