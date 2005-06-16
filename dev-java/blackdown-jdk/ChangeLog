@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.84 2005/06/16 17:27:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.85 2005/06/16 18:32:36 luckyduck Exp $
+
+  16 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  blackdown-jdk-1.4.2.02.ebuild:
+  Marked 1.4.2.02 stable on amd64 and x86 wrt #96229.
 
   16 Jun 2005; Thomas Matthijs <axxo@gentoo.org>
   files/digest-blackdown-jdk-1.4.2.02, Manifest:
