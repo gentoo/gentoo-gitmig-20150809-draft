@@ -2,7 +2,7 @@ MD5 7f52bbd66845629478afc32e9f0753e3 openoffice-bin-1.9.109.ebuild 5858
 MD5 506e205d7acdff08907fdca2b8f80332 openoffice-bin-1.9.104.ebuild 5610
 MD5 1a091dd047f09cc05d99f025c6a65fff openoffice-bin-1.1.1.ebuild 5855
 MD5 c304ae0ed4c510372ff5272a6bb4eefb openoffice-bin-1.1.4-r1.ebuild 5006
-MD5 92854e9e513dac908ef1887eb5547a46 ChangeLog 14386
+MD5 edf7577bf77ecc2b970f2ab6d2f520d3 ChangeLog 14426
 MD5 7134ec08f56019fc5db7f3e84acea4df metadata.xml 460
 MD5 753fd14ec632a7fe71ab9abef357f93f files/digest-openoffice-bin-1.1.4-r1 141
 MD5 2b70af485f57d1db6983b006f16a0587 files/digest-openoffice-bin-1.1.1 171

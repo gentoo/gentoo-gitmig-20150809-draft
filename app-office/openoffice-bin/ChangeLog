@@ -1,13 +1,14 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.82 2005/06/16 16:48:15 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.83 2005/06/16 16:52:45 suka Exp $
 
 *openoffice-bin-1.9.109 (16 Jun 2005)
 
   16 Jun 2005; Andreas Proschofsky <suka@gentoo.org>
   +files/1.9/ooo-wrapper2, +openoffice-bin-1.9.109.ebuild:
   New beta version of OOo 2.0. This uses a new wrapper, also adds two new
-  languages (hr and lt) plus some minor fixes
+  languages (hr and lt) plus some minor fixes and the user install dir
+  has changed.
 
   05 Jun 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-bin-1.9.104.ebuild:
