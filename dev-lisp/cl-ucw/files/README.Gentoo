@@ -33,7 +33,7 @@ path passed to SETUP-LOGGERS to your own choice in logging directory.
 Once you have adjusted your start.lisp and utils.lisp, start UCW within your
 Lisp REPL like this:
 
-    (asdf:oos 'adsf:load-op :ucw)
+    (asdf:oos 'asdf:load-op :ucw)
     (load "/path/to/start.lisp")
 
 By default, the admin and examples applications are available at:

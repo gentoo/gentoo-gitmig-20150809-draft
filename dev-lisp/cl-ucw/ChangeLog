@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-ucw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/ChangeLog,v 1.4 2005/06/15 20:31:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/ChangeLog,v 1.5 2005/06/16 01:07:04 mkennedy Exp $
+
+  16 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> files/README.Gentoo:
+  Corrected typo in README.Gentoo
 
   15 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-ucw-0.3.9.ebuild:
   If araneida is not in USE, then dev-lisp/cl-puri should be a dependency;
