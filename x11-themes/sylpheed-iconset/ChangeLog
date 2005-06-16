@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/sylpheed-iconset
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/ChangeLog,v 1.20 2004/12/28 22:36:07 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/ChangeLog,v 1.21 2005/06/16 14:55:12 genone Exp $
+
+  16 Jun 2005; Marius Mauch <genone@gentoo.org>
+  sylpheed-iconset-20040929.ebuild:
+  stable for x86 and amd64
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
