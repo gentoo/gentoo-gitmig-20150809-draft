@@ -1,7 +1,8 @@
+MD5 d556b2550620b8b0dd5d76921d964cc9 pmacct-0.8.7.ebuild 1506
 MD5 497e26efadd51aa9e5b90e0bddc13866 pmacct-0.8.4.ebuild 1505
 MD5 0c702306aaa3fe89cd4e431520e8b188 pmacct-0.8.6.ebuild 1506
 MD5 1a8be45d950c81b34a3b76149de79975 pmacct-0.8.3.ebuild 1493
-MD5 074e21633380862a71d6c0ba7e0b6999 ChangeLog 3244
+MD5 b8c572e57f251903285f9998ba6f25f0 ChangeLog 3450
 MD5 eb3bf79f430dc9d11927239b72ac581d pmacct-0.8.5.ebuild 1505
 MD5 808a9a788ae7955af0a3c442cafee866 metadata.xml 243
 MD5 50333f1c79a80df31266ce7235cbf36c files/pmacctd-conf.d 313
@@ -10,3 +11,4 @@ MD5 ab598b974f8a63136ead320763bf7a5f files/digest-pmacct-0.8.3 64
 MD5 5aada4dc083afac65f161d24379db6fc files/digest-pmacct-0.8.4 64
 MD5 f6c685e6ca8ed840ccd737080816aeec files/digest-pmacct-0.8.5 64
 MD5 dc1c27641a784b8d4e4397e5415aa7c8 files/digest-pmacct-0.8.6 64
+MD5 c0caf197a66283cd3f7141151216ee48 files/digest-pmacct-0.8.7 64
