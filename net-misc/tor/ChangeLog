@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.40 2005/06/12 01:28:31 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.41 2005/06/16 23:21:03 humpback Exp $
+
+*tor-0.0.9.10 (16 Jun 2005)
+
+  16 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  -tor-0.0.9.5.ebuild, -tor-0.0.9.6.ebuild, -tor-0.0.9.7.ebuild,
+  -tor-0.0.9.9.ebuild, +tor-0.0.9.10.ebuild:
+  Added version 0.9.0.10 that fixes a security bug, removed older versions
+  that were affected.
 
   12 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>; tor-0.0.9.5.ebuild,
   tor-0.0.9.6.ebuild, tor-0.0.9.7.ebuild, tor-0.0.9.9.ebuild:
