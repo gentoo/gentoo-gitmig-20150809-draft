@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/gperf-3.0.1.ebuild,v 1.13 2005/05/13 23:00:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/gperf-3.0.1.ebuild,v 1.14 2005/06/16 02:42:16 halcy0n Exp $
+
+inherit eutils
 
 DESCRIPTION="A perfect hash function generator"
 HOMEPAGE="http://www.gnu.org/software/gperf/gperf.html"
@@ -12,6 +14,11 @@ KEYWORDS="alpha amd64 arm hppa mips ppc ppc64 sparc x86 ~ia64"
 IUSE=""
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+}
 
 src_install() {
 	make DESTDIR=${D} install || die

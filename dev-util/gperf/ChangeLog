@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gperf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.24 2005/05/13 23:00:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.25 2005/06/16 02:42:16 halcy0n Exp $
+
+  16 Jun 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/gperf-3.0.1-gcc4.patch, gperf-3.0.1.ebuild:
+  Added patch to fix compilation with gcc-4.0, thanks to Chen Xiangyang
+  <chenxy@opencjk.org> ; bug #95835
 
   13 May 2005; Bryan Østergaard <kloeri@gentoo.org> gperf-3.0.1.ebuild:
   ~ia64 keyword.

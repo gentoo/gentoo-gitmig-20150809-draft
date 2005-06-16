@@ -1,0 +1,13 @@
+diff -Naur gperf-3.0.1.old/src/positions.h gperf-3.0.1/src/positions.h
+--- gperf-3.0.1.old/src/positions.h	2003-04-07 17:48:19.000000000 +0800
++++ gperf-3.0.1/src/positions.h	2005-06-12 08:17:14.000000000 +0800
+@@ -28,6 +28,9 @@
+ 
+ /* This class denotes a set of byte positions, used to access a keyword.  */
+ 
++class PositionIterator;
++class PositionReverseIterator;
++
+ class Positions
+ {
+   friend class PositionIterator;
