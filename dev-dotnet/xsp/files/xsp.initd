@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/xsp.initd,v 1.2 2004/07/14 21:43:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/xsp.initd,v 1.3 2005/06/16 08:50:49 urilith Exp $
 
 depend() {
 	need net
@@ -16,7 +16,7 @@ start() {
 		--make-pidfile \
 		--pidfile /var/run/aspnet/xsp.pid \
 		--chuid aspnet \
-		--exec /usr/bin/mono /usr/bin/xsp.exe -- --root ${MonoServerRoot} --port ${MonoServerPort} --nonstop
+		--exec /usr/bin/mono /usr/lib/mono/1.0/xsp.exe -- --root ${MonoServerRoot} --port ${MonoServerPort} --nonstop
 	eend $?
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.24 2005/05/22 11:07:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.25 2005/06/16 08:50:49 urilith Exp $
+
+  16 Jun 2005; Michael Tindal <urilith@gentoo.org> files/xsp.initd:
+  Fix init.d script.
 
   22 May 2005; Simon Stelling <blubb@gentoo.org> xsp-1.0.9.ebuild:
   added ~amd64 keyword
