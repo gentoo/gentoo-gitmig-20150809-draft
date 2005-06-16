@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.9 2005/06/16 10:09:30 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.10 2005/06/16 13:24:44 tigger Exp $
+
+  16 Jun 2005; Rob Holland <tigger@gentoo.org> tenshi-0.3.3.ebuild:
+  stable on x86
 
 *tenshi-0.3.4 (16 Jun 2005)
 
