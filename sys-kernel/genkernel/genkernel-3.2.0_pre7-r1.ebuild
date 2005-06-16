@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.2.0_pre7.ebuild,v 1.1 2005/06/16 18:49:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.2.0_pre7-r1.ebuild,v 1.1 2005/06/16 21:53:26 wolf31o2 Exp $
 
 VERSION_DMAP='1.00.17'
 VERSION_DMRAID='1.0.0.rc6'
@@ -26,6 +26,7 @@ DEPEND="sys-fs/e2fsprogs
 
 src_unpack() {
 	unpack ${P}.tar.bz2
+	epatch ${FILESDIR}/${P}-arch.diff
 }
 
 src_install() {
