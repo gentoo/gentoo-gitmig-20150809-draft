@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wsoundserver/wsoundserver-0.4.1.ebuild,v 1.1 2005/06/15 09:26:09 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wsoundserver/wsoundserver-0.4.1.ebuild,v 1.2 2005/06/16 08:37:16 dholm Exp $
 
 MY_P="${P/wsoundserver/WSoundServer}-new"
 S="${WORKDIR}/${MY_P}"
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 src_compile() {
 	local myconf="--prefix=/usr --with-x --sysconfdir=/etc/X11"

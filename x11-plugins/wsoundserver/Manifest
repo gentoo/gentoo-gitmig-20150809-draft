@@ -1,5 +1,5 @@
-MD5 910bdb48c86c4697c8773fd7fea3ef87 wsoundserver-0.4.1.ebuild 1279
-MD5 036330111b9b399961109b8a59754d19 ChangeLog 372
+MD5 16686f068365df6d90f86887b7593ffc ChangeLog 462
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 f2ecdca15cf03b5ff41b47037444e9f0 wsoundserver-0.4.1.ebuild 1284
 MD5 70c168d98548414b9b90a83dbc13bdfe files/WSoundServer.xpm 12956
 MD5 327ba71e47dc0fbfdc91738e1ca2a70c files/digest-wsoundserver-0.4.1 74
