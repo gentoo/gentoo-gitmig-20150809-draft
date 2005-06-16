@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.0.15-r2.ebuild,v 1.9 2005/06/05 11:49:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.0.15-r2.ebuild,v 1.10 2005/06/16 20:45:59 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -69,6 +69,10 @@ src_compile() {
 		--disable-threads || die "configure balsa failed"
 
 	emake || die "emake failed"
+}
+
+src_install() {
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 }
 
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README TODO docs/*"
