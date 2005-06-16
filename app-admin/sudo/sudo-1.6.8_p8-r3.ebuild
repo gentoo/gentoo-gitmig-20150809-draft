@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.7 2005/06/16 22:00:39 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.8 2005/06/16 22:05:06 taviso Exp $
 
 inherit eutils pam
 
@@ -25,6 +25,8 @@ src_unpack() {
 
 	# compatability fix.
 	epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
+
+	# make tls_cacert synonymous with tls_cacertfile.
 	epatch ${FILESDIR}/${P}-ldap-tls_cacert.diff
 
 	# additional variables to disallow, should user disable env_reset.
