@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.127 2005/05/29 23:01:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.128 2005/06/17 22:10:15 plasmaroo Exp $
+
+*linux-headers-2.6.11-r2 (17 Jun 2005)
+
+  17 Jun 2005; <plasmaroo@gentoo.org> -linux-headers-2.6.11-r1.ebuild,
+  +linux-headers-2.6.11-r2.ebuild, files/linux-headers-2.6.11-appCompat.patch:
+  Fix kbd on PPC, bounds-checking on AMD64, and C++-happiness for list.h.
 
 *linux-headers-2.6.11-r1 (29 May 2005)
 

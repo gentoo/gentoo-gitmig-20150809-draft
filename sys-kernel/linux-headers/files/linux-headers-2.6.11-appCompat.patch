@@ -642,6 +642,18 @@ diff -ur linux-2.6.6/include/asm-ppc/signal.h linux-2.6.6-gentoo/include/asm-ppc
 diff -ur linux-2.6.6/include/asm-x86_64/processor.h linux-2.6.6-gentoo/include/asm-x86_64/processor.h
 --- linux-2.6.6/include/asm-x86_64/processor.h	2004-06-02 19:25:24.000000000 +0100
 +++ linux-2.6.6-gentoo/include/asm-x86_64/processor.h	2004-06-02 19:24:31.000000000 +0100
+@@ -136,7 +136,11 @@
+  * enable), so that any CPU's that boot up
+  * after us can get the correct flags.
+  */
++#ifndef __BOUNDS_CHECKING_ON
+ extern unsigned long mmu_cr4_features;
++#else
++unsigned long mmu_cr4_features;
++#endif
+ 
+ static inline void set_in_cr4 (unsigned long mask)
+ {
 @@ -189,17 +189,17 @@
  #define INVALID_IO_BITMAP_OFFSET 0x8000
  
@@ -1540,6 +1552,24 @@ diff -up linux-2.6.11/include/linux/list.h linux-2.6.11-gentoo/include/linux/lis
  	__list_del(entry->prev, entry->next);
 -	entry->prev = LIST_POISON2;
 +	entry->prev = __cast__(list_head*) LIST_POISON2;
+ }
+ 
+ /**
+@@ -219,12 +219,12 @@
+  *
+  * The old entry will be replaced with the new entry atomically.
+  */
+-static inline void list_replace_rcu(struct list_head *old, struct list_head *new){
+-	new->next = old->next;
+-	new->prev = old->prev;
++static inline void list_replace_rcu(struct list_head *old, struct list_head *_new){
++	_new->next = old->next;
++	_new->prev = old->prev;
+ 	smp_wmb();
+-	new->next->prev = new;
+-	new->prev->next = new;
++	_new->next->prev = _new;
++	_new->prev->next = _new;
  }
  
  /**
@@ -2579,6 +2609,17 @@ diff -ur linux-2.6.11/include/asm-ia64/thread_info.h linux-2.6.11-gentoo/include
  #endif /* __ASM_ARM_THREAD_INFO_H */
 --- linux-2.6.11/include/asm-arm/types.h	2005-03-02 07:37:31.000000000 +0000
 +++ linux-2.6.11-gentoo/include/asm-arm/types.h	2005-05-29 23:42:46.000000000 +0100
+@@ -19,7 +19,7 @@
+ typedef __signed__ int __s32;
+ typedef unsigned int __u32;
+ 
+-#if defined(__GNUC__) && !defined(__STRICT_ANSI__)
++#if defined(__GNUC__)
+ typedef __signed__ long long __s64;
+ typedef unsigned long long __u64;
+ #endif
+--- linux-2.6.11/include/asm-ppc/types.h	2005-03-02 07:37:31.000000000 +0000
++++ linux-2.6.11-gentoo/include/asm-ppc/types.h	2005-05-29 23:42:46.000000000 +0100
 @@ -19,7 +19,7 @@
  typedef __signed__ int __s32;
  typedef unsigned int __u32;
