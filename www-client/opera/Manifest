@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fab5ab8bda18fdb2966d891471a4731c opera-8.01.ebuild 4006
-MD5 a3c8efd5af4606b6e496f8d404c64cb5 opera-8.00.ebuild 4004
-MD5 739e24d21a00e4fd3fcac1674e2e0631 ChangeLog 16357
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
+MD5 a3c8efd5af4606b6e496f8d404c64cb5 opera-8.00.ebuild 4004
+MD5 61c538bec8aaf00d0ba687fc2a926a8f ChangeLog 16451
+MD5 3e8425b7be222c3ce278f71ef1b18aea opera-8.01.ebuild 4007
 MD5 c466a4f4004881b5d1f51c8e68a0d507 opera-7.54-r3.ebuild 4987
-MD5 5fde404310e76e32c90caff003dbbbb8 files/digest-opera-8.00 368
 MD5 8cbbc6d9dbd635e9b74831ac4209f292 files/digest-opera-8.01 372
-MD5 05a269373a205b54700e2265119951a0 files/digest-opera-7.54-r3 372
-MD5 3fbc8c365c121ec93a041532f07942f7 files/opera-qt.patch 328
+MD5 5fde404310e76e32c90caff003dbbbb8 files/digest-opera-8.00 368
 MD5 bafbdb86632b055a10fe826d16ea5b7f files/opera.desktop 147
+MD5 3fbc8c365c121ec93a041532f07942f7 files/opera-qt.patch 328
+MD5 05a269373a205b54700e2265119951a0 files/digest-opera-7.54-r3 372
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCsY6LevY57Fted3ERAvnnAJ4ipLGsRX2Yj4KYiIliJlJZtpNVGACeMeX6
-JcS87mKQvXH+RZk44llVBdM=
-=rCoq
+iD8DBQFCssZGKRy60XGEcJIRAmeyAKCs2gvpqzQdlkWxMSzRGE3hOY87owCff1SO
+wr6c1TEB0jg5bTx+is6qwMc=
+=1+zl
 -----END PGP SIGNATURE-----
