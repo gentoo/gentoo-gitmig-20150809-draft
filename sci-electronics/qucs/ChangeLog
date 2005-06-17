@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/qucs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.1 2005/04/29 18:29:54 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.2 2005/06/17 23:05:07 cryos Exp $
+
+*qucs-0.0.6 (17 Jun 2005)
+
+  17 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> +qucs-0.0.6.ebuild:
+  Version bump.
 
 *qucs-0.0.5 (29 Apr 2005)
 
