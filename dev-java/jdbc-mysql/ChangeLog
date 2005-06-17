@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.14 2005/03/06 15:20:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.15 2005/06/17 18:24:24 axxo Exp $
+
+  17 Jun 2005; Thomas Matthijs <axxo@gentoo.org> jdbc-mysql-3.0.11.ebuild,
+  jdbc-mysql-3.0.11-r1.ebuild, jdbc-mysql-3.0.15.ebuild,
+  jdbc-mysql-3.1.7.ebuild:
+  license fix, gpl not lgpl
 
 *jdbc-mysql-3.1.7 (06 Mar 2005)
 
