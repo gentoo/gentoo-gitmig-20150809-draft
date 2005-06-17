@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 18869fd6ae6466f7b94f55ea2420f0ac asbutton-0.3.ebuild 708
 MD5 34f65ba95b98cae1cde5b833534151e7 asbutton-0.3-r1.ebuild 829
 MD5 86962030b99edba1e439e319acba816c ChangeLog 1052
@@ -6,3 +9,10 @@ MD5 fdf751b1bc524954a5ad14c19e3eeccc files/asbutton-0.3-r1-gentoo.patch 520
 MD5 43c35a2adc1d4b41bdb9a1dd199d3666 files/digest-asbutton-0.3 64
 MD5 fdf751b1bc524954a5ad14c19e3eeccc files/asbutton-0.3-gentoo.patch 520
 MD5 43c35a2adc1d4b41bdb9a1dd199d3666 files/digest-asbutton-0.3-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCsrouEZCkKN40op4RAhFFAJ4ra1rg1z8y8vNQyG2shW2JCOrscACeKF8m
+vZ1tbixbWbbufvMoqrVqbK8=
+=OzRn
+-----END PGP SIGNATURE-----
