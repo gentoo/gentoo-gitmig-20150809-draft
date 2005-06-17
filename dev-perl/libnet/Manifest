@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d6ca3e40eb2bf6ee9eaeda44e9032a60 libnet-1.16.ebuild 538
-MD5 731d350772390f7ebb78f421d6267458 ChangeLog 4104
-MD5 f8d0346a4c44a20efeb426f16216c177 libnet-1.17.ebuild 550
-MD5 3a7a1f4a3275442dda1ce6c15da2835f libnet-1.19.ebuild 552
 MD5 5754ff268b56f63cc6b8cca33848cfaf metadata.xml 485
-MD5 f8d3429011b73608f4223f201f20c54c files/digest-libnet-1.16 62
-MD5 0d9f701bedc41cf2c2ca2e0c79e30184 files/digest-libnet-1.17 62
-MD5 ebfa5958fea15492b23d41aceae03fe4 files/digest-libnet-1.19 62
+MD5 5fbc15d440b6974cbf1e310152a1bc00 ChangeLog 4193
+MD5 626f29007f7c446a90d6722ae0645a34 libnet-1.19.ebuild 548
+MD5 f8d0346a4c44a20efeb426f16216c177 libnet-1.17.ebuild 550
 MD5 655ae6886075bd2902bd1b1bcbbffa4d files/libnet.cfg 268
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCoTz3tG5z4I8BtQoRAqUVAJ9BNnn4pM0dtT39tTbVnEioTyPylQCfcZ3A
-fzdI7ZL7LGDjDB47PdE35rM=
-=BKHY
------END PGP SIGNATURE-----
+MD5 0d9f701bedc41cf2c2ca2e0c79e30184 files/digest-libnet-1.17 62
+MD5 f8d3429011b73608f4223f201f20c54c files/digest-libnet-1.16 62
+MD5 ebfa5958fea15492b23d41aceae03fe4 files/digest-libnet-1.19 62
