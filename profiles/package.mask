@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4098 2005/06/17 05:16:27 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4099 2005/06/17 15:46:25 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -827,10 +827,6 @@ sys-kernel/config-kernel
 # depend on ApacheHandler2.
 >=www-apache/mod_perl-1.99.16
 www-apache/libapreq2
-
-# ticho@gentoo.org 25 Sep 2004
-# Masking hotwayd-0.8, because it's been reported to corrupt emails (bug #58531). Package currently seems unmaintained.
-=net-mail/hotwayd-0.8
 
 # Karl Trygve Kalleberg <karltk@gentoo.org> (23 Sep 2004)
 # upstream is unstable
