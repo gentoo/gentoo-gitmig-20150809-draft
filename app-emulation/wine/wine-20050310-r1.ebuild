@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050310-r1.ebuild,v 1.3 2005/05/29 03:48:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050310-r1.ebuild,v 1.4 2005/06/17 02:06:08 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,16 +39,12 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 pkg_setup() {
-	if use amd64 ; then
-		if ! has_m32; then
-			eerror "Your compiler seems to be unable to compile 32bit code."
-			eerror "Make sure you compile gcc with:"
-			echo
-			eerror "    USE=multilib FEATURES=-sandbox"
-			die "Cannot produce 32bit code"
-		else
-			export ABI=x86
-		fi
+	if use amd64 && ! has_m32 ; then
+		eerror "Your compiler seems to be unable to compile 32bit code."
+		eerror "Make sure you compile gcc with:"
+		echo
+		eerror "    USE=multilib FEATURES=-sandbox"
+		die "Cannot produce 32bit code"
 	fi
 }
 
@@ -86,7 +82,13 @@ src_compile() {
 	config_cache lcms header_lcms_h
 
 	strip-flags
-	use lcms && append-flags -I${ROOT}/usr/include/lcms
+	use lcms && append-flags -I"${ROOT}"/usr/include/lcms
+
+	if use amd64 ; then
+		[[ -n $(get_abi_var) ]] \
+			&& export ABI=x86 \
+			|| append-flags -m32
+	fi
 
 	if ! built_with_use app-text/docbook-sgml-utils tetex ; then
 		export DB2PDF=true
