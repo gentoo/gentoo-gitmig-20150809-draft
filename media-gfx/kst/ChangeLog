@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/kst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.6 2005/06/05 12:16:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.7 2005/06/17 18:40:54 centic Exp $
+
+*kst-1.1.0 (17 Jun 2005)
+
+  17 Jun 2005; Dominik Stadler <centic@gentoo.org> +kst-1.1.0.ebuild:
+  Add new version 1.1.0, fixes Bug 96136
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> kst-0.97.ebuild:
   Stable on ppc.
