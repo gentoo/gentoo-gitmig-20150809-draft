@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/gdeskcal
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.7 2004/10/01 12:25:24 pyrania Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.8 2005/06/17 03:44:18 smithj Exp $
+
+*gdeskcal-0.57.1-r1 (17 Jun 2005)
+
+  17 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/gdeskcal-evo2.patch, +gdeskcal-0.57.1-r1.ebuild:
+  fixed evolution-2 compability for #91899
 
   01 Oct 2004; <pyrania@gentoo.org> gdeskcal-0.57.1.ebuild:
   Marked stable on x86.
