@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.3.1.ebuild,v 1.1 2005/06/17 20:15:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.3.1.ebuild,v 1.2 2005/06/17 23:21:45 dang Exp $
 
 inherit gnome2 eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86"
 
 RDEPEND="
 	djvu? ( app-text/djvu )
-	>=app-text/poppler-0.3.0
+	>=app-text/poppler-0.3.2
 	>=dev-libs/atk-1.9
 	>=dev-libs/expat-1.95
 	>=dev-libs/glib-2

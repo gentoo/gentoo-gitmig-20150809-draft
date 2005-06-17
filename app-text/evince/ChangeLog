@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.1 2005/06/17 20:15:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.2 2005/06/17 23:21:45 dang Exp $
+
+  17 Jun 2005; <dang@gentoo.org> evince-0.3.1.ebuild:
+  minimum poppeler is 0.3.2
 
 *evince-0.3.1 (17 Jun 2005)
 
