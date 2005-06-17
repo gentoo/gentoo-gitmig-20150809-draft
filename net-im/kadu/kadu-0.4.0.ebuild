@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0.ebuild,v 1.3 2005/06/08 19:06:37 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0.ebuild,v 1.4 2005/06/17 16:36:56 josejx Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,7 +36,7 @@ HOMEPAGE="http://kadu.net/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc amd64"
+KEYWORDS="amd64 ppc ~x86"
 
 IUSE="X debug alsa arts esd voice speech nas oss spell ssl tcltk xmms xosd amarok pheaders extraicons extramodules mail"
 
