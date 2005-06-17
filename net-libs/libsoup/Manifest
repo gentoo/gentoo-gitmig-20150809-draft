@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 91a71a0c46fa4ebc5eb523190c79dae5 libsoup-2.2.3.ebuild 728
+MD5 c1a0a87a3943cbea27b6f194457bfa90 libsoup-2.2.3-r1.ebuild 766
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 b85e689ae1865138ae9ff41428dfc77b libsoup-2.2.1.ebuild 815
-MD5 f7c916bc66b3b2e8ee2c807b26d09f04 ChangeLog 7572
+MD5 174e82c4eb97f0a8bb22e21c2fcd8707 ChangeLog 7666
 MD5 ab2763b9426be6cf518c6febf807aca3 libsoup-1.99.28.ebuild 1380
+MD5 b85e689ae1865138ae9ff41428dfc77b libsoup-2.2.1.ebuild 815
 MD5 0b90444f6e07342acd73b15174dec5dd libsoup-2.2.2.ebuild 803
 MD5 7d2421b7bfc9761a866dbd6cf192201a libsoup-1.99.28-r1.ebuild 1452
-MD5 c1a0a87a3943cbea27b6f194457bfa90 libsoup-2.2.3-r1.ebuild 766
-MD5 5ba8cbd6308ea46629bb3e6ef7232c4a files/digest-libsoup-2.2.1 66
-MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28 68
+MD5 9c27c1df4589c8db27979cfba33d41dc libsoup-2.2.3.ebuild 727
 MD5 09a0c3f27613d90ffeb8abb875598ace files/libsoup-1.99.26-with_ssl.patch 2861
-MD5 36682c374a676561d186db8ed97390b5 files/digest-libsoup-2.2.2 66
+MD5 ef781f10152707123d5acdcca14603f5 files/digest-libsoup-2.2.3-r1 66
+MD5 5ba8cbd6308ea46629bb3e6ef7232c4a files/digest-libsoup-2.2.1 66
 MD5 6128cc7bbf088e07b4040e8296a7c57b files/libsoup-1.99.26-msn.patch 627
+MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28-r1 68
+MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28 68
 MD5 8236edc0e5949f46d2a27e747c310889 files/libsoup-2.2.2-gnutls.patch 336
 MD5 ef781f10152707123d5acdcca14603f5 files/digest-libsoup-2.2.3 66
-MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28-r1 68
-MD5 ef781f10152707123d5acdcca14603f5 files/digest-libsoup-2.2.3-r1 66
 MD5 dc791ddf4cb75ab5325eea016e52e09b files/libsoup-1.99.28-gnutls.patch 1275
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrIOtmOfEJZHYOKcRAj9eAKCTIA+rga69jJ6z+UMrLsSD7nMU9ACg5Gcj
-qzEylpCClVeFe/zuGv92p+U=
-=Y2Fc
------END PGP SIGNATURE-----
+MD5 36682c374a676561d186db8ed97390b5 files/digest-libsoup-2.2.2 66
