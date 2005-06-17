@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/t1lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.42 2005/05/22 12:47:39 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.43 2005/06/17 20:05:15 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> t1lib-5.0.2.ebuild:
+  Stable on ppc.
 
   22 May 2005; Rene Nussbaumer <killerfox@gentoo.org> t1lib-5.0.2.ebuild:
   Stable on hppa

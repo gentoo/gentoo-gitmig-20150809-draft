@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/plotutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.24 2005/02/02 21:41:21 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.25 2005/06/17 20:02:39 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  plotutils-2.4.1-r3.ebuild:
+  Stable on ppc.
 
   02 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> plotutils-2.4.1-r3.ebuild:
   Stable ppc-macos
