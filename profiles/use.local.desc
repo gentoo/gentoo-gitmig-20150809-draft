@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1232 2005/06/16 20:27:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1233 2005/06/17 19:08:55 dang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -119,6 +119,9 @@ app-text/crm114:normalizemime - Add support for using the normalizemime
 app-text/djvu:nsplugin - Builds plugins for Netscape compatible browsers
 app-text/estraier:kakasi - Enable kakasi support for Estraier
 app-text/estraier:mecab - Enable mecab support for Estraier
+app-text/evince:djvu - Enable djvu viewer support for Evince
+app-text/evince:dvi - Enable the built-in DVI viewer for Evince
+app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer for Evince
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
 app-text/sword-modules:intl - Enable different languages
