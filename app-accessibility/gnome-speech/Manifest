@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 29ad683bebb0c71feb9827f59f279f7b gnome-speech-0.3.7.ebuild 2344
-MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
-MD5 29705f44d7b14255c9cdf08acdca2129 gnome-speech-0.3.2-r1.ebuild 1621
-MD5 2b3eafde4e5aed523c1299bbdd6dcb77 ChangeLog 5105
 MD5 1faab929744ae48c44ea8c98054db481 gnome-speech-0.3.6.ebuild 2350
-MD5 af77b6880a5acc931bde949ff8ac6a50 files/digest-gnome-speech-0.3.7 71
+MD5 06aa8ff47ec6d1494f24c340d3228e1f gnome-speech-0.3.7.ebuild 2341
+MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
+MD5 cded600eb295530c2449efd11d910e7f ChangeLog 5204
+MD5 29705f44d7b14255c9cdf08acdca2129 gnome-speech-0.3.2-r1.ebuild 1621
 MD5 fbbe039fc02132832a628d53470e36ca files/digest-gnome-speech-0.3.2-r1 71
 MD5 4aea3e91c67820944eab3bef2f1cdc03 files/digest-gnome-speech-0.3.6 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCsEINKRy60XGEcJIRAuKVAKCYeKuYj61O7FiPxqiOwPX8myt4OQCeJYIc
-QiGnb4l1YblV/0CdKEfjdM4=
-=K6Qt
------END PGP SIGNATURE-----
+MD5 af77b6880a5acc931bde949ff8ac6a50 files/digest-gnome-speech-0.3.7 71
