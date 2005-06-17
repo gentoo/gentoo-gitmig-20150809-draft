@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.8 2005/06/16 22:05:06 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.9 2005/06/17 14:12:51 taviso Exp $
 
 inherit eutils pam
 
@@ -74,7 +74,7 @@ src_unpack() {
 	einfo "...done."
 
 	# prevent binaries from being stripped.
-	sed -i 's/-s \([(sudo|visudo)]\)/\1/g' ${S}/Makefile.in
+	sed -i 's/\($(INSTALL).*\) -s \([(sudo|visudo)]\)/\1 \2/g' ${S}/Makefile.in
 }
 
 src_compile() {

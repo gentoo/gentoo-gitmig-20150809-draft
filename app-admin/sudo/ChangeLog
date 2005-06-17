@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.57 2005/06/16 22:00:39 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.58 2005/06/17 14:12:51 taviso Exp $
+
+  17 Jun 2005; Tavis Ormandy <taviso@gentoo.org> sudo-1.6.8_p8-r3.ebuild:
+  tighten sed syntax
 
   16 Jun 2005; Tavis Ormandy <taviso@gentoo.org> sudo-1.6.8_p8-r3.ebuild:
   prevent binaries from being stripped if FEATURES=nostrip.
