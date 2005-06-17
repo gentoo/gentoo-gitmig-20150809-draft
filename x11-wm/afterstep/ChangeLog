@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.39 2005/06/14 01:15:50 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.40 2005/06/17 20:27:07 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  afterstep-2.00.05.ebuild:
+  Stable on ppc.
 
   14 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
   Added afterstep herd.
