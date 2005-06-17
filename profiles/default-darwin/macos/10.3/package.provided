@@ -89,6 +89,7 @@ sys-apps/grep-2.4.2
 sys-apps/groff-1.18.1
 sys-apps/less-378
 sys-process/lsof-4.68
+sys-apps/man-1.5
 sys-apps/miscfiles-1.3-r1
 sys-apps/sed-4.0.7
 sys-apps/tcp-wrappers-7.6-r8
