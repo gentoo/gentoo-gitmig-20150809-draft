@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/konversation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.24 2005/06/08 13:29:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.25 2005/06/17 21:16:19 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  konversation-0.17.ebuild:
+  Stable on ppc.
 
   08 Jun 2005; Sven Wegener <swegener@gentoo.org>
   konversation-0.15.1.ebuild, konversation-0.17.ebuild,

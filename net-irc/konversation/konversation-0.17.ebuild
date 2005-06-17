@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-0.17.ebuild,v 1.3 2005/06/08 13:29:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-0.17.ebuild,v 1.4 2005/06/17 21:16:19 hansmi Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="nls"
 
 need-kde 3
