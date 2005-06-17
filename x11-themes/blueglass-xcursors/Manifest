@@ -1,3 +1,14 @@
-MD5 76d570f25e21aaca90a33cafafaf9b39 ChangeLog 2067
-MD5 60f210362ea2ca767d8660325049333b blueglass-xcursors-0.4.ebuild 1869
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 93f02cf17e28c71ad2a43ecc2399b56f metadata.xml 279
+MD5 137bb062d6f58c3ece16b22484cb5f9a blueglass-xcursors-0.4.ebuild 2109
+MD5 0822d3d4428f8e37d989a9c392b0621e ChangeLog 2268
 MD5 de0300160ad31c18630f323abbc1a7a2 files/digest-blueglass-xcursors-0.4 83
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCsj90l5AvwDPiUowRAqceAKDdKYhwXE4sPstPmIaOUuiO++h3RwCggl2I
+6uixrLTjUKRHaI2ngzbXkiM=
+=WPVb
+-----END PGP SIGNATURE-----

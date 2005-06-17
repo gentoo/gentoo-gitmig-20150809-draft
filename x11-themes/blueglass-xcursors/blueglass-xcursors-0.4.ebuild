@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/blueglass-xcursors-0.4.ebuild,v 1.14 2005/02/19 19:02:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/blueglass-xcursors-0.4.ebuild,v 1.15 2005/06/17 03:10:57 smithj Exp $
 
 MY_P="5532-BlueGlass-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -30,15 +30,20 @@ src_install() {
 }
 
 pkg_postinst() {
+	# dirty hacks...
+	X11_IMPLEM_P="$(best_version virtual/x11)"
+	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	X11_IMPLEM="${X11_IMPLEM##*\/}"
+
 	einfo "To use this set of cursors, edit or create the file ~/.Xdefaults"
 	einfo "and add the following line:"
 	einfo "Xcursor.theme: Blue"
 	einfo ""
-	einfo "Also, you can change the size by adding a line like:"
+	einfo "You can change the size by adding a line like:"
 	einfo "Xcursor.size: 48"
 	einfo ""
 	einfo "To globally use this set of mouse cursors edit the file:"
-	einfo "   /usr/share/cursors/${X11_IMPLEM}/default/index.theme"
+	einfo "   /usr/local/share/cursors/${X11_IMPLEM}/default/index.theme"
 	einfo "and change the line:"
 	einfo "    Inherits=[current setting]"
 	einfo "to"
@@ -49,4 +54,7 @@ pkg_postinst() {
 	ewarn "If you experience flickering, try setting the following line in"
 	ewarn "the Device section of your XF86Config:"
 	ewarn "Option  \"HWCursor\"  \"false\""
+	ewarn ""
+	ewarn "the Device section of your xorg.conf file:"
+	ewarn "    Option  \"HWCursor\"  \"false\""
 }
