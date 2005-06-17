@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.14 2005/06/17 03:35:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.15 2005/06/17 03:40:36 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc4-test.patch #88214
 	epatch "${FILESDIR}"/${P}-dont-abort-long-names.patch #87540
 	epatch "${FILESDIR}"/${P}-less-verbose-newer.patch #86467
+	epatch "${FILESDIR}"/${P}-lseek.patch
 	cp "${FILESDIR}"/append.at tests/
 }
 
