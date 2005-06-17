@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/emerge-delta-webrsync
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.6 2005/05/27 11:39:54 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.7 2005/06/17 14:44:14 ferringb Exp $
+
+*emerge-delta-webrsync-3.3: Jun 17 2005
+
+  17 Jun 2005; Brian Harring <ferringb@gentoo.org> emerge-delta-webrsync-3.3.ebuild, 
+  -emerge-delta-webrsync-3-r1 emerge-delta-webrsync-2 emerge-delta-webrsync-3:
+  bug 94581, plus supression of error message when looking for bases for patches.
+  Keywording x86, since it's just 3.2 + 94581 bug fix.
+  Removed older versions while I was at it.
 
   27 May 2005; Brian Harring <ferringb@gentoo.org> emerge-delta-webrsync-3.2.ebuild:
   Earlier fixes + final distdir cleansing fix for old snapshots. bug 94046
