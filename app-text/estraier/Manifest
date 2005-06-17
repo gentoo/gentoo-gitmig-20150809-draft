@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5918c95d1df83d5583bf97e349229f33 ChangeLog 3333
-MD5 9b1e2ddd41716c8ecd2ff668388d1a7a estraier-1.2.25.ebuild 1198
-MD5 f54558fabdd1c5fd36394e4a77a29fd0 estraier-1.2.26.ebuild 1202
-MD5 1cfa268ddb77f9e624c9ba4db20e38ca estraier-1.2.28.ebuild 1186
+MD5 34e1df8a8427e5d236f64bdcd752c5c8 estraier-1.2.26.ebuild 1199
 MD5 382a25f7a6abf0020285f37f74158690 metadata.xml 226
-MD5 bdc6b57b44fc352b7ad5a2f2f01d1194 files/digest-estraier-1.2.25 67
-MD5 e77f08565b31d29873c3b51a76ff5b7d files/digest-estraier-1.2.26 67
+MD5 e213c51afc0b0cfcb08b12f92c344d4e ChangeLog 3429
+MD5 9b1e2ddd41716c8ecd2ff668388d1a7a estraier-1.2.25.ebuild 1198
+MD5 1cfa268ddb77f9e624c9ba4db20e38ca estraier-1.2.28.ebuild 1186
 MD5 8e9b8eb46bc06fb5b2dcac6196e88c41 files/digest-estraier-1.2.28 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCe4SRKRy60XGEcJIRArnQAKCca0KESOEphuyhuVMOHV7mq2tnHwCfZA0H
-kc/iOW3e+azKc0BE8d3+uZQ=
-=OXsS
------END PGP SIGNATURE-----
+MD5 e77f08565b31d29873c3b51a76ff5b7d files/digest-estraier-1.2.26 67
+MD5 bdc6b57b44fc352b7ad5a2f2f01d1194 files/digest-estraier-1.2.25 67
