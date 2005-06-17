@@ -1,4 +1,14 @@
-MD5 287bd7d716d878157d8715d99293df86 ChangeLog 493
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 53d338eb5c571c32ebbd2b0bbb4cff4d noiz2sa-0.51a.ebuild 1237
+MD5 89af7951ea71218aba0d537d20ebdb9b ChangeLog 579
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 70899305babf25caa06de5a28d65ce0c noiz2sa-0.51a.ebuild 1230
 MD5 3cf2f4f2bc9500ff567ff19790b5b066 files/digest-noiz2sa-0.51a 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCsozDCHk4+ZoBpvsRAhJcAKDGdr7y+XfFoew4vZu0pumHaLQrHwCggSjL
+7VaGhuJXv4brmOPN2b8MRFQ=
+=szDD
+-----END PGP SIGNATURE-----
