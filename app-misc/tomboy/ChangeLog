@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.11 2005/05/19 15:57:35 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.12 2005/06/17 01:14:25 latexer Exp $
+
+*tomboy-0.3.2-r1 (17 Jun 2005)
+
+  17 Jun 2005; Peter Johanson <latexer@gentoo.org>
+  +files/tomboy-0.3.2-mono-1.1.8-compat.diff, +tomboy-0.3.2-r1.ebuild:
+  Revision bump with fixes for stricter mono-1.1.8's mcs.
 
   19 May 2005; Tom Martin <slarti@gentoo.org> tomboy-0.3.2.ebuild:
   Marked ~amd64, resolves bug 93228.
