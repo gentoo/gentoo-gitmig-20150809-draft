@@ -1,28 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1fdb3177b6718405287e406ee53ddafe ChangeLog 13071
-MD5 f6d518ef4ea229230b1bcf85d4ed9a4e webapp-config-1.10-r6.ebuild 1406
-MD5 832c7b1b4124880c77156ae93673934d webapp-config-1.10-r11.ebuild 1438
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
-MD5 2eea1a7f34547efdb82bba8d8cc2dcbb webapp-config-1.11.ebuild 1429
+MD5 832c7b1b4124880c77156ae93673934d webapp-config-1.10-r11.ebuild 1438
 MD5 0a227eed730e13eda60077d2ad92b79a webapp-config-1.10-r10.ebuild 1414
+MD5 8d00336a47291697a162a2d890a9e51a ChangeLog 13189
+MD5 f6d518ef4ea229230b1bcf85d4ed9a4e webapp-config-1.10-r6.ebuild 1406
 MD5 5fa2a14e6a01fde1f4d9ef5c75319974 webapp-config-1.9-r2.ebuild 1143
-MD5 6308235684a3d5115a69cf9334bbf12a webapp-config-1.10-r14.ebuild 2068
 MD5 b83c57dfc4bb030edda59db1cbb85fd2 webapp-config-1.10-r12.ebuild 1645
-MD5 0c1ae4fd2fcc6de80a24f04993a63d80 files/digest-webapp-config-1.9-r2 72
-MD5 e605a4d1868a4a3e17cd2ecd474f7076 files/webapp-config_fixperms.patch 2786
+MD5 6308235684a3d5115a69cf9334bbf12a webapp-config-1.10-r14.ebuild 2068
+MD5 67ebafbd2d046c63f7d3cb07e20cfed6 webapp-config-1.11.ebuild 1428
 MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r11 74
-MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r14 74
-MD5 6aad9c4cd4548cb948cd4035286d6ac7 files/digest-webapp-config-1.11 70
-MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r12 74
 MD5 675f730140fb4b7303082b203e27ba0b files/digest-webapp-config-1.10-r6 73
+MD5 0c1ae4fd2fcc6de80a24f04993a63d80 files/digest-webapp-config-1.9-r2 72
 MD5 ad4be087a0a4be0991e124d97fe377ac files/digest-webapp-config-1.10-r10 74
+MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r12 74
+MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r14 74
+MD5 e605a4d1868a4a3e17cd2ecd474f7076 files/webapp-config_fixperms.patch 2786
 MD5 b9efc67836c3d94009bea1f83cc92027 files/webapp-config_improved-tmpfile-handling.patch 973
+MD5 6aad9c4cd4548cb948cd4035286d6ac7 files/digest-webapp-config-1.11 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCsGzbKf2g/qXtneoRAg/VAJ4muWqM4pAni8HTkraoIuVuuqBWgQCeLcPy
-iaaajwvofopaFzwEn9Qsrkk=
-=BZRg
+iD8DBQFCsi5gmOfEJZHYOKcRAqiJAKCp7/+DgBM162VFcEZnjoCwWd1hywCfdwmo
+tkYra+VQQ1v9eFAPqDJ+20k=
+=81bc
 -----END PGP SIGNATURE-----
