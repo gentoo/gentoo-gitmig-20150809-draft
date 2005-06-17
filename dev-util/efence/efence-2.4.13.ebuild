@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.4.13.ebuild,v 1.5 2005/05/25 18:37:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.4.13.ebuild,v 1.6 2005/06/17 01:22:53 vapier Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -15,14 +15,14 @@ SLOT="0"
 KEYWORDS="x86 ~sparc amd64 ~ppc"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND="${DEPEND}
 	app-shells/bash"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
 
 src_compile() {
@@ -30,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix="${D}/usr" install || die "make install failed"
+	make prefix="${D}"/usr install || die "make install failed"
 	insinto /usr/include
 	doins efence.h efencepp.h efence_config.h \
 		|| die "failed to install headers"
