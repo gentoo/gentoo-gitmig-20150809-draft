@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.68 2005/06/09 15:32:06 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.69 2005/06/17 08:24:51 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -673,7 +673,7 @@ php-sapi_pkg_postinst() {
 		ewarn "your PHP installation is consistant."
 	fi
 	ewarn "If you have additional third party PHP extensions (such as"
-	ewarn "dev-php/turck-mmcache) you may need to recompile them now."
+	ewarn "dev-php/eaccelerator) you may need to recompile them now."
 	if use curl; then
 		ewarn "Please be aware that CURL can allow the bypass of open_basedir restrictions."
 	fi
