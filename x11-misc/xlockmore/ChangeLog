@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.21 2005/06/14 03:56:29 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.22 2005/06/17 00:50:00 smithj Exp $
+
+*xlockmore-5.17 (17 Jun 2005)
+
+  17 Jun 2005; Jonathan Smith <smithj@gentoo.org> -xlockmore-5.11.1.ebuild,
+  +xlockmore-5.17.ebuild:
+  version bump to 5.17
 
   14 Jun 2005; Jonathan Smith <smithj@gentoo.org> xlockmore-5.18.ebuild:
   fixed stupid sandboxing problem with 5.18
