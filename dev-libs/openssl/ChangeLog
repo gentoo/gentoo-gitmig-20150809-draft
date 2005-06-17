@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.122 2005/06/13 14:32:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.123 2005/06/17 20:55:38 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  openssl-0.9.7e-r1.ebuild:
+  Stable on ppc.
 
   13 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
   files/gentoo.config-0.9.7g:
