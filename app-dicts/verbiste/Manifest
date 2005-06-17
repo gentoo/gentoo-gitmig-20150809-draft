@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ddfbf87c06ac6732fc464137c6960843 verbiste-0.1.9.ebuild 823
-MD5 021abcb0c095f08d99aa81b84836343f metadata.xml 321
-MD5 efafbd037a06663bcf82eae4980aa9af ChangeLog 1338
-MD5 e1570d73c654922733ee73427c501d5b verbiste-0.1.10.ebuild 967
 MD5 a7e74992fdd6cc163cbc546a9c348d53 verbiste-0.1.11.ebuild 741
-MD5 5862543258fc53ccf17af641dc347b69 files/makefileam-libtool-0.1.10.patch 1025
+MD5 021abcb0c095f08d99aa81b84836343f metadata.xml 321
+MD5 42d239698f376fbacd17686fee08dbd3 ChangeLog 1437
+MD5 c440e8d586ad40eb7ba214056fcd1f29 verbiste-0.1.10.ebuild 966
 MD5 23b725f5c86c3a50a49a9859e3419855 files/digest-verbiste-0.1.10 67
-MD5 239386925f7a534c57385d2cee01d1a1 files/digest-verbiste-0.1.9 66
 MD5 02db5192009d47034a72d8211122a48b files/digest-verbiste-0.1.11 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCp5kBmOfEJZHYOKcRApHGAJ4pbZBBH2RwSB71Zmyy6+P953bV7wCgiXCg
-QyzUWeExkwAADfzQ6kg8v7U=
-=xDKZ
------END PGP SIGNATURE-----
+MD5 5862543258fc53ccf17af641dc347b69 files/makefileam-libtool-0.1.10.patch 1025
+MD5 239386925f7a534c57385d2cee01d1a1 files/digest-verbiste-0.1.9 66
