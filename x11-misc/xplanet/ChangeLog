@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xplanet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.47 2005/06/15 16:33:43 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.48 2005/06/17 02:50:38 rizzo Exp $
+
+*xplanet-1.2.0 (17 Jun 2005)
+
+  17 Jun 2005; Don Seiler <rizzo@gentoo.org> +xplanet-1.2.0.ebuild:
+  Version bump
 
 *xplanet-1.1.2-r1 (15 Jun 2005)
 

@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a599c3e5c2f1acc8361bd18ffe6fa5db ChangeLog 6353
+MD5 ad556782460751c76026c63f3a523731 ChangeLog 6466
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 16c2d939f96db72a3ce9bed9afb57e5a xplanet-1.1.1.ebuild 1771
 MD5 500d7785d087cd18e9ad57a0889c9b4d xplanet-1.1.2-r1.ebuild 1826
-MD5 807da98c0435e234011c386780907a04 files/digest-xplanet-1.1.1 66
+MD5 eae948234e321bf2e2ecce45d14f8f17 xplanet-1.2.0.ebuild 1822
+MD5 16c2d939f96db72a3ce9bed9afb57e5a xplanet-1.1.1.ebuild 1771
 MD5 356fe22ff0fc950df2daa1927246537f files/digest-xplanet-1.1.2-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsFiMl5AvwDPiUowRAtnjAKC6LESr4oSj40GpHUc2FdUrrPixxwCgid6x
-yVopfB08CknkZFmkGWdADkY=
-=mMqJ
------END PGP SIGNATURE-----
+MD5 7a951199e920e714313c860e37d1a019 files/digest-xplanet-1.2.0 66
+MD5 807da98c0435e234011c386780907a04 files/digest-xplanet-1.1.1 66
