@@ -1,4 +1,14 @@
-MD5 e431c2ccfbd5d0adafcd413cec2e6b3d ChangeLog 821
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e89e4dd5dea08c9f14d0ed7ed4c6194b ChangeLog 922
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 3a35f6f789c6157396fa12256d79fac9 xautolock-2.1.ebuild 683
+MD5 2d50e24a476eb47574cd1c01df7aef44 xautolock-2.1.ebuild 709
 MD5 2a7ccbf66ad1d0f69e8ada42c8562755 files/digest-xautolock-2.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCshPul5AvwDPiUowRAp0yAJ44sSB54Q1G0FYyoUsN2Wjcs4Z4awCfc6nC
+eFKp+lR7GuF7g/xOHfXgKRc=
+=GFlk
+-----END PGP SIGNATURE-----

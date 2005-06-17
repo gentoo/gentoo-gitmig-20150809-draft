@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xautolock
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.9 2005/06/14 02:55:02 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.10 2005/06/17 00:05:26 smithj Exp $
+
+  17 Jun 2005; Jonathan Smith <smithj@gentoo.org> xautolock-2.1.ebuild:
+  fixed dependencies again
 
   14 Jun 2005; Jonathan Smith <smithj@gentoo.org> xautolock-2.1.ebuild:
   added xlockmore as a dependency for #95246
