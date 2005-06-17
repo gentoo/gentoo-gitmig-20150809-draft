@@ -1,0 +1,11 @@
+# ChangeLog for dev-lisp/emacs-cl-cvs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/emacs-cl-cvs/ChangeLog,v 1.1 2005/06/17 17:30:34 mkennedy Exp $
+
+*emacs-cl-cvs-0 (17 Jun 2005)
+
+  17 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/50emacs-cl-gentoo.el, +files/emacs-cl, +metadata.xml,
+  +emacs-cl-cvs-0.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
