@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 26e849d90b66e5cf9a20c784a5fedf87 mrtg-2.11.1.ebuild 986
 MD5 2a638f1afd9ac1de2201d52898ba34ea mrtg-2.9.22.ebuild 1003
-MD5 14d32e686dd2b1e485c65a6f421b044b mrtg-2.12.1.ebuild 993
-MD5 9a5a93ec1fb27067a466215ea79b052c mrtg-2.10.15.ebuild 1067
-MD5 1478cbda8cc0bead4164037f43ad9708 mrtg-2.11.0.ebuild 1070
-MD5 c2e8d481bfc0ee11706739f2254a2eab mrtg-2.10.14.ebuild 1054
-MD5 b3beb9168d116f3c0f49184f551d9ef4 ChangeLog 4738
 MD5 9683bb7323c40d69b48d54ad0eb169ed metadata.xml 221
-MD5 24ebc9ac9a2c19fcb709c8314525675b mrtg-2.11.1.ebuild 990
+MD5 e05980aee78d79061f4e0094b93f352d ChangeLog 4829
+MD5 14d32e686dd2b1e485c65a6f421b044b mrtg-2.12.1.ebuild 993
+MD5 1478cbda8cc0bead4164037f43ad9708 mrtg-2.11.0.ebuild 1070
+MD5 9a5a93ec1fb27067a466215ea79b052c mrtg-2.10.15.ebuild 1067
+MD5 c2e8d481bfc0ee11706739f2254a2eab mrtg-2.10.14.ebuild 1054
 MD5 600205c986160fe48cd6053e39f74644 files/digest-mrtg-2.11.0 64
-MD5 892b30d2bab4ab965453b5bef89cfecb files/digest-mrtg-2.11.1 64
-MD5 3504978d284268fb850a17a8e72ea037 files/digest-mrtg-2.12.1 64
-MD5 b984863c1e7c00e4a0829e901c6cc492 files/digest-mrtg-2.9.22 64
-MD5 85c2c5bcbc07346b4d167bc4ebe4ba9a files/digest-mrtg-2.10.14 65
 MD5 99d47668bd56ffee8a76da73dfcdf81c files/digest-mrtg-2.10.15 65
+MD5 85c2c5bcbc07346b4d167bc4ebe4ba9a files/digest-mrtg-2.10.14 65
 MD5 c9944b21a429dee42089beb12fde4dec files/mrtg.rc 1280
+MD5 b984863c1e7c00e4a0829e901c6cc492 files/digest-mrtg-2.9.22 64
+MD5 892b30d2bab4ab965453b5bef89cfecb files/digest-mrtg-2.11.1 64
 MD5 a8d246d324b90fd1e37cc912d4651372 files/mrtg.confd 512
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmQm7EZCkKN40op4RAuw3AKCBAAt9XGw5YQhByUjWsJCGw2Z3SQCgmotU
-clx3m2ygCKc/E7sJo0pUqJA=
-=5D01
------END PGP SIGNATURE-----
+MD5 3504978d284268fb850a17a8e72ea037 files/digest-mrtg-2.12.1 64
