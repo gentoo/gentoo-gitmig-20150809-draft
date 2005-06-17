@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.6.0.ebuild,v 1.9 2005/01/29 21:20:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.30.0.ebuild,v 1.1 2005/06/17 02:11:43 vanquirius Exp $
+
+# NOTE: netwib, netwox and netwag go together, bump all or bump none
+
+inherit toolchain-funcs
 
 DESCRIPTION="Library of Ethernet, IP, UDP, TCP, ICMP, ARP and RARP protocols"
 HOMEPAGE="http://www.laurentconstantin.com/en/netw/netwib/"
@@ -8,7 +12,7 @@ SRC_URI="http://www.laurentconstantin.com/common/netw/netwib/download/v${PV/.*}/
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~sparc"
 IUSE=""
 
 DEPEND="virtual/libpcap
@@ -30,11 +34,13 @@ src_unpack() {
 
 src_compile() {
 	cd src
-	emake || die "compile problem"
+	emake CC=$(tc-getCC) || die "compile problem"
 }
 
 src_install() {
 	dodoc README.TXT doc/*.txt
 	cd src
 	emake install DESTDIR=${D} || die
+	dodir ${D}/usr/share
+	mv ${D}/usr/man ${D}/usr/share
 }
