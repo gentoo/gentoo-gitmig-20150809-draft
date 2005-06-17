@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ad5d77568dc9e134259f1e8e1357e61c lbdb-0.29-r1.ebuild 1312
-MD5 496ffcfce3a83dd0fc8d0c1e2dc1acfa lbdb-0.29.ebuild 723
-MD5 cc245752a6826d6e7361ba2909cee3ec lbdb-0.30.ebuild 1397
-MD5 dcb10e4c67e8810abe133fa7385aeec6 ChangeLog 3371
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 1a3caa4a3f9186ad7bc71ae9ccedd4d3 ChangeLog 3462
+MD5 ad5d77568dc9e134259f1e8e1357e61c lbdb-0.29-r1.ebuild 1312
+MD5 45e911a2f1c60e8fe4e27bb1f560fe86 lbdb-0.30.ebuild 1397
+MD5 496ffcfce3a83dd0fc8d0c1e2dc1acfa lbdb-0.29.ebuild 723
+MD5 1c694e739dd9620446174390df003997 files/digest-lbdb-0.30 61
+MD5 b4016292f88d51a3b8a6fe5e982597c8 files/digest-lbdb-0.29 60
 MD5 b4016292f88d51a3b8a6fe5e982597c8 files/digest-lbdb-0.29-r1 60
 MD5 181739eb24d5fd4227cc06e8ee243ded files/lbdb-configure-in.patch 2380
-MD5 b4016292f88d51a3b8a6fe5e982597c8 files/digest-lbdb-0.29 60
-MD5 1c694e739dd9620446174390df003997 files/digest-lbdb-0.30 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrfOxViELBEf1JB0RAu4PAJ470D1Q79KyKL7t47aP2SpwWwvk2wCff8Ln
-CC5VNDZ6XZgGuoPLk76Uat4=
-=3ha+
------END PGP SIGNATURE-----
