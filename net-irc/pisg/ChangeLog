@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/pisg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.35 2005/05/16 15:18:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.36 2005/06/17 20:48:35 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> pisg-0.65.ebuild:
+  Stable on ppc.
 
   16 May 2005; Sven Wegener <swegener@gentoo.org> pisg-0.64.ebuild,
   pisg-0.65.ebuild, pisg-0.66.ebuild:

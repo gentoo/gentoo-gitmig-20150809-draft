@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 57f3863180bb70aad44e90bac0a7a987 pisg-0.65.ebuild 1297
-MD5 0a2074115c222a9f804585cefb2ed323 pisg-0.64.ebuild 1296
-MD5 abfbe7af7d508a185775969af60806a2 pisg-0.66.ebuild 1245
-MD5 7620c6a6682562ea7f85310164dc307b ChangeLog 4910
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 20a23ff23f550ab3a458ea0513436730 files/digest-pisg-0.64 61
+MD5 abfbe7af7d508a185775969af60806a2 pisg-0.66.ebuild 1245
+MD5 d9587fba248b939d4ad50caab51cfae0 ChangeLog 4998
+MD5 49a693d1c477501c7b513dc441ec6b7f pisg-0.65.ebuild 1294
+MD5 0a2074115c222a9f804585cefb2ed323 pisg-0.64.ebuild 1296
 MD5 490f56fd22bece6cafbf8607d8808977 files/digest-pisg-0.65 61
 MD5 9eca5760bc6d3ef523ad2ab2105057cf files/digest-pisg-0.66 61
+MD5 20a23ff23f550ab3a458ea0513436730 files/digest-pisg-0.64 61
 MD5 2116a6e5786030640b4a7f25159dbfc6 files/0.56-network-option-fix.patch 1345
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCiLnuI1lqEGTUzyQRAiS5AJoD+PMiPzODHc3dSWbrhOG4mOsz5gCeMidc
-xXTj3EjHZqpEyxLaA3d1jl0=
-=LwRv
------END PGP SIGNATURE-----
