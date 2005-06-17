@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.28.ebuild,v 1.1 2005/05/31 00:11:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.28.ebuild,v 1.2 2005/06/17 00:56:59 vapier Exp $
 
 inherit eutils
 
@@ -11,11 +11,12 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ppc sparc x86"
-IUSE=""
+IUSE="zlib bzip2"
 
 RDEPEND=">=dev-lang/perl-5.6.0
 	>=sys-libs/ncurses-5.2-r7
-	>=sys-libs/zlib-1.1.4" #app-text/sgmltools-lite?
+	zlib? ( >=sys-libs/zlib-1.1.4 )
+	bzip2? ( app-arch/bzip2 )" #app-text/sgmltools-lite?
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5"
 
@@ -28,7 +29,10 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure || die
+	econf \
+		$(use_with zlib) \
+		$(use_with bzip2 bz2lib) \
+		|| die
 	make || die
 }
 
