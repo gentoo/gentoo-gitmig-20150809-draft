@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 9b6746acd7f94792dcd06c82fbd3c389 dovecot-0.99.11-r1.ebuild 4769
 MD5 51723b49deac9728153954a777e36a3b dovecot-0.99.14.ebuild 4767
-MD5 082a155d222a11ba0f7f9c200186fcbc dovecot-0.99.14-r1.ebuild 5077
-MD5 3e5c29ef2f5befbbc59e97d367493bfd ChangeLog 5274
+MD5 e3f412247504dda5956be9a2cbc11bcd dovecot-0.99.14-r1.ebuild 5076
+MD5 c02910025ccc32963204c1f22ec6b7a6 ChangeLog 5375
 MD5 61e0d05b1306513aede2838fa81b05b5 metadata.xml 225
 MD5 9276b036d97370b0aa6936b9506c7f58 dovecot-0.99.13.ebuild 4766
 MD5 07b795b2b49257dee3743d5698d0d919 files/dovecot.init 517
@@ -16,7 +16,7 @@ MD5 1c0a9ca75cadf12377e70c2ef725ba0e files/dovecot.pam 220
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjhIyViELBEf1JB0RAsQTAJwP8bL04I6nJTUmus3gXdizGOAHswCbBHbM
-X6/7dy3+BGr1R/FqFr/HJIM=
-=kGit
+iD8DBQFCs1p9ViELBEf1JB0RAoMMAJsH4yPLhgwLDpctKIXF/PCKNegLSACfVzui
+fjs/dnRkHIdORCPSJ4KgNnc=
+=3XRl
 -----END PGP SIGNATURE-----
