@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.48 2005/06/06 10:17:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.49 2005/06/17 20:36:26 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  live-2005.01.29.ebuild:
+  Stable on ppc.
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> live-2005.01.29.ebuild:
   added ~ppc64
