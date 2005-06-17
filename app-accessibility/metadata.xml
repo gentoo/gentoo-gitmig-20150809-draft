@@ -17,5 +17,8 @@
 		De app-accessibility categorie bevat applicaties die de
 		toegankelijkheid bevorderen, bijvoorbeeld een schermlezer.
 	</longdescription>
+	<longdescription lang="ja">
+	app-accessibilityカテゴリィにはアクセシビリティのために使ったパッケージがあります。
+	</longdescription>
 </catmetadata>
 
