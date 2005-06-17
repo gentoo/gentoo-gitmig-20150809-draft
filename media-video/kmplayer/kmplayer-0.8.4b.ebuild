@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.8.4b.ebuild,v 1.3 2005/05/29 10:02:01 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.8.4b.ebuild,v 1.4 2005/06/17 21:05:18 hansmi Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.xs4all.nl/~jjvrieze/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="gstreamer xine"
 
 # Removed koffice plugin, since the compilation fails and it's not supported upstream.
