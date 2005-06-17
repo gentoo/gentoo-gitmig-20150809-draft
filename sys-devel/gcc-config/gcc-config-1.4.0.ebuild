@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.4.0.ebuild,v 1.2 2005/03/04 12:22:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.4.0.ebuild,v 1.3 2005/06/17 20:38:59 wolf31o2 Exp $
 
 inherit toolchain-funcs
 
@@ -18,8 +18,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 #KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=sys-apps/portage-2.0.47-r10" # We need portageq ...
+DEPEND="virtual/libc"
 
 S=${WORKDIR}
 
