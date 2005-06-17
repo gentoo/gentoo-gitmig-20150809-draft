@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/razor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.25 2005/06/16 16:08:08 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.26 2005/06/17 08:36:27 slarti Exp $
+
+*razor-2.72 (17 Jun 2005)
+
+  17 Jun 2005; Tom Martin <slarti@gentoo.org> +razor-2.72.ebuild:
+  Version bump, for security bug 95492.
 
 *razor-2.71 (16 Jun 2005)
 
