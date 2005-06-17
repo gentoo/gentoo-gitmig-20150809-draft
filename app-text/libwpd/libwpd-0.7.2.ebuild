@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.7.2.ebuild,v 1.3 2005/05/02 21:11:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.7.2.ebuild,v 1.4 2005/06/17 20:13:08 hansmi Exp $
 
 DESCRIPTION="WordPerfect Document import/export library"
 HOMEPAGE="http://libwpd.sf.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
