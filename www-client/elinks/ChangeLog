@@ -1,7 +1,10 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.13 2005/06/08 01:03:15 redhatter Exp $
-  
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.14 2005/06/17 21:03:28 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> elinks-0.10.4.ebuild:
+  Stable on ppc.
+
   08 Jun 2005; Stuart Longland <redhatter@gentoo.org> elinks-0.10.5.ebuild:
   Adding ~mips keyword as per bug #82560.
 
