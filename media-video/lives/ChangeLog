@@ -1,6 +1,11 @@
 # ChangeLog for media-video/lives
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.11 2005/03/20 00:42:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.12 2005/06/17 10:09:28 zypher Exp $
+
+*lives-0.9.5_pre3 (09 Apr 2005)
+
+  17 Jun 2005; Marc Hildebrand <zyper@gentoo.org> +lives-0.9.5_pre3.ebuild:
+  Version bump. Closes bug #96121, thanks to Andre Kloth for the ebuild.
 
   20 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> lives-0.9.1.ebuild:
   introduced libvisual support, controlled by the respective useflag. also
