@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 49e73ed7e61b314d9f10f5f46e88ffd1 ChangeLog 1380
-MD5 fc15a9196ef23e13929033fe45381a3c fpconst-0.6.0.ebuild 578
 MD5 33dfd1ea5ca2bba8046756a964bb028f fpconst-0.7.2.ebuild 537
+MD5 fc15a9196ef23e13929033fe45381a3c fpconst-0.6.0.ebuild 578
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 1c0fffee5c5983e1d48227b0336ebb34 fpconst-0.7.1.ebuild 538
+MD5 94cbbc4d7712412fcc58450acd866492 ChangeLog 1475
+MD5 daa8283e7e88bc17359e98b027c5af1f fpconst-0.7.1.ebuild 538
 MD5 19fff1d23ee1fda3565c219e1ab833aa files/digest-fpconst-0.6.0 63
-MD5 a746f15f3843f6831c95b9ad6675a3ef files/digest-fpconst-0.7.1 63
 MD5 f1f9bcfa594fd2d28b3c54eee9aada52 files/digest-fpconst-0.7.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCocrQxtZcznfol0URAm2uAJ0SHzr4iUnSnsvT69t2MbF0T3MvXACfaIch
-1/Tm+X7ypz9Ath/T7kmtUBs=
-=S+EX
------END PGP SIGNATURE-----
+MD5 a746f15f3843f6831c95b9ad6675a3ef files/digest-fpconst-0.7.1 63
