@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.21.ebuild,v 1.7 2005/05/14 10:51:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.21.ebuild,v 1.8 2005/06/17 20:30:53 hansmi Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ DEPEND=">=app-admin/gkrellm-2
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc alpha amd64"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 src_compile() {
 	emake || die

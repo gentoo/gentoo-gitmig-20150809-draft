@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.43 2005/05/18 21:34:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.44 2005/06/17 20:30:53 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gkrellmms-2.1.21.ebuild:
+  Stable on ppc.
 
 *gkrellmms-2.1.22 (18 May 2005)
 
