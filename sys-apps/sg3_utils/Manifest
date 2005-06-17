@@ -1,6 +1,6 @@
 MD5 4be8ac9f58f93c13367d8e57329f4a1e ChangeLog 1678
 MD5 37443e54165d5bcdaa8550d52edafa98 metadata.xml 228
-MD5 beeceb5984181d8f28d558a30c7084ad sg3_utils-1.15.ebuild 926
+MD5 eae70fd0e48273e4a0443cfa34919c44 sg3_utils-1.15.ebuild 954
 MD5 d5959d5cb2439b78b3c1d20fc555f047 sg3_utils-1.08.ebuild 938
 MD5 276082cc2877b0ec5710dea2c78c7df6 sg3_utils-1.11.ebuild 870
 MD5 8dcedd2980cb1b56ed8e0a60b13f8c48 files/digest-sg3_utils-1.15 124

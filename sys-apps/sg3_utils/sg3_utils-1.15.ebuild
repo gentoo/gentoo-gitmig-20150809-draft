@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.15.ebuild,v 1.1 2005/06/06 22:16:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.15.ebuild,v 1.2 2005/06/17 01:16:03 vapier Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 		-e "s:-g -O2:${CFLAGS}:g" \
 		-e '/^PREFIX=/s:/local::' \
 		-e 's:$(DESTDIR)/:$(DESTDIR):' \
+		-e 's:/man:/share/man:' \
 		Makefile
 }
 
