@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8.ebuild,v 1.10 2005/05/13 01:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8.ebuild,v 1.11 2005/06/17 00:04:07 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -55,7 +55,7 @@ src_install() {
 		make DESTDIR="${D}" install || die "install failed"
 		dosbin ${FILESDIR}/mkinfodir
 		# tetex installs this guy #76812
-		rm -f "${D}"/usr/bin/texi2pdf
+		has_version '<app-text/tetex-3' && rm -f "${D}"/usr/bin/texi2pdf
 
 		if [[ ! -f ${D}/usr/share/info/texinfo.info ]] ; then
 			die "Could not install texinfo.info!!!"
