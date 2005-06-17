@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22-r3.ebuild,v 1.5 2005/06/12 12:14:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22-r3.ebuild,v 1.6 2005/06/17 21:05:21 hansmi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://members.elysium.pl/brush/cmd5checkpw/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
