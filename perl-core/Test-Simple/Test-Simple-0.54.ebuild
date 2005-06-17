@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Simple/Test-Simple-0.54.ebuild,v 1.5 2005/06/12 12:46:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Simple/Test-Simple-0.54.ebuild,v 1.6 2005/06/17 21:01:08 hansmi Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~mschwern/${P}/"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ~ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 
 mydoc="rfc*.txt"
 myconf="INSTALLDIRS=vendor"
