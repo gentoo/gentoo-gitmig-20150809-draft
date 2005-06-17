@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r3.ebuild,v 1.15 2005/06/06 11:46:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r3.ebuild,v 1.16 2005/06/17 20:14:14 hansmi Exp $
 
 inherit flag-o-matic eutils gnuconfig multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
 
 LICENSE="wxWinLL-3"
 SLOT="2.4"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="debug wxgtk1 gtk2 odbc opengl unicode"
 
 RDEPEND="virtual/x11
