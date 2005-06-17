@@ -1,10 +1,16 @@
-MD5 080a78fb7d5fff3a2af904ffbfc5a5ea gnu-classpath-0.15.ebuild 1283
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 df99a89b8cbc313fe3c1b5c0e0fc75d1 gnu-classpath-0.13.ebuild 1280
-MD5 eae9f63fb27d8d45f6ee861d814d744a gnu-classpath-0.14.ebuild 1283
-MD5 08a5612bde9c8f094a89b0472cd4485f ChangeLog 4787
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0d7fd50717a8e15a35a35213040e0261 gnu-classpath-0.15-r1.ebuild 1651
-MD5 9b2c43cfbb9e8d325407a9ddd2068a5d files/digest-gnu-classpath-0.14 67
-MD5 2690159fdd3e679de05cd6daed73f4da files/digest-gnu-classpath-0.15 67
-MD5 44f281c7cf47c19fe1359a1ebda60db5 files/digest-gnu-classpath-0.13 67
+MD5 4e37ad20e47a094412cae6182d2694ba gnu-classpath-0.14.ebuild 1290
+MD5 f47188aea1a9e6d2aea8b73393670a47 ChangeLog 4972
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 2690159fdd3e679de05cd6daed73f4da files/digest-gnu-classpath-0.15-r1 67
+MD5 9b2c43cfbb9e8d325407a9ddd2068a5d files/digest-gnu-classpath-0.14 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCswjI06ebR+OMO78RAu2/AJ9GsM6nQii4Aa05sgLsvedbDHRf9wCfZmIz
+q9ms5HexTN27QMeVi5UiWQk=
+=MwMg
+-----END PGP SIGNATURE-----
