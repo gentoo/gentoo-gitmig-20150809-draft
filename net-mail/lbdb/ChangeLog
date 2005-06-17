@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/lbdb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.24 2005/06/13 20:58:42 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.25 2005/06/17 20:24:23 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> lbdb-0.30.ebuild:
+  Stable on ppc.
 
   13 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> lbdb-0.30.ebuild:
   fully replace gnome use flag with evo and use get_libdir. also merge both
