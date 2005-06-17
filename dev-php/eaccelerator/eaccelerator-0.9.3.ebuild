@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.5 2005/06/12 17:24:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.6 2005/06/17 08:13:30 sebastian Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_ZENDEXT="yes"
@@ -18,8 +18,7 @@ KEYWORDS="amd64 sparc x86"
 DEPEND="$DEPEND
 		!dev-php/ioncube_loaders
 		!dev-php/php-accelerator
-		!dev-php/PECL-apc
-		!dev-php/turck-mmcache"
+		!dev-php/PECL-apc"
 
 src_compile() {
 	# eAccelerator does not work with Zend Thread Safety (ZTS)
