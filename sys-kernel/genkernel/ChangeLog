@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.86 2005/06/17 17:59:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.87 2005/06/17 19:36:51 wolf31o2 Exp $
+
+*genkernel-3.2.0_pre8 (17 Jun 2005)
+
+  17 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/genkernel-3.2.0_pre7-arch.diff, -genkernel-3.2.0_pre7-r1.ebuild,
+  +genkernel-3.2.0_pre8.ebuild:
+  Version bumped to 3.2.0_pre8 to fix a bug with localversion and 2.4 kernels.
 
   17 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   files/genkernel-3.2.0_pre7-arch.diff, genkernel-3.2.0_pre7-r1.ebuild:
