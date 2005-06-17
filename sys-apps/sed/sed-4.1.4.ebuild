@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.8 2005/06/13 23:16:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.9 2005/06/17 03:31:14 j4rg0n Exp $
 
 inherit flag-o-matic
 
@@ -61,7 +61,12 @@ src_compile() {
 
 src_install() {
 	into /
-	dobin sed/sed || die "dobin"
+	if use ppc-macos || use x86-fbsd; then
+		newbin sed/sed gsed || die "dobin"
+	else
+		dobin sed/sed || die "dobin"
+	fi
+
 	if ! use build ; then
 		make install DESTDIR="${D}" || die "Install failed"
 		dodoc NEWS README* THANKS AUTHORS BUGS ChangeLog
@@ -71,12 +76,13 @@ src_install() {
 		dodir /usr/bin
 	fi
 
-	rm -f "${D}"/usr/bin/sed
 	if use ppc-macos || use x86-fbsd ; then
 		cd "${D}"
+		rm -f "${D}"/usr/bin/gsed
 		dosym /bin/gsed /usr/bin/gsed
 		rm "${D}"/usr/lib/charset.alias "${D}"/usr/share/locale/locale.alias
 	else
+		rm -f "${D}"/usr/bin/sed
 		dosym /bin/sed /usr/bin/sed
 	fi
 }

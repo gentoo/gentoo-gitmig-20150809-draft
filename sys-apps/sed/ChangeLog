@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sed
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.64 2005/06/13 23:16:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.65 2005/06/17 03:31:14 j4rg0n Exp $
+
+  17 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org> sed-4.1.4.ebuild:
+  Fix for Bug 96321.
 
   13 Jun 2005; Mike Frysinger <vapier@gentoo.org>
   +files/sed-4.1.4-fix-invalid-ref-error.patch, sed-4.1.4.ebuild:
