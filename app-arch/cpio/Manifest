@@ -1,7 +1,8 @@
-MD5 6cfb646c7b7a38452cbc6ba9884f1d84 ChangeLog 5518
+MD5 8a8899218a3d4aaa3c2c82774c65cdd8 ChangeLog 5726
 MD5 e55fdc50aad5d87ac28cc3317fc750d8 cpio-2.6-r3.ebuild 1367
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 f70830cbd6b8132c9595fd7f13d0cc66 cpio-2.6-r2.ebuild 1117
+MD5 16fc5ba7b8856a351560a6006c8adfc0 cpio-2.6-r4.ebuild 1432
 MD5 e5b0619beac9b1fe4490c3424e903f1f files/2.6-umask.patch 1382
 MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6-r3 61
 MD5 ae93625090241de60fb662d4dd0153dc files/2.6-lstat.patch 843
@@ -10,3 +11,5 @@ MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6-r2 61
 MD5 7894f923500cbeeb0b36117e08049b5d files/2.6-rili-big-files.patch 2709
 MD5 c1efb6f13ac85b99cf4f468083101b53 files/cpio-2.6-gcc4-tests.patch 542
 MD5 08647cfda931b161030477956f57b03b files/cpio-2.6-chmodRaceC.patch 4153
+MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6-r4 61
+MD5 ad27a9309017220fb814c7877fd52cb1 files/cpio-2.6-dirTraversal.patch 6673
