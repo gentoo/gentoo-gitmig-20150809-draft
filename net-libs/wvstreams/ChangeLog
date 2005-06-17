@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.59 2005/06/17 21:12:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.60 2005/06/17 21:12:58 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> Manifest:
+  Stable on ppc.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   wvstreams-4.0.2.ebuild:
