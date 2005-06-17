@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Event
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.25 2005/05/24 17:49:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.26 2005/06/17 20:41:14 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> Event-1.00.ebuild:
+  Stable on ppc.
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org> :
   dev-perl/Test => perl-core/Test migration

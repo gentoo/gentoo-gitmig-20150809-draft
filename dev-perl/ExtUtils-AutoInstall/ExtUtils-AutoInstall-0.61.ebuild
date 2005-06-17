@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ExtUtils-AutoInstall-0.61.ebuild,v 1.5 2005/06/01 21:08:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ExtUtils-AutoInstall-0.61.ebuild,v 1.6 2005/06/17 20:47:52 hansmi Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://search.cpan.org/~autrijus/${P}/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ~ppc sparc alpha"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 # TESTS BAD. Wants to write to cpan's config on the live system
 #SRC_TEST="do"
