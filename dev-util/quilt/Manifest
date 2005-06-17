@@ -2,7 +2,7 @@ MD5 5b59cbe14244ad3dde2348bc3f7b8f75 quilt-0.37.ebuild 1161
 MD5 8ab3de6bb64aa7ebfa3d7c05538b8271 quilt-0.39.ebuild 1047
 MD5 10cafc712971b949072797243e099c10 quilt-0.40.ebuild 1048
 MD5 54de0b3520bdcab79b7c58dbcd0e66c0 quilt-0.32-r1.ebuild 775
-MD5 39b6fd658828e7328b41d978c869392a ChangeLog 1389
+MD5 ed08782c1f0dd4eaecbefdecc08d6829 ChangeLog 1389
 MD5 fa9f0ec1a9f013df4ca78764a473a250 metadata.xml 256
 MD5 003c9ff8a9caa912eaa92f9eb99376f1 files/digest-quilt-0.37 67
 MD5 f833281ba40e1a4b8319065751487a3b files/digest-quilt-0.39 67
