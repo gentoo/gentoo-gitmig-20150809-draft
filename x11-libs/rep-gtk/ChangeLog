@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.35 2005/05/10 14:49:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.36 2005/06/17 21:04:51 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  rep-gtk-0.18-r1.ebuild:
+  Stable on ppc.
 
   10 May 2005; Aron Griffis <agriffis@gentoo.org> :
   Regenerate digests based on sources from sf.net. It looks like these digests
