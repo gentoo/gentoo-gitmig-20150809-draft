@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a588b3d036ef2c1ca9387999bd199f3 PECL-apc-2.0.ebuild 741
 MD5 58d1ad409cf70a12c3c3b29062a4fbbb PECL-apc-2.0.4.ebuild 996
 MD5 248962c45207de4ba1ecda4584458d9e ChangeLog 1506
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 25a572361223adc26bf0aefa4da18a51 files/digest-PECL-apc-2.0 55
 MD5 7603dc56a299fce545e20b1db52b0b45 files/digest-PECL-apc-2.0.4 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCsocnaGfFFLhbXWkRAoaUAJwI7sBRmyYAeTBQKbeXW0T4Y27MaQCgkLpb
+cpDNZnh7ihyEyYhujWkNlJw=
+=bwS/
+-----END PGP SIGNATURE-----
