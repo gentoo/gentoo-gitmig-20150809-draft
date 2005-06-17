@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.28.ebuild,v 1.2 2005/06/17 00:56:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.28.ebuild,v 1.3 2005/06/17 01:02:55 vapier Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	rm -f "${D}"/usr/sbin/{install-info,start-stop-daemon}
 	rm -f "${D}"/usr/bin/md5sum
-	mv "${D}"/usr/etc "${D}"/
+	rm -f "${D}"/usr/share/man/man?/{md5sum,install-info,start-stop-daemon}.?
 	dodoc ChangeLog INSTALL THANKS TODO
 	keepdir /usr/lib/db/methods/{mnt,floppy,disk}
 	keepdir /usr/lib/db/{alternatives,info,methods,parts,updates}
