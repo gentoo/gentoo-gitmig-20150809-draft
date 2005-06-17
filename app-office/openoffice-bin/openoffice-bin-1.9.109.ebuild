@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.109.ebuild,v 1.1 2005/06/16 16:48:15 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.109.ebuild,v 1.2 2005/06/17 19:57:51 suka Exp $
 
 inherit eutils fdo-mime rpm versionator
 
@@ -152,5 +152,6 @@ pkg_postinst() {
 	einfo
 	einfo " Also, for individual components, you can use any of:"
 	einfo
-	einfo " oocalc2, oodraw2, ooimpress2, oomath2, ooweb2 or oowriter2"
+	einfo " oobase2, oocalc2, oodraw2, oofromtemplate2, ooimpress2, oomath2,"
+	einfo " ooweb2 or oowriter2"
 }
