@@ -1,5 +1,15 @@
-MD5 bfc9aa35537f38d53a95ed6d51b8346e ChangeLog 1773
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f90c6b5ccd48096b82a7842c5994583b metadata.xml 469
-MD5 0bdf73e9b20233e63602df97619bd0ac libiconv-1.9.2-r2.ebuild 769
+MD5 277cb2900ce229bba5574ddbfa4af107 libiconv-1.9.2-r3.ebuild 1279
+MD5 67f1991d15839b3956ae3cf9c181ce21 ChangeLog 2142
 MD5 97aebb7d7ded50f07b44c23768d25928 files/libiconv-1.9.2-RPATH-fix.patch 1906
-MD5 ba26148d2aed650a790b129b9907ae59 files/digest-libiconv-1.9.2-r2 67
+MD5 ba26148d2aed650a790b129b9907ae59 files/digest-libiconv-1.9.2-r3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCswGHj5H05b2HAEkRAtnRAJ9n12VLQiaDLxjNlbLrwYsz26dDvgCdFSLB
+mn3BUgLWVFF9q9Sr59/Rqic=
+=1TPV
+-----END PGP SIGNATURE-----
