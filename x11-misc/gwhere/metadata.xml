@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>desktop-misc</herd>
+<maintainer>
+	<email>pYrania@gentoo.org</email>
+	<name>Markus Nigbur</name>
+</maintainer>
+<longdescription lang="en">
+GWhere allows you to manage a catalog of your CDs and any other removable media
+(such as hard disks, floppy disks, Zip disks, CD-ROMs, etc...) indexed in a
+database. With GWhere it is easy to browse your CDs or to make a quick search
+without needing to insert each CD one after another.
+</longdescription>
+</pkgmetadata>
