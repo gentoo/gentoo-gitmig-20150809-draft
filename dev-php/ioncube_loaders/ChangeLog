@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/ioncube_loaders
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ChangeLog,v 1.6 2004/07/04 23:19:27 robbat2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ChangeLog,v 1.7 2005/06/17 08:21:43 sebastian Exp $
+
+  17 Jun 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  ioncube_loaders-2.4.ebuild:
+  Update block: dev-php/turck-mmcache -> dev-php/eaccelerator
 
   04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org>
   ioncube_loaders-2.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/PECL-apc-2.0.ebuild,v 1.8 2005/04/22 14:48:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/PECL-apc-2.0.ebuild,v 1.9 2005/06/17 08:17:23 sebastian Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_NAME="apc"
@@ -18,10 +18,10 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="PHP"
 KEYWORDS="x86 alpha ~sparc ppc amd64"
 DEPEND="$DEPEND
-	    !dev-php/turck-mmcache
-		!dev-php/php-accelerator
-		!dev-php/ioncube_loaders
-		=dev-php/php-4*"
+	!dev-php/eaccelerator
+	!dev-php/php-accelerator
+	!dev-php/ioncube_loaders
+	=dev-php/php-4*"
 
 src_install () {
 	php-ext-source_src_install
