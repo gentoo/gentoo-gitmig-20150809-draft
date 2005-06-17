@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-mount
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mount/ChangeLog,v 1.1 2005/06/17 00:34:29 bcowan Exp $
+
+*xfce4-mount-0.3 (17 Jun 2005)
+
+  17 Jun 2005; Brad Cowan <bcowan@gentoo.org> +metadata.xml,
+  +xfce4-mount-0.3.ebuild:
+  Initial import.
+
