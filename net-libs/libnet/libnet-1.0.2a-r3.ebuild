@@ -1,34 +1,35 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.13 2005/05/15 11:35:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.14 2005/06/17 01:10:55 vapier Exp $
 
 inherit eutils
 
-S="${WORKDIR}/Libnet-${PV}"
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
 HOMEPAGE="http://www.packetfactory.net/libnet/"
 SRC_URI="http://www.packetfactory.net/libnet/dist/deprecated/${P}.tar.gz"
 
-KEYWORDS="x86 ppc sparc alpha amd64 ~ppc64"
 LICENSE="LGPL-2"
 SLOT="1.0"
+KEYWORDS="x86 ppc sparc alpha amd64 ~ppc64"
 IUSE=""
+
+S=${WORKDIR}/Libnet-${PV}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/libnet-gcc33-fix
-	epatch ${FILESDIR}/${PV}-slot.patch
-	cd ${S}
+	epatch "${FILESDIR}"/libnet-gcc33-fix
+	epatch "${FILESDIR}"/${PV}-slot.patch
+	cd "${S}"
 	mv libnet-config.in libnet-${SLOT}-config.in || die "moving libnet-config"
-	cd ${S}/include
+	cd "${S}"/include
 	ln -s libnet.h libnet-${SLOT}.h
 	cd libnet
 	for f in *.h ; do
 		ln -s ${f} ${f/-/-${SLOT}-} || die "linking ${f}"
 	done
-	cd ${S}/doc
+	cd "${S}"/doc
 	ln -s libnet.3 libnet-${SLOT}.3 || die "linking manpage"
-	cd ${S}
+	cd "${S}"
 	autoconf || die
 }
 
@@ -39,11 +40,13 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
+	doman "${D}"/usr/man/man3/libnet-1.0.3
+	rm -r "${D}"/usr/man
 
-	dodoc VERSION doc/{README,TODO*,CHANGELOG*} || die "dodoc failed"
-	newdoc README README.1st || die "newdoc failed"
-	docinto example ; dodoc example/libnet* || die "dodoc failed (example)"
-	docinto Ancillary ; dodoc doc/Ancillary/* || die "dodoc failed (Ancillary)"
+	dodoc VERSION doc/{README,TODO*,CHANGELOG*}
+	newdoc README README.1st
+	docinto example ; dodoc example/libnet*
+	docinto Ancillary ; dodoc doc/Ancillary/*
 }
 
 pkg_postinst(){
