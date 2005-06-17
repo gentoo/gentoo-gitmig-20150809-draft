@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/login-app
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/ChangeLog,v 1.6 2004/06/24 22:28:10 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/ChangeLog,v 1.7 2005/06/17 20:39:54 smithj Exp $
+
+*login-app-2.0.0_alpha7-r1 (17 Jun 2005)
+
+  17 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/login-app-windowmaker.patch, +metadata.xml,
+  +login-app-2.0.0_alpha7-r1.ebuild:
+  added metadata.xml, fixed #76366; thanks to Gunnar Wrobel for the patch
 
   19 Jun 2004; <pyrania@gentoo.org> login-app-2.0.0_alpha7.ebuild:
   Added IUSE.
