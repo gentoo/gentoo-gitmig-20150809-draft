@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.14 2005/06/15 20:37:32 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.15 2005/06/17 20:09:26 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> monotone-0.19.ebuild:
+  Stable on ppc.
 
   15 Jun 2005; Leonardo Boshell <leonardop@gentoo.org> monotone-0.19.ebuild:
   Stable on x86.
