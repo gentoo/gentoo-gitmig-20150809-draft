@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ansi-tests-cvs/cl-ansi-tests-cvs-0.ebuild,v 1.1 2005/06/17 16:25:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ansi-tests-cvs/cl-ansi-tests-cvs-0.ebuild,v 1.2 2005/06/17 16:49:29 mkennedy Exp $
 
 ECVS_AUTH="ext"
 export CVS_RSH="ssh"
@@ -20,14 +20,13 @@ S=${WORKDIR}/${ECVS_MODULE}
 
 DESCRIPTION="The ANSI Common Lisp compliance test suite from the GCL CVS tree."
 SRC_URI=""
-HOMEPAGE="http://www.gnu.org/software/emacs
-	http://www.cliki.net/GCL%20ANSI%20Test%20Suite"
+HOMEPAGE="http://www.cliki.net/GCL%20ANSI%20Test%20Suite"
 
 DEPEND=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 src_compile() {
 	rm -f makefile || die

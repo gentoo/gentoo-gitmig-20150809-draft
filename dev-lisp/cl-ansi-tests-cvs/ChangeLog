@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-ansi-tests-cvs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ansi-tests-cvs/ChangeLog,v 1.1 2005/06/17 16:25:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ansi-tests-cvs/ChangeLog,v 1.2 2005/06/17 16:49:29 mkennedy Exp $
+
+  17 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-ansi-tests-cvs-0.ebuild:
+  Keywording ~x86; Corrected home page URL
 
 *cl-ansi-tests-cvs-0 (17 Jun 2005)
 
