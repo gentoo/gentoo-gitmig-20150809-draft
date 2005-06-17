@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.4 2005/06/06 02:00:12 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.5 2005/06/17 23:34:55 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -16,7 +16,8 @@
 # 	RDEPEND: *Optional* Set if the desklet requires a minimum version
 #		of gDesklets greater than 0.34 or other packages.
 
-inherit eutils
+inherit eutils multilib
+
 ECLASS="gdesklets"
 INHERITED="$INHERITED $ECLASS"
 
@@ -47,6 +48,12 @@ gdesklets_src_install() {
 	
 	# The displays only need to be readable
 	insopts -m0744
+	
+	# Check to see if DISPLAY is set for the
+	# gdesklets-control-getid script to run without
+	# error
+	[ -z "${DISPLAY}" ] && DISPLAY=""
+	export DISPLAY
 	
 	# First, install the Sensor (if there is one)
 	if [[ -n "${SENSOR_NAME}" ]]; then
