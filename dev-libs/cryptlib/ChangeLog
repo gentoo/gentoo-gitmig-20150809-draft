@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cryptlib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.8 2005/02/17 17:15:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.9 2005/06/17 01:21:23 vanquirius Exp $
+
+*cryptlib-3.2 (17 Jun 2005)
+
+  17 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> cryptlib-3.1.ebuild,
+  +cryptlib-3.2.ebuild:
+  Version bump. QA: add missing doc to IUSE.
 
   17 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> cryptlib-3.1.ebuild,
   cryptlib-3.1_beta05.ebuild:
