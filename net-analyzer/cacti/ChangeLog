@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.44 2005/06/16 03:14:29 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.45 2005/06/17 00:59:49 ramereth Exp $
+
+  17 Jun 2005; Lance Albertson <ramereth@gentoo.org>
+  files/digest-cacti-0.8.6e, Manifest:
+  Updated digest for new tarball from author
 
 *cacti-0.8.6e (15 Jun 2005)
 
