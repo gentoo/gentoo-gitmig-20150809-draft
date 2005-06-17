@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 91dc5155f487dcc82dbc717996b60647 bluez-libs-2.16.ebuild 667
-MD5 c9f20a8909e5d94ecaacb8618e779480 ChangeLog 4913
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
-MD5 d60864c5f3bfcdf0a3a4ceed86256d5f bluez-libs-2.16-r1.ebuild 665
-MD5 bdf6c60a1d1be6f891ad12cb7a622629 bluez-libs-2.15.ebuild 571
-MD5 f460ade9182808a2326ff36ddcfe793e bluez-libs-2.10.ebuild 648
+MD5 b625d17afc75ab96d484388a8369d30c ChangeLog 4996
 MD5 d3664b6d1d4b6c1b9191982bee9039b1 bluez-libs-2.17.ebuild 575
+MD5 f460ade9182808a2326ff36ddcfe793e bluez-libs-2.10.ebuild 648
+MD5 4c2a1148e6770f08be49ee0cd8587708 bluez-libs-2.16-r1.ebuild 664
+MD5 91dc5155f487dcc82dbc717996b60647 bluez-libs-2.16.ebuild 667
+MD5 bdf6c60a1d1be6f891ad12cb7a622629 bluez-libs-2.15.ebuild 571
 MD5 93cd2daa33fc078a0bdf45ab9584d601 files/digest-bluez-libs-2.16-r1 67
-MD5 de3e6042ceea4fbca926d59617ffdb36 files/bluez-libs-2.10-handsfree.patch 1030
 MD5 d8ae1c76ebaed0d5c69e90b4aade8624 files/2.16-bluetooth.h.patch 269
+MD5 de3e6042ceea4fbca926d59617ffdb36 files/bluez-libs-2.10-handsfree.patch 1030
 MD5 da1f5139d76bee6ca060e64c3075f5b3 files/digest-bluez-libs-2.15 67
-MD5 d5d0644946bb10d84e7891be9bea0799 files/digest-bluez-libs-2.17 67
-MD5 3582cb4d2e7e3578ac75f23798b13d25 files/digest-bluez-libs-2.10 67
 MD5 93cd2daa33fc078a0bdf45ab9584d601 files/digest-bluez-libs-2.16 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrFfbKf2g/qXtneoRArWgAKCklWYk+1fSxrD41lYQOIBRwjRL+ACeK8sr
-+kkbGPU2JdnEHyG77GMCs9s=
-=O5WM
------END PGP SIGNATURE-----
+MD5 3582cb4d2e7e3578ac75f23798b13d25 files/digest-bluez-libs-2.10 67
+MD5 d5d0644946bb10d84e7891be9bea0799 files/digest-bluez-libs-2.17 67
