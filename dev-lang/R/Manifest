@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 36452c6e2bafe945b77c10ee5f6168ab R-2.1.0-r1.ebuild 2599
 MD5 a182d325b0bce4efd708b2ebc3ecfaed R-2.0.1.ebuild 3691
-MD5 7a37f2e885ee7e50ca16d945056e9ea2 ChangeLog 8286
-MD5 15ce6e575cf7a5844aa8deecb504e7be files/R.desktop 425
-MD5 eec0037e7f2073028a10b5028ee8b0bc files/digest-R-2.0.1 61
-MD5 35b08f0bf56b91051f76faa75d70eb9f files/digest-R-2.1.0-r1 61
+MD5 2aa6c029ce321dcb34d35c29fd53d54b ChangeLog 8375
+MD5 be55ad53cffd9d8dbb487099cfb202ac R-2.1.0-r1.ebuild 2596
 MD5 44015fe4137f1326769e89f2c2c2eda7 files/R-logo.png 4867
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCrehHKRy60XGEcJIRAkYmAKCeqdT0a0PNMl66o9CABEQgfOxm0gCfarAx
-PpGgxRkH8Tw7oAxN+jGVXes=
-=vSpd
------END PGP SIGNATURE-----
+MD5 eec0037e7f2073028a10b5028ee8b0bc files/digest-R-2.0.1 61
+MD5 15ce6e575cf7a5844aa8deecb504e7be files/R.desktop 425
+MD5 35b08f0bf56b91051f76faa75d70eb9f files/digest-R-2.1.0-r1 61

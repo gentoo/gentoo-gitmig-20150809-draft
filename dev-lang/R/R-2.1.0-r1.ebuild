@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.6 2005/06/13 20:11:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.7 2005/06/17 20:30:32 hansmi Exp $
 
 inherit fortran toolchain-funcs
 
@@ -20,7 +20,7 @@ DEPEND="virtual/libc
 		tcltk? ( dev-lang/tk )"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 
 src_compile() {
 	# Test for a 64 bit architecture - f2c won't work on 64 bit archs with R.
