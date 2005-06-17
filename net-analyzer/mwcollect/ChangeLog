@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mwcollect
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.1 2005/06/17 02:48:52 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.2 2005/06/17 02:54:49 chriswhite Exp $
+
+  17 Jun 2005; Chris White <chriswhite@gentoo.org> files/confd:
+  Fixed manifest signing issue and removed redundant error for issue upstream
+  has addressed in confd file.
 
 *mwcollect-2.1.0 (17 Jun 2005)
 

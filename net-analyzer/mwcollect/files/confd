@@ -18,10 +18,6 @@
 
 OPTIONS="-D -p /var/run/mwcollectd.pid -c /etc/mwcollect/mwcollectd.conf"
 
-# NOTE: DO NOT specify "-D", because mwcollectd does not create its pid file
-# This way, start-stop-daemon makes it background and is able to create the
-# pid file under /var/run
-
 # example: add log file
 # OPTIONS="$OPTIONS -l /var/log/mwcollect.log -L 3"
 
