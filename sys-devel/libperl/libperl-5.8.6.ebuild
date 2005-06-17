@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.10 2005/05/30 02:44:56 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.11 2005/06/17 09:54:37 kugelfang Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -217,7 +217,7 @@ src_compile() {
 		${myconf} || die
 
 	emake -j1 -f Makefile depend || die "Couldn't make libperl.so depends"
-	emake -j1 -f Makefile ${LIBPERL} || die "Unable to make libperl.so"
+	emake -j1 -f Makefile LIBPERL=${LIBPERL} ${LIBPERL} || die "Unable to make libperl.so"
 	mv ${LIBPERL} ${WORKDIR}
 }
 

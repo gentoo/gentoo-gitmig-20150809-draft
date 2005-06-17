@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.61 2005/05/30 02:44:56 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.62 2005/06/17 09:54:37 kugelfang Exp $
+
+  17 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> libperl-5.8.5.ebuild,
+  libperl-5.8.6.ebuild:
+  Specifying LIBPERL variable for make on command line to fix BUG #63699.
 
   29 May 2005; <solar@gentoo.org> libperl-5.8.2-r1.ebuild,
   libperl-5.8.4-r1.ebuild, libperl-5.8.5-r1.ebuild, libperl-5.8.5.ebuild,
