@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 164118b6efb69a4fe6443c4e96d6f03b oprofile-0.8.2.ebuild 1965
+MD5 5f4b4ce6df8b9ac9eac2c7eaed723dbd oprofile-0.8.2.ebuild 1965
 MD5 ababebca8c58f8cec22ed515c4e25acd oprofile-0.9.ebuild 1964
-MD5 acd80e3a427a72c104aa4734ff2750bc ChangeLog 2194
-MD5 0740dd6f2af79164df7499027b89593d oprofile-0.8.1.ebuild 1861
 MD5 3d4a085e59f4ef22017d52452649205b metadata.xml 310
+MD5 4fd202377cd1bca9ea107c6d23e66c5b ChangeLog 2290
+MD5 0740dd6f2af79164df7499027b89593d oprofile-0.8.1.ebuild 1861
 MD5 26253b92a26a505d340c30e8bd9be1d3 files/digest-oprofile-0.8.1 66
 MD5 c2c6ccfba6b301b507f80d5b1d595cf9 files/digest-oprofile-0.8.2 66
 MD5 3f9580dac61b935958e6f8671c7d6ce0 files/digest-oprofile-0.9 64
 MD5 37dee2be2710a99023888aa0be7f00cd files/oprofile-0.8.2.patch 669
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrBFTchej4aZK9/cRAqGBAJ9ybueM/CRi9fxPTipmDAl6sMt8YgCZAfOo
-EznCJL/6yEenwWxnsfBmtwE=
-=WohO
------END PGP SIGNATURE-----

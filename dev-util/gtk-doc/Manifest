@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 7f7f0343027beecf152fa08c27591da2 gtk-doc-1.3-r1.ebuild 1156
-MD5 01767f1950e2888ce1aa8093d3324ef7 ChangeLog 5166
-MD5 f9a751bcfc337782edd6266175608a9c gtk-doc-1.2-r1.ebuild 1019
 MD5 a43fd82a11cf9cf34f542ba09a7222ec gtk-doc-1.1.ebuild 950
-MD5 9e9bf533df75a1c8173b97715f5391a6 files/digest-gtk-doc-1.2-r1 64
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 4fc225b66ac32e436702b83f62921330 gtk-doc-1.3-r1.ebuild 1155
+MD5 92e6e1c38d2428b47191d92539ec4fba ChangeLog 5261
+MD5 f9a751bcfc337782edd6266175608a9c gtk-doc-1.2-r1.ebuild 1019
 MD5 01e1d20270319035161fbafc0d87132c files/gtk-doc-1.3-declaration.patch 372
+MD5 9e9bf533df75a1c8173b97715f5391a6 files/digest-gtk-doc-1.2-r1 64
 MD5 7cc023d59d3e76467752a9eddc070059 files/digest-gtk-doc-1.3-r1 64
 MD5 c036d436f5c42ec78ef0bb5507eb5437 files/digest-gtk-doc-1.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrHssmOfEJZHYOKcRAt0jAKDMCEZ95sH1tHDMFhfVNZBFvrFB8wCgwomz
-VQjnvyP0jDZMKH7OYf6JCmk=
-=vA/G
------END PGP SIGNATURE-----
