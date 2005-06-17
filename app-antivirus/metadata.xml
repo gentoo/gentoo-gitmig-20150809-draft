@@ -19,5 +19,8 @@
 	<longdescription lang="vi">
 		Nhóm app-antivirus chứa các ứng dụng chống/diệt virus.
 	</longdescription>
+	<longdescription lang="ja">
+		app-antivirusカテゴリにはアンチウィルスソフトがあります。
+	</longdescription>
 </catmetadata>
 
