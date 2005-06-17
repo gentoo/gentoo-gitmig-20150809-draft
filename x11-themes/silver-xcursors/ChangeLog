@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/silver-xcursors
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.12 2004/11/24 02:41:37 geoman Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.13 2005/06/17 03:17:15 smithj Exp $
+
+  17 Jun 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml,
+  silver-xcursors-0.4.ebuild:
+  added metadata.xml (desktop-misc herd) and updated ebuild with proper einfos
+  and ewarns for #81920
 
   23 Nov 2004; Stephen P. Becker <geoman@gentoo.org>
   silver-xcursors-0.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.8.ebuild,v 1.14 2005/02/19 19:10:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.8.ebuild,v 1.15 2005/06/17 03:14:26 smithj Exp $
 
 MY_P="5507-Golden-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -28,23 +28,29 @@ src_install() {
 }
 
 pkg_postinst() {
+	# yes, i know; it is ugly
+	X11_IMPLEM_P="$(best_version virtual/x11)"
+	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	X11_IMPLEM="${X11_IMPLEM##*\/}"
+
 	einfo "To use this set of cursors, edit or create the file ~/.Xdefaults"
 	einfo "and add the following line:"
 	einfo "Xcursor.theme: Gold"
 	einfo ""
-	einfo "Also, you can change the size by adding a line like:"
+	einfo "You can change the size by adding a line like:"
 	einfo "Xcursor.size: 48"
 	einfo ""
-	einfo ""
-	einfo "To globally use this set of mouse cursors edit the file:"
-	einfo "   /usr/share/cursors/${X11_IMPLEM}/default/index.theme"
+	einfo "Also, to globally use this set of mouse cursors edit the file:"
+	einfo "   /usr/local/share/cursors/${X11_IMPLEM}/default/index.theme"
 	einfo "and change the line:"
-	einfo "   Inherits=[current setting]"
+	einfo "    Inherits=[current setting]"
 	einfo "to"
-	einfo "   Inherits=Gold"
-	einfo "Note this will be overruled by a user's ~/.Xdefaults file"
+	einfo "    Inherits=Gold"
+	einfo ""
+	einfo "Note this will be overruled by a user's ~/.Xdefaults file."
 	einfo ""
 	ewarn "If you experience flickering, try setting the following line in"
-	ewarn "the Device section of your XF86Config:"
-	ewarn "Option  \"HWCursor\"  \"false\""
+	ewarn ""
+	ewarn "the Device section of your xorg.conf file:"
+	ewarn "    Option  \"HWCursor\"  \"false\""
 }
