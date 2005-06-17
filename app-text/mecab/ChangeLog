@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mecab
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.17 2005/06/04 09:41:29 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.18 2005/06/17 20:23:55 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> mecab-0.80.ebuild:
+  Stable on ppc.
 
   04 Jun 2005; Akinori Hattori <hattya@gentoo.org> mecab-0.81.ebuild:
   don't pass --with-charset if the unicode use flag is not set.

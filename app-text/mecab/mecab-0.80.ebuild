@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.80.ebuild,v 1.5 2005/05/23 15:17:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.80.ebuild,v 1.6 2005/06/17 20:23:55 hansmi Exp $
 
 # need one of ipadic-2.4.4/2.5.0/2.5.1 
 MY_IPADIC="ipadic-2.5.1"
@@ -12,7 +12,7 @@ SRC_URI="http://chasen.org/~taku/software/mecab/src/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc ~amd64 ~ppc64"
+KEYWORDS="~amd64 ppc ~ppc64 sparc x86"
 IUSE="unicode"
 
 DEPEND="dev-lang/perl"
