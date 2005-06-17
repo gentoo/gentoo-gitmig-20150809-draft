@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.40 2005/06/13 10:53:35 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.41 2005/06/17 20:46:58 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> hal-0.4.7-r2.ebuild:
+  Stable on ppc.
 
   13 Jun 2005; Heinrich Wendel <lanius@gentoo.org> hal-0.4.7-r2.ebuild:
   stable on amd64
