@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 10f4fa2be821c9f598d6b27a4e14e788 ChangeLog 1453
 MD5 754678c81877b8e077031dbe33931f59 libvisual-plugins-0.1.6.ebuild 833
 MD5 b979542328754f4832e48fcf1afdc627 libvisual-plugins-0.1.7.ebuild 846
-MD5 e8cb48a5d0f5f210c559c3aee148c11b ChangeLog 1349
-MD5 0e75f0993356a474db61553e43d1f1dc libvisual-plugins-0.2.0.ebuild 1029
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 cd32e1ad4bd26ebca70a0f65350195ba files/libvisual-plugins-0.2.0-configure.patch 414
+MD5 2d90379c19119b1890025b952a4aa204 libvisual-plugins-0.2.0.ebuild 1028
 MD5 e341800a9ecd70a1be2bd3dca5e651e3 files/digest-libvisual-plugins-0.1.6 75
-MD5 ef7a43fa14e3c6e823115c74c891dc7c files/digest-libvisual-plugins-0.1.7 75
 MD5 ba5f0b6a4d085dd4ddc2667c3574fada files/digest-libvisual-plugins-0.2.0 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCj5G8evY57Fted3ERAvtHAJ9l+GApisMS4KNVgq/+vbrJMC8KrQCeN/cJ
-sx1iSDOp2v9s44KyDQO/+58=
-=x4Ar
------END PGP SIGNATURE-----
+MD5 cd32e1ad4bd26ebca70a0f65350195ba files/libvisual-plugins-0.2.0-configure.patch 414
+MD5 ef7a43fa14e3c6e823115c74c891dc7c files/digest-libvisual-plugins-0.1.7 75

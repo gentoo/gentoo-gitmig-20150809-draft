@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.6 2005/05/21 19:49:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.7 2005/06/17 16:33:07 josejx Exp $
+
+  17 Jun 2005; Joseph Jezak <josejx@gentoo.org>
+  libvisual-plugins-0.2.0.ebuild:
+  Marked ppc stable.
 
   14 May 2005; Heinrich Wendel <lanius@gentoo.org>
   libvisual-plugins-0.2.0.ebuild:
