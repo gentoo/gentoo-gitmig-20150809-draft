@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/mwcollect
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.1 2005/06/17 02:48:52 chriswhite Exp $
+
+*mwcollect-2.1.0 (17 Jun 2005)
+
+  17 Jun 2005; Chris White <chriswhite@gentoo.org> +files/confd,
+  +files/initd, +metadata.xml, +mwcollect-2.1.0.ebuild:
+  Initial import into the tree. This closes bug #94336. Thanks to Tomoyuki
+  Sakurai for the initial ebuild.
+

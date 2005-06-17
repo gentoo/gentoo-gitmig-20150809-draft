@@ -1,0 +1,36 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+opts="depend checkconfig start stop"
+
+depend() {
+	need net 
+}
+
+checkconfig() {
+	if [ ! -e /etc/mwcollect/mwcollectd.conf ] ; then
+		eerror "You need to create /etc/mwcollect/mwcollectd.conf first."
+		eerror "An example can be found in /etc/mwcollect/mwcollectd.conf.dist"
+		return 1
+	fi
+}
+
+start() {
+	ebegin "Starting mwcollectd"
+	# HACK: making mwcollectd background with --background
+	# mwcollectd should have created its pid file
+	checkconfig && \
+	start-stop-daemon --start --quiet \
+		--exec /usr/sbin/mwcollectd -- ${OPTIONS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping mwcollectd"
+	start-stop-daemon --stop --quiet \
+		--pidfile /var/run/mwcollectd.pid \
+		--exec /usr/sbin/mwcollectd && rm /var/run/mwcollectd.pid
+	eend $?
+}
+

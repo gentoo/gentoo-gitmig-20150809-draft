@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+#
+# options for mwcollectd
+#
+# Usage: /usr/sbin/mwcollectd [options]
+# Where options can be one of the following:
+#         -c <config-file>        specify config file (defaults to /etc/mwcollectd.conf)
+#         -l <log-file>           add log file
+#         -C                      add console logger
+#         -L <log-level>  specify log level, inital is 3
+#         -D                      detach from console
+#         -h                      display this info
+# 
+# Example:
+#         /usr/sbin/mwcollectd -L critical -C -L info -l /var/log/mwcollectd.log -c /etc/mwcollectd.conf
+
+OPTIONS="-D -p /var/run/mwcollectd.pid -c /etc/mwcollect/mwcollectd.conf"
+
+# NOTE: DO NOT specify "-D", because mwcollectd does not create its pid file
+# This way, start-stop-daemon makes it background and is able to create the
+# pid file under /var/run
+
+# example: add log file
+# OPTIONS="$OPTIONS -l /var/log/mwcollect.log -L 3"
+
+# see http://www.mwcollect.org/wiki/DocConfiguration for
+# more info, which is currently empty, though
