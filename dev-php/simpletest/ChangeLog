@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/simpletest
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/simpletest/ChangeLog,v 1.1 2005/06/10 04:32:17 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/simpletest/ChangeLog,v 1.2 2005/06/17 06:26:23 sebastian Exp $
+
+  17 Jun 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  simpletest-1.0.0.ebuild:
+  Stable on amd64 and x86.
 
 *simpletest-1.0.0 (10 Jun 2005)
 
