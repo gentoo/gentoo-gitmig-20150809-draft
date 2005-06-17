@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/texpower-0.1b.ebuild,v 1.3 2005/06/06 11:59:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/texpower-0.1b.ebuild,v 1.4 2005/06/17 21:08:34 hansmi Exp $
 
 inherit latex-package
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/texpower/${MY_P}.tar.gz"
 HOMEPAGE="http://texpower.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 
 S="${WORKDIR}/${MY_P}"
 
