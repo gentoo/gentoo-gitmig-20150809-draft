@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asapm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/ChangeLog,v 1.9 2004/06/28 20:32:48 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/ChangeLog,v 1.10 2005/06/17 11:53:17 ka0ttic Exp $
+
+  17 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Added metadata.xml (afterstep herd).
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> asapm-2.10.ebuild:
   glibc -> libc
