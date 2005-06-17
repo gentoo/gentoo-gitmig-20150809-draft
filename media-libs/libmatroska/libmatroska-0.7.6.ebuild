@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.6.ebuild,v 1.6 2005/06/12 23:56:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.6.ebuild,v 1.7 2005/06/17 20:40:25 hansmi Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ppc64 sparc x86"
 
 DEPEND=">=dev-libs/libebml-0.7.3"
 

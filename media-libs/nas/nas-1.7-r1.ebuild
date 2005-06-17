@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.5 2005/05/09 01:16:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.6 2005/06/17 20:27:10 hansmi Exp $
 
 IUSE="static"
 
@@ -12,7 +12,7 @@ SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
 
 RDEPEND="virtual/x11"
 
