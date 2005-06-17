@@ -1,11 +1,6 @@
-Index: gen_compile.sh
-===================================================================
-RCS file: /var/cvsroot/gentoo/src/genkernel_bradmssw/gen_compile.sh,v
-retrieving revision 1.38
-retrieving revision 1.39
-diff -u -b -B -r1.38 -r1.39
---- gen_compile.sh	15 Jun 2005 19:05:31 -0000	1.38
-+++ gen_compile.sh	16 Jun 2005 21:23:13 -0000	1.39
+diff -urN genkernel-3.2.0_pre7.orig/gen_compile.sh genkernel-3.2.0_pre7/gen_compile.sh
+--- genkernel-3.2.0_pre7.orig/gen_compile.sh	2005-06-16 14:23:06.000000000 -0400
++++ genkernel-3.2.0_pre7/gen_compile.sh	2005-06-17 14:02:31.000000000 -0400
 @@ -689,7 +689,13 @@
  		print_info 1 'udev: >> Compiling...'
  

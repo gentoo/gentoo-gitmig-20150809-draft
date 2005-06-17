@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.85 2005/06/16 21:53:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.86 2005/06/17 17:59:39 wolf31o2 Exp $
+
+  17 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  files/genkernel-3.2.0_pre7-arch.diff, genkernel-3.2.0_pre7-r1.ebuild:
+  Fixed patch and added inherit eutils for epatch support.
 
 *genkernel-3.2.0_pre7-r1 (16 Jun 2005)
 
