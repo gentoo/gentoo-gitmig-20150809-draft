@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.7.37.ebuild,v 1.14 2005/01/01 17:36:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.7.37.ebuild,v 1.15 2005/06/17 21:23:55 kloeri Exp $
 
 S=${WORKDIR}/${PN}-${PV%.*}
 DESCRIPTION="Embedded database library"
 HOMEPAGE="http://www.equi4.com/metakit/"
 SRC_URI="http://www.equi4.com/pub/mk/${PN}-${PV%.*}-${PV##*.}.tar.gz"
 
-LICENSE="MetaKit"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 ppc hppa"
 IUSE="python tcltk"

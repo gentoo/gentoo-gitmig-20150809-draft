@@ -1,7 +1,17 @@
-MD5 8cad5d94026a65c6c18f0c3718892c19 metakit-2.4.7.37.ebuild 1557
-MD5 a0b24a10ddfc048cc117f2aeb2f7a55e ChangeLog 3321
-MD5 2cc46cc3c4a1350a152e4a65b29b1991 metakit-2.4.9.3-r2.ebuild 1626
-MD5 6c753ce53055a462c005735345c1c8f1 metakit-2.4.9.2-r1.ebuild 1507
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 86ee030c6cbd46ef7c65f70265b45f67 metakit-2.4.9.2-r1.ebuild 1499
+MD5 b8bfbbfec5e2208fd8b2740fe6ac701f metakit-2.4.9.3-r2.ebuild 1622
+MD5 f6527c93e0c64d83806041c255e17f95 ChangeLog 3489
+MD5 e265ae5e7565700b506264c21064d5c4 metakit-2.4.7.37.ebuild 1549
 MD5 0f63d5f3d5f137464097c1539a07496d files/digest-metakit-2.4.9.2-r1 67
-MD5 e045e605eab23d2201a5ba644558f6e7 files/digest-metakit-2.4.7.37 68
 MD5 00fc347ece0536a96f90ddf76d90bf51 files/digest-metakit-2.4.9.3-r2 67
+MD5 e045e605eab23d2201a5ba644558f6e7 files/digest-metakit-2.4.7.37 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCsz+JKf2g/qXtneoRAviMAJ9afxIOKUaONAKTSZ6eMM0J3wAyHACgiWro
+nhnoMKofEPXVgXhurEpMAmo=
+=zVyY
+-----END PGP SIGNATURE-----
