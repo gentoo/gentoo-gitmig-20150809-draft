@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bce1b5050738944235bd23778813bf71 ltrace-0.3.36.ebuild 935
-MD5 21824dedfe41c5d903521466c653a514 ltrace-0.3.31.ebuild 1219
-MD5 0341f1c8bf393d92e925edb19decb2d1 ChangeLog 2839
 MD5 fa9f0ec1a9f013df4ca78764a473a250 metadata.xml 256
-MD5 bdd8f496365cbecd525f682a272b724b files/digest-ltrace-0.3.31 136
+MD5 af288a7b967e1df57bf79850abf33798 ChangeLog 2932
+MD5 21824dedfe41c5d903521466c653a514 ltrace-0.3.31.ebuild 1219
+MD5 c71e7f09c9754609c98884386b10f9ad ltrace-0.3.36.ebuild 933
+MD5 922241bfe160b7f8d4c34753b0192308 files/ltrace-0.3.31-gcc4.patch 408
 MD5 3bd65602468de146eb305f7b9bfe160e files/digest-ltrace-0.3.36 136
 MD5 f196bc8262608da52e8a9cb90dbac6e5 files/ltrace-0.3.31-64bit-fixes.patch 5964
-MD5 922241bfe160b7f8d4c34753b0192308 files/ltrace-0.3.31-gcc4.patch 408
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsi1eEZCkKN40op4RAl0qAJ4ku9VZxYhnpmWjafqxWrXCz8LDJQCggRKX
-kMLgHilf9zdXJzvwdPddMU0=
-=26Br
------END PGP SIGNATURE-----
+MD5 bdd8f496365cbecd525f682a272b724b files/digest-ltrace-0.3.31 136
