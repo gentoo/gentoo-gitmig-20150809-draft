@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.43 2005/06/01 00:52:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.44 2005/06/17 20:21:54 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> fox-1.2.6-r2.ebuild:
+  Stable on ppc.
 
   01 Jun 2005; Mike Frysinger <vapier@gentoo.org> fox-1.2.15.ebuild,
   fox-1.4.11.ebuild, fox-1.4.12.ebuild, fox-1.5.4.ebuild:
