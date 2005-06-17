@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fpconst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.12 2005/06/04 15:37:12 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.13 2005/06/17 20:52:48 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> fpconst-0.7.1.ebuild:
+  Stable on ppc.
 
 *fpconst-0.7.2 (04 Jun 2005)
 

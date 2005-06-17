@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.25 2005/06/16 15:36:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.26 2005/06/17 20:55:48 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> pygame-1.6.2.ebuild:
+  Stable on ppc.
 
   16 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> pygame-1.6.2.ebuild:
   Stable on sparc
