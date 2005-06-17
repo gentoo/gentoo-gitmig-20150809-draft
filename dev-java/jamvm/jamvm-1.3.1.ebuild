@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.2.4.ebuild,v 1.2 2005/04/09 18:57:41 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.3.1.ebuild,v 1.1 2005/06/17 17:30:42 luckyduck Exp $
 
 inherit eutils
 
-DESCRIPTION="An extremely small and specification-compliant Java virtual machine."
+DESCRIPTION="An extremely small and specification-compliant virtual machine."
 HOMEPAGE="http://jamvm.sourceforge.net/"
-
 SRC_URI="mirror://sourceforge/jamvm/jamvm-${PV}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="debug"
-DEPEND=">=dev-java/gnu-classpath-0.13"
-RDEPEND=">=dev-java/gnu-classpath-0.13"
-RESTRICT="nomirror"
+
+DEPEND=">=dev-java/gnu-classpath-0.15"
+RDEPEND=">=dev-java/gnu-classpath-0.15"
 
 src_compile() {
 	# compiles JamVM
