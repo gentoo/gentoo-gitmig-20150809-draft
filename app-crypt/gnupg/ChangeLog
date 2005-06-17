@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.116 2005/05/23 14:03:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.117 2005/06/17 17:32:19 vanquirius Exp $
+
+*gnupg-1.4.1-r1 (17 Jun 2005)
+
+  17 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> +gnupg-1.4.1-r1.ebuild:
+  Added usb USE flag. Fixes bug 96391.
 
   23 May 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.9.16.ebuild:
   broken with keyservers. -* keyworded temporaly
