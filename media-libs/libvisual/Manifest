@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 75567d80eaa5258e3df3b3fbf5885ac6 ChangeLog 2254
 MD5 8e5bd6c3389ce06c6b0098bb24ce39c9 libvisual-0.1.7.ebuild 770
-MD5 6336e30cf8f0e952a2f3095e30f82e1b libvisual-0.2.0.ebuild 819
-MD5 812469d0118b38d70f7186b3b0fcc5fa libvisual-0.1.6.ebuild 868
-MD5 7dc80dcb81011faead43241b4e4ce56b ChangeLog 2160
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 812469d0118b38d70f7186b3b0fcc5fa libvisual-0.1.6.ebuild 868
+MD5 b6674a5d41ae0126f92e3b92e8a85440 libvisual-0.2.0.ebuild 818
 MD5 53ecbcd0fec17493a304bcf78542ec24 files/digest-libvisual-0.1.6 67
-MD5 51cf2ffa696411a045e0f42b6c5c04d1 files/digest-libvisual-0.1.7 67
-MD5 1518cf4b1c75fd33e28e944ed8d7f564 files/digest-libvisual-0.2.0 67
-MD5 a5618132aa463a831f1ccc810f1b0119 files/libvisual-0.1.6-destdir.patch 1341
-MD5 b1907f241b15fc7a548cc813c91f9fad files/libvisual-0.2.0-movd.patch 502
 MD5 2ca3eb29ba481ae9b5eed236e2f5c491 files/0.2.0-ppc.patch 387
+MD5 b1907f241b15fc7a548cc813c91f9fad files/libvisual-0.2.0-movd.patch 502
+MD5 51cf2ffa696411a045e0f42b6c5c04d1 files/digest-libvisual-0.1.7 67
 MD5 a09abb4aa7de75d9f36b868286e113dd files/libvisual-0.1.6-libdir.patch 1804
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCj5G9evY57Fted3ERAi1pAJ4iI66PaUsyeGcjt5DDM29Q26iZ2QCfe6QA
-6FhTyRF9cS9+zPw++2cw2NY=
-=D4JT
------END PGP SIGNATURE-----
+MD5 a5618132aa463a831f1ccc810f1b0119 files/libvisual-0.1.6-destdir.patch 1341
+MD5 1518cf4b1c75fd33e28e944ed8d7f564 files/digest-libvisual-0.2.0 67

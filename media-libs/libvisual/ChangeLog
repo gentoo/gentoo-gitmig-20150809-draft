@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvisual
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.13 2005/05/21 19:50:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.14 2005/06/17 16:31:59 josejx Exp $
+
+  17 Jun 2005; Joseph Jezak <josejx@gentoo.org> libvisual-0.2.0.ebuild:
+  Marked ppc stable.
 
   21 May 2005; Heinrich Wendel <lanius@gentoo.org> libvisual-0.2.0.ebuild:
   stable on x86 and amd64
