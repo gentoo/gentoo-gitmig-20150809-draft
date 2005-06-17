@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.30.0.ebuild,v 1.1 2005/06/17 02:11:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.30.0.ebuild,v 1.2 2005/06/17 08:55:41 dholm Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.laurentconstantin.com/common/netw/netwib/download/v${PV/.*}/
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libpcap
