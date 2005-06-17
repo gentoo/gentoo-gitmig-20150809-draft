@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.11.ebuild,v 1.2 2005/06/16 16:34:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.11.ebuild,v 1.3 2005/06/17 18:11:13 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PV}-no-unkown-widgets.patch
+	epatch "${FILESDIR}"/${PV}-optional-4.1-support.patch
 }
 
 src_compile() {
