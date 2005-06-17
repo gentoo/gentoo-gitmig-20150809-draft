@@ -1,5 +1,5 @@
-MD5 8b089b4f238d9ced5931ad3164627ceb ChangeLog 10075
-MD5 c2a56eb329825fc5922a406c1d02c395 tar-1.15.1.ebuild 1593
+MD5 79ed1bc695c0da8c09d838ebfa9b43aa ChangeLog 10245
+MD5 b6ff3d368713db33ad6aadfb022ea443 tar-1.15.1.ebuild 1666
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d4f800ee8a2c5ddd00931249e680def8 tar-1.14.ebuild 1329
 MD5 1ce0c7df0ad9ec0c279340132692d7d4 files/digest-tar-1.15.1 64
@@ -7,5 +7,6 @@ MD5 a1433bcc25f8f63d8ee96bddbf877962 files/1.15.1-flex-arg.patch 519
 MD5 9873b609521d574ae1f98d1c092c80e4 files/append.at 1065
 MD5 c94df05539a43d66c055452ef5acfb3b files/tar.1 12154
 MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
+MD5 71aa7eea494a25b07f4ea14a7f8a7a99 files/tar-1.15.1-less-verbose-newer.patch 770
 MD5 971970980dc4f15a093acfe810dae560 files/tar-1.15.1-gcc4-test.patch 637
 MD5 6c645ac1da5d382a9f7ca85729b7e9e9 files/tar-1.15.1-dont-abort-long-names.patch 1586
