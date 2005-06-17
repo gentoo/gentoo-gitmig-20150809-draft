@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5b59cbe14244ad3dde2348bc3f7b8f75 quilt-0.37.ebuild 1161
 MD5 8ab3de6bb64aa7ebfa3d7c05538b8271 quilt-0.39.ebuild 1047
 MD5 10cafc712971b949072797243e099c10 quilt-0.40.ebuild 1048
 MD5 54de0b3520bdcab79b7c58dbcd0e66c0 quilt-0.32-r1.ebuild 775
-MD5 0a8c879eb4cb2575e64cbf4646bda887 ChangeLog 1298
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 39b6fd658828e7328b41d978c869392a ChangeLog 1389
+MD5 fa9f0ec1a9f013df4ca78764a473a250 metadata.xml 256
 MD5 003c9ff8a9caa912eaa92f9eb99376f1 files/digest-quilt-0.37 67
 MD5 f833281ba40e1a4b8319065751487a3b files/digest-quilt-0.39 67
 MD5 1cfc6f4adacb34934f4b8c041841a32a files/digest-quilt-0.40 67
 MD5 c6fbb2eecd1ee85a0db63fea70a2416d files/digest-quilt-0.32-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmQWLEZCkKN40op4RAgObAJ9h5WrNFYGOYffmyBlckxp8Imyw+ACgpQ+S
-KTWvzN5X2VJ3piUQ0U7wUPQ=
-=CKUZ
------END PGP SIGNATURE-----

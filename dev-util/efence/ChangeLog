@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/efence
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.20 2005/05/25 18:37:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.21 2005/06/17 01:52:07 ka0ttic Exp $
+
+  17 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
+  Added to dev-tools herd.
 
   25 May 2005; Jan Brinkmann <luckyduck@gentoo.org> efence-2.4.13.ebuild:
   stable on amd64

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/quilt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.8 2005/05/28 23:57:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.9 2005/06/17 01:54:32 ka0ttic Exp $
+
+  17 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
+  Added to dev-tools herd.
 
 *quilt-0.40 (28 May 2005)
 

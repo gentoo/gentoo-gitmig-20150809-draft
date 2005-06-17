@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cgdb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.15 2005/06/04 17:39:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.16 2005/06/17 01:49:40 ka0ttic Exp $
+
+  17 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
+  Added to dev-tools herd.
 
   04 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org> cgdb-0.5.1.ebuild:
   Stable on ppc.
