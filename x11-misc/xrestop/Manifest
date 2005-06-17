@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 819617e4f1f181dc928a04406659f3ec ChangeLog 1033
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+MD5 f19e780cee14a10519481eed8072f179 ChangeLog 1126
+MD5 36875febed1dbc14d924ee87b4f25f94 xrestop-0.3.ebuild 616
 MD5 95125a9b1e250f434f70a74aa1cbf365 xrestop-0.2.ebuild 590
-MD5 29284e562437e3b7b8d2d52ac41788e7 xrestop-0.3.ebuild 617
 MD5 12fce93e62dc29cb74ecb54bd5c77b9b files/digest-xrestop-0.2 62
 MD5 3a3ff3bc2fa0dac8838dc57d4b7ef99b files/digest-xrestop-0.3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrssUl5AvwDPiUowRAtdVAKDR/lcVBpv3KVMeyAmym6GSy39fQwCgyObt
-WYbOT3gW+Fa/ROIsz8Zer2E=
-=3myg
------END PGP SIGNATURE-----

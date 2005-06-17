@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrestop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.9 2005/06/14 12:18:05 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.10 2005/06/17 20:20:13 hansmi Exp $
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> xrestop-0.3.ebuild:
+  Stable on ppc.
 
   14 Jun 2005; Jonathan Smith <smithj@gentoo.org> xrestop-0.3.ebuild:
   fixed homepage for #93132 and marked 0.3 stable
