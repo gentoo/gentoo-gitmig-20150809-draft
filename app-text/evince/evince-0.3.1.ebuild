@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.3.1.ebuild,v 1.2 2005/06/17 23:21:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.3.1.ebuild,v 1.3 2005/06/18 16:30:38 dholm Exp $
 
 inherit gnome2 eutils
 
@@ -14,7 +14,7 @@ IUSE="djvu doc dvi t1lib"
 # app-text/evince:t1lib - Enable Type1 fonts support in .dvi files
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 RDEPEND="
 	djvu? ( app-text/djvu )
