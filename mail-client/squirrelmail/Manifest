@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 246b22c198cfdbe544125f3efe239857 squirrelmail-1.4.4.ebuild 5477
-MD5 1b4837ddb795a1c18cc03fac14510d05 squirrelmail-1.4.4-r1.ebuild 5609
-MD5 5c286332b9a0a7c8f48b2d324044aa15 ChangeLog 12055
+MD5 02c2085aae80f093f199c3092b4aed3d ChangeLog 12171
 MD5 08cd5d6f4b8f101029a526ea0a1ea4b1 metadata.xml 258
-MD5 2b55f3aff8ba056d1793356b7035b2ff files/digest-squirrelmail-1.4.4 634
-MD5 ebb6924dba63e16023a37f0f4f5563e8 files/squirrelmail-fortune.patch 603
-MD5 a34a9335bafb3173bb60b373caae8c4e files/postinstall-en.txt 698
-MD5 a237338de91ac8c2b5e8fd27acd1fc63 files/digest-squirrelmail-1.4.4-r1 695
-MD5 1ebd5ce3ff0ce02fa62f3890b6a8f255 files/ldapuserdata-0.4-gentoo.patch 709
+MD5 e1613d469ab3a3161559e9d2e8d4f9b2 squirrelmail-1.4.4-r1.ebuild 5604
+MD5 246b22c198cfdbe544125f3efe239857 squirrelmail-1.4.4.ebuild 5477
 MD5 f4c0fcd6d4349e312d335f82e4485f6c files/squirrelmail-1.4.3a-xss.patch 1025
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtDxi5FrxP71izLARAlwoAKCY2ZhIT7cRhR3Bu1gxf6Y3aMlI6QCeJ9rV
-rScAuFrskKGgqXqsjLUAsoc=
-=ozop
------END PGP SIGNATURE-----
+MD5 1ebd5ce3ff0ce02fa62f3890b6a8f255 files/ldapuserdata-0.4-gentoo.patch 709
+MD5 a34a9335bafb3173bb60b373caae8c4e files/postinstall-en.txt 698
+MD5 ebb6924dba63e16023a37f0f4f5563e8 files/squirrelmail-fortune.patch 603
+MD5 2b55f3aff8ba056d1793356b7035b2ff files/digest-squirrelmail-1.4.4 634
+MD5 a237338de91ac8c2b5e8fd27acd1fc63 files/digest-squirrelmail-1.4.4-r1 695
