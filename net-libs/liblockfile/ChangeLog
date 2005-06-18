@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.21 2005/06/17 19:12:20 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.22 2005/06/18 07:59:25 wormo Exp $
+
+  18 Jun 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  liblockfile-1.06.ebuild:
+  stable on ppc, bug #96349
 
   17 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org>
   liblockfile-1.06.ebuild:

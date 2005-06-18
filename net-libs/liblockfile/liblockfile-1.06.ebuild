@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.06.ebuild,v 1.5 2005/06/17 19:12:20 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.06.ebuild,v 1.6 2005/06/18 07:59:25 wormo Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 hppa ~ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 src_compile() {
