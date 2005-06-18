@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.19 2005/06/14 01:30:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.20 2005/06/18 19:35:19 yoswink Exp $
+
+  18 Jun 2005; Jose Luis Rivero <yoswink@gentoo.org> kjsembed-3.3.1.ebuild:
+  Keyworded ~alpha since is needed on #95128
 
   14 Jun 2005; Jason Wever <weeve@gentoo.org> kjsembed-3.3.1.ebuild:
   Stable on SPARC.
