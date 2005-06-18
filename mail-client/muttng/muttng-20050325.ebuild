@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050325.ebuild,v 1.2 2005/06/05 20:44:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050325.ebuild,v 1.3 2005/06/18 20:22:56 mcummings Exp $
 
 DESCRIPTION="mutt-ng is the next generation of mutt."
 HOMEPAGE="http://www.muttng.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.muttng.org/snapshots/${P}.tar.gz"
 IUSE="crypt debug gnutls gdbm gpgme idn imap mbox nls nntp sasl slang smtp ssl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~sparc"
 RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	idn?     ( net-dns/libidn )
