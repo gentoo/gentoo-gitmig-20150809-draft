@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.82 2005/06/18 10:51:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.83 2005/06/18 20:35:18 ticho Exp $
+
+  18 Jun 2005; Andrej Kacian <ticho@gentoo.org> clamav-0.86_rc1.ebuild:
+  Point clamav to correct sendmail binary if mailwrapper USE flag is enabled.
+  Closes bug #96373, by Analyzer <subscribe2k at yandex.ru>. Also fix head
+  syntax (fixheadtails.eclass) in configure.
 
   18 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   clamav-0.85.1-r1.ebuild:

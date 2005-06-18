@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.86_rc1.ebuild,v 1.1 2005/06/14 00:58:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.86_rc1.ebuild,v 1.2 2005/06/18 20:35:18 ticho Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic fixheadtails
 
 MY_P=${P/_/}
 DESCRIPTION="Clam Anti-Virus Scanner"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/clamav/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="crypt milter selinux"
+IUSE="crypt milter selinux mailwrapper"
 
 DEPEND="virtual/libc
 	crypt? ( >=dev-libs/gmp-4.1.2 )
@@ -52,8 +52,13 @@ src_compile() {
 	myconf="${myconf} --disable-zlib-vcheck"
 	# use id utility instead of /etc/passwd parsing (bug #72540)
 	myconf="${myconf} --enable-id-check"
-	use milter && myconf="${myconf} --enable-milter"
+	use milter && {
+		myconf="${myconf} --enable-milter"
+		use mailwrapper && \
+			myconf="${myconf} --with-sendmail=/usr/sbin/sendmail.sendmail"
+	}
 
+	ht_fix_file configure
 	econf ${myconf} --with-dbdir=/var/lib/clamav || die
 	emake || die
 }
@@ -109,9 +114,8 @@ pkg_postinst() {
 	ewarn "You should restart them with: /etc/init.d/clamd restart"
 	echo
 	if use milter ; then
-		einfo "For simple instructions howto setup the clamav-milter..."
-		einfo ""
-		einfo "zless /usr/share/doc/${PF}/clamav-milter.README.gentoo.gz"
+		einfo "For simple instructions how to setup the clamav-milter type:"
+		echo "  zless /usr/share/doc/${PF}/clamav-milter.README.gentoo.gz"
 		echo
 	fi
 }
