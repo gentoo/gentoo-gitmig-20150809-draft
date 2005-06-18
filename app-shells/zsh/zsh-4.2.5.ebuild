@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.5.ebuild,v 1.8 2005/06/14 19:51:54 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.5.ebuild,v 1.9 2005/06/18 16:42:02 usata Exp $
 
 inherit eutils
 
@@ -78,12 +78,21 @@ src_compile() {
 			Makefile || die
 	fi
 
+	# hack for Darwin8 broken poll()
+	if use ppc-macos ; then
+		sed -i -e "s/define HAVE_POLL_H/undef HAVE_POLL_H/g" \
+			-e "s/define HAVE_POLL/undef HAVE_POLL/g" \
+			config.h
+	fi
+
 	# emake still b0rks
 	emake -j1 || die "make failed"
 }
 
 src_test() {
-	addpredict /dev/ptmx
+	for f in /dev/pt* ; do
+		addpredict $f
+	done
 	make check || die "make check failed"
 }
 
