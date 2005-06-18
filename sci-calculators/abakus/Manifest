@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 672e3b2154ba8f41aaaca486aa315094 abakus-0.80.2.ebuild 855
+MD5 bc5757868e9f06d6048259da3a5918aa metadata.xml 157
+MD5 dfd365acc367a483e77ec01230b2ac57 ChangeLog 367
+MD5 522ef706efe03be9cbc3e73d000bc7c2 files/digest-abakus-0.80.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCs9ZM7IRIh26aCTkRAutIAJ0WA2NzolXGHzVJKA7Oe2XOnGIyxACfeFox
+1BiHNiNH+g0lFID4ZBF2knk=
+=unOd
+-----END PGP SIGNATURE-----
