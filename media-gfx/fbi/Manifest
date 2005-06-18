@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 b00c3fcce555b57b59ba0044a1a82287 ChangeLog 4054
+MD5 927078891e4f06b61506da7f21cb9648 fbi-1.31-r1.ebuild 1134
 MD5 3cea4d52fae981c56e196120997c2a45 fbi-1.31.ebuild 964
-MD5 ddb06ee75c2b5f245d9cae0125811d05 fbi-1.31-r1.ebuild 1133
-MD5 ae9e4d654ae96d4a64d9d828e26e8bd0 ChangeLog 3964
 MD5 7fc77b947cec0d01897854f31eb34b31 metadata.xml 367
-MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31-r1 59
 MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCq2tVchej4aZK9/cRAicBAJ0cl6tiYr8ADd+LV3uz5E813DPqVACfRgwj
-3HANtF4ZOQ/BelJTnsC8J28=
-=xGwt
------END PGP SIGNATURE-----
+MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31-r1 59
