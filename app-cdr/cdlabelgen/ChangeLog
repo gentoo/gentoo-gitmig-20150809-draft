@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/cdlabelgen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.21 2005/06/18 19:39:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.22 2005/06/18 19:53:21 tove Exp $
+
+  18 Jun 2005; Torsten Veller <tove@gentoo.org> -files/makefile.patch-2.4.0,
+  -files/makefile.patch-2.6.0, -files/makefile.patch-2.6.1,
+  -files/makefile.patch, -cdlabelgen-2.3.0.ebuild, -cdlabelgen-2.4.0.ebuild,
+  -cdlabelgen-2.6.0.ebuild, -cdlabelgen-2.6.1.ebuild,
+  cdlabelgen-3.0.0.ebuild:
+  Removed old ebuilds.
+  Fixed HOMEPAGE and SRC_URI -- bug #86372.
 
 *cdlabelgen-3.5.0 (18 Jun 2005)
 

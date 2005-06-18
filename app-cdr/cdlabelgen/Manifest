@@ -1,18 +1,16 @@
-MD5 1ee3b9b57a04d02be4a596cec7bd378f cdlabelgen-2.6.0.ebuild 707
-MD5 f8a632897e72961e569a51b074a3d5b7 cdlabelgen-2.3.0.ebuild 708
-MD5 165af3eee3fbec9e897797d12cf551d0 cdlabelgen-2.4.0.ebuild 709
-MD5 37ed5dba873e5152a8c26cdd7550b55c cdlabelgen-2.6.1.ebuild 955
-MD5 a4c0eff5fb6ebc735ac649e806dade11 cdlabelgen-3.0.0.ebuild 946
-MD5 0f163cb5189b62046f2023c0a5c8e20d ChangeLog 3098
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5230711abaa00d2ec967fb630b1b76b4 cdlabelgen-3.0.0.ebuild 940
+MD5 9bd430ee851c2af02044e67f098d1a0d ChangeLog 3461
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 d75580264ce32b04d4755d221050f8a3 cdlabelgen-3.5.0.ebuild 1023
-MD5 856cfdea5f6e8201ccb75b8020754335 files/makefile.patch-2.4.0 1088
-MD5 08f43be319a72950784c25dc90ce1f16 files/makefile.patch-2.6.0 1050
-MD5 17b8da696651580c3b9eac7f96c1611c files/makefile.patch-2.6.1 1188
-MD5 bff2b23835a3572047c6661e88129d75 files/makefile.patch 927
-MD5 f5f68a6ca5f9f6ff5324d33fcaa46ace files/digest-cdlabelgen-2.3.0 65
-MD5 b340cb1f3df8fdb267d0bbdafbd5e930 files/digest-cdlabelgen-2.4.0 65
-MD5 4c59844d493acdc0cb186eb6d7367d59 files/digest-cdlabelgen-2.6.0 65
-MD5 64d64c0016fce9b8b191507dee623d23 files/digest-cdlabelgen-2.6.1 65
 MD5 7ae5079af09947e1f62b692d15814a50 files/digest-cdlabelgen-3.0.0 65
 MD5 9a1d3d70de160e0f035badcdd3687ace files/digest-cdlabelgen-3.5.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtHvOV3J2n04EauwRAv0XAKDWOD2/K7WrAC+vuzl18q6ATfwL8QCg032K
+sdjuWBAHgTpsNF4rnSOjURE=
+=MDYN
+-----END PGP SIGNATURE-----
