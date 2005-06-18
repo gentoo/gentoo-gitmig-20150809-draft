@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.33 2005/05/18 12:05:57 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.34 2005/06/18 09:25:21 brix Exp $
+
+  18 Jun 2005; <brix@gentoo.org>
+  +files/ipw2200-1.0.4-is_multicast_ether_addr.patch, ipw2200-1.0.4.ebuild:
+  Apply patch for allow compiling against linux-2.6.12.
 
 *ipw2200-1.0.4 (18 May 2005)
 

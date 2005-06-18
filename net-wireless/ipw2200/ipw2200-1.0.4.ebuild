@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-1.0.4.ebuild,v 1.1 2005/05/18 12:05:57 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-1.0.4.ebuild,v 1.2 2005/06/18 09:25:21 brix Exp $
 
-inherit linux-mod
+inherit eutils linux-mod
 
 # The following works with both pre-releases and releases
 MY_P=${P/_/-}
@@ -61,6 +61,9 @@ src_unpack() {
 	local debug="n"
 
 	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-is_multicast_ether_addr.patch
 
 	use debug && debug="y"
 	sed -i \
