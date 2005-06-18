@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.40 2005/06/17 20:27:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.41 2005/06/18 19:06:16 corsair Exp $
+
+  18 Jun 2005; Markus Rothe <corsair@gentoo.org> afterstep-2.1.1.ebuild:
+  added ~ppc64
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   afterstep-2.00.05.ebuild:
