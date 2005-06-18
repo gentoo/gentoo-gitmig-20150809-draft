@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/gnome-common-2.8.0.ebuild,v 1.7 2005/06/12 21:25:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/gnome-common-2.8.0.ebuild,v 1.8 2005/06/18 14:50:11 corsair Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 ~arm ~hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~arm ~hppa ~ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=""
