@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7-r1.ebuild,v 1.2 2005/06/17 22:30:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7-r1.ebuild,v 1.3 2005/06/18 18:22:16 dholm Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND=">=x11-libs/libPropList-0.10.1
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
 
 src_unpack() {
