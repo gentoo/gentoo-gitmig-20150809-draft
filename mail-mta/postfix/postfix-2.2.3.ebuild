@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.3.ebuild,v 1.1 2005/05/12 21:32:54 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.3.ebuild,v 1.2 2005/06/18 23:18:29 ticho Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic mailer
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mbox nis vda selinux hardened"
@@ -274,7 +274,7 @@ src_install () {
 	newins "${FILESDIR}/smtp.pass" saslpass
 	fperms 600 /etc/postfix/saslpass
 
-	newinitd "${FILESDIR}/postfix.rc6" postfix || \
+	newinitd "${FILESDIR}/postfix.rc6.${PV}" postfix || \
 		die "newinitd failed"
 
 	mv "${S}/examples" "${D}/usr/share/doc/${PF}/"
