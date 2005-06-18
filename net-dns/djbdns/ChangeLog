@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.60 2005/05/17 22:07:40 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.61 2005/06/18 23:17:58 weeve Exp $
+
+  18 Jun 2005; Jason Wever <weeve@gentoo.org> djbdns-1.05-r14.ebuild:
+  Stable on SPARC.
 
   17 May 2005; Jan Brinkmann <luckyduck@gentoo.org> djbdns-1.05-r14.ebuild:
   stable on amd64
