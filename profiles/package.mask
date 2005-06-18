@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4100 2005/06/18 15:35:36 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4101 2005/06/18 20:40:52 morfic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1120,3 +1120,6 @@ app-text/sgml2x
 
 # Masked until upstream considers it stable
 app-text/evince
+
+# Masked for further testing, right now g++ hangs
+=sys-devel/distcc-2.18.3-r8
