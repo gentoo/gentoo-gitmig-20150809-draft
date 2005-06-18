@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdlabelgen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.20 2005/01/01 12:09:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.21 2005/06/18 19:39:33 tove Exp $
+
+*cdlabelgen-3.5.0 (18 Jun 2005)
+
+  18 Jun 2005; Torsten Veller <tove@gentoo.org> +cdlabelgen-3.5.0.ebuild:
+  Version bump. Closes bug #93430.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   cdlabelgen-2.4.0.ebuild, cdlabelgen-2.6.0.ebuild, cdlabelgen-2.6.1.ebuild,
