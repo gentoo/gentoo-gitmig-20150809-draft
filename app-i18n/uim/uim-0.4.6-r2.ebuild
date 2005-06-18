@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r2.ebuild,v 1.4 2005/06/06 07:30:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r2.ebuild,v 1.5 2005/06/18 10:47:52 hansmi Exp $
 
 inherit eutils kde-functions
 
@@ -15,7 +15,7 @@ SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ppc64 sparc x86"
 IUSE="gtk qt immqt immqt-bc nls X m17n-lib canna"
 
 RDEPEND="X? ( virtual/x11 )
