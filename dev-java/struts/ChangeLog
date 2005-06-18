@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/struts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.18 2005/05/29 15:54:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.19 2005/06/18 14:52:47 luckyduck Exp $
+
+  18 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> struts-1.2.4-r1.ebuild:
+  The package.env file now contains DEPEND, fixes #96145. Introduced support
+  for the examples and the source useflag.
 
   29 May 2005; Markus Rothe <corsair@gentoo.org> struts-1.1-r3.ebuild:
   Stable on ppc64
