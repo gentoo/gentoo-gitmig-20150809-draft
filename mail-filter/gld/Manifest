@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ee053a16e9eae0a66bd394e135dbe16b gld-1.5-r1.ebuild 1595
 MD5 9b90c83173d174bf703b7cd1962b298f gld-1.5.ebuild 1363
 MD5 5a42d92970f06d4a9022ef68ba0be395 gld-1.5.2.ebuild 1467
@@ -12,3 +15,10 @@ MD5 4ec33dbb0fd9c8a61e86f738deb457e4 files/digest-gld-1.5-r1 55
 MD5 4ec33dbb0fd9c8a61e86f738deb457e4 files/digest-gld-1.5-r2 55
 MD5 408be3de93fe18f0361ad976ab36589f files/digest-gld-1.4 55
 MD5 4ec33dbb0fd9c8a61e86f738deb457e4 files/digest-gld-1.5 55
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtKvGQlM6RnzZP+IRAhl6AJwNb7k9/BaI76qh0uLcoTg/yWeppgCeMOVH
+QIWfpVKfCYNQolTHR6vQpMk=
+=6CBz
+-----END PGP SIGNATURE-----
