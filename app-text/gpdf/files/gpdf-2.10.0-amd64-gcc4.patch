@@ -1,6 +1,12 @@
 --- gpdf-2.10.0/xpdf/gpdf-control.cc	2005-05-20 15:03:29.000000000 +0200
 +++ gpdf-2.10.0.az/xpdf/gpdf-control.cc	2005-05-20 15:06:39.000000000 +0200
-@@ -213,7 +213,7 @@
+@@ -209,12 +209,12 @@
+ 			   const gchar * status)
+ {
+ 	GPdfControlPrivate *priv;
+-	guint to_id;
++	unsigned long to_id;
+ 
  	g_return_if_fail (GPDF_IS_NON_NULL_CONTROL (control));
  	priv = control->priv;
  
@@ -9,3 +15,16 @@
  	     g_object_get_data (G_OBJECT (control),
  				"status-timeout-id")) != 0) {
  		g_object_set_data (G_OBJECT (control),
+--- xpdf-3.00.old/xpdf/TextOutputDev.h	2004-01-22 09:26:45.000000000 +0800
++++ xpdf-3.00/xpdf/TextOutputDev.h	2005-06-08 10:15:45.000000000 +0800
+@@ -26,6 +26,10 @@
+ class GfxState;
+ class UnicodeMap;
+ 
++class TextBlock;
++class TextPage;
++class TextLineFrag;
++
+ //------------------------------------------------------------------------
+ 
+ typedef void (*TextOutputFunc)(void *stream, char *text, int len);
