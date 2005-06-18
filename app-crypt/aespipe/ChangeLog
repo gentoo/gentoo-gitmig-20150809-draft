@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/aespipe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.7 2005/01/01 12:24:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.8 2005/06/18 05:15:39 avenj Exp $
+
+*aespipe-2.3b (18 Jun 2005)
+
+  18 Jun 2005; Jon Portnoy <avenj@gentoo.org> aespipe-2.3b.ebuild:
+  Version bump, clears bugs #52046 & #95941
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> aespipe-2.2a.ebuild:
   Added ~sparc keyword.

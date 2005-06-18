@@ -1,4 +1,6 @@
-MD5 e5c15033290e9a629c9d09a867c2c9e8 ChangeLog 800
+MD5 c0f22ba4f6cf3f980d93f8828c7fb8ef ChangeLog 936
 MD5 ec65f6ad470963640672310ef6a9a481 aespipe-2.2a.ebuild 735
 MD5 51334b67d2cbed22e0efec4143bc6ff0 metadata.xml 245
+MD5 32bb865c9a4bee22c1f5e50aca5e59c8 aespipe-2.3b.ebuild 733
 MD5 a26129290dfe5d81ab805764dc03d3dd files/digest-aespipe-2.2a 65
+MD5 8c96d61f2cb3f5cbfd62f12b8bf1c5fd files/digest-aespipe-2.3b 65
