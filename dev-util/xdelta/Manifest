@@ -1,4 +1,4 @@
-MD5 f203feebf828ace6bcc56ccdb896915f ChangeLog 1338
-MD5 5582a4d4bbe8d3b1f2c6e9c21ab6b820 xdelta-1.1.3.ebuild 700
-MD5 48768de74694023f8bd354f03b5ff52d files/digest-xdelta-1.1.3 64
+MD5 09a83a5cbd8fa0cf0e8374dc0e6c745d xdelta-1.1.3.ebuild 707
+MD5 87c0fb760a4aab5977b5c7bcc9d2831a ChangeLog 1458
 MD5 6b23b4b4f57efd6cc0d1c69edcb25d88 files/xdelta-1.1.3-m4.patch 109
+MD5 48768de74694023f8bd354f03b5ff52d files/digest-xdelta-1.1.3 64
