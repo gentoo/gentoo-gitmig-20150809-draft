@@ -1,12 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/files/gld.rc,v 1.3 2005/04/20 15:18:09 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/files/gld.rc,v 1.4 2005/06/18 22:50:12 ticho Exp $
 
 depend() {
 	need net # in case mysql daemon is not local
 	use dns mysql postgresql
 	before postfix
+	provide postfix_graylist
 }
 
 start() {
