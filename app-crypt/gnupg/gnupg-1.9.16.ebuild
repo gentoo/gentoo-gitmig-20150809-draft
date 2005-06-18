@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.16.ebuild,v 1.2 2005/05/23 14:03:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.16.ebuild,v 1.3 2005/06/18 00:32:17 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,8 +13,6 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-*"
-#very broken with keyservers - will look later
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="X caps ldap nls smartcard static threads selinux"
 
 DEPEND_COMMON="
@@ -44,11 +42,15 @@ DEPEND="
 	caps? ( sys-libs/libcap )
 	ldap? ( net-nds/openldap )"
 
-
 src_unpack() {
 	ewarn "Danger BETA software"
 	unpack ${A}
-	sed -i -e 's/PIC/__PIC__/g' ${S}/intl/relocatable.c
+	cd "${S}"
+	sed -i -e 's/PIC/__PIC__/g' intl/relocatable.c
+	use caps && return 0
+	sed -i \
+		-e '/^gpg2_LDADD/s:=:=-Wl,-z,now:' \
+		g10/Makefile.in || die "sed -z now"
 }
 
 src_compile() {
@@ -66,19 +68,17 @@ src_compile() {
 		myconf="${myconf} --disable-photo-viewers"
 	fi
 
-	append-ldflags -Wl,-z,now
-
 	econf \
 		--disable-agent \
 		--enable-gpg \
 		--enable-hkp \
 		--enable-mailto \
 		--enable-keyserver-helpers \
-		`use_enable smartcard scdaemon` \
-		`use_enable nls` \
-		`use_enable ldap` \
-		`use_with caps capabilities` \
-		`use_enable threads` \
+		$(use_enable smartcard scdaemon) \
+		$(use_enable nls) \
+		$(use_enable ldap) \
+		$(use_with caps capabilities) \
+		$(use_enable threads) \
 		${myconf} \
 		|| die
 	emake || die
@@ -93,8 +93,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-
+	make DESTDIR="${D}" install || die
 	dosym gpg2 /usr/bin/gpg
 
 	# keep the documentation in /usr/share/doc/...
@@ -103,7 +102,7 @@ src_install() {
 	dodoc ChangeLog INSTALL NEWS README THANKS TODO VERSION
 
 	if ! use caps ; then
-		fperms u+s /usr/bin/gpg2
+		fperms u+s,go-r /usr/bin/gpg2
 	fi
 }
 
