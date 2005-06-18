@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.11-r1.ebuild,v 1.1 2005/06/18 13:48:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.11-r1.ebuild,v 1.2 2005/06/18 13:52:03 axxo Exp $
 
 inherit distutils
 
@@ -21,7 +21,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-shebang.patch
 }
-	
+
 src_install() {
 	distutils_src_install
 	dobin ${S}/java-config
