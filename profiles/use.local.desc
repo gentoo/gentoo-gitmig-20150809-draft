@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1234 2005/06/18 07:58:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1235 2005/06/18 19:04:13 morfic Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -858,6 +858,7 @@ sys-devel/gcc:nossp - Disable SSP support (NOT FOR GENERAL USE)
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
+sys-devel/distcc:crosscompile - Change distcc-config to create shell script not links for proper invokation on cross compile setups
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
 sys-fs/clvm:nolvmstatic - Allow users to build clvm dynamically
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
