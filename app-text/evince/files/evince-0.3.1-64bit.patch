@@ -1,0 +1,11 @@
+--- evince-0.3.1/dvi/mdvi-lib/dviread.c.orig	2005-06-18 17:07:36.000000000 -0400
++++ evince-0.3.1/dvi/mdvi-lib/dviread.c	2005-06-18 17:11:06.000000000 -0400
+@@ -853,7 +853,7 @@
+ 		for(i = 1; i <= 10; i++)
+ 			page[i] = fsget4(p);
+ 		page[0] = offset;
+-		offset = (long)fuget4(p);
++		offset = fsget4(p);
+ 		/* check if the page is selected */
+ 		if(spec && mdvi_page_selected(spec, page, n) == 0) {
+ 			DEBUG((DBG_DVI, "Page %d (%ld.%ld.%ld.%ld.%ld.%ld.%ld.%ld.%ld.%ld) ignored by request\n",
