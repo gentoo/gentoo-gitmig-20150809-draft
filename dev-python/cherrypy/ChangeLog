@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cherrypy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.2 2005/05/04 23:16:10 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.3 2005/06/18 15:22:31 pythonhead Exp $
+
+  18 Jun 2005; Rob Cakebread <pythonhead@gentoo.org> cherrypy-2.0.0.ebuild:
+  Marked x86 stable
 
 *cherrypy-2.0.0 (04 May 2005)
 

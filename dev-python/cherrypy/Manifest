@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4c2474cb2a935ed71219c4e661937606 cherrypy-2.0.0.ebuild 1136
+MD5 c64acac3832b458f248a273afab9559d cherrypy-2.0.0.ebuild 1135
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
-MD5 2247eb64aa8fabbefce4f0053f7edbce ChangeLog 856
+MD5 1ff21fa6b76e24cc9166b4a8bf17dbf2 ChangeLog 953
 MD5 4991e5ddb5d31fb149fdadc26b75f551 files/digest-cherrypy-2.0.0 65
 MD5 c885c6173e005c060a73ecf836011132 files/cherrypy-2.0.0-setup-gentoo.diff 471
 MD5 f411ca60958e839619324a1a81b9af4d files/cherrypy-2.0.0-test-gentoo.diff 212
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCeVfHz2gxt1z4IGYRAoHcAKDKafkJVogEkcAP4hJxRPonhpLTSQCdFZdp
-aFvNt6nuNGdwUm7uln2RrQ4=
-=Jbww
------END PGP SIGNATURE-----
