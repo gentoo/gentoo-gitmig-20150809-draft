@@ -3,27 +3,21 @@
 # Pretty much copied from test-control.py
 
 from plugin.Interface import Interface
-from main import HOME
-from plugin import Permission
-
 
 import sys
 import os
-import code
 import __builtin__
 
 if "." not in sys.path: sys.path.append(".")
-if HOME not in sys.path: sys.path.append(HOME)
-
 
 try:
     path = os.path.abspath(sys.argv[1])
     folder, base = os.path.split(path)
 except:
-    sys.exit("Usage: gdesklets-control-getid <control-directory>")
+    #sys.exit("Usage: gdesklets-control-getid <control-directory>")
+    print "ERROR_IN_CONTROL_INSTALLATION"
     
 
-cwd = os.getcwd()
 os.chdir(folder)
 try:
     module = __import__(base)
@@ -32,6 +26,7 @@ try:
     ctrl = clss()
     
 except IOError:
-    sys.exit("Could not load control %s." % (path))
+    #sys.exit("Could not load control %s." % (path))
+    print folder
 
 print Interface.get_id(Interface.get_interfaces(clss)[0]).replace(":", "_")
