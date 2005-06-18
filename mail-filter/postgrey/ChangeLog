@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.5 2005/06/13 21:43:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.6 2005/06/18 22:46:45 ticho Exp $
+
+  18 Jun 2005; Andrej Kacian <ticho@gentoo.org> files/postgrey.rc:
+  Initscript provides "postfix_graylist", so postfix can safely start after
+  postgrey. Bug #55705, by Duncan Hill <gentoo-bugs at nacnud.force9.co.uk>.
 
   13 Jun 2005; Andrej Kacian <ticho@gentoo.org> postgrey-1.21.ebuild:
   Stable on x86 and amd64.
