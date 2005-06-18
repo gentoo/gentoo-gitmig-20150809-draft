@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12_beta2.ebuild,v 1.4 2005/06/11 17:59:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.1.ebuild,v 1.1 2005/06/18 13:00:38 carlo Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -18,6 +18,7 @@ IUSE="css dvdr encode ffmpeg flac hal kde mp3 musepack vorbis"
 DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 	hal? ( =sys-apps/dbus-0.23*
 		=sys-apps/hal-0.4* )
+	media-libs/libsndfile
 	media-libs/libsamplerate
 	media-libs/taglib
 	media-libs/musicbrainz
@@ -25,7 +26,7 @@ DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 	ffmpeg? ( media-video/ffmpeg )
 	flac? ( media-libs/flac )
 	mp3? ( media-libs/libmad )
-	musepack? ( >=media-libs/libmusepack-1.1 )
+	musepack? ( media-libs/libmpcdec )
 	vorbis? ( media-libs/libvorbis )"
 
 RDEPEND="${DEPEND}
@@ -41,31 +42,20 @@ RDEPEND="${DEPEND}
 
 need-kde 3.3
 
-I18N="${PN}-i18n-${PV%.*}"
-
-# debug build
-RESTRICT="nostrip"
-filter-flags -fomit-frame-pointer
+I18N="${PN}-i18n-${PV}"
 
 # These are the languages and translated documentation supported by k3b for 
 # version 0.11.x. If you are using this ebuild as a model for another ebuild 
 # for another version of K3b, DO check whether these values are different.
 # Check the {po,doc}/Makefile.am files in k3b-i18n package.
-LANGS="ar bg bs ca cs da de el en_GB es et fi fo fr gl hu it ja nb nl nso pl pt pt_BR ro ru sk sl sr sv ta tr ven xh xx zh_CN zh_TW zu"
-LANGS_DOC="da de es et fr pt ru sv"
+LANGS="bg br bs ca cs cy da de el en_GB es et fr ga hi hu is it lt mk nb nl nn pa pl pt pt_BR ru sr sv ta tr uk zh_CN"
 
-#MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
-#MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
+MAKE_LANGS=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
+MAKE_lANGS=${MAKE_lANGS/sr/sr sr@Latn}
 
-# for X in $LANGS; do
-# 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
-# done
-# 
-# src_unpack() {
-# 	kde_src_unpack
-# 	epatch "${FILESDIR}/k3b-0.11.17-noarts.patch"
-# 	make -f admin/Makefile.common || die
-# }
+for X in ${LANGS}; do
+	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
+done
 
 pkg_setup() {
 	use hal && if ! built_with_use dbus qt ; then
@@ -76,7 +66,7 @@ pkg_setup() {
 }
 
 src_compile() {
-# 	local _S=${S}
+	local _S=${S}
 	local myconf="--enable-libsuffix= --with-external-libsamplerate \
 			--without-resmgr --with-musicbrainz \
 			$(use_with kde k3bsetup)	\
@@ -88,35 +78,29 @@ src_compile() {
 			$(use_with mp3 libmad)		\
 			$(use_with musepack)"
 
-	# debug build
-	myconf="${myconf} --enable-debug=full"
-
 	# Build process of K3B
 	kde_src_compile
 
 	# Build process of K3B-i18n, select LINGUAS elements
-# 	S=${WORKDIR}/${I18N}
-# 	if [ -n "${LINGUAS}" -a -d "${S}" ] ; then
-# 		sed -i -e "s:^SUBDIRS = .*:SUBDIRS = ${MAKE_PO}:" ${S}/po/Makefile.in
-# 		sed -i -e "s:^SUBDIRS = .*:SUBDIRS = ${MAKE_DOC}:" ${S}/doc/Makefile.in
-# 		kde_src_compile
-# 	fi
-# 	S=${_S}
+	S=${WORKDIR}/${I18N}
+	if [ -n "${LINGUAS}" -a -d "${S}" ] ; then
+		sed -i -e "s:^SUBDIRS = .*:SUBDIRS = ${MAKE_LANGS}:" ${S}/Makefile.in
+		kde_src_compile
+	fi
+	S=${_S}
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS ChangeLog FAQ README TODO
+	dodoc AUTHORS ChangeLog COPYING FAQ INSTALL KNOWNBUGS PERMISSIONS README TODO
 
-# 	if [ -n "${LINGUAS}" -a -d "${WORKDIR}/${I18N}" ]; then
-# 		cd ${WORKDIR}/${I18N}
-# 		make DESTDIR=${D} install || die
-# 	fi
+	if [ -n "${LINGUAS}" -a -d "${WORKDIR}/${I18N}" ]; then
+		cd ${WORKDIR}/${I18N}
+		make DESTDIR=${D} install || die
+	fi
 
 	# install menu entry
-	dodir /usr/share/applications
-	mv ${D}/usr/share/applnk/Multimedia/k3b.desktop ${D}/usr/share/applications
 	if use kde; then
 		mv ${D}/usr/share/applnk/Settings/System/k3bsetup2.desktop ${D}/usr/share/applications
 	fi
