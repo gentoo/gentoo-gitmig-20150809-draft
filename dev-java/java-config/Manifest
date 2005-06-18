@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 750ad711b46f01a27e2d2895b0665594 java-config-1.2.6.ebuild 645
 MD5 ef7ed50bccfdd990bf96dffd374ac245 java-config-1.2.11.ebuild 737
 MD5 85d879eebe40ca9c7e541be9e2c37d53 java-config-1.2.10.ebuild 648
@@ -11,3 +14,10 @@ MD5 78909db2dd94f5ed1060036b0dfced48 files/digest-java-config-1.2.11-r1 70
 MD5 882665d94cc943f315ec729d990afadf files/java-config-1.2.11-shebang.patch 229
 MD5 49e2b6b8988b1dcb838716e5463256f5 files/digest-java-config-1.2.10 70
 MD5 78909db2dd94f5ed1060036b0dfced48 files/digest-java-config-1.2.11 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtCf5/rLF9B432nYRAk1yAJ9P/bAiVNe2oikwZGa7wZCgFY244QCdHwdi
+yV/wTdtl5deLU5hJ0tPn3ks=
+=00SV
+-----END PGP SIGNATURE-----
