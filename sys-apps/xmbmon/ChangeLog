@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/xmbmon
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/ChangeLog,v 1.9 2005/02/05 03:32:54 matsuu Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/ChangeLog,v 1.10 2005/06/18 04:48:54 vapier Exp $
+
+*xmbmon-2.0.5-r1 (18 Jun 2005)
+
+  18 Jun 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/xmbmon-2.0.5-loopback.patch, +files/xmbmon-2.0.5-pid.patch,
+  +files/mbmon.confd, +files/mbmon.rc, +xmbmon-2.0.5-r1.ebuild:
+  Add init.d script by Pedro Algarvio #96324 and some custom patches to bind
+  daemon to loopback/write pid file.
 
 *xmbmon-2.0.5 (05 Feb 2005)
 

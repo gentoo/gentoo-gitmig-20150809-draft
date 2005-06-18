@@ -1,8 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1ac020de05308a507db43d8a16c91b55 ChangeLog 1554
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c64efab0f0a18fa4a17711f31a9ba405 xmbmon-2.0.3.ebuild 1510
 MD5 f924b4529d447126126533c75c6d27b6 xmbmon-2.0.5.ebuild 1631
-MD5 14df9f39b73f5e913339379a4537421e ChangeLog 1223
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 7cd8051a9606fc6b11bdb465b0e676b2 files/xmbmon-2.0.5-amd64.patch 674
-MD5 9c27e9d00e4c46cdac30f402fc3092c0 files/xmbmon-2.0.3-gcc34.patch 702
+MD5 495469e39e1df68b8c60b7ea7dcaf1a3 xmbmon-2.0.5-r1.ebuild 1808
 MD5 bcbf7a71b0097dda70c0ca258cf00c84 files/digest-xmbmon-2.0.3 61
+MD5 9c27e9d00e4c46cdac30f402fc3092c0 files/xmbmon-2.0.3-gcc34.patch 702
+MD5 8e27c8cca2ba525771b72a602b821d19 files/mbmon.rc 489
 MD5 0c353771c30cbc519c6e0691ff79a0ad files/digest-xmbmon-2.0.5 125
+MD5 7cd8051a9606fc6b11bdb465b0e676b2 files/xmbmon-2.0.5-amd64.patch 674
+MD5 d94cced51ed9cc01b86bb1ce4e22cd62 files/mbmon.confd 280
+MD5 3c8f0268ab51de0a52f5969f1c42af33 files/xmbmon-2.0.5-loopback.patch 1181
+MD5 00bb33e41041d97c8a371e193368b65d files/xmbmon-2.0.5-pid.patch 505
+MD5 0c353771c30cbc519c6e0691ff79a0ad files/digest-xmbmon-2.0.5-r1 125
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCs6g5gIKl8Uu19MoRAmu1AJ4gGpo0jeMlwrF39AlfqlfZCfRM4ACZARJi
+JjvnQWvS1RVHspLjsca7IUI=
+=8Iw0
+-----END PGP SIGNATURE-----

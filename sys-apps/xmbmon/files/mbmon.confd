@@ -1,0 +1,11 @@
+# /etc/conf.d/mbmon
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/files/mbmon.confd,v 1.1 2005/06/18 04:48:54 vapier Exp $
+
+# Port to listen on.
+
+MBMON_PORT="12912"
+
+# These are default options to use with gkrellm2.
+# See the mbmon(1) manpage for more info.
+
+MBMON_OPTS="-l"
