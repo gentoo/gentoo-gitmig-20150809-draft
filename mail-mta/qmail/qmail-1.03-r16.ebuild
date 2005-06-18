@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.20 2005/06/12 20:03:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.21 2005/06/18 13:37:36 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -578,7 +578,9 @@ pkg_config() {
 	fi
 
 	if use ssl; then
+		ebegin "Generating RSA keys for SSL/TLS, this can take some time"
 		${ROOT}etc/cron.hourly/qmail-genrsacert.sh
+		eend $?
 		einfo "Creating a self-signed ssl-certificate:"
 		/var/qmail/bin/mkservercert
 		einfo "If you want to have a properly signed certificate "
@@ -586,8 +588,8 @@ pkg_config() {
 		# space at the end of the string because of the current implementation
 		# of einfo
 		einfo "openssl req -new -nodes -out req.pem \\ "
-		einfo "-config /var/qmail/control/servercert.cnf \\ "
-		einfo "-keyout /var/qmail/control/servercert.pem"
+		einfo "  -config /var/qmail/control/servercert.cnf \\ "
+		einfo "  -keyout /var/qmail/control/servercert.pem"
 		einfo "Send req.pem to your CA to obtain signed_req.pem, and do:"
 		einfo "cat signed_req.pem >> /var/qmail/control/servercert.pem"
 	fi
