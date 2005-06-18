@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/karchiver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.25 2005/06/17 20:21:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.26 2005/06/18 13:04:50 carlo Exp $
+
+  18 Jun 2005; Carsten Lohrke <carlo@gentoo.org> karchiver-3.1.1-r1.ebuild:
+  don't install mandriva desktop entry
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   karchiver-3.1.1-r1.ebuild:
