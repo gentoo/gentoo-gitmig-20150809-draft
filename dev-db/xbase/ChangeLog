@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xbase
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.8 2005/06/14 18:25:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.9 2005/06/18 14:59:36 corsair Exp $
+
+  18 Jun 2005; Markus Rothe <corsair@gentoo.org> xbase-2.0.0.ebuild:
+  added ~ppc64
 
   14 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> xbase-2.0.0.ebuild:
   Keyworded ~sparc
