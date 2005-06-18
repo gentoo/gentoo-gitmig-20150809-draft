@@ -5,40 +5,86 @@
 
 trap 'exit 0' PIPE
 
-F=$1	# so we can use "set" later to play with positional params
+guesscompress() {
+	case "$1" in
+		*.gz)  echo "gunzip -c" ;;
+		*.bz2) echo "bunzip2 -c" ;;
+		*)     echo "cat" ;;
+	esac
+}
 
-case "$F" in
-  *.tar.bz2) tar tjvvf "$F" 2>/dev/null ;;
-  *.tar.gz) tar tzvvf "$F" 2>/dev/null ;;
-  *.tar.z) tar tzvvf "$F" 2>/dev/null ;;
-  *.tar.Z) tar tzvvf "$F" 2>/dev/null ;;
-  *.tar) tar tvvf "$F" 2>/dev/null ;;
-  *.tbz2) tar tjvvf "$F" 2>/dev/null ;;
-  *.tbz) tar tjvvf "$F" 2>/dev/null ;;
-  *.tgz) tar tzvvf "$F" 2>/dev/null ;;
-  *.bz2) bzip2 -dc "$F" 2>/dev/null ;;
-  *.z) gzip -dc "$F"  2>/dev/null ;;
-  *.Z) gzip -dc "$F"  2>/dev/null ;;
-  *.zip) unzip -l "$F" 2>/dev/null ;;
-  *.rpm) rpm -qilp --changelog "$F" 2>/dev/null ;;
-  *.rar) unrar l "$F" 2>/dev/null ;;
+lesspipe() {
+	local DECOMPRESSOR=""
 
-  *.[1-9] | *.n | *.man)
-  	[[ $(file -L "$F") == *troff* ]] && \
-    groff -S -s -p -t -e -Tascii -mandoc "$F" 2>/dev/null ;;
+	case "$match" in
 
-  *.[1-9].gz | *.n.gz | *.man.gz)
-  	[[ $(gzip -dc "$F" 2>/dev/null | file -) == *troff* ]] && \
-    gzip -dc "$F" 2>/dev/null | groff -S -s -p -t -e -Tascii -mandoc ||
-    gzip -dc "$F" 2>/dev/null ;;
+	### Man pages ###
+	*.[0-9n]|*.man|\
+	*.[0-9n].bz2|*.man.bz2|\
+	*.[0-9n].gz|*.man.gz)
+		DECOMPRESSOR=$(guesscompress "$match")
+		if [[ $($DECOMPRESSOR -- "$1" | file -) == *troff* ]] ; then
+			if [[ $1 == /* ]] ; then
+				man -- "$1"
+			else
+				man -- "./$1"
+			fi
+		else
+			$DECOMPRESSOR -- "$1"
+		fi
+		;;
 
-  # keep this *after* testing for gzipped troff
-  *.gz) gzip -dc "$F"  2>/dev/null ;;
+	### Tar files ###
+	*.tar)                   tar tvvf "$1" ;;
+	*.tar.bz2|*.tbz2|*.tbz) tar tjvvf "$1" ;;
+	*.tar.gz|*.tgz|*.tar.z) tar tzvvf "$1" ;;
 
-  *)
-	set -- $(file -L "$F")
-	if [[ $2 == Linux/* || $3 == Linux/* || $2 == ELF || $3 == ELF ]]; then
-		strings "$F"
-	fi
-	;;
-esac
+	### Misc archives ###
+	*.bz2)        bzip2 -dc -- "$1" ;;
+	*.gz|*.z)     gzip -dc -- "$1"  ;;
+	*.zip)        unzip -l "$1" ;;
+	*.rpm)        rpm -qpivl --changelog -- "$1" ;;
+	*.cpi|*.cpio) cpio -itv < "$1" ;;
+	*.rar)        unrar l -- "$1" ;;
+	*.ace)        unace l -- "$1" ;;
+	*.arj)        unarj l -- "$1" ;;
+	*.cab)        cabextract -l -- "$1" ;;
+
+	### Media ###
+	*.gif|*.jpeg|*.jpg|*.pcd|*.png|*.tga|*.tiff|*.tif|*.bmp)
+		if type -p identify > /dev/null ; then
+			identify "$1"
+		else
+			echo "Please emerge imagemagick in order"
+			echo "to view info about images"
+		fi
+		;;
+	*.avi|*.mpeg|*.mpg|*.mov|*.qt|*.wmv|*.asf|*.rm)
+		# XXX: anyone have a better command ?
+		file -L -- "$1"
+		;;
+
+	### Everything else ###
+	*)
+		# Maybe we didn't match due to case issues ...
+		if [[ ${recur} == 0 ]] ; then
+			recur=1
+			match=$(echo $1 | tr '[:upper:]' '[:lower:]')
+			lesspipe "$1"
+		fi
+
+		local out=$(file -L -- "$1")
+		if [[ ${out} == *ELF* || ${out} == *a.out* ]] ; then
+			strings -- "$1"
+		fi
+		;;
+	esac
+}
+
+if [[ -d $1 ]] ; then
+	ls -alF -- "$1"
+else
+	recur=0
+	match=$1
+	lesspipe "$1" 2> /dev/null
+fi

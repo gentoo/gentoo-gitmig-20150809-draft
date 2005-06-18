@@ -1,7 +1,17 @@
-MD5 14a60bb54f84f6f25e9da93f2e5daadc ChangeLog 4928
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 44d915d5bfa3b935f3b8142d0ef56271 ChangeLog 5070
 MD5 2aaa4d79df0dbf51d83d34fafc68f58b less-385.ebuild 776
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 4186d877c3fa2ef9d3433adf9f1b751c less-382-r2.ebuild 767
 MD5 c9bb99cd4f916916f975c59d38c3d590 files/digest-less-385 60
-MD5 db1319ec9421763e5fb32eb282fa10b7 files/lesspipe.sh 1325
+MD5 cc01269bfad4bdf8a19cabce45de3914 files/lesspipe.sh 1880
 MD5 6f05cb473c8bd03fb8fb5ba7466aa804 files/digest-less-382-r2 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCs5DUgIKl8Uu19MoRAlX6AJ473mcbcNWHT3xfVVp2uo/bczvwOwCeIOyF
+S1toho+m6u/FpcGZuH/q1vE=
+=fQ5V
+-----END PGP SIGNATURE-----
