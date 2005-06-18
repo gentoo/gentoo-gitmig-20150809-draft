@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.33 2005/06/17 20:51:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.34 2005/06/18 23:03:37 ticho Exp $
+
+  18 Jun 2005; Andrej Kacian <ticho@gentoo.org> files/sendmail:
+  Added "antivirus" to 'use' in depend(). Bug #76205, by Phil Pennock <gentoo
+  at spodhuis.demon.nl>.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   sendmail-8.13.3.ebuild:
