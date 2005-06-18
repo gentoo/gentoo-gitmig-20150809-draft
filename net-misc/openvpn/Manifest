@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 46cb662edae9474cac1886a1c18f62a4 ChangeLog 4880
+MD5 17b736fa429f827f2616bdfa227af246 ChangeLog 4962
 MD5 41623f5bd4f728bd9018e69514149bc5 metadata.xml 452
+MD5 81a0aac2d0d7352209961ebe9bb9e105 openvpn-2.0.ebuild 1910
+MD5 446a8128f661a6fdd0dbee3456b2d0e8 openvpn-2.0-r1.ebuild 2106
 MD5 57db3db67cafcb3a5bb7a07eb4a3b884 openvpn-1.5.0-r1.ebuild 1334
 MD5 c0bb9d10424cda8d9361368015b324ca openvpn-1.6.0.ebuild 1338
-MD5 8ce742d481a15f90eeae17c8a5cde546 openvpn-2.0.ebuild 1912
-MD5 446a8128f661a6fdd0dbee3456b2d0e8 openvpn-2.0-r1.ebuild 2106
-MD5 51eea8a2c9a5189571de49ad32b88ac1 files/digest-openvpn-1.5.0-r1 65
-MD5 64180e225493c8fc2e085071ff65897b files/digest-openvpn-1.6.0 65
 MD5 a455c11efdca8a3caadbac543345490e files/digest-openvpn-2.0 63
-MD5 e173c8d27fc623ce79d2c5e83854b28a files/openvpn 1318
 MD5 a455c11efdca8a3caadbac543345490e files/digest-openvpn-2.0-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCp9jb06ebR+OMO78RAmPWAJ9xvbXMDRSxqM/jq+f+HOf/gabXGgCfXs38
-J1AC7OazSC+JabKA3rmFXCM=
-=GtDQ
------END PGP SIGNATURE-----
+MD5 51eea8a2c9a5189571de49ad32b88ac1 files/digest-openvpn-1.5.0-r1 65
+MD5 e173c8d27fc623ce79d2c5e83854b28a files/openvpn 1318
+MD5 64180e225493c8fc2e085071ff65897b files/digest-openvpn-1.6.0 65
