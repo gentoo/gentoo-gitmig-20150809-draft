@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/smtptools/smtptools-0.2.3.ebuild,v 1.7 2005/06/14 21:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/smtptools/smtptools-0.2.3.ebuild,v 1.8 2005/06/18 06:06:44 vapier Exp $
 
 DESCRIPTION="A collection of tools to send or receive mails with SMTP"
 HOMEPAGE="http://www.ohse.de/uwe/software/${PN}.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.ohse.de/uwe/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ppc s390 x86"
+KEYWORDS="amd64 arm m68k mips ppc s390 sh x86"
 IUSE=""
 
 DEPEND=""
