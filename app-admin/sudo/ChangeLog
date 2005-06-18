@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.59 2005/06/18 19:29:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.60 2005/06/18 23:49:12 weeve Exp $
+
+  18 Jun 2005; Jason Wever <weeve@gentoo.org> sudo-1.6.8_p8-r3.ebuild:
+  Added ~sparc keyword since someone dropped all the keywords :(
 
   18 Jun 2005; Markus Rothe <corsair@gentoo.org> sudo-1.6.8_p8-r3.ebuild:
   added ~ppc64
