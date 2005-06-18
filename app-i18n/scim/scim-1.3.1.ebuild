@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.2.1.ebuild,v 1.6 2005/05/22 14:34:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.3.1.ebuild,v 1.1 2005/06/18 15:47:20 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ppc ~amd64 ~sparc ppc64"
+KEYWORDS="~x86 ~alpha ~ppc ~amd64 ~sparc ~ppc64"
 IUSE="gtk immqt immqt-bc"
 
 GTK_DEPEND=">=x11-libs/gtk+-2
@@ -82,7 +82,7 @@ pkg_postinst() {
 	einfo "	# emerge app-i18n/scim-m17n"
 	einfo
 	ewarn
-	ewarn "If you are upgrading from scim-1.0.x, you should remerge all SCIM modules."
+	ewarn "If you upgraded from scim-1.2.x or scim-1.0.x, you should remerge all SCIM modules."
 	ewarn
 	epause 10
 
