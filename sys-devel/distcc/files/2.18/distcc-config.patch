@@ -8,7 +8,7 @@
 +		os.chmod(path+file,0755)
 +
 +def installoverrides(chost):
-+	for file in ['gcc', 'c++', 'g++']:
++	for file in ['gcc', 'cc', 'c++', 'g++']:
 +		path = '/usr/lib/distcc/bin/'
 +		if os.path.exists('/usr/bin/'+chost+'-'+file):
 +			if os.path.exists(path+file):

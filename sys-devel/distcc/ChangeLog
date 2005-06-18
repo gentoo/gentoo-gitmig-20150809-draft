@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.143 2005/06/18 19:38:32 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.144 2005/06/18 21:01:15 morfic Exp $
+
+  18 Jun 2005; Daniel Goller <morfic@gentoo.org>
+  files/2.18/distcc-config.patch:
+  added one more script to array
 
 *distcc-2.18.3-r8 (18 Jun 2005)
 
