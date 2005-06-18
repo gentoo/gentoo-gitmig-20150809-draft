@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/net-server
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.14 2005/06/15 17:36:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.15 2005/06/18 14:45:37 corsair Exp $
+
+  18 Jun 2005; Markus Rothe <corsair@gentoo.org> net-server-0.87-r1.ebuild:
+  added ~ppc64
 
   15 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   net-server-0.87-r1.ebuild:
