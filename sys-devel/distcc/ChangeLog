@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.141 2005/06/15 12:52:17 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.142 2005/06/18 17:21:05 corsair Exp $
+
+  18 Jun 2005; Markus Rothe <corsair@gentoo.org> distcc-2.18.3-r7.ebuild:
+  added ~ppc64
 
 *distcc-2.18.3-r7 (15 Jun 2005)
 *distcc-2.16-r3 (15 Jun 2005)
