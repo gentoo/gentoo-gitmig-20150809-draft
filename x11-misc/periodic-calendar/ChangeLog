@@ -1,0 +1,12 @@
+# ChangeLog for x11-misc/periodic-calendar
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/ChangeLog,v 1.1 2005/06/18 17:15:17 lisa Exp $
+
+*periodic-calendar-1.3 (18 Jun 2005)
+
+  18 Jun 2005; Lisa Seelye <lisa@gentoo.org> +Changelog, +metadata.xml,
+  +periodic-calendar-1.3.ebuild:
+  Initial commit. Resolves bug #91151, Ebuild submitted by Ooblick
+  <txe_stc@yahoo.com>. Thanks for the great addition. I'm sure it'll help a
+  lot of users.
+
