@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1c593cedca7b1bd086e31c6d09422e4 ChangeLog 3629
 MD5 841fe7cb64f1627631800a5a7bac292b pth-1.4.0.ebuild 776
 MD5 f18d7552a5a5f031f28b5a805a4c93e4 pth-1.4.1.ebuild 764
@@ -7,3 +10,10 @@ MD5 5a8d84760fa717b03ba0a74fdcda84a2 files/digest-pth-1.4.0 61
 MD5 1bfd642d99d813a259564df018c7f6dd files/digest-pth-1.4.1 61
 MD5 b2b42d9f7e85e829667e5cec706c44fe files/digest-pth-2.0.3 61
 MD5 87d3f708eb2c1edc4f1f82de5665ac93 files/pth-2.0.3-m4.patch 665
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCs3AkgIKl8Uu19MoRAnOTAJ4pWKssXWCWr/VVWmq1RF3v08rBEwCeKoSh
+MuuNX3+nffj0pXpKk3Tpolg=
+=1cHA
+-----END PGP SIGNATURE-----
