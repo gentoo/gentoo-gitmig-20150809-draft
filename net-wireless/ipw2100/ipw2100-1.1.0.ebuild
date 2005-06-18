@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.1.0.ebuild,v 1.3 2005/05/05 19:55:41 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.1.0.ebuild,v 1.4 2005/06/18 09:20:38 brix Exp $
 
 inherit eutils linux-mod
 
@@ -60,6 +60,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-suspend2.patch
+	epatch ${FILESDIR}/${P}-is_multicast_ether_addr.patch
 
 	use debug && debug="y"
 	sed -i \
