@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP_Request
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request/ChangeLog,v 1.8 2005/05/06 20:31:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request/ChangeLog,v 1.9 2005/06/18 10:41:56 hansmi Exp $
+
+  18 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  PEAR-HTTP_Request-1.2.4.ebuild:
+  Stable on ppc.
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   PEAR-HTTP_Request-1.2.4.ebuild:
