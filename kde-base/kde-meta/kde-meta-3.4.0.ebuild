@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-3.4.0.ebuild,v 1.6 2005/05/25 16:59:11 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-3.4.0.ebuild,v 1.7 2005/06/18 13:44:50 carlo Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -12,7 +12,7 @@ SLOT="3.4"
 KEYWORDS="~x86 ~ppc ~sparc ~ppc64 ~amd64"
 IUSE="accessibility"
 
-RDEPEND="
+RDEPEND="~kde-base/kdelibs-${PV}
 $(deprange $PV $MAXKDEVER kde-base/kdeaddons-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdeadmin-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-meta)
