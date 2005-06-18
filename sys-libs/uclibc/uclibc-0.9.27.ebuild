@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.17 2005/05/31 21:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.18 2005/06/18 04:55:30 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -25,7 +25,7 @@ fi
 
 MY_P=${P/ucl/uCl}
 SVN_VER="20050114"
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
@@ -124,6 +124,7 @@ src_unpack() {
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		unpack ${MY_P}-patches-${PATCH_VER}.tar.bz2
+		EPATCH_SUFFIX="patch"
 		epatch ${WORKDIR}/patch
 		# math functions (sinf,cosf,tanf,atan2f,powf,fabsf,copysignf,scalbnf,rem_pio2f)
 		use build || epatch ${WORKDIR}/patch/math

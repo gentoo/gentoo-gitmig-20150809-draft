@@ -1,5 +1,15 @@
-MD5 ea76446f3ea63868e45e08d419fdbc86 ChangeLog 8595
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d84d1f081eec086910691946ab56b176 ChangeLog 8787
 MD5 e96b4dfc373a1cdf7735aeae52c4cf7e metadata.xml 999
-MD5 2220455da94d59bc25b6bda4ce02d33c uclibc-0.9.27.ebuild 10496
+MD5 eb09e9142a9b59cd16b9da01c20bd95c uclibc-0.9.27.ebuild 10520
+MD5 814f6b412ea1b9b1e0ed99648a5b6f17 files/digest-uclibc-0.9.27 229
 MD5 684def72ebc0da73cb8b6d1c53e7e8fb files/getent 1112
-MD5 8801c8a97f025fb426cba64a5b9a4501 files/digest-uclibc-0.9.27 229
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCs6ltgIKl8Uu19MoRAg6mAJ0eqeF1fTsP1Ru1qZFKPJNjljIH7gCfU5EB
+uahI8/Dh0CquNRGyli8kZ/8=
+=i6f2
+-----END PGP SIGNATURE-----
