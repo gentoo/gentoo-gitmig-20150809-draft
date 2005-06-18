@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/capi4hylafax
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.8 2005/02/13 21:18:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.9 2005/06/18 22:21:31 sbriesen Exp $
+
+*capi4hylafax-01.02.03.11 (18 Jun 2005)
+
+  18 Jun 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  +capi4hylafax-01.02.03.11.ebuild:
+  changing version to debian patch level, removing hylafax dependency (because
+  it's optional), adding tiff dependency, ebuild code cleanup.
 
   13 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
   -capi4hylafax-01.02.02.ebuild, capi4hylafax-01.02.03.ebuild:
