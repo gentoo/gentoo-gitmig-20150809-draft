@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.18 2005/06/18 04:55:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.19 2005/06/18 05:32:27 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -75,8 +75,9 @@ CPU_M68K=""
 CPU_MIPS="MIPS_ISA_{1,2,3,4,MIPS{32,64}}"
 CPU_PPC=""
 CPU_SH="SH{2,3,4,5}"
+CPU_SPARC=""
 CPU_X86="GENERIC_386 {3,4,5,6}86 586MMX PENTIUM{II,III,4} K{6,7} ELAN CRUSOE WINCHIP{C6,2} CYRIXIII NEHEMIAH"
-IUSE_UCLIBC_CPU="${CPU_ARM} ${CPU_MIPS} ${CPU_PPC} ${CPU_SH} ${CPU_X86}"
+IUSE_UCLIBC_CPU="${CPU_ARM} ${CPU_MIPS} ${CPU_PPC} ${CPU_SH} ${CPU_SPARC} ${CPU_X86}"
 
 check_cpu_opts() {
 	local cpu_var="CPU_$(echo $(tc-arch) | tr [a-z] [A-Z])"
@@ -103,7 +104,7 @@ check_cpu_opts() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	check_cpu_opts
 
 	echo
@@ -120,14 +121,14 @@ src_unpack() {
 	########## PATCHES ##########
 
 	[[ -n ${SVN_VER} ]] && \
-		epatch ${WORKDIR}/${MY_P}-cvs-update-${SVN_VER}.patch
+		epatch "${WORKDIR}"/${MY_P}-cvs-update-${SVN_VER}.patch
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		unpack ${MY_P}-patches-${PATCH_VER}.tar.bz2
 		EPATCH_SUFFIX="patch"
-		epatch ${WORKDIR}/patch
+		epatch "${WORKDIR}"/patch
 		# math functions (sinf,cosf,tanf,atan2f,powf,fabsf,copysignf,scalbnf,rem_pio2f)
-		use build || epatch ${WORKDIR}/patch/math
+		use build || epatch "${WORKDIR}"/patch/math
 	fi
 
 	########## CPU SELECTION ##########
@@ -237,28 +238,18 @@ src_unpack() {
 }
 
 src_compile() {
-	# running tests require this
-	use build || addwrite /dev/ptmx
 	cp myconfig .config
 
-	#if use nls ; then
-	#	# these can be built only if the build system supports locales (as of 0.9.26)
-	#	emake -j1 headers
-	#	cd extra/locale
-	#	make clean
-	#	find ./charmaps -name "*.pairs" > codesets.txt
-	#	cp LOCALES locales.txt
-	#	emake -j1 || die "could not make locales"
-	#	cd ../..
-	#fi
-	local makeopts
-	type -p ${CTARGET}-ar && makeopts="CROSS=${CTARGET}-"
+	# last release doesnt support parallel build, 
+	# but the current svn repo does ...
+	export MAKEOPTS="${MAKEOPTS} -j1"
+	type -p ${CTARGET}-ar && export MAKEOPTS="${MAKEOPTS} CROSS=${CTARGET}-"
 
-	emake -j1 ${makeopts} || die "could not make"
+	emake || die "could not make"
 	[[ ${CTARGET} != ${CHOST} ]] && return 0
 
 	if [[ ${CHOST} == *-uclibc ]] ; then
-		emake -j1 ${makeopts} utils || die "could not make utils"
+		emake utils || die "could not make utils"
 	fi
 
 	! use build && ! hasq test $RESTRICT && src_test
@@ -267,6 +258,9 @@ src_compile() {
 src_test() {
 	[[ ${CHOST} != ${CTARGET} ]] && return 0
 	[[ ${CBUILD} != ${CHOST} ]] && return 0
+
+	# running tests require this
+	use build || addwrite /dev/ptmx
 
 	# This is wrong, but uclibc's tests fail bad when screwing 
 	# around with sandbox, so lets just punt it
@@ -299,10 +293,7 @@ src_install() {
 
 	if [[ ${CHOST} == *-uclibc ]] ; then
 		emake PREFIX="${D}" install_utils || die "install-utils failed"
-		dodir /usr/bin
-		exeinto /usr/bin
-		#doexe extra/scripts/getent
-		doexe ${FILESDIR}/getent
+		dobin extra/scripts/getent
 	fi
 
 	if ! use build ; then

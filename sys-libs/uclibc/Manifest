@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 d84d1f081eec086910691946ab56b176 ChangeLog 8787
 MD5 e96b4dfc373a1cdf7735aeae52c4cf7e metadata.xml 999
-MD5 eb09e9142a9b59cd16b9da01c20bd95c uclibc-0.9.27.ebuild 10520
+MD5 a10c70d64d31d9a0b517f2c7aaac318a uclibc-0.9.27.ebuild 10289
 MD5 814f6b412ea1b9b1e0ed99648a5b6f17 files/digest-uclibc-0.9.27 229
 MD5 684def72ebc0da73cb8b6d1c53e7e8fb files/getent 1112
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCs6ltgIKl8Uu19MoRAg6mAJ0eqeF1fTsP1Ru1qZFKPJNjljIH7gCfU5EB
-uahI8/Dh0CquNRGyli8kZ/8=
-=i6f2
+iD8DBQFCs7J4gIKl8Uu19MoRAox/AJ9NFkU6GGNmBCJv7ChwCP+sN8T6yACePbwY
+nxJDPhLS1DTQ79ZwXPs/HVM=
+=rY5m
 -----END PGP SIGNATURE-----
