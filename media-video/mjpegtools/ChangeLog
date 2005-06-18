@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.92 2005/06/17 20:46:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.93 2005/06/18 15:16:45 corsair Exp $
+
+  18 Jun 2005; Markus Rothe <corsair@gentoo.org> mjpegtools-1.6.2-r4.ebuild:
+  Stable on ppc64
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   mjpegtools-1.6.2-r4.ebuild:
