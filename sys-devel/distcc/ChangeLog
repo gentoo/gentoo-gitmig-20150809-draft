@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.142 2005/06/18 17:21:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.143 2005/06/18 19:38:32 morfic Exp $
+
+*distcc-2.18.3-r8 (18 Jun 2005)
+
+  18 Jun 2005; Daniel Goller <morfic@gentoo.org>
+  +files/2.18/distcc-config.patch, +distcc-2.18.3-r8.ebuild:
+  Added crosscompile USE flag to allow proper cross compilation in multi arch
+  environments, thanks to Andrew de Quincey on bug #87859
 
   18 Jun 2005; Markus Rothe <corsair@gentoo.org> distcc-2.18.3-r7.ebuild:
   added ~ppc64
