@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r2.ebuild,v 1.5 2005/06/18 10:47:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r2.ebuild,v 1.6 2005/06/18 16:15:48 usata Exp $
 
 inherit eutils kde-functions
 
@@ -54,17 +54,19 @@ src_unpack() {
 	use X || sed -i -e '/^SUBDIRS/s/xim//' Makefile.in || die
 	cd uim; epatch "${WORKDIR}"/skk-dic-serv.diff2.gz
 	cd "${S}"; epatch "${FILESDIR}"/${P}-gtk2_4-gentoo.diff
+	cd "${S}/qt"; epatch "${FILESDIR}"/${P}-nls.diff
 }
 
 src_compile() {
 	local myconf
 	if use immqt || use immqt-bc ; then
-		myconf="${myconf} --enable-qt-immodule"
+		myconf="${myconf} --with-qt-immodule"
 		export CPPFLAGS="${CPPFLAGS} -I${S}/qt"
 	fi
 	use qt && set-qtdir 3
 
-	myconf="$(use_enable nls)
+	myconf="${myconf}
+		$(use_enable nls)
 		$(use_with X x)
 		$(use_with gtk gtk2)
 		$(use_with m17n-lib m17nlib)
