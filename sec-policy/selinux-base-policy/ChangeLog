@@ -1,6 +1,14 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.38 2005/05/10 18:31:19 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.39 2005/06/18 14:18:31 pebenito Exp $
+
+*selinux-base-policy-20050618 (18 Jun 2005)
+
+  18 Jun 2005; Chris PeBenito <pebenito@gentoo.org>
+  -selinux-base-policy-20041123.ebuild,
+  -selinux-base-policy-20050306.ebuild,
+  +selinux-base-policy-20050618.ebuild:
+  New release to support 2.6.12 features.
 
   10 May 2005; Stephen Bennett <spb@gentoo.org>
   selinux-base-policy-20050322.ebuild:
