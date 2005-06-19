@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/toolame
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.10 2005/02/14 08:25:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.11 2005/06/19 20:47:23 eradicator Exp $
+
+*toolame-02l-r1 (19 Jun 2005)
+
+  19 Jun 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/toolame-02l-uint.patch, +toolame-02l-r1.ebuild:
+  Revbump to fix signed/unsigned issue which caused segfault on 64bit archs.
+  Pusing into stable amd64. Closes bug #89751 thanks to Scott Smith
+  <scott-gentoo@gelatinous.com>
 
   14 Feb 2005; David Holm <dholm@gentoo.org> toolame-02l.ebuild:
   Added to ~ppc.
