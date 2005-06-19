@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 6219248fb12b3efcd4142168ad1d798f ChangeLog 26726
 MD5 02847d17d77f9fa6b67c232400108e44 distcc-2.16-r2.ebuild 4856
-MD5 64e0afe30accc560225a5c48fc49119d distcc-2.18.3-r6.ebuild 4593
-MD5 b85c5a8d8eec201a2f0ae671e16779eb distcc-2.18.3-r8.ebuild 5082
-MD5 de278aaedd21a3852f8700ceda593eb9 distcc-2.16-r3.ebuild 5182
-MD5 e42f52f6ecb0685fc753b93666cd0baf ChangeLog 26636
 MD5 c04441917ccb5e5f9790642545c1f469 metadata.xml 375
-MD5 56b6cabb07fa9101dba8dc0996134228 distcc-2.18.3-r7.ebuild 4930
-MD5 fa3f7ab9f7829ba28b454f624b11da53 files/digest-distcc-2.18.3-r6 66
-MD5 fa3f7ab9f7829ba28b454f624b11da53 files/digest-distcc-2.18.3-r7 66
-MD5 fa3f7ab9f7829ba28b454f624b11da53 files/digest-distcc-2.18.3-r8 66
-MD5 ec06b50c03c5002d4df60e49b9798445 files/distcc-gentoo-multilib-r1.patch 4245
+MD5 64e0afe30accc560225a5c48fc49119d distcc-2.18.3-r6.ebuild 4593
+MD5 de278aaedd21a3852f8700ceda593eb9 distcc-2.16-r3.ebuild 5182
+MD5 7d76d7e3f588349443d847a81b1f40c9 distcc-2.18.3-r7.ebuild 4927
+MD5 b85c5a8d8eec201a2f0ae671e16779eb distcc-2.18.3-r8.ebuild 5082
 MD5 c462167d99c154e9f8b9f94022ed2a71 files/digest-distcc-2.16-r2 64
+MD5 687a622f11f457581b267ce5fb3c2721 files/distcc-gentoo-multilib.patch 3784
+MD5 fa3f7ab9f7829ba28b454f624b11da53 files/digest-distcc-2.18.3-r6 66
 MD5 c462167d99c154e9f8b9f94022ed2a71 files/digest-distcc-2.16-r3 64
 MD5 fec77b3be8d8bd8f2d6e5a708cb35717 files/distcc-config 4874
-MD5 687a622f11f457581b267ce5fb3c2721 files/distcc-gentoo-multilib.patch 3784
-MD5 69a089566bd18a1bfba2da639964c19e files/2.17/conf 1317
-MD5 1161999a5d25185f95a8c284bd7307d1 files/2.17/init 733
+MD5 ec06b50c03c5002d4df60e49b9798445 files/distcc-gentoo-multilib-r1.patch 4245
+MD5 fa3f7ab9f7829ba28b454f624b11da53 files/digest-distcc-2.18.3-r7 66
+MD5 fa3f7ab9f7829ba28b454f624b11da53 files/digest-distcc-2.18.3-r8 66
 MD5 bb53a18e009ef62f4402a23f83bfda20 files/2.18/conf 1384
 MD5 739ebfc62fe125b76021cf7987a158f7 files/2.18/init 733
 MD5 601b451b5d2555281660ee7f96562dbd files/2.18/distcc-config.patch 1200
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtIscUpKYMelfdYERAlIXAJ4l9VTjGw60Ae6cLwD0ILPpxdtn+QCePMaE
-1p4zr1f/WhRIY7wqcZet/c4=
-=dF/M
------END PGP SIGNATURE-----
+MD5 69a089566bd18a1bfba2da639964c19e files/2.17/conf 1317
+MD5 1161999a5d25185f95a8c284bd7307d1 files/2.17/init 733
