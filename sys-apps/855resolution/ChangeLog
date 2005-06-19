@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/855resolution
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/855resolution/ChangeLog,v 1.1 2005/06/19 22:07:03 fafhrd Exp $
+
+  19 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org> ChangeLog:
+  Initial import of 855resolution package which patches the VBIOS of Intel
+  815, 865, 915 chipsets so that one can insert a correct video mode entry
+  into the VBIOS; package suggestion and conf.d/init.d files by
+  Gard Spreeman <spreeman -| at |- stud.ntnu.no>
+
