@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/electricsheep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.23 2005/06/19 07:25:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.24 2005/06/19 13:37:08 dragonheart Exp $
+
+  19 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  electricsheep-2.6.2.ebuild:
+  Bad use of uniqueid. Removed as per bug #96522. Thanks David Pyke
 
 *electricsheep-2.6.2 (19 Jun 2005)
 
