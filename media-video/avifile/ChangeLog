@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.103 2005/05/17 22:29:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.104 2005/06/19 15:59:58 gmsoft Exp $
+
+  18 Jun 2005; Guy Martin <gmsoft@gentoo.org> files/avifile-mad.patch,
+  avifile-0.7.43.20050224-r1.ebuild:
+  Fixed and marked stable for hppa.
 
   17 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   avifile-0.7.43.20050224-r1.ebuild:
