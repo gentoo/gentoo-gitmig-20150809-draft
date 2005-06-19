@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.4.ebuild,v 1.7 2005/06/02 14:58:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.4.ebuild,v 1.8 2005/06/19 23:01:56 vanquirius Exp $
 
 inherit toolchain-funcs
 
@@ -45,4 +45,6 @@ src_install() {
 	newins ${FILESDIR}/nessusd-r7 nessusd
 	keepdir /var/lib/nessus/logs
 	keepdir /var/lib/nessus/users
+	# newer version is provided by nessus-libraries
+	rm ${D}/usr/include/nessus/includes.h
 }
