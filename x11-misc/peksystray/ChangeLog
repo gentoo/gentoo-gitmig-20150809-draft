@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/peksystray
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.7 2005/01/30 18:01:59 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.8 2005/06/19 22:54:27 smithj Exp $
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> peksystray-0.2.1.ebuild:
+  stable x86
 
   30 Jan 2005; Tavis Ormandy <taviso@gentoo.org> peksystray-0.2.1.ebuild,
   peksystray-0.2.ebuild:
