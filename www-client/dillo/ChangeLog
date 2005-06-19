@@ -1,11 +1,17 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.27 2005/05/14 11:35:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.28 2005/06/19 09:41:50 usata Exp $
+
+*dillo-0.8.5 (19 Jun 2005)
+
+  19 Jun 2005; Mamoru KOMACHI <usata@gentoo.org> dillo-0.8.4-r2.ebuild,
+  +dillo-0.8.5.ebuild:
+  Version bumped; bug #96502. Dropped misc patch until its ready.
 
   14 May 2005; Guy Martin <gmsoft@gentoo.org> dillo-0.8.4-r1.ebuild:
   Stable on hppa.
 
-  26 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> dillo-0.8.4-r1.ebuild:
+  26 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> dillo-0.8.4-r1.ebuild:
   Stable on alpha.
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> dillo-0.8.4-r1.ebuild:
@@ -27,7 +33,7 @@
   Updated i18n-misc patch, and appended -O to CFLAGS (bug #86442).
   Marked 0.8.4-r1 stable on x86 and ppc.
 
-  19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> dillo-0.8.4.ebuild:
+  19 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> dillo-0.8.4.ebuild:
   Stable on alpha.
 
   24 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> dillo-0.8.4.ebuild:
@@ -51,7 +57,7 @@
   08 Jan 2005; Jason Wever <weeve@gentoo.org> dillo-0.8.3-r4.ebuild:
   Stable on sparc wrt bug #76665.
 
-  08 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> dillo-0.8.3-r4.ebuild:
+  08 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org> dillo-0.8.3-r4.ebuild:
   Stable on alpha, bug 76665.
 
   08 Jan 2005; Lars Weiler <pylon@gentoo.org> dillo-0.8.3-r4.ebuild:

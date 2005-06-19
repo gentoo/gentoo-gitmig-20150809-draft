@@ -1,22 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.4-r2.ebuild,v 1.2 2005/06/19 09:41:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.5.ebuild,v 1.1 2005/06/19 09:41:50 usata Exp $
 
 inherit flag-o-matic eutils
 
 S2=${WORKDIR}/dillo-gentoo-extras-patch4
-DILLO_I18N_P="${P}-i18n-misc-20050402"
+DILLO_I18N_P="${P}-i18n-misc-20050414"
 
 DESCRIPTION="Lean GTK+-based web browser"
 HOMEPAGE="http://www.dillo.org/"
 SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
-	mirror://gentoo/dillo-gentoo-extras-patch4.tar.bz2
-	http://teki.jpn.ph/pc/software/${DILLO_I18N_P}.diff.bz2"
+	mirror://gentoo/dillo-gentoo-extras-patch4.tar.bz2"
+#	"http://teki.jpn.ph/pc/software/${DILLO_I18N_P}.diff.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips ~arm ~ppc64"
-MISC_IUSE="nls truetype"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips ~arm ~ppc64"
+#MISC_IUSE="nls truetype"
 IUSE="${MISC_IUSE} ipv6 ssl"
 
 RDEPEND="=x11-libs/gtk+-1.2*
@@ -31,7 +31,8 @@ DEPEND="sys-devel/autoconf
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ../${DILLO_I18N_P}.diff
+	#epatch ../${DILLO_I18N_P}.diff || die
+	#sh autogen.sh || die
 
 	if [ "${DILLO_ICONSET}" = "kde" ]
 	then
@@ -64,8 +65,6 @@ src_unpack() {
 	else
 		einfo "Using default Dillo icon set"
 	fi
-
-	cd ${S}; sh autogen.sh || die
 }
 
 src_compile() {
@@ -74,10 +73,11 @@ src_compile() {
 
 	local myconf
 
-	myconf="$(use_enable nls)
-		$(use_enable truetype anti-alias)
-		--enable-tabs
-		--enable-meta-refresh"
+	# misc features
+	#myconf="$(use_enable nls)
+	#	$(use_enable truetype anti-alias)
+	#	--enable-tabs
+	#	--enable-meta-refresh"
 
 	myconf="${myconf}
 		$(use_enable ipv6)
