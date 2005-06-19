@@ -1,6 +1,10 @@
 # ChangeLog for games-action/armagetronad
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.1 2005/06/09 17:11:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.2 2005/06/19 08:52:45 blubb Exp $
+
+  19 Jun 2005; Simon Stelling <blubb@gentoo.org>
+  armagetronad-0.2.7.1.ebuild:
+  added ~amd64 keyword
 
 *armagetronad-0.2.7.1 (09 Jun 2005)
 
