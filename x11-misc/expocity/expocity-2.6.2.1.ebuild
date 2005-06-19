@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.2 2004/11/11 16:50:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.3 2005/06/19 19:21:56 smithj Exp $
 
 inherit gnome2
 
-DESCRIPTION="Windowmanager expocity is an effort to integrate an efficient means of switching between applications into the window manager metacity similar to Expose on Apple's OS-X."
+DESCRIPTION="metacity app for switching between apps; similar to Expose on OSX"
 
 HOMEPAGE="http://www.pycage.de/software_expocity.html"
 MY_P=${P/.1/-1}
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="xinerama"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND="virtual/x11
 		>=x11-libs/pango-1.2
