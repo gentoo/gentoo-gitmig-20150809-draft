@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/karamba-0.17-r2.ebuild,v 1.1 2005/05/01 20:03:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/karamba-0.17-r2.ebuild,v 1.2 2005/06/19 20:23:14 smithj Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.efd.lth.se/~d98hk/karamba/src/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 need-kde 3.1

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/karamba
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.16 2005/05/01 20:03:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.17 2005/06/19 20:23:14 smithj Exp $
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml,
+  karamba-0.17-r2.ebuild:
+  added desktop-misc as maintainer, 0.17-r2 stable x86
 
 *karamba-0.17-r2 (01 May 2005)
 
