@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4103 2005/06/18 22:19:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4104 2005/06/19 18:25:51 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -245,13 +245,6 @@ gnome-extra/gnome-network
 # This ebuild is totally broken, but I have not had time to look into the issue.
 # I am adding it here so I can get some assistance on it.
 >=net-misc/pxes-1.0
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (27 May 2005)
-# This is the shiny new Netbeans 4.0 ebuild! Its built
-# from source for the first time and just want to make
-# sure it doesnt break on anyones box.  It most likely
-# will be unmasked in a week.
->=dev-util/netbeans-4.0
 
 # Robin Johnson <robbat2@gentoo.org> (17 May 2005)
 # This new 4.0 series ebuild is similar to the 4.1 series stuff, 
