@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+MD5 9e023ac72267e158ae2bb65b795bf549 pyrtf-0.45.ebuild 560
+MD5 408d0a3d1e9ba425ebd80e1b3976ebb7 ChangeLog 398
+MD5 10a94cc182772d9e503df22342302977 files/digest-pyrtf-0.45 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtZAOxtZcznfol0URAndyAKDlJgpvVPqDqYWrtWeN7yKTcnSFDgCgliww
+Ynyj8BP/olKCTHY53jnd1ic=
+=0sh6
+-----END PGP SIGNATURE-----
