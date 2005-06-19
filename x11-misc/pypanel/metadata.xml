@@ -2,11 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-misc</herd>
-<herd>python</herd>
+
 <maintainer>
-  <email>karltk@gentoo.org</email>
-  <name>Karl Trygve Kalleberg</name>
-  <description>Temporary maintainer until the herds accept maintainership</description>
+  <email>desktop-misc@gentoo.org</email>
 </maintainer>
 
 <longdescription>

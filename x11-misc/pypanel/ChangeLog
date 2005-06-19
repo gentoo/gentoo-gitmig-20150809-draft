@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/pypanel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.19 2005/05/26 16:36:13 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.20 2005/06/19 23:01:27 smithj Exp $
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml,
+  -pypanel-0.9.ebuild, -pypanel-1.1.ebuild, -pypanel-1.2.ebuild:
+  desktop-misc accepting responsibility for the package; ebuild cleanup
 
 *pypanel-2.3 (26 May 2005)
 
