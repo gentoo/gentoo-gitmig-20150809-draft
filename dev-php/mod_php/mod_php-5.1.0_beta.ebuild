@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.1.0_beta.ebuild,v 1.1 2005/06/11 13:15:14 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.1.0_beta.ebuild,v 1.2 2005/06/19 08:58:56 stuart Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -26,7 +26,7 @@ PHP_PACKAGE=1
 
 # BIG FAT WARNING!
 # the php eclass requires the PHPSAPI setting!
-inherit eutils php5-sapi-r2 apache-module
+inherit eutils php5-sapi-r3 apache-module
 
 need_apache
 
@@ -42,11 +42,11 @@ pkg_setup() {
 	fi
 
 	apache-module_pkg_setup
-	php5-sapi-r2_pkg_setup
+	php5-sapi-r3_pkg_setup
 }
 
 src_unpack() {
-	php5-sapi-r2_src_unpack
+	php5-sapi-r3_src_unpack
 
 	# if we're not using threads, we need to force them to be switched
 	# off by patching php's configure script
@@ -78,12 +78,12 @@ src_compile() {
 
 	my_conf="${my_conf} --with-apxs${USE_APACHE2}=/usr/sbin/apxs${USE_APACHE2}"
 
-	php5-sapi-r2_src_compile
+	php5-sapi-r3_src_compile
 }
 
 src_install() {
 	PHP_INSTALLTARGETS="install"
-	php5-sapi-r2_src_install
+	php5-sapi-r3_src_install
 
 	if [ -n "${USE_APACHE2}" ] ; then
 		einfo "Installing a Apache2 config for PHP (70_mod_php5.conf)"
