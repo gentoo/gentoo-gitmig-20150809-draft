@@ -1,5 +1,15 @@
-MD5 6d56c50991d26e5d8e3b661c18a1439b bbapm-0.0.1-r3.ebuild 1101
-MD5 d61b6ca0ea2491e718ada9f2fb13c684 ChangeLog 1709
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 db14869b0694fe66b65e70d94b25b949 ChangeLog 1798
 MD5 1371b1268e76e407acbe8e18c73dd48b metadata.xml 255
+MD5 d91bfd72a36c0c0f104cdd0d77491151 bbapm-0.0.1-r3.ebuild 1092
 MD5 aa5f809a06601db4880ae6f14b77e3eb files/bbapm-0.0.1-gcc3.patch 1984
 MD5 a81471db9dad8ee351970369ad4d8d42 files/digest-bbapm-0.0.1-r3 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtbsgl5AvwDPiUowRAmO7AKCwFUQkATdCmCHGHefgxsWwbaELxwCeOU6A
+ar3tKH8G0B+Og506ohHW+Pg=
+=qv1F
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbapm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/ChangeLog,v 1.13 2004/06/28 19:50:10 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/ChangeLog,v 1.14 2005/06/19 18:34:40 smithj Exp $
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> bbapm-0.0.1-r3.ebuild:
+  fixed homepage
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> bbapm-0.0.1-r3.ebuild:
   add sed-4 dep
