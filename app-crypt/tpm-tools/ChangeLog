@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/tpm-tools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/ChangeLog,v 1.1 2005/06/19 13:12:08 dragonheart Exp $
+
+*tpm-tools-1.0.0 (19 Jun 2005)
+
+  19 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  +tpm-tools-1.0.0.ebuild, +metadata.xml:
+  Initial Import thanks to TGL in bug #96516
+
