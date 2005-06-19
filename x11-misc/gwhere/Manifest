@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2d78f64f9dc3d6faa553f491ac999393 ChangeLog 1743
 MD5 2291056a5584ec06e16ead445a5e5c35 gwhere-0.1.4.ebuild 681
 MD5 3f32ff381f7ba8f808af681dde866bfa gwhere-0.1.6.ebuild 769
 MD5 93c8e87100085d36fc7e98350f1f2456 metadata.xml 589
 MD5 76c29b3fa9f746876c009f163028e826 files/digest-gwhere-0.1.4 64
 MD5 7db74cd8b365250aac5babbbbde34b31 files/digest-gwhere-0.1.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtc94l5AvwDPiUowRArklAJ4kSR6UQViRsiI9Nl+Srq1MfPx5awCg0eqi
+vZgUNvkXM6IU/uZo/M9FLbE=
+=/uhA
+-----END PGP SIGNATURE-----
