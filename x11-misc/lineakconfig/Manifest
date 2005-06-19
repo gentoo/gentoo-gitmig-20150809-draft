@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e42588e5c531817505e2f8adff06cf1c ChangeLog 970
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 2abe3023bf54c4c5bc420b8104ed56e9 lineakconfig-0.4.1b.ebuild 662
 MD5 6093eda87af975548774aa3db007121a files/digest-lineakconfig-0.4.1b 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtdh4l5AvwDPiUowRArGHAKCX0uwIcSwrtQMnGru91gabPiyKSwCaAxck
+PC9KvDhy9016w9bpEzm1iEU=
+=78yI
+-----END PGP SIGNATURE-----
