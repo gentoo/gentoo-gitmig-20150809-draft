@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/efax-gtk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.14 2005/05/06 03:36:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.15 2005/06/19 17:20:41 smithj Exp $
+
+*efax-gtk-2.2.16 (19 Jun 2005)
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> -efax-gtk-2.0.7.ebuild,
+  -efax-gtk-2.2.4.ebuild, -efax-gtk-2.2.5a.ebuild, efax-gtk-2.2.9.ebuild,
+  +efax-gtk-2.2.16.ebuild:
+  version bump to 2.2.16, marked 2.2.9 stable, and removed old ebuilds
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> efax-gtk-2.0.7.ebuild,
   efax-gtk-2.2.4.ebuild, efax-gtk-2.2.5a.ebuild, efax-gtk-2.2.9.ebuild:

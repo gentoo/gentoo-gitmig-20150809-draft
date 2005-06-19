@@ -1,25 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/efax-gtk-2.2.4.ebuild,v 1.6 2005/05/06 03:36:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/efax-gtk-2.2.16.ebuild,v 1.1 2005/06/19 17:20:41 smithj Exp $
 
 DESCRIPTION="GTK+2 frontend for the efax program."
 
-HOMEPAGE="http://www.cvine.freeserve.co.uk/efax-gtk"
-SRC_URI="http://www.cvine.freeserve.co.uk/efax-gtk/${P}.src.tgz"
+HOMEPAGE="http://efax-gtk.sourceforge.net/"
+SRC_URI="mirror://sourceforge/efax-gtk/${P}.src.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=dev-cpp/gtkmm-2.0.5
-	>=x11-libs/gtk+-2"
+		>=x11-libs/gtk+-2
+		>=sys-apps/sed-4"
 RDEPEND=">=net-misc/efax-0.9"
 
 
-#S=${WORKDIR}/${PN}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e 's:efax-0.9a:efax:' src/efax_controller.cpp src/main.cpp
+	sed -i -e 's:efix-0.9a:efix:' src/fax_list.cpp
 }
 
 src_install() {
