@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.26 2005/06/18 19:10:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.27 2005/06/19 20:17:20 smithj Exp $
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> idesk-0.7.2.ebuild:
+  some keywords got lost (accidentally) on the version bump... fixed
 
   18 Jun 2005; Markus Rothe <corsair@gentoo.org> idesk-0.7.2.ebuild:
   added ~ppc64
