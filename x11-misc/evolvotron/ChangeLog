@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/evolvotron
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/ChangeLog,v 1.5 2005/05/08 06:32:33 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/ChangeLog,v 1.6 2005/06/19 19:18:56 smithj Exp $
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml,
+  -evolvotron-0.2.2.ebuild, evolvotron-0.3.1.ebuild:
+  added metadata, 0.3.1 stable x86, cleanup
 
   07 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   evolvotron-0.3.1.ebuild:
