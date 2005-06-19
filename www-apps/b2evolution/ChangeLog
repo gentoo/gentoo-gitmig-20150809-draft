@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/b2evolution
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.1 2005/02/05 21:44:47 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.2 2005/06/19 21:03:25 dostrow Exp $
+
+  19 Jun 2005; Daniel Ostrow <dostrow@gentoo.org>
+  b2evolution-0.9.0.11.ebuild:
+  Marked ~ppc for testing.
 
 *b2evolution-0.9.0.11 (05 Feb 2005)
 
