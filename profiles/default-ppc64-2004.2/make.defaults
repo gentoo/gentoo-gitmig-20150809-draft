@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-ppc64-2004.2/make.defaults,v 1.16 2005/05/03 18:45:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-ppc64-2004.2/make.defaults,v 1.17 2005/06/19 19:51:53 corsair Exp $
 # System-wide defaults for the Portage system
 
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
@@ -24,7 +24,7 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="bitmap-fonts oss dvd xv slang readline fortran font-server gpm berkdb gdbm tcpd pam libwww ssl jpeg nls mitshm perl python gif imlib sdl oggvorbis png truetype truetype-fonts type1-fonts ppc64 cups foomaticdb"
+USE="bitmap-fonts oss dvd xv slang readline fortran font-server gpm berkdb gdbm tcpd pam libwww ssl jpeg nls mitshm perl python gif imlib sdl oggvorbis png truetype truetype-fonts type1-fonts ppc64 cups foomaticdb emboss"
 
 # esd gnome gtk gtk2 X qt kde  motif opengl mozilla
 # The following USE should _not_ bet set on ppc as they can cause breakage
