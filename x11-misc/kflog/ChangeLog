@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/kflog
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/ChangeLog,v 1.9 2004/09/02 22:49:41 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/ChangeLog,v 1.10 2005/06/19 20:26:41 smithj Exp $
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml,
+  kflog-2.1.1.ebuild:
+  homepage update, taken over by desktop-misc
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kflog-2.1.1.ebuild:
   Masked kflog-2.1.1.ebuild stable for ppc

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>desktop-misc</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-    <description>A user ebuild that I felt obliged to include. Please take over if you want 
-to</description>
+<email>desktop-misc@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
