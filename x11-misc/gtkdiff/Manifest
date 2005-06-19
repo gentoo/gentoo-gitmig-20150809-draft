@@ -1,3 +1,14 @@
-MD5 c9e3ea3404d735d404d848a8f351f78b ChangeLog 1646
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 70c8a9d90999dbc33690be8e03274c9b ChangeLog 1730
 MD5 a20e59123951dcf8b17b2a2de060b354 gtkdiff-1.8.0-r2.ebuild 777
+MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
 MD5 25c58e0d2e0ab9aa15df1e0d1f62ede3 files/digest-gtkdiff-1.8.0-r2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtc6nl5AvwDPiUowRAgKdAJ9uzzvjXGIuRi5KpN/a7g5akKJdJgCfSPxS
+Gyduwu7M4N37ou4xwKkqckg=
+=i3YT
+-----END PGP SIGNATURE-----

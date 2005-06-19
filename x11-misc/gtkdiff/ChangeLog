@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gtkdiff
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdiff/ChangeLog,v 1.10 2004/09/01 02:07:58 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdiff/ChangeLog,v 1.11 2005/06/19 19:58:16 smithj Exp $
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml:
+  added metadata
 
   31 Aug 2004; Tom Gall <tgall@gentoo.org> gtkdiff-1.8.0-r2.ebuild:
   stable on ppc64, bug #61757
