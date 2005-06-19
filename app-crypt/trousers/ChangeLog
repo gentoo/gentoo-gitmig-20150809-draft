@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.1 2005/02/06 08:29:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.2 2005/06/19 12:54:19 dragonheart Exp $
+
+*trousers-0.1.11 (19 Jun 2005)
+
+  19 Jun 2005; Daniel Black <dragonheart@gentoo.org> +files/tcsd.confd,
+  +files/tcsd.initd, +trousers-0.1.11.ebuild:
+  Version bump as per bug #95764. Thankyou TGL
 
 *trousers-0.1.7 (06 Feb 2005)
 
