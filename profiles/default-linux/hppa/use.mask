@@ -1,3 +1,7 @@
+# 19 Jun 2005 Guy Martin <gmsoft@gentoo.org>
+# dmalloc is broken on hppa
+dmalloc
+
 # 14 May 2005 Guy Martin <gmsoft@gentoo.org>
 # kde-base/libkcal doesn't compile yet on hppa and is a needed dep
 irmc
