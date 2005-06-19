@@ -1,0 +1,18 @@
+# ChangeLog for app-editors/gobby
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.1 2005/06/19 14:20:12 humpback Exp $
+
+  19 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/gobby.desktop, +metadata.xml, +gobby-0.1.1.ebuild:
+  Moved from app-text/gobby to app-editors/gobby.
+
+  12 Jun 2005; David Holm <dholm@gentoo.org> gobby-0.1.1.ebuild:
+  Added to ~ppc.
+
+*gobby-0.1.1 (12 Jun 2005)
+
+  12 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/gobby.desktop, +metadata.xml, +gobby-0.1.1.ebuild:
+  Initial import, based on ebuild's by upstream devs with changes to handle
+  locale bug.
+
