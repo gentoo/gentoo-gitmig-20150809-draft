@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba989bba7e71954f729ebf0723a9f6f7 lablgl-1.00.ebuild 2226
-MD5 39ea4250fe4981efaabfede74983ab8b ChangeLog 5094
+MD5 2e1e8fe6a427184fbf059115999f4657 ChangeLog 5199
 MD5 648a541494aceee26dbcfd76164f37ea metadata.xml 157
-MD5 fe2f6d4854f565091bda3022e0a62b31 files/lablgl-1.00-Makefile.config 371
+MD5 753ca915abb10fb6fb4cd8363361377a lablgl-1.00.ebuild 2220
 MD5 e3979d1e494a41fb22b8dbd98f82978d files/digest-lablgl-1.00 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCer21I1lqEGTUzyQRAooxAJ9A+L1UvQSBCHcNZS9e5lmt6d6dpACfUiDl
-j7AQ1i+B329a8tUaaklBeFw=
-=+UnA
------END PGP SIGNATURE-----
+MD5 fe2f6d4854f565091bda3022e0a62b31 files/lablgl-1.00-Makefile.config 371

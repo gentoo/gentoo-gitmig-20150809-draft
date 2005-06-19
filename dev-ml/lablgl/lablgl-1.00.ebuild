@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.19 2005/05/06 00:43:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.20 2005/06/19 10:36:34 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="as-is"
 
 DEPEND=">=dev-lang/ocaml-3.05
 	virtual/opengl
-	glut? ( media-libs/glut )
+	glut? ( virtual/glut )
 	tcltk? (
 		>=dev-lang/tcl-8.3
 		>=dev-lang/tk-8.3
