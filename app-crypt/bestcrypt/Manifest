@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 720d90493cd6d4e312093a6455f2fe3e ChangeLog 6005
-MD5 bf81314335561f76f139d8cf728cfdc1 bestcrypt-1.5_p10.ebuild 2935
+MD5 bd28be85b34d9b7abd102d9f52f9f378 ChangeLog 6202
+MD5 68121ad348d78c8efdebce17ab7bbb81 bestcrypt-1.5_p10.ebuild 2942
 MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
-MD5 862dbf3889ddf0ba7f4ba9c6ad144bf6 bestcrypt-1.6_p1.ebuild 2962
+MD5 e370b036cab2432071c93457a419310e bestcrypt-1.6_p1.ebuild 2962
 MD5 e4fb0265d55a570daf750fa7c0b8414c files/bestcrypt-1.6_p1-makefile_fix.patch 1367
 MD5 063ae0f67213da39ed4dd75a594b3b07 files/bcrypt3 3246
 MD5 dee6aa8c71224187da9fbc2b2a6fc167 files/digest-bestcrypt-1.6_p1 136
@@ -14,7 +14,7 @@ MD5 01225cc87eee84cf54232c86b04e8c93 files/bestcrypt.devfs 1673
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCkdGmmdTrptrqvGERAjm+AJ0WZbvp3gKILvevogIogY9EDNZ/RQCgnUiG
-cwj9+VeGxwg+r6aCwAfqM0I=
-=SE3i
+iD8DBQFCtMMCmdTrptrqvGERAkxbAJ9Zh+HM68vQcUU8uBNTjD7NGYS8NwCfZLbn
+tqhfc0iigaDesZXiysn9i0c=
+=nMOE
 -----END PGP SIGNATURE-----

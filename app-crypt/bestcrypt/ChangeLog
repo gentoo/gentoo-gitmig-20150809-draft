@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.30 2005/05/23 12:50:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.31 2005/06/19 00:57:23 dragonheart Exp $
+
+  19 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  bestcrypt-1.5_p10.ebuild, bestcrypt-1.6_p1.ebuild:
+  masked on amd64 due to coding error (ref bug #94288). This has been reported
+  upstream
 
 *bestcrypt-1.6_p1 (23 May 2005)
 
