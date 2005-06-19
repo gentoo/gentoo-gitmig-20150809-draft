@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/p0f
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.22 2005/05/14 22:07:42 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.23 2005/06/19 01:54:40 vanquirius Exp $
+
+*p0f-2.0.5-r1 (19 Jun 2005)
+
+  19 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> +files/p0f.initd2,
+  +files/p0f.confd, +p0f-2.0.5-r1.ebuild:
+  Adding p0f.confd and modified init script to use it. Fixes bug 91873. Thanks
+  to Lorinc Czegledi <lorinc.czegledi@mail.cpst.hu>.
 
   14 May 2005; Marcelo Goes <vanquirius@gentoo.org>
   -files/p0f-1.8.2-makefile.patch, -files/p0f-1.8.2.rc:
