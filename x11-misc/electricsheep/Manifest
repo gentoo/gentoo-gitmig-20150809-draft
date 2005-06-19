@@ -1,5 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8278b5cbacd25346157267d000f1084e ChangeLog 3456
 MD5 8d586f168c0d7e4c5f148fa26eb082bd electricsheep-2.5.ebuild 2415
-MD5 6ae7e5c2b2b3e446452bd57de25d01da ChangeLog 3275
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 dc7ec1fc658dfc1556ca1967b3deef7f electricsheep-2.6.2.ebuild 2673
+MD5 6dd13bc63ef06db5fa52858aa0cd527e files/digest-electricsheep-2.6.2 72
 MD5 87239588d30aa9a05e38a9bd73e53476 files/nice.patch 1442
 MD5 03246081d78231c42811d7e25601da7a files/digest-electricsheep-2.5 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtR3umdTrptrqvGERAswqAKCRhyyLEbR+j8PzH6lB2b4clCPe2gCfRF3P
+0OPWmDuHhxHo3Uv852H04U8=
+=Hcf9
+-----END PGP SIGNATURE-----
