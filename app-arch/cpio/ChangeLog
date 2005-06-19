@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.35 2005/06/17 19:11:36 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.36 2005/06/19 00:21:10 kloeri Exp $
+
+  19 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> cpio-2.6-r4.ebuild:
+  Stable on ia64, bug 90619.
 
   17 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> cpio-2.6-r4.ebuild:
   Stable on alpha wrt bug #90619
