@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/hermes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.25 2005/04/21 19:19:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.26 2005/06/19 21:08:20 eradicator Exp $
+
+*hermes-1.3.3-r1 (19 Jun 2005)
+
+  19 Jun 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +hermes-1.3.3-r1.ebuild:
+  Working around unfriendly asm (disabling x86asm) since it has runtime text
+  relocations. Thanks to solar. Closes bug #93287.
 
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> hermes-1.3.3.ebuild:
   Stable on ppc.
