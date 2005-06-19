@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/aaindex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/aaindex/ChangeLog,v 1.6 2005/05/02 09:16:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/aaindex/ChangeLog,v 1.7 2005/06/19 21:49:54 dostrow Exp $
+
+  19 Jun 2005; Daniel Ostrow <dostrow@gentoo.org> aaindex-6.0.ebuild:
+  Stable on ppc64.
 
   02 May 2005; Michael Hanselmann <hansmi@gentoo.org> aaindex-6.0.ebuild:
   Stable on ppc.
