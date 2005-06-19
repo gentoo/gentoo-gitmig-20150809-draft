@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/stripclub
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/ChangeLog,v 1.1 2005/06/19 15:36:56 smithj Exp $
+
+*stripclub-0.9.1.2 (16 Jun 2005)
+
+  16 Jun 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml,
+  +stripclub-0.9.1.2.ebuild:
+  initial commit for #88211, thanks to Eoin Coffey for the ebuild
+

@@ -1,0 +1,23 @@
+--- /root/Makefile.linux	2005-06-16 16:23:17.000000000 -0600
++++ /root/Makefile.linux.mine	2005-06-16 17:21:38.000000000 -0600
+@@ -4,8 +4,8 @@
+ TARGET = stripclub
+ SOURCES = $(wildcard *.cpp)
+ OBJECTS = $(SOURCES:.cpp=.o) util.o
+-LDFLAGS = -Wall -L/usr/X11R6/lib -lfltk -lfltk_images -lpcre -lXpm
+-CFLAGS = -g -Wall -I.
++LDFLAGS = -Wall -L/usr/X11R6/lib `fltk-config --ldflags` -lfltk -lfltk_images -lpcre -lXpm
++CFLAGS = -g -Wall -I. `fltk-config --cflags`
+ 
+ all:	interface.h depend $(TARGET)
+ 
+@@ -43,7 +43,8 @@
+ 	strip $(TARGET)
+ 	install -D -c -m 755 $(TARGET) $(BINDIR)/$(TARGET)
+ 	install -D -c -m 644 $(TARGET).1 $(MANDIR)/man1/$(TARGET).1
+-	install -D -c -m 644 readme.txt FAQ $(DOCDIR)/
++	install -D -c -m 644 readme.txt $(DOCDIR)/readme.txt
++	install -D -c -m 644 FAQ $(DOCDIR)/FAQ
+ 	gzip -9 $(MANDIR)/man1/$(TARGET).1
+ 	gzip -9 $(DOCDIR)/readme.txt
+ 
