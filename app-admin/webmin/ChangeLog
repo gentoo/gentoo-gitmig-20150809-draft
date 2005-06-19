@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.86 2005/04/23 23:08:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.87 2005/06/19 23:29:47 flameeyes Exp $
+
+*webmin-1.200-r1 (19 Jun 2005)
+
+  19 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +webmin-1.200-r1.ebuild:
+  Use sed -i -e instead of just sed -i, changed a find loop into an xargs sed
+  call, fixed root:root chown, use newinitd/newpamd to install init.d and
+  pam.d files, add dependency over virtual/pam.
 
   24 Apr 2005; Guy Martin <gmsoft@gentoo.org> webmin-1.200.ebuild:
   Stable on hppa.
