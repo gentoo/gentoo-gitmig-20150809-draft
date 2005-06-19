@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.13.ebuild,v 1.3 2005/01/21 20:08:37 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.13.ebuild,v 1.4 2005/06/19 11:12:11 morfic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -42,6 +42,7 @@ src_compile() {
 	epatch ${FILESDIR}/chrpfix.patch
 	epatch ${FILESDIR}/yaboot-3.4.patch
 	epatch ${FILESDIR}/yaboot-${PV}-ofpath.patch
+	epatch ${FILESDIR}/yaboot-nopiessp.patch
 	emake ${MAKEOPTS} CC="$(tc-getCC)" || die
 }
 
