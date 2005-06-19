@@ -1,6 +1,9 @@
 # ChangeLog for net-im/silc-toolkit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.44 2005/06/18 17:05:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.45 2005/06/19 00:14:53 weeve Exp $
+
+  19 Jun 2005; Jason Wever <weeve@gentoo.org> silc-toolkit-1.0.ebuild:
+  Stable on SPARC.
 
   18 Jun 2005; Markus Rothe <corsair@gentoo.org> silc-toolkit-1.0.ebuild:
   Stable on ppc64
