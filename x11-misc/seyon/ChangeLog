@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/seyon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/seyon/ChangeLog,v 1.5 2004/06/24 22:32:10 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/seyon/ChangeLog,v 1.6 2005/06/19 23:47:17 smithj Exp $
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> seyon-2.20c.ebuild:
+  updated homepage and description
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> seyon-2.20c.ebuild:
   Add inherit eutils
