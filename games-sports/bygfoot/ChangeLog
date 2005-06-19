@@ -1,6 +1,12 @@
 # ChangeLog for games-sports/bygfoot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.4 2005/06/15 19:10:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.5 2005/06/19 05:38:32 mr_bones_ Exp $
+
+*bygfoot-1.8.2 (19 Jun 2005)
+
+  19 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +bygfoot-1.8.2.ebuild:
+  version bump
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> bygfoot-1.8.1.ebuild:
   Removed INSTALL file.
