@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/basket
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.6 2005/06/16 20:37:45 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.7 2005/06/19 16:04:26 smithj Exp $
+
+*basket-0.5.0 (19 Jun 2005)
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/basket-0.5.0-noarts.patch, +basket-0.5.0.ebuild:
+  version bump for #81369 using the ebuild on the homepage with a few
+  modifications
 
   16 Jun 2005; Jonathan Smith <smithj@gentoo.org> basket-0.4.0d.ebuild:
   updated homepage
