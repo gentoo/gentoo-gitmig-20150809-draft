@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/make.defaults,v 1.2 2005/05/06 21:47:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/make.defaults,v 1.3 2005/06/19 19:57:29 corsair Exp $
 
 ARCH="ppc64"
 ACCEPT_KEYWORDS="ppc64"
 
-USE="unicode pam bitmap-fonts gif jpeg nls png truetype truetype-fonts type1-fonts zlib"
+USE="unicode pam bitmap-fonts emboss gif jpeg nls png truetype truetype-fonts type1-fonts zlib"
 FEATURES="autoconfig sandbox sfperms"

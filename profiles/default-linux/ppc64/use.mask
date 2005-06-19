@@ -5,7 +5,6 @@ afs
 acpi
 3dfx
 directfb
-emboss
 avi
 icc
 icc-pgo
