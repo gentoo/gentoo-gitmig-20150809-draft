@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.39 2005/06/18 03:10:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.40 2005/06/19 07:54:36 vapier Exp $
+
+*less-385_p4 (19 Jun 2005)
+
+  19 Jun 2005; Mike Frysinger <vapier@gentoo.org> +less-385_p4.ebuild:
+  Version bump with patch from Charles Levert.
 
   18 Jun 2005; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
   Import ideas from Redhats lesspipe.sh and add support for more files.
