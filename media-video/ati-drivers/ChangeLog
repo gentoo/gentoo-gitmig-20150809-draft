@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.95 2005/06/13 21:14:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.96 2005/06/19 14:33:21 lu_zero Exp $
+
+  19 Jun 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/fglrx-2.6.12-pci_name.patch, ati-drivers-8.14.13.ebuild,
+  ati-drivers-8.14.13-r1.ebuild:
+  Fix for linux 2.6.12
 
   13 Jun 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.14.13.ebuild,
   ati-drivers-8.14.13-r1.ebuild:
