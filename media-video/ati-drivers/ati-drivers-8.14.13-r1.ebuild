@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r1.ebuild,v 1.4 2005/06/19 14:33:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r1.ebuild,v 1.5 2005/06/19 20:58:49 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -72,6 +72,7 @@ src_unpack() {
 	if kernel_is 2 6
 	then
 		epatch ${FILESDIR}/fglrx-2.6.12-pci_name.patch
+		epatch ${FILESDIR}/fglrx-2.6.12-inter_module_get.patch
 	fi
 	epatch ${FILESDIR}/8.8.25-via-amd64.patch
 	epatch ${FILESDIR}/8.8.25-smp.patch

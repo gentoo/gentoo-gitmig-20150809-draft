@@ -1,13 +1,5 @@
 --- build_mod.orig/agpgart_be.c	2005-06-19 15:59:55.000000000 +0200
 +++ build_mod/agpgart_be.c	2005-06-19 15:58:59.000000000 +0200
-@@ -117,6 +117,10 @@
- #include <linux/miscdevice.h>
- #include <linux/pm.h>
- 
-+#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,12)
-+#define pci_name(x) (x)->slot_name
-+#endif
-+
  #if (LINUX_VERSION_CODE >= 0x020400)
  #define FGL_PM_PRESENT
  #else
