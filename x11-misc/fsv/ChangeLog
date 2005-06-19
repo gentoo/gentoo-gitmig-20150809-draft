@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fsv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fsv/ChangeLog,v 1.6 2004/06/28 04:28:47 augustus Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fsv/ChangeLog,v 1.7 2005/06/19 19:27:40 smithj Exp $
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml:
+  added metadata
 
   28 Jun 2004; <augustus@gentoo.org> fsv-0.9.ebuild:
   Marked amd64.  First fsv tag for amd64.
