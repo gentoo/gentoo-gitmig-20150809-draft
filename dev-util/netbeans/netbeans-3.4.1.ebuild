@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.4.1.ebuild,v 1.10 2005/02/21 17:40:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.4.1.ebuild,v 1.11 2005/06/19 18:35:17 compnerd Exp $
 
 IUSE="kde gnome"
 
 MY_BUILD=200301202341
 MY_P=NetBeansIDE-release341
 S=${WORKDIR}/${PN}
-DESCRIPTION="NetBeans ${PV} IDE for Java"
+DESCRIPTION="NetBeans IDE for Java"
 SRC_URI="http://www.netbeans.org/download/release341/night/build${MY_BUILD}/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.netbeans.org"
 
