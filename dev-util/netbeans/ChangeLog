@@ -1,10 +1,15 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.31 2005/06/19 18:35:17 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.32 2005/06/19 18:57:06 compnerd Exp $
+
+  19 Jun 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  -netbeans-4.0.ebuild:
+  Removing 4.0 in favor of 4.0-r1, it is a broken ebuild now
 
   19 Jun 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   netbeans-3.4.1.ebuild, netbeans-3.5.1.ebuild, netbeans-3.6-r1.ebuild:
   Removing ${PV} from the descriptions to prevent web descriptions from breaking
+  Resolves bug #54457
 
 *netbeans-4.0-r1 (04 Jun 2005)
 
