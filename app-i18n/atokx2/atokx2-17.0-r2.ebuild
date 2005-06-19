@@ -1,76 +1,73 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r1.ebuild,v 1.2 2005/06/19 05:08:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r2.ebuild,v 1.1 2005/06/19 05:08:28 usata Exp $
 
 inherit eutils
 
 DESCRIPTION="ATOK for Linux - The most famous Japanese Input Method Engine"
 HOMEPAGE="http://www.justsystem.co.jp/linux/atok.html"
 IIIMF_V="trunk_r2059-js1"
-SRC_URI=""
+UPDATE_P="atokforlinux_update_17_0_2_1"
+SRC_URI="http://www3.justsystem.co.jp/download/atok/up/lin/${UPDATE_P}.tar.gz"
 
 LICENSE="ATOK X11"
 
 SLOT="0"
-KEYWORDS="-* x86"
-IUSE="ext-iiimf"
+KEYWORDS="-* ~x86"
+IUSE=""
 
-RESTRICT="nostrip"
+RESTRICT="nostrip nomirror"
 
 DEPEND=">=x11-libs/gtk+-2.2
-	ext-iiimf?
-	(
-		>=dev-libs/libiiimcf-12.1
-		>=dev-libs/csconv-12.1
-		>=app-i18n/iiimgcf-12.1
-		>=dev-libs/libiiimp-12.1
-		>=app-i18n/iiimsf-12.1
-		>=app-i18n/iiimxcf-12.1
-	)
-	!ext-iiimf?
-	(
 		!dev-libs/libiiimcf
 		!dev-libs/csconv
 		!app-i18n/iiimgcf
 		!dev-libs/libiiimp
 		!app-i18n/iiimsf
-		!app-i18n/iiimxcf
-	)"
+		!app-i18n/iiimxcf"
 
 src_unpack() {
 	cdrom_get_cds doc/license.html || die "Please mount ATOK for Linux CD-ROM or set CD_ROOT variable to the directory containing ATOK for Linux."
+	unpack ${A}
 }
 
 src_install() {
 	cd ${D}
 
-	if ! use ext-iiimf ; then
-		local iiimgcf
-		if has_version '>=x11-libs/gtk+-2.4' ; then
-			iiimgcf=iiimf-gtk24-${IIIMF_V}.i386.tar.gz
-		else
-			iiimgcf=iiimf-gtk22-${IIIMF_V}.i386.tar.gz
-		fi
-
-		for i in ${iiimgcf} \
-			iiimf-client-lib-${IIIMF_V}.i386.tar.gz \
-			iiimf-csconv-${IIIMF_V}.i386.tar.gz \
-			iiimf-protocol-lib-${IIIMF_V}.i386.tar.gz \
-			iiimf-rc-${IIIMF_V}.i386.tar.gz \
-			iiimf-server-${IIIMF_V}.i386.tar.gz \
-			iiimf-x-${IIIMF_V}.i386.tar.gz
-		do
-			echo ${CDROM_ROOT}
-			tar xzf ${CDROM_ROOT}/bin/IIIMF/${i} \
-			|| die "Failed to unpack ${i}"
-		done
-
-		# /etc files
-		newinitd ${FILESDIR}/iiim.initd iiim || die
-		newconfd ${FILESDIR}/iiim.confd iiim || die
+	local iiimgcf
+	if has_version '>=x11-libs/gtk+-2.4' ; then
+		iiimgcf="iiimf-gtk24-${IIIMF_V/js1/js2}.i386.tar.gz
+			iiimf-gtkopt24-${IIIMF_V/js1/js2}.i386.tar.gz"
+	else
+		iiimgcf=iiimf-gtk22-${IIIMF_V/js1/js2}.i386.tar.gz
 	fi
 
-	tar xzf ${CDROM_ROOT}/bin/ATOK/atokx-${PV}-2.0.i386.tar.gz || die "Failed to unpack atokx-${PV}-2.0.i386.tar.gz"
+	for i in  \
+		iiimf-client-lib-${IIIMF_V}.i386.tar.gz \
+		iiimf-csconv-${IIIMF_V}.i386.tar.gz \
+		iiimf-protocol-lib-${IIIMF_V}.i386.tar.gz \
+		iiimf-rc-${IIIMF_V}.i386.tar.gz \
+		iiimf-server-${IIIMF_V}.i386.tar.gz \
+		iiimf-x-${IIIMF_V}.i386.tar.gz
+	do
+		echo ${CDROM_ROOT}
+		tar xzf ${CDROM_ROOT}/bin/IIIMF/${i} \
+		|| die "Failed to unpack ${i}"
+	done
+
+	for i in ${iiimgcf}
+	do
+		tar xzf ${WORKDIR}/${UPDATE_P}/bin/IIIMF/$i || die
+	done
+
+	# /etc files
+	newinitd ${FILESDIR}/iiim.initd iiim || die
+	newconfd ${FILESDIR}/iiim.confd iiim || die
+
+	tar xzf ${CDROM_ROOT}/bin/ATOK/atokx-${PV}-2.0.i386.tar.gz \
+		|| die "Failed to unpack atokx-${PV}-2.0.i386.tar.gz"
+	tar xzf ${WORKDIR}/${UPDATE_P}/bin/ATOK/atokx-${PV}-2.1.i386.patch.tar.gz \
+		|| die "Failed to unpack atokx-${PV}-2.1.i386.patch.tar.gz"
 
 	newinitd ${FILESDIR}/atokx2.initd atokx2 || die
 
