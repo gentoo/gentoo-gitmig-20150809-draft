@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8072317aa3f455fa4875b0b4928e69a4 ChangeLog 2424
 MD5 88697703583f0f5e81d7cc0ee1a505ed lineakd-0.7.2.ebuild 820
 MD5 b6e25d0b1a00440436d0d3046200505c lineakd-0.8.2.ebuild 859
@@ -7,3 +10,10 @@ MD5 972697b2c9473d58cc3734141c3161a4 files/digest-lineakd-0.7.2 65
 MD5 7d34394cb4d85fa0c1aeca17e614ab85 files/digest-lineakd-0.8.2 65
 MD5 c3a210f82bfa5f48a2de86956bccec43 files/digest-lineakd-0.8.3 65
 MD5 c5669d240c36c2f263c6ace7678e382c files/lkey-cast.patch 519
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFCtdj0l5AvwDPiUowRAoJsAJ0VaITwgS1BdEDq0g+aH7pZ+bNpOgCXYvP2
+PXH0wtsefJjrNK8QeYYNHg==
+=50V3
+-----END PGP SIGNATURE-----
