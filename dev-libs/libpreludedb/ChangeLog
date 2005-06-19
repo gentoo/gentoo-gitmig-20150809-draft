@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libpreludedb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.4 2005/05/17 21:35:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.5 2005/06/19 02:29:08 vanquirius Exp $
+
+*libpreludedb-0.9.0_rc7 (19 Jun 2005)
+
+  19 Jun 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +libpreludedb-0.9.0_rc7.ebuild:
+  Version bump.
 
   17 May 2005; Jason Wever <weeve@gentoo.org> libpreludedb-0.9.0_rc5.ebuild:
   Added ~sparc keyword.
