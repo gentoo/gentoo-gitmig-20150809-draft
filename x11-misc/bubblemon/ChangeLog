@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/bubblemon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.13 2005/03/19 15:23:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.14 2005/06/19 18:42:01 smithj Exp $
+
+*bubblemon-1.46 (19 Jun 2005)
+
+  19 Jun 2005; Jonathan Smith <smithj@gentoo.org> -bubblemon-1.4-r1.ebuild,
+  +bubblemon-1.46.ebuild:
+  version bump and old ebuild cleanout
 
   19 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> bubblemon-1.41.ebuild:
   stable on amd64, fixes #85669
