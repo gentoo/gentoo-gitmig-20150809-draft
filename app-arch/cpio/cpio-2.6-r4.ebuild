@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6-r4.ebuild,v 1.8 2005/06/19 00:21:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6-r4.ebuild,v 1.9 2005/06/19 19:50:59 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/cpio/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ~ppc-macos ppc64 ~s390 ~sh sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE="nls"
 
 DEPEND=""
