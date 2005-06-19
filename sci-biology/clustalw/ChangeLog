@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/clustalw
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/ChangeLog,v 1.6 2005/05/03 02:28:45 omkhar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/ChangeLog,v 1.7 2005/06/19 19:38:59 corsair Exp $
+
+  19 Jun 2005; Markus Rothe <corsair@gentoo.org> clustalw-1.83-r1.ebuild:
+  Stable on ppc64
 
   02 May 2005; Omkhar Arasaratnam <omkhar@gentoo.org>
   clustalw-1.83-r1.ebuild:
