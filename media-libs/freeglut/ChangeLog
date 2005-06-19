@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.18 2005/06/13 16:22:47 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.19 2005/06/19 12:55:14 blubb Exp $
+
+  19 Jun 2005; Simon Stelling <blubb@gentoo.org> freeglut-2.2.0.ebuild:
+  stable on amd64 wrt bug 95920
 
   13 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> freeglut-2.2.0.ebuild:
   marked alpha stable, wrt bug #95920

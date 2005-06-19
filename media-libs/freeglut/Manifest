@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 268a1cd173f6419cbba12673203bc3f3 freeglut-2.2.0.ebuild 763
-MD5 e5e5c830278b79753466ef6f4dfe699b ChangeLog 2159
+MD5 8a6154a105186ec099dce120d222cad6 ChangeLog 2264
+MD5 44f6165ff3efcb08e56455a5308f54bc freeglut-2.2.0.ebuild 762
 MD5 3c716e18e124f4626bc1170328f70b07 metadata.xml 425
 MD5 e2b32978d8afb726aaccca034b50bb50 files/digest-freeglut-2.2.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrbMGViELBEf1JB0RAqFiAJ4ygZUfTVfaxuzEntJQPN8iIlUzpwCfdr73
-17xeYumaMMI2Ze/p2T2gy4k=
-=pWkB
------END PGP SIGNATURE-----
