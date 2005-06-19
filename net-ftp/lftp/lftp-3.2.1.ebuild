@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.2.1.ebuild,v 1.1 2005/06/19 06:46:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.2.1.ebuild,v 1.2 2005/06/19 06:54:05 dragonheart Exp $
 
 DESCRIPTION="A sophisticated ftp/http client, file transfer program"
 HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
@@ -18,8 +18,8 @@ DEPEND=">=sys-libs/ncurses-5.1
 		nls? ( sys-devel/gettext )
 		socks5? ( >=net-misc/dante-1.1.12 )
 		socks5? ( virtual/pam )
-		ssl? ( 
-			gnutls? ( >=net-libs/gnutls-1.2.3 ) 
+		ssl? (
+			gnutls? ( >=net-libs/gnutls-1.2.3 )
 			!gnutls? ( >=dev-libs/openssl-0.9.6 )
 		)
 		sys-libs/readline
@@ -39,30 +39,30 @@ src_compile() {
 	if use ssl && use gnutls ; then
 		myconf="${myconf} --without-openssl"
 	elif use ssl && ! use gnutls ; then
-       		myconf="${myconf} --without-gnutls --with-openssl=/usr"
-    	else
-        	myconf="${myconf} --without-gnutls --without-openssl"
-    	fi
+		myconf="${myconf} --without-gnutls --with-openssl=/usr"
+	else
+		myconf="${myconf} --without-gnutls --without-openssl"
+	fi
 
-        use socks5 && myconf="${myconf} --with-socksdante=/usr" \
-                || myconf="${myconf} --without-socksdante"
+	use socks5 && myconf="${myconf} --with-socksdante=/usr" \
+		|| myconf="${myconf} --without-socksdante"
 
-        use ppc-macos && myconf="${myconf} --with-included-readline"
+	use ppc-macos && myconf="${myconf} --with-included-readline"
 
-        econf \
-                --sysconfdir=/etc/lftp \
-                --without-modules \
-                ${myconf} || die "econf failed"
+	econf \
+		--sysconfdir=/etc/lftp \
+		--without-modules \
+		${myconf} || die "econf failed"
 
-        emake || die "compile problem"
+	emake || die "compile problem"
 }
 
 src_install() {
-        emake install DESTDIR=${D} || die
+	emake install DESTDIR=${D} || die
 
-        # hrmph, empty..
-        rm -rf ${D}/usr/lib
+	# hrmph, empty..
+	rm -rf ${D}/usr/lib
 
-        dodoc BUGS COPYING ChangeLog FAQ FEATURES MIRRORS \
-                NEWS README* THANKS TODO
+	dodoc BUGS COPYING ChangeLog FAQ FEATURES MIRRORS \
+		NEWS README* THANKS TODO
 }

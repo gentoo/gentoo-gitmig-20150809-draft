@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 13f99f363d61759a660f781d3d523374 ChangeLog 12352
 MD5 addeea48ff6a8059ab2a1729489c533a lftp-3.1.4.ebuild 1795
-MD5 7b2ce959ea8355febd5f0b561ea21e38 lftp-3.2.1.ebuild 1924
+MD5 d1b501fc9bc3424ee254d6efd7b2de7a lftp-3.2.1.ebuild 1774
 MD5 bd30469259dd912781df916084edcacd metadata.xml 430
 MD5 45de7d38d6f096ef7886ad0f4316265f lftp-3.0.13.ebuild 1815
 MD5 c0baf1757a5c0bb7e34227509481e547 lftp-3.1.3.ebuild 1827
@@ -14,7 +14,7 @@ MD5 ea65aa4442e75800a316d23bbbb58ea7 files/digest-lftp-3.1.3 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCtRThmdTrptrqvGERAsQmAJ9SDxhVhndQapbnnDGgvl+U52gC7gCgnmAK
-Lj05zrZRMWs/iEg5FQuiuqk=
-=am9g
+iD8DBQFCtRagmdTrptrqvGERAiOvAJ462yX+sj2sNA7ippUZWMee2YauOACgkqGe
+iuovAOO8dOzfftDgIhck5mI=
+=BPPM
 -----END PGP SIGNATURE-----
