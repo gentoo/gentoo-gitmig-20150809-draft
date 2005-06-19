@@ -1,6 +1,17 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.18 2005/06/14 06:33:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.19 2005/06/19 17:21:00 chainsaw Exp $
+
+*xchat-xsys-2.0.6 (19 Jun 2005)
+
+  19 Jun 2005; Tony Vroon <chainsaw@gentoo.org>
+  -files/1.9.3-ppc-support.patch,
+  -files/1.9.3-sysfs-instead-of-lspci-2.patch, -xchat-xsys-1.9.3-r1.ebuild,
+  -xchat-xsys-2.0.0-r1.ebuild, -xchat-xsys-2.0.2.ebuild,
+  -xchat-xsys-2.0.4.ebuild, xchat-xsys-2.0.5.ebuild,
+  +xchat-xsys-2.0.6.ebuild:
+  Version bump, no longer requires a 2.6 kernel. 2.0.5 stable on x86. Clean up
+  old ebuilds.
 
   14 Jun 2005; Markus Rothe <corsair@gentoo.org> xchat-xsys-2.0.5.ebuild:
   Added ~ppc64
