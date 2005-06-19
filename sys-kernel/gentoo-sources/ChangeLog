@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.151 2005/06/19 12:34:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.152 2005/06/19 14:05:24 kingtaco Exp $
+
+  19 Jun 2005; Mike Doty <kingtaco@gentoo.org> gentoo-sources-2.6.12.ebuild:
+  ~amd64 added, bug 96493
 
   19 Jun 2005; Markus Rothe <corsair@gentoo.org>
   gentoo-sources-2.6.12.ebuild:
