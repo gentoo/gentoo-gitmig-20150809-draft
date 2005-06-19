@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/twin
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/ChangeLog,v 1.14 2005/01/01 15:27:52 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/ChangeLog,v 1.15 2005/06/19 07:53:50 vapier Exp $
+
+  19 Jun 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/twin-0.4.6-autotools.patch, twin-0.4.6.ebuild:
+  Dont rebuild configure #72425.
 
 *twin-0.4.6 (01 Jun 2004)
 

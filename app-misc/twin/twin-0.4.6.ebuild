@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.5 2005/01/01 15:27:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.6 2005/06/19 07:53:50 vapier Exp $
 
-inherit fixheadtails
+inherit eutils fixheadtails
 
 DESCRIPTION="A text-mode window environment"
 HOMEPAGE="http://twin.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/twin/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE="X gtk ggi gpm"
 
 DEPEND="X? ( virtual/x11 )
@@ -21,7 +21,8 @@ DEPEND="X? ( virtual/x11 )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-autotools.patch
 	ht_fix_file configure
 }
 
