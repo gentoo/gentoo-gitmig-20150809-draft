@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/files/mrtg.rc,v 1.2 2005/01/26 10:35:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/files/mrtg.rc,v 1.3 2005/06/19 18:24:49 vanquirius Exp $
 
 depend() {
     need net
@@ -22,7 +22,7 @@ checkconfig() {
 
 start() {
 	# mrtg will not run if LANG=*utf8
-	[[ "${LANG}" == *[uU][tT][fF]8 ]] && LANG='C'
+	[[ "${LANG}" == *[uU][tT][fF]?8 ]] && LANG='C'
 
 	checkconfig || return $?
 
