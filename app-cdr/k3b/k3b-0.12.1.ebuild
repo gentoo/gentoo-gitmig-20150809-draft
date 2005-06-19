@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.1.ebuild,v 1.1 2005/06/18 13:00:38 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.1.ebuild,v 1.2 2005/06/19 17:07:31 carlo Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -48,7 +48,7 @@ I18N="${PN}-i18n-${PV}"
 # version 0.11.x. If you are using this ebuild as a model for another ebuild 
 # for another version of K3b, DO check whether these values are different.
 # Check the {po,doc}/Makefile.am files in k3b-i18n package.
-LANGS="bg br bs ca cs cy da de el en_GB es et fr ga hi hu is it lt mk nb nl nn pa pl pt pt_BR ru sr sv ta tr uk zh_CN"
+LANGS="bg br bs ca cs cy da de el en_GB es et fr ga hi hu is it lt mk nb nl nn pa pt pt_BR ru sr sv ta tr uk zh_CN"
 
 MAKE_LANGS=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
 MAKE_lANGS=${MAKE_lANGS/sr/sr sr@Latn}
