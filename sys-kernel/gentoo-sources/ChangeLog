@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.149 2005/06/14 13:49:12 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.150 2005/06/19 00:54:27 dsd Exp $
+
+*gentoo-sources-2.6.12 (19 Jun 2005)
+
+  19 Jun 2005; Daniel Drake <dsd@gentoo.org>
+  -gentoo-sources-2.6.11-r7.ebuild, -gentoo-sources-2.6.11-r9.ebuild,
+  +gentoo-sources-2.6.12.ebuild:
+  Initial 2.6.12 release. Features inotify 0.23-12 and fbsplash 0.9.2-r3. Be
+  aware that you need udev-058 or newer, and splashutils-1.1.9.6 or newer
+  (only if you use fbsplash) to avoid potential problems. Speakup is missing
+  from this release but will return soon.
 
   14 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org>
   gentoo-sources-2.6.11-r11.ebuild:
