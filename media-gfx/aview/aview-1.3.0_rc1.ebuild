@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/aview-1.3.0_rc1.ebuild,v 1.14 2005/03/01 21:27:06 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/aview-1.3.0_rc1.ebuild,v 1.15 2005/06/19 14:34:23 blubb Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P/rc*/}
@@ -10,7 +10,7 @@ HOMEPAGE="http://aa-project.sourceforge.net/aview/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/aalib-1.4_rc4"

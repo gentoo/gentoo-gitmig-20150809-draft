@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/aview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/ChangeLog,v 1.6 2005/03/01 21:27:06 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/ChangeLog,v 1.7 2005/06/19 14:34:23 blubb Exp $
+
+  19 Jun 2005; Simon Stelling <blubb@gentoo.org> aview-1.3.0_rc1.ebuild:
+  stable on amd64
 
   01 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> aview-1.3.0_rc1.ebuild:
   added ~amd64 to KEYWORDS. fixes #83701
