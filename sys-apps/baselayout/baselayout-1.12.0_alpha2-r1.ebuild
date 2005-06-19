@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_alpha2-r1.ebuild,v 1.6 2005/05/31 22:52:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_alpha2-r1.ebuild,v 1.7 2005/06/19 18:50:02 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -54,6 +54,10 @@ src_unpack() {
 	if [[ $(tc-arch) == "sparc" ]] ; then
 		sed -i -e 's:KEYMAP="us":KEYMAP="sunkeymap":' ${S}/etc/rc.conf || die
 	fi
+
+	# Use correct path to filefuncs.so on multilib systems
+	sed -i -e "s:/lib/rcscripts:/$(get_libdir)/rcscripts:" \
+		${S}/src/awk/{cachedepends,genenviron}.awk || die
 }
 
 src_compile() {
