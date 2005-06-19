@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.141 2005/06/02 09:59:04 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.142 2005/06/19 23:38:24 greg_g Exp $
+
+  19 Jun 2005; Gregorio Guidi <greg_g@gentoo.org>
+  kdenetwork-3.3.2-r1.ebuild:
+  Stable on x86.
 
   02 Jun 2005; Gregorio Guidi <greg_g@gentoo.org> kdenetwork-3.4.1.ebuild:
   Correct dependency on wireless-tools for bug #94719.
