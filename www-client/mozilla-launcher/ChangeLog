@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.8 2005/04/18 18:37:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.9 2005/06/19 15:22:09 blubb Exp $
+
+  19 Jun 2005; Simon Stelling <blubb@gentoo.org>
+  +files/mozilla-launcher-multilib.patch, mozilla-launcher-1.32.ebuild:
+  make the package multilib-compliant, bug 93860
 
   18 Apr 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-launcher-1.32.ebuild:

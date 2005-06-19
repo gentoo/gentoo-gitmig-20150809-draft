@@ -1,16 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 310f9d5f886c515d04be27148cae66b8 mozilla-launcher-1.30.ebuild 869
-MD5 311a023d4fabe996d3d2ab0c8a470b2d mozilla-launcher-1.32.ebuild 869
-MD5 07e2580546c732711033ea79f9a0ca68 ChangeLog 10583
+MD5 e91688bb3a59ff1c604d9d70364311dc ChangeLog 10751
 MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
+MD5 310f9d5f886c515d04be27148cae66b8 mozilla-launcher-1.30.ebuild 869
+MD5 2d511441a22bd268ce2bf33b28ab57c5 mozilla-launcher-1.32.ebuild 977
 MD5 647e59c9a4e6f883e364a37dc9c9203e files/digest-mozilla-launcher-1.30 68
 MD5 70ac948488bf73b6045253bab0ebe76e files/digest-mozilla-launcher-1.32 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCY/9rBXaUFmZvwyMRAj73AKCeqKCnIFzy1nC0TKKWr92kjchiGACeOO32
-ztXRTVMMTgbnVEyhtaIQ2vE=
-=Voag
------END PGP SIGNATURE-----
+MD5 8f9f4a6c55148fcafa405a6abb07a2ef files/mozilla-launcher-multilib.patch 1300
