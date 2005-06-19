@@ -8,7 +8,6 @@ acpi
 3dnowext
 directfb
 avi
-emboss
 icc
 icc-pgo
 ifc
