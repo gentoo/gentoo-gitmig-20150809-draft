@@ -1,6 +1,9 @@
 # ChangeLog for media-video/okle
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/okle/ChangeLog,v 1.6 2004/11/29 10:10:58 motaboy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/okle/ChangeLog,v 1.7 2005/06/19 18:39:33 kugelfang Exp $
+
+  19 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> okle-0.4.ebuild:
+  Marked ~amd64.
 
   29 Nov 2004; Simone Gotti <motaboy@gentoo.org>
   +files/okle-0.4-configure-arts.patch, okle-0.4.ebuild:
