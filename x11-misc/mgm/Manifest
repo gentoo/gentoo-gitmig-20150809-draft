@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 50fb8d744bad13751149842bf44a4f4d ChangeLog 1305
+MD5 1375e03e2a873d5cbe0a0669228ed1f4 ChangeLog 1402
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 db4aff53ee15e3f132d48934803c4040 mgm-1.1.ebuild 1138
+MD5 a5e69b70b1daca80fb3df4293c0ad0dc mgm-1.1.ebuild 939
 MD5 ba48ed638a063d83420f1bcb48ab919a files/digest-mgm-1.1 56
 MD5 0a02b0c410ec3f1838fc57d4f71b584a files/mgm-1.1-gentoo.patch 352
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCoaKnI7fK2cqeyXkRAoVoAJ9p/hmgEmZTfCNwj/9IRWfscfuXrwCgiNMa
-iFNsAhnV2F2Hrrw/uf11bHs=
-=17EQ
+iD8DBQFCtdxql5AvwDPiUowRAsxjAKDIOPPnXr2sVkxDVqZHKUFTD31TpwCeMX7v
++Jgv5pi46ZNylpU7jsjPpkA=
+=932p
 -----END PGP SIGNATURE-----
