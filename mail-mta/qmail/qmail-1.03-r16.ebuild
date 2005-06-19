@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.22 2005/06/19 06:52:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.23 2005/06/19 19:31:36 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -417,7 +417,7 @@ src_install() {
 	einfo "Insalling some stock configuration files"
 	insinto /var/qmail/control
 	insopts -o root -g root -m 644
-	doins ${FILESDIR}/conf-{send,qmtpd,qmqpd,pop3d}
+	doins ${FILESDIR}/conf-{common,send,qmtpd,qmqpd,pop3d}
 	newins ${FILESDIR}/conf-smtpd-${PR} conf-smtpd
 	doins ${FILESDIR}/${PVR}/smtpplugins
 	newins ${FILESDIR}/dot_qmail defaultdelivery
