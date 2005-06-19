@@ -1,4 +1,14 @@
-MD5 bf95a5b49fd47820aad4f101bf09d5bb eclair-9999.ebuild 507
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 be86ab6e490ecfff9527ca02597327e4 eclair-9999.ebuild 526
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 b7ed4a4367606e2b94ab13ca88bacde4 ChangeLog 353
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eclair-9999 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtQgngIKl8Uu19MoRAsvxAJ9EEbunMDfjGA2jMjiXCKWikJ6PRgCfeESp
+taWVXULoPgVJyKwy3+X5vb0=
+=J8io
+-----END PGP SIGNATURE-----
