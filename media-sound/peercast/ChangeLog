@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/peercast
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.5 2004/12/19 06:13:27 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.6 2005/06/19 17:34:11 chainsaw Exp $
+
+*peercast-0.1212 (19 Jun 2005)
+
+  19 Jun 2005; Tony Vroon <chainsaw@gentoo.org> -peercast-0.1211.ebuild,
+  +peercast-0.1212.ebuild:
+  Security bump for format string vulnerability; see
+  http://www.peercast.org/forum/viewtopic.php?p=11596 for more information.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   peercast-0.1211.ebuild:
