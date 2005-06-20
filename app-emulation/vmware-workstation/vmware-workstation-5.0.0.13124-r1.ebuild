@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124.ebuild,v 1.3 2005/05/02 19:02:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124-r1.ebuild,v 1.1 2005/06/20 21:38:34 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -9,7 +9,7 @@
 inherit eutils
 
 S=${WORKDIR}/vmware-distrib
-ANY_ANY="vmware-any-any-update90"
+ANY_ANY="vmware-any-any-update92"
 NP="VMware-workstation-5.0.0-13124"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
@@ -25,8 +25,7 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
-	mirror://gentoo/vmware.png"
+	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz"
 
 LICENSE="vmware"
 IUSE=""
@@ -49,16 +48,19 @@ Ddir=${D}/${dir}
 src_unpack() {
 	unpack ${NP}.tar.gz
 	cd ${S}
+	# patch the config to not install desktop/icon files
+	epatch ${FILESDIR}/${P}-config.patch
 	unpack ${ANY_ANY}.tar.gz
 	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
 	cd ${S}/${ANY_ANY}
 	chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
-	# vmware any90 still doesn't patch the vmware binary
+	# vmware any92 still doesn't patch the vmware binary
 	#./update vmware ../lib/bin/vmware || die
 	#./update bridge ../bin/vmnet-bridge || die
 	#./update vmx ../lib/bin/vmware-vmx || die
 	#./update vmxdebug ../lib/bin-debug/vmware-vmx || die
 }
+
 src_install() {
 	dodir ${dir}/bin
 	cp -a bin/* ${Ddir}/bin
@@ -69,6 +71,8 @@ src_install() {
 	# Since with Gentoo we compile everthing it doesn't make sense to keep
 	# the precompiled modules arround. Saves about 4 megs of disk space too.
 	rm -rf ${Ddir}/lib/modules/binary
+	# We also don't need to keep the icons around
+	rm -rf ${Ddir}/lib/share/icons
 	# We set vmware-vmx and vmware-ping suid
 	chmod u+s ${Ddir}/bin/vmware-ping
 	chmod u+s ${Ddir}/lib/bin/vmware-vmx
@@ -105,12 +109,13 @@ src_install() {
 	# package which would rmdir the /etc/vmware/init.d/rc?.d directories.
 	keepdir /etc/vmware/init.d/rc{0,1,2,3,4,5,6}.d
 
-	# A simple icon I made
 	insinto ${dir}/lib/icon
-	doins ${DISTDIR}/vmware.png || die
-	doicon ${DISTDIR}/vmware.png || die
+	doins ${S}/lib/share/icons/48x48/apps/${PN}.png || die
+	doicon ${S}/lib/share/icons/48x48/apps/${PN}.png || die
+	insinto /usr/share/mime/packages
+	doins ${FILESDIR}/vmware.xml
 
-	make_desktop_entry vmware "VMWare Workstation" vmware.png
+	make_desktop_entry vmware "VMWare Workstation" ${PN}.png
 
 	dodir /usr/bin
 	dosym ${dir}/bin/vmware /usr/bin/vmware
@@ -169,6 +174,8 @@ pkg_config() {
 }
 
 pkg_postinst() {
+	update-mime-database /usr/share/mime
+
 	# This is to fix the problem where the not_configured file doesn't get
 	# removed when the configuration is run. This doesn't remove the file
 	# It just tells the vmware-config.pl script it can delete it.

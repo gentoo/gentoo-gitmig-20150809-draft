@@ -1,0 +1,13 @@
+--- vmware-distrib/bin/vmware-config.pl.org	2005-04-20 14:08:32.000000000 -0700
++++ vmware-distrib/bin/vmware-config.pl	2005-04-20 14:30:10.000000000 -0700
+@@ -7875,8 +7875,8 @@ sub main {
+   }
+   if (vmware_product() ne 'server') {
+     configure_gtk2();
+-    createMimePackageFile();
+-    configureDesktopFiles();
++    #createMimePackageFile();
++    #configureDesktopFiles();
+     configure_mon();
+     configure_pp();
+     configure_net();
