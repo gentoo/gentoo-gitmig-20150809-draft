@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7d79f6c4a608f90b9b74ba30d03abbc6 ChangeLog 87544
 MD5 32233b4175cc076b602394c34d4b4ee1 gcc-2.95.3-r8.ebuild 7485
 MD5 3196c90905902891b12b4d08372c0eb5 gcc-2.95.3-r9.ebuild 7524
@@ -128,3 +131,10 @@ MD5 c919e0a2cd429d0121b6133c1b4e41a6 files/3.4.0/gcc34-ice-hack.patch 8605
 MD5 bae93db3186aa0fc25d659b7799ef499 files/3.4.0/gcc34-ppc64-m32-m64-multilib-only.patch 825
 MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
 MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtivNgIKl8Uu19MoRAjhvAJ9G3Zq8CaagN19Ln6jSZENcm/OpigCffDZ+
+LMdYOzwGWCccbOvX5UBkEps=
+=yIU2
+-----END PGP SIGNATURE-----
