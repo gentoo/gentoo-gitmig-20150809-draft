@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 30621ba9545f40ac11037bbcb20ba1f5 ChangeLog 1227
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 b588e0af2e429ba71fe618c06b277e51 wayv-0.3.ebuild 521
 MD5 4a982ba81decd16c2b60dc53200c3df6 wayv-0.3-r1.ebuild 564
 MD5 d7598154795c752b81fe319bf86ebe45 files/digest-wayv-0.3 60
 MD5 d7598154795c752b81fe319bf86ebe45 files/digest-wayv-0.3-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtgvdl5AvwDPiUowRAhY0AKCGl0V2CYwcGIlyBhHEtH5VOzDzSgCfQdi4
+itHPPcGDRheC/dZItqzTK1s=
+=4InK
+-----END PGP SIGNATURE-----
