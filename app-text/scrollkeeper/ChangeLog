@@ -1,7 +1,14 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.47 2005/05/30 03:04:29 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.48 2005/06/20 21:49:19 leonardop Exp $
 
+*scrollkeeper-0.3.14-r1 (20 Jun 2005)
+
+  20 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
+  scrollkeeper-0.3.14-r1.ebuild, files/scrollkeeper-logrotate:
+  New revision, installs a logrotate file for /var/log/scrollkeeper.log.
+  Thanks to Gad Kadosh for the contribution on bug #89351.
+  
   29 May 2005; Leonardo Boshell <leonardop@gentoo.org>
   scrollkeeper-0.3.14.ebuild, files/scrollkeeper-0.3.14-gentoo.patch:
   Modified patch to avoid failure with 'collision-protect' feature; thanks
