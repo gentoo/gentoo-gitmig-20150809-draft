@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.3.2.ebuild,v 1.12 2005/06/20 00:41:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.3.2.ebuild,v 1.13 2005/06/20 05:12:33 ka0ttic Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 pkg_setup() {
-	enewgroup cron
+	enewgroup cron 16
+	enewuser cron 16 /bin/false /var/spool/cron 16
 }
 
 src_install() {
