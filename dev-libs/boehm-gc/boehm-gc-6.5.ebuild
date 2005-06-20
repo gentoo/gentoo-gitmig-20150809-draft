@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.3.ebuild,v 1.8 2005/04/04 14:39:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.5.ebuild,v 1.1 2005/06/20 14:09:07 matsuu Exp $
 
 MY_P=gc${PV/_/}
 S=${WORKDIR}/${MY_P}
@@ -11,10 +11,13 @@ SRC_URI="http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~sparc alpha ppc ~amd64 ~hppa ppc64 ppc-macos"
-IUSE=""
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+IUSE="nocxx threads"
 
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -23,8 +26,17 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-threads=pthreads \
-		|| die "Configure failed..."
+	local myconf=""
+
+	if use nocxx ; then
+		myconf="${myconf} --disable-cplusplus"
+	else
+		myconf="${myconf} --enable-cplusplus"
+	fi
+
+	use threads || myconf="${myconf} --disable-threads"
+
+	econf ${myconf} || die "Configure failed..."
 	emake || die
 }
 
