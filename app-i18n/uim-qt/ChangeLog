@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim-qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/ChangeLog,v 1.10 2005/05/29 05:26:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/ChangeLog,v 1.11 2005/06/20 04:43:43 usata Exp $
+
+  20 Jun 2005; Mamoru KOMACHI <usata@gentoo.org> uim-qt-0.2.0.ebuild:
+  Added version restriction to uim.
 
   29 May 2005; Mamoru KOMACHI <usata@gentoo.org> -uim-qt-0.1.7.ebuild,
   uim-qt-0.2.0.ebuild:

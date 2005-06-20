@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.2.0.ebuild,v 1.4 2005/05/29 05:26:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.2.0.ebuild,v 1.5 2005/06/20 04:43:43 usata Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=app-i18n/uim-0.4.4
+	!>=app-i18n/uim-0.4.6-r2
 	>=x11-libs/qt-3.3.3-r1"
 
 pkg_setup() {
