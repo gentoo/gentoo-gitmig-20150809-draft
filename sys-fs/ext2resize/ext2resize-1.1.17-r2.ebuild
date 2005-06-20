@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.17-r2.ebuild,v 1.4 2005/06/03 19:27:21 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.17-r2.ebuild,v 1.5 2005/06/20 23:06:57 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,14 +10,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha arm amd64"
+KEYWORDS="alpha amd64 arm ppc sparc x86"
 IUSE="static"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# stupid packaged source isn't clean
 	make distclean || die "distclean failed"
@@ -25,8 +25,8 @@ src_unpack() {
 
 	# Fix broken source for non-''old'' GCCs
 	sed -e 's/printf(__FUNCTION__ \"\\n\");/printf(\"%s\\n\", __FUNCTION__);/g' -i src/*.c
-	epatch ${FILESDIR}/${P}-gcc3.3.patch
-	epatch ${FILESDIR}/${P}-linux26.patch
+	epatch "${FILESDIR}"/${P}-gcc3.3.patch
+	epatch "${FILESDIR}"/${P}-linux26.patch
 }
 
 src_compile() {
@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "Install failed"
+	make install DESTDIR="${D}" || die "Install failed"
 	dodir /usr/sbin
 	dosym ../../sbin/ext2online /usr/sbin/ext2online
 	dosym ../../sbin/ext2prepare /usr/sbin/ext2prepare
