@@ -1,0 +1,11 @@
+--- nb	2005-06-20 05:21:40.000000000 +0100
++++ nb	2005-06-20 05:23:20.000000000 +0100
+@@ -1075,7 +1075,7 @@
+ 	done
+ 	# create some critical empty directories
+ 	for weblog_emptydir in "$ARCHIVES_DIR" "$CACHE_DIR" "$PARTS_DIR"; do
+-		[ ! -d "$weblog_emptydir" ] && mkdir "$weblog_emptydir"
++		[ ! -d "$BLOG_DIR/$weblog_emptydir" ] && mkdir "$BLOG_DIR/$weblog_emptydir"
+ 	done
+ 	# but prompt for configuration.
+ 	echo "would you like to configure the new weblog now? [Y/n]"

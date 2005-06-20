@@ -1,0 +1,18 @@
+--- nb	2005-06-20 06:23:04.000000000 +0100
++++ nb	2005-06-20 06:18:56.000000000 +0100
+@@ -1064,7 +1064,6 @@
+ if [ ! -d "$BLOG_DIR" ]; then
+ 	nb_msg "creating weblog directory '$BLOG_DIR' ..."
+ 	mkdir -p "$BLOG_DIR"
+-fi
+ if [ -d "$BLOG_DIR" ]; then
+ 	> "$BLOG_DIR/.nb_new_weblog"
+ 	nb_msg "copying default weblog files ..."
+@@ -1091,6 +1090,7 @@
+ else
+ 	die "failed to create weblog directory!"
+ fi
++fi
+ check_config
+ # create a new category 
+ if [ ! -z "$cat_num" ]; then

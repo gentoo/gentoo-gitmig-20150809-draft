@@ -1,8 +1,22 @@
-MD5 2a3a2c279dff65bd4e1e72d5bb399c39 ChangeLog 1716
-MD5 c08d190785ce2e73bba9042c2decf264 metadata.xml 1082
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2ce9cb0d00db92bc1f0e77340d2e167 nanoblogger-3.2.2.ebuild 2234
 MD5 710ea825b46bd4aef363b4f0c334d9a1 nanoblogger-3.1-r3.ebuild 1670
 MD5 a3be6f050940ed564cc06a7d728c601a nanoblogger-3.2.ebuild 1632
+MD5 066464cac2bdaa2a771955714605e98d ChangeLog 2006
+MD5 c08d190785ce2e73bba9042c2decf264 metadata.xml 1082
+MD5 b3aeb2c12ec202511efdeba55fcf4b7f files/nanoblogger-3.2.2-fix-misplaced-dirs.diff 471
+MD5 3603c3e99210052ce503e98d20f63806 files/digest-nanoblogger-3.2 66
 MD5 1c213e50a94f5d19d1aa1fb5edd93721 files/nb.bashcomp 1389
 MD5 1ab32e1e0e5fef5232ec0b69d002f8eb files/digest-nanoblogger-3.1-r3 66
+MD5 b47aeb3b2f8cc614e2deb398c806086b files/digest-nanoblogger-3.2.2 68
+MD5 d09c43535f9f25c9d7fc4dff1f6ebf73 files/nanoblogger-3.2.2-fix-add-option.diff 472
 MD5 67755be92a7c9db9f65d470a5bd5cc6f files/nanoblogger-3.1-fix-rss2.diff 1204
-MD5 3603c3e99210052ce503e98d20f63806 files/digest-nanoblogger-3.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtlohEZCkKN40op4RAmaBAKC0GvmdvjGkePT1eMCgrqYuT1qkYgCfXTuf
+uXPrcVYfeP0xWFYZxkHx7kA=
+=UpJR
+-----END PGP SIGNATURE-----
