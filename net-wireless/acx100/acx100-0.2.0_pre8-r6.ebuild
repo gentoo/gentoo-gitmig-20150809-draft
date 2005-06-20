@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.2.0_pre8-r6.ebuild,v 1.1 2005/06/09 13:58:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.2.0_pre8-r6.ebuild,v 1.2 2005/06/20 18:10:50 genstef Exp $
 
 inherit linux-mod
 
@@ -16,7 +16,7 @@ SRC_URI="http://lisas.de/~andi/${PN}/${P/_/}_plus_fixes_${FIX_VERSION}.tar.bz2
 
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="pcmcia"
 RESTRICT="nomirror"
 
