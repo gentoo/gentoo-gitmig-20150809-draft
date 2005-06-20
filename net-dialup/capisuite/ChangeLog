@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.18 2005/06/04 15:53:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.19 2005/06/20 20:26:54 sbriesen Exp $
+
+*capisuite-0.4.5-r2 (20 Jun 2005)
+
+  20 Jun 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/capisuite-0.4.5-date-header.patch, +capisuite-0.4.5-r2.ebuild:
+  Added date-header patch for cs_helpers.py, thanks to Torben Janssen (see bug
+  #96540)
 
 *capisuite-0.4.5-r1 (04 Jun 2005)
 

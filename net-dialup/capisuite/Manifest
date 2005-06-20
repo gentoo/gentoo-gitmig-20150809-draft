@@ -1,10 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0294f1d40412a7a1a5e64f10ad4ba22f capisuite-0.4.5-r1.ebuild 2099
 MD5 017f50ded5070f5b725deda3ba7d7e9e capisuite-0.4.5.3.ebuild 1796
 MD5 9a1a55d18f62b4adcfa40bcf19eefba2 capisuite-0.4.5.ebuild 1357
-MD5 b93abbab72cb71fba0fad75ce24472ab ChangeLog 3175
+MD5 705a2e219e311cc3616d8ec94f27bd70 capisuite-0.4.5-r2.ebuild 2193
+MD5 92b884c90e53925920d515a8510a44d8 ChangeLog 3428
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 63b5890053139f14a3d3baf78812e0bc files/capisuite-fax-compatibility.patch 423
 MD5 a6bdc491a9d9a33c0f41c68f06a320ca files/capisuite 487
@@ -12,14 +10,9 @@ MD5 d0b0dd46c8f863d3849ee1ce118da842 files/capisuite-0.4.5-gentoo.patch 1979
 MD5 ae0010a9739f9b1273dd9a679d43d913 files/capisuite-0.4.5-capi4linux_v3.diff 4395
 MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5 68
 MD5 bd2ad19acf9244ce2fcfaa06ad5f53e1 files/capisuite.logrotated 1003
+MD5 135be011248d6215905132143e6a7dab files/capisuite-0.4.5-date-header.patch 821
 MD5 b89c96393c676a2977e9b0b55b553b9f files/capisuite-0.4.5-capiv3.patch 2151
 MD5 f8cc369b2ad959cf9f00457f2729d5da files/digest-capisuite-0.4.5.3 137
 MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r1 68
+MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r2 68
 MD5 78748205ff049b27b92175e818a06e0d files/capisuite.initd 1417
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCodmpI1lqEGTUzyQRArJFAJ9vWkd5S1JcSqrdNzEdKxnZgM33PwCg1yE3
-79Vh0d0TWBl224F+oRTNSd0=
-=2YgU
------END PGP SIGNATURE-----
