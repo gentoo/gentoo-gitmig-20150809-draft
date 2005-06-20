@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bcm4400
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.11 2005/01/31 18:49:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.12 2005/06/20 11:58:38 genstef Exp $
+
+*bcm4400-3.0.8-r1 (20 Jun 2005)
+
+  20 Jun 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/bcm4400-3.0.8-pci_name.patch, +bcm4400-3.0.8-r1.ebuild:
+  Fix compiling with kernel 2.6.12, thanks to Philip Kovacs
+  <kovacsp3@comcast.net> in bug 96559
 
   31 Jan 2005; Stefan Schweizer <genstef@gentoo.org> -bcm4400-3.0.7.ebuild,
   bcm4400-3.0.8.ebuild:
