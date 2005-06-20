@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r1.ebuild,v 1.8 2005/06/09 19:27:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r1.ebuild,v 1.9 2005/06/20 09:50:57 satya Exp $
 
 inherit eutils versionator
 
@@ -60,6 +60,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# sandbox permissions
+	addpredict /etc/krb5.conf #bugs #95840 and #96453
+
 	ebegin "Running autoconf"
 		autoconf
 	eend $?

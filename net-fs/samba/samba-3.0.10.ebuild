@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.10.ebuild,v 1.16 2005/04/28 13:39:15 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.10.ebuild,v 1.17 2005/06/20 09:50:57 satya Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -146,6 +146,9 @@ my_configure() {
 }
 #===========================================================================
 src_compile() {
+	# sandbox permissions
+	addpredict /etc/krb5.conf #bugs #95840 and #96453
+
 	local myconf
 	local mymods
 	#mymods="nisplussam" #this is deprecated...

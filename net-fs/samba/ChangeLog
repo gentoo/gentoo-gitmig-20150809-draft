@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.177 2005/06/10 13:10:05 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.178 2005/06/20 09:50:57 satya Exp $
+
+  20 Jun 2005; Christian Andreetta <satya@gentoo.org> samba-3.0.10.ebuild,
+  samba-3.0.11.ebuild, samba-3.0.14a-r1.ebuild:
+  mit-krb5 sandbox perms (fake write) #bugs #95840 and #96453
 
   10 Jun 2005; Christian Andreetta <satya@gentoo.org> files/samba.pam:
   reverting pam to old behaviour until pam-0.78 becomes stable
