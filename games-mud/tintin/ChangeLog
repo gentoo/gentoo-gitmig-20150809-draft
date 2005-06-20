@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/tintin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.25 2005/06/17 03:40:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.26 2005/06/20 18:14:18 mr_bones_ Exp $
+
+  20 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  files/digest-tintin-1.95.1, Manifest:
+  digest fix (upstream changed archive) (bug #96626)
 
 *tintin-1.95.1 (17 Jun 2005)
 
