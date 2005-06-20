@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.26 2005/06/19 02:25:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.27 2005/06/20 21:07:08 vanquirius Exp $
+
+  20 Jun 2005; Marcelo Goes <vanquirius@gentoo.org>
+  libprelude-0.9.0_rc8.ebuild:
+  Block net-analyzer/prelude-nids so that people who want to use unstable
+  prelude don't get in a catch-22 with upgrading and downgrading
+  dev-libs/libprelude. If you want to use prelude from the 0.9 branch, use
+  net-analyzer/snort for your sensors. See bug 96580.
 
   19 Jun 2005; Marcelo Goes <vanquirius@gentoo.org>
   -libprelude-0.8.10.ebuild, -libprelude-0.9.0_rc5-r1.ebuild,
