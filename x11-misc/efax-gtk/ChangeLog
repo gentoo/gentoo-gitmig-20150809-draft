@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/efax-gtk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.15 2005/06/19 17:20:41 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.16 2005/06/20 12:31:37 dholm Exp $
+
+  20 Jun 2005; David Holm <dholm@gentoo.org> efax-gtk-2.2.16.ebuild:
+  Added to ~ppc.
 
 *efax-gtk-2.2.16 (19 Jun 2005)
 
