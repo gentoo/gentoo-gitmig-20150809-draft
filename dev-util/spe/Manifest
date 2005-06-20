@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 69bcb1593a44da2552632587bc710f6a spe-0.5.1d.ebuild 1546
-MD5 8527d184a4526c21f70121beeb67a663 spe-0.5.1a.ebuild 1092
 MD5 f22ca27ff2c20ac13ad45291692dd1f4 ChangeLog 2109
 MD5 6ebeaaff1d72f4b710a98339cbf235fc metadata.xml 372
-MD5 cb08b53cb0d9a3674c4e3e8da0e01fdd spe-0.7.1a.ebuild 1669
+MD5 8527d184a4526c21f70121beeb67a663 spe-0.5.1a.ebuild 1092
 MD5 2d67f849ff85ce0e75724df0de197d83 spe-0.5.1f.ebuild 1668
-MD5 9d6af2459be69c9ae2f5f3d34f6cdea7 spe-0.7.3a.ebuild 1624
+MD5 69bcb1593a44da2552632587bc710f6a spe-0.5.1d.ebuild 1546
+MD5 cb08b53cb0d9a3674c4e3e8da0e01fdd spe-0.7.1a.ebuild 1669
+MD5 37f8452cb6039bc23a869765f7c48800 spe-0.7.3a.ebuild 1631
 MD5 666d9771d3bb00e2801ad24e472ec7d3 files/digest-spe-0.5.1a 82
-MD5 f4455c7c456733c72a20607cd8fd816c files/digest-spe-0.7.3a 79
 MD5 d7b222aad27177169608286ea0e18ac9 files/digest-spe-0.5.1d 82
+MD5 0465e3df590b254707522e5b1d2eb64c files/digest-spe-0.5.1f 82
 MD5 84b0a8b787ec8c3b89836eb571eda5f9 files/spe_setup.patch 277
 MD5 0465e3df590b254707522e5b1d2eb64c files/digest-spe-0.7.1a 82
-MD5 0465e3df590b254707522e5b1d2eb64c files/digest-spe-0.5.1f 82
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFChf34Kf2g/qXtneoRAnz0AJ9yKEo0gI8prxQIpAEgNyr53UBUMQCgn71h
-u6ro79gM/gB+4YyE+XTVs6o=
-=pOlH
------END PGP SIGNATURE-----
+MD5 f4455c7c456733c72a20607cd8fd816c files/digest-spe-0.7.3a 79

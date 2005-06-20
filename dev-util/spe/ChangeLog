@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.16 2005/05/14 13:31:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.17 2005/06/20 12:23:09 weeve Exp $
+
+  20 Jun 2005; Jason Wever <weeve@gentoo.org> spe-0.7.3a.ebuild:
+  Added ~sparc keyword.
 
 *spe-0.7.3a (14 May 2005)
 
