@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.62 2005/06/16 09:29:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.63 2005/06/20 12:55:45 axxo Exp $
+
+  20 Jun 2005; Thomas Matthijs <axxo@gentoo.org>
+  blackdown-jre-1.4.2.02.ebuild:
+  stable for security'
 
 *blackdown-jre-1.4.2.02 (16 Jun 2005)
 
