@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1235 2005/06/18 19:04:13 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1236 2005/06/20 21:11:54 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -234,6 +234,8 @@ dev-libs/wx-xmingw:monolithic - Build a monolithic lib
 dev-libs/wx-xmingw:mslu - Enable mslu support
 dev-libs/wx-xmingw:shared - Enable shared libs
 dev-libs/wxbase:dmalloc - Enable support for the Debug Malloc Library
+dev-lisp/abcl-cvs:jpty - Enable PTY support
+dev-lisp/abcl-cvs:libabcl - Enable ^C handler (from JNI)
 dev-lisp/cl-sql:sqlite3 - build support for sqlite3
 dev-lisp/cl-ucw:araneida - use the Araneida web-server backend
 dev-lisp/cl-ucw:aserve - use the Portable Allegro Serve web-server backend
