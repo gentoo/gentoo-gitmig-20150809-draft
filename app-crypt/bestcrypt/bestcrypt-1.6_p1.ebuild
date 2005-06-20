@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p1.ebuild,v 1.2 2005/06/19 00:57:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p1.ebuild,v 1.3 2005/06/20 13:37:37 dragonheart Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.jetico.com/linux/BestCrypt-${PV/_p/-}.tar.gz
 LICENSE="bestcrypt"
 SLOT="0"
 IUSE=""
-KEYWORDS="-amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="virtual/linux-sources"
 
@@ -30,8 +30,6 @@ MODULE_NAMES="bc(block:${S}/mod)
 		bc_gost(block:${S}/mod/gost)
 		bc_idea(block:${S}/mod/idea)
 		bc_rijn(block:${S}/mod/rijn)
-		bc_serpent(block:${S}/mod/serpent)
-		bc_rc6(block:${S}/mod/rc6)
 		bc_twofish(block:${S}/mod/twofish)"
 
 src_unpack() {
@@ -39,10 +37,18 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-makefile_fix.patch
 	cd ${S}
 
-	epatch ${DISTDIR}/bcrypt-rc6-serpent.diff.gz
+	if ! use amd64;
+	then
+		epatch ${DISTDIR}/bcrypt-rc6-serpent.diff.gz
+		export MODULE_NAMES="${MODULE_NAMES} bc_serpent(block:${S}/mod/serpent) bc_rc6(block:${S}/mod/rc6)"
+	fi
 }
 
 src_compile() {
+	if ! use amd64;
+	then
+		export MODULE_NAMES="${MODULE_NAMES} bc_serpent(block:${S}/mod/serpent) bc_rc6(block:${S}/mod/rc6)"
+	fi
 
 	filter-flags -fforce-addr
 
@@ -62,6 +68,11 @@ src_compile() {
 }
 
 src_install() {
+	if ! use amd64;
+	then
+		export MODULE_NAMES="${MODULE_NAMES} bc_serpent(block:${S}/mod/serpent) bc_rc6(block:${S}/mod/rc6)"
+	fi
+
 	linux-mod_src_install
 
 	cd ${S}

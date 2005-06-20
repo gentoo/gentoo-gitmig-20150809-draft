@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.31 2005/06/19 00:57:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.32 2005/06/20 13:37:37 dragonheart Exp $
+
+  20 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  bestcrypt-1.6_p1.ebuild:
+  Disabled serpent/rc6 for amd64. readded ~amd64 keyword. Submitted bug report
+  upstream for amd64 serpent compile fault fault
 
   19 Jun 2005; Daniel Black <dragonheart@gentoo.org>
   bestcrypt-1.5_p10.ebuild, bestcrypt-1.6_p1.ebuild:
