@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.3.2.ebuild,v 1.11 2005/06/18 13:21:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.3.2.ebuild,v 1.12 2005/06/20 00:41:04 ka0ttic Exp $
+
+inherit eutils
 
 DESCRIPTION="base for all cron ebuilds"
 HOMEPAGE="http://www.gentoo.org/"
@@ -9,6 +11,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
+
+pkg_setup() {
+	enewgroup cron
+}
 
 src_install() {
 	newsbin "${FILESDIR}"/run-crons-${PV} run-crons || die
