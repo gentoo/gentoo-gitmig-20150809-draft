@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/wayv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wayv/ChangeLog,v 1.10 2005/05/23 00:37:12 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wayv/ChangeLog,v 1.11 2005/06/20 00:19:41 smithj Exp $
+
+  20 Jun 2005; Jonathan Smith <smithj@gentoo.org> -wayv-0.2.ebuild,
+  wayv-0.3-r1.ebuild:
+  stable x86
 
 *wayv-0.3-r1 (22 May 2005)
 

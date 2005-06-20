@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wininfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/ChangeLog,v 1.2 2005/06/15 14:16:33 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/ChangeLog,v 1.3 2005/06/20 00:21:55 smithj Exp $
+
+  20 Jun 2005; Jonathan Smith <smithj@gentoo.org> wininfo-0.7.ebuild:
+  stable x86
 
   15 Jun 2005; Jonathan Smith <smithj@gentoo.org> wininfo-0.7.ebuild:
   fixed src_uri for #90152

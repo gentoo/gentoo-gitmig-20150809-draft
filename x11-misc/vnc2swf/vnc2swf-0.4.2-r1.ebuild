@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.4.2-r1.ebuild,v 1.2 2005/02/13 05:52:57 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.4.2-r1.ebuild,v 1.3 2005/06/20 00:15:41 smithj Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.unixuser.org/~euske/vnc2swf/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="x11vnc"
 
 DEPEND=">=media-libs/ming-0.2a
