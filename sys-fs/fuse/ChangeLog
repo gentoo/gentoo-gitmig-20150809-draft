@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.23 2005/06/08 17:32:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.24 2005/06/20 15:49:57 genstef Exp $
+
+  20 Jun 2005; Stefan Schweizer <genstef@gentoo.org> -fuse-2.2.1.ebuild,
+  fuse-2.3.0.ebuild:
+  KV_DIR -> KV_OUT_DIR thanks to Georgi Georgiev <chutz@gg3.net>, removing old
+  ebuilds
 
   08 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> fuse-2.3.0.ebuild:
   Stable on ppc.
