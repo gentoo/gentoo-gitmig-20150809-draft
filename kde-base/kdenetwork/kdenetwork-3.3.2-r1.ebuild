@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.2-r1.ebuild,v 1.2 2005/06/19 23:38:24 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.2-r1.ebuild,v 1.3 2005/06/20 14:56:11 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -13,7 +13,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	slp? ( net-libs/openslp )
 	samba? ( net-fs/samba )
 	ssl? ( app-crypt/qca-tls )
-	wifi? ( net-wireless/wireless-tools )"
+	wifi? ( <=net-wireless/wireless-tools-28_pre6 )"
 
 src_unpack() {
 	kde_src_unpack
