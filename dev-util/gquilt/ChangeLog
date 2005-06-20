@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/gquilt
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.1 2005/06/20 13:25:54 ka0ttic Exp $
+
+*gquilt-0.06 (20 Jun 2005)
+
+  20 Jun 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/gquilt-0.06-fix-makefile.diff, +metadata.xml, +gquilt-0.06.ebuild:
+  Initial commit.  Ebuild based on one submitted by Andrew Fink in bug 94340.
+
