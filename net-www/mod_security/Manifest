@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 50fb087426cba2afe8146c25bd2c1363 ChangeLog 1566
 MD5 cadfb3d36ccae4dce3effd3d12bc1d33 metadata.xml 285
-MD5 2c6f970b03ac0bba6abdbf2654da42d6 mod_security-1.8.7.ebuild 982
-MD5 aaf9229bf36d8b03387b64e88df4a047 mod_security-1.8.6.ebuild 949
-MD5 8bf8c05cd01ea7853efabe0eb5faeba2 ChangeLog 1463
-MD5 d9a5f677510c88be378188ffc281af70 mod_security-1.8.7_rc2.ebuild 990
 MD5 8ca8985829c6ecb7444c9eab39aad3c9 mod_security-1.7.6.ebuild 1321
-MD5 606e2333ef2c0c721942809eed9f4d54 files/digest-mod_security-1.8.7_rc2 73
+MD5 aaf9229bf36d8b03387b64e88df4a047 mod_security-1.8.6.ebuild 949
+MD5 5aea876746bbe33ecdc81a8c70b80146 mod_security-1.8.7.ebuild 991
+MD5 d9a5f677510c88be378188ffc281af70 mod_security-1.8.7_rc2.ebuild 990
 MD5 4ff2b278a8aaff992f04347e4fda401b files/99_mod_security.conf 3671
 MD5 93b283b1aef242964a12edd89989d103 files/digest-mod_security-1.7.6 70
-MD5 2858e79ac2a333e5542ed27274f38de8 files/digest-mod_security-1.8.7 69
-MD5 854e24ef0e50b53915629f226e76b43c files/mod_security.conf 3399
 MD5 acba071671480e82391bcf1022f3838a files/digest-mod_security-1.8.6 70
+MD5 2858e79ac2a333e5542ed27274f38de8 files/digest-mod_security-1.8.7 69
+MD5 606e2333ef2c0c721942809eed9f4d54 files/digest-mod_security-1.8.7_rc2 73
+MD5 854e24ef0e50b53915629f226e76b43c files/mod_security.conf 3399
 MD5 99189490f6840a16c1e14874719592cf files/1.8.6/99_mod_security.conf 3666
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCKrKOjUHll2nfF60RAqS8AJ9xLu9nAObIzqNYvO+ZSjsx2eNkfgCeOIB8
-ri1TJiJsA2jUBpRRMNsDn3Q=
-=BCwn
------END PGP SIGNATURE-----
