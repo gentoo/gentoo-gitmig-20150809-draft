@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/ChangeLog,v 1.1 2005/06/20 03:41:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/ChangeLog,v 1.2 2005/06/20 12:30:58 dholm Exp $
+
+  20 Jun 2005; David Holm <dholm@gentoo.org> cinit-0.0.8.ebuild:
+  Added to ~ppc.
 
 *cinit-0.0.8 (19 Jun 2005)
 
