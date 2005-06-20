@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.2.0_pre8.ebuild,v 1.1 2005/06/17 19:36:51 wolf31o2 Exp $
-
-#inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.2.0_pre9.ebuild,v 1.1 2005/06/20 19:12:34 plasmaroo Exp $
 
 VERSION_DMAP='1.00.17'
 VERSION_DMRAID='1.0.0.rc6'
@@ -28,8 +26,6 @@ DEPEND="sys-fs/e2fsprogs
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-#	epatch ${FILESDIR}/${P}-arch.diff
-#	sed -i 's/prepare0/prepare/' ${S}/gen_determineargs.sh
 }
 
 src_install() {
