@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/moodss
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/ChangeLog,v 1.7 2005/05/11 22:30:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/ChangeLog,v 1.8 2005/06/20 14:11:49 matsuu Exp $
+
+  20 Jun 2005; MATSUU Takuto <matsuu@gentoo.org> moodss-20.0.ebuild:
+  Added inherit eutils. Bug 96524.
 
 *moodss-20.0 (11 May 2005)
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-20.0.ebuild,v 1.1 2005/05/11 22:30:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-20.0.ebuild,v 1.2 2005/06/20 14:11:49 matsuu Exp $
+
+inherit eutils
 
 DESCRIPTION="Modular Object Oriented Dynamic SpreadSheet"
 HOMEPAGE="http://moodss.sourceforge.net/"
