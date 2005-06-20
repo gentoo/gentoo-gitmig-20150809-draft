@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.54 2005/05/16 11:33:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.55 2005/06/20 15:23:49 solar Exp $
+
+*gradm-2.1.6.200506131347 (20 Jun 2005)
+
+  20 Jun 2005; <solar@gentoo.org> -files/gradm2-cvs-20Jun2004.diff,
+  -files/gradm_parse.c-1.9.x.patch, +gradm-2.1.6.200506131347.ebuild:
+  - version bump for 2.1.6 series
 
   16 May 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/digest-gradm-2.1.0, -files/digest-gradm-2.1.3.200503070918,
