@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/peercast
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.6 2005/06/19 17:34:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.7 2005/06/20 18:15:08 chainsaw Exp $
+
+  20 Jun 2005; Tony Vroon <chainsaw@gentoo.org> peercast-0.1212.ebuild:
+  Change to Gentoo mirrors now that the distfile has propagated.
 
 *peercast-0.1212 (19 Jun 2005)
 

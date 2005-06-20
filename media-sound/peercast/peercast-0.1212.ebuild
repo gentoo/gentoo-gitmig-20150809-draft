@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1212.ebuild,v 1.1 2005/06/19 17:34:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1212.ebuild,v 1.2 2005/06/20 18:15:08 chainsaw Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.peercast.org"
 # as the official peercast download site does *NOT* provide
 # versioned URLs we must provide a seperated download URL where
 # we can download this (versioned).
-SRC_URI="http://dev.gentoo.org/~chainsaw/${PN}-linux-${PV}.tgz"
+SRC_URI="mirror://gentoo/${PN}-linux-${PV}.tgz"
 
 LICENSE="freedist"
 
