@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/erc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.15 2005/06/05 11:35:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.16 2005/06/20 16:58:37 mkennedy Exp $
+
+*erc-5.0.3 (20 Jun 2005)
+
+  20 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/5.0/50erc-gentoo.el, -files/5.0.1/50erc-gentoo.el,
+  +files/5.0.3/50erc-gentoo.el, -files/50erc-gentoo.el,
+  -erc-4.0_rc2-r1.ebuild, -erc-5.0.1.ebuild, +erc-5.0.3.ebuild:
+  New upstream; Removed old ebuilds.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> erc-5.0.2.ebuild:
   Stable on ppc.
