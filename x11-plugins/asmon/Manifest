@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cd37806f7a9a21e37d10ebbe44f27336 asmon-0.64.ebuild 709
 MD5 6314d31559f31e6f6c7eb30c933e1033 asmon-0.65.ebuild 710
 MD5 20b3f3d49e08dc97363eaf5497eb776d asmon-0.62.ebuild 749
@@ -8,3 +11,10 @@ MD5 7b0913a99b68877e50ea847c8242f12d files/asmon-alpha.diff 819
 MD5 2f3b3737e0b104f481cfd0cbd66f5ac3 files/digest-asmon-0.62 60
 MD5 18e342fd8a446660ae6583d7bbc6a8cd files/digest-asmon-0.64 61
 MD5 17bf096b394249c033722bdffc14c0c6 files/digest-asmon-0.65 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtrSLEZCkKN40op4RAv7FAJ9P/LgATLxOeEuK7RD+idJr6lp48ACglumd
+HtVQHibGy6KDRVyXc3dSxTg=
+=pPEy
+-----END PGP SIGNATURE-----

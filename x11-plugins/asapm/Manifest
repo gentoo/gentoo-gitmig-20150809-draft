@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5ed17c2b668972504f6d47c21f713963 asapm-2.11.ebuild 612
 MD5 6f140771f5e4752e48cd2dfbcf227ccc asapm-3.0.ebuild 644
 MD5 967eba467cee18ff1dc299c64d49c250 asapm-2.10.ebuild 756
@@ -7,3 +10,10 @@ MD5 57f770a739af0227050a5d5e55b241cd files/digest-asapm-3.0 60
 MD5 fda28a37f9d22eaab623916850ab8559 files/asapm-2.10-gentoo.diff 625
 MD5 8421c0b48b3a26caa0993a6d56c448b0 files/digest-asapm-2.10 61
 MD5 88a7ec946c29032d3526c5481c29ca67 files/digest-asapm-2.11 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCtrWuEZCkKN40op4RAiCwAKDCJ/3kt74fuEzIakLJMsDkixkwmQCeLGlu
+NoqFlbifnUYySjeeEArAgM0=
+=b1vv
+-----END PGP SIGNATURE-----
