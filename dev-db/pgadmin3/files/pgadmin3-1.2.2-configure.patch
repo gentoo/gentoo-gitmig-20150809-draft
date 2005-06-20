@@ -1,0 +1,26 @@
+--- configure.orig	2005-06-19 23:29:13.000000000 +0200
++++ configure	2005-06-19 23:32:38.000000000 +0200
+@@ -5364,13 +5364,22 @@
+         then
+             if test ! -f "${WX_HOME}/${wx_config_binary}"
+             then
++	    	# PP: here i have trouble, since on my machine
++		# the WX_HOME point to /usr/local (old 2.5) and should be /usr...
++		# lets try as last chance
++		WX_HOME=/usr
++		if test ! -f "${WX_HOME}/${wx_config_binary}"
++           	then
+                 { { echo "$as_me:$LINENO: error: Could not find ${wx_config_binary}" >&5
+-echo "$as_me: error: Could not find ${wx_config_binary}" >&2;}
++			echo "$as_me: error: Could not find ${wx_config_binary}" >&2;}
+    { (exit 1); exit 1; }; }
+             else
+                 WX_CONFIG="${WX_HOME}/${wx_config_binary}"
+             fi
+         else
++                WX_CONFIG="${WX_HOME}/${wx_config_binary}"
++            fi
++        else
+             WX_CONFIG="${WX_HOME}/bin/${wx_config_binary}"
+         fi
+     else

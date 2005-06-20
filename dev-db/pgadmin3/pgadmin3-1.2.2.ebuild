@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.2.2.ebuild,v 1.1 2005/06/19 09:13:15 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.2.2.ebuild,v 1.2 2005/06/20 05:29:24 nakano Exp $
 
 inherit eutils libtool wxwidgets
 
@@ -25,11 +25,11 @@ pkg_setup() {
 	fi
 }
 
-#src_unpack() {
-#	unpack ${A}
-#	cd ${S} || die "Couldn't cd to ${S}"
-#	epatch ${FILESDIR}/${P}-configure.patch
-#}
+src_unpack() {
+	unpack ${A}
+	cd ${S} || die "Couldn't cd to ${S}"
+	epatch ${FILESDIR}/${P}-configure.patch
+}
 
 src_compile() {
 	export WX_GTK_VER=2.6
