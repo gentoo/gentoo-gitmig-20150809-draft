@@ -1,6 +1,16 @@
-MD5 77d58780a05a7628416d8c9eb282893a xtermcontrol-2.7.ebuild 614
-MD5 347dbc9f667c824d6aa049524ce3da9e xtermcontrol-2.4.ebuild 610
-MD5 ae8a15aaf1c2e4335ccf52fd3df14bcb ChangeLog 1357
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 75ba9574db9ed6115cb609a8c71bb611 metadata.xml 709
+MD5 ede4630177e520715c51c2652c45dd3d ChangeLog 1458
+MD5 77d58780a05a7628416d8c9eb282893a xtermcontrol-2.7.ebuild 614
+MD5 a5c9ee897bac1d4cc08d67dbed2c381e xtermcontrol-2.4.ebuild 611
 MD5 005fd4ad4a4b2dec83d3fad2564b8930 files/digest-xtermcontrol-2.4 68
 MD5 ed6a2ee396b6ddf5d23b4862cd51ba7d files/digest-xtermcontrol-2.7 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCttvRBXaUFmZvwyMRAt1VAKCAVx12ZS/9PmnaXVm8loLluBArngCgiNPr
+A+JWNX/seLyUi185JrZPGLM=
+=jAOt
+-----END PGP SIGNATURE-----

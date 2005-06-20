@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/xtermcontrol-2.4.ebuild,v 1.7 2005/04/09 17:37:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/xtermcontrol-2.4.ebuild,v 1.8 2005/06/20 15:06:09 agriffis Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.thrysoee.dk/xtermcontrol/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha ia64 ~ppc ~amd64"
+KEYWORDS="alpha amd64 ia64 ~ppc x86"
 
 DEPEND="virtual/x11"
 
