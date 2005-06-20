@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-kdehelper/uim-kdehelper-0.1.0-r1.ebuild,v 1.2 2005/01/01 14:42:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-kdehelper/uim-kdehelper-0.1.0-r1.ebuild,v 1.3 2005/06/20 04:41:47 usata Exp $
 
 inherit kde
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="app-i18n/uim"
+DEPEND="app-i18n/uim
+	!>=app-i18n/uim-0.4.6"
 
 need-kde 3
 need-qt 3.2

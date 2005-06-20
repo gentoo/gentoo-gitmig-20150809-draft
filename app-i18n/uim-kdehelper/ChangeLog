@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim-kdehelper
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-kdehelper/ChangeLog,v 1.3 2005/01/01 14:42:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-kdehelper/ChangeLog,v 1.4 2005/06/20 04:41:47 usata Exp $
+
+  20 Jun 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -uim-kdehelper-0.1.0.ebuild, uim-kdehelper-0.1.0-r1.ebuild:
+  Removed old ebuild and added version restriction to uim.
 
 *uim-kdehelper-0.1.0-r1 (10 Nov 2004)
 

@@ -1,5 +1,5 @@
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 d8af8cf2dceb143f96106e2f1dc520b6 ChangeLog 1584
-MD5 66ca6be90d593dfac71c1b1940e065cf uim-qt-0.2.0.ebuild 1661
+MD5 46062133f6ed47e2765c2f8a62e994d5 ChangeLog 1691
+MD5 a44820e28e4bff82d65684a733b8c0dd uim-qt-0.2.0.ebuild 1687
 MD5 fc9f430e80b37971d16d0aecf15d8957 files/uim-qt-0.1.7-thread.diff 293
 MD5 d4775a2045a127b335be4f1b8778ec05 files/digest-uim-qt-0.2.0 64
