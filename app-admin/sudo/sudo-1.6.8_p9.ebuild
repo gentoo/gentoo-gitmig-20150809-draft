@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9.ebuild,v 1.3 2005/06/20 16:18:44 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9.ebuild,v 1.4 2005/06/20 16:21:26 taviso Exp $
 
 inherit eutils pam
 
@@ -17,6 +17,7 @@ IUSE="pam skey offensive ldap"
 DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
 	ldap? ( >=net-nds/openldap-2.1.30-r1 )
 	skey? ( >=app-admin/skey-1.1.5-r1 )
+	sys-devel/bison
 	virtual/mta"
 RDEPEND="${DEPEND} ldap? ( dev-lang/perl )"
 
