@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.6.ebuild,v 1.10 2005/05/17 19:40:30 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.6.ebuild,v 1.11 2005/06/20 21:00:38 vanquirius Exp $
 
 inherit flag-o-matic
 
@@ -43,4 +43,12 @@ src_install() {
 	into /usr/share/prelude/ruleset
 	mv ${D}/etc/prelude-nids/ruleset ${D}/usr/share/prelude/ruleset/nids
 	dosym /usr/share/prelude/ruleset/nids /etc/prelude-nids/ruleset
+}
+
+pkg_postinst(){
+	ewarn "Please note that net-analyzer/prelude-nids is no longer"
+	ewarn "maintained as net-analyzer/snort replaces it in the developing"
+	ewarn "branch. If you want to use unstable prelude, please unmerge"
+	ewarn "net-analyzer/prelude-nids to avoid undesired downgrades of"
+	ewarn "dev-libs/libprelude."
 }
