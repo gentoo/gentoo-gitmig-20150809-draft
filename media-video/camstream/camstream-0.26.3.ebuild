@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.7 2004/07/14 21:31:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.8 2005/06/20 14:08:48 phosphan Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="Collection of tools for webcams and other video devices"
 HOMEPAGE="http://www.smcc.demon.nl/camstream/"
@@ -12,12 +12,12 @@ KEYWORDS="x86 ~amd64 -ppc"
 SLOT="0"
 IUSE="doc"
 
-DEPEND=">=x11-libs/qt-3"
+DEPEND=">=x11-libs/qt-3
+	sys-devel/autoconf"
 
 src_unpack () {
 	unpack ${A}
 	cd ${S}
-	gnuconfig_update
 	# Camstream has 32 bit asssembler normally.
 	use amd64 && epatch ${FILESDIR}/x86_64-asm.patch
 }
@@ -28,6 +28,8 @@ src_compile () {
 	mkdir -p $T/fakehome/.qt
 	export HOME="$T/fakehome"
 	addwrite "${QTDIR}/etc/settings"
+	autoreconf &> autoreconf-output || \
+		die "autoreconf failed. Output in ${S}/autoreconf-output"
 	econf || die "configure failed"
 	emake || die "emake failed"
 }
