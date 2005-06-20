@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.8 2005/06/20 02:51:38 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.9 2005/06/20 03:46:36 anarchy Exp $
+
+  20 Jun 2005; <anarchy@gentoo.org> files/nvu.desktop:
+  fixed bug #96532
 
   20 Jun 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/nvu-1.0_pre-gcc4.patch, nvu-1.0_pre.ebuild:

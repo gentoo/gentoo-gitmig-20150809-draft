@@ -2,7 +2,7 @@
 Name=Nvu
 Comment=WYSIWYG Web Editor
 Exec=nvu
-Icon=/usr/lib/Nvu/icons/mozicon16.xpm
+Icon=/usr/lib/nvu/icons/mozicon50.xpm
 Terminal=false
 Type=Application
 Categories=Application;Development;

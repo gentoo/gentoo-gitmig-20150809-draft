@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05241f7be012395a83837ee890c80602 ChangeLog 3664
+MD5 9d5c57f5db67283976551312d5c7ac58 ChangeLog 3739
 MD5 2f058933e09a68513c1ca3022b81a441 metadata.xml 433
 MD5 e3b4ccc9cb447cc7e5827c82f31d2579 nvu-0.81.ebuild 2301
+MD5 c05340442ff08d09be9375f467bd735b nvu-0.90-r1.ebuild 2299
 MD5 a242ea1eef3d40a59e5c249fc8063345 nvu-0.90.ebuild 2301
 MD5 c60a7386dc2f20e29032f90f0cf56fd7 nvu-1.0_pre.ebuild 2888
-MD5 c05340442ff08d09be9375f467bd735b nvu-0.90-r1.ebuild 2299
-MD5 ed3ccc4c9deab00dc6df2930061efd76 files/digest-nvu-1.0_pre 72
 MD5 2c903c369e8f7450ba419eb7ea8050f1 files/digest-nvu-0.81 71
 MD5 ffdec5b2a9933225ba5f03bafd9fcc2a files/digest-nvu-0.90 71
+MD5 ffdec5b2a9933225ba5f03bafd9fcc2a files/digest-nvu-0.90-r1 71
+MD5 ed3ccc4c9deab00dc6df2930061efd76 files/digest-nvu-1.0_pre 72
+MD5 565f1133c57a789f0cf51c02510a6f9c files/mozconfig-1.0PR 1367
 MD5 91bb5e61f505e2e53aa42345431c8fa7 files/mozconfig2 2160
 MD5 841f7a0a89c5d8be3841444ce2dd0b85 files/nvu-0.50-dir.patch 713
 MD5 952edf776beb47f9ddeeed1eb3a9407f files/nvu-0.50-freetype-compile.patch 13641
 MD5 7880f1109c0f8a9df0830238e70b0d62 files/nvu-0.50-nvu.patch 674
-MD5 fedceb24f98d16efe7580f4c2877afca files/nvu.desktop 182
-MD5 565f1133c57a789f0cf51c02510a6f9c files/mozconfig-1.0PR 1367
-MD5 ffdec5b2a9933225ba5f03bafd9fcc2a files/digest-nvu-0.90-r1 71
+MD5 bde161b6920a9f919de3eb400506b6a7 files/nvu.desktop 182
 MD5 c68ab50fa971f53df6ae113289920242 files/nvu-1.0_pre-gcc4.patch 1924
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCti9LCRZPokWLroQRAjnhAJ0dGhYg8f0jW0gI6vXHSBZir2+6EACdHxc7
-nZZV5RyWKkvbrpAb7+e0G1g=
-=UNex
------END PGP SIGNATURE-----
