@@ -1,23 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6.ebuild,v 1.1 2005/02/27 02:41:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.7_beta1.ebuild,v 1.1 2005/06/20 04:36:27 usata Exp $
 
 inherit eutils kde-functions
 
-PRIME_P=prime-0.9.4-beta2
-PRIME_SCM=${PRIME_P}_${P/_*/}_2.scm
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="a simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
 SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz
-	http://prime.sourceforge.jp/src/${PRIME_SCM}"
+	http://prime.sourceforge.jp/src/prime-1.0.0.1.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gtk qt immqt immqt-bc nls X m17n-lib canna"
+#IUSE="${IUSE} scim"
 
 RDEPEND="X? ( virtual/x11 )
 	gtk? ( >=x11-libs/gtk+-2 )
@@ -28,17 +27,25 @@ RDEPEND="X? ( virtual/x11 )
 	immqt? ( >=x11-libs/qt-3.3.3-r1 )
 	immqt-bc? ( >=x11-libs/qt-3.3.3-r1 )
 	qt? ( >=x11-libs/qt-3.3.3-r1
-		!app-i18n/uim-kdehelper )"
+		!app-i18n/uim-kdehelper )
+	!<app-i18n/prime-0.9.4"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-perl/XML-Parser
 	>=sys-apps/sed-4
+	sys-devel/autoconf
+	sys-devel/automake
+	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
+
+# An arch specific config directory is used on multilib systems
+has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 
 src_unpack() {
 	unpack ${A}
+
 	cd "${S}"
-	cp ${DISTDIR}/${PRIME_SCM} scm/prime.scm || die
 	# we execute gtk-query-immodules-2.0 in pkg_postinst()
 	# to not violate sandbox.
 	sed -i -e "/gtk-query-immodules-2.0/s/.*/	:\\\\/g" \
@@ -49,24 +56,37 @@ src_unpack() {
 src_compile() {
 	local myconf
 	if use immqt || use immqt-bc ; then
-		myconf="${myconf} --enable-qt-immodule"
+		myconf="${myconf} --with-qt-immodule"
 		export CPPFLAGS="${CPPFLAGS} -I${S}/qt"
 	fi
 	use qt && set-qtdir 3
 
-	econf \
-		$(use_enable nls) \
-		$(use_with X x) \
-		$(use_with gtk gtk2) \
-		$(use_with m17n-lib m17nlib) \
-		$(use_with canna) \
-		$(use_with qt) \
-		${myconf} || die "econf failed"
+	myconf="${myconf}
+		$(use_enable nls)
+		$(use_with X x)
+		$(use_with gtk gtk2)
+		$(use_with m17n-lib m17nlib)
+		$(use_with canna)
+		$(use_with qt)"
+
+	autoreconf
+	libtoolize --copy --force
+
+	# --with-scim is not stable enough
+	econf ${myconf} --without-scim || die "econf failed"
 	emake -j1 || die "emake failed"
+
+	cd ${WORKDIR}/prime-1.0.0.1
+	econf || die
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
+
+	cd ${WORKDIR}/prime-1.0.0.1
+	make DESTDIR="${D}" install-uim || die "make install-uim failed"
+	cd -
+
 	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
 	dodoc doc/{HELPER-CANDWIN,KEY,UIM-SH}
 	use X && dodoc doc/XIM-SERVER
@@ -75,8 +95,8 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "To use uim-anthy you should emerge app-i18n/anthy or app-i18n/anthy-ss."
-	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo (uim doesn't support skkserv)."
-	einfo "To use uim-prime you should emerge app-i18n/prime"
+	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo."
+	einfo "To use uim-prime you should emerge app-i18n/prime."
 	einfo
 
 	ewarn
@@ -93,9 +113,9 @@ pkg_postinst() {
 	ewarn "or uim-im-switcher-qt."
 	ewarn
 
-	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	use gtk && gtk-query-immodules-2.0 > ${ROOT}/${GTK2_CONFDIR}/gtk.immodules
 }
 
 pkg_postrm() {
-	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	use gtk && gtk-query-immodules-2.0 > ${ROOT}/${GTK2_CONFDIR}/gtk.immodules
 }
