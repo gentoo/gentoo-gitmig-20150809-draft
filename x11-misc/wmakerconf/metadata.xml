@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<!-- yes, windowmaker is in the gnustep herd, but wmakerconf is a 3rd party app -->
-<!-- I'll updated the ebuild somewhat, but otherwise, it really is "x11-misc" -->
-	<herd>no-herd</herd>
+<herd>desktop-misc</herd>
+<maintainer>
+<email>desktop-misc@gentoo.org</email>
+</maintainer>
 </pkgmetadata>
