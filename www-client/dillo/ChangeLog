@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.28 2005/06/19 09:41:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.29 2005/06/20 19:21:38 killerfox Exp $
+
+  20 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> dillo-0.8.4-r2.ebuild:
+  Stable on hppa.
 
 *dillo-0.8.5 (19 Jun 2005)
 
