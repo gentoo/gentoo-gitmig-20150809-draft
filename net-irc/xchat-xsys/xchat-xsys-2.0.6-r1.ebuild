@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.0.6.ebuild,v 1.1 2005/06/19 17:21:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.0.6-r1.ebuild,v 1.1 2005/06/20 18:49:00 chainsaw Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 MY_P="${P/xchat-/}"
 S=${WORKDIR}/${MY_P}
@@ -26,6 +26,7 @@ src_unpack() {
 	if use buttons; then
 		sed -i -e "s:#BUTTON:BUTTON:" ${S}/Makefile
 	fi
+	epatch ${FILESDIR}/${PV}-localisation.patch
 }
 
 src_compile() {
