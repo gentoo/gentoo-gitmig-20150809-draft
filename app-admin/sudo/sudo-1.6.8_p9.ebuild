@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9.ebuild,v 1.4 2005/06/20 16:21:26 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9.ebuild,v 1.5 2005/06/20 18:41:25 taviso Exp $
 
 inherit eutils pam
 
@@ -125,10 +125,7 @@ src_install() {
 	dodoc BUGS CHANGES HISTORY PORTING README RUNSON TODO \
 		TROUBLESHOOTING UPGRADE sample.*
 
-	use ldap && {
-		dodoc README.LDAP
-		dosbin sudoers2ldif
-	}
+	use ldap && { dodoc README.LDAP; dosbin sudoers2ldif; }
 
 	if has_version virtual/pam; then
 		pamd_mimic_system sudo auth account password session
