@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e9eb61dfc109d382317fb7f63ac6f8f8 slrnconf-0.8.4.ebuild 833
-MD5 5b3df740f183e587cce08d480a74d4fb ChangeLog 1061
+MD5 28c4a4796deb241a207931a483d978d0 ChangeLog 1154
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
+MD5 6b7d55afea1573184f4763ef4a1364b7 slrnconf-0.8.4.ebuild 837
 MD5 5987dc28a8ca15c7ae66b61550edaabc files/digest-slrnconf-0.8.4 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB7DLWI1lqEGTUzyQRAjaAAKCB3P/lTQIL6dhZeixyEV6v1D+jUgCguP6A
-swaTMfWR2uCOgCEiYSHr8mc=
-=zT+v
------END PGP SIGNATURE-----
