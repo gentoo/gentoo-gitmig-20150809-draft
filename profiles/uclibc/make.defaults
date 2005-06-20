@@ -1,6 +1,6 @@
 STAGE1_USE="uclibc"
-GRP_STAGE23_USE="berkdb ncurses readline zlib uclibc"
-USE="berkdb ncurses readline zlib uclibc"
+GRP_STAGE23_USE="ncurses readline zlib uclibc"
+USE="ncurses readline zlib uclibc"
 
 CFLAGS="-Os"
 CXXFLAGS="${CFLAGS}"
