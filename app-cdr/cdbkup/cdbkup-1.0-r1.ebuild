@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/cdbkup-1.0-r1.ebuild,v 1.5 2005/01/01 12:08:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/cdbkup-1.0-r1.ebuild,v 1.6 2005/06/20 00:47:12 flameeyes Exp $
 
 inherit eutils
 
@@ -13,12 +13,10 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
-RDEPEND="virtual/libc
-	>=app-cdr/cdrtools-1.11.28
-	>=sys-apps/eject-2.0.10
+DEPEND=">=app-cdr/cdrtools-1.11.28"
+RDEPEND="${DEPEND}
+	virtual/eject
 	!app-misc/cdcat"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
