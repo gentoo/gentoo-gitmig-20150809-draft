@@ -1,0 +1,44 @@
+diff -urN -p mozilla~/security/nss/lib/pki1/oiddata.h mozilla/security/nss/lib/pki1/oiddata.h
+--- mozilla~/security/nss/lib/pki1/oiddata.h	2002-01-03 23:22:07.000000000 -0600
++++ mozilla/security/nss/lib/pki1/oiddata.h	2005-06-01 02:20:28.000000000 -0600
+@@ -43,12 +43,6 @@ static const char OIDDATA_CVS_ID[] = "@(
+ #include "nsspki1t.h"
+ #endif /* NSSPKI1T_H */
+ 
+-extern const NSSOID nss_builtin_oids[];
+-extern const PRUint32 nss_builtin_oid_count;
+-
+-/*extern const nssAttributeTypeAliasTable nss_attribute_type_aliases[];*/
+-/*extern const PRUint32 nss_attribute_type_alias_count;*/
+-
+ extern const NSSOID *NSS_OID_RFC1274_UID;
+ extern const NSSOID *NSS_OID_RFC1274_EMAIL;
+ extern const NSSOID *NSS_OID_RFC2247_DC;
+diff -urN -p mozilla~/security/nss/lib/pki1/oidgen.perl mozilla/security/nss/lib/pki1/oidgen.perl
+--- mozilla~/security/nss/lib/pki1/oidgen.perl	2001-11-07 18:15:25.000000000 -0600
++++ mozilla/security/nss/lib/pki1/oidgen.perl	2005-06-01 02:21:31.000000000 -0600
+@@ -233,12 +233,6 @@ static const char OIDDATA_CVS_ID[] = "$g
+ #include "nsspki1t.h"
+ #endif /* NSSPKI1T_H */
+ 
+-extern const NSSOID nss_builtin_oids[];
+-extern const PRUint32 nss_builtin_oid_count;
+-
+-/*extern const nssAttributeTypeAliasTable nss_attribute_type_aliases[];*/
+-/*extern const PRUint32 nss_attribute_type_alias_count;*/
+-
+ EOD
+     ;
+ 
+diff -urN -p mozilla~/security/nss/lib/pki1/pki1.h mozilla/security/nss/lib/pki1/pki1.h
+--- mozilla~/security/nss/lib/pki1/pki1.h	2001-07-19 14:40:42.000000000 -0600
++++ mozilla/security/nss/lib/pki1/pki1.h	2005-06-01 02:22:50.000000000 -0600
+@@ -56,6 +56,8 @@ static const char PKI1_CVS_ID[] = "@(#) 
+ PR_BEGIN_EXTERN_C
+ 
+ /* fgmr 19990505 moved these here from oiddata.h */
++extern const NSSOID nss_builtin_oids[];
++extern const PRUint32 nss_builtin_oid_count;
+ extern const nssAttributeTypeAliasTable nss_attribute_type_aliases[];
+ extern const PRUint32 nss_attribute_type_alias_count;
+
