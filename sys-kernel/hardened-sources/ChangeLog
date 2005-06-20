@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.58 2005/06/14 22:54:24 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.59 2005/06/20 06:26:48 solar Exp $
+
+*hardened-sources-2.4.31 (20 Jun 2005)
+
+  20 Jun 2005; <solar@gentoo.org> +hardened-sources-2.4.31.ebuild:
+  initial import of 2.4.31 tree
 
 *hardened-sources-2.6.11-r14 (14 Jun 2005)
 
