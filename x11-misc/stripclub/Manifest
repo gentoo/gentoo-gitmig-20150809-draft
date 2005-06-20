@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 922ed34ec2312547947827756f0267be ChangeLog 492
 MD5 93f02cf17e28c71ad2a43ecc2399b56f metadata.xml 279
-MD5 d667a450a66f523546ea9d87075346a0 stripclub-0.9.1.2.ebuild 917
-MD5 2d35b88f13915645757343586eda1997 ChangeLog 404
+MD5 fa712b8b025a64c6fa76607794f6ba59 stripclub-0.9.1.2.ebuild 921
 MD5 6e01d2597e3b88bd08927dfc46355880 files/digest-stripclub-0.9.1.2 68
 MD5 c4c077c1aae2d8c62d82fa7abc9f3216 files/stripclub-0.9.1.2-Makefile.linux.patch 863
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtZGEl5AvwDPiUowRAvQdAKC4/HcuQ1BrFXQUObUv2yboMjjHiACfec62
-XPpx/HvdHKaHrU+skSNW/oQ=
-=pIrT
------END PGP SIGNATURE-----
