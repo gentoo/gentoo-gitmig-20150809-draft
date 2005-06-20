@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9.ebuild,v 1.1 2005/06/20 15:55:53 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9.ebuild,v 1.2 2005/06/20 16:14:45 taviso Exp $
 
 inherit eutils pam
 
@@ -131,7 +131,7 @@ src_install() {
 	if has_version virtual/pam; then
 		pamd_mimic_system sudo auth account password session
 	else
-		newpamd ${FILESDIR}/sudo-sudo-1.6.8_p8 sudo
+		newpamd ${FILESDIR}/sudo-1.6.8_p8 sudo
 	fi
 
 	insinto /etc
