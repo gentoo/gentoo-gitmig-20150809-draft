@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/profuse-0.23.0.ebuild,v 1.1 2005/06/20 21:35:58 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/profuse-0.23.0.ebuild,v 1.2 2005/06/20 21:43:21 dams Exp $
 
 IUSE=""
 
@@ -18,8 +18,8 @@ IUSE="gtk ncurses"
 DEPEND="dev-lang/perl
 >=dev-util/dialog-1.0.20050206
 dev-perl/TermReadKey
->=dev-util/libconf-0.39.16
-gtk? ( >=dev-perl/gtk2-fu-0.08 )
+>=dev-util/libconf-0.39.21
+gtk? ( >=dev-perl/gtk2-fu-0.10 )
 ncurses? ( dev-perl/Curses-UI )"
 
 src_compile() {
