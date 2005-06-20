@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_rc1-r2.ebuild,v 1.1 2005/06/16 15:52:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_rc1-r3.ebuild,v 1.1 2005/06/20 20:01:59 caleb Exp $
 
 inherit eutils flag-o-matic
 
 SRCTYPE="opensource-desktop"
-SNAPSHOT="20050616"
+SNAPSHOT="20050620"
 #SNAPSHOT=""
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -144,27 +144,21 @@ src_install() {
 	export PATH="${S}/bin:${PATH}"
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
 
-	# make INSTALL_ROOT=${D} sub-demos-install_subtargets-ordered sub-examples-install_subtargets-ordered || die
-	# make INSTALL_ROOT=${D} install_qmake sub-tools-install_subtargets-ordered || die
-	# Using install_qmake forces lots of other things to build.  Bypass it for now.
-
 	make INSTALL_ROOT=${D} sub-tools-install_subtargets-ordered || die
+
 	if use examples; then
-		make INSTALL_ROOT=${D} sub-examples-install_subtargets
-		# dodir ${QTDATADIR}/examples
-		# cp -a ${S}/examples/* ${D}/${QTDATADIR}/examples
-		# dodir ${QTDATADIR}/demos
-		# cp -a ${S}/demos/* ${D}/${QTDATADIR}/demos
+		make INSTALL_ROOT=${D} sub-examples-install_subtargets || die
 	fi
 
 	make INSTALL_ROOT=${D} install_qmake || die
 	make INSTALL_ROOT=${D} install_mkspecs || die
 
-	# The QtDesigner and QtAssistant header files aren't installed..not sure why
-	#cp -a ${S}/include/QtDesigner ${D}/${QTHEADERDIR}/QtDesigner
-	#rm -rf ${D}/${QTHEADERDIR}/QtDesigner/private
+	if use doc; then
+		make INSTALL_ROOT=${D} install_htmldocs || die
+	fi
 
-	#cp -a ${S}/include/QtAssistant ${D}/${QTHEADERDIR}/QtAssistant
+	# The QtAssistant header files aren't installed..not sure why
+	cp -a ${S}/include/QtAssistant ${D}/${QTHEADERDIR}/QtAssistant
 
 	# Fix symlink
 	cd ${D}/${QTDATADIR}/mkspecs
@@ -174,17 +168,10 @@ src_install() {
 
 	mkdir -p ${D}/${QTSYSCONFDIR}
 
-	if use doc; then
-		make INSTALL_ROOT=${D} install_htmldocs || die
-	fi
-
-	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.la
-	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.prl
-	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
-	sed -i -e "s:${S}:${QTBASEDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
-
-	# Don't need to install stray linguist files
-	rm -rf ${D}/${DATADIR}/phrasebooks/linguist
+	#sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.la
+	#sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.prl
+	#sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
+	#sed -i -e "s:${S}:${QTBASEDIR}:g" ${D}/${QTLIBDIR}/pkgconfig/*.pc
 
 	# List all the multilib libdirs
 	local libdirs
