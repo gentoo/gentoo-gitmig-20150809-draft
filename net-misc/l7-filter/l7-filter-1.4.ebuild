@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.4.ebuild,v 1.2 2005/06/08 14:34:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.4.ebuild,v 1.3 2005/06/20 02:11:12 weeve Exp $
 
 inherit linux-info eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://l7-filter.sourceforge.net"
 SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
 SLOT="${KV}"
 S=${WORKDIR}/${MY_P}

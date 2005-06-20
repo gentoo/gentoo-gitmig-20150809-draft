@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-filter
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.13 2005/06/08 14:34:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.14 2005/06/20 02:11:12 weeve Exp $
+
+  20 Jun 2005; Jason Wever <weeve@gentoo.org> l7-filter-1.4.ebuild:
+  Added ~sparc keyword.
 
   08 Jun 2005; Daniel Black <dragonheart@gentoo.org>
   l7-filter-0.9.1-r1.ebuild, l7-filter-1.2.ebuild, l7-filter-1.4.ebuild:

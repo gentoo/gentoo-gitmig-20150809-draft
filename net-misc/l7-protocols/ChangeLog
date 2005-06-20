@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/l7-protocols
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.8 2005/06/08 14:42:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.9 2005/06/20 02:10:44 weeve Exp $
+
+  20 Jun 2005; Jason Wever <weeve@gentoo.org>
+  l7-protocols-2005.06.04.ebuild:
+  Added ~sparc keyword.
 
 *l7-protocols-2005.06.04 (08 Jun 2005)
 
