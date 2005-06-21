@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.37 2005/06/03 23:35:11 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.38 2005/06/21 08:34:25 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -94,6 +94,11 @@ elif [ "$KMNAME" == "koffice" ]; then
 			;;
 		1.4.0_rc1)
 			SRC_PATH="unstable/koffice-1.4-rc1/src/koffice-1.3.98.tar.bz2"
+			XDELTA_BASE=""
+			XDELTA_DELTA=""
+			;;
+		1.4.0)
+			SRC_PATH="stable/koffice-1.4/src/koffice-$PV.tar.bz2"
 			XDELTA_BASE=""
 			XDELTA_DELTA=""
 			;;
