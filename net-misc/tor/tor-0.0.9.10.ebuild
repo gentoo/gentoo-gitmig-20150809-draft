@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.0.9.10.ebuild,v 1.1 2005/06/16 23:21:03 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.0.9.10.ebuild,v 1.2 2005/06/21 05:53:37 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://tor.eff.org/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64 ~ppc64 ~sparc"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl"
