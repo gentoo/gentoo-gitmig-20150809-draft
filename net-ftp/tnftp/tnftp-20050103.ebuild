@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050103.ebuild,v 1.5 2005/06/21 18:54:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050103.ebuild,v 1.6 2005/06/21 23:42:09 swegener Exp $
 
 DESCRIPTION="NetBSD FTP client with several advanced features"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/misc/${PN}/${P}.tar.gz
@@ -44,7 +44,7 @@ src_install() {
 
 	for x in ftp lukemftp
 	do
-		if [ ! -e ${ROOT}/usr/bin/${X} ]
+		if [ ! -e ${ROOT}/usr/bin/${x} ]
 		then
 			dosym tnftp /usr/bin/${x} || die "dosym failed"
 		fi
