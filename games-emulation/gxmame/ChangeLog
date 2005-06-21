@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gxmame
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.14 2005/05/21 19:37:09 weeve Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.15 2005/06/21 04:39:16 vapier Exp $
+
+  21 Jun 2005; Mike Frysinger <vapier@gentoo.org> gxmame-0.35_beta2.ebuild:
+  Fix xmame dir #96651 by Kerin Millar.
 
   21 May 2005; Jason Wever <weeve@gentoo.org> gxmame-0.35_beta2.ebuild:
   Added ~sparc keyword.

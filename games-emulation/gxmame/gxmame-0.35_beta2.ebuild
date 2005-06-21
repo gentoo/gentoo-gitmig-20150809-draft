@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.35_beta2.ebuild,v 1.2 2005/05/21 19:37:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.35_beta2.ebuild,v 1.3 2005/06/21 04:39:16 vapier Exp $
 
 inherit games
 
@@ -54,6 +54,7 @@ src_unpack() {
 src_compile() {
 	egamesconf \
 		--disable-dependency-tracking \
+		--with-xmame-dir="${GAMES_DATADIR}"/xmame \
 		$(use_enable nls) \
 		$(use_enable joystick) \
 		|| die
