@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.16.ebuild,v 1.3 2005/05/04 16:11:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.16.ebuild,v 1.4 2005/06/21 04:41:51 vapier Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ DEPEND="virtual/libc
 	media-libs/libpng
 	sys-libs/zlib
 	arts? ( kde-base/arts )
-	gnome? ( gnome-base/libgnomeui )
+	gnome? ( gnome-base/gnome-libs )
 	readline? ( sys-libs/readline )
 	sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )
@@ -27,7 +27,7 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/vice_gcc4_patch.gz
+	epatch "${FILESDIR}"/vice_gcc4_patch.gz
 }
 
 
