@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-2.7-r3.ebuild,v 1.2 2005/03/08 18:49:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-2.7-r3.ebuild,v 1.3 2005/06/21 00:12:24 ribosome Exp $
 
 inherit virtualx eutils
 
