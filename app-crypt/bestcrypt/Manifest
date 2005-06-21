@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 03a05d9dede8471e658c93d0e3c3df6e ChangeLog 6624
-MD5 943c58d394778b99f21501bdff1db1b5 bestcrypt-1.6_p1-r1.ebuild 3030
+MD5 abf0fef6742da4a36b40993466610cc9 bestcrypt-1.6_p1-r1.ebuild 3048
 MD5 68121ad348d78c8efdebce17ab7bbb81 bestcrypt-1.5_p10.ebuild 2942
 MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
 MD5 c2c1f3279f95f65b86cf226f84bace9b bestcrypt-1.6_p1.ebuild 3285
@@ -16,7 +16,7 @@ MD5 6a91a7867c21eaa1be5ac4b829ae34d9 files/digest-bestcrypt-1.6_p1-r1 207
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCt9tYmdTrptrqvGERAs0nAJ9FYTiMPYzL9YjWBU4bmziizYFxyACeM/tD
-bsla7vgy5EfQeAZws6LrAcU=
-=xir0
+iD8DBQFCt+VKmdTrptrqvGERAsKVAKCNkuTMS5cjT3njnq++8KWBex8GAwCeJ9TY
+AklTnf1T38Fa8y+VB1vvR5o=
+=TDkZ
 -----END PGP SIGNATURE-----

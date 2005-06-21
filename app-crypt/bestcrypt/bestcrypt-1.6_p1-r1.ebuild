@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p1-r1.ebuild,v 1.1 2005/06/21 09:17:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p1-r1.ebuild,v 1.2 2005/06/21 10:00:21 dragonheart Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs
 
@@ -8,8 +8,8 @@ MY_PN="bcrypt"
 DESCRIPTION="commercially licensed transparent filesystem encryption"
 HOMEPAGE="http://www.jetico.com/"
 SRC_URI="http://www.jetico.com/linux/BestCrypt-${PV/_p/-}.tar.gz
-	mirror://gentoo/bcrypt-rc6-serpent-c.diff.gz
-	http://www.carceri.dk/files/bcrypt-rc6-serpent.diff.gz"
+	!x86? ( mirror://gentoo/bcrypt-rc6-serpent-c.diff.gz )
+	x86? ( http://www.carceri.dk/files/bcrypt-rc6-serpent.diff.gz )"
 
 LICENSE="bestcrypt"
 SLOT="0"
@@ -38,7 +38,7 @@ MODULE_NAMES="bc(block:${S}/mod)
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-makefile_fix.patch
-	
+
 	if use x86;
 	then
 		epatch bcrypt-rc6-serpent.diff
