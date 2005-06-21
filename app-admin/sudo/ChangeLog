@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.69 2005/06/21 18:32:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.70 2005/06/21 20:40:04 ferdy Exp $
+
+  21 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> sudo-1.6.8_p9.ebuild:
+  stable on alpha, wrt bug #96618
 
   21 Jun 2005; <plasmaroo@gentoo.org> sudo-1.6.8_p9.ebuild:
   Stable on IA64: Bug #96618.
