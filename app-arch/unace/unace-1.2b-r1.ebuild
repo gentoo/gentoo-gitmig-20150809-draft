@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b-r1.ebuild,v 1.6 2005/05/17 22:08:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b-r1.ebuild,v 1.7 2005/06/21 20:42:12 kugelfang Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cp unix/makefile .
 	cp unix/gccmaked .
 	epatch "${FILESDIR}"/unace-1.2b-CAN-2005-0160-CAN-2005-0161.patch
+	epatch "${FILESDIR}"/unace-1.2b-64bit.patch
 }
 
 src_compile() {

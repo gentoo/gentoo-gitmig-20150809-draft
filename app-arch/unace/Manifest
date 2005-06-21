@@ -1,4 +1,15 @@
-MD5 f8b2fa3792541ada970a2aad2a8f7913 ChangeLog 2586
-MD5 c032c96e73b35eba486d9b6d3e5ec2b7 unace-1.2b-r1.ebuild 815
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a78db37c104932ff0370f27e111fae7a ChangeLog 2767
+MD5 e0a8bf7f84cd7b168a65f404d047c8b0 unace-1.2b-r1.ebuild 863
 MD5 34628d3f6507592703856c82761becf0 files/digest-unace-1.2b-r1 61
 MD5 5ec540a4e79c388d1b3e270f2c7083f8 files/unace-1.2b-CAN-2005-0160-CAN-2005-0161.patch 4618
+MD5 dd6ae2184aa3e8f4767d5298880afee6 files/unace-1.2b-64bit.patch 1604
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCuHzc5mJXAu5GbtIRAiLkAJ4rB8mvI6bzd/QxwBrP+R4lNsPAqgCeKFH1
+2ttsroV18ulAi2Eq3b++Qaw=
+=5JFp
+-----END PGP SIGNATURE-----

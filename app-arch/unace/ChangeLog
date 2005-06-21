@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/unace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.22 2005/04/24 10:44:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.23 2005/06/21 20:42:12 kugelfang Exp $
+
+  21 Jun 2005; Danny van Dyk <kugelfang@gentoo.org>
+  +files/unace-1.2b-64bit.patch, unace-1.2b-r1.ebuild:
+  Fixed BUG #95110. Thanks to Juan J. García de Soria for the patch.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> unace-1.2b-r1.ebuild:
   Stable on ppc.
