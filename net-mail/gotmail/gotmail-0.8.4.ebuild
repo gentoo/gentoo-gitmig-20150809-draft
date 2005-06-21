@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.8.4.ebuild,v 1.1 2005/06/19 20:29:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.8.4.ebuild,v 1.2 2005/06/21 19:58:45 g2boojum Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gotmail/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
