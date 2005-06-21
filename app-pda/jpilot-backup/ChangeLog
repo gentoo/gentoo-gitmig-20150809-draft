@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/jpilot-backup
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.5 2005/06/21 02:28:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.6 2005/06/21 02:29:02 agriffis Exp $
+
+  21 Jun 2005; Aron Griffis <agriffis@gentoo.org> jpilot-backup-0.50.ebuild:
+  Add sys-libs/gdbm dependency #93182
 
   21 Jun 2005; Aron Griffis <agriffis@gentoo.org> jpilot-backup-0.50.ebuild:
   stable on alpha amd64 x86

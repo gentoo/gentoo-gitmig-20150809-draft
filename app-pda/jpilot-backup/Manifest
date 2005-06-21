@@ -1,4 +1,14 @@
-MD5 9115912a2a5468137f9a4c6ce6be2e41 ChangeLog 581
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f3b1fce4dbd2b30a1e6ac1906e1302d5 jpilot-backup-0.50.ebuild 776
+MD5 96fe12f84338220a0df33679424cc61c ChangeLog 806
 MD5 0e09c69566d6d8eeb61f0ac82e61bd31 metadata.xml 252
-MD5 d1a2e8942c35e5476e5cd4b00905bd9b jpilot-backup-0.50.ebuild 761
 MD5 66e2f2ff1e3f30631b2efd85fe427dba files/digest-jpilot-backup-0.50 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCt3/ABXaUFmZvwyMRAt0qAJ94FJgpLZiKIogSwJnHTxyWuJtuGgCfft6x
+V15yQjiK3ehruHCowQs7RFE=
+=rnQz
+-----END PGP SIGNATURE-----
