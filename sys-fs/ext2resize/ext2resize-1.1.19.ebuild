@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.19.ebuild,v 1.1 2005/06/21 03:54:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.19.ebuild,v 1.2 2005/06/21 19:42:17 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,6 +22,8 @@ src_unpack() {
 	# stupid packaged source isn't clean
 	make -k distclean >& /dev/null
 	sed -i '/^CFLAGS/d' src/Makefile.in
+
+	epatch ${FILESDIR}/${P}-linux26.patch
 }
 
 src_compile() {
