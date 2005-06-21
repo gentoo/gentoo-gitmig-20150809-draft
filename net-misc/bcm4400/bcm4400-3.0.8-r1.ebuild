@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/bcm4400-3.0.8-r1.ebuild,v 1.1 2005/06/20 11:58:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/bcm4400-3.0.8-r1.ebuild,v 1.2 2005/06/21 07:38:05 dholm Exp $
 
 inherit eutils linux-mod
 
@@ -8,7 +8,7 @@ SRC_URI="http://www.broadcom.com/docs/driver_download/440x/linux-${PV}.zip"
 DESCRIPTION="Driver for the bcm4400 10/100 network card (in the form of kernel modules)."
 HOMEPAGE="http://www.broadcom.com"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 DEPEND="app-arch/unzip"
 S=${WORKDIR}/linux/${P}/src
