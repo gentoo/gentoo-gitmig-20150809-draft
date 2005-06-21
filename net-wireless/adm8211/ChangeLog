@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/adm8211
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/adm8211/ChangeLog,v 1.1 2005/06/21 11:48:29 genstef Exp $
+
+*adm8211-20050323 (21 Jun 2005)
+
+  21 Jun 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +adm8211-20050323.ebuild:
+  New package thanks to azazello <kislyuk@ocf.berkeley.edu> in bug 96323,
+  thanks to Henrik Brix Andersen <brix@gentoo.org> for the ebuild.
+
