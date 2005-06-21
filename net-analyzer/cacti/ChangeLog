@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.45 2005/06/17 00:59:49 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.46 2005/06/21 20:31:50 ramereth Exp $
+
+  21 Jun 2005; Lance Albertson <ramereth@gentoo.org> metadata.xml,
+  cacti-0.8.6e.ebuild:
+  Security Bump per bug #96243
+  (SQL injection / global php var security issues)
+  * x86 & sparc marked stable
+  * alpha, amd64, ppc marked testing
+  * Updated metadata
 
   17 Jun 2005; Lance Albertson <ramereth@gentoo.org>
   files/digest-cacti-0.8.6e, Manifest:
