@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ifd-gempc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.6 2004/12/30 22:41:55 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.7 2005/06/21 12:22:06 dragonheart Exp $
+
+  21 Jun 2005; Daniel Black <dragonheart@gentoo.org> ifd-gempc-0.9.3.ebuild,
+  ifd-gempc-0.9.1.ebuild:
+  Dependancy changed to libusb0.1.10a as per bug #87125. Thanks Florian Klein
 
 *ifd-gempc-0.9.3 (31 Dec 2004)
 

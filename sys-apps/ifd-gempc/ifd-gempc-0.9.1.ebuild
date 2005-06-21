@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ifd-gempc-0.9.1.ebuild,v 1.6 2004/12/30 22:41:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ifd-gempc-0.9.1.ebuild,v 1.7 2005/06/21 12:22:06 dragonheart Exp $
 
 inherit eutils
 
@@ -11,10 +11,8 @@ KEYWORDS="x86 ~ppc"
 SLOT="0"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 IUSE=""
-DEPEND=">=sys-devel/gcc-2.95.3-r5
-	sys-apps/pcsc-lite"
-
-RDEPEND="sys-apps/pcsc-lite"
+DEPEND="sys-apps/pcsc-lite
+	>=dev-libs/libusb-0.1.10a"
 
 src_unpack() {
 	unpack ${A}
