@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/tnftp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.11 2005/03/21 14:14:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.12 2005/06/21 18:43:30 swegener Exp $
+
+*tnftp-20050610 (21 Jun 2005)
+
+  21 Jun 2005; Sven Wegener <swegener@gentoo.org> +tnftp-20050610.ebuild:
+  Version bump.
 
   21 Mar 2005; Sven Wegener <swegener@gentoo.org> metadata.xml,
   tnftp-20050103.ebuild:
