@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.163 2005/06/13 17:47:37 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.164 2005/06/21 12:07:00 swegener Exp $
+
+*xchat-2.4.4 (21 Jun 2005)
+
+  21 Jun 2005; Sven Wegener <swegener@gentoo.org>
+  +files/xchat-dccserver-0.5.patch, +xchat-2.4.4.ebuild:
+  Version bump, bug #96687.
 
   13 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> xchat-2.4.3.ebuild:
   alpha stable
