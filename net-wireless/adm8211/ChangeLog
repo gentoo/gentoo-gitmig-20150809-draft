@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/adm8211
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/adm8211/ChangeLog,v 1.2 2005/06/21 11:58:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/adm8211/ChangeLog,v 1.3 2005/06/21 12:04:16 genstef Exp $
+
+  21 Jun 2005; Stefan Schweizer <genstef@gentoo.org>
+  adm8211-20050323.ebuild:
+  20050323 x86 stable for livecd
 
 *adm8211-20050620 (21 Jun 2005)
 
