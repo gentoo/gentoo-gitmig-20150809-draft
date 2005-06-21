@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4109 2005/06/21 09:16:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4110 2005/06/21 09:59:21 greg_g Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -143,25 +143,6 @@ sys-libs/nss-mysql
 # 9/10 times, it'll work, the other time it'll either segfault,
 # or emit a syntax error in /etc/auditd.rules .. *hrmph*
 >=sys-process/audit-0.9.1
-
-# Gregorio Guidi <greg_g@gentoo.org> (3 Jun 2005)
-# Release candidate for new version of KOffice.
->=app-office/karbon-1.4.0_rc
->=app-office/kexi-1.4.0_rc
->=app-office/kivio-1.4.0_rc
->=app-office/koffice-data-1.4.0_rc
->=app-office/koffice-meta-1.4.0_rc
->=app-office/kpresenter-1.4.0_rc
->=app-office/kspread-1.4.0_rc
->=app-office/kword-1.4.0_rc
->=app-office/kchart-1.4.0_rc
->=app-office/kformula-1.4.0_rc
->=app-office/koffice-1.4.0_rc
->=app-office/koffice-libs-1.4.0_rc
->=app-office/koshell-1.4.0_rc
->=app-office/krita-1.4.0_rc
->=app-office/kugar-1.4.0_rc
->=app-i18n/koffice-i18n-1.4.0_rc
 
 # Roy Marples <uberlord@gentoo.org> (3 Jun 2005)
 # Masked for testing
