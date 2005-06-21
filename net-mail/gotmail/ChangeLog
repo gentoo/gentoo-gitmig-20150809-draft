@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/gotmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.30 2005/06/21 19:58:45 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.31 2005/06/21 20:00:22 g2boojum Exp $
+
+  21 Jun 2005; Grant Goodyear <g2boojum@gentoo.org> gotmail-0.8.4.ebuild:
+  Oops, that was supposed to be stable on ppc64, not ppc.
 
   21 Jun 2005; Grant Goodyear <g2boojum@gentoo.org> gotmail-0.8.4.ebuild:
   Long overdue stabling.  Thanks to omkhar for the reminder.
