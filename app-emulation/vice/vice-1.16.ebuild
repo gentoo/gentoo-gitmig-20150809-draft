@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.16.ebuild,v 1.4 2005/06/21 04:41:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.16.ebuild,v 1.5 2005/06/21 05:11:26 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="The Versatile Commodore 8-bit Emulator"
 HOMEPAGE="http://www.viceteam.org/"
@@ -29,7 +29,6 @@ src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/vice_gcc4_patch.gz
 }
-
 
 src_compile() {
 	# disabled ffmpeg support since ffmpeg isn't slotted and later

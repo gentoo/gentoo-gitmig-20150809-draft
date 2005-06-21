@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 ea0527f261dfe613a27db89365e5db7b vice-1.16.ebuild 1798
 MD5 9692e416b6b624a221ce77378db3026f ChangeLog 3101
 MD5 1a7534d8ed5034901d921cf9840896b4 vice-1.14-r1.ebuild 1390
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 1a039d869a0e8b8bd753ee2f054cd73c vice-1.16.ebuild 1789
-MD5 5467080b8555dc1bad201449fbdaf87e files/1.14-console-security.patch 3709
 MD5 eca7586b8ef1c0d8665368c0328f9250 files/digest-vice-1.14-r1 62
 MD5 962c8cfd8a9a308b180e1a26c4973625 files/1.14-po-Makefile.patch 560
 MD5 fd15ab780139d6d1ff8ed8c0d5d85f90 files/digest-vice-1.16 62
 MD5 818e0e7dbc321296c08530856f1c297a files/vice_gcc4_patch.gz 1805
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCt5qfgIKl8Uu19MoRAqgDAJ9i7y7GPDI08XWG1IHAsNXCq0tkvgCfSw4w
-iaQS5L6H6USS7ubeYj5nuEU=
-=g48T
------END PGP SIGNATURE-----
+MD5 5467080b8555dc1bad201449fbdaf87e files/1.14-console-security.patch 3709
