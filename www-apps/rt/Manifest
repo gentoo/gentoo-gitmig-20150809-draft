@@ -1,12 +1,28 @@
-MD5 b3631336bddd3dc491992fda6d70d558 ChangeLog 1808
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ad78ebb8d4f31942a62a147457ca3140 rt-3.4.2-r1.ebuild 5357
+MD5 e28b5c19f33196d18983e2db57aad44f rt-3.2.1.ebuild 4217
+MD5 36a06c6979f2d93df52d5f5867fd96ee rt-3.4.2.ebuild 3722
+MD5 62980925acc10af7bc396248dbbdb854 ChangeLog 2479
 MD5 224c312cc23d02aa06c26a4da3cc1f90 metadata.xml 221
-MD5 1c784be45b571bfad5f6d6a78b9ed335 rt-3.2.1.ebuild 4204
-MD5 61ac7b350e4a8824b4429dd092219890 rt-3.4.2.ebuild 3711
+MD5 af335c7cab7bfc09dbd08feba51d2879 files/digest-rt-3.4.2-r1 61
 MD5 5f5c3f76ea4676e743612e38341780fe files/digest-rt-3.2.1 61
-MD5 15fc088b37155656e008679f3c07eea7 files/postinstall-en.txt 1648
-MD5 0706d6edcd1c4e23f526d611c9c6b531 files/reconfig 1170
-MD5 4dcfdbf63b882b398473d975b34fa23e files/config.layout-gentoo 616
 MD5 af335c7cab7bfc09dbd08feba51d2879 files/digest-rt-3.4.2 61
-MD5 f10e5a91df99b3628925509bad35efe0 files/postinstall-en-3.4.2.txt 689
-MD5 cb9bc69c23176e3d72d89f7b04461864 files/reconfig-3.4.2 1345
-MD5 85b9344f8e24073b64ab0ecc09033691 files/rt_apache.conf 406
+MD5 15fc088b37155656e008679f3c07eea7 files/3.2.1/postinstall-en.txt 1648
+MD5 0706d6edcd1c4e23f526d611c9c6b531 files/3.2.1/reconfig 1170
+MD5 4dcfdbf63b882b398473d975b34fa23e files/3.4.2/config.layout-gentoo 616
+MD5 b54ebbfd3fc1dd2a49d396e3dba2b857 files/3.4.2/rt_apache1_fcgi.conf 990
+MD5 efba744a8f997643ae37f912ac0d72db files/3.4.2/postinstall-en.txt 687
+MD5 3d2e627499ec86839cc0099719fcc3bd files/3.4.2/rt_apache.conf 574
+MD5 c807deb11e08ab9f37a658bd5e971c7f files/3.4.2/rt.conf.d 405
+MD5 2a44970aa65730024c61a5cb50323cb3 files/3.4.2/rt.init.d 968
+MD5 1be40f6b7f40406cd2a9dfcd25483357 files/3.4.2/reconfig 1303
+MD5 73c354dd8ba0f64a74e5c6cd01b33834 files/3.4.2/rt_apache2_fcgi.conf 993
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCt3enEzitwsaoONoRAqBVAJ47NmsZEPfxZyNX3AzfmvVBPP0iDACg0XTz
+wFCkyzvwOXr5wFr4OGQU9mk=
+=q4mE
+-----END PGP SIGNATURE-----

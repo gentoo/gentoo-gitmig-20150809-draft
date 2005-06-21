@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.5 2005/05/10 00:24:12 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.6 2005/06/21 02:12:38 rl03 Exp $
 
 inherit webapp eutils
 
@@ -140,7 +140,7 @@ src_install() {
 	grep -Rl "${D}" * | xargs dosed
 	chmod +r ${D}/${MY_HOSTROOTDIR}/rt-config/RT*
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
-	webapp_hook_script ${FILESDIR}/reconfig
+	webapp_postinst_txt en ${FILESDIR}/${PV}/postinstall-en.txt
+	webapp_hook_script ${FILESDIR}/${PV}/reconfig
 	webapp_src_install
 }

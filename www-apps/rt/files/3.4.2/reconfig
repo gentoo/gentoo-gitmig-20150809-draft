@@ -3,13 +3,11 @@ if [ $1 = "install" ]; then
 	# fix location
 	cd ${VHOST_ROOT}/${P}
 	sed -e "s|${MY_HOSTROOTDIR}/${P}|${VHOST_ROOT}/${P}|g
-		s|${MY_HTDOCSDIR}|${MY_INSTALLDIR}|g" -i bin/* lib/RT.pm sbin/*
+		s|${MY_HTDOCSDIR}|${MY_INSTALLDIR}|g" -i bin/* lib/RT.pm sbin/* etc/RT_Config.pm
 
-	# fix Apache config
-	sed -e "s|WEBMUX|${VHOST_ROOT}/${P}/bin/webmux.pl|" -i ${MY_SERVERCONFIGDIR}/apache1-rt_apache.conf
-
-	# fix permissions
-	chown -R  ${VHOST_SERVER_GID}:${VHOST_SERVER_UID} ${VHOST_ROOT}/${P}/var
+	# fix Apache configs
+	sed -e "s|RT_DIR|${VHOST_ROOT}/${P}|g
+		s|HTDOCS|${MY_INSTALLDIR}|g" -i ${MY_SERVERCONFIGDIR}/apache*
 
 	# check for upgrades
 	cd ${VHOST_ROOT}/${P}/upgrade
@@ -28,8 +26,8 @@ elif [ $1 = "clean" ]; then
 	MY_PN=$(basename $(dirname $(dirname ${MY_HOSTROOTDIR})))
 	MY_P="${MY_PN}-${MY_PV}"
 
-	if [ ! "${VHOST_ROOT}${MY_P}a" = "a" ]; then 
-		rm -rf ${VHOST_ROOT}/${MY_P}/bin ${VHOST_ROOT}/${MY_P}/lib/RT.pm ${VHOST_ROOT}/${MY_P}/sbin
+	if [[ "${VHOST_ROOT}${MY_P}" ]]; then 
+		rm -rf ${VHOST_ROOT}/${MY_P}/bin ${VHOST_ROOT}/${MY_P}/lib/RT.pm ${VHOST_ROOT}/${MY_P}/sbin ${VHOST_ROOT}/${MY_P}/etc/RT_Config.pm
 	else
 		echo "Variables not set!"
 	fi

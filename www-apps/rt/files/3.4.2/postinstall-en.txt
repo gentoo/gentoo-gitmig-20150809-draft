@@ -15,5 +15,5 @@ If you need more help, consider searching the mailing list (Google site:lists.fs
 NOTE:
 
 Some file locations have changed. Everything is now installed into
-${VHOST_ROOT}. RT executables are no longer in /usr/bin. 
+${VHOST_ROOT}. RT executables are no longer in /usr/bin
 You may need to modify your existing configuration files accordingly.
