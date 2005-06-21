@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.36-r1.ebuild,v 1.6 2005/05/25 15:40:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.36-r1.ebuild,v 1.7 2005/06/21 21:18:16 ticho Exp $
 
 inherit perl-module eutils
 
@@ -48,7 +48,7 @@ pkg_postinst() {
 	einfo "mechanism. Registration is done with razor-admin -register. It has to be"
 	einfo "manually invoked in either of the following ways:"
 	einfo ""
-	einfo "To register user foo with 's1kret' as password: "
+	einfo "To register user foo with 's1kr3t' as password: "
 	einfo ""
 	einfo "razor-admin -register -user=foo -pass=s1kr3t"
 	einfo ""
