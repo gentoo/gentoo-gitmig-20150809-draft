@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1.ebuild,v 1.1 2005/06/21 00:12:24 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1.ebuild,v 1.2 2005/06/21 00:32:56 ribosome Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.scilab.org/"
 LICENSE="scilab"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="ifc tcltk atlas gtk gtk2 Xaw3d"
+IUSE="ifc ocaml tcltk atlas gtk gtk2 Xaw3d"
 
 RDEPEND="virtual/x11
 	sys-libs/ncurses
@@ -80,6 +80,9 @@ src_compile() {
 	if use gtk; then
 		use gtk2 && myopts="${myopts} --with-gtk2" || \
 			myopts="${myopts} --with-gtk"
+	fi
+	if ! use ocaml; then
+		myopts="${myopts} --without-ocaml"
 	fi
 
 	econf ${myopts} || die
