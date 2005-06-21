@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.4.ebuild,v 1.4 2005/06/21 12:45:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.4.ebuild,v 1.5 2005/06/21 18:26:58 swegener Exp $
 
 inherit gnome2
 
@@ -14,8 +14,11 @@ KEYWORDS="~x86 ~amd64"
 IUSE="perl tcltk python ssl mmx ipv6 nls"
 
 RDEPEND=">=dev-libs/glib-2.0.3
-	gnome-base/libgnome
-	gnome-base/gconf
+	>=gnome-base/libgnome-2
+	>=gnome-base/gconf-2
+	>=gnome-base/libgnomeui-2
+	>=gnome-base/libglade-2
+	>=gnome-base/gnome-vfs-2
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.6.1 )
 	python? ( dev-lang/python )
