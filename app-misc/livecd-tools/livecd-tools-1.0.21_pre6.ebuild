@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.21_pre5.ebuild,v 1.1 2005/06/10 15:09:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.21_pre6.ebuild,v 1.1 2005/06/21 14:36:48 wolf31o2 Exp $
 
 IUSE="opengl X"
 
