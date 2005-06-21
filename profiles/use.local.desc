@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1236 2005/06/20 21:11:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1237 2005/06/21 00:31:29 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -810,6 +810,7 @@ sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions
 sci-mathematics/octave:blas - Adds dependency for virtual/blas.
 sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to sci-mathematics/octave (may be merged with hdf when opendx is completed)
 sci-mathematics/scilab:atlas - Add support for the atlas library
+sci-mathematics/scilab:ocaml - Add support for the ocaml programming language
 sci-misc/boinc:server - Enable compilation of server
 sys-apps/baselayout:ibm - adds support for hvc consoles
 sys-apps/baselayout-vserver:fakelog - install a fake logger init script
