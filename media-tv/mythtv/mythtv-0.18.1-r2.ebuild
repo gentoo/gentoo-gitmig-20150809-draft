@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.4 2005/06/06 10:10:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.5 2005/06/21 20:26:33 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -28,6 +28,7 @@ DEPEND=">=media-libs/freetype-2.0
 	oggvorbis? ( media-libs/libvorbis )
 	opengl? ( virtual/opengl )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
+			sys-libs/libavc1394
 			>=media-libs/libiec61883-1.0.0 )
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )
 	!x11-base/xfree
