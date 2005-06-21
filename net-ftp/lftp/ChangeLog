@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.84 2005/06/19 06:46:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.85 2005/06/21 12:10:03 dragonheart Exp $
+
+  21 Jun 2005; Daniel Black <dragonheart@gentoo.org> lftp-3.2.1.ebuild:
+  {R}DEPEND typo as per bug #96668 thanks to Dirk Dierckx
 
 *lftp-3.2.1 (19 Jun 2005)
 
