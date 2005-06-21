@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.65 2005/06/21 06:43:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.66 2005/06/21 08:12:19 killerfox Exp $
+
+  21 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> sudo-1.6.8_p9.ebuild:
+  Stable on hppa. bug #96618
 
   21 Jun 2005; Markus Rothe <corsair@gentoo.org> sudo-1.6.8_p9.ebuild:
   Stable on ppc64; bug #96618
