@@ -1,6 +1,11 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.3 2005/06/11 09:46:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.4 2005/06/21 08:41:34 greg_g Exp $
+
+*krita-1.4.0 (21 Jun 2005)
+
+  21 Jun 2005; Gregorio Guidi <greg_g@gentoo.org> +krita-1.4.0.ebuild:
+  Final release of KOffice 1.4.
 
   11 Jun 2005; Markus Rothe <corsair@gentoo.org> krita-1.4.0_rc1.ebuild:
   Added ~ppc64; bug #95128

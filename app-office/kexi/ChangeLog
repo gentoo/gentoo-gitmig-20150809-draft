@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.3 2005/06/11 09:44:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.4 2005/06/21 08:38:18 greg_g Exp $
+
+*kexi-1.4.0 (21 Jun 2005)
+
+  21 Jun 2005; Gregorio Guidi <greg_g@gentoo.org> +kexi-1.4.0.ebuild:
+  Final release of KOffice 1.4.
 
   11 Jun 2005; Markus Rothe <corsair@gentoo.org> kexi-1.4.0_rc1.ebuild:
   Added ~ppc64; bug #95128

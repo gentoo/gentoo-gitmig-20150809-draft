@@ -1,6 +1,11 @@
 # ChangeLog for app-office/karbon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.6 2005/06/11 09:42:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.7 2005/06/21 08:37:53 greg_g Exp $
+
+*karbon-1.4.0 (21 Jun 2005)
+
+  21 Jun 2005; Gregorio Guidi <greg_g@gentoo.org> +karbon-1.4.0.ebuild:
+  Final release of KOffice 1.4.
 
   11 Jun 2005; Markus Rothe <corsair@gentoo.org> karbon-1.3.5.ebuild,
   karbon-1.4.0_rc1.ebuild:

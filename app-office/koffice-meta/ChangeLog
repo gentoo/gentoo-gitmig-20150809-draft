@@ -1,6 +1,12 @@
 # ChangeLog for app-office/koffice-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.6 2005/06/05 19:44:05 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.7 2005/06/21 08:42:21 greg_g Exp $
+
+*koffice-meta-1.4.0 (21 Jun 2005)
+
+  21 Jun 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +koffice-meta-1.4.0.ebuild:
+  Final release of KOffice 1.4.
 
   05 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org>
   koffice-meta-1.4.0_rc1.ebuild:
