@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ac-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.54 2005/03/08 14:38:24 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.55 2005/06/21 17:06:34 marineam Exp $
+
+*ac-sources-2.6.11-r7 (21 Jun 2005)
+
+  21 Jun 2005; Michael Marineau <marineam@gentoo.org>
+  -ac-sources-2.6.10-r12.ebuild, -ac-sources-2.6.11-r1.ebuild,
+  +ac-sources-2.6.11-r7.ebuild:
+  Bump to 2.6.11-ac7 and added a patch to include all the -stable updates up
+  to 2.6.11.12
 
 *ac-sources-2.6.11-r1 (08 Mar 2005)
 
