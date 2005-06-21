@@ -1,6 +1,16 @@
 # ChangeLog for app-text/xhtml1
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.12 2005/06/01 01:07:36 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.13 2005/06/21 09:25:29 leonardop Exp $
+
+*xhtml1-20020801-r3 (21 Jun 2005)
+
+  21 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
+  xhtml1-20020801-r3.ebuild, files/xhtml1-catalog.patch:
+  New revision, with a corrected patch, the SGMLDECL keyword should be
+  removed now that we use DTDDECL. Resolves bug #92020, thanks to Peter
+  Simons. Doesn't block gtk-doc anymore (bug #33843). Marked stable on x86
+  since it fixes critical problems with openjade and the global catalogs
+  system.
 
   31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   xhtml1-20020801-r2.ebuild:
