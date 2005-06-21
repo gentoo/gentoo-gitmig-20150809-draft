@@ -1,13 +1,23 @@
-MD5 2e49f34769297a5cdf516e44c8aa40c2 rxvt-unicode-4.0.ebuild 1587
-MD5 61c0515ef7071fa88bd6f6bd254fa62d rxvt-unicode-5.3.ebuild 1927
-MD5 ae0e078fda7b29d36a2b6d5233c16cda rxvt-unicode-3.0.ebuild 1751
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 85e40552e6de9c19348815b9275be979 rxvt-unicode-5.1.ebuild 1585
-MD5 04feab27571b3abf1aef33ab229ccf51 ChangeLog 8692
 MD5 b5865f551fa6dd21658e0f8349638c9f metadata.xml 223
-MD5 ff186f769724f65b45dcedf2b9e7c9a3 files/digest-rxvt-unicode-3.0 69
-MD5 0454b0e411ee7798e273a94fcabdc823 files/digest-rxvt-unicode-4.0 69
-MD5 749b453f3a41c4bcc2e8706cad32f568 files/digest-rxvt-unicode-5.1 69
+MD5 2cda6700635c68d34b11530970ec9207 rxvt-unicode-5.3.ebuild 1927
+MD5 144a1f30d82a67f685f1cbc08c9ea825 ChangeLog 8793
+MD5 ae0e078fda7b29d36a2b6d5233c16cda rxvt-unicode-3.0.ebuild 1751
+MD5 2e49f34769297a5cdf516e44c8aa40c2 rxvt-unicode-4.0.ebuild 1587
 MD5 b7923e2725d925a7ae5210a144a3eeaa files/digest-rxvt-unicode-5.3 69
 MD5 63548e76ee03f6dc4fee9e2239453ca1 files/rxvt-unicode-4.0-64bit.patch 728
 MD5 8d13934dc747f15f11334bd642c342cd files/rxvt-unicode-3.9-64bit.patch 632
 MD5 27f475fce3946d48a23f36e0279a978c files/rxvt-unicode-2.3-font-fix.diff 431
+MD5 0454b0e411ee7798e273a94fcabdc823 files/digest-rxvt-unicode-4.0 69
+MD5 749b453f3a41c4bcc2e8706cad32f568 files/digest-rxvt-unicode-5.1 69
+MD5 ff186f769724f65b45dcedf2b9e7c9a3 files/digest-rxvt-unicode-3.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCuF7rKRy60XGEcJIRAmGcAJ9Bej/Av0IujQ3oh5m9azZTS/+IqQCeJCCv
+NDaTt8y/ODZnrDcflCb/qoc=
+=+wk1
+-----END PGP SIGNATURE-----
