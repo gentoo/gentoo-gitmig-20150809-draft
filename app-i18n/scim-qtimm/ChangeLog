@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.21 2005/06/17 20:32:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.22 2005/06/21 11:20:20 blubb Exp $
+
+  21 Jun 2005; Simon Stelling <blubb@gentoo.org> scim-qtimm-0.9.0.ebuild:
+  added ~amd64 keyword
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   scim-qtimm-0.8.9.ebuild:
