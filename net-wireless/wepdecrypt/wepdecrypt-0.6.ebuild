@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.6.ebuild,v 1.1 2005/06/21 12:44:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.6.ebuild,v 1.2 2005/06/21 14:32:11 swegener Exp $
 
 MY_P="WepDecrypt-${PV}"
 DESCRIPTION="Enhanced version of WepAttack a tool for breaking 802.11 WEP keys"
@@ -23,4 +23,3 @@ src_install() {
 	doman doc/wepdecrypt.1.gz
 	dodoc CHANGELOG README doc/manual.html doc/manual.txt
 }
-
