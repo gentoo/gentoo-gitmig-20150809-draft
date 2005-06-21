@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.61 2005/06/18 23:17:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.62 2005/06/21 15:23:23 flameeyes Exp $
+
+*djbdns-1.05-r15 (21 Jun 2005)
+
+  21 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +djbdns-1.05-r15.ebuild:
+  Updated to patch test22 from fefe for IPv6 support, thanks to Kalin
+  Kozhuharov in bug #96660.
 
   18 Jun 2005; Jason Wever <weeve@gentoo.org> djbdns-1.05-r14.ebuild:
   Stable on SPARC.
