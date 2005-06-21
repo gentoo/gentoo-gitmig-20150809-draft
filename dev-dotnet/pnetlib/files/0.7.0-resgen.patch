@@ -1,0 +1,11 @@
+--- configure.in.orig	2005-01-16 08:18:30.586416224 +0100
++++ configure.in	2005-01-16 08:20:48.656426392 +0100
+@@ -143,7 +143,7 @@
+ 
+ dnl Find the .NET resource generator to use.
+ if test "$MSTOOLS" = "no"; then
+-	AC_PATH_PROG(RESGEN, resgen,, $PNET_PATH/resgen:${prefix}/bin:$PATH)
++	AC_PATH_PROG(RESGEN, resgen.pnet,, $PNET_PATH/resgen.pnet:${prefix}/bin:$PATH)
+ 	if test "$RESGEN" = "" ; then
+ 		echo '**************************************************************'
+ 		echo "Portable.NET's or Microsoft's resgen is required to build."

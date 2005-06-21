@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/pnetc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/ChangeLog,v 1.20 2005/02/06 16:09:20 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/ChangeLog,v 1.21 2005/06/21 23:41:17 urilith Exp $
+
+*pnetc-0.7.0 (21 Jun 2005)
+
+  21 Jun 2005; Michael Tindal <urilith@gentoo.org> metadata.xml,
+  +pnetc-0.7.0.ebuild:
+  Version bump.
 
   06 Feb 2005; Rainer Groesslinger <scandium@gentoo.org> :
   fix use of DESTDIR (bug #80941)
