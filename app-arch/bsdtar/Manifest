@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 afec809b169074e5d5b0803e4f8f5ec8 metadata.xml 428
-MD5 202e25a6f6fe2efa621a9d8dd67b7f5b ChangeLog 727
-MD5 83c17c2a0d9a0ea0b66ec0271c152b18 bsdtar-1.02.027-r1.ebuild 929
+MD5 313b32a1625c70ffeafd9e5c33f57837 ChangeLog 882
+MD5 64caac79e7778366634a05fb7178532a bsdtar-1.02.027-r1.ebuild 1019
 MD5 7cf5fd7cad3a8974a71ce2e1622824c5 files/digest-bsdtar-1.02.027-r1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCspYFj5H05b2HAEkRAkb9AKCBAOGZB+m4D6Laaq0bLCwdwJBJQwCeMdrB
-p2EbYK7DB90mic7rqvxcg30=
-=NBKA
+iD8DBQFCuA1dj5H05b2HAEkRAs+NAKCD7R5giWikBoEnWsiaZOgX1rZzGACaAhRw
+uakMqxu/8/YTERjic62/An0=
+=Ojeb
 -----END PGP SIGNATURE-----
