@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1.ebuild,v 1.2 2005/06/21 00:32:56 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1.ebuild,v 1.3 2005/06/21 00:35:32 ribosome Exp $
 
 inherit eutils
 
@@ -29,7 +29,8 @@ RDEPEND="virtual/x11
 	)
 	tcltk? ( >=dev-lang/tk-8.4
 		>=dev-lang/tcl-8.4 )
-	Xaw3d? ( x11-libs/Xaw3d )"
+	Xaw3d? ( x11-libs/Xaw3d )
+	ocaml? ( dev-lang/ocaml )"
 
 DEPEND="${RDEPEND}
 	ifc? ( dev-lang/ifc )
