@@ -1,3 +1,13 @@
-MD5 6e4a89a51b50d9e847d3299a6b796cdf libswf-0.99.ebuild 902
-MD5 00e2f3373312afae45157fcbb1dfd022 ChangeLog 1821
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0bc5aa45509b480de452aa0e09a5451d ChangeLog 2027
+MD5 58328e5f298c10c3acf9470f7b39f6ad libswf-0.99.ebuild 956
 MD5 da1f46d6038291fc16289587f34f034b files/digest-libswf-0.99 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCuGpL5mJXAu5GbtIRAuXfAJ0VZcT8JAuHEeJzPEh/VVJjkxij3wCZAbpL
+Kl8NLUVEQ2vr9ImoRcpzTR4=
+=skxo
+-----END PGP SIGNATURE-----

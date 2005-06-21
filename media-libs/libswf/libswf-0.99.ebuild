@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/libswf-0.99.ebuild,v 1.18 2004/07/20 14:40:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/libswf-0.99.ebuild,v 1.19 2005/06/21 19:24:24 kugelfang Exp $
+
+inherit multilib
 
 S=${WORKDIR}/dist
 DESCRIPTION="A library for flash movies"
@@ -9,8 +11,10 @@ HOMEPAGE="ftp://ftp.sgi.com/sgi/graphics/grafica/flash/index.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 -sparc ppc hppa -mips amd64"
+KEYWORDS="x86 -sparc -ppc -hppa -mips amd64"
 IUSE=""
+
+has_multilib_profile && ABI=x86
 
 DEPEND="virtual/libc
 	app-arch/unzip"
