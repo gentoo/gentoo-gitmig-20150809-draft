@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.63 2005/06/20 16:18:44 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.64 2005/06/21 06:27:20 hansmi Exp $
+
+  21 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> sudo-1.6.8_p9.ebuild:
+  Stable on ppc (#96618).
 
   20 Jun 2005; Tavis Ormandy <taviso@gentoo.org> sudo-1.6.8_p9.ebuild:
   depend on virtual/mta
