@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.50 2005/06/18 15:57:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.51 2005/06/21 05:22:39 corsair Exp $
+
+  21 Jun 2005; Markus Rothe <corsair@gentoo.org> anthy-6300.ebuild,
+  anthy-6300d.ebuild:
+  added ~ppc64
 
   18 Jun 2005; Mamoru KOMACHI <usata@gentoo.org> anthy-6300.ebuild,
   anthy-6300d.ebuild:
