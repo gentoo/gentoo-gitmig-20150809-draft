@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.7.1-r1.ebuild,v 1.1 2005/05/29 14:45:03 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.7.1-r1.ebuild,v 1.2 2005/06/21 08:46:15 greg_g Exp $
 
 inherit kde eutils
 
@@ -27,7 +27,7 @@ need-kde 3.2
 src_unpack() {
 	kde_src_unpack
 
-	# See bug 1210755 on sourceforge.net
+	# See bug 1210755 on sourceforge.net. Fixed in next version.
 	epatch "${FILESDIR}/${P}-csv-export.patch"
 }
 
