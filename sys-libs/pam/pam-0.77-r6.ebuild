@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r6.ebuild,v 1.4 2005/05/16 00:50:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r6.ebuild,v 1.5 2005/06/21 18:54:19 kugelfang Exp $
 
 PATCH_LEVEL="1.7"
 BDB_VER="4.1.25"
@@ -95,6 +95,12 @@ src_unpack() {
 		cp -f "${readme}" doc/txts/README.$(dirname "${readme}" | \
 			sed -e 's|^modules/||')
 	done
+
+	# Fix building of sys-libs/pam for no-symlink amd64 profiles
+	# BUG #96385
+	sed -i \
+		-e "s|^\(MODULE_SIMPLE_EXTRALIBS=.*\/usr\/\)lib\/|\1$(get_libdir)\/|" \
+		${S}/modules/pam_cracklib/Makefile || die sed failed
 
 	cp /usr/share/automake/install-sh . || die
 	export WANT_AUTOCONF=2.5
