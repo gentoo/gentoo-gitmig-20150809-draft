@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.70 2005/06/06 19:04:05 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.71 2005/06/21 11:46:41 dragonheart Exp $
+
+  21 Jun 2005; Daniel Black <dragonheart@gentoo.org> gnutls-1.0.25.ebuild,
+  gnutls-1.2.3.ebuild, gnutls-1.2.3-r1.ebuild, gnutls-1.2.4.ebuild:
+  added dropped keywords
 
   06 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> gnutls-1.2.4.ebuild:
   Marked ~s390, BUG #93960.
