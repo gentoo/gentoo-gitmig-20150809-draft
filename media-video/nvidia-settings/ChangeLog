@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.12 2005/06/12 12:15:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.13 2005/06/21 08:15:45 azarah Exp $
+
+*nvidia-settings-1.0.20050525 (21 Jun 2005)
+
+  21 Jun 2005; Martin Schlemmer <azarah@gentoo.org>
+  +nvidia-settings-1.0.20050525.ebuild:
+  Update version. Change version scheme to make updates easier. Include NVCtrl
+  lib and headers, bug #80427.
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org>
   nvidia-settings-1.0.6111.ebuild, nvidia-settings-1.0.6629.ebuild,
