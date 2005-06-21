@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchatosd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.13 2005/04/22 14:49:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.14 2005/06/21 13:18:26 swegener Exp $
+
+  21 Jun 2005; Sven Wegener <swegener@gentoo.org> xchatosd-5.18.ebuild:
+  Adjusted dependencies to work with net-irc/xchat-gnome.
 
   22 Apr 2005; Sven Wegener <swegener@gentoo.org>
   -files/5.12-return-values.patch, -xchatosd-5.12.ebuild,

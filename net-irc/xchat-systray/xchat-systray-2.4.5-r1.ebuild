@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r1.ebuild,v 1.6 2005/06/08 16:00:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r1.ebuild,v 1.7 2005/06/21 13:20:11 swegener Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -17,7 +17,10 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0.3
 	>=x11-libs/gtk+-2.0.3
-	>=net-irc/xchat-2.0.3"
+	|| (
+		>=net-irc/xchat-2.0.3
+		>=net-irc/xchat-gnome-0.4
+	)"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
