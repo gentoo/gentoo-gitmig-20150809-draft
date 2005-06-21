@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/wm2-4.ebuild,v 1.4 2005/05/10 09:07:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/wm2-4.ebuild,v 1.5 2005/06/21 19:58:28 kugelfang Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 
 src_unpack() {
 	unpack ${A}
