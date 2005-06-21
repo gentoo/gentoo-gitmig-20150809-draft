@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/torsmo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.33 2005/06/06 11:58:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.34 2005/06/21 11:01:17 dragonheart Exp $
+
+*torsmo-0.18-r5 (21 Jun 2005)
+
+  21 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/torsmo-0.18.avgsmp.patch, +torsmo-0.18-r5.ebuild:
+  another small patch for a small feature of unknown origin. bug #96601 thanks
+  to Brenden Matthews
 
 *torsmo-0.18-r4 (06 Jun 2005)
 
