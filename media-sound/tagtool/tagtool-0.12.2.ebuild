@@ -1,8 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.11.1.ebuild,v 1.4 2005/06/21 01:08:18 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.12.2.ebuild,v 1.1 2005/06/21 01:08:18 allanonjl Exp $
 
-inherit eutils
 
 DESCRIPTION="Audio Tag Tool Ogg/Mp3 Tagger"
 HOMEPAGE="http://pwp.netcabo.pt/paol/tagtool/"
@@ -12,22 +11,13 @@ LICENSE="GPL-2"
 SLOT="0"
 
 #-sparc: 0.10 doesn't browse files properly
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="vorbis mp3"
 
 DEPEND=">=x11-libs/gtk+-2.4.0-r1
 	>=gnome-base/libglade-2.4.0
 	mp3? ( >=media-libs/id3lib-3.8.3-r3 )
 	vorbis? ( >=media-libs/libvorbis-1.0.1 )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# fix for #93907
-	epatch ${FILESDIR}/tagtool-gmodule.patch
-	autoconf || die "autoconf failed"
-}
 
 src_compile() {
 	local myconf
