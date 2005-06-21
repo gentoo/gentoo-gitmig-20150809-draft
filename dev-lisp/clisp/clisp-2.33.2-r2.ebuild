@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33.2-r2.ebuild,v 1.5 2005/06/14 23:17:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33.2-r2.ebuild,v 1.6 2005/06/21 20:32:50 blubb Exp $
 
 inherit flag-o-matic common-lisp-common-2 eutils
 
@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${PV}/fastcgi-Makefile.in-gentoo.patch || die
 	epatch ${FILESDIR}/${PV}/glibc-linux.lisp-sigpause-gentoo.patch || die
+	epatch ${FILESDIR}/${PV}/compilefix.patch || die
 }
 
 src_compile() {

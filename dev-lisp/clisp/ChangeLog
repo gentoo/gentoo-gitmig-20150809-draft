@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.35 2005/06/14 23:17:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.36 2005/06/21 20:32:50 blubb Exp $
+
+  21 Jun 2005; Simon Stelling <blubb@gentoo.org>
+  +files/2.33.2/compilefix.patch, clisp-2.33.2-r2.ebuild:
+  fix bug 90911
 
   14 Jun 2005; <mkennedy@gentoo.org> clisp-2.33.2-r2.ebuild:
   Keywording ~sparc
