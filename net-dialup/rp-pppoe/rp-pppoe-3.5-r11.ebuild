@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r11.ebuild,v 1.2 2005/05/11 21:20:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r11.ebuild,v 1.3 2005/06/21 05:25:36 mrness Exp $
 
 inherit eutils
 
@@ -73,8 +73,6 @@ src_install () {
 		datadir=/usr/share/doc/${PF}/ || die "gui install failed"
 		dosym /usr/share/doc/${PF}/tkpppoe /usr/share/tkpppoe
 	fi
-
-	exeinto /etc/init.d ; newexe ${FILESDIR}/rp-pppoe.rc rp-pppoe
 }
 
 pkg_postinst() {
