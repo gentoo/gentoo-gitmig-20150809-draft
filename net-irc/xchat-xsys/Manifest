@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5a7ea5c8da27105b8f973b33d7c599f4 ChangeLog 4348
 MD5 f0b1aadf9019a28c3ba07db0e7d4dba5 files/2.0.6-localisation.patch 357
 MD5 c4b3f86959972270bb4a3c32ce850dd9 files/digest-xchat-xsys-2.0.5 62
@@ -5,3 +8,10 @@ MD5 cfd00aeca2a4bbf333f23e4f44bb9feb files/digest-xchat-xsys-2.0.6-r1 62
 MD5 42cef2da59c81f792584c3f9048a1930 metadata.xml 250
 MD5 b21ccad0502c49e93951e9c41b3882f2 xchat-xsys-2.0.5.ebuild 1043
 MD5 1b24c90c9a50892188a7d5ceea9a4e32 xchat-xsys-2.0.6-r1.ebuild 1118
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCuBLhI1lqEGTUzyQRAn2IAJ0b7gE+m6GiPgAjy8AQtQd/Q6zfTQCgw0/l
+rG1lksDApqlcnTV8ZHSEKnI=
+=Srih
+-----END PGP SIGNATURE-----
