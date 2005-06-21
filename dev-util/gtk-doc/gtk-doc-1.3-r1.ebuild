@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.3-r1.ebuild,v 1.7 2005/06/17 21:06:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.3-r1.ebuild,v 1.8 2005/06/21 09:54:16 leonardop Exp $
 
 inherit eutils elisp-common gnome.org
 
@@ -19,8 +19,7 @@ DEPEND=">=app-text/openjade-1.3.1
 	>=app-text/docbook-dsssl-stylesheets-1.40
 	>=dev-lang/perl-5.6
 	>=dev-libs/libxml2-2.3.6
-	dev-libs/libxslt
-	!app-text/xhtml1"
+	dev-libs/libxslt"
 
 src_unpack() {
 	unpack ${A}
