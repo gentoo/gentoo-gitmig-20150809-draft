@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.164 2005/06/21 12:07:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.165 2005/06/21 13:22:03 swegener Exp $
+
+  21 Jun 2005; Sven Wegener <swegener@gentoo.org> xchat-2.4.1-r1.ebuild,
+  xchat-2.4.3.ebuild, xchat-2.4.4.ebuild:
+  Added blocker on net-irc/xchat-gnome.
 
 *xchat-2.4.4 (21 Jun 2005)
 
