@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f6af126f8a55159058b94f27ed894dd3 mythdvd-0.17.ebuild 819
 MD5 cd97e18580c7693cbf8704ae7633a7ab mythdvd-0.18.1.ebuild 698
 MD5 c14ef71b0e524a285d913671a66bcc40 ChangeLog 3242
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythdvd-0.18.1 72
 MD5 385db2c60a8bb48b5ac6264082372df6 files/digest-mythdvd-0.17 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCuKBk2G5bA0cA/ScRAmisAJ488f8lUoMkS72Y83YEtSGOixkocACfXaMs
+BxEta4s8lqaBUNgpTyW+BHs=
+=8brn
+-----END PGP SIGNATURE-----
