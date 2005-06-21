@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gquilt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.1 2005/06/20 13:25:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.2 2005/06/21 07:25:57 dholm Exp $
+
+  21 Jun 2005; David Holm <dholm@gentoo.org> gquilt-0.06.ebuild:
+  Added to ~ppc.
 
 *gquilt-0.06 (20 Jun 2005)
 
