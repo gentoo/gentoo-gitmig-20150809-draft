@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/adm8211/adm8211-20050323.ebuild,v 1.2 2005/06/21 12:04:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/adm8211/adm8211-20050323.ebuild,v 1.3 2005/06/21 12:13:58 genstef Exp $
 
 inherit linux-mod
 
@@ -12,7 +12,7 @@ SRC_URI="http://aluminum.sourmilk.net/adm8211/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE=""
 RDEPEND="net-wireless/wireless-tools"
