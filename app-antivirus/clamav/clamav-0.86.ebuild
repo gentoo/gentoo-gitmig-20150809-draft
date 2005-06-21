@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.86_rc1.ebuild,v 1.2 2005/06/18 20:35:18 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.86.ebuild,v 1.1 2005/06/21 01:16:38 ticho Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
-MY_P=${P/_/}
 DESCRIPTION="Clam Anti-Virus Scanner"
 HOMEPAGE="http://www.clamav.net/"
-SRC_URI="mirror://sourceforge/clamav/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,8 +24,6 @@ RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-clamav )
 	sys-apps/grep"
 PROVIDE="virtual/antivirus"
-
-S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if use milter; then

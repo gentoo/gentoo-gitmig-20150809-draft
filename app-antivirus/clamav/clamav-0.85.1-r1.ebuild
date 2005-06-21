@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85.1-r1.ebuild,v 1.9 2005/06/18 10:51:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85.1-r1.ebuild,v 1.10 2005/06/21 01:16:38 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -49,7 +49,11 @@ src_compile() {
 	myconf="${myconf} --disable-zlib-vcheck"
 	# use id utility instead of /etc/passwd parsing (bug #72540)
 	myconf="${myconf} --enable-id-check"
-	use milter && myconf="${myconf} --enable-milter"
+	use milter && {
+		myconf="${myconf} --enable-milter"
+		use mailwrapper && \
+			myconf="${myconf} --with-sendmail=/usr/sbin/sendmail.sendmail"
+	}
 
 	econf ${myconf} --with-dbdir=/var/lib/clamav || die
 	emake || die
