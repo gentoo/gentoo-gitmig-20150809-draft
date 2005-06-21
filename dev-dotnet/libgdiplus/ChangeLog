@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.35 2005/06/06 08:19:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.36 2005/06/21 23:54:38 latexer Exp $
+
+*libgdiplus-1.1.8 (21 Jun 2005)
+
+  21 Jun 2005; Peter Johanson <latexer@gentoo.org>
+  +files/libgdiplus-1.1.8-giflib.diff, +libgdiplus-1.1.8.ebuild:
+  Bumpity bump.
 
   06 Jun 2005; David Holm <dholm@gentoo.org> libgdiplus-1.1.7-r1.ebuild:
   Added to ~ppc.
