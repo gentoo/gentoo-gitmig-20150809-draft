@@ -1,6 +1,16 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.84 2005/06/07 17:27:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.85 2005/06/21 21:38:10 seemant Exp $
+
+*mit-krb5-1.4.1 (21 Jun 2005)
+
+  21 Jun 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/mit-krb5-1.4.1-lazyldflags.patch, +mit-krb5-1.4.1.ebuild:
+  version bump, which also fixes the db-4 specific issue. I do not like it,
+  for the record, but then the sys-libs/db package has always been a thorn in
+  gentoo's side, so what else is new. Fixes bug #95549 by Justin Guyett
+  <justin-gentoo@soze.net>.  Will probably not pass make test, but I'm working
+  on that.
 
 *mit-krb5-1.4-r1 (07 Jun 2005)
 

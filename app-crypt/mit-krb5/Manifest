@@ -1,7 +1,8 @@
+MD5 9062be8ec5d6e98e8125b4e38226cdda ChangeLog 14845
 MD5 825f0126519fefa7b4e9fb330c9e81b3 mit-krb5-1.3.6-r2.ebuild 4276
 MD5 f3ea9dd1d52f37139fbc4d101044f821 metadata.xml 241
-MD5 0d2252776ec251b70b5708b9388cf838 ChangeLog 14378
 MD5 2151d08120cba1de5cc848923f72e74d mit-krb5-1.4-r1.ebuild 2418
+MD5 c7b889b317336ca58b4585b07e15ec97 mit-krb5-1.4.1.ebuild 2388
 MD5 186bd4cbeff944079f44105d4c962c80 files/kdc.conf 438
 MD5 fbb2a86038ab98ca0c7493ad9d55ace9 files/krb5.conf 541
 MD5 c451148d1b3e182a19a8f9084d0b55b8 files/krb5.confd 233
@@ -15,3 +16,5 @@ MD5 07a38334b351973026f8616b79662cfb files/mit-krb5-1.4-2005-001.patch 2758
 MD5 ae7e2bde0b20e580f49d5a3c524b445b files/mit-krb5-1.4-lazyldflags.patch 509
 MD5 1db67f7788b8dbae908d29565c7fca2b files/mit-krb5-1.3.6-gcc4.patch 1139
 MD5 a02d4871edc472776ad7ccc23fb8331d files/digest-mit-krb5-1.4-r1 65
+MD5 ff575ccdd0fff03962bb725872d4d51a files/digest-mit-krb5-1.4.1 67
+MD5 ae7e2bde0b20e580f49d5a3c524b445b files/mit-krb5-1.4.1-lazyldflags.patch 509
