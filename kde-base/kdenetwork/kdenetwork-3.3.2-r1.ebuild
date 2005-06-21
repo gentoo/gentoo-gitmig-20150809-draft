@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.2-r1.ebuild,v 1.3 2005/06/20 14:56:11 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.2-r1.ebuild,v 1.4 2005/06/21 06:04:35 corsair Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE network apps: kopete, kppp, kget..."
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc x86"
 IUSE="slp samba wifi ssl"
 
 DEPEND="~kde-base/kdebase-${PV}
