@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0e7d300cbed74dadfa28fadb79c3bafc jpilot-backup-0.50.ebuild 761
 MD5 ca547366630ae78860ca26678db78046 ChangeLog 690
 MD5 0e09c69566d6d8eeb61f0ac82e61bd31 metadata.xml 252
 MD5 66e2f2ff1e3f30631b2efd85fe427dba files/digest-jpilot-backup-0.50 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCt3+WBXaUFmZvwyMRAiA6AJ9cWGXYGYDH+mbldGeM9RczwYKbRACeK0Wd
+SmmSCRdVGQ5Ok1mh92RsYWU=
+=37Zm
+-----END PGP SIGNATURE-----

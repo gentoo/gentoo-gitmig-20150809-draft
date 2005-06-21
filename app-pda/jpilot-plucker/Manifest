@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 975475adcf74b7ab9ab09b5237383271 jpilot-plucker-0.01.ebuild 788
 MD5 4376a1cea8b990ff0ac9071d2ff5d23b ChangeLog 607
 MD5 0e09c69566d6d8eeb61f0ac82e61bd31 metadata.xml 252
 MD5 fc4181452faec4aef813d67a7840ec8d files/digest-jpilot-plucker-0.01 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCt4CpBXaUFmZvwyMRAndbAJsFklxqSle5UmqNy6W7QoDRcHF3GQCfTosl
+zYF+k07GBc62yslYqeZVawE=
+=3aNm
+-----END PGP SIGNATURE-----
