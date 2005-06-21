@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9d1812480ad7e4216a4e22737cc530a5 cwirc-1.8.8.ebuild 962
-MD5 d007179a288eae3c9e81311c5a522bac ChangeLog 2345
-MD5 18d8be7bfeeebf17ad3e91c3cc533726 metadata.xml 427
-MD5 ff0ee0746cfc1deb98185aabe6be599f files/digest-cwirc-1.8.8 63
+MD5 be6ee85da25ca7d05a21fed4ecbb6c02 ChangeLog 2474
+MD5 d57607546c9d9d7d80b17dab1663394e cwirc-1.8.8.ebuild 1000
 MD5 7c240ef73cd9a53241026c38c5c8b36f files/cwirc-1.7.1-gentoo.patch 662
+MD5 ff0ee0746cfc1deb98185aabe6be599f files/digest-cwirc-1.8.8 63
+MD5 18d8be7bfeeebf17ad3e91c3cc533726 metadata.xml 427
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCiMx6I1lqEGTUzyQRAiDjAKDJoCFhxGRE95kRc1VGzRXMZSYnegCeJ6+w
-SiFQQMMM58AE6fvaz8Swtto=
-=PA8A
+iD8DBQFCuBW/I1lqEGTUzyQRAjFbAJ9jtGgGzyE9yr64UPiHDiTR2PHnmwCgpCAY
+0kwxVuORqMRSLkL8lRvUXXs=
+=agfz
 -----END PGP SIGNATURE-----

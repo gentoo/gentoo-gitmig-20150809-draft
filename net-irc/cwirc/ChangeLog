@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/cwirc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/ChangeLog,v 1.17 2005/05/16 16:37:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/ChangeLog,v 1.18 2005/06/21 13:27:02 swegener Exp $
+
+  21 Jun 2005; Sven Wegener <swegener@gentoo.org> cwirc-1.8.8.ebuild:
+  Adjusted dependencies to work with net-irc/xchat-gnome.
 
   16 May 2005; Sven Wegener <swegener@gentoo.org> cwirc-1.8.8.ebuild:
   Added cross-compile support.

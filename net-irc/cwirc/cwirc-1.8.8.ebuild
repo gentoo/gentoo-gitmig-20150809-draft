@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-1.8.8.ebuild,v 1.3 2005/05/16 16:37:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-1.8.8.ebuild,v 1.4 2005/06/21 13:27:02 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,10 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+
-	>=net-irc/xchat-2.0.1"
+	|| (
+		>=net-irc/xchat-2.0.1
+		>=net-irc/xchat-gnome-0.4
+	)"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
