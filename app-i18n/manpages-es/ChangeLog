@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/manpages-es
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/ChangeLog,v 1.7 2005/04/14 12:46:16 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/ChangeLog,v 1.8 2005/06/21 14:08:07 ferdy Exp $
+
+*manpages-es-1.55 (21 Jun 2005)
+
+  21 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +manpages-es-1.55.ebuild:
+  version bump, wrt bug #96686. Reported by: Francisco Lloret
+  <fcolloret@wanadoo.es>
 
   14 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org> metadata.xml,
   manpages-es-1.28.ebuild:
