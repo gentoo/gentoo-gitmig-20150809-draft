@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1242 2005/06/22 22:03:03 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1243 2005/06/22 22:47:09 vanquirius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -763,6 +763,7 @@ net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-servers/fnord:diet - Compile and link with dietlibc
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/ndiswrapper:4kstacks - Allow the use of 4kstacks in ndiswrapper for some users
+net-wireless/wepattack:john - Build with johntheripper support
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa_supplicant:gsm - Add support for EAP-SIM authentication algorithm
 net-www/apache:distcache - Enable SSL distcache support
