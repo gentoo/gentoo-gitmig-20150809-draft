@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.19 2005/06/14 16:27:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.20 2005/06/22 14:05:06 wolf31o2 Exp $
+
+  22 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.0-r2.ebuild,
+  hwsetup-1.0-r3.ebuild:
+  Added ~sparc on request of gustavoz.
 
 *hwsetup-1.0-r3 (14 Jun 2005)
 

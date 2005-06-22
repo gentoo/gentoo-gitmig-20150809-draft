@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwdata-knoppix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.21 2005/05/31 20:41:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.22 2005/06/22 14:03:05 wolf31o2 Exp $
+
+  22 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  hwdata-knoppix-0.107-r1.ebuild:
+  Added ~sparc on request of gustavoz.
 
   31 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   hwdata-knoppix-0.107-r1.ebuild:

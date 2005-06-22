@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r2.ebuild,v 1.3 2005/06/16 16:54:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r2.ebuild,v 1.4 2005/06/22 14:03:52 wolf31o2 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://developer.linuxtag.net/knoppix/sources/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha -sparc -mips ~ppc64"
+KEYWORDS="~alpha ~amd64 -mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="livecd nls minimal python"
 
 RDEPEND="!livecd? ( !minimal? ( dev-libs/newt ) )
