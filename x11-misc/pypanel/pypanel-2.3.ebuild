@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-2.3.ebuild,v 1.1 2005/05/26 16:36:13 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-2.3.ebuild,v 1.2 2005/06/22 23:49:34 smithj Exp $
 
 inherit distutils eutils
 
@@ -9,7 +9,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="PyPanel is a lightweight panel/taskbar for X11 window managers."
 HOMEPAGE="http://pypanel.sourceforge.net"
-SRC_URI="mirror://sourceforge/pypanel/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
