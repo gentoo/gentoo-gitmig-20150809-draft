@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.45 2005/06/17 17:47:02 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.46 2005/06/22 10:40:24 herbs Exp $
+
+  22 Jun 2005; Herbie Hopkins <herbs@gentoo.org> fltk-1.1.6.ebuild:
+  Add multilib fix to this version too.
 
 *fltk-1.1.6 (17 Jun 2005)
 
