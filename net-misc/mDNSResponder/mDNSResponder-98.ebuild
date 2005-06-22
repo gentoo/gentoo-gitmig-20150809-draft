@@ -1,19 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-98.ebuild,v 1.8 2005/05/29 16:19:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-98.ebuild,v 1.9 2005/06/22 14:00:02 greg_g Exp $
 
 inherit eutils
 
-DESCRIPTION="The mDNSResponder project is a component of Rendezvous, Apple's ease-of-use IP networking initiative."
-HOMEPAGE="http://developer.apple.com/macosx/rendezvous/"
+DESCRIPTION="The mDNSResponder project is a component of Bonjour, Apple's initiative for zero-configuration networking."
+HOMEPAGE="http://developer.apple.com/networking/bonjour/index.html"
 SRC_URI="http://helios.et.put.poznan.pl/~jstachow/pub/${P}.tar.gz"
-
 LICENSE="APSL-2"
-SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~sparc ~x86"
-IUSE=""
 
-DEPEND="virtual/libc"
+SLOT="0"
+KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~sparc x86"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
