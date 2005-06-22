@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.9 2005/05/20 15:51:41 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.10 2005/06/22 11:30:11 ferdy Exp $
 
 #
 # Original Authors: Fernando J. Pereda <ferdy@gentoo.org>
@@ -16,6 +16,18 @@
 # IUSE="mailwrapper" or create RDEPENDS for mailwrapper as used to be the case.
 # As you can see below, these are now set by this eclass. This rule also holds
 # true for PROVIDE="virtual/mta".
+#
+##
+# Functions available for ebuilds:
+#
+#  mailer_get_current()  - Returns the current profile (i.e. postfix-2.2.3)
+#  mailer_install_conf() - Installs the profile file in ${1} or
+#							${FILESDIR}/mailer.conf if ${1} is not specified.
+#  mailer_set_profile()  - Sets the current profile to ${1} or to ${P} if ${1}
+#							is not specified.
+#  mailer_wipe_confs()   - Removes unused profiles (i.e. the profile exists but
+#  							the package is no longer available)
+##
 
 ECLASS="mailer"
 INHERITED="$INHERITED $ECLASS"
@@ -88,11 +100,11 @@ mailer_pkg_postinst() {
 			mailer_set_profile
 		else
 			einfo " "
-			einfo "Use either net-mail/mailer-config or app-admin/eclectic to change"
+			einfo "Use either net-mail/mailer-config or app-admin/eselect to change"
 			einfo "to this mailer profile:"
 			einfo " "
 			einfo "    mailer-config --set-profile ${P}"
-			einfo "    eclectic mailer set ${P}"
+			einfo "    eselect mailer set ${P}"
 			einfo " "
 		fi
 	fi
