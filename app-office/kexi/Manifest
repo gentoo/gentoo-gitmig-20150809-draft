@@ -1,6 +1,4 @@
-MD5 8dcaf499221d59e13d10f6d0ee9f4eb0 ChangeLog 790
-MD5 74405334c8f2a6c88fc1980e2e1f7b72 kexi-1.4.0_rc1.ebuild 1062
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 MD5 a9613ec5f4b9e3c72ebc2f2e6c75ab74 kexi-1.4.0.ebuild 1061
-MD5 115a377f43af7c4116229b38631f80bc files/digest-kexi-1.4.0_rc1 69
+MD5 8dcaf499221d59e13d10f6d0ee9f4eb0 ChangeLog 790
 MD5 91f33849abb334a913f8ac16f9f916aa files/digest-kexi-1.4.0 68
