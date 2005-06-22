@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>zzam@gentoo.org</email>
+		<name>Matthias Schwarzott</name>
+	</maintainer>
+	<longdescription lang="de">dvbsnoop is a DVB / MPEG stream analyzer program, which enables you to watch (live) stream information in human readable form.</longdescription>
+</pkgmetadata>
