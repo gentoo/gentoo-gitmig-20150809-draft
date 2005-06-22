@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.39 2005/06/17 21:18:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.40 2005/06/22 15:58:58 ka0ttic Exp $
+
+*libevent-1.1a (22 Jun 2005)
+
+  22 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> -libevent-1.1.ebuild,
+  +libevent-1.1a.ebuild:
+  Version bump for bug 96700; Don't waste time building tests/examples. Also
+  added a src_test so that the tests are actually run.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> libevent-1.0e.ebuild:
   Stable on ppc.
