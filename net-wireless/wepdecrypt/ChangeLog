@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wepdecrypt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.1 2005/06/21 12:44:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.2 2005/06/22 15:22:26 dholm Exp $
+
+  22 Jun 2005; David Holm <dholm@gentoo.org> wepdecrypt-0.6.ebuild:
+  Added to ~ppc.
 
 *wepdecrypt-0.6 (21 Jun 2005)
 
