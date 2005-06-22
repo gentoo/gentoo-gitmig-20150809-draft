@@ -17,7 +17,7 @@ MD5 3301062e0eb044b7ee2002b463809cb9 gcc-3.3.5.20050130.ebuild 3649
 MD5 575e7bd3eccd6af2f423baaab72e5c1f gcc-3.3.6.ebuild 2946
 MD5 df39446c98557b815bf5d3d1e1c7e510 gcc-3.4.4.ebuild 4791
 MD5 22583bfbc351f0715fefcf199efa7c79 gcc-3.4.1-r3.ebuild 31176
-MD5 50c6ff5aba9160ccfc43cd3291e54fd5 gcc-3.4.3-r1.ebuild 5303
+MD5 646e8442168cccac8e716a42df389617 gcc-3.4.3-r1.ebuild 5321
 MD5 6aa36c9b1ad52c119d0439c9ed385186 gcc-3.4.3.20050110-r1.ebuild 5273
 MD5 60bb772b074a2a4a48032178a6c8cacc gcc-3.4.3.20050110-r2.ebuild 5083
 MD5 926048c09b54755ca4d0bc3a2eb7bdda gcc-4.0.0.ebuild 1748
@@ -40,7 +40,7 @@ MD5 b29f3bde3e23f17cd9a9bb4a5b026ea1 files/digest-gcc-3.3.5.20050130-r1 620
 MD5 9e216fb231a24884fe548b31864296b8 files/digest-gcc-3.3.5.20050130-r2 620
 MD5 98ad527286a6b39ce8c72f5c61362469 files/digest-gcc-3.3.6 453
 MD5 c6ea8a92bac6d2638c54c011f98bc5b8 files/digest-gcc-3.4.1-r3 442
-MD5 9b68e03bb1a6a1494399c8a6537bb766 files/digest-gcc-3.4.3-r1 527
+MD5 1f5d41f2617d2f72b10ecfa350537446 files/digest-gcc-3.4.3-r1 607
 MD5 7f2bf81dfe5bd01ac373d19b599e072f files/digest-gcc-3.4.3.20050110-r1 616
 MD5 a98425f9d4389f8df683d7f809563d8d files/digest-gcc-3.4.3.20050110-r2 616
 MD5 f92627152fa37ad20619e9c6c74a28e4 files/digest-gcc-3.4.4 450
@@ -134,7 +134,7 @@ MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCtivNgIKl8Uu19MoRAjhvAJ9G3Zq8CaagN19Ln6jSZENcm/OpigCffDZ+
-LMdYOzwGWCccbOvX5UBkEps=
-=yIU2
+iD8DBQFCuOxxgIKl8Uu19MoRAl+rAJ9mjiu6+7BvnOyJFpgbAWjCOseo9QCfZstF
+Cv1aAmaluFjzyAhgHQId9BY=
+=L1KB
 -----END PGP SIGNATURE-----
