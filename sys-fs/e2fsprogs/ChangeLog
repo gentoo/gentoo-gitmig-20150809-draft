@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.57 2005/05/30 02:46:38 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.58 2005/06/22 20:14:04 hansmi Exp $
+
+  22 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  e2fsprogs-1.37-r1.ebuild:
+  Stable on ppc (#96727).
 
   29 May 2005; <solar@gentoo.org> e2fsprogs-1.37.ebuild:
   - update sys-fs/e2fsprogs to use libc expanded variable elibc_uclibc vs uclibc
