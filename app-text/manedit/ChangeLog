@@ -1,6 +1,11 @@
 # ChangeLog for app-text/manedit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.17 2005/04/24 11:40:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.18 2005/06/22 03:45:09 fuzzyray Exp $
+
+*manedit-0.6.1 (22 Jun 2005)
+
+  22 Jun 2005; Paul Varner <fuzzyray@gentoo.org> +manedit-0.6.1.ebuild:
+  Revision bump to fix Bug 90407
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> manedit-0.5.10.ebuild:
   Stable on ppc.
