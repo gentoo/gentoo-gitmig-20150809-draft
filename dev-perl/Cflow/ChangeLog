@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Cflow
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/ChangeLog,v 1.1 2005/06/22 14:55:48 strerror Exp $
+
+*Cflow-1.051 (22 Jun 2005)
+
+  22 Jun 2005; Benjamin Smee <strerror@gentoo.org> +metadata.xml,
+  +Cflow-1.051.ebuild:
+  Initial import.
+
