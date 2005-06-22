@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/lurker
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/ChangeLog,v 1.1 2005/06/22 10:17:37 strerror Exp $
+
+*lurker-1.3 (22 Jun 2005)
+
+  22 Jun 2005; Benjamin Smee <strerror@gentoo.org> +metadata.xml,
+  +lurker-1.3.ebuild:
+  Initial Import. Based on ebuild by George Clark.
+
