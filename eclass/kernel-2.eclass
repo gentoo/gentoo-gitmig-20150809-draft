@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.125 2005/05/15 20:30:04 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.126 2005/06/22 18:02:40 dsd Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -36,6 +36,11 @@
 #
 # K_DEFCONFIG			- Allow specifying a different defconfig target.
 #						  If length zero, defaults to "defconfig".
+# K_WANT_GENPATCHES		- Apply genpatches to kernel source. Provide any
+# 						  combination of "base" and "extras"
+# K_GENPATCHES_VER		- The version of the genpatches tarball(s) to apply.
+#						  A value of "5" would apply genpatches-2.6.12-5 to
+#						  my-sources-2.6.12.ebuild
 
 # H_SUPPORTEDARCH		- this should be a space separated list of ARCH's which
 #						  can be supported by the headers ebuild
@@ -71,6 +76,17 @@ LICENSE="GPL-2"
 
 #Eclass functions only from here onwards ...
 #==============================================================
+handle_genpatches() {
+	local tarball
+	[[ -z ${K_WANT_GENPATCHES} || -z ${K_GENPATCHES_VER} ]] && return -1
+
+	for i in ${K_WANT_GENPATCHES} ; do
+		tarball="genpatches-${OKV}-${K_GENPATCHES_VER}.${i}.tar.bz2"
+		GENPATCHES_URI="${GENPATCHES_URI} mirror://gentoo/${tarball}"
+		UNIPATCH_LIST_GENPATCHES="${UNIPATCH_LIST_GENPATCHES} ${DISTDIR}/${tarball}"
+	done
+}
+
 detect_version() {
 	# this function will detect and set
 	# - OKV: Original Kernel Version (2.6.0/2.6.0-test11)
@@ -185,6 +201,8 @@ detect_version() {
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 	fi
+
+	handle_genpatches
 }
 
 kernel_is() {
@@ -865,8 +883,8 @@ headers___fix() {
 kernel-2_src_unpack() {
 	universal_unpack
 
-	[[ -n ${UNIPATCH_LIST} ]] || [[ -n ${UNIPATCH_LIST_DEFAULT} ]] && \
-		unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST}"
+	[[ -n ${UNIPATCH_LIST} || -n ${UNIPATCH_LIST_DEFAULT} || -n ${UNIPATCH_LIST_GENPATCHES} ]] && \
+		unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST_GENPATCHES} ${UNIPATCH_LIST}"
 
 	[[ -z ${K_NOSETEXTRAVERSION} ]] && unpack_set_extraversion
 	unpack_fix_docbook
