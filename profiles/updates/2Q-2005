@@ -104,3 +104,4 @@ move app-admin/eclectic app-admin/eselect
 move dev-python/menumaker x11-misc/menumaker
 move app-portage/qfile app-portage/portage-utils
 move app-text/gobby app-editors/gobby
+move dev-db/kexi app-office/kexi
