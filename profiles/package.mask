@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4110 2005/06/21 09:59:21 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4111 2005/06/22 20:00:11 agriffis Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Aron Griffis <agriffis@gentoo.org> (22 Jun 2005)
+# Mask for a half-hour to test
+=mail-client/mozilla-thunderbird-1.0.2-r1
 
 # Daniel Black <dragonheart@gentoo.org> (21 Jun 2005)
 # New serpent/rc6 encryption in c for testing on amd64
