@@ -1,7 +1,17 @@
-MD5 d3c4709dfcc6743193813c607e99dc97 otpcalc-0.97.ebuild 804
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aeb1a409529707513dd5954c650a5e67 otpcalc-0.96.ebuild 729
-MD5 e12faac6c93fd8debd474abcfac684f4 ChangeLog 1015
 MD5 78714bd1cdeb6709df0a6dcc4c5347ce metadata.xml 410
-MD5 1ce297d1a90353ea4e3ee49a9d21be6d files/digest-otpcalc-0.96 64
-MD5 fb4ade24812b14dd5fc4c2d89dc6a9a5 files/digest-otpcalc-0.97 64
+MD5 fd104160af10fda9b7913ab0a6d46e3b otpcalc-0.97.ebuild 813
+MD5 d809483b98bd999bf00b9eb095dba5d0 ChangeLog 1105
 MD5 79ac858c43e67fdc670c1092b51a03ad files/otpcalc-man-table-format.diff 507
+MD5 fb4ade24812b14dd5fc4c2d89dc6a9a5 files/digest-otpcalc-0.97 64
+MD5 1ce297d1a90353ea4e3ee49a9d21be6d files/digest-otpcalc-0.96 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCudJFKRy60XGEcJIRAnNnAJ0bIOhQDTHkv1iGXiX23Y0nnJbFZQCfTprG
+PPOHO0TWKLrD1sldIxBQ9xI=
+=gAeg
+-----END PGP SIGNATURE-----
