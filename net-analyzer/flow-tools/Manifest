@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8f0e96a56941e3d7723e42e72bf24441 ChangeLog 2723
 MD5 4274d0fb58b88876a5767ab9d1c6204c files/digest-flow-tools-0.66 67
 MD5 1101576a17a0a70941408d279474aa97 files/digest-flow-tools-0.67 67
@@ -19,3 +22,10 @@ MD5 50b2beaf69c3163fee00bda59f3e906a flow-tools-0.67.ebuild 2108
 MD5 92134266c2a60584681a9515d35af91c flow-tools-0.68-r1.ebuild 2470
 MD5 5560c24bf2e48922e1a5dcc9288bca44 flow-tools-0.68.ebuild 2174
 MD5 657939d746987d289ffa06516ae69d46 metadata.xml 261
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCuZMnI1lqEGTUzyQRAruFAJ9Q+/o3a972TP4V0e71gp2cWT4yYQCfZYcV
+4b2KE70cmJXROa1xv2RPqLM=
+=15kF
+-----END PGP SIGNATURE-----
