@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/htmlize
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlize/ChangeLog,v 1.6 2005/01/01 13:48:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlize/ChangeLog,v 1.7 2005/06/22 01:37:43 weeve Exp $
+
+  22 Jun 2005; Jason Wever <weeve@gentoo.org> htmlize-1.16.ebuild:
+  Added ~sparc keyword.
 
 *htmlize-1.16 (23 Oct 2003)
 
