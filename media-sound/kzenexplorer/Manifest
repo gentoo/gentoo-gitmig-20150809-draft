@@ -1,4 +1,14 @@
-MD5 57f3eda36f26e556c971ec7784031133 ChangeLog 521
-MD5 01ec2ab95ca1abbec8a55140974420a8 kzenexplorer-0.6_rc1.ebuild 555
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8228678436fe23e05242bc73b972069a ChangeLog 626
+MD5 e6c1fdcd8bb00e8c1a9155201a128a78 kzenexplorer-0.6_rc1.ebuild 566
 MD5 36e01e1ff9f8e46f1839e5902ce056cb metadata.xml 540
 MD5 0f25745222a80d2b706615d9e279ea0e files/digest-kzenexplorer-0.6_rc1 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCudhv5mJXAu5GbtIRAricAJ9AXyAflWW0ksPz38cn2/iCOeistgCePzkn
+aAUg1eBqvAST1HaUMLFbe5M=
+=oQ8d
+-----END PGP SIGNATURE-----
