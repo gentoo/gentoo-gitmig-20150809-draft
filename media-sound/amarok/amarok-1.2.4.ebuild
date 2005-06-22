@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.4.ebuild,v 1.1 2005/05/21 17:34:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.4.ebuild,v 1.2 2005/06/22 17:46:04 hanno Exp $
 
 inherit kde eutils
 
@@ -53,6 +53,11 @@ pkg_setup() {
 
 	# check whether kdelibs was compiled with arts support
 	kde_pkg_setup
+}
+
+src_unpack() {
+	kde_src_unpack
+	epatch ${FILESDIR}/amarok-gcc4.gz
 }
 
 src_compile() {
