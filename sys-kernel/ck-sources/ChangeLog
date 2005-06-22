@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.102 2005/06/13 02:07:56 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.103 2005/06/22 17:41:21 marineam Exp $
+
+*ck-sources-2.6.12_p2 (22 Jun 2005)
+
+  22 Jun 2005; Michael Marineau <marineam@gentoo.org>
+  +ck-sources-2.6.12_p2.ebuild:
+  Bump to 2.6.12-ck2, also added the vesafb-tng and inotify patches from the
+  gentoo patchset. Closes bug #96748. Enjoy :-)
 
 *ck-sources-2.6.11_p10 (13 Jun 2005)
 
