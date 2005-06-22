@@ -1,11 +1,11 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.1 2005/06/22 11:26:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.2 2005/06/22 11:29:17 dragonheart Exp $
 
 *conky-1.0 (22 Jun 2005)
 
   22 Jun 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +conky-1.0.ebuild:
   Initial ebuild thanks to Brenden Matthews based on torsmo with all current
-  patches.
+  patches. bug #96750
 
