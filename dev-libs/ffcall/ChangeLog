@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/ffcall
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.17 2005/04/24 02:50:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.18 2005/06/22 20:37:22 fafhrd Exp $
+
+*ffcall-1.10 (22 Jun 2005)
+
+  22 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +ffcall-1.10.ebuild:
+  Added version 1.10 of ffcall; added metadata.xml; added myself for
+  maintership (optional dependency of core GNUstep libs)
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> ffcall-1.8d.ebuild:
   Stable on ppc.
