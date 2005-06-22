@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JKFlow/JKFlow-3.4.ebuild,v 1.2 2005/06/22 23:32:03 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ SRC_URI="http://users.telenet.be/jurgen.kobierczynski/${MY_PN}/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 RDEPEND="dev-lang/perl
 		net-analyzer/FlowScan
