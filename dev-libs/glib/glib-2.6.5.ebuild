@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.4.ebuild,v 1.2 2005/06/22 12:09:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.5.ebuild,v 1.1 2005/06/22 12:09:27 foser Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -10,12 +10,13 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc"
+KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc"
 IUSE="doc hardened static"
 
 DEPEND=">=dev-util/pkgconfig-0.14
 	>=sys-devel/gettext-0.11
-	doc? ( >=dev-util/gtk-doc-1 )"
+	doc? ( >=dev-util/gtk-doc-1
+		=app-text/docbook-xml-dtd-4.1.2-r5 )"
 
 RDEPEND="virtual/libc"
 
@@ -41,7 +42,6 @@ src_compile() {
 		append-ldflags "-L/usr/lib -lpthread"
 	fi
 
-	# enable static for PAM
 	econf \
 		--with-threads=posix \
 		`use_enable static` \
