@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.26 2005/06/09 14:40:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.27 2005/06/22 21:15:42 fafhrd Exp $
+
+*gnustep-base-1.10.3-r1 (22 Jun 2005)
+
+  22 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  +gnustep-base-1.10.3-r1.ebuild:
+  Added optional dependency for ffcall -- prefer ffcall over libffi; gnustep
+  user of libffi is buggy
 
   09 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gnustep-base-1.10.3.ebuild:
