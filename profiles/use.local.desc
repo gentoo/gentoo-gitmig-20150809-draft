@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1241 2005/06/22 20:50:02 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1242 2005/06/22 22:03:03 smithj Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -981,6 +981,7 @@ x11-libs/wxGTK:wxgtk1 - Add gtk1 support in addition to optional gtk2ansi and gt
 x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
 x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
+x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
 x11-plugins/wmhdplop:gkrellm - Enable build of gkrellm module
 x11-plugins/wmsysmon:high-ints - Enable support for monitoring 24 interrupts, useful on SMP machines
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
