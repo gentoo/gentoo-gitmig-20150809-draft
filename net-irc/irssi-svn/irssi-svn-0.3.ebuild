@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.5 2005/06/13 19:37:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.6 2005/06/22 13:01:54 ferdy Exp $
 
 inherit subversion perl-module
 
@@ -12,7 +12,7 @@ DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~alpha ~x86"
 IUSE="ipv6 perl ssl"
 
 RDEPEND=">=dev-libs/glib-2.2.1
