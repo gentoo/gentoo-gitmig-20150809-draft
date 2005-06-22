@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.13 2005/05/02 11:51:10 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.14 2005/06/22 14:35:10 smithj Exp $
+
+*sarg-2.0.8 (22 Jun 2005)
+
+  22 Jun 2005; Jonathan Smith <smithj@gentoo.org> +sarg-2.0.8.ebuild:
+  version bump for #71656, which also fixes #43132, #64743, and probably
+  #77285; thanks to Volkov Peter <torre_cremata@mail.ru> (a dev-in-training
+  :-) for the ebuild; fixed homepage and description while i was at it
 
   02 May 2005; Eldad Zack <eldad@gentoo.org> sarg-1.4.1-r2.ebuild:
   Homepage, SRC_URI updates. Closes #57527. Thanks to Daniel Webert
