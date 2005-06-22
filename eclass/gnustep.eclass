@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.26 2005/06/06 07:08:19 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.27 2005/06/22 20:51:06 fafhrd Exp $
 
 inherit gnustep-funcs eutils flag-o-matic
 
@@ -9,7 +9,16 @@ INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="EClass designed to facilitate building GNUstep Apps, Frameworks, and Bundles on Gentoo."
 
-IUSE="debug profile"
+###########################################################################
+# IUSE variables across all GNUstep packages
+IUSE="debug profile verbose"
+if use debug; then
+	RESTRICT="nostrip"
+fi
+if use profile; then
+	RESTRICT="nostrip"
+fi
+###########################################################################
 
 ###########################################################################
 # Internal variables

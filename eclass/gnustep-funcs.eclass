@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.4 2005/03/18 02:47:00 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.5 2005/06/22 20:51:06 fafhrd Exp $
 
 inherit toolchain-funcs eutils
 
@@ -160,6 +160,9 @@ egnustep_make() {
 		if use profile; then
 			gs_make_opts="${gs_make_opts} profile=yes"
 		fi
+		if use verbose; then
+			gs_make_opts="${gs_make_opts} messages=yes"
+		fi
 		eval emake ${__GS_MAKE_EVAL} ${gs_make_opts} all || die "package make failed"
 	else
 		die "no Makefile found"
@@ -195,6 +198,9 @@ egnustep_install() {
 		if use profile; then
 			gs_make_opts="${gs_make_opts} profile=yes"
 		fi
+		if use verbose; then
+			gs_make_opts="${gs_make_opts} messages=yes"
+		fi
 		eval emake ${__GS_MAKE_EVAL} ${gs_make_opts} install || die "package install failed"
 	else
 		die "no Makefile found"
@@ -214,6 +220,9 @@ egnustep_doc() {
 		fi
 		if use profile; then
 			gs_make_opts="${gs_make_opts} profile=yes"
+		fi
+		if use verbose; then
+			gs_make_opts="${gs_make_opts} messages=yes"
 		fi
 		eval emake ${__GS_MAKE_EVAL} ${gs_make_opts} all || die "doc make failed"
 		eval emake ${__GS_MAKE_EVAL} ${gs_make_opts} install || die "doc install failed"
