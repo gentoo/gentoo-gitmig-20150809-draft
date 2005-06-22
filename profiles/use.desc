@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.250 2005/06/15 08:19:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.251 2005/06/22 20:50:02 fafhrd Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -320,6 +320,7 @@ usepackagedmakefiles - Makes 'split' kde-base ebuilds use prepackaged makfile ta
 v4l - Enables video4linux support
 vanilla - Do not add extra patches which change default behaviour
 vcd - Video CD support
+verbose - effects vary across packages; generally used to enable extra informational output during a build or at runtime
 vhosts - Adds support for installing web-based applications into a virtual-hosting environment
 videos - Tells portage to install optional video files (used in some games)
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.

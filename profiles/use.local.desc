@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1240 2005/06/22 12:34:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1241 2005/06/22 20:50:02 fafhrd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -345,6 +345,7 @@ gnustep-apps/gworkspace:imagekits - Enable support for ImageKits Bundle (mainly 
 gnustep-apps/gworkspace:pdfkit - Enable support for PDFKit Bundle
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
+gnustep-base/gnustep-base:ffcall - enable use of ffcall package in gnustep-base, rather than libffi
 gnustep-base/gnustep-base:gcc-libffi - Offers a migration path away from the ill fated dev-libs/libffi; gcc-3.* will generally have to be compiled with 'gcj' on, >=gcc-3.4.3-r1 can be used with only 'objc' turned on (this will reduce compile time).
 gnustep-base/gnustep-gui:gsnd - Enable GNUstep sound server
 gnustep-base/gnustep-make:layout-from-conf-file - Layout GNUstep according to /etc/conf.d/gnustep.env; GNUSTEP_SYSTEM_ROOT, GNUSTEP_LOCAL_ROOT, GNUSTEP_NETWORK_ROOT, and GNUSTEP_USER_ROOT (use '~' or '~/whatever' -- SURROUNDED BY SINGLE QUOTES -- for the user root); the only required entry is GNUSTEP_SYSTEM_ROOT; GNUSTEP_SYSTEM_ROOT must end with "System".
