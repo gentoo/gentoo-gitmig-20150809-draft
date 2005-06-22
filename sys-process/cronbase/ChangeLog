@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.13 2005/06/20 00:41:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.14 2005/06/22 00:54:36 ka0ttic Exp $
+
+  22 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> cronbase-0.3.2.ebuild:
+  Don't use /bin/false.
 
   20 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> cronbase-0.3.2.ebuild:
   Ensure that cron group exists, bug 96557.
