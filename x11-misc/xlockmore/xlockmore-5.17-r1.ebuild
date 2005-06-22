@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.17.ebuild,v 1.1 2005/06/17 00:50:00 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.17-r1.ebuild,v 1.1 2005/06/22 22:03:57 smithj Exp $
 
 inherit gnuconfig eutils pam
 
-IUSE="nas esd motif opengl truetype gtk pam"
+IUSE="nas esd motif opengl truetype gtk pam xlockrc"
 
 DESCRIPTION="Just another screensaver application for X"
 SRC_URI="http://ftp.tux.org/pub/tux/bagleyd/${PN}/${P}.tar.bz2"
@@ -26,8 +26,8 @@ DEPEND="virtual/x11
 src_compile() {
 
 	local myconf
-	use pam || myconf="${myconf} --enable-xlockrc"
 
+	use xlockrc && myconf="${myconf} --enable-xlockrc"
 	use opengl || myconf="${myconf} --without-opengl --without-gltt --without-mesa"
 
 	econf \
