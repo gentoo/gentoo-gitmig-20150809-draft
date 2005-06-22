@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1ce4852bb9edab1d50bfb22232e706ce pstoedit-3.32.ebuild 1004
-MD5 bd7cab174c437811dc8c3028ebc16231 pstoedit-3.40.ebuild 1565
-MD5 08d94ea9f8b5e989d3f2db66e4610f27 ChangeLog 2923
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 b9015542befa7a7c9826a7809c9ad029 ChangeLog 3017
 MD5 0187a9702c0fb3b0b8beae436a0bb9c0 pstoedit-3.33.ebuild 1465
+MD5 52272c0756916c6c2cd89a12f17fd21b pstoedit-3.40.ebuild 1563
+MD5 1ce4852bb9edab1d50bfb22232e706ce pstoedit-3.32.ebuild 1004
 MD5 31054e5cc9324907446fa0eebf1438ca files/digest-pstoedit-3.32 65
-MD5 a907639a46bec91770facf3dda3db0b6 files/digest-pstoedit-3.33 65
 MD5 b4ab64e60b0732f6b73230e7834dc110 files/digest-pstoedit-3.40 65
+MD5 a907639a46bec91770facf3dda3db0b6 files/digest-pstoedit-3.33 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCqGo3Z/iYVBmujdURAsCcAJ9Wm659rRyd+xEmRSyOJn8/0Iu+hQCgh7eA
-6GDvtJZKsC4mhn+XJkxsdlE=
-=7jmp
+iD8DBQFCuZYaKRy60XGEcJIRAro9AJwPwxcPx6t86kezaUlqPrTVCYLKkgCdHXYq
+kSX9nwOZRihjc8w8dZhHRmA=
+=muMo
 -----END PGP SIGNATURE-----
