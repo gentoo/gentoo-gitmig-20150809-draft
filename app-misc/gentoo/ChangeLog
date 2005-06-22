@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.53 2005/05/16 13:22:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.54 2005/06/22 17:08:56 seemant Exp $
+
+*gentoo-0.11.55 (22 Jun 2005)
+
+  22 Jun 2005; Seemant Kulleen <seemant@gentoo.org> gentoo-0.11.54.ebuild,
+  +gentoo-0.11.55.ebuild:
+  Version bump to newest in ~arches, and stabled 54 for x86 and amd64. New
+  release notification thanks to Bret Towe (magnade on irc)
 
   16 May 2005; Seemant Kulleen <seemant@gentoo.org> gentoo-0.11.54.ebuild:
   Changed to depend on virtual/fam (gamin or fam) per bug #92480 by Ben Skeggs
