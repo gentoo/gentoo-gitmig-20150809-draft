@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.4.13.ebuild,v 1.7 2005/06/18 19:05:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.4.13-r1.ebuild,v 1.1 2005/06/22 20:56:06 agriffis Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -32,7 +32,7 @@ src_compile() {
 src_install() {
 	make prefix="${D}"/usr install || die "make install failed"
 	insinto /usr/include
-	doins efence.h efencepp.h efence_config.h \
+	doins efence.h efencepp.h efence_config.h noefence.h \
 		|| die "failed to install headers"
 	dodoc CHANGES README
 }
