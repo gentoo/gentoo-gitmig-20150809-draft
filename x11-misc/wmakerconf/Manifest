@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8dda41e228d79dfc1c5a660bf0c97403 ChangeLog 2563
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
 MD5 f245d7fdb0fd6a5e66a67d8e90794a0e wmakerconf-2.11.ebuild 1191
+MD5 ef08efbefcdf5d85b84769dbc24bc3cf wmakerconf-2.9.2.ebuild 1238
+MD5 27f0fb90fd09e9a881eb975f261b9fdd ChangeLog 2659
 MD5 4a739eeb9d5b7428719e0b92edf8e67c wmakerconf-2.8.1-r2.ebuild 1253
-MD5 b5462803c517787b5ac0a483457d724e wmakerconf-2.9.2.ebuild 1229
-MD5 08460ad64726481d73b93e68c86d20f3 files/digest-wmakerconf-2.11 67
 MD5 1e9fc0f7bee345603a1202c29ea3f14e files/digest-wmakerconf-2.8.1-r2 68
+MD5 08460ad64726481d73b93e68c86d20f3 files/digest-wmakerconf-2.11 67
 MD5 9836fda7307d1de81541a6ce1f894070 files/digest-wmakerconf-2.9.2 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCtg4Hl5AvwDPiUowRAqprAJ4raMIE+AA3AHJdsoGcyQ3lz9U/twCfVZKa
-4e0JOVQaUQyWB+nn40MXAok=
-=sCSe
+iD8DBQFCuWwuKRy60XGEcJIRAolDAJ41T7YeIp47KS1u/QChSvzGnqRTTwCZAYCU
+VYlJRp693HbHme+ebz6tAUY=
+=/A3M
 -----END PGP SIGNATURE-----
