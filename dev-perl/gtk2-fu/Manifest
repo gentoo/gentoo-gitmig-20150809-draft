@@ -1,4 +1,4 @@
-MD5 401eeb45eb9de0099b201d3fe77c078f ChangeLog 1669
+MD5 e49731ecdac8f4666c0cfe324b7fc752 ChangeLog 1773
 MD5 f847ba8f318b30fbc8299b91490e348a gtk2-fu-0.01.ebuild 669
 MD5 d31b025e8f1c44df514d77de9a314110 gtk2-fu-0.02.ebuild 669
 MD5 8a487db2af4fee760b23e1ac102047b0 metadata.xml 240
@@ -8,7 +8,7 @@ MD5 d366d5d8bb54f54d7435b9106634f3bc gtk2-fu-0.04.ebuild 706
 MD5 6c02f25e3c611db18712903fc82fff9e gtk2-fu-0.05.ebuild 715
 MD5 b955e8b8ba6ce0dfc9e3c36b5324c5a0 gtk2-fu-0.07.ebuild 656
 MD5 55a9c691772efc685bc7a3153c228106 gtk2-fu-0.06.ebuild 658
-MD5 df7266b2bbed4cbc897d6b872a4e2fa4 gtk2-fu-0.10.ebuild 642
+MD5 746b9c7a85e5f0fffb642156e82a6efb gtk2-fu-0.10.ebuild 664
 MD5 08b0bed77b800a81ab295da75bf91e83 gtk2-fu-0.08.ebuild 645
 MD5 222bb1ab280993cab6d31c4317b5e711 files/digest-gtk2-fu-0.01 64
 MD5 d169d5602336492a9683ed18e7758aef files/digest-gtk2-fu-0.02 64
