@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006.ebuild,v 1.2 2005/06/22 16:33:30 swegener Exp $
 
 inherit eutils
 

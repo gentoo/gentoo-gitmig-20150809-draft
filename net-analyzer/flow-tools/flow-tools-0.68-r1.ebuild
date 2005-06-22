@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r1.ebuild,v 1.2 2005/06/22 16:34:22 swegener Exp $
 
 inherit eutils flag-o-matic
 
