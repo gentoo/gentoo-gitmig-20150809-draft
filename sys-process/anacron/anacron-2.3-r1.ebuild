@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/anacron-2.3.ebuild,v 1.1 2005/03/03 17:32:37 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/anacron-2.3-r1.ebuild,v 1.1 2005/06/22 01:20:25 ka0ttic Exp $
 
 inherit eutils
 
