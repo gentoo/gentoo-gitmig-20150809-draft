@@ -1,19 +1,27 @@
 diff -ruN torsmo-0.18/linux.c torsmo-0.18.new/linux.c
 --- torsmo-0.18/linux.c	2004-12-21 14:20:07.000000000 -0700
-+++ torsmo-0.18.new/linux.c	2005-06-20 05:46:40.000000000 -0600
-@@ -115,7 +115,11 @@
++++ torsmo-0.18.new/linux.c	2005-06-21 19:28:17.000000000 -0600
+@@ -115,7 +115,9 @@
  
  void update_net_stats() {
    static int rep;
+-  unsigned int i;
 +  // FIXME: arbitrary size chosen to keep code simple.
-+  static float net_rec[15];
-+  static float net_trans[15];
-   unsigned int i;
-+  unsigned int curtmp;
++  unsigned int i, i2;
++  unsigned int curtmp1, curtmp2;
    char buf[256];
    double delta;
  
-@@ -174,9 +178,31 @@
+@@ -134,7 +136,7 @@
+   fgets(buf, 255, net_dev_fp); /* garbage (field names) */
+ 
+   /* read each interface */
+-  for (i=0; i<16; i++) {
++  for (i2=0; i2<16; i2++) {
+     struct net_stat *ns;
+     char *s, *p;
+     long long r, t, last_recv, last_trans;
+@@ -174,9 +176,28 @@
        ns->trans += (t - ns->last_read_trans);
      ns->last_read_trans = t;
  
@@ -22,32 +30,29 @@ diff -ruN torsmo-0.18/linux.c torsmo-0.18.new/linux.c
      /* calculate speeds */
 -    ns->recv_speed = (ns->recv - last_recv) / delta;
 -    ns->trans_speed = (ns->trans - last_trans) / delta;
-+    net_rec[0] = (ns->recv - last_recv) / delta;
-+    net_trans[0] = (ns->trans - last_trans) / delta;
-+    curtmp = 0;
++    ns->net_rec[0] = (ns->recv - last_recv) / delta;
++    ns->net_trans[0] = (ns->trans - last_trans) / delta;
++    curtmp1 = 0;
++    curtmp2 = 0;
 +    // get an average
-+    for (i=0;i<info.net_rec_avg_samples;i++)
-+	curtmp += net_rec[i];
-+    ns->recv_speed = curtmp / (double)info.net_rec_avg_samples;
-+    curtmp = 0;
-+    for (i=0;i<info.net_trans_avg_samples;i++)
-+	curtmp += net_trans[i];
-+    ns->trans_speed = curtmp / (double)info.net_trans_avg_samples;
++    for (i=0;i<info.net_rec_avg_samples;i++) {
++	curtmp1 += ns->net_rec[i];
++	curtmp2 += ns->net_trans[i];
++    }
++    ns->recv_speed = curtmp1 / (double)info.net_rec_avg_samples;
++    ns->trans_speed = curtmp2 / (double)info.net_trans_avg_samples;
 +    if (info.net_rec_avg_samples > 1) {
-+      for (i=info.net_rec_avg_samples;i>1;i--)
-+	    net_rec[i-1] = net_rec[i-2];
++      for (i=info.net_rec_avg_samples;i>1;i--) {
++	    ns->net_rec[i-1] = ns->net_rec[i-2];
++	    ns->net_trans[i-1] = ns->net_trans[i-2];
++      }
 +    }
-+    if (info.net_trans_avg_samples > 1) {
-+      for (i=info.net_trans_avg_samples;i>1;i--)
-+	    net_trans[i-1] = net_trans[i-2];
-+    }
-+	//printf("net %i %i\n", info.net_trans_avg_samples, info.net_rec_avg_samples);
 +    
 +    
    }
  
    /* fclose(net_dev_fp); net_dev_fp = NULL; */
-@@ -193,8 +219,12 @@
+@@ -193,8 +214,12 @@
  static FILE *stat_fp;
  
  static void update_stat() {
@@ -60,7 +65,7 @@ diff -ruN torsmo-0.18/linux.c torsmo-0.18.new/linux.c
  
    if (stat_fp == NULL)
      stat_fp = open_file("/proc/stat", &rep);
-@@ -228,10 +258,16 @@
+@@ -228,10 +253,15 @@
  
      if (clock_ticks == 0)
        clock_ticks = sysconf(_SC_CLK_TCK);
@@ -75,14 +80,13 @@ diff -ruN torsmo-0.18/linux.c torsmo-0.18.new/linux.c
      last_cpu_sum = cpu_user+cpu_nice+cpu_system;
 +    for (i=info.cpu_avg_samples;i>1;i--)
 +	    cpu_val[i-1] = cpu_val[i-2];
-+    //printf("cpu %i\n", info.cpu_avg_samples);
 +	    
    }
  }
  
 diff -ruN torsmo-0.18/torsmo.c torsmo-0.18.new/torsmo.c
 --- torsmo-0.18/torsmo.c	2004-12-21 15:14:46.000000000 -0700
-+++ torsmo-0.18.new/torsmo.c	2005-06-20 05:46:42.000000000 -0600
++++ torsmo-0.18.new/torsmo.c	2005-06-21 19:14:26.000000000 -0600
 @@ -61,6 +61,8 @@
  
  static long default_fg_color, default_bg_color, default_out_color;
@@ -151,8 +155,16 @@ diff -ruN torsmo-0.18/torsmo.c torsmo-0.18.new/torsmo.c
        use_xdbe = string_to_bool(value);
 diff -ruN torsmo-0.18/torsmo.h torsmo-0.18.new/torsmo.h
 --- torsmo-0.18/torsmo.h	2004-12-21 14:49:17.000000000 -0700
-+++ torsmo-0.18.new/torsmo.h	2005-06-20 05:47:29.000000000 -0600
-@@ -30,6 +30,7 @@
++++ torsmo-0.18.new/torsmo.h	2005-06-21 19:14:49.000000000 -0600
+@@ -19,6 +19,7 @@
+   long long last_read_recv, last_read_trans;
+   long long recv, trans;
+   double recv_speed, trans_speed;
++  double net_rec[15], net_trans[15];
+ };
+ 
+ struct fs_stat {
+@@ -30,6 +31,7 @@
  
  struct cpu_stat {
    unsigned int user, nice, system, idle, iowait, irq, softirq;
@@ -160,7 +172,7 @@ diff -ruN torsmo-0.18/torsmo.h torsmo-0.18.new/torsmo.h
  };
  
  enum {
-@@ -71,6 +72,9 @@
+@@ -71,6 +73,9 @@
    float cpu_usage;
    struct cpu_stat cpu_summed;
    unsigned int cpu_count;
@@ -172,17 +184,19 @@ diff -ruN torsmo-0.18/torsmo.h torsmo-0.18.new/torsmo.h
  
 diff -ruN torsmo-0.18/torsmorc.sample torsmo-0.18.new/torsmorc.sample
 --- torsmo-0.18/torsmorc.sample	2004-12-21 14:56:12.000000000 -0700
-+++ torsmo-0.18.new/torsmorc.sample	2005-06-20 05:50:09.000000000 -0600
-@@ -75,6 +75,14 @@
++++ torsmo-0.18.new/torsmorc.sample	2005-06-21 19:19:28.000000000 -0600
+@@ -75,6 +75,16 @@
  # set to yes if you want all text to be in uppercase
  uppercase no
  
 +# number of cpu samples to average
++# set to 1 to disable averaging
 +cpu_avg_samples 4
 +
 +# number of net samples to average
++# set to 1 to disable averaging
 +net_rec_avg_samples 4 # receiving
-+net_trans_avg_samples # transmitting
++net_trans_avg_samples 4 # transmitting
 +
 +
  # boinc (seti) dir
@@ -190,7 +204,7 @@ diff -ruN torsmo-0.18/torsmorc.sample torsmo-0.18.new/torsmorc.sample
  
 diff -ruN torsmo-0.18/x11.c torsmo-0.18.new/x11.c
 --- torsmo-0.18/x11.c	2004-12-21 15:19:55.000000000 -0700
-+++ torsmo-0.18.new/x11.c	2005-06-20 04:47:00.000000000 -0600
++++ torsmo-0.18.new/x11.c	2005-06-21 19:14:26.000000000 -0600
 @@ -64,15 +64,6 @@
  
      XFree(buf); buf = 0;
