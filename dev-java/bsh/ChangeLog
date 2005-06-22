@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/bsh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.24 2005/04/08 14:52:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.25 2005/06/22 17:22:37 axxo Exp $
+
+*bsh-2.0_beta4 (22 Jun 2005)
+
+  22 Jun 2005; Thomas Matthijs <axxo@gentoo.org> +bsh-2.0_beta4.ebuild:
+  version bump
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> bsh-2.0_beta1-r1.ebuild:
   Stable on ppc64
