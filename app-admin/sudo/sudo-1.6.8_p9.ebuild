@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9.ebuild,v 1.12 2005/06/21 20:40:04 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9.ebuild,v 1.13 2005/06/22 20:23:03 taviso Exp $
 
 inherit eutils pam
 
@@ -53,7 +53,10 @@ src_unpack() {
 	# XXX: <?> = probably safe enough for most circumstances.
 
 	einfo "Blacklisting common variables (env_delete)..."
-		sudo_bad_var 'SHELLOPTS'      # bash, change shoptions.
+		sudo_bad_var 'SHELLOPTS'      # bash, change shoptions. 
+			# http://www.sudo.ws/bugs/show_bug.cgi?id=182
+			# http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1051
+			# *sigh*
 		sudo_bad_var 'PERLIO_DEBUG'   # perl, write debug to file.
 		sudo_bad_var 'PERL5LIB'       # perl, change search path.
 		sudo_bad_var 'PERLLIB'        # perl, change search path.
