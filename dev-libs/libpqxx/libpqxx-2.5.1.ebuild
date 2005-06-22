@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.5.1.ebuild,v 1.3 2005/06/22 09:01:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.5.1.ebuild,v 1.4 2005/06/22 21:24:47 yoswink Exp $
 
 inherit eutils
 IUSE=""
@@ -10,7 +10,7 @@ SRC_URI="ftp://gborg.postgresql.org/pub/libpqxx/stable/${P}.tar.gz
 HOMEPAGE="http://gborg.postgresql.org/project/libpqxx/projdisplay.php"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 
 DEPEND="dev-db/libpq"
