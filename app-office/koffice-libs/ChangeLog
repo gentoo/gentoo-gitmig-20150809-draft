@@ -1,10 +1,16 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.8 2005/06/22 12:46:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.9 2005/06/22 13:21:47 greg_g Exp $
 
   22 Jun 2005; Markus Rothe <corsair@gentoo.org> koffice-libs-1.3.5.ebuild,
   koffice-libs-1.4.0.ebuild:
   Added ~ppc64
+
+*koffice-libs-1.4.0-r1 (22 Jun 2005)
+
+  22 Jun 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/koffice-1.4.0-save.patch, +koffice-libs-1.4.0-r1.ebuild:
+  Add patch to fix critical problem when saving from koshell.
 
 *koffice-libs-1.4.0 (21 Jun 2005)
 
