@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/FlowScan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/ChangeLog,v 1.2 2005/06/22 18:57:09 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/ChangeLog,v 1.3 2005/06/22 21:20:59 strerror Exp $
+
+  22 Jun 2005; Benjamin Smee <strerror@gentoo.org> FlowScan-1.006-r1.ebuild:
+  Changed DEPEND
 
 *FlowScan-1.006-r1 (22 Jun 2005)
 
