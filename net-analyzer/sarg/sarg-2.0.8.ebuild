@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.0.8.ebuild,v 1.1 2005/06/22 14:35:10 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.0.8.ebuild,v 1.2 2005/06/22 16:39:29 smithj Exp $
 
 inherit eutils
 
@@ -14,10 +14,10 @@ SLOT="0"
 IUSE=""
 
 DEPEND="virtual/libc
-		media-libs/freetype
-		media-libs/libpng
-		sys-libs/zlib
-		media-libs/gd"
+	media-libs/freetype
+	media-libs/libpng
+	sys-libs/zlib
+	media-libs/gd"
 
 RDEPEND=">=net-proxy/squid-2.5.1"
 
