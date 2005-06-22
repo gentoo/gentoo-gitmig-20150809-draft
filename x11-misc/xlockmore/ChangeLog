@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.25 2005/06/22 22:28:05 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.26 2005/06/22 22:50:12 smithj Exp $
+
+  22 Jun 2005; Jonathan Smith <smithj@gentoo.org> xlockmore-5.17-r1.ebuild,
+  xlockmore-5.18-r1.ebuild:
+  fixed ftgl problem for #90202
 
 *xlockmore-5.18-r1 (22 Jun 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.17-r1.ebuild,v 1.2 2005/06/22 22:22:45 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.17-r1.ebuild,v 1.3 2005/06/22 22:50:12 smithj Exp $
 
 inherit gnuconfig eutils pam flag-o-matic
 
@@ -33,6 +33,7 @@ src_compile() {
 	econf \
 		--sharedstatedir=${D}/usr/share/xlockmore \
 		--enable-vtlock \
+		--without-ftgl \
 		$(use_enable pam) \
 		$(use_with truetype ttf) \
 		$(use_with gtk) \
