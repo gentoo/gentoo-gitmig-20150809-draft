@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r3.ebuild,v 1.1 2005/05/17 09:18:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r3.ebuild,v 1.2 2005/06/22 17:58:20 herbs Exp $
 
-inherit eutils
+inherit eutils multilib
 
 MY_P=w3c-${P}
 DESCRIPTION="A general-purpose client side WEB API"
@@ -48,15 +48,20 @@ src_unpack() {
 }
 
 src_compile() {
+	if use mysql ; then
+		myconf="--with-mysql=/usr/$(get_libdir)/mysql/libmysqlclient.a"
+	else
+		myconf="--without-mysql"
+	fi
+
 	econf \
 		--enable-shared \
 		--enable-static \
 		--with-zlib \
 		--with-md5 \
 		--with-expat \
-		$(use_with mysql) \
 		$(use_with ssl) \
-		|| die
+		${myconf} || die
 
 	emake check-am || die
 	use ppc-macos && echo "#undef HAVE_APPKIT_APPKIT_H" >> wwwconf.h
