@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.43 2005/06/18 21:58:44 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.44 2005/06/22 04:28:25 ramereth Exp $
+
+*stunnel-4.10 (22 Jun 2005)
+
+  22 Jun 2005; Lance Albertson <ramereth@gentoo.org>
+  -files/stunnel-3.22-blinding.patch, -files/stunnel-3.22-gentoo.diff,
+  -files/stunnel-3.26-gentoo.diff, -files/stunnel-4.04-blinding.patch,
+  -files/stunnel-4.04-gentoo.diff, files/stunnel.conf,
+  -files/stunnel.conf.4.04-r2, -files/stunnel.conf.4.04-r3,
+  files/stunnel.rc6, -files/stunnel.rc6.4.04-r2, -files/stunnel.rc6.4.04-r3,
+  -stunnel-3.22-r2.ebuild, -stunnel-3.26.ebuild, -stunnel-4.04-r1.ebuild,
+  -stunnel-4.04-r2.ebuild, -stunnel-4.04-r3.ebuild, +stunnel-4.10.ebuild:
+  * Cleanup - taking out a bunch of old stuff
+  * Adding 4.10 as testing only (since upstream calls it experimental anyways)
+    Closing bug #92604
 
   18 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> stunnel-4.09.ebuild:
   stable on alpha, wrt bug #95802
