@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.74 2005/05/16 04:30:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.75 2005/06/22 21:37:17 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -79,7 +79,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.74 2005/05/16 04:30:39 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.75 2005/06/22 21:37:17 wolf31o2 Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -215,6 +215,9 @@ for opt in ${ORIGUSE} ; do
 			;;
 		multilib)
 			STAGE1_USE="${STAGE1_USE} multilib"
+			;;
+		userlocales)
+			STAGE1_USE="${STAGE1_USE} userlocales"
 			;;
 	esac
 done
