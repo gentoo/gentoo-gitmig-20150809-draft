@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/manpages-es-1.55.ebuild,v 1.1 2005/06/21 14:08:07 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/manpages-es-1.55.ebuild,v 1.2 2005/06/22 10:43:15 dholm Exp $
 
 S1=${WORKDIR}/man-pages-es-${PV}
 S2=${WORKDIR}/man-pages-es-extra-0.8a
@@ -10,7 +10,7 @@ SRC_URI="http://ditec.um.es/~piernas/manpages-es/man-pages-es-${PV}.tar.bz2
 	http://ditec.um.es/~piernas/manpages-es/man-pages-es-extra-0.8a.tar.gz"
 HOMEPAGE="http://ditec.um.es/~piernas/manpages-es/index.html"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~hppa ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
 
 DEPEND=""
 RDEPEND="sys-apps/man"
