@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/manpages-es
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/ChangeLog,v 1.10 2005/06/22 15:05:22 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/ChangeLog,v 1.11 2005/06/22 15:21:02 ferdy Exp $
+
+  22 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  manpages-es-1.55.ebuild:
+  add unicode flag support
 
   22 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org>
   manpages-es-1.55.ebuild:
