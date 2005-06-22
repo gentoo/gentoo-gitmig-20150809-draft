@@ -1,3 +1,17 @@
-MD5 b9000ef30829e8b784f99fd76374f281 ChangeLog 796
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4fcc34079dc1e2cbd91ae946958712dd ChangeLog 1013
 MD5 c6f2ddec336d7206b0c5db426ee6f2e1 fsviewer-0.2.3e-r1.ebuild 752
+MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
+MD5 d6bb191a7f02ae1ef453c11492f76d0b fsviewer-0.2.5.ebuild 891
 MD5 2e3849f1c388150becdcaaace1a81ae4 files/digest-fsviewer-0.2.3e-r1 72
+MD5 42990483538b9e7f156739209b9817d2 files/fsviewer-0.2.5-windowmaker.patch 10838
+MD5 cb533e00910969bb4210ceacfd4751f6 files/digest-fsviewer-0.2.5 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCudqal5AvwDPiUowRAlkwAJwNj9A002BT868jppZ3CloqcH6sHQCgnmUd
+1o++UR2x2x/saDsp75BX1mM=
+=GjZ1
+-----END PGP SIGNATURE-----

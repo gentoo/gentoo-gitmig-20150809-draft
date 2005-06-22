@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/fsviewer
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.7 2004/06/28 04:33:08 augustus Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.8 2005/06/22 21:38:59 smithj Exp $
+
+*fsviewer-0.2.5 (22 Jun 2005)
+
+  22 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/fsviewer-0.2.5-windowmaker.patch, +metadata.xml,
+  +fsviewer-0.2.5.ebuild:
+  added metadata and version bump which fixes #76865
 
   28 Jun 2004; <augustus@gentoo.org> fsviewer-0.2.3e-r1.ebuild:
   Marrked amd64.  First fsviewer tag for amd64.
