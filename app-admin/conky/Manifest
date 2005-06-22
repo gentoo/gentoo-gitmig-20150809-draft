@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 87112e0acd992eac0a08c5f64d0196b7 conky-1.0.ebuild 1371
+MD5 c523644170dfb059ad9924c752d9e3b2 metadata.xml 541
+MD5 e3312fd02f7667a3e7a92e44ebe48e13 ChangeLog 412
+MD5 a5bba8ea4e2dc8761199eb5a38449eed files/digest-conky-1.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCuUsPmdTrptrqvGERAvGlAJ9oWLe7tSuebsEVNamZ3PIsfaDTxACglLmo
+8jDJP6hPTq9s9tFy3DW71jc=
+=ftms
+-----END PGP SIGNATURE-----

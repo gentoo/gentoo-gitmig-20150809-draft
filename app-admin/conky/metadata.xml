@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>dragonheart@gentoo.org</email>
+    <name>Daniel Black</name>
+    <description>A user ebuild that I felt obliged to include. Please take over if you want it</description>
+</maintainer>
+<longdescription>
+Conky is a system monitor that sits in the corner of your desktop.
+It is a fork of Torsmo that seems to have got very slow with patching.
+</longdescription>
+</pkgmetadata>
