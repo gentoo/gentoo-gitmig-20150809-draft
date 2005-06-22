@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b60657318890f4a2b093658dd9ac82eb ChangeLog 9920
 MD5 9683bb7323c40d69b48d54ad0eb169ed metadata.xml 221
-MD5 fd7a8869be5c3b7315f5334409377c6e shorewall-2.0.13.ebuild 1877
 MD5 ad0387886c40902b6858c8bf82210c16 shorewall-2.0.7.ebuild 1872
-MD5 64e09120a596516712c34342a1420bb4 shorewall-2.2.0.ebuild 2246
 MD5 f0fd2bf75f451107ad8e34202e06061a shorewall-2.2.0_rc5.ebuild 2390
+MD5 5fbec3d31da8769fc6d521cc72164f8f ChangeLog 10021
 MD5 e86ce27deb7eabac5c4cb909cde5b138 shorewall-2.2.4.ebuild 2250
 MD5 3401b07d1684b5b093207fda8b3fa488 shorewall-2.4.0.ebuild 2251
-MD5 676f605ed6ee7c8f297bc531a5d21326 shorewall-2.2.3.ebuild 2244
-MD5 89555a3093e081abbc3365b6e050cb74 files/digest-shorewall-2.0.13 141
-MD5 42daac4688988d74bb62f390b6aa486a files/digest-shorewall-2.0.7 139
-MD5 b15cce3a5f327cdab34b959397060398 files/digest-shorewall-2.2.0 139
+MD5 9d5c6a577862fff1619aa6ca37b415fa shorewall-2.2.3.ebuild 2245
+MD5 fd7a8869be5c3b7315f5334409377c6e shorewall-2.0.13.ebuild 1877
+MD5 64e09120a596516712c34342a1420bb4 shorewall-2.2.0.ebuild 2246
 MD5 e5bea352c75a6b0c56f36a29dec327a8 files/digest-shorewall-2.2.0_rc5 147
+MD5 89555a3093e081abbc3365b6e050cb74 files/digest-shorewall-2.0.13 141
+MD5 886a46dd1ca55990686be5bf42b776de files/shorewall 1041
 MD5 cd869b336ad98b18bcbe4548ea1ce0c5 files/digest-shorewall-2.2.3 139
 MD5 3404020fab5d120975e1294e3554b470 files/digest-shorewall-2.2.4 139
+MD5 42daac4688988d74bb62f390b6aa486a files/digest-shorewall-2.0.7 139
+MD5 b15cce3a5f327cdab34b959397060398 files/digest-shorewall-2.2.0 139
 MD5 8b0f23d1beb0db77f2b2c29e9de1abd0 files/digest-shorewall-2.4.0 139
-MD5 886a46dd1ca55990686be5bf42b776de files/shorewall 1041
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCtufZl5AvwDPiUowRAmTYAKC5Y4lnvhPszlLFx7H8yCB0kqEoFACgs3aW
-SA2KLeNRGZaYOWk1fA62ZJ0=
-=FJoP
+iD8DBQFCuWNgKRy60XGEcJIRAm+tAKCdKVLS5Ud/Yd/cr9VTXn3HNY7bhgCgqzxv
+TbMlOv3weigF70PALKTEo+o=
+=x5d0
 -----END PGP SIGNATURE-----

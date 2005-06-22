@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.2.3.ebuild,v 1.2 2005/06/20 15:57:56 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.2.3.ebuild,v 1.3 2005/06/22 13:10:53 gustavoz Exp $
 
 MY_P_DOCS="${P/${PN}/${PN}-docs-html}"
 
@@ -11,7 +11,7 @@ SRC_URI="http://shorewall.net/pub/${PN}/2.2/${P}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~amd64"
 IUSE="doc"
 
 DEPEND="virtual/libc
