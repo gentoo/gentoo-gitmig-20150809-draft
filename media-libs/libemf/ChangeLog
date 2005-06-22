@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.12 2005/06/09 14:22:22 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.13 2005/06/22 16:45:49 gustavoz Exp $
+
+  22 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> libemf-1.0.ebuild:
+  Stable on sparc
 
   09 Jun 2005; <sekretarz@gentoo.org> libemf-1.0.ebuild:
   Stable on amd64
