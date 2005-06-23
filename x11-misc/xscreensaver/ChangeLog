@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.87 2005/06/17 20:58:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.88 2005/06/23 21:47:27 smithj Exp $
+
+  23 Jun 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml:
+  removed liquidx as maintainer of this package; desktop-misc herd will handle
+  it from now on
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   xscreensaver-4.20.ebuild:
