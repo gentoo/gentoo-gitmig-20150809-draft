@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/orsa
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.7 2004/12/28 20:28:56 ribosome Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.8 2005/06/23 02:41:33 ribosome Exp $
+
+  23 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -orsa-0.3.1.ebuild,
+  -orsa-0.5.0_rc2.ebuild:
+  Removed obsolete versions.
 
   28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> orsa-0.6.1.ebuild:
   Dependency update: dev-libs/gsl -> sci-libs/gsl.
