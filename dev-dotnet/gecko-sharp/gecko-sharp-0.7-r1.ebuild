@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.7-r1.ebuild,v 1.3 2005/05/31 12:14:57 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.7-r1.ebuild,v 1.4 2005/06/23 13:22:03 urilith Exp $
 
 inherit mono eutils
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-1.9.3-compat.diff
+	epatch ${FILESDIR}/${PN}-webshot-fix.patch
 
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e 's:^libdir.*:libdir=@libdir@:' \

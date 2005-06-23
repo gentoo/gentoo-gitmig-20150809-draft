@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gecko-sharp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.32 2005/05/31 12:14:57 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.33 2005/06/23 13:22:03 urilith Exp $
+
+  23 Jun 2005; Michael Tindal <urilith@gentoo.org>
+  +files/gecko-sharp-webshot-fix.patch, gecko-sharp-0.7-r1.ebuild:
+  Webshot fix.
 
   31 May 2005; Herbie Hopkins <herbs@gentoo.org> gecko-sharp-0.6.ebuild,
   gecko-sharp-0.7-r1.ebuild, gecko-sharp-0.10.ebuild:
