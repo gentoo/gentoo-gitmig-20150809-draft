@@ -29,6 +29,7 @@
       <tstamp />
       <mkdir dir="${build}"/>
       <mkdir dir="${build}/doc"/>
+      <mkdir dir="${build}/doc/api"/>
    </target>
 
    <target name="manifest" depends="init">
