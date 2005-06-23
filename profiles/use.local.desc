@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1245 2005/06/23 07:58:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1246 2005/06/23 18:16:03 blubb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -837,6 +837,12 @@ sys-apps/pcmcia-cs:xforms - Enable building the xforms based cardinfo binary
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
+sys-block/gparted:fat - Include FAT16/FAT32 support
+sys-block/gparted:hfs - Include HFS support
+sys-block/gparted:jfs - Include JFS support
+sys-block/gparted:ntfs - Include NTFS support
+sys-block/gparted:reiserfs - Include ReiserFS support
+sys-block/gparted:xfs - Include XFS support
 sys-block/partimage:nologin - Do not include login support
 sys-boot/arcboot:cobalt - Disables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-boot/arcboot:ip27 - Disables support for SGI Origin (IP27)
