@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.149 2005/06/01 15:31:16 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.150 2005/06/23 05:08:31 rphillips Exp $
 
 *vim-core-6.3.075 (01 Jun 2005)
 
@@ -11,6 +11,11 @@
   (more) fstab syntax highlighting fixes, bug #92263. Switch to using ncurses
   by default (with termcap-compat local USE flag for those who really want it)
   to keep *BSD happy, bug #93970.
+
+*vim-core-7.0_alpha20050622 (23 Jun 2005)
+
+  23 Jun 2005; <rphillips@gentoo.org> +vim-core-7.0_alpha20050622.ebuild:
+  version bump
 
 *vim-core-6.3.074 (23 May 2005)
 

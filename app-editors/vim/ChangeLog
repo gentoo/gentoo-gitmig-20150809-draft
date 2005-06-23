@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.167 2005/06/09 14:09:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.168 2005/06/23 05:09:55 rphillips Exp $
+
+*vim-7.0_alpha20050622 (23 Jun 2005)
+
+  23 Jun 2005; <rphillips@gentoo.org> +vim-7.0_alpha20050622.ebuild:
+  version bump
 
   09 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> vim-6.3.075.ebuild:
   Add missing ${VIM_RUNTIME_SNAP} to SRC_URI.
