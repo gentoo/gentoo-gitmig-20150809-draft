@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.6.1.ebuild,v 1.4 2005/04/16 23:36:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.6.1.ebuild,v 1.5 2005/06/23 02:00:42 agriffis Exp $
 
 inherit gnome2 python eutils
 
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
 # Skip test, to avoid gnome-python-2.0 block (fixes bug 72594)
-RESTRICT="maketest"
+RESTRICT="test"
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
 src_unpack() {
