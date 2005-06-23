@@ -1,21 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r2.ebuild,v 1.4 2005/03/20 05:22:45 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r6.ebuild,v 1.1 2005/06/23 16:24:40 fafhrd Exp $
 
-inherit eutils gnustep-funcs
+inherit eutils gnustep-funcs flag-o-matic
 
 S=${WORKDIR}/${P/windowm/WindowM}
 
 DESCRIPTION="The fast and light GNUstep window manager"
 SRC_URI="ftp://ftp.windowmaker.org/pub/source/release/${P/windowm/WindowM}.tar.gz
-	http://www.windowmaker.org/pub/source/release/WindowMaker-extra-0.1.tar.gz"
+	http://www.windowmaker.org/pub/source/release/WindowMaker-extra-0.1.tar.gz
+	mirror://gentoo/windowmaker-0.9X-use-giflib.patch3.bz2"
 HOMEPAGE="http://www.windowmaker.org/"
 
 IUSE="gif gnustep jpeg nls png tiff modelock xinerama"
 DEPEND="x11-base/xorg-x11
 	media-libs/fontconfig
-	gif? ( || ( >=media-libs/libungif-4.1.0
-			>=media-libs/giflib-4.1.0-r3 ) )
+	gif? ( >=media-libs/giflib-4.1.0-r3 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.6.1-r2 )"
@@ -31,10 +31,15 @@ if use gnustep; then
 fi
 
 src_unpack() {
+	is-flag -fstack-protector && filter-flags -fstack-protector \
+		&& ewarn "CFLAG -fstack-protector has been disabled, as it is known to cause bugs with WindowMaker (bug #78051)" && ebeep 2
 	unpack ${A}
 	cd ${S}
+	epatch ${WORKDIR}/windowmaker-0.9X-use-giflib.patch3 || die "giflib patch failed"
 	epatch ${FILESDIR}/menufocus.patch || die "menu focus patch failed"
-	epatch ${FILESDIR}/20_endian+64bit.diff || die "64-bit fix patch failed"
+	epatch ${FILESDIR}/singleclick-shadeormaxopts-0.9x.patch2 || die "single click and shade-or-maximize-options patch failed"
+	epatch ${FILESDIR}/wlist-0.9x.patch || die "window list patch failed"
+	epatch ${FILESDIR}/64bit+endian-fixes-0.9x.patch || die "64-bit + endian fix patch failed"
 }
 
 src_compile() {
@@ -68,6 +73,10 @@ src_compile() {
 		--enable-usermenu \
 		--with-pixmapdir=/usr/share/pixmaps \
 		${myconf} || die
+
+	# call here needed as some users report breakage with one of the above
+	#  patches (though patched after autoreconf)
+	libtoolize --copy --force
 
 	# don't know if zh_TW is still non-functional, but leaving it out still
 	#  for now
@@ -141,6 +150,7 @@ src_install() {
 
 	insinto /etc/X11/dm/Sessions
 	doins ${FILESDIR}/wmaker.desktop
+	make_desktop_entry /usr/bin/wmaker
 }
 
 pkg_postinst() {
