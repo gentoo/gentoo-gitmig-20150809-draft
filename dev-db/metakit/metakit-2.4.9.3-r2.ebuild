@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.16 2005/06/17 21:23:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.17 2005/06/23 01:22:19 agriffis Exp $
 
 inherit python multilib
 
@@ -17,7 +17,7 @@ DEPEND=">=sys-apps/sed-4
 	python? ( >=dev-lang/python-2.2.1 )
 	tcltk? ( >=dev-lang/tcl-8.3.3-r2 )"
 
-RESTRICT="maketest"
+RESTRICT="test"
 
 src_unpack() {
 	python_version
