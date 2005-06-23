@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r1.ebuild,v 1.1 2005/06/20 21:49:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r1.ebuild,v 1.2 2005/06/23 10:31:28 leonardop Exp $
 
 inherit libtool eutils
 
@@ -54,7 +54,7 @@ src_install() {
 	insinto /etc/logrotate.d
 	newins ${FILESDIR}/scrollkeeper-logrotate scrollkeeper
 
-	dodoc AUTHORS INSTALL TODO COPYING* ChangeLog README NEWS
+	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README TODO scrollkeeper-spec.txt
 }
 
 pkg_preinst() {

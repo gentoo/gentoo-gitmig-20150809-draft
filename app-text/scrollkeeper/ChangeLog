@@ -1,6 +1,11 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.48 2005/06/20 21:49:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.49 2005/06/23 10:31:28 leonardop Exp $
+
+  23 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
+  scrollkeeper-0.3.14-r1.ebuild, files/scrollkeeper-0.3.14-gentoo.patch:
+  Modified patch to stop installing files that are handled by dodoc.
+  Suggestions by TGL on bug #96831.
 
 *scrollkeeper-0.3.14-r1 (20 Jun 2005)
 
