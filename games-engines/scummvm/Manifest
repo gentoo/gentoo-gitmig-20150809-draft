@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d6ec4567eed4073d044cba64b3d7b076 scummvm-0.7.1.ebuild 1776
 MD5 1460d38d860a489484e2c2c299106d1f ChangeLog 5398
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6b161524831d71640fdb8eebf1900f2b scummvm-0.7.1.ebuild 1778
 MD5 6b7e3eea92e3d3345457d83a2d851099 files/0.7.1-configure.patch 699
 MD5 fb4256256ccf802b62a4a9e798e259d3 files/digest-scummvm-0.7.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCughXBXaUFmZvwyMRAmXgAKCo752xRj+m30ZTOwCwpGVHeG80VwCdFK0Z
+Ls9Cxux8nTT2sOyDoN0ASzc=
+=P1Ix
+-----END PGP SIGNATURE-----
