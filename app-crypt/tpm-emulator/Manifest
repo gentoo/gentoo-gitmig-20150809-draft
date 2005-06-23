@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0f33bfee89fd2c3136e78bc1d644c753 tpm-emulator-0.2a.ebuild 1010
 MD5 2603eeeb20b24caddac3e9ce6996f357 metadata.xml 251
 MD5 962867d09803606647245d4361e52778 ChangeLog 412
 MD5 b4b60f2d1cc35dd8e7c59c6762ef9468 files/digest-tpm-emulator-0.2a 69
 MD5 fd008890558a0afd90c7f0af8dcc3907 files/tpm-emulator-0.2a-inline.patch 5243
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCurQmmdTrptrqvGERAvGRAJ4yrEvs8iRUQ4Rhza8j3gmWGaa2lgCglEFD
+VY9ndw4Gbriy/APOE/P0yQA=
+=nGh1
+-----END PGP SIGNATURE-----

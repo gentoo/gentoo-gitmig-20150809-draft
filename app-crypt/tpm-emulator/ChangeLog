@@ -1,0 +1,11 @@
+# ChangeLog for app-crypt/tpm-emulator
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.1 2005/06/23 13:07:26 dragonheart Exp $
+
+*tpm-emulator-0.2a (23 Jun 2005)
+
+  23 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/tpm-emulator-0.2a-inline.patch, +metadata.xml,
+  +tpm-emulator-0.2a.ebuild:
+  initial import
+

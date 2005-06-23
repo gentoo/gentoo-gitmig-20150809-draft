@@ -1,0 +1,148 @@
+--- tpm_marshalling.c.orig	2005-05-07 17:57:21.000000000 +1000
++++ tpm_marshalling.c	2005-06-23 21:46:08.000000000 +1000
+@@ -20,7 +20,7 @@
+ #include "crypto/rsa.h"
+ #include "linux_module.h"
+ 
+-inline int tpm_marshal_BYTE(BYTE **ptr, UINT32 *length, BYTE v)
++ int tpm_marshal_BYTE(BYTE **ptr, UINT32 *length, BYTE v)
+ {
+   if (*length < 1) return -1;
+   **ptr = v;
+@@ -28,7 +28,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_unmarshal_BYTE(BYTE **ptr, UINT32 *length, BYTE *v)
++ int tpm_unmarshal_BYTE(BYTE **ptr, UINT32 *length, BYTE *v)
+ {
+   if (*length < 1) return -1;
+   *v = **ptr;
+@@ -36,7 +36,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_marshal_UINT16(BYTE **ptr, UINT32 *length, UINT16 v)
++ int tpm_marshal_UINT16(BYTE **ptr, UINT32 *length, UINT16 v)
+ {
+   if (*length < 2) return -1;
+   **(UINT16**)ptr = CPU_TO_BE16(v);
+@@ -44,7 +44,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_unmarshal_UINT16(BYTE **ptr, UINT32 *length, UINT16 *v)
++ int tpm_unmarshal_UINT16(BYTE **ptr, UINT32 *length, UINT16 *v)
+ {
+   if (*length < 2) return -1;
+   *v = BE16_TO_CPU(**(UINT16**)ptr);
+@@ -52,7 +52,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_marshal_UINT32(BYTE **ptr, UINT32 *length, UINT32 v)
++ int tpm_marshal_UINT32(BYTE **ptr, UINT32 *length, UINT32 v)
+ {
+   if (*length < 4) return -1;
+   **(UINT32**)ptr = CPU_TO_BE32(v);
+@@ -60,7 +60,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_unmarshal_UINT32(BYTE **ptr, UINT32 *length, UINT32 *v)
++ int tpm_unmarshal_UINT32(BYTE **ptr, UINT32 *length, UINT32 *v)
+ {
+   if (*length < 4) return -1;
+   *v = BE32_TO_CPU(**(UINT32**)ptr);
+@@ -68,7 +68,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_marshal_UINT64(BYTE **ptr, UINT32 *length, UINT64 v)
++ int tpm_marshal_UINT64(BYTE **ptr, UINT32 *length, UINT64 v)
+ {
+   if (*length < 8) return -1;
+   **(UINT64**)ptr = CPU_TO_BE64(v);
+@@ -76,7 +76,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_unmarshal_UINT64(BYTE **ptr, UINT32 *length, UINT64 *v)
++ int tpm_unmarshal_UINT64(BYTE **ptr, UINT32 *length, UINT64 *v)
+ {
+   if (*length < 8) return -1;
+   *v = BE64_TO_CPU(**(UINT64**)ptr);
+@@ -84,7 +84,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_marshal_BLOB(BYTE **ptr, UINT32 *ptr_length,
++ int tpm_marshal_BLOB(BYTE **ptr, UINT32 *ptr_length,
+                             BYTE *b, UINT32 b_length)
+ {
+   if (*ptr_length < b_length) return -1;
+@@ -93,7 +93,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_unmarshal_BLOB(BYTE **ptr, UINT32 *ptr_length,
++ int tpm_unmarshal_BLOB(BYTE **ptr, UINT32 *ptr_length,
+                               BYTE **b, UINT32 b_length)
+ {
+   if (*ptr_length < b_length) return -1;
+@@ -102,7 +102,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_marshal_BYTE_ARRAY(BYTE **ptr, UINT32 *ptr_length,
++ int tpm_marshal_BYTE_ARRAY(BYTE **ptr, UINT32 *ptr_length,
+                                   BYTE *b, UINT32 b_length)
+ {
+   if (*ptr_length < b_length) return -1;
+@@ -111,7 +111,7 @@
+   return 0;
+ }
+ 
+-inline int tpm_unmarshal_BYTE_ARRAY(BYTE **ptr, UINT32 *ptr_length,
++ int tpm_unmarshal_BYTE_ARRAY(BYTE **ptr, UINT32 *ptr_length,
+                                     BYTE *b, UINT32 b_length)
+ {
+   if (*ptr_length < b_length) return -1;
+--- tpm_marshalling.h.orig	2005-05-07 17:57:21.000000000 +1000
++++ tpm_marshalling.h	2005-06-23 21:46:08.000000000 +1000
+@@ -56,23 +56,23 @@
+  * returned and the values of ptr and length are undefined.
+  */
+ 
+-inline int tpm_marshal_BYTE(BYTE **ptr, UINT32 *length, BYTE v);
+-inline int tpm_unmarshal_BYTE(BYTE **ptr, UINT32 *length, BYTE *v);
++ int tpm_marshal_BYTE(BYTE **ptr, UINT32 *length, BYTE v);
++ int tpm_unmarshal_BYTE(BYTE **ptr, UINT32 *length, BYTE *v);
+ 
+-inline int tpm_marshal_UINT16(BYTE **ptr, UINT32 *length, UINT16 v);
+-inline int tpm_unmarshal_UINT16(BYTE **ptr, UINT32 *length, UINT16 *v);
++ int tpm_marshal_UINT16(BYTE **ptr, UINT32 *length, UINT16 v);
++ int tpm_unmarshal_UINT16(BYTE **ptr, UINT32 *length, UINT16 *v);
+ 
+-inline int tpm_marshal_UINT32(BYTE **ptr, UINT32 *length, UINT32 v);
+-inline int tpm_unmarshal_UINT32(BYTE **ptr, UINT32 *length, UINT32 *v);
++ int tpm_marshal_UINT32(BYTE **ptr, UINT32 *length, UINT32 v);
++ int tpm_unmarshal_UINT32(BYTE **ptr, UINT32 *length, UINT32 *v);
+ 
+-inline int tpm_marshal_UINT64(BYTE **ptr, UINT32 *length, UINT64 v);
+-inline int tpm_unmarshal_UINT64(BYTE **ptr, UINT32 *length, UINT64 *v);
++ int tpm_marshal_UINT64(BYTE **ptr, UINT32 *length, UINT64 v);
++ int tpm_unmarshal_UINT64(BYTE **ptr, UINT32 *length, UINT64 *v);
+ 
+-inline int tpm_marshal_BLOB(BYTE **ptr, UINT32 *ptr_length, BYTE *b, UINT32 b_length);
+-inline int tpm_unmarshal_BLOB(BYTE **ptr, UINT32 *ptr_length, BYTE **b, UINT32 b_length);
++ int tpm_marshal_BLOB(BYTE **ptr, UINT32 *ptr_length, BYTE *b, UINT32 b_length);
++ int tpm_unmarshal_BLOB(BYTE **ptr, UINT32 *ptr_length, BYTE **b, UINT32 b_length);
+ 
+-inline int tpm_marshal_BYTE_ARRAY(BYTE **ptr, UINT32 *ptr_length, BYTE *b, UINT32 b_length);
+-inline int tpm_unmarshal_BYTE_ARRAY(BYTE **ptr, UINT32 *ptr_length, BYTE *b, UINT32 b_length);
++ int tpm_marshal_BYTE_ARRAY(BYTE **ptr, UINT32 *ptr_length, BYTE *b, UINT32 b_length);
++ int tpm_unmarshal_BYTE_ARRAY(BYTE **ptr, UINT32 *ptr_length, BYTE *b, UINT32 b_length);
+ 
+ #define tpm_marshal_BOOL                       tpm_marshal_BYTE
+ #define tpm_unmarshal_BOOL                     tpm_unmarshal_BYTE
