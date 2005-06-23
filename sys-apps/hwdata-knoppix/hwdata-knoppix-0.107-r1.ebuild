@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.107-r1.ebuild,v 1.6 2005/06/22 14:03:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.107-r1.ebuild,v 1.7 2005/06/23 13:52:50 wolf31o2 Exp $
 
 inherit eutils
 
@@ -19,7 +19,11 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	use livecd && use opengl && epatch ${FILESDIR}/${P}-binary_drivers.patch
+	if use x86 || use amd64; then
+		if use livecd && use opengl; then
+			epatch ${FILESDIR}/${P}-binary_drivers.patch || die "patching"
+		fi
+	fi
 }
 
 src_install() {

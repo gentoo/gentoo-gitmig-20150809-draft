@@ -1,5 +1,5 @@
-MD5 433f0c3a4b459fe52c5a9ea60726930d ChangeLog 2843
+MD5 3062f035c2424ea1f9673b16162f4a35 ChangeLog 2991
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
-MD5 097b1a7e48b1793c584cf43f0daefcf7 hwdata-knoppix-0.107-r1.ebuild 888
+MD5 b769a798fc4bdaf657928df6bd54fbc0 hwdata-knoppix-0.107-r1.ebuild 956
 MD5 66b28b078d17b41b283267375957ec8f files/hwdata-knoppix-0.107-binary_drivers.patch 3363
 MD5 83726b4e2a07fe0c8b3eca8433bf2648 files/digest-hwdata-knoppix-0.107-r1 74

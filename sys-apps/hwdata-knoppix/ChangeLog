@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwdata-knoppix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.22 2005/06/22 14:03:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/ChangeLog,v 1.23 2005/06/23 13:52:50 wolf31o2 Exp $
+
+  23 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  hwdata-knoppix-0.107-r1.ebuild:
+  Changed to only apply binary_drivers patch on x86/amd64.
 
   22 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   hwdata-knoppix-0.107-r1.ebuild:
