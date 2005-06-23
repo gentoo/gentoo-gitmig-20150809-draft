@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.57 2005/05/31 23:37:51 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.58 2005/06/23 21:43:58 stkn Exp $
+
+  23 Jun 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.0.0/asterisk-1.0.7-manager-cli-segv.patch,
+  asterisk-1.0.7-r1.ebuild:
+  Added security fix for
+  http://www.portcullis-security.com/advisory/advisory-05-013.txt (bug #96826)
+  (taken from asterisk-1.0.8), non-root changes and cleanups, astconf.h is
+  installed into /usr/include/asterisk, because several external modules need
+  it. Tested and marking ~* again.
 
   01 Jun 2005; Stefan Knoblich <stkn@gentoo.org> -asterisk-1.0.0.ebuild,
   -asterisk-1.0.1.ebuild, -asterisk-1.0.2.ebuild, -asterisk-1.0.3-r1.ebuild,
