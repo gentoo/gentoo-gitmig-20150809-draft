@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 df14b502787190763c38ca0e94bb2adc ChangeLog 1992
+MD5 3d478a8501663e79fe507fb84e9d3646 files/digest-mlmmj-1.2.4 64
+MD5 148c3ccf8d042dc7795494252c18b6d3 files/digest-mlmmj-1.2.8 64
 MD5 30223d14708305de61bb24584b66bd87 metadata.xml 285
 MD5 c15c446c91bb367386ebe1366f3975a6 mlmmj-1.2.4.ebuild 1166
 MD5 063d6badc975a243000876d7514bb673 mlmmj-1.2.8.ebuild 1165
-MD5 3d478a8501663e79fe507fb84e9d3646 files/digest-mlmmj-1.2.4 64
-MD5 148c3ccf8d042dc7795494252c18b6d3 files/digest-mlmmj-1.2.8 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCuqwSI1lqEGTUzyQRArqWAKDTn9u7rauye8ukj2Bs4E0NVNJXhgCfZrYS
++wEWD/aWd3tKtfJE5Zp7yro=
+=HO1s
+-----END PGP SIGNATURE-----
