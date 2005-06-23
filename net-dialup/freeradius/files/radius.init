@@ -1,5 +1,7 @@
 #!/sbin/runscript
 
+opts="${opts} reload"
+
 depend() {
 	need net
 	use dns
@@ -42,5 +44,11 @@ start() {
 stop () {
 	ebegin "Stopping radiusd"
 	start-stop-daemon --stop --quiet --pidfile=/var/run/radiusd/radwatch.pid
+	eend $?
+}
+
+reload () {
+	ebegin "Reloading radiusd"
+	start-stop-daemon --stop --signal HUP --quiet --pidfile=/var/run/radiusd/radiusd.pid
 	eend $?
 }
