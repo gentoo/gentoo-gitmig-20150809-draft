@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.20 2005/06/19 23:17:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.21 2005/06/23 02:00:11 flameeyes Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -40,3 +40,4 @@
 <media-gfx/splashutils-1.1.9.6
 <sys-libs/pam_passwdqc-1.0.2
 <app-admin/usermin-1.130-r1
+<net-misc/hylafax-4.2.1-r1
