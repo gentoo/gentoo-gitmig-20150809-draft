@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.5 2005/02/23 21:29:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.6 2005/06/23 19:35:18 wolf31o2 Exp $
 
 inherit games
 
@@ -13,6 +13,7 @@ DESCRIPTION="Enemy Territory - ${MOD_DESC}"
 
 SLOT="0"
 KEYWORDS="-* amd64 x86"
+RESTRICT="strip"
 IUSE="opengl dedicated"
 
 DEPEND="app-arch/unzip"
