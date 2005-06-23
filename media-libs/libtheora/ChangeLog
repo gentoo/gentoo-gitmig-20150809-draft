@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.33 2005/06/23 10:52:35 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.34 2005/06/23 10:59:25 zaheerm Exp $
+
+  23 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  -libtheora-1.0_alpha4.ebuild:
+  alpha4.ebuild has a broken encoder
 
 *libtheora-1.0_alpha4-r1 (23 Jun 2005)
 
