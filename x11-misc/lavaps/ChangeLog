@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/lavaps
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/ChangeLog,v 1.11 2005/06/14 23:13:11 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/ChangeLog,v 1.12 2005/06/23 20:45:32 smithj Exp $
+
+*lavaps-2.7-r1 (23 Jun 2005)
+
+  23 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/lavaps-2.7-this-makes-it-compile.patch, +lavaps-2.7-r1.ebuild:
+  fixed compilation problem for bug 96372; thanks to Stian Skjelstad
+  <stian@nixia.no> for the patch
 
 *lavaps-2.7 (14 Jun 2005)
 
