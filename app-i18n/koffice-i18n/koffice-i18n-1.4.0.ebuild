@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.4.0.ebuild,v 1.1 2005/06/21 08:43:02 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.4.0.ebuild,v 1.2 2005/06/23 09:50:16 greg_g Exp $
 
 inherit kde
 
@@ -31,7 +31,7 @@ pkg_setup() {
 		eerror "of the language codes for which languages you would like to install."
 		eerror "Look at the LANGS variable inside the ebuild to see the list of"
 		eerror "available languages."
-		eerror "e.g.: LINGUAS=\"de pt\""
+		eerror "e.g.: LINGUAS=\"sv de pt\""
 		echo
 		die
 	fi
