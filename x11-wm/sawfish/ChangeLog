@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/sawfish
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.49 2004/08/30 19:19:31 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.50 2005/06/23 02:06:44 agriffis Exp $
+
+*sawfish-1.3.20040120-r1 (23 Jun 2005)
+
+  23 Jun 2005; Aron Griffis <agriffis@gentoo.org> -sawfish-1.0.1-r6.ebuild,
+  +sawfish-1.3.20040120-r1.ebuild:
+  Reduce DEPEND: remove bogus imlib, respect USE=audiofile #84947
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   sawfish-1.3.20040120.ebuild:
