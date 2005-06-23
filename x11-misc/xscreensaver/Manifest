@@ -10,7 +10,6 @@ MD5 8f8a0169ebf8e31ec8e931e3fddacf87 ChangeLog 15587
 MD5 64d504c9ea04705ce78f9ffb87c96321 files/digest-xscreensaver-4.20 70
 MD5 64d504c9ea04705ce78f9ffb87c96321 files/digest-xscreensaver-4.20-r1 70
 MD5 c4ec3ad074fd83aff37b4b4ddc9b7f61 files/digest-xscreensaver-4.21 70
-MD5 dc4579312065187f296cd6fdeba96664 files/xscreensaver-4.10-norpm.patch 1266
 MD5 8bd9730fb1f84b69efac29fab28d0db2 files/xscreensaver-4.14-analogtv_tmp.patch 419
 MD5 23c5d8085eb70d6dc6168857a31cc284 files/xscreensaver-4.14-fortune.patch 348
 MD5 18988e2c62fe964e00bc98c251dba3ee files/xscreensaver-4.14-icc.patch 8126
@@ -23,7 +22,7 @@ MD5 6eb40b28a36f889d0f1919cdbf160ef7 files/pam.d/xscreensaver 79
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCuzxil5AvwDPiUowRAsnNAJ0SqUx4+koaprDn9dnOsk6Iy/maQACePdsR
-EHP+8jXmZhIhTcihvKQcMVE=
-=dmh1
+iD8DBQFCuz1cl5AvwDPiUowRAv3CAJ9ao/zQAqY/DAWMypXTmRndFErSAACdHDlN
+JQ1BVX26PsR4bbPKeoH5QeI=
+=8Z3I
 -----END PGP SIGNATURE-----
