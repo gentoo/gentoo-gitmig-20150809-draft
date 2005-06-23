@@ -1,31 +1,30 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/geki3-KXL/geki3-KXL-1.0.3-r1.ebuild,v 1.5 2004/06/24 21:55:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki3-KXL/geki3-KXL-1.0.3-r1.ebuild,v 1.6 2005/06/23 19:06:52 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="2D length scroll shooting game"
-SRC_URI="http://kxl.hn.org/download/${P}.tar.gz"
 HOMEPAGE="http://kxl.hn.org/"
+SRC_URI="http://kxl.hn.org/download/${P}.tar.gz"
 
-KEYWORDS="x86"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=dev-games/KXL-1.1.7"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gentoo-paths.patch
-	aclocal || die "aclocal failed"
-	automake -a || die "automake failed"
-	autoconf || die "autoconf failed"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-gentoo-paths.patch
+	export WANT_AUTOCONF=2.5
+	aclocal && automake -a -c && autoconf || die "autotools failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc ChangeLog README
 	prepgamesdirs
 }
