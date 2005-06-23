@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.59 2005/06/22 19:35:36 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.60 2005/06/23 18:00:06 agriffis Exp $
+
+  23 Jun 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-thunderbird-1.0.2-r1.ebuild:
+  Use the thunderbird enigmail theme #45609
 
 *mozilla-thunderbird-1.0.2-r1 (22 Jun 2005)
 

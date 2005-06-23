@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2-r1.ebuild,v 1.1 2005/06/22 19:35:36 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2-r1.ebuild,v 1.2 2005/06/23 18:00:06 agriffis Exp $
 
 IUSE="crypt"
 
@@ -107,12 +107,19 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/$(get_libdir)
-	dodir /usr/$(get_libdir)/MozillaThunderbird
-	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/$(get_libdir)/MozillaThunderbird
+	declare tb_libdir=/usr/$(get_libdir)/MozillaThunderbird
+
+	dodir ${tb_libdir}
+	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}${tb_libdir}
+
+	# use the right theme for thunderbird #45609
+	if use crypt; then
+		mv ${D}${tb_libdir}/chrome/enigmail-skin-tbird.jar \
+			${D}${tb_libdir}/chrome/enigmail-skin.jar
+	fi
 
 	# fix permissions
-	chown -R root:root ${D}/usr/$(get_libdir)/MozillaThunderbird
+	chown -R root:root ${D}${tb_libdir}
 
 	# use mozilla-launcher which supports thunderbird as of version 1.6.
 	# version 1.7-r1 moved the script to /usr/libexec
@@ -127,11 +134,12 @@ src_install() {
 export MOZILLA_LAUNCHER=thunderbird
 exec /usr/libexec/mozilla-launcher "\$@"
 EOF
-chmod 0755 ${D}/usr/bin/thunderbird
+	chmod 0755 ${D}/usr/bin/thunderbird
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps
 	doins ${FILESDIR}/icon/thunderbird-icon.png
+
 	# Fix bug 54179: Install .desktop file into /usr/share/applications
 	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
 	insinto /usr/share/applications
@@ -141,8 +149,7 @@ chmod 0755 ${D}/usr/bin/thunderbird
 	# be run as a normal user.  Drop in some initialized files to
 	# avoid this.
 	einfo "Extracting thunderbird-${PV} initialization files"
-	tar xjpf ${FILESDIR}/thunderbird-0.7-init.tar.bz2 \
-		-C ${D}/usr/$(get_libdir)/MozillaThunderbird
+	tar xjpf ${FILESDIR}/thunderbird-0.7-init.tar.bz2 -C ${tb_libdir}
 }
 
 pkg_preinst() {
