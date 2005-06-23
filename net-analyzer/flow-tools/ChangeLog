@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.13 2005/06/22 14:46:54 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.14 2005/06/23 07:29:24 dholm Exp $
+
+  23 Jun 2005; David Holm <dholm@gentoo.org> flow-tools-0.68-r1.ebuild:
+  Added to ~ppc.
 
 *flow-tools-0.68-r1 (22 Jun 2005)
 
