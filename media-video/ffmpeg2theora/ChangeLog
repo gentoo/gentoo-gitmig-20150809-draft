@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.3 2005/05/05 13:02:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.4 2005/06/23 19:35:34 zaheerm Exp $
+
+  23 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  ffmpeg2theora-0.12.ebuild, ffmpeg2theora-0.13.ebuild:
+  forced re-keywording due to libtheora encode issue
 
   05 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   ffmpeg2theora-0.12.ebuild:
