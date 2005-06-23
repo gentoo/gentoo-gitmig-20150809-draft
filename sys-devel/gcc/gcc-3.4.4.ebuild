@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4.ebuild,v 1.12 2005/06/20 02:36:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4.ebuild,v 1.13 2005/06/23 18:24:20 gustavoz Exp $
 
 MAN_VER=""
 PATCH_VER="1.2"
@@ -93,6 +93,9 @@ src_unpack() {
 
 	# Fix cross-compiling
 	epatch "${FILESDIR}"/3.4.4/gcc-3.4.4-cross-compile.patch
+
+	# Newer AVR target processors
+	epatch "${FILESDIR}"/3.4.4/gcc-3.4_x-avr-news-devs2.patch
 
 	# Arch stuff
 	case $(tc-arch) in
