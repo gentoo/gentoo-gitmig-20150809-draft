@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.42 2005/05/31 23:31:53 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.43 2005/06/23 21:35:47 stkn Exp $
+
+  23 Jun 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.7-r1.ebuild:
+  ~* keywords restored for asterisk-1.0.7 security update.
 
   01 Jun 2005; Stefan Knoblich <stkn@gentoo.org>
   -files/zaptel-bristuff-0.2.0-RC8d.patch,

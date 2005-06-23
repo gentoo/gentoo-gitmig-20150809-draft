@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.4 2005/05/31 23:31:53 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.5 2005/06/23 21:35:47 stkn Exp $
 
 IUSE="devfs26 bri florz"
 
@@ -17,8 +17,7 @@ SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/zaptel-${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-#KEYWORDS="~x86 ~ppc ~amd64"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="virtual/libc
 	virtual/linux-sources
@@ -184,7 +183,7 @@ src_install() {
 
 	# fix permissions if there's no udev / devfs around
 	if [[ -d ${D}/dev/zap ]]; then
-		chown -R root:dialout  ${D}/dev/zap
+		chown -R root:dialout	${D}/dev/zap
 		chmod -R u=rwX,g=rwX,o= ${D}/dev/zap
 	fi
 }
@@ -225,7 +224,7 @@ pkg_postinst() {
 
 	# fix permissions if there's no udev / devfs around
 	if [[ -d ${ROOT}/dev/zap ]]; then
-		chown -R root:dialout  ${ROOT}/dev/zap
+		chown -R root:dialout	${ROOT}/dev/zap
 		chmod -R u=rwX,g=rwX,o= ${ROOT}/dev/zap
 	fi
 }
