@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 2fa8e771ddddb674d8d616006ff0283d mod_layout-4.0.1a-r1.ebuild 621
+MD5 59bfc95504a0942e3b2c7dd721560e26 mod_layout-3.2.1-r1.ebuild 729
+MD5 e8c6c7d071bfb6789dc372a8d39c2ef5 mod_layout-3.2.1.ebuild 1363
+MD5 5f481ced2b1bd139b97f31902006ec2e mod_layout-4.0.1a.ebuild 933
 MD5 a545a9bd046a12b12daf65ad642631a9 ChangeLog 1288
 MD5 4b562dac77e8dcbc4aaea4b9bf4dbac2 metadata.xml 264
-MD5 479d0bc0289407319766279555d182f8 mod_layout-3.2.1-r1.ebuild 731
-MD5 e8c6c7d071bfb6789dc372a8d39c2ef5 mod_layout-3.2.1.ebuild 1363
-MD5 2fa8e771ddddb674d8d616006ff0283d mod_layout-4.0.1a-r1.ebuild 621
-MD5 5f481ced2b1bd139b97f31902006ec2e mod_layout-4.0.1a.ebuild 933
 MD5 ed08f74402be537f28435ce409adb86d files/15_mod_layout.conf 4590
-MD5 77707c5cb33c82abcb18389a7499495b files/15_mod_layout321.conf 846
-MD5 e63bd20acd48f4065be8f0fc542a393b files/digest-mod_layout-3.2.1 67
-MD5 e63bd20acd48f4065be8f0fc542a393b files/digest-mod_layout-3.2.1-r1 67
 MD5 31f7af245df33de3e73bfcf60898240b files/digest-mod_layout-4.0.1a 68
+MD5 e63bd20acd48f4065be8f0fc542a393b files/digest-mod_layout-3.2.1 67
+MD5 77707c5cb33c82abcb18389a7499495b files/15_mod_layout321.conf 846
+MD5 e63bd20acd48f4065be8f0fc542a393b files/digest-mod_layout-3.2.1-r1 67
 MD5 31f7af245df33de3e73bfcf60898240b files/digest-mod_layout-4.0.1a-r1 68
 MD5 9ce33c60579d3b6a35ac6d2722b0888c files/mod_layout-4.0.1a-register.patch 585
 MD5 233872afb84493400986f25e36dd396f files/3.2.1-r1/15_mod_layout.conf 4654
 MD5 233872afb84493400986f25e36dd396f files/4.0.1a-r1/15_mod_layout.conf 4654
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCI7dYjUHll2nfF60RAui8AJ452I/AkQF0lPxaPbnEiCLDuWvqKQCgs0Mt
-PAb9ZSurc/X7gBKh9Ig2u6I=
-=U8wH
------END PGP SIGNATURE-----
