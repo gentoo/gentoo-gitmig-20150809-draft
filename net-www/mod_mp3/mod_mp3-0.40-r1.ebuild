@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.40-r1.ebuild,v 1.2 2005/02/25 14:56:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.40-r1.ebuild,v 1.3 2005/06/23 01:25:32 agriffis Exp $
 
 inherit apache-module
 
 # test target in Makefile isn't sane
-RESTRICT="maketest"
+RESTRICT="test"
 
 IUSE="mysql postgres"
 
