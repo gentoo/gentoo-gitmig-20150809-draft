@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/plucker
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/ChangeLog,v 1.8 2005/01/02 21:46:32 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/ChangeLog,v 1.9 2005/06/23 13:03:59 agriffis Exp $
+
+  23 Jun 2005; Aron Griffis <agriffis@gentoo.org> plucker-1.8-r1.ebuild:
+  Plucker doesn't build with unicode wxGTK, so make sure we get the ansi
+  version instead #55716
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
