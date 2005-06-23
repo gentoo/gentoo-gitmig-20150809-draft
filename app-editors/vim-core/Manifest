@@ -4,8 +4,8 @@ MD5 080820e394e6c4b569ad2db6b078cf9e vim-core-7.0_alpha20050326.ebuild 840
 MD5 9ebf5e1ac06b024ab8250d9c9d16a6ca vim-core-7.0_alpha20050321.ebuild 840
 MD5 2f4b84c1608030f760332f9e2994d7fe vim-core-6.3-r4.ebuild 947
 MD5 2cfe86f3b3acb17b9e57bdd38f5824fd vim-core-6.3.075.ebuild 1066
-MD5 080820e394e6c4b569ad2db6b078cf9e vim-core-7.0_alpha20050622.ebuild 840
-MD5 c072455b5afe39df9b070e0810bccfba ChangeLog 20643
+MD5 9c93d1855539f4302483e237d1889a26 vim-core-7.0_alpha20050622.ebuild 842
+MD5 a51717be77331ac94ef7b3aa8f9ab116 ChangeLog 20645
 MD5 b92a393a9d3de4345361118bc035ef73 vim-core-6.3.068.ebuild 1053
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 266f8b682476da0ec6c4d39de5a79264 files/vimrc-r1 5728
