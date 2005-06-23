@@ -1,19 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 826a2e8e20b3a3a58cb7583b68d89344 trousers-0.1.7.ebuild 1353
 MD5 2603eeeb20b24caddac3e9ce6996f357 metadata.xml 251
-MD5 8c0a74b1bcc693bd243e63a8172168e2 ChangeLog 593
-MD5 2e2f35cae17f3e5a8440d8889e3016e5 trousers-0.1.11.ebuild 2393
-MD5 6ced7c6423b5d94e01d6e03e435f620e files/digest-trousers-0.1.7 66
-MD5 1c0953f370d4ecddd3307f0b64bccb0d files/0.1.7-makefile-statedir.patch 2978
+MD5 3463919d77ad73755da490ac67fa468a ChangeLog 935
+MD5 1906afd62fd11874fce2580feb769857 trousers-0.1.11-r1.ebuild 2598
 MD5 05e27e046284f46a7da59bf3dbbdddf0 files/tcsd.confd 372
-MD5 3b7548b0904848bef6723446075e7678 files/tcsd.initd 943
-MD5 a0c59b3b9088b1773498e993ccdad67c files/digest-trousers-0.1.11 68
+MD5 edcaf716f7fc47ab4eeb301291a53fb4 files/tcsd.initd 958
+MD5 a0c59b3b9088b1773498e993ccdad67c files/digest-trousers-0.1.11-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCtWsTmdTrptrqvGERArWmAJsFeld2ILj9QU96P8QXeg8HEmyrzgCfcENI
-mnV/NWW7F6vV6qo40P8K3bw=
-=fpS3
+iD8DBQFCurNTmdTrptrqvGERAqUFAJ4n/w1jt+ABnkMLIcJixiukG7QryQCcD1Py
+yt2GOsw+d31vBLZdzLHUU8o=
+=VRln
 -----END PGP SIGNATURE-----

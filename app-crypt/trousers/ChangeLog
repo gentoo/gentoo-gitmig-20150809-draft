@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.2 2005/06/19 12:54:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.3 2005/06/23 13:03:55 dragonheart Exp $
+
+*trousers-0.1.11-r1 (23 Jun 2005)
+
+  23 Jun 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/0.1.7-makefile-statedir.patch, files/tcsd.initd,
+  -trousers-0.1.7.ebuild, -trousers-0.1.11.ebuild,
+  +trousers-0.1.11-r1.ebuild:
+  added udev permissions. Added tpm-emulator as optional dependancy. script
+  file fixes and old version cleanout
 
 *trousers-0.1.11 (19 Jun 2005)
 

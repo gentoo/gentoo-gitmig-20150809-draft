@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.1.11.ebuild,v 1.1 2005/06/19 12:54:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.1.11-r1.ebuild,v 1.1 2005/06/23 13:03:55 dragonheart Exp $
 
 inherit eutils linux-info
 
@@ -48,9 +48,10 @@ pkg_setup() {
 	else
 		eerror
 		eerror "To use this package, you should install a TPM driver."
-		eerror "You can either:"
+		eerror "You can have the following options:"
 		eerror "  - install app-crypt/tpm-module"
-		eerror "  - switch to a >=2.6.12 kernel"
+		eerror "  - install app-crypt/tpm-emulator"
+		eerror "  - switch to a >=2.6.12 kernel and compile the kernel module"
 		eerror
 	fi
 
@@ -75,4 +76,6 @@ src_install() {
 	fi
 	newinitd "${FILESDIR}/tcsd.initd" tcsd
 	newconfd "${FILESDIR}/tcsd.confd" tcsd
+	into /etc/udev/permissions.d/
+	echo "tpm*:tss:tss:0600" > ${D}/etc/udev/permissions.d/30-tpm.permissions
 }

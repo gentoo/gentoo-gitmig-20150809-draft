@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/files/tcsd.initd,v 1.1 2005/06/19 12:54:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/files/tcsd.initd,v 1.2 2005/06/23 13:03:55 dragonheart Exp $
 
 depend() {
 	use logger
@@ -28,12 +28,12 @@ checkconfig() {
 start() {
 	ebegin "Starting TrouSerS' TCS daemon (tcsd)"
 	checkconfig || eend $?
-	start-stop-daemon --start --quiet --exec /usr/sbin/tcsd
+	start-stop-daemon --start --chuid tss --exec /usr/sbin/tcsd
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping TrouSerS' TCS daemon (tcsd)"
-	start-stop-daemon --stop --quiet --exec /usr/sbin/tcsd
+	start-stop-daemon --stop --quiet --exec /usr/sbin/tcsd --user tss
 	eend $?
 }
