@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.51 2005/06/23 03:51:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.52 2005/06/23 13:14:46 agriffis Exp $
+
+  23 Jun 2005; Aron Griffis <agriffis@gentoo.org> +sawfish-1.0.1-r6.ebuild,
+  -sawfish-1.2.ebuild:
+  Resurrect sawfish-1.0.1-r6 instead of sawfish-1.2, since gnome-1 depends on
+  <x11-wm/sawfish-1.2
 
   23 Jun 2005; Aron Griffis <agriffis@gentoo.org> +sawfish-1.2.ebuild:
   Resurrect sawfish-1.2 for gnome-1
