@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.33 2005/06/23 14:46:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.34 2005/06/23 22:28:07 spock Exp $
+
+  23 Jun 2005; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.1.9.6-r1.ebuild:
+  Use KERNEL_DIR instead of /usr/src/linux for the kernel source tree (bug
+  #96897).
 
   23 Jun 2005; Michał Januszewski <spock@gentoo.org>
   splashutils-1.1.9.6.ebuild, splashutils-1.1.9.6-r1.ebuild:

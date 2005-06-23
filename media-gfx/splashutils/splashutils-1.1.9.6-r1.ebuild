@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6-r1.ebuild,v 1.2 2005/06/23 14:46:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6-r1.ebuild,v 1.3 2005/06/23 22:28:07 spock Exp $
 
 inherit multilib linux-mod
 
@@ -72,7 +72,7 @@ spl_conf_use() {
 
 src_unpack() {
 	unpack ${A}
-	ln -s /usr/src/linux ${S}/linux
+	ln -s ${KERNEL_DIR} ${S}/linux
 
 	mv ${WORKDIR}/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT},klibc-${V_KLIBC}} ${S}/libs
 	ln -s ../../linux ${S}/libs/klibc-${V_KLIBC}/linux
