@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e45da842037875a102e58f76e464df27 freeradius-dialupadmin-1.0.2.ebuild 1633
-MD5 d0ebd63b45126726eb1d1cdc08ed0946 ChangeLog 431
+MD5 b6bb13d37529fe94213aafa1d22881b0 freeradius-dialupadmin-1.70.ebuild 1665
+MD5 faaa035a800e33a9854e40b0d19804af ChangeLog 678
 MD5 c4dcaab5383cc9eb6c10a80049cb3f65 metadata.xml 525
+MD5 5a26f9881af51aed070957e5fc4ed808 files/digest-freeradius-dialupadmin-1.70 69
 MD5 efcbf471e41edf8ce54ab910ad44945d files/setrootpath 184
-MD5 5a26f9881af51aed070957e5fc4ed808 files/digest-freeradius-dialupadmin-1.0.2 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSJgojiC39V7gKu0RAkQcAJ46fS4MtzeJxEwIf4uViitDK5/XmQCghXMU
-p+9zeGICcwmwTtXG7jpd/GU=
-=uzKU
+iD4DBQFCuzP5jiC39V7gKu0RAg61AJ4urbNAo/BT3S3C1HN5uWZ0fhvmNQCXcfNW
+0wEarQWjEACk47sKxILoaQ==
+=b38e
 -----END PGP SIGNATURE-----

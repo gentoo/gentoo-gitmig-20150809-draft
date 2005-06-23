@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/freeradius-dialupadmin-1.0.2.ebuild,v 1.3 2005/03/28 23:47:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/freeradius-dialupadmin-1.70.ebuild,v 1.1 2005/06/23 22:13:02 mrness Exp $
 
 inherit webapp
-
-MY_P=${P/-dialupadmin/}
+MY_FREERADIUS_P="freeradius-1.0.2"
 
 DESCRIPTION="Web administration interface of freeradius server"
-SRC_URI="ftp://ftp.freeradius.org/pub/radius/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.freeradius.org/pub/radius/${MY_FREERADIUS_P}.tar.gz"
 HOMEPAGE="http://www.freeradius.org/dialupadmin.html"
 
 KEYWORDS="~x86 ~amd64 ~ppc"
@@ -17,9 +16,9 @@ LICENSE="GPL-2"
 DEPEND="virtual/php
 	dev-perl/DateManip
 	sys-apps/findutils
-	=net-dialup/freeradius-${PV}*	"
+	>=net-dialup/${MY_FREERADIUS_P}"
 
-S="${WORKDIR}/${MY_P}/dialup_admin"
+S="${WORKDIR}/${MY_FREERADIUS_P}/dialup_admin"
 
 src_unpack() {
 	unpack ${A}
