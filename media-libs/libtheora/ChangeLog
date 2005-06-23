@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.32 2005/06/17 20:30:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.33 2005/06/23 10:52:35 zaheerm Exp $
+
+*libtheora-1.0_alpha4-r1 (23 Jun 2005)
+
+  23 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/libtheora-1.0_alpha4-enable-flags.patch,
+  +libtheora-1.0_alpha4-r1.ebuild:
+  fix stupid upstream configure, enable-encode disables encoder. Thanks bilboed
+  for the patch, also been committed upstream in cvs
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   libtheora-1.0_alpha4.ebuild:
