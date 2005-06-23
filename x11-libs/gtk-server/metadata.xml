@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>common-lisp</herd>
+<maintainer>
+  <email>mkennedy@gentoo.org</email>
+</maintainer>
+<longdescription>
+The GTK-server provides access to the GTK+ GUI toolkit over standard input,
+FIFOs, TCP and UDP interfaces.  This facilitates a VERY wide range of GTK+
+language bindings.
+</longdescription>
+</pkgmetadata>

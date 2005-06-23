@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/gtk-server
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-server/ChangeLog,v 1.1 2005/06/23 19:00:16 mkennedy Exp $
+
+*gtk-server-2.0.2 (23 Jun 2005)
+
+  23 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +gtk-server-2.0.2.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
