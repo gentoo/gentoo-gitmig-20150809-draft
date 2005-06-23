@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.38 2005/05/29 02:37:07 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.39 2005/06/23 21:55:52 sekretarz Exp $
+
+*gtk-gnutella-0.95.3 (23 Jun 2005)
+
+  23 Jun 2005; <sekretarz@gentoo.org> gtk-gnutella-0.95.ebuild,
+  +gtk-gnutella-0.95.3.ebuild:
+  Version bump, bug #91697. Release fixes bug #95524, #71353 and #63746. Fixed
+  DEPEND variable to hit gtk+-2.6, bug #77918
 
   29 May 2005; Jose Luis Rivero <yoswink@gentoo.org>
   gtk-gnutella-0.95-r1.ebuild:
