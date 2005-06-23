@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/profuse-0.23.0.ebuild,v 1.2 2005/06/20 21:43:21 dams Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/profuse-0.23.0.ebuild,v 1.3 2005/06/23 10:30:39 dams Exp $
 
 MY_P=${PN}-${PV}
 S=${WORKDIR}/${MY_P}
