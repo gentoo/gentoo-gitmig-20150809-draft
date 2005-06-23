@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.2.ebuild,v 1.12 2005/03/21 13:53:30 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.2.ebuild,v 1.13 2005/06/23 09:54:27 greg_g Exp $
 
 inherit kde eutils
 
@@ -33,7 +33,7 @@ pkg_setup() {
 		eerror "of the language codes for which languages you would like to install."
 		eerror "Look at the LANGS variable inside the ebuild to see the list of"
 		eerror "available languages."
-		eerror "e.g.: LINGUAS=\"se de pt\""
+		eerror "e.g.: LINGUAS=\"sv de pt\""
 		echo
 		die
 	fi
