@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/fte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.29 2005/06/05 03:44:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.30 2005/06/23 17:59:29 voxus Exp $
+
+  23 Jun 2005; Konstantin Arkhipov <voxus@gentoo.org> fte-20050108-r3.ebuild,
+  -fte-20020324.ebuild, -fte-20020324-r1.ebuild:
+  Marked stable 20050108 on amd64 and x86. Cleaned out old ebuilds.
 
   05 Jun 2005; Joseph Jezak <josejx@gentoo.org> fte-20050108-r3.ebuild:
   Marked ppc stable as this is the only version that builds on ppc.
