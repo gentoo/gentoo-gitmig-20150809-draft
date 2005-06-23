@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 574309004015c52c39e2f4e8122c18a3 metadata.xml 180
+MD5 78f8efd660c67f00e559f4758fe87402 ChangeLog 4658
 MD5 83890e7bba5fad9b2b92c2fd9efa953d libgnomecups-0.1.14.ebuild 531
 MD5 4e8f6b4306d3c55047cd893628818869 libgnomecups-0.1.6.ebuild 521
-MD5 c8338a0f826bc93154a0111578489c2c ChangeLog 4566
-MD5 50d9f2384422e8eccef63970164c96e0 libgnomecups-0.2.0.ebuild 533
+MD5 5993e873af67eb03a142aed783243068 libgnomecups-0.2.0.ebuild 532
+MD5 574309004015c52c39e2f4e8122c18a3 metadata.xml 180
 MD5 972a00f1c984c22f4b9cdb69122edd38 files/digest-libgnomecups-0.1.14 72
 MD5 598c276edd67500c9c91148bb57c968c files/digest-libgnomecups-0.1.6 71
 MD5 3f3a8f9b995d2d0f5db06e6cf01b9b3f files/digest-libgnomecups-0.2.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrIbRmOfEJZHYOKcRApxZAJ4q0SRTGlknW/04pc9ZLXWl4BCBaQCfTSbm
-Pe88blAU9cvs4/dqMVY3mOE=
-=lp7j
------END PGP SIGNATURE-----
