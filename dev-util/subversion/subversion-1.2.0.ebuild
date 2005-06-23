@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.0.ebuild,v 1.3 2005/05/27 13:17:16 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.0.ebuild,v 1.4 2005/06/23 01:50:53 agriffis Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -12,7 +12,7 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="apache2 berkdb python emacs perl java nls nowebdav zlib"
-RESTRICT="maketest"
+RESTRICT="test"
 
 # Presently subversion doesn't build with swig-1.3.22, bug 65424
 RDEPEND="apache2? ( ${APACHE2_DEPEND} )
