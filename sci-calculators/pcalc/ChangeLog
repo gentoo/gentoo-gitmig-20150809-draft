@@ -1,6 +1,19 @@
 # ChangeLog for sci-calculators/pcalc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.1 2005/03/30 05:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.2 2005/06/23 22:44:11 vapier Exp $
+
+*pcalc-1.0.0-r1 (23 Jun 2005)
+
+  23 Jun 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/pcalc-1.0.0-duplicated-case.patch,
+  +files/pcalc-1.0.0-error-handler.patch,
+  +files/pcalc-1.0.0-input-overflow-check.patch,
+  +files/pcalc-1.0.0-operator-updates.patch,
+  +files/pcalc-1.0.0-static-vars.patch,
+  +files/pcalc-1.0.0-string-overflow-checks.patch,
+  +files/pcalc-1.0.0-tmpfile.patch, +files/pcalc-1.0.0-usage.patch,
+  +pcalc-1.0.0-r1.ebuild:
+  Fix misc overflows, and support for more operators, etc...
 
 *pcalc-1.0.0 (30 Mar 2005)
 
