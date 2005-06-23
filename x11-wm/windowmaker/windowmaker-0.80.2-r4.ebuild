@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r4.ebuild,v 1.9 2005/03/18 02:03:07 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r4.ebuild,v 1.10 2005/06/23 22:53:01 fafhrd Exp $
 
 inherit eutils flag-o-matic
 filter-mfpmath "sse" "387"
@@ -32,26 +32,26 @@ KEYWORDS="~x86 ppc ~sparc ~alpha ~mips amd64 ppc64"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.80.2-r1-gentoo.patch
+	epatch ${FILESDIR}/${PV}/${PN}-0.80.2-r1-gentoo.patch
 
 	# scroll with the arrow keys
 	cd ${S}/WINGs
-	epatch ${FILESDIR}/wlist.patch
+	epatch ${FILESDIR}/${PV}/wlist.patch
 
 	# transparency/translucency
 	cd ${S}
-	epatch ${FILESDIR}/trance.patch.WM-0.80.2.diff
+	epatch ${FILESDIR}/${PV}/trance.patch.WM-0.80.2.diff
 
 	# Add some BETTER xinerama support
-	use xinerama && epatch ${FILESDIR}/xinerama.patch.bz2
+	use xinerama && epatch ${FILESDIR}/${PV}/xinerama.patch.bz2
 
 	# Fix GTK2 window flickering bug
-	epatch ${FILESDIR}/gtk2flickerfix.patch
+	epatch ${FILESDIR}/${PV}/gtk2flickerfix.patch
 
 	# Add options to WPrefs for single-click launching of windows
 	# and maximize vs. shading when double-click on titlebars
 	# http://orbita.starmedia.com/~neofpo/home.html
-	epatch ${FILESDIR}/wmfpo.patch
+	epatch ${FILESDIR}/${PV}/wmfpo.patch
 }
 
 src_compile() {

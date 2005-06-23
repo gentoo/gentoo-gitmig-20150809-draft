@@ -1,6 +1,27 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.49 2005/06/23 22:06:48 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.50 2005/06/23 22:53:01 fafhrd Exp $
+
+  23 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -files/singleclick-shadeormaxopts-0.9x.patch,
+  +files/0.80.2/gtk2flickerfix.patch, -files/wlist-0.9x.patch,
+  +files/0.80.2/xinerama.patch.bz2,
+  +files/0.91.0/64bit+endian-fixes-0.9x.patch,
+  +files/0.91.0/maximize-fix-0.9x.patch, +files/0.91.0/wlist-0.9x.patch,
+  -files/singleclick-shadeormaxopts-0.9x.patch2,
+  +files/0.80.2/windowmaker-0.80.2-r1-gentoo.patch,
+  +files/0.80.2/wlist.patch, +files/0.91.0/menufocus.patch,
+  -files/20_endian+64bit.diff,
+  +files/0.91.0/singleclick-shadeormaxopts-0.9x.patch2,
+  -files/windowmaker-0.80.2-r1-gentoo.patch,
+  +files/0.80.2/trance.patch.WM-0.80.2.diff, +files/0.80.2/wmfpo.patch,
+  -files/gtk2flickerfix.patch, -files/64bit+endian-fixes-0.9x.patch,
+  -files/maximize-fix-0.9x.patch, -files/trance.patch.WM-0.80.2.diff,
+  -files/menufocus.patch, -files/wlist.patch, -files/wmfpo.patch,
+  -files/xinerama.patch.bz2, windowmaker-0.80.2-r2.ebuild,
+  windowmaker-0.80.2-r4.ebuild, windowmaker-0.91.0-r1.ebuild,
+  windowmaker-0.91.0-r7.ebuild:
+  Cleanup of windowmaker ebuild files, patches, etc
 
   23 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org>
   -windowmaker-0.80.2-r3.ebuild, -windowmaker-0.91.0-r6.ebuild:

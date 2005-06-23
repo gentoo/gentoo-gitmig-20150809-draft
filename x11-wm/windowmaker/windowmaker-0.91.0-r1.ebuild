@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.13 2005/04/07 17:24:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.14 2005/06/23 22:53:01 fafhrd Exp $
 
 inherit eutils gnustep-funcs
 
@@ -33,7 +33,7 @@ fi
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/menufocus.patch || die "menu focus patch failed"
+	epatch ${FILESDIR}/${PV}/menufocus.patch || die "menu focus patch failed"
 }
 
 src_compile() {

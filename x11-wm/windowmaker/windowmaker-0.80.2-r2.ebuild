@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r2.ebuild,v 1.9 2005/03/18 02:03:07 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r2.ebuild,v 1.10 2005/06/23 22:53:01 fafhrd Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ KEYWORDS="x86 ppc sparc alpha ~mips"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.80.2-r1-gentoo.patch
+	epatch ${FILESDIR}/${PV}/${PN}-0.80.2-r1-gentoo.patch
 }
 
 src_compile() {
