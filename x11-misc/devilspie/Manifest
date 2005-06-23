@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 c959853801294a64d6d8c4349eb90fe6 devilspie-0.4.ebuild 1344
 MD5 897913be51b8b9a7ae5b831c5fae1392 ChangeLog 1815
@@ -5,3 +8,10 @@ MD5 e661303849cf2a07db0876373d0338dc devilspie-0.10.ebuild 1527
 MD5 7f59e7d1f82e99e7484df493d9dae910 files/digest-devilspie-0.4 65
 MD5 5db2050971146baa05aaaaf09522cec7 files/devilspie-0.10-make-check.patch 1700
 MD5 250de26147fe03f451e784147c2d2852 files/digest-devilspie-0.10 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCuwJ4mOfEJZHYOKcRAlZaAJ0RsAOwufD9iPhlbQxXWSt+BwvkQwCfV00H
+PXylGIai8fds3t4sAv9lYjo=
+=6LMP
+-----END PGP SIGNATURE-----
