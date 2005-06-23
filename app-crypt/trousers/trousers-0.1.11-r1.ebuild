@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.1.11-r1.ebuild,v 1.1 2005/06/23 13:03:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.1.11-r1.ebuild,v 1.2 2005/06/23 22:08:11 dragonheart Exp $
 
 inherit eutils linux-info
 
@@ -76,6 +76,6 @@ src_install() {
 	fi
 	newinitd "${FILESDIR}/tcsd.initd" tcsd
 	newconfd "${FILESDIR}/tcsd.confd" tcsd
-	into /etc/udev/permissions.d/
-	echo "tpm*:tss:tss:0600" > ${D}/etc/udev/permissions.d/30-tpm.permissions
+	into /etc/udev/rules.d/
+	echo 'KERNEL="tpm*", OWNER="tss", GROUP="tss", MODE="0600"' > ${D}/etc/udev/rules.d/30-tpm.rules
 }
