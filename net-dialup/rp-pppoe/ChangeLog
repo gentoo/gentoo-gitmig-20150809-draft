@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.59 2005/06/21 05:25:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.60 2005/06/23 13:51:35 nigoro Exp $
+
+  23 Jun 2005; Yuta SATOH <nigoro@gentoo.org> rp-pppoe-3.5-r11.ebuild:
+  added ~ppc64
 
   21 Jun 2005; Alin Nastac <mrness@gentoo.org> -files/rp-pppoe.rc,
   rp-pppoe-3.5-r11.ebuild:
