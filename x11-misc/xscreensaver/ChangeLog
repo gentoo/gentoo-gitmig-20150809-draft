@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.88 2005/06/23 21:47:27 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.89 2005/06/23 22:48:39 smithj Exp $
+
+*xscreensaver-4.22 (23 Jun 2005)
+
+  23 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  -xscreensaver-4.14-r2.ebuild, -xscreensaver-4.15.ebuild,
+  -xscreensaver-4.16.ebuild, +xscreensaver-4.22.ebuild:
+  ebuild cleanup, version bump for #96894, fixed setuid/pam crap in 4.22 for
+  #94570; #93577 and #94739 should also be fixed by the version bump
 
   23 Jun 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml:
   removed liquidx as maintainer of this package; desktop-misc herd will handle
