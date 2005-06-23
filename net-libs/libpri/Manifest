@@ -5,8 +5,8 @@ MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
 MD5 01cd448bb10692f8b9c4d13fa24a40c4 libpri-1.0.0.ebuild 578
 MD5 5fdc7b4e3c52ec3ee5d93f8a050e5927 libpri-1.0.2.ebuild 585
 MD5 c2e30097b166fd685cfc695acc2deb1f libpri-0.4.0.ebuild 577
-MD5 6c01b55cb3052efc57388b7e80b69990 ChangeLog 2815
-MD5 7bb84c9c92b11104155f356540c536e1 libpri-1.0.7-r1.ebuild 1025
+MD5 a29bcee6e26a2b8db9878d19788362cc ChangeLog 2961
+MD5 cbcdb32d891ce46dbd4e22a704df7e2b libpri-1.0.7-r1.ebuild 1010
 MD5 b3e2dcac0b1648321b4cf6cf5202ee64 libpri-0.6.0.ebuild 569
 MD5 909addb123e7d76e5d48344fc3d1ce82 libpri-1.0.4.ebuild 597
 MD5 f9c52de2d4793ce020544d73d2ef816c libpri-1.0.3.ebuild 593

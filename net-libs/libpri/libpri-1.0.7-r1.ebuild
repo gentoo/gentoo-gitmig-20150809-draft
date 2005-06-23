@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.0.7-r1.ebuild,v 1.4 2005/05/31 23:23:59 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.0.7-r1.ebuild,v 1.5 2005/06/23 21:38:05 stkn Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ SRC_URI="ftp://ftp.asterisk.org/pub/telephony/libpri/libpri-${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-#KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND="virtual/libc"
 
