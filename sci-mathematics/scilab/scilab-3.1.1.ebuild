@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1.ebuild,v 1.3 2005/06/21 00:35:32 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.1.1.ebuild,v 1.4 2005/06/23 00:10:01 ribosome Exp $
 
 inherit eutils
 
@@ -176,10 +176,23 @@ src_install() {
 	dosym /usr/lib/${P}/bin/intersci-n /usr/bin/intersci-n
 
 	# The compile and install process causes the work folder to be registered
-	# as the runtime folder in the launch script. This is corrected here.
-	BAD_LINE=SCI\=\"${WORKDIR}/${P}\"
-	FIXED_LINE=SCI\=\"/usr/lib/${P}\"
-	sed -i -e "s#${BAD_LINE}#${FIXED_LINE}#" ${D}/usr/lib/${P}/bin/scilab
+	# as the runtime folder in many files. This is corrected here.
+	BAD_REF="${WORKDIR}/${P}"
+	FIXED_REF="/usr/lib/${P}"
+	BIN_TO_FIX="Blpr BEpsf Blatexpr2 Blatexprs Blatexpr scilab"
+	for i in ${BIN_TO_FIX}; do
+		sed -e "s%${BAD_REF}%${FIXED_REF}%" -i ${D}/usr/lib/${P}/bin/${i} || die
+	done
+	MAN_TO_FIX="eng fr"
+	for i in ${MAN_TO_FIX}; do
+		for j in ${D}/usr/lib/${P}/man/${i}/*.h*; do
+			sed -e "s%${BAD_REF}%${FIXED_REF}%" -i ${j} || die
+		done
+	done
+	MISC_TO_FIX="util/Blatdoc util/Blatdocs"
+	for i in ${MISC_TO_FIX}; do
+		sed -e "s%${BAD_REF}%${FIXED_REF}%" -i ${D}/usr/lib/${P}/${i} || die
+	done
 }
 
 pkg_postinst() {
