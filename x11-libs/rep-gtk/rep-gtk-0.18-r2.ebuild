@@ -1,17 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.17-r1.ebuild,v 1.8 2004/06/28 19:25:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r2.ebuild,v 1.1 2005/06/23 01:26:24 agriffis Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
-IUSE=""
+IUSE="gnome"
 
 DESCRIPTION="A GTK+/libglade/GNOME language binding for the librep Lisp environment"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://rep-gtk.sourceforge.net/"
 SLOT="gtk-2.0"
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha sparc -ppc"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 DEPEND="virtual/libc
 	>=dev-util/pkgconfig-0.12.0
@@ -26,26 +26,29 @@ DEPEND="virtual/libc
 	>=dev-libs/librep-0.13"
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S}     || die
-	epatch ${FILESDIR}/rep-gtk-0.17-64bit.patch || die
+	unpack ${A}
+	cd ${S} || die
+
+	# Fix for bug 45646 to sync up rep-gtk headers with gtk+
+	if has_version '>=x11-libs/gtk+-2.4'; then
+		epatch ${FILESDIR}/rep-gtk-0.18-gtk24.patch
+	fi
+
+	# Remove reference to gtk internal functions.  These functions are no
+	# longer available in recent versions of gtk, and sawfish doesn't use
+	# them anyway.  Bug 48439, patch from fn_x
+	epatch ${FILESDIR}/rep-gtk-0.18-gtk26.patch
 }
 
 src_compile() {
-
-	./configure --host=${CHOST} \
-	    --prefix=/usr \
-	    --libexecdir=/usr/lib \
-		--with-gnome \
+	CC=$(tc-getCC) econf \
 		--with-libglade \
 		--with-gdk-pixbuf \
-	    --infodir=/usr/share/info || die
-
+		$(use_with gnome) || die
 	emake host_type=${CHOST} || die
 }
 
 src_install() {
-
 	make install \
 		host_type=${CHOST} \
 		installdir=${D}/usr/lib/rep/${CHOST} || die

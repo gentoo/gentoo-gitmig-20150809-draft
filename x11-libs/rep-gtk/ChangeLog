@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.36 2005/06/17 21:04:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.37 2005/06/23 01:26:24 agriffis Exp $
+
+*rep-gtk-0.18-r2 (23 Jun 2005)
+
+  23 Jun 2005; Aron Griffis <agriffis@gentoo.org> -rep-gtk-0.15-r3.ebuild,
+  -rep-gtk-0.17-r1.ebuild, -rep-gtk-0.18.ebuild, +rep-gtk-0.18-r2.ebuild:
+  Use tc-getCC to solve libtool tag problems #70514
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   rep-gtk-0.18-r1.ebuild:
