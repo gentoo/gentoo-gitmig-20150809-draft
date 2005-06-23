@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/liboggz
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.1 2005/06/23 20:19:27 zaheerm Exp $
+
+*liboggz-0.9.1 (23 Jun 2005)
+
+  23 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> +metadata.xml,
+  +liboggz-0.9.1.ebuild:
+  initial ebuild
+
