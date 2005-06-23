@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.127 2005/06/23 20:23:00 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.128 2005/06/23 20:39:44 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -255,7 +255,8 @@ kernel_header_destdir() {
 if [[ ${ETYPE} == sources ]]; then
 	DEPEND="!build? ( sys-apps/sed
 					  >=sys-devel/binutils-2.11.90.0.31 )
-			doc? ( app-text/docbook-sgml-utils )"
+			doc? ( app-text/docbook-sgml-utils 
+				   app-text/xmlto)"
 	RDEPEND="${DEPEND}
 			!build? ( >=sys-libs/ncurses-5.2
 					  sys-devel/make )"
@@ -488,11 +489,13 @@ install_sources() {
 
 install_manpages() {
 	kernel_is lt 2 5 && return
-	sed -ie "s#/usr/local/man#${D}/usr/man#g" scripts/makeman
+	sed -ie "s#/usr/local/man#${D}/usr/man#g" \
+		scripts/makeman Documentation/DocBook/Makefile
 	ebegin "Installing manpages"
 	env -u ARCH make installmandocs
 	eend $?
-	sed -ie "s#${D}/usr/man#/usr/local/man#g" scripts/makeman
+	sed -ie "s#${D}/usr/man#/usr/local/man#g" \
+		scripts/makeman Documentation/DocBook/Makefile
 }
 
 # pkg_preinst functions
@@ -926,7 +929,7 @@ kernel-2_pkg_prerm() {
 	if [[ ${ETYPE} == sources ]]; then
 		# if we have a config for it then we should act on it.
 		if [[ -f ${KV_DIR}/.config ]]; then
-			gzip -c ${KV_DIR}/.config > ${KV_DIR}.config
+			gzip -c ${KV_DIR}/.config > ${KV_DIR}.config.gz
 		fi
 
 		# have kbuild clean up for us.
