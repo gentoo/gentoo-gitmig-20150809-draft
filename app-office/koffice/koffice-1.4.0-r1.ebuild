@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.0-r1.ebuild,v 1.2 2005/06/22 13:25:53 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.0-r1.ebuild,v 1.3 2005/06/23 13:03:10 greg_g Exp $
 
 inherit kde eutils
 
@@ -24,7 +24,7 @@ RDEPEND=">=media-gfx/imagemagick-5.5.2
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-libs/libpqxx )
 	dev-lang/python
-	media-libs/lcms
+	>=media-libs/lcms-1.12
 	javascript? ( kde-base/kjsembed )
 	!dev-db/kexi"
 
