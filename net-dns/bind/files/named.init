@@ -1,0 +1,72 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init,v 1.1 2005/06/23 17:37:44 voxus Exp $
+
+opts="start stop reload restart"
+
+depend() {
+	need net
+	use logger
+	provide dns
+}
+
+checkconfig() {
+	if [ ! -f ${CHROOT}/etc/bind/named.conf ] ; then
+		eerror "No ${CHROOT}/etc/bind/named.conf file exists!"
+	fi
+	
+	# In case someone doesn't have $CPU set from /etc/conf.d/named
+	if [ ! ${CPU} ] ; then
+		CPU="1"
+	fi
+
+	# As with the named.conf test, above, there's no need
+	# for chroot and non-chroot cases here
+	PIDFILE=$(grep "pid-file" ${CHROOT}/etc/bind/named.conf | \
+		egrep -v ".*[#,//].*pid-file" | \
+		head -n 1 | \
+		sed -ne 's:.*pid-file \"\(.*\)\";:\1:p')
+	[ -n "$PIDFILE" ] || PIDFILE=/var/run/named.pid
+
+	PIDFILE="${CHROOT}$PIDFILE"
+
+	KEY="${CHROOT}/etc/bind/rndc.key"
+}
+
+start() {
+	ebegin "Starting ${CHROOT:+chrooted }named"
+	checkconfig || return 1
+	start-stop-daemon --start --quiet --pidfile ${PIDFILE} \
+		--exec /usr/sbin/named \
+		-- -u named -n ${CPU} ${OPTIONS} ${CHROOT:+-t $CHROOT}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ${CHROOT:+chrooted }named"
+	checkconfig || return 2
+	start-stop-daemon --stop --quiet --pidfile $PIDFILE \
+		--exec /usr/sbin/named -- stop
+	eend $?
+}
+
+reload() {
+	checkconfig || return 3
+	if [ ! -f $PIDFILE ] ; then
+		/etc/init.d/named start &>/dev/null
+		exit
+	fi
+
+	if [ -f $KEY ] ; then
+		ebegin "Reloading named.conf and zone files"
+		rndc -k $KEY reload &>/dev/null
+		eend $?
+	else /etc/init.d/named restart &>/dev/null
+	fi
+}
+
+restart() {
+	svc_stop
+	svc_start
+}
