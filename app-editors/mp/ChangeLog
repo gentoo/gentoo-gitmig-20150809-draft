@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.39 2005/06/12 12:10:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.40 2005/06/23 08:03:01 compnerd Exp $
+
+*mp-3.3.14 (23 Jun 2005)
+
+  23 Jun 2005; Saleem Abdulrasool <compnerd@gentoo.org> +mp-3.3.14.ebuild:
+  Version bump to new upstream release.  Added new useflags (nls, syntax).
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> mp-3.3.1.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.
