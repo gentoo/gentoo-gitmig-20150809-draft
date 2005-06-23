@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2fa8e771ddddb674d8d616006ff0283d mod_layout-4.0.1a-r1.ebuild 621
 MD5 59bfc95504a0942e3b2c7dd721560e26 mod_layout-3.2.1-r1.ebuild 729
 MD5 e8c6c7d071bfb6789dc372a8d39c2ef5 mod_layout-3.2.1.ebuild 1363
@@ -13,3 +16,10 @@ MD5 31f7af245df33de3e73bfcf60898240b files/digest-mod_layout-4.0.1a-r1 68
 MD5 9ce33c60579d3b6a35ac6d2722b0888c files/mod_layout-4.0.1a-register.patch 585
 MD5 233872afb84493400986f25e36dd396f files/3.2.1-r1/15_mod_layout.conf 4654
 MD5 233872afb84493400986f25e36dd396f files/4.0.1a-r1/15_mod_layout.conf 4654
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCuhL3BXaUFmZvwyMRAiywAKCm6VINUjHp3c16oWgapRv9mJWYngCeNa46
+izhxa1u7CEgPfZ+CkgeilYk=
+=gPZq
+-----END PGP SIGNATURE-----
