@@ -2,11 +2,9 @@ MD5 ec95671cff076c604701692776467ff6 windowmaker-0.91.0-r6.ebuild 6680
 MD5 d34d8f12ade4ec45a61930d8327c1c6d windowmaker-0.91.0-r1.ebuild 5903
 MD5 f85c62f96342786ef1452bd97504d6ef windowmaker-0.80.2-r2.ebuild 3445
 MD5 1c6bba221de348c79f9e7037d96eaa7d windowmaker-0.80.2-r4.ebuild 4046
-MD5 0da93ec8beeb554f285413774993446d windowmaker-0.91.0-r5.ebuild 6679
 MD5 e2d622829340e8a59e534d24747be769 windowmaker-0.80.2-r3.ebuild 3762
-MD5 c1f3dec064f99ce89adf9208605f2970 ChangeLog 11755
+MD5 077ac88f450b4573c4763daca56352a3 ChangeLog 11896
 MD5 641b83c6027dc91a4ac14e1749a58b41 metadata.xml 222
-MD5 66a1040057a2f2daf01e4d8d4c62d3e8 windowmaker-0.91.0-r4.ebuild 6643
 MD5 a42a33a349ca84fb6e2cc5fdbd627b99 files/trance.patch.WM-0.80.2.diff 9738
 MD5 3a5eaebd5ccf7d3384c042e13f52bef1 files/wlist-0.9x.patch 2980
 MD5 c8eb68627dc7b53b10143626018ff597 files/gtk2flickerfix.patch 1969
@@ -20,8 +18,6 @@ MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r3 144
 MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r4 144
 MD5 9a5c9f1b2b44a678526f0fd71b2cf51d files/windowmaker-0.80.2-r1-gentoo.patch 4331
 MD5 8b11b75a0ece3b854bf47e03ded7e0ba files/digest-windowmaker-0.91.0-r1 144
-MD5 4c748a4dd9d3e57dfe5c1d01ccac4b54 files/digest-windowmaker-0.91.0-r4 227
-MD5 4c748a4dd9d3e57dfe5c1d01ccac4b54 files/digest-windowmaker-0.91.0-r5 227
 MD5 4c748a4dd9d3e57dfe5c1d01ccac4b54 files/digest-windowmaker-0.91.0-r6 227
 MD5 e451189d91551534b18988709274b73b files/xinerama.patch.bz2 5908
 MD5 84bc0e347cd23ca347219959362afa91 files/singleclick-shadeormaxopts-0.9x.patch2 7788
