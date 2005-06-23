@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/htpdate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.1 2005/06/22 13:58:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.2 2005/06/23 11:26:46 dertobi123 Exp $
+
+  22 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  htpdate-0.8.2.ebuild:
+  Was keyworded ppc by a mistake. Removed the keyword.
+  It is currently known to be broken on ppc machines.
 
 *htpdate-0.8.2 (22 Jun 2005)
 
