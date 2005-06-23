@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.153 2005/06/19 15:56:43 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.154 2005/06/23 16:29:29 dsd Exp $
+
+*gentoo-sources-2.6.12-r1 (23 Jun 2005)
+
+  23 Jun 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.12-r1.ebuild:
+  SATA bridge lockup fix. Add support for BCM5785. Add support for pdc20619.
+  Remove support for libata PDC2027x as it is present as an IDE driver. Add
+  ALSA ice1712 SN25P support. Speakup returns. PCI driver typo-fix. Critical
+  e1000 spinlock fix. Fix Fix remap_pte_range checking. Sync to Linux 2.6.12.1
 
   19 Jun 2005; Daniel Goller <morfic@gentoo.org>
   gentoo-sources-2.6.12.ebuild:
