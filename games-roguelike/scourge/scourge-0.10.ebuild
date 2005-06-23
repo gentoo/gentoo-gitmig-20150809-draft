@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.10.ebuild,v 1.1 2005/06/22 17:14:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.10.ebuild,v 1.2 2005/06/23 00:20:40 mr_bones_ Exp $
 
-inherit games
+inherit flag-o-matic eutils games
 
 DESCRIPTION="A rogue-like adventure game to eliminate pests"
 HOMEPAGE="http://scourge.sf.net"
@@ -26,14 +26,11 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	find "${S}/data" -type f -exec chmod a-x \{\} \;
-	cd "${S}"
-	sed -i \
-		-e "s:rootDir = (char\*)BR_DATADIR( \"/data\" ):rootDir=DATA_DIR:" \
-		src/main.cpp \
-		|| die "sed failed"
+	epatch "${FILESDIR}/${PV}-64bit.patch"
 }
 
 src_compile() {
+	append-flags -DENABLE_BINRELOC -DBR_PTHREADS=0
 	egamesconf \
 		--with-data-dir="${GAMES_DATADIR}/${PN}/data" \
 		|| die

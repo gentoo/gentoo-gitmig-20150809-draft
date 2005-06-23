@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/scourge
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.10 2005/06/22 17:14:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.11 2005/06/23 00:20:40 mr_bones_ Exp $
+
+  23 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.10-64bit.patch, scourge-0.10.ebuild:
+  Add patch from David Leverton to fix build on amd64 (bug #96814)
 
 *scourge-0.10 (22 Jun 2005)
 

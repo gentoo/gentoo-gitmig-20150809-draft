@@ -1,0 +1,9 @@
+--- scourge/src/effect.cpp~	2005-05-19 19:47:29.000000000 +0100
++++ scourge/src/effect.cpp	2005-06-22 23:30:02.000000000 +0100
+@@ -520,7 +520,7 @@
+   //float d = (float)(shape->getDepth() / GLShape::DIV) / 2.0;
+   h = (float)(shape->getHeight() / GLShape::DIV) / 3.0f;
+   if(h == 0) h = 0.25 / GLShape::DIV;
+-  sh = ((float)( abs( particle->z - particle->startZ ) / GLShape::DIV) / 3.0f);
++  sh = ((float)( abs((int)(particle->z - particle->startZ)) / GLShape::DIV) / 3.0f);
+   if(h == 0) h = 0.25 / GLShape::DIV;
