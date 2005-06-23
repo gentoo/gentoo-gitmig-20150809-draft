@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/lurker-1.3.ebuild,v 1.2 2005/06/22 12:05:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/lurker-1.3.ebuild,v 1.3 2005/06/23 08:38:18 dholm Exp $
 
 inherit eutils webapp
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/lurker/${P}.tar.gz mirror://sourceforge/lurker/mim
 HOMEPAGE="http://lurker.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND=">=sys-devel/gcc-2.95

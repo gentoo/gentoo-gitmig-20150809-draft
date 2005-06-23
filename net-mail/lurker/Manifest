@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2916e54ac9a8506c05c1f95a8730a1d ChangeLog 372
-MD5 06d3a3c1dec0957252b9b9eb9d17c47a files/digest-lurker-1.3 127
-MD5 37725b311f8331a2e0beb0c0434cce79 lurker-1.3.ebuild 4294
+MD5 de991eb48dc2835b4708b6342d742016 ChangeLog 451
+MD5 06f224470c7fabf22af6a80713a696d3 lurker-1.3.ebuild 4296
 MD5 a1cb31686d0a059a1b35426b67ba78e8 metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCuVQHI1lqEGTUzyQRAsb6AJ9vu4g7q1ws2sEBLynNLS+BYU/jTwCeKNpP
-iepBGwuRU8lgnMCfrDDqkWU=
-=6qff
------END PGP SIGNATURE-----
+MD5 06d3a3c1dec0957252b9b9eb9d17c47a files/digest-lurker-1.3 127
