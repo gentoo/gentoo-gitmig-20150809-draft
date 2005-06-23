@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8113cd4dbabec174f47b8767774e5b14 libxklavier-1.04-r1.ebuild 1070
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 ddfe99faedd0be2841fd37eacdc38112 libxklavier-1.04.ebuild 999
-MD5 49bb1b4b6c093943b57da5ee6d0141e0 ChangeLog 4821
-MD5 11f83de3d100083dec4fa85c3a929f78 libxklavier-1.03.ebuild 949
+MD5 71437a6ce719c41fc15689d5b57487ea ChangeLog 4910
 MD5 5a267a38ce83469d40f7eb2e28de500d libxklavier-1.02.ebuild 941
-MD5 8585df759eeb241569caa0b09c45db84 libxklavier-2.0.ebuild 1075
-MD5 31529efcf0188518d362d24a148c74b5 files/libxklavier-1.04-fix_free.patch 301
-MD5 da5387283d8b989c1809f27825f60310 files/digest-libxklavier-2.0 67
-MD5 10d8c674e282f71c1dd0e11903e86e7d files/sun.xml 4572
+MD5 11f83de3d100083dec4fa85c3a929f78 libxklavier-1.03.ebuild 949
+MD5 8113cd4dbabec174f47b8767774e5b14 libxklavier-1.04-r1.ebuild 1070
+MD5 ddfe99faedd0be2841fd37eacdc38112 libxklavier-1.04.ebuild 999
+MD5 6040f36072e445cd0c3b5559ebb31229 libxklavier-2.0.ebuild 1074
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 2ee4cc635af9abc1de963e4d38525430 files/digest-libxklavier-1.02 68
-MD5 6b672d420ef40c97961975eb5be760e2 files/digest-libxklavier-1.04-r1 68
-MD5 95f50dc00a9778b6f862c56e0c990b3f files/sun-keymaps.patch 940
-MD5 554177dc558823391aea91515efb3902 files/sun-keymaps-102.patch 687
 MD5 e25e334ceafe0426056d920a3ead52c3 files/digest-libxklavier-1.03 68
 MD5 6b672d420ef40c97961975eb5be760e2 files/digest-libxklavier-1.04 68
+MD5 6b672d420ef40c97961975eb5be760e2 files/digest-libxklavier-1.04-r1 68
+MD5 da5387283d8b989c1809f27825f60310 files/digest-libxklavier-2.0 67
+MD5 31529efcf0188518d362d24a148c74b5 files/libxklavier-1.04-fix_free.patch 301
+MD5 554177dc558823391aea91515efb3902 files/sun-keymaps-102.patch 687
+MD5 95f50dc00a9778b6f862c56e0c990b3f files/sun-keymaps.patch 940
+MD5 10d8c674e282f71c1dd0e11903e86e7d files/sun.xml 4572
 MD5 dd5b95ef05fbd2d67d79ce2053a1f4a2 files/libxklavier-1.14-werror.patch 1189
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrIQtmOfEJZHYOKcRAoviAKDaFV19bT8ApdHV8IGvf6S629efFgCgnsC9
-j37/UbspJkao3kc85i3WcVM=
-=VG83
------END PGP SIGNATURE-----
