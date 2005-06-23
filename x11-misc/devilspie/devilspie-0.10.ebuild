@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.10.ebuild,v 1.2 2005/06/13 14:03:12 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.10.ebuild,v 1.3 2005/06/23 13:48:15 smithj Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.burtonini.com/computing/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~alpha ~sparc ~amd64"
 
 IUSE=""
 

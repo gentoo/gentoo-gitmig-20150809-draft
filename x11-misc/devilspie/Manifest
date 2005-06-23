@@ -1,19 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c088b49c3819f4bd34f33a59060d1149 ChangeLog 1533
-MD5 8bff7ff3aa49aa6cffdf80bac439f46d devilspie-0.10.ebuild 1527
+MD5 48a61dfcc3ac344792998d28fad00b5f ChangeLog 1670
 MD5 c959853801294a64d6d8c4349eb90fe6 devilspie-0.4.ebuild 1344
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 c7f5be545044dbec2fbe6228d8e9a3c6 devilspie-0.7.ebuild 1347
+MD5 0ea9febd9c7db98c3da395fa9f1698ab devilspie-0.10.ebuild 1528
 MD5 5db2050971146baa05aaaaf09522cec7 files/devilspie-0.10-make-check.patch 1700
 MD5 250de26147fe03f451e784147c2d2852 files/digest-devilspie-0.10 66
 MD5 7f59e7d1f82e99e7484df493d9dae910 files/digest-devilspie-0.4 65
-MD5 cc64de78b1f61d19f0d7304bb80d0a8d files/digest-devilspie-0.7 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCta+9l5AvwDPiUowRAlghAJ9LtUZLo/p5cj4+3R9qxVIA7Sb2jwCfcL/J
-9TzOV0fkxBNXAl/b25fI5E8=
-=/Cn3
+iD8DBQFCur3Tl5AvwDPiUowRAt8VAKClHJflIYa9KQRFKS8x4dkWD0vaTwCeJs1k
+kwrdTMi1DR3dMAZXuHp2VeM=
+=Raix
 -----END PGP SIGNATURE-----
