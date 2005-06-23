@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kudzu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.16 2005/05/12 19:07:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.17 2005/06/23 14:20:17 wolf31o2 Exp $
+
+  23 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> kudzu-0.99.99.ebuild,
+  kudzu-1.1.62.ebuild:
+  HOMEPAGE fix.
 
   12 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> +files/kudzu.conf.d,
   +files/kudzu.rc, -kudzu-0.99.66.ebuild, kudzu-0.99.99.ebuild,
