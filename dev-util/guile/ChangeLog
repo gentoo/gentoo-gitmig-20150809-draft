@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.44 2005/06/14 18:46:38 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.45 2005/06/23 06:17:17 gmsoft Exp $
+
+  23 Jun 2005; Guy Martin <gmsoft@gentoo.org> guile-1.6.7.ebuild:
+  Stable on hppa.
 
   14 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> guile-1.6.7.ebuild:
   Stable on alpha
