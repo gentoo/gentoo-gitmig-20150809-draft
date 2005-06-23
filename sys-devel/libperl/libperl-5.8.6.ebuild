@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.11 2005/06/17 09:54:37 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.12 2005/06/23 01:19:34 agriffis Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -78,7 +78,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 # badly when you -n it, because it won't exist and will therefore try
 # to build itself again ad infinitum.
 
-RESTRICT="maketest"
+RESTRICT="test"
 
 DEPEND="!nocxx? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
