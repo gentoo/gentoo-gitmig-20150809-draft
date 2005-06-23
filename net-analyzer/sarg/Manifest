@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 48b80940de207537d96b8cbd3b529e05 ChangeLog 2246
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 2969a97b43e7764f8030ffe20db97c9c sarg-1.4.1-r2.ebuild 1116
-MD5 012be31b8485c17618f90a3daec9f4ec ChangeLog 2165
-MD5 978f8d3c34b2a3511d2f5a4364e1cc1c sarg-2.0.8.ebuild 2097
+MD5 1ea2f02c66df242c8e97cbab584141a1 sarg-2.0.8.ebuild 2101
 MD5 c1d5675a58b98064b57ce771a2ecd4b8 files/digest-sarg-1.4.1-r2 132
 MD5 4ce75e6dba68e51c94d8fb4b47a5ed9f files/sarg-1.4.1-2.6.fix.patch 1556
 MD5 51dfe863ba88a60c8c3ae74fb81729c1 files/digest-sarg-2.0.8 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCuZR1l5AvwDPiUowRAoodAJ4gy2YTvUrEFvk1Qca5yhOkfJP9HgCgqzU7
-KAenhBpDjhIwrudLsYKzQzY=
-=EENd
------END PGP SIGNATURE-----
