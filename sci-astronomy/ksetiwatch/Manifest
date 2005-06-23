@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da99d7044e50f92a2c67febda0b2bffb ksetiwatch-2.6.0.ebuild 527
-MD5 c0df742f25218c2ff46a14551719b11d ChangeLog 1871
-MD5 86226eb7c15a7e6e44b88990198c7e25 ksetiwatch-2.6.1.ebuild 534
+MD5 d6ec15db02926ac35e60adddea6c6510 ChangeLog 2008
 MD5 c1ccb5b2ee6475f232a22781b31b5411 ksetiwatch-3.0.0.ebuild 533
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 6411c0e9981436a8fb0c6e59ab938336 files/digest-ksetiwatch-2.6.0 69
-MD5 fe9338c45a10883263b05c997affb5f2 files/digest-ksetiwatch-2.6.1 70
 MD5 5922c1b28f022e85ba36c07f29c03c37 files/digest-ksetiwatch-3.0.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHOLI1lqEGTUzyQRAqjuAKCkKyNqIPCGsvw5U3+z/6yxmRkXoQCgw9QS
-o4qO5+toL3AMEFQ5Z8FIZmk=
-=VKub
------END PGP SIGNATURE-----

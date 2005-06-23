@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a70a0f04e69769b45e761f5acda8c869 ksetispy-0.6.2.ebuild 568
-MD5 ab9f8606932b771827df32fddd1cca5d ksetispy-0.5.3.ebuild 568
-MD5 5566c6335cc63eb2436f354c371eb7ac ksetispy-0.5.2.ebuild 540
-MD5 0b9ed035c1e8327f74f795e3df49d5e4 ChangeLog 1762
+MD5 faae3b443882709261d3b5d54d8cb924 ChangeLog 1895
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 8098aacfd34d1474098efc79d77610ed files/digest-ksetispy-0.5.2 68
-MD5 a8be1a6799b3b776782d2b1d350a7199 files/digest-ksetispy-0.5.3 68
 MD5 9e50cadc70f89fbae27d403f8bbfe45e files/digest-ksetispy-0.6.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHNgI1lqEGTUzyQRAuROAKCbkL54jrfJ40DqgAMw0JBDOan27QCg0mp8
-hUGvA5WoQAK9CSUztw/P+uM=
-=ee2i
------END PGP SIGNATURE-----
