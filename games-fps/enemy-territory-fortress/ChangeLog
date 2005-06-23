@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/enemy-territory-fortress
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/ChangeLog,v 1.2 2005/02/23 21:35:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/ChangeLog,v 1.3 2005/06/23 19:44:02 wolf31o2 Exp $
+
+*enemy-territory-fortress-1.4 (23 Jun 2005)
+
+  23 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +enemy-territory-fortress-1.4.ebuild:
+  Version bumped and closing bug #90345.
 
 *enemy-territory-fortress-1.2 (23 Feb 2005)
 
