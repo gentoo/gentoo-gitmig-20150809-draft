@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r2.ebuild,v 1.1 2005/06/23 01:26:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r2.ebuild,v 1.2 2005/06/23 01:47:36 agriffis Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,16 +14,18 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 DEPEND="virtual/libc
+	>=dev-libs/librep-0.13
 	>=dev-util/pkgconfig-0.12.0
-	>=x11-libs/gtk+-2.0.3
-	>=gnome-base/libbonobo-2.0.0
-	>=gnome-base/libbonoboui-2.0.0
-	>=gnome-base/libgnome-2.0.0
-	>=gnome-base/libgnomeui-2.0.0
-	>=gnome-base/libgnomecanvas-2.0.0
 	>=gnome-base/libglade-2.0.0
 	>=sys-devel/automake-1.6.1-r5
-	>=dev-libs/librep-0.13"
+	>=x11-libs/gtk+-2.0.3
+	gnome? (
+		>=gnome-base/libbonobo-2.0.0
+		>=gnome-base/libbonoboui-2.0.0
+		>=gnome-base/libgnome-2.0.0
+		>=gnome-base/libgnomeui-2.0.0
+		>=gnome-base/libgnomecanvas-2.0.0
+	)"
 
 src_unpack() {
 	unpack ${A}
