@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.25 2005/06/16 08:50:49 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.26 2005/06/23 08:57:52 urilith Exp $
+
+  23 Jun 2005; Michael Tindal <urilith@gentoo.org> xsp-1.0.9.ebuild:
+  Fix typos.
 
   16 Jun 2005; Michael Tindal <urilith@gentoo.org> files/xsp.initd:
   Fix init.d script.
