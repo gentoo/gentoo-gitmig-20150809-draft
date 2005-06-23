@@ -1,0 +1,10 @@
+# ChangeLog for games-simulation/lincity-ng
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/ChangeLog,v 1.1 2005/06/23 22:25:17 mr_bones_ Exp $
+
+*lincity-ng-1.0 (23 Jun 2005)
+
+  23 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +lincity-ng-1.0.ebuild:
+  initial commit - ebuild submitted by Anno v. Heimburg via bug #94809
+
