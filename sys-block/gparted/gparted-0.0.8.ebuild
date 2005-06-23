@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.0.8.ebuild,v 1.1 2005/06/23 18:16:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.0.8.ebuild,v 1.2 2005/06/23 19:32:33 swegener Exp $
 
 inherit gnome2
 
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="fat hfs jfs ntfs xfs reiserfs"
 
-RDEPEND=">=parted-1.6.13
-		>=gtkmm-2.4.0
+RDEPEND=">=sys-apps/parted-1.6.13
+		>=dev-cpp/gtkmm-2.4.0
 		fat? ( sys-fs/dosfstools )
 		ntfs? ( sys-fs/ntfsprogs )
 		hfs? ( sys-fs/hfsutils )
