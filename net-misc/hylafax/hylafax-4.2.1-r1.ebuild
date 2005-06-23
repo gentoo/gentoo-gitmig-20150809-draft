@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.1-r1.ebuild,v 1.1 2005/05/07 00:55:00 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.1-r1.ebuild,v 1.2 2005/06/23 01:57:30 flameeyes Exp $
 
-inherit eutils
+inherit eutils multilib pam
 
 IUSE="faxonly jpeg pam mgetty"
 
@@ -20,13 +20,20 @@ DEPEND="!faxonly? ( net-dialup/mgetty )
 	>=media-libs/tiff-3.7.0
 	jpeg? ( media-libs/jpeg )
 	sys-apps/gawk
-	pam? ( sys-libs/pam )
+	pam? ( virtual/pam )
 	mgetty? ( net-dialup/mgetty )"
 
 RDEPEND="${DEPEND}
 	net-mail/metamail"
 
 export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-openpam.patch
+}
 
 src_compile() {
 	if use faxonly; then
@@ -37,7 +44,7 @@ src_compile() {
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
 		--with-DIR_SBIN=/usr/sbin
-		--with-DIR_LIB=/usr/lib
+		--with-DIR_LIB=/usr/$(get_libdir)
 		--with-DIR_LIBEXEC=/usr/sbin
 		--with-DIR_LIBDATA=/usr/lib/fax
 		--with-DIR_LOCKS=/var/lock
@@ -83,13 +90,13 @@ src_compile() {
 
 src_install() {
 	dodir /usr/{bin,sbin} /usr/lib/fax /usr/share/man /var/spool /var/spool/recvq
-	dodir /usr/share/doc/${P}/html
+	dodir /usr/share/doc/${P}/html /usr/$(get_libdir)
 
 	make \
 		BIN=${D}/usr/bin \
 		SBIN=${D}/usr/sbin \
-		LIBDIR=${D}/usr/lib \
-		LIB=${D}/usr/lib \
+		LIBDIR=${D}/usr/$(get_libdir) \
+		LIB=${D}/usr/$(get_libdir) \
 		LIBEXEC=${D}/usr/sbin \
 		LIBDATA=${D}/usr/lib/fax \
 		MAN=${D}/usr/share/man \
@@ -108,6 +115,8 @@ src_install() {
 	insinto /etc/init.d
 	insopts -m 755
 	newins ${FILESDIR}/hylafax-4.2 hylafax
+
+	pamd_mimic_system hylafax auth account session
 
 	dodoc COPYRIGHT README TODO VERSION
 }
