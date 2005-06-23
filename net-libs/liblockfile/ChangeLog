@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.24 2005/06/19 14:51:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.25 2005/06/23 10:19:06 plasmaroo Exp $
+
+  23 Jun 2005; <plasmaroo@gentoo.org> liblockfile-1.06.ebuild:
+  Stable on IA64.
 
   19 Jun 2005; Simon Stelling <blubb@gentoo.org> liblockfile-1.06.ebuild:
   stable on amd64
