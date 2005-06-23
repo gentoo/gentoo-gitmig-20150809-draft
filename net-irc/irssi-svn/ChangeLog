@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.7 2005/06/22 13:33:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.8 2005/06/23 03:16:02 tester Exp $
+
+  23 Jun 2005; Olivier Crête <tester@gentoo.org> irssi-svn-0.3.ebuild:
+  Marked ~amd64
 
   22 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   irssi-svn-0.3.ebuild:
