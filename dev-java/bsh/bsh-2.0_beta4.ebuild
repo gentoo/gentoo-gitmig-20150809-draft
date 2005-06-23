@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4.ebuild,v 1.1 2005/06/22 17:22:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4.ebuild,v 1.2 2005/06/23 09:04:31 axxo Exp $
 
 inherit java-pkg eutils
 
-MY_DIST=${P/_beta/b}-src.jar
+MY_PV=${PV/_beta/b}
+MY_DIST=${PN}-${MY_PV}-src.jar
 
 DESCRIPTION="BeanShell: A small embeddable Java source interpreter"
 HOMEPAGE="http://www.beanshell.org"
@@ -14,7 +15,7 @@ SRC_URI="http://www.beanshell.org/${MY_DIST}
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="doc gnome jikes junit kde readline"
+IUSE="doc jikes junit readline"
 
 DEPEND="${RDEPEND}
 		>=dev-java/ant-core-1.5.4"
@@ -23,7 +24,7 @@ RDEPEND=">=virtual/jdk-1.4
 	=dev-java/servletapi-2.4*
 	readline? ( dev-java/libreadline-java )"
 
-S=${WORKDIR}/BeanShell
+S=${WORKDIR}/BeanShell-${MY_PV}
 
 src_unpack() {
 	# Extract the sources
@@ -32,7 +33,7 @@ src_unpack() {
 
 	# Apply the build patch
 	cd ${S}
-	epatch ${FILESDIR}/bsh2-build.patch
+	epatch ${FILESDIR}/bsh${MY_PV}-build.patch
 
 	# Copy the needed files
 	cp ${FILESDIR}/bsh.Console ${FILESDIR}/bsh.Interpreter ${S}
