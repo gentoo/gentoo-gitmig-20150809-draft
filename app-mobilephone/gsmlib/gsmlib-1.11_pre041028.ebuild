@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/gsmlib-1.11_pre041028.ebuild,v 1.1 2005/05/15 20:19:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/gsmlib-1.11_pre041028.ebuild,v 1.2 2005/06/23 01:15:43 agriffis Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
-RESTRICT="maketest"
+RESTRICT="test"
 
 S=${WORKDIR}/${PN}-${PV%_pre*}
 
