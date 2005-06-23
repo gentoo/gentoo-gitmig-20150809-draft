@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.4.13-r1.ebuild,v 1.1 2005/06/22 20:56:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.4.13-r1.ebuild,v 1.2 2005/06/23 01:28:20 agriffis Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -9,6 +9,7 @@ S="${WORKDIR}/${PN}"
 DESCRIPTION="ElectricFence malloc() debugger"
 HOMEPAGE="http://www.pf-lug.de/projekte/haya/efence.php"
 SRC_URI="http://www.pf-lug.de/projekte/haya/${MY_P}.tar.gz"
+RESTRICT="test"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
