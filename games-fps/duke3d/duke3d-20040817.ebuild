@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.5 2005/03/28 13:17:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.6 2005/06/23 16:01:40 mr_bones_ Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -19,7 +19,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc hppa"
-IUSE="perl opengl" # nophysfs"
+IUSE="hardened perl opengl" # nophysfs"
 
 RDEPEND="virtual/x11
 	media-libs/libsdl
@@ -29,8 +29,7 @@ RDEPEND="virtual/x11
 	perl? ( dev-lang/perl )
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )
-	>=sys-apps/sed-4"
+	!hardened? ( x86? ( dev-lang/nasm ) )"
 
 S="${WORKDIR}/${ECVS_MODULE}"
 
@@ -69,7 +68,7 @@ src_unpack() {
 		-e "/^use_physfs := / s:=.*:= false:" \
 		Makefile \
 		|| die "sed duke3d Makefile failed"
-	if use x86 ; then
+	if ! use hardened && use x86 ; then
 		sed -i \
 			-e 's:^#USE_ASM:USE_ASM:' buildengine/Makefile \
 			|| die "sed failed"
@@ -83,10 +82,8 @@ src_unpack() {
 }
 
 src_compile() {
-	cd source/buildengine
-	emake OPTFLAGS="${CFLAGS}" || die "buildengine failed"
-	cd ..
-	emake OPTIMIZE="${CFLAGS}" || die "duke3d failed"
+	emake -C source/buildengine OPTFLAGS="${CFLAGS}" || die "buildengine failed"
+	emake -C source OPTIMIZE="${CFLAGS}" || die "duke3d failed"
 }
 
 src_install() {
