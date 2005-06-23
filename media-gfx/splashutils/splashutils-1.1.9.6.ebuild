@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6.ebuild,v 1.5 2005/06/12 13:40:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6.ebuild,v 1.6 2005/06/23 14:46:39 spock Exp $
 
 inherit multilib
 
@@ -174,7 +174,7 @@ pkg_postinst() {
 		ewarn "the root filesystem. This will prevent the silent mode from working"
 		ewarn "properly. You can fix the problem by doing:"
 		ewarn "  mount --bind / /lib/splash/tmp"
-		ewarn "  mkdev /lib/splash/tmp/dev/tty1 c 4 1"
+		ewarn "  mknod /lib/splash/tmp/dev/tty1 c 4 1"
 		ewarn "  umount /lib/splash/tmp"
 	else
 		eend 0
