@@ -2,15 +2,17 @@
 Hash: SHA1
 
 MD5 e06b0edbed6cdb6cdbb478439520adea spamprobe-1.0a.ebuild 802
-MD5 e30fb83572fc72f5b1ffa569c8547a0e ChangeLog 1635
+MD5 db54005967ae1133928026744a191301 spamprobe-1.2a.ebuild 803
+MD5 704a72e74ec987b30b684ec028c84aca ChangeLog 1755
 MD5 7a63986c893466830ff3fb3aad7f89fa metadata.xml 251
 MD5 616a3bbbb3f85a4ca78bafacd23c33e2 spamprobe-1.2.ebuild 802
 MD5 21f983f3dc3db1a9bff6cb7e29b01585 files/digest-spamprobe-1.2 65
 MD5 3e2a7aa9ae39974be42efa119ee86ca2 files/digest-spamprobe-1.0a 66
+MD5 076bb63b83991bf542674b5fae5123c8 files/digest-spamprobe-1.2a 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCuXVQQlM6RnzZP+IRAlDoAKC+3YPlZu/WINpVGaSZIs4Pq+W99ACfR0/Q
-iqcARKkuvWgAooEqLL5GkWE=
-=q89w
+iD8DBQFCuw8sQlM6RnzZP+IRAupjAJ4rCG50OKgSXnSn1Gn/iVUreRfiIwCfUm0X
+WMZuwXq6/arUDKJRccawoGc=
+=NyPL
 -----END PGP SIGNATURE-----
