@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.126 2005/06/22 18:02:40 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.127 2005/06/23 20:23:00 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -60,7 +60,7 @@ inherit toolchain-funcs versionator multilib
 ECLASS="kernel-2"
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install \
-	pkg_preinst pkg_postinst
+	pkg_preinst pkg_postinst pkg_prerm
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} && ${CATEGORY/cross-} != ${CATEGORY} ]]; then
@@ -918,4 +918,21 @@ kernel-2_pkg_postinst() {
 kernel-2_pkg_setup() {
 	[[ ${ETYPE} == headers ]] && setup_headers
 	[[ ${ETYPE} == sources ]] && echo ">>> Preparing to unpack ..."
+}
+
+kernel-2_pkg_prerm() {
+	local KV_DIR=${ROOT}/usr/src/linux-${KV_FULL}
+
+	if [[ ${ETYPE} == sources ]]; then
+		# if we have a config for it then we should act on it.
+		if [[ -f ${KV_DIR}/.config ]]; then
+			gzip -c ${KV_DIR}/.config > ${KV_DIR}.config
+		fi
+
+		# have kbuild clean up for us.
+		if [[ -f ${KV_DIR}/include/linux/version.h ]]; then
+			ARCH=$(tc-arch-kernel)
+			make -C ${KV_DIR} mrproper
+		fi
+	fi
 }
