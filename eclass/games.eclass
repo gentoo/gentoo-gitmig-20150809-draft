@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.99 2005/05/29 09:09:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.100 2005/06/23 22:03:27 mr_bones_ Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -125,7 +125,7 @@ prepgamesdirs() {
 			die "refusing to merge a setuid root game"
 		fi
 	done
-	chmod 750 "${D}/${GAMES_BINDIR}"/* &> /dev/null
+	find "${D}/${GAMES_BINDIR}" -type f -maxdepth 1 -exec chmod 750 '{}' \;
 }
 
 gamesenv() {
