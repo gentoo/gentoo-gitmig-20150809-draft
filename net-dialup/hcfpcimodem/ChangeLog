@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/hcfpcimodem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.16 2005/04/14 21:04:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.17 2005/06/24 05:25:26 mrness Exp $
+
+*hcfpcimodem-1.06 (24 Jun 2005)
+
+  24 Jun 2005; Alin Nastac <mrness@gentoo.org> +hcfpcimodem-1.06.ebuild:
+  Version bump. Optionally install modem documentation, selected by doc useflag.
 
   14 Apr 2005; Alin Nastac <mrness@gentoo.org> -hcfpcimodem-1.03.ebuild,
   hcfpcimodem-1.05-r1.ebuild:
