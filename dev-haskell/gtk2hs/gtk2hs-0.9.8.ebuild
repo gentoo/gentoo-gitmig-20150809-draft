@@ -1,16 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.7.ebuild,v 1.4 2005/06/24 05:52:51 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.8.ebuild,v 1.1 2005/06/24 05:52:51 dcoutts Exp $
 
-inherit base check-reqs ghc-package
+inherit base ghc-package multilib
 
 DESCRIPTION="GTK+-2.x bindings for Haskell"
 HOMEPAGE="http://haskell.org/gtk2hs/"
 SRC_URI="mirror://sourceforge/gtk2hs/${P}.tar.gz"
-LICENSE="LGPL-2 GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc -amd64 ~sparc"
+KEYWORDS="~x86 -amd64"
+#enable amd64 when ghc-6.4.1 is out
+#enable sparc when CFLAGS/-mcpu ebuild bug is fixed
+#enable ppc when it's been tested!
 
 IUSE="doc gnome mozilla"
 
@@ -22,33 +25,18 @@ DEPEND=">=virtual/ghc-5.04
 		mozilla? ( >=www-client/mozilla-1.4 )
 		doc? ( >=dev-haskell/haddock-0.6 )"
 
-pkg_setup() {
-	# need this much memory (in MBytes) (does *not* check swap)
-	CHECKREQS_MEMORY="400"
-
-	check_reqs
-}
-
-src_unpack() {
-	base_src_unpack
-
-	# patch for GHC 6.4 compatability
-	epatch ${FILESDIR}/gtk2hs-0.9.7-ghc64.patch.gz
-}
-
 src_compile() {
 	econf \
-		--libdir=$(ghc-libdir) \
-		--with-hcflags="-O" \
-		--without-pkgreg \
-		`use_enable gnome gnome` \
+		--enable-packager-mode \
 		`use_enable gnome libglade` \
+		`use_enable gnome gconf` \
+		`use_enable gnome sourceview` \
 		`use_enable mozilla mozilla` \
 		`use_enable doc docs` \
 		|| die "Configure failed"
 
 	# parallel build doesn't work, so specify -j1
-	emake -j1 HSTOOLFLAGS="-H380m -M380m" || die "Make failed"
+	emake -j1 || die "Make failed"
 }
 
 src_install() {
@@ -76,28 +64,28 @@ src_install() {
 		pkgext=pkg
 	fi
 	ghc-setup-pkg \
-		"${D}/$(ghc-libdir)/gtk2hs/glib.${pkgext}" \
-		"${D}/$(ghc-libdir)/gtk2hs/gtk.${pkgext}" \
-		"${D}/$(ghc-libdir)/gtk2hs/mogul.${pkgext}" \
+		"${D}/usr/$(get_libdir)/gtk2hs/glib.${pkgext}" \
+		"${D}/usr/$(get_libdir)/gtk2hs/gtk.${pkgext}" \
+		"${D}/usr/$(get_libdir)/gtk2hs/mogul.${pkgext}" \
 		$(useq gnome && echo \
-			"${D}/$(ghc-libdir)/gtk2hs/glade.${pkgext}" \
-			"${D}/$(ghc-libdir)/gtk2hs/gconf.${pkgext}" \
-			"${D}/$(ghc-libdir)/gtk2hs/sourceview.${pkgext}") \
+			"${D}/usr/$(get_libdir)/gtk2hs/glade.${pkgext}" \
+			"${D}/usr/$(get_libdir)/gtk2hs/gconf.${pkgext}" \
+			"${D}/usr/$(get_libdir)/gtk2hs/sourceview.${pkgext}") \
 		$(useq mozilla && echo \
-			"${D}/$(ghc-libdir)/gtk2hs/mozembed.${pkgext}")
+			"${D}/usr/$(get_libdir)/gtk2hs/mozembed.${pkgext}")
 	ghc-install-pkg
 
 	# build ghci .o files from .a files
-	ghc-makeghcilib ${D}/$(ghc-libdir)/gtk2hs/libHSglib.a
-	ghc-makeghcilib ${D}/$(ghc-libdir)/gtk2hs/libHSgtk.a
-	ghc-makeghcilib ${D}/$(ghc-libdir)/gtk2hs/libHSmogul.a
+	ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSglib.a
+	ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSgtk.a
+	ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSmogul.a
 	if use gnome; then
-		ghc-makeghcilib ${D}/$(ghc-libdir)/gtk2hs/libHSglade.a
-		ghc-makeghcilib ${D}/$(ghc-libdir)/gtk2hs/libHSgconf.a
-		ghc-makeghcilib ${D}/$(ghc-libdir)/gtk2hs/libHSsourceview.a
+		ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSglade.a
+		ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSgconf.a
+		ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSsourceview.a
 	fi
 	if use mozilla; then
-		ghc-makeghcilib ${D}/$(ghc-libdir)/gtk2hs/libHSmozembed.a
+		ghc-makeghcilib ${D}/usr/$(get_libdir)/gtk2hs/libHSmozembed.a
 	fi
 }
 

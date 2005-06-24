@@ -1,6 +1,15 @@
 # ChangeLog for dev-haskell/gtk2hs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.11 2005/05/08 14:53:43 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.12 2005/06/24 05:52:51 dcoutts Exp $
+
+*gtk2hs-0.9.8 (24 Jun 2005)
+
+  24 Jun 2005; <duncan@gentoo.org> gtk2hs-0.9.7.ebuild,
+  +gtk2hs-0.9.8.ebuild:
+  New version.
+
+  20 May 2005; <duncan@gentoo.org> gtk2hs-0.9.7.ebuild:
+  Added ~sparc to KEYWORDS.
 
   08 May 2005; Duncan Coutts <dcoutts@gentoo.org>
   +files/gtk2hs-0.9.7-ghc64.patch, gtk2hs-0.9.7.ebuild:
