@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.5.ebuild,v 1.5 2005/06/24 21:31:21 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.5.ebuild,v 1.6 2005/06/24 21:33:55 brix Exp $
 
 inherit eutils linux-mod
 
@@ -74,5 +74,5 @@ src_unpack() {
 src_install() {
 	linux-mod_src_install
 
-	dodoc CHANGES ISSUES
+	dodoc CHANGES
 }
