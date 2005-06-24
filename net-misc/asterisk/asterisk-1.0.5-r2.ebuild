@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.5-r2.ebuild,v 1.1 2005/05/31 23:19:56 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.5-r2.ebuild,v 1.2 2005/06/24 16:46:21 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc resperl debug postgres vmdbmysql vmdbpostgres"
 
@@ -18,21 +18,20 @@ S_ADDONS=${WORKDIR}/${PN}-addons-${ADDONS_VERSION}
 
 SLOT="0"
 LICENSE="GPL-2"
-#KEYWORDS="~x86 ~sparc ~hppa ~amd64"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~sparc ~hppa ~amd64"
 
 DEPEND="dev-libs/newt
 	media-sound/mpg123
 	media-sound/sox
 	doc? ( app-doc/doxygen )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	pri? ( >=net-libs/libpri-1.0.3 )
+	pri? ( >=net-libs/libpri-1.0.4-r1 )
 	alsa? ( media-libs/alsa-lib )
 	mysql? ( dev-db/mysql )
 	uclibc? ( sys-libs/uclibc )
-	zaptel? ( >=net-misc/zaptel-1.0.3 )
+	zaptel? ( >=net-misc/zaptel-1.0.4-r1 )
 	resperl? ( dev-lang/perl
-		   >=net-misc/zaptel-1.0.3 )
+		   >=net-misc/zaptel-1.0.4-r1 )
 	postgres? ( dev-db/postgresql )
 	vmdbmysql? ( dev-db/mysql )
 	vmdbpostgres? ( dev-db/postgresql )"
@@ -61,19 +60,12 @@ pkg_setup() {
 	ewarn "     http://bugs.gentoo.org/show_bug.cgi?id=88732"
 	ewarn "     http://www.voip-info.org/wiki-Asterisk+non-root"
 	ewarn
-	if has_version "net-misc/asterisk"; then
-		echo
-		eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-		eerror "! PLEASE RUN THE FOLLOWING COMMAND AFTER UPDATING ASTERISK:               !"
-		eerror "! \"ebuild /usr/portage/net-misc/asterisk/asterisk-${PVR}.ebuild config\" !"
-		eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-	fi
 	echo
 	einfo "Press Ctrl+C to abort"
 	echo
 	ebeep
 
-	n=20
+	n=15
 	while [[ $n -gt 0 ]]; do
 		echo -en "  Waiting $n seconds...\r"
 		sleep 1
@@ -220,6 +212,9 @@ src_unpack() {
 	# to support supplementary groups for the asterisk
 	# user (start-stop-daemons --chguid breaks realtime priority support)
 	epatch ${FILESDIR}/1.0.0/${PN}-1.0.7-initgroups.diff
+
+	# security fix (www.portcullis-security.com/advisory/advisory-05-013.txt)
+	epatch ${FILESDIR}/1.0.0/${PN}-1.0.7-manager-cli-segv.patch
 }
 
 src_compile() {
@@ -248,6 +243,10 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "Make install failed"
 	make DESTDIR=${D} samples || die "Make install samples failed"
+
+	# install astconf.h, a lot of external modules need this
+	insinto /usr/include/asterisk
+	doins   astconf.h
 
 	# install addmailbox and astgenkey
 	dosbin contrib/scripts/addmailbox
@@ -340,6 +339,32 @@ src_install() {
 }
 
 pkg_postinst() {
+	if has_version "net-misc/asterisk"; then
+		#
+		# Change permissions and ownerships of asterisk
+		# directories and files
+		#
+		einfo "Fixing permissions and ownerships"
+		# fix permissions in /var/...
+		for x in spool run lib log; do
+			chown -R asterisk:asterisk ${ROOT}/var/${x}/asterisk
+			chmod -R u=rwX,g=rX,o=     ${ROOT}/var/${x}/asterisk
+		done
+
+		chown -R root:asterisk ${ROOT}/etc/asterisk
+		chmod -R u=rwX,g=rX,o= ${ROOT}/etc/asterisk
+
+		if [[ -z "$(grep "/var/run/asterisk" ${ROOT}/etc/asterisk/asterisk.conf)" ]]
+		then
+			einfo "Fixing astrundir in ${ROOT}/etc/asterisk/asterisk.conf"
+			mv -f ${ROOT}/etc/asterisk/asterisk.conf \
+				${ROOT}/etc/asterisk/asterisk.conf.bak
+			sed -e "s:^\(astrundir[\t ]=>\).*:\1 /var/run/asterisk:" \
+				${ROOT}/etc/asterisk/asterisk.conf.bak >\
+				${ROOT}/etc/asterisk/asterisk.conf
+			einfo "Backup has been saved as ${ROOT}/etc/asterisk/asterisk.conf.bak"
+		fi
+	fi
 	einfo "Asterisk has been installed"
 	einfo ""
 	einfo "to add new Mailboxes use: /usr/sbin/addmailbox"
@@ -362,6 +387,10 @@ pkg_postinst() {
 	ewarn "  Use usermod -G to make the asterisk user a member of additional"
 	ewarn "  groups if necessary."
 	ewarn
+	ewarn "- Make sure the asterisk user is a member of the proper groups if you want it"
+	ewarn "  to have access to hardware devices, e.g. \"audio\" for Alsa and OSS sound or"
+	ewarn "  \"dialout\" for zaptel!"
+	ewarn
 	ewarn "- Permissions of /etc/asterisk have been changed to root:asterisk"
 	ewarn "  750 (rwxr-x--- directories) / 640 (rw-r----- files)"
 	ewarn
@@ -379,63 +408,4 @@ pkg_postinst() {
 	ewarn "For more details:"
 	ewarn "     http://bugs.gentoo.org/show_bug.cgi?id=88732"
 	ewarn "     http://www.voip-info.org/wiki-Asterisk+non-root"
-	echo
-	if has_version "net-misc/asterisk"; then
-		chown -R root:asterisk ${ROOT}/etc/asterisk
-		chmod -R o=            ${ROOT}/etc/asterisk
-
-		eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-		eerror "! NOW RUN                                                                 !"
-		eerror "! \"ebuild /usr/portage/net-misc/asterisk/asterisk-${PVR}.ebuild config\" !"
-		eerror "! TO FIX PERMISSION ON THE FILESYSTEM                                     !"
-		eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-	fi
-	echo
 }
-
-
-pkg_config() {
-	local x
-
-	ewarn "This will change permissions of asterisk related files:"
-	einfo
-	einfo "- Permissions of /etc/asterisk will be changed to root:asterisk"
-	einfo "  750 (rwxr-x--- directories) / 640 (rw-r----- files)"
-	einfo
-	einfo "- Permissions of /var/{log,lib,run,spool}/asterisk will be changed"
-	einfo "  to asterisk:asterisk 750 / 640"
-	einfo
-	ewarn "Continue [Y/n]?"
-	read x
-
-	if [[ "$x" = "y" ]] || [[ "$x" = "Y" ]] || [[ -z "$x" ]]
-	then
-		#
-		# Change permissions and ownerships of asterisk
-		# directories and files
-		#
-		einfo "Fixing permissions and ownerships"
-		# fix permissions
-		for x in spool run lib log; do
-			chown -R asterisk:asterisk ${ROOT}/var/${x}/asterisk
-			chmod -R u=rwX,g=rX,o=     ${ROOT}/var/${x}/asterisk
-		done
-
-		chown -R root:asterisk ${ROOT}/etc/asterisk
-		chmod -R u=rwX,g=rX,o= ${ROOT}/etc/asterisk
-
-		if [[ -z "$(grep "/var/run/asterisk" ${ROOT}/etc/asterisk/asterisk.conf)" ]]
-		then
-			einfo "Fixing astrundir in ${ROOT}/etc/asterisk/asterisk.conf"
-			mv -f ${ROOT}/etc/asterisk/asterisk.conf \
-				${ROOT}/etc/asterisk/asterisk.conf.bak
-			sed -e "s:^\(astrundir[\t ]=>\).*:\1 /var/run/asterisk:" \
-				${ROOT}/etc/asterisk/asterisk.conf.bak >\
-				${ROOT}/etc/asterisk/asterisk.conf
-			einfo "Backup has been saved as ${ROOT}/etc/asterisk/asterisk.conf.bak"
-		fi
-	else
-		einfo "Aborted!"
-	fi
-}
-

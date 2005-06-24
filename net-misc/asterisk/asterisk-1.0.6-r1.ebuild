@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.6-r1.ebuild,v 1.1 2005/05/31 23:19:56 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.6-r1.ebuild,v 1.2 2005/06/24 16:46:21 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 
@@ -20,26 +20,25 @@ S_ADDONS=${WORKDIR}/${PN}-addons-${ADDONS_VERSION}
 
 SLOT="0"
 LICENSE="GPL-2"
-#KEYWORDS="~x86 ~sparc ~hppa ~amd64"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~sparc ~hppa ~amd64"
 
 DEPEND="dev-libs/newt
 	media-sound/mpg123
 	media-sound/sox
 	doc? ( app-doc/doxygen )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	pri? ( >=net-libs/libpri-1.0.3 )
+	pri? ( >=net-libs/libpri-1.0.4-r1 )
 	bri? ( >=net-libs/libpri-1.0.6
-		>=net-misc/zaptel-1.0.6 )
+		>=net-misc/zaptel-1.0.6-r1 )
 	alsa? ( media-libs/alsa-lib )
 	mysql? ( dev-db/mysql )
 	speex? ( media-libs/speex )
-	zaptel? ( >=net-misc/zaptel-1.0.3 )
+	zaptel? ( >=net-misc/zaptel-1.0.4-r1 )
 	postgres? ( dev-db/postgresql )
 	vmdbmysql? ( dev-db/mysql )
 	vmdbpostgres? ( dev-db/postgresql )
 	resperl? ( dev-lang/perl
-		   >=net-misc/zaptel-1.0.3 )"
+		   >=net-misc/zaptel-1.0.4-r1 )"
 
 pkg_setup() {
 	local n
@@ -270,6 +269,9 @@ src_unpack() {
 	# to support supplementary groups for the asterisk
 	# user (start-stop-daemons --chguid breaks realtime priority support)
 	epatch ${FILESDIR}/1.0.0/${PN}-1.0.7-initgroups.diff
+
+	# security fix (www.portcullis-security.com/advisory/advisory-05-013.txt)
+	epatch ${FILESDIR}/1.0.0/${PN}-1.0.7-manager-cli-segv.patch
 }
 
 src_compile() {
@@ -298,6 +300,10 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "Make install failed"
 	make DESTDIR=${D} samples || die "Make install samples failed"
+
+	# install astconf.h, a lot of external modules need this
+	insinto /usr/include/asterisk
+	doins   astconf.h
 
 	# install addmailbox and astgenkey
 	dosbin contrib/scripts/addmailbox
@@ -386,78 +392,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Asterisk has been installed"
-	einfo ""
-	einfo "to add new Mailboxes use: /usr/sbin/addmailbox"
-	einfo ""
-	einfo "If you want to know more about asterisk, visit these sites:"
-	einfo "http://www.asteriskdocs.org/"
-	einfo "http://www.voip-info.org/wiki-Asterisk"
-	echo
-	einfo "http://asterisk.xvoip.com/"
-	einfo "http://junghanns.net/asterisk/"
-	einfo "http://www.automated.it/guidetoasterisk.htm"
-	echo
-	einfo "Gentoo VoIP IRC Channel:"
-	einfo "#gentoo-voip @ irc.freenode.net"
-
-	#
-	# Warning about security changes...
-	#
-	ewarn "*********************** Important changes **************************"
-	ewarn
-	ewarn "- Asterisk runs as user asterisk, group asterisk by default"
-	ewarn "  Use usermod -G to make the asterisk user a member of additional"
-	ewarn "  groups if necessary."
-	ewarn
-	ewarn "- Permissions of /etc/asterisk have been changed to root:asterisk"
-	ewarn "  750 (rwxr-x--- directories) / 640 (rw-r----- files)"
-	ewarn
-	ewarn "- Permissions of /var/{log,lib,run,spool}/asterisk have been changed"
-	ewarn "  to asterisk:asterisk 750 / 640"
-	ewarn
-	ewarn "- Asterisk's unix socket and pidfile are now in /var/run/astrisk"
-	ewarn
-	ewarn "- Asterisk cannot set the IP ToS bits when run as user,"
-	ewarn "  use something like this to make iptables set them for you:"
-	ewarn "  \"iptables -A OUTPUT -t mangle -p udp -m udp --dport 5060 -j DSCP --set-dscp 0x28\""
-	ewarn "  \"iptables -A OUTPUT -t mangle -p udp -m udp --sport 10000:20000 -j DSCP --set-dscp 0x28\""
-	ewarn "  (taken from voip-info.org comments (see below), thanks andrewid)"
-	ewarn
-	ewarn "For more details:"
-	ewarn "     http://bugs.gentoo.org/show_bug.cgi?id=88732"
-	ewarn "     http://www.voip-info.org/wiki-Asterisk+non-root"
-	echo
 	if has_version "net-misc/asterisk"; then
-		chown -R root:asterisk ${ROOT}/etc/asterisk
-		chmod -R o=            ${ROOT}/etc/asterisk
-
-		eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-		eerror "! NOW RUN                                                                 !"
-		eerror "! \"ebuild /usr/portage/net-misc/asterisk/asterisk-${PVR}.ebuild config\" !"
-		eerror "! TO FIX PERMISSION ON THE FILESYSTEM                                     !"
-		eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-	fi
-	echo
-}
-
-
-pkg_config() {
-	local x
-
-	ewarn "This will change permissions of asterisk related files:"
-	einfo
-	einfo "- Permissions of /etc/asterisk will be changed to root:asterisk"
-	einfo "  750 (rwxr-x--- directories) / 640 (rw-r----- files)"
-	einfo
-	einfo "- Permissions of /var/{log,lib,run,spool}/asterisk will be changed"
-	einfo "  to asterisk:asterisk 750 / 640"
-	einfo
-	ewarn "Continue [Y/n]?"
-	read x
-
-	if [[ "$x" = "y" ]] || [[ "$x" = "Y" ]] || [[ -z "$x" ]]
-	then
 		#
 		# Change permissions and ownerships of asterisk
 		# directories and files
@@ -482,7 +417,50 @@ pkg_config() {
 				${ROOT}/etc/asterisk/asterisk.conf
 			einfo "Backup has been saved as ${ROOT}/etc/asterisk/asterisk.conf.bak"
 		fi
-	else
-		einfo "Aborted!"
 	fi
+	einfo "Asterisk has been installed"
+	einfo ""
+	einfo "to add new Mailboxes use: /usr/sbin/addmailbox"
+	einfo ""
+	einfo "If you want to know more about asterisk, visit these sites:"
+	einfo "http://www.asteriskdocs.org/"
+	einfo "http://www.voip-info.org/wiki-Asterisk"
+	echo
+	einfo "http://asterisk.xvoip.com/"
+	einfo "http://junghanns.net/asterisk/"
+	einfo "http://www.automated.it/guidetoasterisk.htm"
+	echo
+	einfo "Gentoo VoIP IRC Channel:"
+	einfo "#gentoo-voip @ irc.freenode.net"
+
+	#
+	# Warning about security changes...
+	#
+	ewarn "*********************** Important changes **************************"
+	ewarn
+	ewarn "- Asterisk runs as user asterisk, group asterisk by default"
+	ewarn "  Use usermod -G to make the asterisk user a member of additional"
+	ewarn "  groups if necessary."
+	ewarn
+	ewarn "- Make sure the asterisk user is a member of the proper groups if you want it"
+	ewarn "  to have access to hardware devices, e.g. \"audio\" for Alsa and OSS sound or"
+	ewarn "  \"dialout\" for zaptel!"
+	ewarn
+	ewarn "- Permissions of /etc/asterisk have been changed to root:asterisk"
+	ewarn "  750 (rwxr-x--- directories) / 640 (rw-r----- files)"
+	ewarn
+	ewarn "- Permissions of /var/{log,lib,run,spool}/asterisk have been changed"
+	ewarn "  to asterisk:asterisk 750 / 640"
+	ewarn
+	ewarn "- Asterisk's unix socket and pidfile are now in /var/run/astrisk"
+	ewarn
+	ewarn "- Asterisk cannot set the IP ToS bits when run as user,"
+	ewarn "  use something like this to make iptables set them for you:"
+	ewarn "  \"iptables -A OUTPUT -t mangle -p udp -m udp --dport 5060 -j DSCP --set-dscp 0x28\""
+	ewarn "  \"iptables -A OUTPUT -t mangle -p udp -m udp --sport 10000:20000 -j DSCP --set-dscp 0x28\""
+	ewarn "  (taken from voip-info.org comments (see below), thanks andrewid)"
+	ewarn
+	ewarn "For more details:"
+	ewarn "     http://bugs.gentoo.org/show_bug.cgi?id=88732"
+	ewarn "     http://www.voip-info.org/wiki-Asterisk+non-root"
 }
