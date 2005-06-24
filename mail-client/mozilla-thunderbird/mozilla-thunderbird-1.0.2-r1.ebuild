@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2-r1.ebuild,v 1.2 2005/06/23 18:00:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2-r1.ebuild,v 1.3 2005/06/24 22:29:18 smithj Exp $
 
 IUSE="crypt"
 
@@ -149,7 +149,7 @@ EOF
 	# be run as a normal user.  Drop in some initialized files to
 	# avoid this.
 	einfo "Extracting thunderbird-${PV} initialization files"
-	tar xjpf ${FILESDIR}/thunderbird-0.7-init.tar.bz2 -C ${tb_libdir}
+	tar xjpf ${FILESDIR}/thunderbird-0.7-init.tar.bz2 -C ${D}${tb_libdir}
 }
 
 pkg_preinst() {
