@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-1.0.1.ebuild,v 1.6 2005/06/24 21:42:06 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-1.0.1.ebuild,v 1.7 2005/06/24 21:44:10 brix Exp $
 
 inherit eutils linux-mod
 
@@ -8,7 +8,7 @@ inherit eutils linux-mod
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
 
-FW_VERSION="2.3"
+FW_VERSION="2.2"
 
 DESCRIPTION="Driver for the Intel PRO/Wireless 2200BG/2915ABG miniPCI and 2225BG PCI adapters"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 
 IUSE="debug"
 RDEPEND="=net-wireless/ipw2200-firmware-${FW_VERSION}
