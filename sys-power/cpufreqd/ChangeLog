@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.6 2005/05/26 12:45:04 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.7 2005/06/24 07:48:23 brix Exp $
+
+  24 Jun 2005; <brix@gentoo.org> cpufreqd-1.2.3.ebuild:
+  Stable on x86.
 
   26 May 2005; <brix@gentoo.org> cpufreqd-1.2.2-r1.ebuild:
   Stabilizing on x86 to close memory leaks.
