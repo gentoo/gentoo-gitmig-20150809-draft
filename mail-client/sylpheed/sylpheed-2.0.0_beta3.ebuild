@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.0.0_beta3.ebuild,v 1.1 2005/06/24 08:47:10 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.0.0_beta3.ebuild,v 1.2 2005/06/24 08:58:27 hattya Exp $
 
 inherit eutils
 
@@ -12,15 +12,14 @@ DESCRIPTION="A lightweight email client and newsreader"
 HOMEPAGE="http://sylpheed.good-day.net/"
 SRC_URI="http://sylpheed.good-day.net/${PN}/v${PV%.*}beta/${MY_P}.tar.bz2"
 
-RESTRICT="nomirror"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
 PROVIDE="virtual/sylpheed"
 
-DEPEND=">=x11-libs/gtk+-2.2
+DEPEND=">=x11-libs/gtk+-2.4
 	!amd64? ( nls? ( >=sys-devel/gettext-0.12.1 ) )
 	crypt? ( >=app-crypt/gpgme-0.4.5 )
 	ldap? ( >=net-nds/openldap-2.0.11 )
@@ -71,5 +70,3 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog* INSTALL* NEWS* README* TODO*
 
 }
-
-# $Id: sylpheed-2.0.0_beta3.ebuild,v 1.1 2005/06/24 08:47:10 hattya Exp $
