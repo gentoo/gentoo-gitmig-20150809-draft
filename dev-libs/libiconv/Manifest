@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 f90c6b5ccd48096b82a7842c5994583b metadata.xml 469
-MD5 67f1991d15839b3956ae3cf9c181ce21 ChangeLog 2142
-MD5 34e8a475124954f9b76c627a1c59c427 libiconv-1.9.2-r3.ebuild 1293
+MD5 7969331fd86222c64fbcc22a96203747 ChangeLog 2283
+MD5 8e7a564529c9b92df46f091ee31bfdb9 libiconv-1.9.2-r3.ebuild 1239
 MD5 97aebb7d7ded50f07b44c23768d25928 files/libiconv-1.9.2-RPATH-fix.patch 1906
 MD5 ba26148d2aed650a790b129b9907ae59 files/digest-libiconv-1.9.2-r3 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCsw2Lj5H05b2HAEkRApdyAKChjN0mRZnz/+y/newEQRsGagl0bgCgoIWZ
-FXs1uwqDBqvlvJnVujt1KIQ=
-=tmOR
+iD8DBQFCvG7pj5H05b2HAEkRAnt+AJ4kyKB4rkttpzOjH2YGRPSkV+aJ3gCghS4R
+FfeTHWvdiJ1AJ9iTWwYt8O8=
+=nsTW
 -----END PGP SIGNATURE-----

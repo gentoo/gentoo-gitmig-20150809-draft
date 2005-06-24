@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.9.2-r3.ebuild,v 1.3 2005/06/17 17:50:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.9.2-r3.ebuild,v 1.4 2005/06/24 20:36:22 flameeyes Exp $
 
 inherit eutils multilib
 
@@ -30,7 +30,6 @@ src_compile() {
 	# between libiconv and gettext
 
 	econf \
-		--libdir=/$(get_libdir) \
 		--disable-nls \
 		 || die "econf failed"
 	emake || die "emake failed"
@@ -40,8 +39,8 @@ src_install() {
 	make DESTDIR=${D} docdir="/usr/share/doc/${PF}/html" install || die "make install failed"
 
 	# Move static libs and creates ldscripts into /usr/lib
-	dolib /usr/$(get_libdir)
-	mv ${D}/$(get_libdir)/*.a ${D}/$(get_libdir)/*.la ${D}/usr/$(get_libdir)
+	dodir /$(get_libdir)
+	mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
 	gen_usr_ldscript libiconv.so
 	gen_usr_ldscript libcharset.so
 
