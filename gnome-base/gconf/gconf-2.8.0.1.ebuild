@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.8.0.1.ebuild,v 1.8 2005/01/08 23:26:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.8.0.1.ebuild,v 1.9 2005/06/24 22:12:06 agriffis Exp $
 
 inherit eutils gnome2
 
@@ -42,6 +42,9 @@ src_install() {
 	touch ${D}/etc/gconf/gconf.xml.mandatory/.keep${SLOT}
 	touch ${D}/etc/gconf/gconf.xml.defaults/.keep${SLOT}
 
+	dodir /etc/env.d
+	dodir /root/.gconfd
+
 }
 
 kill_gconf () {
@@ -75,10 +78,7 @@ pkg_preinst () {
 
 	kill_gconf
 
-	dodir /etc/env.d
-	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > ${D}/etc/env.d/50gconf
-
-	dodir /root/.gconfd
+	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > ${IMAGE}/etc/env.d/50gconf
 
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.107 2005/06/12 21:30:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.108 2005/06/24 22:12:06 agriffis Exp $
+
+  24 Jun 2005; Aron Griffis <agriffis@gentoo.org> gconf-2.4.0.1.ebuild,
+  gconf-2.6.0.ebuild, gconf-2.6.1.ebuild, gconf-2.6.2.ebuild,
+  gconf-2.8.0.1.ebuild, gconf-2.8.1-r1.ebuild, gconf-2.9.91.ebuild,
+  gconf-2.10.0.ebuild:
+  Don't call dodir in pkg_*; it breaks binary packages. Also use $IMAGE
+  instead of $D in pkg_*
 
   12 Jun 2005; Olivier Crête <tester@gentoo.org> gconf-1.0.9.ebuild:
   Stable on amd64
