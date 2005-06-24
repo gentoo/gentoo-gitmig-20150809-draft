@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.3 2005/03/16 13:55:30 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.4 2005/06/24 22:33:04 agriffis Exp $
 
 inherit eutils java-pkg
 
@@ -22,11 +22,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/${PV}-gentoo.patch
-}
-
-pkg_preinst() {
-	enewgroup orion
-	enewuser orion -1 /bin/bash /opt/orion orion
 }
 
 src_install() {
@@ -88,12 +83,15 @@ src_install() {
 	dodoc Readme.txt changes.txt
 }
 
+pkg_preinst() {
+	enewgroup orion
+	enewuser orion -1 /bin/bash /opt/orion orion
+	chown -R orion:orion ${IMAGE}/opt/${PN}
+	chown -R orion:orion ${IMAGE}/var/log/${PN}
+	chown root:root ${IMAGE}/etc/conf.d/orion
+}
+
 pkg_postinst() {
-
-	chown -R orion:orion /opt/${PN} || die "Failed to chown in /opt"
-	chown -R orion:orion /var/log/${PN} || die "Failed to chown in /var/log"
-	chown root:root /etc/conf.d/orion
-
 	einfo " "
 	einfo " NOTICE!"
 	einfo " User and group 'orion' have been added."

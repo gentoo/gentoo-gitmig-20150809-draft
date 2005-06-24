@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/orion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.8 2005/03/16 13:55:30 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.9 2005/06/24 22:33:04 agriffis Exp $
+
+  24 Jun 2005; Aron Griffis <agriffis@gentoo.org> orion-2.0.1.ebuild,
+  orion-2.0.2.ebuild, orion-2.0.5.ebuild:
+  Use $IMAGE instead of $D in pkg_*. Don't call fowners in pkg_*, use chown
+  instead. In 2.0.5, move the chown from pkg_postinst to pkg_preinst so it
+  happens prior to the merge. Move pkg_preinst below src_install in the ebuild
+  since the functions are called in that order
 
   16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> orion-2.0.5.ebuild:
   applied parts of the patch which was suggested in #85032 by Marc Vilanova
