@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r2.ebuild,v 1.4 2005/03/15 18:11:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r2.ebuild,v 1.5 2005/06/24 22:01:43 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -113,14 +113,13 @@ src_compile() {
 	emake || die
 
 	# NOTE libexecdir dir is deliberately different from that in the install
-
-	if ! use caps ; then
-		fperms u+s /usr/bin/gpg
-	fi
 }
 
 src_install() {
 	emake DESTDIR=${D} libexecdir="/usr/libexec/gnupg" install || die
+
+	# caps support makes life easier
+	use caps || fperms u+s,go-r /usr/bin/gpg
 
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"

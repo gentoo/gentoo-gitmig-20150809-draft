@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.117 2005/06/17 17:32:19 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.118 2005/06/24 22:01:43 agriffis Exp $
+
+  24 Jun 2005; Aron Griffis <agriffis@gentoo.org> gnupg-1.4.0-r1.ebuild,
+  gnupg-1.4.0-r2.ebuild, gnupg-1.4.1.ebuild, gnupg-1.4.1-r1.ebuild,
+  gnupg-1.9.14.ebuild, gnupg-1.9.15.ebuild, gnupg-1.9.15-r1.ebuild:
+  Move fperms from src_compile to src_install.  Normalize to u+s,go-r
 
 *gnupg-1.4.1-r1 (17 Jun 2005)
 
