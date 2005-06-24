@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.38 2005/06/24 07:44:20 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.39 2005/06/24 13:53:41 gustavoz Exp $
+
+  24 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  sendmail-8.13.4.ebuild:
+  Stable on sparc wrt #96837
 
   24 Jun 2005; lcars <lcars@gentoo.org> sendmail-8.13.4-r1.ebuild:
   Added /etc/mail/submit.mc (bug #70309).  
