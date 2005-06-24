@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/panda3d
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/ChangeLog,v 1.1 2005/06/24 05:28:52 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/ChangeLog,v 1.2 2005/06/24 05:34:04 chriswhite Exp $
+
+  24 Jun 2005; Chris White <chriswhite@gentoo.org> :
+  Recommiting manifest with non-alpha gnupg.
 
 *panda3d-1.0.4 (24 Jun 2005)
 
