@@ -1,6 +1,12 @@
 # ChangeLog for media-video/helixplayer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.11 2005/05/02 00:13:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.12 2005/06/24 22:08:54 flameeyes Exp $
+
+*helixplayer-1.0.5 (24 Jun 2005)
+
+  24 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +helixplayer-1.0.5.ebuild:
+  New upstream version. Dropped keywords as I can't test it for now.
 
   02 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   -files/helixplayer-1.0.1-bif.patch, -files/helixplayer-1.0.1-sem_t.patch,

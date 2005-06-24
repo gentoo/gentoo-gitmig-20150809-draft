@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4c38c4813a5a47212241bba55779e49a ChangeLog 3153
 MD5 f73e205359792d55c5215a427ff36e7e helixplayer-1.0.4.ebuild 2277
 MD5 75ed185b972cd276a339309609fba567 metadata.xml 276
 MD5 3c500db06ebd6ffafff51607345d3de6 helixplayer-1.0.5.ebuild 2271
 MD5 b58761808153ad55d61baf4017ea8486 files/digest-helixplayer-1.0.4 139
 MD5 5ce59341635af14a578e0f26c81fce2f files/digest-helixplayer-1.0.5 139
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvISFj5H05b2HAEkRAl5jAJ48vS9MYdcP1EdnAzFk7I0y0vP8AwCfbg/2
+YN9HoXRHGjKvrQHdhKjMPr4=
+=vwmt
+-----END PGP SIGNATURE-----
