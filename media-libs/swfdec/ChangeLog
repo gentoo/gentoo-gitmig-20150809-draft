@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.15 2005/06/13 21:53:16 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.16 2005/06/24 09:16:11 zaheerm Exp $
+
+  24 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> swfdec-0.3.2.ebuild:
+  fix liboil dep
 
   13 Jun 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> swfdec-0.3.5.ebuild:
   fix sandbox error (bug #95597)

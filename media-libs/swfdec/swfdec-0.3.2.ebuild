@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.3.2.ebuild,v 1.3 2005/03/23 16:18:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.3.2.ebuild,v 1.4 2005/06/24 09:16:11 zaheerm Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="X mozilla gtk sdl mad"
 
 RDEPEND=">=dev-libs/glib-2
 	media-libs/libart_lgpl
-	>=dev-libs/liboil-0.2.0
+	=dev-libs/liboil-0.2*
 	gtk? ( >=x11-libs/gtk+-2.2 )
 	sdl? ( media-libs/libsdl )
 	mad? ( media-sound/madplay )
