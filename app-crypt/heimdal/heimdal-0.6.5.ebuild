@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.5.ebuild,v 1.2 2005/06/22 20:12:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.5.ebuild,v 1.3 2005/06/24 13:36:42 seemant Exp $
 
 inherit libtool eutils virtualx toolchain-funcs
 
@@ -142,4 +142,14 @@ src_install() {
 
 	# default database dir
 	keepdir /var/heimdal
+}
+
+pkg_postinst() {
+	echo
+	einfo "This release of heimdal now depends on an external version"
+	einfo "of the com_err library.  Please make sure to run revdep-rebuild"
+	einfo "to ensure the integrity of the linking on your system"
+	echo
+	epause 10
+	ebeep
 }
