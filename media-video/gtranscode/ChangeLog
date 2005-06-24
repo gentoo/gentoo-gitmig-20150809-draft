@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gtranscode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gtranscode/ChangeLog,v 1.2 2005/05/01 20:20:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gtranscode/ChangeLog,v 1.3 2005/06/24 17:20:16 astinus Exp $
+
+  24 Jun 2005; Alex Howells <astinus@gentoo.org> gtranscode-0.3.ebuild:
+  Marking ~amd64, works fine for me!
 
   01 May 2005; David Holm <dholm@gentoo.org> gtranscode-0.3.ebuild:
   Added to ~ppc.
