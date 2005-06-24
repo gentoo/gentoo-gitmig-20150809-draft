@@ -1,24 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-1.9.12.ebuild,v 1.1 2005/06/04 10:01:46 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-1.0.5.ebuild,v 1.1 2005/06/24 08:56:57 hattya Exp $
 
 inherit eutils
 
-IUSE="crypt gnome ipv6 ldap nls pda ssl xface"
+IUSE="crypt gnome imlib ipv6 ldap nls pda ssl xface"
 
 DESCRIPTION="A lightweight email client and newsreader"
 HOMEPAGE="http://sylpheed.good-day.net/"
 SRC_URI="http://sylpheed.good-day.net/${PN}/v${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 
 PROVIDE="virtual/sylpheed"
 
-DEPEND=">=x11-libs/gtk+-2.2
+DEPEND="=x11-libs/gtk+-1.2*
 	!amd64? ( nls? ( >=sys-devel/gettext-0.12.1 ) )
 	crypt? ( >=app-crypt/gpgme-0.4.5 )
+	gnome? ( media-libs/gdk-pixbuf )
+	imlib? ( media-libs/imlib )
 	ldap? ( >=net-nds/openldap-2.0.11 )
 	pda? ( app-pda/jpilot )
 	ssl? ( dev-libs/openssl )
@@ -46,6 +48,8 @@ src_compile() {
 		`use_enable pda jpilot` \
 		`use_enable ldap` \
 		`use_enable ipv6` \
+		`use_enable imlib` \
+		`use_enable gnome gdk-pixbuf` \
 		`use_enable xface compface` \
 		|| die
 
