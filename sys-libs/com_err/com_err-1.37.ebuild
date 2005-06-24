@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.37.ebuild,v 1.6 2005/06/22 20:05:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.37.ebuild,v 1.7 2005/06/24 13:26:33 seemant Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -57,4 +57,16 @@ src_install() {
 	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)/
 	dolib.a lib/libcom_err.a || die "dolib.a"
 	gen_usr_ldscript libcom_err.so
+}
+
+pkg_postinst() {
+	echo
+	einfo "PLEASE PLEASE take note of this"
+	einfo "Please make *sure* to run revdep-rebuild now"
+	einfo "Certain things on your system may have linked against a"
+	einfo "different version of com_err -- those things need to be"
+	einfo "recompiled.  Sorry for the inconvenience"
+	echo
+	epause 10
+	ebeep
 }
