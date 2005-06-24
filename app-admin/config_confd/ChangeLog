@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/config_confd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/config_confd/ChangeLog,v 1.1 2005/06/24 10:01:36 dams Exp $
+
+*config_confd-0.0.2 (24 Jun 2005)
+
+  24 Jun 2005; <dams@gentoo.org> +config_confd-0.0.2.ebuild:
+  first public version
+
