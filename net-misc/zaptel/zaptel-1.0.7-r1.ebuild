@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.5 2005/06/23 21:35:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.6 2005/06/24 16:01:03 stkn Exp $
 
 IUSE="devfs26 bri florz"
 
@@ -179,7 +179,7 @@ src_install() {
 
 	# install udev rule file
 	insinto /etc/udev/rules.d
-	newins ${FILESDIR}/zaptel.udevd 99-zaptel.rules
+	newins ${FILESDIR}/zaptel.udevd 10-zaptel.rules
 
 	# fix permissions if there's no udev / devfs around
 	if [[ -d ${D}/dev/zap ]]; then

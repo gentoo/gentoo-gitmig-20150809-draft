@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.43 2005/06/23 21:35:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.44 2005/06/24 16:01:03 stkn Exp $
+
+  24 Jun 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.7-r1.ebuild:
+  Renamed udev rules file to 10-zaptel.rules, making udev use our custom rules
+  instead of the shipped.
 
   23 Jun 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.7-r1.ebuild:
   ~* keywords restored for asterisk-1.0.7 security update.
