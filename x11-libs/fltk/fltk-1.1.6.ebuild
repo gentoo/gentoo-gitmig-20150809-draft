@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.6.ebuild,v 1.2 2005/06/22 10:40:24 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.6.ebuild,v 1.3 2005/06/24 21:57:54 smithj Exp $
 
-IUSE="X opengl debug"
+IUSE="noxft opengl debug"
 
 inherit eutils toolchain-funcs multilib
 
@@ -39,7 +39,7 @@ src_compile() {
 	local myconf
 	myconf="--enable-shared --enable-xdbe --enable-static --enable-threads"
 
-	if use X; then
+	if ! use noxft; then
 		myconf="${myconf} --enable-xft"
 	else
 		myconf="${myconf} --disable-xft"
@@ -85,4 +85,9 @@ src_install() {
 	dodir /usr/share/doc/${P}/html
 	mv ${D}/usr/share/doc/fltk/* ${D}/usr/share/doc/${PF}/html
 	rmdir ${D}/usr/share/doc/fltk
+}
+
+pkg_postinst() {
+	ewarn "the xft USE flag has been changed to noxft. this was because most"
+	ewarn "users want xft, but if you do not, be sure to change the flag"
 }
