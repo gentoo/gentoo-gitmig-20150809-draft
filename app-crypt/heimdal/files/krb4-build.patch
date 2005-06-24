@@ -1,0 +1,21 @@
+diff -Nura heimdal-0.6.5/kdc/kerberos4.c heimdal-0.6.5.krb4fix/kdc/kerberos4.c
+--- heimdal-0.6.5/kdc/kerberos4.c	2005-06-14 11:26:55.000000000 -0300
++++ heimdal-0.6.5.krb4fix/kdc/kerberos4.c	2005-06-24 15:21:58.000000000 -0300
+@@ -391,7 +391,7 @@
+ 	    char *s;
+ 	    s = kdc_log_msg(0, "Client not found in database: (krb4) %s: %s",
+ 			    client_name, krb5_get_err_text(context, ret));
+-	    make_err_reply(context, reply, KERB_ERR_PRINCIPAL_UNKNOWN, s);
++	    make_err_reply(reply, KERB_ERR_PRINCIPAL_UNKNOWN, s);
+ 	    free(s);
+ 	    goto out2;
+ 	}
+@@ -400,7 +400,7 @@
+ 	    char *s;
+ 	    s = kdc_log_msg(0, "Local client not found in database: (krb4) "
+ 			    "%s", client_name);
+-	    make_err_reply(context, reply, KERB_ERR_PRINCIPAL_UNKNOWN, s);
++	    make_err_reply(reply, KERB_ERR_PRINCIPAL_UNKNOWN, s);
+ 	    free(s);
+ 	    goto out2;
+ 	}

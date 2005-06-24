@@ -1,13 +1,24 @@
-MD5 6c9cbfc951ebeca1a88d8722de4dde80 metadata.xml 231
-MD5 b0f3100ae5ee9a72be61f5458f73a687 ChangeLog 12564
-MD5 8ff78d3463eb4bbfdd4d0cdf29ac937c heimdal-0.6.4.ebuild 2805
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6f4f0246f8037a5ce93b840ab15570c5 heimdal-0.6.4-r1.ebuild 3524
-MD5 8ad30c8f9299bb633fff9da019798c11 heimdal-0.6.5.ebuild 3774
+MD5 6c9cbfc951ebeca1a88d8722de4dde80 metadata.xml 231
+MD5 a24e73d8e8e04514c19aa85a57bf0b7f heimdal-0.6.5.ebuild 3811
+MD5 58fb55e5766d6f91d55db2a94c52b650 ChangeLog 12720
+MD5 8ff78d3463eb4bbfdd4d0cdf29ac937c heimdal-0.6.4.ebuild 2805
+MD5 0f222a777af729dc4d6076ab03342056 files/krb5.conf 423
 MD5 0becad2fb5b2e15b30b47b2939304647 files/heimdal-kadmind 546
 MD5 2be6ab7b49a076e078f34913d65bcaad files/heimdal-kdc 514
-MD5 f4811d443f68fe11946a031ada8ce125 files/heimdal-kpasswdd 551
-MD5 06ae43d9ec1ce6f03630f6bd5e1631eb files/krb5-kdc.schema 4051
-MD5 0f222a777af729dc4d6076ab03342056 files/krb5.conf 423
-MD5 64ac3c23dcd54135648853869219dad6 files/digest-heimdal-0.6.4 147
 MD5 695b4c971cc27af8d7c24c69d7646f26 files/digest-heimdal-0.6.4-r1 147
+MD5 f4811d443f68fe11946a031ada8ce125 files/heimdal-kpasswdd 551
 MD5 c9a17d0a75733352c1e45b1d1c4470b1 files/digest-heimdal-0.6.5 147
+MD5 f51748af8baa63a8eecdb0ba7a0106cc files/krb4-build.patch 853
+MD5 06ae43d9ec1ce6f03630f6bd5e1631eb files/krb5-kdc.schema 4051
+MD5 64ac3c23dcd54135648853869219dad6 files/digest-heimdal-0.6.4 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCvGxcKRy60XGEcJIRAnqMAJsH8eI3HExZtXlpCTpKxprHazxBpgCgod+A
+0iQJZXCYTOA/bbyx2fkajt8=
+=60h/
+-----END PGP SIGNATURE-----
