@@ -1,12 +1,12 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.12 2005/06/24 05:03:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.13 2005/06/24 05:06:25 mrness Exp $
 
 *hsfmodem-7.18.00.05 (24 Jun 2005)
 
   24 Jun 2005; Alin Nastac <mrness@gentoo.org> +hsfmodem-7.18.00.05.ebuild:
-  Version bump. Optionally install modem documentation controlled through doc
-  useflag.
+  Version bump (#96688). Optionally install modem documentation, selected 
+  by doc useflag.
 
   16 May 2005; Seemant Kulleen <seemant@gentoo.org>
   hsfmodem-7.18.00.03-r2.ebuild:
