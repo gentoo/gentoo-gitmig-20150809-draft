@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4187046f284fcf00d48c87ff55144b13 ChangeLog 4643
 MD5 945eaa358382c7b7da3c353826053e9f gphoto2-2.1.4.ebuild 1662
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
@@ -6,3 +9,10 @@ MD5 7b9fedaf2cef59c5127103b10b07ef9b gphoto2-2.1.6.ebuild 1714
 MD5 41665ec8402a0bb20d2b6112fd707870 files/digest-gphoto2-2.1.4 66
 MD5 140f74b092e17be74411552ab8821e55 files/digest-gphoto2-2.1.5 65
 MD5 3a36c3b5451b1f4d0452bf3ea8789e9f files/digest-gphoto2-2.1.6 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvCM0TM53OX+9xmMRAsSlAJ4ol0nv1Wr7pGUln8L8yhzJr52z4ACeI2Fh
+/uP3lM2/sUlqqAINtbkdD48=
+=wAyw
+-----END PGP SIGNATURE-----
