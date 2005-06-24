@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.5.ebuild,v 1.5 2005/06/24 14:58:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6.ebuild,v 1.1 2005/06/24 14:58:39 liquidx Exp $
 
 inherit libtool eutils
 
@@ -10,14 +10,14 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ia64 ~ppc64 ~alpha"
 IUSE="nls doc jpeg nousb"
 
 # needs >usbutils-0.11-r2 to avoid /usr/lib/libusb*
 # conflicts with dev-libs/libusb
-RDEPEND="!nousb? ( >=dev-libs/libusb-0.1.8
+RDEPEND="!nousb? (>=dev-libs/libusb-0.1.8
 	>=sys-apps/usbutils-0.11-r2
-	sys-apps/hotplug )
+	sys-apps/hotplug)
 	jpeg? ( >=media-libs/libexif-0.5.9 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 # If you want to only compile for specific card(s), set CAMERAS
 # environment to a comma-separated list (no spaces) of drivers that
 # you want to build.
-IUSE_CAMERAS="agfa-cl20 aox barbie canon casio digita dimera directory enigma13 fuji gsmart300 iclick jamcam jd11
+IUSE_CAMERAS="adc65 agfa-cl20 aox barbie canon casio digita dimera directory enigma13 fuji gsmart300 iclick jamcam jd11
 kodak konica largan mars minolta mustek panasonic pccam300 pccam600 polaroid ptp2 ricoh samsung
 sierra sipix smal sonydscf1 sonydscf55 soundvision spca50x sq905 stv0674 stv0680 sx330z toshiba"
 
