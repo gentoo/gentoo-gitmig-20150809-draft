@@ -1,6 +1,16 @@
-MD5 efaca3f93c7f97a98402711502625ac1 ChangeLog 2960
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 11d0f67b5304cc88f6e66d2aa5441f5b binutils-config-1.8-r4.ebuild 577
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 3f585cdf53a3ce0272638a558e2be98f binutils-config-1.8-r3.ebuild 577
-MD5 19211fb35938712e33d8d151e2d6571b files/binutils-config-1.8 9296
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.8-r3 0
+MD5 efaca3f93c7f97a98402711502625ac1 ChangeLog 2960
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.8-r4 0
 MD5 953efbc2a688428dfb75ecfa3c2d3d43 files/binutils-config.8 2989
+MD5 2c6dd3e5d0554c0f0aae89651d2da5bf files/binutils-config-1.8 9551
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvIFjgIKl8Uu19MoRAtpUAJ9MN9uKR1Viwfm7RTs9E21VrhqB6gCfQasZ
+VTu9ukW0W6QBkyZe9UO/o28=
+=NQuu
+-----END PGP SIGNATURE-----
