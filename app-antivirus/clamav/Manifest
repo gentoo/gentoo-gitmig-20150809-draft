@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 34a649543043b4506c5ecdca94ddad41 clamav-0.85.ebuild 2314
+MD5 b9dc829b2d42a696c12024fba1598a1a ChangeLog 17723
+MD5 7a832f77b721edd70e3aa547dc744a60 clamav-0.86.ebuild 3705
+MD5 689c7676f16b3126b2c3f9271f7c2a1e clamav-0.85-r1.ebuild 3290
 MD5 a680e10fbd5a60b1efa6f4fe2b57f3ab clamav-0.85.1-r1.ebuild 3663
 MD5 921a56174bc3634808df37537d77ea1d clamav-0.85.1.ebuild 3326
-MD5 689c7676f16b3126b2c3f9271f7c2a1e clamav-0.85-r1.ebuild 3290
-MD5 7a832f77b721edd70e3aa547dc744a60 clamav-0.86.ebuild 3705
-MD5 555be94c15051e78533a8bf6063d42ff clamav-0.86.1.ebuild 3703
-MD5 1e521db4cbf6a3b5710d6b684ef48fa4 ChangeLog 17618
+MD5 34a649543043b4506c5ecdca94ddad41 clamav-0.85.ebuild 2314
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
-MD5 0bd0d31062475433335752e126830799 files/digest-clamav-0.85-r1 64
+MD5 08259cd388099f8d3d18c6e40f9d05ee clamav-0.86.1.ebuild 3704
 MD5 08f7b320461c04bbb88555e389c2e544 files/clamav-milter.README.gentoo 1124
-MD5 102cc388dbea3446ba249cfc2e80cff3 files/digest-clamav-0.85.1 66
-MD5 81f7f63e7cb877af7cb982e5a2d67677 files/digest-clamav-0.86.1 66
-MD5 0bd0d31062475433335752e126830799 files/digest-clamav-0.85 64
-MD5 f39518e9307018776f037f161e788d2a files/digest-clamav-0.86 64
-MD5 f6bf5b894e60e8686cb5a36ba240e1ef files/clamd.rc.new 2032
-MD5 102cc388dbea3446ba249cfc2e80cff3 files/digest-clamav-0.85.1-r1 66
 MD5 e29ee77ca9bfe28ed18dbf67a9c90e75 files/clamd.conf 193
 MD5 1b3268d3723e003ad99bf706e6bf4312 files/clamd.rc 1444
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvGlU2G5bA0cA/ScRAkCzAJ0VhVzhWu9gEzIJG8HZEeKKO6GuqgCg2HzM
-KdLoGkRgSZwVHbTPXCxOahU=
-=0+Tl
------END PGP SIGNATURE-----
+MD5 f6bf5b894e60e8686cb5a36ba240e1ef files/clamd.rc.new 2032
+MD5 f39518e9307018776f037f161e788d2a files/digest-clamav-0.86 64
+MD5 81f7f63e7cb877af7cb982e5a2d67677 files/digest-clamav-0.86.1 66
+MD5 0bd0d31062475433335752e126830799 files/digest-clamav-0.85 64
+MD5 0bd0d31062475433335752e126830799 files/digest-clamav-0.85-r1 64
+MD5 102cc388dbea3446ba249cfc2e80cff3 files/digest-clamav-0.85.1 66
+MD5 102cc388dbea3446ba249cfc2e80cff3 files/digest-clamav-0.85.1-r1 66
