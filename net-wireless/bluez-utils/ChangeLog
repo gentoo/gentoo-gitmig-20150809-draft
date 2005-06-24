@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.45 2005/06/17 20:35:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.46 2005/06/24 16:18:45 liquidx Exp $
+
+*bluez-utils-2.17-r1 (24 Jun 2005)
+
+  24 Jun 2005; Alastair Tse <liquidx@gentoo.org> bluez-utils-2.17.ebuild,
+  +bluez-utils-2.17-r1.ebuild:
+  fix localstatedir to point to /var/lib/bluetooth rather than
+  /var/lib/lib/bluetooth (#95990)
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   bluez-utils-2.16-r1.ebuild:
