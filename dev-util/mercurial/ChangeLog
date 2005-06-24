@@ -1,0 +1,15 @@
+# ChangeLog for dev-util/mercurial
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.1 2005/06/24 21:03:54 agriffis Exp $
+
+*mercurial-0.5b_p20050624 (24 Jun 2005)
+
+  24 Jun 2005; Aron Griffis <agriffis@gentoo.org> 
+  +mercurial-0.5b_p20050624.ebuild:
+  Update to most recent snapshot
+
+*mercurial-0.5b (24 Jun 2005)
+
+  24 Jun 2005; Aron Griffis <agriffis@gentoo.org> +mercurial-0.5b.ebuild:
+  First pass ebuild for mercurial
+

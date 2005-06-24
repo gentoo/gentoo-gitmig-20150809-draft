@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f5dc2524285458a100a31eac2e2a5929 mercurial-0.5b.ebuild 669
+MD5 b298dff3c276cb3fb37fd46e40ee550f mercurial-0.5b_p20050624.ebuild 931
+MD5 35c14d0062a190eeb345c4a9a6c61c60 ChangeLog 513
+MD5 a665f2675f13020037bd5fe782c1c546 metadata.xml 252
+MD5 1eb338d2ebc538172419b329e08bbc6b files/digest-mercurial-0.5b_p20050624 74
+MD5 749c2c2dfd3653ade54eed42c07cff3f files/digest-mercurial-0.5b 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvHVSBXaUFmZvwyMRAiQiAJ9C6Clf47sJQgDGRrwISoLLw6xuNgCgwoEZ
+pkc9tw8RpuuX4+niNDZC/Xo=
+=lu69
+-----END PGP SIGNATURE-----
