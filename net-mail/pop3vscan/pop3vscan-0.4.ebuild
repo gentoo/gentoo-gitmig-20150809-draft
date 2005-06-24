@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.15 2004/10/01 21:39:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.16 2005/06/24 22:49:18 agriffis Exp $
 
 DESCRIPTION="A transparent POP3-Proxy with virus-scanning capabilities."
 SRC_URI="mirror://sourceforge/pop3vscan/${P}.tar.gz"
@@ -35,15 +35,13 @@ src_install () {
 	doins ${FILESDIR}/pop3vscan
 	fperms 755 /etc/init.d/pop3vscan
 
+	dodir /var/spool/pop3vscan
+	fperms 700 /var/spool/pop3vscan
+
 	dodoc README
 }
 
 pkg_postinst() {
-	useradd -d /tmp -s /bin/false -g nogroup mail
-	dodir /var/spool/pop3vscan
-	fowners mail /var/spool/pop3vscan
-	fperms 700 /var/spool/pop3vscan
-
 	einfo "You need configure /etc/pop3vscan and /etc/pop3vscan.mail"
 	einfo "For start pop3vscan you can use /etc/init.d/pop3vscan start"
 	einfo "You need port-redirecting, a rule like:"
