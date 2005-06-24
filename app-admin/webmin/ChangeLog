@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.87 2005/06/19 23:29:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.88 2005/06/24 17:07:33 eradicator Exp $
+
+*webmin-1.210 (24 Jun 2005)
+
+  24 Jun 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/virtual-server-2.60-nocgibin.patch, webmin-1.200-r1.ebuild,
+  +webmin-1.210.ebuild:
+  Added pam use flag for pam dependency. Bumped webmin and virtualmin versions
+  for small feature additions and bugfixes. Fixes bugs #95670 and #96698.
 
 *webmin-1.200-r1 (19 Jun 2005)
 

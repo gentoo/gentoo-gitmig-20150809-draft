@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.200-r1.ebuild,v 1.2 2005/06/24 17:07:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.210.ebuild,v 1.1 2005/06/24 17:07:33 eradicator Exp $
 
 IUSE="apache2 pam postgres ssl webmin-minimal"
 
 inherit eutils pam
 
-VM_V="2.50"
+VM_V="2.60"
 
 DESCRIPTION="Webmin, a web-based system administration interface"
 HOMEPAGE="http://www.webmin.com/"
@@ -48,7 +48,7 @@ src_unpack() {
 		tar -xf ${T}/vs.tar
 
 		# Don't create ${HOME}/cgi-bin on new accounts
-		epatch ${FILESDIR}/virtual-server-2.31-nocgibin.patch
+		epatch ${FILESDIR}/virtual-server-2.60-nocgibin.patch
 
 		# Check if a newly added IP is already active
 		epatch ${FILESDIR}/virtual-server-2.31-checkip.patch
