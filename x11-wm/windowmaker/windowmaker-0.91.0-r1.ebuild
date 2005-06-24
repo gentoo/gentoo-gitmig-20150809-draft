@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.14 2005/06/23 22:53:01 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.15 2005/06/24 00:32:26 fafhrd Exp $
 
 inherit eutils gnustep-funcs
 
@@ -19,7 +19,8 @@ DEPEND="x11-base/xorg-x11
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.6.1-r2 )"
-RDEPEND="nls? ( >=sys-devel/gettext-0.10.39 )
+RDEPEND="${DEPEND}
+	nls? ( >=sys-devel/gettext-0.10.39 )
 	gnustep? ( gnustep-base/gnustep-env )"
 
 SLOT="0"
