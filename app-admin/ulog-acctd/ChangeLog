@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulog-acctd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ChangeLog,v 1.4 2005/06/05 11:28:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ChangeLog,v 1.5 2005/06/24 13:52:18 liquidx Exp $
+
+  24 Jun 2005; Alastair Tse <liquidx@gentoo.org> +files/init.d/ulog-acctd,
+  ulog-acctd-0.4.2.ebuild:
+  added init script. thanks to Radek Podgorny (#79034)
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   ulog-acctd-0.4.2.ebuild:

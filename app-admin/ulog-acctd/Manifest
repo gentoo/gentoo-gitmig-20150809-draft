@@ -1,5 +1,16 @@
-MD5 c9bc86829f595b725ebc1d0863f137fc ulog-acctd-0.4.2.ebuild 1326
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9fd343abce7001a64c850de93056585d ChangeLog 810
 MD5 d05a99e0cbeadebc1bcc73a8b0e31ad0 metadata.xml 223
-MD5 aab6800f7db7a59686f9d296818de8d6 ChangeLog 651
-MD5 cf07ec3e1da17f58e2a752d589393f03 files/ulog-acctd-0.4.2-gcc2.patch 546
+MD5 d4af4cf155b1b5710c0c13d3c4f8ed7c ulog-acctd-0.4.2.ebuild 1366
 MD5 2482235c9b2861a218595874d58bde76 files/digest-ulog-acctd-0.4.2 72
+MD5 cf07ec3e1da17f58e2a752d589393f03 files/ulog-acctd-0.4.2-gcc2.patch 546
+MD5 7c6e657d0cac0e03867e706d5480c515 files/init.d/ulog-acctd 476
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvBCeTM53OX+9xmMRAjcJAJ9AXLg9hQfZGUZerEOrkYV7zFixqACgrew3
+DvEmbY3m4kxzqHumsAwBn70=
+=V+Lj
+-----END PGP SIGNATURE-----

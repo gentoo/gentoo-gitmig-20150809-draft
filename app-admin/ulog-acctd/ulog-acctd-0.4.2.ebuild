@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.2.ebuild,v 1.5 2005/06/05 11:28:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.2.ebuild,v 1.6 2005/06/24 13:52:18 liquidx Exp $
 
 inherit eutils
 
@@ -47,6 +47,7 @@ src_install() {
 	dodoc contrib/ulog-acctd2mrtg/*
 
 	keepdir /var/log/ulog-acctd
+	doinitd ${FILESDIR}/init.d/ulog-acctd
 }
 
 pkg_postinst() {
