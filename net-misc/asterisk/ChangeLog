@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.59 2005/06/24 16:46:21 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.60 2005/06/24 16:49:19 stkn Exp $
+
+  24 Jun 2005; Stefan Knoblich <stkn@gentoo.org> -asterisk-1.0.5-r1.ebuild,
+  -asterisk-1.0.5.ebuild, -asterisk-1.0.6.ebuild, -asterisk-1.0.7.ebuild:
+  Removing old ebuilds without security update.
 
   24 Jun 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.5-r2.ebuild,
   asterisk-1.0.6-r1.ebuild:
