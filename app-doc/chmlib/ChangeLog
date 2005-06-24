@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/chmlib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.10 2005/01/01 13:05:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.11 2005/06/24 18:55:13 herbs Exp $
+
+  24 Jun 2005; Herbie Hopkins <herbs@gentoo.org> chmlib-0.35.ebuild:
+  Fixed multilib-strict issue, bug #96958
 
   19 Dec 2004; Jason Huebel <jhuebel@gentoo.org> chmlib-0.35.ebuild:
   stable on amd64

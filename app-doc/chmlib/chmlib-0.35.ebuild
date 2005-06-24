@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.35.ebuild,v 1.4 2005/01/01 13:05:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.35.ebuild,v 1.5 2005/06/24 18:55:13 herbs Exp $
+
+inherit multilib
 
 DESCRIPTION="Library for MS CHM (compressed html) file format plus extracting and http server utils"
 HOMEPAGE="http://66.93.236.84/~jedwin/projects/chmlib/"
@@ -17,7 +19,10 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -r "s,(\\\$\\{INSTALLPREFIX\\}),\${DESTDIR}\\1,g;s,@LIBTOOL@,libtool,g" Makefile.in
+	sed -i -r "s,(\\\$\\{INSTALLPREFIX\\}),\${DESTDIR}\\1,g;
+			s,@LIBTOOL@,libtool,g;
+			s,(\\\$\\{INSTALLPREFIX\\})/lib,\1/$(get_libdir),g" \
+			Makefile.in || die "sed failed"
 	econf || die "econf failed"
 #	sed -i "s:gcc-3.2:gcc:" Makefile
 #	sed -i "s:/usr/local/:/${D}/usr/:" Makefile
@@ -38,7 +43,7 @@ src_compile() {
 src_install() {
 	#Make expects to find these dirs.
 	dodir /usr/bin
-	dodir /usr/lib
+	dodir /usr/$(get_libdir)
 	dodir /usr/include
 	dodir /usr/share/doc/${PF}/examples/
 

@@ -1,10 +1,20 @@
-MD5 c4e0f380b27feed3d6ffa57f434f08b6 ChangeLog 1289
-MD5 f30eb2324e15841bcb8d7596bcab1df1 chmlib-0.31.ebuild 1473
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2095c8fbff91172458e40a3c7f4c35c4 chmlib-0.32.ebuild 1676
+MD5 f30eb2324e15841bcb8d7596bcab1df1 chmlib-0.31.ebuild 1473
 MD5 7912dfce57aa45cc73b72fb4c81d5e27 chmlib-0.33.ebuild 1676
-MD5 88ddc0014e63d38e2c5bdb5a9fea6cac chmlib-0.35.ebuild 1676
+MD5 fa6c5694a640524a7ae25445fe5ce11f ChangeLog 1396
 MD5 a5f4a4a8acdf2c295bdb3bc50b4e0d86 metadata.xml 254
+MD5 3841b3d02541fc293ef1f6a1b42925b5 chmlib-0.35.ebuild 1783
 MD5 5e241d7b61c20016a54f95cc7538c41c files/digest-chmlib-0.31 59
 MD5 79e2ad3061c14b4285f578bc09190b55 files/digest-chmlib-0.32 60
 MD5 d946aa58575a98474e1d1f8c01195a6e files/digest-chmlib-0.33 60
 MD5 5f72df9f154b0843fcc8986396d9e476 files/digest-chmlib-0.35 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvFc62G5bA0cA/ScRAoiEAKDBqHkqH7uvK0lDrB4fc2R8aGAgdQCfRD3b
+13r2BluzYqHLtODlfZ0Trf0=
+=g8an
+-----END PGP SIGNATURE-----
