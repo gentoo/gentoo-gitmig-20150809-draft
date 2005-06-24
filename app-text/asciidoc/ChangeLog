@@ -1,6 +1,9 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.4 2005/06/13 16:48:47 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.5 2005/06/24 21:02:45 agriffis Exp $
+
+  24 Jun 2005; Aron Griffis <agriffis@gentoo.org> asciidoc-6.0.3-r1.ebuild:
+  marked ~ia64 as a mercurial dep
 
   13 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> asciidoc-6.0.3.ebuild,
   asciidoc-6.0.3-r1.ebuild:
