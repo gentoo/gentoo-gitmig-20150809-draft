@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.40 2005/06/23 08:03:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.41 2005/06/24 05:58:58 mr_bones_ Exp $
+
+  24 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org> -mp-3.1.9.ebuild,
+  -mp-3.2.10.ebuild, -mp-3.3.1.ebuild, -mp-3.3.9.ebuild, -mp-3.3.10.ebuild,
+  -mp-3.3.11.ebuild:
+  clean old versions
 
 *mp-3.3.14 (23 Jun 2005)
 
