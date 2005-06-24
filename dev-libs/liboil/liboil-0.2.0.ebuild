@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.2.0.ebuild,v 1.5 2005/06/08 15:38:58 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.2.0.ebuild,v 1.6 2005/06/24 09:11:47 zaheerm Exp $
 
 inherit eutils
 DESCRIPTION="Liboil is a library of simple functions that are optimized for various CPUs."
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.schleef.org/liboil/"
 SRC_URI="http://www.schleef.org/${PN}/download/${P}.tar.gz"
 
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="0.2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 #RESTRICT="nostrip"
