@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.5b_p20050624.ebuild,v 1.1 2005/06/24 21:03:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.5b_p20050624.ebuild,v 1.2 2005/06/24 21:41:23 agriffis Exp $
 
 inherit distutils
 
@@ -16,18 +16,24 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.3
-	app-text/asciidoc
-	app-text/xmlto"
+DEPEND=">=dev-lang/python-2.3"
+if [[ $MY_PV != $PV ]]; then
+	DEPEND="${DEPEND}
+		app-text/asciidoc
+		app-text/xmlto"
+fi
 
 src_compile() {
 	distutils_src_compile
-	local x
-	cd doc
-	for x in *.?.txt; do
-		asciidoc -d manpage -b docbook $x || die
-		xmlto man ${x%txt}xml || die
-	done
+	if [[ $MY_PV != $PV ]]; then
+		cd doc
+		local x
+		for x in *.?.txt; do
+			asciidoc -d manpage -b docbook $x || die
+			xmlto man ${x%txt}xml || die
+			sed -nie '/./p' ${x%.*} || die
+		done
+	fi
 }
 
 src_install() {
