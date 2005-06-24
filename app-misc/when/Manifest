@@ -1,6 +1,16 @@
-MD5 6b4052773d7423aab2550a1159dda1e1 when-1.0.23.ebuild 724
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 23251e2939ab06b0faedcc9da8b563f5 when-1.0.23.ebuild 733
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 4b93ec6e0971325e3b991c6ce36e8ecf ChangeLog 1915
+MD5 691ed65c87d5cf3f7eec5ade1cc10c65 ChangeLog 2004
 MD5 5666efe9416ecb0d53694d020fb1fdb6 when-1.0.20.ebuild 728
-MD5 e96caf8ddb5a1924a0ea862b98f130fd files/digest-when-1.0.20 62
 MD5 b8c97a8b7c42704c9a0efbb60eab989c files/digest-when-1.0.23 62
+MD5 e96caf8ddb5a1924a0ea862b98f130fd files/digest-when-1.0.20 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCvBV5KRy60XGEcJIRApuLAJ95T3EDvh6JFlVrtZKTw6N6GtsKZgCeIlN+
+/5PbwXN/xxM7zfRvU3s9TjI=
+=rIDn
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.14 2005/04/24 11:25:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.15 2005/06/24 14:15:33 gustavoz Exp $
+
+  24 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> when-1.0.23.ebuild:
+  To ~sparc
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> when-1.0.23.ebuild:
   Stable on ppc.
