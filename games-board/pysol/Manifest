@@ -3,12 +3,15 @@ Hash: SHA1
 
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 2ed9f5b51fdbd06e6ebca139b3068076 pysol-4.82.ebuild 1009
-MD5 e2d558ab9e16f03098cfc8fca36c10bf ChangeLog 1140
+MD5 fbcf1c28e8174d96a93e5eda256240ab pysol-4.82-r1.ebuild 1273
+MD5 cc92bbc17e8d3cf9c712ec0f3d8de975 ChangeLog 1378
+MD5 1ea7842520bd2765105663127826d162 files/digest-pysol-4.82-r1 131
+MD5 3f8caa1bf12625ec007855239ce99176 files/pysol-4.82-sound-ok.patch 635
 MD5 64d3e8b76a0ed236cf4a0fdb4a3e4b50 files/digest-pysol-4.82 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCu1JXgIKl8Uu19MoRAg+zAKCDiu2alJDTpk8qVeDQPWaCb9aj9ACePoGD
-0//k6CXOxxaOC0W3pRyxB40=
-=me08
+iD4DBQFCu1wagIKl8Uu19MoRAgd/AJi7zCG8tM2jOE+O+GG0g2JcUAXjAJ4/inNS
+d6YN7MRmGoXdfYpF0Pg3WQ==
+=rpkl
 -----END PGP SIGNATURE-----

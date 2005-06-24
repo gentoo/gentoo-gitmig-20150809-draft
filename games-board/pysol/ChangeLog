@@ -1,6 +1,13 @@
 # ChangeLog for games-board/pysol
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.6 2005/06/15 18:31:16 wolf31o2 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.7 2005/06/24 01:04:09 vapier Exp $
+
+*pysol-4.82-r1 (24 Jun 2005)
+
+  24 Jun 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/pysol-4.82-sound-ok.patch, +pysol-4.82-r1.ebuild:
+  Install the source to fix #81176 by David Ripton and fix an assert error
+  #94234 by Mark Knecht.
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> pysol-4.82.ebuild:
   Removed INSTALL file.
