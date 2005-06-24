@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.15.ebuild,v 1.1 2005/01/25 18:07:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.15.ebuild,v 1.2 2005/06/24 22:42:19 agriffis Exp $
 
 inherit eutils
 
@@ -49,12 +49,12 @@ src_install() {
 
 	newinitd "${FILESDIR}/perdition.initd" perdition
 	insinto /etc/conf.d; newins "${FILESDIR}/perdition.confd" perdition
+
+	keepdir /var/run/perdition
 }
 
 pkg_preinst() {
 	einfo "Checking for user perdition, creating if missing"
 	enewuser perdition
-
-	keepdir /var/run/perdition
-	fowners perdition /var/run/perdition
+	chown perdition ${IMAGE}/var/run/perdition
 }
