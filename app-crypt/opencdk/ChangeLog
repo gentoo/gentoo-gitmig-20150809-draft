@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.41 2005/06/06 18:59:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.42 2005/06/24 15:10:06 liquidx Exp $
+
+*opencdk-0.5.7 (24 Jun 2005)
+
+  24 Jun 2005; Alastair Tse <liquidx@gentoo.org> -opencdk-0.4.5.ebuild,
+  -opencdk-0.5.1.ebuild, -opencdk-0.5.3.ebuild, +opencdk-0.5.7.ebuild:
+  version bump for g/fsd. fix einstall (#95679) (#72012)
 
   06 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> opencdk-0.5.5.ebuild:
   Marked ~s390.
