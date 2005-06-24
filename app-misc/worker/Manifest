@@ -1,6 +1,16 @@
-MD5 2d4ad713a40a637f628a0316717696fc worker-2.10.0.ebuild 667
-MD5 bb8744760edb53f8cbaf2e23f4a937dc worker-2.9.0.ebuild 659
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fe4d95871dac9e7b60276474dd915445 metadata.xml 612
-MD5 09c6674650ba21c583d17090fba73a1c ChangeLog 2906
-MD5 d5b65cc3ffe5502cd4a641ec59e9280b files/digest-worker-2.10.0 66
+MD5 92e96545a26c0146882ac08ea238a395 ChangeLog 3002
+MD5 2d4ad713a40a637f628a0316717696fc worker-2.10.0.ebuild 667
+MD5 f965e76ca96f45199d699d6282e2a43b worker-2.9.0.ebuild 660
 MD5 e16e9e52efcded230287ff0f3e9c0517 files/digest-worker-2.9.0 65
+MD5 d5b65cc3ffe5502cd4a641ec59e9280b files/digest-worker-2.10.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCvBjjKRy60XGEcJIRAlM0AJ0T6qpvalNNfKR731AM2+vIrgzQcwCgjXP0
+gv6vx28+NaGrJye+uhnBQZI=
+=qFHQ
+-----END PGP SIGNATURE-----
