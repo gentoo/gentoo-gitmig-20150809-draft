@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.4-r1.ebuild,v 1.1 2005/06/23 10:30:37 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.4-r1.ebuild,v 1.2 2005/06/24 07:44:20 lcars Exp $
 
 inherit eutils mailer
 
@@ -125,6 +125,9 @@ src_install () {
 	fi
 	m4 ${D}/usr/share/sendmail-cf/m4/cf.m4 ${D}/etc/mail/sendmail.mc \
 		> ${D}/etc/mail/sendmail.cf
+	echo "include(\`/usr/share/sendmail-cf/m4/cf.m4')dnl" \
+		> ${D}/etc/mail/submit.mc
+	cat ${D}/usr/share/sendmail-cf/cf/submit.mc >> ${D}/etc/mail/submit.mc
 	echo "# local-host-names - include all aliases for your machine here" \
 		> ${D}/etc/mail/local-host-names
 	cat <<- EOF > ${D}/etc/mail/trusted-users
