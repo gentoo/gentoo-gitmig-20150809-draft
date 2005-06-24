@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/realtime-lsm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.7 2005/03/14 16:53:20 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.8 2005/06/24 04:26:41 fafhrd Exp $
+
+*realtime-lsm-0.8.5-r2 (24 Jun 2005)
+
+  24 Jun 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  +files/realtime-lsm-0.8.5-allcaps.patch, +realtime-lsm-0.8.5-r2.ebuild:
+  added 0.8.5-r2 which re-adds the 'allcaps' module param; package masked for
+  now, until I can prove this isn't a security issue
 
   14 Mar 2005; Eric Shattow <jnc@gentoo.org> metadata.xml,
   realtime-lsm-0.8.5-r1.ebuild:
