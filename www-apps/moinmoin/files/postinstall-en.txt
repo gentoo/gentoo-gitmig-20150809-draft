@@ -4,7 +4,7 @@ You are almost done!
 1. ExecCGI needs to be enabled in your Moinmoin directory. You con do this by
 simply
 # echo "Options ExecCGI" > ${MY_INSTALLDIR}/.htaccess
-# echo "AddHandler cgi-script .cgi" > ${MY_INSTALLDIR}/.htaccess
+# echo "AddHandler cgi-script .cgi" >> ${MY_INSTALLDIR}/.htaccess
 
 2. Add the following lines to your Apache configs:
 Alias /wiki "${MY_INSTALLDIR}"

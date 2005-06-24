@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.7 2005/03/10 21:22:44 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.8 2005/06/24 10:12:57 trapni Exp $
+
+  24 Jun 2005; Christian Parpart <trapni@gentoo.org>
+  files/postinstall-en.txt:
+  little typofix in postinst-en.txt
 
   10 Mar 2005; Grant Goodyear <g2boojum@gentoo.org>
   files/postinstall-en.txt:
