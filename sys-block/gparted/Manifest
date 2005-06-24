@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07b2c346c99136f83ed7d8fe0a2403aa ChangeLog 464
-MD5 ade0dfd43f839382159b0005efb5369a files/digest-gparted-0.0.8 66
-MD5 15ddc7534992463a12d0b478382f8af3 gparted-0.0.8.ebuild 743
+MD5 907b76370e0cf1bfd8e11af0c54fba1d ChangeLog 546
+MD5 1a3ffd0b3adf400868e15eddf80c1116 gparted-0.0.8.ebuild 745
 MD5 81476cef2aa1a3dee591c798fbdbe91c metadata.xml 409
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCuw5sI1lqEGTUzyQRAs7+AJ9W01oRVWlXxSI2ucpJZDRYkrC8XQCfQKmL
-WXsZkvEt31p+kBkiEzAq6so=
-=t/Yn
------END PGP SIGNATURE-----
+MD5 ade0dfd43f839382159b0005efb5369a files/digest-gparted-0.0.8 66
