@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.28 2005/06/05 06:46:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.29 2005/06/24 14:10:36 josejx Exp $
+
+  24 Jun 2005; Joseph Jezak <josejx@gentoo.org> rosegarden-4.1.0-r1.ebuild:
+  Marked ppc stable for bug #96462.
 
   05 Jun 2005; Joseph Jezak <josejx@gentoo.org> rosegarden-4.0.9.8.ebuild:
   Marked ppc stable.
