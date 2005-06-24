@@ -1,8 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.91 2005/06/24 21:44:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.92 2005/06/24 22:00:01 killerfox Exp $
 
-  24 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> clamav-0.86.1.ebuild:
+  24 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> clamav-0.86.1.ebuild:
+  Stable on hppa. bug #96960
+
+  24 Jun 2005; Bryan Ãstergaard <kloeri@gentoo.org> clamav-0.86.1.ebuild:
   Stable on alpha, bug 96960.
 
   24 Jun 2005; Markus Rothe <corsair@gentoo.org> clamav-0.86.1.ebuild:
@@ -139,7 +142,7 @@
   Version bump. Closes bug #90958, reported by djfunk <djfunk@free.fr>. Old
   ebuild cleanup (yay!). Use newinitd and newconfd in ebuilds.
 
-  22 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> clamav-0.84_rc1.ebuild:
+  22 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> clamav-0.84_rc1.ebuild:
   Add ~ia64 keyword.
 
   08 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> :
@@ -155,7 +158,7 @@
   27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> clamav-0.83.ebuild:
   Stable on ppc.
 
-  20 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> clamav-0.83.ebuild:
+  20 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> clamav-0.83.ebuild:
   Stable on alpha.
 
   13 Mar 2005; Guy Martin <gmsoft@gentoo.org> clamav-0.83.ebuild:
@@ -215,7 +218,7 @@
   06 Feb 2005; Markus Rothe <corsair@gentoo.org> clamav-0.80.ebuild:
   Stable on ppc64
 
-  30 Jan 2005; Bryan Ăstergaard <kloeri@gentoo.org> clamav-0.81.ebuild:
+  30 Jan 2005; Bryan ÄÂstergaard <kloeri@gentoo.org> clamav-0.81.ebuild:
   Stable on alpha, bug 78656.
 
   28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> clamav-0.81.ebuild:
@@ -265,7 +268,7 @@
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
 
-  11 Dec 2004; Bryan ÄÂstergaard <kloeri@gentoo.org> clamav-0.80.ebuild:
+  11 Dec 2004; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> clamav-0.80.ebuild:
   ~alpha keyword.
 
   30 Nov 2004; Guy Martin <gmsoft@gentoo.org> clamav-0.80.ebuild:
@@ -375,7 +378,7 @@
   04 May 2004; Luca Barbato <lu_zero@gentoo.org> clamav-0.70.ebuild:
   Marked ppc
 
-  30 Apr 2004; Bryan ÄÂstergaard <kloeri@gentoo.org> clamav-0.70.ebuild:
+  30 Apr 2004; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> clamav-0.70.ebuild:
   Stable on alpha.
 
   29 Apr 2004; Jason Wever <weeve@gentoo.org> clamav-0.70.ebuild:
