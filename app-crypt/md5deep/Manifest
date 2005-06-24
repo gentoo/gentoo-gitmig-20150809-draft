@@ -2,18 +2,18 @@
 Hash: SHA1
 
 MD5 f4c54d871957d04e4ceaa26833f298ec ChangeLog 1527
-MD5 959e1c3a43dc10d79ab9092650d52229 md5deep-1.2.ebuild 660
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 679fcffa6212e37a00d2cbacefc04bd3 md5deep-1.5.ebuild 692
-MD5 f623fae10d206e46e1f2469a7f0def88 md5deep-1.5-r1.ebuild 808
 MD5 bc30d9148d8e1893b83f6647dddaefe2 files/digest-md5deep-1.2 62
-MD5 1ebf78ad61dc5647440e0a66a9a85bb1 files/md5deep-0.16-gentoo.diff 35
 MD5 7e67a84d4478da9c787c3010a611f5d0 files/digest-md5deep-1.5 62
 MD5 7e67a84d4478da9c787c3010a611f5d0 files/digest-md5deep-1.5-r1 62
+MD5 1ebf78ad61dc5647440e0a66a9a85bb1 files/md5deep-0.16-gentoo.diff 35
+MD5 959e1c3a43dc10d79ab9092650d52229 md5deep-1.2.ebuild 660
+MD5 78577ba42035120612a2892b8ec05362 md5deep-1.5-r1.ebuild 806
+MD5 679fcffa6212e37a00d2cbacefc04bd3 md5deep-1.5.ebuild 692
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCvA6oTM53OX+9xmMRAlgmAKClXo5rQaX1BehxjR8RBjp7n3aZUQCeOYAy
-zzugmdUjWEarhfFhJBltKos=
-=YnIq
+iD8DBQFCvCRwI1lqEGTUzyQRAtOuAJ4oTw0mHa3FHqjXgqX6JJKS6j0/NQCfQ4TX
+7H3mXBU8xdO7AclpEat8o6Q=
+=Artr
 -----END PGP SIGNATURE-----
