@@ -1,11 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.86 2005/04/28 20:06:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.87 2005/06/24 22:06:19 vapier Exp $
 
 ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
-
-IUSE="debug"
 
 # need access to emktemp()
 inherit eutils toolchain-funcs multilib
@@ -81,25 +79,20 @@ setup-allowed-flags() {
 	if [[ -z ${ALLOWED_FLAGS} ]] ; then
 		export ALLOWED_FLAGS="-pipe"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -O -O0 -O1 -O2 -mcpu -march -mtune"
-		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fstack-protector -fno-stack-protector"
+		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fstack-protector -fstack-protector-all"
+		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fbounds-checking -fno-bounds-checking"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-pie -fno-unit-at-a-time"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -g -g0 -g1 -g2 -g3 -ggdb -ggdb0 -ggdb1 -ggdb2 -ggdb3"
-		case $(tc-arch) in
-			mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mips32 -mips64 -mips16 -EL -EB -mabi" ;;
-			amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC -m64" ;;
-			x86)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -m32" ;;
-			alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
-			ia64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
-			sparc)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -m32 -m64" ;;
-			ppc)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mabi" ;;
-		esac
 	fi
 	# allow a bunch of flags that negate features / control ABI
 	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-stack-protector -fno-stack-protector-all"
-	case $(tc-arch) in
-		x86|amd64|ia64) ALLOWED_FLAGS="${ALLOWED_FLAGS} -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow" ;;
-	esac
-	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mregparm -mno-app-regs -mapp-regs -msoft-float -mflat -mno-faster-structs -mfaster-structs -mlittle-endian -mbig-endian -mlive-g0 -mcmodel -mno-stack-bias -mstack-bias"
+	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mregparm -mno-app-regs -mapp-regs \
+		-mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow \
+		-mips1 -mips2 -mips3 -mips4 -mips32 -mips64 -mips16 \
+		-msoft-float -mno-soft-float -mhard-float -mno-hard-float -mfpu \
+		-mflat -mno-flat -mno-faster-structs -mfaster-structs \
+		-m32 -m64 -mabi -mlittle-endian -mbig-endian -EL -EB -fPIC \
+		-mlive-g0 -mcmodel -mstack-bias -mno-stack-bias"
 
 	# C[XX]FLAGS that we are think is ok, but needs testing
 	# NOTE:  currently -Os have issues with gcc3 and K6* arch's
@@ -237,7 +230,6 @@ strip-flags() {
 
 	# Allow unstable C[XX]FLAGS if we are using unstable profile ...
 	if has ~$(tc-arch) ${ACCEPT_KEYWORDS} ; then
-		use debug && einfo "Enabling the use of some unstable flags"
 		ALLOWED_FLAGS="${ALLOWED_FLAGS} ${UNSTABLE_FLAGS}"
 	fi
 
