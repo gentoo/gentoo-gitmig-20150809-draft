@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_p1.ebuild,v 1.1 2005/06/24 12:45:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_p1.ebuild,v 1.2 2005/06/24 16:13:10 agriffis Exp $
 
 inherit bash-completion toolchain-funcs
 
@@ -41,11 +41,12 @@ src_install() {
 	use doc && dohtml doc/*
 
 	keepdir /var/lib/herdstat
-	fowners root:portage /var/lib/herdstat
 	fperms 0775 /var/lib/herdstat
 }
 
 pkg_postinst() {
+	chgrp portage ${ROOT}/var/lib/herdstat
+
 	# remove any previous caches, as it's possible that the internal
 	# format has changed, and may cause bugs.
 	rm -f ${ROOT}var/lib/herdstat/*cache*
