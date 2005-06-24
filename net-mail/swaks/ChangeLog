@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/swaks
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.5 2005/06/23 23:11:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.6 2005/06/24 11:23:56 dholm Exp $
+
+  24 Jun 2005; David Holm <dholm@gentoo.org> swaks-20050605.3.ebuild:
+  Added to ~ppc.
 
 *swaks-20050605.3 (23 Jun 2005)
 

@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 92ec1e71ede80f8a83ce4fd2d565b061 ChangeLog 931
 MD5 25822404d543970f374c03c190602347 metadata.xml 217
-MD5 16cd266216c2f9bb9d5dbcb736451f07 pcalc-1.0.0-r1.ebuild 1120
 MD5 050e9516a42e9449715ec6231865ed4a pcalc-1.0.0.ebuild 703
-MD5 aa9fc05b6c68170d3f7c898afdc03175 ChangeLog 846
+MD5 91eaf8879ca377e3e95e314d9afb00ed pcalc-1.0.0-r1.ebuild 1124
+MD5 ca434e3472d0fc8b9da24dc053a7929f files/digest-pcalc-1.0.0 61
 MD5 ca434e3472d0fc8b9da24dc053a7929f files/digest-pcalc-1.0.0-r1 61
 MD5 e36de7ac01ab409f77bf06a356099b38 files/pcalc-1.0.0-duplicated-case.patch 653
-MD5 127ca758677a0ee0e12a564d390f1de6 files/pcalc-1.0.0-string-overflow-checks.patch 935
-MD5 44100658fc8c1627d8d7833fa95ad814 files/pcalc-1.0.0-static-vars.patch 1118
-MD5 ca434e3472d0fc8b9da24dc053a7929f files/digest-pcalc-1.0.0 61
-MD5 800c5fe897cd8901c8b5671fcb17b11f files/pcalc-1.0.0-usage.patch 785
-MD5 37048896f8eadea6e20d6d4ba67c2d5f files/pcalc-1.0.0-operator-updates.patch 3712
 MD5 b6ec72ff82cd4a5d80a40e5f8ccc6d67 files/pcalc-1.0.0-error-handler.patch 746
 MD5 4d66ff33f60981fcadd27d915a6c0c7f files/pcalc-1.0.0-input-overflow-check.patch 974
+MD5 37048896f8eadea6e20d6d4ba67c2d5f files/pcalc-1.0.0-operator-updates.patch 3712
+MD5 44100658fc8c1627d8d7833fa95ad814 files/pcalc-1.0.0-static-vars.patch 1118
+MD5 127ca758677a0ee0e12a564d390f1de6 files/pcalc-1.0.0-string-overflow-checks.patch 935
 MD5 868aa5ef1f69bce9df43d429023026d9 files/pcalc-1.0.0-tmpfile.patch 1946
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCuztOgIKl8Uu19MoRAsn2AJ47lzlCSI37zvHknQI+Rov02o6wGQCeOUUY
-ubWUpRUSInK1NR8kZTx9tnQ=
-=C/ZU
------END PGP SIGNATURE-----
+MD5 800c5fe897cd8901c8b5671fcb17b11f files/pcalc-1.0.0-usage.patch 785
