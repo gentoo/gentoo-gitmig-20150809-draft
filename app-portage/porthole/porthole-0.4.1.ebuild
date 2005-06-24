@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.4.1.ebuild,v 1.5 2005/06/24 16:16:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.4.1.ebuild,v 1.6 2005/06/24 17:38:21 agriffis Exp $
 
 inherit distutils
 
@@ -46,6 +46,6 @@ src_install() {
 	fperms g+w /var/log/porthole
 }
 
-pkg_postinst() {
-	chgrp portage ${ROOT}/var/log/porthole
+pkg_preinst() {
+	chgrp portage ${IMAGE}/var/log/porthole
 }

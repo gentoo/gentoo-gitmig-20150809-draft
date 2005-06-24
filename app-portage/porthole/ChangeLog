@@ -1,10 +1,11 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.19 2005/06/24 16:16:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.20 2005/06/24 17:38:21 agriffis Exp $
 
   24 Jun 2005; Aron Griffis <agriffis@gentoo.org> porthole-0.4.1.ebuild:
-  fowners root:portage in src_install doesn't work. Use chgrp in pkg_postinst
-  instead. Clean up pkg_setup and spacing in DEPEND
+  fowners root:portage in src_install doesn't work, and you can't use functions
+  in pkg_* that refer to ${D}.  Use chgrp in pkg_preinst instead. Clean up
+  pkg_setup and spacing in DEPEND
 
   08 Dec 2004; Marius Mauch <genone@gentoo.org> -porthole-0.3.1.ebuild:
   removing 0.3.1 as it's reported to break with portage-2.0.51
