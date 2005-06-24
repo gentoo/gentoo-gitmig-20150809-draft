@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fc8fe30dcb1183b2f014f3c7906d3c46 emerge-delta-webrsync-3.3.ebuild 836
-MD5 f8be9ffd1aee8119d6fc8de518430b10 emerge-delta-webrsync-3.2.ebuild 810
-MD5 4ec78f27b96e0e7cd941a67b3df34147 ChangeLog 2125
+MD5 5243aca4d8c1d9ee6bb7fd1498258aca emerge-delta-webrsync-3.3.ebuild 836
+MD5 f9a7e4f5d59737a754d9fbe170d85af8 emerge-delta-webrsync-3.2.ebuild 810
+MD5 6bb8cdfb9579d22dffc47f1a5cd3b87c ChangeLog 2124
 MD5 d8cb2e08f3abe02ae022cb88ecea6578 metadata.xml 276
 MD5 2a5f3e86b62e391461b2f559a6872819 files/v3-full-fix.patch 326
 MD5 9201ad3bbb8ca7e4f59d46baa8f0be8c files/digest-emerge-delta-webrsync-3.2 69
 MD5 fa89493cbc412db19c934ef89a6645ef files/digest-emerge-delta-webrsync-3.3 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvC+EBXaUFmZvwyMRAof2AKDRuVvv2FJhdYsKxC1UTYx9AbFWrACfaQ/4
-jbUKF6Cpzsyw4qKvFL4qHRY=
-=sBVt
------END PGP SIGNATURE-----
