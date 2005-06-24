@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.42.ebuild,v 1.1 2004/07/21 02:22:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.42.ebuild,v 1.2 2005/06/24 06:08:33 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -11,35 +11,35 @@ SRC_URI="mirror://sourceforge/doomlegacy/legacy_${PV/.}_src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
-IUSE="sdl X dga esd"
+KEYWORDS="ppc x86"
+IUSE="X dga esd" #sdl - broken with recent sdl-mixer releases
 
 RDEPEND="
 	virtual/opengl
 	virtual/x11
-	esd? ( media-sound/esound )
-	sdl? (
-		media-libs/libsdl
-		media-libs/sdl-mixer
-	)"
+	esd? ( media-sound/esound )"
+	# broken with recent sdl-mixer releases
+	#sdl? (
+		#media-libs/libsdl
+		#media-libs/sdl-mixer
+	#)"
 DEPEND="${RDEPEND}
-	x86? ( >=dev-lang/nasm-0.98 )
-	>=sys-apps/sed-4"
+	x86? ( >=dev-lang/nasm-0.98 )"
 
 S=${WORKDIR}/doomlegacy_${PV/.}_src
 
 src_unpack() {
 	unpack ${A}
 	mkdir bin
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-errno.patch
-	epatch ${FILESDIR}/${PV}-makefile.patch
-	epatch ${FILESDIR}/${PV}-sdl-gentoo-paths.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-errno.patch
+	epatch "${FILESDIR}"/${PV}-makefile.patch
+	epatch "${FILESDIR}"/${PV}-sdl-gentoo-paths.patch
 
 	# disable logfile writing
 	sed -i \
 		-e 's:#define LOGMESSAGES::' doomdef.h \
-		|| die 'sed doomdef.h failed'
+		|| die 'sed failed'
 
 	# make sure the games can find the wads/data files
 	sed -i \
@@ -47,13 +47,13 @@ src_unpack() {
 		linux_x/i_system.c || die "sed linux_x/i_system.c failed"
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/doom-data:" \
-		sdl/i_system.c || die "sed sdl/i_system.c failed"
+		sdl/i_system.c || die "sed failed"
 
 	# move opengl lib file because it's not useful to anyone else
 	sed -i \
 		-e "s:\"r_opengl:\"${GAMES_LIBDIR}/${PN}/r_opengl:" \
 		linux_x/i_video_xshm.c \
-		|| die "sed linux_x/i_video_xshm.c failed"
+		|| die "sed failed"
 
 	cd linux_x/musserv
 	make -f Makefile.linux clean
@@ -61,16 +61,17 @@ src_unpack() {
 
 src_compile() {
 	# this is ugly but it's late (here) and it works
-	local makeopts=""
-	local interfaces=""
-	use sdl && interfaces="${interfaces} SDL"
+	local makeopts i interfaces
+
+	# broken with recent sdl-mixer releases
+	#use sdl && interfaces="${interfaces} SDL"
 	use X && interfaces="${interfaces} X"
 	[ -z "${interfaces}" ] && interfaces="X"
-	mkdir ${WORKDIR}/my-bins
+	mkdir "${WORKDIR}"/my-bins
 	for i in ${interfaces} ; do
 		case ${i} in
 			SDL)
-				makeopts="SDL=1";;
+				makeopts="LINUX=1 SDL=1 HAVE_MIXER=1" ;;
 			X)
 				makeopts="LINUX=1 X=1"
 				use x86 && makeopts="${makeopts} USEASM=1"
@@ -79,11 +80,11 @@ src_compile() {
 		esac
 		emake EXTRAOPTS="${CFLAGS}" ${makeopts} || die "build failed"
 		mv \
-			${WORKDIR}/bin/* \
+			"${WORKDIR}"/bin/* \
 			linux_x/musserv/linux/musserver \
 			linux_x/sndserv/linux/llsndserv \
-			${WORKDIR}/my-bins/
-		rm ${WORKDIR}/objs/*
+			"${WORKDIR}"/my-bins/
+		rm "${WORKDIR}"/objs/*
 	done
 }
 
@@ -92,14 +93,14 @@ src_install() {
 	rm _doc/*.html
 	dodoc _doc/*
 
-	cd ${WORKDIR}
-	exeinto ${GAMES_LIBDIR}/${PN}
-	doexe my-bins/r_opengl.so
+	cd "${WORKDIR}"
+	exeinto "${GAMES_LIBDIR}/${PN}"
+	doexe my-bins/r_opengl.so || die "doexe failed"
 	rm my-bins/r_opengl.so
-	dogamesbin my-bins/*
+	dogamesbin my-bins/* || die "dogamesbin failed"
 
-	insinto ${GAMES_DATADIR}/doom-data
-	newins legacy-${PV}.dat legacy.dat || die
+	insinto "${GAMES_DATADIR}/doom-data"
+	newins legacy-${PV}.dat legacy.dat || die "newins failed"
 
 	prepgamesdirs
 }
