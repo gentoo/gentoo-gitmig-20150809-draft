@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20050504.ebuild,v 1.1 2005/05/05 00:12:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20050504-r1.ebuild,v 1.1 2005/06/24 06:57:26 eradicator Exp $
 
 inherit eutils gnuconfig
 
