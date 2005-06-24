@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/embassy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.9 2005/05/13 03:07:00 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.10 2005/06/24 14:39:25 josejx Exp $
+
+  24 Jun 2005; Joseph Jezak <josejx@gentoo.org> embassy-2.10.0.ebuild:
+  Marked ppc stable.
 
   13 May 2005; Olivier Fisette <ribosome@gentoo.org> embassy-2.10.0.ebuild:
   Added to x86.
