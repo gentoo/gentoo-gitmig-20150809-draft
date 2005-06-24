@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r1.ebuild,v 1.1 2005/06/24 01:04:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r1.ebuild,v 1.2 2005/06/24 21:33:53 vapier Exp $
 
 inherit games python eutils
 
@@ -43,6 +43,8 @@ src_install() {
 
 	doman pysol.6
 	dodoc NEWS README
+
+	prepgamesdirs
 }
 
 pkg_postinst() {
