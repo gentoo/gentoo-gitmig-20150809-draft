@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.1.ebuild,v 1.2 2005/06/22 20:14:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.1.ebuild,v 1.3 2005/06/24 20:30:51 gustavoz Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 sparc ~x86"
 IUSE="krb4 static tcltk ipv6 doc tetex"
 
 RDEPEND="virtual/libc
@@ -113,4 +113,11 @@ pkg_postinst() {
 	einfo "The client apps are installed with the mit- prefix"
 	einfo "(ie. mit-ftp, mit-ftpd, mit-telnet, mit-telnetd, etc...)"
 	echo ""
+	einfo "This release of mit-krb5 now depends on an external version"
+	einfo "of the com_err library.  Please make sure to run revdep-rebuild"
+	einfo "to ensure the integrity of the linking on your system"
+	echo ""
+	epause 10
+	ebeep
+
 }
