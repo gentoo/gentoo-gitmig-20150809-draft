@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.8 2005/05/19 22:27:24 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.9 2005/06/24 14:44:11 gustavoz Exp $
+
+  24 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> git-0.7.ebuild:
+  To ~sparc
 
   19 May 2005; Carlos Silva <r3pek@gentoo.org> git-0.7.ebuild:
   Adding net-misc/curl as a dep. Thanks to Priit Laes in bug #93247
