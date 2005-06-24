@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.14.ebuild,v 1.1 2005/06/17 06:35:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.14.ebuild,v 1.2 2005/06/24 06:18:31 suka Exp $
 
 # Notes:
 #
@@ -253,6 +253,9 @@ src_unpack() {
 	#Beginnings of our own patchset
 	cd ${PATCHDIR}
 	epatch ${FILESDIR}/${OO_VER}/gentoo-${PV}.patch
+
+	# Correct some broken patch
+	epatch ${FILESDIR}/${OO_VER}/vcl-gtk-mainloop-m79.diff
 
 	cd ${S}
 
