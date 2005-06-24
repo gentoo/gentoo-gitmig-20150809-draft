@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 29cee4788f670e07a114fd2158fc8125 hcfusbmodem-1.05.ebuild 763
-MD5 f7da83912cf767b2a1d9cf3f538074f7 ChangeLog 1695
+MD5 ebc35641f7d0128e5bcc0fb0225a7300 hcfusbmodem-1.06.ebuild 763
+MD5 addf72511501deb1fbdb0cef4aaf8741 ChangeLog 1818
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 b79164cb72d3158caa12b91d8449f9ae files/digest-hcfusbmodem-1.05 79
+MD5 2ea75e584ddedfbb0c19b75beadad4d7 files/digest-hcfusbmodem-1.06 79
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCXtu5jiC39V7gKu0RAt4LAJ9D/HymHntdb5hG2V2YpyPeIQpVpgCfQtks
-v0VL9pN3Nv1aAIrnEqSXkws=
-=Nbr4
+iD8DBQFCu5qTjiC39V7gKu0RAgxKAJ4pxfscgIICodi0BeaFmVFt7CxobgCeLq6W
+Mkw67R4TfjV7YjCvcvpWiTk=
+=Wgvn
 -----END PGP SIGNATURE-----

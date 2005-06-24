@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.05.ebuild,v 1.1 2005/06/24 05:03:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.05.ebuild,v 1.2 2005/06/24 05:26:35 mrness Exp $
 
 inherit eutils
 
+#The document is the same as in hcfpcimodem, even if it has a different URL
 MY_DOC="100498D_RM_HxF_Released.pdf"
 
 DESCRIPTION="Linuxant's modem driver for Conexant HSF chipset"
@@ -40,7 +41,7 @@ src_install () {
 	cd ${MY_ARCH_S}
 	make PREFIX=${D}/usr/ ROOT=${D} install || die "make install failed"
 
-	use doc && dodoc ${DISTDIR}/${MY_DOC}
+	use doc && dodoc "${DISTDIR}/${MY_DOC}"
 }
 
 pkg_preinst() {
