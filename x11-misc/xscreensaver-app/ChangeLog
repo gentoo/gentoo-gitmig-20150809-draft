@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver-app
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.4 2005/03/05 19:45:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.5 2005/06/24 23:45:44 smithj Exp $
+
+  24 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  xscreensaver-app-2.3.ebuild:
+  homepage update
 
   05 Mar 2005; Simon Stelling <blubb@gentoo.org>
   xscreensaver-app-2.3.ebuild:
