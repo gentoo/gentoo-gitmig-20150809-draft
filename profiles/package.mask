@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4118 2005/06/24 21:08:53 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4119 2005/06/24 21:57:43 tercel Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -138,10 +138,6 @@ sys-libs/nss-mysql
 =gnustep-base/gnustep-gui-0.9.5_pre20050312-r1
 =gnustep-base/gnustep-back-xlib-0.9.5_pre20050312
 =gnustep-base/gnustep-back-art-0.9.5_pre20050312
-
-# Colin Kingsley <tercel@gentoo.org> (06 June 2005)
-# Masked for testing
->app-portage/mirrorselect-0.89
 
 # Elfyn McBratney <beu@gentoo.org> (06 Jun 2005)
 # 9/10 times, it'll work, the other time it'll either segfault,
