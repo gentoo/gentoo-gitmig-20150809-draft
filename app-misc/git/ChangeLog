@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/git
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/git/ChangeLog,v 1.9 2005/04/21 19:15:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/git/ChangeLog,v 1.10 2005/06/24 14:41:54 gustavoz Exp $
+
+  24 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> git-4.3.20.ebuild:
+  To ~sparc
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> git-4.3.20.ebuild:
   stable on amd64
