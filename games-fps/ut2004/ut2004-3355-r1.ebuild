@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3355-r1.ebuild,v 1.1 2005/06/16 21:36:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3355-r1.ebuild,v 1.2 2005/06/24 13:27:38 wolf31o2 Exp $
 
 inherit games
 
@@ -35,7 +35,7 @@ pkg_setup() {
 
 src_install() {
 	# moving patched binary into proper location
-	mv -f ${S}/ut2004-bin-linux-amd64 ${S}/System
+	mv -f ${WORKDIR}/ut2004-bin-linux-amd64 ${S}/System
 
 	# Installing patch files
 	for p in {Animations,Help,Speech,System,Textures,Web}
