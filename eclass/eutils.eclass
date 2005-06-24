@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.183 2005/06/14 17:56:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.184 2005/06/24 17:08:43 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1501,7 +1501,7 @@ preserve_old_lib_notify() {
 		SONAME=`basename ${LIB}`
 
 		einfo "An old version of an installed library was detected on your system."
-		einfo "In order to avoid breaking packages that link against is, this older version"
+		einfo "In order to avoid breaking packages that link against it, this older version"
 		einfo "is not being removed.  In order to make full use of this newer version,"
 		einfo "you will need to execute the following command:"
 		einfo "  revdep-rebuild --soname ${SONAME}"
