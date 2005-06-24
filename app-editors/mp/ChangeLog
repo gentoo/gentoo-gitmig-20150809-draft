@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.42 2005/06/24 11:54:25 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.43 2005/06/24 14:02:28 josejx Exp $
+
+  24 Jun 2005; Joseph Jezak <josejx@gentoo.org> mp-3.3.12.ebuild:
+  Marked ppc stable for bug #96825.
 
   24 Jun 2005; Ferris McCormick <fmccor@gentoo.org> mp-3.3.12.ebuild:
   Stable for sparc, closing Bug 96825 for sparc.  This version builds and
