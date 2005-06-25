@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.4 2005/06/01 00:53:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.5 2005/06/25 09:20:53 dragonheart Exp $
 
 # Comments/fixes to lloyd@randombit.net (author)
 
@@ -10,7 +10,7 @@ DESCRIPTION="A C++ crypto library"
 HOMEPAGE="http://botan.randombit.net/"
 SRC_URI="http://botan.randombit.net/files/Botan-${PV}.tgz"
 
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="ppc sparc x86"
 SLOT="0"
 LICENSE="BSD"
 IUSE="bzip2 zlib gmp ssl debug"

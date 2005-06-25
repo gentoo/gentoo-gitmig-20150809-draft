@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.3.ebuild,v 1.3 2005/06/01 00:53:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.6.ebuild,v 1.1 2005/06/25 09:20:53 dragonheart Exp $
 
 # Comments/fixes to lloyd@randombit.net (author)
 
@@ -8,7 +8,7 @@ DESCRIPTION="A C++ crypto library"
 HOMEPAGE="http://botan.randombit.net/"
 SRC_URI="http://botan.randombit.net/files/Botan-${PV}.tgz"
 
-KEYWORDS="x86"
+KEYWORDS="~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="BSD"
 IUSE="bzip2 zlib gmp ssl debug"
@@ -29,39 +29,44 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	# Modules that should work under any semi-recent Unix
-	modules="alloc_mmap,es_egd,es_ftw,es_unix,fd_unix,ml_unix,tm_unix,mux_pthr"
+	local modules="alloc_mmap,es_egd,es_ftw,es_unix,fd_unix,ml_unix,tm_unix,mux_pthr"
 
 	if useq bzip2; then modules="$modules,comp_bzip2"; fi
-	if use zlib; then modules="$modules,comp_zlib"; fi
-	if use gmp; then modules="$modules,eng_gmp"; fi
-	if use ssl; then modules="$modules,eng_ossl"; fi
+	if useq zlib; then modules="$modules,comp_zlib"; fi
+	if useq gmp; then modules="$modules,eng_gmp"; fi
+	if useq ssl; then modules="$modules,eng_ossl"; fi
 
 
-	# This is also supported on i586+ and sparcv9 - how to test for them? CCHOST?
+	# This is also supported on i586+ - hope this is correct.
 	if [ ${ARCH} = 'alpha' -o ${ARCH} = 'amd64' ] || \
 		[ ${ARCH} = 'x86' -a ${CHOST:0:4} != "i386" -a ${CHOST:0:4} != "i486" ]; then
 		modules="$modules,tm_hard"
 	fi
 
-	# Also works on mips64 and sparc64
-	if [ ${ARCH} = 'alpha' -o ${ARCH} = 'amd64' -o \
-		${ARCH} = 'ia64' -o ${ARCH} = 'ppc64' ]; then
+	# Also works on mips64
+	if [ "${ARCH}" = 'alpha' -o "${ARCH}" = 'amd64' -o \
+		"${ARCH}" = 'ia64' -o "${ARCH}" = 'ppc64' -o "${PROFILE_ARCH}" = 'mips64'  ]; then
 		modules="$modules,mp_asm64"
 	fi
 
-	# Are there any CHOSTs in use which break this?
-	CHOSTARCH=$(echo ${CHOST} | cut -d - -f 1)
+	# Enable v9 instructions for sparc64
+	if [ ${PROFILE_ARCH} = 'sparc64' ]; then
+		CHOSTARCH='sparc32-v9'
+	else
+		CHOSTARCH=$(echo ${CHOST} | cut -d - -f 1)
+	fi
 
 	cd ${S}
-	einfo "Enabling modules: " $(echo $modules | sed 's/,/ /g')
+	einfo "Enabling modules: " ${modules}
 
 	# FIXME: We might actually be on *BSD or OS X...
-	./configure.pl --noauto gcc-linux-$CHOSTARCH --modules=$modules --dumb-gcc ||
+	./configure.pl --noauto gcc-linux-$CHOSTARCH --modules=$modules ||
 		die "configure.pl failed"
 	emake "LIB_OPT=${CXXFLAGS}" "MACH_OPT=" || die "emake failed"
 }
 
 src_test() {
+	chmod -R ugo+rX ${S}
 	emake check || die "emake check failed"
 	env LD_LIBRARY_PATH=${S} ./check --validate || die "validation tests failed"
 }
