@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.5-r2.ebuild,v 1.2 2005/06/24 16:46:21 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.5-r2.ebuild,v 1.3 2005/06/25 13:34:13 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc resperl debug postgres vmdbmysql vmdbpostgres"
 
@@ -10,8 +10,8 @@ ADDONS_VERSION="1.0.4"
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="ftp://ftp.asterisk.org/pub/telephony/asterisk/${P}.tar.gz
-	 ftp://ftp.asterisk.org/pub/telephony/asterisk/${PN}-addons-${ADDONS_VERSION}.tar.gz"
+SRC_URI="ftp://ftp.asterisk.org/pub/telephony/${PN}/old-releases/${P}.tar.gz
+	 ftp://ftp.asterisk.org/pub/telephony/${PN}/old-releases/${PN}-addons-${ADDONS_VERSION}.tar.gz"
 
 S=${WORKDIR}/${P}
 S_ADDONS=${WORKDIR}/${PN}-addons-${ADDONS_VERSION}
@@ -397,7 +397,7 @@ pkg_postinst() {
 	ewarn "- Permissions of /var/{log,lib,run,spool}/asterisk have been changed"
 	ewarn "  to asterisk:asterisk 750 / 640"
 	ewarn
-	ewarn "- Asterisk's unix socket and pidfile are now in /var/run/astrisk"
+	ewarn "- Asterisk's unix socket and pidfile are now in /var/run/asterisk"
 	ewarn
 	ewarn "- Asterisk cannot set the IP ToS bits when run as user,"
 	ewarn "  use something like this to make iptables set them for you:"
