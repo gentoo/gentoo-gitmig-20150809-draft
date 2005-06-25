@@ -1,21 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d0cb9d32c357fa58c904cd030f7b10c8 lard-2.0.15-r1.ebuild 1523
-MD5 bddc7ecd35640b499b01349071374e50 lard-2.0.14.ebuild 1423
-MD5 16109188fa2dfb464774191a847816d7 ChangeLog 2510
+MD5 5a912ab93c90ac56876d1f21beb80ca5 lard-2.0.15-r1.ebuild 1522
+MD5 fcc12b12daaa1c4da651b926dd428aae ChangeLog 2712
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 16c563adb4b485db3ebfc2957e0bc8e5 lard-2.0.15.ebuild 1427
-MD5 017b3b8d56d2ab50af986a012c264e94 files/digest-lard-2.0.14 199
-MD5 7cb79984b40e57160f56c678ebcbcb6e files/digest-lard-2.0.15 199
 MD5 b15a173334689177c50733e628dbcdb2 files/2.0.15-gcc-multi-string-literal.patch 901
-MD5 35210aeeee5612c8757e9fa082e4ae46 files/lard-2.0.14-configure.patch 779
 MD5 f8edcceea4f0b88bdec4b7834fa43b35 files/lard-2.0.15-configure.patch 2274
 MD5 7cb79984b40e57160f56c678ebcbcb6e files/digest-lard-2.0.15-r1 199
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0HgjI1lqEGTUzyQRAp6qAKChCaENpQ6TQn5FXdWy4ZV2fOvNzQCg1sPI
-rwPVm5h0kxanI6cAYmW4PPw=
-=gsuH
------END PGP SIGNATURE-----
