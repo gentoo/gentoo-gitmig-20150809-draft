@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/hotkeys
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.21 2004/06/24 22:22:20 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.22 2005/06/25 15:29:14 tester Exp $
+
+  25 Jun 2005; Olivier Crête <tester@gentoo.org> hotkeys-0.5.7.1-r1.ebuild:
+  Stable on amd64
 
   10 May 2004; Daniel Ahlberg <aliz@gentoo.org> hotkeys-0.5.7.1-r1.ebuild:
   Added amd64 keyword, closing #50567.
