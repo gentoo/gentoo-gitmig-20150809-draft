@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-147-r1.ebuild,v 1.1 2005/06/25 21:32:58 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-147-r1.ebuild,v 1.2 2005/06/25 21:36:59 ribosome Exp $
 
 DESCRIPTION="Codon usage tables calculated from GenBank"
 HOMEPAGE="http://www.kazusa.or.jp/codon/"
@@ -30,7 +30,7 @@ src_compile() {
 
 src_install() {
 	if ! use minimal; then
-		mkdir -p ${D}/usr/share/${PN}
+		mkdir -p ${D}usr/share/${PN}
 		mv *.codon *.spsum ${D}usr/share/${PN} || die \
 			"Installing raw CUTG database failed."
 	fi
