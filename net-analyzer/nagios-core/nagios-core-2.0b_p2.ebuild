@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0b_p2.ebuild,v 1.1 2005/02/24 09:43:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0b_p2.ebuild,v 1.2 2005/06/25 20:26:07 vanquirius Exp $
 
 inherit eutils depend.apache toolchain-funcs
 
@@ -36,6 +36,15 @@ pkg_setup() {
 			eerror "# USE="jpeg" emerge gd"
 			die "pkg_setup failed"
 		fi
+	fi
+
+	enewgroup nagios
+
+	if use noweb; then
+		enewuser nagios -1 /bin/bash /dev/null nagios
+	else
+		enewuser nagios -1 /bin/bash /dev/null apache
+		usermod -G apache nagios
 	fi
 }
 
@@ -156,14 +165,9 @@ pkg_preinst() {
 	keepdir /usr/nagios/share/ssi
 	keepdir /var/nagios/rw
 
-	enewgroup nagios
-
 	if use noweb; then
-		enewuser nagios -1 /bin/bash /dev/null nagios
 		chown nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	else
-		enewuser nagios -1 /bin/bash /dev/null apache
-		usermod -G apache nagios
 		chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	fi
 

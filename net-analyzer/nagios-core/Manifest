@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0c0e29d1d08ee5eb8bf8cf882394188b nagios-core-2.0b_p2.ebuild 5824
+MD5 ea5f6351605c6eb2bcba8a9d96e5ce15 nagios-core-2.0b_p2.ebuild 5854
 MD5 f24664e272f7b4bcb83904296db63468 nagios-core-1.2-r3.ebuild 7167
 MD5 d17edace39fc697120e7576ba246fe91 nagios-core-2.0b_p1.ebuild 5824
 MD5 dba78a7028bb972dc63b2ed5d9f6ab01 nagios-core-1.2-r2.ebuild 6619
 MD5 eef2b50696231cc7c0c222099c5dacc7 nagios-core-1.2-r4.ebuild 7089
-MD5 9cab0fc28d377ca9c93b3ab27f07c07f ChangeLog 9007
+MD5 b5f61423d5b2c6f09b476fbb0400f189 ChangeLog 9197
 MD5 a1ece421fae3536d1e5dd9b5ecb0215d metadata.xml 928
 MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
 MD5 aa5bb53aee1f5609395e8184f2eff4a6 files/digest-nagios-core-2.0b_p1 65
@@ -21,10 +18,3 @@ MD5 cee7d66cc61be3558af44ab177d99e1f files/submit_check_result_via_nsca.patch 58
 MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2-r2 63
 MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2-r3 63
 MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2-r4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJDRsT+MN7JbqCpMRAi+2AKCQhQH5ntnTxkd7RjT4J2N6oN1o2wCeO09e
-i4eb1jZjsiaHukbd6oAN6gA=
-=YVzh
------END PGP SIGNATURE-----
