@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r4.ebuild,v 1.5 2005/06/13 05:32:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r4.ebuild,v 1.6 2005/06/25 07:57:31 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -59,10 +59,21 @@ src_unpack() {
 		sed -i -e '/^UNICODE=/s:no:yes:' etc/rc.conf
 	fi
 
-	# Fix Sparc specific stuff
-	if [[ $(tc-arch) == "sparc" ]] ; then
-		sed -i -e 's:KEYMAP="us":KEYMAP="sunkeymap":' ${S}/etc/rc.conf || die
-	fi
+	# Tweak arch-specific details
+	cd "${S}"
+	case $(tc-arch) in
+	ppc64)
+		if [[ -e ${ROOT}/dev/hvc ]] ; then
+			cat <<-EOF >> etc/inittab
+			#HVC CONSOLE
+			#hvc:12345:respawn:/sbin/agetty -nl /bin/bashlogin 9600 hvc0 vt220
+			EOF
+		fi
+		;;
+	sparc)
+		sed -i -e '/^KEYMAP=/s:us:sunkeymap:' etc/conf.d/keymaps || die
+		;;
+	esac
 }
 
 src_compile() {
