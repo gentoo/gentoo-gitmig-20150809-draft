@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r2.ebuild,v 1.4 2005/06/22 14:03:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r2.ebuild,v 1.5 2005/06/25 18:17:34 gustavoz Exp $
 
 inherit eutils
 
@@ -36,6 +36,7 @@ src_unpack() {
 	if ! use nls; then
 		epatch "${FILESDIR}/${P}-nonls-v4.patch" || die "epatch failed"
 	fi
+	epatch ${FILESDIR}/sunlance.patch
 }
 
 src_compile() {
