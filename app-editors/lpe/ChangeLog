@@ -1,10 +1,10 @@
 # ChangeLog for app-editors/lpe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.6 2005/06/25 11:22:21 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.7 2005/06/25 11:37:32 pyrania Exp $
 
 *lpe-1.2.6.12 (25 Jun 2005)
 
-  25 Jun 2005; <pyrania@gentoo.org> +files/lpe-1.2.6.12-slang.patch,
+  25 Jun 2005; Markus Nigbur <pyrania@gentoo.org> +files/lpe-1.2.6.12-slang.patch,
   +lpe-1.2.6.12.ebuild:
   Version bump. See bug #80398 for details (debian took maintainership).
 

@@ -1,4 +1,7 @@
-MD5 9bfd5259e989c6ece8872ab2c1580862 ChangeLog 762
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 de802bb26e4a1c8090e7d6f3d3b4e243 ChangeLog 776
 MD5 d3426a8da8ef783fe7deace8dc8b59d1 lpe-1.2.6.ebuild 871
 MD5 4dc6d4e1ef0c431973c5d0dbbbeb81c8 metadata.xml 351
 MD5 b2372eabec51b99b0271454a05701755 lpe-1.2.6.12.ebuild 878
@@ -6,3 +9,10 @@ MD5 a678618369e633c350fc7a1c51bb0e68 files/digest-lpe-1.2.6 61
 MD5 c2d1499e89218cbe880b75ca499a63b7 files/lpe-1.2.6-gentoo.patch 766
 MD5 41be02de497aa2040050a992ee023f07 files/digest-lpe-1.2.6.12 64
 MD5 ff7045caf10764fd1d7c4beb0aa5b093 files/lpe-1.2.6.12-slang.patch 800
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvUIaI7fK2cqeyXkRAtwMAJwIOa9Q3wCH42aJDbJfhCsFA9XpwACbBUmO
+xKIBmmLUvvr7p7lweab+uNc=
+=XO4Q
+-----END PGP SIGNATURE-----
