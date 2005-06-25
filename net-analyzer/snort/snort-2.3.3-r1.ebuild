@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.1 2005/05/08 17:43:03 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.2 2005/06/25 23:31:30 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -111,9 +111,11 @@ src_install() {
 	docinto schemas ; dodoc schemas/*
 
 	insinto /etc/snort
-	doins etc/reference.config etc/classification.config rules/*.rules \
+	doins etc/reference.config etc/classification.config \
 		etc/*.map etc/threshold.conf
 	newins etc/snort.conf snort.conf.distrib
+	insinto /etc/snort/rules
+	doins rules/*.rules
 
 	use prelude && doins etc/prelude-classification.config
 
@@ -138,5 +140,6 @@ pkg_postinst() {
 		einfo ""
 		einfo "Also, read the following Gentoo forums article:"
 		einfo '   http://forums.gentoo.org/viewtopic.php?t=78718'
+		ewarn "Rules are now installed in /etc/snort/rules"
 	fi
 }

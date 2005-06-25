@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.68 2005/05/26 18:14:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.69 2005/06/25 23:31:30 vanquirius Exp $
+
+  25 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> snort-2.3.3-r1.ebuild:
+  Install rules in /etc/snort/rules for cleaner layout. Fixes bug 95368.
+  Thanks to Greg Watson <bugs@linuxlogin.com>.
 
   26 May 2005; Marcelo Goes <vanquirius@gentoo.org> :
   Took snort-2.3.3-r1 out of package.mask.
