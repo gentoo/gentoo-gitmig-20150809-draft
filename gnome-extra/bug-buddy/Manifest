@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ecb0e87c2c9edbad22604deb1f42537 bug-buddy-2.6.1.ebuild 907
-MD5 0ec1de2b3e815b16d15b77b2a593e66c ChangeLog 7959
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 d5e7f00587431288bd50920350d3f929 bug-buddy-2.10.0.ebuild 1088
-MD5 9a7dd99ec4df911e7d41c006ce86dbfa bug-buddy-2.8.0.ebuild 898
+MD5 b9484b9b2ae343e3c768c18112ebddee ChangeLog 8049
 MD5 36655711685d89d6c886370b1937a993 bug-buddy-2.0.8.ebuild 979
+MD5 64ceb085df57eee42a0aac9302748fd4 bug-buddy-2.10.0.ebuild 1093
 MD5 11143716e046e2673950af22448172c3 bug-buddy-2.4.2.ebuild 924
 MD5 258c27eaa75b9890efe2ccfaf7a62aa5 bug-buddy-2.6.0.ebuild 907
+MD5 8ecb0e87c2c9edbad22604deb1f42537 bug-buddy-2.6.1.ebuild 907
+MD5 9a7dd99ec4df911e7d41c006ce86dbfa bug-buddy-2.8.0.ebuild 898
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 4d7a28f47d32104e184c44c5f00b9e50 files/digest-bug-buddy-2.0.8 67
 MD5 b49fb0e31813c4682de1a44013d0beab files/digest-bug-buddy-2.10.0 69
 MD5 5ff5b1cd644e2fdbfe7d4162e09da84e files/digest-bug-buddy-2.4.2 68
-MD5 6efd76f3f75693ab65bc3daf4b284bf5 files/digest-bug-buddy-2.8.0 68
 MD5 bb4fc864ea6a7c9fc9c17ad8ddc05c53 files/digest-bug-buddy-2.6.0 68
 MD5 b30fe1faa0c77120d080a56e6475283a files/digest-bug-buddy-2.6.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrVjlKf2g/qXtneoRApvOAJwN6XV3Q07TI4WY0ygAXTI5B6GYjwCgr2MJ
-YPKXE5FfTukVpraKba8KKnA=
-=3JNz
------END PGP SIGNATURE-----
+MD5 6efd76f3f75693ab65bc3daf4b284bf5 files/digest-bug-buddy-2.8.0 68
