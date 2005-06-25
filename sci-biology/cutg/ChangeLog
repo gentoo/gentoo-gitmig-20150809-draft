@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/cutg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.17 2005/06/19 00:38:11 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.18 2005/06/25 21:32:58 ribosome Exp $
+
+*cutg-147-r1 (25 Jun 2005)
+
+  25 Jun 2005; Olivier Fisette <ribosome@gentoo.org> +cutg-147-r1.ebuild:
+  Trying to fix some ppc-macos bug reported in #96819.
 
 *cutg-147 (19 Jun 2005)
 
