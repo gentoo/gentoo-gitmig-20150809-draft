@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.96 2005/06/12 19:01:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.97 2005/06/25 13:43:30 gmsoft Exp $
+
+  25 Jun 2005; Guy Martin <gmsoft@gentoo.org> gnome-terminal-2.10.0.ebuild:
+  Stable on hppa.
 
   12 Jun 2005; Olivier Crête <tester@gentoo.org>
   gnome-terminal-2.10.0.ebuild:
