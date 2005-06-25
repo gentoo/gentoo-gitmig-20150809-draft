@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ike-scan/ike-scan-1.7.ebuild,v 1.2 2005/06/25 11:33:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ike-scan/ike-scan-1.7.ebuild,v 1.3 2005/06/25 13:32:45 swegener Exp $
 
 DESCRIPTION="A utility for finding, fingerprinting and testing IKE VPN servers"
 HOMEPAGE="http://www.nta-monitor.com/ike-scan/"
@@ -12,7 +12,7 @@ KEYWORDS="~ppc ~x86"
 IUSE="ssl"
 
 DEPEND="virtual/libc
-	ssl? dev-libs/openssl"
+	ssl? ( dev-libs/openssl )"
 
 src_compile() {
 	econf $(use_with ssl openssl) || die
