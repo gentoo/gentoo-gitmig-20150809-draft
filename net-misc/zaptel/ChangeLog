@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.46 2005/06/25 07:01:38 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.47 2005/06/25 08:56:54 stkn Exp $
+
+*zaptel-1.0.8 (25 Jun 2005)
+
+  25 Jun 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/zaptel-1.0.8-gentoo.diff, +files/zaptel-bristuff-0.2.0-RC8h.patch,
+  +zaptel-1.0.8.ebuild:
+  Version bump.
 
   24 Jun 2005; Stefan Knoblich <stkn@gentoo.org> -zaptel-1.0.0.ebuild,
   -zaptel-1.0.1.ebuild, -zaptel-1.0.2.ebuild:
