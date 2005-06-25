@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.10.ebuild,v 1.1 2005/06/22 04:28:25 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.10-r1.ebuild,v 1.1 2005/06/25 00:45:38 ramereth Exp $
 
 inherit ssl-cert eutils flag-o-matic
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	# Hack away generation of certificate
 	sed -i s/^install-data-local:/do-not-run-this:/ "${S}"/tools/Makefile.in
+	epatch ${FILESDIR}/stunnel-4.10-inetd.patch
 }
 
 src_compile() {
