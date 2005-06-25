@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/files/mailgraph.initd,v 1.1 2005/06/25 04:06:26 halcy0n Exp $
+
+start() {
+	ebegin "Starting mailgraph"
+
+	# read postfix log messages somewhere other than /var/log/syslog?
+	[[ -n "${MG_POSTFIX_LOG}" ]] && MG_OPTS="${MG_OPTS} -l ${MG_POSTFIX_LOG}"
+
+	start-stop-daemon --start --quiet \
+		--exec /usr/bin/mailgraph -- --daemon \
+		--daemon-rrd=/var/lib/mailgraph ${MG_OPTS}
+		
+	eend $?
+}
+
+stop() {
+	ebegin "Shutting down mailgraph"
+	start-stop-daemon --stop --quiet --pidfile /var/run/mailgraph.pid
+	eend $?
+}
