@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.93.ebuild,v 1.1 2005/06/24 17:12:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.93.1.ebuild,v 1.1 2005/06/25 14:23:18 tester Exp $
 
 DESCRIPTION="GUI for iPod using GTK2"
 HOMEPAGE="http://gtkpod.sourceforge.net/"
