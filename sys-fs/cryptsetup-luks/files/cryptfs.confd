@@ -1,5 +1,5 @@
 # /etc/conf.d/cryptfs
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/files/cryptfs.confd,v 1.3 2005/06/25 14:11:37 swegener Exp $
 
 # Note regarding the syntax of this file.  This file is *almost* bash,
 # but each line is evaluated separately.  Separate swaps/mounts can be
