@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.18 2005/04/10 23:38:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.19 2005/06/25 22:33:18 vanquirius Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 	cd src
-	emake CFLAGS="$CFLAGS" DEBUG="" TARGET="/usr/sbin" WORKDIR="/var/lib/iptraf" \
+	emake -j1 CFLAGS="$CFLAGS" DEBUG="" TARGET="/usr/sbin" WORKDIR="/var/lib/iptraf" \
 	clean all || die "emake failed"
 }
 
