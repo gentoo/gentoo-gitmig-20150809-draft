@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/panda3d-1.0.4.ebuild,v 1.1 2005/06/24 05:28:52 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/panda3d-1.0.4.ebuild,v 1.2 2005/06/25 13:31:00 swegener Exp $
 
 inherit eutils
 
@@ -13,14 +13,14 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="png jpeg tiff fmod nspr ssl freetype doc zlib"
 
-DEPEND="doc?( dev-python/epydoc )
-		png?( media-libs/libpng )
-		jpeg?( media-libs/jpeg )
-		tiff?( media-libs/tiff )
-		fmod?( media-libs/fmod )
-		ssl?( dev-libs/openssl )
-		freetype?( media-libs/freetype )
-		zlib?( sys-libs/zlib )"
+DEPEND="doc? ( dev-python/epydoc )
+		png? ( media-libs/libpng )
+		jpeg? ( media-libs/jpeg )
+		tiff? ( media-libs/tiff )
+		fmod? ( media-libs/fmod )
+		ssl? ( dev-libs/openssl )
+		freetype? ( media-libs/freetype )
+		zlib? ( sys-libs/zlib )"
 
 use_no()
 {
