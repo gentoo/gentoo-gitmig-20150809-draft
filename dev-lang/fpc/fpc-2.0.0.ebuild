@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0.ebuild,v 1.1 2005/06/25 22:26:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0.ebuild,v 1.2 2005/06/25 22:56:04 agriffis Exp $
 
 inherit eutils
 
@@ -61,8 +61,10 @@ src_install() {
 	local pp
 	set_pp new
 
-	make compiler_install rtl_install fcl_install packages_install utils_install \
-		PP=${pp} FPCMAKE=${S}/utils/fpcm/fpcmake INSTALL_PREFIX=${D}usr \
+	make compiler_install rtl_install fcl_install \
+		packages_install utils_install man_install \
+		PP=${pp} FPCMAKE=${S}/utils/fpcm/fpcmake \
+		INSTALL_PREFIX=${D}usr INSTALL_MANDIR=${D}usr/share/man \
 		|| die "make install failed!"
 }
 
