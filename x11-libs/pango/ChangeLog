@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.92 2005/04/28 19:33:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.93 2005/06/25 15:10:57 allanonjl Exp $
+
+*pango-1.8.1-r1 (25 Jun 2005)
+
+  25 Jun 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +files/pango-1.8.1-fontfix.patch, +pango-1.8.1-r1.ebuild:
+  fix for bug #84586
 
   28 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> pango-1.8.1.ebuild:
   Stable on alpha.
