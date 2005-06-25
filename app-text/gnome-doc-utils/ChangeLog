@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.13 2005/06/20 09:46:51 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.14 2005/06/25 15:26:54 gmsoft Exp $
+
+  25 Jun 2005; Guy Martin <gmsoft@gentoo.org> gnome-doc-utils-0.1.3.ebuild:
+  Stable on hppa.
 
   20 Jun 2005; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Adding text-markup herd.
