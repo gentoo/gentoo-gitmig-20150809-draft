@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3d2c80b7a25df5387c998d0a41333cb9 ChangeLog 3327
 MD5 8c28d8f082436ae543dc01e0de623419 files/digest-mythtv-themes-0.13 243
 MD5 c7057af4f93c32381e0dfda2bec77ada files/digest-mythtv-themes-0.14 185
@@ -10,3 +13,10 @@ MD5 93a4fa1dc0b96b8c31fd5616a093ea7b mythtv-themes-0.14.ebuild 829
 MD5 0c3163ba8b624e8e5a213e1e60105b99 mythtv-themes-0.15.ebuild 959
 MD5 50262b17d1aea5ffb465cf36d91a3800 mythtv-themes-0.17.ebuild 1031
 MD5 ece694155afef1d2ea5167e2445c49fb mythtv-themes-0.18.ebuild 1172
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvWSnI1lqEGTUzyQRAkFtAJ9RekqOFGqam7jsE7uby/9tEvs9nwCeOSpm
+ctq+tCDm6GvTN1of2+zdM1g=
+=nH3b
+-----END PGP SIGNATURE-----
