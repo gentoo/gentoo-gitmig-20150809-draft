@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.18-r1.ebuild,v 1.2 2005/06/22 22:50:12 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.18-r2.ebuild,v 1.1 2005/06/25 22:43:08 smithj Exp $
 
 inherit gnuconfig eutils pam flag-o-matic
 
@@ -23,8 +23,18 @@ DEPEND="virtual/x11
 	motif? ( x11-libs/openmotif )
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}/xlock
 
+	# fixes stupid pam bug for #96212
+	einfo "patching passwd.c"
+	sed -e '/pam_error = pam_acct_mgmt(pamh, 0);/a\
+		fprintf("stupid pam fix %s/n", &pam_error);' \
+		-i passwd.c
+}
+
+src_compile() {
 	local myconf
 
 	use xlockrc && myconf="${myconf} --enable-xlockrc"

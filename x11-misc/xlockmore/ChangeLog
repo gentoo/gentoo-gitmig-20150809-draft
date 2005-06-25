@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.26 2005/06/22 22:50:12 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.27 2005/06/25 22:43:08 smithj Exp $
+
+*xlockmore-5.18-r2 (25 Jun 2005)
+
+  25 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/xlock-5.18-this-should-not-work.patch, -xlockmore-5.18-r1.ebuild,
+  +xlockmore-5.18-r2.ebuild:
+  experimental fix for 5.18 line, which is still masked
 
   22 Jun 2005; Jonathan Smith <smithj@gentoo.org> xlockmore-5.17-r1.ebuild,
   xlockmore-5.18-r1.ebuild:
