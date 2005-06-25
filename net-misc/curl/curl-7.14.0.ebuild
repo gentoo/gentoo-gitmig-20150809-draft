@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.13.2.ebuild,v 1.3 2005/06/25 15:04:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.14.0.ebuild,v 1.1 2005/06/25 15:04:04 liquidx Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -20,10 +20,11 @@ http://curl.haxx.se/download/${P}.tar.bz2"
 
 LICENSE="MIT X11"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc x86"
-IUSE="ssl ipv6 ldap ares"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+IUSE="ssl ipv6 ldap ares gnutls"
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.6a )
+DEPEND="ssl? ( gnutls? ( net-libs/gnutls ) )
+	ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.6a ) )
 	ldap? ( net-nds/openldap )
 	x86? ( ares? ( net-dns/c-ares ) )"
 
@@ -43,7 +44,6 @@ src_unpack() {
 src_compile() {
 
 	myconf="$(use_enable ldap)
-		$(use_with ssl)
 		--enable-http
 		--enable-ftp
 		--enable-gopher
@@ -62,6 +62,14 @@ src_compile() {
 		if use x86; then
 			myconf="${myconf} $(use_enable ipv6) $(use_enable ares)"
 		fi
+	fi
+
+    if use ssl && use gnutls; then
+		myconf="${myconf} --without-ssl --with-gnutls=/usr"
+	elif use ssl; then
+		myconf="${myconf} --without-gnutls --with-ssl=/usr"
+	else
+		myconf="${myconf} --without-gnutls --without-ssl"
 	fi
 
 	if _curl_has_old_ver; then
