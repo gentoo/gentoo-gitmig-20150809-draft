@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6.ebuild,v 1.2 2005/06/24 16:14:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6.ebuild,v 1.3 2005/06/25 13:56:08 swegener Exp $
 
 inherit libtool eutils
 
@@ -15,9 +15,11 @@ IUSE="nls doc exif nousb"
 
 # needs >usbutils-0.11-r2 to avoid /usr/lib/libusb*
 # conflicts with dev-libs/libusb
-RDEPEND="!nousb? (>=dev-libs/libusb-0.1.8
-	>=sys-apps/usbutils-0.11-r2
-	sys-apps/hotplug)
+RDEPEND="!nousb? (
+		>=dev-libs/libusb-0.1.8
+		>=sys-apps/usbutils-0.11-r2
+		sys-apps/hotplug
+	)
 	exif? ( >=media-libs/libexif-0.5.9 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

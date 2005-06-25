@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.16.ebuild,v 1.1 2005/06/20 11:16:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.16.ebuild,v 1.2 2005/06/25 13:57:07 swegener Exp $
 
 IUSE="X nls v4l dvb doc"
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~alpha ~ia64"
 
-DEPEND="X? (virtual/x11)
+DEPEND="X? ( virtual/x11 )
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 
