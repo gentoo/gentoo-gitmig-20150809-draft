@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.33 2005/06/18 21:09:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.34 2005/06/25 12:10:10 luckyduck Exp $
+
+  25 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> openvpn-2.0-r1.ebuild:
+  -r1 installs the initscript again, fixes #96855.
 
   18 Jun 2005; Jason Wever <weeve@gentoo.org> openvpn-2.0.ebuild:
   Stable on SPARC.

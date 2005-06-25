@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0-r1.ebuild,v 1.2 2005/06/09 06:14:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0-r1.ebuild,v 1.3 2005/06/25 12:10:10 luckyduck Exp $
 
 inherit eutils gnuconfig
 
@@ -43,7 +43,7 @@ src_install() {
 	keepdir /etc/openvpn
 
 	# Install the init script
-	newinitd ${FILESDIR}/openvpn
+	newinitd ${FILESDIR}/openvpn openvpn
 
 	# Install easy-rsa stuffs
 	dodir /usr/share/${PN}/easy-rsa
