@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 88db285ca97cdce683586547e79a2ce9 ChangeLog 477
+MD5 6a878aff2832e4633194444a7b206889 ike-scan-1.7.ebuild 733
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
-MD5 9c34316796eb7eec3d1662cb61867497 ike-scan-1.7.ebuild 734
-MD5 101d1b9c260737d6004e87962b29a28e ChangeLog 399
 MD5 d0369ba8fcfae20c7c0a14f95dbeeb7d files/digest-ike-scan-1.7 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCu8Q1mdTrptrqvGERAh8/AJ9mZh5b/a7x3iiRIStDT7vT/9u+ngCeKWY3
-W4XTNUXpJRSJQzhAO1ueJHo=
-=xmcO
------END PGP SIGNATURE-----
