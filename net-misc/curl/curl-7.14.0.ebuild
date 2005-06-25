@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.14.0.ebuild,v 1.1 2005/06/25 15:04:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.14.0.ebuild,v 1.2 2005/06/25 16:05:09 swegener Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -64,7 +64,7 @@ src_compile() {
 		fi
 	fi
 
-    if use ssl && use gnutls; then
+	if use ssl && use gnutls; then
 		myconf="${myconf} --without-ssl --with-gnutls=/usr"
 	elif use ssl; then
 		myconf="${myconf} --without-gnutls --with-ssl=/usr"
