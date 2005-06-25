@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/lpe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.5 2005/01/01 13:31:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.6 2005/06/25 11:22:21 pyrania Exp $
+
+*lpe-1.2.6.12 (25 Jun 2005)
+
+  25 Jun 2005; <pyrania@gentoo.org> +files/lpe-1.2.6.12-slang.patch,
+  +lpe-1.2.6.12.ebuild:
+  Version bump. See bug #80398 for details (debian took maintainership).
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lpe-1.2.6.ebuild:
   Masked lpe-1.2.6.ebuild stable for ppc
