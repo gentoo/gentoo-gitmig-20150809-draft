@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.36 2005/06/09 15:07:20 omkhar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.37 2005/06/25 18:53:40 blubb Exp $
+
+  25 Jun 2005; Simon Stelling <blubb@gentoo.org> vnc-4.0-r1.ebuild:
+  make vnc multilib-capable, bug 91755
 
   09 Jun 2005; <omkhar@gentoo.org> +files/xc.patch-eieio.patch,
   vnc-4.0-r1.ebuild:

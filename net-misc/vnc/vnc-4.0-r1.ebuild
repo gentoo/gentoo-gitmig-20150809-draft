@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.10 2005/06/10 15:31:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.11 2005/06/25 18:53:40 blubb Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs multilib
 
 X_VERSION="6.8.1"
 
@@ -54,7 +54,11 @@ src_unpack() {
 		epatch ${FILESDIR}/xc.patch-eieio.patch
 		epatch xc.patch
 
-		echo "#define CcCmd $(tc-getCC)" >> ${S}/xc/config/cf/vnc.def
+		HOSTCONF="${S}/xc/config/cf/vnc.def"
+		echo "#define CcCmd $(tc-getCC)" >> ${HOSTCONF}
+		echo "#define FontDir /usr/share/fonts" >> ${HOSTCONF}
+		echo "#define LibDir /usr/$(get_libdir)/X11" >> ${HOSTCONF}
+		echo "#define UsrLibDir /usr/$(get_libdir)" >> ${HOSTCONF}
 	fi
 }
 
@@ -70,9 +74,9 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin /usr/share/man/man1
-	use server && dodir /usr/X11R6/lib/modules/extensions
+	use server && dodir /usr/$(get_libdir)/modules/extensions
 
-	./vncinstall ${D}/usr/bin ${D}/usr/share/man ${D}/usr/X11R6/lib/modules/extensions || die
+	./vncinstall ${D}/usr/bin ${D}/usr/share/man ${D}/usr/$(get_libdir)/modules/extensions || die
 	dodoc LICENCE.TXT README
 
 	use server || (
