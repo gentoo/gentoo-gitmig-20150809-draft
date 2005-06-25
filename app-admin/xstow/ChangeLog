@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/xstow
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.4 2005/06/24 13:27:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.5 2005/06/25 10:17:52 dholm Exp $
+
+  25 Jun 2005; David Holm <dholm@gentoo.org> xstow-0.4.6.ebuild:
+  Added to ~ppc.
 
 *xstow-0.5.1 (24 Jun 2005)
 

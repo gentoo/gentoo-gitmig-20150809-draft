@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce987f461df0a19c14697dbc8e4d90e5 ChangeLog 519
+MD5 f3048e84571f335e4bc2e07cebc61bd7 ChangeLog 600
+MD5 cf374faa60a3a432e6730934769c453a xstow-0.4.6.ebuild 752
 MD5 ef38e3bc0dbedc4396427ecef0407930 xstow-0.5.1.ebuild 671
-MD5 72b6e308cc1d49072e3750e58cb12c5c xstow-0.4.6.ebuild 752
 MD5 3e6e841329de70b113d46828506780d8 files/digest-xstow-0.4.6 63
 MD5 49825a24ed2a22d7f3c4f72daa0af9f1 files/xstow-0.4.6-configure-ncurses.diff 2211
 MD5 f22a686391365024ea0ad131cb64c7f6 files/digest-xstow-0.5.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvAsQTM53OX+9xmMRAj/4AKCpMieAep/O6oT4ryBHBAhxQrFw3QCfawHr
-LUa4QZ/B1N0E8bKDnPc3Qso=
-=2yxn
------END PGP SIGNATURE-----
