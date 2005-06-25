@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.53 2005/04/30 02:39:36 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.54 2005/06/25 00:54:31 ramereth Exp $
+
+*cfengine-2.1.15 (25 Jun 2005)
+
+  25 Jun 2005; Lance Albertson <ramereth@gentoo.org> cfengine-2.1.14.ebuild,
+  +cfengine-2.1.15.ebuild:
+  * Bumped 2.1.14 stable on x86
+  * Added 2.1.15 ~arch
 
 *cfengine-2.1.14 (30 Apr 2005)
 
