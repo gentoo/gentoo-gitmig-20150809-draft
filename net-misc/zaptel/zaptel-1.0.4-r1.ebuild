@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.4-r1.ebuild,v 1.1 2005/06/24 16:40:42 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.4-r1.ebuild,v 1.2 2005/06/25 13:26:54 stkn Exp $
 
 IUSE="devfs26"
 
@@ -8,7 +8,7 @@ inherit toolchain-funcs eutils linux-info
 
 DESCRIPTION="Drivers for Digium and ZapataTelephony cards"
 HOMEPAGE="http://www.asterisk.org"
-SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/zaptel-${PV}.tar.gz"
+SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/old/zaptel-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
