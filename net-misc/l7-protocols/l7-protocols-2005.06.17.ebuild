@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2004.12.29.ebuild,v 1.1 2005/01/04 09:32:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2005.06.17.ebuild,v 1.1 2005/06/25 08:29:18 dragonheart Exp $
 
 inherit toolchain-funcs
 
 IUSE=""
 
-MY_P=${PN}-${PV//./_}
+MY_P=${PN}-${PV//./-}
 
 DESCRIPTION="Protocol definitions of l7-filter kernel modules"
 HOMEPAGE="http://l7-filter.sourceforge.net/protocols"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~ppc ~sparc ~x86"
 S=${WORKDIR}/${MY_P}
 
 RDEPEND="net-misc/l7-filter"
@@ -45,7 +45,7 @@ src_install() {
 	cd ${S}
 
 	dodoc README CHANGELOG HOWTO WANTED
-	newdoc weakpatterns/README README.weakpatterns
+	newdoc README.weakpatterns
 	newdoc extra/README README.extra
 	newdoc file_types/README README.file_types
 	newdoc malware/README README.malware
