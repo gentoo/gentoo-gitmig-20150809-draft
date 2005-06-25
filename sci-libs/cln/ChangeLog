@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.4 2005/06/05 15:49:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.5 2005/06/25 23:55:54 ribosome Exp $
+
+  25 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -cln-1.1.5.ebuild:
+  Removed obsolete version.
 
 *cln-1.1.9 (05 Jun 2005)
 
