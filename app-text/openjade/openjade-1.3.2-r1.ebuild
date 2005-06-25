@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.27 2005/06/05 08:42:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.28 2005/06/25 17:07:57 liquidx Exp $
 
 inherit libtool sgml-catalog eutils flag-o-matic gnuconfig multilib
 
@@ -32,7 +32,7 @@ src_compile() {
 	# Please note!  Opts are disabled.  If you know what you're doing
 	# feel free to remove this line.  It may cause problems with
 	# docbook-sgml-utils among other things.
-	export ALLOWED_FLAGS="-O -O1 -O2 -pipe -g"
+	export ALLOWED_FLAGS="-O -O1 -O2 -pipe -g -march"
 	strip-flags
 
 	# Default CFLAGS and CXXFLAGS is -O2 but this make openjade segfault

@@ -1,6 +1,16 @@
-MD5 1a63f7bd326b259e91d89d01568243a1 ChangeLog 6325
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7c6f3d05d6d068dbd92085a90adff6a3 ChangeLog 6438
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 6899ce558500a98ade7571481d5dfd3b openjade-1.3.2-r1.ebuild 2848
+MD5 611eacad93df108771d81f02701c256e openjade-1.3.2-r1.ebuild 2857
 MD5 7aec561045cfe90b07ce666881668288 files/digest-openjade-1.3.2-r1 66
 MD5 97ffae1d667ab6f72f6e716bac5f3833 files/openjade-1.3.2-msggen.pl.patch 418
 MD5 7b4fc3abf04cdb88a197065eaf3b4e53 files/openjade-1.3.2.dsssl-catalog 269
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFCvZAzTM53OX+9xmMRAvljAKCtVR3iofl/g46YUrLJ6h4ESAtiCgCXRBrg
+LeBWczrJbxVwMfUDe0ag8g==
+=LUje
+-----END PGP SIGNATURE-----
