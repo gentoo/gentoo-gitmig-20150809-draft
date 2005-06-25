@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.45 2005/06/24 16:40:42 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.46 2005/06/25 07:01:38 stkn Exp $
+
+  24 Jun 2005; Stefan Knoblich <stkn@gentoo.org> -zaptel-1.0.0.ebuild,
+  -zaptel-1.0.1.ebuild, -zaptel-1.0.2.ebuild:
+  Removing old zaptel ebuilds
 
 *zaptel-1.0.4-r1 (24 Jun 2005)
 
