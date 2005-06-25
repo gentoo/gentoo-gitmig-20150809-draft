@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 437f3d22f213b8569b6cb5403f8ddfbf ChangeLog 3770
 MD5 3478ada446b86ea433b13c9ae7163607 ivtv-0.2.0_rc2.ebuild 3655
 MD5 e3054c36ac41502ac2502af8511ad8f4 ivtv-0.2.0_rc3-r2.ebuild 2830
@@ -12,3 +15,10 @@ MD5 b9e5dc4af8f84b925e0821829ce7e1ba files/digest-ivtv-0.2.0_rc3-r2 134
 MD5 b9e5dc4af8f84b925e0821829ce7e1ba files/digest-ivtv-0.2.0_rc3-r3 134
 MD5 994d47620b6a826a5d2cf84b3cb1bc5c files/digest-ivtv-0.2.0_rc3-r4 134
 MD5 5458ad51769cecb853e0afb00ab63930 files/digest-ivtv-0.2.0_rc3-r5 134
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvd8LBtvusYtCZMsRAj39AKCLbe68K0CxqjkNGFzIYrQs2XvDEgCfdxGc
+xtaMuvFcXxbEVKt4nJ5amJ8=
+=u5PS
+-----END PGP SIGNATURE-----
