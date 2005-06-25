@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortalog
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.17 2005/05/25 14:03:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.18 2005/06/25 02:03:52 ticho Exp $
+
+  25 Jun 2005; Andrej Kacian <ticho@gentoo.org> snortalog-2.4.0.ebuild:
+  Added ~amd64 keyword.
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> snortalog-2.4.0.ebuild:
   dev-perl/Getopt-Long => perl-core/Getopt-Long migration
