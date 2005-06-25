@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.10 2005/06/22 11:30:11 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.11 2005/06/25 19:41:40 ferdy Exp $
 
 #
 # Original Authors: Fernando J. Pereda <ferdy@gentoo.org>
@@ -33,7 +33,10 @@ ECLASS="mailer"
 INHERITED="$INHERITED $ECLASS"
 IUSE="mailwrapper"
 RDEPEND="mailwrapper? (
-		net-mail/mailer-config
+		|| ( 
+			net-mail/mailer-config
+			app-admin/eselect
+		)
 		>=net-mail/mailwrapper-0.2.1-r1
 	)
 	!mailwrapper? (
