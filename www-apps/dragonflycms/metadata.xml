@@ -7,10 +7,12 @@
 <name>Jochen Maes</name>
 </maintainer>
 <longdescription lang="en">
-	DragonFly CMS is an Opensource CMS/portal based on CPG-Nuke.
+	CPG Dragonfly CMS is a feature-rich open source content management system
+	based off of PHP-Nuke 6.5
 </longdescription>
 <longdescription lang="nl">
-	DragonFLy CMS is een Opensource CMS/portaal gebaseerd op CPG-Nuke.
+	CPG Dragonfly CMS is een open source content management system met enorm
+	veel mogelijkheden. Dragonfly is gebaseerd op PHP-Nuke 6.5
 </longdescription>
 </pkgmetadata>
 
