@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.66 2005/06/18 11:52:27 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.67 2005/06/25 14:03:57 gmsoft Exp $
+
+  25 Jun 2005; Guy Martin <gmsoft@gentoo.org> gcalctool-5.5.41.ebuild:
+  Stable on hppa.
 
   18 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org>
   gcalctool-5.5.41.ebuild:
