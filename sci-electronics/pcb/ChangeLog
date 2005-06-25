@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.11 2005/05/17 18:17:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.12 2005/06/25 23:38:09 ribosome Exp $
+
+  25 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -pcb-20040215.ebuild,
+  -pcb-20040530.ebuild, -pcb-20040903.ebuild:
+  Removed obsolete versions.
 
   17 May 2005; Michael Hanselmann <hansmi@gentoo.org> pcb-20050127.ebuild:
   Stable on ppc.
