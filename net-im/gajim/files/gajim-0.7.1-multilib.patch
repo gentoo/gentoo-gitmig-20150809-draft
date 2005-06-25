@@ -1,0 +1,22 @@
+--- gajim-0.7.1/Makefile	2005-06-05 12:56:42.000000000 +0200
++++ gajim-0.7.1/Makefile	2005-06-25 13:05:42.000000000 +0200
+@@ -3,6 +3,7 @@
+ MODULES		= src src/common po
+ PREFIX		= /usr
+ DESTDIR		= /
++LIBDIR		= lib
+ 
+ FIND		= find . \( -name '*.glade' -o -name '*.py' -o -name '*.xpm' -o -name '*.gif' -o -name '*.png' -o -name '*.mo' -o -name '*.wav' \)
+ 
+@@ -67,9 +68,9 @@
+ 	cp gajim.desktop "$(DESTDIR)$(PREFIX)/share/applications/";
+ 	mkdir -p "$(DESTDIR)$(PREFIX)/share/man/man1";
+ 	cp gajim.1 "$(DESTDIR)$(PREFIX)/share/man/man1";
+-	mkdir -p "$(DESTDIR)$(PREFIX)/lib/gajim";
++	mkdir -p "$(DESTDIR)$(PREFIX)/$(LIBDIR)/gajim";
+ 	for f in $(FILES_LIB) ; do \
+-		cp "$$f" "$(DESTDIR)$(PREFIX)/lib/gajim/"; \
++		cp "$$f" "$(DESTDIR)$(PREFIX)/$(LIBDIR)/gajim/"; \
+ 	done
+ 	mkdir -p "$(DESTDIR)$(PREFIX)/bin";
+ 	for s in $(SCRIPTS) ; do \

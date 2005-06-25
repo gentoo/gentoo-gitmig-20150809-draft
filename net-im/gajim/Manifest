@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1886c8f93b967ebc061ac254dd9b9d99 gajim-0.7.1.ebuild 822
-MD5 3f4e830986815582b1a669dcefb99e21 ChangeLog 470
+MD5 cf68911bcbbfd928bf63ef38e2bebaf3 ChangeLog 606
+MD5 ff1a00b007397ff26f7ebd4d0f532236 gajim-0.7.1.ebuild 938
 MD5 aeded6d40742a2f4f21777446c628a75 metadata.xml 256
 MD5 6f1aa51ef02f0ae0d5408a8efa7e49dd files/digest-gajim-0.7.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCqD49I1lqEGTUzyQRAnToAKC+nD3f4g4+OYtRwRnfnoxebQ26WACeO9Ni
-CJCguGYcmrZG3njx40JolZE=
-=untB
------END PGP SIGNATURE-----
+MD5 5a8c6770554dbd5a01ddb6cba24c301b files/gajim-0.7.1-multilib.patch 836
