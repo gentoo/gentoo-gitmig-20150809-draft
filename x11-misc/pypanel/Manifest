@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 06fb0b24054a921b3525962f4c42a54e ChangeLog 2837
+MD5 87402a7f30cb3a0b91fa1dd5978358f3 ChangeLog 2925
 MD5 c0605cd5dbbc8ef96afed257d9fb8f88 pypanel-1.3.ebuild 791
 MD5 35cdb8a4404d1a4e555e4413fdf422e0 metadata.xml 745
-MD5 ea01225b1e3d77e28a2ea00e55665661 pypanel-2.3.ebuild 860
 MD5 75e7cc3ec36166df5d275808765387aa pypanel-2.0.ebuild 858
+MD5 209fc35efed5e65b079c5940b977467f pypanel-2.3.ebuild 859
 MD5 b80903e4b9a2654f0a4543c094763683 files/digest-pypanel-1.3 62
 MD5 5501ab964c6e6fd776fe2a1428c6a824 files/digest-pypanel-2.0 62
 MD5 020268bfe4da036f1d95353c4441f523 files/digest-pypanel-2.3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCuflQl5AvwDPiUowRAh7kAKCS81LS1akmImPOiI/zGq/CDnR33ACeL1Kp
-FrXCETPHKM2WPv83UfwLQAs=
-=8Gd0
------END PGP SIGNATURE-----
