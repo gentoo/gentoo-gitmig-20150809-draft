@@ -1,10 +1,10 @@
 # ChangeLog for net-mail/mailgraph
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.1 2005/06/25 04:06:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.2 2005/06/25 04:12:34 halcy0n Exp $
 
 *mailgraph-1.11 (25 Jun 2005)
 
-  25 Jun 2005; <halcyon@gentoo.org> +files/mailgraph.confd,
+  25 Jun 2005; Mark Loeser <halcy0n@gentoo.org> +files/mailgraph.confd,
   +files/mailgraph.initd, +metadata.xml, +mailgraph-1.11.ebuild:
   Initial commit of mailgraph. Thanks to Aaron Walker <ka0ttic@gentoo.org> for
   the init scripts and ebuild. More info on bug #74372
