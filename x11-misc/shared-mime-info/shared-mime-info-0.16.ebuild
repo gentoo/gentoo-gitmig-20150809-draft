@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.16.ebuild,v 1.8 2005/06/12 18:14:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.16.ebuild,v 1.9 2005/06/25 13:53:37 gmsoft Exp $
 
 inherit eutils fdo-mime
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.freedesktop.org/~jrb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2

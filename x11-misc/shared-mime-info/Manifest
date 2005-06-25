@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 918d9188a5cfa3375bd385168b00bd21 ChangeLog 5035
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 f6330ebfe02f92328f03ee4af2b2d8fb ChangeLog 4940
 MD5 5f02044ce2bb97d9c9b0f66f2193daef shared-mime-info-0.14-r2.ebuild 1086
 MD5 ddf992d263ea6441be3038531e88a571 shared-mime-info-0.14.ebuild 723
 MD5 34cb3f14ceed8d406a18bfb2dd67735f shared-mime-info-0.15.ebuild 1096
-MD5 779a008e3209da05e8ea7a1755388864 shared-mime-info-0.16.ebuild 979
-MD5 d321aa82774706113fca9f5c62f7923b files/shared-mime-info-0.14-text_plain.patch 7403
-MD5 e22d66c3b0f0daaae096665812da282c files/digest-shared-mime-info-0.14-r2 73
-MD5 67aa86e5f21d4e23fe3cb4aef1984df7 files/digest-shared-mime-info-0.15 73
-MD5 2ba3279e9293282a945a64b94e679c25 files/shared-mime-info-0.15-ALL_CFLAGS_LIBS.patch 232
+MD5 581b0337448169e7a84087a56d25c0f8 shared-mime-info-0.16.ebuild 978
 MD5 e22d66c3b0f0daaae096665812da282c files/digest-shared-mime-info-0.14 73
 MD5 ef9e940db1ccddfec652d897511fcc27 files/digest-shared-mime-info-0.16 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrHuymOfEJZHYOKcRAn6cAJ9iVjErSiyNu4yFZPGIwdVjbMLHXwCdFAJ8
-8IBP4LBVkQWL+Dbyy1cZBNM=
-=F2Xj
------END PGP SIGNATURE-----
+MD5 e22d66c3b0f0daaae096665812da282c files/digest-shared-mime-info-0.14-r2 73
+MD5 67aa86e5f21d4e23fe3cb4aef1984df7 files/digest-shared-mime-info-0.15 73
+MD5 d321aa82774706113fca9f5c62f7923b files/shared-mime-info-0.14-text_plain.patch 7403
+MD5 2ba3279e9293282a945a64b94e679c25 files/shared-mime-info-0.15-ALL_CFLAGS_LIBS.patch 232
