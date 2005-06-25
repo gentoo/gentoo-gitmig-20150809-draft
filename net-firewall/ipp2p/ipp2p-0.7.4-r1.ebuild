@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.7.4.ebuild,v 1.1 2005/06/24 17:27:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.7.4-r1.ebuild,v 1.1 2005/06/25 02:06:16 eradicator Exp $
 
 IUSE=""
 
@@ -14,12 +14,10 @@ SLOT="${KV}"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-RDEPEND="virtual/modutils"
-
-IPTABLES_VERSION="1.2.11"
+RDEPEND="virtual/modutils
+	 >=net-firewall/iptables-1.2.11"
 
 DEPEND="${RDEPEND}
-	>=net-firewall/iptables-${IPTABLES_VERSION}
 	virtual/linux-sources"
 
 pkg_setup() {
@@ -40,7 +38,7 @@ src_unpack() {
 src_compile() {
 	xarch="${ARCH}"
 	unset ARCH
-	emake KERNEL_SRC="${KV_DIR}" CFLAGS="${CFLAGS}" IPTABLES_SRC="${ROOT}/usr" IPTABLES_VERSION="${IPTABLES_VERSION}" IPTABLES_BIN="${ROOT}/sbin/iptables" || die "Parallel Make Failed"
+	emake KERNEL_SRC="${KV_DIR}" CFLAGS="${CFLAGS}" IPTABLES_SRC="${ROOT}/usr" IPTABLES_VERSION="$(${ROOT}/sbin/iptables --version | cut -f2 -dv)" IPTABLES_BIN="${ROOT}/sbin/iptables" || die "Parallel Make Failed"
 	ARCH="${xarch}"
 }
 
