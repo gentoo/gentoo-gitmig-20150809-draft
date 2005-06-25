@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.20-r1.ebuild,v 1.1 2005/02/14 00:38:20 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.24.ebuild,v 1.1 2005/06/25 23:43:25 pebenito Exp $
 
 IUSE="build nls pam"
 
 inherit eutils
 
 EXTRAS_VER="1.12"
-SEPOL_VER="1.2"
+SEPOL_VER="1.4"
 
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -15,7 +15,7 @@ SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 RDEPEND=">=sys-libs/libselinux-${PV}
 	!build? ( pam? ( sys-libs/pam ) >=sys-libs/libsepol-${SEPOL_VER} )
@@ -47,6 +47,12 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/policycoreutils-1.24-genhomedircon-quiet.diff
+
+	# This warning makes no sense, in this context
+	sed -i -e '/FILE/ s/;/=NULL;/' ${S}/audit2why/audit2why.c \
+		|| die "audit2why sed failed"
 
 	# fixfiles is extremely dangerous
 	sed -i -e '/^all/s/fixfiles//' ${S}/scripts/Makefile \
