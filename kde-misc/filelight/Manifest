@@ -1,5 +1,15 @@
-MD5 3b6fd8f66dc3a5cfb3c34f05faa81d7a filelight-1.0_beta6.ebuild 682
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6e096bd66735777c0d2e22100fc875e5 ChangeLog 3113
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 76a93581f2ef5de805878bd4a6c87f94 ChangeLog 3012
-MD5 681713bf05f8bbf1693fa8728cc22861 files/filelight-1.0_beta6-pic.patch 1025
+MD5 7c4b93a7aa9388fb186259ec6a50f6d8 filelight-1.0_beta6.ebuild 683
 MD5 7ef6c74df9f1f4873b4647add19f5152 files/digest-filelight-1.0_beta6 72
+MD5 681713bf05f8bbf1693fa8728cc22861 files/filelight-1.0_beta6-pic.patch 1025
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvXfHBXaUFmZvwyMRAu/SAJsFHoXLBmkxoZzdeToRgofsijabNwCgjTrB
+r/fdx7dbqd/Isb8h6KdlN2E=
+=qojh
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.0_beta6.ebuild,v 1.3 2005/06/05 11:41:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.0_beta6.ebuild,v 1.4 2005/06/25 15:26:42 agriffis Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.methylblue.com/filelight/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ppc ~sparc x86"
+KEYWORDS="amd64 ~hppa ppc ~sparc x86"
 IUSE=""
 
 need-kde 3.2
