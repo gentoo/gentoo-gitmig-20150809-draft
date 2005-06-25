@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.0.22a.ebuild,v 1.2 2005/06/17 14:39:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.0.22a.ebuild,v 1.3 2005/06/25 12:02:48 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -32,11 +32,11 @@ src_unpack() {
 
 src_compile() {
 	cd "${S}"/mysql-gui-common
-	econf --with-commondirname=common-administrator || die "econf failed"
+	econf --with-commondirname=common/administrator || die "econf failed"
 	emake -j1 || die "emake failed"
 
 	cd "${S}"/mysql-administrator
-	econf --with-commondirname=common-administrator || die "econf failed"
+	econf --with-commondirname=common/administrator || die "econf failed"
 	emake -j1 || die "emake failed"
 }
 
