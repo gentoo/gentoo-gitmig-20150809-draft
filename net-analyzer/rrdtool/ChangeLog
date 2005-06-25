@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.71 2005/06/25 21:14:51 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.72 2005/06/25 23:51:18 vanquirius Exp $
+
+  25 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> rrdtool-1.2.6.ebuild,
+  rrdtool-1.2.6-r1.ebuild:
+  Fix tcl issues. Thanks to Kugelfang on irc.
 
   25 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org>
   rrdtool-1.2.6-r1.ebuild:
