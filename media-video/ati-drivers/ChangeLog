@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.98 2005/06/25 08:53:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.99 2005/06/25 09:19:44 lu_zero Exp $
+
+*ati-drivers-8.13.4 (25 Jun 2005)
+
+  25 Jun 2005; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-8.13.4.ebuild:
+  New Xpress 200 driver, p.masked as usual since I cannot test it
 
   25 Jun 2005; Luca Barbato <lu_zero@gentoo.org> +files/8.14.13-amd64.patch,
   ati-drivers-8.14.13.ebuild, ati-drivers-8.14.13-r1.ebuild:
