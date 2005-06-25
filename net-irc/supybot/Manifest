@@ -1,21 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 166dbc6993e7a103788bc60fdea41b4a supybot-0.80.1.ebuild 924
-MD5 2ffa619d18509f703649b13e0875b020 supybot-0.80.0_pre2.ebuild 980
-MD5 a018e19fe4705050febf66a6576b56e0 supybot-0.77.0.ebuild 924
-MD5 c4776a9dac5b002f4da907bf0a1820f4 supybot-0.77.2.ebuild 1130
-MD5 faa66222026a52960a28bd29ad086626 ChangeLog 1799
+MD5 26a8b05daaa3a6498306a341cc18486b ChangeLog 2015
 MD5 eccd3e44b1e8fc954692d4faf329cf38 metadata.xml 218
-MD5 e723df2ced2db8d65e4b8ed5026d2b2b files/supybot-0.77.0-setup.py.patch 629
-MD5 67a13f83c4ad67ef8e6e25c06b67cf3e files/digest-supybot-0.77.0 67
+MD5 c4776a9dac5b002f4da907bf0a1820f4 supybot-0.77.2.ebuild 1130
+MD5 a1976b9e5cd7e7028d5346bb3f7369e4 supybot-0.80.1.ebuild 925
+MD5 9da093864026b3482dd88291c887d289 supybot-0.83.0_rc3.ebuild 928
 MD5 e3869089e6a6a46323a95659f1fbcd02 files/digest-supybot-0.77.2 158
+MD5 e723df2ced2db8d65e4b8ed5026d2b2b files/supybot-0.77.0-setup.py.patch 629
 MD5 42b11d8290fbd3908d3a434cf0987f3b files/digest-supybot-0.80.1 67
-MD5 1aa681f3f8b9a3b9392c7adc5213fd74 files/digest-supybot-0.80.0_pre2 71
+MD5 d4ac0c8b972cdb7979ccc792a86dc44e files/digest-supybot-0.83.0_rc3 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCmeNAI1lqEGTUzyQRAr0MAKDIn1UCU1aPV5H1s5e05ZjOVQMmuQCfa6Tm
-bWPTMUEbnRManmELzA+c6sc=
-=2cu8
+iD8DBQFCvZKfTM53OX+9xmMRAl3JAJ4sjW+wbvSkGBWUG6fvGBQds/HElwCeMcB6
+hp8HNXb3vCl6v+uB5aUQeD0=
+=GJgt
 -----END PGP SIGNATURE-----
