@@ -16,13 +16,13 @@ MD5 54b96012b8c9d68ff22f22fecb2ee06e gnome-python-1.4.4.ebuild 1206
 MD5 a22d248c0215c66a6fd1eac6929a07e3 gnome-python-2.0.0-r1.ebuild 1293
 MD5 088818e715d16d6b0e2b3ff0fa7a6bc7 gnome-python-2.0.0.ebuild 1086
 MD5 6abefe511c4eb0f08929376ad7249b58 gnome-python-2.0.2.ebuild 1295
-MD5 3240520144f9ba03312809f3430016df gnome-python-2.10.0.ebuild 1369
+MD5 d422b4e0a13e555d7dcf9838ae5fe421 gnome-python-2.10.0.ebuild 1373
 MD5 744a2b99b65118ec82f17842c1649113 gnome-python-2.6.1.ebuild 1561
 MD5 aab7d8b8a9c5777f5acad94eb998f367 metadata.xml 178
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCui5OI1lqEGTUzyQRAjkXAJ9MBQps/OlbuWdNPNO7HEBftSYs3gCfY5bv
-c2AkqLkgnL7Z9tJYVY4Ez6o=
-=xCXO
+iD8DBQFCvWyfI1lqEGTUzyQRAuCwAJ9HC8uZFVj8hbRxmcdRrDCLTV7tbwCgsEY9
+A32M9YjugLduuacu5WIkWso=
+=1Igg
 -----END PGP SIGNATURE-----
