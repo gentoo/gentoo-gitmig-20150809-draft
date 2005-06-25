@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2112c132e5168e923c6dedb19ef3c39f evolution-2.2.1.1.ebuild 4481
+MD5 7566d13b5f7a68ff7de28e4dea4a533e ChangeLog 26488
 MD5 536ab7e8f8a48d425ca9ce4c31d61c29 evolution-1.2.4.ebuild 6258
-MD5 a2e01a1a26ddd44ae87690c7915726a3 evolution-2.0.4.ebuild 4093
 MD5 9f33366393af6b5b626a56e13296913e evolution-2.0.3-r2.ebuild 4206
-MD5 6281d98444033e02e9391799079257eb ChangeLog 26396
+MD5 a2e01a1a26ddd44ae87690c7915726a3 evolution-2.0.4.ebuild 4093
 MD5 6ec9b6a7896b799d17a21c4edffd33c9 metadata.xml 272
-MD5 231c671de5ffec656f15c352abe8dcc4 files/evolution-2.2-mark-as.patch 2283
-MD5 7b8c1cc2fd2428815184d471af4bb3bf files/evolution-2.0.3-gentoo_etc_services.patch 1662
-MD5 015ecd719e11c1170e7f41b3490f52f7 files/evolution-2-CAN-2005-0102.patch 467
-MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
-MD5 5c653e85cdd60291967915b55df80e82 files/digest-evolution-2.2.1.1 72
-MD5 2381d584d4a3104a6c491b21ecc0bc47 files/evolution_mail-account-gui_authtype.diff 737
-MD5 f44bc5e363c1f976a7a72676886b9d13 files/evolution-1.1.90-subversion.patch 470
-MD5 80037ae3781636f2ddad3a09bf628ebc files/evolution-2.2-pilot.patch 998
-MD5 988789d67b6d0e09eea25ba441cda871 files/digest-evolution-2.0.3-r2 70
+MD5 d6ae0c4169455df0328d79c35b971f8a evolution-2.2.1.1.ebuild 4487
 MD5 5d430637760a0c93974ed91b72a16438 files/digest-evolution-1.2.4 131
+MD5 988789d67b6d0e09eea25ba441cda871 files/digest-evolution-2.0.3-r2 70
 MD5 75a9be02c12e91b5ddedbdfd11c07e03 files/digest-evolution-2.0.4 70
+MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
 MD5 8909b7f2d3483d55036f21ca2780e4a3 files/evolution-1.1.90-sharedldap.patch 370
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsyAJViELBEf1JB0RAhNZAJ49Nca7PMiwmnBUPzgS3Ukx2PAlhQCfbPSh
-adGuXePylofl+MlO9JndDKQ=
-=kWhZ
------END PGP SIGNATURE-----
+MD5 f44bc5e363c1f976a7a72676886b9d13 files/evolution-1.1.90-subversion.patch 470
+MD5 015ecd719e11c1170e7f41b3490f52f7 files/evolution-2-CAN-2005-0102.patch 467
+MD5 7b8c1cc2fd2428815184d471af4bb3bf files/evolution-2.0.3-gentoo_etc_services.patch 1662
+MD5 231c671de5ffec656f15c352abe8dcc4 files/evolution-2.2-mark-as.patch 2283
+MD5 2381d584d4a3104a6c491b21ecc0bc47 files/evolution_mail-account-gui_authtype.diff 737
+MD5 5c653e85cdd60291967915b55df80e82 files/digest-evolution-2.2.1.1 72
+MD5 80037ae3781636f2ddad3a09bf628ebc files/evolution-2.2-pilot.patch 998
