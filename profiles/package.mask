@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4123 2005/06/25 12:39:00 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4124 2005/06/25 23:11:40 smithj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -62,7 +62,7 @@ kde-misc/kcpuload
 x11-plugins/karamba-weather
 
 # Jonathan Smith <smithj@gentoo.org> (15 Jun 2005)
-# Seems to be broken... see #96212
+# masked for testing
 >=x11-misc/xlockmore-5.18
 
 # Andrej Kacian <ticho@gentoo.org> (15 Jun 2005)
