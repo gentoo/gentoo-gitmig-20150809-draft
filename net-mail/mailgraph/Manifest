@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 133b0c994ab2e5d6251f05f57e6dce66 ChangeLog 597
+MD5 646dafd0e7669abd126da23ebaaf6d2a mailgraph-1.11.ebuild 1423
 MD5 12cc0b3f6dae806d246c36bd9ea010e9 metadata.xml 259
-MD5 20481024ccbe7a6ef718248e645d6797 mailgraph-1.11.ebuild 1420
-MD5 fa4ab9113887dc8cbbc73f83f703eefe ChangeLog 513
-MD5 608f945e78c754fb3f5aee14881ec2da files/mailgraph.initd 685
-MD5 f464fa42aeb389a331b25ce8a4314661 files/mailgraph.confd 406
 MD5 ca32a39fff4fa2c070d832feb539f47d files/digest-mailgraph-1.11 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvNneCRZPokWLroQRAvJiAJ4nbOrmNVgxXuScWEoqCE6rJCYmEwCg3KBj
-9X6tuEMoSQvflj2BvCK22fY=
-=ISAo
------END PGP SIGNATURE-----
+MD5 f464fa42aeb389a331b25ce8a4314661 files/mailgraph.confd 406
+MD5 608f945e78c754fb3f5aee14881ec2da files/mailgraph.initd 685
