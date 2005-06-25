@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r1.ebuild,v 1.5 2005/06/19 20:58:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r1.ebuild,v 1.6 2005/06/25 08:53:34 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -76,6 +76,7 @@ src_unpack() {
 	fi
 	epatch ${FILESDIR}/8.8.25-via-amd64.patch
 	epatch ${FILESDIR}/8.8.25-smp.patch
+	epatch ${FILESDIR}/8.14.13-amd64.patch
 	rm -rf ${WORKDIR}/usr/X11R6/bin/fgl_glxgears
 }
 

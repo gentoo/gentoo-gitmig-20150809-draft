@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.97 2005/06/19 20:58:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.98 2005/06/25 08:53:34 lu_zero Exp $
+
+  25 Jun 2005; Luca Barbato <lu_zero@gentoo.org> +files/8.14.13-amd64.patch,
+  ati-drivers-8.14.13.ebuild, ati-drivers-8.14.13-r1.ebuild:
+  fix for bug #96740, thanks to Marcin Deranekl <gringo@slonko.net> for
+  reporting and providing the patch
 
   19 Jun 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/fglrx-2.6.12-inter_module_get.patch,
