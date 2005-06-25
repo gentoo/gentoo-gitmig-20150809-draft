@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-1.9.5_pre20040820.ebuild,v 1.1 2005/01/20 22:45:19 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-1.9.5_pre20040820.ebuild,v 1.2 2005/06/25 22:26:32 agriffis Exp $
 
 inherit eutils
 
@@ -21,26 +21,22 @@ src_compile() {
 
 	einfo "Building the fpc compiler and units"
 	# have to use -j1 as it doesn't seem to like -j2+
-	emake -j1 \
-	build \
-	OS_TARGET=linux \
-	PP=${S}/ppc386 \
-	PREFIX=${D}/usr \
-	|| die "Free Pascal Compiler build process failed!"
+	emake -j1 build \
+		OS_TARGET=linux \
+		PP=${S}/ppc386 \
+		PREFIX=${D}/usr \
+		|| die "Free Pascal Compiler build process failed!"
 }
 
 src_install() {
-
 	einfo "Installing the fpc compiler and units"
-	emake -j1 \
-	install \
-	OS_TARGET=linux \
-	PP=${S}/ppc386 \
-	PREFIX=${D}/usr \
-	|| die "Free Pascal Compiler install failed!"
+	make install \
+		OS_TARGET=linux \
+		PP=${S}/ppc386 \
+		PREFIX=${D}/usr \
+		|| die "Free Pascal Compiler install failed!"
 
-	if use doc
-	then
+	if use doc; then
 		#install the html docs
 		einfo "Installing html docs"
 		mkdir ${D}/usr/share/doc/fpc-${FPC_V}/html

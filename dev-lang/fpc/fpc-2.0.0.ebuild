@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0_rc2.ebuild,v 1.3 2005/06/25 22:26:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0.ebuild,v 1.1 2005/06/25 22:26:32 agriffis Exp $
 
 inherit eutils
 
-MY_PV="1.9.8"
-STABLE="1.0.10"
+MY_PV="2.0.0"
+STABLE="2.0.0"
 ARCH="386"
 
 SLOT="0"
@@ -14,15 +14,16 @@ KEYWORDS="~x86"
 DESCRIPTION="Free Pascal Compiler"
 HOMEPAGE="http://www.freepascal.org/"
 IUSE=""
-SRC_URI="ftp://ftp.freepascal.org/pub/fpc/beta/source-${MY_PV}/fpc-${MY_PV}.source.tar.gz
-	 ftp://ftp.freepascal.org/pub/fpc/dist/Linux/i386/separate/binary.tar"
+SRC_URI="mirror://sourceforge/freepascal/fpc-${MY_PV}.source.tar.gz
+	 mirror://sourceforge/freepascal/fpc-${MY_PV}.i386-linux.tar"
 DEPEND="!dev-lang/fpc-bin"
 RDEPEND="!dev-lang/fpc-bin"
 S=${WORKDIR}/fpc
 
 src_unpack() {
 	unpack ${A} || die "Unpacking ${A} failed!"
-	tar -zxf baselinux.tar.gz || die "Unpacking baselinux.tar.gz failed!"
+	tar -xf binary.i386-linux.tar || die "Unpacking binary.i386-linux.tar failed!"
+	tar -zxf base.i386-linux.tar.gz || die "Unpacking base.i386-linux.tar.gz failed!"
 }
 
 set_pp() {
