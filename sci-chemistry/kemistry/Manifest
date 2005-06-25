@@ -1,19 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3771e66e30a01fab4588bc647952d2c4 kemistry-0.7.ebuild 667
-MD5 b160b1dcf62bcfd685a7393827124b8a kemistry-0.6.ebuild 578
-MD5 dd8daffff21c00cbf57383427ec8d1f6 ChangeLog 2479
+MD5 1e59746738ba79c45f8ea1d90a9d4171 ChangeLog 2622
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 50e1d5c2a24f011bf95f4f52408c7ad1 files/kemistry-0.6-gcc3.2.patch 1736
 MD5 c3996b6e2fbc3c51e3cb7420a61cfed3 files/kemistry-0.7-gcc3.4.patch 2128
 MD5 228927d1d7c84e2f350740b3ed134944 files/kemistry-0.7-fPIC.patch 1966
-MD5 3f2cfa5242a8209eb005aa688f7e161b files/digest-kemistry-0.6 66
 MD5 ff459344a766830061d4245b51081a7c files/digest-kemistry-0.7 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmlfBntT9W3vfTuoRAuexAKCcaDgd7O+kasWRYkXGngzSkEURIgCgiv1+
-ddWT4ZnyW7vTulcyS8NqURE=
-=P/Nl
------END PGP SIGNATURE-----

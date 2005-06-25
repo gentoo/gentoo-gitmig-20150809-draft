@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/kemistry
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/ChangeLog,v 1.4 2005/05/30 00:00:50 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/ChangeLog,v 1.5 2005/06/25 21:50:59 ribosome Exp $
+
+  25 Jun 2005; Olivier Fisette <ribosome@gentoo.org>
+  -files/kemistry-0.6-gcc3.2.patch, -kemistry-0.6.ebuild:
+  Removed obsolete version.
 
   30 May 2005; Marcus D. Hanwell <marcus@gentoo.org> kemistry-0.7.ebuild:
   Stable on amd64.
