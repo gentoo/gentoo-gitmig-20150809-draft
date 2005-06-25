@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/cowloop
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/ChangeLog,v 1.5 2005/04/24 03:30:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/ChangeLog,v 1.6 2005/06/25 08:49:54 dragonheart Exp $
+
+*cowloop-2.15 (25 Jun 2005)
+
+  25 Jun 2005; Daniel Black <dragonheart@gentoo.org> cowloop-2.14.ebuild,
+  +cowloop-2.15.ebuild:
+  version bump thanks to meatoo. 2.14 marked x86 stable
 
   24 Apr 2005; Daniel Black <dragonheart@gentoo.org> cowloop-2.14.ebuild:
   CFLAGS fix
