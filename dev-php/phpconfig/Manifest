@@ -1,8 +1,18 @@
-MD5 a337cb2c7926716bbee9bb67fd55945a phpconfig-4.3.10.ebuild 475
-MD5 77bca7c7383a4e8518c897436978e6ec phpconfig-5.0.4.ebuild 503
-MD5 4aaa700474b3b39a5ee0df8c9533be3f phpconfig-5.1.0_beta.ebuild 509
-MD5 20a839261a245831bebc798717c34cec metadata.xml 272
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e83da8eba1a19dbb7735e9641207af1d ChangeLog 413
 MD5 f8b0f67c9699e97ba131dfe1294d1c74 files/digest-phpconfig-4.3.10 68
 MD5 6e51126168d1b338861e5590d5aa58f5 files/digest-phpconfig-5.0.4 68
 MD5 b838a7be804caad9551e86ddf531f1a9 files/digest-phpconfig-5.1.0_beta 73
+MD5 20a839261a245831bebc798717c34cec metadata.xml 272
+MD5 a337cb2c7926716bbee9bb67fd55945a phpconfig-4.3.10.ebuild 475
+MD5 5538b25024843e11ac3231154083d8f1 phpconfig-5.0.4.ebuild 506
+MD5 4aaa700474b3b39a5ee0df8c9533be3f phpconfig-5.1.0_beta.ebuild 509
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvWwmI1lqEGTUzyQRAijBAJ44hm+xhrkyxIUp72BCazx8m3YK7QCcDhBM
+bjOlEMv4synuL9gYgXEDros=
+=s6cP
+-----END PGP SIGNATURE-----
