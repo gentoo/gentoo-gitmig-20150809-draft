@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.25 2005/04/27 21:29:36 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.26 2005/06/25 22:29:52 cardoe Exp $
+
+*ivtv-0.2.0_rc3-r5 (25 Jun 2005)
+
+  25 Jun 2005; Doug Goldstein <cardoe@gentoo.org> +ivtv-0.2.0_rc3-r5.ebuild:
+  rev bump to rc3k to support 2.6.12 kernels. bug #97013
 
   27 Apr 2005; Brian Jackson <iggy@gentoo.org> ivtv-0.2.0_rc3-r4.ebuild:
   a few fixes from bug #90535, thanks to Andreas Weder
