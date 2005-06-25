@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.12 2005/04/07 17:20:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.13 2005/06/25 14:01:08 liquidx Exp $
 
 inherit rpm eutils
 
@@ -12,7 +12,7 @@ RPM_V=${END_V%.[0-9]*.[0-9]*}
 XIMIAN_V=${END_V#[0-9]*.}
 
 DESCRIPTION="Ximian Desktop's GTK, Galeon, GDM, Metacity, Nautilus, XMMS themes, icons and cursors."
-HOMEPAGE="http://www.ximian.com/xd2/"
+HOMEPAGE="http://www.novell.com/products/desktop/"
 SRC_URI="ftp://ftp.ximian.com/pub/xd2/redhat-9-i386/source/${PN}-${MY_PV}-${RPM_V}.ximian.${XIMIAN_V}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
