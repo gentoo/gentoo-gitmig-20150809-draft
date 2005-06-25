@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.10 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.11 2005/06/25 15:58:55 liquidx Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org> (21 Jun 2003)
 #
@@ -42,8 +42,6 @@ rpm_unpack() {
 	if [ -z "${rpmfile}" ]; then
 		return 1
 	fi
-
-	cd ${WORKDIR}
 	if [ -x /usr/bin/rpm2cpio -a -z "${USE_RPMOFFSET_ONLY}" ]; then
 		rpm2cpio ${rpmfile} | cpio -idmu --no-preserve-owner --quiet || return 1
 	else
