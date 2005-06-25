@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/bcwipe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.11 2005/01/01 12:25:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.12 2005/06/25 08:22:51 dragonheart Exp $
+
+*bcwipe-1.5_p3 (25 Jun 2005)
+
+  25 Jun 2005; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  bcwipe-1.5_p2.ebuild, +bcwipe-1.5_p3.ebuild:
+  version bump. 1.5_p2 x86 stable. metadata owner change to crypto herd
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> bcwipe-1.5_p2.ebuild:
   Added ~sparc keyword.
