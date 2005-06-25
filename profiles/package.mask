@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4119 2005/06/24 21:57:43 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4120 2005/06/25 00:53:45 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# John N. Laliberte <allanonjl@gentoo.org> (24 Jun 2005)
+# old, unmaintained ebuilds with dead upstream
+# pending removal
+app-office/gnofin
+gnome-extra/gnobog
 
 # Andrea Barisani <lcars@gentoo.org> (23 Jun 2005)
 # Masked for testing
