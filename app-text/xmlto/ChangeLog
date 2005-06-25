@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.33 2005/06/25 21:49:24 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.34 2005/06/25 22:22:30 kugelfang Exp $
+
+  25 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> xmlto-0.0.18.ebuild:
+  Marked s390.
 
   25 Jun 2005; John Mylchreest <johnm@gentoo.org> xmlto-0.0.18.ebuild:
   adding ~s390
