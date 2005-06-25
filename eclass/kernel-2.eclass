@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.128 2005/06/23 20:39:44 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.129 2005/06/25 12:10:49 swegener Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -256,7 +256,7 @@ if [[ ${ETYPE} == sources ]]; then
 	DEPEND="!build? ( sys-apps/sed
 					  >=sys-devel/binutils-2.11.90.0.31 )
 			doc? ( app-text/docbook-sgml-utils 
-				   app-text/xmlto)"
+				   app-text/xmlto )"
 	RDEPEND="${DEPEND}
 			!build? ( >=sys-libs/ncurses-5.2
 					  sys-devel/make )"
