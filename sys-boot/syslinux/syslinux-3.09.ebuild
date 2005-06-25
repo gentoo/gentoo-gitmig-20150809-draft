@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.08.ebuild,v 1.2 2005/06/25 14:35:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.09.ebuild,v 1.1 2005/06/25 14:35:40 solar Exp $
 
 inherit eutils
 

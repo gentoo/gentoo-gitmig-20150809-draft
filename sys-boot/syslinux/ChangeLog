@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.16 2005/06/16 23:00:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.17 2005/06/25 14:35:40 solar Exp $
+
+*syslinux-3.09 (25 Jun 2005)
+
+  25 Jun 2005; <solar@gentoo.org> +files/syslinux-3.09-nopie.patch,
+  syslinux-3.08.ebuild, +syslinux-3.09.ebuild:
+  - worked around BREG compile errors while building. version bumped to current
+  also
 
 *syslinux-3.08 (16 Jun 2005)
 
