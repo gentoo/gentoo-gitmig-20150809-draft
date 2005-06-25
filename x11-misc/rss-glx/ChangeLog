@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.31 2005/06/25 12:29:57 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.32 2005/06/25 16:40:23 smithj Exp $
+
+*rss-glx-0.8.0-r1 (25 Jun 2005)
+
+  25 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/rss-glx-0.8.0-configure.in.patch, +rss-glx-0.8.0-r1.ebuild:
+  allows user-cflags for #89963; installs all screensavers for #89908; fixed
+  hackdir so that it works with xscreensaver 4.22-r1
 
   25 Jun 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml:
   removed vapier and liquidx as maintainer

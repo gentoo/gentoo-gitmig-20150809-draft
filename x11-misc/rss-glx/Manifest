@@ -1,22 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 503c247c3675ae80a971018cc4660df5 ChangeLog 5574
 MD5 d455ab02ea8f01213b3bbabc80cec72b rss-glx-0.7.6-r1.ebuild 4490
 MD5 3881c6c924d1b00291fb9c15455fe0b9 rss-glx-0.7.6.ebuild 4046
 MD5 2b2bf7730af496e4eee5da98c390868d rss-glx-0.8.0.ebuild 4635
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 d37cf2a8b33927e7e4bd4167720bdf83 ChangeLog 5857
+MD5 c9bd51f1a08343044d47e7ec3cd5e83d rss-glx-0.8.0-r1.ebuild 4724
 MD5 c569bd57d6615d7b3d0d66db78c86bb9 files/digest-rss-glx-0.7.6 67
 MD5 c569bd57d6615d7b3d0d66db78c86bb9 files/digest-rss-glx-0.7.6-r1 67
 MD5 6c580284e5773f292a32a5a30fcf539a files/digest-rss-glx-0.8.0 67
-MD5 4dbe321921028a106a05564a14b2f814 files/jwz-vroot.h 6234
 MD5 2f47a2d4b9947332e2817ec81f2ec0d7 files/rss-glx-0.7.4-kdedesktop.patch 833
 MD5 2ef57cb76733985320d72f9ca147f109 files/rss-glx-0.8.0-assert.patch 553
 MD5 9b4404f02157380acbe80165fb4b7bf2 files/rss-glx-0.8.0-kdedesktop.patch 854
+MD5 9ffedb9bb790a6ff0bb9b3e64c6c6675 files/rss-glx-0.8.0-configure.in.patch 642
+MD5 4dbe321921028a106a05564a14b2f814 files/jwz-vroot.h 6234
+MD5 6c580284e5773f292a32a5a30fcf539a files/digest-rss-glx-0.8.0-r1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCvU/Fl5AvwDPiUowRArYjAJ49NSAU3qac7ungX/eh83mWLYOadQCfXs9D
-2TGTAsuLPJ/a5TTXvuFJmwo=
-=FJqW
+iD8DBQFCvYkyl5AvwDPiUowRAgCEAKCTO+OZfyObmuWyGYjAT7gQLixI9gCgiBW0
+ihedXaZnc4YQJFRzrZOgO58=
+=+orm
 -----END PGP SIGNATURE-----
