@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.110 2005/06/21 05:05:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.111 2005/06/25 12:44:26 ka0ttic Exp $
+
+*net-snmp-5.3.20050624 (25 Jun 2005)
+
+  25 Jun 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +net-snmp-5.3.20050624.ebuild:
+  Added 5.3 cvs snapshot for interested folks to play with. Is currently (and
+  will remain) package.mask'd.
 
 *net-snmp-5.1.3_pre1 (21 Jun 2005)
 
