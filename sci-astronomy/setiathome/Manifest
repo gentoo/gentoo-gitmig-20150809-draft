@@ -2,7 +2,7 @@ MD5 0b3bfb8c25357904ca4a26056ea4aa4d ChangeLog 5196
 MD5 3ad691ed19cf5b2e4cc414d72160d3d1 setiathome-3.03-r1.ebuild 2194
 MD5 2e2e20a64df13c2d3aa9a8e5b7e48efd setiathome-3.08-r4.ebuild 2328
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 1070f509bb2a43d513ec4e85ebd32ee8 setiathome-3.03-r2.ebuild 2150
+MD5 4ff6fc7ddcc3cc4130c3d8d04e3f058a setiathome-3.03-r2.ebuild 2151
 MD5 9a7e850d8e364823f360c347d3a37ff8 files/digest-setiathome-3.03-r2 342
 MD5 4383e568b5b768f6fa2f27b3d9a713b9 files/digest-setiathome-3.08-r4 166
 MD5 2d83ded4bcd8e9b28eb91fc883aec602 files/seti-conf.d-r1 349

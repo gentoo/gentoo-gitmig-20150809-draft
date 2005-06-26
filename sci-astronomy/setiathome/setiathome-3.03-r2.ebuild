@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-3.03-r2.ebuild,v 1.3 2005/06/26 11:53:05 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-3.03-r2.ebuild,v 1.4 2005/06/26 11:58:28 killerfox Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -10,8 +10,8 @@ DESCRIPTION="Search for Extraterrestrial Intelligence (SETI) @ home"
 HOMEPAGE="http://setiathome.ssl.berkeley.edu"
 SRC_URI="ppc? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.powerpc-unknown-linux-gnu.tar )
 	sparc? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.sparc-unknown-linux-gnu.tar )
-	ia64? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.ia64-Linux-gnu.tar )
-	hppa? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.hppa-parisc-palinux.tar )"
+	ia64? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.ia64-Linux-gnu.tar )"
+#	hppa? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.hppa-parisc-palinux.tar )
 #	alpha? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.alpha-unknown-linux-gnu.tar )
 
 LICENSE="as-is"
