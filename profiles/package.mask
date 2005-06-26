@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4125 2005/06/26 01:35:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4126 2005/06/26 02:18:33 beu Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -343,10 +343,6 @@ dev-dotnet/winelib
 =dev-java/libgconf-java-2.10.1
 =dev-java/libglade-java-2.10.1
 =dev-java/java-gnome-2.10.1
-
-# Elfyn McBratney <beu@gentoo.org> (28 Apr 2005)
-# Masked for testing.
-app-admin/filewatcher
 
 # Elfyn McBratney <beu@gentoo.org> (27 Apr 2005)
 # Security mask, see bug #88926.
