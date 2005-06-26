@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4126 2005/06/26 02:18:33 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4127 2005/06/26 02:50:01 fuzzyray Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -80,10 +80,6 @@ net-mail/pop3vscan
 # <hansmi@gentoo.org> (13 Jun 2005)
 # Masked for testing
 =mail-mta/qmail-1.03-r17
-
-# Paul Varner <fuzzyray@gentoo.org> (12 Jun 2005)
-# Masked for arch testing of new revdep-rebuild
-=app-portage/gentoolkit-0.2.1_pre3
 
 # David Holm <dholm@gentoo.org> (11 Jun 2005)
 # Masked since it is known to create broken partition
