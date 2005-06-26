@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PECL-Fileinfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-Fileinfo/ChangeLog,v 1.1 2005/02/16 17:57:44 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-Fileinfo/ChangeLog,v 1.2 2005/06/26 06:15:17 sebastian Exp $
+
+*PECL-Fileinfo-0.3 (26 Jun 2005)
+
+  26 Jun 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PECL-Fileinfo-0.2.ebuild, +PECL-Fileinfo-0.3.ebuild:
+  Version bump. Mark previous version stable on x86.
 
 *PECL-Fileinfo-0.2 (16 Feb 2005)
 
