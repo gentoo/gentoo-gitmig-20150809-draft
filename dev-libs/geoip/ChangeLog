@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.36 2005/06/08 13:27:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.37 2005/06/26 02:38:32 vanquirius Exp $
+
+  26 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> geoip-1.3.10.ebuild:
+  amd64 stable.
 
   08 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> geoip-1.3.10.ebuild:
   Stable on sparc

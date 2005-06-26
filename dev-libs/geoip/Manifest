@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c22e66ec9842f9bce82cbc63ffce3ec1 metadata.xml 277
-MD5 a07a303d048931045a5aa8635cf59749 ChangeLog 4802
 MD5 af5767fa9a7af057c83d2764755524cb geoip-1.3.6.ebuild 749
-MD5 95a92396f7590b840f80feeb79a42000 geoip-1.3.10.ebuild 751
-MD5 fc321a6a46862b9da0ee69c074227c10 files/digest-geoip-1.3.10 64
+MD5 dec79b03a92d446d90bf1603d00882c8 geoip-1.3.10.ebuild 752
+MD5 9d7a11dbc81080e2688ac9f8075490e0 ChangeLog 4894
+MD5 c22e66ec9842f9bce82cbc63ffce3ec1 metadata.xml 277
 MD5 50dc59ad7a0d69cd4466c26057825fda files/digest-geoip-1.3.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCpvJGKRy60XGEcJIRAonhAJ983a0aHV1jvJ00BFVNWRrGv2F+fACfWX31
-8cxvy6CZid5g/3nnaLicZsw=
-=kzBo
------END PGP SIGNATURE-----
+MD5 fc321a6a46862b9da0ee69c074227c10 files/digest-geoip-1.3.10 64
