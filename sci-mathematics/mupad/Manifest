@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 570a7ec307782d0d3f134bb6c8cda7e8 mupad-2.5.2-r1.ebuild 3163
-MD5 0d8bb6142857c9d4640f045eb7585076 ChangeLog 2172
+MD5 18c85940b7fb1c5e5b609e48fd125f2d ChangeLog 2278
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 a40ac6d34848c4d00a0306e0d6bf60c1 mupad-2.5.2-r2.ebuild 3405
-MD5 4e05b1eb3ba3380509b9085086cad7ef files/digest-mupad-2.5.2-r1 249
 MD5 4e05b1eb3ba3380509b9085086cad7ef files/digest-mupad-2.5.2-r2 249
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0cWqI1lqEGTUzyQRAgkLAKCqyZvaOdX5D82nwn/xVmpFnrJQVwCglQdk
-2htpMF0nRsH8t6ShQNEdYwo=
-=izvf
------END PGP SIGNATURE-----
