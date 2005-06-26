@@ -1,8 +1,21 @@
-MD5 24fe9e7aeee2fdafa152c4bea3c037e3 ChangeLog 3621
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7437e6ee38f80ea81754bca5de8e8c86 beecrypt-3.1.0-r1.ebuild 1402
+MD5 fd64c57cf0bacb29259dc0ed56a70ef9 ChangeLog 3821
 MD5 484a66b30e614bfe565cc481d7af724c beecrypt-3.1.0-r2.ebuild 1722
+MD5 49fe203a10424b616be6ab00aeb27c61 beecrypt-4.1.2.ebuild 1427
 MD5 9801ec0e3201addd45f08dea31ac5324 files/beecrypt-3.1.0-alpha.patch 321
-MD5 4662ac258eb0f491d0b32ef0ad1cfeeb files/beecrypt-3.1.0-athlon.diff 391
 MD5 a1ec8219f4c2e7e3185f2cd869ddae33 files/beecrypt-3.1.0-python2.3.patch 769
-MD5 1c56cad20612ef6cbb3d1b56fa3c0b2e files/digest-beecrypt-3.1.0-r1 66
 MD5 1c56cad20612ef6cbb3d1b56fa3c0b2e files/digest-beecrypt-3.1.0-r2 66
+MD5 1c56cad20612ef6cbb3d1b56fa3c0b2e files/digest-beecrypt-3.1.0-r1 66
+MD5 4662ac258eb0f491d0b32ef0ad1cfeeb files/beecrypt-3.1.0-athlon.diff 391
+MD5 1088d87436deafc76d2114137c9a6330 files/digest-beecrypt-4.1.2 66
+MD5 1790137c0aa51e5978f813f06f74f9f5 files/beecrypt-4.1.2-athlon.patch 700
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvn/amdTrptrqvGERAl6GAJ9uO2WQ0/6A8XsQW1ZYubRNDu2LfACghHKB
+vJ3vA1f0gv1dAjmYlUPTrL0=
+=POZN
+-----END PGP SIGNATURE-----
