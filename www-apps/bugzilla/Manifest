@@ -2,7 +2,8 @@
 Hash: SHA1
 
 MD5 12f37762a11fd60727348437bf22a419 bugzilla-2.18.1.ebuild 1855
-MD5 1d67e202285b34292ff78b66f2c061dd ChangeLog 6241
+MD5 e83882209c32f6592197405c0d7c9a06 bugzilla-2.18.1-r1.ebuild 1795
+MD5 0d2645348a3c9f3878b358113425f89a ChangeLog 6542
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 0606a9da89d19a505c52818d14de61e3 files/cronset.sh 70
 MD5 b38d67b03726b84833bd8c5f632e4020 files/bugzilla.cron.tab 54
@@ -11,10 +12,15 @@ MD5 a001fc92584de0cd6f1a0d8de99ee6ce files/firstcheck.sh 48
 MD5 4a9b1a263f16b2a53b44bce45350b373 files/bugzilla.conf 148
 MD5 69de0903f09253375e69f72695675172 files/digest-bugzilla-2.18.1 68
 MD5 0be5a588dc7fdfc9e4898a855bd32361 files/bugzilla.cron.daily 115
+MD5 69de0903f09253375e69f72695675172 files/digest-bugzilla-2.18.1-r1 68
+MD5 b38d67b03726b84833bd8c5f632e4020 files/2.18.1-r1/bugzilla.cron.tab 54
+MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18.1-r1/bugzilla.cron.daily 115
+MD5 42151252d49e42c9839f80c80dff9138 files/2.18.1-r1/apache.htaccess 94
+MD5 627268c5a2c707a3aaf69312c68a3c66 files/2.18.1-r1/reconfig 4264
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCvxQ4EzitwsaoONoRAqx/AJ9R3q3ncMZcbtDVljMfEbN0NbZ6IwCfWxuz
-aqXMKXwq4bFNq/YUcw+0LVc=
-=urco
+iD8DBQFCvxu2EzitwsaoONoRAgOCAJ0S38XLf27fdCgmGHNa2DRnU4MDCQCbBmU2
+TpXdTHqHRsMi5H5V3fx5zkU=
+=OlQ2
 -----END PGP SIGNATURE-----

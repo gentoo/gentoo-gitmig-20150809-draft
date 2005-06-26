@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.25 2005/06/26 20:46:22 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.26 2005/06/26 21:18:35 rl03 Exp $
+
+*bugzilla-2.18.1-r1 (26 Jun 2005)
+
+  26 Jun 2005; Renat Lumpau <rl03@gentoo.org>
+  +files/2.18.1-r1/apache.htaccess, +files/2.18.1-r1/bugzilla.cron.daily,
+  +files/2.18.1-r1/bugzilla.cron.tab, +files/2.18.1-r1/reconfig,
+  +bugzilla-2.18.1-r1.ebuild:
+  Fixed reconfig script. Closes #80996 and #96072
 
   26 Jun 2005; Renat Lumpau <rl03@gentoo.org> :
   Cleaning house.
