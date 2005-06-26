@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.5 2004/11/25 15:18:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.6 2005/06/26 08:49:27 blubb Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="~amd64 ppc ~sparc x86"
 
 src_unpack() {
 
