@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.50 2005/05/28 17:23:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.51 2005/06/26 02:03:45 halcy0n Exp $
+
+  26 Jun 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/timidity++-2.13.2-gcc4.patch, timidity++-2.13.2-r2.ebuild:
+  GCC4 patch, thanks to <sunmoon1997@gmail.com> for the patch; bug #89933
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   timidity++-2.13.2.ebuild, timidity++-2.13.2-r2.ebuild:
