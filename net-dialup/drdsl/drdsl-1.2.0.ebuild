@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/drdsl-1.2.0.ebuild,v 1.2 2005/05/04 20:43:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/drdsl-1.2.0.ebuild,v 1.3 2005/06/26 10:48:35 sbriesen Exp $
 
 DESCRIPTION="AVM DSL Assistant for autodetecting DSL values (VPI, VCI, VPP) for 'fcdsl' based cards"
 HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/drdsl/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 -*"
 IUSE="unicode"
 
 DEPEND="sys-apps/coreutils"

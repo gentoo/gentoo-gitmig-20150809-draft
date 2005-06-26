@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/drdsl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/ChangeLog,v 1.2 2005/05/04 20:43:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/ChangeLog,v 1.3 2005/06/26 10:48:35 sbriesen Exp $
+
+  26 Jun 2005; Stefan Briesenick <sbriesen@gentoo.org> drdsl-1.2.0.ebuild:
+  stable on x86
 
   04 May 2005; Stefan Schweizer <genstef@gentoo.org> drdsl-1.2.0.ebuild:
   Change utf8 use-flag to unicode, thanks to SpanKY <vapier@gentoo.org> in bug
