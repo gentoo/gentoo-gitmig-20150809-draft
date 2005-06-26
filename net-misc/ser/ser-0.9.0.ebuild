@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.0.ebuild,v 1.4 2005/06/15 07:02:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.0.ebuild,v 1.5 2005/06/26 13:16:16 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -29,8 +29,10 @@ DEPEND=">=sys-devel/bison-1.35
 	radius? ( >=net-dialup/radiusclient-ng-0.5.0 )
 	postgres? ( dev-db/postgresql )
 	jabber? ( dev-libs/expat )
-	ldap? ( net-nds/openldap
-		ssl? ( dev-libs/openssl ))"
+	ldap? (
+		net-nds/openldap
+		ssl? ( dev-libs/openssl )
+	)"
 
 src_unpack() {
 	local modules extmodules MY_A
