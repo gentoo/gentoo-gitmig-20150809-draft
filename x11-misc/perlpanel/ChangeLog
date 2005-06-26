@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/perlpanel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/ChangeLog,v 1.9 2005/06/06 08:40:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/ChangeLog,v 1.10 2005/06/26 10:50:03 mcummings Exp $
+
+  26 Jun 2005; Michael Cummings <mcummings@gentoo.org>
+  perlpanel-0.9.1.ebuild:
+  Dep for hicolor-theme was missing
 
 *perlpanel-0.9.1 (06 Jun 2005)
 

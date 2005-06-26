@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/perlpanel-0.9.1.ebuild,v 1.1 2005/06/06 08:40:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/perlpanel-0.9.1.ebuild,v 1.2 2005/06/26 10:50:03 mcummings Exp $
 
 MY_P="PerlPanel-${PV}"
 DESCRIPTION="PerlPanel is a useable, lean panel program (like Gnome's gnome-panel & KDE's Kicker) in Perl, using the Gtk2-Perl libraries."
@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=x11-libs/gtk+-2.4.0
+	x11-themes/hicolor-icon-theme
 	>=dev-perl/XML-Simple-2
 	>=dev-perl/XML-Parser-2
 	>=dev-perl/DateManip-5.42a-r1
