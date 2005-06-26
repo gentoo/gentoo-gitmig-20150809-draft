@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a571f62d28bac4cd5ba9904cdc882e09 ChangeLog 1763
+MD5 7da7161044bebbf73f09d70bfabbabba ChangeLog 1840
 MD5 4ec1286f93577adf0c7b4cb1111f53ca fdutils-5.4.20020222-r1.ebuild 1066
-MD5 91a493878c88175f6c800fa307ce9408 fdutils-5.5.ebuild 896
+MD5 4042bf4a70b9edcb5ff2f1eb591dbc0a fdutils-5.5.ebuild 895
 MD5 c2ef222aaad9496533b756688db40543 files/digest-fdutils-5.4.20020222-r1 135
 MD5 9ff6a26897281b34d5e67b3f80ab60f2 files/fdutils-no-fd.4-manpage.diff 434
 MD5 5c3161c351b422855e48edafa8b3848b files/digest-fdutils-5.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvfXRmdTrptrqvGERAhZxAJ4vROTY48AmR4HW3yie14oQoTNO6wCfbZOD
-UWl4Ug9eEOKXY6hnlnv/sQo=
-=WS6C
------END PGP SIGNATURE-----
