@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.46 2005/06/24 16:18:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.47 2005/06/26 08:14:32 brix Exp $
+
+  26 Jun 2005; <brix@gentoo.org> bluez-utils-2.17.ebuild,
+  bluez-utils-2.17-r1.ebuild:
+  Added missing '|| die' statement to econf call, bug #97029.
 
 *bluez-utils-2.17-r1 (24 Jun 2005)
 
