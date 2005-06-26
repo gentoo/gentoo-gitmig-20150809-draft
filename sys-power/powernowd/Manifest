@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ce7290d25e6cf97a2f1f8b62a4716394 powernowd-0.90.ebuild 925
-MD5 36a055c64af15b19cd9c4ed8b63bca57 ChangeLog 845
+MD5 85c8da11401aeec11bf9ac71879140a3 powernowd-0.96.ebuild 716
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
-MD5 70bfa0543b7d2b1e2f6cd7a546805eb3 files/powernowd.rc 478
+MD5 cc47fc018f5d87e1ddb5eca0da3726b4 ChangeLog 1011
+MD5 523f3c9234c16faccbfa2a6f3ab0915c powernowd-0.90.ebuild 922
 MD5 d40f461cccd3d7b56d395fc6cca0a5b3 files/digest-powernowd-0.90 69
+MD5 70bfa0543b7d2b1e2f6cd7a546805eb3 files/powernowd.rc 478
 MD5 25d1f3aa6df3b36681658f828ef49fd6 files/powernowd.confd 278
+MD5 329c8f914ce7a1fe829f46205df9d02c files/digest-powernowd-0.96 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCNw/SI1lqEGTUzyQRAt4jAKDTXcanZqDxaXhkqyzyoz/yw5GZSwCg1/ao
-ZfMp9LWqY83vNosIpvxWStA=
-=LBPn
+iD8DBQFCvkeZgIKl8Uu19MoRAkiRAJ0W6Zab0Kb86a15d28oTmfhRv6oUgCeJZKk
+uBGN6Lrtd1wYrm0sNa7EcPM=
+=JGuL
 -----END PGP SIGNATURE-----
