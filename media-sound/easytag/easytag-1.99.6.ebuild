@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.99.5.ebuild,v 1.1 2005/06/09 22:03:12 dsd Exp $
-
-inherit eutils gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.99.6.ebuild,v 1.1 2005/06/26 20:15:59 dsd Exp $
 
 DESCRIPTION="EasyTAG mp3/ogg ID3 tag editor"
 HOMEPAGE="http://easytag.sourceforge.net/"
@@ -17,12 +15,6 @@ RDEPEND=">=media-libs/id3lib-3.8.2
 	>=x11-libs/gtk+-2.4.1
 	flac? ( >=media-libs/flac-1.1.0 >=media-libs/libvorbis-1.0 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-}
 
 src_compile() {
 	econf \
