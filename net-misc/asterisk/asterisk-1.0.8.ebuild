@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.8.ebuild,v 1.3 2005/06/25 13:34:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.8.ebuild,v 1.4 2005/06/26 19:57:28 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 
@@ -266,6 +266,9 @@ src_unpack() {
 	# to support supplementary groups for the asterisk
 	# user (start-stop-daemons --chguid breaks realtime priority support)
 	epatch ${FILESDIR}/1.0.0/${PN}-1.0.8-initgroups.diff
+
+	# fix callerid matching bug in dialplan
+	epatch ${FILESDIR}/1.0.0/${P}-callerid.patch
 }
 
 src_compile() {
