@@ -1,22 +1,15 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.65 2005/05/04 20:11:51 omkhar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.66 2005/06/26 15:02:24 humpback Exp $
 
-  04 May 2005; Omkhar Arasaratnam <omkhar@gentoo.org> psi-0.9.3-r3.ebuild:
-  Added ~ppc64
+*psi-0.9.3-r4 (26 Jun 2005)
 
-  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> psi-0.9.3-r2.ebuild:
-  Stable on ppc.
-
-  01 May 2005; Guy Martin <gmsoft@gentoo.org> psi-0.9.3-r2.ebuild:
-  Stable on hppa.
-
-  01 May 2005; Jason Wever <weeve@gentoo.org> psi-0.9.3-r2.ebuild:
-  Stable on SPARC.
-
-  26 Apr 2005; Gustavo Felisberto <humpback@gentoo.org>;
-  psi-0.9.3-r2.ebuild:
-  Removing older versions and orphaned files. Moving psi-0.9.3-r2 to x86.
+  26 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/psi-emergency.png, +files/psi-indicator.png,
+  files/psi-pathfix.patch, +files/psi-reverse_trayicon.patch,
+  +psi-0.9.3-r4.ebuild:
+  New revision that takes care of a bunch of pending bugs. 85% of credits go
+  to Maciag our Gentoo/Psi connection :)
 
 *psi-0.9.3-r3 (17 Apr 2005)
 
