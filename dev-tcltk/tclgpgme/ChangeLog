@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.16 2005/04/07 13:53:05 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.17 2005/06/26 13:11:26 matsuu Exp $
+
+*tclgpgme-1.0-r2 (26 Jun 2005)
+
+  26 Jun 2005; MATSUU Takuto <matsuu@gentoo.org> +files/1.0-configure.diff,
+  +tclgpgme-1.0-r2.ebuild:
+  Fixed compilation problem on amd64.
 
   07 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> tclgpgme-1.0-r1.ebuild:
   added ~amd64 to KEYWORDS, fixes #88181
