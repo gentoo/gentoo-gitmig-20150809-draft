@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtkhtml2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.3 2005/05/22 00:40:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.4 2005/06/26 15:40:38 usata Exp $
+
+  26 Jun 2005; Mamoru KOMACHI <usata@gentoo.org>
+  ruby-gtkhtml2-0.11.0.ebuild, ruby-gtkhtml2-0.12.0.ebuild:
+  Stable on x86.
 
   22 May 2005; Jason Wever <weeve@gentoo.org> ruby-gtkhtml2-0.12.0.ebuild:
   Added ~sparc keyword.
