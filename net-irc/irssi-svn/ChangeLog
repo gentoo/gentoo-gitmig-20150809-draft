@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.9 2005/06/25 21:02:53 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.10 2005/06/26 01:09:50 weeve Exp $
+
+  26 Jun 2005; Jason Wever <weeve@gentoo.org> irssi-svn-0.3.ebuild:
+  Added ~sparc keyword wrt bug #96775.
 
   25 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> irssi-svn-0.3.ebuild:
   Added to ~hppa.
