@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openct
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.10 2005/01/23 10:59:56 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.11 2005/06/26 09:24:16 vapier Exp $
+
+*openct-0.6.5 (26 Jun 2005)
+
+  26 Jun 2005; Mike Frysinger <vapier@gentoo.org> +openct-0.6.5.ebuild:
+  Version bump #92291 by Andreas Jellinghaus.
 
   23 Jan 2005; Markus Rothe <corsair@gentoo.org> openct-0.5.0.ebuild,
   openct-0.6.2.ebuild:
