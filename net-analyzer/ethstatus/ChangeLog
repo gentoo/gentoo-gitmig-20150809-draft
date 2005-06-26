@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethstatus
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.4 2004/12/19 06:53:19 avenj Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.5 2005/06/26 03:58:36 vanquirius Exp $
+
+  26 Jun 2005; Marcelo Goes <vanquirius@gentoo.org>
+  ethstatus-0.4.2-r2.ebuild:
+  amd64 stable.
 
   19 Dec 2004; Jon Portnoy <avenj@gentoo.org> ethstatus-0.4.2-r2.ebuild :
   AMD64 keywords.
