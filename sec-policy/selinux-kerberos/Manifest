@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 320787c15e4bc1f1170e94ffeaee43a2 ChangeLog 388
 MD5 836aa756cef8b75262c39c094644d6dc metadata.xml 519
 MD5 1d1bf7bd2a1a179154e69e3d0f23ea1a selinux-kerberos-20050626.ebuild 488
 MD5 df69b6ecb126a0cf90f1b0b8418ba28e files/digest-selinux-kerberos-20050626 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCvu+sGSBEIeh4AEYRAlxZAKCBQgFKjt5kVmYvSIaNOalVBj2eSQCgjuF3
+4m2CDB4wGat3vI7Ahl0Pwco=
+=81s1
+-----END PGP SIGNATURE-----
