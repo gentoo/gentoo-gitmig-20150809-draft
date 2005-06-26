@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1253 2005/06/26 07:53:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1254 2005/06/26 15:10:38 lu_zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -431,6 +431,8 @@ media-gfx/graphicsmagick:gs - enable ghostscript support
 media-gfx/graphicsmagick:jbig - enable jbig support
 media-gfx/graphicsmagick:jp2 - enable jpeg v2 support
 media-gfx/graphicsmagick:lzw - enable LZW support
+media-gfx/graphviz:cairo - enable cairo support
+media-gfx/graphviz:dynagraph - enable dynagraph support
 media-gfx/gwenview:kipi - add support for kipi plugins
 media-gfx/imagemagick:fpx - enable libfpx support
 media-gfx/imagemagick:graphviz - enable graphviz support
