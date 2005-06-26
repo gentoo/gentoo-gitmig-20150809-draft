@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.75.ebuild,v 1.13 2005/03/09 01:04:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.75.ebuild,v 1.14 2005/06/26 18:15:29 j4rg0n Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="A utility for network exploration or security auditing"
 HOMEPAGE="http://www.insecure.org/nmap/"
@@ -18,6 +18,7 @@ DEPEND="virtual/libc
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
 src_compile() {
+	use ppc-macos && filter-flags -fstrict-aliasing -O2
 	econf `use_with gtk nmapfe` \
 		`use_enable ipv6` || die
 	emake -j1 || die
