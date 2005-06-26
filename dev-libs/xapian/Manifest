@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 57986335d924ebf34cd5328aef4661ef xapian-0.9.1.ebuild 1073
+MD5 dc13939b32182f2e280f538a7179834b xapian-0.9.1.ebuild 1074
 MD5 a79d0a8053e4546b0739ac010ce7e9c0 ChangeLog 1743
 MD5 fe34c0fc51be91b1df02dd01b5147a34 xapian-0.7.5.ebuild 957
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
@@ -14,7 +14,7 @@ MD5 359ff8c7c668bd7df20e45e8518254cf files/digest-xapian-0.8.5 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCviaGmdTrptrqvGERArmJAJ9l0wcsKlosBhxMETHvKMsu11LHSwCeNhtI
-zoI2LzL1sCLuelRkBP74678=
-=GrRU
+iD8DBQFCviiQmdTrptrqvGERAtgmAJsFBd6e59Ejw6t/g9RSutFMkGT7zQCdEc1f
++g+DkzjMK51m6Ornmwo1PSg=
+=zJld
 -----END PGP SIGNATURE-----
