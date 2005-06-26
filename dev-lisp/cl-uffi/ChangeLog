@@ -1,12 +1,12 @@
 # ChangeLog for dev-lisp/cl-uffi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.21 2005/06/26 05:58:31 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.22 2005/06/26 06:03:24 mkennedy Exp $
 
 *cl-uffi-1.4.39 (26 Jun 2005)
 
   26 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> -cl-uffi-1.4.37.ebuild,
   +cl-uffi-1.4.39.ebuild:
-  New upstream version.
+  New upstream version
 
   24 May 2005; <mkennedy@gentoo.org> cl-uffi-1.4.37.ebuild:
   Keywording ~sparc
