@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 12f37762a11fd60727348437bf22a419 bugzilla-2.18.1.ebuild 1855
-MD5 7831c6257a410e35c10741a04e456a95 ChangeLog 6174
+MD5 1d67e202285b34292ff78b66f2c061dd ChangeLog 6241
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 0606a9da89d19a505c52818d14de61e3 files/cronset.sh 70
 MD5 b38d67b03726b84833bd8c5f632e4020 files/bugzilla.cron.tab 54
@@ -14,7 +14,7 @@ MD5 0be5a588dc7fdfc9e4898a855bd32361 files/bugzilla.cron.daily 115
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCvxNOEzitwsaoONoRAsM7AJ43nRRCqe7SEkJKF1QVesYSvAYAogCfSnh5
-5tHtASO2TzCuYXiZIEy6NTg=
-=3qi8
+iD8DBQFCvxQ4EzitwsaoONoRAqx/AJ9R3q3ncMZcbtDVljMfEbN0NbZ6IwCfWxuz
+aqXMKXwq4bFNq/YUcw+0LVc=
+=urco
 -----END PGP SIGNATURE-----
