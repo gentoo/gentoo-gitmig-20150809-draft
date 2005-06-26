@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.123 2005/05/29 22:29:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.124 2005/06/26 07:54:20 vapier Exp $
+
+  26 Jun 2005; Mike Frysinger <vapier@gentoo.org> openssh-3.9_p1-r2.ebuild,
+  openssh-4.0_p1-r1.ebuild, openssh-4.1_p1.ebuild:
+  Add support for the High Performance patch #96717 by Frank Benkstein.
 
   29 May 2005; Mike Frysinger <vapier@gentoo.org> openssh-4.0_p1-r1.ebuild,
   openssh-4.1_p1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r2.ebuild,v 1.8 2005/05/31 03:23:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r2.ebuild,v 1.9 2005/06/26 07:54:20 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -12,17 +12,19 @@ SFTPLOG_PATCH_VER="1.2"
 X509_PATCH="${PARCH}+x509h.diff.gz"
 SELINUX_PATCH="openssh-3.9_p1-selinux.diff"
 LDAP_PATCH="${PARCH/-/-lpk-}-0.3.4.patch"
+HPN_PATCH="${PARCH}-hpn11.diff"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 	ldap? ( http://www.opendarwin.org/en/projects/openssh-lpk/files/${LDAP_PATCH} )
-	X509? ( http://roumenpetrov.info/openssh/x509h/${X509_PATCH} )"
+	X509? ( http://roumenpetrov.info/openssh/x509h/${X509_PATCH} )
+	hpn? ( http://www.psc.edu/networking/projects/hpn-ssh/${HPN_PATCH} )"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap smartcard nocxx sftplogging"
+IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap smartcard nocxx sftplogging hpn"
 
 RDEPEND="pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 )
 	kerberos? ( virtual/krb5 )
@@ -67,6 +69,7 @@ src_unpack() {
 			epatch ${DISTDIR}/${LDAP_PATCH}
 		fi
 	fi
+	use hpn && epatch ${DISTDIR}/${HPN_PATCH}
 
 	autoconf || die "autoconf failed"
 }

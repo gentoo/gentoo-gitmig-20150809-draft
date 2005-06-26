@@ -1,3 +1,4 @@
 MD5 8e1774d0b52aff08f817f3987442a16e openssh-3.9p1.tar.gz 854027
 MD5 e1be73c425cc6893df83ced51ee1df10 openssh-lpk-3.9p1-0.3.4.patch 44563
 MD5 eedb263c96a1d7bf208eb2ba70c2e238 openssh-3.9p1+x509h.diff.gz 98011
+MD5 b91d73e58e2b72aecb3025ee550411fb openssh-3.9p1-hpn11.diff 13237

@@ -1,39 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 db2b441d2a9eaaf2e90abebe15a8b978 openssh-4.0_p1-r1.ebuild 5268
+MD5 cff4886efb9b17ac0d3a5ea26204ed55 openssh-4.1_p1.ebuild 5258
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
-MD5 6b41826729576cf9785ced6831ae7499 openssh-4.0_p1-r1.ebuild 5118
-MD5 196adb7149b11f6a132fcd3f84549f0c openssh-3.9_p1-r2.ebuild 4829
-MD5 5a2f359ca20983f3bc6204cdfc29e689 openssh-4.1_p1.ebuild 5109
+MD5 29e475571f65f429e5506f8c4fc4d951 openssh-3.9_p1-r2.ebuild 4978
 MD5 a0b1458592ae618360b280bf9e15e1c4 openssh-3.8.1_p1-r1.ebuild 4545
-MD5 d7bd4957b2469a9793d6dbcedcdca305 ChangeLog 20773
-MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8_p1-skey.patch.bz2 270
-MD5 7937a17eb31fc6139ef42fa04521de27 files/openssh-3.9_p1-configure-openct.patch 995
+MD5 9d85b67d5ff66a6125a6dbf440f11c47 ChangeLog 20973
 MD5 2b66f75047edfac5d5e6cdbffa35383e files/sshd.pam_include 205
-MD5 7880e18b2a91e5927810dddc7bda270f files/openssh-3.7.1_p1-selinux.diff.bz2 1353
-MD5 6905aafd16d110e8e8b74cad4914ceb7 files/openssh-3.8.1_p1-largekey.patch.bz2 1304
-MD5 03897042175223579b97e42d6c70c6bd files/digest-openssh-4.0_p1-r1 292
-MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8_p1-chroot.patch.bz2 1119
-MD5 7205b89215b9dc72e3958c662065b529 files/openssh-3.9_p1-largekey.patch.bz2 1262
-MD5 c293d0259af0ab6a79d89c629bdc6df6 files/digest-openssh-3.9_p1-r2 209
-MD5 73f3b46d27bd413eb79350a2ce412bf6 files/openssh-3.9_p1-pamfix.patch.bz2 1125
-MD5 5b057f6a1a7c2c0f94f83bc19c4d6a9b files/openssh-3.5_p1-gentoo-sshd-gcc3.patch.bz2 253
-MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
-MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.9_p1-skey.patch.bz2 270
-MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8.1_p1-chroot.patch.bz2 1119
+MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8_p1-resolv_functions.patch.bz2 315
 MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8_p1-kerberos.patch.bz2 465
-MD5 a700af683ef42fb682fa2f313a6946c3 files/sshd.rc6 1203
-MD5 4bee5c8ce11f30487154c3742e004f7d files/openssh-4.0_p1-smartcard-ldap-happy.patch 545
-MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.9_p1-opensc.patch.bz2 1381
-MD5 a838d5092e4bce1a4e1d1b976cce347e files/digest-openssh-3.8.1_p1-r1 216
-MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8.1_p1-resolv_functions.patch.bz2 315
-MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8.1_p1-kerberos.patch.bz2 465
-MD5 f5e33d1831f95c821a08893bcf3e3f5f files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5745
-MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8.1_p1-skey.patch.bz2 270
-MD5 f68837d6568b1c98ef01db0ab629a171 files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 5935
-MD5 05cf2773f696302afd8ca10a01f8cdf9 files/digest-openssh-4.1_p1 213
+MD5 7205b89215b9dc72e3958c662065b529 files/openssh-3.9_p1-largekey.patch.bz2 1262
+MD5 7937a17eb31fc6139ef42fa04521de27 files/openssh-3.9_p1-configure-openct.patch 995
 MD5 87593c73e26e1a3825fcb51f2270b694 files/openssh-3.9_p1-chroot.patch 3027
-MD5 ba87dbfc3be0ab9d70fe24278d9deb02 files/openssh-3.9_p1-infoleak.patch 2496
+MD5 a838d5092e4bce1a4e1d1b976cce347e files/digest-openssh-3.8.1_p1-r1 216
+MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.9_p1-opensc.patch.bz2 1381
+MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
+MD5 4bee5c8ce11f30487154c3742e004f7d files/openssh-4.0_p1-smartcard-ldap-happy.patch 545
+MD5 a700af683ef42fb682fa2f313a6946c3 files/sshd.rc6 1203
+MD5 73f3b46d27bd413eb79350a2ce412bf6 files/openssh-3.9_p1-pamfix.patch.bz2 1125
+MD5 7880e18b2a91e5927810dddc7bda270f files/openssh-3.7.1_p1-selinux.diff.bz2 1353
+MD5 f68837d6568b1c98ef01db0ab629a171 files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 5935
+MD5 93d19c0ef91091a730510c46ab8e811e files/openssh-3.9_p1-selinux.diff.bz2 1307
+MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.9_p1-skey.patch.bz2 270
+MD5 c326cd447fb5f86124295ef943d3bf35 files/openssh-3.9_p1-kerberos-detection.patch 593
+MD5 0558277d49d667925774731e5e4e989a files/digest-openssh-3.9_p1-r2 277
+MD5 f58807d5d75bc9929883e6876c7ddd46 files/openssh-3.9_p1-terminal_restore.patch.bz2 332
+MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8.1_p1-kerberos.patch.bz2 465
+MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8_p1-chroot.patch.bz2 1119
+MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8.1_p1-chroot.patch.bz2 1119
+MD5 5b057f6a1a7c2c0f94f83bc19c4d6a9b files/openssh-3.5_p1-gentoo-sshd-gcc3.patch.bz2 253
+MD5 4400ddd29bc14480210f6005a6d28fa9 files/digest-openssh-4.1_p1 281
+MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8.1_p1-resolv_functions.patch.bz2 315
+MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8_p1-skey.patch.bz2 270
+MD5 6ef2226131d95667f8cf5be1eead658a files/digest-openssh-4.0_p1-r1 360
+MD5 6905aafd16d110e8e8b74cad4914ceb7 files/openssh-3.8.1_p1-largekey.patch.bz2 1304
 MD5 265e0566d8f9408f1f89cfa2bf2a5105 files/openssh-3.9_p1-fix_suid.patch.bz2 304
 MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.8.1_p1-opensc.patch.bz2 1381
-MD5 c326cd447fb5f86124295ef943d3bf35 files/openssh-3.9_p1-kerberos-detection.patch 593
-MD5 93d19c0ef91091a730510c46ab8e811e files/openssh-3.9_p1-selinux.diff.bz2 1307
-MD5 f58807d5d75bc9929883e6876c7ddd46 files/openssh-3.9_p1-terminal_restore.patch.bz2 332
-MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8_p1-resolv_functions.patch.bz2 315
+MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8.1_p1-skey.patch.bz2 270
+MD5 ba87dbfc3be0ab9d70fe24278d9deb02 files/openssh-3.9_p1-infoleak.patch 2496
+MD5 f5e33d1831f95c821a08893bcf3e3f5f files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5745
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvl8+gIKl8Uu19MoRAjXFAJ45zRGWgKMPkpSlYAoNtU8lHH8x8gCeLc9m
+N23zUTOdy0wvj20hGqzGOB0=
+=SCfn
+-----END PGP SIGNATURE-----
