@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-hmmer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-hmmer/ChangeLog,v 1.7 2005/06/24 14:32:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-hmmer/ChangeLog,v 1.8 2005/06/26 21:05:16 j4rg0n Exp $
+
+  26 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org>
+  embassy-hmmer-2.1.1-r1.ebuild:
+  Stable ppc-macos Bug 96819
 
   24 Jun 2005; Joseph Jezak <josejx@gentoo.org>
   embassy-hmmer-2.1.1-r1.ebuild:
