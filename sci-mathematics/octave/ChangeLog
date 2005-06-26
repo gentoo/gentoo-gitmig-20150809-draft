@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.8 2005/06/10 11:48:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.9 2005/06/26 01:55:08 ribosome Exp $
+
+  26 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -files/filebuf.diff,
+  -files/kill-dvips.diff, -octave-2.1.64.ebuild:
+  Removed obsolete version and unused patches.
 
   10 Jun 2005; Patrick Kursawe <phosphan@gentoo.org> octave-2.1.57-r1.ebuild,
   octave-2.1.64.ebuild, octave-2.1.69.ebuild:
