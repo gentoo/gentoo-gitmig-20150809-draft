@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-construct
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-construct/ChangeLog,v 1.4 2005/06/24 14:30:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-construct/ChangeLog,v 1.5 2005/06/26 20:55:43 j4rg0n Exp $
+
+  26 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org>
+  embassy-construct-1.0.0.ebuild:
+  Keyworded ~ppc-macos
 
   24 Jun 2005; Joseph Jezak <josejx@gentoo.org>
   embassy-construct-1.0.0.ebuild:
