@@ -1,19 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44501dc69597aeca3366a1d060e99ca2 singular-2.0.5-r4.ebuild 4271
-MD5 abe99574c58bcc81f93758f27c815515 singular-2.0.4-r1.ebuild 3681
-MD5 fbfb349850ee1072763a5fdf9d7b62c0 ChangeLog 3087
+MD5 04e6be188d434a23dbb138e9a5889ef6 singular-2.0.5-r4.ebuild 4271
+MD5 16b502df043a8600a3fbd0e5c7a10344 ChangeLog 3246
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 b1383ace2a0b30413341982e4e34341f files/fake_ssh 150
-MD5 b52673163a28446aae41691abc3e705d files/digest-singular-2.0.4-r1 862
 MD5 673cd925126b07ea0e78cf91269b7d66 files/digest-singular-2.0.5-r4 859
 MD5 916f91466aad4f177f2270b4c1fad94a files/singular-2.0.5-r3-gentoo.diff 4399
-MD5 8f79455c2cd6352e5e0907b21a7390f1 files/singular-2.0.4-gentoo.diff 3287
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0clGI1lqEGTUzyQRAmkpAJ9gIkVgInsrEUB1jya0pCyvL5656QCg3XBh
-fd3IWSjdA05fA9UPAzD5tK0=
-=o98R
------END PGP SIGNATURE-----

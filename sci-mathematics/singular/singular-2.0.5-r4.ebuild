@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-2.0.5-r4.ebuild,v 1.1 2004/12/28 15:17:37 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-2.0.5-r4.ebuild,v 1.2 2005/06/26 02:38:06 ribosome Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ BPN=${PN/s/S}
 NTLVERSION="5.3.1"
 # attention: different versions are mixed. IntProg is older
 
-DESCRIPTION="computer algebra system for polynomial computations"
+DESCRIPTION="Computer algebra system for polynomial computations"
 SRC_URI="ftp://www.mathematik.uni-kl.de/pub/Math/Singular/src/${BPN}-doc-${MINPV}.tar.gz
 		ftp://www.mathematik.uni-kl.de/pub/Math/Singular/src/${BPN}-emacs-${MINPV}.tar.gz
 		ftp://www.mathematik.uni-kl.de/pub/Math/Singular/src/${BPN}-factory-${MINPV}.tar.gz
