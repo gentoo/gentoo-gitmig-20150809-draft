@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/otter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.4 2005/04/22 01:14:36 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.5 2005/06/26 02:19:00 ribosome Exp $
+
+  26 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -otter-3.2.ebuild,
+  -otter-3.3.ebuild, otter-3.3-r1.ebuild:
+  Added to x86. Removed old versions.
 
 *otter-3.3-r1 (21 Apr 2005)
 

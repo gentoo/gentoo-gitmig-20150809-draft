@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/otter-3.3-r1.ebuild,v 1.1 2005/04/22 01:14:36 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/otter-3.3-r1.ebuild,v 1.2 2005/06/26 02:19:00 ribosome Exp $
 
 DESCRIPTION="An Automated Deduction System."
 SRC_URI="http://www-unix.mcs.anl.gov/AR/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www-unix.mcs.anl.gov/AR/otter/"
 
-KEYWORDS="~x86 ~ppc-macos ~ppc"
+KEYWORDS="x86 ~ppc-macos ~ppc"
 LICENSE="otter"
 SLOT="0"
 IUSE=""
