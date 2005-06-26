@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.13 2005/05/06 00:53:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.14 2005/06/26 18:27:35 blubb Exp $
+
+  26 Jun 2005; Simon Stelling <blubb@gentoo.org> DBD-SQLite-1.08.ebuild:
+  added ~amd64 keyword
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> DBD-SQLite-1.07.ebuild,
   DBD-SQLite-1.08.ebuild:
