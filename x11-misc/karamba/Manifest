@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e1a6b85ec54930f53dd9fb0570011567 ChangeLog 1881
-MD5 4aa0a05d14d2d92818071d2d4120e5b0 karamba-0.17-r1.ebuild 970
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
-MD5 9c40fc04becc5c1fa53ecb26a2076fca karamba-0.17-r2.ebuild 1021
+MD5 830457574d4269b866dccddb916c13d5 ChangeLog 1979
+MD5 d4f480cb43e10f137d01dddc67013ef5 karamba-0.17-r2.ebuild 1020
+MD5 4aa0a05d14d2d92818071d2d4120e5b0 karamba-0.17-r1.ebuild 970
 MD5 2d6a37d1fe7a6d7ae2728d48fec2efd9 files/digest-karamba-0.17-r1 64
-MD5 2d6a37d1fe7a6d7ae2728d48fec2efd9 files/digest-karamba-0.17-r2 64
-MD5 be8ce78e013784421857511974eaab58 files/karamba-0.17-configure-arts.patch 3478
 MD5 dfffd46934fc1bbec91ae05eb8ec535b files/karamba-env 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtdSKl5AvwDPiUowRAuTmAJ9yYpzKMq5DYl2u0bkGPmzMkM9NGACfUQ4Q
-DejVgF+fI9dLQXWwhJL6Xl8=
-=x0Hn
------END PGP SIGNATURE-----
+MD5 be8ce78e013784421857511974eaab58 files/karamba-0.17-configure-arts.patch 3478
+MD5 2d6a37d1fe7a6d7ae2728d48fec2efd9 files/digest-karamba-0.17-r2 64

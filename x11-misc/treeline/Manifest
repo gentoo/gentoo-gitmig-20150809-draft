@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c1a4ba4fc521963dbcafdc96bc3bae46 ChangeLog 2485
-MD5 d7e40013d145a19e60856a63a083161b treeline-0.10.2.ebuild 1149
 MD5 265415084fb95a28c09ca011371e8ec7 treeline-0.12.0.ebuild 1358
-MD5 cee8383c9946b4357583daf3720b5f80 treeline-0.11.1.ebuild 1150
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
-MD5 5a3c2359dae7f73f35658cf778d0d779 files/digest-treeline-0.10.2 67
+MD5 88455606340c82ab394dab7ea3e3ad4d ChangeLog 2583
+MD5 f121ee1250cc666aead58577a7ab8d31 treeline-0.11.1.ebuild 1149
+MD5 d7e40013d145a19e60856a63a083161b treeline-0.10.2.ebuild 1149
 MD5 26f947f268cacafb686a6bac571e63fd files/digest-treeline-0.11.1 67
+MD5 5a3c2359dae7f73f35658cf778d0d779 files/digest-treeline-0.10.2 67
 MD5 f3c5502ac4b139e4922e9c92c0e8d0f9 files/digest-treeline-0.12.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtgoLl5AvwDPiUowRAuSbAJ9hOySgHvxu7AFRno82bHqqv7e+ogCfY/Kc
-YSwTyt6qjcpTGXZE2u7qT0Q=
-=kei7
------END PGP SIGNATURE-----
