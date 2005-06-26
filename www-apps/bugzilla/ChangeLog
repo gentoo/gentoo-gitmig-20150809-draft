@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.23 2005/06/12 17:49:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.24 2005/06/26 20:42:26 rl03 Exp $
+
+  26 Jun 2005; Renat Lumpau <rl03@gentoo.org> -files/CAN-2004-1061.patch,
+  -files/2.18.0_rc1/apache.htaccess, -files/2.18.0_rc1/reconfig,
+  -files/2.18.0_rc2/apache.htaccess, -files/2.18.0_rc2/reconfig,
+  -files/2.18.0_rc3/apache.htaccess, -files/2.18.0_rc3/reconfig,
+  -files/2.18.0_rc4/apache.htaccess, -files/2.18.0_rc4/reconfig,
+  files/bz.cfg.templ, -bugzilla-2.18.0_rc1.ebuild,
+  -bugzilla-2.18.0_rc2.ebuild, -bugzilla-2.18.0_rc3.ebuild,
+  -bugzilla-2.18.0_rc4.ebuild:
+  Removing obsolete versions.
 
   12 Jun 2005; Jason Wever <weeve@gentoo.org> bugzilla-2.18.1.ebuild:
   Stable on SPARC.
