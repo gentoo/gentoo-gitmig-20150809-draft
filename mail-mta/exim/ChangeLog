@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.31 2005/06/20 17:43:24 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.32 2005/06/26 09:08:38 hansmi Exp $
+
+  26 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> exim-4.50-r1.ebuild:
+  Readded to ~ppc. Please don't drop keywords!
 
   20 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> exim-4.50-r1.ebuild:
   Added to ~hppa.
