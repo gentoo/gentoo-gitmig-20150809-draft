@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gezel/gezel-1.7.ebuild,v 1.1 2005/06/26 00:48:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gezel/gezel-1.7.ebuild,v 1.2 2005/06/26 09:21:28 dholm Exp $
 
 DESCRIPTION="GEZEL is a language and open environment for exploration, simulation and implementation of domain-specific micro-architectures."
 HOMEPAGE="http://www.ee.ucla.edu/~schaum/gezel/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.ee.ucla.edu/~schaum/gezel/package/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="java"
 
 RDEPEND="dev-libs/gmp
