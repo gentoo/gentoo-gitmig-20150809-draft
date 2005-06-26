@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.4.ebuild,v 1.5 2005/06/21 18:26:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.4.ebuild,v 1.6 2005/06/26 16:39:25 chainsaw Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://flapjack.navi.cx/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="perl tcltk python ssl mmx ipv6 nls"
 
 RDEPEND=">=dev-libs/glib-2.0.3
