@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a71451c6c8f966a09211a8c31da8e606 ivcall-0.4-r1.ebuild 794
+MD5 58f0e2f85edc4771c8cc5c3208b9eb3d ChangeLog 949
+MD5 c9248c8d81582e4a3d4b88884d57001e ivcall-0.4-r1.ebuild 800
 MD5 e809f1530ddbd393dd95fa8c201a5af8 ivcall-0.4.ebuild 736
-MD5 b81349a52ed2d1a6e16ddaa719d2c892 ChangeLog 855
 MD5 c1142dc0a0ffc5e8cbaac0db478de330 metadata.xml 252
 MD5 1062d5f96c51d0af7a720d98495a0ba3 files/digest-ivcall-0.4 62
 MD5 1062d5f96c51d0af7a720d98495a0ba3 files/digest-ivcall-0.4-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsKJmjiC39V7gKu0RAgKdAJ4upTN5YO4bMCgW36EjyESDlKWUSQCg4PaS
-1GEkNPd+WxYa2QnHrG1kxYQ=
-=kue+
------END PGP SIGNATURE-----

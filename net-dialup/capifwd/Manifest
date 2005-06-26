@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6c51c1d0a081ed873aa9fbe46d709f11 capifwd-0.6.3.ebuild 1044
-MD5 d137bc9f5a983c5319c262345a0bba24 ChangeLog 568
+MD5 8ab960a234e39751b6e04c7922908314 ChangeLog 662
 MD5 d2acf377c86761937a704f2455f1e353 metadata.xml 255
-MD5 c285576667acfe2e958402cd0d600ad7 files/digest-capifwd-0.6.3 65
+MD5 7cef2cfa047b0d4447903a7924fef8bf capifwd-0.6.3.ebuild 1050
+MD5 3e3512b77612880bfe174bee8870e609 files/capifwd-0.6.3.patch 1057
 MD5 449537e26587ce2daaf23629bcad366a files/capifwd.conf 255
 MD5 d9ba73a7ed9b8ec964aa75ce3890da52 files/capifwd.init 552
-MD5 3e3512b77612880bfe174bee8870e609 files/capifwd-0.6.3.patch 1057
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCBfgkjiC39V7gKu0RAp9jAJ4/CTfkJi5ogAw30MXSEBFn2PPWhACg44vU
-y0nIuzUmQsLH7cRYLsQjlDI=
-=ttfQ
------END PGP SIGNATURE-----
+MD5 c285576667acfe2e958402cd0d600ad7 files/digest-capifwd-0.6.3 65
