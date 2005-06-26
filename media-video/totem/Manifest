@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b31f6f81a14885c7cbf0180642cafd9 totem-0.100-r3.ebuild 2034
-MD5 6da1f545a8db0c4f35b6c2e2727f1b1d totem-0.99.19.ebuild 1747
-MD5 e5e2b81c04d29b53a189fe0575818815 totem-1.0.3.ebuild 2658
-MD5 4477f625d12feabd039433711643fef7 totem-1.0.2-r1.ebuild 2737
-MD5 285bc3868cb625553a82eb462ab492e7 ChangeLog 8712
+MD5 1b40a8e54b3507c75a8f140414d94f87 ChangeLog 8824
 MD5 74b9bd3cc5015b286abc33eb51408252 metadata.xml 521
-MD5 50a343412446e05871e042a7b5958c93 files/totem-0.100-fix_desktop_item.patch 558
+MD5 00161a8903741da52e50c7869ebe8417 totem-1.0.2-r1.ebuild 2745
+MD5 6da1f545a8db0c4f35b6c2e2727f1b1d totem-0.99.19.ebuild 1747
+MD5 433adeb069b7e1b1dc8a4df2d7db520c totem-1.0.3.ebuild 2666
+MD5 6b31f6f81a14885c7cbf0180642cafd9 totem-0.100-r3.ebuild 2034
 MD5 7e5a2048d71f5bd98866aba5531f9012 files/digest-totem-1.0.2-r1 65
 MD5 433904d250358b12576f519d9a0f2cc1 files/digest-totem-1.0.3 65
-MD5 8dd0c2a14c9603045fb2eebd0ee50534 files/digest-totem-0.100-r3 65
-MD5 8ab6b544e88eb5901e71820c8b41a477 files/totem-0.100-cdrom_include.patch 413
 MD5 eeba2ab1c3ed87a4a630addd709262ea files/digest-totem-0.99.19 67
+MD5 8ab6b544e88eb5901e71820c8b41a477 files/totem-0.100-cdrom_include.patch 413
+MD5 50a343412446e05871e042a7b5958c93 files/totem-0.100-fix_desktop_item.patch 558
 MD5 62cbcd8c86010195b8b70ee4d9703e84 files/totem-0.100-gst_backend_fixes-r1.patch 1036
-MD5 665f89e5e0d268567a54c9acd6026a90 files/totem-0.100-xine_backend-nocdrom.patch 601
 MD5 572a285ceed98dcaa61cf9520e7e59f7 files/totem-0.99.22-x_includes.patch 1330
+MD5 8dd0c2a14c9603045fb2eebd0ee50534 files/digest-totem-0.100-r3 65
+MD5 665f89e5e0d268567a54c9acd6026a90 files/totem-0.100-xine_backend-nocdrom.patch 601
 MD5 35a6d2e3ca24f11ad967a671a008b488 files/totem-1.0.2-xine_no_xxmc.patch 360
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsH2comPajV0RnrERAqAcAJ9EXvCiJBMyBttwWVM+rblDo+b7KQCdFkaM
-zD+0Vsju5NytQqhybeEpZ5E=
-=uy9G
------END PGP SIGNATURE-----
