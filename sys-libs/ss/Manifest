@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 cc915bc1b4ed127fd5d8d09e325e7779 ChangeLog 632
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 10ac3174faff91c6b5b5764fa8a39062 ss-1.37.ebuild 1629
-MD5 6ebe6f0762687b5caf1b3e35c0dd4f22 ChangeLog 536
+MD5 d7b0be1414a6ef61f521e0502af05935 ss-1.37.ebuild 1627
+MD5 65689a8be4c1b58f8e64f22165313292 files/digest-ss-1.37 67
 MD5 d26cca7efe06dba1d940abee82342487 files/ss-1.37-makefile.patch 337
 MD5 4a7d54ccac4002d10462c40660712a72 files/ss-1.37-sed-locale.patch 2142
-MD5 65689a8be4c1b58f8e64f22165313292 files/digest-ss-1.37 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCvGoYKRy60XGEcJIRAsXGAJ9nzFiI15C2sj9vdquJrUWkZyNUMgCfTc99
-WemjzRqU1vc3qUyUuUFeD/0=
-=RkZr
------END PGP SIGNATURE-----
