@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/euler
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.4 2005/04/20 21:40:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.5 2005/06/26 01:32:29 ribosome Exp $
+
+  26 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -euler-1.60.6.ebuild:
+  Removed obsolete version.
 
   20 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   euler-1.60.6-r1.ebuild:
