@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/coreutils-darwin-5.3.0.ebuild,v 1.6 2005/05/28 21:31:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/coreutils-darwin-5.3.0.ebuild,v 1.7 2005/06/26 03:44:59 j4rg0n Exp $
 
 inherit eutils
 
@@ -26,13 +26,13 @@ S=${WORKDIR}/coreutils-${PV}
 # Existing utils
 
 EXISTINGUSR="basename chgrp cksum comm cut dirname \
-	du env expand false fmt fold head install id join \
+	du env expand false fmt fold groups head install id join \
 	logname mkfifo nice nohup od paste pr printenv \
 	printf sort split stat su sum tail tee touch tr true \
-	tsort tty uname unexpand uniq users wc who whoami yes"
+	tsort tty uname unexpand uniq uptime users wc who whoami yes"
 EXISTINGBIN="cat chmod cp date dd df echo expr ln ls mkdir \
 			 mv pwd rm rmdir sleep stty sync test"
-EXISTINGUSBIN="chown chroot groups uptime"
+EXISTINGUSBIN="chown chroot"
 EXISTINGSBIN="mknod"
 DONTLINK="[ kill hostname"
 TENFOURBIN="link unlink csplit nl"
