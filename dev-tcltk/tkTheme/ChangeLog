@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tkTheme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.11 2005/04/07 13:38:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.12 2005/06/26 13:25:50 matsuu Exp $
+
+*tkTheme-1.0-r1 (26 Jun 2005)
+
+  26 Jun 2005; MATSUU Takuto <matsuu@gentoo.org> +files/1.0-configure.diff,
+  +tkTheme-1.0-r1.ebuild:
+  Fixed fail to compile on amd64.
 
   07 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> tkTheme-1.0.ebuild:
   added ~amd64 to KEYWORDS, fixes #88185
