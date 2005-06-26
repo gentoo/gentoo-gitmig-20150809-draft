@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/embassy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.10 2005/06/24 14:39:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.11 2005/06/26 22:37:14 j4rg0n Exp $
+
+  26 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org> embassy-2.10.0.ebuild:
+  Testing ppc-macos due to embassy-construct being testing.
 
   24 Jun 2005; Joseph Jezak <josejx@gentoo.org> embassy-2.10.0.ebuild:
   Marked ppc stable.
