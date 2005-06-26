@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9b34c0a4129833d0c821049db320d49d szip-1.1.ebuild 743
 MD5 57eba775e06b887d541eb50f9ba37c37 szip-1.1-r1.ebuild 842
-MD5 5e445d1a4f8fbbc818ae3d661c6f862b ChangeLog 1002
+MD5 a698a78ec65e09d8106161acfc6400b0 ChangeLog 1102
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 a0ae6bd69a2381d86cd009949e19726d files/digest-szip-1.1 58
 MD5 a0ae6bd69a2381d86cd009949e19726d files/digest-szip-1.1-r1 58
 MD5 dd37cc6d5e3d04ede70df602af666fb7 files/szip-1.1-fPIC.patch 312
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0ftvI1lqEGTUzyQRAh+oAKDNOyLWEsTCiU3PhJbpK275HLfkAwCfQskO
-IIBUai2sJBixsrrpsMVcmyQ=
-=MK53
------END PGP SIGNATURE-----
