@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.27 2005/06/19 20:17:20 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.28 2005/06/26 12:56:33 smithj Exp $
+
+*idesk-0.7.2-r1 (26 Jun 2005)
+
+  26 Jun 2005; Jonathan Smith <smithj@gentoo.org> -idesk-0.7.2.ebuild,
+  +idesk-0.7.2-r1.ebuild:
+  added the necessary files to /usr/share/idesk
 
   19 Jun 2005; Jonathan Smith <smithj@gentoo.org> idesk-0.7.2.ebuild:
   some keywords got lost (accidentally) on the version bump... fixed
