@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.20 2005/06/26 06:30:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.21 2005/06/26 20:22:45 j4rg0n Exp $
+
+  26 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org> links-2.1_pre17-r1.ebuild:
+  Stable ppc-macos. Bug 97071
 
   26 Jun 2005; Markus Rothe <corsair@gentoo.org> links-2.1_pre17-r1.ebuild:
   Stable on ppc64 (bug #97071)
