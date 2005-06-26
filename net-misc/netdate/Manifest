@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b637341fa420d798062922bc7f6711f0 netdate-1.2.ebuild 624
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 39b06044c6e21a2a86019d496a32466d ChangeLog 775
 MD5 29edee867ca109ed22b4158b7be37109 files/digest-netdate-1.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvm+NgIKl8Uu19MoRAmjmAJ9qzA0FET6CMh+btTvab71RUDgAUACggDAt
+16PNZMKgiBsRCmO18JtEhi0=
+=ly5c
+-----END PGP SIGNATURE-----
