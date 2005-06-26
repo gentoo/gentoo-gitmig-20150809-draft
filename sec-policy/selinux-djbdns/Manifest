@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 db6f1e5652ba05f73a9e87afd06abbdb ChangeLog 1003
 MD5 fb218f45790b91233fae3bf77a791b91 metadata.xml 528
 MD5 165517f6a38bff85175c6b4e07179bfa selinux-djbdns-20050316.ebuild 459
-MD5 38b8eb0480c986d972cc17222c212591 selinux-djbdns-20041121.ebuild 459
+MD5 77e2d2f7c7a36ba76819785e6d8af87c selinux-djbdns-20050626.ebuild 392
 MD5 971fb37d492a6f1e0498a6645770d038 files/digest-selinux-djbdns-20050316 74
-MD5 a9a4901495f3da8547b6eeb997e404f6 files/digest-selinux-djbdns-20041121 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCfGohGSBEIeh4AEYRAnk/AJwJSnVYVMK1qt3nwusUwY6gSdbN/wCfW+Gf
-4sHCMvda1DRxqTO+XKGwrjY=
-=24Vg
------END PGP SIGNATURE-----
+MD5 ce94a58c639b04cc5bee8a0b917e9778 files/digest-selinux-djbdns-20050626 74
