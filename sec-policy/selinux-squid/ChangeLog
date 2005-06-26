@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-squid
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/ChangeLog,v 1.12 2005/05/07 07:04:02 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/ChangeLog,v 1.13 2005/06/26 17:47:38 kaiowas Exp $
+
+*selinux-squid-20050626 (26 Jun 2005)
+
+  26 Jun 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-squid-20050219.ebuild, +selinux-squid-20050626.ebuild:
+  added name_connect rules, mark stable
 
   07 May 2005; petre rodan <kaiowas@gentoo.org>
   selinux-squid-20050408.ebuild:
