@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/szip
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.4 2004/12/29 00:33:45 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.5 2005/06/26 00:54:05 ribosome Exp $
+
+  26 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -szip-1.1.ebuild:
+  Removed obsolete version.
 
 *szip-1.1 (28 Dec 2004)
 
