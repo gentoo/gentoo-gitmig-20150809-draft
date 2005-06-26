@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.25 2005/06/11 04:37:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.26 2005/06/26 17:22:56 lu_zero Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1138,8 +1138,15 @@ pkg_setup() {
 		die "nptlonly without nptl"
 	fi
 
+
 	# give some sort of warning about the nptl logic changes...
 	if want_nptl && want_linuxthreads ; then
+
+		if use ppc ; then
+			eerror "glibc doesn't currently work with nptl and linuxthreads"
+			eerror "please select either nptlonly or -nptl"
+			die "nptlonly not set on ppc"
+		fi
 		ewarn "Warning! Gentoo's GLIBC with NPTL enabled now behaves like the"
 		ewarn "glibc from almost every other distribution out there. This means"
 		ewarn "that glibc is compiled -twice-, once with linuxthreads and once"

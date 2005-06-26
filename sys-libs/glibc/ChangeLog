@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.352 2005/06/16 12:10:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.353 2005/06/26 17:22:56 lu_zero Exp $
+
+  26 Jun 2005; Luca Barbato <lu_zero@gentoo.org> glibc-2.3.5.ebuild:
+  ppc doesn't build correctly with -nptlonly
 
   16 June 2005; Martin Schlemmer <azarah@gentoo.org>
   glibc-2.3.4.20050125-r1.ebuild, glibc-2.3.5.20050421.ebuild:
