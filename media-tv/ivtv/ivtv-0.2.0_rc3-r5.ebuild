@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc3-r5.ebuild,v 1.1 2005/06/25 22:29:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc3-r5.ebuild,v 1.2 2005/06/26 09:09:22 dholm Exp $
 
 # TODO: make this thing 0.3.x friendly so people will stop asking me to put 0.3 in portage
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.ivtv.tv/releases/ivtv-0.2/${MY_P}.tgz
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 S="${WORKDIR}/${MY_P}"

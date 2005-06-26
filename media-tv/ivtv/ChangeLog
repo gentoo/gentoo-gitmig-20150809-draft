@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.26 2005/06/25 22:29:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.27 2005/06/26 09:09:22 dholm Exp $
+
+  22 Jun 2005; David Holm <dholm@gentoo.org> ivtv-0.2.0_rc3-r5.ebuild:
+  Added to ~ppc.
 
 *ivtv-0.2.0_rc3-r5 (25 Jun 2005)
 
