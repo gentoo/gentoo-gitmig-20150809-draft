@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 47bf2548feb19f65fbf889c36d12b103 perl-support-2.5.ebuild 530
+MD5 356d0f08b7d988a82e03336883c05bc6 ChangeLog 569
 MD5 f9c07e93fd234c2f2dc46e7ed1ccdca3 metadata.xml 253
-MD5 ee9930a8cd40ca15a9d595fda7216448 ChangeLog 485
+MD5 89065191e7b8582c1f04246ea4d60a39 perl-support-2.5.ebuild 531
 MD5 f15ebd69c09087f435ceab5f330963a9 files/digest-perl-support-2.5 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvVsltG5z4I8BtQoRAtRPAJ4vBmQKHMFUvu7tNyYGEiylp/nuqQCeKWsK
-HoEpmD7MXTEai8we6VYnGtA=
-=hh0u
------END PGP SIGNATURE-----
