@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/reiser4progs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.21 2005/05/22 06:57:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.22 2005/06/26 06:22:59 vapier Exp $
+
+  26 Jun 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/reiser4progs-1.0.4.pset.patch, reiser4progs-1.0.4.ebuild:
+  Add upstream patch for newer kernel support #97048 by Sander Sweers.
 
   22 May 2005; Mike Frysinger <vapier@gentoo.org> reiser4progs-1.0.4.ebuild:
   Add fix for broken libtool relinking by Simone Gotti #74817.

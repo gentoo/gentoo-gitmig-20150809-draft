@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.4.ebuild,v 1.5 2005/05/22 06:58:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.4.ebuild,v 1.6 2005/06/26 06:22:59 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.namesys.com/pub/reiser4progs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 -sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 -sparc x86"
 IUSE="static debug readline"
 
 DEPEND=">=sys-libs/libaal-${PV}
@@ -22,10 +22,11 @@ src_unpack() {
 	# bundled libtool sucks, so rebuild autotools #74817
 	aclocal && libtoolize -c -f && autoconf && automake || die "autotools failed"
 	epatch "${FILESDIR}"/${P}-gcc4.patch
-	cat << EOF > run-ldconfig
-#!/bin/sh
-true
-EOF
+	epatch "${FILESDIR}"/${P}.pset.patch
+	cat <<-EOF > run-ldconfig
+	#!/bin/sh
+	true
+	EOF
 }
 
 src_compile() {
