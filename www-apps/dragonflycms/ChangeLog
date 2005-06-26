@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/dragonflycms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.3 2005/06/25 16:58:58 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.4 2005/06/26 06:33:35 sejo Exp $
+
+*dragonflycms-9.0.4.0 (26 Jun 2005)
+
+  26 Jun 2005; Jochen Maes <sejo@gentoo.org> +dragonflycms-9.0.4.0.ebuild:
+  new version
 
   25 Jun 2005; Jochen Maes <sejo@gentoo.org> dragonflycms-9.0.3.0.ebuild:
   marked unstable x86 and changed description
