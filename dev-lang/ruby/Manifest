@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 26b2f76d89df2d5d502e586920a3f0d5 ruby-1.8.3_pre1.ebuild 3652
-MD5 a63962eec3291eb3762c7462570b39bc ruby-1.6.8-r12.ebuild 1937
-MD5 67de00f5d7b9ced2530317f945d0ebc9 ruby-1.8.2.ebuild 3446
-MD5 86a74e169adf8b86fc1b6d182dad85d7 ruby-1.8.2-r1.ebuild 3754
-MD5 1920202e4f4390cc15dfbd484516f8df ChangeLog 20883
+MD5 2d7e42472c7cda6a85e9653e4a8cf697 ChangeLog 21020
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 d05f63da27634456886e7c924eaf96da files/ruby-1.6.8-fix-x86_64.patch 431
+MD5 c10b69498f45f12695c5e67c38f0bcd1 ruby-1.8.3_pre1.ebuild 3714
+MD5 28ab1152a9495ba140c0b3b1573dc86a ruby-1.8.2-r1.ebuild 3818
+MD5 67de00f5d7b9ced2530317f945d0ebc9 ruby-1.8.2.ebuild 3446
+MD5 a63962eec3291eb3762c7462570b39bc ruby-1.6.8-r12.ebuild 1937
 MD5 5d27b5dca2842607d0dd0469612a2224 files/ruby-1.8.2-soap.diff 596
-MD5 e7fc14a584186eb629eddc20bc853a24 files/ruby-rdoc-gentoo.diff 455
-MD5 2026b6d80f876e54e87b8fe906d469ca files/ruby-1.8.2-unittest.diff 822
 MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2 125
+MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2-r1 125
+MD5 2026b6d80f876e54e87b8fe906d469ca files/ruby-1.8.2-unittest.diff 822
+MD5 2b7f4a180b9678de56681a4d5c254c48 files/digest-ruby-1.8.3_pre1 134
 MD5 d4b55b8964955655827a50afba707a69 files/re.c.182.patch 2472
+MD5 d05f63da27634456886e7c924eaf96da files/ruby-1.6.8-fix-x86_64.patch 431
+MD5 e7fc14a584186eb629eddc20bc853a24 files/ruby-rdoc-gentoo.diff 455
 MD5 844ffd93bddeeb9decf86b49669423e8 files/digest-ruby-1.6.8-r12 136
 MD5 be89d4c412387337e14a1d141b90b125 files/oniguruma-2.3.1-gentoo.patch 593
-MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2-r1 125
-MD5 2b7f4a180b9678de56681a4d5c254c48 files/digest-ruby-1.8.3_pre1 134
 MD5 a061fe32b8e0538c203bccebcd2ad8ac files/ruby-1.6.8-20040728-20041024.diff 3094
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCmK4lBXaUFmZvwyMRAruxAJ944vx6akvJvWFrVjkUMpiV0O5NCACfdJ0V
-XtApROyevgByqffX2qkyJZo=
-=6YPj
+iD8DBQFCvw4l5mJXAu5GbtIRAhaIAJ9eB+ekKdDMt3kiZ0Y75FRiM8paBwCfR8gr
+UGRRqcm7Kf02zTAhnC7JHXk=
+=LiMi
 -----END PGP SIGNATURE-----

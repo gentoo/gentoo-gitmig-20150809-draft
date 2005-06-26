@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.3_pre1.ebuild,v 1.2 2005/05/28 17:31:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.3_pre1.ebuild,v 1.3 2005/06/26 20:15:50 kugelfang Exp $
 
 ONIGURUMA="onigd2_4_2"
 
@@ -77,6 +77,7 @@ src_compile() {
 	fi
 
 	econf --program-suffix=${SLOT/./} --enable-shared \
+		--with-sitedir=\$\(prefix\)/$(get_libdir)/ruby/site_ruby \
 		$(use_enable socks5 socks) \
 		$(use_enable doc install-doc) \
 		$(use_enable threads pthread) \

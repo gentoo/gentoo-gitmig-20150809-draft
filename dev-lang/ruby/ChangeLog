@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.140 2005/05/28 17:31:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.141 2005/06/26 20:15:50 kugelfang Exp $
+
+  26 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> ruby-1.8.2-r1.ebuild,
+  ruby-1.8.3_pre1.ebuild:
+  Fixed multlib-strict BUG #89985.
 
   28 May 2005; Aron Griffis <agriffis@gentoo.org> ruby-1.8.3_pre1.ebuild:
   Change ia64 to ~ia64, looks like a bump was done without running ekeyword
