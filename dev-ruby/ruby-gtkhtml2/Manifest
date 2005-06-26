@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 772c70d3de8a1f9a73b6ab6d558a847c ruby-gtkhtml2-0.11.0.ebuild 509
 MD5 93d2017d1916946b48a791c926ef82aa ChangeLog 718
 MD5 314e8afbb5011f612fdee01473720a91 ruby-gtkhtml2-0.12.0.ebuild 516
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gtkhtml2-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gtkhtml2-0.12.0 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvsm1VWNWqTUmv+0RAheVAKCL+Z6nJ3aMh0ALl/1K/gSyomqhZACgl+OS
+JaqjdkJEgvTbR33wusXoETg=
+=dERt
+-----END PGP SIGNATURE-----
