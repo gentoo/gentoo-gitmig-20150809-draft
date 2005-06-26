@@ -1,4 +1,4 @@
-MD5 c0389d585a45f2d683f744a7502b62bc ChangeLog 2806
-MD5 e443fd1440c958af4653d350e7cdbf58 cl-uffi-1.4.37.ebuild 1069
+MD5 49a5ffd2b71429a29dfd18b28105a8c3 ChangeLog 2965
+MD5 ba4b5d4633da6c8afafe14140af7261d cl-uffi-1.4.39.ebuild 1069
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
-MD5 8ba5662070fb57e3c102be5f8ff5562a files/digest-cl-uffi-1.4.37 63
+MD5 a4f40327d744249cd2cde2bda589a054 files/digest-cl-uffi-1.4.39 63
