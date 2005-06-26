@@ -6,7 +6,8 @@ MD5 b59f615ff4e1c464f88d1667a66f6b5d metadata.xml 224
 MD5 e1259e82a81981c048e09a1fcf20efba libtorrent-0.6.3.ebuild 922
 MD5 0e1d2b62b6d961049b91ea07bdcbeed5 libtorrent-0.6.4.ebuild 929
 MD5 b9c90950ad788c88bff449d9054879da libtorrent-0.6.5.ebuild 830
-MD5 5875bdb56fb473d04a45e92ee5995785 ChangeLog 2624
+MD5 7d39a70b64606c02325b53642f1f7c1c ChangeLog 2763
+MD5 58d41e282376808aba59ec326eeae34c libtorrent-0.6.6.ebuild 830
 MD5 fed0b1d9f0637d8bec0610b06bc48f09 files/digest-libtorrent-0.6.2 68
 MD5 335ec65aa07b3ccf5efa7a7bc06ff4a5 files/libtorrent-0.6.2-fbsd.patch 1305
 MD5 fa7178b92b0fe229d3b56215dff10599 files/libtorrent-0.6.2-warns.patch 1166
@@ -14,10 +15,11 @@ MD5 f6cd2647a394412df2ddd6d20d1ec93a files/digest-libtorrent-0.6.3 68
 MD5 bd8c220c5ca9e041d6702c2c6b3dd883 files/libtorrent-0.6.3-fbsd.patch 821
 MD5 da473a11734fc08492c4ecdb2ffe34cc files/digest-libtorrent-0.6.4 68
 MD5 97b33bdaf7e3f4491def6f86f2e3f986 files/digest-libtorrent-0.6.5 68
+MD5 8b387d5490785db7d0ac8bbfab60683c files/digest-libtorrent-0.6.6 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCsJ+0j5H05b2HAEkRAtlvAJwP8b6X8AAmtoX7Udf2XW8amQDaMwCgom8V
-W+allZpZ64/zUf5zo4dKGrU=
-=vnHK
+iD8DBQFCvxrbj5H05b2HAEkRAjiuAJ9168PLaAketgqlopZ8wPsI/qsNBQCfcLFo
+6yGrL7qTPfT0HB/INU6nWII=
+=RsBO
 -----END PGP SIGNATURE-----
