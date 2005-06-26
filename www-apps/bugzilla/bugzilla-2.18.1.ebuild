@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.1.ebuild,v 1.6 2005/06/12 17:49:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.1.ebuild,v 1.7 2005/06/26 21:24:15 rl03 Exp $
 
 inherit webapp
 
@@ -49,7 +49,7 @@ src_install () {
 		webapp_serverowned "${MY_HTDOCSDIR}/${file}"
 	done
 
-	cp ${FILESDIR}/${PVR}/apache.htaccess ${D}/${MY_HTDOCSDIR}/.htaccess
+	cp ${FILESDIR}/2.18.1-r1/apache.htaccess ${D}/${MY_HTDOCSDIR}/.htaccess
 
 	FILE="bugzilla.cron.daily bugzilla.cron.tab bz.cfg.templ firstcheck.sh cronset.sh"
 	for file in ${FILE}; do
@@ -58,7 +58,7 @@ src_install () {
 	done
 
 	# add the reconfigure hook
-	webapp_hook_script ${FILESDIR}/2.18.0_rc4/reconfig
+	webapp_hook_script ${FILESDIR}/2.18.1-r1/reconfig
 
 	webapp_src_install
 }
