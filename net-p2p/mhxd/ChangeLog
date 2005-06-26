@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mhxd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/ChangeLog,v 1.9 2005/03/14 18:12:11 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/ChangeLog,v 1.10 2005/06/26 20:43:19 kang Exp $
+
+  26 Jun 2005; Guillaume Destuynder <kang@gentoo.org> mhxd-0.4.10.ebuild:
+  Warning added: #89196. Also, this ebuild is going away soon.
 
   14 Mar 2005; Guillaume Destuynder <kang@gentoo.org> mhxd-0.4.10.ebuild,
   -mhxd-0.4.9.ebuild:

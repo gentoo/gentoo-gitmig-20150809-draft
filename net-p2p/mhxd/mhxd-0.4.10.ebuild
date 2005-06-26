@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.10.ebuild,v 1.4 2005/03/14 18:12:11 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.10.ebuild,v 1.5 2005/06/26 20:43:19 kang Exp $
 
 inherit eutils
 
@@ -71,9 +71,10 @@ pkg_preinst() {
 pkg_postinst() {
 	#fowners don't do directories :(
 	chown -R hxd:hxd /var/mhxd || "Failed to set owner on /var/mhxd"
-	einfo
 	einfo "Welcome to Horline!"
 	einfo "Do '/etc/init.d/mhxd start' to start the server, then"
 	einfo "Login as admin and no password to your hotline server, and change the password"
-	einfo
+	ewarn "Please add CONFIG_PROTECT=\"/var/mhxd/accounts\" to
+	/etc/env.d/99mhxd and run env-update;source /etc/profile or your accounts
+	will be erased at next merge. (Also add news for news)"
 }
