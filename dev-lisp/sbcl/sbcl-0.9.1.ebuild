@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.1.ebuild,v 1.3 2005/06/01 03:24:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.1.ebuild,v 1.4 2005/06/26 16:14:58 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -113,11 +113,11 @@ src_compile() {
 		bindir=../x86-64-binary
 	fi
 
-	PATH=${bindir}/src/runtime:${PATH} SBCL_HOME=${bindir}/output GNUMAKE=make \
+	LANG=C PATH=${bindir}/src/runtime:${PATH} SBCL_HOME=${bindir}/output GNUMAKE=make \
 		./make.sh 'sbcl
 			--sysinit /dev/null
 			--userinit /dev/null
-			--no-debugger
+			--disable-debugger
 			--core ${bindir}/output/sbcl.core' \
 				|| die
 	cd ${S}/doc/manual

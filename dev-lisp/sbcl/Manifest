@@ -1,8 +1,11 @@
-MD5 b4839ed223fea1007c99c9cea42ae1b8 ChangeLog 17629
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5b4c84e29e01eb4b8e817b590b173ea7 ChangeLog 17796
 MD5 0c9bf11185a2a2f1916fc3dc72c0e89e metadata.xml 1037
 MD5 93b63e11f2b4f11824fd8d5393223d4d sbcl-0.8.21-r1.ebuild 4998
 MD5 2243e86820f01f5062895975617100dd sbcl-0.9.0.ebuild 4864
-MD5 8595ce133302f2d91782b2711dbc2889 sbcl-0.9.1.ebuild 5066
+MD5 b1f886a4f1701f330ccd82ccb43a677c sbcl-0.9.1.ebuild 5078
 MD5 d18264bffb7b1a60421ea17c1862106f files/digest-sbcl-0.8.21-r1 558
 MD5 804f3eded447b0c1d9a238ca5533b058 files/digest-sbcl-0.9.0 557
 MD5 ad2b50cc0044a102b5eba7a50c597745 files/digest-sbcl-0.9.1 557
@@ -28,3 +31,10 @@ MD5 3869dca83085d07e01386eda00c05943 files/0.9.1/install-clc.lisp 980
 MD5 f2071db9468694928756b219dad5c84e files/0.9.1/sbcl-gentoo.patch 3810
 MD5 7447a308f36b4ad14626357d8f2c8db6 files/0.9.1/sbcl.sh 1512
 MD5 653f804ebcd167d167f8163756b7da17 files/0.9.1/sbclrc 639
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvtS3yiNZaEAZA+ARAkdIAJ9N9fzDgkp3bEgolEGPCq5Coi7BwgCeIfig
+NRZED9yRPtCPKSs/g4vlpHs=
+=RVK0
+-----END PGP SIGNATURE-----
