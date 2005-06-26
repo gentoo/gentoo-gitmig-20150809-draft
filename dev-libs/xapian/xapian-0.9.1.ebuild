@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-0.9.1.ebuild,v 1.1 2005/06/25 23:27:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-0.9.1.ebuild,v 1.2 2005/06/26 03:52:21 dragonheart Exp $
 
 IUSE=""
 
@@ -17,15 +17,20 @@ DEPEND="virtual/libc
 	sys-apps/grep
 	sys-apps/sed
 	sys-devel/libtool
-	sys-devel/bison
 	sys-devel/gcc"
 
 RDEPEND="virtual/libc"
 
-
 src_test() {
-	make check || einfo "stemtest and internaltest are known to fail with loading shared libraries: cannot apply additional memory protection after relocation: Cannot allocate memory: SEGFAULT"
+	if has_version '~dev-util/valgrind-2.2.0';
+	then
+		#valgrind-2.2 caused errors here.
+		make check VALGRIND= || die "check failed"
+	else
+		make check || die "check failed"
+	fi
 }
+
 
 src_install () {
 	emake DESTDIR=${D} install || die
