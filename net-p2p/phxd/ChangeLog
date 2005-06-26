@@ -1,0 +1,8 @@
+# ChangeLog for net-p2p/phxd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/ChangeLog,v 1.1 2005/06/26 21:08:45 kang Exp $
+
+  26 Jun 2005; Guillaume Destuynder <kang@gentoo.org> ChangeLog:
+  Initial import. This ebuild provides a replacement for net-p2p/mhxd which is
+  not supported anymore upstream.
+
