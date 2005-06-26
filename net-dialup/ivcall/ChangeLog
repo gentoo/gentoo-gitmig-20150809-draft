@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ivcall
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivcall/ChangeLog,v 1.4 2005/06/15 21:49:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivcall/ChangeLog,v 1.5 2005/06/26 08:41:01 blubb Exp $
+
+  26 Jun 2005; Simon Stelling <blubb@gentoo.org> ivcall-0.4-r1.ebuild:
+  added ~amd64 keyword
 
   15 Jun 2005; Alin Nastac <mrness@gentoo.org> -ivcall-0.3.ebuild:
   Remove old version.
