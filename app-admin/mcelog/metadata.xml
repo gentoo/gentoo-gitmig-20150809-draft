@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>amd64@gentoo.org</herd>
+	<herd>amd64</herd>
 	<longdescription lang="en">
 		Starting with version 2.6.4, the Linux kernel for x86-64 no longer
 		decodes and logs recoverable Machine Check Exception events to the

@@ -1,4 +1,14 @@
-MD5 78ca346d15499cec18f74891da7043b3 mcelog-0.4.ebuild 590
-MD5 cd836e348cd6bc5b82cf0fece7b9bfbd metadata.xml 383
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0105c4fa47cd4f31306dc308477fd41e ChangeLog 373
 MD5 5f3eb7b5e121753ec78373186ef22a9a files/digest-mcelog-0.4 60
+MD5 78ca346d15499cec18f74891da7043b3 mcelog-0.4.ebuild 590
+MD5 b4b0772873bb3d0c44751d008a80e68e metadata.xml 372
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCvzBRI1lqEGTUzyQRAlRnAJ0ZswG7nqVjcfPClDAXGm9p8mHtpwCgqGbs
+E9K/qUaBORpktL5MBF4R/Pg=
+=S0fp
+-----END PGP SIGNATURE-----
