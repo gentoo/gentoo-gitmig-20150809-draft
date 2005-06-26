@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mkl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.2 2004/12/29 00:23:29 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.3 2005/06/26 00:35:12 ribosome Exp $
+
+  26 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -mkl-5.1.ebuild:
+  Removed obsolete version.
 
 *mkl-5.2 (28 Dec 2004)
 
