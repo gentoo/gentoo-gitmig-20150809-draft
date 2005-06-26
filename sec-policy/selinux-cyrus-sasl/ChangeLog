@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-cyrus-sasl
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-cyrus-sasl/ChangeLog,v 1.1 2005/06/26 18:18:23 kaiowas Exp $
+
+*selinux-cyrus-sasl-20050605 (26 Jun 2005)
+
+  26 Jun 2005; petre rodan <kaiowas@gentoo.org> +metadata.xml,
+  +selinux-cyrus-sasl-20050605.ebuild:
+  initial commit
+

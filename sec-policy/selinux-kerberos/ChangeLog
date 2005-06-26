@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-kerberos
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-kerberos/ChangeLog,v 1.1 2005/06/26 18:22:09 kaiowas Exp $
+
+*selinux-kerberos-20050626 (26 Jun 2005)
+
+  26 Jun 2005; petre rodan <kaiowas@gentoo.org> +metadata.xml,
+  +selinux-kerberos-20050626.ebuild:
+  initial commit
+
