@@ -1,4 +1,4 @@
-MD5 1c36f253870de6b2710981fc9045179f ChangeLog 132
+MD5 f5745b8ae8635b67ac9a98ab48367206 ChangeLog 384
 MD5 3c24d8f9cc57ccd5628fc2df6a568c2c metadata.xml 510
-MD5 c6c01a0c9e74bf7efaa0c51a08ac5343 selinux-openvpn-20050618.ebuild 278
+MD5 77b7059a12a0fd980f6c9abe4636924d selinux-openvpn-20050618.ebuild 395
 MD5 f63f74c4cae11305699d945ae0616660 files/digest-selinux-openvpn-20050618 74
