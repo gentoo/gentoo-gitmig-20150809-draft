@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-5.0.ebuild,v 1.12 2005/06/10 20:40:29 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-5.0.ebuild,v 1.13 2005/06/26 06:16:27 j4rg0n Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -21,8 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/pcre-5.0-uclibc-tuple.patch
-	epatch "${FILESDIR}"/pcre-4.2-link.patch
-	use ppc-macos && epatch "${FILESDIR}"/pcre-5.0-macos.patch
+	use ppc-macos || epatch "${FILESDIR}"/pcre-4.2-link.patch
 
 	# position-independent code must used for all shared objects.
 	append-flags -fPIC
@@ -37,17 +36,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-
-	if use ppc-macos; then
-		cd "${D}"/usr/lib
-		for i in libpcre{,.0.0.1,.0} libpcreposix{,.0.0.0,.0}; do
-			mv $i $i.dylib
-		done
-		ln -sf libpcre.0.0.1.dylib libpcre.dylib
-		ln -sf libpcre.0.0.1.dylib libpcre.0.dylib
-		ln -sf libpcreposix.0.0.0.dylib libpcreposix.dylib
-		ln -sf libpcreposix.0.0.0.dylib libpcreposix.0.dylib
-	fi
 
 	dodoc AUTHORS INSTALL NON-UNIX-USE
 	dodoc doc/*.txt doc/Tech.Notes
