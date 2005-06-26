@@ -1,12 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/ip6tables.init,v 1.6 2005/04/25 00:27:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/ip6tables.init,v 1.7 2005/06/26 09:06:28 vapier Exp $
 
 opts="save reload"
 
 depend() {
-	need logger net
+	before net
+	use logger
 }
 
 checkrules() {
