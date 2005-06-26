@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.13 2005/06/08 00:49:35 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.14 2005/06/26 15:01:27 killerfox Exp $
+
+  26 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> squid-2.5.9-r3.ebuild:
+  Stable on hppa. bug 89149
 
   08 Jun 2005; Stuart Longland <redhatter@gentoo.org> squid-2.5.10_rc3.ebuild:
   Marking stable on mips.
