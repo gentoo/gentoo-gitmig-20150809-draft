@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 48f1ffbe9009e060b10a5fe07abe7fa9 ChangeLog 1474
 MD5 b99e999a2b338c63b407d5d138bab325 metadata.xml 508
 MD5 b176606d9fd7e3be569f0ffc52bdb18b selinux-samba-20050626.ebuild 433
 MD5 0ac241df6240728f4ca5f5b0f3630af4 selinux-samba-20041117.ebuild 381
 MD5 d6686ede6d739fa547533c5145fea40e files/digest-selinux-samba-20050626 73
 MD5 60147fa77df94c78722e2f6161eb1e49 files/digest-selinux-samba-20041117 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCvshbGSBEIeh4AEYRAswyAJ9E55yycMhwgUSCkfMpq9EuJfDrRwCeNj0S
+kIKvwXO4Ifhsigl3XJiREm4=
+=/02q
+-----END PGP SIGNATURE-----
