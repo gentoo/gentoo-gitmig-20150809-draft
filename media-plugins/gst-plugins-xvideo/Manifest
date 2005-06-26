@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a0d3c4bb8d3d4662e0a59bd587f5fb8 ChangeLog 3226
-MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 0d1beddd380c070ad33768a914492c48 gst-plugins-xvideo-0.8.2.ebuild 437
-MD5 4200ca7b5ac47eafc81e9bba49c078f1 gst-plugins-xvideo-0.8.5.ebuild 438
-MD5 24020144fdce9475164de502eadab6f8 gst-plugins-xvideo-0.8.8.ebuild 452
-MD5 89bca2873e5579e5ec8580d16cc88d32 gst-plugins-xvideo-0.8.9.ebuild 462
-MD5 72dfd49464d372b5113e62b63ac8016c gst-plugins-xvideo-0.8.3.ebuild 441
+MD5 4724ede4733934cdbea4cec8a273c3b3 ChangeLog 3359
 MD5 8c9622333a4d69b78674d16ee0fa3d0d gst-plugins-xvideo-0.8.1.ebuild 437
+MD5 0d1beddd380c070ad33768a914492c48 gst-plugins-xvideo-0.8.2.ebuild 437
+MD5 72dfd49464d372b5113e62b63ac8016c gst-plugins-xvideo-0.8.3.ebuild 441
+MD5 4200ca7b5ac47eafc81e9bba49c078f1 gst-plugins-xvideo-0.8.5.ebuild 438
 MD5 805c2a308af1c8f76360833026653dba gst-plugins-xvideo-0.8.7.ebuild 437
+MD5 74c79f9bb9a9c70104b12973492a3429 gst-plugins-xvideo-0.8.8.ebuild 455
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+MD5 0f0dadc82dd0796ac1d14d005c65d09a gst-plugins-xvideo-0.8.9.ebuild 468
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-xvideo-0.8.9 71
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-xvideo-0.8.1 71
-MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-xvideo-0.8.7 71
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-xvideo-0.8.2 71
 MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-xvideo-0.8.3 71
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-xvideo-0.8.8 71
-MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-xvideo-0.8.9 71
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-xvideo-0.8.5 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrVZIKf2g/qXtneoRAsSXAKCRdEtGAIEfdwhijXUKEFCriO58CwCeIhp3
-nSwhkJtKitj0dAOg+ay/T90=
-=VpX8
------END PGP SIGNATURE-----
+MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-xvideo-0.8.7 71
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-xvideo-0.8.8 71

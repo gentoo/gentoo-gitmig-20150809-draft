@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3c944364343de0dc5eceac8c806b822c ChangeLog 1921
-MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
-MD5 27a72b9673d19f05a6c37ddf2b4d22fd gst-plugins-pango-0.8.8-r1.ebuild 487
-MD5 8461313f4849ded560403797ce7a1871 gst-plugins-pango-0.8.9.ebuild 355
+MD5 ddc303428d9ce57c972310ab0c45e065 ChangeLog 2055
 MD5 6f59ae92dbb0b81b182584e892ba7501 gst-plugins-pango-0.8.8.ebuild 336
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8-r1 71
-MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-pango-0.8.9 71
+MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
+MD5 11554355b0d5c69fb7e8acd34b6f0d85 gst-plugins-pango-0.8.8-r1.ebuild 489
+MD5 501ae3ac26a06994fe11d3c2b86b1370 gst-plugins-pango-0.8.9.ebuild 361
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8 71
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8-r1 71
 MD5 ed95a2d8b0c203bc1b8b72118101a97b files/gst-plugins-pango-0.8.8-sub_position.patch 1648
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrVaNKf2g/qXtneoRAvzGAKCkxAoiA7a1YQfKjZ2OGAS7WErMJgCgiSCz
-PZzPaPuEbFiYto1cBkvKcIQ=
-=EFr8
------END PGP SIGNATURE-----
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-pango-0.8.9 71
