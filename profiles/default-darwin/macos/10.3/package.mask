@@ -2,6 +2,7 @@
 # These packages will, or depend on packages that will overwrite collision-protected files 
 ##
 
+app-editors/nano
 app-editors/vim-core
 app-shells/zsh
 dev-libs/libxml2
