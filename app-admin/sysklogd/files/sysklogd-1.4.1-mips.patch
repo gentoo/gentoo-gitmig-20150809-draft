@@ -1,10 +1,12 @@
---- /home/portage/sysklogd-1.4.1-r7/work/sysklogd-1.4.1/ksym_mod.c	2000-09-12 23:15:28.000000000 +0200
-+++ /tmp/ksym_mod.c	2003-10-16 19:04:21.000000000 +0200
-@@ -93,6 +93,7 @@
+--- sysklogd/ksym_mod.c
++++ sysklogd/ksym_mod.c
+@@ -93,6 +93,9 @@
  #include <linux/time.h>
  #include <linux/module.h>
  #else /* __GLIBC__ */
++#ifdef __mips__
 +#include <linux/linkage.h>
++#endif
  #include <linux/module.h>
  extern __off64_t lseek64 __P ((int __fd, __off64_t __offset, int __whence));
  extern int get_kernel_syms __P ((struct kernel_sym *__table));
