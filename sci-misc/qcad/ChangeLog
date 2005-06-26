@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/qcad
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.5 2005/03/17 02:40:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.6 2005/06/26 03:19:08 ribosome Exp $
+
+  26 Jun 2005; Olivier Fisette <ribosome@gentoo.org>
+  -files/qcad-2.0.2.0-1.src-gentoo.patch,
+  -files/qcad-2.0.3.1-1.src-gentoo.patch, -files/qcad-2.0.3.1-gcc34.patch,
+  -files/manual.patch, -qcad-2.0.2.0.ebuild, -qcad-2.0.3.1.ebuild,
+  -qcad-2.0.3.1-r1.ebuild, -qcad-2.0.4.0.ebuild:
+  Removed obsolete versions.
 
   17 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> qcad-2.0.4.0-r1.ebuild:
   Marked stable on x86 and amd64, added desktop entry - bug 75900.
