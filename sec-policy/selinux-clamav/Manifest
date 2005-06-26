@@ -6,11 +6,11 @@ MD5 75701bb6f376247fef2884655262fddf metadata.xml 517
 MD5 946b85bc6354ad84a36f62a302334628 selinux-clamav-20050505.ebuild 420
 MD5 5aec1238850a8e8c8c037623cad8826e selinux-clamav-20050626.ebuild 476
 MD5 88760f930acbd5d9b0e53ce121f7adbe files/digest-selinux-clamav-20050505 74
-MD5 eb30dad3de32f3a1947935aef5646ae1 files/digest-selinux-clamav-20050626 74
+MD5 4d6e3fa1429f442d1a108cf62d0020d3 files/digest-selinux-clamav-20050626 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCvpVOGSBEIeh4AEYRAo/4AJ92BICaHXHEC3s/Pwwac6tRg59QgwCfTHcv
-tD/rteRIQfgoRmSp+iCH0+4=
-=fHkR
+iD8DBQFCvuzgGSBEIeh4AEYRAowcAJ9qrnOd7xGekxAA3LDsubXRCZ+FdwCgjBQV
+a3No/Jbryc6RSm4YBPOroy4=
+=d+2C
 -----END PGP SIGNATURE-----
