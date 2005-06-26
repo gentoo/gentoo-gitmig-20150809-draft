@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/xfoil
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/ChangeLog,v 1.4 2005/05/06 21:38:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/ChangeLog,v 1.5 2005/06/26 03:21:37 ribosome Exp $
+
+  26 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -xfoil-6.94.ebuild,
+  xfoil-6.94-r1.ebuild:
+  Fixed typo. Removed obsolete version.
 
   06 May 2005; David Holm <dholm@gentoo.org> xfoil-6.94-r1.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/xfoil-6.94-r1.ebuild,v 1.4 2005/05/06 21:38:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/xfoil-6.94-r1.ebuild,v 1.5 2005/06/26 03:21:37 ribosome Exp $
 
 inherit toolchain-funcs fortran
 
@@ -8,7 +8,7 @@ MY_PN="${PN}"
 MY_PV="${PV/./}"
 MY_P="${MY_PN}${MY_PV}"
 
-DESCRIPTION="design and analysis of subsonic isolated airfoils"
+DESCRIPTION="Design and analysis of subsonic isolated airfoils"
 HOMEPAGE="http://raphael.mit.edu/xfoil/"
 SRC_URI="http://raphael.mit.edu/xfoil/${MY_P}.tar.gz
 	doc? ( http://raphael.mit.edu/xfoil/xfoil_doc.ps
