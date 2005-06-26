@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 8e855b65b24e271d303ef21f68b60609 ChangeLog 610
 MD5 d57187d1a35cc6f3da93a155d8fc1564 libftdi-0.5.ebuild 603
 MD5 d800ef4fc34a6b31455ffdc225d9188d metadata.xml 374
-MD5 bbc9b0bfa80639ecc4ce61a54e427664 ChangeLog 533
-MD5 fb668be5318344a30066ddd83f7e145b libftdi-0.6.ebuild 605
+MD5 6118ef5a1f006fee211daff29be1b2e3 libftdi-0.6.ebuild 604
 MD5 bb7f6f51bafd1a1d2b9d555760107520 files/digest-libftdi-0.5 63
 MD5 7f724ffd6869b3de6f64a60fa3179f22 files/digest-libftdi-0.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvWKQmdTrptrqvGERAs5yAJ0cz5MGoJmDO1CT9EwjDykxe47OMQCglGNA
-DTH+ABVYk5O9SLgZmiaJirU=
-=INvX
------END PGP SIGNATURE-----
