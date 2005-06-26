@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 39c89a716e1e067d235143611dae7c5b squidclam-0.11.ebuild 1618
-MD5 49622aa5278d98c229a4241f52fa079f ChangeLog 365
+MD5 747fa3ba760102bef815fdf675a79fa4 ChangeLog 473
 MD5 0fcd3e06211b4df6185d71e97e6ff23f metadata.xml 296
+MD5 b9f6abcadd999ca55ece37c68ee57f22 squidclam-0.11.ebuild 1624
 MD5 4385df4221997c40aa3875292ebadfce files/digest-squidclam-0.11 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjOKVjiC39V7gKu0RAu2eAKC2m3/WPI2GHEdlkiPc9l2XeRnp7ACfRa1S
-3apPPa1wmDoZUawcklenALM=
-=MYKX
------END PGP SIGNATURE-----
