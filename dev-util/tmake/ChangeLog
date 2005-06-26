@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/tmake
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/ChangeLog,v 1.17 2005/04/24 02:57:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/ChangeLog,v 1.18 2005/06/26 09:44:04 dragonheart Exp $
+
+*tmake-2.12 (26 Jun 2005)
+*tmake-1.13 (26 Jun 2005)
+
+  26 Jun 2005; Daniel Black <dragonheart@gentoo.org> +tmake-1.13.ebuild,
+  +tmake-2.12.ebuild:
+  version bump
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> tmake-1.8-r1.ebuild:
   Stable on ppc.
