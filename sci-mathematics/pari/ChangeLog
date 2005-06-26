@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.12 2005/05/31 09:48:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.13 2005/06/26 02:22:38 ribosome Exp $
+
+  26 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -pari-2.1.5-r1.ebuild:
+  Removed obsolete version.
 
   31 May 2005; Guy Martin <gmsoft@gentoo.org> pari-2.1.6.ebuild:
   Stable and fixed on hppa.
