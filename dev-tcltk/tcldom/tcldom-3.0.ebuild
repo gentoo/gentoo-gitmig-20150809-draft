@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-3.0.ebuild,v 1.1 2005/06/26 03:34:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-3.0.ebuild,v 1.2 2005/06/26 12:39:46 swegener Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-tcltk/tcllib-1.2
 	~dev-tcltk/tclxml-3.0
-	expat? ( >=dev-libs/expat )"
+	expat? ( dev-libs/expat )"
 
 src_unpack() {
 	unpack ${A}
