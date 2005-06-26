@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tcldom
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/ChangeLog,v 1.5 2005/05/12 03:31:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/ChangeLog,v 1.6 2005/06/26 03:34:28 matsuu Exp $
+
+*tcldom-3.0 (26 Jun 2005)
+
+  26 Jun 2005; MATSUU Takuto <matsuu@gentoo.org> +tcldom-3.0.ebuild:
+  Version bumped.
+  Added some USE flags.
 
   12 May 2005; Olivier Crête <tester@gentoo.org> tcldom-2.6.ebuild:
   Marking ~amd64

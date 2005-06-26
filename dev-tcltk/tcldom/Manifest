@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 59600967fa974ff0ea137cbb1b25691a tcldom-3.0.ebuild 1327
+MD5 01fc541cd5d63c71d43698db97e5e76e ChangeLog 702
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 8e830cebb2959e830a3d0b55f3d2ebe3 ChangeLog 563
 MD5 37d9d1bee0c87a73e4986a2dbcdceb6a tcldom-2.6.ebuild 620
 MD5 ad2e519bbc7102830cb4f72173944a18 files/digest-tcldom-2.6 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCgs4cmOfEJZHYOKcRAtdtAJ91ZPcoqgRutUR8QH34Lr6xiHVLNwCeKP8a
-U4y+uLRYDna+fS8S/I9kvAo=
-=RTSx
------END PGP SIGNATURE-----
+MD5 6ced6c084ff617a46a00282483c6e4fd files/digest-tcldom-3.0 62
