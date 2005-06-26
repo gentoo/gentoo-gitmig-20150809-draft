@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d1b804aa354cff77c98645c0fea1114d ChangeLog 825
+MD5 e2c6af89ce0c867f6e6512615f23695b ChangeLog 904
 MD5 fceb02b196b4dec73068e426c64f420d tcpreen-1.2.4.ebuild 631
 MD5 13f274588a1f7f86fe7cf36314f661e5 metadata.xml 226
 MD5 e33556be37dd19305454240351809ead tcpreen-1.4.2.ebuild 632
-MD5 650456d59e9dcde07e6b2604b73dbe9e tcpreen-1.4.3.ebuild 633
+MD5 3a93f27c019772f806f2cc80efe8ffca tcpreen-1.4.3.ebuild 632
 MD5 1037df49d4629d1f7f364c41b8ad40cc files/digest-tcpreen-1.2.4 66
 MD5 c9610fc6d7976f275e1eae177519ffd6 files/digest-tcpreen-1.4.2 66
 MD5 443929ba6cd7ec125b2b38dcf5598d85 files/digest-tcpreen-1.4.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvUlGmdTrptrqvGERAntKAJ9g/uhUkCMbitrI9sTD6bf3jYjxUACZAbT0
-65lADC30gqqQDKGJOUhVdNk=
-=/fyY
------END PGP SIGNATURE-----
