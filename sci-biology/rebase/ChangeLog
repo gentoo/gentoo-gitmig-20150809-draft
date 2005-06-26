@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.21 2005/06/19 19:45:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.22 2005/06/26 18:19:10 j4rg0n Exp $
+
+  26 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org> rebase-505.ebuild:
+  Stable ppc-macos
 
   19 Jun 2005; Markus Rothe <corsair@gentoo.org> rebase-505.ebuild:
   Stable on ppc64
