@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0.ebuild,v 1.3 2005/06/26 10:46:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0.ebuild,v 1.4 2005/06/26 12:41:57 swegener Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.freepascal.org/"
 IUSE=""
 SRC_URI="mirror://sourceforge/freepascal/fpc-${MY_PV}.source.tar.gz
 	 x86? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.i386-linux.tar )
-	 ppc? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.powerpc-linux.tar)"
+	 ppc? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.powerpc-linux.tar )"
 DEPEND="!dev-lang/fpc-bin"
 RDEPEND="!dev-lang/fpc-bin"
 S=${WORKDIR}/fpc
