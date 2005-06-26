@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/mcelog
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.1 2005/06/26 20:22:05 blubb Exp $
+
+*mcelog-0.4 (26 Jun 2005)
+
+  26 Jun 2005; Simon Stelling <blubb@gentoo.org> +metadata.xml,
+  +mcelog-0.4.ebuild:
+  Initial import. Thanks to Andy Lutomirski; bug 90997
+
