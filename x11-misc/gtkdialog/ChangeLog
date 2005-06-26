@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gtkdialog
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.6 2005/06/19 19:51:14 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.7 2005/06/26 09:12:50 hansmi Exp $
+
+  26 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gtkdialog-0.59.4.ebuild:
+  Stable on ppc.
 
   19 Jun 2005; Jonathan Smith <smithj@gentoo.org> gtkdialog-0.59.4.ebuild:
   homepage update, x86 stable

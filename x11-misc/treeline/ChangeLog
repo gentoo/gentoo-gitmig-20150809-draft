@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.16 2005/06/20 00:11:20 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.17 2005/06/26 09:13:38 hansmi Exp $
+
+  26 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
+  treeline-0.11.1.ebuild:
+  Stable on ppc.
 
   20 Jun 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml,
   treeline-0.11.1.ebuild:

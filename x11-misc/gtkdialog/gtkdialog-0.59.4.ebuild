@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/gtkdialog-0.59.4.ebuild,v 1.2 2005/06/19 19:51:14 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/gtkdialog-0.59.4.ebuild,v 1.3 2005/06/26 09:12:50 hansmi Exp $
 
 DESCRIPTION="GUI-creation utility that can be used with an arbitrary interpreter"
 HOMEPAGE="http://linux.pte.hu/~pipas/gtkdialog/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://linux.pte.hu/pub/gtkdialog/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE="doc"
 
 DEPEND="=x11-libs/gtk+-2*"
