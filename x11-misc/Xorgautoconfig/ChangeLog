@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/Xorgautoconfig
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/ChangeLog,v 1.1 2005/06/26 03:53:12 josejx Exp $
+
+*Xorgautoconfig-0.2 (26 Jun 2005)
+
+  26 Jun 2005; Joseph Jezak <josejx@gentoo.org> +metadata.xml,
+  +Xorgautoconfig-0.2.ebuild:
+  Initial commit.
+
