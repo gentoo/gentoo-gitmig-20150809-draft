@@ -1,0 +1,9 @@
+# ChangeLog for sys-devel/distcc-config
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc-config/ChangeLog,v 1.1 2005/06/26 17:57:10 pyrania Exp $
+
+*distcc-config-1.3 (26 Jun 2005)
+
+  26 Jun 2005; Markus Nigbur <pyrania@gentoo.org> +distcc-config-1.3.ebuild:
+  Outsourced distcc-config. Initial import.
+
