@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.93 2005/06/26 18:57:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.94 2005/06/27 13:44:18 flameeyes Exp $
+
+  27 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -vlc-0.8.2_beta2.ebuild, vlc-0.8.2.ebuild:
+  Removed vlc-0.8.2_beta2. Disabled mozilla support waiting for new gecko-sdk,
+  see bug #97164.
 
 *vlc-0.8.2 (26 Jun 2005)
 
