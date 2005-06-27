@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ss
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ChangeLog,v 1.5 2005/06/27 20:29:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ChangeLog,v 1.6 2005/06/27 21:02:15 hansmi Exp $
+
+  27 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> ss-1.37.ebuild:
+  Stable on hppa.
 
   27 Jun 2005; Seemant Kulleen <seemant@gentoo.org> ss-1.37.ebuild:
   stable x86 and amd64 because of bug 96727
