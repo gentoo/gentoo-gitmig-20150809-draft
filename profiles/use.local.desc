@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1255 2005/06/27 16:23:26 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1256 2005/06/27 19:49:09 lu_zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -73,6 +73,7 @@ app-emulation/pearpc:jit - Use the JITC-X86 CPU
 app-emulation/qemu:kqemu - Enables the kernel module acceleration on the x86 cpu
 app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
 app-emulation/qemu:softmmu - Support for softmmu targets
+app-emulation/qemu-softmmu:kqemu - Enables the kernel module acceleration on the x86 cpu
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/anthy:ucs4 - Enable ucs4 support
