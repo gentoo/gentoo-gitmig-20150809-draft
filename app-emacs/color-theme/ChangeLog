@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/color-theme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.14 2005/04/21 18:31:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.15 2005/06/27 04:21:03 mkennedy Exp $
+
+*color-theme-6.5.4-r1 (27 Jun 2005)
+
+  27 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -color-theme-5.2.13.ebuild, -color-theme-6.5.2.ebuild,
+  color-theme-6.5.4.ebuild, +color-theme-6.5.4-r1.ebuild:
+  Conditionally apply menu patch based on whether the GNU Emacs major version
+  is 21* or 22* (CVS) resolves Bug #73192; Correct spelling error in
+  DESCRIPTION resolves Bug #94001; Remove old ebuilds.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> color-theme-6.5.4.ebuild:
   stable on amd64
