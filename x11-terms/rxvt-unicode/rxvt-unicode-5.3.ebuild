@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.3.ebuild,v 1.8 2005/06/21 18:39:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.3.ebuild,v 1.9 2005/06/27 09:26:11 corsair Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://dist.schmorp.de/rxvt-unicode/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~hppa ppc ppc64 sparc x86"
 IUSE="xgetdefault tabs"
 
 RDEPEND="virtual/x11
