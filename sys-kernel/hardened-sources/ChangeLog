@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.59 2005/06/20 06:26:48 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.60 2005/06/27 21:36:20 johnm Exp $
+
+*hardened-sources-2.6.11-r15 (27 Jun 2005)
+
+  27 Jun 2005; John Mylchreest <johnm@gentoo.org>
+  +hardened-sources-2.6.11-r15.ebuild:
+  Fixes CAN-2005-1763, CAN-2005-1265 & CAN-2005-176. Also fixes problem with
+  grsec redefining curr_ip struct.
 
 *hardened-sources-2.4.31 (20 Jun 2005)
 
