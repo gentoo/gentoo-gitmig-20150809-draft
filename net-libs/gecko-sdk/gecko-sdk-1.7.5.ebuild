@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.7 2005/06/27 13:42:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.8 2005/06/27 23:38:53 swegener Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozilla-launcher mozconfig makeedit multilib
 
-IUSE="java crypt ssl moznomail postgres"
+IUSE="java crypt ssl moznomail postgres mozsvg"
 
 EMVER="0.91.0"
 IPCVER="1.1.3"
@@ -42,7 +42,7 @@ DEPEND="${RDEPEND}
 	~sys-devel/autoconf-2.13
 	java? ( >=dev-java/java-config-0.2.0 )
 	dev-lang/perl
-	pgsql? ( >=dev-db/postgresql-7.2.0 )"
+	postgres? ( >=dev-db/postgresql-7.2.0 )"
 
 S="${WORKDIR}/mozilla"
 
