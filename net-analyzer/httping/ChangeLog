@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.14 2005/06/08 05:29:31 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.15 2005/06/27 17:46:09 vanquirius Exp $
+
+  27 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> httping-0.0.95.ebuild:
+  amd64 stable.
 
   08 Jun 2005; Stuart Longland <redhatter@gentoo.org> httping-1.0.4.ebuild:
   Added ~mips keyword as per bug #89294.
