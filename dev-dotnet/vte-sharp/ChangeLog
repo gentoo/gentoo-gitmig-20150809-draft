@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/vte-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.23 2005/05/30 05:02:48 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.24 2005/06/27 00:59:46 urilith Exp $
+
+  27 Jun 2005; Michael Tindal <urilith@gentoo.org> vte-sharp-1.0.10.ebuild:
+  Commited a fix to actually build the lib.
 
   30 May 2005; Michael Tindal <urilith@gentoo.org> vte-sharp-1.9.5.ebuild,
   vte-sharp-2.5.5.ebuild:
