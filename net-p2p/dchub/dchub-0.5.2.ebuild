@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/dchub-0.5.2.ebuild,v 1.6 2005/05/14 08:19:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/dchub-0.5.2.ebuild,v 1.7 2005/06/27 07:20:49 corsair Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://brainz.servebeer.com/dctc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~ppc64"
+KEYWORDS="ppc ppc64 x86"
 
 RDEPEND="virtual/libc
 	=dev-libs/glib-1*
