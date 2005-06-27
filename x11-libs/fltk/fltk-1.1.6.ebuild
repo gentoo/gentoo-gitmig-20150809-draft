@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.6.ebuild,v 1.3 2005/06/24 21:57:54 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.6.ebuild,v 1.4 2005/06/27 13:59:29 pyrania Exp $
 
 IUSE="noxft opengl debug"
 
@@ -22,7 +22,7 @@ INCDIR=/usr/include/fltk-${SLOT}
 LIBDIR=/usr/$(get_libdir)/fltk-${SLOT}
 
 DEPEND="virtual/x11
-	X? ( virtual/xft )
+	!noxft? ( virtual/xft )
 	media-libs/libpng
 	media-libs/jpeg
 	opengl? ( virtual/opengl )"

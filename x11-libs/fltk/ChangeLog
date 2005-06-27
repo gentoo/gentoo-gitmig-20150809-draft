@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.47 2005/06/24 21:57:54 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.48 2005/06/27 13:59:29 pyrania Exp $
+
+  27 Jun 2005; Markus Nigbur <pyrania@gentoo.org> fltk-1.1.6.ebuild:
+  Fixed DEPEND (X->!noxft). Thanks to nelchael for reporting.
 
   24 Jun 2005; Jonathan Smith <smithj@gentoo.org> fltk-1.1.6.ebuild:
   fixed use flags
