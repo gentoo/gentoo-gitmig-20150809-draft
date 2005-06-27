@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.8-r1.ebuild,v 1.4 2005/05/30 19:55:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.8-r1.ebuild,v 1.5 2005/06/27 23:33:12 swegener Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 	~sys-devel/autoconf-2.13
 	java? ( >=dev-java/java-config-0.2.0 )
 	dev-lang/perl
-	pgsql? ( >=dev-db/postgresql-7.2.0 )"
+	postgres? ( >=dev-db/postgresql-7.2.0 )"
 
 S="${WORKDIR}/mozilla"
 
