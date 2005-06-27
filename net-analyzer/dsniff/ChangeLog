@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.16 2005/05/17 18:14:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.17 2005/06/27 19:20:26 vanquirius Exp $
+
+*dsniff-2.3-r5 (27 Jun 2005)
+
+  27 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> +dsniff-2.3-r5.ebuild:
+  Adding append-ldflags -lresolv to allow amd64 compilation, ~amd64 keyword.
 
   17 May 2005; Michael Hanselmann <hansmi@gentoo.org> dsniff-2.3-r4.ebuild:
   Stable on ppc.
