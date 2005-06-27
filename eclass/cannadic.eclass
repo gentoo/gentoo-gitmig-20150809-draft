@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.7 2005/01/05 09:26:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.8 2005/06/27 20:07:32 agriffis Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -10,8 +10,7 @@
 
 ECLASS=cannadic
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS cannadic-install dicsdir-install update-cannadic-dir \
-	src_install pkg_setup pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS src_install pkg_setup pkg_postinst pkg_postrm
 
 IUSE="${IUSE} canna"
 
@@ -35,7 +34,7 @@ dicsdir="${ROOT}/var/lib/canna/dic/dics.d"
 
 #
 # pkg_setup() : sets up cannadic dir
-pkg_setup() {
+cannadic_pkg_setup() {
 
 	keepdir $cannadir
 	fowners bin:bin $cannadir
@@ -65,7 +64,7 @@ dicsdir-install() {
 # src_install() : installs all dictionaries under ${WORKDIR}
 #                 plus dics.dir and docs
 #
-src_install() {
+cannadic_src_install() {
 
 	for f in *.c[btl]d *.t ; do
 		cannadic-install $f
@@ -114,7 +113,7 @@ update-cannadic-dir() {
 #
 # pkg_postinst() : updates dics.dir and print out notice after install
 #
-pkg_postinst() {
+cannadic_pkg_postinst() {
 
 	if use canna ; then
 		update-cannadic-dir
@@ -139,7 +138,7 @@ pkg_postinst() {
 #
 # pkg_postrm() : updates dics.dir and print out notice after uninstall
 #
-pkg_postrm() {
+cannadic_pkg_postrm() {
 
 	if use canna ; then
 		update-cannadic-dir
