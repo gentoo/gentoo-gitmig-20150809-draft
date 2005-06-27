@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.4.ebuild,v 1.6 2005/06/26 06:22:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.4.ebuild,v 1.7 2005/06/27 07:34:26 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.namesys.com/pub/reiser4progs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 -sparc x86"
+KEYWORDS="amd64 ppc ppc64 -sparc x86"
 IUSE="static debug readline"
 
 DEPEND=">=sys-libs/libaal-${PV}
