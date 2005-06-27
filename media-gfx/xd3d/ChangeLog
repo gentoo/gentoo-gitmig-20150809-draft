@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xd3d
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xd3d/ChangeLog,v 1.2 2004/12/24 19:50:31 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xd3d/ChangeLog,v 1.3 2005/06/27 02:00:46 ribosome Exp $
+
+  27 Jun 2005; Olivier Fisette <ribosome@gentoo.org> xd3d-8.2.1.ebuild:
+  Added missing tcsh dependency (bug #73814). Thanks to Bryan Duff.
 
 *xd3d-8.2.1 (23 Dec 2004)
 

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 60c5d13d40ff8f7fdd499d7a48a4eeeb ChangeLog 702
+MD5 4f4bb484d797297230b1c10db0c28d0d ChangeLog 843
 MD5 7bf785acde90eaaaf82fbf66074df9ec metadata.xml 673
-MD5 89b1a73490dac352503e9681f7c1ff98 xd3d-8.2.1.ebuild 1172
+MD5 666c57d1951f429e7e67315eadaeec94 xd3d-8.2.1.ebuild 1190
 MD5 8e74eb67d30393b9b79c4cf10e070ac9 files/gentoo-xd3d-8.2.1.diff 4127
 MD5 155cd0a8aa6b4012cddc9e7666e93b4f files/digest-xd3d-8.2.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHMNI1lqEGTUzyQRAtt+AJ9Qo1d6w+pcl8vxo90jtz6QcUrX8gCghAMF
-OkFYtwVFU6GhGQvbvW9zmAk=
-=I2Ri
------END PGP SIGNATURE-----
