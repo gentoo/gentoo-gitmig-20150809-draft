@@ -1,5 +1,5 @@
-MD5 d5f5236433b6083ad150ded6e7c8f397 ChangeLog 927
-MD5 dbae66f21903eae03198cdd5bfb66b12 avrdude-4.4.0-r1.ebuild 805
+MD5 c90c5218363389c60aa3b05d51e411de ChangeLog 1020
+MD5 31175be7df235a155573ee3baca35a74 avrdude-4.4.0-r1.ebuild 804
 MD5 84cd4ec546fd8285c5ceff5dfb0f69ff avrdude-4.4.0.ebuild 684
 MD5 61dd990d46d9043e65248d672b9e217e metadata.xml 265
 MD5 1f49502ac24572171b5de332b6b41948 files/avrdude-html-doc-build-fix.patch 1227

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7eaa8947a8812408ed4affaab36ef68e ChangeLog 1624
-MD5 8a3ae3ce5cafc9fcd1f6e7c4e05e1159 avr-libc-1.2.3.ebuild 1011
+MD5 d7ed2c3b485030768977deaa58b52eae ChangeLog 1714
+MD5 579951f6c5b40fd5347015286cfca429 avr-libc-1.2.3.ebuild 1009
 MD5 d05677e7bc0cae2e33f6a6736b9aca03 metadata.xml 486
 MD5 ee96360211c9e70e81677b740b1b139a files/digest-avr-libc-1.2.3 67
 MD5 a171e49ae4824538fe554c27b30d5fd0 files/avr-libc-macros.patch 497
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCnMKJKRy60XGEcJIRAk/FAJsEt2kCnQnFxQ06hQdG8Zha57dqIwCeOJUl
-3cNE0o6a0iRVtyE45OecNcQ=
-=jt4Y
------END PGP SIGNATURE-----
