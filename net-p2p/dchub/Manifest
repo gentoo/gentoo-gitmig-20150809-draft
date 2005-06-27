@@ -1,5 +1,5 @@
-MD5 1232420c2869fa41a066fdca5bcc41ae ChangeLog 2173
-MD5 65de24c430858164c20db36ff26f6db2 dchub-0.5.2.ebuild 880
+MD5 ba64d7cfb73fbbc86dc7a92871e5b9f4 ChangeLog 2261
+MD5 53feeb1701d1f86a2cb0285867192f64 dchub-0.5.2.ebuild 879
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 3be14814c18259089fe0aa301a4eb6af files/dchub.conf.d 1610
 MD5 8c69e07d3efd31080f8cd768d75dd7ad files/dchub.init.d 1018
