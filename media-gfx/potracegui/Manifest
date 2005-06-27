@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f454a22daed577e16a00684a87956949 potracegui-1.2.ebuild 597
-MD5 5e0e6c956728cc7394cece8d61b9dee1 ChangeLog 547
+MD5 554a4ce2ae30c01d575a8f71e4304f1a ChangeLog 629
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 5648c688dd1bc54be8eaa9ef67010129 potracegui-1.2.ebuild 598
 MD5 8d97ca14322c9f97a5d09e5374eb8197 files/digest-potracegui-1.2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCahY206ebR+OMO78RArfcAJ9DcNaOg7I6Y/HtNs9A2h5RvDstGACeO9Tn
-YI93JF49kBzsX+sHIsCcGW4=
-=e3Bm
------END PGP SIGNATURE-----
