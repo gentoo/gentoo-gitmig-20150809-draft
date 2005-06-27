@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1-r1.ebuild,v 1.6 2005/05/13 18:08:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1-r1.ebuild,v 1.7 2005/06/27 19:42:01 astinus Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/wm-icons-${PV}-cvs-01092003.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 alpha ppc"
+KEYWORDS="x86 alpha ppc amd64"
 
 IUSE=""
 RDEPEND="sys-apps/gawk dev-lang/perl"
