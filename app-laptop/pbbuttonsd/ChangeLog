@@ -1,6 +1,14 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.23 2005/05/26 19:28:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.24 2005/06/27 04:31:37 josejx Exp $
+
+*pbbuttonsd-0.7_pre1 (27 Jun 2005)
+
+  27 Jun 2005; Joseph Jezak <josejx@gentoo.org>
+  -files/alsa-segfault-0.6.7.patch, -pbbuttonsd-0.6.7.ebuild,
+  -pbbuttonsd-0.6.8.ebuild, -pbbuttonsd-0.6.9.ebuild,
+  +pbbuttonsd-0.7_pre1.ebuild:
+  Added 0.7beta1 and removed old ebuilds.
 
 *pbbuttonsd-0.6.10 (26 May 2005)
 
