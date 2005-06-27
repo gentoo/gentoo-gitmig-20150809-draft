@@ -1,8 +1,18 @@
-MD5 ddfef122cdba2ca01bc50ba5bd9925c9 tellico-0.13.5.ebuild 641
-MD5 5bd3a2cfca63283933efaf0ec523d8ba tellico-0.13.7.ebuild 640
-MD5 ed74ccff17e5d418b366c50defadf723 tellico-0.13.6.ebuild 644
-MD5 60f5992c176506d2c62cf4169994a726 ChangeLog 2719
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 82278cb8a43c35c407f987a3cb81db8a tellico-0.13.7.ebuild 642
+MD5 f8c582c5cf79662d9d03e04c1aea3212 ChangeLog 2818
+MD5 ed74ccff17e5d418b366c50defadf723 tellico-0.13.6.ebuild 644
+MD5 ddfef122cdba2ca01bc50ba5bd9925c9 tellico-0.13.5.ebuild 641
 MD5 32c148e392bfa303823bd544032da253 files/digest-tellico-0.13.5 67
-MD5 ed652cfa1bc8c3bf1ba03406c806be42 files/digest-tellico-0.13.6 67
 MD5 09842214d7642f1a90db70719bd40a3e files/digest-tellico-0.13.7 67
+MD5 ed652cfa1bc8c3bf1ba03406c806be42 files/digest-tellico-0.13.6 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCwErQKRy60XGEcJIRAud7AJwOAtb47yZehIyf/uFd/WoamfM5kwCeL/oM
+r1t9gIPt3TmdrS2g7etv6Pk=
+=U+KW
+-----END PGP SIGNATURE-----
