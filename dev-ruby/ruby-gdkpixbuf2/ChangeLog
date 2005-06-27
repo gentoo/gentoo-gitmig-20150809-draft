@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.22 2005/06/26 15:28:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.23 2005/06/27 19:30:07 gustavoz Exp $
+
+  27 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  ruby-gdkpixbuf2-0.12.0.ebuild:
+  Stable on sparc
 
   26 Jun 2005; Mamoru KOMACHI <usata@gentoo.org>
   ruby-gdkpixbuf2-0.11.0.ebuild, ruby-gdkpixbuf2-0.12.0.ebuild:
