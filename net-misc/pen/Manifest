@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 40870a44b6b24e15d6ebdb8a737d2ea9 ChangeLog 573
+MD5 4f68fa23de66517f9c523fe48baf33b1 ChangeLog 649
 MD5 e9c7f48bb542f0d1f9a319a67d65ce46 pen-0.12.1.ebuild 422
-MD5 85cd1d91b10d006d80c070967e1d04cc pen-0.15.0.ebuild 500
+MD5 a385a9917dd7dd73270d029d62d29135 pen-0.15.0.ebuild 499
 MD5 0d7bf5bbb6fc0f9665bc7bbba5ed469e files/digest-pen-0.12.1 61
 MD5 9426cb45a8cec2715688d1545781a36d files/digest-pen-0.15.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvn6JmdTrptrqvGERAv53AJ9SpvXE8iQu1iwSdM7oRr2wR+InJgCcCbY8
-na3nBjJ6CJW1r+Oha3iF0XI=
-=OreI
------END PGP SIGNATURE-----
