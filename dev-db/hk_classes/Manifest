@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6cb863af5558a5d0dcdb37f57aec5fe7 ChangeLog 5227
 MD5 567cad53853adfda1ae7f205966523a8 files/digest-hk_classes-0.6.2a 198
 MD5 63250076b187f1feb6dd60af946bf54b files/digest-hk_classes-0.7 196
@@ -17,3 +20,10 @@ MD5 227492cacb1ac7af3bbca40a78095698 hk_classes-0.7.3.ebuild 1482
 MD5 2837c382c28380d3f0bec927e49ffb15 hk_classes-0.7.4.ebuild 1932
 MD5 2dcc319450160699603ac7c4903c9466 hk_classes-0.7.ebuild 1106
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwHCtI1lqEGTUzyQRAiz5AJ9IbR2hSXitMdaHAiQwp782hJeWAQCgvcAq
+6SHHauXrP7/MhuofvG2vPYQ=
+=5f/7
+-----END PGP SIGNATURE-----
