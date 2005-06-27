@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.33 2005/06/23 10:30:39 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.34 2005/06/27 07:18:48 corsair Exp $
+
+  27 Jun 2005; Markus Rothe <corsair@gentoo.org> profuse-0.23.0.ebuild:
+  Stable on ppc64
 
   23 Jun 2005; <dams@gentoo.org> profuse-0.23.0.ebuild:
   removed useless line in ebuild

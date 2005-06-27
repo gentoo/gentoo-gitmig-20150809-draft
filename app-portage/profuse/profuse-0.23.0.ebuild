@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/profuse-0.23.0.ebuild,v 1.3 2005/06/23 10:30:39 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/profuse-0.23.0.ebuild,v 1.4 2005/06/27 07:18:48 corsair Exp $
 
 MY_P=${PN}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://libconf.net/profuse/download/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc ~ppc64 ~sparc x86 ~amd64"
+KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
 IUSE="gtk ncurses"
 
 DEPEND="dev-lang/perl
