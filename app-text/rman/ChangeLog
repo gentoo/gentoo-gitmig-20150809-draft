@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rman
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.12 2005/01/01 16:34:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.13 2005/06/27 18:57:47 j4rg0n Exp $
+
+  27 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org> rman-3.1.ebuild:
+  Marked ~ppc-macos on behalf of Fabian Groffen (fabian.groffen@cwi.nl)
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> rman-3.0.9.ebuild,
   rman-3.1.ebuild:
