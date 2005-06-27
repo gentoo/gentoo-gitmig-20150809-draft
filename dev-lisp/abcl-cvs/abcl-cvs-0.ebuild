@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/abcl-cvs/abcl-cvs-0.ebuild,v 1.2 2005/06/20 21:15:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/abcl-cvs/abcl-cvs-0.ebuild,v 1.3 2005/06/27 21:59:02 mkennedy Exp $
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/armedbear-j"
 if [ -z "${ECVS_BRANCH}" ]; then
@@ -18,7 +18,7 @@ HOMEPAGE="http://armedbear-j.sourceforge.net/"
 SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="debug libabcl jpty"
 
 DEPEND="virtual/jdk"

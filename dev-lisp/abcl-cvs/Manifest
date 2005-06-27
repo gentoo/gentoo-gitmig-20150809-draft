@@ -1,7 +1,17 @@
-MD5 047f88cb78f60cc6331c374d114cc3e9 abcl-cvs-0.ebuild 1220
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 49a7f76476769d4d052652644ec585bf abcl-cvs-0.ebuild 1227
 MD5 b6a54e50eae430cd07528f6850aaac17 metadata.xml 403
-MD5 105447a03bc9a6c5396f8bc0ec3f65be ChangeLog 579
+MD5 c8fa19d3bb3e87033822c6e278eb8e6e ChangeLog 673
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-abcl-cvs-0 0
 MD5 038ee5392e620c54c0973082bd987652 files/j 124
 MD5 ef31c45735e62ba0eb84c62b2509aa38 files/abcl 143
 MD5 0e513373ec8c0af1409abbf3497ad814 files/clc-lite.lisp 2050
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwHazyiNZaEAZA+ARAvtVAJ4mfu3ALMwbfuKJk7O/qDjS8uaQ8QCfVXxA
+MkLBKogrsDLI+XtGI8Ik6sQ=
+=6346
+-----END PGP SIGNATURE-----
