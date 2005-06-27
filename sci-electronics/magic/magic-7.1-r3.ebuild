@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.1-r3.ebuild,v 1.2 2005/06/04 20:52:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.1-r3.ebuild,v 1.3 2005/06/27 02:18:41 ribosome Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,14 +10,15 @@ SRC_URI="http://vlsi.cornell.edu/magic/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="sys-apps/findutils
 	dev-lang/perl
 	>=app-shells/tcsh-6.10-r3
 	sys-libs/libtermcap-compat"
-RDEPEND="sys-libs/libtermcap-compat"
+RDEPEND="sys-libs/libtermcap-compat
+	!sys-apps/file"
 
 src_unpack() {
 	unpack ${A}
