@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.8 2005/05/20 12:24:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.9 2005/06/27 15:58:50 azarah Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -33,7 +33,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="berkdb pwdb selinux pam_chroot pam_console pam_timestamp nis"
 
-RDEPEND=">=sys-libs/cracklib-2.7-r8
+RDEPEND=">=sys-libs/cracklib-2.8.3
 	selinux? ( sys-libs/libselinux )
 	berkdb? ( >=sys-libs/db-${BDB_VER2} )
 	pwdb? ( >=sys-libs/pwdb-0.62 )"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.77 2005/06/21 18:54:19 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.78 2005/06/27 15:58:50 azarah Exp $
+
+  27 Jun 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.78-r2.ebuild:
+  Update cracklib dependencies, bug #85679.
 
   21 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> pam-0.77-r6.ebuild:
   Fixed BUG #96385 by changing hardcoded libdir in pam_cracklib's Makefile to
