@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.ebuild,v 1.1 2005/05/23 00:29:21 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.9.ebuild,v 1.2 2005/06/27 17:24:13 leonardop Exp $
 
 inherit gnome2
 
@@ -22,3 +22,11 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog README TODO"
 
+src_unpack () {
+	unpack ${A}
+	cd ${S}
+
+	# Let this file be re-created so the path in the <oaf_server> element is
+	# correct. See bug #93612.
+	rm GNOME_BlogApplet.server.in
+}
