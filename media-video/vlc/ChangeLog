@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.94 2005/06/27 13:44:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.95 2005/06/27 13:56:39 flameeyes Exp $
+
+  27 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.2.ebuild:
+  Disabled also slp support as upstream still uses an older API which breaks
+  with current version. See bug #97169.
 
   27 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
   -vlc-0.8.2_beta2.ebuild, vlc-0.8.2.ebuild:

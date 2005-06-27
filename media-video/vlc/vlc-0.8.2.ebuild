@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2.ebuild,v 1.2 2005/06/27 13:44:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2.ebuild,v 1.3 2005/06/27 13:56:39 flameeyes Exp $
 
 # Missing USE-flags due to missing deps:
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
@@ -22,7 +22,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # ~sparc keyword dropped due to missing daap dependency.. mark or use.mask it
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick hal stream mp3 xv bidi gtk2 sdl png xml2 samba daap slp corba screen mod speex"
+IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick hal stream mp3 xv bidi gtk2 sdl png xml2 samba daap corba screen mod speex"
 
 RDEPEND="hal? ( =sys-apps/hal-0.4* )
 		cdda? ( >=dev-libs/libcdio-0.71
@@ -71,7 +71,6 @@ RDEPEND="hal? ( =sys-apps/hal-0.4* )
 		vcd? ( >=dev-libs/libcdio-0.72
 			>=media-video/vcdimager-0.7.21 )
 		daap? ( >=media-libs/libopendaap-0.3.0 )
-		slp? ( net-libs/openslp )
 		corba? ( >=gnome-base/orbit-2.8.0
 			>=dev-libs/glib-2.3.2 )
 		v4l? ( sys-kernel/linux-headers )
@@ -87,6 +86,7 @@ RDEPEND="hal? ( =sys-apps/hal-0.4* )
 # 			www-client/mozilla-firefox
 # 			net-libs/gecko-sdk
 # 			) )
+# 		slp? ( net-libs/openslp )
 
 DEPEND="${RDEPEND}
 	dev-util/cvs
@@ -231,13 +231,13 @@ src_compile () {
 		$(use_enable xml2 libxml2) \
 		$(use_enable samba smb) \
 		$(use_enable daap) \
-		$(use_enable slp) \
 		$(use_enable corba) \
 		$(use_enable mod) \
 		$(use_enable speex) \
 		--disable-mozilla \
 		--disable-pth \
 		--disable-portaudio \
+		--disable-slp \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then

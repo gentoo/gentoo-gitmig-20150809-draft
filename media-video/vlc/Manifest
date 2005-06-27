@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 938acab8dca7daa281706607eeb7da1b ChangeLog 19158
+MD5 d83bf850b305b14a3ce6b555efb3fa38 ChangeLog 19347
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 2fbab31179d6bdf6dafb6aa263fe492f vlc-0.6.2-r1.ebuild 6503
 MD5 652bc3bbeeeb343edfed07a13e2ecb7a vlc-0.6.2.ebuild 5551
@@ -9,7 +9,7 @@ MD5 c4bb9e3867d1992d598670b74551ebf5 vlc-0.7.2.ebuild 6014
 MD5 ce0ead5f060f1a70fe6e867bc3ed231e vlc-0.8.1-r1.ebuild 6953
 MD5 82c6363b6853c66488c9ab0cb2bc2ef2 vlc-0.8.1-r2.ebuild 7164
 MD5 e6e1eb64af6cddda4ce8177ed782d1c3 vlc-0.8.1-r3.ebuild 7233
-MD5 9ceddc7335f99b5094f6b4ce923190e1 vlc-0.8.2.ebuild 8643
+MD5 e750ba5a30d8d5143e234019b4c6883f vlc-0.8.2.ebuild 8637
 MD5 09c124e45049f615519ded3278a97376 files/0.6.2-mozilla-fix.patch 1261
 MD5 d766f772e3e3be4f8d6cbf4d54bf2700 files/digest-vlc-0.6.2 63
 MD5 cc5d4fb953ad7bd0ee3e14076811a1d4 files/digest-vlc-0.6.2-r1 202
@@ -23,7 +23,7 @@ MD5 460bf7b3005ee9cf204e50526bfca381 files/digest-vlc-0.8.2 127
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCwALNj5H05b2HAEkRAjx/AKCArm6xWZr5L+ww6LaxksNRsgY0oQCfUoGw
-aKlQ5eoIF/BTAzVdonHHqm4=
-=Yr4V
+iD8DBQFCwAWzj5H05b2HAEkRAnSjAKCNYPHmlicac9Wn2I5QACp9ftCQLwCffIDc
+Lu5bNW42DcSwohsZo1XJm+U=
+=EH8C
 -----END PGP SIGNATURE-----
