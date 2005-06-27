@@ -1,14 +1,14 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.66 2005/06/09 02:46:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.67 2005/06/27 21:11:41 agriffis Exp $
 
   09 Jun 2005; Mike Frysinger <vapier@gentoo.org> bash-3.0-r11.ebuild:
   Stabilize for all arches.
 
   29 May 2005; <solar@gentoo.org> bash-2.05b-r11.ebuild, bash-3.0-r7.ebuild,
   bash-3.0-r8.ebuild:
-  echangelog - update package to use libc expanded variable elibc_uclibc vs
-  uclibc so USE=-* works
+  update package to use libc expanded variable elibc_uclibc vs uclibc so USE=-*
+  works
 
   04 May 2005; Mike Frysinger <vapier@gentoo.org>
   +files/bash-3.0-bash-logger.patch, bash-3.0-r11.ebuild:
@@ -38,7 +38,7 @@
   +files/bash_logout, +bash-3.0-r10.ebuild:
   Add a bunch of fixes from Fedora. Add patch to fix Darwin support #79124 by
   Sune Foldager. Dont install /bin/sh symlink on non-gnu systems (like BSD)
-  #84777 by Diego Pettenò. Add global bash_logout support #90488 by Andre
+  #84777 by Diego PettenÃ². Add global bash_logout support #90488 by Andre
   Kloth. Add support for PREEXEC #31414 by M3Dlor and all. Move /etc/bashrc
   back to /etc/bash/bashrc sine we now have /etc/bash/bash_logout too.
 
