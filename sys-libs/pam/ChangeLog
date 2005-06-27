@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.78 2005/06/27 15:58:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.79 2005/06/27 16:04:12 azarah Exp $
+
+  27 Jun 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.78-r2.ebuild:
+  Add /usr/lib specifically again, as at least here ldd does not return lib64
+  in output.
 
   27 Jun 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.78-r2.ebuild:
   Update cracklib dependencies, bug #85679.
