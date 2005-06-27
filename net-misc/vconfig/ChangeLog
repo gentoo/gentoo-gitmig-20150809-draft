@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vconfig
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.13 2005/02/05 21:21:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.14 2005/06/27 14:30:21 dholm Exp $
+
+  27 Jun 2005; David Holm <dholm@gentoo.org> vconfig-1.8.ebuild:
+  Added to ~ppc.
 
   05 Feb 2005; <solar@gentoo.org> vconfig-1.8.ebuild:
   - update rdepends
