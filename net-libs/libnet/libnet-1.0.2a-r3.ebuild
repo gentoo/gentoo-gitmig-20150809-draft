@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.14 2005/06/17 01:10:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.15 2005/06/27 07:26:09 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.packetfactory.net/libnet/dist/deprecated/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="1.0"
-KEYWORDS="x86 ppc sparc alpha amd64 ~ppc64"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 S=${WORKDIR}/Libnet-${PV}
