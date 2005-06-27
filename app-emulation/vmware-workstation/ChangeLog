@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.87 2005/06/20 21:38:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.88 2005/06/27 14:28:40 wolf31o2 Exp $
+
+  27 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-3.2.1.2242-r3.ebuild:
+  Moving os-headers to DEPEND and closing bug #82449.
 
 *vmware-workstation-5.0.0.13124-r1 (20 Jun 2005)
 
