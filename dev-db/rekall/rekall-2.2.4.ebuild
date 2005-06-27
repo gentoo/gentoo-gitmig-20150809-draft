@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/rekall-2.2.4.ebuild,v 1.1 2005/06/27 20:12:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/rekall-2.2.4.ebuild,v 1.2 2005/06/27 20:57:54 herbs Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rekallrevealed.org/packages/${P}-2.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mysql postgres xbase"
 
 DEPEND="sys-apps/sed
@@ -34,7 +34,6 @@ src_compile() {
 		`use_enable mysql` \
 		`use_enable postgres pgsql` \
 		`use_enable xbase`"
-	#use amd64 && myconf="${myconf} --enable-libsuffix=64"
 
 	kde_src_compile
 }
