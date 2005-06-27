@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam_usb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_usb/ChangeLog,v 1.13 2005/06/08 07:25:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_usb/ChangeLog,v 1.14 2005/06/27 19:26:03 blubb Exp $
+
+  27 Jun 2005; Simon Stelling <blubb@gentoo.org> ChangeLog:
+  stable on amd64
 
   06 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> pam_usb-0.3.2.ebuild:
   Cleaned up dependencies, useflags and fixed for multilib-strict on amd64
