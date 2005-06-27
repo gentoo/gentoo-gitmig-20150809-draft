@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8101cb445ec9582311193ef81039fbab ChangeLog 2936
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 ef83f52422547352c20c11ecd712ef18 ruby-glib2-0.11.0.ebuild 703
 MD5 c750f48803d435994b9eefd0599c8cf4 ruby-glib2-0.10.1.ebuild 444
-MD5 753d7a7771b4f76f0770d4e636a73859 ruby-glib2-0.12.0.ebuild 703
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 3e510c35703357c05cc0293eb482ca7e ChangeLog 3040
+MD5 c83be2a887615c9e1ee2aa8b96bf4c95 ruby-glib2-0.12.0.ebuild 705
+MD5 ef83f52422547352c20c11ecd712ef18 ruby-glib2-0.11.0.ebuild 703
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-glib2-0.11.0 75
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-glib2-0.10.1 74
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-glib2-0.12.0 75
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCvsP1VWNWqTUmv+0RAjbjAJwKKUJP8CIXfK+gtEke4PaOci0omwCdEXtg
-C8psenWmCF2wintDl4ngcUM=
-=5YZy
+iD8DBQFCwFI9KRy60XGEcJIRAlwrAKCG4y1AYAr5gh+LNXABy7XD3lDirQCgo4Wl
+p94f8LOL6aoXy1OuKNs52hg=
+=JtoX
 -----END PGP SIGNATURE-----

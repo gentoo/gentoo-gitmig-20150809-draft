@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5ea0893716691f2867b1a1e1ab4288c2 ChangeLog 1993
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 af15f6455fb57a557324ab6d3c56da9c ruby-atk-0.11.0.ebuild 438
 MD5 74c534a2115c634dc8ad079f286956cc ruby-atk-0.10.1.ebuild 456
-MD5 ff158042ca3e5882f0ed4bbc0004ed45 ruby-atk-0.12.0.ebuild 438
-MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-atk-0.11.0 75
-MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-atk-0.10.1 74
+MD5 ee69654ad7e3b12763a83a0edd18c1a1 ChangeLog 2095
+MD5 af15f6455fb57a557324ab6d3c56da9c ruby-atk-0.11.0.ebuild 438
+MD5 7749fcb2837fc21156018908c0cb1ec6 ruby-atk-0.12.0.ebuild 440
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-atk-0.12.0 75
+MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-atk-0.10.1 74
+MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-atk-0.11.0 75
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCvsWxVWNWqTUmv+0RAo7PAKCLN35ivlW4IGvJDpKt0pz7ArZIFgCgm/M1
-EwcCwnuvD+AcbWtMLkX08WY=
-=Zy6G
+iD8DBQFCwFMrKRy60XGEcJIRAge3AKCr//NddqDWVYQOXeAxyCgNUPjGFQCeIwt1
+EGGU9P1wwwQw6X8F+l9Bs3Q=
+=RKy3
 -----END PGP SIGNATURE-----
