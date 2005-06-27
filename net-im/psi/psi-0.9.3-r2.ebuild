@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r2.ebuild,v 1.6 2005/05/01 18:19:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r2.ebuild,v 1.7 2005/06/27 18:30:44 humpback Exp $
 
 inherit eutils
 
@@ -78,12 +78,12 @@ src_unpack() {
 			ewarn "try the version with extra unsuported patches by adding 'extras' to"
 			ewarn "your use flags."
 		else
-			ebeep
 			ewarn "You are about to build a version of Psi with extra unsuported patches."
 			ewarn "Patched psi versions will not be supported by the Gentoo devs or the psi"
 			ewarn "development team."
 			ewarn "If you do not want that please press Control-C now and add '-extras' to "
 			ewarn "your USE flags."
+			ebeep
 			epause 10
 
 			cd ${S}
