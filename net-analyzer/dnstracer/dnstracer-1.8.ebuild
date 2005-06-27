@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/dnstracer-1.8.ebuild,v 1.9 2005/03/13 03:37:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/dnstracer-1.8.ebuild,v 1.10 2005/06/27 17:30:43 vanquirius Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mavetju.org/download/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 arm hppa ia64 ~ppc ppc64 ppc-macos s390 sparc x86"
+KEYWORDS="amd64 arm hppa ia64 ~ppc ppc64 ppc-macos s390 sparc x86"
 IUSE="ipv6"
 
 DEPEND=""
