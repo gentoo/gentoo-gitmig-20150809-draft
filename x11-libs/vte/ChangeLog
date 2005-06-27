@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.75 2005/06/27 16:40:23 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.76 2005/06/27 18:20:55 swegener Exp $
+
+  27 Jun 2005; Sven Wegener <swegener@gentoo.org>
+  files/vte-0.11.13-memory_fix.patch:
+  Removed CVS keyword replacements from patch.
 
 *vte-0.11.13-r1 (27 Jun 2005)
 

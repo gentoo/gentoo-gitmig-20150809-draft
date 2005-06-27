@@ -3,15 +3,6 @@
 diff -NurdB vte-0.11.13/src/table.c vte-0.11.13-patched/src/table.c
 --- vte-0.11.13/src/table.c	2004-11-16 19:23:44.000000000 -0500
 +++ vte-0.11.13-patched/src/table.c	2005-06-27 10:43:47.000000000 -0500
-@@ -16,7 +16,7 @@
-  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-  */
- 
--#ident "$Id: vte-0.11.13-memory_fix.patch,v 1.1 2005/06/27 16:40:23 leonardop Exp $"
-+#ident "$Id: vte-0.11.13-memory_fix.patch,v 1.1 2005/06/27 16:40:23 leonardop Exp $"
- #include "../config.h"
- #include <sys/types.h>
- #include <assert.h>
 @@ -41,18 +41,16 @@
  	(((__c) < (VTE_TABLE_MAX_LITERAL)) ? (__c) : 0)
  #define _vte_table_is_numeric(__c) \
