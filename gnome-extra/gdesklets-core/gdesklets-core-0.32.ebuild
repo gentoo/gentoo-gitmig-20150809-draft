@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.32.ebuild,v 1.2 2005/01/23 02:30:42 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.32.ebuild,v 1.3 2005/06/27 02:29:02 nixphoeni Exp $
 
 inherit gnome2 eutils
 
@@ -24,7 +24,6 @@ RDEPEND=">=dev-lang/python-2.3
 	>=gnome-base/libgtop-2.6
 	>=dev-python/pygtk-2.4
 	>=dev-python/gnome-python-2.6
-	>=x11-libs/gtk+-2.2
 	>=gnome-base/libgnomeui-2.2
 	>=dev-lang/swig-1.3"
 
