@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.19 2005/06/18 05:32:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.20 2005/06/27 23:10:15 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -251,11 +251,11 @@ src_compile() {
 	if [[ ${CHOST} == *-uclibc ]] ; then
 		emake utils || die "could not make utils"
 	fi
-
-	! use build && ! hasq test $RESTRICT && src_test
 }
 
 src_test() {
+	return 0
+
 	[[ ${CHOST} != ${CTARGET} ]] && return 0
 	[[ ${CBUILD} != ${CHOST} ]] && return 0
 
