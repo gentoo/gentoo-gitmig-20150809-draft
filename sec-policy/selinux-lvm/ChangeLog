@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-lvm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-lvm/ChangeLog,v 1.4 2005/06/26 17:10:24 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-lvm/ChangeLog,v 1.5 2005/06/27 11:39:32 kaiowas Exp $
+
+  27 Jun 2005; petre rodan <kaiowas@gentoo.org> selinux-lvm-20050605.ebuild:
+  mark stable
 
 *selinux-lvm-20050605 (26 Jun 2005)
 
