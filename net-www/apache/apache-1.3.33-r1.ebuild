@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.23 2005/05/18 20:39:05 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.24 2005/06/27 16:30:19 blubb Exp $
 
 # Gentoo ARCH teams
 #
@@ -20,7 +20,7 @@ mod_ssl_ver=2.8.22-1.3.33
 S=${WORKDIR}/${PN}_${PV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
-KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ~ppc ppc64 sparc x86"
 SRC_URI="mirror://apache/httpd/apache_${PV}.tar.gz
 	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}.tar.gz
 	http://dev.gentoo.org/~stuart/apache/apache-patches-1.3.33.tar.bz2"
