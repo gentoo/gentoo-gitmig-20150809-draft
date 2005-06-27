@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/adm8211
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/adm8211/ChangeLog,v 1.4 2005/06/21 12:13:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/adm8211/ChangeLog,v 1.5 2005/06/27 17:24:09 herbs Exp $
+
+  27 Jun 2005; Herbie Hopkins <herbs@gentoo.org> adm8211-20050620.ebuild:
+  Marked ~amd64 wrt bug #96714.
 
 *adm8211-20050620 (21 Jun 2005)
 
