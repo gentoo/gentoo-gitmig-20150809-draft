@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Curses
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.17 2005/06/17 21:01:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.18 2005/06/27 07:16:48 corsair Exp $
+
+  27 Jun 2005; Markus Rothe <corsair@gentoo.org> Curses-1.08.ebuild:
+  Stable on ppc64
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> Curses-1.08.ebuild:
   Stable on ppc.
