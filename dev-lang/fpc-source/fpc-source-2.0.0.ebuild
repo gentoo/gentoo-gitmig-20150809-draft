@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/fpc-source-2.0.0.ebuild,v 1.2 2005/06/26 00:20:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/fpc-source-2.0.0.ebuild,v 1.3 2005/06/27 15:14:19 agriffis Exp $
 
-# Needed to release candidates etc.
+# Needed for release candidates etc.
 MY_PV="2.0.0"
 
 SLOT="0" # Read src_install notes!
