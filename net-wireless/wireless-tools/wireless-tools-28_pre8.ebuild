@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-28_pre8.ebuild,v 1.1 2005/05/31 17:43:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-28_pre8.ebuild,v 1.2 2005/06/27 16:45:08 herbs Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs multilib
 
 # The following works with both pre-releases and releases
 MY_P=${PN/-/_}.${PV/_/.}
@@ -39,6 +39,9 @@ src_unpack() {
 		${S}/Makefile
 
 	sed -i "s:^\(INSTALL_MAN= \$(PREFIX)\)/man/:\1/share/man:" \
+		${S}/Makefile
+
+	sed -i "s:^\(INSTALL_LIB= \$(PREFIX)\)/lib/:\1/$(get_libdir)/:" \
 		${S}/Makefile
 }
 
