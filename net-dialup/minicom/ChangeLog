@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.29 2005/05/29 11:40:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.30 2005/06/27 07:40:17 corsair Exp $
+
+  27 Jun 2005; Markus Rothe <corsair@gentoo.org> minicom-2.1-r1.ebuild:
+  Stable on ppc64
 
   29 May 2005; Alin Nastac <mrness@gentoo.org>
   +files/minicom-2.1-gcc4.patch, minicom-2.1-r1.ebuild:
