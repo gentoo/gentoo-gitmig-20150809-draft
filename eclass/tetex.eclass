@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.37 2005/04/12 19:52:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.38 2005/06/27 15:37:24 agriffis Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -13,7 +13,7 @@ inherit eutils flag-o-matic toolchain-funcs
 
 ECLASS=tetex
 INHERITED="${INHERITED} ${ECLASS}"
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_setup pkg_preinst pkg_postinst
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_setup pkg_postinst
 
 if [ -z "${TETEX_PV}" ] ; then
 	TETEX_PV=${PV}
