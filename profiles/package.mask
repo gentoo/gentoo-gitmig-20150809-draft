@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4130 2005/06/27 08:56:20 koon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4131 2005/06/27 10:20:25 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (27 Jun 2005)
+# Mask all 1.3_beta versions.
+=media-sound/amarok-1.3_beta*
 
 # Thierry Carrez <koon@gentoo.org> (27 Jun 2005)
 # Package contains insecure tmpfile handling, bug #93792
@@ -131,10 +135,6 @@ net-firewall/giptables
 # Robin Johnson <robbat2@gentoo.org> (06 Jun 2005)
 # Masked prior to removal. Please use libnss-mysql instead.
 sys-libs/nss-mysql
-
-# Heinrich Wendel <lanius@gentoo.org> (06 Jun 2005)
-# this is a beta version
-=media-sound/amarok-1.3_beta1
 
 # Armando Di Cianno <fafhrd@gentoo.org> (06 Jun 2005)
 # Masking ebuilds that are incorrectly newer, but still ~arch key'd anyway;
