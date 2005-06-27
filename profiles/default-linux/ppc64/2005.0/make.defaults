@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/2005.0/make.defaults,v 1.6 2005/06/19 19:57:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/2005.0/make.defaults,v 1.7 2005/06/27 03:14:49 tgall Exp $
 
 ARCH="ppc64"
 ACCEPT_KEYWORDS="ppc64"
 
 CHOST="powerpc64-unknown-linux-gnu"
 
-CFLAGS="-O2 -pipe -mtune=970 -mcpu=970"
+CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
 ACCEPT_KEYWORDS="ppc64"
