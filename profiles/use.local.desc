@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1254 2005/06/26 15:10:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1255 2005/06/27 16:23:26 brix Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -912,6 +912,7 @@ sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 sys-libs/uclibc:wordexp - add support for word expansion (wordexp.h)
 sys-libs/uclibc:xattr - enables extended attributes
 sys-power/apcupsd:cgi - Add CGI script support
+sys-power/hibernate-script:logrotate - Use logrotate for rotating logs
 sys-process/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
 sys-process/procps:n32 - Enable n32 ABI support on mips
 www-apps/dspam-web:cyrus - Build delivery options for cyrus-imapd
