@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4132 2005/06/27 10:35:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4133 2005/06/27 13:35:57 leonardop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -181,10 +181,6 @@ sys-libs/nss-mysql
 # Harald van Dĳk <truedfx@gentoo.org> (29 May 2005)
 # masked for testing
 =app-portage/ufed-0.40_pre*
-
-# Leonardo Boshell <leonardop@gentoo.org> (27 May 2005)
-# No maintainer, going to the to-be-removed pile now.
-app-editors/gnome-chord
 
 # Danny van Dyk <kugelfang@gentoo.org> (27 May 2005)
 # Needs some testing and love before going gold
