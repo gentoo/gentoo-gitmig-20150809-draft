@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortsam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.10 2005/05/15 11:37:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.11 2005/06/27 07:27:44 corsair Exp $
+
+  27 Jun 2005; Markus Rothe <corsair@gentoo.org> snortsam-2.31.ebuild:
+  Stable on ppc64
 
   15 May 2005; Markus Rothe <corsair@gentoo.org> snortsam-2.31.ebuild:
   Added ~ppc64 to KEYWORDS
