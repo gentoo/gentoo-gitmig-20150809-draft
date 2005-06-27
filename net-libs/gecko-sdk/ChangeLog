@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.11 2005/05/16 04:42:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.12 2005/06/27 13:42:02 flameeyes Exp $
+
+  27 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> gecko-sdk-1.7.5.ebuild:
+  Add patch to build with gcc4 on amd64 systems as per mozilla-1.7.8. Fixes
+  possible crash dued to faultly logic.
 
   15 May 2005; Joseph Jezak <josejx@gentoo.org> gecko-sdk-1.7.5.ebuild:
   Replaced gcc.eclass with toolchain-funcs.eclass. Updated internally to

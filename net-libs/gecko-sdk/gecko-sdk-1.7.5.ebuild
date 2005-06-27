@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.6 2005/05/16 04:42:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.7 2005/06/27 13:42:02 flameeyes Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -90,6 +90,9 @@ src_unpack() {
 	# Mozilla crashes under some rare cases when plugin.default_plugin_disabled
 	# is true. This patch fixes that. Backported by hansmi@gentoo.org.
 	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-${MOZVER}-objectframefix.diff
+
+	# Fix building on amd64 with gcc4 (patch from Debian)
+	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-${MOZVER}-amd64.patch
 
 	# Fix scripts that call for /usr/local/bin/perl #51916
 	ebegin "Patching smime to call perl from /usr/bin"
