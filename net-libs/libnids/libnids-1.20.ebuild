@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.20.ebuild,v 1.3 2005/06/27 18:29:35 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.20.ebuild,v 1.4 2005/06/27 20:54:59 vanquirius Exp $
 
 inherit eutils
 
 DESCRIPTION="emulates the IP stack of Linux 2.0.x and offers IP defragmentation, TCP stream assembly and TCP port scan detection."
-HOMEPAGE="http://sourceforge.net/projects/${PN}/"
+HOMEPAGE="http://libnids.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
