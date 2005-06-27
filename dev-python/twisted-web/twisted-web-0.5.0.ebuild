@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/twisted-web-0.5.0.ebuild,v 1.2 2005/04/22 16:16:18 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/twisted-web-0.5.0.ebuild,v 1.3 2005/06/27 08:15:55 dholm Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://tmrc.mit.edu/mirror/twisted/Web/0.5/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE="doc"
 
 DEPEND=">=dev-python/twisted-2.0.0"
