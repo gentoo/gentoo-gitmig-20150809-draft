@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r11.ebuild,v 1.7 2005/06/09 02:46:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r11.ebuild,v 1.8 2005/06/27 21:54:54 agriffis Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -85,6 +85,9 @@ src_unpack() {
 	echo '#define PGRP_PIPE 1' >> config-bot.h
 
 	sed -i 's:-lcurses:-lncurses:' configure || die "sed configure"
+
+	# Fix parallel builds #87247
+	epatch ${FILESDIR}/${P}-parallel.patch
 }
 
 src_compile() {

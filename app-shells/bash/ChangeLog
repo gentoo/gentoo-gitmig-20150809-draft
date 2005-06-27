@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.67 2005/06/27 21:11:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.68 2005/06/27 21:54:54 agriffis Exp $
+
+  27 Jun 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/bash-3.0-parallel.patch, bash-3.0-r11.ebuild:
+  Fix parallel builds #87247
 
   09 Jun 2005; Mike Frysinger <vapier@gentoo.org> bash-3.0-r11.ebuild:
   Stabilize for all arches.
