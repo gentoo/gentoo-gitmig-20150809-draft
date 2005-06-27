@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-kernel.eclass,v 1.4 2004/08/28 03:24:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-kernel.eclass,v 1.5 2005/06/27 20:18:40 agriffis Exp $
 
 # Author: Martin Schlemmer <azarah@gentoo.org>
 # Eclass'd by: Seemant Kulleen <seemant@gentoo.org>
@@ -10,9 +10,6 @@
 
 ECLASS=check-kernel
 INHERITED="${INHERITED} ${ECLASS}"
-
-EXPORT_FUNCTIONS check_version_h get_KV_info \
-	is_2_4_kernel is_2_5_kernel is_2_6_kernel
 
 DEPEND="sys-apps/gawk"
 
