@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 1bf8375b764861cbb66fa2e4d57236fe fpc-source-2.0.0.ebuild 1344
 MD5 770da6ecff8987707d6f9c22bda8c7cf ChangeLog 1361
+MD5 cbf4c3b52cbba187c1dd222521df21f7 fpc-source-1.9.5_pre20040820.ebuild 1719
+MD5 bab07a6688abb4e82baf0c99b60b6c15 fpc-source-2.0.0_rc2.ebuild 1847
 MD5 3197b41dcf78a69bd6aba5c9f97a3cb7 files/digest-fpc-source-1.9.5_pre20040820 141
 MD5 cd231688f22b41aaa230f7deb4752a05 files/digest-fpc-source-2.0.0 70
 MD5 0a08fa163a3c573b43867be33e766913 files/digest-fpc-source-2.0.0_rc2 70
-MD5 cbf4c3b52cbba187c1dd222521df21f7 fpc-source-1.9.5_pre20040820.ebuild 1719
-MD5 96d4c69d91e40d583584b15ec6fafdaa fpc-source-2.0.0.ebuild 1343
-MD5 bab07a6688abb4e82baf0c99b60b6c15 fpc-source-2.0.0_rc2.ebuild 1847
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFCvfTbI1lqEGTUzyQRAo6fAKCJvsOsYd08gYhsl//lzPKMh28ITwCWJupM
-hcZBNNNxpgmljCpnWPrvbw==
-=3gl4
------END PGP SIGNATURE-----

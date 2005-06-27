@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0.ebuild,v 1.4 2005/06/26 12:41:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0.ebuild,v 1.5 2005/06/27 15:13:27 agriffis Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_compile() {
 		|| die "make compiler_cycle failed!"
 
 	# Using the new compiler.
-	set_compiler new
+	set_pp new
 
 	# We cannot do this at once!
 	for d in rtl packages fcl; do
