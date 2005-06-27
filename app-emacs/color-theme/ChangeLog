@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/color-theme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.15 2005/06/27 04:21:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.16 2005/06/27 08:10:46 dholm Exp $
+
+  27 Jun 2005; David Holm <dholm@gentoo.org> color-theme-6.5.4-r1.ebuild:
+  Added to ~ppc.
 
 *color-theme-6.5.4-r1 (27 Jun 2005)
 

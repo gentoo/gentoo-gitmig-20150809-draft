@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b3494a2057c16e921b680399f3326736 ChangeLog 2121
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 03761dd9aaf8f8ec0b083f2044a7954c color-theme-6.5.4-r1.ebuild 941
+MD5 5f05cce71754d2aa65528059bd24c1c8 ChangeLog 2210
 MD5 bc2cb2a3d72ce0f611cdb1544f205f24 color-theme-6.5.4.ebuild 632
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 7a00eae4c97d14ae85d578475d3483eb color-theme-6.5.4-r1.ebuild 943
 MD5 00a25d11e7177936fb464386a60997c8 files/50color-theme-gentoo.el 104
-MD5 205de53bc919ce2c7ad70f62e7287ad1 files/6.5.4-easy-menu-gentoo.patch 537
 MD5 47143d30cb8c65d6ea55a7984331405d files/digest-color-theme-6.5.4 69
+MD5 205de53bc919ce2c7ad70f62e7287ad1 files/6.5.4-easy-menu-gentoo.patch 537
 MD5 47143d30cb8c65d6ea55a7984331405d files/digest-color-theme-6.5.4-r1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCv37LyiNZaEAZA+ARAsIjAJ0UG+4JHdiNKy9QWLKpFzQFF35J9QCfTmQ8
-VC8QFB8/8Jkw1WgB4NdBHP4=
-=T/T0
------END PGP SIGNATURE-----
