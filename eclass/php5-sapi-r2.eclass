@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.19 2005/06/12 18:33:57 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.20 2005/06/27 23:05:09 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -385,7 +385,11 @@ php5-sapi-r2_src_compile() {
 	confutils_init
 
 	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR}"
-	my_conf="${my_conf} --without-pear"
+	if [ "$PHPSAPI" == "cli" ]; then
+		my_conf="${my_conf} --with-pear"
+	else
+		my_conf="${my_conf} --without-pear"
+	fi
 
 	#							extension		USE flag		shared support?
 	enable_extension_enable		"bcmath"		"bcmath"		1
@@ -521,8 +525,7 @@ php5-sapi-r2_src_install() {
 	insinto ${PHP_INI_DIR}
 	newins ${phpinisrc} ${PHP_INI_FILE}
 
-	# PEAR-Installer and phpconfig install the following, so we
-	# don't have to
+	# php-config install the following, so we don't have to
 	#
 	# if 'mkconfig' USE flag is set, we create the phpconfig
 	# source tarball ... this makes it easy for us to bump the
@@ -550,8 +553,25 @@ php5-sapi-r2_src_install() {
 		einfo "Done; tarball is ${T}/${CONFIG_NAME}.tar.bz2"
 	fi
 
-	rm -rf ${D}/usr/bin/{phpextdist,phpize,php-config,pear}
+	# move all the PEAR stuff from /usr/lib/php to /usr/share/php
+
 	rm -rf ${D}/usr/lib/php/build
+	dodir /usr/share/php
+
+	for x in ${D}/usr/lib/php ; do
+		if [ "`basename $x`" != 'extensions' ]; then
+			mv $x ${D}/usr/share/php
+		fi
+	done
+
+	# only the cli SAPI is allowed to install PEAR
+
+	if [ "$PHPSAPI" != "cli" ]; then
+		rm -f ${D}/usr/bin/pear
+		rm -f ${D}/usr/share/php
+	fi
+
+	rm -rf ${D}/usr/bin/{phpextdist,phpize,php-config}
 	rm -rf ${D}/usr/include/php
 
 	# we let each SAPI install the man page
