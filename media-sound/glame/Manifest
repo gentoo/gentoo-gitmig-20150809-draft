@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 55be955bf684c0ed10dab3e90f2db2c3 glame-2.0.1.ebuild 1855
+MD5 ba8e32bf506dc4394985c660d0dd661f ChangeLog 3765
 MD5 37f573b0015e373500912290e78c7a26 glame-1.0.2.ebuild 2284
-MD5 36d7bc6410ba71d12ce540c1e2a8cf9e ChangeLog 3686
 MD5 552d4fdf9e391a7631494186974bdb80 metadata.xml 266
-MD5 992f68dfecc733f0bbb14079e1a70f3a files/glame-1.0.2-cflags.patch 1063
-MD5 1414bd1790705dfed4d11d93033cbda8 files/gentoo.patch 1532
-MD5 54ea3169510093db3d31eb388e8e8a0c files/glame-2.0.1-cflags.patch 612
+MD5 bb63b248c27fb8818ee54355b2b5a244 glame-2.0.1.ebuild 1856
 MD5 f96064bc6c40df179eea7502e0999af8 files/digest-glame-1.0.2 64
+MD5 1414bd1790705dfed4d11d93033cbda8 files/gentoo.patch 1532
+MD5 992f68dfecc733f0bbb14079e1a70f3a files/glame-1.0.2-cflags.patch 1063
 MD5 140e5f563ba5d7d92fa89504677497e7 files/digest-glame-2.0.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFChdWp06ebR+OMO78RArhsAJ4/VeeABJPgVPg01WAq+HsPh9YkHACcCzzm
-vX7mXM9wJK/hdkRz4QLlIZY=
-=Q5T9
------END PGP SIGNATURE-----
+MD5 54ea3169510093db3d31eb388e8e8a0c files/glame-2.0.1-cflags.patch 612
