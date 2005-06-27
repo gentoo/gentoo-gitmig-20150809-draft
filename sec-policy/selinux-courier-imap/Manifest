@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 70d9d215b320c45d680ed140d919e0f4 ChangeLog 2361
 MD5 005f0ae76809fe8924209542636647f2 metadata.xml 526
 MD5 44716cb21146920b3f062d8801751a3f selinux-courier-imap-20050607.ebuild 416
 MD5 f702aed6f2123a2571354faa6d1277a7 selinux-courier-imap-20050417.ebuild 416
 MD5 bae8a41c4e4082318d8eec34e78aa668 files/digest-selinux-courier-imap-20050607 80
 MD5 e3429a94147bebae8b7628e4905ff240 files/digest-selinux-courier-imap-20050417 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCv9KTGSBEIeh4AEYRAgr2AJ9GvzANbdCOJmKHWY2b2twqePkyggCcCUUt
+HdvYaAzvpN1FXtMPkr2gXzE=
+=EWEr
+-----END PGP SIGNATURE-----
