@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 9b9cf43c3db78c7fe6432fbe9e778e78 ChangeLog 1183
 MD5 32091e12a0d4c659816591dc67c1ab04 mailgraph-1.11.ebuild 1383
-MD5 34752f9a870354ff8f7567ade74fe67b ChangeLog 922
 MD5 12cc0b3f6dae806d246c36bd9ea010e9 metadata.xml 259
+MD5 23abf68890b58f3fc734315ca095cdd8 mailgraph-1.11-r1.ebuild 1426
+MD5 ca32a39fff4fa2c070d832feb539f47d files/digest-mailgraph-1.11 65
 MD5 fa47226fdde5601a3b0ae0d19377019f files/mailgraph.confd 476
 MD5 608f945e78c754fb3f5aee14881ec2da files/mailgraph.initd 685
-MD5 ca32a39fff4fa2c070d832feb539f47d files/digest-mailgraph-1.11 65
+MD5 33feb3504b889ed382183cecbbeafa57 files/mailgraph-1.11-regexp.patch 427
+MD5 ca32a39fff4fa2c070d832feb539f47d files/digest-mailgraph-1.11-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCvzxqQlM6RnzZP+IRAgf/AKCA1SpzZW9TFIqpoJHw/Q2y9+SsPwCgr7iX
-+/mcwLURJvmX6DnhAJb+CLw=
-=+9Oy
+iD8DBQFCv1+fCRZPokWLroQRAtAtAKCdNOobu+C39q4utN3iInRliF347wCgsl3a
+knt8R8uTRCEOSMuuyDY2Yq8=
+=4CpS
 -----END PGP SIGNATURE-----
