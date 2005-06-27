@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/callgrind
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/ChangeLog,v 1.9 2005/06/08 18:09:15 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/ChangeLog,v 1.10 2005/06/27 20:41:46 caleb Exp $
+
+  27 Jun 2005; Caleb Tennis <caleb@gentoo.org> callgrind-0.9.11-r1.ebuild:
+  x86 stable
 
 *callgrind-0.9.11-r1 (08 Jun 2005)
 

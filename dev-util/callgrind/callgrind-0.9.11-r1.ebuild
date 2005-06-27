@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.9.11-r1.ebuild,v 1.2 2005/06/08 21:39:00 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.9.11-r1.ebuild,v 1.3 2005/06/27 20:41:46 caleb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://kcachegrind.sourceforge.net/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=dev-util/valgrind-2.2.0
