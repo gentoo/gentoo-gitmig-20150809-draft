@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4e94cd15acb3e14820ddc528d5bf1999 ampache-3.3.1.ebuild 783
+MD5 2aae4bad15cbcb569927f52df8bb37b4 ChangeLog 429
+MD5 46ab575d4d218ddb1fe7500850065f03 metadata.xml 257
+MD5 54dbaabc383b0fa56e0cc41c9d61e5e6 files/digest-ampache-3.3.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCv0yVnVkA0cTr1F4RAhb+AJ9+hE8YpRAEixFNJkNq6Eoj/U2vcQCdH4qG
+0fVuqddzshi/Zj5Y937moSk=
+=f/kN
+-----END PGP SIGNATURE-----
