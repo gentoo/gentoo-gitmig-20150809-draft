@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.43 2004/12/11 10:33:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.44 2005/06/27 20:26:56 agriffis Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -40,8 +40,7 @@ inherit eutils toolchain-funcs
 
 ECLASS=ruby
 INHERITED="${INHERITED} ${ECLASS}"
-EXPORT_FUNCTIONS src_unpack src_compile src_install prepall \
-	econf emake einstall erubyconf erubymake erubyinstall erubydoc
+EXPORT_FUNCTIONS src_unpack src_compile src_install econf emake einstall
 
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=${PN}"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
