@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.2 2004/09/01 20:27:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.3 2005/06/27 22:33:25 wolf31o2 Exp $
 
 inherit games
 
@@ -18,7 +18,8 @@ RESTRICT="nostrip"
 
 DEPEND="virtual/libc
 	app-arch/unzip
-	games-util/uz2unpack"
+	games-util/uz2unpack
+	games-util/loki_patch"
 RDEPEND="dedicated? ( games-server/ut2003-ded )
 	!dedicated? ( virtual/opengl )"
 
@@ -120,8 +121,8 @@ src_install() {
 
 	# this brings our install up to the newest version
 	cd ${S}
-	bin/Linux/x86/loki_patch --verify patch.dat || die "verifying patch"
-	bin/Linux/x86/loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
+	loki_patch --verify patch.dat || die "verifying patch"
+	loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
 
 	# Here we apply DrSiN's crash patch
 	cp ${S}/CrashFix/System/crashfix.u ${Ddir}/System
