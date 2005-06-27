@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkTheme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.12 2005/06/26 13:25:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.13 2005/06/27 08:11:29 dholm Exp $
+
+  27 Jun 2005; David Holm <dholm@gentoo.org> tkTheme-1.0-r1.ebuild:
+  Added to ~ppc.
 
 *tkTheme-1.0-r1 (26 Jun 2005)
 
