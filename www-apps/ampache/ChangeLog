@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.1 2005/06/27 00:47:04 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.2 2005/06/27 03:56:11 marineam Exp $
+
+*ampache-3.3.1.1 (27 Jun 2005)
+
+  27 Jun 2005; Michael Marineau <marineam@gentoo.org>
+  +files/ampache-3.3.1.1-webinstall.txt, -ampache-3.3.1.ebuild,
+  +ampache-3.3.1.1.ebuild:
+  A little ebuild bump. Also cleaned up a couple things, closing bug #93544
+  again. Hopefully all is happy now.
 
 *ampache-3.3.1 (27 Jun 2005)
 
