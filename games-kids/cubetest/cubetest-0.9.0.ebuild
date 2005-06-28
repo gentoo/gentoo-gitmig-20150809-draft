@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.0.ebuild,v 1.5 2004/07/03 22:17:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.0.ebuild,v 1.6 2005/06/28 05:30:34 vapier Exp $
 
 inherit kde
 
@@ -10,12 +10,12 @@ SRC_URI="http://www.vandenoever.info/software/cubetest/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 export DO_NOT_COMPILE="fun"
 
-DEPEND=">=sys-apps/sed-4"
+DEPEND=""
 need-kde 3
 
 src_unpack() {
