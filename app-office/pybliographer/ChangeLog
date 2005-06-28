@@ -1,6 +1,10 @@
 # ChangeLog for app-office/pybliographer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.6 2005/04/11 18:48:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.7 2005/06/28 23:51:51 allanonjl Exp $
+
+  28 Jun 2005; John N. Laliberte <allanonjl@gentoo.org>
+  pybliographer-1.2.4.ebuild:
+  fix for access violation due to gnome2 eclass change, see bug #92920
 
   11 Apr 2005; Simon Stelling <blubb@gentoo.org> pybliographer-1.2.4.ebuild:
   added ~amd64
