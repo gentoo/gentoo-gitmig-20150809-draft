@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.5 2005/06/28 19:07:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.6 2005/06/28 22:11:59 agriffis Exp $
 
 ECLASS=mozilla-launcher
 INHERITED="$INHERITED $ECLASS"
@@ -59,8 +59,9 @@ update_mozilla_launcher_symlinks() {
 # Install a stub called /usr/bin/$name that executes mozilla-launcher
 #
 install_mozilla_launcher_stub() {
-	[[ -n $1 ]] || die "install_launcher_stub requires an argument"
+	[[ -n $2 ]] || die "install_launcher_stub requires two arguments"
 	declare name=$1
+	declare libdir=$2
 
 	dodir /usr/bin
 	cat <<EOF >${D}/usr/bin/${name}
@@ -71,6 +72,7 @@ install_mozilla_launcher_stub() {
 # http://bugs.gentoo.org/show_bug.cgi?id=78890
 
 export MOZILLA_LAUNCHER=${name}
+export MOZILLA_LIBDIR=${libdir}
 exec /usr/libexec/mozilla-launcher "\$@"
 EOF
 	chmod 0755 ${D}/usr/bin/${name}
