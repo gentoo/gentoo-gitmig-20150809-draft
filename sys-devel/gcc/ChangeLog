@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.424 2005/06/25 20:47:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.425 2005/06/28 16:05:28 corsair Exp $
+
+  28 Jun 2005; Markus Rothe <corsair@gentoo.org> gcc-3.4.4.ebuild:
+  Stable on ppc64
 
 *gcc-4.1.0_beta20050625 (25 Jun 2005)
 
