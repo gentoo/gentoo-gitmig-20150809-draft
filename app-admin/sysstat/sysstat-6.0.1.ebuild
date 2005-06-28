@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-6.0.0.ebuild,v 1.2 2005/06/28 16:59:32 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-6.0.1.ebuild,v 1.1 2005/06/28 16:59:32 ka0ttic Exp $
 
 inherit eutils
 
@@ -18,24 +18,27 @@ DEPEND="nls? ( sys-devel/gettext )"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e "s:-O2:${CFLAGS}:" Makefile
-	sed -i -e '1d;2i # Crontab sample for app-admin/sysstat' -e '2d;3d;s:PREFIX:/usr:' crontab.sample
+	sed -i -e "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
+	sed -i -e '1d;2i # Crontab sample for app-admin/sysstat' \
+		-e '2d;3d;s:PREFIX:/usr:' crontab.sample || die "sed crontab.sample failed"
 	epatch ${FILESDIR}/${P}-gcc4.diff
 }
 
 src_compile() {
+	# ick. interactive makefile rule
 	yes '' | make config
-	use nls || sed -i 's/\(ENABLE_NLS\ =\ \)y/\1n/g' build/CONFIG
-	make PREFIX=/usr || die
+
+	if ! use nls ; then
+		sed -i 's/\(ENABLE_NLS\ =\ \)y/\1n/g' build/CONFIG || \
+			die "sed CONFIG failed"
+	fi
+
+	make PREFIX=/usr || die "make failed"
 }
 
 src_install() {
-	dodir /usr/bin
-	dodir /usr/share/man/man{1,8}
-	dodir /var/log/sa
 	keepdir /var/log/sa
-	dodir /etc/cron.d
-	cp ./crontab.sample ${D}/etc/cron.d/sysstat
+	dodoc crontab.sample
 
 	make \
 		DESTDIR=${D} \
@@ -43,5 +46,5 @@ src_install() {
 		MAN_DIR=/usr/share/man \
 		DOC_DIR=/usr/share/doc/${PF} \
 		SA_LIB_DIR=/usr/lib/sa \
-		install || die
+		install || die "make install failed"
 }
