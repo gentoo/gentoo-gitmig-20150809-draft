@@ -1,0 +1,24 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/dev/2005.1/no-multilib/multilib/make.defaults,v 1.1 2005/06/28 14:15:08 nigoro Exp $
+
+MULTILIB_ABIS="ppc ppc64"
+DEFAULT_ABI="ppc64"
+
+# This profile doesn't fully support multilib portage yet.  We still rely
+# on the emul-* packages.  As such, we have -multilib-pkg here to emphasise
+# that point.
+# For future reference, Please delete '-strict' at the time of a release.
+FEATURES="autoconfig sandbox sfperms -multilib-pkg -strict"
+
+CFLAGS_ppc="-m32"
+LDFLAGS_ppc="-m elf32-powerpc"
+CHOST_ppc="powerpc-unknown-linux-gnu"
+CDEFINE_ppc="!__powerpc64__"
+LIBDIR_ppc="lib32"
+
+# In case someone wants to help out by setting FEATURES="multilib-strict"
+MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
+MULTILIB_STRICT_DENY="64-bit.*shared object"
+MULTILIB_STRICT_EXEMPT="(perl5|gcc|gcc-lib|eclipse-3)"
+

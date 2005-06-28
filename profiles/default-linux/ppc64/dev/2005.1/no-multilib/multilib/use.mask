@@ -1,0 +1,4 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/dev/2005.1/no-multilib/multilib/use.mask,v 1.1 2005/06/28 14:15:08 nigoro Exp $
+
+multilib
+
