@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r7.ebuild,v 1.3 2005/06/19 19:29:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r7.ebuild,v 1.4 2005/06/28 22:52:14 agriffis Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -101,7 +101,7 @@ src_install() {
 	dodir /var/run/distccd
 	keepdir /var/run/distccd
 
-	if [ `use gnome` -o `use gtk` ]; then
+	if use gnome || use gtk; then
 	  einfo "Renaming /usr/bin/distccmon-gnome to /usr/bin/distccmon-gui"
 	  einfo "This is to have a little sensability in naming schemes between distccmon programs"
 	  mv ${D}/usr/bin/distccmon-gnome ${D}/usr/bin/distccmon-gui
