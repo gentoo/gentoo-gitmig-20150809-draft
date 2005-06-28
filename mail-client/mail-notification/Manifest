@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5d240c2111a6535d744ec8bbc7cc692c metadata.xml 249
-MD5 5abda330dd27c6cb85902343ff173744 mail-notification-1.1.ebuild 1619
 MD5 e77332c825d2c72566117f6f3117182e mail-notification-0.8.1.ebuild 1548
-MD5 be0e5197a81d0c519065056e7463a858 mail-notification-1.0.ebuild 1555
-MD5 c3d36c75ba804b5e8c38db9d08181256 ChangeLog 3667
-MD5 a5717a3f9a4857a66a2884232fd6f42c files/digest-mail-notification-1.1 73
+MD5 22f5243044ad07ca9879dcb34c461492 mail-notification-1.0.ebuild 1554
+MD5 5abda330dd27c6cb85902343ff173744 mail-notification-1.1.ebuild 1619
+MD5 e9c3c7fd260fba32d890b98fe6d84f47 ChangeLog 3772
 MD5 4f3f62c7c6d7b58791bba1c52b9dcc52 files/digest-mail-notification-0.8.1 75
+MD5 a5717a3f9a4857a66a2884232fd6f42c files/digest-mail-notification-1.1 73
 MD5 a1ac4da13eaa2be84f10c4c769682253 files/digest-mail-notification-1.0 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCwK18KRy60XGEcJIRAut0AJ0XYx0mkPq37xQY3FMZmwhPzQc4zwCfTgky
+k61EwrsRT8nxg9fEEoudmrQ=
+=KWph
+-----END PGP SIGNATURE-----
