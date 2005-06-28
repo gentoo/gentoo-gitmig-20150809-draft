@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.10 2005/06/26 01:09:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.11 2005/06/28 14:41:29 swegener Exp $
 
-inherit subversion perl-module
+inherit subversion perl-module flag-o-matic
 
 ESVN_REPO_URI="http://svn.irssi.org/repos/irssi/trunk/"
 ESVN_PROJECT="irssi"
-ESVN_BOOTSTRAP="./autogen.sh"
+ESVN_BOOTSTRAP="NOCONFIGURE=1 ./autogen.sh"
 
 DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"

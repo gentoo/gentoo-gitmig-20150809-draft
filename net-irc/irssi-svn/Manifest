@@ -1,4 +1,14 @@
-MD5 ba7fb8a4ed072c1e9ed3576d898cbcaa ChangeLog 1496
-MD5 9dfbce806bdd0d16ee054a217840bbd3 irssi-svn-0.3.ebuild 1475
-MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8319a49992cc603634fd51441c584640 ChangeLog 1639
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-irssi-svn-0.3 0
+MD5 bd6130e771cd3c5fee3a8bafc68a3c72 irssi-svn-0.3.ebuild 1505
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwWGzI1lqEGTUzyQRApldAJ9gprbTSXNZN//P56Eny6HaUbXhtQCgxe4S
+941B1oSBj45U2y4ZKsEGpMQ=
+=lQhD
+-----END PGP SIGNATURE-----
