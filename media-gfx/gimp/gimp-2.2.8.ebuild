@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.7.ebuild,v 1.5 2005/05/24 11:17:31 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.8.ebuild,v 1.1 2005/06/28 23:35:34 allanonjl Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gimp/v2.2/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~mips"
+KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aalib altivec debug doc gtkhtml gimpprint hardened jpeg lcms mmx mng png
 python scanner smp sse svg tiff wmf"
 
@@ -103,7 +103,6 @@ src_compile() {
 	fi
 
 	local myconf
-	use doc || myconf="${myconf} --disable-devel-docs"
 
 	# Hard enable SIMD assembler code for AMD64.
 	if use x86; then
@@ -172,6 +171,10 @@ src_install() {
 
 pkg_postinst() {
 	alternatives_auto_makesym "/usr/bin/gimp" "/usr/bin/gimp-[0-9].[0-9]"
+
+	# fix for bug #76050
+	ln -s $(gimptool-2.0 --gimpdatadir)/images/wilber-icon.png /usr/share/pixmaps/
+
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	einfo ""
@@ -180,6 +183,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	rm /usr/share/pixmaps/wilber-icon.png
+
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }
