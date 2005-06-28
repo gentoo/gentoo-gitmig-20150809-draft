@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r1.ebuild,v 1.10 2005/06/28 04:11:56 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r1.ebuild,v 1.11 2005/06/28 13:33:42 gustavoz Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="${HOMEPAGE}/download/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc-macos ppc64 ~s390 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc-macos ppc64 ~s390 sparc x86"
 IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg unicode livecd"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
