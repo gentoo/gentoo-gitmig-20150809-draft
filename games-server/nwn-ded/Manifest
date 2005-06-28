@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aaf055a7edcd2698b58e946bf293bb4f ChangeLog 1262
+MD5 e87fe466a899fceea68117e6497d777e ChangeLog 1359
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 151e50cd5ba2d25912a07d5223b4c3ee nwn-ded-1.65-r1.ebuild 1659
-MD5 bfdcf278d621e5f6ec577235fa7a4947 files/nwserver 45
+MD5 dff5e8ddef7c5a554ba9dcc2cfd6294f nwn-ded-1.65-r1.ebuild 1665
 MD5 41149c425cd32af8f35787d80c81c9ab files/digest-nwn-ded-1.65-r1 502
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB2LLbroRuSHgZdywRAoYxAJ0UQ2hRGluUE/5VNawKBg/3TV4J4ACgi5vl
-ye0TBnF6bnjZe5NjVaokhMg=
-=fNeQ
------END PGP SIGNATURE-----
+MD5 bfdcf278d621e5f6ec577235fa7a4947 files/nwserver 45

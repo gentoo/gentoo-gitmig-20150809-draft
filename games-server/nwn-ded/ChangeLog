@@ -1,6 +1,9 @@
 # ChangeLog for games-server/nwn-ded
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/ChangeLog,v 1.9 2005/01/03 02:49:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/ChangeLog,v 1.10 2005/06/28 09:08:29 blubb Exp $
+
+  28 Jun 2005; Simon Stelling <blubb@gentoo.org> nwn-ded-1.65-r1.ebuild:
+  added ~amd64 keyword
 
 *nwn-ded-1.65-r1 (02 Jan 2005)
 
