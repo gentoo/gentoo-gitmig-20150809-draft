@@ -1,7 +1,17 @@
-MD5 259bbc79688762934fc5de94b3f407c0 ChangeLog 2087
-MD5 1e39714f2bc5e2c1d6a9fe497f2891b3 edna-0.5-r3.ebuild 1448
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8221e3990883569e1f24440fbd48e25b metadata.xml 330
-MD5 bd928143f86b7c6370154fe35712d343 edna-0.5-r4.ebuild 1609
+MD5 619c30f1d56a261393dafdd4935d23b6 edna-0.5-r4.ebuild 1609
+MD5 40f8b3773178e178847e7073d1ad79f9 ChangeLog 2181
+MD5 1e39714f2bc5e2c1d6a9fe497f2891b3 edna-0.5-r3.ebuild 1448
 MD5 0afeb0ec9a434506f2b38f2e66dbb0e3 files/digest-edna-0.5-r3 59
-MD5 3ebeae755eeebd30c84867f96b8fb8ce files/edna.gentoo 606
 MD5 0afeb0ec9a434506f2b38f2e66dbb0e3 files/digest-edna-0.5-r4 59
+MD5 3ebeae755eeebd30c84867f96b8fb8ce files/edna.gentoo 606
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCwbRqKRy60XGEcJIRAiSPAKCSLyTa5BspBtgK3uk5YCZmk4/UCgCgn3QC
+xPkIWYc2qw5kXxZisGzXE1w=
+=gokj
+-----END PGP SIGNATURE-----
