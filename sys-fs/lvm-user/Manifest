@@ -2,7 +2,8 @@ MD5 2c0f0c295b886eff7a4fef23c4822669 lvm-user-1.0.7-r2.ebuild 1790
 MD5 6c4843e465bc701edfd2848bc61b9816 lvm-user-1.0.7-r3.ebuild 1923
 MD5 7b301d7420e1c916ab2c582cf98928ff metadata.xml 256
 MD5 af522a2bf30dd73356656143e3068b2f lvm-user-1.0.7-r4.ebuild 2063
-MD5 5197328954343704a004711e4a5a7ff8 ChangeLog 5411
+MD5 25df1db3f2ccd4d1f283c8e989c2e90c ChangeLog 5532
+MD5 92336fa695c6dca54cc10b46cd44bdef lvm-user-1.0.8.ebuild 2061
 MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7-r2 61
 MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7-r3 61
 MD5 7484cb0ecb2a997be4910a8612e951cf files/lvm-user-1.0.7-statics.patch 1040
@@ -10,3 +11,4 @@ MD5 5a13a84be2257b542d2ff7dce74e3af7 files/lvm-user-1.0.7-tmpfile.patch 554
 MD5 aba804ce68a3bbfe20f5312a3891958e files/lvm-user-start.sh 789
 MD5 79c525e785e11238d90c6a4f2d0283d5 files/lvm-user-stop.sh 440
 MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7-r4 61
+MD5 a8fa868a4e24685af74bec39b76e33a9 files/digest-lvm-user-1.0.8 61

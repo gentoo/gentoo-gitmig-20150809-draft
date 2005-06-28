@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm-user
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.10 2005/06/01 20:28:50 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.11 2005/06/28 17:56:40 rocket Exp $
+
+*lvm-user-1.0.8 (28 Jun 2005)
+
+  28 Jun 2005; <eje001@gentoo.org> +lvm-user-1.0.8.ebuild:
+  version bump for old ebuild
 
 *lvm-user-1.0.7-r4 (01 Jun 2005)
 
