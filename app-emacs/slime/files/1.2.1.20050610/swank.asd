@@ -38,10 +38,15 @@
 	  "swank-source-file-cache" 
 	  "swank-gray")
 
-#+cmu   (define-swank-system
-	  "swank-source-path-parser" 
-	  "swank-source-file-cache"
-	  "swank-cmucl")
+#+openmcl (define-swank-system
+	    "metering"
+	    "swank-openmcl"
+	    "swank-gray")
+
+#+cmu (define-swank-system
+	"swank-source-path-parser" 
+	"swank-source-file-cache"
+	"swank-cmucl")
 
 #+clisp (define-swank-system
 	  "xref"
