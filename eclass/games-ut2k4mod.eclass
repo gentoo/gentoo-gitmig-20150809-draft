@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.4 2005/03/16 01:51:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.5 2005/06/28 20:35:56 wolf31o2 Exp $
 
 inherit games
 
 ECLASS=games-ut2k4mod
 INHERITED="$INHERITED $ECLASS"
 
-EXPORT_FUNCTIONS pkg_fetch src_unpack src_install pkg_postinst
+EXPORT_FUNCTIONS pkg_nofetch src_unpack src_install pkg_postinst
 
 DESCRIPTION="UT2004 - ${MOD_DESC}"
 
@@ -46,7 +46,7 @@ check_dvd() {
 	fi
 }
 
-games-ut2k4mod_pkg_fetch() {
+games-ut2k4mod_pkg_nofetch() {
 	einfo "Please download ${A} and put it into ${DISTDIR}"
 	einfo "http://liflg.org/?catid=6&gameid=17"
 }
