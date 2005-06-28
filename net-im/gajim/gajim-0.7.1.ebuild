@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.7.1.ebuild,v 1.4 2005/06/25 11:41:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.7.1.ebuild,v 1.5 2005/06/28 23:01:13 agriffis Exp $
 
 inherit virtualx multilib eutils
 
-DESCRIPTION="Jabber client written in PyGTK."
+DESCRIPTION="Jabber client written in PyGTK"
 HOMEPAGE="http://www.gajim.org/"
 SRC_URI="http://www.gajim.org/downloads/${P}.tar.bz2"
 
@@ -27,11 +27,11 @@ src_unpack() {
 
 src_compile() {
 	targets="idle trayicon"
-	`use nls` && targets="${targets} translation"
-	`use spell` && targets="${targets} gtkspell"
-
-		Xemake ${targets} || die "Xmake failed"
+	use nls && targets="${targets} translation"
+	use spell && targets="${targets} gtkspell"
+	Xemake ${targets} || die "Xmake failed"
 }
+
 src_install() {
 	Xemake DESTDIR=${D} LIBDIR=$(get_libdir) install || die
 	dodoc README AUTHORS COPYING
