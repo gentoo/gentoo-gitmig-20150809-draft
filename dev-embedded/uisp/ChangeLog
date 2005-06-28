@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/uisp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/ChangeLog,v 1.10 2005/06/10 14:36:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/ChangeLog,v 1.11 2005/06/28 19:56:12 gustavoz Exp $
+
+*uisp-20050207-r1 (28 Jun 2005)
+
+  28 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/mega-48-88-168.patch, -uisp-20050207.ebuild,
+  +uisp-20050207-r1.ebuild:
+  Bump with fixed and new device support
 
 *uisp-20050207 (10 Jun 2005)
 
