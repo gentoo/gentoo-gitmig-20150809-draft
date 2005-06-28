@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.04.ebuild,v 1.1 2005/06/28 11:31:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.04.ebuild,v 1.2 2005/06/28 13:06:55 axxo Exp $
 
 inherit java eutils
 
@@ -27,11 +27,9 @@ RESTRICT="fetch"
 IUSE="mozilla"
 
 DEPEND=">=dev-java/java-config-1.2
-	sys-apps/sed
-	virtual/lpr"
+	sys-apps/sed"
 
-RDEPEND="x86? ( sys-libs/lib-compat )
-	virtual/lpr"
+RDEPEND="x86? ( sys-libs/lib-compat )"
 
 PROVIDE="virtual/jre"
 
@@ -175,6 +173,6 @@ pkg_postinst() {
 	fi
 
 	echo
-	eerror "Some parts of Sun's JRE require virtual/x11 to be installed."
+	eerror "Some parts of Sun's JRE require virtual/x11 and virtual/lpr to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
 }
