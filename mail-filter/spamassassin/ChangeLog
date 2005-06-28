@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.65 2005/06/18 08:52:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.66 2005/06/28 22:48:48 mcummings Exp $
+
+  28 Jun 2005; Michael Cummings <mcummings@gentoo.org>
+  spamassassin-3.0.4.ebuild:
+  Bug 96669
 
   18 Jun 2005; Thomas Matthijs <axxo@gentoo.org> spamassassin-3.0.4.ebuild:
   stable on x86
