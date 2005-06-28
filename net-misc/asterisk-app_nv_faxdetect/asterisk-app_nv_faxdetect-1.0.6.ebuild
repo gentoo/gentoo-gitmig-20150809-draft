@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_nv_faxdetect/asterisk-app_nv_faxdetect-1.0.6.ebuild,v 1.1 2005/05/31 13:39:16 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_nv_faxdetect/asterisk-app_nv_faxdetect-1.0.6.ebuild,v 1.2 2005/06/28 23:15:42 stkn Exp $
 
 inherit eutils
 
 MY_PN="app_nv_faxdetect"
 
-DESCRIPTION="Asterisk application plugins to detect incoming faxes, dtfm and voice"
+DESCRIPTION="Asterisk plugins to detect faxes, dtfm and voice (faxdetect and backgrounddetect)"
 HOMEPAGE="http://www.newmantelecom.com/asterisk/faxdetect/"
 SRC_URI="mirror://gentoo/${MY_PN}-${PV}.tar.bz2"
 
