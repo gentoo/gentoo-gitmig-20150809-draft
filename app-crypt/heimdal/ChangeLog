@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.77 2005/06/27 21:05:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.78 2005/06/28 22:46:43 kloeri Exp $
+
+  28 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> heimdal-0.6.5.ebuild:
+  Stable on alpha + ia64, bug 96727.
 
   27 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> heimdal-0.6.5.ebuild:
   Stable on hppa.
