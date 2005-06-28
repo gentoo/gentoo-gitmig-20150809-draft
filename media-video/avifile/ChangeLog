@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.104 2005/06/19 15:59:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.105 2005/06/28 22:13:30 azarah Exp $
+
+*avifile-0.7.43.20050224-r2 (28 Jun 2005)
+
+  28 Jun 2005; Martin Schlemmer <azarah@gentoo.org>
+  +avifile-0.7.43.20050224-r2.ebuild:
+  Fix broken acinclude.m4 that have a broken SDL test that clobber
+  '/usr/lib64' to '4'.
 
   18 Jun 2005; Guy Martin <gmsoft@gentoo.org> files/avifile-mad.patch,
   avifile-0.7.43.20050224-r1.ebuild:
