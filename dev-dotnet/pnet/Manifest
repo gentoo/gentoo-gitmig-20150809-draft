@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f91048627f97dd8a3efb217ff4756bde ChangeLog 4961
 MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
-MD5 1eb411ea1446a98d22c75bea5ecd362c pnet-0.6.12.ebuild 1932
-MD5 5ca3549fb2b533aab3d5ebce1f2bb558 pnet-0.7.0.ebuild 2005
-MD5 f67e886cd3f450ce5e6d9f1606c75592 pnet-0.6.10.ebuild 1266
-MD5 a4a87f3eccba99418a94c7ec906a2a05 ChangeLog 4184
+MD5 5e45a1e0e9a0467290102ccbdeb3b9b2 pnet-0.6.10.ebuild 1255
+MD5 c9068d6a6c62e1b8bde714b670716cea pnet-0.6.12.ebuild 1920
+MD5 3eb52d2059d3e6c342ac077725ed030e pnet-0.7.0.ebuild 1992
 MD5 ed42c7e8f78bcd92970a52f7a8ea20b3 files/digest-pnet-0.6.10 64
-MD5 7532061c314b285d24bc9feed41f924a files/digest-pnet-0.7.0 63
 MD5 5bc32ed73a56e8d55706286a3d82df06 files/digest-pnet-0.6.12 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCuJngQcyUawK/P5kRAm2HAJsEWZ9pvwwxFEjZzjDvs3QsluokfwCfSAlb
-4qRmwVWpcrgpTl2kH8smV8w=
-=JRjD
------END PGP SIGNATURE-----
+MD5 7532061c314b285d24bc9feed41f924a files/digest-pnet-0.7.0 63

@@ -1,6 +1,24 @@
 # ChangeLog for dev-dotnet/pnetlib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.24 2005/06/21 23:37:02 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.25 2005/06/28 21:49:18 iluxa Exp $
+
+  29 Jun 2005; Ilya A. Volynets-Evenbakh <ilya@total-knowledge.com>
+  pnetlib-0.6.10.ebuild, pnetlib-0.6.12.ebuild, pnetlib-0.7.0.ebuild:
+  We seem to have yet another unfortunate incident of
+  keyword-happy developer. There have been numerous
+  instances of untested unapproved packages being
+  keyworded, this was discussed time and again, the
+  issue is mentioned in developer documentation,
+  added to developer quiz, and voila, we have it again..
+  
+  This time multiple packages in dev-dotnet/ category
+  were marked as mips, ~mips, sparc, ~sparc, as well as
+  working on other arches. It was confirmed that dotnet
+  doesn't even build on most of these, yet they were
+  keyworded. Oh well... There seems to be no way to teach
+  some people.
+  
+  Removing mips and sparc keywords
 
 *pnetlib-0.7.0 (21 Jun 2005)
 

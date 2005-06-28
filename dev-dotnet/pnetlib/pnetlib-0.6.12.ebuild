@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.12.ebuild,v 1.4 2005/05/13 14:45:08 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.12.ebuild,v 1.5 2005/06/28 21:49:18 iluxa Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/dotgnu/pnet/${P}.tar.gz"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="x86 ppc ppc64 sparc ~mips ~alpha arm ~hppa amd64 ia64"
+KEYWORDS="x86 ppc ppc64 ~alpha arm ~hppa amd64 ia64"
 IUSE="truetype X"
 
 DEPEND="=dev-dotnet/pnet-${PV}*

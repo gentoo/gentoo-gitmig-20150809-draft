@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.10.ebuild,v 1.5 2005/03/11 03:16:25 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.10.ebuild,v 1.6 2005/06/28 21:47:18 iluxa Exp $
 
 DESCRIPTION="Portable. NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gnu/dotgnu/pnet/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64"
+KEYWORDS="x86 ppc ppc64 alpha arm hppa amd64 ia64"
 IUSE=""
 
 DEPEND=">=dev-util/treecc-0.3.0
