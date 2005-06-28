@@ -1,8 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2004.3/virtuals,v 1.3 2005/03/04 23:43:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2004.3/virtuals,v 1.4 2005/06/28 02:03:22 gustavoz Exp $
 
-sys-apps/reiserfs-utils 	sys-fs/reiserfsprogs
 virtual/bootloader		sys-boot/silo
 virtual/cron			sys-process/dcron
 virtual/jdk			dev-java/blackdown-jdk
@@ -12,4 +11,3 @@ virtual/linux-sources		sys-kernel/sparc-sources
 virtual/logger			app-admin/sysklogd
 virtual/mta			mail-mta/ssmtp
 virtual/os-headers		sys-kernel/linux-headers
-x11-libs/xaw			x11-libs/Xaw3d
