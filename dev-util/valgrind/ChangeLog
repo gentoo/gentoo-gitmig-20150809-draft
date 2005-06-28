@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.48 2005/05/25 21:41:44 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.49 2005/06/28 20:34:57 griffon26 Exp $
+
+  28 Jun 2005; Maurice van der Pot <griffon26@gentoo.org>
+  -files/valgrind-2.1.1-pic.patch,
+  -files/valgrind-2.1.2-kernel-headers.patch,
+  -files/valgrind-configure.in-2.6.diff, -valgrind-2.0.0.ebuild,
+  -valgrind-2.1.0.ebuild, -valgrind-2.1.1.ebuild, -valgrind-2.1.1-r1.ebuild,
+  -valgrind-2.1.2.ebuild, -valgrind-2.2.0.ebuild, -valgrind-2.2.0-r1.ebuild,
+  valgrind-2.4.0.ebuild:
+  Marked valgrind 2.4.0 stable on x86.
+  Removed old valgrind ebuilds.
 
   25 May 2005; Maurice van der Pot <griffon26@gentoo.org>
   valgrind-2.4.0.ebuild:
