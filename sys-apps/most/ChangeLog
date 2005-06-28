@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/most
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.14 2004/12/31 18:32:17 gongloo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.15 2005/06/28 16:36:08 ka0ttic Exp $
+
+*most-4.10.1 (28 Jun 2005)
+
+  28 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> +most-4.10.1.ebuild:
+  Version bump.
 
   31 Dec 2004; <gongloo@gentoo.org> most-4.9.5.ebuild:
   Added ~ppc-macos.
