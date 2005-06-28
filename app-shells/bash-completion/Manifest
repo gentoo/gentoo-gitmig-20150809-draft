@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ad63ce6604a4c18824c6a5127f55e99f bash-completion-20050121-r9.ebuild 1871
+MD5 d65abaa6250fcb7ccdf58a6a516d57d6 ChangeLog 21362
 MD5 6eeb1d7aba8dbb67d3909a7f2f35da08 bash-completion-20050121-r1.ebuild 2695
-MD5 9d8139b88593929d02363242832782d7 ChangeLog 21250
+MD5 bb9fa571641a26da727c84cad22f486e bash-completion-20050121-r9.ebuild 1870
 MD5 08ab540760a142dbc2af127d5f71be07 metadata.xml 1019
-MD5 4406981db9a6c4f413d3f9f4b14eae91 files/gentoo-bashcomp-20050117-equery.diff 3329
-MD5 35fc8232b26ca995623692bea7df2e5d files/digest-bash-completion-20050121-r1 152
-MD5 8872557b2357f405c7c702497b2fdf68 files/digest-bash-completion-20050121-r9 76
-MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
 MD5 64ca0b5063d0874c6104a4b174cb0d40 files/20050121-gentoo.diff 1894
-MD5 d53ba451ff7064515327649c28ec37fb files/20050121/08_all_lvm.diff 868
+MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
+MD5 8872557b2357f405c7c702497b2fdf68 files/digest-bash-completion-20050121-r9 76
+MD5 35fc8232b26ca995623692bea7df2e5d files/digest-bash-completion-20050121-r1 152
+MD5 4406981db9a6c4f413d3f9f4b14eae91 files/gentoo-bashcomp-20050117-equery.diff 3329
 MD5 bc7bb8b50049a7c6d412b60b273b55d4 files/20050121/01_all_gkrellm.diff 246
-MD5 61f83b8578faa6f1d522ce1a9411e0cd files/20050121/05_all_muttng.diff 2293
 MD5 a5a7bf3f82466146a212f2e54a5bb1d9 files/20050121/02_all_cvs.diff 772
-MD5 5a5965b5055a1d6ee5d7ae884bc0cc18 files/20050121/07_all_find.diff 947
 MD5 ffcc2a25851c78eed228d5bf9a34a471 files/20050121/03_all_timidity.diff 844
-MD5 49c5f3ad15cbf56b194b4fa56bbe8342 files/20050121/06_all_tar.diff 347
 MD5 a68ebcc5af6af06535fcc9895b6066b3 files/20050121/04_all_mplayer.diff 974
+MD5 61f83b8578faa6f1d522ce1a9411e0cd files/20050121/05_all_muttng.diff 2293
+MD5 49c5f3ad15cbf56b194b4fa56bbe8342 files/20050121/06_all_tar.diff 347
+MD5 5a5965b5055a1d6ee5d7ae884bc0cc18 files/20050121/07_all_find.diff 947
+MD5 d53ba451ff7064515327649c28ec37fb files/20050121/08_all_lvm.diff 868
 MD5 bb517a3e3dea3755291f4629330481f2 files/20050121/09_all_command.diff 492
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtAzVViELBEf1JB0RAuFlAJ4wmnIHIU/pkt+6xzzVoBu+OC+XNwCdE+FF
-eP7YW3WRtON3j2Q2G1ZGF8Q=
-=tcLn
------END PGP SIGNATURE-----
