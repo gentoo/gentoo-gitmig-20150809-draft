@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.28 2005/06/28 05:25:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.29 2005/06/28 05:31:14 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -849,10 +849,9 @@ host_def_setup() {
 			echo "#define XVirtualFramebufferServer NO" >> ${HOSTCONF}
 			echo "#define XInputDrivers mouse keyboard" >> ${HOSTCONF}
 
-			# Don't want to add to defaults for other archs, set above
+			# If you want more drivers built with minimal, file a bug
+			# -Donnie Berkholz <spyderous@gentoo.org>
 			if use x86; then
-				# If you want more drivers built with minimal, file a bug
-				# -Donnie Berkholz <spyderous@gentoo.org>
 				# Remove glint, tga, s3, s3virge, rendition, neomagic, i740,
 				# cirrus, tseng, trident, chips, apm, ark, cyrix, siliconmotion
 				# mga, nv, sis, tdfx, savage, GlideDriver, i386Drivers
@@ -862,6 +861,10 @@ host_def_setup() {
 				# DevelDrivers includes imstt and newport on x86
 				echo "#define XF86CardDrivers vmware vesa vga dummy \
 					XF86OSCardDrivers XF86ExtraCardDrivers" >> ${HOSTCONF}
+			# (#93339)
+			elif use sparc; then
+				echo "#define XF86CardDrivers vesa vga fbdev sunffb suncg6 \
+					sunleo" >> ${HOSTCONF}
 			fi
 		fi
 
