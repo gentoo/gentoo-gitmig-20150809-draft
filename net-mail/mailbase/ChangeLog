@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.57 2005/06/18 11:24:42 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.58 2005/06/28 05:18:30 kumba Exp $
+
+  28 Jun 2005; Joshua Kinard <kumba@gentoo.org> mailbase-0.00-r9.ebuild:
+  Marked stable on mips.
 
   18 Jun 2005; Chris Bainbridge <chrb@gentoo.org> Manifest:
   Fix broken manifest.
