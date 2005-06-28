@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.03.0190.ebuild,v 1.1 2005/06/02 14:32:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.03.0190.ebuild,v 1.2 2005/06/28 13:51:28 wolf31o2 Exp $
 
 MY_PV=${PV}-k9
 DESCRIPTION="Cisco VPN Client (3DES)"
@@ -47,7 +47,8 @@ src_install() {
 	doexe cvpnd
 	into /opt/cisco-vpnclient/
 	dobin ipseclog cisco_cert_mgr
-	dolib.so libvpnapi.so
+	insinto ${VPNDIR}/lib
+	doins libvpnapi.so
 	insinto /opt/cisco-vpnclient/include
 	doins vpnapi.h
 	dodir /usr/bin

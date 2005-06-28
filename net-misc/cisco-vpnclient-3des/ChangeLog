@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.24 2005/06/02 14:32:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.25 2005/06/28 13:51:28 wolf31o2 Exp $
+
+  28 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-vpnclient-3des-4.6.03.0190.ebuild:
+  Changed dolib.so to doins to fix problems loading library on amd64. Closing
+  bug #97269.
 
 *cisco-vpnclient-3des-4.6.03.0190 (02 Jun 2005)
 
