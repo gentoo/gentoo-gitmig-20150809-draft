@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/gnudoku
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnudoku/ChangeLog,v 1.1 2005/06/28 03:47:15 mr_bones_ Exp $
+
+*gnudoku-0.9 (28 Jun 2005)
+
+  28 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +gnudoku-0.9.ebuild:
+  initial commit - ebuild submitted by Fernando Serboncini via bug #97040
+
