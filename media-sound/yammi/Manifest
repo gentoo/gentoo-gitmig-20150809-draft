@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1fe1d7e8aec8e2626fded1e0416e98f2 yammi-1.0-r1.ebuild 2154
-MD5 7b8ee8129937a0aa16ce1d7471bfaa47 yammi-1.2.ebuild 1727
-MD5 33b64d1a71bcba50bb6e7775dfcdea90 ChangeLog 4188
+MD5 9534763de613d9ebf7c7bf7aa19ef899 yammi-1.2.ebuild 1725
 MD5 1637953277a812ec316da84a5d6b3f41 metadata.xml 175
-MD5 3f815698af1d6b4efd7b6e08498cbef3 files/yammi-1.0-qt.patch 2173
+MD5 1fe1d7e8aec8e2626fded1e0416e98f2 yammi-1.0-r1.ebuild 2154
+MD5 6a65856f34941843840c32926ed22955 ChangeLog 4278
 MD5 3b3a8303b5885223b0416428f9d07009 files/digest-yammi-1.2 62
 MD5 dddb69fe8545cfaaf5c307b5bb80df75 files/yammi-1.0-traverse.patch 593
+MD5 3f815698af1d6b4efd7b6e08498cbef3 files/yammi-1.0-qt.patch 2173
 MD5 9c22722989a753ad61b3b764925f252a files/digest-yammi-1.0-r1 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCmLzD06ebR+OMO78RApFYAJkBeE0SWmTTJ2AQZhW5Xj2yyFEclgCeJ1cU
-k8r6f+MrhjzPrsGtYAQ6x/Q=
-=RS/j
+iD8DBQFCwb+bKRy60XGEcJIRAmuqAKCIMTzLIbEFoFbBfhf0uFZWsbIN7ACgirWn
+wMxMCjhNuOZI1P+E823Ri2o=
+=rQEr
 -----END PGP SIGNATURE-----
