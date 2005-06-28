@@ -1,0 +1,15 @@
+# ChangeLog for net-ftp/ftpbase
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.1 2005/06/28 14:52:26 uberlord Exp $
+
+*ftpbase-0.00 (28 Jun 2005)
+
+  28 Jun 2005; Roy Marples <uberlord@gentoo.org> +files/ftp-pamd,
+  +files/ftp-pamd-include, +files/ftpusers, +metadata.xml,
+  +ftpbase-0.00.ebuild:
+  Initial ftpbase ebuild.
+  This is a meta-ebuild for vsftpd, proftpd and pureftp - possibly others too.
+  It provides a /etc/ftpusers, installs the ftp:ftp user and creates the
+  home directory.
+  Optionally it provides /etc/pam.d/ftp
+
