@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/pound
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.7 2005/04/30 08:02:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.8 2005/06/28 13:47:01 ka0ttic Exp $
+
+  28 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> pound-1.8.3.ebuild:
+  Added static support via USE=static for bug 84482.
 
   30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> pound-1.8.3.ebuild:
   Stable on alpha, bug 90851.

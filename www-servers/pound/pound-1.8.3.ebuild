@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.8.3.ebuild,v 1.3 2005/04/30 08:02:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.8.3.ebuild,v 1.4 2005/06/28 13:47:01 ka0ttic Exp $
+
+inherit flag-o-matic
 
 MY_P="${P/p/P}"
 DESCRIPTION="A http/https reverse-proxy and load-balancer."
@@ -10,7 +12,7 @@ HOMEPAGE="http://www.apsis.ch/pound/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha ~mips ~hppa"
-IUSE="ssl msdav unsafe"
+IUSE="ssl msdav unsafe static"
 
 DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
@@ -18,11 +20,14 @@ DEPEND="virtual/libc
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
+	use static && append-ldflags -static
+
 	econf \
 		$(use_with ssl) \
 		$(use_enable msdav) \
 		$(use_enable unsafe) \
 		|| die "configure failed"
+
 	emake || die "compile failed"
 }
 
