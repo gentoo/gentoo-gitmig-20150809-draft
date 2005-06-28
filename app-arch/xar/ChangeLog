@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/xar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/ChangeLog,v 1.1 2005/04/24 04:57:07 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/ChangeLog,v 1.2 2005/06/28 18:24:48 flameeyes Exp $
+
+  28 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xar-20050423-amd64.patch, xar-20050423.ebuild:
+  Added patch to compile with -fPIC the library, and unset $SYMLINK_LIB which
+  is set by AMD64-multilib profile and conflicts with internal build one.
 
 *xar-20050423 (23 Apr 2005)
 
