@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6.ebuild,v 1.3 2005/06/25 13:56:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6.ebuild,v 1.4 2005/06/28 22:55:38 agriffis Exp $
 
 inherit libtool eutils
 
@@ -40,9 +40,7 @@ pkg_setup() {
 		einfo "libgphoto2 supports: all ${IUSE_CAMERAS}"
 	fi
 	echo
-	if [ `use jpeg` ]; then
-		ewarn "For 'exif' support, you need to set USE=exif"
-	fi
+	use jpeg && ewarn "For 'exif' support, you need to set USE=exif"
 }
 
 src_unpack() {
