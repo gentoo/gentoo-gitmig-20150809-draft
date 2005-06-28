@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.4.ebuild,v 1.9 2005/06/28 22:48:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.4.ebuild,v 1.10 2005/06/28 23:08:52 mcummings Exp $
 
 inherit perl-module
 
@@ -82,23 +82,24 @@ src_compile() {
 	# Some more files to be installed (README* and Changes are already
 	# included per default)
 	mydoc="NOTICE
-		TRADEMARK
-		LICENSE
-		CREDITS
-		INSTALL
-		UPGRADE
-		BUGS
-		USAGE
-		README.spamd
-		README.sql
-		README.ldap
-		procmailrc.example
-		sample-nonspam.txt
-		sample-spam.txt
-		STATISTICS.set0
-		STATISTICS.set1
-		STATISTICS.set2
-		STATISTICS.set3"
+	TRADEMARK
+	LICENSE
+	CREDITS
+	INSTALL
+	UPGRADE
+	BUGS
+	USAGE
+	README.spamd
+	README.sql
+	README.ldap
+	procmailrc.example
+	sample-nonspam.txt
+	sample-spam.txt
+	STATISTICS.set0
+	STATISTICS.set1
+	STATISTICS.set2
+	STATISTICS.set3"
+
 
 	use qmail && mydoc="${mydoc} README.qmail"
 
@@ -163,6 +164,7 @@ src_install () {
 	newconfd "${FILESDIR}"/3.0.0-spamd.conf spamd
 
 	if use doc; then
+		dodoc ${mydoc}
 		dodoc spamd/PROTOCOL
 		dohtml doc/*.html
 	fi
@@ -187,15 +189,17 @@ pkg_postinst() {
 		fi
 	fi
 
-	einfo
-	einfo "Please read the file"
-	einfo "  /usr/share/doc/${PF}/INSTALL.gz"
-	einfo "to find out which optional modules you need to install to enable"
-	einfo "additional features which depend on them."
-	einfo
-	einfo "If upgraded from 2.x, please read the file"
-	einfo "  /usr/share/doc/${PF}/UPGRADE.gz"
-	einfo
+	if use doc; then
+		einfo
+		einfo "Please read the file"
+		einfo "  /usr/share/doc/${PF}/INSTALL.gz"
+		einfo "to find out which optional modules you need to install to enable"
+		einfo "additional features which depend on them."
+		einfo
+		einfo "If upgraded from 2.x, please read the file"
+		einfo "  /usr/share/doc/${PF}/UPGRADE.gz"
+		einfo
+	fi
 	ewarn
 	ewarn "spamd is not designed to listen to an untrusted network"
 	ewarn "and is vulnerable to DoS attacks (and eternal doom) if"

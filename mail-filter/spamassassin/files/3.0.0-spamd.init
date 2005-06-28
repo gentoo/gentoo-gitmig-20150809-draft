@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/files/3.0.0-spamd.init,v 1.4 2005/06/10 11:44:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/files/3.0.0-spamd.init,v 1.5 2005/06/28 23:08:52 mcummings Exp $
 
 # NB: Config is in /etc/conf.d/spamd
 
@@ -11,6 +11,7 @@ PIDFILE=${PIDFILE:-/var/run/spamd.pid}
 depend() {
 	need net
 	before mta
+	use logger
 }
 
 start() {
