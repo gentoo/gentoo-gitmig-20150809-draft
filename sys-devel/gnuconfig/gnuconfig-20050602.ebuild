@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20050602.ebuild,v 1.1 2005/06/16 23:01:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20050602.ebuild,v 1.2 2005/06/28 05:22:52 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Updated config.sub and config.guess file from GNU"
-HOMEPAGE="ftp://ftp.gnu.org/pub/gnu/config"
+HOMEPAGE="http://savannah.gnu.org/projects/config"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"

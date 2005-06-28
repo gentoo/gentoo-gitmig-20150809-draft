@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d63a72170e518490dcdf40f5ea8fcd62 metadata.xml 293
 MD5 16a373b76399563b7ecbca09614b4cc7 gnuconfig-20050324.ebuild 819
 MD5 88153e109b0927aa50f07c51319837ec gnuconfig-20050602.ebuild 840
 MD5 9e0cc75af984e19009630f1f2986ad49 ChangeLog 1687
 MD5 3a869d5bbfb2e872aa492fef9678a67d files/digest-gnuconfig-20050602 70
 MD5 bcc49e0a3cffa806deeda49e2013362a files/digest-gnuconfig-20050324 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwN7FgIKl8Uu19MoRAqz2AKCEPZ0hbVANJDSF9jmv1h6zIxMO2wCfQpXQ
+CmeLSi8lipuGtYuwyw0E9AU=
+=FN3g
+-----END PGP SIGNATURE-----
