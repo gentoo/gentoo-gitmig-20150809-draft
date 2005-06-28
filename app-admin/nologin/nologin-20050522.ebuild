@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/nologin-20050522.ebuild,v 1.1 2005/05/22 20:02:59 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/nologin-20050522.ebuild,v 1.2 2005/06/28 13:57:13 ka0ttic Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 src_compile() {

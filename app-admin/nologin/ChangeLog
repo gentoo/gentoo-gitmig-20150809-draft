@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/nologin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/ChangeLog,v 1.1 2005/05/22 20:02:59 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/ChangeLog,v 1.2 2005/06/28 13:57:13 ka0ttic Exp $
+
+  28 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> nologin-20050522.ebuild:
+  Stable on x86.
 
 *nologin-20050522 (22 May 2005)
 
