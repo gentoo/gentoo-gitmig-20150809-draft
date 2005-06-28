@@ -1,6 +1,14 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.10 2005/06/28 22:09:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.11 2005/06/28 23:30:01 agriffis Exp $
+
+  28 Jun 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/mozilla-launcher-1.32-multilib.patch,
+  +files/mozilla-launcher-1.33-multilib.patch,
+  -files/mozilla-launcher-multilib.patch, mozilla-launcher-1.32.ebuild,
+  mozilla-launcher-1.33.ebuild:
+  Use versioned multilib patch (which won't be necessary at all with
+  MOZILLA_LIBDIR in future launcher stubs)
 
 *mozilla-launcher-1.33 (28 Jun 2005)
 

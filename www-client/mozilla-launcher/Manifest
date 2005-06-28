@@ -1,17 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0bc6972cb4d873e95cc3f91764b440a1 mozilla-launcher-1.33.ebuild 1027
-MD5 20a52c21fc9a735689721a6ebde95270 mozilla-launcher-1.32.ebuild 1017
-MD5 1cca434163f9babc29e588c0d4410f4f ChangeLog 11024
+MD5 743d1a7cd2844f0d0d9595ac1f018d69 mozilla-launcher-1.33.ebuild 1031
+MD5 79893487bed970300e40acb9514ea5aa mozilla-launcher-1.32.ebuild 1022
+MD5 abd08b933098b977a51f4cd183b825af ChangeLog 11385
 MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
-MD5 8f9f4a6c55148fcafa405a6abb07a2ef files/mozilla-launcher-multilib.patch 1300
+MD5 af3dfb22fb2ae02478ac397ce3ebd279 files/mozilla-launcher-1.33-multilib.patch 1297
+MD5 8f9f4a6c55148fcafa405a6abb07a2ef files/mozilla-launcher-1.32-multilib.patch 1300
 MD5 70ac948488bf73b6045253bab0ebe76e files/digest-mozilla-launcher-1.32 68
 MD5 9abc83f7f35587a32f39c48ee43cf0e3 files/digest-mozilla-launcher-1.33 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCwcqsBXaUFmZvwyMRAlUkAJ9afZdDpf+gsynT+7J0e3stZkfZWACgrfnH
-SOqZHraRFiAQrYSmNr21vWA=
-=HHCU
+iD8DBQFCwd2DBXaUFmZvwyMRAn54AJ9xaGl/SK3OAgZ9mJ+LOVsTorMlpwCcDeKb
+O2VOU+aPMWxDpVFKu8Eoj6s=
+=AKL9
 -----END PGP SIGNATURE-----
