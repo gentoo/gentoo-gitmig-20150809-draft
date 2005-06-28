@@ -1,0 +1,275 @@
+diff -Naur  psi-0.9.3-orig/iconsets/roster/default/icondef.xml  psi-0.9.3/iconsets/roster/default/icondef.xml
+--- psi-0.9.3-orig/iconsets/roster/default/icondef.xml	2004-04-22 19:49:53.000000000 +0000
++++ psi-0.9.3/iconsets/roster/default/icondef.xml	2005-05-19 11:52:35.000000000 +0000
+@@ -61,6 +61,11 @@
+ 		<x xmlns='name'>status/error</x>
+ 		<object mime='image/png'>perr.png</object>
+ 	</icon>
++	
++	<icon>
++		<x xmlns='name'>psi/statInd</x>
++		<object mime='image/png'>indicator.png</object>
++	</icon>
+ 
+ 	<!-- Special icons -->
+ 	<icon>
+diff -Naur  psi-0.9.3-orig/iris/xmpp-im/client.cpp  psi-0.9.3/iris/xmpp-im/client.cpp
+--- psi-0.9.3-orig/iris/xmpp-im/client.cpp	2004-12-28 20:19:45.000000000 +0000
++++ psi-0.9.3/iris/xmpp-im/client.cpp	2005-05-19 11:52:35.000000000 +0000
+@@ -792,10 +792,27 @@
+ 
+ 	// unavailable?  remove the resource
+ 	if(!s.isAvailable()) {
+-		if(found) {
+-			(*rit).setStatus(s);
+-			debug(QString("Client: Removing resource from [%1]: name=[%2]\n").arg(i->jid().full()).arg(j.resource()));
+-			resourceUnavailable(j, *rit);
++		Resource r;
++		if(!found) {
++			//if (!s.status().isEmpty()) {
++				r = Resource(j.resource(), s);
++				i->resourceList() += r;
++				debug(QString("Client: Adding resource to [%1]: name=[%2]\n").arg(i->jid().full()).arg(j.resource()));
++				resourceAvailable(j, r);
++		} 
++		else {
++				(*rit).setStatus(s);
++				r = *rit;
++				debug(QString("Client: Updating resource to [%1]: name=[%2]\n").arg(i->jid().full()).arg(j.resource()));
++				resourceAvailable(j, r);			
++		}
++		
++		rit = i->resourceList().find(j.resource());
++		found = (rit == i->resourceList().end()) ? false: true;
++		
++ 		if(found) {
++ 			(*rit).setStatus(s);
++ 			debug(QString("Client: Removing resource from [%1]: name=[%2]\n").arg(i->jid().full()).arg(j.resource())); 	resourceUnavailable(j, *rit);
+ 			i->resourceList().remove(rit);
+ 			i->setLastUnavailableStatus(s);
+ 		}
+diff -Naur  psi-0.9.3-orig/src/chatdlg.cpp  psi-0.9.3/src/chatdlg.cpp
+--- psi-0.9.3-orig/src/chatdlg.cpp	2004-12-22 12:37:35.000000000 +0000
++++ psi-0.9.3/src/chatdlg.cpp	2005-05-19 11:52:35.000000000 +0000
+@@ -474,8 +474,10 @@
+ 			u = ul.first();
+ 			if(rname.isEmpty()) {
+ 				// use priority
+-				if(!u->isAvailable())
++				if(!u->isAvailable()){
+ 					status = STATUS_OFFLINE;
++					statusString = u->lastUnavailableStatus().status();
++				}
+ 				else {
+ 					const UserResource &r = *u->userResourceList().priority();
+ 					status = makeSTATUS(r.status());
+diff -Naur  psi-0.9.3-orig/src/common.h  psi-0.9.3/src/common.h
+--- psi-0.9.3-orig/src/common.h	2005-05-19 11:52:34.000000000 +0000
++++ psi-0.9.3/src/common.h	2005-05-19 11:52:35.000000000 +0000
+@@ -146,6 +146,7 @@
+ 	QStringList gcHighlights, gcNickColors;
+ 
+ 	bool clNewHeadings;
++	bool clStIndicator;
+ 	bool clIconsAtTop;
+ 	bool clTransportStatus;
+ 
+diff -Naur  psi-0.9.3-orig/src/contactview.cpp  psi-0.9.3/src/contactview.cpp
+--- psi-0.9.3-orig/src/contactview.cpp	2005-05-19 11:52:34.000000000 +0000
++++ psi-0.9.3/src/contactview.cpp	2005-05-19 11:52:35.000000000 +0000
+@@ -26,6 +26,7 @@
+ #include<qheader.h>
+ #include<qtimer.h>
+ #include<qpainter.h>
++#include<qbitmap.h>
+ #include<qpopupmenu.h>
+ #include<qmessagebox.h>
+ #include<qinputdialog.h>
+@@ -2260,7 +2261,7 @@
+ 		strName = "";
+ 		v_selected = false;
+ 
+-		icon = lastIcon = 0;
++		icon = lastIcon = indIcon = 0;
+ 	}
+ 
+ 	~Private() {
+@@ -2323,7 +2324,7 @@
+ 	bool alerting;
+ 	bool animatingNick;
+ 
+-	Icon *icon, *lastIcon;
++	Icon *icon, *lastIcon, *indIcon;
+ 	int animateNickX, animateNickColor; // nick animation
+ };
+ 
+@@ -2595,6 +2596,12 @@
+ 				}
+ 			}
+ 		}
++
++		if( d->indIcon ){
++			const QPixmap &ipix = d->indIcon->pixmap();
++			const int y = (option.clIconsAtTop) ? 2 + pxh - ipix.height() : (h - ipix.height())/2;
++			p->drawPixmap((pix->width() - ipix.width())/2, y, ipix);
++		}
+ 	}
+ 	else if ( d->type == Group ) {
+ 		QColorGroup xcg = cg;
+@@ -2956,12 +2963,13 @@
+ 
+ void ContactViewItem::setIcon(const Icon *icon, bool alert)
+ {
++	/* needed by status indicator :o| 
+ 	if ( d->lastIcon == icon ) {
+ 		return; // cause less flicker. but still have to run calltree valgring skin on psi while online (mblsha).
+ 	}
+ 	else
+ 		d->lastIcon = (Icon *)icon;
+-
++	*/
+ 	if ( d->icon ) {
+ 		disconnect(d->icon, 0, this, 0 );
+ 		d->icon->stop();
+@@ -2983,11 +2991,29 @@
+ 		pix = d->icon->pixmap();
+ 	}
+ 
+-	setPixmap(0, pix);
++	iconUpdated(pix);
+ }
+ 
+ void ContactViewItem::iconUpdated(const QPixmap &pix)
+ {
++	// set status indicator icon
++	if(d->u){
++		bool ind = false;
++		if(!d->u->userResourceList().isEmpty() && option.clStIndicator) {
++			UserResourceList srl = d->u->userResourceList();
++
++			for(UserResourceList::ConstIterator rit = srl.begin(); rit != srl.end(); ++rit)
++				if(!(*rit).status().status().isEmpty()) { ind = true; break; }
++			
++		} 
++		else if(!d->u->lastUnavailableStatus().status().isEmpty() && option.clStIndicator)
++			ind = true;
++
++		if(ind)
++			d->indIcon = is->indicatorPtr(d->u->jid());
++		else
++			d->indIcon = 0;
++	}
+ 	setPixmap(0, pix);
+ }
+ 
+diff -Naur  psi-0.9.3-orig/src/options/opt_roster.cpp  psi-0.9.3/src/options/opt_roster.cpp
+--- psi-0.9.3-orig/src/options/opt_roster.cpp	2005-05-19 11:52:34.000000000 +0000
++++ psi-0.9.3/src/options/opt_roster.cpp	2005-05-19 11:52:35.000000000 +0000
+@@ -38,6 +38,8 @@
+ 		"  Check this option if you'd rather invoke with a single-click."));
+ 	QWhatsThis::add(d->ck_scrollTo,
+ 		tr("Makes Psi scroll the main window automatically so you can see new incoming events."));
++	QWhatsThis::add(d->ck_statusIndicator,
++		tr("Displays an indicator by the contact name if the contact entered a descriptive text status line."));
+ 	QWhatsThis::add(d->ck_useStatusLinebreak,
+ 		tr("Use new lines characters in shown statuses (shown statuses will be a bit bigger with this)."));
+ 
+@@ -61,6 +63,7 @@
+ 	opt->rosterAnim = d->ck_rosterAnim->isChecked();
+ 	opt->singleclick = d->ck_singleclick->isChecked();
+ 	opt->scrollTo = d->ck_scrollTo->isChecked();
++	opt->clStIndicator = d->ck_statusIndicator->isChecked();
+ 	opt->clIconsAtTop  = d->ck_iconsAtTop->isChecked();
+ 	opt->useStatusLinebreak = d->ck_useStatusLinebreak->isChecked();
+ 	opt->clTransportStatus = d->ck_transportStatus->isChecked();
+@@ -79,6 +82,7 @@
+ 	d->ck_rosterAnim->setChecked( opt->rosterAnim );
+ 	d->ck_singleclick->setChecked( opt->singleclick );
+ 	d->ck_scrollTo->setChecked( opt->scrollTo );
++	d->ck_statusIndicator->setChecked( opt->clStIndicator );
+ 	d->ck_iconsAtTop->setChecked( opt->clIconsAtTop );
+ 	d->ck_useStatusLinebreak->setChecked( opt->useStatusLinebreak );
+ 	d->ck_transportStatus->setChecked( opt->clTransportStatus );
+diff -Naur  psi-0.9.3-orig/src/options/opt_roster-ui.ui  psi-0.9.3/src/options/opt_roster-ui.ui
+--- psi-0.9.3-orig/src/options/opt_roster-ui.ui	2005-05-19 11:52:34.000000000 +0000
++++ psi-0.9.3/src/options/opt_roster-ui.ui	2005-05-19 11:52:35.000000000 +0000
+@@ -49,6 +49,14 @@
+                 <string>Scroll roster to contact on event</string>
+             </property>
+         </widget>
++	<widget class="QCheckBox">
++	    <property name="name">
++		<cstring>ck_statusIndicator</cstring>
++	    </property>
++	    <property name="text">
++		<string>Show indicator for text statuses</string>
++	    </property>
++	</widget>
+         <widget class="QCheckBox">
+             <property name="name">
+                 <cstring>ck_iconsAtTop</cstring>
+diff -Naur  psi-0.9.3-orig/src/psiiconset.cpp  psi-0.9.3/src/psiiconset.cpp
+--- psi-0.9.3-orig/src/psiiconset.cpp	2004-06-14 10:34:43.000000000 +0000
++++ psi-0.9.3/src/psiiconset.cpp	2005-05-19 11:52:35.000000000 +0000
+@@ -516,6 +516,19 @@
+ 	return Icon();
+ }
+ 
++Icon *PsiIconset::indicatorPtr(const XMPP::Jid &jid)
++{
++	return d->jid2icon(jid, "psi/statInd");
++}
++
++Icon PsiIconset::indicator(const XMPP::Jid &jid)
++{
++	Icon *icon = indicatorPtr(jid);
++	if ( icon )
++		return *icon;
++	return Icon();
++}
++
+ Icon *PsiIconset::statusPtr(const XMPP::Jid &jid, int s)
+ {
+ 	return d->jid2icon(jid, status2name(s));
+diff -Naur  psi-0.9.3-orig/src/psiiconset.h  psi-0.9.3/src/psiiconset.h
+--- psi-0.9.3-orig/src/psiiconset.h	2003-11-20 03:32:47.000000000 +0000
++++ psi-0.9.3/src/psiiconset.h	2005-05-19 11:52:35.000000000 +0000
+@@ -61,9 +61,11 @@
+ 	// JID-enabled status functions
+ 	Icon *statusPtr(const XMPP::Jid &, int);
+ 	Icon *statusPtr(const XMPP::Jid &, const XMPP::Status &);
++	Icon *indicatorPtr(const XMPP::Jid &);
+ 
+ 	Icon status(const XMPP::Jid &, int);
+ 	Icon status(const XMPP::Jid &, const XMPP::Status &);
++	Icon indicator(const XMPP::Jid &);
+ 
+ 	// functions to get status icon by transport name
+ 	Icon *transportStatusPtr(QString name, int);
+diff -Naur  psi-0.9.3-orig/src/psi_profiles.cpp  psi-0.9.3/src/psi_profiles.cpp
+--- psi-0.9.3-orig/src/psi_profiles.cpp	2005-05-19 11:52:34.000000000 +0000
++++ psi-0.9.3/src/psi_profiles.cpp	2005-05-19 11:52:35.000000000 +0000
+@@ -448,6 +448,7 @@
+ 		prefs.font[fStatusMes] = font.toString();
+ 	}
+ 
++	prefs.clStIndicator = TRUE;
+ 	prefs.clIconsAtTop = TRUE;
+ 
+ 	// calculate the small font size
+@@ -890,6 +891,7 @@
+ 			tag.appendChild(textTag(doc, "rosterAnim", prefs.rosterAnim));
+ 			tag.appendChild(textTag(doc, "singleclick", prefs.singleclick));
+ 			tag.appendChild(textTag(doc, "scrollTo", prefs.scrollTo));
++			tag.appendChild(textTag(doc, "statusIndicator", prefs.clStIndicator));
+ 			tag.appendChild(textTag(doc, "contactIconsAtTop", prefs.clIconsAtTop));
+ 			tag.appendChild(textTag(doc, "newHeadings", prefs.clNewHeadings));
+ 		}
+@@ -1417,6 +1419,7 @@
+ 				readBoolEntry(tag, "rosterAnim", &prefs.rosterAnim);
+ 				readBoolEntry(tag, "singleclick", &prefs.singleclick);
+ 				readBoolEntry(tag, "scrollTo", &prefs.scrollTo);
++				readBoolEntry(tag, "statusIndicator", &prefs.clStIndicator);
+ 				readBoolEntry(tag, "contactIconsAtTop", &prefs.clIconsAtTop);
+ 				readBoolEntry(tag, "newHeadings", &prefs.clNewHeadings);
+ 			}

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r4.ebuild,v 1.3 2005/06/27 18:30:44 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r4.ebuild,v 1.4 2005/06/28 20:34:23 humpback Exp $
 
 inherit eutils
 
@@ -87,7 +87,7 @@ src_unpack() {
 			cd ${S}
 			# roster-nr
 			epatch ${PATCHDIR}/psi-roster-nr-0.7.patch
-			epatch ${PATCHDIR}/psi-status_indicator++_add-on_roster-nr.patch
+			epatch ${FILESDIR}/psi-status_indicator++_add-on_roster-nr.patch
 			# indicator icon
 			cp ${FILESDIR}/psi-indicator.png ${S}/iconsets/roster/default/indicator.png
 
@@ -174,7 +174,7 @@ src_unpack() {
 			epatch ${PATCHDIR}/checkboxes-sound-options.diff
 			epatch ${PATCHDIR}/psi-history_lug.patch
 			epatch ${PATCHDIR}/psi-cli-v2_gentoo.diff
-			epatch ${PATCHDIR}/vcard-photo-interface.patch
+			epatch ${FILESDIR}/vcard-photo-interface.patch
 			epatch ${PATCHDIR}/psi-history-deletion-bugfix.patch
 
 			# from http://tleilax.if.pw.edu.pl/~myak/

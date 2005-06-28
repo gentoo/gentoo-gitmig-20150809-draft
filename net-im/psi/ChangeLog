@@ -1,6 +1,11 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.69 2005/06/27 18:30:44 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.70 2005/06/28 20:34:23 humpback Exp $
+
+  28 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/psi-status_indicator++_add-on_roster-nr.patch,
+  +files/vcard-photo-interface.patch, psi-0.9.3-r4.ebuild:
+  Small changes to the patches. Fixes bug #97177.
 
   27 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>;
   psi-0.9.3-r1.ebuild, psi-0.9.3-r2.ebuild, psi-0.9.3-r3.ebuild,
