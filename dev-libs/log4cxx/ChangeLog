@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.13 2005/04/23 12:16:10 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.14 2005/06/28 08:24:37 blubb Exp $
+
+  28 Jun 2005; Simon Stelling <blubb@gentoo.org> log4cxx-0.9.7-r2.ebuild:
+  added ~amd64 keyword
 
   23 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> -log4cxx-0.9.7-r1.ebuild,
   log4cxx-0.9.7-r2.ebuild:
