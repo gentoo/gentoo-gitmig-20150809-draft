@@ -1,22 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
-MD5 bd16a4af0537c7b4d37bc7d0bd20f32e mm-sources-2.6.12_rc4-r1.ebuild 1055
-MD5 0f92078ae2de823bd0793d9980c4d807 ChangeLog 41531
 MD5 2c5dc41b36e848a618db34beefeddba2 mm-sources-2.6.12_rc3-r3.ebuild 1009
-MD5 7b0f7b7b21140a1242a16fc4a0fceb90 mm-sources-2.6.12-r1.ebuild 1008
 MD5 b0155ba593685ccced05da78573d8ff3 mm-sources-2.6.12_rc6-r1.ebuild 1013
-MD5 52223bf322395924dccadd66c9d66748 files/digest-mm-sources-2.6.12-r1 127
-MD5 ab4feb194a239ec2da27b1515b015101 files/2.6.12-rc4-mm1-reiser4-breakage.patch 1688
-MD5 f2b9eca7841dd4baaf0db7b0fe603b1d files/digest-mm-sources-2.6.12_rc6-r1 197
-MD5 0bfebafd203f91c4a051b663a6b66f55 files/digest-mm-sources-2.6.12_rc4-r1 197
-MD5 b8382b71b7b17387b168843efc9b469d files/digest-mm-sources-2.6.12_rc3-r3 197
+MD5 1d1d87d4bbd2810826884cba24258b14 mm-sources-2.6.12-r2.ebuild 1005
+MD5 bd16a4af0537c7b4d37bc7d0bd20f32e mm-sources-2.6.12_rc4-r1.ebuild 1055
+MD5 7b0f7b7b21140a1242a16fc4a0fceb90 mm-sources-2.6.12-r1.ebuild 1008
+MD5 045b6151b2a3a64347f803403102ab75 ChangeLog 41668
+MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
 MD5 577afa6b9756ac464c781ff23727e92a files/2.6.12-rc3-mm1-uniprocessor-fixes.patch 2781
+MD5 52223bf322395924dccadd66c9d66748 files/digest-mm-sources-2.6.12-r1 127
+MD5 2ccf8151c29200d917620a7156e33e81 files/digest-mm-sources-2.6.12-r2 127
+MD5 b8382b71b7b17387b168843efc9b469d files/digest-mm-sources-2.6.12_rc3-r3 197
+MD5 0bfebafd203f91c4a051b663a6b66f55 files/digest-mm-sources-2.6.12_rc4-r1 197
+MD5 f2b9eca7841dd4baaf0db7b0fe603b1d files/digest-mm-sources-2.6.12_rc6-r1 197
+MD5 ab4feb194a239ec2da27b1515b015101 files/2.6.12-rc4-mm1-reiser4-breakage.patch 1688
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCucGsp5vW4rUFj5oRAuEeAJ95PxEZ+LF6N7hmJQ9CRWifsB6ZnwCgq59J
-tsimOo3++kNLIZFsOBXSwHw=
-=JOXQ
+iD8DBQFCwbxechej4aZK9/cRAtiAAKCE+5u6bqbQnjtewtGoVm7+UCHzQACfTprG
+cWNvOaWxiP+Xm9n5WwmE5CQ=
+=A6SF
 -----END PGP SIGNATURE-----
