@@ -1,8 +1,18 @@
-MD5 2123db4ecb94bc0434975723fee631bb ChangeLog 3289
-MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
-MD5 36063ed1bddc150c7b726bd793641b49 ml-pnet-0.6.10.ebuild 712
-MD5 6c8268e8144767f01afdb862dcdc7b6e ml-pnet-0.6.12.ebuild 741
-MD5 61a56decb5d2d906ebb3c237ecaeb70b ml-pnet-0.7.0.ebuild 810
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f4ece1d7ac66361bf38bc1573261f590 ChangeLog 3287
 MD5 f05441658a18742b29a7ee55dfb37d12 files/digest-ml-pnet-0.6.10 67
 MD5 fdf15c929b7e33344b9e128933bcaee2 files/digest-ml-pnet-0.6.12 67
 MD5 cad09c2078eee5b9915bc142d552d7f6 files/digest-ml-pnet-0.7.0 66
+MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
+MD5 e14c2c1d61d40ba6045ed4d49fa9281d ml-pnet-0.6.10.ebuild 707
+MD5 a5c0c4058c415711c3dd9f66d4507439 ml-pnet-0.6.12.ebuild 738
+MD5 7ab1d69621c016b0e1edc1e3e08a3d82 ml-pnet-0.7.0.ebuild 808
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwdmFI1lqEGTUzyQRArdsAJ9+gFDSowo2MzeqSP0Gne5i1UdZegCfV777
+dZ7PaMB9iqQPBdOM0IkrCq4=
+=F23i
+-----END PGP SIGNATURE-----
