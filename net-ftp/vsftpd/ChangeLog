@@ -1,8 +1,23 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.53 2005/06/07 23:04:57 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.54 2005/06/28 14:53:40 uberlord Exp $
 
-  08 Jun 2005; Roy Marples <uberlord@gentoo.org>
+*vsftpd-2.0.3-r1 (28 Jun 2005)
+
+  28 Jun 2005; Roy Marples <uberlord@gentoo.org>
+  +files/vsftpd-2.0.3-gentoo.diff, +vsftpd-2.0.3-r1.ebuild,
+  files/vsftpd.conf:
+  Added dependency on ftpbase - fixes #96258
+  
+  Changed default options of /etc/vsftpd/vsftpd.something
+  to /etc/vsftpd/something - exception is /etc/vsftpd/vsftpd.conf
+  This makes is more consistent with the default vsftpd installation.
+  
+  Default log file is now /var/log/vsftpd.log - which is the package default
+  
+  Default PAM service name is now ftp again
+
+  07 Jun 2005; Roy Marples <uberlord@gentoo.org>
   -files/vsftpd-1.0.1-gentoo.diff, -files/vsftpd-1.2.0-gentoo.diff.bz2,
   metadata.xml, -vsftpd-1.0.1-r1.ebuild, -vsftpd-1.2.0-r1.ebuild,
   -vsftpd-1.2.1.ebuild, -vsftpd-2.0.1.ebuild, vsftpd-2.0.3.ebuild:
