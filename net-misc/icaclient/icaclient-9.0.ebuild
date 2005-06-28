@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.1 2005/05/18 02:15:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.2 2005/06/28 23:14:03 agriffis Exp $
 
 inherit multilib
 
@@ -78,7 +78,7 @@ src_install() {
 	insinto /usr/$(get_libdir)/nsbrowser/plugins
 	dosym /opt/ICAClient/npica.so /usr/$(get_libdir)/nsbrowser/plugins/npica.so
 
-	if [ `use gnome` ]; then
+	if use gnome; then
 		insinto /usr/share/applications
 		doins lib/ICAClient/desktop/*.desktop
 	fi

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.20 2005/05/18 02:15:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.21 2005/06/28 23:14:03 agriffis Exp $
+
+  28 Jun 2005; Aron Griffis <agriffis@gentoo.org> icaclient-9.0.ebuild:
+  Fix use invocation
 
 *icaclient-9.0 (18 May 2005)
 
