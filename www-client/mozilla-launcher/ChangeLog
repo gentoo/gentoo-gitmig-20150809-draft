@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.9 2005/06/19 15:22:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.10 2005/06/28 22:09:39 agriffis Exp $
+
+*mozilla-launcher-1.33 (28 Jun 2005)
+
+  28 Jun 2005; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-launcher-1.30.ebuild, +mozilla-launcher-1.33.ebuild:
+  Implement MOZILLA_LIBDIR, part of fix for bug 88802. Make
+  moz_pis_startstop_scripts work for -bin installations
 
   19 Jun 2005; Simon Stelling <blubb@gentoo.org>
   +files/mozilla-launcher-multilib.patch, mozilla-launcher-1.32.ebuild:

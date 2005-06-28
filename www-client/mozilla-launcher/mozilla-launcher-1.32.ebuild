@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.32.ebuild,v 1.3 2005/06/19 15:22:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.32.ebuild,v 1.4 2005/06/28 22:09:39 agriffis Exp $
 
 inherit eutils
 
 DESCRIPTION="Script that launches mozilla or firefox"
-HOMEPAGE=""
+HOMEPAGE="http://dev.gentoo.org/~agriffis/dist/"
 SRC_URI="mirror://gentoo/${P}.bz2 \
 		http://dev.gentoo.org/~agriffis/dist/${P}.bz2"
 
