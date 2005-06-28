@@ -1,9 +1,9 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.40 2005/06/28 08:08:42 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.41 2005/06/28 08:21:58 lcars Exp $
 
   28 Jun 2005; Andrea Barisani <lcars@gentoo.org> sendmail-8.13.4-r1.ebuild:
-  Added better smmsp user/group checking and creation.
+  Added better smmsp user/group checking and creation in pkg_setup.
 
   24 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   sendmail-8.13.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.4-r1.ebuild,v 1.3 2005/06/28 08:08:42 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.4-r1.ebuild,v 1.4 2005/06/28 08:21:58 lcars Exp $
 
 inherit eutils mailer
 
@@ -166,7 +166,7 @@ src_install () {
 
 }
 
-pkg_preinst() {
+pkg_setup() {
 	einfo "checking for smmsp group...    create if missing."
 	enewgroup smmsp 209 || die "problem adding group smmsp"
 	einfo "checking for smmsp user...     create if missing."
