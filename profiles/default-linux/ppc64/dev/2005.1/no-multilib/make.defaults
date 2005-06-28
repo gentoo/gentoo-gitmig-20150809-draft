@@ -1,0 +1,31 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/dev/2005.1/no-multilib/make.defaults,v 1.1 2005/06/28 14:13:16 nigoro Exp $
+
+ARCH="ppc64"
+ACCEPT_KEYWORDS="ppc64"
+
+CHOST="powerpc64-unknown-linux-gnu"
+
+CFLAGS="-O2 -pipe"
+CXXFLAGS=${CFLAGS}
+
+STAGE1_USE="unicode"
+GRP_STAGE23_USE="unicode ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses"
+
+USE="unicode pam berkdb bitmap-fonts gif jpeg nls ncurses perl png python readline ssl tcpd truetype truetype-fonts type1-fonts zlib"
+
+FEATURES="autoconfig sandbox sfperms"
+
+MULTILIB_ABIS="ppc64"
+DEFAULT_ABI="ppc64"
+
+CFLAGS_ppc64="-m64"
+LDFLAGS_ppc64="-m elf64-powerpc"
+CHOST_ppc64="powerpc64-unknown-linux-gnu"
+CDEFINE_ppc64="__powerpc64__"
+LIBDIR_ppc64="lib64"
+
+# Hack to tell baselayout to use symlinks for /lib, /usr/lib, and /usr/local/lib
+SYMLINK_LIB="yes"
+
