@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.29 2005/06/28 05:31:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.30 2005/06/28 06:03:39 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -33,7 +33,7 @@ RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
 IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server
-	insecure-drivers ipv6 minimal mmx nls opengl pam sdk sse static
+	insecure-drivers ipv6 minimal mmx nls nocxx opengl pam sdk sse static
 	truetype-fonts type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
@@ -86,7 +86,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/freetype-2.1.8
 	>=media-libs/fontconfig-2.1-r1
 	opengl? ( >=x11-base/opengl-update-2.2.0 )
-	>=x11-misc/ttmkfdir-3.0.9-r2
+	!nocxx? ( >=x11-misc/ttmkfdir-3.0.9-r2 )
 	>=sys-apps/sed-4
 	sys-apps/util-linux
 	dev-lang/perl
@@ -103,7 +103,7 @@ RDEPEND="
 		>=media-libs/freetype-2.1.8
 		>=media-libs/fontconfig-2.1-r1
 		opengl? ( >=x11-base/opengl-update-2.2.0 )
-		>=x11-misc/ttmkfdir-3.0.9-r2
+		!nocxx? ( >=x11-misc/ttmkfdir-3.0.9-r2 )
 		media-libs/libpng
 		>=sys-libs/ncurses-5.1
 		!<=app-emulation/emul-linux-x86-xlibs-1.2-r3
@@ -1677,47 +1677,48 @@ font_setup() {
 
 	eend 0
 
-	if [ -x ${ROOT}/usr/bin/ttmkfdir ]; then
-		ebegin "Creating fonts.scale files"
-			local x
-			for x in $(find ${ROOT}/usr/share/fonts/* -maxdepth 1 -type d); do
-				[ -z "$(ls ${x}/)" ] && continue
-				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
+	ebegin "Creating fonts.scale files"
+		local x
+		for x in $(find ${ROOT}/usr/share/fonts/* -maxdepth 1 -type d); do
+			[ -z "$(ls ${x}/)" ] && continue
+			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 
-				# Only generate .scale files if truetype, opentype or type1
-				# fonts are present ...
+			# Only generate .scale files if truetype, opentype or type1
+			# fonts are present ...
 
-				# First truetype (ttf,ttc)
-				# NOTE: ttmkfdir does NOT work on type1 fonts (#53753)
-				# Also, there is no way to regenerate Speedo/CID fonts.scale
-				# <spyderous@gentoo.org> 2 August 2004
-				if [ "${x/encodings}" = "${x}" -a \
-				     -n "$(find ${x} -iname '*.tt[cf]' -print)" ]; then
+			# First truetype (ttf,ttc)
+			# NOTE: ttmkfdir does NOT work on type1 fonts (#53753)
+			# Also, there is no way to regenerate Speedo/CID fonts.scale
+			# <spyderous@gentoo.org> 2 August 2004
+			if [ "${x/encodings}" = "${x}" -a \
+				-n "$(find ${x} -iname '*.tt[cf]' -print)" ]; then
+				if [ -x ${ROOT}/usr/bin/ttmkfdir ]; then
 					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 					${ROOT}/usr/bin/ttmkfdir -x 2 \
 						-e ${ROOT}/usr/share/fonts/encodings/encodings.dir \
 						-o ${x}/fonts.scale -d ${x}
 					# ttmkfdir fails on some stuff, so try mkfontscale if it does
 					local ttmkfdir_return=$?
-					if [ ${ttmkfdir_return} -ne 1 ]; then
-						LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
-						${ROOT}/usr/bin/mkfontscale \
-							-a /usr/share/fonts/encodings/encodings.dir \
-							-- ${x}
-					fi
-				# Next type1 and opentype (pfa,pfb,otf,otc)
-				elif [ "${x/encodings}" = "${x}" -a \
-					-n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]; then
+				else
+					# We didn't use ttmkfdir at all
+					local ttmkfdir_return=2
+				fi
+				if [ ${ttmkfdir_return} -ne 1 ]; then
 					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 					${ROOT}/usr/bin/mkfontscale \
-						-a ${ROOT}/usr/share/fonts/encodings/encodings.dir \
+						-a /usr/share/fonts/encodings/encodings.dir \
 						-- ${x}
 				fi
-			done
-		eend 0
-	else
-		eerror "ttmkfdir not found. Unable to prepare TrueType fonts for use."
-	fi
+			# Next type1 and opentype (pfa,pfb,otf,otc)
+			elif [ "${x/encodings}" = "${x}" -a \
+				-n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]; then
+				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
+				${ROOT}/usr/bin/mkfontscale \
+					-a ${ROOT}/usr/share/fonts/encodings/encodings.dir \
+					-- ${x}
+			fi
+		done
+	eend 0
 
 	ebegin "Generating fonts.dir files"
 		for x in $(find ${ROOT}/usr/share/fonts/* -maxdepth 1 -type d); do
