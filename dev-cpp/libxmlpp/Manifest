@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 f3893471a4182b1fd0340f5f6d9576b8 libxmlpp-0.27.0.ebuild 890
 MD5 6f406de127feaf6d750a665fa85e21b4 libxmlpp-1.0.2.ebuild 893
 MD5 d151ee2e2dbdbe62eb2c5a6326d57654 libxmlpp-1.0.4-r2.ebuild 896
-MD5 fea06460e5898fed879967ddb37c08aa ChangeLog 5315
+MD5 c4ae1491c0383790d46e4f49670ed1b6 ChangeLog 5409
 MD5 09d3293038c3ef6ba2ff98ef6609680a metadata.xml 252
-MD5 32440196c08ace01254be5189dd5b677 libxmlpp-2.10.0-r1.ebuild 1352
+MD5 894697437b1e329d419e49e3668f37ab libxmlpp-2.10.0-r1.ebuild 1352
 MD5 2725f93a53655a21ce7bd8dd2d6de41d libxmlpp-2.8.0-r2.ebuild 1348
 MD5 d8908feca35d34dbd88eab2dc2eaa621 files/digest-libxmlpp-1.0.2 67
 MD5 785183ae0a7196fc94879a9cfaa70d1a files/libxmlpp-2.10.0-use-correct-callback.diff 751
@@ -19,7 +19,7 @@ MD5 335a2cd8fe569196d631a0a54d8cac32 files/digest-libxmlpp-2.10.0-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCpahtEZCkKN40op4RAv1XAJ9Dw0u1QBgMdO26aCD74l7s7JvpcQCfYIxP
-JabhPY0s7PdpxLr5OAzeJDc=
-=3U1i
+iD8DBQFCwVWlEZCkKN40op4RAhvnAKClBiJR2LBHMbJA3Q9v9WyCTwTA9QCgkz7n
+JDP1JhmqlX+PfUNHlTSroRQ=
+=kgTo
 -----END PGP SIGNATURE-----
