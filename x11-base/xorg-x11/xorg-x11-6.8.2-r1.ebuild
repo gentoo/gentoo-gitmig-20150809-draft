@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.20 2005/06/01 10:16:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.21 2005/06/28 05:25:02 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -156,6 +156,12 @@ pkg_setup() {
 	check_use_combos
 
 	setup_multilib
+
+	# xfs user
+	if use xfs; then
+		enewgroup xfs 33
+		enewuser xfs 33 /bin/false /etc/X11/fs xfs
+	fi
 }
 
 src_unpack() {

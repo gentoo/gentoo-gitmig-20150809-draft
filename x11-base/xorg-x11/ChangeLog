@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.411 2005/06/27 07:22:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.412 2005/06/28 05:25:02 spyderous Exp $
+
+  28 Jun 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r1.ebuild, xorg-x11-6.8.2-r2.ebuild,
+  xorg-x11-6.8.99.5.ebuild, xorg-x11-6.8.99.8.ebuild,
+  xorg-x11-6.8.99.13.ebuild:
+  (#94964) Use enewuser()/enewgroup() for xfs, so default /etc/passwd etc isn't
+  so huge.
 
 *xorg-x11-6.8.99.13 (27 Jun 2005)
 
