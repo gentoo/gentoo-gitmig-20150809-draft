@@ -1,6 +1,5 @@
 MD5 016c3e144c65ab89a45ffff611a9da54 qt-3.3.4-r3.ebuild 8950
 MD5 88875c77c2482de25169850cfc19faf5 qt-3.3.3-r1.ebuild 7987
-MD5 3775ebac71f6df7674c3f01e5e5bcc0d qt-4.0.0_rc1-r3.ebuild 6066
 MD5 97fed8fbf48cf5353098d6f736d01383 qt-3.3.4-r5.ebuild 9088
 MD5 af3389b71ffd09801de9d12e7539f2c7 qt-4.0.0.ebuild 5727
 MD5 98c2c897d6bb5fd3f7c6af49cd8decb7 qt-3.3.4-r2.ebuild 8565
@@ -14,7 +13,6 @@ MD5 8b3da5dae8babfcbdee3be465579d6c2 files/0002-dnd_active_window_fix.patch 7289
 MD5 c7f65a0625242eccf159e2b8ee74976d files/45qt3 109
 MD5 7eae3f0a0cb9f3188a994c9f546c869e files/digest-qt-4.0.0 86
 MD5 fff1c03b4a3ad38904a30d1b2de88a07 files/qt4-nomkdir.patch 866
-MD5 e8aa618af5aad24e1925959fd2c6acd5 files/digest-qt-4.0.0_rc1-r3 104
 MD5 b9689fa9461944ba25ebf0acde5fb70b files/qt-3.3.4-flickerfree_qiconview_buffered.patch 3347
 MD5 4122542a37b787efb9476b0fb1fdafc0 files/qt-3.3.4-0047-fix-kmenu-widget.diff 992
 MD5 77ee6484af384828441336443499ec0e files/digest-qt-3.3.3-r1 238
@@ -31,7 +29,6 @@ MD5 2f121ac14a939da7f1958ffc866f8560 files/qt4-rpath.patch 353
 MD5 527200fe7fd34be19a63e56a09ad7f47 files/qt-3.3.4-immodule-focus.patch 877
 MD5 0221c85bc6f785b68812fc7f42110742 files/qt-3.3.4-flickerfree_qscrollview_fixwindowactivate.patch 1540
 MD5 3e5e045d0c1448839a8dc1c82aeef21b files/qt-3.3.3-qclipboard-hack.patch 1662
-MD5 fff1c03b4a3ad38904a30d1b2de88a07 files/qt4rc1_nomkdir.patch 866
 MD5 3e5e045d0c1448839a8dc1c82aeef21b files/qt-3.3.4-qclipboard-hack.patch 1662
 MD5 da2eb517a4c29a58002e92864ff966e5 files/qt-no-rpath-uic.patch 294
 MD5 8f75ba0e151481962fcb239dc216cf39 files/qt-3.3.4-0051-qtoolbar_77047.patch 1278
