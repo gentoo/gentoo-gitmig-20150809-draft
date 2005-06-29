@@ -1,21 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p8-r3.ebuild,v 1.13 2005/06/19 00:05:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9-r1.ebuild,v 1.1 2005/06/29 14:36:06 taviso Exp $
 
 inherit eutils pam
 
 # TODO: Fix support for krb4 and krb5
 
-DESCRIPTION="Allows certain users/groups to run commands as root"
+DESCRIPTION="Allows users or groups to run commands as other users"
 HOMEPAGE="http://www.sudo.ws/"
 SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
 LICENSE="Sudo"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam skey offensive ldap"
 
-DEPEND="pam? ( virtual/pam ) skey? ( >=app-admin/skey-1.1.5-r1 )
-	ldap? ( >=net-nds/openldap-2.1.30-r1 )"
+DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
+	ldap? ( >=net-nds/openldap-2.1.30-r1 )
+	skey? ( >=app-admin/skey-1.1.5-r1 )
+	sys-devel/bison
+	virtual/mta"
 RDEPEND="${DEPEND} ldap? ( dev-lang/perl )"
 
 S=${WORKDIR}/${P/_/}
@@ -27,7 +30,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
 
 	# make tls_cacert synonymous with tls_cacertfile.
-	epatch ${FILESDIR}/${P}-ldap-tls_cacert.diff
+	epatch ${FILESDIR}/${PN}-1.6.8_p8-ldap-tls_cacert.diff
 
 	# additional variables to disallow, should user disable env_reset.
 
@@ -111,6 +114,7 @@ src_compile() {
 		$(use_with offensive all-insults) \
 		$(use_with pam) \
 		$(use_with skey) \
+		$(use_with ldap ldap_conf_file /etc/ldap.conf.sudo) \
 		$(use_with ldap) || die
 
 	# disallow lazy bindings
@@ -122,16 +126,27 @@ src_install() {
 	dodoc BUGS CHANGES HISTORY PORTING README RUNSON TODO \
 		TROUBLESHOOTING UPGRADE sample.*
 
-	use ldap && {
+	if use ldap; then
 		dodoc README.LDAP
 		dosbin sudoers2ldif
-	}
 
-	pamd_mimic_system sudo auth account password session
+		printf "# See ldap.conf(5) for details\n" > ${T}/ldap.conf.sudo
+		printf "# This file should only be readable by root\n\n" >> ${T}/ldap.conf.sudo
+
+		insinto /etc
+		doins ${T}/ldap.conf.sudo
+		fperms 0440 /etc/ldap.conf.sudo
+	fi
+
+	if has_version virtual/pam; then
+		pamd_mimic_system sudo auth account password session
+	else
+		newpamd ${FILESDIR}/sudo-1.6.8_p8 sudo
+	fi
 
 	insinto /etc
 	doins ${FILESDIR}/sudoers
-	fperms 0440 /etc/sudoers
+	fperms 0640 /etc/sudoers
 }
 
 # remove duplicate path entries from $1
@@ -159,9 +174,12 @@ sudo_bad_var() {
 
 pkg_postinst() {
 	use skey && use pam && {
-		 ewarn "sudo will not use skey authentication when compiled with"
-		 ewarn "pam support."
-		 ewarn "To allow users to authenticate with one time passwords,"
-		 ewarn "you should unset the pam USE flag for sudo."
+		ewarn "sudo will not use skey authentication when compiled with"
+		ewarn "pam support."
+		ewarn "To allow users to authenticate with one time passwords,"
+		ewarn "you should unset the pam USE flag for sudo."
+	}
+	use ldap && {
+		ewarn "sudo uses the /etc/ldap.conf.sudo file for ldap configuration."
 	}
 }

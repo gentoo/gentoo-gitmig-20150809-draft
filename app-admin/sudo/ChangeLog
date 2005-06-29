@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.71 2005/06/23 03:35:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.72 2005/06/29 14:36:06 taviso Exp $
+
+*sudo-1.6.8_p9-r1 (29 Jun 2005)
+
+  29 Jun 2005; Tavis Ormandy <taviso@gentoo.org> -sudo-1.6.7_p5-r4.ebuild,
+  -sudo-1.6.8_p8-r2.ebuild, -sudo-1.6.8_p8-r3.ebuild,
+  +sudo-1.6.8_p9-r1.ebuild:
+  use a secure copy of ldap.conf to prevent local information leak.
 
   23 Jun 2005; Olivier Crête <tester@gentoo.org> sudo-1.6.8_p9.ebuild:
   Stable on x86
