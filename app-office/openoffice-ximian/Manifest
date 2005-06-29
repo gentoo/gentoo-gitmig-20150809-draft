@@ -1,7 +1,7 @@
-MD5 7a718b7002feb46ed1a9817261e02e24 openoffice-ximian-1.3.14.ebuild 17901
+MD5 079f615da6f0aac32471416c17c700f6 openoffice-ximian-1.3.14.ebuild 17989
 MD5 ce67e2b1dc445c93428e0abc29835bee openoffice-ximian-1.3.6-r1.ebuild 17073
 MD5 ca8add812e406335562b69941a364865 openoffice-ximian-1.3.9-r1.ebuild 17907
-MD5 2b59c723d76c0427398f73132b779b98 ChangeLog 32779
+MD5 79091848c512175291e5063c19f30cd9 ChangeLog 32966
 MD5 f3942f82433bf5ae16461240cbcc4984 metadata.xml 300
 MD5 2595967ac130a541e50bffc75e105041 files/digest-openoffice-ximian-1.3.6-r1 502
 MD5 e84e07ee231b9ceaabacc5556a63f647 files/digest-openoffice-ximian-1.3.9-r1 492
@@ -27,6 +27,7 @@ MD5 ddb36dfd1d142b8a03850e3bee62a8c3 files/1.1.4/hardened-link.patch 576
 MD5 e08721c60cf0f7bc7ea0a714baeac120 files/1.1.4/getcompver.awk.patch 418
 MD5 964398ef88829e5a2935d0c0f8389c9d files/1.1.4/xooffice-wrapper-1.3 6091
 MD5 b2ea5c34d4a5e430c21a2da7426b9e39 files/1.1.4/cws-heapbug_CAN-2005-0941.diff 598
+MD5 622aff56239fa55eb653a16645b6a3f2 files/1.1.4/vcl-unx-gtk-frame-m110.diff 7858
 MD5 d14fafce0cfe0c8d399902a2c3d83e64 files/1.1.4/vcl-gtk-mainloop-m79.diff 1130
 MD5 6938dc2e28e840cebf4fdbde9d6e2d4b files/1.1.4/gentoo-1.3.9.patch 859
 MD5 3d3555a66a2d8a66613d4e4471701eb8 files/1.1.4/pthreadlink-fix.patch 1163

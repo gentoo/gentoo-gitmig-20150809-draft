@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.14.ebuild,v 1.2 2005/06/24 06:18:31 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.14.ebuild,v 1.3 2005/06/29 20:48:50 suka Exp $
 
 # Notes:
 #
@@ -306,6 +306,9 @@ src_unpack() {
 	#Finally apply the patches
 	einfo "Applying Ximian OO.org Patches"
 	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=${DISTRO} || die "Ximian patches failed"
+
+	#Dead keys fix
+	use gnome && epatch ${FILESDIR}/${OO_VER}/vcl-unx-gtk-frame-m110.diff
 
 	#Fix for hardened
 	if use hardened; then
