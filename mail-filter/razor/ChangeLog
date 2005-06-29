@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/razor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.34 2005/06/29 03:41:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.35 2005/06/29 13:21:41 gustavoz Exp $
+
+  29 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> razor-2.74.ebuild:
+  Stable on sparc wrt #96776
 
   29 Jun 2005; Andrej Kacian <ticho@gentoo.org> razor-2.74.ebuild:
   Stable on x86, security bug #96776.
