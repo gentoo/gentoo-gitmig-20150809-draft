@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0.ebuild,v 1.3 2005/06/29 17:56:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0.ebuild,v 1.4 2005/06/29 19:07:12 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -94,11 +94,6 @@ src_compile() {
 	export SYSCONF=${D}${QTPREFIXDIR}/etc/settings
 	export PATH="${S}/bin:${PATH}"
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
-
-	# Let's just allow writing to these directories during Qt emerge
-	# as it makes Qt much happier.
-	# addwrite "${QTBASE}/etc/settings"
-	# addwrite "$HOME/.qt"
 
 	myconf="${myconf} $(qt_use accessibility) $(qt_use cups) $(qt_use xinerama)"
 	myconf="${myconf} $(qt_use opengl) $(qt_use nis)"
