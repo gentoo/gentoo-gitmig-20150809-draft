@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javacc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.14 2005/05/01 09:55:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.15 2005/06/29 19:21:59 axxo Exp $
+
+  29 Jun 2005; Thomas Matthijs <axxo@gentoo.org>
+  +files/javacc-3.2-javadoc.patch, javacc-3.2-r3.ebuild:
+  add patch from Josh Nichols <nichoj@alum.rpi.edu> to build api docs #97014
 
   01 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -javacc-3.2-r2.ebuild,
   javacc-3.2-r3.ebuild:

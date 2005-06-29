@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r3.ebuild,v 1.7 2005/05/01 22:12:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r3.ebuild,v 1.8 2005/06/29 19:21:59 axxo Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
 DESCRIPTION="Java Compiler Compiler [tm] (JavaCC [tm]) - The Java Parser Generator"
 HOMEPAGE="https://javacc.dev.java.net/servlets/ProjectHome"
@@ -18,16 +18,24 @@ DEPEND=">=virtual/jdk-1.3
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.3"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-javadoc.patch
+}
+
 src_compile() {
 	local antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	use doc && antflags="${antflags} javadoc"
 	ant ${antflags} || die "compilation failed"
 
-	cp ${FILESDIR}/${PN}-${PV} ${S}/ || die "Missing env file ${P}"
+	cp ${FILESDIR}/${P} ${S}/ || die "Missing env file ${P}"
 	sed -i \
 		-e "s:@PV@:${PV}:" \
 		-e "s:@PN@:${PN}:" \
-		${PN}-${PV} || die "Failed to sed"
+		${P} || die "Failed to sed"
 }
 
 src_install() {
@@ -36,6 +44,7 @@ src_install() {
 	if use doc; then
 		dodoc README
 		java-pkg_dohtml -r www/*
+		java-pkg_dohtml -r doc/api
 	fi
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
@@ -49,7 +58,7 @@ src_install() {
 
 	dodir /etc/env.d/java
 	insinto /etc/env.d/java
-	newins ${PN}-${PV} 22javacc || die "Missing ${PF}"
+	newins ${P} 22javacc || die "Missing ${PF}"
 }
 
 pkg_postinst() {
