@@ -1,6 +1,10 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.49 2005/06/23 10:31:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.50 2005/06/29 13:50:28 leonardop Exp $
+
+  29 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
+  scrollkeeper-0.3.14-r1.ebuild:
+  Modified docbook-xml-dtd dependency to use '~' syntax.
 
   23 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
   scrollkeeper-0.3.14-r1.ebuild, files/scrollkeeper-0.3.14-gentoo.patch:

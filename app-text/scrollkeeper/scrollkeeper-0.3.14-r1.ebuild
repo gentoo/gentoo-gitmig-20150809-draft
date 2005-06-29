@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r1.ebuild,v 1.2 2005/06/23 10:31:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r1.ebuild,v 1.3 2005/06/29 13:50:28 leonardop Exp $
 
 inherit libtool eutils
 
@@ -16,7 +16,7 @@ IUSE="nls"
 RDEPEND=">=dev-libs/libxml2-2.4.19
 	>=dev-libs/libxslt-1.0.14
 	>=sys-libs/zlib-1.1.3
-	=app-text/docbook-xml-dtd-4.1.2*
+	~app-text/docbook-xml-dtd-4.1.2
 	>=app-text/docbook-sgml-utils-0.6.6"
 DEPEND="${RDEPEND}
 	 >=dev-util/intltool-0.29
