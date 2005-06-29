@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/xmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.12 2005/06/06 13:25:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.13 2005/06/29 21:12:17 langthang Exp $
+
+  29 Jun 2005; Tuấn Văn <langthang@gentoo.org> xmail-1.21.ebuild:
+  Fix issues in bug #96632. Thanks to Jakub Moc <jakub@gentoo.org> for 
+  the patch.
 
   06 Jun 2005; Andrej Kacian <ticho@gentoo.org> -xmail-1.16.ebuild:
   Removed 1.16.
