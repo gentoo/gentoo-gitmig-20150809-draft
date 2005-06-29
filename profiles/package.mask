@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4139 2005/06/29 11:57:01 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4140 2005/06/29 14:43:12 leonardop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -775,11 +775,6 @@ media-video/bcast
 # <robbat2@gentoo.org> (17 Nov 2004)
 # Masking for testing
 =dev-db/mysql-4.1*
-
-# <usata@gentoo.org> (15 Nov 2004)
-# need to fix bug #71366
-=app-text/docbook-xml-simple-dtd-4.1.2.4-r1
-=app-text/docbook-xml-simple-dtd-1.0-r1
 
 # <pythonhead@gentoo.org (13 Nov 2004)
 # 2.6.0 is now in portage but will remove this soon as deps in other ebuilds are fixed
