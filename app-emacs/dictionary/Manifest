@@ -1,5 +1,5 @@
-MD5 d1eadbcf82978a17a63447561e345d5f ChangeLog 780
+MD5 95c649343c0409711d56f90d3786262f ChangeLog 778
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 d773213f86884dd54777dbe701e4cdf5 dictionary-1.8.7.ebuild 617
+MD5 4edcf3c32562d829df4794fa55f0f3c1 dictionary-1.8.7.ebuild 615
 MD5 fed8cfe9cc0c1eb524b5f8b91ab593c6 files/50dictionary-gentoo.el 208
 MD5 2f40890c9ee96d59722cb378c5ea0d34 files/digest-dictionary-1.8.7 67
