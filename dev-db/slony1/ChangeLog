@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/slony1
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.4 2005/06/27 11:17:25 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.5 2005/06/29 16:09:52 nakano Exp $
+
+  29 Jun 2005; Masatomo Nakano <nakano@gentoo.org> slony1-1.1.0_rc1.ebuild,
+  slony1-1.1.0.ebuild:
+  Fixed license. (#97348)
 
 *slony1-1.1.0 (27 Jun 2005)
 
