@@ -8,11 +8,14 @@ name should be bumped, but the patch content should stay fairly the same.
 
 --- ltmain.in.orig	Wed Apr  3 01:19:37 2002
 +++ ltmain.in	Sun May 26 19:50:52 2002
-@@ -3940,9 +3940,50 @@
+@@ -3940,9 +3940,53 @@
  		  $echo "$modename: \`$deplib' is not a valid libtool archive" 1>&2
  		  exit 1
  		fi
 -		newdependency_libs="$newdependency_libs $libdir/$name"
++		if [ "x$EGREP" = x ] ; then
++			EGREP=egrep
++		fi
 +		# We do not want portage's install root ($D) present.  Check only for
 +		# this if the .la is being installed.
 +		if test "$installed" = yes && test "$D"; then

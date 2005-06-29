@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.18.ebuild,v 1.2 2005/06/29 11:04:00 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.18-r1.ebuild,v 1.1 2005/06/29 11:04:00 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils libtool
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.14.ebuild,v 1.2 2005/04/10 23:34:37 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.14.ebuild,v 1.3 2005/06/29 11:04:00 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils libtool
 
@@ -107,6 +107,9 @@ src_unpack() {
 	# dependencies.  Hard links can't cross filesystems though, 
 	# so we have to use a diff source for the link.  #40992
 	epatch ${FILESDIR}/1.5.10/libtool-1.5.10-locking.patch
+
+	# In some cases EGREP is not set by the build system.
+	epatch ${FILESDIR}/1.5.14/libtool-1.5.14-egrep.patch
 
 	ebegin "Generating ltmain.sh"
 	gen_ltmain_sh || die "Failed to generate ltmain.sh!"
