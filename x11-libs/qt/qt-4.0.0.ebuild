@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0.ebuild,v 1.2 2005/06/29 12:49:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0.ebuild,v 1.3 2005/06/29 17:56:03 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -140,6 +140,7 @@ src_install() {
 
 	if use examples; then
 		make INSTALL_ROOT=${D} sub-examples-install_subtargets || die
+		make INSTALL_ROOT=${D} sub-demos-install_subtargets || die
 	fi
 
 	make INSTALL_ROOT=${D} install_qmake || die
