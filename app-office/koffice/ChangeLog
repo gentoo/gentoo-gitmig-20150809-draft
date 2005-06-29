@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.104 2005/06/23 13:03:10 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.105 2005/06/29 21:25:44 yoswink Exp $
+
+  29 Jun 2005; Jose Luis Rivero <yoswink@gentoo.org>
+  koffice-1.4.0-r1.ebuild:
+  Added ~alpha wrt #95128
 
   23 Jun 2005; Gregorio Guidi <greg_g@gentoo.org> koffice-1.4.0-r1.ebuild:
   Correct dependency on lcms (#96851).
