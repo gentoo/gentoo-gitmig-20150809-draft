@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20041030.ebuild,v 1.1 2005/06/29 15:34:13 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20041030.ebuild,v 1.2 2005/06/29 20:02:40 rl03 Exp $
 
 inherit webapp eutils
 
@@ -10,6 +10,7 @@ SRC_URI="http://ftp.ale.org/pub/mirrors/openpkg/sources/DST/${PN}//TWiki${PV}bet
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE=""
 
 S=${WORKDIR}
 
