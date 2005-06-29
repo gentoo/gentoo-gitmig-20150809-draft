@@ -1,6 +1,16 @@
-MD5 ff23c9f437096671565a8bf5d7111226 desklet-sidecandyrhythmbox-0.72.ebuild 713
-MD5 a1967aa9b0f0923d0951ec03585e8623 ChangeLog 727
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6bdff92f19f48041cb28629b5174dae1 metadata.xml 162
-MD5 2842fe546b99831e52d8e5bca3f6dc30 desklet-sidecandyrhythmbox-0.72-r1.ebuild 885
+MD5 1c987c76a90db77407526212f705edef ChangeLog 838
+MD5 1abd2ecbab6940d904d7b029457b802a desklet-sidecandyrhythmbox-0.72-r1.ebuild 891
+MD5 ff23c9f437096671565a8bf5d7111226 desklet-sidecandyrhythmbox-0.72.ebuild 713
 MD5 77ad997f11133f9abcaf60cf16342611 files/digest-desklet-sidecandyrhythmbox-0.72 74
 MD5 77ad997f11133f9abcaf60cf16342611 files/digest-desklet-sidecandyrhythmbox-0.72-r1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCwyYFKRy60XGEcJIRAtn0AKCDcegeZyQdScin97PJqYpBmhtgDgCfbPdr
+Z6FtARoLy51rKzuRe0oQzp0=
+=EUMQ
+-----END PGP SIGNATURE-----
