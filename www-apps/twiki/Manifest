@@ -1,11 +1,18 @@
-MD5 82fab81b3bd6a7d0e5bb47240179dd93 twiki-20040901.ebuild 1750
-MD5 cfe1e57612885c294f2a677dce39238c twiki-20040902.ebuild 1749
-MD5 0b0e2a7c21a620898187a27a4f73a1dd ChangeLog 2548
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e78b04a3780e75e0fba5a0e3451fa181 twiki-20041030.ebuild 1408
+MD5 7de5d51ce117f23c872ce880ed19b315 ChangeLog 3154
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 a3b9ed6f1eb7a992d52d92822bd225a6 twiki-20030201.ebuild 1733
-MD5 04f94d0af6fd19687b32938b23b9e4aa twiki-20040902-r1.ebuild 1670
-MD5 03289224ed6b4fd47078e353bc05c650 files/digest-twiki-20030201 65
-MD5 6c6c056f184e8d333ae577837290e282 files/twiki.conf 538
-MD5 171d54d5e23801d47b006999d95f0c75 files/digest-twiki-20040901 66
-MD5 482053b76eef263c5377921e1dedcf08 files/digest-twiki-20040902 66
-MD5 482053b76eef263c5377921e1dedcf08 files/digest-twiki-20040902-r1 66
+MD5 d6ef3da92ece6d68c83fa4be8f6f97be files/twiki.conf 508
+MD5 fab10473182738fadb4188bf90af8162 files/execwithsearch.patch 653
+MD5 627fc47a95051f23c40f7bdd99c872e7 files/postinstall-en.txt 706
+MD5 67624b3735f6d1c92bce9dacf2cb36b8 files/digest-twiki-20041030 67
+MD5 9292c651cfb9e87173cb745c863461dd files/reconfig 487
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwr+PEzitwsaoONoRAjQBAJ9j7RSO5h5zMs8iwT6H6OZmNmptmgCfR8xD
++MiTinyOWLRQwbT8NO1spUA=
+=MAG5
+-----END PGP SIGNATURE-----

@@ -1,6 +1,18 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.12 2005/06/22 02:04:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.13 2005/06/29 15:34:13 rl03 Exp $
+
+*twiki-20041030 (29 Jun 2005)
+
+  29 Jun 2005; Renat Lumpau <rl03@gentoo.org> +files/execwithsearch.patch,
+  +files/postinstall-en.txt, +files/reconfig, files/twiki.conf,
+  -twiki-20030201.ebuild, -twiki-20040901.ebuild, -twiki-20040902.ebuild,
+  -twiki-20040902-r1.ebuild, +twiki-20041030.ebuild:
+  Added recent version of twiki with correct dependencies, using
+  webapp.eclass. Fixes #52157, #53057, #60460, #77308, #84589, #93208.
+  Removing old versions of ebuilds, including stable on ppc (which should not
+  have been stabled in the first place). Whoever committed the original ebuild
+  is A BAD MAN.
 
   22 Jun 2005; Jason Wever <weeve@gentoo.org> twiki-20040902-r1.ebuild:
   Added ~sparc keyword.

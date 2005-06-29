@@ -1,0 +1,15 @@
+--- Search.pm	2004-10-21 14:41:14.000000000 -0400
++++ Search.pm.fixed	2005-06-28 17:53:53.000000000 -0400
+@@ -442,6 +442,12 @@
+     my $tempVal = "";
+     my $tmpl = "";
+     my $topicCount = 0; # JohnTalintyre
++    # fix for Codev.SecurityAlertExecuteCommandsWithSearch
++    # vulnerability, search: "test_vulnerability '; ls -la'"
++    $theSearchVal =~ s/(^|[^\\])([\'\`])/\\$2/g;    # Escape ' and `
++    $theSearchVal =~ s/[\@\$]\(/$1\\\(/g;           # Defuse @( ... ) and $( ... )
++    $theSearchVal = substr($theSearchVal, 0, 1500); # Limit string length
++ 
+     my $originalSearch = $theSearchVal;
+     my $renameTopic;
+     my $renameWeb = "";
