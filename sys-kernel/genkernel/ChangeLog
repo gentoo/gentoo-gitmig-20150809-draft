@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.94 2005/06/28 20:20:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.95 2005/06/29 21:06:42 plasmaroo Exp $
+
+*genkernel-3.2.0_pre17 (29 Jun 2005)
+
+  29 Jun 2005; <plasmaroo@gentoo.org> -genkernel-3.2.0_pre15.ebuild,
+  +genkernel-3.2.0_pre17.ebuild:
+  Revert udev back to 054; update unionfs code.
 
   28 Jun 2005; <plasmaroo@gentoo.org> -genkernel-1.6.ebuild,
   -genkernel-1.8.ebuild, -genkernel-1.9.ebuild, -genkernel-3.0.1.ebuild,
