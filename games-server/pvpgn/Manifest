@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 4e17b990a3a41d3f08692fcfaeadb79d pvpgn-1.6.6.ebuild 2582
+MD5 3a1e4a55a6bd7e34529aec3e716e2175 ChangeLog 1113
 MD5 fb5e703aa41050d49b0ee8d37707c1d6 pvpgn-1.6.5-r1.ebuild 2590
-MD5 4fa0c78783091db169bc9dbdb32e2583 pvpgn-1.6.6.ebuild 2585
-MD5 45584e1473e077ba867bf90307a8ce9c ChangeLog 992
+MD5 ba5db7daf3b6cfeb5c463b3d8f7ee32b files/digest-pvpgn-1.6.5-r1 134
+MD5 778be818c35e7df1e022398198427172 files/1.6.5-fhs.patch 10322
 MD5 778be818c35e7df1e022398198427172 files/1.6.6-fhs.patch 10322
 MD5 0dea305044e123e1b1ee007331906727 files/init.d.rc 785
-MD5 778be818c35e7df1e022398198427172 files/1.6.5-fhs.patch 10322
 MD5 1c3287bfa7c9f6e8826885ab742acb79 files/digest-pvpgn-1.6.6 134
-MD5 ba5db7daf3b6cfeb5c463b3d8f7ee32b files/digest-pvpgn-1.6.5-r1 134
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwfengIKl8Uu19MoRAkcGAJ0bS81yL8nG+NCav2twqIGfPqpwdACbB27R
+/VyN/duniYiBJVCoUSGykeE=
+=lGoM
+-----END PGP SIGNATURE-----
