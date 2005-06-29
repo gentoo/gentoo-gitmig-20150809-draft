@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.33 2005/05/03 22:17:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.34 2005/06/29 16:08:58 swegener Exp $
+
+  29 Jun 2005; Sven Wegener <swegener@gentoo.org>
+  unrealircd-3.2.3-r1.ebuild:
+  Updated the curl check to also check for the ipv6 USE flag.
 
 *unrealircd-3.2.3-r1 (03 May 2005)
 
