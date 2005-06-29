@@ -91,6 +91,15 @@
  Item &APE::Item::operator=(const Item &item)
  {
    delete d;
+@@ -111,7 +116,7 @@
+ 
+ String APE::Item::toString() const
+ {
+-  return d->text.front();
++  return isEmpty() ? String::null : d->text.front();
+ }
+ 
+ bool APE::Item::isEmpty() const
 @@ -121,7 +126,7 @@
      case 1:
        if(d->text.isEmpty())
