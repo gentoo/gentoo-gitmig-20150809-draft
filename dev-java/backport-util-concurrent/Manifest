@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c7cb9ba7c95184bc0b6fd938e286de34 backport-util-concurrent-1.1.01.ebuild 1195
+MD5 10eae846450d4d687309d213bdd3e3b4 ChangeLog 466
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 66b7a460f9e72d5c8c8385fd424d30fa files/digest-backport-util-concurrent-1.1.01 88
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwvxA/rLF9B432nYRAu6ZAJ4oXJql4o5XeKrRsGGJ0qusS0TwnACgtL7R
+uFc8sJceyapNMNjdIHpoL+Y=
+=n86W
+-----END PGP SIGNATURE-----
