@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5-r1.ebuild,v 1.9 2005/06/23 01:19:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5-r1.ebuild,v 1.10 2005/06/29 22:13:08 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -134,19 +134,19 @@ src_unpack() {
 	#
 	#   LIBPERL=libperl.so.${SLOT}.`echo ${PV} | cut -d. -f1,2`
 	#
-	cd ${S}; epatch ${FILESDIR}/${P}-create-libperl-soname.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-create-libperl-soname.patch
 
 	# uclibc support - dragonheart 2004.06.16
-	cd ${S}; epatch ${FILESDIR}/${P}-uclibc.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-uclibc.patch
 
 	# Configure makes an unwarranted assumption that /bin/ksh is a
 	# good shell. This patch makes it revert to using /bin/sh unless
 	# /bin/ksh really is executable. Should fix bug 42665.
 	# rac 2004.06.09
-	cd ${S}; epatch ${FILESDIR}/${P}-noksh.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-noksh.patch
 
 	# we need the same @INC-inversion magic here we do in perl
-	cd ${S}; epatch ${FILESDIR}/${P}-reorder-INC.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-reorder-INC.patch
 }
 
 src_compile() {

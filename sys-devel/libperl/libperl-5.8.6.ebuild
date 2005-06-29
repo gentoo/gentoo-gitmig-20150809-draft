@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.12 2005/06/23 01:19:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.13 2005/06/29 22:13:08 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -68,7 +68,7 @@ HOMEPAGE="http://www.perl.org"
 SLOT="${PERLSLOT}"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
 
 # rac 2004.08.06
 
@@ -129,16 +129,19 @@ src_unpack() {
 	#
 	#   LIBPERL=libperl.so.${SLOT}.`echo ${PV} | cut -d. -f1,2`
 	#
-	cd ${S}; epatch ${FILESDIR}/${P}-create-libperl-soname.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-create-libperl-soname.patch
 
 	# uclibc support - dragonheart 2004.06.16
-	cd ${S}; epatch ${FILESDIR}/${P}-uclibc.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-uclibc.patch
 
 	# Configure makes an unwarranted assumption that /bin/ksh is a
 	# good shell. This patch makes it revert to using /bin/sh unless
 	# /bin/ksh really is executable. Should fix bug 42665.
 	# rac 2004.06.09
-	cd ${S}; epatch ${FILESDIR}/${P}-noksh.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-noksh.patch
+
+	# we need the same @INC-inversion magic here we do in perl
+	cd ${S}; epatch ${FILESDIR}/${PN}-reorder-INC.patch
 }
 
 src_compile() {
@@ -150,16 +153,22 @@ src_compile() {
 	export LC_ALL="C"
 	local myconf=""
 
+	if [[ ${KERNEL} == "Linux" ]]; then
+		osname="linux"
+	elif [[ ${KERNEL} == "FreeBSD" && "${ELIBC}" = "FreeBsd" ]]; then
+		osname="freebsd"
+	fi
+
 	if use ithreads
 	then
 		einfo "using ithreads"
 		mythreading="-multi"
 		myconf="-Dusethreads ${myconf}"
 		myarch=$(get_abi_CHOST)
-		myarch="${myarch%%-*}-linux-thread"
+		myarch="${myarch%%-*}-${osname}-thread"
 	else
 		myarch=$(get_abi_CHOST)
-		myarch="${myarch%%-*}-linux"
+		myarch="${myarch%%-*}-${osname}"
 	fi
 
 	ewarn "myarch: ${myarch}"
@@ -195,6 +204,8 @@ src_compile() {
 	rm -f config.sh Policy.sh
 
 	[ -n "${ABI}" ] && myconf="${myconf} -Dusrinc=$(get_ml_incdir)"
+
+	[[ ${ELIBC} == "FreeBSD" ]] && myconf="${myconf} -Dlibc=/usr/lib/libc.a"
 
 	sh Configure -des \
 		-Darchname="${myarch}" \

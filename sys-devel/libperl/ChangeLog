@@ -1,6 +1,24 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.62 2005/06/17 09:54:37 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.63 2005/06/29 22:13:08 mcummings Exp $
+
+*libperl-5.8.7 (29 Jun 2005)
+
+  29 Jun 2005; Michael Cummings <mcummings@gentoo.org>
+  -files/libperl-5.8.2-create-libperl-soname.patch,
+  -files/libperl-5.8.4-create-libperl-soname.patch,
+  -files/libperl-5.8.4-noksh.patch, -files/libperl-5.8.4-uclibc.patch,
+  -files/libperl-5.8.5-create-libperl-soname.patch,
+  -files/libperl-5.8.5-noksh.patch, -files/libperl-5.8.5-reorder-INC.patch,
+  -files/libperl-5.8.5-uclibc.patch,
+  -files/libperl-5.8.6-create-libperl-soname.patch,
+  -files/libperl-5.8.6-noksh.patch, -files/libperl-5.8.6-uclibc.patch,
+  +files/libperl-create-libperl-soname.patch, +files/libperl-noksh.patch,
+  +files/libperl-reorder-INC.patch, +files/libperl-uclibc.patch,
+  -libperl-5.8.2.ebuild, -libperl-5.8.2-r1.ebuild, -libperl-5.8.4.ebuild,
+  -libperl-5.8.4-r1.ebuild, libperl-5.8.5.ebuild, libperl-5.8.5-r1.ebuild,
+  libperl-5.8.6.ebuild, +libperl-5.8.7.ebuild:
+  Perl 5.8.6 unmasking; perl 5.8.7 being added
 
   17 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> libperl-5.8.5.ebuild,
   libperl-5.8.6.ebuild:
