@@ -1,6 +1,16 @@
-MD5 737e5a0c2eda40731e8e2d8dfa5f276a ChangeLog 3093
-MD5 4a6ad88a6f65e4630524d0713b0a471f jython-2.1-r5.ebuild 2294
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 119f0e9195221d578a4640a313efb2e4 jython-2.1-r6.ebuild 2301
+MD5 95f7fe3b0f66486371ace15a528eea9a ChangeLog 3247
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 6b146a799308d0793ac04ee93bebfad2 files/digest-jython-2.1-r5 61
-MD5 b271f5441bb93491ead9f78332393451 files/jython 363
 MD5 17272ca5f12bd9bb307210c12606d526 files/jythonc 67
+MD5 b271f5441bb93491ead9f78332393451 files/jython 363
+MD5 6b146a799308d0793ac04ee93bebfad2 files/digest-jython-2.1-r6 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwtor/rLF9B432nYRAmCoAKCm+aBHN6tGUmgkaYYXvh1nuqn2kwCgtsNQ
+FySHv7LcSWYxXvMlU0VxKU8=
+=n16P
+-----END PGP SIGNATURE-----
