@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r1.ebuild,v 1.6 2005/01/09 10:48:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r1.ebuild,v 1.7 2005/06/29 00:32:25 vapier Exp $
 
 inherit flag-o-matic eutils games
 
@@ -8,16 +8,16 @@ DATAFILE="d2shar10"
 DESCRIPTION="Descent 2"
 HOMEPAGE="http://icculus.org/d2x/"
 SRC_URI="http://icculus.org/d2x/src/${P}.tar.gz
-	!cdinstall? ( http://icculus.org/d2x/data/${DATAFILE}.tar.gz )"
+	!nocd? ( http://icculus.org/d2x/data/${DATAFILE}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
-IUSE="cdinstall debug opengl ggi svga"
+KEYWORDS="ppc x86"
+IUSE="nocd debug opengl ggi svga"
 
 RDEPEND="media-libs/libsdl
 	media-libs/sdl-image
-	cdinstall? ( app-arch/unarj )
+	nocd? ( app-arch/unarj )
 	opengl? ( virtual/opengl )
 	ggi? ( media-libs/libggi )
 	svga? ( media-libs/svgalib )"
@@ -25,9 +25,11 @@ DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
 pkg_setup() {
-	if use cdinstall ; then
-		if ! [ -e ${DISTDIR}/descent2.sow ] ; then
-		cdrom_get_cds d2data
+	games_pkg_setup
+
+	if use nocd ; then
+		if [[ ! -e ${DISTDIR}/descent2.sow ]] ; then
+			cdrom_get_cds d2data
 			if [ -e ${CDROM_ROOT}/d2data/descent2.sow ] ; then
 				export CDROM_ROOT=${CDROM_ROOT}/d2data
 				einfo "Found the original Descent2 CD"
@@ -38,12 +40,11 @@ pkg_setup() {
 			fi
 		fi
 	fi
-	games_pkg_setup
 }
 
 src_unpack() {
 	unpack ${A}
-	if use cdinstall ; then
+	if use nocd ; then
 		cd ${WORKDIR}
 		mkdir SOW
 		cd SOW
@@ -88,7 +89,7 @@ src_install() {
 	make install DESTDIR=${D} || die
 	dogamesbin my-bins/*
 	dodir ${GAMES_DATADIR}/${PN}
-	if use cdinstall ; then
+	if use nocd ; then
 		cp -r ${WORKDIR}/SOW/* ${D}/${GAMES_DATADIR}/${PN}/
 	else
 		cp -r ${WORKDIR}/${DATAFILE}/* ${D}/${GAMES_DATADIR}/${PN}/
