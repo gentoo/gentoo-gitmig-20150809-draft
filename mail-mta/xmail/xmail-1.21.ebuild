@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.21.ebuild,v 1.2 2005/06/29 21:12:17 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.21.ebuild,v 1.3 2005/06/29 21:14:16 langthang Exp $
 
 inherit eutils linux-info
 
@@ -37,7 +37,7 @@ pkg_setup() {
 		eerror "Reboot will be required if compiled directly into kernel."
 		eerror "If reboot is not desired you should choose a module instead and run"
 		eerror "make modules && make modules_install"
-    		die "Kernel without CONFIG_IP_NF_TARGET_REDIRECT detected!"
+		die "Kernel without CONFIG_IP_NF_TARGET_REDIRECT detected!"
 	fi
 
 	enewgroup xmail
