@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/unsermake
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.10 2004/12/09 02:59:02 caleb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.11 2005/06/29 02:09:08 caleb Exp $
+
+*unsermake-0.4.20050628 (29 Jun 2005)
+
+  29 Jun 2005; Caleb Tennis <caleb@gentoo.org>
+  +unsermake-0.4.20050628.ebuild:
+  The latest version from KDE's svn repository.
+  
+  Install the python modules into python/site-packages, and unsermake into
+  /usr/bin. No more need for the UNSERMAKE environment variable.
 
 *unsermake-0.3.1.4319.0 (08 Dec 2004)
 
