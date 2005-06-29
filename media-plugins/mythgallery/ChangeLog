@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythgallery
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.29 2005/06/06 08:57:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.30 2005/06/29 08:02:37 cardoe Exp $
+
+  29 Jun 2005; Doug Goldstein <cardoe@gentoo.org>
+  -mythgallery-0.17-r1.ebuild:
+  remove old version
 
   06 Jun 2005; Doug Goldstein <cardoe@gentoo.org> -mythgallery-0.16.ebuild,
   -mythgallery-0.17.ebuild, mythgallery-0.17-r1.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.41 2005/06/08 23:17:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.42 2005/06/29 08:07:26 cardoe Exp $
+
+  29 Jun 2005; Doug Goldstein <cardoe@gentoo.org>
+  -files/mythmusic-0.17-sample_rate_type.patch, -mythmusic-0.17-r2.ebuild:
+  remove old version
 
   08 Jun 2005; Doug Goldstein <cardoe@gentoo.org> mythmusic-0.18.1.ebuild:
   fixed up amd64 issue
