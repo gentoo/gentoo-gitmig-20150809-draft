@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r3.ebuild,v 1.1 2005/05/14 16:09:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r4.ebuild,v 1.1 2005/06/29 17:23:45 axxo Exp $
 
 inherit java-pkg
 
@@ -58,6 +58,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar dist/*.jar
+	java-pkg_newjar dist/${P}.jar ${PN}.jar
+	java-pkg_newjar dist/${P}-applet.jar ${PN}-applet.jar
 	use doc && java-pkg_dohtml -r docs/*
 }
