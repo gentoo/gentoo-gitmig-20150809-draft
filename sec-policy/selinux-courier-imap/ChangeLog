@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-courier-imap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-courier-imap/ChangeLog,v 1.15 2005/06/28 12:05:10 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-courier-imap/ChangeLog,v 1.16 2005/06/29 16:06:47 kaiowas Exp $
+
+  29 Jun 2005; petre rodan <kaiowas@gentoo.org>
+  selinux-courier-imap-20050628.ebuild:
+  mark stable
 
 *selinux-courier-imap-20050628 (28 Jun 2005)
 
