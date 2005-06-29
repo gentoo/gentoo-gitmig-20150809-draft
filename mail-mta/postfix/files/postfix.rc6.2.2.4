@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.2.4,v 1.1 2005/06/29 15:12:13 langthang Exp $
+
+opts="${opts} reload"
+
+depend() {
+	need net
+	use logger dns ypbind amavisd mysql postgresql antivirus postfix_greylist
+	provide mta
+}
+
+start() {
+	ebegin "Starting postfix"
+	/usr/sbin/postfix start &>/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping postfix"
+	/usr/sbin/postfix stop &>/dev/null
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading postfix"
+	/usr/sbin/postfix reload &>/dev/null
+	eend $?
+}
