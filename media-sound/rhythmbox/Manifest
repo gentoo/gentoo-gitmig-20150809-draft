@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d922cbbf039839a3b9f2ed1ae1aca87a rhythmbox-0.8.8-r1.ebuild 2611
-MD5 d2968941c2f302421df216a64069d635 ChangeLog 6230
+MD5 4ac0a74cae0d17662819debb77f46df4 rhythmbox-0.8.8-r1.ebuild 2532
 MD5 e854b7f54a4de6256186cbdcaabbc1ec metadata.xml 200
-MD5 44a42f72ca8c0f3136fded12f1aa7172 files/digest-rhythmbox-0.8.8-r1 69
-MD5 7c49ce1b3d4a78dc9adba805fd3b82fb files/rhythmbox-0.8.7-gst_shn_support.patch 665
+MD5 35f9bcced66d987bd2b596111226e477 ChangeLog 6325
 MD5 9f5bc9bf255b78cc67342f9fc9423ef6 files/rhythmbox-0.8.8-ipod.patch 809
+MD5 7c49ce1b3d4a78dc9adba805fd3b82fb files/rhythmbox-0.8.7-gst_shn_support.patch 665
+MD5 44a42f72ca8c0f3136fded12f1aa7172 files/digest-rhythmbox-0.8.8-r1 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCmI+T06ebR+OMO78RAkzMAJ9vTGggZCKxAgIl3/t6jUgAbAm6UwCgkZb1
-rIg+Xwj7mkoILYwWH0ebeis=
-=xwTu
+iD8DBQFCwyNaKRy60XGEcJIRAiXmAJ95CGLe3c5Vb7sh2WJwEwEtWPYy1wCfWY4S
+1aCqtKNgkEsiNNcvEEMG+hE=
+=9brg
 -----END PGP SIGNATURE-----

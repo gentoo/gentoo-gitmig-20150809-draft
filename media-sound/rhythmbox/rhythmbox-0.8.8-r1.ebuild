@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.8-r1.ebuild,v 1.6 2005/05/28 15:34:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.8-r1.ebuild,v 1.7 2005/06/29 22:40:25 gustavoz Exp $
 
 inherit gnome2 eutils
 
@@ -8,8 +8,7 @@ DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 
-#-sparc: 0.8.5: Fails with "Illegal Instruction" when you try playing a file.
-KEYWORDS="x86 ppc amd64 -sparc"
+KEYWORDS="x86 ppc amd64 ~sparc"
 #IUSE="vorbis xine flac aac mad pda"
 IUSE="vorbis flac aac mad pda"
 SLOT="0"
