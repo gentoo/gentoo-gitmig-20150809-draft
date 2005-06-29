@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/dictionary
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.6 2005/01/01 13:42:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.7 2005/06/29 17:28:52 mkennedy Exp $
+
+*dictionary-1.8.7 (29 Jun 2005)
+
+  29 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -dictionary-1.8.3.ebuild, -dictionary-1.8.5.ebuild,
+  +dictionary-1.8.7.ebuild:
+  Keywording ~amd64; New upstream version; Removed old ebuilds.
 
 *dictionary-1.8.5 (28 Dec 2003)
 
