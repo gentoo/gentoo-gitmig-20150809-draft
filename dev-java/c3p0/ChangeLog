@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/c3p0
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.12 2005/04/22 08:17:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.13 2005/06/29 17:18:21 axxo Exp $
+
+*c3p0-0.9.0_pre6 (29 Jun 2005)
+*c3p0-0.8.5.2 (29 Jun 2005)
+*c3p0-0.8.5_pre9-r1 (29 Jun 2005)
+
+  29 Jun 2005; Thomas Matthijs <axxo@gentoo.org> -c3p0-0.8.4.5.ebuild,
+  -c3p0-0.8.5_pre9.ebuild, +c3p0-0.8.5_pre9-r1.ebuild, +c3p0-0.8.5.2.ebuild,
+  +c3p0-0.9.0_pre6.ebuild:
+  dont install versioned jar, thanks too Josh Nichols <nichoj@alum.rpi.edu> +
+  version bump
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> c3p0-0.8.5_pre9.ebuild:
   stable on amd64
