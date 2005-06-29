@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b8cafa8b4338c3f838543497dcd97273 plib-1.8.4.ebuild 613
-MD5 59fca21b21f958ff270346276284ba02 plib-1.8.3.ebuild 612
 MD5 1c970ec9d6c3c98a4a03ab416a21f446 plib-1.6.0.ebuild 657
-MD5 274ab38bec968fb51b8463163f0534ff ChangeLog 3082
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 f5061365a80c4d8aececf56604d9b5c8 files/digest-plib-1.6.0 62
-MD5 bc913bb51ba51adf7d83ee2a5b784fac files/digest-plib-1.8.3 62
+MD5 ba6c0c536670313b3cfc2aee0d143bb7 plib-1.8.4.ebuild 614
+MD5 f8915237fa1d1686476624f817624f6b ChangeLog 3176
+MD5 59fca21b21f958ff270346276284ba02 plib-1.8.3.ebuild 612
 MD5 b786078ffac425978e62d0f7ebdb6feb files/digest-plib-1.8.4 62
+MD5 bc913bb51ba51adf7d83ee2a5b784fac files/digest-plib-1.8.3 62
+MD5 f5061365a80c4d8aececf56604d9b5c8 files/digest-plib-1.6.0 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCrLyTKf2g/qXtneoRAs2FAJwPWzJXOt0TFjgQ7yOyxiJDtHDDaQCgnxIt
-Wv+gtx+La091CBlCdUW23Yg=
-=MHjF
+iD8DBQFCwsGOKRy60XGEcJIRAhwmAKCVEGw1Bw1wQ18w9VR+t6gRDmmYGACeKH3R
+F3s5bzusLkXW14+X1IGr0TM=
+=9RPS
 -----END PGP SIGNATURE-----
