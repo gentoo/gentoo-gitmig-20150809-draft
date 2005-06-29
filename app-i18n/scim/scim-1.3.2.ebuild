@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.3.0.ebuild,v 1.1 2005/05/28 18:48:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.3.2.ebuild,v 1.1 2005/06/29 17:45:30 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -82,7 +82,7 @@ pkg_postinst() {
 	einfo "	# emerge app-i18n/scim-m17n"
 	einfo
 	ewarn
-	ewarn "If you upgraded from scim-1.2.x and scim-1.0.x, you should remerge all SCIM modules."
+	ewarn "If you upgraded from scim-1.2.x or scim-1.0.x, you should remerge all SCIM modules."
 	ewarn
 	epause 10
 
