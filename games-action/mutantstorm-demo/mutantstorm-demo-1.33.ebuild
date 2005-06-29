@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.2 2004/06/24 21:57:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.3 2005/06/29 13:16:56 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -10,10 +10,17 @@ SRC_URI="ftp://ggdev-1.homelan.com/mutantstorm/MutantStormDemo_${PV/./_}.sh.bin"
 
 LICENSE="POMPOM"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 ~amd64"
 IUSE=""
 
 S=${WORKDIR}
+
+RDEPEND="virtual/opengl
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-soundlibs
+		app-emulation/emul-linux-x86-compat
+		app-emulation/emul-linux-x86-sdl )"
 
 pkg_setup() {
 	check_license
