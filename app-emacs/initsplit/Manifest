@@ -1,5 +1,5 @@
-MD5 aa3ed0f943a562905546b91f47b9202b ChangeLog 446
-MD5 1a84bf783333988df762af2fa34ed0a7 initsplit-1.6.ebuild 482
+MD5 ac244944460c03b5843514c36851b5ed ChangeLog 558
+MD5 99cda4c73c4c1babe200a4e45a91b2fc initsplit-1.6.ebuild 480
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 e7bb76099eabbf75a3fcc402468aca4e files/50initsplit-gentoo.el 395
 MD5 f3f73a0c3447dd52cd8fa70db47c8465 files/digest-initsplit-1.6 63
