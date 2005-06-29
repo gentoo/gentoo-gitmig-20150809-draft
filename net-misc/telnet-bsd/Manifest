@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ed14867dc34184d43e9bcefc4fcb57ca ChangeLog 2333
+MD5 e127f6f488037c96a9193c0b6c6b0a30 ChangeLog 2437
 MD5 b9d51041c0ff0456dd8dd8346159863b telnet-bsd-1.0-r1.ebuild 1070
-MD5 0a9869ba7f3ececd8e5fbeb4727e6943 telnet-bsd-1.2.ebuild 755
+MD5 aa6c5236087a6e55d9122e746c802692 telnet-bsd-1.2.ebuild 753
+MD5 311eccbf485f973d2274c49343611051 files/digest-telnet-bsd-1.0-r1 67
+MD5 982c76cd605dc0ce46a43be968ac62ac files/telnet-bsd-1.0-overflow.patch 2362
 MD5 6e9abbecabfaa06ac7bc61e1fc8ce862 files/telnet-bsd_gentoo.diff.gz 689
 MD5 0bdd0131a5803a2e4a4ec8b3b9fb5039 files/telnetd.xinetd 205
 MD5 06961ee981bc4f8c460b3caaeccc6651 files/digest-telnet-bsd-1.2 67
-MD5 311eccbf485f973d2274c49343611051 files/digest-telnet-bsd-1.0-r1 67
-MD5 982c76cd605dc0ce46a43be968ac62ac files/telnet-bsd-1.0-overflow.patch 2362
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCwdzwKf2g/qXtneoRAs7jAJ940bNW7enm3EOIyMLtnIk7aWGDVACgqE+g
-duJovRHUQfOgXr8fgpdbPc0=
-=eK4m
------END PGP SIGNATURE-----
