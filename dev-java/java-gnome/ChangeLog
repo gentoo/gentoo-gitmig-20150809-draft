@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.25 2005/05/01 16:46:31 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.26 2005/06/29 15:11:51 axxo Exp $
+
+  29 Jun 2005; Thomas Matthijs <axxo@gentoo.org> -java-gnome-2.6.0.1.ebuild,
+  -java-gnome-2.6.0.1-r1.ebuild, -java-gnome-2.8.2-r2.ebuild,
+  -java-gnome-2.8.2-r3.ebuild, java-gnome-2.8.3.ebuild:
+  remove older ebuilds + keyword x86
 
 *java-gnome-2.10.1 (01 May 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.10.1.ebuild,v 1.1 2005/05/01 16:42:39 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.10.1.ebuild,v 1.2 2005/06/29 15:10:50 axxo Exp $
 
 #
 # WARNING: Because java-gnome is a set of bindings to native GNOME libraries, 
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 #
 SLOT="2.10"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~x86"
 IUSE="gcj"
 
 src_unpack() {

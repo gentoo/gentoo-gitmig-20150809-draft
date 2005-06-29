@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.10.1.ebuild,v 1.1 2005/05/01 16:46:31 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.10.1.ebuild,v 1.2 2005/06/29 15:11:51 axxo Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ DEPEND="!<dev-java/java-gnome-2.8
 
 SLOT="2.10"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 pkg_setup() {

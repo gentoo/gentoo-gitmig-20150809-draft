@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.8.3.ebuild,v 1.9 2005/03/31 19:12:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.8.3.ebuild,v 1.10 2005/06/29 15:11:51 axxo Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/libc
 
 SLOT="0.8"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~sparc x86"
 IUSE=""
 
 src_compile() {
