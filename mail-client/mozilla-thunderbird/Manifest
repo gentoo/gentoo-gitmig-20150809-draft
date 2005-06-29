@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 54b5b4f88eca9884412348311c2b4ecc mozilla-thunderbird-1.0.2-r1.ebuild 6284
+MD5 cd216f0b74621c41992dfcf451636054 mozilla-thunderbird-1.0.2.ebuild 6174
+MD5 4872b06da0b638b7f2c5492d3f46da4d mozilla-thunderbird-1.0.2-r10.ebuild 3960
 MD5 cf663a3173522ef8f7bc6f37f1bc2f5e ChangeLog 7531
-MD5 558a424a1a9905cedc4e7ef902e8c1c3 files/digest-mozilla-thunderbird-1.0.2 207
-MD5 f904cce3be497c53c3ffd5373b7851b4 files/digest-mozilla-thunderbird-1.0.2-r1 207
-MD5 99df508a69b6283098fcf48cc2dd2456 files/digest-mozilla-thunderbird-1.0.2-r10 79
-MD5 1c810870d0c92c730341e491c310e2d4 files/icon/mozillathunderbird.desktop 184
-MD5 04115f0e204444eac76a092a63c89027 files/icon/thunderbird-icon.png 6499
+MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
+MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-thunderbird-1.0.2-gcc4.patch 1818
 MD5 23d6b685fd5e49a07cc4a1786871bf47 files/mozilla-alpha-xpcom-subs-fix.patch 4953
 MD5 e79634ee1e611182b6c227daa362b20d files/mozilla-thunderbird-0.9-4ft2.patch 22360
-MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-thunderbird-1.0.2-gcc4.patch 1818
+MD5 f904cce3be497c53c3ffd5373b7851b4 files/digest-mozilla-thunderbird-1.0.2-r1 207
 MD5 f014f20584305e86670ed50e990745db files/thunderbird-0.7-init.tar.bz2 3345
-MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 54b5b4f88eca9884412348311c2b4ecc mozilla-thunderbird-1.0.2-r1.ebuild 6284
-MD5 d4ebf13fc38ccc2fc1e58ec740c686e9 mozilla-thunderbird-1.0.2-r10.ebuild 3960
-MD5 cd216f0b74621c41992dfcf451636054 mozilla-thunderbird-1.0.2.ebuild 6174
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCwrEuI1lqEGTUzyQRAuZ2AJ4khISNLKVCrQCWpZBCEp01sPkAbgCffg3s
-2ckGWeRl6FonVVwwc80wsZc=
-=u4Fv
------END PGP SIGNATURE-----
+MD5 99df508a69b6283098fcf48cc2dd2456 files/digest-mozilla-thunderbird-1.0.2-r10 79
+MD5 558a424a1a9905cedc4e7ef902e8c1c3 files/digest-mozilla-thunderbird-1.0.2 207
+MD5 04115f0e204444eac76a092a63c89027 files/icon/thunderbird-icon.png 6499
+MD5 1c810870d0c92c730341e491c310e2d4 files/icon/mozillathunderbird.desktop 184
