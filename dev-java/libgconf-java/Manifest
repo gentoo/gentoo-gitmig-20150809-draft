@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e1684ff2694e01a35d373d45df68240e ChangeLog 1655
 MD5 2e1952c33e5bcce8813dec9d43203e29 metadata.xml 1042
 MD5 fd22812a3b002cc9c60fd870cd7256a3 libgconf-java-2.10.1.ebuild 2277
@@ -7,3 +10,10 @@ MD5 03c4b5ccb943b51e5259e5046ff30719 files/libgconf-java-2.8.2_gentoo-PN-SLOT.pa
 MD5 00133abfc0fddd7799314a248ebeb6c9 files/digest-libgconf-java-2.10.1 73
 MD5 4028a5325b5787c89a1eceddb66bc437 files/libgconf-java-2.10.0_fix-install-dir.patch 420
 MD5 fa4698389381ae96bb70cc672750fe57 files/digest-libgconf-java-2.8.3.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwro6/rLF9B432nYRAlWTAJ9VQFvreFye12jnbpXcaovrzmlSZACdF0iA
+ck23iah+LfT0ou7FWpdC1Y0=
+=TvTD
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 360c1314d6fe677a56248d2d21f55484 libgtk-java-2.4.9.ebuild 2892
 MD5 2aa276fc15573e0c60aa5900b9f72a36 libgtk-java-2.4.8.1.ebuild 3350
 MD5 67cd286bfd2c9ebc9102d15fde8afc56 libgtk-java-2.6.2-r1.ebuild 2820
@@ -14,3 +17,10 @@ MD5 40c9acf29309ee98632a536eba5ef6a9 files/libgtk-java-2.4.8.1_fix-TextBuffer.pa
 MD5 21907163f2b6597c520b7c1a4da20784 files/libgtk-java-2.4.6_find_jni.patch 369
 MD5 40956547f4eb0b797359f67f6c6910bb files/libgtk-java-2.4.6_gcj-autoconf-macro-fix.patch 689
 MD5 e8a6ddb689376b8e04d3bc41cca48253 files/libgtk-java-2.4.6_no-docbook-autoconf-macro.patch 394
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwrn3/rLF9B432nYRAn0MAKCiX0WovtjI57En5WUlJNkTFRL2NQCguRvt
+Osn2zG8LoRilZw32YLlVosI=
+=eLQE
+-----END PGP SIGNATURE-----

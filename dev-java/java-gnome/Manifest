@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a2d9b199b2ba69265bdd98121f270b9e java-gnome-0.8.3.ebuild 1771
 MD5 311f663f104f662514ab0b94b73afe22 java-gnome-2.8.3.ebuild 3664
 MD5 dd7783b162d8bf772ac6156632871ee5 java-gnome-2.10.1.ebuild 2757
@@ -8,3 +11,10 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-java-gnome-2.10.1 0
 MD5 3b0e994589f54485c4c6f43618005bc7 files/gentoo-java-gnome-2.6.0.1.patch 3574
 MD5 d0548db82a1916704411084a9a019f05 files/digest-java-gnome-0.8.3 70
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-java-gnome-2.8.3 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwrpP/rLF9B432nYRAuCyAJ9SVbLblfYbBnIyme5CSpfZpFA+YgCaA11+
+Dqk+fHKL56ZOPBEW8OwJgDU=
+=HBr/
+-----END PGP SIGNATURE-----
