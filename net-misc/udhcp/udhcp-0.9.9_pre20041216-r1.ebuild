@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.9_pre20041216.ebuild,v 1.4 2005/06/28 13:19:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.9_pre20041216-r1.ebuild,v 1.1 2005/06/29 14:27:41 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -32,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	make STRIP=true install DESTDIR="${D}" || die
+	make STRIP=true install DESTDIR="${D}" USRSBINDIR="${D}/sbin" || die
 	newinitd "${FILESDIR}"/udhcp.rc udhcp
 	insinto /etc
 	doins samples/udhcpd.conf
