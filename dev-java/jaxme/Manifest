@@ -1,3 +1,5 @@
-MD5 487cd07da880e98f4f0c5d36bfeb8d71 jaxme-0.3.1.ebuild 1698
+MD5 3e578f79be6258c742190a41ec237c4a jaxme-0.3.1.ebuild 1597
+MD5 35c41ffdf3740063bc32c451c379229c ChangeLog 437
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 8039a2f19bcc273d417ec48d00bbe87a files/jaxme-0.3.1-gentoo.patch 1771
 MD5 853d4cf0c1e2efc633bcfad8ade239e2 files/digest-jaxme-0.3.1 71

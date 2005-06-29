@@ -1,3 +1,5 @@
-MD5 b83442291ef5719c84f6b1ac1e79c04f jsr173-1.0.ebuild 1053
-MD5 c089b7d34f96c556a34bb8c402794023 files/build-1.0.xml 1546
+MD5 f72f38b12de6e7d87fa715be46e215d1 jsr173-1.0.ebuild 1255
+MD5 1973edef8a5c26a16a8ff6b0e54a216d ChangeLog 426
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 c1514eff44a7a2cca3ab0bee30140efd files/build-1.0.xml 1771
 MD5 792db1cd7ea6dc98f85d378d93640840 files/digest-jsr173-1.0 55
