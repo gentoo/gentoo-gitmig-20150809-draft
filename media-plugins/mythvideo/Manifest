@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 80ab306bd9de60aef377745a5e884311 mythvideo-0.17.ebuild 638
-MD5 3ce1b8ad0d91cb6599aec9b10320a423 mythvideo-0.18.1.ebuild 620
-MD5 3c36ff534c8f6bb82c61f7a39ab12fe1 ChangeLog 4743
+MD5 97194f75a110325eae62637d3b4aa450 ChangeLog 4841
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
-MD5 ce56915ca405ce9fc7961ee9ea3bb8e0 files/digest-mythvideo-0.17 67
+MD5 3ce1b8ad0d91cb6599aec9b10320a423 mythvideo-0.18.1.ebuild 620
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythvideo-0.18.1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCuJ9v2G5bA0cA/ScRAkDvAJ4245XvqsPDs8i8ZaMSQmYMLW6WfQCfXsCt
-GZkCcPkALQ5B+AONEop8tJw=
-=a5bS
------END PGP SIGNATURE-----

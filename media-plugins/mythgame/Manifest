@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1de51eef8b49e8612b0a72c8b5d55160 ChangeLog 4046
+MD5 7fec9e15e06e00f8b9588fed238220f6 ChangeLog 4141
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
-MD5 8f9ca4383d3ad1008c7095a7ed2e0abf mythgame-0.17.ebuild 601
 MD5 587bf8af0e4e9ef59eb0bc2b41eaa5dc mythgame-0.18.1.ebuild 596
-MD5 d6da9e35b7e18ddddf9af6617de83f35 files/digest-mythgame-0.17 65
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythgame-0.18.1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCpBOrBtvusYtCZMsRAqKLAJ9Q/oJAyJpROKY25TkwZ/+4M8ovzgCeO7RJ
-mnsNxPE7VBJA3r8v8BdAd7Q=
-=9UUU
------END PGP SIGNATURE-----
