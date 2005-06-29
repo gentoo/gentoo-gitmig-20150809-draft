@@ -5,4 +5,11 @@
 <maintainer>
   <email>taviso@gentoo.org</email>
 </maintainer>
+<maintainer>
+	<email>lcars@gentoo.org</email>
+	<description>ldap support</description>
+</maintainer>
+<longdescription>
+Sudo (superuser do) allows a system administrator to give certain users (or groups of users) the ability to run some (or all) commands as root or another user while logging the commands and arguments.
+</longdescription>
 </pkgmetadata>

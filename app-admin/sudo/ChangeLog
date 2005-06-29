@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.72 2005/06/29 14:36:06 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.73 2005/06/29 17:12:12 taviso Exp $
+
+  29 Jun 2005; Tavis Ormandy <taviso@gentoo.org> metadata.xml:
+  added lcars as maintainer of ldap support.
 
 *sudo-1.6.8_p9-r1 (29 Jun 2005)
 
