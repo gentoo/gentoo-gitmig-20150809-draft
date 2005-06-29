@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.33.ebuild,v 1.2 2005/06/28 23:30:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.33.ebuild,v 1.3 2005/06/29 18:41:56 agriffis Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ S=${WORKDIR}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use amd64 && epatch ${FILESDIR}/${PN}-1.33-multilib.patch
+	use amd64 && epatch ${FILESDIR}/${P}-multilib.patch
 }
 
 src_install() {
