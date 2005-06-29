@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.4.0.ebuild,v 1.2 2005/06/22 12:55:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.4.0.ebuild,v 1.3 2005/06/29 21:58:30 yoswink Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="mysql postgres"
 
 RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)

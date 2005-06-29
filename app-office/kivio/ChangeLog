@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kivio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.7 2005/06/21 08:38:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.8 2005/06/29 22:06:10 yoswink Exp $
+
+  29 Jun 2005; Jose Luis Rivero <yoswink@gentoo.org> kivio-1.4.0.ebuild:
+  Added ~alpha wrt #95128
 
 *kivio-1.4.0 (21 Jun 2005)
 
