@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/bmp-musepack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-musepack/ChangeLog,v 1.4 2005/02/06 02:01:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-musepack/ChangeLog,v 1.5 2005/06/29 21:39:33 chainsaw Exp $
+
+*bmp-musepack-1.2_rc1 (29 Jun 2005)
+
+  29 Jun 2005; Tony Vroon <chainsaw@gentoo.org> -bmp-musepack-1.1.ebuild,
+  bmp-musepack-1.1.2.ebuild, +bmp-musepack-1.2_rc1.ebuild:
+  Bump to 1.2_rc1 release, depending on libmpc. 1.1.2 stable on x86. Old
+  ebuild cleaned. Ebuild updates by Giacomo Perale in bug #95713.
 
   06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> bmp-musepack-1.1.2.ebuild:
   added ~amd64 to KEYWORDS. fixes #78084
