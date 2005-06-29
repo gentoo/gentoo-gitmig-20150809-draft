@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1256 2005/06/27 19:49:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1257 2005/06/29 00:35:00 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -300,7 +300,6 @@ dev-util/kdevelop:subversion - Enable support for the subversion version control
 dev-util/monodevelop:boo - Enable support for the boo programming language
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/subversion:nowebdav - Disables WebDAV support via neon library
-games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
 games-emulation/mupen64-glN64:asm - Enable use of asm routines to improve performance
@@ -309,7 +308,6 @@ games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
 games-engines/exult:timidity - Add sound support (timidity)
 games-fps/alephone:lua - Enable Lua scripting support
-games-fps/doom3:cdinstall - Copies files from the CDROM rather than leaving it for the user
 games-fps/duke3d:nophysfs - Disables support for physfs
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
