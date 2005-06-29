@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/drivel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.17 2005/05/18 22:54:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.18 2005/06/29 00:05:54 allanonjl Exp $
+
+*drivel-1.2.4-r1 (29 Jun 2005)
+
+  29 Jun 2005; John N. Laliberte <allanonjl@gentoo.org>
+  -drivel-1.2.3.ebuild, -drivel-1.2.4.ebuild, +drivel-1.2.4-r1.ebuild:
+  fix for access violation due to gnome2 eclass change, see bug #92920,
+  cleanup old builds
 
   18 May 2005; Jason Wever <weeve@gentoo.org> drivel-1.2.4.ebuild:
   Added ~sparc keyword.

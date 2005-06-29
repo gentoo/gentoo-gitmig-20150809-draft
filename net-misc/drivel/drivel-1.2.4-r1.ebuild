@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-1.2.4.ebuild,v 1.3 2005/05/18 22:54:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-1.2.4-r1.ebuild,v 1.1 2005/06/29 00:05:54 allanonjl Exp $
 
 inherit gnome2
 
@@ -42,3 +42,8 @@ G2CONF="${G2CONF} \
 	--disable-desktop-update"
 
 USE_DESTDIR="1"
+
+src_install() {
+	# fix for access violation due to eclass change
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
+}
