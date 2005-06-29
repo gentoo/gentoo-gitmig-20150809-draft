@@ -1,4 +1,14 @@
-MD5 8716dcb1b37279cd2f147889a1a242a3 ChangeLog 477
-MD5 2aab47ce85a916798cf7d31c2acddf1e desklet-sidecandy-0.10.ebuild 685
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6bdff92f19f48041cb28629b5174dae1 metadata.xml 162
+MD5 e35d6b1d868566c77cbe76367f88e937 ChangeLog 588
+MD5 8bcb3b13bd7f48385203530a4d619675 desklet-sidecandy-0.10.ebuild 695
 MD5 bcd50e6303377645d92ba7165a891ef0 files/digest-desklet-sidecandy-0.10 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCwvZZKRy60XGEcJIRAlFAAJ9Ds05gkn02mo9UC2Y4PmCKonj3dwCdFP7Y
+S/gLVw7yMLpacn+R5/rns9k=
+=/Bxp
+-----END PGP SIGNATURE-----
