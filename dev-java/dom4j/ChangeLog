@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.20 2005/05/29 15:55:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.21 2005/06/29 18:53:08 axxo Exp $
+
+*dom4j-1.6.1 (29 Jun 2005)
+
+  29 Jun 2005; Thomas Matthijs <axxo@gentoo.org> +dom4j-1.6.1.ebuild:
+  version bump and no longer uses packed jars, ebuild contributed by Josh
+  Nichols <nichoj@alum.rpi.edu>
 
   29 May 2005; Markus Rothe <corsair@gentoo.org> dom4j-1.5.ebuild:
   Stable on ppc64
