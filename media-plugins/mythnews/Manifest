@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ea9f935edd44b5cccec2b996ac0879a9 ChangeLog 2384
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 5ceed4dd7a0ff5dca3c38749a55e040d mythnews-0.18.1.ebuild 495
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythnews-0.18.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwlc2BtvusYtCZMsRAv9nAJ9IfUvtwaX+VOK2qEUR7EC7vM9eBgCbBECp
+3Z3u3clGnvHVpHsaijqdk8Y=
+=JGWP
+-----END PGP SIGNATURE-----

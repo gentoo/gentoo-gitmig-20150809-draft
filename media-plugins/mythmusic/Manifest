@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e3cdabb39739149cae89a6e66417bca ChangeLog 6983
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 cd0e04433cd9f40bc70de495becbc09a mythmusic-0.18.1.ebuild 1218
 MD5 ef56a3b3f8186be653546698f22b66ce files/mythmusic-0.18.1-sample_rate_type.patch 533
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythmusic-0.18.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwlbTBtvusYtCZMsRAhBzAJ9PUhKsZt3SKxi2uxQgdh8DrkYMEACeJp73
+Q0cO7ewuvT0L6GEC667hSJA=
+=CHVA
+-----END PGP SIGNATURE-----

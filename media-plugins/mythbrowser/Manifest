@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7c3dcc0544dfc449eb2a5430c8f53270 ChangeLog 2117
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 9375b2fdbecf87bf51957a1f0eff6d5c mythbrowser-0.18.1.ebuild 699
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythbrowser-0.18.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwlSQBtvusYtCZMsRAvsqAJ9GmCTnt82KJT0QsB4HIwMDEvttcwCeIccw
+u1qDT3C4Lx8tpzMnuifyH54=
+=CrQp
+-----END PGP SIGNATURE-----

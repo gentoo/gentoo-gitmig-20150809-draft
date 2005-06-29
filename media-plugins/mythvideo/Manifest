@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 97194f75a110325eae62637d3b4aa450 ChangeLog 4841
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 3ce1b8ad0d91cb6599aec9b10320a423 mythvideo-0.18.1.ebuild 620
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythvideo-0.18.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCwlVDBtvusYtCZMsRAtCxAJ490pIQ83FBOSAGdW3YUf5qvuhmuACfZitR
+Wydf5zYquXzFsr8H6I2UXYc=
+=9gUf
+-----END PGP SIGNATURE-----
