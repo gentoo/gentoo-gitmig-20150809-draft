@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.4.1.ebuild,v 1.3 2005/06/02 09:59:04 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.4.1.ebuild,v 1.4 2005/06/29 20:43:15 danarmak Exp $
 
 inherit kde-dist
 
@@ -11,7 +11,7 @@ IUSE="rdesktop slp ssl wifi"
 
 DEPEND="~kde-base/kdebase-${PV}
 	slp? ( net-libs/openslp )
-	wifi? ( <=net-wireless/wireless-tools-28_pre6 )"
+	wifi? ( net-wireless/wireless-tools )"
 
 RDEPEND="${DEPEND}
 	rdesktop? ( >=net-misc/rdesktop-1.4.1 )
@@ -21,6 +21,8 @@ RDEPEND="${DEPEND}
 # perl: for KSirc
 # qca-tls: for Kopete jabber plugin.
 # IO-Socket-SSL: for SSL support in KSirc.
+
+PATCHES="$FILESDIR/wireless-extensions-api.diff" # In cvs, remove for 3.4.2
 
 src_compile() {
 	myconf="$(use_enable slp)"

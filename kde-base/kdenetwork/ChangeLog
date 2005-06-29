@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.143 2005/06/21 06:04:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.144 2005/06/29 20:43:15 danarmak Exp $
+
+  29 Jun 2005; Dan Armak <danarmak@gentoo.org>
+  +files/wireless-extensions-api.diff, kdenetwork-3.4.1.ebuild:
+  Fix bug 94719: add patch from upstream branch cvs allowing kwifimanager to
+  compile with wireless extensions 28_pre8.
 
   21 Jun 2005; Markus Rothe <corsair@gentoo.org> kdenetwork-3.3.2-r1.ebuild:
   Stable on ppc64
