@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b53e2cb37b76a601e071c129e358dfd0 kcdlabel-2.12-r1.ebuild 660
+MD5 295ec68ba63c83b355dcdc808efffdac kcdlabel-2.12-r1.ebuild 659
 MD5 4eaf0d1482f1e3c4b94cd8baa3dd45cb kcdlabel-2.12.ebuild 569
-MD5 8dc47ba5070dc15005a8b80020c161ff ChangeLog 1741
+MD5 2501ec488ad3c9c1987a0db5d8c3861e ChangeLog 1832
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c235b43131df0245020f8a24928925e8 files/digest-kcdlabel-2.12 70
 MD5 e3942bbddf2d997a5bfe13b0c4cb79b6 files/kcdlabel-2.12-configure-arts.patch 3478
 MD5 c235b43131df0245020f8a24928925e8 files/digest-kcdlabel-2.12-r1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmk+HntT9W3vfTuoRAt1oAJ4k9AqaSd210F7phwCTzPAYK9atMACfRg/a
-wxAy573u/IJfWEoTHP9MVOA=
-=/NIT
------END PGP SIGNATURE-----
