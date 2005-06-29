@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/jsr173
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.1 2005/06/29 18:34:20 axxo Exp $
+
+*jsr173-1.0 (29 Jun 2005)
+
+  29 Jun 2005; Thomas Matthijs <axxo@gentoo.org> +files/build-1.0.xml,
+  +metadata.xml, +jsr173-1.0.ebuild:
+  new packages, dep of dom4j, ebuild contributed by Josh Nichols
+  <nichoj@alum.rpi.edu>
+

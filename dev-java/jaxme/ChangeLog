@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/jaxme
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.1 2005/06/29 18:31:59 axxo Exp $
+
+*jaxme-0.3.1 (29 Jun 2005)
+
+  29 Jun 2005; Thomas Matthijs <axxo@gentoo.org>
+  +files/jaxme-0.3.1-gentoo.patch, +metadata.xml, +jaxme-0.3.1.ebuild:
+  new packages, dep of dom4j, ebuild contributed by Josh Nichols
+  <nichoj@alum.rpi.edu>
+
