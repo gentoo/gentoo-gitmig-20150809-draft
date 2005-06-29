@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/xpp2
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/ChangeLog,v 1.1 2005/06/29 18:13:26 axxo Exp $
+
+*xpp2-2.1.10 (29 Jun 2005)
+
+  29 Jun 2005; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +xpp2-2.1.10.ebuild:
+  new packages, dep of dom4j, ebuild contributed by Josh Nichols
+  <nichoj@alum.rpi.edu>
+
