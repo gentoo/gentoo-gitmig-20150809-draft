@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4141 2005/06/29 15:07:23 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4142 2005/06/29 15:14:39 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# <dang@gentoo.org> (29 Jun 2005)
+# Masked until stable upstream
+app-text/evince
 
 # Aaron Walker <ka0ttic@gentoo.org> (29 Jun 2005)
 # Masked due to some pretty big bugs (Goto Line/Search is broken)
@@ -1112,6 +1116,3 @@ app-text/sgml2x
 
 # broken
 >=media-video/mpeg2-movie-1.5
-
-# Masked until upstream considers it stable
-app-text/evince
