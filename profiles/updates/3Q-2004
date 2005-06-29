@@ -166,7 +166,6 @@ move net-www/dspam-web www-apps/dspam-web
 move dev-tcltk/mmucl games-mud/mmucl
 move app-editors/xemacs-packages-sumo app-xemacs/xemacs-packages-sumo
 move x11-base/xfree-drm x11-base/x11-drm
-move dev-java/jython-bin dev-java/jython
 move dev-java/regexp-bin dev-java/regexp
 move dev-java/ant-optional dev-java/ant-tasks
 move net-www/ci www-client/ci
