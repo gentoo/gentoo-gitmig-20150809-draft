@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.13.ebuild,v 1.4 2005/06/28 06:03:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.13.ebuild,v 1.5 2005/06/29 01:11:01 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -37,7 +37,7 @@ IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server
 	truetype-fonts type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
-FILES_VER="0.1"
+FILES_VER="0.2"
 PATCH_VER="0.1.1"
 XCUR_VER="0.3.1"
 XFSFT_ENC_VER="0.1"
@@ -1207,7 +1207,7 @@ etc_files_install() {
 	doins ${FILES_DIR}/xinitrc
 	if ! use minimal; then
 		exeinto /etc/X11/xdm
-		doexe ${FILES_DIR}/Xsession ${FILES_DIR}/Xsetup_0
+		doexe ${FILES_DIR}/Xsession
 		exeinto /etc/init.d
 		newexe ${FILES_DIR}/xdm.start xdm
 	fi
