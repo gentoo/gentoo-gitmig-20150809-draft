@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlize/htmlize-1.16.ebuild,v 1.6 2005/06/22 01:37:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlize/htmlize-1.16.ebuild,v 1.7 2005/06/29 17:45:49 mkennedy Exp $
 
 inherit elisp
 
@@ -12,28 +12,7 @@ HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki.pl?SaveAsHtml
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc x86"
-
-DEPEND="virtual/emacs"
+KEYWORDS="~sparc x86 ~amd64"
 
 SITEFILE=50htmlize-gentoo.el
 
-# NOTE: this version of htmlize may have issues with emacs-cvs
-
-src_compile() {
-	emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el
-}
-
-src_install() {
-	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
-}
-
-pkg_postinst() {
-	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/htmlize.el for the complete documentation."
-}
-
-pkg_postrm() {
-	elisp-site-regen
-}
