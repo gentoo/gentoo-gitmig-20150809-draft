@@ -1,6 +1,17 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.61 2005/06/24 22:29:18 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.62 2005/06/29 13:34:37 agriffis Exp $
+
+*mozilla-thunderbird-1.0.2-r10 (29 Jun 2005)
+
+  29 Jun 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-thunderbird-1.0.2-r10.ebuild:
+  Add pmasked development ebuild which will break enigmail out into its own
+  ebuild. Additionally this ebuild changes MOZILLA_FIVE_HOME to
+  /usr/lib/thunderbird and moves chromes to /var/lib/thunderbird. It's no
+  longer necessary to use a snapshot of initialization files since
+  mozilla-launcher-1.33 has a -register mechanism which is called in
+  pkg_postinst
 
   24 Jun 2005; Jonathan Smith <smithj@gentoo.org>
   mozilla-thunderbird-1.0.2-r1.ebuild:
