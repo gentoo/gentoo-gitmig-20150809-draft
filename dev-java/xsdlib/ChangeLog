@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/xsdlib
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.1 2005/06/29 18:43:44 axxo Exp $
+
+*xsdlib-20050627 (29 Jun 2005)
+
+  29 Jun 2005; Thomas Matthijs <axxo@gentoo.org> +files/build-20050627.xml,
+  +metadata.xml, +xsdlib-20050627.ebuild:
+  new packages, dep of dom4j, ebuild contributed by Josh Nichols
+  <nichoj@alum.rpi.edu>
+
