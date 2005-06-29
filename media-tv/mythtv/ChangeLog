@@ -1,10 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.70 2005/06/21 21:47:08 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.71 2005/06/29 04:39:01 cardoe Exp $
 
   21 Jun 2005; Herbie Hopkins <herbs@gentoo.org> mythtv-0.18.1-r1.ebuild:
   Backport multilib fixes and amd64 configure patch from -r2. Mark stable on
   amd64.
+
+  29 Jun 2005; Doug Goldstein <cardoe@gentoo.org> +files/runmythfe,
+  mythtv-0.18.1-r2.ebuild:
+  Add crontab script for keeping mythfrontend going
 
   21 Jun 2005; Doug Goldstein <cardoe@gentoo.org> mythtv-0.18.1-r2.ebuild:
   fixed firewire deps

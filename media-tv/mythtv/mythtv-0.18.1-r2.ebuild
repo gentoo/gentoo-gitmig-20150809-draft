@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.5 2005/06/21 20:26:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.6 2005/06/29 04:39:01 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -178,6 +178,14 @@ src_install() {
 		newinitd ${FILESDIR}/0.18-mythbackend.rc mythbackend
 		newconfd ${FILESDIR}/0.18-mythbackend.conf mythbackend
 	fi
+
+	dobin ${FILESDIR}/runmythfe
+
+	ewarn "Want MythFrontend to always? Add the following to your"
+	ewarn "myth user. i.e. My user is mythtv"
+	echo "crontab -e -u mythtv"
+	echo "* * * * * /usr/bin/runmythfe &"
+	ewarn "And you're all set."
 
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
