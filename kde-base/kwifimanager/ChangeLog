@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwifimanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.8 2005/06/02 10:00:48 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.9 2005/06/29 20:29:23 danarmak Exp $
+
+  29 Jun 2005; Dan Armak <danarmak@gentoo.org>
+  +files/wireless-extensions-api.diff, kwifimanager-3.4.1.ebuild:
+  Fix bug 94719: add patch from upstream branch cvs allowing kwifimanager to
+  compile with wireless extensions 28_pre8.
 
   02 Jun 2005; Gregorio Guidi <greg_g@gentoo.org> kwifimanager-3.4.1.ebuild:
   Correct dependency on wireless-tools for bug #94719.
