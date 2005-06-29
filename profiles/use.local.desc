@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1257 2005/06/29 00:35:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1258 2005/06/29 17:56:43 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -70,10 +70,10 @@ app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:sheep - Support for the sheep net driver
 app-emulation/mol:vnc - Includes vnc support
 app-emulation/pearpc:jit - Use the JITC-X86 CPU
+app-emulation/qemu-softmmu:kqemu - Enables the kernel module acceleration on the x86 cpu
 app-emulation/qemu:kqemu - Enables the kernel module acceleration on the x86 cpu
 app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
 app-emulation/qemu:softmmu - Support for softmmu targets
-app-emulation/qemu-softmmu:kqemu - Enables the kernel module acceleration on the x86 cpu
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/anthy:ucs4 - Enable ucs4 support
@@ -260,9 +260,9 @@ dev-perl/gtk-perl:applet - Enable gnome applet support
 dev-perl/gtk-perl:gnome-print - Enable gnome-print support
 dev-php/eaccelerator:inode - Enable inode-based caching.
 dev-php/mod_php:mkconfig - Package up files required for php-config package (for maintainer use only)
-dev-php/php:mkconfig - Package up files required for php-config package (for maintainer use only)
 dev-php/php-cgi:force-cgi-redirect - Enable security check for internal server redirects.
 dev-php/php-cgi:mkconfig - Package up files required for php-config package (for maintainer use only)
+dev-php/php:mkconfig - Package up files required for php-config package (for maintainer use only)
 dev-python/bicyclerepair:vim - enable vim with bicyclerepair support
 dev-python/cgkit:3ds - enable support for importing 3D Studio models
 dev-python/cgkit:ogre - enable support for Ogre rendering
@@ -676,6 +676,7 @@ net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
 net-libs/gecko-sdk:moznomail - Do not compile mail
 net-libs/gecko-sdk:moznoxft - Disable XFT support
+net-libs/gecko-sdk:mozsvg - Enable SVG support in mozilla and firefox
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
@@ -820,8 +821,8 @@ sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 t
 sci-mathematics/scilab:atlas - Add support for the atlas library
 sci-mathematics/scilab:ocaml - Add support for the ocaml programming language
 sci-misc/boinc:server - Enable compilation of server
-sys-apps/baselayout:ibm - adds support for hvc consoles
 sys-apps/baselayout-vserver:fakelog - install a fake logger init script
+sys-apps/baselayout:ibm - adds support for hvc consoles
 sys-apps/busybox:floppyboot - builds a busybox binary for use on floppy drives.
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
@@ -862,6 +863,7 @@ sys-cluster/pvm:ssh - Use SSH instead of RSH for communication.
 sys-cluster/util-vserver:glibc - Compile with glibc instead of dietlibc
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
+sys-devel/distcc:crosscompile - Change distcc-config to create shell script not links for proper invokation on cross compile setups
 sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
 sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checking (disables PIE and SSP building in gcc)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
@@ -875,7 +877,6 @@ sys-devel/gcc:nossp - Disable SSP support (NOT FOR GENERAL USE)
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
-sys-devel/distcc:crosscompile - Change distcc-config to create shell script not links for proper invokation on cross compile setups
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
 sys-fs/clvm:nolvmstatic - Allow users to build clvm dynamically
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
@@ -993,9 +994,9 @@ x11-libs/wxGTK:dmalloc - Enable support for the Debug Malloc Library
 x11-libs/wxGTK:no_wxgtk1 - Disable gtk support. Must be used in combination with gtk2
 x11-libs/wxGTK:wxgtk1 - Add gtk1 support in addition to optional gtk2ansi and gtk2unicode
 x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
-x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/openclipart:gzip - Compresses clip art using gzip
 x11-misc/openclipart:pdf - Installs pdf files as "clipart"
+x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
 x11-plugins/wmhdplop:gkrellm - Enable build of gkrellm module
