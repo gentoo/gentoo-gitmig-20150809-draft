@@ -1,6 +1,35 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.132 2005/06/05 13:41:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.133 2005/06/29 22:14:31 mcummings Exp $
+
+*perl-5.8.7 (29 Jun 2005)
+
+  29 Jun 2005; Michael Cummings <mcummings@gentoo.org>
+  -files/perl-5.8.0-RC2-special-h2ph-not-failing-on-machine_ansi_header.patc
+  h, -files/perl-5.8.2-perldoc-emptydirs.patch,
+  -files/perl-5.8.2-picdl.patch, -files/perl-5.8.2-prelink-lpthread.patch,
+  -files/perl-5.8.2-reorder-INC.patch, -files/perl-5.8.2-uclibc.patch,
+  -files/perl-5.8.4-noksh.patch, -files/perl-5.8.4-nonblock.patch,
+  -files/perl-5.8.4-perldoc-emptydirs.patch, -files/perl-5.8.4-picdl.patch,
+  -files/perl-5.8.4-prelink-lpthread.patch,
+  -files/perl-5.8.4-reorder-INC.patch, -files/perl-5.8.5-noksh.patch,
+  -files/perl-5.8.5-nonblock.patch,
+  -files/perl-5.8.5-perldoc-emptydirs.patch, -files/perl-5.8.5-picdl.patch,
+  -files/perl-5.8.5-prelink-lpthread.patch,
+  -files/perl-5.8.5-reorder-INC.patch, -files/perl-5.8.6-noksh.patch,
+  -files/perl-5.8.6-perldoc-emptydirs.patch, -files/perl-5.8.6-picdl.patch,
+  -files/perl-5.8.6-prelink-lpthread.patch,
+  -files/perl-5.8.6-reorder-INC.patch,
+  +files/perl-5.8.7-CAN-2005-0448-rmtree.patch,
+  +files/perl-5.8.7-tempfiles.patch, -files/libperl_rebuilder,
+  +files/perl-h2ph-ansi-header.patch, +files/perl-noksh.patch,
+  +files/perl-nonblock.patch, +files/perl-perldoc-emptydirs.patch,
+  +files/perl-picdl.patch, +files/perl-prelink-lpthread.patch,
+  +files/perl-reorder-INC.patch, +files/perl-tempfiles.patch,
+  +files/perl-uclibc.patch, -files/stat.t, -perl-5.8.2-r4.ebuild,
+  -perl-5.8.4-r4.ebuild, perl-5.8.5-r5.ebuild, perl-5.8.6-r4.ebuild,
+  +perl-5.8.7.ebuild:
+  Perl 5.8.6 unmasking, perl 5.8.7 addition
 
   05 Jun 2005; Michael Cummings <mcummings@gentoo.org> files/perl-cleaner:
   Bug 90502 - don't leave behind empty log files if nothing has been done

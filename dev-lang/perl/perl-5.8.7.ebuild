@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r4.ebuild,v 1.10 2005/05/30 13:41:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.1 2005/06/29 22:14:31 mcummings Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
@@ -11,56 +11,55 @@ SHORT_PV="${PV%.*}"
 MY_P="perl-${PV/_rc/-RC}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 S="${WORKDIR}/${MY_P}"
-SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.perl.org/"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ~ppc64 s390 sh"
-IUSE="berkdb debug doc gdbm ithreads perlsuid"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="berkdb debug doc gdbm ithreads perlsuid build minimal"
+PERL_OLDVERSEN="5.8.0 5.8.2 5.8.4 5.8.5 5.8.6"
 
 DEPEND="!elibc_uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	gdbm? ( >=sys-libs/gdbm-1.8.3 )
 	>=sys-devel/libperl-${PV}
 	!<perl-core/ExtUtils-MakeMaker-6.17
-	!<perl-core/File-Spec-0.84-r1
+	!<perl-core/File-Spec-0.87
 	!<perl-core/Test-Simple-0.47-r1"
+
 RDEPEND=">=sys-devel/libperl-${PV}
 	berkdb? ( sys-libs/db )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
+	gdbm? ( >=sys-libs/gdbm-1.8.3 )"
+
+PDEPEND="app-admin/perl-cleaner"
 
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'ithreads'
 	# in USE if it could break things ...
 	if use ithreads
 	then
-		ewarn ""
 		ewarn "PLEASE NOTE: You are compiling perl-5.8 with"
 		ewarn "interpreter-level threading enabled."
 		ewarn "Threading is not supported by all applications "
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
-		ewarn ""
 		epause 10
 	else
-		ewarn ""
-		ewarn "PLEASE NOTE: If you want to compile perl-5.8 with"
-		ewarn "threading enabled , you must restart this emerge"
-		ewarn "with USE=ithreads emerge...."
-		ewarn "Threading is not supported by all applications "
-		ewarn "that compile against perl. You use threading at "
-		ewarn "your own discretion. "
-		ewarn ""
+		einfo "PLEASE NOTE: If you want to compile perl-5.8 with"
+		einfo "interpreter-level threading enabled , you must "
+		einfo "restart this emerge with USE=ithreads"
+		einfo "Interpreter-level threading is not supported by "
+		einfo "all applications that compile against perl."
 	fi
 
-	if [ ! -f "${ROOT}/usr/lib/${LIBPERL}" ]
+	if [ ! -f "${ROOT}/usr/$(get_libdir)/${LIBPERL}" ]
 	then
 		# Make sure we have libperl installed ...
-		eerror "Cannot find ${ROOT}/usr/lib/${LIBPERL}!  Make sure that you"
+		eerror "Cannot find ${ROOT}/usr/$(get_libdir)/${LIBPERL}!  Make sure that you"
 		eerror "have sys-libs/libperl installed properly ..."
-		die "Cannot find /usr/lib/${LIBPERL}!"
+		die "Cannot find ${ROOT}/usr/$(get_libdir)/${LIBPERL}!"
 	fi
 }
 
@@ -72,42 +71,32 @@ src_unpack() {
 	# handling breaks.  Fixes bug #14380.
 	# <rac@gentoo.org> (14 Feb 2003)
 	# reinstated to try to avoid sdl segfaults 03.10.02
-	cd ${S}; epatch ${FILESDIR}/${P}-prelink-lpthread.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-prelink-lpthread.patch
 
 	# Patch perldoc to not abort when it attempts to search
 	# nonexistent directories; fixes bug #16589.
 	# <rac@gentoo.org> (28 Feb 2003)
 
-	cd ${S}; epatch ${FILESDIR}/${P}-perldoc-emptydirs.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-perldoc-emptydirs.patch
 
 	# this lays the groundwork for solving the issue of what happens
 	# when people (or ebuilds) install different versiosn of modules
 	# that are in the core, by rearranging the @INC directory to look
 	# site -> vendor -> core.
-	cd ${S}; epatch ${FILESDIR}/${P}-reorder-INC.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-reorder-INC.patch
 
 	# some well-intentioned stuff in http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&selm=Pine.SOL.4.10.10205231231200.5399-100000%40maxwell.phys.lafayette.edu
 	# attempts to avoid bringing cccdlflags to bear on static
 	# extensions (like DynaLoader).  i believe this is
 	# counterproductive on a Gentoo system which has both a shared
 	# and static libperl, so effectively revert this here.
-	cd ${S}; epatch ${FILESDIR}/${P}-picdl.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-picdl.patch
 
 	# Configure makes an unwarranted assumption that /bin/ksh is a
 	# good shell. This patch makes it revert to using /bin/sh unless
 	# /bin/ksh really is executable. Should fix bug 42665.
 	# rac 2004.06.09
-	cd ${S}; epatch ${FILESDIR}/${P}-noksh.patch
-
-	# see bug 52660
-	# i'm not entirely thrilled with this has_version, but can't see
-	# how else to handle it. attempting to link libgdbm_compat is
-	# fatal on systems where it doesn't exist.
-
-	has_version ">=sys-libs/gdbm-1.8.3" && epatch ${FILESDIR}/${P}-NDBM-GDBM-compat.patch
-
-	# uclibc support
-	epatch ${FILESDIR}/perl-5.8.2-uclibc.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-noksh.patch
 
 	# this one only affects sparc64, as best weeve and rac can tell,
 	# but seems sane for all linux.  we don't have to worry about
@@ -115,20 +104,22 @@ src_unpack() {
 	# code in IO.xs that checks for this sort of thing dies in LDAP on
 	# sparc64.
 
-	epatch ${FILESDIR}/${P}-nonblock.patch
+	#epatch ${FILESDIR}/${PN}-nonblock.patch
 
-	# An additional tempfile patch, bug 75696
-	#epatch ${FILESDIR}/file_path_rmtree.patch
+	# since we build in non-world-writeable portage directories, none
+	# of the .t sections of the original version of this patch matter
+	# much.  the PPPort section is apparently obsolete, because i see
+	# no /tmp in there now.  ditto on perlbug.SH, which has secure
+	# tempfile handling if resources are present.  originally from bug
+	# 66360.
 
-	# Bug 80460, perlsuid vulnerability
-	if use perlsuid
-	then
-		epatch ${FILESDIR}/CAN-2005-0156-suid.patch
-	fi
+	epatch ${FILESDIR}/${P}-tempfiles.patch
+
 
 }
 
 src_configure() {
+
 	# some arches and -O do not mix :)
 	use arm && replace-flags -O? -O1
 	use ppc && replace-flags -O? -O1
@@ -141,15 +132,26 @@ src_configure() {
 	export LC_ALL="C"
 	local myconf=""
 
+	if [[ ${KERNEL} == "FreeBSD" && "${ELIBC}" = "FreeBSD" ]]; then
+		osname="freebsd"
+	else
+		# Default setting
+		osname="linux"
+	fi
+
 	if use ithreads
 	then
 		einfo "using ithreads"
 		mythreading="-multi"
 		myconf="-Dusethreads ${myconf}"
-		myarch="${CHOST%%-*}-linux-thread"
+		myarch=$(get_abi_CHOST)
+		myarch="${myarch%%-*}-${osname}-thread"
 	else
-		myarch="${CHOST%%-*}-linux"
+		myarch=$(get_abi_CHOST)
+		myarch="${myarch%%-*}-${osname}"
 	fi
+
+	local inclist=$(for v in $PERL_OLDVERSEN; do echo -n "$v $v/$myarch$mythreading "; done)
 
 	# allow either gdbm to provide ndbm (in <gdbm/ndbm.h>) or db1
 
@@ -162,7 +164,6 @@ src_configure() {
 		mygdbm='D'
 		myndbm='D'
 	fi
-
 	if use berkdb
 	then
 		mydb='D'
@@ -203,12 +204,9 @@ src_configure() {
 		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
 
-	# These are temporary fixes. Need to edit the build so that that libraries created
-	# only get compiled with -fPIC, since they get linked into shared objects, they
-	# must be compiled with -fPIC.  Don't have time to parse through the build system
-	# at this time.
-	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
-#	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
+	[ -n "${ABI}" ] && myconf="${myconf} -Dusrinc=$(get_ml_incdir)"
+
+	[[ ${ELIBC} == "FreeBSD" ]] && myconf="${myconf} -Dlibc=/usr/lib/libc.a"
 
 	sh Configure -des \
 		-Darchname="${myarch}" \
@@ -229,6 +227,7 @@ src_configure() {
 		-Dinstallman3dir=${D}/usr/share/man/man3 \
 		-Dman1ext='1' \
 		-Dman3ext='3pm' \
+		-Dinc_version_list="$inclist" \
 		-Dcf_by='Gentoo' \
 		-Ud_csh \
 		${myconf} || die "Unable to configure"
@@ -242,17 +241,6 @@ src_compile() {
 	src_configure
 
 	emake -j1 || die "Unable to make"
-
-
-	# i want people to have to take actions to disable tests, because
-	# they reveal lots of important problems in clear ways.  if that
-	# happens, you can revisit this, but portage .51 will call
-	# src_test if FEATURES=maketest is enabled, and we'll call it here
-	# if it isn't.
-
-	if ! hasq maketest $FEATURES; then
-		src_test
-	fi
 }
 
 src_test() {
@@ -268,14 +256,18 @@ src_install() {
 	# the library ...
 	local coredir="/usr/lib/perl5/${PV}/${myarch}${mythreading}/CORE"
 	dodir ${coredir}
-	dosym ../../../../${LIBPERL} ${coredir}/${LIBPERL}
-	dosym ../../../../${LIBPERL} ${coredir}/libperl.so.${PERLSLOT}
-	dosym ../../../../${LIBPERL} ${coredir}/libperl.so
+	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/${LIBPERL}
+	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl.so.${PERLSLOT}
+	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl.so
 
 	# Fix for "stupid" modules and programs
 	dodir /usr/lib/perl5/site_perl/${PV}/${myarch}${mythreading}
 
-	make DESTDIR="${D}" install || die "Unable to make install"
+	local installtarget=install
+	if use minimal || use build ; then
+		installtarget=install.perl
+	fi
+	make DESTDIR="${D}" ${installtarget} || die "Unable to make ${installtarget}"
 
 	# 2004.07.28 rac
 
@@ -294,7 +286,7 @@ src_install() {
 	ln -s perl${PV} ${D}/usr/bin/perl
 
 	cp -f utils/h2ph utils/h2ph_patched
-	epatch ${FILESDIR}/perl-5.8.0-RC2-special-h2ph-not-failing-on-machine_ansi_header.patch
+	epatch ${FILESDIR}/${PN}-h2ph-ansi-header.patch
 
 	LD_LIBRARY_PATH=. ./perl -Ilib utils/h2ph_patched \
 		-a -d ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading} <<EOF
@@ -350,18 +342,188 @@ EOF
 	fi
 	cd `find ${D} -name Path.pm|sed -e 's/Path.pm//'`
 	# CAN patch in bug 79685
-	epatch ${FILESDIR}/CAN-2005-0448-rmtree.patch
+	epatch ${FILESDIR}/${P}-CAN-2005-0448-rmtree.patch
+
+	if use minimal || use build ; then
+		src_remove_extra_files
+	fi
+
+}
+
+src_remove_extra_files()
+{
+	local prefix="./usr" # ./ is important
+	local bindir="${prefix}/bin"
+	local perlroot="${prefix}/lib/perl5" # perl installs per-arch dirs
+	local prV="${perlroot}/${PV}"
+	# myarch and mythreading are defined inside src_configure()
+	local prVA="${prV}/${myarch}${mythreading}"
+
+	# I made this list from the Mandr*, Debian and ex-Connectiva perl-base list
+	# Then, I added several files to get GNU autotools running
+	# FIXME: should this be in a separated file to be sourced?
+	local MINIMAL_PERL_INSTALL="
+	${bindir}/h2ph
+	${bindir}/perl
+	${bindir}/perl${PV}
+	${bindir}/pod2man
+	${prV}/attributes.pm
+	${prV}/AutoLoader.pm
+	${prV}/autouse.pm
+	${prV}/base.pm
+	${prV}/bigint.pm
+	${prV}/bignum.pm
+	${prV}/bigrat.pm
+	${prV}/blib.pm
+	${prV}/bytes_heavy.pl
+	${prV}/bytes.pm
+	${prV}/Carp/Heavy.pm
+	${prV}/Carp.pm
+	${prV}/charnames.pm
+	${prV}/Class/Struct.pm
+	${prV}/constant.pm
+	${prV}/diagnostics.pm
+	${prV}/DirHandle.pm
+	${prV}/Exporter/Heavy.pm
+	${prV}/Exporter.pm
+	${prV}/fields.pm
+	${prV}/File/Basename.pm
+	${prV}/File/Compare.pm
+	${prV}/File/Copy.pm
+	${prV}/File/Find.pm
+	${prV}/FileHandle.pm
+	${prV}/File/Path.pm
+	${prV}/File/Spec.pm
+	${prV}/File/Spec/Unix.pm
+	${prV}/File/stat.pm
+	${prV}/filetest.pm
+	${prVA}/attrs.pm
+	${prVA}/auto/attrs
+	${prVA}/auto/Cwd/Cwd.so
+	${prVA}/auto/Data/Dumper/Dumper.so
+	${prVA}/auto/DynaLoader/dl_findfile.al
+	${prVA}/auto/Fcntl/Fcntl.so
+	${prVA}/auto/File/Glob/Glob.so
+	${prVA}/auto/IO/IO.so
+	${prVA}/auto/POSIX/autosplit.ix
+	${prVA}/auto/POSIX/fstat.al
+	${prVA}/auto/POSIX/load_imports.al
+	${prVA}/auto/POSIX/POSIX.bs
+	${prVA}/auto/POSIX/POSIX.so
+	${prVA}/auto/POSIX/stat.al
+	${prVA}/auto/POSIX/tmpfile.al
+	${prVA}/auto/re/re.so
+	${prVA}/auto/Socket/Socket.so
+	${prVA}/auto/Storable/autosplit.ix
+	${prVA}/auto/Storable/_retrieve.al
+	${prVA}/auto/Storable/retrieve.al
+	${prVA}/auto/Storable/Storable.so
+	${prVA}/auto/Storable/_store.al
+	${prVA}/auto/Storable/store.al
+	${prVA}/B/Deparse.pm
+	${prVA}/B.pm
+	${prVA}/Config.pm
+	${prVA}/Config_heavy.pl
+	${prVA}/CORE/libperl.so
+	${prVA}/Cwd.pm
+	${prVA}/Data/Dumper.pm
+	${prVA}/DynaLoader.pm
+	${prVA}/encoding.pm
+	${prVA}/Errno.pm
+	${prVA}/Fcntl.pm
+	${prVA}/File/Glob.pm
+	${prVA}/_h2ph_pre.ph
+	${prVA}/IO/File.pm
+	${prVA}/IO/Handle.pm
+	${prVA}/IO/Pipe.pm
+	${prVA}/IO.pm
+	${prVA}/IO/Seekable.pm
+	${prVA}/IO/Select.pm
+	${prVA}/IO/Socket.pm
+	${prVA}/lib.pm
+	${prVA}/NDBM_File.pm
+	${prVA}/ops.pm
+	${prVA}/POSIX.pm
+	${prVA}/re.pm
+	${prVA}/Socket.pm
+	${prVA}/Storable.pm
+	${prVA}/threads
+	${prVA}/threads.pm
+	${prVA}/XSLoader.pm
+	${prV}/Getopt/Long.pm
+	${prV}/Getopt/Std.pm
+	${prV}/if.pm
+	${prV}/integer.pm
+	${prV}/IO/Socket/INET.pm
+	${prV}/IO/Socket/UNIX.pm
+	${prV}/IPC/Open2.pm
+	${prV}/IPC/Open3.pm
+	${prV}/less.pm
+	${prV}/List/Util.pm
+	${prV}/locale.pm
+	${prV}/open.pm
+	${prV}/overload.pm
+	${prV}/Pod/InputObjects.pm
+	${prV}/Pod/Man.pm
+	${prV}/Pod/ParseLink.pm
+	${prV}/Pod/Parser.pm
+	${prV}/Pod/Select.pm
+	${prV}/Pod/Text.pm
+	${prV}/Pod/Usage.pm
+	${prV}/PerlIO.pm
+	${prV}/Scalar/Util.pm
+	${prV}/SelectSaver.pm
+	${prV}/sigtrap.pm
+	${prV}/sort.pm
+	${prV}/stat.pl
+	${prV}/strict.pm
+	${prV}/subs.pm
+	${prV}/Symbol.pm
+	${prV}/Text/ParseWords.pm
+	${prV}/Text/Tabs.pm
+	${prV}/Text/Wrap.pm
+	${prV}/Time/Local.pm
+	${prV}/unicore/Canonical.pl
+	${prV}/unicore/Exact.pl
+	${prV}/unicore/lib/gc_sc/Digit.pl
+	${prV}/unicore/lib/gc_sc/Word.pl
+	${prV}/unicore/PVA.pl
+	${prV}/unicore/To/Fold.pl
+	${prV}/unicore/To/Lower.pl
+	${prV}/unicore/To/Upper.pl
+	${prV}/utf8_heavy.pl
+	${prV}/utf8.pm
+	${prV}/vars.pm
+	${prV}/vmsish.pm
+	${prV}/warnings
+	${prV}/warnings.pm
+	${prV}/warnings/register.pm"
+
+	if use perlsuid ; then
+		MINIMAL_PERL_INSTALL="${MINIMAL_PERL_INSTALL}
+		${bindir}/suidperl
+		${bindir}/sperl${PV}"
+	fi
+
+	pushd ${D} > /dev/null
+	# Remove cruft
+	einfo "Removing files that are not in the minimal install"
+	for f in $(find . -type f); do
+		has ${f} ${MINIMAL_PERL_INSTALL} || rm -f ${f}
+	done
+	# Remove empty directories
+	find . -depth -type d | xargs -r rmdir &> /dev/null
+	popd > /dev/null
 }
 
 pkg_postinst() {
-
 	# Make sure we do not have stale/invalid libperl.so 's ...
-	if [ -f "${ROOT}usr/lib/libperl.so" -a ! -L "${ROOT}usr/lib/libperl.so" ]
+	if [ -f "${ROOT}usr/$(get_libdir)/libperl.so" -a ! -L "${ROOT}usr/$(get_libdir)/libperl.so" ]
 	then
-		mv -f ${ROOT}usr/lib/libperl.so ${ROOT}usr/lib/libperl.so.old
+		mv -f ${ROOT}usr/$(get_libdir)/libperl.so ${ROOT}usr/$(get_libdir)/libperl.so.old
 	fi
 
-	local perllib="`readlink -f ${ROOT}usr/lib/libperl.so | sed -e 's:^.*/::'`"
+	local perllib="`readlink -f ${ROOT}usr/$(get_libdir)/libperl.so | sed -e 's:^.*/::'`"
 
 	# If we are installing perl, we need the /usr/lib/libperl.so symlink to
 	# point to the version of perl we are running, else builing something
@@ -369,12 +531,12 @@ pkg_postinst() {
 	if [ "${perllib}" != "${LIBPERL}" ]
 	then
 		# Delete stale symlinks
-		rm -f ${ROOT}usr/lib/libperl.so
-		rm -f ${ROOT}usr/lib/libperl.so.${PERLSLOT}
+		rm -f ${ROOT}usr/$(get_libdir)/libperl.so
+		rm -f ${ROOT}usr/$(get_libdir)/libperl.so.${PERLSLOT}
 		# Regenerate libperl.so.${PERLSLOT}
-		ln -snf ${LIBPERL} ${ROOT}usr/lib/libperl.so.${PERLSLOT}
+		ln -snf ${LIBPERL} ${ROOT}usr/$(get_libdir)/libperl.so.${PERLSLOT}
 		# Create libperl.so (we use the *soname* versioned lib here ..)
-		ln -snf libperl.so.${PERLSLOT} ${ROOT}usr/lib/libperl.so
+		ln -snf libperl.so.${PERLSLOT} ${ROOT}usr/$(get_libdir)/libperl.so
 	fi
 
 	INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${PV}'|etc|local|perl$/; print "$line\n" }')
@@ -392,9 +554,7 @@ pkg_postinst() {
 		# Silently remove the now empty dirs
 		for DIR in $INC; do
 		   if [ -d ${ROOT}/$DIR ]; then
-		       for $empty in $(find ${ROOT}/$DIR -type d); do
-			   		rmdir $empty >/dev/null 2>&1
-			   done
+		   	find ${ROOT}/$DIR -depth -type d | xargs -r rmdir &> /dev/null
 		   fi
 		done
 		ebegin "Converting C header files to the corresponding Perl format"
@@ -403,23 +563,21 @@ pkg_postinst() {
 		cd /usr/include/linux;
 		h2ph *
 	fi
+
 # This has been moved into a function because rumor has it that a future release
 # of portage will allow us to check what version was just removed - which means
 # we will be able to invoke this only as needed :)
-
 	# Tried doing this via  -z, but $INC is too big...
 	if [ "${INC}x" != "x" ]; then
 		cleaner_msg
 		epause 10
 	fi
-
 }
 
 cleaner_msg() {
-	eerror "You have changed versions of perl. It is recommended"
-	eerror "that you run"
-	eerror "dev-lang/perl/files/perl-cleaner "
-	eerror "to assist with this transition. This script is capable"
+	eerror "You have had multiple versions of perl. It is recommended"
+	eerror "that you run perl-cleaner now. perl-cleaner will"
+	eerror "assist with this transition. This script is capable"
 	eerror "of cleaning out old .ph files, rebuilding modules for "
 	eerror "your new version of perl, as well as re-emerging"
 	eerror "applications that compiled against your old libperl.so"
@@ -430,7 +588,7 @@ cleaner_msg() {
 	eerror "them - interruptions could leave you with unmerged"
 	eerror "packages before they can be remerged."
 	eerror ""
-	eerror "If you have run the rebuilder and a package still gives"
+	eerror "If you have run perl-cleaner and a package still gives"
 	eerror "you trouble, and re-emerging it fails to correct"
 	eerror "the problem, please check http://bugs.gentoo.org/"
 	eerror "for more information or to report a bug."

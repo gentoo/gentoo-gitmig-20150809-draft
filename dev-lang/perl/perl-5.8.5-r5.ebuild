@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5-r5.ebuild,v 1.11 2005/05/30 13:41:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5-r5.ebuild,v 1.12 2005/06/29 22:14:31 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -73,35 +73,35 @@ src_unpack() {
 	# handling breaks.  Fixes bug #14380.
 	# <rac@gentoo.org> (14 Feb 2003)
 	# reinstated to try to avoid sdl segfaults 03.10.02
-	cd ${S}; epatch ${FILESDIR}/${P}-prelink-lpthread.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-prelink-lpthread.patch
 
 	# Patch perldoc to not abort when it attempts to search
 	# nonexistent directories; fixes bug #16589.
 	# <rac@gentoo.org> (28 Feb 2003)
 
-	cd ${S}; epatch ${FILESDIR}/${P}-perldoc-emptydirs.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-perldoc-emptydirs.patch
 
 	# this lays the groundwork for solving the issue of what happens
 	# when people (or ebuilds) install different versiosn of modules
 	# that are in the core, by rearranging the @INC directory to look
 	# site -> vendor -> core.
-	cd ${S}; epatch ${FILESDIR}/${P}-reorder-INC.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-reorder-INC.patch
 
 	# some well-intentioned stuff in http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&selm=Pine.SOL.4.10.10205231231200.5399-100000%40maxwell.phys.lafayette.edu
 	# attempts to avoid bringing cccdlflags to bear on static
 	# extensions (like DynaLoader).  i believe this is
 	# counterproductive on a Gentoo system which has both a shared
 	# and static libperl, so effectively revert this here.
-	cd ${S}; epatch ${FILESDIR}/${P}-picdl.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-picdl.patch
 
 	# Configure makes an unwarranted assumption that /bin/ksh is a
 	# good shell. This patch makes it revert to using /bin/sh unless
 	# /bin/ksh really is executable. Should fix bug 42665.
 	# rac 2004.06.09
-	cd ${S}; epatch ${FILESDIR}/${P}-noksh.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-noksh.patch
 
 	# uclibc support
-	epatch ${FILESDIR}/perl-5.8.2-uclibc.patch
+	epatch ${FILESDIR}/${PN}-uclibc.patch
 
 	# this one only affects sparc64, as best weeve and rac can tell,
 	# but seems sane for all linux.  we don't have to worry about
@@ -109,7 +109,7 @@ src_unpack() {
 	# code in IO.xs that checks for this sort of thing dies in LDAP on
 	# sparc64.
 
-	epatch ${FILESDIR}/${P}-nonblock.patch
+	epatch ${FILESDIR}/${PN}-nonblock.patch
 
 	# since we build in non-world-writeable portage directories, none
 	# of the .t sections of the original version of this patch matter
@@ -283,7 +283,7 @@ src_install() {
 	ln -s perl${PV} ${D}/usr/bin/perl
 
 	cp -f utils/h2ph utils/h2ph_patched
-	epatch ${FILESDIR}/perl-5.8.0-RC2-special-h2ph-not-failing-on-machine_ansi_header.patch
+	epatch ${FILESDIR}/${PN}-h2ph-ansi-header.patch
 
 	LD_LIBRARY_PATH=. ./perl -Ilib utils/h2ph_patched \
 		-a -d ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading} <<EOF
