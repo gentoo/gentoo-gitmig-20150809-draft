@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.18 2005/05/29 02:34:02 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.19 2005/06/30 14:45:51 ka0ttic Exp $
+
+*honeyd-1.0-r1 (30 Jun 2005)
+
+  30 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> files/honeyd.initd,
+  +honeyd-1.0-r1.ebuild:
+  Revision bump; fixed init script so that the webserver will start, bug 89348.
 
   29 May 2005; Aaron Walker <ka0ttic@gentoo.org>
   +files/honeyd-1.0-gcc4.diff, honeyd-1.0.ebuild:

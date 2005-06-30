@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/files/honeyd.initd,v 1.1 2005/01/21 22:13:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/files/honeyd.initd,v 1.2 2005/06/30 14:45:51 ka0ttic Exp $
 
 depend() {
 	need net
@@ -30,17 +30,18 @@ start() {
 	fi
 
 	# supports webserver feature?
-	if [[ "$(/usr/sbin/honeyd --help 2>1 | grep webserver)" != "" ]] ; then
+	if [[ "$(/usr/sbin/honeyd --help 2>&1 | grep webserver)" != "" ]] ; then
 		# run webserver?
-		if [[ ${HONEY_HTTPD} -eq 1 ]] ; then
-			options="${options} --webserver-port ${HONEY_HTTPD_PORT} \
-				--webserver-root ${HONEY_HTTPD_ROOT} --fix-webserver-permissions"
+		if [[ ${HONEYD_HTTPD} -eq 1 ]] ; then
+			options="${options} --webserver-port ${HONEYD_HTTPD_PORT} \
+				--webserver-root ${HONEYD_HTTPD_ROOT} --fix-webserver-permissions"
 		else
 			options="${options} --disable-webserver"
 		fi
 	fi
 
 	options="${options} -i ${HONEYD_IF:-lo} ${HONEYD_OPTS}"
+
     start-stop-daemon --start --quiet --exec /usr/sbin/honeyd \
 		-- ${options} ${HONEYD_NET} >/dev/null 2>&1
     eend $?
