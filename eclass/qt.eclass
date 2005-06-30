@@ -1,14 +1,18 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.7 2005/06/30 13:43:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.8 2005/06/30 13:46:22 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
-# If you inherit this class, it assumes that you want to make sure the user has a version of Qt3
-# installed.  The logic is as follows:
+# This eclass is simple.  Inherit it, and in your depend, do something like this:
 #
-# Currently, it forces a dependency on any Qt3 version.  If the ebuild also sets the version directly, then
-# both should be in effect.
+# DEPEND="$(qt_min_version 3.1)"
+#
+# and it handles the rest for you
+#
+# Caveats:
+#
+# Currently, the ebuild assumes that a minimum version of Qt3 is NOT satisfied by Qt4
 
 inherit versionator
 
