@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/protbuf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/protbuf/ChangeLog,v 1.4 2005/01/01 13:57:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/protbuf/ChangeLog,v 1.5 2005/06/30 19:54:25 mkennedy Exp $
+
+  30 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> protbuf-1.7.ebuild:
+  Keywording ~amd64; Ebuild clean up.
 
 *protbuf-1.7 (31 Oct 2002)
 
