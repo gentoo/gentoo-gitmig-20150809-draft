@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/hyperic-hq-agent-2.1.20.ebuild,v 1.1 2005/06/20 21:43:15 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/hyperic-hq-agent-2.1.20.ebuild,v 1.2 2005/06/30 12:27:49 mattm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="x86? ( http://download.hyperic.net/downloads/ebuilds/hyperic-hq-agent-$
 
 LICENSE="hyperic"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 AGENT_HOME=/opt/hyperic-hq-agent-${PV}

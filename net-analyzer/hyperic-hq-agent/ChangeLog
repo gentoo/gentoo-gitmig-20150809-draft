@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hyperic-hq-agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.5 2005/06/20 21:43:15 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.6 2005/06/30 12:27:49 mattm Exp $
+
+  30 Jun 2005; Matthew Marlowe <mattm@gentoo.org>
+  hyperic-hq-agent-2.1.20.ebuild:
+  Make 2.1.20 the new stable branch for x86 and amd64.
 
 *hyperic-hq-agent-2.1.20 (20 Jun 2005)
 
