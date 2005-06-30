@@ -7,7 +7,12 @@
 # Written by John Mylchreest (johnm@gentoo.org)
 # Copyright Gentoo Linux
 
-R_VERSION="0.2"
+if [[ `id -u` != 0 ]]; then
+	echo "This application must be ran as root."
+	exit 1
+fi
+
+R_VERSION="0.3"
 R_MODULES="${ROOT}/usr/share/module-rebuild/moduledb"
 R_PORTAGEQ="`which portageq 2>/dev/null`"
 if [[ -z ${R_PORTAGEQ} ]]; then
@@ -31,13 +36,13 @@ package_valid() {
 
 package_valid_strict() {
 	local package=${1}
-	package_valid ${package} && [[ -z ${package//*-[0-9]*} ]] && return 0 || return 1
+	package_valid ${package} && [[ -z ${package%-[0-9]*} ]] && return 0 || return 1
 }
 
 package_exists() {
 	local package=${1}
 
-	package=${package//-[0-9]*}
+	package=${package%-[0-9]*}
 	if $(${R_PORTAGEQ} has_version / ${package}); then
 		return 0
 	else
@@ -128,16 +133,20 @@ db_module_list() {
 		echo -e "${C_BOLD}${C_RED}** There are no known modules. Quitting.${C_NORM}"
 		exit 1
 	fi
-	
-	echo -e "${C_BOLD}${C_GREEN}** Packages which I will emerge are:${C_NORM}"
-	for pkg in ${tomerge[@]}; do
-		echo -e "\t${pkg}"
-	done
 
-	echo -e "${C_BOLD}${C_GREEN}** Packages which I will ignore are:${C_NORM}"
-	for pkg in ${toignore[@]}; do
-		echo -e "\t${pkg}"
-	done
+	if [[ -n ${tomerge[@]} ]]; then
+		echo -e "${C_BOLD}${C_GREEN}** Packages which I will emerge are:${C_NORM}"
+		for pkg in ${tomerge[@]}; do
+			echo -e "\t${pkg}"
+		done
+	fi
+
+	if [[ -n ${toignore[@]} ]]; then
+		echo -e "${C_BOLD}${C_GREEN}** Packages which I will ignore are:${C_NORM}"
+		for pkg in ${toignore[@]}; do
+			echo -e "\t${pkg}"
+		done
+	fi
 }
 
 db_module_populate() {
@@ -208,11 +217,6 @@ Where action is one of:
 EOF
 
 }
-
-if [[ `id -u` != 0 ]]; then
-	echo "This application must be ran as root."
-	exit 1
-fi
 
 if [[ ! -f ${ROOT}/usr/share/module-rebuild/moduledb ]]; then
 	[[ ! -d ${ROOT}/usr/share/module-rebuild/ ]] && mkdir ${ROOT}/usr/share/module-rebuild/

@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/module-rebuild
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.3 2005/05/19 17:40:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.4 2005/06/30 17:27:02 johnm Exp $
+
+*module-rebuild-0.3 (30 Jun 2005)
+
+  30 Jun 2005; John Mylchreest <johnm@gentoo.org> -files/module-rebuild-0.2,
+  +files/module-rebuild-0.3, -module-rebuild-0.2.ebuild,
+  +module-rebuild-0.3.ebuild:
+  Moving root check. Fixing bug #94424 - thanks mostly to Timothy Kilbourn.
 
   19 May 2005; <dang@gentoo.org> module-rebuild-0.2.ebuild:
   Added ~amd64
