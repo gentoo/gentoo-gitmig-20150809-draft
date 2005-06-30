@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.67 2005/06/30 02:02:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.68 2005/06/30 09:50:53 lu_zero Exp $
+
+  30 Jun 2005; Luca Barbato <lu_zero@gentoo.org> man-1.6.ebuild:
+  Forced -j1 in the ebuild
 
 *man-1.6 (30 Jun 2005)
 
