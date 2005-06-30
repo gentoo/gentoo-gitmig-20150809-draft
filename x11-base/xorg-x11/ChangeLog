@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.417 2005/06/30 01:32:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.418 2005/06/30 01:50:52 spyderous Exp $
+
+  30 Jun 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r2.ebuild:
+  Patchset 0.1.8. Add 9925_all_6.8.2-fix-mtrr-endless-loop.patch: (#fd.o 2750)
+  Prevent mtrr_remove_offending from ending up in an endless loop if the
+  offending region refuses to be removed.
 
   30 Jun 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r2.ebuild:
