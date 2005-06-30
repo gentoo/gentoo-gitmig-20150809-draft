@@ -1,25 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a861da7be0dc89cff82506f17ebbc85e libperl-5.8.7.ebuild 10511
-MD5 c3705ace73bcec3cf1beb1e2427ea3b6 ChangeLog 9982
-MD5 07818b1d40f16b937482b6f90951f0c9 libperl-5.8.6.ebuild 10507
+MD5 11e66e14413f0e136f550fb8f8a7b373 ChangeLog 10282
 MD5 a1b608da3bd3fa3d97d3b7c675cf5062 libperl-5.8.5-r1.ebuild 10033
 MD5 59bb9cbb8cd8730b652bb9a97f836a52 libperl-5.8.5.ebuild 9924
+MD5 dcc6c1bb20031369bf21fb782d143670 libperl-5.8.6.ebuild 10474
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-libperl-5.8.5-r1 64
+MD5 a861da7be0dc89cff82506f17ebbc85e libperl-5.8.7.ebuild 10511
+MD5 9e7a726d85b40e0c0d39eb28d8638bed libperl-5.8.6-r1.ebuild 10476
 MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-libperl-5.8.5 64
-MD5 d9412dab085f22309997c8f08ea1ac85 files/libperl-reorder-INC.patch 2211
+MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-libperl-5.8.5-r1 64
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-libperl-5.8.6 64
+MD5 ce442db939c59218a16be167f793b817 files/libperl-5.8.2-uclibc.patch 573
 MD5 c10e44e47d7f702efe7d4009064a97ca files/digest-libperl-5.8.7 64
-MD5 ce442db939c59218a16be167f793b817 files/libperl-uclibc.patch 573
 MD5 0bdca74363c218d91a0db4ad1ea55485 files/libperl-create-libperl-soname.patch 417
 MD5 076dcbef37263d6dd7af719b55cfc2de files/libperl-noksh.patch 611
-MD5 ce442db939c59218a16be167f793b817 files/libperl-5.8.2-uclibc.patch 573
+MD5 d9412dab085f22309997c8f08ea1ac85 files/libperl-reorder-INC.patch 2211
+MD5 ce442db939c59218a16be167f793b817 files/libperl-uclibc.patch 573
+MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-libperl-5.8.6-r1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCwxxDtG5z4I8BtQoRAqvSAJ0RS6bR+n9uQ4R+0+N6NXaVxx3TwACgkTKR
-QysSmsp+lq8U86vNvwiYE9c=
-=zFJj
+iD8DBQFCxAfOtG5z4I8BtQoRAguWAJ9+IDjgv5PBiuScUPEyn4cIWaL4qgCdEDK1
+it2j5Llv+DMfeP/8lh3C+jM=
+=aWh5
 -----END PGP SIGNATURE-----
