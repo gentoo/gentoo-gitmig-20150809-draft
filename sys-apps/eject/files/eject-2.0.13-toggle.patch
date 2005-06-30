@@ -35,7 +35,7 @@ or the 4th and 5th hunks will fail.
  "  -v\t-- enable verbose output\n"
  "  -n\t-- don't eject, just show device found\n"
  "  -r\t-- eject CD-ROM\n"
-+"  -T\t-- toggle tray status (EXPERIMENTAL)"
++"  -T\t-- toggle tray status (EXPERIMENTAL)\n"
  "  -s\t-- eject SCSI device\n"
  "  -f\t-- eject floppy\n"
  "  -q\t-- eject tape\n"
