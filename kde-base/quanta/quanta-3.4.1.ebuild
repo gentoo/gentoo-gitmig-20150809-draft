@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/quanta-3.4.1.ebuild,v 1.5 2005/05/28 20:50:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/quanta-3.4.1.ebuild,v 1.6 2005/06/30 21:02:28 danarmak Exp $
 KMNAME=kdewebdev
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE: Quanta Plus Web Development Environment"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="doc tidy"
 DEPEND="doc? ( app-doc/quanta-docs )
 	dev-libs/libxml2"
