@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-3.sh,v 1.1 2005/06/28 21:17:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-3.sh,v 1.2 2005/06/30 12:58:52 azarah Exp $
 
 # Based on the ac-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -50,7 +50,7 @@ if [[ ${WANT_AUTOCONF} != "2.5" ]] ; then
 		case "${WANT_AUTOMAKE}" in
 		1.[7-9]) ;;
 		*)
-			acfiles=$(ls ac{local,include}.m4 2>/dev/null)
+			acfiles=$(ls ac{local,include}.m4 configure.{in,ac} 2>/dev/null)
 			if [[ -n ${acfiles} ]] ; then
 				confversion=$(gawk \
 				'{
