@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.2 2005/05/15 13:51:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.3 2005/06/30 18:47:23 brix Exp $
 
 inherit eutils
 
@@ -47,6 +47,7 @@ src_install () {
 	dodir /usr/sbin
 
 	emake install RPM_OPT_FLAGS="${CFLAGS}" RPM_BUILD_ROOT="${D}" ROOT="${D}" PREFIX="${D}" \
+		MANDIR="${D}/usr/share/man" \
 		|| die "emake install failed"
 
 	into /usr

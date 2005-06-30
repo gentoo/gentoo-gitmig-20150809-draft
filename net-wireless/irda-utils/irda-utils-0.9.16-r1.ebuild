@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.16-r1.ebuild,v 1.2 2005/06/27 09:06:35 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.16-r1.ebuild,v 1.3 2005/06/30 18:47:23 brix Exp $
 
 inherit eutils
 
@@ -46,7 +46,8 @@ src_install () {
 	dodir /usr/bin
 	dodir /usr/sbin
 
-	emake install PREFIX="${D}" ROOT="${D}" || die "Couldn't install from ${S}"
+	emake install PREFIX="${D}" ROOT="${D}" MANDIR="${D}/usr/share/man" \
+		|| die "Couldn't install from ${S}"
 
 	# irda-utils's install-etc installs files in /etc/sysconfig if
 	# that directory exists on the system, so clean up just in case.
