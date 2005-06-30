@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.8 2005/06/30 13:46:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.9 2005/06/30 13:53:07 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -24,12 +24,14 @@ QT3VERSIONS="3.3.4-r5 3.3.4-r4 3.3.4-r3 3.3.4-r2 3.3.4-r1 3.3.4 3.3.3-r3 3.3.3-r
 QT4VERSIONS="4.0.0"
 
 qt_pkg_setup() {
-	if [ ! $QTDIR ]; then
-		QTDIR="/usr/qt/3"
-	fi
+	if has_version =x11-libs/qt-3*; then	
+		if [ ! $QTDIR ]; then
+			QTDIR="/usr/qt/3"
+		fi
 
-   [ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
-   addpredict "$QTDIR/etc/settings"
+   	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
+	   addpredict "$QTDIR/etc/settings"
+	fi
 }
 
 qt_min_version() {
