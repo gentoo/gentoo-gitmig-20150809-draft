@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/gfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.10 2005/06/14 09:46:46 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.11 2005/06/30 13:47:02 xmerlin Exp $
+
+*gfs-1.00.00 (30 Jun 2005)
+
+  30 Jun 2005; Christian Zoffoli <xmerlin@gentoo.org> +gfs-1.00.00.ebuild,
+  -gfs-6.1_pre21.ebuild:
+  1.00.00 tree in portage. Removed old ebuilds.
 
   14 Jun 2005; Christian Zoffoli <xmerlin@gentoo.org> files/gfs.rc:
   fixed gfs mounting. Closed bug #93903.
