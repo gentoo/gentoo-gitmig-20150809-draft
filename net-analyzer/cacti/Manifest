@@ -1,4 +1,4 @@
-MD5 d7e1058181e8e5b77ac63edccbcf0db5 ChangeLog 6536
+MD5 e687eecc5fb57c85292a32e714ff0b75 ChangeLog 6684
 MD5 7f0c51f9165a9663ba08719cf80c8a34 metadata.xml 744
 MD5 678f83d4332c7064ed3c3b9f05887a57 cacti-0.8.6b.ebuild 1332
 MD5 eb29792b90b350f2cd49623037fe5d42 cacti-0.8.6c.ebuild 1332
@@ -8,4 +8,4 @@ MD5 5415dc0df13fd1528eb90acce7f44989 files/digest-cacti-0.8.6b 65
 MD5 92214d64b7a546022d81ca37cb137262 files/digest-cacti-0.8.6c 65
 MD5 cf35c7601be5a748b851ae64487871f2 files/postinstall-en.txt 2062
 MD5 e77a5f6b9f7c97f061348312cd9e1004 files/digest-cacti-0.8.6d 65
-MD5 ffe7f18cecee6d785659887465b72c52 files/digest-cacti-0.8.6e 65
+MD5 ce21d377ddb344aa5a4ebea091e369d8 files/digest-cacti-0.8.6e 65
