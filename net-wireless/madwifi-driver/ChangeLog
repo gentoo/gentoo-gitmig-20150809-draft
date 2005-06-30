@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.22 2005/04/25 15:16:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.23 2005/06/30 17:31:18 josejx Exp $
+
+  30 Jun 2005; Joseph Jezak <josejx@gentoo.org>
+  madwifi-driver-0.1_pre20050420.ebuild:
+  Added ~ppc and PPC target, bug #97001.
 
 *madwifi-driver-0.1_pre20050420 (25 Apr 2005)
 
