@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/kompose-0.5.ebuild,v 1.3 2005/01/21 17:15:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/kompose-0.5.ebuild,v 1.4 2005/06/30 12:58:44 danarmak Exp $
 
 inherit kde
 
@@ -16,3 +16,13 @@ IUSE=""
 DEPEND="media-libs/imlib2"
 RDEPEND="media-libs/imlib2"
 need-kde 3.2
+
+
+function pkg_setup() {
+	# bug 94881
+	if ! built_with_use media-libs/imlib2 X; then
+	        eerror "This package requires imlib2 to be built with X11 support."
+	        eerror "Please run USE=X emerge media-libs/imlib2, then try emerging kompose again."
+	        die "imlib2 must be built with USE=X"
+	fi
+}
