@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/systemconfigurator
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.9 2005/01/01 11:30:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.10 2005/06/30 13:10:41 bass Exp $
+
+*systemconfigurator-2.2.2 (30 Jun 2005)
+ 
+ 30 Jun 2005; José Alberto Suaŕez López <bass@gentoo.org> systemconfigurator-2.2.2.ebuild:
+ Bump version. Thanks to Mark D. #92848
+
+*systemconfigurator-2.0.9 (27 Feb 2004)
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   systemconfigurator-2.0.9.ebuild:
@@ -8,9 +15,7 @@
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> systemconfigurator-2.0.9.ebuild:
   Typo in DESCRIPTION fixed: consistant -> consistent. Bug 59717.
-
-*systemconfigurator-2.0.9 (27 Feb 2004)
-
+  
   01 Aug 2004; José Alberto Suárez López <bass@gentoo.org> 
   +files/systemconfigurator-2.0.9-Makefile.PL.patch,
   systemconfigurator-2.0.9.ebuild:
