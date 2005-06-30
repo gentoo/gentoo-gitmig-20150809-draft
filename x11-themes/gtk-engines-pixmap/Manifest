@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4dd06cdb1ab5e793178fde06b1f0c2b8 gtk-engines-pixmap-0.12.ebuild 395
-MD5 81a74f9bd5c484e9fcd959010151f862 ChangeLog 493
+MD5 536e92171482377c36886d0512e443a5 ChangeLog 623
+MD5 a81ec35efd820616b45f7e4c595ecfca gtk-engines-pixmap-0.12.ebuild 396
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 afb601e772f47c8243a8602c5209a855 files/digest-gtk-engines-pixmap-0.12 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCohRLI1lqEGTUzyQRAkIYAKC24ervQYNFKMR/hbgHePtADJ1cRgCdEvtr
-1Pcf6gweWMQq6uGkBFVE7dE=
-=taKo
------END PGP SIGNATURE-----
