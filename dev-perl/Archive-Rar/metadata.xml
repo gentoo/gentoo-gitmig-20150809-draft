@@ -6,5 +6,7 @@
 		<email>perl@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
-	<longdescription></longdescription>
+	<longdescription>Pure impementation of rar. Tests for this module only work
+	on platforms that can support the rar executable, however, which at the
+	moment is the x86/amd64 family.</longdescription>
 </pkgmetadata>
