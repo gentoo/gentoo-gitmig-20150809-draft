@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.68 2005/06/12 15:31:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.69 2005/06/30 03:42:52 kumba Exp $
+
+  29 Jun 2005; Joshua Kinard <kumba@gentoo.org> hdparm-5.9.ebuild:
+  Marked stable on mips.
 
   12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> hdparm-5.9.ebuild:
   Stable on alpha.

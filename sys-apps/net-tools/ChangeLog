@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.54 2005/05/30 02:42:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.55 2005/06/30 03:40:31 kumba Exp $
+
+  29 Jun 2005; Joshua Kinard <kumba@gentoo.org> net-tools-1.60-r11.ebuild:
+  Marked stable on mips.
 
   29 May 2005; <solar@gentoo.org> net-tools-1.60-r9.ebuild:
   - update sys-apps/net-tools to use libc expanded variable elibc_uclibc vs
