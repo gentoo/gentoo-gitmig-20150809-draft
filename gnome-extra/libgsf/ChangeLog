@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.49 2005/05/24 05:19:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.50 2005/06/30 18:24:19 leonardop Exp $
+
+*libgsf-1.12.1 (30 Jun 2005)
+
+  30 Jun 2005; Leonardo Boshell <leonardop@gentoo.org> libgsf-1.12.1.ebuild:
+  New release. Added support for the 'bzip2' USE flag.
+
+  30 Jun 2005; Leonardo Boshell <leonardop@gentoo.org> libgsf-1.12.0.ebuild:
+  Stable on x86.
 
 *libgsf-1.12.0 (24 May 2005)
 
