@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/k3guitune
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.8 2005/04/03 16:48:08 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.9 2005/06/30 17:38:58 danarmak Exp $
+
+  30 Jun 2005; Dan Armak <danarmak@gentoo.org>
+  files/k3guitune-0.4.1-configure.patch:
+  Fix 96577: compilation without arts installed.
 
   03 Apr 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/k3guitune-0.4.1-configure.patch, metadata.xml,
