@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_p1.ebuild,v 1.3 2005/06/24 18:02:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_p2.ebuild,v 1.1 2005/06/30 00:12:47 ka0ttic Exp $
 
 inherit bash-completion toolchain-funcs
 
@@ -33,6 +33,11 @@ src_compile() {
 	fi
 }
 
+src_test() {
+	addwrite /var/lib/herdstat
+	make check || die "make check failed"
+}
+
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dobashcompletion bashcomp
@@ -51,7 +56,7 @@ pkg_preinst() {
 pkg_postinst() {
 	# remove any previous caches, as it's possible that the internal
 	# format has changed, and may cause bugs.
-	rm -f ${ROOT}var/lib/herdstat/*cache*
+	rm -f ${ROOT}/var/lib/herdstat/*
 
 	einfo
 	einfo "You must be in the portage group to use herdstat."

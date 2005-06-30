@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.43 2005/06/24 18:02:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.44 2005/06/30 00:12:47 ka0ttic Exp $
+
+*herdstat-1.1.1_p2 (30 Jun 2005)
+
+  30 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> -herdstat-1.1.1_p1.ebuild,
+  +herdstat-1.1.1_p2.ebuild:
+  Version bump; several bug fixes as well as the addition of some regression
+  tests.
 
   24 Jun 2005; Aron Griffis <agriffis@gentoo.org> herdstat-1.1.1_p1.ebuild:
   fowners root:portage in src_install doesn't work. Use chgrp in pkg_preinst
