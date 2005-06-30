@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.2.ebuild,v 1.1 2005/06/30 08:48:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.2.ebuild,v 1.2 2005/06/30 10:55:15 ticho Exp $
 
 inherit eutils
 
@@ -155,8 +155,7 @@ src_install() {
 		else
 			einfo "Copying existing razor config files..."
 			insinto ${AMAVIS_ROOT}/.razor
-			doins ${AMAVIS_ROOT}/.razor/razor-agent.conf \
-				${AMAVIS_ROOT}/.razor/server*
+			doins ${AMAVIS_ROOT}/.razor/*.{conf,lst}
 		fi
 	fi
 
