@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.10 2005/06/22 20:56:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.11 2005/06/30 20:53:38 danarmak Exp $
+
+  30 Jun 2005; Dan Armak <danarmak@gentoo.org> mDNSResponder-98.ebuild:
+  Stable on amd64.
 
   22 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   mDNSResponder-98.ebuild:
