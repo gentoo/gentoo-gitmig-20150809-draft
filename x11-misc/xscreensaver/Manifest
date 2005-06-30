@@ -6,9 +6,9 @@ MD5 f9e4d478fa668b28e05c77b33ff4d3ad xscreensaver-4.21.ebuild 4637
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 c0f94e55889ac9d62ea23e5690bd49db xscreensaver-4.22.ebuild 4873
 MD5 9b75f02ad6d2e359cab3b1d17412dacd xscreensaver-4.20-r1.ebuild 4462
-MD5 ae4900711d1fc53c1c57bfd38380c1e3 ChangeLog 16243
+MD5 e1ff233106fe49000fe92243a12a4252 ChangeLog 16355
 MD5 b43816a7c59e94a72b5f682c1dd192b6 xscreensaver-4.22-r1.ebuild 4924
-MD5 3bc1b9477a5eaa04ed0d1a02b75c4cca xscreensaver-4.22-r2.ebuild 5625
+MD5 39303abcd3f2c478cc1bc5c05ef67138 xscreensaver-4.22-r2.ebuild 5617
 MD5 64d504c9ea04705ce78f9ffb87c96321 files/digest-xscreensaver-4.20 70
 MD5 64d504c9ea04705ce78f9ffb87c96321 files/digest-xscreensaver-4.20-r1 70
 MD5 c4ec3ad074fd83aff37b4b4ddc9b7f61 files/digest-xscreensaver-4.21 70
@@ -29,7 +29,7 @@ MD5 6eb40b28a36f889d0f1919cdbf160ef7 files/pam.d/xscreensaver 79
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCxCPcl5AvwDPiUowRArgcAKDGZzKxqnsQ8bDan3nDP9VTEeZtVACgxl1W
-VoaiVXDSjASHZG5rXZ4uEF0=
-=feoT
+iD8DBQFCxFwbl5AvwDPiUowRAgADAKCtyEvTaRBrHLSgHwnaIVb9TyI4BQCgtdwQ
+4TzNob3xc0YpkoaRs/wvejY=
+=xnAd
 -----END PGP SIGNATURE-----

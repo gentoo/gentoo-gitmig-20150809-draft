@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r2.ebuild,v 1.1 2005/06/30 16:53:52 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r2.ebuild,v 1.2 2005/06/30 20:54:07 smithj Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -76,7 +76,7 @@ pkg_setup() {
 		ewarn
 		epause
 	fi
-	if [ use arm ] && [ use new-login ]; then
+	if use arm && use new-login; then
 		ewarn "gnome-base/gdm is required for USE=\"new-login\", and is not"
 		ewarn "available for the amd platform. please disable this use flag"
 		die "new-login USE is not supported on arm"

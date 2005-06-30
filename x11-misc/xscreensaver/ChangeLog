@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.91 2005/06/30 16:53:52 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.92 2005/06/30 20:54:07 smithj Exp $
+
+  30 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  xscreensaver-4.22-r2.ebuild:
+  fixed the syntax for if use
 
 *xscreensaver-4.22-r2 (30 Jun 2005)
 
