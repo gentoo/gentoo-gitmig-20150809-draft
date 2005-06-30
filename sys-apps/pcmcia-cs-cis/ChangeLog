@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pcmcia-cs-cis
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/ChangeLog,v 1.1 2005/06/30 09:13:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/ChangeLog,v 1.2 2005/06/30 09:43:49 brix Exp $
+
+*pcmcia-cs-cis-3.2.8-r1 (30 Jun 2005)
+
+  30 Jun 2005; <brix@gentoo.org> +pcmcia-cs-cis-3.2.8-r1.ebuild:
+  The kernel expects files ending in .cis, not .dat - thanks to Dominik
+  Brodowski for the heads up.
 
 *pcmcia-cs-cis-3.2.8 (30 Jun 2005)
 
