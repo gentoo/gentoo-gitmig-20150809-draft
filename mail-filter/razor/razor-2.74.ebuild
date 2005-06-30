@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.74.ebuild,v 1.3 2005/06/29 13:21:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.74.ebuild,v 1.4 2005/06/30 02:38:06 ticho Exp $
 
 inherit perl-module
 
@@ -22,6 +22,13 @@ RDEPEND="dev-perl/Net-DNS
 	dev-perl/Digest-Nilsimsa"
 
 S=${WORKDIR}/razor-agents-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e "s:^INSTALLMAN5DIR = :INSTALLMAN5DIR = \\\$(DESTDIR)/:" \
+		Makefile.PL || die "sed failed"
+}
 
 pkg_postinst() {
 	einfo ""

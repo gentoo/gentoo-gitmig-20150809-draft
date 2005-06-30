@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fad46ea3817b7fbe181a5de9842711eb razor-2.74.ebuild 2595
+MD5 f9dc59b8a6c2fb9e5451b4851153d794 razor-2.74.ebuild 2735
 MD5 dd96c10f7ddca9c129d0cfe6e776a8e1 razor-2.71.ebuild 2859
 MD5 866081721ce52da5777970f6cba1d8da razor-2.67.ebuild 2736
 MD5 965845c75406bbf29e997d5e629e8a51 razor-2.40-r1.ebuild 2737
 MD5 27d6b572a9272b6e116faf782e4c3e6a razor-2.66.ebuild 2736
 MD5 c3935cfbf0f094fcbbcbd590b0ad74de razor-2.61.ebuild 2732
 MD5 0a93b9dbb8e9ab624761a66c09010e59 razor-2.36-r1.ebuild 2849
-MD5 3459c09692a669a7e27be6e4a442521b ChangeLog 6711
+MD5 94004ddfe62edfcf49f37f793591e080 ChangeLog 6878
 MD5 1d091fa1e3f5f500329bb26a05ef214a razor-2.72.ebuild 2588
 MD5 2be3e1984342f154b35258491bff1830 metadata.xml 417
 MD5 d3e9a49fe82b4c304cafaadb03eedb08 files/razor-taint.patch 2125
@@ -25,7 +25,7 @@ MD5 cf27167873572ac8be99c5195762d630 files/razor_uninstall.patch 1765
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCw0tJQlM6RnzZP+IRAg8FAJwIYO7xlZiyIud6wvfIFVM0LuZvLQCfRlXc
-xUpA7LJON40XBr6H9/v8uQM=
-=9dJM
+iD8DBQFCw1sfQlM6RnzZP+IRAqoDAKCWI1tgxsEJsqTJdBpW9iJBqSM2aQCffSvO
+xhokrZHqtWnj03BK/yWIwBY=
+=IiyW
 -----END PGP SIGNATURE-----
