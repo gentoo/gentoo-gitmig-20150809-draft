@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.66 2005/06/30 00:01:07 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.67 2005/06/30 23:16:35 azarah Exp $
+
+  30 Jun 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/cdrdao-1.2.0-gcc4.patch, cdrdao-1.2.0.ebuild:
+  Fix building with gcc4.
 
 *cdrdao-1.2.0 (29 Jun 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.0.ebuild,v 1.2 2005/06/30 10:55:52 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.0.ebuild,v 1.3 2005/06/30 23:16:35 azarah Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,6 +27,8 @@ DEPEND="pccts? ( >=dev-util/pccts-1.33.24-r1 )
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	[[ $(gcc-major-version) -eq 4 ]] && epatch ${FILESDIR}/${P}-gcc4.patch
 
 	# Add gentoo to version
 	sed -i -e "s:^PACKAGE_STRING='cdrdao 1.1.9':PACKAGE_STRING='cdrdao 1.1.9 gentoo':" configure
