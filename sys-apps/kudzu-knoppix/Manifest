@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0abc34527e5c1a44db99294a12532f81 kudzu-knoppix-1.1.36-r2.ebuild 2352
-MD5 43c80a687ebf705f4b3a295c5da9f5b1 ChangeLog 3152
-MD5 a581fe003dea2202d210abc65249ef06 kudzu-knoppix-1.1.36-r1.ebuild 1769
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
-MD5 2095589c4ddc3ed3d8972ebcea3d04bf files/kudzu.rc 302
-MD5 0f546a1fe4121a5b22b21ab5eb53819f files/kudzu.conf.d 137
-MD5 5310a8dffb3e81e7c81fccd43d0ce18d files/digest-kudzu-knoppix-1.1.36-r1 74
-MD5 5310a8dffb3e81e7c81fccd43d0ce18d files/digest-kudzu-knoppix-1.1.36-r2 74
-MD5 33b7b6fafaa4558014dad67f9d8236b4 files/kudzu-knoppix-1.1.36-nonls-v4.patch 1781
+MD5 37cf5dd5bb1bf399fbe0a15e8fe36519 kudzu-knoppix-1.1.36-r2.ebuild 2346
+MD5 b7030463d927f2ccf0da82ac90be2d23 ChangeLog 3317
 MD5 7cf6227fd7e640efa2462086ed448521 files/sunlance.patch 479
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvZ/YKRy60XGEcJIRAshIAJ0TK0I2Auod5zx6MsPziYVznU5n+wCgi46g
-4q2qVWlxH3BhzGjhTGVeiy8=
-=IYab
------END PGP SIGNATURE-----
+MD5 33b7b6fafaa4558014dad67f9d8236b4 files/kudzu-knoppix-1.1.36-nonls-v4.patch 1781
+MD5 0f546a1fe4121a5b22b21ab5eb53819f files/kudzu.conf.d 137
+MD5 2095589c4ddc3ed3d8972ebcea3d04bf files/kudzu.rc 302
+MD5 5310a8dffb3e81e7c81fccd43d0ce18d files/digest-kudzu-knoppix-1.1.36-r2 74
