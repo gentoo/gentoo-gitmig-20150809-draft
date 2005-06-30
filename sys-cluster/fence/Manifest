@@ -1,10 +1,16 @@
-MD5 458a3f7bbb15b94860e31c6fa7bffb86 fence-1.1.ebuild 669
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 02c88b22ed5e75be1fe1e7506df80b3e ChangeLog 1494
-MD5 cb94b196d62bc3893e450a7fc41602f0 fence-1.25.ebuild 703
-MD5 aa574c04123a95b27d1703aa16c3fdb9 fence-1.00.00.ebuild 810
-MD5 0525a754475de417bde039d1d5ea1b02 files/digest-fence-1.1 60
-MD5 f01eba53626c01082acd57e7a8caa414 files/digest-fence-1.25 61
+MD5 513a9823d0f15f2f84bd83a8616ae9ba ChangeLog 1691
+MD5 470f1a0658b24a7f5fb73f60536a1e0b fence-1.00.00.ebuild 791
 MD5 965225021b3b8d5a293a4d94d5ea4550 files/fenced.rc 1589
 MD5 847b16e549d8f4bf1f496454d7d653ad files/fenced.conf 263
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-fence-1.00.00 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCw/e1gMUyd/cdjWsRAuQPAKCQTKQAQoGWwts3v2eLhIR52ffJJQCgkJuI
+FfZZZzLl2ElpRRf9/VcKOBM=
+=NGBU
+-----END PGP SIGNATURE-----
