@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.2.3.ebuild,v 1.3 2005/06/30 16:56:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.2.8.ebuild,v 1.1 2005/06/30 16:56:40 mkennedy Exp $
 
 inherit elisp
 
