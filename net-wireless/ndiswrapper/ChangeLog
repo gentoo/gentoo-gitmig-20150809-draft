@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.24 2005/06/30 21:31:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.25 2005/06/30 22:13:26 cardoe Exp $
+
+  30 Jun 2005; Doug Goldstein <cardoe@gentoo.org> ndiswrapper-1.2.ebuild:
+  Changed CONFIG_CHECK cause it appeared it might have been failing for a 
+  user.
 
 *ndiswrapper-1.2 (30 Jun 2005)
 

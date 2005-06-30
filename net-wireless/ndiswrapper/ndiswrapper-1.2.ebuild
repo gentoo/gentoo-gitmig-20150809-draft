@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2.ebuild,v 1.1 2005/06/30 21:31:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2.ebuild,v 1.2 2005/06/30 22:13:26 cardoe Exp $
 
 inherit linux-mod eutils
 
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/${P}
 
-CONFIG_CHECK="${CONFIG_CHECK} NET_RADIO"
+CONFIG_CHECK="NET_RADIO"
 
 MODULE_NAMES="ndiswrapper(misc:${S}/driver)"
 BUILD_PARAMS="KSRC=${ROOT}${KV_DIR} KVERS=${KV_MAJOR}${KV_MINOR}"
