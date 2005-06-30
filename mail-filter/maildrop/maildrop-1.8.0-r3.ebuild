@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.9 2005/06/05 11:57:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.10 2005/06/30 17:21:41 agriffis Exp $
 
 inherit eutils gnuconfig
 
@@ -61,11 +61,12 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if use gdbm ; then
+	if use gdbm; then
 		myconf="${myconf} --with-db=gdbm"
+	elif use berkdb; then
+		myconf="${myconf} --with-db=db"
 	else
-		[ use berkdb ] &&  myconf="${myconf} --with-db=db" || \
-			myconf="${myconf} --without-db"
+		myconf="${myconf} --without-db"
 	fi
 
 	if ! use mysql && ! use postgres && ! use ldap ; then

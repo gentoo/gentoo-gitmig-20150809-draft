@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.33 2005/06/23 11:16:51 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.34 2005/06/30 17:21:41 agriffis Exp $
+
+  30 Jun 2005; Aron Griffis <agriffis@gentoo.org> maildrop-1.8.0-r3.ebuild:
+  Fix use invocation
 
 *maildrop-1.8.1 (23 Jun 2005)
 
