@@ -59,7 +59,6 @@ move dev-java/javahelp dev-java/javahelp-bin
 move dev-java/jess dev-java/jess-bin
 move dev-java/jmf dev-java/jmf-bin
 move dev-java/maven dev-java/maven-bin
-move dev-java/saxon dev-java/saxon-bin
 move dev-java/snipsnap dev-java/snipsnap-bin
 move dev-java/sun-java3d dev-java/sun-java3d-bin
 move net-www/boa www-servers/boa
