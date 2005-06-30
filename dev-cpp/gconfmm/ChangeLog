@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.24 2005/05/18 12:02:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.25 2005/06/30 11:29:52 azarah Exp $
+
+  30 Jun 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/gconfmm-2.6.1-amd64-gcc4.patch, gconfmm-2.6.1.ebuild:
+  Fix building on amd64 with gcc4.
 
   18 May 2005; Markus Rothe <corsair@gentoo.org> gconfmm-2.0.2.ebuild,
   gconfmm-2.6.1.ebuild:
