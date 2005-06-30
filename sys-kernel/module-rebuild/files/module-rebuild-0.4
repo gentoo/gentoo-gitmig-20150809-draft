@@ -12,7 +12,7 @@ if [[ `id -u` != 0 ]]; then
 	exit 1
 fi
 
-R_VERSION="0.3"
+R_VERSION="0.4"
 R_MODULES="${ROOT}/usr/share/module-rebuild/moduledb"
 R_PORTAGEQ="`which portageq 2>/dev/null`"
 if [[ -z ${R_PORTAGEQ} ]]; then
@@ -21,12 +21,8 @@ if [[ -z ${R_PORTAGEQ} ]]; then
 fi
 R_PORTDIR=`${R_PORTAGEQ} portdir`
 R_VDBPATH=`${R_PORTAGEQ} vdb_path`
-
-
-C_BOLD='\e[1m'
-C_NORM='\e[0m'
-C_GREEN='\e[32m'
-C_RED='\e[31m'
+R_OPTION_X=0;
+R_OPTION_C=0;
 
 package_valid() {
 	local package=${1}
@@ -118,7 +114,13 @@ db_module_list() {
 		auto=${pkg/:*}
 		pkg=${pkg/*:}
 		
-		package_valid_strict ${pkg} && pkg="=${pkg}"
+		if [[ ${R_OPTION_X} == 1 ]]; then
+			pkg=${pkg%-[0-9]*}
+			package_valid ${pkg}
+		else
+			package_valid_strict ${pkg} && pkg="=${pkg}"
+		fi
+
 		if [[ ${auto} = 1 ]]; then
 			tomerge[${a}]=${pkg}
 			a=$((${a} + 1))
@@ -201,8 +203,13 @@ db_module_merge() {
 
 phelp() {
 cat << EOF
-module-rebuild action [category/package]
+module-rebuild [options] action [category/package]
 Version: ${R_VERSION}
+
+Where options are:
+	-X       - Emerge based on package names,
+	           not exact versions.
+	-C       - Disable all coloured output.
 
 Where action is one of:
 	add      - Add package to moduledb.
@@ -236,13 +243,41 @@ check_validity() {
 	fi
 }
 
-method="${1}"
-case ${method} in
-	add)		check_validity ${2} 1; db_module_add ${2};;
-	del)		check_validity ${2}; db_module_del ${2};;
-	toggle)		check_validity ${2}; db_module_toggle ${2};;
+while getopts "XC" options; do
+	case ${options} in
+		X) R_OPTION_X='1';;
+		C) R_OPTION_C='1';;
+		*) phelp; exit 1;;
+	esac
+done
+
+if [[ ${R_OPTION_C} == 0 ]]; then
+	C_BOLD='\e[1m'
+	C_NORM='\e[0m'
+	C_GREEN='\e[32m'
+	C_RED='\e[31m'
+else
+	C_BOLD=''
+	C_NORM=''
+	C_GREEN=''
+	C_RED=''
+fi
+
+x=0
+for i in ${@:${OPTIND}}; do
+	if [[ ${i:0:1} != - ]]; then
+		R_PARAMS[${x}]=${i}
+		x=$((${x} + 1))
+	fi
+done
+unset i x
+
+case ${R_PARAMS[0]} in
+	add)		check_validity ${R_PARAMS[1]} 1; db_module_add ${R_PARAMS[1]};;
+	del)		check_validity ${R_PARAMS[1]}; db_module_del ${R_PARAMS[1]};;
+	toggle)		check_validity ${R_PARAMS[1]}; db_module_toggle ${R_PARAMS[1]};;
 	list)		db_module_list;;
 	rebuild)	db_module_merge;;
 	populate)	db_module_populate;;
-	*)			phelp;;
+	*)			phelp; exit 1;;
 esac

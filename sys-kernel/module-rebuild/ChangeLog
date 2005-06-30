@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/module-rebuild
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.4 2005/06/30 17:27:02 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.5 2005/06/30 20:27:31 johnm Exp $
+
+*module-rebuild-0.4 (30 Jun 2005)
+
+  30 Jun 2005; John Mylchreest <johnm@gentoo.org> -files/module-rebuild-0.3,
+  +files/module-rebuild-0.4, -module-rebuild-0.3.ebuild,
+  +module-rebuild-0.4.ebuild:
+  adding support for -X (package-names) for brix. Adding support for -C (no
+  colour).
 
 *module-rebuild-0.3 (30 Jun 2005)
 
