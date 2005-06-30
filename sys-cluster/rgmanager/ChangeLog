@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/rgmanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/ChangeLog,v 1.1 2005/03/10 14:01:24 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/ChangeLog,v 1.2 2005/06/30 23:24:49 xmerlin Exp $
+
+*rgmanager-1.00.00 (01 Jul 2005)
+
+  01 Jul 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  -files/rgmanager-1.9.4-errno.patch, +rgmanager-1.00.00.ebuild,
+  -rgmanager-1.9.4.ebuild:
+  1.00.00 tree in portage. Removed old ebuilds.
 
 *rgmanager-1.9.4 (10 Mar 2005)
 

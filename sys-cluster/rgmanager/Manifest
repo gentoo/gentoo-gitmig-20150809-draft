@@ -1,15 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c11ab684bb6523cf7e061126fe58790f rgmanager-1.9.4.ebuild 761
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 60e17af0566701f65eb4c5365e66eb05 ChangeLog 400
-MD5 11edae7453d66a837327d707d2569387 files/rgmanager-1.9.4-errno.patch 291
-MD5 53e754551f7c8b915a750028a7e613b0 files/digest-rgmanager-1.9.4 67
+MD5 e2b655b34523f8231f91c9df46ba4568 ChangeLog 629
+MD5 cd7e932bd3e7b7e8f560a2a5ad6e03b6 rgmanager-1.00.00.ebuild 823
+MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-rgmanager-1.00.00 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMFn8gMUyd/cdjWsRAutAAJ9Cm3YPrIguslpedlquwohDQ4fDjgCglAkw
-G86v3jR7j9fE1jigiKY3PF8=
-=MfDn
+iD8DBQFCxH94gMUyd/cdjWsRAt9QAJ4jKIJ7gFpz2iEtXew0JQnv6AAChwCdFUVE
+KsDK5Ic/HJTyAW6jeysD7Ak=
+=zNfM
 -----END PGP SIGNATURE-----
