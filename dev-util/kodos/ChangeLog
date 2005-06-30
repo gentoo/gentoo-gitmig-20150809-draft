@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kodos
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kodos/ChangeLog,v 1.12 2005/06/29 22:06:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kodos/ChangeLog,v 1.13 2005/06/30 13:12:41 gustavoz Exp $
+
+  30 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> kodos-2.4.5-r1.ebuild:
+  Stable on sparc
 
   29 Jun 2005; Carsten Lohrke <carlo@gentoo.org> kodos-2.4.5-r1.ebuild:
   stable on x86
