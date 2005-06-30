@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.32 2005/06/04 17:29:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.33 2005/06/30 11:25:35 azarah Exp $
+
+  30 Jun 2005; Martin Schlemmer <azarah@gentoo.org>
+  libgnomecanvasmm-2.6.1.ebuild:
+  Fix typo in amd64 auto* stuff.  Reorder them properly.
 
   04 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   libgnomecanvasmm-2.6.1.ebuild:

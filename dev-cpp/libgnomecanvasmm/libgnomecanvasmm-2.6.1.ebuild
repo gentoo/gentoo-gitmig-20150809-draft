@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.6.1.ebuild,v 1.14 2005/06/04 17:29:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.6.1.ebuild,v 1.15 2005/06/30 11:25:35 azarah Exp $
 
 inherit gnome2
 
@@ -23,12 +23,13 @@ DOCS="AUTHORS COPYING ChangeLog NEWS README TODO INSTALL"
 
 src_compile() {
 
-	if [ use amd64 ]; then
-		aclocal -I scrips
-		automake -c -f
-		autoconf
+	if useq amd64; then
 		libtoolize --copy --force
+		aclocal -I scripts
+		autoconf
+		automake -c -f
 	fi
+
 	gnome2_src_compile
 
 }
