@@ -1,7 +1,17 @@
-MD5 295ec68ba63c83b355dcdc808efffdac kcdlabel-2.12-r1.ebuild 659
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4eaf0d1482f1e3c4b94cd8baa3dd45cb kcdlabel-2.12.ebuild 569
-MD5 2501ec488ad3c9c1987a0db5d8c3861e ChangeLog 1832
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 59fc0565c999454218df3527a7a9bbc3 ChangeLog 1935
+MD5 8bcee8c56c0cc6629545e35b1ace5ee8 kcdlabel-2.12-r1.ebuild 662
 MD5 c235b43131df0245020f8a24928925e8 files/digest-kcdlabel-2.12 70
 MD5 e3942bbddf2d997a5bfe13b0c4cb79b6 files/kcdlabel-2.12-configure-arts.patch 3478
 MD5 c235b43131df0245020f8a24928925e8 files/digest-kcdlabel-2.12-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCw+8NKRy60XGEcJIRAve4AJ0cbgD3Xye5qkSktKkPvi0GPA27+gCaAmei
+yIqX2qXxlf0ENH2b2oXzgMw=
+=M104
+-----END PGP SIGNATURE-----
