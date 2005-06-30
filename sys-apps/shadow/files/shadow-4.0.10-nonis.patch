@@ -1,0 +1,53 @@
+--- src/login_nopam.c
++++ src/login_nopam.c
+@@ -50,7 +50,9 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>		/* for inet_ntoa() */
+ extern struct group *getgrnam ();
++#ifdef USE_NIS
+ extern int innetgr ();
++#endif
+ 
+ #if !defined(MAXHOSTNAMELEN) || (MAXHOSTNAMELEN < 64)
+ #undef MAXHOSTNAMELEN
+@@ -187,6 +189,7 @@
+ 	return (name);
+ }
+ 
++#ifdef USE_NIS
+ /* netgroup_match - match group against machine or user */
+ 
+ static int
+@@ -203,6 +206,7 @@
+ 
+ 	return innetgr (group, machine, user, mydomain);
+ }
++#endif
+ 
+ /* user_match - match a username against one token */
+ 
+@@ -226,8 +230,10 @@
+ 		*at = 0;
+ 		return (user_match (tok, string)
+ 			&& from_match (at + 1, myhostname ()));
++#ifdef USE_NIS
+ 	} else if (tok[0] == '@') {	/* netgroup */
+ 		return (netgroup_match (tok + 1, (char *) 0, string));
++#endif
+ 	} else if (string_match (tok, string)) {	/* ALL or exact match */
+ 		return (YES);
+ 	} else if ((group = getgrnam (tok))) {	/* try group membership */
+@@ -285,9 +291,13 @@
+ 	 * if it matches the head of the string.
+ 	 */
+ 
++#ifdef USE_NIS
+ 	if (tok[0] == '@') {	/* netgroup */
+ 		return (netgroup_match (tok + 1, string, (char *) 0));
+ 	} else if (string_match (tok, string)) {	/* ALL or exact match */
++#else
++	if (string_match (tok, string)) {	/* ALL or exact match */
++#endif
+ 		return (YES);
+ 	} else if (tok[0] == '.') {	/* domain: match last fields */
+ 		if ((str_len = strlen (string)) > (tok_len = strlen (tok))

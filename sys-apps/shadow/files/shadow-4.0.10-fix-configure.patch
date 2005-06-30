@@ -1,0 +1,24 @@
+Fix wrong var name
+
+--- configure.in
++++ configure.in
+@@ -165,7 +165,7 @@ AC_DEFINE_UNQUOTED(_UTMP_FILE, "$shadow_
+ 
+ AC_CACHE_CHECK([location of faillog/lastlog/wtmp], shadow_cv_logdir,
+ [for shadow_cv_logdir in /var/log /var/adm /usr/adm /etc; do
+-	if test -d $logdir; then
++	if test -d $shadow_cv_logdir; then
+ 		break
+ 	fi
+ done])
+--- configure
++++ configure
+@@ -22349,7 +22348,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   for shadow_cv_logdir in /var/log /var/adm /usr/adm /etc; do
+-	if test -d $logdir; then
++	if test -d $shadow_cv_logdir; then
+ 		break
+ 	fi
+ done
