@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 65cabcea782bbf9344c84c1bb6561041 AppConfig-1.56-r2.ebuild 1131
 MD5 2defeec291ade354e5d323a92d5da1ff AppConfig-1.56-r1.ebuild 654
-MD5 9f665715c9b5bbaa6d660b791f824d2a AppConfig-1.56-r2.ebuild 1117
-MD5 bd3da80e857ddafbfc2d65cb324abe5a ChangeLog 2418
+MD5 25521ed74e1ceb9ac6d91f36960d954c ChangeLog 2550
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3ff95f843a1d73e04b9d80345b372343 files/AppConfig-1.52-gentoo.diff 2204
 MD5 7d66af0eceb608490f6fbc44a1c8407e files/blocksep.patch 3053
@@ -13,7 +13,7 @@ MD5 cd9d4e331a460c62cbefa6c1eac51119 files/digest-AppConfig-1.56-r2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFClJKgtG5z4I8BtQoRAv4cAJsFae3RKLxrQQvN00oqr2miROAW3QCeIvjJ
-pBlgUSCQiIHFO/lbKMsiUCE=
-=AX3j
+iD8DBQFCw9e+tG5z4I8BtQoRAlAQAJ4vLTcgXrx/6gRmsAtMMAUzRRUuBwCfQFpY
+3xPBIlowHn0OaJY7mgb2Dxk=
+=gryV
 -----END PGP SIGNATURE-----
