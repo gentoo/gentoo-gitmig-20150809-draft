@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.65 2005/06/10 20:57:31 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.66 2005/06/30 00:01:07 pylon Exp $
+
+*cdrdao-1.2.0 (29 Jun 2005)
+
+  29 Jun 2005; Lars Weiler <pylon@gentoo.org> +cdrdao-1.2.0.ebuild:
+  Version bump.  Needed for security bug #92494.
 
   10 Jun 2005; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.9-r2.ebuild:
   Added local useflag pccts. Without it cdrdao will build with the internal
