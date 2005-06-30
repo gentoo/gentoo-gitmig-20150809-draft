@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.2 2005/06/30 13:26:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.3 2005/06/30 13:29:13 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -43,8 +43,3 @@ qt3_min_version_list() {
 	
 	echo -n $VERSIONS
 }
-
-qt3_min_version 3.0.0
-qt3_min_version 3.3
-qt3_min_version 3.0.5
-qt3_min_version 3.1.2-r3
