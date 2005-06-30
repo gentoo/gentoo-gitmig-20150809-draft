@@ -1,22 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3438ca9c45b6bbc220e7cf42449163bb ChangeLog 4489
-MD5 1d99e796eb907223245905e3b1f3d722 gnome-libs-1.4.1.6.ebuild 1853
-MD5 7bed2a056adc1898e1cc6addab07ff81 gnome-libs-1.4.1.7.ebuild 1512
 MD5 80579102bff1fdf4d389a63ae51ce128 gnome-libs-1.4.2.ebuild 2486
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 3a9b07232c2e27a44a8b3b3a83a9d696 files/digest-gnome-libs-1.4.1.6 72
-MD5 f699a38c77fa9c8d30de6e1c9d4ba7c0 files/digest-gnome-libs-1.4.1.7 72
 MD5 e0991b18209dfd87a7d6f2ed771dc00b files/digest-gnome-libs-1.4.2 70
 MD5 f331a840d47fda5b17211d968f974f14 files/gnome-libs-1.4.2-gtkdoc_fixes.patch 1089
-MD5 275bc3267f2d6a2ba6f02b7db3cf28de files/no-libdb-check.diff 11481
 MD5 fb16550517db1b4f3993031c0695cc31 files/gnome-libs-1.4.2-m4.patch 274
 MD5 a49f7096a16de9d5e0f310cdf845a189 files/gnome-libs-1.4.2-gcc4.patch 530
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmkaACRZPokWLroQRArPgAJ93NXyssVrWmN2i6UolznDqXy2wDgCdGNVG
-O1izGxta5+17zs7It5CvJMo=
-=D9d0
------END PGP SIGNATURE-----
