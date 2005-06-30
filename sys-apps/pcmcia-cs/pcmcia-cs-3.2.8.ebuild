@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8.ebuild,v 1.9 2005/06/30 08:58:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8.ebuild,v 1.10 2005/06/30 09:11:47 brix Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ppc x86"
 IUSE="gtk gtk2 trusted X xforms"
 DEPEND="virtual/linux-sources
 		>=sys-apps/sed-4"
-RDEPEND="X? ( virtual/x11
+RDEPEND="!sys-apps/pcmcia-cs-cis
+			X? ( virtual/x11
 			gtk? ( gtk2? ( =x11-libs/gtk+-2*
 						   dev-util/pkgconfig )
 				    !gtk2? ( =x11-libs/gtk+-1* ) )
