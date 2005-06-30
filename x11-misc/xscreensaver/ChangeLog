@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.90 2005/06/24 23:09:16 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.91 2005/06/30 16:53:52 smithj Exp $
+
+*xscreensaver-4.22-r2 (30 Jun 2005)
+
+  30 Jun 2005; Jonathan Smith <smithj@gentoo.org>
+  +xscreensaver-4.22-r2.ebuild:
+  #97253: removed gnome USE flag and added new-login USE
 
 *xscreensaver-4.22-r1 (24 Jun 2005)
 
