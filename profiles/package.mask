@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4146 2005/06/30 18:31:33 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4147 2005/06/30 23:06:17 pyrania Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Markus Nigbur <pYrania@gentoo.org> (01 Jul 2005)
+# Masked due to a pretty big bug with crosscompile support.
+sys-devel/distcc-2.18.3-r8
 
 # Colin Kingsley <tercel@gentoo.org> (30 Jun 2005)
 # Major revisions. Masked for testing.
