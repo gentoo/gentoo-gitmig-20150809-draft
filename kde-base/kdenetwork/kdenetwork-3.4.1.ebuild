@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.4.1.ebuild,v 1.4 2005/06/29 20:43:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.4.1.ebuild,v 1.5 2005/06/30 19:21:08 danarmak Exp $
 
 inherit kde-dist
 
@@ -23,6 +23,10 @@ RDEPEND="${DEPEND}
 # IO-Socket-SSL: for SSL support in KSirc.
 
 PATCHES="$FILESDIR/wireless-extensions-api.diff" # In cvs, remove for 3.4.2
+
+# No meanwhile support in kopete. See bug 96778.
+PATCHES="$PATCHES $FILESDIR/disable-meanwhile.diff"
+
 
 src_compile() {
 	myconf="$(use_enable slp)"

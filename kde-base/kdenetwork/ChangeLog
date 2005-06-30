@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.144 2005/06/29 20:43:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.145 2005/06/30 19:21:08 danarmak Exp $
+
+  30 Jun 2005; Dan Armak <danarmak@gentoo.org>
+  +files/disable-meanwhile.diff, kdenetwork-3.4.1.ebuild:
+  Force meanwhile support to off. It was unpredictable, was missing a dep, and
+  broke compilation with meanwhile >=0.4. Bug 96778.
 
   29 Jun 2005; Dan Armak <danarmak@gentoo.org>
   +files/wireless-extensions-api.diff, kdenetwork-3.4.1.ebuild:
