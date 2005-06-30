@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.7-r3.ebuild,v 1.1 2005/04/12 19:09:07 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.7-r3.ebuild,v 1.2 2005/06/30 08:58:18 brix Exp $
 
 inherit linux-info eutils
 
@@ -21,6 +21,7 @@ RDEPEND=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ppc amd64 ~mips"
+PROVIDE="virtual/pcmcia"
 
 src_unpack() {
 	unpack ${P}.tar.gz || die "unpack failed"
