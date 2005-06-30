@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.37.ebuild,v 1.12 2005/06/28 22:44:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.37.ebuild,v 1.13 2005/06/30 02:27:04 kumba Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/e2fsprogs/e2fsprogs-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="nls"
 
 RDEPEND=""
