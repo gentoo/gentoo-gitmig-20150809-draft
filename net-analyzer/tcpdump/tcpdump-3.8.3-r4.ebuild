@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r3.ebuild,v 1.8 2005/06/11 08:17:08 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r4.ebuild,v 1.1 2005/06/30 14:13:21 ka0ttic Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -23,6 +23,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.patch
 	epatch ${FILESDIR}/${P}-gcc4.patch
 	epatch ${FILESDIR}/${P}-bgp-infinite-loop2.patch
+
+	if use ssl ; then
+		sed -i -e 's|des\(_cbc_encrypt\)|DES\1|' ${S}/configure || \
+			die "sed configure failed"
+	fi
 }
 
 src_compile() {
@@ -36,7 +41,9 @@ src_compile() {
 		append-flags -fno-unit-at-a-time #48747
 	fi
 
-	econf $(use_with ssl crypto) $(use_enable ipv6) || die
+	local myconf
+	use ssl || myconf="${myconf} --without-crypto"
+	econf $(use_enable ipv6) ${myconf} || die
 	make CCOPT="$CFLAGS" || die
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.51 2005/06/11 08:17:08 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.52 2005/06/30 14:13:21 ka0ttic Exp $
+
+*tcpdump-3.8.3-r4 (30 Jun 2005)
+
+  30 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> -tcpdump-3.8.3-r2.ebuild,
+  -tcpdump-3.8.3-r3.ebuild, +tcpdump-3.8.3-r4.ebuild:
+  Revision bump; previous ebuilds do not enable SSL with USE=ssl, bug 97471.
+  Tidy old ebuilds.
 
   11 Jun 2005; Yuta SATOH <nigoro@gentoo.org> tcpdump-3.8.3-r3.ebuild:
   Stable on ppc64, bug #95349
