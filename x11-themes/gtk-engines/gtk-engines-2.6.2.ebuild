@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.6.2.ebuild,v 1.2 2005/06/04 20:22:30 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.6.2.ebuild,v 1.3 2005/06/30 23:21:55 leonardop Exp $
 
 inherit gtk-engines2 gnuconfig
 
 GTK1_VER="0.12"
 GTK2_VER="${PV}"
-PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+PVP=(${PV//[-._]/ })
 
 DESCRIPTION="GTK+1 and GTK+2 Theme Engines from GNOME including Pixmap, Metal, Raleigh, Redmond95, Raleigh and Notif"
 SRC_URI="mirror://gnome/sources/${PN}/${GTK1_VER}/${PN}-${GTK1_VER}.tar.gz
@@ -26,11 +26,6 @@ DEPEND="${DEPEND}
 	!x11-themes/gtk-engines-smooth
 	!>=x11-themes/gtk-engines-thinice-2
 	!<=x11-themes/gnome-themes-2.8.2"
-
-#PROVIDE="x11-themes/gtk-engines-metal 
-#	x11-themes/gtk-engines-pixbuf 
-#	x11-themes/gtk-engines-raleigh
-#	x11-themes/gtk-engines-redmond95"
 
 [ -n "${HAS_GTK1}" ] && DEPEND="${DEPEND} >=media-libs/imlib-1.8"
 
