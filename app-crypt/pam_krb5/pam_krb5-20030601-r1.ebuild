@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/pam_krb5-20030601-r1.ebuild,v 1.1 2005/01/28 20:13:13 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/pam_krb5-20030601-r1.ebuild,v 1.2 2005/06/30 22:53:12 rphillips Exp $
 
 inherit eutils
 
@@ -25,6 +25,9 @@ S="${WORKDIR}/${MY_PN}-${MY_PV}"
 
 src_unpack() {
 	unpack ${A}
+
+	# bug #66919
+	epatch ${FILESDIR}/${P}-defaultrealm.patch
 }
 
 src_compile() {
