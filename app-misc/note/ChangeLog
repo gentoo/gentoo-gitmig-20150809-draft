@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/note
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/ChangeLog,v 1.8 2005/06/05 11:53:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/ChangeLog,v 1.9 2005/06/30 22:01:34 rphillips Exp $
+
+*note-1.3.1 (30 Jun 2005)
+
+  30 Jun 2005; <rphillips@gentoo.org> +note-1.3.1.ebuild:
+  version bump. Thanks to Bertrand Jacquin
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> note-1.2.5-r1.ebuild:
   Stable on ppc.
