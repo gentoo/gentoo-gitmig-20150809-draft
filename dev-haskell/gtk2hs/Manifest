@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aa6683db85f72543c90c40c04a62a450 gtk2hs-0.9.8.ebuild 2721
-MD5 0d469baff6f815f740a1cf80d2da9d0e gtk2hs-0.9.7.ebuild 2835
-MD5 90402f2cf22e7bfee70addeb5e32a22f ChangeLog 1633
+MD5 1ef6e548264b077dc48aee4265e772f5 ChangeLog 1715
 MD5 5cf11c08544b065d0144e11273f0000d metadata.xml 223
 MD5 785d6c4be9c0d72fcc6f890a83cf601d gtk2hs-0.9.6-r1.ebuild 2698
-MD5 690f4192d427c43531d990e34ff0ad0b files/gtk2hs-0.9.7-ghc64.patch.gz 6986
-MD5 6f7aca1981bfbd6384c83cea70a1e20c files/digest-gtk2hs-0.9.7 64
-MD5 3b88c846dd87e7256e9396fbe9682f1f files/digest-gtk2hs-0.9.8 64
+MD5 0d469baff6f815f740a1cf80d2da9d0e gtk2hs-0.9.7.ebuild 2835
+MD5 3386a679e722fb5781893afd152786f6 gtk2hs-0.9.8.ebuild 2689
 MD5 96674cbaf4f6bddf1517166b6e6f13a5 files/digest-gtk2hs-0.9.6-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCu6AXkyZuKN4EQ6YRAoH/AJwLKBKjJ4CsdKfxFSmiMVTWRhXIZwCfbq7I
-KnUFrGZXZ1XKlNQ3fO2ivMk=
-=qKq5
------END PGP SIGNATURE-----
+MD5 6f7aca1981bfbd6384c83cea70a1e20c files/digest-gtk2hs-0.9.7 64
+MD5 690f4192d427c43531d990e34ff0ad0b files/gtk2hs-0.9.7-ghc64.patch.gz 6986
+MD5 3b88c846dd87e7256e9396fbe9682f1f files/digest-gtk2hs-0.9.8 64
