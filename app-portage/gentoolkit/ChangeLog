@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.45 2005/06/24 14:03:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.46 2005/06/30 02:48:47 fuzzyray Exp $
+
+*gentoolkit-0.2.1_pre4 (30 Jun 2005)
+
+  30 Jun 2005; Paul Varner <fuzzyray@gentoo.org>
+  +gentoolkit-0.2.1_pre4.ebuild:
+  Revision bump to fix bug 97171
 
   24 Jun 2005; Aron Griffis <agriffis@gentoo.org>
   gentoolkit-0.2.1_pre3.ebuild:
@@ -196,7 +202,7 @@
   gentoolkit-0.1.32-r1.ebuild, files/scripts/revdep-rebuild:
   Fixed --help, patch submitted by Stanislav Brabec <utx@gentoo.org>:
   Properly documented --soname behaviour (bug #30187), Preserve temporary 
-  files for --fetchonly, too (idea from Henryk Plötz <henryk@ploetzli.ch>)
+  files for --fetchonly, too (idea from Henryk PlÃ¶tz <henryk@ploetzli.ch>)
   
 *gentoolkit-0.1.32 (17 Oct 2003)
 
