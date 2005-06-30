@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.0_rc5.ebuild,v 1.1 2005/05/26 18:27:33 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.0_rc5.ebuild,v 1.2 2005/06/30 14:28:45 ka0ttic Exp $
 
 inherit flag-o-matic versionator
 
@@ -47,4 +47,6 @@ src_install() {
 	insinto /etc/conf.d
 	insopts -m 644
 	newins ${FILESDIR}/gentoo.conf prelude-manager
+
+	keepdir /var/lib/spool/prelude-manager
 }

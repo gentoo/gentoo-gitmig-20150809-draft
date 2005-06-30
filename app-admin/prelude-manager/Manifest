@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 40be6dfef08d7c6a24715d87578cdbc2 prelude-manager-0.9.0_rc5.ebuild 1346
+MD5 55f4db3d53cac7019362501e98c95bdd prelude-manager-0.9.0_rc5.ebuild 1387
 MD5 abcbad71bd50bb198800aa54b1cddcfb prelude-manager-0.8.10.ebuild 1587
-MD5 e09c5a279ba299dd294d58563d3bf4b7 ChangeLog 2624
+MD5 c882921a0709ac1ac541024f8055d443 ChangeLog 2763
 MD5 ee733e3e3fd25b8baf496cf157ceec87 metadata.xml 214
 MD5 0058897bc2efe34eeed45b5cf5a2bcd6 files/gentoo.conf 174
 MD5 3222b66939d63807ff3edf15d89a33ca files/gentoo.init 571
@@ -12,7 +12,7 @@ MD5 ac0e6afe0daa939e9f9774091cc6dc21 files/digest-prelude-manager-0.9.0_rc5 77
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClhUtEZCkKN40op4RAvK3AJ0dTW5c4mlXMGgSO2DU/+l61r6/pQCfRIby
-ljPA1uos/u6a10zL0HvB6+8=
-=ioyQ
+iD8DBQFCxAGyEZCkKN40op4RAvbGAJ9T4wVLVMVEbv2jEf9qTUyXSoh3AgCdFRgB
+55nnXXeerWNU6TdzoGK2cKM=
+=TG/G
 -----END PGP SIGNATURE-----

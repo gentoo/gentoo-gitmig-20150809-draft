@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/prelude-manager
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.17 2005/05/26 18:27:33 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.18 2005/06/30 14:28:45 ka0ttic Exp $
+
+  30 Jun 2005; Aaron Walker <ka0ttic@gentoo.org>
+  prelude-manager-0.9.0_rc5.ebuild:
+  keepdir /var/lib/spool/prelude-manager, bug 94740.
 
 *prelude-manager-0.9.0_rc5 (26 May 2005)
 
