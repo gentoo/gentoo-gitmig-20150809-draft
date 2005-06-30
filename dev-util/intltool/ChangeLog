@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.58 2005/04/01 05:37:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.59 2005/06/30 20:56:31 leonardop Exp $
+
+*intltool-0.33 (30 Jun 2005)
+
+  30 Jun 2005; Leonardo Boshell <leonardop@gentoo.org> intltool-0.33.ebuild:
+  New release, resolving bug #96955.
+
+  30 Jun 2005; Leonardo Boshell <leonardop@gentoo.org> intltool-0.32.1.ebuild:
+  Stable on x86.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> intltool-0.32.1.ebuild:
   stable on ia64
