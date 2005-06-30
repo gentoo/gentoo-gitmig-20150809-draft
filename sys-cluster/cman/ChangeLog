@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/cman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.13 2005/03/25 16:15:21 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.14 2005/06/30 13:22:22 xmerlin Exp $
+
+  30 Jun 2005; Christian Zoffoli <xmerlin@gentoo.org> -cman-1.0_pre3.ebuild,
+  -cman-1.0_pre31.ebuild:
+  1.00.00 tree in portage. Removed old ebuilds.
 
   25 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/cman.rc,
   cman-1.0_pre31.ebuild:
