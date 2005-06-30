@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/phpBB
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.13 2005/05/12 19:21:01 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.14 2005/06/30 13:09:26 rl03 Exp $
+
+*phpBB-2.0.16 (30 Jun 2005)
+
+  30 Jun 2005; Renat Lumpau <rl03@gentoo.org>
+  files/2.0.10-postinstall-en.txt, +phpBB-2.0.16.ebuild:
+  Version bump. Fix #97278.
 
   12 May 2005; Lars Weiler <pylon@gentoo.org> phpBB-2.0.15.ebuild:
   Stable on ppc; bug #90213.
