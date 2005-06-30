@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/clvm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.4 2005/03/26 14:31:27 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.5 2005/06/30 23:31:13 xmerlin Exp $
+
+*clvm-2.01.09 (01 Jul 2005)
+
+  01 Jul 2005; Christian Zoffoli <xmerlin@gentoo.org> -clvm-2.00.33.ebuild,
+  +clvm-2.01.09.ebuild:
+  clvm-2.01.09 added to portage, removed old ebuild
 
   26 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> clvm-2.00.33.ebuild:
   fixed url
