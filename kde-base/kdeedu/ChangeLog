@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.128 2005/05/27 08:52:43 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.129 2005/06/30 15:03:43 danarmak Exp $
+
+*kdeedu-3.4.1-r10 (30 Jun 2005)
+
+  30 Jun 2005; Dan Armak <danarmak@gentoo.org> kdeedu-3.4.1.ebuild,
+  +kdeedu-3.4.1-r10.ebuild:
+  Added new revision identical to the old one, and removed kig-scripting
+  support in 3.4.1 (the old revision). The intention is to keyword only the
+  3.4.1 ebuild stable, and leave -r10 at ~arch, because the version of boost
+  necessary for kig-scripting support doesn't yet haev stable keywwords.
 
 *kdeedu-3.4.1 (27 May 2005)
 
