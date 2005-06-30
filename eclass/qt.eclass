@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.9 2005/06/30 13:53:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.10 2005/06/30 21:26:34 agriffis Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -24,20 +24,20 @@ QT3VERSIONS="3.3.4-r5 3.3.4-r4 3.3.4-r3 3.3.4-r2 3.3.4-r1 3.3.4 3.3.3-r3 3.3.3-r
 QT4VERSIONS="4.0.0"
 
 qt_pkg_setup() {
-	if has_version =x11-libs/qt-3*; then	
-		if [ ! $QTDIR ]; then
+	if has_version =x11-libs/qt-3*; then
+		if [[ -z $QTDIR ]]; then
 			QTDIR="/usr/qt/3"
 		fi
 
-   	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
-	   addpredict "$QTDIR/etc/settings"
+		[[ -d "$QTDIR/etc/settings" ]] && addwrite "$QTDIR/etc/settings"
+		addpredict "$QTDIR/etc/settings"
 	fi
 }
 
 qt_min_version() {
-	echo -n "|| ( "
-	qt_min_version_list $@
-	echo " )"
+	echo "|| ("
+	qt_min_version_list "$@"
+	echo ")"
 }
 
 qt_min_version_list() {
@@ -45,30 +45,28 @@ qt_min_version_list() {
 	local VERSIONS=""
 
 	case $MINVER in
-		3) VERSIONS="=${QTPKG}3*";;
-		3.0) VERSIONS="=${QTPKG}3*";;
-		3.0.0) VERSIONS="=${QTPKG}3*";;
-		4) VERSIONS="=${QTPKG}4*";;
-		4.0) VERSIONS="=${QTPKG}4*";;
-		4.0.0) VERSIONS="=${QTPKG}4*";;
+		3|3.0|3.0.0) VERSIONS="=${QTPKG}3*";;
+		4|4.0|4.0.0) VERSIONS="=${QTPKG}4*";;
 		3*)
 			for x in $QT3VERSIONS; do
 				if $(version_is_at_least $MINVER $x); then
 					VERSIONS="${VERSIONS} =${QTPKG}${x}"
 				fi
 			done
-		;;
+			;;
 		4*)
 			for x in $QT4VERSIONS; do
 				if $(version_is_at_least $MINVER $x); then
 					VERSIONS="${VERSIONS} =${QTPKG}${x}"
 				fi
 			done
-		;;
-      *)       echo "!!! error: qt_min_version called with invalid parameter: \"$1\", please report bug" && exit 1;;
+			;;
+		*)    
+			die "qt_min_version called with invalid parameter: \"$1\""
+			;;
 	esac
-	
-	echo -n $VERSIONS
+
+	echo "$VERSIONS"
 }
 
 EXPORT_FUNCTIONS pkg_setup
