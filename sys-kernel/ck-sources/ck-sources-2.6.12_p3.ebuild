@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.12_p2-r1.ebuild,v 1.1 2005/06/27 23:29:37 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.12_p3.ebuild,v 1.1 2005/06/30 20:07:19 marineam Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 K_NOUSENAME="yes"
 K_WANT_GENPATCHES="base"
-K_GENPATCHES_VER="3"
+K_GENPATCHES_VER="4"
 ETYPE="sources"
 inherit kernel-2
 detect_version
@@ -27,8 +27,11 @@ else
 	CK_PATCH="patch-${KV_CK}.bz2"
 fi
 
-UNIPATCH_LIST="${DISTDIR}/${CK_PATCH} ${FILESDIR}/ck-sources-2.6.12.1.patch"
+UNIPATCH_LIST="${DISTDIR}/${CK_PATCH}"
 UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE}
+	1900_pci-driver-typo.patch
+	2100_e1000-spinlock.patch
+	2300_qla2xxx-initialization.patch
 	10" #All of the 2.6.x.y patches (in ck or manual edit) start with 10
 
 DESCRIPTION="Full sources for the Stock Linux kernel and Con Kolivas's high performance patchset"
