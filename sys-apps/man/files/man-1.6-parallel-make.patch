@@ -1,0 +1,31 @@
+diff -ur man-1.6.orig/Makefile.in man-1.6/Makefile.in
+--- man-1.6.orig/Makefile.in	2005-06-30 04:38:50.000000000 -0500
++++ man-1.6/Makefile.in	2005-06-30 04:39:21.000000000 -0500
+@@ -33,13 +33,13 @@
+ source:	src/Makefile
+ 	cd src; $(MAKE)
+ 
+-manhtml: man2html/Makefile
++manhtml: man2html/Makefile source
+ 	cd man2html; $(MAKE)
+ 
+ manpages: man/Makefile
+ 	cd man; $(MAKE) subdirs
+ 
+-%messages: gencat/gencat msgs/Makefile
++%messages: gencat/gencat msgs/Makefile source
+ %	cd msgs; $(MAKE)
+ 
+ %gencat/gencat:
+diff -ur man-1.6.orig/src/Makefile.in man-1.6/src/Makefile.in
+--- man-1.6.orig/src/Makefile.in	2005-06-30 04:38:50.000000000 -0500
++++ man-1.6/src/Makefile.in	2005-06-30 04:39:21.000000000 -0500
+@@ -56,7 +56,7 @@
+ different.o man-config.o man-getopt.o man.o manpath.o: man-config.h
+ gripes.o man-config.o man-getopt.o man.o manpath.o util.o: man.h
+ man-getopt.o man.o manpath.o: man-getopt.h
+-man.o manfile.o to_cat.o: manfile.h
++man.o manfile.o to_cat.o: manfile.h gripes.h gripedefs.h
+ man.o man-iconv.o: man-iconv.h
+ man.o manpath.o: manpath.h
+ man-config.o: paths.h

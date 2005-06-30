@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.68 2005/06/30 09:50:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.69 2005/06/30 10:18:45 lu_zero Exp $
+
+  30 Jun 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/man-1.6-parallel-make.patch, man-1.6.ebuild:
+  Proper fix by Octavio Ruiz (Ta^3) <tacvbo@tacvbo.net> fixes bug #97439
 
   30 Jun 2005; Luca Barbato <lu_zero@gentoo.org> man-1.6.ebuild:
   Forced -j1 in the ebuild

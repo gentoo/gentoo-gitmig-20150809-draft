@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6.ebuild,v 1.2 2005/06/30 09:50:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6.ebuild,v 1.3 2005/06/30 10:18:45 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -23,7 +23,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Make sure we can build with -j :)
-	epatch ${FILESDIR}/man-1.5p-parallel-make.patch
+	epatch ${FILESDIR}/man-1.6-parallel-make.patch
 
 	# Fix search order in man.conf so that system installed manpages
 	# will be found first ...
@@ -54,8 +54,7 @@ src_compile() {
 		+sgid +fhs \
 		${myconf} || die "configure failed"
 
-	#Ugly workaround
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
