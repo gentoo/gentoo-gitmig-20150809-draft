@@ -1,0 +1,28 @@
+diff -ur chess-2.0b5.orig/chess-maint.el chess-2.0b5/chess-maint.el
+--- chess-2.0b5.orig/chess-maint.el	2004-02-24 05:43:42.000000000 -0600
++++ chess-2.0b5/chess-maint.el	2005-06-30 11:10:05.000000000 -0500
+@@ -4,10 +4,21 @@
+ (require 'chess)
+ (require 'chess-pgn)
+ 
++;; (defmacro assert (form)
++;;   ;; byte-compiling-files-p not available in Emacs 22
++;;   (if (< emacs-major-version 22)
++;;       (unless  (byte-compiling-files-p)
++;; 	`(unless ,form
++;; 	   (error "Assertion failed: %s" (pp-to-string ,form))))
++;;     `(unless ,form
++;;        (error "Assertion failed: %s" (pp-to-string ,form)))))
++
++;; (defmacro assert (form)
++;;   `(unless ,form
++;;      (error "Assertion failed: %s" (pp-to-string ,form))))
++
+ (defmacro assert (form)
+-  (unless (byte-compiling-files-p)
+-    `(unless ,form
+-       (error "Assertion failed: %s" (pp-to-string ,form)))))
++  t)
+ 
+ (defun chess-generate-texinfo-file ()
+   (require 'lispdoc)

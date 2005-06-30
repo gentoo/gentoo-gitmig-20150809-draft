@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta3.ebuild,v 1.10 2005/06/30 16:12:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta5.ebuild,v 1.1 2005/06/30 16:12:57 mkennedy Exp $
 
-inherit elisp
+inherit elisp eutils
 
 DESCRIPTION="A chess client and library for Emacs"
 HOMEPAGE="http://emacs-chess.sourceforge.net/"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/emacs-chess/${P/_beta/b}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 RDEPEND="${DEPEND}
@@ -24,6 +24,7 @@ SITEFILE=50chess-gentoo.el
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/${PV}-byte-compiling-files-gentoo.patch || die
 	cd ${S} && rm -f *.elc
 }
 
