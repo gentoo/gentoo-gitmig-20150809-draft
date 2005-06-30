@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/razor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.37 2005/06/30 02:38:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.38 2005/06/30 18:38:26 hansmi Exp $
+
+  30 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> razor-2.74.ebuild:
+  Stable on ppc.
 
   30 Jun 2005; Andrej Kacian <ticho@gentoo.org> razor-2.74.ebuild:
   Fixed a sandbox violation. Fix suggested by Kerin Millar <kerframil at
