@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ultimate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.14 2005/04/12 21:51:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.15 2005/06/30 15:25:35 swegener Exp $
+
+  30 Jun 2005; Sven Wegener <swegener@gentoo.org> ultimate-2.8.9.ebuild:
+  Added cross-compile support.
 
 *ultimate-3.0.1 (12 Apr 2005)
 *ultimate-2.8.9 (12 Apr 2005)
