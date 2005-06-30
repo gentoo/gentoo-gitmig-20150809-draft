@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.79 2005/06/27 16:04:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.80 2005/06/30 10:29:47 flameeyes Exp $
+
+  30 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> pam-0.77.ebuild,
+  pam-0.77-r1.ebuild, pam-0.77-r2.ebuild, pam-0.77-r3.ebuild,
+  pam-0.77-r4.ebuild, pam-0.77-r6.ebuild, pam-0.77-r7.ebuild,
+  pam-0.77-r8.ebuild, pam-0.78.ebuild, pam-0.78-r1.ebuild,
+  pam-0.78-r2.ebuild:
+  Doesn't count on ${P} for patches as the package is going to be renamed.
 
   27 Jun 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.78-r2.ebuild:
   Add /usr/lib specifically again, as at least here ldd does not return lib64
