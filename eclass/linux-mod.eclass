@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.38 2005/05/12 20:08:53 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.39 2005/06/30 08:58:55 brix Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -90,7 +90,7 @@ DESCRIPTION="Based on the $ECLASS eclass"
 DEPEND="virtual/linux-sources
 		sys-apps/sed
 		virtual/modutils
-		pcmcia? ( sys-apps/pcmcia-cs )" 
+		pcmcia? ( virtual/pcmcia )"
 
 # eclass utilities
 # ----------------------------------
