@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r10.ebuild,v 1.1 2005/06/03 09:02:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r10.ebuild,v 1.2 2005/06/30 22:45:02 vapier Exp $
 
-inherit gnuconfig flag-o-matic eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="A dhcp client only"
 HOMEPAGE="http://www.phystech.com/download/"
@@ -15,14 +15,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="build static"
 
-DEPEND="virtual/libc"
+DEPEND=""
 PROVIDE="virtual/dhcpc"
 
-S="${WORKDIR}/${P/_p/-pl}"
+S=${WORKDIR}/${P/_p/-pl}
 
 src_unpack() {
 	unpack ${A}
-	gnuconfig_update
 
 	cd "${S}"
 	#Started working on this patch from an older version I found; then
@@ -55,6 +54,12 @@ src_unpack() {
 	# creates {resolv,ntp,yp}.conf
 	epatch "${FILESDIR}"/${P}-gentoo-config.patch
 
+	# Make sure we use paths from configure rather than hardcoded crap
+	sed -i \
+		-e '/^mandir/s:=.*:=@mandir@:' \
+		-e "/^docdir/s:=.*:=@datadir@/doc/${PF}:" \
+		Makefile.in || die
+
 	# Brand dhcpcd with the gentoo version
 	sed -i '/^#define VERSION/s/"$/-gentoo-'"${PR}"'"/' dhcpcd.h
 	sed -i '/^DHCPCD_REL=/s/$/-gentoo-'"${PR}"'/' configure
@@ -69,10 +74,10 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die "Install failed"
-	rm -rf "${D}"/etc
+	rm -r "${D}"/etc
 	if ! use build ; then
 		dodoc AUTHORS ChangeLog NEWS README
 	else
-		rm -rf "${D}"/usr/share
+		rm -r "${D}"/usr/share
 	fi
 }
