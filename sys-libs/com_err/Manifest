@@ -1,5 +1,5 @@
-MD5 eca065a33af673889df2bb6a1b7023fc ChangeLog 1372
-MD5 6ac75b38c1f8553ee3299fe4c50abb58 com_err-1.37.ebuild 1964
+MD5 d82931f0886ec801654579a95a9c1f2d ChangeLog 1371
+MD5 b2f65999f7033b872f4de88f114a82ca com_err-1.37.ebuild 1963
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d26cca7efe06dba1d940abee82342487 files/com_err-1.37-makefile.patch 337
 MD5 4a7d54ccac4002d10462c40660712a72 files/com_err-1.37-sed-locale.patch 2142
