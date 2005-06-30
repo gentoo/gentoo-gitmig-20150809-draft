@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ohphone
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ohphone/ChangeLog,v 1.4 2004/07/11 12:35:02 pylon Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ohphone/ChangeLog,v 1.5 2005/06/30 17:18:55 agriffis Exp $
+
+  30 Jun 2005; Aron Griffis <agriffis@gentoo.org> ohphone-1.4.1-r1.ebuild:
+  It's really obvious this was never tested on ppc. The way the ebuild was
+  written, the ppc binary would never have been installed.
 
   11 Jul 2004; Lars Weiler <pylon@gentoo.org> ohphone-1.4.1-r1.ebuild:
   Add ~ppc to keywords.
