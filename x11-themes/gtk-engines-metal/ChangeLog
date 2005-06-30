@@ -1,13 +1,15 @@
 # ChangeLog for x11-themes/gtk-engines-metal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-metal/ChangeLog,v 1.4 2004/06/24 23:30:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-metal/ChangeLog,v 1.5 2005/06/30 20:58:09 leonardop Exp $
+
+  30 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-metal-0.12.ebuild, gtk-engines-metal-2.2.0.ebuild:
+  Fixing DESCRIPTION (bug #82464).
 
 *gtk-engines-metal-2.2.0 (31 Jan 2003)
   
   31 Jan 2003; Spider <spider@gentoo.org> gtk-engines-metal-2.2.0.ebuild :
   update to a stable release
-
-*gtk-engines-metal-1.9.0 (4 Aug 2002)
 
 *gtk-engines-metal-0.12 (4 Aug 2002)
 

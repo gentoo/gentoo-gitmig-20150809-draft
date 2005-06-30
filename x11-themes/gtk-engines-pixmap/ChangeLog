@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-pixmap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-pixmap/ChangeLog,v 1.4 2004/07/18 23:40:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-pixmap/ChangeLog,v 1.5 2005/06/30 21:04:32 leonardop Exp $
+
+  30 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-pixmap-0.12.ebuild:
+  Fixing DESCRIPTION (bug #82464).
 
   18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org>
   gtk-engines-pixmap-0.12.ebuild:
