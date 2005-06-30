@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.6 2005/06/30 13:41:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.7 2005/06/30 13:43:52 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -42,9 +42,9 @@ qt_min_version_list() {
 		3) VERSIONS="=${QTPKG}3*";;
 		3.0) VERSIONS="=${QTPKG}3*";;
 		3.0.0) VERSIONS="=${QTPKG}3*";;
-		4) VERSIONS="=${QTPKG}4*"::
-		4.0) VERSIONS="=${QTPKG}4*"::
-		4.0.0) VERSIONS="=${QTPKG}4*"::
+		4) VERSIONS="=${QTPKG}4*";;
+		4.0) VERSIONS="=${QTPKG}4*";;
+		4.0.0) VERSIONS="=${QTPKG}4*";;
 		3*)
 			for x in $QT3VERSIONS; do
 				if $(version_is_at_least $MINVER $x); then
