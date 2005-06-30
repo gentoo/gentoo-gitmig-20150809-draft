@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c99ecd84614ef0494a2cc82a83c6fef7 ChangeLog 854
-MD5 4f01a7a22502e04cbaa1b3391047bdd6 Class-DBI-mysql-0.23.ebuild 632
+MD5 ecf7fdce8f7860a471c500b28cd8be01 ChangeLog 963
+MD5 5633fcd9baf5c91ac7c8bebc8fce2822 Class-DBI-mysql-0.23.ebuild 631
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 335a45f8f36f5eb6adf9d648e90f6776 files/digest-Class-DBI-mysql-0.23 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFClJM9tG5z4I8BtQoRAmOzAJ9bvQV2HiyiFCGIxvaTVD+ML8DT9ACgklSm
-DUTePmZBHqkhGDdlkiKtyfQ=
-=ruLg
+iD8DBQFCw99NtG5z4I8BtQoRAqY3AJ9IHvo93kDZgafxadpCFvG8fD/gcwCfR4FH
+Yr43llnsEhHKOlsy0lLaUAI=
+=ccXt
 -----END PGP SIGNATURE-----
