@@ -1,0 +1,14 @@
+diff -ru ndiswrapper-1.2rc1/driver/ntoskernel.h ndiswrapper-1.2rc1-fixed/driver/ntoskernel.h
+--- ndiswrapper-1.2rc1/driver/ntoskernel.h	2005-04-12 09:53:46.000000000 -0400
++++ ndiswrapper-1.2rc1-fixed/driver/ntoskernel.h	2005-05-24 16:16:21.000000000 -0400
+@@ -170,6 +170,10 @@
+ 
+ #endif // LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
+ 
++#ifdef CONFIG_SUSPEND2
++#define CONFIG_SOFTWARE_SUSPEND2
++#endif
++
+ #ifdef CONFIG_SOFTWARE_SUSPEND2
+ #define KTHREAD_RUN(a,b,c) kthread_run(a,b,0,c)
+ #else
