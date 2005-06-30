@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.81 2005/06/29 08:04:54 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.82 2005/06/30 13:05:48 brix Exp $
+
+*vanilla-sources-2.6.12.2 (30 Jun 2005)
+
+  30 Jun 2005; <brix@gentoo.org> +vanilla-sources-2.6.12.2.ebuild:
+  Version bump.
 
 *vanilla-sources-2.6.13_rc1 (29 Jun 2005)
 
