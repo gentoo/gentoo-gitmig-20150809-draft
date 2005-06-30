@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.79 2005/06/23 17:37:44 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.80 2005/06/30 03:17:43 kumba Exp $
+
+  29 Jun 2005; Joshua Kinard <kumba@gentoo.org> bind-9.2.5-r4.ebuild:
+  Marked stable on mips.
 
 *bind-9.3.1-r2 (23 Jun 2005)
 
