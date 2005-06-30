@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4142 2005/06/29 15:14:39 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4143 2005/06/30 03:10:47 superlag Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -355,10 +355,6 @@ www-apps/interchange
 # Masking as it is broken against newer wine versions,
 # and completely abandoned upstream
 dev-dotnet/winelib
-
-# Elfyn McBratney <beu@gentoo.org> (27 Apr 2005)
-# Security mask, see bug #88926.
-www-apps/wordpress
 
 # Diego Pettenò <flameeyes@gentoo.org> (27 April 2005)
 # Transcode 1.0.0 is still in beta, masking until final is released.
