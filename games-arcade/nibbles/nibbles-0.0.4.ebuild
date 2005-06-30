@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/nibbles-0.0.4.ebuild,v 1.3 2005/05/03 08:57:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/nibbles-0.0.4.ebuild,v 1.4 2005/06/30 20:30:55 josejx Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.earth.li/projectpurple/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc64 ~ppc"
+KEYWORDS="ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
