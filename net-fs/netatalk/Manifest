@@ -1,18 +1,30 @@
-MD5 d1baa9063bf7f814bdbe65ea15c1e6bf netatalk-1.6.3.ebuild 1162
-MD5 ca47349a551627eda830545623fc7818 netatalk-1.6.4-r1.ebuild 1277
-MD5 182737befc5bc6abbd54fe52970963ba netatalk-1.6.2.ebuild 1162
-MD5 3eec7d8cf70c78d35a1f66b1d9af1fea netatalk-2.0.1.ebuild 2649
-MD5 6f7992bc14acaa917877f8481083db0a netatalk-1.6.4.ebuild 1173
-MD5 ed5f17a8565df72266eae04330832143 netatalk-1.5.3.1-r1.ebuild 1157
-MD5 112c22b6e9421578e4cb9e4e5b6c0616 ChangeLog 3547
-MD5 22abbe591c68284850e50221193fd32f metadata.xml 255
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 436ad45a1a470e5206657a0876aedff4 ChangeLog 4051
+MD5 43c6b606d88eab1f3467634846a77491 metadata.xml 347
+MD5 2bcb3497b4d9ccc3c0c9daf36e113a67 netatalk-1.5.3.1-r1.ebuild 1156
+MD5 63afc065a7a07ba14f50496389687f5b netatalk-1.6.2.ebuild 1161
+MD5 94d48f8fdd7cbad718834f4a2b3e3181 netatalk-1.6.3.ebuild 1161
+MD5 8f9575d3629ca459f2ed69c5eba1cbe9 netatalk-1.6.4-r1.ebuild 1277
+MD5 e7b075a1382db326ce33b16fc52be870 netatalk-1.6.4.ebuild 1172
+MD5 594141697d7ae4313fad22dde49122c4 netatalk-2.0.1.ebuild 2646
+MD5 b522c5849f7541a1126f553bb9674a18 netatalk-2.0.3.ebuild 2439
 MD5 cff2c2aa902db847d2e3ec8e34f818fc files/atalk 1297
 MD5 3f81842125cd168666a7f1a026be463d files/atalk-rc6 2007
-MD5 6dd0a76546b70cf567b7926c0881c9b5 files/digest-netatalk-1.6.4-r1 67
+MD5 bd4410c61e921e87c00183817b6e29b9 files/atalknew-rc6 1703
 MD5 a2dcac8839ace55b372a1cfde094bfab files/digest-netatalk-1.5.3.1-r1 68
 MD5 9802f047b3ef9c6a2944bd69a9babd92 files/digest-netatalk-1.6.2 66
 MD5 2be14842a5591dde5f7a615a9e7e16c7 files/digest-netatalk-1.6.3 66
 MD5 6dd0a76546b70cf567b7926c0881c9b5 files/digest-netatalk-1.6.4 67
+MD5 6dd0a76546b70cf567b7926c0881c9b5 files/digest-netatalk-1.6.4-r1 67
 MD5 9b5e18bed7037413bf3b2d808c391b78 files/digest-netatalk-2.0.1 68
 MD5 9eeca2a8610190fcd373ff619d56a298 files/netatalk-1.6.4-tempfile.patch 557
-MD5 bd4410c61e921e87c00183817b6e29b9 files/atalknew-rc6 1703
+MD5 9ee0857567bda5d9ffabf5d04095e90b files/digest-netatalk-2.0.3 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxIbsj5H05b2HAEkRArJgAJwNLuP7dkg861tm1Uh4QGlFZPllzQCgm17K
+WgCLxa0aV+Tc7xaXNII9QRk=
+=OKzx
+-----END PGP SIGNATURE-----
