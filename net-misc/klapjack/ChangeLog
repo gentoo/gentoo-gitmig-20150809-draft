@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/klapjack
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/klapjack/ChangeLog,v 1.1 2005/06/30 12:34:51 bass Exp $
+
+*net-misc/klapjack-0.4.2 (30 Jun 2005)
+
+  30 Jun 2005; José Alberto Suárez López <bass@gentoo.org>:
+  New ebuild. Thanks to James Harlow #21089
+
