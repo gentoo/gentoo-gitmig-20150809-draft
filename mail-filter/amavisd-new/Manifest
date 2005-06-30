@@ -1,16 +1,28 @@
-MD5 e225fddbec4900bbaa5c9e064c8f1689 ChangeLog 12040
-MD5 9ef3182fc15c8c2de2c0e918c22f5790 amavisd-new-2.2.1-r1.ebuild 4820
-MD5 ed2b2060671d066ffc187b1902912891 amavisd-new-2.2.1-r2.ebuild 5087
-MD5 2e9a4a46a72df5d8efab0f8c92afe16f amavisd-new-2.2.1.ebuild 4809
-MD5 2bbe70fe2a2d29b6d5895112866ff64d amavisd-new-2.3.0.ebuild 5183
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e5344a75a4160ea26ce4de061eb618b5 amavisd-new-2.3.1.ebuild 5167
+MD5 ed2b2060671d066ffc187b1902912891 amavisd-new-2.2.1-r2.ebuild 5087
+MD5 2bbe70fe2a2d29b6d5895112866ff64d amavisd-new-2.3.0.ebuild 5183
+MD5 0a5edeae0a90d71aaded1f96737e41f9 amavisd-new-2.3.2.ebuild 5431
+MD5 9ef3182fc15c8c2de2c0e918c22f5790 amavisd-new-2.2.1-r1.ebuild 4820
+MD5 a35dc74bbbf5dd18c1c285eed57473c0 ChangeLog 12267
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
+MD5 2e9a4a46a72df5d8efab0f8c92afe16f amavisd-new-2.2.1.ebuild 4809
+MD5 1f1f4cf9c92f92f966361a8ac08aa543 files/amavisd.rc6 305
 MD5 ccd66b725ef1b2e2ed20d4a1057b03b8 files/amavisd-new-2.2.1-amavisd.conf-gentoo.patch 6849
 MD5 ee33de51df853bd8426a4304f264245f files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
-MD5 a9c49eb16b5fa7dfecd54a436bc07200 files/amavisd-new-2.3.0-amavisd.conf-gentoo.patch 6687
-MD5 1f1f4cf9c92f92f966361a8ac08aa543 files/amavisd.rc6 305
 MD5 1ec247b48d1de4fdbc2a57fc9b338681 files/digest-amavisd-new-2.2.1 69
-MD5 1ec247b48d1de4fdbc2a57fc9b338681 files/digest-amavisd-new-2.2.1-r1 69
-MD5 1ec247b48d1de4fdbc2a57fc9b338681 files/digest-amavisd-new-2.2.1-r2 69
 MD5 20d1361125dc21db61b44dec3a13dea2 files/digest-amavisd-new-2.3.0 69
 MD5 d7ee87336e865f363c430fc60f105d44 files/digest-amavisd-new-2.3.1 69
+MD5 64e273484857758e614f8afa7aa14e09 files/digest-amavisd-new-2.3.2 69
+MD5 1ec247b48d1de4fdbc2a57fc9b338681 files/digest-amavisd-new-2.2.1-r1 69
+MD5 1ec247b48d1de4fdbc2a57fc9b338681 files/digest-amavisd-new-2.2.1-r2 69
+MD5 a9c49eb16b5fa7dfecd54a436bc07200 files/amavisd-new-2.3.0-amavisd.conf-gentoo.patch 6687
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCw7HYQlM6RnzZP+IRAl35AKC65Lufz3Y+sjQBUk755/Qp9euubQCgm72e
+jNkBWwHXwP8azM5Jp80z19Y=
+=uYjz
+-----END PGP SIGNATURE-----
