@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/magma
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/ChangeLog,v 1.4 2005/03/23 02:46:23 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/ChangeLog,v 1.5 2005/06/30 12:39:32 xmerlin Exp $
+
+*magma-1.00.00 (30 Jun 2005)
+
+  30 Jun 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  -files/magma-1.0_pre21-compile.patch, -files/magma-1.0_pre3-compile.patch,
+  +magma-1.00.00.ebuild, -magma-1.0_pre21.ebuild, -magma-1.0_pre3.ebuild:
+  1.00.00 tree in portage. Removed old ebuilds.
 
   23 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> magma-1.0_pre21.ebuild,
   -magma-1.0_pre8.ebuild:
