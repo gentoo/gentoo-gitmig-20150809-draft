@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.0.ebuild,v 1.1 2005/06/30 00:01:07 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.0.ebuild,v 1.2 2005/06/30 10:55:52 pylon Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,7 @@ IUSE="gnome debug encode pccts"
 RESTRICT="nostrip"
 
 RDEPEND="encode? ( >=media-sound/lame-3.90 )
-	gnome? ( >dev-cpp/gtkmm-2.4*
+	gnome? ( >=dev-cpp/gtkmm-2.4
 		=dev-cpp/libgnomemm-2.6*
 		=dev-cpp/libgnomecanvasmm-2.6*
 		=dev-cpp/gconfmm-2.6*
