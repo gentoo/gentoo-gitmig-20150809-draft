@@ -1,3 +1,16 @@
-MD5 02e7f79681c32b2506ac1a13d407e2ee ChangeLog 645
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e294fc0a1d2ca72a09ed5ae8f8c3e64f socketstream-0.7.0.ebuild 808
 MD5 e83256abb6db7c53f842899e85db1909 socketstream-0.3.0.ebuild 604
+MD5 d1993eb9d1da71ba0a56fcbcd3349391 ChangeLog 842
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 b81fbdba36dad0176562cefa5d84419e files/digest-socketstream-0.3.0 70
+MD5 d6df5b9e48fe37372b5f91cd84fb7670 files/digest-socketstream-0.7.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCw39WEZCkKN40op4RAh36AKC/5ICvmKz7PaOiGv2Sl/EHaBcSXgCgnAwC
+g9HvSNnJR7AjQfMFnrls0M8=
+=7zx1
+-----END PGP SIGNATURE-----
