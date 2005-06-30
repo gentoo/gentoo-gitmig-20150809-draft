@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.63 2005/05/28 10:07:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.64 2005/06/30 04:04:38 kumba Exp $
+
+  29 Jun 2005; Joshua Kinard <kumba@gentoo.org> strace-4.5.11.ebuild:
+  Marked stable on mips.
 
   28 May 2005; Mike Frysinger <vapier@gentoo.org>
   +files/strace-4.5.11-alpha-stat64.patch, strace-4.5.11.ebuild:
