@@ -5,10 +5,10 @@
      SED=sed
  fi
 +# Same for EGREP, and just to be sure, do LTCC as well
-+if [ "x$EGREP" = x ] ; then
++if test "X$EGREP" = X ; then
 +    EGREP=egrep
 +fi
-+if [ "x$LTCC" = x ] ; then
++if test "X$LTCC" = X ; then
 +    LTCC=${CC-gcc}
 +fi
  

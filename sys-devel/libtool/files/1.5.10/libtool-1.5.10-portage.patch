@@ -13,7 +13,7 @@ name should be bumped, but the patch content should stay fairly the same.
  		  exit 1
  		fi
 -		newdependency_libs="$newdependency_libs $libdir/$name"
-+		if [ "x$EGREP" = x ] ; then
++		if test "X$EGREP" = X ; then
 +			EGREP=egrep
 +		fi
 +		# We do not want portage's install root ($D) present.  Check only for
