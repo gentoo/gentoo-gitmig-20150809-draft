@@ -1,5 +1,5 @@
-MD5 720be705cf8ed2dc46892e632299b096 ktalkd-3.4.1.ebuild 416
-MD5 c5a322ac48d97470c3c72d6da9aadb50 ChangeLog 1622
+MD5 c38cb15be8d32f2d738264d943d0211b ktalkd-3.4.1.ebuild 414
+MD5 c7cb7df262aa3cb2a86919fa68063121 ChangeLog 1724
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 06e018bd2a31d6d3185cf6d628e004cb ktalkd-3.4.0.ebuild 417
 MD5 622d3497792334fa87e483e249da693d files/digest-ktalkd-3.4.0 70
