@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icewoed
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/ChangeLog,v 1.15 2004/11/02 14:36:45 phosphan Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/ChangeLog,v 1.16 2005/07/01 15:19:50 caleb Exp $
+
+  01 Jul 2005; Caleb Tennis <caleb@gentoo.org> icewoed-1.8.ebuild:
+  Fix qmake dir per bug #97535
 
   02 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -icewoed-1.5.ebuild,
   -icewoed-1.6.ebuild, icewoed-1.8.ebuild:

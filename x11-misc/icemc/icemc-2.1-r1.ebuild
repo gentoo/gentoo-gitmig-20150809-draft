@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/icemc-2.1-r1.ebuild,v 1.2 2004/11/02 14:40:32 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/icemc-2.1-r1.ebuild,v 1.3 2005/07/01 15:15:11 caleb Exp $
 
 DESCRIPTION="IceWM menu/toolbar editor"
 HOMEPAGE="http://icecc.sourceforge.net/"
@@ -20,7 +20,7 @@ src_unpack() {
 
 src_compile() {
 	addwrite ${QTDIR}/etc/settings
-	qmake ${PN}.pro
+	${QTDIR}/bin/qmake ${PN}.pro
 	emake || die "emake failed"
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icemc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.20 2004/11/02 14:40:32 phosphan Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.21 2005/07/01 15:15:11 caleb Exp $
+
+  01 Jul 2005; Caleb Tennis <caleb@gentoo.org> icemc-2.1-r1.ebuild:
+  Fix qmake dir per bug #97535
 
   02 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -icemc-1.8.ebuild,
   -icemc-1.9.ebuild, icemc-2.1-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icecc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/ChangeLog,v 1.22 2004/11/02 13:18:18 phosphan Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/ChangeLog,v 1.23 2005/07/01 15:14:40 caleb Exp $
+
+  01 Jul 2005; Caleb Tennis <caleb@gentoo.org> icecc-2.9.ebuild:
+  Fix qmake dir per bug #97535
 
   02 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> :
   Cleanup, latest version stable for x86.
