@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/jam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.11 2005/05/03 03:22:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.12 2005/07/01 16:30:40 fmccor Exp $
+
+  01 Jul 2005; Ferris McCormick <fmccor@gentoo.org> jam-2.5-r1.ebuild:
+  Add ~sparc keyword.  Builds and runs on sparc, and is needed for a
+  few packages and for some third-party openMPI testing (boost library).
 
 *jam-2.5-r1 (03 May 2005)
 
