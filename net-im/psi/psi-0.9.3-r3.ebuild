@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r3.ebuild,v 1.4 2005/06/27 18:30:44 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r3.ebuild,v 1.5 2005/07/01 15:10:13 caleb Exp $
 
 inherit eutils
 
@@ -224,7 +224,7 @@ src_compile() {
 	use kde || myconf="${myconf} --disable-kde"
 	./configure --prefix=/usr $myconf || die "Configure failed"
 	# for CXXFLAGS from make.conf
-	qmake psi.pro \
+	${QTDIR}/bin/qmake psi.pro \
 		QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
 		QMAKE_RPATH= \
 		|| die "Qmake failed"

@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e60fd2cfd833b274656f57813677d7d9 ChangeLog 9054
+MD5 9a1bd73f597b384ff20940d9c4e9e3ea psi-0.9.3-r2.ebuild 9415
+MD5 7e06059293e0f5c3d26a71702c0d39a6 psi-0.9.3-r4.ebuild 9020
+MD5 9475e3b3d2cdf69a3ddab52f7384e16c psi-0.9.3-r1.ebuild 8128
+MD5 1103a5bafea110e85e710773f588b792 psi-0.9.3-r3.ebuild 9814
+MD5 565cc579996af0d2d8dcf9f47449e17a ChangeLog 9216
 MD5 9b91ead14acbf0da98d3b33e75c67e79 metadata.xml 306
-MD5 e6f5de8ed652b522a8dbc50a42bb0015 psi-0.9.3-r1.ebuild 8118
-MD5 849d8f11e7e35325f45a2e79278f6a4d psi-0.9.3-r2.ebuild 9405
-MD5 4df38ef8d0270123661efa4f2a4850da psi-0.9.3-r3.ebuild 9804
-MD5 33ce30c8534698ff96f1a685fb2691b9 psi-0.9.3-r4.ebuild 9010
 MD5 fc8fae7a49b592b4f2c2914c21494c11 files/digest-psi-0.9.3-r1 1924
 MD5 db2a4c5b68dbb0147392a4657f2dbc92 files/digest-psi-0.9.3-r2 2132
 MD5 839e6fa5502e1f03a660918bc30e48b5 files/digest-psi-0.9.3-r3 2211
 MD5 55307aeb75ba675468f91832d951eff7 files/digest-psi-0.9.3-r4 1975
-MD5 1c741813b6d820d43475058dbfab3100 files/psi-desktop.patch 492
-MD5 4195bf9d000383fae25545249a3f8709 files/psi-desktop_file_and_icons_directories.patch 1454
-MD5 5fa629c5177a7b1c5090428e22b7ec30 files/psi-emergency.png 295
 MD5 0d5cafd17325fc912c4855252d73378f files/psi-indicator.png 300
+MD5 0250867fe42d1dc91e798336869a09d6 files/vcard-photo-interface.patch 32494
+MD5 4195bf9d000383fae25545249a3f8709 files/psi-desktop_file_and_icons_directories.patch 1454
+MD5 18253b59a4622a06bc3a17a4eef93d22 files/psi-status_indicator++_add-on_roster-nr.patch 9821
+MD5 5fa629c5177a7b1c5090428e22b7ec30 files/psi-emergency.png 295
 MD5 76f5cc28b75698adddaa068e5f4593f5 files/psi-pathfix.patch 462
 MD5 893421922de588e6a40fbe8357976279 files/psi-reverse_trayicon.patch 937
-MD5 18253b59a4622a06bc3a17a4eef93d22 files/psi-status_indicator++_add-on_roster-nr.patch 9821
-MD5 0250867fe42d1dc91e798336869a09d6 files/vcard-photo-interface.patch 32494
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCwbMz8zY1VwezZiERAk9LAKCDb2D4h9+H8XEFShXQQJAuIbFq9wCeOBS7
-Aw6Iud8WJ5tVbnBGjJNSjpQ=
-=rkg7
------END PGP SIGNATURE-----
+MD5 1c741813b6d820d43475058dbfab3100 files/psi-desktop.patch 492
