@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1261 2005/07/01 04:48:43 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1262 2005/07/01 13:27:30 iggy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -13,6 +13,11 @@ app-accessibility/gnome-speech:freetts - Adds support for the freetts speech dri
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty
 app-admin/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-admin/apg:cracklib - Support for cracklib strong password checking
+app-admin/bacula:bacula-clientonly - Disable DB support, and just build a client
+app-admin/bacula:bacula-console - Build console only bits, no gui
+app-admin/bacula:bacula-split - NFC what this does
+app-admin/bacula:logrotate - Install support files for logrotate
+app-admin/bacula:logwatch - Install support files for logwatch
 app-admin/conky:seti - include seti monitoring capabilities if the correct config is edited ~/.conkyrc
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
