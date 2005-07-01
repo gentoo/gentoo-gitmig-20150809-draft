@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 337d5ba6f6cd8dd42a83ba118cf9439f junkbuster-2.0.2-r3.ebuild 996
-MD5 f3cd0888ced9e7417ae3fc83c9ef07e8 ChangeLog 2190
+MD5 15fbc0d9bea8fbe199e524442d9804a4 ChangeLog 2294
+MD5 47113e45f70498a1a8bb442e5a0a8634 junkbuster-2.0.2-r3.ebuild 1005
 MD5 1d7888b1ea9ce027a9822471cd49a627 metadata.xml 218
 MD5 144473c056c1fe200cf39e691a8417ba files/digest-junkbuster-2.0.2-r3 70
-MD5 362740b7af3aedc5db2c0a659e695af8 files/junkbuster.rc6 583
 MD5 77a51c2ad0d03e74b67b9f6caa0d4048 files/junkbuster-2.0.2-fixups.patch 1871
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCakh3I1lqEGTUzyQRAlHoAJ9E2iCFQHfeeg9SjatxL/nAV+OBWgCgtEpp
-w0BHr20dqdDCcHxnm1PUq78=
-=hC3j
------END PGP SIGNATURE-----
+MD5 362740b7af3aedc5db2c0a659e695af8 files/junkbuster.rc6 583

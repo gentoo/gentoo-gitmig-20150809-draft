@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/junkbuster
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/junkbuster/ChangeLog,v 1.2 2005/04/23 13:06:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/junkbuster/ChangeLog,v 1.3 2005/07/01 19:49:02 mkennedy Exp $
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  junkbuster-2.0.2-r3.ebuild:
+  Keywording ~amd64
 
   22 Apr 2005; Alin Nastac <mrness@gentoo.org> :
   Rename category & herd www-proxy to net-proxy
