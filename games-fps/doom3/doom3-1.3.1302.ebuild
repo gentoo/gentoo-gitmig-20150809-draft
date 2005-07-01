@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302.ebuild,v 1.6 2005/06/29 00:35:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302.ebuild,v 1.7 2005/07/01 00:13:25 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,8 +13,8 @@ SRC_URI="mirror://3dgamers/3dgamers/games/${PN}/${PN}-linux-${PV}.x86.run
 
 LICENSE="DOOM3"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
-IUSE="nocd alsa opengl dedicated"
+KEYWORDS="-* x86 amd64"
+IUSE="cdinstall alsa opengl dedicated"
 RESTRICT="nostrip"
 
 DEPEND="app-arch/bzip2
@@ -31,7 +31,7 @@ Ddir=${D}/${dir}
 
 pkg_setup() {
 	check_license
-	use nocd && cdrom_get_cds Setup/Data/base/pak002.pk4 \
+	use cdinstall && cdrom_get_cds Setup/Data/base/pak002.pk4 \
 		Setup/Data/base/pak000.pk4 \
 		 Setup/Data/base/pak003.pk4
 	games_pkg_setup
@@ -63,7 +63,7 @@ src_install() {
 	doins d3xp/* || die "doins d3xp"
 	insinto ${dir}/base
 	doins base/* || die "doins base"
-	if use nocd; then
+	if use cdinstall; then
 		einfo "Copying files from Disk 1..."
 		doins ${CDROM_ROOT}/Setup/Data/base/pak002.pk4 \
 			|| die "copying pak002"
@@ -80,7 +80,7 @@ src_install() {
 	games_make_wrapper doom3 ./doom.x86 ${dir}
 	games_make_wrapper doom3-ded ./doomded.x86 ${dir}
 
-	use nocd && find ${Ddir} -exec touch '{}' \;
+	use cdinstall && find ${Ddir} -exec touch '{}' \;
 
 	doicon ${DISTDIR}/doom3.png || die "Copying icon"
 
@@ -91,7 +91,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	if use nocd; then
+	if use cdinstall; then
 		einfo "To play the game run:"
 		einfo " doom3"
 	else
