@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/gld
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.21 2005/06/18 22:50:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.22 2005/07/01 15:05:07 ticho Exp $
+
+  01 Jul 2005; Andrej Kacian <ticho@gentoo.org> gld-1.5.2.ebuild:
+  Stable on x86 and amd64. Bug #97619, by Alexander Stoll <as at
+  ha-networks.com>.
 
   18 Jun 2005; Andrej Kacian <ticho@gentoo.org> files/gld.rc:
   Initscript provides "postfix_graylist", so postfix can safely start after
