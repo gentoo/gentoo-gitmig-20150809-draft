@@ -1,5 +1,5 @@
-MD5 391b18f524c7d0f6972dd896bb1d3c49 ChangeLog 383
+MD5 b897adb5aa347694c260415b327ddc5b qimhangul-0.0.1.ebuild 1284
+MD5 3f76e8e3c094cbeb59c23bb05ccc8ef4 ChangeLog 482
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 add705c40135a0d7ad57c700002381de qimhangul-0.0.1.ebuild 1276
 MD5 3733fe5702155ef1ce0988b30a13e04b files/digest-qimhangul-0.0.1 67
 MD5 48935f4a1a76f440fb18dc3dda89b8ff files/qimhangul-0.0.1-thread-gentoo.diff 282

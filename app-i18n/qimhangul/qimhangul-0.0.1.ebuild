@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/qimhangul-0.0.1.ebuild,v 1.3 2005/01/01 14:37:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/qimhangul-0.0.1.ebuild,v 1.4 2005/07/01 14:52:35 caleb Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	qmake -makefile || die "qmake failed"
+	${QTDIR}/bin/qmake -makefile || die "qmake failed"
 	emake -j1 || die "make failed."
 }
 
