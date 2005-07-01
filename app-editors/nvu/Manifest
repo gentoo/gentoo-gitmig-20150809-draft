@@ -4,6 +4,7 @@ MD5 1b0b169cd47eb58ed4314dc19ce4d36a nvu-0.90-r1.ebuild 2312
 MD5 0b88e349c78fa37c9a0fe79c75ac99ee nvu-1.0.ebuild 2882
 MD5 a05fdf2c14ab81e5c9e6827958cc4a2c files/digest-nvu-1.0 70
 MD5 ffdec5b2a9933225ba5f03bafd9fcc2a files/digest-nvu-0.90-r1 71
+MD5 91bb5e61f505e2e53aa42345431c8fa7 files/mozconfig2 2160
 MD5 c68ab50fa971f53df6ae113289920242 files/1.0/nvu-1.0-gcc4.patch 1924
 MD5 841f7a0a89c5d8be3841444ce2dd0b85 files/1.0/nvu-0.50-dir.patch 713
 MD5 952edf776beb47f9ddeeed1eb3a9407f files/1.0/nvu-0.50-freetype-compile.patch 13641
