@@ -1,34 +1,34 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.6.ebuild,v 1.3 2005/02/03 04:18:25 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.8-r1.ebuild,v 1.1 2005/07/01 02:57:59 allanonjl Exp $
 
-inherit flag-o-matic libtool eutils
+inherit flag-o-matic libtool eutils fdo-mime alternatives
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
-LICENSE="GPL-2"
 
-P_HELP="gimp-help-2-0.5" #"gimp-help-${PV/\./-}"
+P_HELP="gimp-help-2-0.8"
 S_HELP="$WORKDIR/${P_HELP}"
-SRC_URI="mirror://gimp/v2.0/${P}.tar.bz2
+SRC_URI="mirror://gimp/v2.2/${P}.tar.bz2
 	doc? ( mirror://gimp/help/testing/${P_HELP}.tar.gz )"
 
+LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64 ~mips ~ppc64 ~alpha"
-#IUSE="X aalib altivec debug doc gimpprint jpeg mmx mng png python sse svg tiff wmf"
-IUSE="aalib altivec debug doc gimpprint gtkhtml jpeg mmx mng png python sse svg tiff wmf"
-
-# FIXME : some more things can be (local) USE flagged
-# a few options are detection only, fix them to switch
+KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="aalib altivec debug doc gtkhtml gimpprint hardened jpeg lcms mmx mng png
+python scanner smp sse svg tiff wmf"
 
 #	X? ( virtual/x11 )"
 RDEPEND="virtual/x11
-	>=dev-libs/glib-2.2
-	>=x11-libs/gtk+-2.2.2
-	>=x11-libs/pango-1.2.2
+	>=dev-libs/glib-2.4.5
+	>=x11-libs/gtk+-2.4.4
+	>=x11-libs/pango-1.4
+	>=media-libs/freetype-2.1.7
 	>=media-libs/fontconfig-2.2
 	>=media-libs/libart_lgpl-2.3.8-r1
 	sys-libs/zlib
+	dev-libs/libxml2
+	dev-libs/libxslt
 
 	gimpprint? ( =media-gfx/gimp-print-4.2* )
 	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
@@ -39,12 +39,18 @@ RDEPEND="virtual/x11
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	mng? ( media-libs/libmng )
 
-	wmf? ( >=media-libs/libwmf-0.2.8 )
+	wmf? ( >=media-libs/libwmf-0.2.8.2 )
 	svg? ( >=gnome-base/librsvg-2.2 )
 
 	aalib?	( media-libs/aalib )
 	python?	( >=dev-lang/python-2.2
-		>=dev-python/pygtk-2 )"
+		>=dev-python/pygtk-2 )
+	lcms? ( media-libs/lcms )
+
+	scanner? ( media-gfx/xsane
+		media-gfx/sane-backends
+		media-gfx/sane-frontends
+		)"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
@@ -56,10 +62,22 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	# fixes bug #76050, allows for themable icons
+	sed -i -e s,@gimpdatadir@/images/@GIMP_DESKTOP_ICON@,@GIMP_DESKTOP_ICON@, ${S}/data/misc/gimp.desktop.in.in
+
 	# Fix linking to older version of gimp if installed - this should
 	# void liquidx's hack, so it is removed.
 	epatch ${FILESDIR}/ltmain_sh-1.5.0-fix-relink.patch
+	epatch ${FILESDIR}/${P}-configure-fix.patch
 
+	# fix for #97361
+	epatch ${FILESDIR}/gimp-2.2.8-restart-marker.patch
+
+	# fix for configure patch
+	aclocal
+	libtoolize --force --copy
+	autoconf
 }
 
 src_compile() {
@@ -81,15 +99,26 @@ src_compile() {
 	if use hardened; then
 		ewarn "hardened use flag suppressing mmx use flag"
 		HARDENED_SUPPRESS_MMX="--disable-mmx"
-	else
+	elif use x86; then
 		HARDENED_SUPPRESS_MMX="`use_enable mmx`"
+	elif use amd64; then
+		HARDENED_SUPPRESS_MMX="--enable-mmx"
+	fi
+
+	local myconf
+
+	# Hard enable SIMD assembler code for AMD64.
+	if use x86; then
+		myconf="${myconf} `use_enable sse`"
+	elif use amd64; then
+		myconf="${myconf} --enable-sse"
 	fi
 
 	econf \
 		--disable-default-binary \
 		--with-x \
 		"${HARDENED_SUPPRESS_MMX}" \
-		`use_enable sse` \
+		${myconf} \
 		`use_enable altivec` \
 		`use_enable doc gtk-doc` \
 		`use_enable python` \
@@ -97,9 +126,13 @@ src_compile() {
 		`use_with png libpng` \
 		`use_with jpeg libjpeg` \
 		`use_with jpeg libexif` \
+		`use_enable smp mp` \
 		`use_with tiff libtiff` \
 		`use_with mng libmng` \
 		`use_with aalib aa` \
+		`use_enable lcms` \
+		`use_enable gtkhtml` \
+		`use_enable svg` \
 		`use_enable debug` || die
 
 	# X isn't optional (#58003) atm
@@ -112,25 +145,49 @@ src_compile() {
 		econf --without-gimp || die
 		emake || die
 	fi
-
 }
 
 src_install() {
-
 	# Workaround portage variable leakage
 	local AA=
 
 	# create these dirs to make the makefile installs these items correctly
 	dodir /usr/share/{applications,application-registry,mime-info}
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
-	dodoc AUTHORS COPYING ChangeL* HACKING INSTALL \
-		MAINTAINERS NEWS PLUGIN_MAINTAINERS README* TODO*
+	dodoc AUTHORS ChangeLog* HACKING NEWS README*
 
 	if use doc; then
 		cd ${S_HELP}
-		make DESTDIR=${D} install || die
+		make DESTDIR="${D}" install || die
 	fi
 
+	# Create the gimp-remote link, see bug #36648
+	dosym gimp-remote-2.2 /usr/bin/gimp-remote
+
+	# if use scanner, create the symlink see bug #93018
+	if use scanner; then
+		dosym /usr/bin/xscanimage /usr/lib/gimp/2.0/plug-ins/
+	fi
+}
+
+pkg_postinst() {
+	alternatives_auto_makesym "/usr/bin/gimp" "/usr/bin/gimp-[0-9].[0-9]"
+
+	# fix for bug #76050
+	ln -s $(gimptool-2.0 --gimpdatadir)/images/wilber-icon.png /usr/share/pixmaps/
+
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+	einfo ""
+	einfo "If you want Postscript file support, emerge ghostscript."
+	einfo ""
+}
+
+pkg_postrm() {
+	rm /usr/share/pixmaps/wilber-icon.png
+
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }

@@ -1,0 +1,12 @@
+diff -Nur gimp-2.2.7/plug-ins/common/jpeg.c gimp-2.2.7-mod/plug-ins/common/jpeg.c
+--- gimp-2.2.7/plug-ins/common/jpeg.c	2005-01-22 17:22:40.000000000 +0100
++++ gimp-2.2.7-mod/plug-ins/common/jpeg.c	2005-06-29 02:43:44.000000000 +0200
+@@ -2039,6 +2039,8 @@
+   gtk_table_attach (GTK_TABLE (table), restart, 2, 4, 1, 2,
+                     GTK_FILL, 0, 0, 0);
+   gtk_widget_show (restart);
++  
++  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (restart), jsvals.restart);
+ 
+   gtk_widget_set_sensitive (restart_markers_label, jsvals.restart);
+   gtk_widget_set_sensitive (restart_markers_scale, jsvals.restart);
