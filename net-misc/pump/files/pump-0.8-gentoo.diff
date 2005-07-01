@@ -1,6 +1,6 @@
---- pump.h.orig	2005-06-30 12:58:52.357148624 +0100
-+++ pump.h	2005-06-30 12:59:21.426160635 +0100
-@@ -88,13 +88,13 @@
+--- pump.h.orig	2003-10-24 20:37:53.000000000 +0100
++++ pump.h	2005-07-01 10:30:28.526406380 +0100
+@@ -100,13 +100,14 @@
  char * pumpDhcpRun(char * device, int flags, int lease,
  		     char * reqHostname, struct pumpNetIntf * intf,
  		     struct pumpOverrideInfo * override);
@@ -9,6 +9,7 @@
  /* setup an interface for sending a broadcast -- uses all 0's address */
  char * pumpPrepareInterface(struct pumpNetIntf * intf, int s);
  char * pumpDisableInterface(char * device);
++char * pumpDownInterface(char * device);
  int pumpDhcpRenew(struct pumpNetIntf * intf);
  int pumpDhcpRelease(struct pumpNetIntf * intf);
 -int pumpSetupDefaultGateway(struct in_addr * gw);
@@ -16,18 +17,23 @@
  time_t pumpUptime(void);
  
  #define RESULT_OKAY		0
---- pump.c.orig	2005-06-30 12:59:09.391801577 +0100
-+++ pump.c	2005-06-30 12:59:19.553415093 +0100
-@@ -69,6 +69,8 @@
+--- pump.c.orig	2002-06-18 18:03:59.000000000 +0100
++++ pump.c	2005-07-01 10:30:26.579634633 +0100
+@@ -69,10 +69,13 @@
  	    int flags;
- 	    int reqLease;			/* in hours */
+ 	    int reqLease;			/* in seconds */
  	    char reqHostname[200];
 +	    char resolv[1024];
 +	    int routeMetric;
  	} start;
  	int result;				/* 0 for success */
  	struct {
-@@ -92,13 +94,14 @@
+ 	    char device[20];
++	    int keepUp;
+ 	} stop;
+ 	struct {
+ 	    char device[20];
+@@ -92,13 +95,14 @@
  
  static int openControlSocket(char * configFile, struct pumpOverrideInfo * override);
  
@@ -44,7 +50,7 @@
      if (fd < 0) return NULL;
  
      fstat(fd, &sb);
-@@ -132,8 +135,8 @@
+@@ -132,8 +136,8 @@
      return NULL;
  }
  
@@ -55,7 +61,7 @@
      FILE * f;
      int i;
      char * chptr;
-@@ -142,7 +145,7 @@
+@@ -142,7 +146,7 @@
      res_close();
  
      if (!domain) {
@@ -64,7 +70,7 @@
   	if (domain) {
  	    chptr = alloca(strlen(domain) + 1);
  	    strcpy(chptr, domain);
-@@ -152,19 +155,21 @@
+@@ -152,19 +156,21 @@
  	}
      }
  
@@ -90,7 +96,7 @@
  	chptr = domain;
  	do {
  	    /* If there is a single . in the search path, write it out
-@@ -240,7 +245,7 @@
+@@ -240,7 +246,7 @@
      return;
  }
  
@@ -99,7 +105,7 @@
      char * hn, * dn = NULL;
      struct hostent * he;
  
-@@ -249,7 +254,7 @@
+@@ -249,7 +255,7 @@
      }
  
      if (override->searchPath) {
@@ -108,7 +114,7 @@
  	return;
      }
  
-@@ -258,7 +263,7 @@
+@@ -258,7 +264,7 @@
  	    if (intf->set & PUMP_NETINFO_HAS_HOSTNAME) {
  		hn = intf->hostname;
  	    } else {
@@ -117,7 +123,7 @@
  
  		he = gethostbyaddr((char *) &intf->ip, sizeof(intf->ip),
  				   AF_INET);
-@@ -278,7 +283,7 @@
+@@ -278,7 +284,7 @@
  	    dn = intf->domain;
  	}
  
@@ -126,7 +132,7 @@
      }
  }
  
-@@ -480,16 +485,18 @@
+@@ -529,16 +535,18 @@
  			        intf + numInterfaces, o)) {
  		    cmd.u.result = 1;
  		} else {
@@ -148,12 +154,22 @@
  		    setupDomain(intf + i, o);
  
  		    callScript(o->script, PUMP_SCRIPT_NEWLEASE, 
-@@ -761,12 +768,16 @@
-     int nogateway = 0;
+@@ -570,6 +578,8 @@
+ 		    cmd.u.result = RESULT_UNKNOWNIFACE;
+ 		else {
+ 		    cmd.u.result = pumpDhcpRelease(intf + i);
++		    syslog(LOG_INFO, "keekUp %i", cmd.u.stop.keepUp);
++		    if (! cmd.u.stop.keepUp) pumpDownInterface(intf[i].device);
+ 		    callScript(o->script, PUMP_SCRIPT_DOWN, intf + i);
+ 		    if (numInterfaces == 1) {
+ 			cmd.type = CMD_RESULT;
+@@ -811,17 +821,24 @@
+     int nogateway = 0, nobootp = 0;
      struct command cmd, response;
      char * configFile = "/etc/pump.conf";
 +    char * etcDir = "/etc";
-+    int routeMetric = 0;
++    int routeMetric = 0, keepUp = 0;
++    char * script = "";
      struct pumpOverrideInfo * overrides;
      int cont;
      struct poptOption options[] = {
@@ -165,27 +181,109 @@
              { "hostname", 'h', POPT_ARG_STRING, &hostname, 0, 
  			N_("Hostname to request"), N_("hostname") },
              { "interface", 'i', POPT_ARG_STRING, &device, 0, 
-@@ -782,6 +793,8 @@
+ 			N_("Interface to configure (normally eth0)"), 
+ 			N_("iface") },
++	    { "keep-up", 'u', POPT_ARG_NONE, &keepUp, 0,
++			N_("Keep the interface up when releasing it") },
+ 	    { "kill", 'k', POPT_ARG_NONE, &killDaemon, 0,
+ 			N_("Kill daemon (and disable all interfaces)"), NULL },
+ 	    { "lease", 'l', POPT_ARG_INT, &lease_hrs, 0,
+@@ -834,6 +851,10 @@
  			N_("Release interface"), NULL },
  	    { "renew", 'R', POPT_ARG_NONE, &renew, 0,
  			N_("Force immediate lease renewal"), NULL },
 +	    { "route-metric", 'm', POPT_ARG_INT, &routeMetric, 0,
 +			N_("Metric applied to routes (normally 0)") },
++	    { "script", '\0', POPT_ARG_STRING, &script, 0,
++			N_("Script to run when on DHCP actions") },
  	    { "status", 's', POPT_ARG_NONE, &status, 0,
  			N_("Display interface status"), NULL },
  	    { "no-dns", 'd', POPT_ARG_NONE, &nodns, 0,
-@@ -855,6 +868,8 @@
- 	cmd.u.start.flags = flags;
- 	cmd.u.start.reqLease = lease * 60 * 60;
+@@ -889,6 +910,8 @@
+ 	overrides->flags |= OVERRIDE_FLAG_NOBOOTP;
+     if (nogateway)
+ 	overrides->flags |= OVERRIDE_FLAG_NOGATEWAY;
++    if (strlen(script))
++	overrides->script = script;	
+ 
+     cont = openControlSocket(configFile, overrides);
+     if (cont < 0) 
+@@ -905,6 +928,7 @@
+     } else if (release) {
+ 	cmd.type = CMD_STOPIFACE;
+ 	strcpy(cmd.u.stop.device, device);
++	cmd.u.stop.keepUp = keepUp;
+     } else {
+ 	cmd.type = CMD_STARTIFACE;
+ 	strcpy(cmd.u.start.device, device);
+@@ -914,6 +938,8 @@
+ 	else
+ 		cmd.u.start.reqLease = lease;
  	strcpy(cmd.u.start.reqHostname, hostname);
 +	sprintf(cmd.u.start.resolv, "%s/resolv.conf", etcDir);
 +	cmd.u.start.routeMetric = routeMetric;
      }
  
      write(cont, &cmd, sizeof(cmd));
---- dhcp.c.orig	2005-06-30 12:58:47.802781163 +0100
-+++ dhcp.c	2005-06-30 12:59:24.662721637 +0100
-@@ -227,7 +227,7 @@
+--- dhcp.c.orig	2004-09-21 16:19:06.000000000 +0100
++++ dhcp.c	2005-07-01 10:32:30.240170027 +0100
+@@ -203,43 +203,68 @@
+     return err;
+ }
+ 
+-
+ char * pumpDisableInterface(char * device) {
++    struct sockaddr_in * addrp;
+     struct ifreq req;
+     int s;
+ 
++    /* Instead of downing the interface, we erase the address
++     * This is important as other daemons such as ifplugd and/or
++     * wpa_supplicant may be using it */
++    
+     s = socket(AF_INET, SOCK_DGRAM, 0);
+ 	
+     memset(&req,0,sizeof(req));
++    addrp = (struct sockaddr_in *) &req.ifr_addr;
++    addrp->sin_family = AF_INET;
++    strcpy(req.ifr_name, device);
++   
++    addrp->sin_addr.s_addr = 0;
++    if (ioctl(s, SIOCSIFADDR, &req)) {
++	close(s);
++	return perrorstr("SIOCSIFADDR");
++    }
++
++    close(s);
++    return NULL;
++}
++
++char * pumpDownInterface(char * device) {
++    struct ifreq req;
++    int s;
++
++    s = socket(AF_INET, SOCK_DGRAM, 0);
++
++    memset(&req,0,sizeof(req));
+ 
+     strcpy(req.ifr_name, device);
+     if (ioctl(s, SIOCGIFFLAGS, &req)) {
+-	close(s);
+-	return perrorstr("SIOCGIFFLAGS");
++        close(s);
++        return perrorstr("SIOCGIFFLAGS");
+     }
+ 
+     req.ifr_flags &= ~(IFF_UP | IFF_RUNNING);
+     if (ioctl(s, SIOCSIFFLAGS, &req)) {
+-	close(s);
+-	return perrorstr("SIOCSIFFLAGS");
++        close(s);
++        return perrorstr("SIOCSIFFLAGS");
+     }
+ 
+     close(s);
+-
      return NULL;
  }
  
@@ -194,7 +292,11 @@
      char * rc;
      struct sockaddr_in * addrp;
      struct ifreq req;
-@@ -239,7 +239,6 @@
+     struct rtentry route;
+     int s;
+ 
++    if ((rc = pumpDisableInterface(intf->device))) return rc;
++    
      s = socket(AF_INET, SOCK_DGRAM, 0);
  	
      memset(&req,0,sizeof(req));
@@ -202,7 +304,7 @@
      /* we have to have basic information to get this far */
      addrp = (struct sockaddr_in *) &req.ifr_addr;
      addrp->sin_family = AF_INET;
-@@ -267,29 +266,47 @@
+@@ -267,29 +292,45 @@
      if (ioctl(s, SIOCSIFFLAGS, &req))
  	return perrorstr("SIOCSIFFLAGS");
  
@@ -244,8 +346,7 @@
 -	    /* the route cannot already exist, as we've taken the device down */
 -	    return perrorstr("SIOCADDRT 1");
 +	if (ioctl(s, SIOCDELRT, &route)) {
-+	    syslog(LOG_ERR, "pump: failed to delete kernel supplied default route: %m");
-+	    return perrorstr("SIOCADDRT 2");
++	    return perrorstr("SIOCADDRT");
  	}
      }
  
@@ -253,7 +354,6 @@
 +    if (metric > 0) metric++;
 +    route.rt_metric = metric;
 +    if (ioctl(s, SIOCADDRT, &route)) {
-+	syslog(LOG_ERR, "pump: failed to add default route: %m");
 +	return perrorstr("SIOCADDRT 1");
 +    }
 +    
@@ -265,7 +365,7 @@
      struct sockaddr_in addr;
      struct rtentry route;
      int s;
-@@ -303,12 +320,12 @@
+@@ -303,12 +344,12 @@
      addr.sin_addr.s_addr = INADDR_ANY;
      memcpy(&route.rt_dst, &addr, sizeof(addr));
      memcpy(&route.rt_genmask, &addr, sizeof(addr));

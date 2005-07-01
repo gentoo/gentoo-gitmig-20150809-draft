@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21-r1.ebuild,v 1.1 2005/06/30 12:46:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21-r2.ebuild,v 1.1 2005/07/01 09:47:18 uberlord Exp $
 
 inherit eutils
 
@@ -25,12 +25,9 @@ src_unpack() {
 	# resolv.conf - default /etc
 	# Enable the -m (--route-metric) option to specify the default
 	# metric applied to routes
-	epatch "${FILESDIR}/pump-0.8-gentoo-etcdir-routemetric.diff"
-
-	# For some reason, pump doesn't disable the interface before
-	# applying it's setup - this resulted in a duplicate route, so we
-	# re-introduce the old behaviour
-	epatch "${FILESDIR}/pump-0.8.21-gentoo-disable-before-setup.diff"
+	# Enable the --script option to specify a script to run on DHCP actions
+	# Enable the --keep-up option to keep interfaces up when we release
+	epatch "${FILESDIR}/pump-0.8-gentoo.diff"
 }
 
 src_compile() {
