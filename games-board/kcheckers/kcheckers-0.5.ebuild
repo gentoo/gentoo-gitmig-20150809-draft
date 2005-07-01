@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.5.ebuild,v 1.3 2005/06/10 11:27:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.5.ebuild,v 1.4 2005/07/01 15:02:50 caleb Exp $
 
 inherit kde games
 
@@ -18,7 +18,7 @@ DEPEND="virtual/x11
 
 src_compile() {
 	kde_src_compile nothing
-	qmake
+	${QTDIR}/bin/qmake
 	emake || die "emake failed"
 }
 
