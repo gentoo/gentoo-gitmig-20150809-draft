@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/make.defaults,v 1.14 2005/07/01 21:12:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/make.defaults,v 1.15 2005/07/01 21:14:23 blubb Exp $
 
 #removed because managers vote requires us to do so
 #("when we go nptl, we all go nptl")
@@ -19,7 +19,6 @@ LDFLAGS_amd64="-m elf_x86_64"
 CHOST_amd64="x86_64-pc-linux-gnu"
 CDEFINE_amd64="__x86_64__"
 LIBDIR_amd64="lib64"
-PKGCONFIG_amd64="/usr/lib64/pkgconfig"
 
 # Added -L/emul* workaround to aid compilation of 32bit packages
 # See bug #88725 for more info - Herbie Hopkins <herbs@gentoo.org> 2005/04/19
@@ -28,7 +27,6 @@ LDFLAGS_x86="-m elf_i386 -L/emul/linux/x86/lib -L/emul/linux/x86/usr/lib"
 CHOST_x86="i686-pc-linux-gnu"
 CDEFINE_x86="__i386__"
 LIBDIR_x86="lib32"
-PKGCONFIG_x86="/usr/lib32/pkgconfig"
 
 # In case someone wants to help out by setting FEATURES="multilib-strict"
 MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
