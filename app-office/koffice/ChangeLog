@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.106 2005/06/30 12:49:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.107 2005/07/01 20:26:15 gustavoz Exp $
+
+  01 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  koffice-1.4.0-r1.ebuild:
+  Keyworded ~sparc wrt #95128
 
   30 Jun 2005; Joseph Jezak <josejx@gentoo.org> koffice-1.4.0-r1.ebuild:
   Added ~ppc for bug #95128.
