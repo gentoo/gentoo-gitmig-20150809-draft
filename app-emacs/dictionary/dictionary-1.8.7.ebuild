@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/dictionary-1.8.7.ebuild,v 1.1 2005/06/29 17:28:52 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/dictionary-1.8.7.ebuild,v 1.2 2005/07/01 09:28:59 dholm Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.myrkr.in-berlin.de/dictionary/index.html"
 SRC_URI="http://www.myrkr.in-berlin.de/dictionary/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 
 SITEFILE="50${PN}-gentoo.el"
 
