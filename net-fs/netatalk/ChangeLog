@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.23 2005/06/30 23:56:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.24 2005/07/01 23:56:28 flameeyes Exp $
+
+  01 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> netatalk-2.0.3.ebuild:
+  Added flags to search in special installation prefix for openafs.
 
 *netatalk-2.0.3 (30 Jun 2005)
 

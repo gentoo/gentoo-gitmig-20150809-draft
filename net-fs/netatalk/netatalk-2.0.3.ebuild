@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3.ebuild,v 1.1 2005/06/30 23:56:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3.ebuild,v 1.2 2005/07/01 23:56:28 flameeyes Exp $
 
-inherit eutils pam
+inherit eutils pam flag-o-matic
 IUSE="ssl pam tcpd slp cups kerberos krb4 afs debug cracklib"
 
-DESCRIPTION="kernel level implementation of the AppleTalk Protocol Suite"
+DESCRIPTION="Kernel level implementation of the AppleTalk Protocol Suite"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://netatalk.sourceforge.net"
 
@@ -43,6 +43,12 @@ src_unpack() {
 }
 
 src_compile() {
+	# openafs installs in /usr/afsws "prefix" so we must add that manually
+	if use afs; then
+		append-flags -I/usr/afsws/include
+		append-ldflags -L/usr/afsws/lib
+	fi
+
 	# Ignore --enable-gentoo, we install the init.d by hand and we avoid having to
 	# sed the Makefiles to not do rc-update.
 	econf \
