@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.4.0-r1.ebuild,v 1.3 2005/04/27 18:53:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.4.0-r1.ebuild,v 1.4 2005/07/01 14:28:27 danarmak Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -11,8 +11,7 @@ DESCRIPTION="KDE news feed aggregator"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ppc64"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
-$(deprange $PV $MAXKDEVER kde-base/kontact)
-!net-www/akregator"
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
 
 KMCOPYLIB="libkdepim libkdepim
 libkpinterfaces kontact/interfaces"

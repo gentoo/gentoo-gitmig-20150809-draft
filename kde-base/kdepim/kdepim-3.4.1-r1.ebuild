@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.4.1-r1.ebuild,v 1.3 2005/07/01 04:56:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.4.1-r1.ebuild,v 1.4 2005/07/01 14:26:12 danarmak Exp $
 
 inherit kde-dist eutils
 
@@ -13,8 +13,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	>=dev-libs/cyrus-sasl-2
 	pda? ( app-pda/pilot-link dev-libs/libmal )
 	gnokii? ( app-mobilephone/gnokii )
-	crypt? ( >=app-crypt/gpgme-0.9.0-r1 )
-	!net-www/akregator"
+	crypt? ( >=app-crypt/gpgme-0.9.0-r1 )"
 
 src_unpack() {
 	kde_src_unpack
