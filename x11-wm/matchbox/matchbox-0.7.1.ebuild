@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.5 2005/06/12 04:51:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.6 2005/07/01 22:06:03 josejx Exp $
 
 IUSE="jpeg png nls debug"
 
@@ -10,7 +10,7 @@ SRC_URI="http://handhelds.org/~mallum/downloadables/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 
 RDEPEND="virtual/x11
 	dev-libs/expat
