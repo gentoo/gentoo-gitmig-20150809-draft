@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10.1_pre0.ebuild,v 1.4 2005/06/06 09:22:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10.1_pre0.ebuild,v 1.5 2005/07/01 22:02:04 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -68,9 +68,9 @@ RDEPEND="!gnome-base/gnome-core
 	>=app-text/gpdf-2.10
 
 	>=gnome-base/gnome-session-2.10
-	>=gnome-base/gnome-desktop-2.10
-	>=gnome-base/gnome-applets-2.10
-	>=gnome-base/gnome-panel-2.10
+	>=gnome-base/gnome-desktop-2.10.1
+	>=gnome-base/gnome-applets-2.10.1
+	>=gnome-base/gnome-panel-2.10.1
 	>=gnome-base/gnome-menus-2.10.1
 
 	>=x11-themes/gnome-icon-theme-2.10.1
