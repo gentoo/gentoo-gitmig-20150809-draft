@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.1 2005/06/14 11:20:09 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.2 2005/07/01 15:09:09 caleb Exp $
 
 inherit eutils kde-functions
 set-qtdir 3
@@ -22,7 +22,7 @@ DEPEND=">=x11-libs/qt-3.3
 
 src_compile() {
 	cd src
-	qmake -o Makefile qlcr.pro || die "qmake failed"
+	${QTDIR}/bin/qmake -o Makefile qlcr.pro || die "qmake failed"
 	emake || die "emake failed"
 }
 
