@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qsoapman
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/ChangeLog,v 1.5 2005/04/24 13:06:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/ChangeLog,v 1.6 2005/07/01 14:59:41 caleb Exp $
+
+  01 Jul 2005; Caleb Tennis <caleb@gentoo.org> qsoapman-0.3.ebuild:
+  Fix qmake dir per bug #97535
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> qsoapman-0.3.ebuild:
   Stable on ppc.

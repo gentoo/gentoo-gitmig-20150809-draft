@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/qsoapman-0.3.ebuild,v 1.5 2005/04/24 13:06:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/qsoapman-0.3.ebuild,v 1.6 2005/07/01 14:59:41 caleb Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND=">=x11-libs/qt-3.1"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	qmake -o Makefile qsoapman.pro
+	${QTDIR}/bin/qmake -o Makefile qsoapman.pro
 	sed -i -e "s/CFLAGS   = -pipe -Wall -W -O2/CFLAGS   = ${CFLAGS} -Wall -W/" src/Makefile
 	sed -i -e "s/CXXFLAGS = -pipe -Wall -W -O2/CXXFLAGS = ${CXXFLAGS} -Wall -W/" src/Makefile
 

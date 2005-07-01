@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.4.0.ebuild,v 1.3 2005/05/11 06:17:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.4.0.ebuild,v 1.4 2005/07/01 15:00:23 caleb Exp $
 
 inherit kde-functions
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 need-qt 3
 
 src_compile() {
-	qmake -o Makefile lincvs.pro
+	${QTDIR}/bin/qmake -o Makefile lincvs.pro
 	sed -i -e "s/^\tstrip/#\tstrip/" \
 		-e "s/CFLAGS   = -pipe -Wall -W -O2/CFLAGS   = ${CFLAGS} -Wall -W/" \
 		-e "s/CXXFLAGS = -pipe -Wall -W -O2/CXXFLAGS = ${CXXFLAGS} -Wall -W/" Makefile \
