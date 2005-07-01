@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-1.1.01.ebuild,v 1.1 2005/06/29 19:53:09 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/backport-util-concurrent-1.1.01.ebuild,v 1.2 2005/07/01 09:50:07 dholm Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mathcs.emory.edu/dcl/util/${PN}/dist/${MY_P}/${MY_P}-src.tar
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="jikes doc"
 
 DEPEND=">=virtual/jdk-1.4

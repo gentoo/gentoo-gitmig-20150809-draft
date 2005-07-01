@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111.ebuild,v 1.1 2005/06/29 18:28:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111.ebuild,v 1.2 2005/07/01 09:49:54 dholm Exp $
 
 inherit java-pkg eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xmldb-org/${MY_P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
