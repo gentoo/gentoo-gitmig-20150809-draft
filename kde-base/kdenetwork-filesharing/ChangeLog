@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-filesharing
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-filesharing/ChangeLog,v 1.10 2005/07/01 14:26:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-filesharing/ChangeLog,v 1.11 2005/07/01 22:53:43 pylon Exp $
+
+  01 Jul 2005; Lars Weiler <pylon@gentoo.org>
+  kdenetwork-filesharing-3.4.1.ebuild:
+  Stable on ppc; Bug #97544.
 
   01 Jul 2005; Markus Rothe <corsair@gentoo.org>
   kdenetwork-filesharing-3.4.1.ebuild:

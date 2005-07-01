@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmines/kmines-3.4.1.ebuild,v 1.4 2005/07/01 14:03:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmines/kmines-3.4.1.ebuild,v 1.5 2005/07/01 23:08:29 pylon Exp $
 KMNAME=kdegames
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KMines is a classic mine sweeper game"
-KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdegames-3.3.1"
 DEPEND="

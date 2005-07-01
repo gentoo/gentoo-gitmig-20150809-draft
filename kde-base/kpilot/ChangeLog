@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpilot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.10 2005/05/28 08:35:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.11 2005/07/01 22:37:32 pylon Exp $
+
+  01 Jul 2005; Lars Weiler <pylon@gentoo.org> kpilot-3.4.1.ebuild:
+  Stable on ppc; Bug #97544.
 
   27 May 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/kdepim-3.4.1-kpilot-fix.patch, kpilot-3.4.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.9 2005/07/01 14:50:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.10 2005/07/01 22:42:01 pylon Exp $
+
+  01 Jul 2005; Lars Weiler <pylon@gentoo.org> kfloppy-3.4.1.ebuild:
+  Stable on ppc; Bug #97544.
 
   01 Jul 2005; Markus Rothe <corsair@gentoo.org> kfloppy-3.4.1.ebuild:
   Stable on ppc64 (bug #97544)

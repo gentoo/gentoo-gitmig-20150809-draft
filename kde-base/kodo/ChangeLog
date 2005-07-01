@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kodo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kodo/ChangeLog,v 1.10 2005/07/01 14:56:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kodo/ChangeLog,v 1.11 2005/07/01 23:34:26 pylon Exp $
+
+  01 Jul 2005; Lars Weiler <pylon@gentoo.org> kodo-3.4.1.ebuild:
+  Stable on ppc; Bug #97544.
 
   01 Jul 2005; Markus Rothe <corsair@gentoo.org> kodo-3.4.1.ebuild:
   Stable on ppc64 (bug #97544)
