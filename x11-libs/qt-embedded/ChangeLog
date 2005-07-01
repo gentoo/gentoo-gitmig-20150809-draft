@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-embedded
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.16 2005/03/07 10:17:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.17 2005/07/01 15:47:41 danarmak Exp $
+
+*qt-embedded-3.3.4-r1 (01 Jul 2005)
+
+  01 Jul 2005; Dan Armak <danarmak@gentoo.org> +qt-embedded-3.3.4-r1.ebuild:
+  Fixed bug 14178 (circular dependency with dev-db/unixODBC). The qt odbc
+  plugin now lives in the separate ebuild dev-db/qt-unixODBC. This ebuild has
+  a PDEPEND on that one if USE odbc is enabled.
 
   07 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> -files/47qt-embedded3,
   -files/50qt-embeddeddir3, -files/tools-Makefile, -qt-embedded-3.0.5.ebuild,
