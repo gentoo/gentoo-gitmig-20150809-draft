@@ -1,8 +1,8 @@
 # ChangeLog for kde-base/libkpgp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.10 2005/07/01 09:21:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.11 2005/07/01 09:57:34 corsair Exp $
 
-  01 Jul 2005; <markus@gentoo.org> libkpgp-3.4.1.ebuild:
+  01 Jul 2005; Markus Rothe <corsair@gentoo.org> libkpgp-3.4.1.ebuild:
   Stable on ppc64 (bug #97544)
 
 *libkpgp-3.4.1 (25 May 2005)
