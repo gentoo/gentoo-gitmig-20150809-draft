@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-musepack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-musepack/ChangeLog,v 1.5 2005/06/29 21:39:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-musepack/ChangeLog,v 1.6 2005/07/01 09:52:42 dholm Exp $
+
+  01 Jul 2005; David Holm <dholm@gentoo.org> bmp-musepack-1.2_rc1.ebuild:
+  Added to ~ppc.
 
 *bmp-musepack-1.2_rc1 (29 Jun 2005)
 

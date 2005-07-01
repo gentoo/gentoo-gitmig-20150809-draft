@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-musepack/bmp-musepack-1.2_rc1.ebuild,v 1.1 2005/06/29 21:39:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-musepack/bmp-musepack-1.2_rc1.ebuild,v 1.2 2005/07/01 09:52:42 dholm Exp $
 
 MY_P=${P/_rc/-RC}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ SRC_URI="http://musepack.origean.net/files/linux/plugins/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="media-sound/beep-media-player
 	>=media-libs/libmpcdec-1.2
