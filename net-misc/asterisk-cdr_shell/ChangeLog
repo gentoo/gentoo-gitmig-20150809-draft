@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/asterisk-cdr_shell
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/ChangeLog,v 1.1 2005/07/01 21:09:20 stkn Exp $
+
+*asterisk-cdr_shell-20050626 (01 Jul 2005)
+
+  01 Jul 2005; Stefan Knoblich <stkn@gentoo.org> +metadata.xml,
+  +files/cdr.conf, +files/cdr_shell-20050626-astcfg.diff,
+  +files/cdr_shell-20050626-stable.diff, +asterisk-cdr_shell-20050626.ebuild:
+  Initial import.
+

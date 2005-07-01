@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/asterisk-app_intercept
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_intercept/ChangeLog,v 1.1 2005/07/01 21:06:20 stkn Exp $
+
+*asterisk-app_intercept-20050623 (01 Jul 2005)
+
+  01 Jul 2005; Stefan Knoblich <stkn@gentoo.org> +metadata.xml,
+  +files/app_intercept-20050623-astcfg.diff,
+  +asterisk-app_intercept-20050623.ebuild:
+  Initial import.
+
