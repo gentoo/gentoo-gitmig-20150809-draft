@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4149 2005/07/01 12:42:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4150 2005/07/01 14:05:52 danarmak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -786,12 +786,6 @@ media-video/bcast
 # <pythonhead@gentoo.org (13 Nov 2004)
 # 2.6.0 is now in portage but will remove this soon as deps in other ebuilds are fixed
 =x11-libs/wxGTK-2.5*
-
-# <danarmak@gentoo.org> (23 Oct 2004)
-# Experimental package for plugin separate from main qt ebuild
-# masked until considered official; atm it would overwrite the same plugin as installed
-# by x11-lib/qt
-dev-db/qt-unixODBC
 
 # <foser@gentoo.org> (22 Oct 2004)
 # no good release #68514 & #68034
