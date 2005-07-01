@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.13 2005/05/29 16:16:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.14 2005/07/01 13:09:34 fmccor Exp $
+
+  01 Jul 2005; Ferris McCormick <fmccor@gentoo.org> fftw-3.0.1-r1.ebuild:
+  Stable for sparc.  No sparc errors outstanding and runs its 'bench'
+  performance test program in both single and double mode without any
+  issues.
 
   29 May 2005; Markus Rothe <corsair@gentoo.org> fftw-2.1.5-r1.ebuild:
   Stable on ppc64
