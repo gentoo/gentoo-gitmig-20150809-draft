@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r1.ebuild,v 1.7 2005/06/21 21:47:08 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r1.ebuild,v 1.8 2005/07/01 15:06:01 caleb Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -152,7 +152,7 @@ src_compile() {
 	CXXFLAGS=""
 	econf ${myconf} || die "configure died"
 
-	qmake -o "Makefile" mythtv.pro || die "qmake failed"
+	${QTDIR}/bin/qmake -o "Makefile" mythtv.pro || die "qmake failed"
 	emake || die "emake failed"
 
 }
