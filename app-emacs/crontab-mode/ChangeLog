@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/crontab-mode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/crontab-mode/ChangeLog,v 1.6 2005/06/26 15:07:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/crontab-mode/ChangeLog,v 1.7 2005/07/01 18:14:57 mkennedy Exp $
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  crontab-mode-1.18.ebuild:
+  Keywording ~amd64.
 
   26 Jun 2005; Mamoru KOMACHI <usata@gentoo.org> crontab-mode-1.18.ebuild:
   Stable on x86.

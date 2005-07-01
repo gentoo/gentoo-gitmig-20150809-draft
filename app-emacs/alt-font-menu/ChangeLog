@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/alt-font-menu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/alt-font-menu/ChangeLog,v 1.4 2005/01/01 13:38:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/alt-font-menu/ChangeLog,v 1.5 2005/07/01 18:14:57 mkennedy Exp $
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  alt-font-menu-0.4.ebuild:
+  Keywording ~amd64.
 
   01 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> alt-font-menu-0.4.ebuild:
   Stable on x86. Added to ~alpha and ~ppc-macos.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/aspectj4emacs-1.1_beta2.ebuild,v 1.7 2005/01/01 13:39:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/aspectj4emacs-1.1_beta2.ebuild,v 1.8 2005/07/01 18:14:57 mkennedy Exp $
 
 inherit elisp eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://aspectj4emacs.sourceforge.net/"
 SRC_URI="http://aspectj4emacs.sourceforge.net/${MY_P}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="app-emacs/jde
 	=dev-java/aspectj-1.1*"

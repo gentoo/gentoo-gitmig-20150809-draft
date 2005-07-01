@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/semi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.16 2005/01/01 14:00:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.17 2005/07/01 18:14:57 mkennedy Exp $
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> semi-1.14.6.ebuild:
+  Keywording ~amd64.
 
   30 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> files/comp.el:
   Fixed coding system selection bug during info creation.

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/dircolors
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.7 2005/05/10 02:59:11 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.8 2005/07/01 18:14:57 mkennedy Exp $
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  dircolors-1.0-r1.ebuild:
+  Keywording ~amd64.
 
   10 May 2005; Brian Harring <ferringb@gentoo.org> dircolors-1.0.ebuild, dircolors-1.0-r1.ebuild:
   fixed src_uri

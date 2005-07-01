@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cdrw/cdrw-1.2.ebuild,v 1.7 2005/01/01 13:40:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cdrw/cdrw-1.2.ebuild,v 1.8 2005/07/01 18:14:57 mkennedy Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="ftp://ftp.cis.ohio-state.edu/pub/emacs-lisp/archive/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
@@ -31,23 +31,9 @@ src_unpack() {
 	cp cdrw.el cdrw.el~ && sed -e 's/mpg123/mpg321/g' <cdrw.el~ >cdrw.el
 }
 
-src_compile() {
-	emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el || die
-}
-
 src_install() {
 	elisp-install ${PN} *.el *.elc
 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
-
 	exeinto /usr/bin
 	doexe  mp3time
-}
-
-pkg_postinst() {
-	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/cdrw.el for the complete documentation."
-}
-
-pkg_postrm() {
-	elisp-site-regen
 }
