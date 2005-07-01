@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.48 2005/06/05 16:33:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.49 2005/07/01 20:35:31 leonardop Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -27,9 +27,7 @@ gnome2_src_configure() {
 	elibtoolize ${ELTCONF}
 
 	# doc keyword for gtk-doc
-	use doc \
-		&& G2CONF="${G2CONF} --enable-gtk-doc" \
-		|| G2CONF="${G2CONF} --disable-gtk-doc"
+	G2CONF="${G2CONF} $(use_enable doc gtk-doc)"
 
 	econf "$@" ${G2CONF} || die "./configure failure"
 
@@ -87,9 +85,11 @@ gnome2_gconf_install() {
 		unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 		export GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
 		einfo "Installing GNOME 2 GConf schemas"	
-		cat ${ROOT}/var/db/pkg/*/${PN}-${PVR}/CONTENTS | grep "obj /etc/gconf/schemas" | sed 's:obj \([^ ]*\) .*:\1:' |while read F; do
-			# echo "DEBUG::gconf install  ${F}"
-			${ROOT}/usr/bin/gconftool-2  --makefile-install-rule ${F} 1>/dev/null
+		grep "obj /etc/gconf/schemas" ${ROOT}/var/db/pkg/*/${PF}/CONTENTS | sed 's:obj \([^ ]*\) .*:\1:' | while read F; do
+			if [ -e "${F}" ]; then
+				# echo "DEBUG::gconf install  ${F}"
+				${ROOT}/usr/bin/gconftool-2  --makefile-install-rule ${F} 1>/dev/null
+			fi
 		done
 	fi
 
