@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/junkbust/junkbust-0.8.ebuild,v 1.9 2005/04/22 19:39:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/junkbust/junkbust-0.8.ebuild,v 1.10 2005/07/01 19:49:37 mkennedy Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.neilvandyke.org/junkbust-emacs/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}

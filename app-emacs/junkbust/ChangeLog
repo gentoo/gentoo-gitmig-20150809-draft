@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/junkbust
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/junkbust/ChangeLog,v 1.6 2005/04/22 19:39:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/junkbust/ChangeLog,v 1.7 2005/07/01 19:49:37 mkennedy Exp $
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> junkbust-0.8.ebuild:
+  Keywording ~amd64.
 
   22 Apr 2005; Alin Nastac <mrness@gentoo.org> junkbust-0.8.ebuild:
   www-proxy/junkbuster -> net-proxy/junkbuster

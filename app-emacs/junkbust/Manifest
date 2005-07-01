@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 39849a840796a5aaabb62a3f8fc2ad8d junkbust-0.8.ebuild 932
 MD5 9ef6c71b80d3f4aa9b7ab3470e157d64 ChangeLog 641
+MD5 85514b27b24ef3c99f9752a04f790bde junkbust-0.8.ebuild 939
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 1276120f68d61c84752a3864e5a1b5c7 files/50junkbust-gentoo.el 268
 MD5 064075c4d2cf3ae3d72f3d498000134a files/digest-junkbust-0.8 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCaVMQjiC39V7gKu0RArdSAJ9EpA+sP2gvChN030TCQSOL/TTFfQCfWYLQ
-uEOaQ6WexKS0w+1SmPwDP4A=
-=P8mE
------END PGP SIGNATURE-----

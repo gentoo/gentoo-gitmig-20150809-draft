@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jam-mode/jam-mode-0.1.ebuild,v 1.6 2005/01/01 13:50:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jam-mode/jam-mode-0.1.ebuild,v 1.7 2005/07/01 19:49:37 mkennedy Exp $
 
 inherit elisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.tenfoot.uklinux.net/emacs/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~ppc-macos x86"
 IUSE=""
 DEPEND=""
 
