@@ -2,14 +2,16 @@
 Hash: SHA1
 
 MD5 a2f623c02d370f176cf87dc873180855 prewikka-0.9.0_rc5.ebuild 807
-MD5 1f20164b91a69e77f00b809a5f7fa04b metadata.xml 218
-MD5 cf081536ab053b9a5cd8cfc59c9f48fa ChangeLog 579
-MD5 a415c070bfb6371991d3847aa9b7853a files/digest-prewikka-0.9.0_rc5 70
+MD5 0021c9963b5cc71953516cbd0446a451 prewikka-0.9.0_rc7.ebuild 776
+MD5 1eee268b29eb703e49a66ccfd7e3d988 ChangeLog 720
+MD5 4fbb6885cc73a96f82855db5b77a7fd6 metadata.xml 216
 MD5 3dbc2b447f2bf163cb2ba075405411f2 files/prewikka-0.9.0_rc5-pathfix.patch 1249
+MD5 a415c070bfb6371991d3847aa9b7853a files/digest-prewikka-0.9.0_rc5 70
+MD5 a9b48a3442a6380e21a5acf8702dd3fa files/digest-prewikka-0.9.0_rc7 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCmbO7mdTrptrqvGERAjOlAJ48PGDPKG64nx+JdozNn69NTt1cnQCfUOji
-dojuBYwCm29kWJMNFi7Mipo=
-=v7do
+iD8DBQFCxWnEEZCkKN40op4RAs33AJ0YubPAjZcahAKU+zy5TEytI00HAgCghd5A
+uyD2q0h+H48uJ95p5ibFVAI=
+=D3HF
 -----END PGP SIGNATURE-----

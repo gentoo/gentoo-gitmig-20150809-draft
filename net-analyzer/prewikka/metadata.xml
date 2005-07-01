@@ -2,5 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<longdescription>A frount end to prelude</longdescription>
+<longdescription>A frontend to prelude</longdescription>
 </pkgmetadata>
