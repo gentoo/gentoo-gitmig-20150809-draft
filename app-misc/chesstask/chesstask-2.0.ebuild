@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/chesstask-2.0.ebuild,v 1.4 2005/01/01 14:56:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/chesstask-2.0.ebuild,v 1.5 2005/07/01 14:53:36 caleb Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/qt-3
 
 src_compile() {
 	sed -i -e "/ENGLISH/s/^#//" ChessTask.pro || die
-	qmake -o Makefile ChessTask.pro || die
+	${QTDIR}/bin/qmake -o Makefile ChessTask.pro || die
 	emake || die "compile failed"
 }
 

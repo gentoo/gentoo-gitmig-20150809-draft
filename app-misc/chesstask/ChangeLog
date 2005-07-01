@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/chesstask
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/ChangeLog,v 1.8 2005/01/01 14:56:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/ChangeLog,v 1.9 2005/07/01 14:53:36 caleb Exp $
+
+  01 Jul 2005; Caleb Tennis <caleb@gentoo.org> chesstask-2.0.ebuild:
+  Change qmake dir per bug #97535
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> chesstask-1.3.ebuild,
   chesstask-2.0.ebuild:
