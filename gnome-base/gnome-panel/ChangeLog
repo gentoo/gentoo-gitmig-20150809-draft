@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.135 2005/06/25 13:08:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.136 2005/07/01 20:50:26 leonardop Exp $
+
+*gnome-panel-2.10.2 (01 Jul 2005)
+
+  01 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gnome-panel-2.10.2.ebuild:
+  New release. Added support for the 'static' USE flag. Moved
+  gnome2_pkg_postinst command in pkg_postinst() after local commands so
+  panel-default-setup.entries is not processed with 'gconftool-2
+  --makefile-install-rule'.
 
   25 Jun 2005; Guy Martin <gmsoft@gentoo.org> gnome-panel-2.10.0-r1.ebuild:
   Stable on hppa.
