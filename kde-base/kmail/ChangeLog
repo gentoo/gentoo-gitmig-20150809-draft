@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.11 2005/05/25 21:23:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.12 2005/07/01 00:53:18 carlo Exp $
+
+*kmail-3.4.1-r1 (01 Jul 2005)
+
+  01 Jul 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/kmail-3.4.1-shift+click-crash.diff, +kmail-3.4.1-r1.ebuild:
+  fixing crash on shift+click in kmail reader, #97549
 
 *kmail-3.4.1 (25 May 2005)
 

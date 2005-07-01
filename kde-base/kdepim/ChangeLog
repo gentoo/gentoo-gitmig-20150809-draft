@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.151 2005/06/08 21:59:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.152 2005/07/01 00:56:23 carlo Exp $
+
+*kdepim-3.4.1-r2 (01 Jul 2005)
+
+  01 Jul 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/kmail-3.4.1-shift+click-crash.diff, +kdepim-3.4.1-r2.ebuild:
+  fixing crash on shift+click in kmail reader, #97549
 
 *kdepim-3.4.1-r1 (08 Jun 2005)
 
