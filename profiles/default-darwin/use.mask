@@ -90,3 +90,6 @@ pcre
 
 # breaks clisp builds
 fastcgi
+
+# USE_EXPANDed flags used only by other profiles
+userland_GNU
