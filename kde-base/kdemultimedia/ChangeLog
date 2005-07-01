@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.160 2005/06/10 14:54:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.161 2005/07/01 04:56:28 josejx Exp $
+
+  01 Jul 2005; Joseph Jezak <josejx@gentoo.org>
+  kdemultimedia-3.4.1-r1.ebuild:
+  Marked ppc stable for bug #97544.
 
 *kdemultimedia-3.4.1-r1 (10 Jun 2005)
 

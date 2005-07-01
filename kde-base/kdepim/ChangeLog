@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.152 2005/07/01 00:56:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.153 2005/07/01 04:56:28 josejx Exp $
+
+  01 Jul 2005; Joseph Jezak <josejx@gentoo.org> kdepim-3.4.1-r1.ebuild,
+  kdepim-3.4.1-r2.ebuild:
+  Marked ppc stable for bug #97544.
 
 *kdepim-3.4.1-r2 (01 Jul 2005)
 

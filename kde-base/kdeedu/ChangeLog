@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.129 2005/06/30 15:03:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.130 2005/07/01 04:56:28 josejx Exp $
+
+  01 Jul 2005; Joseph Jezak <josejx@gentoo.org> ChangeLog:
+  Marked ppc stable for bug #97544.
 
 *kdeedu-3.4.1-r10 (30 Jun 2005)
 
