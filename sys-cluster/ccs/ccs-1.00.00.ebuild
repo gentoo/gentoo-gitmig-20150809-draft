@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-1.00.00.ebuild,v 1.1 2005/06/30 12:41:15 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-1.00.00.ebuild,v 1.2 2005/07/01 09:57:02 dholm Exp $
 
 inherit linux-mod
 
@@ -12,7 +12,7 @@ IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 DEPEND=">=sys-cluster/magma-1.00.00
 	dev-libs/libxml2
