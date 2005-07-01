@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3fe09ecf9c960270bc8fee3c4e6be6f module-rebuild-0.4.ebuild 478
-MD5 ea0963c42faaa0ae11ab458207259875 module-rebuild-0.1.ebuild 472
-MD5 fe15c0fd17ebc82376abdd3a0693277d ChangeLog 1309
+MD5 97b0b009a2559f8c6f334cc8ff8d48d7 ChangeLog 1399
 MD5 4f16a183ffde9bcb9ad32bc19fafa1aa metadata.xml 526
-MD5 2a7d0f8657e4bd140b33d1cd4a6a81d9 files/module-rebuild-0.1 4381
-MD5 f95b8771d5dce0be0c63baa9899298db files/module-rebuild-0.4 6365
+MD5 ea0963c42faaa0ae11ab458207259875 module-rebuild-0.1.ebuild 472
+MD5 b130f25addc9360925c4befae795eb49 module-rebuild-0.4.ebuild 483
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-module-rebuild-0.1 0
+MD5 2a7d0f8657e4bd140b33d1cd4a6a81d9 files/module-rebuild-0.1 4381
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-module-rebuild-0.4 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxFWyz7mlh8wQzGMRAjBsAJ9dVoTqAYwchmKygaFkL4lhFOeFkQCePaCI
-23VLT0RCJ3Mts0V12fBDsPM=
-=7XEn
------END PGP SIGNATURE-----
+MD5 f95b8771d5dce0be0c63baa9899298db files/module-rebuild-0.4 6365
