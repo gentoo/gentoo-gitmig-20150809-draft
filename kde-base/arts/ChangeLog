@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.168 2005/07/01 20:57:59 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.169 2005/07/01 21:17:00 corsair Exp $
+
+  01 Jul 2005; Markus Rothe <corsair@gentoo.org> arts-3.4.1.ebuild,
+  arts-3.4.1-r1.ebuild, arts-3.4.1-r2.ebuild:
+  3.4.1-r2 stable on ppc64; removed dublicate keywords.. however they got in
+  there..
 
   01 Jul 2005; Lars Weiler <pylon@gentoo.org> arts-3.4.1-r2.ebuild:
   Stable on ppc; Bug #97544.
