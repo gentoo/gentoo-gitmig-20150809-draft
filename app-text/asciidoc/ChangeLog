@@ -1,6 +1,16 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.5 2005/06/24 21:02:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.6 2005/07/01 23:32:44 leonardop Exp $
+
+*asciidoc-7.0.1 (01 Jul 2005)
+
+  01 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> asciidoc-7.0.1.ebuild:
+  New release, resolves bug #96102. Patch no longer necessary. Modified
+  src_install() to follow upstream packager notes more closely.
+
+  01 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  asciidoc-6.0.3-r1.ebuild:
+  Stable on x86.
 
   24 Jun 2005; Aron Griffis <agriffis@gentoo.org> asciidoc-6.0.3-r1.ebuild:
   marked ~ia64 as a mercurial dep
