@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<longdescription>
+ksb26 is a package that redirects tcp connection (to user-defined target hosts)
+through socks 4/5 chains. It is divided into a kernel module, ksb26, that
+intercepts and redirects tcp connections, and a userspace manager, ksb26manager,
+that keeps updated the SOCKS list and loads target hosts list via a character
+device, /dev/ksb26
+</longdescription>
+<maintainer>
+  <email>s4t4n@gentoo.org</email>
+  <name>Michele Noberasco</name>
+</maintainer>
+</pkgmetadata>
