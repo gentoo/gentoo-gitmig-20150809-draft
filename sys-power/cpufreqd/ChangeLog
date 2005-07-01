@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.7 2005/06/24 07:48:23 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.8 2005/07/01 22:19:27 josejx Exp $
+
+  01 Jul 2005; Joseph Jezak <josejx@gentoo.org> cpufreqd-1.2.3.ebuild:
+  Marked ppc stable.
 
   24 Jun 2005; <brix@gentoo.org> cpufreqd-1.2.3.ebuild:
   Stable on x86.

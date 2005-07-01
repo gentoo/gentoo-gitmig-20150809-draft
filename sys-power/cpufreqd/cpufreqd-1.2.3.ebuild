@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-1.2.3.ebuild,v 1.2 2005/06/24 07:48:23 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-1.2.3.ebuild,v 1.3 2005/07/01 22:19:27 josejx Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 IUSE=""
 
