@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0.ebuild,v 1.2 2004/12/14 14:22:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0.ebuild,v 1.3 2005/07/01 15:13:26 caleb Exp $
 
 MY_PV="${PV/_r/r}"
 
@@ -34,10 +34,10 @@ src_unpack () {
 
 src_compile () {
 	addwrite ${QTDIR}/etc/settings
-	qmake qwt.pro
+	${QTDIR}/bin/qmake qwt.pro
 	emake || die
 	cd designer
-	qmake qwtplugin.pro
+	${QTDIR}/bin/qmake qwtplugin.pro
 	emake || die
 }
 
