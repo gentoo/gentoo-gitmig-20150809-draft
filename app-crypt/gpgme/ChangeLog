@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.76 2005/06/08 14:15:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.77 2005/07/01 23:56:07 hardave Exp $
+
+  01 Jul 2005; Hardave Riar <hardave@gentoo.org> gpgme-1.0.2.ebuild:
+  Stable on mips
 
   08 Jun 2005; Daniel Black <dragonheart@gentoo.org> gpgme-0.3.14-r1.ebuild,
   -gpgme-0.9.0-r1.ebuild, -gpgme-1.0.1.ebuild, -gpgme-1.0.1-r1.ebuild,
