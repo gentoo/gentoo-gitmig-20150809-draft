@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.11.3.ebuild,v 1.2 2005/06/13 16:55:44 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.11.3.ebuild,v 1.3 2005/07/01 13:08:06 r3pek Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ RDEPEND="net-misc/rsync
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/git-rev-list.patch
 	cd "${S}"
 	sed -i \
 		-e "/^CFLAGS/s:-g -O2:${CFLAGS}:" \
