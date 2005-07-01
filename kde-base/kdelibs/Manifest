@@ -10,7 +10,7 @@ MD5 d2b4b1a7bcb1bc7191e59d82a37a3bdc kdelibs-3.4.0.ebuild 2960
 MD5 5a3d1a6d316ead8f2cb08751b71b9aba kdelibs-3.2.3-r7.ebuild 3002
 MD5 e8c4c4bd12f91736ec48fb1a3f1c04e9 kdelibs-3.3.2-r8.ebuild 3677
 MD5 8405254cef1e05aae67ed401777af2b1 kdelibs-3.2.3-r9.ebuild 3205
-MD5 3e671eef54998bb5e2b2fc39db0b87b0 ChangeLog 39808
+MD5 aabe3f1b5208096e6615775b6c213566 ChangeLog 39822
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 f08d38452bda90dfc0aa5475d21b72a2 kdelibs-3.4.0-r2.ebuild 3243
 MD5 eb2891eff874523d2dc5dc47507cbe7d kdelibs-3.3.2-r5.ebuild 3344
