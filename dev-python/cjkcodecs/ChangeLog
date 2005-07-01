@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cjkcodecs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cjkcodecs/ChangeLog,v 1.11 2005/03/04 21:31:57 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cjkcodecs/ChangeLog,v 1.12 2005/07/01 11:16:40 blubb Exp $
+
+  01 Jul 2005; Simon Stelling <blubb@gentoo.org> cjkcodecs-1.1.1.ebuild:
+  added ~amd64 keyword
 
   04 Mar 2005; Kito <kito@gentoo.org> cjkcodecs-1.1.1.ebuild:
   ~ppc-macos keyword. closes Bug 81625
