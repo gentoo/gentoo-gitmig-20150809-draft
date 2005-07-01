@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmpmon/snmpmon-0.5.ebuild,v 1.3 2004/09/29 00:58:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmpmon/snmpmon-0.5.ebuild,v 1.4 2005/07/01 15:08:32 caleb Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ KEYWORDS="x86 ~sparc"
 DEPEND=">=net-analyzer/net-snmp-5.0.9-r1"
 
 src_compile() {
-	qmake -o Makefile snmpmon.pro
+	${QTDIR}/bin/qmake -o Makefile snmpmon.pro
 	sed -i -e "s/CFLAGS   = -pipe -w -O2/CFLAGS   = ${CFLAGS} -w/" Makefile
 	sed -i -e "s/CXXFLAGS = -pipe -w -O2/CXXFLAGS = ${CXXFLAGS} -w/" Makefile
 	addpredict ${QTDIR}/etc/settings
