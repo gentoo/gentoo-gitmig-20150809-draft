@@ -1,8 +1,20 @@
-MD5 5974a1ac191d0b4714f9b4e0e59a5346 ChangeLog 2146
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6cb048da087ae0d8aa8bbae2edbcf1c5 aap-1.076.ebuild 1023
 MD5 82a290343ccae7e2393e17c606a2fc48 aap-1.055.ebuild 925
-MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 545b15d33528b6cf79a8a4f9ec4e5015 aap-1.070.ebuild 1014
 MD5 c11cc139637b08faaa47e8d56bb79bb7 aap-1.072.ebuild 1016
+MD5 2e6ec9433d2d18c6498030db844fd61b ChangeLog 2259
+MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 c9846cf10f1922d756e981928866a69d files/digest-aap-1.055 59
 MD5 c8821df8212d8fda85c8d1a9a3ac290e files/digest-aap-1.070 59
 MD5 1af821073e552639ccebd80f2cc26fed files/digest-aap-1.072 59
+MD5 67dd8c7ce66feeb1867699d3b512a45c files/digest-aap-1.076 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxUAmEZCkKN40op4RAvAnAJ0Wso2yxl1OeJZxvnUhk/RMXQ30kgCgtGna
+FG+HOQ4lvvKaDYXSSmGbQhw=
+=bCn7
+-----END PGP SIGNATURE-----
