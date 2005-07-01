@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.14 2005/06/07 05:48:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.15 2005/07/01 15:01:49 caleb Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
@@ -82,7 +82,7 @@ myth_src_compile() {
 		econf ${myconf}
 	fi
 
-	qmake -o "Makefile" "${S}/${pkg_pro}"
+	${QTDIR}/bin/qmake -o "Makefile" "${S}/${pkg_pro}"
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" "${@}" || die
 }
 
