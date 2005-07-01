@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdeskcal-skins/gdeskcal-skins-0.0.1.ebuild,v 1.1 2005/01/11 10:44:59 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdeskcal-skins/gdeskcal-skins-0.0.1.ebuild,v 1.2 2005/07/01 04:41:36 josejx Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of gdeskcal skins"
@@ -30,7 +30,7 @@ SRC_URI="${THEME_URI}/yellow.tar.gz
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="x11-misc/gdeskcal"

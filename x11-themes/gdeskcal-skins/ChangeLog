@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gdeskcal-skins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdeskcal-skins/ChangeLog,v 1.1 2005/01/11 10:44:59 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdeskcal-skins/ChangeLog,v 1.2 2005/07/01 04:41:36 josejx Exp $
+
+  01 Jul 2005; Joseph Jezak <josejx@gentoo.org> gdeskcal-skins-0.0.1.ebuild:
+  Marked ~ppc and fixed aqua skin for bug #90102.
 
 *gdeskcal-skins-0.0.1 (11 Jan 2005)
 
