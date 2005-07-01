@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-1.0.4_rc2.ebuild,v 1.1 2005/06/30 18:41:29 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-1.1.ebuild,v 1.1 2005/07/01 02:53:41 tercel Exp $
 
 DESCRIPTION="Tool to help select distfiles mirrors for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
