@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.9 2005/07/01 15:02:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.10 2005/07/01 21:15:08 pylon Exp $
+
+  01 Jul 2005; Lars Weiler <pylon@gentoo.org> libkdeedu-3.4.1.ebuild:
+  Stable on ppc; Bug #97544.
 
   01 Jul 2005; Markus Rothe <corsair@gentoo.org> libkdeedu-3.4.1.ebuild:
   Stable on ppc64 (bug #97544)
