@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/phpxmlrpc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpxmlrpc/ChangeLog,v 1.10 2005/04/22 14:51:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpxmlrpc/ChangeLog,v 1.11 2005/07/01 16:30:06 sebastian Exp $
+
+*phpxmlrpc-1.1.1 (01 Jul 2005)
+
+  01 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -phpxmlrpc-1.0.99.2.ebuild, +phpxmlrpc-1.1.1.ebuild:
+  Version bump, mark directly stable and pull vulnerable version with regard
+  to bug 97399.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> phpxmlrpc-1.0.99.2.ebuild:
   stable on amd64
