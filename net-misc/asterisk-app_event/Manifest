@@ -1,3 +1,5 @@
-MD5 d68ac63088659ec2dce22acb94628431 asterisk-app_event-20050627.ebuild 631
-MD5 6398a986be929e46ee45a43cd18be378 files/digest-asterisk-app_event-20050627 78
+MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+MD5 a807c0eef7fe332493b5d3890061f7f4 ChangeLog 415
+MD5 31cc6b54faf201360580768dbfba284f asterisk-app_event-20050627.ebuild 754
 MD5 c53af72e2e4bfc3b055dd8a91082dded files/app_event-20050627-astcfg.diff 697
+MD5 6398a986be929e46ee45a43cd18be378 files/digest-asterisk-app_event-20050627 78
