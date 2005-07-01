@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.13 2005/06/18 13:44:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.14 2005/07/01 15:19:38 corsair Exp $
+
+  01 Jul 2005; Markus Rothe <corsair@gentoo.org> kde-meta-3.4.1.ebuild:
+  Stable on ppc64 (bug #97544)
 
   18 Jun 2005; Carsten Lohrke <carlo@gentoo.org> kde-meta-3.4.0.ebuild,
   kde-meta-3.4.1.ebuild:

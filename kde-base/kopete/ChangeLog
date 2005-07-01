@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.12 2005/06/30 19:11:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.13 2005/07/01 14:30:32 corsair Exp $
+
+  01 Jul 2005; Markus Rothe <corsair@gentoo.org> kopete-3.4.1.ebuild:
+  Stable on ppc64 (bug #97544)
 
   30 Jun 2005; Dan Armak <danarmak@gentoo.org>
   +files/disable-meanwhile.diff, kopete-3.4.1.ebuild:
