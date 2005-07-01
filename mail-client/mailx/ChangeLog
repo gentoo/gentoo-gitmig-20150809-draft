@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mailx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.38 2005/05/18 11:33:22 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.39 2005/07/01 19:48:29 ticho Exp $
+
+  01 Jul 2005; Andrej Kacian <ticho@gentoo.org>
+  mailx-8.1.2.20040524-r1.ebuild:
+  Corrected the LICENSE variable, as suggested by bug #97636, reported by
+  Albert Holm <albert+gentoo-bugzilla at cdr.se>.
 
   18 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
   -files/mailx-64bit.diff:
