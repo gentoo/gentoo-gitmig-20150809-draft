@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.1.ebuild,v 1.5 2005/07/01 04:56:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.1.ebuild,v 1.6 2005/07/01 17:56:49 danarmak Exp $
 
 inherit kde-dist eutils
 
@@ -46,6 +46,7 @@ src_compile() {
 	fi
 
 	use scanner || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kooka libkscan"
+	use povray || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kpovmodeler"
 
 	myconf="${myconf} $(use_with imlib) $(use_enable !nodrm kpdf-drm)"
 
