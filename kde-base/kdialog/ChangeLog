@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.10 2005/05/28 01:22:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.11 2005/07/01 10:58:26 corsair Exp $
+
+  01 Jul 2005; Markus Rothe <corsair@gentoo.org> kdialog-3.4.1.ebuild:
+  Stable on ppc64 (bug #97544)
 
   28 May 2005; Diego Pettenò <flameeyes@gentoo.org> kdialog-3.4.1.ebuild:
   Moved dependency to virtual/eject.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.4.1.ebuild,v 1.3 2005/06/30 21:02:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.4.1.ebuild,v 1.4 2005/07/01 11:16:24 corsair Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -10,7 +10,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="startkde script, which starts a complete KDE session, and associated scripts"
-KEYWORDS="x86 amd64 ~ppc64 ~ppc ~sparc"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 # The kde apps called from the startkde script.

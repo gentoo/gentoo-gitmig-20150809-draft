@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.12 2005/05/26 08:51:21 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.13 2005/07/01 11:59:28 corsair Exp $
+
+  01 Jul 2005; Markus Rothe <corsair@gentoo.org> juk-3.4.1.ebuild:
+  Stable on ppc64 (bug #97544)
 
   26 May 2005; Gregorio Guidi <greg_g@gentoo.org> juk-3.4.1.ebuild:
   Change flag 'oggvorbis' into 'vorbis' (#89592), 'mad' into 'mp3' (#94045).

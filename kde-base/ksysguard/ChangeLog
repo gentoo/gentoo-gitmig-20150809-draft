@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.14 2005/06/07 13:02:51 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.15 2005/07/01 11:32:44 corsair Exp $
+
+  01 Jul 2005; Markus Rothe <corsair@gentoo.org> ksysguard-3.4.1-r1.ebuild:
+  Stable on ppc64 (bug #97544)
 
 *ksysguard-3.4.1-r1 (07 Jun 2005)
 

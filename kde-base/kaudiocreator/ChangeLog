@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kaudiocreator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/ChangeLog,v 1.12 2005/06/07 15:36:47 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/ChangeLog,v 1.13 2005/07/01 11:53:25 corsair Exp $
+
+  01 Jul 2005; Markus Rothe <corsair@gentoo.org> kaudiocreator-3.4.1.ebuild:
+  Stable on ppc64 (bug #97544)
 
   07 Jun 2005; Gregorio Guidi <greg_g@gentoo.org>
   kaudiocreator-3.4.1.ebuild:
