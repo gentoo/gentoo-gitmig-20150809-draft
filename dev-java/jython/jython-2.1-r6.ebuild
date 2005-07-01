@@ -1,29 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r6.ebuild,v 1.1 2005/06/29 17:27:46 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r6.ebuild,v 1.2 2005/07/01 23:03:46 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="An implementation of Python written in Java"
 HOMEPAGE="http://www.jython.org"
 MY_PV="21"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.class"
+#SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.class"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="JPython"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 ppc64"
-IUSE="readline jikes"
+IUSE="readline jikes doc"
 # servlet
 
 DEPEND=">=virtual/jdk-1.2
 	readline? ( >=dev-java/libreadline-java-0.8.0 )
 	jikes? ( >=dev-java/jikes-1.18 )"
 #	servlet? ( >=net-www/tomcat-5.0 )
-
-src_unpack() {
-	cp ${DISTDIR}/${A} ${WORKDIR}
-	cd ${WORKDIR}
-	`java-config -J` -classpath . ${PN}-${MY_PV} -o ${S}/ demo lib source || die "unpack failed"
-}
 
 src_compile() {
 	javac=$(java-config -c)
@@ -54,8 +49,8 @@ src_compile() {
 src_install() {
 	java-pkg_newjar jython-${PV}.jar ${PN}.jar || die "install failed"
 
-	dodoc {README,LICENSE}.txt NEWS ACKNOWLEDGMENTS
-	java-pkg_dohtml -A .css .jpg .gif -r Doc
+	dodoc README.txt NEWS ACKNOWLEDGMENTS
+	use doc && java-pkg_dohtml -A .css .jpg .gif -r Doc/*
 	newbin ${FILESDIR}/jython jython
 	newbin ${FILESDIR}/jythonc jythonc
 

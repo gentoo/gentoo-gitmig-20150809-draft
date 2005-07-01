@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.25 2005/06/29 17:27:46 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.26 2005/07/01 23:03:46 axxo Exp $
+
+  01 Jul 2005; Thomas Matthijs <axxo@gentoo.org> jython-2.1-r6.ebuild:
+  fix 94099: unpackable class. 97665: use doc useflag for javadocs
 
 *jython-2.1-r6 (29 Jun 2005)
 
