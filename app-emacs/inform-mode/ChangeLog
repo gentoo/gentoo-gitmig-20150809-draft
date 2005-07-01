@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/inform-mode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/inform-mode/ChangeLog,v 1.8 2005/05/01 16:46:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/inform-mode/ChangeLog,v 1.9 2005/07/01 19:35:20 mkennedy Exp $
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  inform-mode-1.5.8.ebuild:
+  Keywording ~amd64
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   inform-mode-1.5.8.ebuild:
