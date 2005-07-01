@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/qlife
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/ChangeLog,v 1.3 2005/06/02 23:26:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/ChangeLog,v 1.4 2005/07/01 15:03:34 caleb Exp $
+
+  01 Jul 2005; Caleb Tennis <caleb@gentoo.org> qlife-0.7.ebuild,
+  qlife-0.8.ebuild:
+  Fix qmake dir per bug #97535
 
 *qlife-0.8 (02 Jun 2005)
 

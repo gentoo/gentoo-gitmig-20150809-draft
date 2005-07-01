@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.8.ebuild,v 1.1 2005/06/02 23:26:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.8.ebuild,v 1.2 2005/07/01 15:03:34 caleb Exp $
 
 inherit kde
 need-qt 3
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 src_compile() {
-	qmake || die "qmake failed"
+	${QTDIR}/bin/qmake || die "qmake failed"
 	emake || die "emake failed"
 }
 
