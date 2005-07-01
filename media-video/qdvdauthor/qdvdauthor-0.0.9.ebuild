@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.0.9.ebuild,v 1.2 2005/04/20 21:59:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.0.9.ebuild,v 1.3 2005/07/01 15:06:59 caleb Exp $
 
 inherit kde-functions
 
@@ -36,14 +36,14 @@ src_compile() {
 	#export QT_LIB="$QTDIR"
 	sed -i "s|/usr/local/bin|/usr/bin|g" qdvdauthor/qdvdauthor.cpp qdvdauthor/dialogexecute.cpp doc/sound.txt
 	cd qdvdauthor
-	qmake qdvdauthor.pro
+	${QTDIR}/bin/qmake qdvdauthor.pro
 
 	# fixing Makefile, so that we can use our CFLAGS
 	sed -i -e "s|^CFLAGS.*-O2|CFLAGS = ${CFLAGS} |g" -e "s|^CXXFLAGS.*-O2|CXXFLAGS = ${CXXFLAGS} |g" Makefile
 	emake || die "emake qdvdauthor failed"
 
 	cd qslideshow
-	qmake qslideshow.pro
+	${QTDIR}/bin/qmake qslideshow.pro
 	# fixing Makefile, so that we can use our CFLAGS
 	sed -i -e "s|^CFLAGS.*-O2|CFLAGS   = ${CFLAGS} |g" -e "s|^CXXFLAGS.*-O2|CXXFLAGS = ${CXXFLAGS} |g" Makefile
 	emake || die "emake qslideshow failed"
