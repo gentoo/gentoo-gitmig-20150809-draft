@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.60.ebuild,v 1.10 2005/02/20 15:58:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.60.ebuild,v 1.11 2005/07/01 14:58:49 caleb Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 
 src_compile() {
 	cd ${S}/qt
-	qmake -o Makefile qscintilla.pro
+	${QTDIR}/bin/qmake -o Makefile qscintilla.pro
 	sed -i -e "s/CFLAGS   = -pipe -w -O2/CFLAGS   = ${CFLAGS} -w/" Makefile
 	sed -i -e "s/CXXFLAGS = -pipe -w -O2/CXXFLAGS = ${CXXFLAGS} -w/" Makefile
 	epatch ${FILESDIR}/${P}-sandbox.patch

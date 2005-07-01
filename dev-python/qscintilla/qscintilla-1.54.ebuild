@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.54.ebuild,v 1.11 2005/02/20 15:58:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.54.ebuild,v 1.12 2005/07/01 14:58:49 caleb Exp $
 
 
 inherit eutils
@@ -20,7 +20,7 @@ src_unpack() {
 
 	unpack ${P}-x11-gpl-1.2.tar.gz
 	cd ${S}/qt
-	qmake -o Makefile qscintilla.pro
+	${QTDIR}/bin/qmake -o Makefile qscintilla.pro
 	epatch ${FILESDIR}/${P}-sandbox.patch
 	mkdir -p ${D}/${QTDIR}/lib
 
