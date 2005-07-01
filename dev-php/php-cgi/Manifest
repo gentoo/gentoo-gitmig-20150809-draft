@@ -1,25 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 686f1f839bde788f08f6a1193b860a10 php-cgi-5.0.4.ebuild 1100
 MD5 b0699992939c804bbc6e2382978bbe1f php-cgi-4.3.8-r1.ebuild 767
 MD5 a2364c381c6ecc36e77343399d311f8f php-cgi-4.3.8.ebuild 749
-MD5 b1d80945c0756401996e022e9af9397e php-cgi-4.4.0_rc1.ebuild 1032
 MD5 09d3d3d80c7d19497f383b50f0d6f2f6 php-cgi-4.3.11.ebuild 995
 MD5 dceed980602910f4b477dfec8d31bc68 php-cgi-4.3.9_rc1.ebuild 860
 MD5 0027de1560a23faca547c7531eebce2f php-cgi-4.3.9.ebuild 790
 MD5 46aebfa8a26be82c3c0a32aab969f492 php-cgi-4.3.10.ebuild 921
+MD5 b1d80945c0756401996e022e9af9397e php-cgi-4.4.0_rc2.ebuild 1032
 MD5 a4c7d82cf8fe5d4b82eff5a4b283d882 php-cgi-4.3.9-r1.ebuild 808
 MD5 bd43248eeca41df5712a8cd1d8fad2b1 php-cgi-4.3.9_rc1-r1.ebuild 878
 MD5 ec6a9c89ec2cc50a21a6beba1811af20 php-cgi-4.3.11-r1.ebuild 1118
-MD5 eada0f2a45a2167550bbab03ce0e9973 ChangeLog 10217
+MD5 4de77a649dccf48b7364ccd8355da30e ChangeLog 10381
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 b2c4209d0ddcd0a3debef249ffd2d8d2 files/digest-php-cgi-4.3.11-r1 284
 MD5 286ce4ea00fde75122c14fd35c3d4672 files/digest-php-cgi-4.3.9_rc1 208
 MD5 390a659097a43447e44ab5bdd59378b5 files/digest-php-cgi-4.3.8 282
 MD5 24b9b19a4420d27906e4aface78ed963 files/digest-php-cgi-4.3.9 282
 MD5 457955f18cb41f31bab803aac779573c files/digest-php-cgi-5.0.4 140
-MD5 61651790550bc156f10ae2a3edafebe2 files/digest-php-cgi-4.4.0_rc1 208
+MD5 50b61c204b86124e0b99e90bb45eebfd files/digest-php-cgi-4.4.0_rc2 208
 MD5 286ce4ea00fde75122c14fd35c3d4672 files/digest-php-cgi-4.3.9_rc1-r1 208
 MD5 390a659097a43447e44ab5bdd59378b5 files/digest-php-cgi-4.3.8-r1 282
 MD5 24b9b19a4420d27906e4aface78ed963 files/digest-php-cgi-4.3.9-r1 282
@@ -31,10 +28,3 @@ MD5 b2c4209d0ddcd0a3debef249ffd2d8d2 files/digest-php-cgi-4.3.11 284
 MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
 MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
 MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCr6rMaGfFFLhbXWkRAqXlAKCKsYICx84K5fpS1hXxF2hQjbAx/wCghc6T
-U3EdI5zFom3ND6fn2H1LLWs=
-=mQ+2
------END PGP SIGNATURE-----

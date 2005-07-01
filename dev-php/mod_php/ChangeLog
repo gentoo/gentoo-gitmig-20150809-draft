@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.241 2005/06/19 08:58:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.242 2005/07/01 10:52:24 sebastian Exp $
+
+*mod_php-4.4.0_rc2 (01 Jul 2005)
+
+  01 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -mod_php-4.4.0_rc1.ebuild, +mod_php-4.4.0_rc2.ebuild:
+  Version bump.
 
 *mod_php-5.1.0_beta (19 Jun 2005)
 
