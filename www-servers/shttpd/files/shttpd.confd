@@ -1,36 +1,20 @@
 # /etc/init.d/shttpd:
-# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/files/shttpd.confd,v 1.1 2005/06/06 14:17:42 ka0ttic Exp $
-#
-# usage: shttpd [OPTIONS]
-# -d <directory>  wwwroot (dflt: )
-# -D              no directory listing
-# -p <port>       listening port (dflt: 80 or 443)
-# -l <logfile>    access log file (dflt: shttpd.log)
-# -I              inetd mode
-# -e <errorlog>   error log file
-# -i <files>      index files (dflt: index.html,index.cgi)
-# -c <cgi_ext>    CGI file pattern (dflt: .cgi)
-# -P <passfile>   global auth file
-# -A <passfile> <domain> <user> <password> edit .htpasswd file
-# -u <login_name> switch UID to user <login_name>
-# -N <servername> server domain name (auth realm) (dflt: mydomain.com)
-# -m <mime_file>  mime types file
-# -v              debug mode
-# -s <pem_file>   SSL certfileificate file (dflt: shttpd.pem)
-# -S              use SSL
-#
+# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/files/shttpd.confd,v 1.2 2005/07/01 04:49:16 ka0ttic Exp $
 
-SHTTPD_PORT="81"
-SHTTPD_USER="shttpd"
-SHTTPD_DOCROOT="/var/www/localhost/htdocs"
-SHTTPD_LOG="/var/log/shttpd/access.log"
-SHTTPD_ERROR="/var/log/shttpd/error.log"
+# shttpd now uses /etc/shttpd/shttpd.conf.
+# This file is obsolete and will be removed later.
+
+#SHTTPD_PORT="81"
+#SHTTPD_USER="shttpd"
+#SHTTPD_DOCROOT="/var/www/localhost/htdocs"
+#SHTTPD_LOG="/var/log/shttpd/access.log"
+#SHTTPD_ERROR="/var/log/shttpd/error.log"
 
 # comma separated list of files shttpd will interpret as index files
-SHTTPD_INDECIS="index.html,index.cgi"
-SHTTPD_CGIEXT=".cgi"
-SHTTPD_DOMAIN="localhost"
-SHTTPD_MIME="/etc/mime.types"
+#SHTTPD_INDECIS="index.html,index.cgi"
+#SHTTPD_CGIEXT=".cgi"
+#SHTTPD_DOMAIN="localhost"
+#SHTTPD_MIME="/etc/mime.types"
 
 # set any extra options here.
 #SHTTPD_EXTRAOPTS=""

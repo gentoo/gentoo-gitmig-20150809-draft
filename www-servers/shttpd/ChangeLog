@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/shttpd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.3 2005/06/09 11:46:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.4 2005/07/01 04:49:16 ka0ttic Exp $
+
+*shttpd-1.25 (01 Jul 2005)
+
+  01 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> +files/shttpd.conf,
+  files/shttpd.confd, files/shttpd.xinetd, -shttpd-1.21.ebuild,
+  +shttpd-1.25.ebuild:
+  Version bump for bug 96936; added USE flags cgi,dmalloc,threads. Updated
+  initd/confd files as well as added a shttpd.conf now that shttpd supports
+  them. Thanks to Lukas Zapletal for the help.
 
   09 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> shttpd-1.21.ebuild:
   Add app-misc/mime-types to RDEPEND.
