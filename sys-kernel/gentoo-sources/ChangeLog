@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.156 2005/06/28 11:34:48 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.157 2005/07/01 00:47:09 dsd Exp $
+
+*gentoo-sources-2.6.12-r3 (01 Jul 2005)
+
+  01 Jul 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.12-r3.ebuild:
+  Update to Linux 2.6.12.2. Add IT8212 storage driver. Megaraid driver update.
+  Allow both megaraid drivers to be built. Remove inotify temporarily due to
+  bug 97219.
 
   28 Jun 2005; Daniel Drake <dsd@gentoo.org>
   -gentoo-sources-2.6.1-r2.ebuild, -gentoo-sources-2.6.7-r19.ebuild,
