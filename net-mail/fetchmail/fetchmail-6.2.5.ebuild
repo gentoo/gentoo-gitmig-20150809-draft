@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.19 2004/11/03 04:24:04 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.20 2005/07/01 16:35:11 ticho Exp $
 
 inherit eutils gnuconfig
 
@@ -28,6 +28,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-kerberos.patch
 	# patch fixes bug #40126 (tomk@gentoo.org 2004-08-07)
 	epatch ${FILESDIR}/${P}-fetchsizelimit.patch || die
+	# this patch fixes bug #97263 (ticho@gentoo.org 2005-06-01)
+	if has_version '>=app-crypt/mit-krb5-1.4' ; then
+		epatch ${FILESDIR}/${P}-mit-krb5-1.4.patch || die
+	fi
 }
 
 src_compile() {

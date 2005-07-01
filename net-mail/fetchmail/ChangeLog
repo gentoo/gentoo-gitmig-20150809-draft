@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.59 2005/05/31 17:36:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.60 2005/07/01 16:35:11 ticho Exp $
+
+  01 Jul 2005; Andrej Kacian <ticho@gentoo.org>
+  +files/fetchmail-6.2.5-mit-krb5-1.4.patch, fetchmail-6.2.5.ebuild,
+  fetchmail-6.2.5-r1.ebuild, fetchmail-6.2.5-r2.ebuild:
+  Added a patch to remove a deprecated function call from sources if
+  >=mit-krb5-1.4 is installed. Closes bug #97263, reported by Tomasz
+  Mloduchowski <mlodutb at mit.edu>.
 
   31 May 2005; Andrej Kacian <ticho@gentoo.org> fetchmail-6.2.5-r2.ebuild:
   Made ebuild compatible with Gentoo/FreeBSD (bug #92401, by Diego Pettenò
