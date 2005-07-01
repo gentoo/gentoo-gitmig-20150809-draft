@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e5f0cf5efb0adc23b8eb998aab7152aa ChangeLog 348
+MD5 161abe8de5d0bf596544177e10407a48 ChangeLog 463
 MD5 cb28be74814f0f6cbf78047995f51226 metadata.xml 233
-MD5 a0aa8d6662685c4b5a487d82a6a96f95 tiblit-1.2.ebuild 482
+MD5 5cfa0472c904dc1c55e810d4dfeee7e3 tiblit-1.2.ebuild 488
 MD5 a0616853764094310c10ce30ac89a1f1 files/digest-tiblit-1.2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCakqEI1lqEGTUzyQRAtqKAKC1dnC2ONY6X+xjtDUeQbfVVzA6vQCfUVGU
-heXLB0xnrUDPgTiwJ9Er0bA=
-=yFKM
------END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/tiblit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tiblit/ChangeLog,v 1.2 2005/04/23 13:15:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tiblit/ChangeLog,v 1.3 2005/07/01 09:00:40 voxus Exp $
+
+  01 Jul 2005; Konstantin Arkhipov <voxus@gentoo.org> tiblit-1.2.ebuild:
+  Goes stable on x86, ~amd64 keyword added.
 
 *tiblit-1.2 (22 Apr 2005)
 
