@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.11.ebuild,v 1.6 2005/01/28 18:56:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.11.ebuild,v 1.7 2005/07/01 14:55:07 caleb Exp $
 
 inherit kde-functions
 
@@ -34,7 +34,7 @@ src_compile() {
 	DYLD_LIBRARY_PATH=${QTDIR}/lib:${DYLD_LIBRARY_PATH}
 	export QTDIR PATH LD_LIBRARY_PATH DYLD_LIBRARY_PATH
 
-	qmake -unix texmaker.pro || die "qmake failed"
+	${QTDIR}/bin/qmake -unix texmaker.pro || die "qmake failed"
 
 	emake || die "emake failed"
 }
