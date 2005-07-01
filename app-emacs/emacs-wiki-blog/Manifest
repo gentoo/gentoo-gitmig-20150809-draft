@@ -1,5 +1,5 @@
-MD5 6bc69ce5ea75dd9da5a993cf181ef329 ChangeLog 501
-MD5 ef65ce98be27b8077a6a087870ea9cbd emacs-wiki-blog-0.4.ebuild 614
+MD5 369f264d74fdacf4c24322f4f09795b0 ChangeLog 606
+MD5 b3133420ac896c4e44ce25536b39af6c emacs-wiki-blog-0.4.ebuild 615
 MD5 5cf3acd53cef99c0d1d8b9bc7757d474 metadata.xml 331
 MD5 77797253db2da2f3b3a748a010b71cc8 files/0.4-gentoo.patch 389
 MD5 ba0545b34e097d080c47dbdf50ec6c95 files/90emacs-wiki-blog-gentoo.el 340

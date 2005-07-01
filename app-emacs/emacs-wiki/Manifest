@@ -1,5 +1,5 @@
-MD5 d915f912c1b8bcec0272f30ae926a5a8 ChangeLog 1089
-MD5 9c625caff3d24d3347ee1c2d8b75bffb emacs-wiki-2.69.ebuild 1111
+MD5 9e394b82514369fdee652c8ae80e58aa ChangeLog 1299
+MD5 cbbf71940b5042b779ba7ff76727abc8 emacs-wiki-2.69.ebuild 1114
 MD5 ad233270cb8f454e2923316f8c7e229d metadata.xml 808
 MD5 75277e8288b9116c92657bdf4f54b68e files/50emacs-wiki-gentoo.el 111
 MD5 54010873793caf7c486543d0daf07dd8 files/digest-emacs-wiki-2.69 67

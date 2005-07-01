@@ -1,5 +1,5 @@
-MD5 d4c46909e736dd23c66ae1d65303a81b ChangeLog 397
-MD5 b9c93b67d7dd4c5887061eec5a692179 analog-1.29.ebuild 885
+MD5 beeb492d2c4bdb9a9efcf0725f3f6793 ChangeLog 490
+MD5 2cdb549e55cd68e209a9a952b41bc24c analog-1.29.ebuild 883
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 7eb8d20fbf40655e4cce9f95603fa7c9 files/50analog-gentoo.el 139
 MD5 b5b18348bc63e22e3419bfd16f3b6560 files/digest-analog-1.29 62

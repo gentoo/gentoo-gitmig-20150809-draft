@@ -1,5 +1,5 @@
-MD5 250c0a496439a43fe06fc4bcd605fb68 ChangeLog 603
-MD5 a2df191e1e9a8e09ac3498a88e90a7fd cmail-2.62.ebuild 873
+MD5 9493f629d3907d65070fde79882e50a9 ChangeLog 695
+MD5 d64333086199b0a47f1affdfb57a8e74 cmail-2.62.ebuild 871
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 df6682168598a463781ca98d84062d49 files/70cmail-gentoo.el 115
 MD5 b3f27384950dcd57a2fc4b86cf34014d files/digest-cmail-2.62 62
