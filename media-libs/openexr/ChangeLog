@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.17 2005/06/30 20:49:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.18 2005/07/01 04:02:19 josejx Exp $
+
+  01 Jul 2005; Joseph Jezak <josejx@gentoo.org> openexr-1.2.2.ebuild:
+  Marked ppc stable.
 
   30 Jun 2005; Dan Armak <danarmak@gentoo.org> openexr-1.2.2.ebuild:
   Stable on amd64 - been around long enough, and needed for kde 3.4 going stable
