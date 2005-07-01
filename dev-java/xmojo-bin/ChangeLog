@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmojo-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/ChangeLog,v 1.5 2004/10/22 10:34:54 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/ChangeLog,v 1.6 2005/07/01 09:03:43 axxo Exp $
+
+  01 Jul 2005; Thomas Matthijs <axxo@gentoo.org> xmojo-bin-5.0.0.ebuild:
+  update dependency on gnu-jaxp 97562
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xmojo-bin-5.0.0.ebuild:
   Keywords ~amd64.
