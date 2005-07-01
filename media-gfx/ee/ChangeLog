@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/ee
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ChangeLog,v 1.9 2004/12/07 10:20:21 hattya Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ChangeLog,v 1.10 2005/07/01 13:04:06 fmccor Exp $
+
+  01 Jul 2005; Ferris McCormick <fmccor@gentoo.org> ee-0.3.12-r3.ebuild:
+  Add ~sparc keyword (after user query); builds without incident and appears
+  to run fine.
+
+  01 Jul 2005; Ferris McCormick <fmccor@gentoo.org> ee-0.3.12-r2.ebuild:
+  Add ~sparc keyword as a result of a user query; seems to work fine.
 
 *ee-0.3.12-r3 (07 Dec 2004)
 
