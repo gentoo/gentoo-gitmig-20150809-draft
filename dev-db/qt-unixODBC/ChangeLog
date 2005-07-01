@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/qt-unixODBC
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.2 2005/01/01 17:42:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.3 2005/07/01 14:07:18 danarmak Exp $
+
+*qt-unixODBC-3.3.4 (01 Jul 2005)
+
+  01 Jul 2005; Dan Armak <danarmak@gentoo.org> -qt-unixODBC-3.3.3.ebuild,
+  +qt-unixODBC-3.3.4.ebuild:
+  Added 3.3.4 version. Unmasking. Cf bug 14178.
 
 *qt-ODBC-3.3.3 (23 Oct 2004)
 
