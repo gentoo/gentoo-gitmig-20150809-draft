@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/howm/howm-1.2-r1.ebuild,v 1.2 2005/01/01 13:48:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/howm/howm-1.2-r1.ebuild,v 1.3 2005/07/01 18:36:56 mkennedy Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://howm.sourceforge.jp/a/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ppc-macos"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
 IUSE=""
 
 SITEFILE="55howm-gentoo.el"

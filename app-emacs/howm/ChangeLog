@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/howm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/howm/ChangeLog,v 1.9 2005/05/01 16:45:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/howm/ChangeLog,v 1.10 2005/07/01 18:36:56 mkennedy Exp $
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> howm-1.2-r1.ebuild:
+  Keywording ~amd64.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> howm-1.2.ebuild:
   Stable on ppc.

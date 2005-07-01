@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/htmlfontify-0.17.ebuild,v 1.7 2005/01/01 13:48:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/htmlfontify-0.17.ebuild,v 1.8 2005/07/01 18:39:22 mkennedy Exp $
 
 inherit elisp
 
@@ -14,7 +14,7 @@ SRC_URI="http://rtfm.etla.org/emacs/htmlfontify/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 DEPEND="virtual/emacs"
 
@@ -22,22 +22,13 @@ DEPEND="virtual/emacs"
 SITEFILE=50htmlfontify-gentoo.el
 
 src_compile() {
-	emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el
+	elisp-compile *.el
 	makeinfo htmlfontify.texi
 }
 
 src_install() {
 	elisp-install ${PN} *.el *.elc
 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
-
 	dodoc LICENSE
 	doinfo htmlfontify.info
-}
-
-pkg_postinst() {
-	elisp-site-regen
-}
-
-pkg_postrm() {
-	elisp-site-regen
 }

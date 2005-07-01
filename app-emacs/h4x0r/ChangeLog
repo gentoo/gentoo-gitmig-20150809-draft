@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/h4x0r
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/h4x0r/ChangeLog,v 1.4 2005/01/01 13:47:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/h4x0r/ChangeLog,v 1.5 2005/07/01 18:33:01 mkennedy Exp $
+
+*h4x0r-0.13 (01 Jul 2005)
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> h4x0r-0.11.ebuild,
+  +h4x0r-0.13.ebuild:
+  New upstream version; Keywording ~amd64.
 
 *h4x0r-0.11 (31 Oct 2002)
 

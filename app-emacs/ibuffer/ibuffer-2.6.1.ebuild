@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ibuffer/ibuffer-2.6.1.ebuild,v 1.1 2005/05/21 20:43:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ibuffer/ibuffer-2.6.1.ebuild,v 1.2 2005/07/01 18:47:37 mkennedy Exp $
 
 inherit elisp
 
@@ -15,17 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~usata/distfiles/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
-
-DEPEND="virtual/emacs"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 SITEFILE=50ibuffer-gentoo.el
 
-pkg_postinst() {
-	elisp-site-regen
-	einfo "Please see ${SITELISP}/${PN}/ibuffer.el for the complete documentation."
-}
-
-pkg_postrm() {
-	elisp-site-regen
-}

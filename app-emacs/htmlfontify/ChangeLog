@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/htmlfontify
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/ChangeLog,v 1.5 2005/01/01 13:48:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/ChangeLog,v 1.6 2005/07/01 18:39:22 mkennedy Exp $
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  htmlfontify-0.17.ebuild:
+  Keywording ~amd64.
 
 *htmlfontify-0.17 (31 Oct 2002)
 
