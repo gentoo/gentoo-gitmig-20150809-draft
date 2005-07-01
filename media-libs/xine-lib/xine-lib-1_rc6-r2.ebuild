@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6-r2.ebuild,v 1.5 2005/05/15 02:03:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6-r2.ebuild,v 1.6 2005/07/01 21:02:01 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -21,8 +21,7 @@ IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theor
 RESTRICT="nostrip"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
-	!amd64? ( X? ( virtual/x11 ) )
-	amd64? ( X? ( || ( virtual/x11 ) ) )
+	X? ( virtual/x11 )
 	avi? ( x86? ( >=media-libs/win32codecs-0.50 ) )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-1.2.7 )
