@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-98.ebuild,v 1.11 2005/06/30 20:53:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-98.ebuild,v 1.12 2005/07/01 03:57:39 josejx Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://helios.et.put.poznan.pl/~jstachow/pub/${P}.tar.gz"
 LICENSE="APSL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 src_unpack() {
