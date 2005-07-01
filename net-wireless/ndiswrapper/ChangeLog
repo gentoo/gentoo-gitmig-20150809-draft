@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.25 2005/06/30 22:13:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.26 2005/07/01 18:49:04 cardoe Exp $
+
+  01 Jul 2005; Doug Goldstein <cardoe@gentoo.org> ndiswrapper-1.2.ebuild:
+  get rid of swsusp2 until brix fixes it. Since I don't use ndiswrapper 
+  (anymore) or swsusp2 it's a bit tough for me.
 
   30 Jun 2005; Doug Goldstein <cardoe@gentoo.org> ndiswrapper-1.2.ebuild:
   Changed CONFIG_CHECK cause it appeared it might have been failing for a 
