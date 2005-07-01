@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r1.ebuild,v 1.1 2005/05/18 11:59:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r1.ebuild,v 1.2 2005/07/01 09:02:56 axxo Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ LICENSE="Exolab"
 RDEPEND="virtual/jre
 	=dev-java/rhino-1.5*
 	=dev-java/log4j-1.2*
-	=dev-java/gnu-jaxp-1.0*
+	=dev-java/gnu-jaxp
 	=dev-java/xerces-2.6*"
 DEPEND="virtual/jdk
 	>=dev-java/ant-1.4

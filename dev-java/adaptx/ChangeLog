@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/adaptx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.9 2005/05/18 11:59:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.10 2005/07/01 09:02:56 axxo Exp $
+
+  01 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
+  adaptx-0.9.13_p20041105.ebuild, adaptx-0.9.13_p20041105-r1.ebuild:
+  udpate dependency on gnu-jaxp 97562
 
 *adaptx-0.9.13_p20041105-r1 (18 May 2005)
 
