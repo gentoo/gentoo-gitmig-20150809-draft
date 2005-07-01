@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.14 2005/07/01 04:56:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.15 2005/07/01 23:32:38 hardave Exp $
+
+  01 Jul 2005; Hardave Riar <hardave@gentoo.org> kdebase-pam-4.ebuild:
+  Stable on mips
 
   01 Jul 2005; Joseph Jezak <josejx@gentoo.org> kdebase-pam-4.ebuild:
   Marked ppc stable for bug #97544.
