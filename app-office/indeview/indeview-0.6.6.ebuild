@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.6.ebuild,v 1.3 2005/04/24 11:26:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.6.ebuild,v 1.4 2005/07/01 14:56:28 caleb Exp $
 
 DESCRIPTION="Convert OpenOffice/KOffice to run independently on Linux, OSX, or Windows"
 HOMEPAGE="http://www.indeview.org/"
@@ -15,7 +15,7 @@ RDEPEND="x11-libs/qt"
 S=${WORKDIR}/${P}/Viewer
 
 src_compile() {
-	qmake || die "qmake failed"
+	${QTDIR}/bin/qmake || die "qmake failed"
 	make || die "make failed"
 
 	# Fix up the OpenOffice macro file

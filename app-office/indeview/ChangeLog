@@ -1,6 +1,10 @@
 # ChangeLog for app-office/indeview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/ChangeLog,v 1.9 2005/04/24 11:26:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/ChangeLog,v 1.10 2005/07/01 14:56:28 caleb Exp $
+
+  01 Jul 2005; Caleb Tennis <caleb@gentoo.org> indeview-0.6.5.ebuild,
+  indeview-0.6.6.ebuild:
+  Fix qmake dir per bug #97535
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> indeview-0.6.6.ebuild:
   Stable on ppc.
