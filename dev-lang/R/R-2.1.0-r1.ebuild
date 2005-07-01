@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.8 2005/06/18 14:40:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.9 2005/07/01 11:53:30 kugelfang Exp $
 
 inherit fortran toolchain-funcs
 
@@ -22,7 +22,7 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 
-src_compile() {
+pkg_setup() {
 	# Test for a 64 bit architecture - f2c won't work on 64 bit archs with R.
 	# Thanks to vapier for providing the test.
 	echo 'int main(){}' > test.c
@@ -30,8 +30,13 @@ src_compile() {
 	if file test.o | grep -qs 64-bit ; then
 		einfo "64 bit architecture detected, using g77."
 		FORTRAN="g77"
+	else
+		FORTRAN="g77 f2c"
 	fi
+	fortran_pkg_setup
+}
 
+src_compile() {
 	local myconf="--enable-R-profiling --enable-R-shlib --enable-linux-lfs"
 
 	if use tcltk; then

@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.55 2005/06/18 14:40:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.56 2005/07/01 11:53:30 kugelfang Exp $
+
+*R-2.1.1 (01 Jul 2005)
+
+  01 Jul 2005; Danny van Dyk <kugelfang@gentoo.org> R-2.0.1.ebuild,
+  R-2.1.0-r1.ebuild, +R-2.1.1.ebuild:
+  Moved 64bit check to pkg_setup() to make fortran.eclass work again. Bumped
+  to version 2.1.1
 
   18 Jun 2005; Markus Rothe <corsair@gentoo.org> R-2.1.0-r1.ebuild:
   Stable on ppc64
