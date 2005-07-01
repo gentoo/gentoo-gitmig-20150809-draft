@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/qvortaro/qvortaro-0.3.0.ebuild,v 1.2 2005/03/20 02:54:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/qvortaro/qvortaro-0.3.0.ebuild,v 1.3 2005/07/01 13:46:39 caleb Exp $
 
 inherit eutils kde
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/qVortaro-${PV}
 
 src_compile() {
 	cd ${S}
-	qmake || die "qmake failed"
+	${QTDIR}/qmake || die "qmake failed"
 	set-kdedir
 	kde_src_compile make || "make failed!"
 }
