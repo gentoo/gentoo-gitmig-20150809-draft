@@ -1,5 +1,5 @@
---- pump.h.orig	2003-10-24 20:37:53.000000000 +0100
-+++ pump.h	2005-07-01 10:30:28.526406380 +0100
+--- pump.h.orig	2005-07-01 11:46:54.337215787 +0100
++++ pump.h	2005-07-01 11:38:08.969331584 +0100
 @@ -100,13 +100,14 @@
  char * pumpDhcpRun(char * device, int flags, int lease,
  		     char * reqHostname, struct pumpNetIntf * intf,
@@ -17,8 +17,8 @@
  time_t pumpUptime(void);
  
  #define RESULT_OKAY		0
---- pump.c.orig	2002-06-18 18:03:59.000000000 +0100
-+++ pump.c	2005-07-01 10:30:26.579634633 +0100
+--- pump.c.orig	2005-07-01 11:46:58.824710842 +0100
++++ pump.c	2005-07-01 14:31:45.883753527 +0100
 @@ -69,10 +69,13 @@
  	    int flags;
  	    int reqLease;			/* in seconds */
@@ -154,16 +154,15 @@
  		    setupDomain(intf + i, o);
  
  		    callScript(o->script, PUMP_SCRIPT_NEWLEASE, 
-@@ -570,6 +578,8 @@
+@@ -570,6 +578,7 @@
  		    cmd.u.result = RESULT_UNKNOWNIFACE;
  		else {
  		    cmd.u.result = pumpDhcpRelease(intf + i);
-+		    syslog(LOG_INFO, "keekUp %i", cmd.u.stop.keepUp);
 +		    if (! cmd.u.stop.keepUp) pumpDownInterface(intf[i].device);
  		    callScript(o->script, PUMP_SCRIPT_DOWN, intf + i);
  		    if (numInterfaces == 1) {
  			cmd.type = CMD_RESULT;
-@@ -811,17 +821,24 @@
+@@ -811,17 +820,24 @@
      int nogateway = 0, nobootp = 0;
      struct command cmd, response;
      char * configFile = "/etc/pump.conf";
@@ -188,7 +187,7 @@
  	    { "kill", 'k', POPT_ARG_NONE, &killDaemon, 0,
  			N_("Kill daemon (and disable all interfaces)"), NULL },
  	    { "lease", 'l', POPT_ARG_INT, &lease_hrs, 0,
-@@ -834,6 +851,10 @@
+@@ -834,6 +850,10 @@
  			N_("Release interface"), NULL },
  	    { "renew", 'R', POPT_ARG_NONE, &renew, 0,
  			N_("Force immediate lease renewal"), NULL },
@@ -199,7 +198,7 @@
  	    { "status", 's', POPT_ARG_NONE, &status, 0,
  			N_("Display interface status"), NULL },
  	    { "no-dns", 'd', POPT_ARG_NONE, &nodns, 0,
-@@ -889,6 +910,8 @@
+@@ -889,6 +909,8 @@
  	overrides->flags |= OVERRIDE_FLAG_NOBOOTP;
      if (nogateway)
  	overrides->flags |= OVERRIDE_FLAG_NOGATEWAY;
@@ -208,7 +207,7 @@
  
      cont = openControlSocket(configFile, overrides);
      if (cont < 0) 
-@@ -905,6 +928,7 @@
+@@ -905,6 +927,7 @@
      } else if (release) {
  	cmd.type = CMD_STOPIFACE;
  	strcpy(cmd.u.stop.device, device);
@@ -216,7 +215,7 @@
      } else {
  	cmd.type = CMD_STARTIFACE;
  	strcpy(cmd.u.start.device, device);
-@@ -914,6 +938,8 @@
+@@ -914,6 +937,8 @@
  	else
  		cmd.u.start.reqLease = lease;
  	strcpy(cmd.u.start.reqHostname, hostname);
@@ -225,9 +224,9 @@
      }
  
      write(cont, &cmd, sizeof(cmd));
---- dhcp.c.orig	2004-09-21 16:19:06.000000000 +0100
-+++ dhcp.c	2005-07-01 10:32:30.240170027 +0100
-@@ -203,43 +203,68 @@
+--- dhcp.c.orig	2005-07-01 11:47:05.221991003 +0100
++++ dhcp.c	2005-07-01 14:43:41.215170958 +0100
+@@ -203,13 +203,62 @@
      return err;
  }
  
@@ -236,24 +235,49 @@
 +    struct sockaddr_in * addrp;
      struct ifreq req;
      int s;
- 
-+    /* Instead of downing the interface, we erase the address
++    struct rtentry route;
++    
++    /* Instead of downing the interface, we erase the addresses
 +     * This is important as other daemons such as ifplugd and/or
 +     * wpa_supplicant may be using it */
-+    
+ 
      s = socket(AF_INET, SOCK_DGRAM, 0);
- 	
-     memset(&req,0,sizeof(req));
+-	
++
++    memset(&req,0,sizeof(req));
 +    addrp = (struct sockaddr_in *) &req.ifr_addr;
 +    addrp->sin_family = AF_INET;
 +    strcpy(req.ifr_name, device);
 +   
-+    addrp->sin_addr.s_addr = 0;
-+    if (ioctl(s, SIOCSIFADDR, &req)) {
-+	close(s);
-+	return perrorstr("SIOCSIFADDR");
++    while(! ioctl(s, SIOCGIFADDR, &req)) {
++	addrp->sin_addr.s_addr = 0;
++	if (ioctl(s, SIOCSIFADDR, &req)) {
++	    close(s);
++	    return perrorstr("SIOCSIFADDR");
++	}
 +    }
++  
++    /* Delete the broadcast route that we may have added earlier */
++    memset(&route, 0, sizeof(route));
++    memcpy(&route.rt_gateway, addrp, sizeof(*addrp));
 +
++    addrp->sin_family = AF_INET;
++    addrp->sin_port = 0;
++    addrp->sin_addr.s_addr = INADDR_ANY;
++    memcpy(&route.rt_dst, addrp, sizeof(*addrp));
++    memcpy(&route.rt_genmask, addrp, sizeof(*addrp));
++
++    route.rt_dev = device;
++    route.rt_flags = RTF_UP;
++    route.rt_metric = 0;
++
++    if (ioctl(s, SIOCDELRT, &route)) {
++        if (errno != EEXIST) {
++            close(s);
++            return perrorstr("SIOCADDRT 3");
++        }
++    }
++    
 +    close(s);
 +    return NULL;
 +}
@@ -264,26 +288,10 @@
 +
 +    s = socket(AF_INET, SOCK_DGRAM, 0);
 +
-+    memset(&req,0,sizeof(req));
+     memset(&req,0,sizeof(req));
  
      strcpy(req.ifr_name, device);
-     if (ioctl(s, SIOCGIFFLAGS, &req)) {
--	close(s);
--	return perrorstr("SIOCGIFFLAGS");
-+        close(s);
-+        return perrorstr("SIOCGIFFLAGS");
-     }
- 
-     req.ifr_flags &= ~(IFF_UP | IFF_RUNNING);
-     if (ioctl(s, SIOCSIFFLAGS, &req)) {
--	close(s);
--	return perrorstr("SIOCSIFFLAGS");
-+        close(s);
-+        return perrorstr("SIOCSIFFLAGS");
-     }
- 
-     close(s);
--
+@@ -229,17 +278,18 @@
      return NULL;
  }
  
@@ -304,7 +312,7 @@
      /* we have to have basic information to get this far */
      addrp = (struct sockaddr_in *) &req.ifr_addr;
      addrp->sin_family = AF_INET;
-@@ -267,29 +292,45 @@
+@@ -267,29 +317,45 @@
      if (ioctl(s, SIOCSIFFLAGS, &req))
  	return perrorstr("SIOCSIFFLAGS");
  
@@ -365,7 +373,7 @@
      struct sockaddr_in addr;
      struct rtentry route;
      int s;
-@@ -303,12 +344,12 @@
+@@ -303,12 +369,12 @@
      addr.sin_addr.s_addr = INADDR_ANY;
      memcpy(&route.rt_dst, &addr, sizeof(addr));
      memcpy(&route.rt_genmask, &addr, sizeof(addr));

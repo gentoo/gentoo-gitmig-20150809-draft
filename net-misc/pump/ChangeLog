@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.14 2005/07/01 09:47:18 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.15 2005/07/01 13:52:29 uberlord Exp $
+
+*pump-0.8.21-r3 (01 Jul 2005)
+
+  01 Jul 2005; Roy Marples <uberlord@gentoo.org>
+  +files/pump-0.8.21-gentoo.diff, -files/pump-0.8-gentoo.diff,
+  -pump-0.8.21-r2.ebuild, +pump-0.8.21-r3.ebuild:
+  Fixed an issue with not dropping the broadcast route
 
 *pump-0.8.21-r2 (01 Jul 2005)
 
