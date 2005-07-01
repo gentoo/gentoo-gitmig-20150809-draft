@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.231 2005/06/28 13:58:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.232 2005/07/01 14:06:30 danarmak Exp $
+
+  01 Jul 2005; Dan Armak <danarmak@gentoo.org> qt-3.3.4-r5.ebuild:
+  Fixed bug 14178 (circular dependency with dev-db/unixODBC). The qt odbc
+  plugin now lives in the separate ebuild dev-db/qt-unixODBC. This ebuild has
+  a PDEPEND on that one if USE odbc is enabled.
 
 *qt-4.0.0 (28 Jun 2005)
 

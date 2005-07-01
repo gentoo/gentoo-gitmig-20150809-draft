@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r5.ebuild,v 1.1 2005/06/18 12:31:32 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r5.ebuild,v 1.2 2005/07/01 14:06:30 danarmak Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -26,13 +26,13 @@ DEPEND="virtual/x11 virtual/xft
 	media-libs/libmng
 	>=media-libs/freetype-2
 	nas? ( >=media-libs/nas-1.5 )
-	odbc? ( dev-db/unixODBC )
 	mysql? ( dev-db/mysql )
 	firebird? ( dev-db/firebird )
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( dev-db/postgresql )
 	cups? ( net-print/cups )
 	zlib? ( sys-libs/zlib )"
+PDEPEND="odbc? ( ~dev-db/qt-unixODBC-$PV )"
 
 S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
@@ -138,13 +138,13 @@ src_compile() {
 
 	[ $(get_libdir) != "lib" ] && myconf="${myconf} -L/usr/$(get_libdir)"
 
+	# unixODBC support is now a PDEPEND on dev-db/qt-unixODBC; see bug 14178.
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif" || myconf="${myconf} -no-gif"
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/$(get_libdir)/mysql" || myconf="${myconf} -no-sql-mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server -I/usr/include/postgresql/pgsql -I/usr/include/postgresql/pgsql/server" || myconf="${myconf} -no-sql-psql"
 	use firebird    && myconf="${myconf} -plugin-sql-ibase" || myconf="${myconf} -no-sql-ibase"
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite" || myconf="${myconf} -no-sql-sqlite"
-	use odbc	&& myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"
 	use cups	&& myconf="${myconf} -cups" || myconf="${myconf} -no-cups"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
@@ -155,7 +155,7 @@ src_compile() {
 	use immqt	&& myconf="${myconf} -inputmethod -inputmethod-ext"
 
 	if use ppc-macos ; then
-		myconf="${myconf} -no-sql-ibase -no-sql-mysql -no-sql-odbc -no-sql-psql -no-cups -lresolv -shared"
+		myconf="${myconf} -no-sql-ibase -no-sql-mysql -no-sql-psql -no-cups -lresolv -shared"
 		myconf="${myconf} -I/usr/X11R6/include -L/usr/X11R6/lib"
 		myconf="${myconf} -L${S}/lib -I${S}/include"
 		sed -i -e "s,#define QT_AOUT_UNDERSCORE,," mkspecs/${PLATFORM}/qplatformdefs.h || die
@@ -167,7 +167,7 @@ src_compile() {
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -xft -platform ${PLATFORM} -xplatform \
 		${PLATFORM} -xrender -prefix ${QTBASE} -libdir ${QTBASE}/$(get_libdir) \
-		-fast ${myconf} -dlopen-opengl || die
+		-fast -no-sql-odbc ${myconf} -dlopen-opengl || die
 
 	emake src-qmake src-moc sub-src || die
 
