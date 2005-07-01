@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0-r1.ebuild,v 1.1 2005/06/25 16:40:23 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0-r2.ebuild,v 1.1 2005/07/01 13:08:26 smithj Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,8 +19,8 @@ DEPEND="virtual/x11
 	virtual/opengl
 	>=media-gfx/imagemagick-5.5.7
 	kde? ( || ( kde-base/kdeartwork-kscreensaver kde-base/kdeartwork ) )
-	!kde? ( >=x11-misc/xscreensaver-4.22-r1 )
-	xscreensaver? ( >=x11-misc/xscreensaver-4.22-r1 )
+	!kde? ( >=x11-misc/xscreensaver-4.22-r2 )
+	xscreensaver? ( >=x11-misc/xscreensaver-4.22-r2 )
 	openal? ( media-libs/openal )"
 
 pkg_setup() {
@@ -39,9 +39,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.8.0-kdedesktop.patch
+	epatch ${FILESDIR}/${PN}-0.8.0-r2-kdedesktop.patch
 	epatch ${FILESDIR}/${PN}-0.8.0-assert.patch
 	epatch ${FILESDIR}/${PN}-0.8.0-configure.in.patch
+	epatch ${FILESDIR}/${PN}-0.8.0-hyperspace-install-fix.patch
 	cp ${FILESDIR}/jwz-vroot.h ${S}/include/vroot.h
 }
 
@@ -51,7 +52,7 @@ src_compile() {
 	local myconf
 
 	myconf="${myconf} --bindir=/usr/lib/misc/xscreensaver" \
-	myconf="${myconf} --with-configdir=/usr/share/control-center/screensavers/" \
+	myconf="${myconf} --with-configdir=/usr/share/xscreensaver/config/" \
 
 	if use kde; then
 		find . -name '*.desktop' -exec \
@@ -92,7 +93,7 @@ pkg_postinst() {
 	GL:        \"Flocks\"  flocks --root      \\n\\\
 	GL:          \"Flux\"  flux --root        \\n\\\
 	GL:        \"Helios\"  helios --root      \\n\\\
-	GL:    \"hyperspace\"  hyperspace --root  \\n\\\
+	GL:    \"Hyperspace\"  hyperspace --root  \\n\\\
 	GL:       \"Lattice\"  lattice --root     \\n\\\
 	GL:        \"Plasma\"  plasma --root      \\n\\\
 	GL:     \"Skyrocket\"  skyrocket --root   \\n\\\

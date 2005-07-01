@@ -1,0 +1,22 @@
+--- reallyslick/cpp_src/Makefile.in	2005-04-10 03:46:04.000000000 +0100
++++ reallyslick/cpp_src/Makefile.in.new	2005-04-20 15:29:55.786785182 +0100
+@@ -171,7 +171,7 @@
+ 
+ @INSTALL_XSCREENSAVER_CONFIG_FILES_TRUE@dist_config_DATA = cyclone.xml fieldlines.xml flocks.xml flux.xml helios.xml hyperspace.xml plasma.xml skyrocket.xml solarwinds.xml
+ 
+-@INSTALL_XSCREENSAVER_CONFIG_FILES_TRUE@dist_kdessconfig_DATA = cyclone.desktop fieldlines.desktop flocks.desktop flux.desktop helios.desktop hyperspace.xml plasma.desktop skyrocket.desktop solarwinds.desktop
++@INSTALL_KDE_CONFIG_FILES_TRUE@dist_kdessconfig_DATA = cyclone.desktop fieldlines.desktop flocks.desktop flux.desktop helios.desktop hyperspace.xml plasma.desktop skyrocket.desktop solarwinds.desktop
+ 
+ man_MANS = cyclone.1 fieldlines.1 flocks.1 flux.1 helios.1 plasma.1 skyrocket.1 solarwinds.1
+ 
+--- reallyslick/cpp_src/Makefile.am	2005/07/01 11:34:22	1.1
++++ reallyslick/cpp_src/Makefile.am	2005/07/01 11:35:02
+@@ -19,7 +19,7 @@ if INSTALL_XSCREENSAVER_CONFIG_FILES
+ dist_config_DATA = cyclone.xml fieldlines.xml flocks.xml flux.xml helios.xml hyperspace.xml plasma.xml skyrocket.xml solarwinds.xml
+ endif
+ 
+-if INSTALL_XSCREENSAVER_CONFIG_FILES
++if INSTALL_KDE_CONFIG_FILES
+ dist_kdessconfig_DATA = cyclone.desktop fieldlines.desktop flocks.desktop flux.desktop helios.desktop hyperspace.xml plasma.desktop skyrocket.desktop solarwinds.desktop
+ endif
+ 

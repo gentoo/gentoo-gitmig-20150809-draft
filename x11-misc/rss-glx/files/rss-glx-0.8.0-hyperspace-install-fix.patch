@@ -1,0 +1,22 @@
+--- rss-glx_0.8.0/reallyslick/cpp_src/Makefile.in	2005/07/01 11:39:43	1.1
++++ rss-glx_0.8.0/reallyslick/cpp_src/Makefile.in	2005/07/01 11:40:19
+@@ -171,7 +171,7 @@ solarwinds_SOURCES = driver.cpp solarwin
+ 
+ @INSTALL_XSCREENSAVER_CONFIG_FILES_TRUE@dist_config_DATA = cyclone.xml fieldlines.xml flocks.xml flux.xml helios.xml hyperspace.xml plasma.xml skyrocket.xml solarwinds.xml
+ 
+-@INSTALL_KDE_CONFIG_FILES_TRUE@dist_kdessconfig_DATA = cyclone.desktop fieldlines.desktop flocks.desktop flux.desktop helios.desktop hyperspace.xml plasma.desktop skyrocket.desktop solarwinds.desktop
++@INSTALL_KDE_CONFIG_FILES_TRUE@dist_kdessconfig_DATA = cyclone.desktop fieldlines.desktop flocks.desktop flux.desktop helios.desktop hyperspace.desktop plasma.desktop skyrocket.desktop solarwinds.desktop
+ 
+ man_MANS = cyclone.1 fieldlines.1 flocks.1 flux.1 helios.1 plasma.1 skyrocket.1 solarwinds.1
+ 
+--- rss-glx_0.8.0/reallyslick/cpp_src/Makefile.am	2005/07/01 11:39:44	1.1
++++ rss-glx_0.8.0/reallyslick/cpp_src/Makefile.am	2005/07/01 11:40:02
+@@ -20,7 +20,7 @@ dist_config_DATA = cyclone.xml fieldline
+ endif
+ 
+ if INSTALL_KDE_CONFIG_FILES
+-dist_kdessconfig_DATA = cyclone.desktop fieldlines.desktop flocks.desktop flux.desktop helios.desktop hyperspace.xml plasma.desktop skyrocket.desktop solarwinds.desktop
++dist_kdessconfig_DATA = cyclone.desktop fieldlines.desktop flocks.desktop flux.desktop helios.desktop hyperspace.desktop plasma.desktop skyrocket.desktop solarwinds.desktop
+ endif
+ 
+ man_MANS = cyclone.1 fieldlines.1 flocks.1 flux.1 helios.1 plasma.1 skyrocket.1 solarwinds.1
