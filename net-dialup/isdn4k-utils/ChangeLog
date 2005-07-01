@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.41 2005/07/01 22:34:02 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.42 2005/07/01 22:43:20 sbriesen Exp $
+
+  01 Jul 2005; Stefan Briesenick <sbriesen@gentoo.org> ChangeLog:
+  removing obsolete/empty directories in FILESIR.
 
 *isdn4k-utils-3.7_pre20050626 (01 Jul 2005)
 
