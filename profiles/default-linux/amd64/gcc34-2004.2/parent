@@ -1,7 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/gcc34-2004.2/parent,v 1.2 2005/05/10 02:14:20 swegener Exp $
-
-# This file describes the parent profile to this.  In most cases this will
-# just be the name of the parent directory
-..
