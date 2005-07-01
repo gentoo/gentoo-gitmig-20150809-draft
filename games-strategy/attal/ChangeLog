@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/attal
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.11 2005/06/12 12:12:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.12 2005/07/01 15:05:06 caleb Exp $
+
+  01 Jul 2005; Caleb Tennis <caleb@gentoo.org> attal-0.8.1.ebuild,
+  attal-0.9.2.ebuild, attal-0.9.3.ebuild:
+  Fix qmake dir per bug #97535
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> attal-0.8.1.ebuild,
   attal-0.9.2.ebuild, attal-0.9.3.ebuild:

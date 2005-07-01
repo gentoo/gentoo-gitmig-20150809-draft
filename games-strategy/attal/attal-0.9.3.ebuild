@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.9.3.ebuild,v 1.2 2005/06/12 12:12:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.9.3.ebuild,v 1.3 2005/07/01 15:05:06 caleb Exp $
 
 inherit eutils flag-o-matic games
 
@@ -31,7 +31,7 @@ src_unpack() {
 		-e "s:\"\./:\"${GAMES_DATADIR}/${PN}/:" \
 		libCommon/displayHelp.cpp \
 		|| die "sed failed"
-	qmake -o Makefile Makefile.pro || die "qmake failed"
+	${QTDIR}/bin/qmake -o Makefile Makefile.pro || die "qmake failed"
 	sed -i \
 		"s:\./themes/:${GAMES_DATADIR}/${PN}/themes/:" \
 		`grep -Rl '\./themes/' *` \
