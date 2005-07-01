@@ -1,6 +1,9 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdn.confd,v 1.1 2005/03/29 08:40:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdn.confd,v 1.2 2005/07/01 22:34:02 sbriesen Exp $
+
+# if you have CAPI based cards connected to I4L via CAPIDRV.
+DEPEND_ON_CAPI="yes"
 
 # Location where isdnctrl will save its configuration
 ISDNCTRL_CONFIG="/var/lib/isdn/isdnctrl.conf"
@@ -8,4 +11,3 @@ ISDNCTRL_CONFIG="/var/lib/isdn/isdnctrl.conf"
 # Location where iprofd will save the modem-register settings
 # comment out if you don't want to use iprofd
 IPROFD_SETTINGS="/var/lib/isdn/modem-register.dat"
-

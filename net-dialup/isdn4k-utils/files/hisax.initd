@@ -1,9 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/hisax.initd,v 1.1 2005/03/29 08:40:14 mrness Exp $
-
-opts="start stop"
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/hisax.initd,v 1.2 2005/07/01 22:34:02 sbriesen Exp $
 
 depend() {
         use isapnp pcmcia
@@ -16,7 +14,7 @@ check_module() {
 get_first_free_idx() {
 	local -a _idxa
 	local _it _lin _idx=-1
-	if ! read _it _lin < <(/usr/bin/head 2>/dev/null -n1 /dev/isdninfo); then
+	if ! read _it _lin < <(/bin/head 2>/dev/null -n1 /dev/isdninfo); then
 		echo "0"; return
 	fi
 	read -a _idxa < <(echo $_lin)
@@ -37,7 +35,7 @@ read_config() {
 	while read H_TYPE H_PROTO H_IO H_IRQ H_MEM H_DEBUG H_ID; do
 
 		# check and set card id
-		case ${H_TYPE} in
+		case "${H_TYPE}" in
 			99)	# AVM Fritz PCI/PnP
 				H_ID="#<FC>#"  # fixed later
 				;;
@@ -48,7 +46,7 @@ read_config() {
 		esac
     
 		# convert protocol to number
-		case "$H_PROTO" in
+		case "${H_PROTO}" in
 			[eE][dD][sS][sS]1)        H_PROTO_NR=2 ;;  # EDSS1
 			[eE][uU][rR][oO])         H_PROTO_NR=2 ;;  # EDSS1
 			[dD][sS][sS]1)            H_PROTO_NR=2 ;;  # EDSS1
@@ -75,7 +73,7 @@ read_config() {
 			|| HISAX_DEBUG="${HISAX_DEBUG} ${H_ID}%${H_DEBUG//\%}"
 
 		# build list of cards which needs ISAR.BIN firmware
-		case ${H_TYPE} in
+		case "${H_TYPE}" in
 			28|29) [ -z "${HISAX_FIRMWARE}" ] \
 				&& HISAX_FIRMWARE="${H_ID}" \
 				|| HISAX_FIRMWARE="${HISAX_FIRMWARE} ${H_ID}"
@@ -83,7 +81,7 @@ read_config() {
 		esac
                 
 		# build options
-		case ${H_TYPE} in
+		case "${H_TYPE}" in
 			99)	# AVM Fritz PCI/PnP
 				if [ -z "${HISAXFC_TYPE}" ]; then
 					HISAXFC_TYPE="${H_TYPE}"
@@ -174,6 +172,11 @@ start() {
 		fi
 	fi
 	eend $?
+
+	CNT=0  # wait for udev
+	while [ ! -e /dev/isdninfo -a $CNT -lt 10 ]; do
+		sleep 1; : $((CNT++))
+	done
 
 	if [ -n "${HISAX_FIRMWARE}" ]; then
 		for ID in ${HISAX_FIRMWARE}; do

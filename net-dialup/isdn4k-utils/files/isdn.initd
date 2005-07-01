@@ -1,41 +1,47 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdn.initd,v 1.1 2005/03/29 08:40:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdn.initd,v 1.2 2005/07/01 22:34:02 sbriesen Exp $
 
-opts="start stop save reload info show cards"
+opts="save reload info"
 
 depend() {
-	use capi hisax
+	use hisax pcmcia hotplug
+	[ "$DEPEND_ON_CAPI" = "yes" ] && need capi
 }
 
-check_cards() {
-	local -a _idxa
-	local _it _lin _idx=0
-	read _it _lin < <(/usr/bin/head 2>/dev/null -n1 /dev/isdninfo) || return 1
-	read -a _idxa < <(echo $_lin)
-	while [ $_idx -lt 65 ]; do
-		[ "${_idxa[$_idx]}" = "-" ] || return 0
-		: $((_idx+=2)); [ -z "${_idxa[$_idx]}" ] && break
+card_list() {  # output: <contr> <chan> <card>
+	local IDMAP=() IDX=1 CONTR=0 LAST='-' CARD=''
+	read -a IDMAP < <(/bin/head 2>/dev/null -n1 /dev/isdninfo) || return 1
+	while [ $IDX -lt ${#IDMAP[*]} ]; do
+		CARD=${IDMAP[$IDX]}
+		if [ "$CARD" != "-" -a "$CARD" != "$LAST" ]; then
+			echo "${CONTR} $((IDX-1)) ${CARD}"; : $((CONTR++))
+		fi
+		LAST="$CARD"; : $((IDX++))
 	done
-	return 1
 }
 
-check_module() {
-	/bin/grep 2>/dev/null -q "^${1} " /proc/modules
+show_cards() {
+	local CONTR CHAN CARD CAPI
+	while read CONTR CHAN CARD; do
+		case ${CARD} in
+		capidrv-[1-9]*)
+			CAPI=$(/bin/sed 2>/dev/null -n "s:^${CARD/capidrv-} \+[^ ]\+ \+[^ ]\+ \+\([^ ]\+\) \+.\+$:\1:p" /proc/capi/controller)
+			einfo "${1}${CONTR} ${CARD} (${CAPI})"
+			;;
+		*)
+			einfo "${1}${CONTR} ${CARD}"
+			;;
+		esac
+	done
 }
 
 start() {
-	/sbin/modprobe -s isdn && check_module isdn
-	if [ $? -ne 0 ]; then
-		eerror "ERROR: could not load ISDN driver"
-		/sbin/modprobe -sqr isdn
-		return 1
-	fi
+	local LIST="$(card_list)"
 
-	if ! check_cards; then
+	if [ -z "$LIST" ]; then
 		eerror "ERROR: no ISDN cards available"
-		/sbin/modprobe -sqr isdn
 		return 1
 	fi
 
@@ -45,21 +51,40 @@ start() {
 	
 	if [ -n "${IPROFD_SETTINGS}" ]; then
 		ebegin "Starting modem-register daemon"
-		start-stop-daemon --start --quiet --exec /usr/sbin/iprofd -- "${IPROFD_SETTINGS}"
+		start-stop-daemon 2>/dev/null --start --quiet --exec /usr/sbin/iprofd -- "${IPROFD_SETTINGS}"
 		eend $?
 	fi
+
+	einfo "Available ISDN cards:"
+	# eindent  -> waiting for new baselayout :-/
+	show_cards "   " < <(echo "$LIST")
+	# eoutdent
+	return 0
 }
 
 stop() {
+        # if some other monitoring processes are running
+	if /bin/fuser 2>/dev/null -s /dev/isdninfo; then
+		ebegin "Stopping monitoring processes"
+		/bin/fuser -ks /dev/isdninfo; RET=$?; FCNT=0
+		while [ $RET -eq 0 -a $FCNT -lt 10 ]; do
+			echo -n "."; sleep 0.5; FCNT=$(($FCNT + 1))
+			/bin/fuser -s /dev/isdninfo; RET=$?
+		done
+		[ $RET -eq 0 ] && eend 1 || eend 0
+	fi
+
 	if [ -n "${IPROFD_SETTINGS}" ]; then
 		ebegin "Stopping modem-register daemon"
-		start-stop-daemon --stop --quiet --retry 5 --exec /usr/sbin/iprofd
+		start-stop-daemon 2>/dev/null --stop --quiet --retry 5 --exec /usr/sbin/iprofd
 		eend $?
 	fi
 
 	ebegin "Unloading isdnctrl configuration"
-	/usr/sbin/isdnctrl reset force >/dev/null
+	/usr/sbin/isdnctrl reset force &>/dev/null
 	eend $?
+
+	return 0  # ignore errors
 }
 
 save() {
@@ -75,24 +100,11 @@ reload() {
 	eend $?
 }
 
-cards() {
-	local -a _idxa
-	local _it _lin _idx=0
-        if ! read _it _lin < <(/usr/bin/head 2>/dev/null -n1 /dev/isdninfo); then
-		eerror "ERROR: no ISDN cards available"
-                return 1
-        fi
-	read -a _idxa < <(echo $_lin)
-	while [ $_idx -lt 65 ]; do
-		[ "${_idxa[$_idx]}" = "-" ] || einfo "$((_idx / 2)) ${_idxa[$_idx]}"
-                : $((_idx+=2)); [ -z "${_idxa[$_idx]}" ] && break
-        done
-}
-
 info() {
-	/usr/sbin/isdnctrl status all
-}
-
-show() {
-        /usr/sbin/isdnctrl list all
+	local LIST="$(card_list)"
+	if [ -z "$LIST" ]; then
+		eerror "ERROR: no ISDN cards available"
+		return 1
+	fi
+	show_cards < <(echo "$LIST")
 }

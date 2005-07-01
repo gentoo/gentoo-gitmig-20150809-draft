@@ -1,33 +1,82 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdnlog.initd,v 1.1 2005/03/29 08:40:14 mrness Exp $
-
-opts="start stop"
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdnlog.initd,v 1.2 2005/07/01 22:34:02 sbriesen Exp $
 
 depend() {
 	need isdn
 }
 
+card_list() {  # output: <contr> <chan> <card>
+	local IDMAP=() IDX=1 CONTR=0 LAST='-' CARD=''
+	read -a IDMAP < <(/bin/head 2>/dev/null -n1 /dev/isdninfo) || return 1
+	while [ $IDX -lt ${#IDMAP[*]} ]; do
+		CARD=${IDMAP[$IDX]}
+		if [ "$CARD" != "-" -a "$CARD" != "$LAST" ]; then
+			echo "${CONTR} $((IDX-1)) ${CARD}"; : $((CONTR++))
+		fi
+		LAST="$CARD"; : $((IDX++))
+	done
+}
+
+card_info() {
+	local MASK
+	case "$1" in
+		contr[0-9]*)
+			MASK="^${1#contr*} [0-9]\+ .*\$"
+			;;
+		isdnctrl[0-9]*)
+			MASK="^[0-9]\+ ${1#isdnctrl*} .*\$"
+			;;
+		*)
+			MASK="^[0-9]\+ [0-9]\+ ${1}\$"
+			;;
+	esac
+	/bin/grep "$MASK" <(card_list)
+}
+
 start() {
-	local CONTR="${myservice#*.contr}" CTRL=$((CONTR * 2))
-	local CONFIG="/etc/isdn/isdnlog.isdnctrl${CTRL}.options"
-	[ -e "$CONFIG" ] || CONFIG="/etc/isdn/isdnlog.options.contr${CONTR}"
- 
-	if [ ! -e "$CONFIG" ] ; then
-		eerror "You're missing ${CONFIG}"
+	local CONTR CHAN CARD TYPE="${myservice#*.*}"
+	read CONTR CHAN CARD < <(card_info "$TYPE")
+	
+	if [ -z "$CARD" ]; then
+		eerror "ISDNLOG: Selected controller not available (${TYPE})"
 		return 1
 	fi
 
-	ebegin "Starting ISDNLOG for controller #${CONTR}"
-	start-stop-daemon --start --quiet --pidfile "/var/run/isdnlog.isdnctrl${CTRL}.pid" \
-		--exec /usr/sbin/isdnlog -- ${ISDNLOG_OPTIONS} -f "${CONFIG}" "/dev/isdnctrl${CTRL}"
+	# try to find a configuration file	
+	local CONFIG="/etc/isdn/isdnlog.isdnctrl${CHAN}.options"
+	[ -e "$CONFIG" ] || CONFIG="/etc/isdn/isdnlog.options.contr${CONTR}"
+	[ -e "$CONFIG" ] || CONFIG="/etc/isdn/isdnlog.options.isdnctrl${CHAN}"
+	[ -e "$CONFIG" ] || CONFIG="/etc/isdn/isdnlog.options.${CARD}"
+ 
+	if [ ! -e "$CONFIG" ]; then
+		eerror "ISDNLOG: You're missing /etc/isdn/isdnlog.options.${TYPE}"
+		return 1
+	fi
+
+	rm -f "/var/run/${myservice}"  # cleanup
+
+	ebegin "Starting ISDNLOG for controller #${CONTR} (${CARD})"
+	start-stop-daemon --start --quiet --pidfile "/var/run/isdnlog.isdnctrl${CHAN}.pid" \
+		--exec /usr/sbin/isdnlog -- ${ISDNLOG_OPTIONS} -f "${CONFIG}" "/dev/isdnctrl${CHAN}" && \
+	echo "${CONTR} ${CHAN} ${CARD} ${CONFIG##*/}" > "/var/run/${myservice}"
 	eend $?
 }
 
 stop() {
-        local CONTR="${myservice#*.contr}" CTRL=$((CONTR * 2))
-	ebegin "Stopping ISDNLOG for controller #${CONTR}"
-	start-stop-daemon --stop --quiet --retry 5 --pidfile "/var/run/isdnlog.isdnctrl${CTRL}.pid"
+	if [ ! -f "/var/run/${myservice}" ]; then
+		eerror "ISDNLOG: Controller setup not found (${myservice#*.*})"
+		return 1
+	fi
+
+	local CONTR CHAN CARD CONF
+	read CONTR CHAN CARD CONF < "/var/run/${myservice}"
+
+	ebegin "Stopping ISDNLOG for controller #${CONTR} (${CARD})"
+	start-stop-daemon --stop --quiet --retry 5 --pidfile "/var/run/isdnlog.isdnctrl${CHAN}.pid"
 	eend $?
+
+	rm -f "/var/run/${myservice}"
+	return 0  # ignore errors 
 }
