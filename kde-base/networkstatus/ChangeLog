@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/networkstatus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/networkstatus/ChangeLog,v 1.8 2005/05/25 21:23:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/networkstatus/ChangeLog,v 1.9 2005/07/01 09:28:10 corsair Exp $
+
+  01 Jul 2005; <markus@gentoo.org> networkstatus-3.4.1.ebuild:
+  Stable on ppc64 (bug #97544)
 
 *networkstatus-3.4.1 (25 May 2005)
 

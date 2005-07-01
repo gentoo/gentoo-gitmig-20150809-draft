@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksayit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.9 2005/05/25 21:23:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.10 2005/07/01 09:14:32 corsair Exp $
+
+  01 Jul 2005; <markus@gentoo.org> ksayit-3.4.1.ebuild:
+  Stable on ppc64 (bug #97544)
 
 *ksayit-3.4.1 (25 May 2005)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.9 2005/06/15 16:06:23 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.10 2005/07/01 09:12:35 corsair Exp $
+
+  01 Jul 2005; <markus@gentoo.org> kttsd-3.4.1.ebuild:
+  Stable on ppc64 (bug #97544)
 
   15 Jun 2005; Heinrich Wendel <lanius@gentoo.org>
   +files/kdeaccessibility-3.4.0-noarts.patch, kttsd-3.4.1.ebuild:

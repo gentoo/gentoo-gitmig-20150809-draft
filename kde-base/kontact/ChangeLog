@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.10 2005/05/25 21:23:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.11 2005/07/01 09:25:44 corsair Exp $
+
+  01 Jul 2005; <markus@gentoo.org> kontact-3.4.1.ebuild:
+  Stable on ppc64 (bug #97544)
 
 *kontact-3.4.1 (25 May 2005)
 
