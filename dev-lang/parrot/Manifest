@@ -1,6 +1,19 @@
-MD5 32cb955094e08c713eabd4b21aa0e667 ChangeLog 989
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c945d06f74e84a7106d0ccf283b5d7db parrot-0.1.1.ebuild 1147
+MD5 2a07721ae678695fcda05cd1bcda4a43 ChangeLog 1198
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 4ff51bfa42e5b9dee3556f32b84ad998 parrot-0.2.1.ebuild 1791
 MD5 47d9f189df0c6f95e690a6e5b523f185 parrot-0.1.2.ebuild 1538
+MD5 e973d8e474a6da7a82f7d20c2d496a1c files/digest-parrot-0.2.1 65
 MD5 75fbd20b4daec7e1b315a172ad60c64f files/digest-parrot-0.1.1 65
 MD5 33b986910cc59316976efc38da8ab47c files/digest-parrot-0.1.2 65
+MD5 bb2ee3162424592150ab37c417374ceb files/mod_parrot.patch 226
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFCxIzItG5z4I8BtQoRAmo0AJYrKia2U2osHB3CHv8E12UZ0y7pAJ0b35IP
+NuafyMoSUzUQqOsFeYsQrQ==
+=CTHY
+-----END PGP SIGNATURE-----
