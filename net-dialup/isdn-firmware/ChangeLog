@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/isdn-firmware
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.4 2005/02/17 22:57:07 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.5 2005/07/01 15:20:12 sbriesen Exp $
+
+*isdn-firmware-2005.3.21.3 (01 Jul 2005)
+
+  01 Jul 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  +isdn-firmware-2005.3.21.3.ebuild:
+  Update to latest SuSE package, rpm-release is now included in the ebuild
+  version.
 
   18 Feb 2005; Alin Nastac <mrness@gentoo.org>
   isdn-firmware-2004.4.5-r1.ebuild:
