@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6d7527be76988b09dcf469014fa57b1a libgda-1.2.1.ebuild 1991
-MD5 4e05bf65dae6c8c21ed9c3931680b44d ChangeLog 10600
+MD5 ef9b2a54bfd3835539ed22768a6db560 libgda-1.2.1.ebuild 1997
+MD5 00ce99c5ecbcf7f0df5c634141f860f5 ChangeLog 10720
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 efe942efcc3bbe2a6ae347a7e6808a57 libgda-0.2.96-r2.ebuild 3487
 MD5 f6d0012405583f2078317ce929763064 libgda-1.0.3.ebuild 2753
-MD5 3b3f490eefc6c2279ecb38084d6d27a2 libgda-1.2.2.ebuild 1991
+MD5 8d168d9f57504bc9ca6b89810475a44e libgda-1.2.2.ebuild 1997
 MD5 016ec893635c15e43c7159e1f1d92b33 libgda-1.0.2.ebuild 2893
 MD5 eceac9d80b6e54f4091a9a3026c32fec libgda-1.0.4.ebuild 2939
 MD5 89d5a7588e21826826be8ecb11218b94 files/libgda-1.0.2-freetds_fix.patch 1338
@@ -29,7 +29,7 @@ MD5 46b8c0b40219635d47ca4583d42dc814 files/digest-libgda-1.0.2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCxsORKf2g/qXtneoRApIbAJ9Y0Vs6OUYHbLKuO0ebpFFNBfzA+QCeJsPo
-KP79ipc3C8bYmNtgsmNon8I=
-=QTv5
+iD8DBQFCxsmZKf2g/qXtneoRAiLqAKCJn4m6m9KFWc0HyR64x6QQrn0bYACeP34P
+IO7LgL7wRNbytsthGG+z3h4=
+=Ijvr
 -----END PGP SIGNATURE-----
