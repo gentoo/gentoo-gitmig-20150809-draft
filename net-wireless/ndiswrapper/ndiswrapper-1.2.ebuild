@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2.ebuild,v 1.3 2005/07/01 18:49:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2.ebuild,v 1.4 2005/07/02 17:42:43 brix Exp $
 
 inherit linux-mod eutils
 
@@ -28,16 +28,8 @@ MODULESD_NDISWRAPPER_ALIASES=("wlan0 ndiswrapper")
 src_unpack() {
 	unpack ${A}
 
-	if grep '# CONFIG_SOFTWARE_SUSPEND2 is not set' ${ROOT}${KV_DIR}/.config
-	then
-		eerror "You have a kernel patched with Software Suspend 2 (swsusp2)"
-		eerror "but don't have it enabled. You must remove the patch or"
-		eerror "enable Software Suspend 2 (swsusp2)."
-		eerror "http://bugs.gentoo.org/show_bug.cgi?id=74864"
-		die "Please fix your kernel"
-	fi
-
-	#epatch ${FILESDIR}/${P}-swsusp2.patch || die "swsusp2 patch failed"
+	cd ${S}
+	epatch ${FILESDIR}/${P}-suspend2.patch || die "suspend2 patch failed"
 
 	convert_to_m ${S}/driver/Makefile
 }
