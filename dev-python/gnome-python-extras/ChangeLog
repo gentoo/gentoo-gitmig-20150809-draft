@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/gnome-python-extras
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.1 2005/07/02 18:13:00 allanonjl Exp $
+
+*gnome-python-extras-2.10.2 (02 Jul 2005)
+
+  02 Jul 2005; John N. Laliberte <allanonjl@gentoo.org> +metadata.xml,
+  +gnome-python-extras-2.10.2.ebuild:
+  Initial commit.  Fixes #93504
+
