@@ -1,6 +1,6 @@
-# ChangeLog for sys-devel/gcc-mips64
+# ChangeLog for sys-devel/gcc-powerpc64
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-powerpc64/ChangeLog,v 1.1 2005/07/02 04:58:08 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-powerpc64/ChangeLog,v 1.2 2005/07/02 12:48:35 swegener Exp $
 
 *gcc-powerpc64-3.4.4 (02 Jul 2005)
 
