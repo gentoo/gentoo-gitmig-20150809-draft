@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.0.ebuild,v 1.5 2005/05/30 18:19:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.0.ebuild,v 1.6 2005/07/02 19:19:10 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic elisp-common
 
@@ -24,17 +24,21 @@ DEPEND=">=dev-lang/perl-5.6.1
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	emacs? ( virtual/emacs )"
 
+S=${WORKDIR}/${MY_P}_${MyDate}
+
 SITEFILE=50erlang-gentoo.el
 
-S=${WORKDIR}/${MY_P}_${MyDate}
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-export-TARGET.patch
+}
 
 src_compile() {
 	[ "`gcc-fullversion`" == "3.3.2" ] && filter-mfpmath sse
 	[ "`gcc-fullversion`" == "3.3.3" ] && filter-mfpmath sse
 	addpredict /dev/pty # Bug #25366
 
-	#erlang configure seems to "misdetect" CHOST on amd64
-	[ "${ARCH}" = "amd64" ] && CHOST="x86_64-unknown-linux-gnu"
 	econf --enable-threads || die
 	make || die
 
