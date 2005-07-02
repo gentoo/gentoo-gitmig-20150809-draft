@@ -2,9 +2,9 @@ MD5 b380ec0bd3eed250a681d75daf8c7465 gst-plugins-lame-0.8.5.ebuild 347
 MD5 4b361ef722abff415d669607100b52cb gst-plugins-lame-0.8.7.ebuild 341
 MD5 bcfbfef64f3b33a4d85673d1cb3b69e4 gst-plugins-lame-0.8.2.ebuild 345
 MD5 285c637e4501c4a6756e5d0ec2d7a198 gst-plugins-lame-0.8.9.ebuild 349
-MD5 285c637e4501c4a6756e5d0ec2d7a198 gst-plugins-lame-0.8.10.ebuild 349
+MD5 27b0ec4f1e024ece4810cd655286cec6 gst-plugins-lame-0.8.10.ebuild 350
 MD5 7247db6d49b0f70111806da78474b469 gst-plugins-lame-0.8.1.ebuild 340
-MD5 175a7fed860dea365abb0d7a03442983 ChangeLog 2946
+MD5 8bfa840f166219823306056e0148f965 ChangeLog 3093
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 4a0ae14ca3289c3cde58b02d85a8d3a2 gst-plugins-lame-0.8.8.ebuild 344
 MD5 cf702ade5ff82579a0b88dfe037be01b gst-plugins-lame-0.8.3.ebuild 349
