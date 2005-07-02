@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 34373cc9de79bae25508c08ddc9f9caf gob-2.0.9.ebuild 688
 MD5 767ff83985b25c68cd71bba80910ae42 ChangeLog 4077
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -6,3 +9,10 @@ MD5 e7aee6ae2a765a8afbf7a86a4bc4ee9d gob-2.0.11.ebuild 689
 MD5 69cc2e2c3652b2d96ff87ce2cf96df55 files/digest-gob-2.0.9 62
 MD5 af1045825b434f2c59e89e0ed157e085 files/digest-gob-2.0.11 63
 MD5 a78e56617e86837c5bd694044ddc070a files/digest-gob-1.0.12 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxv2iKf2g/qXtneoRAqpsAKCJfvn6p7cD3480lcGBMdyFuOqjiQCeMUgG
+/9HFc5iMeAQ1UhybDZr10kY=
+=GjDY
+-----END PGP SIGNATURE-----
