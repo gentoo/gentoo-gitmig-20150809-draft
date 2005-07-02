@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1264 2005/07/02 10:49:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1265 2005/07/02 18:09:39 allanonjl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -273,6 +273,7 @@ dev-python/cgkit:3ds - enable support for importing 3D Studio models
 dev-python/cgkit:ogre - enable support for Ogre rendering
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/epydoc:pdf - enable support for exporting to pdf
+dev-python/gnome-python-extras:firefox - allow building against firefox libs
 dev-python/ipython:gnuplot - enable gnuplot support
 dev-python/numeric:lapack - enable lapack library support
 dev-python/pycairo:numeric - enable Numeric support
