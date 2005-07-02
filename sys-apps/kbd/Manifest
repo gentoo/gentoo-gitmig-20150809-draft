@@ -2,26 +2,27 @@
 Hash: SHA1
 
 MD5 c29424ddee16d6f71aa4b5276d4718a4 kbd-1.12-r3.ebuild 2268
-MD5 8e6dc79ff3b16a40252dd5d7550b9c32 kbd-1.12-r5.ebuild 2642
-MD5 373ac401400870223a0f5c52ed31951b kbd-1.12-r4.ebuild 2412
-MD5 b3a10d6a10c074d5fc6c87cf9a820205 ChangeLog 6765
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 5f28051ad309ee4e481ef3b2b9cc9714 files/kbd-1.12-kbd_repeat-v2.patch 809
-MD5 d03cdb6117cda1a23cb90b91ab133c3e files/kbd-1.12-alias.patch 1129
-MD5 ff84eec635b7a1578ef1284b994f779b files/kbd-1.12-setfont-man.patch 629
+MD5 373ac401400870223a0f5c52ed31951b kbd-1.12-r4.ebuild 2412
+MD5 209b61e1d43b648cdcb948386279e6fc kbd-1.12-r5.ebuild 2631
+MD5 b3a10d6a10c074d5fc6c87cf9a820205 ChangeLog 6765
 MD5 2fff8da17e566c258df2888fbc599c23 files/kbd-1.12-cz-qwerty-map.patch 5821
-MD5 3e2652f1b8451784488b743b6e0dd556 files/kbd-1.12-find-map-fix.patch 957
-MD5 6e007f04a80358ea81b27c80498a4808 files/kbd-1.08-terminal.patch 925
-MD5 590a77d26b0b25a4217435ffa8bcd18a files/kbd-1.12-debian.patch 2628
-MD5 fa826e223fa8177a8faff98b798cf601 files/kbd-1.12-Meta_utf8.patch 344
-MD5 58617e4171ee3357153c9793be062524 files/kbd-1.12-it-euro-map.patch 501
+MD5 d03cdb6117cda1a23cb90b91ab133c3e files/kbd-1.12-alias.patch 1129
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r3 118
+MD5 590a77d26b0b25a4217435ffa8bcd18a files/kbd-1.12-debian.patch 2628
+MD5 3e2652f1b8451784488b743b6e0dd556 files/kbd-1.12-find-map-fix.patch 957
+MD5 58617e4171ee3357153c9793be062524 files/kbd-1.12-it-euro-map.patch 501
+MD5 fa826e223fa8177a8faff98b798cf601 files/kbd-1.12-Meta_utf8.patch 344
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r4 118
+MD5 5f28051ad309ee4e481ef3b2b9cc9714 files/kbd-1.12-kbd_repeat-v2.patch 809
+MD5 86535adb8da923e0df3c58d9caa35ae6 files/kbd-1.06-othervt.patch 1605
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r5 118
+MD5 ff84eec635b7a1578ef1284b994f779b files/kbd-1.12-setfont-man.patch 629
+MD5 6e007f04a80358ea81b27c80498a4808 files/kbd-1.08-terminal.patch 925
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCnJccI1lqEGTUzyQRAvsRAJ4mRf+ixYhflVd73WA1015d3pSBPACeP9Ft
-HiHCKmosw98q9txP858HDlY=
-=9hrq
+iD8DBQFCxtKxgIKl8Uu19MoRAkinAJ0R/3V8pVeDAv8J+i8Acyq3OvMJsQCfS90n
+Lb9PNmE3NJhy71csq9qK4B4=
+=5sgZ
 -----END PGP SIGNATURE-----
