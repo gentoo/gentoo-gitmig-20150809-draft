@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 247881ae9a96fee1e6dba0a17403d6b4 zenity-2.8.1.ebuild 846
 MD5 26d242647efe851f5677f67f580c8cad zenity-2.8.0.ebuild 865
 MD5 160ef4fee0830a153b173d854a9935d3 ChangeLog 6553
@@ -14,3 +17,10 @@ MD5 0308ff19f6b68370739997806d23f4ac files/zenity-2.6.3-utf8_fix.patch 569
 MD5 ef2defe06ca23b8e19247b646df39600 files/digest-zenity-1.8 63
 MD5 0d8795c3b63fac85b8415f3abf724e19 files/digest-zenity-2.10.0 66
 MD5 11d6827a445afb68eb58138ba36167b6 files/zenity-1.8-utf8_fix.patch 716
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxqQeKf2g/qXtneoRAkNdAKCJiH0y7TeKU2Eo4Zl2RzIDdbYZowCfYhsn
+aVR7nqu1sBSqrhkWphZySqQ=
+=IUuH
+-----END PGP SIGNATURE-----
