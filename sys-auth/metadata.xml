@@ -3,7 +3,7 @@
 <catmetadata>
 	<longdescription lang="en">
 		The sys-auth category contains applications and libraries to support
-		authentication and authorization facilities for Gentoo systems.
+		authentication and authorization facilities.
 		Here belongs PAM modules, NSS modules and login apps.
 	</longdescription>
 </catmetadata>
