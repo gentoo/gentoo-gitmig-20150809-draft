@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-symlinks/no-lib32/package.mask,v 1.2 2005/06/07 16:02:28 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-symlinks/no-lib32/package.mask,v 1.3 2005/07/02 14:37:46 flameeyes Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -38,7 +38,7 @@
 <dev-libs/libxslt-1.1.13-r1
 <sys-fs/e2fsprogs-1.37-r1
 <media-gfx/splashutils-1.1.9.6
-<sys-libs/pam_passwdqc-1.0.2
+<sys-auth/pam_passwdqc-1.0.2
 <media-video/mplayer-1.0_pre7
 <net-nds/openldap-2.2.26-r2
 <kde-base/kdelibs-3.4.1-r1
