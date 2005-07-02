@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6839cf89497e4abdd46ffdbe59b1b7b4 ChangeLog 1042
 MD5 f884d2b08eefef254e63415960a233a4 metadata.xml 725
-MD5 f2e64cc1340dea48f0f8c032f955700a iripdb-0.1.1.ebuild 1592
 MD5 c6479ab5e53d4a546bbcd8a639421139 iripdb-0.1.3b.ebuild 1421
+MD5 22023d079a31cfa8f730642f0e6044d1 ChangeLog 1158
 MD5 e7baedeee0805d5ab253d1af916adec3 files/digest-iripdb-0.1.3b 61
-MD5 75a18c7fcd88a614b247cd6fd269ae3f files/digest-iripdb-0.1.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCF2ZjI1lqEGTUzyQRAiQRAJ9K0BxWfgnu0w0f302+4Bv04fQeNgCfcspP
-UEH3Ez6QuQvjUDUeIGi4Umo=
-=XP3F
------END PGP SIGNATURE-----
