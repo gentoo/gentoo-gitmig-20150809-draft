@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.6 2005/05/19 15:09:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.7 2005/07/02 21:56:38 nakano Exp $
+
+  02 Jul 2005; Masatomo Nakano <nakano@gentoo.org> libpq-7.3.10.ebuild,
+  libpq-7.4.8.ebuild, libpq-8.0.1.ebuild, libpq-8.0.3.ebuild:
+  Fixed wrong symlink problem. (#97684).
 
   19 May 2005; MATSUU Takuto <matsuu@gentoo.org> libpq-7.3.10.ebuild,
   libpq-7.4.8.ebuild, libpq-8.0.1.ebuild, libpq-8.0.3.ebuild:

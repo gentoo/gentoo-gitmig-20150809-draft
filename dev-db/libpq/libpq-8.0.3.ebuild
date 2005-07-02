@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.3.ebuild,v 1.2 2005/05/19 15:09:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.3.ebuild,v 1.3 2005/07/02 21:56:38 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
@@ -31,6 +31,14 @@ RDEPEND="virtual/libc
 	kerberos? ( virtual/krb5 )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+pkg_preinst() {
+	# removing wrong symlink which is created by previous ebuild.
+	if [ -L /usr/include/libpq ]; then
+		rm /usr/include/libpq
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gentoo.patch
