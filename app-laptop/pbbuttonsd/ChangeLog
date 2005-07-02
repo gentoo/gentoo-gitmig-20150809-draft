@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.24 2005/06/27 04:31:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.25 2005/07/02 14:06:11 josejx Exp $
+
+*pbbuttonsd-0.7_pre2 (02 Jul 2005)
+
+  02 Jul 2005; Joseph Jezak <josejx@gentoo.org> +pbbuttonsd-0.7_pre2.ebuild:
+  Added new beta version.
 
 *pbbuttonsd-0.7_pre1 (27 Jun 2005)
 
