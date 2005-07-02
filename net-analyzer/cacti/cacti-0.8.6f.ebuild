@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6d.ebuild,v 1.2 2005/05/02 11:23:48 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6f.ebuild,v 1.1 2005/07/02 02:13:10 ramereth Exp $
 
 inherit eutils webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cacti.net/"
 SRC_URI="http://www.cacti.net/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="snmp"
 
 DEPEND=""
