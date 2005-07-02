@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_event/asterisk-app_event-20050627.ebuild,v 1.1 2005/07/01 21:03:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_event/asterisk-app_event-20050627.ebuild,v 1.2 2005/07/02 09:33:56 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 DEPEND=">=net-misc/asterisk-1.0.7-r1"
 
