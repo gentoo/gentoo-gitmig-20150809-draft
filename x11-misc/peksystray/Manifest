@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3bb78a9aa582f83a317def4110e2ebb8 ChangeLog 1261
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
 MD5 cb3e2e3727314e4ef090808c53ff9024 peksystray-0.2.1.ebuild 651
@@ -5,3 +8,10 @@ MD5 d4d19826fa6130491074a8ab2a0927af peksystray-0.2.ebuild 831
 MD5 65914961157e06b6a6c208934e37e76e files/digest-peksystray-0.2 65
 MD5 235ebfa6792cba5ba808e21cc0ea76b4 files/peksystray-gcc3-mlsl.diff 1323
 MD5 63c91efcd33091940b6ee927c484973e files/digest-peksystray-0.2.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxtaVKf2g/qXtneoRAhYeAKDDXMfZ8WgXCex0RYFMi0pdJ2DBhgCgr0nr
+i2B6n8GfkV2lpgvqRlczaYA=
+=A/+C
+-----END PGP SIGNATURE-----
