@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/h4x0r
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/h4x0r/ChangeLog,v 1.5 2005/07/01 18:33:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/h4x0r/ChangeLog,v 1.6 2005/07/02 09:32:44 dholm Exp $
+
+  02 Jul 2005; David Holm <dholm@gentoo.org> h4x0r-0.13.ebuild:
+  Added to ~ppc.
 
 *h4x0r-0.13 (01 Jul 2005)
 
