@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6.ebuild,v 1.3 2005/06/30 10:18:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6.ebuild,v 1.4 2005/07/02 14:51:48 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -23,18 +23,18 @@ src_unpack() {
 	cd "${S}"
 
 	# Make sure we can build with -j :)
-	epatch ${FILESDIR}/man-1.6-parallel-make.patch
+	epatch "${FILESDIR}"/man-1.6-parallel-make.patch
 
 	# Fix search order in man.conf so that system installed manpages
 	# will be found first ...
-	epatch ${FILESDIR}/man-1.5p-search-order.patch
+	epatch "${FILESDIR}"/man-1.5p-search-order.patch
 
 	# For groff-1.18 or later we need to call nroff with '-c'
-	epatch ${FILESDIR}/man-1.5m-groff-1.18.patch
+	epatch "${FILESDIR}"/man-1.5m-groff-1.18.patch
 
 	# makewhatis traverses manpages twice, as default manpath
 	# contains two directories that are symlinked together
-	epatch ${FILESDIR}/man-1.5p-defmanpath-symlinks.patch
+	epatch "${FILESDIR}"/man-1.5p-defmanpath-symlinks.patch
 
 	# use non-lazy binds for man. And let portage handling stripping.
 	append-ldflags -Wl,-z,now
@@ -48,7 +48,16 @@ src_compile() {
 	tc-export CC BUILD_CC
 
 	local myconf=
-	use nls && myconf="+lang all" || myconf="+lang none"
+	if use nls ; then
+		strip-linguas $(cd man; echo ??)
+		if [[ -z ${LINGUAS} ]] ; then
+			myconf="+lang all"
+		else
+			myconf="+lang ${LINGUAS// /,}"
+		fi
+	else
+		myconf="+lang none"
+	fi
 	./configure \
 		-confdir=/etc \
 		+sgid +fhs \

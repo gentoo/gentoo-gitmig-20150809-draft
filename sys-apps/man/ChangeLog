@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.70 2005/07/01 00:04:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.71 2005/07/02 14:51:48 vapier Exp $
+
+  02 Jul 2005; Mike Frysinger <vapier@gentoo.org> man-1.6.ebuild:
+  Only build/install languages as defined by $LINGUAS #97612 by Martin von
+  Gagern.
 
   30 Jun 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/man-1.6-parallel-make.patch, man-1.6.ebuild:
