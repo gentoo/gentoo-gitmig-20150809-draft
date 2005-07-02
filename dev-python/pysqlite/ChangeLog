@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.29 2005/05/27 21:08:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.30 2005/07/02 23:32:19 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> pysqlite-2.0.2.ebuild:
+  Add ~alpha keyword.
 
   27 May 2005; Jason Wever <weeve@gentoo.org> pysqlite-1.0.1.ebuild:
   Stable on SPARC.
