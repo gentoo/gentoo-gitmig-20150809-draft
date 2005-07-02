@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d526b4d67ea22adf3160140342e4440a bonobo-activation-2.2.1.ebuild 693
 MD5 f06378a99c1c6a68db8b418f447c1f30 ChangeLog 4798
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -12,3 +15,10 @@ MD5 78e72abf7d4e00874bf39e197a9b86e2 files/digest-bonobo-activation-2.2.4 76
 MD5 124d64e2149f100c477d9a8347316ac0 files/digest-bonobo-activation-2.2.2 76
 MD5 7378aacff5ad5f9a82f2407b41274347 files/digest-bonobo-activation-2.2.1.1 78
 MD5 5788dd9dd571e36c6509636b5c5afe00 files/digest-bonobo-activation-2.2.3 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxsQ5Kf2g/qXtneoRAtzCAJ9HYiVQ52XQeWfdEFFNtAZJtk8pGQCfRQj6
+qYfzWByy/Nmff2CS6xFlrXA=
+=HXWE
+-----END PGP SIGNATURE-----
