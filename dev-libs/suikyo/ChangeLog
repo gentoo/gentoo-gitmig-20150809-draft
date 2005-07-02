@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/suikyo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/ChangeLog,v 1.26 2005/04/30 19:21:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/ChangeLog,v 1.27 2005/07/02 20:33:59 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> suikyo-2.1.0.ebuild:
+  Stable on alpha.
 
   30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> suikyo-2.1.0.ebuild:
   Stable on ppc.
