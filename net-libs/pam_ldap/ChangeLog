@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/pam_ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.25 2005/05/02 01:55:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.26 2005/07/02 14:35:33 hansmi Exp $
+
+  02 Jul 2005; Michael Hanselmann <hansmi@gentoo.org> pam_ldap-176.ebuild:
+  Stable on hppa, fixed bug 90982.
 
   02 May 2005; Jason Wever <weeve@gentoo.org> pam_ldap-176.ebuild:
   Stable on SPARC.
