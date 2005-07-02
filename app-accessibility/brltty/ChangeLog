@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.30 2005/06/12 19:32:36 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.31 2005/07/02 14:55:27 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> brltty-3.6.1.ebuild:
+  Stable on alpha.
 
   12 Jun 2005; Olivier Crête <tester@gentoo.org> brltty-3.6.1.ebuild:
   Stable on amd64
