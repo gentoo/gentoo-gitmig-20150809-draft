@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.2.ebuild,v 1.1 2005/07/02 15:43:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.2.ebuild,v 1.2 2005/07/02 19:22:03 danarmak Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -79,7 +79,7 @@ src_compile() {
 			$(use_with musepack)"
 
 	# Build process of K3B
-	#kde_src_compile
+	kde_src_compile
 
 	# Build process of K3B-i18n, select LINGUAS elements
 	S=${WORKDIR}/${I18N}
@@ -91,7 +91,7 @@ src_compile() {
 }
 
 src_install() {
-	#make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS ChangeLog COPYING FAQ INSTALL KNOWNBUGS PERMISSIONS README TODO
 
