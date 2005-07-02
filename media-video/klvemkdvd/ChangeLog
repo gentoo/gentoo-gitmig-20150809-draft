@@ -1,6 +1,10 @@
 # ChangeLog for media-video/klvemkdvd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/klvemkdvd/ChangeLog,v 1.7 2005/01/15 00:05:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/klvemkdvd/ChangeLog,v 1.8 2005/07/02 13:42:13 flameeyes Exp $
+
+  02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> klvemkdvd-0.4.ebuild:
+  Add need-kde call to be sure that $KDEDIR is set. Removed dependency over
+  kdebase as the sources don't seem to need it.
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> klvemkdvd-0.4.ebuild:
   Changed dep on a kde-base monolithic package to accept the equivalent split
