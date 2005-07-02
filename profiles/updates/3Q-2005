@@ -1,1 +1,2 @@
 move net-www/akregator kde-base/akregator
+move app-admin/pam_dotfile sys-auth/pam_dotfile
