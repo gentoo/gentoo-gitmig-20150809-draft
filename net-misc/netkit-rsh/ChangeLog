@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.25 2005/05/22 21:33:49 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.26 2005/07/02 20:58:49 hardave Exp $
+
+  02 Jul 2005; Hardave Riar <hardave@gentoo.org> netkit-rsh-0.17-r6.ebuild:
+  Stable on mips, bug #93215.
 
   22 May 2005; Olivier Crête <tester@gentoo.org> netkit-rsh-0.17-r6.ebuild:
   Mark stable on x86 per security bug #93215
