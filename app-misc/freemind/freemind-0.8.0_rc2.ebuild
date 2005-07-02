@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0_rc2.ebuild,v 1.2 2005/05/05 23:01:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0_rc2.ebuild,v 1.3 2005/07/02 18:29:21 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -36,7 +36,7 @@ src_install() {
 
 	echo "#!/bin/sh" > ${PN}.sh
 	echo "cd /opt/${PN}" >> ${PN}.sh
-	echo "'${JAVA_HOME}'/bin/java -jar lib/${PN}.jar" >> ${PN}.sh
+	echo "java -jar lib/${PN}.jar" >> ${PN}.sh
 
 	cp -R ${S}/doc ${D}/opt/${PN}
 	use doc && java-pkg_dohtml -r doc/

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/freemind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.17 2005/05/05 23:01:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.18 2005/07/02 18:29:21 axxo Exp $
+
+  02 Jul 2005; Thomas Matthijs <axxo@gentoo.org> freemind-0.7.1.ebuild,
+  freemind-0.7.1-r1.ebuild, freemind-0.8.0_rc2.ebuild:
+  fix wrapper script
 
   05 May 2005; Sven Wegener <swegener@gentoo.org> freemind-0.7.1.ebuild,
   freemind-0.7.1-r1.ebuild, freemind-0.8.0_rc2.ebuild:
