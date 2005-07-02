@@ -7,3 +7,4 @@ move sys-libs/pam_passwdqc sys-auth/pam_passwdqc
 move sys-libs/pam_pwdfile sys-auth/pam_pwdfile
 move sys-libs/pam_ssh_agent sys-auth/pam_ssh_agent
 move sys-libs/pam_usb sys-auth/pam_usb
+move app-crypt/pam_krb5 sys-auth/pam_krb5
