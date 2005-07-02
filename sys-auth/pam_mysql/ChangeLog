@@ -1,0 +1,31 @@
+# ChangeLog for sys-auth/pam_mysql
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.1 2005/07/02 14:24:30 flameeyes Exp $
+
+  02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +pam_mysql-0.4.7.ebuild, +pam_mysql-0.5.ebuild:
+  Moved from sys-libs/pam_mysql to sys-auth/pam_mysql.
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  pam_mysql-0.5.ebuild:
+  Masked pam_mysql-0.5.ebuild stable for ppc
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> pam_mysql-0.4.7.ebuild,
+  pam_mysql-0.5.ebuild:
+  Added missing IUSE.
+
+  27 Oct 2003; Brad House <brad_mssw@gentoo.org> pam_mysql-0.5.ebuild:
+  add ~amd64 flag
+
+*pam_mysql-0.5 (22 Jun 2003)
+
+  22 Jun 2003; Donny Davies <woodchip@gentoo.org> pam_mysql-0.5.ebuild:
+  Bump, close #11353.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*pam_mysql-0.4.7 (13 Nov 2002)
+
+  13 Nov 2002; Donny Davies <woodchip@gentoo.org> :
+  Initial import; reworked by me.  Thanks to mw@teamzone.de (Markus Wagner)
+  and henri.schomaecker@virtual-homes.de (Henri Schomaecker) for help.

@@ -1,0 +1,6 @@
+MD5 952bd1b956da5cdcbfe0b1afa97e9d18 ChangeLog 988
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 54b9caa5e46840fd943cb10611ee29ed pam_mysql-0.4.7.ebuild 883
+MD5 257f9b9a8717ac140bb70fccbff86ac8 pam_mysql-0.5.ebuild 980
+MD5 321f5b5eb63426fa78d6f069aeb5e1d5 files/digest-pam_mysql-0.4.7 65
+MD5 a7e0e0308d553dc4013157deceb6bb21 files/digest-pam_mysql-0.5 64
