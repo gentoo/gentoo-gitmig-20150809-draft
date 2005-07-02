@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.4.1-r1.ebuild,v 1.2 2005/07/01 11:05:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.4.1-r1.ebuild,v 1.3 2005/07/02 22:22:03 greg_g Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -20,8 +20,8 @@ $(deprange $PV $MAXKDEVER kde-base/libkcal)
 $(deprange $PV $MAXKDEVER kde-base/kontact)"
 RDEPEND="${DEPEND}
 $(deprange $PV $MAXKDEVER kde-base/kdepim-kioslaves)
-$(deprange $PV $MAXKDEVER kde-base/kdebase-kioslaves)
-$(deprange $PV $MAXKDEVER kde-base/kmailcvt)"
+$(deprange $PV $MAXKDEVER kde-base/kmailcvt)
+$(deprange-dual $PV $MAXKDEVER kde-base/kdebase-kioslaves)"
 
 KMCOPYLIB="
 	libkdepim libkdepim/
