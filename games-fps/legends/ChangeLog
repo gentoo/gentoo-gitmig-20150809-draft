@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/legends
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.10 2005/05/16 01:52:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.11 2005/07/02 00:34:44 mr_bones_ Exp $
+
+  02 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  legends-0.4.1c.ebuild:
+  fix src_uri for bug #97631
 
 *legends-0.4.1c (16 May 2005)
 

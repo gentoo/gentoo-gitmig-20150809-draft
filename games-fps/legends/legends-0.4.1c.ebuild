@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1c.ebuild,v 1.1 2005/05/16 01:52:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1c.ebuild,v 1.2 2005/07/02 00:34:44 mr_bones_ Exp $
 
 inherit games
 
 MY_P=${PN}_linux-${PV}
 DESCRIPTION="A fast-paced first-person-perspective online multiplayer game similar to Tribes"
 HOMEPAGE="http://legendsthegame.net/"
-SRC_URI="http://runcrash.com/legends/${MY_P}.tar.gz"
+SRC_URI="http://www.legendsthegame.net/files//${MY_P}.tar.gz"
 
 RESTRICT="nomirror"
 KEYWORDS="-* x86"
