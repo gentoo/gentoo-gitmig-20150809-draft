@@ -111,6 +111,7 @@ sci-mathematics
 sci-misc
 sec-policy
 sys-apps
+sys-auth
 sys-block
 sys-boot
 sys-cluster

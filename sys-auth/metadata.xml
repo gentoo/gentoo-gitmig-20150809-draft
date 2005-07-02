@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		The sys-auth category contains applications and libraries to support
+		authentication and authorization facilities for Gentoo systems.
+		Here belongs PAM modules, NSS modules and login apps.
+	</longdescription>
+</catmetadata>
