@@ -1,0 +1,35 @@
+# ChangeLog for sys-auth/pam_passwdqc
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.1 2005/07/02 14:30:19 flameeyes Exp $
+
+  02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +pam_passwdqc-0.7.5.ebuild, +pam_passwdqc-1.0.2.ebuild:
+  Moved from sys-libs/pam_passwdqc to sys-auth/pam_passwdqc.
+
+*pam_passwdqc-1.0.2 (04 Jun 2005)
+
+  04 Jun 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -pam_passwdqc-0.7.4.ebuild, pam_passwdqc-0.7.5.ebuild,
+  +pam_passwdqc-1.0.2.ebuild:
+  Added new version, closes #93811. Fixed 0.7.5 version for multilib.
+
+  04 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
+  pam_passwdqc-0.7.5.ebuild:
+  Marked ~amd64.
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  pam_passwdqc-0.7.5.ebuild:
+  Masked pam_passwdqc-0.7.5.ebuild stable for ppc
+
+*pam_passwdqc-0.7.5 (18 Nov 2003)
+
+  18 Nov 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org>
+  pam_passwdqc-0.7.5.ebuild:
+  version bump to 0.7.5 and marked stable on x86
+
+*pam_passwdqc-0.7.4 (17 Sep 2003)
+
+  17 Sep 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org>
+  pam_passwdqc-0.7.4.ebuild:
+  New package -- see bug #28413
+
