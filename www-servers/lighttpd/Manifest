@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2ee7defa9578776786620b0864ca3bbc lighttpd-1.3.10-r1.ebuild 2160
-MD5 c252902cef252fc0f13fb934d9c506e8 lighttpd-1.3.14.ebuild 2454
-MD5 3e5bb5d47d1b107f11b702af81b85451 lighttpd-1.3.13-r1.ebuild 2342
-MD5 df30fd0ee33c219a6c26ad80ffa8399e lighttpd-1.3.13-r3.ebuild 2464
-MD5 928fda826cb5b9eb3cda3b4fb119bf78 ChangeLog 6120
+MD5 01b5ea9b6aa9a88852ed91bb7b9256b7 lighttpd-1.3.10-r1.ebuild 2181
+MD5 aee3715fea11b421e88f5bfb3754860d lighttpd-1.3.14.ebuild 2473
+MD5 4712f96039616a54383ea538afb7c46f lighttpd-1.3.13-r1.ebuild 2361
+MD5 8857687babedab806d728ea7b6c7c3df lighttpd-1.3.13-r3.ebuild 2483
+MD5 83addfbc0c2033be828142fa025c852e ChangeLog 6328
 MD5 4a186842848d9c384e2d12785ba426bc metadata.xml 165
 MD5 1d925aed297ec4541fb230dd19e11bc1 files/spawn-fcgi.confd 1076
 MD5 f984dc26b2bc491272d302ab453f6e6b files/lighttpd-1.3.13-ldap-binddn.diff 3863
@@ -27,7 +27,7 @@ MD5 44374d14af9b69b8f60f8d73f14c848d files/lighttpd-1.3.13-pam-name.diff 564
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCsrrSEZCkKN40op4RAuFDAJ9IUQue7maptmBAKD5a9OmCDk7suACeIZkM
-7sKxutKwDW6+6FoDY6FduC4=
-=BwmX
+iD8DBQFCxox9EZCkKN40op4RAuJvAJ9D6nKAQM39Pd3gOuBjT4Cm8ZBC+gCgva9P
+ZlIVzdtq/aWiPTCV4P7TsWo=
+=R5EU
 -----END PGP SIGNATURE-----

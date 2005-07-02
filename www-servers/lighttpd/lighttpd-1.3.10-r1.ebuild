@@ -1,16 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.10-r1.ebuild,v 1.3 2005/03/22 16:36:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.10-r1.ebuild,v 1.4 2005/07/02 12:44:23 ka0ttic Exp $
 
 inherit eutils
+
+RESTRICT="test"
 
 DESCRIPTION="lightweight high-performance web server"
 HOMEPAGE="http://www.lighttpd.net/"
 SRC_URI="http://www.lighttpd.net/download/${P}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE="mysql ssl php xattr ldap"
+
 RDEPEND="virtual/libc
 		app-arch/bzip2
 		>=dev-libs/libpcre-3.1
