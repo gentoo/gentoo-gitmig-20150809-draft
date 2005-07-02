@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.130 2005/06/30 18:32:45 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.131 2005/07/02 04:37:17 dostrow Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -430,6 +430,15 @@ install_headers() {
 			cp -ax ${S}/include/asm-x86_64/* ${D}/${ddir}/asm-x86_64
 
 			create_ml_includes ${ddir}/asm __i386__:${ddir}/asm-i386 __x86_64__:${ddir}/asm-x86_64
+			;;
+		ppc64)
+			dodir ${ddir}/asm-ppc
+			cp -ax ${S}/include/asm-ppc/* ${D}/${ddir}/asm-ppc
+
+			dodir ${ddir}/asm-ppc64
+			cp -ax ${S}/include/asm-ppc64/* ${D}/${ddir}/asm-ppc64
+
+			create_ml_includes ${ddir}/asm !__powerpc64__:${ddir}/asm-ppc __powerpc64__:${ddir}/asm-ppc64
 			;;
 		arm)
 			dodir ${ddir}/asm
