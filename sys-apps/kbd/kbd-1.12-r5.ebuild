@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r5.ebuild,v 1.4 2005/07/02 17:44:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r5.ebuild,v 1.5 2005/07/02 20:56:02 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -55,6 +55,9 @@ src_unpack() {
 
 	# The italian keymap is missing euro support #75970
 	epatch "${FILESDIR}"/${P}-it-euro-map.patch
+
+	# Fix jp map to recognize Ctrl-[ as Escape #71870
+	epatch "${FILESDIR}"/${P}-jp-escape.patch
 
 	# Patches from Fedora
 	epatch "${FILESDIR}"/${P}-Meta_utf8.patch
