@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.10.2.ebuild,v 1.3 2005/07/02 21:45:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.10.2.ebuild,v 1.4 2005/07/02 23:45:40 allanonjl Exp $
 
 inherit eutils gnome2 python
 
@@ -48,7 +48,7 @@ src_compile() {
 
 	gnome2_src_configure ${G2CONF}
 
-	emake || make || die "make failed!"
+	emake || die "make failed!"
 }
 
 src_install() {
