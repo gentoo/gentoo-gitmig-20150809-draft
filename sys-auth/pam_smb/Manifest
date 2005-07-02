@@ -1,9 +1,19 @@
-MD5 de469d368b631f3e7580108d67e52bf0 ChangeLog 864
-MD5 f7af4838b82a80e14151093855dc3a59 pam_smb-1.9.9-r1.ebuild 1046
-MD5 aa8519bcf13ab9354bab697fe6cd1b5a pam_smb-2.0.0_rc5.ebuild 1135
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 81d46bda2ce20955fda2889c5434aeae ChangeLog 1093
 MD5 e5b710cc0aa8547232aa1709aba632b3 metadata.xml 381
-MD5 68e3158a235c139a6598e3c0371143fd pam_smb-2.0.0_rc6.ebuild 1157
+MD5 d7f17ed984b8f6c22a89d3e9fdf6a482 pam_smb-1.9.9-r1.ebuild 1047
+MD5 da62e0af3d3a2f9cd9cd5122feb0bbb7 pam_smb-2.0.0_rc5.ebuild 1136
+MD5 0f2003f537a1578685cd42a6d63cf38a pam_smb-2.0.0_rc6.ebuild 1161
 MD5 758307bf5853c461dd0d18ea60991fe1 files/digest-pam_smb-1.9.9-r1 65
 MD5 9fe6e35bc7a3bb09b54d5adb0821082a files/digest-pam_smb-2.0.0_rc5 69
-MD5 8b0abca6ab4167fd498f144b48a2b0dc files/pamsmbd-init 467
 MD5 1aac798708053c2d12cf913f1ddbf8e0 files/digest-pam_smb-2.0.0_rc6 69
+MD5 1e43479dbe172fe3e449c6c137be0f24 files/pamsmbd-init 468
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxqIaj5H05b2HAEkRAsdCAJ9y+qk2UYM2DwqEfmrmPh0AuorBmgCfYoYW
+fIkeC2cpCrZJjQU9j0KUsOA=
+=uchI
+-----END PGP SIGNATURE-----
