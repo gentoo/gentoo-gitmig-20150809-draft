@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/wmsmixer-0.5.1.ebuild,v 1.5 2004/10/19 09:02:16 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/wmsmixer-0.5.1.ebuild,v 1.6 2005/07/02 09:34:25 corsair Exp $
 
 inherit eutils
 IUSE=""
@@ -10,7 +10,7 @@ SRC_URI="http://www.hibernaculum.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~sparc ~ppc"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 
 DEPEND="virtual/libc
 	virtual/x11"
