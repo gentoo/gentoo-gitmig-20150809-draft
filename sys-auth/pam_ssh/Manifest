@@ -1,0 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1fc321cd416b7183fa2fb4d6349ab338 ChangeLog 971
+MD5 d3b4e86535e8d7f0a6e03b53d5f3219f metadata.xml 157
+MD5 2e1785e7d5e28d486f6c88576ff578e9 pam_ssh-1.9.ebuild 856
+MD5 7d53d7cbe10c4faa30bebc4ea1aa65db pam_ssh-1.91.ebuild 831
+MD5 95801f821f2f72dfc56862216600f034 pam_ssh-1.91-r1.ebuild 972
+MD5 5cd5460fb7b7377b0e576eac476bc830 files/1.9-standard-prompt.patch 378
+MD5 2da9f0064c9caa03f6d298f3f3f6a169 files/digest-pam_ssh-1.9 64
+MD5 d42a0e20bf5fa8783aa3a7c6de9a935e files/digest-pam_ssh-1.91 65
+MD5 4d93b0a0bbf019434f9c7a6da68c5e9f files/system-auth.example 612
+MD5 d42a0e20bf5fa8783aa3a7c6de9a935e files/digest-pam_ssh-1.91-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCppx2j5H05b2HAEkRAmCuAKCGrd9cBcSuvDambEUxDoDq732oPACgmSg0
++V98QCDsiXCF7E7FkK6LDgQ=
+=Ynv9
+-----END PGP SIGNATURE-----
