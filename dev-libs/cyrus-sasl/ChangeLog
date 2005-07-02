@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.126 2005/06/07 00:31:04 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.127 2005/07/02 15:32:42 flameeyes Exp $
+
+  02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  cyrus-sasl-2.1.18-r2.ebuild:
+  sys-libs/pam_mysql -> sys-auth/pam_mysql
 
 *cyrus-sasl-2.1.21-r1 (07 Jun 2005)
 

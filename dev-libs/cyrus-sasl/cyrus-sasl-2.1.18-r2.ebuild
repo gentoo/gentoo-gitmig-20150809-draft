@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18-r2.ebuild,v 1.9 2005/01/24 22:36:05 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18-r2.ebuild,v 1.10 2005/07/02 15:32:42 flameeyes Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -157,7 +157,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	if ! use pam-mysql && use pam && has_version 'sys-libs/pam_mysql'; then
+	if ! use pam-mysql && use pam && has_version 'sys-auth/pam_mysql'; then
 		echo
 		ewarn
 		ewarn "Starting with version 2.1.17 of cyrus-sasl, the cyrus-sasl team has switched"
