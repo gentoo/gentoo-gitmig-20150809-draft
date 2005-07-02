@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/windowlab
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.12 2005/05/28 18:43:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.13 2005/07/02 06:50:35 usata Exp $
+
+*windowlab-1.31 (02 Jul 2005)
+
+  02 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> windowlab-1.30.ebuild,
+  +windowlab-1.31.ebuild:
+  Version bumped; bug #96891.
 
 *windowlab-1.30 (28 May 2005)
 
