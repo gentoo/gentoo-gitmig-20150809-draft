@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r2.ebuild,v 1.8 2005/01/01 14:37:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.4.ebuild,v 1.1 2005/07/02 09:40:50 usata Exp $
 
 inherit ruby eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.unixuser.org/~ysjj/rskkserv/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ~ppc"
+KEYWORDS="~x86 ~alpha ~ppc"
 IUSE=""
 
 DEPEND="dev-ruby/ruby-tcpwrap"
@@ -19,28 +19,15 @@ RDEPEND="${DEPEND}
 PROVIDE="virtual/skkserv"
 USE_RUBY="ruby16 ruby18 ruby19"
 
-S=${WORKDIR}/${PN}-cvs
-
-src_unpack() {
-	unpack ${P}.tar.gz
-
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-conf-gentoo.diff
-
-	sed -i -e "s%with_RUBY%with_ruby%g" configure
-	sed -i -e "s%@datadir@%/usr/share%g" rskkserv.conf.in
-	sed -i -e "s%@VERSION@%${PV}%g" doc/*.in
-}
-
 src_compile() {
+	ruby -i -pe "gsub(/with_RUBY/,'with_ruby')" configure || die
 	econf \
 		--with-dicfile=/usr/share/skk/SKK-JISYO.L \
 		--with-cachedir=/var/lib/rskkserv \
 		--with-piddir=/var/run \
 		--with-logdir=/var/log \
-		|| die
-	emake || die
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -48,12 +35,14 @@ src_install() {
 	einstall || die
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/rskkserv.initd rskkserv || die
+	newexe ${FILESDIR}/rskkserv-2.95.initd rskkserv || die
 
 	dodoc ChangeLog
 	cd doc
 	dodoc rskkserv.conf.sample
 	newdoc README.old README
+	insinto /usr/share/doc/${PF}
+	doins conf-o2n.rb
 	newman rskkserv.1.in rskkserv.1
 	insinto /usr/share/man/ja/man1
 	newins rskkserv.1.ja_JP.eucJP.in rskkserv.1
@@ -67,5 +56,11 @@ pkg_postinst() {
 	einfo "/etc/rskkserv.conf manually."
 	#einfo "See /usr/share/doc/${PF}/rskkserv.conf.sample.gz"
 	#einfo "for an example of multiple dictionaries."
+	einfo
+	draw_line
+	einfo
+	einfo "If you are upgrading from 2.94.x, you may want to use"
+	einfo "/usr/share/doc/${PF}/conf-o2n.rb to convert configuration"
+	einfo "file into new format."
 	einfo
 }
