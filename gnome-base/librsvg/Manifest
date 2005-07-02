@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 67b393462173cd45ae144f5d9f0b938c ChangeLog 9070
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 62862626e0141a94877b2316316786c9 librsvg-2.4.0-r1.ebuild 1021
@@ -15,3 +18,10 @@ MD5 4da0dc642eed645fd4dcbbfa8c7f4989 files/librsvg-2.6.4-gcc2_fix.patch 653
 MD5 a8d8e664929769b2cb10ba5dbeccb0d6 files/digest-librsvg-2.6.4 66
 MD5 d74e975dc13fe71bdb6a66a6e021b3d7 files/digest-librsvg-2.8.1 66
 MD5 46efdcbccab8e3618356a4b79cdf7a6a files/digest-librsvg-2.6.5 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxqDPKf2g/qXtneoRAgowAKDCMifIF6khYNTcKfBsPZvcvymIVACfYUxU
+F2r9tYOQGVbXVHFVPysy0lA=
+=cW1B
+-----END PGP SIGNATURE-----
