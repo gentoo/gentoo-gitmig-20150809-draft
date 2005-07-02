@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pychecker
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.24 2005/05/22 20:59:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.25 2005/07/02 23:11:06 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  pychecker-0.8.14.ebuild:
+  Stable on alpha.
 
   22 May 2005; Jason Wever <weeve@gentoo.org> pychecker-0.8.14.ebuild:
   Stable on SPARC.
