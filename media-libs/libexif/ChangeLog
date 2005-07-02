@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.40 2005/05/12 15:54:37 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.41 2005/07/02 21:45:27 hardave Exp $
+
+  02 Jul 2005; Hardave Riar <hardave@gentoo.org> libexif-0.5.12-r3.ebuild:
+  Stable on mips, bug #92035
 
   12 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
   libexif-0.5.12-r3.ebuild:
