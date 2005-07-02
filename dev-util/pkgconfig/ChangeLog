@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.27 2005/06/28 05:26:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.28 2005/07/02 20:45:35 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  pkgconfig-0.17.2-r1.ebuild:
+  Stable on alpha.
 
   28 Jun 2005; Joshua Kinard <kumba@gentoo.org> pkgconfig-0.17.2-r1.ebuild:
   Marked stable on mips.

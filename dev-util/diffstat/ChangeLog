@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.31 2005/06/30 04:02:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.32 2005/07/02 20:43:24 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> diffstat-1.39.ebuild:
+  Stable on alpha.
 
   29 Jun 2005; Joshua Kinard <kumba@gentoo.org> diffstat-1.39.ebuild:
   Marked stable on mips.

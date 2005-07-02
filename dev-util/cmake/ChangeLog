@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.15 2005/05/12 17:16:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.16 2005/07/02 20:42:27 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> cmake-2.0.5.ebuild:
+  Stable on alpha.
 
   12 May 2005; Aron Griffis <agriffis@gentoo.org> cmake-2.0.6.ebuild:
   add ~ia64
