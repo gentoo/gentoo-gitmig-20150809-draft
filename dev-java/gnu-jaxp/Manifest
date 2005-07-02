@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 951a7268b6a973756566bc0dc285f44b ChangeLog 2297
+MD5 2305f3f6c8c13390118bd1b3ecbd3a3a ChangeLog 2435
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 18bacd588f71b9177af4fce546480bc7 gnu-jaxp-1.0_beta1-r1.ebuild 966
-MD5 80b27189ccda920445ee629716b455d4 gnu-jaxp-1.3.ebuild 945
+MD5 0defccd43be097b5d5e0d321e5b91051 gnu-jaxp-1.3.ebuild 1021
 MD5 50da691cb79b54a117d99ba6bc7caea5 files/digest-gnu-jaxp-1.3 61
 MD5 3d1c4ac4f9e43835b6eef1ddb4f5dcd3 files/digest-gnu-jaxp-1.0_beta1-r1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCw83x/rLF9B432nYRAgrQAKCbdlnnYu2rP5nIJTLyvHTtIf6x4QCghtJw
-eRkvycQTAacrOnlDlcTlaw8=
-=MbrJ
+iD8DBQFCxuVa/rLF9B432nYRAvsdAJ4qCdWeEUkDYO3owBT/emc8DgkrOACgqJyQ
+t5+F/0MXiXbHzt0L8IhvNxI=
+=ujjZ
 -----END PGP SIGNATURE-----

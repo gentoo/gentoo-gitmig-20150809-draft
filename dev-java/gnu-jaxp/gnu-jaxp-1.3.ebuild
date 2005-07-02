@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/gnu-jaxp-1.3.ebuild,v 1.1 2005/06/30 10:47:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/gnu-jaxp-1.3.ebuild,v 1.2 2005/07/02 19:04:31 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -9,12 +9,17 @@ MY_P=${PN/gnu-/}-${PV}
 DESCRIPTION="GNU JAXP, a free implementation of SAX parser API, DOM Level 2, Sun JAXP 1.1."
 HOMEPAGE="http://www.gnu.org/software/classpathx/jaxp/"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/classpathx/${MY_P}.tar.gz"
-DEPEND="app-arch/unzip"
-RDEPEND=">=virtual/jdk-1.3"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
+
+RDEPEND=">=virtual/jre-1.3
+		=dev-libs/libxml2-2*
+		dev-libs/libxslt"
+DEPEND=">=virtual/jdk-1.3
+		app-arch/unzip
+		${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
