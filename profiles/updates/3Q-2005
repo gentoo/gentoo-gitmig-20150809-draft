@@ -11,3 +11,4 @@ move app-crypt/pam_krb5 sys-auth/pam_krb5
 move net-libs/pam_ldap sys-auth/pam_ldap
 move sys-libs/pam_require sys-auth/pam_require
 move sys-libs/libnss-mysql sys-auth/libnss-mysql
+move sys-libs/libnss-pgsql sys-auth/libnss-pgsql
