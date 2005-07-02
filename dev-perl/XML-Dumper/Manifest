@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ad8006dbcfd103f73827449d90ee5718 XML-Dumper-0.75.ebuild 471
+MD5 022df50afc015dfe815a465965c1ec92 ChangeLog 368
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 fad6cbcd490f3def395204b9871da84f files/digest-XML-Dumper-0.75 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxyj7EzitwsaoONoRAq0KAJ0Xq32222emoEIld7P0AtPxDIRt6gCfYJ9+
+kNUmIoCJoPRWVWq1A05K5i0=
+=Cmms
+-----END PGP SIGNATURE-----
