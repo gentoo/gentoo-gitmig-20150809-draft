@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gtranslator
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.15 2005/03/25 15:03:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.16 2005/07/02 15:57:37 chainsaw Exp $
+
+*gtranslator-1.1.6 (02 Jul 2005)
+
+  02 Jul 2005; Tony Vroon <chainsaw@gentoo.org> +gtranslator-1.1.6.ebuild:
+  Version bump, closes bug #95785.
 
 *gtranslator-1.1.5 (25 Mar 2005)
 
