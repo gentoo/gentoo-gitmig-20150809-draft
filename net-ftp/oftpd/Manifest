@@ -1,6 +1,20 @@
-MD5 aa7ae4176d791906c638a4b01cc6c649 ChangeLog 2113
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9b3d5cec9ba56085c010b1c149b00b0c ChangeLog 2378
 MD5 0f7a846dd3f2197538502db078109b71 metadata.xml 351
 MD5 741cbc4b00b06c6579b17b8acffca400 oftpd-0.3.7-r1.ebuild 832
-MD5 14eb385d2dee30be94c941c01703ab40 files/digest-oftpd-0.3.7-r1 62
+MD5 dd52078d730ad43aef6777c07969fc57 oftpd-0.3.7-r2.ebuild 839
 MD5 b0ba4d96ae0eb98abce711409607eda4 files/conf.d.oftpd 469
-MD5 e172cb3380495952dbccdc43d5168a16 files/init.d.oftpd 671
+MD5 14eb385d2dee30be94c941c01703ab40 files/digest-oftpd-0.3.7-r1 62
+MD5 42f3108677c4a53b623f3646d6db5fe2 files/init.d.oftpd 676
+MD5 dd7b994af55686281ddf1f73b8cba663 files/conf.d.oftpd-r1 578
+MD5 72d1cf62ed5467e49076dcdb4e932d9d files/init.d.oftpd-r1 703
+MD5 14eb385d2dee30be94c941c01703ab40 files/digest-oftpd-0.3.7-r2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxyAHArHZZzCEUG0RAtFKAJ0YrnkvrBeV2MF6zlbbHNXlDlHgIwCfbaIh
+LeGhOEdI0OCj2rMy2Ic433A=
+=BUGq
+-----END PGP SIGNATURE-----
