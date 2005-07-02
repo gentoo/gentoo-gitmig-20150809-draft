@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.10 2005/05/12 14:49:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.11 2005/07/02 03:19:12 agriffis Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -149,6 +149,9 @@ mozconfig_init() {
 		# Needed to build without warnings on gcc-3
 		CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 	fi
+
+	# Go a little faster; use less RAM
+	append-flags "$MAKEEDIT_FLAGS"
 
 	####################################
 	#
