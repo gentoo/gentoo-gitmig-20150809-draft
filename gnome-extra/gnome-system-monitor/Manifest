@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d3a86db05bdeaaaccf4ac0f1e52a2260 ChangeLog 10432
 MD5 20135b67c1073e61cc6d59c23799cc26 gnome-system-monitor-2.8.0.ebuild 890
 MD5 3c182a30e9f499a465b5131cbd9faf9d gnome-system-monitor-2.10.1.ebuild 934
@@ -13,3 +16,10 @@ MD5 cb821d6a95343091a60060f653b8ae00 files/gnome-system-monitor-2.8.1-usermem.pa
 MD5 1717d3423ff0c95f21dd6037d93a26cf files/gnome-system-monitor-2.10.1-icon_warning.patch 503
 MD5 67bd440a0a6bbd96815b8a68d623ea28 files/digest-gnome-system-monitor-2.8.0 79
 MD5 7c28214b448264bb2db48c93401651ae files/digest-gnome-system-monitor-2.8.3 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxq8+Kf2g/qXtneoRAjD9AJ43UTr5m8EF+BNEwVPS5on6QPjiJwCeIzp7
+e4cBBgaQAVrXNItK+U7cMSo=
+=qzKN
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0968c6beb0faac76ab139e237ef5ad67 at-spi-1.6.4.ebuild 791
 MD5 2154221f6fa0660e83a82e413dcbd414 ChangeLog 10062
 MD5 a02d854ef1a6286be97b553e056e89d1 at-spi-1.6.3.ebuild 791
@@ -8,3 +11,10 @@ MD5 365985ef25775753dab336fc7ad8dc04 files/digest-at-spi-1.6.3 65
 MD5 be2e44c0d8b92adea62569c44d62d4f9 files/digest-at-spi-1.4.2 65
 MD5 8746d394d6122dd05e7ee86223621db7 files/digest-at-spi-1.6.4 65
 MD5 db394022f62d0eabf7d1b4ee7b8cedcd files/digest-at-spi-1.6.2-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxq5HKf2g/qXtneoRAmG/AJ4zfkjcogrwpnx2RiJUtiJLkGPJxgCfTQ/y
+7Oi6dU1BxNxPNcHhgw8zJb0=
+=pGak
+-----END PGP SIGNATURE-----
