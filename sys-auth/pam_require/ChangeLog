@@ -1,0 +1,17 @@
+# ChangeLog for sys-auth/pam_require
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_require/ChangeLog,v 1.1 2005/07/02 21:41:37 flameeyes Exp $
+
+  02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +pam_require-0.6.ebuild:
+  Moved from sys-libs/pam_require to sys-auth/pam_require.
+
+  02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> pam_require-0.6.ebuild:
+  Use dopammod to install the module (as make install is wrong). Added ~amd64.
+
+*pam_require-0.6 (05 Dec 2004)
+
+  05 Dec 2004; Christian Parpart <trapni@gentoo.org> +metadata.xml,
+  +pam_require-0.6.ebuild:
+  initial import
+
