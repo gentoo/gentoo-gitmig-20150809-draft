@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Net_Server
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.1 2005/07/02 07:07:10 sebastian Exp $
+
+*PEAR-Net_Server-0.12.0 (02 Jul 2005)
+
+  02 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-Net_Server-0.12.0.ebuild:
+  Initial ebuild, closes bug 96058.
+
