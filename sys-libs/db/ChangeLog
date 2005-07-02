@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.127 2005/06/17 20:04:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.128 2005/07/02 18:09:12 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> db-4.2.52_p2.ebuild:
+  Add ~alpha keyword.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> db-4.2.52_p2.ebuild:
   Stable on ppc.
