@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/netwmpager
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/ChangeLog,v 1.1 2005/07/02 10:05:30 usata Exp $
+
+*netwmpager-1.6 (02 Jul 2005)
+
+  02 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +netwmpager-1.6.ebuild:
+  Initial import. Ebuild submitted by Timo Hirvonen <tihirvon@ee.oulu.fi>;
+  bug #91872.
+
