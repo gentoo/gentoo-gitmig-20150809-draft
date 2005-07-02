@@ -1,9 +1,10 @@
 MD5 46ba338c5a7428fe1142818cae498661 pcmcia-cs-3.2.5-r2.ebuild 4500
 MD5 aecf267260223661e51c699fce1b0fa9 pcmcia-cs-3.2.7-r3.ebuild 4948
 MD5 46d6711607ee4502f93c2da5db0a109e pcmcia-cs-3.2.8.ebuild 3758
+MD5 d66557a0ec3b732b1f255db65e655f32 pcmcia-cs-3.2.8-r2.ebuild 3990
 MD5 c3672fa593c9979153429feeee953868 pcmcia-cs-3.2.5-r3.ebuild 5317
 MD5 5e13ded1aea8e4efdda81c8835be2631 pcmcia-cs-3.2.8-r1.ebuild 3975
-MD5 03943461edb75fc9dc523b392da24696 ChangeLog 19508
+MD5 fe548c5a6f3ff7386e8f03acab3429ee ChangeLog 19737
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 5124be825d809ef8846598270319f302 pcmcia-cs-3.2.7-r4.ebuild 4994
 MD5 f8f190b2ddbf95e58f3abf55fc303d27 files/digest-pcmcia-cs-3.2.5-r2 150
@@ -11,6 +12,7 @@ MD5 157ac5bc22e938e1c2268c1f2610420c files/digest-pcmcia-cs-3.2.5-r3 379
 MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7-r3 287
 MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7-r4 287
 MD5 89130d20833db1421e8f624c90d19516 files/digest-pcmcia-cs-3.2.8-r1 68
+MD5 89130d20833db1421e8f624c90d19516 files/digest-pcmcia-cs-3.2.8-r2 68
 MD5 8df7f8fac6931504e84e1c13acfe92e6 files/pcmcia-cs-3.2.8-x11.patch 874
 MD5 33c110d98480f8c994d902995356cda2 files/pcmcia-cs-3.2.8-move-pnp-ids.patch 1648
 MD5 c913e8e351070fda2dd49be2802d9128 files/pcmcia-cs-3.2.8-ldflags.patch 944
@@ -21,6 +23,7 @@ MD5 89130d20833db1421e8f624c90d19516 files/digest-pcmcia-cs-3.2.8 68
 MD5 da3f5dc50768f0a5d9868dd5bd227329 files/network 768
 MD5 fb59203b176eea34b5969d465efb85a9 files/ppc.config.opts 1687
 MD5 8938df25626d18aa4493d26dea7e00eb files/pcmcia-cs-3.2.8-ppc.config.opts 1657
+MD5 4aff8abc0109d71184f648e2cc87eb51 files/pcmcia-cs-3.2.8-CS_EVENT_RESET_COMPLETE.patch 1402
 MD5 e4879f03bbdbfbdc094c1f1b6486846b files/pcmcia.conf 549
 MD5 d5958e695d20fb3bcd14c11121ba27a4 files/pcmcia-cs-3.2.8-gcc4.patch 902
 MD5 18e1f0bdc6612842839a2b2888ea16ad files/pcmcia-cs-3.2.8-tools-only.patch 1230
