@@ -1,5 +1,5 @@
-MD5 59d862130d8093c3c9a33b01cc0c87f9 htpdate-0.8.2.ebuild 719
+MD5 89706da895a75c2c58be935de8ad4d49 htpdate-0.8.2.ebuild 726
 MD5 ff2b63df63e17d0b2714390e4c9ff1e1 metadata.xml 256
-MD5 27136c85dc294a249f045b02ffc0b338 ChangeLog 924
+MD5 6cce5876e7e57f8ca6847cd00613ee47 ChangeLog 1024
 MD5 86ea7c47156ba3ab7bd460ad939b1d57 files/digest-htpdate-0.8.2 64
 MD5 ec81f587e402abf72a7e9e7f7f35e31b files/ppc.patch 474
