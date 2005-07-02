@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.7_p1.ebuild,v 1.1 2005/06/10 00:06:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.7_p1.ebuild,v 1.2 2005/07/02 19:24:31 humpback Exp $
+
+inherit eutils
 
 MY_P=${P/_/}
 DESCRIPTION="Lightweight NTP server ported from OpenBSD"
