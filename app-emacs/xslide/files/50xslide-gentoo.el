@@ -9,6 +9,6 @@
 (setq auto-mode-alist
       (append
        (list
-	'("\\.fo" . xsl-mode)
+	'("\\.fo$" . xsl-mode)
 	'("\\.xsl" . xsl-mode))
        auto-mode-alist))
