@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.78 2005/06/21 06:40:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.79 2005/07/02 18:29:36 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  nessus-core-2.2.4-r1.ebuild:
+  Stable on alpha.
 
   21 Jun 2005; Markus Rothe <corsair@gentoo.org>
   nessus-core-2.2.4-r1.ebuild:
