@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 126e1fb1e678516e80d971aeb93d9d80 nautilus-2.8.2-r1.ebuild 2927
 MD5 00c95b6b319c4650c8e666dbe2354c7a nautilus-1.0.6-r9.ebuild 3398
 MD5 b494eceb14a88919d0287945fcf44eac ChangeLog 18095
@@ -20,3 +23,10 @@ MD5 e5290667a362d69a787cf1b6308674bd files/nautilus-2-nocdda.patch 640
 MD5 e59f42d528ba156ebff5be711d19c97c files/nautilus-2.8-x-printers.patch 39945
 MD5 486b971d706aec59655a72282d3feb0b files/macros/nautilus-macros.m4 7993
 MD5 7cb2f285f24e86a90c6a65b0b9356d39 files/macros/gnome.m4 16426
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxp7tKf2g/qXtneoRAmYvAKCn93v1QNEiQWYnTr0phS0/sfjG8ACeJt9K
+Fnn52Yjxz70y0BQ3fkzY5R8=
+=pfeI
+-----END PGP SIGNATURE-----
