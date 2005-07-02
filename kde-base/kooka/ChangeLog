@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kooka
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/ChangeLog,v 1.9 2005/05/31 21:33:44 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/ChangeLog,v 1.10 2005/07/02 01:16:56 pylon Exp $
+
+  02 Jul 2005; Lars Weiler <pylon@gentoo.org> kooka-3.4.1.ebuild:
+  Stable on ppc; Bug #97544.
 
   31 May 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/kdegraphics-3.4.1-gocr.patch, kooka-3.4.1.ebuild:
