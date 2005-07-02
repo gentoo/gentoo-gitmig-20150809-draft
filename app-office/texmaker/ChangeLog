@@ -1,6 +1,12 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.7 2005/07/01 14:55:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.8 2005/07/02 08:58:14 usata Exp $
+
+*texmaker-1.11-r1 (02 Jul 2005)
+
+  02 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> +texmaker-1.11-r1.ebuild:
+  Added desktop entry; bug #97126. Thanks to Sebastian Kemper
+  <sebastian_ml@gmx.net>.
 
   01 Jul 2005; Caleb Tennis <caleb@gentoo.org> texmaker-1.11.ebuild:
   Fix qmake bin path per bug #97535
