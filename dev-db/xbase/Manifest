@@ -1,4 +1,14 @@
-MD5 27dbc7373761feff1b7b62f3f5868ac7 ChangeLog 945
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3c688d797ab84f46ae8103e9aea449ca ChangeLog 1041
 MD5 d6863e368bff32cb8dca1b8062fbc321 metadata.xml 221
-MD5 3f0c2c2eef36e162236fa856a65b6f9d xbase-2.0.0.ebuild 815
+MD5 85375e515617ee42aa31dfafde61a340 xbase-2.0.0.ebuild 822
 MD5 b01379d61f349d62b1719edc1655c98b files/digest-xbase-2.0.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxskHKf2g/qXtneoRAoE6AJ9Z+Ys+JWnRCuUuds06XfGWkXFetACfSj/H
+g3FwScrbXaabXOvZ7+T53lk=
+=ykvA
+-----END PGP SIGNATURE-----
