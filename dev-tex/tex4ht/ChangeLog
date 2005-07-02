@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.5 2005/04/09 04:01:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.6 2005/07/02 08:33:36 usata Exp $
+
+*tex4ht-20050701_p1825 (02 Jul 2005)
+
+  02 Jul 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -tex4ht-20050406_p1623.ebuild, tex4ht-20050406_p1623-r1,
+  +tex4ht-20050701_p1825.ebuild:
+  Version bumped. This closes bug #97099.
 
 *tex4ht-20050406_p1623-r1 (09 Apr 2005)
 

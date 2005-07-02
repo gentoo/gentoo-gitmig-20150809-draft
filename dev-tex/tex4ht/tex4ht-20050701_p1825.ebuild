@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20050406_p1623.ebuild,v 1.1 2005/04/07 05:28:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20050701_p1825.ebuild,v 1.1 2005/07/02 08:33:36 usata Exp $
 
-inherit toolchain-funcs
+inherit latex-package toolchain-funcs
 
 IUSE=""
 
@@ -10,18 +10,17 @@ IUSE=""
 MY_P="${PN}-1.0.${PV:0:4}_${PV:4:2}_${PV:6:2}_${PV/*_p/}"
 
 DESCRIPTION="Converts (La)TeX to (X)HTML, XML and OO.org"
-HOMEPAGE="http://www.cse.ohio-state.edu/~gurari/TeX4ht/"
+HOMEPAGE="http://www.cse.ohio-state.edu/~gurari/TeX4ht/
+	http://www.cse.ohio-state.edu/~gurari/TeX4ht/bugfixes.html"
 SRC_URI="http://www.cse.ohio-state.edu/~gurari/TeX4ht/fix/${MY_P}.tar.gz"
 
 LICENSE="LPPL-1.2"
 KEYWORDS="~x86 ~ppc ~amd64"
 SLOT="0"
 
-DEPEND="virtual/tetex
-	>=sys-apps/sed-4"
+DEPEND=">=sys-apps/sed-4"
 
-RDEPEND="virtual/tetex
-	virtual/ghostscript
+RDEPEND="virtual/ghostscript
 	media-gfx/imagemagick"
 
 S="${WORKDIR}/${MY_P}"
@@ -68,21 +67,8 @@ src_install () {
 	insinto /usr/share/texmf/tex4ht/base
 	newins ${S}/texmf/tex4ht/base/unix/tex4ht.env tex4ht.env
 
-	# this dir is 700 in the zip
-	fperms 755 /usr/share/texmf/tex4ht/ht-fonts
-
-}
-
-pkg_postinst () {
-
-	einfo "Running mktexlsr to rebuild file databases..."
-	mktexlsr
-
-}
-
-pkg_postrm () {
-
-	einfo "Running mktexlsr to rebuild file databases..."
-	mktexlsr
-
+	if has_tetex_3 ; then
+		insinto /etc/texmf/texmf.d
+		doins ${FILESDIR}/50tex4ht.cnf || die
+	fi
 }
