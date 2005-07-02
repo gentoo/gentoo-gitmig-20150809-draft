@@ -1,8 +1,18 @@
-MD5 3fc851c6fda21b07dc2bb3ffeda874b0 legends-0.4.1c.ebuild 1802
-MD5 19efaca346e15cfd4b111429276f9ea9 metadata.xml 1336
-MD5 dd9168d4d38639c8abf746c69c057ce5 ChangeLog 1687
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3efb63256541fceb33ebf0f287844aa3 legends-0.4.1b.ebuild 1763
-MD5 c325789d9c7d46ef6877ac53199c1f3a files/digest-legends-0.4.1b 68
-MD5 3c8d3736e44ff5b89117c2f5930b60b3 files/legends-ded 49
+MD5 4e0741233d83663442a98e9d07e7e3f6 legends-0.4.1c.ebuild 1904
+MD5 d8e3b122d6fa58d3c240cd1cd97d08bf ChangeLog 1788
+MD5 19efaca346e15cfd4b111429276f9ea9 metadata.xml 1336
 MD5 aa8c1bd48a100c976303df49a0e31c30 files/legends 76
+MD5 c325789d9c7d46ef6877ac53199c1f3a files/digest-legends-0.4.1b 68
 MD5 9ae2c1340a8feeb0d8b3280569dfec71 files/digest-legends-0.4.1c 75
+MD5 3c8d3736e44ff5b89117c2f5930b60b3 files/legends-ded 49
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxsct2G5bA0cA/ScRArBIAJ9Vahf14F7yWFfjhPdQsofzhv8AtgCgkRsl
+NRoDLh3cIVCDnlsGtIcAfOE=
+=e0oE
+-----END PGP SIGNATURE-----

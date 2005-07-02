@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1c.ebuild,v 1.2 2005/07/02 00:34:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1c.ebuild,v 1.3 2005/07/02 16:54:32 herbs Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://legendsthegame.net/"
 SRC_URI="http://www.legendsthegame.net/files//${MY_P}.tar.gz"
 
 RESTRICT="nomirror"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~amd64 x86"
 LICENSE="as-is"
 SLOT="0"
 IUSE="dedicated"
@@ -19,7 +19,9 @@ DEPEND=""
 RDEPEND=">=media-libs/libsdl-1.2
 	media-libs/libogg
 	media-libs/libvorbis
-	media-libs/openal"
+	media-libs/openal
+	amd64? ( >=app-emulation/emul-linux-x86-sdl-2.1
+			>=app-emulation/emul-linux-x86-soundlibs-2.1 )"
 
 S=${WORKDIR}/${MY_P}
 
