@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.35 2005/07/02 06:42:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.36 2005/07/02 17:36:56 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> rxvt-2.7.10-r2.ebuild:
+  Stable on alpha.
 
 *rxvt-2.7.10-r3 (02 Jul 2005)
 

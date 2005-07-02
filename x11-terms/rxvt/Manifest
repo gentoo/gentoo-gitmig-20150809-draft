@@ -1,11 +1,21 @@
-MD5 dcc6040c07751ed76667a361cacbb05c rxvt-2.7.10.ebuild 1731
-MD5 3c6cd016f3920a810a5649eb55c735ec ChangeLog 6389
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a4a998a3029b6457948ad869c778346e ChangeLog 6486
 MD5 cd46a87805d1d53c2c0e5f9d9169b9ae metadata.xml 491
+MD5 dcc6040c07751ed76667a361cacbb05c rxvt-2.7.10.ebuild 1731
 MD5 383b764cae6abd641a878011085323fa rxvt-2.7.10-r3.ebuild 2118
-MD5 89ee273983fa7aa93372068e7758a641 rxvt-2.7.10-r2.ebuild 2074
-MD5 291517d74d27db9317081ea6cdbea0bb files/digest-rxvt-2.7.10-r2 133
-MD5 783f67501d23b6516ec6a923b96e2b6a files/digest-rxvt-2.7.10 63
-MD5 a38b2f365a55cad915e1e503466ab029 files/rxvt-2.7.10-azz4.diff 5072
-MD5 291517d74d27db9317081ea6cdbea0bb files/digest-rxvt-2.7.10-r3 133
+MD5 99383e7a741948a8a3ab997758adfa35 rxvt-2.7.10-r2.ebuild 2074
 MD5 02ae23d7da7a8289fef1da4ec68d69fb files/rxvt-2.7.10-line-scroll.patch 438
 MD5 16be90450ba268312bb146b3d4e7b6e9 files/rxvt-2.7.10-rk.patch 2772
+MD5 783f67501d23b6516ec6a923b96e2b6a files/digest-rxvt-2.7.10 63
+MD5 291517d74d27db9317081ea6cdbea0bb files/digest-rxvt-2.7.10-r2 133
+MD5 a38b2f365a55cad915e1e503466ab029 files/rxvt-2.7.10-azz4.diff 5072
+MD5 291517d74d27db9317081ea6cdbea0bb files/digest-rxvt-2.7.10-r3 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxtDSKf2g/qXtneoRAnVjAJ9M2+Fs9b911B8683hNH3I1n5BNEACbBILX
+QYtR92jhXwmlHYreu8nj460=
+=goMj
+-----END PGP SIGNATURE-----
