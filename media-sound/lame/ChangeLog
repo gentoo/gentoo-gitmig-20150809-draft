@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.63 2005/05/21 11:17:20 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.64 2005/07/02 00:22:51 hardave Exp $
+
+  02 Jul 2005; Hardave Riar <hardave@gentoo.org> lame-3.96.1.ebuild:
+  Stable on mips
 
   21 May 2005; Jan Brinkmann <luckyduck@gentoo.org> lame-3.96.1.ebuild:
   dont force the use of nasm by default on x86, fixes bug #93279

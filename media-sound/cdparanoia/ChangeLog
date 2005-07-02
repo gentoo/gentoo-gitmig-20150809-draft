@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.24 2005/05/31 15:31:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.25 2005/07/02 00:26:57 hardave Exp $
+
+  02 Jul 2005; Hardave Riar <hardave@gentoo.org> cdparanoia-3.9.8-r2.ebuild:
+  Stable on mips
 
   31 May 2005; Sven Wegener <swegener@gentoo.org>
   cdparanoia-3.9.8-r1.ebuild, cdparanoia-3.9.8-r2.ebuild:
