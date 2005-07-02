@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/libodbc++
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.4 2005/01/01 17:35:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.5 2005/07/02 20:55:03 robbat2 Exp $
+
+*libodbc++-0.2.3-r1 (02 Jul 2005)
+
+  02 Jul 2005; Robin H. Johnson <robbat2@gentoo.org> 
+  +libodbc++-0.2.3-r1.ebuild:
+  Fix bug #97081, and also a lingering unnoticed bug that isql++ was not always
+  built. ccache is highly recommended now due to the braindead build method
+  that upstream uses.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> libodbc++-0.2.3.ebuild:
   sync IUSE (+qt)
