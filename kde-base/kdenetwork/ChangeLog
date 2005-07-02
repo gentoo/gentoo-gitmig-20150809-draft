@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.146 2005/07/01 04:56:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.147 2005/07/02 22:49:33 weeve Exp $
+
+  02 Jul 2005; Jason Wever <weeve@gentoo.org> kdenetwork-3.3.2-r1.ebuild:
+  Stable on SPARC.
 
   01 Jul 2005; Joseph Jezak <josejx@gentoo.org> kdenetwork-3.4.1.ebuild:
   Marked ppc stable for bug #97544.
