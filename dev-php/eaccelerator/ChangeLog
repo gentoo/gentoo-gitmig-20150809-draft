@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/eaccelerator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.13 2005/06/17 08:13:30 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.14 2005/07/02 05:42:10 sebastian Exp $
+
+*eaccelerator-0.9.3-r1 (02 Jul 2005)
+
+  02 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +eaccelerator-0.9.3-r1.ebuild:
+  Make cache directory not world-writable with regard to bug 96296.
 
   17 Jun 2005; Sebastian Bergmann <sebastian@gentoo.org>
   eaccelerator-0.9.3.ebuild:
