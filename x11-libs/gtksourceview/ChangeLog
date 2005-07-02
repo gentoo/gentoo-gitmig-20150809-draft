@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.51 2005/06/11 10:32:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.52 2005/07/02 20:42:10 hardave Exp $
+
+  02 Jul 2005; Hardave Riar <hardave@gentoo.org> gtksourceview-1.2.0.ebuild:
+  Stable on mips, dep for bug #93352
 
   11 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
   gtksourceview-1.2.0.ebuild:
