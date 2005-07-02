@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtk2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.28 2005/06/27 19:53:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.29 2005/07/02 22:54:06 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  ruby-gtk2-0.12.0.ebuild:
+  Stable on alpha.
 
   27 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   ruby-gtk2-0.12.0.ebuild:

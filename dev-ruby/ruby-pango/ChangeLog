@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.21 2005/06/27 19:25:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.22 2005/07/02 22:52:27 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  ruby-pango-0.12.0.ebuild:
+  Stable on alpha.
 
   27 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   ruby-pango-0.12.0.ebuild:

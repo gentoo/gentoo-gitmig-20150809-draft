@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-libart2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart2/ChangeLog,v 1.21 2005/06/26 15:32:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart2/ChangeLog,v 1.22 2005/07/02 22:55:47 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  ruby-libart2-0.12.0.ebuild:
+  Stable on alpha.
 
   26 Jun 2005; Mamoru KOMACHI <usata@gentoo.org> ruby-libart2-0.11.0.ebuild,
   ruby-libart2-0.12.0.ebuild:

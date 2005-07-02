@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-atk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.16 2005/06/27 19:27:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.17 2005/07/02 22:45:54 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> ruby-atk-0.12.0.ebuild:
+  Stable on alpha.
 
   27 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   ruby-atk-0.12.0.ebuild:

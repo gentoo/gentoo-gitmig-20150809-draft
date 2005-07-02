@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gconf2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.20 2005/05/22 00:13:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.21 2005/07/02 22:47:12 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  ruby-gconf2-0.12.0.ebuild:
+  Stable on alpha.
 
   22 May 2005; Jason Wever <weeve@gentoo.org> ruby-gconf2-0.12.0.ebuild:
   Added ~sparc keyword.
