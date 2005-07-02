@@ -1,0 +1,24 @@
+# ChangeLog for sys-auth/libnss-pgsql
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-pgsql/ChangeLog,v 1.1 2005/07/02 21:59:23 flameeyes Exp $
+
+  02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libnss-pgsql-1.3-gentoo.patch, +files/postgres-and-glibc.patch,
+  +metadata.xml, +libnss-pgsql-1.0.0.ebuild, +libnss-pgsql-1.3.ebuild:
+  Moved from sys-libs/libnss-pgsql to sys-auth/libnss-pgsql.
+
+  09 May 2005; Masatomo Nakano <nakano@gentoo.org>
+  +files/libnss-pgsql-1.3-gentoo.patch, libnss-pgsql-1.3.ebuild:
+  Fixed libpq header location.
+
+*libnss-pgsql-1.3 (09 May 2005)
+
+  09 May 2005; Masatomo Nakano <nakano@gentoo.org> +libnss-pgsql-1.3.ebuild:
+  Version bump.
+
+*libnss-pgsql-1.0.0 (12 Jan 2005)
+
+  12 Jan 2005; Masatomo Nakano <nakano@gentoo.org> +metadata.xml,
+  +files/postgres-and-glibc.patch, +libnss-pgsql-1.0.0.ebuild:
+  Initil import. (#34627)
+
