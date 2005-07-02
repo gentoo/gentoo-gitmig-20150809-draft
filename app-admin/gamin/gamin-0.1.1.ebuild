@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.1.ebuild,v 1.1 2005/06/19 15:35:29 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.1.ebuild,v 1.2 2005/07/02 08:56:06 cardoe Exp $
 
 inherit eutils
 
@@ -29,32 +29,27 @@ src_unpack() {
 }
 
 src_compile() {
-
 	econf \
-		--enable-inotify \
-		`use_enable debug` \
-		`use_enable debug debug-api` \
-		|| die
+		$(use_enable kernel_linux inotify) \
+		$(use_enable debug) \
+		$(use_enable debug debug-api) \
+		|| die "econf failed"
 
 	emake || die "emake failed"
-
 }
 
 src_install() {
-
 	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog README TODO NEWS doc/*txt
-
 	use doc && dohtml doc/*
-
 }
 
 pkg_postinst() {
-
-	einfo "It is strongly suggested you use Gamin with an inotify enabled"
-	einfo "kernel for best performance. For this release of gamin you need"
-	einfo "at least an inotify 0.23-6 patched kernel, gentoo-sources-2.6.12"
-	einfo "provides this patch for example."
-
+	if use kernel_linux; then
+		einfo "It is strongly suggested you use Gamin with an inotify enabled"
+		einfo "kernel for best performance. For this release of gamin you need"
+		einfo "at least an inotify 0.23-6 patched kernel, gentoo-sources-2.6.12"
+		einfo "provides this patch for example."
+	fi
 }
