@@ -1,0 +1,32 @@
+# ChangeLog for sys-auth/pam_smb
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/ChangeLog,v 1.1 2005/07/02 14:17:41 flameeyes Exp $
+
+  02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +files/pamsmbd-init,
+  +metadata.xml, +pam_smb-1.9.9-r1.ebuild, +pam_smb-2.0.0_rc5.ebuild,
+  +pam_smb-2.0.0_rc6.ebuild:
+  Moved from net-misc/pam_smb to sys-auth/pam_smb.
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> pam_smb-2.0.0_rc6.ebuild:
+  Added to ~ppc.
+
+*pam_smb-2.0.0_rc6 (20 Sep 2004)
+
+  20 Sep 2004; Christian Andreetta <satya@gentoo.org>
+  +pam_smb-2.0.0_rc6.ebuild:
+  new version: bug #64702 (thanks to Carter Smithhart)
+
+*pam_smb-2.0.0_rc5 (01 Sep 2003)
+
+  01 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> pam_smb-2.0.0_rc5:
+  Security update.
+
+*pam_smb-1.9.9-r1 (02 Nov 2002)
+
+  02 Nov 2002; Donny Davies <woodchip@gentoo.org> :
+  Add initscript.  Close #7046.
+
+*pam_smb-1.9.9 (25 Oct 2002)
+
+  25 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Initial import; cleaned/fixed by me. Thank you eivindt-gentoo@multinet.no.
