@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcmcia-cs-cis
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/ChangeLog,v 1.2 2005/06/30 09:43:49 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/ChangeLog,v 1.3 2005/07/02 22:34:43 brix Exp $
+
+  02 Jul 2005; <brix@gentoo.org> -pcmcia-cs-cis-3.2.8.ebuild:
+  Pruned old ebuild.
 
 *pcmcia-cs-cis-3.2.8-r1 (30 Jun 2005)
 
