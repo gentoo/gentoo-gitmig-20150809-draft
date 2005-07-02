@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4151 2005/07/02 09:58:08 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4152 2005/07/02 22:15:31 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -632,7 +632,7 @@ dev-lisp/cl-imho
 
 # Robin H. Johnson <robbat2@gentoo.org> (02 Feb 2005)
 # broken... doesn't even query the LDAP server
-=net-libs/nss_ldap-233
+=sys-auth/nss_ldap-233
 
 # Paul de Vrieze <pauldv@gentoo.org> (02 Feb 2005)
 # Masked for testing dependend packages
