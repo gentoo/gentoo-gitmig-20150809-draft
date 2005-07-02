@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r2.ebuild,v 1.1 2005/06/03 18:02:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r2.ebuild,v 1.2 2005/07/02 15:49:53 vapier Exp $
 
-inherit eutils libtool flag-o-matic
+inherit eutils libtool toolchain-funcs flag-o-matic
 
 # We should remove this login after pam-0.78 goes stable.
 FORCE_SYSTEMAUTH_UPDATE="no"
@@ -129,6 +129,11 @@ src_install() {
 	insopts -m0600 ; doins ${FILESDIR}/securetty
 	insopts -m0600 ; doins etc/login.access
 	insopts -m0644 ; doins etc/limits
+	# Only output hvc ibm cruft for ppc64 machines
+	if [[ $(tc-arch) == "ppc64" ]] ; then
+		echo "hvc0" >> "${D}"/etc/securetty
+		echo "hvsi0" >> "${D}"/etc/securetty
+	fi
 
 	# needed for 'adduser -D'
 	insinto /etc/default

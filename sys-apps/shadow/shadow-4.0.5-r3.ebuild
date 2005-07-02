@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5-r3.ebuild,v 1.10 2005/05/31 22:49:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5-r3.ebuild,v 1.11 2005/07/02 15:49:53 vapier Exp $
 
-inherit eutils libtool gnuconfig flag-o-matic
+inherit eutils libtool toolchain-funcs flag-o-matic
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 SELINUX_PATCH="shadow-4.0.4.1-selinux.diff"
@@ -64,8 +64,6 @@ src_unpack() {
 	# actually end up in the environment
 	epatch ${FILESDIR}/shadow-${PV}-fix-adding-of-pam_env-set-env-vars.patch
 
-	# Allows shadow configure detect newer systems properly
-	gnuconfig_update
 	elibtoolize
 	epunt_cxx
 }
@@ -112,6 +110,11 @@ src_install() {
 	insopts -m0600 ; doins ${FILESDIR}/securetty
 	insopts -m0600 ; doins etc/login.access
 	insopts -m0644 ; doins etc/limits
+	# Only output hvc ibm cruft for ppc64 machines
+	if [[ $(tc-arch) == "ppc64" ]] ; then
+		echo "hvc0" >> "${D}"/etc/securetty
+		echo "hvsi0" >> "${D}"/etc/securetty
+	fi
 
 	# needed for 'adduser -D'
 	insinto /etc/default

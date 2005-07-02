@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 ac3c5c29460f248d06d4ef83c96ca912 shadow-4.0.7-r1.ebuild 6602
-MD5 a5ff413fb8140bced49067f81ef73cbb shadow-4.0.5-r3.ebuild 5515
+MD5 2581b4daddefcf73a30d69ac42fdfd1a shadow-4.0.5-r3.ebuild 5614
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a51d02eb155feb33913816239bb3cf57 shadow-4.0.7.ebuild 5602
 MD5 06049e2959c62c88aee32422a37bf07f shadow-4.0.6-r1.ebuild 5641
-MD5 969267a499da1158e3d9c021d8ca41c0 shadow-4.0.7-r2.ebuild 6820
+MD5 2c02c9d3f48ced29b41466570396278e shadow-4.0.7-r2.ebuild 7001
 MD5 fad39eceb7fd04f2805c6acc16c59d57 shadow-4.0.5-r2.ebuild 5440
 MD5 db680deb85b813de86bec42788cce6c7 ChangeLog 19990
 MD5 db870979ea0f600d0bd8137520e2251a shadow-4.0.4.1-r4.ebuild 5961
-MD5 5e65453ca6b8ba7db102a399cdfa55ed shadow-4.0.10.ebuild 6525
+MD5 94f729277cd41cc1d45c29cb7e0d7391 shadow-4.0.10.ebuild 6709
 MD5 962e753a4789598d75532745e1f3e6cf files/digest-shadow-4.0.10 67
 MD5 20fd2dc35b8671b91e120b90281b4cf3 files/shadow-4.0.5-hack-X-envvars.patch 521
 MD5 8bf11ce0e8ee683fe290462473871dab files/shadow-4.0.6-long-groupnames.patch 1625
@@ -29,7 +29,7 @@ MD5 a99f871c88548d503bad935d2aa6f412 files/shadow-4.0.4.1-nls-manpages.patch 355
 MD5 d14e133da535d64d1b397784e17c213a files/shadow-4.0.5-login.defs.patch 766
 MD5 058f760e522ab65e270293003805fe61 files/shadow-4.0.4.1-userdel-missing-brackets.patch 380
 MD5 aaedecd7edcccff66f962fd82928eec9 files/shadow-4.0.10-long-groupnames.patch 1205
-MD5 e279025434e6328ff7f251d6bb179d77 files/securetty 258
+MD5 a744152ec905f4c06f3b92142b7fec8a files/securetty 253
 MD5 b4d0fc0f54800978591791493d6b2ec3 files/shadow-4.0.6-dots-in-usernames.patch 1993
 MD5 bb55107c3a9354ef2d1977547fdb5a83 files/shadow-4.0.4.1-useradd-manpage-update.patch 958
 MD5 e9ac6a566b65499773437ce98911a046 files/digest-shadow-4.0.6-r1 66
@@ -65,7 +65,7 @@ MD5 a5721c39446539b751dceae4b054542b files/pam.d/shadow 171
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCw2dVgIKl8Uu19MoRAhuVAJ9lJTK4zdb+JuQPy6/cIn4RCtiKogCcDOfH
-hvhQRU/Y6nttGzziqiiqjCI=
-=qxuy
+iD8DBQFCxrfJgIKl8Uu19MoRAo2FAJ9QJjO0w6FzNhjHwKvGWJRQBcUslwCbBVVK
+dd2ef8ZE+oE1dBi6S9bRh8c=
+=fNJG
 -----END PGP SIGNATURE-----
