@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.1-r1.ebuild,v 1.2 2005/06/24 22:01:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.1-r1.ebuild,v 1.3 2005/07/02 00:22:34 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -62,6 +62,9 @@ src_unpack() {
 		fi
 		EPATCH_OPTS="-p1 -d ${S}" epatch $eccpatch || die "ecc patch failed"
 	fi
+
+	# maketest fix
+	epatch ${FILESDIR}/${P}-selftest.patch
 
 	# Fix PIC definitions
 	cd ${S}

@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.118 2005/06/24 22:01:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.119 2005/07/02 00:22:34 dragonheart Exp $
+
+  02 Jul 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/gnupg-1.4.1-selftest.patch, gnupg-1.4.1.ebuild,
+  gnupg-1.4.1-r1.ebuild:
+  Crashing selftest fixed thanks to patch from Ben Peddell - bug #80044
 
   24 Jun 2005; Aron Griffis <agriffis@gentoo.org> gnupg-1.4.0-r1.ebuild,
   gnupg-1.4.0-r2.ebuild, gnupg-1.4.1.ebuild, gnupg-1.4.1-r1.ebuild,
