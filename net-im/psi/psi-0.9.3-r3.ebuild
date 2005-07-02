@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r3.ebuild,v 1.5 2005/07/01 15:10:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r3.ebuild,v 1.6 2005/07/02 16:40:17 humpback Exp $
 
 inherit eutils
 
@@ -236,7 +236,7 @@ src_compile() {
 	einfo "Building language packs"
 	cd ${WORKDIR}/langs
 	for i in `ls -c1 | grep "\.ts$"` ; do
-		lrelease $i
+		${QTDIR}/bin/lrelease $i
 	done;
 }
 
