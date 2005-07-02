@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7_pre2.ebuild,v 1.1 2005/07/02 14:06:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7_pre2.ebuild,v 1.2 2005/07/02 19:42:17 pylon Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc
 	>=sys-apps/baselayout-1.8.6.12-r1"
 RDEPEND=""
 
-S="${WORKDIR}/${PN}-0.7.0beta1"
+S="${WORKDIR}/${PN}-0.7.0beta2"
 
 src_compile() {
 	econf || die "Sorry, failed to configure pbbuttonsd"
