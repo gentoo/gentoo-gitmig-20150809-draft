@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 59f6a15f40c81590a017e44c0528a79e ChangeLog 3861
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 f40589695a28b85e62f85f42d08c819e ChangeLog 3774
 MD5 7d0d8162babfa42fdde3dc2480ea3c7e taglib-1.3.1-r2.ebuild 967
-MD5 96fd9919709b18bba8001266155f211f taglib-1.3.1.ebuild 903
-MD5 cc8a58ea8028f3539fcee148baeffcc1 files/digest-taglib-1.3.1-r2 64
+MD5 458bc6ddb0c3b0a106b79eb00f70bf02 taglib-1.3.1.ebuild 903
 MD5 cc8a58ea8028f3539fcee148baeffcc1 files/digest-taglib-1.3.1 64
+MD5 cc8a58ea8028f3539fcee148baeffcc1 files/digest-taglib-1.3.1-r2 64
 MD5 103dd47ff1744397288b44834902e16c files/taglib-1.3.1-memleak-fix2.patch 2514
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCwxNJp5vW4rUFj5oRAvR3AJ0WsByJ6Pt8ZYkRLBxwBAk0H4Gv5ACeKOkP
-OfHlae+PeIuRgrTtQ3bvmQU=
-=T4Ud
------END PGP SIGNATURE-----
