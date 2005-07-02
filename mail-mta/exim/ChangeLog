@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.32 2005/06/26 09:08:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.33 2005/07/02 19:06:09 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> exim-4.50-r1.ebuild:
+  Add ~alpha keyword.
 
   26 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> exim-4.50-r1.ebuild:
   Readded to ~ppc. Please don't drop keywords!
