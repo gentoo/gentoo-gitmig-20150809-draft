@@ -1,4 +1,16 @@
-MD5 3ea106c4542f6f045022cc336cdc8528 esdl-0.94.0125.ebuild 986
-MD5 3e75209ba8f4cc7de0d3fc1728590e0b ChangeLog 1241
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d31360e40e0be4c302ad3361115d82c0 metadata.xml 537
+MD5 3ea106c4542f6f045022cc336cdc8528 esdl-0.94.0125.ebuild 986
+MD5 dbe91aa5b5eb777bcb94b55a449ab9cd esdl-0.95.0630.ebuild 904
+MD5 fb64e12818f6398d5b5dfc565aaa924e ChangeLog 1387
 MD5 c518385944f03c20e18f69323eced824 files/digest-esdl-0.94.0125 70
+MD5 56402f45d483007fc183c8f21f007f08 files/digest-esdl-0.95.0630 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxxdngIKl8Uu19MoRAsOiAJ98xVzct8Bfg8ZBBu544Lm7v+7mqQCdFQDe
+0u+fJyhreuYq8eGt3drlrkA=
+=MnmF
+-----END PGP SIGNATURE-----
