@@ -1,28 +1,34 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r1.ebuild,v 1.4 2004/12/29 17:08:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.1 2005/07/02 06:42:04 usata Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic libtool
 
 DESCRIPTION="rxvt -- nice small x11 terminal"
-HOMEPAGE="http://www.rxvt.org/"
-SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz"
+HOMEPAGE="http://www.rxvt.org/
+	http://www.giga.it.okayama-u.ac.jp/~ishihara/opensource/"
+SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz
+	http://www.giga.it.okayama-u.ac.jp/~ishihara/opensource/${P}-xim-fix.patch.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~mips ~amd64 ~ppc64"
-IUSE="motif cjk xgetdefault"
+IUSE="motif cjk xgetdefault linuxkeys"
 
 DEPEND="virtual/libc
 	virtual/x11
 	motif? ( x11-libs/openmotif )"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 	cd ${S}
 
+	epatch ${FILESDIR}/${P}-line-scroll.patch
 	use motif && epatch ${FILESDIR}/${P}-azz4.diff
-	use cjk && epatch ${FILESDIR}/${P}-rk.patch
+	use cjk && epatch ${DISTDIR}/${P}-xim-fix.patch.gz
+	use linguas_ja && epatch ${FILESDIR}/${P}-rk.patch
+
+	uclibctoolize
 }
 
 src_compile() {
@@ -35,7 +41,7 @@ src_compile() {
 	fi
 
 	# bug #22325
-	append-flags -DLINUX_KEYS
+	use linuxkeys && append-flags -DLINUX_KEYS
 	append-ldflags -Wl,-z,now
 
 	econf \
