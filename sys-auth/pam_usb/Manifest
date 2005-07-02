@@ -1,6 +1,16 @@
-MD5 2b1d37dd26ddc39b49a02a32bd095046 ChangeLog 1850
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2eda159fdf45c2152ac25008e76741c ChangeLog 2021
 MD5 a40465c4eaab0ab75d9bea883b413c2f metadata.xml 414
-MD5 fd140f17623853d331a7fc7cedcfcff6 pam_usb-0.3.1.ebuild 899
-MD5 61fc1b89fb6cf22005a50548913d12d4 pam_usb-0.3.2.ebuild 914
+MD5 ac03b459072c43a1e1c0f91448fb570c pam_usb-0.3.1.ebuild 904
+MD5 2d7634dd7bfb77e9c99b0b0d0079e8fb pam_usb-0.3.2.ebuild 914
 MD5 ffdbf6f86aace60aeab938e75bd10c0a files/digest-pam_usb-0.3.1 64
 MD5 ce9b8a2131a8e569f927f3b539e7d059 files/digest-pam_usb-0.3.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxrBMj5H05b2HAEkRAjXeAKCajMs6GcTUQWhQ8h7EJz/4bGQ84wCfWdm3
+qwRRd3EmiXk3t13T27KeisM=
+=knDq
+-----END PGP SIGNATURE-----
