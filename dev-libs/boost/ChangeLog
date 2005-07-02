@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.54 2005/05/29 20:03:52 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.55 2005/07/02 16:12:16 morfic Exp $
+
+  02 Jul 2005; <morfic@gentoo.org> boost-1.32.0-r4.ebuild:
+  Fixed quotation, closing bug #97292
 
   29 May 2005; Fernando J. Pereda <ferdy@gentoo.org> boost-1.32.0-r4.ebuild:
   marked ~alpha, wrt #91936
