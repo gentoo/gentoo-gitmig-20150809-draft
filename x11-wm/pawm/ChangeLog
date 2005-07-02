@@ -1,0 +1,11 @@
+# ChangeLog for x11-wm/pawm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pawm/ChangeLog,v 1.1 2005/07/02 10:36:10 usata Exp $
+
+*pawm-2.0.3 (02 Jul 2005)
+
+  02 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +pawm-2.0.3.ebuild:
+  Initial import. Ebuild submitted by Mikel Olasagasti <hey_neken@euskal.org>;
+  bug #93556.
+
