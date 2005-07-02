@@ -1,6 +1,5 @@
-diff -urN zlib-1.2.1-old/Makefile.in zlib-1.2.1/Makefile.in
---- zlib-1.2.1-old/Makefile.in	2003-12-02 12:14:28.000000000 -0800
-+++ zlib-1.2.1/Makefile.in	2003-12-02 12:16:46.000000000 -0800
+--- zlib-1.2.1/Makefile.in
++++ zlib-1.2.1/Makefile.in
 @@ -49,6 +49,8 @@
  OBJS = adler32.o compress.o crc32.o gzio.o uncompr.o deflate.o trees.o \
         zutil.o inflate.o infback.o inftrees.o inffast.o
@@ -51,9 +50,17 @@ diff -urN zlib-1.2.1-old/Makefile.in zlib-1.2.1/Makefile.in
  uninstall:
  	cd $(includedir); \
  	cd $(libdir); rm -f libz.a; \
-diff -urN zlib-1.2.1-old/configure zlib-1.2.1/configure
---- zlib-1.2.1-old/configure	2003-11-16 19:50:39.000000000 -0800
-+++ zlib-1.2.1/configure	2003-12-02 12:18:01.000000000 -0800
+@@ -127,7 +127,7 @@
+ 
+ mostlyclean: clean
+ clean:
+-	rm -f *.o *~ example$(EXE) minigzip$(EXE) \
++	rm -f *.lo *.o *~ example$(EXE) minigzip$(EXE) \
+ 	   libz.* foo.gz so_locations \
+ 	   _match.s maketree contrib/infback9/*.o
+ 
+--- zlib-1.2.1/configure
++++ zlib-1.2.1/configure
 @@ -160,7 +160,7 @@
    if test "`($CC -c $SFLAGS $test.c) 2>&1`" = "" &&
       test "`($LDSHARED -o $test$shared_ext $test.o) 2>&1`" = ""; then
