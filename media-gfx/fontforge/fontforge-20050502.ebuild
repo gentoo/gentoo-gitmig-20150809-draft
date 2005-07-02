@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20050502.ebuild,v 1.1 2005/05/19 21:08:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20050502.ebuild,v 1.2 2005/07/02 08:07:32 usata Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://fontforge.sourceforge.net/${PN}_full-${PV}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc x86"
 IUSE="png gif jpeg tiff truetype svg unicode X"
 
 DEPEND="png? ( >=media-libs/libpng-1.2.4 )

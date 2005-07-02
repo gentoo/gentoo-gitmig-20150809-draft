@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20050209.ebuild,v 1.2 2005/03/18 15:22:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20050624.ebuild,v 1.1 2005/07/02 08:07:32 usata Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="postscript font editor and converter"
 HOMEPAGE="http://fontforge.sourceforge.net/"
-SRC_URI="mirror://sourceforge/fontforge/${PN}_full-${PV}.tgz"
+SRC_URI="http://fontforge.sourceforge.net/${PN}_full-${PV}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ia64 ~alpha"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="png gif jpeg tiff truetype svg unicode X"
 
 DEPEND="png? ( >=media-libs/libpng-1.2.4 )
@@ -39,11 +39,4 @@ src_install() {
 	dodir /usr/lib
 	einstall || die
 	dodoc AUTHORS README*
-}
-
-pkg_postinst() {
-	einfo
-	einfo "If you want to do autotracing you should install either"
-	einfo "media-gfx/autotrace or media-gfx/potrace."
-	einfo
 }
