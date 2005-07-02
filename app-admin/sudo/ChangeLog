@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.73 2005/06/29 17:12:12 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.74 2005/07/02 19:05:56 hardave Exp $
+
+  02 Jul 2005; Hardave Riar <hardave@gentoo.org> sudo-1.6.8_p9.ebuild,
+  sudo-1.6.8_p9-r1.ebuild:
+  Stable on mips, bug #96618. Also adding dropped ~mips keyword.
 
   29 Jun 2005; Tavis Ormandy <taviso@gentoo.org> metadata.xml:
   added lcars as maintainer of ldap support.
