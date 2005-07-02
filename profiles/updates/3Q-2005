@@ -1,3 +1,4 @@
 move net-www/akregator kde-base/akregator
 move app-admin/pam_dotfile sys-auth/pam_dotfile
 move app-crypt/pam_ssh sys-auth/pam_ssh
+move net-misc/pam_smb sys-auth/pam_smb
