@@ -4,9 +4,9 @@ MD5 83a66a296b72220fc2c78344be3415f7 gst-plugins-mad-0.8.3.ebuild 438
 MD5 8e07e98dbf54c85edf94c385818c7ef6 gst-plugins-mad-0.8.5.ebuild 440
 MD5 fc27b0dc9db5b9204df639f71bc15e7f gst-plugins-mad-0.8.7.ebuild 442
 MD5 fcd6f909f78e03737456c6fed5b765e0 gst-plugins-mad-0.8.2.ebuild 442
-MD5 884d26c75b256dda65fca21115c288f5 gst-plugins-mad-0.8.10.ebuild 452
+MD5 8f84213fdbb367790382da04a04e4e1f gst-plugins-mad-0.8.10.ebuild 453
 MD5 884d26c75b256dda65fca21115c288f5 gst-plugins-mad-0.8.9.ebuild 452
-MD5 0007014d7e0337e7d9f5794c1dfc7c3f ChangeLog 6090
+MD5 670f6f949d7333df6b896d0895d81451 ChangeLog 6235
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-mad-0.8.1 71
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-mad-0.8.2 71
