@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.59 2005/06/26 06:16:27 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.60 2005/07/02 23:23:15 eradicator Exp $
+
+*libpcre-6.1 (02 Jul 2005)
+
+  02 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/pcre-6.1-link.patch, +libpcre-6.1.ebuild:
+  Version bump closes bug #97246 thanks to Carsten Lohrke <carlo@gentoo.org>.
 
   26 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org> libpcre-5.0.ebuild:
   Fixed dirty dylib hack
