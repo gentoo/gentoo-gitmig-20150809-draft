@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b26a028d4ce77233988619a7e6be5f10 ChangeLog 6094
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 279fb1222e71c68fe95db03e199f1ade libgsf-1.12.1.ebuild 834
@@ -9,3 +12,10 @@ MD5 9bb1a07d9b94f96998a19f49544066cf files/libgsf-1.8.2-gtkdoc_fix.patch 830
 MD5 b5115c032d14e47d1895c04bc07ae06b files/digest-libgsf-1.8.2 65
 MD5 8900cebbec415c5f3b8ac5d397dfd832 files/digest-libgsf-1.12.1 66
 MD5 51a6736b0f95c3ff2576bc0c63ca7ffc files/digest-libgsf-1.12.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxsn4Kf2g/qXtneoRAoEvAJ4/n55gh1geotUtjbTSvKKqCcJkSQCfYuiy
+xO1u/q7z8qjY1XR9St32YPI=
+=WRF1
+-----END PGP SIGNATURE-----
