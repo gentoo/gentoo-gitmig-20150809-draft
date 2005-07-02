@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5-r1.ebuild,v 1.2 2005/07/01 16:30:40 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5-r2.ebuild,v 1.1 2005/07/02 00:25:41 chriswhite Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-cxx.patch
+	epatch "${FILESDIR}"/${P}-amd64.patch
 }
 
 src_compile() {
