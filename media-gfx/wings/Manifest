@@ -1,7 +1,17 @@
-MD5 a5e0f373fe4fd5db7ef9c068435b1ca4 wings-0.98.21c.ebuild 922
-MD5 b601dcaf434a901a714b6be133db0fe9 wings-0.98.20c.ebuild 920
-MD5 6bb7a7cec9b8be0c9e9fd194ffd4a418 ChangeLog 1441
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9bddf18f4d4f69f23d00d06d85d28daa metadata.xml 604
+MD5 b601dcaf434a901a714b6be133db0fe9 wings-0.98.20c.ebuild 920
+MD5 0fd876dd6532b72bf71e7855969728c8 wings-0.98.21c.ebuild 918
+MD5 6bb7a7cec9b8be0c9e9fd194ffd4a418 ChangeLog 1441
 MD5 0fd80fa8e48d37b740a4a63b937ee231 files/digest-wings-0.98.20c 67
 MD5 f5cec09e12d398b7c76a90122992303d files/digest-wings-0.98.21c 67
 MD5 56a37b6b86b97612494f6b71ebf0bc58 files/wings.sh 171
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCxxdNgIKl8Uu19MoRAgQlAJ4n+E61ITsvjAqnn5gH4vYLa2fOMwCfdGCJ
+evqA4gv1ptHB2thhuWtTMtI=
+=XlaG
+-----END PGP SIGNATURE-----
