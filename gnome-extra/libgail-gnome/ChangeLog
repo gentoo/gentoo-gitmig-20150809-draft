@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgail-gnome
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.49 2005/06/12 19:27:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.50 2005/07/02 16:56:28 kloeri Exp $
+
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  libgail-gnome-1.1.1.ebuild:
+  Stable on alpha.
 
   12 Jun 2005; Olivier Crête <tester@gentoo.org>
   libgail-gnome-1.1.1.ebuild:
