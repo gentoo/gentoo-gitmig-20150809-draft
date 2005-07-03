@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.22 2005/07/03 01:28:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.23 2005/07/03 01:31:06 robbat2 Exp $
+
+  03 Jul 2005; Robin H. Johnson <robbat2@gentoo.org>
+  -bridge-utils-0.9.6.ebuild, -bridge-utils-0.9.6-r1.ebuild:
+  Remove some old ebuilds.
 
 *bridge-utils-0.9.6-r2 (03 Jul 2005)
 
