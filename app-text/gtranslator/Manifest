@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d276e7a3b2a182c7260118bc008b58bb gtranslator-1.1.6.ebuild 779
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 6f27521fd35ff0a0a5a9b32d5e7461a9 ChangeLog 1743
-MD5 817eb3bb852e16074e6adf1ffa8248b6 gtranslator-1.1.5.ebuild 776
+MD5 97221e14a482c1cab84218eae19e5694 ChangeLog 1829
 MD5 9c29168529e9e6b1286b1833b4ac3f5e gtranslator-0.43.ebuild 1432
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 817eb3bb852e16074e6adf1ffa8248b6 gtranslator-1.1.5.ebuild 776
+MD5 b2d2ad0b7a8b65108861580459775e09 gtranslator-1.1.6.ebuild 781
+MD5 8ab7e18e98059400689660486529bda0 files/digest-gtranslator-0.43 69
 MD5 00eda9fae5836cdc3191a63edc477f7b files/digest-gtranslator-1.1.5 70
 MD5 506f5ff5e458171cbeaa1e6aa2c1112d files/digest-gtranslator-1.1.6 70
-MD5 8ab7e18e98059400689660486529bda0 files/digest-gtranslator-0.43 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCxrlVp5vW4rUFj5oRAtcnAJ9FMfiM4e2mCo9eJk2pr333J3xN5gCfanks
-Zh0j0TGJwXAn3ghZ53ZMML4=
-=DNDf
------END PGP SIGNATURE-----
