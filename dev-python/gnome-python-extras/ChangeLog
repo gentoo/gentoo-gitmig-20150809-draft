@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.4 2005/07/03 12:05:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.5 2005/07/03 15:24:06 kloeri Exp $
+
+  03 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  gnome-python-extras-2.10.2.ebuild:
+  Add ~alpha keyword.
 
   03 Jul 2005; David Holm <dholm@gentoo.org>
   gnome-python-extras-2.10.2.ebuild:
