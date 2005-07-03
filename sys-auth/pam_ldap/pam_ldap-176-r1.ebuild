@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-176-r1.ebuild,v 1.1 2005/07/03 19:09:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-176-r1.ebuild,v 1.2 2005/07/03 19:15:06 robbat2 Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 src_unpack() {
 	unpack ${A}
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-176-fix-referral-tls.patch
-	
+
 	cd ${S}
 	export WANT_AUTOCONF=2.5
 	aclocal || die "aclocal failed"
