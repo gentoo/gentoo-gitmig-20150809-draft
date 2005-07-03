@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/netwmpager-1.6.ebuild,v 1.1 2005/07/02 10:05:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/netwmpager-1.6.ebuild,v 1.2 2005/07/03 12:05:58 dholm Exp $
 
 DESCRIPTION="EWMH (NetWM) compatible pager. Works with Openbox and other EWMH
 compliant window managers."
@@ -12,7 +12,7 @@ IUSE=""
 DEPEND="virtual/x11 virtual/xft"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 src_compile()
 {
