@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c59f74b1a4c9914d2660aa9422a7505 ChangeLog 7622
+MD5 68f7dd29633375afc17b13dd25f45207 ChangeLog 7711
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 75866601e831f181a72a98132068f7d9 ochusha-0.5.8.ebuild 1034
 MD5 9fcc9c86799ac3bb39ae806e0e3591fc ochusha-0.5.7.2.ebuild 1036
-MD5 0fa78ea604e13170c91ff4b6f65d2b14 ochusha-0.5.8.ebuild 1035
-MD5 6da9ff06500be51b3da019a18c7a17df files/digest-ochusha-0.5.7.2 69
 MD5 6c5dae77bdfc653351a87b1e31356ed6 files/digest-ochusha-0.5.8 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrQiQVWNWqTUmv+0RApndAJ9zjwSu6LPX5DC4qzOgfSs+JJqUoQCgprrG
-vw2B5S2OcunpHZNFnIjasOg=
-=KaTi
------END PGP SIGNATURE-----
+MD5 6da9ff06500be51b3da019a18c7a17df files/digest-ochusha-0.5.7.2 69
