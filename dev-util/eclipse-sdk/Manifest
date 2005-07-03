@@ -10,7 +10,6 @@ MD5 ab0f6620b4767e065bd533b06245b0fc files/01-distribute_ant_target-2.1.patch 11
 MD5 69ee2069b0260e40c6fa93315ff759cc files/eclipse-3.1.desktop 226
 MD5 a9f983102fa1b491ad4c4f154123d509 files/06-path-fixups.patch 4707
 MD5 6ac05b530442f845b10b830e624ffe04 files/eclipse-2.desktop 222
-MD5 a8bdecb6304c91da92a3b153e154f544 files/02-konqueror_help_browser-3.0.patch 1560
 MD5 3110e7ec528bc98ef251172c2d7e2956 files/05-mozilla-xpcom.patch 862
 MD5 0805c4d31f80b5ebb2f52456273d0d44 files/digest-eclipse-sdk-3.1 86
 MD5 0e815a2260dbd0153de35c6de26fbd05 files/digest-eclipse-sdk-3.0.0-r3 86
