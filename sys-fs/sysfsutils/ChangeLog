@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.24 2005/07/03 17:58:04 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.25 2005/07/03 20:37:41 tester Exp $
+
+  03 Jul 2005; Olivier Crête <tester@gentoo.org>
+  sysfsutils-1.2.0-r2.ebuild:
+  Stable on x86 per bug 82970
 
   03 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
   sysfsutils-1.2.0-r2.ebuild:
