@@ -1,34 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2e7f7a028cd77a2e0121d8a4db2695b1 sandbox-1.2.2.ebuild 2269
-MD5 924266160e07f32460078d11d3fd5158 sandbox-1.2.9.ebuild 2628
-MD5 ee87d170e367ddf5ba6081fdb9ec4029 sandbox-1.2.3.ebuild 2179
-MD5 d0f1b6c62fb060151edd8b40821f8b65 sandbox-1.2.5.ebuild 2809
-MD5 d211e8c2cefc10cc574350b9f7217951 sandbox-1.2.6.ebuild 2488
 MD5 a2948cad108ed3c23dcaf5be58cf89d4 ChangeLog 2943
-MD5 116ce687147fd402fa759e706e1bb1bc sandbox-1.2.4.ebuild 2179
-MD5 6830bdd58e02ad79d41b52ed31b24b7d sandbox-1.2.5-r2.ebuild 2510
-MD5 1df3499c0be95c0a47fb7a9cf20bbe20 sandbox-1.2.5-r1.ebuild 2345
+MD5 9fe5eef00b6290f1c9fb750c3bfc1fad files/digest-sandbox-1.2.10 67
+MD5 0b9d8a3302f89af8fcb328f02eb16824 files/digest-sandbox-1.2.9 66
 MD5 968e2965b0b6f620634dae6d28d8b4c4 metadata.xml 455
 MD5 712a227c38e91acbf46935ca02c8f9a8 sandbox-1.2.10.ebuild 2629
-MD5 90bdd4a5588570acdc12d14e10560c50 sandbox-1.2.7.ebuild 2550
-MD5 608efd4e5027f32ca42a16add8823ca2 sandbox-1.2.8.ebuild 2628
-MD5 54b60d2b6f5d3b74312b47c02e3f169e files/digest-sandbox-1.2.5-r1 66
-MD5 bf2c5f346fcc11659401c9240b1b8db9 files/digest-sandbox-1.2.3 66
-MD5 9fe5eef00b6290f1c9fb750c3bfc1fad files/digest-sandbox-1.2.10 67
-MD5 608cba289865ac916fb83ba5dc9daa2f files/digest-sandbox-1.2.4 66
-MD5 ccaf432074b58217f8f1750228923978 files/digest-sandbox-1.2.7 66
-MD5 fb651b249c3214a6d0fa321e1d419e07 files/digest-sandbox-1.2.2 66
-MD5 150aaffe0c9c0c8eb503c3f616d985f2 files/digest-sandbox-1.2.6 66
-MD5 54b60d2b6f5d3b74312b47c02e3f169e files/digest-sandbox-1.2.5-r2 66
-MD5 fcfb6124f08f3637efdf37a854b9f995 files/digest-sandbox-1.2.8 66
-MD5 54b60d2b6f5d3b74312b47c02e3f169e files/digest-sandbox-1.2.5 66
-MD5 0b9d8a3302f89af8fcb328f02eb16824 files/digest-sandbox-1.2.9 66
+MD5 924266160e07f32460078d11d3fd5158 sandbox-1.2.9.ebuild 2628
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCyDeX1ZcsMnZjRyIRAhouAKCmcXRQeoNpa/A62LD7jUDILugxnQCfdSAS
-4E/QQWFjkcbqKw4yNMG4HqA=
-=3S83
+iD8DBQFCyE1cI1lqEGTUzyQRAp8/AKDfqTBCrAf83EDbgh/pAZCw0mS0XgCgkskk
+JKo7vsbIvBjAZlgAqN2mZIc=
+=w5YZ
 -----END PGP SIGNATURE-----
