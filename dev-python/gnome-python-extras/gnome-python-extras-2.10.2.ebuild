@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.10.2.ebuild,v 1.4 2005/07/02 23:45:40 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.10.2.ebuild,v 1.5 2005/07/03 12:05:31 dholm Exp $
 
 inherit eutils gnome2 python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.pygtk.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE="doc firefox mozilla"
 
 RDEPEND=">=dev-lang/python-2.3
