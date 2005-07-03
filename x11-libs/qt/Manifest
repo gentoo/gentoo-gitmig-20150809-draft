@@ -4,8 +4,9 @@ MD5 bf589360a8c76e24f4335d55a1cdad0f qt-3.3.4-r5.ebuild 9098
 MD5 fdccbca900e19915ac073313a0fb1504 qt-4.0.0.ebuild 5576
 MD5 98c2c897d6bb5fd3f7c6af49cd8decb7 qt-3.3.4-r2.ebuild 8565
 MD5 e5e1f28d1973386abc7d593bd7330d62 qt-3.3.4-r4.ebuild 9306
-MD5 155b0cf6dc638c35cfd2a1b913bd7ea6 ChangeLog 38720
+MD5 ef59905f70da7a0a059fcb364f82ba77 ChangeLog 38954
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
+MD5 5e204d31980f12856a6932fbd1e27aad qt-3.3.4-r6.ebuild 9098
 MD5 74acd4c098f2c4bd70bdea585f0cb096 files/qt-no-rpath.patch 352
 MD5 8ffca1b1b7523339af04fd24b4595ce4 files/0001-dnd_optimization.patch 5623
 MD5 0cc401186f490faf55906cd458280db8 files/0037-dnd-timestamp-fix.patch 2138
@@ -20,6 +21,7 @@ MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r2 166
 MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r3 166
 MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r4 166
 MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r5 166
+MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r6 166
 MD5 0221c85bc6f785b68812fc7f42110742 files/qt-3.3.3-flickerfree_qscrollview_fixwindowactivate.patch 1540
 MD5 2df2442dc59faeb8b545a81d2523cf28 files/qt-3.3.3-immodule-r123-event-inversion-20040909.diff 327
 MD5 8c01ee8bb9af451f93082717ed8f4c49 files/qfontdatabase_x11.diff 1147
