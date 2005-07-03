@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnome2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.17 2005/06/26 15:36:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.18 2005/07/03 09:13:35 kloeri Exp $
+
+  03 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  ruby-gnome2-0.12.0.ebuild:
+  Stable on alpha.
 
   26 Jun 2005; Mamoru KOMACHI <usata@gentoo.org> ruby-gnome2-0.11.0.ebuild,
   ruby-gnome2-0.12.0.ebuild:
