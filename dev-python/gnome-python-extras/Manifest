@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0077fb1b889fba25a1ae3c81a26a1e97 ChangeLog 867
+MD5 f1ded0736a93708a416682d49a8219c0 gnome-python-extras-2.10.2.ebuild 1676
+MD5 41ebc9c97712bdcb090ee437ddb73df4 ChangeLog 985
 MD5 7815efa8e3c1eece4b748785c644df85 metadata.xml 243
-MD5 4667f8db9ed57be180e6c251ff0e3fb7 gnome-python-extras-2.10.2.ebuild 1670
 MD5 dee99b75f4b766a4a588ddb6b8a086c0 files/digest-gnome-python-extras-2.10.2 79
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCyAM1Kf2g/qXtneoRAkGdAJ4w4En/4LW+QU8W5Y1DLXJw3qqVbQCcDop3
-+BaCGu8lMlvMVe1JJ9z+rA0=
-=ahJ5
+iD8DBQFCyEi82G5bA0cA/ScRArRZAKDdhd3zNxDYCDtHsfDvt8hgrp5oewCg8iRR
+CzEn51k5CrIFW1dxs/OO9ds=
+=KU5b
 -----END PGP SIGNATURE-----
