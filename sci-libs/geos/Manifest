@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f5d0cf13b0c768020b9754562c969652 ChangeLog 878
 MD5 e98d16ebc236ddf57708cde5b837d2d8 geos-2.1.1.ebuild 956
+MD5 0b336710b0fbd74fc3bc5f50c4a4a466 ChangeLog 989
 MD5 4b491a816a154aafb3877b71ae44bda2 metadata.xml 180
-MD5 e64702857a489d4d24706066fb8b9edb files/digest-geos-2.1.1 63
+MD5 85a8842ba87725038bf4162d70266bb7 geos-2.1.2.ebuild 872
 MD5 ccfdc64d67bd756e8681dbcedf4a7ee4 files/geos-2.1.1-multilib.patch 901
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCiebvFdQwWVoAgN4RAo3bAJ9zVoJC0XyLvli7vS99xnmf452GVQCeIhPm
-yETYAKjJ+oLz1dqXUJ05f70=
-=EeEL
------END PGP SIGNATURE-----
+MD5 e64702857a489d4d24706066fb8b9edb files/digest-geos-2.1.1 63
+MD5 10716de046c293dcbc7acead1c63aa13 files/digest-geos-2.1.2 63
