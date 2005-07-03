@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.418 2005/06/30 01:50:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.419 2005/07/03 02:20:53 geoman Exp $
+
+  03 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
+  xorg-x11-6.8.99.8.ebuild, xorg-x11-6.8.99.13.ebuild:
+  these versions seriously break displaying of icons in gtk and qt apps with
+  the newport driver, so changing keywords to -mips
 
   30 Jun 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r2.ebuild:
