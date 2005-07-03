@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.32 2005/07/03 15:47:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.33 2005/07/03 20:40:00 plasmaroo Exp $
+
+*brltty-3.6.1-r1 (03 Jul 2005)
+
+  03 Jul 2005; <plasmaroo@gentoo.org> +brltty-3.6.1-r1.ebuild,
+  -brltty-3.6.1.ebuild:
+  Bump for #85373.
 
   03 Jul 2005; <plasmaroo@gentoo.org> brltty-3.6.1.ebuild:
   Fix #85373. This is boot critical so we do need to be in /bin, not /usr/bin.
