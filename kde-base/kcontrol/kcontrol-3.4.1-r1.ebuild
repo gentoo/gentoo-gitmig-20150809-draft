@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.1-r1.ebuild,v 1.6 2005/07/01 21:45:16 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.1-r1.ebuild,v 1.7 2005/07/03 18:28:21 danarmak Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -24,7 +24,8 @@ RDEPEND="${DEPEND}
 $(deprange $PV $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-data)
 $(deprange $PV $MAXKDEVER kde-base/kdesu)
-$(deprange $PV $MAXKDEVER kde-base/khelpcenter)"
+$(deprange $PV $MAXKDEVER kde-base/khelpcenter)
+$(deprange $PV $MAXKDEVER kde-base/khotkeys)"
 
 KMEXTRACTONLY="kicker/core/kicker.h
 	    kwin/kwinbindings.cpp
