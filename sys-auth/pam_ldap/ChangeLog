@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/pam_ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.1 2005/07/02 21:29:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.2 2005/07/03 19:09:46 robbat2 Exp $
+
+*pam_ldap-178-r1 (03 Jul 2005)
+*pam_ldap-176-r1 (03 Jul 2005)
+
+  03 Jul 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/pam_ldap-176-fix-referral-tls.patch, +pam_ldap-176-r1.ebuild,
+  +pam_ldap-178-r1.ebuild:
+  Security Bug #96767, ssl not being used always. Note that both 176-r1 and
+  178-r1 have the patch.
 
 *pam_ldap-176 (02 Jul 2005)
 
