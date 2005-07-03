@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/jpgraph
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.15 2005/07/02 05:28:16 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.16 2005/07/03 08:22:53 sebastian Exp $
+
+  03 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  jpgraph-1.12.2.ebuild, jpgraph-1.17.ebuild, jpgraph-1.18.ebuild:
+  Add blocker against PHP 5, closes bug 60445.
 
 *jpgraph-1.18 (02 Jul 2005)
 
