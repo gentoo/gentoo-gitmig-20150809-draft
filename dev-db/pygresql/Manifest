@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 381f11ae3792a3e7988d7d67aa01b5aa ChangeLog 3138
 MD5 05a1d5c849b7a82f1e01b660c54dd1b4 pygresql-3.6.1.ebuild 652
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
@@ -11,3 +14,10 @@ MD5 18af1ef69d758794d3a95d48e00c38fa files/pygresql-3.6.1-gentoo.patch 531
 MD5 4197cad26a33686a31e08a2f86c585fb files/digest-pygresql-3.6.1 62
 MD5 b3cc0a635106665541248040917b9b1e files/pygresql-3.5-gentoo.patch 523
 MD5 5325224fe3a370426933d64f51e82ebb files/pygresql-3.6.2-gentoo.patch 506
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCx7LCKf2g/qXtneoRApNsAJ9qizSbBi6pt2M0oYguBCeoJzDmzACggUfp
+x56QUKD+8Uh70vAsR1WPW9U=
+=hi9t
+-----END PGP SIGNATURE-----

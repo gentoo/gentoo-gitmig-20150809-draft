@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e70e6589155e500c411989e70270385a sqlite-2.8.16-r1.ebuild 1773
 MD5 99bf2a671c91f7499255003439d5eac0 sqlite-2.8.14.ebuild 862
 MD5 312b80f072430d2ba0ae5fcf9b342ec5 ChangeLog 12533
@@ -23,3 +26,10 @@ MD5 d0fc4c53a61d386992d16680140548d0 files/maketcllib.sh 879
 MD5 3f0417272ef2e01ef38d27021a93aeaf files/digest-sqlite-2.8.16 65
 MD5 c35f34620d18893001720951f8ea0c73 files/digest-sqlite-2.8.13 65
 MD5 46cefa8dc3aa8a97c973f54cd08f0ace files/sqlite-3.2.1-data-corruption.patch 6529
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCx7MwKf2g/qXtneoRAoKFAJ43p5gGuoi9Q5/zLdRVbjhuRBhiawCfUvSX
+STLKZ1wmhOK0uSIqKgydQrs=
+=DZ9J
+-----END PGP SIGNATURE-----
