@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/dragonflycms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.5 2005/07/03 06:56:53 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.6 2005/07/03 10:44:43 swegener Exp $
+
+  03 Jul 2005; Sven Wegener <swegener@gentoo.org>
+  dragonflycms-9.0.3.0.ebuild, dragonflycms-9.0.4.0.ebuild,
+  dragonflycms-9.0.5.0.ebuild:
+  QA: Removed src_unpack because it was the default, exchanged RDEPEND and
+  DEPEND, removed unused digest entries.
 
 *dragonflycms-9.0.5.0 (03 Jul 2005)
 
