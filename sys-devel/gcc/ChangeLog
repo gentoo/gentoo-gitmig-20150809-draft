@@ -1,12 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.426 2005/07/03 00:34:41 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.427 2005/07/03 06:42:54 eradicator Exp $
 
+*gcc-4.0.1_pre20050702 (03 Jul 2005)
 *gcc-4.1.0_beta20050702 (03 Jul 2005)
 
   03 Jul 2005; Mark Loeser <halcy0n@gentoo.org>
-  -gcc-4.1.0_beta20050625.ebuild, +gcc-4.1.0_beta20050702.ebuild:
-  Bump to newest gcc 4.1 snapshot.
+  -gcc-4.0.1_pre20050616.ebuild, -gcc-4.1.0_beta20050625.ebuild,
+  +gcc-4.0.1_pre20050702.ebuild, +gcc-4.1.0_beta20050702.ebuild:
+  Bump to newest gcc4 snapshots.
 
   28 Jun 2005; Markus Rothe <corsair@gentoo.org> gcc-3.4.4.ebuild:
   Stable on ppc64
