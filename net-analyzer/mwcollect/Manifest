@@ -1,6 +1,18 @@
-MD5 a849f72da16bd70aca06d58efae61f4a ChangeLog 740
-MD5 135b596c858a5c434296161c99da73dc metadata.xml 437
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2eacc94c79e119102dae912b457e962a mwcollect-2.1.0.ebuild 1249
+MD5 a849f72da16bd70aca06d58efae61f4a ChangeLog 740
+MD5 d6686b70beeb04333a23a1bcf7cedffd metadata.xml 434
 MD5 f59158af5e1c4093564ccf55bbe01f23 files/confd 984
-MD5 55d7fce54ad5e7342a076f413f5527a0 files/digest-mwcollect-2.1.0 66
 MD5 74e0b4bdc8a808fc003c6012de634c5d files/initd 873
+MD5 55d7fce54ad5e7342a076f413f5527a0 files/digest-mwcollect-2.1.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iQCVAwUBQsgL054WFLgrx1GWAQIn1QQAuq9L6foerNIK9I55786anctVr5TDoY+P
+gThPpvu2V/1wubSuAD4D7frBVIVZTgOLFd3gWR046op6OzNpbsXTLsM9zvmfPxbS
+Ke4abydNmlH6XeZPa2uxXMQHs3mygWmpOGx+qRoeW7sdPs7L2hB5mX4pOF77akDY
+mA/NAUeRlpQ=
+=ES2X
+-----END PGP SIGNATURE-----
