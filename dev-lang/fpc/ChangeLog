@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.20 2005/06/27 15:13:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.21 2005/07/03 17:42:51 carlo Exp $
+
+*fpc-2.0.0-r1 (03 Jul 2005)
+
+  03 Jul 2005; Carsten Lohrke <carlo@gentoo.org> +fpc-2.0.0-r1.ebuild:
+  added optional documentation
 
   27 Jun 2005; Aron Griffis <agriffis@gentoo.org> fpc-2.0.0_rc2.ebuild,
   fpc-2.0.0.ebuild:
