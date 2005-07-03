@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.2.1.ebuild,v 1.2 2005/06/10 05:13:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.2.1.ebuild,v 1.3 2005/07/03 22:27:55 carlo Exp $
 
 inherit kde
 
@@ -16,7 +16,8 @@ SLOT="3"
 DEPEND="dev-lang/perl
 	sys-devel/flex
 	sys-devel/gdb
-	subversion? ( dev-util/subversion )"
+	subversion? ( dev-util/subversion )
+	|| ( kde-base/cervisia kde-base/kdesdk )"
 
 need-kde 3.3
 
@@ -51,7 +52,6 @@ pkg_postinst() {
 	einfo "complete list. All these packages can be emerged after kdevelop."
 	einfo
 	einfo "kde-base/kdebase:               (RECOMMENDED) embed konsole kpart in kdevelop ide"
-	einfo "dev-util/cvs:                   (RECOMMENDED) support cvs for version control"
 	einfo "kde-base/kdesdk:                (RECOMMENDED) use kompare to show differences between files and cervisia for cvs"
 	einfo "dev-util/kdbg:                  (RECOMMENDED) kde frontend to gdb"
 	einfo "dev-util/valgrind:              (RECOMMENDED) integrates valgrind (memory debugger) commands"
