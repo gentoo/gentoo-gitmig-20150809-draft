@@ -1,0 +1,13 @@
+diff -urN openldap-2.2.26.orig/libraries/libldap/tls.c openldap-2.2.26/libraries/libldap/tls.c
+--- openldap-2.2.26.orig/libraries/libldap/tls.c	2005-01-20 17:01:02.000000000 +0000
++++ openldap-2.2.26/libraries/libldap/tls.c	2005-06-22 01:34:22.000000000 +0100
+@@ -1738,7 +1738,8 @@
+ 
+ 	/* XXYYZ: this initiates operation only on default connection! */
+ 
+-	if ( ld->ld_sb != NULL && ldap_pvt_tls_inplace( ld->ld_sb ) != 0 ) {
++	if ( ( ld->ld_defconn != NULL ) ? ( ld->ld_defconn->lconn_sb != NULL && ldap_pvt_tls_inplace( ld->ld_defconn->lconn_sb ) != 0 )
++			: ( ld->ld_sb != NULL && ldap_pvt_tls_inplace( ld->ld_sb ) != 0 ) ) {
+ 		return LDAP_LOCAL_ERROR;
+ 	}
+ 
