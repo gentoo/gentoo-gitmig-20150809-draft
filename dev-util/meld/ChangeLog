@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.22 2005/07/03 20:36:36 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.23 2005/07/03 23:43:14 allanonjl Exp $
+
+*meld-1.0.0 (03 Jul 2005)
+
+  03 Jul 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +files/meld-1.0.0-frpo.patch, +meld-1.0.0.ebuild:
+  new 1.0.0 version. large changes to the ebuild to make it much easier to
+  handle. submitted patch upstream for the fr.po file.
 
 *meld-0.9.5 (02 Jul 2005)
 
