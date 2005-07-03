@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.7.ebuild,v 1.8 2005/06/19 20:36:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.5-r1.ebuild,v 1.1 2005/07/03 20:28:37 allanonjl Exp $
 
-inherit eutils fdo-mime alternatives
+inherit eutils fdo-mime
 
 IUSE="gnome jpeg spell xml2 debug"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.abisource.com"
 
 SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.bz2"
 
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="x86 sparc alpha ppc amd64 hppa ~ppc64"
 LICENSE="GPL-2"
 SLOT="2"
 
@@ -46,6 +46,9 @@ src_compile() {
 	cp configure configure.old
 	cat configure.old |sed s:-pedantic::g >configure
 	rm -f configure.old
+
+	# fix for security, see #96991
+	epatch ${FILESDIR}/${PN}-security-fix.patch
 
 	econf \
 		`use_enable gnome` \
@@ -100,7 +103,5 @@ src_install() {
 pkg_postinst() {
 
 	fdo-mime_desktop_database_update
-
-	alternatives_auto_makesym "/usr/bin/abiword" "/usr/bin/abiword-[0-9].[0-9]"
 
 }

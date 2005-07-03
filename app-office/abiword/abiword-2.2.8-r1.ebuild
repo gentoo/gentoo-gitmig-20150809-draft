@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.8.ebuild,v 1.2 2005/06/23 22:57:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.8-r1.ebuild,v 1.1 2005/07/03 20:28:37 allanonjl Exp $
 
 inherit eutils fdo-mime alternatives
 
@@ -49,6 +49,9 @@ src_compile() {
 
 	# Fix compilation on GCC4; upstream patch
 	epatch ${FILESDIR}/${PV}-gcc4.patch
+
+	# fix for security, see #96991
+	epatch ${FILESDIR}/${PN}-security-fix.patch
 
 	econf \
 		`use_enable gnome` \
