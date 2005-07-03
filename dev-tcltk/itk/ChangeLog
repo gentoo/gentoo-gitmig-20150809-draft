@@ -1,0 +1,9 @@
+# ChangeLog for dev-tcltk/itk
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.1 2005/07/03 02:49:30 matsuu Exp $
+
+*itk-3.3 (03 Jul 2005)
+
+  03 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> +itk-3.3.ebuild:
+  Initial ebuild. Bug 93311.
+
