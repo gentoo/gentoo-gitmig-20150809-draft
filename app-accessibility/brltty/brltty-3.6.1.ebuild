@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.6.1.ebuild,v 1.9 2005/07/02 14:55:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.6.1.ebuild,v 1.10 2005/07/03 15:47:41 plasmaroo Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -21,7 +21,9 @@ DEPEND="virtual/libc
 src_compile() {
 	econf `use_enable gpm` \
 		`use_with X x` \
-		`use_enable usb usb-support` || die
+		`use_enable usb usb-support` \
+		--prefix=/ \
+		--includedir=/usr/include || die
 	make || die
 }
 
