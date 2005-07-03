@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.26 2005/06/25 22:34:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.27 2005/07/03 21:18:52 hardave Exp $
+
+  03 Jul 2005; Hardave Riar <hardave@gentoo.org> lzo-1.08-r1.ebuild:
+  Stable on mips, dep for bug #90726.
 
 *lzo-2.00 (25 Jun 2005)
 

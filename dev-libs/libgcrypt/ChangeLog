@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.52 2005/06/06 08:54:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.53 2005/07/03 21:17:11 hardave Exp $
+
+  03 Jul 2005; Hardave Riar <hardave@gentoo.org> libgcrypt-1.2.1.ebuild:
+  Stable on mips, dep for bug #90726.
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> libgcrypt-1.2.1.ebuild:
   Stable on ppc64
