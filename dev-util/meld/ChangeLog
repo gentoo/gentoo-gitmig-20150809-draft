@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.21 2005/05/29 21:48:03 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.22 2005/07/03 20:36:36 allanonjl Exp $
+
+*meld-0.9.5 (02 Jul 2005)
+
+  02 Jul 2005; John N. Laliberte <allanonjl@gentoo.org> metadata.xml,
+  +meld-0.9.5.ebuild:
+  version bump to fix #85325. Now depends on gnome-python-extras so it has
+  support for line numbering and source highlighting.
 
 *meld-0.9.4.1-r1 (29 May 2005)
 
