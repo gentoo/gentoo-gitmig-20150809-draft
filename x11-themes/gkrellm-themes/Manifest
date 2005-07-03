@@ -1,4 +1,14 @@
-MD5 aea7f351643161974d4cb8f30ddf99a8 ChangeLog 1125
-MD5 f07110161a77abf5f43d7e9f4257b2ba gkrellm-themes-0.1.ebuild 7295
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8316753a38cb3b708db60b0b213c64e4 gkrellm-themes-0.1.ebuild 7325
+MD5 b58e0f0a2071809690d1ba4c13f63515 ChangeLog 1278
 MD5 25337439620ee06f28cf452cc1174deb metadata.xml 347
-MD5 cfc7f9df433533dcbdc41da5058b41c7 files/digest-gkrellm-themes-0.1 11978
+MD5 5793b12959b5ecd7251f0a6538ec0a49 files/digest-gkrellm-themes-0.1 12032
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCx/px8zY1VwezZiERAtCTAJ0dcnCZFf9mrzNmZ57Ji328NkAyIwCfblrp
+yESvTnybS9FvyitTGjyT4iE=
+=fIi6
+-----END PGP SIGNATURE-----

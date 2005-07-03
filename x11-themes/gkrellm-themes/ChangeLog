@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gkrellm-themes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/ChangeLog,v 1.8 2005/04/26 01:58:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/ChangeLog,v 1.9 2005/07/03 13:18:37 humpback Exp $
+
+  03 Jul 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  gkrellm-themes-0.1.ebuild:
+  aqua back on the pack, lets see if digest problems continue.
 
   26 Apr 2005; Jason Wever <weeve@gentoo.org> gkrellm-themes-0.1.ebuild:
   Added ~sparc keyword wrt bug #90420.

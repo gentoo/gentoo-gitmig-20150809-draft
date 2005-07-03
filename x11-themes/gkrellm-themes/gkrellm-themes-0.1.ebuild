@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/gkrellm-themes-0.1.ebuild,v 1.9 2005/04/26 01:58:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/gkrellm-themes-0.1.ebuild,v 1.10 2005/07/03 13:18:37 humpback Exp $
 
 DESCRIPTION="A pack of ~200 themes for GKrellM"
 HOMEPAGE="http://www.muhri.net/gkrellm"
@@ -122,6 +122,7 @@ SRC_URI="${THEME_URI}/3051.tar.gz
 	${THEME_URI}/adept.tar.gz
 	${THEME_URI}/aliens.tar.gz
 	${THEME_URI}/aliens.tgz
+	${THEME_URI}/aqua.tar.gz
 	${THEME_URI}/amber2.tar.gz
 	${THEME_URI}/antarctic.gkrellm.tar.gz
 	${THEME_URI}/arctic-2.gkrellm.tar.gz
