@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6d1d01ee15404d24bfa2e96964d75a36 ppp-2.4.2-r12.ebuild 6934
+MD5 c453d01b2a7fec78be471afd6a834e51 ppp-2.4.2-r12.ebuild 6933
 MD5 9bc31d2cc95400804e46ac0355f95d94 ppp-2.4.3-r6.ebuild 7640
-MD5 335b82bd6e27354b61e58364e81e9620 ChangeLog 20699
+MD5 51ee6999494b169c87f98ecc1c1b4374 ChangeLog 20786
 MD5 e6fdfdc4317d7fe324c50bd0477ca3f8 metadata.xml 295
 MD5 fc56767c28bef6332decb0a5c48cad83 ppp-2.4.2-r10.ebuild 6209
 MD5 4e62cdeb360ca0a22becbd2deb6f2dac files/pon 957
@@ -26,7 +26,7 @@ MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/pppoe.html 7605
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCq+bWjiC39V7gKu0RAp9RAJ9mColsB7T4mjXkhoiFWqBY3tQJcgCgwyv8
-3URaEG56oLYf0H7O0CkThag=
-=uW7e
+iD8DBQFCx9XYNSP4Vda7IdsRAoY+AJ4w+n+ksLWbOVz2akSd4LOcEImrjQCdHp3J
+t4jGOzCCzAMFxO+zW4AjY0g=
+=ywai
 -----END PGP SIGNATURE-----
