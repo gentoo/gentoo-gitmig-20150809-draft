@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/nss-db
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.7 2005/02/16 11:04:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.8 2005/07/03 15:01:32 robbat2 Exp $
+
+*nss-db-2.2.3_pre1-r1 (03 Jul 2005)
+
+  03 Jul 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nss-db-2.2.3_pre1-root-upgrade-only.patch,
+  +nss-db-2.2.3_pre1-r1.ebuild:
+  Add small patch to only use db->update when root privileges are present.
 
 *nss-db-2.2.3_pre1 (16 Feb 2005)
 
