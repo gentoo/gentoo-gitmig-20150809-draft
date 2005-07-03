@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/geoip-python-1.2.0.ebuild,v 1.2 2005/07/03 03:52:28 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/geoip-python-1.2.1.ebuild,v 1.1 2005/07/03 03:52:28 fserb Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.maxmind.com/download/geoip/api/python/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/geoip-1.2.1

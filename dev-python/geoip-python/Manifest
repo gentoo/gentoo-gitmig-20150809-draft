@@ -1,6 +1,18 @@
-MD5 8c17d6cd8c57d595b56f5d18471f0fd7 ChangeLog 1004
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3aa4e2895636c4ac95e90222b6af1361 ChangeLog 1188
 MD5 2d3dda2779dec56f622b404dfae33b9f geoip-python-0.2.0.ebuild 582
-MD5 3286b796aa0167e0c61d2880577ed7c5 geoip-python-1.2.0.ebuild 647
+MD5 8a60277736454e6ac52b2ded20c49882 geoip-python-1.2.0.ebuild 641
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 b254e981b83da5ba4e659ef327fb733d geoip-python-1.2.1.ebuild 642
 MD5 1adcfc9e4dc3e78fec4c758943259516 files/digest-geoip-python-0.2.0 68
 MD5 536c80bf77311027d4f99ffe250f9def files/digest-geoip-python-1.2.0 68
+MD5 de86fe458d9ec055442bcd4355f9314e files/digest-geoip-python-1.2.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCx2ERxtZcznfol0URAhJZAKCmzsGvDvzc90Zc/Hz6MQin0RWMCQCgj4M5
+IUcUGFH7ii5OM/VKZPgZgKc=
+=QVAI
+-----END PGP SIGNATURE-----
