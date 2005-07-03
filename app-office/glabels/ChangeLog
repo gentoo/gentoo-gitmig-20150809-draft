@@ -1,6 +1,13 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.16 2005/04/21 20:01:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.17 2005/07/03 14:14:59 leonardop Exp $
+
+*glabels-2.0.3 (03 Jul 2005)
+
+  03 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> glabels-2.0.3.ebuild,
+  files/glabels-2.0.3-update_dbs_switch.patch:
+  New release. Modified patch to enable/disable running
+  update-{mime,desktop}-database.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> glabels-2.0.2.ebuild:
   stable on amd64
