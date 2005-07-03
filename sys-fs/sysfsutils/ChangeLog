@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.20 2005/07/03 11:54:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.21 2005/07/03 13:15:22 flameeyes Exp $
+
+  03 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  sysfsutils-1.2.0-r2.ebuild:
+  Made multilib-strict aware.
 
   03 Jul 2005; Aron Griffis <agriffis@gentoo.org>
   sysfsutils-1.2.0-r2.ebuild:
