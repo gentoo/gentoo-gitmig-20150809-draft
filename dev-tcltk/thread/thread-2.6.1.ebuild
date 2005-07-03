@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.1.ebuild,v 1.1 2005/07/02 15:20:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.1.ebuild,v 1.2 2005/07/03 01:20:12 matsuu Exp $
 
 inherit eutils
 
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="the Tcl Thread extension"
 HOMEPAGE="http://www.tcl.tk/"
 SRC_URI="mirror://sourceforge/tcl/${PN}${PV}.tar.gz"
 
@@ -27,10 +27,12 @@ pkg_setup() {
 }
 
 src_compile() {
-	econf \
-		--with-threads \
-		--with-tclinclude=/usr/include \
-		`use_with gdbm` || die "econf failed"
+	local myconf="--with-threads --with-tclinclude=/usr/include"
+
+	if use gdbm ; then
+		myconf="${myconf} --with-gdbm"
+	fi
+	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/thread
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.1 2005/07/02 15:20:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.2 2005/07/03 01:20:12 matsuu Exp $
+
+  03 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> thread-2.6.1.ebuild:
+  Fixed with gdbm cofigure issue. Bug 97738.
+  Fixed DISCRIPTION. Bug 97739.
 
 *thread-2.6.1 (02 Jul 2005)
 
