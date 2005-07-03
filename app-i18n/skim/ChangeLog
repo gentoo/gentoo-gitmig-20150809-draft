@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.28 2005/06/26 15:26:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.29 2005/07/03 13:31:20 hansmi Exp $
+
+  03 Jul 2005; Michael Hanselmann <hansmi@gentoo.org> skim-1.2.3.ebuild:
+  Stable on ppc.
 
 *skim-1.3.1 (26 Jun 2005)
 
