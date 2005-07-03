@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/esound
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.49 2004/12/29 01:10:27 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.50 2005/07/03 16:12:33 leonardop Exp $
+
+*esound-0.2.36 (03 Jul 2005)
+
+  03 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> esound-0.2.36.ebuild:
+  New release. Added support for 'debug' and 'static' USE flags. Replaced
+  install with "make DESTDIR=$D".
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
