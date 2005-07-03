@@ -1,5 +1,18 @@
-MD5 dc754f9db7d3787cb476b38756aa7029 ChangeLog 589
-MD5 08e7296ce53e39a3bc4bbd10fbddbc36 ivam2-0.3.ebuild 1167
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dfb7d49775a5f3fa6f6eea4b8fb2d776 ivam2-0.3.ebuild 1250
+MD5 f2aa4d808b2aa491b53e4411e63752d8 ivam2-0.3-r1.ebuild 1389
+MD5 a12eaf24ef2b294232613d9bc577ebf1 ChangeLog 874
 MD5 0f85f905010789f7ee35acae0307a6d6 metadata.xml 250
-MD5 13c574283b5f131701b415600ab68bcf files/digest-ivam2-0.3 61
+MD5 b46f8543d57f7bf5a12dec82418addf1 files/ivam2-0.3-base64-enc.patch 1032
 MD5 0b0524fa159ddb2bc40a3f8c6b795e41 files/ivam2.init 1021
+MD5 13c574283b5f131701b415600ab68bcf files/digest-ivam2-0.3-r1 61
+MD5 13c574283b5f131701b415600ab68bcf files/digest-ivam2-0.3 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCx7LUNSP4Vda7IdsRApODAJ9KE3EuvptwyiUpWGFpMqg/7QZk6ACeJIr/
+d2MV6NJpjnSSm593iWZij8s=
+=Bnou
+-----END PGP SIGNATURE-----

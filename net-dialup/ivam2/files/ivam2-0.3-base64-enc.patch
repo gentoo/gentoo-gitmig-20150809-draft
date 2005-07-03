@@ -1,0 +1,28 @@
+diff -Nru ivam2-0.3.orig/clients/ivam-newmessage ivam2-0.3/clients/ivam-newmessage
+--- ivam2-0.3.orig/clients/ivam-newmessage	2004-01-18 16:53:48.000000000 +0200
++++ ivam2-0.3/clients/ivam-newmessage	2005-07-03 12:26:37.000000000 +0300
+@@ -24,6 +24,15 @@
+     exit 1
+ fi
+ 
++if which mimencode &>/dev/null ; then
++	BASE64_ENCODE="mimencode"
++elif which openssl &>/dev/null ; then
++	BASE64_ENCODE="openssl base64 -e"
++else
++	echo "Cannot encode the new message: mimencode or openssl not found" > /dev/stderr
++	exit 1
++fi
++
+ EMAIL=root
+ [ -r "$SPOOLDIR/EMAIL" ] && EMAIL=$(cat "$SPOOLDIR/EMAIL")
+ 
+@@ -68,7 +77,7 @@
+ 
+ EOF
+ 
+-    zcat -f "$1" | sox -t raw -Ub -r8000 -c1 - -t raw -sw - | oggenc --quiet -q0 -r -C1 -B16 -R8000 -a "IVAM Voicebox" -t "Phone call from $CALLERMSN to $RINGMSN, $DATE" -o- - | mimencode
++    zcat -f "$1" | sox -t raw -Ub -r8000 -c1 - -t raw -sw - | oggenc --quiet -q0 -r -C1 -B16 -R8000 -a "IVAM Voicebox" -t "Phone call from $CALLERMSN to $RINGMSN, $DATE" -o- - | $BASE64_ENCODE
+ 
+ cat <<EOF
+ --${BOUND}--
