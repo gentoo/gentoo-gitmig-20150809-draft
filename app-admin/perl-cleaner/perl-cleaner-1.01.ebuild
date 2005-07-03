@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/perl-cleaner-1.01.ebuild,v 1.1 2005/06/05 17:33:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/perl-cleaner-1.01.ebuild,v 1.2 2005/07/03 11:39:06 mcummings Exp $
 
 DESCRIPTION="User land tool for cleaning up old perl installs"
 HOMEPAGE="http://dev.gentoo.org/~mcummings/"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND="app-shells/bash"
 
-RDPEND="dev-lang/perl"
+RDEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
