@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1267 2005/07/03 03:25:08 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1268 2005/07/03 08:50:34 voxus Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -483,6 +483,7 @@ media-libs/xine-lib:nvidia - Support the nvidia XvMC libs
 media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accellerated mpeg playback)
 media-plugins/bmp-wma:wma123 - Installs optional commandline wma player
+media-plugins/eq-xmms:sse-filters - Enable SSE-based equalizer's implementation
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-plugins/mythphone:festival - Enable festival support
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
