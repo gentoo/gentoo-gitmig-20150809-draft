@@ -1,6 +1,18 @@
-MD5 6cdd8511c413c98f021d97ef80fe4fa3 ChangeLog 922
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a7f19a81216a61c91bee0fd894254941 cgiirc-0.5.4.ebuild 837
 MD5 723211a70a648d0e0b1d19aab9820dce cgiirc-0.5.3.ebuild 875
-MD5 3ccc6616d966380a4556814627251098 cgiirc-0.5.4.ebuild 838
+MD5 aa84b7ae07f4e40127a747154da34b38 cgiirc-0.5.7.ebuild 962
+MD5 1f121c68a763612ae47c9ff8e44c8b6c ChangeLog 1080
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 4ef89acf015aecb207da91dd00e60a9a files/digest-cgiirc-0.5.3 64
 MD5 0f901ebba5b3d8bbcb054639066b192a files/digest-cgiirc-0.5.4 64
+MD5 2aca1bc2f7368c8fcc4d5e947a7d06ab files/digest-cgiirc-0.5.7 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCyDSOEzitwsaoONoRAsThAKCyGGsihLmMvdzMBmvUkjHF71vrzwCgrxwR
+C0tGdRCTtDmuKVeIBfYGVq8=
+=Nh0f
+-----END PGP SIGNATURE-----

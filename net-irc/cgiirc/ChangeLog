@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/cgiirc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/ChangeLog,v 1.7 2004/12/18 11:18:35 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/ChangeLog,v 1.8 2005/07/03 18:54:39 rl03 Exp $
+
+*cgiirc-0.5.7 (03 Jul 2005)
+
+  03 Jul 2005; Renat Lumpau <rl03@gentoo.org> +cgiirc-0.5.7.ebuild:
+  Version bump per #80003. Install things into MY_CGIBINDIR.
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> cgiirc-0.5.4.ebuild:
   added ~amd64

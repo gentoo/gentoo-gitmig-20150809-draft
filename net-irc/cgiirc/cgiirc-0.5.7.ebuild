@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.4.ebuild,v 1.4 2005/07/03 18:54:39 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.7.ebuild,v 1.1 2005/07/03 18:54:39 rl03 Exp $
 
 IUSE=""
 
@@ -13,8 +13,9 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 src_unpack() {
+	einfo "Note that file locations have changed."
+	einfo "CGI:IRC will be installed into cgi-bin/${P}"
 	unpack ${A}
-
 	find ${S} -name .cvsignore -exec rm {} \;
 }
 
@@ -23,14 +24,17 @@ src_install() {
 
 	local docs="README cgiirc.config.full ipaccess.example"
 
-	dodoc docs/{CHANGES,COPYING,TODO} ${docs}
+	dodoc docs/{CHANGES,TODO} ${docs}
 	dohtml docs/help.html
+
+	dodir ${MY_CGIBINDIR}/${P}
+
+	cp -R . ${D}/${MY_CGIBINDIR}/${P}
+
+	cd ${D}/${MY_CGIBINDIR}/${P}
 	rm -rf docs ${docs}
 
-	echo "Options +ExecCGI" >>.htaccess
-
-	cp -R . ${D}/${MY_HTDOCSDIR}
-	webapp_configfile ${MY_HTDOCSDIR}/cgiirc.config
+	webapp_configfile ${MY_CGIBINDIR}/${P}/cgiirc.config
 
 	webapp_src_install
 }
