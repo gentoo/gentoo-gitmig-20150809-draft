@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.12.ebuild,v 1.1 2005/05/17 13:09:16 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.1.12.ebuild,v 1.2 2005/07/03 09:11:31 voxus Exp $
 
 DESCRIPTION="memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load."
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.danga.com/memcached/dist/${P}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 amd64 ~ppc"
 IUSE="static perl php"
 
 DEPEND=">=dev-libs/libevent-0.6
