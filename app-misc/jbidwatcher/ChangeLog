@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/jbidwatcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/ChangeLog,v 1.18 2005/05/17 17:00:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/ChangeLog,v 1.19 2005/07/03 09:52:28 axxo Exp $
+
+*jbidwatcher-0.9.7 (03 Jul 2005)
+
+  03 Jul 2005; Thomas Matthijs <axxo@gentoo.org> +jbidwatcher-0.9.7.ebuild:
+  version bump
 
   17 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   -jbidwatcher-0.9.5.ebuild, -jbidwatcher-0.9.6.ebuild,
