@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/otpcalc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.11 2005/06/22 21:03:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.12 2005/07/03 13:16:45 hansmi Exp $
+
+  03 Jul 2005; Michael Hanselmann <hansmi@gentoo.org> otpcalc-0.97.ebuild:
+  Stable on ppc.
 
   22 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> otpcalc-0.97.ebuild:
   To ~sparc

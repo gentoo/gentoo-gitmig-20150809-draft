@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r1.ebuild,v 1.3 2005/07/01 11:22:17 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r1.ebuild,v 1.4 2005/07/03 13:16:32 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.adel.nursat.kz/apg/download/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc amd64 ~hppa"
+KEYWORDS="amd64 ~hppa ppc ~sparc x86"
 IUSE="cracklib"
 
 DEPEND="virtual/libc
