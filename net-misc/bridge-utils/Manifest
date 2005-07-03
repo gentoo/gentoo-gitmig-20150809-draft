@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0d6d3f3c84b9fd514a08af08ba76ad0f bridge-utils-1.0.4.ebuild 1169
-MD5 66fb74daa1ded70f437c3d6bc2606b61 bridge-utils-1.0.6.ebuild 1263
+MD5 338c9904ef9b231212318464c33967e9 bridge-utils-1.0.6.ebuild 1269
 MD5 48067eb678968119fe68b6ecb4f54824 bridge-utils-0.9.6.ebuild 1080
 MD5 ae80441fe5414d6268613fdd7cd7b91b bridge-utils-0.9.6-r1.ebuild 1166
-MD5 e15796675474af2962e37fff302e2dfe ChangeLog 3141
+MD5 2d45b90aad581c6a3116df04387b16f3 ChangeLog 3297
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 ab89aefb5bcf4befdfb115be79139469 files/digest-bridge-utils-0.9.6 69
 MD5 be13eee50cb73dfb7574dc9d439e247e files/digest-bridge-utils-1.0.4 70
@@ -13,10 +10,3 @@ MD5 69312e372ac3b1c445dd53c8abf3cd57 files/digest-bridge-utils-1.0.6 69
 MD5 bccc629ec82d45006faa7d2e7cfe900f files/bridge.conf 106
 MD5 ab89aefb5bcf4befdfb115be79139469 files/digest-bridge-utils-0.9.6-r1 69
 MD5 2247ac780a2897505fa460ba9b322d86 files/bridge.rc 939
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe4EwI1lqEGTUzyQRApDSAKC/epbcd5duUHr/yi1W4lh4CoV1mwCgofXD
-IQVNae918L144KsC+/klrRo=
-=QzcI
------END PGP SIGNATURE-----

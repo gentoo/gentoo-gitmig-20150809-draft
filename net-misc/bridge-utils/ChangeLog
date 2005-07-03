@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.20 2005/05/06 14:37:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.21 2005/07/03 01:24:30 robbat2 Exp $
+
+  02 Jul 2005; Robin H. Johnson <robbat2@gentoo.org>
+  bridge-utils-1.0.6.ebuild:
+  Add ~amd64 to newest ebuild since it seems to exist on an old one only.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> bridge-utils-1.0.6.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.
