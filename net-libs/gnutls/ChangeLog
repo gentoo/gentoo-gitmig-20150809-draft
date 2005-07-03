@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.71 2005/06/21 11:46:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.72 2005/07/03 21:20:17 hardave Exp $
+
+  03 Jul 2005; Hardave Riar <hardave@gentoo.org> gnutls-1.0.25.ebuild,
+  gnutls-1.2.3.ebuild:
+  Stable on mips, bug #90726.
 
   21 Jun 2005; Daniel Black <dragonheart@gentoo.org> gnutls-1.0.25.ebuild,
   gnutls-1.2.3.ebuild, gnutls-1.2.3-r1.ebuild, gnutls-1.2.4.ebuild:
