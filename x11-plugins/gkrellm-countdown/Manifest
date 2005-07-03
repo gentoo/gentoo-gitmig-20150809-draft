@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 83b03ef5912571ef477e92f0e0093a73 ChangeLog 433
-MD5 654919fc3c71adcba88654d7542d5ef8 gkrellm-countdown-0.1.1.ebuild 644
+MD5 26b42ae03022e674177103d153205f8a ChangeLog 526
+MD5 35d42f3031eb3bbc18734e19d17f011a gkrellm-countdown-0.1.1.ebuild 647
 MD5 97ed0d868abde3771195ebf5fac34312 metadata.xml 230
 MD5 21176a0ec04e09afa900454be625e08f files/digest-gkrellm-countdown-0.1.1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxw3gI7fK2cqeyXkRAqiKAJ9EyrtyS6EPgcw8Nk4lYhSV7eamRwCfXQcn
-wu8Z3AdK3UZwSZrfv+r7j7I=
-=QU+s
------END PGP SIGNATURE-----
