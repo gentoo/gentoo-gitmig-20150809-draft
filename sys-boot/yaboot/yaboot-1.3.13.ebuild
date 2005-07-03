@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.13.ebuild,v 1.4 2005/06/19 11:12:11 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.13.ebuild,v 1.5 2005/07/03 13:14:24 hansmi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://penguinppc.org/projects/yaboot/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc -x86 -amd64 -alpha -hppa -mips -sparc -ppc64"
+KEYWORDS="-* ppc -ppc64"
 IUSE=""
 
 DEPEND="sys-apps/powerpc-utils
