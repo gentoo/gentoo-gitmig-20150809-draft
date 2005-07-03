@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/re2c-0.9.3.ebuild,v 1.4 2005/07/03 18:30:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/re2c-0.9.7.ebuild,v 1.1 2005/07/03 18:30:42 robbat2 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-util/byacc-1.9"

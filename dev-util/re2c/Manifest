@@ -1,16 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 540a60d3b00edb236fa134b7b13d99b9 ChangeLog 1451
+MD5 9209d95fc795931da6f2683ed5dd9e07 re2c-0.9.3.ebuild 706
+MD5 16ed46fa3b71e457a7503764e630f165 re2c-0.9.7.ebuild 707
 MD5 d79a5160c7498b6fb45dd46b4ce5b1a1 re2c-0.9.1.ebuild 774
-MD5 d14061886b9569106cf6149ff4788fc1 re2c-0.9.3.ebuild 705
-MD5 9ab079edcf8f22efe343fb3b1c4722b4 files/0.9.1-patch.gz 1466
+MD5 83bbcedeb79ef422112682a16a09e329 ChangeLog 1706
+MD5 342915f70ca37ac7f9b27c0dd26350c1 metadata.xml 283
 MD5 63995d480a554e62b5d950e649397cea files/digest-re2c-0.9.1 62
 MD5 7a14f80c1e008a42c699a8899bd290cc files/digest-re2c-0.9.3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBU2OBHTu7gpaalycRAswNAJ4rouropBbIaiTQPs7WwPXul0a+uACg0H3B
-Cc6oy+Dk0iU3QxB/KV+cxrk=
-=E6YC
------END PGP SIGNATURE-----
+MD5 3687da5d2f47594ae13ae7ead7001a81 files/digest-re2c-0.9.7 62
+MD5 9ab079edcf8f22efe343fb3b1c4722b4 files/0.9.1-patch.gz 1466
