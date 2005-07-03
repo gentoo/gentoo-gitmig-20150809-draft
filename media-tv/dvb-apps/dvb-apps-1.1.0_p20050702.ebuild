@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvb-apps/dvb-apps-1.1.0_p20050702.ebuild,v 1.1 2005/07/03 12:18:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvb-apps/dvb-apps-1.1.0_p20050702.ebuild,v 1.2 2005/07/03 12:33:25 zzam Exp $
 
 
 inherit eutils
@@ -43,7 +43,7 @@ src_install()
 
 	dodoc README TODO INSTALL
 	newdoc util/scan/README README.dvbscan
-	newdoc util/szap/READEM README.zap
+	newdoc util/szap/README README.zap
 	newdoc util/av7110_loadkeys/README README.av7110_loadkeys
 
 	use usb && newdoc util/ttusb_dec_reset/READEM README.ttusb_dec_reset
