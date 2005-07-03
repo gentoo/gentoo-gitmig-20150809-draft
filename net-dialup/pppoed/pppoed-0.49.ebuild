@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.49.ebuild,v 1.1 2005/04/16 16:20:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.49.ebuild,v 1.2 2005/07/03 12:21:36 mrness Exp $
 
 inherit linux-info eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.furryterror.org/~afong/pppoe/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc"

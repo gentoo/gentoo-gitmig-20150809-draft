@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 4f05643ee9eae2c7916be06892680f18 pppoed-0.48_beta1-r1.ebuild 822
-MD5 f3fef757fb564d638a13649820bc815e pppoed-0.49.ebuild 1087
-MD5 7c9c5faae8ef745b95cceafd69b155e9 ChangeLog 1368
+MD5 97ef297c71ab3b5c3df96801a32020cf pppoed-0.49.ebuild 1086
+MD5 88fe51f0727fa8f6f3221a4ea32dd6ae ChangeLog 1454
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 21fa57e8741b20eece9fcddbe09e6179 files/digest-pppoed-0.49 63
 MD5 a943a082b47d10b696fc4ae6fffd66a0 files/pppoed-0.48_beta1-gcc-3.3.patch 1073
@@ -12,7 +12,7 @@ MD5 e6638bf000c200f77ee828929b2e1dbd files/pppoed-0.49-gcc-3.3.patch 1014
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCYTtqjiC39V7gKu0RAmIqAKCu0BbuDNHF0PvoukDmxAre0jfkawCgvgdp
-3JDHjL1F8CcUEKOX4Tt5qzo=
-=fB+w
+iD8DBQFCx9hlNSP4Vda7IdsRAvEeAJ4qBd8vx1cPTIpwJUpTFAPSSEd9SACfWh1y
+0eKzkBzFSgclOmfs/IncJ/g=
+=m9Hl
 -----END PGP SIGNATURE-----
