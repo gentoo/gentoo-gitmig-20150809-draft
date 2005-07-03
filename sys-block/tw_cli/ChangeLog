@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/tw_cli
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.5 2005/05/03 09:54:53 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.6 2005/07/03 18:12:23 robbat2 Exp $
+
+*tw_cli-9.2 (03 Jul 2005)
+
+  03 Jul 2005; Robin H. Johnson <robbat2@gentoo.org> +tw_cli-9.2.ebuild:
+  Upstream now has version numbers on tarballs! Bug #60689.
 
   03 May 2005; Herbie Hopkins <herbs@gentoo.org> tw_cli-2.00.00.042.ebuild:
   Stable on amd64 wrt bug #90985
