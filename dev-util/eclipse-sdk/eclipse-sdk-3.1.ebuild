@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.ebuild,v 1.1 2005/07/03 17:48:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.ebuild,v 1.2 2005/07/03 18:08:58 karltk Exp $
 
 inherit eutils java-utils
 
@@ -40,6 +40,7 @@ pkg_setup() {
 
 	einfo "Checking for sufficient physical RAM"
 	check-ram
+	check-cflags
 
 	java-utils_setup-vm
 
@@ -360,3 +361,32 @@ function strip-docs() {
 function recompile-with-gcj() {
 	:;
 }
+
+function check-cflags() {
+
+	einfo "Checking for bad CFLAGS"
+
+	local badflags="-fomit-frame-pointer -msse2"
+	local error=false
+
+	for x in ${badflags} ; do
+		if [ ! -z "$(echo ${CFLAGS} | grep -- $x)" ] ; then
+			ewarn "Found offending option $x in your CFLAGS"
+			error=true
+		fi
+	done
+	if [ ${error} == "true" ]; then
+		echo
+		ewarn "One or more potentially gruesome CFLAGS detected. When you run into trouble,"
+		ewarn "please edit /etc/make.conf and remove all offending flags, then recompile"
+		ewarn "Eclipse and all its dependencies before submitting a bug report."
+		echo
+		ewarn "In particular, gtk+ is extremely sensitive to which which flags it was"
+		ewarn "compiled with."
+		echo
+		einfo "Tip: use equery depgraph \"=${PF}\" to list all dependencies."
+		echo
+		ebeep
+	fi
+}
+
