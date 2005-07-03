@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/files/ntlmaps.init,v 1.1 2005/04/22 19:15:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/files/ntlmaps.init,v 1.2 2005/07/03 08:57:13 mrness Exp $
 
 PID_FILE="/var/run/ntlmaps.pid"
 
@@ -13,8 +13,9 @@ start() {
 	ebegin "Starting ntlmaps"
 	touch ${PID_FILE}
 	chown nobody:nogroup ${PID_FILE}
-	start-stop-daemon --quiet --start --background --exec /usr/bin/python \
-		--make-pidfile --pidfile ${PID_FILE} --chuid nobody -- /usr/bin/ntlmaps < /dev/null && \
+	cd /var/log/ntlmaps && \
+		start-stop-daemon --quiet --start --background --exec /usr/bin/python \
+			--make-pidfile --pidfile ${PID_FILE} --chuid nobody -- /usr/bin/ntlmaps < /dev/null && \
 		sleep 1
 	eend $?
 }

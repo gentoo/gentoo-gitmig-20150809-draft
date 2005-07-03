@@ -1,0 +1,37 @@
+diff -Nru ntlmaps-0.9.9.5.orig/__init__.py ntlmaps-0.9.9.5/__init__.py
+--- ntlmaps-0.9.9.5.orig/__init__.py	2005-06-10 06:49:35.000000000 +0300
++++ ntlmaps-0.9.9.5/__init__.py	2005-07-03 11:07:15.434273296 +0300
+@@ -22,8 +22,7 @@
+ 
+ import os, sys
+ 
+-ntlmaps_dir = os.path.dirname(os.path.abspath(__file__))
+-ntlmaps_libdir = ntlmaps_dir + '/lib'
++ntlmaps_dir = '/usr/lib/ntlmaps'
+ sys.path.append(ntlmaps_libdir)
+ 
+ del os, sys
+diff -Nru ntlmaps-0.9.9.5.orig/main.py ntlmaps-0.9.9.5/main.py
+--- ntlmaps-0.9.9.5.orig/main.py	2005-06-16 13:03:15.000000000 +0300
++++ ntlmaps-0.9.9.5/main.py	2005-07-03 11:07:15.435273144 +0300
+@@ -18,17 +18,17 @@
+ # Free Software Foundation, Inc.,
+ # 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
+ #
+-import __init__
+-
+ import sys
+ 
++sys.path.append('/usr/lib/ntlmaps')
++
+ import server, config, config_affairs
+ 
+ 
+ #--------------------------------------------------------------
+ # config affairs
+ # look for default config name in lib/config.py
+-conf = config.read_config(config.findConfigFileNameInArgv(sys.argv, __init__.ntlmaps_dir+'/'))
++conf = config.read_config('/etc/ntlmaps/server.cfg')
+ 
+ conf['GENERAL']['VERSION'] = '0.9.9.5'
+ 
