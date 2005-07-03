@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.6.12.2_p2.ebuild,v 1.1 2005/07/01 19:15:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.6.12.2_p2.ebuild,v 1.2 2005/07/03 14:05:41 gmsoft Exp $
 
 ETYPE="sources"
 
 CKV="${PV/_*}"
 K_NOUSENAME=true
-#K_NOSETEXTRAVERSION=true
 inherit kernel-2
 
 KV_FULL=${CKV}-pa${PATCH_LEVEL}
@@ -36,7 +35,14 @@ src_unpack() {
 	fi
 
 	EXTRAVERSION=${KV_EXTRA}-pa${PATCH_LEVEL}
-	kernel-2_src_unpack
 
+	universal_unpack
+
+	unipatch  ${UNIPATCH_LIST}
+	unipatch  ${UNIPATCH_LIST_DEFAULT}
+
+	unpack_set_extraversion
+	unpack_fix_docbook
+	unpack_fix_install_path
 
 }
