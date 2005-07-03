@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.2.ebuild,v 1.1 2005/07/03 18:12:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.2.ebuild,v 1.2 2005/07/03 18:16:33 robbat2 Exp $
 
 #set
 DESCRIPTION="3ware Command Line Interface Tool"
@@ -17,12 +17,17 @@ DEPEND=""
 RDEPEND="virtual/libc"
 DOWNLOAD_URL_BASE="http://www.3ware.com/support/download_${PV}.asp?SNO="
 DOWNLOAD_URL="x86? (   ${DOWNLOAD_URL_BASE}499 )
-              amd64? ( ${DOWNLOAD_URL_BASE}501 )"
+			  amd64? ( ${DOWNLOAD_URL_BASE}501 )"
 MY_P="${PN}-linux-${ARCH/amd64/x86_64}-${PV}"
-SRC_URI="http://www.3ware.com/download/Escalade9000Series/${PV}/${MY_P}.tgz"
+SRC_URI="x86? ( http://www.3ware.com/download/Escalade9000Series/${PV}/${PN}-linux-x86-${PV}.tgz )
+		 amd64? ( http://www.3ware.com/download/Escalade9000Series/${PV}/${PN}-linux-x86_64-${PV}.tgz )"
 DOWNLOAD_URL_APP="http://www.3ware.com/support/dnload_agreeeng.asp?code=2&id=&softtype=CLI&os=Linux"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${MY_P}.tgz
+}
 
 supportedcards() {
 	einfo "This binary supports all current cards, including, but not"
