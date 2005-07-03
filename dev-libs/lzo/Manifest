@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ddb7f67c602c209bd5eb503fddda814f ChangeLog 2475
-MD5 a54cc36d61cdc487853f753089d96a78 lzo-1.08-r1.ebuild 1008
+MD5 e8a118436480823b1723ce004131e5b6 ChangeLog 2579
+MD5 23c6e385410aeb709e8e857ecf46f2a8 lzo-1.08-r1.ebuild 1008
 MD5 d8cac4801c5796251defedcf05bfe82e lzo-1.08.ebuild 751
 MD5 b435656ffac22c971cb79122f2ff2b9e lzo-2.00.ebuild 814
-MD5 f763da497cf176570db24ce14bcb8123 files/digest-lzo-2.00 60
 MD5 43fb13762383b572d22152f8815ea4a5 files/1.08-gcc3.patch 738
 MD5 b40c71f87f862f9f4491fd165379f23b files/digest-lzo-1.08 60
 MD5 b40c71f87f862f9f4491fd165379f23b files/digest-lzo-1.08-r1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvdwgmdTrptrqvGERAlVlAKCPmjyn+iuqOhSFOeiBESht/D787gCbBt4s
-pV90flACxY6eVF0RDLzEl90=
-=F8ne
------END PGP SIGNATURE-----
+MD5 f763da497cf176570db24ce14bcb8123 files/digest-lzo-2.00 60
