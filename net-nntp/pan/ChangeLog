@@ -1,6 +1,14 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.6 2005/04/30 16:09:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.7 2005/07/03 19:32:09 azarah Exp $
+
+*pan-0.14.2.91-r3 (03 Jul 2005)
+*pan-0.14.2-r1 (03 Jul 2005)
+
+  03 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/pan-0.14.2-update-desktop-file.patch, +pan-0.14.2-r1.ebuild,
+  +pan-0.14.2.91-r3.ebuild:
+  Install desktop file in new location, and add Categories entry, bug #97815.
 
 *pan-0.14.2.91-r2 (30 Apr 2005)
 

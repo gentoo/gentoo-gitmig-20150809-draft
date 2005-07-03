@@ -1,18 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6225c7c8a053c3b857b7b6ca504bd4f9 pan-0.14.2.ebuild 1388
 MD5 6ed7a7a5f6fad9864cd7c2f99c316db8 pan-0.14.2.91-r2.ebuild 1503
-MD5 2dab63376eceed1eff3cdb30d285e7b7 ChangeLog 7357
+MD5 46f15d3f60ab45741b8f5564e8bd1e9a ChangeLog 7648
+MD5 6225c7c8a053c3b857b7b6ca504bd4f9 pan-0.14.2.ebuild 1388
+MD5 fa3ef41f66f2528be36433103d3de8bb pan-0.14.2-r1.ebuild 1497
+MD5 087aeddbbb6077618899e307c8553b82 pan-0.14.2.91-r3.ebuild 1607
 MD5 b379ecb012e58dcb29c4feee0f5219f2 metadata.xml 180
+MD5 179a6776627498e226a1cc2d6bdc33d2 files/digest-pan-0.14.2-r1 64
+MD5 8ba6afcc31900a8353dc12ef62681f38 files/pan-0.14.2.91-gcc4-2.patch 698
 MD5 daf4b06f3fce576fbf35e97bcffa9305 files/pan-0.14.2.91-gcc4.patch 698
+MD5 bc715242bd05043ca432fb54b03e2fdf files/digest-pan-0.14.2.91-r3 67
+MD5 daf054bb0ce6c974d349b379460e882b files/pan-0.14.2-update-desktop-file.patch 1028
 MD5 bc715242bd05043ca432fb54b03e2fdf files/digest-pan-0.14.2.91-r2 67
 MD5 179a6776627498e226a1cc2d6bdc33d2 files/digest-pan-0.14.2 64
-MD5 8ba6afcc31900a8353dc12ef62681f38 files/pan-0.14.2.91-gcc4-2.patch 698
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCc83JI1lqEGTUzyQRAmjzAJwO1JJt7t8ZOI7JEnOor2Q2JTwY5wCfZ0Qg
-kUBxDaQ9PinPnda/n6c3QCg=
-=9vaY
+iD8DBQFCyD2x1ZcsMnZjRyIRAkgqAKCTsdmijtpaz4A7riOdALCOpBbSGwCeLKHz
+w9mbxSOVOu1ESIn2BiTZIeQ=
+=kiA3
 -----END PGP SIGNATURE-----
