@@ -1,3 +1,0 @@
-amanda	dgram	udp	wait	amanda	/usr/libexec/amandad	amandad
-amandaidx	stream	tcp	nowait	amanda	/usr/libexec/amindexd	amindexd
-amidxtape	stream	tcp	nowait	amanda	/usr/libexec/amidxtaped	amidxtaped
