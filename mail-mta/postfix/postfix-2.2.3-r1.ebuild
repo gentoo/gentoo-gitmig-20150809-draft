@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.3-r1.ebuild,v 1.2 2005/06/18 23:18:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.3-r1.ebuild,v 1.3 2005/07/04 14:37:26 ticho Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic mailer pam
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mbox nis vda selinux hardened"
@@ -239,6 +239,15 @@ src_install () {
 	if use mailwrapper ; then
 		mv "${D}/usr/sbin/sendmail" "${D}/usr/sbin/sendmail.postfix"
 		rm "${D}/usr/bin/mailq" "${D}/usr/bin/newaliases"
+
+		mv "${D}/usr/share/man/man1/sendmail.1" \
+			"${D}/usr/share/man/man1/sendmail-postfix.1"
+		mv "${D}/usr/share/man/man1/newaliases.1" \
+			"${D}/usr/share/man/man1/newaliases-postfix.1"
+		mv "${D}/usr/share/man/man1/mailq.1" \
+			"${D}/usr/share/man/man1/mailq-postfix.1"
+		mv "${D}/usr/share/man/man5/aliases.5" \
+			"${D}/usr/share/man/man5/aliases-postfix.5"
 		mailer_install_conf
 	else
 		# Provide another link for legacy FSH.

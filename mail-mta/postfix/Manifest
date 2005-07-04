@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8529168be77f27c39de88158d39b0ce0 postfix-2.2.3-r1.ebuild 10036
 MD5 d2f97ac7ba19997b4e588b28009d684d postfix-2.2.1.ebuild 9296
 MD5 17007a983ae776242105a163124927e4 postfix-2.2.3.ebuild 9712
@@ -26,3 +29,10 @@ MD5 fd01735093dde1691a849d9bf002bf5c files/mailer.conf 408
 MD5 a41e637c45f2bbc39a37d8f704722164 files/postfix.rc6.2.2.3 633
 MD5 8d7d372a5e867ebc0b1644ee19105e4e files/postfix.rc6.2.2.4 637
 MD5 502e444ec6b9d6fb9bbef3bb0f5e284a files/smtp.pam 254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCyUnAQlM6RnzZP+IRAq+1AJ9tlrUKO8jhLnFPg6NBzIBag7rKwACgiPOb
+doQXXHm4gSmmESeD1udmWQE=
+=X+yL
+-----END PGP SIGNATURE-----
