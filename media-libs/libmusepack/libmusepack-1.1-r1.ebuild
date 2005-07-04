@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmusepack/libmusepack-1.1-r1.ebuild,v 1.2 2005/05/28 19:52:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmusepack/libmusepack-1.1-r1.ebuild,v 1.3 2005/07/04 20:10:26 gustavoz Exp $
 
 DESCRIPTION="Musepack decoder library"
 HOMEPAGE="http://www.musepack.net"
@@ -8,7 +8,7 @@ SRC_URI="http://files.musepack.net/source/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="static"
 
 src_compile() {
