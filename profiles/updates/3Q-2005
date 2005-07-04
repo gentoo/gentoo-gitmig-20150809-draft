@@ -16,3 +16,4 @@ move net-libs/nss_ldap sys-auth/nss_ldap
 move app-admin/amanda app-backup/amanda
 move app-admin/bacula app-backup/bacula
 move app-arch/flexbackup app-backup/flexbackup
+move app-arch/hdup app-backup/hdup
