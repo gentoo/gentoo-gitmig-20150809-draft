@@ -1,5 +1,15 @@
-MD5 f0d9e011f2c404c509d7367b31455e9e autoconf-archive-2005.04.18.ebuild 882
-MD5 6b8557d5fca6775d99729d69c4fdbadf ChangeLog 554
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e1573f0a9c30b5ea3cdaa8d38e0e814 autoconf-archive-2005.05.31.ebuild 882
-MD5 b85611ba16b0e6db771b88430aeb3024 files/digest-autoconf-archive-2005.04.18 80
+MD5 cf20175d1b78535f0216991977239a74 autoconf-archive-2005.06.17.ebuild 882
+MD5 c60b2b7274e55222e27e2b652fc6cdf0 ChangeLog 727
 MD5 66c2d3c224321d588b36daff5299fc73 files/digest-autoconf-archive-2005.05.31 80
+MD5 d92a6c79beaad99c575eec23923c5bd5 files/digest-autoconf-archive-2005.06.17 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCyapRgIKl8Uu19MoRAieLAJ4tZZQiZoWn1OxA8xkbcDrob4el4wCcDkBh
+rj44dCV9v4pnVPvDC4q213c=
+=GW+H
+-----END PGP SIGNATURE-----
