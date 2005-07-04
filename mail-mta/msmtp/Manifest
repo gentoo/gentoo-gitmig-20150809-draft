@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fba83f0ac53b288f89589fd3329e1525 ChangeLog 6506
 MD5 f5faaeb357f830f0111c00cba5cb7a81 msmtp-1.4.1.ebuild 1582
-MD5 a0ee800c0c272bc0e3383429cca3d858 msmtp-1.4.1-r1.ebuild 1452
-MD5 570c3b91cefa46a71ea570343906ccc3 metadata.xml 247
+MD5 7c414a2b246acc8eee7a1d8f3edb9078 msmtp-1.4.1-r1.ebuild 1443
 MD5 5c397704ff67b621ff79fc18fd846e0b msmtp-1.4.0.ebuild 1577
+MD5 fba83f0ac53b288f89589fd3329e1525 ChangeLog 6506
+MD5 570c3b91cefa46a71ea570343906ccc3 metadata.xml 247
 MD5 76f50a1c193917903564978a2bfc016a msmtp-1.4.0-r1.ebuild 1452
 MD5 5c7a9806b21c53c30d4c0181956371c9 files/digest-msmtp-1.4.0-r1 64
-MD5 5c7a9806b21c53c30d4c0181956371c9 files/digest-msmtp-1.4.0 64
 MD5 d48ce2f5a0c821e44160dcaa26e0dff8 files/digest-msmtp-1.4.1-r1 64
-MD5 d48ce2f5a0c821e44160dcaa26e0dff8 files/digest-msmtp-1.4.1 64
 MD5 25a1f06b39d5ecd451afeccad46678c6 files/mailer.conf 279
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCl1KbCHk4+ZoBpvsRAlIUAJ0SMED1wsaNqCbdkDyIQYGVLPhl8gCfW9Kq
-piks5vdhQG692Oos6Ufx3us=
-=DvZO
------END PGP SIGNATURE-----
+MD5 5c7a9806b21c53c30d4c0181956371c9 files/digest-msmtp-1.4.0 64
+MD5 d48ce2f5a0c821e44160dcaa26e0dff8 files/digest-msmtp-1.4.1 64

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r1.ebuild,v 1.1 2005/04/25 20:36:38 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r1.ebuild,v 1.2 2005/07/04 14:32:11 ticho Exp $
 
 inherit eutils mailer
 
@@ -15,8 +15,6 @@ IUSE="ssl ipv6 md5sum"
 
 DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
-
-S=${WORKDIR}/ssmtp-2.61
 
 src_compile() {
 	econf \
@@ -55,14 +53,11 @@ src_install() {
 
 	if use mailwrapper ; then
 		dosym /usr/sbin/ssmtp /usr/bin/sendmail.ssmtp
-		dosym /usr/sbin/ssmtp /usr/bin/mailq.ssmtp
-		dosym /usr/sbin/ssmtp /usr/bin/newaliases.ssmtp
 		mailer_install_conf
 	else
-		dosym /usr/sbin/ssmtp /usr/sbin/sendmail
 		dosym /usr/sbin/ssmtp /usr/lib/sendmail
 		dosym /usr/sbin/ssmtp /usr/bin/sendmail
-		dosym /usr/sbin/ssmtp /usr/sbin/mailq
-		dosym /usr/sbin/ssmtp /usr/sbin/newaliases
+		dosym /usr/sbin/ssmtp /usr/bin/mailq
+		dosym /usr/sbin/ssmtp /usr/bin/newaliases
 	fi
 }

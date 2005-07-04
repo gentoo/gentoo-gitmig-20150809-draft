@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.1-r1.ebuild,v 1.1 2005/05/27 16:00:40 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.1-r1.ebuild,v 1.2 2005/07/04 14:34:27 ticho Exp $
 
 inherit mailer
 
@@ -44,7 +44,7 @@ src_install () {
 	if use mailwrapper ; then
 		mailer_install_conf
 	else
-		dodir /usr/sbin /usr/lib
+		dodir /usr/sbin
 		dosym /usr/bin/msmtp /usr/sbin/sendmail || die "dosym failed"
 	fi
 
