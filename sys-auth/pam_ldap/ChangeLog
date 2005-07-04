@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.2 2005/07/03 19:09:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.3 2005/07/04 21:07:13 robbat2 Exp $
+
+  04 Jul 2005; Robin H. Johnson <robbat2@gentoo.org> pam_ldap-176-r1.ebuild,
+  pam_ldap-178-r1.ebuild:
+  Change DEP on openldap to ensure fixed version is used.
 
 *pam_ldap-178-r1 (03 Jul 2005)
 *pam_ldap-176-r1 (03 Jul 2005)
