@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.3.ebuild,v 1.2 2005/06/26 09:47:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.3.ebuild,v 1.3 2005/07/04 22:49:47 gustavoz Exp $
 
 inherit gnome2 eutils
 
@@ -55,6 +55,7 @@ DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
 
 # gstreamer is default backend
 use xine || G2CONF="${G2CONF} --enable-gstreamer"
+use sparc && G2CONF="${G2CONF} --enable-gstreamer"
 
 # gtk only support broken
 #use gnome \
