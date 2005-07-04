@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.ebuild,v 1.2 2005/07/03 18:08:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1.ebuild,v 1.3 2005/07/04 21:39:09 karltk Exp $
 
 inherit eutils java-utils
 
@@ -8,7 +8,7 @@ MY_A="eclipse-sourceBuild-srcIncluded-3.1.zip"
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/eclipse/downloads/drops/R-3.1-200506271435/${MY_A}"
-IUSE="gnome mozilla firefox gcj nosrc nodoc atk"
+IUSE="gnome mozilla firefox nosrc nodoc atk" #gcj
 SLOT="3.1"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86 ~ppc ~amd64"
@@ -19,8 +19,9 @@ RDEPEND="
 	mozilla? ( >=www-client/mozilla-1.7 )
 	atk? ( >=dev-libs/atk-1.6 )
 	firefox? ( >=www-client/mozilla-firefox-1.0.2 )
-	gcj? ( >=sys-devel/gcc-4.0.0_beta20050305 )
 	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )"
+
+#	gcj? ( >=sys-devel/gcc-4.0.0_beta20050305 )
 
 DEPEND="${RDEPEND}
 	>=dev-java/ant-1.6.2
