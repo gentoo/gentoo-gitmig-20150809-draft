@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.22 2005/07/03 11:54:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.23 2005/07/04 03:54:16 superlag Exp $
+
+  04 Jul 2005; Aaron Kulbe <superlag@gentoo.org> wordpress-1.5.1.3.ebuild:
+  Stable on amd64 and x86.
 
   03 Jul 2005; Michael Hanselmann <hansmi@gentoo.org>
   wordpress-1.5.1.3.ebuild:
