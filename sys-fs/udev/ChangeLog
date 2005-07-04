@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.113 2005/07/03 07:11:11 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.114 2005/07/04 14:52:42 gustavoz Exp $
+
+  04 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> udev-058.ebuild:
+  Stable on sparc
 
 *udev-060 (03 Jul 2005)
 
