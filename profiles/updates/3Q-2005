@@ -29,3 +29,4 @@ move app-cdr/cdbkup app-backup/cdbkup
 move sys-apps/reoback app-backup/reoback
 move app-arch/dar app-backup/dar
 move app-arch/kdar app-backup/kdar
+move x11-misc/yawmppp x11-plugins/yawmppp
