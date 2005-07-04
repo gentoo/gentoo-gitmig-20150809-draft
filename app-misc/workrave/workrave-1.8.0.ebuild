@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.0.ebuild,v 1.1 2005/07/03 14:13:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.0.ebuild,v 1.2 2005/07/04 19:04:19 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 # Local USE flags: distribution
-IUSE="dbus debug gnome kde nls xml2 distribution"
+IUSE="dbus debug gnome nls xml2 distribution"
 
 # KDE support is still untested, please feel free to report bugs/improvements
 # (leonardop@gentoo.org)
@@ -28,12 +28,12 @@ RDEPEND=">=dev-libs/glib-2
 		>=gnome-base/libbonobo-2
 		>=gnome-base/orbit-2.8.3
 	)
-	kde? ( >=x11-libs/qt-3 )
 	>=dev-libs/libsigc++-2.0
 	distribution? ( >=net-libs/gnet-2 )
 	dbus? ( >=sys-apps/dbus-0.22 )
 	nls? ( sys-devel/gettext )
 	xml2? ( dev-libs/gdome2 )"
+#	kde? ( >=x11-libs/qt-3 )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -43,7 +43,7 @@ DOCS="ABOUT-NLS AUTHORS ChangeLog NEWS README"
 
 G2CONF="${G2CONF} --enable-gconf $(use_enable distribution) $(use_enable nls) \
 $(use_enable xml2 xml) $(use_enable gnome) $(use_enable gnome gnomemm) \
-$(use_enable dbus) $(use_enable kde)"
+$(use_enable dbus)" # $(use_enable kde)
 
 src_unpack() {
 	unpack ${A}
