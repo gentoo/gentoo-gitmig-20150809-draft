@@ -1,9 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.73 2005/07/04 14:37:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.74 2005/07/04 14:38:27 ticho Exp $
 
   04 Jul 2005; Andrej Kacian <ticho@gentoo.org> postfix-2.2.3-r1.ebuild:
-  Added compatibility with mailer-config-2.0 - manpages. Bug #97589.
+  Added compatibility with mailer-config-0.2 - manpages. Bug #97589.
 
 *postfix-2.2.4 (29 Jun 2005)
 
