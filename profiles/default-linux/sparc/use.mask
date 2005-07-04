@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.35 2005/06/30 19:14:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.36 2005/07/04 23:46:08 weeve Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -37,6 +37,7 @@ uml
 voodoo3
 wavelan
 wifi
+xine
 xvmc
 
 # And arch keyword flags that don't work
