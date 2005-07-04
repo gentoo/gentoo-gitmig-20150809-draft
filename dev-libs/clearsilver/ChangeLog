@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.9 2005/04/11 12:16:59 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.10 2005/07/04 22:40:22 dju Exp $
+
+*clearsilver-0.9.14 (04 Jul 2005)
+
+  04 Jul 2005; <dju@gentoo.org> metadata.xml, +clearsilver-0.9.14.ebuild:
+  Version bump, closing bug #71302. Disable apache 1 module and java support.
+  Cleaned up the ebuild and fixed the neo_cgi.so installation directory.
+  Assigned myself as the maintainer.
 
   11 Apr 2005; Christian Parpart <trapni@gentoo.org>
   clearsilver-0.9.7.ebuild:
