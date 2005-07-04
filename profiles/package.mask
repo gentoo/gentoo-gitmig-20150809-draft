@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4156 2005/07/04 06:47:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4157 2005/07/04 12:01:36 ka0ttic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -102,7 +102,6 @@ gnome-extra/gnobog
 
 # Aaron Walker <ka0ttic@gentoo.org> (20 Jun 2005)
 # testing releases/cvs snaps
-=net-analyzer/net-snmp-5.1.3_pre*
 =net-analyzer/net-snmp-5.3*
 
 # Marcelo Goes <vanquirius@gentoo.org> (19 Jun 2005)
