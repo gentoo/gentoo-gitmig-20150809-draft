@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.0.023.ebuild,v 1.1 2005/07/04 19:58:22 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.0.023.ebuild,v 1.2 2005/07/04 21:55:23 kugelfang Exp $
 
 inherit rpm
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
 LICENSE="icc-9.0"
 RDEPEND=">=sys-libs/glibc-2.2.5"
 SLOT="9.0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="nostrip fetch"
 S="${WORKDIR}/l_cc_c_${PV}"
@@ -23,14 +23,17 @@ src_unpack() {
 	# The tarball contains rpms for multiple arches, and a lot of
 	# auxiliary rpms common across arches. We must throw away 
 	# the arch we're not.
-	if [ "$ARCH" = "x86" ]
-	then
-		rm -f intel-*.em64t.rpm
-		rm -f intel-*.ia64.rpm
-	else
-		rm -f intel-*.em64t.rpm
-		rm -f intel-*.i386.rpm
-	fi
+	case ${ARCH} in
+		amd64)
+			rm -f intel-*.{i386,ia64}.rpm
+			;;
+		ia64)
+			rm -f intel-*.{em64t,i386}.rpm
+			;;
+		x86)
+			rm -f intel-*.{em64t,ia64}.rpm
+			;;
+	esac
 
 	for x in *.rpm
 	do
@@ -51,7 +54,7 @@ src_compile() {
 	eval `grep "^[ ]*PACKAGEID=" ${S}/install.sh`
 
 	# From UNTAG_SUPPORT() in 'install.sh'
-	SUPPORTFILE=${S}/opt/intel/cc/9.0/doc/csupport
+	SUPPORTFILE=${S}/opt/intel/cc*/9.0/doc/csupport
 	if [ -f ${SUPPORTFILE} ]
 	then
 		einfo "Untagging: ${SUPPORTFILE}"
@@ -61,7 +64,7 @@ src_compile() {
 	fi
 
 	# From UNTAG_SUPPORT_IDB() in 'install.sh'
-	SUPPORTFILE=${S}/opt/intel/idb/9.0/doc/idbsupport
+	SUPPORTFILE=${S}/opt/intel/idb*/9.0/doc/idbsupport
 	if [ -f ${SUPPORTFILE} ]
 	then
 		einfo "Untagging: ${SUPPORTFILE}"
@@ -71,9 +74,9 @@ src_compile() {
 	fi
 
 	# These should not be executable
-	find "${S}/opt/intel/cc/9.0/"{doc,man,include} -type f -exec chmod -x "{}" ";"
-	find "${S}/opt/intel/cc/9.0/lib" -name \*.a -exec chmod -x "{}" ";"
-	find "${S}/opt/intel/idb/9.0/"{doc,man} -type f -exec chmod -x "{}" ";"
+	find "${S}/opt/intel/cc*/9.0/"{doc,man,include} -type f -exec chmod -x "{}" ";"
+	find "${S}/opt/intel/cc*/9.0/lib" -name \*.a -exec chmod -x "{}" ";"
+	find "${S}/opt/intel/idb*/9.0/"{doc,man} -type f -exec chmod -x "{}" ";"
 }
 
 src_install () {
@@ -81,8 +84,8 @@ src_install () {
 	dodoc ${S}/lgpltext
 	dodoc ${S}/clicense
 	dodir ${instdir}
-	cp -a opt/intel/cc/9.0/* ${D}/${instdir}
-	cp -a opt/intel/idb/9.0/* ${D}/${instdir}
+	cp -a opt/intel/cc*/9.0/* ${D}/${instdir}
+	cp -a opt/intel/idb*/9.0/* ${D}/${instdir}
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PVR}/05icc-ifc || die
 	exeinto ${instdir}/bin
