@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r1.ebuild,v 1.1 2005/07/03 15:01:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r1.ebuild,v 1.2 2005/07/04 07:45:22 dholm Exp $
 
 inherit eutils versionator multilib
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/${MY_P}.tar.gz
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="nls"
 
 # awk and make ARE needed at runtime!
