@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/lfpfonts-var
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-var/ChangeLog,v 1.7 2005/07/02 07:14:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-var/ChangeLog,v 1.8 2005/07/04 14:03:26 gustavoz Exp $
+
+  04 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  lfpfonts-var-0.84.ebuild:
+  Stable on sparc
 
   02 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> -lfpfonts-var-0.83.ebuild,
   lfpfonts-var-0.84.ebuild:
