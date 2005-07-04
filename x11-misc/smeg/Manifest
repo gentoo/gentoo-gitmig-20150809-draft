@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da5471fc7bee1e1869aeb6c53c590a42 smeg-0.7.5.ebuild 750
-MD5 a4467cba1c37e82280d4b357afe7d898 ChangeLog 610
+MD5 81f8041cfc3ccb59eb799833e6763efc smeg-0.7.5.ebuild 774
+MD5 314f1807ffe10dca5fa8eb458e1b9a9a ChangeLog 705
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 9ad677b6f5b1420bbcdd988a09e15b9c files/digest-smeg-0.7.5 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCph+mevY57Fted3ERAhYxAJ9H56zWZijxuHWE1BAl0HBleNpYpACgnZ7v
-LDg3i7nPi6wnZtCrSwmE2To=
-=6Ebk
------END PGP SIGNATURE-----
