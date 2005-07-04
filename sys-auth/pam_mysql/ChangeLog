@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.1 2005/07/02 14:24:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.2 2005/07/04 14:20:50 azarah Exp $
+
+*pam_mysql-0.6.0 (04 Jul 2005)
+
+  04 Jul 2005; Martin Schlemmer <azarah@gentoo.org> +pam_mysql-0.6.0.ebuild:
+  Update version.  Hopefully fixes bug #49854.
 
   02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   +pam_mysql-0.4.7.ebuild, +pam_mysql-0.5.ebuild:

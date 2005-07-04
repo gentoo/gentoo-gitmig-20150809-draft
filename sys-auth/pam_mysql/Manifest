@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 41780f7026fe972061d52b09ab2745b9 ChangeLog 1163
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 4512d112bdc2ac23ec9259b78725d863 ChangeLog 1317
+MD5 2a9f15b0d1078d1b84145ff885733d46 pam_mysql-0.6.0.ebuild 722
 MD5 69c69f7906d1891f12bd71c7db7aca12 pam_mysql-0.4.7.ebuild 884
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 7b9098d4646534b0b52f839218ad8b8e pam_mysql-0.5.ebuild 981
-MD5 321f5b5eb63426fa78d6f069aeb5e1d5 files/digest-pam_mysql-0.4.7 65
 MD5 a7e0e0308d553dc4013157deceb6bb21 files/digest-pam_mysql-0.5 64
+MD5 321f5b5eb63426fa78d6f069aeb5e1d5 files/digest-pam_mysql-0.4.7 65
+MD5 f4477f9b03e2fe4216502e43ae443b98 files/digest-pam_mysql-0.6.0 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCxqOzj5H05b2HAEkRAhZZAJ9SNzSxEr/jVjqGmst3meW1bI7OdwCdEXzy
-mYJO2qilhh+ALvOjKxCpR6w=
-=Gs5B
+iD8DBQFCyUY51ZcsMnZjRyIRAt7vAJ90i5eh8XBxZW0Ddcic6G45D6yPjgCfdrut
+cLloUDu1XGBMlkB9/iG7E2I=
+=0fOT
 -----END PGP SIGNATURE-----
