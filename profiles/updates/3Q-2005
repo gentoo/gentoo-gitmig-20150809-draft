@@ -27,3 +27,4 @@ move sys-apps/mondo-rescue app-backup/mondo-rescue
 move app-admin/furball app-backup/furball
 move app-cdr/cdbkup app-backup/cdbkup
 move sys-apps/reoback app-backup/reoback
+move app-arch/dar app-backup/dar
