@@ -23,5 +23,6 @@ move app-arch/tob app-backup/tob
 move net-misc/duplicity app-backup/duplicity
 move net-misc/rdiff-backup app-backup/rdiff-backup
 move net-misc/rsnapshot app-backup/rsnapshot
+move sys-apps/mondo-rescue app-backup/mondo-rescue
 move app-admin/furball app-backup/furball
 move app-cdr/cdbkup app-backup/cdbkup
