@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.53 2005/07/03 13:19:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.54 2005/07/04 13:45:29 matsuu Exp $
+
+*anthy-6700b (04 Jul 2005)
+
+  04 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> -anthy-5100b.ebuild,
+  -anthy-5500.ebuild, +anthy-6700b.ebuild:
+  Version bumped.
+  Removed old versions.
 
   03 Jul 2005; Michael Hanselmann <hansmi@gentoo.org> anthy-6300.ebuild:
   Stable on ppc.

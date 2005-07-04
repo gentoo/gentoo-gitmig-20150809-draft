@@ -1,22 +1,34 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-5100b.ebuild,v 1.13 2005/01/01 14:25:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-6700b.ebuild,v 1.1 2005/07/04 13:45:29 matsuu Exp $
 
-inherit elisp-common
+inherit elisp-common eutils
 
-IUSE="emacs"
+IUSE="emacs ucs4"
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/8610/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/15414/${P}.tar.gz"
 
 RESTRICT="nomirror"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc alpha amd64 ~sparc ppc64 ia64"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 SLOT="0"
 
 DEPEND="emacs? ( virtual/emacs )
 	!app-i18n/anthy-ss"
+
+MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	if has_version '>=sys-devel/gcc-3.4' ; then
+		epatch ${FILESDIR}/anthy-mkdic-gcc34.patch
+	fi
+}
 
 src_compile() {
 
@@ -24,19 +36,18 @@ src_compile() {
 	local cannadicdir=/var/lib/canna/dic/canna
 
 	use emacs || myconf="EMACS=no"
+	use ucs4 && myconf="${myconf} --enable-ucs4"
 
 	if has_version 'app-dicts/canna-zipcode'; then
 		einfo "Adding zipcode.t and jigyosyo.t to anthy.dic."
 		cp ${cannadicdir}/{zipcode,jigyosyo}.t mkanthydic
-		sed -i -e "/^EXTRA_DICS/s|$| zipcode.t jigyosyo.t|" \
-			mkanthydic/Makefile.{in,am}
+		sed -i -e "/^EXTRA_DICS/s|$| zipcode.t jigyosyo.t|" mkanthydic/Makefile.in
 	fi
 
 	if has_version 'app-dicts/canna-2ch'; then
 		einfo "Adding nichan.ctd to anthy.dic."
 		cp ${cannadicdir}/nichan.ctd mkanthydic/2ch.t
-		sed -i -e "/^EXTRA_DICS/s|$| 2ch.t|" \
-			mkanthydic/Makefile.{in,am}
+		sed -i -e "/^EXTRA_DICS/s|$| 2ch.t|" mkanthydic/Makefile.in
 	fi
 
 	econf ${myconf} || die
