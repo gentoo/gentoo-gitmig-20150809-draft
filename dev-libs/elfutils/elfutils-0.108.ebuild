@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.108.ebuild,v 1.12 2005/06/03 19:15:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.108.ebuild,v 1.13 2005/07/04 06:58:36 vapier Exp $
 
 inherit eutils
 
@@ -17,10 +17,11 @@ IUSE="nls"
 # environment (xrealloc errs), but we need to ensure that glibc never
 # gets pulled in as a dep since this package does not respect virtual/libc
 DEPEND="!elibc_uclibc? ( >=sys-libs/glibc-2.3.2 )
-	sys-devel/gettext
+	nls? ( sys-devel/gettext )
 	>=sys-devel/binutils-2.14.90.0.6
 	>=sys-devel/gcc-3.2.1-r6
 	!dev-libs/libelf"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
