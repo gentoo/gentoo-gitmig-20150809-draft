@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96.ebuild,v 1.6 2005/05/30 19:58:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96.ebuild,v 1.7 2005/07/04 11:35:49 swegener Exp $
 
 inherit mount-boot eutils flag-o-matic gnuconfig toolchain-funcs
 
@@ -135,7 +135,7 @@ pkg_postinst() {
 
 	[[ -e /boot/grub/stage2 ]] && mv /boot/grub/stage2{,.old}
 
-	einfo "Copying files from /usr/lib/grub to /boot"
+	einfo "Copying files from /lib/grub and /usr/lib/grub to /boot"
 	for x in /lib/grub/*/* /usr/lib/grub/*/* ; do
 		[[ -f ${x} ]] && cp -p ${x} /boot/grub
 	done
