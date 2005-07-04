@@ -1,17 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 90d5b27f5bdf0c609345c61a0ca41612 dvenv-0.2.2.ebuild 693
-MD5 a6bf1a885f7d61164d522d96bb323b79 ChangeLog 1117
+MD5 eed7e835afad57ccb0dcd7940ce03189 dvenv-0.2.2-r2.ebuild 949
+MD5 dc4b943e89c28fe631fcedaffbb4c5bb ChangeLog 1514
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 f26d7d1c9b73e309e025f1157b9beab5 dvenv-0.2.2-r1.ebuild 899
-MD5 c42cc75097a337cb937538324a491c7f files/digest-dvenv-0.2.2-r1 63
+MD5 c42cc75097a337cb937538324a491c7f files/digest-dvenv-0.2.2-r2 63
 MD5 f23f466dd46b56d2296211125dbde567 files/dvenv-0.2.2-virtual-dtors.diff 1167
 MD5 c42cc75097a337cb937538324a491c7f files/digest-dvenv-0.2.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFChJOCEZCkKN40op4RAs+8AJ4oRCdIFRxd22UAu/xLGShZ03pZjACghJm7
-mN+u7j8Hch0gcXEG5U5jKoc=
-=j7CW
------END PGP SIGNATURE-----
+MD5 5de48606ea67549a654be86ada156870 files/dvenv-0.2.2-fix-underquoted-m4.diff 498
