@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.10 2005/06/29 21:44:54 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.11 2005/07/04 23:49:23 weeve Exp $
+
+  04 Jul 2005; Jason Wever <weeve@gentoo.org> koffice-libs-1.4.0-r1.ebuild:
+  Added ~sparc keyword.
 
   29 Jun 2005; Jose Luis Rivero <yoswink@gentoo.org>
   koffice-libs-1.4.0-r1.ebuild:

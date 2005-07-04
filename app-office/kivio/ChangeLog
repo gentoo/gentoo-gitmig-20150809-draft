@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kivio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.8 2005/06/29 22:06:10 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.9 2005/07/04 23:55:52 weeve Exp $
+
+  04 Jul 2005; Jason Wever <weeve@gentoo.org> kivio-1.4.0.ebuild:
+  Added ~sparc keyword.
 
   29 Jun 2005; Jose Luis Rivero <yoswink@gentoo.org> kivio-1.4.0.ebuild:
   Added ~alpha wrt #95128

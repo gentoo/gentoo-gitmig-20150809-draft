@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koshell
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/ChangeLog,v 1.8 2005/06/29 21:56:31 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/ChangeLog,v 1.9 2005/07/04 23:53:36 weeve Exp $
+
+  04 Jul 2005; Jason Wever <weeve@gentoo.org> koshell-1.4.0.ebuild:
+  Added ~sparc keyword.
 
   29 Jun 2005; Jose Luis Rivero <yoswink@gentoo.org> koshell-1.4.0.ebuild:
   Added ~alpha wrt #95128
