@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/aria
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.16 2005/02/03 20:32:09 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.17 2005/07/04 16:11:46 gustavoz Exp $
+
+  04 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  +files/aria-1.0.0-bigendian.diff, aria-0.10.0.ebuild,
+  aria-0.10.2_beta7.ebuild, aria-1.0.0.ebuild:
+  Fixed 1.0.0 bigendian build problems and sparc stable, others gone the
+  -sparc path
 
   03 Feb 2005; Jared Hudson <jhhudso@gentoo.org> aria-1.0.0.ebuild:
   Marked aria-1.0.0 as stable on x86 and amd64

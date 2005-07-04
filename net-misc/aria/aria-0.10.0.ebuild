@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-0.10.0.ebuild,v 1.13 2005/02/03 20:32:09 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-0.10.0.ebuild,v 1.14 2005/07/04 16:11:46 gustavoz Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ SRC_URI="http://aria.rednoah.com/storage/sources/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 -sparc"
 
 RDEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*

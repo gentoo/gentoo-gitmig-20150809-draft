@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-1.0.0.ebuild,v 1.7 2005/02/03 20:32:09 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-1.0.0.ebuild,v 1.8 2005/07/04 16:11:46 gustavoz Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/aria-1.0.0-xgettext-gentoo.diff
 	epatch ${FILESDIR}/aria-1.0.0-savefiles-gentoo.diff
+	epatch ${FILESDIR}/aria-1.0.0-bigendian.diff
 }
 
 src_compile() {
