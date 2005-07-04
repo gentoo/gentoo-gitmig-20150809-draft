@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/esmtp-0.5.1.ebuild,v 1.1 2005/05/27 13:02:10 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/esmtp-0.5.1.ebuild,v 1.2 2005/07/04 14:29:58 ticho Exp $
 
 inherit mailer
 
@@ -20,9 +20,17 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 
 	if use mailwrapper ; then
-		mv ${D}/usr/sbin/sendmail ${D}/usr/bin/sendmail.esmtp
-		mv ${D}/usr/bin/mailq ${D}/usr/bin/mailq.esmtp
-		mv ${D}/usr/bin/newaliases ${D}/usr/bin/newaliases.esmtp
+		rm "${D}/usr/sbin/sendmail"
+		rm "${D}/usr/lib/sendmail"
+		dosym "/usr/bin/esmtp" "/usr/sbin/sendmail.esmtp"
+		rm "${D}/usr/bin/mailq"
+		rm "${D}/usr/bin/newaliases"
+		mv "${D}/usr/share/man/man1/newaliases.1" \
+			"${D}/usr/share/man/man1/newaliases-esmtp.1"
+		mv "${D}/usr/share/man/man1/mailq.1" \
+			"${D}/usr/share/man/man1/mailq-esmtp.1"
+		mv "${D}/usr/share/man/man1/sendmail.1" \
+			"${D}/usr/share/man/man1/sendmail-esmtp.1"
 		mailer_install_conf
 	fi
 }

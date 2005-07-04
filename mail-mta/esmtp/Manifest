@@ -2,18 +2,18 @@
 Hash: SHA1
 
 MD5 7d631acde6e333a3a8185b42a4c947b7 esmtp-0.5.0-r1.ebuild 1045
-MD5 63eea91d01a4eeab8f0575835e9bc909 esmtp-0.5.1.ebuild 902
+MD5 1e48654bdac0e91cb502888e96624f30 esmtp-0.5.1.ebuild 1174
 MD5 08bfc725ae2eb5026a2090bfbf014fb4 esmtp-0.5.0-r2.ebuild 905
-MD5 79efed36d6f536f2fb7f5181c52f19b7 ChangeLog 1957
+MD5 9083c18b215f710e5ff18876a5470e3e ChangeLog 2109
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 c99a26bd6ed6b3b450d77f9c3ef0e823 files/digest-esmtp-0.5.0-r1 64
 MD5 c99a26bd6ed6b3b450d77f9c3ef0e823 files/digest-esmtp-0.5.0-r2 64
-MD5 42fb8e733cb3c85a6d1de97c8f27df34 files/mailer.conf 290
+MD5 70171b742473604d395d6ceba9c879a9 files/mailer.conf 295
 MD5 433d95b25f4a17a0a18016d70781396a files/digest-esmtp-0.5.1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCm0+OViELBEf1JB0RAo34AJ95RT/Fkc81YOohe3/YoxlWGvnVRwCfeFYO
-xqDEF5UgUv+lTD5Xt9Qb3cw=
-=vHgV
+iD8DBQFCyUgYQlM6RnzZP+IRAqbeAKCjwTG/ov5S74odGbNsm6D0feoeAwCgj6j7
+/8guNV3qnGMwx2DqOncfcMI=
+=cm8T
 -----END PGP SIGNATURE-----
