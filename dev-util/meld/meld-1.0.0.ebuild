@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.0.0.ebuild,v 1.1 2005/07/03 23:43:14 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.0.0.ebuild,v 1.2 2005/07/04 14:54:13 allanonjl Exp $
 
 inherit python gnome2 eutils
 
@@ -31,16 +31,6 @@ pkg_setup() {
 		einfo "Please re-emerge pygtk with the gnome use flag set."
 		einfo ""
 		die "You need to re-emerge pygtk with gnome use flag."
-	fi
-	# same check for gnome-python-extras with gtkhtml
-	if ! built_with_use gnome-python-extras gtkhtml ; then
-		einfo ""
-		einfo "Meld requires gnome-python-extras be built "
-		einfo "with gtkhtml use flag set to enable line "
-		einfo "numbering and source highlighting. "
-		einfo ""
-		einfo "You need to re-emerge gnome-python-extras "
-		einfo "with gtkhtml use flag."
 	fi
 }
 

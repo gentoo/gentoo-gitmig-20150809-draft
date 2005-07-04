@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.23 2005/07/03 23:43:14 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.24 2005/07/04 14:54:13 allanonjl Exp $
+
+  04 Jul 2005; John N. Laliberte <allanonjl@gentoo.org> meld-1.0.0.ebuild:
+  remove check for gtkhtml in gnome-python-extras, fix #97910
 
 *meld-1.0.0 (03 Jul 2005)
 
