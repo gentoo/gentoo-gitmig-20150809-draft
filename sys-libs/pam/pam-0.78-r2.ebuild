@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.11 2005/06/30 10:29:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.12 2005/07/04 22:10:27 azarah Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -14,7 +14,7 @@ FORCE_SYSTEMAUTH_UPDATE="no"
 PATCH_LEVEL="1.2"
 BDB_VER="4.3.27"
 BDB_VER2="4.1.25"
-GLIB_VER="2.6.3"
+GLIB_VER="2.6.5"
 PAM_REDHAT_VER="0.78-3"
 
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
@@ -166,6 +166,7 @@ src_compile() {
 		#./s_config
 		CFLAGS="${CFLAGS} -fPIC" \
 		../dist/configure \
+			--host=${CHOST} \
 			--cache-file=config.cache \
 			--disable-compat185 \
 			--disable-cxx \
@@ -198,7 +199,9 @@ src_compile() {
 		sed -i -s 's:G_GNUC_INTERNAL::g' "${GLIB_DIR}/glib"/*.c
 
 		CFLAGS="${CFLAGS} -fPIC" \
-		./configure --enable-static \
+		./configure \
+			--host=${CHOST} \
+			--enable-static \
 			--disable-shared \
 			--with-pic \
 			--disable-threads \

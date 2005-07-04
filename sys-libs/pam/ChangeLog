@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.80 2005/06/30 10:29:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.81 2005/07/04 22:10:27 azarah Exp $
+
+  04 Jul 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.78-r2.ebuild:
+  Add --host to glib/db's configure lines, bug #88439.
 
   30 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> pam-0.77.ebuild,
   pam-0.77-r1.ebuild, pam-0.77-r2.ebuild, pam-0.77-r3.ebuild,
