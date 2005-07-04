@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/atmel-firmware-1.3.ebuild,v 1.1 2005/05/14 09:24:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/atmel-firmware-1.3.ebuild,v 1.2 2005/07/04 18:04:32 genstef Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ IUSE="pcmcia usb"
 
 RDEPEND=">=sys-apps/hotplug-20040923
 		>=net-wireless/wireless-tools-26-r1
-		pcmcia? ( sys-apps/pcmcia-cs )"
+		pcmcia? ( virtual/pcmcia )"
 
 src_compile() {
 	$(tc-getCC) -o atmel_fwl atmel_fwl.c
