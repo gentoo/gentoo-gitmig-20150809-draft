@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/make.defaults,v 1.6 2005/04/18 19:07:22 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/make.defaults,v 1.7 2005/07/04 16:58:54 solar Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
-GRP_STAGE23_USE="${ARCH} berkdb crypt readline ssl tcpd zlib pam pic  hardened nls justify userlocales"
-USE="${ARCH} berkdb crypt readline ssl tcpd zlib pam pic  hardened nls justify userlocales"
+GRP_STAGE23_USE="${ARCH} berkdb crypt readline ssl tcpd zlib pam pic hardened nls justify userlocales"
+USE="${ARCH} berkdb crypt readline ssl tcpd zlib pam pic hardened nls justify userlocales"
 MULTILIB_ABIS="amd64"
 
 # amd64
