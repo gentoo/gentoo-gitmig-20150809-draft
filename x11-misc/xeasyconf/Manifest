@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a4f2e337d33763f287ef88e06ce2b866 ChangeLog 1518
 MD5 52c64bbf4773df784d351b050cae1954 xeasyconf-0.1.5.ebuild 726
 MD5 f1c0cfe7886d354b2af814ee0e4d888c metadata.xml 157
 MD5 8e54317f64bbc99a51998f8640168397 files/digest-xeasyconf-0.1.5 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCyI8Bl5AvwDPiUowRAnazAJ9p7mMYq/B65bXFv7qds/gAjbM8MgCdFxQS
+Gb8QCCUlpguFpZOCl9u8P+Y=
+=J3WF
+-----END PGP SIGNATURE-----
