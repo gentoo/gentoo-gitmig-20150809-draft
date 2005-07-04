@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7c2ac12ae2916ad112624b0cbf9b248a ChangeLog 7080
 MD5 c44af4e971a0c10fd3adf8e95e093215 kdewebdev-3.3.2-r2.ebuild 509
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
@@ -8,3 +11,10 @@ MD5 94ceb356a311fd77a423e29df704051e files/digest-kdewebdev-3.4.1 69
 MD5 64933746cbdc378bd6d40e0b56eac91f files/post-3.4-kdewebdev-2.diff 2703
 MD5 a6863fd743a5d77407c2de68efec9b90 files/digest-kdewebdev-3.4.0-r2 69
 MD5 d0fe799b425a893d05d633cd6afb32a8 files/quanta-3.4.0-vpl.patch 8115
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCyb9LKf2g/qXtneoRAhakAJ9O0xmZRQGiSwfAP1YAbYoZLSTm4gCgnD4z
+o4Vrrf/knas9ebcyVe93z74=
+=VhI6
+-----END PGP SIGNATURE-----
