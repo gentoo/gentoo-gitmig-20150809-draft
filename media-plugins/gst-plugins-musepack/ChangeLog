@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-musepack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-musepack/ChangeLog,v 1.9 2005/07/02 10:16:13 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-musepack/ChangeLog,v 1.10 2005/07/04 20:13:50 gustavoz Exp $
+
+  04 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-musepack-0.8.8.ebuild, gst-plugins-musepack-0.8.9.ebuild,
+  gst-plugins-musepack-0.8.10.ebuild:
+  Keyworded ~sparc
 
 *gst-plugins-musepack-0.8.10 (02 Jul 2005)
 
