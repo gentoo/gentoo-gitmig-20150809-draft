@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20050125.ebuild,v 1.1 2005/01/25 17:14:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20050125.ebuild,v 1.2 2005/07/04 18:27:45 genstef Exp $
 
 inherit linux-mod
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 IUSE="pcmcia"
 RDEPEND="net-wireless/prism54-firmware
-		net-wireless/wireless-tools
-		pcmcia? ( sys-apps/pcmcia-cs )"
+		net-wireless/wireless-tools"
 
 MODULE_NAMES="prism54(net:${S}/ksrc)"
 BUILD_PARAMS="KVER=${KV_FULL} KDIR=${KV_DIR}"
@@ -27,7 +26,7 @@ NET_RADIO_ERROR='You should enable "Wireless LAN drivers (non-hamradio) &
 Wireless Extensions"[CONFIG_NET_RADIO] in your kernel config'
 FW_LOADER_ERROR="Make sure you have CONFIG_FW_LOADER enabled in your kernel."
 
-useq pcmcia && CONFIG_CHECK="${CONFIG_CHECK} PCMCIA CARDBUS"
+use pcmcia && CONFIG_CHECK="${CONFIG_CHECK} PCMCIA CARDBUS"
 PCMCIA_ERROR=CARDBUS_ERROR="General setup  --->
 	PCMCIA/CardBus support  --->
 		PCMCIA/CardBus support (m or y)
