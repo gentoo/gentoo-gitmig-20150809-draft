@@ -1,0 +1,42 @@
+Don't hardcode the data paths, use the info from configure.
+
+--- vamos/vamos.cc
++++ vamos/vamos.cc
+@@ -143,7 +143,7 @@
+     if (check)
+       return path;
+   }
+-  path = "/usr/local/share/vamos/" + section + "/" + file + ".xml";
++  path = DATADIR "/" + section + "/" + file + ".xml";
+   {
+     std::ifstream check (path.c_str ());
+     if (check)
+@@ -202,7 +202,7 @@
+ 
+       // How I can I get this automatically set to the configured data
+       // directory?
+-      data_dir = "/usr/local/share/vamos/";
++      data_dir = DATADIR "/";
+       try
+         {
+           Texture_Image test_tex (data_dir + "textures/wall.png");
+@@ -210,7 +210,7 @@
+       catch (Missing_Texture_File)
+         {
+           std::cerr << "Couldn't find the data direcory  ../data, or "
+-                    << "/usr/local/share/vamos/."
++                    << DATADIR "/."
+                     << std::endl;
+           std::exit (EXIT_FAILURE);
+         }
+--- vamos/Makefile.in
++++ vamos/Makefile.in
+@@ -154,7 +154,7 @@
+ 	`pkg-config --cflags sigc++-1.2`
+ 
+ 
+-AM_CXXFLAGS = -Wall -pedantic -O1 -g -gstabs+
++AM_CXXFLAGS = -Wall -pedantic -O1 -g -gstabs+ -DDATADIR=\"$(pkgdatadir)\"
+ subdir = vamos
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs

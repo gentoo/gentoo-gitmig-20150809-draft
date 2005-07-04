@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 17f6ab009acef0cf26fa4646d346ecf3 vamos-0.5.4.ebuild 853
+MD5 612a3c4dc3ac46fc2cb3a7de759274e9 ChangeLog 326
+MD5 2fc465e0159c32d283ffb99cf54a37f0 files/vamos-0.5.4-datadir.patch 1279
+MD5 b6bf35ad7f7bc9c70b05768fa183377a files/digest-vamos-0.5.4 64
+MD5 587f57a2fffe95c9f18fc85a67ab935b files/vamos-0.5.4-gcc.patch 375
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCyOZTgIKl8Uu19MoRAgADAJ993Zwfwbrpz783Y09P61ISt23F+wCdGzSM
+rVimN6zq/Ne0ti98u3Bmvrs=
+=d9QF
+-----END PGP SIGNATURE-----

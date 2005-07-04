@@ -1,0 +1,21 @@
+Compile with newer gcc versions
+
+--- track/Strip_Track.cc
++++ track/Strip_Track.cc
+@@ -181,14 +181,14 @@
+     fixed (false),
+     vertical_field_angle (10.0),
+     range (range_in)
+-{};
++{}
+ 
+ Camera::Camera () 
+   : segment_index (0), 
+     fixed (false),
+     vertical_field_angle (10.0), 
+     range (0.0) 
+-{};
++{}
+ 
+ //* Class Strip_Track
+ Strip_Track::Strip_Track () :
