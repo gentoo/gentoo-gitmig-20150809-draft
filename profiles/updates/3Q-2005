@@ -17,3 +17,4 @@ move app-admin/amanda app-backup/amanda
 move app-admin/bacula app-backup/bacula
 move app-arch/flexbackup app-backup/flexbackup
 move app-arch/hdup app-backup/hdup
+move app-arch/konserve app-backup/konserve
