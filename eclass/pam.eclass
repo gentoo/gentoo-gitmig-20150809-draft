@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Diego Pettenò <flameeyes@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/pam.eclass,v 1.5 2005/06/07 11:33:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pam.eclass,v 1.6 2005/07/04 12:50:47 flameeyes Exp $
 #
 # This eclass contains functions to install pamd configuration files and
 # pam modules.
@@ -130,12 +130,18 @@ pamd_mimic_system() {
 
 	authlevels="auth account password session"
 
+	if has_version '<sys-libs/pam-0.78'; then
+		mimic="\trequired\t\tpam_stack.so service=system-auth"
+	else
+		mimic="\tinclude\t\tsystem-auth"
+	fi
+
 	shift
 
 	while [[ -n $1 ]]; do
 		hasq $1 ${authlevels} || die "unknown level type"
 
-		echo -e "$1\tinclude\t\tsystem-auth" >> ${pamdfile}
+		echo -e "$1${mimic}" >> ${pamdfile}
 
 		shift
 	done
