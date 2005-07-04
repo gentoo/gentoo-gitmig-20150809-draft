@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.0.4.0.ebuild,v 1.3 2005/07/03 10:44:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.0.4.0.ebuild,v 1.4 2005/07/04 18:25:53 sejo Exp $
 
 inherit webapp
 
@@ -42,5 +42,19 @@ src_install() {
 	# done, now strut the stuff
 
 	webapp_src_install
+
+	# manually changing the permissions on the directories
+	# if no-suexec then perms should be 777 else 755
+
+	if useq no-suexec; then
+		PERMS=777
+	else
+		PERMS=755
+	fi
+	fperms 600 ${D}/cpg_error.log
+	fperms ${PERMS} ${D}/cache
+	fperms ${PERMS} ${D}/modules/coppermine/albums
+	fperms ${PERMS} ${D}/modules/coppermine/albums/userpics
+	fperms ${PERMS} ${D}/uploads/{avatars,forums}
 
 }

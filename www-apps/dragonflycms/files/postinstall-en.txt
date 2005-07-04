@@ -1,8 +1,24 @@
 To complete your installation, you must
 
-1) add a database to mysql that will contain your DragonFly tables
+1) Create a new database, for example, 'dragonfly': mysqladmin create dragonfly
+   OR add a database through your web control panel.
+   
+2) Edit the file "config.php". Change all the fields until you are happy with
+   the changes and they fit the need of your web site. Give special attention
+   to the database configuration section. When you have finished editing
+   config.php, save it.
+	 
+3) install by going to http://localhost/dragonflycms/install.php
 
-2) install by going to http://localhost/dragonflycms/install.php
+4) IMPORTANT: certain directories have been chmodded 755 if you don't have
+no-suexec in your useflags! if however you don't use suexec please change the
+permissions on following dirs to 777
+	- cache
+	- modules/coppermine/albums
+	- modules/coppermine/albums/userpics
+	- uploads/avatars
+	- uploads/forums
+
 
 Enjoy DragonFly!!!
 

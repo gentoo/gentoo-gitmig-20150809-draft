@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/dragonflycms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.6 2005/07/03 10:44:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.7 2005/07/04 18:25:53 sejo Exp $
+
+  04 Jul 2005; Jochen Maes <sejo@gentoo.org> files/postinstall-en.txt,
+  dragonflycms-9.0.3.0.ebuild, dragonflycms-9.0.4.0.ebuild,
+  dragonflycms-9.0.5.0.ebuild:
+  fixed permissions problems
 
   03 Jul 2005; Sven Wegener <swegener@gentoo.org>
   dragonflycms-9.0.3.0.ebuild, dragonflycms-9.0.4.0.ebuild,
