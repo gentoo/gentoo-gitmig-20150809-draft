@@ -21,3 +21,4 @@ move app-arch/konserve app-backup/konserve
 move app-arch/pdumpfs app-backup/pdumpfs
 move app-arch/tob app-backup/tob
 move net-misc/duplicity app-backup/duplicity
+move net-misc/rdiff-backup app-backup/rdiff-backup
