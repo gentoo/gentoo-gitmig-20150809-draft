@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.112 2005/07/03 02:54:17 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.113 2005/07/04 11:59:12 ka0ttic Exp $
+
+*net-snmp-5.1.3 (04 Jul 2005)
+
+  04 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> -files/net-snmp-proc.patch,
+  -files/snmpd.conf, -files/snmpd.rc6, -net-snmp-5.1.1.ebuild,
+  net-snmp-5.1.1-r1.ebuild, -net-snmp-5.1.3_pre1.ebuild,
+  +net-snmp-5.1.3.ebuild, -net-snmp-5.2.ebuild, -net-snmp-5.2-r3.ebuild,
+  -net-snmp-5.2.1.ebuild, net-snmp-5.2.1-r1.ebuild,
+  net-snmp-5.3.20050624.ebuild:
+  Version bump (5.1.3 final); tidy old ebuilds/patches/cruft. Also added BSD
+  to LICENSE.
 
   03 Jul 2005; Hardave Riar <hardave@gentoo.org> net-snmp-5.2.1-r1.ebuild:
   Stable on mips bug #91792.

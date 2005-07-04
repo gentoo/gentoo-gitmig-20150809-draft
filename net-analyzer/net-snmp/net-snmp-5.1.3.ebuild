@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2-r3.ebuild,v 1.6 2005/03/15 15:27:12 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.3.ebuild,v 1.1 2005/07/04 11:59:12 ka0ttic Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -8,23 +8,25 @@ DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64 ~mips"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux doc"
 
-DEPEND="virtual/libc
+DEPEND=">=sys-libs/zlib-1.1.4
 	!minimal? ( <sys-libs/db-2 )
-	>=sys-libs/zlib-1.1.4
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	lm_sensors? (
 		x86?   ( sys-apps/lm_sensors )
 		amd64? ( sys-apps/lm_sensors )
 	)"
+
 RDEPEND="${DEPEND}
-	dev-perl/TermReadKey
-	perl? ( X? ( dev-perl/perl-tk ) )
+	perl? (
+		X? ( dev-perl/perl-tk )
+		!minimal? ( dev-perl/TermReadKey )
+	)
 	selinux? ( sec-policy/selinux-snmpd )"
 
 DEPEND="${DEPEND}
@@ -46,30 +48,33 @@ src_unpack() {
 		fi
 	fi
 
-	#wrt to bugs 68467, 68254
+	# bugs 68467 and 68254
 	sed -i -e \
 		's/^NSC_AGENTLIBS="@AGENTLIBS@"/NSC_AGENTLIBS="@AGENTLIBS@ @WRAPLIBS@"/' \
 		net-snmp-config.in || die "sed net-snmp-config.in"
 	sed -i -e 's;embed_perl="yes",;embed_perl=$enableval,;' configure.in \
 		|| die "sed configure.in failed"
+	# fix access violation in make check
+	sed -i 's/\(snmpd.*\)-Lf/\1-l/' testing/eval_tools.sh || \
+		die "sed eval_tools.sh failed"
+	# fix path in fixproc
+	sed -i 's|\(database_file =.*\)/local\(.*\)$|\1\2|' local/fixproc || \
+		die "sed fixproc failed"
 
 	ht_fix_all
 }
 
 src_compile() {
-	local myconf mibs
+	local mibs
 
 	autoconf || die "autoconf failed"
 
-	myconf="${myconf} `use_enable perl embedded-perl`"
-	myconf="${myconf} `use_with ssl openssl` `use_enable !ssl internal-md5`"
-	myconf="${myconf} `use_with tcpd libwrap`"
-	myconf="${myconf} `use_enable ipv6`"
-
 	mibs="host ucd-snmp/dlmod"
 	use smux && mibs="${mibs} smux"
+	use lm_sensors && mibs="${mibs} ucd-snmp/lmSensors"
 
 	econf \
+		--with-install-prefix="${D}" \
 		--with-sys-location="Unknown" \
 		--with-sys-contact="root@Unknown" \
 		--with-default-snmp-version="3" \
@@ -79,10 +84,14 @@ src_compile() {
 		--enable-ucd-snmp-compatibility \
 		--enable-shared \
 		--with-zlib \
-		--with-install-prefix="${D}" \
-		${myconf} || die "econf failed"
+		$(use_enable perl embedded-perl) \
+		$(use_enable ipv6) \
+		$(use_enable !ssl internal-md5) \
+		$(use_with ssl openssl) \
+		$(use_with tcpd libwrap) \
+		|| die "econf failed"
 
-	emake -j1 || die "compile problem"
+	emake -j1 || die "emake failed"
 
 	if use perl ; then
 		emake perlmodules || die "compile perl modules problem"
@@ -91,6 +100,18 @@ src_compile() {
 	if use doc ; then
 		einfo "Building HTML Documentation"
 		make docsdox || die "failed to build docs"
+	fi
+}
+
+src_test() {
+	cd testing
+	if ! make test ; then
+		echo
+		einfo "Don't be alarmed if a few tests FAIL."
+		einfo "This could happen for several reasons:"
+		einfo "    - You don't already have a working configuration."
+		einfo "    - Your ethernet interface isn't properly configured."
+		echo
 	fi
 }
 
@@ -113,17 +134,18 @@ src_install () {
 
 	keepdir /etc/snmp /var/lib/net-snmp
 
-	newinitd ${FILESDIR}/snmpd-5.1.rc6 snmpd
-	newconfd ${FILESDIR}/snmpd-5.1.conf snmpd
+	newinitd ${FILESDIR}/snmpd-5.1.rc6 snmpd || die
+	newconfd ${FILESDIR}/snmpd-5.1.conf snmpd || die
 
 	# snmptrapd can use the same rc script just slightly modified
 	sed -e 's/net-snmpd/snmptrapd/g' \
 		-e 's/snmpd/snmptrapd/g' \
 		-e 's/SNMPD/SNMPTRAPD/g' \
-		${D}/etc/init.d/snmpd > ${D}/etc/init.d/snmptrapd || die
+		${D}/etc/init.d/snmpd > ${D}/etc/init.d/snmptrapd || \
+			die "failed to create snmptrapd init script"
 	chmod 0755 ${D}/etc/init.d/snmptrapd
 
-	newconfd ${FILESDIR}/snmptrapd.conf snmptrapd
+	newconfd ${FILESDIR}/snmptrapd.conf snmptrapd || die
 
 	# Remove everything, keeping only the snmpd, snmptrapd, MIBs, libs, and includes.
 	if use minimal; then

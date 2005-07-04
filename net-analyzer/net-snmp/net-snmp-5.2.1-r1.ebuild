@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1-r1.ebuild,v 1.9 2005/07/03 02:54:18 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1-r1.ebuild,v 1.10 2005/07/04 11:59:12 ka0ttic Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -8,7 +8,7 @@ DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="as-is BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux doc rpm elf"

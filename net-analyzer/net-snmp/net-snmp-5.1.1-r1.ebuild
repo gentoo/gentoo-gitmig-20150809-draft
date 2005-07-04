@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1-r1.ebuild,v 1.20 2005/05/25 16:54:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1-r1.ebuild,v 1.21 2005/07/04 11:59:12 ka0ttic Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="as-is BSD"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha ~arm hppa amd64 ~ia64 ~s390 ~ppc64 ~mips"
 IUSE="perl ipv6 ssl tcpd X lm_sensors minimal selinux"
