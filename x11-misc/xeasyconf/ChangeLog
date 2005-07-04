@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xeasyconf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xeasyconf/ChangeLog,v 1.14 2004/10/02 15:48:12 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xeasyconf/ChangeLog,v 1.15 2005/07/04 01:20:40 smithj Exp $
+
+  04 Jul 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml:
+  added metadata
 
   19 Jun 2004; <pyrania@gentoo.org> xeasyconf-0.1.5.ebuild:
   Removed default .
