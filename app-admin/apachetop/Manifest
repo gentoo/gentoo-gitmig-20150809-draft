@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b5da4bf360971eda809f72ee392de6ac apachetop-0.12.ebuild 1058
 MD5 7c24f70666f4ab80a7968850da5b9ce6 apachetop-0.11.ebuild 1033
-MD5 9706ab4317477db2e2267d86d25bc4ee apachetop-0.12.5.ebuild 1000
-MD5 ecf0593cab5bea1fd553e6e553f04cf9 ChangeLog 3003
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+MD5 4e522eb4df1be5aa7277ef0e08a067c3 apachetop-0.12.5.ebuild 1003
+MD5 4cf1bde6ed3ef073a1af071f0ca1712e ChangeLog 3107
+MD5 b5da4bf360971eda809f72ee392de6ac apachetop-0.12.ebuild 1058
 MD5 946d0848d81bf273d4d8a0cf79667a31 files/digest-apachetop-0.12.5 68
-MD5 fdecf3384b463c0f2b2d46f6417c7a69 files/digest-apachetop-0.11 66
 MD5 6e87f45d9828dcc07fc87b5f2c75d159 files/digest-apachetop-0.12 66
+MD5 fdecf3384b463c0f2b2d46f6417c7a69 files/digest-apachetop-0.11 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCyCe/EzitwsaoONoRAl2pAKDXQakO/4xTBMKjLdEa5sl2aeO6YACgjJo4
-j/CM/6gzvCQHADcEyjkACz0=
-=7PKE
+iD8DBQFCyUH3KRy60XGEcJIRAhy/AKCNhPvwIGFD7C/jnb+qth68YKzXRwCffSto
+HFOvu1wt95ZbHDXphcdlL5A=
+=ycXi
 -----END PGP SIGNATURE-----
