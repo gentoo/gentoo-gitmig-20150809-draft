@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.88 2005/06/28 19:25:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.89 2005/07/04 22:51:38 weeve Exp $
+
+  04 Jul 2005; Jason Wever <weeve@gentoo.org> kdesdk-3.4.1.ebuild:
+  Added ~sparc keyword.
 
   28 Jun 2005; Caleb Tennis <caleb@gentoo.org> kdesdk-3.2.3.ebuild:
   Calltree isn't in portage anymore, remove dep (I don't think it will work
