@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-6.0.1.ebuild,v 1.1 2005/06/28 16:59:32 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-6.0.1.ebuild,v 1.2 2005/07/04 16:44:29 ka0ttic Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_compile() {
 			die "sed CONFIG failed"
 	fi
 
-	make PREFIX=/usr || die "make failed"
+	make PREFIX=/usr SA_LIB_DIR=/usr/lib/sa || die "make failed"
 }
 
 src_install() {
