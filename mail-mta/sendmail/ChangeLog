@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.43 2005/06/30 22:02:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.44 2005/07/04 14:24:30 ticho Exp $
+
+  04 Jul 2005; Andrej Kacian <ticho@gentoo.org> sendmail-8.13.4-r1.ebuild:
+  Added compatibility with mailer-config-0.2. See bug #97589.
 
   30 Jun 2005; Aron Griffis <agriffis@gentoo.org> sendmail-8.13.4.ebuild:
   stable on ia64 #96837

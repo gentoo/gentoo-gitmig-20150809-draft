@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.4-r1.ebuild,v 1.4 2005/06/28 08:21:58 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.4-r1.ebuild,v 1.5 2005/07/04 14:24:30 ticho Exp $
 
 inherit eutils mailer
 
@@ -104,7 +104,6 @@ src_install () {
 	fowners smmsp:smmsp /var/spool/clientmqueue
 	fperms 770 /var/spool/clientmqueue
 	fperms 700 /var/spool/mqueue
-	dosym /usr/sbin/sendmail /usr/lib/sendmail
 	dosym /usr/sbin/makemap /usr/bin/makemap
 	dodoc FAQ LICENSE KNOWNBUGS README RELEASE_NOTES doc/op/op.ps
 	newdoc sendmail/README README.sendmail
@@ -159,6 +158,14 @@ src_install () {
 		mv ${D}/usr/sbin/sendmail ${D}/usr/sbin/sendmail.sendmail
 		rm ${D}/usr/bin/mailq
 		rm ${D}/usr/bin/newaliases
+		mv ${D}/usr/share/man/man8/sendmail.8 \
+			${D}/usr/share/man/man8/sendmail-sendmail.8
+		mv ${D}/usr/share/man/man1/mailq.1 \
+			${D}/usr/share/man/man1/mailq-sendmail.1
+		mv ${D}/usr/share/man/man1/newaliases.1 \
+			${D}/usr/share/man/man1/newaliases-sendmail.1
+		mv ${D}/usr/share/man/man5/aliases.5 \
+			${D}/usr/share/man/man5/aliases-sendmail.5
 		dosed 's/} sendmail/} sendmail.sendmail/' /etc/init.d/sendmail
 		dosed 's/sbin\/sendmail/sbin\/sendmail.sendmail/' /etc/init.d/sendmail
 		mailer_install_conf
