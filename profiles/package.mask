@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4155 2005/07/03 21:06:55 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4156 2005/07/04 06:47:57 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -852,7 +852,7 @@ www-client/netscape-communicator
 # <pfeifer@gentoo.org> (12 Aug 2004)
 # Masked for following ebuilds for testing:
 =sys-apps/mindi-1.10
-=sys-apps/mondo-rescue-2.10
+=app-backup/mondo-rescue-2.10
 
 # <latexer@gentoo.org> (11 Aug 2004)
 # This is broken with recent mono releases. Waiting on a new upstream release
