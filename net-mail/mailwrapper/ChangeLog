@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailwrapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.26 2005/05/16 14:54:58 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.27 2005/07/04 23:11:37 ticho Exp $
+
+  04 Jul 2005; Andrej Kacian <ticho@gentoo.org> mailwrapper-0.2.1-r1.ebuild:
+  Install also as /usr/bin/rmail. Bug #97589.
 
   16 May 2005; Grant Goodyear <g2boojum@gentoo.org> -mailwrapper-0.1.ebuild:
   Remove old ebuild.
