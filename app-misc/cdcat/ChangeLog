@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cdcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/ChangeLog,v 1.11 2005/04/21 19:04:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/ChangeLog,v 1.12 2005/07/04 07:12:38 robbat2 Exp $
+
+  04 Jul 2005; Robin H. Johnson <robbat2@gentoo.org> cdcat-0.2.ebuild,
+  cdcat-0.3.ebuild:
+  Moved app-cdr/cdbkup to app-backup/cdbkup (missed by epkgmove).
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> cdcat-0.3.ebuild:
   stable on amd64
