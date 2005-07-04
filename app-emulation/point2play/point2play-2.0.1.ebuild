@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-2.0.1.ebuild,v 1.1 2005/06/08 01:04:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-2.0.1.ebuild,v 1.2 2005/07/04 01:47:11 vapier Exp $
 
 inherit eutils
 
@@ -37,6 +37,6 @@ src_unpack() {
 
 src_install() {
 	mv usr "${D}"/ || die "mv usr"
-	mv etc/X11/applnk "${D}"/usr/share
-	make_desktop_entry Point2Play Point2Play /usr/lib/transgaming_point2play/pixmaps/tg_logo.png
+	# remove duplicated desktop files
+	rm -r "${D}"/usr/share/gnome
 }
