@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.122 2005/07/02 01:11:55 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.123 2005/07/04 23:02:46 kloeri Exp $
+
+  04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  kdeartwork-3.4.1.ebuild:
+  Add ~alpha keyword.
 
   02 Jul 2005; Hardave Riar <hardave@gentoo.org> kdeartwork-3.3.2.ebuild:
   Stable on mips

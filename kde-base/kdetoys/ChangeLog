@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.110 2005/07/02 02:45:45 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.111 2005/07/04 22:56:37 kloeri Exp $
+
+  04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> kdetoys-3.4.1.ebuild:
+  Add ~alpha keyword.
 
   02 Jul 2005; Hardave Riar <hardave@gentoo.org> kdetoys-3.3.2.ebuild:
   Stable on mips

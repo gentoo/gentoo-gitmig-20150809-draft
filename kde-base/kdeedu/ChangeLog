@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.131 2005/07/02 01:17:21 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.132 2005/07/04 22:55:28 kloeri Exp $
+
+  04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  kdeedu-3.4.1-r10.ebuild:
+  Add ~alpha keyword.
 
   02 Jul 2005; Hardave Riar <hardave@gentoo.org> kdeedu-3.3.2.ebuild:
   Stable on mips

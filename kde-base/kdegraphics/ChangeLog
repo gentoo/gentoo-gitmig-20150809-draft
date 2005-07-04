@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.166 2005/07/01 22:48:43 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.167 2005/07/04 23:02:07 kloeri Exp $
+
+  04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  kdegraphics-3.4.1.ebuild:
+  Add ~alpha keyword.
 
   01 Jul 2005; Hardave Riar <hardave@gentoo.org>
   kdegraphics-3.3.2-r2.ebuild:
