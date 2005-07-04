@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-8.38.ebuild,v 1.1 2005/07/04 01:01:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-8.38.ebuild,v 1.2 2005/07/04 07:45:03 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DEBIAN_PV="3"
 SRC_URI="ftp://ftp.iqchoice.com/pub/people/rail/gmso/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 DEPEND="sys-fs/sysfsutils"
 
