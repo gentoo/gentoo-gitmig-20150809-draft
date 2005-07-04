@@ -19,3 +19,4 @@ move app-arch/flexbackup app-backup/flexbackup
 move app-arch/hdup app-backup/hdup
 move app-arch/konserve app-backup/konserve
 move app-arch/pdumpfs app-backup/pdumpfs
+move app-arch/tob app-backup/tob
