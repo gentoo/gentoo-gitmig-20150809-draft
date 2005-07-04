@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/ivam2-0.3-r1.ebuild,v 1.1 2005/07/03 09:41:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/ivam2-0.3-r1.ebuild,v 1.2 2005/07/04 07:43:44 dholm Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Automatic phone answering machine software for ISDN"
 SRC_URI="http://0pointer.de/lennart/projects/ivam2/${P}.tar.gz"
 HOMEPAGE="http://0pointer.de/lennart/projects/ivam2/"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
