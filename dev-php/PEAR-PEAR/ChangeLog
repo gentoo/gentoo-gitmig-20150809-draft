@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.16 2005/03/27 14:56:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.17 2005/07/04 05:29:52 sebastian Exp $
+
+  04 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-PEAR-1.3.5-r1.ebuild:
+  Update PEAR-XML_RPC dependency. Fix pkg_preinst().
 
   27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> PEAR-PEAR-1.3.5.ebuild:
   Stable on alpha.

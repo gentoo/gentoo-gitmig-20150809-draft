@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.8 2005/05/13 01:19:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.9 2005/07/04 05:29:52 sebastian Exp $
 
 ARCHIVE_TAR="1.2"
 CONSOLE_GETOPT="1.2"
 PEAR="1.3.5"
-XML_RPC="1.2.0"
+XML_RPC="1.3.1"
 
 DESCRIPTION="PEAR Base System"
 HOMEPAGE="http://pear.php.net/"
@@ -22,19 +22,22 @@ IUSE=""
 DEPEND="virtual/php dev-php/php"
 PDEPEND=">=dev-php/PEAR-Archive_Tar-1.1
 	>=dev-php/PEAR-Console_Getopt-1.2
-	>=dev-php/PEAR-XML_RPC-1.0.4"
+	>=dev-php/PEAR-XML_RPC-1.3.1"
 
 pkg_preinst() {
 	if [[ -d "${ROOT}"/usr/lib/php ]] && [[ ! -e "${ROOT}"/usr/share/php ]] ; then
-		for f in /usr/lib/php/*
+		for f in "${ROOT}"/usr/lib/php/*
 		do
 			if [ "$f" != "/usr/lib/php/build" ] &&
 			   [ "$f" != "/usr/lib/php/extensions" ]
-				then mv $f /usr/share/php;
+				then mv $f "${ROOT}"/usr/share/php;
 			fi
 		done
 
-		sed -i 's:/usr/lib/php:/usr/share/php:g' ${ROOT}/usr/bin/pear || die
+		if [[ -d "${ROOT}"/usr/bin/pear ]] ; then
+			sed -i 's:/usr/lib/php:/usr/share/php:g' ${ROOT}/usr/bin/pear || die
+		fi
+
 		rm ${ROOT}/etc/pear.conf
 	fi
 }
