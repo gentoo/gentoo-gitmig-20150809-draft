@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.30 2005/07/02 06:59:03 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.31 2005/07/04 14:18:42 gustavoz Exp $
+
+  04 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> PEAR-DB-1.7.6.ebuild:
+  Stable on sparc
 
   02 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-DB-1.7.6.ebuild:
