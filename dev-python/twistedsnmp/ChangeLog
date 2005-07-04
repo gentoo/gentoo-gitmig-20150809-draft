@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/twistedsnmp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twistedsnmp/ChangeLog,v 1.1 2005/07/04 15:44:37 lordvan Exp $
+
+*twistedsnmp-0.2.9 (04 Jul 2005)
+
+  04 Jul 2005; Thomas Raschbacher <lordvan@gentoo.org> +metadata.xml,
+  +twistedsnmp-0.2.9.ebuild:
+  Initial Import
+  Bug 54871; Thanks to Mike C. Fletcher <mcfletch@rogers.com>
+
