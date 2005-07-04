@@ -1,4 +1,14 @@
-MD5 68af68640b25139ba1eba81a98b8d9a5 ebookmerge-0.6.ebuild 723
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ce446772c9e11c033a94f21c788ae401 ChangeLog 359
-MD5 2728787204b0602d953833773808efa6 metadata.xml 374
+MD5 995277c8510f1b186d7b8a8288a53ed4 ebookmerge-0.6.ebuild 672
 MD5 5b50b7f8bfc24848819289a2e244a371 files/digest-ebookmerge-0.6 61
+MD5 5e6855bb53ff2a05b9adf6ea9fcdd9ea metadata.xml 303
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCycQZI1lqEGTUzyQRAlIpAJ9zhgDa+tavdMSBM5lk3VT8Im7OhQCgvXIL
++8O56hcNnTh8qKyol+UM0Gs=
+=FXxh
+-----END PGP SIGNATURE-----
