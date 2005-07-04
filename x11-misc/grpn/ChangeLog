@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/grpn
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.5 2004/12/28 22:06:21 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.6 2005/07/04 00:49:36 smithj Exp $
+
+  04 Jul 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml:
+  added metadata
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
