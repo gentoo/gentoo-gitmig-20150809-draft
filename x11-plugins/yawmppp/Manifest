@@ -1,4 +1,5 @@
-MD5 685ebf4af6ca3ba453d4d8cb751b7499 yawmppp-2.0.2.ebuild 973
-MD5 be2697813e873fd2876ce019bd436a8f ChangeLog 1013
+MD5 6669e8f7a66d1337f480e11866ec088f yawmppp-2.0.2.ebuild 1090
+MD5 12e2384e6a3fb1311a0bb648013e7f2f ChangeLog 1046
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 4e0fc569decd48ee323ab0a57d54b9a8 files/yawmppp-2.0.2-Makefile.in.patch 448
 MD5 5adde7571413fb3efb7ddde02602af74 files/digest-yawmppp-2.0.2 65
