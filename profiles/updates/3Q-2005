@@ -14,3 +14,4 @@ move sys-libs/libnss-mysql sys-auth/libnss-mysql
 move sys-libs/libnss-pgsql sys-auth/libnss-pgsql
 move net-libs/nss_ldap sys-auth/nss_ldap
 move app-admin/amanda app-backup/amanda
+move app-admin/bacula app-backup/bacula
