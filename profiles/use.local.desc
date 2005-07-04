@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1274 2005/07/04 13:52:41 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1275 2005/07/04 16:00:33 lordvan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1045,3 +1045,4 @@ x11-wm/metisse:freetype - Enable freetype font support
 x11-wm/openbox:pango - Enable pango support
 x11-wm/openbox:startup-notification - Enable application startup notification
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
+dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
