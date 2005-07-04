@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.0.6.ebuild,v 1.4 2005/07/03 01:24:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.0.6.ebuild,v 1.5 2005/07/04 21:13:52 robbat2 Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -17,7 +17,7 @@ DEPEND="${RDEPEND} virtual/os-headers"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 
 src_compile() {
 	# use santitized headers and not headers from /usr/src
