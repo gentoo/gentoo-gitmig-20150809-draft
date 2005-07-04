@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.207 2005/07/01 23:35:28 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.208 2005/07/04 22:50:18 kloeri Exp $
+
+  04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  kdebase-3.4.1-r1.ebuild:
+  Add ~alpha keyword.
 
   01 Jul 2005; Hardave Riar <hardave@gentoo.org> kdebase-3.3.2-r3.ebuild:
   Stable on mips
