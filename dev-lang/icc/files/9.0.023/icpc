@@ -1,0 +1,10 @@
+#! /bin/sh
+#
+# Gentoo-specific wrapper script for Intel C/C++ compiler suite
+#
+# Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
+#
+
+export INTEL_LICENSE_FILE="/opt/intel/compiler90/licenses"
+export LD_LIBRARY_PATH="/opt/intel/compiler90/lib"
+/opt/intel/compiler90/bin/icpcbin $*
