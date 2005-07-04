@@ -1,0 +1,18 @@
+Index: TextScrollWindow.h
+===================================================================
+RCS file: /home/users/michael/cvs/MultiImonC/src/TextScrollWindow.h,v
+retrieving revision 1.4
+diff -u -r1.4 TextScrollWindow.h
+--- TextScrollWindow.h	10 Jul 2004 19:25:39 -0000	1.4
++++ TextScrollWindow.h	4 Jul 2005 21:27:51 -0000
+@@ -29,8 +29,8 @@
+ class TextScrollWindow: public wxFrame {
+ public:
+     TextScrollWindow(const wxFrame* parent,
+-                     wxString i_strTitle = "",
+-                     wxString i_strText = "");
++                     wxString i_strTitle = wxT(""),
++                     wxString i_strText = wxT(""));
+     void SetText(wxString& i_strText);
+ private:
+     void OnSave(wxCommandEvent &event);
