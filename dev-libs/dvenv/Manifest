@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 90d5b27f5bdf0c609345c61a0ca41612 dvenv-0.2.2.ebuild 693
-MD5 4ded8d2c216c31abd5c24151b2385432 dvenv-0.2.2-r2.ebuild 949
-MD5 ccd9174e91ef8aa017b04605605e44eb ChangeLog 1514
+MD5 f4535a46e23aee9b0c044445484be1ca dvenv-0.2.2-r2.ebuild 950
+MD5 e3aee6f483858fec721556e266e0cb02 ChangeLog 1352
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 c42cc75097a337cb937538324a491c7f files/digest-dvenv-0.2.2-r2 63
 MD5 f23f466dd46b56d2296211125dbde567 files/dvenv-0.2.2-virtual-dtors.diff 1167
@@ -12,7 +12,7 @@ MD5 5de48606ea67549a654be86ada156870 files/dvenv-0.2.2-fix-underquoted-m4.diff 4
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCyS2vEZCkKN40op4RAq2BAJ9F5EUqhLLTAWwt5ie/O9MjI1Y7GACfTwHu
-ECO6SriIb4uZiIy/rNAIhwY=
-=hegG
+iD8DBQFCyS72EZCkKN40op4RAqpyAJ9PL9LKSrDeP+W/F2Lw3GVxahDHKACfcDjw
+7ux9HHe5gDBl9G1TFnsAqKI=
+=lb37
 -----END PGP SIGNATURE-----
