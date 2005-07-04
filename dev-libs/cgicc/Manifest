@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 91316e42579a2c0769ce9611fc0819cb cgicc-3.2.1.ebuild 1060
-MD5 2f4fa1950e3a2efcfd3f07d2c9630818 cgicc-3.2.3.ebuild 1242
-MD5 0f7126d96bc3fa8b1ab77ebd21b56995 ChangeLog 721
+MD5 d4f68831b668295d4998e9ba58a5f833 cgicc-3.2.3.ebuild 1241
+MD5 e7007856ca70f0866787d146bd5acb05 ChangeLog 808
 MD5 9ac650d13e0bef1a0e5e6e73efa3557f metadata.xml 881
 MD5 8f2cf8b6b53e4679564cb60ca50e0300 files/digest-cgicc-3.2.1 64
 MD5 74788631b3284a10b1253f550bfe1ab2 files/digest-cgicc-3.2.3 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCDJrzEZCkKN40op4RAojvAJ4kBb3/Yml77wJojTY/8xviGgT+vgCfQzyc
-xoxUbJWeYDAqz/5MbFF/aVY=
-=hVk0
+iD8DBQFCyRyREZCkKN40op4RAmhPAJ4xYRzsr9Ms2TmuFRgm2VX8tE3MMACgvvaP
+XnpwtSq/xAQeyoFvTfNQJkE=
+=EThX
 -----END PGP SIGNATURE-----

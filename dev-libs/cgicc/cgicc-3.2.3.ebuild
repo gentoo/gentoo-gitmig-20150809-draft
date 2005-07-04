@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgicc/cgicc-3.2.3.ebuild,v 1.1 2005/02/11 11:43:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgicc/cgicc-3.2.3.ebuild,v 1.2 2005/07/04 11:23:46 ka0ttic Exp $
 
 DESCRIPTION="A C++ class library for writing CGI applications"
 HOMEPAGE="http://www.cgicc.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc debug"
 
 DEPEND=">=sys-apps/sed-4"
