@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f7c742a234841cde9c95ad404e693e6f ChangeLog 1057
 MD5 313d954bbdef488188930f14fdd317d4 grun-0.9.2.ebuild 2466
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
 MD5 73023cc27e61e18e71950b09863a0e1c files/digest-grun-0.9.2 67
 MD5 58ba6774097de6fdfbaf53d0870a6cf9 files/grun-0.9.2-gentoo.diff.bz2 16446
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCyIhQl5AvwDPiUowRAqW2AJ9N2q0PeywLwglw9JpGpYDZqLsmMACgrhOI
+C1tob0BMp8mt9xgxpiebsKc=
+=Qlp7
+-----END PGP SIGNATURE-----
