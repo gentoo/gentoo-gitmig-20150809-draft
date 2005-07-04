@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 b80f77029b320d6c051cec53a7c26861 ChangeLog 1964
 MD5 d6ec2b28cce2e9c71331bbdf0737400a alltray-0.5.1.ebuild 736
 MD5 1396312b35b4577b85f2c8b69953717e alltray-0.54.ebuild 818
-MD5 5251a60f3a7b1de1bad1653557d94c17 ChangeLog 1846
-MD5 9212eb629264546c8d7fcd6e2563073a metadata.xml 596
-MD5 06d7fb4c3de598a259d3bb830edc7f05 files/digest-alltray-0.54 64
+MD5 f35df00de73a8dc87277032d9d34d4e9 alltray-0.55.ebuild 818
 MD5 5440c7ffb33c32f7582fbc94af0f0b78 files/digest-alltray-0.5.1 64
+MD5 06d7fb4c3de598a259d3bb830edc7f05 files/digest-alltray-0.54 64
+MD5 ca0215c8513074865220853fcf851d6a files/digest-alltray-0.55 64
+MD5 9212eb629264546c8d7fcd6e2563073a metadata.xml 596
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCsDoBI1lqEGTUzyQRAhmCAKDbapOxbr1RW9c4SSAjx+4AWnt2WACaA2cc
-b8qY5rh66gFBDttR6KS/V5g=
-=zmLy
+iD8DBQFCycUzI1lqEGTUzyQRAn4XAKDcp0gwht0enCMV/vsW3M/3lfJAzACguaT6
+gLCafColCRqsjNMEgd7LG4w=
+=M6AR
 -----END PGP SIGNATURE-----
