@@ -1,6 +1,9 @@
 # ChangeLog for net-im/micq
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.35 2005/07/02 06:47:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.36 2005/07/04 14:10:11 gustavoz Exp $
+
+  04 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> micq-0.5.0.3.ebuild:
+  Stable on sparc
 
 *micq-0.5.0.4 (02 Jul 2005)
 
