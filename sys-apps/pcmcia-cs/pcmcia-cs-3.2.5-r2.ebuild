@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5-r2.ebuild,v 1.3 2005/06/30 09:11:47 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.5-r2.ebuild,v 1.4 2005/07/05 08:54:08 brix Exp $
 
 inherit eutils linux-info
 
@@ -16,7 +16,7 @@ DEPEND="virtual/os-headers >=sys-apps/sed-4"
 RDEPEND="!sys-apps/pcmcia-cs-cis"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 alpha -sparc"
+KEYWORDS="~x86 -sparc"
 PROVIDE="virtual/pcmcia"
 
 src_unpack() {
