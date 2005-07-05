@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.3-r1.ebuild,v 1.3 2005/07/04 14:37:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.3-r1.ebuild,v 1.4 2005/07/05 01:04:50 ticho Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic mailer pam
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mbox nis vda selinux hardened"
@@ -235,9 +235,13 @@ src_install () {
 	rm -rf "${D}/var"
 	keepdir /var/spool/postfix
 
+	# Install an rmail for UUCP, closing bug #19127.
+	dobin auxiliary/rmail/rmail
+
 	# mailwrapper stuff
 	if use mailwrapper ; then
 		mv "${D}/usr/sbin/sendmail" "${D}/usr/sbin/sendmail.postfix"
+		mv "${D}/usr/bin/rmail" "${D}/usr/bin/rmail.postfix"
 		rm "${D}/usr/bin/mailq" "${D}/usr/bin/newaliases"
 
 		mv "${D}/usr/share/man/man1/sendmail.1" \
@@ -253,9 +257,6 @@ src_install () {
 		# Provide another link for legacy FSH.
 		dosym /usr/sbin/sendmail /usr/lib/sendmail
 	fi
-
-	# Install an rmail for UUCP, closing bug #19127.
-	dobin auxiliary/rmail/rmail
 
 	# Install qshape tool.
 	dobin auxiliary/qshape/qshape.pl
