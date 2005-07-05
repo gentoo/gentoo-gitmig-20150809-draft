@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mmsv2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.7 2005/05/01 21:04:11 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.8 2005/07/05 01:39:24 arj Exp $
+
+*mmsv2-1.0.2.2 (05 Jul 2005)
+
+  05 Jul 2005; Anders Rune Jensen <arj@gentoo.org> +mmsv2-1.0.2.2.ebuild:
+  New version.
 
   01 May 2005; Anders Rune Jensen <arj@gentoo.org> mmsv2-1.0.1.ebuild:
   Marked stable on amd64 and x86.
