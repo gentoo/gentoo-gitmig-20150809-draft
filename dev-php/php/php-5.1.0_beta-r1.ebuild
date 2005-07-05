@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.1.0_beta.ebuild,v 1.1 2005/06/11 14:28:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.1.0_beta-r1.ebuild,v 1.1 2005/07/05 04:36:10 sebastian Exp $
 
 PHPSAPI="cli"
-MY_PV="5.1.0b1"
+MY_PV="5.1.0b2"
 MY_PHP_P="php-${MY_PV}"
 PHP_S="${WORKDIR}/${MY_PHP_P}"
 PHP_PACKAGE=1
