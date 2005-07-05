@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.5.ebuild,v 1.1 2005/05/14 17:50:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.5.ebuild,v 1.2 2005/07/05 21:27:41 swegener Exp $
 
 MY_P=ScrollZ-${PV}
 
@@ -10,13 +10,13 @@ HOMEPAGE="http://www.scrollz.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ia64 ~amd64 ~ppc"
+KEYWORDS="x86 ~ia64 ~amd64 ~ppc"
 IUSE="ipv6 socks5 ssl"
 
 DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_compile() {
 	econf \
@@ -31,8 +31,8 @@ src_compile() {
 src_install() {
 	dodir /usr/share/man/man1
 	einstall \
-		sharedir=${D}/usr/share \
-		mandir=${D}/usr/share/man/man1 \
+		sharedir="${D}"/usr/share \
+		mandir="${D}"/usr/share/man/man1 \
 		install \
 		|| die "einstall failed"
 	dodoc ChangeLog* README* || die "dodoc failed"
