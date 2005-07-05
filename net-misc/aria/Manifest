@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 d8998cc649683ff1cd49df55d91918f9 aria-0.10.0.ebuild 804
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 16373e087b195f970cebf5f8e42df7ad aria-0.10.2_beta7.ebuild 857
-MD5 77c42983bc9f9099ec01936e0a8c2358 ChangeLog 2261
-MD5 6b959e7a5a44de9b5374a77f763c89c8 aria-1.0.0.ebuild 1177
+MD5 088190d2cd342fb32e3e88848cca6951 ChangeLog 2359
+MD5 54a72f8b909ed172d4d9b3dfbbbd8a0d aria-1.0.0.ebuild 1176
 MD5 e49bd8fb946e7f696225f4fb9d6b7bca files/digest-aria-0.10.2_beta7 69
 MD5 650691427e963c1e71e93aca6c62f0f4 files/digest-aria-1.0.0 63
 MD5 6cf5cba54a93af546dd72d878553cf0d files/aria-1.0.0-bigendian.diff 684
@@ -15,7 +15,7 @@ MD5 eecc0279096e5be08069f7e6e6d95665 files/aria-1.0.0-xgettext-gentoo.diff 956
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCyV/NKRy60XGEcJIRAuhqAKCiNZQEUYHLz7CF+BEWcC/t/JdJoQCfXHK5
-xeHeHa4VRE0cUim/ianPtm8=
-=5nwQ
+iD8DBQFCyoHQKRy60XGEcJIRAklaAJ9QqPYOixV8a3SIBWwyjAQAf4cE8QCfak83
+rToDqt+zVHXaH51R0nhEzn8=
+=kNd6
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aria
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.17 2005/07/04 16:11:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.18 2005/07/05 12:49:20 gustavoz Exp $
+
+  05 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> aria-1.0.0.ebuild:
+  Sparc stable for real
 
   04 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   +files/aria-1.0.0-bigendian.diff, aria-0.10.0.ebuild,
