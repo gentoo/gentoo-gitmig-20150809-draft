@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5.ebuild,v 1.5 2005/07/05 23:59:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r1.ebuild,v 1.1 2005/07/05 23:59:18 robbat2 Exp $
 
 inherit eutils
 
@@ -8,12 +8,12 @@ MY_P="${P/-}"
 DESCRIPTION="PVM: Parallel Virtual Machine"
 HOMEPAGE="http://www.epm.ornl.gov/pvm/pvm_home.html"
 SRC_URI="ftp://ftp.netlib.org/pvm3/${MY_P}.tgz "
-IUSE=""
+IUSE="crypt"
 DEPEND=""
 RDEPEND="virtual/libc"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 S="${WORKDIR}/${MY_P%%.*}"
 
 src_unpack() {
@@ -35,6 +35,13 @@ src_unpack() {
 		sed -i -e "s|ARCHDLIB	=|ARCHDLIB	= -L/usr/lib64 -L/usr/X11R6/lib64 |" conf/LINUX${I}.def || die "Failed to fix 64-bit"
 		sed -i -e "s|ARCHLIB	=|ARCHLIB	= -L/usr/lib64 -L/usr/X11R6/lib64 |" conf/LINUX${I}.def || die "Failed to fix 64-bit"
 	done
+
+	if use crypt; then
+		for i in ${S}/conf/LINUX*def; do
+			sed -i.orig -e '/^ARCHCFLAGS/s~/usr/bin/rsh~/usr/bin/ssh~' "${i}" ||
+			die "Failed to set ssh instead of rsh"
+		done
+	fi
 
 }
 

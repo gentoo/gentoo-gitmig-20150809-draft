@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/pvm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.21 2005/06/15 21:20:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.22 2005/07/05 23:59:18 robbat2 Exp $
+
+*pvm-3.4.5-r1 (05 Jul 2005)
+
+  05 Jul 2005; Robin H. Johnson <robbat2@gentoo.org> pvm-3.4.5.ebuild,
+  +pvm-3.4.5-r1.ebuild:
+  The ssh changes really should have been in a new revision, that wasnt stable
+  already, so revert them and create that new revision. Also change the
+  useflag for having ssh to be crypt instead of ssh.
 
   15 Jun 2005; Robin H. Johnson <robbat2@gentoo.org> pvm-3.4.5.ebuild:
   Add support for ssh instead of rsh.
