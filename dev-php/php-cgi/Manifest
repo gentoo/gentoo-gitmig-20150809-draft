@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 686f1f839bde788f08f6a1193b860a10 php-cgi-5.0.4.ebuild 1100
 MD5 b0699992939c804bbc6e2382978bbe1f php-cgi-4.3.8-r1.ebuild 767
 MD5 a2364c381c6ecc36e77343399d311f8f php-cgi-4.3.8.ebuild 749
@@ -24,3 +27,10 @@ MD5 b2c4209d0ddcd0a3debef249ffd2d8d2 files/digest-php-cgi-4.3.11 284
 MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
 MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
 MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCyhDxaGfFFLhbXWkRAsFGAJ9jlAjkiB4/DLIE8ouJl+zGmPmiJQCgiWmT
+9zX/n3foXqShESpcL2YlX7s=
+=VnMg
+-----END PGP SIGNATURE-----
