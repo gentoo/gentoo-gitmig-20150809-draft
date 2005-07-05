@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.42 2005/07/02 17:42:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.43 2005/07/05 17:57:00 killerfox Exp $
+
+  05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  logrotate-3.7.1-r1.ebuild:
+  Stable on hppa.
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   logrotate-3.7.1-r1.ebuild:
