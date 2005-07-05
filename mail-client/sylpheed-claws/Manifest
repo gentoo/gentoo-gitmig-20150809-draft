@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d5fa1781252c7715cf5c4ed5baf7cf3c ChangeLog 21638
 MD5 82e806ed62f0596fb7bef493d225712f metadata.xml 269
 MD5 46f10b844855dee328c902f9ba08d67c sylpheed-claws-1.0.4.ebuild 3817
 MD5 c3b2ba267a24143952b42a6608ada76b sylpheed-claws-1.0.4a.ebuild 3823
+MD5 727fb93d81899ac6ee684a85b3c741c0 sylpheed-claws-1.9.11.ebuild 4180
 MD5 24b59e53fb54963eb86f43f2d2a91705 sylpheed-claws-1.9.9.ebuild 4173
-MD5 3f49f52d06cd596f35c49dddeadd2b1e sylpheed-claws-1.9.11.ebuild 4174
-MD5 2ed3f2d1d9b4d364d5e51bf13fed8776 ChangeLog 21538
-MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
 MD5 abb48579ea54768c2ee6f172f6d8aa05 files/digest-sylpheed-claws-1.0.4 74
 MD5 09779e8e66b75ff8da4647363365a28e files/digest-sylpheed-claws-1.0.4a 75
-MD5 a45d048c97b1ae5b771186d7dc692cdf files/digest-sylpheed-claws-1.9.9 74
 MD5 906915a77cd2ecc9aa705810ba1c944e files/digest-sylpheed-claws-1.9.11 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCo1E26J2i8a8J4okRArYjAJ9aiF63rj92fWE78E4kTfLbXdmRZgCg2snm
-s8c0/mlJy+m708LW+m06h1c=
-=EBjx
------END PGP SIGNATURE-----
+MD5 a45d048c97b1ae5b771186d7dc692cdf files/digest-sylpheed-claws-1.9.9 74
+MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
