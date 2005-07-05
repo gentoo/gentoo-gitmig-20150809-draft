@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-speex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.6 2005/07/02 10:22:20 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.7 2005/07/05 15:19:19 gustavoz Exp $
+
+  05 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-speex-0.8.8.ebuild, gst-plugins-speex-0.8.9.ebuild,
+  gst-plugins-speex-0.8.10.ebuild:
+  Keyworded ~sparc
 
 *gst-plugins-speex-0.8.10 (02 Jul 2005)
 
