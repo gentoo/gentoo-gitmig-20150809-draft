@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.25 2005/06/15 17:26:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.26 2005/07/05 16:01:05 wolf31o2 Exp $
+
+  05 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org> -pwgen-2.01.ebuild,
+  pwgen-2.03-r1.ebuild, pwgen-2.04.ebuild:
+  Added ia64 to KEYWORDS.  Blame plasmaroo.
 
 *pwgen-2.04 (15 Jun 2005)
 
