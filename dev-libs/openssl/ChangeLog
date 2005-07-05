@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.125 2005/07/04 10:10:23 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.126 2005/07/05 23:39:24 azarah Exp $
+
+*openssl-0.9.8 (05 Jul 2005)
+
+  05 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/openssl-0.9.8-make-engines-dir.patch,
+  +files/openssl-0.9.8-parallel-build.patch,
+  +files/openssl-0.9.8-ppc64.patch, +openssl-0.9.8.ebuild:
+  Update version. Fix parallel build. Fix new engines not creating install
+  dir. Fix creating certificates cannot find libcrypt/libssl on new install.
 
   04 Jul 2005; Hardave Riar <hardave@gentoo.org> openssl-0.9.7e-r1.ebuild:
   Stable on mips.
