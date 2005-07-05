@@ -1,8 +1,10 @@
 adminblock
 adsense
 amazontools
+amazon_items
 amazonsearch
 article
+atom
 attachment
 banner
 bbcode_wysiwyg
@@ -22,9 +24,11 @@ daily
 dba
 diff
 distantparent
+donations
 download_counter
 ecommerce
 event
+eventfinder
 excerpt
 ezmlm
 fckeditor
@@ -45,6 +49,7 @@ glossary
 guestbook
 hof
 helpedit
+highlight
 htmlcorrector
 html2txt
 htmlarea
@@ -72,6 +77,7 @@ nodewords
 nodelist
 nmoderation
 node_privacy_byrole
+nodevote
 node_import
 notify
 og
@@ -87,10 +93,12 @@ quotes
 recipe
 rsvp
 scheduler
+scripturefilter
 securesite
 series
 shoutbox
 sidecontent
+similar
 simpletest
 site_map
 profile_pages
@@ -100,6 +108,7 @@ smileys
 spam
 trip_search
 statistics_filter
+statistics_trends
 stock
 subscriptions
 summary
@@ -122,12 +131,14 @@ trackback
 troll
 urlfilter
 variable
+video
 vimcolor
 volunteer
 webform
 weblink
 webserver_auth
 week
+whatsrelated
 wiki
 wordfilter
 workspace
