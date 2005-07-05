@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4161 2005/07/05 20:38:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4162 2005/07/05 23:37:20 azarah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Martin Schlemmer <azarah@gentoo.org> (05 Jul 2005)
+# Masked for testing, as it breaks api
+>=dev-libs/openssl-0.9.8
 
 # Leonardo Boshell <leonardop@gentoo.org> (05 Jul 2005)
 # Masked for testing as it's potentially problematic.
