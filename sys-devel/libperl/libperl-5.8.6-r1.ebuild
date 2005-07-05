@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6-r1.ebuild,v 1.4 2005/07/03 13:31:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6-r1.ebuild,v 1.5 2005/07/05 16:43:37 hardave Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -68,7 +68,7 @@ HOMEPAGE="http://www.perl.org"
 SLOT="${PERLSLOT}"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
-KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~m68k mips ppc ~ppc64 ~s390 ~sh sparc x86"
 
 # rac 2004.08.06
 
