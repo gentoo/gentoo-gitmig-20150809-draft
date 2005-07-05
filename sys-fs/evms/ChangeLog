@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.35 2005/06/24 07:09:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.36 2005/07/05 16:04:13 wolf31o2 Exp $
+
+  05 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org> evms-2.5.2-r1.ebuild:
+  Added ia64 to KEYWORDS.  Blame plasmaroo.
 
 *evms-2.5.3 (24 Jun 2005)
 
