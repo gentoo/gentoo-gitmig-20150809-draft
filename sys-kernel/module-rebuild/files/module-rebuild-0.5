@@ -12,8 +12,8 @@ if [[ `id -u` != 0 ]]; then
 	exit 1
 fi
 
-R_VERSION="0.4"
-R_MODULES="${ROOT}/usr/share/module-rebuild/moduledb"
+R_VERSION="0.5"
+R_MODULES="${ROOT}/var/lib/module-rebuild/moduledb"
 R_PORTAGEQ="`which portageq 2>/dev/null`"
 if [[ -z ${R_PORTAGEQ} ]]; then
 	echo "** FATAL: Unable to find portageq."
@@ -32,7 +32,7 @@ package_valid() {
 
 package_valid_strict() {
 	local package=${1}
-	package_valid ${package} && [[ -z ${package%-[0-9]*} ]] && return 0 || return 1
+	package_valid ${package} && [[ -z ${package%%*-[0-9]*} ]] && return 0 || return 1
 }
 
 package_exists() {
@@ -113,7 +113,7 @@ db_module_list() {
 		pkg=${line#*:}
 		auto=${pkg/:*}
 		pkg=${pkg/*:}
-		
+
 		if [[ ${R_OPTION_X} == 1 ]]; then
 			pkg=${pkg%-[0-9]*}
 			package_valid ${pkg}
@@ -225,11 +225,6 @@ EOF
 
 }
 
-if [[ ! -f ${ROOT}/usr/share/module-rebuild/moduledb ]]; then
-	[[ ! -d ${ROOT}/usr/share/module-rebuild/ ]] && mkdir ${ROOT}/usr/share/module-rebuild/
-	touch ${ROOT}/usr/share/module-rebuild/moduledb
-fi
-
 check_validity() {
 	local package=${1} strict=${2:-0} ret=1
 
@@ -271,6 +266,19 @@ for i in ${@:${OPTIND}}; do
 	fi
 done
 unset i x
+
+# If the moduledb doesnt exist, lets populate it automatically.
+if [[ ! -f ${R_MODULES} ]]; then
+	echo -e "${C_BOLD}${C_RED}No moduledb found...${C_NORM}"
+
+	[[ ! -d ${ROOT}/var/lib/module-rebuild/ ]] && \
+		echo -e "${C_BOLD}Creating moduledb state directory.${C_NORM}"; \
+		mkdir -p ${ROOT}/var/lib/module-rebuild/
+
+	echo -e "${C_BOLD}Populating moduledb...${C_NORM}"
+	touch ${R_MODULES}
+	R_PARAMS[0]=populate
+fi
 
 case ${R_PARAMS[0]} in
 	add)		check_validity ${R_PARAMS[1]} 1; db_module_add ${R_PARAMS[1]};;
