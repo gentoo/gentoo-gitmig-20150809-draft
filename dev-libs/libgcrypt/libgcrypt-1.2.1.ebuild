@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1.ebuild,v 1.13 2005/07/03 21:17:11 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1.ebuild,v 1.14 2005/07/05 10:42:54 dragonheart Exp $
 
 inherit eutils
 
@@ -36,7 +36,5 @@ src_install() {
 		dosym libgcrypt.11.dylib /usr/lib/libgcrypt.7.dylib
 	else
 		dosym libgcrypt.so.11 /usr/lib/libgcrypt.so.7
-		dosym libgcrypt-pth.so.11 /usr/lib/libgcrypt-pth.so.7
-		dosym libgcrypt-pthread.so.11 /usr/lib/libgcrypt-pthread.so.7
 	fi
 }

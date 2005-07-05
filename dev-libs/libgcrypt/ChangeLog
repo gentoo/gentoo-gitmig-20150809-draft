@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.53 2005/07/03 21:17:11 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.54 2005/07/05 10:42:54 dragonheart Exp $
+
+  05 Jul 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/libgcrypt-hppa.patch, -files/libgcrypt-rijndael.patch,
+  -libgcrypt-1.1.91.ebuild, -libgcrypt-1.1.92.ebuild,
+  -libgcrypt-1.2.0-r1.ebuild, -libgcrypt-1.2.0-r2.ebuild,
+  libgcrypt-1.2.1.ebuild:
+  Version cleanout and fixes bug #96792 by Chris White
 
   03 Jul 2005; Hardave Riar <hardave@gentoo.org> libgcrypt-1.2.1.ebuild:
   Stable on mips, dep for bug #90726.
