@@ -1,6 +1,11 @@
 # ChangeLog for games-board/eboard
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.9 2004/12/28 23:52:53 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.10 2005/07/05 18:40:49 gustavoz Exp $
+
+  05 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/0.8.0-fake-nls.patch, -files/0.9.0-fake-nls.patch,
+  eboard-0.9.5.ebuild:
+  Keyworded ~sparc wrt #97950
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
