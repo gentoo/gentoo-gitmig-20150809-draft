@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.3-r1.ebuild,v 1.1 2005/05/26 20:13:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.3-r1.ebuild,v 1.2 2005/07/05 23:08:46 swegener Exp $
 
 MY_P=radius-${PV}
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/radius/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="guile mysql postgres odbc dbm nls snmp pam static debug"
+IUSE="guile mysql postgres odbc dbm nls snmp pam static debug readline"
 
 DEPEND="!net-dialup/freeradius
 	!net-dialup/cistronradius

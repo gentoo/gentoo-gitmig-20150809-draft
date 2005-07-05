@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 353b34389532adf37aa954f3a869e8b6 gnuradius-1.3.ebuild 1333
-MD5 f4c62ccf173fe71641356922ec12be11 gnuradius-1.3-r1.ebuild 1307
-MD5 cc202f5e3393d1884497ebeb3b81c215 ChangeLog 838
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 21713346f39f9d79cdd3cdf4acb5e1a4 ChangeLog 970
 MD5 2fcc0ff6ac050e6fdc1bf8a233e9eeac files/digest-gnuradius-1.3 63
 MD5 2fcc0ff6ac050e6fdc1bf8a233e9eeac files/digest-gnuradius-1.3-r1 63
+MD5 852ecab405e3d37a2c884e94e91ce9d1 gnuradius-1.3-r1.ebuild 1318
+MD5 9a903940793985bfa8a4d62eb49d4465 gnuradius-1.3.ebuild 1344
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCli33jiC39V7gKu0RAma0AJ9GMIiqvn2iZOJDSG7aacioA3xlMgCfdhxk
-5QCi5+oaTdZImg4M7e+S9+M=
-=ld9K
+iD8DBQFCyxMLI1lqEGTUzyQRAnFkAKChWmfnxOCTSKSC58OyqETQMBw4OgCfZaPf
+r/IXDPLI7GTEpGzgUb0Demg=
+=aJkW
 -----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gnuradius
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/ChangeLog,v 1.4 2005/05/26 20:13:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/ChangeLog,v 1.5 2005/07/05 23:08:46 swegener Exp $
+
+  05 Jul 2005; Sven Wegener <swegener@gentoo.org> gnuradius-1.3.ebuild,
+  gnuradius-1.3-r1.ebuild:
+  QA: Added readline to IUSE.
 
 *gnuradius-1.3-r1 (26 May 2005)
 
