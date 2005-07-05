@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.0.ebuild,v 1.1 2005/07/04 12:07:07 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.0.ebuild,v 1.2 2005/07/05 19:41:36 zzam Exp $
 
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org/wiki/index.php/LinuxTV_dvb-apps"
@@ -34,8 +34,8 @@ src_install() {
 	dobin dvbdate/dvbdate
 	dobin dvbnet/dvbnet
 	dobin dvbtraffic/dvbtraffic
-	mv scan/scan scan/scan.dvb # conflict with exim file name
-	dobin scan/scan.dvb
+	mv scan/scan scan/dvbscan # conflict with exim file name
+	dobin scan/dvbscan
 	cd szap
 	dobin szap czap tzap femon
 
@@ -75,4 +75,6 @@ src_install() {
 pkg_postinst() {
 	einfo "Please read the documentation in /usr/share/doc/${PF}."
 	einfo "The channel lists and other examples also are in this directory."
+	einfo
+	einfo "scanning utility is now installed as dvbscan"
 }
