@@ -1,9 +1,19 @@
-MD5 95a48192094d67904270a50caf739def psh-0.009-r1.ebuild 777
-MD5 9aeed965d89fbf04cfb34d947cd42826 psh-0.009-r2.ebuild 545
-MD5 9dae3770cb0340d13b5f1f22c305b1ad ChangeLog 2008
-MD5 11a6741da286f0b1907650d69bf2ea08 psh-1.8.ebuild 581
-MD5 103aa49abc0598e94c472eb28b33cb80 psh-1.8-r1.ebuild 667
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e0bb91196c028a408c1097b626f64bcc ChangeLog 2109
 MD5 b7b5f394fec913203bfbbe6a4c500686 files/digest-psh-0.009-r1 60
 MD5 b7b5f394fec913203bfbbe6a4c500686 files/digest-psh-0.009-r2 60
 MD5 37c0535df6b49bfa7b38d111d0e43b0c files/digest-psh-1.8 59
 MD5 37c0535df6b49bfa7b38d111d0e43b0c files/digest-psh-1.8-r1 59
+MD5 95a48192094d67904270a50caf739def psh-0.009-r1.ebuild 777
+MD5 9aeed965d89fbf04cfb34d947cd42826 psh-0.009-r2.ebuild 545
+MD5 25bd079b4a8fd50cc908bb7bacda025d psh-1.8-r1.ebuild 676
+MD5 11a6741da286f0b1907650d69bf2ea08 psh-1.8.ebuild 581
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCyxOZI1lqEGTUzyQRApSZAKCSPVqLlRwjTIP/+tsFejdrLB7DpwCZAeTk
+vQf5HmDlI2O7G37i1sUIOD4=
+=uZRD
+-----END PGP SIGNATURE-----
