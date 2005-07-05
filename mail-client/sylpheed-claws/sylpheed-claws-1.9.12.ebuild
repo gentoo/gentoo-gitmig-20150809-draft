@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.4a.ebuild,v 1.2 2005/07/05 23:04:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.9.12.ebuild,v 1.1 2005/07/05 23:04:21 genone Exp $
 
 IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir xface kde" # mbox
 
@@ -14,13 +14,12 @@ MAILDIR_VERSION="maildir-0.7"
 DESCRIPTION="Bleeding edge version of Sylpheed"
 HOMEPAGE="http://sylpheed-claws.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-#SRC_URI="mirror://gentoo/${P}.tar.bz2 http://dev.gentoo.org/~genone/distfiles/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc amd64 ~alpha ~ppc64"
+KEYWORDS="~amd64 ~x86 ~sparc"
 
-COMMONDEPEND="=x11-libs/gtk+-1.2*
+COMMONDEPEND=">=x11-libs/gtk+-2.4
 	pda? ( >=app-pda/jpilot-0.99 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
@@ -42,20 +41,12 @@ RDEPEND="${COMMONDEPEND}
 	net-mail/metamail
 	x11-misc/shared-mime-info"
 
-PDEPEND="pdflib? ( =mail-client/${PN}-${GS_VERSION} )
-		 maildir? ( =mail-client/${PN}-${MAILDIR_VERSION} )
-		 crypt? ( =mail-client/${PN}-${PGP_VERSION} )"
+#PDEPEND="pdflib? ( =mail-client/${PN}-${GS_VERSION} )
+#		 maildir? ( =mail-client/${PN}-${MAILDIR_VERSION} )
+#		 crypt? ( =mail-client/${PN}-${PGP_VERSION} )"
 #		 mbox? ( =mail-client/${PN}-${MBOX_VERSION} )"
 
 PROVIDE="virtual/sylpheed"
-
-src_unpack() {
-	unpack ${A}
-
-	# use shared-mime-info
-	cd ${S}/src
-	epatch ${FILESDIR}/procmime.patch
-}
 
 src_compile() {
 	local myconf
@@ -78,6 +69,7 @@ src_compile() {
 	econf \
 		--program-suffix=-claws \
 		--enable-spamassassin-plugin \
+		--with-config-dir=.sylpheed-claws \
 		${myconf} || die "./configure failed"
 
 	emake || die
@@ -125,6 +117,14 @@ src_install() {
 }
 
 pkg_postinst() {
+	echo
+	ewarn "External plugins need specially adjusted versions, see the "
+	ewarn "relevant package.mask entry for the available gtk2 versions."
+	ewarn "Some plugins may not have a gtk2 version available."
+	echo
+	einfo "For safety reasons this version will use the alternate configuration"
+	einfo "directory ~/.sylpheed-claws instead of ~/.sylpheed, so you have to"
+	einfo "copy your configuration manually or create a new one."
 	ewarn
 	ewarn "You have to re-emerge or update all external plugins"
 	ewarn

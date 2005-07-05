@@ -1,9 +1,19 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.50 2005/07/05 01:30:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.51 2005/07/05 23:04:21 genone Exp $
 
   05 Jul 2005; Jason Wever <weeve@gentoo.org> sylpheed-claws-1.9.11.ebuild:
   Added ~sparc keyword.
+
+*sylpheed-claws-1.9.12 (05 Jul 2005)
+*sylpheed-claws-1.0.5 (05 Jul 2005)
+
+  05 Jul 2005; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-1.0.4a.ebuild, +sylpheed-claws-1.0.5.ebuild,
+  +sylpheed-claws-1.9.12.ebuild:
+  version bump for both stable and development version. Removing procmime
+  patch from 1.9.12 as it's merged upstream. Marking 1.0.4a stable for x86
+  and amd64.
 
 *sylpheed-claws-1.9.11 (05 Jun 2005)
 
