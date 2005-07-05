@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.54 2005/07/01 18:12:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.55 2005/07/05 16:02:21 wolf31o2 Exp $
+
+  05 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  livecd-tools-1.0.20.ebuild, livecd-tools-1.0.21_pre9.ebuild:
+  Added ia64 to KEYWORDS.  Blame plasmaroo.
 
 *livecd-tools-1.0.21_pre9 (01 Jul 2005)
 
