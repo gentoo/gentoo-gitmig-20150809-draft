@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.1-r1.ebuild,v 1.2 2005/07/04 14:34:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.1-r1.ebuild,v 1.3 2005/07/05 20:51:39 slarti Exp $
 
 inherit mailer
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://msmtp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/msmtp/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64 ~alpha"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ssl gnutls sasl doc"
 DEPEND="virtual/libc
 	dev-util/pkgconfig
