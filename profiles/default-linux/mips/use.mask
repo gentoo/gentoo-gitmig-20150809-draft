@@ -1,4 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.30 2005/05/24 02:10:36 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.31 2005/07/05 13:06:51 brix Exp $
+
+# Henrik Brix Andersen <brix@gentoo.org>
+# According to the mips herd, we currently have no way of testing
+# pcmcia on mips, bug #90359
+pcmcia
 
 # John N. Laliberte <allanonjl@gentoo.org>
 # mask scanner support

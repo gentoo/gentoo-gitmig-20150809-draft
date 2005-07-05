@@ -1,0 +1,6 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/mips/use.mask,v 1.1 2005/07/05 13:06:52 brix Exp $
+
+# Henrik Brix Andersen <brix@gentoo.org>
+# According to the mips herd, we currently have no way of testing
+# pcmcia on mips, bug #90359
+pcmcia
