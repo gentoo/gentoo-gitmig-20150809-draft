@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/socketstream-0.7.0.ebuild,v 1.1 2005/06/30 05:11:37 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/socketstream-0.7.0-r1.ebuild,v 1.1 2005/07/05 21:46:34 ka0ttic Exp $
 
 DESCRIPTION="C++ Streaming sockets library"
 HOMEPAGE="http://socketstream.sourceforge.net/"
@@ -13,6 +13,14 @@ IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# include/Makefile uses DIST_SUBDIRS and thus headers dont get installed
+	sed -i 's|^DIST_\(SUBDIRS =\)|\1|' include/Makefile.in || \
+		die "sed include/Makefile.in failed"
+}
+
 src_compile() {
 	econf || die "econf failed"
 	emake || die "emake failed"
@@ -24,6 +32,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README* HACKING TODO
 	use doc && dohtml -r docs/html/*
 }

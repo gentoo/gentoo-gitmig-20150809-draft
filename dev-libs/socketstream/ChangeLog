@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/socketstream
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/ChangeLog,v 1.6 2005/06/30 05:11:37 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/ChangeLog,v 1.7 2005/07/05 21:46:34 ka0ttic Exp $
+
+*socketstream-0.7.0-r1 (05 Jul 2005)
+
+  05 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> -socketstream-0.7.0.ebuild,
+  +socketstream-0.7.0-r1.ebuild:
+  Revision bump; -r0 did not install headers properly.
 
 *socketstream-0.7.0 (30 Jun 2005)
 
