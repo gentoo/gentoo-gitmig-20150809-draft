@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 1613ac6e27fd512508d3594a5645834e ChangeLog 640
 MD5 df56f13bcfcbbe4d0c286ece4b275062 libetpan-0.36.ebuild 804
-MD5 29e73af1d1efebb6501dc21a93da04bc libetpan-0.37.ebuild 804
-MD5 2100de0b9627d62c77b85c4830af2c3a ChangeLog 555
 MD5 509fe3ad1d5f4dfbeab7ff814984a262 metadata.xml 612
+MD5 7014f0ca37282fedb771b8b4e063a561 libetpan-0.37.ebuild 809
 MD5 b97f7371a550f937a4b82ef30079c155 files/digest-libetpan-0.36 66
 MD5 abfec432a49010c2597fe864d33e8287 files/digest-libetpan-0.37 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCyPLCQlM6RnzZP+IRAqvbAKCc6G5sWmqT+0tFv9suC3exmxTllQCdHHTi
-DEViZI66awz5kQe2lx1AIJk=
-=vZ+P
------END PGP SIGNATURE-----
