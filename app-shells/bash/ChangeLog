@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.68 2005/06/27 21:54:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.69 2005/07/05 22:52:33 vapier Exp $
+
+*bash-3.0-r12 (05 Jul 2005)
+
+  05 Jul 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/bash-3.0-pgrp-pipe-fix.patch, +bash-3.0-r12.ebuild:
+  Fix from upstream for pipe code when PGRP_PIPE is enabled #92349 by Harald
+  van Dijk.
 
   27 Jun 2005; Aron Griffis <agriffis@gentoo.org>
   +files/bash-3.0-parallel.patch, bash-3.0-r11.ebuild:
