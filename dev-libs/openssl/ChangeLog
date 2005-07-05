@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.126 2005/07/05 23:39:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.127 2005/07/05 23:45:20 azarah Exp $
+
+  05 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  openssl-0.9.7c-r1.ebuild, openssl-0.9.7d-r2.ebuild, openssl-0.9.7e.ebuild,
+  openssl-0.9.7e-r1.ebuild, openssl-0.9.7g.ebuild:
+  Fix creating certificates cannot find libcrypt/libssl on new install.
 
 *openssl-0.9.8 (05 Jul 2005)
 

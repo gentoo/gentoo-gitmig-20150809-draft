@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.10 2005/06/13 12:05:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.11 2005/07/05 23:45:20 azarah Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -128,6 +128,7 @@ src_install() {
 	# to be the more FHS compliant setup... -raker
 	insinto /etc/ssl/certs
 	doins certs/*.pem
+	LD_LIBRARY_PATH="${D}"/usr/$(get_libdir)/ \
 	OPENSSL="${D}"/usr/bin/openssl /usr/bin/perl tools/c_rehash "${D}"/etc/ssl/certs
 
 	# These man pages with other packages so rename them
