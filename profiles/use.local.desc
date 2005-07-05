@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1276 2005/07/05 22:37:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1277 2005/07/05 23:15:16 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -873,6 +873,7 @@ sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-boot/yaboot-static:ibm - Indicate the usage of ibm based ppc64 hardware
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
+sys-cluster/lam-mpi:pbs - Add support for PBS scheduling stuff
 sys-cluster/magma-plugins:nogulm - Removes gulm support to magma-plugins
 sys-cluster/ocfs:aio - Add aio support
 sys-cluster/pvm:ssh - Use SSH instead of RSH for communication.
