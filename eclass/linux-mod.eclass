@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.41 2005/07/05 13:34:45 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.42 2005/07/05 13:39:26 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -194,7 +194,9 @@ move_old_moduledb() {
 	
 	if [[ -f ${OLDDIR}/moduledb ]]; then
 		[[ ! -d ${NEWDIR} ]] && mkdir -p ${NEWDIR}
-		mv ${OLDDIR}/moduledb ${NEWDIR}/moduledb
+		[[ ! -f ${NEWDIR}/moduledb ]] && \
+			mv ${OLDDIR}/moduledb ${NEWDIR}/moduledb
+		rm -f ${OLDDIR}/*
 		rmdir ${OLDDIR}
 	fi
 }
