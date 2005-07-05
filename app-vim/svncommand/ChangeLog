@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/svncommand
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/svncommand/ChangeLog,v 1.7 2005/05/28 17:26:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/svncommand/ChangeLog,v 1.8 2005/07/05 10:50:51 slarti Exp $
+
+  05 Jul 2005; Tom Martin <slarti@gentoo.org> svncommand-1.67.3.ebuild:
+  Stable on sparc.
 
   28 May 2005; Aron Griffis <agriffis@gentoo.org> svncommand-1.67.3.ebuild:
   stable on alpha amd64 ia64 x86
