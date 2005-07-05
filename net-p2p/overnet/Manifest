@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d3042547ef3c8c6fd4e0af69534f37ca overnet-1.0.1.ebuild 813
+MD5 367073b2af80fb42796851e9a2f5436c overnet-1.3.0.ebuild 817
 MD5 b9643ffc1bd33b46e4ce6e1c4b211d61 ChangeLog 2025
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 bd6addb676c6267e4983ae94068058dd files/digest-overnet-1.0.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbCNWevY57Fted3ERAkNMAKCNgF43RpMYMx4oLkGIHf+5dZ8GKwCaA0uo
-eZCAsrg9PZKqBQUMdFOdCLo=
-=jBSR
------END PGP SIGNATURE-----
+MD5 08738fc868891d6b76e52b76916af358 files/digest-overnet-1.3.0 73
