@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-maildir/sylpheed-claws-maildir-0.7.ebuild,v 1.7 2005/05/18 12:17:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-maildir/sylpheed-claws-maildir-0.7.ebuild,v 1.8 2005/07/05 23:12:46 genone Exp $
 
 MY_P="${P##sylpheed-claws-}"
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 alpha ppc64"
 IUSE=""
-DEPEND=">=mail-client/sylpheed-claws-0.9.13"
+DEPEND=">=mail-client/sylpheed-claws-0.9.13 =sys-libs/db-4*"
 
 S="${WORKDIR}/${MY_P}"
 
