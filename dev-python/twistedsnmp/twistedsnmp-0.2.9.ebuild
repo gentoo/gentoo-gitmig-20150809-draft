@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twistedsnmp/twistedsnmp-0.2.9.ebuild,v 1.1 2005/07/04 15:44:37 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twistedsnmp/twistedsnmp-0.2.9.ebuild,v 1.2 2005/07/05 09:52:47 dholm Exp $
 
 inherit distutils
 MY_PN="TwistedSNMP"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${MY_PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0" # should only be the one version installed
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 IUSE=""
 DEPEND="virtual/python
