@@ -1,20 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.8.1.ebuild,v 1.7 2005/01/22 06:40:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.10.1.ebuild,v 1.1 2005/07/05 17:31:07 leonardop Exp $
 
-inherit gnome2 eutils
+inherit gnome2
 
 DESCRIPTION="commandline dialog tool for gnome"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 ~mips"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.3.1
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomecanvas-2
+	>=dev-libs/glib-2.5.3
 	dev-libs/popt"
 
 DEPEND="${RDEPEND}
@@ -23,13 +24,4 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
-
-src_unpack() {
-
-	unpack ${A}
-	cd ${S}
-	# Don't set the UTF-8 codeset before parsing command line arguments.
-	# Closes bug #45204.
-	epatch ${FILESDIR}/${PN}-2.6.3-utf8_fix.patch
-
-}
+USE_DESTDIR="1"

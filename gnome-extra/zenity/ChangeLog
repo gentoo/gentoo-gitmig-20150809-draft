@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.62 2005/07/02 14:26:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.63 2005/07/05 17:31:07 leonardop Exp $
+
+*zenity-2.10.1 (05 Jul 2005)
+
+  05 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> zenity-2.10.1.ebuild:
+  New release.
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> zenity-2.10.0.ebuild:
   Stable on alpha.
