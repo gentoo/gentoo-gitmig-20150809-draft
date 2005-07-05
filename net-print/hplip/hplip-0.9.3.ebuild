@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.3.ebuild,v 1.3 2005/06/08 10:11:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.3.ebuild,v 1.4 2005/07/05 23:03:37 swegener Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="foomaticdb snmp X qt ppds scanner"
+IUSE="foomaticdb snmp X qt ppds scanner cups usb"
 
 DEPEND="dev-lang/python
 	snmp? ( >=net-analyzer/net-snmp-5.0.9 )
