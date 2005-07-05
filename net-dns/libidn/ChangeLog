@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.29 2005/06/27 18:55:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.30 2005/07/05 17:52:07 killerfox Exp $
+
+  05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> libidn-0.5.15.ebuild:
+  Stable on hppa.
 
   27 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> libidn-0.5.15.ebuild:
   Stable on sparc
