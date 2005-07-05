@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0.ebuild,v 1.3 2005/07/05 07:09:16 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0.ebuild,v 1.4 2005/07/05 07:18:29 fafhrd Exp $
 
 inherit eutils gnustep-funcs flag-o-matic
 
@@ -60,9 +60,11 @@ src_compile() {
 		myconf="${myconf} --with-gnustepdir=/usr/lib/GNUstep/Applications"
 	fi
 
-	use nls \
-		&& export LINGUAS="`ls po/*.po | sed 's:po/\(.*\)\.po$:\1:'`" \
-		|| myconf="${myconf} --disable-locale"
+	if use nls; then
+		[ -z "$LINGUAS" ] && export LINGUAS="`ls po/*.po | sed 's:po/\(.*\)\.po$:\1:'`"
+	else
+		myconf="${myconf} --disable-locale"
+	fi
 
 	# default settings with $myconf appended
 	econf \
