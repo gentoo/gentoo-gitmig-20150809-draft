@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.77 2005/07/01 10:53:18 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.78 2005/07/05 04:47:10 sebastian Exp $
+
+  05 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -php-cgi-4.3.9_rc1.ebuild, -php-cgi-4.3.9_rc1-r1.ebuild:
+  Pull old RC.
 
 *php-cgi-4.4.0_rc2 (01 Jul 2005)
 

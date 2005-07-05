@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.170 2005/07/05 04:36:10 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.171 2005/07/05 04:44:36 sebastian Exp $
+
+  05 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -php-4.3.9_rc1.ebuild:
+  Pull old RC.
 
 *php-5.1.0_beta-r1 (05 Jul 2005)
 
