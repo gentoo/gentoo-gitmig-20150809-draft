@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.95 2005/07/05 08:54:08 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.96 2005/07/05 13:20:19 brix Exp $
+
+  05 Jul 2005; <brix@gentoo.org> pcmcia-cs-3.2.7-r3.ebuild,
+  pcmcia-cs-3.2.7-r4.ebuild:
+  Removed mips keywords as per bug #90359.
 
   05 Jul 2005; <brix@gentoo.org> pcmcia-cs-3.2.5-r2.ebuild:
   Removed alpha keyword since USE=pcmcia is masked on alpha.
