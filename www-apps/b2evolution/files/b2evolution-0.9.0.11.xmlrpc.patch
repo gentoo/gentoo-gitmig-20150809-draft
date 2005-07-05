@@ -1,0 +1,29 @@
+--- b2evolution/blogs/b2evocore/_functions_xmlrpc.php.old	2005-07-05 10:34:29.000000000 +0200
++++ b2evolution/blogs/b2evocore/_functions_xmlrpc.php	2005-07-05 10:36:01.000000000 +0200
+@@ -226,7 +226,7 @@
+ 		$_xh[$parser]['qt']=0;
+ 	  break;
+ 	case "NAME":
+-	  $_xh[$parser]['st'].="'"; $_xh[$parser]['ac']="";
++	  $_xh[$parser]['st'].='"'; $_xh[$parser]['ac']="";
+ 	  break;
+ 	case "FAULT":
+ 	  $_xh[$parser]['isf']=1;
+@@ -292,7 +292,7 @@
+ 	  $_xh[$parser]['cm']--;
+ 	  break;
+ 	case "NAME":
+-	  $_xh[$parser]['st'].= $_xh[$parser]['ac'] . "' => ";
++	  $_xh[$parser]['st'].= $_xh[$parser]['ac'] . '" => ';
+ 	  break;
+ 	case "BOOLEAN":
+ 		// special case here: we translate boolean 1 or 0 into PHP
+@@ -313,7 +313,7 @@
+ 			// we use double quotes rather than single so backslashification works OK
+ 			$_xh[$parser]['st'].="\"". $_xh[$parser]['ac'] . "\""; 
+ 		} else if ($_xh[$parser]['qt']==2) {
+-			$_xh[$parser]['st'].="base64_decode('". $_xh[$parser]['ac'] . "')"; 
++			$_xh[$parser]['st'].='base64_decode("'. $_xh[$parser]['ac'] . '")'; 
+ 		} else if ($name=="BOOLEAN") {
+ 			$_xh[$parser]['st'].=$_xh[$parser]['ac'];
+ 		} else {
