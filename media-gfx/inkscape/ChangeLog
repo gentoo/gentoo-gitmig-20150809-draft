@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.27 2005/06/27 18:58:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.28 2005/07/05 08:33:34 zypher Exp $
+
+  05 Jul 2005; Marc Hildebrand <zypher@gentoo.org>
+  inkscape-0.41-r1.ebuild:
+  Stable on x86
 
   27 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   inkscape-0.41-r1.ebuild:
