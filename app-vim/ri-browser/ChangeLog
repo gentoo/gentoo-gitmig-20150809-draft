@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/ri-browser
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ri-browser/ChangeLog,v 1.3 2005/04/02 14:54:04 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ri-browser/ChangeLog,v 1.4 2005/07/05 10:15:16 slarti Exp $
+
+  05 Jul 2005; Tom Martin <slarti@gentoo.org> ri-browser-1.2.ebuild:
+  Marked ~sparc.
 
   02 Apr 2005; Michael Kohl <citizen428@gentoo.org> ri-browser-1.2.ebuild:
   Added to ~x86.
