@@ -1,0 +1,76 @@
+diff -urN sudo-1.6.8p8/ldap.c sudo-1.6.8p8-patched/ldap.c
+--- sudo-1.6.8p8/ldap.c	2004-12-01 03:28:46.000000000 +0000
++++ sudo-1.6.8p8-patched/ldap.c	2005-06-22 08:14:59.000000000 +0000
+@@ -82,6 +82,8 @@
+   char *bindpw;
+   char *base;
+   char *ssl;
++  int  bind_timelimit;
++  int  timelimit;
+   int  tls_checkpeer;
+   char *tls_cacertfile;
+   char *tls_cacertdir;
+@@ -545,6 +547,8 @@
+     else MATCH_S("tls_cert",        ldap_conf.tls_certfile)
+     else MATCH_S("tls_key",         ldap_conf.tls_keyfile)
+     else MATCH_I("ldap_version", ldap_conf.version)
++    else MATCH_I("bind_timelimit",  ldap_conf.bind_timelimit)
++    else MATCH_I("timelimit",       ldap_conf.timelimit)
+     else MATCH_S("uri",     ldap_conf.uri)
+     else MATCH_S("binddn",  ldap_conf.binddn)
+     else MATCH_S("bindpw",  ldap_conf.bindpw)
+@@ -566,6 +570,8 @@
+   if (!ldap_conf.version) ldap_conf.version=3;
+   if (!ldap_conf.port) ldap_conf.port=389;
+   if (!ldap_conf.host) ldap_conf.host=estrdup("localhost");
++  if (!ldap_conf.bind_timelimit) ldap_conf.bind_timelimit=30;
++  if (!ldap_conf.timelimit) ldap_conf.timelimit=30;
+ 
+ 
+   if (ldap_conf.debug>1) {
+@@ -589,6 +595,10 @@
+                  ldap_conf.binddn : "(anonymous)");
+     printf("bindpw       %s\n", ldap_conf.bindpw ?
+                  ldap_conf.bindpw : "(anonymous)");
++    printf("bind_timelimit  %d\n", ldap_conf.bind_timelimit ?
++                 ldap_conf.bind_timelimit : 30);
++    printf("timelimit    %d\n", ldap_conf.timelimit ?
++                 ldap_conf.timelimit : 30);
+ #ifdef HAVE_LDAP_START_TLS_S
+     printf("ssl          %s\n", ldap_conf.ssl ?
+                  ldap_conf.ssl    : "(no)");
+@@ -772,6 +782,34 @@
+   }
+ #endif /* LDAP_OPT_X_TLS_REQUIRE_CERT */
+ 
++  /* setup timelimit options */
++
++SET_OPTI(LDAP_OPT_TIMELIMIT, "TIMELIMIT", timelimit);
++
++#ifdef LDAP_X_OPT_CONNECT_TIMEOUT
++  int timeout;
++  timeout = ldap_conf.bind_timelimit * 1000;
++
++  SET_OPTI(LDAP_X_OPT_CONNECT_TIMEOUT, "X_OPT_CONNECT_TIMEOUT", timeout);
++#endif  
++
++#ifdef LDAP_OPT_NETWORK_TIMEOUT
++  if (ldap_conf.debug>1) fprintf(stderr, "setting bind_timelimit to %d\n", \
++      ldap_conf.bind_timelimit);
++
++  struct timeval tv;
++
++  tv.tv_sec = ldap_conf.bind_timelimit;
++  tv.tv_usec = 0;
++
++  rc = ldap_set_option (ld, LDAP_OPT_NETWORK_TIMEOUT, &tv);
++    
++  if (rc != LDAP_OPT_SUCCESS) {
++    fprintf(stderr, "bind_timelimit ldap_set_option failed: %s\n", ldap_err2string(rc));
++    return VALIDATE_ERROR;
++  }
++#endif  
++
+   /* attempt connect */
+ #ifdef HAVE_LDAP_INITIALIZE
+   if (ldap_conf.uri) {
