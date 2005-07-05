@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.34 2005/05/24 23:17:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.35 2005/07/05 22:21:59 kugelfang Exp $
+
+*lam-mpi-7.1.1-r1 (06 Jul 2005)
+
+  06 Jul 2005; Danny van Dyk <kugelfang@gentoo.org> lam-mpi-7.1.1-r1.ebuild:
+  Bumped to circumvent my broken romio patch. Sorry :-/
 
   24 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
   files/lam-mpi-7.1.1-shared-romio.patch:
