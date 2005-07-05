@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.31-r2.ebuild,v 1.16 2005/04/09 21:55:46 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.31-r2.ebuild,v 1.17 2005/07/05 22:59:08 swegener Exp $
 
 inherit eutils fixheadtails
 
-IUSE="pam"
+IUSE="pam selinux"
 
 mod_ssl_ver=2.8.18
 PATCH_LEVEL="${PV}-r2"
