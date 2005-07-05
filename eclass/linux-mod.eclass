@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.39 2005/06/30 08:58:55 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.40 2005/07/05 11:37:03 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -189,20 +189,24 @@ update_modules() {
 }
 
 update_moduledb() {
-	if [[ ! -f ${ROOT}/usr/share/module-rebuild/moduledb ]]; then
-		[[ ! -d ${ROOT}/usr/share/module-rebuild/ ]] && mkdir ${ROOT}/usr/share/module-rebuild/
-		touch ${ROOT}/usr/share/module-rebuild/moduledb
+	local MODULEDB_DIR=${ROOT}/var/lib/module-rebuild/
+
+	if [[ ! -f ${MODULEDB_DIR}/moduledb ]]; then
+		[[ ! -d ${MODULEDB_DIR} ]] && mkdir -p ${MODULEDB_DIR}
+		touch ${MODULEDB_DIR}/moduledb
 	fi
-	if [[ -z $(grep ${CATEGORY}/${PN}-${PVR} ${ROOT}/usr/share/module-rebuild/moduledb) ]]; then
+	if [[ -z $(grep ${CATEGORY}/${PN}-${PVR} ${MODULEDB_DIR}/moduledb) ]]; then
 		einfo "Adding module to moduledb."
-		echo "a:1:${CATEGORY}/${PN}-${PVR}" >> ${ROOT}/usr/share/module-rebuild/moduledb
+		echo "a:1:${CATEGORY}/${PN}-${PVR}" >> ${MODULEDB_DIR}/moduledb
 	fi	
 }
 
 remove_moduledb() {
-	if [[ -n $(grep ${CATEGORY}/${PN}-${PVR} ${ROOT}/usr/share/module-rebuild/moduledb) ]]; then
+	local MODULEDB_DIR=${ROOT}/var/lib/module-rebuild/
+
+	if [[ -n $(grep ${CATEGORY}/${PN}-${PVR} ${MODULEDB_DIR}/moduledb) ]]; then
 		einfo "Removing ${CATEGORY}/${PN}-${PVR} from moduledb."
-		sed -ie "/.*${CATEGORY}\/${P}.*/d" ${ROOT}/usr/share/module-rebuild/moduledb
+		sed -ie "/.*${CATEGORY}\/${P}.*/d" ${MODULEDB_DIR}/moduledb
 	fi
 }
 
