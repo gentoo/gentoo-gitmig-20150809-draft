@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.18.1.ebuild,v 1.1 2005/07/05 18:58:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.18.1.ebuild,v 1.2 2005/07/05 20:48:03 leonardop Exp $
 
-inherit flag-o-matic gnome.org
+inherit eutils flag-o-matic gnome.org
 
 MY_PN="pkg-config"
+MY_P=${MY_PN}-${PV}
 DESCRIPTION="Package config system that manages compile/link flags for libraries"
 HOMEPAGE="http://pkgconfig.freedesktop.org/wiki/"
 
@@ -15,11 +16,19 @@ IUSE="hardened"
 
 DEPEND=""
 
-S=${WORKDIR}/${MY_PN}-${PV}
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+
 	use ppc64 && use hardened && replace-flags -O[2-3] -O1
+
+	# Set the default search path correctly
+	epatch ${FILESDIR}/${MY_P}-pc_path.patch
+
+	einfo "Running autoconf"
+	autoconf || die "Autoconf failed"
 }
 
 src_compile() {

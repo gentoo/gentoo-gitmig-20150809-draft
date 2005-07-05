@@ -1,0 +1,12 @@
+diff -NurdB pkg-config-0.18.1/configure.in pkg-config-0.18.1-patched/configure.in
+--- pkg-config-0.18.1/configure.in	2005-06-29 06:07:14.000000000 -0500
++++ pkg-config-0.18.1-patched/configure.in	2005-07-05 14:57:01.000000000 -0500
+@@ -16,7 +16,7 @@
+  [ pc_path="$withval"
+    AC_MSG_CHECKING([for default search path for .pc files])
+    AC_MSG_RESULT([$pc_path])],
+- [pc_path="$libdir/$PACKAGE:$datadir/$PACKAGE"])
++ [pc_path="$libdir/pkgconfig:$datadir/pkgconfig"])
+  AC_SUBST([pc_path])
+ dnl AC_DEFINE_UNQUOTED(PKG_CONFIG_PC_PATH,["$pc_path"],[Default search path for .pc files])
+ 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.29 2005/07/05 18:58:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.30 2005/07/05 20:48:03 leonardop Exp $
+
+  05 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> pkgconfig-0.18.1.ebuild,
+  files/pkg-config-0.18.1-pc_path.patch:
+  Added patch from https://bugs.freedesktop.org/show_bug.cgi?id=3662 to set
+  the default search path correctly.
 
 *pkgconfig-0.18.1 (05 Jul 2005)
 
