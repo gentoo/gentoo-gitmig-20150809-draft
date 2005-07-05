@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.52 2005/07/04 23:46:33 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.53 2005/07/05 07:03:11 fafhrd Exp $
+
+  05 Jul 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  windowmaker-0.92.0.ebuild:
+  amd64/mmx fixes for bug 97963
 
 *windowmaker-0.92.0 (04 Jul 2005)
 
