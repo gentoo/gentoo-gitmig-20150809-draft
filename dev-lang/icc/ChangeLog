@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.27 2005/07/04 21:55:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.28 2005/07/05 13:35:50 karltk Exp $
+
+*icc-9.0.021 (05 Jul 2005)
+
+  05 Jul 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/9.0.021/05icc-ifc, +files/9.0.021/iccifc.conf, +files/9.0.021/icc,
+  +files/9.0.021/icpc, +icc-9.0.021.ebuild:
+  Old upstream release. But this one is generally available.
 
   04 Jul 2005; Danny van Dyk <kugelfang@gentoo.org> icc-9.0.023.ebuild:
   Fixed to work on amd64 and marked accordingly.
