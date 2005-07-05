@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.72 2005/07/03 21:20:17 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.73 2005/07/05 19:51:19 killerfox Exp $
+
+  05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> gnutls-1.2.3.ebuild:
+  Stable on hppa.
 
   03 Jul 2005; Hardave Riar <hardave@gentoo.org> gnutls-1.0.25.ebuild,
   gnutls-1.2.3.ebuild:
