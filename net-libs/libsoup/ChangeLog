@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.63 2005/06/17 21:09:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.64 2005/07/05 20:01:58 killerfox Exp $
+
+  05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> libsoup-2.2.3.ebuild:
+  Stable on hppa.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> libsoup-2.2.3.ebuild:
   Stable on ppc.
