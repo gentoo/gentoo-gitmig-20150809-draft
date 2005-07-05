@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/manpages-ja
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.40 2005/04/23 13:07:17 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.41 2005/07/05 18:19:14 killerfox Exp $
+
+  05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  manpages-ja-20041115.ebuild:
+  Stable on hppa.
 
 *manpages-ja-20050415 (23 Apr 2005)
 
