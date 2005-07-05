@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.55 2005/04/20 22:13:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.56 2005/07/05 09:36:19 dragonheart Exp $
+
+*dialog-1.0.20050306 (05 Jul 2005)
+
+  05 Jul 2005; Daniel Black <dragonheart@gentoo.org>
+  dialog-1.0.20050206.ebuild, +dialog-1.0.20050306.ebuild:
+  dialog-1.0.20050206 nolonger on debian mirror (bug #91994).
+  dialog-1.0.20050306 added that seems to fix one language and installation of
+  samples
 
   20 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   dialog-1.0.20050206.ebuild:
