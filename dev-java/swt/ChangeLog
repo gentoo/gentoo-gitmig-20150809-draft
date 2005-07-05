@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.17 2005/05/26 18:10:12 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.18 2005/07/05 04:20:14 compnerd Exp $
+
+  04 Jul 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  files/SWTMessages.properties, +swt-3.1.ebuild:
+  Version bump; Changing AWT_LIB_PATH handling as IBM JDk is not liking the new
+  setup.
 
   26 May 2005; Saleem Abdulrasool <compnerd@gentoo.org> swt-3.1_pre7.ebuild:
   Fixing the extraction for amd64
