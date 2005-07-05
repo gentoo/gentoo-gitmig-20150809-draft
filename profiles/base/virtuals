@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.66 2005/07/05 19:59:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.67 2005/07/05 20:01:30 robbat2 Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -61,7 +61,7 @@ virtual/opengl				x11-base/xorg-x11
 # directive to phase out pam_stack.
 virtual/pam					>=sys-libs/pam-0.78
 # What PBS implementation to use
-virtual/pbs				sys-cluster/openpbs
+virtual/pbs				sys-cluster/torque
 virtual/pcmcia				sys-apps/pcmcia-cs
 virtual/pdfviewer			app-text/xpdf
 virtual/php					dev-php/mod_php
