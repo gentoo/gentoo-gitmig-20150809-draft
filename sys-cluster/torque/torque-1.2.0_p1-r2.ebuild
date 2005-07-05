@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r2.ebuild,v 1.1 2005/07/05 20:03:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r2.ebuild,v 1.2 2005/07/05 20:13:07 robbat2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -51,7 +51,7 @@ src_compile() {
 		$(use_enable doc docs) \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
-		--libdir="\${exec_prefix}/$(get_libdir)/torque" \
+		--libdir="\${exec_prefix}/$(get_libdir)/pbs" \
 		--enable-server \
 		--enable-mom \
 		--enable-clients \
