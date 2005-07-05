@@ -1,7 +1,12 @@
 # ChangeLog for app-dicts/ispell-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-cs/ChangeLog,v 1.10 2005/01/01 12:53:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-cs/ChangeLog,v 1.11 2005/07/05 01:04:47 arj Exp $
 
+*ispell-cs-20040229 (05 Jul 2005)
+
+  05 Jul 2005; Anders Rune Jensen <arj@gentoo.org> +ispell-cs-20040229.ebuild:
+  New version. Fix #95353
+	
   30 Jul 2004; Anders Rune Jensen <arj@gentoo.org> +metadata.xml:
   QA - IUSE fix and {add missing,correct} metatata.xml.
 
