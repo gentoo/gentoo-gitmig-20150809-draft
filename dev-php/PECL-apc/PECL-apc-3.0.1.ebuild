@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/PECL-apc-3.0.1.ebuild,v 1.1 2005/07/05 20:32:20 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/PECL-apc-3.0.1.ebuild,v 1.2 2005/07/05 20:42:43 sebastian Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_PKG="APC"
@@ -17,9 +17,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 DEPEND="${DEPEND}
 	!dev-php/eaccelerator
 	!dev-php/php-accelerator
-	!dev-php/ioncube_loaders
-	|| ( =dev-php/php-4*
-	     =dev-php/php-5.1* )"
+	!dev-php/ioncube_loaders"
 
 src_install () {
 	php-ext-pecl_src_install
