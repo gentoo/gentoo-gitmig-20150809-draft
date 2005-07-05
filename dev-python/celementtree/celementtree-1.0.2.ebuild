@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/celementtree-1.0.2.ebuild,v 1.1 2005/04/19 01:05:18 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/celementtree-1.0.2.ebuild,v 1.2 2005/07/05 08:15:02 dholm Exp $
 
 inherit eutils distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://effbot.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 IUSE="doc"
 DEPEND=">=dev-lang/python-2.1.3-r1
