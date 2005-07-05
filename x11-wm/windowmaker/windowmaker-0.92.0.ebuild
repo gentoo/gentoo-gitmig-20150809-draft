@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0.ebuild,v 1.2 2005/07/05 07:03:11 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0.ebuild,v 1.3 2005/07/05 07:09:16 fafhrd Exp $
 
 inherit eutils gnustep-funcs flag-o-matic
 
@@ -105,7 +105,7 @@ src_compile() {
 	done;
 
 	# amd64 and mmx don't play nice together (yet)
-	use amd64 && sed -i -e 's!.*ASM_X86.*!!' "${S}/src/config.h"
+	use amd64 && sed -i -e '/ASM_X86/ d' "${S}/src/config.h"
 
 	cd ${S}
 	emake -j1 || die "windowmaker: make has failed"
