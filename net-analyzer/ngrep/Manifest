@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fda8b0f34654135b721cc3d72cd51e14 ChangeLog 3750
+MD5 39b982463e877eb3253d82fbe53c5a6f ChangeLog 3866
 MD5 676123827c1f9954a5d26962aaf2a17d metadata.xml 501
+MD5 0d4e9791c342f0b86bfd7cc6a4f9bccb ngrep-1.44.ebuild 757
 MD5 e5c7ecfccc9b582a58336106bc08a669 ngrep-1.42.ebuild 866
 MD5 15e54d1970930271a7c4a7c27e7be82c ngrep-1.43.ebuild 622
+MD5 39d0cea1c55cbf48d2e5268ce04c3720 files/digest-ngrep-1.44 63
 MD5 85a227510da15e6a2af304931c2ec1e7 files/digest-ngrep-1.42 63
 MD5 a7fdfbde749237f8813aefb8a2a93d7e files/ngrep-1.42-libpcap-include.patch 6398
 MD5 cd845e373218beedc9eb6856e28d29b1 files/digest-ngrep-1.43 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFCIAkMmdTrptrqvGERAv8nAJ9WiomEoW338Fi4apIoUz9+SARvKACYoUSM
-xSzg3iYQbtWSZcMkvdqZkg==
-=jiDT
+iD8DBQFCyox9mdTrptrqvGERAjaPAJ0S2gWweUL+LE2Zuod7B/Nua86X1gCgktqG
+/TJjl6jlAKHvGzwqYOwrWC0=
+=0xiJ
 -----END PGP SIGNATURE-----
