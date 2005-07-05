@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r2.ebuild,v 1.2 2005/07/05 20:13:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r2.ebuild,v 1.3 2005/07/05 20:17:14 robbat2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -68,5 +68,5 @@ src_install() {
 	# Init scripts come from openpbs-common
 	#newinitd ${FILESDIR}/pbs-init.d pbs
 	#newconfd ${FILESDIR}/pbs-conf.d pbs
-	dosym /usr/$(get_libdir)/torque/libpbs.a /usr/$(get_libdir)/libpbs.a
+	dosym /usr/$(get_libdir)/pbs/libpbs.a /usr/$(get_libdir)/libpbs.a
 }
