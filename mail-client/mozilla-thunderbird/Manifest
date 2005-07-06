@@ -1,7 +1,10 @@
-MD5 54b5b4f88eca9884412348311c2b4ecc mozilla-thunderbird-1.0.2-r1.ebuild 6284
-MD5 cd216f0b74621c41992dfcf451636054 mozilla-thunderbird-1.0.2.ebuild 6174
-MD5 4872b06da0b638b7f2c5492d3f46da4d mozilla-thunderbird-1.0.2-r10.ebuild 3960
-MD5 cf663a3173522ef8f7bc6f37f1bc2f5e ChangeLog 7531
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 560ee30f3e0c90a1f094f58b2233e6bd mozilla-thunderbird-1.0.2-r1.ebuild 6291
+MD5 6a46a133faac10cf9e245f5c8991dbee mozilla-thunderbird-1.0.2.ebuild 6179
+MD5 988cdabe4b288a0ace4b12d1815b667e mozilla-thunderbird-1.0.2-r10.ebuild 3964
+MD5 1cf31a9cf2ec457b425fdc2479a83ce0 ChangeLog 7714
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-thunderbird-1.0.2-gcc4.patch 1818
 MD5 23d6b685fd5e49a07cc4a1786871bf47 files/mozilla-alpha-xpcom-subs-fix.patch 4953
@@ -12,3 +15,10 @@ MD5 99df508a69b6283098fcf48cc2dd2456 files/digest-mozilla-thunderbird-1.0.2-r10 
 MD5 558a424a1a9905cedc4e7ef902e8c1c3 files/digest-mozilla-thunderbird-1.0.2 207
 MD5 04115f0e204444eac76a092a63c89027 files/icon/thunderbird-icon.png 6499
 MD5 1c810870d0c92c730341e491c310e2d4 files/icon/mozillathunderbird.desktop 184
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzClpBXaUFmZvwyMRAi0zAKCWzb7V6rNSAok+dtLP1v+6nf7BsQCeLwq0
+2nzSxPQneDW/mMQNiQg3GJM=
+=dx3F
+-----END PGP SIGNATURE-----
