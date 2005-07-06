@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/openquicktime-1.0-r1.ebuild,v 1.10 2005/03/12 18:22:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/openquicktime-1.0-r1.ebuild,v 1.11 2005/07/06 22:50:52 rajiv Exp $
 
 inherit flag-o-matic eutils
 replace-flags "-fprefetch-loop-arrays" " "
@@ -10,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="OpenQuicktime library for linux"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz
 	mirror://gentoo/openquicktime-1.0-gcc34-1.patch.bz2"
-HOMEPAGE="http://openquicktime.sourceforge.net/"
+HOMEPAGE="http://www.openquicktime.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"

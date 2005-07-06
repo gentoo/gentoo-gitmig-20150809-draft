@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0f793347557b9270db453d763f15be15 ChangeLog 2009
-MD5 f8e62c7530450e2d427e9a21ecfd37fb openquicktime-1.0-r1.ebuild 1114
+MD5 6992cfaea1c7543fbf4645c32d3e6561 openquicktime-1.0-r1.ebuild 1103
+MD5 f6647263f88204b5f2e5eb09eae90d40 ChangeLog 2117
 MD5 40f0db85a78b1dd555e222afd3c24570 files/digest-openquicktime-1.0-r1 147
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCMzN0BXaUFmZvwyMRAsY+AJ9NIO8BLSFTQ3AqvtDseIxqCEZeDgCgg9ca
-PKlp5AL68dgW6jZyNLj4lxs=
-=hzX7
------END PGP SIGNATURE-----

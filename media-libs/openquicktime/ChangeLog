@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openquicktime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.14 2005/03/12 18:22:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.15 2005/07/06 22:50:52 rajiv Exp $
+
+  06 Jul 2005; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  openquicktime-1.0-r1.ebuild:
+  update home page url.
 
   12 Mar 2005; Aron Griffis <agriffis@gentoo.org>
   openquicktime-1.0-r1.ebuild:
