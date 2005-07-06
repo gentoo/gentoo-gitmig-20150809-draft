@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/jam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.13 2005/07/02 00:25:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.14 2005/07/06 20:18:32 chriswhite Exp $
+
+  07 Jul 2005; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Re-adding ChangeLog.. not sure how it got lost... Adding myself as temp
+  maintainer.
 
 *jam-2.5-r1 (02 Jul 2005)
 
