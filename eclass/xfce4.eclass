@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.15 2005/06/12 12:17:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.16 2005/07/06 19:53:42 agriffis Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -11,45 +11,43 @@ ECLASS=xfce4
 INHERITED="$INHERITED $ECLASS"
 
 if [[ ${BZIPPED} = "1" ]];then
-    COMPRESS=".tar.bz2"
-    ZIP="-bz2"
+	COMPRESS=".tar.bz2"
+	ZIP="-bz2"
 else
-    COMPRESS=".tar.gz"
-    ZIP=""
+	COMPRESS=".tar.gz"
+	ZIP=""
 fi
 
 if [[ ${GOODIES_PLUGIN} = "1" ]]; then
-    [[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"    
-    SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}${COMPRESS}"    
-    [[ -z ${XFCE_VERSION} ]] \
-	&& XFCE_VERSION="4.2.0"
-    RDEPEND="${RDEPEND} >=xfce-base/xfce4-panel-${XFCE_VERSION}"
+	[[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"    
+	SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}${COMPRESS}"    
+	[[ -z ${XFCE_VERSION} ]] && XFCE_VERSION="4.2.0"
+	RDEPEND="${RDEPEND} >=xfce-base/xfce4-panel-${XFCE_VERSION}"
 fi
 
 if [[ ${PLUGIN} = "1" ]]; then
-    MY_P="${PN}-plugin-${PV}"
-    [[ -z ${XFCE_VERSION} ]] \
-	&& XFCE_VERSION="4.2.0"
-    RDEPEND="${RDEPEND} >=xfce-base/xfce4-panel-${XFCE_VERSION}"
+	MY_P="${PN}-plugin-${PV}"
+	[[ -z ${XFCE_VERSION} ]] && XFCE_VERSION="4.2.0"
+	RDEPEND="${RDEPEND} >=xfce-base/xfce4-panel-${XFCE_VERSION}"
 fi
 
 [[ ${GOODIES} = "1" ]] \
-    && SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P:-${P}}${COMPRESS}"
+	&& SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P:-${P}}${COMPRESS}"
 
 [[ -n ${SRC_URI} ]] \
-    || SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src${ZIP}/${P}${COMPRESS}"
+	|| SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src${ZIP}/${P}${COMPRESS}"
 
 [[ ${XFCE_META} = "1" ]] \
-    && SRC_URI=""
-    
+	&& SRC_URI=""
+
 [[ -z ${LICENSE} ]] \
-    && LICENSE="GPL-2"
+	&& LICENSE="GPL-2"
 
 [[ -z ${HOMEPAGE} ]] \
-    && HOMEPAGE="http://www.xfce.org/"
+	&& HOMEPAGE="http://www.xfce.org/"
 
 SLOT="0"
-IUSE="${IUSE} doc debug"
+IUSE="debug doc"
 
 RDEPEND="virtual/x11
 	>=x11-libs/gtk+-2.2
@@ -62,8 +60,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 [[ -z ${XFCE_S} ]] \
-    && S="${WORKDIR}/${MY_P:-${P}}" \
-    || S="${XFCE_S}"
+	&& S="${WORKDIR}/${MY_P:-${P}}" \
+	|| S="${XFCE_S}"
 
 xfce4_src_compile() {
 	if [[ "${DEBUG_OFF}" = "1" ]] && use debug; then
@@ -76,7 +74,7 @@ xfce4_src_compile() {
 	    einfo "Meta Build, Nothing to compile."   
 	else
 	    econf ${XFCE_CONFIG} || die
-    
+
 	    if [[ "${SINGLE_MAKE}" = "1" ]]; then
 		emake -j1 || die
 	    else
