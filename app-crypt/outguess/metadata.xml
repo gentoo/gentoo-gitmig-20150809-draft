@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>zhen@gentoo.org</email>
-	<name>John Davis</name>
-	<description>Full time maintainer</description>
-</maintainer>
-	<longdescription>outguess is a flexible stenography tool</longdescription>
+<herd>crypto</herd>
+<longdescription>
+	OutGuess is a universal steganographic tool that allows the insertion of
+	hidden information into the redundant bits of data sources.
+</longdescription>
 </pkgmetadata>
