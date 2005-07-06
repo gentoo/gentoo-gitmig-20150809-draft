@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1-r2.ebuild,v 1.1 2005/07/05 23:53:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1-r2.ebuild,v 1.2 2005/07/06 04:08:00 robbat2 Exp $
 
 inherit fortran flag-o-matic
 
@@ -43,6 +43,10 @@ src_unpack() {
 	done
 }
 
+pkg_setup() {
+	use fortran && fortran_pkg_setup
+}
+
 src_compile() {
 
 	local myconf
@@ -56,7 +60,7 @@ src_compile() {
 	use pbs && append-ldflags -L/usr/lib/pbs
 
 	if use fortran; then
-		myconf="${myconf} --with-fc=g77"
+		myconf="${myconf} --with-fc=${FORTRANC}"
 	else
 		myconf="${myconf} --without-fc"
 	fi
