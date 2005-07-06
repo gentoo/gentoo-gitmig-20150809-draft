@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.131 2005/07/02 04:37:17 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.132 2005/07/06 02:09:40 dostrow Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -61,6 +61,11 @@ ECLASS="kernel-2"
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install \
 	pkg_preinst pkg_postinst pkg_prerm
+
+# Added by Daniel Ostrow <dostrow@gentoo.org>
+# This is an ugly hack to get around an issue with a 32-bit userland on ppc64.
+# I will remove it when I come up with something more reasonable.
+[[ ${PROFILE_ARCH} == 'ppc64' ]] && CHOST='powerpc64-unknown-linux-gnu'
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} && ${CATEGORY/cross-} != ${CATEGORY} ]]; then
