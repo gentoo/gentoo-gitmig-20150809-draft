@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.55 2005/07/05 07:18:29 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.56 2005/07/06 23:07:18 fafhrd Exp $
+
+*windowmaker-0.92.0-r1 (06 Jul 2005)
+
+  06 Jul 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -windowmaker-0.92.0.ebuild, +windowmaker-0.92.0-r1.ebuild:
+  Fixes for bug 97960 and bug 97961
 
   05 Jul 2005; Armando Di Cianno <fafhrd@gentoo.org>
   windowmaker-0.92.0.ebuild:

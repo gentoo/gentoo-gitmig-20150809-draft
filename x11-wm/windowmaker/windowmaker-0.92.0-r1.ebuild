@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0.ebuild,v 1.4 2005/07/05 07:18:29 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r1.ebuild,v 1.1 2005/07/06 23:07:18 fafhrd Exp $
 
-inherit eutils gnustep-funcs flag-o-matic
+inherit eutils gnustep-funcs flag-o-matic multilib
 
 S=${WORKDIR}/${P/windowm/WindowM}
 
@@ -17,10 +17,10 @@ DEPEND="x11-base/xorg-x11
 	gif? ( >=media-libs/giflib-4.1.0-r3 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
-	tiff? ( >=media-libs/tiff-3.6.1-r2 )"
+	tiff? ( >=media-libs/tiff-3.6.1-r2 )
+	gnustep? ( gnustep-base/gnustep-make )"
 RDEPEND="${DEPEND}
-	nls? ( >=sys-devel/gettext-0.10.39 )
-	gnustep? ( gnustep-base/gnustep-env )"
+	nls? ( >=sys-devel/gettext-0.10.39 )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -53,11 +53,12 @@ src_compile() {
 
 	# integrate with GNUstep environment, or not
 	if use gnustep ; then
+		# install WPrefs.app into GS Local Domain after setting up the GS env
 		egnustep_env
-		myconf="${myconf} --with-gnustepdir=$(egnustep_system_root)/Applications"
+#		myconf="${myconf} --with-gnustepdir=$(egnustep_system_root)/Applications"
 	else
 		# no change from wm-0.80* ebuilds, as to not pollute things more
-		myconf="${myconf} --with-gnustepdir=/usr/lib/GNUstep/Applications"
+		myconf="${myconf} --with-gnustepdir=/usr/$(get_libdir)/GNUstep"
 	fi
 
 	if use nls; then
@@ -94,14 +95,18 @@ src_compile() {
 	for file in ${S}/WindowMaker/*menu*; do
 		if [ -r $file ]; then
 			if use gnustep ; then
-				sed -e "s/\/usr\/local\/GNUstep/`cat ${TMP}/sed.gs_prefix`System/g;
-					s/XXX_SED_FSLASH/\//g;" < $file > $file.tmp
+#				sed -e "s/\/usr\/local\/GNUstep/`cat ${TMP}/sed.gs_prefix`System/g;
+#					s/XXX_SED_FSLASH/\//g;" < $file > $file.tmp
+				sed -e "s:/usr/local/GNUstep:`cat ${TMP}/sed.gs_prefix`System:g;" \
+					-e "s:XXX_SED_FSLASH:/:g;" < $file > $file.tmp
 			else
-				sed -e 's/\/usr\/local\/GNUstep/\/usr\/lib\/GNUstep/g;' < $file > $file.tmp
+#				sed -e 's/\/usr\/local\/GNUstep/\/usr\/lib\/GNUstep/g;' < $file > $file.tmp
+				sed -e "s:/usr/local/GNUstep:/usr/$(get_libdir)/GNUstep:g;" < $file > $file.tmp
 			fi
 			mv $file.tmp $file;
 
-			sed -e 's/\/usr\/local\/share\/WindowMaker/\/usr\/share\/WindowMaker/g;' < $file > $file.tmp;
+#			sed -e 's/\/usr\/local\/share\/WindowMaker/\/usr\/share\/WindowMaker/g;' < $file > $file.tmp;
+			sed -e 's:/usr/local/share/WindowMaker:/usr/share/WindowMaker:g;' < $file > $file.tmp;
 			mv $file.tmp $file;
 		fi;
 	done;
@@ -158,7 +163,7 @@ src_install() {
 
 pkg_postinst() {
 	if use gnustep ; then
-		einfo "WPrefs.app is installed in you GNUstep System Applications directory."
+		einfo "WPrefs.app is installed in you GNUstep Local Domain Applications directory."
 	fi
 }
 
