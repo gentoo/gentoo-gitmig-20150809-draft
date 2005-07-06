@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $1 = "install" ]; then
+
+	sed -e "s|^database_dir.*|database_dir: ${VHOST_ROOT}/htdig/db|" -i ${MY_HOSTROOTDIR}/htdig/htdig.conf
+
+elif [ $1 = "clean" ]; then
+	echo $1
+fi
