@@ -1,6 +1,18 @@
-MD5 33bf8a5d8caf7c0a1545ca12b61e447e ChangeLog 1284
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 10a5cc4c140b2b0d2d51e05607c048c8 cssed-0.2.0.ebuild 770
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+MD5 6b593f558340927adc64cc0064dcd68f cssed-0.3.0.ebuild 730
 MD5 069364923162139fbde133f773315ee9 cssed-0.2.1.ebuild 717
+MD5 3db90604f36062bd6034c467d8c0b7bd ChangeLog 1426
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 08593a08dd2fe764eb2d928ef2c94e12 files/digest-cssed-0.2.0 63
 MD5 97773db217705424bcf7ef6615a5449e files/digest-cssed-0.2.1 63
+MD5 7110e9cfdd108bfe6e3da574fc55a55a files/digest-cssed-0.3.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCy8l/EzitwsaoONoRAuHwAKCbRVqni7kfintenRf6US1mhsL1XwCdHAqc
+zpIN0Ot18mIC1qy0ywbZukc=
+=pTgZ
+-----END PGP SIGNATURE-----
