@@ -2,8 +2,8 @@ MD5 70f06600556327dcfbc31fa03f610042 metadata.xml 155
 MD5 a8514e56407bd3865c1ad9eb15f926ed xxdiff-2.9.2.ebuild 988
 MD5 d9bec1c563fe59bb1a64b3fc32c2bde2 xxdiff-2.9.2-r1.ebuild 1254
 MD5 f526d3005a3635e4011fc37f3da47f82 xxdiff-3.0.2.ebuild 1550
-MD5 d0a898669a5bb87d01111b72e4761e31 ChangeLog 3550
-MD5 cfea9008af96bfbed9574602679e7402 xxdiff-3.0.2-r1.ebuild 1563
+MD5 218372a4f2d95cbce71ba4add3c7a7a8 ChangeLog 3642
+MD5 a9307403557dd042756220a26c25c8b3 xxdiff-3.0.2-r1.ebuild 1562
 MD5 90983c130466c6d73a77a59889fbc673 files/kdesupport.patch 588
 MD5 a533ffd20699e97c403fff6cdd3dcf37 files/digest-xxdiff-2.9.2 64
 MD5 a533ffd20699e97c403fff6cdd3dcf37 files/digest-xxdiff-2.9.2-r1 64
