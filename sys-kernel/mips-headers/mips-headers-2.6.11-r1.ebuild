@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.11-r1.ebuild,v 1.1 2005/06/15 22:28:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.11-r1.ebuild,v 1.2 2005/07/06 05:43:44 kumba Exp $
 
 # Eclass bits
 ETYPE="headers"
@@ -30,7 +30,7 @@ SRC_URI="${KERNEL_URI}
 
 HOMEPAGE="http://www.linux-mips.org/ http://www.kernel.org/ http://www.gentoo.org/"
 KEYWORDS="-* ~mips"
-IUSE="ip30 nptl"
+IUSE="ip30 nptl cobalt"
 
 
 UNIPATCH_LIST="

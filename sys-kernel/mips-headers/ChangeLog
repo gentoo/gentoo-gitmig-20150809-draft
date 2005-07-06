@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.32 2005/06/15 22:28:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.33 2005/07/06 05:43:44 kumba Exp $
+
+  06 Jul 2005; Joshua Kinard <kumba@gentoo.org> mips-headers-2.6.11-r1.ebuild:
+  Add cobalt to IUSE.
 
 *mips-headers-2.6.11-r1 (15 Jun 2005)
 
