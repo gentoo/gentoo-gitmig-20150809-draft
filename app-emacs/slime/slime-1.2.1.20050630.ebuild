@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.2.1.20050610.ebuild,v 1.2 2005/07/06 17:31:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.2.1.20050630.ebuild,v 1.1 2005/07/06 17:31:49 mkennedy Exp $
 
 inherit elisp eutils
 
