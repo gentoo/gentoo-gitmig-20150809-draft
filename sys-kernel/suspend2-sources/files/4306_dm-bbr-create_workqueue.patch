@@ -1,0 +1,15 @@
+diff -urp linux-2.6.12/drivers/md/dm-bbr.c linux-2.6.12-dm-bbr-create_workqueue/drivers/md/dm-bbr.c
+--- linux-2.6.12/drivers/md/dm-bbr.c	2005-06-29 14:35:31.000000000 +0200
++++ linux-2.6.12-dm-bbr-create_workqueue/drivers/md/dm-bbr.c	2005-06-29 16:58:37.000000000 +0200
+@@ -959,7 +959,11 @@ int __init dm_bbr_init(void)
+ 		goto err4;
+ 	}
+ 
++#ifdef PF_SYNCTHREAD
++	dm_bbr_wq = create_workqueue("dm-bbr", 0);
++#else
+ 	dm_bbr_wq = create_workqueue("dm-bbr");
++#endif
+ 	if (!dm_bbr_wq) {
+ 		DMERR("dm-bbr: error creating work-queue.");
+ 		rc = ENOMEM;

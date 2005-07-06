@@ -1,0 +1,6 @@
+MD5 af3a2dc84edfa599714c447ccd2b58a2 suspend2-sources-2.6.12.ebuild 1965
+MD5 48296f6b51f8564eea9a5ebfb50ea9e1 ChangeLog 459
+MD5 93f5bba7043e57c7092196362f2b494f metadata.xml 255
+MD5 2c13f91d861547f897bd8bc3e4d7e9cb files/digest-suspend2-sources-2.6.12 310
+MD5 2b6c45a5cc42e34edf11954e71a95815 files/4306_dm-bbr-create_workqueue.patch 548
+MD5 0b4371d982e38217edb8af1023bb4803 files/linux-2.6.12-vesafb-tng-suspend2.patch 633

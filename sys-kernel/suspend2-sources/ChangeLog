@@ -1,0 +1,11 @@
+# ChangeLog for sys-kernel/suspend2-sources
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.1 2005/07/06 11:04:03 brix Exp $
+
+*suspend2-sources-2.6.12 (06 Jul 2005)
+
+  06 Jul 2005; <brix@gentoo.org> +files/4306_dm-bbr-create_workqueue.patch,
+  +files/linux-2.6.12-vesafb-tng-suspend2.patch, +metadata.xml,
+  +suspend2-sources-2.6.12.ebuild:
+  Initial import.
+

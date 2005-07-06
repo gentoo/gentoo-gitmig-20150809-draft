@@ -1,0 +1,17 @@
+diff -urp linux-2.6.12/drivers/video/vesafb-thread.c linux-2.6.12-vesafb-tng-suspend2/drivers/video/vesafb-thread.c
+--- linux-2.6.12/drivers/video/vesafb-thread.c	2005-06-29 14:35:32.000000000 +0200
++++ linux-2.6.12-vesafb-tng-suspend2/drivers/video/vesafb-thread.c	2005-07-04 23:44:38.000000000 +0200
+@@ -540,8 +540,13 @@ int vesafb_thread(void *unused)
+ 	while (1) {
+ 		vesafb_handle_tasks();
+ 		wait_event_interruptible(vesafb_wait, !list_empty(&vesafb_task_list));
++
++#ifdef PF_FREEZE
+ 		if (current->flags & PF_FREEZE)
+ 			refrigerator(PF_FREEZE);
++#else
++		try_to_freeze();
++#endif
+ 
+ 		if (signal_pending(current))
+ 			break;
