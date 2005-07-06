@@ -1,4 +1,13 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/1.0/virtuals,v 1.16 2005/07/06 05:16:48 dostrow Exp $
 virtual/glu			x11-base/xorg-x11
 virtual/opengl			x11-base/xorg-x11
 virtual/x11			x11-base/xorg-x11
 virtual/xft			x11-base/xorg-x11
+virtual/bootloader		sys-boot/yaboot
+virtual/jdk			dev-java/ibm-jdk-bin
+virtual/jre			dev-java/ibm-jre-bin
+virtual/linux-sources		sys-kernel/gentoo-sources
+virtual/ghc			dev-lang/ghc
+virtual/ooo			app-office/openoffice
