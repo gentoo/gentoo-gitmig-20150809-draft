@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.5 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.6 2005/07/06 21:01:53 agriffis Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -13,7 +13,7 @@ inherit tetex
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
 
-IUSE="motif lesstif Xaw3d neXt"
+IUSE="X Xaw3d lesstif motif neXt"
 
 DEPEND="X? ( motif? ( lesstif? ( x11-libs/lesstif )
 			!lesstif? ( x11-libs/openmotif ) )
