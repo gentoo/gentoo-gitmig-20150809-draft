@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/orpie
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.1 2005/02/03 01:35:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.2 2005/07/06 23:33:40 herbs Exp $
+
+  06 Jul 2005; Herbie Hopkins <herbs@gentoo.org> orpie-1.4.1.ebuild:
+  Marked ~amd64 wrt bug #97928.
 
 *orpie-1.4.1 (02 Feb 2005)
 

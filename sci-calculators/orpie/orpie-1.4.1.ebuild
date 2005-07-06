@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/orpie-1.4.1.ebuild,v 1.2 2005/02/03 01:43:00 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/orpie-1.4.1.ebuild,v 1.3 2005/07/06 23:33:40 herbs Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.eecs.umich.edu/~pelzlpj/orpie/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-lang/ocaml

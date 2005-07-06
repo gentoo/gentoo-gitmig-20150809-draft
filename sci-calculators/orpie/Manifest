@@ -1,4 +1,14 @@
-MD5 e3c6f7ff957fa93ab68604f17e2bdec9 orpie-1.4.1.ebuild 729
-MD5 d17c4be6019a17655dd99390b746abbd ChangeLog 355
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6363deeaefbb3c8ea5fd5db1355d1dab orpie-1.4.1.ebuild 733
+MD5 15a44ea52bf2abe3b4c2e366c30d0a82 ChangeLog 454
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 daeb2694921f2f6a00b7e5d74990117e files/digest-orpie-1.4.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzGp22G5bA0cA/ScRAjs8AKC377PUZk+GWoo5brj3Fg7DKAV+OQCfUZaP
+ZcStkTNLjLll7p+MT8WxRfM=
+=Fui5
+-----END PGP SIGNATURE-----
