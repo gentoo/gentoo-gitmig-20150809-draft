@@ -1,0 +1,12 @@
+--- gnome-bluetooth-0.5.1/python/manager.py.gnome	2005-02-21 14:56:23.000000000 +0100
++++ gnome-bluetooth-0.5.1/python/manager.py	2005-02-21 14:56:26.000000000 +0100
+@@ -139,8 +139,7 @@
+         menu.add (gtk.ImageMenuItem ('gnome-stock-about'), self.on_about)
+         menuitem.set_submenu (menu)
+         
+-        self.statusbar = gnome.ui.AppBar (gtk.TRUE, gtk.TRUE, 
+-                gnome.ui.PREFERENCES_NEVER)
++        self.statusbar = gnome.ui.AppBar (gtk.TRUE, gtk.TRUE)
+         self.window.set_statusbar (self.statusbar)
+         self.window.set_menus (menubar)
+         menubar.show_all ()

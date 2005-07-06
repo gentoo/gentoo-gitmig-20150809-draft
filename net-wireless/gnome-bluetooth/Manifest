@@ -1,11 +1,24 @@
-MD5 8c6e2f154a49504779c8c9661be15c8f ChangeLog 2672
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6ad9a5a561a8ffec4d79b98b9e4bc15e ChangeLog 2876
 MD5 b8d74ef95f6d4ed18c27eb91772ca760 gnome-bluetooth-0.4.1.ebuild 1258
-MD5 0abfbaaad5770f268091bab168724d98 gnome-bluetooth-0.5.1-r1.ebuild 1348
 MD5 16e582416bafabc76f1f541ec6716c0a gnome-bluetooth-0.5.1.ebuild 1288
 MD5 7a66fef4deb08f29b7cf0de1c2e3a4de metadata.xml 254
+MD5 0abfbaaad5770f268091bab168724d98 gnome-bluetooth-0.5.1-r1.ebuild 1348
+MD5 bf946bb646b9a6c0fa2f7676cef873ac gnome-bluetooth-0.5.1-r2.ebuild 1382
 MD5 ff63b2b07eb50db8962f544a45028bee files/digest-gnome-bluetooth-0.4.1 73
 MD5 6da6c9018b79e0077f1a3bb071a01cef files/digest-gnome-bluetooth-0.5.1 73
-MD5 6da6c9018b79e0077f1a3bb071a01cef files/digest-gnome-bluetooth-0.5.1-r1 73
 MD5 9c859b033ee9e338893bc5bc3ea21d5a files/gnome-bluetooth-0.4.1-gtk24.patch 2340
 MD5 1b075164be0f7aab81714a3efd302a65 files/gnome-bluetooth-0.5.1-gobcrash.patch 1099
+MD5 6da6c9018b79e0077f1a3bb071a01cef files/digest-gnome-bluetooth-0.5.1-r1 73
 MD5 a254aa9cdd6ad1e9e5f2e7a78c636b25 files/gnome-bluetooth-0.5.1-obex_xfer_rate.patch 2108
+MD5 c9cdf6988fe751bbd26baf8b6eba1a34 files/gnome-bluetooth-0.5.1-gnome.patch 602
+MD5 6da6c9018b79e0077f1a3bb071a01cef files/digest-gnome-bluetooth-0.5.1-r2 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCy7aLTM53OX+9xmMRAsXiAKCC7jJRjMUYhVp+8LRullfIk2eN2gCghU4/
+qzhwKyRBXmUeFL+XIp/y/ok=
+=uI4e
+-----END PGP SIGNATURE-----
