@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1278 2005/07/06 00:14:37 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1279 2005/07/06 05:15:29 leonardop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -951,6 +951,7 @@ www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
 www-client/elinks:lua - enable lua support
 www-client/epiphany:firefox - build against firefox instead of mozilla
+www-client/epiphany-extensions:firefox - build against firefox instead of mozilla
 www-client/galeon:firefox - build against firefox instead of mozilla
 www-client/kazehakase-cvs:estraier - enable estraier support for full-text search in history.
 www-client/kazehakase-cvs:firefox - Use firefox's Gecko engine.
