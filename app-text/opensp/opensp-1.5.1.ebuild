@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.1.ebuild,v 1.8 2005/04/09 20:41:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.1.ebuild,v 1.9 2005/07/06 09:59:15 liquidx Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P=${P/opensp/OpenSP}
 S=${WORKDIR}/${MY_P}
@@ -29,8 +29,10 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	myconf="${myconf} --enable-http"
+	# gentoo bug #77033
+	filter-flags "-fvisibility=hidden"
+
+	myconf="--enable-http"
 	myconf="${myconf} --enable-default-catalog=/etc/sgml/catalog"
 	myconf="${myconf} --enable-default-search-path=/usr/share/sgml"
 	myconf="${myconf} --datadir=/usr/share/sgml/${P}"
