@@ -1,3 +1,13 @@
-MD5 fe651285688ca05120965ec76377022d trickle-1.06.ebuild 639
-MD5 f8187f53de68ed96f85a50cc2d97009b ChangeLog 789
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b5b3742ac785acae6a905f5edc2633ac trickle-1.06.ebuild 645
+MD5 ae086696a831d5027e0ce26076353cad ChangeLog 891
 MD5 32a904d9258e29aff82a406e10e0cc9b files/digest-trickle-1.06 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzGRm2G5bA0cA/ScRAlYoAJ4kSUM2ZGjsh/ItY8fhJAb+Vhq/FgCgsW2Q
+XQdp+YQpm9yIHKd/0YcDa1A=
+=wbqE
+-----END PGP SIGNATURE-----
