@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1_pre7.ebuild,v 1.2 2005/05/26 18:10:12 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1_pre7.ebuild,v 1.3 2005/07/06 03:19:17 compnerd Exp $
 
 inherit eutils java-pkg
 
@@ -72,12 +72,16 @@ src_compile() {
 	JAVA_HOME=$(java-config -O)
 
 	# Identify the AWT path
-	if [[ ${ARCH} == 'x86' ]] ; then
-		export AWT_LIB_PATH=$JAVA_HOME/jre/lib/i386
-	elif [[ ${ARCH} == 'ppc' ]] ; then
+	if [[ ! -z "$(java-config --java-version | grep 'IBM')" ]] ; then
 		export AWT_LIB_PATH=$JAVA_HOME/jre/bin
 	else
-		export AWT_LIB_PATH=$JAVA_HOME/jre/lib/amd64
+		if [[ ${ARCH} == 'x86' ]] ; then
+			export AWT_LIB_PATH=$JAVA_HOME/jre/lib/i386
+		elif [[ ${ARCH} == 'ppc' ]] ; then
+			export AWT_LIB_PATH=$JAVA_HOME/jre/bin
+		else
+			export AWT_LIB_PATH=$JAVA_HOME/jre/lib/amd64
+		fi
 	fi
 
 	# Identity the XTEST library location
