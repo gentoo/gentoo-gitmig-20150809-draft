@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.7 2005/05/14 15:36:45 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.8 2005/07/06 19:56:01 agriffis Exp $
 
 # Author Diego Pettenò <flameeyes@gentoo.org>
 # Maintained by wxwidgets herd
@@ -13,7 +13,7 @@ inherit flag-o-matic eutils multilib toolchain-funcs
 ECLASS="wxlib"
 INHERITED="${INHERITED} ${ECLASS}"
 
-IUSE="doc debug unicode"
+IUSE="debug doc odbc unicode"
 
 LICENSE="wxWinLL-3"
 
