@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.6.ebuild,v 1.1 2005/07/03 17:11:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.6.ebuild,v 1.2 2005/07/06 09:24:50 hollow Exp $
 
 inherit eutils flag-o-matic bash-completion
 
@@ -16,6 +16,7 @@ IUSE=""
 DEPEND="sys-apps/portage"
 
 src_compile() {
+	epatch ${FILESDIR}/0.2.6-package.cc.patch
 	aclocal || die "aclocal"
 	libtoolize --force --copy || die "libtoolize"
 	autoconf || die "autoconf"

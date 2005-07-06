@@ -1,0 +1,14 @@
+diff -NurpP eix-0.2.6/src/package.cc eix-0.2.6-new/src/package.cc
+--- eix-0.2.6/src/package.cc	2005-06-18 15:28:40.000000000 +0200
++++ eix-0.2.6-new/src/package.cc	2005-07-06 11:21:56.245367136 +0200
+@@ -90,8 +90,9 @@ void Package::readNeeded(HasType we_want
+ 			for( unsigned short i=0; i<numVersions; i++ )
+ 				this->addVersion(new Version( this->input_stream ));
+ 		case Package::ALL:
+-			this->have = we_want;
++			break;
+ 	}
++	this->have = we_want;
+ }
+ 
+ 
