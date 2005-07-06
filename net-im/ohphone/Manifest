@@ -1,6 +1,16 @@
-MD5 31f36cf8a6e240dc87ba502b154c8c78 ohphone-1.4.1-r1.ebuild 1295
-MD5 1c1d53d08070ad8ceea385e2ff6c8ba2 ohphone-1.4.1.ebuild 812
-MD5 3a5fbf16da462c7f73bb83239e767255 ChangeLog 966
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f802d84e9374d2ca19ee00e80656ac32 ChangeLog 1170
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 31f36cf8a6e240dc87ba502b154c8c78 ohphone-1.4.1-r1.ebuild 1295
+MD5 44a2ec1569f78a1c2033b5b3eb7adefa ohphone-1.4.3_pre20050304.ebuild 1371
 MD5 eb00a184805b4c495b46976ce6ccfbbf files/digest-ohphone-1.4.1-r1 64
-MD5 eb00a184805b4c495b46976ce6ccfbbf files/digest-ohphone-1.4.1 64
+MD5 50a3ec4868bd9ba46b1b7d9af3eb4352 files/digest-ohphone-1.4.3_pre20050304 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCy7KITM53OX+9xmMRAkB8AJ9j9cstr5PvNgGVTpFH0lLNBxhgGQCeNcFp
+BEmOfv0W9A9fX/fbbVebfoA=
+=rYwG
+-----END PGP SIGNATURE-----
