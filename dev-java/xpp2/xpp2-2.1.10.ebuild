@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10.ebuild,v 1.2 2005/07/01 09:51:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10.ebuild,v 1.3 2005/07/06 10:07:11 axxo Exp $
 
 inherit java-pkg
 
@@ -18,6 +18,7 @@ S="${WORKDIR}/${MY_P}"
 
 DEPEND=">=virtual/jdk-1.3
 	dev-java/ant-core
+	>=dev-java/xerces-2.6.2-r2
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3"
 
@@ -28,7 +29,7 @@ src_unpack() {
 	rm build/*/*.jar
 }
 src_compile() {
-	local antflags="compile"
+	local antflags="-lib $(java-config -p xerces-2) compile"
 	use jikes && antflags="-Dbuild.compiler=jikes ${antflags}"
 	use doc && antflags="${antflags} api"
 
