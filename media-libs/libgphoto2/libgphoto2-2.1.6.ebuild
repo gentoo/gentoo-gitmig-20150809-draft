@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6.ebuild,v 1.4 2005/06/28 22:55:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6.ebuild,v 1.5 2005/07/06 09:44:51 liquidx Exp $
 
 inherit libtool eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ia64 ~ppc64 ~alpha"
-IUSE="nls doc exif nousb"
+IUSE="nls doc exif nousb jpeg"
 
 # needs >usbutils-0.11-r2 to avoid /usr/lib/libusb*
 # conflicts with dev-libs/libusb
