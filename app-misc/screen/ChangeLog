@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.89 2005/06/13 19:03:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.90 2005/07/06 18:07:56 swegener Exp $
+
+  06 Jul 2005; Sven Wegener <swegener@gentoo.org>
+  +files/4.0.2-windowlist-multiuser-fix.patch, screen-4.0.2-r4.ebuild:
+  Added a minor patch that makes %u work for the windowlist format.
 
   13 Jun 2005; Sven Wegener <swegener@gentoo.org> files/screenrc:
   Changed the xterm scrollback tweak to clear the screen after detaching and

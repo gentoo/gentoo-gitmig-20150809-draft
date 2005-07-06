@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r4.ebuild,v 1.1 2005/06/07 13:00:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r4.ebuild,v 1.2 2005/07/06 18:07:56 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pam
 
@@ -43,6 +43,9 @@ src_unpack() {
 
 	# Patch for time function on 64bit systems
 	epatch "${FILESDIR}"/${PV}-64bit-time.patch
+
+	# Patch that makes %u work for windowlist formats
+	epatch "${FILESDIR}"/${PV}-windowlist-multiuser-fix.patch
 
 	# Fix manpage.
 	sed -i \
