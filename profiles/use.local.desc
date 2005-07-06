@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1281 2005/07/06 10:54:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1282 2005/07/06 11:03:38 brix Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -907,6 +907,7 @@ sys-kernel/mips-sources:ip27 - Enables support for SGI Origin (IP27)
 sys-kernel/mips-sources:ip28 - Enables support for SGI Indigo2 Impact R10000 (IP28)
 sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
+sys-kernel/suspend2-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/vserver-sources:ngnet - Adds experimental NGNET patches by Herbert Poetzl (http://vserver.13thfloor.at/Experimental/NGNET/)
 sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:n32 - Enable n32 ABI support on mips
