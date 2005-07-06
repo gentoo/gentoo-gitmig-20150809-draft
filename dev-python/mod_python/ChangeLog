@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.32 2005/05/05 12:53:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.33 2005/07/06 10:50:26 liquidx Exp $
+
+*mod_python-3.1.4-r1 (06 Jul 2005)
+
+  06 Jul 2005; Alastair Tse <liquidx@gentoo.org>
+  -mod_python-2.7.10-r1.ebuild, -mod_python-3.1.3.ebuild,
+  +mod_python-3.1.4-r1.ebuild:
+  replaced ./configure with econf to force search paths to /usr rather than
+  /usr/local (#97992)
 
   05 May 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Add apache herd as maintainers.
