@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.6 2005/03/08 18:28:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.7 2005/07/06 20:34:36 agriffis Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -72,7 +72,6 @@ need_fortran() {
 	done
 	AVAILABLE="${AVAILABLE/^[[:space:]]}"
 	use debug && echo ${AVAILABLE}
-	use
 	if [ -z "${AVAILABLE}" ]; then
 		eerror "None of the needed Fortran Compilers ($@) is installed."
 		eerror "To install one of these, choose one of the following steps:"
