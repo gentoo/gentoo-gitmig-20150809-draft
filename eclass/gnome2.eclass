@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.51 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.52 2005/07/06 20:36:43 agriffis Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -14,7 +14,7 @@ G2CONF=""               # extra configure opts passed to econf
 ELTCONF=""              # extra options passed to elibtoolize
 SCROLLKEEPER_UPDATE="1" # whether to run scrollkeeper for this package
 USE_DESTDIR=""          # use make DESTDIR=${D} install rather than einstall
-IUSE="debug"
+IUSE="debug doc"
 use debug && G2CONF="${G2CONF} --enable-debug=yes"
 
 DEPEND="${DEPEND} >=sys-apps/sed-4"
