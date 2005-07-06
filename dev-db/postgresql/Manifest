@@ -7,10 +7,10 @@ MD5 461bda3ff314acce4f6a587a61864385 postgresql-8.0.1-r2.ebuild 7633
 MD5 e649d19e9a3421f84df910c25b2b2e1c postgresql-7.4.8.ebuild 10618
 MD5 337a42d98f8373978cca5e56cbd47ab3 postgresql-8.0.2-r1.ebuild 7854
 MD5 6d493ba29edd90cdd6bf0f9864b65ff2 postgresql-8.0.3.ebuild 7527
-MD5 d7672151380978aa2b5ad92e5b559a4f postgresql-8.0.1-r4.ebuild 7874
+MD5 ae5abca0bc81f18dbd6338435a4b01fb postgresql-8.0.1-r4.ebuild 7873
 MD5 2e8cb4fb57a0620f97ed47decce6bb61 postgresql-7.4.7-r2.ebuild 10900
 MD5 b97f1ff215bab634316e5cf9cee6598e postgresql-7.3.6-r2.ebuild 7869
-MD5 de2e7df15c2329c81270ccf8a832675e ChangeLog 41916
+MD5 d4a007b5af9df7fff0f3d5355c625f5a ChangeLog 42022
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 90acacf5efb7b8a73ec5d34128358c32 files/CAN-2005-1409.patch 1698
 MD5 2e87af398df0a957bf2f2dff754ac174 files/postgresql-7.4.7-vacuum-delay.patch 8918
