@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.115 2005/07/05 21:23:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.116 2005/07/06 21:47:12 gregkh Exp $
+
+*udev-061 (06 Jul 2005)
+
+  06 Jul 2005; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-061.ebuild:
+  061 release
+  Fixes the cdsymlink issue.
 
   05 Jul 2005; Aron Griffis <agriffis@gentoo.org> udev-058.ebuild:
   stable on ia64
