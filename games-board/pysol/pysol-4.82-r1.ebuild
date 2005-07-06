@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r1.ebuild,v 1.3 2005/07/06 05:27:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r1.ebuild,v 1.4 2005/07/06 05:38:52 mr_bones_ Exp $
 
 inherit games python eutils
 
@@ -21,6 +21,7 @@ RDEPEND="virtual/python
 
 pkg_setup() {
 	python_tkinter_exists
+	games_pkg_setup
 }
 
 src_unpack() {
