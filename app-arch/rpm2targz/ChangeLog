@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.29 2005/06/25 12:40:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.30 2005/07/06 13:42:20 gustavoz Exp $
+
+  06 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  rpm2targz-9.0-r3.ebuild:
+  Stable on sparc
 
 *rpm2targz-9.0-r3 (25 Jun 2005)
 
