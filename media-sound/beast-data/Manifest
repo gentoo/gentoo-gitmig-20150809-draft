@@ -1,4 +1,14 @@
-MD5 614af051804828fafe9e8e76eae494cc ChangeLog 667
-MD5 7a2634770fe9fb1e53d2b43d9d64c42a beast-data-0.3.ebuild 572
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 75deffd21e4c11fbaf66ce8b2a40e9fb beast-data-0.3.ebuild 579
+MD5 f27f25355fd3b37d6d878c64707a3210 ChangeLog 772
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 106b042e6e015f0dcb795dc74d5dc797 files/digest-beast-data-0.3 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzE2v2G5bA0cA/ScRAlSQAJ0VgDKyhZbrAcCMztZVWwyyuZRWiQCgsRpi
+5ZUfzYvWsutxiklTmKeOCzc=
+=xE1O
+-----END PGP SIGNATURE-----
