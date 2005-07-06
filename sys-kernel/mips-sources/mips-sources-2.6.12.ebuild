@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.12_rc6.ebuild,v 1.1 2005/06/11 20:50:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.12.ebuild,v 1.1 2005/07/06 04:18:45 kumba Exp $
 
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 29 May 2005
+# 2) linux-mips.org CVS snapshot diff from 03 Jul 2005
 # 3) Generic Fixes
 # 4) Security fixes
 # 5) Patch for IP30 Octane Support		(http://helios.et.put.poznan.pl/~sskowron/ip30/)
@@ -19,12 +19,12 @@
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20050610"			# Date of diff between kernel.org and lmo CVS
+CVSDATE="20050703"			# Date of diff between kernel.org and lmo CVS
 SECPATCHVER="1.14"			# Tarball version for security patches
-GENPATCHVER="1.12"			# Tarball version for generic patches
+GENPATCHVER="1.13"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
-USERC="yes"				# If set to "yes", then attempt to use an RC kernel
+USERC="no"				# If set to "yes", then attempt to use an RC kernel
 
 # Directories
 S="${WORKDIR}/linux-${OKV}-${CVSDATE}"
@@ -129,9 +129,9 @@ pkg_setup() {
 			ewarn "patch is used on the system gcc, kernel-gcc (gcc-mips64) and the kernel"
 			ewarn "itself in order to support this machine.  These patches will only be applied"
 			ewarn "if \"ip28\" is defined in USE, which the profile sets.  Other things to keep"
-			ewarn "in mind are that this system can only be netbooted (no arcboot support),"
-			ewarn "requires a full 64-bit kernel, serial-console only (Impact graphics not"
-			ewarn "supported yet), and _nothing_ is guaranteed to work smoothly."
+			ewarn "in mind are that this system requires a full 64-bit kernel, serial-console"
+			einfo "only (Impact graphics not supported yet), and _nothing_ is guaranteed to"
+			einfo "work smoothly."
 			echo -e ""
 			arch_is_selected="yes"
 		else
@@ -144,15 +144,13 @@ pkg_setup() {
 	if use ip30; then
 		if [ "${arch_is_selected}" = "no" ]; then
 			echo -e ""
-			einfo "Octane support is still considered experimental, but runs reasonably"
-			einfo "well.  There is still the limitation of using only one SCSI disk (two"
-			einfo "or more will panic the kernel), serial is still limited to 96008N1, and"
-			einfo "there is no X support as of this release.  Framebuffer Console only"
-			einfo "works on ImpactSR, no VPro support yet, and Octane can only be netbooted"
-			einfo "for the time being."
+			einfo "With this release, Octane now uses the qla1280 driver.  Please refrain"
+			einfo "from using the old qlogicisp driver.  It is marked BROKEN and will be"
+			einfo "removed from the kernel soon.  qla1280 is a much better driver, as you"
+			einfo "can now use multiple disks with it."
 			echo -e ""
-			einfo "SMP on Octane is also available with this release, however it is still"
-			einfo "in testing and thus should be considered very experimental."
+			einfo "This release also has a basic driver for VPro-based systems now.  Like"
+			einfo "MGRAS, it's console-only, no X support yet."
 			echo -e ""
 			arch_is_selected="yes"
 		else
@@ -196,7 +194,7 @@ do_generic_patches() {
 		epatch ${MIPS_PATCHES}/misc-2.6.12-ip32-stupid-gbefb-typo.patch
 
 		# Cobalt Patches (Safe for non-Cobalt use)
-		epatch ${MIPS_PATCHES}/misc-2.6.12-rc6-cobalt-bits.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.12-cobalt-bits.patch
 
 		# Generic
 		epatch ${MIPS_PATCHES}/misc-2.6.12-ths-mips-tweaks.patch
@@ -204,8 +202,8 @@ do_generic_patches() {
 		epatch ${MIPS_PATCHES}/misc-2.6.12-add-ramdisk-back.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.12-mips-iomap-functions.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.12-seccomp-no-default.patch
-		epatch ${MIPS_PATCHES}/misc-2.6.11-add-byteorder-to-proc.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.12-rem-qlogicisp-scsi_to_pci_dma_dir.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.11-add-byteorder-to-proc.patch
 
 		# Ugly Hacks (Long Story, ask about it on IRC if you really want to know)
 		if ! use ip30 && ! use ip28; then
@@ -250,13 +248,14 @@ do_ip27_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Origin (IP27) support ..."
 	epatch ${MIPS_PATCHES}/misc-2.6.11-ip27-horrible-hacks_may-eat-kittens.patch
+#	epatch ${MIPS_PATCHES}/misc-2.6.12-ip27-iluxa-fixes.patch
 }
 
 # SGI Indigo2 Impact R10000 (IP28)
 do_ip28_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Indigo2 Impact R10000 (IP28) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.12-rc2-ip28-i2_impact-support.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.12-ip28-i2_impact-support.patch
 }
 
 
@@ -264,7 +263,8 @@ do_ip28_support() {
 do_ip30_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Octane (IP30) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.12-rc2-ip30-octane-support.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.12-ip30-octane-support.patch
+	epatch ${MIPS_PATCHES}/misc-2.6.12-ip30-switch-to-plat_setup.patch
 }
 
 
