@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.17 2005/07/06 20:47:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.18 2005/07/06 20:49:35 agriffis Exp $
 
 inherit base java-pkg
 
@@ -37,8 +37,8 @@ jakarta-commons_src_compile() {
 
 	debug-print-function $FUNCNAME $*
 	[ -z "$1" ] && jakarta-commons_src_compile all
-    ant_targetlist=`fgrep "<target" build.xml | sed -e 's/.*name="\([^"]*\)".*/\1/g'`
-    debug-print "TargetList: $ant_targetlist"
+	ant_targetlist=`fgrep "<target" build.xml | sed -e 's/.*name="\([^"]*\)".*/\1/g'`
+	debug-print "TargetList: $ant_targetlist"
 
 	cd ${S}
 	while [ "$1" ]; do
@@ -51,47 +51,47 @@ jakarta-commons_src_compile() {
 				use junit && echo "junit.jar=`java-config --classpath=junit`" >> build.properties
 				debug-print "$FUNCNAME: myconf: set to ${myconf}"
 				;;
-            		maketest)
+			maketest)
 				debug-print-section maketest
-                		if use junit ; then
-                    			if [ -n $(echo "$target" | grep "test") ]; then
-                        			ANT_OPTS=${myconf} ant test || die "Building Testing Classes Failed"
-                    			else
-                        			ANT_OPTS=${myconf} ant || die "Building Testing Classes Failed"
-                    			fi
-                		fi
-                		;;
+				if use junit ; then
+					if [ -n $(echo "$target" | grep "test") ]; then
+						ANT_OPTS=${myconf} ant test || die "Building Testing Classes Failed"
+					else
+						ANT_OPTS=${myconf} ant || die "Building Testing Classes Failed"
+					fi
+				fi
+				;;
 			make)
 				debug-print-section make
-						for each in $ant_targetlist
-						do
-							if [ "${each}" == "jar" ] ; then
-								target=${each}
-							elif [ "${each}" == "dist-jar" ] ; then
-								target=${each}
-							elif [ "${each}" == "compile" ] ; then
-								target=${each}
-							fi
-						done
-                		ANT_OPTS=${myconf} ant ${target} || die "Compilation Failed"
+				for each in $ant_targetlist
+				do
+					if [ "${each}" == "jar" ] ; then
+						target=${each}
+					elif [ "${each}" == "dist-jar" ] ; then
+						target=${each}
+					elif [ "${each}" == "compile" ] ; then
+						target=${each}
+					fi
+				done
+				ANT_OPTS=${myconf} ant ${target} || die "Compilation Failed"
 				;;
 			makedoc)
 				debug-print-section makedoc
 				ANT_OPTS="${myconf}"
-                		target=`echo "${ant_targetlist}" | grep "^javadoc$"`
-                		debug-print "Building ${target}"
-                		if [ -n "${target}" ]; then
-                    			ant "${target}" || die "Unable to create documents"
-                		else
-                  			target=`echo "${ant_targetlist}" | grep "^doc$"`
-                  			if [ -n "${target}" ]; then
-                    				ant "${target}" || die "Unable to create documents"
-                  			fi
-                		fi
+				target=`echo "${ant_targetlist}" | grep "^javadoc$"`
+				debug-print "Building ${target}"
+				if [ -n "${target}" ]; then
+						ant "${target}" || die "Unable to create documents"
+				else
+					target=`echo "${ant_targetlist}" | grep "^doc$"`
+					if [ -n "${target}" ]; then
+							ant "${target}" || die "Unable to create documents"
+					fi
+				fi
 				;;
 			all)
 				debug-print-section all
-                # Problem in commons-logging
+				# Problem in commons-logging
 				jakarta-commons_src_compile myconf make makedoc
 				;;
 		esac
