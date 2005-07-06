@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.3.ebuild,v 1.2 2005/05/10 22:26:52 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.3.ebuild,v 1.3 2005/07/06 23:32:21 herbs Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils multilib
 
 DESCRIPTION="fast modern type-inferring functional programming language descended from the ML (Meta Language) family"
 HOMEPAGE="http://www.ocaml.org/"
@@ -41,7 +41,7 @@ src_compile() {
 
 	./configure -prefix /usr \
 		-bindir /usr/bin \
-		-libdir /usr/lib/ocaml \
+		-libdir /usr/$(get_libdir)/ocaml \
 		-mandir /usr/share/man \
 		--with-pthread ${myconf} || die
 
@@ -55,12 +55,12 @@ src_compile() {
 
 src_install() {
 	make BINDIR=${D}/usr/bin \
-		LIBDIR=${D}/usr/lib/ocaml \
+		LIBDIR=${D}/usr/$(get_libdir)/ocaml \
 		MANDIR=${D}/usr/share/man \
 		install || die
 
 	# silly, silly makefiles
-	dosed "s:${D}::g" /usr/lib/ocaml/ld.conf
+	dosed "s:${D}::g" /usr/$(get_libdir)/ocaml/ld.conf
 
 	# documentation
 	dodoc Changes INSTALL LICENSE README Upgrading
@@ -68,7 +68,7 @@ src_install() {
 
 pkg_postinst() {
 	if use latex; then
-		echo "TEXINPUTS=/usr/lib/ocaml/ocamldoc:" > /etc/env.d/99ocamldoc
+		echo "TEXINPUTS=/usr/$(get_libdir)/ocaml/ocamldoc:" > /etc/env.d/99ocamldoc
 	fi
 
 	echo

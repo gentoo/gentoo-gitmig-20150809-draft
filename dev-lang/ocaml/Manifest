@@ -1,9 +1,12 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ede360aa66fcf54120c19798f0421e61 ocaml-3.08.ebuild 2209
 MD5 e3554fd0d2b4cbd09694d68ca3edb0d8 ocaml-3.08.1.ebuild 2149
 MD5 d3e28c5c99b056007b6b5b0781a4e542 ocaml-3.06-r2.ebuild 1660
 MD5 ef7cc12a4ff8aeec9ddb58ff65f7e3c0 ocaml-3.07-r1.ebuild 2910
-MD5 f3a3095becc44092b9aa661ab3b85d27 ocaml-3.08.3.ebuild 2156
-MD5 90b9571c1ff7964e9008fa3838b6e420 ChangeLog 9847
+MD5 692d7dad58640c908f7d0ceaf7199b38 ocaml-3.08.3.ebuild 2204
+MD5 9db66d06a227d3fc07aa956bbc4499e7 ChangeLog 9935
 MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
 MD5 4df214d6cd74b3c5955d868879dd6cc7 files/ocaml-3.06-tcltk-8.4compat-patch.bz2 639
 MD5 8213fcf5533d0317af0486896b7afdd3 files/ocaml-rebuild.sh 1331
@@ -14,3 +17,10 @@ MD5 3854a7d6aaedc7d5fde7239776cec5cf files/digest-ocaml-3.08.1 66
 MD5 d80f37fe859bc2ea8f71e13f02578275 files/digest-ocaml-3.08.3 66
 MD5 77519cb4017543f060a963387b593299 files/digest-ocaml-3.08 65
 MD5 91579cecf8659312c2324d8d40709433 files/ocaml-3.06-sparc-configure.patch 1660
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzGon2G5bA0cA/ScRAgzbAKDBU2P1Mgo9pXkZWlN7lX+SxSwCmQCgkm/2
+o8auOy2s9/cQPriJotmkc64=
+=pjI6
+-----END PGP SIGNATURE-----
