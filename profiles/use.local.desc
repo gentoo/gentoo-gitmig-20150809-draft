@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1282 2005/07/06 11:03:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1283 2005/07/06 19:03:30 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -388,7 +388,6 @@ mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:gmailtimestamps - Enable support for Gmail timestamps
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-mail-client/mozilla-thunderbird:mozplaintext - Disallow HTML editing for email
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:nntp - Adds support for nntp via patch
 mail-client/muttng:gpgme - Enable support for gpgme
@@ -959,16 +958,11 @@ www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g.
 www-client/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 www-client/mozilla-firefox:mozsvg - Enable SVG support in mozilla and firefox
 www-client/mozilla-firefox:mozxmlterm - Enable mozilla's XML-based command-line terminal
-www-client/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
 www-client/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
-www-client/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
 www-client/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla:moznocompose - Disable building of mozilla's HTML editor component
-www-client/mozilla:moznoirc - Disable building of mozilla's IRC client
 www-client/mozilla:moznomail - Disable building mozilla's mail client
 www-client/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-www-client/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
-www-client/mozilla:mozplaintext - Disallow HTML editing for email
 www-client/mozilla:mozsvg - Enable SVG support in mozilla and firefox
 www-client/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 www-client/netscape:aim - AOL Instant Messenger support
