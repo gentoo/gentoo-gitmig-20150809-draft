@@ -1,5 +1,5 @@
-MD5 1141466828515f6fa109b2ab026f4e16 ChangeLog 1371
-MD5 1a1e06d97a183d8aa2a589f6dfb4a2d6 ace-1.2-r1.ebuild 845
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 5e8d33435873284eee2f840b61cb7bbf ace-1.2-r1.ebuild 851
+MD5 426e7e450472402815a2438bf68584a0 ChangeLog 1464
 MD5 0db35cac674353398197d9ae9feb9fc3 files/digest-ace-1.2-r1 59
 MD5 1dbc44808235a583afa1158ba19cb5a6 files/ace-1.2-check_for_end_of_game.patch 262
