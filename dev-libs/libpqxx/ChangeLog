@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.21 2005/06/30 22:33:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.22 2005/07/06 04:16:00 nakano Exp $
+
+*libpqxx-2.5.5 (06 Jul 2005)
+
+  06 Jul 2005; Masatomo Nakano <nakano@gentoo.org> +libpqxx-2.5.5.ebuild:
+  Version bump.
 
   30 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> libpqxx-2.5.1.ebuild:
   ~sparc wrt #95128
