@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.15 2005/05/24 05:10:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.16 2005/07/06 03:38:26 spyderous Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -9,8 +9,7 @@
 # fonts (but support for built-in ``fixed'' and ``cursor'' fonts, and
 # normal support for bitmap fonts and font-server provided fonts).
 
-IUSE="ipv6 xinerama fbdev speedo type1 cjk truetype freetype font-server xv
-	debug"
+IUSE="ipv6 xinerama fbdev speedo type1 cjk truetype font-server xv debug"
 
 IUSE_VIDEO_CARDS="savage trident sis530 trio ts300 mach64 i810 igs"
 
@@ -67,7 +66,8 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-apps/sed-4
 	dev-lang/perl
 	media-libs/libpng
-	>=sys-apps/portage-2.0.49-r13"
+	>=sys-apps/portage-2.0.49-r13
+	truetype? ( media-libs/freetype )"
 
 DESCRIPTION="Xfree86: famous and free X server. Tiny version (KDrive)"
 
@@ -185,10 +185,9 @@ src_unpack() {
 		use speedo && echo "#define BuildSpeedo YES" >> config/cf/host.def
 		use type1 && echo "#define BuildType1 YES" >> config/cf/host.def
 		use cjk && echo "#define BuildCID YES" >> config/cf/host.def
-		use truetype && echo "#define BuildXTrueType YES" >> config/cf/host.def
-		use freetype && echo "#define BuildFreeType YES" >> config/cf/host.def
-		use font-server \
-			&& echo "#define FontServerAccess YES" >> config/cf/host.def
+		use truetype && echo "#define BuildXTrueType YES" >> config/cf/host.def \
+			&& echo "#define BuildFreeType YES" >> config/cf/host.def
+		use font-server && echo "#define FontServerAccess YES" >> config/cf/host.def
 
 		# Video
 		use xv && echo "#define BuildXvExt YES" >> config/cf/host.def
