@@ -1,0 +1,25 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.8.2b.ebuild,v 1.1 2005/07/06 16:43:51 carlo Exp $
+
+inherit kde
+
+DESCRIPTION="KIso is a fronted for KDE to make it as easy as possible to create manipulate and extract CD Image files."
+HOMEPAGE="http://kiso.sourceforge.net/"
+#SRC_URI="mirror://sourceforge/kiso/${P}.tar.bz2"
+# reissued tarball, using gentoo mirror system
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
+S="${WORKDIR}/${P/b/}"
+
+LICENSE="GPL-2"
+KEYWORDS="~amd64 ~ppc ~x86"
+
+SLOT="0"
+IUSE=""
+
+DEPEND=">=dev-libs/libcdio-0.73"
+RDEPEND="${DEPEND}
+	app-cdr/cdrtools
+	app-admin/sudo"
+
+need-kde 3.2
