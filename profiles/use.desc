@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.253 2005/07/06 08:21:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.254 2005/07/06 08:54:01 greg_g Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -23,7 +23,6 @@ altivec - Adds support for optimizations for G4 and G5/ppc970 processors
 apache2 - Chooses Apache2 support when a package supports both Apache1 and Apache2
 apm - Adds APM (Advanced Power Management) support
 arts - Adds support for aRts: the KDE sound daemon
-atlas - Adds support for atlas instead of blas in dev-lang/R
 audiofile - Adds support for libaudiofile where applicable
 avi - Adds avifile (Library for avi) support
 bash-completion - Enable bash-completion support
