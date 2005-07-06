@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.64 2005/07/05 20:01:58 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.65 2005/07/06 07:53:26 leonardop Exp $
+
+  06 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  libsoup-2.2.3-r1.ebuild, libsoup-1.99.28-r1.ebuild:
+  Stable on x86.
 
   05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> libsoup-2.2.3.ebuild:
   Stable on hppa.
@@ -28,7 +32,8 @@
 
 *libsoup-1.99.28-r1 (30 May 2005)
 
-  30 May 2005; Leonardo Boshell <leonardop@gentoo.org> libsoup-1.99.28.ebuild:
+  30 May 2005; Leonardo Boshell <leonardop@gentoo.org>
+  libsoup-1.99.28-r1.ebuild:
   New revision. Implements the 'static' USE flag.
 
   30 May 2005; Leonardo Boshell <leonardop@gentoo.org> libsoup-1.99.28.ebuild,
