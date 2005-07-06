@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $1 = "install" ]; then
+	cd ${MY_INSTALLDIR}
+	sed -e "s|\$cfg\['PmaAbsoluteUri'\] = '';|\$cfg\['PmaAbsoluteUri'\] = 'http://${VHOST_HOSTNAME}${VHOST_APPDIR}';|g" -i config.inc.php
+		
+elif [ $1 = "clean" ]; then
+	echo $1
+fi
