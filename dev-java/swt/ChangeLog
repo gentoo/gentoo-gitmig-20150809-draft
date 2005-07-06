@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.19 2005/07/05 14:36:15 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.20 2005/07/06 03:04:23 compnerd Exp $
+
+  05 Jul 2005; Saleem Abdulrasool <compnerd@gentoo.org> swt-3.1.ebuild:
+  Fixing $ARCH == 'amd64'; Resolves bug #98025
 
   05 Jul 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/build-3.1.xml:

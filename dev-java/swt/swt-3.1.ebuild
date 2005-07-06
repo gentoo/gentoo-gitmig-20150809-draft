@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1.ebuild,v 1.7 2005/07/05 04:20:14 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1.ebuild,v 1.8 2005/07/06 03:04:23 compnerd Exp $
 
 inherit eutils java-pkg
 
@@ -47,7 +47,7 @@ pkg_setup() {
 
 src_unpack() {
 	# Extract based on architecture
-	if [[ ${ARCH} == 'x86_64' ]] ; then
+	if [[ ${ARCH} == 'amd64' ]] ; then
 		unpack swt-${MY_VERSION}-gtk-linux-x86_64.zip || die "Unable to unpack sources"
 	elif [[ ${ARCH} == 'ppc' ]] ; then
 		unpack swt-${MY_VERSION}-gtk-linux-ppc.zip || die "Unable to unpack	sources"
