@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1279 2005/07/06 05:15:29 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1280 2005/07/06 08:21:23 kugelfang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -214,7 +214,6 @@ dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Po
 dev-java/swt:cairo - Enable Cairo rendering backend
 dev-java/swt:firefox - Build the Mozilla Embeded Component against firefox rather than mozilla
 dev-java/velocity:j2ee - Add j2ee support
-dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
 dev-lang/mono:icu - Enable internationalization support via ICU lib.
 dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
@@ -278,7 +277,6 @@ dev-python/docutils:glep - Install support for GLEPs
 dev-python/epydoc:pdf - enable support for exporting to pdf
 dev-python/gnome-python-extras:firefox - allow building against firefox libs
 dev-python/ipython:gnuplot - enable gnuplot support
-dev-python/numeric:lapack - enable lapack library support
 dev-python/pycairo:numeric - enable Numeric support
 dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
 dev-python/soya:ode - include support for Open Dynamics Engine
@@ -810,12 +808,10 @@ sci-geosciences/gmt:gmtfull - Full resolution bathimetry database;
 sci-geosciences/gmt:gmthigh - Adds high resolution bathimetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT;
 sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient;
-sci-geosciences/grass:nviz - support GLw functionality
 sci-libs/fftw:sse2 - Enables sse2 support
 sci-libs/gdal:fits - enables support for NASA's cfitsio library
 sci-libs/gdal:ogdi - enables support for the open geographic datastore interface
 sci-libs/hdf5:hlapi - Enables support for high-level library
-sci-libs/plplot:fortran - Support for FORTRAN bindings.
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
 sci-libs/vtk:patented - Builds patented classes.
@@ -830,9 +826,7 @@ sci-mathematics/maxima:gcl   - adds gcl (lisp) support to maxima
 sci-mathematics/maxima:sbcl   - adds sbcl (lisp) support to maxima
 sci-mathematics/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
-sci-mathematics/octave:blas - Adds dependency for virtual/blas.
 sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to sci-mathematics/octave (may be merged with hdf when opendx is completed)
-sci-mathematics/scilab:atlas - Add support for the atlas library
 sci-mathematics/scilab:ocaml - Add support for the ocaml programming language
 sci-misc/boinc:server - Enable compilation of server
 sys-apps/baselayout-vserver:fakelog - install a fake logger init script

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.252 2005/07/05 23:23:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.253 2005/07/06 08:21:23 kugelfang Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -137,7 +137,6 @@ hardenedphp - include the hardened php security patch for the php group of ebuil
 howl - Enable howl support, enables DNS Service Discovery (DNS-SD)
 hyperwave-api - Adds support for Hyperwave document storage system
 icc - Add support for the Intel C++ Compiler (does _not_ set $CC)
-icc-pgo - Enable PGO data generation or use when use icc.
 iconv - Enable support for the iconv character set conversion library
 icq - Enable ICQ IM protocol support
 ieee1394 - Enable FireWire/iLink IEEE1394 support (dv, camera, ...)
