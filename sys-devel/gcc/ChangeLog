@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.427 2005/07/03 06:42:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.428 2005/07/06 05:39:39 kumba Exp $
+
+  05 Jul 2005; Joshua Kinard <kumba@gentoo.org> gcc-3.4.3.20050110-r2.ebuild,
+  gcc-3.4.4.ebuild:
+  Make 3.4.3.20050110-r2 stable on mips, and bump 3.4.4 into unstable.
 
 *gcc-4.0.1_pre20050702 (03 Jul 2005)
 *gcc-4.1.0_beta20050702 (03 Jul 2005)
