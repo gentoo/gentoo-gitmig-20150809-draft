@@ -1,14 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5b4c84e29e01eb4b8e817b590b173ea7 ChangeLog 17796
+MD5 1e26f306a4892f1246c9eeba67b9948a ChangeLog 18330
 MD5 0c9bf11185a2a2f1916fc3dc72c0e89e metadata.xml 1037
+MD5 e560df72cd212fef9b54afd436e2c894 sbcl-0.9.2.ebuild 5014
+MD5 db884c159f65fa62f59a4f34a95771f2 sbcl-0.9.1-r1.ebuild 5009
 MD5 93b63e11f2b4f11824fd8d5393223d4d sbcl-0.8.21-r1.ebuild 4998
 MD5 2243e86820f01f5062895975617100dd sbcl-0.9.0.ebuild 4864
 MD5 b1f886a4f1701f330ccd82ccb43a677c sbcl-0.9.1.ebuild 5078
+MD5 c62393dcb29e00ef8e61621eb49078f6 files/digest-sbcl-0.9.2 557
+MD5 ad2b50cc0044a102b5eba7a50c597745 files/digest-sbcl-0.9.1-r1 557
 MD5 d18264bffb7b1a60421ea17c1862106f files/digest-sbcl-0.8.21-r1 558
 MD5 804f3eded447b0c1d9a238ca5533b058 files/digest-sbcl-0.9.0 557
 MD5 ad2b50cc0044a102b5eba7a50c597745 files/digest-sbcl-0.9.1 557
+MD5 918b12b7b742be8cf2e22a3a41f53b0c files/0.9.2/README.Gentoo 1060
+MD5 683427165f7d0717333bbb9762972b8d files/0.9.2/customize-target-features.lisp-prefix 95
+MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.9.2/customize-target-features.lisp-suffix 8
+MD5 3869dca83085d07e01386eda00c05943 files/0.9.2/install-clc.lisp 980
+MD5 23b47e03a456e33b5d3c74354e95ac5c files/0.9.2/sbcl-gentoo.patch 3810
+MD5 7447a308f36b4ad14626357d8f2c8db6 files/0.9.2/sbcl.sh 1512
+MD5 653f804ebcd167d167f8163756b7da17 files/0.9.2/sbclrc 639
 MD5 ae674398012ba5e2737be7b08f8ac944 files/0.8.21/README.Gentoo 1060
 MD5 683427165f7d0717333bbb9762972b8d files/0.8.21/customize-target-features.lisp-prefix 95
 MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.8.21/customize-target-features.lisp-suffix 8
@@ -31,10 +39,3 @@ MD5 3869dca83085d07e01386eda00c05943 files/0.9.1/install-clc.lisp 980
 MD5 f2071db9468694928756b219dad5c84e files/0.9.1/sbcl-gentoo.patch 3810
 MD5 7447a308f36b4ad14626357d8f2c8db6 files/0.9.1/sbcl.sh 1512
 MD5 653f804ebcd167d167f8163756b7da17 files/0.9.1/sbclrc 639
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvtS3yiNZaEAZA+ARAkdIAJ9N9fzDgkp3bEgolEGPCq5Coi7BwgCeIfig
-NRZED9yRPtCPKSs/g4vlpHs=
-=RVK0
------END PGP SIGNATURE-----
