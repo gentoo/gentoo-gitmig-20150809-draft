@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.5.3.ebuild,v 1.2 2005/05/07 07:51:31 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.5.3.ebuild,v 1.3 2005/07/06 19:17:46 rl03 Exp $
 
 inherit eutils webapp
 
@@ -24,33 +24,19 @@ DEPEND=">=dev-db/postgresql-7.0.0
 RDEPEND="${DEPEND}
 	!<=dev-db/phppgadmin-3.3.1"
 
-src_compile() {
-	mv libraries/lib.inc.php ${T}/lib.inc.php
-	mv login.php ${T}/login.php
-	sed -e "s|conf/config.inc.php|/etc/phppgadmin/config.inc.php|g" \
-		${T}/login.php > login.php
-	sed -e "s|include('./conf|include('conf|g" \
-		-e "s|conf/config.inc.php|/etc/phppgadmin/config.inc.php|g" \
-		${T}/lib.inc.php > libraries/lib.inc.php
-}
-
 src_install() {
 	webapp_src_preinst
 
-	local docs="DEVELOPERS FAQ HISTORY INSTALL TODO TRANSLATORS CREDITS LICENSE BUGS"
-
+	local docs="DEVELOPERS FAQ HISTORY INSTALL TODO TRANSLATORS CREDITS BUGS"
 	dodoc ${docs}
-	for docs in ${docs} INSTALL; do
-		rm -f $doc
-	done
-
-	dodir /etc/phppgadmin
-	mv conf/* sql/* ${D}/etc/phppgadmin/
-	rm -fr config/ sql/
+	mv conf/config.inc.php-dist conf/config.inc.php
 
 	cp -r * ${D}${MY_HTDOCSDIR}
+	for doc in ${docs} INSTALL LICENSE; do
+		rm -f ${D}${MY_HTDOCSDIR}/${doc}
+	done
 
+	webapp_configfile ${MY_HTDOCSDIR}/conf/config.inc.php
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
-
 	webapp_src_install
 }
