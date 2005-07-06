@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.134 2005/07/05 17:39:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.135 2005/07/06 05:51:07 dostrow Exp $
+
+  06 Jul 2005; Daniel Ostrow <dostrow@gentoo.org>
+  linux-headers-2.6.8.1-r4.ebuild, linux-headers-2.6.11-r2.ebuild:
+  Add a dep on sys-devel/gcc-powerpc64 if the user is using a 32bit userland
+  with a ppc64 kernel.
 
   05 Jul 2005; <plasmaroo@gentoo.org> linux-headers-2.6.11-r2.ebuild:
   Stable on x86 and amd64.
