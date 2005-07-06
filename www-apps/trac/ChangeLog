@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.17 2005/07/05 22:35:45 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.18 2005/07/06 06:57:55 dju Exp $
+
+  06 Jul 2005; Julien Allanos <dju@gentoo.org> -files/0.7.1-postinst-en.txt,
+  -files/0.8-postinst-en.txt, -files/0.7-postinst-en.txt,
+  -files/postinst-en.txt, -trac-0.6.1.ebuild, -trac-0.7.ebuild,
+  -trac-0.7.1.ebuild, -trac-0.8.ebuild, -trac-0.8.1.ebuild:
+  Removed old ebuids.
 
   05 Jul 2005; Julien Allanos <dju@gentoo.org> +files/0.8.4-postinst-en.txt,
   metadata.xml, trac-0.8.4.ebuild:
