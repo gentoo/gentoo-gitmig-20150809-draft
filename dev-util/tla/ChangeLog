@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/tla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.29 2005/06/03 10:48:00 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.30 2005/07/06 20:40:46 rphillips Exp $
+
+*tla-1.3.3-r1 (06 Jul 2005)
+
+  06 Jul 2005; <rphillips@gentoo.org> +tla-1.3.3-r1.ebuild:
+  Added Matteo Settenvini's changes for installing documentation. #94391
 
 *tla-1.3.3 (03 Jun 2005)
 
