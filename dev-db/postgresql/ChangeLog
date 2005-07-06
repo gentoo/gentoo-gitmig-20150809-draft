@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.220 2005/07/03 02:27:21 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.221 2005/07/06 04:33:46 nakano Exp $
+
+  06 Jul 2005; Masatomo Nakano <nakano@gentoo.org> postgresql-7.4.8.ebuild:
+  Makred stable on x86.
 
   03 Jul 2005; Masatomo Nakano <nakano@gentoo.org>
   files/postgresql-7.4.8-gentoo.patch:
