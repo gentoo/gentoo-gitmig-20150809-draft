@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/zile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.15 2005/04/21 18:28:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.16 2005/07/06 19:24:34 mkennedy Exp $
+
+*zile-2.0.7 (06 Jul 2005)
+
+  06 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> +zile-2.0.7.ebuild:
+  New upstream version; Resolves Bug #98062
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> zile-1.7_beta3-r1.ebuild:
   stable on amd64
