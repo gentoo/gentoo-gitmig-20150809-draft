@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.92 2005/07/02 20:13:29 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.93 2005/07/06 18:23:19 seemant Exp $
+
+  06 Jul 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/mit-krb5-1.4-2005-001.patch, -files/mit-krb5-1.4-lazyldflags.patch,
+  -mit-krb5-1.4-r1.ebuild:
+  remove cruft version
 
   02 Jul 2005; Hardave Riar <hardave@gentoo.org> mit-krb5-1.4.1.ebuild:
   Stable on mips, bug #96156.
