@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/hpl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/ChangeLog,v 1.4 2004/12/28 22:05:47 ribosome Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/ChangeLog,v 1.5 2005/07/06 01:01:52 robbat2 Exp $
+
+*hpl-1.0-r1 (06 Jul 2005)
+
+  06 Jul 2005; Robin H. Johnson <robbat2@gentoo.org> +hpl-1.0-r1.ebuild:
+  Update hpl build to work with virtual/mpi including fixing it to compile via
+  mpicc so it works with lam-mpi. Also include parameters to /usr/share/hpl
+  and force the user to copy them instead of polluting /usr/bin.
 
   28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> hpl-1.0.ebuild:
   Dependency update: dev-libs/atlas -> sci-libs/atlas.
