@@ -2,10 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>video</herd>
-<maintainer>
-  <email>zhen@gentoo.org</email>
-  <name>John Davis</name>
-  <description>Full time maintainer, please post all bugs to me.</description>
-</maintainer>
 <longdescription>camsource is a utility specializing in webcams</longdescription>
 </pkgmetadata>
