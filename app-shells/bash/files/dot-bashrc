@@ -1,5 +1,5 @@
 # /etc/skel/.bashrc:
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/files/dot-bashrc,v 1.1 2005/04/30 00:08:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/files/dot-bashrc,v 1.2 2005/07/06 12:32:50 azarah Exp $
 # 
 # This file is sourced by all *interactive* bash shells on startup,
 # including some apparently interactive shells such as scp and rcp
@@ -28,7 +28,7 @@ alias ls="ls --color=auto"
 
 # Change the window title of X terminals 
 case $TERM in
-	xterm*|rxvt|Eterm|eterm)
+	xterm*|rxvt*|Eterm|eterm)
 		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
 		;;
 	screen)
