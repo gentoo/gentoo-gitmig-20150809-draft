@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.9 2005/02/10 09:08:28 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.10 2005/07/06 20:20:03 agriffis Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -8,7 +8,6 @@
 # Common Lisp libraries
 
 inherit common-lisp-common
-ECLASS=common-lisp
 INHERITED="$INHERITED $ECLASS"
 
 CLPACKAGE=

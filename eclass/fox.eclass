@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.1 2005/05/07 19:16:27 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.2 2005/07/06 20:20:03 agriffis Exp $
 
 # fox eclass
 #
@@ -31,7 +31,6 @@
 
 inherit eutils libtool
 
-ECLASS="fox"
 INHERITED="$INHERITED $ECLASS"
 
 FOX_PV="${FOX_PV:-${PV}}"

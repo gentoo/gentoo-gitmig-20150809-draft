@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.16 2005/05/26 23:33:50 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.17 2005/07/06 20:20:03 agriffis Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
 
 inherit eutils mono multilib
 
-ECLASS="gtk-sharp-component"
 INHERITED="$INHERITED $ECLASS"
 
 LICENSE="LGPL-2"

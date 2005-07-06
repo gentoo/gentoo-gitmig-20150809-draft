@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.15 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.16 2005/07/06 20:20:03 agriffis Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
@@ -13,7 +13,6 @@
 
 inherit flag-o-matic
 
-ECLASS=ccc
 INHERITED="${INHERITED} ${ECLASS}"
 
 # define this to make this eclass noisy.

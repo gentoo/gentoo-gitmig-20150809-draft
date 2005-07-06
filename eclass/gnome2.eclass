@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.49 2005/07/01 20:35:31 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.50 2005/07/06 20:20:03 agriffis Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -9,7 +9,6 @@
 inherit libtool gnome.org debug fdo-mime
 
 # Gnome 2 ECLASS
-ECLASS="gnome2"
 INHERITED="$INHERITED $ECLASS"
 
 G2CONF=""               # extra configure opts passed to econf

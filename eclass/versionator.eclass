@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.7 2005/05/21 04:56:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.8 2005/07/06 20:20:04 agriffis Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -34,7 +34,6 @@
 #     version_is_at_least             want      have
 # which may be buggy, so use with caution.
 
-ECLASS=versionator
 INHERITED="$INHERITED $ECLASS"
 
 shopt -s extglob

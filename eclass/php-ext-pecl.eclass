@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl.eclass,v 1.3 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl.eclass,v 1.4 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -15,7 +15,6 @@ PECL_PKG_V=$PECL_PKG-$PV
 
 inherit php-ext-source
 
-ECLASS=php-ext-pecl
 INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_compile src_install

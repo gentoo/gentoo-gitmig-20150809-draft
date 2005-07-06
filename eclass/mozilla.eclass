@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.28 2005/04/17 05:00:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.29 2005/07/06 20:20:04 agriffis Exp $
 #
 # You probably don't want to change this eclass.  Newer ebuilds use
 # mozconfig.eclass instead.
 
-ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
 
 IUSE="java gnome gtk2 ldap debug xinerama xprint"

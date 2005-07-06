@@ -9,7 +9,6 @@
 
 inherit eutils
 
-ECLASS=java-utils
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the $ECLASS eclass"
 

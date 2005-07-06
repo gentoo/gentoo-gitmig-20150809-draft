@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.15 2005/07/01 15:01:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.16 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
@@ -13,7 +13,6 @@
 
 inherit multilib versionator toolchain-funcs
 
-ECLASS=myth
 INHERITED="${INHERITED} ${ECLASS}"
 IUSE="${IUSE} nls debug"
 

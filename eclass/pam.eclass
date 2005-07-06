@@ -1,13 +1,12 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Diego Pettenò <flameeyes@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/pam.eclass,v 1.6 2005/07/04 12:50:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pam.eclass,v 1.7 2005/07/06 20:20:04 agriffis Exp $
 #
 # This eclass contains functions to install pamd configuration files and
 # pam modules.
 
 inherit multilib
-ECLASS="pam"
 INHERITED="$INHERITED $ECLASS"
 
 # dopamd <file> [more files]

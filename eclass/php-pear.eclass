@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear.eclass,v 1.9 2005/05/06 04:38:05 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear.eclass,v 1.10 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -10,7 +10,6 @@
 # Note that this eclass doesn't handle PEAR packages' dependencies on
 # purpose, please use (R)DEPEND to define them.
 
-ECLASS=php-pear
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_install
 

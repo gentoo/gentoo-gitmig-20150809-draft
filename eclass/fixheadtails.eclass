@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.6 2005/02/10 00:08:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.7 2005/07/06 20:20:03 agriffis Exp $
 #
 # Author John Mylchreest <johnm@gentoo.org>
 
-ECLASS=fixheadtails
 INHERITED="$INHERITED $ECLASS"
 DEPEND="${DEPEND} >=sys-apps/sed-4"
 

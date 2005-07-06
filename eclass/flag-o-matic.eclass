@@ -1,8 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.87 2005/06/24 22:06:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.88 2005/07/06 20:20:03 agriffis Exp $
 
-ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
 
 # need access to emktemp()

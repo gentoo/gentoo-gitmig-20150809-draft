@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.19 2005/05/07 23:27:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.20 2005/07/06 20:20:03 agriffis Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -25,7 +25,6 @@
 inherit webapp eutils
 [[ ${PN} != ${PN/-cvs} ]] && inherit cvs
 
-ECLASS=horde
 INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_install pkg_postinst

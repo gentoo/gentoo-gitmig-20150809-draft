@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db4-fix.eclass,v 1.4 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db4-fix.eclass,v 1.5 2005/07/06 20:20:03 agriffis Exp $
 #
 # Author: Paul de Vrieze <pauldv@gentoo.org>
 #
@@ -9,7 +9,6 @@
 # the dodb4-fix script should be run from the directory where autoconf needs to
 # be run from
 
-ECLASS=db4-fix
 INHERITED="$INHERITED $ECLASS"
 
 DEPEND="sys-apps/sed"

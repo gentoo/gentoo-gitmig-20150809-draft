@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.30 2004/09/15 23:10:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.31 2005/07/06 20:20:03 agriffis Exp $
 #
 # The gtk-engines eclass is inherited by all gtk-engines-* ebuilds.
 #
@@ -20,7 +20,6 @@
 
 inherit eutils
 
-ECLASS=gtk-engines
 INHERITED="$INHERITED $ECLASS"
 
 [ -n "$DEBUG" ] && einfo "Entering gtk-engines.eclass"

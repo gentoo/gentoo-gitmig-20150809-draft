@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.22 2004/07/13 17:48:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.23 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -11,7 +11,6 @@
 # This package will be offically depreciated when vhost-config and
 # webapp-config from GLEP11 are released.
 
-ECLASS=webapp-apache
 INHERITED="$INHERITED $ECLASS"
 IUSE="apache2"
 DEPEND="${DEPEND} net-www/apache"

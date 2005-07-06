@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.13 2004/12/06 03:40:43 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.14 2005/07/06 20:20:04 agriffis Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the policy
 
 inherit eutils
-ECLASS="selinux-policy"
 INHERITED="$INHERITED $ECLASS"
 
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"

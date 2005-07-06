@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.20 2004/09/29 20:58:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.21 2005/07/06 20:20:03 agriffis Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
 inherit eutils
 
-ECLASS=java
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the $ECLASS eclass"
 

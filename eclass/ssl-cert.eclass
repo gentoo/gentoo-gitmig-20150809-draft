@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.5 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.6 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author: Max Kalika <max@gentoo.org>
 #
 # This eclass implements standard installation procedure for installing
 # self-signed SSL certificates.
 
-ECLASS=ssl-cert
 INHERITED="$INHERITED $ECLASS"
 
 # Conditionally depend on OpenSSL: allows inheretence

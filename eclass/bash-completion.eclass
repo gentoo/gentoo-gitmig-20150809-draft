@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.12 2005/06/13 14:06:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.13 2005/07/06 20:20:03 agriffis Exp $
 #
 # Simple eclass that provides an interface for installing
 # contributed (ie not included in bash-completion proper)
@@ -10,7 +10,6 @@
 # 
 # Please assign any bug reports to shell-tools@gentoo.org.
 
-ECLASS="bash-completion"
 INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS pkg_postinst
 

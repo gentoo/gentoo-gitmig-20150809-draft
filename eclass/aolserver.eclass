@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aolserver.eclass,v 1.5 2005/02/27 22:40:21 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aolserver.eclass,v 1.6 2005/07/06 20:20:03 agriffis Exp $
 
 # Authors:
 #	Ian Leitch <port001@gentoo.org>
 
-ECLASS=aolserver
 INHERITED="$INHERITED $ECLASS"
 
 DEPEND="$DEPEND www-servers/aolserver"

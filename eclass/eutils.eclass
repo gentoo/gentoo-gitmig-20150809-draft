@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.185 2005/07/04 20:32:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.186 2005/07/06 20:20:03 agriffis Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -10,7 +10,6 @@
 # NB:  If you add anything, please comment it!
 
 inherit multilib
-ECLASS=eutils
 INHERITED="$INHERITED $ECLASS"
 
 DEPEND="!bootstrap? ( sys-devel/patch )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.110 2005/06/23 19:02:39 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.111 2005/07/06 20:20:04 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -43,7 +43,6 @@ if version_is_at_least 6.3.1 ; then
 	inherit bash-completion
 fi
 
-ECLASS=vim
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack pkg_setup
 

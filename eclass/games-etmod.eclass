@@ -1,10 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.6 2005/06/23 19:35:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.7 2005/07/06 20:20:03 agriffis Exp $
 
 inherit games
 
-ECLASS=games-etmod
 INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_install pkg_postinst

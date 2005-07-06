@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.14 2004/12/21 03:24:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.15 2005/07/06 20:20:03 agriffis Exp $
 
 # !!!!!!!!!!
 #
@@ -31,7 +31,6 @@
 
 inherit eutils
 
-ECLASS=kmod
 INHERITED="$INHERITED $ECLASS"
 S=${WORKDIR}/${P}
 DESCRIPTION="Based on the $ECLASS eclass"

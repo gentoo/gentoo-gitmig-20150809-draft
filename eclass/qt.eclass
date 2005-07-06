@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.10 2005/06/30 21:26:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt.eclass,v 1.11 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -16,7 +16,6 @@
 
 inherit versionator
 
-ECLASS=qt
 INHERITED="$INHERITED $ECLASS"
 
 QTPKG="x11-libs/qt-"

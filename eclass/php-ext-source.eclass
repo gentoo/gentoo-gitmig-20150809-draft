@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.9 2004/09/05 20:57:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.10 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -14,7 +14,6 @@
 
 inherit php-ext-base
 
-ECLASS=php-ext-source
 INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_compile src_install

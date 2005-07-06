@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.37 2005/07/01 22:31:40 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.38 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -9,7 +9,6 @@
 
 inherit multilib
 
-ECLASS=toolchain-funcs
 INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/makeedit.eclass,v 1.8 2005/07/02 03:19:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/makeedit.eclass,v 1.9 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author: Spider
 #
@@ -13,7 +13,6 @@
 # This combination should reduce the RAM requirements of your build, and maybe
 # even speed it up a bit.
 
-ECLASS="makeedit"
 INHERITED="$INHERITED $ECLASS"
 
 MAKEEDIT_FLAGS="-Wno-return-type -w"

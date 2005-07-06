@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.27 2005/06/22 20:51:06 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.28 2005/07/06 20:20:03 agriffis Exp $
 
 inherit gnustep-funcs eutils flag-o-matic
 
-ECLASS=gnustep
 INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="EClass designed to facilitate building GNUstep Apps, Frameworks, and Bundles on Gentoo."

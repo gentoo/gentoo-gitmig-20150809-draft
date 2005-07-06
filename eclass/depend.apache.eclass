@@ -1,7 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.15 2005/06/07 22:11:26 vericgar Exp $
-ECLASS=depend.apache
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.16 2005/07/06 20:20:03 agriffis Exp $
 INHERITED="$INHERITED $ECLASS"
 
 ######

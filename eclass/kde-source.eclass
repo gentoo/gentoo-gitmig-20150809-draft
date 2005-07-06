@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.20 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.21 2005/07/06 20:20:03 agriffis Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -9,7 +9,6 @@
 # See http://www.gentoo.org/~danarmak/kde-cvs.html !
 # All of the real functionality is in cvs.eclass; this just adds some trivial kde-specific items
 
-ECLASS=kde-source
 INHERITED="$INHERITED $ECLASS"
 
 # --- begin user-configurable settings ---
@@ -52,7 +51,6 @@ INHERITED="$INHERITED $ECLASS"
 # kde-source.eclass defaults, which in turn override cvs.eclass defaults
 inherit cvs
 #... and reset $ECLASS. Ugly I know, hopefully I can prettify it someday
-ECLASS=kde-source
 
 # --- end user-configurable settings ---
 

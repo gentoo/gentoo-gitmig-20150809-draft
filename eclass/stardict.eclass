@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.7 2005/01/13 16:41:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.8 2005/07/06 20:20:04 agriffis Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org>
 #
@@ -13,7 +13,6 @@
 #      * DICT_PREFIX   -  SRC_URI prefix, like "dictd_www.mova.org_"
 #	   * DICT_SUFFIX   -  SRC_URI after the prefix.
 
-ECLASS="stardict"
 INHERITED="$INHERITED $ECLASS"
 
 RESTRICT="nostrip"

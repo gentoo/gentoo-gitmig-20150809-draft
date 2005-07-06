@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/embassy-2.9.eclass,v 1.4 2005/05/06 00:14:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/embassy-2.9.eclass,v 1.5 2005/07/06 20:20:03 agriffis Exp $
 
 # Author Olivier Fisette <ribosome@gentoo.org>
 
@@ -12,7 +12,6 @@
 
 inherit eutils multilib
 
-ECLASS=embassy
 INHERITED="$INHERITED $ECLASS"
 
 # EMBOSS version needed for the EMBASSY packages

@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.23 2005/05/18 11:19:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.24 2005/07/06 20:20:03 agriffis Exp $
 
-ECLASS=java-pkg
 INHERITED="${INHERITED} ${ECLASS}"
 IUSE="${IUSE}"
 SLOT="${SLOT}"

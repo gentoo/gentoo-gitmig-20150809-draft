@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.5 2005/06/17 23:34:55 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.6 2005/07/06 20:20:03 agriffis Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -18,7 +18,6 @@
 
 inherit eutils multilib
 
-ECLASS="gdesklets"
 INHERITED="$INHERITED $ECLASS"
 
 MY_P="${DESKLET_NAME}-${PV}"

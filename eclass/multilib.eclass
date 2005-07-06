@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.27 2005/04/12 19:52:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.28 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
 # This eclass is for all functions pertaining to handling multilib.
 # configurations.
 
-ECLASS=multilib
 INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"

@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.16 2005/05/29 03:20:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.17 2005/07/06 20:20:03 agriffis Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
-ECLASS=db
 INHERITED="$INHERITED $ECLASS"
 
 db_fix_so () {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.11 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.12 2005/07/06 20:20:03 agriffis Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003 Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -8,7 +8,6 @@
 # This eclass sets the site-lisp directory for emacs-related packages.
 
 inherit elisp-common
-ECLASS=elisp
 INHERITED="$INHERITED $ECLASS"
 
 # SRC_URI should be set to wherever the primary app-emacs/ maintainer

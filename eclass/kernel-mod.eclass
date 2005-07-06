@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.10 2004/10/06 21:48:24 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.11 2005/07/06 20:20:03 agriffis Exp $
 
 # This eclass provides help for compiling external kernel modules from
 # source.
@@ -8,7 +8,6 @@
 # This eclass differs from kmod.eclass because it doesn't require modules
 # to be added to the kernel source tree first.
 
-ECLASS=kernel-mod
 INHERITED="$INHERITED $ECLASS"
 S=${WORKDIR}/${P}
 DESCRIPTION="Based on the $ECLASS eclass"

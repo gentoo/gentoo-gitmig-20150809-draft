@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.57 2005/01/18 22:20:38 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.58 2005/07/06 20:20:03 agriffis Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -8,7 +8,6 @@
 # small naming fix by kain
 # moved set_arch_to_ functions to eutils -iggy (20041002)
 
-ECLASS=kernel
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 export CTARGET=${CTARGET:-${CHOST}}

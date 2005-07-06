@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.31 2005/02/20 10:17:01 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.32 2005/07/06 20:20:03 agriffis Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -8,7 +8,6 @@
 # ebuilds for the new aspell dictionaries (from gnu.org) which support
 # aspell-0.50. Support for aspell-0.60 has been added by Sergey Ulanov.
 
-ECLASS=aspell-dict
 INHERITED="${INHERITED} ${ECLASS}"
 
 EXPORT_FUNCTIONS src_compile src_install

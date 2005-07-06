@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.25 2004/09/15 23:10:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.26 2005/07/06 20:20:03 agriffis Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -21,7 +21,6 @@
 
 inherit python eutils
 
-ECLASS=distutils
 INHERITED="$INHERITED $ECLASS"
 
 # This helps make it possible to add extensions to python slots.

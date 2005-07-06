@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.3 2005/04/09 13:38:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.4 2005/07/06 20:20:04 agriffis Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -11,7 +11,6 @@ TEXMF_PATH=/var/lib/texmf
 
 inherit tetex
 
-ECLASS=tetex-3
 INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
 

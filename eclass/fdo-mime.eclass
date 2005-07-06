@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fdo-mime.eclass,v 1.2 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fdo-mime.eclass,v 1.3 2005/07/06 20:20:03 agriffis Exp $
 
 # Author:
 # foser <foser@gentoo.org>
@@ -8,7 +8,6 @@
 # utility eclass to update the desktop mime info as laid out in the freedesktop specs & implementations
 # <references here>
 
-ECLASS="fdo-mime"
 INHERITED="$INHERITED $ECLASS"
 
 # Updates the desktop database

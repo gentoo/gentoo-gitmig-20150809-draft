@@ -1,17 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.7 2005/02/23 17:26:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.8 2005/07/06 20:20:03 agriffis Exp $
 #
 # Author: David Holm <dholm@gentoo.org>
 #
 # This eclass contains some common settings for gnat based ada stuff
 # It also strips some flags to bring C[XX]FLAGS in cpmpliance with gcc-2.8.1
 
-ECLASS=gnat
 
 inherit flag-o-matic
 
-INHERITED="$INHERITED $ECLASS"
 
 DEPEND="dev-lang/gnat"
 

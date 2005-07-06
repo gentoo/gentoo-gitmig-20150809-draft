@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.9 2004/09/15 23:10:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.10 2005/07/06 20:20:03 agriffis Exp $
 
 # Author: Alastair Tse <liquidx@gentoo.org>
 # 
@@ -43,7 +43,6 @@
 
 inherit eutils
 
-ECLASS="gtk-engines2"
 INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="GTK+1/2 ${PN/gtk-engines-} Theme Engine"

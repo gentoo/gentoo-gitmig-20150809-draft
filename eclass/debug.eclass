@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.21 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.22 2005/07/06 20:20:03 agriffis Exp $
 #
 # Author: Spider
 #
@@ -8,7 +8,6 @@
 # and to remove "bad" flags from CFLAGS
 
 # Debug ECLASS
-ECLASS="debug"
 INHERITED="$INHERITED $ECLASS"
 IUSE="debug"
 

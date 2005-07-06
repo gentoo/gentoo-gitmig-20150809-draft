@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.2 2004/11/21 15:11:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.3 2005/07/06 20:20:03 agriffis Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -52,7 +52,6 @@
 
 inherit eutils
 
-ECLASS=check-reqs
 INHERITED="$INHERITED $ECLASS"
 
 check_reqs() {
