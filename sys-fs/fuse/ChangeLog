@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.24 2005/06/20 15:49:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.25 2005/07/06 15:08:33 genstef Exp $
+
+  06 Jul 2005; Stefan Schweizer <genstef@gentoo.org> fuse-2.3.0.ebuild:
+  Remove non-existand files from dodoc thanks to Geaaru <geaaru@gmail.com> in
+  bug 97692
 
   20 Jun 2005; Stefan Schweizer <genstef@gentoo.org> -fuse-2.2.1.ebuild,
   fuse-2.3.0.ebuild:

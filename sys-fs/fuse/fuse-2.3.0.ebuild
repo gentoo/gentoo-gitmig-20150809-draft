@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.3.0.ebuild,v 1.3 2005/06/20 15:49:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.3.0.ebuild,v 1.4 2005/07/06 15:08:33 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -42,8 +42,8 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS BUGS ChangeLog Filesystems README README-2.4 \
-		README-2.6 README.NFS NEWS doc/how-fuse-works
+	dodoc AUTHORS ChangeLog Filesystems README README-2.4 \
+		README.NFS NEWS doc/how-fuse-works
 	docinto example
 	dodoc example/*
 
