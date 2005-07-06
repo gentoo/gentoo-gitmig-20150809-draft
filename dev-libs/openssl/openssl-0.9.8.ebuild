@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8.ebuild,v 1.1 2005/07/05 23:39:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8.ebuild,v 1.2 2005/07/06 02:07:05 azarah Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -31,10 +31,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.9.7-alpha-default-gcc.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-parallel-build.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-make-engines-dir.patch
-
-	# allow openssl to be cross-compiled
-	cp "${FILESDIR}"/gentoo.config-0.9.7g gentoo.config || die "cp cross-compile failed"
-	chmod a+rx gentoo.config
 
 	case $(gcc-version) in
 		3.2)
@@ -83,13 +79,7 @@ src_compile() {
 	local confopts=""
 	use bindist && confopts="no-idea no-rc5 no-mdc2 -no-ec"
 
-	local sslout=$(./gentoo.config)
-	einfo "Use configuration ${sslout}"
-
-	local config="Configure"
-	[[ -z ${sslout} ]] && config="config"
-	./${config} \
-		${sslout} \
+	./config \
 		${confopts} \
 		--prefix=/usr \
 		--openssldir=/etc/ssl \
