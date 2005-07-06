@@ -1,0 +1,10 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.1/ppc64/virtuals,v 1.1 2005/07/06 05:39:35 dostrow Exp $
+
+virtual/bootloader     sys-boot/yaboot-static
+virtual/jdk            dev-java/ibm-jdk-bin
+virtual/jre            dev-java/ibm-jre-bin
+virtual/linux-sources  sys-kernel/gentoo-sources
+virtual/kernel         sys-kernel/linux-headers
+virtual/os-headers     sys-kernel/linux-headers

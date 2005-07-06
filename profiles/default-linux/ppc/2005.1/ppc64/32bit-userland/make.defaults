@@ -1,0 +1,17 @@
+ARCH="ppc"
+ACCEPT_KEYWORDS="${ARCH}"
+
+CHOST="powerpc-unknown-linux-gnu"
+PROFILE_ARCH="ppc64"
+
+CFLAGS="-O2 -pipe"
+CXXFLAGS=${CFLAGS}
+
+ACCEPT_KEYWORDS="${ARCH}"
+
+STAGE1_USE="unicode"
+GRP_STAGE23_USE="${STAGE1_USE} ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses ibm"
+
+USE="${GRP_STAGE23_USE} berkdb bitmap-fonts gif jpeg ncurses png truetype truetype-fonts type1-fonts zlib nptl"
+
+FEATURES="autoconfig sandbox sfperms"
