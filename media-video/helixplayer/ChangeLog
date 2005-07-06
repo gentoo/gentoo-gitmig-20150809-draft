@@ -1,6 +1,9 @@
 # ChangeLog for media-video/helixplayer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.12 2005/06/24 22:08:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.13 2005/07/06 10:04:25 johnm Exp $
+
+  06 Jul 2005; John Mylchreest <johnm@gentoo.org> helixplayer-1.0.5.ebuild:
+  Marking ~x86 as per bug #96923
 
 *helixplayer-1.0.5 (24 Jun 2005)
 
