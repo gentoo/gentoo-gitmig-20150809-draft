@@ -1,7 +1,0 @@
-# Copyright 2001-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/packages,v 1.11 2004/09/27 19:47:14 vapier Exp $
-
-*sys-fs/hfsutils
-*sys-fs/hfsplusutils
-*sys-fs/mac-fdisk
