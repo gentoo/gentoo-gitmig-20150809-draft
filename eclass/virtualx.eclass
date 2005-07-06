@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.20 2005/06/07 14:26:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.21 2005/07/06 19:58:37 agriffis Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
 # This eclass can be used for packages that needs a working X environment to build
 
 ECLASS=virtualx
-INHERITED="$INHERITED $ECLASS"
 DEPEND="X? ( virtual/x11 )"
+IUSE="X"
 
 DESCRIPTION="Based on the $ECLASS eclass"
 
