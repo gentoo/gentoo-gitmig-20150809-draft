@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da4a07ecd8cfcdd4bd226f810c578002 sdl-mixer-1.2.6.ebuild 1248
-MD5 98d99e954e2ccebd613b5396df79e07d ChangeLog 4005
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 9626d96d420463a76fb0a6e3550d1bd7 sdl-mixer-1.2.6.ebuild 1257
+MD5 98d99e954e2ccebd613b5396df79e07d ChangeLog 4005
 MD5 375360d31ec4aa8f404bb421dc7bc39b sdl-mixer-1.2.5-r1.ebuild 1421
-MD5 f026901e029ec31037b0bca6dc7f07d8 files/1.2.5-gcc3.patch 1235
 MD5 53b2015dae19981548f34d124a734f8e files/digest-sdl-mixer-1.2.5-r1 67
-MD5 1ca1975170b01d4da4056cc84635b608 files/digest-sdl-mixer-1.2.6 68
 MD5 b20854212133319dd5b400f71a372bcb files/sdl-mixer-1.2.5-amd64-mikmod.patch 929
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrHQVKf2g/qXtneoRAsniAJsE+0+n/WTZSCGLLe9l+aLvK7lniACgusRQ
-+Vgb1/BOumc5/tAAPAicsF4=
-=DQlq
------END PGP SIGNATURE-----
+MD5 f026901e029ec31037b0bca6dc7f07d8 files/1.2.5-gcc3.patch 1235
+MD5 1ca1975170b01d4da4056cc84635b608 files/digest-sdl-mixer-1.2.6 68
