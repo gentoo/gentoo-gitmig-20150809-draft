@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r2.ebuild,v 1.2 2005/06/30 20:54:07 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r2.ebuild,v 1.3 2005/07/06 23:12:25 smithj Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -99,19 +99,15 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
+	local myconf
 
 	if use gtk ; then
-		myconf="${myconf} --without-motif --with-gtk --with-xml"
+		myconf="${myconf} --without-motif --with-xml"
 	elif use motif; then
-		myconf="${myconf} --with-motif --without-gtk --without-pixbuf"
+		myconf="${myconf} --with-motif --without-pixbuf"
 	else
-		myconf="${myconf} --without-motif --without-gtk --without-pixbuf"
+		myconf="${myconf} --without-motif --without-pixbuf"
 	fi
-
-	use new-login \
-		&& myconf="${myconf} --with-login-manager" \
-		|| myconf="${myconf} --without-login-manager"
 
 	use kerberos && use krb4 \
 		&& myconf="${myconf} --with-kerberos" \
@@ -131,6 +127,8 @@ src_compile() {
 		--with-xshm-ext \
 		--with-xdbe-ext \
 		--enable-locking \
+		$(use_with gtk) \
+		$(use_with new-login login-manager) \
 		$(use_with xinerama xinerama-ext) \
 		$(use_with pam) \
 		$(use_with opengl gl) $(use_with opengl gle) \
