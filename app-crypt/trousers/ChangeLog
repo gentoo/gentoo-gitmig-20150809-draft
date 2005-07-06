@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.4 2005/06/23 22:08:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.5 2005/07/06 08:31:42 dragonheart Exp $
+
+*trousers-0.2.0 (06 Jul 2005)
+
+  06 Jul 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/trousers-0.2.0-nouseradd.patch, +trousers-0.2.0.ebuild:
+  version bump. tpm udev is now part of udev-060
 
   23 Jun 2005; Daniel Black <dragonheart@gentoo.org>
   trousers-0.1.11-r1.ebuild:

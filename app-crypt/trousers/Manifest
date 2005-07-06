@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 d76efcbfa2c2baf692070074ece18eb5 trousers-0.2.0.ebuild 2512
 MD5 2603eeeb20b24caddac3e9ce6996f357 metadata.xml 251
-MD5 f07a15036be0deed910595c23a59e04e ChangeLog 1047
+MD5 f9292da6b43291d95c423f4397f16bc2 ChangeLog 1246
 MD5 1f1f422c71a4989f1cd4e95209a6070a trousers-0.1.11-r1.ebuild 2615
+MD5 22f51c734f799c5519585dfd17183633 files/digest-trousers-0.2.0 67
+MD5 d1b7e938c45e716e4e813560e0394388 files/trousers-0.2.0-nouseradd.patch 1220
 MD5 05e27e046284f46a7da59bf3dbbdddf0 files/tcsd.confd 372
 MD5 edcaf716f7fc47ab4eeb301291a53fb4 files/tcsd.initd 958
 MD5 a0c59b3b9088b1773498e993ccdad67c files/digest-trousers-0.1.11-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCuzLYmdTrptrqvGERAqVMAJ90e+MsYUhiETlNBAna8sKJtESh7QCfbG22
-JmS2WwgFONTtqLCE/as7CSM=
-=eT/B
+iD8DBQFCy5cDmdTrptrqvGERAtKPAJ95JnvQQHEEJHCyy3XXyTck/ChxPgCfaogf
+/Cg/+2aonhcb2fCRqMQjp0g=
+=cMrw
 -----END PGP SIGNATURE-----
