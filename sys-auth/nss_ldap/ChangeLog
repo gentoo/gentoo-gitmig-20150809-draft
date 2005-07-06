@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.2 2005/07/02 23:44:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.3 2005/07/06 23:45:20 robbat2 Exp $
+
+*nss_ldap-239-r1 (06 Jul 2005)
+*nss_ldap-226-r1 (06 Jul 2005)
+
+  06 Jul 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nss_ldap-239-tls-security-bug.patch, +nss_ldap-226-r1.ebuild,
+  +nss_ldap-239-r1.ebuild:
+  Add patch for security problem in bug #96767.
 
 *nss_ldap-239 (02 Jul 2005)
 
