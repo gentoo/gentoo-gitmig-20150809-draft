@@ -1,4 +1,14 @@
-MD5 fb17be561cdbd052db58ae0aae91b7c4 ChangeLog 422
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9f90dd4bab0ebcbcbf459eaa09b69dad rej-0.15.ebuild 556
+MD5 6aeffd83534faae3763778987cd183c4 ChangeLog 499
 MD5 87b57a6cf5bf857ae1c1a6d03d7ceb4a metadata.xml 223
-MD5 59bd3940526554f29b4b4f9a018bc7c0 rej-0.15.ebuild 559
 MD5 ba4641bb6fdf773465020f7885e2bef9 files/digest-rej-0.15 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzFU8TOXg++0VvJQRAncmAKCJB0MP/viXuEEOgjuW0nYFpdxm+gCgg664
+1/zS54cBlmFh7PMziuvII7I=
+=xxjR
+-----END PGP SIGNATURE-----
