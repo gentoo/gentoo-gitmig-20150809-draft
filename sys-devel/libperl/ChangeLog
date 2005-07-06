@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.68 2005/07/05 16:43:37 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.69 2005/07/06 19:57:40 wolf31o2 Exp $
+
+  06 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  libperl-5.8.6-r1.ebuild:
+  Stable on arm, m68k, s390, and sh.
 
   05 Jul 2005; Hardave Riar <hardave@gentoo.org> libperl-5.8.6-r1.ebuild:
   Stable on mips.
