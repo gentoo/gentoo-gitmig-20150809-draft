@@ -1,6 +1,9 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.38 2005/06/24 22:08:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.39 2005/07/06 11:39:35 brix Exp $
+
+  06 Jul 2005; <brix@gentoo.org> realplayer-10.0.5.ebuild:
+  Stable on x86, bug #96923.
 
 *realplayer-10.0.5 (24 Jun 2005)
 
