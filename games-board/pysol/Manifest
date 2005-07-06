@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 2ed9f5b51fdbd06e6ebca139b3068076 pysol-4.82.ebuild 1009
-MD5 1ea3754575523f1fa5657fb5eeb91fc8 pysol-4.82-r1.ebuild 1289
+MD5 417c43b236d19fa646e764ac43a0f51c pysol-4.82-r1.ebuild 1312
 MD5 cc92bbc17e8d3cf9c712ec0f3d8de975 ChangeLog 1378
-MD5 1ea7842520bd2765105663127826d162 files/digest-pysol-4.82-r1 131
+MD5 2ed9f5b51fdbd06e6ebca139b3068076 pysol-4.82.ebuild 1009
 MD5 3f8caa1bf12625ec007855239ce99176 files/pysol-4.82-sound-ok.patch 635
+MD5 1ea7842520bd2765105663127826d162 files/digest-pysol-4.82-r1 131
 MD5 64d3e8b76a0ed236cf4a0fdb4a3e4b50 files/digest-pysol-4.82 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvHxUgIKl8Uu19MoRArweAJoDHJ3IPxi5Qb/9euQLfLM/C3/KzACdH4B4
-qyuX9Cg02ZTymSWCDUf0hXU=
-=owoE
------END PGP SIGNATURE-----
