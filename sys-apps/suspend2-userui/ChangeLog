@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/suspend2-userui
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/suspend2-userui/ChangeLog,v 1.1 2005/07/06 10:54:58 brix Exp $
+
+*suspend2-userui-0.5.1 (06 Jul 2005)
+
+  06 Jul 2005; <brix@gentoo.org> +metadata.xml,
+  +suspend2-userui-0.5.1.ebuild:
+  Initial import in preparation for sys-kernel/suspend2-sources, fixes bug
+  #85334.
+
