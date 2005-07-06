@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.22 2005/07/06 20:46:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.23 2005/07/06 23:07:38 swegener Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -25,7 +25,7 @@
 inherit webapp eutils
 [[ ${PN} != ${PN/-cvs} ]] && inherit cvs
 
-IUSE="vhost"
+IUSE="vhosts"
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_install pkg_postinst
 
@@ -134,7 +134,7 @@ horde_pkg_postinst() {
 		ewarn "They tend to break things when working with" 
 		ewarn "the non CVS versions of horde."
 	fi
-	if use vhost ; then
+	if use vhosts ; then
 		echo
 		ewarn "When installing horde into a vhost dir, you will"
 		ewarn "need to use the -d option so that it is installed"
