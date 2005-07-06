@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.161 2005/07/05 21:15:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.162 2005/07/06 08:49:17 dsd Exp $
+
+  06 Jul 2005; Daniel Drake <dsd@gentoo.org>
+  gentoo-sources-2.6.12-r4.ebuild:
+  Switch to gentoo mirrors now that mirroring is fixed
 
   05 Jul 2005; Aron Griffis <agriffis@gentoo.org>
   gentoo-sources-2.6.12-r3.ebuild, gentoo-sources-2.6.12-r4.ebuild:

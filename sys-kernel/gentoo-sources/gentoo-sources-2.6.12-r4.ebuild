@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.12-r4.ebuild,v 1.3 2005/07/05 21:15:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.12-r4.ebuild,v 1.4 2005/07/06 08:49:17 dsd Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -15,10 +15,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~x86"
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches"
 
 DESCRIPTION="Full sources including the gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
-SRC_URI="${KERNEL_URI}
-	http://reactivated.net/genpatches-2.6.12-7.base.tar.bz2
-	http://reactivated.net/genpatches-2.6.12-7.extras.tar.bz2
-	${ARCH_URI}"
+SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}"
 
 pkg_setup() {
 	if use sparc; then
