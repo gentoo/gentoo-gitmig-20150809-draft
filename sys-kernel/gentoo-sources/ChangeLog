@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.162 2005/07/06 08:49:17 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.163 2005/07/06 12:42:24 dsd Exp $
+
+  06 Jul 2005; Daniel Drake <dsd@gentoo.org>
+  gentoo-sources-2.6.12-r4.ebuild:
+  Stable on x86. Remember to upgrade to udev-058, and, if you use fbsplash,
+  splashutils-1.1.9.6-r1
 
   06 Jul 2005; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.6.12-r4.ebuild:
