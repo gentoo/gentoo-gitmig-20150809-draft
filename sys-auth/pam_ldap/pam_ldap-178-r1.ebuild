@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-178-r1.ebuild,v 1.3 2005/07/04 22:39:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-178-r1.ebuild,v 1.4 2005/07/06 20:07:17 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.padl.com/download/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~hppa ~ppc sparc ~x86"
+KEYWORDS="~alpha ~hppa ppc sparc ~x86"
 IUSE="ssl"
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/pam-0.72
