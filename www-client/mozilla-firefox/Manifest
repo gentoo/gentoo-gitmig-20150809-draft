@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 21f6afc27391e5c307da65e4e1822f4f mozilla-firefox-1.0.3-r1.ebuild 8144
-MD5 09feb6cd09fac9076f1de5d433de65cf mozilla-firefox-1.0.3.ebuild 7812
-MD5 53d3c010133dbcd473b3af70ca94c981 mozilla-firefox-1.0.2-r1.ebuild 7805
-MD5 9932df24748473d4927f4a56ad795a77 mozilla-firefox-1.0.2.ebuild 6613
-MD5 0d937c3abc0f89d20d829cc684efde0e ChangeLog 22753
+MD5 a3b2ad5197ef6500de99eb23d2948290 mozilla-firefox-1.0.3-r1.ebuild 8161
+MD5 e6177f7aca52fb5c71c02d00af78b005 mozilla-firefox-1.0.3.ebuild 7830
+MD5 3baf9f64ec7da4da77b290d1f59d5152 mozilla-firefox-1.0.2-r1.ebuild 7822
+MD5 dc120bae04a358fc78081993202b8837 mozilla-firefox-1.0.2.ebuild 6630
+MD5 8e157c31883718d5d452c49e6f853606 ChangeLog 22994
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 0b6adde0e2f6c0f5e40180503a351041 mozilla-firefox-1.0.4.ebuild 8331
+MD5 eef27d893c00a81c68af330cbd867578 mozilla-firefox-1.0.4.ebuild 8348
 MD5 3961b39c763ff8f98b56098ac0cdbecc files/mozilla-firefox-1.0-kp_separator.patch 444
 MD5 b16efe0e4066720b718d67348aeee757 files/mozilla-firefox-1.0-4ft2.patch 22294
 MD5 7870df97e6382caede680d440af594c1 files/digest-mozilla-firefox-1.0.2 75
@@ -28,7 +28,7 @@ MD5 bff260036c5dcca45da3218517fb33d8 files/icon/firefox-icon.png 3979
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCm29WI1lqEGTUzyQRAivLAKDOnNc0HV8SVm1SE35nii6/sLB+aQCgtPdb
-vJuqX6K+oAWgBRZMFqmQE+o=
-=CYdz
+iD8DBQFCzCqJBXaUFmZvwyMRAoaPAKCB01bALM19NPidK9Oxx8S7Fx0Y8QCg2FVX
+dYChpfbXNsd56WPpCmHI28A=
+=xq25
 -----END PGP SIGNATURE-----
