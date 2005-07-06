@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1283 2005/07/06 19:03:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1284 2005/07/06 20:29:18 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -826,6 +826,7 @@ sci-mathematics/maxima:sbcl   - adds sbcl (lisp) support to maxima
 sci-mathematics/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
 sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to sci-mathematics/octave (may be merged with hdf when opendx is completed)
+sci-mathematics/scilab:atlas - Add support for the atlas library
 sci-mathematics/scilab:ocaml - Add support for the ocaml programming language
 sci-misc/boinc:server - Enable compilation of server
 sys-apps/baselayout-vserver:fakelog - install a fake logger init script
