@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.121 2005/07/05 23:07:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.122 2005/07/06 19:50:06 hansmi Exp $
+
+  06 Jul 2005; Michael Hanselmann <hansmi@gentoo.org>
+  openldap-2.1.30-r5.ebuild:
+  Stable on ppc.
 
   05 Jul 2005; Sven Wegener <swegener@gentoo.org> openldap-2.2.23-r1.ebuild:
   QA: Added kerberos to IUSE.
