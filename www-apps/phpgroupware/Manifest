@@ -1,9 +1,19 @@
-MD5 4a94177be4b3ba9d8d4add1311964311 ChangeLog 5703
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 44da205cc847f03f79af7a0f2e835ad9 phpgroupware-0.9.16.003.ebuild 932
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a35a96275e139a057329fc7f0f2bcd17 phpgroupware-0.9.16.004.ebuild 931
+MD5 4122de47dba514a53db15f91969760ba phpgroupware-0.9.16.006.ebuild 934
 MD5 f4962e7417f461d51551a5bb52af6dd5 phpgroupware-0.9.16.005.ebuild 931
-MD5 e5ce1749ac7ebe273ebca1904d055281 files/digest-phpgroupware-0.9.16.003 78
-MD5 d93f91af3aec42a3a699571b816060b2 files/postinstall-en.txt 251
+MD5 5782c7dc1a43cb308f4f34f3486ddc94 ChangeLog 5902
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 fed33549c26825072f62f6c0afecef2e files/digest-phpgroupware-0.9.16.004 78
 MD5 93dc8c7ffd2defa8721e66f7fdff411a files/digest-phpgroupware-0.9.16.005 78
+MD5 a6a9e83c4e8b3627e2dda944e8f87564 files/digest-phpgroupware-0.9.16.006 78
+MD5 d93f91af3aec42a3a699571b816060b2 files/postinstall-en.txt 251
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCy7DBEZCkKN40op4RAgoRAJ4jdS8vQYqteSToUk1HLtLOavnZBgCfe4Mo
+dV7BDt3AHcNa+wP/5wkDuk0=
+=xq+u
+-----END PGP SIGNATURE-----
