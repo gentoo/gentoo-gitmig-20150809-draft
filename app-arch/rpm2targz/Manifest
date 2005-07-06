@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 2b0f74de01c335edc81d7a8908638062 ChangeLog 3890
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 448bca5e5f0e53872f20fc4464e9e0aa rpm2targz-9.0-r2.ebuild 1203
-MD5 a9de2a86ef924703f1bd2685425b37fa rpm2targz-9.0-r3.ebuild 1304
+MD5 52f56e79c6a961525685685c19805960 rpm2targz-9.0-r3.ebuild 1303
 MD5 d0f2d521642a49ec038e441268ab6480 files/digest-rpm2targz-9.0-r2 63
 MD5 75217fcb7780c16c88ead1295d8e9d7b files/rpm2targz-9.0-bzip2.patch 800
 MD5 96b33b5b51d34b9764ed9c50ffac18d6 files/rpm2targz-9.0-bzip2_rpm2targz.patch 2100
@@ -14,7 +14,7 @@ MD5 d0f2d521642a49ec038e441268ab6480 files/digest-rpm2targz-9.0-r3 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCvVEwTM53OX+9xmMRAuHyAKC5aGmw7qScJYTBm7xaK9Yz7zSNewCdHI91
-AdyJx4ZZuIs/t/LSLCS3+Fc=
-=5INg
+iD8DBQFCy6ecTM53OX+9xmMRArGFAKDWuPOwM2vCQaMqQW0dsOiH36xCcgCeLK9E
+qFvPx5PABpBiXnTWfkmdIBo=
+=IgoM
 -----END PGP SIGNATURE-----
