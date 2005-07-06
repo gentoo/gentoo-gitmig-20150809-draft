@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.4 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.5 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author: Rob Cakebread <pythonhead@gentoo.org>
 # Current Maintainer: Rob Cakebread <pythonhead@gentoo.org>
@@ -21,7 +21,6 @@
 
 inherit ruby eutils
 
-INHERITED="$INHERITED $ECLASS"
 
 DEPEND=">=dev-ruby/rubygems-0.8.4-r1"
 

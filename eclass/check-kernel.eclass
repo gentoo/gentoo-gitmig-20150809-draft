@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-kernel.eclass,v 1.6 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-kernel.eclass,v 1.7 2005/07/06 20:23:20 agriffis Exp $
 
 # Author: Martin Schlemmer <azarah@gentoo.org>
 # Eclass'd by: Seemant Kulleen <seemant@gentoo.org>
@@ -8,7 +8,6 @@
 # The check-kernel eclass is designed to detect the kernel sources and
 # report info on the versions
 
-INHERITED="${INHERITED} ${ECLASS}"
 
 DEPEND="sys-apps/gawk"
 

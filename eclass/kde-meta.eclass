@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.39 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.40 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -8,7 +8,6 @@
 # This is the kde-meta eclass which supports broken-up kde-base packages.
 
 inherit kde multilib
-INHERITED="$INHERITED $ECLASS"
 IUSE="$IUSE kdexdeltas" 
 
 # only broken-up ebuilds can use this eclass

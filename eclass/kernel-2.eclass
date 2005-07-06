@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.133 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.134 2005/07/06 20:23:20 agriffis Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -57,7 +57,6 @@
 #						  order, so they are applied in the order passed
 
 inherit toolchain-funcs versionator multilib
-INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install \
 	pkg_preinst pkg_postinst pkg_prerm
 

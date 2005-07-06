@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.12 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.13 2005/07/06 20:23:20 agriffis Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org> (21 Jun 2003)
 #
@@ -28,7 +28,6 @@
 # 
 # USE_RPMOFFSET_ONLY="1"
 
-INHERITED="$INHERITED $ECLASS"
 
 USE_RPMOFFSET_ONLY=${USE_RPMOFFSET_ONLY-""}
 

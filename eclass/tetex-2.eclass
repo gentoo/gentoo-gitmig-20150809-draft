@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-2.eclass,v 1.2 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-2.eclass,v 1.3 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -9,7 +9,6 @@
 
 inherit tetex
 
-INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS src_unpack src_install
 
 tetex-2_src_unpack() {

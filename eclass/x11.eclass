@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.6 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.7 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -10,7 +10,6 @@
 # wishes to build support for.  Note, that this variable is only unlocked if
 # the USE variable "expertxfree" is switched on, at least for xfree.
 
-INHERITED="${INHERITED} ${ECLASS}"
 
 vcards() {	
 	has "$1" ${VIDEO_CARDS} && return 0

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.10 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.11 2005/07/06 20:23:20 agriffis Exp $
 #
 # ########################################################################
 #
@@ -21,7 +21,6 @@ CONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob fr
 
 inherit flag-o-matic eutils confutils libtool
 
-INHERITED="$INHERITED $ECLASS"
 
 # set MY_PHP_P in the ebuild
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.7 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.8 2005/07/06 20:23:20 agriffis Exp $
 
 # pcmcia.eclass - This eclass facilities writing ebuilds for driver packages 
 # that may need to build against the pcmcia-cs drivers, depending on kernel
@@ -23,7 +23,6 @@
 
 inherit eutils
 
-INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="eclass for drivers that may build against pcmcia-cs"
 IUSE="${IUSE} pcmcia"

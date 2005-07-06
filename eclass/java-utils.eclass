@@ -9,7 +9,6 @@
 
 inherit eutils
 
-INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the $ECLASS eclass"
 
 DEPEND=">=dev-java/java-config-1.2.7"

@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.12 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.13 2005/07/06 20:23:20 agriffis Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
-INHERITED="$INHERITED $ECLASS"
 
 IUSE="java gnome ldap debug xinerama xprint moznoxft"
 case ${PN} in

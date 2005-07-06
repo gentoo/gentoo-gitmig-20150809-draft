@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.27 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.28 2005/07/06 20:23:20 agriffis Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -51,7 +51,6 @@
 # And to ensure all the weirdness with crosscompile
 inherit toolchain-funcs versionator
 
-INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup
 
 # Overwritable environment Var's

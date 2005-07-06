@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.111 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.112 2005/07/06 20:23:20 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -43,7 +43,6 @@ if version_is_at_least 6.3.1 ; then
 	inherit bash-completion
 fi
 
-INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack pkg_setup
 
 IUSE="$IUSE selinux nls acl"

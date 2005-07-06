@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.10 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.11 2005/07/06 20:23:20 agriffis Exp $
 
 # Author :     Alastair Tse <liquidx@gentoo.org> (03 Oct 2003)
 # Short Desc:  Creates symlink to the latest version of multiple slotted
@@ -42,7 +42,6 @@
 #  link to. It is probably more robust against version upgrades. You should
 #  consider using this unless you are want to do something special.
 # 
-INHERITED="$INHERITED $ECLASS"
 
 # automatic deduction based on a symlink and a regex mask
 alternatives_auto_makesym() {

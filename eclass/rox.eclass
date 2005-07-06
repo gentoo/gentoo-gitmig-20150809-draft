@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.4 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.5 2005/07/06 20:23:20 agriffis Exp $
 
 # ROX eclass Version 2
 
@@ -16,7 +16,6 @@
 
 # For examples refer to ebuilds in rox-extra/
 
-INHERITED="$INHERITED $ECLASS"
 
 if [ -z "$ROX_VER" ]; then
 	ROX_VER="2.1.0"

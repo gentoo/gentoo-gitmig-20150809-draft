@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.56 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.57 2005/07/06 20:23:20 agriffis Exp $
 
 # Current Maintainer: Tal Peer <coredumb@gentoo.org>
 # Original Author:    Dan Armak <danarmak@gentoo.org>
@@ -26,7 +26,6 @@
 # anyone actually need to use it with anything other than SSH?)
 
 
-INHERITED="$INHERITED $ECLASS"
 
 # Users shouldn't change these settings!  The ebuild/eclass inheriting
 # this eclass will take care of that.  If you want to set the global

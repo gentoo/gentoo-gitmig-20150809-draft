@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.9 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.10 2005/07/06 20:23:20 agriffis Exp $
 #
 # This eclass simplifies installation of the various pieces of
 # ruby-gnome2 since they share a very common installation procedure.
@@ -8,7 +8,6 @@
 # ruby-module.eclass, but at the moment it contains some things
 # specific to ruby-gnome2
 
-INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS src_compile src_install
 
 IUSE=""

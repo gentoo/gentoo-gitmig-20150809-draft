@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.28 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.29 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -18,7 +18,6 @@
 #
 # gnuconfig_update should generally be called from src_unpack()
 
-INHERITED="$INHERITED $ECLASS"
 
 DEPEND="sys-devel/gnuconfig"
 

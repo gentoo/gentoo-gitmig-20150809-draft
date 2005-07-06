@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.11 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.12 2005/07/06 20:23:20 agriffis Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003 Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -8,7 +8,6 @@
 # This is not an eclass, but it does provide emacs-related
 # installation utilities.
 
-INHERITED="$INHERITED $ECLASS"
 
 SITELISP=/usr/share/emacs/site-lisp
 

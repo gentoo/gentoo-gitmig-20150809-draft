@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.170 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.171 2005/07/06 20:23:20 agriffis Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -9,7 +9,6 @@ RESTRICT="nostrip"
 #---->> eclass stuff <<----
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib fixheadtails
 
-INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test pkg_preinst src_install pkg_postinst pkg_prerm pkg_postrm
 DESCRIPTION="Based on the ${ECLASS} eclass"
 

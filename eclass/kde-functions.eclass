@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.115 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.116 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
 # This contains everything except things that modify ebuild variables
 # and functions (e.g. $P, src_compile() etc.)
 
-INHERITED="$INHERITED $ECLASS"
 
 # map of the monolithic->split ebuild derivation; used to build deps describing
 # the relationships between them

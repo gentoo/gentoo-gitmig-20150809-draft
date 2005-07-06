@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.11 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.12 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -8,7 +8,6 @@
 # libraries, servers, clients and modules within the Portage system.
 #
 
-INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_compile src_install
 
 IMSDK_PV="r${PV//./_}"

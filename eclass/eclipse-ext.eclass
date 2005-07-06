@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.9 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.10 2005/07/06 20:23:20 agriffis Exp $
 
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
 
 inherit base eutils
-INHERITED="${INHERITED} ${ECLASS}"
 IUSE="${IUSE}"
 SLOT="${SLOT}"
 

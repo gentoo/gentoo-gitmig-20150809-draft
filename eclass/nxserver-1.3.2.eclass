@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.3.2.eclass,v 1.9 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.3.2.eclass,v 1.10 2005/07/06 20:23:20 agriffis Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
 
 inherit rpm eutils
 
-INHERITED="$INHERITED $ECLASS"
 
 HOMEPAGE="http://www.nomachine.com/"
 IUSE=""

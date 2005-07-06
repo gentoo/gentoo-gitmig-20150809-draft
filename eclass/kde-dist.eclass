@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.65 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.66 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -8,7 +8,6 @@
 # Don't use it for e.g. kdevelop, koffice because of their separate versioning schemes.
 
 inherit kde
-INHERITED="$INHERITED $ECLASS"
 
 # kde 3.1 prereleases have tarball versions of 3.0.6 ff
 unset SRC_URI

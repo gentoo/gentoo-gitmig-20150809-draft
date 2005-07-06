@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.6 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.7 2005/07/06 20:23:20 agriffis Exp $
 #
 # Original Author:    Jeffrey Yasskin <jyasskin@mail.utexas.edu>
 #
@@ -17,7 +17,6 @@
 # TODO:
 # Make it support particular revisions.
 
-INHERITED="$INHERITED $ECLASS"
 
 # Don't download anything other than the tla archive
 SRC_URI=""

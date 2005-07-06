@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.45 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.46 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -38,7 +38,6 @@
 
 inherit eutils toolchain-funcs
 
-INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS src_unpack src_compile src_install econf emake einstall
 
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=${PN}"

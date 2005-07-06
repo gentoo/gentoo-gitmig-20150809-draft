@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/findlib.eclass,v 1.3 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/findlib.eclass,v 1.4 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author : Matthieu Sozeau <mattam@gentoo.org>
 #
 # ocamlfind (a.k.a. findlib) eclass
 # 
 
-INHERITED="$INHERITED $ECLASS"
 
 # From this findlib version there is proper stublibs support.
 DEPEND=">=dev-ml/findlib-1.0.4-r1"

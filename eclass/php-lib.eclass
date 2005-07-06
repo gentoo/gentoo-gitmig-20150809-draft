@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-lib.eclass,v 1.3 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-lib.eclass,v 1.4 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 #
@@ -10,7 +10,6 @@
 #
 # This eclass doesn't do a lot (yet)
 
-INHERITED="$INHERITED $ECLASS"
 RESTRICT="${RESTRICT} nostrip"
 
 EXPORT_FUNCTIONS src_install

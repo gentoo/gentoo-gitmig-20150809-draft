@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.21 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.22 2005/07/06 20:23:20 agriffis Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -9,7 +9,6 @@
 # See http://www.gentoo.org/~danarmak/kde-cvs.html !
 # All of the real functionality is in cvs.eclass; this just adds some trivial kde-specific items
 
-INHERITED="$INHERITED $ECLASS"
 
 # --- begin user-configurable settings ---
 
