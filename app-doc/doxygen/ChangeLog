@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.73 2005/06/11 02:18:05 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.74 2005/07/06 00:42:08 iluxa Exp $
+
+  05 Jul 2005; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  doxygen-1.4.3-r1.ebuild:
+  replace make with emake for main build to allow parallelization
 
   11 Jun 2005; Steve Arnold <nerdboy@gentoo.org>
   +files/doxygen-1.4.3-nls.patch, +doxygen-1.4.3-r1.ebuild

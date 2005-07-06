@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.1 2005/06/11 02:18:05 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.2 2005/07/06 00:42:08 iluxa Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_compile() {
 
 	# ./configure and compile
 	./configure ${confopts} || die '"./configure" failed.'
-	make DESTDIR="${D}" all || die '"make all" failed.'
+	emake all || die 'emake failed'
 
 	# generate html and pdf (if tetex in use) documents.
 	# errors here are not considered fatal, hence the ewarn message
