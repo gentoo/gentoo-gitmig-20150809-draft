@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1cad804d73682cf9573fb223b0acfabe kunit-0.5.ebuild 658
+MD5 24181120ddbd79bc48bcd7a1b220a74c kunit-0.5.ebuild 652
 MD5 527a977f5bc01a0aa1fcfbe917ffe8eb ChangeLog 719
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 0c90d280bdbe0daf16c2cb881e61683a files/digest-kunit-0.5 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHagI1lqEGTUzyQRAok9AJ0RiQBowdRfbdmVu7qu9fsV6hPBygCfXPWE
-RM8eT9vZWS+8QMgf0IR4SbQ=
-=Iv9l
------END PGP SIGNATURE-----
