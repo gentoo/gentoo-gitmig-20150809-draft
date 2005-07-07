@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/coda
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.18 2005/06/08 20:39:05 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.19 2005/07/07 16:26:01 griffon26 Exp $
+
+  07 Jul 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +files/6.0.11/venus, coda-6.0.8.ebuild, coda-6.0.10.ebuild,
+  coda-6.0.11.ebuild:
+  Again added venus init script, this time for 6.0.11.
+  Also added perl to run-time dependencies.
 
   08 Jun 2005; Maurice van der Pot <griffon26@gentoo.org>
   -files/coda-6.0.3-iowr.patch, -files/6.0.7/venus, +files/6.0.10/venus,
