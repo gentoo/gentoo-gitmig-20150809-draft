@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p4.ebuild,v 1.4 2005/07/07 00:05:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p4.ebuild,v 1.5 2005/07/07 15:06:09 dertobi123 Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://graveman.tuxfamily.org/sources/${PN}-${PV/_p/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="ppc x86 ~amd64"
 IUSE="debug dvdr flac mp3 nls oggvorbis sox"
 
 DEPEND=">=x11-libs/gtk+-2.4
