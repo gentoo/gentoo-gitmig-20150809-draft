@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.35 2005/04/16 01:53:43 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.36 2005/07/07 00:26:22 smithj Exp $
+
+*webalizer-2.01.10-r9 (07 Jul 2005)
+
+  07 Jul 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/webalizer-db4.patch, -webalizer-2.01.10-r6.ebuild,
+  -webalizer-2.01.10-r7.ebuild, +webalizer-2.01.10-r9.ebuild:
+  fixed db1 problem for #65399, fixed gb-without-png-support problem for #65163
 
 *webalizer-2.01.10-r8 (16 Apr 2005)
 

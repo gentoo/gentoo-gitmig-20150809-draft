@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r7.ebuild,v 1.1 2005/03/01 16:15:25 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r9.ebuild,v 1.1 2005/07/07 00:26:22 smithj Exp $
 
 # uses webapps to create directories with right permissions
 # probably slight overkil but works well
@@ -18,11 +18,21 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64"
 IUSE="apache2 geoip"
 
-DEPEND="=sys-libs/db-1*
+DEPEND="=sys-libs/db-4.1*
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
 	>=media-libs/gd-1.8.3
 	geoip? ( dev-libs/geoip )"
+
+pkg_setup() {
+	webapp_pkg_setup
+	# prevents "undefined reference" errors... see bug #65163
+	if ! built_with_use media-libs/gd png; then
+		ewarn "media-libs/gd must be built with png for this package"
+		ewarn "to function."
+		die "recompile gd with USE=\"png\""
+	fi
+}
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -39,18 +49,22 @@ src_unpack() {
 		# pretty printer for numbers
 		cd ${S} && epatch ${FILESDIR}/output.c.patch || die
 	fi
+
+	# this enables the package to use db4.1, fixing bug #65399
+	epatch ${FILESDIR}/${PN}-db4.patch
 }
 
 src_compile() {
+	local myconf
 	if use geoip; then
-		myconf="`use_enable geoip`"
+		myconf="--enable-geoip"
 	else
 		myconf="--enable-dns"
 	fi
-	myconf="${myconf} --with-db=/usr/include/db1/"
-	einfo "Configuration: ${myconf}"
-	econf ${myconf} || die
-	make || die
+	myconf="${myconf} --with-db=/usr/include/db4.1/"
+	autoconf # stupid broken configure file
+	econf ${myconf} || die "econf failed"
+	emake || die "make failed"
 }
 
 src_install() {
@@ -67,9 +81,9 @@ src_install() {
 	if use apache2; then
 		# patch for apache2
 		sed -i -e "s/apache/apache2/g" ${D}/etc/webalizer.conf
-		insinto /etc/apache2/conf
+		insinto ${APACHE2_CONFDIR}
 	else
-		insinto /etc/apache/conf
+		insinto ${APACHE1_CONFDIR}
 	fi
 
 	doins ${FILESDIR}/${PV}/webalizer.conf
@@ -87,6 +101,8 @@ src_install() {
 }
 
 pkg_postinst(){
+	einfo
+	einfo "It is suggested that you restart apache before using webalizer"
 	einfo
 	einfo "Just type webalizer to generate your stats."
 	einfo "You can also use cron to generate them e.g. every day."
