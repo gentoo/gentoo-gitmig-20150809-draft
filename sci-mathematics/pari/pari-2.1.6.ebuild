@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.11 2005/05/31 09:48:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.12 2005/07/07 13:18:46 george Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
 HOMEPAGE="http://pari.math.u-bordeaux.fr/"
@@ -25,6 +25,7 @@ src_unpack() {
 src_compile() {
 	# Fix usage of toolchain
 	tc-getAS; tc-getLD; tc-getCC; tc-getCXX
+
 	./Configure \
 		--host="$(echo ${CHOST} | cut -f "1 3" -d '-')" \
 		--prefix=/usr \
@@ -47,8 +48,14 @@ src_compile() {
 	einfo "Building shared library..."
 	cd Olinux-* || die "Bad directory. File a BUG!"
 	emake ${mymake} CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" lib-dyn || die "Building shared library failed!"
+
 	einfo "Building executables..."
-	emake ${mymake} CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building executables failed!"
+	#-fPIC seems to be needed here as well on amd64
+	if [ "${ARCH}" = "amd64" ]; then
+		emake ${mymake} CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" gp ../gp || die "Building executables failed!"
+	else
+		emake ${mymake} CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building executables failed!"
+	fi
 
 	use doc || rm -rf doc/*.tex
 	use doc && emake doc
