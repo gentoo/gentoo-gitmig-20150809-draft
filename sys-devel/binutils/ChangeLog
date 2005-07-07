@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.220 2005/06/28 19:57:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.221 2005/07/07 22:31:53 hardave Exp $
+
+  07 Jul 2005; Hardave Riar <hardave@gentoo.org>
+  binutils-2.15.92.0.2-r10.ebuild:
+  Stable on mips.
 
   28 Jun 2005; Markus Rothe <corsair@gentoo.org> binutils-2.16-r1.ebuild:
   Back to ~ppc64; ld problem with current stable glibc :-/
