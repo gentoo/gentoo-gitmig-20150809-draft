@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e91bdd6f62262b9ddaf49542dfe77826 libmustux-0.20.2.ebuild 1071
-MD5 1af58d659c8554e37afe4dd0f21529c6 libmustux-0.20.1.ebuild 827
-MD5 c00493d5c1870e2bb5056f1bef77fc6e ChangeLog 3038
+MD5 3744d889e41858e7eac25ca7d279b77d libmustux-0.20.2.ebuild 1067
+MD5 76f1fc6b65c469c56e7587532b9f7fee libmustux-0.20.1.ebuild 823
+MD5 e5c8964e48afb68e82d1f27b827283e0 ChangeLog 3147
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 cf5082c812a4848bacd63b5b8c0338f2 files/digest-libmustux-0.20.1 68
 MD5 3c81d6bb6e17103411e654d928297b31 files/digest-libmustux-0.20.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCPvX506ebR+OMO78RAtU8AJ4q2CEwAG8NYO41lJnSB7Tz+ot2NACfTsR7
-Kum4Nd4Dje4nNk9dKkThYn0=
-=6Onb
------END PGP SIGNATURE-----
