@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-1.5.1.ebuild,v 1.1 2005/05/14 19:57:58 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-1.5.1.ebuild,v 1.2 2005/07/07 18:50:20 spock Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 DEPEND=">=dev-cpp/libbinio-1.2"
 
