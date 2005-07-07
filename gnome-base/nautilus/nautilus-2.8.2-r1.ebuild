@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.8.2-r1.ebuild,v 1.12 2005/05/28 08:08:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.8.2-r1.ebuild,v 1.13 2005/07/07 05:07:29 vapier Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 mips arm"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
 IUSE="oggvorbis cups gstreamer mad flac"
 
 RDEPEND=">=dev-libs/glib-2.3
