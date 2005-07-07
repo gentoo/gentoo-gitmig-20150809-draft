@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/cheesetracker-0.9.9.ebuild,v 1.9 2005/05/05 02:39:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/cheesetracker-0.9.9.ebuild,v 1.10 2005/07/07 05:13:16 caleb Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="jack"
 
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	=dev-libs/libsigc++-1.2*
-	>=x11-libs/qt-3.0"
+	=x11-libs/qt-3*"
 DEPEND="${RDEPEND}
 	>=dev-util/scons-0.94-r2"
 
