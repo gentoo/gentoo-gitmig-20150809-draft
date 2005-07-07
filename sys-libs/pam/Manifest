@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 c1bc40f3becae42b69e9aaa00978ca36 pam-0.77-r7.ebuild 8068
 MD5 f50265fdbc063e1f2e21fae1c2481f44 pam-0.77.ebuild 7449
 MD5 c3f5aee94d17c63381b7a8ba81df0f40 pam-0.77-r1.ebuild 7500
-MD5 ba8a1ff4c3b25920d1a4fb9b9128863e pam-0.78-r2.ebuild 11507
+MD5 288f957a7eff31310a05997abba705fb pam-0.78-r2.ebuild 11143
 MD5 d6f6914fedb8a4a20a6de8965bd98304 pam-0.77-r8.ebuild 8237
 MD5 83482dd7c95ad30beb2b17d93111a534 ChangeLog 13760
 MD5 45e4ffa616491f670f6b43f7482889e7 pam-0.77-r6.ebuild 8080
@@ -33,7 +33,7 @@ MD5 2d840b9afde7319bc8a8f7676582af11 files/pam.d/other 139
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzSTG1ZcsMnZjRyIRAspFAJ46Wur9TO1zbwRCZ360sj+JujeWkwCgr4Qp
-vw4xzthvMUGrnIQ6rSxenJk=
-=0b+f
+iD8DBQFCzWik1ZcsMnZjRyIRAh+QAJ4m0FDDXWCtHsK6paEr3tSidEFkjACgssK/
+GExZp0Q8nmSvltRLbGLe+l0=
+=/mOG
 -----END PGP SIGNATURE-----

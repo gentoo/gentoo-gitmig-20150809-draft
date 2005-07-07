@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.16 2005/07/07 12:47:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.17 2005/07/07 17:36:33 azarah Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -142,19 +142,6 @@ src_unpack() {
 	cp /usr/share/automake/install-sh ${S}/ 2>/dev/null || touch install-sh
 	export WANT_AUTOCONF=2.5
 	autoconf || die
-
-	if use pam_console; then
-		# Update libtool garbage in glib
-		cd "${WORKDIR}"/glib-${GLIB_VER}
-		sed -i -e 's:^GTK_DOC_CHECK.*::g' configure.in
-		sed -i -e 's:docs[^[:space:]]*::g' configure.in Makefile.am
-		> gtk-doc.make
-		aclocal && \
-		autoheader && \
-		libtoolize --automake -c -f && \
-		autoconf && \
-		automake -a -c --foreign || die "glib autotools"
-	fi
 }
 
 src_compile() {
