@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.8 2005/06/01 15:46:24 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r4.ebuild,v 1.9 2005/07/07 13:51:31 gustavoz Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -119,6 +119,8 @@ src_unpack() {
 		epatch ${T}/${P}-darwin-fink.patch
 	fi
 
+	# known working flags wrt #77623
+	use sparc && export CFLAGS="-O1" && export CXXFLAGS="${CFLAGS}"
 	# set c/xxflags and ldflags
 	strip-flags
 	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \

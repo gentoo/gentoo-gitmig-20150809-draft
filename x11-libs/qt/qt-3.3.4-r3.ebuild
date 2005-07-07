@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r3.ebuild,v 1.14 2005/07/05 17:09:11 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r3.ebuild,v 1.15 2005/07/07 13:51:30 gustavoz Exp $
 
 inherit eutils flag-o-matic
 
@@ -100,6 +100,8 @@ src_unpack() {
 	fi
 
 	cd mkspecs/${PLATFORM}
+	# known working flags wrt #77623
+	use sparc && export CFLAGS="-O1" && export CXXFLAGS="${CFLAGS}"
 	# set c/xxflags and ldflags
 	strip-flags
 	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
