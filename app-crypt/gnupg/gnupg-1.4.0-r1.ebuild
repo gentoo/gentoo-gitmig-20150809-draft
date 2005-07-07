@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r1.ebuild,v 1.6 2005/06/24 22:01:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r1.ebuild,v 1.7 2005/07/07 00:11:52 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,18 +12,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm -hppa ~ppc ~ppc-macos ~s390 -sparc ~x86 ~ia64 ~mips ~ppc64"
-IUSE="ldap nls readline caps zlib idea bzip2 selinux"
-#static not working yet
-#
-# Disabling X and usb until dependancies has sufficient keywords
-# X
-# smartcard
-
-#!static? (
-#			ldap? ( net-nds/openldap )
-#			bzip2? ( app-arch/bzip2 )
-#			zlib? ( sys-libs/zlib )
-#		)
+IUSE="X bzip2 caps idea ldap nls readline selinux smartcard zlib"
 
 RDEPEND="
 	ldap? ( net-nds/openldap )
@@ -33,10 +22,16 @@ RDEPEND="
 	virtual/libc
 	readline? ( sys-libs/readline )
 	selinux? ( sec-policy/selinux-gnupg )"
-
-
+# Disabling X and usb until dependancies has sufficient keywords
 #	X? ( media-gfx/xloadimage media-gfx/xli )
 #	smartcard? ( dev-libs/libusb )
+
+# static not working yet
+#	!static? (
+#			ldap? ( net-nds/openldap )
+#			bzip2? ( app-arch/bzip2 )
+#			zlib? ( sys-libs/zlib )
+#		)
 
 # 	dev-lang/perl
 #	virtual/mta
