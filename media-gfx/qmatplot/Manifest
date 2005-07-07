@@ -1,5 +1,5 @@
-MD5 934f7120f4e1a306ce86fefae7eb97fe qmatplot-0.4.2-r1.ebuild 972
-MD5 b0587e7015b4324c2ccfd85de6612d9c ChangeLog 1213
+MD5 b1f069036d7dafac301bbb0fb4e3b1fb qmatplot-0.4.2-r1.ebuild 969
+MD5 053d852543bedf27002e2ff545447cf7 ChangeLog 1297
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 caa148371a7c466ed0b1c5c95b929622 files/qmatplot-0.4.2-gentoo.patch 453
 MD5 2cbaba30419f14241d64b9569438428f files/digest-qmatplot-0.4.2-r1 64

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qmatplot/qmatplot-0.4.2-r1.ebuild,v 1.3 2004/12/28 15:15:34 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qmatplot/qmatplot-0.4.2-r1.ebuild,v 1.4 2005/07/07 05:17:01 caleb Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ~amd64"
 IUSE=""
 SLOT="0"
 
-DEPEND=">=x11-libs/qt-3
+DEPEND="=x11-libs/qt-3*
 	>=sci-mathematics/octave-2.1
 	>=sci-mathematics/scilab-2.6"
 
