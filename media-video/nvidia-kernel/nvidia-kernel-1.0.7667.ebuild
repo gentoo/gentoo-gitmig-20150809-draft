@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.7664.ebuild,v 1.2 2005/07/07 14:33:32 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.7667.ebuild,v 1.1 2005/07/07 14:33:32 augustus Exp $
 
 inherit eutils linux-mod
 
@@ -93,7 +93,7 @@ src_unpack() {
 		# Fix the /usr/src/linux/include/asm not existing on koutput issue #58294
 		# epatch ${NV_PATCH_PREFIX//7174/7167}-conftest-koutput-includes.patch
 		# Fix calling of smp_processor_id() when preempt is enabled
-		epatch ${NV_PATCH_PREFIX//7664/7167}-disable-preempt-on-smp_processor_id.patch
+		epatch ${NV_PATCH_PREFIX//7667/7167}-disable-preempt-on-smp_processor_id.patch
 	fi
 
 	# if you set this then it's your own fault when stuff breaks :)
@@ -117,15 +117,19 @@ src_install() {
 	dodoc ${S}/../../share/doc/NVIDIA_Changelog
 
 	# The device creation script
-	into /
-	newsbin ${S}/makedevices.sh NVmakedevices.sh
+	# This script appears to be gone.  Maybe NVIDIA is no longer supporting
+	# a static /dev.
+	#into /
+	#newsbin ${S}/makedevices.sh NVmakedevices.sh
 }
 
 pkg_postinst() {
-	if [[ "${ROOT}" = "/" && ! -e /dev/.devfsd && \
-		  ! -e /dev/.udev && -x /sbin/NVmakedevices.sh ]] ; then
-		/sbin/NVmakedevices.sh >/dev/null 2>&1
-	fi
+	# This script appears to be gone.  Maybe NVIDIA is no longer supporting
+	# a static /dev.
+	#if [[ "${ROOT}" = "/" && ! -e /dev/.devfsd && \
+	#	  ! -e /dev/.udev && -x /sbin/NVmakedevices.sh ]] ; then
+	#	/sbin/NVmakedevices.sh >/dev/null 2>&1
+	#fi
 
 	linux-mod_pkg_postinst
 }

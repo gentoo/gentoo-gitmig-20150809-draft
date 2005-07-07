@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7664.ebuild,v 1.2 2005/07/07 14:34:53 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7667.ebuild,v 1.1 2005/07/07 14:34:53 augustus Exp $
 
 inherit eutils multilib versionator
 

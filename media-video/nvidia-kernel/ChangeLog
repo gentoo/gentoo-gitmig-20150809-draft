@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.117 2005/06/03 11:54:56 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.118 2005/07/07 14:33:32 augustus Exp $
+
+*nvidia-kernel-1.0.7667 (07 Jul 2005)
+
+  07 Jul 2005; <augustus@gentoo.org> nvidia-kernel-1.0.7664.ebuild,
+  +nvidia-kernel-1.0.7667.ebuild:
+  Fixes for the following bugs: bug #91101, bug #96514, bug #96885, bug #97768.
+  The fixes to these have been added to version 1.0.7664 and 1.0.7667 of the
+  driver.
 
 *nvidia-kernel-1.0.7664 (03 Jun 2005)
 

@@ -6,6 +6,7 @@ MD5 31dc5b8d10b1e9dc8bff64fd56fd642a nvidia-kernel-1.0.6111-r3.ebuild 4494
 MD5 e4bd52644954f799ac186b4ad070d4dc nvidia-kernel-1.0.7167-r1.ebuild 3953
 MD5 4005c9a8094dcdfcba1fdec1fc2dfd9d nvidia-kernel-1.0.7174.ebuild 3991
 MD5 82b923bd2d66ca16c5a1a38e9970c0b0 nvidia-kernel-1.0.7664.ebuild 4002
+MD5 82b923bd2d66ca16c5a1a38e9970c0b0 nvidia-kernel-1.0.7667.ebuild 4002
 MD5 d8fcf2021aa68584d4a4d9e96b671da0 files/nvidia 501
 MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629-r1 163
 MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629-r4 163
@@ -13,6 +14,7 @@ MD5 ed1e098d85579c75542ef0a49ee4dd5c files/digest-nvidia-kernel-1.0.6111-r3 163
 MD5 97b3ec5488fb7f7f6cdde31ee42e45af files/digest-nvidia-kernel-1.0.7167-r1 163
 MD5 61c3ebdd8604c971bf969ea03040d170 files/digest-nvidia-kernel-1.0.7174 163
 MD5 fdcf2a4ed4588fce54171fa1f2eb0526 files/digest-nvidia-kernel-1.0.7664 163
+MD5 ef2c4ecedb45b67d79b43ffe58c660cf files/digest-nvidia-kernel-1.0.7667 163
 MD5 29eafcaf7ab5d59dd90d3d3243bf57c3 files/1.0.6111/nv_enable_pci.patch 3640
 MD5 14924b09123b075f910c73316baff848 files/1.0.6111/power-suspend-2.6.9-changes.patch 856
 MD5 762e6f6e16aa6dd5b2469e99fe8decd3 files/1.0.6111/nv-pci_find_class.patch 2903
