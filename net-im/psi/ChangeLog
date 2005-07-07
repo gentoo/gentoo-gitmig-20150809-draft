@@ -1,6 +1,10 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.72 2005/07/02 16:40:17 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.73 2005/07/07 16:05:48 humpback Exp $
+
+  07 Jul 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  psi-0.9.3-r4.ebuild:
+  Stabble on x86 and AMD64
 
   02 Jul 2005; Gustavo Felisberto <humpback@gentoo.org>;
   psi-0.9.3-r1.ebuild, psi-0.9.3-r2.ebuild, psi-0.9.3-r3.ebuild,

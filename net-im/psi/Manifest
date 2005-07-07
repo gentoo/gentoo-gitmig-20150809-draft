@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1769f596b6946b498e6f5850a4d5ed6f psi-0.9.3-r2.ebuild 9431
-MD5 f38e90fa54dda44314f90eab410504d2 psi-0.9.3-r4.ebuild 9036
+MD5 192d270c90cc31a050ed9cf4587e2212 psi-0.9.3-r4.ebuild 9123
 MD5 12c2c3a9493d869049a357f863646c88 psi-0.9.3-r1.ebuild 8145
 MD5 303d49d1d74fe87961051612047246bc psi-0.9.3-r3.ebuild 9830
-MD5 98bd300fe98072b8ad161d13f46e978e ChangeLog 9428
+MD5 1f8cd4cb33b8fcdcc330d8e3503fa518 ChangeLog 9536
 MD5 9b91ead14acbf0da98d3b33e75c67e79 metadata.xml 306
 MD5 fc8fae7a49b592b4f2c2914c21494c11 files/digest-psi-0.9.3-r1 1924
 MD5 db2a4c5b68dbb0147392a4657f2dbc92 files/digest-psi-0.9.3-r2 2132
@@ -16,3 +19,10 @@ MD5 5fa629c5177a7b1c5090428e22b7ec30 files/psi-emergency.png 295
 MD5 76f5cc28b75698adddaa068e5f4593f5 files/psi-pathfix.patch 462
 MD5 893421922de588e6a40fbe8357976279 files/psi-reverse_trayicon.patch 937
 MD5 1c741813b6d820d43475058dbfab3100 files/psi-desktop.patch 492
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzVMB8zY1VwezZiERAuxAAJ4oRHhpN27HdppgOQKuSL4cZSOh2gCfSddv
+Fjp0gsAurmTr+nj4W8zPIYc=
+=NU1V
+-----END PGP SIGNATURE-----
