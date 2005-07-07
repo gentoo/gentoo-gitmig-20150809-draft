@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.96 2005/07/05 13:20:19 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.97 2005/07/07 10:47:47 brix Exp $
+
+  07 Jul 2005; <brix@gentoo.org> pcmcia-cs-3.2.7-r3.ebuild,
+  pcmcia-cs-3.2.7-r4.ebuild, pcmcia-cs-3.2.8.ebuild,
+  pcmcia-cs-3.2.8-r1.ebuild, pcmcia-cs-3.2.8-r2.ebuild:
+  Fixed DEPEND/RDEPEND issue.
 
   05 Jul 2005; <brix@gentoo.org> pcmcia-cs-3.2.7-r3.ebuild,
   pcmcia-cs-3.2.7-r4.ebuild:

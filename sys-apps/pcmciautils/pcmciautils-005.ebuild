@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-005.ebuild,v 1.1 2005/07/03 13:18:15 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-005.ebuild,v 1.2 2005/07/07 10:48:50 brix Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -14,14 +14,15 @@ SLOT="0"
 KEYWORDS="~x86"
 
 IUSE="cis debug staticsocket"
-DEPEND="dev-util/yacc
-		sys-devel/flex
-		sys-apps/sed"
 RDEPEND=">=sys-fs/sysfsutils-1.2.0-r1
 		>=sys-apps/module-init-tools-3.2_pre4
 		>=sys-apps/hotplug-20040920
 		>=sys-apps/coldplug-20040920
 		cis? ( sys-apps/pcmcia-cs-cis )"
+DEPEND="${RDEPEND}
+		dev-util/yacc
+		sys-devel/flex
+		sys-apps/sed"
 PROVIDE="virtual/pcmcia"
 
 CONFIG_CHECK="PCMCIA"
