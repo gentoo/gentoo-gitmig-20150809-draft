@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/rl-0.2.4.ebuild,v 1.2 2005/07/07 16:08:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/rl-0.2.4.ebuild,v 1.3 2005/07/07 16:10:06 swegener Exp $
 
 DESCRIPTION="Randomize lines from text files or stdin"
 HOMEPAGE="http://tiefighter.et.tudelft.nl/~arthur/rl/"
@@ -23,6 +23,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "install failed"
+	make install DESTDIR="${D}" || die "install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }

@@ -6,13 +6,13 @@ MD5 c4b0edbb6636a114dae5cf17e3d8bb4f files/digest-rl-0.2.2 60
 MD5 a969e68ccdca0cfff71e833bdf66796c files/digest-rl-0.2.3 60
 MD5 c05a7dcdc19bc5b63e9062efaa5df8b3 files/digest-rl-0.2.4 60
 MD5 0e81493cec22dcbd57bc4ba24c586bc5 metadata.xml 402
-MD5 39e91059c47daeefdaca81e436739462 rl-0.2.2.ebuild 765
-MD5 3eb2b1f7f14b394315ede6ad8991f317 rl-0.2.3.ebuild 768
-MD5 29065b0f3dc10759a1a02f5f24caaf3e rl-0.2.4.ebuild 769
+MD5 967b964c5ea5c14e408dba9636f087f2 rl-0.2.2.ebuild 769
+MD5 5cca3c63e170d924548de7ba2d254d59 rl-0.2.3.ebuild 768
+MD5 3ae6f25f3475bd0e18c268ae90070d4b rl-0.2.4.ebuild 771
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzVOsI1lqEGTUzyQRAjS5AKDdIg2FtRO/i5dk0629HnChCVMLcQCgqUXl
-wwujhwpkjg1zASbsCYRFW28=
-=N0qb
+iD8DBQFCzVP3I1lqEGTUzyQRAtFGAJ9qzxvt+0b8dYQEeQK6tq/4IjbBUACeJqcQ
+WWK86DnbcVm+KSovqAcOtNY=
+=8hby
 -----END PGP SIGNATURE-----
