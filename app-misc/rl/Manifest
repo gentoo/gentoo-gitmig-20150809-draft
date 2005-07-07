@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 39e91059c47daeefdaca81e436739462 rl-0.2.2.ebuild 765
-MD5 aec3a880f2b4af2394a9ff557f70160c rl-0.2.4.ebuild 770
-MD5 3eb2b1f7f14b394315ede6ad8991f317 rl-0.2.3.ebuild 768
-MD5 a022c085042b7179a9b9354e2c2c1d70 ChangeLog 1656
-MD5 0e81493cec22dcbd57bc4ba24c586bc5 metadata.xml 402
+MD5 256d28a89939d0cd125f6851e70ce1c3 ChangeLog 1748
 MD5 c4b0edbb6636a114dae5cf17e3d8bb4f files/digest-rl-0.2.2 60
 MD5 a969e68ccdca0cfff71e833bdf66796c files/digest-rl-0.2.3 60
 MD5 c05a7dcdc19bc5b63e9062efaa5df8b3 files/digest-rl-0.2.4 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmQXmI1lqEGTUzyQRAmAYAJwNpNBJh+Hi3J0S1l5zmqD+I6oyswCdFCqZ
-5iYny0Zol7vlDI/RuwfVN4Y=
-=zh7o
------END PGP SIGNATURE-----
+MD5 0e81493cec22dcbd57bc4ba24c586bc5 metadata.xml 402
+MD5 39e91059c47daeefdaca81e436739462 rl-0.2.2.ebuild 765
+MD5 3eb2b1f7f14b394315ede6ad8991f317 rl-0.2.3.ebuild 768
+MD5 29065b0f3dc10759a1a02f5f24caaf3e rl-0.2.4.ebuild 769
