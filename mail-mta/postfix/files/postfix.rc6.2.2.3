@@ -1,12 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.2.3,v 1.1 2005/06/18 23:18:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.2.3,v 1.2 2005/07/07 02:27:10 ticho Exp $
 
 opts="${opts} reload"
 
 depend() {
-	need net
+	use net
 	use logger dns ypbind amavisd mysql postgresql antivirus postfix_greylist
 	provide mta
 }
