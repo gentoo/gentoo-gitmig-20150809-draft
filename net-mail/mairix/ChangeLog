@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mairix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.13 2005/05/26 18:06:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.14 2005/07/07 14:10:11 ticho Exp $
+
+  26 Jun 2005; Andrej Kacian <ticho@gentoo.org> mairix-0.16.1.ebuild:
+  Stable on x86.
 
 *mairix-0.16.1 (26 May 2005)
 
