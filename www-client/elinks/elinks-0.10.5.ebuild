@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.2 2005/06/08 01:03:15 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.3 2005/07/07 18:59:26 spock Exp $
 
 IUSE="gpm zlib ssl ipv6 X lua guile"
 
@@ -13,7 +13,7 @@ SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha ~ppc64 ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~amd64 ~alpha ~ppc64 ~mips"
 
 DEPEND="virtual/libc
 	>=app-arch/bzip2-1.0.2
