@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.13 2005/01/01 15:36:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.14 2005/07/07 04:25:32 caleb Exp $
 
 inherit kde-functions eutils libtool
 
@@ -24,7 +24,7 @@ DEPEND="virtual/x11
 	>=dev-lang/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus
-	qt? ( >=x11-libs/qt-3 ) !qt? ( =x11-libs/xforms-1* )"
+	qt? ( =x11-libs/qt-3* ) !qt? ( =x11-libs/xforms-1* )"
 
 RDEPEND="${DEPEND}
 	virtual/ghostscript
