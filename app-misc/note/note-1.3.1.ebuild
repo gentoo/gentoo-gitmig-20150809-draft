@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.1 2005/06/30 22:01:34 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.2 2005/07/07 11:45:33 agriffis Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.daemon.de/scip/Apps/note/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="crypt mysql dbm"
+IUSE="crypt dbm general mysql text"
 
 # inherit perl-module cause depend on dev-lang/perl
 DEPEND="dev-perl/TermReadKey
