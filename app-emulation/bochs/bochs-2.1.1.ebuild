@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.23 2005/07/07 02:48:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.24 2005/07/07 02:52:13 agriffis Exp $
 
 inherit eutils wxwidgets
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ppc alpha sparc amd64"
-IUSE="bochs-debugger gtk2 readline sdl wxwindows"
+IUSE="debugger gtk2 readline sdl wxwindows"
 
 RDEPEND="virtual/libc
 	virtual/x11
@@ -54,16 +54,15 @@ src_compile() {
 		myconf="${myconf} --with-gtk --with-wx"
 	use wxwindows || \
 		myconf="${myconf} --without-gtk --without-wx"
-	use bochs-debugger && \
-		myconf="$myconf --enable-debugger --enable-disasm
-	--enable-x86-debugger"
+	use debugger && \
+		myconf="$myconf --enable-debugger --enable-disasm --enable-x86-debugger"
 
 	./configure \
 		--enable-fpu --enable-cdrom --enable-control-panel \
 		--enable-usb --enable-pci --enable-mmx --enable-sse\
 		--enable-cpu-level=6 --enable-vbe\
 		--enable-repeat-speedups --enable-guest2host-tlb \
-		--enable-plugins --enable-debugger \
+		--enable-plugins \
 		--enable-ignore-bad-msr \
 		--enable-ne2000 --enable-sb16=linux --enable-slowdown --prefix=/usr \
 		--infodir=/usr/share/info --mandir=/usr/share/man --host=${CHOST} \
