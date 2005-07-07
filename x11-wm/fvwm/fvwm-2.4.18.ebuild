@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.18.ebuild,v 1.8 2005/01/03 15:41:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.18.ebuild,v 1.9 2005/07/07 03:04:13 agriffis Exp $
 
 inherit gnuconfig
 
-IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk imlib"
+IUSE="cjk gnome gtk imlib readline rplay stroke xinerama"
 
 DESCRIPTION="an extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2"
