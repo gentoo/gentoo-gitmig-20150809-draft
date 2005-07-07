@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.5 2005/07/06 20:07:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.6 2005/07/07 10:32:17 corsair Exp $
+
+  07 Jul 2005; Markus Rothe <corsair@gentoo.org> pam_ldap-178-r1.ebuild:
+  added ~ppc64
 
   06 Jul 2005; Michael Hanselmann <hansmi@gentoo.org>
   pam_ldap-178-r1.ebuild:
