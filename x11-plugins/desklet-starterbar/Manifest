@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b37b75fbf6ffc0f207b7e80ecffbff8e desklet-starterbar-0.30.ebuild 1244
 MD5 234c6ddf97f8681e4855989793df925f desklet-starterbar-0.21.ebuild 1099
 MD5 da521c750b32623bc8723a26f7284f2f desklet-starterbar-0.31.3.ebuild 722
 MD5 704080d9c79994881b47826878550fbd desklet-starterbar-0.22.1.ebuild 1235
+MD5 6a6b7b84cad3a46980bb2dcc5a77a787 desklet-starterbar-0.31.3-r1.ebuild 764
 MD5 5de19aee4e3cf5bbf523afad962c9cf1 desklet-starterbar-0.31.2.ebuild 739
-MD5 39b6285090dfe2d12203fccf5f50e544 ChangeLog 3263
+MD5 87905e2f9d025b978985f10cf8adb678 ChangeLog 3477
 MD5 a175a96fb7e85b152ade748dbd2360e0 metadata.xml 213
+MD5 6cb332f9bbab1da0ed9c0f4d45f393f1 files/digest-desklet-starterbar-0.31.3-r1 76
 MD5 780965281e4f0b18a7947846264ec4c6 files/digest-desklet-starterbar-0.21 75
 MD5 4675e9bc5d2c9b32b359f231a368d193 files/digest-desklet-starterbar-0.30 75
 MD5 01da384bca3fffa9e9a106097ceda0d7 files/digest-desklet-starterbar-0.22.1 77
 MD5 744e6e48a6f8c68b1519ad5e432054e4 files/digest-desklet-starterbar-0.31.2 77
 MD5 6cb332f9bbab1da0ed9c0f4d45f393f1 files/digest-desklet-starterbar-0.31.3 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCqJaAevY57Fted3ERAgvIAJ9FoBQ6bVioQTJhSNLg27dzOoTxuQCgqIeO
-osFycqjROdpZMlp/AGhVxaY=
-=Y+ZA
------END PGP SIGNATURE-----
