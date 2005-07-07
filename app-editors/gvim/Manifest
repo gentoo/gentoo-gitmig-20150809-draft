@@ -1,11 +1,14 @@
-MD5 3a5313640192016b8750989e98b784ef gvim-6.3.075.ebuild 1196
-MD5 2bf3627d58fc5bc11e7deaebec4211c5 gvim-6.3-r2.ebuild 1084
-MD5 0eebc7315e7ad47929f4bc916584a469 gvim-6.3.068.ebuild 1104
-MD5 9806ef65962bbf051537ec678c4e181c gvim-7.0_alpha20050326.ebuild 1243
-MD5 df87bb0d475e4da7acff21613f12cecd gvim-6.3-r4.ebuild 1082
-MD5 1fbbd099d9d5388cc226da7d0155d28d gvim-7.0_alpha20050321.ebuild 1236
-MD5 d5db205eb5b90ad09df4095a86d4855a gvim-6.3.074.ebuild 1111
-MD5 1ff072e5f8eb6baf87bf12a2a7520045 gvim-7.0_alpha20050622.ebuild 1245
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0d7175a5e809c67d7e9266819bb90b08 gvim-6.3.075.ebuild 1189
+MD5 f1a65e4342c4c64cd5e92e5bdacef77d gvim-6.3-r2.ebuild 1074
+MD5 c0d87d0e84388c628270bde56762735e gvim-6.3.068.ebuild 1096
+MD5 41e77b404700e238fcddcd5b8d0768d4 gvim-7.0_alpha20050326.ebuild 1241
+MD5 355bacf2ec7679b378dbf4c968c6968d gvim-6.3-r4.ebuild 1074
+MD5 24e9cd86261b74f298109ca1f7704810 gvim-7.0_alpha20050321.ebuild 1234
+MD5 28d4de25bfe31d2e8c580a1d8cae382a gvim-6.3.074.ebuild 1104
+MD5 ecbd6a75a31f9672214f11165e374f49 gvim-7.0_alpha20050622.ebuild 1241
 MD5 8a5f364f3d3d0af7a028da9c69a6f655 ChangeLog 19085
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 fd40cb6bcf70915df71cdfc65cd0ac7c files/digest-gvim-7.0_alpha20050321 157
@@ -21,3 +24,10 @@ MD5 5fedc57d438147906375b2ef60daa4b9 files/gvim.xpm 1371
 MD5 99367dbfe85f20e78e648bdcf0760d86 files/gvim-completion 1200
 MD5 461a5fdc06cac13bb9c7d9c869d68e2e files/digest-gvim-6.3-r2 274
 MD5 b9203f742a2fb575ca24d486e177a9dc files/digest-gvim-6.3-r4 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzIz9BXaUFmZvwyMRAkZwAJ98IMI9jIgLqDoq0uYCc+xbAsADpwCfbrY1
+9Sswh4DTYo+oxP7694gdSyM=
+=1IRL
+-----END PGP SIGNATURE-----
