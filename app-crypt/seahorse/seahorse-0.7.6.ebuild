@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.6.ebuild,v 1.2 2005/03/25 23:17:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.6.ebuild,v 1.3 2005/07/07 00:47:59 agriffis Exp $
 
 inherit gnome2 eutils
 
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
-IUSE="doc ldap"
+IUSE="ldap"
 
 src_unpack() {
 	unpack ${A}
