@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 4da0ca4266b73a113cab33b4dba8ef03 ekg-1.4-r1.ebuild 1109
-MD5 7c2ca3f95793fab6c7fa9b71e585ffa9 ekg-1.6_rc1-r1.ebuild 1461
+MD5 72c6e29b2ae506307721c4383f44d5a3 ekg-1.6_rc1-r1.ebuild 1460
 MD5 f43c4aa49c2172a1d4f64eef10bca1f5 ekg-1.5.ebuild 1224
-MD5 5546b44e7a4765b753fa1001e0cacfd8 ChangeLog 2962
+MD5 3ddc8cc4029dcc4a9499434d96121566 ChangeLog 3064
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 3e3c676c4be1c5bcc141eb3cbfc801d9 ekg-1.6_rc1.ebuild 1367
 MD5 2bc5f13c9e2cc840a2f8f61fc3a51391 files/digest-ekg-1.4-r1 59
@@ -15,7 +15,7 @@ MD5 811e95299fbf084137ceb9b517843924 files/digest-ekg-1.6_rc1-r1 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcST2chej4aZK9/cRAqM3AJ9U6cnpb5VpjNPBsB+oYAAKwfJzZACfQSN6
-iBc9aXGaMsZAObvygtYFDEg=
-=X/Ia
+iD8DBQFCzXo3chej4aZK9/cRArmxAJ4xLrbDneSzsj1s5E5wHaHzPiiAngCfWNNY
+TCYVKn/9O4xINlr+XWcw9OI=
+=bFXc
 -----END PGP SIGNATURE-----
