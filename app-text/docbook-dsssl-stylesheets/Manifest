@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 74c0ddc5e213d689bdc8108059a8f1df docbook-dsssl-stylesheets-1.79.ebuild 1683
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 d868b353b991a150bae7f1e6b95869de docbook-dsssl-stylesheets-1.77-r2.ebuild 1595
-MD5 4dd1ee3b93b9cb441f66da39478d3633 ChangeLog 3359
+MD5 b01c0abddc84763d25a5aac8470d165d ChangeLog 3472
+MD5 d6e27b4b024fe51bce13ec4537543d06 docbook-dsssl-stylesheets-1.79.ebuild 1684
+MD5 aa413b2500a9fa5f6ac08e657d0958d5 files/docbook-dsssl-stylesheets-1.77.Makefile 676
 MD5 828b0c7fd631679fa8fe2bf60d082c38 files/digest-docbook-dsssl-stylesheets-1.77-r2 70
 MD5 b699a5dd4e690ad2197647822d5aac92 files/digest-docbook-dsssl-stylesheets-1.79 71
-MD5 aa413b2500a9fa5f6ac08e657d0958d5 files/docbook-dsssl-stylesheets-1.77.Makefile 676
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCzLbCgIKl8Uu19MoRAg2QAJsGLtWzP4yODmY9Mkfpj4zlPEL0CQCeOUa+
-4PcPo1nWySdnjMvev6dOhxc=
-=6ziQ
+iD8DBQFCzTuiKRy60XGEcJIRApDrAKCE+nG/sDNkpcY54rfKlWhWCA5oDACfQjFv
+THWVvbOmEDGUFJv4oKBfQmQ=
+=VBbI
 -----END PGP SIGNATURE-----
