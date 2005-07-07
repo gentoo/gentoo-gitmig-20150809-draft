@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.39 2005/07/05 18:31:56 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.40 2005/07/07 03:34:02 iluxa Exp $
+
+  07 Jul 2005; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  glibmm-2.4.7-r1.ebuild:
+  add ~mips to keywords
 
   05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> glibmm-2.6.1.ebuild:
   Stable on hppa.
