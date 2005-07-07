@@ -1,11 +1,6 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.76 2005/07/07 02:27:10 ticho Exp $
-
-  07 Jul 2005; Andrej Kacian <ticho@gentoo.org> files/postfix.rc6.2.2.3,
-  postfix-2.2.3-r1.ebuild, postfix-2.2.4.ebuild:
-  Changed 'need net' to 'use net'. Bug #96850, by Akos Ladanyi <ladanyi at
-  tmit.bme.hu>.
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.77 2005/07/07 02:34:55 ticho Exp $
 
   05 Jul 2005; Andrej Kacian <ticho@gentoo.org> postfix-2.2.3-r1.ebuild,
   postfix-2.2.4.ebuild:
