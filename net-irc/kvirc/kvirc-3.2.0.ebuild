@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.5 2005/05/22 18:11:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.6 2005/07/07 04:52:59 caleb Exp $
 
 inherit eutils kde-functions
 
@@ -20,7 +20,7 @@ RDEPEND="esd? ( media-sound/esound )
 	ssl? ( dev-libs/openssl )
 	oss? ( media-libs/audiofile )
 	kde? ( >=kde-base/kdelibs-3 )
-	>=x11-libs/qt-3"
+	=x11-libs/qt-3*"
 
 DEPEND="${RDEPEND}
 	sys-apps/gawk

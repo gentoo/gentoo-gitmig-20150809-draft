@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/vyqchat
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/ChangeLog,v 1.10 2004/08/22 14:22:59 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/ChangeLog,v 1.11 2005/07/07 04:53:45 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> vyqchat-0.1.1.ebuild,
+  vyqchat-0.2.3.ebuild, vyqchat-0.2.6.ebuild:
+  Fix qt dep
 
   22 Aug 2004; Sven Wegener <swegener@gentoo.org> vyqchat-0.2.6.ebuild:
   Update timestamps to avoid running autotools at compile time. Closes bug
