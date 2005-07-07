@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.33 2005/07/05 00:40:12 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.34 2005/07/07 02:14:00 allanonjl Exp $
+
+*balsa-2.3.4-r1 (07 Jul 2005)
+
+  07 Jul 2005; John N. Laliberte <allanonl@bu.edu>
+  +files/balsa-2.3.4-icon-cache.patch, -balsa-2.3.4.ebuild,
+  +balsa-2.3.4-r1.ebuild:
+  fix for bug #98148, remove icon-cache file.
 
 *balsa-2.3.4 (05 Jul 2005)
 
