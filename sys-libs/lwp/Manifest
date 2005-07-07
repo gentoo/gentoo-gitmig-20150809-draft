@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fdd307ea78fc900a01e57b8151f34d4e metadata.xml 224
 MD5 2db297cc92ec3ad44329e42662b5b29f lwp-1.12.ebuild 771
-MD5 36e36841d9dfc0c63189f8a7d2d25ed6 ChangeLog 2688
-MD5 a2dc2be59d6bcc051367c92c454ad95e lwp-2.0.ebuild 821
+MD5 02d601e5f1dd410d0d548dadebf849e5 ChangeLog 2786
+MD5 5c6d451421305a3132a2282bed9e6489 lwp-2.0.ebuild 820
 MD5 642fb581dc4613a8c351d35ddfbfeaaf files/lwp-1.10-amd64.patch 1929
 MD5 03ac15a8c125277e302e9cf95873de89 files/digest-lwp-1.12 60
 MD5 30ec12e50fe24609f01a4b5887448a42 files/digest-lwp-2.0 59
 MD5 147bcbca707eadf9faeea72963a197e1 files/lwp-2.0-amd64.patch 866
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCp0K0MGnpIbeahxwRAvsGAKDKoT3D8kW8lrNX0WkaIR2v8VZgKACfTBUD
-D2jvmSWPu73ndiI2OzPMlk4=
-=0eIm
------END PGP SIGNATURE-----
