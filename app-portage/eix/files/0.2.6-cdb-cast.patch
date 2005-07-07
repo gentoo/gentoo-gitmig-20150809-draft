@@ -1,0 +1,14 @@
+--- eix-0.2.6/src/cacheTk/cdbCache.cc	2005-07-07 16:24:27.000000000 +0200
++++ eix-0.2.6-new/src/cacheTk/cdbCache.cc	2005-07-07 16:24:56.000000000 +0200
+@@ -149,9 +149,9 @@
+ 
+ 		string get(uint32_t *dlen, void **data) {
+ 			uint32_t klen;
+-			UINT32_UNPACK(current, &klen);
++			UINT32_UNPACK((char *)current, &klen);
+ 			current++;
+-			UINT32_UNPACK(current, dlen);
++			UINT32_UNPACK((char *)current, dlen);
+ 			current++;
+ 			string key((char *)current, klen);
+ 			current = (uint32_t*)(  (char *)current + (klen));

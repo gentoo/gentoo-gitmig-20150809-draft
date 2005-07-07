@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.6.ebuild,v 1.3 2005/07/07 19:48:24 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.6.ebuild,v 1.4 2005/07/07 19:52:42 hollow Exp $
 
 inherit eutils flag-o-matic bash-completion
 
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/0.2.6-package.cc.patch
+	epatch ${FILESDIR}/0.2.6-cdb-cast.patch
 }
 
 src_compile() {
