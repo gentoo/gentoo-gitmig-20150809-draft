@@ -1,19 +1,9 @@
-Follow the instructions at /usr/share/doc/${PF}/INSTALL
-to complete the install.  You need to add MySQL users
-and configure group-office 
+Now browse to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
+to complete the install.
 
-Before installing/configure you have to
+Note: User data are stored in ${VHOST_ROOT}/groupoffice-<VERSION>/userdata
+Local data are stored in ${MY_INSTALLDIR}/local
 
-touch /var/www/localhost/htdocs/groupoffice/config.php
-chmod 0777 /var/www/localhost/htdocs/groupoffice/config.php
-mkdir /var/www/localhost/htdocs/groupoffice/local/
-chown apache:apache /var/www/localhost/htdocs/groupoffice/local/
-chmod 644 /var/www/localhost/htdocs/groupoffice/config.php
-rm -Rf /var/www/localhost/htdocs/groupoffice/install/
-
-
-After that, make groupoffice secure again
-chmod 644 /var/www/localhost/htdocs/groupoffice/config.php
-and
-rm -Rf /var/www/localhost/htdocs/groupoffice/install/
+When you are done with the installation, 
+rm -Rf ${MY_INSTALLDIR}/install/
 
