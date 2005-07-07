@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 064642189f4132cedf70ea9dfe4784f8 getmail-4.3.8.ebuild 1533
 MD5 fdef5056f5957616e00845af65dca038 getmail-4.3.3.ebuild 1536
 MD5 26cbc55544cd00c4a3c50446469b4483 getmail-4.3.5.ebuild 1535
@@ -17,3 +20,10 @@ MD5 f5a22cb502a1c483c3ee6949eeff6f17 files/digest-getmail-4.3.7 65
 MD5 0816084fea7e8c63bcaf3a3a06989971 files/digest-getmail-4.3.8 65
 MD5 44501c7c8b83bf06c34a755121274e50 files/digest-getmail-4.3.10 66
 MD5 86240c0d474cc541504969f938a0e7f2 files/digest-getmail-4.3.11 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzTPTQlM6RnzZP+IRAoYUAJ9ocS8jbeI8qweJhS/twG58RwvD0ACaA+5x
+Qej7StuqGXmrBmLPyYxZFck=
+=98UM
+-----END PGP SIGNATURE-----
