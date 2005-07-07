@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/loqui-0.4.0_pre2.ebuild,v 1.1 2005/06/07 15:29:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/loqui-0.4.0.ebuild,v 1.1 2005/07/07 16:23:05 swegener Exp $
 
 MY_P="${P/_}"
 
