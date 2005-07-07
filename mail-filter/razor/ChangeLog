@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/razor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.40 2005/07/03 21:36:55 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.41 2005/07/07 01:21:46 ticho Exp $
+
+*razor-2.75 (07 Jul 2005)
+
+  07 Jul 2005; Andrej Kacian <ticho@gentoo.org> -files/razor-taint.patch,
+  -files/razor_uninstall.patch, -razor-2.36-r1.ebuild,
+  -razor-2.40-r1.ebuild, -razor-2.61.ebuild, -razor-2.66.ebuild,
+  +razor-2.75.ebuild:
+  Version bump. Removed older ebuilds and two unused patches.
 
   03 Jul 2005; Herbie Hopkins <herbs@gentoo.org> razor-2.74.ebuild:
   Stable on amd64 wrt bug #96776.
