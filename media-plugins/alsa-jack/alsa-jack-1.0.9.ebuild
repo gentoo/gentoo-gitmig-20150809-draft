@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/alsa-jack-1.0.9.ebuild,v 1.2 2005/05/27 21:19:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/alsa-jack-1.0.9.ebuild,v 1.3 2005/07/07 09:05:07 eradicator Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://alsaproject/plugins/alsa-plugins-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 -sparc ~x86"
 IUSE=""
 
 DEPEND="~media-libs/alsa-lib-${PV}
