@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.3.8.ebuild,v 1.5 2005/03/18 15:11:32 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.3.8.ebuild,v 1.6 2005/07/07 04:58:28 caleb Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 
 IUSE="kde debug voice extramodules"
 
-DEPEND=">=x11-libs/qt-3.0.1
+DEPEND="=x11-libs/qt-3*
 	kde? ( kde-base/arts )"
 
 S=${WORKDIR}/${PN}

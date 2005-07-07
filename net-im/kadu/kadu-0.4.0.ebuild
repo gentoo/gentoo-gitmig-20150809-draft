@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0.ebuild,v 1.4 2005/06/17 16:36:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0.ebuild,v 1.5 2005/07/07 04:58:28 caleb Exp $
 
 inherit flag-o-matic eutils
 
@@ -40,7 +40,7 @@ KEYWORDS="amd64 ppc ~x86"
 
 IUSE="X debug alsa arts esd voice speech nas oss spell ssl tcltk xmms xosd amarok pheaders extraicons extramodules mail"
 
-DEPEND="x11-libs/qt
+DEPEND="=x11-libs/qt-3*
 	media-libs/libsndfile
 	alsa? ( media-libs/alsa-lib virtual/alsa )
 	arts? ( kde-base/arts )
