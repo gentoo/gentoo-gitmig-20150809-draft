@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ydpdict-0.63.ebuild,v 1.2 2005/01/01 13:04:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ydpdict-0.63.ebuild,v 1.3 2005/07/07 18:26:30 spock Exp $
 
 DESCRIPTION="A Linux interface for the Collins Polish-English, English-Polish Dictionary."
 HOMEPAGE="http://toxygen.net/ydpdict/"
@@ -9,7 +9,7 @@ SLOT="0"
 DEPEND=""
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_compile() {
 	econf || die

@@ -1,4 +1,14 @@
-MD5 ee94c25a20502023aa437066aa2baf92 ChangeLog 334
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 32e321e42b5cb70a8550e737fb5f9592 ChangeLog 422
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
-MD5 1a4a632e4c0b73a743e9323b148fd0e2 ydpdict-0.63.ebuild 1124
+MD5 7d790985e9b9b11c006bd6848a538a21 ydpdict-0.63.ebuild 1118
 MD5 b0b14844966cea4dd2dea36f6c805f8c files/digest-ydpdict-0.63 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzXPrchej4aZK9/cRAkoDAJ9v6wjcSJaNwdtC6xAQUGNl7reiigCeOryQ
+k7xKKvTbeHpvUYWZOZk8brM=
+=w0XT
+-----END PGP SIGNATURE-----
