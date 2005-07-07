@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r12.ebuild,v 1.4 2005/01/01 15:13:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r12.ebuild,v 1.5 2005/07/07 11:42:29 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
-IUSE="gpm nls samba ncurses X slang unicode"
+IUSE="X gpm ncurses nls pam samba slang unicode"
 
 PROVIDE="virtual/editor"
 
