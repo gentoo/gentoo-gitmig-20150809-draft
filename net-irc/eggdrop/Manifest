@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 41decde26d17f97a1356aee7f896bebe ChangeLog 6827
 MD5 6e020cc3d06747e6d69d9d873b25d99a eggdrop-1.6.17-r2.ebuild 2273
 MD5 62f31d8a6a61e414ccdf004363b59563 eggdrop-1.6.17.ebuild 2188
@@ -5,3 +8,10 @@ MD5 6b09026c13cde0090d7b943e6a4e1535 files/digest-eggdrop-1.6.17 145
 MD5 553b1bc88e6b98c27766e4e361c41490 files/digest-eggdrop-1.6.17-r2 145
 MD5 d1c7b90b504d49b5f9f19cab742f227c files/eggdrop-installer 2268
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzVKNI1lqEGTUzyQRAglqAKCrXX1E3pYfi/frNvN7CMJD/qYVlwCeNPwu
+IO/xJyx8YOGVsCwCtTA/7Ws=
+=fpe0
+-----END PGP SIGNATURE-----
