@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.0.ebuild,v 1.12 2005/06/06 09:45:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.0.ebuild,v 1.13 2005/07/07 01:58:34 ticho Exp $
 
 inherit eutils
 
@@ -169,7 +169,7 @@ pkg_postinst() {
 		einfo "will be performed without it. Since you do not have SpamAssassin installed,"
 		einfo "all spam checks have been disabled. To enable them, install SpamAssassin"
 		einfo "and comment out the line containing: "
-		einfo "@bypass_virus_checks_maps = (1); in /etc/amavisd.conf."
+		einfo "@bypass_spam_checks_maps = (1); in /etc/amavisd.conf."
 	fi
 	echo
 	ewarn "Adjusting permissions for /etc/amavisd.conf (0 for world, owner root:amavis)"
