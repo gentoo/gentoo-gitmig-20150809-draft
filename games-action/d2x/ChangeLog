@@ -1,6 +1,9 @@
 # ChangeLog for games-action/d2x
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.9 2005/01/09 10:48:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.10 2005/07/07 13:39:28 wolf31o2 Exp $
+
+  07 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org> d2x-0.2.5-r1.ebuild:
+  Changed nocd to cdinstall, since it is optional and breaks interactivity.
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> d2x-0.2.5-r1.ebuild:
   Added missing parentheses in SRC_URI/*DEPEND/LICENSE.

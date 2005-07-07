@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a7a398ca1b13c0eccf26c863530145a d2x-0.2.5-r1.ebuild 2617
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 b12ce707e74812859c7ae92c1d007aca ChangeLog 1342
+MD5 abfafce3ebdf03bbcfa5c289391e0986 d2x-0.2.5-r1.ebuild 2649
 MD5 e560b26a3a230cfe16b0871e80234121 d2x-0.2.5.ebuild 1978
-MD5 82ad65f111df1092db5ea9b305885feb ChangeLog 1189
-MD5 b298d324cbce31e8cc4779c765fabc4d files/digest-d2x-0.2.5-r1 123
-MD5 b298d324cbce31e8cc4779c765fabc4d files/digest-d2x-0.2.5 123
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 499b24f4949333a0c04d1177aa3213e5 files/0.2.5-shellscripts.patch 747
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCwexCgIKl8Uu19MoRAjrhAJ9b4b0+yGRIo2B5ax2TZltblwA+TQCaA3d3
-9sYn13uWsa1pF8XCZBzA8hM=
-=xGUl
------END PGP SIGNATURE-----
+MD5 b298d324cbce31e8cc4779c765fabc4d files/digest-d2x-0.2.5 123
+MD5 b298d324cbce31e8cc4779c765fabc4d files/digest-d2x-0.2.5-r1 123
