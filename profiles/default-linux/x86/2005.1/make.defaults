@@ -1,5 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2005.1/make.defaults,v 1.2 2005/06/03 20:21:02 wolf31o2 Exp $
-
-GRP_STAGE23_USE="bonobo esd gtkhtml mozilla ruby tcltk ldap dvd dvdr cdr"
