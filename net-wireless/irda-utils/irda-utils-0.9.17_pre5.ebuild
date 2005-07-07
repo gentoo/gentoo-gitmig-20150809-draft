@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.3 2005/06/30 18:47:23 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.4 2005/07/07 09:54:28 brix Exp $
 
 inherit eutils
 
@@ -16,9 +16,9 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 IUSE="gtk"
-DEPEND="sys-apps/sed"
 RDEPEND="=dev-libs/glib-2*
 		gtk? ( =x11-libs/gtk+-1.2* )"
+DEPEND="${RDEPEND} sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}

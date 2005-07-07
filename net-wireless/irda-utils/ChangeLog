@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/irda-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.12 2005/06/30 18:47:23 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.13 2005/07/07 09:54:28 brix Exp $
+
+  07 Jul 2005; <brix@gentoo.org> irda-utils-0.9.17_pre5.ebuild:
+  Fixed DEPEND/RDEPEND issue.
 
   30 Jun 2005; <brix@gentoo.org> irda-utils-0.9.16.ebuild,
   irda-utils-0.9.16-r1.ebuild, irda-utils-0.9.17_pre5.ebuild:

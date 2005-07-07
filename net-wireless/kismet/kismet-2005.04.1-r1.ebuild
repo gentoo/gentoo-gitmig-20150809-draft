@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2005.04.1-r1.ebuild,v 1.1 2005/06/13 10:38:41 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2005.04.1-r1.ebuild,v 1.2 2005/07/07 09:56:30 brix Exp $
 
 inherit linux-info
 
@@ -20,8 +20,6 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="ethereal gps ncurses"
 
-DEPEND=">=sys-devel/autoconf-2.58
-		sys-apps/sed"
 RDEPEND="net-wireless/wireless-tools
 		sys-libs/ncurses
 		ethereal? ( =dev-libs/glib-1.2*
@@ -32,6 +30,9 @@ RDEPEND="net-wireless/wireless-tools
 				dev-libs/gmp
 				>=media-gfx/imagemagick-6.0
 				dev-perl/libwww-perl )"
+DEPEND="${RDEPEND}
+		>=sys-devel/autoconf-2.58
+		sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}

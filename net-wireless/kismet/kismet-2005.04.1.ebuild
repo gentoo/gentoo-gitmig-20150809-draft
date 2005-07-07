@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2005.04.1.ebuild,v 1.4 2005/05/09 11:17:59 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2005.04.1.ebuild,v 1.5 2005/07/07 09:56:30 brix Exp $
 
 inherit linux-info
 
@@ -20,7 +20,6 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ppc"
 IUSE="ethereal gps"
 
-DEPEND=">=sys-devel/autoconf-2.58"
 RDEPEND="virtual/libc
 		net-wireless/wireless-tools
 		sys-libs/ncurses
@@ -35,6 +34,8 @@ RDEPEND="virtual/libc
 		# Note: gps support is automatically enabled based on the
 		# above libs - 2005-04-R1 doesn't honor the --disable-gps flag
 		# brix@gentoo.org
+DEPEND="${RDEPEND}
+		>=sys-devel/autoconf-2.58"
 
 src_compile() {
 	local ETHEREAL_APPEND=""
