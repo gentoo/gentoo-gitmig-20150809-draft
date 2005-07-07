@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 83a9c1aa5dd9d790895987ad62d11bd1 ChangeLog 5345
-MD5 a2bebac7fa68e1da0fb0c66c05c2ecfc ati-drivers-extra-8.12.10.ebuild 2629
-MD5 4659b6d779562eb7f1920c4d89eaca1b ati-drivers-extra-8.13.3.ebuild 2629
-MD5 432269abcc70862f1c0d7c5bbed82449 ati-drivers-extra-8.14.13.ebuild 2661
-MD5 9e344a0d88c597052b0712adb2a210f3 ati-drivers-extra-8.8.25.ebuild 2628
+MD5 d126d320f7ff18202e6b105bea30fb38 ati-drivers-extra-8.12.10.ebuild 2625
+MD5 a5e38c5f831709b2e98de4fec37d4d1b ati-drivers-extra-8.13.3.ebuild 2625
+MD5 c5b696c9c60b486b133379b74a337af5 ati-drivers-extra-8.14.13.ebuild 2656
+MD5 670d006b1312c5a83ecfab82e0e614d2 ati-drivers-extra-8.8.25.ebuild 2624
+MD5 862c0e074e5be3ed667ad26a645e603a ChangeLog 5578
+MD5 9cea1a7968c87ed8d1c09c6ae707a963 ati-drivers-extra-8.10.19.ebuild 2626
 MD5 c306bb93866a4dd8913899229dd20726 metadata.xml 227
-MD5 788a4920043af156c8301f1a0faf4a8f ati-drivers-extra-8.10.19.ebuild 2630
-MD5 337d2e41fb33c043980bc961b42127c2 files/ati-drivers-extra-8.12.10-improvements.patch.bz2 10241
-MD5 5da71c5ff5ebc066ef2b465e93049515 files/ati-drivers-extra-8.13.3-improvements.patch.bz2 10419
-MD5 071a3c5b95ac48e604a480f037b0e91e files/ati-drivers-extra-8.14.13-improvements.patch.bz2 10459
-MD5 5349e88a1d5524007b97ead001558d0d files/digest-ati-drivers-extra-8.12.10 156
-MD5 c60a324510581e10db73034d6ffc89e7 files/digest-ati-drivers-extra-8.13.3 154
-MD5 82c5244e2e3822f5e73ff38138dc23c1 files/digest-ati-drivers-extra-8.14.13 157
-MD5 f62d7815852919948deb06c864841953 files/digest-ati-drivers-extra-8.8.25 154
-MD5 f2aad1d22d8cdb74d99b5efec9d02c2d files/digest-ati-drivers-extra-8.10.19 156
-MD5 41782adae08060611f324e8c8ddf3de9 files/fireglcontrol.desktop 149
 MD5 6d101e30f74b2208e76b3e8cb329d15d files/ati-drivers-extra-8.8.25-improvements.patch.bz2 10581
+MD5 337d2e41fb33c043980bc961b42127c2 files/ati-drivers-extra-8.12.10-improvements.patch.bz2 10241
+MD5 f2aad1d22d8cdb74d99b5efec9d02c2d files/digest-ati-drivers-extra-8.10.19 156
+MD5 5349e88a1d5524007b97ead001558d0d files/digest-ati-drivers-extra-8.12.10 156
+MD5 82c5244e2e3822f5e73ff38138dc23c1 files/digest-ati-drivers-extra-8.14.13 157
+MD5 5da71c5ff5ebc066ef2b465e93049515 files/ati-drivers-extra-8.13.3-improvements.patch.bz2 10419
+MD5 c60a324510581e10db73034d6ffc89e7 files/digest-ati-drivers-extra-8.13.3 154
+MD5 f62d7815852919948deb06c864841953 files/digest-ati-drivers-extra-8.8.25 154
+MD5 071a3c5b95ac48e604a480f037b0e91e files/ati-drivers-extra-8.14.13-improvements.patch.bz2 10459
 MD5 96e9a8be78db2a99bf6bfb9e166948f3 files/ati-drivers-extra-8.10.19-improvements.patch.bz2 12027
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCqkkq0K3RJaeXx6cRAr62AKCFFQXT4qcl2g3uUD4yTXPcn7Z8xwCfU5+Z
-eVG5+FyJ+cmbj1w9ji6n0P0=
-=AJz7
------END PGP SIGNATURE-----
+MD5 41782adae08060611f324e8c8ddf3de9 files/fireglcontrol.desktop 149

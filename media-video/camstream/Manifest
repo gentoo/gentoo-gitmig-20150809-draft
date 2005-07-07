@@ -1,5 +1,5 @@
-MD5 1a5fcddca5007df1d75dd747255d8160 camstream-0.26.3.ebuild 1214
-MD5 ddaebd02849b8bbbcbc3efb2c8e6fb50 ChangeLog 2476
+MD5 71750530efec84b73cbbb69bc7f4938e camstream-0.26.3.ebuild 1211
+MD5 8f2a611efd8096fd6597b383689e25b1 ChangeLog 2559
 MD5 5ef11878179d451985ee7157a416c27e metadata.xml 222
 MD5 e44f9499a8044ecb7eb25cc6aa60f587 files/uicmocpath.patch 692
 MD5 55ae29f8111814f90a59ce1692028d3e files/x86_64-asm.patch 7265
