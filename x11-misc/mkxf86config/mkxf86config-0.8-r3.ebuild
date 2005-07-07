@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.8-r3.ebuild,v 1.6 2005/07/07 12:42:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.8-r3.ebuild,v 1.7 2005/07/07 13:25:29 agriffis Exp $
 
 inherit eutils
 
-IUSE=""
+IUSE="livecd"
 
 MY_PN="xf86config-knoppix"
 MY_PV="${PV}-5"
