@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r9.ebuild,v 1.1 2005/07/07 00:26:22 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r9.ebuild,v 1.2 2005/07/07 22:26:03 rl03 Exp $
 
 # uses webapps to create directories with right permissions
 # probably slight overkil but works well
@@ -76,17 +76,8 @@ src_install() {
 	doman webalizer.1
 
 	insinto /etc
-	newins ${FILESDIR}/${PV}/webalizer.conf webalizer.conf
-
-	if use apache2; then
-		# patch for apache2
-		sed -i -e "s/apache/apache2/g" ${D}/etc/webalizer.conf
-		insinto ${APACHE2_CONFDIR}
-	else
-		insinto ${APACHE1_CONFDIR}
-	fi
-
 	doins ${FILESDIR}/${PV}/webalizer.conf
+	use apache2 && sed -i -e "s/apache/apache2/g" ${D}/etc/webalizer.conf
 
 	if use apache2; then
 		insinto ${APACHE2_MODULES_CONFDIR}

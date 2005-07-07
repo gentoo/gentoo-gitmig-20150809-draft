@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.36 2005/07/07 00:26:22 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.37 2005/07/07 22:26:03 rl03 Exp $
+
+  07 Jul 2005; Renat Lumpau <rl03@gentoo.org>
+  files/2.01.10/apache.webalizer, files/2.01.10/reconfig,
+  files/2.01.10/webalizer.conf, webalizer-2.01.10-r9.ebuild:
+  Fix config files (#67551)
 
 *webalizer-2.01.10-r9 (07 Jul 2005)
 

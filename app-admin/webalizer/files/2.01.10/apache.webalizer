@@ -1,15 +1,11 @@
 #
 # This is the config snippet for Webalizer
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/files/2.01.10/apache.webalizer,v 1.2 2004/07/18 02:25:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/files/2.01.10/apache.webalizer,v 1.3 2005/07/07 22:26:03 rl03 Exp $
 
-Alias /webalizer "/var/www/webalizer"
-
-<Directory "/var/www/webalizer">
+<Directory "DIR">
   Options None
   AllowOverride None
   Order allow,deny
   Allow from all
 </Directory>
-
-
