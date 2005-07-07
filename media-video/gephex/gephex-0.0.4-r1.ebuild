@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.0.4-r1.ebuild,v 1.3 2004/06/25 00:40:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.0.4-r1.ebuild,v 1.4 2005/07/07 04:49:52 caleb Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="x86"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="virtual/x11
-	>=x11-libs/qt-3
+	=x11-libs/qt-3*
 	>=media-libs/libsdl-1.2.6-r3
 	>=media-libs/libpng-1.2.5-r4
 	>=media-libs/sdl-ttf-2.0.6

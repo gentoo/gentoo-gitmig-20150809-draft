@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-1.9_alpha90.ebuild,v 1.4 2005/04/11 18:21:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-1.9_alpha90.ebuild,v 1.5 2005/07/07 04:50:49 caleb Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/x11
 	media-video/avifile
 	>=media-libs/glut-3.7.1
 	>=media-libs/freetype-2.1.4
-	>=x11-libs/qt-3"
+	=x11-libs/qt-3*"
 
 RDEPEND=${DEPEND}
 

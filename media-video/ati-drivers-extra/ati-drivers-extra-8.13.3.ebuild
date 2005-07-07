@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-8.13.3.ebuild,v 1.1 2005/05/21 20:15:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-8.13.3.ebuild,v 1.2 2005/07/07 04:48:15 caleb Exp $
 
 IUSE="qt"
 
@@ -16,7 +16,7 @@ LICENSE="ATI GPL-2 QPL-1.0"
 KEYWORDS="~x86"  # ~amd64 yet to be fixed
 
 DEPEND="=media-video/ati-drivers-${PV}*
-	qt? ( >=x11-libs/qt-3.0 )"
+	qt? ( =x11-libs/qt-3* )"
 
 ATIBIN="${D}/opt/ati/bin"
 RESTRICT="nostrip"

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gephex
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.10 2005/06/12 08:36:04 zypher Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.11 2005/07/07 04:49:52 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> gephex-0.0.4.ebuild,
+  gephex-0.0.4-r1.ebuild, gephex-0.4.ebuild, gephex-0.4.1.ebuild,
+  gephex-0.4.3.ebuild:
+  Fix qt dep
 
 *gephex-0.4.3 (04 un 2005)
 

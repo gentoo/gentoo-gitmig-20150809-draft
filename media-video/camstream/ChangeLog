@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camstream
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.13 2005/06/20 14:08:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.14 2005/07/07 04:51:17 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> camstream-0.26.3.ebuild:
+  Fix qt dep
 
   20 Jun 2005; Patrick Kursawe <phosphan@gentoo.org> camstream-0.26.3.ebuild:
   Fixing #96555 (need autoreconf when using latest portage which sets $CBUILD)
