@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-theme-switch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.21 2005/05/09 03:00:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.22 2005/07/07 01:13:46 allanonjl Exp $
+
+  07 Jul 2005; John N. Laliberte <allanonjl@gentoo.org>
+  gtk-theme-switch-2.0.0_rc2-r2.ebuild:
+  fix for bug #91847, fix symlink
 
   09 May 2005; Aron Griffis <agriffis@gentoo.org>
   gtk-theme-switch-2.0.0_rc2-r2.ebuild:

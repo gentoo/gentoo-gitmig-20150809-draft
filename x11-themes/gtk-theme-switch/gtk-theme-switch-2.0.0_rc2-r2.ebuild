@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-2.0.0_rc2-r2.ebuild,v 1.2 2005/05/09 03:00:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-2.0.0_rc2-r2.ebuild,v 1.3 2005/07/07 01:13:46 allanonjl Exp $
 
 inherit eutils
 
@@ -36,5 +36,5 @@ src_install() {
 
 	dobin switch2
 	newman switch.1 gtk-theme-switch2.1
-	dosym gtk-theme-switch.1 /usr/share/man/man1/switch2.1
+	dosym gtk-theme-switch2.1 /usr/share/man/man1/switch2.1
 }
