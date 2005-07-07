@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.7 2005/06/10 02:09:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.8 2005/07/07 23:23:04 vapier Exp $
+
+*mdadm-1.12.0 (07 Jul 2005)
+
+  07 Jul 2005; Mike Frysinger <vapier@gentoo.org> +mdadm-1.12.0.ebuild:
+  Version bump #98286 by Daniel Webert.
 
   10 Jun 2005; Mike Frysinger <vapier@gentoo.org> files/raid-start.sh:
   Tweak device node creation to handle subpaths #95593 by Milan Holzäpfel.
