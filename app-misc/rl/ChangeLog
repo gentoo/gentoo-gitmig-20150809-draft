@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.17 2005/07/07 16:08:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.18 2005/07/07 16:26:25 dertobi123 Exp $
+
+  07 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org> rl-0.2.4.ebuild:
+  ppc stable
 
   07 Jul 2005; Sven Wegener <swegener@gentoo.org> rl-0.2.4.ebuild:
   Marked stable on x86.
