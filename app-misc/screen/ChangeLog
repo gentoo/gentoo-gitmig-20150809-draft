@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.90 2005/07/06 18:07:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.91 2005/07/07 16:07:41 swegener Exp $
+
+  07 Jul 2005; Sven Wegener <swegener@gentoo.org> screen-4.0.2-r4.ebuild:
+  Marked stable on x86.
 
   06 Jul 2005; Sven Wegener <swegener@gentoo.org>
   +files/4.0.2-windowlist-multiuser-fix.patch, screen-4.0.2-r4.ebuild:
