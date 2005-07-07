@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/gtk-engines-smooth-0.6.0.1.ebuild,v 1.2 2005/06/09 13:07:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/gtk-engines-smooth-0.6.0.1.ebuild,v 1.3 2005/07/07 03:11:40 agriffis Exp $
 
 inherit gtk-engines2
 
 MY_P="gtk-smooth-engine-${PV}"
 
-IUSE=""
+IUSE="gtk"
 DESCRIPTION="GTK+1 and GTK+2 Smooth Theme Engine"
 HOMEPAGE="http://sourceforge.net/projects/smooth-engine/"
 SRC_URI="mirror://sourceforge/smooth-engine/${MY_P}.tar.gz"
