@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.5 2005/04/14 21:36:05 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.6 2005/07/07 18:55:53 spock Exp $
+
+  07 Jul 2005; Michał Januszewski <spock@gentoo.org> gimps-24.6.ebuild:
+  Marked stable on x86.
 
   14 Apr 2005; Michał Januszewski <spock@gentoo.org> files/gimps-conf.d:
   Fixed comments in the config file (bug #89129).
