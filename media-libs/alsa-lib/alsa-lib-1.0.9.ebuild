@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9.ebuild,v 1.1 2005/05/27 20:36:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9.ebuild,v 1.2 2005/07/07 09:05:54 eradicator Exp $
 
 inherit eutils
 
@@ -10,7 +10,9 @@ SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+
+# -sparc: many ioctl32 issues when using alsa-lib-1.0.9 --eradicator
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86"
 IUSE="doc jack"
 
 RDEPEND="virtual/alsa
