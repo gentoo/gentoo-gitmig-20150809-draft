@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ogmrip-0.6.2.ebuild,v 1.3 2005/03/30 13:51:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ogmrip-0.6.2.ebuild,v 1.4 2005/07/07 00:07:23 agriffis Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ogmrip/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 
 SLOT="0"
-IUSE="gnome matroska doc subp"
+IUSE="debug gnome matroska subp"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 RDEPEND=">=dev-libs/glib-2.4.6
