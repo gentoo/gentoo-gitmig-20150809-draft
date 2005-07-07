@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.18 2005/01/29 17:50:50 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.19 2005/07/07 04:52:24 caleb Exp $
 
 inherit eutils kde-functions
 
@@ -22,7 +22,7 @@ IUSE="ssl socks5 qt kde ncurses"
 RDEPEND="kde? ( >=kde-base/kdelibs-3.0 )"
 DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	qt? ( >=x11-libs/qt-3.0.0 )
+	qt? ( =x11-libs/qt-3* )
 	ncurses? ( sys-libs/ncurses )"
 
 src_unpack() {
