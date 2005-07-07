@@ -2,18 +2,18 @@
 Hash: SHA1
 
 MD5 67bd4c482479738a34057710a43b70de libusb-0.1.7-r1.ebuild 917
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 ecc4ed6c771b98aea70ec6f3955f569f libusb-0.1.8.ebuild 1361
 MD5 8d36e3a4a1028a9f2c272233b3a7ed27 ChangeLog 4540
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 1948773950c221cdddb52eef5b73af29 libusb-0.1.10a.ebuild 1281
-MD5 13b0f271f94755b89f904270daa0659d files/libusb-0.1.8-amd64-fPIC.patch 268
-MD5 9cb49945879f78000d198c898d197e54 files/digest-libusb-0.1.7-r1 64
+MD5 6276b178ab4ea6603bcff9b7db20845b libusb-0.1.10a.ebuild 1278
 MD5 9b71253641038ba3d13b833a85cdcf76 files/digest-libusb-0.1.10a 66
+MD5 9cb49945879f78000d198c898d197e54 files/digest-libusb-0.1.7-r1 64
+MD5 13b0f271f94755b89f904270daa0659d files/libusb-0.1.8-amd64-fPIC.patch 268
 MD5 edf695ba0c7ee442c501401384faaa94 files/digest-libusb-0.1.8 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCxvnDKf2g/qXtneoRAnJAAJsFFbVLZC/htdOAN17Kp26SzRzWqwCfVHOh
-iEzB6rF7UfH8ufJKS1emT2Q=
-=8svj
+iD8DBQFCzHe2gIKl8Uu19MoRAjzqAJ0WYNG9mEtCEi6HViv1tRnikpMsAwCcC2gq
+OgLRUntK1jZh8VqpU/+tcLQ=
+=OfV+
 -----END PGP SIGNATURE-----
