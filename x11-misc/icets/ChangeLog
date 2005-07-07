@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icets
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.19 2005/07/01 15:15:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.20 2005/07/07 05:19:21 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> icets-1.4.ebuild:
+  Fix qt dep
 
   01 Jul 2005; Caleb Tennis <caleb@gentoo.org> icets-1.4.ebuild:
   Fix qmake dir per bug #97535

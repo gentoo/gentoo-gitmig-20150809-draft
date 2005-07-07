@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.9.ebuild,v 1.4 2005/07/01 15:14:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.9.ebuild,v 1.5 2005/07/07 05:19:38 caleb Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc"
 IUSE=""
 SLOT="0"
 
-DEPEND=">=x11-libs/qt-3.0.0"
+DEPEND="=x11-libs/qt-3*"
 
 src_unpack() {
 	unpack ${A}
