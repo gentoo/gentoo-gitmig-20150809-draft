@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r7.ebuild,v 1.2 2005/07/05 22:59:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r7.ebuild,v 1.3 2005/07/07 04:59:50 vericgar Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
-PATCH_LEVEL="2.0.54-r4"
+PATCH_LEVEL="2.0.54-r7"
 S="${WORKDIR}/httpd-${PV}"
 DESCRIPTION="Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://www.apache.org/"

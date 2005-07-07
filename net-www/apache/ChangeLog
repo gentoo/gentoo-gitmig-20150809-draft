@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.378 2005/07/05 22:59:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.379 2005/07/07 04:59:50 vericgar Exp $
+
+  07 Jul 2005; Michael Stewart <vericgar@gentoo.org>
+  apache-2.0.54-r7.ebuild:
+  Removed 00_apache_manual.conf as a simpler solution is already in place.
+  Fixes bug #98162
 
   05 Jul 2005; Sven Wegener <swegener@gentoo.org> apache-1.3.29-r2.ebuild,
   apache-1.3.31-r1.ebuild, apache-1.3.31-r2.ebuild, apache-1.3.31-r3.ebuild,
