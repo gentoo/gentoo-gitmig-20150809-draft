@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a10519e10d82582cb5146cea2e86b66 ChangeLog 1874
+MD5 c0061a028bc0be036a52b03404289be6 ams-1.7.2.ebuild 911
+MD5 5d867b840872439654339529e1ea907e ams-1.8.7.ebuild 943
+MD5 df2404c72173525e4575450d37c4dada ams-1.8.2.ebuild 910
+MD5 ac5c7b366aaf076cff07565e36edfaa5 ams-1.8.4.ebuild 915
+MD5 09c7006c74e07f7afa08f85afd7e9af0 ChangeLog 2008
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 7ff3ce225034f0e18fb2323015b61d29 ams-1.8.4.ebuild 922
-MD5 a871dbd7465127661c7fa9a4172070fd ams-1.8.7.ebuild 950
-MD5 ae214a74928f807060216e713648825e ams-1.7.2.ebuild 918
-MD5 2bea85a32ad7c738d6a50f9dea81f439 ams-1.8.2.ebuild 917
-MD5 a10be76630a8184335a83449a12a5de0 files/digest-ams-1.8.4 62
-MD5 c19ec89f0bf4237ed67c3479875b09e0 files/digest-ams-1.8.2 62
-MD5 82fd7a5edb679f417fe2e20571a23b79 files/digest-ams-1.8.7 62
 MD5 285e9f3b72f69416d97b9ecd61434974 files/digest-ams-1.7.2 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZLz1Kf2g/qXtneoRAj13AJkBCpebfsdi6Tv5aVcMByQLhaIMQwCgiyOJ
-7CVYdlvEZ082ONMpJNO17gg=
-=VwD2
------END PGP SIGNATURE-----
+MD5 c19ec89f0bf4237ed67c3479875b09e0 files/digest-ams-1.8.2 62
+MD5 a10be76630a8184335a83449a12a5de0 files/digest-ams-1.8.4 62
+MD5 82fd7a5edb679f417fe2e20571a23b79 files/digest-ams-1.8.7 62
