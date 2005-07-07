@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unadf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unadf/ChangeLog,v 1.1 2005/06/01 00:05:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unadf/ChangeLog,v 1.2 2005/07/07 09:04:15 dholm Exp $
+
+  07 Jul 2005; David Holm <dholm@gentoo.org> unadf-0.7.9b.ebuild:
+  Added to ~ppc.
 
 *unadf-0.7.9b (01 Jun 2005)
 
