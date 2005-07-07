@@ -1,0 +1,19 @@
+Name: ZM_PATH_MPEG_ENCODE
+Value: /usr/bin/mpeg_encode
+Description: Path to (optional) Berkeley mpeg encoder
+
+Name: ZM_PATH_FFMPEG
+Value: /usr/bin/ffmpeg
+Description: Path to (optional) ffmpeg mpeg encoder
+
+Name: ZM_OPT_NETPBM
+Value: yes
+Description: Are the (optional) Netpbm utilities installed
+
+Name: ZM_PATH_NETPBM
+Value: /usr/bin
+Description: Path to (optional) Netpbm utilities
+
+Name: ZM_PATH_LOGS
+Value: /var/log/zoneminder
+Description: Path to the various logs that the ZoneMinder daemons generate
