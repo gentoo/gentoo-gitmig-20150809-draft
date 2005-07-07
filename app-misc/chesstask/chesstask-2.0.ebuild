@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/chesstask-2.0.ebuild,v 1.5 2005/07/01 14:53:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/chesstask-2.0.ebuild,v 1.6 2005/07/07 04:26:45 caleb Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ppc"
 
-DEPEND=">=x11-libs/qt-3
+DEPEND="=x11-libs/qt-3*
 	app-arch/unzip
 	virtual/tetex"
 
