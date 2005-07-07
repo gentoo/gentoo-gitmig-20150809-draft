@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.16 2005/03/06 04:35:53 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.17 2005/07/07 21:44:49 wolf31o2 Exp $
+
+*mkxf86config-0.9.1 (07 Jul 2005)
+
+  07 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/mkxf86config-0.8-gentoo.patch, -mkxf86config-0.8-r3.ebuild,
+  +mkxf86config-0.9.1.ebuild:
+  Removing old and stale knoppix version and adding new version.
 
 *mkxf86config-0.9 (23 Feb 2005)
 

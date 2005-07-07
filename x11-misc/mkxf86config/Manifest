@@ -1,18 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 11b1e7a2c35a518fc52a1992c54a6ae6 mkxf86config-0.8-r3.ebuild 1000
-MD5 14cf7ca6a98559630b02845a6db5586f mkxf86config-0.9.ebuild 685
-MD5 2160e36657bb93f4009081280969f199 ChangeLog 2788
+MD5 7d5e571f9bf06e3e32df14a895cdd6aa ChangeLog 3042
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
-MD5 05ef2a39273eb3078a00d32415313cd9 files/mkxf86config-init 141
+MD5 90cbb821c1a52169120066fdf06d225f mkxf86config-0.9.1.ebuild 694
+MD5 14cf7ca6a98559630b02845a6db5586f mkxf86config-0.9.ebuild 685
+MD5 07163a1f8e24b774fee4af9f4316a1ef files/digest-mkxf86config-0.9.1 69
 MD5 363d66e5d98e3f6d4ff73fe4192a98b7 files/digest-mkxf86config-0.9 67
-MD5 acb082113f280286835527d735631bfd files/digest-mkxf86config-0.8-r3 74
-MD5 db289c2cd67a32e4726683836ac498ad files/mkxf86config-0.8-gentoo.patch 14314
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzS1cBXaUFmZvwyMRApUwAKDHut+S2JHtbRnc3T3KvBFZnFC4BACeKuvF
-bQToBw4EeTadWFqd87+hLFo=
-=hqQM
------END PGP SIGNATURE-----
+MD5 05ef2a39273eb3078a00d32415313cd9 files/mkxf86config-init 141
