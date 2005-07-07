@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.119 2005/07/07 23:00:42 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.120 2005/07/07 23:03:38 gregkh Exp $
+
+  07 Jul 2005; Greg Kroah-Hartman <gregkh@gentoo.org> -udev-061.ebuild:
+  remove 061 from tree as it's so broken.
 
 *udev-062 (07 Jul 2005)
 

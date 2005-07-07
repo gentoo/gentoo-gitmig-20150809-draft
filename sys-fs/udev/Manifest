@@ -1,4 +1,4 @@
-MD5 2cd4ddc9d8c6a47acbb35a0c96ea8ac7 ChangeLog 22054
+MD5 c5ee460e4df6ef96abcac88fb4ab366e ChangeLog 22169
 MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
 MD5 43820d124485c872fbebc855051bbe4a udev-030.ebuild 3525
 MD5 cef816e878810bec1736a3b3fc54f6cc udev-062.ebuild 5836
@@ -7,7 +7,6 @@ MD5 7857aad3c85f55c0746507043e3fa47f udev-056.ebuild 4377
 MD5 0f96a2316312b6b61c7f2fe983d5b9fe udev-058.ebuild 5171
 MD5 3df57bc94979e0ddf2c0866b9ed6e205 udev-059.ebuild 5794
 MD5 1cb16379d021e33a4ff00a70b1285fc7 udev-060.ebuild 5794
-MD5 f1614e0968d992375f00bef8233d80f8 udev-061.ebuild 5836
 MD5 691dace731323137de690d8f677c582f files/digest-udev-060 61
 MD5 511c376c4c6346bcbf51531ef811f00c files/digest-udev-030 61
 MD5 4bc32861744372ee3db7d0141a7f28e6 files/digest-udev-062 61
@@ -27,4 +26,3 @@ MD5 d8da5df6f7d3c8a80bde23618ae8a797 files/udev.rules 3553
 MD5 6df9e08cd088f74720689640de2ffcd6 files/udev.rules-018 4365
 MD5 7f23fbfcba51c7c4b8c29a8c08429996 files/udev.rules.post_012 4184
 MD5 e6bf08ab2e77d344f5cd03e30e38ba9a files/udev.conf.post_059 730
-MD5 c42ec822fcbc4dad3300a3b779d5659f files/digest-udev-061 61
