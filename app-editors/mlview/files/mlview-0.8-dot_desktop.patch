@@ -1,0 +1,32 @@
+diff -NurdB mlview-0.8/configure mlview-0.8-patched/configure
+--- mlview-0.8/configure	2005-07-03 12:20:48.000000000 -0500
++++ mlview-0.8-patched/configure	2005-07-06 21:35:04.000000000 -0500
+@@ -2218,7 +2218,7 @@
+ \* 10000 + $MLVIEW_MINOR_VERSION \
+ \* 100 + $MLVIEW_MICRO_VERSION`
+ 
+-MLVIEW_EXE=$prefix/bin/mlv
++MLVIEW_EXE=$prefix/bin/mlview
+ 
+ 
+ 
+diff -NurdB mlview-0.8/mlview.desktop.in mlview-0.8-patched/mlview.desktop.in
+--- mlview-0.8/mlview.desktop.in	2005-06-25 07:57:05.000000000 -0500
++++ mlview-0.8-patched/mlview.desktop.in	2005-07-06 21:14:26.000000000 -0500
+@@ -1,13 +1,13 @@
+ [Desktop Entry]
+-Version=0.9.4
++Version=0.8
+ Encoding=UTF-8
+ Type=Application
+ Name=MlView XML Editor
+ GenericName=MlView Generic XML Editor
+ Categories=Application;Development;
+ Comment=A generic simple XML editor for GNOME
+-Icon=mlview-app-icon.xpm
+-TryExec=mlv
++Icon=mlview-app-icon.png
++TryExec=mlview
+ Exec=@MLVIEW_EXE@ %F
+ Terminal=false
+ 

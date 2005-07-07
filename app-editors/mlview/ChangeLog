@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/mlview
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.9 2005/04/21 18:23:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.10 2005/07/07 02:51:30 leonardop Exp $
+
+*mlview-0.8 (06 Jul 2005)
+
+  06 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> mlview-0.8.ebuild,
+  files/mlview-0.8-dot_desktop.patch:
+  New release. Added 'dbus' and 'static' USE flags. Added patch to correct a
+  few small things in the .desktop file.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> mlview-0.6.3.ebuild:
   stable on amd64
