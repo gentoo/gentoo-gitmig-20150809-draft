@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c60affebef8a427e09368ebb54eb4379 qinx-1.2.ebuild 693
 MD5 ebaabb12aa5abf84d1a244d0384ba11c qinx-1.4.ebuild 534
 MD5 336ce7b48d7d128d3d6144c751436a9d ChangeLog 3714
@@ -5,3 +8,10 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 fe9bce381d85e3f64cc290afaeee0e20 files/qinx-1.2-configure-arts.patch 3563
 MD5 dbbff3105669ae9dc677bbc0ccdd9130 files/digest-qinx-1.2 60
 MD5 72117d0595d9276bfc6753b96a1f5d10 files/digest-qinx-1.4 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzJ5QBXaUFmZvwyMRAk2PAKCempXCzdw8aJAoaxJx+cG4GjgviACfa6g4
+qa5pW09/osIpAwi21Bro7iE=
+=C2py
+-----END PGP SIGNATURE-----
