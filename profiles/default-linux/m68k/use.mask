@@ -46,3 +46,4 @@ tcltk
 ldap
 slang
 X
+diet
