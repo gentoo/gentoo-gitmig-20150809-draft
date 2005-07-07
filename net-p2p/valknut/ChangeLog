@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/valknut
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.17 2005/06/27 07:24:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.18 2005/07/07 05:00:39 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> valknut-0.3.0.ebuild,
+  valknut-0.3.3.ebuild, valknut-0.3.5.ebuild:
+  Fix qt dep
 
   27 Jun 2005; Markus Rothe <corsair@gentoo.org> valknut-0.3.7.ebuild:
   Stable on ppc64

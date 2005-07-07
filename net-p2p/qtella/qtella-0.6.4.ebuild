@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.6.4.ebuild,v 1.8 2005/02/27 22:30:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.6.4.ebuild,v 1.9 2005/07/07 05:01:32 caleb Exp $
 
 inherit kde
 
 IUSE="kde"
 
-DEPEND=">=x11-libs/qt-3
+DEPEND="=x11-libs/qt-3*
 	kde? ( >=kde-base/kdelibs-3 )"
 
 SRC_URI="mirror://sourceforge/qtella/${P}.tar.gz"

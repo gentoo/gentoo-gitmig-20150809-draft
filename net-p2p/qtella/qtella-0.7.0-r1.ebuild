@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0-r1.ebuild,v 1.2 2005/02/27 22:30:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0-r1.ebuild,v 1.3 2005/07/07 05:01:32 caleb Exp $
 
 inherit eutils kde-functions
 
@@ -13,7 +13,7 @@ IUSE="kde"
 KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="3" # why??
 
-DEPEND=">=x11-libs/qt-3
+DEPEND="=x11-libs/qt-3*
 	kde? ( >=kde-base/kdelibs-3 )"
 
 export MAKEOPTS="$MAKEOPTS -j1"

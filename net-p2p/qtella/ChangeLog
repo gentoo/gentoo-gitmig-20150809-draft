@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qtella
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.23 2005/02/27 22:30:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.24 2005/07/07 05:01:32 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> qtella-0.6.4.ebuild,
+  qtella-0.6.5.ebuild, qtella-0.7.0.ebuild, qtella-0.7.0-r1.ebuild:
+  Fix qt dep
 
   27 Feb 2005; Jason Wever <weeve@gentoo.org> qtella-0.7.0-r1.ebuild:
   Added ~sparc keyword.
