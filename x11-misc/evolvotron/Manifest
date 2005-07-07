@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c9303cb0de140207d92afa192f180741 ChangeLog 933
+MD5 bec5d6e7a59d64eb611fe5215b9977ff evolvotron-0.3.1.ebuild 938
+MD5 732816489d699562aab4760dbe2cd009 ChangeLog 1018
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
-MD5 f5a172b5968c7a4501dd730b42c49cf1 evolvotron-0.3.1.ebuild 939
 MD5 03a2ea7677c6b7bd6dd2a5fad7519e5f files/digest-evolvotron-0.3.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtcVul5AvwDPiUowRApiNAJ90WS1H74q8ZQev7ZTETEwCF/rAJgCgwUq1
-SrGa4fJ52IGNIKtH/DvRP5o=
-=vvjW
------END PGP SIGNATURE-----
