@@ -57,7 +57,7 @@ MD5 44fc8ddc9a05a056d8a08e6d843c997c files/digest-apache-2.0.52-r1 204
 MD5 710e7291039a6cba132568e32daede8a files/digest-apache-2.0.52-r2 213
 MD5 326a59d4f3d30e34f7b61550f9466328 files/digest-apache-2.0.54-r11 151
 MD5 f0386414da0ae14678d2875eb947d99d files/digest-apache-2.0.54-r10 151
-MD5 caa5d2e38e69c184ba6ec52e15267851 files/digest-apache-2.0.54-r7 214
+MD5 4f6de1cd192882313d41650cf23eb26a files/digest-apache-2.0.54-r7 214
 MD5 b9ff3534313dae1b8ac96df0e3e01373 files/httpd-2.0.48-ipv6.patch 865
 MD5 d52999376f67a872ee48cbae72db0160 files/httpd-2.0.49-cgi.patch 10319
 MD5 8cb4313e58d7bd5dc369eb92f75daa2b files/httpd-2.0.49-ipv6.patch 788
