@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e07c0dab5ea1f489fe07ce71d7dd6d8f ChangeLog 12050
-MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
-MD5 b1e9b59819ae9e74d5ebf4dbc31efd23 dillo-0.8.5.ebuild 3623
-MD5 2e853f9207a33d2fd352132561c48e6a dillo-0.7.3-r7.ebuild 3072
-MD5 4a1d96c3478e17c65d06e09388d89993 dillo-0.8.4-r1.ebuild 3596
-MD5 f238d815962a70d67851fcd4aca4bcaf dillo-0.8.4-r2.ebuild 3597
+MD5 b1ba6f18769aff32f4ee3b0cdbe96726 dillo-0.8.5.ebuild 3624
 MD5 2193d4a3532b99be305ba4d59f6ae074 dillo-0.8.4.ebuild 3573
-MD5 b016b3fba0f52cf2c7809dfe3248b47c dillo-0.8.5-r1.ebuild 3616
+MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
+MD5 4a1d96c3478e17c65d06e09388d89993 dillo-0.8.4-r1.ebuild 3596
+MD5 1e8d82db4899091006fd2e07b8292f93 dillo-0.8.5-r1.ebuild 3617
+MD5 e07c0dab5ea1f489fe07ce71d7dd6d8f ChangeLog 12050
+MD5 d94aee325c297e9d0463e10feeb18ac4 dillo-0.8.4-r2.ebuild 3596
+MD5 2e853f9207a33d2fd352132561c48e6a dillo-0.7.3-r7.ebuild 3072
 MD5 deb91ab61005bccf824ad864ea0ea66a files/digest-dillo-0.8.5 142
-MD5 e257387d2c71e79a44b93b59e5240db3 files/digest-dillo-0.7.3-r7 226
-MD5 cec29ab3305c35980bc16ecc1eac7b8d files/digest-dillo-0.8.4-r2 226
-MD5 47c572d76913ed4ec3608d3f840f9c67 files/digest-dillo-0.8.4 226
-MD5 8114dfcae2f9f3437c043ed6953f219d files/digest-dillo-0.8.5-r1 226
-MD5 b86fffd43a8ba3b6791d459ad012a2e3 files/digest-dillo-0.8.4-r1 226
 MD5 7750091e1346c986eeb58aef81297fd0 files/dillo-format-string-vulnerability.diff 787
+MD5 cec29ab3305c35980bc16ecc1eac7b8d files/digest-dillo-0.8.4-r2 226
+MD5 b86fffd43a8ba3b6791d459ad012a2e3 files/digest-dillo-0.8.4-r1 226
+MD5 8114dfcae2f9f3437c043ed6953f219d files/digest-dillo-0.8.5-r1 226
+MD5 e257387d2c71e79a44b93b59e5240db3 files/digest-dillo-0.7.3-r7 226
+MD5 47c572d76913ed4ec3608d3f840f9c67 files/digest-dillo-0.8.4 226
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCxtNcKf2g/qXtneoRAtD2AKCc7Ue0AKw30Sgh5YrcKO9jxHpbAgCgotW8
-rJ4yamzZKjTKBBaLvtpAI4Q=
-=yYEV
+iD8DBQFCzHVvgIKl8Uu19MoRApl2AJ9rj8pLK0PO9O4JPQfNIDwQwRCxWACfVK5j
+cPNpttHglkxxVeIbU3QspEY=
+=dMRz
 -----END PGP SIGNATURE-----
