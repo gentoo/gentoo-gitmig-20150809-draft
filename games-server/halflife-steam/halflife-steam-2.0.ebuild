@@ -1,31 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/halflife-steam-2.0.ebuild,v 1.8 2005/04/15 23:09:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/halflife-steam-2.0.ebuild,v 1.9 2005/07/07 23:09:20 vapier Exp $
 
 inherit games eutils
 
 DESCRIPTION="client for Valve Software's Steam content delivery program"
 HOMEPAGE="http://www.steampowered.com/"
-SRC_URI="hldsupdatetool.bin"
+SRC_URI="http://www.steampowered.com/download/hldsupdatetool.bin"
 
 LICENSE="ValveServer"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
-RESTRICT="fetch"
+RESTRICT="mirror"
 
 S=${WORKDIR}
-
-pkg_nofetch() {
-	einfo "Please download ${A} from the following ftp server:"
-	einfo "server: ftp.valvesoftware.com"
-	einfo "user: hlserver"
-	einfo "password: hlserver"
-	einfo "directory: linux"
-	echo
-	einfo "You should also grab any readme's that happen to be"
-	einfo "floating around the directory!"
-}
 
 src_unpack() {
 	unpack_pdv hldsupdatetool.bin 4
