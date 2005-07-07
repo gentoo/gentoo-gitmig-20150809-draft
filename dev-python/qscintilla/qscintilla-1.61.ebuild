@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.61.ebuild,v 1.12 2005/07/07 06:31:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.61.ebuild,v 1.13 2005/07/07 12:48:45 caleb Exp $
 
-inherit eutils qt3
+inherit eutils
 
 MY_P=${P}-gpl-1.4
 S=${WORKDIR}/${MY_P}
@@ -18,7 +18,7 @@ IUSE="doc"
 
 DEPEND="virtual/libc
 	sys-apps/sed
-	$(qt_min_version 3)"
+	=x11-libs/qt-3*"
 
 src_unpack() {
 	unpack ${A}
