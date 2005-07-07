@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Multiplex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.6 2005/06/18 14:43:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.7 2005/07/07 19:04:14 corsair Exp $
+
+  07 Jul 2005; Markus Rothe <corsair@gentoo.org> IO-Multiplex-1.08.ebuild:
+  Stable on ppc64
 
   18 Jun 2005; Markus Rothe <corsair@gentoo.org> IO-Multiplex-1.08.ebuild:
   added ~ppc64
