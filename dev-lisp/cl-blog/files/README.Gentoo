@@ -1,0 +1,24 @@
+-*- outline -*- $Id: README.Gentoo,v 1.1 2005/07/07 16:45:34 mkennedy Exp $
+
+Gentoo GNU/Linux specific notes for CL-BLOG
+-------------------------------------------
+
+This is the README.Gentoo file from /usr/share/doc/@PF@/ directory.
+
+  * The Gentoo port patches variables.lisp to prepare CL-BLOG for standard
+    system-wide installation.
+
+  * Sample configurations and templates distributed with CL-BLOG have been
+    installed into /etc/cl-blog.  You are expected to changes these.  See the
+    README distributed with CL-BLOG for some tips on how to configure CL-BLOG.
+
+  * Initializing, starting and stopping CL-BLOG on whatever Common Lisp
+    implementation and combination of additional libraries you are using is
+    beyond the scope of this port.
+
+  * A directory for blog entries have been created at /var/lib/cl-blog/entries/.
+    Adjust ownership and permissions on this directory as needed.
+
+If you encounter any problems or have suggestions, use http://bugs.gentoo.org.
+Please don't bother the upstream authors unless you are absolutely certain it is
+not Gentoo-related.

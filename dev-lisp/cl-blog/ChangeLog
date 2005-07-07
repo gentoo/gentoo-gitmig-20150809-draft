@@ -1,0 +1,11 @@
+# ChangeLog for dev-lisp/cl-blog
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-blog/ChangeLog,v 1.1 2005/07/07 16:45:34 mkennedy Exp $
+
+*cl-blog-20050707 (07 Jul 2005)
+
+  07 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/20050707-gentoo.patch, +files/README.Gentoo, +metadata.xml,
+  +cl-blog-20050707.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

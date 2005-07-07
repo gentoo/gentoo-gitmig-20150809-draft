@@ -1,0 +1,31 @@
+Only in cl-blog: .svn
+Only in cl-blog/source: .svn
+diff -ur cl-blog.orig/source/variable.lisp cl-blog/source/variable.lisp
+--- cl-blog.orig/source/variable.lisp	2005-07-07 09:40:53.000000000 -0500
++++ cl-blog/source/variable.lisp	2005-07-07 11:08:01.000000000 -0500
+@@ -1,14 +1,7 @@
+ (in-package :cl-blog)
+ 
+ (defparameter *blog-pathname-root*
+-  (make-pathname :directory
+-                 (pathname-directory
+-                  (asdf:component-pathname
+-                   (asdf:find-component
+-		    nil
+-		    #+cl-modules
+-		    #.(cl-modules:current-module-name :downcase t)
+-		    #-cl-modules "cl-blog")))))
++  #p"/etc/cl-blog/")
+ 
+ (defparameter *blog-configuration*
+   (parse-configuration-file
+@@ -43,8 +36,7 @@
+ (defvar *passwords* nil)
+ 
+ (defparameter *entry-path*
+-  (merge-pathnames (make-pathname :directory '(:relative "entries"))
+-                   *blog-pathname-root*))
++  #p"/var/lib/cl-blog/entries/")
+ 
+ (defparameter *entry-index*
+   (merge-pathnames "index" *entry-path*))
