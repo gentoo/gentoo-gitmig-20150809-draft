@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.47 2005/05/12 23:32:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.48 2005/07/07 04:54:38 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> libfwbuilder-2.0.6.ebuild,
+  libfwbuilder-2.0.7.ebuild:
+  Fix qt dep
 
 *libfwbuilder-2.0.7 (12 May 2005)
 
