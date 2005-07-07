@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03.ebuild,v 1.14 2005/05/12 19:03:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03.ebuild,v 1.15 2005/07/07 11:51:26 agriffis Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ IUSE="cjk"
 
 DEPEND="virtual/libc
 	sys-libs/ncurses
-	!macos? ( !ppc-macos? ( cjk? ( app-i18n/nkf ) ) )"
+	!ppc-macos? ( cjk? ( app-i18n/nkf ) )"
 RDEPEND="virtual/libc
 	sys-libs/ncurses"
 
