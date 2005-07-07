@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.171 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.172 2005/07/07 19:12:37 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -745,7 +745,7 @@ create_gcc_env_entry() {
 
 #---->> pkg_* <<----
 gcc_pkg_setup() {
-	if [[ $(tc-arch) == "amd64" ]] && [[ ${LD_PRELOAD} == "/lib/libsandbox.so" ]] && is_multilib ; then
+	if [[ ( $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ) && ( ${LD_PRELOAD} == "/lib/libsandbox.so" || ${LD_PRELOAD} == "/usr/lib/libsandbox.so" ) ]] && is_multilib ; then
 		eerror "Sandbox in your installed portage does not support compilation."
 		eerror "of a multilib gcc.  Please set FEATURES=-sandbox and try again."
 		eerror "After you have a multilib gcc, re-emerge portage to have a working sandbox."
@@ -903,7 +903,7 @@ gcc_src_unpack() {
 	ht_fix_file ${fix_files} */configure *.sh
 
 	if ! is_crosscompile && is_multilib && \
-	   [[ $(tc-arch) == "amd64" && -z ${SKIP_MULTILIB_HACK} ]] ; then
+	   [[ ( $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ) && -z ${SKIP_MULTILIB_HACK} ]] ; then
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
 	fi
 
@@ -1947,12 +1947,28 @@ gcc_version_patch() {
 # Travis Tilley <lv@gentoo.org> (03 Sep 2004)
 #
 disgusting_gcc_multilib_HACK() {
+	local config
 	local libdirs
-	has_multilib_profile \
-		&& libdirs="../$(get_abi_LIBDIR amd64) ../$(get_abi_LIBDIR x86)" \
-		|| libdirs="../$(get_libdir) ../$(get_multilibdir)"
+	if has_multilib_profile ; then
+		case $(tc-arch) in
+			amd64)
+				config="i386/t-linux64"
+				libdirs="../$(get_abi_LIBDIR amd64) ../$(get_abi_LIBDIR x86)" \
+			;;
+			ppc64)
+				config="rs6000/t-linux64"
+				libdirs="../$(get_abi_LIBDIR ppc64) ../$(get_abi_LIBDIR ppc)" \
+			;;
+		esac
+	else
+		# Remove this hunk when amd64's 2004.3 is purged from portage.
+		use amd64 || die "Your profile is no longer supported by portage."
+		config="i386/t-linux64"
+		libdirs="../$(get_libdir) ../$(get_multilibdir)"
+	fi
+
 	einfo "updating multilib directories to be: ${libdirs}"
-	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" ${S}/gcc/config/i386/t-linux64
+	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" ${S}/gcc/config/${config}
 }
 
 gcc_crosscompile_multilib_specs() {
