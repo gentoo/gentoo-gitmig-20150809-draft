@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ff5dcf9db7653dac17a20c75561f2cd1 ChangeLog 3330
 MD5 16524313d45151786b72dee746cc8804 files/digest-konversation-0.15.1 73
 MD5 c1371c333bb8d481fd2d8416a2b7669b files/digest-konversation-0.17 71
@@ -6,3 +9,10 @@ MD5 943c1c08b2bae6ad084ba17ec78c9aef konversation-0.15.1.ebuild 553
 MD5 5c2465682f4ca3cf97f010f6263cf29a konversation-0.17.ebuild 550
 MD5 d5f9f027d1fae10c3faa3caa3bc98f6a konversation-0.18.ebuild 553
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzVkKI1lqEGTUzyQRAg+CAKCw0bo4aXo80xI6inBhhrr5Y+UXlQCdHp99
+uRVKs9VcB/RxIAgJqPvuqM8=
+=w44J
+-----END PGP SIGNATURE-----
