@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.32 2005/07/02 20:43:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.33 2005/07/07 17:15:55 swegener Exp $
+
+  07 Jul 2005; Sven Wegener <swegener@gentoo.org>
+  -files/diffstat-1.34-hard-locale.patch, -diffstat-1.34.ebuild,
+  -diffstat-1.37.ebuild:
+  Removed old ebuilds.
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> diffstat-1.39.ebuild:
   Stable on alpha.
