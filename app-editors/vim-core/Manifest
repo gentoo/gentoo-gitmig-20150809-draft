@@ -1,12 +1,15 @@
-MD5 5e9dc8a98f0d1234fb8c2324a385c8ab vim-core-6.3-r3.ebuild 901
-MD5 ad791ea0c0ad91bcdf88ffee0506fe0f vim-core-6.3.074.ebuild 1066
-MD5 080820e394e6c4b569ad2db6b078cf9e vim-core-7.0_alpha20050326.ebuild 840
-MD5 9ebf5e1ac06b024ab8250d9c9d16a6ca vim-core-7.0_alpha20050321.ebuild 840
-MD5 2f4b84c1608030f760332f9e2994d7fe vim-core-6.3-r4.ebuild 947
-MD5 2cfe86f3b3acb17b9e57bdd38f5824fd vim-core-6.3.075.ebuild 1066
-MD5 9c93d1855539f4302483e237d1889a26 vim-core-7.0_alpha20050622.ebuild 842
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9bb989ad256607e3f4928e8514976a46 vim-core-6.3-r3.ebuild 894
+MD5 d508e596b3e60137b87bd13e79b547a3 vim-core-6.3.074.ebuild 1059
+MD5 f1743527fb6dd899cdc35e29e7039742 vim-core-7.0_alpha20050326.ebuild 827
+MD5 3d32505d1ebeb62b6900886a73c555cd vim-core-7.0_alpha20050321.ebuild 827
+MD5 4a56cae009d973e0c1913ca7ed441df9 vim-core-6.3-r4.ebuild 939
+MD5 590c03917a042f8c6a701ce916dc0fad vim-core-6.3.075.ebuild 1059
+MD5 3dc6ecd27c606a420beb6f7a8f3c76b6 vim-core-7.0_alpha20050622.ebuild 827
 MD5 a51717be77331ac94ef7b3aa8f9ab116 ChangeLog 20645
-MD5 b92a393a9d3de4345361118bc035ef73 vim-core-6.3.068.ebuild 1053
+MD5 88d7773dae1974e69b10a39215a6b88d vim-core-6.3.068.ebuild 1047
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 266f8b682476da0ec6c4d39de5a79264 files/vimrc-r1 5728
 MD5 2ad354160ca3635ea115beb56e237e7c files/vimrc 3879
@@ -20,3 +23,10 @@ MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
 MD5 fe3a85b7f303db551bfc5984738e1dfb files/digest-vim-core-6.3-r3 348
 MD5 2fa89e2e9fd73c3778073f18e6836be8 files/digest-vim-core-6.3-r4 348
 MD5 ba542e54d91a04a85435253ae35301b6 files/xxd-completion 461
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzJQ0BXaUFmZvwyMRAmxOAKCjV5ywvWJbV1ZGXHyY5iI4d/neQACgmFxZ
+lavqCZ8iB3y50laKSoe4/sE=
+=RtqK
+-----END PGP SIGNATURE-----
