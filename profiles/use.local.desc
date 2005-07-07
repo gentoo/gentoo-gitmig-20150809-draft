@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1286 2005/07/07 21:41:27 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1287 2005/07/07 22:12:19 rphillips Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -102,6 +102,8 @@ app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/booh:transcode - Use transcode to extract video thumbnails
 app-misc/lirc:streamzap - add the streamzap driver to lirc
 app-misc/mc:7zip - add support for 7zip archives
+app-misc/note:general - add support for ascii flatfile backend
+app-misc/note:dbm - add support for dbm backend
 app-misc/screen:nethack - Express error messages in nethack style
 app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home banking software
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
