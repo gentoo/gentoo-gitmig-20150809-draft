@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.31 2005/07/07 07:51:07 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.32 2005/07/07 10:23:17 herbs Exp $
+
+  07 Jul 2005; Herbie Hopkins <herbs@gentoo.org> rosegarden-4.1.0-r1.ebuild:
+  Stable on amd64 wrt bug #96462.
 
   07 Jul 2005; Gregorio Guidi <greg_g@gentoo.org>
   rosegarden-4.1.0-r1.ebuild:
