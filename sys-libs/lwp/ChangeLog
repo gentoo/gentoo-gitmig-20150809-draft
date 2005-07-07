@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/lwp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.22 2005/06/08 19:10:15 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.23 2005/07/07 16:21:58 griffon26 Exp $
+
+  07 Jul 2005; Maurice van der Pot <griffon26@gentoo.org> lwp-2.0.ebuild:
+  Marked stable on x86
 
   08 Jun 2005; Maurice van der Pot <griffon26@gentoo.org> -lwp-1.9.ebuild,
   -lwp-1.10.ebuild, -lwp-1.11.ebuild, lwp-1.12.ebuild, lwp-2.0.ebuild:

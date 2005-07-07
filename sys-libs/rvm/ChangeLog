@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/rvm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/rvm/ChangeLog,v 1.15 2005/06/08 19:14:45 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/rvm/ChangeLog,v 1.16 2005/07/07 16:23:46 griffon26 Exp $
+
+  07 Jul 2005; Maurice van der Pot <griffon26@gentoo.org> rvm-1.11.ebuild:
+  Marked stable on x86
 
   08 Jun 2005; Maurice van der Pot <griffon26@gentoo.org> -rvm-1.6.ebuild,
   -rvm-1.8.ebuild, -rvm-1.9.ebuild, rvm-1.10.ebuild, rvm-1.11.ebuild:
