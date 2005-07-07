@@ -1,6 +1,16 @@
-MD5 d98ddf00de375f6c3ca1f68c1f20e83d ChangeLog 3074
-MD5 f5bee1ad6a467d09f1a70c5174dc4409 genlop-0.30.3.ebuild 688
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8f8b52c633d21cd77bb487ea92366028 genlop-0.30.2.ebuild 696
+MD5 b86678024be3e1a58be3eab575eb4e8b ChangeLog 3216
+MD5 b25eedf2465a8bfb5dc82f3963d12f10 genlop-0.30.3.ebuild 711
 MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
-MD5 ffd91382034405706cb2f1c532f984da genlop-0.30.2.ebuild 673
-MD5 83bcb8342aa07aa298c1b473a2598493 files/digest-genlop-0.30.3 64
 MD5 8871845dc6189a9507ffe72c38d15178 files/digest-genlop-0.30.2 64
+MD5 83bcb8342aa07aa298c1b473a2598493 files/digest-genlop-0.30.3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzICPtG5z4I8BtQoRAne/AKCL0nW6EI03v6Bls5SrKHTCHiHl2wCdHNTU
+R1FXR8ihKJT+IsY9hP33vt8=
+=Q7p8
+-----END PGP SIGNATURE-----
