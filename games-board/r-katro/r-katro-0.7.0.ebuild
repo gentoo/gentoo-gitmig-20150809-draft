@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.5 2005/05/03 10:13:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.6 2005/07/07 04:36:26 caleb Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="nls"
 
-DEPEND=">=x11-libs/qt-3
+DEPEND="=x11-libs/qt-3*
 	virtual/glut"
 
 src_compile() {
