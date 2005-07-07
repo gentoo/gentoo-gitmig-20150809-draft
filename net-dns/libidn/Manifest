@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d70a61dfede6c01385d9c157e43e2011 libidn-0.5.15.ebuild 1243
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 c33918231e4239d278a3f701319462b7 libidn-0.5.4.ebuild 543
+MD5 1646e3decbe2c887f93fbf4a4817757c libidn-0.5.17.ebuild 1253
 MD5 5dbe6572032f2a6324f22b6c1bf69849 libidn-0.3.7.ebuild 636
 MD5 8e0007d9387bbcdd935f205a6631ae60 libidn-0.5.13.ebuild 1278
-MD5 1646e3decbe2c887f93fbf4a4817757c libidn-0.5.17.ebuild 1253
-MD5 3dd5b4d0177e43ef2cc9a1eb924505d1 ChangeLog 3642
-MD5 c33918231e4239d278a3f701319462b7 libidn-0.5.4.ebuild 543
-MD5 34af7cf0c0c059728bc3b2870298d456 files/digest-libidn-0.5.4 65
-MD5 68549705ff201e9108e312df95a7f7c8 files/digest-libidn-0.5.17 66
+MD5 3fa90c06711022456b16d749b0a08a53 ChangeLog 3730
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 a4ad8dca9cc26684d4b3d2853eb8c438 libidn-0.5.15.ebuild 1243
 MD5 71c9d73948b2aae62f1f91b02a24904c files/digest-libidn-0.3.7 65
+MD5 34af7cf0c0c059728bc3b2870298d456 files/digest-libidn-0.5.4 65
 MD5 04ac8297c56ed0aa42ee97df501dda7e files/digest-libidn-0.5.13 66
 MD5 91804808fca23d8a14cc7a801e512b76 files/digest-libidn-0.5.15 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzHd6gIKl8Uu19MoRAg1ZAJ9BAdzSkjFoICV0N5YI2+1TiW3dLQCdEDTn
-84SiNsQrqgeEAO2sQnEJh3Q=
-=i+qW
------END PGP SIGNATURE-----
+MD5 68549705ff201e9108e312df95a7f7c8 files/digest-libidn-0.5.17 66
