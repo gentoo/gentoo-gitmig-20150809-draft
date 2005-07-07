@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 09fcefdd8423e3fa1c4c0d161677871c ChangeLog 13761
 MD5 a7f6e6bfb5647c6e69a797eaa16acf3d files/4.0.2-64bit-time.patch 298
 MD5 2531444b0a51bc5ba5ea1db2d2ec1f4b files/4.0.2-no-libelf.patch 555
@@ -13,3 +16,10 @@ MD5 6bc834288686d2b30935fd09fdc988c7 files/screenrc 10430
 MD5 537c3754e8f6422e4f7025358173ef2b metadata.xml 1525
 MD5 658eab9b529aacb435aeb69195b8171b screen-4.0.2-r1.ebuild 3506
 MD5 acfa4464a2add503b468d98b39668845 screen-4.0.2-r4.ebuild 3959
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzVNmI1lqEGTUzyQRArmHAKC1aHyIssTEHm71aeDCug66YPw1rgCeIjzy
+dPvjLpCO5e7HScPdLvvw4zE=
+=5KBD
+-----END PGP SIGNATURE-----
