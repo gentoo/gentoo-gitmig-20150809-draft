@@ -2,8 +2,8 @@ Setup Completion
 ---
 
 If there is no existing TikiWiki install and database you will need to
-create an empty database for TikiWiki before starting setup.  For
-example (MySQL):
+create an empty database for TikiWiki before starting setup.
+You can run the pkg_config script in the ebuild, or (MySQL):
 
 mysql -p -u root mysql <<__EOSQL
   CREATE DATABASE tiki;
@@ -13,6 +13,8 @@ mysql -p -u root mysql <<__EOSQL
     IDENTIFIED BY 'a_good_password';
   FLUSH PRIVILEGES;
 __EOSQL
+
+If you are using PostgreSQL, please consult your documentation.
 
 
 TikiWiki likes to have a generous PHP environment.  Please edit
@@ -26,8 +28,6 @@ Tiki likes PHP to have :
     ==> 'default_charset = utf-8'
     ==> 'file_uploads = On'
 
-Make certain you have compiled php and mod_php with your database of choice in
-the USE flags.
 
 Please read the files in ${MY_INSTALLDIR}/doc
 especially if you want clean URLs under Apache.
@@ -41,10 +41,9 @@ Note: The equivalent of running setup.sh has already been completed.
 Now, point your browser to the location of tiki-install.php to complete the
 setup/upgrade.  For example:
 
-http://${VHOST_HOSTNAME}/tiki-install.php
+http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/tiki-install.php
 
 You may need to manually rename tiki-install.php to tiki-install.done to
 secure your system.
 
 Enjoy your TikiWiki site.
-
