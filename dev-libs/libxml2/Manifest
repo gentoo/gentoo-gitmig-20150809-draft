@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f9a05609b1706d1a96ec522d25e7f0d libxml2-2.6.19.ebuild 2038
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 47e51f2596c69d2b8ee7c34a39f2a647 libxml2-2.6.17.ebuild 1704
-MD5 d4e72fc2f379967240c0772ed5b7bfef ChangeLog 14366
+MD5 3cedf082ab0cd9881afcd7e56a39fe99 libxml2-2.6.19.ebuild 2038
 MD5 2c997a3eeb8cebea6c43aeeb58d08e2c libxml2-2.6.16.ebuild 1775
-MD5 761d617849c91c951713a1411f3c1cff files/digest-libxml2-2.6.19 68
-MD5 8409491d7d4c895c3a509a3c1c121e02 files/digest-libxml2-2.6.17 68
+MD5 c9052b1ee32c8d2c17f0b130f5710146 ChangeLog 14455
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3451360f628f1e2dc20813a52fbaa404 files/libxml2-2.6.16-xlattable.patch 537
 MD5 ff7efcdcc2a364b0eeca271ef52566f8 files/digest-libxml2-2.6.16 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzHn8gIKl8Uu19MoRAgJwAJ9QWDe8m0C2zLtX/dcQFtIBymS1RgCfWV4a
-b9UduEVToZZbHJriBdlmX4k=
-=v6KC
------END PGP SIGNATURE-----
+MD5 8409491d7d4c895c3a509a3c1c121e02 files/digest-libxml2-2.6.17 68
+MD5 761d617849c91c951713a1411f3c1cff files/digest-libxml2-2.6.19 68
