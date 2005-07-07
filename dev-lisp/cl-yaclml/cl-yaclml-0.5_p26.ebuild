@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-yaclml/cl-yaclml-0.5_p26.ebuild,v 1.2 2005/05/24 18:48:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-yaclml/cl-yaclml-0.5_p26.ebuild,v 1.3 2005/07/07 22:21:03 mkennedy Exp $
 
 inherit common-lisp
 
@@ -14,10 +14,9 @@ SRC_URI="mirror://gentoo/yaclml--dev--${MY_PV}--patch-${MY_PATCH_PV}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
-IUSE="doc"
+IUSE=""
 DEPEND="dev-lisp/cl-iterate
-	dev-lisp/cl-arnesi
-	doc? ( virtual/tetex )"
+	dev-lisp/cl-arnesi"
 
 CLPACKAGE="yaclml"
 
@@ -29,12 +28,6 @@ src_unpack() {
 	find ${S}/ -type d -name .arch-ids -exec rm -rf '{}' \; &>/dev/null
 }
 
-src_compile() {
-	if use doc; then
-		make -C docs || die
-	fi
-}
-
 src_install() {
 	dodir /usr/share/common-lisp/source/yaclml
 	dodir /usr/share/common-lisp/systems
@@ -43,5 +36,4 @@ src_install() {
 	common-lisp-system-symlink
 	dosym /usr/share/common-lisp/source/yaclml/yaclml.asd \
 		/usr/share/common-lisp/systems/
-	use doc && dodoc docs/yaclml.pdf
 }
