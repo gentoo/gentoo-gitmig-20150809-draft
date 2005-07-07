@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.0.ebuild,v 1.2 2005/07/04 19:04:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.0.ebuild,v 1.3 2005/07/07 04:23:18 caleb Exp $
 
 inherit eutils gnome2
 
@@ -33,7 +33,7 @@ RDEPEND=">=dev-libs/glib-2
 	dbus? ( >=sys-apps/dbus-0.22 )
 	nls? ( sys-devel/gettext )
 	xml2? ( dev-libs/gdome2 )"
-#	kde? ( >=x11-libs/qt-3 )
+#	kde? ( =x11-libs/qt-3* )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
