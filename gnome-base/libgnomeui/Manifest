@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ed514b184f0e086c1e06db1d565d92d1 libgnomeui-2.8.1-r1.ebuild 1154
 MD5 2df2a87f52a88e9dd0f32cf7eaa0229a libgnomeui-2.10.0.ebuild 1153
@@ -5,3 +8,10 @@ MD5 717c0175567305f132e6ac722b4e5706 ChangeLog 9065
 MD5 4becd0494324e4349c245e2b95b0f663 files/libgnomeui-2.8.0-ditch_ancient_pics.patch 505
 MD5 de45532214b2589e59dfdafcc4bfaea6 files/digest-libgnomeui-2.10.0 71
 MD5 9826934947d2ada3715a8cd28696047d files/digest-libgnomeui-2.8.1-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzLe3gIKl8Uu19MoRAj6kAJ0e8Bsv7lerEWx8P7tZcaJWbIfddgCdHN9Z
+I58zUufmNg5tsS3+KIc1JTE=
+=Rrsx
+-----END PGP SIGNATURE-----
