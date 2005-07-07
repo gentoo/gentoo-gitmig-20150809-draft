@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.13 2005/07/06 20:19:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.14 2005/07/07 04:08:25 vapier Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -30,7 +30,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.ta
 
 LICENSE="PAM"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86"
 IUSE="berkdb pwdb selinux pam_chroot pam_console pam_timestamp nis"
 
 RDEPEND=">=sys-libs/cracklib-2.8.3
@@ -142,6 +142,17 @@ src_unpack() {
 	cp /usr/share/automake/install-sh ${S}/ 2>/dev/null || touch install-sh
 	export WANT_AUTOCONF=2.5
 	autoconf || die
+
+	# Update libtool garbage in glib
+	cd "${WORKDIR}"/glib-${GLIB_VER}
+	sed -i -e 's:^GTK_DOC_CHECK.*::g' configure.in
+	sed -i -e 's:docs[^[:space:]]*::g' configure.in Makefile.am
+	> gtk-doc.make
+	aclocal && \
+	autoheader && \
+	libtoolize --automake -c -f && \
+	autoconf && \
+	automake -a -c --foreign || die "glib autotools"
 }
 
 src_compile() {
@@ -203,6 +214,7 @@ src_compile() {
 			--host=${CHOST} \
 			--enable-static \
 			--disable-shared \
+			--host=${CHOST} \
 			--with-pic \
 			--disable-threads \
 			--with-threads=none \
