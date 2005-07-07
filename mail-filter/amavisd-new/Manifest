@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8086c7232251415519ae33944fa9e8c2 amavisd-new-2.3.1.ebuild 5166
+MD5 afec9fbf2f9cdffc5efc978855496721 amavisd-new-2.3.1.ebuild 5165
 MD5 223435c1e5a0e5e343eeeb5f2ca9f0cc amavisd-new-2.2.1-r2.ebuild 5082
 MD5 5bce09c8953b16b2e3d04766d163496f amavisd-new-2.3.0.ebuild 5180
-MD5 6fc64d90ced0766ea4ccb0105cfe5db8 amavisd-new-2.3.2.ebuild 5390
+MD5 b5125259fb952cb5d11c0e0448a278bf amavisd-new-2.3.2.ebuild 5390
 MD5 a9fe6789d2b6320eea936de70255c3f7 amavisd-new-2.2.1-r1.ebuild 4815
-MD5 cb65d812a45fe0dfec7d80606f26b7d3 ChangeLog 12586
+MD5 68da8a3f91fa81508a5fb738bfdddd38 ChangeLog 12739
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 MD5 a0b31b21e8c9bbc2ebc89df55e7efef6 amavisd-new-2.2.1.ebuild 4804
 MD5 1f1f4cf9c92f92f966361a8ac08aa543 files/amavisd.rc6 305
@@ -22,7 +22,7 @@ MD5 a9c49eb16b5fa7dfecd54a436bc07200 files/amavisd-new-2.3.0-amavisd.conf-gentoo
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzI0gQlM6RnzZP+IRAjSfAKC7hCcz/Jioylj8irChuNDGCAusxgCghDT5
-qd0RVVHVLlAHaj1fda6051M=
-=Baws
+iD8DBQFCzTMPQlM6RnzZP+IRAmsHAJ0c74ERqPel+qR8MzJUYsT/cnHiugCfawTL
+H0SUEBmU8RJAsbj2FbFpexc=
+=p3ef
 -----END PGP SIGNATURE-----
