@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/mupen64-alsasnd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.6 2005/04/20 00:28:43 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.7 2005/07/07 04:36:55 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> mupen64-alsasnd-0.4.ebuild:
+  Fix qt dep
 
   19 Apr 2005; Daniel Goller <morfic@gentoo.org> mupen64-alsasnd-0.4.ebuild:
   moved file to mirrors
