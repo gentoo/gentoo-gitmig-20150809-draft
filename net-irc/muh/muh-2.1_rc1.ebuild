@@ -1,9 +1,9 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.1_rc1.ebuild,v 1.8 2004/08/08 00:09:39 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.1_rc1.ebuild,v 1.9 2005/07/07 16:36:01 swegener Exp $
 
 MY_P=${P/_/}
-S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="Persistent IRC bouncer"
 HOMEPAGE="http://mind.riot.org/muh/"
 IUSE=""
@@ -14,10 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha ~hppa ~mips"
 
-src_compile() {
-	econf || die "configure failed"
-	emake || die "compile failed"
-}
+S="${WORKDIR}"/${MY_P}
 
 src_install() {
 	einstall install || die "install failed"

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b9baebcb1839125a8552a1a44faf9cbd ChangeLog 1227
 MD5 23e0c42c9152a26274c01bbf269cf489 files/digest-muh-2.1_rc1 62
 MD5 45e5d28a6140d65317c16041e8962e74 files/digest-muh-2.2_beta1 64
 MD5 da7dbee115397b6e308fe911595bd5ea metadata.xml 328
 MD5 8dbc3e3f09f5a1b40a3f5cb45bba4343 muh-2.1_rc1.ebuild 787
 MD5 8174fb46013b9f228c08ccb5f6023020 muh-2.2_beta1.ebuild 907
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzVoLI1lqEGTUzyQRAkt1AJ99pCGdRzpbxzE1bdwM1W6KmBAM7wCgpps2
++BW/Rxfi6r+Lpid2puknDmc=
+=2v3E
+-----END PGP SIGNATURE-----

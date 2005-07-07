@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.2_beta1.ebuild,v 1.3 2004/08/08 00:09:39 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.2_beta1.ebuild,v 1.4 2005/07/07 16:36:01 swegener Exp $
 
 MY_P=${P/_/}
 
@@ -15,7 +15,7 @@ IUSE="ipv6"
 
 DEPEND=""
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_compile() {
 	econf $(use_enable ipv6) || die "econf failed"
