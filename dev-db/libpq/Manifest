@@ -1,14 +1,24 @@
-MD5 c0d9a2b29a5f49ab627121d4183c6384 libpq-8.0.1.ebuild 3080
-MD5 15c26bdb644f5554def35900cd4bf902 libpq-7.4.8.ebuild 3080
-MD5 dcaf915256dcd271c0e54d8ccad1cd55 libpq-8.0.3.ebuild 3081
-MD5 ef49d9fe7473b947fe414d0ec16369cb ChangeLog 1930
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c636553325865adb0240c9b29c89e669 libpq-8.0.1.ebuild 3078
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 eff13865c992b879b9d2b1196654722b libpq-7.3.10.ebuild 3081
+MD5 9d7c11d82b76f8c85a4823fe5ae901c7 libpq-8.0.3.ebuild 3081
+MD5 79ac70bf478934f08dd231e40931a324 libpq-7.3.10.ebuild 3079
+MD5 923fe3a7c29dc71c373f77fb26bd6f16 libpq-7.4.8.ebuild 3078
+MD5 ef49d9fe7473b947fe414d0ec16369cb ChangeLog 1930
+MD5 f7905db93301407b9caf37581e270d1f files/digest-libpq-7.3.10 76
+MD5 a29e8334813c549e8d3d7bcc2e364a66 files/libpq-8.0.1-gentoo.patch 2306
 MD5 582e557cd0b0ea25adf5798062de0f76 files/digest-libpq-7.4.8 75
+MD5 5256293555f24dec0d84734c19784174 files/libpq-7.4.8-gentoo.patch 2599
 MD5 0540e6c42fdd652b981e236ea835c524 files/digest-libpq-8.0.1 75
 MD5 b8a68c8f7fbe4116f7d39a520a3da8c9 files/digest-libpq-8.0.3 75
 MD5 07e1154edfd02b73a7772384ce2238b2 files/libpq-7.3.10-gentoo.patch 2072
-MD5 a29e8334813c549e8d3d7bcc2e364a66 files/libpq-8.0.1-gentoo.patch 2306
 MD5 91bb6f54ae3772de8b4b98ef69b79f95 files/libpq-8.0.3-gentoo.patch 2306
-MD5 f7905db93301407b9caf37581e270d1f files/digest-libpq-7.3.10 76
-MD5 5256293555f24dec0d84734c19784174 files/libpq-7.4.8-gentoo.patch 2599
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzHZ7gIKl8Uu19MoRAgnrAJ4iNuR3dimNvoYQaDB5qZEQPkOwfQCcCeE3
+PC6eKsBJtYUHluY5iXz52LU=
+=mpX5
+-----END PGP SIGNATURE-----
