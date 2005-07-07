@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.33 2005/05/31 00:11:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.34 2005/07/07 16:51:57 kugelfang Exp $
+
+  07 Jul 2005; Danny van Dyk <kugelfang@gentoo.org>
+  files/dpkg-1.10.27.gcc4.patch:
+  Fixed BUG #96394 by replacing bogus gcc-4 patch.
 
 *dpkg-1.10.28 (31 May 2005)
 

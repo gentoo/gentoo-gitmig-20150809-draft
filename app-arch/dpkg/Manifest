@@ -1,6 +1,16 @@
-MD5 63bf35d0b5dc79669eff66734c4c3c7d ChangeLog 3841
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8866816da629432f3d617c35998f09b4 ChangeLog 3981
 MD5 fa02f20f5a615e964afe6782ca3c0531 dpkg-1.10.28.ebuild 1296
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 74ab726dd6bc09fdb24cac5bb933f2f9 files/dpkg-1.10.27.gcc4.patch 1284
 MD5 0696aa314a61ed693110418de1dcb1c8 files/digest-dpkg-1.10.28 65
 MD5 feb5a11111cc715877cc527c979ef699 files/dpkg-1.10.26.patch 840
+MD5 4eef996aa17c8027d82b5e3b421e50ed files/dpkg-1.10.27.gcc4.patch 1180
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzV635mJXAu5GbtIRAhM2AJkB3cCZ0baNaKHCwnZQXZGuhbDCFACeNEMu
++C/VFxOoVmYHQvPR0jkEQm0=
+=tDlF
+-----END PGP SIGNATURE-----

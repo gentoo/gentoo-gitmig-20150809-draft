@@ -1,33 +1,34 @@
---- lib/mlib.c~	2005-02-10 16:24:17.000000000 +0100
-+++ lib/mlib.c	2005-05-04 16:13:58.000000000 +0200
-@@ -189,7 +189,7 @@
-   switch(data->type) {
-     case BUFFER_WRITE_BUF:
-       memcpy(data->data.ptr, buf, length);
-+      data->data.ptr = (char*)data->data.ptr + length;
--      (char*)data->data.ptr += length;
-       break;
-     case BUFFER_WRITE_VBUF:
-       varbufaddbuf((struct varbuf *)data->data.ptr, buf, length);
---- lib/parse.c~	2005-02-10 16:24:17.000000000 +0100
-+++ lib/parse.c	2005-05-04 16:13:25.000000000 +0200
+--- parse.c.orig	2005-07-07 18:51:15.000000000 +0200
++++ parse.c	2005-07-07 18:53:35.000000000 +0200
 @@ -39,7 +39,7 @@
  #include <sys/mman.h>
  #endif
  
-+const struct fieldinfo *fieldinfos = {
--const struct fieldinfo fieldinfos[]= {
+-const struct fieldinfo *fieldinfos = {
++const struct fieldinfo fieldinfos[]= {
    /* NB: capitalisation of these strings is important. */
    { "Package",          f_name,            w_name                                     },
    { "Essential",        f_boolean,         w_booleandefno,   PKGIFPOFF(essential)     },
---- include/parsedump.h~	2005-02-10 16:24:17.000000000 +0100
-+++ include/parsedump.h	2005-05-04 16:13:36.000000000 +0200
-@@ -30,7 +30,7 @@
-   const char *canon;
- };
+@@ -96,7 +96,7 @@
+   const char *fieldstart, *valuestart;
+   char *value= NULL;
+   int fieldlen= 0, valuelen= 0;
+-  int *ip, c;
++  int *ip, c, i;
+   struct stat stat;
  
-+extern const struct fieldinfo *fieldinfos;
--extern const struct fieldinfo fieldinfos[];
- extern const struct nickname nicknames[];
- extern const int nfields; /* = elements in fieldinfos, including the sentinels */
- 
+   if (warncount) *warncount= 0;
+@@ -194,9 +194,10 @@
+ 	fieldstart= nick->canon;
+ 	fieldlen= strlen(fieldstart);
+       }
+-      for (fip= fieldinfos, ip= fieldencountered;
+-           fip->name && strncasecmp(fieldstart,fip->name, fieldlen);
+-           fip++, ip++);
++      for (i=0, ip=fieldencountered;
++           fieldinfos[i].name && strncasecmp(fieldstart,fieldinfos[i].name, fieldlen);
++	   i++, ip++);
++      fip = &(fieldinfos[i]);
+       if (fip->name) {
+ 	value= realloc(value,valuelen+1);
+ 	memcpy(value,valuestart,valuelen);
