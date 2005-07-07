@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.9 2005/05/31 20:58:47 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.10 2005/07/07 04:29:42 caleb Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="kde"
 
-DEPEND=">=x11-libs/qt-3
+DEPEND="=x11-libs/qt-3*
 	kde? ( >=kde-base/kdelibs-3 )"
 
 src_compile() {

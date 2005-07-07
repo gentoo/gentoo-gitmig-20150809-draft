@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kbedic
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.17 2005/05/31 20:58:47 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.18 2005/07/07 04:29:42 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> kbedic-4.0.ebuild:
+  Fix qt dep
 
   31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> kbedic-4.0.ebuild:
   mark ~ppc
