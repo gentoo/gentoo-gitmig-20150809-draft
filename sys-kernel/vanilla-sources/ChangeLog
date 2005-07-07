@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.83 2005/07/05 11:54:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.84 2005/07/07 22:27:59 dsd Exp $
+
+  07 Jul 2005; Daniel Drake <dsd@gentoo.org>
+  -files/vanilla-sources-2.4.24.CAN-2004-0001.patch,
+  -files/do_brk_fix.patch, -vanilla-sources-2.4.21.ebuild,
+  -vanilla-sources-2.4.29.ebuild, -vanilla-sources-2.6.11.7.ebuild,
+  -vanilla-sources-2.6.11.9.ebuild, -vanilla-sources-2.6.11.10.ebuild:
+  Remove old versions
 
   05 Jul 2005; Markus Rothe <corsair@gentoo.org>
   vanilla-sources-2.6.12.2.ebuild:
