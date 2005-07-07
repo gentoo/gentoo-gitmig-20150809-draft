@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.17 2005/06/17 21:10:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.18 2005/07/07 18:34:29 spock Exp $
+
+  07 Jul 2005; Michał Januszewski <spock@gentoo.org> oprofile-0.9.ebuild:
+  Marked stable on x86.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> oprofile-0.8.2.ebuild:
   Stable on ppc.
