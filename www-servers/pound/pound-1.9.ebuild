@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.8.3.ebuild,v 1.5 2005/07/07 15:45:08 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.9.ebuild,v 1.1 2005/07/07 15:45:08 mkennedy Exp $
 
 inherit flag-o-matic
 
@@ -35,9 +35,9 @@ src_install() {
 	dosbin pound
 	doman pound.8
 
-	dodoc README
+	dodoc README FAQ
 
-	newinitd ${FILESDIR}/${PN}.init ${PN}
+	newinitd ${FILESDIR}/${PN}.init-${PV} ${PN}
 
 	insinto /etc
 	doins ${FILESDIR}/pound.cfg
