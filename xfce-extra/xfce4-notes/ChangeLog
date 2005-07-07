@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-notes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.9 2005/04/09 22:50:18 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.10 2005/07/07 01:19:54 dostrow Exp $
+
+  07 Jul 2005; Daniel Ostrow <dostrow@gentoo.org>
+  xfce4-notes-0.9.7-r1.ebuild:
+  Stable on ppc and ppc64.
 
 *xfce4-notes-0.10.0-r1 (09 Apr 2005)
 
