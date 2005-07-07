@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6.ebuild,v 1.17 2005/06/12 12:11:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6.ebuild,v 1.18 2005/07/07 04:31:57 caleb Exp $
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -14,7 +14,7 @@ IUSE="qt gnome"
 DEPEND="virtual/libc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
-	qt? ( >=x11-libs/qt-3.0 )
+	qt? ( =x11-libs/qt-3* )
 	gnome? ( gnome-base/gnome-libs )"
 
 src_compile() {

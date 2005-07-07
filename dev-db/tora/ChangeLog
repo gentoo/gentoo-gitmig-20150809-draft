@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.41 2005/04/21 20:49:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.42 2005/07/07 04:30:36 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> tora-1.3.16.ebuild,
+  tora-1.3.16-r1.ebuild:
+  Fix qt dep
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> tora-1.3.16-r1.ebuild:
   stable on amd64
