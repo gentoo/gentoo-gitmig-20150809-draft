@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.36 2005/07/05 20:31:12 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.37 2005/07/07 19:53:13 corsair Exp $
+
+  07 Jul 2005; Markus Rothe <corsair@gentoo.org>
+  iproute2-2.6.11.20050310-r1.ebuild:
+  Stable on ppc64
 
   05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
   iproute2-2.6.11.20050310-r1.ebuild:

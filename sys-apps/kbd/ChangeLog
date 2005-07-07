@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.39 2005/07/04 14:47:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.40 2005/07/07 19:54:35 corsair Exp $
+
+  07 Jul 2005; Markus Rothe <corsair@gentoo.org> kbd-1.12-r5.ebuild:
+  Stable on ppc64
 
   04 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> kbd-1.12-r5.ebuild:
   Stable on sparc
