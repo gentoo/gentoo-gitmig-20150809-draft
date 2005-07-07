@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cce6708b997e0ef4eef6bdd2ffd7b47f rbot-0.9.7.ebuild 1147
-MD5 89f06ee63ada769f2a7eb9ae782a2680 ChangeLog 1380
-MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 163a634076bb146505dec59c0cfc0bc4 rbot-0.9.6.ebuild 1073
-MD5 53971baa1052d065a78ed3a35daedd0b files/digest-rbot-0.9.6 62
+MD5 d31a54896f4c662702600554ef30e437 ChangeLog 1474
 MD5 b54404b694144667970666b4bcdaf706 files/digest-rbot-0.9.7 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCd/3NI1lqEGTUzyQRAmU5AKCEs4nE7trkOvzMsjZRRnvxZavO/wCghk6u
-1OpKf512lUEVseLcf+HV8Lc=
-=fBhB
------END PGP SIGNATURE-----
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 cce6708b997e0ef4eef6bdd2ffd7b47f rbot-0.9.7.ebuild 1147
