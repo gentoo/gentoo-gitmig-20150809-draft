@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ams
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.16 2005/04/19 08:10:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.17 2005/07/07 04:42:27 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> ams-1.7.2.ebuild,
+  ams-1.8.2.ebuild, ams-1.8.4.ebuild, ams-1.8.7.ebuild:
+  Fix qt dep
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.

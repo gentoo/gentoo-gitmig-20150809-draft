@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/squelch
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squelch/ChangeLog,v 1.8 2004/12/19 07:34:35 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squelch/ChangeLog,v 1.9 2005/07/07 04:44:19 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> squelch-1.0.1.ebuild:
+  Fix qt dep
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   squelch-1.0.1.ebuild:

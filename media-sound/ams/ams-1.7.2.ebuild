@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.7.2.ebuild,v 1.8 2004/12/29 02:49:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.7.2.ebuild,v 1.9 2005/07/07 04:42:27 caleb Exp $
 
 DESCRIPTION="Alsa Modular Software Synthesizer"
 HOMEPAGE="http://alsamodular.sourceforge.net"
@@ -12,7 +12,7 @@ IUSE=""
 
 RDEPEND=">=media-libs/alsa-lib-0.9
 	 media-sound/jack-audio-connection-kit
-	 >=x11-libs/qt-3.0.0
+	 =x11-libs/qt-3*
 	 =sci-libs/fftw-2*
 	 media-libs/ladspa-sdk"
 

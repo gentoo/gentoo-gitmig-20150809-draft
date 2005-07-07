@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.2.ebuild,v 1.7 2005/05/28 14:45:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.2.ebuild,v 1.8 2005/07/07 04:45:22 caleb Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="ogg"
 
 RESTRICT="primaryuri"
 
-DEPEND=">=x11-libs/qt-3.0
+DEPEND="=x11-libs/qt-3*
 	dev-db/mysql
 	>=media-libs/id3lib-3.8.2
 	ogg? ( >=media-libs/libogg-1.0

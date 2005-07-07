@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.8.ebuild,v 1.8 2005/06/05 06:46:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.8.ebuild,v 1.9 2005/07/07 04:43:44 caleb Exp $
 
 MY_PV="${PV/./-}"
 MY_P="${PN}-${MY_PV}"
@@ -18,7 +18,7 @@ IUSE="jack"
 
 DEPEND=">=kde-base/kdelibs-3.0
 	|| ( kde-base/kdemultimedia-meta kde-base/kdemultimedia )
-	>=x11-libs/qt-3
+	=x11-libs/qt-3*
 	virtual/alsa
 	jack? ( media-sound/jack-audio-connection-kit )
 	>=media-libs/ladspa-sdk-1.0

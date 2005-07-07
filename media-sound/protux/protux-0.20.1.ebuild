@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.20.1.ebuild,v 1.5 2005/01/20 21:37:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.20.1.ebuild,v 1.6 2005/07/07 04:44:55 caleb Exp $
 
 inherit eutils kde-functions
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~amd64"
 
 DEPEND="virtual/x11
-	>=x11-libs/qt-3
+	=x11-libs/qt-3*
 	>=media-libs/libmustux-0.20.1"
 
 set-qtdir 3

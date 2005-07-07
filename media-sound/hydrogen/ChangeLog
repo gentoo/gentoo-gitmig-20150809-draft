@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.32 2005/05/27 21:41:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.33 2005/07/07 04:46:09 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> hydrogen-0.9.0.ebuild,
+  hydrogen-0.9.1.ebuild:
+  Fix qt dep
 
   27 May 2005; Jan Brinkmann <luckyduck@gentoo.org> hydrogen-0.9.1.ebuild:
   install a .desktop file for hydrogen, fixes #93253

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squelch/squelch-1.0.1.ebuild,v 1.10 2004/12/19 07:34:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squelch/squelch-1.0.1.ebuild,v 1.11 2005/07/07 04:44:19 caleb Exp $
 
 inherit kde
 need-qt 3
@@ -17,7 +17,7 @@ KEYWORDS="~sparc x86"
 
 DEPEND="media-libs/libvorbis
 	media-libs/libao
-	>=x11-libs/qt-3"
+	=x11-libs/qt-3*"
 
 src_compile() {
 	./configure --prefix=/usr

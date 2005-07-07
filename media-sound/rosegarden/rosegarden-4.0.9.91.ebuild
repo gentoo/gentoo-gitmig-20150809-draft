@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.91.ebuild,v 1.2 2005/01/14 23:59:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.91.ebuild,v 1.3 2005/07/07 04:43:44 caleb Exp $
 
 IUSE="alsa arts jack"
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=kde-base/kdelibs-3.0
 	|| ( kde-base/kdemultimedia-meta kde-base/kdemultimedia )
-	>=x11-libs/qt-3
+	=x11-libs/qt-3*
 	!arts? ( media-libs/alsa-lib )
 	alsa? ( media-libs/alsa-lib )
 	!alsa? ( arts? ( kde-base/arts ) )
