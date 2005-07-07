@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/imapsync
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.3 2005/05/24 15:58:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.4 2005/07/07 13:56:02 ticho Exp $
+
+  07 Jul 2005; Andrej Kacian <ticho@gentoo.org> imapsync-1.121.ebuild:
+  Stable on x86.
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org> imapsync-1.121.ebuild:
   dev-perl/Digest-MD5 => perl-core/Digest-MD5
