@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.34 2005/07/03 13:26:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.35 2005/07/07 07:00:04 iluxa Exp $
+
+  07 Jul 2005; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  libxmlpp-2.10.0-r1.ebuild:
+  add ~mips to keywords
 
   03 Jul 2005; Michael Hanselmann <hansmi@gentoo.org>
   libxmlpp-2.10.0-r1.ebuild:
