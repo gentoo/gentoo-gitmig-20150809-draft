@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.0.4.ebuild,v 1.2 2005/04/22 21:04:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.0.5.ebuild,v 1.1 2005/07/07 15:58:31 swegener Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Epic5 IRC Client"
 SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC5-ALPHA/${P}.tar.bz2"
@@ -20,9 +20,9 @@ DEPEND=">=sys-libs/ncurses-5.2
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/epic-defaultserver.patch
+	epatch "${FILESDIR}"/epic-defaultserver.patch
 
 	sed -i \
 		-e 's:/include/tcl$ver:/include:' \
@@ -39,17 +39,17 @@ src_compile() {
 		$(use_with tcltk tcl) \
 		$(use_with socks5) \
 		|| die "econf failed"
-	emake || die "emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install () {
 	einstall \
-		sharedir=${D}/usr/share \
-		libexecdir=${D}/usr/lib/misc || die "einstall failed"
+		sharedir="${D}"/usr/share \
+		libexecdir="${D}"/usr/lib/misc || die "einstall failed"
 
 	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES
 
-	cd ${S}/doc
+	cd "${S}"/doc
 	docinto doc
 	dodoc \
 		*.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load \
