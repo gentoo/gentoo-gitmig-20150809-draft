@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/yapide/yapide-0.1.ebuild,v 1.3 2005/01/01 17:57:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/yapide/yapide-0.1.ebuild,v 1.4 2005/07/07 04:32:44 caleb Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/libc
-	>=x11-libs/qt-3.0.0
+	=x11-libs/qt-3*
 	dev-embedded/gputils"
 
 DEPEND="${RDEPEND}
