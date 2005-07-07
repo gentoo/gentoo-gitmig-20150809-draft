@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/pariguide
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pariguide/ChangeLog,v 1.4 2005/04/24 02:58:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pariguide/ChangeLog,v 1.5 2005/07/07 13:27:39 george Exp $
+
+  07 Jul 2005; George Shapovalov <george@gentoo.org> pariguide-0.43a.ebuild:
+  fixed qt dependency (#98180, qt-4 is upcoming)
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   pariguide-0.43a.ebuild:

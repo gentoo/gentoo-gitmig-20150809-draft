@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pariguide/pariguide-0.43a.ebuild,v 1.2 2005/04/24 02:58:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pariguide/pariguide-0.43a.ebuild,v 1.3 2005/07/07 13:27:39 george Exp $
 
 IUSE=""
 
@@ -10,9 +10,9 @@ SRC_URI="mirror://sourceforge/pariguide/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc alpha ~hppa"
+KEYWORDS="~amd64 x86 ppc ~sparc alpha ~hppa"
 
-DEPEND=">=x11-libs/qt-2.2.0
+DEPEND="<x11-libs/qt-4
 	virtual/x11"
 
 RDEPEND=">=sci-mathematics/pari-2.1.0"
