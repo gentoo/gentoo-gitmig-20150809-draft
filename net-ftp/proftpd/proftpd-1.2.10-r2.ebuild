@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r2.ebuild,v 1.4 2005/03/07 16:42:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r2.ebuild,v 1.5 2005/07/07 23:58:53 humpback Exp $
 
 inherit flag-o-matic eutils
 
@@ -42,6 +42,7 @@ src_unpack() {
 }
 
 src_compile() {
+	addpredict /etc/krb5.conf
 	local modules myconf
 
 	modules="mod_ratio:mod_readme:mod_delay"
