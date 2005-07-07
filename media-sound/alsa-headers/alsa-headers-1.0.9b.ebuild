@@ -1,13 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.9_rc3.ebuild,v 1.1 2005/05/05 17:37:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.9b.ebuild,v 1.1 2005/07/07 09:12:21 eradicator Exp $
 
 inherit eutils
 
-MY_PV="${PV/_rc/rc}"
-
 MY_PN=${PN/headers/driver}
-MY_P="${MY_PN}-${MY_PV}"
+MY_P="${MY_PN}-${PV}"
 S=${WORKDIR}/${MY_P}
 MY_FILESDIR="${FILESDIR/headers/driver}"
 
@@ -17,7 +15,7 @@ SRC_URI="mirror://alsaproject/driver/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86"
 IUSE=""
 
 DEPEND=""
