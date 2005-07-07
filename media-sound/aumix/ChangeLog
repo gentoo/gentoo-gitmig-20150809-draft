@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aumix
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.48 2004/12/29 01:09:48 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.49 2005/07/07 19:36:39 eradicator Exp $
+
+  07 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> files/aumix.rc6:
+  Updated init script to work with sparc audio. Closes bug #84412 thanks to
+  Peter Schloemer <dapete@dapete.de>.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
