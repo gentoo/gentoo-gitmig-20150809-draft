@@ -1,4 +1,6 @@
-MD5 0a2958519498151cab7916447d661dc2 ChangeLog 719
+MD5 3305bff8cba54b1a3554c7f13da2de82 ChangeLog 862
 MD5 710923d0dc3757bc44573e44e8c45b0d cl-html-encode-1.0.ebuild 734
 MD5 394263b1141a12674b7944e5652f9433 metadata.xml 606
+MD5 9866e9d5028c8277480af016f929de87 cl-html-encode-1.1.ebuild 734
 MD5 21936a14f75d367c4934f891d7300f12 files/digest-cl-html-encode-1.0 65
+MD5 c17e7cba92a5573dc089691e8cc06c7f files/digest-cl-html-encode-1.1 65
