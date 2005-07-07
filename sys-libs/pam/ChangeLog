@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.82 2005/07/06 20:19:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.83 2005/07/07 11:24:32 flameeyes Exp $
+
+  07 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> pam-0.78-r2.ebuild:
+  Make glib stuff dependant on pam_console useflag. See bug #98190.
 
   06 Jul 2005; Danny van Dyk <kugelfang@gentoo.org> pam-0.78-r2.ebuild:
   Marked stable on amd64.
