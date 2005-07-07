@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9978b552276448a9a6457a9e6da3e87e tomboy-0.3.2.ebuild 1113
 MD5 5f4f41842ff859b9ac623845975743dc tomboy-0.2.2-r1.ebuild 774
 MD5 936f819ac015ed12c012b4e070fa16be tomboy-0.3.2-r1.ebuild 1171
@@ -12,3 +15,10 @@ MD5 b5e0ab8c69f352631980ececaee73635 files/tomboy-0.3.2-mono-1.1.8-compat.diff 1
 MD5 a29ae36c54ef8ad24aad99ede4f6c01a files/tomboy-0.3.1-mono-1.1.4-compat.diff 6562
 MD5 a55d790d6f5b13436c5244a0e9465a27 files/digest-tomboy-0.3.1 64
 MD5 f9b0cda18b91473b3e94744e50bb93fd files/digest-tomboy-0.3.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzRe3BXaUFmZvwyMRAnHxAJ4vN/SoArQW6ucbI+EDT2bW+QhfKQCgsy9V
+PRONl3/RNCbOcIbN0ByQ3HU=
+=jzLf
+-----END PGP SIGNATURE-----
