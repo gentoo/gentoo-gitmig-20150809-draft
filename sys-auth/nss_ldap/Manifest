@@ -13,9 +13,9 @@ MD5 ac7a4a33fe022b39fa720f3400311732 nss_ldap-215-r1.ebuild 1491
 MD5 09e944c3a06eb51d27c2da98a79a809f nss_ldap-211.ebuild 1444
 MD5 9eb6230d204098fe102143fc52733514 nss_ldap-207.ebuild 1046
 MD5 2facb9b8b2db2a53cdcb1ffca8254a4a nss_ldap-202.ebuild 1006
-MD5 22b9f1539229e5fd39b1d849401bd657 ChangeLog 7494
+MD5 144f0404496cc1459d1723dfbe43e44a ChangeLog 7583
 MD5 5ba8c9c9be079ebcbc93c08f838665bd metadata.xml 255
-MD5 287a04c2f2187d0e3bd94a6d77b1462e nss_ldap-239-r1.ebuild 1352
+MD5 78134db782693066c39caf45d32ce872 nss_ldap-239-r1.ebuild 1359
 MD5 2af7b597298bb9269f739cbb8a25224d files/nss_ldap-220-db4.2-patch.diff 1707
 MD5 a2d9a9c16028097d3f2ade6550440711 files/digest-nss_ldap-174-r2 64
 MD5 8d358c3dda5ce728c6fd5f8f4bc448d2 files/digest-nss_ldap-207-r1 64
