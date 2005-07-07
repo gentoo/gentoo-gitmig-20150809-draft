@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rtl8180
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.6 2005/06/26 17:12:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.7 2005/07/07 20:56:39 genstef Exp $
+
+  07 Jul 2005; Stefan Schweizer <genstef@gentoo.org> -rtl8180-0.19.ebuild,
+  -rtl8180-0.20.2.ebuild, -rtl8180-0.21.ebuild, rtl8180-0.21-r1.ebuild:
+  Fix bug 98057 by reordering the MODULE_NAMES
 
 *rtl8180-0.21-r1 (26 Jun 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/rtl8180-0.21-r1.ebuild,v 1.1 2005/06/26 17:12:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/rtl8180-0.21-r1.ebuild,v 1.2 2005/07/07 20:56:39 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="net-wireless/wireless-tools"
 
-MODULE_NAMES="r8180(net:) ieee80211-r8180(net:)
-	ieee80211_crypt-r8180(net:) ieee80211_crypt_wep-r8180(net:)"
+MODULE_NAMES="ieee80211_crypt-r8180(net:) ieee80211_crypt_wep-r8180(net:)
+	ieee80211-r8180(net:) r8180(net:)"
 CONFIG_CHECK="NET_RADIO CRYPTO CRYPTO_ARC4 CRC32"
 BUILD_TARGETS="all"
 
