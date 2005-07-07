@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.38 2005/06/27 02:29:02 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.39 2005/07/07 00:57:09 nixphoeni Exp $
+
+  07 Jul 2005; Joe Sapp <nixphoeni@gentoo.org> gdesklets-core-0.33.1.ebuild,
+  gdesklets-core-0.34.3.ebuild:
+  Added gnome-python-extras to RDEPEND for versions needing 
+  python gtkhtml2
 
   27 Jun 2005; Joe Sapp <nixphoeni@gentoo.org> gdesklets-core-0.32.ebuild,
   gdesklets-core-0.33.1.ebuild, gdesklets-core-0.34.3.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3.ebuild,v 1.7 2005/06/27 02:29:02 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3.ebuild,v 1.8 2005/07/07 00:57:09 nixphoeni Exp $
 
 inherit gnome2 eutils
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~alpha"
 
 RDEPEND=">=dev-lang/python-2.3
 	>=dev-libs/glib-2
@@ -24,7 +24,8 @@ RDEPEND=">=dev-lang/python-2.3
 	>=gnome-base/gconf-2
 	>=gnome-base/libgtop-2.8.2
 	>=dev-python/pygtk-2.4
-	>=dev-python/gnome-python-2.6
+	>=dev-python/gnome-python-2.6.1
+	>=dev-python/gnome-python-extras-2.10.2
 	>=gnome-base/libgnomeui-2.2
 	>=dev-libs/expat-1.95.8
 	>=dev-python/pyxml-0.8.3-r1"
