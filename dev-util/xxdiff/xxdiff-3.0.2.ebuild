@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.13 2005/05/08 22:31:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.14 2005/07/07 04:35:10 caleb Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
 HOMEPAGE="http://xxdiff.sourceforge.net/"
 
-DEPEND=">=x11-libs/qt-3.0.0
+DEPEND="=x11-libs/qt-3*
 	=dev-util/tmake-1.8*
 	kde? ( >=kde-base/kdelibs-3.1.0 )"
 
