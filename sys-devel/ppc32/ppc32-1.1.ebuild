@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ppc32/ppc32-1.1.ebuild,v 1.1 2005/07/06 04:39:46 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ppc32/ppc32-1.1.ebuild,v 1.2 2005/07/07 03:14:31 dostrow Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo.org/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ppc"
+KEYWORDS="-* ppc ppc64"
 IUSE=""
 
 DEPEND="virtual/libc"

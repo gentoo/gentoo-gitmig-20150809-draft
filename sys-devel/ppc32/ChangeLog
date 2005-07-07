@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/ppc32
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ppc32/ChangeLog,v 1.1 2005/07/06 04:39:46 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ppc32/ChangeLog,v 1.2 2005/07/07 03:14:31 dostrow Exp $
+
+  07 Jul 2005; Daniel Ostrow <dostrow@gentoo.org> ppc32-1.1.ebuild:
+  Mark ppc64 for catalyst use.
 
 *ppc32-1.1 (06 Jul 2005)
 
