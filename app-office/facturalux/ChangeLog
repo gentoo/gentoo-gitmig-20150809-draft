@@ -1,6 +1,9 @@
 # ChangeLog for app-office/facturalux
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/facturalux/ChangeLog,v 1.5 2005/01/01 15:31:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/facturalux/ChangeLog,v 1.6 2005/07/07 04:28:04 caleb Exp $
+
+  07 Jul 2005; Caleb Tennis <caleb@gentoo.org> facturalux-0.4.ebuild:
+  Fix qt dep
 
   01 Jul 2004; Aron Griffis <agriffis@gentoo.org> facturalux-0.4.ebuild:
   sync IUSE (missing)
