@@ -1,7 +1,7 @@
 /*
  * Copyright 1999-2005 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.6.c,v 1.2 2005/03/16 23:32:12 vapier Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.6.c,v 1.3 2005/07/07 23:03:40 vapier Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
  */
 
@@ -353,6 +353,8 @@ int main(int argc, char *argv[])
 	/* cc calls "/full/path/to/gcc" ... */
 	if (!strcmp(data->name, "cc"))
 		strcpy(data->name, "gcc");
+	if (!strcmp(data->name, "f77"))
+		data->name[0] = 'g';
 
 	/* What is the full name of our wrapper? */
 	size = sizeof(data->fullname);

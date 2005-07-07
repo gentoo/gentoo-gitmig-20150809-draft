@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.11,v 1.5 2005/06/13 04:57:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.11,v 1.6 2005/07/07 23:03:40 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -213,7 +213,8 @@ switch_profile() {
 		# sync mtimes together.  This makes things like ccache
 		# happy.  See Bug #70548 for more info.
 		local ref=${ROOT}/${GCC_BIN_PATH}/${x}
-		[[ ${x} == "cc" ]] && ref=${ROOT}/${GCC_BIN_PATH}/gcc
+		[[ ${x} == "cc"  ]] && ref=${ROOT}/${GCC_BIN_PATH}/gcc
+		[[ ${x} == "f77" ]] && ref=${ROOT}/${GCC_BIN_PATH}/g77
 		if [[ -x ${ref} ]] ; then
 			${CP} -f "${ROOT}/usr/lib/misc/gcc-config" \
 			         "${ROOT}/usr/bin/${x}"
