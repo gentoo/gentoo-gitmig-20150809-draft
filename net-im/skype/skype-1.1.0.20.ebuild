@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.0.0.7.ebuild,v 1.2 2005/06/02 17:26:04 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.1.0.20.ebuild,v 1.1 2005/07/07 16:51:13 humpback Exp $
 
 inherit eutils
 
@@ -17,15 +17,15 @@ LICENSE="skype-eula"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="static arts esd"
-DEPEND="amd64? ( app-emulation/emul-linux-x86-glibc
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-compat
-		app-emulation/emul-linux-x86-baselibs
-		!static? ( app-emulation/emul-linux-x86-qtlibs )
-	)
+DEPEND="
+	amd64? ( app-emulation/emul-linux-x86-glibc
+		>=app-emulation/emul-linux-x86-xlibs-1.2
+		>=app-emulation/emul-linux-x86-baselibs-2.1.1
+		!static? ( >=app-emulation/emul-linux-x86-qtlibs-1.1 ) )
 	x86? ( !static? ( >=x11-libs/qt-3.2 )
-		>=sys-libs/glibc-2.2.5
-	)"
+		>=sys-libs/glibc-2.3.2 )"
+RDEPEND="${DEPEND}
+	>=sys-apps/dbus-0.23.4"
 
 src_unpack() {
 	if use static;
@@ -49,6 +49,7 @@ src_install() {
 	exeinto /opt/${PN}
 	doexe skype
 	doexe skype.bin
+	doexe skype-callto-handler
 	insinto /opt/${PN}/sound
 	doins sound/*.wav
 
@@ -60,6 +61,8 @@ src_install() {
 	#		doins lang/${PN}_${i}.qm
 	#	fi;
 	#done;
+	insinto /etc/dbus-1/system.d
+	doins skype.conf
 
 	insinto /opt/${PN}/avatars
 	doins avatars/*.jpg
@@ -73,10 +76,13 @@ src_install() {
 	done
 	fowners root:audio /opt/skype/skype.bin
 	fowners root:audio /opt/skype/skype
+	fowners root:audio /opt/skype/skype-callto-handler
 	dodir /usr/bin/
 	dosym /opt/skype/skype /usr/bin/skype
 	# Install the Documentation
 	dodoc README LICENSE
+
+	# TODO: Optional configuration of callto:// in KDE, Mozilla and friends
 }
 
 pkg_postinst() {
@@ -90,7 +96,6 @@ pkg_postinst() {
 		ewarn "On the \"Hardware\" tab, check the box next to \"Full duplex\"."
 	fi
 	##I do not know if this is true for this version. But will leave the note here
-	ewarn "There are some problems with this version of skype when upgrading"
-	ewarn "If you have problems please go to:"
-	ewarn "http://forum.skype.com/bb/viewtopic.php?t=7187"
+	ewarn "If you are upgrading and skype does not autologin do a manual login"
+	ewarn "you will not lose your contacts."
 }
