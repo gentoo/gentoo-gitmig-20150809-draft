@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 74aeaf2987adfeaaef1b27ee1bcb772b ChangeLog 1791
 MD5 873dfcb3f5c44688deeb32472cef90c3 metadata.xml 268
-MD5 1076e2687c621820aad16b4764ea81d8 openoffice-ximian-bin-1.3.11.ebuild 3386
+MD5 eab37ea6f1fe4214de5c0d749a9bd40f openoffice-ximian-bin-1.3.11.ebuild 3395
 MD5 8757a425426f3aeb1d1344d22f4e9932 files/digest-openoffice-ximian-bin-1.3.11 426
 MD5 59aa5496699827b1cefbd461c1623642 files/1.1.4/xooffice-wrapper-1.3 6893
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzSQnBXaUFmZvwyMRAp9YAKCE5+XNsQjl3TICOe5QkUGIx1oNRACguCbN
+vBypKW67HBXpD5R6pGgj9Bw=
+=MsI4
+-----END PGP SIGNATURE-----

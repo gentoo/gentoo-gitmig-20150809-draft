@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.3.11.ebuild,v 1.1 2005/05/07 16:33:14 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.3.11.ebuild,v 1.2 2005/07/07 12:46:11 agriffis Exp $
 
 inherit fdo-mime rpm
 
-IUSE="gnome kde"
+IUSE="gnome java kde"
 
 OO_VER="1.1.4"
 XOOPATH="http://red-carpet.go-ooo.org/ooo-645/nld-9-i586"
