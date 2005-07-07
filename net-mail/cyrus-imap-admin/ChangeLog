@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.38 2005/04/06 19:05:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.39 2005/07/07 01:48:52 ticho Exp $
+
+  07 Jul 2005; Andrej Kacian <ticho@gentoo.org>
+  cyrus-imap-admin-2.2.12.ebuild:
+  Fix perllocal.pod collision by using fixlocalpod(). Bug #98122, by Analyzer
+  <subscribe2k at yandex.ru>.
 
   06 Apr 2005; Markus Rothe <corsair@gentoo.org>
   cyrus-imap-admin-2.2.12.ebuild:
