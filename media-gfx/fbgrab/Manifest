@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e570df0ca07b051dc7246040b6cbd16e fbgrab-1.0.ebuild 725
 MD5 e66b15896be7d59a09ca0eb64a965cc0 ChangeLog 1331
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 458ad94460142c4d821312d93b1c8f4f files/digest-fbgrab-1.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzYMg2G5bA0cA/ScRAiwfAJ0eCLlD97n1hQW2QaPA5MT9Ayz8IgCgj3ll
+OMVwDD9URwa/OIGOrHGaMJc=
+=dPvo
+-----END PGP SIGNATURE-----
