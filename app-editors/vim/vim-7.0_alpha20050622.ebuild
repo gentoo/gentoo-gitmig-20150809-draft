@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.0_alpha20050622.ebuild,v 1.1 2005/06/23 05:09:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.0_alpha20050622.ebuild,v 1.2 2005/07/07 02:18:17 agriffis Exp $
 
 inherit vim
 
@@ -17,7 +17,7 @@ SRC_URI="${SRC_URI}
 S=${WORKDIR}/vim${VIM_VERSION/.*}
 DESCRIPTION="Vim, an improved vi-style text editor"
 KEYWORDS="~x86 ~sparc ~mips ~ppc ~amd64 ~ppc64 ~alpha"
-IUSE="${IUSE}"
+IUSE=""
 PROVIDE="virtual/editor"
 DEPEND="${DEPEND}
 	~app-editors/vim-core-${PV}"
