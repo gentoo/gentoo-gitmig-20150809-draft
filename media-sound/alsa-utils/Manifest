@@ -1,23 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 76a0e8910cb1451478cf46a9bd93c6a5 alsa-utils-1.0.9.ebuild 2350
-MD5 9bd07d3adb3c0f92b4065d6ead0ed43c alsa-utils-1.0.9a.ebuild 2351
-MD5 26f5354615b23de013a20117251274ee alsa-utils-1.0.8.ebuild 2269
-MD5 c1186ae9da7b5f167543b8f0d9f093d1 ChangeLog 14797
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 76f945217a4d380f2518d01f38691f7a ChangeLog 14934
 MD5 a2a37bf9cb817343a6a58e20cfea9bb8 alsa-utils-1.0.7.ebuild 2272
-MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a 70
-MD5 f4f492c382b243ebf558809a372fd6b7 files/alsasound.confd 515
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 26f5354615b23de013a20117251274ee alsa-utils-1.0.8.ebuild 2269
+MD5 ad94854212b24b8a02b67560fb4ed1d0 alsa-utils-1.0.9a.ebuild 2352
 MD5 954b0951b5fed9bf591abf9e7cc1963e files/alsa-modules.conf-rc 1162
+MD5 2a50971b115f63d74d0054c7e3ee9144 files/alsasound 7106
+MD5 f4f492c382b243ebf558809a372fd6b7 files/alsasound.confd 515
 MD5 ddaf1d5cc1a19dff65e19e6470bc711d files/digest-alsa-utils-1.0.7 69
 MD5 ec6210532acb9b397bacb3eb81f7593a files/digest-alsa-utils-1.0.8 69
-MD5 95a3737b14bbdd8f540bce955ecf02cd files/digest-alsa-utils-1.0.9 69
-MD5 2a50971b115f63d74d0054c7e3ee9144 files/alsasound 7106
+MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCoLbz06ebR+OMO78RAv0MAJ0cSORfesp3SqYXvBm2rx4iP2qoPgCeIgxf
-pWhROK+lVq2u9LVHeYX2yOE=
-=7z8A
+iD8DBQFCzQI4ArHZZzCEUG0RAg+HAJ44oip4Dl2ivNonNUiwnNHUUGjeWgCfQGFi
+Uh9+rx8Ejq+N8SzEcHkF0n4=
+=Ym+r
 -----END PGP SIGNATURE-----
