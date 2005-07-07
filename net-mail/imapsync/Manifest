@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4737b3344a65dba0ebdec52f9797f748 ChangeLog 833
-MD5 6c3f9db4a61546ef02d8f2ee8541f4fc imapsync-1.121.ebuild 1179
+MD5 89977debe9acf9b298367814a79f5008 imapsync-1.121.ebuild 1174
+MD5 53e21171912d10cd26f030ced221aecd ChangeLog 918
 MD5 86c229fe394877d2c6a26aa5367bc697 metadata.xml 253
-MD5 162952d278fd23763fa7810cad178625 files/digest-imapsync-1.121 62
 MD5 e64e1e1301d8e51840c98381ec3a5245 files/imapsync-gentoo.patch 945
+MD5 162952d278fd23763fa7810cad178625 files/digest-imapsync-1.121 62
 MD5 9f3b0fb71f9437bcf73253609605915c files/imapsync-ssl.patch 990
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCk08utG5z4I8BtQoRAgkaAKCBgPq4SuaMXAC6woPcIbko3ExFYgCePUMJ
-gI3mPNNFg4u9eAuJatIdpCg=
-=Eht3
------END PGP SIGNATURE-----
