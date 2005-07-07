@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1-r2.ebuild,v 1.2 2005/07/06 04:08:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1-r2.ebuild,v 1.3 2005/07/07 11:49:00 corsair Exp $
 
 inherit fortran flag-o-matic
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 	!crypt? ( net-misc/netkit-rsh )"
 
 SLOT="6"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 LICENSE="as-is"
 
 src_unpack() {

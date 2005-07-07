@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r2.ebuild,v 1.3 2005/07/05 20:17:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r2.ebuild,v 1.4 2005/07/07 11:47:16 corsair Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://supercluster.org/downloads/torque/${MY_P}.tar.gz"
 LICENSE="openpbs"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc tcltk X"
 PROVIDE="virtual/pbs"
 
