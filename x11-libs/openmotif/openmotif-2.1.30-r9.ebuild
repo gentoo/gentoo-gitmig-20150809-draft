@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r9.ebuild,v 1.10 2005/04/27 00:12:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r9.ebuild,v 1.11 2005/07/08 12:15:42 agriffis Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -101,7 +101,7 @@ src_install() {
 		f="${D}/usr/X11R6/bin/${nib}"; rm "$f" || die "rm $f"
 	done
 	for nim in ${NOINSTMAN1}; do
-		if useq ppc-macos || useq macos ; then
+		if useq ppc-macos ; then
 			f="${D}/usr/X11R6/man/man1/${nim}.1"
 		else
 			f="${D}/usr/X11R6/man/man1/${nim}.1x"
