@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0-r2.ebuild,v 1.3 2005/05/09 14:22:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0-r2.ebuild,v 1.4 2005/07/08 20:35:37 danarmak Exp $
 
 inherit kde eutils flag-o-matic
 set-qtdir 3
@@ -8,7 +8,8 @@ set-kdedir 3.4
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
-SRC_URI="mirror://kde/stable/3.4/src/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/3.4/src/${P}.tar.bz2
+	mirror://kde/security_patches/post-3.4.0-kdelibs-kimgio-fixed.diff"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.4"
@@ -49,7 +50,10 @@ DEPEND="${RDEPEND}
 #PATCHES="${FILESDIR}/${PN}-3.4.0_beta2-export-kio-symbols.diff"
 
 src_unpack() {
-	kde_src_unpack
+        unpack $PN-$PV.tar.bz2
+        # This is an ugly hack: it makes base_src_unpack do nothing, but still lets us enjoy
+        # the other things kde_src_unpack does.
+        kde_src_unpack nounpack
 
 	# Fix freezing in web forms (kde bug 100963). Applied for 3.4.1.
 	epatch "${FILESDIR}/${P}-form-freeze.patch"
@@ -61,7 +65,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-3.3.2-ppc64.patch
 
 	# kimgio input validation errors, bug 88862
-	cd ${S}/kimgio && patch -p0 < "${FILESDIR}/post-3.4.0-kdelibs-kimgio-2.diff"
+	cd ${S}/kimgio && patch -p0 < "${DISTDIR}/post-3.4.0-kdelibs-kimgio-fixed.diff"
 }
 
 src_compile() {

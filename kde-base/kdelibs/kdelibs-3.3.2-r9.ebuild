@@ -1,13 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.2-r9.ebuild,v 1.9 2005/07/01 23:21:47 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.2-r9.ebuild,v 1.10 2005/07/08 20:35:36 danarmak Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.3
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
-SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2
+	mirror://kde/security_patches/post-3.3.2-kdelibs-dcop.patch
+	mirror://kde/security_patches/post-3.3.2-kdelibs-idn-2.patch
+	mirror://kde/security_patches/post-3.3.2-kdelibs-kimgio-fixed.diff
+	mirror://kde/security_patches/post-3.3.2-kdelibs-kio.diff
+	mirror://kde/security_patches/post-3.3.2-kdelibs-htmlframes2.patch
+	mirror://kde/security_patches/post-3.3.2-kdelibs-kioslave.patch"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.3"
@@ -43,10 +49,15 @@ DEPEND="${RDEPEND}
 	!kde-misc/kgamma"
 
 src_unpack() {
-	kde_src_unpack
-	epatch ${FILESDIR}/post-3.3.2-kdelibs-kio.diff
-	epatch ${FILESDIR}/post-3.3.2-kdelibs-htmlframes2.patch
-	epatch ${FILESDIR}/post-3.3.2-kdelibs-kioslave.patch
+        unpack $PN-$PV.tar.bz2
+        # This is an ugly hack: it makes base_src_unpack do nothing, but still lets us enjoy
+        # the other things kde_src_unpack does.
+        kde_src_unpack nounpack
+
+	cd $S/kio/kio && patch -p0 <${DISTDIR}/post-3.3.2-kdelibs-kio.diff
+	cd $S
+	epatch ${DISTDIR}/post-3.3.2-kdelibs-htmlframes2.patch
+	epatch ${DISTDIR}/post-3.3.2-kdelibs-kioslave.patch
 
 	# see bug #67748. Patch applied in kdelibs 3.4.x.
 	epatch ${FILESDIR}/${P}-aspell-dir.patch
@@ -61,13 +72,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-ppc64.patch
 
 	# see bug #83814.
-	epatch ${FILESDIR}/post-3.3.2-kdelibs-dcop.patch
+	epatch ${DISTDIR}/post-3.3.2-kdelibs-dcop.patch
 
 	# see bug #81110.
-	epatch ${FILESDIR}/post-3.3.2-kdelibs-idn-2.patch
+	epatch ${DISTDIR}/post-3.3.2-kdelibs-idn-2.patch
 
 	# kimgio input validation errors, see bug #88862
-	cd ${S}/kimgio && patch -p0 < "${FILESDIR}/post-3.3.2-kdelibs-kimgio-2.diff"
+	cd ${S}/kimgio && patch -p0 < "${DISTDIR}/post-3.3.2-kdelibs-kimgio-fixed.diff"
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.3-r7.ebuild,v 1.6 2005/03/21 08:29:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.3-r7.ebuild,v 1.7 2005/07/08 20:35:36 danarmak Exp $
 
 inherit kde eutils
 
@@ -9,7 +9,13 @@ set-kdedir ${PV}
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
-SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2
+	mirror://kde/security_patches/post-3.2.3-kdelibs-kcookiejar.patch
+	mirror://kde/security_patches/post-3.2.3-kdelibs-kstandarddirs.patch
+	mirror://kde/security_patches/post-3.2.3-kdelibs-htmlframes2.patch
+	mirror://kde/security_patches/post-3.2.3-kdelibs-kio.diff
+	mirror://kde/security_patches/post-3.2.3-kdelibs-dcopserver.patch
+	mirror://kde/security_patches/post-3.2.3-kdelibs-kioslave.patch"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.2"
@@ -42,16 +48,20 @@ RDEPEND="${DEPEND}
 	dev-lang/python"
 
 src_unpack() {
-	kde_src_unpack
-	epatch ${FILESDIR}/post-3.2.3-kdelibs-kcookiejar.patch
-	epatch ${FILESDIR}/post-3.2.3-kdelibs-kstandarddirs.patch
+	unpack $PN-$PV.tar.bz2
+	# This is an ugly hack: it makes base_src_unpack do nothing, but still lets us enjoy
+	# the other things kde_src_unpack does.
+	kde_src_unpack nounpack
+	
+	epatch ${DISTDIR}/post-3.2.3-kdelibs-kcookiejar.patch
+	epatch ${DISTDIR}/post-3.2.3-kdelibs-kstandarddirs.patch
 	epatch ${FILESDIR}/post-3.2.3-kdelibs-htmlframes.patch
-	epatch ${FILESDIR}/post-3.2.3-kdelibs-htmlframes2.patch
-	epatch ${FILESDIR}/post-3.2.3-kdelibs-kio.diff
+	epatch ${DISTDIR}/post-3.2.3-kdelibs-htmlframes2.patch
 	epatch ${FILESDIR}/post-3.2.3-kdelibs-khtml.diff
-	epatch ${FILESDIR}/post-3.2.3-kdelibs-kioslave.patch
+	epatch ${DISTDIR}/post-3.2.3-kdelibs-kioslave.patch
 	epatch ${FILESDIR}/kde3-dcopidlng.patch
-	cd ${S}/dcop && patch -p0 < ${FILESDIR}/post-3.2.3-kdelibs-dcopserver.patch
+	cd ${S}/kio && patch -p0 < ${DISTDIR}/post-3.2.3-kdelibs-kio.diff
+	cd ${S}/dcop && patch -p0 < ${DISTDIR}/post-3.2.3-kdelibs-dcopserver.patch
 	cd ${S}
 	make -f admin/Makefile.common || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.1-r1.ebuild,v 1.7 2005/07/08 02:14:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.1-r1.ebuild,v 1.8 2005/07/08 20:35:37 danarmak Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-qtdir 3
@@ -47,7 +47,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_unpack() {
-	kde_src_unpack
+        unpack $PN-$PV.tar.bz2
+        # This is an ugly hack: it makes base_src_unpack do nothing, but still lets us enjoy
+        # the other things kde_src_unpack does.
+        kde_src_unpack nounpack
 
 	epatch "${FILESDIR}/${P}-configure.patch"
 

@@ -1,6 +1,25 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.252 2005/07/08 02:14:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.253 2005/07/08 20:35:36 danarmak Exp $
+
+  08 Jul 2005; Dan Armak <danarmak@gentoo.org>
+  -files/post-3.2.3-kdelibs-dcop.patch,
+  -files/post-3.2.3-kdelibs-dcopserver.patch,
+  -files/post-3.2.3-kdelibs-htmlframes2.patch,
+  -files/post-3.2.3-kdelibs-kcookiejar.patch,
+  -files/post-3.2.3-kdelibs-kio.diff,
+  -files/post-3.2.3-kdelibs-kioslave.patch,
+  -files/post-3.2.3-kdelibs-kstandarddirs.patch,
+  -files/post-3.3.2-kdelibs-dcop.patch,
+  -files/post-3.3.2-kdelibs-idn-2.patch,
+  -files/post-3.3.2-kdelibs-kimgio-2.diff,
+  -files/post-3.3.2-kdelibs-kio.diff,
+  -files/post-3.3.2-kdelibs-kioslave.patch,
+  -files/post-3.4.0-kdelibs-kimgio-2.diff, kdelibs-3.2.3-r7.ebuild,
+  kdelibs-3.2.3-r9.ebuild, kdelibs-3.3.2-r9.ebuild, kdelibs-3.4.0-r2.ebuild,
+  kdelibs-3.4.1-r1.ebuild:
+  Removed from files/ all patches that exist on ftp.kde.org, and pointed the
+  ebuilds there.
 
   08 Jul 2005; Jason Wever <weeve@gentoo.org> kdelibs-3.4.1-r1.ebuild:
   Stable on SPARC.
