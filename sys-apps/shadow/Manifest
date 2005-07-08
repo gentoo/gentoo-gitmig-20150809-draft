@@ -10,7 +10,6 @@ MD5 94f729277cd41cc1d45c29cb7e0d7391 shadow-4.0.10.ebuild 6709
 MD5 ac3c5c29460f248d06d4ef83c96ca912 shadow-4.0.7-r1.ebuild 6602
 MD5 fad39eceb7fd04f2805c6acc16c59d57 shadow-4.0.5-r2.ebuild 5440
 MD5 06049e2959c62c88aee32422a37bf07f shadow-4.0.6-r1.ebuild 5641
-MD5 a9eb42b715cdadd052483348dfa2f29f shadow-4.0.7-r2.ebuild 6995
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 20fd2dc35b8671b91e120b90281b4cf3 files/shadow-4.0.5-hack-X-envvars.patch 521
 MD5 d06833980d79d4f001b6064a3f52f938 files/shadow-4.0.7-iswheel.patch 416
@@ -25,7 +24,6 @@ MD5 391991f50203bd8b7738474051befdee files/shadow-4.0.5-remove-else.patch 531
 MD5 e32464f2df5a85f4f6c67bc78e9a23d1 files/shadow-4.0.7-nscd-socket-path.patch 1081
 MD5 aaf16ddabef285df169e37254b13561c files/shadow-4.0.4.1-selinux.diff 4296
 MD5 fda41657b856ffaeec5a2734b312409b files/shadow-4.0.5-fix-mail-configure.patch 5452
-MD5 46c2be2ed8b26ec007e3ed1f476491d8 files/digest-shadow-4.0.7-r2 66
 MD5 e9ac6a566b65499773437ce98911a046 files/digest-shadow-4.0.6-r1 66
 MD5 201f1321262da41ccd1a0283216ae9a7 files/shadow-4.0.4.1-su-pam_open_session.patch 4886
 MD5 46c2be2ed8b26ec007e3ed1f476491d8 files/digest-shadow-4.0.7 66
@@ -69,7 +67,7 @@ MD5 5bff4f2134b72dabc4afa5bb296e874d files/pam.d/other 142
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzn071ZcsMnZjRyIRAmpwAJ9aRepz6P+c3r160vsZyQ8HhCEBRQCbBAoH
-UU/3ymqzk3dQ2E6G003NU4c=
-=vek/
+iD8DBQFCzn3F1ZcsMnZjRyIRArXSAJ9ockWxlKXxaFS8u/GtuHijRU6sowCfcNt8
+CetSIKw/YUqlhK4oq3eEN+E=
+=FPlL
 -----END PGP SIGNATURE-----
