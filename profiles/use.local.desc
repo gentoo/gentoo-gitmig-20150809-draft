@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1292 2005/07/08 03:55:43 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1293 2005/07/08 19:53:01 rl03 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -871,6 +871,7 @@ sys-power/apcupsd:cgi - Add CGI script support
 sys-power/hibernate-script:logrotate - Use logrotate for rotating logs
 sys-process/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
 sys-process/procps:n32 - Enable n32 ABI support on mips
+www-apps/bugzilla:graphviz - enable graphviz support
 www-apps/dspam-web:cyrus - Build delivery options for cyrus-imapd
 www-apps/dspam-web:exim - Build with delivery options for exim
 www-apps/dspam-web:large-domain - Builds for large domain rather than for domain scale
