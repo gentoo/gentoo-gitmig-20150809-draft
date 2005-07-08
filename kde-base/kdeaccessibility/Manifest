@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d8d24de351d4616955249a64e3071e88 kdeaccessibility-3.3.2.ebuild 364
-MD5 b689ef995481b8fb34343ab49cbfa92d ChangeLog 8286
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 4c552bfdcfb39e62a252ed7a148d9283 ChangeLog 8382
 MD5 5465f58f6ff6e91216286364a7d94a50 kdeaccessibility-3.2.3.ebuild 355
+MD5 d8d24de351d4616955249a64e3071e88 kdeaccessibility-3.3.2.ebuild 364
 MD5 bc4b54a8ea350d619a29e33e327c75ca kdeaccessibility-3.4.0.ebuild 961
-MD5 91d0c5ce2fa03b976c5315fa92ed1544 kdeaccessibility-3.4.1.ebuild 995
-MD5 39b0d45ba034c139eed4599fe33074d0 files/digest-kdeaccessibility-3.3.2 76
+MD5 d11f2ac621afa26d64cdd74e86bd607e kdeaccessibility-3.4.1.ebuild 993
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 eb6b70285e7b5fdaae76722a87edf929 files/digest-kdeaccessibility-3.2.3 76
-MD5 a4a2fe961dac0445daa5ceffc2e2c841 files/kdeaccessibility-3.4.0-noarts.patch 3826
+MD5 39b0d45ba034c139eed4599fe33074d0 files/digest-kdeaccessibility-3.3.2 76
 MD5 9bcbcb53359a15a0ba58301d37537222 files/digest-kdeaccessibility-3.4.0 76
 MD5 a96a1d7a63ac3bfb215cda52b2a9c3e6 files/digest-kdeaccessibility-3.4.1 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCybpAKf2g/qXtneoRAjnAAKCrUr9cXx/GdzLyE9G3EA8aLMfCdACeJTRI
-ZNRipsVWWIqpO4LGzNzP+vQ=
-=vaC5
------END PGP SIGNATURE-----
+MD5 a4a2fe961dac0445daa5ceffc2e2c841 files/kdeaccessibility-3.4.0-noarts.patch 3826
