@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3e9db06b96be80b9500257a94feb42f8 bsh-2.0_beta1-r1.ebuild 1175
 MD5 8bd71a260abed0bb42193acb1ec2c8df bsh-1.3.0.ebuild 870
 MD5 ac6889173fe71cf9e03c2b6d6473f952 bsh-2.0_beta2.ebuild 2051
@@ -14,3 +17,10 @@ MD5 b2c7f4d348c2075960cec1811975f5c9 files/bsh2.0b4-build.patch 1697
 MD5 356a59a8ed4e03783dc4ec5a143ef75f files/bsh2-readline.patch 5428
 MD5 0321e1ba45e1f4f328eae0eecf037105 files/digest-bsh-2.0_beta1-r1 120
 MD5 32448cba89ef5394ffab7a7cdb399ded files/beanshell.desktop 266
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzlt1/rLF9B432nYRAjuXAJ9u3Wn8C0XDNc5KnMDOm9o+LwbncwCeJcNc
+kQZwMGl0SIBBff/bktqNKas=
+=xsZy
+-----END PGP SIGNATURE-----

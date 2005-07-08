@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4.ebuild,v 1.2 2005/06/23 09:04:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4.ebuild,v 1.3 2005/07/08 10:54:24 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="doc jikes junit readline"
 
 DEPEND="${RDEPEND}
-		>=dev-java/ant-core-1.5.4"
+		>=dev-java/ant-core-1.6"
 RDEPEND=">=virtual/jdk-1.4
 	=dev-java/bsf-2.3*
 	=dev-java/servletapi-2.4*
