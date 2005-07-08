@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.149 2005/07/08 02:20:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.150 2005/07/08 05:05:24 hardave Exp $
+
+  08 Jul 2005; Hardave Riar <hardave@gentoo.org> kdenetwork-3.3.2-r1.ebuild:
+  Stable on mips.
 
   08 Jul 2005; Jason Wever <weeve@gentoo.org> kdenetwork-3.4.1.ebuild:
   Stable on SPARC.
