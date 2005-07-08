@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.92 2005/07/08 20:15:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.93 2005/07/08 20:41:21 killerfox Exp $
+
+  08 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  screen-4.0.2-r4.ebuild:
+  Stable on hppa.
 
   08 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   screen-4.0.2-r4.ebuild:
