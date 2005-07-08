@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.52 2005/07/05 20:51:39 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.53 2005/07/08 11:50:05 slarti Exp $
+
+*msmtp-1.4.2-r1 (08 Jul 2005)
+*msmtp-1.4.2 (08 Jul 2005)
+
+  08 Jul 2005; Tom Martin <slarti@gentoo.org> +msmtp-1.4.2.ebuild,
+  +msmtp-1.4.2-r1.ebuild:
+  Version bump, adds NLS support. Two variants, as ever, one for old-style
+  mailwrapper and -r1 for new mailer.eclass support.
 
   05 Jul 2005; Tom Martin <slarti@gentoo.org> msmtp-1.4.1.ebuild,
   msmtp-1.4.1-r1.ebuild:
