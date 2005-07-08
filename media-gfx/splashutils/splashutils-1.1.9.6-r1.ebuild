@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6-r1.ebuild,v 1.5 2005/07/07 19:31:54 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6-r1.ebuild,v 1.6 2005/07/08 23:31:33 spock Exp $
 
 inherit multilib linux-mod
 
@@ -175,7 +175,7 @@ pkg_postinst() {
 	echo ""
 	ewarn "Due to a change in the splash protocol you will have to rebuild"
 	ewarn "all initrds created with splashutils < 1.1.9. This can be done"
-	ewarn "with the splash_geninitramsfs script."
+	ewarn "with the splash_geninitramfs script."
 	echo ""
 	ewarn "It is required that you add 'CONSOLE=/dev/tty1', to make sure all"
 	ewarn "init messages are printed to the first tty, and not the foreground one."
