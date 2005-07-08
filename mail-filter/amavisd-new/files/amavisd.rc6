@@ -1,7 +1,8 @@
 #!/sbin/runscript
 
 depend() {
-	need net logger
+	need net
+	use logger
         before mta
 }
 
