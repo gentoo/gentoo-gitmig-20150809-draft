@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/linux32
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux32/ChangeLog,v 1.4 2004/09/05 08:19:03 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux32/ChangeLog,v 1.5 2005/07/08 04:06:59 kumba Exp $
+
+*linux32-2.0 (07 Jul 2005)
+
+  07 Jul 2005; Joshua Kinard <kumba@gentoo.org> metadata.xml,
+  +linux32-2.0.ebuild:
+  Literal re-write of linux32. Based off of a patch from debian's version, this
+  works on multiple archs. Deprecates sys-devel/sparc32 and sys-devel/mips32,
+  and avoids the need for other such variants. Due to the changes, amd64 and x86
+  keywords were dropped to avoid problems. sparc, mips, ppc, and ppc64 are the
+  initial keywords for this newer revision.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
