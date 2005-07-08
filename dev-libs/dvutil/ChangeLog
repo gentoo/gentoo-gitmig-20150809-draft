@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvutil
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.18 2005/05/20 12:57:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.19 2005/07/08 14:46:15 ka0ttic Exp $
+
+  08 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> dvutil-0.13.15-r2.ebuild:
+  Stable on x86.
 
 *dvutil-0.13.15-r2 (20 May 2005)
 

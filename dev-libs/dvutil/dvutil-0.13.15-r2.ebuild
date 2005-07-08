@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.13.15-r2.ebuild,v 1.1 2005/05/20 12:57:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.13.15-r2.ebuild,v 1.2 2005/07/08 14:46:15 ka0ttic Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvutil/download/dvutil-${P
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~ppc ~sparc x86"
 IUSE="doc"
 
 src_unpack() {

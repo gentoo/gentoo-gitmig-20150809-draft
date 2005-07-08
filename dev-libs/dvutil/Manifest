@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 5fd0fb969fe181169f3bacc8ea0238ec dvutil-0.13.13.ebuild 874
 MD5 36f32cf88135aa428b40685b955c8c3a dvutil-0.13.15.ebuild 748
-MD5 7b61baa2ba99a684ed837d763b3279f1 ChangeLog 3106
+MD5 b64072936d4b5351fb7e67b4f787f81f ChangeLog 3199
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 2f55a96b9d2f81071c659b3afef35ae8 dvutil-0.13.15-r2.ebuild 997
+MD5 672bc44420f28ed3674eb16ac7221b16 dvutil-0.13.15-r2.ebuild 996
 MD5 c811d8de8b8fdf0d0524c1e57e637129 files/digest-dvutil-0.13.13 66
 MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15 66
 MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15-r2 66
@@ -14,7 +14,7 @@ MD5 fe20149f0cdfcf848443da51c71bb4f0 files/dvutil-0.13.15-fix-underquoted-m4.dif
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjd8iEZCkKN40op4RAjDrAJ9Eul5bTYEGkHXJLY36IviQ3ZzMoQCglb3Q
-NVPg3tTQr8fpQUvgReL2wHU=
-=WVIt
+iD8DBQFCzpIHEZCkKN40op4RAuEhAKCy2BnSQOvOaor3bfcj9fu5dS01qgCgiCwj
+pybJbmrmeNbPeJmz3i+w10k=
+=SNbY
 -----END PGP SIGNATURE-----
