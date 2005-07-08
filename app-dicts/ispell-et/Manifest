@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2605c486aac6c43ec803e3bcb4a526cb ispell-et-20030602.ebuild 766
-MD5 ac29282295621d5c3e8429ffabb1dccb ChangeLog 344
+MD5 3cf37eb3efd90a7e7023716858d31c33 ChangeLog 431
+MD5 3dc5c8445c260c73dabd447fcf587a8a ispell-et-20030602.ebuild 773
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
 MD5 0a78066ee8f55ca3561c72ccf4fdf732 files/digest-ispell-et-20030602 116
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCog5/I1lqEGTUzyQRAhqOAJ9jCyr/VsZxYxwej5H1parYxZxRiwCeJsRH
-t6r94tRwPWCFYiqLoY59Z50=
-=nQoK
------END PGP SIGNATURE-----
