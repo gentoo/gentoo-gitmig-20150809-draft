@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/mpqc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.5 2005/06/11 16:24:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.6 2005/07/08 05:21:12 spyderous Exp $
 
   11 Jun 2005; Markus Rothe <corsair@gentoo.org> mpqc-2.2.3.ebuild:
   Added ~ppc64 and solved bug #62124: ppc64 needs --enable-shared
@@ -14,8 +14,6 @@
   24 May 2005; Donnie Berkholz <spyderous@gentoo.org>; +mpqc-2.2.3.ebuild:
   (#92179) Bump. Fix up indentation, use '-i' with sed instead of moving files
   around, change .gz to .bz2 for distfiles. Add threads USE flag.
-
-*mpqc-2.2.2 (24 Dec 2004)
 
   24 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
   +mpqc-2.2.2-r1.ebuild, +mpqc-2.2.2.ebuild:
