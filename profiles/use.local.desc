@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1287 2005/07/07 22:12:19 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1288 2005/07/08 01:54:24 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -245,7 +245,6 @@ dev-libs/wx-xmingw:debug_gdb - Enable gdb debugging
 dev-libs/wx-xmingw:monolithic - Build a monolithic lib
 dev-libs/wx-xmingw:mslu - Enable mslu support
 dev-libs/wx-xmingw:shared - Enable shared libs
-dev-libs/wxbase:dmalloc - Enable support for the Debug Malloc Library
 dev-lisp/abcl-cvs:jpty - Enable PTY support
 dev-lisp/abcl-cvs:libabcl - Enable ^C handler (from JNI)
 dev-lisp/cl-sql:sqlite3 - build support for sqlite3
@@ -332,10 +331,6 @@ games-mud/mmucl:mccp - adds support for the Mud Client Compression Protocol
 games-rpg/eternal-lands:mapeditor - Install the mapeditor as well as the game
 games-rpg/eternal-lands:nomusic - Disable install of music files
 games-rpg/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
-games-server/halflife-metamod:src - use the source, not the binary install
-games-server/halflife-statsme:nocstrike - no counterstrike
-games-server/halflife-statsme:nodod - no day of defeat
-games-server/halflife-statsme:notfc - no team fortress classic
 games-simulation/openttd:timidity - Add sound support (timidity)
 games-strategy/freecraft-fcmp:music - Installs optional music data
 games-strategy/freelords:editor - Installs optional map editor
@@ -511,9 +506,6 @@ media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), 
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/timidity++:ao - Use libao for sound playback
 media-tv/freevo:matrox - Enable output support on Matrox cards
-media-tv/mythfrontend:cle266 - Enable viaslice hardware MPEG decoding support
-media-tv/mythfrontend:lcd - Enable LCD display support using lcdproc
-media-tv/mythfrontend:nvidia - Enable nVidia XvMC decoding support
 media-tv/mythtv:cle266 - Enable viaslice hardware MPEG decoding support
 media-tv/mythtv:frontendonly - Only builds the Frontend component rather then the whole suite
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
@@ -781,7 +773,6 @@ net-proxy/squid:logrotate - Use logrotate for rotating logs
 net-proxy/squid:underscores - Enables support for domain names containing underscores
 net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
-net-servers/fnord:diet - Compile and link with dietlibc
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/ndiswrapper:4kstacks - Allow the use of 4kstacks in ndiswrapper for some users
 net-wireless/wepattack:john - Build with johntheripper support
@@ -900,7 +891,6 @@ sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/unionfs:vserver - Enable vserver kernel patches support
 sys-kernel/ck-sources:ck-server - Tune the kernel for servers
-sys-kernel/development-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/genkernel:bootsplash - Installs bootsplash support if you request it and it is not already available.
 sys-kernel/genkernel:ibm - Install IBM pSeries config as default instead of G5 config.
 sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
@@ -1030,7 +1020,6 @@ x11-terms/rxvt-unicode:xgetdefault - Enable resources via X instead of rxvt smal
 x11-terms/rxvt:linuxkeys - Define LINUX_KEYS (changes Home/End key)
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/xterm:toolbar - Enable the xterm toolbar to be built.
-x11-themes/plastique:sse2 - Enables sse2 support.
 x11-themes/polymer:sse2 - Enables sse2 support.
 x11-wm/enlightenment:nothemes - Don't include the standard E themes
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
