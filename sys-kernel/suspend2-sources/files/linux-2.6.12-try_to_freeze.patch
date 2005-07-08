@@ -1,0 +1,84 @@
+diff -urp linux-2.6.12/arch/arm/kernel/signal.c linux-2.6.12-try_to_freeze/arch/arm/kernel/signal.c
+--- linux-2.6.12/arch/arm/kernel/signal.c	2005-06-17 21:48:29.000000000 +0200
++++ linux-2.6.12-try_to_freeze/arch/arm/kernel/signal.c	2005-07-08 19:48:20.000000000 +0200
+@@ -688,7 +688,7 @@ static int do_signal(sigset_t *oldset, s
+ 	if (!user_mode(regs))
+ 		return 0;
+ 
+-	if (try_to_freeze(0))
++	if (try_to_freeze())
+ 		goto no_signal;
+ 
+ 	if (current->ptrace & PT_SINGLESTEP)
+diff -urp linux-2.6.12/arch/mips/kernel/irixsig.c linux-2.6.12-try_to_freeze/arch/mips/kernel/irixsig.c
+--- linux-2.6.12/arch/mips/kernel/irixsig.c	2005-06-17 21:48:29.000000000 +0200
++++ linux-2.6.12-try_to_freeze/arch/mips/kernel/irixsig.c	2005-07-08 19:48:27.000000000 +0200
+@@ -178,7 +178,7 @@ asmlinkage int do_irix_signal(sigset_t *
+ 	if (!user_mode(regs))
+ 		return 1;
+ 
+-	if (try_to_freeze(0))
++	if (try_to_freeze())
+ 		goto no_signal;
+ 
+ 	if (!oldset)
+diff -urp linux-2.6.12/arch/mips/kernel/signal32.c linux-2.6.12-try_to_freeze/arch/mips/kernel/signal32.c
+--- linux-2.6.12/arch/mips/kernel/signal32.c	2005-06-17 21:48:29.000000000 +0200
++++ linux-2.6.12-try_to_freeze/arch/mips/kernel/signal32.c	2005-07-08 19:48:28.000000000 +0200
+@@ -774,7 +774,7 @@ int do_signal32(sigset_t *oldset, struct
+ 	if (!user_mode(regs))
+ 		return 1;
+ 
+-	if (try_to_freeze(0))
++	if (try_to_freeze())
+ 		goto no_signal;
+ 
+ 	if (!oldset)
+diff -urp linux-2.6.12/arch/mips/kernel/signal.c linux-2.6.12-try_to_freeze/arch/mips/kernel/signal.c
+--- linux-2.6.12/arch/mips/kernel/signal.c	2005-06-17 21:48:29.000000000 +0200
++++ linux-2.6.12-try_to_freeze/arch/mips/kernel/signal.c	2005-07-08 19:48:27.000000000 +0200
+@@ -457,7 +457,7 @@ static int do_signal(sigset_t *oldset, s
+ 	if (!user_mode(regs))
+ 		return 1;
+ 
+-	if (try_to_freeze(0))
++	if (try_to_freeze())
+ 		goto no_signal;
+ 
+ 	if (!oldset)
+diff -urp linux-2.6.12/arch/sh/kernel/signal.c linux-2.6.12-try_to_freeze/arch/sh/kernel/signal.c
+--- linux-2.6.12/arch/sh/kernel/signal.c	2005-06-17 21:48:29.000000000 +0200
++++ linux-2.6.12-try_to_freeze/arch/sh/kernel/signal.c	2005-07-08 19:48:19.000000000 +0200
+@@ -579,7 +579,7 @@ int do_signal(struct pt_regs *regs, sigs
+ 	if (!user_mode(regs))
+ 		return 1;
+ 
+-	if (try_to_freeze(0))
++	if (try_to_freeze())
+ 		goto no_signal;
+ 
+ 	if (!oldset)
+diff -urp linux-2.6.12/arch/sh64/kernel/signal.c linux-2.6.12-try_to_freeze/arch/sh64/kernel/signal.c
+--- linux-2.6.12/arch/sh64/kernel/signal.c	2005-06-17 21:48:29.000000000 +0200
++++ linux-2.6.12-try_to_freeze/arch/sh64/kernel/signal.c	2005-07-08 19:48:29.000000000 +0200
+@@ -697,7 +697,7 @@ int do_signal(struct pt_regs *regs, sigs
+ 	if (!user_mode(regs))
+ 		return 1;
+ 
+-	if (try_to_freeze(0))
++	if (try_to_freeze())
+ 		goto no_signal;
+ 
+ 	if (!oldset)
+diff -urp linux-2.6.12/fs/jffs2/background.c linux-2.6.12-try_to_freeze/fs/jffs2/background.c
+--- linux-2.6.12/fs/jffs2/background.c	2005-06-17 21:48:29.000000000 +0200
++++ linux-2.6.12-try_to_freeze/fs/jffs2/background.c	2005-07-08 19:48:11.000000000 +0200
+@@ -92,7 +92,7 @@ static int jffs2_garbage_collect_thread(
+ 			schedule();
+ 		}
+ 
+-		if (try_to_freeze(0))
++		if (try_to_freeze())
+ 			continue;
+ 
+ 		cond_resched();
