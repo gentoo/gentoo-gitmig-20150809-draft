@@ -1,0 +1,36 @@
+Fix EPIPE failure when writing to nscd, bug #80413
+
+--- shadow-4.0.7/lib/nscd.c	2005-07-08 14:59:49.000000000 +0200
++++ shadow-4.0.7.az/lib/nscd.c	2005-07-08 14:59:22.000000000 +0200
+@@ -71,6 +71,7 @@
+ {
+ 	int sock = nscd_open_socket ();
+ 	request_header req;
++	struct iovec iov[2];
+ 	ssize_t nbytes;
+ 
+ 	if (sock == -1)
+@@ -78,15 +79,15 @@
+ 
+ 	req.version = NSCD_VERSION;
+ 	req.type = INVALIDATE;
+-	req.key_len = strlen (service) + 1;
+-	nbytes = write (sock, &req, sizeof (request_header));
+-	if (nbytes != sizeof (request_header)) {
+-		close (sock);
+-		return -1;
+-	}
++	req.key_len = strlen(service);
++
++	iov[0].iov_base = &req;
++	iov[0].iov_len = sizeof (req);
++	iov[1].iov_base = service;
++	iov[1].iov_len = req.key_len;
+ 
+-	nbytes = write (sock, (void *) service, req.key_len);
++	nbytes = writev(sock, iov, 2);
+ 
+ 	close (sock);
+-	return (nbytes != req.key_len ? (-1) : 0);
++	return (nbytes != iov[0].iov_len + iov[1].iov_len ? (-1) : 0);
+ }

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.107 2005/07/07 19:49:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.108 2005/07/08 13:16:40 azarah Exp $
+
+*shadow-4.0.7-r3 (08 Jul 2005)
+
+  08 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/shadow-4.0.7-nscd-EPIPE-failure.patch,
+  +files/shadow-4.0.7-nscd-socket-path.patch, shadow-4.0.7-r3.ebuild:
+  Fix EPIPE when nscd is used, bug #80413.
 
   07 Jul 2005; Markus Rothe <corsair@gentoo.org> shadow-4.0.7-r2.ebuild:
   Stable on ppc64
