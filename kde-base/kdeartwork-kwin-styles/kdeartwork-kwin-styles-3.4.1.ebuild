@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kwin-styles/kdeartwork-kwin-styles-3.4.1.ebuild,v 1.6 2005/07/01 23:41:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kwin-styles/kdeartwork-kwin-styles-3.4.1.ebuild,v 1.7 2005/07/08 03:26:34 weeve Exp $
 
 KMMODULE=kwin-styles
 KMNAME=kdeartwork
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Window styles for kde"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 OLDDEPEND="~kde-base/kwin-$PV"
 DEPEND="

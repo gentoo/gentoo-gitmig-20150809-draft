@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.13 2005/07/02 01:27:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.14 2005/07/08 03:14:01 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kdesktop-3.4.1.ebuild:
+  Stable on SPARC.
 
   02 Jul 2005; Lars Weiler <pylon@gentoo.org> kdesktop-3.4.1.ebuild:
   Stable on ppc; Bug #97544.

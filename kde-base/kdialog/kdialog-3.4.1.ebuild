@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/kdialog-3.4.1.ebuild,v 1.7 2005/07/01 21:49:17 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/kdialog-3.4.1.ebuild,v 1.8 2005/07/08 03:07:06 weeve Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDialog can be used to show nice dialog boxes from shell scripts"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/eject"

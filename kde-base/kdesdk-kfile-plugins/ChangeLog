@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-kfile-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kfile-plugins/ChangeLog,v 1.10 2005/07/01 12:45:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kfile-plugins/ChangeLog,v 1.11 2005/07/08 05:12:19 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org>
+  kdesdk-kfile-plugins-3.4.1.ebuild:
+  Stable on SPARC.
 
   01 Jul 2005; Markus Rothe <corsair@gentoo.org>
   kdesdk-kfile-plugins-3.4.1.ebuild:

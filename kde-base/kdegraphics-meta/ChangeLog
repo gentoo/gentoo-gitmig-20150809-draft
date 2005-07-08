@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.15 2005/07/02 01:18:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.16 2005/07/08 04:07:15 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kdegraphics-meta-3.4.1.ebuild:
+  Stable on SPARC.
 
   02 Jul 2005; Lars Weiler <pylon@gentoo.org> kdegraphics-meta-3.4.1.ebuild:
   Stable on ppc; Bug #97544.

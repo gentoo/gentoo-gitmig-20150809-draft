@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.12 2005/07/01 23:36:14 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.13 2005/07/08 04:48:07 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kdetoys-meta-3.4.1.ebuild:
+  Stable on SPARC.
 
   01 Jul 2005; Lars Weiler <pylon@gentoo.org> kdetoys-meta-3.4.1.ebuild:
   Stable on ppc; Bug #97544.

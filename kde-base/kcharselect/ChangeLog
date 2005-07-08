@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.10 2005/07/01 22:43:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.11 2005/07/08 04:51:16 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kcharselect-3.4.1.ebuild:
+  Stable on SPARC.
 
   01 Jul 2005; Lars Weiler <pylon@gentoo.org> kcharselect-3.4.1.ebuild:
   Stable on ppc; Bug #97544.

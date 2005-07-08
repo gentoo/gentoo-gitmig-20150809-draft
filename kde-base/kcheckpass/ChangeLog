@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.10 2005/07/02 01:24:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.11 2005/07/08 03:08:45 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kcheckpass-3.4.1.ebuild:
+  Stable on SPARC.
 
   02 Jul 2005; Lars Weiler <pylon@gentoo.org> kcheckpass-3.4.1.ebuild:
   Stable on ppc; Bug #97544.

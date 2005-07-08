@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kate-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate-plugins/ChangeLog,v 1.13 2005/07/01 23:23:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate-plugins/ChangeLog,v 1.14 2005/07/08 05:04:55 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kate-plugins-3.4.1.ebuild:
+  Stable on SPARC.
 
   01 Jul 2005; Lars Weiler <pylon@gentoo.org> kate-plugins-3.4.1.ebuild:
   Stable on ppc; Bug #97544.

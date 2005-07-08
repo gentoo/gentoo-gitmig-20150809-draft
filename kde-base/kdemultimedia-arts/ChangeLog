@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-arts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/ChangeLog,v 1.12 2005/07/01 21:38:33 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/ChangeLog,v 1.13 2005/07/08 04:09:25 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org>
+  kdemultimedia-arts-3.4.1.ebuild:
+  Stable on SPARC.
 
   01 Jul 2005; Lars Weiler <pylon@gentoo.org>
   kdemultimedia-arts-3.4.1.ebuild:

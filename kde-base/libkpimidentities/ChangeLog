@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkpimidentities
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimidentities/ChangeLog,v 1.12 2005/07/01 21:27:30 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimidentities/ChangeLog,v 1.13 2005/07/08 04:31:21 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org>
+  libkpimidentities-3.4.1.ebuild:
+  Stable on SPARC.
 
   01 Jul 2005; Lars Weiler <pylon@gentoo.org>
   libkpimidentities-3.4.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kresources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.13 2005/07/01 21:31:07 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.14 2005/07/08 04:34:06 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org>
+  kdepim-kresources-3.4.1.ebuild:
+  Stable on SPARC.
 
   01 Jul 2005; Lars Weiler <pylon@gentoo.org>
   kdepim-kresources-3.4.1.ebuild:

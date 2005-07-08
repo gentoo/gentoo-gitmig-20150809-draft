@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.19 2005/07/03 18:28:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.20 2005/07/08 02:57:29 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kcontrol-3.4.1-r1.ebuild:
+  Stable on SPARC.
 
   03 Jul 2005; Dan Armak <danarmak@gentoo.org> kcontrol-3.4.1-r1.ebuild:
   Add missing dep on khotkeys, fixes bug 97773. Thanks to Lukas Turek for
