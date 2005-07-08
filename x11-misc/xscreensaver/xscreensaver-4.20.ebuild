@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.20.ebuild,v 1.14 2005/07/02 01:10:36 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.20.ebuild,v 1.15 2005/07/08 11:46:15 agriffis Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="pam kerberos krb4 gtk gnome opengl jpeg xinerama offensive motif"
+IUSE="gnome gtk jpeg kde kerberos krb4 motif nls offensive opengl pam xinerama"
 
 DESCRIPTION="a modular screensaver for X11"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"

@@ -1,29 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 ae8ca0e3d266edb7a2b23ad4ffb0dd61 xscreensaver-4.20.ebuild 4845
+MD5 f40f5a4edc3efd4821e8c9b8f6136d5f xscreensaver-4.20-r1.ebuild 4473
 MD5 d4d67c63edc11cff3dc90a71183554d2 ChangeLog 16618
+MD5 7afe354fd3b984447cb3c38eb301fdfd xscreensaver-4.22-r2.ebuild 5479
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 9b75f02ad6d2e359cab3b1d17412dacd xscreensaver-4.20-r1.ebuild 4462
-MD5 2005bbcde16751631e16bd5d76b4da2b xscreensaver-4.20.ebuild 4836
-MD5 425c5a33e5ac4d1106c01a2691e735c1 xscreensaver-4.22-r2.ebuild 5522
 MD5 64d504c9ea04705ce78f9ffb87c96321 files/digest-xscreensaver-4.20 70
-MD5 64d504c9ea04705ce78f9ffb87c96321 files/digest-xscreensaver-4.20-r1 70
-MD5 8bd9730fb1f84b69efac29fab28d0db2 files/xscreensaver-4.14-analogtv_tmp.patch 419
-MD5 23c5d8085eb70d6dc6168857a31cc284 files/xscreensaver-4.14-fortune.patch 348
-MD5 18988e2c62fe964e00bc98c251dba3ee files/xscreensaver-4.14-icc.patch 8126
-MD5 cd227d954dff63ea80266d1db213b15f files/xscreensaver-4.16-nsfw.patch 1586
 MD5 deb323da3671e7d537a7d3973e7304ba files/xscreensaver-4.20-norpm.patch 1287
+MD5 f5dcb5acf99e374e9f99a95890b8eb0f files/xscreensaver-4.22-configure.patch 1592
+MD5 0802ff58ba46dfdc9d155798ef4936e5 files/xscreensaver-4.22-settings.patch 1766
+MD5 8bd9730fb1f84b69efac29fab28d0db2 files/xscreensaver-4.14-analogtv_tmp.patch 419
 MD5 a719b7c6d25874293342a3f22d69d8e4 files/xscreensaver-4.21-norpm.patch 1290
 MD5 d51a7f89b409fa5d58c228856b927993 files/xscreensaver-4.21-settings.patch 1162
-MD5 f5dcb5acf99e374e9f99a95890b8eb0f files/xscreensaver-4.22-configure.patch 1592
+MD5 18988e2c62fe964e00bc98c251dba3ee files/xscreensaver-4.14-icc.patch 8126
 MD5 e6a4444e1548adf83be31a933c5e19bf files/xscreensaver-4.22-interaggregate.patch 542
-MD5 0802ff58ba46dfdc9d155798ef4936e5 files/xscreensaver-4.22-settings.patch 1766
+MD5 64d504c9ea04705ce78f9ffb87c96321 files/digest-xscreensaver-4.20-r1 70
 MD5 24bb039b898635c9224f9866f29757ed files/digest-xscreensaver-4.22-r2 70
+MD5 23c5d8085eb70d6dc6168857a31cc284 files/xscreensaver-4.14-fortune.patch 348
+MD5 cd227d954dff63ea80266d1db213b15f files/xscreensaver-4.16-nsfw.patch 1586
 MD5 6eb40b28a36f889d0f1919cdbf160ef7 files/pam.d/xscreensaver 79
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzGV0l5AvwDPiUowRAqCQAKDT1lGbX10GRMClaz9uwMzEsGgrWwCgwp3d
-va38OtkprWB8xaLyK3Dxxo0=
-=vKxu
+iD8DBQFCzmeZBXaUFmZvwyMRAsHmAJ9mqs9sEbyoaMsJgiT+ng5e9GRhJQCg3go3
+wwDpVONMjSeFElPlRMBBAx4=
+=3B2H
 -----END PGP SIGNATURE-----

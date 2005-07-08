@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r2.ebuild,v 1.3 2005/07/06 23:12:25 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r2.ebuild,v 1.4 2005/07/08 11:46:15 agriffis Exp $
 
 inherit eutils flag-o-matic pam
 
-IUSE="gtk jpeg kerberos krb4 motif new-login nls offensive opengl pam xinerama"
+IUSE="gnome gtk jpeg kde kerberos krb4 motif new-login nls offensive opengl pam xinerama"
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -78,7 +78,7 @@ pkg_setup() {
 	fi
 	if use arm && use new-login; then
 		ewarn "gnome-base/gdm is required for USE=\"new-login\", and is not"
-		ewarn "available for the amd platform. please disable this use flag"
+		ewarn "available for the arm platform. please disable this use flag"
 		die "new-login USE is not supported on arm"
 	fi
 }
@@ -169,8 +169,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "the gnome USE flag has been dropped"
-	einfo ""
 	if ! use new-login; then
 		einfo "You have chosen to not use the new-login USE flag."
 		einfo "This is a new USE flag which enables individuals to"
