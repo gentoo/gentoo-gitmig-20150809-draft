@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-app_conference
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/ChangeLog,v 1.1 2005/05/07 13:26:05 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/ChangeLog,v 1.2 2005/07/08 20:41:54 dholm Exp $
+
+  08 Jul 2005; David Holm <dholm@gentoo.org>
+  asterisk-app_conference-0.0.1_pre20050506.ebuild:
+  Added to ~ppc.
 
 *asterisk-app_conference-0.0.1_pre20050506 (06 May 2005)
 

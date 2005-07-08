@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_icd/asterisk-app_icd-1.0.0.ebuild,v 1.3 2005/07/01 19:46:09 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_icd/asterisk-app_icd-1.0.0.ebuild,v 1.4 2005/07/08 20:46:16 dholm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE="debug"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="sys-libs/glibc
 	>=net-misc/asterisk-1.0.7-r1
