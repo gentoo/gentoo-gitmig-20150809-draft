@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.24 2005/07/08 01:49:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.25 2005/07/08 20:58:00 killerfox Exp $
+
+  08 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  linux-logo-4.12.ebuild:
+  Stable on hppa.
 
   08 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   linux-logo-4.12.ebuild:
