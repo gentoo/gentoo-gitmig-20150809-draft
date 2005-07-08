@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.8.ebuild,v 1.1 2005/04/28 21:29:12 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.8-r2.ebuild,v 1.1 2005/07/08 10:11:06 wschlich Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,6 +22,8 @@ DEPEND="!net-im/jabber-server
 	berkdb? ( >=sys-libs/db-4.1.25 )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )"
+RDEPEND="${DEPEND}
+	dev-lang/perl" # for the /usr/bin/jabberd wrapper script
 
 pkg_setup() {
 	if ! use postgres && ! use mysql && ! use berkdb;  then
@@ -37,6 +39,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch "${FILESDIR}/${P}-FindBin.patch"
 }
 
 src_compile() {
