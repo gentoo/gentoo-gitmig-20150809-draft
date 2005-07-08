@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.51 2005/07/07 02:11:39 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.52 2005/07/08 17:57:21 gustavoz Exp $
+
+  08 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> xfce4-4.2.2.ebuild:
+  Stable on sparc
 
   07 Jul 2005; Daniel Ostrow <dostrow@gentoo.org> xfce4-4.2.2.ebuild:
   Stable on ppc and ppc64.
