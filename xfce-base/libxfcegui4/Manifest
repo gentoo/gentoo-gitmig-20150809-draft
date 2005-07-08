@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4c0aa9e2cb3327324da76d4c3aee9bce libxfcegui4-4.2.1.ebuild 419
 MD5 92ca7783a0021474cc3d9994447248ee libxfcegui4-4.2.0.ebuild 412
 MD5 846b4d926377f6ca5f271e125b35b394 libxfcegui4-4.0.6.ebuild 945
 MD5 f33a0e7a4a49579f23c56931969c2b00 ChangeLog 6223
-MD5 cd2733076e0c99c1d7c95759022d8f08 libxfcegui4-4.2.2.ebuild 417
+MD5 fd3506a05014aad925049d2888f89331 libxfcegui4-4.2.2.ebuild 414
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 022f596f0e15b93b536481bfbb826b86 files/digest-libxfcegui4-4.0.6 69
 MD5 ed38cfbda6391873939d9e0943cca030 files/digest-libxfcegui4-4.2.0 70
 MD5 d07a25a965ca8315611ea916b2d60f3d files/digest-libxfcegui4-4.2.1 69
 MD5 daed0f9e9ebfcfd09728f348e74eb1b2 files/digest-libxfcegui4-4.2.2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzJa4BXaUFmZvwyMRAloEAJwK5Y76nzfU/6IOQ8JRUoHO323JPwCfSqEM
-OfcJ2NLNGDsM3d+HKYkyeMw=
-=PIDr
------END PGP SIGNATURE-----
