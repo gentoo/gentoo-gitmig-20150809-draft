@@ -1,4 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.31 2005/07/05 13:06:51 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.32 2005/07/08 04:59:45 hardave Exp $
+
+# Hardave Riar <hardave@gentoo.org>
+# Temporarily masking wifi until I can test it
+# Preventing kde from going stable
+wifi
 
 # Henrik Brix Andersen <brix@gentoo.org>
 # According to the mips herd, we currently have no way of testing
