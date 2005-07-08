@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 963c13011e6798504337e7e9a45097bd libxslt-1.1.13-r1.ebuild 1544
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f102c3ff0322525b382f133a44e7b67a libxslt-1.1.14.ebuild 1490
@@ -8,3 +11,10 @@ MD5 0036be4a6749d5a3fc499f2732f59031 files/digest-libxslt-1.1.12 68
 MD5 ba955ecf3fb1912956c89db250c6e233 files/libxslt-1.1.13-xslt.patch 819
 MD5 a772cd7aafe8f9e0fd59de02b2ea2e85 files/libxslt.m4-libxslt-1.1.8.patch 1292
 MD5 0c18eda60de8886c97c58c7a17596c3d files/digest-libxslt-1.1.14 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzekHgIKl8Uu19MoRAmdSAJ0ZMBsuwJ6lB30HMv3I94RAcS3HXQCfRvKy
+mzUrzSJdTjoXGpsR+PQMHUA=
+=MZ21
+-----END PGP SIGNATURE-----
