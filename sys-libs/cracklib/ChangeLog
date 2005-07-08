@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.72 2005/07/07 19:22:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.73 2005/07/08 18:21:49 gustavoz Exp $
+
+  08 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  cracklib-2.8.3-r1.ebuild:
+  Stable on sparc
 
   07 Jul 2005; Markus Rothe <corsair@gentoo.org> cracklib-2.8.3-r1.ebuild:
   Stable on ppc64
