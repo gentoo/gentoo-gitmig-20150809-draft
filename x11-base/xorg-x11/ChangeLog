@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.427 2005/07/08 14:28:06 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.428 2005/07/08 22:26:21 spyderous Exp $
+
+  08 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r2.ebuild, xorg-x11-6.8.99.14.ebuild:
+  Fileset 0.6 for 6.8.2-r2, fileset 0.2 for 6.8.99.14. (#83680) Add a change
+  that's mostly useful on LiveCD's: Adding 'nox' to the boot prompt will cause
+  the xdm init script to skip starting a login manager. This will allow
+  selection between X and CLI-only on X-enabled LiveCD's, as well as serving a
+  rescue function for broken X installations.
 
   08 Jul 2005; Ferris McCormick <fmccor@gentoo.org>
   xorg-x11-6.8.2-r2.ebuild:
