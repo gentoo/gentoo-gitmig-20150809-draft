@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.10.0.ebuild,v 1.8 2005/07/02 15:07:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.10.0.ebuild,v 1.9 2005/07/08 11:24:07 leonardop Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Gnome session manager"
 HOMEPAGE="http://www.gnome.org/"
+SRC_URI="${SRC_URI} mirror://gentoo/gentoo-splash.png"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
@@ -34,7 +35,7 @@ USE_DESTDIR="1"
 
 src_unpack() {
 
-	unpack ${A}
+	unpack ${P}.tar.bz2
 	cd ${S}
 
 	# patch for logout dialog, see bug # 30230 and dups
@@ -57,6 +58,6 @@ src_install() {
 
 	# Our own splash for world domination
 	insinto /usr/share/pixmaps/splash/
-	doins ${FILESDIR}/gentoo-splash.png
+	doins ${DISTDIR}/gentoo-splash.png
 
 }
