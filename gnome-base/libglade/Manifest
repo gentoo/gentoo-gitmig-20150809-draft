@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a9cb8bca42de24626f531a5b07868233 libglade-2.4.0.ebuild 1276
 MD5 ca224404a556a37ff9ea6d73cbcac9ab libglade-2.5.0.ebuild 1357
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -12,3 +15,10 @@ MD5 225998fcdfb3607e5908dfb6178d849b files/digest-libglade-2.5.0 67
 MD5 6876e5db1b80846b82a289a82b44408b files/digest-libglade-0.17-r6 65
 MD5 ff81ecaaaec02a4578b6c4ee3234f2c2 files/digest-libglade-2.5.1 67
 MD5 f9bf50cb0d304288f8fe07db3385bdeb files/Makefile.in.am-2.4.2-xmlcatalog.patch 1331
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzeuqgIKl8Uu19MoRAjmOAJ0e0NBS/QUZU9EVaXD5zlNOm6GXwACfbzKM
+33PlkWH+ft+dekd948MfBNA=
+=34t8
+-----END PGP SIGNATURE-----
