@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4164 2005/07/07 23:09:19 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4165 2005/07/08 08:58:02 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -83,7 +83,7 @@ net-p2p/mhxd
 net-im/kpopper
 
 # Diego Pettenò <flameeyes@gentoo.org> (27 Jun 2005)
-# Mask all 1.3_beta versions.
+# Upstream beta versions, not for final users.
 =media-sound/amarok-1.3_beta*
 
 # Thierry Carrez <koon@gentoo.org> (27 Jun 2005)
