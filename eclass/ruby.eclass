@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.46 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.47 2005/07/08 00:56:06 gongloo Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -151,7 +151,7 @@ erubydoc() {
 	for dir in sample example examples; do
 		if [ -d ${dir} ] ; then
 			dodir /usr/share/doc/${PF}
-			cp -a ${dir} ${D}/usr/share/doc/${PF} || die "cp failed"
+			cp -pPR ${dir} ${D}/usr/share/doc/${PF} || die "cp failed"
 		fi
 	done
 	for i in ChangeLog* [A-Z][A-Z]* ; do
