@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.10.0-r3.ebuild,v 1.1 2005/07/06 10:40:15 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.10.0-r3.ebuild,v 1.2 2005/07/08 12:33:47 rl03 Exp $
 
 inherit webapp eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://phpwebsite.appstate.edu"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}-full.tar.gz
 http://phpwebsite.appstate.edu/downloads/security/phpws_image_secure_patch.tgz
 http://phpwebsite.appstate.edu/downloads/security/phpws_files_security_patch3.tgz
-http://phpwebsite.appstate.edu/downloads/security/phpwebsite_security_patch_20050705.2.tgz"
+http://phpwebsite.appstate.edu/downloads/security/phpwebsite_security_patch_20050707.1.tgz"
 LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE=""
@@ -26,7 +26,7 @@ src_unpack() {
 	cd ${S}
 	unpack phpws_files_security_patch3.tgz
 	unpack phpws_image_secure_patch.tgz
-	unpack phpwebsite_security_patch_20050705.2.tgz
+	unpack phpwebsite_security_patch_20050707.1.tgz
 	epatch ${FILESDIR}/${P}-xml-rpc.diff
 }
 
