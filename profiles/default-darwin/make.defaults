@@ -11,8 +11,8 @@ CXXFLAGS=${CFLAGS}
 MAKEOPTS="-j2"
 PLATFORM=$CHOST
 
-FETCHCOMMAND="/usr/bin/curl --connect-timeout 15 -# -o \${DISTDIR}/\${FILE} \${URI}"
-RESUMECOMMAND="/usr/bin/curl --connect-timeout 15 -# -C - -o \${DISTDIR}/\${FILE} \${URI}"
+FETCHCOMMAND="/usr/bin/curl -f --connect-timeout 15 -# -o \${DISTDIR}/\${FILE} \${URI}"
+RESUMECOMMAND="/usr/bin/curl -f --connect-timeout 15 -# -C - -o \${DISTDIR}/\${FILE} \${URI}"
 
 FEATURES="-sandbox userpriv"
 
