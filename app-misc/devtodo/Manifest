@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 09cf4262be1e0bfc3de7f9f36b91c7cb devtodo-0.1.18-r2.ebuild 1383
-MD5 4395564b1aa37ea2e2bd6639e61f17f4 devtodo-0.1.19.ebuild 1447
-MD5 883e65c095d935cd1137bc935fcd8732 ChangeLog 6850
+MD5 4f70b713861a95b9873ebe5746f23f53 devtodo-0.1.19.ebuild 1446
+MD5 f44305e623ee342734aa79fdce2b1a1e ChangeLog 6940
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 07ddb19b677965f01eb612985e082441 files/digest-devtodo-0.1.19 66
 MD5 e254b7fe4623f6fb5dfb4c9169e75ef7 files/digest-devtodo-0.1.18-r2 66
@@ -14,7 +14,7 @@ MD5 d4832a9a5c0f6bd3d6a400be666a60d4 files/devtodo-0.1.19-gentoo.diff 4623
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCpHtsEZCkKN40op4RAjcaAKCVnWLk0qqpKEWaUZkpp5ZcelBYLwCggUuX
-kDgmMHQi+6OQ6BMxufKTheA=
-=0BiS
+iD8DBQFCzo/GEZCkKN40op4RApbOAJ9Fwpru/yjUCRHcuIJkGPOkEYwmZgCcDJF9
+dqP1iXxGW11u7jlHxRzyrAA=
+=30iD
 -----END PGP SIGNATURE-----
