@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.2.1.ebuild,v 1.4 2005/07/08 07:40:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.2.1.ebuild,v 1.5 2005/07/08 07:52:43 greg_g Exp $
 
 inherit kde
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://kde/stable/${PV/#3.2/3.4}/src/${P}.tar.bz2"
 HOMEPAGE="http://www.kdevelop.org"
 LICENSE="GPL-2"
 
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="ada clearcase fortran haskell java pascal perforce perl php python ruby sql subversion"
 SLOT="3"
 
