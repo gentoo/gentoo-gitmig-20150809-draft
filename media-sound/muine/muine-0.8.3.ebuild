@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3.ebuild,v 1.3 2005/06/14 15:02:25 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3.ebuild,v 1.4 2005/07/08 11:18:39 dholm Exp $
 
 inherit gnome2 mono eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 LICENSE="GPL-2"
 IUSE="xine mad vorbis flac aac"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 RDEPEND=">=dev-lang/mono-0.96
 	>=dev-dotnet/gtk-sharp-1.9.2
