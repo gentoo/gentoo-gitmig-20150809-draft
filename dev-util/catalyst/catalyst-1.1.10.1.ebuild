@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.1.ebuild,v 1.2 2005/07/08 19:10:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.1.ebuild,v 1.3 2005/07/08 19:25:01 wolf31o2 Exp $
 
 inherit eutils
 
@@ -16,10 +16,17 @@ IUSE="doc ccache cdr examples"
 DEPEND=""
 RDEPEND="dev-lang/python
 	sys-apps/portage
-	amd64? ( sys-apps/linux32 )
-	ccache? ( dev-util/ccache )
-	cdr? ( virtual/cdrtools app-misc/zisofs-tools >=sys-fs/squashfs-tools-2.1 )
-	examples? ( dev-util/livecd-kconfigs dev-util/livecd-specs )"
+	amd64? (
+		sys-apps/linux32 )
+	ccache? (
+		dev-util/ccache )
+	cdr? (
+		virtual/cdrtools
+		app-misc/zisofs-tools
+		!mips? >=sys-fs/squashfs-tools-2.1 )
+	examples? (
+		dev-util/livecd-kconfigs
+		dev-util/livecd-specs )"
 
 pkg_setup() {
 	if use ccache; then
