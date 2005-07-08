@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3e9db06b96be80b9500257a94feb42f8 bsh-2.0_beta1-r1.ebuild 1175
 MD5 8bd71a260abed0bb42193acb1ec2c8df bsh-1.3.0.ebuild 870
-MD5 550ad7ad9811ed65d58f9c04f25e64bf bsh-2.0_beta2.ebuild 2057
+MD5 ac6889173fe71cf9e03c2b6d6473f952 bsh-2.0_beta2.ebuild 2051
 MD5 e450b33e32256c4be5e4f6e13dd0b5f8 ChangeLog 3434
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 0c3de80925da02c41ccf26414d08101b bsh-2.0_beta4.ebuild 2081
+MD5 023e06c781de5912b9743f4ee112219e bsh-2.0_beta4.ebuild 2079
 MD5 5ec33004601026e3f5206a441853b1ed files/digest-bsh-1.3.0 58
 MD5 e98c8ab811f673d6089a092d3b8a3d97 files/bsh.Console 856
 MD5 c0ad0331cfc0855056051a83d34fc35f files/bsh.Interpreter 871
@@ -17,10 +14,3 @@ MD5 b2c7f4d348c2075960cec1811975f5c9 files/bsh2.0b4-build.patch 1697
 MD5 356a59a8ed4e03783dc4ec5a143ef75f files/bsh2-readline.patch 5428
 MD5 0321e1ba45e1f4f328eae0eecf037105 files/digest-bsh-2.0_beta1-r1 120
 MD5 32448cba89ef5394ffab7a7cdb399ded files/beanshell.desktop 266
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCuntJ/rLF9B432nYRAgFgAKCLMIhRT9UMX3JmAdulcrdVPjonhQCbBmKy
-2iz9uJ5TboxFKMDaIZ0Hm5g=
-=Ur2o
------END PGP SIGNATURE-----
