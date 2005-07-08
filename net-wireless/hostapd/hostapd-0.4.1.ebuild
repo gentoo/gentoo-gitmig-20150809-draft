@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.1.ebuild,v 1.1 2005/05/23 11:47:42 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.4.1.ebuild,v 1.2 2005/07/08 12:26:11 brix Exp $
 
 inherit toolchain-funcs
 
@@ -17,8 +17,9 @@ KEYWORDS="~x86 ~ppc"
 
 IUSE="ipv6 ssl"
 
-DEPEND="sys-apps/sed"
 RDEPEND="ssl? ( dev-libs/openssl )"
+DEPEND="${RDEPEND}
+		sys-apps/sed"
 
 src_unpack() {
 	local CONFIG=${S}/.config
