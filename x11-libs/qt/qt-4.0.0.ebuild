@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0.ebuild,v 1.4 2005/06/29 19:07:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0.ebuild,v 1.5 2005/07/08 12:19:22 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 KEYWORDS="-*"
-IUSE="accessibility cups debug doc examples firebird gif ipv6 jpeg mng mysql nas nis odbc opengl postgres png sqlite xinerama zlib"
+IUSE="accessibility cups debug doc examples firebird gif jpeg mng mysql nas nis odbc opengl png postgres sqlite xinerama zlib"
 
 DEPEND="virtual/x11 virtual/xft >=media-libs/freetype-2
 	png? ( media-libs/libpng )
