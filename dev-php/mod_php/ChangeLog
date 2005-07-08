@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.244 2005/07/05 04:43:06 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.245 2005/07/08 04:14:53 hardave Exp $
+
+  08 Jul 2005; Hardave Riar <hardave@gentoo.org> mod_php-4.3.11.ebuild:
+  Stable on mips.
 
   05 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
   -mod_php-4.3.9_rc1.ebuild:
