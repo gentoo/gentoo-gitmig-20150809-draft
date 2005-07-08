@@ -7,7 +7,7 @@ MD5 9d31ca0f3aa6e4c9ed4df4f342615787 gcc-3.3.5.20050130-r2.ebuild 3175
 MD5 132db30725738320a534b435169be631 gcc-3.4.3.20050110-r2.ebuild 5082
 MD5 026ee7f9ea3d2a4dc997ddefe12a1d0c gcc-3.3.5-r1.ebuild 3743
 MD5 22583bfbc351f0715fefcf199efa7c79 gcc-3.4.1-r3.ebuild 31176
-MD5 b01cb5fafdacb16281ade692b0e737f5 ChangeLog 88838
+MD5 c0d9dc2198d249df5bbcfd3606cee44f ChangeLog 90165
 MD5 ec4d020f30921c19267414cec2a27c39 gcc-3.4.3-r1.ebuild 5321
 MD5 3196c90905902891b12b4d08372c0eb5 gcc-2.95.3-r9.ebuild 7524
 MD5 575e7bd3eccd6af2f423baaab72e5c1f gcc-3.3.6.ebuild 2946
@@ -59,50 +59,24 @@ MD5 c9c45dab64bab25e716859626ad7f94f files/3.2.3/gcc32-c++-classfn-member-templa
 MD5 494d917cc15c81c9cead4a8c17d4d00d files/3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch 926
 MD5 99db7c1a41babe024f0c6859c30a87ee files/3.2.3/gcc323-gentoo-branding.patch 2058
 MD5 869b9a1ea49bf8b07c8405d2f1d76270 files/3.2.3/gcc323-hppa-default_assemble_visibility.patch 571
-MD5 d047c78a9141b16915d8ec3f54d1e246 files/3.3/gcc33-coreutils-compat.patch.bz2 3462
-MD5 f6b6f7c3577eccb694066bb54dd8075a files/3.3/gcc33-gentoo-branding-1.patch 870
-MD5 d6ee829d1712436361f5f1daf7b14e83 files/3.3/gcc33-gentoo-branding.patch 890
-MD5 088e0807e677010cafe4e590e8711be1 files/3.3/gcc33-no-multilib-amd64.patch 343
-MD5 453122edf63d75cca3a6c56a6dac45b0 files/3.3/gcc33-propolice-version.patch 570
-MD5 d3e53318166d71a05d2b51bd44502270 files/3.3.1/gcc331-gentoo-branding.patch 874
 MD5 b398b7415b93423ff04952c6e69bdb4d files/3.3.1/gcc331-pp-fixup.patch 407
 MD5 9e7ed6184a1cdcb69db29f1de26c2d18 files/3.3.2/gcc332-altivec-fix.patch 1607
 MD5 d9ae122db2768f8e504dfef256d4991f files/3.3.2/gcc332-gentoo-branding.patch 874
-MD5 66df5567226338b7504bbd3c25cea92c files/3.3.3/gcc-3.3.3-libiberty-pic.patch 370
 MD5 ee700275f341541af37d56bd15dcf863 files/3.3.3/gcc-3.3.3-norelro.patch 606
 MD5 ff6d7b5082c5e39fab8a5d8932c1a8b7 files/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch 461
 MD5 308a0e53f03e9cb74b3d12c2633cbee2 files/3.3.3/gcc-uclibc-3.3-loop.patch 433
 MD5 9ba0bd0b103cf9535927ad7c482fe780 files/3.3.3/gcc333-debian-arm-getoff.patch 3501
 MD5 25eda9981106a55c413d1df3d3a87db5 files/3.3.3/gcc333-debian-arm-ldm.patch 3383
-MD5 cd87c02e4896f47bf6029eef0dc29468 files/3.3.3/gcc333-gentoo-branding.patch 874
-MD5 e5812da37c1862908a29cdae004c4e52 files/3.3.3/gcc333-pr15693.patch 3927
-MD5 bb0078854a778b2a279cfb15d8933c29 files/3.3.3/gcc333-ssp-3.3.2_1-fixup.patch 2598
-MD5 0e8d94bbc14fbb3fbad1df4f404b39ef files/3.3.3/gcc333-ssp-3.3_7-fixup.patch 2616
-MD5 4b249bff27ab6328436e6289ac9f9cfc files/3.3.3/gcc333_pre20040215-gentoo-branding.patch 839
-MD5 f317331e0b196ca455ca9554479cd8eb files/3.3.3/gcc333_pre20040322-gentoo-branding.patch 817
-MD5 43c60f04779324d74d3aac52224bed95 files/3.3.3/gcc333_pre20040408-gentoo-branding.patch 820
 MD5 3210d5fd70806c44d4426c3dceebd480 files/3.3.3/gcc333_pre20040408-stack-size.patch 653
-MD5 43c60f04779324d74d3aac52224bed95 files/3.3.3/gcc333_pre20040426-gentoo-branding.patch 820
-MD5 27120401d2355e5d959b8d2d55eba310 files/3.3.4/gcc334-gentoo-branding.patch 876
 MD5 5fb5b49f3f16cc9e7e27e582c92ffa2f files/3.3.4/libffi-without-libgcj.patch 890
 MD5 7c29f54dd8d50385ac42fae65459c744 files/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch 538
 MD5 184cb0a87ee2fa0197dec6f4902ef4c8 files/3.3.5/gcc-3.3.5-no-COPYING-cross-compile.patch 1192
-MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
-MD5 66edf32babf498517ca56fa44c901f26 files/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch 894
-MD5 06580106a905e8fa2ff23aa190f9d82c files/3.4.0/gcc-3.4.0-r6-gentoo-branding.patch 781
-MD5 c7ed491e4bcee6cae89067d4e1c899a8 files/3.4.0/gcc34-ia64-lib64.patch 1395
-MD5 c919e0a2cd429d0121b6133c1b4e41a6 files/3.4.0/gcc34-ice-hack.patch 8605
-MD5 31470a0e018eb2cdfe68c71039ede80f files/3.4.0/gcc34-multi32-hack.patch 2445
-MD5 bae93db3186aa0fc25d659b7799ef499 files/3.4.0/gcc34-ppc64-m32-m64-multilib-only.patch 825
 MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
-MD5 86ae592deb82c4564eb61f770fe5f8a7 files/3.4.1/gcc-3.4.1-gentoo-branding.patch 759
 MD5 cd770c23ece7458db5e6c5067f262ce0 files/3.4.1/gcc-3.4.1-glibc-is-native.patch 760
 MD5 7cb2138ac2df6f8674d19974e966a45b files/3.4.1/gcc-3.4.1-mips-n32only.patch 614
 MD5 aa8e15a63d797df37bbd4e489ed0267f files/3.4.1/gcc-3.4.1-mips-n64only.patch 614
 MD5 14fec2000fc63536d4cf22195e88e14f files/3.4.1/gcc-3.4.1-r2-gentoo-branding.patch 781
-MD5 df06b1cf70425c78e2e59136ed372ab4 files/3.4.1/gcc341-ppc64-mozilla-ICE-fix.patch 729
 MD5 a720c913b78bcfbd7f63319130fadd4a files/3.4.2/810-arm-bigendian-uclibc.patch 1139
-MD5 f3a1b668077c6486c542dcef1cdd9672 files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers.patch 12545
 MD5 b2922cfe76692e7d2b373a0a255f405e files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248
 MD5 f2395cf0f72d870e263d0dcec18fdd67 files/3.4.2/gcc34-fix-sse2_pinsrw.patch 1268
 MD5 2c1ce849de55d8c81af4e081dbb2f5e4 files/3.4.2/gcc34-m32-no-sse2.patch 1058
@@ -111,7 +85,6 @@ MD5 0b31c7f32c0c28bafdd75c5c0dfc16a5 files/3.4.3/gcc-3.4.3-cross-compile.patch 2
 MD5 3f6d070c2a4a899e7d879fdb55eecba4 files/3.4.3/libffi-nogcj-lib-path-fix.patch 1691
 MD5 007c62d92efd70fd44c4d2e6a326036b files/3.4.3/libffi-without-libgcj.patch 1658
 MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
-MD5 4a62ecf1101f7973ea9a60dc4cb98c43 files/3.4.3/35_all_pr18987-fix.patch 748
 MD5 f8c48b2e721c21d83582f5884bfb79c7 files/awk/fixlafiles.awk 7830
 MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
 MD5 0f8035bc5ae6126fd9380ba9dcdcc271 files/stubs/gcc-3.3-htb-stub.patch 2195
@@ -123,7 +96,7 @@ MD5 d71c91009df788366867cb67fc875d6d files/stubs/gcc-4.0-ssp-stub.patch 1068
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCztoFArHZZzCEUG0RAloaAJsGVcuJBrzlUTyKwpP1EcjQsrEqygCeP3IC
-XmEOTwHFrOvw28vc14LxvRU=
-=0ijp
+iD8DBQFCzt5eArHZZzCEUG0RAjxjAKCHI7NkHiF//TrkE6MNw3srLhVzBgCeJiC1
+oI/Vnky5ob6ZXgjo+z+vbWA=
+=4edS
 -----END PGP SIGNATURE-----
