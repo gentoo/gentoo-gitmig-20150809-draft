@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.164 2005/06/23 19:12:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.165 2005/07/08 20:31:02 pauldv Exp $
+
+*subversion-1.2.1 (08 Jul 2005)
+
+  08 Jul 2005; Paul de Vrieze <pauldv@gentoo.org> +subversion-1.2.1.ebuild:
+  New upstream version
 
   23 Jun 2005; Sven Wegener <swegener@gentoo.org> subversion-1.2.0.ebuild:
   Correctly check for the perl USE flag before calling perl-module_pkg_postrm.
