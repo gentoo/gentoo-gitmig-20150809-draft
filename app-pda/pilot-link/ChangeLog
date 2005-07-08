@@ -1,6 +1,15 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.19 2005/01/27 10:39:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.20 2005/07/08 10:10:49 liquidx Exp $
+
+  08 Jul 2005; Alastair Tse <liquidx@gentoo.org>
+  -files/pilot-link-0.11.8-fPIC.patch,
+  +files/pilot-link-0.11.8-java_fPIC_fix.patch,
+  files/pilot-link-0.11.8-java_install_amd64.patch, -files/perlpatch.diff,
+  -pilot-link-0.11.3.ebuild, -pilot-link-0.11.5-r2.ebuild,
+  -pilot-link-0.11.7-r1.ebuild, pilot-link-0.11.8-r1.ebuild:
+  another attempt at fixing java support for amd64. patches thanks to Philipp
+  Weinfurter (#87774)
 
   27 Jan 2005; Alastair Tse <liquidx@gentoo.org> pilot-link-0.11.8.ebuild:
   fix missing patch while doing housecleaning (#79682)
