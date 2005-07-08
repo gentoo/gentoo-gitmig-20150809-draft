@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.5.ebuild,v 1.4 2005/05/28 01:09:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.5.ebuild,v 1.5 2005/07/08 12:03:37 humpback Exp $
 
 inherit perl-module eutils
 
@@ -66,4 +66,9 @@ pkg_postinst() {
 	einfo "for bash: export PERLIO=stdio"
 	einfo "for csh:  setenv PERLIO stdio"
 	einfo "into your /.${shell}rc"
+	if ( use amd64 );
+	then
+		einfo "If you get messages about not finding the tools, go t preferences"
+		einfo "And deactivate the NPTL workaround"
+	fi
 }

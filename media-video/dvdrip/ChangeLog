@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.49 2005/05/28 01:09:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.50 2005/07/08 12:03:37 humpback Exp $
+
+  08 Jul 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  dvdrip-0.52.5.ebuild:
+  Added warning to AMD64 users.
 
   28 May 2005; Diego Pettenò <flameeyes@gentoo.org> dvdrip-0.52.5.ebuild:
   Changed dependency of latest dvdrip to virtual/eject.
