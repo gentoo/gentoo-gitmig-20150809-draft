@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.6.0.ebuild,v 1.2 2005/07/08 03:35:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.6.0-r1.ebuild,v 1.1 2005/07/08 03:35:46 halcy0n Exp $
 
 MY_PV=${PV//./_}
 MY_P=${PN}-src_${MY_PV}
@@ -10,7 +10,7 @@ SRC_URI="http://www.apache.org/dist/xml/xerces-c/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE="doc"
 
 DEPEND="virtual/libc
@@ -21,7 +21,7 @@ S=${WORKDIR}/${MY_P}
 src_compile() {
 	export XERCESCROOT=${S}
 	cd src/xercesc
-	econf || die
+	./runConfigure -plinux -P/usr
 	emake -j1 || die
 }
 

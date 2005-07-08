@@ -3,10 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>zhen@gentoo.org</email>
-  <name>John Davis</name>
-  <description>Full time maintainer, please post all bugs to me.</description>
+  <email>halcy0n@gentoo.org</email>
+  <name>Mark Loeser</name>
 </maintainer>
-<longdescription>xerces-c is a C++ library specializing in XML parsing. It is released by
-the Apache Foundation</longdescription>
+<longdescription>xerces-c is a C++ library specializing in XML parsing. It is released by the Apache Foundation</longdescription>
 </pkgmetadata>

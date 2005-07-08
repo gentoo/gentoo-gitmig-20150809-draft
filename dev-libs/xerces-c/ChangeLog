@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xerces-c
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.22 2004/10/04 15:58:16 zhen Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.23 2005/07/08 03:35:46 halcy0n Exp $
+
+*xerces-c-2.6.0-r1 (08 Jul 2005)
+
+  08 Jul 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml,
+  +xerces-c-2.6.0-r1.ebuild:
+  Changed ebuild to use runConfigure instead of the configure script.  Fixes bug
+  #77876.  Taking over maintainership of package.
 
   04 Oct 2004; John Davis <zhen@gentoo.org> :
   security bump bug #66303
