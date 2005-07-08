@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.110 2005/07/08 18:31:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.111 2005/07/08 20:50:06 killerfox Exp $
+
+  08 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  shadow-4.0.7-r3.ebuild:
+  Stable on hppa.
 
   08 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   shadow-4.0.7-r3.ebuild:
