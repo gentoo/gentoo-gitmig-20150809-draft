@@ -1,6 +1,16 @@
-MD5 350548c194505e305a7b91408116cf49 ChangeLog 1719
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c15e3a74997698eb0d22b3dc296fcb36 metadata.xml 232
+MD5 7815c175712578c73b791ed8461ffd6a unfoo-1.0.5.ebuild 810
 MD5 fc9a5633e1aeccc4eb791356a723b9f8 unfoo-1.0.4.ebuild 814
-MD5 93a3e5b369d27c1f16b7e71af8bdb7c0 unfoo-1.0.5.ebuild 812
+MD5 350548c194505e305a7b91408116cf49 ChangeLog 1719
 MD5 b0095fd8d6b036a272345adce5744e61 files/digest-unfoo-1.0.4 57
 MD5 ad9a51607b4b5f842ec4bdbe9076ff79 files/digest-unfoo-1.0.5 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzezmgIKl8Uu19MoRAsmpAJ9+uvcvVabirJuZQ8PoZICl53rEewCeMZBL
+r1B/2/VuRKqn5HqQRh4iyyk=
+=bf79
+-----END PGP SIGNATURE-----
