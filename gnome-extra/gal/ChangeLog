@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.100 2005/06/23 08:45:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.101 2005/07/08 03:07:04 leonardop Exp $
+
+*gal-2.4.3 (07 Jul 2005)
+
+  07 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> gal-2.4.3.ebuild:
+  New version. Added 'static' USE flag. Updated dependencies.
 
   23 Jun 2005; Guy Martin <gmsoft@gentoo.org> gal-2.4.1.ebuild:
   Stable on hppa.

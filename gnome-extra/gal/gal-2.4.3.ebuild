@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-2.4.0.ebuild,v 1.2 2005/03/09 16:44:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-2.4.3.ebuild,v 1.1 2005/07/08 03:07:04 leonardop Exp $
 
-inherit gnome2 libtool eutils
+inherit libtool eutils gnome2
 
 DESCRIPTION="The Gnome Application Libraries"
 HOMEPAGE="http://www.gnome.org/"
 
-LICENSE="GPL-2 LGPL-2.1"
+LICENSE="LGPL-2"
 SLOT="2.4"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
-IUSE="doc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="doc static"
 
 RDEPEND=">=x11-libs/gtk+-2.2
 	>=gnome-base/libgnomeprint-2.2
@@ -18,18 +18,20 @@ RDEPEND=">=x11-libs/gtk+-2.2
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libgnomecanvas-2.2.0.2
-	>=dev-libs/libxml2-2
-	app-text/scrollkeeper"
+	>=dev-libs/libxml2-2"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig
-	>=dev-util/intltool-0.30
-	doc? ( dev-util/gtk-doc )"
+	>=dev-util/intltool-0.27.1
+	doc? ( >=dev-util/gtk-doc-1 )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 USE_DESTDIR="1"
 ELTCONF="--reverse-deps"
+
+DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
+G2CONF="${G2CONF} $(use_enable static)"
 
 src_unpack() {
 
@@ -38,12 +40,12 @@ src_unpack() {
 
 	#GCC 3.4 fix
 	cd ${S}
-	epatch ${FILESDIR}/gal-2.1.12-gcc34.patch
+	epatch ${FILESDIR}/${PN}-2.1.12-gcc34.patch
 
 	ln -s ${S}/docs/gal-decl.txt ${S}/docs/gal-2.4-decl.txt
 	ln -s ${S}/docs/gal-sections.txt ${S}/docs/gal-2.4-sections.txt
 
 	#USE=doc build fix
-	epatch ${FILESDIR}/gal-1.99.3-docfix.patch
+	epatch ${FILESDIR}/${PN}-1.99.3-docfix.patch
 
 }
