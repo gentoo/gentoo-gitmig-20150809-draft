@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.78 2005/07/08 19:08:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.79 2005/07/08 19:10:05 wolf31o2 Exp $
+
+  08 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  catalyst-1.1.10.1.ebuild:
+  Fixing being all masked.
 
 *catalyst-1.1.10.1 (08 Jul 2005)
 
