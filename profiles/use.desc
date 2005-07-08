@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.255 2005/07/08 02:00:36 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.256 2005/07/08 10:46:07 danarmak Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -314,7 +314,6 @@ truetype - Adds support for FreeType and/or FreeType2 fonts
 uclibc - Enable uclibc specific patches and build or link uclibc
 unicode - Adds support for Unicode
 usb - Adds USB support to applications that have optional USB support (e.g. cups)
-usepackagedmakefiles - Makes 'split' kde-base ebuilds use prepackaged makfile tarballs. This is an experimental compilation speedup that doesn't affect output.
 v4l - Enables video4linux support
 vanilla - Do not add extra patches which change default behaviour
 vcd - Video CD support
