@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a2ce302ebe5367d4db42012c01795e12 ChangeLog 7692
+MD5 5b4574cc0d2b00145b5aeabdd74f3c5f ChangeLog 7855
 MD5 b049b8c4d26d949b96515f79c805084c bluez-utils-2.10-r1.ebuild 2591
-MD5 8956170e0d15f46fb0885c977f11126f bluez-utils-2.15.ebuild 2482
+MD5 b8902fd2efa31a57e83025541cddca86 bluez-utils-2.15.ebuild 2511
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
 MD5 5fb15e85a2a314a3177e67893e720933 bluez-utils-2.16-r1.ebuild 2682
-MD5 351c4b048ac6dc373904dbbf5d3748af bluez-utils-2.17-r1.ebuild 2736
-MD5 ec7e6f140cb5d4cfdc7aa57d1f802da8 bluez-utils-2.18.ebuild 2877
+MD5 120f85a0c6b0f6a94e3623eb4821ecff bluez-utils-2.17-r1.ebuild 2732
+MD5 e5e21f985e130805eefe32a4e72f2412 bluez-utils-2.18.ebuild 2873
 MD5 44ca243c60a83967c811537a38b92549 files/bluetooth.rc 1166
 MD5 2fcf0c81d0479f85cb7244f2b1900c6d files/bluez-utils-2.10-handsfree.patch 540
 MD5 d552cb6515bf251c019ca4a95dd266eb files/bluez-utils-2.3-bluepin-gtk2.patch 3295
@@ -27,7 +27,7 @@ MD5 8640fa9eafee8ea600121af7792b7ad9 files/2.16/bluetooth.rc 3396
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCy7PUTM53OX+9xmMRAoZQAJ9E+wIyRLvPuTj4LOoxgDMrdk/3lgCaA1dN
-3m0rIZuAFp55WHM28iDXuIw=
-=pX2h
+iD8DBQFCzrg1TM53OX+9xmMRAkdpAJ4/Cep6fTwnUhCe3x84u7+bfTECFACdE8Jc
+XB7/X7sDlEzXUjvF5+cRfJE=
+=7Qmj
 -----END PGP SIGNATURE-----

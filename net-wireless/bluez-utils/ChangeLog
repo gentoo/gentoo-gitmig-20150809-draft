@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.48 2005/07/06 10:34:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.49 2005/07/08 17:29:57 liquidx Exp $
+
+  08 Jul 2005; Alastair Tse <liquidx@gentoo.org> bluez-utils-2.15.ebuild,
+  bluez-utils-2.17-r1.ebuild, bluez-utils-2.18.ebuild:
+  virtual/pcmcia dep replacement
 
 *bluez-utils-2.18 (06 Jul 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.15.ebuild,v 1.5 2005/05/14 11:58:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.15.ebuild,v 1.6 2005/07/08 17:29:57 liquidx Exp $
 
 IUSE="gtk alsa cups pcmcia"
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ppc ~sparc x86 hppa"
 RDEPEND=">=net-wireless/bluez-libs-2.15
 	!net-wireless/bluez-pan
 	dev-libs/libusb
+	pcmcia? ( virtual/pcmcia )
 	gtk? ( >=dev-python/pygtk-2.2 )
 	alsa? ( media-libs/alsa-lib )
 	cups? ( net-print/cups )"
