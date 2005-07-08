@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfcalendar
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/ChangeLog,v 1.40 2005/07/07 01:19:53 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/ChangeLog,v 1.41 2005/07/08 17:32:35 gustavoz Exp $
+
+  08 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfcalendar-4.2.2.ebuild:
+  Stable on sparc
 
   07 Jul 2005; Daniel Ostrow <dostrow@gentoo.org> xfcalendar-4.2.2.ebuild:
   Stable on ppc and ppc64.
