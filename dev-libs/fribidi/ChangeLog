@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.16 2005/03/24 04:04:28 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.17 2005/07/08 05:28:05 hardave Exp $
+
+  08 Jul 2005; Hardave Riar <hardave@gentoo.org> fribidi-0.10.4.ebuild:
+  Stable on mips.
 
   24 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> fribidi-0.10.4.ebuild:
   Stable ppc-macos
