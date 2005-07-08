@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/p3nfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.7 2005/07/02 22:31:16 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.8 2005/07/08 11:19:01 brix Exp $
+
+  08 Jul 2005; <brix@gentoo.org> metadata.xml:
+  Removed myself from metadata.xml as I no longer have a supported Symbian
+  device.
 
   02 Jul 2005; <brix@gentoo.org> -p3nfs-5.16.ebuild, -p3nfs-5.17a.ebuild:
   Pruned old ebuilds.
