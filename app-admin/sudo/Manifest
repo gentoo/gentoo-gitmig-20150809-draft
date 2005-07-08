@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f6b8ff198921f7255bc43bfa44cff62d sudo-1.6.8_p9.ebuild 6049
+MD5 9eb89c67b32298a4af16098d4c499d34 sudo-1.6.8_p9.ebuild 6054
 MD5 4e3ab49065539b5aa4d3153261b5d687 metadata.xml 561
 MD5 02caf6e86d5e08fd89baccd299a0ee3c sudo-1.6.7_p5-r5.ebuild 1508
-MD5 d0aec012fb64fe8fa656a595f2707782 sudo-1.6.8_p9-r2.ebuild 6686
-MD5 52abea0d36b857d1b016958de2d0ac7f sudo-1.6.8_p9-r1.ebuild 6307
+MD5 1d4467add8f9827d7548d926cfd87ab4 sudo-1.6.8_p9-r2.ebuild 6698
+MD5 7ec8076c273c0ad66f4e51c8e675730e sudo-1.6.8_p9-r1.ebuild 6317
 MD5 1830dd653b9b5b92fa5cc86823e06d65 sudo-1.6.7_p5-r2.ebuild 1438
 MD5 396fcee67d497e67ebea3c8533b9e148 ChangeLog 10072
 MD5 2a601951e4e5d6bdafc31b223737ddf5 files/sudo-ldap_timelimit.diff 2550
@@ -23,10 +20,3 @@ MD5 774b75e759fe13c7334c523b1db8ab2e files/sudo_include 67
 MD5 b1fc3dd8440dc02690820c01190106a3 files/sudo-strip-shellopts.diff 316
 MD5 b906eb71f7564707384cfa9fc80c1b5f files/sudo-1.6.7_p5-strip-bash-functions.diff 1101
 MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzHRqgIKl8Uu19MoRAv5oAJ9WpTEnFqIFdIW8uYfCC+Pebk5NXwCcCdii
-GACaOhwXaz+Z0vBxX2CsPZA=
-=wPCQ
------END PGP SIGNATURE-----
