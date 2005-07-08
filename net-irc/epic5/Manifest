@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a4b8ed85e745e3275daa288de7d719e ChangeLog 1048
-MD5 401448a7b1d633e0a27936cf29a7f6fd epic5-0.0.5.ebuild 1338
-MD5 221f4dbd04ae28838381e7eeda7210d6 files/digest-epic5-0.0.5 64
-MD5 6aa61e3d4cb005aac02541c2d2d1fff1 files/epic-defaultserver.patch 610
+MD5 ba573f8c1348fcb367a1bb049259754f ChangeLog 1128
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzVFAI1lqEGTUzyQRAo9QAKCz5Eqx7ionb6eoVeahBXHOijSAdACfc9Xa
-cKgeSdxF8z8d8LgSPyHcgso=
-=RanP
------END PGP SIGNATURE-----
+MD5 ff5c6d764dcff80c62e1ab421a86e502 epic5-0.0.5.ebuild 1340
+MD5 6aa61e3d4cb005aac02541c2d2d1fff1 files/epic-defaultserver.patch 610
+MD5 221f4dbd04ae28838381e7eeda7210d6 files/digest-epic5-0.0.5 64
