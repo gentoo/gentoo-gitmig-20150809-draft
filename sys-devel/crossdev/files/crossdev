@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.23 2005/05/31 23:37:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.24 2005/07/08 02:04:03 vapier Exp $
 
 if [[ ${ROOT:-/} != "/" ]] ; then
 	echo "Sorry, but crossdev does not support ROOT."
@@ -226,9 +226,8 @@ fi
 
 setup_portage_vars
 if [[ -z ${PORTDIR_OVERLAY} ]] ; then
-	eerror "You need to set PORTDIR_OVERLAY in your"
-	eerror "make.conf.  A standard setting is"
-	eerror "/usr/local/portage"
+	eerror "You need to set PORTDIR_OVERLAY in your make.conf."
+	eerror "A standard setting is /usr/local/portage"
 	exit 1
 fi
 
