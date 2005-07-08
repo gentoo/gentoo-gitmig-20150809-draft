@@ -1,10 +1,20 @@
-MD5 8041f09fbba6a7dc07bfc9331f08f6df xfwm4-themes-4.2.1.ebuild 395
-MD5 b1518ef664c567bab59995eae68e70d9 xfwm4-themes-4.2.0.ebuild 398
-MD5 1ac6cd5881ddea6f0c94ffde321c9427 xfwm4-themes-4.0.6.ebuild 749
-MD5 18edec588fa72fac83f9eab053b8b35c xfwm4-themes-4.2.2.ebuild 392
-MD5 8ce1eee470e032956371c7a023f7ca68 ChangeLog 5901
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 94f03e5cc6d8a4acfa777856df167e00 files/digest-xfwm4-themes-4.0.6 70
+MD5 b1518ef664c567bab59995eae68e70d9 xfwm4-themes-4.2.0.ebuild 398
+MD5 d6d5fbef40b435bf940e7bc3c934bcf2 ChangeLog 6004
+MD5 8041f09fbba6a7dc07bfc9331f08f6df xfwm4-themes-4.2.1.ebuild 395
+MD5 1ac6cd5881ddea6f0c94ffde321c9427 xfwm4-themes-4.0.6.ebuild 749
+MD5 6a60e971ceff00608c727b266c045f39 xfwm4-themes-4.2.2.ebuild 394
 MD5 1ef688fa46fc9d1b4f496e89180b0d00 files/digest-xfwm4-themes-4.2.0 71
 MD5 d4eb558579e68c9b60f916c299e109bd files/digest-xfwm4-themes-4.2.1 70
+MD5 94f03e5cc6d8a4acfa777856df167e00 files/digest-xfwm4-themes-4.0.6 70
 MD5 bb1cffc84649fb09c4999e7cb2cdc782 files/digest-xfwm4-themes-4.2.2 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCzroqKRy60XGEcJIRAr57AJ94tHLeNvu0QzF5ANDDDtqsRz0OjQCgpGxA
+RYbR7WbA92qLK5eV9jtqV18=
+=oMTK
+-----END PGP SIGNATURE-----

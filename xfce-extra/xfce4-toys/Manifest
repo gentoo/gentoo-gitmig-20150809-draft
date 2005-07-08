@@ -1,10 +1,20 @@
-MD5 8b305a62fe202f034531aadd523f6e97 xfce4-toys-4.2.0.ebuild 396
-MD5 a916c951b966b29f3a8e572f360e2e35 xfce4-toys-4.0.6.ebuild 743
-MD5 33576e1b3fab2b39fea4f3ebb7430075 xfce4-toys-4.2.2.ebuild 391
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a20cb781d9fa04b1930bb571c002d48c xfce4-toys-4.2.1.ebuild 397
-MD5 f13aae81de486dd6821eb07b3e181518 ChangeLog 6213
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 53c9bc3e92ba9c706f2f1a32a973055d files/digest-xfce4-toys-4.0.6 68
-MD5 131e81a8722058445d9e6dadf6629d58 files/digest-xfce4-toys-4.2.0 69
+MD5 a916c951b966b29f3a8e572f360e2e35 xfce4-toys-4.0.6.ebuild 743
+MD5 f101f5f360379f8e7b9f8bb88d248b66 xfce4-toys-4.2.2.ebuild 392
+MD5 a2dc6eaf7fd6f027d86d8a7bdb01f636 ChangeLog 6314
+MD5 8b305a62fe202f034531aadd523f6e97 xfce4-toys-4.2.0.ebuild 396
 MD5 e57b8e8e6d0bcd722588e9a4b4e9da6a files/digest-xfce4-toys-4.2.1 68
+MD5 131e81a8722058445d9e6dadf6629d58 files/digest-xfce4-toys-4.2.0 69
 MD5 a895616888f1136a0ae73affcbf958cc files/digest-xfce4-toys-4.2.2 68
+MD5 53c9bc3e92ba9c706f2f1a32a973055d files/digest-xfce4-toys-4.0.6 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCzrwfKRy60XGEcJIRApx7AJ9sm71QT5HiRjEbeUevWNUooqWJmgCeLxKJ
+afh5aHmCYJrNgqoHwQ1IlJw=
+=dWvz
+-----END PGP SIGNATURE-----
