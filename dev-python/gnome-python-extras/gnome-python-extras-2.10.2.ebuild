@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.10.2.ebuild,v 1.7 2005/07/03 20:19:25 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.10.2.ebuild,v 1.8 2005/07/08 03:40:23 swegener Exp $
 
 inherit eutils gnome2 python
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-lang/python-2.3
 	>=x11-libs/gtksourceview-1.1.90
 	>=gnome-base/gnome-panel-2.2.0
 	>=x11-libs/libwnck-2.9.92
-	firefox? ( >=www-client/mozilla-firefox-1.0)
+	firefox? ( >=www-client/mozilla-firefox-1.0 )
 	mozilla? ( >=www-client/mozilla-1.2 )
 	>=gnome-base/libgtop-2.9.5
 	>=gnome-extra/nautilus-cd-burner-2.9.4
