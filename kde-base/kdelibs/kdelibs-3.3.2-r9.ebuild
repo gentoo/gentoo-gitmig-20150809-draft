@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.2-r9.ebuild,v 1.10 2005/07/08 20:35:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.2-r9.ebuild,v 1.11 2005/07/08 23:20:48 swegener Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.3
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
-SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2
+SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 	mirror://kde/security_patches/post-3.3.2-kdelibs-dcop.patch
 	mirror://kde/security_patches/post-3.3.2-kdelibs-idn-2.patch
 	mirror://kde/security_patches/post-3.3.2-kdelibs-kimgio-fixed.diff
@@ -49,10 +49,10 @@ DEPEND="${RDEPEND}
 	!kde-misc/kgamma"
 
 src_unpack() {
-        unpack $PN-$PV.tar.bz2
-        # This is an ugly hack: it makes base_src_unpack do nothing, but still lets us enjoy
-        # the other things kde_src_unpack does.
-        kde_src_unpack nounpack
+	unpack ${P}.tar.bz2
+	# This is an ugly hack: it makes base_src_unpack do nothing, but still lets us enjoy
+	# the other things kde_src_unpack does.
+	kde_src_unpack nounpack
 
 	cd $S/kio/kio && patch -p0 <${DISTDIR}/post-3.3.2-kdelibs-kio.diff
 	cd $S

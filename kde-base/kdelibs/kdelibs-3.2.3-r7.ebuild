@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.3-r7.ebuild,v 1.7 2005/07/08 20:35:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.3-r7.ebuild,v 1.8 2005/07/08 23:20:48 swegener Exp $
 
 inherit kde eutils
 
@@ -9,7 +9,7 @@ set-kdedir ${PV}
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
-SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2
+SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 	mirror://kde/security_patches/post-3.2.3-kdelibs-kcookiejar.patch
 	mirror://kde/security_patches/post-3.2.3-kdelibs-kstandarddirs.patch
 	mirror://kde/security_patches/post-3.2.3-kdelibs-htmlframes2.patch
@@ -48,11 +48,11 @@ RDEPEND="${DEPEND}
 	dev-lang/python"
 
 src_unpack() {
-	unpack $PN-$PV.tar.bz2
+	unpack ${P}.tar.bz2
 	# This is an ugly hack: it makes base_src_unpack do nothing, but still lets us enjoy
 	# the other things kde_src_unpack does.
 	kde_src_unpack nounpack
-	
+
 	epatch ${DISTDIR}/post-3.2.3-kdelibs-kcookiejar.patch
 	epatch ${DISTDIR}/post-3.2.3-kdelibs-kstandarddirs.patch
 	epatch ${FILESDIR}/post-3.2.3-kdelibs-htmlframes.patch

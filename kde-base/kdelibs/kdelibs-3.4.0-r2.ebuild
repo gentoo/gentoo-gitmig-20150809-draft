@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0-r2.ebuild,v 1.4 2005/07/08 20:35:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0-r2.ebuild,v 1.5 2005/07/08 23:20:48 swegener Exp $
 
 inherit kde eutils flag-o-matic
 set-qtdir 3
@@ -50,10 +50,10 @@ DEPEND="${RDEPEND}
 #PATCHES="${FILESDIR}/${PN}-3.4.0_beta2-export-kio-symbols.diff"
 
 src_unpack() {
-        unpack $PN-$PV.tar.bz2
-        # This is an ugly hack: it makes base_src_unpack do nothing, but still lets us enjoy
-        # the other things kde_src_unpack does.
-        kde_src_unpack nounpack
+	unpack ${P}.tar.bz2
+	# This is an ugly hack: it makes base_src_unpack do nothing, but still lets us enjoy
+	# the other things kde_src_unpack does.
+	kde_src_unpack nounpack
 
 	# Fix freezing in web forms (kde bug 100963). Applied for 3.4.1.
 	epatch "${FILESDIR}/${P}-form-freeze.patch"
