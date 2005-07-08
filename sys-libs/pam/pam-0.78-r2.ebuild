@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.19 2005/07/07 22:05:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.20 2005/07/08 07:47:56 greg_g Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -377,5 +377,12 @@ pkg_postinst() {
 		else
 			rm -f ${ROOT}/etc/pam.d/system-auth.new
 		fi
+	fi
+
+	if use pam_console; then
+		echo
+		einfo "If you want to enable the pam_console module, please follow"
+		einfo "the instructions in /usr/share/doc/${PF}/README.pam_console."
+		echo
 	fi
 }
