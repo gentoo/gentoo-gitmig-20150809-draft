@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.12 2005/02/24 05:50:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.13 2005/07/08 19:26:13 flameeyes Exp $
 
-inherit cannadic eutils
+inherit cannadic eutils multilib
 
 MY_P="Canna${PV//./}"
 
@@ -32,6 +32,10 @@ src_unpack() {
 	epatch ${T}/${PF}-gentoo.diff
 	cd dic/phono
 	epatch ${FILESDIR}/${PN}-kpdef-gentoo.diff
+
+	cd ${S}
+	# Multilib-strict fix for amd64
+	sed -i -e "s:\(DefLibCannaDir.*\)/lib:\1/$(get_libdir):g" Canna.conf*
 }
 
 src_compile() {

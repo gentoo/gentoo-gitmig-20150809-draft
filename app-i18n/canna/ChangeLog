@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.48 2005/03/30 06:46:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.49 2005/07/08 19:26:13 flameeyes Exp $
+
+  08 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> canna-3.7_p2.ebuild:
+  Make canna multilib-strict aware. Thanks Martin Schlemmer
+  <azarah@gentoo.org> for the sed.
 
   30 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> -canna-3.7.ebuild,
   -canna-3.7_p1.ebuild:
