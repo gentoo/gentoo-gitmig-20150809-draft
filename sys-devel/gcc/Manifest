@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 32233b4175cc076b602394c34d4b4ee1 gcc-2.95.3-r8.ebuild 7485
 MD5 71b180bed94dca00dddf253f7bd6508f gcc-3.2.3-r4.ebuild 19841
 MD5 37ae28535bb42708bc729e53512ad369 gcc-3.3.2-r5.ebuild 21306
@@ -127,3 +130,10 @@ MD5 053b213d6994cef2ad995aa516ed937a files/stubs/gcc-3.4-htb-stub.patch 722
 MD5 d71c91009df788366867cb67fc875d6d files/stubs/gcc-3.4-ssp-stub.patch 1068
 MD5 37e756238508fe9f9e2b9ba6a7ca67ca files/stubs/gcc-4.0-htb-stub.patch 722
 MD5 d71c91009df788366867cb67fc875d6d files/stubs/gcc-4.0-ssp-stub.patch 1068
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCztA+ArHZZzCEUG0RAuI9AJ40pNP9q0sE2zr7HAg+asSjT/ZpZACggHqc
+VcTuI59fXvAJypLGZTNnxOk=
+=fB8x
+-----END PGP SIGNATURE-----
