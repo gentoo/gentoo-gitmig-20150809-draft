@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.109 2005/07/08 13:40:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.110 2005/07/08 18:31:34 gustavoz Exp $
+
+  08 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  shadow-4.0.7-r3.ebuild:
+  Stable on sparc
 
   08 Jul 2005; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.10.ebuild:
   Add NSCD patches from 4.0.7-r3 as well.
