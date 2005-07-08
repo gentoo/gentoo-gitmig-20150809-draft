@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1288 2005/07/08 01:54:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1289 2005/07/08 02:03:25 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -409,8 +409,7 @@ mail-filter/dspam:large-domain - Builds for large domain rather than for domain 
 mail-filter/dspam:maildrop - Build with delivery options for maildrop
 mail-filter/dspam:neural - Build neural support for dspam
 mail-filter/dspam:procmail - Build procmail filter support
-mail-filter/dspam:sqlite - Build sqlite 2 support
-mail-filter/dspam:sqlite3 - Build sqlite 2 support
+mail-filter/dspam:sqlite3 - Build sqlite 3 support
 mail-filter/dspam:virtual-users  - Build with virtual-users support
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
@@ -456,7 +455,6 @@ media-gfx/sane-frontends:gimp - Build a plugin for the GIMP
 media-gfx/splashutils:kdgraphics - Use KD_GRAPHICS for silent mode. This will cover ALL messages (even when there's a kernel panic) with the silent splash image. If the splash daemon dies, this might leave the console dead.
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
-media-libs/libao:mmap - (experimental) Enable memory-mapped I/O
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:nousb - Disable USB support
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
@@ -541,7 +539,6 @@ media-video/mplayer:3dnowext - Enables 3dnow extensions in mplayer
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cpudetection - Enables runtime cpudetection
 media-video/mplayer:custom-cflags - Enables custom cflags
-media-video/mplayer:dga - Enables the dga xfree extension video output support
 media-video/mplayer:dts	- Enables libdts (5.1 surround sound audio) support
 media-video/mplayer:edl - Enables usage of Edit Decision Lists
 media-video/mplayer:i8x0 - Enables support for the i8x0 xvmc video driver
@@ -603,7 +600,6 @@ net-analyzer/net-snmp:rpm - Enable the rpm snmp probing
 net-analyzer/net-snmp:smux - Enable the smux MIBS module
 net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs after connect
 net-analyzer/nstats:pcap - enable pcap support
-net-analyzer/pmacct:mmap - Enable memory-mapped I/O
 net-analyzer/slurm:altcolors - Use alternative color set
 net-analyzer/snort:flexresp - Enable connection tearing (not recommended)
 net-analyzer/snort:inline - Enable snort-inline for accepting packets from iptables, via libipq, rather than libpcap.
@@ -687,7 +683,6 @@ net-libs/gecko-sdk:mozsvg - Enable SVG support in mozilla and firefox
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
-net-libs/obby:howl - enable support for howl zero-conf
 net-libs/openh323:noaudio - Disable audio codecs
 net-libs/openh323:novideo - Disable video codecs
 net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap server
@@ -746,7 +741,6 @@ net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/quagga:bgpclassless - Enable classless prefixes for BGP 
 net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessing the OSPF link state database
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
-net-misc/sitecopy:expat - Enables use of the expat library for XML parsing.
 net-misc/sitecopy:gssapi - Enables GSSAPI (Generic Security Services Application Programming Interface).  This is a client-server authentication method that promotes a standard API for authentication systems.  This is included in kerbos distributions and allows vendors to define a specific system with a more generic API layer to coordinate with other authentication systems.
 net-misc/sitecopy:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites.  sftp is a much more secure protocol and is prefered.
 net-misc/sitecopy:sftp - Enables use of sftp for secure ftp transfers.
@@ -872,8 +866,6 @@ sys-devel/binutils:multislot - Allow for multiple versions of binutils to be eme
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/distcc:crosscompile - Change distcc-config to create shell script not links for proper invokation on cross compile setups
 sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
-sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checking (disables PIE and SSP building in gcc)
-sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
 sys-devel/gcc:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
 sys-devel/gcc:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
@@ -928,8 +920,7 @@ www-apps/dspam-web:large-domain - Builds for large domain rather than for domain
 www-apps/dspam-web:maildrop - Build with delivery options for maildrop
 www-apps/dspam-web:neural - Build neural support for dspam
 www-apps/dspam-web:procmail - Build procmail filter support
-www-apps/dspam-web:sqlite - Build sqlite 2 support
-www-apps/dspam-web:sqlite3 - Build sqlite 2 support
+www-apps/dspam-web:sqlite3 - Build sqlite 3 support
 www-apps/dspam-web:virtual-users  - Build with virtual-users support
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/mediawiki:math - Adds math rendering support
@@ -961,7 +952,6 @@ www-client/mozilla:moznomail - Disable building mozilla's mail client
 www-client/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 www-client/mozilla:mozsvg - Enable SVG support in mozilla and firefox
 www-client/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
-www-client/netscape:aim - AOL Instant Messenger support
 www-client/netscape:moznomail - Do not install Netscape Mail
 www-client/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
 www-client/w3m:async - Enables asynchronous fetch
@@ -993,7 +983,6 @@ x11-base/xorg-x11:type1-fonts - Build Type1 fonts
 x11-libs/cairo:glitz - Build with glitz support
 x11-libs/evas:cairo - Build the cairo graphical engine
 x11-libs/fltk:noxft - Disables fltk; use for non-english characters
-x11-libs/fox:truetype - Enable freetype support (allows for antialiased fonts)
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/qt:immqt -Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
