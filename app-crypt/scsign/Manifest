@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a577cbb2fd710dd1e3eee0a4e14efb38 scsign-0.0.4.ebuild 799
+MD5 09ada93c1a48d90634a4f2a71f221067 ChangeLog 667
 MD5 9979c4e501313f0e6346ec660ba7e698 metadata.xml 373
-MD5 b1dc50810e67d1d845bb851e218c9918 ChangeLog 589
-MD5 29f0b8e11704568760773fbbb76b5083 scsign-0.0.5.ebuild 810
+MD5 a577cbb2fd710dd1e3eee0a4e14efb38 scsign-0.0.4.ebuild 799
+MD5 0b486e514e8a8b49d6545b2c6cf291ac scsign-0.0.5.ebuild 809
 MD5 217fea83a8ef8ad72f02e1c2acfbbab4 files/digest-scsign-0.0.4 63
-MD5 b414df7baf1e76821f5f09d4777e6420 files/scsign-0.0.4-printid.patch 555
 MD5 9fcabefb1789c950571b1ddc667dd65f files/digest-scsign-0.0.5 63
+MD5 b414df7baf1e76821f5f09d4777e6420 files/scsign-0.0.4-printid.patch 555
 MD5 84fe8e26c60b6919c0c5ca93262f5f79 files/scsign-0.0.5-printid.patch 570
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB5NwvmdTrptrqvGERAtrQAJ9A1I0NJRvxaapRC9tlIj8jZYwZoQCgizdi
-vE3GHPs+lmJptQRuoePwto4=
-=3T+n
------END PGP SIGNATURE-----
