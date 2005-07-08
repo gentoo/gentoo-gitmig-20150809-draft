@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b3b5b77378ef2dc57647668ea0f74983 linux-logo-4.12.ebuild 1795
 MD5 d093a95d4645c067cb09b02e68147fc3 linux-logo-4.07-r1.ebuild 1456
 MD5 c48c0a280816c9a4ebce8e1643118b33 ChangeLog 4403
@@ -12,3 +15,10 @@ MD5 72ee7112b7111772d9434f266ee9e16f files/linux-logo.conf 1213
 MD5 3bfb6ca0acd4a8f0341de465e774b9c1 files/digest-linux-logo-4.12 66
 MD5 6c88e72ae5d2b3b6a9c268c326663956 files/digest-linux-logo-4.07-r1 66
 MD5 845d6cc3f98a1b0adfc731c46787481f files/digest-linux-logo-4.09 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzdvVKRy60XGEcJIRArmpAJ4sarzuOW4rsp/IZhA1siogHhkv6gCghdJK
+BEBXbSu7supX9PDLP0We4AE=
+=9RxC
+-----END PGP SIGNATURE-----
