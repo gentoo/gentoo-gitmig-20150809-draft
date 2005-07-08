@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8-r1.ebuild,v 1.10 2005/07/08 10:10:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8-r1.ebuild,v 1.11 2005/07/08 11:56:21 swegener Exp $
 
 inherit perl-module eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch ${FILESDIR}/${P}-java_fPIC_fix.patch
-	
+
 	if use java; then
 		if use ppc; then
 			epatch ${FILESDIR}/${P}-java_install_ppc.patch
