@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/hatari
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.8 2005/06/06 20:40:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.9 2005/07/08 21:31:24 lanius Exp $
+
+  08 Jul 2005; Heinrich Wendel <lanius@gentoo.org> hatari-0.70.ebuild:
+  add ~amd64
 
 *hatari-0.70 (06 Jun 2005)
 

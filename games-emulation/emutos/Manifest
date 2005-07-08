@@ -1,4 +1,6 @@
 MD5 9e3003597ec427c486c64f7589637e0d emutos-0.7.ebuild 719
-MD5 730bc42c72b15a3628fd735ca8b42f5d ChangeLog 419
+MD5 f30fdc4e83ea01549c3398c3fdbfa69d emutos-0.8.ebuild 835
+MD5 b3314b6e24800a0b7ae9549edb97c795 ChangeLog 543
 MD5 95e2b5bfd7767aeae061c77f7e1a055e metadata.xml 221
 MD5 bb52dc6149c00e827d80a0458ae493a7 files/digest-emutos-0.7 122
+MD5 5ce352f93b88c7237ba08ee4f54eb130 files/digest-emutos-0.8 189
