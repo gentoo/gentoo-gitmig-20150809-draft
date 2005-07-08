@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.10.ebuild,v 1.2 2005/07/02 15:49:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.10.ebuild,v 1.3 2005/07/08 13:40:12 azarah Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -9,7 +9,7 @@ FORCE_SYSTEMAUTH_UPDATE="no"
 
 DESCRIPTION="Utilities to deal with user accounts"
 HOMEPAGE="http://shadow.pld.org.pl/"
-SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.bz2"
+SRC_URI="ftp://ftp.pld.org.pl/software/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -32,7 +32,7 @@ src_unpack() {
 	cd "${S}"
 
 	# uclibc support, corrects NIS usage
-	epatch "${FILESDIR}"/shadow-4.0.10-nonis.patch
+	epatch "${FILESDIR}"/${PN}-4.0.10-nonis.patch
 
 	# If su should not simulate a login shell, use '/bin/sh' as shell to enable
 	# running of commands as user with /bin/false as shell, closing bug #15015.
@@ -40,22 +40,23 @@ src_unpack() {
 	#epatch "${FILESDIR}"/${P}-nologin-run-sh.patch
 
 	# don't install manpages if USE=-nls
-	epatch "${FILESDIR}"/shadow-4.0.10-nls-manpages.patch
+	epatch "${FILESDIR}"/${PN}-4.0.10-nls-manpages.patch
 
 	# tweak the default login.defs
-	epatch "${FILESDIR}"/shadow-4.0.5-login.defs.patch
+	epatch "${FILESDIR}"/${PN}-4.0.5-login.defs.patch
 
 	# The new configure changes do not detect utmp/logdir properly
-	epatch "${FILESDIR}"/shadow-4.0.10-fix-configure.patch
+	epatch "${FILESDIR}"/${PN}-4.0.10-fix-configure.patch
 
 	# Make user/group names more flexible #3485 / #22920
-	epatch "${FILESDIR}"/shadow-4.0.10-dots-in-usernames.patch
-	epatch "${FILESDIR}"/shadow-4.0.10-long-groupnames.patch
+	epatch "${FILESDIR}"/${PN}-4.0.10-dots-in-usernames.patch
+	epatch "${FILESDIR}"/${PN}-4.0.10-long-groupnames.patch
 
 	# Newer glibc's have a different nscd socket location #74395
-	sed -i \
-		-e '/_PATH_NSCDSOCKET/s:/var/run/.nscd_socket:/var/run/nscd/socket:' \
-		lib/nscd.c || die "sed nscd socket"
+	epatch "${FILESDIR}"/${PN}-4.0.7-nscd-socket-path.patch
+
+	# Fix EPIPE failure when writing to nscd, bug #80413
+	epatch "${FILESDIR}"/${PN}-4.0.7-nscd-EPIPE-failure.patch
 
 	elibtoolize
 	epunt_cxx

@@ -5,8 +5,8 @@ MD5 2581b4daddefcf73a30d69ac42fdfd1a shadow-4.0.5-r3.ebuild 5614
 MD5 db870979ea0f600d0bd8137520e2251a shadow-4.0.4.1-r4.ebuild 5961
 MD5 a51d02eb155feb33913816239bb3cf57 shadow-4.0.7.ebuild 5602
 MD5 80b1199a3fef2d1758404dbc1836c5ac shadow-4.0.7-r3.ebuild 7026
-MD5 fd457a31c8dee4d4e21c4d25472cdac6 ChangeLog 20424
-MD5 94f729277cd41cc1d45c29cb7e0d7391 shadow-4.0.10.ebuild 6709
+MD5 e1fcced0011ab6f7b5be53ef4f1e1464 ChangeLog 20541
+MD5 e0d109d5c6707ccdb7273480194634c4 shadow-4.0.10.ebuild 6752
 MD5 ac3c5c29460f248d06d4ef83c96ca912 shadow-4.0.7-r1.ebuild 6602
 MD5 fad39eceb7fd04f2805c6acc16c59d57 shadow-4.0.5-r2.ebuild 5440
 MD5 06049e2959c62c88aee32422a37bf07f shadow-4.0.6-r1.ebuild 5641
@@ -67,7 +67,7 @@ MD5 5bff4f2134b72dabc4afa5bb296e874d files/pam.d/other 142
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzn3F1ZcsMnZjRyIRArXSAJ9ockWxlKXxaFS8u/GtuHijRU6sowCfcNt8
-CetSIKw/YUqlhK4oq3eEN+E=
-=FPlL
+iD8DBQFCzoK/1ZcsMnZjRyIRAtD1AJ4+Lyh38alDCB46d5MiFKqqy93p8wCgrmkI
+DyQ+HI3bKwK9BORXjwStbaA=
+=og30
 -----END PGP SIGNATURE-----
