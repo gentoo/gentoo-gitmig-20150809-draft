@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1290 2005/07/08 02:24:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1291 2005/07/08 03:35:48 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -883,6 +883,7 @@ www-apps/mediawiki:math - Adds math rendering support
 www-apps/nut:cgi - Add CGI script support
 www-apps/rt:lighttpd - Add lighttpd support
 www-apps/swish-e:pdf - enable support for exporting to pdf
+www-apps/tikiwiki:graphviz - enable graphviz support
 www-apps/viewcvs:cvsgraph - Add cvsgraph support to show graphical views of revisions and branches
 www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the repository
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
