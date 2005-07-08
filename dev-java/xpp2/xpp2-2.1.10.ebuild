@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10.ebuild,v 1.3 2005/07/06 10:07:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10.ebuild,v 1.4 2005/07/08 10:43:54 axxo Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,7 @@ IUSE="doc jikes source"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND=">=virtual/jdk-1.3
-	dev-java/ant-core
+	>=dev-java/ant-core-1.6
 	>=dev-java/xerces-2.6.2-r2
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3"
