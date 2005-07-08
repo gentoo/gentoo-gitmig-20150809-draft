@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.3.ebuild,v 1.2 2005/03/26 06:35:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.3.ebuild,v 1.3 2005/07/08 16:00:52 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://cdw.sourceforge.net"
 SRC_URI="mirror://sourceforge/cdw/${PN}-${PV/_/-}.tar.gz
 	mirror://debian/pool/main/c/cdw/${PN}_${PV}-3.diff.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="encode gtk mysql nls oggvorbis sqlite"
