@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ita/babytrans-en2ita-0.1.ebuild,v 1.1 2005/05/27 18:41:32 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ita/babytrans-en2ita-0.1.ebuild,v 1.2 2005/07/08 13:30:38 dholm Exp $
 
 MY_P="EngtoIta.dic.gz"
 MY_F="Engtoita.dic"
@@ -10,7 +10,7 @@ SRC_URI="${MY_P}"
 
 LICENSE="Babylon"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 RDEPEND="app-dicts/babytrans"
