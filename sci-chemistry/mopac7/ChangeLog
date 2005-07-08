@@ -1,0 +1,11 @@
+# ChangeLog for sci-chemistry/mopac7
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.1 2005/07/08 06:55:29 spyderous Exp $
+
+*mopac7-1.00 (08 Jul 2005)
+
+  08 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +mopac7-1.00.ebuild:
+  Initial commit, ebuild by me. This will be useful for the new ghemical. It's
+  a quite solid semi-empirical package.
+
