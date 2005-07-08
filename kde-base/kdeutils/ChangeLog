@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.118 2005/07/04 23:00:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.119 2005/07/08 02:29:10 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kdeutils-3.4.1.ebuild:
+  Stable on SPARC.
 
   04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> kdeutils-3.4.1.ebuild:
   Add ~alpha keyword.

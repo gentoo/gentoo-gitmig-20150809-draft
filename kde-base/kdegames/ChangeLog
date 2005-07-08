@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.120 2005/07/04 23:00:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.121 2005/07/08 02:27:38 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kdegames-3.4.1.ebuild:
+  Stable on SPARC.
 
   04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> kdegames-3.4.1.ebuild:
   Add ~alpha keyword.

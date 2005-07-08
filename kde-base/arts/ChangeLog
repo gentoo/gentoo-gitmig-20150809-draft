@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.170 2005/07/04 22:14:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.171 2005/07/08 02:13:47 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> arts-3.4.1-r2.ebuild:
+  Stable on SPARC.
 
   04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> arts-3.4.1-r2.ebuild:
   Add ~alpha keyword.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.132 2005/07/04 22:55:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.133 2005/07/08 02:33:09 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kdeedu-3.4.1.ebuild:
+  Stable on SPARC.
 
   04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   kdeedu-3.4.1-r10.ebuild:

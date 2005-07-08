@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.130 2005/07/05 13:07:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.131 2005/07/08 02:40:26 weeve Exp $
+
+  08 Jul 2005; Jason Wever <weeve@gentoo.org> kdeaddons-3.4.1.ebuild:
+  Stable on SPARC.
 
   05 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> kdeaddons-3.4.1.ebuild:
   Add ~alpha keyword.
