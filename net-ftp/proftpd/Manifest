@@ -1,35 +1,35 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a3f3d269963b8887b8f6e1c9d0dccae6 proftpd-1.2.10-r6.ebuild 4462
-MD5 47c7909cf9d623eaa77933d997bdb7c1 proftpd-1.2.10-r1.ebuild 4422
-MD5 ccd3b0639bb673d4f542f42b1a9824b2 proftpd-1.2.10-r3.ebuild 4356
-MD5 9cd5b3f274033c4ed06ac8c36b143353 proftpd-1.2.10-r5.ebuild 4393
-MD5 0215c43fd279ba334fe05f9761ec8293 proftpd-1.2.10.ebuild 4166
-MD5 49ff4274614a4ecc736e8674b47b9d2b proftpd-1.2.10-r2.ebuild 4505
 MD5 fe86805aef41c396e18da3c162f2f1aa ChangeLog 15516
-MD5 b47207aedd0149443faa2152950714ed metadata.xml 401
-MD5 032f9750ce490f668ca047a660bd099b proftpd-1.2.9-r2.ebuild 3466
-MD5 b00999f820f1e46a501ce4fcaeb5fe23 files/proftpd-1.2.9-makefile.patch 434
-MD5 55ca24c9ee61b9ed94968c664baaeace files/proftpd.rc6 731
-MD5 b338504ed873219e368abab7df6c276d files/proftpd.conf 1704
-MD5 0cf02f8c82f22e714b8299e7b7907d8f files/mod_sql_postgres.c.patch 275
-MD5 3f7725dfa4ff0f5b632ddf41104ba44b files/ftp.pamd-include 592
-MD5 4d676b70c97bc6daabd8c2ba8d52d27a files/proftpd.xinetd 295
+MD5 e558f099037d359da5f855285542246e files/1.2.9_rc3-reversedns.diff 1974
 MD5 fa041c7b343099eef454338152a04ea7 files/digest-proftpd-1.2.10 67
-MD5 50955f0d375360841d50a82b9589e435 files/proftpd-1.2.9-privescal-fix.patch 588
 MD5 52697b758d9c85e63c881592c5a8bb02 files/digest-proftpd-1.2.10-r1 213
 MD5 52697b758d9c85e63c881592c5a8bb02 files/digest-proftpd-1.2.10-r2 213
 MD5 81e05e840c023b1f6bfb46dc24cb165f files/digest-proftpd-1.2.10-r3 142
 MD5 81e05e840c023b1f6bfb46dc24cb165f files/digest-proftpd-1.2.10-r5 142
 MD5 81e05e840c023b1f6bfb46dc24cb165f files/digest-proftpd-1.2.10-r6 142
 MD5 6c1a92fc601780a49fdfc01aaf483b69 files/digest-proftpd-1.2.9-r2 66
-MD5 e558f099037d359da5f855285542246e files/1.2.9_rc3-reversedns.diff 1974
 MD5 cfe47c0d5f8fece1d36ca8d56d0f2b99 files/ftp.pamd 701
+MD5 3f7725dfa4ff0f5b632ddf41104ba44b files/ftp.pamd-include 592
+MD5 0cf02f8c82f22e714b8299e7b7907d8f files/mod_sql_postgres.c.patch 275
+MD5 b00999f820f1e46a501ce4fcaeb5fe23 files/proftpd-1.2.9-makefile.patch 434
+MD5 50955f0d375360841d50a82b9589e435 files/proftpd-1.2.9-privescal-fix.patch 588
+MD5 b338504ed873219e368abab7df6c276d files/proftpd.conf 1704
+MD5 55ca24c9ee61b9ed94968c664baaeace files/proftpd.rc6 731
+MD5 4d676b70c97bc6daabd8c2ba8d52d27a files/proftpd.xinetd 295
+MD5 b47207aedd0149443faa2152950714ed metadata.xml 401
+MD5 47c7909cf9d623eaa77933d997bdb7c1 proftpd-1.2.10-r1.ebuild 4422
+MD5 49ff4274614a4ecc736e8674b47b9d2b proftpd-1.2.10-r2.ebuild 4505
+MD5 ccd3b0639bb673d4f542f42b1a9824b2 proftpd-1.2.10-r3.ebuild 4356
+MD5 9cd5b3f274033c4ed06ac8c36b143353 proftpd-1.2.10-r5.ebuild 4393
+MD5 7eb102efc36d413917722fe7801140f1 proftpd-1.2.10-r6.ebuild 4463
+MD5 0215c43fd279ba334fe05f9761ec8293 proftpd-1.2.10.ebuild 4166
+MD5 032f9750ce490f668ca047a660bd099b proftpd-1.2.9-r2.ebuild 3466
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzqOs8zY1VwezZiERAr+rAKCgBfqi5mvAuzECcdCyLDKED0GP3QCffaoJ
-C3zcuiby/GP9qslANQ3L7f0=
-=fg44
+iD8DBQFCzrROI1lqEGTUzyQRAvm5AJ91hkdXBI4mGAmGI0JYxrmwLmng6gCaA3Z+
+n5NG3zzHdHlnUrCw4u7L8cc=
+=Es/7
 -----END PGP SIGNATURE-----
