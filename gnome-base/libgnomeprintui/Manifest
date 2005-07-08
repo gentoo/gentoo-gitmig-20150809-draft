@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 55ce130d96634515615624d321abbf24 libgnomeprintui-1.116.0.ebuild 787
 MD5 cb14d90babd863372136632662a75811 libgnomeprintui-2.6.2.ebuild 742
 MD5 293dd19a882d4982be95d279fdd4dda3 libgnomeprintui-2.10.2.ebuild 736
@@ -16,3 +19,10 @@ MD5 5bfbd1dd041e8ac446b2964073f7cbb0 files/digest-libgnomeprintui-2.8.1 74
 MD5 d8ad11ea67765fb87fe98afabbf5fe54 files/digest-libgnomeprintui-2.8.2 74
 MD5 10f031e0e10c3a162607bf3903f1c89c files/digest-libgnomeprintui-2.10.2 75
 MD5 18289359b871af166c305a4e908642be files/digest-libgnomeprintui-1.116.0 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzewPgIKl8Uu19MoRAlQZAJ40yfUM1lqUa0hrVE6cmJAZJhgEEACfUGLc
+91TvWzzQSC3AVVZU87cBhGs=
+=0925
+-----END PGP SIGNATURE-----
