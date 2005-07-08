@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.7 2005/07/06 20:34:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.8 2005/07/08 06:18:30 spyderous Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -119,7 +119,7 @@ need_fortran() {
 		use debug && echo "MY_FORTRAN: \"${MY_FORTRAN}\""
 		
 		if ! hasq ${MY_FORTRAN} ${AVAILABLE}; then
-			eerror "Current Fortan Compiler is set to ${MY_FORTRAN}, which is not usable with this package !"
+			eerror "Current Fortran Compiler is set to ${MY_FORTRAN}, which is not usable with this package !"
 			die "Wrong Fortran Compiler !"
 		fi
 		
