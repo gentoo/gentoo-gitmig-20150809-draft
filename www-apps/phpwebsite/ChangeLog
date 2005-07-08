@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.28 2005/07/08 12:33:47 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.29 2005/07/08 12:37:18 rl03 Exp $
+
+*phpwebsite-0.10.1-r1 (08 Jul 2005)
+
+  08 Jul 2005; Renat Lumpau <rl03@gentoo.org> -phpwebsite-0.10.1.ebuild,
+  +phpwebsite-0.10.1-r1.ebuild:
+  revbumped
 
   08 Jul 2005; Renat Lumpau <rl03@gentoo.org> phpwebsite-0.10.1.ebuild:
   Updated security patch wrt #97461
