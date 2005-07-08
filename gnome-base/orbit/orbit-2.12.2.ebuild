@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.12.2.ebuild,v 1.7 2005/07/02 16:49:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.12.2.ebuild,v 1.8 2005/07/08 02:59:36 vapier Exp $
 
 inherit gnome2 eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnome/sources/ORBit2/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="doc ssl"
 
 RDEPEND=">=dev-libs/glib-2
