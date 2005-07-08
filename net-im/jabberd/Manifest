@@ -2,7 +2,7 @@ MD5 51ba76e2432e4a463cfe9c2104e2c585 ChangeLog 9358
 MD5 1de04ab5d7e18332a5d73790aadf336f jabberd-1.4.3-r4.ebuild 5813
 MD5 073710b6dd1869d3930f8f2e857341e8 metadata.xml 411
 MD5 dbb285912f47ec8143993f9a79081817 jabberd-1.4.3-r5.ebuild 5813
-MD5 896cacca8541c08b79cfff7b0bb69ced jabberd-2.0.8-r2.ebuild 3678
+MD5 0445152b94712b92ab09cbd0e7667898 jabberd-2.0.8-r2.ebuild 3673
 MD5 1a325b6068e591bc222376a7d70f6e17 files/README.Gentoo 984
 MD5 264b9719c0773f480ee42d8a61c34d0a files/digest-jabberd-1.4.3-r4 201
 MD5 3a5219d7870e60f5b16d6aefb1c63a0e files/jabber-conf.d 525
