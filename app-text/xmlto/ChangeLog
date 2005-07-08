@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.34 2005/06/25 22:22:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.35 2005/07/08 22:12:28 leonardop Exp $
+
+  08 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> xmlto-0.0.18.ebuild,
+  xmlto-0.0.17.ebuild:
+  Declare RDEPEND explicitly. Modified docbook-xml-dtd dependency to use
+  '~' syntax. Added sys-apps/util-linux dependency, resolves bug #98287.
 
   25 Jun 2005; Danny van Dyk <kugelfang@gentoo.org> xmlto-0.0.18.ebuild:
   Marked s390.
