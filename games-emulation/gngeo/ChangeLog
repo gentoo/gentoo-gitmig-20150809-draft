@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gngeo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.7 2004/07/31 08:00:45 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.8 2005/07/08 22:28:22 mr_bones_ Exp $
+
+  08 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org> -gngeo-0.5.9a.ebuild,
+  -gngeo-0.6.1.ebuild, gngeo-0.6.3.ebuild:
+  clean old ebuilds; tidy
 
 *gngeo-0.6.3 (31 Jul 2004)
 

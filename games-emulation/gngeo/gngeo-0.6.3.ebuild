@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.6.3.ebuild,v 1.1 2004/07/31 08:00:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.6.3.ebuild,v 1.2 2005/07/08 22:28:22 mr_bones_ Exp $
 
 inherit games
 
@@ -10,21 +10,19 @@ SRC_URI="http://m.peponas.free.fr/gngeo/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND="virtual/libc
-	virtual/opengl
+RDEPEND="virtual/opengl
 	sys-libs/zlib
 	media-libs/sdl-image
 	>=media-libs/libsdl-1.2"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	x86? ( >=dev-lang/nasm-0.98 )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s/-malign-functions/-falign-functions/" \
 		-e "s/-malign-loops/-falign-loops/" \
