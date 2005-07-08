@@ -7,7 +7,7 @@ MD5 6c96ba5979bf0f56d6d04c90de9e0208 guile-1.4.1.ebuild 818
 MD5 0d9318a760c6bf3f32beccf5f5b5c81f guile-1.6.6.ebuild 2067
 MD5 f4a3bb08da3e9162271dee410addc833 guile-1.4-r3.ebuild 786
 MD5 d17a70db1c4d9f0c42cf55e81cd609c9 ChangeLog 5924
-MD5 3436229046465a21dcdd0b50d2dbf8b8 guile-1.6.7.ebuild 2225
+MD5 548dd4af803e0f50acbd6832b6dec879 guile-1.6.7.ebuild 2224
 MD5 979d4686f6e39379b33139182873dead files/guile-amd64.patch 439
 MD5 c8ef00401b82bbfae1fa78785341e8dc files/digest-guile-1.6.4-r1 64
 MD5 983ca0d7ff0dc5899a453df89e714538 files/digest-guile-1.4-r3 62
@@ -21,7 +21,7 @@ MD5 c6e6b728591d901172031cc9a0997d31 files/digest-guile-1.4.1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzKivgIKl8Uu19MoRAv76AJ9l1oVk0oKEdZEea6uIKfF5xfi88wCeLZ2C
-/YH9QJyU2BPGuiWe7mWCacI=
-=iH1n
+iD8DBQFCzeovgIKl8Uu19MoRAoaIAJ9qzUNhafSac2Frz6cc/fDYBT9lCQCfWFJi
+tZ9y/IwG20JOUUDV7ZE4gwI=
+=LlK5
 -----END PGP SIGNATURE-----
