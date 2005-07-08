@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 06757f29077ba93d75f8bb762caee848 gcalctool-4.4.22.ebuild 959
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5fc2d9d6abb21e1596c3195a5a59cbbf gcalctool-4.4.20.ebuild 951
@@ -12,3 +15,10 @@ MD5 65a63bafe87741895d52ee30ab304b93 files/digest-gcalctool-5.5.42-r1 70
 MD5 16a23e780e431cedcd5a78e64aab35c3 files/digest-gcalctool-4.4.20 69
 MD5 804e74faec2cab4025478c0bfc0e4bfd files/digest-gcalctool-5.5.41 70
 MD5 65a63bafe87741895d52ee30ab304b93 files/digest-gcalctool-5.5.42 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzem5gIKl8Uu19MoRAgoeAJ9pl43L5/+8YKcY1rI/1+tGr/tJhwCeIaZq
+ZpOcLRtpn9BUerTLa9SjGWc=
+=jGY/
+-----END PGP SIGNATURE-----
