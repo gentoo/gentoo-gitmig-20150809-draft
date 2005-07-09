@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5cca3c63e170d924548de7ba2d254d59 rl-0.2.3.ebuild 768
-MD5 3e43fde93a33f05fd07c56a5b6d9a2c6 rl-0.2.4.ebuild 769
-MD5 d2d18954a76358726df6c661e360f269 ChangeLog 1925
-MD5 967b964c5ea5c14e408dba9636f087f2 rl-0.2.2.ebuild 769
 MD5 0e81493cec22dcbd57bc4ba24c586bc5 metadata.xml 402
+MD5 967b964c5ea5c14e408dba9636f087f2 rl-0.2.2.ebuild 769
+MD5 ac73a95b0a043ea37ca8b4102eb61b20 rl-0.2.4.ebuild 766
+MD5 5cca3c63e170d924548de7ba2d254d59 rl-0.2.3.ebuild 768
+MD5 d2d18954a76358726df6c661e360f269 ChangeLog 1925
 MD5 c4b0edbb6636a114dae5cf17e3d8bb4f files/digest-rl-0.2.2 60
-MD5 a969e68ccdca0cfff71e833bdf66796c files/digest-rl-0.2.3 60
 MD5 c05a7dcdc19bc5b63e9062efaa5df8b3 files/digest-rl-0.2.4 60
+MD5 a969e68ccdca0cfff71e833bdf66796c files/digest-rl-0.2.3 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzdzWKRy60XGEcJIRAhnAAJ9eDuJobRvvK9a4fBjGEqXxb1zYwwCeK2Uf
-HDc7VGUDWKlOTYwaVXQx+Wc=
-=jtA7
+iD8DBQFCzyhRgIKl8Uu19MoRAnNQAJ9OP8ptol1ymHZRq8UyQFxm7kMFJgCfSVQR
+lm7JLRNGK62QP97OxMlHhPo=
+=9u09
 -----END PGP SIGNATURE-----
