@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/jmf-bin-2.1.1e.ebuild,v 1.1 2004/07/30 20:51:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/jmf-bin-2.1.1e.ebuild,v 1.2 2005/07/09 17:01:19 swegener Exp $
 
 inherit java-pkg
 
@@ -18,15 +18,15 @@ RDEPEND=">=virtual/jdk-1.4"
 RESTRICT="fetch"
 
 pkg_nofetch() {
-	einfo " "
+	einfo
 	einfo " Due to license restrictions, we cannot fetch the"
 	einfo " distributables automagically."
-	einfo " "
+	einfo
 	einfo " 1. Visit ${HOMEPAGE} and select 'Cross Platform Java'"
 	einfo " 2. Download ${At}"
 	einfo " 3. Move file to ${DISTDIR}"
 	einfo " 4. Run emerge on this package again to complete"
-	einfo " "
+	einfo
 }
 
 src_unpack() {
@@ -34,15 +34,15 @@ src_unpack() {
 		echo  " "
 		echo  "!!! Missing ${DISTDIR}/${At}"
 		echo  " "
-		einfo " "
+		einfo
 		einfo " Due to license restrictions, we cannot fetch the"
 		einfo " distributables automagically."
-		einfo " "
+		einfo
 		einfo " 1. Visit ${HOMEPAGE} and select 'Cross Platform Java'"
 		einfo " 2. Download ${At}"
 		einfo " 3. Move file to ${DISTDIR}"
 		einfo " 4. Run emerge on this package again to complete"
-		einfo " "
+		einfo
 		die "User must manually download distfile"
 	fi
 	unzip -qq ${DISTDIR}/${At}

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/sun-javamail-bin-1.3.1.ebuild,v 1.7 2005/01/26 21:00:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/sun-javamail-bin-1.3.1.ebuild,v 1.8 2005/07/09 16:59:24 swegener Exp $
 
 inherit java-pkg
 
@@ -22,15 +22,15 @@ RESTRICT="fetch"
 DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=7515-java_mail-1.3.1-oth-JPR&SiteId=JSC&TransactionId=noreg"
 
 pkg_nofetch() {
-	einfo " "
+	einfo
 	einfo " Due to license restrictions, we cannot fetch the"
 	einfo " distributables automagically."
-	einfo " "
+	einfo
 	einfo " 1. Visit ${HOMEPAGE}"
 	einfo "   Direct link: ${DOWNLOAD_URL}"
 	einfo " 2. Download ${At}"
 	einfo " 3. Move file to ${DISTDIR}"
-	einfo " "
+	einfo
 }
 
 src_unpack() {
@@ -38,15 +38,15 @@ src_unpack() {
 		echo  " "
 		echo  "!!! Missing ${DISTDIR}/${At}"
 		echo  " "
-		einfo " "
+		einfo
 		einfo " Due to license restrictions, we cannot fetch the"
 		einfo " distributables automagically."
-		einfo " "
+		einfo
 		einfo " 1. Visit ${HOMEPAGE}"
 		einfo " 2. Download ${At}"
 		einfo " 3. Move file to ${DISTDIR}"
 		einfo " 4. Run emerge on this package again to complete"
-		einfo " "
+		einfo
 		die "User must manually download distfile"
 	fi
 	unzip -qq ${DISTDIR}/${At}
