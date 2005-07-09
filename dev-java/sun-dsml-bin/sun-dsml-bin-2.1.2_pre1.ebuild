@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/sun-dsml-bin-2.1.2_pre1.ebuild,v 1.3 2005/07/09 16:36:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/sun-dsml-bin-2.1.2_pre1.ebuild,v 1.4 2005/07/09 18:10:36 swegener Exp $
 
 inherit java-pkg
 
@@ -36,9 +36,9 @@ pkg_nofetch() {
 
 src_unpack() {
 	if [ ! -f "${DISTDIR}/${At}" ] ; then
-		echo  " "
+		echo
 		echo  "!!! Missing ${DISTDIR}/${At}"
-		echo  " "
+		echo
 		einfo
 		einfo " Due to license restrictions, we cannot fetch the"
 		einfo " distributables automagically."
