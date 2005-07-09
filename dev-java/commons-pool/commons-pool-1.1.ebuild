@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.1.ebuild,v 1.11 2005/01/20 18:40:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.1.ebuild,v 1.12 2005/07/09 03:23:53 swegener Exp $
 
 inherit java-pkg
 
-S=${WORKDIR}/${PN}-${PV}
 DESCRIPTION="Jakarta-Commons component providing general purpose object pooling API"
 HOMEPAGE="http://jakarta.apache.org/commons/pool.html"
-SRC_URI="mirror://apache/jakarta/commons/pool/source/${PN}-${PV}-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/commons/pool/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
 	>=dev-java/commons-collections-2.0
