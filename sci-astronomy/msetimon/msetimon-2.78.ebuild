@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/msetimon/msetimon-2.78.ebuild,v 1.2 2005/07/09 18:34:47 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/msetimon/msetimon-2.78.ebuild,v 1.3 2005/07/09 18:36:20 smithj Exp $
 
 MY_P=${PN}-i386-linux-lib6c-${PV/./-}
 DESCRIPTION="A GUI utility for monitoring the SETI@Home client"
@@ -14,6 +14,9 @@ KEYWORDS="-*"
 IUSE=""
 
 DEPEND="virtual/x11"
+
+# stupid binary-only package messes up when stripped
+RESTRICT="nostrip"
 
 S=${WORKDIR}/${MY_P}
 

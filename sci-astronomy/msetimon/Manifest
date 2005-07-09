@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b90632f57fc10c9363143e1652c97936 ChangeLog 1382
+MD5 58af3f635277645be121cbe99337350d ChangeLog 1489
 MD5 74946b3a0771a4fd2aed8cb884d38ab5 msetimon-2.07.ebuild 733
 MD5 2fdcec0b295e9db8d064992932e77fd5 metadata.xml 344
-MD5 e3d72d5b54cf22e30d6f74404b48b84d msetimon-2.78.ebuild 622
 MD5 2c06228f63b2f99323c5c2588d58866b msetimon-2.53.ebuild 890
+MD5 97e34e5c144e6fbf113bdc59eac34310 msetimon-2.78.ebuild 695
 MD5 20e21ddbeb262f988690a411638f0f90 files/digest-msetimon-2.07 77
 MD5 b50a8e14ac6a6a1435b7292d9a9c1b35 files/digest-msetimon-2.78 83
 MD5 a2152eaf673f7100bc902bc4719a7a65 files/msetimon-daemon-only.patch 2002
@@ -13,7 +13,7 @@ MD5 98347fc7eb71ca86fc390de1298b1de0 files/digest-msetimon-2.53 77
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0Bjhl5AvwDPiUowRAq8DAJ0dxheyHnSeC/S2gEZBm3t2cF+nmgCeK8x2
-htdzWhaFGy2rN8qho9sniwY=
-=5cze
+iD8DBQFC0Bk+l5AvwDPiUowRAr7dAJ0a9D/fwf54xaOohnTUzvKRNyNEyQCgiCxE
+Q/yOianmDS1Put6KBlezeUw=
+=UuTj
 -----END PGP SIGNATURE-----
