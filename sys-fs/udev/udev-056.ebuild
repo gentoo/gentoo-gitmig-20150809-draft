@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-056.ebuild,v 1.9 2005/06/28 05:23:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-056.ebuild,v 1.10 2005/07/09 16:21:40 swegener Exp $
 
 inherit eutils
 
@@ -164,6 +164,6 @@ pkg_postinst() {
 	ewarn "      up-to-date udev database."
 
 	einfo "For more information on udev on Gentoo, writing udev rules, and"
-	einfo "         fixing known issues visit: "
+	einfo "         fixing known issues visit:"
 	einfo "         http://www.gentoo.org/doc/en/udev-guide.xml"
 }

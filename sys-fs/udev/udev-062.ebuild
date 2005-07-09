@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-062.ebuild,v 1.1 2005/07/07 23:00:42 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-062.ebuild,v 1.2 2005/07/09 16:21:40 swegener Exp $
 
 inherit eutils
 
@@ -168,19 +168,19 @@ pkg_postinst() {
 	ewarn "      and you rely on the output of udevinfo for anything, please"
 	ewarn "      either run 'udevstart' now, or reboot, in order to get a"
 	ewarn "      up-to-date udev database."
-	ewarn " "
+	ewarn
 	ewarn "Note: If you are upgrading from a version of udev prior to 050"
 	ewarn "      and you had written some custom permissions rules, please"
 	ewarn "      realize that the permission rules are now part of the main"
 	ewarn "      udev rules files and are not stand-alone anymore.  This means"
 	ewarn "      you need to rewrite them."
-	ewarn " "
+	ewarn
 	ewarn "Note: If you are upgrading from a version of udev prior to 057"
 	ewarn "      and you have written custom rules, and rely on the etc/dev.d/"
 	ewarn "      functionality, please read the RELEASE-NOTES file for details"
 	ewarn "      on what has changed with this feature, and how to change your"
 	ewarn "      rules to work properly."
-	ewarn " "
+	ewarn
 	ewarn "Note: If you are upgrading from a version of udev prior to 059"
 	ewarn "      and you have written custom rules, and rely on the etc/dev.d/"
 	ewarn "      functionality, or the etc/hotplug.d functionality, or just"
@@ -188,8 +188,8 @@ pkg_postinst() {
 	ewarn "      read the RELEASE-NOTES file for details on what has changed"
 	ewarn "      with this feature, and how to change your rules to work properly."
 
-	einfo " "
+	einfo
 	einfo "For more information on udev on Gentoo, writing udev rules, and"
-	einfo "         fixing known issues visit: "
+	einfo "         fixing known issues visit:"
 	einfo "         http://www.gentoo.org/doc/en/udev-guide.xml"
 }
