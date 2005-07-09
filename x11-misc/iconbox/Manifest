@@ -1,4 +1,14 @@
-MD5 d58e8e5ac2937ea7048bf9da6b4a0e8e ChangeLog 415
-MD5 d29bbd0c6708759e9d124fe70ce2d166 iconbox-0.2.ebuild 814
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a461ec7c0356784e45db648d11a1c19a ChangeLog 502
 MD5 d823b91768c432c519e541378b43f9c9 metadata.xml 632
+MD5 4a4cf42c253e7edf50ecf75b20ba90c0 iconbox-0.2.ebuild 822
 MD5 9516e3e4a0d7ac21916c24b0d849484e files/digest-iconbox-0.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz3tPl5AvwDPiUowRAlZXAKCKCFfGfo3m+9pOmRF0+QYEzh3dQwCcCOnd
+HE0K7ZY+L1ZJzpmeKiPjlO4=
+=KrOS
+-----END PGP SIGNATURE-----
