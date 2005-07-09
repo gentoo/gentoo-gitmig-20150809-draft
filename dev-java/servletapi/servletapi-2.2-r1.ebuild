@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2-r1.ebuild,v 1.6 2005/03/23 12:09:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2-r1.ebuild,v 1.7 2005/07/09 16:07:56 axxo Exp $
 
 inherit java-pkg
 
-S=${WORKDIR}/jakarta-servletapi-src
 DESCRIPTION="Servlet API ${PV} from jakarta.apache.org"
 HOMEPAGE="http://jakarta.apache.org/"
-SRC_URI="mirror://gentoo/${PN}-${PV}-20021101.tar.gz"
+SRC_URI="mirror://gentoo/${P}-20021101.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-core-1.4
 	jikes? ( dev-java/jikes )"
@@ -16,26 +15,20 @@ LICENSE="Apache-1.1"
 SLOT="2.2"
 KEYWORDS="x86 ~sparc ~ppc amd64"
 IUSE="jikes doc"
+S=${WORKDIR}/jakarta-servletapi-src
 
 src_compile() {
-	local myc
+	local antflags="all"
 
-	if use jikes ; then
-		myc="${myc} -Dbuild.compiler=jikes"
-	fi
-	cd ${S}
-	ANT_OPTS=${myc} ant all
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	ant ${antflags} || die "failed to compile"
 }
 
-src_install () {
-	cd ..
-	cd  dist
-	mv servletapi/lib/servlet.jar servletapi/lib/${PN}-${PV}.jar
-	java-pkg_dojar servletapi/lib/${PN}-${PV}.jar || die "Unable to install"
+src_install() {
+	cd ../dist
+	java-pkg_dojar servletapi/lib/servlet.jar || die "Unable to install"
 
-	if use doc ; then
-		java-pkg_dohtml -r servletapi/docs/*
-	fi
+	use doc && java-pkg_dohtml -r servletapi/docs/*
 
 	dodoc dist/README.txt
 }
