@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/ipodder
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ipodder/ChangeLog,v 1.1 2005/07/09 09:27:28 chriswhite Exp $
+
+*ipodder-2.0_rc4 (09 Jul 2005)
+
+  09 Jul 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/2.0_rc4-wx26-selector.patch, +ipodder-2.0_rc4.ebuild:
+  Initial import. This fixes bug #87609. Thanks to manny15 for the ebuild
+  submissions and fserb for ebuild cleanup. Package.masked until a few
+  upstream bug fixes are put into place.
+

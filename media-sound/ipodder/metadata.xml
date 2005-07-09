@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>sound</herd>
+<maintainer>
+	<email>chriswhite@gentoo.org</email>
+	<name>Chris White</name>
+</maintainer>
+<longdescription>
+iPodder is a podcast reciever.  It subscribes you to feeds, lets you check for new feeds only, or download all avalaible feeds.
+</longdescription>
+</pkgmetadata>
