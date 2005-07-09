@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.2.ebuild,v 1.5 2005/07/09 01:38:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.2.ebuild,v 1.6 2005/07/09 19:22:12 swegener Exp $
 
 DESCRIPTION="Xfce 4 base ebuild"
 LICENSE="GPL-2 BSD LGPL-2"
@@ -29,10 +29,10 @@ XFCE_META=1
 inherit xfce4
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	ewarn "As of Xfce 4.2 xfce-base/xfce4-base is deprecated, please remove it."
-	einfo ""
+	einfo
 	einfo "For extra functionality please emerge xfce-base/xfce4-extras."
 	einfo "To start Xfce the default script is startxfce4."
-	einfo ""
+	einfo
 }
