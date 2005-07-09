@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.3 2005/03/23 00:42:40 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.4 2005/07/09 22:26:45 swegener Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Hibernate is a powerful, ultra-high performance object / relational persistence and query service for Java."
-SRC_URI="mirror://sourceforge/hibernate/${PN}-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/hibernate/${P}.tar.gz"
 HOMEPAGE="http://hibernate.bluemars.net"
 LICENSE="LGPL-2"
 SLOT="2"
