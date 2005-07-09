@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 70adc8cfc4e8dad6a1c4418139d35686 dom4j-1.4-r1.ebuild 847
 MD5 27e5383083b7e70bc82f7857df134849 dom4j-1.6.1.ebuild 2184
 MD5 061f591ed104fc509a12eb2b73073f08 dom4j-1.5.ebuild 979
@@ -6,3 +9,10 @@ MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 48544058c2c90c92b7e7a2bd9c9de6d0 files/digest-dom4j-1.4-r1 63
 MD5 d39295fd6f79fddbccc7d05723d49111 files/digest-dom4j-1.6.1 64
 MD5 08461e3c2f9380aa2a055cfb2f9865e1 files/digest-dom4j-1.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/UG/rLF9B432nYRAh5+AJwPHSUXFoelOjlIb4UupFrn3uY0hACgs2DE
+vg01a/aH5MvBjlV/gvgabeo=
+=jNW3
+-----END PGP SIGNATURE-----
