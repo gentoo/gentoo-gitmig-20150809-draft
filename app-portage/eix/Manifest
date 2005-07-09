@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b7de204d18692dd606db1413f0e66378 ChangeLog 4768
-MD5 bd737296be27155ccf735dd459739c2b eix-0.2.1.ebuild 921
-MD5 50b745d72e3082b34dd62fbc2aa6e1a5 eix-0.2.2.ebuild 1163
-MD5 74c5aadf8e3e9d642a20e64d1afefec8 metadata.xml 239
+MD5 68a279a35a3f34c3c9562ad4509938db eix-0.2.1.ebuild 916
+MD5 49642086df408e27d9c50e8759b6f8e3 eix-0.2.2.ebuild 1152
 MD5 3ddb302ff870c03e4c516e07298417e2 eix-0.2.6.ebuild 1303
 MD5 b012df8992488da6f22e677cba2e1f9c files/0.2.2-incorrect-masks.patch 1661
 MD5 9033adc2410fa5477618aa28ae6d8582 files/0.2.2-unistd.h.patch 716
-MD5 3a36ef63cff165b67afeb774a7edf9d1 files/0.2.6-package.cc.patch 461
 MD5 1df3eabe7a20b27cf2d3c1c0b2b5a090 files/0.2.6-cdb-cast.patch 516
+MD5 3a36ef63cff165b67afeb774a7edf9d1 files/0.2.6-package.cc.patch 461
 MD5 943e6938455bf034be166ecbe03c88aa files/digest-eix-0.2.1 62
 MD5 3eff250e62af117080bac27f4f2a9655 files/digest-eix-0.2.2 62
 MD5 79cb9eb15d5c16732f94bf126ee8ca2f files/digest-eix-0.2.6 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzYi4mPFBzbX68WERAudCAJ4m2tKnU8BXoMXxlNqHekFtocz1EACgikTV
-WESW74U8BGxlF+g1L+lSQfQ=
-=aVLh
------END PGP SIGNATURE-----
+MD5 74c5aadf8e3e9d642a20e64d1afefec8 metadata.xml 239
