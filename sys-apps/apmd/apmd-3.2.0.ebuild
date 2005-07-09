@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.10 2005/01/04 11:52:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.11 2005/07/09 03:18:39 swegener Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ src_compile() {
 	emake || die
 }
 
-S="${WORKDIR}/${PN}-${PV}.orig"
+S="${WORKDIR}/${P}.orig"
 
 src_install() {
 	dodir /usr/sbin
