@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.9.1.ebuild,v 1.12 2005/05/31 08:11:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.9.1.ebuild,v 1.13 2005/07/09 18:50:50 swegener Exp $
 
 DESCRIPTION="Documentation and analysis tool for C++, C, Java, IDL, PHP and C#"
 HOMEPAGE="http://www.doxygen.org/"
@@ -75,11 +75,11 @@ src_install() {
 
 pkg_postinst() {
 
-	ewarn ""
+	ewarn
 	einfo "The USE flags qt, doc, and tetex will enable doxywizard, or"
 	einfo "the html and pdf documentation, respectively.  For examples"
 	einfo "and other goodies, see the source tarball.  For some example"
 	einfo "output, run doxygen on the doxygen source using the Doxyfile"
 	einfo "provided in the top-level source dir."
-	ewarn ""
+	ewarn
 }
