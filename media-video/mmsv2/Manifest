@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7fbc0795c42d3febc669293f8e0a56fc ChangeLog 1308
 MD5 15f841e3a249b011bec2ecda0ee6c223 files/config.diff 628
 MD5 930867e107776e2dbea0db0152cebbf0 files/digest-mmsv2-0.93 64
@@ -13,3 +16,10 @@ MD5 9cb82c1bc9b9ad04be5014e871c2c815 mmsv2-0.93.ebuild 2054
 MD5 56f75b8445e8e02b654f978e2f62599d mmsv2-1.0.1.ebuild 2053
 MD5 c29699cfd4522fea7352e288151dc339 mmsv2-1.0.2.2.ebuild 1973
 MD5 85bded388e06cb3f3d56add27d0a0d7a mmsv2-1.0.ebuild 2034
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0B9ZI1lqEGTUzyQRAnPUAKCfdpt7eibCIjpk575lv0rNmT0FRACghe4m
+Zf2XgCWyJ9ZifOSWiT4hMU0=
+=9mAF
+-----END PGP SIGNATURE-----

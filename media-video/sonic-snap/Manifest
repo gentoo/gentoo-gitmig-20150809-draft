@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b4a07265129c209f42270b15d5c2557b ChangeLog 509
 MD5 d092e71ce6c3033f3c98eb4a6b1e313a files/digest-sonic-snap-1.5 65
 MD5 cfd31d9720e9bc2a3ad6d285c7affe72 metadata.xml 383
 MD5 31d91be7539b7b3b48d679c7ffca05ac sonic-snap-1.5.ebuild 1676
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0B7hI1lqEGTUzyQRAgmXAJ0Y8EKPSjfHmdZYPU2rpZHpdh0/AACghB40
+BS/V5Z5ryBJm76YKumozexE=
+=UYjI
+-----END PGP SIGNATURE-----
