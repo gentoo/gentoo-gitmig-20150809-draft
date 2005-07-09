@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 34954c7ca1b212ee340e2858c1f39019 profuse-0.18.ebuild 666
 MD5 e433ee470fe906369f24a21d83ca3cf9 profuse-0.22.1.ebuild 812
 MD5 59850e563bf694575238786cecb034ef profuse-0.13.ebuild 665
@@ -40,3 +43,10 @@ MD5 596e10047982c578228e9df292c61edd files/digest-profuse-0.16 64
 MD5 4c01bb73cb8930272d5fa2f85b4020a7 files/digest-profuse-0.17 64
 MD5 61bb4d3a183f4d5cc4e9f0e67adeeaa2 files/digest-profuse-0.18 64
 MD5 8b2be9a33905796b2d1ac415061a7870 files/digest-profuse-0.20 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzzV3BXaUFmZvwyMRArMLAJ0fKr1VPNqz/bF033xol6q8IktbrgCgsOA6
+5gsxzVadnDfqfN1q2E7YQ3E=
+=klB6
+-----END PGP SIGNATURE-----
