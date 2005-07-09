@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20050306.ebuild,v 1.4 2005/04/11 21:04:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20050306.ebuild,v 1.5 2005/07/09 19:36:56 swegener Exp $
 
 MY_P="${P/-2./-}"
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
@@ -43,16 +43,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "This is a new branch of fvwm-crystal theme. If you prefer"
 	einfo "to stay with versions 1.x, put the following line in"
 	einfo "/etc/portage/package.mask, and reemerge fvwm-crystal:"
 	einfo " >=x11-themes/fvwm-crystal-2*"
-	einfo ""
+	einfo
 	einfo "After installation, execute following commands:"
 	einfo " $ cp -r /usr/share/${PN}/addons/Xresources-EN ~/.Xresources"
 	einfo " $ cp -r /usr/share/${PN}/addons/Xsession ~/.xinitrc"
-	einfo ""
+	einfo
 	einfo "Authors of fvwm-crystal recommend also installing"
 	einfo "the following applications:"
 	einfo " app-admin/gkrellm"
@@ -62,6 +62,6 @@ pkg_postinst() {
 	einfo " x11-misc/xpad"
 	einfo " x11-misc/xscreensaver"
 	einfo " x11-terms/aterm"
-	einfo ""
+	einfo
 }
 

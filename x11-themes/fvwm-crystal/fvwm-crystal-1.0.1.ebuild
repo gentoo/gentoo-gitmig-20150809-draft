@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.1.ebuild,v 1.12 2005/01/15 19:34:40 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.1.ebuild,v 1.13 2005/07/09 19:36:56 swegener Exp $
 
 inherit eutils
 
@@ -68,15 +68,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "users should run fvwm-crystal.install to configure fvwm-crystal"
-	einfo ""
-	einfo ""
+	einfo
+	einfo
 	einfo "fvwm-crystal authors also reccomend the following applications:"
-	einfo ""
+	einfo
 	einfo "	app-misc/rox"
 	einfo "	media-gfx/scrot"
 	einfo "	x11-misc/xlockmore"
-	einfo ""
+	einfo
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.3_pre1.ebuild,v 1.7 2005/01/15 19:34:40 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.3_pre1.ebuild,v 1.8 2005/07/09 19:36:56 swegener Exp $
 
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
 HOMEPAGE="http://fvwm-crystal.linuxpl.org/"
@@ -28,14 +28,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "users should run fvwm-crystal.install to configure fvwm-crystal"
-	einfo ""
-	einfo ""
+	einfo
+	einfo
 	einfo "fvwm-crystal authors also recommend the following applications:"
-	einfo ""
+	einfo
 	einfo "	app-misc/rox"
 	einfo "	media-gfx/scrot"
 	einfo "	x11-misc/xlockmore"
-	einfo ""
+	einfo
 }
