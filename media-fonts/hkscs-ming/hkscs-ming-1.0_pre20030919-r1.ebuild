@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.5 2004/09/29 06:15:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.6 2005/07/09 18:16:54 swegener Exp $
 
 inherit rpm font
 
@@ -40,12 +40,12 @@ pkg_postinst() {
 	einfo "The font name installed is 'Ming(for ISO10646)'. To add make it"
 	einfo "the default Chinese font, you should add entries to your"
 	einfo "/etc/fonts/local.conf similar to:"
-	einfo " "
+	einfo
 	einfo "<alias>"
 	einfo "    <family>Luxi Sans</family>"
 	einfo "    <family>Bitstream Vera Sans</family>"
 	einfo "    <family>Ming(for ISO10646)</family>"
 	einfo "    <default><family>sans-serif</family></default>"
 	einfo "</alias>"
-	einfo " "
+	einfo
 }
