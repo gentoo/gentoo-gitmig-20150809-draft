@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.28 2005/07/08 19:53:44 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.29 2005/07/09 14:18:41 rl03 Exp $
+
+  09 Jul 2005; Renat Lumpau <rl03@gentoo.org>
+  -files/2.20_rc1/pgsql-version-detect-broken-gentoo.patch,
+  bugzilla-2.20_rc1.ebuild:
+  Update DBD:Pg dependency
 
 *bugzilla-2.20_rc1 (08 Jul 2005)
 

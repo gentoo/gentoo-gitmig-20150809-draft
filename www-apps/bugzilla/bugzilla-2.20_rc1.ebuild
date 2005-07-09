@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20_rc1.ebuild,v 1.1 2005/07/08 19:53:44 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20_rc1.ebuild,v 1.2 2005/07/09 14:18:41 rl03 Exp $
 
 inherit webapp eutils
 
@@ -17,7 +17,7 @@ IUSE="apache2 postgres graphviz"
 
 RDEPEND="
 	>=dev-lang/perl-5.6.1
-	postgres? ( >=dev-db/postgresql-7.3 >=dev-perl/DBD-Pg-1.31 )
+	postgres? ( >=dev-db/postgresql-7.3 >=dev-perl/DBD-Pg-1.43 )
 	!postgres? ( >=dev-db/mysql-3.23.41	>=dev-perl/DBD-mysql-2.9003 )
 	apache2? ( >=net-www/apache-2.0 )
 	!apache2? ( =net-www/apache-1* )
@@ -48,7 +48,6 @@ src_unpack() {
 	cd ${S}
 	# remove CVS directories
 	find . -type d -name 'CVS' -print | xargs rm -rf
-	epatch ${FILESDIR}/${PVR}/pgsql-version-detect-broken-gentoo.patch
 }
 
 src_install () {
