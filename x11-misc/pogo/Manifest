@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ea3a637cf8cad16f8762c766ab033e74 ChangeLog 945
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 65ed07dab08330a081ba8e6cf449b4b3 pogo-2.2.ebuild 829
 MD5 7866986b7b75f93f57b2704e24c21f49 files/Makefile 787
 MD5 14dfeacc336e0247acb2541756227083 files/digest-pogo-2.2 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0Ck7l5AvwDPiUowRAt9mAJwO945iL7qNWVzSJFBDbvycawLf+wCggloI
+inGqG6qR34r8yjmmuUS2kpQ=
+=LH9m
+-----END PGP SIGNATURE-----
