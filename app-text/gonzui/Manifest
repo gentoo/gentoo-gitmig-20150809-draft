@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4d00103174284c9c626cd585769f496d gonzui-1.1.ebuild 1081
-MD5 bc3d138150e0fcaad516ddf1b017004a gonzui-1.2.ebuild 1150
+MD5 25ae2f42b12a9722bb6ab77cd4a91366 gonzui-1.2.ebuild 1158
 MD5 6abb5a8df45e3f87b2ead404fc336395 ChangeLog 716
 MD5 6f9e93c0f7b1c97af47eff2dda9ecaff metadata.xml 248
 MD5 0dd0e97ce440d47373a5b47a202b7937 files/digest-gonzui-1.1 62
 MD5 60d761db20551b5b4f598b2c425beb57 files/digest-gonzui-1.2 62
 MD5 4c4700315deaaeed3379174f14ff64dc files/gonzui 821
 MD5 755cba28c489e4002a0e10b39a624092 files/ebuild.rb 831
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz1KQBXaUFmZvwyMRAjU0AJ0VZrDlBuIE08LBrRWKDdu0SUnbWACfaSk4
+YZwfFDpH23NHYY5dmRfM2Cw=
+=048g
+-----END PGP SIGNATURE-----

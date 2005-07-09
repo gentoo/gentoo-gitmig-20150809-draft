@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/gonzui-1.2.ebuild,v 1.1 2005/07/06 15:53:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/gonzui-1.2.ebuild,v 1.2 2005/07/09 04:28:51 agriffis Exp $
 
 inherit eutils ruby
 
-IUSE=""
+IUSE="ocaml"
+
 USE_RUBY="ruby18 ruby19"
 
 DESCRIPTION="gonzui is a source code search engine."
