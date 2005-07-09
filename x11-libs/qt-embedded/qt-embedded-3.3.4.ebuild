@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.4.ebuild,v 1.2 2005/03/07 10:17:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.4.ebuild,v 1.3 2005/07/09 19:23:10 swegener Exp $
 
 DESCRIPTION="Embedded Linux port of Qt"
 HOMEPAGE="http://www.trolltech.com/products/embedded/"
@@ -140,7 +140,7 @@ pkg_postinst() {
 	einfo "If you want to compile and run a test application using"
 	einfo "QT/Embedded instead of standard Qt, you must properly"
 	einfo "set the QTDIR and QMAKESPEC variables, e.g.:"
-	einfo ""
+	einfo
 	einfo "    export QTDIR=${QTBASE}"
 	einfo "    export QMAKESPEC=${QTBASE}/mkspecs/${XPLATFORM}"
 	echo
