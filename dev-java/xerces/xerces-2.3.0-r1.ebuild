@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r1.ebuild,v 1.11 2005/05/06 13:36:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r1.ebuild,v 1.12 2005/07/09 15:56:13 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -13,14 +13,15 @@ SLOT="2.3"
 KEYWORDS="x86 amd64 sparc ~ppc"
 IUSE="doc examples jikes source"
 
-DEPEND=">=virtual/jdk-1.3
-	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.3
-	>=dev-java/ant-core-1.5.2
-	>=dev-java/xalan-2.5.2
-	dev-java/xjavac
 	>=dev-java/xml-commons-1.0_beta2"
+DEPEND=">=virtual/jdk-1.3
+	>=dev-java/ant-core-1.5.2
+	>=dev-java/xjavac-20041208-r1
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )
+	${RDEPEND}"
+
 S=${WORKDIR}/xerces-${PV//./_}
 
 src_unpack() {
@@ -30,9 +31,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	mkdir ${S}/tools && cd ${S}/tools
-	java-pkg_jar-from ant-core ant.jar
-	java-pkg_jar-from ant-core ant-launcher.jar
-	java-pkg_jar-from xalan
 	java-pkg_jar-from xml-commons xml-apis.jar
 
 	mkdir ${S}/tools/bin && cd ${S}/tools/bin
@@ -43,7 +41,7 @@ src_compile() {
 	local antflags="jars"
 	use doc && antflags="${antflags} javadocs"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	sh build.sh ${antflags} || die "ant build failed"
+	ant ${antflags} || die "ant build failed"
 }
 
 src_install () {

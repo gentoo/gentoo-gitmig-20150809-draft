@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-1.3.1-r1.ebuild,v 1.5 2005/05/06 13:36:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-1.3.1-r1.ebuild,v 1.6 2005/07/09 15:56:13 axxo Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,8 @@ KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND=">=virtual/jdk-1.3
 	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
+	source? ( app-arch/zip )
+	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.3
 	>=dev-java/xalan-2.5.2"
 IUSE="doc jikes source"

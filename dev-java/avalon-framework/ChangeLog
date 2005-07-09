@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-framework
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.7 2005/05/30 19:22:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.8 2005/07/09 15:58:54 axxo Exp $
+
+  09 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
+  avalon-framework-4.1.5.ebuild, avalon-framework-4.2.0.ebuild:
+  fix deps, cleanups
 
   30 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   avalon-framework-4.1.5.ebuild, avalon-framework-4.2.0.ebuild:
