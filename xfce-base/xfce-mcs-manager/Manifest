@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cbf07dd36dd3829a48c679c777d5e2f0 xfce-mcs-manager-4.2.2.ebuild 414
-MD5 f76927a257537559bdfeefc304cd979f xfce-mcs-manager-4.2.1.ebuild 416
+MD5 7f17f3b9994dfe157fa05ea82d57583c xfce-mcs-manager-4.2.2.ebuild 411
 MD5 96a1cb9ca6e0059b96d7a390b79c6a5e xfce-mcs-manager-4.0.6.ebuild 834
+MD5 f76927a257537559bdfeefc304cd979f xfce-mcs-manager-4.2.1.ebuild 416
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 990788e28cb7916be2aaa0cb53167e46 ChangeLog 6665
 MD5 df2b1c6c4a75b731a512e9fe3d15e02a xfce-mcs-manager-4.2.0.ebuild 418
-MD5 d69958702a86fd719be9ef272c56278f files/digest-xfce-mcs-manager-4.0.6 74
-MD5 4592f602a0965dfb63ab6616aafe0df6 files/digest-xfce-mcs-manager-4.2.2 74
-MD5 9cf685c1a7049e32d13f8e38a4825c0c files/digest-xfce-mcs-manager-4.2.1 74
+MD5 990788e28cb7916be2aaa0cb53167e46 ChangeLog 6665
 MD5 86cdb84a3d6532edb298680997d3bb5f files/digest-xfce-mcs-manager-4.2.0 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCzreRKRy60XGEcJIRAmzTAJ9AheW3iaKxh81rHKbr1x0wtIxbFwCfcEY9
-WSnKx1cz74KCI6clZBNk5O0=
-=+hYJ
------END PGP SIGNATURE-----
+MD5 d69958702a86fd719be9ef272c56278f files/digest-xfce-mcs-manager-4.0.6 74
+MD5 9cf685c1a7049e32d13f8e38a4825c0c files/digest-xfce-mcs-manager-4.2.1 74
+MD5 4592f602a0965dfb63ab6616aafe0df6 files/digest-xfce-mcs-manager-4.2.2 74
