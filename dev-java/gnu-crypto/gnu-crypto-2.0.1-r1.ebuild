@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/gnu-crypto-2.0.1-r1.ebuild,v 1.1 2005/05/28 23:58:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/gnu-crypto-2.0.1-r1.ebuild,v 1.2 2005/07/09 16:02:10 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -16,6 +16,8 @@ IUSE="doc"
 DEPEND=">=virtual/jdk-1.3"
 RDEPEND=">=virtual/jre-1.3"
 
+RESTRICT="test"
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -29,9 +31,9 @@ src_compile() {
 		--with-jce=yes \
 		--with-sasl=yes \
 		|| die
-	emake || die
+	emake -j1 || die
 	if use doc ; then
-		emake javadoc || die
+		emake -j1 javadoc || die
 	fi
 }
 
@@ -43,11 +45,7 @@ src_install() {
 	java-pkg_dojar jce/javax-crypto.jar
 	java-pkg_dojar security/javax-security.jar
 
-	if use doc ; then
-		java-pkg_dohtml -r api/*
-	fi
+	use doc && java-pkg_dohtml -r api/*
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS
 }
-
-src_test() { :; }

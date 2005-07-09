@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/gnu-crypto-2.0.1.ebuild,v 1.14 2005/05/27 00:02:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/gnu-crypto-2.0.1.ebuild,v 1.15 2005/07/09 16:02:10 axxo Exp $
 
 inherit java-pkg
 
@@ -13,6 +13,7 @@ KEYWORDS="x86 ppc amd64 ppc64"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.3"
 RDEPEND=">=virtual/jre-1.3"
+RESTRICT="test"
 
 src_compile() {
 	# jikes support disabled, doesnt work: #86655
@@ -20,9 +21,9 @@ src_compile() {
 		--with-jce=yes \
 		--with-sasl=yes \
 		|| die
-	emake || die
+	emake -j1 || die
 	if use doc ; then
-		emake javadoc || die
+		emake -j1 javadoc || die
 	fi
 }
 
@@ -40,5 +41,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS
 }
-
-src_test() { :; }
