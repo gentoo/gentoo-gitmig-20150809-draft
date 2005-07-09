@@ -1,6 +1,16 @@
-MD5 bbd1c3da6b1c9d18fb622feffa4bad9d pglogd-2.3.ebuild 1444
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e71078b9e64c8294d152222cbbcfc6c ChangeLog 439
-MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 e67442dd9e4759ae981da63dce507e25 files/digest-pglogd-2.3 61
 MD5 12e3988f7380e90f2e3a6a6fd9e87598 files/Makefile.patch 516
+MD5 e67442dd9e4759ae981da63dce507e25 files/digest-pglogd-2.3 61
 MD5 0c77083bcb07ead78c786540e9d7a386 files/pglogd.init 556
+MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+MD5 b2518a52e9f9f9cc201223c4aed089cd pglogd-2.3.ebuild 1433
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0B4OI1lqEGTUzyQRAuXkAJ0QpWZeH3/b6huBqp+KiPVJZ/T7SwCfSPaV
+ahuVSVN74sjwTtdOXT/fYAM=
+=xh2S
+-----END PGP SIGNATURE-----
