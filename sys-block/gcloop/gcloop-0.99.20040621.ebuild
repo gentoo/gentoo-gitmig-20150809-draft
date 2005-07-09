@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gcloop/gcloop-0.99.20040621.ebuild,v 1.1 2005/03/14 20:00:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gcloop/gcloop-0.99.20040621.ebuild,v 1.2 2005/07/09 19:45:53 swegener Exp $
 
 DESCRIPTION="Compressed loopback userspace tools and kernel patches"
 
@@ -47,8 +47,8 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "This is a gcloop prerelease, userspace tool may change."
-	ewarn "Please report any bug to lu_zero@gentoo.org via e-mail "
-	ewarn "or bugzilla. "
+	ewarn "Please report any bug to lu_zero@gentoo.org via e-mail"
+	ewarn "or bugzilla."
 	ewarn "REMEBER this is a PRERELEASE"
 	echo
 	einfo "the required patches are installed in /usr/share/gcloop ."
