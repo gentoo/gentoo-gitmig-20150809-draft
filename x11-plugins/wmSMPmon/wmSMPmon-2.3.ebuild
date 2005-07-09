@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/wmSMPmon-2.3.ebuild,v 1.3 2005/04/07 17:09:58 blubb Exp $
-
-S="${WORKDIR}/${PN}-2.x"
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/wmSMPmon-2.3.ebuild,v 1.4 2005/07/09 15:56:42 swegener Exp $
 
 IUSE=""
 DESCRIPTION="SMP system monitor dockapp"
