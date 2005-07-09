@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.8.5-r1.ebuild,v 1.1 2005/07/05 23:10:00 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.8.5-r1.ebuild,v 1.2 2005/07/09 18:57:48 swegener Exp $
 
 inherit eutils webapp
 
@@ -81,9 +81,9 @@ src_install() {
 pkg_config() {
 	einfo "Type in your MySQL root password to create an empty tiki database:"
 	mysqladmin -u root -p create tikiwiki
-	einfo ""
-	einfo ""
+	einfo
+	einfo
 	einfo "Now, point your browser to the location of tiki-install.php"
 	einfo "    ==> e.g. http://localhost/tikiwiki/tiki-install.php"
-	einfo ""
+	einfo
 }

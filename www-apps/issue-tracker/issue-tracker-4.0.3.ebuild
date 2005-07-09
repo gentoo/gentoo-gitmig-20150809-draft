@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/issue-tracker-4.0.3.ebuild,v 1.2 2004/09/03 17:17:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/issue-tracker-4.0.3.ebuild,v 1.3 2005/07/09 18:58:40 swegener Exp $
 
 inherit webapp-apache
 
@@ -53,13 +53,13 @@ pkg_postinst() {
 	webapp-detect
 
 	einfo "You will need to configure issue-tracker for a particular database"
-	einfo ""
+	einfo
 	einfo "(1) First, you must decide on:"
 	einfo " - a database username, <it-username>"
 	einfo " - a database name in the database, <it-dbname>"
-	einfo ""
+	einfo
 	einfo "(2) Next, you must create the database"
-	einfo ""
+	einfo
 	einfo "For MySQL:"
 	einfo "mysqladmin -p -u <it-username> create <it-dbname>"
 	einfo "mysql -p -u <it-username> <it-dbname> \\"
@@ -68,7 +68,7 @@ pkg_postinst() {
 	einfo "      < ${HTTPD_ROOT}/issue-tracker/setup/data.sql"
 	einfo "mysql -p -u <it-username> <it-dbname> \\"
 	einfo "      < ${HTTPD_ROOT}/issue-tracker/setup/indexes.sql"
-	einfo ""
+	einfo
 	einfo "For PostgreSQL:"
 	einfo "createdb -U <it-username> <it-dbname>"
 	einfo "psql -U <it-username> \\"
@@ -77,16 +77,16 @@ pkg_postinst() {
 	einfo "     < ${HTTPD_ROOT}/issue-tracker/setup/data.sql"
 	einfo "psql -U <it-username> \\"
 	einfo "     < ${HTTPD_ROOT}/issue-tracker/setup/indexes.sql"
-	einfo ""
+	einfo
 	einfo "(3) Next, you will need to configure issue-tracker"
 	einfo "cp ${HTTPD_ROOT}/issue-tracker/conf/config.php-default \\"
 	einfo "   ${HTTPD_ROOT}/issue-tracker/conf/config.php"
-	einfo ""
+	einfo
 	einfo "Edit ${HTTPD_ROOT}/issue-tracker/conf/config.php"
 	einfo "with name=<it-dbname>, user=<it-username> and the correct db info"
-	einfo ""
+	einfo
 	ewarn "Make sure you don't just edit the commented-out example;)"
-	einfo ""
+	einfo
 	ewarn "(4) Finally, you must log in to the issue-tracker as admin/demo, and"
 	ewarn "change the password in Preferences."
 }
