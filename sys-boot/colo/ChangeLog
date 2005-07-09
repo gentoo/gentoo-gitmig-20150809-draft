@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/colo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.13 2005/06/04 07:29:44 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.14 2005/07/09 10:49:57 redhatter Exp $
+
+  09 Jul 2005; Stuart Longland <redhatter@gentoo.org> colo-1.16.ebuild:
+  No bugs filed in over a month.  Moving colo-1.16 to stable (mips)
 
 *colo-1.19 (04 Jun 2005)
   04 Jun 2005; Stuart Longland <redhatter@gentoo.org> +colo-1.19.ebuild:
