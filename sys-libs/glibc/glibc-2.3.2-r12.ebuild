@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.13 2005/05/17 22:33:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.14 2005/07/09 21:11:39 agriffis Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -40,7 +40,7 @@ LICENSE="LGPL-2"
 	&& SLOT="${CTARGET}-2.2" \
 	|| SLOT="2.2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86"
-IUSE="nls pic build nptl debug userlocales"
+IUSE="build nls nptl pic userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...

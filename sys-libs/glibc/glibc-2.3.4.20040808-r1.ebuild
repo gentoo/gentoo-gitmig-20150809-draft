@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.47 2005/05/17 22:33:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.48 2005/07/09 21:11:39 agriffis Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -53,7 +53,7 @@ LICENSE="LGPL-2"
 #~sparc: This is only used by the sparc64-multilib PROFILE_ARCH as versions
 #        after ~2.3.3.20040420 break blackdown-jdk on sparc.
 KEYWORDS="x86 amd64 hppa ppc64 ~ppc -mips ~sparc"
-IUSE="nls pic build nptl erandom hardened multilib debug userlocales"
+IUSE="build erandom hardened multilib n32 nls nptl pic userlocales"
 RESTRICT="nostrip multilib-pkg-force" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
