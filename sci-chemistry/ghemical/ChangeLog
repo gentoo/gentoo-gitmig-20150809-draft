@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/ghemical
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.7 2005/07/09 00:20:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.8 2005/07/09 05:06:00 spyderous Exp $
+
+*ghemical-1.90 (09 Jul 2005)
+
+  09 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/ghemical-1.90-ghemical-server-fix.patch,
+  +files/1.90-gcc3.4-r1.patch, +ghemical-1.90.ebuild:
+  Development version.
 
   09 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>; ghemical-1.02.ebuild:
   We can use virtual/glut here, no need to get tied into media-libs/glut.
