@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/resin-ee-2.1.14.ebuild,v 1.2 2005/06/05 16:00:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/resin-ee-2.1.14.ebuild,v 1.3 2005/07/09 17:51:40 swegener Exp $
 
 inherit java-pkg eutils
 
@@ -77,10 +77,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo " "
+	einfo
 	einfo " NOTICE!"
 	einfo " User and group 'resin' have been added."
-	einfo " "
+	einfo
 	einfo " FILE LOCATIONS:"
 	einfo " 1.  Resin home directory: ${RESIN_HOME}"
 	einfo "     Contains application data, configuration files."
@@ -88,37 +88,34 @@ pkg_postinst() {
 	einfo "     Contains CLASSPATH and JAVA_HOME settings."
 	einfo " 3.  Logs:  /var/log/resin/"
 	einfo " 4.  Executables, libraries:  /usr/share/resin-ee/"
-	einfo " "
-	einfo " "
+	einfo
 	einfo " STARTING AND STOPPING RESIN:"
 	einfo "   /etc/init.d/resin start"
 	einfo "   /etc/init.d/resin stop"
 	einfo "   /etc/init.d/resin restart"
-	einfo " "
-	einfo " "
+	einfo
 	einfo " NETWORK CONFIGURATION:"
 	einfo " By default, Resin runs on port 8080.  You can change this"
 	einfo " value by editing ${RESIN_HOME}/conf/resin.conf."
-	einfo " "
+	einfo
 	einfo " To test Resin while it's running, point your web browser to:"
 	einfo " http://localhost:8080/"
-	einfo " "
+	einfo
 	einfo " Be sure to allow Resin a minute or two to compile the pages"
 	einfo " the first time you run it."
-	einfo " "
+	einfo
 	einfo " Resin cannot run on port 80 as non-root (as of this time)."
 	einfo " The best way to get Resin to respond on port 80 is via port"
 	einfo " forwarding -- by installing a firewall on the machine running"
 	einfo " Resin or the network gateway.  Simply redirect port 80 to"
 	einfo " port 8080."
-	einfo " "
+	einfo
 	einfo " BUGS:"
 	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
 	einfo " may not get seen.  Thank you."
-	einfo " "
+	einfo
 }
 
 pkg_postrm() {
 	einfo "You may want to remove the resin user and group"
 }
-

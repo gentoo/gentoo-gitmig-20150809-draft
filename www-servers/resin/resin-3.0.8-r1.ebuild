@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.8-r1.ebuild,v 1.5 2005/04/19 14:03:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.8-r1.ebuild,v 1.6 2005/07/09 17:50:29 swegener Exp $
 
 inherit java-pkg eutils
 
@@ -71,7 +71,7 @@ pkg_postinst() {
 	einfo
 	einfo " NOTICE!"
 	einfo " User and group 'resin' have been added."
-	einfo " "
+	einfo
 	einfo " FILE LOCATIONS:"
 	einfo " 1.  Resin home directory: ${RESIN_HOME}"
 	einfo "     Contains application data, configuration files."
@@ -82,12 +82,11 @@ pkg_postinst() {
 	einfo
 	einfo "If you are updating from resin-2* your old configuration files"
 	einfo "have been moved to /etc/resin/conf.old"
-	einfo " "
+	einfo
 	einfo " STARTING AND STOPPING RESIN:"
 	einfo "   /etc/init.d/resin start"
 	einfo "   /etc/init.d/resin stop"
 	einfo "   /etc/init.d/resin restart"
-	einfo
 	einfo
 	einfo " NETWORK CONFIGURATION:"
 	einfo " By default, Resin runs on port 8080.  You can change this"

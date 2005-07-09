@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jetty/jetty-4.2.19.ebuild,v 1.2 2004/08/25 03:05:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jetty/jetty-4.2.19.ebuild,v 1.3 2005/07/09 17:53:40 swegener Exp $
 
 inherit eutils
 
@@ -67,7 +67,7 @@ pkg_postinst() {
 	einfo
 	einfo " NOTICE!"
 	einfo " User and group 'jetty' have been added."
-	einfo " "
+	einfo
 	einfo " FILE LOCATIONS:"
 	einfo " 1.  Jetty home directory: ${JETTY_HOME}"
 	einfo "     Contains application data, configuration files."
@@ -84,12 +84,12 @@ pkg_postinst() {
 	einfo "   /etc/init.d/jetty start"
 	einfo "   /etc/init.d/jetty stop"
 	einfo "   /etc/init.d/jetty restart"
-	einfo " "
-	einfo " "
+	einfo
+	einfo
 	einfo " NETWORK CONFIGURATION:"
 	einfo " By default, Jetty runs on port 8080.  You can change this"
 	einfo " value by setting JETTY_PORT in /etc/conf.d/jetty ."
-	einfo " "
+	einfo
 	einfo " To test Jetty while it's running, point your web browser to:"
 	einfo " http://localhost:8080/"
 	einfo
