@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/htun-0.9.5.ebuild,v 1.4 2004/07/15 02:53:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/htun-0.9.5.ebuild,v 1.5 2005/07/09 17:10:31 swegener Exp $
 
 DESCRIPTION="Project to tunnel IP traffic over HTTP"
 HOMEPAGE="http://htun.runslinux.net/"
@@ -29,19 +29,17 @@ src_install() {
 	doins ${S}/doc/htund.conf
 	dodoc doc/*
 
-	einfo "                                                  "
-	einfo "                                                  "
-	einfo "NOTE: HTun requires the Universal TUN/TAP module  "
+	einfo
+	einfo "NOTE: HTun requires the Universal TUN/TAP module"
 	einfo "available in the Linux kernel.  Make sure you have"
-	einfo "compiled the tun.o driver as a module!            "
-	einfo "                                                  "
-	einfo "It can be found in the kernel configuration under "
-	einfo "Network Device Support --> Universal TUN/TAP      "
-	einfo "                                                  "
-	einfo "To configure HTun, run the following commands as root:       "
-	einfo "  # mknod /dev/net/tun c 10 200                              "
+	einfo "compiled the tun.o driver as a module!"
+	einfo
+	einfo "It can be found in the kernel configuration under"
+	einfo "Network Device Support --> Universal TUN/TAP"
+	einfo
+	einfo "To configure HTun, run the following commands as root:"
+	einfo "  # mknod /dev/net/tun c 10 200"
 	einfo "  # echo \"alias char-major-10-200 tun\" >> /etc/modules.conf"
-	einfo "  # depmod -e                                                "
-	einfo "                                                  "
-	einfo "                                                  "
+	einfo "  # depmod -e"
+	einfo
 }

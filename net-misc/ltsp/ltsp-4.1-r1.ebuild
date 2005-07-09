@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.10 2005/04/29 11:30:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.11 2005/07/09 17:09:11 swegener Exp $
 
 IUSE="X debug nas esd audiofile snmp"
 
@@ -159,6 +159,6 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "Either use ltspcfg to configure your stuff, or follow the guide at gentoo.org:"
-	einfo "                   http://www.gentoo.org/doc/en/ltsp.xml                      "
+	einfo "                   http://www.gentoo.org/doc/en/ltsp.xml"
 	einfo
 }
