@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r4.ebuild,v 1.8 2005/07/09 06:06:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r4.ebuild,v 1.9 2005/07/09 19:40:26 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pam
 
@@ -123,7 +123,7 @@ pkg_postinst() {
 	einfo
 	einfo "screen is not installed as setuid root, which effectively disables multi-user"
 	einfo "mode. To enable it, run:"
-	einfo ""
+	einfo
 	einfo "\tchmod u+s /usr/bin/screen"
 	einfo "\tchmod go-w /var/run/screen"
 }
