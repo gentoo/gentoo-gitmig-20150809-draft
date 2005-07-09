@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r6.ebuild,v 1.2 2005/07/08 17:13:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r6.ebuild,v 1.3 2005/07/09 12:35:11 humpback Exp $
 
 inherit flag-o-matic eutils
 
@@ -132,7 +132,6 @@ src_install() {
 	# on initial install. See Make.rules
 	make DESTDIR=${D} install || die
 
-	keepdir /home/ftp
 	keepdir /var/run/proftpd
 
 	dodoc contrib/UPGRADE.mod_sql ${FILESDIR}/proftpd.conf \
