@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 689a6b742d76e03aba62c93d73492a16 mairix-0.16.1.ebuild 996
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 196ec7dd9c11570b4aed3c0948f4c7ca mairix-0.16.1.ebuild 996
 MD5 4ba21539ea2a7f6501d29e25a1b9ece5 mairix-0.15.2.ebuild 996
 MD5 408fd8edeb9950f82d91b2c98d686bb0 ChangeLog 1534
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 177f7663ccafcb5c2f3d1612c5632bd7 files/digest-mairix-0.15.2 65
 MD5 1142f5811ea514b6a18b50d357155503 files/digest-mairix-0.16.1 65
+MD5 177f7663ccafcb5c2f3d1612c5632bd7 files/digest-mairix-0.15.2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzTfcQlM6RnzZP+IRArMdAKCVvr5qcIABdgFMPFQBeIcXlDf56wCgoP+C
-K80DTfP1yeKL6nanRYgZRjg=
-=hU8p
+iD8DBQFCzyhGgIKl8Uu19MoRAsJvAJ4+IyQh9/bsDRl30F51Dnx3S806+wCfY6xS
+lFvsE9HZrGBGYgxjPyYOn6M=
+=j9wG
 -----END PGP SIGNATURE-----
