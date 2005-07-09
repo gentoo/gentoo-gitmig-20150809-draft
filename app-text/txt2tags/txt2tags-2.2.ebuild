@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.2.ebuild,v 1.1 2005/03/05 15:28:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.2.ebuild,v 1.2 2005/07/09 19:41:16 swegener Exp $
 
 inherit elisp-common
 
@@ -23,7 +23,7 @@ pkg_setup() {
 	# need to test if the tcltk support in python is working
 	if use tcltk; then
 		if ! python -c "import _tkinter" 2>&1 > /dev/null ; then
-			echo ""
+			echo
 			eerror "You have requested tcltk, but your build of Python"
 			eerror "doesnt support import _tkinter. You may need to"
 			eerror "remerge dev-lang/python, or build ${P}"

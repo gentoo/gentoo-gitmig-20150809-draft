@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.2.ebuild,v 1.8 2005/01/01 16:05:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.2.ebuild,v 1.9 2005/07/09 19:38:59 swegener Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_install() {
 
 pkg_postinst() {
 	if use emacs ; then
-		einfo ""
+		einfo
 		einfo "Please add to your ~/.emacs"
 		einfo "    (setq migemo-command \"cmigemo\")"
 		einfo "    (setq migemo-options '(\"-q\" \"--emacs\" \"-i\" \"\\\\a\"))"
@@ -58,6 +58,6 @@ pkg_postinst() {
 		einfo "    (setq migemo-user-dictionary nil)"
 		einfo "    (setq migemo-regex-dictionary nil)"
 		einfo "to use cmigemo instead of migemo under emacs."
-		einfo ""
+		einfo
 	fi
 }
