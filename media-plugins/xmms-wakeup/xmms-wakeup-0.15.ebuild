@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wakeup/xmms-wakeup-0.15.ebuild,v 1.4 2004/07/19 20:17:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wakeup/xmms-wakeup-0.15.ebuild,v 1.5 2005/07/09 18:45:49 swegener Exp $
 
 IUSE=""
 
@@ -26,9 +26,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "Server is run with xmms-wakeup-server"
 	einfo "Client is run with xmms-wakeup-client"
 	einfo "Make sure to read the README for more information."
-	einfo ""
+	einfo
 }

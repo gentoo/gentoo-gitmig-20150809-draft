@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.11.ebuild,v 1.5 2004/09/14 07:04:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.11.ebuild,v 1.6 2005/07/09 18:44:43 swegener Exp $
 
 IUSE=""
 
@@ -27,7 +27,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn ""
+	ewarn
 	ewarn "To use Internet-search, you'll need python"
-	ewarn ""
+	ewarn
 }

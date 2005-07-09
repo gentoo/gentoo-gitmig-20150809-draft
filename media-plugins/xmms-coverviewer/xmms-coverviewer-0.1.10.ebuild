@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.1.10.ebuild,v 1.3 2004/06/24 23:37:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.1.10.ebuild,v 1.4 2005/07/09 18:44:43 swegener Exp $
 
 IUSE=""
 
@@ -31,11 +31,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn ""
+	ewarn
 	ewarn "Do not attempt to configure the plugin right away!"
 	ewarn "Enable the plugin.  Sane default values will be applied."
 	ewarn "After that, changing options is fine."
 	ewarn "To use Internet-search, you'll need python"
-	ewarn ""
+	ewarn
 }
 
