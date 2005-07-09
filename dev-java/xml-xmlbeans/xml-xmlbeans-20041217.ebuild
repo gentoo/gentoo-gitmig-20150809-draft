@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.8 2005/06/12 12:59:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.9 2005/07/09 16:09:59 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -13,13 +13,13 @@ SLOT="1"
 KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc junit source"
 
-DEPEND=">=virtual/jdk-1.4
-	junit? ( >=dev-java/ant-1.6.2 )
-	!junit? ( >=dev-java/ant-core-1.6.2 )
-	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/jaxen-1.1*
 	junit? ( >=dev-java/junit-3.8 )"
+DEPEND=">=virtual/jdk-1.4
+	>=dev-java/ant-core-1.6.2
+	source? ( app-arch/zip )
+	${RDEPEND}"
 
 S=${WORKDIR}/${P}/v1
 
@@ -33,8 +33,8 @@ src_unpack() {
 	rm -f jaxen-1.1-beta-2.jar junit.jar
 
 	java-pkg_jar-from jaxen-1.1 jaxen.jar jaxen-1.1-beta-2.jar
-	if has_version dev-java/ant-tasks; then
-		if use junit; then
+	if use junit; then
+		if has_version dev-java/ant-tasks; then
 			java-pkg_jar-from junit
 		fi
 	fi
@@ -43,8 +43,8 @@ src_unpack() {
 src_compile() {
 	local antflags="xbean.jar"
 	use doc && antflags="${antflags} docs"
-	if has_version dev-java/ant-tasks; then
-		if use junit; then
+	if use junit; then
+		if has_version dev-java/ant-tasks; then
 			antflags="${antflags} random.jar drt.jar drt"
 		fi
 	fi
