@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conserver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.36 2005/05/21 23:27:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.37 2005/07/09 17:08:30 weeve Exp $
+
+  09 Jul 2005; Jason Wever <weeve@gentoo.org> files/conserver.pam,
+  files/conserver.pam-include, conserver-8.1.11-r1.ebuild:
+  Fixed bug #98450, stablized on x86 and sparc and added ~amd64 keyword.
 
 *conserver-8.1.11-r1 (21 May 2005)
 
