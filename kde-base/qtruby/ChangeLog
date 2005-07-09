@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.12 2005/05/25 21:23:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.13 2005/07/09 19:12:20 weeve Exp $
+
+  09 Jul 2005; Jason Wever <weeve@gentoo.org> qtruby-3.4.1.ebuild:
+  Added ~sparc keyword.
 
 *qtruby-3.4.1 (25 May 2005)
 
