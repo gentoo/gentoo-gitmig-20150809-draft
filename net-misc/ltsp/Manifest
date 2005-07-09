@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 035bf0f7c128eed40eabbdd74304daea ChangeLog 7868
 MD5 e54bcb2c2c658558ede4b99c5d1a9a82 files/digest-ltsp-4.1-r1 4466
 MD5 723d89c2799929bdb15335624c5d304c files/digest-ltsp-4.1.1 4863
@@ -8,3 +11,10 @@ MD5 de9c3f040ef3ca39100ac7e5e13eaf67 files/ltsp-4.1.1-usb-config.patch 285
 MD5 929072b6724c853e72fbcc4f55a60c75 ltsp-4.1-r1.ebuild 5641
 MD5 4f268776693efdcf64436fe3335d9d7b ltsp-4.1.1.ebuild 6936
 MD5 8470ac6202a79e428be0ed6867af12e8 metadata.xml 574
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0ATRI1lqEGTUzyQRAh0YAJ92v6E66qI/E99FXZre2p9A0HSAowCgq5Sq
+Wn6lGnu27asX841J4iXNE/k=
+=81L5
+-----END PGP SIGNATURE-----
