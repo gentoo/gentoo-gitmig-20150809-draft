@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.20-r1.ebuild,v 1.2 2005/07/08 11:46:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.20-r1.ebuild,v 1.3 2005/07/09 19:25:42 swegener Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -69,7 +69,7 @@ pkg_setup() {
 		ewarn "You have enabled kerberos without krb4 support. Kerberos will be"
 		ewarn "disabled unless kerberos 4 support has been compiled with your"
 		ewarn "kerberos libraries. To do that, you should abort now and do:"
-		ewarn ""
+		ewarn
 		ewarn " USE=\"krb4\" emerge mit-krb5"
 		ewarn
 		epause
