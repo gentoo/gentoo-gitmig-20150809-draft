@@ -16,7 +16,7 @@
 # Example:
 #         /usr/sbin/mwcollectd -L critical -C -L info -l /var/log/mwcollectd.log -c /etc/mwcollectd.conf
 
-OPTIONS="-D -p /var/run/mwcollectd.pid -c /etc/mwcollect/mwcollectd.conf"
+OPTIONS="-D -c /etc/mwcollect/mwcollectd.conf"
 
 # example: add log file
 # OPTIONS="$OPTIONS -l /var/log/mwcollect.log -L 3"

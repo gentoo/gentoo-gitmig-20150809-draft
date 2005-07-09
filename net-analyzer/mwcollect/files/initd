@@ -22,7 +22,7 @@ start() {
 	# mwcollectd should have created its pid file
 	checkconfig && \
 	start-stop-daemon --start --quiet \
-		--exec /usr/sbin/mwcollectd -- ${OPTIONS}
+		--exec /usr/sbin/mwcollectd -- -p /var/run/mwcollectd.pid ${OPTIONS}
 	eend $?
 }
 
