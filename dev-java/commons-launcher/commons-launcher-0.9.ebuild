@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-0.9.ebuild,v 1.11 2005/05/29 15:42:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-0.9.ebuild,v 1.12 2005/07/09 22:17:39 agriffis Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ibiblio.org/pub/mirrors/apache/jakarta/commons/launcher/sourc
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
-IUSE="jikes doc"
+IUSE="doc jikes source"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.4
 	jikes? ( dev-java/jikes )
