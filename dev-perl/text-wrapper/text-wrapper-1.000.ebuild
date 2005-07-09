@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-wrapper/text-wrapper-1.000.ebuild,v 1.12 2005/04/29 19:41:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-wrapper/text-wrapper-1.000.ebuild,v 1.13 2005/07/09 22:52:27 swegener Exp $
 
 inherit perl-module
 
@@ -15,5 +15,3 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ppc sparc alpha ~hppa ppc64"
 IUSE=""
-
-DEPEND="${DEPEND}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/set-scalar-1.19.ebuild,v 1.5 2005/04/29 19:37:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/set-scalar-1.19.ebuild,v 1.6 2005/07/09 22:43:40 swegener Exp $
 
 inherit perl-module
 MY_P=Set-Scalar-${PV}
@@ -16,6 +16,3 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~s390"
 
 SRC_TEST="do"
-
-DEPEND="${DEPEND}"
-RDEPEND="${DEPEND}"
