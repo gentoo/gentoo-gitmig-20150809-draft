@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wavemon
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.14 2004/09/10 07:08:19 brix Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.15 2005/07/09 03:55:39 halcy0n Exp $
+
+  09 Jul 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/wavemon-gcc-fixes.patch, -files/wavemon_gcc33_fix,
+  -files/wavemon_gcc34_fix.gz, wavemon-0.4.0b.ebuild:
+  Consolidate gcc fixes into one patch.  Fix compilation with gcc-4.
 
   10 Sep 2004; Henrik Brix Andersen <brix@gentoo.org> wavemon-0.3.3.ebuild:
   Added missing IUSE="".

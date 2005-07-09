@@ -1,8 +1,17 @@
-MD5 39d34a2be4a374f7fdaf090e0db99edd wavemon-0.4.0b.ebuild 871
-MD5 e9e77dba83ba2f7fd1a853b060d366d6 wavemon-0.3.3.ebuild 706
-MD5 cb06d3d0fb5ac928eda053d291973874 ChangeLog 1634
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6359862abf12ea8e8b110091d52b2ea4 ChangeLog 1869
 MD5 32831d719499c83f7942f6432ef58278 metadata.xml 252
+MD5 e9e77dba83ba2f7fd1a853b060d366d6 wavemon-0.3.3.ebuild 706
+MD5 d7e5341e43c05cf578ad0ef1aa075ef4 wavemon-0.4.0b.ebuild 878
 MD5 74ff273e243d9bfc9a4e80c8a7e6eeaa files/digest-wavemon-0.3.3 66
 MD5 651f4112ea3085a94cd49e49abb1e851 files/digest-wavemon-0.4.0b 65
-MD5 2be127b4e6fce78b81f708845c7c46b3 files/wavemon_gcc34_fix.gz 604
-MD5 ff2398ce07fafd5ac9ff8a7b964378d1 files/wavemon_gcc33_fix 281
+MD5 c818e93801166a1257810f1ccd56001d files/wavemon-gcc-fixes.patch 2147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFCz0rrCRZPokWLroQRAmP/AKCv+Y+s3SqsHESB7IBr5kHYPxs+MwCY8HV0
+MgIXtvTY7UEfslWJtnbIvg==
+=evh7
+-----END PGP SIGNATURE-----
