@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1295 2005/07/09 00:34:54 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1296 2005/07/09 05:09:08 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -759,7 +759,10 @@ sci-astronomy/predict:xforms - Adds a "map" client which uses the xforms library
 sci-biology/hmmer:pvm - Adds support for parallel virtual machine.
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities.
-sci-chemistry/ghemical:mpqc - Add support for using the MPQC package
+sci-chemistry/ghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
+sci-chemistry/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
+sci-chemistry/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
+sci-chemistry/libghemical:openbabel - Use the OpenBabel package for file conversions
 sci-geosciences/gmt:gmtfull - Full resolution bathimetry database;
 sci-geosciences/gmt:gmthigh - Adds high resolution bathimetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT;
