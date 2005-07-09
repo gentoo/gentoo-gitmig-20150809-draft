@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.28 2005/06/25 17:07:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.29 2005/07/09 04:46:45 agriffis Exp $
 
 inherit libtool sgml-catalog eutils flag-o-matic gnuconfig multilib
 
@@ -24,7 +24,7 @@ src_unpack() {
 	einfo "Patching msggen.pl for perl-5.6.*"
 	epatch ${FILESDIR}/${P}-msggen.pl.patch
 
-	#Needed for mips and probablly others
+	# Needed for mips and probably others
 	gnuconfig_update
 }
 
@@ -32,15 +32,12 @@ src_compile() {
 	# Please note!  Opts are disabled.  If you know what you're doing
 	# feel free to remove this line.  It may cause problems with
 	# docbook-sgml-utils among other things.
-	export ALLOWED_FLAGS="-O -O1 -O2 -pipe -g -march"
+	ALLOWED_FLAGS="-O -O1 -O2 -pipe -g -march"
 	strip-flags
 
 	# Default CFLAGS and CXXFLAGS is -O2 but this make openjade segfault
 	# on hppa. Using -O1 works fine. So I force it here.
-	if [ "${ARCH}" = "hppa" ]
-	then
-		replace-flags -O[2] -O1
-	fi
+	use hppa && replace-flags -O2 -O1
 
 	ln -s config/configure.in configure.in
 	elibtoolize
