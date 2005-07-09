@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/exmh/exmh-2.5.ebuild,v 1.4 2004/08/08 11:24:42 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/exmh/exmh-2.5.ebuild,v 1.5 2005/07/09 15:41:36 swegener Exp $
 
 inherit eutils
 DESCRIPTION="An X user interface for MH mail"
@@ -26,7 +26,7 @@ src_unpack() {
 	cd ${S}
 	for i in *.MASTER; do cp $i ${i%%.MASTER}; done
 	mv exmh.l exmh.1
-	epatch ${FILESDIR}/exmh-2.5-conf.patch
+	epatch ${FILESDIR}/${P}-conf.patch
 	cd misc
 	rm -rf RPM *tar* *gbuffy*
 	for i in *
