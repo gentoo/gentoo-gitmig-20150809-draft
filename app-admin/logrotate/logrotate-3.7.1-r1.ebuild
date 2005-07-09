@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.1-r1.ebuild,v 1.10 2005/07/08 03:00:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.1-r1.ebuild,v 1.11 2005/07/09 13:51:53 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="Rotates, compresses, and mails system logs"
 HOMEPAGE="http://www.gentoo.org"
-SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

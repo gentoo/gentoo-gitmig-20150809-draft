@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.3.ebuild,v 1.1 2005/06/27 09:45:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.3.ebuild,v 1.2 2005/07/09 13:50:26 swegener Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="net-firewall/iptables"
 
-S=${WORKDIR}/${PN}-${PV}.orig
+S=${WORKDIR}/${P}.orig
 
 src_unpack() {
 	unpack ${A}
