@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.4_rc3.ebuild,v 1.1 2005/03/11 04:26:41 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.4_rc3.ebuild,v 1.2 2005/07/09 15:24:46 agriffis Exp $
 
 inherit webapp eutils
 
@@ -21,6 +21,7 @@ DEPEND=">=mail-filter/dspam-3.2_rc3
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil"
 KEYWORDS="~x86 ~ppc"
+IUSE="debug large-domain mysql neural oci8 postgres sqlite"
 S=${WORKDIR}/${MY_P}
 HOMEDIR=/etc/mail/dspam
 
@@ -47,7 +48,7 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug --enable-verbose-debug"
 
 	# select storage driver
-	if use mysql || use mysql41; then
+	if use mysql ; then
 		myconf="${myconf} --with-storage-driver=mysql_drv"
 		myconf="${myconf} --with-mysql-includes=/usr/include/mysql"
 		myconf="${myconf} --with-mysql-libraries=/usr/lib/mysql"
