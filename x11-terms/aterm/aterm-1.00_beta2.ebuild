@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.00_beta2.ebuild,v 1.7 2005/06/18 19:07:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.00_beta2.ebuild,v 1.8 2005/07/09 19:27:37 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,10 +68,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo ""
+	echo
 	ewarn "The transparent background will only work if you have the 'real' root wallpaper"
 	ewarn "set. Use Esetroot (x11-terms/eterm) or fbsetbg (x11-wm/fluxbox) if you are"
 	ewarn "experiencing problems with transparency in aterm."
-	echo ""
+	echo
 }
 
