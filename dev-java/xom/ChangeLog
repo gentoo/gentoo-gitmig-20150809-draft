@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.15 2005/06/12 18:11:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.16 2005/07/09 16:10:20 axxo Exp $
+
+  09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> xom-1.0-r1.ebuild:
+  fix deps, some cleanup
 
   12 Jun 2005; Jason Wever <weeve@gentoo.org> xom-1.0-r1.ebuild:
   Added ~sparc keyword wrt bug #95859.

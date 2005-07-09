@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r1.ebuild,v 1.2 2005/06/12 18:11:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r1.ebuild,v 1.3 2005/07/09 16:10:20 axxo Exp $
 
 inherit java-pkg
 
@@ -14,17 +14,18 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="doc jikes source"
 
-DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-1.4
-	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/xerces-2.6*
 	dev-java/xalan
 	dev-java/junit
 	dev-java/icu4j
 	dev-java/tagsoup
-	=dev-java/servletapi-2.3*"
+	=dev-java/servletapi-2.4*"
+DEPEND=">=virtual/jdk-1.3
+	dev-java/ant-core
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )
+	${RDEPEND}"
 
 S=${WORKDIR}/XOM
 
@@ -37,7 +38,7 @@ src_unpack() {
 	java-pkg_jar-from junit
 	java-pkg_jar-from xalan
 	java-pkg_jar-from xerces-2
-	java-pkg_jar-from servletapi-2.3
+	java-pkg_jar-from servletapi-2.4
 	java-pkg_jar-from icu4j icu4j.jar normalizer.jar
 	java-pkg_jar-from tagsoup
 }
@@ -49,14 +50,9 @@ src_compile() {
 }
 
 src_install() {
-	mv ${WORKDIR}/XOM/build/${XOMVER}.jar ${PN}.jar
-	java-pkg_dojar ${PN}.jar
+	java-pkg_newjar build/${XOMVER}.jar ${PN}.jar
 	dodoc Todo.txt
 
-	if use doc ; then
-		dodir /usr/share/doc/${P}
-		cd ${WORKDIR}/XOM/
-		java-pkg_dohtml -r apidocs/
-	fi
+	use doc && java-pkg_dohtml -r apidocs/
 	use source && java-pkg_dosrc src/*
 }

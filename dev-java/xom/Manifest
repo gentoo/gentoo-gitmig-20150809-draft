@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d23a5fe5d6cc30e0637852340f25b6d4 xom-1.0-r1.ebuild 1473
 MD5 56dd165e66eb81ab7f51accc5c9c0679 ChangeLog 2224
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 deb2f00f818f16deba73b81503a0a169 files/digest-xom-1.0-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/cH/rLF9B432nYRAsg+AJ0fyzYvGzK1fXXCiu8aJNGmft3bswCgpDvP
+TaNghXAhg84cLteU8omuNnk=
+=rJAI
+-----END PGP SIGNATURE-----
