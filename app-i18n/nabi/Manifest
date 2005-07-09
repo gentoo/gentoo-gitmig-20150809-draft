@@ -1,8 +1,18 @@
-MD5 bb577a846ba45d0451bdbce9df3e6fec metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8689c5a9ea6550a7ebd0f3b87c4c637b ChangeLog 2188
-MD5 3622582b273d79321f681c1fbb2430be nabi-0.13.ebuild 900
-MD5 69a49b2466493d8aca6477bcc72d848f nabi-0.15.ebuild 857
-MD5 5237f2e13515af3670efc709abcfd6bf nabi-0.14.ebuild 856
 MD5 59034fb795bff06c2b4bc5eb25c7d9a1 files/digest-nabi-0.13 61
-MD5 5f555c8d4ff6e6b8288d457dce5ad26c files/digest-nabi-0.15 61
 MD5 0081725dcdfa2060bf2e53bf3626873b files/digest-nabi-0.14 61
+MD5 5f555c8d4ff6e6b8288d457dce5ad26c files/digest-nabi-0.15 61
+MD5 bb577a846ba45d0451bdbce9df3e6fec metadata.xml 158
+MD5 917f52cb1e2df8346217e95616b34cf6 nabi-0.13.ebuild 710
+MD5 77f0e7335abe8276c24e651827323074 nabi-0.14.ebuild 666
+MD5 2687f95239df020d2392e6921789f7a3 nabi-0.15.ebuild 668
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0A+JI1lqEGTUzyQRAm/aAJ0djvlnVGQMhBsr4+dZx9MIQoxh6ACgvteG
+S5gg9anQ6CAu0950pgiYI4c=
+=zE7H
+-----END PGP SIGNATURE-----
