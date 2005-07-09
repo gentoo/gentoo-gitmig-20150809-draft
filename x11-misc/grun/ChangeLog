@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/grun
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/ChangeLog,v 1.11 2005/07/04 00:52:11 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/ChangeLog,v 1.12 2005/07/09 07:47:22 smithj Exp $
+
+  09 Jul 2005; Jonathan Smith <smithj@gentoo.org> grun-0.9.2.ebuild:
+  stable amd64
 
   04 Jul 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml:
   added metadata
