@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9f905c3bb5f70dffdec8f2aa7ce1cff9 ChangeLog 20207
+MD5 b3c5a5cfbe89a82f61af9db67b32655e ChangeLog 20504
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 03b5a2c3e1a9e7148ca0d786b14ad78f transcode-0.6.11.ebuild 4042
 MD5 7d0e11a01abf672daf0803ddae11589f transcode-0.6.12-r1.ebuild 3695
@@ -9,24 +9,25 @@ MD5 7e524c22bfd0ac5843c31fa3434afa31 transcode-0.6.12-r2.ebuild 4386
 MD5 89bfa93308a46f45e9b41adb7747ad0f transcode-0.6.13-r1.ebuild 2843
 MD5 aeb808af25c7e03bab1de600cf787435 transcode-0.6.14-r2.ebuild 4182
 MD5 119a7d425650a2c2ad7ee46ed133bcda transcode-0.6.14.ebuild 3566
-MD5 4b23761029cc19919ff28ce9ddca536c transcode-1.0.0_beta3.ebuild 3963
+MD5 84d638c8bad87277e358e2142a40a458 transcode-1.0.0_rc1.ebuild 4115
 MD5 bc1cb5a39d56ce5216c803c74e73545d files/digest-transcode-0.6.11 69
 MD5 8fde4803c96e026f6caa94fa0e42687f files/digest-transcode-0.6.12-r1 69
 MD5 8fde4803c96e026f6caa94fa0e42687f files/digest-transcode-0.6.12-r2 69
 MD5 870fbce21a78f1dcde8efc61df838497 files/digest-transcode-0.6.13-r1 69
 MD5 613fd9a0d03f4df95d439dd0a4c1bccb files/digest-transcode-0.6.14 69
 MD5 8e1251c76b508dfdfe0e4f0c0b166540 files/digest-transcode-0.6.14-r2 144
-MD5 c70e2a40a01f7a060b1cdad18adccf46 files/digest-transcode-1.0.0_beta3 73
 MD5 3b957eef288ce095a2ff0a256aec7c93 files/transcode-0.6.11-no-mmx.patch 1491
 MD5 b2561dbf66455c878a08afd19868dc5d files/transcode-0.6.12-gcc-3.4.patch 2503
 MD5 085f514d559cd32a401241bbbf639d39 files/transcode-0.6.12-r2-dvdmenu.patch 4840
 MD5 90f42fff1c2a0b4be8df0b015ac2b309 files/transcode-0.6.12-r2-gcc34.patch 2963
 MD5 936b66bb309cb3c1dfa33924d3114fa9 files/transcode-0.6.13-r1-bitstream.patch 446
 MD5 2cb7b1a00a0529a8256fc0104b5f2a09 files/transcode-gcc34.patch 460
+MD5 37881dfd11a9f51ba8ca5923f3f42a55 files/digest-transcode-1.0.0_rc1 71
+MD5 c0764123585a1f43aa26a9ff6482a042 files/transcode-1.0.0_rc1-gcc4.patch 2989
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCkvMpj5H05b2HAEkRAsHOAJ9EoNZPcmep1/NC2PNbsGEWXxhxxQCfWqL5
-HqOYXQ/zYJ0HjtUppZxuPnQ=
-=CO/T
+iD8DBQFCzxygj5H05b2HAEkRAgTxAJ0e4mA7E3ajgGKYH4WnwYuvJbm9IwCff2F5
+2c2Yhl44OgDGT01GggdwrgY=
+=Pf4G
 -----END PGP SIGNATURE-----

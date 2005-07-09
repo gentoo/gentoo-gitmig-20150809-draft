@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.0_beta3.ebuild,v 1.4 2005/05/24 09:29:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.0_rc1.ebuild,v 1.1 2005/07/09 00:38:37 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -58,6 +58,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc4.patch
+	sed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
+		${S}/docs/Makefile.am ${S}/docs/html/Makefile.am
 
 	libtoolize --copy --force || die "libtoolize failed"
 	autoreconf -i || die "autoreconf failed"
