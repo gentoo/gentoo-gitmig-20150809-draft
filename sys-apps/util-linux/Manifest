@@ -1,32 +1,42 @@
-MD5 612c360bed155592aadebf39410bfe9d ChangeLog 17789
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 756af6a79fdf6371ee07ccbc9ca0153b util-linux-2.12i-r1.ebuild 3821
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ff9ff35124110104cec062d7b263baed util-linux-2.12q.ebuild 4807
 MD5 3ce3a57f1a507ce364c232d5d7b6ff02 util-linux-2.12p-r1.ebuild 4418
-MD5 ec205b8566d21aca0295046fb27292e8 util-linux-2.12q-r1.ebuild 4853
+MD5 4e04ed93a1dcd23ae8cb7b270cdb97df util-linux-2.12q-r1.ebuild 4853
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 756af6a79fdf6371ee07ccbc9ca0153b util-linux-2.12i-r1.ebuild 3821
+MD5 612c360bed155592aadebf39410bfe9d ChangeLog 17789
+MD5 519d6757067c4ee7c634c8b60f9abeb3 files/util-linux-2.12p-swapon-check-symlinks.patch 864
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
-MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
+MD5 28b1a8ed38823851eafadacef8ce11ec files/util-linux-2.12q-no-m68k-fdisk.patch 239
+MD5 33ddd96078cf91030b80f73eb70f5371 files/util-linux-2.12i-swapon-check-symlinks.patch 875
+MD5 8d4f1146f0699deb1e6872e1c81293e3 files/util-linux-2.12-selinux.diff.bz2 2558
+MD5 a33ff00c09f558d4273360a581880c23 files/digest-util-linux-2.12q-r1 292
+MD5 d448f3b1b3ea21db4c2c4f303b48c1c8 files/digest-util-linux-2.12p-r1 294
+MD5 65f42fbf981464410f7d5d84a429e920 files/util-linux-no-kill.patch 642
 MD5 a43d2b8c70c5f40a195721dc536abace files/util-linux-2.12-swapon-unistd.patch 289
-MD5 7d35ae646b52391076f7a329af8265bc files/util-linux-2.11z-agetty-domainname-option.patch 1810
+MD5 570b9b148cbb60ec16de30940990ab53 files/util-linux-2.12q-i18n-update.patch 344
+MD5 73c0cb6f9aa5fa84e701fc68d0478aac files/util-linux-2.12i-nfsv4.patch 12854
+MD5 4460875a6ebcf24a7ca5b41ed12f9fe5 files/util-linux-2.12-gcloop.patch 3806
+MD5 e2d566b683bb1b9b1c3e127b2bbd258b files/digest-util-linux-2.12q 294
+MD5 bc90959c4718e7dc5d53dcddac1172f5 files/util-linux-2.12q-debian-10cfdisk.patch 1888
 MD5 0be8df03dae23c81a0e929e58a4114e0 files/util-linux-2.11z-01-nfsv4.dif 13442
+MD5 7ce604460c5607e6eb5d894b6c8b2064 files/util-linux-2.12-fat-LABEL-support.patch 11583
+MD5 7d35ae646b52391076f7a329af8265bc files/util-linux-2.11z-agetty-domainname-option.patch 1810
+MD5 c9c2c92d7bba0652f22b638127c2107e files/util-linux-2.12i-pic.patch 2457
+MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
+MD5 d20405e12353610b3ef8fbc2e1d57f2a files/crypto-loop.initd 1625
+MD5 61beee95fb4696a6af11ffb84ddb055c files/util-linux-2.12i-ignore-managed.patch 506
+MD5 a9bc06c292401d6f2d27e8e4ebf7e6ae files/util-linux-2.12i-fat-LABEL-support.patch 2304
 MD5 18371db840b08f5782e3f8f96c4efe8d files/util-linux-2.11z-pic.patch 3056
 MD5 d927611f34139a40f1fc9f4162c61f8a files/util-linux-2.12-kernel-2.6.patch 2964
-MD5 7ce604460c5607e6eb5d894b6c8b2064 files/util-linux-2.12-fat-LABEL-support.patch 11583
-MD5 4460875a6ebcf24a7ca5b41ed12f9fe5 files/util-linux-2.12-gcloop.patch 3806
-MD5 65f42fbf981464410f7d5d84a429e920 files/util-linux-no-kill.patch 642
-MD5 d448f3b1b3ea21db4c2c4f303b48c1c8 files/digest-util-linux-2.12p-r1 294
-MD5 73c0cb6f9aa5fa84e701fc68d0478aac files/util-linux-2.12i-nfsv4.patch 12854
-MD5 8d4f1146f0699deb1e6872e1c81293e3 files/util-linux-2.12-selinux.diff.bz2 2558
-MD5 61beee95fb4696a6af11ffb84ddb055c files/util-linux-2.12i-ignore-managed.patch 506
-MD5 c9c2c92d7bba0652f22b638127c2107e files/util-linux-2.12i-pic.patch 2457
-MD5 e2d566b683bb1b9b1c3e127b2bbd258b files/digest-util-linux-2.12q 294
 MD5 0b95e856fd2f375270cf2ec4eaa69c8a files/crypto-loop.confd 505
-MD5 a9bc06c292401d6f2d27e8e4ebf7e6ae files/util-linux-2.12i-fat-LABEL-support.patch 2304
-MD5 d20405e12353610b3ef8fbc2e1d57f2a files/crypto-loop.initd 1625
-MD5 570b9b148cbb60ec16de30940990ab53 files/util-linux-2.12q-i18n-update.patch 344
-MD5 519d6757067c4ee7c634c8b60f9abeb3 files/util-linux-2.12p-swapon-check-symlinks.patch 864
-MD5 33ddd96078cf91030b80f73eb70f5371 files/util-linux-2.12i-swapon-check-symlinks.patch 875
-MD5 28b1a8ed38823851eafadacef8ce11ec files/util-linux-2.12q-no-m68k-fdisk.patch 239
-MD5 bc90959c4718e7dc5d53dcddac1172f5 files/util-linux-2.12q-debian-10cfdisk.patch 1888
-MD5 4b00906276e8aae2c222622471d6a366 files/digest-util-linux-2.12q-r1 292
 MD5 cfa3960fd97ca16c85b0d1b87e6ba226 files/digest-util-linux-2.12i-r1 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0FzhgIKl8Uu19MoRAjrOAJ9mlCtorSbGu3BDS8CR9KRyHrH/dACZAUnH
+o2Zn3ijb8CIB6pbqnqJqrF0=
+=P8ck
+-----END PGP SIGNATURE-----
