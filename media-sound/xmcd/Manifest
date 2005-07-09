@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb5662f553ec409a9f3fd0b251457b38 xmcd-3.3.2.ebuild 4069
 MD5 bb0ffe90c7224ff0b9a44b04e1e6ef41 ChangeLog 1817
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 b6909e49017277bdc8ed33c65f9d282c files/xmcd-3.3.2-gentoo.patch 8407
 MD5 b54e3803073e1e4f961bb0e66d322647 files/digest-xmcd-3.3.2 127
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCmLE206ebR+OMO78RAvM1AJ98EvljqMsXA4tGBMWMXskSAF5yoACeMy1H
-vtIuBREqVltbE64aP2/5azc=
-=AftS
------END PGP SIGNATURE-----
+MD5 b6909e49017277bdc8ed33c65f9d282c files/xmcd-3.3.2-gentoo.patch 8407
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 94105d54de200aa223261412eafaa744 xmcd-3.3.2.ebuild 4056
