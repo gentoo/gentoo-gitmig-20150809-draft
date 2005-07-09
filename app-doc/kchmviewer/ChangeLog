@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/kchmviewer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.3 2005/06/11 13:32:45 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/ChangeLog,v 1.4 2005/07/09 17:44:56 greg_g Exp $
+
+*kchmviewer-0.92 (09 Jul 2005)
+
+  09 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> +kchmviewer-0.92.ebuild:
+  New version (#97467).
 
   11 Jun 2005; Dominik Stadler <centic@gentoo.org> kchmviewer-0.9.ebuild:
   Adjust to make use of kde-ebuild-functionality, should fix Bug 91193 and others.
