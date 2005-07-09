@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7f826d65843e0eea157db4f15bff1845 mod_mono-1.0.9-r1.ebuild 1660
 MD5 124c75e8c045099bd89b70db1790567c mod_mono-1.0.2.ebuild 1111
 MD5 3154db28b7eb25809b89e395970cf499 mod_mono-1.0.5-r1.ebuild 1659
@@ -27,3 +30,10 @@ MD5 3c40535ec688be1562b0571ea0fe7da2 files/mod_mono-1.0.2-70_mod_mono.conf 614
 MD5 be67d42abf306926f0fdd150c7291edc files/70_mod_mono.conf 617
 MD5 d89d30289a4e7cea16c558e170c5c7ec files/mod_mono-1.0.5-70_mod_mono.conf 915
 MD5 7582229e0d91b8d103b06796b7731c58 files/1.0.5-r1/70_mod_mono.conf 910
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/EqBXaUFmZvwyMRAqh6AKCs2xrsYT6B+ZKuQosjoi152D3hBwCfXSUc
+FRiEAcwB1msRkkEZ7E2oOnM=
+=93zS
+-----END PGP SIGNATURE-----
