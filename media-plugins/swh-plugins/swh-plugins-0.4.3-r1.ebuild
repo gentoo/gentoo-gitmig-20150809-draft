@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.3-r1.ebuild,v 1.5 2004/12/29 02:46:06 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.3-r1.ebuild,v 1.6 2005/07/09 18:02:30 swegener Exp $
 
 inherit eutils
 
@@ -31,9 +31,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "WARNING: You have to be careful when using the	"
-	ewarn "swh plugins. Be sure to lower your sound volume	"
-	ewarn "and then play around a bit with the plugins so	"
+	ewarn "WARNING: You have to be careful when using the"
+	ewarn "swh plugins. Be sure to lower your sound volume"
+	ewarn "and then play around a bit with the plugins so"
 	ewarn "you get a feeling for it. Otherwise your speakers"
-	ewarn "won't like that.									"
+	ewarn "won't like that."
 }
