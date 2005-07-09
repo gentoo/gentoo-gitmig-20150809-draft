@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ba862d32deadcab4e6af2a8ee2c44cf8 commons-collections-3.1.ebuild 1197
 MD5 513255c8822b0e5213120982264d3100 ChangeLog 4053
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d6999c3ed2ac2f04284b7b49641afcc9 files/digest-commons-collections-3.1 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/TL/rLF9B432nYRAg01AKCumndS5e+nDy4jsrDTfG3JGhqrdgCfVRA7
+i/Xtjk/NiR+XHhEh4WzhGXI=
+=kwsm
+-----END PGP SIGNATURE-----
