@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.4 2005/07/09 17:59:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.5 2005/07/09 22:55:04 swegener Exp $
 
 inherit perl-module
-CATEGORY="sci-biology"
 
 DESCRIPTION="A collection of tools for bioinformatics, genomics and life science research: Biopipe"
 HOMEPAGE="http://www.biopipe.org/"
@@ -24,11 +23,6 @@ RDEPEND="
 	dev-perl/Data-ShowTable"
 
 DEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
 
 src_compile() {
 	# there's a test to run for BioGFFDB if using mysql

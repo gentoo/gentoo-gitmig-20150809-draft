@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.2.2.ebuild,v 1.4 2005/05/25 13:56:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.2.2.ebuild,v 1.5 2005/07/09 22:56:10 swegener Exp $
 
 inherit perl-module eutils
-CATEGORY="sci-biology"
 
 DESCRIPTION="A collection of tools for bioinformatics, genomics and life science research: subset required to run analyses"
 HOMEPAGE="http://www.bioperl.org/"

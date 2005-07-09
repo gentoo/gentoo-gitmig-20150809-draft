@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.2.3.ebuild,v 1.5 2005/05/25 14:46:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.2.3.ebuild,v 1.6 2005/07/09 22:57:34 swegener Exp $
 
 inherit perl-module eutils
-
-CATEGORY="sci-biology"
 
 DESCRIPTION="A collection of tools for bioinformatics, genomics and life science research"
 HOMEPAGE="http://www.bioperl.org/"
@@ -16,8 +14,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="mysql gd"
 
-DEPEND="${DEPEND}
-	perl-core/File-Temp
+DEPEND="perl-core/File-Temp
 	dev-perl/HTML-Parser
 	dev-perl/IO-String
 	dev-perl/IO-stringy
