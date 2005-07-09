@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.15.ebuild,v 1.5 2005/07/07 00:12:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.15.ebuild,v 1.6 2005/07/09 19:34:04 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -71,7 +71,7 @@ pkg_postinst() {
 
 	ewarn "** WARNING ** WARNING ** WARNING ** WARNING ** WARNING ** WARNING **"
 	ewarn " THIS IS _ALPHA_ CODE, IT MAY NOT WORK CORRECTLY OR AT ALL. THERE"
-	ewarn " MAY BE UNDISCOVERED SECURITY OR DATA-LOSS ISSUES, DO NOT USE "
+	ewarn " MAY BE UNDISCOVERED SECURITY OR DATA-LOSS ISSUES, DO NOT USE"
 	ewarn " IN A PRODUCTION ENVIRONMENT."
 
 	if ! use caps; then

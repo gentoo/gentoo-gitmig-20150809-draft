@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.14.ebuild,v 1.7 2005/06/24 22:01:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.14.ebuild,v 1.8 2005/07/09 19:33:16 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -99,13 +99,13 @@ pkg_postinst() {
 	einfo
 	ewarn "** WARNING ** WARNING ** WARNING ** WARNING ** WARNING ** WARNING **"
 	ewarn "	THIS IS _ALPHA_ CODE, IT MAY NOT WORK CORRECTLY OR AT ALL. THERE"
-	ewarn "	MAY BE UNDISCOVERED SECURITY OR DATA-LOSS ISSUES, DO NOT USE "
+	ewarn "	MAY BE UNDISCOVERED SECURITY OR DATA-LOSS ISSUES, DO NOT USE"
 	ewarn "	IN A PRODUCTION ENVIRONMENT."
-	ewarn ""
+	ewarn
 	ewarn "	This ebuild is provided for those who wish to experiment with this"
 	ewarn "	new branch of gnupg and beta-testers, not for general purpose use"
 	ewarn "	by non-developers"
-	ewarn ""
+	ewarn
 	ewarn "	Please see #37109"
 	ewarn "** WARNING ** WARNING ** WARNING ** WARNING ** WARNING ** WARNING **"
 
