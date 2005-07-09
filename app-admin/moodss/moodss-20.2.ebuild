@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-19.6.ebuild,v 1.1 2005/02/20 13:55:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-20.2.ebuild,v 1.1 2005/07/09 11:21:19 matsuu Exp $
+
+inherit eutils
 
 DESCRIPTION="Modular Object Oriented Dynamic SpreadSheet"
 HOMEPAGE="http://moodss.sourceforge.net/"
@@ -8,7 +10,7 @@ SRC_URI="mirror://sourceforge/moodss/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="mysql perl python"
 
 DEPEND=">=dev-lang/tcl-8.4"
@@ -29,6 +31,14 @@ RDEPEND="${DEPEND}
 #	sqlite? ( >=dev-db/sqlite-tcl-2.8.6 )
 #	odbc? ( dev-tcltk/tclodbc )
 
+pkg_setup() {
+	if ! built_with_use dev-lang/tcl threads ; then
+		eerror "Tcl is missing threads support."
+		eerror "Please add 'threads' to your USE flags, and re-emerge tcl."
+		die "tcl needs threads support"
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 
@@ -47,10 +57,7 @@ src_install() {
 		MOODSSDOCDIR=/usr/share/doc/${PF} \
 		install || die
 
-	insinto /usr/share/applications
-	doins ${PN}.desktop
-	insinto /usr/share/pixmaps
-	doins ${PN}.png
-	insinto /usr/share/${PN}
-	doins linux.moo
+	domenu ${PN}.desktop
+	doicon ${PN}.png
+	insinto /usr/share/${PN}; doins linux.moo
 }
