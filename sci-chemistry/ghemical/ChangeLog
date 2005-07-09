@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/ghemical
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.5 2005/07/08 05:20:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.6 2005/07/09 00:08:06 spyderous Exp $
+
+*ghemical-1.02 (09 Jul 2005)
+
+  09 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +ghemical-1.02.ebuild:
+  Version bump. Now uses external mopac7 and openbabel instead of including
+  its own copies. Added USE flags for mpqc and for GTK+ front-end instead of
+  GLUT front-end.
 
 *ghemical-1.01 (04 Jan 2005)
 
