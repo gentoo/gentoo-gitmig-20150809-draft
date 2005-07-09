@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.4.4.ebuild,v 1.1 2005/06/15 15:21:47 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.4.4.ebuild,v 1.2 2005/07/09 07:16:07 smithj Exp $
 
 
 DESCRIPTION="A GTK2 based xmessage clone"
@@ -9,7 +9,7 @@ SRC_URI="http://homepages.ihug.co.nz/~trmusson/stuff/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND=">=x11-libs/gtk+-2.2
 	virtual/x11"
