@@ -2,6 +2,14 @@
 Hash: SHA1
 
 MD5 546025a3f989eeb85094052e513685b2 ChangeLog 3729
+MD5 e17b723d0c9c7c910b80b441f95f45f0 files/digest-vserver-sources-1.9.4 207
+MD5 eeba2c8f8e1d02662a34ddbb3821f384 files/digest-vserver-sources-1.9.5 199
+MD5 c23e53a44d346458d3819aa6c45608c9 files/digest-vserver-sources-2.0_pre1 203
+MD5 057549c90633f95e8bd85ce663993878 files/digest-vserver-sources-2.0_rc1 207
+MD5 9651286dbe1977e01675b114f0f6c05c files/digest-vserver-sources-2.0_rc2 208
+MD5 a29936f2d3bd57165a9e3b5eac1579d0 files/digest-vserver-sources-2.0_rc3 208
+MD5 f16b04a20b78288c97d59471024d1d4f files/digest-vserver-sources-2.0_rc4 208
+MD5 b56f7fe64ee18735e4e9286db89f7299 files/digest-vserver-sources-2.0_rc4-r1 211
 MD5 aa56cf15a7bbeb714ab4dae1e8c670e5 metadata.xml 546
 MD5 e0455bb8f024f206a5111df57e058c2c vserver-sources-1.9.4.ebuild 682
 MD5 ff4a387303cfd58d2f9e899bd95dedab vserver-sources-1.9.5.ebuild 756
@@ -9,20 +17,12 @@ MD5 91704dd7d725b7ed29b731a61c4abdd1 vserver-sources-2.0_pre1.ebuild 760
 MD5 aae1c02eebdd66e0ce87d41220868973 vserver-sources-2.0_rc1.ebuild 593
 MD5 39bf22d1b4787f50555707282dd87ab9 vserver-sources-2.0_rc2.ebuild 594
 MD5 5f16272128a98bf6c4400f7e8d556404 vserver-sources-2.0_rc3.ebuild 594
+MD5 fd63e853ba78834cbc0f0dafa9cab974 vserver-sources-2.0_rc4-r1.ebuild 601
 MD5 e5d7d9a69be5556dadc5d6f2ae5c6858 vserver-sources-2.0_rc4.ebuild 594
-MD5 13cbfb78ba8dfb5f9c1652b8427be4d0 vserver-sources-2.0_rc4-r1.ebuild 613
-MD5 e17b723d0c9c7c910b80b441f95f45f0 files/digest-vserver-sources-1.9.4 207
-MD5 eeba2c8f8e1d02662a34ddbb3821f384 files/digest-vserver-sources-1.9.5 199
-MD5 c23e53a44d346458d3819aa6c45608c9 files/digest-vserver-sources-2.0_pre1 203
-MD5 057549c90633f95e8bd85ce663993878 files/digest-vserver-sources-2.0_rc1 207
-MD5 9651286dbe1977e01675b114f0f6c05c files/digest-vserver-sources-2.0_rc2 208
-MD5 a29936f2d3bd57165a9e3b5eac1579d0 files/digest-vserver-sources-2.0_rc3 208
-MD5 b56f7fe64ee18735e4e9286db89f7299 files/digest-vserver-sources-2.0_rc4-r1 211
-MD5 f16b04a20b78288c97d59471024d1d4f files/digest-vserver-sources-2.0_rc4 208
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCr7+GmPFBzbX68WERAmKpAJ4mTJEoQ+pLFMpyzVbevo9zkAry4gCfVu2g
-kpp5KUyTvrcLktejaBLMrlY=
-=uaYJ
+iD8DBQFCz9N5I1lqEGTUzyQRAl5PAJ9E763J9AXD0ZE0UfHaNBhwC7t6jQCg3fvM
+iR7DCGG5S8KyhlYjhTDc0vw=
+=hL21
 -----END PGP SIGNATURE-----
