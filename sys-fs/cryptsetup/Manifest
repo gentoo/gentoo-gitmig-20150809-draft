@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cd57823a7232b359b6a8674cde9fadde metadata.xml 290
 MD5 0f46d9844823e8065251475262678673 cryptsetup-0.1-r1.ebuild 1705
 MD5 152fbc52aca31ba3184b0967b2173315 cryptsetup-0.1-r2.ebuild 1738
@@ -9,3 +12,10 @@ MD5 959c303c3bfeab6c12e28ae4e16400b3 files/digest-cryptsetup-0.1 67
 MD5 3232a190894a35b7d2f3610f2eb652dc files/dm-crypt-start.sh 3937
 MD5 959c303c3bfeab6c12e28ae4e16400b3 files/digest-cryptsetup-0.1-r2 67
 MD5 327d83538ed5305bdc3568cd353410bb files/cryptfs.confd 1337
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0AF4gIKl8Uu19MoRAnqaAJ9ADB4/9ILFTh0ATLSfkMNX70CAgACggWlf
+rykUyQ9jvjf+4a7STJPDdd8=
+=4QQQ
+-----END PGP SIGNATURE-----
