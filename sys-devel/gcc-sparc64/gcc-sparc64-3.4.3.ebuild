@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.4.3.ebuild,v 1.2 2005/01/11 13:31:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.4.3.ebuild,v 1.3 2005/07/09 19:46:45 swegener Exp $
 
 
 # Variables 
@@ -112,14 +112,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "To facilitate an easier kernel build, you may wish to add the following line to your profile:"
-	einfo ""
+	einfo
 	einfo "alias ${MYARCH}make=\"make ARCH=${MYARCH} CROSS_COMPILE=${MYARCH}-unknown-linux-gnu-\""
-	einfo ""
+	einfo
 	einfo "Then to compile a kernel, simply goto the kernel source directory, and issue:"
 	einfo "${MYARCH}make <target>"
 	einfo "Where <target> is one of the usual kernel targets"
-	einfo ""
+	einfo
 	epause 10
 }

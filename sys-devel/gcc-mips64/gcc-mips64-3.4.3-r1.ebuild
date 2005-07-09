@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.3-r1.ebuild,v 1.2 2005/02/06 19:15:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.3-r1.ebuild,v 1.3 2005/07/09 19:47:36 swegener Exp $
 
 
 # Variables 
@@ -118,18 +118,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "To facilitate an easier kernel build, you may wish to add the following line to your profile:"
-	einfo ""
+	einfo
 	einfo "For 2.4.x kernel builds:"
 	einfo "alias ${MYARCH}make=\"make ARCH=${MYARCH} CROSS_COMPILE=${MYARCH}-unknown-linux-gnu-\""
-	einfo ""
+	einfo
 	einfo "For 2.6.x kernel builds:"
 	einfo "alias ${MYARCH}make=\"make ARCH=${MYARCH/64/} CROSS_COMPILE=${MYARCH}-unknown-linux-gnu-\""
-	einfo ""
+	einfo
 	einfo "Then to compile a kernel, simply goto the kernel source directory, and issue:"
 	einfo "${MYARCH}make <target>"
 	einfo "Where <target> is one of the usual kernel targets"
-	einfo ""
+	einfo
 	epause 10
 }
