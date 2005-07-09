@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.3.ebuild,v 1.2 2005/01/01 17:39:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.3.ebuild,v 1.3 2005/07/09 19:48:20 swegener Exp $
 
 inherit eutils
 
@@ -79,8 +79,8 @@ pkg_postinst() {
 	einfo "supplemental JDBC functionality with Oracle) and the"
 	einfo "oracle-instantclient-sqlplus (for running the SQL*Plus application)"
 	einfo "packages as well."
-	einfo ""
+	einfo
 	einfo "Examples are located in /usr/share/doc/${PF}/"
-	einfo ""
+	einfo
 	ewarn "ORACLE_HOME (and others) are set in /etc/env.d/50oracle-instantclient-basic"
 }

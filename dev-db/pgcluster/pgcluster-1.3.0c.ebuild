@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0c.ebuild,v 1.2 2005/07/09 15:44:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0c.ebuild,v 1.3 2005/07/09 19:49:22 swegener Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib
 
@@ -182,16 +182,16 @@ pkg_postinst() {
 	einfo "Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell"
 
 	if [ ! -f ${PG_DIR}/data/PG_VERSION ] ; then
-		einfo ""
+		einfo
 		einfo "Execute the following command"
 		einfo "ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config"
 		einfo "to setup the initial database environment."
 	fi
 
-	einfo ""
+	einfo
 	einfo "Python modules was removed from PostgreSQL package."
 	einfo "If you need it, please run \"emerge dev-db/pygresql\"."
-	einfo ""
+	einfo
 }
 
 pkg_config() {
@@ -226,17 +226,17 @@ pkg_config() {
 			ewarn "Restoring the SEMMNI value to the previous value"
 			ewarn "Please edit the last value of kernel.sem in /etc/sysctl.conf"
 			ewarn "and set it to at least ${SEMMNI_MIN}"
-			ewarn ""
+			ewarn
 			ewarn "  kernel.sem = ${SEM} ${SEMMNI_MIN}"
-			ewarn ""
+			ewarn
 		fi
 
 		if [ ${SHMMAX} -lt ${SHMMAX_MIN} ]; then
 			eerror "The current value of SHMMAX is too low for postgresql to run."
 			eerror "Please edit /etc/sysctl.conf and set this value to at least ${SHMMAX_MIN}."
-			eerror ""
+			eerror
 			eerror "  kernel.shmmax = ${SHMMAX_MIN}"
-			eerror ""
+			eerror
 
 		fi
 	fi
