@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r6.ebuild,v 1.8 2005/05/30 19:54:20 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r6.ebuild,v 1.9 2005/07/09 13:47:07 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="Gentoo's installer for web-based applications"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="http://dev.gentoo.org/~stuart/${PN}/${PN}-${PVR}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~stuart/${PN}/${PF}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
