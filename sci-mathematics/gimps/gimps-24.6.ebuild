@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.6.ebuild,v 1.3 2005/07/07 18:55:53 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.6.ebuild,v 1.4 2005/07/09 19:19:48 swegener Exp $
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -32,20 +32,20 @@ src_install () {
 }
 
 pkg_postinst () {
-	echo ""
+	echo
 	einfo "You can use \`/etc/init.d/gimps start\` to start a GIMPS client in the"
 	einfo "background at boot. Have a look at /etc/conf.d/gimps and check some"
 	einfo "configuration options."
-	einfo ""
+	einfo
 	einfo "If you don't want to use the init script to start gimps, remember"
 	einfo "to cd into the directory where the data files are to be stored first, eg.:"
 	einfo "   cd /var/lib/gimps && ${I}/mprime"
-	echo ""
+	echo
 }
 
 pkg_postrm () {
-	echo ""
+	echo
 	einfo "GIMPS data files were not removed."
 	einfo "Remove them manually from /var/lib/gimps/"
-	echo ""
+	echo
 }
