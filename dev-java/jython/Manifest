@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 02c534c759bb9d71a3e9893971e0d9e1 jython-2.1-r6.ebuild 2201
 MD5 55c04875b5d80c29be66ad811a812aae ChangeLog 3497
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 17272ca5f12bd9bb307210c12606d526 files/jythonc 67
 MD5 b271f5441bb93491ead9f78332393451 files/jython 363
 MD5 d38ea464f1cad146456318d7ee87319a files/digest-jython-2.1-r6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/YC/rLF9B432nYRAhhQAJ9JRQqgH3664a55xPXrNDn8zsqNvQCgqTRv
+2HijwMe1MLEbrlCN2C9fkOo=
+=Wiri
+-----END PGP SIGNATURE-----

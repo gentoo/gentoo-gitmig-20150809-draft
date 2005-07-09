@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b60a51cab4033a7d018fa827f6ab3b41 junit-3.8.1-r1.ebuild 1145
 MD5 be3ad39dbdaaf1f70fe4eb172890ce1f ChangeLog 3148
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 bab94fdc8a6c2abf20e0f2cee4849a4e files/digest-junit-3.8.1-r1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/Xy/rLF9B432nYRAkTeAKCdG/x1evI6zMj1KgKA7h+iwTh++QCfQeRz
+EBAqDWP6B3uq4IYyvqZ3hP4=
+=TH2d
+-----END PGP SIGNATURE-----
