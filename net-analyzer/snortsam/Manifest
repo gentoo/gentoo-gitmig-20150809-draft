@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 50f8ab379a9946ee9258543d60aceeae ChangeLog 1553
 MD5 ba3cfd3145dc1ff7957a323d413e45ab files/digest-snortsam-2.24 69
 MD5 0fba63de6dcbb1d580551ccdd18e3cd1 files/digest-snortsam-2.29 70
@@ -9,3 +12,10 @@ MD5 0aab34643b6648fc5d83078a4a239cd8 snortsam-2.24.ebuild 1017
 MD5 563816515ae29db4307c0c08572c9255 snortsam-2.29.ebuild 1150
 MD5 c0adb61a69f1dda5813380d265af5d05 snortsam-2.30.ebuild 1202
 MD5 21a4d32d50fdc886a60dfb3e6a4257eb snortsam-2.31.ebuild 1211
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0BpnI1lqEGTUzyQRAoWEAKDcfNBRbdqA5OfysINpTN7xmhJJRQCfSZRP
+GMJ759iQZ8gH1d0mor/xJYQ=
+=tjSa
+-----END PGP SIGNATURE-----

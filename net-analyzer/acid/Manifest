@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fc015b47ac1f99ab01027e593ed779e6 ChangeLog 2067
 MD5 6f6a775fc11cb6471984d0984f7723f6 acid-0.9.6_beta23.ebuild 1826
 MD5 26f34d01017d5c8acb2d58fd139cef67 files/digest-acid-0.9.6_beta23 65
 MD5 d5e9bd932b7a02f7fbaa05865d864854 metadata.xml 248
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0BqSI1lqEGTUzyQRAma8AKCQ8oK0tS+faHNXSYIXpkNYoe6ugACffVdb
+VAIL+0PpWvvjGPfSLLugyPg=
+=cTM3
+-----END PGP SIGNATURE-----

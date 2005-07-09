@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7609cd81d666c771e6f6d3654fd9446f ChangeLog 1261
 MD5 913a9112332add1b07f8e13567ef78c6 files/digest-sussen-0.10 63
 MD5 6bbd8221dae260aa294014e79587f74d files/digest-sussen-0.12 63
@@ -6,3 +9,10 @@ MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 284a33f91290e58dc976067ff9438ae5 sussen-0.10.ebuild 745
 MD5 eb4b0f734206dfbff9990d9a1edb216f sussen-0.12.ebuild 745
 MD5 606a391d68a2efbd6f306c20cd73fdbe sussen-0.5.3.ebuild 1118
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0Be4I1lqEGTUzyQRAqraAJ9k03Ejhi8lWCqaHkXbVtussBzMnwCgmQ1h
+7jzRCCb2LqL+P8DUSqG9ysg=
+=jcWS
+-----END PGP SIGNATURE-----

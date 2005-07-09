@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9690d9a71ebd243c1041695cbcbe80df ChangeLog 5670
 MD5 c8c25561d4871462ea03dc0490ced91b files/check_swap.c.patch 2212
 MD5 39af7074b023625d9a75730bd6932437 files/digest-nagios-plugins-1.3.1-r1 72
@@ -7,3 +10,10 @@ MD5 ee71da291efd7427bd9786591a98df34 files/nagios-plugins-noradius.patch 2661
 MD5 a3aa02d9b004cdb8629496aa61024fb7 metadata.xml 256
 MD5 8f37db1a5330acf9b68c8642375acd17 nagios-plugins-1.3.1-r1.ebuild 2947
 MD5 c10dbe4588d1e4a29da496f604e98de7 nagios-plugins-1.4.ebuild 3280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0BbtI1lqEGTUzyQRAjRtAJ4w1833IkEOfp6Cez/KXcEKW7b7UQCcDU/V
+DiVFNAjKvmn1+A0yu/oGCtQ=
+=uMep
+-----END PGP SIGNATURE-----

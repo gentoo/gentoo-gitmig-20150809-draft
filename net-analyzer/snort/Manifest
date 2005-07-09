@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1d0de32091ea9a86e17e2c34ed627aa2 ChangeLog 13529
 MD5 fe6a25fdd3c6d4b527d89c51d78b8f36 files/2.0.6-libnet-1.0.patch 2753
 MD5 fe6a25fdd3c6d4b527d89c51d78b8f36 files/2.1.2-libnet-1.0.patch 2753
@@ -29,3 +32,10 @@ MD5 9b2bebc98da0c3d9557772760ab3bcba snort-2.3.2.ebuild 4449
 MD5 0d951e1b49a914bff96f0c4dcaa1758e snort-2.3.3-r1.ebuild 4219
 MD5 45aadbffae0e3986ec20670571892242 snort-2.3.3.ebuild 4147
 MD5 e5dc3d5a6745cbd0ccfda56cf06450bf snort-2.4.20050508.ebuild 4048
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0Bl9I1lqEGTUzyQRAv1UAKCLKE5itcSetCD+RrgqVz8R4WgYRgCgmXn0
+O3H214hz1SsWWyK1nlAcLf0=
+=BRAw
+-----END PGP SIGNATURE-----

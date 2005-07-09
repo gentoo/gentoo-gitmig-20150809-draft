@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a3382c90b2408e33938e3460de5c52d5 ChangeLog 3042
 MD5 c6fde5842858e98a063e78223644e191 files/digest-ipac-ng-1.30 65
 MD5 39c34f5fc4e8f1edc81459ec0895f59d files/digest-ipac-ng-1.31 65
@@ -11,3 +14,10 @@ MD5 0440d5d1752a968fc89ee147931e6823 ipac-ng-1.30.ebuild 2443
 MD5 d060e69170dbf16cf3ce008c9da18ca4 ipac-ng-1.31-r1.ebuild 2672
 MD5 a997dfb8bac438d50f75fa2f382d5728 ipac-ng-1.31.ebuild 2592
 MD5 d21717f5748c9774708f37fd538eca26 metadata.xml 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0BdYI1lqEGTUzyQRAgbpAJ0Sxb52QQVjdTX5eIyxhGzJ5fJWQgCgqvtp
+o9IXDgA07tgmTwh2IQVvip0=
+=HGJP
+-----END PGP SIGNATURE-----

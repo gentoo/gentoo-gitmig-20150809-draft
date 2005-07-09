@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7385dcf02a3364d8151a70f256e2c13b ChangeLog 1326
 MD5 861e47b262af687131be582de0b37b3a files/digest-hyperic-hq-agent-2.0.31 84
 MD5 088bc23eceee1f896cec195ef1f5cead files/digest-hyperic-hq-agent-2.0.53 170
@@ -9,3 +12,10 @@ MD5 6dd2b3ce69c66365ca7a11f43b6503ac hyperic-hq-agent-2.0.31.ebuild 1462
 MD5 eb984e07b5410ef2c4640d49b22fe448 hyperic-hq-agent-2.0.53.ebuild 1435
 MD5 0c2dbe9d74fdfa74a42d2c96ef530d69 hyperic-hq-agent-2.1.20.ebuild 1433
 MD5 eddcfeabec90c590787504b96256b98a metadata.xml 475
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0BcXI1lqEGTUzyQRAnYhAJ91Gb+xCyiONOGOXHkeoNRLU3r9PACg2eGJ
+XhFBqp2sSYU7D6+bj72ZEOI=
+=eqUh
+-----END PGP SIGNATURE-----

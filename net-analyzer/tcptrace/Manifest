@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e3d9692987ca45c06a6499b9d9e0e639 ChangeLog 1863
 MD5 53131797321a63c406299ae4bf29455c files/digest-tcptrace-6.6.1 67
 MD5 53131797321a63c406299ae4bf29455c files/digest-tcptrace-6.6.1-r1 67
@@ -6,3 +9,10 @@ MD5 1ca5a522a1c690bd58b9667fb3f3ebac metadata.xml 236
 MD5 beeca9676db9473d0178387c770a945e tcptrace-6.6.1-r1.ebuild 996
 MD5 8bd2252b42bcbfde68bac2d6d9ec1ff8 tcptrace-6.6.1.ebuild 733
 MD5 433c6d99601aa3f00cd93d17a1e37daa tcptrace-6.6.7.ebuild 988
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0BoUI1lqEGTUzyQRAhGpAJ4z9IZyddzzJJB5XTeFpy5gUSKgBwCg2C7F
+nTBhSKj67DxQsgTMEaz8FIg=
+=vAXp
+-----END PGP SIGNATURE-----
