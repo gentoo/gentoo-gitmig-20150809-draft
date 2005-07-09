@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.25 2005/06/02 16:24:48 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.26 2005/07/09 15:46:06 axxo Exp $
+
+  09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> ant-core-1.5.4-r2.ebuild,
+  ant-core-1.6.2-r3.ebuild, ant-core-1.6.5.ebuild:
+  Fix deps, add source useflag
 
   02 Jun 2005; Thomas Matthijs <axxo@gentoo.org> -files/1.6.3-ant,
   -files/1.6.4-ant, -ant-core-1.6.3-r1.ebuild, -ant-core-1.6.4.ebuild:

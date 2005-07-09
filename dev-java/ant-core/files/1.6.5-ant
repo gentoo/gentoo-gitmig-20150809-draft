@@ -15,7 +15,7 @@
 #   limitations under the License.
 
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/files/1.6.5-ant,v 1.1 2005/06/02 16:21:30 axxo Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/files/1.6.5-ant,v 1.2 2005/07/09 15:46:06 axxo Exp $
 
 # Extract launch and ant arguments, (see details below).
 ant_exec_args=
@@ -105,7 +105,7 @@ else
 fi
 
 # add in the dependency .jar files
-LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant-core,ant-tasks,log4j,xerces-2,xalan,junit,antlr,bcel,bsh,commons-beanutils-1.6,commons-collections,commons-logging,commons-net,jakarta-oro-2.0,jdepend,jsch,jakarta-regexp-1.3,rhino-1.5,jython,jta,jaf,javamail 2> /dev/null`"
+LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant-tasks,log4j,xerces-2,xalan,junit,antlr,bcel,bsh,commons-beanutils-1.6,commons-collections,commons-logging,commons-net,jakarta-oro-2.0,jdepend,jsch,jakarta-regexp-1.3,rhino-1.5,jython,jta,jaf,javamail 2> /dev/null`"
 
 if [ -n "$JAVA_HOME" ] ; then
   if [ -f "$JAVA_HOME/lib/tools.jar" ] ; then
@@ -161,7 +161,7 @@ if [ "`arch`" == "ppc" ] ; then
 fi
 
 
-ant_exec_command="exec \"$JAVACMD\" $ANT_OPTS -classpath \"$LOCALCLASSPATH\" -Dant.home=\"$ANT_HOME\" -Dant.library.dir=\"$ANT_LIB\" $ant_sys_opts org.apache.tools.ant.launch.Launcher $ANT_ARGS -lib \"$CLASSPATH\" $ant_exec_args"
+ant_exec_command="exec \"$JAVACMD\" $ANT_OPTS -classpath \"$LOCALCLASSPATH\" -Dant.home=\"$ANT_HOME\" -Dant.library.dir=\"$ANT_LIB\" $ant_sys_opts org.apache.tools.ant.launch.Launcher $ANT_ARGS -cp \"$CLASSPATH\" $ant_exec_args"
 
 if $ant_exec_debug ; then
   echo $ant_exec_command
