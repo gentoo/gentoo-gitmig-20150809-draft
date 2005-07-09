@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f826fcca414fc0c05030db1f99e479d8 metadata.xml 360
 MD5 be6f03243df7fa72791ed9f9494d5494 ChangeLog 4430
-MD5 924a3dbb8fee57b75b41e19f3f6a629c gcc-sparc64-3.3.6.ebuild 3033
-MD5 35cac54faddd09f738952d6f680bdd09 gcc-sparc64-3.3.5.ebuild 3032
-MD5 1607cfb772bdc7d3074413de8ae495b8 gcc-sparc64-3.4.3.ebuild 3253
-MD5 7e77e040f0b5745fee5fb4b99188190c gcc-sparc64-3.3.4.ebuild 3036
 MD5 af241dd07c46bc5b0c2d54eac803f1f3 files/digest-gcc-sparc64-3.3.4 151
+MD5 595fc5d3e417d76d1f7e7f0a8439535a files/digest-gcc-sparc64-3.3.5 64
+MD5 79ef0db9c6e9750aa92334dded832283 files/digest-gcc-sparc64-3.3.6 64
 MD5 2ca380cbcf0547fb5d2a671c1c0296de files/digest-gcc-sparc64-3.4.3 64
 MD5 e411938ca2908079a2359fed5cb3b442 files/gcc-3.3.4-gentoo-branding.patch 874
-MD5 595fc5d3e417d76d1f7e7f0a8439535a files/digest-gcc-sparc64-3.3.5 64
 MD5 5f8835c8de8d96466954796d2512a29b files/gcc-3.3.5-gentoo-branding.patch 874
 MD5 bffc563ab83f8025f3e477286ece2e65 files/gcc-3.3.6-gentoo-branding.patch 874
-MD5 79ef0db9c6e9750aa92334dded832283 files/digest-gcc-sparc64-3.3.6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCpkAEKRy60XGEcJIRAnToAJ9ECszc+cEnqmvEej/VSJnRl6n06wCffNSN
-DbZmV6Bx/+7zIKTejwqupnw=
-=3bW8
------END PGP SIGNATURE-----
+MD5 afcb9bebe37adb1841be873bce174dbb gcc-sparc64-3.3.4.ebuild 3024
+MD5 ae62b8519fe9fb223ac9cd0d2a69be3a gcc-sparc64-3.3.5.ebuild 3020
+MD5 5527d7aca7ba394003481cafc89478b4 gcc-sparc64-3.3.6.ebuild 3021
+MD5 32c00037a9b021d13be70b68d3eb317b gcc-sparc64-3.4.3.ebuild 3241
+MD5 f826fcca414fc0c05030db1f99e479d8 metadata.xml 360
