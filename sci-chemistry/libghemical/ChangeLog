@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/libghemical
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/libghemical/ChangeLog,v 1.1 2005/07/09 05:04:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/libghemical/ChangeLog,v 1.2 2005/07/09 12:16:45 dholm Exp $
+
+  09 Jul 2005; David Holm <dholm@gentoo.org> libghemical-1.90.ebuild:
+  Added to ~ppc.
 
 *libghemical-1.90 (09 Jul 2005)
 

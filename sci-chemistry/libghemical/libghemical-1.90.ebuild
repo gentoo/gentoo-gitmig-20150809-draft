@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/libghemical/libghemical-1.90.ebuild,v 1.1 2005/07/09 05:04:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/libghemical/libghemical-1.90.ebuild,v 1.2 2005/07/09 12:16:45 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.uku.fi/~thassine/ghemical/download/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="mopac7 mpqc openbabel"
 
 DEPEND="dev-libs/libf2c
