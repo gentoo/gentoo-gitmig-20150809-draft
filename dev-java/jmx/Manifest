@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1406147c875670b002be1e5b928b31cb jmx-1.2.1.ebuild 1694
 MD5 a093b4d849d1cb4ddfcae00bbb19e07e ChangeLog 2050
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 b075599e4253703c34d53059f8a7f587 files/digest-jmx-1.2.1 64
 MD5 399be713cba96daaec9b89cbf0e369d1 files/build.xml-jdk1.5.patch 314
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClZyd06ebR+OMO78RAixwAJ9crjzhJZAljvPS8J+kkZZu842CxwCfet7H
-/sY4a2LlHdTSWVfY3UvwSEM=
-=CN5h
------END PGP SIGNATURE-----
+MD5 b075599e4253703c34d53059f8a7f587 files/digest-jmx-1.2.1 64
+MD5 b8b2fca11ab98b163a6ae375b8cdbdf5 jmx-1.2.1.ebuild 1689
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
