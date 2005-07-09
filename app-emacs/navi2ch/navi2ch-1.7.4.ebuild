@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.4.ebuild,v 1.8 2005/01/01 13:55:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.7.4.ebuild,v 1.9 2005/07/09 19:35:51 swegener Exp $
 
 inherit elisp gnuconfig
 
@@ -38,7 +38,7 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
-	einfo ""
+	einfo
 	einfo "Please add to your .emacs"
 	einfo "If you use mona-font,"
 	einfo "\t(setq navi2ch-mona-enable t)"
@@ -47,5 +47,5 @@ pkg_postinst() {
 	einfo "\t(add-hook 'navi2ch-bm-mode-hook      'izonmoji-mode-on)"
 	einfo "\t(add-hook 'navi2ch-article-mode-hook 'izonmoji-mode-on)"
 	einfo "\t(add-hook 'navi2ch-popup-article-mode-hook 'izonmoji-mode-on)"
-	einfo ""
+	einfo
 }
