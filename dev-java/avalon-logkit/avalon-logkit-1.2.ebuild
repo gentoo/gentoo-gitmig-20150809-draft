@@ -1,16 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.ebuild,v 1.19 2005/05/30 19:19:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.ebuild,v 1.20 2005/07/09 15:59:10 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="LogKit is an easy-to-use Java logging toolkit designed for secure, performance-oriented logging."
 HOMEPAGE="http://avalon.apache.org/"
 SRC_URI="mirror://apache/avalon/logkit/v${PV}/LogKit-${PV}-src.tar.gz"
-DEPEND=">=virtual/jdk-1.3
-	dev-java/ant-core
-	dev-java/junit
-	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3
 	javamail? (
 		dev-java/sun-jaf-bin
@@ -24,17 +20,24 @@ RDEPEND=">=virtual/jre-1.3
 			dev-java/jms
 		)
 	)"
+DEPEND=">=virtual/jdk-1.3
+	dev-java/ant-core
+	dev-java/junit
+	source? ( app-arch/zip )
+	jikes? ( dev-java/jikes )
+	${RDEPEND}"
 
 LICENSE="Apache-1.1"
 SLOT="1.2"
 KEYWORDS="x86 amd64 ppc64 sparc ppc"
-IUSE="doc javamail jikes jms"
+IUSE="doc javamail jikes jms source"
 
 S=${WORKDIR}/LogKit-${PV}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
+	rm -f *.jar
 
 	# decide which mail implementation we use
 	if use javamail; then
@@ -68,4 +71,5 @@ src_compile() {
 src_install () {
 	java-pkg_dojar ${S}/build/lib/*.jar || die "Unable to Install"
 	use doc && java-pkg_dohtml -r docs/*
+	use source && java-pkg_dosrc src/java/*
 }

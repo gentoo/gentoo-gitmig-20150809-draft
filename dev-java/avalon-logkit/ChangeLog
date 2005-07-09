@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-logkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.18 2005/05/30 19:19:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.19 2005/07/09 15:59:10 axxo Exp $
+
+  09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> avalon-logkit-1.2.ebuild,
+  avalon-logkit-2.0.ebuild:
+  fix deps, and source useflag support, small cleanups
 
   30 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   avalon-logkit-1.2.ebuild, avalon-logkit-2.0.ebuild:

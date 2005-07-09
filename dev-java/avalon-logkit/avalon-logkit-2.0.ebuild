@@ -1,20 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.11 2005/05/30 19:19:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.12 2005/07/09 15:59:10 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Easy-to-use Java logging toolkit"
 HOMEPAGE="http://avalon.apache.org/"
-SRC_URI="mirror://apache/avalon/avalon-logkit/distributions/${PF}.dev-0-src.tar.gz"
+SRC_URI="mirror://apache/avalon/avalon-logkit/distributions/${P}.dev-0-src.tar.gz"
 KEYWORDS="x86 amd64 ppc64 sparc ppc"
 LICENSE="Apache-2.0"
 SLOT="2.0"
-IUSE="doc jikes jms javamail"
-DEPEND=">=virtual/jdk-1.4
-		jikes? ( >=dev-java/jikes-1.21 )
-		>=dev-java/ant-1.5
-		dev-java/junit"
+IUSE="doc jikes jms javamail source"
 RDEPEND=">=virtual/jre-1.4
 		dev-java/log4j
 		jms? ( || (
@@ -27,9 +23,15 @@ RDEPEND=">=virtual/jre-1.4
 				dev-java/sun-javamail-bin
 			)
 		)
-		=dev-java/servletapi-2.3*"
+		=dev-java/servletapi-2.4*"
+DEPEND=">=virtual/jdk-1.4
+		jikes? ( >=dev-java/jikes-1.21 )
+		source? ( app-arch/zip )
+		dev-java/ant-core
+		dev-java/junit
+		${RDEPEND}"
 
-S=${WORKDIR}/${PF}.dev-0
+S=${WORKDIR}/${P}.dev-0
 
 src_unpack() {
 	unpack ${A}
@@ -58,22 +60,22 @@ src_unpack() {
 		fi
 	fi
 
-	local libs="log4j,servletapi-2.3"
+	local libs="log4j,servletapi-2.4"
 	use jms && libs="${libs},${jms}"
 	use javamail && libs="${libs},${javamail}"
 
-	echo "classpath=`java-config -p ${libs}`" > build.properties
+	echo "classpath=$(java-pkg_getjars ${libs})" > build.properties
 
 	cd ${S}/src/java/org/apache/log/output/
 
 	if ! use jms; then
-		einfo "Removing jms related files"
+		echo "Removing jms related files"
 		rm -rf jms || die "JMS Failure!"
 		rm -f ServletOutputLogTarget.java || die "JMS Failure!"
 	fi
 
 	if ! use javamail; then
-		einfo "Removing javamail related files"
+		echo "Removing javamail related files"
 		rm -rf net || die "JavaMail Failure!"
 	fi
 }
@@ -90,4 +92,5 @@ src_install() {
 
 	dodoc README.txt LICENSE.txt
 	use doc && java-pkg_dohtml -r ${S}/dist/docs/*
+	use source && java-pkg_dosrc src/java/*
 }
