@@ -1,5 +1,15 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 16d5014072060c318bacc9b4678748cf khttrack-0.10.ebuild 655
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1cdcf75474948d1e6c4c9bda82ccfe83 khttrack-0.10.ebuild 658
 MD5 11a92b3a57f0a5056e02821974dab370 ChangeLog 1739
-MD5 7641fbc59a4910d2a24229ec84ed5c1c files/khttrack-0.10-configure-arts.patch 3131
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 b7559176556c585532688229e5222397 files/digest-khttrack-0.10 66
+MD5 7641fbc59a4910d2a24229ec84ed5c1c files/khttrack-0.10-configure-arts.patch 3131
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz1daBXaUFmZvwyMRArVUAJ94w4Y7aHdxhjbKBIRLjKseG63j5gCbBQFx
+FYhnodslaihAefh4tCTAgik=
+=mNZS
+-----END PGP SIGNATURE-----
