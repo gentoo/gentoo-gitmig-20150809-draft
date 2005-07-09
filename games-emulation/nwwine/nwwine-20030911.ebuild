@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/nwwine-20030911.ebuild,v 1.5 2004/10/31 05:10:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/nwwine-20030911.ebuild,v 1.6 2005/07/09 18:46:35 swegener Exp $
 
 inherit eutils
 
@@ -113,10 +113,10 @@ src_install () {
 pkg_postinst() {
 	einfo "Use /usr/bin/nwwine to start wine. This is a wrapper-script"
 	einfo "which will take care of everything else."
-	einfo ""
+	einfo
 	einfo "Use /usr/bin/regedit-nwwine to import registry files into the"
 	einfo "wine registry."
-	einfo ""
+	einfo
 	einfo "If you have bugs, enhancements or patches"
 	einfo "report a bug and assign it to wine@gentoo.org"
 }
