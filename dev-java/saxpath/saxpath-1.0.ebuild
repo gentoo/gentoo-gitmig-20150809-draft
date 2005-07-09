@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/saxpath-1.0.ebuild,v 1.6 2005/05/29 15:48:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/saxpath-1.0.ebuild,v 1.7 2005/07/09 16:07:45 axxo Exp $
 
 inherit java-pkg
 
@@ -10,12 +10,15 @@ SRC_URI="mirror://sourceforge/saxpath/${P}.tar.gz"
 LICENSE="saxpath"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
-IUSE="doc junit"
-DEPEND="dev-java/ant
-	junit? ( dev-java/junit )
+IUSE="doc junit source"
+
+RDEPEND=">=virtual/jre-1.4
 	dev-java/xalan
 	>=dev-java/xerces-2.6.2-r1"
-#RDEPEND=""
+DEPEND=">=virtual/jdk-1.4
+	dev-java/ant
+	junit? ( dev-java/junit )
+	${RDEPEND}"
 
 S=${WORKDIR}/${P}-FCS
 
@@ -26,7 +29,7 @@ src_unpack() {
 	mkdir src/conf
 	cp ${FILESDIR}/MANIFEST.MF src/conf
 	cd lib
-	rm -f jakarta-ant-1.3-optional.jar ant-1.3.jar xerces.jar junit.jar
+	rm -f *.jar
 	use junit && java-pkg_jar-from junit
 	java-pkg_jar-from xalan
 	java-pkg_jar-from xerces-2
@@ -43,4 +46,5 @@ src_install() {
 	java-pkg_dojar build/saxpath.jar
 
 	use doc && java-pkg_dohtml -r build/doc/*
+	use source && java-pkg_dosrc src/java/main/*
 }

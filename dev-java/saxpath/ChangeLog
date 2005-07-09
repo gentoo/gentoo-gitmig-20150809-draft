@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/saxpath
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/ChangeLog,v 1.6 2005/05/29 15:48:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/ChangeLog,v 1.7 2005/07/09 16:07:45 axxo Exp $
+
+  09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> saxpath-1.0.ebuild:
+  fix deps, and source useflag support, small cleanup
 
   29 May 2005; Markus Rothe <corsair@gentoo.org> saxpath-1.0.ebuild:
   Stable on ppc64
