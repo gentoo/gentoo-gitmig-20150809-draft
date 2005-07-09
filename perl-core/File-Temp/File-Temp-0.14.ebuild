@@ -1,16 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/File-Temp-0.14.ebuild,v 1.2 2005/05/27 19:08:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/File-Temp-0.14.ebuild,v 1.3 2005/07/09 22:59:02 swegener Exp $
 
 inherit perl-module
 
-MY_P=File-Temp-${PV}
-S=${WORKDIR}/${MY_P}
-CATEGORY="perl-core"
-
 DESCRIPTION="File::Temp can be used to create and open temporary files in a safe way."
-HOMEPAGE="http://www.cpan.org/modules/by-module/File/${MY_P}.readme"
-SRC_URI="mirror://cpan/authors/id/T/TJ/TJENNESS/${MY_P}.tar.gz"
+HOMEPAGE="http://www.cpan.org/modules/by-module/File/${P}.readme"
+SRC_URI="mirror://cpan/authors/id/T/TJ/TJENNESS/${P}.tar.gz"
 SRC_TEST="do"
 
 LICENSE="|| ( Artistic GPL-2 )"
