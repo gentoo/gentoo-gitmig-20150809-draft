@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050301.ebuild,v 1.2 2005/03/23 16:20:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050301.ebuild,v 1.3 2005/07/09 19:26:37 swegener Exp $
 
 inherit cvs
 
@@ -67,7 +67,7 @@ src_install(){
 
 pkg_postinst(){
 	if use thumbnail; then
-		einfo "To enable thumbnail, "
+		einfo "To enable thumbnail,"
 		einfo "   1. Go to Preference."
 		einfo "   2. Check \"Create thumbnail\"."
 		einfo

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050325.ebuild,v 1.3 2005/03/27 18:48:11 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050325.ebuild,v 1.4 2005/07/09 19:26:37 swegener Exp $
 
 inherit cvs eutils
 
@@ -80,7 +80,7 @@ src_install(){
 
 pkg_postinst(){
 	if use thumbnail; then
-		einfo "To enable thumbnail, "
+		einfo "To enable thumbnail,"
 		einfo "   1. Go to Preference."
 		einfo "   2. Check \"Create thumbnail\"."
 		einfo
@@ -95,17 +95,17 @@ pkg_postinst(){
 		ewarn
 	fi
 
-	einfo ""
-	einfo "Many files/directories have been installed with -cvs postfix since kazehakase-cvs-20050325 "
+	einfo
+	einfo "Many files/directories have been installed with -cvs postfix since kazehakase-cvs-20050325"
 	einfo "so that you can install kazehakase/kazehakase-cvs in the same box."
-	einfo ""
+	einfo
 	einfo "Renamed files/directories which you should know."
 	einfo " /usr/bin/kazehakase-cvs"
 	einfo " /etc/kazehakase-cvs"
 	einfo " <your home directory>/.kazehakase-cvs"
-	einfo ""
+	einfo
 	einfo "You might want to create symbolic link .kazehakase-cvs which points to .kazehakase in your home directory."
 	einfo "i.e. ln -s .kazehakase <your home directory>/.kazehakase-cvs"
-	einfo ""
+	einfo
 }
 

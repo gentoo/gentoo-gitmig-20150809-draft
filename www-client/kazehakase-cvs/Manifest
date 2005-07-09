@@ -1,8 +1,18 @@
-MD5 7e5f9fcc4eb22d07bd6f48e9aed2e80c kazehakase-cvs-20050325.ebuild 3255
-MD5 b2c29ea05ced9ceeb926b06478071050 kazehakase-cvs-20050301.ebuild 2193
-MD5 ce6987b1a2bb1e50e77cf17dcb0ea137 kazehakase-cvs-20050330.ebuild 3431
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 efeb1a8273a1b55001637ef1c69481f3 ChangeLog 1553
-MD5 b6a70dc606d1eae980c96b5e81dd1e1b metadata.xml 249
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kazehakase-cvs-20050301 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kazehakase-cvs-20050325 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kazehakase-cvs-20050330 0
+MD5 bb09ad3ac0f53a0ffbc178d598464576 kazehakase-cvs-20050301.ebuild 2193
+MD5 f371aa5633a77a698c12520c9b631439 kazehakase-cvs-20050325.ebuild 3243
+MD5 b1e067aa5795978c70d97601195852a7 kazehakase-cvs-20050330.ebuild 3419
+MD5 b6a70dc606d1eae980c96b5e81dd1e1b metadata.xml 249
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0CUII1lqEGTUzyQRApiWAKDHJJ7iSLJVVlV5ndryQii0BCW10ACcD1SX
+8KjetQ022Z0pde0iwtqoUl4=
+=DTY5
+-----END PGP SIGNATURE-----
