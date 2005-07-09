@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bd95881fe7b052b358c925fbbc67f21d ChangeLog 512
 MD5 7cf586a2dee647bd4ab36fdbc64f73a4 Test-WWW-Mechanize-1.04.ebuild 709
 MD5 2b547ad00616c0840304748e9d6c34a5 files/digest-Test-WWW-Mechanize-1.04 73
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0F2nI1lqEGTUzyQRApkuAKCZA0paTDTwyDQta4inqm5StNs/QgCgshGD
+SRL8YEFSYDpjw1ZX0Yo4Xso=
+=fkTi
+-----END PGP SIGNATURE-----

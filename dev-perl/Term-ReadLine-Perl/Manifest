@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 031249553a5ee2b3cddff7bb148dc1d4 ChangeLog 1476
 MD5 cec0983dc675918b1a96cddf830745bc Term-ReadLine-Perl-1.0203.ebuild 549
 MD5 b74886941b0b32f8a58d1c3ed73d9031 files/digest-Term-ReadLine-Perl-1.0203 76
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0FtRI1lqEGTUzyQRAsgNAKCK6MajPEf+D3D+2ae5Y2vRnWACXwCgwSO5
+GEZSeUIvFS8d8EN49kzwRoQ=
+=AUt1
+-----END PGP SIGNATURE-----
