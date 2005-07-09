@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r4.ebuild,v 1.6 2005/03/03 18:40:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r4.ebuild,v 1.7 2005/07/09 03:01:55 swegener Exp $
 
 inherit eutils
 
@@ -99,10 +99,8 @@ pkg_postinst() {
 	chmod 770 /var/log/nullmailer /var/nullmailer/{tmp,queue}
 	chmod 660 /var/nullmailer/trigger
 
-	TMP_P="${PN}-${PV}"
-	[ "${PR}" != "r0" ] && TMP_P="${TMP_P}-${PR}"
 	einfo "To create an initial setup, please do:"
-	einfo "ebuild /var/db/pkg/${CATEGORY}/${TMP_P}/${TMP_P}.ebuild config"
+	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	einfo "To start nullmailer at boot you have to enable the /etc/init.d/svscan rc file"
 	einfo "and create the following links :"
 	einfo "ln -fs /var/nullmailer/service /service/nullmailer"

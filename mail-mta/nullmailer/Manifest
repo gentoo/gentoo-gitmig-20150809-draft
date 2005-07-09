@@ -1,19 +1,29 @@
-MD5 df1b62368f5f626e26eaf4b678948324 nullmailer-1.00_rc7-r2.ebuild 3533
-MD5 742c697dfe7b504eaa213fb5b20e7118 nullmailer-1.00_rc7-r4.ebuild 3830
-MD5 c6b65bbbb3a616cb7d477df13339d21d nullmailer-1.00.ebuild 4119
-MD5 dd627bf2e85f34c159c4889a3503f70f nullmailer-1.00_rc7-r1.ebuild 3182
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7713fe393545d72d5ccd8608226f62c1 ChangeLog 4108
-MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
-MD5 c422882176b83baa82dc9ee2964f70f4 nullmailer-1.00_rc7.ebuild 3231
-MD5 0c0e050ec359f92b6a42c57ebe6b26b8 nullmailer-1.00_rc7-r5.ebuild 4415
-MD5 a8919e8c159a7204d3d17f018d5415ce files/nullmailer-1.00-smtp-auth.patch 3990
+MD5 c367e5657509b68e227ffa43f954a211 files/digest-nullmailer-1.00 67
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7 70
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7-r1 70
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7-r2 70
 MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7-r4 70
 MD5 639fa6e9d323b500b247ab367596cb29 files/digest-nullmailer-1.00_rc7-r5 143
 MD5 4a2517a7b69e06ec8f1dcc634f1f9f28 files/mailer.conf 1588
+MD5 8fec0281a21917aa07f71f32877486d6 files/nullmailer-1.00-gcc34-fix.patch 618
+MD5 a8919e8c159a7204d3d17f018d5415ce files/nullmailer-1.00-smtp-auth.patch 3990
 MD5 a01ca848067aabbcb80c249f08c764eb files/nullmailer-1.00-syslog.patch 10047
 MD5 6d7b320c8d40ac0e2b4daca84d975cba files/remotes.sample 444
-MD5 8fec0281a21917aa07f71f32877486d6 files/nullmailer-1.00-gcc34-fix.patch 618
-MD5 c367e5657509b68e227ffa43f954a211 files/digest-nullmailer-1.00 67
+MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
+MD5 5d859342b9a7e38ea0b597d497ffadb0 nullmailer-1.00.ebuild 4046
+MD5 107dfa3e234efb28793e20c0577f5040 nullmailer-1.00_rc7-r1.ebuild 3109
+MD5 4a4fab3e4c0d1071f7b6ac74435e39a6 nullmailer-1.00_rc7-r2.ebuild 3460
+MD5 d6d59dec1d46bd3c4e2f6e4a95eb4411 nullmailer-1.00_rc7-r4.ebuild 3757
+MD5 81b2820bc4870c2e0a79c1b6e921fada nullmailer-1.00_rc7-r5.ebuild 4342
+MD5 642af279edee12aa1db84cea59fcc7a3 nullmailer-1.00_rc7.ebuild 3158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzz4zI1lqEGTUzyQRAmu0AKDc3yxirsqZhq9jNUEywZiaaaL/2ACdHYzs
+uXC6ytJ2YV8nLDQ9z06OTm8=
+=AmCP
+-----END PGP SIGNATURE-----

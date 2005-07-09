@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.1 2005/06/02 04:58:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00.ebuild,v 1.2 2005/07/09 03:01:55 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -120,10 +120,8 @@ pkg_postinst() {
 	chmod 770 /var/log/nullmailer /var/nullmailer/{tmp,queue}
 	chmod 660 /var/nullmailer/trigger
 
-	TMP_P="${PN}-${PV}"
-	[ "${PR}" != "r0" ] && TMP_P="${TMP_P}-${PR}"
 	einfo "To create an initial setup, please do:"
-	einfo "ebuild /var/db/pkg/${CATEGORY}/${TMP_P}/${TMP_P}.ebuild config"
+	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	msg_svscan
 	msg_mailerconf
 }
