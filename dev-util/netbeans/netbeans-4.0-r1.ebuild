@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0-r1.ebuild,v 1.1 2005/06/04 16:02:53 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0-r1.ebuild,v 1.2 2005/07/09 18:16:10 swegener Exp $
 
 inherit eutils java-pkg
 
@@ -298,13 +298,13 @@ src_install() {
 
 pkg_postinst () {
 	einfo "Your tomcat directory might not have the right permissions."
-	einfo "Please make sure that normal users can read the directory: "
-	einfo "${ROOT}/usr/share/tomcat-${TOMCATSLOT}                     "
-	einfo "                                                           "
-	einfo "The integrated Tomcat is not installed, but you can easily "
-	einfo "use the system Tomcat. See Netbeans documentation if you   "
+	einfo "Please make sure that normal users can read the directory:"
+	einfo "${ROOT}/usr/share/tomcat-${TOMCATSLOT}"
+	einfo
+	einfo "The integrated Tomcat is not installed, but you can easily"
+	einfo "use the system Tomcat. See Netbeans documentation if you"
 	einfo "don't know how to do that. The relevant settings are in the"
-	einfo "runtime window.                                            "
+	einfo "runtime window."
 }
 
 # Supporting functions for this ebuild
