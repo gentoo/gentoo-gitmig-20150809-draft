@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.0.ebuild,v 1.8 2005/05/29 15:58:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.0.ebuild,v 1.9 2005/07/09 16:04:05 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -10,16 +10,18 @@ SRC_URI="mirror://sourceforge/jaxen/${P}-FCS.tar.gz"
 LICENSE="jaxen"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
-IUSE="doc junit"
-DEPEND=">=virtual/jdk-1.3
-	dev-java/ant
-	junit? ( dev-java/junit )
+IUSE="doc junit source"
+RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.3* )
 	dev-java/xalan
 	>=dev-java/xerces-2.6.2-r1
 	=dev-java/dom4j-1*
 	~dev-java/jdom-1.0_beta9
 	dev-java/saxpath"
-RDEPEND=">=virtual/jre-1.3"
+
+DEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.3* )
+	dev-java/ant
+	junit? ( dev-java/junit )
+	${RDEPEND}"
 
 S=${WORKDIR}/${P}-FCS
 
@@ -31,7 +33,7 @@ src_unpack() {
 	cp ${FILESDIR}/MANIFEST.MF src/conf
 	rm -f *.jar
 	cd ${S}/lib
-	rm -f ant-1.3.jar jakarta-ant-1.3-optional.jar junit.jar xerces.jar dom4j-core.jar
+	rm -f *.jar
 
 	java-pkg_jar-from saxpath
 	java-pkg_jar-from xalan
@@ -52,5 +54,6 @@ src_install() {
 	java-pkg_dojar build/jaxen-full.jar
 
 	use doc && java-pkg_dohtml -r build/doc/*
+	use source && java-pkg_dosrc src/java/main/*
 }
 

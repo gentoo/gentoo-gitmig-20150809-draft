@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta2-r1.ebuild,v 1.2 2005/04/22 08:51:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta2-r1.ebuild,v 1.3 2005/07/09 16:04:05 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -10,18 +10,18 @@ SRC_URI="http://www.ibiblio.org/maven/jaxen/distributions/${PN}-1.1-beta-2-src.t
 LICENSE="jaxen"
 SLOT="1.1"
 KEYWORDS="x86 ~ppc ~sparc amd64"
-IUSE="doc jikes"
+IUSE="doc jikes source"
 
-DEPEND=">=virtual/jdk-1.3
-	jikes? ( dev-java/jikes )
-	dev-java/ant
-	>=sys-apps/sed-4
-	${RDEPEND}"
-
-RDEPEND=">=virtual/jre-1.3
+RDEPEND="|| ( =virtual/jre-1.3* =virtual/jre-1.4* )
 	>=dev-java/xerces-2.6.2-r1
 	=dev-java/dom4j-1*
 	~dev-java/jdom-1.0_beta9"
+
+DEPEND="|| ( =virtual/jdk-1.3* =virtual/jdk-1.4* )
+	jikes? ( dev-java/jikes )
+	dev-java/ant-core
+	>=sys-apps/sed-4
+	${RDEPEND}"
 
 S=${WORKDIR}/${PN}-1.1-beta-2
 
@@ -33,7 +33,6 @@ src_unpack() {
 
 	mkdir -p target/lib
 	cd target/lib
-	rm -f *.jar
 	java-pkg_jar-from xerces-2
 	java-pkg_jar-from dom4j-1
 	java-pkg_jar-from jdom-1.0_beta9
@@ -50,9 +49,9 @@ src_compile() {
 }
 
 src_install() {
-	mv target/jaxen*.jar target/${PN}.jar
-	java-pkg_dojar target/${PN}.jar
+	java-pkg_newjar target/jaxen*.jar ${PN}.jar
 
 	use doc && java-pkg_dohtml -r dist/docs/*
+	use source && java-pkg_dosrc src/java/main/*
 }
 

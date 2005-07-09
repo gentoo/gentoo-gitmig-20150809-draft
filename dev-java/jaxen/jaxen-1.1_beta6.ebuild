@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta6.ebuild,v 1.2 2005/06/12 18:12:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta6.ebuild,v 1.3 2005/07/09 16:04:05 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -13,15 +13,18 @@ SLOT="1.1"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc jikes source"
 
-DEPEND=">=virtual/jdk-1.3
-	dev-java/ant-core
-	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jre-1.3
+RDEPEND="|| ( =virtual/jre-1.3* =virtual/jre-1.4* )
 	~dev-java/jdom-1.0_beta9
 	=dev-java/dom4j-1*
 	=dev-java/xerces-2.6*
 	dev-java/xom"
+
+DEPEND="|| ( =virtual/jdk-1.3* =virtual/jdk-1.4* )
+	dev-java/ant-core
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )
+	${RDEPEND}"
+
 
 S=${WORKDIR}/${PN}-1.1-beta-6
 
@@ -47,8 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	mv target/jaxen*.jar target/${PN}.jar
-	java-pkg_dojar target/${PN}.jar
+	java-pkg_newjar target/jaxen*.jar ${PN}.jar
 
 	use doc && java-pkg_dohtml -r dist/docs/*
 	use source && java-pkg_dosrc src/java/main/*
