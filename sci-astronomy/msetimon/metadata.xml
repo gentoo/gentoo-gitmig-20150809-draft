@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+<email>smithj@gentoo.org</email>
+
+<!-- smithj is only a TEMPORARY MAINTAINER until a more appropiate herd can take
+over... i'm looking at you, sci herd -->
+
+</maintainer>
+</pkgmetadata>
