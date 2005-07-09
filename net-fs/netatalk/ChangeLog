@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.26 2005/07/09 10:11:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.27 2005/07/09 22:40:19 weeve Exp $
+
+  09 Jul 2005; Jason Wever <weeve@gentoo.org> netatalk-2.0.3.ebuild:
+  Added ~sparc keyword wrt bug #97586.
 
   09 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> -files/atalk,
   -files/atalk-rc6, -netatalk-1.5.3.1-r1.ebuild, -netatalk-1.6.2.ebuild,

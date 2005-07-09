@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3.ebuild,v 1.3 2005/07/07 20:08:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3.ebuild,v 1.4 2005/07/09 22:40:19 weeve Exp $
 
 inherit eutils pam flag-o-matic
 IUSE="ssl pam tcpd slp cups kerberos krb4 afs debug cracklib"
@@ -11,7 +11,7 @@ HOMEPAGE="http://netatalk.sourceforge.net"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=sys-libs/db-4.2.52
 	cracklib? ( sys-libs/cracklib )
