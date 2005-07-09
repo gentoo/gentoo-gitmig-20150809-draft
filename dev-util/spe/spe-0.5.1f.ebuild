@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.5.1f.ebuild,v 1.2 2005/04/20 05:53:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.5.1f.ebuild,v 1.3 2005/07/09 16:32:58 swegener Exp $
 
 inherit distutils eutils
 
@@ -47,10 +47,10 @@ pkg_postinst() {
 	distutils_python_version
 	SPEPATH="/usr/lib/python${PYVER}/site-packages"
 
-	einfo " "
+	einfo
 	einfo "To be able to use spe in blender, be sure that the path where spe is"
 	einfo "installed ($SPEPATH) is included in your PYTHONPATH"
 	einfo "environment variable. See the installation section in the manual for"
 	einfo "more information ($SPEPATH/_spe/doc/manual.pdf)."
-	einfo " "
+	einfo
 }
