@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dac725061082de850ccd8748309bd49c net-ping-2.31.ebuild 548
 MD5 4f4f37b10f109a1bc4446a48acd432b5 ChangeLog 1152
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 64b48720c4d5239cdd1b4ab08bc79fef files/digest-net-ping-2.31 64
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 0644c1a43dadbfaedb6d708c0f7394f6 net-ping-2.31.ebuild 527
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCljC5I1lqEGTUzyQRAqneAJoDd1v1V1QFEdgsskvNb6VBGClTTwCeKaUr
-MEeie1OOKrM08F3bQoPQ38Q=
-=j/se
+iD8DBQFC0FBhI1lqEGTUzyQRAjtTAJ4gK5u9YvEr7TxDRsrPzIP6ddJpugCfVW6B
+tkQl0ejGmgdtrmHaQy1H0/Q=
+=8SxM
 -----END PGP SIGNATURE-----
