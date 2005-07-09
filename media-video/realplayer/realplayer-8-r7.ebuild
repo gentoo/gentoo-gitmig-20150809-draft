@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r7.ebuild,v 1.7 2005/07/09 16:22:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r7.ebuild,v 1.8 2005/07/09 18:19:33 swegener Exp $
 
 inherit nsplugins
 
@@ -40,7 +40,7 @@ pkg_nofetch() {
 	einfo
 	einfo "Download ${A} and place it in :"
 	einfo "${DISTDIR}"
-	einfo " "
+	einfo
 	use x86 && \
 		ewarn "Please note, do NOT download the rpm, just the .bin file"
 }

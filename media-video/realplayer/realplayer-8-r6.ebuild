@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.14 2005/01/20 21:20:55 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.15 2005/07/09 18:19:33 swegener Exp $
 
 inherit nsplugins
 
@@ -52,10 +52,10 @@ pkg_setup() {
 		eerror "http://forms.real.com/real/player/unix/unix.html"
 		eerror "And download the appropriate realplayer binary installer"
 		eerror "for this architecture: ${ARCH}"
-		use x86 && \
+		eerror
 		eerror "Please note, do NOT download the rpm.  Just the .bin file"
 		eerror "Named Linux 2.x (libc6 i386)"
-		eerror ""
+		eerror
 		eerror "Download ${MY_A} and place it in ${DISTDIR}"
 		eerror "Then emerge this package again"
 
