@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6d-r1.ebuild,v 1.5 2005/05/28 16:33:08 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6d-r1.ebuild,v 1.6 2005/07/09 18:35:31 swegener Exp $
 
 DESCRIPTION="Cactid is a poller for Cacti that primarily strives to be as fast
 as possible"
@@ -43,6 +43,6 @@ pkg_postinst() {
 	einfo "Please see cacti's site for installation instructions."
 	einfo "Theres no need to change the crontab for this, just"
 	einfo "read the	instructions on how to implement it"
-	einfo ""
+	einfo
 	einfo "http://cacti.net/cactid_install.php"
 }

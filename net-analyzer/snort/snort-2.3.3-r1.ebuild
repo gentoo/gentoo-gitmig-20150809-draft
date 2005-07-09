@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.3 2005/06/27 07:31:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.4 2005/07/09 18:37:22 swegener Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -131,13 +131,13 @@ pkg_postinst() {
 		einfo "To use a database as a backend for snort you will have to"
 		einfo "import the correct tables to the database."
 		einfo "You will have to setup a database called snort first."
-		einfo ""
+		einfo
 		use mysql && \
 			einfo "  MySQL: zcat /usr/share/doc/${PF}/schemas/create_mysql.gz | mysql -p snort"
 		use postgres && \
 			einfo "  PostgreSQL: import /usr/share/doc/${PF}/schemas/create_postgresql.gz"
 		use odbc && einfo "SQL tables need to be created - look at /usr/share/doc/${PF}/schemas/"
-		einfo ""
+		einfo
 		einfo "Also, read the following Gentoo forums article:"
 		einfo '   http://forums.gentoo.org/viewtopic.php?t=78718'
 		ewarn "Rules are now installed in /etc/snort/rules"

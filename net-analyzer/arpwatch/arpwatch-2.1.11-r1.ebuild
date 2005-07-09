@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.14 2005/05/01 17:09:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.15 2005/07/09 18:30:36 swegener Exp $
 
 MY_P=arpwatch-2.1a11
 S=${WORKDIR}/$MY_P
@@ -62,5 +62,5 @@ src_install () {
 }
 pkg_postinst() {
 	ewarn "NOTE: if you want to run arpwatch on boot then execute"
-	ewarn "      rc-update add arpwatch default                  "
+	ewarn "      rc-update add arpwatch default"
 }

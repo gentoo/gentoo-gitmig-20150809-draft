@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.12 2005/03/01 09:21:44 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.13 2005/07/09 18:38:09 swegener Exp $
 
 inherit eutils
 
@@ -61,9 +61,9 @@ src_compile() {
 
 		has_version ">=sys-apps/portage-2.0.50" && (
 			einfo "You can add -"
-			echo ""
+			echo
 			einfo "net-analyzer/nagios-core [use flags]"
-			echo ""
+			echo
 			einfo "to /etc/portage/package.use to permanently set this package's USE flags"
 			einfo "More info on package.use is available on:"
 			einfo "	    man 5 portage"

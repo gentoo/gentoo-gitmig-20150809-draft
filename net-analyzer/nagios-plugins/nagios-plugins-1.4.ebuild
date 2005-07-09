@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.ebuild,v 1.6 2005/05/04 15:14:00 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.ebuild,v 1.7 2005/07/09 18:26:27 swegener Exp $
 
 inherit eutils
 
@@ -98,7 +98,7 @@ pkg_postinst() {
 	einfo "This ebuild has a number of USE flags which determines what nagios isable to monitor."
 	einfo "Depending on what you want to monitor with nagios, some or all of these USE"
 	einfo "flags need to be set for nagios to function correctly."
-	echo ""
+	echo
 	einfo "contrib plugins are installed into /usr/nagios/libexec/contrib"
 }
 
