@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/xmille-2.0-r1.ebuild,v 1.6 2005/05/14 21:57:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/xmille-2.0-r1.ebuild,v 1.7 2005/07/09 16:10:03 swegener Exp $
 
 inherit eutils games
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="virtual/x11"
 
-S="${WORKDIR}/${PN}-${PV}.orig"
+S="${WORKDIR}/${P}.orig"
 
 src_unpack() {
 	unpack ${A}
