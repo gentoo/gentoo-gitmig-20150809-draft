@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e8b482cc6e0f54df0d61ba7885a1e3ad kpogre-1.3.2.ebuild 504
 MD5 903172786ee1686684080afdd057c97a ChangeLog 1916
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 381d855feb75056ae2fc706b854924fe kpogre-1.2.7.ebuild 595
+MD5 19b82f1e823b611e98ffe041ac3f0f9b kpogre-1.2.7.ebuild 601
 MD5 57966fc64a4af84bff0af04cbff4dc1e kpogre-1.3.5.ebuild 519
 MD5 bf3cec4a37625413c32cd0f77ace3e32 files/digest-kpogre-1.2.7 65
 MD5 ecfbd891d7aead5b40113c68fc729065 files/digest-kpogre-1.3.2 65
 MD5 edbd69435d270ab7e635ed391c1c470a files/digest-kpogre-1.3.5 65
 MD5 da5fc11e4cea8dd8e3100c840a3d9759 files/kpogre-1.2.7-configure-arts.patch 3567
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/AYBXaUFmZvwyMRAs2LAJ9JJOeGhx5NCjRl1l5goHLo6NjYBACeIkZ6
+DVJkoU+vWNf+EYUX9JTufQU=
+=C2ec
+-----END PGP SIGNATURE-----

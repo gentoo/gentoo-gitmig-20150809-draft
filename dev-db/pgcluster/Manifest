@@ -1,5 +1,5 @@
-MD5 df6aafac9d50a2035d5bdd35348ac4cc pgcluster-1.3.0c.ebuild 7826
-MD5 313970999e36876e3a3a16d768f3795c pgcluster-1.3.0b.ebuild 7826
+MD5 eb8af17a3439f887cf6bc8683f04bbec pgcluster-1.3.0c.ebuild 7832
+MD5 00f032b5b1846d35979b7fb47a8b827a pgcluster-1.3.0b.ebuild 7832
 MD5 2e887b575c21c6e15baeb53b67868ba8 ChangeLog 916
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 7f906690e9022c2c88c1e0165c5a66b5 files/pglb.conf-1.3.0b 49
