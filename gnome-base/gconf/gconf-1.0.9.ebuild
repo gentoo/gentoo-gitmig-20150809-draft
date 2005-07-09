@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.17 2005/06/12 21:30:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.18 2005/07/09 15:58:38 swegener Exp $
 
 inherit libtool gnome.org eutils gnuconfig
 
 MY_PN=GConf
 MY_P=${MY_PN}-${PV}
 PVP=(${PV//[-\._]/ })
-S=${WORKDIR}/GConf-${PV}
 
 S=${WORKDIR}/${MY_P}
 
