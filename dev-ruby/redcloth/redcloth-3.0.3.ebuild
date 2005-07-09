@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-3.0.3.ebuild,v 1.2 2005/03/31 00:45:49 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-3.0.3.ebuild,v 1.3 2005/07/09 18:15:21 swegener Exp $
 
 inherit ruby gems
 
@@ -26,9 +26,9 @@ pkg_postinst() {
 	einfo "No packages in portage required ${PN}, so you won't be affected unless"
 	einfo "you have written ruby code which requires ${PN}. In that case you'll need"
 	einfo "to add this:"
-	einfo " "
+	einfo
 	einfo "require 'rubygems'"
-	einfo " "
+	einfo
 	einfo "before:"
 	einfo "require '${PN}'"
 }
