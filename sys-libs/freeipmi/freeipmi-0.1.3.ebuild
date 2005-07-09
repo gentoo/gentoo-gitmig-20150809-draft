@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.1.3.ebuild,v 1.5 2005/05/24 14:24:28 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.1.3.ebuild,v 1.6 2005/07/09 20:27:32 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.californiadigital.com/pub/freeipmi/download/${PV}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 RDEPEND="virtual/libc
 		dev-util/guile"
 DEPEND="${RDEPEND}
