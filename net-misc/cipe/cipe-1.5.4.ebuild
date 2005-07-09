@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/cipe-1.5.4.ebuild,v 1.5 2004/07/15 02:42:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cipe/cipe-1.5.4.ebuild,v 1.6 2005/07/09 18:07:50 swegener Exp $
 
 inherit eutils
 
@@ -73,6 +73,6 @@ pkg_postinst() {
 	update-modules
 	depmod -a
 
-	echo  " "
+	echo
 	einfo "For info on configuring cipe, do 'info cipe'"
 }

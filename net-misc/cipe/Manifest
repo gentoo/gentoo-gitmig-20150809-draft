@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 3caa49356242e80fb5b87d674ecfd6cd ChangeLog 744
-MD5 1339f24aa81aaed681c3114c03628550 cipe-1.5.4.ebuild 1656
-MD5 a8f64fc69346292f297dba6b2d575346 metadata.xml 332
+MD5 43cf9c9ae91e0437f54fa3cf22361eb2 cipe-1.5.4.ebuild 1651
 MD5 5b2673b980666a233f3b15dd3ce3e886 files/cipe-1.5.4-gentoo.patch 4391
 MD5 b476a9ee4e52c7f58d642bf6ccc503e8 files/digest-cipe-1.5.4 124
 MD5 3606a508beaa02106e20f68ec0d00fb1 files/init.d-ciped 1130
+MD5 a8f64fc69346292f297dba6b2d575346 metadata.xml 332
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBXsm/I1lqEGTUzyQRAjS+AJ0Tj+tPLn2OZObI/xvFWIyT59FGcACcDhA+
-13g9t6c1Btc5pE5+w4GS918=
-=Og8Z
+iD8DBQFC0BKQI1lqEGTUzyQRAlBRAKCE6l11q8WM9E9CqYUF2dsoolK84gCfQjLQ
+v7d0HYBWVL+Al9WS7Gh2ouk=
+=H896
 -----END PGP SIGNATURE-----
