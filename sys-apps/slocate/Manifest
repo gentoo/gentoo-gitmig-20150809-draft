@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 431ab45729807e44eee37bc12e0f892c slocate-2.7-r8.ebuild 2717
 MD5 1711c302c7546e0a7210bce15849fa43 slocate-2.7-r7.ebuild 2323
@@ -6,3 +9,10 @@ MD5 4109d0757229d079e30f8ea33b676f00 files/digest-slocate-2.7-r8 211
 MD5 4109d0757229d079e30f8ea33b676f00 files/digest-slocate-2.7-r7 211
 MD5 6cd691d75d501eb87ed12cf31c1e1ff6 files/slocate-2.7-bounds.patch 305
 MD5 828e58f63c83167893cfc190f94f8ba3 files/updatedb.conf 470
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0FLxgIKl8Uu19MoRAsxwAJ9157RhrTnAQsQTPj0YeCmYmBxlCwCcCXr3
+nfaJ9pPMucc8brAMKctzho0=
+=NQvy
+-----END PGP SIGNATURE-----
