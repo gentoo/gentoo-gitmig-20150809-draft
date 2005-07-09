@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.4 2005/07/08 01:48:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.5 2005/07/09 02:30:33 j4rg0n Exp $
+
+inherit eutils
 
 IUSE="gpm zlib ssl ipv6 X lua guile"
 
@@ -13,7 +15,7 @@ SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~amd64 ~alpha ~ppc64 ~mips"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc-macos ~ppc64 sparc x86"
 
 DEPEND="virtual/libc
 	>=app-arch/bzip2-1.0.2
@@ -37,6 +39,7 @@ src_unpack() {
 		-e 's:CONFIG_LEDS=.*:CONFIG_LEDS=yes:' \
 		-e 's:CONFIG_HTML_HIGHLIGHT=.*:CONFIG_HTML_HIGHLIGHT=yes:' \
 		${S}/features.conf
+	use ppc-macos && epatch ${FILESDIR}/${PN}-osx-configure.diff
 }
 
 src_compile() {
@@ -71,6 +74,13 @@ src_install() {
 	insinto /usr/share/doc/${PF}/contrib/lua ; doins contrib/lua/{*.lua,elinks-remote}
 	insinto /usr/share/doc/${PF}/contrib/conv ; doins contrib/conv/*.*
 	insinto /usr/share/doc/${PF}/contrib/guile ; doins contrib/guile/*.scm
+
+	# Remove some conflicting files on OSX.  The files provided by OSX 10.4
+	# are more or less the same.  -- Fabian Groffen (2005-06-30)
+	if use ppc-macos; then
+		rm -f ${D}/usr/lib/charset.alias
+		rm -f ${D}/usr/share/locale/locale.alias
+	fi
 }
 
 # disable it as the only test available is interactive..

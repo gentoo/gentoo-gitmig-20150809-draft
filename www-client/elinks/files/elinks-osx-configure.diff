@@ -1,0 +1,37 @@
+--- elinks-0.10.5/configure.orig	2005-07-02 17:36:19.000000000 +0200
++++ elinks-0.10.5/configure	2005-07-02 20:22:55.000000000 +0200
+@@ -3439,32 +3439,7 @@
+ 	echo "$ac_t""$HAVE_VARIADIC_MACROS" 1>&6
+ 
+ 
+-echo $ac_n "checking for -rdynamic""... $ac_c" 1>&6
+-echo "configure:3444: checking for -rdynamic" >&5
+-LDFLAGS_X="$LDFLAGS"
+-LDFLAGS="$LDFLAGS -rdynamic"
+-cat > conftest.$ac_ext <<EOF
+-#line 3448 "configure"
+-#include "confdefs.h"
+-
+-int main() {
+-
+-; return 0; }
+-EOF
+-if { (eval echo configure:3455: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  rm -rf conftest*
+-  have_rdynamic=yes
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  have_rdynamic=no
+-fi
+-rm -f conftest*
+-test "$have_rdynamic" = no && LDFLAGS="$LDFLAGS_X"
+-echo "$ac_t""$have_rdynamic" 1>&6
+-
+-
++LDFLAGS="$LDFLAGS -Xlinker -m"
+ 
+ 	
+ 	HAVE_REGEX_H=yes;
+
