@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 62473ccad06f3a846cf68a0119a9016f ant-1.6.2-r6.ebuild 481
-MD5 cc195cf74511c731065069acf1ae927a ant-1.6.5.ebuild 480
-MD5 9056a18b187ed9246f1f5d71f1281db0 ChangeLog 1392
+MD5 2d8b443eca0c65119bfaad860773badd ant-1.6.2-r6.ebuild 497
+MD5 4d47c0e1192baed1e42418ed166af1eb ant-1.6.5.ebuild 499
+MD5 a6e5daabb876bd8ce0d45b7ef6a91bc9 ChangeLog 1518
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 939920bc04ad72a7b53d8cd13dc1bf3a ant-1.5.4-r2.ebuild 448
+MD5 4f208fb54675e4e2f1b440f17cee7140 ant-1.5.4-r2.ebuild 463
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ant-1.6.5 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ant-1.5.4-r2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ant-1.6.2-r6 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCnzLT/rLF9B432nYRAim8AKCfRcz19h7OBIDjZqA4LxBX0jgBEwCgyoOv
-3401c3+OJC8IJY+TUkzHngw=
-=5PAp
+iD8DBQFCz9P2/rLF9B432nYRAhFkAKCfSecV2CbFFxfl4rFKgVLtJclrmgCfVvKR
+XHpufy74NnmJ7naJxBing5Q=
+=QSrP
 -----END PGP SIGNATURE-----
