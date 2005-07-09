@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.4-r1.ebuild,v 1.9 2005/05/25 04:08:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.4-r1.ebuild,v 1.10 2005/07/09 15:31:33 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -81,7 +81,7 @@ src_compile() {
 		|| die
 
 	# gtk+ isn't multithread friendly due to some obscure code generation bug
-	MAKEOPTS="${MAKEOPTS} -j1" emake || die
+	emake -j1 || die
 
 }
 
