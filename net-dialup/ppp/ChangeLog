@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.115 2005/07/05 18:55:36 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.116 2005/07/09 05:12:12 josejx Exp $
+
+  09 Jul 2005; Joseph Jezak <josejx@gentoo.org> ppp-2.4.2-r12.ebuild:
+  Marked ppc stable.
 
   05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> ppp-2.4.2-r12.ebuild:
   Stable on hppa.
