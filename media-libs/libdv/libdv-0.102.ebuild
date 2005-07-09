@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.102.ebuild,v 1.11 2005/05/07 10:18:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.102.ebuild,v 1.12 2005/07/09 01:29:58 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://libdv.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha ~hppa ia64 ~mips ppc64"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="debug gtk sdl xv"
 
 RDEPEND="dev-libs/popt
