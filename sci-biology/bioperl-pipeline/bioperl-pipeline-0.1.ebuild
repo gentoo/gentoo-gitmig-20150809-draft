@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.3 2005/01/03 05:00:48 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.4 2005/07/09 17:59:22 swegener Exp $
 
 inherit perl-module
 CATEGORY="sci-biology"
@@ -35,10 +35,10 @@ src_compile() {
 	perl-module_src_compile || die "compile failed"
 	# make test
 	##	perl-module_src_test || die "src test failed"
-	ewarn " "
+	ewarn
 	ewarn "Tests skipped since they will fail unless"
 	ewarn "mysql root user has no password"
-	ewarn " "
+	ewarn
 }
 
 src_install() {
@@ -64,10 +64,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo " "
-	einfo "You will need to modify Bio/Pipeline/PipeConf.pm "
+	einfo
+	einfo "You will need to modify Bio/Pipeline/PipeConf.pm"
 	einfo "with mysql user and batch job software information"
-	einfo "Read the docs in /usr/share/docs/${PF} "
+	einfo "Read the docs in /usr/share/docs/${PF}"
 	einfo "for more information"
-	einfo " "
+	einfo
 }

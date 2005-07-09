@@ -1,4 +1,14 @@
-MD5 40ff6de039a58694e41e988a5112f22d bioperl-pipeline-0.1.ebuild 1970
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9bee4a0cf8708aa085e97041cad97c0 ChangeLog 923
-MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
+MD5 f755ccf3a0a86a53d62f15ea09ce86ff bioperl-pipeline-0.1.ebuild 1952
 MD5 cea8881ae00a651493915c7732732233 files/digest-bioperl-pipeline-0.1 72
+MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0BCVI1lqEGTUzyQRAm3qAKCMSX/kxD+y4k6//L5kBNlhvM+EIQCfQ/F2
+pGfKCyfZRM1S5HE6iygGj0s=
+=P+P5
+-----END PGP SIGNATURE-----
