@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r1.ebuild,v 1.2 2005/04/02 21:51:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r1.ebuild,v 1.3 2005/07/09 16:12:20 swegener Exp $
 
 inherit java-pkg
 
@@ -41,7 +41,7 @@ src_install () {
 	if use j2ee ; then
 		java-pkg_dojar bin/${PN}-J2EE-${PV}.jar
 	else
-		java-pkg_dojar bin/${PN}-${PV}.jar
+		java-pkg_dojar bin/${P}.jar
 	fi
 	dodoc LICENSE NOTICE README.txt
 	use doc && java-pkg_dohtml -r docs/*
