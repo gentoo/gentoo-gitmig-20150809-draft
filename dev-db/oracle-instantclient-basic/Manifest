@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 995e952bfa9cfcef1cc47256ac3b3e4f ChangeLog 1682
 MD5 8531dff3174726242a9e9de77be6b595 files/digest-oracle-instantclient-basic-10.1.0.2_p1 93
 MD5 8531dff3174726242a9e9de77be6b595 files/digest-oracle-instantclient-basic-10.1.0.2_p1-r1 93
@@ -8,3 +11,10 @@ MD5 203d67d121be57d7114503d35119cdca oracle-instantclient-basic-10.1.0.2_p1-r1.e
 MD5 ec0dd84ca69c522cdd056f7366f33f36 oracle-instantclient-basic-10.1.0.2_p1.ebuild 1388
 MD5 10adce8ab331bfc635e617f48c2a2d51 oracle-instantclient-basic-10.1.0.3.ebuild 2846
 MD5 fc3c0d69aee8404857f1d8029667c02f oracle-instantclient-basic-10.1.0.4.ebuild 2538
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0CogI1lqEGTUzyQRAt/4AJ4zimtXm6PuiKWUtg9MdWIN7s65xACgxu5Z
+ZVVHTemDD9m1xJfAUXn5ouc=
+=nA0Y
+-----END PGP SIGNATURE-----
