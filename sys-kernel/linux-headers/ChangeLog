@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.135 2005/07/06 05:51:07 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.136 2005/07/09 02:03:50 plasmaroo Exp $
+
+  09 Jul 2005; <plasmaroo@gentoo.org> linux-headers-2.6.11-r2.ebuild,
+  linux-headers-2.6.8.1-r4.ebuild:
+  Fix <spinlock.h> issues on PPC64/PPC multilib.
 
   06 Jul 2005; Daniel Ostrow <dostrow@gentoo.org>
   linux-headers-2.6.8.1-r4.ebuild, linux-headers-2.6.11-r2.ebuild:
