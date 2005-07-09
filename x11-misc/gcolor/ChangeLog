@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gcolor
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor/ChangeLog,v 1.7 2004/08/30 19:41:39 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor/ChangeLog,v 1.8 2005/07/09 07:05:04 smithj Exp $
+
+  09 Jul 2005; Jonathan Smith <smithj@gentoo.org> gcolor-0.4.ebuild:
+  stable amd64
 
   30 Aug 2004; Tom Martin <slarti@gentoo.org> gcolor-0.4.ebuild:
   Marked ~amd64.
