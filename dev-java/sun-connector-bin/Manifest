@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b575e1876464919007fc2ddcd8937ef2 ChangeLog 595
 MD5 65fd76ef59661394b6d2a439b85e5754 files/digest-sun-connector-bin-1.5 82
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 7c1eb70c7fb64396c3830628c1c53ea4 sun-connector-bin-1.5.ebuild 1703
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/yGI1lqEGTUzyQRAi+pAJ9nOBuDyxU3mr68MaeqU/dObJec8gCeJffG
+2zIFKfKZ3Uqm53dgyXsqf7Q=
+=do5Y
+-----END PGP SIGNATURE-----
