@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.13 2005/05/25 21:23:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.14 2005/07/09 19:55:11 weeve Exp $
+
+  09 Jul 2005; Jason Wever <weeve@gentoo.org> korundum-3.4.1.ebuild:
+  Added ~sparc keyword.
 
 *korundum-3.4.1 (25 May 2005)
 

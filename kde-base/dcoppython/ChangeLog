@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.10 2005/05/25 21:23:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.11 2005/07/09 19:55:52 weeve Exp $
+
+  09 Jul 2005; Jason Wever <weeve@gentoo.org> dcoppython-3.4.1.ebuild:
+  Added ~sparc keyword.
 
 *dcoppython-3.4.1 (25 May 2005)
 
