@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 3e3acb67aabdc0e08e2ceff310fa27cf ChangeLog 1052
-MD5 e195d07dd8c771cb3816ab6cece1510e metadata.xml 464
-MD5 85cbb558c2309d1f7a4087fc96b04824 pugs-6.0.11.ebuild 605
-MD5 7cdd9542983a225103d264fe60593d85 pugs-6.2.3.ebuild 619
 MD5 9b22fae8c9c831a52de40862635a0763 files/digest-pugs-6.0.11 69
 MD5 d5e4dbe7341fe4043de32ec0fca783bd files/digest-pugs-6.2.3 68
+MD5 e195d07dd8c771cb3816ab6cece1510e metadata.xml 464
+MD5 07a195c0bdadd7b5d9da0dd456e48282 pugs-6.0.11.ebuild 582
+MD5 7ace74efbc137da8fa877331841c76a5 pugs-6.2.3.ebuild 596
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCi7G/tG5z4I8BtQoRAmfTAJ4tuRci5DstyKeapZ9V15W5yS3R/QCaAjfF
-IXX0Op7xWfg8dSnf94qGVGU=
-=b1ie
+iD8DBQFCz/TyI1lqEGTUzyQRAoq7AJ4hx/adWxQSlWFYQBwmFY7vcGmirwCgzaP2
+t/11AXV61Ijj9nQqlrf5lvI=
+=AVsn
 -----END PGP SIGNATURE-----
