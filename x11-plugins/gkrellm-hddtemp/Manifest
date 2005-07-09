@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 854c5e4821a6c6a55362ff2c0da6154c gkrellm-hddtemp-0.1.ebuild 1022
-MD5 b6fce466ac7ddaa9f5decddf3ced21e8 gkrellm-hddtemp-0.2_beta.ebuild 1580
 MD5 f5b90fb4bc28443ed5dd238d6dcf9c76 ChangeLog 2398
 MD5 a9f57bac01537cef132c947c68eb3977 files/digest-gkrellm-hddtemp-0.1 69
 MD5 d3cc852ee5cbc0155681cecb5e3afa65 files/digest-gkrellm-hddtemp-0.2_beta 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCb/u52G5bA0cA/ScRAqohAKCX2Y25cn2YtoQLm4QLCR09MJpKpgCggHTk
-IuOg6nntxe2ZwxTNQLM8pPc=
-=lJm/
------END PGP SIGNATURE-----
+MD5 183eb23a7000b353665294228d7d8e93 gkrellm-hddtemp-0.1.ebuild 1019
+MD5 616143fc9e28d7fa3e3c1b800a92e509 gkrellm-hddtemp-0.2_beta.ebuild 1580
