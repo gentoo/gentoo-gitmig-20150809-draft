@@ -1,4 +1,14 @@
-MD5 659c7631d700a32037cf741f2d569bea config_confd-0.0.2.ebuild 668
-MD5 8a487db2af4fee760b23e1ac102047b0 metadata.xml 240
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5020d9e4c7bd0d8d252533fd6bcafc40 ChangeLog 335
+MD5 b783428a42b0e0332c719d417220324c config_confd-0.0.2.ebuild 618
 MD5 8bbf6622f1569929dacf660784bd9ec3 files/digest-config_confd-0.0.2 69
+MD5 8a487db2af4fee760b23e1ac102047b0 metadata.xml 240
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0ENMI1lqEGTUzyQRAmgrAJ9Q1YCJYuJgNd7skLIIpGZ1rZlaIwCg1kNt
+wQ8BbSEf19oH5KVGXt3mPtw=
+=Tkno
+-----END PGP SIGNATURE-----
