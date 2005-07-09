@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 f530e34da568a3a03171e4ce4fdc6613 ChangeLog 6136
-MD5 b418a028a7b4696efb082b3fd684a87e xfce4-mixer-4.2.1.ebuild 488
-MD5 aa7f46bbc01dcf57289b876bb499baaf xfce4-mixer-4.2.2.ebuild 483
+MD5 d7ed1a937a6180209b31e6c14239c1a1 xfce4-mixer-4.2.2.ebuild 480
 MD5 cfbbc04e8619d62785adea5e2f0b9436 xfce4-mixer-4.0.6.ebuild 905
 MD5 ce28a7934ad578d4db8e345c45ed690e xfce4-mixer-4.2.0.ebuild 487
-MD5 2d86e2f0849e0f4d12d8f67113b15a30 files/digest-xfce4-mixer-4.2.1 69
+MD5 b418a028a7b4696efb082b3fd684a87e xfce4-mixer-4.2.1.ebuild 488
+MD5 f530e34da568a3a03171e4ce4fdc6613 ChangeLog 6136
 MD5 853ed031d35e53c619d8bc437fde21d0 files/digest-xfce4-mixer-4.0.6 69
+MD5 2d86e2f0849e0f4d12d8f67113b15a30 files/digest-xfce4-mixer-4.2.1 69
 MD5 59cce41ce2bd2a76d432307069e945c1 files/digest-xfce4-mixer-4.2.2 69
 MD5 f32bac4edcf73b43bd142fbe9a66045c files/digest-xfce4-mixer-4.2.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCzrkaKRy60XGEcJIRAhzYAJ41rOmQmbT6OOZtNRJ8W6tiCnKEMwCfb87x
-ZcBgkS2/2axMdlujREKtJ7A=
-=3/Or
------END PGP SIGNATURE-----

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 c69cff2c7821e58718ff121dc5a5ea8f xfce4-appfinder-4.2.2.ebuild 403
-MD5 a21173dc8cfdee45d47ff15bbcbf6f58 xfce4-appfinder-4.2.1.ebuild 404
-MD5 e327c4bd5692ad001ee33d53d47312fd ChangeLog 2490
 MD5 327b69989ecb09b4693fdd5ae9d0f301 xfce4-appfinder-4.2.0.ebuild 407
+MD5 a21173dc8cfdee45d47ff15bbcbf6f58 xfce4-appfinder-4.2.1.ebuild 404
+MD5 ecacbef8df44f59ea54a581ec2a1f7f2 xfce4-appfinder-4.2.2.ebuild 400
+MD5 e327c4bd5692ad001ee33d53d47312fd ChangeLog 2490
 MD5 d7d11e06640cff428e402ceac7f7a9fe files/digest-xfce4-appfinder-4.2.0 74
-MD5 2b2b57f0a3081b3994ca2a75b18bda75 files/digest-xfce4-appfinder-4.2.1 73
 MD5 40caedb5905dd010d04ffcbb0c4f9073 files/digest-xfce4-appfinder-4.2.2 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCzrsYKRy60XGEcJIRAiyTAJsHL86jRl+FnYG6HQQRsCJ+6ImYkgCfV/OZ
-F8PmiSkFZHKqllaAZsMV3kQ=
-=qObp
------END PGP SIGNATURE-----
+MD5 2b2b57f0a3081b3994ca2a75b18bda75 files/digest-xfce4-appfinder-4.2.1 73
