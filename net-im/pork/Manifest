@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2f96e1e9984a89e70250a7a98a8884db ChangeLog 3772
 MD5 b3fa6e0066ac61156a89da8ac6f2f51a pork-0.99.7.ebuild 988
+MD5 3ce93f9d9287279e3cda265940d08100 ChangeLog 3864
+MD5 9e5529b0233167d748d680b7bcd0d64c pork-0.99.8.1.ebuild 988
 MD5 01d933d85d8f282b16e5390ecf2380be metadata.xml 321
-MD5 de31b71682846f6bf4c60d2fb8f0f1af pork-0.99.8.1.ebuild 989
-MD5 47d5b5f21b2d264a13cd4b4198a45391 files/digest-pork-0.99.7 63
 MD5 6c14a8f6820250a5ce7a79dc84c5e102 files/digest-pork-0.99.8.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzxo2l5AvwDPiUowRAh1lAJ0b00k38T9vn/2YtGY6hmav5SPvDQCeJjdO
-P9yj3fVWPX72BY/TKqqTqK0=
-=XM/Q
------END PGP SIGNATURE-----
+MD5 47d5b5f21b2d264a13cd4b4198a45391 files/digest-pork-0.99.7 63
