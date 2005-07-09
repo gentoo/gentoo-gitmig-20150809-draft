@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/unsermake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.12 2005/06/29 14:53:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.13 2005/07/09 22:56:58 weeve Exp $
+
+  09 Jul 2005; Jason Wever <weeve@gentoo.org> unsermake-0.3.1.4319.0.ebuild:
+  Added ~sparc keyword.
 
 *unsermake-0.4.20050628-r1 (29 Jun 2005)
 
