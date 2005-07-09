@@ -3,6 +3,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>cybersystem@gentoo.org</email>
+<email>smithj@gentoo.org</email>
+
+<!-- smithj is only a TEMPORARY MAINTAINER until a more appropiate herd can take
+over... i'm looking at you, sci herd -->
+
 </maintainer>
 </pkgmetadata>
