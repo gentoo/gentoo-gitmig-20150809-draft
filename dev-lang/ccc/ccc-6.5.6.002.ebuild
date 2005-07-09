@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.6.002.ebuild,v 1.4 2004/07/02 04:24:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.6.002.ebuild,v 1.5 2005/07/09 18:11:31 swegener Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -38,13 +38,13 @@ src_unpack() {
 	local ccc_rpm="ccc-${ccc_release}.alpha.rpm"
 
 	if [ ! -f ${DISTDIR}/${ccc_rpm} ]; then
-		eerror ""
+		eerror
 		eerror "Please download ${ccc_rpm} from"
 		eerror "${HOMEPAGE}, and place it in"
 		eerror "${DISTDIR}"
-		eerror ""
+		eerror
 		eerror "Then restart this emerge."
-		eerror ""
+		eerror
 		die "ccc distribution (${ccc_rpm}) not found"
 	fi
 
@@ -151,13 +151,13 @@ pkg_postinst () {
 	ewarn "to complete the installation"
 	ewarn
 	einfo "Hopefullly soon we will get a ccc USE flag"
-	einfo "on packages (or at least individual       "
+	einfo "on packages (or at least individual"
 	einfo "components) that can be successfully built"
-	einfo "using this compiler, until then you will  "
-	einfo "just have to experiment :)                "
+	einfo "using this compiler, until then you will"
+	einfo "just have to experiment :)"
 	einfo
-	einfo "Please report successes/failures with ccc "
-	einfo "to http://bugs.gentoo.org so that the USE "
-	einfo "flags can be updated.                     "
+	einfo "Please report successes/failures with ccc"
+	einfo "to http://bugs.gentoo.org so that the USE"
+	einfo "flags can be updated."
 	einfo
 }

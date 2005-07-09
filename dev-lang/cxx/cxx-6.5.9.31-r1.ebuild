@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.8 2004/07/02 04:25:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.9 2005/07/09 18:12:36 swegener Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -45,7 +45,7 @@ src_unpack() {
 	local cxx_rpm="cxx-${cxx_release}.alpha.rpm"
 
 	if [ -z ${CXX_LICENSE_KEY} ]; then
-		eerror ""
+		eerror
 		eerror "You have not set the environment variable"
 		eerror "\$CXX_LICENSE_KEY, this should be set to"
 		eerror "the password you were sent when you applied"
@@ -53,7 +53,7 @@ src_unpack() {
 		eerror "license."
 		eerror "If you do not have a license key, apply for one"
 		eerror "here ${ee_license_reg}"
-		eerror ""
+		eerror
 		die "no license key in \$CXX_LICENSE_KEY"
 	fi
 
@@ -172,13 +172,13 @@ pkg_postinst () {
 	ewarn "to complete the installation"
 	ewarn
 	einfo "Hopefullly soon we will get a ccc USE flag"
-	einfo "on packages (or at least individual       "
+	einfo "on packages (or at least individual"
 	einfo "components) that can be successfully built"
-	einfo "using this compiler, until then you will  "
-	einfo "just have to experiment :)                "
+	einfo "using this compiler, until then you will"
+	einfo "just have to experiment :)"
 	einfo
-	einfo "Please report successes/failures with cxx "
-	einfo "to http://bugs.gentoo.org so that the USE "
-	einfo "flags can be updated.                     "
+	einfo "Please report successes/failures with cxx"
+	einfo "to http://bugs.gentoo.org so that the USE"
+	einfo "flags can be updated."
 	einfo
 }
