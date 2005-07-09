@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-1.1.ebuild,v 1.4 2005/07/01 10:40:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-1.1.ebuild,v 1.5 2005/07/09 18:01:19 swegener Exp $
 
 inherit gnome2
 
@@ -43,13 +43,13 @@ G2CONF="${G2CONF} --disable-gmail"
 # G2CONF="${G2CONF} $(use_enable gmail)"
 
 pkg_postinst() {
-	ewarn " "
+	ewarn
 	ewarn "Due to a bug in bonobo-activation, your GNOME/X11 session must"
 	ewarn "be restarted for mail-notification to work. If you don't do"
 	ewarn "this, this program will crash during the setup phase."
 	ewarn "See http://bugzilla.gnome.org/show_bug.cgi?id=151082"
-	ewarn " "
+	ewarn
 	ewarn "Support for gmail does not seem to be functioning. Check back for"
 	ewarn "gmail support in future releases."
-	ewarn " "
+	ewarn
 }
