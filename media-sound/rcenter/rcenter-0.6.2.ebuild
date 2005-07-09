@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/rcenter-0.6.2.ebuild,v 1.10 2004/11/23 05:59:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/rcenter-0.6.2.ebuild,v 1.11 2005/07/09 16:29:58 swegener Exp $
 
 IUSE=""
 
@@ -30,7 +30,7 @@ src_install() {
 pkg_postinst() {
 	einfo "Rcenter Installed  - However You need to setup the scripts"
 	einfo "for making remote control commands actually work"
-	einfo " "
+	einfo
 	einfo "The Skel scripts can be copied from /usr/share/rcenter/config to <user>/.rcenter"
 	einfo "Where <user> is a person who will use rcenter"
 	einfo "Remeber to use emu-config -i to turn on the remote"
