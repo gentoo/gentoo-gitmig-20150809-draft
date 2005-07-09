@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.15 2005/07/01 23:32:38 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.16 2005/07/09 12:34:13 greg_g Exp $
+
+*kdebase-pam-6 (09 Jul 2005)
+
+  09 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> +files/kde-np.pam-6,
+  +files/kde.pam-6, +kdebase-pam-6.ebuild:
+  Remove references to the pam_console module (#31877).
 
   01 Jul 2005; Hardave Riar <hardave@gentoo.org> kdebase-pam-4.ebuild:
   Stable on mips
