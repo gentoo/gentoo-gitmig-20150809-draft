@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 21bff2ea6b213abc5a22bea3b33127a4 xfce4-iconbox-4.2.2.ebuild 386
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 1e9dbbf03132ef8c5abfbdabe720614d xfce4-iconbox-4.2.1.ebuild 394
@@ -8,3 +11,10 @@ MD5 b3d9957586020c5efecd0607e3491765 files/digest-xfce4-iconbox-4.2.0 72
 MD5 68ea90dcca1e6c0b4b14af49f5232865 files/digest-xfce4-iconbox-4.0.6 71
 MD5 aa53567f90f6508bc2d48db4fdeda41c files/digest-xfce4-iconbox-4.2.2 71
 MD5 5f893748301a580b15184398cf6613bc files/digest-xfce4-iconbox-4.2.1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzymcgIKl8Uu19MoRAm/kAJwIwg7TiVbGZ/56efS46vc4gQbZZwCfTu0e
+oOMAgwL9sec79vw+nKnnqwU=
+=6mdA
+-----END PGP SIGNATURE-----
