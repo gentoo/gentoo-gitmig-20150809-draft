@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/fluxspace-0.0.3.ebuild,v 1.5 2004/11/29 08:21:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxspace/fluxspace-0.0.3.ebuild,v 1.6 2005/07/09 16:30:55 swegener Exp $
 
 IUSE=""
 DESCRIPTION="Enhancements for workspace management within Fluxbox."
@@ -39,14 +39,14 @@ pkg_postinst() {
 	cp -f /tmp/fluxspace.xml /usr/share/fluxspace/examples/fluxspace.xml
 	rm -f /tmp/fluxspace.xml
 
-	einfo " "
+	einfo
 	einfo "  Copy /usr/share/fluxspace/examples/fluxspace.xml to your"
 	einfo "  ~/.fluxbox and edit it!"
 	einfo "  (just to make it work change all the \"no\" to \"yes\")"
-	einfo " "
+	einfo
 	einfo "  In your ~/.fluxbox/init change:"
 	einfo "                       session.screen0.rootCommand:"
 	einfo "  to:"
 	einfo "                       session.screen0.rootCommand:    fluxspace"
-	einfo " "
+	einfo
 }
