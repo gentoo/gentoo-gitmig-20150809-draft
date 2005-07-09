@@ -5,7 +5,7 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 8772a413d333ed84f37599c75e749776 libwnck-2.8.1.ebuild 629
 MD5 5c8fc7c865b134e91d23b93aa761ed65 libwnck-2.8.1-r1.ebuild 827
 MD5 93d7a476b9309f9c0dd20549655ad59b ChangeLog 9503
-MD5 52a952de0e2b969a53869cfad1cf8722 libwnck-2.10.0.ebuild 651
+MD5 ca0acc17876d26d7d74cec50a1851778 libwnck-2.10.0.ebuild 651
 MD5 b7704d9245487126791088a06da548a5 libwnck-2.6.2.1.ebuild 613
 MD5 548c282858e185dd6171be66b720553c files/libwnck-2.4.0.1-pager.patch 2949
 MD5 e38978396ff7cef1114dc8f5d3937c99 files/digest-libwnck-2.8.1-r1 66
@@ -16,7 +16,7 @@ MD5 18b803208062c76b65f948628222f371 files/libwnck-2.8-multimon-tasklist.patch 3
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzKP+gIKl8Uu19MoRAj3uAJ0RBzcDFpsjBXY4/yZRoUv4EwHUzwCdHoCf
-rWeaNa5OKifvBg+nwOIUD44=
-=Nfht
+iD8DBQFCzyZHgIKl8Uu19MoRAmU1AJsEJhnvVrw90Tlq+D9jY2PO+8fQkACfT11D
+A8rb+8UQy5dOvExRbJtKsyo=
+=lJB4
 -----END PGP SIGNATURE-----
