@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4171 2005/07/08 15:09:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4172 2005/07/09 00:38:43 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (08 Jul 2005)
+# Probably it's incompatible with previous versions, needs testing
+=media-video/transcode-1.0.0_rc*
 
 # Stefan Schweizer <genstef@gentoo.org> (08 Jul 2005)
 # Masked because of "UnixAppOpenFilePerform() Buffer Overflow", #98101
@@ -369,10 +373,6 @@ www-apps/interchange
 # Masking as it is broken against newer wine versions,
 # and completely abandoned upstream
 dev-dotnet/winelib
-
-# Diego Pettenò <flameeyes@gentoo.org> (27 April 2005)
-# Transcode 1.0.0 is still in beta, masking until final is released.
-=media-video/transcode-1.0.0_beta*
 
 # Marius Mauch <genone@gentoo.org> (26 April 2005)
 # CVS is still broken :( Masking till I'm sure it's fixed.
