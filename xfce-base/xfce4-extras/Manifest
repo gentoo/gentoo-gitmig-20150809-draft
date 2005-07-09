@@ -1,8 +1,18 @@
-MD5 eb849acc0ced6b4be9a480386d97a9b4 xfce4-extras-4.2.0.ebuild 835
-MD5 23dbb1698287f4ebb605de48d3deac8d xfce4-extras-4.2.2.ebuild 840
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4b6d6b311d6e959600383389c9de0dcc xfce4-extras-4.2.1.ebuild 842
-MD5 90e483357530abc8accedcb5dae21bc2 ChangeLog 1397
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 d0955fae01a7625f817f0bcd29451ad3 xfce4-extras-4.2.2.ebuild 841
+MD5 eb849acc0ced6b4be9a480386d97a9b4 xfce4-extras-4.2.0.ebuild 835
+MD5 5def2124deccfa1770a5b092914cbe9b ChangeLog 1501
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-extras-4.2.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-extras-4.2.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-extras-4.2.2 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCzyT5KRy60XGEcJIRAp1PAKCpwW3oEcboqrOBuT+r+5jBoSAzBQCZATIn
+my0kYvFHytN6RX9p1wup5Kg=
+=AABV
+-----END PGP SIGNATURE-----
