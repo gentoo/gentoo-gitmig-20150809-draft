@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r3.ebuild,v 1.5 2005/07/04 22:07:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r3.ebuild,v 1.6 2005/07/09 19:43:19 swegener Exp $
 
 inherit eutils
 
@@ -85,9 +85,9 @@ src_install() {
 	cd ${WORKDIR}/festival/lib/etc/*Linux*
 	dobin audsp
 
-	einfo ""
+	einfo
 	einfo "Please ignore errors about skipped directories. They are harmless."
-	einfo ""
+	einfo
 
 	# Install the main libraries
 	insinto /usr/share/festival
