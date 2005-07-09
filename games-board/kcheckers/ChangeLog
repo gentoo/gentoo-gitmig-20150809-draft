@@ -1,6 +1,11 @@
 # ChangeLog for games-board/kcheckers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.4 2005/07/01 15:02:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.5 2005/07/09 21:26:27 greg_g Exp $
+
+*kcheckers-0.6 (09 Jul 2005)
+
+  09 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> +kcheckers-0.6.ebuild:
+  New version. Remove dependency on kde.
 
   01 Jul 2005; Caleb Tennis <caleb@gentoo.org> kcheckers-0.5.ebuild:
   Fix qmake dir per bug #97535
