@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85.1.ebuild,v 1.6 2005/06/06 06:48:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85.1.ebuild,v 1.7 2005/07/09 18:53:12 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -98,7 +98,7 @@ pkg_postinst() {
 	echo
 	if use milter ; then
 		einfo "For simple instructions howto setup the clamav-milter..."
-		einfo ""
+		einfo
 		einfo "less /usr/share/doc/${PF}/clamav-milter.README.gentoo.gz"
 		echo
 	fi
