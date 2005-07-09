@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ea9c70f12cef1eefb99c0e6554c2945a ChangeLog 2868
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 f301a010cd34b275c4767e00723e84fc Class-MakeMethods-1.009.ebuild 709
-MD5 7e0eea20a4feb795fa43cc2dde635422 Class-MakeMethods-1.01.ebuild 555
+MD5 e54956c5b12566ebc404f3fe60bd61e9 Class-MakeMethods-1.009.ebuild 636
+MD5 1422ea7dbcd1f14ae29f5b58b22c64bc Class-MakeMethods-1.01.ebuild 533
 MD5 71396e578ffcfa6be6464b548159bc0d files/digest-Class-MakeMethods-1.009 75
 MD5 e834273d477412f0495d2c791e053ff5 files/digest-Class-MakeMethods-1.01 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCa8VmtG5z4I8BtQoRAjJJAJ95xJPmfzD1I1Ub5l1jWqIVtGn8UQCeOhZp
-t6FKkGvamzeiD4dwxSONDjc=
-=qgYr
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

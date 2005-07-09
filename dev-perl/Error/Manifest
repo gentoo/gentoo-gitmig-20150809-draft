@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ce7e1916b50e4a38634a6f1b50c854fd ChangeLog 2001
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e1fc1c50a413077d50a8ec9967994f88 Error-0.15-r2.ebuild 548
+MD5 154759e0d8399ba07aa4039c195a95de Error-0.15-r2.ebuild 527
 MD5 0244db9cf7e9fe5fc16acb7229198a43 files/digest-Error-0.15-r2 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcsCJtG5z4I8BtQoRAkqAAJ9PHrROaQf3YLempT/Gz062zI3HfwCghD08
-ELyHnqc9p14AFrvVvBwztrg=
-=D+Ma
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

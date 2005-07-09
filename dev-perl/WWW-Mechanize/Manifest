@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d31a1e32a7bd302d6723e19968db8a85 ChangeLog 2029
-MD5 0d1264e5321571731b89566c1cab242a WWW-Mechanize-1.12.ebuild 673
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 5b8f1c64cd5a27d4d0d03f203423c922 WWW-Mechanize-1.04.ebuild 667
-MD5 ad91c7185810dad044510087b2a90ca4 WWW-Mechanize-1.0301.ebuild 740
-MD5 8de5e0779143e0430d8d83fe9ed5da9b files/digest-WWW-Mechanize-1.04 69
+MD5 43199d91b30f40179e649b27ab2bdc69 WWW-Mechanize-1.0301.ebuild 720
+MD5 c68c92f9e2553aeb7a4dbd0e31d2aa12 WWW-Mechanize-1.04.ebuild 649
+MD5 b03fadd8224a1b2db8de1ee0a8121235 WWW-Mechanize-1.12.ebuild 652
 MD5 5a16ba0cd4057511b5fb8a0249531014 files/digest-WWW-Mechanize-1.0301 72
+MD5 8de5e0779143e0430d8d83fe9ed5da9b files/digest-WWW-Mechanize-1.04 69
 MD5 2fc2c1cd70affa9b5f155bdf45766e4a files/digest-WWW-Mechanize-1.12 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdR6iCHk4+ZoBpvsRAv8bAJ9M+nr+K/aPP+In5hhAfJY2hlW8AACfQH3b
-C4jLd2bbixV+LH97tFPTmjI=
-=cvyp
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

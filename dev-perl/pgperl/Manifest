@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 24c16ae52e27094c3da789c45ba73bc3 ChangeLog 667
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 1746d502baefcbbcfee0ef6f0513044d pgperl-2.0.2.ebuild 651
 MD5 a6f303b9aaf02bad92a68dc73067c67c files/digest-pgperl-2.0.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCm2r4KRy60XGEcJIRAvdwAKCTgJ09LfEjSpqCTIXOt7yU3v1H8ACcDHQA
-MMx1814/+RvIfJNb+E6FIlo=
-=ysCc
------END PGP SIGNATURE-----
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 0b1e7543a3f16836a2a33cdd7a36dae7 pgperl-2.0.2.ebuild 631

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2bbc8e94de067fc0dc41a7ff9d66b8a7 ChangeLog 660
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 082c89ba338f1cabf0ce0d7c1248d35c Mail-IMAPClient-2.2.9.ebuild 826
-MD5 6314086b298bb7c48151fab2e33d3c4d files/digest-Mail-IMAPClient-2.2.9 73
+MD5 00b85b89501e4088e021ddd0989f2889 Mail-IMAPClient-2.2.9.ebuild 794
 MD5 b684a8da1614812836018e6bdf3de8c5 files/2.2.9-skiptest.patch 492
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFB6UY5tG5z4I8BtQoRAgqBAJ9fOEisUtW1gDhhlmfzd2OB5Mc+xwCeO3AO
-FaF2jkU6AQDVjAyl551HsQs=
-=4P0h
------END PGP SIGNATURE-----
+MD5 6314086b298bb7c48151fab2e33d3c4d files/digest-Mail-IMAPClient-2.2.9 73
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305

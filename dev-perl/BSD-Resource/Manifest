@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a0f6e1776ef2c772bd38d1e1587b010 metadata.xml 309
-MD5 5fe2df15b2c4e33efc48b0161a062524 BSD-Resource-1.24.ebuild 661
+MD5 3e8177e0511917dd261c6353ff7d70d2 BSD-Resource-1.24.ebuild 645
 MD5 6e5eafe1456c63eb0bf1957ab9a11b0a ChangeLog 2127
 MD5 7c0143f2a1de9325985efd9311baa470 files/digest-BSD-Resource-1.24 68
 MD5 53281413b2c669afae5d401d892c4693 files/portage_niceness.patch 479
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCa6+atG5z4I8BtQoRAq/qAKCH66DExicYexyEofLShluGvAnU3ACdGFgr
-UlG6U7hDLo64gpZtqfLrp4k=
-=O0Js
------END PGP SIGNATURE-----
+MD5 0a0f6e1776ef2c772bd38d1e1587b010 metadata.xml 309
