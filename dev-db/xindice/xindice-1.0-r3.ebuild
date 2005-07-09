@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r3.ebuild,v 1.2 2005/01/01 17:45:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r3.ebuild,v 1.3 2005/07/09 13:40:08 swegener Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-${PVR}.patch
+	epatch ${FILESDIR}/${PF}.patch
 }
 
 src_compile() {
