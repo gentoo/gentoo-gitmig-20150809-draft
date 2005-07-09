@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r3.ebuild,v 1.15 2005/04/02 18:06:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r3.ebuild,v 1.16 2005/07/09 13:44:15 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,10 +18,15 @@ KEYWORDS="x86 sparc ~ppc hppa ~amd64 ~alpha"
 DEPEND=""
 RDEPEND=">=net-im/jabberd-1.4.3-r3"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
-src_compile() {
 	epatch ${FILESDIR}/jit-patch-00
 	use sparc && epatch ${FILESDIR}/jit-sparc.patch
+}
+
+src_compile() {
 	./configure
 	emake || die
 	cp ${S}/jabberd/jabberd ${S}/jabberd/jit-wpjabber
@@ -44,9 +49,8 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	einfo
-	einfo "Please read /usr/share/doc/${PN}-${PVR}/README.Gentoo.gz"
+	einfo "Please read /usr/share/doc/${PF}/README.Gentoo.gz"
 	einfo "And please notice that now jit-transport comes with a init.d script"
 	einfo "dont forget to add it to your runlevel."
 	einfo
