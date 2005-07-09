@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.4 2005/05/25 15:26:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.5 2005/07/09 17:14:00 swegener Exp $
 
 inherit eutils java-pkg
 
@@ -226,7 +226,7 @@ pkg_postinst() {
 
 	chmod -R 750 /etc/${TOMCAT_NAME}
 
-	einfo " "
+	einfo
 	einfo " NOTICE!"
 	einfo " FILE LOCATIONS:"
 	einfo " 1.  Tomcat home directory: ${TOMCAT_HOME}"
@@ -235,36 +235,36 @@ pkg_postinst() {
 	einfo "     Contains CLASSPATH and JAVA_HOME settings."
 	einfo " 3.  Configuration:  /etc/${TOMCAT_NAME}/default"
 	einfo " 4.  Logs:  /var/log/${TOMCAT_NAME}/default"
-	einfo " "
-	einfo " "
+	einfo
+	einfo
 	einfo " STARTING AND STOPPING TOMCAT:"
 	einfo "   /etc/init.d/${TOMCAT_NAME} start"
 	einfo "   /etc/init.d/${TOMCAT_NAME} stop"
 	einfo "   /etc/init.d/${TOMCAT_NAME} restart"
-	einfo " "
-	einfo " "
+	einfo
+	einfo
 	ewarn " If you are upgrading from older ebuild do NOT use"
 	ewarn " /etc/init.d/tomcat and /etc/conf.d/tomcat you probably"
-	ewarn " want to remove these. "
-	einfo " "
+	ewarn " want to remove these."
+	einfo
 	ewarn " This ebuild implements a new filesystem layout for tomcat"
 	ewarn " please read http://gentoo-wiki.com/Tomcat_Gentoo_ebuild for"
 	ewarn " more information!."
-	einfo " "
+	einfo
 	einfo " NETWORK CONFIGURATION:"
 	einfo " By default, Tomcat runs on port 8080.  You can change this"
 	einfo " value by editing /etc/${TOMCAT_NAME}/default/server.xml."
-	einfo " "
+	einfo
 	einfo " To test Tomcat while it's running, point your web browser to:"
 	einfo " http://localhost:8080/"
 	if ! use examples; then
-		ewarn ""
+		ewarn
 		ewarn "You do not have the examples USE flag set, examples have NOT been installed."
-		ewarn " "
+		ewarn
 	fi
-	einfo " "
+	einfo
 	einfo " BUGS:"
 	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
 	einfo " may not get seen.  Thank you."
-	einfo " "
+	einfo
 }

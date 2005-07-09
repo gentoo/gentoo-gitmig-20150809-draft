@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r6.ebuild,v 1.1 2005/05/15 15:36:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r6.ebuild,v 1.2 2005/07/09 17:14:00 swegener Exp $
 
 inherit eutils
 
@@ -91,7 +91,7 @@ pkg_postinst() {
 
 	chmod 750 /etc/${TOMCAT_NAME}
 
-	einfo " "
+	einfo
 	einfo " NOTICE!"
 	einfo " FILE LOCATIONS:"
 	einfo " 1.  Tomcat home directory: ${TOMCAT_HOME}"
@@ -100,30 +100,30 @@ pkg_postinst() {
 	einfo "     Contains CLASSPATH and JAVA_HOME settings."
 	einfo " 3.  Configuration:  /etc/${TOMCAT_NAME}"
 	einfo " 4.  Logs:  /var/log/${TOMCAT_NAME}/"
-	einfo " "
-	einfo " "
+	einfo
+	einfo
 	einfo " STARTING AND STOPPING TOMCAT:"
 	einfo "   /etc/init.d/${TOMCAT_NAME} start"
 	einfo "   /etc/init.d/${TOMCAT_NAME} stop"
 	einfo "   /etc/init.d/${TOMCAT_NAME} restart"
-	einfo " "
-	einfo " "
+	einfo
+	einfo
 	ewarn " If you are upgrading from older ebuild do NOT use"
 	ewarn " /etc/init.d/tomcat and /etc/conf.d/tomcat you probably"
-	ewarn " want to remove these. "
+	ewarn " want to remove these."
 	ewarn " A version number has been appended so that tomcat 3, 4 and 5"
 	ewarn " can be installed side by side"
-	einfo " "
+	einfo
 	einfo " NETWORK CONFIGURATION:"
 	einfo " By default, Tomcat runs on port 8080.  You can change this"
 	einfo " value by editing /etc/${TOMCAT_NAME}/server.xml."
-	einfo " "
+	einfo
 	einfo " To test Tomcat while it's running, point your web browser to:"
 	einfo " http://localhost:8080/"
-	einfo " "
-	einfo " "
+	einfo
+	einfo
 	einfo " BUGS:"
 	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
 	einfo " may not get seen.  Thank you."
-	einfo " "
+	einfo
 }
