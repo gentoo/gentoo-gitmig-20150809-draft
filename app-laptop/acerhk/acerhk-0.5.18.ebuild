@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.18.ebuild,v 1.5 2005/04/21 07:10:52 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/acerhk-0.5.18.ebuild,v 1.6 2005/07/09 16:08:19 swegener Exp $
 
 inherit kernel-mod eutils
 
@@ -53,5 +53,5 @@ pkg_postinst() {
 	einfo "% modprobe acerhk poll=1"
 	echo
 	einfo "If you need more info about this driver you can read the README file"
-	einfo "% zmore /usr/share/doc/${PN}-${PV}/README.gz"
+	einfo "% zmore /usr/share/doc/${PF}/README.gz"
 }
