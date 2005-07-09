@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ghemical
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.8 2005/07/09 05:06:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.9 2005/07/09 05:06:57 spyderous Exp $
+
+  09 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>; ghemical-1.02.ebuild:
+  Fix die messages.
 
 *ghemical-1.90 (09 Jul 2005)
 
