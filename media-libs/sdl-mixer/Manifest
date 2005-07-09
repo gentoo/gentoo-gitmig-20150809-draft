@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 9626d96d420463a76fb0a6e3550d1bd7 sdl-mixer-1.2.6.ebuild 1257
+MD5 23705937b9797ba254ff614c89c1b306 sdl-mixer-1.2.6.ebuild 1225
 MD5 98d99e954e2ccebd613b5396df79e07d ChangeLog 4005
 MD5 375360d31ec4aa8f404bb421dc7bc39b sdl-mixer-1.2.5-r1.ebuild 1421
 MD5 53b2015dae19981548f34d124a734f8e files/digest-sdl-mixer-1.2.5-r1 67
@@ -12,7 +12,7 @@ MD5 1ca1975170b01d4da4056cc84635b608 files/digest-sdl-mixer-1.2.6 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzGJKgIKl8Uu19MoRApIQAJ9xjEGD6PyGZ5aQQq1Gx+G1/WVGUQCfRCUd
-bqK7UrhSN5Vt6ZlGaP3VKbg=
-=nWWG
+iD8DBQFC0FbEgIKl8Uu19MoRAheMAJ9bU52/9VS4GhazAdKckfl/2j4JvgCdEYFV
+gmNFAQ95uWyVfmbUN09oygA=
+=r3j7
 -----END PGP SIGNATURE-----
