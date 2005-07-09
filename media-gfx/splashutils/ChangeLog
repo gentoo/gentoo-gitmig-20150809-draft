@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.37 2005/07/08 23:31:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.38 2005/07/09 01:46:08 spock Exp $
+
+*splashutils-1.1.9.7 (09 Jul 2005)
+
+  09 Jul 2005; Michał Januszewski <spock@gentoo.org>
+  +splashutils-1.1.9.7.ebuild:
+  Version bump -- 1.1.9.7 includes many bugfixes and has support for genkernel
+  initrds. Changed all KBUILD_OUTPUT references to KV_OUT_DIR in the ebuild.
+  This should fix compilation problems for people using an external kernel
+  object directory.
 
   08 Jul 2005; Michał Januszewski <spock@gentoo.org>
   -splashutils-1.1.9.6.ebuild, splashutils-1.1.9.6-r1.ebuild:
