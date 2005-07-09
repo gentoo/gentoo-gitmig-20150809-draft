@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-0.9.6.ebuild,v 1.2 2005/04/20 05:26:05 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-0.9.6.ebuild,v 1.3 2005/07/09 13:48:40 swegener Exp $
 
 inherit java-pkg
 
 DESCRIPTION="A toolkit for list transformations"
 HOMEPAGE="http://publicobject.com/glazedlists/"
-SRC_URI="https://glazedlists.dev.java.net/files/documents/1073/13000/${PN}-${PVR}-source.zip"
+SRC_URI="https://glazedlists.dev.java.net/files/documents/1073/13000/${P}-source.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
