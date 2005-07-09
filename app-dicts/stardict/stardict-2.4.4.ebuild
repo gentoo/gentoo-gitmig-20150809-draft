@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.4.ebuild,v 1.1 2005/01/13 16:48:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.4.ebuild,v 1.2 2005/07/09 17:56:49 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -47,9 +47,9 @@ src_install() {
 pkg_postinst() {
 	einfo "You will now need to install stardict dictionary files. If"
 	einfo "you have not, execute the below to get a list of dictionaries:"
-	einfo " "
+	einfo
 	einfo "  emerge -s stardict-"
-	einfo " "
+	einfo
 	ewarn "If you upgraded from 2.4.1 or lower and use your own dictionary"
 	ewarn "files, you'll need to run: /usr/share/stardict/tools/stardict_dict_update"
 }
