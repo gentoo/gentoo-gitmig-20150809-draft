@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9.ebuild,v 1.5 2005/06/12 12:16:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9.ebuild,v 1.6 2005/07/09 18:22:27 swegener Exp $
 
 IUSE="gtk"
 
@@ -51,10 +51,10 @@ src_install() {
 
 	doman src/wmium.1
 
-	einfo ""
+	einfo
 	einfo "To configure look at the /usr/share/doc/${PF}/dot.wmiumrc.sample"
 	einfo "(if using /usr/bin/wmium with WINDOWMAKER ONLY)"
-	einfo ""
+	einfo
 	einfo "or use the preferences within gkrellm2"
 }
 

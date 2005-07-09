@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.16 2005/04/27 20:52:45 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.17 2005/07/09 18:21:32 swegener Exp $
 
 inherit multilib
 
@@ -56,6 +56,6 @@ src_install() {
 pkg_postinst() {
 	einfo "hddtemp has to be suid root to allow regular users to run this plugin."
 	einfo "To make it suid root, run"
-	einfo ""
+	einfo
 	einfo "\tchmod u+s /usr/sbin/hddtemp"
 }

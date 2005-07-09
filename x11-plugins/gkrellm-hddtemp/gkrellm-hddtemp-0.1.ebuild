@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.1.ebuild,v 1.14 2004/09/06 01:30:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.1.ebuild,v 1.15 2005/07/09 18:21:32 swegener Exp $
 
 DESCRIPTION="a GKrellM plugin for hddtemp (which reads the temperature of SMART capable hard drives)"
 SRC_URI="http://coredump.free.fr/linux/${P}.tar.gz"
@@ -34,6 +34,6 @@ src_install() {
 pkg_postinst() {
 	einfo "hddtemp has to be suid root to allow regular users to run this plugin."
 	einfo "To make it suid root, run"
-	einfo ""
+	einfo
 	einfo "\tchmod u+s /usr/bin/hddtemp"
 }
