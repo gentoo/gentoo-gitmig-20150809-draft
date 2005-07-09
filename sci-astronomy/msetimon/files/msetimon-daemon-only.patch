@@ -1,0 +1,91 @@
+--- msetimon.pl.orig	2003-05-14 17:41:50.000000000 +0200
++++ msetimon.pl	2005-01-09 23:33:22.683849408 +0100
+@@ -20,28 +20,32 @@
+ 
+ # use Win32::Shell ; 
+ # use Win32::GUI ;
+-use Tk  ;
+-use Tk::Checkbutton ;
+-use Tk::Radiobutton ;
+-use Tk::Scale ;
+-use Tk::Widget ;
+-use Tk::Pixmap ;
+-use Tk::Canvas ;
+-use Tk::Label ;
+-use Tk::Entry ;
+-use Tk::Text ;
+-use Tk::Scrollbar ;
+-use Tk::Menubutton ;
+-use Tk::Frame ;
+-use Tk::Menu ;
+-use Tk::Button ;
+-use Tk::Scale ;
+-use Tk::FileSelect ;
+-use Tk::Photo ;
+-use Tk::FBox ;
+-use Tk::Optionmenu ;
+-use Tk::Bitmap ;
+-use Tk::Font ;
++
++# commented out by daemon_only.patch to enable execution without perl-tk
++# re-emerge msetimon with USE=X set to get the (original) GUI version
++# use Tk  ;
++# use Tk::Checkbutton ;
++# use Tk::Radiobutton ;
++# use Tk::Scale ;
++# use Tk::Widget ;
++# use Tk::Pixmap ;
++# use Tk::Canvas ;
++# use Tk::Label ;
++# use Tk::Entry ;
++# use Tk::Text ;
++# use Tk::Scrollbar ;
++# use Tk::Menubutton ;
++# use Tk::Frame ;
++# use Tk::Menu ;
++# use Tk::Button ;
++# use Tk::Scale ;
++# use Tk::FileSelect ;
++# use Tk::Photo ;
++# use Tk::FBox ;
++# use Tk::Optionmenu ;
++# use Tk::Bitmap ;
++# use Tk::Font ;
++
+ # use Tk::Scrolled ;
+ 
+ use Sys::Hostname ; 
+@@ -236,6 +240,12 @@
+ 	}
+ }
+ 
++unless ($daemon) {
++	print STDERR "\nmsetimon was emerged without the X USE-flag and can only run in daemon mode!\n";
++	print STDERR "re-emerge with USE=X if you want the GUI or run in daemon mode with msetimon -d\n\n";
++	exit -255;
++}
++
+ my ($icondata);
+ unless ($daemon) {
+ 	$main = MainWindow->new;
+@@ -1356,12 +1366,16 @@
+ 		&write_socket($seq,$dir,$ipaddr,$ndir,$host,$port,1,-1,$buffer,$thost,$nhops);
+ 	}
+ 
+-	if (Exists ($sdl) ) {
+-		show_relay_server(0);
++	unless ($daemon) {
++		if (Exists ($sdl) ) {
++			show_relay_server(0);
++		}
+ 	}
+ 
+-	if (Exists ($dl) && "$save_detail" eq "$ndir" ) {
+-		show_detail($l,0,$ndir);
++	unless ($daemon) {
++		if (Exists ($dl) && "$save_detail" eq "$ndir" ) {
++			show_detail($l,0,$ndir);
++		}
+ 	}
+ 		
+ 	# $l->update;

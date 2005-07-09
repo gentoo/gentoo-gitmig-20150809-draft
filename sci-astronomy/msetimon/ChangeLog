@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/msetimon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/msetimon/ChangeLog,v 1.1 2005/07/09 18:06:15 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/msetimon/ChangeLog,v 1.2 2005/07/09 18:34:47 smithj Exp $
+
+*msetimon-2.53 (09 Jul 2005)
+
+  09 Jul 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/msetimon-daemon-only.patch, +msetimon-2.53.ebuild,
+  msetimon-2.78.ebuild:
+  #81788: version bump (yes, i know there is a higher version, but it does not
+  come with source code) and patch to work without x11... patch and ebuild
+  thanks to Peter Stuge <stuge-gentoo@cdy.org>
 
   09 Jul 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml,
   +msetimon-2.07.ebuild, +msetimon-2.78.ebuild:
