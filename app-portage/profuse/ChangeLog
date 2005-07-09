@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.36 2005/07/09 02:35:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.37 2005/07/09 17:32:34 dams Exp $
+
+  09 Jul 2005; <dams@gentoo.org> -profuse-0.1.ebuild, -profuse-0.11.ebuild,
+  -profuse-0.12.ebuild, -profuse-0.13.ebuild, -profuse-0.14.ebuild,
+  -profuse-0.15.ebuild, -profuse-0.16.ebuild, -profuse-0.17.ebuild,
+  -profuse-0.18.ebuild, -profuse-0.18.1.ebuild, -profuse-0.20.ebuild,
+  -profuse-0.20.1.ebuild, -profuse-0.20.2.ebuild, -profuse-0.20.2-r1.ebuild,
+  -profuse-0.20.3.ebuild, -profuse-0.21.0.ebuild, -profuse-0.22.0.ebuild,
+  -profuse-0.22.0-r1.ebuild:
+  removed useless ebuilds
 
   09 Jul 2005; Sven Wegener <swegener@gentoo.org> profuse-0.1.ebuild,
   profuse-0.11.ebuild, profuse-0.12.ebuild, profuse-0.13.ebuild,

@@ -1,52 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44d3ea1a1e46eb848958fe4171b7fba0 ChangeLog 4785
-MD5 6ea98f01c28703bf36ccf141519518d2 files/digest-profuse-0.1 62
-MD5 6382a08f07553fe4ffe9297e2ab85632 files/digest-profuse-0.11 64
-MD5 56089f6fb4c0ff287512cbf3f56031e2 files/digest-profuse-0.12 64
-MD5 bb1ffb2c4ae5ff6af32413d29d3c51ac files/digest-profuse-0.13 64
-MD5 c5a384f749e8478f28b3078344bfde6a files/digest-profuse-0.14 64
-MD5 479be6dce9c569cde252e065186494a6 files/digest-profuse-0.15 64
-MD5 596e10047982c578228e9df292c61edd files/digest-profuse-0.16 64
-MD5 4c01bb73cb8930272d5fa2f85b4020a7 files/digest-profuse-0.17 64
-MD5 61bb4d3a183f4d5cc4e9f0e67adeeaa2 files/digest-profuse-0.18 64
-MD5 c7e859409d7ad9481b0e29a1d4b8a081 files/digest-profuse-0.18.1 66
-MD5 8b2be9a33905796b2d1ac415061a7870 files/digest-profuse-0.20 64
-MD5 38bb4e5acfb800663c95f59b6262f8a1 files/digest-profuse-0.20.1 66
-MD5 377772cd5ffa501245d239a85606ca78 files/digest-profuse-0.20.2 66
-MD5 377772cd5ffa501245d239a85606ca78 files/digest-profuse-0.20.2-r1 66
-MD5 576e26d21f8e36a1cc918734e72ec395 files/digest-profuse-0.20.3 66
-MD5 2b8d1ba0ecb5e3976ea7c8aef4e672c8 files/digest-profuse-0.21.0 66
-MD5 c5ac74f5d15582c4449be498824e9d8c files/digest-profuse-0.22.0 66
-MD5 c5ac74f5d15582c4449be498824e9d8c files/digest-profuse-0.22.0-r1 66
-MD5 63b3d95b090e835ea4c9250bccf07072 files/digest-profuse-0.22.1 66
-MD5 fffc28214b2afa2ce918a0608c4e057b files/digest-profuse-0.23.0 66
+MD5 1b7a7d684bb0a0a0c9d47f98ee5df46b ChangeLog 5270
 MD5 5f1c3b9a62f513d6a4802b57677c23bf metadata.xml 284
-MD5 36d8d60ff5b33fcc155d48b30ee0bceb profuse-0.1.ebuild 630
-MD5 9dad956c7d6c4678db4d2cead9932bcd profuse-0.11.ebuild 613
-MD5 ecfadbebbf268be036587cd6df3286c5 profuse-0.12.ebuild 613
-MD5 e313e15c8b452fc5a4016f636a6a88c3 profuse-0.13.ebuild 613
-MD5 1b263397770a4eaf74f09ba985264a53 profuse-0.14.ebuild 619
-MD5 976bf77f988b1b72d78130e7fdc6fe27 profuse-0.15.ebuild 613
-MD5 6a23f4363b96cbcc50b839864c5337de profuse-0.16.ebuild 613
-MD5 fcb6b4b5dd70025bd2bd386367aa15cd profuse-0.17.ebuild 613
-MD5 75be741ec06ef37412948104c7a765ad profuse-0.18.1.ebuild 616
-MD5 a68ba5cc8635055db78e29efe64b88ef profuse-0.18.ebuild 614
-MD5 9756e1a84a11a12e932e5fb8a062d88e profuse-0.20.1.ebuild 616
-MD5 3af0598c820dd1c6979975f4387226af profuse-0.20.2-r1.ebuild 619
-MD5 92f8116ce03277927efd10c247c6c288 profuse-0.20.2.ebuild 616
-MD5 7ff25385af2a53e1ac769edf0c004ec1 profuse-0.20.3.ebuild 609
-MD5 93c628b8086f65aab079e781046bfa28 profuse-0.20.ebuild 614
-MD5 28e36c9928713ad1b410a0042cba1879 profuse-0.21.0.ebuild 726
-MD5 5a7312c8d34db688846ac22e56f7e2d0 profuse-0.22.0-r1.ebuild 737
-MD5 4577bcaf3ab019b16c5f78b339604013 profuse-0.22.0.ebuild 734
-MD5 3ed595c30ffbccdbe2c5dff1df21712b profuse-0.22.1.ebuild 760
 MD5 4e09617e6898d40f8a876f3a035f1489 profuse-0.23.0.ebuild 747
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzzgUI1lqEGTUzyQRAsMlAKCeU6nQqVtS2XbHgdRRyGrFttfXlwCfcRXH
-TNZ2S/Mk58rdWA4dWXDy2O0=
-=ulRX
------END PGP SIGNATURE-----
+MD5 3ed595c30ffbccdbe2c5dff1df21712b profuse-0.22.1.ebuild 760
+MD5 fffc28214b2afa2ce918a0608c4e057b files/digest-profuse-0.23.0 66
+MD5 63b3d95b090e835ea4c9250bccf07072 files/digest-profuse-0.22.1 66
