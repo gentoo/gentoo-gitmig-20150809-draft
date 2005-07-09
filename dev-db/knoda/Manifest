@@ -1,4 +1,7 @@
-MD5 3e033c34b758764ea2640f1842224815 knoda-0.7.1.ebuild 587
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6ccc05f7120be903fa688fd4b56ca7de knoda-0.7.1.ebuild 593
 MD5 685e9a54251a62f85927aa68572b3dbc knoda-0.7.3.ebuild 554
 MD5 5ffd014d7de1e1539e5944df9241c330 knoda-0.6.2a.ebuild 492
 MD5 750593cd8f9ca7852102c84cb64daf09 knoda-0.7.2.ebuild 558
@@ -13,3 +16,10 @@ MD5 c75b5d2a7e3dbc49ec6c84d095c21799 files/digest-knoda-0.7.3 64
 MD5 a9b1117eec883735adb0e1265fc0deca files/digest-knoda-0.7.4 65
 MD5 5010947f33fe747c6d35a4aad7e01122 files/knoda-0.7.1-configure.patch 3567
 MD5 c9c0c3d4377e30205f2c2b49aa56b88c files/digest-knoda-0.6.2a 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz+zfBXaUFmZvwyMRAvnIAJ9+3OMhkVjuBajeKJImbXm5iv4e/QCdHQnX
+O79usMePttrZNs5HJqO/6UE=
+=jXdN
+-----END PGP SIGNATURE-----
