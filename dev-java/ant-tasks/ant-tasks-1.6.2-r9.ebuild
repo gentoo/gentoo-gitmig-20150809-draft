@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r9.ebuild,v 1.1 2005/05/14 16:10:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r9.ebuild,v 1.2 2005/07/09 14:10:07 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="x86 amd64 ppc sparc ppc64"
 IUSE="javamail noantlr nobcel nobeanutils nobsh nocommonsnet nocommonslogging nojdepend nojsch nojython nolog4j nooro noregexp norhino noxalan noxerces"
 
-DEPEND="=dev-java/ant-core-${PV}*
+RDEPEND=">=virtual/jre-1.4
+	=dev-java/ant-core-${PV}*
 	!dev-java/ant-optional
-	>=dev-java/java-config-1.2
 	>=dev-java/junit-3.8
 	!nolog4j? ( >=dev-java/log4j-1.2.8 )
 	!noxerces? ( >=dev-java/xerces-2.6.2-r1 )
@@ -33,7 +33,9 @@ DEPEND="=dev-java/ant-core-${PV}*
 	!noregexp? ( >=dev-java/jakarta-regexp-1.3-r2 )
 	!nojython? ( >=dev-java/jython-2.1-r5 )
 	javamail? ( >=dev-java/sun-javamail-bin-1.3 )"
-RDEPEND="${DEPEND}"
+DEPEND=">=virtual/jdk-1.4
+	>=dev-java/java-config-1.2
+	${RDEPEND}"
 
 S="${WORKDIR}/apache-ant-${PV}"
 
@@ -53,7 +55,7 @@ src_compile() {
 		export THREADS_FLAG="green"
 	fi
 
-	local p="ant-core,junit"
+	local p="ant-core,junit" libs
 	use noantlr || p="${p},antlr"
 	use nobcel || p="${p},bcel"
 	use nobeanutils || p="${p},commons-beanutils-1.6"
@@ -65,14 +67,14 @@ src_compile() {
 	use nojython || p="${p},jython"
 	use nolog4j || p="${p},log4j"
 	use nooro || p="${p},jakarta-oro-2.0"
-	use noregexp || p="${p},jakarta-regexp-1.3*"
+	use noregexp || p="${p},jakarta-regexp-1.3"
 	use norhino || p="${p},rhino-1.5"
 	use noxalan || p="${p},xalan"
 	use noxerces || p="${p},xerces-2"
 
 	use javamail && p="${p},sun-javamail-bin,sun-jaf-bin"
 
-	libs=$(java-config -p ${p})
+	libs=$(java-pkg_getjars ${p})
 	CLASSPATH="." ./build.sh -Ddist.dir=${D}/usr/share/ant-core -lib ${libs} || die "build failed"
 }
 
