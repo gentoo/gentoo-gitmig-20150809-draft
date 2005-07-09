@@ -1,0 +1,14 @@
+Using Magic on Gentoo Linux
+
+To avoid conflicts with the "sys-apps/file" package, Magic
+("sci-electronics/magic") is patched on Gentoo systems to use "~/.magic-cad"
+rather than "~/.magic" as the user's personnal startup file. (The system-wide
+startup file remains "/usr/share/magic/sys/.magic".)
+
+This is done because the "file" program (a basic UNIX utility) uses "~/.magic"
+for its configuration, and will not function properly if this file contains
+Magic startup instructions.
+
+--
+Olivier Fisette <ribosome@gentoo.org>
+8 Jul 2005
