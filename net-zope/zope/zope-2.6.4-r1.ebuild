@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.14 2005/01/14 21:16:20 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.15 2005/07/09 16:06:46 swegener Exp $
 
 inherit eutils
 
@@ -98,7 +98,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	$python wo_pcgi.py || die "Failed to compile."
+	${python} wo_pcgi.py || die "Failed to compile."
 }
 
 src_install() {
@@ -179,7 +179,7 @@ pkg_postrm() {
 	# Delete .default if this ebuild is the default. zprod-manager will
 	# have to handle a missing default;
 	local VERSION_DEF="$(zope-config --zidef-get)"
-	if [ "${ZGID}" = "$VERSION_DEF" ] ; then
+	if [ "${ZGID}" = "${VERSION_DEF}" ] ; then
 		rm -f ${ZI_DIR}/.default
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.0.ebuild,v 1.1 2005/06/11 11:56:33 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.0.ebuild,v 1.2 2005/07/09 16:06:46 swegener Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ S="${WORKDIR}/Zope-${PV}-final"
 ZUID=zope
 ZGID=zope
 ZS_DIR=${ROOT%/}/usr/lib
-ZSERVDIR=${ZS_DIR}/${PN}-${PV}
+ZSERVDIR=${ZS_DIR}/${P}
 
 # Narrow the scope of ownership/permissions.
 # Security plan:
