@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0b.ebuild,v 1.1 2005/02/27 07:20:28 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0b.ebuild,v 1.2 2005/07/09 15:44:44 agriffis Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://pgfoundry.org/frs/download.php/181/${P}.tar.gz"
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
-IUSE="ssl nls python tcltk perl libg++ pam readline xml2 zlib pg-intdatetime"
+IUSE="doc libg++ nls pam perl pg-intdatetime python readline ssl tcltk xml2 zlib"
 
 S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc

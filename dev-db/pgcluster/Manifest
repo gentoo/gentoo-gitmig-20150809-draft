@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 eb8af17a3439f887cf6bc8683f04bbec pgcluster-1.3.0c.ebuild 7832
 MD5 00f032b5b1846d35979b7fb47a8b827a pgcluster-1.3.0b.ebuild 7832
 MD5 2e887b575c21c6e15baeb53b67868ba8 ChangeLog 916
@@ -18,3 +21,10 @@ MD5 c676056d10d63c6a517095cf993c9eb3 files/pgreplicate.conf-1.3.0c 47
 MD5 458e5022c67470ae49700fbf1bb4b915 files/pglb.init-1.3.0b 510
 MD5 befc4d100b36ec187d3997395ec4e6b7 files/pglb.init-1.3.0c 510
 MD5 bda92770ca02e1e04a8ca4fed68e7271 files/pgcluster-1.3.0b-gentoo.patch 1853
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/EBBXaUFmZvwyMRApYWAKDKBZLs4T2wCaK1lP6VJ+KuTLpfjwCaAq8u
+bbeXgAKejw76sSm9M/oB93Y=
+=O1c7
+-----END PGP SIGNATURE-----
