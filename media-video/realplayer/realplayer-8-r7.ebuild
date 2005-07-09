@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r7.ebuild,v 1.6 2005/01/20 21:20:55 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r7.ebuild,v 1.7 2005/07/09 16:22:52 swegener Exp $
 
 inherit nsplugins
 
@@ -37,7 +37,7 @@ pkg_nofetch() {
 	einfo "Please go to ${HOMEPAGE}"
 	einfo "and download the appropriate realplayer binary installer"
 	einfo "for OS type : ${REAL_OS}"
-	einfo " "
+	einfo
 	einfo "Download ${A} and place it in :"
 	einfo "${DISTDIR}"
 	einfo " "
