@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/sun-dsml-bin-2.1.2_pre1.ebuild,v 1.2 2005/05/04 21:58:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/sun-dsml-bin-2.1.2_pre1.ebuild,v 1.3 2005/07/09 16:36:28 swegener Exp $
 
 inherit java-pkg
 
@@ -23,15 +23,15 @@ S=${WORKDIR}
 DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=7022-jndi_dsml-2.0-ea-oth-JPR&SiteId=DSC&TransactionId=noreg"
 
 pkg_nofetch() {
-	einfo " "
+	einfo
 	einfo " Due to license restrictions, we cannot fetch the"
 	einfo " distributables automagically."
-	einfo " "
+	einfo
 	einfo " 1. Visit ${HOMEPAGE}"
 	einfo "    Direct link: ${DOWNLOAD_URL}"
 	einfo " 2. Download ${At}"
 	einfo " 3. Move file to ${DISTDIR}"
-	einfo " "
+	einfo
 }
 
 src_unpack() {
@@ -39,15 +39,15 @@ src_unpack() {
 		echo  " "
 		echo  "!!! Missing ${DISTDIR}/${At}"
 		echo  " "
-		einfo " "
+		einfo
 		einfo " Due to license restrictions, we cannot fetch the"
 		einfo " distributables automagically."
-		einfo " "
+		einfo
 		einfo " 1. Visit ${HOMEPAGE}"
 		einfo " 2. Download ${At}"
 		einfo " 3. Move file to ${DISTDIR}"
 		einfo " 4. Run emerge on this package again to complete"
-		einfo " "
+		einfo
 		die "User must manually download distfile"
 	fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.5 2005/06/09 00:51:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.6 2005/07/09 16:34:49 swegener Exp $
 
 inherit java-pkg
 
@@ -79,26 +79,25 @@ src_install() {
 
 pkg_postinst() {
 	einfo "CONFIGURATION NOTES"
-	einfo " "
+	einfo
 	einfo "Make sure your CLASSPATH variable is updated via java-config(1)"
 	einfo "to use your desired JDBC driver."
-	einfo " "
+	einfo
 	einfo "You must then create a database. Run '/usr/bin/${PN}'"
 	einfo "and fill the connection dialog box with your database details."
 
 	if use mysql; then
-		einfo " "
+		einfo
 		einfo "MySQL example:"
 		einfo "Driver class name: com.mysql.jdbc.Driver"
 		einfo "Connection: jdbc:mysql://localhost/database"
 	fi
 
 	if use postgres; then
-		einfo " "
+		einfo
 		einfo "PostgreSQL example:"
 		einfo "Driver class name:org.postgresql.Driver"
 		einfo "Connection: jdbc:postgresql://localhost/database"
 	fi
-	einfo " "
-	einfo " "
+	einfo
 }

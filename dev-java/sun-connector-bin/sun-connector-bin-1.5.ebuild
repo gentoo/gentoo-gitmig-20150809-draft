@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-connector-bin/sun-connector-bin-1.5.ebuild,v 1.2 2005/05/20 19:06:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-connector-bin/sun-connector-bin-1.5.ebuild,v 1.3 2005/07/09 16:33:49 swegener Exp $
 
 inherit java-pkg
 
@@ -16,15 +16,15 @@ DEPEND="app-arch/unzip"
 RESTRICT="fetch"
 
 pkg_nofetch() {
-	einfo " "
+	einfo
 	einfo " Due to license restrictions, we cannot fetch the"
 	einfo " distributables automagically."
-	einfo " "
+	einfo
 	einfo " 1. Visit ${HOMEPAGE} and select 'Downloads'"
 	einfo " 2. Select 'J2EE Connector Architecture Specification - 1.5 - Download class file."
 	einfo " 3. Download ${A}"
 	einfo " 4. Move file to ${DISTDIR}"
-	einfo " "
+	einfo
 }
 
 src_unpack() {
@@ -32,16 +32,16 @@ src_unpack() {
 		echo  " "
 		echo  "!!! Missing ${DISTDIR}/${A}"
 		echo  " "
-		einfo " "
+		einfo
 		einfo " Due to license restrictions, we cannot fetch the"
 		einfo " distributables automagically."
-		einfo " "
+		einfo
 		einfo " 1. Visit ${HOMEPAGE} and select 'Downloads'"
 		einfo " 2. Select 'J2EE Connector Architecture Specification - 1.5 - Download class file."
 		einfo " 3. Download ${A}"
 		einfo " 4. Move file to ${DISTDIR}"
 		einfo " 5. Run emerge on this package again to complete"
-		einfo " "
+		einfo
 		die "User must manually download distfile"
 	fi
 	unzip -qq ${DISTDIR}/${A}

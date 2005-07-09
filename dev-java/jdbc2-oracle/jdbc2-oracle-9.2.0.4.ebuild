@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/jdbc2-oracle-9.2.0.4.ebuild,v 1.1 2004/10/20 11:06:00 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/jdbc2-oracle-9.2.0.4.ebuild,v 1.2 2005/07/09 16:38:36 swegener Exp $
 
 inherit java-pkg
 
@@ -32,9 +32,9 @@ RDEPEND=">=virtual/jdk-1.2"
 RESTRICT="fetch"
 
 pkg_nofetch() {
-	einfo " "
+	einfo
 	einfo " Because of license terms and file name conventions, please:"
-	einfo " "
+	einfo
 	einfo " 1. Visit ${HOMEPAGE}"
 	einfo "    (you may need to create an account on Oracle's site)"
 	einfo " 2. Download the appropriate files:"
@@ -51,7 +51,7 @@ pkg_nofetch() {
 	use debug > /dev/null && einfo "    - ${file_main_debug_orig} --> ${file_main_debug}"
 	einfo " 4. Place the files in ${DISTDIR}"
 	einfo " 5. Repeat the emerge process to continue."
-	einfo " "
+	einfo
 }
 
 src_unpack() {
