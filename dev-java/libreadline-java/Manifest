@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2afcb59fafd97db77c8fd32b17962d66 ChangeLog 2551
 MD5 15965747957a7f0df15cdc7b4b6d2b21 libreadline-java-0.8.0-r1.ebuild 1018
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 9e6c8c38a34f297ef3ff5d65648dc214 files/digest-libreadline-java-0.8.0-r1 77
 MD5 dcfb40cea2d4ce6b93a3a05548f702a0 files/termcap-to-ncurses.patch 498
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/Yu/rLF9B432nYRAmmLAJ9QHT0tN8/ZbKtq4DVxEeNPnEX7DwCePQas
+PXSH88S7cE+NUecKsBV8pRM=
+=tr0D
+-----END PGP SIGNATURE-----

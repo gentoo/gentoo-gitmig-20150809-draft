@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a5f1f61a9045bb693495fcb21d557923 saxpath-1.0.ebuild 1159
 MD5 b3ad9edadb4ce8daf55b194a6c58a492 ChangeLog 1066
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 3d3ef900f2efc99e36d9d4f87026d5b2 files/digest-saxpath-1.0 64
 MD5 cb58720b66697c1ef1f47de80c839e00 files/MANIFEST.MF 276
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/Zr/rLF9B432nYRAkxOAKCu7+AM7QyTOdF6/upzmOgGi1cabgCfTu1W
+F4xV7rdmtZlV5Qol8Thz1wY=
+=/V+c
+-----END PGP SIGNATURE-----

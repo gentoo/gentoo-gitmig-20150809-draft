@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ffada4f238f8cbf3ee67e1bd469e9f7b rhino-1.5.5-r1.ebuild 1411
 MD5 25fba24bfccc5ba930d867415b35523b rhino-1.6.1-r1.ebuild 1426
 MD5 b6ed334698dbd1a7a62acc82cc5141fa ChangeLog 3808
@@ -8,3 +11,10 @@ MD5 bba5a68c73328abd7ba67bcf3e828452 files/digest-rhino-1.6.1-r1 126
 MD5 0a5ef83b30538dd468f24d14be07769f files/00_dont-fetch-swing-ex.patch 604
 MD5 1efa33d52544cf9e08d6538fd15936c2 files/rhino-1.6-gentoo.patch 4761
 MD5 5ab916fbf55d8587da8547b2d264a383 files/1.5.5_jdk15.patch 1217
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/ZT/rLF9B432nYRAh3MAJ90i8/V/NvQoVZmJb6lbXb7AB7bcgCgpyfN
+t8+JyKD30mSa6gyF1RBTpJM=
+=grH0
+-----END PGP SIGNATURE-----
