@@ -1,6 +1,16 @@
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a2adad7916f395e4a3f0aed51526a14d freecol-0.4.0.ebuild 1295
-MD5 3e19038e45c6f7b26d432cd9a3ec4edd freecol-0.3.0.ebuild 1282
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6cfe68f412042b2001c6f0c126b4791 ChangeLog 633
-MD5 92bb30eafb73ec91288034215826b0cd files/digest-freecol-0.4.0 70
 MD5 dc6a4d04e026d9776e432d2dbd24e53e files/digest-freecol-0.3.0 70
+MD5 92bb30eafb73ec91288034215826b0cd files/digest-freecol-0.4.0 70
+MD5 ddd133776f3f1f61955e05ed3e4e44db freecol-0.3.0.ebuild 1284
+MD5 78f9d8e71125c63193760e01422ca6bb freecol-0.4.0.ebuild 1293
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzzvAI1lqEGTUzyQRAps7AJsGw5fInI1qkoi90SueYOnZBNQpgACgjYAB
+JBPJs/u9vDLTbpf08GDzJ+Q=
+=xQa2
+-----END PGP SIGNATURE-----
