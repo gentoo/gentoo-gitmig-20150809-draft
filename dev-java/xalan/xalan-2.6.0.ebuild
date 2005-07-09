@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0.ebuild,v 1.10 2005/01/26 21:50:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0.ebuild,v 1.11 2005/07/09 16:57:18 swegener Exp $
 
 inherit java-pkg eutils
 
@@ -36,9 +36,9 @@ src_compile() {
 		if can_build_doc  ; then
 			ant javadocs || die "Build Javadocs Failed"
 		else
-			einfo "                                                          "
-			einfo " 1.4.x JDKs are unable to compile Javadocs at this time.  "
-			einfo "                                                          "
+			einfo
+			einfo " 1.4.x JDKs are unable to compile Javadocs at this time."
+			einfo
 		fi
 	fi
 }
@@ -48,7 +48,6 @@ src_install () {
 	dohtml readme.html
 
 	if use doc ; then
-		dodir /usr/share/doc/${P}
 		dodoc TODO STATUS README LICENSE ISSUES
 		java-pkg_dohtml -r build/docs/*
 	fi
@@ -56,19 +55,19 @@ src_install () {
 
 pkg_postinst() {
 	if use doc && can_build_doc ; then
-		einfo "                                                          "
-		einfo " API Documentation is in /usr/share/doc/${PN}-${PV}.      "
-		einfo "                                                          "
-		einfo " Design documentation can be found online at:             "
+		einfo
+		einfo " API Documentation is in /usr/share/doc/${PF}."
+		einfo
+		einfo " Design documentation can be found online at:"
 		einfo "     http://xml.apache.org/xalan-j/design/design2_0_0.html"
-		einfo "                                                          "
+		einfo
 		epause 5
 	else
-		einfo "                                                          "
-		einfo " Online Documentation:                                    "
+		einfo
+		einfo " Online Documentation:"
 		einfo "     http://xml.apache.org/xalan-j/design/design2_0_0.html"
-		einfo "     http://xml.apache.org/xalan-j/apidocs/index.html     "
-		einfo "                                                          "
+		einfo "     http://xml.apache.org/xalan-j/apidocs/index.html"
+		einfo
 		epause 5
 	fi
 }
