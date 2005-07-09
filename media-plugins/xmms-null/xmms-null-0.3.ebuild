@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-null/xmms-null-0.3.ebuild,v 1.9 2004/11/27 20:27:03 corsair Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-null/xmms-null-0.3.ebuild,v 1.10 2005/07/09 16:03:32 swegener Exp $
 
 inherit gnuconfig
 
@@ -15,11 +13,11 @@ HOMEPAGE="http://havardk.xmms.org/plugins/null_output"
 
 DEPEND="media-sound/xmms"
 
+IUSE=""
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc amd64 sparc ~ppc64"
-
-S=${WORKDIR}/null_output-${PV}
 
 DOCS="AUTHORS ChangeLog NEWS"
 
