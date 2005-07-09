@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5328cce1ac1dabd9a5562bcb91c59359 ChangeLog 7107
 MD5 5dc6f506ad44aae8328d0690e94eb688 capi4k-utils-20041006-r5.ebuild 3736
 MD5 03243c209893699ce44a97f2090546fe capi4k-utils-20050322-r1.ebuild 4014
@@ -24,3 +27,10 @@ MD5 709e4079ecd09537691845755cb9136d files/digest-capi4k-utils-20050322-r1 75
 MD5 239b613eb69255eead19892de760db8d files/digest-capi4k-utils-20050509 75
 MD5 2fe94d2623c5b129780b72bacaf4a7bc files/rcapid.xinetd 236
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0BvUI1lqEGTUzyQRApAjAJ9ON8j2WeMuZGCzhe0xzfiNbCAhTQCfdNEk
+AHbfx78US32qD9cunEkZcmw=
+=YUft
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c94ca13838fd541512a5e65461722e5d ChangeLog 4059
 MD5 d6eb26607fa211c61609dd783ecfdac9 files/adsl.sample 599
 MD5 be6c41b714f7e55195d93fd478dc5e7e files/digest-speedtouch-1.3.1-r2 69
@@ -6,3 +9,10 @@ MD5 e1433d87a19203883aeaa0d4f791f91f files/speedtouch.confd 699
 MD5 aa0803fb7b3133521df4ee07d7ff141a files/speedtouch.rc7 1655
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 9401611fdc8b082e6facbcc591424221 speedtouch-1.3.1-r2.ebuild 2948
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0BwDI1lqEGTUzyQRAlcDAKDME2QtUg1p1ifSA/4pL9tTxjSqlgCgyeic
+UHI1kGemG0ydxqRywpVY/lg=
+=jEUC
+-----END PGP SIGNATURE-----
