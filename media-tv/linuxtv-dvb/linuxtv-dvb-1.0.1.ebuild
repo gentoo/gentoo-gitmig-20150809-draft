@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.0.1.ebuild,v 1.8 2005/01/25 13:22:23 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.0.1.ebuild,v 1.9 2005/07/09 18:43:45 swegener Exp $
 
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org"
@@ -13,12 +13,12 @@ DEPEND="virtual/linux-sources"
 #RDEPEND=""
 
 pkg_setup() {
-	einfo ""
+	einfo
 	einfo "Please make sure that the following option is enabled"
 	einfo "in your current kernel 'Multimedia devices'"
 	einfo "and /usr/src/linux point's to your current kernel"
 	einfo "or make will die."
-	einfo ""
+	einfo
 }
 
 src_compile() {
@@ -98,10 +98,10 @@ src_install() {
 
 pkg_postinst() {
 	depmod -a
-	einfo ""
+	einfo
 	einfo "If you don't use devfs, execute makedev.napi o create"
 	einfo "the device nodes. The file is in /usr/share/doc/${PF}/"
-	einfo ""
+	einfo
 	einfo "now copy an appropriate from"
 	einfo "/usr/share/doc/${PF}/channels.conf-XXX"
 	einfo "channel list for DVB-S/C/T"
@@ -109,11 +109,11 @@ pkg_postinst() {
 	einfo "		~/.czap/channels.conf"
 	einfo "		~/.tzap/channels.conf"
 	einfo "and then call szap for DVB-S, czap for DVB-C or tzap for DVB-T"
-	einfo ""
+	einfo
 	einfo "If you'd like to load all modules at once, unpack and add"
 	einfo "/usr/share/doc/${PF}/dvb.gz to /etc/modules.d/"
 	einfo "then run #update-modules to update your modules.conf"
-	einfo ""
+	einfo
 }
 
 pkg_postrm() {

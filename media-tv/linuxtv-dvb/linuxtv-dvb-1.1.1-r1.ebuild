@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1-r1.ebuild,v 1.4 2005/01/25 13:22:23 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1-r1.ebuild,v 1.5 2005/07/09 18:43:45 swegener Exp $
 
 inherit eutils kernel-mod
 
@@ -18,12 +18,12 @@ DEPEND="virtual/linux-sources"
 
 pkg_setup() {
 	if kernel-mod_is_2_4_kernel; then
-		einfo ""
+		einfo
 		einfo "Please make sure that the following option is enabled"
 		einfo "in your current kernel 'Multimedia devices'"
 		einfo "and /usr/src/linux point's to your current kernel"
 		einfo "or make will die."
-		einfo ""
+		einfo
 	fi
 }
 
@@ -97,19 +97,19 @@ src_install() {
 pkg_postinst() {
 	einfo "If you don't use devfs, execute MAKEDEV-DVB.sh to create"
 	einfo "the device nodes. The file is in /usr/share/doc/${PF}/"
-	einfo ""
+	einfo
 	einfo "A file called dvb-module-load has been created to simplify loading all modules."
 	einfo "Call it using 'dvb-module-load {load|debug|unload}'."
-	einfo ""
+	einfo
 	einfo "For information about firmware please see /usr/share/doc/${PF}/README."
-	einfo ""
+	einfo
 
 	if kernel-mod_is_2_4_kernel; then
 		einfo "Checking kernel module dependencies"
 		test -r "${ROOT}/usr/src/linux/System.map" && \
 			depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
 	else
-	        einfo ""
+	        einfo
 			einfo "Modules for kernel 2.6 will not be built."
 			einfo "According to the README-2.6 the driver in kernel"
 			einfo "2.6.1 and above is regularily kept up-to-date."
@@ -117,6 +117,6 @@ pkg_postinst() {
 			einfo "has newer modules then the latest release."
 			einfo "This ebuild will just install the dvb-ttpci"
 			einfo "firmware and docs on kernel 2.6 machines."
-			einfo ""
+			einfo
 	fi
 }
