@@ -1,14 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.2.1a.ebuild,v 1.2 2005/06/07 19:18:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.2.1a.ebuild,v 1.3 2005/07/09 15:54:36 swegener Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${PN}sdk-${PV}"
-
 DESCRIPTION="Intel's UPnP SDK"
 HOMEPAGE="http://upnp.sourceforge.net"
-SRC_URI="mirror://sourceforge/upnp/lib${PN}-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/upnp/lib${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="BSD"
 SLOT="0"
@@ -20,7 +18,7 @@ DEPEND="sys-fs/e2fsprogs
 	       app-text/tetex
 	       app-text/ghostscript )"
 
-S=${WORKDIR}/lib${PN}-${PV}/upnp
+S="${WORKDIR}"/lib${P}/upnp
 
 src_compile() {
 	myconf=""
