@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.10 2004/10/04 22:47:14 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.11 2005/07/09 17:12:23 swegener Exp $
 
 inherit eutils
 
@@ -75,19 +75,19 @@ pkg_postinst() {
 	echo "running depmod...."
 	depmod -aq || die
 
-	echo " "
+	echo
 	einfo " Use either 'shfsmount' or 'mount -t shfs' to mount remote"
-	einfo " filesystems to into your local filesystem.               "
-	echo " "
-	echo " "
-	einfo " Note the following:                                      "
-	einfo "                                                          "
-	einfo "   1.  The shfs.o kernel module has to be loaded first    "
-	einfo "       before you can start mounting filesystems.         "
-	einfo "       Try: 'insmod shfs' as root.                        "
-	einfo "                                                          "
-	einfo "   2.  When mounting, you must enter the absolute path of "
-	einfo "       the remote filesystem without any special chars,   "
-	einfo "       such as tilde (~), for example.                    "
-	echo " "
+	einfo " filesystems to into your local filesystem."
+	echo
+	echo
+	einfo " Note the following:"
+	einfo
+	einfo "   1.  The shfs.o kernel module has to be loaded first"
+	einfo "       before you can start mounting filesystems."
+	einfo "       Try: 'insmod shfs' as root."
+	einfo
+	einfo "   2.  When mounting, you must enter the absolute path of"
+	einfo "       the remote filesystem without any special chars,"
+	einfo "       such as tilde (~), for example."
+	echo
 }
