@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 376d824a92eea309fe02476b7928e374 ChangeLog 537
 MD5 b6b08b082cdd69678d1034f0d6b9b129 files/digest-usbmidi-1.0 67
 MD5 7708d9c50a42ddfbf40aed3e6d480b60 files/ezusbmidi 947
 MD5 007cb1fe02b3ca041259d819d8958608 files/ezusbmidi.usermap 174
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 07581fe14522f80a74d6cbff3421c65f usbmidi-1.0.ebuild 1093
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0CEXI1lqEGTUzyQRAkhsAKCZhN501fmDdGS7GyJnZTEOflCRpwCdGsz/
+YN5sABgjZPuHz0C3e17lugU=
+=x81X
+-----END PGP SIGNATURE-----

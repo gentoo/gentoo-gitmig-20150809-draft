@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 40e63288102b3fb76597b1a79489702a ChangeLog 1698
 MD5 d73a9c5effa0eb340ee9eb4b799e32b8 files/4.6-gcc.patch 272
 MD5 234ec2d99e4c992ccc12fa76de885a0e files/5.0-beaming-bug.patch 928
@@ -8,3 +11,10 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 2aa7f964e840bea93ea0ceb418be50ed mup-4.4.ebuild 2103
 MD5 41c3b17508896d4f8d030ffa37446b2a mup-4.6.ebuild 2134
 MD5 eaa9e17b08aeffa110e6ef90e41535fa mup-5.0.ebuild 2118
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0CMrI1lqEGTUzyQRApyiAKDXq4/7Uq6R512H1v+ExcLYoPdweACdGugC
+hALT1swjZtrZ9jb0V5x99gM=
+=Twsk
+-----END PGP SIGNATURE-----

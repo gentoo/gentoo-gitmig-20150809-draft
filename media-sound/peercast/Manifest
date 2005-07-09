@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0dae886c1419164608685b1b6d7dc043 ChangeLog 1415
 MD5 9aa0a0713c5edcfc7e6a5dad02a2bb78 files/digest-peercast-0.1212 70
 MD5 46edc53a482f19af8574b644d6ba02ec files/peercast.init 890
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
 MD5 f4851d46b0cf2a245e80c1a617fe610a peercast-0.1212.ebuild 1454
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0CBzI1lqEGTUzyQRAmphAKDHkZ8tJCUnUaQF8C3rV9s+d5LxtACgjkLX
+N0OCU44t44LK7i1mdvR79gw=
+=L7+P
+-----END PGP SIGNATURE-----

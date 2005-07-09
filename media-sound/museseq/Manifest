@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f7939c9a96b535b085a7910522f7fed ChangeLog 4693
 MD5 fbb837028f0103f8c2775f24e661888b files/digest-museseq-0.6.2-r1 64
 MD5 20ef97c251eae618ada71d7493308b96 files/digest-museseq-0.7.0-r1 64
@@ -14,3 +17,10 @@ MD5 76b8cc2874ac38f7dacf735f4ba503bc museseq-0.6.2-r1.ebuild 3157
 MD5 b3576d0c0e0786fcfb03399eee6b084a museseq-0.7.0-r1.ebuild 1978
 MD5 35a97523a414f4b663c1aba6c8a66310 museseq-0.7.1.ebuild 1770
 MD5 864601c929d98ec9d26859cb53e55d19 museseq-0.7.1_pre3.ebuild 1714
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0CFRI1lqEGTUzyQRAkDfAKDJtKxyeOXcG9fLHr8KAl+IpJv/rQCbBxtK
+BUjpSvbwfforPWePN19yTMI=
+=DU9Z
+-----END PGP SIGNATURE-----

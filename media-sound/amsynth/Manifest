@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9db626f03c9644e6b28a1f12107035bc ChangeLog 2231
 MD5 a33d519eeaf9796c2c62ddca0e73b75a amsynth-1.0.0.ebuild 1532
 MD5 2f7dc56770343abd47f6fcc7bca6938e files/amsynth-pthread.patch 256
 MD5 d7a734ec324ae5b115669d858666fb58 files/digest-amsynth-1.0.0 65
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0CDuI1lqEGTUzyQRAk+aAKDIl7R/3+z0GGJlao7UasIqDSj/IACePwzl
+5SA2/UT98XpT15sIhpVUVGo=
+=BCyV
+-----END PGP SIGNATURE-----
