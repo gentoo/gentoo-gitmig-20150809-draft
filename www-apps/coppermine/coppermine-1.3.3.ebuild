@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.3.3.ebuild,v 1.3 2005/06/03 23:40:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.3.3.ebuild,v 1.4 2005/07/09 15:08:21 agriffis Exp $
 
 inherit webapp versionator
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/cpg${PV}.zip"
 
 LICENSE="GPL-2"
 KEYWORDS="~sparc ~x86"
-IUSE=""
+IUSE="imagemagick"
 
 DEPEND="app-arch/zip"
 
