@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.5-r1.ebuild,v 1.2 2005/03/14 16:53:20 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.5-r1.ebuild,v 1.3 2005/07/09 22:33:05 swegener Exp $
 
 inherit linux-mod eutils
 
@@ -15,8 +15,6 @@ SLOT="0"
 KEYWORDS="ppc x86 amd64"
 
 IUSE=""
-DEPEND="${DEPEND}"
-RDEPEND="${RDEPEND}"
 
 MODULE_NAMES="realtime(extra:)"
 BUILD_PARAMS="KSRC=${ROOT}${KV_DIR} TOUT=${TMP}/tmp-gas-check"
@@ -56,4 +54,3 @@ src_unpack() {
 	epatch ${FILESDIR}/kmisc.patch-0.8.2_pre20041022
 	convert_to_m Makefile
 }
-

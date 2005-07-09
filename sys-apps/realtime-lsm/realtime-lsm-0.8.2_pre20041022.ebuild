@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.2_pre20041022.ebuild,v 1.5 2005/01/05 17:52:00 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.2_pre20041022.ebuild,v 1.6 2005/07/09 22:33:05 swegener Exp $
 
 inherit kernel-mod eutils
 
@@ -87,4 +87,3 @@ pkg_postinst() {
 	test -r "${ROOT}/usr/src/linux/System.map" && \
 		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
 }
-
