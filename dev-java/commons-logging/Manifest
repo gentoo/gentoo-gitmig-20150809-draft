@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 6e08e06ce6bd628d1dba7fc96e7ac87c commons-logging-1.0.4-r1.ebuild 1567
+MD5 0bc50585bdb116a8c3425135b39e359c ChangeLog 4686
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 ad5ec96d01324f469e03d297e10caaab commons-logging-1.0.4-r1.ebuild 1564
-MD5 0626fe661ad5c0ea60a9c17e620685d8 commons-logging-1.0.4.ebuild 1533
-MD5 7a0dbab9aeb6be05746564940b1bf375 ChangeLog 4544
 MD5 1e62b8a1770a8f7d817420e0c0d5f651 files/digest-commons-logging-1.0.4-r1 77
-MD5 1e62b8a1770a8f7d817420e0c0d5f651 files/digest-commons-logging-1.0.4 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCpxAwKRy60XGEcJIRAkGuAJoCGs2kpvJE5oE18aHkGBKCXVp2VwCdHW0v
-yXavsNZ5fKldXX7WrKeQQGM=
-=u4em
------END PGP SIGNATURE-----

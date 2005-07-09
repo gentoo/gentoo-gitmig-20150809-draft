@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.23 2005/05/14 16:07:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.24 2005/07/09 16:00:26 axxo Exp $
+
+  09 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
+  commons-beanutils-1.6.1-r2.ebuild, commons-beanutils-1.7.0-r1.ebuild:
+  fix deps, some cleanups
 
 *commons-beanutils-1.7.0-r1 (14 May 2005)
 *commons-beanutils-1.6.1-r2 (14 May 2005)

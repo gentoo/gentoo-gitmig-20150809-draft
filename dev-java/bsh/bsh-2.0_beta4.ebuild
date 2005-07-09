@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4.ebuild,v 1.3 2005/07/08 10:54:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4.ebuild,v 1.4 2005/07/09 16:00:08 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -9,27 +9,27 @@ MY_DIST=${PN}-${MY_PV}-src.jar
 
 DESCRIPTION="BeanShell: A small embeddable Java source interpreter"
 HOMEPAGE="http://www.beanshell.org"
-SRC_URI="http://www.beanshell.org/${MY_DIST}
-		 mirror://gentoo/beanshell-icon.png"
+SRC_URI="http://www.beanshell.org/${MY_DIST} mirror://gentoo/beanshell-icon.png"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="doc jikes junit readline"
+IUSE="doc jikes readline source"
 
-DEPEND="${RDEPEND}
-		>=dev-java/ant-core-1.6"
 RDEPEND=">=virtual/jdk-1.4
 	=dev-java/bsf-2.3*
 	=dev-java/servletapi-2.4*
 	readline? ( dev-java/libreadline-java )"
+DEPEND="${RDEPEND}
+	source? ( app-arch/zip )
+	>=dev-java/ant-core-1.6"
 
 S=${WORKDIR}/BeanShell-${MY_PV}
 
 src_unpack() {
 	# Extract the sources
 	cd ${WORKDIR}
-	jar xf ${DISTDIR}/${MY_DIST}
+	jar xf ${DISTDIR}/${MY_DIST} || die "failed to unpack"
 
 	# Apply the build patch
 	cd ${S}
@@ -42,19 +42,16 @@ src_unpack() {
 	if use readline ; then
 		# Apply the patch
 		epatch ${FILESDIR}/bsh2-readline.patch
-
-		# Update the classpath
-		local ADD_CLASSPATH="`java-config -p libreadline-java`"
-		sed -e "s:__ADD_CLASSPATH__:${ADD_CLASSPATH}:" \
-		    -i ${S}/bsh.Console \
-			-i ${S}/bsh.Interpreter
 	fi
+	local classpath="bsf-2.3,servletapi-2.4"
+	use readline && classpath="${classpath},libreadline-java"
+	classpath="$(java-pkg_getjars ${classpath})"
 }
 
 src_compile() {
 	local classpath="bsf-2.3,servletapi-2.4"
 	use readline && classpath="${classpath},libreadline-java"
-	classpath=`java-config -p ${classpath}`
+	classpath="$(java-pkg_getjars ${classpath})"
 
 	local antflags="jarall"
 	use doc && antflags="${antflags} javadoc"
