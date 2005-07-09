@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 23e904d916069c6539d0c5d2b0f14e1f crystalspace-0.99_pre20050518.ebuild 2226
+MD5 5a3a3244a021fd624028affd3447e74b crystalspace-0.98.4.ebuild 1894
+MD5 e8386d24a6ea68a1bf59913dff215ef2 crystalspace-0.98.4.20050224.ebuild 1963
 MD5 6b5e96ae57596d96ee68cf0e489ae5cf ChangeLog 2436
 MD5 e4c7a49ca08eb200cfa0a9f9246e2257 metadata.xml 959
-MD5 5a3a3244a021fd624028affd3447e74b crystalspace-0.98.4.ebuild 1894
-MD5 9341ad08ebcbcc0c158a0188265b9b3f crystalspace-0.98.4.20050224.ebuild 1958
-MD5 2fd054f3a0480cd1e34cff532b977afa crystalspace-0.99_pre20050518.ebuild 2232
 MD5 bec0edb0863c282510494dc014bbf750 files/digest-crystalspace-0.98.4 63
+MD5 dadfba3b28652426c1b1ff2cf91e07a9 files/digest-crystalspace-0.99_pre20050518 84
 MD5 bb4bd5565667c14a0d7377fda90db568 files/crystalspace-0.98.4-gl.patch 10653
 MD5 dc4db504020f9a21fe8e24ecd6ceac67 files/digest-crystalspace-0.98.4.20050224 83
-MD5 dadfba3b28652426c1b1ff2cf91e07a9 files/digest-crystalspace-0.99_pre20050518 84
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFC0AeiBXaUFmZvwyMRAn4uAKC0gxj2eXG0HeO7M3WxvPrsFE/1vACY2+yk
+NSVKLm9fr6lE1pU6uVaKkQ==
+=0ATv
+-----END PGP SIGNATURE-----
