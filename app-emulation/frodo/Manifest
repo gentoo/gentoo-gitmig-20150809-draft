@@ -4,11 +4,11 @@ Hash: SHA1
 MD5 eb32120a7d11c41692f9c079d1414a2a ChangeLog 792
 MD5 55f09e701fb1d63bf6cdd8e840bbb5cf files/digest-frodo-4.1 66
 MD5 628e1ba170ad4c5ef64e210f5782a5a5 files/frodo-4.1-gentoo.diff 2486
-MD5 1a8b6e7928bba7e3580167ab3592ead0 frodo-4.1.ebuild 2760
+MD5 f95c326edb8f7e456e487e1f7e2a07c7 frodo-4.1.ebuild 2753
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCz/KdI1lqEGTUzyQRAlBdAKC26o1j68hoTbHzkMduKHTnxWtYMQCgr67I
-xz2jAUJWZvYS9pVVJ74UpbU=
-=Eic9
+iD8DBQFCz/LKI1lqEGTUzyQRAhxYAJ93hE2Dqh9k30k4BPn9Yhz+V7Gj9wCfX5aH
+PMFTl/MzFW+wMtYKhOqh5ZI=
+=2+4f
 -----END PGP SIGNATURE-----
