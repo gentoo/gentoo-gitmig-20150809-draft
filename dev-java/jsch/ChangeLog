@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jsch
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.27 2005/05/27 00:03:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.28 2005/07/09 16:05:14 axxo Exp $
+
+  09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> -jsch-0.1.15.ebuild,
+  -jsch-0.1.16.ebuild, -jsch-0.1.17.ebuild, jsch-0.1.18.ebuild:
+  fix deps, and source useflag support, cleanups
 
   27 May 2005; Jan Brinkmann <luckyduck@gentoo.org> jsch-0.1.18.ebuild:
   stable on ppc
