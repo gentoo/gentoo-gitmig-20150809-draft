@@ -1,6 +1,16 @@
-MD5 4fc76f2283ad6467440d5162bb991f9b e-fancylauncher-0.7-r1.ebuild 831
-MD5 c6e70c2d76bd5ffc9459883af52187e8 e-fancylauncher-0.7.ebuild 732
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8fab7ed0b51be417680f9a3a18cafb88 ChangeLog 1026
-MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
+MD5 6ea184da7bb9dec9a33e5c659827a57f e-fancylauncher-0.7-r1.ebuild 802
+MD5 61b08136f8bf1c01398c547f8a12fbf5 e-fancylauncher-0.7.ebuild 702
 MD5 439d9c24f03c7cdb8d68ff7e707acf4f files/digest-e-fancylauncher-0.7 68
 MD5 439d9c24f03c7cdb8d68ff7e707acf4f files/digest-e-fancylauncher-0.7-r1 68
+MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/QKI1lqEGTUzyQRAl1jAKCse/CiS6C7LeiNUXvPZYKGBiPZswCgkxNC
+0xSy65xxdAp9dLydwOGdsPA=
+=vRr/
+-----END PGP SIGNATURE-----
