@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 eb32120a7d11c41692f9c079d1414a2a ChangeLog 792
-MD5 a99684340d90f3daf1b176c470e411ca frodo-4.1.ebuild 4252
 MD5 55f09e701fb1d63bf6cdd8e840bbb5cf files/digest-frodo-4.1 66
 MD5 628e1ba170ad4c5ef64e210f5782a5a5 files/frodo-4.1-gentoo.diff 2486
+MD5 1a8b6e7928bba7e3580167ab3592ead0 frodo-4.1.ebuild 2760
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/KdI1lqEGTUzyQRAlBdAKC26o1j68hoTbHzkMduKHTnxWtYMQCgr67I
+xz2jAUJWZvYS9pVVJ74UpbU=
+=Eic9
+-----END PGP SIGNATURE-----

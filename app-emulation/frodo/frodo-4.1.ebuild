@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.10 2005/04/24 11:12:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.11 2005/07/09 15:51:32 swegener Exp $
 
 inherit eutils
 
@@ -63,42 +63,42 @@ src_install() {
 }
 
 pkg_postinst() {
-einfo "                                                                     "
-einfo " READ THE DOCS!  The documentation can be found at:                  "
-einfo "   /usr/share/doc/${PN}-${PV}/html/                                  "
-einfo "                                                                     "
-einfo " Getting this program to work requires some experimentation with the "
-einfo " settings.  The three executables you can use are:                   "
-einfo "                                                                     "
-einfo "   Frodo   (normal)                                                  "
-einfo "   FrodoPC (faster)                                                  "
-einfo "   FrodoSC (slower than the other two, but most compatible)          "
-einfo "                                                                     "
-einfo " We recommend that you run FrodoSC with the following settings:      "
-einfo "                                                                     "
-einfo "   1.  Limit Speed = enabled                                         "
-einfo "   2.  Map / = enabled                                               "
-einfo "   3.  Emulate 1541 CPU (for copy-protected games)                   "
-einfo "   4.  Sprites, Sprite Collisions = enabled                          "
-einfo "   5.  SID Emulation = Digital                                       "
-einfo "   6.  SID Filters = enabled                                         "
-einfo "                                                                     "
-einfo " You will probably need to occasionally change these settings        "
-einfo " depending upon which programs you try to run, or you may need to run"
-einfo " Frodo or FrodoPC if your machine is too slow.                       "
-einfo "                                                                     "
-einfo " Most Commodore 64 applications load by first pointing to the D64    "
-einfo " file in preferences, then:                                          "
-einfo "      LOAD \"*\",8,1                                                 "
-einfo " then:                                                               "
-einfo "      RUN                                                            "
-einfo "                                                                     "
-einfo " Remember that the keyboard is mapped to the C64 layout.  So to type "
-einfo " the first command above you would use the following sequence:       "
-einfo "     LOAD [SHIFT-2][RIGHT-BRACKET][SHIFT-2],8,1                      "
-einfo "                                                                     "
-einfo "                                                                     "
-einfo " For a complete source of C64 programs, try visiting:                "
-einfo "   http://www.c64unlimited.net/                                      "
-einfo "                                                                     "
+	einfo
+	einfo " READ THE DOCS!  The documentation can be found at:"
+	einfo "   /usr/share/doc/${PF}/html/"
+	einfo
+	einfo " Getting this program to work requires some experimentation with the"
+	einfo " settings.  The three executables you can use are:"
+	einfo
+	einfo "   Frodo   (normal)"
+	einfo "   FrodoPC (faster)"
+	einfo "   FrodoSC (slower than the other two, but most compatible)"
+	einfo
+	einfo " We recommend that you run FrodoSC with the following settings:"
+	einfo
+	einfo "   1.  Limit Speed = enabled"
+	einfo "   2.  Map / = enabled"
+	einfo "   3.  Emulate 1541 CPU (for copy-protected games)"
+	einfo "   4.  Sprites, Sprite Collisions = enabled"
+	einfo "   5.  SID Emulation = Digital"
+	einfo "   6.  SID Filters = enabled"
+	einfo
+	einfo " You will probably need to occasionally change these settings"
+	einfo " depending upon which programs you try to run, or you may need to run"
+	einfo " Frodo or FrodoPC if your machine is too slow."
+	einfo
+	einfo " Most Commodore 64 applications load by first pointing to the D64"
+	einfo " file in preferences, then:"
+	einfo "      LOAD \"*\",8,1"
+	einfo " then:"
+	einfo "      RUN"
+	einfo
+	einfo " Remember that the keyboard is mapped to the C64 layout.  So to type"
+	einfo " the first command above you would use the following sequence:"
+	einfo "     LOAD [SHIFT-2][RIGHT-BRACKET][SHIFT-2],8,1"
+	einfo
+	einfo
+	einfo " For a complete source of C64 programs, try visiting:"
+	einfo "   http://www.c64unlimited.net/"
+	einfo
 }
