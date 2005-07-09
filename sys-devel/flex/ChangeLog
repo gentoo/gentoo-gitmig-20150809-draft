@@ -1,9 +1,13 @@
 # ChangeLog for sys-devel/flex
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.28 2005/02/15 06:21:40 kito Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.29 2005/07/09 23:36:48 vapier Exp $
 
-  15 Feb 2005; Kito <kito@gentoo.org> flex-2.5.4a-r6.ebuild:
-  ~ppc-macos keyword
+*flex-2.5.31 (09 Jul 2005)
+
+  09 Jul 2005; Mike Frysinger <vapier@gentoo.org>
+  -files/flex-2.5.31-yytext_ptr.patch, flex-2.5.4a-r6.ebuild,
+  +flex-2.5.31.ebuild, -flex-2.5.31-r1.ebuild:
+  Add flex-2.5.31 back in with Debian patchset #97921 by Martin Mokrejs.
 
 *flex-2.5.4a-r6 (20 Jan 2005)
 
@@ -20,12 +24,6 @@
   Fixing a very silly typo. I meant "bigcheck", not "bigtest". Sorry. Fixes
   bug #63697.
 
-  07 Oct 2004; Lina Pezzella <j4rg0n@gentoo.org> flex-2.5.4a-r5.ebuild:
-  Removed ~macos keyword Bug #65763
-
-   06 Sep 2004; Alexander Plank <alexander@gentoo.org> flex-2.5.4a-r5.ebuild:
-   add ~macos -- it overwrites apple's flex
-
   16 Sep 2004; <rmoss@gentoo.org> flex-2.5.4a-r5.ebuild:
   flex-2.5.4a was using a broken, irritatingly short version of the testsuite.
   Adding "make bigcheck" in the previously nonexistent src_test function fixes
@@ -38,72 +36,14 @@
   take out the emake || make bit.  Works for me with -j and no verified
   bug reports exist; tidy
 
-  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> flex-2.5.23.ebuild,
-  flex-2.5.31-r1.ebuild, flex-2.5.31.ebuild, flex-2.5.4a-r5.ebuild:
-  virtual/glibc -> virtual/libc
-
-  23 Jun 2004; Aron Griffis <agriffis@gentoo.org> flex-2.5.23.ebuild,
-  flex-2.5.31-r1.ebuild, flex-2.5.31.ebuild:
-  QA - fix use invocation
-
-  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> flex-2.5.31-r1.ebuild:
-  Add inherit eutils
-
-*flex-2.5.31-r1 (17 Oct 2003)
-
-  17 Oct 2003; Martin Holzer <mholzer@gentoo.org> flex-2.5.31-r1.ebuild:
-  adding fix. Closes #31240.
-
-  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> flex-2.5.4a-r5.ebuild:
-  set stable on sparc
-
-*flex-2.5.31 (18 Apr 2003)
-
-  18 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
-  flex-2.5.23.ebuild, flex-2.5.31.ebuild, flex-2.5.4a-r5.ebuild:
-  Version bumped. Changed SRC_URI to gentoo-mirrors.
-
-  20 Feb 2003; Zach Welch <zwelch@gentoo.org> flex-2.5.4a-r5.ebuild :
-  Added arm to keywords.
-
-  08 Feb 2003; Guy Martin <gmsoft@gentoo.org> flex-2.5.4a-r5.ebuild :
-  Added hppa to keywords.
-
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*flex-2.5.23 (18 Nov 2002)
-
-  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> flex-2.5.23.ebuild:
-  homepage syntax fix thanks to: Frantz Dhin <tragedy_rm@hotmail.com> in bug
-  #18145
-
-  01 Dec 2002; Seemant Kulleen <seemant@gentoo.org> flex-2.5.23.ebuild
-  flex-2.5.4a-r5.ebuild :
-
-  emake -> emake || make.  Closes bug #11446 by bartelt@gentoo.org (Ulf
-  Bartelt)
-
-  18 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
-
-  Update version.
-
-*flex-2.5.22 (21 Oct 2002)
-
-  21 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
-
-  Update version thanks to new URL from Nicholas Wourms <nwourms@netscape.net>.
 
 *flex-2.5.4a-r5 (13 Oct 2002)
 
   13 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
-
   Add various Redhat patches to make it more gcc3 friendly.  Fix
   form in a few places.
 
 *flex-2.5.4a-r4 (1 Feb 2002)
-
-  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
-  Added mips to keywords
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
