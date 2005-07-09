@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r2.ebuild,v 1.6 2005/04/26 01:44:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r2.ebuild,v 1.7 2005/07/09 16:08:47 axxo Exp $
 
 inherit java-pkg eutils
-
 
 MY_P=${PN}-j_${PV//./_}
 DESCRIPTION="XSLT processor"
@@ -12,18 +11,19 @@ SRC_URI="mirror://apache/xml/xalan-j/source/${MY_P}-src.tar.gz
 		doc? ( mirror://gentoo/${P}-docs.tar.bz2 )"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 sparc ppc64 amd64"
+KEYWORDS="x86 ~ppc sparc ppc64 amd64"
 IUSE="doc jikes source"
-DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-core-1.5.2
-	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jdk-1.3
+RDEPEND="=virtual/jdk-1.4*
 	dev-java/javacup
 	dev-java/bcel
 	>=dev-java/jakarta-regexp-1.3-r2
 	=dev-java/bsf-2.3*
 	>=dev-java/xerces-2.6.2-r1"
+DEPEND="=virtual/jdk-1.4*
+	>=dev-java/ant-core-1.5.2
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )
+	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -39,7 +39,6 @@ src_unpack() {
 	java-pkg_jar-from bsf-2.3
 	#java-pkg_jar-from jtidy
 	#java-pkg_jar-from jlex jlex.jar JLex.jar
-	cd ${S}
 }
 
 src_compile() {
