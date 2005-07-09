@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.31 2005/07/09 01:08:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.32 2005/07/09 12:48:54 ka0ttic Exp $
+
+  09 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> files/postinstall-en.txt:
+  Update postinstall-en.txt with upgrade information from upstream's upgrade doc.
 
   09 Jul 2005; Jason Wever <weeve@gentoo.org> phpwebsite-0.10.1-r1.ebuild:
   Stable on SPARC wrt security bug #97461.
