@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r6.ebuild,v 1.2 2005/07/01 23:03:46 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r6.ebuild,v 1.3 2005/07/09 16:06:00 axxo Exp $
 
 inherit java-pkg
 
@@ -12,13 +12,16 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="JPython"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 ppc64"
-IUSE="readline jikes doc"
+IUSE="readline jikes source doc"
 # servlet
 
-DEPEND=">=virtual/jdk-1.2
+RDEPEND=">=virtual/jre-1.2
 	readline? ( >=dev-java/libreadline-java-0.8.0 )
 	jikes? ( >=dev-java/jikes-1.18 )"
 #	servlet? ( >=net-www/tomcat-5.0 )
+DEPEND=">=virtual/jdk-1.2
+	source? ( app-arch/zip )
+	${RDEPEND}"
 
 src_compile() {
 	javac=$(java-config -c)
@@ -26,28 +29,28 @@ src_compile() {
 		java=$(which jikes)
 	fi
 
-	local cp=".:${CLASSPATH}"
+	local cp="."
 	local exclude=""
 
 	if use readline ; then
-		cp=${cp}:$(java-config -p libreadline-java)
+		cp=${cp}:$(java-pkg_getjars libreadline-java)
 	else
 		exclude="${exclude} ! -name ReadlineConsole.java"
 	fi
 
 	#if use servlet; then
-	#	cp=${cp}:$(java-config -p servlet)
+	#	cp=${cp}:$(java-pkg_getjars servlet)
 	#else
 		exclude="${exclude} ! -name PyServlet.java"
 	#fi
 
 	find org -name "*.java" ${exclude} | xargs ${javac} -source 1.3 -classpath ${cp} -nowarn || die "Failed to compile"
 
-	find org -name "*.class" | xargs jar cf jython-${PV}.jar
+	find org -name "*.class" | xargs jar cf ${PN}.jar
 }
 
 src_install() {
-	java-pkg_newjar jython-${PV}.jar ${PN}.jar || die "install failed"
+	java-pkg_dojar ${PN}.jar
 
 	dodoc README.txt NEWS ACKNOWLEDGMENTS
 	use doc && java-pkg_dohtml -A .css .jpg .gif -r Doc/*
@@ -57,12 +60,14 @@ src_install() {
 	dodir /usr/share/jython/cachedir
 	chmod a+rw ${D}/usr/share/jython/cachedir
 
-	cp -R Lib ${D}/usr/share/${PN}/
-	cp -R Demo ${D}/usr/share/${PN}/
+	rm Demo/jreload/example.jar
+	insinto /usr/share/${PN}
+	doins -r Lib Demo registry
 
-	dodir /usr/share/${PN}/tools/
-	cp -R Tools/* ${D}/usr/share/${PN}/tools/
-	cp registry ${D}/usr/share/${PN}/
+	insinto /usr/share/${PN}/tools
+	doins -r Tools/*
+
+	use source && java-pkg_dosrc com org
 }
 
 pkg_postinst() {
