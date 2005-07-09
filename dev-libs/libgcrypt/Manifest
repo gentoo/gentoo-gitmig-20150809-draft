@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1dbba662c6f8357c95685e3748311085 ChangeLog 7948
+MD5 3852236bcbbf1c13739be899bbe130fb ChangeLog 8048
 MD5 d7afc8024da44bc7a81cf54e540323f5 libgcrypt-1.1.12.ebuild 1135
-MD5 8e07d5006c7ef4ce1d8befd01c7d6647 libgcrypt-1.2.1.ebuild 1047
-MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
 MD5 208bae1be4306e0e45edeebf65eaabfb libgcrypt-1.1.94.ebuild 1003
 MD5 3b3e797e3cbd4c393d91f4902efb8dfe libgcrypt-1.2.0.ebuild 1061
+MD5 f91cab317fa6caff8dbfbf2c089ba1c7 libgcrypt-1.2.1.ebuild 1041
+MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
 MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
 MD5 9f546283fe69d56096f3707d52a4668a files/digest-libgcrypt-1.1.94 68
 MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0 67
 MD5 1c871fcf508869ff09d46782655c3ca5 files/digest-libgcrypt-1.2.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCymREmdTrptrqvGERAmXkAJ4p8pk3vQYMun32XSVkBi681fzlLACfaWo5
-ZxVLrViiIFLAZiRAQ/+Uj70=
-=aAoZ
------END PGP SIGNATURE-----
