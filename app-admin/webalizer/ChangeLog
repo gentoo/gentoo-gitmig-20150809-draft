@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.37 2005/07/07 22:26:03 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.38 2005/07/09 04:43:37 smithj Exp $
+
+*webalizer-2.01.10-r10 (09 Jul 2005)
+
+  09 Jul 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/webalizer-db4-with-geoip.patch, +files/webalizer-language-list.txt,
+  +files/webalizer-readability.patch, -webalizer-2.01.10-r9.ebuild,
+  +webalizer-2.01.10-r10.ebuild:
+  really discusting small hack to get non-english natural language suppor for
+  #48449; fixed patching problem with USE=geoip for #98304; update to the
+  output.c (now -readability patch for #78182
 
   07 Jul 2005; Renat Lumpau <rl03@gentoo.org>
   files/2.01.10/apache.webalizer, files/2.01.10/reconfig,
