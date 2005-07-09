@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.7-r2.ebuild,v 1.6 2005/07/06 15:27:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.7-r2.ebuild,v 1.7 2005/07/09 14:05:24 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozilla-launcher mozconfig makeedit multilib
 
-IUSE="crypt gnome java ldap mozcalendar mozdevelop moznocompose moznomail mozsvg postgres ssl"
+IUSE="crypt gnome java ldap mozcalendar mozdevelop moznocompose moznoirc moznomail mozsvg mozxmlterm postgres ssl"
 
 EMVER="0.91.0"
 IPCVER="1.1.2"
