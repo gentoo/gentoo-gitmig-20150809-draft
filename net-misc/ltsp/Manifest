@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c195af92c9744c0d8a699e59c79d488 ltsp-4.1.1.ebuild 6974
-MD5 38a539a6855e262ecf824434ad03423f ltsp-4.1-r1.ebuild 5661
 MD5 035bf0f7c128eed40eabbdd74304daea ChangeLog 7868
-MD5 8470ac6202a79e428be0ed6867af12e8 metadata.xml 574
-MD5 de9c3f040ef3ca39100ac7e5e13eaf67 files/ltsp-4.1.1-usb-config.patch 285
-MD5 723d89c2799929bdb15335624c5d304c files/digest-ltsp-4.1.1 4863
-MD5 0f37dcb7969240b88c680e0569385e2d files/eb-5.0.9-eepro100.lzpxe 16426
 MD5 e54bcb2c2c658558ede4b99c5d1a9a82 files/digest-ltsp-4.1-r1 4466
+MD5 723d89c2799929bdb15335624c5d304c files/digest-ltsp-4.1.1 4863
 MD5 98c1e1d5fd02a42ec01348e7525e8108 files/eb-5.0.9-3c905c-tpo.lzpxe 17191
+MD5 0f37dcb7969240b88c680e0569385e2d files/eb-5.0.9-eepro100.lzpxe 16426
 MD5 b716ae3544e8ac3e53f315a1e95f27a0 files/eb-5.0.9-rtl8139.lzpxe 16054
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCpV07evY57Fted3ERAtL4AJ9F+NGS7C2v385l34QVWH3jmtQrqQCeLGUx
-BtKFVuHKbSklLtjl1wdNoAU=
-=fJxr
------END PGP SIGNATURE-----
+MD5 de9c3f040ef3ca39100ac7e5e13eaf67 files/ltsp-4.1.1-usb-config.patch 285
+MD5 929072b6724c853e72fbcc4f55a60c75 ltsp-4.1-r1.ebuild 5641
+MD5 4f268776693efdcf64436fe3335d9d7b ltsp-4.1.1.ebuild 6936
+MD5 8470ac6202a79e428be0ed6867af12e8 metadata.xml 574
