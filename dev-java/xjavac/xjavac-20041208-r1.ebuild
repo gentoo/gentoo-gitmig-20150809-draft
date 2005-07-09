@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208.ebuild,v 1.7 2005/05/18 11:11:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208-r1.ebuild,v 1.1 2005/07/09 13:04:27 axxo Exp $
 
 inherit java-pkg
 
@@ -31,4 +31,6 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
+	dodir /usr/share/ant-core/lib/
+	dosym /usr/share/${PN}-${SLOT}/lib/${PN}.jar /usr/share/ant-core/lib/
 }
