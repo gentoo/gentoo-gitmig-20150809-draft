@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r2.ebuild,v 1.9 2005/07/07 00:15:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r2.ebuild,v 1.10 2005/07/09 21:20:12 humpback Exp $
 
 inherit eutils
 
@@ -20,6 +20,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/qca-pathfix.patch || die "bad patch"
+	#This is needed just in bsd, but make no harm in linux
+	epatch ${FILESDIR}/qca-1.0-fbsd.patch
 }
 
 src_compile() {

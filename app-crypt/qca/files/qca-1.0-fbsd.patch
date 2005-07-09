@@ -1,0 +1,33 @@
+diff -x '*~' -ur qca-1.0/configure qca-1.0-fixed/configure
+--- qca-1.0/configure	2003-12-10 01:06:43.000000000 +0100
++++ qca-1.0-fixed/configure	2005-05-24 18:03:08.912751344 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/bin/bash
+ 
+ show_usage() {
+ cat <<EOT
+@@ -17,12 +17,12 @@
+ while [ $# -gt 0 ]; do
+ 	case "$1" in
+ 		--prefix=*)
+-			PREFIX=`expr "${1}" : "--prefix=\(.*\)"`
++			PREFIX="${1/--prefix=/}"
+ 			shift
+ 			;;
+ 
+ 		--qtdir=*)
+-			QTDIR=`expr "${1}" : "--qtdir=\(.*\)"`
++			QTDIR="${1/--qtdir=/}"
+ 			shift
+ 			;;
+ 
+@@ -76,7 +76,7 @@
+ 		echo Warning: qmake not in \$QTDIR/bin/qmake
+ 		echo trying to find it in \$PATH
+ 	fi
+-	qm=`type -p qmake`
++	qm=`which qmake`
+ 	if [ -x "$qm" ]; then
+ 		if [ "$QC_DEBUG" = "Y" ]; then
+ 			echo qmake found in $qm
