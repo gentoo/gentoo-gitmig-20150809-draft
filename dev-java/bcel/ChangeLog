@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.28 2005/04/02 18:29:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.29 2005/07/09 15:59:30 axxo Exp $
+
+  09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> bcel-5.1-r1.ebuild:
+  fix deps, small cleanups
 
   02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> bcel-5.1-r1.ebuild,
   -bcel-5.1.ebuild:
