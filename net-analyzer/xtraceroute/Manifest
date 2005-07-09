@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7918b606a1e5c72d77ef151034d54d06 xtraceroute-0.9.1.ebuild 1764
 MD5 a08e7aca9b33945d1643524f501ffd00 ChangeLog 1875
-MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 890ee7981ab95097dfc101e8880bd66a files/digest-xtraceroute-0.9.1 130
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmlqFntT9W3vfTuoRAkwRAKCwGxVyObdj36xehUN+If+mMPK4hgCghv0J
-qEWMIs5D2OJ8tQMNPAgyWNg=
-=r4zB
------END PGP SIGNATURE-----
+MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
+MD5 3894d0a7f51f1cfa53e33ae67e83899c xtraceroute-0.9.1.ebuild 1762

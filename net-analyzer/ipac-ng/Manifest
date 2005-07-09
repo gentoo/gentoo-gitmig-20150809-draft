@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aee1a48f97b4806719b17d15a98c1d16 ipac-ng-1.30.ebuild 2452
-MD5 25f9bab976571d859ab637270c1bce63 ipac-ng-1.31-r1.ebuild 2677
 MD5 a3382c90b2408e33938e3460de5c52d5 ChangeLog 3042
-MD5 d21717f5748c9774708f37fd538eca26 metadata.xml 286
-MD5 7cb4d6c288d321e38309dc5049ee189e ipac-ng-1.31.ebuild 2597
-MD5 b2016c3272e9dd9c2b48238bb07efa3a files/ipac-ng-1.31-iptables.patch 389
-MD5 aff4fe032f6693f676350c45e7e78261 files/ipac.conf.1.30 1820
-MD5 39c34f5fc4e8f1edc81459ec0895f59d files/digest-ipac-ng-1.31-r1 65
 MD5 c6fde5842858e98a063e78223644e191 files/digest-ipac-ng-1.30 65
 MD5 39c34f5fc4e8f1edc81459ec0895f59d files/digest-ipac-ng-1.31 65
+MD5 39c34f5fc4e8f1edc81459ec0895f59d files/digest-ipac-ng-1.31-r1 65
+MD5 b2016c3272e9dd9c2b48238bb07efa3a files/ipac-ng-1.31-iptables.patch 389
 MD5 72162ed7957cc82168b4870d26cf66fe files/ipac-ng.cron.1.30 216
-MD5 dba879e7b8ccdcae27d64ceb4ba54f9b files/rules.conf.1.30 1046
 MD5 983ee78164ba492b7bc558418adb0739 files/ipac-ng.rc.1.30 897
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCMXXdEZCkKN40op4RAihoAJoCh5IMOIBlVF53wDeek5WPiNEJ4wCgoe98
-V9vaXOkLd0Y41B8bslD72xw=
-=zZHy
------END PGP SIGNATURE-----
+MD5 aff4fe032f6693f676350c45e7e78261 files/ipac.conf.1.30 1820
+MD5 dba879e7b8ccdcae27d64ceb4ba54f9b files/rules.conf.1.30 1046
+MD5 0440d5d1752a968fc89ee147931e6823 ipac-ng-1.30.ebuild 2443
+MD5 d060e69170dbf16cf3ce008c9da18ca4 ipac-ng-1.31-r1.ebuild 2672
+MD5 a997dfb8bac438d50f75fa2f382d5728 ipac-ng-1.31.ebuild 2592
+MD5 d21717f5748c9774708f37fd538eca26 metadata.xml 286

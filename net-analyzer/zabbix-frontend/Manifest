@@ -1,4 +1,4 @@
-MD5 12059a320bce32f5d8fc7be8fd17bda8 zabbix-frontend-1.1_alpha7.ebuild 749
 MD5 9d02184071065d0fabbf7937731c0f05 ChangeLog 502
-MD5 00648db30cf75f155ed226e0d42c8626 metadata.xml 341
 MD5 4990ea7476a1a66671f7faf9b1c93719 files/digest-zabbix-frontend-1.1_alpha7 68
+MD5 00648db30cf75f155ed226e0d42c8626 metadata.xml 341
+MD5 ac8b9abe1f7c0c1aea3db53cb97da6e4 zabbix-frontend-1.1_alpha7.ebuild 747

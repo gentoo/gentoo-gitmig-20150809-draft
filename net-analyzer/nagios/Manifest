@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7ec559c7cb5d0954aa6cf65b8dfb9a09 ChangeLog 3118
-MD5 2fe8397c985358e1b106f90402557734 nagios-2.0b_p1.ebuild 796
-MD5 a1ece421fae3536d1e5dd9b5ecb0215d metadata.xml 928
-MD5 0d3f02debc29e51989e008fc3cd3d2bd nagios-1.2.ebuild 862
-MD5 6fad00a5ee8fcc067eafb398e387b758 nagios-2.0b_p2.ebuild 796
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nagios-2.0b_p1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nagios-1.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nagios-2.0b_p1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nagios-2.0b_p2 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCHaOlmdTrptrqvGERAgODAJ96uh9s/oRJN/pGSsGGeV2DFiYEkwCeI8ej
-RW+CbL0anat+CBLqGq3VIaI=
-=1UMA
------END PGP SIGNATURE-----
+MD5 a1ece421fae3536d1e5dd9b5ecb0215d metadata.xml 928
+MD5 996ab43c50ed7089004435cc5443c8f6 nagios-1.2.ebuild 853
+MD5 1d6daabdac7e49f65182baf6166a6ca6 nagios-2.0b_p1.ebuild 787
+MD5 8af36a42df1820acb8ae83058471fee4 nagios-2.0b_p2.ebuild 787
