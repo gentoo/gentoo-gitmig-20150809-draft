@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.33.1.ebuild,v 1.3 2005/07/07 00:57:09 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.33.1.ebuild,v 1.4 2005/07/09 18:55:56 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -68,20 +68,20 @@ pkg_postinst() {
 
 	gnome2_pkg_postinst
 
-	echo ""
+	echo
 	einfo "gDesklets Displays are required before the library"
-	einfo "will be usable for you. The displays are found in - "
+	einfo "will be usable for you. The displays are found in -"
 	einfo "           x11-plugins/desklet-*"
-	echo ""
+	echo
 	einfo "Next you'll need to start gdesklets using"
 	einfo "           /usr/bin/gdesklets start"
 	einfo "If you're using GNOME this can be done conveniently"
 	einfo "through Applications->Accessories->gDesklets"
-	echo ""
-	ewarn "If you are migrating from a previous version of "
-	ewarn "gDesklets, please convert your settings with - "
-	ewarn "         /usr/bin/gdesklets-migration-tool "
-	echo ""
+	echo
+	ewarn "If you are migrating from a previous version of"
+	ewarn "gDesklets, please convert your settings with -"
+	ewarn "         /usr/bin/gdesklets-migration-tool"
+	echo
 
 	# This stuff is important, especially the migration-tool
 	# information which flies by on an update.

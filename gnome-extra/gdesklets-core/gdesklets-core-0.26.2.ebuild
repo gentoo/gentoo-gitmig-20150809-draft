@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.26.2.ebuild,v 1.3 2005/01/23 02:30:42 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.26.2.ebuild,v 1.4 2005/07/09 18:55:56 swegener Exp $
 
 inherit gnome2
 
@@ -52,17 +52,17 @@ pkg_postinst() {
 
 	gnome2_pkg_postinst
 
-	echo ""
+	echo
 	einfo "gDesklets Displays are required before the library"
-	einfo "will be usable for you. The displays are found in - "
+	einfo "will be usable for you. The displays are found in -"
 	einfo "           x11-plugins/desklet-*"
 	einfo "Please install at least one of these before using"
-	einfo "gDesklets. Next, you'll need to run 'gdesklets' "
-	einfo "and then add the Displays from - "
+	einfo "gDesklets. Next, you'll need to run 'gdesklets'"
+	einfo "and then add the Displays from -"
 	einfo "         /usr/share/gdesklets/Displays"
 	einfo "If you're using GNOME this can be done conveniently"
 	einfo "through Applications->Accessories menu"
-	echo ""
+	echo
 
 }
 
