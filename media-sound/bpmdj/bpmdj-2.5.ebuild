@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.5.ebuild,v 1.3 2004/10/30 10:49:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.5.ebuild,v 1.4 2005/07/09 15:26:59 swegener Exp $
 
 inherit toolchain-funcs
 
@@ -26,7 +26,7 @@ src_compile() {
 	addwrite "${QTDIR}/etc/settings"
 
 	cp defines.gentoo defines
-	make ${MAKEOPTS} CPP=$(tc-getCXX) CC=$(tc-getCC) VARTEXFONTS=${T}/fonts || die
+	emake CPP=$(tc-getCXX) CC=$(tc-getCC) VARTEXFONTS=${T}/fonts || die
 }
 
 src_install () {
