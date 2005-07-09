@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f66b70950879378d85d3b9371eb2725 metadata.xml 168
 MD5 f5e6f85218f7692ecee87c9b17f69b19 fribidi-0.10.4.ebuild 827
 MD5 867ea60c59eb802898645872584065aa ChangeLog 2186
 MD5 9a610e878fe5f7a2a3e5a855a54b41a5 files/digest-fribidi-0.10.4 67
 MD5 40046ccf090ce4962be3ac75a4329013 files/fribidi-macos.patch 437
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzyiIgIKl8Uu19MoRAnL1AJ9upSLUawMVQyH2PJGevWaIIV59ygCfRM7y
+Y20pa81Iv1rlKkY+xzAZ4u8=
+=VKKe
+-----END PGP SIGNATURE-----

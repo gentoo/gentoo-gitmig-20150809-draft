@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6a1ff508f13e8546aa046fa819ce26bc libebml-0.7.2.ebuild 1179
 MD5 6b308fc85a33d9907d37aa76492f8df4 libebml-0.7.1-r1.ebuild 1203
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
@@ -22,3 +25,10 @@ MD5 d8b01853e6ff493c07b1126436c096b7 files/digest-libebml-0.6.3 65
 MD5 80f94afa7c615d7c39e782c3766177ea files/digest-libebml-0.7.0 65
 MD5 78a2d79355d9331b5c2923c9c4538679 files/digest-libebml-0.7.2 65
 MD5 505ac5c579900c6a541ced0d9cc9442e files/libebml-shared.patch 1880
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzykrgIKl8Uu19MoRAsaRAKCEIHY1uhMHnXDT7ERpti/39ryeCACZAdAg
+JcT1ESrrVZ2zXrnItBWYvw0=
+=t8+I
+-----END PGP SIGNATURE-----
