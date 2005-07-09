@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10.ebuild,v 1.4 2005/07/08 10:43:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10.ebuild,v 1.5 2005/07/09 16:10:44 axxo Exp $
 
 inherit java-pkg
 
@@ -29,10 +29,9 @@ src_unpack() {
 	rm build/*/*.jar
 }
 src_compile() {
-	local antflags="-lib $(java-config -p xerces-2) compile"
+	local antflags="-lib $(java-pkg_getjars xerces-2) compile"
 	use jikes && antflags="-Dbuild.compiler=jikes ${antflags}"
 	use doc && antflags="${antflags} api"
-
 	ant ${antflags} || die "Compilation failed"
 }
 

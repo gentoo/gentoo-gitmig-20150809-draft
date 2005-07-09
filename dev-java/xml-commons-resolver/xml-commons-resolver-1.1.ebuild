@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/xml-commons-resolver-1.1.ebuild,v 1.13 2005/05/30 19:06:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/xml-commons-resolver-1.1.ebuild,v 1.14 2005/07/09 16:09:47 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="xml-commons is focussed on common code and guidelines for xml proje
 HOMEPAGE="http://xml.apache.org/commons/"
 SRC_URI="mirror://apache/xml/commons/${P}.tar.gz"
 DEPEND=">=virtual/jdk-1.3
-		dev-java/ant
+		dev-java/ant-core
 		source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
@@ -35,7 +35,5 @@ src_install() {
 	dodoc KEYS
 	use doc && java-pkg_dohtml -r docs/*
 
-	if use source; then
-		java-pkg_dosrc ${S}/src/*
-	fi
+	use source && java-pkg_dosrc ${S}/src/*
 }
