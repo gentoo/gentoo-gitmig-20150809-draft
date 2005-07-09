@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r3.ebuild,v 1.13 2005/03/28 23:04:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r3.ebuild,v 1.14 2005/07/09 19:44:57 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -24,7 +24,7 @@ pkg_setup() {
 		einfo "WARNING: 3rd party extensions has been enabled."
 		einfo "This means that iptables will use your currently installed"
 		einfo "kernel in /usr/src/linux as headers for iptables."
-		einfo ""
+		einfo
 		einfo "You may have to patch your kernel to allow iptables to build."
 		einfo "Please check http://cvs.iptables.org/patch-o-matic-ng/updates/ for patches"
 		einfo "for your kernel."
@@ -160,13 +160,13 @@ pkg_postinst() {
 	einfo "rules stored in /var/lib/iptables/rules-save"
 	use ipv6 >/dev/null && einfo "and /var/lib/ip6tables/rules-save"
 	einfo "This location can be changed in /etc/conf.d/iptables"
-	einfo ""
+	einfo
 	einfo "If you are using the iptables initsscript you should save your"
 	einfo "rules using the new iptables version before rebooting."
-	einfo ""
+	einfo
 	einfo "If you are upgrading to a >=2.4.21 kernel you may need to rebuild"
 	einfo "iptables."
-	einfo ""
+	einfo
 	ewarn "!!! ipforwarding is now not a part of the iptables initscripts."
 	einfo "Until a more permanent solution is implemented adding the following"
 	einfo "to /etc/conf.d/local.start will enable ipforwarding at bootup:"

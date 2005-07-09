@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.19 2005/03/09 10:16:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.20 2005/07/09 19:44:57 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -85,10 +85,10 @@ pkg_postinst() {
 	einfo "This package now includes an initscript which loads and saves"
 	einfo "rules stored in /var/lib/iptables/rules-save"
 	einfo "This location can be changed in /etc/conf.d/iptables"
-	einfo ""
+	einfo
 	einfo "If you are using the iptables initsscript you should save your"
 	einfo "rules using the new iptables version before rebooting."
-	einfo ""
+	einfo
 	einfo "If you are upgrading to a >=2.4.21 kernel you may need to rebuild"
 	einfo "iptables."
 }
