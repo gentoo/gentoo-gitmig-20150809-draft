@@ -1,8 +1,18 @@
-MD5 9236f23e7ccb7fe8cec20c2c5ca5e9ec kio-locate-0.3.4.ebuild 538
-MD5 445c22bab8c1197e8bfcd8e001ff9906 kio-locate-0.3.0.ebuild 545
-MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 81403338751d0c91f395381dc7a1ee4d ChangeLog 1834
-MD5 d82f192ea99ebeff919b54808fe71568 kio-locate-0.3.2.ebuild 518
 MD5 3598fca50edc709a2779c2071cd16499 files/digest-kio-locate-0.3.0 68
-MD5 149ef0ef857ecaa5596a4efc341027a9 files/digest-kio-locate-0.3.4 68
 MD5 71bcf1693aaaf719d22d2f8edec1cd47 files/digest-kio-locate-0.3.2 68
+MD5 149ef0ef857ecaa5596a4efc341027a9 files/digest-kio-locate-0.3.4 68
+MD5 70ca6d062b65398e267169612f671da9 kio-locate-0.3.0.ebuild 519
+MD5 d82f192ea99ebeff919b54808fe71568 kio-locate-0.3.2.ebuild 518
+MD5 9236f23e7ccb7fe8cec20c2c5ca5e9ec kio-locate-0.3.4.ebuild 538
+MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz++gI1lqEGTUzyQRAohLAKCjRXgwo5hFCPHg4tJFPI/8kCTZXgCfa3at
+x1M7Uc7ed3BpQlN4RFRvySw=
+=Dnls
+-----END PGP SIGNATURE-----
