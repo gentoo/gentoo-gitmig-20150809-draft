@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.12 2005/02/09 00:23:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.13 2005/07/09 17:08:12 swegener Exp $
 
 inherit eutils
 
@@ -125,22 +125,22 @@ pkg_postinst() {
 	einfo "As of fluxbox 0.9.10-r3, we are using an improved system for"
 	einfo "handling styles in the menu. To take advantage of this, use"
 	einfo "the following for your menu styles section:"
-	einfo " "
+	einfo
 	einfo "    [submenu] (Styles) {Select a Style}"
 	einfo "        [include] (/usr/share/fluxbox/menu.d/styles/)"
 	einfo "    [end]"
-	einfo " "
+	einfo
 	einfo "If you use fluxbox-generate_menu or the default global fluxbox"
 	einfo "menu file, this will already be present."
-	einfo " "
+	einfo
 	if has_version '<x11-wm/fluxbox-0.9.10-r3' ; then
 		ewarn "You must restart fluxbox before using the [include] /directory/"
 		ewarn "feature if you are upgrading from an older fluxbox!"
-		ewarn " "
+		ewarn
 	fi
-	ewarn "Be warned that anything involving XComposite is extremely "
-	ewarn "experimental. Please don't report bugs unless they also occur "
+	ewarn "Be warned that anything involving XComposite is extremely"
+	ewarn "experimental. Please don't report bugs unless they also occur"
 	ewarn "with XComposite disabled."
-	ewarn " "
+	ewarn
 	epause
 }
