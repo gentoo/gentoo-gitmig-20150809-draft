@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.24-r10.ebuild,v 1.4 2005/02/14 16:25:55 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.24-r10.ebuild,v 1.5 2005/07/09 18:05:52 swegener Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -70,7 +70,7 @@ pkg_postinst() {
 	ewarn "please, take a look at >=openmosix-sources-2.4.28"
 	einfo
 
-	echo " "
+	echo
 
 	einfo
 	ewarn "using this obsoleted and unsupported sources you are always"
