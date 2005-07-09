@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r2.ebuild,v 1.3 2005/06/06 14:59:16 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r2.ebuild,v 1.4 2005/07/09 18:52:12 swegener Exp $
 
 inherit eutils gnuconfig toolchain-funcs
 
@@ -104,13 +104,13 @@ src_install() {
 pkg_postinst() {
 	einfo "Note the special license on cdrecord/cdrecord.c starting from line 4648."
 	if use ppc-macos ; then
-		einfo ""
-		einfo "Darwin/OS X use the following device names: "
-		einfo ""
-		einfo "CD burners: (probably) ./cdrecord dev=IOCompactDiscServices "
-		einfo ""
-		einfo "DVD burners: (probably) ./cdrecord dev=IODVDServices "
-		einfo ""
+		einfo
+		einfo "Darwin/OS X use the following device names:"
+		einfo
+		einfo "CD burners: (probably) ./cdrecord dev=IOCompactDiscServices"
+		einfo
+		einfo "DVD burners: (probably) ./cdrecord dev=IODVDServices"
+		einfo
 	else
 	echo
 	einfo "The command line option 'dev=/dev/hdX' (X is the name of your drive)"
