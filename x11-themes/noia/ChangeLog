@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/noia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.16 2005/01/10 14:53:39 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.17 2005/07/09 23:08:24 weeve Exp $
+
+  09 Jul 2005; Jason Wever <weeve@gentoo.org> noia-1.0.ebuild:
+  Added ~sparc keyword.
 
   10 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org> noia-1.0.ebuild:
   Added to ~amd64, bug #71047
