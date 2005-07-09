@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.1.ebuild,v 1.4 2005/05/24 18:48:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/cl-mcclim-0.9.1.ebuild,v 1.5 2005/07/09 16:13:34 swegener Exp $
 
 inherit common-lisp elisp eutils
 
@@ -30,7 +30,7 @@ CLPACKAGE="mcclim"
 SITEFILE=${FILESDIR}/50mcclim-gentoo.el
 ELISP_SOURCES="Tools/Emacs/indent-clim.el"
 
-S=${WORKDIR}/${PN}-${PV}.orig
+S=${WORKDIR}/${P}.orig
 
 src_unpack() {
 	unpack ${A}
