@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4174 2005/07/09 09:22:45 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4175 2005/07/09 13:32:46 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -225,10 +225,6 @@ sys-libs/nss-mysql
 # 9/10 times, it'll work, the other time it'll either segfault,
 # or emit a syntax error in /etc/auditd.rules .. *hrmph*
 >=sys-process/audit-0.9.1
-
-# Tim Yamin <plasmaroo@gentoo.org> (3 Jun 2005)
-# Masked for testing
->sys-kernel/genkernel-3.1.9
 
 # Leonardo Boshell <leonardop@gentoo.org> (31 May 2005)
 # Masked for testing, it includes an experimental patch to make Gtk+
