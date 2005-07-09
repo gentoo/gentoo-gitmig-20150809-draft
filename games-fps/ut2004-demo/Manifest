@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aa4833a0796469da854449dbadc09303 ChangeLog 2793
 MD5 7339313ef9ff4f1f6da1972ab63a2c2e files/digest-ut2004-demo-3334 71
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 6610ebf0ebede58aad741591becb9af2 ut2004-demo-3334.ebuild 1948
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0Ba+I1lqEGTUzyQRAuI1AJ9vc2ji8SPdiSKtUP4k6zV8BC1d1QCfXOU1
+qdmKB7vn0ZNQ4ShmdUiuotw=
+=ufzp
+-----END PGP SIGNATURE-----
