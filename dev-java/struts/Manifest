@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26dee5f66132ef4a1bc88772c209d86e struts-1.1-r3.ebuild 2242
-MD5 897f19e87e33a40d2f85a4a3f19143e0 struts-1.2.4-r1.ebuild 2646
-MD5 40e7a5fca1abfe86d7e87cbd99ac9198 struts-1.2.2-r2.ebuild 2223
 MD5 c4ce027ead2d958b9fc4b0039d9aa047 ChangeLog 3350
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 238ad3b803c15bc9e2598110b432335a files/digest-struts-1.1-r3 75
 MD5 ca49a9860e1c5de4c613a8209e388c41 files/digest-struts-1.2.2-r2 77
 MD5 762b50289a349b2d9dad8b763f5186a0 files/digest-struts-1.2.4-r1 78
-MD5 238ad3b803c15bc9e2598110b432335a files/digest-struts-1.1-r3 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCtDVh06ebR+OMO78RAuK7AJ49QN0jTsMiA5rFPl5CV5A6XYikHgCfQmYB
-SLFbnQSTthS0rKU+w4eldlM=
-=ZBW9
------END PGP SIGNATURE-----
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 6cf0c78f0317c4677d62ffccc8485a09 struts-1.1-r3.ebuild 2229
+MD5 2d284ed7b0a31d8e2150e3f37d1c0a3e struts-1.2.2-r2.ebuild 2215
+MD5 7ee1d1face5ea40fd85fc6c3e02c76f7 struts-1.2.4-r1.ebuild 2638
