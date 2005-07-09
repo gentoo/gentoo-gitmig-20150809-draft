@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c8753d3f9161da19e881bb987e9c5716 ChangeLog 869
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 afe52216fc469fd13de95536ed732696 grabc-1.1.ebuild 896
 MD5 908c99c3d26593788028a3152c67ce80 files/digest-grabc-1.1 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz3Zjl5AvwDPiUowRApJeAJ9k0yqb7G5peuY5P9qIiiVx4na4swCfT+Tq
+XDUniF/VFtc9BKgoSERGxtM=
+=SM8+
+-----END PGP SIGNATURE-----
