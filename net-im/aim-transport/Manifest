@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a84a3637b4ced0fa16ab00d6785034c1 ChangeLog 3256
 MD5 1b7ba4bf6ff24ebadd73b9606bcf8fcd aim-transport-20040131-r1.ebuild 1371
 MD5 c8c6d9ee2c1f1315c299b54df30fe255 aim-transport-20040131-r2.ebuild 1489
@@ -10,3 +13,10 @@ MD5 d760ae12ea46b20acd4327c40b35a9fb files/aimtrans.xml 607
 MD5 cb628e08c87e98dfc8d017367231953c files/digest-aim-transport-20040131-r1 81
 MD5 cb628e08c87e98dfc8d017367231953c files/digest-aim-transport-20040131-r2 81
 MD5 6816c17429d2b0f735ff6f1e5872b2a1 metadata.xml 333
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz9UYI1lqEGTUzyQRAkRiAJ4sS7PrOqRdYjIXrtJLXRtKrKuPCQCgiXTW
+cAIzfcvHimHp4YdsKhlS1Cw=
+=owYU
+-----END PGP SIGNATURE-----
