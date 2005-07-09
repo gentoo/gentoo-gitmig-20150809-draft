@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.104 2005/07/08 21:33:02 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.105 2005/07/09 06:44:14 corsair Exp $
+
+  09 Jul 2005; Markus Rothe <corsair@gentoo.org> libxslt-1.1.13-r1.ebuild:
+  Stable on ppc64
 
   08 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
   libxslt-1.1.13-r1.ebuild:
