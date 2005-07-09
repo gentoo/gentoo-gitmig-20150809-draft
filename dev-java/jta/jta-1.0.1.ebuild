@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/jta-1.0.1.ebuild,v 1.10 2005/05/18 11:22:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/jta-1.0.1.ebuild,v 1.11 2005/07/09 17:05:23 swegener Exp $
 
 inherit java-pkg
 
@@ -18,32 +18,32 @@ RDEPEND=">=virtual/jdk-1.3"
 RESTRICT="fetch"
 
 pkg_nofetch() {
-	einfo " "
+	einfo
 	einfo " Due to license restrictions, we cannot fetch the"
 	einfo " distributables automagically."
-	einfo " "
+	einfo
 	einfo " 1. Visit ${HOMEPAGE}"
 	einfo " 2. Select 'Java Transaction API Specification 1.0.1B Class Files 1.0.1B'"
 	einfo " 3. Download ${At}"
 	einfo " 4. Move file to ${DISTDIR}"
-	einfo " "
+	einfo
 }
 
 src_unpack() {
 	if [ ! -f "${DISTDIR}/${At}" ] ; then
-		echo  " "
+		echo
 		echo  "!!! Missing ${DISTDIR}/${At}"
-		echo  " "
-		einfo " "
+		echo
+		einfo
 		einfo " Due to license restrictions, we cannot fetch the"
 		einfo " distributables automagically."
-		einfo " "
+		einfo
 		einfo " 1. Visit ${HOMEPAGE} and select 'Downloads'"
 		einfo " 2. Select 'Java Transaction API Specification 1.0.1B Class Files 1.0.1B'"
 		einfo " 3. Download ${At}"
 		einfo " 4. Move file to ${DISTDIR}"
 		einfo " 5. Run emerge on this package again to complete"
-		einfo " "
+		einfo
 		die "User must manually download distfile"
 	fi
 	unzip -qq ${DISTDIR}/${At}

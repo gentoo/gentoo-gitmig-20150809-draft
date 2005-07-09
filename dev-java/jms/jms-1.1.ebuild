@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jms/jms-1.1.ebuild,v 1.8 2005/05/30 19:12:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jms/jms-1.1.ebuild,v 1.9 2005/07/09 17:07:15 swegener Exp $
 
 inherit java-pkg
 
@@ -21,15 +21,15 @@ RESTRICT="fetch"
 S=${WORKDIR}/${PN}${PV}
 
 pkg_nofetch() {
-	einfo " "
+	einfo
 	einfo " Due to license restrictions, we cannot fetch the"
 	einfo " distributables automagically."
-	einfo " "
+	einfo
 	einfo " 1. Visit ${HOMEPAGE} and select 'Downloads'"
 	einfo " 2. Select 'Download the version 1.1 API Documentation, Jar and Source'"
 	einfo " 3. Download ${At}"
 	einfo " 4. Move file to ${DISTDIR}"
-	einfo " "
+	einfo
 }
 
 src_compile() {

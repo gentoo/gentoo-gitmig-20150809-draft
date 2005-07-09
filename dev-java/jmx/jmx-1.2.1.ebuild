@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.16 2005/05/26 09:53:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.17 2005/07/09 17:06:26 swegener Exp $
 
 inherit java-pkg eutils
 
@@ -33,7 +33,7 @@ pkg_nofetch() {
 	einfo
 	einfo " Due to license restrictions, we cannot fetch the"
 	einfo " distributables automagically."
-	einfo " "
+	einfo
 	einfo " 1. Visit ${DOWNLOADSITE} and follow instructions"
 	einfo " 2. Download ${SRC_URI}"
 	einfo " 3. Move file to ${DISTDIR}"
