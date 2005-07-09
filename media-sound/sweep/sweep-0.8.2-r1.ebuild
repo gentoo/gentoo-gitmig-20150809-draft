@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2-r1.ebuild,v 1.14 2005/05/28 16:20:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2-r1.ebuild,v 1.15 2005/07/09 19:13:46 swegener Exp $
 
 inherit eutils
 
@@ -48,8 +48,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "Sweep can use ladspa plugins,"
 	einfo "emerge ladspa-sdk and ladspa-cmt if you want them."
-	einfo ""
+	einfo
 }

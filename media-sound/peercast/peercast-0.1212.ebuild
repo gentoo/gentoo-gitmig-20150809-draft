@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1212.ebuild,v 1.2 2005/06/20 18:15:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1212.ebuild,v 1.3 2005/07/09 19:07:03 swegener Exp $
 
 IUSE=""
 
@@ -25,7 +25,7 @@ RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )"
 src_compile() {
 	(
 		echo "#! /bin/sh"
-		echo ""
+		echo
 		if use amd64 &> /dev/null; then
 			echo "GCC_VERSION=\$(gcc-config -c)"
 			echo "export LD_LIBRARY_PATH=/lib32:/emul/linux/x86/usr/lib/gcc-lib/\${GCC_VERSION/gnu-/gnu/}"

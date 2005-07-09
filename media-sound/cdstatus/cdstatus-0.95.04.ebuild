@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.95.04.ebuild,v 1.1 2005/04/23 10:42:23 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.95.04.ebuild,v 1.2 2005/07/09 19:04:22 swegener Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "Copy cdstatus.cfg from /usr/share/cdstatus.cfg"
 	einfo "to your home directory and edit as needed."
-	einfo ""
+	einfo
 }

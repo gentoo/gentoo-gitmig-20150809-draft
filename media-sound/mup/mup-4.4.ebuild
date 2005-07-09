@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.4.ebuild,v 1.9 2005/03/09 19:17:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.4.ebuild,v 1.10 2005/07/09 19:18:40 swegener Exp $
 
 MY_P="${PN}44"
 
@@ -82,7 +82,7 @@ pkg_postinst() {
 		einfo "Please note that using mupdisp in SVGA mode on the console"
 		einfo "requires that it can write to the console device. To allow"
 		einfo "this, make mupdisp setuid to root, like this:"
-		einfo ""
+		einfo
 		einfo "\tchown root:root /usr/bin/mupdisp"
 		einfo "\tchmod u+s /usr/bin/mupdisp"
 	fi

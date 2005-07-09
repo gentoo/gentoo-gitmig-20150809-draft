@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.2.1.ebuild,v 1.7 2004/12/29 02:56:49 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.2.1.ebuild,v 1.8 2005/07/09 19:14:39 swegener Exp $
 
 IUSE="jack"
 
@@ -45,9 +45,9 @@ src_install() {
 
 	make install || die
 
-	einfo ""
+	einfo
 	einfo "Fixing permissions..."
-	einfo ""
+	einfo
 
 	chmod 644 ${D}/usr/share/doc/${PF}/*
 	chmod 644 ${D}/usr/share/mixxx/midi/*

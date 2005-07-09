@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/fobbit-0.56.ebuild,v 1.7 2004/07/04 10:31:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/fobbit-0.56.ebuild,v 1.8 2005/07/09 19:12:14 swegener Exp $
 
 MY_P="${PN}-0.60rc1"
 S="${WORKDIR}/${MY_P}/src"
@@ -74,16 +74,16 @@ pkg_config() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "Execute:"
-	einfo ""
+	einfo
 	einfo " \"ebuild /var/db/pkg/media-sound/${P}/${P}.ebuild config\""
-	einfo ""
+	einfo
 	einfo "to create the USB VB devices in /dev/vbc[0-3] and /dev/vbv[0-3]."
-	einfo ""
+	einfo
 	einfo "To load the usbvb module, you may type \"insmod usbvb\". To have"
 	einfo "the module load automatically at boot time, add the line \"usbvb\""
 	einfo "to /etc/modules.autoload"
-	einfo ""
+	einfo
 }
 

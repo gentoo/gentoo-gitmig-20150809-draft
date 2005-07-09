@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r3.ebuild,v 1.12 2005/05/01 17:02:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r3.ebuild,v 1.13 2005/07/09 19:17:49 swegener Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ pkg_postinst() {
 	einfo "directories are allowed).  Test ednad from a shell prompt"
 	einfo "until you have it configured properly, then add edna to"
 	einfo "the default runlevel when you're ready."
-	einfo ""
+	einfo
 	einfo "See edna.conf and the html docs for more info."
 	ewarn
 }

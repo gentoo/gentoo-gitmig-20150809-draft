@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.10 2005/05/28 17:57:47 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.11 2005/07/09 19:17:04 swegener Exp $
 
 inherit eutils
 
@@ -126,18 +126,18 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo ""
+	einfo
 	einfo "Don't forget to run ${ROOT}etc/xmcd/config.sh"
 	einfo "as root to configure your CD devices!"
-	einfo ""
+	einfo
 
 }
 
 pkg_postrm() {
 
-	einfo ""
+	einfo
 	einfo "Old discographies found in ${ROOT}var/lib/xmcd can safely be deleted."
 	einfo "Old CD configurations in ${ROOT}etc/xmcd can safely be deleted."
-	einfo ""
+	einfo
 
 }

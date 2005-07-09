@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/usbmidi-1.0.ebuild,v 1.5 2004/06/25 00:27:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/usbmidi-1.0.ebuild,v 1.6 2005/07/09 19:09:48 swegener Exp $
 
 DESCRIPTION="Sets up hotplugging support for MidiMan midisport 1x1/2x2 usb devices"
 HOMEPAGE="http:///"
@@ -29,11 +29,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "Now the firmware is installed and hotplug has been setup."
 	einfo "Please unplug the midisport, then plug it back in."
 	einfo "The light should start to glow, if that happens its worked."
 	einfo "The midisport ports will appear as 'normal' midi ports under /dev"
-	einfo ""
+	einfo
 }
 
