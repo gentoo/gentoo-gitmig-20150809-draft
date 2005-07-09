@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimirc/vimirc-0.9.10.ebuild,v 1.1 2005/03/05 00:03:54 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimirc/vimirc-0.9.10.ebuild,v 1.2 2005/07/09 16:19:05 swegener Exp $
 
 inherit vim-plugin
 
@@ -27,8 +27,8 @@ src_unpack() {
 
 pkg_postinst() {
 	vim-plugin_pkg_postinst
-	einfo " "
+	einfo
 	einfo "This plugin requires a Vim with perl support enabled. This is"
 	einfo "controlled by the 'perl' USE flag."
-	einfo " "
+	einfo
 }
