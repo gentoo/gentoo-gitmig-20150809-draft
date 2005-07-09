@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.29 2005/05/26 14:10:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.30 2005/07/09 16:07:01 axxo Exp $
+
+  09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> -log4j-1.2.8.ebuild,
+  -log4j-1.2.8-r1.ebuild, -log4j-1.2.8-r2.ebuild, log4j-1.2.9.ebuild:
+  fix deps, small cleanup
 
   26 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> log4j-1.2.9.ebuild:
   Stable on sparc
