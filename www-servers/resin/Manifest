@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7df9e2f5ad8b43f264942e97ff46a3ab resin-3.0.12.ebuild 3436
-MD5 ba0f926b1a86775dfaca8cbbcaf5f9f6 resin-3.0.8-r1.ebuild 3370
 MD5 3638217ea99b079b7849e1be156329d7 ChangeLog 3464
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 1774ee83435bc1d54cb0905b01dbba12 resin-2.1.14.ebuild 3035
-MD5 0e0d2bb7422b3b0f88fe7bb4302738a1 files/digest-resin-2.1.14 65
-MD5 c4456fac82339e40800999da730ef2e2 files/digest-resin-3.0.12 65
-MD5 fb879fef5b9755ced18f4715f5c8d0ca files/digest-resin-3.0.8-r1 64
-MD5 033efd80975c8c86d388f3389eb352c8 files/3.0.8/resin.conf 1126
-MD5 4aee09a4e9a32217579c5cf7e73f2c71 files/3.0.8/resin.init 545
-MD5 5e72e20b51a6013bf62800c1d4c4629e files/3.0.8/21resin 22
-MD5 fc791301841bde6c69ec74e35fcc07e9 files/3.0.8/wrapper.pl.diff 526
+MD5 a810be4b68e920ebc5d2cf8160a5642a files/2.1.14/21resin 53
 MD5 94a0740742735629f269e776256d09bf files/2.1.14/resin.conf 1178
 MD5 cc895b3b901369aa2c6d80fb88369113 files/2.1.14/resin.diff 504
 MD5 fdd22c5f252db48ef11406b278e267be files/2.1.14/resin.init 751
-MD5 a810be4b68e920ebc5d2cf8160a5642a files/2.1.14/21resin 53
-MD5 a06fd833b2ca8f78bf18028b530d52b4 files/3.0.12/resin.conf 1130
-MD5 b113cda023ae557981e4b2e36023d401 files/3.0.12/resin.init 549
 MD5 5e72e20b51a6013bf62800c1d4c4629e files/3.0.12/21resin 22
 MD5 7d6b40e67e41acafd82feb48350882b6 files/3.0.12/gentoo.diff 1203
+MD5 a06fd833b2ca8f78bf18028b530d52b4 files/3.0.12/resin.conf 1130
+MD5 b113cda023ae557981e4b2e36023d401 files/3.0.12/resin.init 549
 MD5 fc791301841bde6c69ec74e35fcc07e9 files/3.0.12/wrapper.pl.diff 526
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCckU206ebR+OMO78RAtk7AJ0X7xQh/PhXiLLtWt0rW4dpr6nbaQCfds0U
-lpVU+uwQXAaCxvUbrBeh3B0=
-=PU2F
------END PGP SIGNATURE-----
+MD5 5e72e20b51a6013bf62800c1d4c4629e files/3.0.8/21resin 22
+MD5 033efd80975c8c86d388f3389eb352c8 files/3.0.8/resin.conf 1126
+MD5 4aee09a4e9a32217579c5cf7e73f2c71 files/3.0.8/resin.init 545
+MD5 fc791301841bde6c69ec74e35fcc07e9 files/3.0.8/wrapper.pl.diff 526
+MD5 0e0d2bb7422b3b0f88fe7bb4302738a1 files/digest-resin-2.1.14 65
+MD5 c4456fac82339e40800999da730ef2e2 files/digest-resin-3.0.12 65
+MD5 fb879fef5b9755ced18f4715f5c8d0ca files/digest-resin-3.0.8-r1 64
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 7d0e7af24cc7fdb3db11cfd3eda1a55e resin-2.1.14.ebuild 2980
+MD5 8356c627fd372e6c18452a216158615b resin-3.0.12.ebuild 3420
+MD5 bb168bd4d077abf4108f9288d949b3c1 resin-3.0.8-r1.ebuild 3354
