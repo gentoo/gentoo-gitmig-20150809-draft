@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 d329d5bd46285d76bb023cfbd1b315c5 ChangeLog 3630
 MD5 88e3463d354ae8c261776456764ad06e apmd-3.0.2-r3.ebuild 1781
-MD5 d9b3ba6b57362cf5a62bd0a9fb7547d6 apmd-3.2.0.ebuild 1909
+MD5 27e5317f463949dfc99f018f5fcc2527 apmd-3.2.0.ebuild 1856
 MD5 023f16ef80ba48a196ca62e299c4c6fe apmd-3.2.1_p4.ebuild 1585
 MD5 bed1c6668552bbf528df267c302a75eb files/apmd-3.2.0.kernel26x.patch 627
 MD5 5aa18e3b8ad79d8893bddb038e29ab98 files/apmd.confd 161
@@ -18,7 +18,7 @@ MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCz0IfI1lqEGTUzyQRAmI+AJ9l/uR1cr1SC2vHES8jXygPZ2oHuACgmYGX
-3tguQYgPsSlzyR29aPVsay8=
-=ZiDp
+iD8DBQFCz/SmI1lqEGTUzyQRAqSaAKCUey80TY0bkAUJaN3lGdvqWGyfawCdFOrr
+q+hiEGsfa8FaLbB2fIkCdSo=
+=A84Z
 -----END PGP SIGNATURE-----

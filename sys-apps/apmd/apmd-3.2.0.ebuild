@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.11 2005/07/09 03:18:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.12 2005/07/09 16:00:13 swegener Exp $
 
 inherit eutils
 
 IUSE="X nls"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${P}.orig"
 DESCRIPTION="Advanced Power Management Daemon"
 HOMEPAGE="http://www.worldvisions.ca/~apenwarr/apmd/"
 SRC_URI="mirror://debian/pool/main/a/apmd/${PN}_${PV}.orig.tar.gz"
@@ -46,12 +46,6 @@ src_unpack() {
 	# and DO NOT just ignore it.
 	epatch ${FILESDIR}/apmd-3.2.0.kernel26x.patch
 }
-
-src_compile() {
-	emake || die
-}
-
-S="${WORKDIR}/${P}.orig"
 
 src_install() {
 	dodir /usr/sbin
