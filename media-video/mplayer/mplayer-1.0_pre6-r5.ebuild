@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r5.ebuild,v 1.3 2005/06/08 19:28:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r5.ebuild,v 1.4 2005/07/09 19:01:28 swegener Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -205,7 +205,7 @@ linguas_warn() {
 	ewarn "Language set to English"
 	ewarn "If this is a mistake, please set the"
 	ewarn "First LINGUAS language to one of the following"
-	ewarn ""
+	ewarn
 	ewarn "bg - Bulgarian"
 	ewarn "cz - Czech"
 	ewarn "de - German"
@@ -416,7 +416,7 @@ src_compile() {
 			eerror "When building support for xvmc, you may only"
 			eerror "include support for one video card:"
 			eerror "   nvidia, i8x0"
-			eerror ""
+			eerror
 			eerror "Emerge again with different USE flags"
 
 			exit 1
@@ -425,7 +425,7 @@ src_compile() {
 	( use xvmc && ! use nvidia && ! use i8x0 ) && {
 		ewarn "You tried to build with xvmc support."
 		ewarn "No supported graphics hardware was specified."
-		ewarn ""
+		ewarn
 		ewarn "No xvmc support will be included."
 		ewarn "Please one appropriate USE flag and re-emerge:"
 		ewarn "   nvidia or i8x0"

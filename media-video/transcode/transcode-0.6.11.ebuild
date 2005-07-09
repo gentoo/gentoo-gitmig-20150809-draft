@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.19 2005/05/15 02:10:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.20 2005/07/09 19:03:35 swegener Exp $
 
 inherit libtool flag-o-matic eutils toolchain-funcs
 
@@ -145,7 +145,7 @@ src_install () {
 	# subrip stuff
 	cd contrib/subrip
 	dobin pgm2txt srttool subtitle2pgm subtitle2vobsub
-	einfo ""
+	einfo
 	einfo "This ebuild uses subtitles !!!"
-	einfo ""
+	einfo
 }

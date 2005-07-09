@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.ebuild,v 1.3 2005/04/20 22:57:04 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.ebuild,v 1.4 2005/07/09 19:02:22 swegener Exp $
 
 inherit eutils
 
@@ -87,6 +87,6 @@ src_install() {
 pkg_postinst() {
 	einfo "Be sure to change /etc/mms/config and /etc/mms/input* to your needs"
 	einfo "You also need to place a TV.xml file in /etc/mms for epg to work"
-	einfo ""
+	einfo
 	einfo "Documentation is available online: http://mms.sunsite.dk/doc/index.html"
 }
