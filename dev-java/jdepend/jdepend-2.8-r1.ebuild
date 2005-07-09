@@ -1,42 +1,39 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.8-r1.ebuild,v 1.5 2005/01/26 21:22:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.8-r1.ebuild,v 1.6 2005/07/09 16:04:16 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="JDepend traverses Java class file directories and generates design quality metrics for each Java package."
 HOMEPAGE="http://www.clarkware.com/software/JDepend.html"
-SRC_URI="http://www.clarkware.com/software/${PN}-${PV}.zip"
+SRC_URI="http://www.clarkware.com/software/${P}.zip"
+
 LICENSE="jdepend"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="doc jikes"
+IUSE="doc jikes source"
+
 DEPEND=">=virtual/jdk-1.3
-	>=app-arch/unzip-5.50-r1
-	>=dev-java/ant-core-1.4
-	jikes? ( >=dev-java/jikes-1.17 )"
-RDEPEND=">=virtual/jdk-1.3"
+		>=app-arch/unzip-5.50-r1
+		>=dev-java/ant-core-1.4
+		source? ( app-arch/zip )
+		jikes? ( >=dev-java/jikes-1.17 )"
+RDEPEND=">=virtual/jre-1.3"
 
 #TODO Do junit testing but resolve the circular dependency we have with ant.
 src_compile() {
-	local myc
+	local antflags="jar"
 
-	if use jikes ; then
-		myc="${myc} -Dbuild.compiler=jikes"
-	fi
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+#	use junit && antflags="${antflags} test"
 
-#	use junit && export CLASSPATH=$CLASSPATH:`java-config --classpath=junit`
+	ant ${antflags} || die "Failed Compiling"
 
-	ant ${myc} jar || die "Failed Compiling"
-
-#	if use junit ; then
-#		ant test || die "Failed Testing Packages Integrity"
-#	fi
 }
 
 src_install() {
 	java-pkg_dojar lib/jdepend.jar || die "Failed Installing"
-	dodoc LICENSE README
+	dodoc README
 
 	dodir /usr/share/ant-core/lib
 	dosym /usr/share/jdepend/lib/jdepend.jar /usr/share/ant-core/lib
@@ -46,4 +43,6 @@ src_install() {
 		cp -r docs/api ${D}/usr/share/doc/${PF}/html
 		cp -r docs/images ${D}/usr/share/doc/${PF}/html
 	fi
+
+	use source && java-pkg_dosrc src/*
 }
