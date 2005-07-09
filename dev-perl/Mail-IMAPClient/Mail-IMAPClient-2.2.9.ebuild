@@ -1,10 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/Mail-IMAPClient-2.2.9.ebuild,v 1.3 2005/01/15 16:38:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/Mail-IMAPClient-2.2.9.ebuild,v 1.4 2005/07/09 23:25:49 swegener Exp $
 
 inherit perl-module eutils
 
-CATEGORY="dev-perl"
 DESCRIPTION="IMAP client module for Perl"
 SRC_URI="mirror://cpan/modules/by-module/Mail/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Mail/${P}.readme"
@@ -18,8 +17,7 @@ IUSE=""
 # an active imap server to connect to, as well as interaction.
 #SRC_TEST="do"
 
-DEPEND="${DEPEND}
-	>=dev-perl/libnet-1.0703
+DEPEND=">=dev-perl/libnet-1.0703
 	dev-perl/Parse-RecDescent"
 
 mydoc="FAQ"

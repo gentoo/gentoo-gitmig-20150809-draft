@@ -1,10 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/pgperl-2.0.2.ebuild,v 1.7 2005/05/30 19:34:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/pgperl-2.0.2.ebuild,v 1.8 2005/07/09 23:17:14 swegener Exp $
 
 inherit perl-module
 
-CATEGORY="dev-perl"
 DESCRIPTION="native Perl interface to PostgreSQL"
 SRC_URI="ftp://gborg.postgresql.org/pub/pgperl/stable/${P}.tar.gz"
 HOMEPAGE="http://gborg.postgresql.org/project/pgperl/projdisplay.php"

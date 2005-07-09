@@ -1,10 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/Test-WWW-Mechanize-1.04.ebuild,v 1.2 2005/06/13 11:21:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/Test-WWW-Mechanize-1.04.ebuild,v 1.3 2005/07/09 23:28:26 swegener Exp $
 
 inherit perl-module
 
-CATEGORY="dev-perl"
 DESCRIPTION="Test::WWW::Mechanize is a subclass of WWW::Mechanize that
 incorporates features for web application testing"
 SRC_URI="mirror://cpan/authors/id/P/PE/PETDANCE/${P}.tar.gz"

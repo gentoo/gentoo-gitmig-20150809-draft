@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/aww-0.34.ebuild,v 1.5 2005/05/25 14:00:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/aww-0.34.ebuild,v 1.6 2005/07/09 23:00:41 swegener Exp $
 
 inherit perl-module
 
 MY_P=${P/a/A}
 S=${WORKDIR}/${MY_P}
-CATEGORY="dev-perl"
 
 DESCRIPTION="Aww is a command-line frontend to the website meta language (wml)"
 HOMEPAGE="http://www.panhorst.com/aww/"

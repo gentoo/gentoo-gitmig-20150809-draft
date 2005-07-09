@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Escapes/Pod-Escapes-1.04.ebuild,v 1.11 2005/05/10 15:36:06 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Escapes/Pod-Escapes-1.04.ebuild,v 1.12 2005/07/09 23:15:19 swegener Exp $
 
 inherit perl-module
-
-CATEGORY="dev-perl"
 
 DESCRIPTION="for resolving Pod E<...> sequences"
 HOMEPAGE="http://search.cpan.org/~sburke/${P}"

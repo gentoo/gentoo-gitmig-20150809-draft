@@ -1,10 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/WWW-Bugzilla-0.4.ebuild,v 1.7 2005/05/06 01:06:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/WWW-Bugzilla-0.4.ebuild,v 1.8 2005/07/09 23:22:05 swegener Exp $
 
 inherit perl-module
 
-CATEGORY="dev-perl"
 DESCRIPTION="automate interaction with bugzilla"
 SRC_URI="mirror://cpan/authors/id/M/MC/MCVELLA/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~mcvella/${P}"

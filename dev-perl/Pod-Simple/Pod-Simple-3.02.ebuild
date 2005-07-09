@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/Pod-Simple-3.02.ebuild,v 1.11 2005/05/10 15:37:23 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/Pod-Simple-3.02.ebuild,v 1.12 2005/07/09 23:03:52 swegener Exp $
 
 inherit perl-module
-
-CATEGORY="dev-perl"
 
 DESCRIPTION="framework for parsing Pod"
 HOMEPAGE="http://search.cpan.org/~sburke/${P}"

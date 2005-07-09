@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/Algorithm-Diff-1.1901.ebuild,v 1.2 2005/05/21 08:43:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/Algorithm-Diff-1.1901.ebuild,v 1.3 2005/07/09 23:22:53 swegener Exp $
 
 inherit perl-module
-
-CATEGORY="dev-perl"
 
 DESCRIPTION="Algorithm::Diff - Compute intelligent differences between two files / lists"
 HOMEPAGE="http://search.cpan.org/~tyemq/${P}/"
@@ -14,6 +12,6 @@ IUSE=""
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ppc64 ~amd64"
 
-DEPEND="${DEPEND} app-arch/unzip"
+DEPEND="app-arch/unzip"
 
 SRC_TEST="do"

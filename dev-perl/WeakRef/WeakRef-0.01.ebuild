@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WeakRef/WeakRef-0.01.ebuild,v 1.7 2005/04/25 16:23:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WeakRef/WeakRef-0.01.ebuild,v 1.8 2005/07/09 23:08:59 swegener Exp $
 
 inherit perl-module
-
-CATEGORY="dev-perl"
 
 DESCRIPTION="an API to the Perl weak references"
 
