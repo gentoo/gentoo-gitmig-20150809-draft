@@ -1,4 +1,14 @@
-MD5 669f65a272c27b9419f57446b30930f1 ChangeLog 523
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
-MD5 81ed1824d9efe0bce795c52cbefcc78d openclipart-0.12.ebuild 1973
+MD5 4390d1aa737c30bb147c2afdc2b573e3 ChangeLog 615
+MD5 9dacf2861d12592877acc8a5d56e909a openclipart-0.12.ebuild 1981
 MD5 9ae01cef1127f8736b4ad6c8f1cb15bb files/digest-openclipart-0.12 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz34cl5AvwDPiUowRAsz1AKDZd4pvpU8Z+S5LTG1ZAvz18k6UaACgzVIW
+xHrxpzjd6RlbHS7/cjj2HV0=
+=pOut
+-----END PGP SIGNATURE-----

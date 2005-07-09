@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.12.ebuild,v 1.2 2005/06/24 13:14:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.12.ebuild,v 1.3 2005/07/09 07:34:31 smithj Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.openclipart.org/downloads/${PV}/${P}.tar.bz2"
 
 LICENSE="public-domain" # creative commons
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc svg png pdf wmf gzip"
 
 # we don't really need anything to run, but compression is optionally needed
