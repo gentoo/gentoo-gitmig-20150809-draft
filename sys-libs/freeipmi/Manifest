@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e82454730ba7f2eccf132fe4f1db75ee freeipmi-0.1.3.ebuild 1298
 MD5 2fd53b9326f15a7e280fef269b4188a0 ChangeLog 705
-MD5 985aad041fcd7a45993c713e0ac911c8 freeipmi-0.1.3.ebuild 1293
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 ea5c577b9e0721b51347c82db9d85c7c files/digest-freeipmi-0.1.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCkzk2CHk4+ZoBpvsRAjmUAJ9MULkrISN7fU5AyHyEEuj2ph613QCdGoet
-cs5BvpYW9QIPIMkqQ+nS5eY=
-=clD9
------END PGP SIGNATURE-----
