@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.2.1.ebuild,v 1.5 2005/07/08 07:52:43 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.2.1.ebuild,v 1.6 2005/07/09 22:13:37 greg_g Exp $
 
 inherit kde
 
@@ -54,6 +54,7 @@ pkg_postinst() {
 	einfo "kde-base/kdebase:               (RECOMMENDED) embed konsole kpart in kdevelop ide"
 	einfo "dev-util/kdbg:                  (RECOMMENDED) kde frontend to gdb"
 	einfo "dev-util/valgrind:              (RECOMMENDED) integrates valgrind (memory debugger) commands"
+	einfo "kde-base/kompare:               (RECOMMENDED) show differences between files"
 	einfo "dev-java/ant:                   support projects using the ant build tool"
 	einfo "dev-util/ctags:                 faster and more powerful code browsing logic"
 	einfo "app-doc/doxygen:                generate KDE-style documentation for your project"
