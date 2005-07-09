@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 3ba48cf21fdff2afe279e1f41b2b6be1 com_err-1.38.ebuild 1832
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 4aa5c4716912fb5fbf142b581f071b6a com_err-1.37.ebuild 1960
-MD5 d82931f0886ec801654579a95a9c1f2d ChangeLog 1371
+MD5 dbb4d79185c6119d63641a965f35d0e9 ChangeLog 1507
 MD5 4a7d54ccac4002d10462c40660712a72 files/com_err-1.37-sed-locale.patch 2142
+MD5 0911aedd4968aa4053139791a961e2a2 files/digest-com_err-1.38 67
 MD5 65689a8be4c1b58f8e64f22165313292 files/digest-com_err-1.37 67
 MD5 d26cca7efe06dba1d940abee82342487 files/com_err-1.37-makefile.patch 337
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzLdogIKl8Uu19MoRAmMXAJ9dK7ZhW+i23dmMrB00XkS900Hk+wCdHhlN
-qhLx+3FEYq65hHidJ9t41LQ=
-=sqrb
+iD8DBQFC0FHXgIKl8Uu19MoRAigBAJ9iwiREQZ50vhqdCU2eeuBJhW1X8wCfWEUA
+gnggMFUrT9DNb/JXLUewcBw=
+=i36Z
 -----END PGP SIGNATURE-----
