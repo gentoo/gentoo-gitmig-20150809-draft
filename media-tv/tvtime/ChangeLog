@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.18 2005/03/01 02:12:41 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.19 2005/07/09 18:27:08 pylon Exp $
+
+*tvtime-0.99 (09 Jul 2005)
+
+  09 Jul 2005; Lars Weiler <pylon@gentoo.org>
+  -files/tvtime-0.9.15-pic.patch, +files/tvtime-pic.patch,
+  tvtime-0.9.15.ebuild, +tvtime-0.99.ebuild:
+  Version bump.  Previous version stable on x86.
 
   01 Mar 2005; Mike Gardiner <obz@gentoo.org> tvtime-0.9.15.ebuild:
   Updated HOMEPAGE
