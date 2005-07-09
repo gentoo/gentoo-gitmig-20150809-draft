@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f523ff947c36e9e360edcd5fe7f3b3f4 ChangeLog 997
-MD5 90b497fcb28b98176bdcb02ab471b02e metadata.xml 356
-MD5 5ae59ff809d46241130cfc83ee1fc145 mhonarc-2.6.10.ebuild 740
-MD5 ee2285265e6f59770997d6caffa5bd69 mhonarc-2.6.11.ebuild 743
 MD5 823469b986476a8a87d4f6deb461d8d5 files/digest-mhonarc-2.6.10 68
 MD5 3ac6e5a669c1c4c576fdf494b0a1b3cf files/digest-mhonarc-2.6.11 68
+MD5 90b497fcb28b98176bdcb02ab471b02e metadata.xml 356
+MD5 499d37a991b679dbb4e5a24bab3558e7 mhonarc-2.6.10.ebuild 723
+MD5 ab5b42da8536fb6c5fcb285e3c4b4fbe mhonarc-2.6.11.ebuild 726
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0FbxI1lqEGTUzyQRAmQFAJ97UDxML/1jbiQp4B8NVvnuUeIttwCfcpoR
+a/IDZI8fQs4JpSKGhm6O3zw=
+=xJ16
+-----END PGP SIGNATURE-----

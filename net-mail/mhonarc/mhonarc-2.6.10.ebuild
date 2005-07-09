@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/mhonarc-2.6.10.ebuild,v 1.2 2005/05/28 04:25:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/mhonarc-2.6.10.ebuild,v 1.3 2005/07/09 22:59:48 swegener Exp $
 
 inherit perl-module
 
@@ -12,7 +12,6 @@ RESTRICT="nomirror"
 DESCRIPTION="Perl Mail-to-HTML Converter"
 HOMEPAGE="http://www.mhonarc.org/"
 LICENSE="GPL-2"
-CATEGORY="net-mail"
 
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~alpha mips ~amd64"
