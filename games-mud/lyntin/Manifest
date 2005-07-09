@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d7c28c148ecdff36c21aa8c410d5344e ChangeLog 583
-MD5 addccc5988b24627f0d488dcd06b1782 lyntin-4.1.1.ebuild 1246
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 6217df66b9e29a0c8f6cfbd351119b3b files/digest-lyntin-4.1.1 64
+MD5 ee5501f3c6446519989157763972fd11 lyntin-4.1.1.ebuild 1242
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCz/wYI1lqEGTUzyQRAnHRAKDbm0Z5DrBpb9slHNQ6Vdak3IYyqQCgnFNq
+vEhlHlbQSOZniaJXKhR1xns=
+=N8cd
+-----END PGP SIGNATURE-----
