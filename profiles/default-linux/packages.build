@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/packages.build,v 1.1 2004/09/14 15:28:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/packages.build,v 1.2 2005/07/09 13:31:54 wolf31o2 Exp $
 
 # This file describes the packages needed to build a stage 1 based on this
 # profile
@@ -10,6 +10,7 @@ app-arch/gzip
 app-arch/tar
 app-editors/nano
 app-shells/bash
+dev-lang/perl
 dev-lang/python
 net-misc/rsync
 net-misc/wget
