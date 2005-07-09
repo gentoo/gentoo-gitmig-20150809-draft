@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 54bd93cd5d53bea79dfc9554eca7b56d libdts-0.0.2-r1.ebuild 1297
 MD5 418e8000e6a6318f7d3163c1fb10d444 libdts-0.0.2.ebuild 967
@@ -5,3 +8,10 @@ MD5 6eacf1d9a1c45c7fd1b3e43eb5df4c25 ChangeLog 1799
 MD5 ab9838cb8c25fd47f0bee4b94a3d3e26 files/libdts-0.0.2-libtool.patch 3208
 MD5 9d1c5f06b01f4cc5b729407e44de4078 files/digest-libdts-0.0.2 64
 MD5 9d1c5f06b01f4cc5b729407e44de4078 files/digest-libdts-0.0.2-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzyjhgIKl8Uu19MoRAszoAJ4r4P3YDSTF4NRh2wn6Ck3YtaqPRwCdGSW+
+F/t8/g+O7iQbs0AOZJUcZq0=
+=+kA9
+-----END PGP SIGNATURE-----

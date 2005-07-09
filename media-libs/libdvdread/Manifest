@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 cd5d7349b6c05dac282f6d31c27d0ca4 libdvdread-0.9.4.ebuild 840
 MD5 33d2b1469ae4ba8151f27d5697da764f libdvdread-0.9.3.ebuild 676
@@ -6,3 +9,10 @@ MD5 39e6017527f3d90d5b09dce2fa3a0d8f ChangeLog 2654
 MD5 87ebfda5feddced62e82b6eadabfdc66 files/digest-libdvdread-0.9.3 68
 MD5 f6350e7699307f258e9ffc5dd8235a64 files/digest-libdvdread-0.9.4-r1 136
 MD5 866bd13bcf653fdb278c774089e3e504 files/digest-libdvdread-0.9.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCzyiYgIKl8Uu19MoRAotpAJ4/GVk+fT5VrbD4T4/fx1SpNX6cowCdFgIM
+OTEymK8ObZp0lQTm+ExHjC4=
+=d56u
+-----END PGP SIGNATURE-----
