@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/milo-2.4.18.ebuild,v 1.5 2005/01/08 00:06:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/milo-2.4.18.ebuild,v 1.6 2005/07/10 20:34:28 agriffis Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -45,7 +45,7 @@ LICENSE="MILO"
 SLOT="0"
 
 KEYWORDS="-* ~alpha"
-IUSE="ev6"
+IUSE=""
 
 DEPEND="sys-apps/kbd
 	>=sys-apps/sed-4"
