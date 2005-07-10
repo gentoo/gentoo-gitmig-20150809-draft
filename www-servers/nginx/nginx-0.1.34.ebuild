@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.34.ebuild,v 1.2 2005/05/29 14:30:28 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.34.ebuild,v 1.3 2005/07/10 21:38:22 swegener Exp $
 
 inherit eutils
 
@@ -35,37 +35,23 @@ src_compile() {
 	use debug	&& myconf="${myconf} --with-debug"
 	use ssl		&& myconf="${myconf} --with-http_ssl_module"
 
-	cd ${S} && ./configure									\
-		--prefix=/usr										\
-		--conf-path=/etc/${PN}/${PN}.conf					\
-		--http-log-path=/var/log/${PN}/access_log			\
-		--error-log-path=/var/log/${PN}/error_log			\
-		--pid-path=/var/run/${PN}.pid						\
-		--http-client-body-temp-path=/var/tmp/${PN}/client	\
-		--http-proxy-temp-path=/var/tmp/${PN}/proxy			\
-		--http-fastcgi-temp-path=/var/tmp/${PN}/fastcgi		\
-		--with-md5-asm										\
+	./configure \
+		--prefix=/usr \
+		--conf-path=/etc/${PN}/${PN}.conf \
+		--http-log-path=/var/log/${PN}/access_log \
+		--error-log-path=/var/log/${PN}/error_log \
+		--pid-path=/var/run/${PN}.pid \
+		--http-client-body-temp-path=/var/tmp/${PN}/client \
+		--http-proxy-temp-path=/var/tmp/${PN}/proxy \
+		--http-fastcgi-temp-path=/var/tmp/${PN}/fastcgi \
+		--with-md5-asm \
 		${myconf} || die "configure failed"
 
-	emake || "failed to compile"
+	emake || die "failed to compile"
 }
 
 src_install() {
-	cd ${S} || die
-
-	dodir /var/log/${PN}
-	keepdir /var/log/${PN}
-
-	dodir /var/tmp/${PN}
-
-	dodir /var/tmp/${PN}/client
-	keepdir /var/tmp/${PN}/client
-
-	dodir /var/tmp/${PN}/proxy
-	keepdir /var/tmp/${PN}/proxy
-
-	dodir /var/tmp/${PN}/fastcgi
-	keepdir /var/tmp/${PN}/fastcgi
+	keepdir /var/log/${PN} /var/tmp/${PN}/{client,proxy,fastcgi}
 
 	dodir /etc/${PN}
 

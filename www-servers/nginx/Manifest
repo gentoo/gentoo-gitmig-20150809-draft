@@ -1,9 +1,7 @@
-MD5 efcde21f75e7a0cbc83d4342ff4d5a0a nginx-0.1.36.ebuild 2174
-MD5 ba17b5c0456ed0e8f4ec17e2690fc394 nginx-0.1.35.ebuild 2166
-MD5 cc49db4ce1ccebd1d8a1d02775f46603 nginx-0.1.37.ebuild 2080
-MD5 114f655395217d77dfab2e257cdd9fe4 nginx-0.1.34.ebuild 2073
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 80c9bfec0f6a1a5ac4673d0d06a71ab4 ChangeLog 5749
-MD5 822f3c821527e6a34f23a6a92a884766 metadata.xml 220
 MD5 b4e5149fed4a89f9561a32a8245dd1a7 files/digest-nginx-0.1.34 64
 MD5 ec8d24578f3f015eabf58f8bef4bb939 files/digest-nginx-0.1.35 64
 MD5 776c824b0b5e7e0a0014f1bdbc361409 files/digest-nginx-0.1.36 64
@@ -11,3 +9,15 @@ MD5 23dc869263233b746e0a92df932c1d77 files/digest-nginx-0.1.37 64
 MD5 d8f7e621e098b58848a6b5fb045c49c3 files/nginx 994
 MD5 0dc86e18f344498c4c2e72952637e88e files/nginx-0.1.35-ppc.patch 240
 MD5 fecedd05099122b1f8169152e5bc9462 files/nginx.conf 1400
+MD5 822f3c821527e6a34f23a6a92a884766 metadata.xml 220
+MD5 3b0e6830d37afb9ef770bd009b5e0aa9 nginx-0.1.34.ebuild 1820
+MD5 608e794e594a905ecf1abc1ae492aeef nginx-0.1.35.ebuild 1913
+MD5 93d45b24c7a7e52e0d37a3f2d01d1555 nginx-0.1.36.ebuild 1921
+MD5 abc240d937fafed0f18651714765ff4b nginx-0.1.37.ebuild 1827
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0ZVaI1lqEGTUzyQRAkAGAJ9xVWc9qHbPmENsitGp68oW2X1kYQCggemO
+u/Twa/m3jOqYmTPYFWEDu2Q=
+=BuzV
+-----END PGP SIGNATURE-----
