@@ -1,15 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-powerpc64/gcc-powerpc64-3.4.4.ebuild,v 1.1 2005/07/02 04:58:08 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-powerpc64/gcc-powerpc64-3.4.4.ebuild,v 1.2 2005/07/10 00:46:18 swegener Exp $
 
+inherit eutils flag-o-matic
 
 # Variables 
-inherit eutils flag-o-matic
 MYARCH="$(echo ${PN} | cut -d- -f2)"
 TMP_P="${P/-${MYARCH}/}"
 TMP_PN="${PN/-${MYARCH}/}"
 I="/usr"
-S="${WORKDIR}/${P}"
 BRANCH_UPDATE=""
 
 DESCRIPTION="PPC64 Kernel Compiler (Experimental)"

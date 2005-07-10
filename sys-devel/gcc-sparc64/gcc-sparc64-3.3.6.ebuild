@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.3.6.ebuild,v 1.2 2005/07/09 19:46:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.3.6.ebuild,v 1.3 2005/07/10 00:47:40 swegener Exp $
+
+inherit eutils flag-o-matic
 
 # Variables 
-inherit eutils flag-o-matic
 MYARCH="$(echo ${PN} | cut -d- -f2)"
 TMP_P="${P/-${MYARCH}/}"
 TMP_PN="${PN/-${MYARCH}/}"
 I="/usr"
-S="${WORKDIR}/${P}"
 BRANCH_UPDATE=""
 
 DESCRIPTION="Sparc64 Kernel Compiler"

@@ -1,15 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.3-r1.ebuild,v 1.3 2005/07/09 19:47:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.3-r1.ebuild,v 1.4 2005/07/10 00:48:52 swegener Exp $
 
+inherit eutils flag-o-matic
 
 # Variables 
-inherit eutils flag-o-matic
 MYARCH="$(echo ${PN} | cut -d- -f2)"
 TMP_P="${P/-${MYARCH}/}"
 TMP_PN="${PN/-${MYARCH}/}"
 I="/usr"
-S="${WORKDIR}/${P}"
 IUSE="ip28"
 BRANCH_UPDATE=""
 
