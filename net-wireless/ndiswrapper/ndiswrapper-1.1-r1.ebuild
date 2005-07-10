@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.1-r1.ebuild,v 1.2 2005/05/10 18:50:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.1-r1.ebuild,v 1.3 2005/07/10 01:14:11 swegener Exp $
 
 inherit linux-mod eutils
 
@@ -15,8 +15,6 @@ IUSE="debug"
 DEPEND="sys-apps/pciutils"
 RDEPEND="${DEPEND}
 	net-wireless/wireless-tools"
-
-S=${WORKDIR}/${P}
 
 CONFIG_CHECK="${CONFIG_CHECK} NET_RADIO"
 
