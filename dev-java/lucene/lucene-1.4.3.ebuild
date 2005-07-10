@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3.ebuild,v 1.1 2005/04/25 15:20:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3.ebuild,v 1.2 2005/07/10 20:35:12 agriffis Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/lucene/source/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="1"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="jikes doc junit"
+IUSE="doc jikes junit source"
 DEPEND=">=virtual/jdk-1.2
 	>=dev-java/ant-1.5
 	jikes? ( dev-java/jikes )
