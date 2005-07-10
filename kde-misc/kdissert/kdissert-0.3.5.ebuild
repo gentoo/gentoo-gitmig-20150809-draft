@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/kdissert-0.3.5.ebuild,v 1.2 2005/02/25 01:48:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/kdissert-0.3.5.ebuild,v 1.3 2005/07/10 21:17:11 swegener Exp $
 
 inherit kde
 
@@ -19,7 +19,7 @@ need-kde 3.2
 # rotten Makefile stuff, can't use kde.eclass
 src_compile() {
 	./configure --prefix=${D}/usr || configure failed
-	emake || emake failed
+	emake || die "emake failed"
 }
 
 src_install() {
