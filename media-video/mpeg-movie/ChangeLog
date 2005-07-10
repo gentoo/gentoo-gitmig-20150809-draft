@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mpeg-movie
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/ChangeLog,v 1.8 2005/01/09 06:18:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/ChangeLog,v 1.9 2005/07/10 21:11:06 swegener Exp $
+
+  10 Jul 2005; Sven Wegener <swegener@gentoo.org>
+  mpeg-movie-1.6.0-r1.ebuild:
+  QA: Removed 'emake || make || die' and variants. Either a package is
+  parallel build safe or it is not. There's nothing like trying and falling
+  back.
 
   09 Jan 2005; <lucky@gentoo.org> +files/mpeg-movie-1.6.0-r1-gentoo.patch,
   mpeg-movie-1.6.0-r1.ebuild:

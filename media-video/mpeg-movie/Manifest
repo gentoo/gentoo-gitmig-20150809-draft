@@ -1,5 +1,15 @@
-MD5 da8976fc6952a5321667de28277677a1 mpeg-movie-1.6.0-r1.ebuild 2817
-MD5 6bdc10276ac82b704f42d21af118d466 ChangeLog 1423
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 55b7c1b7f32738bac69f382bee1bda69 ChangeLog 1658
 MD5 1f5979214c419ba2946b7d77663a69fa files/digest-mpeg-movie-1.6.0-r1 69
 MD5 653a9a9061cfbdb84938b0dd02a01b33 files/mpeg-movie-1.6.0-r1-gentoo.patch 1281
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+MD5 0ed02c0029e26582360f4f545ce40fee mpeg-movie-1.6.0-r1.ebuild 2800
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0Y72I1lqEGTUzyQRAs7WAKCAzQq9osq3TfkxYNosyHhcHKiwVwCgga60
+S85l5uzNGtPusCzB1t+i00E=
+=Ip49
+-----END PGP SIGNATURE-----
