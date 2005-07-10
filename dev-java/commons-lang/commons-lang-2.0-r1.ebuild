@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r1.ebuild,v 1.14 2005/03/24 19:37:05 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r1.ebuild,v 1.15 2005/07/10 15:07:10 axxo Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="Jakarta components to manipulate core java classes"
 HOMEPAGE="http://jakarta.apache.org/commons/lang.html"
 SRC_URI="mirror://apache/jakarta/commons/lang/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-1.4
+	>=dev-java/ant-core-1.4
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
@@ -26,8 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	mv dist/${P}.jar dist/${PN}.jar
-	java-pkg_dojar dist/${PN}.jar
+	java-pkg_newjar dist/${P}.jar ${PN}.jar
 
 	if use doc; then
 		dodoc RELEASE-NOTES.txt
