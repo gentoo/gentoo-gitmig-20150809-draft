@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6.ebuild,v 1.11 2005/07/10 04:10:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6.ebuild,v 1.12 2005/07/10 04:39:23 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.2"
@@ -76,6 +76,7 @@ src_unpack() {
 
 	# misc patches that havent made it into a patch tarball yet
 	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
+	epatch "${FILESDIR}"/3.3.6/gcc-3.3.6-cross-compile.patch
 
 	# Anything useful and objc will require libffi. Seriously. Lets just force
 	# libffi to install with USE="objc", even though it normally only installs
