@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.42 2005/06/24 15:10:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.43 2005/07/10 17:14:01 j4rg0n Exp $
+
+  10 Jul 2005; Lina Pezzella <j4rg0n@gentoo.org> opencdk-0.5.7.ebuild:
+  Testing ppc-macos. Bug #98378. Submitted on behalf of Fabian Groffen.
 
 *opencdk-0.5.7 (24 Jun 2005)
 
