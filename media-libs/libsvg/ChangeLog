@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsvg
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.9 2005/02/25 19:21:54 latexer Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.10 2005/07/10 02:49:07 vapier Exp $
+
+*libsvg-0.1.4 (10 Jul 2005)
+
+  10 Jul 2005; Mike Frysinger <vapier@gentoo.org> +libsvg-0.1.4.ebuild:
+  Version bump.
 
   25 Feb 2005; Peter Johanson <latexer@gentoo.org> :
   Fix digest. See bug #83319
