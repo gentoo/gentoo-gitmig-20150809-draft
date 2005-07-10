@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.39 2005/07/01 02:53:41 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.40 2005/07/10 20:23:23 tercel Exp $
+
+*mirrorselect-1.1.1 (10 Jul 2005)
+
+  10 Jul 2005; <colin@gentoo.org> -mirrorselect-1.0.3.ebuild,
+  -mirrorselect-1.1.ebuild, +mirrorselect-1.1.1.ebuild:
+  new version including more code cleanups and revisions. Make.conf is now
+  auto-backup'd, and bug #98141 is fixed.
 
 *mirrorselect-1.1 (01 Jul 2005)
 
