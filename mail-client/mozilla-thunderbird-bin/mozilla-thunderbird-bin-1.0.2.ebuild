@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.0.2.ebuild,v 1.1 2005/03/24 02:44:43 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.0.2.ebuild,v 1.2 2005/07/10 18:45:56 humpback Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/linux
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird"
 RESTRICT="nostrip"
 
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 ~amd64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE=""
@@ -29,7 +29,9 @@ RDEPEND="virtual/x11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	>=www-client/mozilla-launcher-1.28"
+	>=www-client/mozilla-launcher-1.28
+	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.1.1
+			 >=app-emulation/emul-linux-x86-gtklibs-2.1 )"
 
 src_install() {
 	# Install thunderbird in /opt
@@ -88,6 +90,10 @@ pkg_postinst() {
 	einfo "to simply thunderbird-bin"
 	einfo ""
 
+	if use amd64; then
+		einfo "You just installed a thunderbird version pre-built for 32 bits"
+		einfo "system."
+	fi
 	# This should be called in the postinst and postrm of all the
 	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
 	# thunderbird-bin ebuilds.
