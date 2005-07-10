@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 dd7965c04c184d2fbf07f39f6ca0a93c ChangeLog 1319
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 9958488d5c684b700ac860eff54812f5 mod_injection-0.3.0.ebuild 983
-MD5 48ed7eeba2a2edebb4eaa8c2925d3b3c mod_injection-0.3.1-r1.ebuild 632
-MD5 530cc1cb7de3d4502477bdaa8bb62fba mod_injection-0.3.1.ebuild 987
-MD5 a3f0476015e2855d6cf3e66904b232ee files/23_mod_injection.conf 425
-MD5 189338a2b70fef859aa31149b9143123 files/mod_injection-0.3.0-register.patch 919
-MD5 410d8669ac36d7b41a388e09552a56f8 files/digest-mod_injection-0.3.0 70
-MD5 c98c6ef4db7edb9062e38dc6c16248e1 files/digest-mod_injection-0.3.1-r1 70
-MD5 c98c6ef4db7edb9062e38dc6c16248e1 files/digest-mod_injection-0.3.1 70
 MD5 1e8adbbf6d23b79dcf01b09ada7e0bb6 files/0.3.1-r1/23_mod_injection.conf 419
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCFLM7mPFBzbX68WERAhG9AKCOA2HxI7J6zkmKdwgxIIZrMpvkQwCeLSfn
-DnapOyJxeablpzxGR7Zu8yg=
-=8kgo
------END PGP SIGNATURE-----
+MD5 a3f0476015e2855d6cf3e66904b232ee files/23_mod_injection.conf 425
+MD5 410d8669ac36d7b41a388e09552a56f8 files/digest-mod_injection-0.3.0 70
+MD5 c98c6ef4db7edb9062e38dc6c16248e1 files/digest-mod_injection-0.3.1 70
+MD5 c98c6ef4db7edb9062e38dc6c16248e1 files/digest-mod_injection-0.3.1-r1 70
+MD5 189338a2b70fef859aa31149b9143123 files/mod_injection-0.3.0-register.patch 919
+MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
+MD5 1eb6ba208468e00f76767ee3f9d3344b mod_injection-0.3.0.ebuild 967
+MD5 48ed7eeba2a2edebb4eaa8c2925d3b3c mod_injection-0.3.1-r1.ebuild 632
+MD5 762cd9f0b3d5077388200ae0596255ce mod_injection-0.3.1.ebuild 971
