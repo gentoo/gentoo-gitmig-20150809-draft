@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.17.ebuild,v 1.2 2004/11/06 16:19:44 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.17.ebuild,v 1.3 2005/07/10 20:08:24 swegener Exp $
 
 IUSE="gtk"
 
@@ -11,7 +11,6 @@ use gtk && TOOLKIT="gtk" || TOOLKIT="fox"
 
 DESCRIPTION="a powerful frontend for mldonkey"
 HOMEPAGE="http://sancho-gui.sourceforge.net/"
-SRC_URI="http://sancho-gui.sourceforge.net/tmp/${MY_P}-linux-${TOOLKIT}.tar.bz2"
 SRC_URI="gtk? ( http://sancho-gui.sourceforge.net/tmp/${MY_P}-linux-gtk.tar.bz2 )
 	!gtk? ( http://sancho-gui.sourceforge.net/tmp/${MY_P}-linux-fox.tar.bz2 )"
 
