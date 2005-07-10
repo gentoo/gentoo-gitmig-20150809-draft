@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.31.01.ebuild,v 1.7 2005/06/09 01:07:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.31.01.ebuild,v 1.8 2005/07/10 19:50:05 swegener Exp $
 
 IUSE="gtk ipv6 libwww ncurses tcltk"
 
@@ -10,7 +10,6 @@ MY_P=${PN}-${MY_PV}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A framework for creating multitasking programs in Perl"
-HOMEPAGE="http://poe.perl.org"
 HOMEPAGE="http://search.cpan.org/~rcaputo/${MY_P}/"
 SRC_URI="mirror://cpan/authors/id/R/RC/RCAPUTO/${MY_P}.tar.gz"
 
@@ -18,8 +17,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~sparc"
 
-DEPEND="${DEPEND}
-	dev-perl/ExtUtils-AutoInstall
+DEPEND="dev-perl/ExtUtils-AutoInstall
 	>=dev-perl/Event-1.00
 	>=perl-core/Time-HiRes-1.59
 	>=dev-perl/Compress-Zlib-1.33
