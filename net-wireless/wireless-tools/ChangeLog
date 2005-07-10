@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.70 2005/07/10 15:36:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.71 2005/07/10 16:01:49 brix Exp $
+
+  10 Jul 2005; <brix@gentoo.org> wireless-tools-24.ebuild,
+  wireless-tools-28_pre8.ebuild:
+  Keyworded ~sparc under seal of approval from the sparc high council, bug
+  #26955.
 
   10 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   wireless-tools-26-r1.ebuild, wireless-tools-27.ebuild,
