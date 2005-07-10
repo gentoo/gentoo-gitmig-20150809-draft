@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.19 2005/07/09 18:27:08 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.20 2005/07/10 12:14:48 dholm Exp $
+
+  10 Jul 2005; David Holm <dholm@gentoo.org> tvtime-0.99.ebuild:
+  Added to ~ppc.
 
 *tvtime-0.99 (09 Jul 2005)
 
