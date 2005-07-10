@@ -13,7 +13,7 @@
  					// Is Log4J available?
  					Class.forName("org.apache.log4j.Level");
 -					setLogger(Log4JLogger.class.getName());
-+					setLogger("org.apache.log4j.Level");
++					setLogger("com.mysql.jdbc.log.Log4JLogger");
  				} catch (Throwable t) {
  					try {
  						// Are we running on JDK-1.4?
