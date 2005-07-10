@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 6cdd4f494dc6e75b5a83f8d8599dadfa mod_fcgid-1.05-r2.ebuild 1185
-MD5 0b06be738eaeee6014348432efbb913c ChangeLog 1164
 MD5 b04c3f93349f84b2bc615931f1c1d6c9 metadata.xml 483
+MD5 d65b4367d418a70d65d4c7340e06a8fb ChangeLog 1301
+MD5 78551fb5d30855c03619d782744cb055 mod_fcgid-1.06.ebuild 1183
 MD5 2f3017d748d633af44a9d82fa83cdef7 files/20_mod_fcgid.conf 197
 MD5 2d8046826f8e5dd7cc5256d4e8337275 files/digest-mod_fcgid-1.05-r2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCpixjI1lqEGTUzyQRAs5LAJ4//BaKHJFuGigt3bFxhi2DbmwBygCgtdXW
-mHIAXfrDTFWvaHMJyO8wICU=
-=EPsh
------END PGP SIGNATURE-----
+MD5 cafc8c22c15bd694177cb04afbc32d42 files/digest-mod_fcgid-1.06 65
