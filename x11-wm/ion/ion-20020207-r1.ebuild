@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r1.ebuild,v 1.10 2004/06/24 23:42:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r1.ebuild,v 1.11 2005/07/10 15:19:56 twp Exp $
 
 inherit eutils
 
@@ -31,10 +31,12 @@ src_compile() {
 		-e 's:#HAS_SYSTEM_ASPRINTF=1:HAS_SYSTEM_ASPRINTF=1:' \
 		-e 's:#INSTALL=install -c:INSTALL=install -c:' \
 		-e 's:INSTALL=install *$:#INSTALL=install:' \
+		-e 's:-pedantic-errors ::g' \
 		system.mk.new > system.mk
 
 	cp Makefile Makefile.new
-	sed -e 's:$(DOCDIR)/ion:$(DOCDIR)/${P}:g' Makefile.new > Makefile
+	sed -e 's:$(DOCDIR)/ion:$(DOCDIR)/${P}:g' \
+		Makefile.new > Makefile
 
 	make depend || die
 	emake || die
