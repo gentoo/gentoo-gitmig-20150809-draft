@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86.ebuild,v 1.11 2005/07/10 18:03:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86.ebuild,v 1.12 2005/07/10 18:16:48 dostrow Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="selinux bootstrap build static"
+IUSE="selinux bootstrap build ibm static"
 
 RDEPEND="selinux? ( >=sys-libs/libselinux-1.18 sys-libs/libsepol )"
 DEPEND="${RDEPEND}
@@ -29,6 +29,14 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-gentoo.patch
 	use selinux && epatch "${FILESDIR}"/${PV}-selinux.patch
 	cp "${FILESDIR}"/inittab "${WORKDIR}"/ || die "cp inittab"
+
+	if use ibm ; then
+		cat <<-EOF >> "${WORKDIR}"/inittab
+		#HVC / HVSI CONSOLE
+		#hvc0:12345:respawn:/sbin/agetty -L 9600 hvc0
+		#hvsi:12345:respawn:/sbin/agetty -L	19200 hvsi0
+		EOF
+	fi
 }
 
 src_compile() {
