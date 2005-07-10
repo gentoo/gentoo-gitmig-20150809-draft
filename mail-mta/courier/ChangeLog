@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.58 2005/07/10 23:25:28 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.59 2005/07/10 23:27:15 ticho Exp $
+
+  10 Jul 2005; Andrej Kacian <ticho@gentoo.org> courier-0.48.1-r1.ebuild:
+  Stable on x86.
 
 *courier-0.48.1-r1 (10 Jul 2005)
 
