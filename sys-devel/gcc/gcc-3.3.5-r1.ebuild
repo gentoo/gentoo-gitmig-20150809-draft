@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.25 2005/06/10 01:29:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.26 2005/07/10 04:10:38 vapier Exp $
 
 MAN_VER="3.3.5"
 #BRANCH_UPDATE="20041025"
@@ -84,7 +84,7 @@ src_unpack() {
 	fi
 
 	# misc patches that havent made it into a patch tarball yet
-	epatch ${FILESDIR}/gcc-spec-env.patch
+	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
 
 	# fix an incorrect prototype of ffecom_gfrt_basictype() which causes
 	# 3.3.5 to not compile on some configurations.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.39 2005/06/24 01:16:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.40 2005/07/10 04:10:38 vapier Exp $
 
 MAN_VER="3.4.3"
 BRANCH_UPDATE="20041125"
@@ -84,8 +84,8 @@ src_unpack() {
 	sed -e 's/3\.4\.4/3.4.3/' -i ${S}/gcc/version.c
 
 	# misc patches that havent made it into a patch tarball yet
+	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
-	epatch ${FILESDIR}/gcc-spec-env.patch
 	epatch ${FILESDIR}/3.4.2/810-arm-bigendian-uclibc.patch
 
 	# nothing in the tree provides libssp.so, so nothing will ever trigger this

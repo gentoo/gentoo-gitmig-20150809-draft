@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110-r2.ebuild,v 1.7 2005/07/06 05:39:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110-r2.ebuild,v 1.8 2005/07/10 04:10:38 vapier Exp $
 
 MAN_VER="3.4.3"
 PATCH_VER="1.3"
@@ -79,7 +79,7 @@ src_unpack() {
 	sed -e 's/3\.4\.4/3.4.3/' -i ${S}/gcc/version.c
 
 	# misc patches that havent made it into a patch tarball yet
-	epatch ${FILESDIR}/gcc-spec-env.patch
+	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
 
 	# nothing in the tree provides libssp.so, so nothing will ever trigger this
 	# logic, but having the patch in the tree makes life so much easier for me
