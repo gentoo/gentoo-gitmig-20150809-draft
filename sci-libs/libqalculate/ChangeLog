@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libqalculate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.1 2005/06/05 15:09:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.2 2005/07/10 01:27:50 weeve Exp $
+
+  10 Jul 2005; Jason Wever <weeve@gentoo.org> libqalculate-0.8.0.ebuild:
+  Added ~sparc keyword.
 
 *libqalculate-0.8.0 (05 Jun 2005)
 
