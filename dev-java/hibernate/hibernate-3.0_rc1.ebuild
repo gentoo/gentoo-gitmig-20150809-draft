@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.4 2005/03/23 00:42:40 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.5 2005/07/10 03:30:30 agriffis Exp $
 
 inherit java-pkg
 
@@ -54,7 +54,7 @@ DEPEND="${RDEPEND}
 			dev-java/junit
 			dev-db/hsqldb
 		)"
-IUSE="c3p0 dbcp doc jikes jboss jcs junit proxool oscache swarmcache"
+IUSE="c3p0 dbcp doc jboss jcs jikes junit oscache swarmcache"
 
 S=${WORKDIR}/${PN}-${PV:0:3}
 
