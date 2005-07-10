@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.2.ebuild,v 1.7 2005/07/09 15:20:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.2.ebuild,v 1.8 2005/07/10 01:18:45 swegener Exp $
 
 inherit webapp eutils
 
@@ -8,7 +8,6 @@ DESCRIPTION="Drupal is a PHP-based open-source platform and content management s
 HOMEPAGE="http://drupal.org"
 IUSE="minimal"
 MOD_PV="4.5.0"
-S="${WORKDIR}/${P}"
 
 SRC_URI="http://drupal.org/files/projects/${P}.tar.gz"
 LICENSE="GPL-2"
@@ -706,4 +705,3 @@ src_install() {
 
 	webapp_src_install
 }
-

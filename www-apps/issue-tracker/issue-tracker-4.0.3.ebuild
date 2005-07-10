@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/issue-tracker-4.0.3.ebuild,v 1.3 2005/07/09 18:58:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/issue-tracker-4.0.3.ebuild,v 1.4 2005/07/10 01:18:16 swegener Exp $
 
 inherit webapp-apache
 
@@ -14,8 +14,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="virtual/php
 	|| ( dev-db/mysql dev-db/postgresql )"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
