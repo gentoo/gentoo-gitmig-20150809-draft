@@ -1,4 +1,14 @@
-MD5 6ccf6f67450f34b11a09951eb40fc25d ChangeLog 3047
-MD5 c26d0240297b7297bdefae4a13ddcd98 commons-dbcp-1.2.1.ebuild 1316
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a6de27fe71cdee9ca3dcd60bdab7cdb3 commons-dbcp-1.2.1.ebuild 1322
+MD5 bb3a7ee0a69840fb19cac95bf438bc4c ChangeLog 3162
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 51ec667c831b7a9628a4a9b5054597ae files/digest-commons-dbcp-1.2.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0Sb6/rLF9B432nYRAhxJAJ9QDmLAVlF5p7pk8ruiYrcwhNUr8QCeKOCD
+yYqJ7GPjqf973qP1UQRP1xU=
+=SOPA
+-----END PGP SIGNATURE-----
