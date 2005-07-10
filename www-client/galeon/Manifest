@@ -1,23 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4ab6199a7f4dc29a5770315e0ee3c8b3 galeon-1.3.20.ebuild 1443
-MD5 9db0e855090f5501a6983019b8ed6b3f galeon-1.3.18.ebuild 1585
-MD5 6fde6627effe002573e741eb6147a42b galeon-1.3.21.ebuild 1357
-MD5 a499e17bed3c88e01a4742d9f55b1e26 galeon-1.3.17.ebuild 1589
-MD5 3b26c42561fb9cbd39bf75d19334a105 galeon-1.3.19.ebuild 1583
 MD5 2be57673e46c6b0bd141ea8ca2e1326a ChangeLog 16618
-MD5 4c1c1e710ea77d8d7db9906084c4228d metadata.xml 215
 MD5 f688ddbf98228c4b9511250144ebfcf9 files/digest-galeon-1.3.17 67
 MD5 88ccf8b5a77bd6f7aa00c0d3366ffed8 files/digest-galeon-1.3.18 67
 MD5 bb092f2e34cd7f5be1ad94e328760e31 files/digest-galeon-1.3.19 67
 MD5 e341b08e0c484831306b28a3429883ff files/digest-galeon-1.3.20 67
 MD5 511883d67fd68cc5fcef2df81022339f files/digest-galeon-1.3.21 67
 MD5 5fe8b0cd6c33b466d49ba5ac05ff931b files/galeon-1.3.20-toolbar-crash.diff 518
+MD5 a499e17bed3c88e01a4742d9f55b1e26 galeon-1.3.17.ebuild 1589
+MD5 b13f984db8836c916f16bfb78924e376 galeon-1.3.18.ebuild 1567
+MD5 633c678f632342dc6a4807242483dbae galeon-1.3.19.ebuild 1566
+MD5 05170aebefd6e4f1219d083c7557abff galeon-1.3.20.ebuild 1424
+MD5 5f9223d36d26da836965691dd22be09f galeon-1.3.21.ebuild 1341
+MD5 4c1c1e710ea77d8d7db9906084c4228d metadata.xml 215
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCqM0zKRy60XGEcJIRAgh7AJ40NJok/ObXty6aBAzNNXK8Hkn/TQCgk1TX
-p0TXXRe6n1Ku8Wfb+FMbOTs=
-=CuxG
+iD8DBQFC0G6rI1lqEGTUzyQRAsWlAJ0be2Fw1+uMJh2X6b+DKkOq9zDLIACePv+l
+nYwKmfTmxNN9sah6irz8zeo=
+=rr1k
 -----END PGP SIGNATURE-----

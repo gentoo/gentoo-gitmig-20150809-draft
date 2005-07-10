@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.19.ebuild,v 1.7 2005/05/14 08:23:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.19.ebuild,v 1.8 2005/07/10 00:41:01 swegener Exp $
 
 inherit gnome2 debug libtool eutils
 
@@ -12,8 +12,6 @@ LICENSE="GPL-2"
 IUSE=""
 KEYWORDS="x86 ppc alpha ~sparc amd64 ia64"
 SLOT="0"
-
-S=${WORKDIR}/${P}
 
 RDEPEND="virtual/x11
 	>=www-client/mozilla-1.7.5
