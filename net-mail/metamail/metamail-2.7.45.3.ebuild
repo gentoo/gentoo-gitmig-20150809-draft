@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.3.ebuild,v 1.13 2005/05/18 12:13:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.3.ebuild,v 1.14 2005/07/10 21:20:59 swegener Exp $
 
 inherit eutils
 
@@ -32,13 +32,11 @@ src_unpack() {
 src_compile() {
 	export WANT_AUTOCONF=2.5
 	econf || die
-	emake || emake || die
+	emake || die
 }
 src_install () {
 	make DESTDIR=${D} install || die
 	dodoc COPYING CREDITS README
 	rm man/mmencode.1
-	doman man/*
-	doman debian/mimencode.1 debian/mimeit.1
+	doman man/* debian/mimencode.1 debian/mimeit.1
 }
-
