@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/pymssql-0.6.0.ebuild,v 1.1 2005/02/02 11:28:58 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/pymssql-0.6.0.ebuild,v 1.2 2005/07/10 01:13:39 swegener Exp $
 
 inherit distutils
 
@@ -18,6 +18,3 @@ DEPEND=">=dev-lang/python-2.2
 		>=dev-db/unixODBC-2.2.8"
 
 ## freetds needs to be emerged with USE='mssql'
-
-S=${WORKDIR}/${P}
-
