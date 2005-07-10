@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.43 2005/07/09 01:16:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.44 2005/07/10 05:45:16 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1256,7 +1256,7 @@ cursor_install() {
 
 strip_execs() {
 	if use debug || has nostrip ${FEATURES}; then
-		ewarn "Debug build turned on by USE=debug"
+		ewarn "Debug build turned on by USE=debug or FEATURES=nostrip"
 		ewarn "NOT stripping binaries and libraries"
 	else
 		local STRIP
