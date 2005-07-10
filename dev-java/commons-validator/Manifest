@@ -1,6 +1,16 @@
-MD5 908939c974fa0d538f8675f0cd2ec279 commons-validator-1.0.2-r5.ebuild 2085
-MD5 16eef9ad3acb863752a771e2b83419f2 ChangeLog 4462
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a3fe367b34eb395fd5312c3c43452acd commons-validator-1.1.3-r1.ebuild 2254
+MD5 4cc22229724efca697eac432dcf08198 commons-validator-1.0.2-r5.ebuild 2121
+MD5 cd91bd95a00ffdbb39e205b8ec0fbc56 ChangeLog 4602
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 e7e168f6bd889f4c3eda3fe39e9ecbee commons-validator-1.1.3-r1.ebuild 2265
 MD5 3b4d11c72fe5990ec6689406240d3ef6 files/digest-commons-validator-1.0.2-r5 78
 MD5 b4056d324a1cc96ca13a9f0c3e7c68fc files/digest-commons-validator-1.1.3-r1 173
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0Tii/rLF9B432nYRAlr/AKCmQUGnC4bkUfRX/eZRc8OiWhKWAACeIdhL
+b0i6I1zUkB29XIDanO6jQMA=
+=MFQm
+-----END PGP SIGNATURE-----

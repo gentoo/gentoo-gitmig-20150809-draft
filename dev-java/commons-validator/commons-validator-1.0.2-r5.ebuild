@@ -1,21 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.0.2-r5.ebuild,v 1.1 2005/05/14 16:10:40 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.0.2-r5.ebuild,v 1.2 2005/07/10 15:02:29 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Jakarta component to validate user input, or data input"
 HOMEPAGE="http://jakarta.apache.org/commons/validator/"
-SRC_URI="mirror://apache/jakarta/commons/validator/source/${PN}-${PV}-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/commons/validator/source/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc amd64"
 IUSE="doc examples jikes source"
-
-DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-1.4
-	app-arch/zip
-	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/jakarta-oro-2.0*
 	>=dev-java/commons-digester-1.0
@@ -23,18 +18,23 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/commons-logging-1.0
 	=dev-java/commons-beanutils-1.6*
 	>=dev-java/xerces-2.6.2-r1"
+DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
+	>=dev-java/ant-1.6
+	app-arch/zip
+	jikes? ( dev-java/jikes )"
 
 S="${WORKDIR}/${P}-src"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	echo "oro.jar=`java-config -p jakarta-oro-2.0`" >> build.properties
-	echo "commons-digester.jar=`java-config -p commons-digester`" >> build.properties
-	echo "commons-collections.jar=`java-config -p commons-collections`" >> build.properties
-	echo "commons-logging.jar=`java-config -p commons-logging | sed s/.*://`" >> build.properties
-	echo "commons-beanutils.jar=`java-config -p commons-beanutils-1.6`" >> build.properties
-	echo "xerces.jar=`java-config -p xerces-2`" >> build.properties
+	echo "oro.jar=$(java-pkg_getjars jakarta-oro-2.0)" >> build.properties
+	echo "commons-digester.jar=$(java-pkg_getjars commons-digester)" >> build.properties
+	echo "commons-collections.jar=$(java-pkg_getjars commons-collections)" >> build.properties
+	echo "commons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)" >> build.properties
+	echo "commons-beanutils.jar=$(java-pkg_getjars commons-beanutils-1.6)" >> build.properties
+	echo "xerces.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)" >> build.properties
 }
 
 src_compile() {
