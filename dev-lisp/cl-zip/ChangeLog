@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-zip
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-zip/ChangeLog,v 1.1 2005/07/10 04:35:51 mkennedy Exp $
+
+*cl-zip-20050405 (10 Jul 2005)
+
+  10 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-zip-20050405.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
