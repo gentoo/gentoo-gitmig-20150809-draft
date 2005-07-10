@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r4.ebuild,v 1.9 2005/07/10 02:41:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r4.ebuild,v 1.10 2005/07/10 18:19:06 dostrow Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="bootstrap build static unicode ibm"
+IUSE="bootstrap build static unicode"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
@@ -69,14 +69,6 @@ src_unpack() {
 		sed -i -e '/^KEYMAP=/s:us:sunkeymap:' etc/conf.d/keymaps || die
 		;;
 	esac
-
-	if use ibm ; then
-		cat <<-EOF >> etc/inittab
-		#HVC / HVSI CONSOLE
-		#hvc0:12345:respawn:/sbin/agetty -L 9600 hvc0
-		#hvsi:12345:respawn:/sbin/agetty -L 19200 hvsi0
-		EOF
-	fi
 }
 
 src_compile() {
