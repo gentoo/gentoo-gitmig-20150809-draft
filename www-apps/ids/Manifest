@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 faa22c7b51f680ee5a8614fb6d1564e8 ids-0.83_beta2.ebuild 1477
-MD5 9084fee5eff2cfa2b8b6cbd2bcd0eff5 ids-0.82.ebuild 1441
-MD5 2f6ecaa0d51f8802e92d0c973c306472 ids-0.83_beta2-r1.ebuild 910
 MD5 235b61ef524961b24940cb1aa6321384 ChangeLog 1648
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 f3c2e1e60ba2b89234c3aa7931cbaf50 files/digest-ids-0.83_beta2-r1 62
-MD5 f3c2e1e60ba2b89234c3aa7931cbaf50 files/digest-ids-0.83_beta2 62
-MD5 d82018294820900e72eddf227d213fc7 files/postinstall-en.txt 131
 MD5 2fafb5c9f461a7bd803bad263cad0228 files/digest-ids-0.82 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCb5UHZ/iYVBmujdURAoBaAKCgvw5KIu0XvzTo9+2zvw5xnNerxACg4E0u
-69D2h9P77lNrlCx+9gakTa4=
-=urk+
------END PGP SIGNATURE-----
+MD5 f3c2e1e60ba2b89234c3aa7931cbaf50 files/digest-ids-0.83_beta2 62
+MD5 f3c2e1e60ba2b89234c3aa7931cbaf50 files/digest-ids-0.83_beta2-r1 62
+MD5 d82018294820900e72eddf227d213fc7 files/postinstall-en.txt 131
+MD5 3c9cf17b59e5088757c5a02bcbe4a47c ids-0.82.ebuild 1424
+MD5 2f6ecaa0d51f8802e92d0c973c306472 ids-0.83_beta2-r1.ebuild 910
+MD5 faa22c7b51f680ee5a8614fb6d1564e8 ids-0.83_beta2.ebuild 1477
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
