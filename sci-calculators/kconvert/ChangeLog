@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/kconvert
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kconvert/ChangeLog,v 1.5 2005/05/29 23:00:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kconvert/ChangeLog,v 1.6 2005/07/10 03:00:07 weeve Exp $
+
+  10 Jul 2005; Jason Wever <weeve@gentoo.org> kconvert-1.1-r1.ebuild:
+  Added ~sparc keyword.
 
   29 May 2005; Marcus D. Hanwell <marcus@gentoo.org> -kconvert-1.1.ebuild,
   kconvert-1.1-r1.ebuild:
