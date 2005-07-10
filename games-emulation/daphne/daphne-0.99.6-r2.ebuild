@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-0.99.6-r2.ebuild,v 1.8 2004/09/25 07:40:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-0.99.6-r2.ebuild,v 1.9 2005/07/10 02:33:40 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -13,14 +13,13 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/libc
-	media-libs/libogg
+RDEPEND="media-libs/libogg
 	media-libs/libvorbis
 	media-libs/libsdl
 	media-libs/sdl-mixer
 	sys-libs/zlib"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -28,7 +27,10 @@ src_unpack() {
 	replace-cpu-flags i686 pentium3 pentium4 i586 #18807
 
 	cd "${S}/src"
-	sed -e "s:-march=i686:${CFLAGS}:" \
+	sed \
+		-e "/^DFLAGS/d" \
+		-e "/-fexpensive-optimizations/d " \
+		-e "s/\${DFLAGS}/${CFLAGS}/g" \
 		Makefile.vars.linux_x86 > Makefile.vars \
 		|| die "sed failed"
 

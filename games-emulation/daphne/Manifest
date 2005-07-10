@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 33dda2b9e3db204b5ee2b6f28baad36e ChangeLog 1053
-MD5 eb416c113d4423b6f9e89ef9c837c77e daphne-0.99.6-r2.ebuild 1956
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 b8108296fd1d844b69546291e958bb4c files/0.99.6-local-dapinput.patch 669
+MD5 85284e83790b51e673b35fdcb53f2f77 daphne-0.99.6-r2.ebuild 2006
+MD5 88f57ec49f1b4ceb2d7fc50fbbf7db96 ChangeLog 1175
 MD5 8c819c5ceafbe235dfa7fb2a35bf84ce files/digest-daphne-0.99.6-r2 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBVSEVHTu7gpaalycRArNGAJ9yhWahjjorEg99aWpcU+syM5mSSgCbB0Gf
-8ZGfgZqOdi5nXdem/Ohe3xo=
-=t76Z
------END PGP SIGNATURE-----
+MD5 b8108296fd1d844b69546291e958bb4c files/0.99.6-local-dapinput.patch 669
