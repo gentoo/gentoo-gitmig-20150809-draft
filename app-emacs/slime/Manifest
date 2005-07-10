@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5e401c1dbb83e63b3bb80ec6e512016f ChangeLog 4092
 MD5 910993d2e23f61b956f2df6fad49b657 files/1.0.20050106/70slime-gentoo.el 577
 MD5 50dd21e3645cb3b1daba49d208904103 files/1.0.20050106/swank-loader-init.lisp 526
@@ -46,3 +49,10 @@ MD5 e8fb9dcd6a74b8732a4d34da5803593c slime-1.2.1-r1.ebuild 2022
 MD5 5c3feb7cfa5afaf49774b9770e708bf8 slime-1.2.1.20050610.ebuild 2077
 MD5 061e59b4d1da8242bc2cc3fb6be7ee6b slime-1.2.1.20050630.ebuild 2077
 MD5 5f1e872be70f7318f3df45cfe55e3195 slime-1.2.1.ebuild 2063
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0G9/I1lqEGTUzyQRAtEoAKDDEnhNWDt2Vf2bfimu0E6C0OwARACfePs1
+jMGFaQrmmOrzxeyNOSc2rSw=
+=1H22
+-----END PGP SIGNATURE-----
