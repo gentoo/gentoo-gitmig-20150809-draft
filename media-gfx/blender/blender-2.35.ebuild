@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.35.ebuild,v 1.3 2005/01/03 12:41:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.35.ebuild,v 1.4 2005/07/10 00:50:38 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -28,8 +28,6 @@ RDEPEND="virtual/x11
 
 DEPEND="dev-util/scons
 	${RDEPEND}"
-
-
 
 src_unpack() {
 	unpack ${A}
