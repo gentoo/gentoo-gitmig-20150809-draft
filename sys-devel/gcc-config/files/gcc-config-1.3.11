@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.11,v 1.6 2005/07/07 23:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.11,v 1.7 2005/07/10 06:18:55 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -295,7 +295,7 @@ get_current_profile() {
 	local conf="${GCC_ENV_D}/config"
 	if [[ -n ${CTARGET} ]] ; then
 		conf="${conf}-${CTARGET}"
-	elif [[ -f ${GCC_ENV_D}/config-${CC_COMP} ]] ; then
+	elif [[ -n ${CC_COMP} ]] && is_cross_compiler ; then
 		conf="${conf}-${CC_COMP}"
 	fi
 
@@ -506,8 +506,7 @@ if [[ ${DOIT} == "switch_profile" ]] && [[ -z ${CC_COMP} ]] ; then
 fi
 
 if [[ -z ${CC_COMP} ]] ; then
-	if get_current_profile &>/dev/null
-	then
+	if get_current_profile &>/dev/null ; then
 		CC_COMP="$(get_current_profile)"
 	else
 		list_profiles
