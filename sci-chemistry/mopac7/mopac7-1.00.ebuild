@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.00.ebuild,v 1.1 2005/07/08 06:55:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.00.ebuild,v 1.2 2005/07/10 05:47:55 spyderous Exp $
 
 inherit flag-o-matic
 
@@ -11,11 +11,11 @@ LICENSE="mopac7"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="dev-lang/f2c
+DEPEND="dev-libs/libf2c
 	sys-devel/autoconf
 	sys-devel/automake
 	sys-devel/libtool"
-RDEPEND="dev-lang/f2c"
+RDEPEND="dev-libs/libf2c"
 
 src_compile() {
 	libtoolize --copy --force
