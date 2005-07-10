@@ -1,5 +1,15 @@
-MD5 afe09a2bd64156f60a6a0126d55a31c4 wmrecord-1.0.5.3.ebuild 871
-MD5 fd4e11553fc22163a7a0d1e103a3ea12 ChangeLog 568
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe32f9f4cba717e959f324a8786fe893 ChangeLog 760
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 f5817c0145f7a887133f4977d1cdc71b wmrecord-1.0.5.3-r1.ebuild 887
 MD5 6a432086c96f663c66d6c88c74c2acc0 files/wmrecord.desktop 207
-MD5 1c822fc717f6fa493a76d5b9a0b7eea2 files/digest-wmrecord-1.0.5.3 76
+MD5 1c822fc717f6fa493a76d5b9a0b7eea2 files/digest-wmrecord-1.0.5.3-r1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0IOgl5AvwDPiUowRAsKsAKCS6UPpxx0N2PHDWKzmVozAGi2KEACgpW0r
+XxNLcSJLHcQk3qI/w37coFw=
+=s9cG
+-----END PGP SIGNATURE-----
