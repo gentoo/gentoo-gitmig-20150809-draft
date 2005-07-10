@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/proj
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.3 2004/12/29 21:33:41 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.4 2005/07/10 20:25:18 nerdboy Exp $
+
+  10 Jul 2005; Steve Arnold <nerdboy@gentoo.org> proj-4.4.7-r1.ebuild,
+  proj-4.4.8.ebuild, proj-4.4.9.ebuild:
+  bumping x86 and sparc to stable
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.6 2005/05/26 19:55:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.7 2005/07/10 20:27:26 nerdboy Exp $
+
+  10 Jul 2005; Steve Arnold <nerdboy@gentoo.org> ogdi-3.1.1.ebuild,
+  ogdi-3.1.4.ebuild:
+  bumping x86 and sparc to stable
 
   26 May 2005; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Herd name is 'sci' not 'sci-herd'
