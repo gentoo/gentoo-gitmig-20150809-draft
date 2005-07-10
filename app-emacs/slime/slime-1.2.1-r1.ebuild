@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.2.1-r1.ebuild,v 1.1 2005/05/26 02:24:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.2.1-r1.ebuild,v 1.2 2005/07/10 00:44:33 swegener Exp $
 
 inherit elisp cvs eutils
 
@@ -23,9 +23,6 @@ DEPEND="virtual/emacs
 	dev-lisp/common-lisp-controller
 	virtual/commonlisp
 	doc? ( sys-apps/texinfo )"
-
-# S="${WORKDIR}/slime-${MY_PV_BASE}"
-S="${WORKDIR}/${P}"
 
 CLPACKAGE=swank
 
