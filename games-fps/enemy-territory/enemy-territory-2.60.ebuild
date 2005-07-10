@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.5 2005/05/12 12:30:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.6 2005/07/10 15:55:22 vapier Exp $
 
 inherit eutils games
 
@@ -8,6 +8,7 @@ DESCRIPTION="Return to Castle Wolfenstein: Enemy Territory - standalone multi-pl
 HOMEPAGE="http://www.idsoftware.com/"
 SRC_URI="mirror://3dgamers/pub/3dgamers4/games/wolfensteinet/et-linux-${PV}.x86.run
 	mirror://3dgamers/pub/3dgamers/games/wolfensteinet/et-linux-${PV}.x86.run
+	ftp://ftp.idsoftware.com/idstuff/et/linux/et-linux-${PV}.x86.run
 	dedicated? (
 		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.1.tar.bz2
 		mirror://gentoo/${PN}-all-0.1.tar.bz2 )"
@@ -16,9 +17,9 @@ LICENSE="RTCW-ETEULA"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="dedicated opengl"
-RESTRICT="nomirror nostrip"
+RESTRICT="mirror nostrip"
 
-DEPEND="virtual/libc"
+DEPEND="sys-libs/glibc"
 RDEPEND="dedicated? ( app-misc/screen )
 	!dedicated? ( virtual/opengl )
 	opengl? ( virtual/opengl )
