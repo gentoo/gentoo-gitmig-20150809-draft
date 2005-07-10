@@ -1,16 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.18 2005/01/30 19:39:20 pauldv Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.19 2005/07/10 00:59:22 swegener Exp $
 
 inherit libtool eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
 SRC_URI="ftp://ftp.sleepycat.com/releases/${P}.tar.gz"
 HOMEPAGE="http://www.sleepycat.com/"
 
+IUSE=""
 SLOT="3"
 LICENSE="DB"
 # This ebuild is to be the compatibility ebuild for when db4 is put
@@ -164,4 +162,3 @@ pkg_postinst () {
 pkg_postrm () {
 	fix_so
 }
-

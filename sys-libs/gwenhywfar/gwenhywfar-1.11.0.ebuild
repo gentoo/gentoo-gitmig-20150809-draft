@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-1.11.0.ebuild,v 1.1 2005/04/13 07:01:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-1.11.0.ebuild,v 1.2 2005/07/10 01:01:20 swegener Exp $
 
 DESCRIPTION="A multi-platform helper library for other libraries"
 HOMEPAGE="http://gwenhywfar.sourceforge.net"
@@ -14,8 +14,6 @@ IUSE="debug ssl doc"
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )
 		sys-libs/ncurses
 		doc? ( app-doc/doxygen )"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	if use doc; then

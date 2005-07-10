@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p1.ebuild,v 1.10 2005/01/30 19:39:20 pauldv Exp $
-
-IUSE="tcltk java doc"
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p1.ebuild,v 1.11 2005/07/10 00:59:22 swegener Exp $
 
 inherit eutils gnuconfig db
 
@@ -18,6 +16,7 @@ else
 	MY_P=${PN}-${MY_PV}
 fi
 
+IUSE="tcltk java doc"
 S=${WORKDIR}/${MY_P}/build_unix
 DESCRIPTION="Berkeley DB"
 SRC_URI="ftp://ftp.sleepycat.com/releases/${MY_P}.tar.gz"

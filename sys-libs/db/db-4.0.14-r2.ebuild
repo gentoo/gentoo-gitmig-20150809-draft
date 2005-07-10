@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.27 2005/01/30 19:39:20 pauldv Exp $
-
-IUSE="tcltk java doc"
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.28 2005/07/10 00:59:22 swegener Exp $
 
 inherit eutils gnuconfig db
 
@@ -10,6 +8,7 @@ S="${WORKDIR}/${P}/build_unix"
 DESCRIPTION="Berkeley DB"
 SRC_URI="ftp://ftp.sleepycat.com/releases/${P}.tar.gz"
 HOMEPAGE="http://www.sleepycat.com"
+IUSE="tcltk java doc"
 SLOT="4"
 LICENSE="DB"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64"
