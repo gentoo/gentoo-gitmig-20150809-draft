@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.0_rc1.ebuild,v 1.3 2005/05/29 15:39:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-3.0_rc1.ebuild,v 1.4 2005/07/10 13:01:54 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -12,17 +12,19 @@ SRC_URI="mirror://apache/jakarta/commons/httpclient/source/${MY_P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="3"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="doc junit"
+IUSE="doc junit source"
+
+RDEPEND=">=virtual/jre-1.3
+		>=dev-java/log4j-1.2.5
+		dev-java/commons-logging
+		dev-java/commons-codec"
 
 DEPEND=">=virtual/jdk-1.3
 	sys-apps/sed
-	>=dev-java/log4j-1.2.5
 	>=dev-java/ant-1.4
 	junit? ( dev-java/junit )
+	source? ( app-arch/zip )
 	${RDEPEND}"
-RDEPEND=">=virtual/jdk-1.3
-		dev-java/commons-logging
-		dev-java/commons-codec"
 
 S=${WORKDIR}/${MY_P}
 
@@ -45,4 +47,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
 	use doc && java-pkg_dohtml -r dist/docs/*
+	use source && java-pkg_dosrc src/java/*
 }

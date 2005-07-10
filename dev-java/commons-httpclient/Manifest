@@ -1,12 +1,20 @@
-MD5 1eb9abc8b114b4959bebac14efa9d9b1 ChangeLog 2765
-MD5 bb57b8711943dbb438526d7860fda1b1 commons-httpclient-2.0-r1.ebuild 1320
-MD5 d321a3bd06b3f98f0b29ea1986ead2b5 commons-httpclient-2.0.1.ebuild 1602
-MD5 c37f59f0d5ca472896914fec6530eba5 commons-httpclient-2.0.2.ebuild 1609
-MD5 2d26201aed4618373ceaa58aa9de9742 commons-httpclient-3.0_rc1.ebuild 1348
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f215eff9ad84b6f0e35f0a1ccf8a794c commons-httpclient-2.0.2.ebuild 1697
+MD5 04beccc7db5c85d3c9cb9ea68922ffdb commons-httpclient-2.0.1.ebuild 1689
+MD5 09a1d1615c78d8ba563ac8b6a455f60c ChangeLog 3000
+MD5 a1a4765cad5d775260e5cbc9553cfbb7 commons-httpclient-3.0_rc1.ebuild 1421
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 70dbd7a345c0a9f6a17998de0191f13e files/digest-commons-httpclient-2.0-r1 79
 MD5 22c430c6bf50bc578f8095df5fd64cc4 files/digest-commons-httpclient-2.0.1 81
 MD5 63acee983ed2a9669cd20bc47743b8d3 files/digest-commons-httpclient-2.0.2 81
 MD5 0f992c1cc59ac83b50ecb76e46e4cedd files/digest-commons-httpclient-3.0_rc1 83
 MD5 35bcb566781a909ae25bac9979bf497c files/gentoo.diff 444
 MD5 20316ee59dc3bf35dd5c04778ae6882f files/jikes.diff 955
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0RxY/rLF9B432nYRAqhXAJ9fBkCafatXdZ7vUTX9ywNoIeyiBgCfUt+v
+K+X/GlRUiVG3nLdPhQt2lEM=
+=PGQr
+-----END PGP SIGNATURE-----

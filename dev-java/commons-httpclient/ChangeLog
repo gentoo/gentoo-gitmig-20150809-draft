@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-httpclient
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.19 2005/05/29 15:39:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.20 2005/07/10 13:01:54 axxo Exp $
+
+  10 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
+  -commons-httpclient-2.0-r1.ebuild, commons-httpclient-2.0.1.ebuild,
+  commons-httpclient-2.0.2.ebuild, commons-httpclient-3.0_rc1.ebuild:
+  fix deps, add source useflag support, cleanup
 
   29 May 2005; Markus Rothe <corsair@gentoo.org>
   commons-httpclient-2.0.2.ebuild, commons-httpclient-3.0_rc1.ebuild:
