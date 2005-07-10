@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.380 2005/07/08 01:28:45 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.381 2005/07/10 09:02:31 vericgar Exp $
+
+*apache-2.0.54-r12 (10 Jul 2005)
+*apache-2.0.54-r8 (10 Jul 2005)
+
+  10 Jul 2005; Michael Stewart <vericgar@gentoo.org>
+  +apache-2.0.54-r8.ebuild, +apache-2.0.54-r12.ebuild:
+  Security fix: added patch to address CAN-2005-2088, bug 98358
 
   08 Jul 2005; Hardave Riar <hardave@gentoo.org> apache-2.0.54-r7.ebuild:
   Stable on mips.
