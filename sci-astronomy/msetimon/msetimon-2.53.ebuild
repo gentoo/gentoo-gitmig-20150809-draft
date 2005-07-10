@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/msetimon/msetimon-2.53.ebuild,v 1.1 2005/07/09 18:34:47 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/msetimon/msetimon-2.53.ebuild,v 1.2 2005/07/10 12:19:22 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/msetimon/${NAME}-perl-source-${MY_PV}.tar.gz"
 HOMEPAGE="http://msetimon.sourceforge.net/"
 
 S="${WORKDIR}/${PN}-perl-source-${MY_PV}"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="X"
