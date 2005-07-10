@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/axel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.20 2005/05/10 12:45:01 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.21 2005/07/10 17:07:18 j4rg0n Exp $
+
+  10 Jul 2005; Lina Pezzella <j4rg0n@gentoo.org> axel-1.0b.ebuild:
+  Stable ppc-macos. Bug #88264. Submitted on behalf of Fabian Groffen.
 
   10 May 2005; Tavis Ormandy <taviso@gentoo.org> axel-1.0b.ebuild:
   portage should handle the stripping so as not to override nostrip.
