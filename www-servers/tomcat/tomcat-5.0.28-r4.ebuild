@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.5 2005/07/09 17:14:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.6 2005/07/10 16:16:33 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -11,9 +11,6 @@ SRC_URI="mirror://apache/jakarta/tomcat-${SLOT}/v${PV}/src/jakarta-${P}-src.tar.
 HOMEPAGE="http://jakarta.apache.org/tomcat"
 KEYWORDS="~x86 ~amd64 -ppc64 ~sparc"
 LICENSE="Apache-2.0"
-DEPEND="sys-apps/sed
-	>=virtual/jdk-1.4
-	dev-java/ant"
 RDEPEND=">=virtual/jdk-1.4
 	=dev-java/commons-beanutils-1.7*
 	>=dev-java/commons-collections-3.1
@@ -38,6 +35,10 @@ RDEPEND=">=virtual/jdk-1.4
 	dev-java/sun-jaf-bin
 	>=dev-java/xerces-2.6.2-r1
 	jikes? ( dev-java/jikes )"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	sys-apps/sed
+	dev-java/ant"
 IUSE="doc examples jikes"
 
 S=${WORKDIR}/jakarta-${P}-src
@@ -171,7 +172,7 @@ src_install() {
 	do
 		cd ${dir}
 
-		for jar in $(ls *.jar);
+		for jar in *.jar;
 		do
 			# replace the file with a symlink
 			if [ ! -L ${jar} ]; then
