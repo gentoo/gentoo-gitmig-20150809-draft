@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/pms-0.94.ebuild,v 1.11 2005/04/21 19:35:44 blubb Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/pms-0.94.ebuild,v 1.12 2005/07/10 19:59:09 swegener Exp $
 
 inherit eutils
 

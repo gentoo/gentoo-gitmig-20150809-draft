@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ldapbrowser/ldapbrowser-282_beta2-r1.ebuild,v 1.5 2005/01/01 15:10:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ldapbrowser/ldapbrowser-282_beta2-r1.ebuild,v 1.6 2005/07/10 19:59:51 swegener Exp $
 
 MY_P="Browser282b2"
 S=${WORKDIR}/ldapbrowser
@@ -14,8 +14,6 @@ KEYWORDS="~x86"
 
 RDEPEND="virtual/x11
 	|| ( virtual/jre virtual/jdk )"
-
-IUSE=""
 
 src_unpack() {
 	unpack ${A}
