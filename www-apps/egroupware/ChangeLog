@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.23 2005/07/08 08:28:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.24 2005/07/10 02:01:08 rl03 Exp $
+
+*egroupware-1.0.0.008 (10 Jul 2005)
+
+  10 Jul 2005; Renat Lumpau <rl03@gentoo.org>
+  -files/egroupware-1.0.0.007-xmlrpc.patch, -egroupware-1.0.0.007-r1.ebuild,
+  +egroupware-1.0.0.008.ebuild:
+  Version bump wrt security bug 97651. Remove unnecessary 007-r1.
 
   08 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   egroupware-1.0.0.007-r1.ebuild:
