@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.4.ebuild,v 1.2 2005/07/09 19:48:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.4.ebuild,v 1.3 2005/07/10 16:31:42 radek Exp $
 
 inherit eutils
 
@@ -18,6 +18,9 @@ KEYWORDS="~x86"
 RESTRICT="fetch"
 IUSE=""
 
+DEPEND="app-arch/unzip"
+# RDEPEND does not needs unzip
+
 pkg_nofetch() {
 	eerror "Please go to:"
 	eerror "  ${HOMEPAGE}"
@@ -29,8 +32,8 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	unzip ${DISTDIR}/${MY_P}.zip
-	unzip ${DISTDIR}/${MY_PSDK}.zip
+	unzip ${DISTDIR}/${MY_P}.zip || die "unsuccesful unzip ${MY_P}.zip"
+	unzip ${DISTDIR}/${MY_PSDK}.zip || die "unsuccesful unzip ${MY_PSDK}.zip"
 }
 
 src_install() {
