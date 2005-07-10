@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.13 2005/07/10 13:41:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.14 2005/07/10 13:42:19 axxo Exp $
 
 inherit java-pkg
 
@@ -45,7 +45,7 @@ src_compile() {
 	ant ${antflags} || die "compile problem"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar dist/${PN}.jar
 	dodoc RELEASE-NOTES-1.1.txt RELEASE-NOTES.txt
 	use doc && java-pkg_dohtml -r docs/*
