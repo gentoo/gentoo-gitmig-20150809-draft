@@ -5,3 +5,9 @@ nptl
 # Don't allow alsa in sparc32 because of missing drivers
 alsa
 ladcca
+
+# Jason Wever <weeve@gentoo.org>
+# Don't allow for some video and dvd use flags since sparc32 is too slow
+dvd
+dvdr
+mpeg
