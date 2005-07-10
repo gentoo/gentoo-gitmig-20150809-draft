@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a0bcaada939d41e13be18a7abd9cb10 ChangeLog 869
 MD5 c557d54590f9c358e98570ef1499757f asterisk-sounds-1.0.6.ebuild 781
 MD5 64e5cd5a77b5bb54ca3ff1905a1e025f asterisk-sounds-1.0.7.ebuild 781
@@ -6,3 +9,10 @@ MD5 08e0799d2792b7833b850ee29bcb5bea files/digest-asterisk-sounds-1.0.6 74
 MD5 52b41306e47aa47d6c7825684c715017 files/digest-asterisk-sounds-1.0.7 74
 MD5 0e381530d5433423afd7cea188ce8043 files/digest-asterisk-sounds-1.0.8 74
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HTUI1lqEGTUzyQRAtXKAJ9wK1RY/wTWEy2NwqysD7x49PRSMwCfX03/
+xBkFYQdZrDbZ6USKTkClWPo=
+=K9bM
+-----END PGP SIGNATURE-----
