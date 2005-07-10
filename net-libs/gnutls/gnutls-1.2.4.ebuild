@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.4.ebuild,v 1.4 2005/06/21 11:46:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.4.ebuild,v 1.5 2005/07/10 17:21:25 j4rg0n Exp $
 
 inherit eutils gnuconfig
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1 GPL-2"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
 
 # Removed keywords awaiting >=dev-libs/libtasn1-0.2.10 keywords (bug #61944)
 #  ~ia64 ~hppa
@@ -61,7 +61,15 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	# OSX make doesn't handle -jx with x > 1 correctly here.
+	# Forcing it to be just one process, solves installation
+	# problems that arise here.  Fabian Groffen (2005-07-09)
+	if use ppc-macos; then
+		emake -j1 DESTDIR=${D} install || die
+	else
+		emake DESTDIR=${D} install || die
+	fi
+
 
 	dodoc AUTHORS COPYING COPYING.LIB ChangeLog NEWS \
 		README THANKS doc/TODO

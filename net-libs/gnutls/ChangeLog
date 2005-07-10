@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.73 2005/07/05 19:51:19 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.74 2005/07/10 17:21:25 j4rg0n Exp $
+
+  10 Jul 2005; Lina Pezzella <j4rg0n@gentoo.org> gnutls-1.2.4.ebuild:
+  Testing ppc-macos. Bug #98390. Submitted on behalf of Fabian Groffen.
 
   05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> gnutls-1.2.3.ebuild:
   Stable on hppa.
