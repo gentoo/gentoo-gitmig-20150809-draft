@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/jdbm-0.12.ebuild,v 1.2 2005/05/01 17:49:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/jdbm-0.12.ebuild,v 1.3 2005/07/10 19:14:33 agriffis Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 LICENSE="BSD"
 SLOT="1"
 KEYWORDS="amd64 x86 ~ppc"
-IUSE="doc jikes"
+IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
