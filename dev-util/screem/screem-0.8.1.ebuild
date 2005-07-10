@@ -1,12 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.8.1.ebuild,v 1.1 2004/08/15 17:32:52 stuart Exp $
-
-IUSE="ssl zlib"
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.8.1.ebuild,v 1.2 2005/07/10 01:13:27 swegener Exp $
 
 inherit gnome2 eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="SCREEM (Site CReating and Editing EnvironmenMent) is an
 integrated environment of the creation and maintenance of websites and
 pages"
@@ -15,6 +12,7 @@ HOMEPAGE="http://www.screem.org"
 KEYWORDS="~x86 sparc ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="ssl zlib"
 
 RDEPEND=">=gnome-base/libgnome-2.2.0
 	>=gnome-base/libgnomeui-2.2.0

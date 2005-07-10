@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.6.2.ebuild,v 1.1 2004/08/15 17:32:52 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.6.2.ebuild,v 1.2 2005/07/10 01:13:27 swegener Exp $
 
 IUSE="ssl zlib"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="SCREEM (Site CReating and Editing EnvironmenMent) is an
 integrated environment of the creation and maintenance of websites and
 pages"
@@ -35,16 +34,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-
 	local myconf=""
 
-
 	use ssl && myconf="$myconf --with-ssl"
-
 	use zlib || myconf="$myconf --without-zlib"
 
 	econf ${myconf} || die "Configuration Failure"
-
 	emake || die "Compilation Failure"
 }
 
