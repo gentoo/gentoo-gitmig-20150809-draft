@@ -1,28 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e22d1a3f8a1b3ccd299484f29f9bcecf motif-config-0.9.ebuild 2595
-MD5 33bcba9885d6419bbb4e22eed35676ab motif-config-0.6.ebuild 1239
-MD5 f18c8f14b63a3439113068b5a89e193b motif-config-0.8.ebuild 1239
 MD5 a62321790ac8a2e5cdf9e60e104358b7 ChangeLog 2926
-MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 b57f5a2346d07273acd7e675d3f5d8cc motif-config-0.7.ebuild 1239
-MD5 76af3b1b80127315546ef5ea7f5875e1 files/bindings.tbz2 5342
-MD5 ea7dd0dd1e039ef38db246c23f4d9422 files/motif-config-0.6 7347
-MD5 850befc48daae3dd492f9e263c6dfd4a files/motif-config-0.7 7014
-MD5 a4ba585f1a15d0800a1906e20659c1ce files/motif-config-0.8 7166
-MD5 3a565c0fb8345038591f50aa943aed1b files/motif-config-0.9 5403
-MD5 f9acef531655ae685de204817c6b3c7a files/system.mwmrc 2960
 MD5 aaf04376f7011a2f68b7961100f611fb files/Mwm.defaults 536
+MD5 76af3b1b80127315546ef5ea7f5875e1 files/bindings.tbz2 5342
 MD5 b4cca983e552045606f845e17a00e1d6 files/bitmaps.tbz2 3165
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.6 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.7 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.8 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.9 0
+MD5 ea7dd0dd1e039ef38db246c23f4d9422 files/motif-config-0.6 7347
+MD5 850befc48daae3dd492f9e263c6dfd4a files/motif-config-0.7 7014
+MD5 a4ba585f1a15d0800a1906e20659c1ce files/motif-config-0.8 7166
+MD5 3a565c0fb8345038591f50aa943aed1b files/motif-config-0.9 5403
+MD5 f9acef531655ae685de204817c6b3c7a files/system.mwmrc 2960
+MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
+MD5 33bcba9885d6419bbb4e22eed35676ab motif-config-0.6.ebuild 1239
+MD5 b57f5a2346d07273acd7e675d3f5d8cc motif-config-0.7.ebuild 1239
+MD5 f18c8f14b63a3439113068b5a89e193b motif-config-0.8.ebuild 1239
+MD5 993283a96f9aec57996d1591a9e0f682 motif-config-0.9.ebuild 2596
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0TvSevY57Fted3ERAgDPAJ9S7IMPBepzeRe6DDSEVkx4NkHafwCeKoaM
-SP1wVZlQY2+XvQVLP0GzkWw=
-=gV29
+iD8DBQFC0WxlI1lqEGTUzyQRAsl4AJ9kZqOGhkCcLqHlzzZtj39nRkPs2wCg1A4X
+/P66ua2Vby9T/hQt5PuVzvc=
+=D0t9
 -----END PGP SIGNATURE-----

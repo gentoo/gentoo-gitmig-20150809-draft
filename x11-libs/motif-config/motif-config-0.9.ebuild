@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.9.ebuild,v 1.2 2005/07/10 15:15:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.9.ebuild,v 1.3 2005/07/10 18:43:19 swegener Exp $
 
 inherit multilib
 
@@ -86,7 +86,7 @@ pkg_setup() {
 	has_version =x11-libs/lesstif-0.94* \
 		|| ( rm -f /usr/$(get_libdir)/motif/lesstif-2.1; \
 		rm -fR /usr/include/lesstif-2.1; \
-		rm -fR /usr/$(get_libdir)/openmotif-2.1; 
+		rm -fR /usr/$(get_libdir)/openmotif-2.1;
 		removed=yes )
 
 	if [ "$removed" = "yes" ]; then
