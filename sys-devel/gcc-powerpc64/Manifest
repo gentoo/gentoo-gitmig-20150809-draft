@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fad162de8c9442c6924fb06cc3b24f92 ChangeLog 411
 MD5 4b8b4306f268900392bbd0319bdfdf65 files/digest-gcc-powerpc64-3.4.4 64
 MD5 b8cb4b2e29d1b9eba51fc7bfe5268e97 gcc-powerpc64-3.4.4.ebuild 3294
 MD5 b7f9c085d68ee4d2c8aaab58ef574457 metadata.xml 365
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0G/oI1lqEGTUzyQRAuJxAKCAHQZT5J90BYAv0mnj/DE00UtOmACfQlFR
+qxnELL3++pLlaq4IwjuVwzg=
+=MaVO
+-----END PGP SIGNATURE-----
