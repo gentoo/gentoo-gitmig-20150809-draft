@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.2.0.ebuild,v 1.6 2005/04/07 16:53:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.2.0.ebuild,v 1.7 2005/07/10 15:29:44 lanius Exp $
+
+inherit eutils
 
 DESCRIPTION="ROX is a desktop environment, like GNOME, KDE and XFCE.  It is an attempt to bring some of the good features from RISC OS to Unix and Linux."
 HOMEPAGE="http://rox.sourceforge.net/"
@@ -17,6 +19,12 @@ DEPEND=">=x11-libs/gtk+-2.2
 	svg? ( gnome-base/librsvg )"
 
 IUSE="svg"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc4.patch
+}
 
 src_compile() {
 #	rm ROX-Filer/src/configure # see bug #26162
