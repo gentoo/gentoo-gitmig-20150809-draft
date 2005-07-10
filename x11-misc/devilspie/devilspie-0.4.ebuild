@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.4.ebuild,v 1.2 2005/05/14 06:48:34 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.4.ebuild,v 1.3 2005/07/10 19:57:24 swegener Exp $
 
 DESCRIPTION="A Window Matching utility similar to Sawfish's Matched Windows feature"
 HOMEPAGE="http://www.burtonini.com/blog/computers/devilspie"
@@ -23,8 +23,6 @@ RDEPEND="dev-lang/perl
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
-IUSE=""
-
 src_install() {
 	einstall || die
 	dodoc AUTHORS ChangeLog README NEWS TODO \
@@ -34,7 +32,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "A sample config file has been installed in /usr/share/doc/${P}"
+	einfo "A sample config file has been installed in /usr/share/doc/${PF}"
 	einfo "as sample-config.xml.gz.  Also installed there is the DTD for"
 	einfo "the config file.  It is called devilspie.dtd.gz"
 	echo
