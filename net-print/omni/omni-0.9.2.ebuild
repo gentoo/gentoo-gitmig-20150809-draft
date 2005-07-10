@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.2.ebuild,v 1.2 2005/06/08 08:38:01 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.2.ebuild,v 1.3 2005/07/10 15:56:12 lanius Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 
 	libtoolize --copy --force
 
-	LANG="" ./setupOmni ${myconf} --disable-device-xml --enable-device-compile || die
+	LC_ALL="" LC_NUMERIC="" LANG="" ./setupOmni ${myconf} --disable-device-xml --enable-device-compile || die
 
 	if use ppds && use cups; then
 		sed -i -e "s/model\/foomatic/model\/omni/g" CUPS/Makefile \

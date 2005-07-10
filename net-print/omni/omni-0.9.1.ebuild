@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.1.ebuild,v 1.2 2005/06/07 14:59:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.1.ebuild,v 1.3 2005/07/10 15:56:12 lanius Exp $
 
 DESCRIPTION="Omni provides support for many printers with a pluggable framework (easy to add devices)"
 HOMEPAGE="http://sourceforge.net/projects/omniprint"
@@ -32,7 +32,7 @@ src_compile() {
 
 	libtoolize --copy --force
 
-	LANG="" ./setupOmni ${myconf} || die
+	LC_ALL="" LC_NUMERIC="" LANG="" ./setupOmni ${myconf} || die
 
 	if use ppds && use cups; then
 		sed -i -e "s/model\/foomatic/model\/omni/g" CUPS/Makefile \
