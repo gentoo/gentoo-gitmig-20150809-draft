@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1a5d35aceaa4804ffe8cb3dfeb07008d ChangeLog 4277
 MD5 4e2b35b70de87b84dacf6372075db046 files/digest-screem-0.14.1 66
 MD5 3beed928c0c988ad2b67a66d15754376 files/digest-screem-0.6.2 65
@@ -7,3 +10,10 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f2c0a0e6a0784d10ba29fb1863b85f96 screem-0.14.1.ebuild 1855
 MD5 c8e4dd7235c4414fe790356d627da616 screem-0.6.2.ebuild 1529
 MD5 ce40085ebcb7eec3bad332c8ee273819 screem-0.8.1.ebuild 1374
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HZGI1lqEGTUzyQRAuCeAJ0UITlbHuCNeM2pVEVMaXwIocOQigCgxINI
+GNkJIMDvD/zVvbz372qAeXU=
+=gxsz
+-----END PGP SIGNATURE-----
