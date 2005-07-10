@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7a9c780c77bafa4209c89291b8b56c3b ChangeLog 1007
 MD5 92ac67f9f689503bafbc626a381e6772 files/282_beta2-gentoo.diff 216
 MD5 f40ca78e3d876fde383fa01480a65908 files/282_beta2-r1-gentoo.diff 493
@@ -6,3 +9,10 @@ MD5 371de3bbfe5d0fb36b1c55d653d11c56 files/digest-ldapbrowser-282_beta2-r1 64
 MD5 96cb1ddeef26d3d99e1e67ed6b7ed3b3 ldapbrowser-282_beta2-r1.ebuild 963
 MD5 6ddcb41243c9d7923c494ad3e82452f0 ldapbrowser-282_beta2.ebuild 940
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0X5TI1lqEGTUzyQRAlxSAKC/Kd8Gq0L4ZPwdK1OotpbwoLiUPwCeLwAe
+VygeOYR2g2bf9H/vbtGI+fI=
+=GLFO
+-----END PGP SIGNATURE-----
