@@ -1,6 +1,13 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.40 2005/07/07 16:51:13 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.41 2005/07/10 14:04:18 humpback Exp $
+
+*skype-1.1.0.20-r1 (10 Jul 2005)
+
+  10 Jul 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/sDaemonWrapper-r1, +skype-1.1.0.20-r1.ebuild:
+  Added change to wrapper script to try to run with no arts/esd in case of
+  fail. Thanks to ph in bug #97345.
 
 *skype-1.1.0.20 (07 Jul 2005)
 
