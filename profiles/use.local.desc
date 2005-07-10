@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1299 2005/07/10 04:35:51 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1300 2005/07/10 18:12:33 axxo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -196,6 +196,8 @@ dev-java/hibernate:oscache - Enable OSCache support
 dev-java/hibernate:proxool - Enable Proxool support
 dev-java/hibernate:swarmcache - Enable SwarmCache support
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
+dev-java/jdbc-mysql:log4j - Enable log4 support
+dev-java/jdbc-mysql:c3p0 - Enable c3p0 support
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/log4j:jmx - Build org.apace.log4j.jmx
