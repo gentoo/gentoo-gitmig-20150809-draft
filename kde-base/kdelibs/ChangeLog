@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.253 2005/07/08 20:35:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.254 2005/07/10 20:16:34 carlo Exp $
+
+*kdelibs-3.4.1-r2 (10 Jul 2005)
+
+  10 Jul 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/kdelibs-3.4.1-kntlm.patch,
+  +files/kdelibs-3.4.1-ktoolbar-crash.patch, +kdelibs-3.4.1-r2.ebuild:
+  fix ntlm authentication, #98285 and konqueror crashes
 
   08 Jul 2005; Dan Armak <danarmak@gentoo.org>
   -files/post-3.2.3-kdelibs-dcop.patch,
