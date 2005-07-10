@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4477fe7580cbb0196ba0399398007426 ChangeLog 9193
 MD5 c18e90be9c36c7efb06211733ad765ff files/1.2.7-debugflag.patch 396
 MD5 5f64e4b71c311ff7b6489953fc8bf1f9 files/1.2.7-nptl.patch 1178
@@ -17,3 +20,10 @@ MD5 1e352af319b2d12a468b4f2fd93dd21e licq-1.3.0-r4.ebuild 4420
 MD5 b66e6263d95baca44239d23a900d565e licq-1.3.0-r5.ebuild 4859
 MD5 0e85dd4498bf89db7c161ae23372341f licq-1.3.0.ebuild 3766
 MD5 6ee65b2e61137a2656ef1d0deb541f1d metadata.xml 254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HO1I1lqEGTUzyQRAnzJAKDAhSfuQWA6wXN2QYvJN/Eo5Z5C/gCeO2EG
+n2rfxdGVJZ/OqJZCGGT6ThM=
+=wsJ/
+-----END PGP SIGNATURE-----
