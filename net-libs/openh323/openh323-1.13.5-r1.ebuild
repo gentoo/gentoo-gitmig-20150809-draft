@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5-r1.ebuild,v 1.1 2005/02/03 20:11:08 stkn Exp $
-
-IUSE="ssl"
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5-r1.ebuild,v 1.2 2005/07/10 01:06:25 swegener Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -13,6 +11,7 @@ DESCRIPTION="Open Source implementation of the ITU H.323 teleconferencing protoc
 HOMEPAGE="http://www.openh323.org/"
 SRC_URI="mirror://sourceforge/openh323/${MY_P}-src.tar.gz"
 
+IUSE="ssl"
 SLOT="0"
 LICENSE="MPL-1.1"
 KEYWORDS="~x86 ppc ~amd64 ~sparc ~alpha"

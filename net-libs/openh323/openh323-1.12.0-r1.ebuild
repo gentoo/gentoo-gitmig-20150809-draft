@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0-r1.ebuild,v 1.10 2005/01/08 20:15:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0-r1.ebuild,v 1.11 2005/07/10 01:06:25 swegener Exp $
 
 inherit eutils
 
@@ -97,5 +97,3 @@ src_install() {
 	dosym /usr/lib/libh323_${OPENH323_ARCH}.so.${PV} /usr/lib/libh323_${ALT_ARCH}.so
 
 }
-
-

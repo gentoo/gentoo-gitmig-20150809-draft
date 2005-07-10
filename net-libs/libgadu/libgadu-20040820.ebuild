@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-20040820.ebuild,v 1.6 2004/12/31 23:42:56 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-20040820.ebuild,v 1.7 2005/07/10 01:03:30 swegener Exp $
 
 inherit eutils libtool
 
@@ -16,12 +16,7 @@ IUSE="ssl"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6m )"
 
-#RDEPEND=""
-
-S=${WORKDIR}/${P}
-
 src_compile() {
-	cd ${S}
 	aclocal -I m4
 	autoheader
 	autoconf

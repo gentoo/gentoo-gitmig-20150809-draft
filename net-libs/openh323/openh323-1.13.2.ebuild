@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2.ebuild,v 1.6 2005/01/08 20:15:47 stkn Exp $
-
-IUSE="ssl"
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2.ebuild,v 1.7 2005/07/10 01:06:25 swegener Exp $
 
 inherit eutils
 
@@ -11,6 +9,7 @@ DESCRIPTION="Open Source implementation of the ITU H.323 teleconferencing protoc
 HOMEPAGE="http://www.openh323.org/"
 SRC_URI="http://www.gnomemeeting.org/admin/downloads/latest/sources/sources/${P}.tar.gz"
 
+IUSE="ssl"
 SLOT="0"
 LICENSE="MPL-1.1"
 KEYWORDS="-x86"

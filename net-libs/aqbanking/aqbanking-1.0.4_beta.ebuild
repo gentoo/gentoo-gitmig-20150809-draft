@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-1.0.4_beta.ebuild,v 1.3 2005/02/14 17:15:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-1.0.4_beta.ebuild,v 1.4 2005/07/10 01:04:57 swegener Exp $
 
 DESCRIPTION="Generic Online Banking Interface"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
@@ -12,11 +12,10 @@ IUSE="debug"
 DEPEND=">=sys-libs/gwenhywfar-1.7.2
 	app-misc/ktoblzcheck"
 S=${WORKDIR}/${P/_/}
-MAKEOPTS="-j1"
 
 src_compile() {
 	econf `use_enable debug` || die
-	emake || die
+	emake -j1 || die
 }
 
 src_install() {
