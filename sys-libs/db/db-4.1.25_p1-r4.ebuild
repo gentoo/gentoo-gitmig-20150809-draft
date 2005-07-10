@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.21 2005/07/09 20:25:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.22 2005/07/10 20:59:39 swegener Exp $
 
 inherit eutils gnuconfig db
 
@@ -87,7 +87,7 @@ src_compile() {
 		--host=${CHOST} \
 		${myconf} || die "configure failed"
 
-	emake || make || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {

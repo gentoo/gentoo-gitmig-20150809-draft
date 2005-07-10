@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.128 2005/07/02 18:09:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.129 2005/07/10 20:59:39 swegener Exp $
+
+  10 Jul 2005; Sven Wegener <swegener@gentoo.org> db-4.0.14-r2.ebuild,
+  db-4.0.14-r3.ebuild, db-4.1.25_p1-r3.ebuild, db-4.1.25_p1-r4.ebuild,
+  db-4.2.52_p1.ebuild, db-4.2.52_p2.ebuild, db-4.3.27.ebuild:
+  QA: Removed 'emake || make || die' and variants. Either a package is
+  parallel build safe or it is not. There's nothing like trying and falling
+  back.
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> db-4.2.52_p2.ebuild:
   Add ~alpha keyword.
