@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/scons
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.28 2005/05/22 15:22:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.29 2005/07/10 10:26:57 twp Exp $
+
+*scons-0.96.90 (10 Jul 2005)
+
+  10 Jul 2005; Tom Payne <twp@gentoo.org> -scons-0.0.9.ebuild,
+  -scons-0.94-r1.ebuild, -scons-0.94-r2.ebuild, -scons-0.95.ebuild,
+  -scons-0.96.ebuild, +scons-0.96.90.ebuild:
+  Version bump. Bug # 93887. Remove old versions.
 
   22 May 2005; Tobias Scherbaum <dertobi123@gentoo.org> scons-0.96.1.ebuild:
   Stable on ppc.
