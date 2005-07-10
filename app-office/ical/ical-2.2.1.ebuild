@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.13 2005/04/24 11:26:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.14 2005/07/10 21:07:12 swegener Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_unpack() {
 src_compile() {
 	autoconf
 	econf --with-tclsh=/usr/bin/tclsh || die
-	emake || make || die "parallel make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
