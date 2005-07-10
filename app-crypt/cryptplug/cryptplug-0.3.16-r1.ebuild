@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/cryptplug-0.3.16-r1.ebuild,v 1.11 2005/01/01 12:28:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/cryptplug-0.3.16-r1.ebuild,v 1.12 2005/07/10 21:39:26 swegener Exp $
 
 inherit eutils
 
@@ -29,8 +29,8 @@ src_unpack() {
 
 src_compile() {
 	export GPGME_CONFIG=${ROOT}/usr/bin/gpgme3-config
-	econf || "configure failed"
-	emake || "make failed"
+	econf || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
