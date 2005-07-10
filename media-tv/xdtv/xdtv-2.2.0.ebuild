@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0.ebuild,v 1.1 2005/07/09 09:59:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0.ebuild,v 1.2 2005/07/10 11:26:33 zzam Exp $
 
 inherit font multilib
 
@@ -60,7 +60,7 @@ SRC_URI="${DOWNLOADS_URL}/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="virtual/x11
 	zvbi? ( >=media-libs/zvbi-0.2.4 )
