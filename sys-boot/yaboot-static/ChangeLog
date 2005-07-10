@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/yaboot-static
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.7 2005/04/07 03:37:51 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.8 2005/07/10 18:39:26 dostrow Exp $
+
+  10 Jul 2005; Daniel Ostrow <dostrow@gentoo.org>
+  yaboot-static-1.3.13.ebuild:
+  Fix broken depend.
 
   06 Apr 2005; Daniel Ostrow <dostrow@gentoo.org> :
   Version bump

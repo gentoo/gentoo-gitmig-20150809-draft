@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.13.ebuild,v 1.1 2005/04/07 03:37:51 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.13.ebuild,v 1.2 2005/07/10 18:39:26 dostrow Exp $
 
 DESCRIPTION="Static yaboot ppc boot loader for machines with open firmware"
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc64 -*"
 IUSE="ibm"
-DEPEND="!sys-apps/yaboot
+DEPEND="!sys-boot/yaboot
 		sys-apps/powerpc-utils"
 RDEPEND="!ibm? ( sys-fs/hfsutils )
 		!ibm? ( sys-fs/hfsplusutils )"
