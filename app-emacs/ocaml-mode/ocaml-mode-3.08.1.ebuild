@@ -1,10 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ocaml-mode-3.08.1.ebuild,v 1.2 2005/01/01 13:55:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ocaml-mode-3.08.1.ebuild,v 1.3 2005/07/10 19:58:23 swegener Exp $
 
 inherit elisp
 
-IUSE=""
 MY_P=${P/-mode/}
 
 DESCRIPTION="Emacs mode for OCaml"
