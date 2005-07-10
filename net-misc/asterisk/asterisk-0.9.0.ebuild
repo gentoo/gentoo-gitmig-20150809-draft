@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.9.0.ebuild,v 1.8 2005/01/25 05:17:44 iggy Exp $
-
-IUSE="alsa doc gtk mmx mysql nopri nozaptel"
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.9.0.ebuild,v 1.9 2005/07/10 01:08:32 swegener Exp $
 
 inherit eutils webapp-apache
 
@@ -10,6 +8,7 @@ DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="ftp://ftp.asterisk.org/pub/telephony/asterisk/old-releases/${P}.tar.gz"
 
+IUSE="alsa doc gtk mmx mysql nopri nozaptel"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
