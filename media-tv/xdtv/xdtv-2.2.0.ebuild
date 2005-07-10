@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0.ebuild,v 1.4 2005/07/10 12:17:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0.ebuild,v 1.5 2005/07/10 13:19:40 flameeyes Exp $
 
 inherit font multilib flag-o-matic
 
@@ -137,7 +137,7 @@ src_compile() {
 		myconf="${myconf} --disable-mmx"
 
 	# linux-dvb headers are installed in /usr/include/dvb to avoid collision-protect
-	use dvb && append-flags -I/usr/include/dvb
+	use dvb && CPPFLAGS="${CPPFLAGS} -I/usr/include/dvb"
 
 	econf ${xawconf} \
 		$(use_enable divx4linux) \
@@ -155,6 +155,7 @@ src_compile() {
 		--enable-pixmaps \
 		--disable-cpu-detection \
 		${myconf} \
+		CPPFLAGS="${CPPFLAGS}" \
 		|| die "Configuration failed."
 
 	emake OPT="${CFLAGS}" PERF_FLAGS="${CFLAGS}" || die "Compilation failed."
