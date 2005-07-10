@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 6359862abf12ea8e8b110091d52b2ea4 ChangeLog 1869
-MD5 32831d719499c83f7942f6432ef58278 metadata.xml 252
-MD5 e9e77dba83ba2f7fd1a853b060d366d6 wavemon-0.3.3.ebuild 706
-MD5 d7e5341e43c05cf578ad0ef1aa075ef4 wavemon-0.4.0b.ebuild 878
 MD5 74ff273e243d9bfc9a4e80c8a7e6eeaa files/digest-wavemon-0.3.3 66
 MD5 651f4112ea3085a94cd49e49abb1e851 files/digest-wavemon-0.4.0b 65
 MD5 c818e93801166a1257810f1ccd56001d files/wavemon-gcc-fixes.patch 2147
+MD5 32831d719499c83f7942f6432ef58278 metadata.xml 252
+MD5 9b6a2b91a48a07bff82ca2d929a81b86 wavemon-0.3.3.ebuild 652
+MD5 e9b0833f38c7197280c0fb4fa17f65f0 wavemon-0.4.0b.ebuild 872
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFCz0rrCRZPokWLroQRAmP/AKCv+Y+s3SqsHESB7IBr5kHYPxs+MwCY8HV0
-MgIXtvTY7UEfslWJtnbIvg==
-=evh7
+iD8DBQFC0ITtI1lqEGTUzyQRAsuwAKCkAh8p9JD3pi1Vjba30vp/SWwHFACeNxct
+rrvjgKDOH+TIF4ZlZmLuNIY=
+=n6Qc
 -----END PGP SIGNATURE-----
