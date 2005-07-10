@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.98 2005/07/10 04:05:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.99 2005/07/10 04:06:02 vapier Exp $
+
+  10 Jul 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/wine-hangfix-bug2660.patch, wine-20050524.ebuild:
+  Add patch from upstream cvs to fix some hangs #98156 by Scott Jones.
 
 *wine-20050628 (10 Jul 2005)
 
