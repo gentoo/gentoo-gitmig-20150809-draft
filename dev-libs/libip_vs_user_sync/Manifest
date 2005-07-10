@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 94e5784966e9abd8d217dac32ecda77d ChangeLog 751
 MD5 0a1870463b9a8e38a6a6e0cc1268c3d4 files/digest-libip_vs_user_sync-1.0.0 76
 MD5 a758539da643c66bf4e2bb1b368b2ab4 libip_vs_user_sync-1.0.0.ebuild 963
 MD5 4821c19c6bb72e3366ef45d4b9c7a806 metadata.xml 352
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HW/I1lqEGTUzyQRAn+dAJwLWlBbGBA7seVzOzmPrsEwHvP7QACfQEpq
+KchICEyk68oL4gsO5V7jUvw=
+=n0XV
+-----END PGP SIGNATURE-----
