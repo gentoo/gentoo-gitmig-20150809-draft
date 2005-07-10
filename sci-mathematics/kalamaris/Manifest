@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ab69e918cd3abae48230f9dd9b7163f6 kalamaris-0.7.1.ebuild 670
-MD5 40897855597acd04863eb53825e8d98d ChangeLog 860
+MD5 a5c0e8d6d617d11b86d08fd387a1bd53 ChangeLog 952
+MD5 e28c09adfa3a09097b977476fd689af6 kalamaris-0.7.1.ebuild 674
 MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
 MD5 428aa2f2615902e3e9c937a25a5c5cfd files/digest-kalamaris-0.7.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0b3QI1lqEGTUzyQRAuhFAKCoKXcZmHpH1jVOH75zKd9WljCBZwCfVYso
-ahYoYWIpgTk/IrfWFVL8IOQ=
-=tFRD
------END PGP SIGNATURE-----
