@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e00983dc087919ae931f5f74bcf64b3c ChangeLog 1236
-MD5 147a4ba8d75908f7d4096857d4d17eb7 wavelan-applet-0.5.ebuild 1099
-MD5 4d5231a77a5dd29ff1a581ae221732b2 files/wavelan-0.5-nosegfault.patch 930
 MD5 4c397682c55f891e248e4938f77c803c files/digest-wavelan-applet-0.5 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZ5W+Fhz/XBeRBtARAnQIAJ95BR2AmZ/ymlcGPcjFbVx32Ih0yACfU+aW
-MHWzBwejFFUCt8TqxHQy8ow=
-=NO/z
------END PGP SIGNATURE-----
+MD5 4d5231a77a5dd29ff1a581ae221732b2 files/wavelan-0.5-nosegfault.patch 930
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 4333dcdb89d864f65b7ac443a1f4a57c wavelan-applet-0.5.ebuild 1082
