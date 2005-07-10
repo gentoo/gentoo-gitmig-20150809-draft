@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/yaboot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.17 2005/07/03 13:14:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.18 2005/07/10 18:37:29 dostrow Exp $
+
+  10 Jul 2005; Daniel Ostrow <dostrow@gentoo.org> yaboot-1.3.13.ebuild:
+  Add ibm use flag check for rdeps on hfs stuff.
 
   03 Jul 2005; Michael Hanselmann <hansmi@gentoo.org>
   yaboot-1.3.11-r1.ebuild, yaboot-1.3.12-r1.ebuild, yaboot-1.3.13.ebuild:
