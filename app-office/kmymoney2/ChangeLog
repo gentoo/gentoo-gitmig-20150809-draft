@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.28 2005/07/10 09:40:53 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.29 2005/07/10 21:30:27 greg_g Exp $
+
+  10 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> kmymoney2-0.7.3.ebuild:
+  Disable gcc visibility support for bug #98582.
 
 *kmymoney2-0.7.3 (10 Jul 2005)
 
