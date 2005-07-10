@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0.ebuild,v 1.2 2005/07/10 11:26:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0.ebuild,v 1.3 2005/07/10 11:48:00 flameeyes Exp $
 
-inherit font multilib
+inherit font multilib flag-o-matic
 
 IUSE="alsa jpeg encode ffmpeg xvid lirc xinerama divx4linux
 	neXt Xaw3d mmx zvbi aqua_theme xv debug dvb"
@@ -74,6 +74,9 @@ RDEPEND="virtual/x11
 	lirc? ( app-misc/lirc )
 	alsa? ( >=media-libs/alsa-lib-0.9 )"
 
+DEPEND="${RDEPEND}
+	dvb? ( =media-tv/linuxtv-dvb-headers-3* )"
+
 FONT_S="${S}/font"
 FONT_SUFFIX="pcf.gz"
 
@@ -132,6 +135,9 @@ src_compile() {
 
 	( use mmx || use amd64 ) && myconf="${myconf} --enable-mmx" || \
 		myconf="${myconf} --disable-mmx"
+
+	# linux-dvb headers are installed in /usr/include/dvb to avoid collision-protect
+	use dvb && append-flags -I/usr/include/dvb
 
 	econf ${xawconf} \
 		$(use_enable divx4linux) \

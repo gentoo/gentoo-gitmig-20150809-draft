@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.2 2005/07/10 11:26:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.3 2005/07/10 11:48:00 flameeyes Exp $
+
+  10 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.2.0.ebuild:
+  Added dependency over linuxtv-dvb-headers when dvb is enabled. Fixed the
+  missing DEPEND variable.
 
   10 Jul 2005; Matthias Schwarzott <zzam@gentoo.org> xdtv-2.2.0.ebuild:
   Added to ~x86
