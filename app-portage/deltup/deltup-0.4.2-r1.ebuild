@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.2-r1.ebuild,v 1.3 2005/05/10 18:38:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.2-r1.ebuild,v 1.4 2005/07/10 21:30:16 swegener Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -32,7 +32,7 @@ src_unpack () {
 }
 
 src_compile () {
-	emake || "emake getdelta failed"
+	emake || die "emake getdelta failed"
 
 	cd ${WORKDIR}/bzip2-1.0.2
 	local makeopts="
