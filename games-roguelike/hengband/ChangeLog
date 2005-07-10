@@ -1,6 +1,12 @@
 # ChangeLog for games-roguelike/hengband
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/ChangeLog,v 1.4 2004/06/24 23:12:50 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/ChangeLog,v 1.5 2005/07/10 01:14:57 mr_bones_ Exp $
+
+*hengband-1.6.2 (10 Jul 2005)
+
+  10 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +hengband-1.6.2.ebuild:
+  version bump (bug #65667)
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> hengband-1.5.4.ebuild,
   hengband-1.6.0.ebuild:
