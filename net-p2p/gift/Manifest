@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b6255b7d64ed8e3e0d9cb687064bd81f ChangeLog 3643
 MD5 64b21cffd79f35db281d077303eb810b files/digest-gift-0.11.6 64
 MD5 64b21cffd79f35db281d077303eb810b files/digest-gift-0.11.6-r1 64
@@ -12,3 +15,10 @@ MD5 64a4a61a56630452a903b6a2f05599ac gift-0.11.7-r1.ebuild 1859
 MD5 20f38ffd20cb25188a17e8fe4a985f60 gift-0.11.7_pre20040627.ebuild 2139
 MD5 9a4424e3c8120010fad7322b9d4ccf02 gift-0.11.8.1.ebuild 1721
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0X63I1lqEGTUzyQRAkTsAJ9lt5R4DRv7fukoMCnyk2TDwU3lhwCgvHu8
+L243jZUbewx+stsCzW+/BRA=
+=TiIi
+-----END PGP SIGNATURE-----
