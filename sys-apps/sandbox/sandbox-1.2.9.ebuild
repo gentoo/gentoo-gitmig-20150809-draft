@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.9.ebuild,v 1.2 2005/07/05 06:12:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.9.ebuild,v 1.3 2005/07/10 14:04:45 azarah Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
 # period.
 #
 
-inherit eutils flag-o-matic eutils toolchain-funcs multilib
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 DESCRIPTION="sandbox'd LD_PRELOAD hack"
 HOMEPAGE="http://www.gentoo.org/"
@@ -38,10 +38,13 @@ setup_multilib() {
 src_unpack() {
 	setup_multilib
 	for ABI in $(get_install_abis) ; do
-		unpack ${A}
 		cd ${WORKDIR}
+		unpack ${A}
 		einfo "Unpacking sandbox for ABI=${ABI}..."
 		mv ${S} ${S%/}-${ABI} || die "failed moving \$S to ${ABI}"
+		cd ${S%/}-${ABI}
+		# Fix getcwd, bug #98419.
+		epatch ${FILESDIR}/${P}-uclibc-getcwd.patch
 	done
 }
 

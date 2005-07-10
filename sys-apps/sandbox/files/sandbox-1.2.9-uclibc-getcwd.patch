@@ -1,0 +1,21 @@
+Index: getcwd.c
+===================================================================
+--- getcwd.c	(revision 125)
++++ getcwd.c	(working copy)
+@@ -146,6 +146,8 @@
+     struct stat st;
+     size_t olderrno;
+ 
++    if (lstat("/", &st) < 0)
++	return -1;
+     olderrno = errno;
+     len = -1;
+     cwd = recurser(buf, size, st.st_dev, st.st_ino);
+@@ -175,6 +177,7 @@
+ 	if (path == NULL)
+ 	    return NULL;
+     }
++    snprintf(buf, 2, ".");
+     ret = __syscall_egetcwd(path, alloc_size);
+     if (ret >= 0)
+     {
