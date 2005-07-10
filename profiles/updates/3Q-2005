@@ -32,3 +32,5 @@ move app-arch/kdar app-backup/kdar
 move x11-misc/yawmppp x11-plugins/yawmppp
 move net-irc/irssi-cvs net-irc/irssi-svn
 move x11-misc/msetimon sci-astronomy/msetimon
+move dev-java/connectorj dev-java/jdbc-mysql
+slotmove =dev-java/jdbc-mysql-3.0.16 3 0
