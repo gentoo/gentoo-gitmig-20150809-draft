@@ -7,7 +7,7 @@ MD5 46aebfa8a26be82c3c0a32aab969f492 php-cgi-4.3.10.ebuild 921
 MD5 d31c9af00ea50b3b125f6b7fd6fe51be php-cgi-4.4.0_rc2.ebuild 1032
 MD5 a4c7d82cf8fe5d4b82eff5a4b283d882 php-cgi-4.3.9-r1.ebuild 808
 MD5 307aab11df88d8308b9f240d02d54759 php-cgi-4.3.11-r1.ebuild 1117
-MD5 f1201f57c4ae6909faf5f5246e58eab7 ChangeLog 10605
+MD5 ac7074e1b45d530eadf87eabd1f34e47 ChangeLog 10799
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 225b57325cbdf582288a8796da9d72f5 files/digest-php-cgi-4.3.11-r1 287
 MD5 390a659097a43447e44ab5bdd59378b5 files/digest-php-cgi-4.3.8 282

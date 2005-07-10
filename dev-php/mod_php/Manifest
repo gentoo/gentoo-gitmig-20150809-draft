@@ -7,7 +7,7 @@ MD5 2b6e8a15d7fd5d82d50db473856a5333 mod_php-4.3.11.ebuild 6203
 MD5 b91268f902ce021485b29c4fbc7d1e45 mod_php-5.0.4.ebuild 2408
 MD5 e4b18e01eaf5163e6236425277b965b3 mod_php-4.3.8.ebuild 5963
 MD5 8a5a40024d86195720f12c9b65ae19c6 mod_php-4.3.11-r2.ebuild 6422
-MD5 5e9babe8ccd1c16358b629e107a0df2d ChangeLog 42538
+MD5 a91c58a225c0302fa2888d4be1d79b5d ChangeLog 42764
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 bf3e266fc7fbc08f3b079effce2c7086 mod_php-4.3.10.ebuild 6128
 MD5 7515e9b1dc298a0fb1c12d35a58c265d files/mod_php-4.3.4-amd64hack.diff 1028
