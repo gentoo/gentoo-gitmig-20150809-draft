@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/mod_layout-3.2.1.ebuild,v 1.5 2005/03/01 00:28:32 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/mod_layout-3.2.1.ebuild,v 1.6 2005/07/10 00:56:41 swegener Exp $
 
 
 DESCRIPTION="An Apache DSO module for adding custom headers and/or footers"
@@ -13,7 +13,6 @@ LICENSE="Apache-1.1"
 KEYWORDS="x86"
 IUSE=""
 SLOT="0"
-
 
 src_compile() {
 	sed -i -e 's/-DDEBUG//g' Makefile || die "Makefile fixing Failed"
@@ -43,4 +42,3 @@ pkg_config() {
 		extramodules/mod_layout.so mod_layout.c layout_module \
 		define=LAYOUT addconf=conf/addon-modules/15_mod_layout321.conf
 }
-

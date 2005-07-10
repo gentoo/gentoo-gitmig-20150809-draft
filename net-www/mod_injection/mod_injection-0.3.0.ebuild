@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_injection/mod_injection-0.3.0.ebuild,v 1.6 2005/01/09 00:35:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_injection/mod_injection-0.3.0.ebuild,v 1.7 2005/07/10 00:52:16 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="An Apache2 filtering module"
 HOMEPAGE="http://pmade.org/pjones/software/mod_injection/"
 
-S=${WORKDIR}/${P}
 SRC_URI="http://pmade.org/pjones/software/${PN}/download/${P}.tar.gz"
 DEPEND="=net-www/apache-2*"
 LICENSE="Apache-1.1"

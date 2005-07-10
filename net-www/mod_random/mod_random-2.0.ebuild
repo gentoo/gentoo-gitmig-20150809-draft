@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/mod_random-2.0.ebuild,v 1.8 2005/01/07 19:33:21 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/mod_random-2.0.ebuild,v 1.9 2005/07/10 00:51:32 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="An Apache2 DSO providing custom randomized responses"
 HOMEPAGE="http://software.tangent.org/"
 
-S=${WORKDIR}/${P}
 SRC_URI="http://software.tangent.org/download/${P}.tar.gz"
 DEPEND="=net-www/apache-2*"
 LICENSE="Apache-1.1"

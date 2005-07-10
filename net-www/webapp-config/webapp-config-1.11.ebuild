@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.11.ebuild,v 1.10 2005/06/17 02:08:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.11.ebuild,v 1.11 2005/07/10 00:56:59 swegener Exp $
 
 inherit eutils
 
@@ -21,8 +21,6 @@ RDEPEND="sys-apps/grep
 	sys-apps/coreutils
 	app-shells/bash
 	app-portage/gentoolkit"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	# do nothing

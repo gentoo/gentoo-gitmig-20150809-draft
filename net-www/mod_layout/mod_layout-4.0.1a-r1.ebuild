@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/mod_layout-4.0.1a-r1.ebuild,v 1.2 2005/02/17 15:16:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/mod_layout-4.0.1a-r1.ebuild,v 1.3 2005/07/10 00:56:41 swegener Exp $
 
 inherit apache-module
 
@@ -21,4 +21,3 @@ APACHE2_MOD_DEFINE="LAYOUT"
 DOCFILES="README"
 
 need_apache2
-

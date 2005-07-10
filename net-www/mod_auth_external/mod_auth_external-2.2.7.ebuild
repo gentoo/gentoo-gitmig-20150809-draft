@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/mod_auth_external-2.2.7.ebuild,v 1.6 2005/01/22 04:27:45 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/mod_auth_external-2.2.7.ebuild,v 1.7 2005/07/10 00:55:42 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="An Apache2 authentication DSO using external programs"
 HOMEPAGE="http://www.unixpapa.com/mod_auth_external.html"
 
-S=${WORKDIR}/${P}
 SRC_URI="http://www.unixpapa.com/software/${P}.tar.gz"
 DEPEND="sys-libs/pam
 		=net-www/apache-2*"
