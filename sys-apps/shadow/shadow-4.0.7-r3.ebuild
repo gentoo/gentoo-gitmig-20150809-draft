@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r3.ebuild,v 1.3 2005/07/08 20:50:06 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r3.ebuild,v 1.4 2005/07/10 18:28:32 dostrow Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -131,7 +131,7 @@ src_install() {
 	insopts -m0600 ; doins etc/login.access
 	insopts -m0644 ; doins etc/limits
 	# Only output hvc ibm cruft for ppc64 machines
-	if [[ $(tc-arch) == "ppc64" ]] ; then
+	if [[ $(tc-arch-kernel) == "ppc64" ]] ; then
 		echo "hvc0" >> "${D}"/etc/securetty
 		echo "hvsi0" >> "${D}"/etc/securetty
 	fi
