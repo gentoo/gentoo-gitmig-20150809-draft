@@ -1,22 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4d54aa6a1b2aa5956ae8a6e97c2ec081 ChangeLog 3738
-MD5 6f2a8966e380c4abbebb0883290d7a21 files/digest-tikiwiki-1.8.4.1 70
-MD5 6366ec5badc9e0d9d20befdf8052c73a files/digest-tikiwiki-1.8.5 68
-MD5 6366ec5badc9e0d9d20befdf8052c73a files/digest-tikiwiki-1.8.5-r1 68
-MD5 28eb632d3d2985010cc05afcd084acd4 files/digest-tikiwiki-1.9.0 68
-MD5 a43526d55fa814d5e9af0042767a6600 files/postinstall-en.txt 1407
-MD5 b0e0921fd97e18c1e6746aacc75f87fa files/tikiwiki-1.8.5-xmlrpc.patch 1093
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 2ed8ae162e0d1b50d5356d2d9d15b5fd tikiwiki-1.8.4.1.ebuild 2237
 MD5 9428e2c5313b6733e9476a441c3eb576 tikiwiki-1.8.5-r1.ebuild 2339
-MD5 8582dd52c50f2395981af4b10393db5c tikiwiki-1.8.5.ebuild 2242
 MD5 3df178d3364ec7a6fd53340327e0cd3b tikiwiki-1.9.0.ebuild 2590
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0B5HI1lqEGTUzyQRAnQiAKDGBz3ccxKyk6F8XuKrsiUxIDTiSwCfft05
-nqB9rCq007v0O8qkUvth/go=
-=A9IJ
------END PGP SIGNATURE-----
+MD5 a0c5520a4a81f238ab234817b53cbd07 ChangeLog 3860
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+MD5 a43526d55fa814d5e9af0042767a6600 files/postinstall-en.txt 1407
+MD5 6366ec5badc9e0d9d20befdf8052c73a files/digest-tikiwiki-1.8.5-r1 68
+MD5 b0e0921fd97e18c1e6746aacc75f87fa files/tikiwiki-1.8.5-xmlrpc.patch 1093
+MD5 28eb632d3d2985010cc05afcd084acd4 files/digest-tikiwiki-1.9.0 68

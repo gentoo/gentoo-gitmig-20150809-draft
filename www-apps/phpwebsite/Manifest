@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23d8bcb6054fe0dcac429b9b607b48e7 ChangeLog 7206
-MD5 d1a2bc5cc4c9b25bfe5c58827fc477c8 phpwebsite-0.10.0-r2.ebuild 1734
-MD5 2605b5e8abb079f71b12202c38a8f86d phpwebsite-0.10.0-r1.ebuild 1616
+MD5 233bd531c637457254844976c6dc0175 phpwebsite-0.10.1-r1.ebuild 1644
+MD5 91cf3f58ed696c5ed4a0d7482f70ad81 ChangeLog 7574
 MD5 24a724cdfd1390bba450f4b7c1a9dfc5 metadata.xml 360
-MD5 41dbaed8aafa97c8930480adc9d77c58 phpwebsite-0.9.3_p4-r1.ebuild 1636
-MD5 c9b0b64992415f435bb5cf0b8f603435 phpwebsite-0.9.3_p4-r2.ebuild 1853
-MD5 4f03dd69be734fbd9aa2969d30ebb2c2 phpwebsite-0.10.0.ebuild 1433
-MD5 52d61c0dc46e17dc96a3f4ccb93e8c89 phpwebsite-0.10.1-r1.ebuild 1644
-MD5 5f35aa74e4a7118aa8b830cff357a04c phpwebsite-0.10.0-r3.ebuild 1905
-MD5 2ca9ac185775bab6e8fbecf0584c5c67 files/digest-phpwebsite-0.10.1-r1 159
-MD5 6ddbbfb4f4e1e5c4d8bf717835d3c2d8 files/digest-phpwebsite-0.9.3_p4-r2 239
-MD5 c50eef019c793463d0818d3fe35b46f4 files/digest-phpwebsite-0.10.0-r2 221
-MD5 835150acc17debf9125505dc224adc41 files/digest-phpwebsite-0.10.0-r3 305
-MD5 0f181e50286192df906dd979448e0fd5 files/phpwebsite-0.10.0-xml-rpc.diff 1188
-MD5 e328ec89d9602d614fbf60f87988f218 files/digest-phpwebsite-0.10.0-r1 147
 MD5 87c3729bfda5e5188af3f0df1fcda7e7 files/postinstall-en.txt 4637
-MD5 dab689c75fd084b695c69c427aa758b8 files/digest-phpwebsite-0.10.0 75
-MD5 823ff723bde0deb5142a1753183467fd files/digest-phpwebsite-0.9.3_p4-r1 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0FHfKf2g/qXtneoRAue/AKCKUVsh88rRerQhsp7eCjpepd85XwCfTde5
-a5IVTVB1o35ZDNVNf78CJcE=
-=jh94
------END PGP SIGNATURE-----
+MD5 0f181e50286192df906dd979448e0fd5 files/phpwebsite-0.10.1-xml-rpc.diff 1188
+MD5 2ca9ac185775bab6e8fbecf0584c5c67 files/digest-phpwebsite-0.10.1-r1 159

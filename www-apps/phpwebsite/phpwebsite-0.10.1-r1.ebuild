@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.10.1-r1.ebuild,v 1.4 2005/07/09 22:37:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.10.1-r1.ebuild,v 1.5 2005/07/10 14:36:00 rl03 Exp $
 
 inherit eutils webapp
 
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${P}-full.tar.gz
 	cd ${S}
 	unpack phpwebsite_security_patch_20050707.1.tgz
-	epatch ${FILESDIR}/phpwebsite-0.10.0-xml-rpc.diff
+	epatch ${FILESDIR}/phpwebsite-0.10.1-xml-rpc.diff
 }
 
 src_install() {
