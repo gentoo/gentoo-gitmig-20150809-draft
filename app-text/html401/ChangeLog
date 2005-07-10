@@ -1,6 +1,10 @@
 # ChangeLog for app-text/html401
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.10 2005/06/21 09:32:53 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.11 2005/07/10 00:22:29 leonardop Exp $
+
+  09 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  html401-19991224-r2.ebuild:
+  Moved sgml-catalog_cat_include into pkg_setup().
 
   21 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
   html401-19991224-r2.ebuild:
