@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c9b7b5ce3feeeeb55cf387ee6e22125c jdbc-mysql-3.1.7.ebuild 1006
+MD5 d26bead6dcda741d58880770416b416c jdbc-mysql-3.1.7.ebuild 986
 MD5 8d591c5fe9abbffec905f064673f678b jdbc-mysql-3.0.11.ebuild 638
 MD5 d5ec995ea424127f35a51ea2ff688e37 jdbc-mysql-3.0.15.ebuild 638
-MD5 ab52306ac64a55ccada46d229eef7891 jdbc-mysql-3.0.11-r1.ebuild 1010
-MD5 77427773e1a3c18fea2e3541887b6a6b ChangeLog 4944
+MD5 db161cce82d6f714b47e52612b969778 jdbc-mysql-3.0.11-r1.ebuild 1017
+MD5 b03eff136d86c52d46c79d218e91c51f ChangeLog 5100
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 c145805be9c389961e09e2d55fa7bf6a files/digest-jdbc-mysql-3.1.7 79
 MD5 96778981695f92599ce9eac1c669a9b0 files/digest-jdbc-mysql-3.0.11 86
@@ -14,7 +14,7 @@ MD5 96778981695f92599ce9eac1c669a9b0 files/digest-jdbc-mysql-3.0.11-r1 86
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCsxV7/rLF9B432nYRAso8AJ9ZBdVaFCkdfK9Vdt0ZCUUzr7P2RgCgmn/p
-NiRUR2zXplT23HDfq0FN9DE=
-=GhPQ
+iD8DBQFC0UDW/rLF9B432nYRAmO0AJ9b/d4mFUTEie4MOj+sO8X089N8bgCdF/QW
+u2o7dVcZ+0xTlNkISJHq/F4=
+=U3gI
 -----END PGP SIGNATURE-----
