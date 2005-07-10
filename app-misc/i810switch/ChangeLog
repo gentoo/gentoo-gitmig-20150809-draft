@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/i810switch
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/ChangeLog,v 1.11 2005/01/01 15:07:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/ChangeLog,v 1.12 2005/07/10 10:42:13 twp Exp $
+
+*i810switch-0.6.5 (10 Jul 2005)
+
+  10 Jul 2005; Tom Payne <twp@gentoo.org> +i810switch-0.6.5.ebuild:
+  Version bump. Bug # 95699. Thanks Jeff Ames.
 
   06 Mar 2004; Tom Payne <twp@gentoo.org> i810switch-0.6.2.ebuild, i810switch-0.6.1.ebuild, i810switch-0.5.ebuild :
   Marked 0.6.2 stable on x86, removed old versions.
