@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r4.ebuild,v 1.8 2005/07/08 02:16:51 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.12-r4.ebuild,v 1.9 2005/07/10 02:41:22 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -49,6 +49,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-profile.patch
 	# Help people who don't `etc-update` properly
 	epatch "${FILESDIR}"/${P}-volume-order-etc-update.patch
+	# Make sure we quote the EDITOR var
+	epatch "${FILESDIR}"/${P}-quote-EDITOR.patch
 	# Been moved to cryptfs
 	rm -f etc/conf.d/cryptfs
 	# Moved to ppp package

@@ -1,0 +1,13 @@
+--- etc/profile
++++ etc/profile
+@@ -30,8 +30,8 @@
+ unset ROOTPATH
+ 
+ # Extract the value of EDITOR
+-[ -z $EDITOR ] && EDITOR="`. /etc/rc.conf 2>/dev/null; echo $EDITOR`"
+-[ -z $EDITOR ] && EDITOR="/bin/nano"
++[ -z "$EDITOR" ] && EDITOR="`. /etc/rc.conf 2>/dev/null; echo $EDITOR`"
++[ -z "$EDITOR" ] && EDITOR="/bin/nano"
+ export EDITOR
+ 
+ if [ -n "${BASH_VERSION}" ] ; then
