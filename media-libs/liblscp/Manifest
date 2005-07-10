@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 958b551e0efdf60017d1a30c4463f951 ChangeLog 321
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 afca33cad91fcc18ada6abc4d578f683 liblscp-0.3.0.ebuild 807
 MD5 6576f9c26723f7c21a2dfb27428aa91d liblscp-0.2.9.ebuild 807
+MD5 f966fa3a6f740f3d3efe79da3e0870ea ChangeLog 451
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 432b24c91c6909b8b37a43aeb04b956b files/digest-liblscp-0.2.9 65
+MD5 fbb44fe71c81c773406595f5d33d5dab files/digest-liblscp-0.3.0 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCnBK8vpz1081QvMkRAuNjAKCCj89D0oTMX8eIE4sPGjGGcKgxBQCgmun1
-1H5XE0JngeXR9NHhzML7UHo=
-=Y94F
+iD8DBQFC0Y3Tvpz1081QvMkRAi7/AJ4v3+FiSy5Oj+tnklV8rCbTUDgnYQCeMQTX
+wFdbZWCOpcq5uu99jIFWTGE=
+=el0l
 -----END PGP SIGNATURE-----
