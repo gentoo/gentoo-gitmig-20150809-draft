@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.30 2005/05/29 21:26:17 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.31 2005/07/10 20:54:37 swegener Exp $
+
+  10 Jul 2005; Sven Wegener <swegener@gentoo.org> gnunet-0.6.6b.ebuild:
+  QA: Removed 'emake || make || die' and variants. Either a package is
+  parallel build safe or it is not. There's nothing like trying and falling
+  back.
 
   29 May 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   +files/gnunet-0.6.6b-autotools.patch, gnunet-0.6.6b.ebuild:

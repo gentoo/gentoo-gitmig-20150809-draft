@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.6b.ebuild,v 1.3 2005/05/29 21:26:17 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.6b.ebuild,v 1.4 2005/07/10 20:54:37 swegener Exp $
 
 inherit eutils libtool
 
@@ -55,7 +55,7 @@ src_compile() {
 
 	econf ${myconf} || die "econf failed"
 
-	emake || MAKEOPTS="${MAKEOPTS} -j1" emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
