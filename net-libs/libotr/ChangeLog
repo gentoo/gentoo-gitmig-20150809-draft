@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libotr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.6 2005/05/17 14:12:09 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.7 2005/07/10 21:04:16 swegener Exp $
+
+  10 Jul 2005; Sven Wegener <swegener@gentoo.org> libotr-1.0.4.ebuild,
+  libotr-2.0.0.ebuild, libotr-2.0.1.ebuild, libotr-2.0.2.ebuild:
+  QA: Removed 'emake || make || die' and variants. Either a package is
+  parallel build safe or it is not. There's nothing like trying and falling
+  back.
 
 *libotr-2.0.2 (17 May 2005)
 
