@@ -1,10 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.21.ebuild,v 1.8 2005/06/17 20:30:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.21.ebuild,v 1.9 2005/07/10 19:55:59 swegener Exp $
 
 inherit multilib
 
-IUSE=""
 S=${WORKDIR}/${PN}
 DESCRIPTION="A sweet plugin to control XMMS from GKrellM2"
 SRC_URI="http://gkrellm.luon.net/files/${P}.tar.gz"
