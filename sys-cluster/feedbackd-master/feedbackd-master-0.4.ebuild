@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/feedbackd-master-0.4.ebuild,v 1.4 2005/03/08 02:49:52 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/feedbackd-master-0.4.ebuild,v 1.5 2005/07/10 01:01:32 swegener Exp $
 
 inherit eutils
 
@@ -24,7 +24,6 @@ SRC_URI="mirror://sourceforge/feedbackd/${P}.tar.gz"
 IUSE=""
 SLOT="0"
 KEYWORDS="x86"
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	einfo "Note: feedbackd-master needs a kernel with ipvs support and with ipvs enabled"
