@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.18 2005/05/17 18:41:34 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.19 2005/07/10 00:15:18 humpback Exp $
+
+  10 Jul 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  mod_mono-1.0.9-r1.ebuild:
+  Added ~amd64.
 
 *mod_mono-1.0.9-r1 (17 May 2005)
 *mod_mono-1.0.9 (17 May 2005)
