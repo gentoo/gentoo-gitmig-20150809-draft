@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/kissme-0.0.32-r1.ebuild,v 1.1 2004/07/31 21:50:35 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/kissme-0.0.32-r1.ebuild,v 1.2 2005/07/10 20:34:02 agriffis Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ DEPEND="virtual/libc
 		>=dev-java/jikes-1.19
 		>=dev-java/gnu-classpath-0.08_rc1"
 RDEPEND=""
-IUSE="doc jikes"
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
