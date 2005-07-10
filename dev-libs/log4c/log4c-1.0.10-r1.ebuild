@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.10-r1.ebuild,v 1.6 2005/04/18 17:02:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.10-r1.ebuild,v 1.7 2005/07/10 20:28:14 swegener Exp $
 
 inherit eutils
 
@@ -17,14 +17,12 @@ IUSE="doc"
 # could probably be deleted, but it just doesn't seem right to have log4c
 # without a logger underneath it.
 
-DEPEND=">=dev-libs/expat-1.95.2
-	>=media-gfx/graphviz-1.7.15-r2
-	virtual/logger
-	doc? ( >=app-doc/doxygen-1.2.15 )"
-
-DEPEND=">=dev-libs/expat-1.95.2
+RDEPEND=">=dev-libs/expat-1.95.2
 	>=media-gfx/graphviz-1.7.15-r2
 	virtual/logger"
+
+DEPEND="${RDEPEND}
+	doc? ( >=app-doc/doxygen-1.2.15 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
