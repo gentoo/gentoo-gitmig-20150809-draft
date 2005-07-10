@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.77 2005/07/08 10:00:54 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.78 2005/07/10 20:52:50 swegener Exp $
+
+  10 Jul 2005; Sven Wegener <swegener@gentoo.org> evolution-1.2.4.ebuild,
+  evolution-2.0.3-r2.ebuild, evolution-2.0.4.ebuild,
+  evolution-2.2.1.1.ebuild:
+  QA: Removed 'emake || make || die' and variants. Either a package is
+  parallel build safe or it is not. There's nothing like trying and falling
+  back.
 
 *evolution-2.2.3 (07 Jul 2005)
 

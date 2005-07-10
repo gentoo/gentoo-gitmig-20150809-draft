@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.2.4.ebuild,v 1.7 2005/03/23 16:17:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.2.4.ebuild,v 1.8 2005/07/10 20:52:50 swegener Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde crypt"
 
@@ -191,7 +191,7 @@ src_compile() {
 	export LANG="C"
 
 	#needs to be able to connect to X display to build.
-	Xemake || Xmake || die
+	Xemake -j1 || die
 }
 
 src_install() {

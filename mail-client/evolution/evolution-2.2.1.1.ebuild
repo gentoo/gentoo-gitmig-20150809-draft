@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.1.1.ebuild,v 1.12 2005/06/25 13:03:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.1.1.ebuild,v 1.13 2005/07/10 20:52:50 swegener Exp $
 
 inherit eutils gnome2 flag-o-matic alternatives
 
@@ -133,7 +133,7 @@ src_compile() {
 
 	gnome2_src_configure ${G2CONF} ${myconf}
 
-	emake || make || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
