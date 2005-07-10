@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.3.2_pre20030625.ebuild,v 1.7 2005/03/21 06:58:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.3.2_pre20030625.ebuild,v 1.8 2005/07/10 20:56:15 swegener Exp $
 
 IUSE="sdl X"
 
@@ -45,7 +45,7 @@ src_compile() {
 
 	econf --enable-shared \
 		${myconf} || die "./configure failed"
-	emake || make || die
+	emake -j1 || die
 }
 
 src_install() {
