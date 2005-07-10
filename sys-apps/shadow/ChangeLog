@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.112 2005/07/10 18:28:32 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.113 2005/07/10 21:08:36 josejx Exp $
+
+  10 Jul 2005; Joseph Jezak <josejx@gentoo.org> shadow-4.0.7-r3.ebuild:
+  Marked ppc stable.
 
   10 Jul 2005; Daniel Ostrow <dostrow@gentoo.org> shadow-4.0.7-r3.ebuild:
   Change check for ppc64 and securetty from tc-arch to tc-arch-kernel.
