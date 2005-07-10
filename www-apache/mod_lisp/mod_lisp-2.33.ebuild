@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp/mod_lisp-2.33.ebuild,v 1.3 2005/01/09 00:41:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp/mod_lisp-2.33.ebuild,v 1.4 2005/07/10 00:38:51 swegener Exp $
 
 DESCRIPTION="mod_lisp is an Apache module to easily write web applications in Common Lisp"
 HOMEPAGE="http://www.fractalconcept.com/asp/sdataQIceRsMvtN9fDM==/sdataQuvY9x3g$ecX"
@@ -10,8 +10,6 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND="=net-www/apache-1*"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	mkdir ${S}
