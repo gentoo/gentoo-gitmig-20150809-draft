@@ -1,6 +1,18 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.56 2005/07/02 23:48:10 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.57 2005/07/10 21:37:58 ticho Exp $
+
+  10 Jul 2005; Andrej Kacian <ticho@gentoo.org> +files/mailer.conf,
+  +courier-0.50.1.ebuild:
+  Version bump, wrt security bug #97915. Also changed the ebuild to be more
+  mailwrapper-compatible.
+
+*courier-0.50.1 (04 Jul 2005)
+
+  04 Jul 2005; Andrej Kacian <ticho@gentoo.org> +files/mailer.conf,
+  +courier-0.50.1.ebuild:
+  Version bump, due to security bug #97915. Also improved mailwrapper
+  compatibility.
 
 *courier-0.50.0 (02 Jul 2005)
 
