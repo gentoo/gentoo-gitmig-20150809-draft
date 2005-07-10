@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f5416243e20691371756bbe728160840 squirm-1.23.ebuild 1071
 MD5 8c10440d756e822e30f0fbf6af4f1c79 ChangeLog 1117
-MD5 5db2cab7098ae659adf1c2aeb50e96b5 metadata.xml 309
 MD5 09f57f010bc9572e95566ab97181d8fc files/digest-squirm-1.23 59
+MD5 5db2cab7098ae659adf1c2aeb50e96b5 metadata.xml 309
+MD5 a7f4687d97907ac6c1eb3773374b0a1e squirm-1.23.ebuild 996
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCakkDI1lqEGTUzyQRAhIYAJ9q5IZPZIx76iq8i7L+76k4c/zY9QCggfvR
-Z21EiyWjbhLQPz/KjhWNls8=
-=oV3z
+iD8DBQFC0HVxI1lqEGTUzyQRAjmlAKCwqATq0TdMev8UViwnVDo2bjvuTgCeOljg
+47+9Uprdqn6tR+bMF8M8mKU=
+=xI0w
 -----END PGP SIGNATURE-----
