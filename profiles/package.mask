@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4175 2005/07/09 13:32:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4176 2005/07/10 20:32:01 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -454,10 +454,6 @@ net-im/pymsn-t
 # Danny van Dyk <kugelfang@gentoo.org> (07 April 2005)
 # Doesn't build anymore. Asked maintainer to fix or remove it.
 dev-lang/gpc
-
-# Carsten Lohrke <carlo@gentoo.org> (07 April 2005)
-# Mask development versions.
->media-video/kmplayer-0.8.9
 
 # <axxo@gentoo.org> (03 Apr 2005)
 # broken
