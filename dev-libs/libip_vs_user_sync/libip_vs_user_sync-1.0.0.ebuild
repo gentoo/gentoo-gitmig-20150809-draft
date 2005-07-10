@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libip_vs_user_sync/libip_vs_user_sync-1.0.0.ebuild,v 1.4 2005/01/21 21:49:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libip_vs_user_sync/libip_vs_user_sync-1.0.0.ebuild,v 1.5 2005/07/10 01:11:13 swegener Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ SRC_URI="http://www.ultramonkey.org/download/conn_sync/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="-* ~x86"
 IUSE=""
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	einfo "libip_vs_user_sync needs a kernel patched with linux-2.4.26-user_sync.3.patch"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/xplc-0.3.11.ebuild,v 1.7 2005/06/17 20:41:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/xplc-0.3.11.ebuild,v 1.8 2005/07/10 01:10:21 swegener Exp $
 
 DESCRIPTION="cross platform lightweight components library for C++"
 HOMEPAGE="http://xplc.sourceforge.net"
@@ -13,8 +13,6 @@ IUSE=""
 
 DEPEND="virtual/libc
 	dev-util/pkgconfig"
-
-S=${WORKDIR}/${P}
 
 src_test() {
 	make tests || die "at least one test has failed"
