@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs-bin/jcs-bin-1.2.5.ebuild,v 1.2 2005/05/19 13:45:20 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs-bin/jcs-bin-1.2.5.ebuild,v 1.3 2005/07/10 19:12:07 agriffis Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SLOT="1.0"
 KEYWORDS="x86 amd64"
 DEPEND=">=virtual/jre-1.3"
 RDEPEND=">=virtual/jre-1.3"
-IUSE="doc jikes"
+IUSE=""
 
 src_unpack() {
 	einfo "Nothing to unpack"
