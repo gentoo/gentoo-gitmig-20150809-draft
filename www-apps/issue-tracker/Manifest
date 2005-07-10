@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 688a89c6baa854def763317ebdc40381 ChangeLog 1069
 MD5 ce0a8a8c6b5c5004b17d0c84d62e9473 files/digest-issue-tracker-4.0.3 72
 MD5 ce0a8a8c6b5c5004b17d0c84d62e9473 files/digest-issue-tracker-4.0.3-r1 72
@@ -6,3 +9,10 @@ MD5 08c75a0b0ac01fa786a74ff8775bcfca files/reconfig 3203
 MD5 653aab63a42943ef662f4493875c840d issue-tracker-4.0.3-r1.ebuild 1214
 MD5 b6b10936188d68d4b7139a49471b32b0 issue-tracker-4.0.3.ebuild 3000
 MD5 80cbe8e469a257c0f7a48d256c2a0740 metadata.xml 849
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HdnI1lqEGTUzyQRAlzzAKC4UqhYD8fF+w0xr9DTQFP2y/8pqwCeJBF0
+SRCq4s1wGV4/dz3g4t5siVI=
+=/hwB
+-----END PGP SIGNATURE-----
