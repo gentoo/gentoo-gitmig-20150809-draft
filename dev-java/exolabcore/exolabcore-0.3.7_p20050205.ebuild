@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205.ebuild,v 1.5 2005/05/30 19:16:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205.ebuild,v 1.6 2005/07/10 02:59:27 agriffis Exp $
 
 inherit eutils java-pkg
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 LICENSE="Exolab"
 SLOT="0"
 KEYWORDS="amd64 x86 sparc"
-IUSE="doc jikes"
+IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
