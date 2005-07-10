@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fcc30f0f3ba3c117b39d5318f12533ef ChangeLog 326
 MD5 d8f9826c3ec993255e1dde8e46f15b1c exif-0.6.9.ebuild 734
 MD5 29d527c627976685861c57bab5a072ad files/digest-exif-0.6.9 62
 MD5 f6e6e21a2beceda5e45a2cabfa6176cb metadata.xml 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HCnI1lqEGTUzyQRAjGcAKCj13IeLvO9EcjW7URHjQcre0l3IgCg2fU8
+uuqYCTbCuTvH7AVBHnFz/RU=
+=TfjF
+-----END PGP SIGNATURE-----

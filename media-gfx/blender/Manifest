@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 10771f906ca263395f91ca41459efb39 ChangeLog 9174
 MD5 748a22317a9c9448af9e97a5a2900155 blender-2.34-r1.ebuild 2912
 MD5 c2f4a5861dcc36216ddc1e7592141dd1 blender-2.34.ebuild 2800
@@ -21,3 +24,10 @@ MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36-r1 65
 MD5 2ba439f544d1a154d6ab27d68cd059fc files/digest-blender-2.37 65
 MD5 052c6c1c8bb6f7abaef2c5a615d6995e files/digest-blender-2.37a 66
 MD5 493f38fb63d60a1ce275fdd2ea43d6e9 metadata.xml 587
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HDsI1lqEGTUzyQRAlthAKCXxsgLFKvZ624nDkRgHGsNx2UM4gCeMzPb
+vTRUbByxCGO+mqNPQbYamJ8=
+=2t7y
+-----END PGP SIGNATURE-----
