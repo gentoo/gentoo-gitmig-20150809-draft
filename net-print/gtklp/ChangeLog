@@ -1,6 +1,11 @@
 # ChangeLog for net-print/gtklp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.17 2005/06/06 22:44:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.18 2005/07/10 15:52:23 lanius Exp $
+
+*gtklp-1.0f (10 Jul 2005)
+
+  10 Jul 2005; Heinrich Wendel <lanius@gentoo.org> +gtklp-1.0f.ebuild:
+  version bump
 
 *gtklp-1.0d (06 Jun 2005)
 
