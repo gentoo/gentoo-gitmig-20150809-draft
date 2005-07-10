@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/bookmarksync-0.3.3.ebuild,v 1.1 2004/08/15 18:03:24 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/bookmarksync-0.3.3.ebuild,v 1.2 2005/07/10 01:21:02 swegener Exp $
 
 DESCRIPTION="bookmarksync synchronizes various browser bookmark files"
 HOMEPAGE="http://sourceforge.net/projects/booksync/"
@@ -17,13 +17,8 @@ DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	perl? ( dev-lang/perl )"
 
-src_compile() {
-	emake || die
-}
-
 src_install () {
-	exeinto /usr/bin
-	doexe bookmarksync
+	dobin bookmarksync
 	if use perl >/dev/null; then
 		doexe tools/bookmarksync.pl
 		dodoc README.tools
