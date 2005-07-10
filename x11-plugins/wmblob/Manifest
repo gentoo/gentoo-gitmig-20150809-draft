@@ -1,6 +1,16 @@
-MD5 7d96f8a07104d557f9518ec819aad1de ChangeLog 767
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e75227b75c041d2702e88220ea7cbf18 ChangeLog 1002
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 81949009ab89945049517466a1c7c9b5 wmblob-1.0.1.ebuild 1035
+MD5 804eec037808059a562de3b3750c3167 wmblob-1.0.1.ebuild 1068
 MD5 18919b645c99104e0d245449a17f6507 files/digest-wmblob-1.0.1 65
-MD5 e14ebbd1f61de0db3f734809191ac824 files/gentoo-cflags.patch 316
 MD5 e071f5107eeb98d3da0d49f18691b92b files/wmblob.desktop 170
+MD5 00ea8a34d168a32d869970637704e9c7 files/wmblob-configure-fixes.patch 518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0ZPgl5AvwDPiUowRAh6eAJ9QMjYobEIVcEOMhwdJPQveUiM1uQCg0i5f
+Hguoo/3I2182yr5+T0tm1Go=
+=dWUS
+-----END PGP SIGNATURE-----
