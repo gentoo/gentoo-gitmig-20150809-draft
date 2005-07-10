@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2db7f4b4b7d5b07d56444a71f110abc4 ChangeLog 349
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 950eec6495ed387b07974848dbaf71f3 multisort-1.1.ebuild 598
 MD5 50002a73925a21345657c36633755b5d files/digest-multisort-1.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZzXEmPFBzbX68WERAvcRAJ9iFinYa+HnHvA350oflU/1w+hguwCcCJPb
-6Y3xu92APvaXbXyBXVbNHBI=
-=m+40
------END PGP SIGNATURE-----
+MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
+MD5 7018ecdc4f226f134b81d403d7fe2627 multisort-1.1.ebuild 642
