@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate/qalculate-0.7.2.ebuild,v 1.1 2005/03/13 01:05:28 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate/qalculate-0.7.2.ebuild,v 1.2 2005/07/10 02:04:49 weeve Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="nls gnome"
 
 RDEPEND=">=x11-libs/gtk+-2.3
