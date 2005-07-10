@@ -1,4 +1,14 @@
-MD5 c558bff2b9cd7b80829058d016be08c1 openmcl-build-tools-20040505.ebuild 827
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dc451c2ba93071287bc7ff42c1c038e0 ChangeLog 461
-MD5 6432702f8acde7276febb3a282b717d2 metadata.xml 709
 MD5 cdc510f48391503558fabc7dbe45228f files/digest-openmcl-build-tools-20040505 83
+MD5 6432702f8acde7276febb3a282b717d2 metadata.xml 709
+MD5 77a8ebce3322c5f927f37fd5e189aecd openmcl-build-tools-20040505.ebuild 808
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HXbI1lqEGTUzyQRAphbAJsFCfytfnOO9qbn6hw7ejnBxFJm0wCfRSec
+kdfk+swx60Kk/IvBfwOKpQU=
+=HwpH
+-----END PGP SIGNATURE-----
