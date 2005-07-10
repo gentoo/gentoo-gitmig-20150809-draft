@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c4e097ca05816f1e2e36bcc4c17dccb3 tw_cli-2.00.00.032b.ebuild 1817
 MD5 3775a435bf5a3446f96d65b90cbc1a80 tw_cli-9.2.ebuild 1990
 MD5 72e495e96d23dcac2dee6f89d6176d15 ChangeLog 1357
@@ -6,3 +9,10 @@ MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 a3c1d1101d70383a7e5ec69ea246314d files/digest-tw_cli-2.00.00.032b 129
 MD5 ffe9b53a7e5d9586bdbf3a11be8f7dbe files/digest-tw_cli-2.00.00.042 133
 MD5 10e8d93827d099a1a56791bc118399c4 files/digest-tw_cli-9.2 141
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0YcFBXaUFmZvwyMRAoC7AKCi8ZOcm3t254XPdo5FJ6FZJS6H7QCcDdvQ
+78A61w+TZqs03jpsONqZHH8=
+=fY56
+-----END PGP SIGNATURE-----

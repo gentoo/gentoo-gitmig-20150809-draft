@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-2.00.00.042.ebuild,v 1.3 2005/05/03 09:54:53 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-2.00.00.042.ebuild,v 1.4 2005/07/10 20:37:01 agriffis Exp $
 
 DESCRIPTION="3ware Command Line Interface"
 HOMEPAGE="http://www.3ware.com"
@@ -8,7 +8,7 @@ LICENSE="3ware"
 SLOT="0"
 # binary packages
 KEYWORDS="-* x86 amd64"
-IUSE="doc"
+IUSE=""
 # stripping seems to break this sometimes
 RESTRICT="fetch nostrip nomirror"
 # binary packages
