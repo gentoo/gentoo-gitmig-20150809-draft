@@ -93,3 +93,7 @@ vpopmail
 
 # Mask pyste until gccxml / elementtree work on alpha
 pyste
+
+# can't test wireless currently
+wifi
+

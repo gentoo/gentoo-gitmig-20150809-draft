@@ -70,3 +70,6 @@ emboss
 
 # lm_sensors not supported on ia64 hw, afaik
 lm_sensors
+
+# we can't test wifi currently
+wifi
