@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dd7965c04c184d2fbf07f39f6ca0a93c ChangeLog 1319
 MD5 1e8adbbf6d23b79dcf01b09ada7e0bb6 files/0.3.1-r1/23_mod_injection.conf 419
 MD5 a3f0476015e2855d6cf3e66904b232ee files/23_mod_injection.conf 425
@@ -9,3 +12,10 @@ MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 1eb6ba208468e00f76767ee3f9d3344b mod_injection-0.3.0.ebuild 967
 MD5 48ed7eeba2a2edebb4eaa8c2925d3b3c mod_injection-0.3.1-r1.ebuild 632
 MD5 762cd9f0b3d5077388200ae0596255ce mod_injection-0.3.1.ebuild 971
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HFOI1lqEGTUzyQRAn+KAJ9c6rS8yySld7J82qbOzdpNZQPyyACdF338
+x4EKGEJ69zzIXwA2odJzymM=
+=z4Si
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a545a9bd046a12b12daf65ad642631a9 ChangeLog 1288
 MD5 ed08f74402be537f28435ce409adb86d files/15_mod_layout.conf 4590
 MD5 77707c5cb33c82abcb18389a7499495b files/15_mod_layout321.conf 846
@@ -13,3 +16,10 @@ MD5 59bfc95504a0942e3b2c7dd721560e26 mod_layout-3.2.1-r1.ebuild 729
 MD5 5f3964be22ee512bc64dc6e10e89e446 mod_layout-3.2.1.ebuild 1366
 MD5 ce30cd064772efc39b0052eeec4ff0ac mod_layout-4.0.1a-r1.ebuild 622
 MD5 a89e875622d75667cea0e84621eaa90b mod_layout-4.0.1a.ebuild 915
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HJXI1lqEGTUzyQRAhY+AJ40nZkjvFsg2y/s7Znd9TW8KCWdyQCfSvY8
+4mowHOo3pLjHCyj1RiYU5a8=
+=wa+7
+-----END PGP SIGNATURE-----
