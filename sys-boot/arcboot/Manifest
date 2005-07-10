@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3f92e473c77552b543533673cee8b4b8 ChangeLog 1871
-MD5 e0eb419f993a1ca100c6b5d5a6addc04 arcboot-0.3.8.4-r1.ebuild 3857
-MD5 6fb572ed7959ebf0171d2e5e18b31831 metadata.xml 317
+MD5 c191b127cf678b4e5305460ad3ff1434 arcboot-0.3.8.4-r1.ebuild 3841
 MD5 ee7271af50cf168246a8d0b847f48ef1 arcboot-0.3.8.6-r1.ebuild 4503
 MD5 48502666c968d002b7c270cfdf982800 files/arcboot-0.3.8.4-gentoo.patch 8052
-MD5 9f1445717619735477dd812584e01fe5 files/digest-arcboot-0.3.8.6-r1 138
 MD5 439138ebd60a5a26366ea044e4468b00 files/digest-arcboot-0.3.8.4-r1 67
+MD5 9f1445717619735477dd812584e01fe5 files/digest-arcboot-0.3.8.6-r1 138
+MD5 6fb572ed7959ebf0171d2e5e18b31831 metadata.xml 317
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HKrI1lqEGTUzyQRAiUJAJ45fVdb/pKfJT9C5FlOiIco9lkp+wCeKihC
+i+LvM7FoFLXcS0etHN+uAXA=
+=/Tld
+-----END PGP SIGNATURE-----

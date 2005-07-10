@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.4-r1.ebuild,v 1.2 2005/04/30 05:21:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.4-r1.ebuild,v 1.3 2005/07/10 00:58:05 swegener Exp $
 
 inherit eutils
 
@@ -17,8 +17,6 @@ IUSE="cobalt"
 DEPEND=""
 RDEPEND="sys-boot/dvhtool
 	 sys-apps/debianutils"
-
-S=${WORKDIR}/${P}
 
 pkg_setup() {
 	# arcboot is for SGI mips machines only, so exclude everyone but them
