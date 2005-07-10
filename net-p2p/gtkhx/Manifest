@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aae3ae62e22806a1bc501c71e62fb782 ChangeLog 1213
 MD5 e6251199696655ec20f9ee306dd5cef5 files/digest-gtkhx-0.9.3 63
 MD5 ab49a439ea4a3788dc1c0251a8775176 files/digest-gtkhx-0.9.4 63
 MD5 2fde8dcabbc2564e308bfdd8752844e6 gtkhx-0.9.3.ebuild 596
 MD5 c8b28ca73f5723f20f9a6a4a1437aaf5 gtkhx-0.9.4.ebuild 557
 MD5 0cd02edc281f88f79ff5cf6efd9d83b8 metadata.xml 313
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFC0X8uI1lqEGTUzyQRAjoqAJj/qfgM7kpgQ8kjFTxg2PfUxC0LAJ9K0qhR
+IdarbBhWqidJhCiB+5cjnw==
+=gk1+
+-----END PGP SIGNATURE-----
