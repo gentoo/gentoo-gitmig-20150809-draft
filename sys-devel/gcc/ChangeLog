@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.434 2005/07/10 04:10:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.435 2005/07/10 19:01:11 eradicator Exp $
 
   10 Jul 2005; Mike Frysinger <vapier@gentoo.org> gcc-3.3.5-r1.ebuild,
   gcc-3.3.5.20050130-r1.ebuild, gcc-3.3.5.20050130-r2.ebuild,
@@ -37,7 +37,6 @@
   -files/3.3.3/gcc333_pre20040408-gentoo-branding.patch,
   -files/3.3.3/gcc333_pre20040426-gentoo-branding.patch,
   -files/3.3.4/gcc334-gentoo-branding.patch,
-  -files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch,
   -files/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch,
   -files/3.4.0/gcc-3.4.0-r6-gentoo-branding.patch,
   -files/3.4.0/gcc34-ia64-lib64.patch, -files/3.4.0/gcc34-ice-hack.patch,
