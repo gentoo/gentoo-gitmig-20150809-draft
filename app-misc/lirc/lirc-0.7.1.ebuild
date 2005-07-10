@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.1.ebuild,v 1.4 2005/05/15 08:11:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.1.ebuild,v 1.5 2005/07/10 15:27:34 lanius Exp $
 
 inherit eutils linux-mod flag-o-matic
 
@@ -72,7 +72,7 @@ src_unpack() {
 	sed	-i -e "s:-O2 -g:${CFLAGS}:" configure configure.in
 
 	# fix bz878 compilation, bug #87505
-	sed -i -e "s:lircd.conf.pixelview_bt878:lircd.conf.playtv_bt878" configure configure.in
+	sed -i -e "s:lircd.conf.pixelview_bt878:lircd.conf.playtv_bt878:" configure configure.in
 }
 
 src_compile() {
