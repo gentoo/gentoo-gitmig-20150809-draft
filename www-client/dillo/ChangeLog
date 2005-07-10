@@ -1,6 +1,13 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.34 2005/07/02 17:47:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.35 2005/07/10 20:50:24 swegener Exp $
+
+  10 Jul 2005; Sven Wegener <swegener@gentoo.org> dillo-0.7.3-r7.ebuild,
+  dillo-0.8.4.ebuild, dillo-0.8.4-r1.ebuild, dillo-0.8.4-r2.ebuild,
+  dillo-0.8.5.ebuild, dillo-0.8.5-r1.ebuild:
+  QA: Removed 'emake || make || die' and variants. Either a package is
+  parallel build safe or it is not. There's nothing like trying and falling
+  back.
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> dillo-0.8.4-r2.ebuild:
   Stable on alpha.

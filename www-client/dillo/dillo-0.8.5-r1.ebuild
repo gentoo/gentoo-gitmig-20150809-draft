@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.5-r1.ebuild,v 1.2 2005/07/07 00:20:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.5-r1.ebuild,v 1.3 2005/07/10 20:50:24 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -84,7 +84,7 @@ src_compile() {
 		$(use_enable ssl)"
 
 	econf ${myconf} || die
-	emake || make || die
+	emake -j1 || die
 }
 
 src_install() {
