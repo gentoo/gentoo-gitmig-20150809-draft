@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.12 2005/01/09 00:27:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.13 2005/07/10 19:52:28 swegener Exp $
 
 inherit eutils
 
@@ -35,7 +35,6 @@ detectapache() {
 	esac
 }
 detectapache
-SLOT="${APACHEVER}"
 [ "${APACHEVER}" -eq '2' ] && USE_APACHE2='2' || USE_APACHE2=''
 
 DESCRIPTION="An Apache module to talk to Zope Corporation's PCGI"
@@ -46,11 +45,10 @@ SLOT="${APACHEVER}"
 KEYWORDS="~x86 ~ppc"
 IUSE="apache2"
 
-DEPEND="${DEPEND}
-		net-www/apache
-		apache2? ( >=net-www/apache-2 )
-		www-apps/pcgi"
-#RDEPEND=""
+DEPEND="net-www/apache
+	apache2? ( >=net-www/apache-2 )
+	www-apps/pcgi"
+
 S=${WORKDIR}/${PN/mod_}
 
 src_unpack() {
