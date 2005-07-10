@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.172 2005/07/07 19:12:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.173 2005/07/10 01:45:47 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -245,6 +245,7 @@ gentoo_urls() {
 }
 get_gcc_src_uri() {
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
+	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
 	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
 	export PP_GCC_VER=${PP_GCC_VER:-${GCC_RELEASE_VER}}
 	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
@@ -280,7 +281,7 @@ get_gcc_src_uri() {
 
 	# uclibc lovin
 	[[ -n ${UCLIBC_VER} ]] && \
-		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${PATCH_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2)"
+		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${UCLIBC_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2)"
 
 	# PERL cannot be present at bootstrap, and is used to build the man pages.
 	# So... lets include some pre-generated ones, shall we?
@@ -1631,6 +1632,7 @@ gcc_movelibs() {
 gcc_quick_unpack() {
 	pushd ${WORKDIR} > /dev/null
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
+	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
 	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
 	export PP_GCC_VER=${PP_GCC_VER:-${GCC_RELEASE_VER}}
 	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
@@ -1656,7 +1658,7 @@ gcc_quick_unpack() {
 		unpack ${PN}-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2
 
 	[[ -n ${UCLIBC_VER} ]] && \
-		unpack ${PN}-${PATCH_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
+		unpack ${PN}-${UCLIBC_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
 
 	if want_ssp ; then
 		if [[ -n ${PP_FVER} ]] ; then
