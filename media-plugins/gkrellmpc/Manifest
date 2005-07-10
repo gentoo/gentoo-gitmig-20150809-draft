@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0e6d0fde597bf73c682688c32b2e3c57 gkrellmpc-0.1_beta9.ebuild 637
 MD5 ab22d157b5ff39686c847b6f964df328 ChangeLog 951
-MD5 d23a6055111fcbd0ce73cc2cdc638af3 metadata.xml 345
 MD5 296239fe187d75c0164e3795cdea1b11 files/digest-gkrellmpc-0.1_beta9 70
+MD5 cd10c9c01a9dd894968ceed31d6607c7 gkrellmpc-0.1_beta9.ebuild 632
+MD5 d23a6055111fcbd0ce73cc2cdc638af3 metadata.xml 345
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFClis3I1lqEGTUzyQRAryZAJdlShV8L1QV66QSyD0/j9hZaJ5nAJ0TLy44
-pKA7KGWsSx1dpzaK15GVYA==
-=wZhT
+iD8DBQFC0X/FI1lqEGTUzyQRAuF4AJ9NqLypxG2JiDCBBdEOf3uxclt+hgCg0VgZ
+29iU2bhGoqDd7aGbxx2X5K8=
+=5wfb
 -----END PGP SIGNATURE-----
