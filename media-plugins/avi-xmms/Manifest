@@ -1,7 +1,17 @@
-MD5 200720e01f55a0817bf0067baedd479b ChangeLog 2141
-MD5 3956562cfabf58a2c6d3313b0ac1a2fb avi-xmms-1.2.3-r1.ebuild 901
-MD5 1a3e6d713ec1d57d2f862c6be59ee8d9 avi-xmms-1.2.3.ebuild 734
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c7234e09cb9b7d60e650d2934be146c1 ChangeLog 2396
+MD5 9cd2b71884b869d8e2051ec0248d1d86 avi-xmms-1.2.3-r1.ebuild 894
+MD5 4b356c8cd590d5299b15526a8d48a485 avi-xmms-1.2.3.ebuild 729
 MD5 12ef286167d623ec80c2adbe84ced3c8 files/avi-xmms-1.2.3-gcc3-gentoo.patch 18455
 MD5 1353d8be29f9685e51f62d3b06ad4fe2 files/digest-avi-xmms-1.2.3 66
 MD5 1353d8be29f9685e51f62d3b06ad4fe2 files/digest-avi-xmms-1.2.3-r1 66
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0Y9TI1lqEGTUzyQRAve9AJ9/zayQ+hwMcPrXen0Tl9G6pE4A9ACeN1bA
+SUzA8F+NOpc6kPer/aksoDM=
+=yFAB
+-----END PGP SIGNATURE-----

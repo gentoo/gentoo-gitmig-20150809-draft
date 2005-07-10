@@ -1,8 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/avi-xmms/avi-xmms-1.2.3.ebuild,v 1.8 2004/06/24 23:26:53 agriffis Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/avi-xmms/avi-xmms-1.2.3.ebuild,v 1.9 2005/07/10 21:12:40 swegener Exp $
 
 inherit flag-o-matic
 
@@ -10,6 +8,7 @@ DESCRIPTION="A xmms plugin for AVI/DivX movies"
 SRC_URI="http://www.xmms.org/files/plugins/avi-xmms/${P}.tar.gz"
 HOMEPAGE="http://www.xmms.org/plugins_input.html"
 
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
@@ -21,7 +20,7 @@ src_compile() {
 	filter-flags -fno-exceptions
 
 	econf || die
-	emake || make || die
+	emake -j1 || die
 }
 
 src_install () {
