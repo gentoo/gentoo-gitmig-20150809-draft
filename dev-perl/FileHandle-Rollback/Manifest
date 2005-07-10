@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 07bd9d4363cbc760b725c8716b515b24 ChangeLog 1036
 MD5 b28dd225d6848a16914d76828dd82474 FileHandle-Rollback-1.05.ebuild 487
 MD5 b4114d681b9a3705716ee9d4790e011b files/digest-FileHandle-Rollback-1.05 74
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0YD5I1lqEGTUzyQRAmr8AJ95Mc4qtwFGnGnqNVon2D+STJ4GywCg0kpg
+RRyiRNn/izju044EjoUkiaM=
+=wgYr
+-----END PGP SIGNATURE-----
