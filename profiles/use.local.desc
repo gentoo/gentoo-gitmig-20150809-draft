@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1300 2005/07/10 18:12:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1301 2005/07/10 18:21:02 dostrow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -795,7 +795,6 @@ sci-mathematics/scilab:atlas - Add support for the atlas library
 sci-mathematics/scilab:ocaml - Add support for the ocaml programming language
 sci-misc/boinc:server - Enable compilation of server
 sys-apps/baselayout-vserver:fakelog - install a fake logger init script
-sys-apps/baselayout:ibm - adds support for hvc consoles
 sys-apps/busybox:floppyboot - builds a busybox binary for use on floppy drives.
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
@@ -813,6 +812,7 @@ sys-apps/pcmcia-cs:xforms - Enable building the xforms based cardinfo binary
 sys-apps/pcmciautils:cis - Include CIS override files
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
 sys-apps/suspend2-userui:fbsplash - Add support for framebuffer splash
+sys-apps/sysvinit:ibm - adds support for hvc consoles
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
