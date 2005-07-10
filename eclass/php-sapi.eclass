@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.72 2005/07/09 08:33:27 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.73 2005/07/10 13:34:05 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -56,8 +56,8 @@ case "$PV" in
 	4.3.8) HARDENEDPHP_PATCH="hardened-php-$PV-0.2.2.patch.gz" ;;
 	4.3.9) HARDENEDPHP_PATCH="hardened-php-$PV-0.2.6.patch.gz" ;;
 	4.3.10) HARDENEDPHP_PATCH="hardened-php-$PV-0.2.7.patch.gz" ;;
-	4.3.11) HARDENEDPHP_PATCH="hardened-php-$PV-0.3.2.patch.gz" ;;
-	4.4.0RC2) HARDENEDPHP_PATCH="hardened-php-$PV-0.3.2.patch.gz" ;;
+	4.3.11) HARDENEDPHP_PATCH="hardening-patch-$PV-0.3.2.patch.gz" ;;
+	4.4.0RC2) HARDENEDPHP_PATCH="hardening-patch-$PV-0.3.2.patch.gz" ;;
 esac
 
 [ -n "$HARDENEDPHP_PATCH" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/$HARDENEDPHP_PATCH )"
