@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.30 2005/07/06 20:41:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.31 2005/07/10 18:52:04 fafhrd Exp $
 
 inherit gnustep-funcs eutils flag-o-matic
 
@@ -8,7 +8,13 @@ DESCRIPTION="EClass designed to facilitate building GNUstep Apps, Frameworks, an
 
 ###########################################################################
 # IUSE variables across all GNUstep packages
-IUSE="debug doc profile"
+# ##### All GNUstep applications / libs get these
+# "debug"	- enable code for debugging; also nostrip
+# "profile"	- enable code for profiling; also nostrip
+# "verbose" - enable "normal / noisy" compiling from eclass
+# ##### Set the next USE flags ***per ebuild*** in IUSE, ***not here***
+# "doc" - set in ebuild that inherits to enable doc specific code in eclass
+IUSE="debug profile verbose"
 if use debug; then
 	RESTRICT="nostrip"
 fi

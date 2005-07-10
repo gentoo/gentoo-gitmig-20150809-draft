@@ -1,10 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.8 2005/07/06 20:41:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.9 2005/07/10 18:52:04 fafhrd Exp $
 
 inherit toolchain-funcs eutils
 
-IUSE="debug profile verbose"
+###########################################################################
+# IUSE="debug profile verbose"
+# - These USE variables are utilized here, but set in gnustep.eclass IUSE.
+# - Packages that inherit this gnustep-funcs.eclass file to gain information
+#    and access as to how GNUstep is deployed on the system can safely do so.
+# - Packages built on the GNUstep libraries should inherit gnustep.eclass
+#    directly (it inherits from this eclass as well)
+###########################################################################
 
 DESCRIPTION="EClass that centralizes access to GNUstep environment information."
 
