@@ -1,7 +1,17 @@
-MD5 08d31d5e747aa3e2c23a567ceedc1006 regina-rexx-3.3.ebuild 1151
-MD5 9008f790dff65eb6ef2a1c1684fa8368 metadata.xml 448
-MD5 a8ae4ed81bdc01f84b79d9c0dee841b0 ChangeLog 1815
-MD5 8ff40b6ac84aa7aaf55d7c03a1c9b535 regina-rexx-3.0.1.ebuild 1122
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b6ce70c6ac66c1be3e905d1aa2a1284e ChangeLog 2075
+MD5 1e53d13fa625b7085dfbc3ef9b5ba7ee files/digest-regina-rexx-3.0.1 58
 MD5 eeb7676fd15d5fc464e4f48c291e2794 files/digest-regina-rexx-3.3 67
 MD5 1cb49b9917c92cca9f39fa7c980d7b1b files/rxstack 254
-MD5 1e53d13fa625b7085dfbc3ef9b5ba7ee files/digest-regina-rexx-3.0.1 58
+MD5 9008f790dff65eb6ef2a1c1684fa8368 metadata.xml 448
+MD5 361dfa6c49735b7869d55636cdb7a709 regina-rexx-3.0.1.ebuild 1114
+MD5 4eef33414d339d12c1faf0a58fafc38a regina-rexx-3.3.ebuild 1140
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0Y5iI1lqEGTUzyQRAv/5AJ9j7YU/alCGhJjfBpj+bEWNyy3G3gCg3F72
+vmpaEPG2T9cfY/ldu2JGcco=
+=i6JP
+-----END PGP SIGNATURE-----
