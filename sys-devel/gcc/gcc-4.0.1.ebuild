@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1.ebuild,v 1.1 2005/07/08 19:07:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1.ebuild,v 1.2 2005/07/10 01:36:57 vapier Exp $
 
 PATCH_VER="1.0"
 PATCH_GCC_VER=4.0.1_pre20050616
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/binutils-2.15.97"
 
 PDEPEND="sys-devel/gcc-config
-	!nocxx? ( !n32? ( !n64? ( !elibc_uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
+	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* ) ) ) ) )"
 
 pkg_postinst() {
 	toolchain_pkg_postinst
