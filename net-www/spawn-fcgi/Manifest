@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3917aa19ea4f7344fde5f4bc5c08a51c ChangeLog 1179
-MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
-MD5 5648d8111d14f500b2d8363b2b0168b1 spawn-fcgi-1.1.0.ebuild 965
-MD5 9bd031dfcb5c7ebfb476f2947ad60ab6 spawn-fcgi-1.2.0.ebuild 965
 MD5 177bc4801d074bf86a89089bf4447fc0 files/digest-spawn-fcgi-1.1.0 67
 MD5 b0bdc732195e524c776e4ace877d7a06 files/digest-spawn-fcgi-1.2.0 67
 MD5 297d2df57766c1f90de329d23f81e03e files/spawn-fcgi-1.1.0.conf 1080
 MD5 b771211dd5ddda119c692db878b9b7cc files/spawn-fcgi-1.1.0.initd 1237
+MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
+MD5 3f69f41dde1d03f58b0a61cdc6c0d5be spawn-fcgi-1.1.0.ebuild 868
+MD5 4b391f1118cc5d7d198c77e62bbcdf95 spawn-fcgi-1.2.0.ebuild 873
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0HI7I1lqEGTUzyQRAtqEAKC88dFs/P5XJoUnNLMtw6N5PDgiSgCePEeo
+hjKOEphp2OzJxEO0OnbjdQM=
+=61Dk
+-----END PGP SIGNATURE-----

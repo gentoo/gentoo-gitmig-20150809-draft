@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/spawn-fcgi/spawn-fcgi-1.1.0.ebuild,v 1.3 2004/07/01 22:50:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/spawn-fcgi/spawn-fcgi-1.1.0.ebuild,v 1.4 2005/07/10 00:56:13 swegener Exp $
 
 inherit eutils
 
@@ -18,12 +18,6 @@ DEPEND="virtual/libc
 RDEPEND=">=sys-libs/zlib-1.1
 		 >=sys-devel/libtool-1.4
 		 >=dev-php/php-cgi-4.3.0"
-S=${WORKDIR}/${P}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
 
 src_install() {
 	make DESTDIR=${D} install || die
