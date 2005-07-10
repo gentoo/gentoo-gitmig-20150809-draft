@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.12 2005/06/04 16:02:23 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.13 2005/07/10 17:03:10 axxo Exp $
+
+  10 Jul 2005; Thomas Matthijs <axxo@gentoo.org> hsqldb-1.7.3.1-r1.ebuild:
+  dep fix, cleanup
 
 *hsqldb-1.7.3.1-r1 (04 Jun 2005)
 
