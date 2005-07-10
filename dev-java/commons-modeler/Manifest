@@ -1,5 +1,15 @@
-MD5 e5332ff6a42c5d2843c9ff04eaf6cbc8 ChangeLog 1395
-MD5 fa392495eebc1a3229b87e24e962eec6 commons-modeler-1.1.ebuild 1820
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aa2fc68fcc38948acacfb1b5b6a59d4a ChangeLog 1511
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 482e21e1c8d55be8041439d1c8bec0d3 commons-modeler-1.1.ebuild 1750
 MD5 87f8f04cdcf795715523851d24cf5c7b files/digest-commons-modeler-1.1 66
 MD5 6cd2a42a25b29cb85c58037271a97037 files/gentoo.diff 510
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0SWQ/rLF9B432nYRAs+JAJoDHZckM+/19afm3NUQS8N/k8HdOACeN3Q9
+lV9duqwHk/FFUsVtOLDlNkQ=
+=I4Im
+-----END PGP SIGNATURE-----
