@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/syntax-0.7.0.ebuild,v 1.1 2005/03/30 17:59:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/syntax-0.7.0.ebuild,v 1.2 2005/07/10 01:12:17 swegener Exp $
 
 inherit ruby gems
 
@@ -15,5 +15,3 @@ IUSE=""
 
 USE_RUBY="any"
 DEPEND="virtual/ruby"
-
-S=${WORKDIR}/${P}
