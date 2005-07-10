@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimsf/iiimsf-11.4_p1467.ebuild,v 1.2 2005/01/01 14:29:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimsf/iiimsf-11.4_p1467.ebuild,v 1.3 2005/07/10 20:35:51 swegener Exp $
 
 inherit iiimf eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="server program to provide Input Method facilities via IIIMP"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="dev-libs/libiiimp"
+RDEPEND="dev-libs/libiiimp"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
