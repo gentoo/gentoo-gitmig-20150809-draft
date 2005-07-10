@@ -1,0 +1,382 @@
+This patch adds an option for contacts status messages logging.
+
+Original author of patch:
+Tomasz 'bla' Fortuna
+
+Per-contact statuses loging:
+Przemysław 'Troll' Maciąg <pmaciag (at) gmail (dot) com>
+
+Current version lets you:
+* set global properties of logging statuses (non-empty and all)
+* set per-contact properties of logging statuses (non-empty and all)
+
+Patch requires custom-sound-popup.diff available from
+http://home.unclassified.de/files/psi/patches/
+
+diff -Naur psi-0.9.3-orig/src/common.h psi-0.9.3/src/common.h
+--- psi-0.9.3-orig/src/common.h	2005-05-19 11:55:21.000000000 +0000
++++ psi-0.9.3/src/common.h	2005-05-19 11:55:23.000000000 +0000
+@@ -100,6 +100,7 @@
+ 	QMap<QString, int> contactSoundMsg;
+ 	QMap<QString, int> contactPopupAvail;
+ 	QMap<QString, int> contactVisible;
++	QMap<QString, int> contactLogStatus;
+ 
+ 	// Avatars
+ 	bool avatarsEnabled, avatarsChatdlgEnabled;
+@@ -163,6 +164,10 @@
+ 	bool clIconsAtTop;
+ 	bool clTransportStatus;
+ 
++	// Status logging
++	bool clLogStatus;
++	bool clLogEmptyStatus;
++
+ 	// passive popups
+ 	bool ppIsOn;
+ 	bool ppMessage, ppHeadline, ppChat, ppOnline, ppStatus, ppOffline, ppFile;
+diff -Naur psi-0.9.3-orig/src/contactview.cpp psi-0.9.3/src/contactview.cpp
+--- psi-0.9.3-orig/src/contactview.cpp	2005-05-19 11:55:22.000000000 +0000
++++ psi-0.9.3/src/contactview.cpp	2005-05-19 11:55:23.000000000 +0000
+@@ -1367,6 +1367,34 @@
+ 			if (n > -1) vism->setItemChecked(vism->idAt(n), true);
+ 			mm->insertItem(tr("&Visibility on roster"), vism);
+ 		}
++
++		// Log contact statuses
++		{
++			QPopupMenu *slog = new QPopupMenu(mm);
++			slog->setCheckable(true);
++			d->cv->qa_contactLogStatusAll->addTo(slog);
++			d->cv->qa_contactLogStatusOn->addTo(slog);
++			d->cv->qa_contactLogStatusOff->addTo(slog);
++			d->cv->qa_contactLogStatusDefault->addTo(slog);
++			int n = -1;
++			if (option.contactLogStatus.contains(i->u()->jid().bare()))
++			{
++				switch (option.contactLogStatus[i->u()->jid().bare()])
++				{
++					case 2: n = 0; break;
++					case 1: n = 1; break;
++					case 0: n = 2; break;
++					case -1:
++					default: n = 3; break;
++				}
++			}
++			else
++			{
++				n = 3;
++			}
++			slog->setItemChecked(slog->idAt(n), true);
++			mm->insertItem(tr("&Log statuses"), slog);
++		}
+ 		
+ 		// Avatars
+ 		QPopupMenu *avpm = new QPopupMenu(mm);
+@@ -1988,6 +2016,15 @@
+ 	qa_contactPopupAvailDefault = new IconAction("", tr("Default"), QKeySequence(), this);
+ 	connect(qa_contactPopupAvailDefault, SIGNAL(activated()), SLOT(doContactPopupAvailDefault()));
+ 
++	qa_contactLogStatusAll = new IconAction("", tr("All"), QKeySequence(), this);
++	connect(qa_contactLogStatusAll, SIGNAL(activated()), SLOT(doContactLogStatusAll()));
++	qa_contactLogStatusOn = new IconAction("", tr("Non-empty"), QKeySequence(), this);
++	connect(qa_contactLogStatusOn, SIGNAL(activated()), SLOT(doContactLogStatusOn()));
++	qa_contactLogStatusOff = new IconAction("", tr("Off"), QKeySequence(), this);
++	connect(qa_contactLogStatusOff, SIGNAL(activated()), SLOT(doContactLogStatusOff()));
++	qa_contactLogStatusDefault = new IconAction("", tr("Default"), QKeySequence(), this);
++	connect(qa_contactLogStatusDefault, SIGNAL(activated()), SLOT(doContactLogStatusDefault()));
++
+ 	qa_contactVisibleOn = new IconAction("", tr("On"), QKeySequence(), this);
+ 	connect(qa_contactVisibleOn, SIGNAL(activated()), SLOT(doContactVisibleOn()));
+ 	qa_contactVisibleOff = new IconAction("", tr("Off"), QKeySequence(), this);
+@@ -2358,6 +2395,33 @@
+ 	option.contactPopupAvail[i->u()->jid().bare()] = -1;
+ }
+ 
++// Log status messages
++void ContactView::doContactLogStatusAll()
++{
++	ContactViewItem *i = (ContactViewItem *)selectedItem();
++	option.contactLogStatus[i->u()->jid().bare()] = 2;
++	//QMessageBox::information(0, "Sound on for JID", i->u()->jid().bare());
++}
++
++void ContactView::doContactLogStatusOn()
++{
++	ContactViewItem *i = (ContactViewItem *)selectedItem();
++	option.contactLogStatus[i->u()->jid().bare()] = 1;
++	//QMessageBox::information(0, "Sound on for JID", i->u()->jid().bare());
++}
++
++void ContactView::doContactLogStatusOff()
++{
++	ContactViewItem *i = (ContactViewItem *)selectedItem();
++	option.contactLogStatus[i->u()->jid().bare()] = 0;
++}
++
++void ContactView::doContactLogStatusDefault()
++{
++	ContactViewItem *i = (ContactViewItem *)selectedItem();
++	option.contactLogStatus[i->u()->jid().bare()] = -1;
++}
++
+ // Visibility on roster
+ void ContactView::doContactVisibleOn()
+ {
+diff -Naur psi-0.9.3-orig/src/contactview.h psi-0.9.3/src/contactview.h
+--- psi-0.9.3-orig/src/contactview.h	2005-05-19 11:55:21.000000000 +0000
++++ psi-0.9.3/src/contactview.h	2005-05-19 11:55:23.000000000 +0000
+@@ -201,6 +201,7 @@
+ 	// More properties
+ 	IconAction *qa_contactSoundMsgOn, *qa_contactSoundMsgOff, *qa_contactSoundMsgDefault;
+ 	IconAction *qa_contactPopupAvailOn, *qa_contactPopupAvailOff, *qa_contactPopupAvailDefault;
++	IconAction *qa_contactLogStatusAll, *qa_contactLogStatusOn, *qa_contactLogStatusOff, *qa_contactLogStatusDefault;
+ 	IconAction *qa_contactVisibleOn, *qa_contactVisibleOff, *qa_contactVisibleDefault;
+ 	// Avatars
+ 	IconAction *qa_assignAvatar, *qa_clearAvatar;
+@@ -254,6 +255,10 @@
+ 	void doContactPopupAvailOn();
+ 	void doContactPopupAvailOff();
+ 	void doContactPopupAvailDefault();
++	void doContactLogStatusAll();
++	void doContactLogStatusOn();
++	void doContactLogStatusOff();
++	void doContactLogStatusDefault();
+ 	void doContactVisibleOn();
+ 	void doContactVisibleOff();
+ 	void doContactVisibleDefault();
+diff -Naur psi-0.9.3-orig/src/options/opt_status.cpp psi-0.9.3/src/options/opt_status.cpp
+--- psi-0.9.3-orig/src/options/opt_status.cpp	2005-05-19 11:55:18.000000000 +0000
++++ psi-0.9.3/src/options/opt_status.cpp	2005-05-19 11:55:23.000000000 +0000
+@@ -81,6 +81,12 @@
+ 		" an extended message when you set your status to \"online\"."
+ 		"  Check this option if you want to have this prompt."));
+ 
++	QWhatsThis::add(d->ck_LogStatus,
++		tr("Press this button to log contacts status messages (non-empty)."));
++	QWhatsThis::add(d->ck_LogEmptyStatus,
++		tr("Press this button to log contacts every status messages."));
++	connect(d->ck_LogStatus, SIGNAL(clicked()), SLOT(giveEmptyStatuses()));
++
+ 	return w;
+ }
+ 
+@@ -100,6 +106,8 @@
+ 	opt->use_asWhileDnd = d->ck_asWhileDnd->isChecked();
+ 	opt->use_asMessage = d->ck_asMessage->isChecked();
+ 	opt->asMessage = d->te_asMessage->text();
++	opt->clLogStatus = d->ck_LogStatus->isChecked();
++	opt->clLogEmptyStatus = d->ck_LogEmptyStatus->isChecked();
+ 
+ 	opt->sp = o->sp;
+ 
+@@ -133,6 +141,9 @@
+ 	d->ck_asMessage->setChecked( opt->use_asMessage );
+ 	d->te_asMessage->setEnabled( opt->use_asMessage );
+ 	d->te_asMessage->setText( opt->asMessage );
++	d->ck_LogStatus->setChecked( opt->clLogStatus );
++	d->ck_LogEmptyStatus->setEnabled( opt->clLogStatus );
++	d->ck_LogEmptyStatus->setChecked( opt->clLogEmptyStatus );
+ 
+ 	o->sp = opt->sp;
+ 	d->lb_sp->clear();
+@@ -240,3 +251,11 @@
+ 	o->sp.set(d->lb_sp->text(id), d->te_sp->text());
+ 	emit dataChanged();
+ }
++
++void OptionsTabStatus::giveEmptyStatuses()
++{
++	OptStatusUI *d = (OptStatusUI *)w;
++
++	d->ck_LogEmptyStatus->setEnabled( d->ck_LogStatus->isChecked() );
++}
++
+diff -Naur psi-0.9.3-orig/src/options/opt_status.h psi-0.9.3/src/options/opt_status.h
+--- psi-0.9.3-orig/src/options/opt_status.h	2003-12-01 10:57:55.000000000 +0000
++++ psi-0.9.3/src/options/opt_status.h	2005-05-19 11:55:23.000000000 +0000
+@@ -25,6 +25,7 @@
+ 	void newStatusPreset();
+ 	void removeStatusPreset();
+ 	void changeStatusPreset();
++	void giveEmptyStatuses();
+ 
+ private:
+ 	QWidget *w, *parentWidget;
+diff -Naur psi-0.9.3-orig/src/options/opt_status-ui.ui psi-0.9.3/src/options/opt_status-ui.ui
+--- psi-0.9.3-orig/src/options/opt_status-ui.ui	2005-05-19 11:55:18.000000000 +0000
++++ psi-0.9.3/src/options/opt_status-ui.ui	2005-05-19 11:55:23.000000000 +0000
+@@ -125,6 +125,22 @@
+                         <string>Auto Offline After:</string>
+                     </property>
+                 </widget>
++		<widget class="QCheckBox" row="3" column="0">
++			<property name="name">
++				<cstring>ck_LogStatus</cstring>
++			</property>
++			<property name="text">
++				<string>Log status changes</string>
++			</property>
++		</widget>
++		<widget class="QCheckBox" row="4" column="0">
++			<property name="name">
++				<cstring>ck_LogEmptyStatus</cstring>
++			</property>
++			<property name="text">
++				<string>Additionaly log empty status changes</string>
++			</property>
++		</widget>
+                 <widget class="QCheckBox" row="1" column="0">
+                     <property name="name">
+                         <cstring>ck_asXa</cstring>
+diff -Naur psi-0.9.3-orig/src/psiaccount.cpp psi-0.9.3/src/psiaccount.cpp
+--- psi-0.9.3-orig/src/psiaccount.cpp	2005-05-19 11:55:22.000000000 +0000
++++ psi-0.9.3/src/psiaccount.cpp	2005-05-19 11:55:23.000000000 +0000
+@@ -2177,6 +2177,39 @@
+ 	return u;
+ }
+ 
++void PsiAccount::logStatusEvent(const UserListItem &u, bool force)
++{
++	/* Retrieve status from dark structures. */
++	UserResourceList::ConstIterator rit = u.userResourceList().priority();
++	QString StatusString = (*rit).status().status();
++	int status = makeSTATUS((*rit).status());
++
++	/* Create line */
++	if (!force && (StatusString == "") && !option.clLogEmptyStatus)
++		return;
++
++	QString Content = status2txt(status);
++	if (StatusString != "")
++		Content += " [" + StatusString + "]";
++
++	/* Create Message */
++	Message m;
++	m.setTimeStamp(QDateTime::currentDateTime());
++	m.setType(""); /* or error or headline */
++	m.setFrom(u.jid());
++	m.setBody(Content);
++
++	/* Create event from message */
++	MessageEvent *Event = new MessageEvent(m, 0);
++	Event->setFrom(u.jid());
++
++	/* Add event to history */
++	EDBFlatFile::File h(u.jid());
++	QDateTime Time = QDateTime::currentDateTime();
++	Event->setTimeStamp(Time);
++	logEvent(u.jid(), Event);
++}
++
+ void PsiAccount::cpUpdate(const UserListItem &u, const QString &rname, bool fromPresence)
+ {
+ 	PsiEvent *e = d->eventQueue->peek(u.jid());
+@@ -2196,6 +2229,18 @@
+ 	updateContact(j);
+ 	updateContact(j, fromPresence);
+ 	d->psi->updateContactGlobal(this, j);
++
++	// more properties - status messages logging
++	if (option.contactLogStatus.contains(j.bare()) &&
++			option.contactLogStatus[j.bare()] == 0)
++		return;
++	else if (option.contactLogStatus.contains(j.bare()) &&
++			option.contactLogStatus[j.bare()] == 2)
++		logStatusEvent(u, true);
++	else if ((fromPresence && option.clLogStatus) ||
++			(option.contactLogStatus.contains(j.bare()) &&
++			option.contactLogStatus[j.bare()] == 1))
++		logStatusEvent(u, false);
+ }
+ 
+ QLabel *PsiAccount::accountLabel(QWidget *par, bool simpleMode)
+diff -Naur psi-0.9.3-orig/src/psiaccount.h psi-0.9.3/src/psiaccount.h
+--- psi-0.9.3-orig/src/psiaccount.h	2005-05-19 11:55:21.000000000 +0000
++++ psi-0.9.3/src/psiaccount.h	2005-05-19 11:55:23.000000000 +0000
+@@ -354,6 +354,7 @@
+ 	void simulateContactOffline(UserListItem *);
+ 	void simulateRosterOffline();
+ 	void cpUpdate(const UserListItem &, const QString &rname="", bool fromPresence=false);
++	void logStatusEvent(const UserListItem &u, bool force = false);
+ 	void logEvent(const Jid &, PsiEvent *);
+ 	void queueEvent(PsiEvent *);
+ 	void openNextEvent(const UserListItem &);
+diff -Naur psi-0.9.3-orig/src/psi_profiles.cpp psi-0.9.3/src/psi_profiles.cpp
+--- psi-0.9.3-orig/src/psi_profiles.cpp	2005-05-19 11:55:21.000000000 +0000
++++ psi-0.9.3/src/psi_profiles.cpp	2005-05-19 11:55:23.000000000 +0000
+@@ -471,6 +471,9 @@
+ 	prefs.clStIndicator = TRUE;
+ 	prefs.clIconsAtTop = TRUE;
+ 
++	prefs.clLogStatus = false;
++	prefs.clLogEmptyStatus = false;
++
+ 	// calculate the small font size
+ 	const int minimumFontSize = 7;
+ 	prefs.smallFontSize = qApp->font().pointSize();
+@@ -934,6 +937,25 @@
+ 			}
+ 		}
+ 
++		// More contact properties: custom status messages logging
++		{
++			QDomElement p_csound = doc.createElement("contactLogStatus");
++			p_events.appendChild(p_csound);
++
++			QString jid;
++			QMapIterator<QString, int> it = prefs.contactLogStatus.begin();
++			for ( ; it != prefs.contactLogStatus.end(); ++it) {
++				if (it.data() != -1)   // don't save "default" setting
++				{
++					QDomElement contact = doc.createElement("contact");
++					p_csound.appendChild(contact);
++
++					contact.setAttribute("jid", it.key());
++					contact.setAttribute("logstatus", it.data());
++				}
++			}
++		}
++
+ 		// More contact properties: custom visibility on roster
+ 		{
+ 			QDomElement p_cvis = doc.createElement("contactVisible");
+@@ -991,6 +1013,9 @@
+ 			e = textTag(doc, "message", prefs.asMessage);
+ 			setBoolAttribute(e, "use", prefs.use_asMessage);
+ 			tag.appendChild(e);
++
++			tag.appendChild(textTag(doc, "LogStatus", prefs.clLogStatus));
++			tag.appendChild(textTag(doc, "LogEmptyStatus", prefs.clLogEmptyStatus));
+ 		}
+ 		{
+ 			p_pres.appendChild(prefs.sp.toXml(doc, "statuspresets"));
+@@ -1590,6 +1615,19 @@
+ 				}
+ 			}
+ 
++			// More contact properties: custom status messages logging
++			QDomElement logstatus = findSubTag(p_events, "contactLogStatus", &found);
++			if (found) {
++				prefs.contactLogStatus.clear();
++				for (QDomNode n = logstatus.firstChild(); !n.isNull(); n = n.nextSibling()) {
++					QDomElement el = n.toElement();
++					if ( el.isNull() || el.nodeName() != "contact")
++						continue;
++
++					prefs.contactLogStatus[el.attribute("jid")] = el.attribute("logstatus").toInt();
++				}
++			}
++
+ 			// More contact properties: custom visibility on roster
+ 			QDomElement cvis = findSubTag(p_events, "contactVisible", &found);
+ 			if (found) {
+@@ -1622,6 +1660,8 @@
+ 			if(found) {
+ 				bool found;
+ 				QDomElement e;
++				readBoolEntry(tag, "LogStatus", &prefs.clLogStatus);
++				readBoolEntry(tag, "LogEmptyStatus", &prefs.clLogEmptyStatus);
+ 				e = findSubTag(tag, "away", &found);
+ 				if(found) {
+ 					if(e.hasAttribute("use"))

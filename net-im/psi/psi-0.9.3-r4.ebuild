@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r4.ebuild,v 1.8 2005/07/08 12:39:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r4.ebuild,v 1.9 2005/07/10 00:45:52 humpback Exp $
 
 inherit eutils
 
@@ -160,7 +160,7 @@ src_unpack() {
 			epatch ${PATCHDIR}/hide-no-resource-from-contextmenu.diff
 
 			# from bugs.gentoo.org
-			epatch ${PATCHDIR}/psi-add-status-history.patch
+			epatch ${FILESDIR}/psi-add-status-history.patch
 
 			# from http://www.uni-bonn.de/~nieuwenh/
 			epatch ${PATCHDIR}/libTeXFormula.diff
