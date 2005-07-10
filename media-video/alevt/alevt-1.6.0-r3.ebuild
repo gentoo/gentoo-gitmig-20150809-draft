@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.0-r3.ebuild,v 1.11 2005/02/17 20:17:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.0-r3.ebuild,v 1.12 2005/07/10 19:53:26 swegener Exp $
 
 inherit eutils
 
@@ -8,7 +8,6 @@ DESCRIPTION="Teletext viewer for X11"
 HOMEPAGE="http://www.goron.de/~froese/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/apps/video/${P}.tar.gz"
 
-LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64"
 IUSE="gnome"
