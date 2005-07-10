@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r5.ebuild,v 1.13 2004/11/04 03:24:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r11.ebuild,v 1.1 2005/07/10 10:02:13 uberlord Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -38,6 +38,10 @@ src_unpack() {
 	#to have physical iface scripts (gmsoft, 11 Nov 2003)
 	epatch ${FILESDIR}/${P}-no-iface-down.diff
 	#remove hard-coded arch stuff (drobbins, 06 Sep 2003)
+
+	# Stop a possible DoS issue - fixes #98394
+	epatch "${FILESDIR}"/${P}-security.patch
+
 	sed -i "s/ -march=i.86//g" configure
 	sed -i 's:/etc/ntp\.drift:/var/lib/ntp/ntp.drift:' dhcpconfig.c
 }

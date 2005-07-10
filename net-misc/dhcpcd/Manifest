@@ -1,25 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e047633de90aa61af62c58f294be932 dhcpcd-1.3.22_p4-r7.ebuild 1882
-MD5 72ed97191f3c741e2050bb69fc2edc55 dhcpcd-1.3.22_p4-r5.ebuild 1942
+MD5 357f1a4753ffe320e39130fc93fac6a6 ChangeLog 8167
 MD5 6fe58567b648100d4ff11902921b6889 metadata.xml 165
-MD5 05d70c7a7a21bba5329fe95ee68563b1 dhcpcd-1.3.22_p4-r9.ebuild 2268
-MD5 dc297d271e31f9a14fbb470c8d525164 dhcpcd-1.3.22_p4-r10.ebuild 2757
-MD5 65bc509f0747725d7e0b55426f991c09 ChangeLog 7696
-MD5 f62309143521db696e2229fd34a43fed files/dhcpcd-1.3.22_p4-man.patch 243
-MD5 34b2bd2c58141701c8ba5279c6669e0c files/dhcpcd-1.3.22_p4-optionFQDN.patch 17381
-MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r7 224
-MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r5 224
+MD5 5e3e719d18a21fda83acfdfe451bbee2 dhcpcd-1.3.22_p4-r11.ebuild 2032
+MD5 1e416fa7f47ae134ef45e0c4eee4b425 dhcpcd-1.3.22_p4-r12.ebuild 2846
 MD5 ad580fb02fc1fa72a24fb3c952491bce files/dhcpcd-1.3.22_p4-routemetric.patch 4652
-MD5 e5580d4472c718a772f6e1c700757968 files/dhcpcd-1.3.22_p4-no-iface-down.diff 2606
-MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r10 224
+MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r12 224
+MD5 e0bb9c921a368634a1e4f77c975c4726 files/dhcpcd-1.3.22_p4-security.patch 340
 MD5 be85439617940623ae04f72797bbf3e4 files/dhcpcd-1.3.22_p4-gentoo-config.patch 11908
-MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r9 224
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxHYCgIKl8Uu19MoRAr7/AJwMyly6DjgMFTeAJOxxz7WpFh68cgCfU2U0
-TUj7dPvCLP+Kt32iXoU52RE=
-=KO3L
------END PGP SIGNATURE-----
+MD5 34b2bd2c58141701c8ba5279c6669e0c files/dhcpcd-1.3.22_p4-optionFQDN.patch 17381
+MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r11 224
+MD5 e5580d4472c718a772f6e1c700757968 files/dhcpcd-1.3.22_p4-no-iface-down.diff 2606
+MD5 f62309143521db696e2229fd34a43fed files/dhcpcd-1.3.22_p4-man.patch 243

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r10.ebuild,v 1.2 2005/06/30 22:45:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r12.ebuild,v 1.1 2005/07/10 10:02:13 uberlord Exp $
 
 inherit flag-o-matic eutils
 
@@ -53,6 +53,9 @@ src_unpack() {
 	# Also enables the -e option to specify the /etc dir where dhcpcd
 	# creates {resolv,ntp,yp}.conf
 	epatch "${FILESDIR}"/${P}-gentoo-config.patch
+
+	# Stop a possible DoS issue - fixes #98394
+	epatch "${FILESDIR}"/${P}-security.patch
 
 	# Make sure we use paths from configure rather than hardcoded crap
 	sed -i \
