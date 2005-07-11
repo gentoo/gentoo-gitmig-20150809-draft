@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2270a3bcb3949ba483cc8682c1a2e5c9 txt2regex-0.8-r1.ebuild 915
-MD5 67bdc98ddd22f69716b9f6de733e0ed9 txt2regex-0.8.ebuild 681
-MD5 0db9614676407f11b5e35031caf4cc7a ChangeLog 1721
+MD5 ba07fa857bb1c7c884b83b25acb33171 txt2regex-0.8-r1.ebuild 915
 MD5 ef0e29771a3844176418bb404a586ab8 metadata.xml 342
-MD5 0f685a5f25b9ba83b6846810257763cd files/digest-txt2regex-0.8-r1 61
+MD5 67bdc98ddd22f69716b9f6de733e0ed9 txt2regex-0.8.ebuild 681
+MD5 3c15b9d91b5f10c030249434f408d34a ChangeLog 1822
 MD5 c9bba856a23efb9636dd2f7c4d0e3008 files/txt2regex-0.8-disable-nls.patch 764
+MD5 0f685a5f25b9ba83b6846810257763cd files/digest-txt2regex-0.8-r1 61
 MD5 0f685a5f25b9ba83b6846810257763cd files/digest-txt2regex-0.8 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC0VnmEZCkKN40op4RAnbhAKCmZjz6KMJGjPUvl93MUcN9J3QLuQCgnwc3
-gH6RBvWbWmmoDsZW127Yy1Q=
-=0t/x
+iD8DBQFC0oorKRy60XGEcJIRAmxLAKCOUBO4BdUWEcDQio8/PGkL2fmW/gCgqyZy
+KmjiiiW3RKqug+U8J/EexhM=
+=YRbJ
 -----END PGP SIGNATURE-----
