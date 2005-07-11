@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.3.1.ebuild,v 1.10 2005/07/02 00:25:18 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.3.1.ebuild,v 1.11 2005/07/11 18:49:19 greg_g Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="A library for reading and editing audio meta data"
-HOMEPAGE="http://developer.kde.org/~wheeler/index.html"
+HOMEPAGE="http://developer.kde.org/~wheeler/taglib.html"
 SRC_URI="http://developer.kde.org/~wheeler/files/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
