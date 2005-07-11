@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.61 2005/07/11 10:30:47 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.62 2005/07/11 11:36:31 blubb Exp $
+
+  11 Jul 2005; Simon Stelling <blubb@gentoo.org> courier-0.48.1-r1.ebuild:
+  stable on amd64 wrt bug 97915
 
   11 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
   courier-0.48.1-r1.ebuild:
