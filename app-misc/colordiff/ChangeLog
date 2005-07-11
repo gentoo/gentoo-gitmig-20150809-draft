@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.36 2005/07/11 14:52:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.37 2005/07/11 16:19:42 agriffis Exp $
+
+*colordiff-1.0.5-r2 (11 Jul 2005)
+
+  11 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  -colordiff-1.0.5-r1.ebuild, +colordiff-1.0.5-r2.ebuild:
+  Version 1.0.5 removes the --no-banner option, so make the default in
+  /etc/colordiffrc be banner=no
 
   11 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   colordiff-1.0.5.ebuild:

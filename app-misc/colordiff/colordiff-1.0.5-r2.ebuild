@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.5-r1.ebuild,v 1.1 2005/07/11 03:35:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.5-r2.ebuild,v 1.1 2005/07/11 16:19:42 agriffis Exp $
 
 DESCRIPTION="Colorizes output of diff"
 HOMEPAGE="http://colordiff.sourceforge.net/"
@@ -14,10 +14,16 @@ IUSE=""
 DEPEND="sys-apps/diffutils"
 
 src_compile() {
-	# By default colordiff-1.0.5 lowercases config values, so we need to
+	# Version 1.0.5 removed the --no-banner option.  Few other programs show
+	# such information without requesting it, so make it default to off
+	sed -i -e 's/^banner=.*/banner=no/' colordiffrc*
+
+	# Make "plain" be the default foreground color instead of forcing black or
+	# white.
+	# NB: By default colordiff-1.0.5 lowercases config values, so we need to
 	# lowercase OFF in the executable as well
-	sed -i -e 's/\<OFF\>/off/g' colordiff.pl
 	sed -i -e 's/^plain=.*/plain=off/' colordiffrc*
+	sed -i -e 's/\<OFF\>/off/g' colordiff.pl
 }
 
 src_install() {
