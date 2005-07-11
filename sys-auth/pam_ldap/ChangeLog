@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.7 2005/07/08 20:05:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.8 2005/07/11 12:00:41 blubb Exp $
+
+  11 Jul 2005; Simon Stelling <blubb@gentoo.org> pam_ldap-178-r1.ebuild:
+  stable on amd64 wrt bug 96767
 
   08 Jul 2005; Robin H. Johnson <robbat2@gentoo.org> pam_ldap-178-r1.ebuild:
   Re-add ~amd64 as it seems to have got lost.
