@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20050706.ebuild,v 1.1 2005/07/11 20:40:00 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20050706.ebuild,v 1.2 2005/07/11 22:10:57 swegener Exp $
 
 DESCRIPTION="Text based Instant Messenger client that supports many protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://www.ekg2.org/"
@@ -21,10 +21,6 @@ DEPEND=">=dev-libs/expat-1.95.6
 	!nogg? ( >=net-libs/libgadu-20040820 )
 	gsm? ( >=media-sound/gsm-1.0.10 )
 	python? ( >=dev-lang/python-2.3.3 )"
-
-#RDEPEND=""
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 
