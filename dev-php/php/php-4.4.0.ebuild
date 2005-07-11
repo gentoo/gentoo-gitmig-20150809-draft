@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.4.0_rc2.ebuild,v 1.1 2005/07/01 10:51:24 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.4.0.ebuild,v 1.1 2005/07/11 14:49:06 sebastian Exp $
 
 PHPSAPI="cli"
-SRC_URI_BASE="http://qa.php.net/~derick"
 inherit php-sapi eutils
 
 DESCRIPTION="PHP Shell Interpreter"
