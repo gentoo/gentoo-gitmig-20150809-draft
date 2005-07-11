@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4181 2005/07/11 17:09:31 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4182 2005/07/11 17:59:54 nakano Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -317,12 +317,6 @@ gnome-extra/gnome-network
 # the the tree
 <dev-lang/icc-7.1.006
 <dev-lang/ifc-7.0.064-r1
-
-# Masatomo Nakano <nakano@gentoo.org> (08 May 2005)
-# Masked for testing with new libpq package.
-=dev-db/postgresql-8.0.3
-=dev-db/postgresql-8.0.2*
->=dev-db/libpq-8.0.3
 
 # Marcelo Goes <vanquirius@gentoo.org> (08 May 2005)
 # Masked for testing
