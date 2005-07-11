@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/l7-protocols
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.10 2005/06/25 08:29:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.11 2005/07/11 13:58:58 blubb Exp $
+
+  11 Jul 2005; Simon Stelling <blubb@gentoo.org>
+  l7-protocols-2005.06.17.ebuild:
+  added ~amd64 keyword
 
 *l7-protocols-2005.06.17 (25 Jun 2005)
 
