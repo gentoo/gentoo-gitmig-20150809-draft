@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xffm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.52 2005/07/08 17:53:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.53 2005/07/11 17:40:29 killerfox Exp $
+
+  11 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> xffm-4.2.2.ebuild:
+  Stable on hppa.
 
   08 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> xffm-4.2.2.ebuild:
   Stable on sparc

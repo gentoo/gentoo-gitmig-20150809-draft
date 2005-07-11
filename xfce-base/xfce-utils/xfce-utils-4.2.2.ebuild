@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.2.2.ebuild,v 1.5 2005/07/09 01:28:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.2.2.ebuild,v 1.6 2005/07/11 17:37:28 killerfox Exp $
 
 DESCRIPTION="Xfce 4 utilities"
-KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~mips ppc ppc64 sparc x86"
 IUSE="gtkhtml"
 
 RDEPEND="~xfce-base/xfce-mcs-manager-${PV}
