@@ -36,7 +36,7 @@ fi
 if ! [ -f ~/.jext/variables ]
 then
 	echo "JEXT_HOME="/usr/share/jext/lib > ~/.jext/variables
-	echo "JAVA_CMD="`java-config --java` >>~/.jext/variables
+	echo "JAVA_CMD=java" >>~/.jext/variables
 fi
 
 
@@ -47,4 +47,4 @@ JAVA_OPT=`grep JAVA_OPT ~/.jext/variables | cut -f2 -d=`
 
 
 # Launch JEXT
-exec "$JAVA_CMD" $JAVA_OPTS -Dpython=`java-config --classpath=jython` -classpath "`java-config --classpath=jython`:`java-config --classpath=jext`" org.jext.Jext "$@"
+exec "$JAVA_CMD" $JAVA_OPTS -Dpython=`java-config --classpath=jython` -classpath "`java-config --classpath=jython,jext`" org.jext.Jext "$@"
