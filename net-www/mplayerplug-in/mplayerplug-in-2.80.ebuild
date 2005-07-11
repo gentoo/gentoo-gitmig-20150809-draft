@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.80.ebuild,v 1.8 2005/07/03 18:31:29 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.80.ebuild,v 1.9 2005/07/11 22:03:14 josejx Exp $
 
-inherit nsplugins toolchain-funcs
+inherit nsplugins toolchain-funcs multilib
 
 DESCRIPTION="mplayer plug-in for Mozilla"
 HOMEPAGE="http://mplayerplug-in.sourceforge.net/"
@@ -29,7 +29,7 @@ S=${WORKDIR}/${PN}
 
 src_compile() {
 	local myconf
-	myconf="${myconf} --with-gecko-sdk=/usr/share/gecko-sdk"
+	myconf="${myconf} --with-gecko-sdk=/usr/$(get_libdir)/gecko-sdk"
 	if use gtk2; then
 		einfo Configuring to build using gtk2
 		myconf="${myconf} --enable-gtk2"
