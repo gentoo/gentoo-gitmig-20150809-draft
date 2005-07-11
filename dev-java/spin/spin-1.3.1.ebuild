@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/spin-1.3.1.ebuild,v 1.8 2005/07/10 20:04:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/spin-1.3.1.ebuild,v 1.9 2005/07/11 22:02:41 axxo Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 amd64 sparc ppc"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant
+	dev-java/ant-core
 	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}
@@ -22,7 +22,7 @@ S=${WORKDIR}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's:${java.home}/src::' -i build.xml
+	sed -i 's:${java.home}/src::' -i build.xml || die "sed failed"
 }
 
 src_compile() {
