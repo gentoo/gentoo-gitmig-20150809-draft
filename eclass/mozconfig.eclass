@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.14 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.15 2005/07/11 21:09:50 agriffis Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -105,7 +105,14 @@ mozconfig_init() {
 
 	# Additional ARCH support
 	case "${ARCH}" in
-	alpha|amd64|ia64)
+	alpha)
+		# Historically we have needed to add -fPIC manually for 64-bit.
+		# Additionally, alpha should *always* build with -mieee for correct math
+		# operation
+		append-flags -fPIC -mieee
+		;;
+
+	amd64|ia64)
 		# Historically we have needed to add this manually for 64-bit
 		append-flags -fPIC
 		;;
