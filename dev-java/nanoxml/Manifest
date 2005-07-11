@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3afe6142c64eaa9966de7d9019258421 nanoxml-2.2.1.ebuild 883
 MD5 5edca74d99280d9e52cd8a082a4e6d30 nanoxml-2.2.3.ebuild 893
 MD5 07715304a805ff924a1fbffc10336ee6 ChangeLog 867
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 a152ec7295e1be0f8c663f2ad4beb1d8 files/digest-nanoxml-2.2.1 65
 MD5 167540df9ed5ffa35a0e47f6d5521e9b files/digest-nanoxml-2.2.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0uSI/rLF9B432nYRAt+cAJ0dOQevmkaH0ta5G2wAswx/8nEdKwCeMtn4
+yFUpkcS/dOnlkdSCdeHE6y4=
+=/bMt
+-----END PGP SIGNATURE-----
