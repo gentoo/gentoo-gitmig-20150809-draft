@@ -1,35 +1,25 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a828afa2895b5be594478a9ce9da60e metacity-2.8.0.ebuild 1111
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 8196ca95c398816e2e155c8fc97113ed metacity-2.8.8.ebuild 1208
-MD5 af3f90bd10de8d68551a7cbbf9551e6d metacity-2.10.0.ebuild 1211
-MD5 42d56daa4e0616932aa07b12a7d1673e metacity-2.6.3.ebuild 1008
 MD5 79ae7781a15dddb6df322b5165027a21 metacity-2.8.1.ebuild 883
-MD5 779da48ad69b11cb99d40916378e9dd9 metacity-2.8.6-r1.ebuild 1192
 MD5 c169591b1fb07ae2e9e51878966f006b metacity-2.10.1.ebuild 1234
+MD5 8196ca95c398816e2e155c8fc97113ed metacity-2.8.8.ebuild 1208
+MD5 779da48ad69b11cb99d40916378e9dd9 metacity-2.8.6-r1.ebuild 1192
 MD5 3103ab3487854ef9f9b24fe8038c5d62 metacity-2.8.5.ebuild 997
-MD5 35c5dcab1d20b6107b61d2c7216ef565 ChangeLog 11654
-MD5 844a6198509977d5f2c6252b9099c88a metacity-2.6.5.ebuild 1017
+MD5 3a828afa2895b5be594478a9ce9da60e metacity-2.8.0.ebuild 1111
+MD5 0be28849d58e73a03d82844c80a6ff51 metacity-2.10.0.ebuild 1211
+MD5 42d56daa4e0616932aa07b12a7d1673e metacity-2.6.3.ebuild 1008
 MD5 9d2facc742178b6073f32bf6b8a44048 metacity-2.8.13.ebuild 1211
+MD5 a97370d3d0520b1ffc9ee9b46a12c9f4 ChangeLog 11749
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 844a6198509977d5f2c6252b9099c88a metacity-2.6.5.ebuild 1017
 MD5 888edb091b2a7f1feebf5ad86907048f files/metacity-2.4.3-ppc-gcc3.2.diff 1062
-MD5 518f2435e25b7cd5e532fe83b3178e4c files/digest-metacity-2.8.1 68
-MD5 fb1356c09b646ce7eeb382dfcb705a2b files/digest-metacity-2.8.13 69
-MD5 401c8abc54cf89761ae05db69a25aa60 files/digest-metacity-2.6.5 68
-MD5 cb56b63e849c924d574bb926f1c139be files/digest-metacity-2.8.6-r1 68
-MD5 2562cf5fc7b8b4158301e47955a98c09 files/metacity-2.8.0-xinerama_config_test.patch 466
-MD5 ad3de36c7f3732f72fa88331f5266ba6 files/digest-metacity-2.8.0 68
-MD5 4ab803ac0ffb0f611f083e2df08fc5f1 files/digest-metacity-2.6.3 68
 MD5 98f6fd8a6545a37a2ddf9b0e11ce54f7 files/metacity-2-logout.patch 7363
-MD5 ed9dff958297725508b84313a48e803e files/digest-metacity-2.10.1 69
 MD5 138ac865c20f1f4f6ff2fde4fa487c00 files/digest-metacity-2.10.0 69
+MD5 ed9dff958297725508b84313a48e803e files/digest-metacity-2.10.1 69
+MD5 fb1356c09b646ce7eeb382dfcb705a2b files/digest-metacity-2.8.13 69
+MD5 cb56b63e849c924d574bb926f1c139be files/digest-metacity-2.8.6-r1 68
+MD5 4ab803ac0ffb0f611f083e2df08fc5f1 files/digest-metacity-2.6.3 68
+MD5 401c8abc54cf89761ae05db69a25aa60 files/digest-metacity-2.6.5 68
+MD5 ad3de36c7f3732f72fa88331f5266ba6 files/digest-metacity-2.8.0 68
+MD5 518f2435e25b7cd5e532fe83b3178e4c files/digest-metacity-2.8.1 68
 MD5 6785913225bcd05588b8b2adf011f3c9 files/digest-metacity-2.8.5 68
 MD5 88fc04bedaed2a4d475aaf7928ef9cb1 files/digest-metacity-2.8.8 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzKMegIKl8Uu19MoRAqSzAJ9WdZZ9EmmxHxuvrbIjrFaGyZ7WYQCeMZKD
-xdgpu3bVv2axAFegn+gQ5zQ=
-=rahe
------END PGP SIGNATURE-----
+MD5 2562cf5fc7b8b4158301e47955a98c09 files/metacity-2.8.0-xinerama_config_test.patch 466
