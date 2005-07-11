@@ -1,22 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.8 2005/06/27 23:38:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.8.ebuild,v 1.1 2005/07/11 22:02:57 josejx Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozilla-launcher mozconfig makeedit multilib
 
-IUSE="java crypt ssl moznomail postgres mozsvg"
+IUSE="crypt gnome java ldap mozcalendar mozdevelop moznocompose moznoirc moznomail mozsvg mozxmlterm postgres ssl"
 
 EMVER="0.91.0"
 IPCVER="1.1.3"
-MOZVER="1.7.8"
 
 # handle _rc versions
-MY_PV=${MOZVER/_alpha/a} 	# handle alpha
+MY_PV=${PV/_alpha/a} 	# handle alpha
 MY_PV=${MY_PV/_beta/b}	# handle beta
 MY_PV=${MY_PV/_rc/rc}	# handle rc
 
-DESCRIPTION="Gecko SDK for building applications based on Gecko"
+DESCRIPTION="Gecko SDK for building applications based on Gecko."
 HOMEPAGE="http://www.mozilla.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla${MY_PV}/source/mozilla-${MY_PV}-source.tar.bz2
 	crypt? ( !moznomail? (
@@ -52,7 +51,7 @@ src_unpack() {
 	unpack ${A} || die "unpack failed"
 	cd ${S} || die "cd failed"
 
-	if ! [[ $(gcc-major-version) -eq 2 ]]; then
+	if [[ $(gcc-major-version) -eq 3 ]]; then
 		# ABI Patch for alpha/xpcom for gcc-3.x
 		if [[ ${ARCH} == alpha ]]; then
 			epatch ${PORTDIR}/www-client/mozilla/files/mozilla-alpha-xpcom-subs-fix.patch
@@ -86,13 +85,13 @@ src_unpack() {
 	# Fix building with gcc4
 	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-1.7.6-gcc4.patch
 
+	# Fix building on amd64 with gcc4 (patch from Debian)
+	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-${PV}-amd64.patch
+
 	# Mozilla Bug 292257, https://bugzilla.mozilla.org/show_bug.cgi?id=292257
 	# Mozilla crashes under some rare cases when plugin.default_plugin_disabled
 	# is true. This patch fixes that. Backported by hansmi@gentoo.org.
-	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-${MOZVER}-objectframefix.diff
-
-	# Fix building on amd64 with gcc4 (patch from Debian)
-	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-${MOZVER}-amd64.patch
+	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-${PV}-objectframefix.diff
 
 	# Fix scripts that call for /usr/local/bin/perl #51916
 	ebegin "Patching smime to call perl from /usr/bin"
@@ -213,6 +212,6 @@ src_compile() {
 
 src_install() {
 	cd ${S}/dist
-	mkdir -p ${D}/usr/share
-	cp -RL sdk ${D}/usr/share/gecko-sdk
+	mkdir -p ${D}/usr/$(get_libdir)
+	cp -RL sdk ${D}/usr/$(get_libdir)/gecko-sdk
 }

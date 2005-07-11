@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.13 2005/06/27 23:38:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.14 2005/07/11 22:02:57 josejx Exp $
+
+*gecko-sdk-1.7.8 (11 Jul 2005)
+
+  11 Jul 2005; Joseph Jezak <josejx@gentoo.org>
+  -files/gecko-sdk-1.7.5-gcc4.patch, -gecko-sdk-1.7.5.ebuild,
+  +gecko-sdk-1.7.8.ebuild:
+  Updated gecko-sdk ebuild to install into correct lib directory.
 
   27 Jun 2005; Sven Wegener <swegener@gentoo.org> gecko-sdk-1.7.5.ebuild:
   Changed 'pgsql?' to 'postgres?' in *DEPEND. Added mozsvg to IUSE.
