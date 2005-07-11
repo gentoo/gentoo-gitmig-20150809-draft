@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.13 2005/05/14 23:36:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.14 2005/07/11 21:00:33 swegener Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -18,7 +18,7 @@ KEYWORDS="amd64 ~ppc ~x86"
 IUSE="arts ncurses dvd gtk nls 3dfx svga fbcon esd X alsa ggi speex
 	ogg vorbis gnome xv oss sdl aalib slp bidi truetype v4l lirc
 	wxwindows imlib matroska dvb mozilla debug aac theora
-	xosd png"
+	xosd png mad"
 
 RDEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2
