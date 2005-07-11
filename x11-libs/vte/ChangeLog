@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.76 2005/06/27 18:20:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.77 2005/07/11 23:11:04 geoman Exp $
+
+  11 Jul 2005; Stephen P. Becker <geoman@gentoo.org> vte-0.11.12.ebuild,
+  vte-0.11.13-r1.ebuild:
+  added mips keywords to satisfy gnome repoman deps
 
   27 Jun 2005; Sven Wegener <swegener@gentoo.org>
   files/vte-0.11.13-memory_fix.patch:
