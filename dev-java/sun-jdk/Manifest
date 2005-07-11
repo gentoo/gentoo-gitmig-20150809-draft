@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3d3ae46713231db04068cbc8c2585bab sun-jdk-1.4.2.08-r1.ebuild 6711
 MD5 81f5be9fa09a076ee3470c8d7d9e32d2 sun-jdk-1.3.1.13.ebuild 3728
 MD5 6e6334f4e89e27aca419bc2dea752336 sun-jdk-1.2.2.017.ebuild 2898
@@ -15,3 +18,10 @@ MD5 d1e29e8acce3cfec9912e23aa366478a files/digest-sun-jdk-1.3.1.13 76
 MD5 49cf0d15bb5d59149d1828735355d139 files/digest-sun-jdk-1.4.2.08 140
 MD5 3bb18cb5771d0bf04e97de8d08d41117 files/digest-sun-jdk-1.5.0.04 212
 MD5 64ade01a917993ba9712b2c0d2f4a580 files/javaws-waitid.c 833
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0nKK/rLF9B432nYRAotUAJ4xj1lpBNrxmjFYM00ZyCeE488AVACgpbNC
+gaySacTzRy2HhCcCQuAbTXY=
+=9NVd
+-----END PGP SIGNATURE-----
