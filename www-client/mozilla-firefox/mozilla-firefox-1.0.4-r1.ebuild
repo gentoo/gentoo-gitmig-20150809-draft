@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.3-r1.ebuild,v 1.4 2005/07/11 21:00:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.4-r1.ebuild,v 1.1 2005/07/11 21:00:03 agriffis Exp $
 
-inherit makeedit flag-o-matic toolchain-funcs nsplugins eutils mozconfig mozilla-launcher multilib
+inherit makeedit flag-o-matic nsplugins eutils mozconfig mozilla-launcher multilib
 
 S=${WORKDIR}/mozilla
 
@@ -10,11 +10,12 @@ DESCRIPTION="The Mozilla Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 MY_PV=${PV/_rc/rc}
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2
-	mirror://gentoo/mozilla-firefox-1.0.3-ia64.patch.bz2"
+	mirror://gentoo/mozilla-firefox-1.0.3-ia64.patch.bz2
+	mirror://gentoo/mozilla-jslibmath-alpha.patch"
 
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
-KEYWORDS="ia64"
+KEYWORDS="alpha"
 IUSE="gnome java mozdevelop mozsvg"
 
 # xrender.pc appeared for the first time in xorg-x11-6.7.0-r2
@@ -65,9 +66,15 @@ src_unpack() {
 	# Mosberger
 	epatch ${DISTDIR}/mozilla-firefox-1.0.3-ia64.patch.bz2
 
+	# patch to fix math operations on alpha, makes maps.google.com work!
+	epatch ${DISTDIR}/mozilla-jslibmath-alpha.patch
+
 	if has_version '>=x11-libs/cairo-0.3.0'; then
 		epatch ${FILESDIR}/svg-cairo-0.3.0-fix.patch
 	fi
+
+	# GCC4 compile fix, bug #87800
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {
@@ -150,8 +157,7 @@ src_install() {
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in *.pc; do
 			if [[ -f ${x} ]]; then
-					sed -i -e
-					"s:/lib/firefox-${MY_PV}:/$(get_libdir)/MozillaFirefox:g" ${x}
+					sed -i -e "s:/lib/firefox-${MY_PV}:/$(get_libdir)/MozillaFirefox:g" ${x}
 					sed -i -e "s:/firefox-${MY_PV}:/MozillaFirefox:g" ${x}
 					doins ${x}
 			fi
@@ -179,6 +185,9 @@ EOF
 chmod 0755 ${D}/usr/bin/firefox
 	insinto /etc/env.d
 	doins ${FILESDIR}/10MozillaFirefox
+
+	# Set correct libdir in env.d file
+	dosed "s:/usr/lib:/usr/$(get_libdir):" /etc/env.d/10MozillaFirefox
 
 	# Fix icons to look the same everywhere
 	insinto /usr/$(get_libdir)/MozillaFirefox/icons

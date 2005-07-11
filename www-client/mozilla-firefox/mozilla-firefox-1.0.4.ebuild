@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.4.ebuild,v 1.15 2005/07/06 19:01:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.4.ebuild,v 1.16 2005/07/11 21:00:03 agriffis Exp $
 
 inherit makeedit flag-o-matic nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -9,11 +9,12 @@ S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 MY_PV=${PV/_rc/rc}
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2"
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2
+	mirror://gentoo/mozilla-firefox-1.0.3-ia64.patch.bz2"
 
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc sparc x86"
+KEYWORDS="-alpha amd64 ~arm hppa ia64 ppc sparc x86"
 IUSE="gnome java mozdevelop mozsvg"
 
 # xrender.pc appeared for the first time in xorg-x11-6.7.0-r2
@@ -62,7 +63,7 @@ src_unpack() {
 
 	# patch to solve segfaults on ia64, from Debian, originally from David
 	# Mosberger
-	epatch ${FILESDIR}/mozilla-firefox-1.0.3-ia64.patch
+	epatch ${DISTDIR}/mozilla-firefox-1.0.3-ia64.patch.bz2
 
 	if has_version '>=x11-libs/cairo-0.3.0'; then
 		epatch ${FILESDIR}/svg-cairo-0.3.0-fix.patch
