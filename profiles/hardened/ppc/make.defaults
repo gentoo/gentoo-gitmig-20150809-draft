@@ -1,10 +1,10 @@
 # Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/make.defaults,v 1.3 2005/04/18 19:07:22 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/make.defaults,v 1.4 2005/07/11 02:47:57 solar Exp $
 
 ARCH="ppc"
 ACCEPT_KEYWORDS="${ARCH}"
-GRP_STAGE23_USE="${ARCH} berkdb crypt dlloader hardened nls pam pic readline ssl tcpd zlib"
+GRP_STAGE23_USE="${ARCH} berkdb crypt dlloader hardened nls pam pic readline ssl tcpd zlib userlocales"
 USE="${ARCH} dlloader ${GRP_STAGE23_USE}"
 PORTDIR=/usr/portage/
 PKGDIR=${PORTDIR}/packages/${ARCH}/
