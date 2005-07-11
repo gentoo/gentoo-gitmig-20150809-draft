@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dcd8cccba544153de14ec45f597dc1cf jacksum-1.4.0.ebuild 1116
-MD5 e225e69868246434ca443e7dc17f376e jacksum-1.5.0.ebuild 1124
-MD5 bafa36a71b62082254a03db227d474b1 ChangeLog 1192
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 76ce6e110628079d863303c7fc4a00f8 jacksum-1.5.1.ebuild 1124
+MD5 740a8301aaf0e89de2db647544c2a766 jacksum-1.5.1.ebuild 1127
+MD5 e225e69868246434ca443e7dc17f376e jacksum-1.5.0.ebuild 1124
+MD5 dcd8cccba544153de14ec45f597dc1cf jacksum-1.4.0.ebuild 1116
+MD5 8adfae307c7ca1ba81083ecad58fd99f ChangeLog 1291
+MD5 0576f4f7649b4c5a354c44d3effd44a6 files/digest-jacksum-1.5.1 62
 MD5 d70a42e3ead229a1001fbe2b09ee2937 files/digest-jacksum-1.4.0 62
 MD5 a309849eb2163c087c093b09be3c0787 files/digest-jacksum-1.5.0 62
-MD5 0576f4f7649b4c5a354c44d3effd44a6 files/digest-jacksum-1.5.1 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC0mbx/rLF9B432nYRAmPtAJ9f16H+TlDeK19Ve8aUTTsX7KqC5ACdG7mW
-xhSEzdVRMfmxiK2lFeOh6Wc=
-=BCmX
+iD8DBQFC0q6oKRy60XGEcJIRApKFAJ4vgmoXUkhaoFEoLRyFrE4I27z6hwCfaKd+
+lCjMcXNq9e3GTF2XU8KPtUg=
+=65HJ
 -----END PGP SIGNATURE-----
