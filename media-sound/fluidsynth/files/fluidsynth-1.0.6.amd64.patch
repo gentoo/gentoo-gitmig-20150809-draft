@@ -1,0 +1,15 @@
+--- fluidsynth-1.0.6/src/fluidsynth_priv.h      2005-06-11 16:40:01.000000000 -0500
++++ fluidsynth-1.0.6-new/src/fluidsynth_priv.h  2005-07-06 00:38:10.000000000 -0500
+@@ -285,7 +285,12 @@
+  * As soon as proper alignment is supported by the compiler, this
+  * can be removed.
+  */
++#ifdef ENABLE_SSE
++/* FIXME - This is broken on AMD 64 - only used if SSE enabled */
+ #define FLUID_ALIGN16BYTE(ptr)(((int)(ptr)+15) & (~0xFL))
++#else
++#define FLUID_ALIGN16BYTE(ptr) ptr
++#endif
+
+ #if WITH_FTS
+ #define FLUID_PRINTF                 post

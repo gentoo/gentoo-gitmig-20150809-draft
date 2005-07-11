@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.19 2005/04/08 17:30:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.20 2005/07/11 19:41:43 fvdpol Exp $
+
+*fluidsynth-1.0.6 (11 Jul 2005)
+
+  11 Jul 2005; Frank van de Pol <fvdpol@gentoo.org>
+  +files/fluidsynth-1.0.6.amd64.patch, +fluidsynth-1.0.6.ebuild:
+  Version bump. Included quickfix by Josh Green for crashes on amd64
+  (http://lists.nongnu.org/archive/html/fluid-dev/2005-07/msg00003.html)
 
   08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   fluidsynth-1.0.5.ebuild:
