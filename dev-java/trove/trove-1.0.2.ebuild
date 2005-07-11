@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2.ebuild,v 1.3 2005/04/30 20:09:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2.ebuild,v 1.4 2005/07/11 21:14:15 swegener Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ DEPEND=">=virtual/jdk-1.4
 	dev-java/ant
 	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )"
-IUSE="doc junit jikes"
+IUSE="doc junit jikes source"
 
 src_unpack() {
 	unpack ${A}
