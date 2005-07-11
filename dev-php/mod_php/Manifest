@@ -2,33 +2,21 @@
 Hash: SHA1
 
 MD5 82a690b536a33e9aee81d6bab92dbb0b mod_php-4.4.0.ebuild 6283
-MD5 490f9e2ff2635eae30c20d16861e6f6d mod_php-4.3.9.ebuild 6068
-MD5 001341d164c4e4431c2bd07227c2e328 mod_php-4.3.11-r1.ebuild 6422
 MD5 bc61d0a7ca0fa2b489073275c1cb9d28 mod_php-5.1.0_beta-r1.ebuild 2431
-MD5 acc16e417db750b0a6f65eb6120469ff mod_php-4.3.10-r1.ebuild 6346
 MD5 2b6e8a15d7fd5d82d50db473856a5333 mod_php-4.3.11.ebuild 6203
 MD5 b91268f902ce021485b29c4fbc7d1e45 mod_php-5.0.4.ebuild 2408
-MD5 e4b18e01eaf5163e6236425277b965b3 mod_php-4.3.8.ebuild 5963
-MD5 8a5a40024d86195720f12c9b65ae19c6 mod_php-4.3.11-r2.ebuild 6422
-MD5 158b0d34c065c7ab64d8143b889c76dd ChangeLog 42920
+MD5 e3e930446434bc2369891b29fceaa70b ChangeLog 43158
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
-MD5 bf3e266fc7fbc08f3b079effce2c7086 mod_php-4.3.10.ebuild 6128
 MD5 7515e9b1dc298a0fb1c12d35a58c265d files/mod_php-4.3.4-amd64hack.diff 1028
 MD5 cceddd5c262e0ffef31d45b7da269851 files/mod_php.conf 148
-MD5 7304d443039ee9ef328e98a346f3056e files/digest-mod_php-4.3.10 284
 MD5 225b57325cbdf582288a8796da9d72f5 files/digest-mod_php-4.3.11 287
 MD5 4efe4b530f5c86d8d9252a414ecd5abe files/digest-mod_php-5.1.0_beta-r1 65
 MD5 79ed63479c494aeb2ed0bc7f5c059fb9 files/70_mod_php.conf 1022
 MD5 058042718bc876bf27ab902673919ca9 files/php5-prefork.patch 850
-MD5 390a659097a43447e44ab5bdd59378b5 files/digest-mod_php-4.3.8 282
-MD5 24b9b19a4420d27906e4aface78ed963 files/digest-mod_php-4.3.9 282
 MD5 4be0d508dc94458d213843099979f970 files/digest-mod_php-4.4.0 205
 MD5 74a728966bc5ec6d37ad89f4182ee135 files/digest-mod_php-5.0.4 143
 MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
 MD5 3bf664b414787f8f3c1dcbda5750aef4 files/mod_php-4.3.5-apache1security.diff 425
-MD5 7304d443039ee9ef328e98a346f3056e files/digest-mod_php-4.3.10-r1 284
-MD5 225b57325cbdf582288a8796da9d72f5 files/digest-mod_php-4.3.11-r1 287
-MD5 225b57325cbdf582288a8796da9d72f5 files/digest-mod_php-4.3.11-r2 287
 MD5 07529a6c32d73282c53d2936ed8ea9bd files/with-iodbc.diff 444
 MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
 MD5 80c45eef4f54629e893249f869cff5c6 files/70_mod_php5.conf 484
@@ -40,7 +28,7 @@ MD5 2dfe55aa49dbca0c3316e859f8bebcb1 files/4.3.11-r2/70_mod_php.conf 1125
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0ob7aGfFFLhbXWkRApunAJsFc0yzdX52sSwXoIm3sD9OjLEyIwCfY9Sm
-83oiEPgMRy7D0fZPz/RGvdA=
-=o1qn
+iD8DBQFC0oq9aGfFFLhbXWkRAsQYAJ9BSFOoKnrNYXsYVRLXZ7NHYCRrZQCfRZil
+fMqmfLKdH/PhOeACE/O6PeE=
+=TG1w
 -----END PGP SIGNATURE-----
