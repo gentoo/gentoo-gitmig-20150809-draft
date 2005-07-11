@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 81d0c6c227358718782426295fee7c33 PECL-mailparse-0.9.3.ebuild 704
-MD5 ede35c9116fd7c66099c757815d08bd8 PECL-mailparse-2.1.1.ebuild 528
-MD5 6f7ceb875849cb5b8926db75f397348a PECL-mailparse-2.1.ebuild 526
-MD5 488db6b8f6bfd48dab790fea7adb7d6c PECL-mailparse-0.9.3-r1.ebuild 530
-MD5 c5400a13566a98cc18da23f462ba46d0 PECL-mailparse-2.0b.ebuild 525
-MD5 8284835be28a1a7b3f97a1b8925809de ChangeLog 1242
+MD5 dddb30df6db0a4a16d73c424a0f265ed PECL-mailparse-2.1.1.ebuild 527
+MD5 3d8e3c8e0fd8e2095b3b0d3da5e1a7e3 ChangeLog 1473
 MD5 90addd9e0cd39bebc1ca9eef0185f6fd metadata.xml 268
-MD5 31ebb39eec5e35272155f86ff1e09819 files/digest-PECL-mailparse-0.9.3 63
 MD5 0e0417ccc35d51d676d71b0cf958ec46 files/digest-PECL-mailparse-2.1.1 63
-MD5 f1c438dc7ab114f12ca6d955cd161bb5 files/digest-PECL-mailparse-2.0b 62
-MD5 626117894242c1ba4eaa29efce426cad files/digest-PECL-mailparse-2.1 61
-MD5 31ebb39eec5e35272155f86ff1e09819 files/digest-PECL-mailparse-0.9.3-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIrsqaGfFFLhbXWkRAnOaAJ421XF720foX4QLUqLdLftwtluY7QCfVRql
-5+I0ZWJsul6WR34Jemep0aA=
-=nfnk
------END PGP SIGNATURE-----
