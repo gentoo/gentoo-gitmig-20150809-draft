@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.12 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.13 2005/07/11 15:08:06 swegener Exp $
 #
 # eclass/php5-sapi-r1.eclass
 #               Eclass for building different php5 SAPI instances
@@ -12,7 +12,7 @@
 #
 # ========================================================================
 
-inherit eutils confutils libtool 
+inherit eutils confutils libtool
 
 
 # set MY_P in the ebuild
@@ -70,7 +70,7 @@ DEPEND="$DEPEND
 	wddx? ( dev-libs/expat )
 	xpm? ( virtual/x11 )
 	xsl? ( dev-libs/libxslt )
-	zlib? ( sys-libs/zlib ) "
+	zlib? ( sys-libs/zlib )"
 
 # this would be xml2?, but PEAR requires XML support
 # and we always want to build PEAR.
@@ -131,7 +131,7 @@ php5-sapi-r1_check_awkward_uses() {
 		eerror
 		eerror "We have not been able to add iodbc support to Gentoo yet, as we"
 		eerror "have experienced difficulties in reaching www.iodbc.org."
-		eerror 
+		eerror
 		eerror "For now, please use the 'odbc' USE flag instead."
 		eerror
 		die "iodbc support incomplete; gentoo bug"
@@ -231,7 +231,7 @@ php5-sapi-r1_check_awkward_uses() {
 	fi
 
 	if useq mysql; then
-		enable_extension_with		"mysql"			"mysql"			1 
+		enable_extension_with		"mysql"			"mysql"			1
 		enable_extension_with		"mysql-sock"	"mysql"			0 "/var/run/mysqld/mysqld.sock"
 	fi
 	if useq mysqli; then
@@ -273,7 +273,7 @@ php5-sapi-r1_check_awkward_uses() {
 
 	# GD library support
 	confutils_use_depend_any "truetype" "gd" "gd-external"
-	
+
 	# ldap support
 	confutils_use_depend_all "sasl" "ldap"
 
@@ -311,7 +311,7 @@ php5-sapi-r1_pkg_setup() {
 
 php5-sapi-r1_src_unpack() {
 	unpack ${A}
-	# Fix for HTTP auth bug, #59755 
+	# Fix for HTTP auth bug, #59755
 	[ "x${PV}" == "x5.0.0" ] && epatch ${FILESDIR}/php-5.0.0-httpauthfix.patch
 
 	cd ${S}
@@ -438,7 +438,7 @@ php5-sapi-r1_src_compile() {
 
 php5-sapi-r1_src_install() {
 	addpredict /usr/share/snmp/mibs/.index
-	
+
 	useq sharedext && PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules"
 	make INSTALL_ROOT=${D} $PHP_INSTALLTARGETS || die "install failed"
 
@@ -454,7 +454,7 @@ php5-sapi-r1_src_install() {
 	local phpinisrc=php.ini-dist
 	einfo "Setting extension_dir in php.ini"
 	sed -e "s|^extension_dir .*$|extension_dir = ${PHPEXTDIR}|g" -i ${phpinisrc}
-	
+
 	# A patch for PHP for security. PHP-CLI interface is exempt, as it cannot be
 	# fed bad data from outside.
 	if [ "${PHPSAPI}" != "cli" ]; then
@@ -466,7 +466,7 @@ php5-sapi-r1_src_install() {
 	sed -e 's|^;include_path .*|include_path = ".:/usr/lib/php"|' -i ${phpinisrc}
 
 	if useq sharedext; then
-		for x in `ls ${D}${PHPEXTDIR}/*.so | sort`; do 
+		for x in `ls ${D}${PHPEXTDIR}/*.so | sort`; do
 			echo "extension=`basename ${x}`" >> ${phpinisrc}
 		done;
 	fi

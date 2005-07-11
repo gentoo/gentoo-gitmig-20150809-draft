@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.189 2005/07/06 20:45:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.190 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -69,11 +69,11 @@ gen_usr_ldscript() {
 	for lib in "${@}" ; do
 		cat > "${D}/usr/${libdir}/${lib}" <<-END_LDSCRIPT
 		/* GNU ld script
-		   Since Gentoo has critical dynamic libraries 
-		   in /lib, and the static versions in /usr/lib, 
+		   Since Gentoo has critical dynamic libraries
+		   in /lib, and the static versions in /usr/lib,
 		   we need to have a "fake" dynamic lib in /usr/lib,
 		   otherwise we run into linking problems.
-		
+
 		   See bug http://bugs.gentoo.org/4411 for more info.
 		 */
 		GROUP ( /${libdir}/${lib} )
@@ -902,7 +902,7 @@ domenu() {
 			for j in "${i}"/*.desktop ; do
 				doins "${j}"
 			done
-		fi	
+		fi
 	done
 }
 newmenu() {
@@ -920,7 +920,7 @@ doicon() {
 			for j in "${i}"/*.png ; do
 				doins "${j}"
 			done
-		fi	
+		fi
 	done
 }
 newicon() {

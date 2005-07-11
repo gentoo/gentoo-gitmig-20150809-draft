@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.22 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.23 2005/07/11 15:08:06 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -63,10 +63,10 @@ SRC_URI=""
 
 
 if [ -n "$KCVS_SUBDIR" -o -n "$KCVS_MODULE" ]; then
-    S="$WORKDIR/$KCVS_MODULE"
+	S="$WORKDIR/$KCVS_MODULE"
 else
-    # default for kde-base ebuilds
-    S="$WORKDIR/${ECVS_MODULE:-$PN}"
+	# default for kde-base ebuilds
+	S="$WORKDIR/${ECVS_MODULE:-$PN}"
 fi
 
 
@@ -86,7 +86,7 @@ kde-source_src_unpack() {
 	    ECVS_MODULE="$PN"
 	fi
 
-        cvs_src_unpack
+	cvs_src_unpack
 
 	# subdirs of kde modules get special treatment that is designed for
 	# subdirs which are separate selfcontained apps and only need
@@ -98,12 +98,12 @@ kde-source_src_unpack() {
 	# ECVS_LOCALNAME note: disabled when KCVS_SUBDIR is enabled because the logic
 	# of how it should work is unclear and I don't see any need for it here anyway
 	if [ -n "$KCVS_SUBDIR" ]; then
-	
+
 		if [ -n "$KCVS_BRANCH" ]; then
 		    ECVS_BRANCH2="$ECVS_BRANCH"
 		    ECVS_BRANCH="$KCVS_BRANCH"
 		fi
-		
+
 		ECVS_MODULE="$KCVS_MODULE" ECVS_LOCAL=yes cvs_src_unpack
 
 		# we need the <module>/doc/<name> directory too,
@@ -118,7 +118,7 @@ kde-source_src_unpack() {
 		if [ -z "$KCVS_SUBDIR_NODOC" ] && [ -d "$ECVS_TOP_DIR/$KCVS_MODULE/doc/$KCVS_SUBDIR" -o "$ECVS_SERVER" != "offline" ]; then
 			ECVS_MODULE="${KCVS_MODULE}/doc/${KCVS_SUBDIR}" cvs_src_unpack
 		fi
-		
+
 		if [ -n "$KCVS_BRANCH" ]; then
 		    ECVS_BRANCH="$ECVS_BRANCH2"
 		fi

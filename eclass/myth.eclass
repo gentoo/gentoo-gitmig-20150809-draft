@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.17 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.18 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
@@ -48,11 +48,11 @@ myth_src_unpack() {
 		    -i ${pkg_pro} || die "Disable i18n failed"
 	fi
 
-        if use debug ; then
+	if use debug ; then
 		FEATURES="${FEATURES} nostrip"
-                sed -e 's:#CONFIG += debug:CONFIG += debug:' \
-                    -e 's:CONFIG += release:#CONFIG += release:' \
-                    -i 'settings.pro' || die "enable debug failed"
+		sed -e 's:#CONFIG += debug:CONFIG += debug:' \
+			-e 's:CONFIG += release:#CONFIG += release:' \
+			-i 'settings.pro' || die "enable debug failed"
 	fi
 
 	setup_pro
@@ -75,7 +75,7 @@ myth_src_compile() {
 					myconf="${myconf} --disable-${x}"
 				fi
 			done
-		fi 
+		fi
 
 		econf ${myconf}
 	fi

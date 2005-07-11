@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.7 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
 
 # Original Author: Aaron Walker <ka0ttic@gentoo.org>
 #
@@ -20,12 +20,10 @@ EXPORT_FUNCTIONS pkg_postinst
 
 SLOT="0"
 
-DEPEND="${DEPEND}
-	virtual/libc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4.0.5"
 
-RDEPEND="${RDEPEND}
-	!virtual/cron
+RDEPEND="!virtual/cron
 	virtual/mta
 	>=sys-process/cronbase-0.2.1-r3"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.52 2005/07/06 20:36:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.53 2005/07/11 15:08:06 swegener Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -17,7 +17,7 @@ USE_DESTDIR=""          # use make DESTDIR=${D} install rather than einstall
 IUSE="debug doc"
 use debug && G2CONF="${G2CONF} --enable-debug=yes"
 
-DEPEND="${DEPEND} >=sys-apps/sed-4"
+DEPEND=">=sys-apps/sed-4"
 
 gnome2_src_configure() {
 
@@ -82,7 +82,7 @@ gnome2_gconf_install() {
 	then
 		unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 		export GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
-		einfo "Installing GNOME 2 GConf schemas"	
+		einfo "Installing GNOME 2 GConf schemas"
 		grep "obj /etc/gconf/schemas" ${ROOT}/var/db/pkg/*/${PF}/CONTENTS | sed 's:obj \([^ ]*\) .*:\1:' | while read F; do
 			if [ -e "${F}" ]; then
 				# echo "DEBUG::gconf install  ${F}"
@@ -99,7 +99,7 @@ gnome2_gconf_uninstall() {
 	then
 		unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 		export GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
-		einfo "Uninstalling GNOME 2 GConf schemas"	
+		einfo "Uninstalling GNOME 2 GConf schemas"
 		cat ${ROOT}/var/db/pkg/*/${PN}-${PVR}/CONTENTS | grep "obj /etc/gconf/schemas" | sed 's:obj \([^ ]*\) .*:\1:' |while read F; do
 			# echo "DEBUG::gconf install  ${F}"
 			${ROOT}/usr/bin/gconftool-2  --makefile-uninstall-rule ${F} 1>/dev/null
@@ -113,18 +113,18 @@ gnome2_omf_fix() {
 	# workaround/patch against omf.make or omf-install/Makefile.in
 	# in order to remove redundant scrollkeeper-updates.
 	# - <liquidx@gentoo.org>
-	
+
 	local omf_makefiles
 
 	omf_makefiles="$@"
 
 	[ -f ${S}/omf-install/Makefile.in ] \
 		&& omf_makefiles="${omf_makefiles} ${S}/omf-install/Makefile.in"
-		
+
 	# FIXME: does this really work? because omf.make only gets included
 	#        when autoconf/automake is run. You should directly patch
 	#        the Makefile.in's
-	
+
 	[ -f ${S}/omf.make ] \
 		&& omf_makefiles="${omf_makefiles} ${S}/omf.make"
 
@@ -169,8 +169,5 @@ gnome2_pkg_postrm() {
 
 }
 
-
 #EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_prerm  pkg_postrm
 EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
-
-

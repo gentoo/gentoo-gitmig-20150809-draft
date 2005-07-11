@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.14 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.15 2005/07/11 15:08:06 swegener Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -21,13 +21,12 @@ FONT_S="${S}" # Dir containing the fonts
 
 DOCS="" # Docs to install
 
-IUSE="${IUSE} X"
+IUSE="X"
 
-DEPEND="${DEPEND} \
-	X? ( virtual/x11 ) \
+DEPEND="X? ( virtual/x11 )
 	media-libs/fontconfig"
 
-# 
+#
 # Public functions
 #
 
@@ -69,7 +68,7 @@ font_src_install() {
 	cd "${FONT_S}"
 
 	insinto "/usr/share/fonts/${PN}"
-	
+
 	for suffix in ${FONT_SUFFIX}; do
 		doins *.${suffix}
 	done

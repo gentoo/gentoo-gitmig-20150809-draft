@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.13 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.14 2005/07/11 15:08:06 swegener Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -53,7 +53,7 @@ mozconfig_init() {
 	####################################
 
 	case ${PN} in
-		mozilla) 
+		mozilla)
 			# The other builds have an initial --enable-extensions in their
 			# .mozconfig.  The "default" set in configure applies to mozilla
 			# specifically.

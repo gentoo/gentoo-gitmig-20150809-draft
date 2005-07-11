@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.8 2005/07/08 06:18:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -112,17 +112,17 @@ need_fortran() {
 				MY_FORTRAN="$(basename ${F2C})"
 			fi
 		fi
-		
+
 		# default to g77
 		use debug && echo "MY_FORTRAN: \"${MY_FORTRAN}\""
 		MY_FORTRAN=${MY_FORTRAN:=g77}
 		use debug && echo "MY_FORTRAN: \"${MY_FORTRAN}\""
-		
+
 		if ! hasq ${MY_FORTRAN} ${AVAILABLE}; then
 			eerror "Current Fortran Compiler is set to ${MY_FORTRAN}, which is not usable with this package !"
 			die "Wrong Fortran Compiler !"
 		fi
-		
+
 		case ${MY_FORTRAN} in
 			g77|ifc|f2c)
 				FORTRANC="${MY_FORTRAN}"

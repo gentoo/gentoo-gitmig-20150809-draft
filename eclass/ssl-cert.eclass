@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.8 2005/07/06 21:01:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Max Kalika <max@gentoo.org>
 #
@@ -12,7 +12,7 @@
 DEPEND="ssl? ( dev-libs/openssl )"
 IUSE="ssl"
 
-# Initializes variables and generates the needed 
+# Initializes variables and generates the needed
 # OpenSSL configuration file and a CA serial file
 #
 # Access: private
@@ -56,7 +56,7 @@ gen_cnf() {
 		emailAddress       = ${SSL_EMAIL}
 	EOF
 	eend $?
-	
+
 	return $?
 }
 

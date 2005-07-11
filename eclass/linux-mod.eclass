@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.48 2005/07/07 12:36:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.49 2005/07/11 15:08:06 swegener Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -14,7 +14,7 @@
 
 # A Couple of env vars are available to effect usage of this eclass
 # These are as follows:
-# 
+#
 # Env Var		Option		Default		Description
 # KERNEL_DIR		<string>	/usr/src/linux	The directory containing kernel
 #							the target kernel sources.
@@ -25,20 +25,20 @@
 # BUILD_TARGETS		<string>	clean modules	The build targets to pass to
 #							make.
 # MODULE_NAMES		<string>			This is the modules which are
-#							to be built automatically using 
-#							the default pkg_compile/install. 
-#							They are explained properly 
-#							below. It will only make  
+#							to be built automatically using
+#							the default pkg_compile/install.
+#							They are explained properly
+#							below. It will only make
 #							BUILD_TARGETS once in any
 #							directory.
 
 # MODULE_NAMES - Detailed Overview
-# 
+#
 # The structure of each MODULE_NAMES entry is as follows:
 # modulename(libdir:srcdir:objdir)
 # for example:
 # MODULE_NAMES="module_pci(pci:${S}/pci:${S}) module_usb(usb:${S}/usb:${S})"
-# 
+#
 # what this would do is
 #  cd ${S}/pci
 #  make ${BUILD_PARAMS} ${BUILD_TARGETS}
@@ -102,7 +102,7 @@ unpack_pcmcia_sources() {
 
 	if [[ -f "${1}" ]]; then
 		PCMCIA_SOURCE_DIR="${WORKDIR}/pcmcia-cs/"
-	
+
 		ebegin "Decompressing pcmcia-cs sources"
 		mkdir -p ${PCMCIA_SOURCE_DIR}
 		tar -xjf ${1} -C ${PCMCIA_SOURCE_DIR}
@@ -142,7 +142,7 @@ pcmcia_src_unpack() {
 use_m() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
-	
+
 	# if the kernel version is greater than 2.6.6 then we should use
 	# M= instead of SUBDIRS=
 	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -gt 5 -a ${KV_PATCH} -gt 5 ] && \
@@ -163,7 +163,7 @@ convert_to_m() {
 update_depmod() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
-	
+
 	ebegin "Updating module dependencies for ${KV_FULL}"
 	if [ -r ${KV_OUT_DIR}/System.map ]
 	then
@@ -190,7 +190,7 @@ update_modules() {
 move_old_moduledb() {
 	local OLDDIR=${ROOT}/usr/share/module-rebuild/
 	local NEWDIR=${ROOT}/var/lib/module-rebuild/
-	
+
 	if [[ -f ${OLDDIR}/moduledb ]]; then
 		[[ ! -d ${NEWDIR} ]] && mkdir -p ${NEWDIR}
 		[[ ! -f ${NEWDIR}/moduledb ]] && \
@@ -211,7 +211,7 @@ update_moduledb() {
 	if [[ -z $(grep ${CATEGORY}/${PN}-${PVR} ${MODULEDB_DIR}/moduledb) ]]; then
 		einfo "Adding module to moduledb."
 		echo "a:1:${CATEGORY}/${PN}-${PVR}" >> ${MODULEDB_DIR}/moduledb
-	fi	
+	fi
 }
 
 remove_moduledb() {
@@ -259,7 +259,7 @@ generate_modulesd() {
 		[[ ${module_additions} -eq 0 ]]	&& unset module_additions
 		[[ ${module_examples} -eq 0 ]] 	&& unset module_examples
 
-		# If we specify we dont want it, then lets exit, otherwise we assume 
+		# If we specify we dont want it, then lets exit, otherwise we assume
 		# that if its set, we do want it.
 		[[ ${module_enabled} == no ]] && return 0
 
@@ -310,7 +310,7 @@ generate_modulesd() {
 			echo  "# ------------------------------" >> ${module_config}
 			myIFS="${IFS}"
 			IFS="$(echo -en "\n\b")"
-			
+
 			for t in ${module_modinfo}
 			do
 				myVAR="$(echo ${t#*:} | grep -e " [0-9][ =]" | sed "s:.*\([01][= ]\).*:\1:")"
@@ -319,7 +319,7 @@ generate_modulesd() {
 					module_opts="${module_opts} ${t%%:*}:${myVAR}"
 				fi
 				echo -e "# ${t%%:*}:\t${t#*:}" >> ${module_config}
-			done			
+			done
 			IFS="${myIFS}"
 			echo '' >> ${module_config}
 		fi
@@ -360,7 +360,7 @@ generate_modulesd() {
 			done
 			echo '' >> ${module_config}
 		fi
-		
+
 		#-----------------------------------------------------------------------
 
 		# then we install it
@@ -377,9 +377,9 @@ generate_modulesd() {
 display_postinst() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
-	
+
 	local modulename moduledir sourcedir moduletemp file i
-	
+
 	file=${ROOT}/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}
 	file=${file/\/\///}
 
@@ -408,7 +408,7 @@ display_postinst() {
 find_module_params() {
 	local matched_offset=0 matched_opts=0 test="${@}" temp_var result
 	local i=0 y=0 z=0
-	
+
 	for((i=0; i<=${#test}; i++))
 	do
 		case ${test:${i}:1} in
@@ -419,7 +419,7 @@ find_module_params() {
 					matched_offset[${matched_opts}]="${i}";;
 		esac
 	done
-	
+
 	for((i=0; i<=${matched_opts}; i++))
 	do
 		# i			= offset were working on
@@ -433,7 +433,7 @@ find_module_params() {
 				z=$((${z} - 1))
 				tempvar=${test:${y}:${z}};;
 		esac
-		
+
 		case ${i} in
 			0)	result="${result} modulename:${tempvar}";;
 			1)	result="${result} libdir:${tempvar}";;
@@ -441,7 +441,7 @@ find_module_params() {
 			3)	result="${result} objdir:${tempvar}";;
 		esac
 	done
-	
+
 	echo ${result}
 }
 
@@ -460,7 +460,7 @@ linux-mod_src_compile() {
 	unset ARCH
 
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
-	
+
 	for i in ${MODULE_IGNORE}
 	do
 		MODULE_NAMES=${MODULE_NAMES//${i}(*}
@@ -476,7 +476,7 @@ linux-mod_src_compile() {
 		libdir=${libdir:-misc}
 		srcdir=${srcdir:-${S}}
 		objdir=${objdir:-${srcdir}}
-		
+
 		if [ ! -f "${srcdir}/.built" ];
 		then
 			cd ${srcdir}
@@ -500,7 +500,7 @@ linux-mod_src_compile() {
 
 linux-mod_src_install() {
 	local modulename libdir srcdir objdir i n
-	
+
 	for i in ${MODULE_IGNORE}
 	do
 		MODULE_NAMES=${MODULE_NAMES//${i}(*}
@@ -522,7 +522,7 @@ linux-mod_src_install() {
 		insinto ${ROOT}lib/modules/${KV_FULL}/${libdir}
 		doins ${modulename}.${KV_OBJ}
 		cd ${OLDPWD}
-		
+
 		generate_modulesd ${objdir}/${modulename}
 	done
 }

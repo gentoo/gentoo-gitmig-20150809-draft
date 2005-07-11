@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.18 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.19 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -26,7 +26,7 @@ src_mv_plugins() {
 	dosym /usr/$(get_libdir)/${PLUGINS_DIR} $1
 }
 
-# This function move plugins in pkg_preinst() in old dir to 
+# This function move plugins in pkg_preinst() in old dir to
 # ${ROOT}/usr/$(get_libdir)/${PLUGIN_DIR}.  First argument should be
 # the full path (without $ROOT) to old plugin dir.
 pkg_mv_plugins() {

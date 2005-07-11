@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.39 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.40 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
-# This eclass contains (or should) functions to get common info 
+# This eclass contains (or should) functions to get common info
 # about the toolchain (libc/compiler/binutils/etc...)
 
 inherit multilib
@@ -87,7 +87,7 @@ tc-is-cross-compiler() {
 }
 
 
-# Parse information from CBUILD/CHOST/CTARGET rather than 
+# Parse information from CBUILD/CHOST/CTARGET rather than
 # use external variables from the profile.
 tc-ninja_magic_to_arch() {
 ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }

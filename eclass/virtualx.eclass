@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.22 2005/07/06 20:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.23 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -38,10 +38,10 @@ virtualmake() {
 
 		# We really do not want SANDBOX enabled here
 		export SANDBOX_DISABLED="1"
-		
+
 		local i=0
 		XDISPLAY=$(i=0; while [[ -f /tmp/.X${i}-lock ]] ; do i=$((${i}+1));done; echo ${i})
-		
+
 		# If we are in a chrooted environment, and there is already a
 		# X server started outside of the chroot, Xvfb will fail to start
 		# on the same display (most cases this is :0 ), so make sure
@@ -57,7 +57,7 @@ virtualmake() {
 		#
 		${XVFB} :${XDISPLAY} -screen 0 800x600x24 &>/dev/null &
 		sleep 2
-		
+
 		local start=${XDISPLAY}
 		while [[ ! -f /tmp/.X${XDISPLAY}-lock ]] ; do
 			# Stop trying after 15 tries
@@ -84,7 +84,7 @@ virtualmake() {
 		export SANDBOX_DISABLED="${OLD_SANDBOX_DISABLED}"
 
 		einfo "Starting Xvfb on \$DISPLAY=${XDISPLAY} ..."
-		
+
 		export DISPLAY=:${XDISPLAY}
 		#Do not break on error, but setup $retval, as we need
 		#to kill Xvfb

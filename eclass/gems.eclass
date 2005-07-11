@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.5 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.6 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Rob Cakebread <pythonhead@gentoo.org>
 # Current Maintainer: Rob Cakebread <pythonhead@gentoo.org>
 #
 # The gems eclass is designed to allow easier installation of
-# gems-based ruby packagess and their incorporation into 
+# gems-based ruby packagess and their incorporation into
 # the Gentoo Linux system.
 #
 # - Features:
@@ -49,8 +49,8 @@ gems_src_install() {
 
 	dodir ${GEMSDIR}
 	gem install ${GEM_SRC} -v ${PV} -l -i ${D}/${GEMSDIR} || die "gem install failed"
-	
-	if [ -d ${D}/${GEMSDIR}/bin ] ; then 
+
+	if [ -d ${D}/${GEMSDIR}/bin ] ; then
 		exeinto /usr/bin
 		for exe in ${D}/${GEMSDIR}/bin/* ; do
 			doexe ${exe}
@@ -62,6 +62,4 @@ gems_src_compile() {
 	true
 }
 
-
 EXPORT_FUNCTIONS src_unpack src_compile src_install
-

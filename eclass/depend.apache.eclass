@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.17 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.18 2005/07/11 15:08:06 swegener Exp $
 
 ######
 ## Apache Common Variables
@@ -84,7 +84,7 @@ APACHE2_MODULESDIR="${APACHE2_BASEDIR}/modules"
 ## Dependencies for apache 1.x and apache 2.x
 ##  - apache2 must be at least version 2.0.52-r3, this is lowest version
 ##    containing our new overall changes -- trapni (Jan 21 2005)
-##  - apache1 must be at least version 1.3.33-r1, but how to 
+##  - apache1 must be at least version 1.3.33-r1, but how to
 ##    define the DEPEND here? (FIXME) -- trapni (Jan 21 2005)
 ##     - currently not possible - bug #4315 -- vericgar (Jan 21 2005)
 ####
@@ -135,7 +135,7 @@ need_apache2() {
 }
 
 ####
-## DO NOT CHANGE THIS FUNCTION UNLESS YOU UNDERSTAND THE CONSEQUENCES IT 
+## DO NOT CHANGE THIS FUNCTION UNLESS YOU UNDERSTAND THE CONSEQUENCES IT
 ## WILL HAVE ON THE CACHE! There MUST be a apache2? () block in DEPEND for
 ## things to work correct in the dependency calculation stage.
 ####

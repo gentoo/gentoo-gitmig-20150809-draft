@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.27 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.28 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
 #
 # The distutils eclass is designed to allow easier installation of
-# distutils-based python modules and their incorporation into 
+# distutils-based python modules and their incorporation into
 # the Gentoo Linux system.
 #
 # - Features:
@@ -21,10 +21,9 @@
 
 inherit python eutils
 
-
 # This helps make it possible to add extensions to python slots.
 # Normally only a -py21- ebuild would set PYTHON_SLOT_VERSION.
-if [ "${PYTHON_SLOT_VERSION}" = 2.1 ] ; then 
+if [ "${PYTHON_SLOT_VERSION}" = 2.1 ] ; then
 	DEPEND="=dev-lang/python-2.1*"
 	python="python2.1"
 else
@@ -41,7 +40,7 @@ distutils_src_install() {
 		${python} setup.py install --root=${D} --no-compile "$@" || die
 	else
 		${python} setup.py install --root=${D} "$@" || die
-	fi		
+	fi
 
 	DDOCS="CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS PKG-INFO"
 	DDOCS="${DDOCS} CONTRIBUTORS LICENSE COPYING*"
@@ -52,12 +51,12 @@ distutils_src_install() {
 	done
 
 	[ -n "${DOCS}" ] && dodoc ${DOCS}
-	
+
 	# deprecated! please use DOCS instead.
 	[ -n "${mydoc}" ] && dodoc ${mydoc}
 }
 
-# generic pyc/pyo cleanup script. 
+# generic pyc/pyo cleanup script.
 
 distutils_pkg_postrm() {
 	PYTHON_MODNAME=${PYTHON_MODNAME:-${PN}}
@@ -72,9 +71,9 @@ distutils_pkg_postrm() {
 			done
 		else
 			python_mod_cleanup
-		fi			
+		fi
 		eend 0
-	fi		
+	fi
 }
 
 # this is a generic optimization, you should override it if your package
@@ -82,15 +81,15 @@ distutils_pkg_postrm() {
 
 distutils_pkg_postinst() {
 	PYTHON_MODNAME=${PYTHON_MODNAME:-${PN}}
-	
+
 	if has_version ">=dev-lang/python-2.3"; then
 		python_version
 		for pymod in "${PYTHON_MODNAME}"; do
 			if [ -d "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/${pymod}" ]; then
 				python_mod_optimize ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/${pymod}
 			fi
-		done			
-	fi		
+		done
+	fi
 }
 
 # e.g. insinto ${ROOT}/usr/include/python${PYVER}
@@ -115,6 +114,4 @@ distutils_python_tkinter() {
 	fi
 }
 
-
 EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
-

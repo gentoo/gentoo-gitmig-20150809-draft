@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.30 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.31 2005/07/11 15:08:06 swegener Exp $
 #
 # You probably don't want to change this eclass.  Newer ebuilds use
 # mozconfig.eclass instead.
@@ -29,7 +29,7 @@ RDEPEND="virtual/x11
 		>=x11-libs/gtk+-2.2.0
 		>=dev-libs/glib-2.2.0
 		>=x11-libs/pango-1.2.1
-		>=dev-libs/libIDL-0.8.0 
+		>=dev-libs/libIDL-0.8.0
 		gnome? ( >=gnome-base/gnome-vfs-2.3.5 ) )
 	!gtk2? (
 		=x11-libs/gtk+-1.2*
@@ -266,11 +266,11 @@ mozilla_conf() {
 		[[ ${PV} < 1.0 ]] && myext="${myext},typeaheadfind"
 		use mozdevelop && myext="${myext},venkman"
 		use gnome && use gtk2 && myext="${myext},gnomevfs"
-		
+
 		myconf="${myconf} \
 			--enable-single-profile \
 			--enable-extensions=${myext}"
-			
+
 		mozilla_annotate "n/a on ${PN}" \
 			--disable-mailnews \
 			--disable-composer \

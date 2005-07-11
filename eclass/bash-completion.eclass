@@ -1,21 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.14 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.15 2005/07/11 15:08:06 swegener Exp $
 #
 # Simple eclass that provides an interface for installing
 # contributed (ie not included in bash-completion proper)
 # bash-completion scripts.
 #
 # Author: Aaron Walker <ka0ttic@gentoo.org>
-# 
+#
 # Please assign any bug reports to shell-tools@gentoo.org.
 
 EXPORT_FUNCTIONS pkg_postinst
 
-IUSE="${IUSE} bash-completion"
+IUSE="bash-completion"
 
-RDEPEND="${RDEPEND}
-	bash-completion? ( app-shells/bash-completion-config )"
+RDEPEND="bash-completion? ( app-shells/bash-completion-config )"
 
 # dobashcompletion <file> <new file>
 #	First arg, <file>, is required and is the location of the bash-completion

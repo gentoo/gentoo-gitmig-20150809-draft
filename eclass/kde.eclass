@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.123 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.124 2005/07/11 15:08:06 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -39,14 +39,14 @@ kde_pkg_setup() {
 
 kde_src_unpack() {
 	debug-print-function $FUNCNAME $*
-	
+
 	# call base_src_unpack, which implements most of the functionality and has sections,
 	# unlike this function. The change from base_src_unpack to kde_src_unpack is thus
 	# wholly transparent for ebuilds.
 	base_src_unpack $*
-	
+
 	# kde-specific stuff stars here
-	
+
 	# fix the 'languageChange undeclared' bug group: touch all .ui files, so that the
 	# makefile regenerate any .cpp and .h files depending on them.
 	cd $S
@@ -59,7 +59,7 @@ kde_src_unpack() {
 		debug-print "$FUNCNAME: touching .ui files..."
 		touch $UIFILES
 	fi
-	
+
 	# Visiblity stuff is way broken! Just disable it when it's present
 	# until upstream finds a way to have it working right.
 	if grep KDE_ENABLE_HIDDEN_VISIBILITY configure.in &> /dev/null || ! [[ -f configure ]]; then
@@ -85,9 +85,9 @@ kde_src_compile() {
 	export HOME="$T/fakehome"
 	addwrite "${QTDIR}/etc/settings"
 	# things that should access the real homedir
-	[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"	
+	[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"
 	[ -n "$UNSERMAKE" ] && addwrite "/usr/kde/unsermake"
-	
+
 	while [ "$1" ]; do
 
 		case $1 in
@@ -115,7 +115,7 @@ kde_src_compile() {
 				debug-print "$FUNCNAME::configure: myconf=$myconf"
 
 				# rebuild configure script, etc
-				# This can happen with e.g. a cvs snapshot			
+				# This can happen with e.g. a cvs snapshot
 				if [ ! -f "./configure" ] || [ -n "$UNSERMAKE" ]; then
 					for x in Makefile.cvs admin/Makefile.common; do
 						if [ -f "$x" ] && [ -z "$makefile" ]; then makefile="$x"; fi
@@ -128,7 +128,7 @@ kde_src_compile() {
 				fi
 
 				export PATH="${KDEDIR}/bin:${PATH}"
-				
+
 				# configure doesn't need to know about the other KDEs installed.
 				# in fact, if it does, it sometimes tries to use the wrong dcopidl, etc.
 				# due to the messed up way configure searches for things
@@ -150,7 +150,7 @@ kde_src_compile() {
 				./configure \
 					${myconf} \
 					|| die "died running ./configure, $FUNCNAME:configure"
-					
+
 				# Seems ./configure add -O2 by default but hppa don't want that but we need -ffunction-sections
 				if [ "${ARCH}" = "hppa" ]
 				then

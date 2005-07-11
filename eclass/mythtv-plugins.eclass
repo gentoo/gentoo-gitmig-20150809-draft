@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.7 2005/07/06 20:54:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org
 #
@@ -19,13 +19,13 @@ DEPEND=">=sys-apps/sed-4"
 mythtv-plugins_src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	sed -e 's!PREFIX = /usr/local!PREFIX = /usr!' \
 	-i 'settings.pro' || die "fixing PREFIX to /usr failed"
-	
+
 	sed -e "s!QMAKE_CXXFLAGS_RELEASE = -O3 -march=pentiumpro -fomit-frame-pointer!QMAKE_CXXFLAGS_RELEASE = ${CXXFLAGS}!" \
 	-i 'settings.pro' || die "Fixing QMake's CXXFLAGS failed"
-	
+
 	sed -e "s!QMAKE_CFLAGS_RELEASE = \$\${QMAKE_CXXFLAGS_RELEASE}!QMAKE_CFLAGS_RELEASE = ${CFLAGS}!" \
 	-i 'settings.pro' || die "Fixing Qmake's CFLAGS failed"
 
@@ -37,12 +37,12 @@ mythtv-plugins_src_unpack() {
 
 mythtv-plugins_src_compile() {
 	cd ${S}
-	
+
 	if use debug; then
 		sed -e 's!CONFIG += release!CONFIG += debug!' \
 		-i 'settings.pro' || die "switching to debug build failed"
 	fi
-	
+
 #	if ( use x86 && ! use mmx ) || ! use amd64 ; then
 	if ( ! use mmx ); then
 		sed -e 's!DEFINES += HAVE_MMX!DEFINES -= HAVE_MMX!' \

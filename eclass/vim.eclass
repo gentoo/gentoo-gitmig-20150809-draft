@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.112 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.113 2005/07/11 15:08:06 swegener Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -43,9 +43,9 @@ if version_is_at_least 6.3.1 ; then
 	inherit bash-completion
 fi
 
-EXPORT_FUNCTIONS src_unpack pkg_setup
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install src_test pkg_postinst pkg_postrm
 
-IUSE="$IUSE selinux nls acl"
+IUSE="selinux nls acl"
 
 if version_is_at_least "6.3.075" ; then
 	IUSE="${IUSE} termcap-compat"
@@ -325,7 +325,7 @@ END
 
 }
 
-src_compile() {
+vim_src_compile() {
 	local myconf confrule
 
 	# Fix bug 37354: Disallow -funroll-all-loops on amd64
@@ -503,7 +503,7 @@ src_compile() {
 	[[ $(get_major_version ) -ge 7 ]] && [[ -f src/kvim ]] && mv src/{k,g}vim
 }
 
-src_install() {
+vim_src_install() {
 	if [[ "${MY_PN}" == "vim-core" ]] ; then
 		dodir /usr/{bin,share/{man/man1,vim}}
 		cd src || die "cd src failed"
@@ -679,7 +679,7 @@ update_vim_symlinks() {
 	# have triggers like are done in rpm-land.
 }
 
-pkg_postinst() {
+vim_pkg_postinst() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
 
@@ -755,7 +755,7 @@ pkg_postinst() {
 	update_vim_symlinks
 }
 
-pkg_postrm() {
+vim_pkg_postrm() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
 
@@ -768,7 +768,7 @@ pkg_postrm() {
 	fi
 }
 
-src_test() {
+vim_src_test() {
 
 	if [[ "${MY_PN}" == "vim-core" ]] ; then
 		einfo "No testing needs to be done for vim-core"
@@ -829,4 +829,3 @@ src_test() {
 	make VIMPROG=${testprog} nongui \
 		|| die "At least one test failed"
 }
-

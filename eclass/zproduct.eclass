@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.20 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.21 2005/07/11 15:08:07 swegener Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -42,29 +42,31 @@ zproduct_src_install()
 		case ${1} in
 			do_zpfolders)
 				## Create .zfolders.lst from $ZPROD_LIST.
-				debug-print-section do_zpfolders 
+				debug-print-section do_zpfolders
 				for N in ${ZPROD_LIST} ; do
 					echo ${N} >> ${D}/${DOT_ZFOLDER_FPATH}
-				done ;;					
+				done
+				;;
 			do_docs)
-				#*Moves txt docs 
-				debug-print-section do_docs 
+				#*Moves txt docs
+				debug-print-section do_docs
 				docs_move
 				for ZPROD in ${ZPROD_LIST} ; do
 					docs_move ${ZPROD}/
-				done ;;
+				done
+				;;
 			do_install)
 				debug-print-section do_install
 				# Copy everything that's left to ${D}${ZP_DIR}
 				# modified to not copy ownership (QA)
-				cp --recursive --no-dereference --preserve=timestamps,mode,links ${S}/* ${D}/${ZP_DIR}/${PF} ;;
-						
+				cp --recursive --no-dereference --preserve=timestamps,mode,links ${S}/* ${D}/${ZP_DIR}/${PF}
+				;;
 			all)
-				debug-print-section all 
+				debug-print-section all
 				zproduct_src_install do_zpfolders do_docs do_install ;;
 		esac
 		shift
-	done	
+	done
 	debug-print "${FUNCNAME}: result is ${RESULT}"
 }
 
@@ -73,7 +75,7 @@ docs_move()
 	# if $1 == "/", then this breaks.
 	if [ -n "$1" ] ; then
 		docinto $1
-	else 
+	else
 		docinto /
 	fi
 	dodoc $1HISTORY.txt $1README{.txt,} $1INSTALL{.txt,} > /dev/null
@@ -101,7 +103,7 @@ zproduct_pkg_postinst()
 	# make shure there is nothing writable in the new dir, and all is readable
 	chmod -R go-w,a+rX ${ZP_DIR}/${PF}
 	einfo ">>> Installing ${PF} into the \"$(zope-config --zidef-get)\" zinstance ..."
-	${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF} 
+	${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF}
 }
 
 # This function is deprecated! Still used, until a new system developed.

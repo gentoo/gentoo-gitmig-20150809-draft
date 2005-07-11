@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.12 2005/07/11 12:40:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.13 2005/07/11 15:08:06 swegener Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -12,7 +12,7 @@ inherit common-lisp-common
 CLPACKAGE=
 DEPEND="dev-lisp/common-lisp-controller"
 
-EXPORT_FUNCTIONS pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS pkg_preinst pkg_postinst pkg_postrm
 
 common-lisp_pkg_postinst() {
 	if [ -z "${CLPACKAGE}" ]; then
@@ -43,7 +43,7 @@ common-lisp_pkg_postrm() {
 # In pkg_preinst, we remove the FASL files for the previous version of
 # the source.
 #
-pkg_preinst() {
+common-lisp_pkg_preinst() {
 	if [ -z "${CLPACKAGE}" ]; then
 		die "CLPACKAGE was empty or undefined upon call to pkg_preinst"
 	else

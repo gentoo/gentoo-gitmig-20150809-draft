@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.23 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.24 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Spider
 #
@@ -13,7 +13,7 @@ IUSE="debug"
 if useq debug; then
 	# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 	DEBUG="yes"
-	RESTRICT="$RESTRICT nostrip"
+	RESTRICT="${RESTRICT} nostrip"
 	# Remove omit-frame-pointer as some useless folks define that all over the place. they should be shot with a 16 gauge slingshot at least :)
 	# force debug information
 	export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -g"

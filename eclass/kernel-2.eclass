@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.134 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.135 2005/07/11 15:08:06 swegener Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -169,7 +169,7 @@ detect_version() {
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV}.bz2"
 	fi
-	
+
 	# We need to set this using OKV, but we need to set it before we do any
 	# messing around with OKV based on RELEASETYPE
 	KV_FULL=${OKV}${EXTRAVERSION}
@@ -209,7 +209,7 @@ detect_version() {
 }
 
 kernel_is() {
-	[[ -z ${OKV} ]] && detect_version	
+	[[ -z ${OKV} ]] && detect_version
 	local operator test value x=0 y=0 z=0
 
 	case ${1} in
@@ -225,7 +225,7 @@ kernel_is() {
 		for((y=0; y<$((3 - ${#x})); y++)); do value="${value}0"; done
 		value="${value}${x}"
 		z=$((${z} + 1))
-		
+
 		case ${z} in
 		  1) for((y=0; y<$((3 - ${#KV_MAJOR})); y++)); do test="${test}0"; done;
 			 test="${test}${KV_MAJOR}";;
@@ -258,7 +258,7 @@ kernel_header_destdir() {
 if [[ ${ETYPE} == sources ]]; then
 	DEPEND="!build? ( sys-apps/sed
 					  >=sys-devel/binutils-2.11.90.0.31 )
-			doc? ( app-text/docbook-sgml-utils 
+			doc? ( app-text/docbook-sgml-utils
 				   app-text/xmlto )"
 	RDEPEND="${DEPEND}
 			!build? ( >=sys-libs/ncurses-5.2
@@ -272,7 +272,7 @@ if [[ ${ETYPE} == sources ]]; then
 elif [[ ${ETYPE} == headers ]]; then
 	DESCRIPTION="Linux system headers"
 	IUSE="${IUSE}"
-	
+
 	if [[ ${CTARGET} = ${CHOST} ]]; then
 		DEPEND="!virtual/os-headers"
 		PROVIDE="virtual/kernel virtual/os-headers"
@@ -289,7 +289,7 @@ fi
 #==============================================================
 unpack_2_4() {
 	# Kernel ARCH != portage ARCH
-	local ARCH=$(tc-arch-kernel)	
+	local ARCH=$(tc-arch-kernel)
 
 	cd ${S}
 	# this file is required for other things to build properly,
@@ -347,7 +347,7 @@ compile_headers() {
 	# if it exists.
 	[[ -n ${KBUILD_OUTPUT} ]] && unset KBUILD_OUTPUT
 
-	# if we couldnt obtain HOSTCFLAGS from the Makefile, 
+	# if we couldnt obtain HOSTCFLAGS from the Makefile,
 	# then set it to something sane
 	local HOSTCFLAGS=$(getfilevar HOSTCFLAGS ${S}/Makefile)
 	HOSTCFLAGS=${HOSTCFLAGS:--Wall -Wstrict-prototypes -O2 -fomit-frame-pointer}
@@ -355,7 +355,7 @@ compile_headers() {
 	# Kernel ARCH != portage ARCH
 	local KARCH=$(tc-arch-kernel)
 
-	# When cross-compiling, we need to set the ARCH/CROSS_COMPILE 
+	# When cross-compiling, we need to set the ARCH/CROSS_COMPILE
 	# variables properly or bad things happen !
 	local xmakeopts="ARCH=${KARCH}"
 	if [[ ${CTARGET} != ${CHOST} ]]; then
@@ -522,7 +522,7 @@ preinst_headers() {
 #==============================================================
 postinst_sources() {
 	local MAKELINK=0
-	
+
 	# if we have USE=symlink, then force K_SYMLINK=1
 	use symlink && K_SYMLINK=1
 
@@ -531,10 +531,10 @@ postinst_sources() {
 		[[ -h ${ROOT}usr/src/linux ]] && rm ${ROOT}usr/src/linux
 		MAKELINK=1
 	fi
-	
+
 	# if the link doesnt exist, lets create it
 	[[ ! -h ${ROOT}usr/src/linux ]] && MAKELINK=1
-	
+
 	if [[ ${MAKELINK} == 1 ]]; then
 		cd ${ROOT}usr/src
 		ln -sf linux-${KV_FULL} linux
@@ -601,7 +601,7 @@ setup_headers() {
 unipatch() {
 	local i x y z extention PIPE_CMD UNIPATCH_DROP KPATCH_DIR PATCH_DEPTH ELINE
 	local STRICT_COUNT PATCH_LEVEL myLC_ALL myLANG
-	
+
 	# set to a standard locale to ensure sorts are ordered properly.
 	myLC_ALL="${LC_ALL}"
 	myLANG="${LANG}"
@@ -760,7 +760,7 @@ unipatch() {
 
 	# clean up  KPATCH_DIR's - fixes bug #53610
 	for x in ${KPATCH_DIR}; do rm -Rf ${x}; done
-	
+
 	LC_ALL="${myLC_ALL}"
 	LANG="${myLANG}"
 }
@@ -781,12 +781,12 @@ getfilevar() {
 		basefname=$(basename ${2})
 		basedname=$(dirname ${2})
 		unset ARCH
-		
+
 		cd ${basedname}
 		echo -e "include ${basefname}\ne:\n\t@echo \$(${1})" | \
 			make ${BUILD_FIXES} -s -f - e 2>/dev/null
 		cd ${workingdir}
-		 
+
 		ARCH=${xarch}
 	fi
 }

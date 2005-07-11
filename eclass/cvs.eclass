@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.57 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.58 2005/07/11 15:08:06 swegener Exp $
 
 # Current Maintainer: Tal Peer <coredumb@gentoo.org>
 # Original Author:    Dan Armak <danarmak@gentoo.org>
@@ -157,7 +157,7 @@
 # add cvs to deps
 # ssh is used for ext auth
 # sudo is used to run as a specified user
-DEPEND="$DEPEND dev-util/cvs app-admin/sudo"
+DEPEND="dev-util/cvs app-admin/sudo"
 
 if [ "$ECVS_AUTH" == "ext" ]; then
 	#default to ssh
@@ -165,7 +165,7 @@ if [ "$ECVS_AUTH" == "ext" ]; then
 	if [ "$CVS_RSH" != "ssh" ]; then
 		die "Support for ext auth with clients other than ssh has not been implemented yet"
 	fi
-	DEPEND="$DEPEND net-misc/openssh"
+	DEPEND="${DEPEND} net-misc/openssh"
 fi
 
 # called from cvs_src_unpack
@@ -190,16 +190,15 @@ cvs_fetch() {
 	# should be effective every time cvs_fetch is called, and not just
 	# every time cvs.eclass is inherited
 
-
 	# Handle parameter for local (non-recursive) fetching
-	
+
 	if [ -n "$ECVS_LOCAL" ]; then
 		ECVS_UP_OPTS="$ECVS_UP_OPTS -l"
 		ECVS_CO_OPTS="$ECVS_CO_OPTS -l"
 	fi
 
 	# Handle ECVS_BRANCH option
-	# 
+	#
 	# Because CVS auto-switches branches, we just have to pass the
 	# correct -rBRANCH option when updating.
 
@@ -340,7 +339,7 @@ cvs_fetch() {
 			einfo "Running $cmdupdate"
 			eval $cmdupdate || die "cvs update command failed"
 		elif [ "${mode}" == "checkout" ]; then
-			einfo "Running $cmdcheckout" 
+			einfo "Running $cmdcheckout"
 			eval $cmdcheckout|| die "cvs checkout command failed"
 		fi
 	elif [ "${ECVS_AUTH}" == "ext" ] || [ "${ECVS_AUTH}" == "no" ]; then
@@ -415,7 +414,7 @@ EOF
 			echo "os.execv('/usr/bin/ssh', newarglist)" \
 				>> "${CVS_RSH}"
 
-            chmod a+x "${CVS_RSH}"
+			chmod a+x "${CVS_RSH}"
 
 			# Make sure DISPLAY is set (SSH will not use SSH_ASKPASS
 			# if DISPLAY is not set)
@@ -425,7 +424,7 @@ EOF
 
 			# Create a dummy executable to echo $ECVS_PASS
 
-            export SSH_ASKPASS="${T}/cvs_sshechopass"
+			export SSH_ASKPASS="${T}/cvs_sshechopass"
 			if [ "${ECVS_AUTH}" != "no" ]; then
 				echo -en "#!/bin/bash\necho \"$ECVS_PASS\"\n" \
 					> "${SSH_ASKPASS}"
@@ -436,15 +435,15 @@ EOF
 			fi
 			chmod a+x "${SSH_ASKPASS}"
 		fi
-            
+
 		if [ "${mode}" == "update" ]; then
 			einfo "Running $cmdupdate"
 			eval $cmdupdate || die "cvs update command failed"
 		elif [ "${mode}" == "checkout" ]; then
-			einfo "Running $cmdcheckout" 
+			einfo "Running $cmdcheckout"
 			eval $cmdcheckout|| die "cvs checkout command failed"
 		fi
-		
+
 		# Restore environment variable values
 		export CVS_RSH="${CVS_ECLASS_ORIG_CVS_RSH}"
 		if [ "${CVS_ECLASS_ORIG_SSH_ASKPASS+set}" == "set" ]; then
@@ -545,7 +544,7 @@ cvs_src_unpack() {
 		# e.g. kde-source_src_unpack
 		export PATCHES=""
 	fi
-	
+
 	einfo "CVS module ${ECVS_MODULE} is now in ${WORKDIR}"
 }
 

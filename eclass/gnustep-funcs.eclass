@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.9 2005/07/10 18:52:04 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.10 2005/07/11 15:08:06 swegener Exp $
 
 inherit toolchain-funcs eutils
 
@@ -73,7 +73,7 @@ egnustep_env() {
 	GNUSTEP_SYSTEM_ROOT="$(egnustep_prefix)/System"
 	if [ -f ${GNUSTEP_SYSTEM_ROOT}/Library/Makefiles/GNUstep.sh ] ; then
 		. ${GNUSTEP_SYSTEM_ROOT}/Library/Makefiles/GNUstep-reset.sh
-		if [ -f /etc/conf.d/gnustep.env ]; then 
+		if [ -f /etc/conf.d/gnustep.env ]; then
 			. /etc/conf.d/gnustep.env
 		else
 			GNUSTEP_SYSTEM_ROOT="/usr/GNUstep/System"
@@ -85,7 +85,7 @@ egnustep_env() {
 		__GS_NETWORK_ROOT=${GNUSTEP_NETWORK_ROOT}
 		__GS_USER_ROOT=${GNUSTEP_USER_ROOT}
 		__GS_USER_ROOT_SUFFIX=$(dirname ${GNUSTEP_USER_ROOT#*$USER}/prune)/
-		
+
 		# "gs_prefix" is the prefix that GNUstep is installed into, e.g.
 		#  gs_prefix=/usr/GNUstep => GNUSTEP_SYSTEM_ROOT=${gs_prefix}/System
 		local gs_prefix=`egnustep_prefix`
@@ -190,7 +190,7 @@ egnustep_package_config_info() {
 	if [ -f ${FILESDIR}/config-${PN}.sh ]; then
 		einfo "Make sure to set happy defaults for this package by executing:"
 		einfo "  `egnustep_install_domain`/Tools/Gentoo/config-${PN}.sh"
-		einfo "as the user you will run the package as." 
+		einfo "as the user you will run the package as."
 	fi
 }
 
@@ -334,4 +334,3 @@ ffi_not_available_info() {
 }
 
 ###########################################################################
-

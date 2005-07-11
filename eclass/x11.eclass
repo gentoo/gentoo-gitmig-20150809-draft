@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.7 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.8 2005/07/11 15:08:07 swegener Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -11,7 +11,7 @@
 # the USE variable "expertxfree" is switched on, at least for xfree.
 
 
-vcards() {	
+vcards() {
 	has "$1" ${VIDEO_CARDS} && return 0
 	return 1
 }

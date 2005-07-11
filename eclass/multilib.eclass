@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.29 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.30 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -192,7 +192,7 @@ get_abi_FAKE_TARGETS() { get_abi_var FAKE_TARGETS "${@}"; }
 get_abi_CDEFINE() { get_abi_var CDEFINE "${@}"; }
 get_abi_LIBDIR() { get_abi_var LIBDIR "${@}"; }
 
-# Return a list of the ABIs we want to install for with 
+# Return a list of the ABIs we want to install for with
 # the last one in the list being the default.
 get_install_abis() {
 	local order=""
@@ -202,7 +202,7 @@ get_install_abis() {
 		return 0
 	fi
 
-	if hasq multilib-pkg-force ${RESTRICT} || 
+	if hasq multilib-pkg-force ${RESTRICT} ||
 	   { hasq multilib-pkg ${FEATURES} && hasq multilib-pkg ${RESTRICT}; }; then
 		for x in ${MULTILIB_ABIS}; do
 			if [ "${x}" != "${DEFAULT_ABI}" ]; then
@@ -463,7 +463,7 @@ create_ml_includes-tidy_path() {
 
 		# Remove trailing /
 		[ "${removed##*/}" = "" ] && removed=${removed%/*}
-		
+
 		echo ${removed}
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.74 2005/07/11 08:11:41 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.75 2005/07/11 15:08:06 swegener Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -34,7 +34,7 @@ if [ "${PHPSAPI}" != "cli" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.2-fopen-url-secure.patch"
 fi
 
-# Patch for bug 50991, 49420 
+# Patch for bug 50991, 49420
 # Make sure the correct include_path is used.
 SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.6-includepath.diff http://dev.gentoo.org/~robbat2/distfiles/php-4.3.6-includepath.diff"
 
@@ -65,10 +65,10 @@ esac
 # we need db-1.* for ndbm
 # and then either of db3 or db4
 IUSE="${IUSE} berkdb"
-RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1* 
-							  || ( >=sys-libs/db-4.0.14-r2 
+RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1*
+							  || ( >=sys-libs/db-4.0.14-r2
 								   >=sys-libs/db-3.2.9-r9
-							     ) 
+							     )
 							)"
 
 # Everything is in this list is dynamically linked agaist or needed at runtime
@@ -77,49 +77,47 @@ RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1*
 # 2004/03/28 - stuart - added dependency on the php manual snapshot
 
 RDEPEND="${RDEPEND}
-   >=sys-libs/cracklib-2.7-r8
-   app-arch/bzip2
-   X? ( virtual/x11 )
-   crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
-   curl? ( >=net-misc/curl-7.10.2 )
-   x86? ( firebird? ( >=dev-db/firebird-1.0 ) )
-   freetds? ( >=dev-db/freetds-0.53 )
-   gd-external? ( media-libs/gd >=media-libs/jpeg-6b 
-                  >=media-libs/libpng-1.2.5 )
-   gd? ( >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
-   gdbm? ( >=sys-libs/gdbm-1.8.0 )
-   !alpha? ( !amd64? ( java? ( =virtual/jdk-1.4* dev-java/java-config ) ) )
-   jpeg? ( >=media-libs/jpeg-6b )
-   ldap? ( >=net-nds/openldap-1.2.11 )
-   mysql? ( >=dev-db/mysql-3.23.26 )
-   nls? ( sys-devel/gettext )
-   odbc? ( >=dev-db/unixODBC-1.8.13 )
-   pam? ( >=sys-libs/pam-0.75 )
-   pdflib? ( =media-libs/pdflib-5* >=media-libs/jpeg-6b 
-             >=media-libs/libpng-1.2.5 >=media-libs/tiff-3.5.5 )
-   png? ( >=media-libs/libpng-1.2.5 )
-   postgres? ( >=dev-db/postgresql-7.1 )
-   qt? ( >=x11-libs/qt-2.3.0 )
-   snmp? ( net-analyzer/net-snmp )
-   spell? ( app-text/aspell )
-   ssl? ( >=dev-libs/openssl-0.9.5 )
-   tiff? ( >=media-libs/tiff-3.5.5 )
-   xml2? ( dev-libs/libxml2 >=dev-libs/libxslt-1.0.30 )
-   truetype? ( =media-libs/freetype-2* =media-libs/freetype-1* 
-               media-libs/t1lib )
-   >=net-libs/libwww-5.3.2
-   >=app-text/sablotron-0.97
-   dev-libs/expat
-   sys-libs/zlib 
-   virtual/mta
-   >=sys-apps/file-4.02
-   yaz? ( dev-libs/yaz )
-   doc? ( app-doc/php-docs )
-   gmp? ( dev-libs/gmp )
-   mssql? ( dev-db/freetds )
-   kerberos? ( virtual/krb5 )
-   "
-
+	>=sys-libs/cracklib-2.7-r8
+	app-arch/bzip2
+	X? ( virtual/x11 )
+	crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
+	curl? ( >=net-misc/curl-7.10.2 )
+	x86? ( firebird? ( >=dev-db/firebird-1.0 ) )
+	freetds? ( >=dev-db/freetds-0.53 )
+	gd-external? ( media-libs/gd >=media-libs/jpeg-6b
+		>=media-libs/libpng-1.2.5 )
+	gd? ( >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	!alpha? ( !amd64? ( java? ( =virtual/jdk-1.4* dev-java/java-config ) ) )
+	jpeg? ( >=media-libs/jpeg-6b )
+	ldap? ( >=net-nds/openldap-1.2.11 )
+	mysql? ( >=dev-db/mysql-3.23.26 )
+	nls? ( sys-devel/gettext )
+	odbc? ( >=dev-db/unixODBC-1.8.13 )
+	pam? ( >=sys-libs/pam-0.75 )
+	pdflib? ( =media-libs/pdflib-5* >=media-libs/jpeg-6b
+		>=media-libs/libpng-1.2.5 >=media-libs/tiff-3.5.5 )
+	png? ( >=media-libs/libpng-1.2.5 )
+	postgres? ( >=dev-db/postgresql-7.1 )
+	qt? ( >=x11-libs/qt-2.3.0 )
+	snmp? ( net-analyzer/net-snmp )
+	spell? ( app-text/aspell )
+	ssl? ( >=dev-libs/openssl-0.9.5 )
+	tiff? ( >=media-libs/tiff-3.5.5 )
+	xml2? ( dev-libs/libxml2 >=dev-libs/libxslt-1.0.30 )
+	truetype? ( =media-libs/freetype-2* =media-libs/freetype-1*
+		media-libs/t1lib )
+	>=net-libs/libwww-5.3.2
+	>=app-text/sablotron-0.97
+	dev-libs/expat
+	sys-libs/zlib
+	virtual/mta
+	>=sys-apps/file-4.02
+	yaz? ( dev-libs/yaz )
+	doc? ( app-doc/php-docs )
+	gmp? ( dev-libs/gmp )
+	mssql? ( dev-db/freetds )
+	kerberos? ( virtual/krb5 )"
 
 # USE structure doesn't support ~x86
 #if hasq '~x86' $ACCEPT_KEYWORDS; then
@@ -128,8 +126,8 @@ RDEPEND="${RDEPEND}
 #fi
 
 # libswf is ONLY available on x86
-RDEPEND="${RDEPEND} flash? ( 
-		x86? ( media-libs/libswf ) 
+RDEPEND="${RDEPEND} flash? (
+		x86? ( media-libs/libswf )
 		>=media-libs/ming-0.2a )"
 
 #The new XML extension in PHP5 requires libxml2-2.5.10
@@ -156,7 +154,7 @@ DEPEND="${DEPEND} !dev-libs/9libs"
 DEPEND="${DEPEND} !dev-libs/libiconv"
 
 #Waiting for somebody to want this:
-#cyrus? ( net-mail/cyrus-imapd net-mail/cyrus-imap-admin dev-libs/cyrus-imap-dev ) 
+#cyrus? ( net-mail/cyrus-imapd net-mail/cyrus-imap-admin dev-libs/cyrus-imap-dev )
 
 # this is because dev-php/php provides all of the PEAR stuff and some other
 # required odds and ends, and only as of this version number.
@@ -218,7 +216,7 @@ php-sapi_check_java_config() {
 		eerror
 		eerror "PHP will not build using the Kaffe Java Virtual Machine."
 		eerror "Please change your JVM to either Blackdown or Sun's."
-		eerror 
+		eerror
 		eerror "To build PHP without Java support, please re-run this emerge"
 		eerror "and place the line:"
 		eerror "  USE='-java'"
@@ -245,7 +243,7 @@ php-sapi_src_unpack() {
 	# ( ewarn "You have the xml USE flag turned off. Previously this"
 	#   ewarn "disabled XML support in PHP. However PEAR has a hard"
 	#   ewarn "dependancy on it, so they are now enabled." )
-	
+
 	if use fdftk; then
 		has_version app-text/fdftk || \
 		die "app-text/fdftk is required for FDF support! Portage isn't up to the DEPEND structure for it yet"
@@ -262,7 +260,7 @@ php-sapi_src_unpack() {
 	uclibctoolize
 
 	# no longer needed and breaks pear - Tal, 20031223
-	
+
 	# fix PEAR installer for our packaging
 	# we keep a backup of it as we need it at the end of the install
 	#cp pear/PEAR/Registry.php pear/PEAR/Registry.old
@@ -327,13 +325,13 @@ php-sapi_src_compile() {
 	use X && myconf="${myconf} --with-xpm-dir=/usr/X11R6" LDFLAGS="${LDFLAGS} -L/usr/X11R6/lib"
 	myconf="${myconf} `use_with gmp`"
 	myconf="${myconf} `use_with mssql mssql /usr`"
-	
+
 	# This chunk is intended for png/tiff/jpg, as there are several things that need them, indepentandly!
 	REQUIREPNG=
 	REQUIREJPG=
 	REQUIRETIFF=
 	if use pdflib; then
-		myconf="${myconf} --with-pdflib=/usr" 
+		myconf="${myconf} --with-pdflib=/usr"
 		REQUIREPNG=1 REQUIREJPG=1 REQUIRETIFF=1
 	else
 		myconf="${myconf} --without-pdflib"
@@ -358,17 +356,17 @@ php-sapi_src_compile() {
 	use jpeg && REQUIREJPG=1
 	use tiff && REQUIRETIFF=1
 	if [ -n "${REQUIREPNG}" ]; then
-		myconf="${myconf} --with-png=/usr --with-png-dir=/usr" 
+		myconf="${myconf} --with-png=/usr --with-png-dir=/usr"
 	else
 		myconf="${myconf} --without-png"
 	fi
 	if [ -n "${REQUIREJPG}" ]; then
-		myconf="${myconf} --with-jpeg=/usr --with-jpeg-dir=/usr --enable-exif" 
+		myconf="${myconf} --with-jpeg=/usr --with-jpeg-dir=/usr --enable-exif"
 	else
-		myconf="${myconf} --without-jpeg" 
+		myconf="${myconf} --without-jpeg"
 	fi
 	if [ -n "${REQUIRETIFF}" ]; then
-		myconf="${myconf} --with-tiff=/usr --with-tiff-dir=/usr" 
+		myconf="${myconf} --with-tiff=/usr --with-tiff-dir=/usr"
 		LDFLAGS="${LDFLAGS} -ltiff"
 	else
 		myconf="${myconf} --without-tiff"
@@ -426,14 +424,14 @@ php-sapi_src_compile() {
 		ewarn "Skipping IMAP-SSL support."
 	fi
 
-	
+
 	# These were previously optional, but are now included directly as PEAR needs them.
 	# Zlib is needed for XML
 	myconf="${myconf} --with-zlib=/usr --with-zlib-dir=/usr"
 	LIBS="${LIBS} -lxmlparse -lxmltok"
 	myconf="${myconf} --with-sablot=/usr"
-	myconf="${myconf} --enable-xslt" 
-	myconf="${myconf} --with-xslt-sablot" 
+	myconf="${myconf} --enable-xslt"
+	myconf="${myconf} --with-xslt-sablot"
 	myconf="${myconf} --with-xmlrpc"
 	myconf="${myconf} --enable-wddx"
 	myconf="${myconf} --with-xml"
@@ -453,7 +451,7 @@ php-sapi_src_compile() {
 	myconf="${myconf} --with-crack=/usr"
 	# DEPEND - nothing
 	myconf="${myconf} --with-cdb"
-	
+
 	# No DEPENDancies
 	myconf="${myconf} --enable-pcntl"
 	myconf="${myconf} --enable-bcmath"
@@ -495,7 +493,7 @@ php-sapi_src_compile() {
 
 	einfo "Using INI file: ${PHPINIDIRECTORY}/${PHPINIFILENAME}"
 	myconf="${myconf} \
-		--with-config-file-path=${PHPINIDIRECTORY}" 
+		--with-config-file-path=${PHPINIDIRECTORY}"
 
 	myconf="${myconf} --libdir=/usr/${libdir}/php"
 
@@ -521,7 +519,7 @@ php-sapi_src_compile() {
 	filter-flags "-D_LARGEFILE_SOURCE"
 
 	#fixes bug #14067
-	# changed order to run it in reverse for bug #32022 and #12021 
+	# changed order to run it in reverse for bug #32022 and #12021
 	replace-flags "-march=k6-3" "-march=i586"
 	replace-flags "-march=k6-2" "-march=i586"
 	replace-flags "-march=k6" "-march=i586"
@@ -563,7 +561,7 @@ php-sapi_src_install() {
 
 	# get the extension dir
 	PHPEXTDIR="`${D}/usr/bin/php-config.${PN} --extension-dir`"
-	
+
 	for doc in LICENSE EXTENSIONS CREDITS INSTALL README.* TODO* NEWS; do
 		[ -s "$doc" ] && dodoc $doc
 	done
@@ -604,7 +602,7 @@ php-sapi_src_install() {
 		patch ${phpinisrc} <${DISTDIR}/php-4.3.2-fopen-url-secure.patch
 	fi
 
-	# Patch for bug 50991, 49420 
+	# Patch for bug 50991, 49420
 	# Make sure the correct include_path is used.
 	einfo "Setting correct include_path"
 	patch ${phpinisrc} <${DISTDIR}/php-4.3.6-includepath.diff

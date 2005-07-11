@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.17 2005/07/06 20:23:20 agriffis Exp $
-# 
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.18 2005/07/11 15:08:06 swegener Exp $
+#
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
 #
 # functions to make ebuilds more ccc friendly.
-# 
+#
 # 16/6/2003 - Added otsify()
 # 18/6/2003 - regex tweaks.
 # 22/7/2003 - newdepend
@@ -23,9 +23,9 @@ inherit flag-o-matic
 # supported equivalent.
 #
 # you might see an error like this if you need this:
-# 	
-# 	cc: Error: regexec.c, line 209: In the definition of the function "regexec", 
-# 	the promoted type of pmatch is incompatible with the type of the corresponding 
+#
+# 	cc: Error: regexec.c, line 209: In the definition of the function "regexec",
+# 	the promoted type of pmatch is incompatible with the type of the corresponding
 # 	parameter in a prior declaration. (promotmatch)
 # 	    regmatch_t pmatch[];
 # 	    ---------------^
@@ -42,12 +42,12 @@ inherit flag-o-matic
 # example:
 #
 # 	is-ccc && hide-restrict-arr
-# 	
+#
 #### is-cxx ####
 # Returns success if dec c++ compiler is being used.
 #
 #### replace-ccc-g ####
-# Try to replace -g with -g3 
+# Try to replace -g with -g3
 #
 #### ccc-elf-check </path/to/binary> ####
 # Return success if binary was compiled with ccc
@@ -62,16 +62,16 @@ inherit flag-o-matic
 # 		is pretty safe, but the archive detection may not
 # 		be as reliable.
 #### create-so </usr/lib/library.a> <library.so> ####
-# Make the shared library (.so) specified from the archive (.a) 
-# specified. LDFLAGS will be honoured. if you need a different 
-# `soname` (DT_SONAME) from the shared lib filename, you will have 
+# Make the shared library (.so) specified from the archive (.a)
+# specified. LDFLAGS will be honoured. if you need a different
+# `soname` (DT_SONAME) from the shared lib filename, you will have
 # to do it manually ;)
 #
 # example:
 # 	is-ccc && \
 # 		create-so /usr/lib/libcoolstuff.a libcoolstuff.so.${PV}
 # 	dosym /usr/lib/libcoolstuff.so.${PV} /usr/lib/libcoolstuff.so
-#	
+#
 # NOTE: -lots will be used by default, this is ccc.eclass after all :)
 # NOTE: .${PV} is optional, of course.
 # NOTE: dolib.so will manage installation
@@ -98,19 +98,19 @@ inherit flag-o-matic
 
 ccc-fixup()
 {
-	# helper function to fixup files                                                              
-	# and show differences when debugging                                                         
+	# helper function to fixup files
+	# and show differences when debugging
 	#
 	# store the backup suffix.
-	local files list suffix=ccc-fixup-${$} 
-	
+	local files list suffix=ccc-fixup-${$}
+
 	while read files
 	do
 		sed --in-place=.${suffix} ${1} ${files} || return 1
 		list="${list} ${files}"
 	done
-	
-	[ ! "$DEBUG_CCC_ECLASS" ] && return 0	
+
+	[ ! "$DEBUG_CCC_ECLASS" ] && return 0
 	# if theres a backup, diff it.
 	for i in ${list}
 	do
@@ -129,7 +129,7 @@ hide-restrict-arr()
 	#
 	# example:
 	#           regmatch_t __pmatch[__restrict_arr]
-	#           
+	#
 
 	find ${WORKDIR} -iname '*.h' | \
 		xargs | ccc-fixup 's#\(\[__restrict\)_arr\]#\1\]#g'
@@ -189,7 +189,7 @@ ccc-elf-check()
 		grep -E '^\ [0-9]{2,}\ .note\ ' | \
 			awk '{print $6,$3}' | \
 			line`
-		# check if that got anything. 
+		# check if that got anything.
 		[ ! "${elf_note_offset}" ] && return 1
 		# dump contents of section, and check for compaq signature.
 		hexdump -s 0x${elf_note_offset% *} -n $((0x${elf_note_offset#* })) -e '"%_p"' ${myBINARY} | \
@@ -217,7 +217,7 @@ create-so()
 		${LD:-ld} -shared -o ${T}/${2##*/} -soname `basename ${2/${so_version}}` \
 				-whole-archive ${1} -no-whole-archive -lots ${LDFLAGS}
 	fi
-	# hand installation over to dolib.so 
+	# hand installation over to dolib.so
 	dolib.so ${T}/${2##*/}
 }
 
@@ -227,7 +227,7 @@ append-ldflags()
 }
 
 # flag-o-matic clone
-# 
+#
 #is-ldflags()
 #{
 #	for x in ${LDFLAGS}
@@ -262,29 +262,29 @@ filter-ldflags()
 otsify()
 {
 	[ "$DEBUG_CCC_ECLASS" ] && local ar_args="v"
-	
+
 	# confirm argument exists, and is an archive (eg *.a)
-	# if it is, extract libots members into tempdir, then 
+	# if it is, extract libots members into tempdir, then
 	# append them to argument, regenerate index and then return.
-	
+
 	if [ "${1##*.}" == "a" ] && [ -f "${1}" ]; then
 		einfo "otsifying `basename ${1}` ..."
-		
+
 		mkdir ${T}/ccc-otsify-${$}
 		cd ${T}/ccc-otsify-${$}
-		
+
 		einfo "	extracting archive members from libots ..."
 		ar ${ar_args}x /usr/lib/libots.a || {
 			eerror "	unable to extract libots members."
 			return 1
 		}
-		
+
 		einfo "	appending libots members to `basename ${1}` ..."
 		ar ${ar_args}q ${1} ${T}/ccc-otsify-${$}/*.o || {
 			eerror "	failed to append libots members to ${1}."
 			return 1
 		}
-		
+
 		einfo  "	regenerating `basename ${1}` archive index ..."
 		ranlib ${1} || ewarn "	ranlib returned an error, probably not important."
 		einfo "otsification completed succesfully."

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.49 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.50 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -86,7 +86,7 @@ ELT_walk_patches() {
 			if [[ -n ${x} && -f ${x} ]] ; then
 				local ltver=$(VER_to_int "${version}")
 				local ptver=$(VER_to_int "${x##*/}")
-				
+
 				# If libtool version smaller than patch version, skip patch.
 				[[ ${ltver} -lt ${ptver} ]] && continue
 				# For --remove-internal-dep ...

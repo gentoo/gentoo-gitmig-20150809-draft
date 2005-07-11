@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.8 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
 
 inherit games
 
@@ -147,6 +147,6 @@ cat << EOF > ${T}/et-${MOD_NAME}-ded.conf.d
 $(<${PORTDIR}/header.txt)
 
 # Any extra options you want to pass to the dedicated server
-${MOD_NAME}_OPTS="+set com_hunkmegs 64 +set com_zonemegs 32" 
+${MOD_NAME}_OPTS="+set com_hunkmegs 64 +set com_zonemegs 32"
 EOF
 }

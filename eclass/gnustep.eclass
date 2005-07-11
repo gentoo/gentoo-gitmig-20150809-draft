@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.31 2005/07/10 18:52:04 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.32 2005/07/11 15:08:06 swegener Exp $
 
 inherit gnustep-funcs eutils flag-o-matic
 
@@ -15,10 +15,7 @@ DESCRIPTION="EClass designed to facilitate building GNUstep Apps, Frameworks, an
 # ##### Set the next USE flags ***per ebuild*** in IUSE, ***not here***
 # "doc" - set in ebuild that inherits to enable doc specific code in eclass
 IUSE="debug profile verbose"
-if use debug; then
-	RESTRICT="nostrip"
-fi
-if use profile; then
+if use debug || use profile; then
 	RESTRICT="nostrip"
 fi
 ###########################################################################
@@ -91,9 +88,9 @@ gnustep_pkg_setup() {
 		#  as well as having less specific -march options
 		replace-flags -march=pentium-m -march=pentium3
 		filter-flags -march=k8
-    	filter-flags -march=athlon64
-	    filter-flags -march=opteron
-		
+		filter-flags -march=athlon64
+		filter-flags -march=opteron
+
 		strip-unsupported-flags
 	elif test_version_info 3.4
 	then
@@ -126,4 +123,3 @@ gnustep_pkg_postinst() {
 ###########################################################################
 
 EXPORT_FUNCTIONS pkg_setup src_compile src_install pkg_postinst
-

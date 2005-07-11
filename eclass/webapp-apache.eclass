@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.24 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.25 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
-# 
+#
 # Based on discussions held on gentoo-dev mailing list, and a bug report
-# contributed by Ian Leitch <port001@w0r.mine.nu> in bug #14870, 
+# contributed by Ian Leitch <port001@w0r.mine.nu> in bug #14870,
 # and robbat2's mod_php ebuild
 #
 # This package will be offically depreciated when vhost-config and
@@ -36,8 +36,8 @@ function webapp-apache-detect ()
 	fi
 
 	APACHECONF="/etc/apache${CONFVER}/conf/apache${CONFVER}.conf"
-    APACHECONF_COMMON="/etc/apache${CONFVER}/conf/commonapache${CONFVER}.conf"
-    APACHECONF_DIR="/etc/apache${CONFVER}/conf/"
+	APACHECONF_COMMON="/etc/apache${CONFVER}/conf/commonapache${CONFVER}.conf"
+	APACHECONF_DIR="/etc/apache${CONFVER}/conf/"
 	WEBAPP_SERVER="Apache v${APACHEVER}"
 }
 
@@ -47,7 +47,7 @@ function webapp-detect () {
 	webapp-apache-detect || return 1
 	webapp-determine-installowner
 	webapp-determine-htdocsdir
-    webapp-determine-cgibindir
+	webapp-determine-cgibindir
 
 	# explicit return here to ensure the return code
 	# from webapp-determine-cgibindir above isn't returned instead
@@ -57,7 +57,7 @@ function webapp-detect () {
 
 function webapp-mkdirs () {
 	webapp-determine-htdocsdir
-    webapp-determine-cgibindir
+	webapp-determine-cgibindir
 
 	keepdir "$HTTPD_ROOT"
 	fowners "$HTTPD_USER":"$HTTPD_GROUP" "$HTTPD_ROOT"
@@ -81,8 +81,8 @@ function webapp-determine-htdocsdir ()
 
 function webapp-determine-cgibindir ()
 {
-    #HTTPD_CGIBIN="`grep 'ScriptAlias /cgi-bin/' ${APACHECONF_COMMON} | cut -d ' ' -f 7`"
-    #[ -z "${HTTPD_CGIBIN}" ] && HTTPD_CGIBIN="/home/httpd/cgi-bin/"
+	#HTTPD_CGIBIN="`grep 'ScriptAlias /cgi-bin/' ${APACHECONF_COMMON} | cut -d ' ' -f 7`"
+	#[ -z "${HTTPD_CGIBIN}" ] && HTTPD_CGIBIN="/home/httpd/cgi-bin/"
 	# temporary fix for webapps
 	HTTPD_CGIBIN="/var/www/localhost/cgi-bin/"
 }

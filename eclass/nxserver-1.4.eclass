@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.4.eclass,v 1.7 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.4.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -17,21 +17,19 @@ SLOT="0"
 RESTRICT="nomirror strip"
 
 SRC_URI="nxserver-${MY_PV}.i386.rpm"
-DEPEND="$DEPEND
-        >=sys-apps/shadow-4.0.3-r6
-		>=net-misc/openssh-3.6.1_p2
-		=net-misc/nxssh-1.4*
-		=net-misc/nxproxy-1.4*
-		=net-misc/nxclient-1.4*
-		=net-misc/nx-x11-1.4*"
+DEPEND=">=sys-apps/shadow-4.0.3-r6
+	>=net-misc/openssh-3.6.1_p2
+	=net-misc/nxssh-1.4*
+	=net-misc/nxproxy-1.4*
+	=net-misc/nxclient-1.4*
+	=net-misc/nx-x11-1.4*"
 
-RDEPEND="$RDEPEND
-	     >=media-libs/jpeg-6b-r3
-         >=sys-libs/glibc-2.3.2-r1
-		 >=sys-libs/zlib-1.1.4-r1
-		 virtual/x11
-		 >=net-misc/openssh-3.6.1_p2
-		 >=dev-lang/perl-5.8.0-r12"
+RDEPEND=">=media-libs/jpeg-6b-r3
+	>=sys-libs/glibc-2.3.2-r1
+	>=sys-libs/zlib-1.1.4-r1
+	virtual/x11
+	>=net-misc/openssh-3.6.1_p2
+	>=dev-lang/perl-5.8.0-r12"
 
 S="${WORKDIR}"
 
@@ -68,7 +66,7 @@ nxserver_src_install() {
 	done
 
 	# remove libraries installed by other packages
-	for x in usr/NX/lib/*.so.* ; do 
+	for x in usr/NX/lib/*.so.* ; do
 		if [ -f $x ]; then
 			rm -f $x
 		fi

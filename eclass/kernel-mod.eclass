@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.12 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.13 2005/07/11 15:08:06 swegener Exp $
 
 # This eclass provides help for compiling external kernel modules from
 # source.
@@ -85,7 +85,7 @@ kernel-mod_getversion ()
 
 kernel-mod_configoption_present ()
 {
-        [ -e "${KERNEL_DIR}/.config" ] || die "kernel has not been configured yet"
+	[ -e "${KERNEL_DIR}/.config" ] || die "kernel has not been configured yet"
 
 	if egrep "^CONFIG_${1}=[ym]" ${ROOT}/usr/src/linux/.config >/dev/null
 	then
@@ -161,7 +161,7 @@ kernel-mod_checkzlibinflate_configured ()
 	LINENO_START="`head -n $LINENO_END ${KERNEL_DIR}/lib/Config.in | grep -n 'if \[' | tail -n 1 | cut -d : -f 1`"
 	(( LINENO_AMOUNT = $LINENO_END - $LINENO_START ))
 	(( LINENO_END = $LINENO_END - 1 ))
-	
+
 	SYMBOLS="`head -n $LINENO_END ${KERNEL_DIR}/lib/Config.in | tail -n $LINENO_AMOUNT | sed -e 's/^.*\(CONFIG_[^\" ]*\).*/\1/g;'`"
 
 	# okay, now we have a list of symbols
@@ -208,34 +208,34 @@ kernel-mod_src_compile ()
 kernel-mod_is_2_4_kernel() {
 	kernel-mod_getversion
 
-    if [ "${KV_MAJOR}" -eq 2 -a "${KV_MINOR}" -eq 4 ]
-    then
-        return 0
-    else
-        return 1
-    fi
+	if [ "${KV_MAJOR}" -eq 2 -a "${KV_MINOR}" -eq 4 ]
+	then
+		return 0
+	else
+		return 1
+	fi
 }
 
 kernel-mod_is_2_5_kernel() {
 	kernel-mod_getversion
 
-    if [ "${KV_MAJOR}" -eq 2 -a "${KV_MINOR}" -eq 5 ]
-    then
-        return 0
-    else
-        return 1
-    fi
+	if [ "${KV_MAJOR}" -eq 2 -a "${KV_MINOR}" -eq 5 ]
+	then
+		return 0
+	else
+		return 1
+	fi
 }
 
 kernel-mod_is_2_6_kernel() {
 	kernel-mod_getversion
 
-    if [ "${KV_MAJOR}" -eq 2 -a "${KV_MINOR}" -eq 6 ]
-    then
-        return 0
-    else
-        return 1
-    fi
+	if [ "${KV_MAJOR}" -eq 2 -a "${KV_MINOR}" -eq 6 ]
+	then
+		return 0
+	else
+		return 1
+	fi
 }
 
 EXPORT_FUNCTIONS src_compile

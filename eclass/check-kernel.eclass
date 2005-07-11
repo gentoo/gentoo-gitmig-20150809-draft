@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-kernel.eclass,v 1.7 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-kernel.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
 
 # Author: Martin Schlemmer <azarah@gentoo.org>
 # Eclass'd by: Seemant Kulleen <seemant@gentoo.org>
@@ -37,7 +37,7 @@ get_KV_info() {
 
 is_2_4_kernel() {
 	get_KV_info
-	
+
 	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 4 ]
 	then
 		return 0
@@ -48,7 +48,7 @@ is_2_4_kernel() {
 
 is_2_5_kernel() {
 	get_KV_info
-	
+
 	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
 	then
 		return 0

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.10 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.11 2005/07/11 15:08:06 swegener Exp $
 
 # Author Diego Pettenò <flameeyes@gentoo.org>
 # Maintained by wxwidgets herd
@@ -38,7 +38,7 @@ S=${WORKDIR}/wxWidgets-${PV}
 # $3: all the extra parameters to pass to configure script
 configure_build() {
 	export LANG='C'
-	
+
 	mkdir ${S}/$1_build
 	cd ${S}/$1_build
 	# odbc works with ansi only:
@@ -69,7 +69,7 @@ configure_build() {
 subconfigure() {
 	debug_conf=""
 	if use debug; then
-		debug_conf="--enable-debug --enable-debug_gdb"	
+		debug_conf="--enable-debug --enable-debug_gdb"
 	fi
 	${S}/configure \
 		--host=${CHOST} \

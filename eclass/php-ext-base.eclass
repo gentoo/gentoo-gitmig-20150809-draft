@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.18 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.19 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -28,7 +28,7 @@ EXPORT_FUNCTIONS src_install
 [ -z "$PHP_EXT_INI" ] && PHP_EXT_INI="yes"
 
 # find out where to install extensions
-EXT_DIR="`php-config --extension-dir 2>/dev/null`" 
+EXT_DIR="`php-config --extension-dir 2>/dev/null`"
 
 # ---end ebuild configurable settings
 
@@ -46,7 +46,7 @@ php-ext-base_buildinilist () {
 	if [ -z "${PHPSAPILIST}" ]; then
 		PHPSAPILIST="apache1 apache2 cli cgi"
 	fi
-	
+
 	PHPINIFILELIST=
 
 	for x in ${PHPSAPILIST} ; do
@@ -58,7 +58,7 @@ php-ext-base_buildinilist () {
 			PHPINIFILELIST="${PHPINIFILELIST} etc/php/${x}-php5/php.ini"
 		fi
 	done
-	
+
 	if [ "${PHPINIFILELIST}+" = "+" ] ; then
 		# backwards support for the old location
 
@@ -94,7 +94,7 @@ php-ext-base_addextension () {
 
 	php-ext-base_addtoinifiles "$ext_type" "$ext_file" "Extension added"
 }
-	
+
 php-ext-base_setting_is_present () {
 	grep "^$1=$2" /$3 > /dev/null 2>&1
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.18 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.19 2005/07/11 15:08:06 swegener Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -58,8 +58,7 @@ SRC_URI="${SOURCE_SERVER}/${MY_P}.tar.gz
 S=${WORKDIR}/${MY_P}
 
 # Make sure we're building with the same version.
-DEPEND="${DEPEND}
-	=dev-dotnet/${MY_P}*
+DEPEND="=dev-dotnet/${MY_P}*
 	sys-devel/automake
 	sys-devel/autoconf
 	>=sys-apps/sed-4"
@@ -109,7 +108,6 @@ gtk-sharp-component_fix_makefiles() {
 	fi
 }
 
-	
 gtk-sharp-component_src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -134,12 +132,12 @@ gtk-sharp-component_src_unpack() {
 	sed -i -e "s:sample::" ${S}/Makefile.in || die
 
 	cd ${S}/${GTK_SHARP_COMPONENT_BUILD_DIR}
-	
+
 	gtk-sharp-component_fix_makefiles
 }
 
 gtk-sharp-component_src_configure() {
-	
+
 	# disable any external plugin besides the plugin we want
 	local component deps gtk_sharp_conf
 

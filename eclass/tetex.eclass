@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.40 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.41 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -128,12 +128,12 @@ EOF
 				sed -i -e "/^HOMETEXMF/s:\$HOME/texmf:\$HOME/Library/texmf:" ${S}/texk/kpathsea/texmf.in || die "sed texmf.in failed."
 			fi
 			;;
-    		all)
-    			tetex_src_unpack unpack patch
+		all)
+			tetex_src_unpack unpack patch
 			;;
-    	esac
-    	shift
-    done
+	esac
+	shift
+	done
 }
 
 tetex_src_compile() {

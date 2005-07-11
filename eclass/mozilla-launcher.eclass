@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.8 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
 
 
 # update_mozilla_launcher_symlinks
@@ -64,7 +64,7 @@ install_mozilla_launcher_stub() {
 	dodir /usr/bin
 	cat <<EOF >${D}/usr/bin/${name}
 #!/bin/sh
-# 
+#
 # Stub script to run mozilla-launcher.  We used to use a symlink here
 # but OOo brokenness makes it necessary to use a stub instead:
 # http://bugs.gentoo.org/show_bug.cgi?id=78890

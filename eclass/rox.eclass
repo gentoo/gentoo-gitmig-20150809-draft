@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.5 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.6 2005/07/11 15:08:06 swegener Exp $
 
 # ROX eclass Version 2
 
@@ -40,7 +40,7 @@ rox_src_compile() {
 	#Some packages need to be compiled.
 	chmod 755 ./AppRun
 	if [ -d "src/" ]; then
-		./AppRun --compile || die "Failed to compile the package" 
+		./AppRun --compile || die "Failed to compile the package"
 		rm -rf src
 	fi
 }
@@ -53,7 +53,7 @@ rox_src_install() {
 	fi
 	insinto /usr/lib/rox
 	doins -r ${APPNAME}
-	#set correct permisions on files, in case they are wrong 
+	#set correct permisions on files, in case they are wrong
 	chmod 755 ${D}/usr/lib/rox/${APPNAME}/AppRun
 	chmod 755 ${D}/usr/lib/rox/${APPNAME}/AppletRun
 
@@ -78,7 +78,7 @@ rox_src_install() {
 	    case $ARCH in
 		i?86) ARCH=ix86 ;;
 	    esac
-	    PLATFORM="`uname -s`-$ARCH" 
+	    PLATFORM="`uname -s`-$ARCH"
 	    chmod -R 755 ${D}/usr/lib/rox/${APPNAME}/${PLATFORM}
 	fi
 

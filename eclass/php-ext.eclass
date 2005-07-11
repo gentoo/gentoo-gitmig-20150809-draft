@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.9 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.10 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -30,7 +30,7 @@ DEPEND="${DEPEND}
 		>=sys-devel/m4-1.4
 		>=sys-devel/libtool-1.4.3"
 
-RDEPEND="${RDEPEND} 
+RDEPEND="${RDEPEND}
 		 virtual/php"
 
 php-ext_buildinilist () {
@@ -39,7 +39,7 @@ php-ext_buildinilist () {
 	if [ -z "${PHPSAPILIST}" ]; then
 		PHPSAPILIST="apache1 apache2 cli"
 	fi
-	
+
 	PHPINIFILELIST=""
 
 	for x in ${PHPSAPILIST} ; do
@@ -47,7 +47,7 @@ php-ext_buildinilist () {
 			PHPINIFILELIST="${PHPINIFILELIST} /etc/php/${x}-php4/php.ini"
 		fi
 	done
-	
+
 	if [[ ${PHPINIFILELIST} = "" ]]; then
 		msg="No PHP ini files found for this extension"
 		eerror ${msg}
@@ -67,7 +67,7 @@ php-ext_src_compile() {
 
 php-ext_src_install() {
 	chmod +x build/shtool
-	#this will usually be /usr/lib/php/extensions/no-debug-no-zts-20020409/ 
+	#this will usually be /usr/lib/php/extensions/no-debug-no-zts-20020409/
 	#but i prefer not taking this risk
 	EXT_DIR="`php-config --extension-dir 2>/dev/null`"
 	insinto $EXT_DIR
@@ -103,7 +103,7 @@ php-ext_addextension () {
 		php-ext_addextensiontoinifile "$ext" "$1" "$x"
 	done
 }
-	
+
 php-ext_setting_is_present () {
 	grep "^$1=" $2 > /dev/null 2>&1
 }
@@ -124,5 +124,3 @@ php-ext_addtoinifiles () {
 		php-ext_addtoinifile $1 $2 $x
 	done
 }
-	
-

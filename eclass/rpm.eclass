@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.13 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.14 2005/07/11 15:08:06 swegener Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org> (21 Jun 2003)
 #
 # Convienence class for extracting RPMs
-# 
+#
 # Basically, rpm_src_unpack does:
 #
 # 1. uses rpm_unpack to unpack a rpm file using rpmoffset and cpio
@@ -21,11 +21,11 @@
 # it will use that instead of the less reliable rpmoffset. This means if a
 # particular rpm cannot be read using rpmoffset, you just need to put :
 #
-# DEPEND="app-arch/rpm" 
+# DEPEND="app-arch/rpm"
 #
 # in your ebuild and it will install and use rpm2cpio instead. If you wish
 # to force your ebuild to use rpmoffset in the presence of rpm2cpio, define:
-# 
+#
 # USE_RPMOFFSET_ONLY="1"
 
 
@@ -45,7 +45,7 @@ rpm_unpack() {
 	else
 		rpmoff=`rpmoffset < ${rpmfile}`
 		[ -z "${rpmoff}" ] && return 1
-		
+
 		decompcmd="gzip -dc"
 		if [ -n "`dd if=${rpmfile} skip=${rpmoff} bs=1 count=3 2>/dev/null | file - | grep bzip2`" ]; then
 			decompcmd="bzip2 -dc"
@@ -53,14 +53,14 @@ rpm_unpack() {
 		dd ibs=${rpmoff} skip=1 if=${rpmfile} 2> /dev/null \
 			| ${decompcmd} \
 			| cpio -idmu --no-preserve-owner --quiet || return 1
-	fi	
-	
+	fi
+
 	return 0
 }
 
 rpm_src_unpack() {
 	local x prefix ext myfail OLD_DISTDIR
-	
+
 	for x in ${A}; do
 		myfail="failure unpacking ${x}"
 		ext=${x##*.}
@@ -70,7 +70,7 @@ rpm_src_unpack() {
 			prefix=${x%.rpm}
 			cd ${WORKDIR}
 			rpm_unpack ${DISTDIR}/${x} || die "${myfail}"
-			
+
 			# find all tar.gz files and extract for srpms
 			if [ "${prefix##*.}" = "src" ]; then
 				OLD_DISTDIR=${DISTDIR}
@@ -84,14 +84,13 @@ rpm_src_unpack() {
 					rm -f ${t}
 				done
 				DISTDIR=${OLD_DISTDIR}
-			fi				
+			fi
 			;;
 		*)
 			unpack ${x}
 			;;
 		esac
 	done
-			
 }
 
 EXPORT_FUNCTIONS src_unpack

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.24 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.25 2005/07/11 15:08:06 swegener Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -34,7 +34,7 @@
 #
 # The eClass automatically takes care of rehashing TeX's cache (ls-lR) after
 # installation and after removal, as well as creating final documentation from
-# TeX files that come with the source.  Note that we break TeX layout standards 
+# TeX files that come with the source.  Note that we break TeX layout standards
 # by placing documentation in /usr/share/doc/${PN}
 #
 # For examples of basic installations, check out dev-tex/aastex and

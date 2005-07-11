@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.9 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.10 2005/07/11 15:08:06 swegener Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org>
 #
 # Convienence class to do stardict dictionary installations.
-# 
+#
 # Usage:
 #   - Variables to set :
 #      * FROM_LANG     -  From this language
@@ -23,8 +23,8 @@ if [ -n "${FROM_LANG}" -a -n "${TO_LANG}" ]; then
 	DESCRIPTION="Stardict Dictionary ${FROM_LANG} to ${TO_LANG}"
 elif [ -z "${DESCRIPTION}" ]; then
 	DESCRIPTION="Another Stardict Dictionary"
-fi	
-	
+fi
+
 HOMEPAGE="http://stardict.sourceforge.net/"
 SRC_URI="mirror://sourceforge/stardict/${DICT_P}.tar.bz2"
 

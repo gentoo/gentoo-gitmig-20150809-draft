@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.173 2005/07/10 01:45:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.174 2005/07/11 15:08:06 swegener Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -666,7 +666,7 @@ create_gcc_env_entry() {
 		for abi in $(get_all_abis) ; do
 			[[ ${abi} == ${DEFAULT_ABI} ]] && continue
 
-			MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)			
+			MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 			if [[ ${MULTIDIR} == "." ]] ; then
 				LDPATH="${LDPATH}:${LIBPATH}"
 			else
@@ -811,9 +811,9 @@ gcc-compiler_pkg_prerm() {
 }
 
 gcc-compiler_pkg_postrm() {
-	# to make our lives easier (and saner), we do the fix_libtool stuff here.   
-	# rather than checking SLOT's and trying in upgrade paths, we just see if 
-	# the common libstdc++.la exists in the ${LIBPATH} of the gcc that we are 
+	# to make our lives easier (and saner), we do the fix_libtool stuff here.
+	# rather than checking SLOT's and trying in upgrade paths, we just see if
+	# the common libstdc++.la exists in the ${LIBPATH} of the gcc that we are
 	# unmerging.  if it does, that means this was a simple re-emerge.
 
 	# clean up the cruft left behind by cross-compilers
@@ -931,8 +931,8 @@ gcc_src_unpack() {
 
 	# disable --as-needed from being compiled into gcc specs
 	# natively when using >=sys-devel/binutils-2.15.90.0.1 this is
-	# done to keep our gcc backwards compatible with binutils. 
-	# gcc 3.4.1 cvs has patches that need back porting.. 
+	# done to keep our gcc backwards compatible with binutils.
+	# gcc 3.4.1 cvs has patches that need back porting..
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
 	if [[ ${GCCMAJOR} -lt 4 ]] ; then
 		sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
@@ -1049,7 +1049,7 @@ gcc_do_configure() {
 	confgcc="${confgcc} --host=${CHOST}"
 	if is_crosscompile ; then
 		# Straight from the GCC install doc:
-		# "GCC has code to correctly determine the correct value for target 
+		# "GCC has code to correctly determine the correct value for target
 		# for nearly all native systems. Therefore, we highly recommend you
 		# not provide a configure target when configuring a native compiler."
 		confgcc="${confgcc} --target=${CTARGET}"
@@ -1078,12 +1078,12 @@ gcc_do_configure() {
 	einfo "running ${ETYPE}-configure"
 	${ETYPE}-configure || die
 
-	# if not specified, assume we are building for a target that only 
+	# if not specified, assume we are building for a target that only
 	# requires C support
 	GCC_LANG=${GCC_LANG:-c}
 	confgcc="${confgcc} --enable-languages=${GCC_LANG}"
 
-	# When building a stage1 cross-compiler (just C compiler), we have to 
+	# When building a stage1 cross-compiler (just C compiler), we have to
 	# disable a bunch of features or gcc goes boom
 	if is_crosscompile && [[ ${GCC_LANG} == "c" ]] ; then
 		confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
@@ -1092,7 +1092,7 @@ gcc_do_configure() {
 	fi
 	# __cxa_atexit is "essential for fully standards-compliant handling of
 	# destructors", but apparently requires glibc.
-	# --enable-sjlj-exceptions : currently the unwind stuff seems to work 
+	# --enable-sjlj-exceptions : currently the unwind stuff seems to work
 	# for statically linked apps but not dynamic
 	# so use setjmp/longjmp exceptions by default
 	if is_uclibc ; then
@@ -1213,7 +1213,7 @@ gcc_do_make() {
 }
 
 # This function will add ${GCC_CONFIG_VER} to the names of all shared libraries in the
-# directory specified to avoid filename collisions between multiple slotted 
+# directory specified to avoid filename collisions between multiple slotted
 # non-versioned gcc targets. If no directory is specified, it is assumed that
 # you want -all- shared objects to have ${GCC_CONFIG_VER} added. Example
 #
@@ -1370,7 +1370,7 @@ gcc-library_src_install() {
 		mkdir -p ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
 		mv "${D}"${LIBPATH}/* ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
 		mv ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/ "${D}"${LIBPATH}
-		
+
 		dodir /etc/env.d
 		echo "LDPATH=\"${LIBPATH}/${GCC_LIB_USE_SUBDIR}/\"" >> "${D}"/etc/env.d/99${PN}
 	fi
@@ -1486,7 +1486,7 @@ gcc-compiler_src_install() {
 
 		# I do not know if this will break gcj stuff, so I'll only do it for
 		#   objc for now; basically "ffi.h" is the correct file to include,
-		#   but it gets installed in .../GCCVER/include and yet it does 
+		#   but it gets installed in .../GCCVER/include and yet it does
 		#   "#include <ffitarget.h>" which (correctly, as it's an "extra" file)
 		#   is installed in .../GCCVER/include/libffi; the following fixes
 		#   ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
@@ -1499,15 +1499,15 @@ gcc-compiler_src_install() {
 
 	# Setup symlinks to multilib ABIs for crosscompiled gccs
 	if is_crosscompile && is_multilib; then
-		CHOST_x86="i686-pc-linux-gnu" 
-		CHOST_amd64="x86_64-pc-linux-gnu" 
-		CHOST_o32="mips-unknown-linux-gnu" 
-		CHOST_n32="mips64-unknown-linux-gnu" 
-		CHOST_n64="mips64-unknown-linux-gnu" 
-		CHOST_ppc="powerpc-unknown-linux-gnu" 
-		CHOST_ppc64="powerpc64-unknown-linux-gnu" 
-		CHOST_sparc32="sparc-unknown-linux-gnu" 
-		CHOST_sparc64="sparc64-unknown-linux-gnu" 
+		CHOST_x86="i686-pc-linux-gnu"
+		CHOST_amd64="x86_64-pc-linux-gnu"
+		CHOST_o32="mips-unknown-linux-gnu"
+		CHOST_n32="mips64-unknown-linux-gnu"
+		CHOST_n64="mips64-unknown-linux-gnu"
+		CHOST_ppc="powerpc-unknown-linux-gnu"
+		CHOST_ppc64="powerpc64-unknown-linux-gnu"
+		CHOST_sparc32="sparc-unknown-linux-gnu"
+		CHOST_sparc64="sparc64-unknown-linux-gnu"
 
 		case $(tc-arch) in
 		amd64)
@@ -1868,7 +1868,7 @@ should_we_gcc_config() {
 	# if the current config is invalid, we definitely want a new one
 	env -i gcc-config -c ${CTARGET} >&/dev/null || return 0
 
-	# if the previously selected config has the same major.minor (branch) as 
+	# if the previously selected config has the same major.minor (branch) as
 	# the version we are installing, then it will probably be uninstalled
 	# for being in the same SLOT, make sure we run gcc-config.
 	local curr_config_ver=$(env -i gcc-config -c ${CTARGET} | awk -F - '{ print $5 }')
@@ -1883,9 +1883,9 @@ should_we_gcc_config() {
 	else
 		# if we're installing a genuinely different compiler version,
 		# we should probably tell the user -how- to switch to the new
-		# gcc version, since we're not going to do it for him/her.  
-		# We don't want to switch from say gcc-3.3 to gcc-3.4 right in 
-		# the middle of an emerge operation (like an 'emerge -e world' 
+		# gcc version, since we're not going to do it for him/her.
+		# We don't want to switch from say gcc-3.3 to gcc-3.4 right in
+		# the middle of an emerge operation (like an 'emerge -e world'
 		# which could install multiple gcc versions).
 		einfo "The current gcc config appears valid, so it will not be"
 		einfo "automatically switched for you.  If you would like to"

@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aolserver.eclass,v 1.7 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aolserver.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
 
 # Authors:
 #	Ian Leitch <port001@gentoo.org>
 
+EXPORT_FUNCTIONS src_compile src_install pkg_postinst
 
-DEPEND="$DEPEND www-servers/aolserver"
-RDEPEND="$RDEPEND www-servers/aolserver"
+DEPEND="www-servers/aolserver"
+RDEPEND="${DEPEND}"
 
 NS_CONF="/usr/share/aolserver" # /include/ is implied by the Makefile
 NS_BASE="/usr/lib/aolserver"
@@ -17,12 +18,12 @@ HOMEPAGE="http://www.aolserver.com"
 LICENSE="MPL-1.1"
 SLOT="0"
 
-src_compile() {
+aolserver_src_compile() {
 
 	emake NSBUILD=1 INST=${NS_CONF} AOLSERVER=${NS_CONF} ${MAKE_FLAGS} || die "emake failed"
 }
 
-src_install() {
+aolserver_src_install() {
 
 	find ${S} -type d -name CVS -prune | xargs rm -rf
 
@@ -46,7 +47,7 @@ src_install() {
 	done
 }
 
-pkg_postinst() {
+aolserver_pkg_postinst() {
 
 	echo
 	einfo "To enable the use of ${PN} you must add the module to your AOLServer configuration"

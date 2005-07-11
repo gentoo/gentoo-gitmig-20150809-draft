@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.13 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.14 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
@@ -97,7 +97,7 @@ ghc-setup-pkg() {
 # fixes the library and import directories path
 # of the package configuration file
 ghc-fixlibpath() {
-    sed -i "s|$1|$(ghc-libdir)|g" ${S}/$(ghc-localpkgconf)
+	sed -i "s|$1|$(ghc-libdir)|g" ${S}/$(ghc-localpkgconf)
 	if [[ -n "$2" ]]; then
 		sed -i "s|$2|$(ghc-libdir)/imports|g" ${S}/$(ghc-localpkgconf)
 	fi

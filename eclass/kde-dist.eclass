@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.66 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.67 2005/07/11 15:08:06 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -11,7 +11,7 @@ inherit kde
 
 # kde 3.1 prereleases have tarball versions of 3.0.6 ff
 unset SRC_URI
-case "$PV" in
+case "${PV}" in
 	1*)			SRC_PATH="stable/3.0.2/src/${P}.tar.bz2";; # backward compatibility for unmerging ebuilds
 	2.2.2a)			SRC_PATH="2.2.2/src/${PN}-${PV/a/}.tar.bz2" ;;
 	2.2.2*)			SRC_PATH="2.2.2/src/${P}.tar.bz2" ;;
@@ -23,11 +23,11 @@ case "$PV" in
 	3.4.0)			SRC_PATH="stable/3.4/src/${P}.tar.bz2" ;;
 	3*)			SRC_PATH="stable/${PV}/src/${P}.tar.bz2" ;;
 	5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
-				debug-print "$ECLASS: cvs detected" ;;
-	*)			debug-print "$ECLASS: Error: unrecognized version $PV, could not set SRC_URI" ;;
+				debug-print "${ECLASS}: cvs detected" ;;
+	*)			debug-print "${ECLASS}: Error: unrecognized version $PV, could not set SRC_URI" ;;
 esac
-[ -n "$SRC_PATH" ] && SRC_URI="$SRC_URI mirror://kde/$SRC_PATH"
-debug-print "$ECLASS: finished, SRC_URI=$SRC_URI"
+[ -n "${SRC_PATH}" ] && SRC_URI="${SRC_URI} mirror://kde/${SRC_PATH}"
+debug-print "${ECLASS}: finished, SRC_URI=${SRC_URI}"
 
 need-kde ${PV}
 
@@ -39,7 +39,7 @@ need-kde ${PV}
 DESCRIPTION="KDE ${PV} - "
 HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
-SLOT="$KDEMAJORVER.$KDEMINORVER"
+SLOT="${KDEMAJORVER}.${KDEMINORVER}"
 
 # add blockers on split packages derived from this one
 for x in $(get-child-packages ${CATEGORY}/${PN}); do

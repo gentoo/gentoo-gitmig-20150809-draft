@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.26 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.27 2005/07/11 15:08:06 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -50,7 +50,7 @@ base_src_unpack() {
 
 	shift
 	done
-    
+
 }
 
 base_src_compile() {
@@ -76,10 +76,10 @@ base_src_compile() {
 		base_src_compile configure make
 		;;
 	esac
-	
+
 	shift
 	done
-    
+
 }
 
 base_src_install() {

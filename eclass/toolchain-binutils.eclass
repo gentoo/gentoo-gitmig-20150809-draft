@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.41 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.42 2005/07/11 15:08:06 swegener Exp $
 
-# We install binutils into CTARGET-VERSION specific directories.  This lets 
-# us easily merge multiple versions for multiple targets (if we wish) and 
+# We install binutils into CTARGET-VERSION specific directories.  This lets
+# us easily merge multiple versions for multiple targets (if we wish) and
 # then switch the versions on the fly (with `binutils-config`).
 
 inherit eutils libtool flag-o-matic gnuconfig
@@ -93,7 +93,7 @@ tc-binutils_apply_patches() {
 
 toolchain-binutils_src_unpack() {
 	tc-binutils_unpack
-	tc-binutils_apply_patches	
+	tc-binutils_apply_patches
 }
 
 toolchain-binutils_src_compile() {
@@ -130,14 +130,14 @@ toolchain-binutils_src_compile() {
 	emake -j1 headers -C bfd || die "make headers-bfd failed"
 	emake all || die "emake failed"
 
-	# only build info pages if we user wants them, and if 
+	# only build info pages if we user wants them, and if
 	# we have makeinfo (may not exist when we bootstrap)
 	if ! has noinfo ${FEATURES} ; then
 		if type -p makeinfo ; then
 			make info || die "make info failed"
 		fi
 	fi
-	# we nuke the manpages when we're left with junk 
+	# we nuke the manpages when we're left with junk
 	# (like when we bootstrap, no perl -> no manpages)
 	find . -name '*.1' -a -size 0 | xargs rm -f
 }
@@ -177,10 +177,10 @@ toolchain-binutils_src_install() {
 	dodir /usr/${CTARGET}/{bin,include,lib}
 	prepman ${DATAPATH}
 
-	# Now, some binutils are tricky and actually provide 
-	# for multiple TARGETS.  Really, we're talking just 
-	# 32bit/64bit support (like mips/ppc/sparc).  Here 
-	# we want to tell binutils-config that it's cool if 
+	# Now, some binutils are tricky and actually provide
+	# for multiple TARGETS.  Really, we're talking just
+	# 32bit/64bit support (like mips/ppc/sparc).  Here
+	# we want to tell binutils-config that it's cool if
 	# it generates multiple sets of binutil symlinks.
 	# e.g. sparc gets {sparc,sparc64}-unknown-linux-gnu
 	local targ=${CTARGET/-*}
@@ -191,7 +191,6 @@ toolchain-binutils_src_install() {
 		mips*|powerpc|sparc*)
 			FAKE_TARGETS="${FAKE_TARGETS} ${CTARGET/-/64-}";;
 	esac
-	
 
 	# Generate an env.d entry for this binutils
 	cd "${S}"
@@ -237,7 +236,7 @@ toolchain-binutils_pkg_postinst() {
 toolchain-binutils_pkg_postrm() {
 	local current_profile=$(binutils-config -c ${CTARGET})
 
-	# If no other versions exist, then uninstall for this 
+	# If no other versions exist, then uninstall for this
 	# target ... otherwise, switch to the newest version
 	# Note: only do this if this version is unmerged.  We
 	#       rerun binutils-config if this is a remerge, as

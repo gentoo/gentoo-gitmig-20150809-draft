@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.10 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.11 2005/07/11 15:08:06 swegener Exp $
 
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
@@ -187,32 +187,32 @@ function pkg_postinst() {
 
 eclipse-ext_get-classpath() {
 
-        local file=$1
-        local envvar="classpath"
+	local file=$1
+	local envvar="classpath"
 
-        if [ "$1" == "build.properties" ] ; then
-                if [ ! -z "$2" ] ; then
-                        envvar="$2"
-                fi
-        fi
+	if [ "$1" == "build.properties" ] ; then
+		if [ ! -z "$2" ] ; then
+			envvar="$2"
+		fi
+	fi
 
-        echo "$(cat ${FILESDIR}/build.properties-${PV} | sed "s/.*=//" | tr ';' ' ')"
+	echo "$(cat ${FILESDIR}/build.properties-${PV} | sed "s/.*=//" | tr ';' ' ')"
 }
 
 _path-dissecter() {
-        echo $1 | sed -r "s/.*\/([^/]+)_([0-9.]+)\/(.*)/\\${2}/"
+	echo $1 | sed -r "s/.*\/([^/]+)_([0-9.]+)\/(.*)/\\${2}/"
 }
 
 _get-plugin-name() {
-        _path-dissecter $1 1
+	_path-dissecter $1 1
 }
 
 _get-plugin-version() {
-        _path-dissecter $1 2
+	_path-dissecter $1 2
 }
 
 _get-plugin-content() {
-        _path-dissecter $1 3
+	_path-dissecter $1 3
 }
 
 # ---------------------------------------------------------------------------
@@ -229,19 +229,18 @@ _get-plugin-content() {
 # ---------------------------------------------------------------------------
 eclipse-ext_resolve-jars() {
 
-        local resolved=""
+	local resolved=""
 
-        for x in $1 ; do
-                local jarfile=$(_get-plugin-content $x)
-                local name="$(_get-plugin-name $x)"
-                local x=$(echo ${eclipse_ext_platformdir}/plugins/${name}_*/${jarfile})
-                if [ -f ${x} ] ; then
-                        resolved="${resolved}:$x"
-                else
-                        :
-                        #echo "Warning: did not find ${name}"
-                fi
-        done
-        echo ${resolved}
+	for x in $1 ; do
+		local jarfile=$(_get-plugin-content $x)
+		local name="$(_get-plugin-name $x)"
+		local x=$(echo ${eclipse_ext_platformdir}/plugins/${name}_*/${jarfile})
+		if [ -f ${x} ] ; then
+			resolved="${resolved}:$x"
+		else
+			:
+			#echo "Warning: did not find ${name}"
+		fi
+	done
+	echo ${resolved}
 }
-

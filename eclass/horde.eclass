@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.23 2005/07/06 23:07:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.24 2005/07/11 15:08:06 swegener Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -9,7 +9,7 @@
 # SNAP additions by Jonathan Polansky <jpolansky@lsit.ucsb.edu>
 #
 # This eclass provides generic functions to make the writing of horde
-# ebuilds fairly trivial since there are many horde applications and 
+# ebuilds fairly trivial since there are many horde applications and
 # they all share the same basic install process.
 
 # EHORDE_SNAP
@@ -131,7 +131,7 @@ horde_pkg_postinst() {
 	if [[ ${EHORDE_CVS} = "true" ]] ; then
 		ewarn
 		ewarn "Use these CVS versions at your own risk."
-		ewarn "They tend to break things when working with" 
+		ewarn "They tend to break things when working with"
 		ewarn "the non CVS versions of horde."
 	fi
 	if use vhosts ; then

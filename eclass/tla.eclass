@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.7 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
 #
 # Original Author:    Jeffrey Yasskin <jyasskin@mail.utexas.edu>
 #
@@ -22,7 +22,7 @@
 SRC_URI=""
 
 # You shouldn't change these settings yourself! The ebuild/eclass inheriting
-# this eclass will take care of that. 
+# this eclass will take care of that.
 
 # --- begin ebuild-configurable settings
 
@@ -109,7 +109,7 @@ tla_fetch() {
 	local tla_archive=`$ETLA_TLA_CMD parse-package-name --arch $ETLA_VERSION`
 	local tla_version=`$ETLA_TLA_CMD parse-package-name --package-version $ETLA_VERSION`
 	#local tla_revision=`$ETLA_TLA_CMD parse-package-name --lvl $ETLA_VERSION`
-	
+
 	# determine checkout or update mode and change to the right directory.
 	if [ ! -d "$ETLA_TOP_DIR/$ETLA_CACHE_DIR/{arch}" ]; then
 		mode=get
@@ -139,7 +139,7 @@ tla_fetch() {
 	local cmdupdate="${ETLA_TLA_CMD} ${ETLA_UPDATE_CMD} ${ETLA_VERSION}"
 
 	if [ "${mode}" == "get" ]; then
-		einfo "Running $cmdget" 
+		einfo "Running $cmdget"
 		eval $cmdget || die "tla get command failed"
 	elif [ "${mode}" == "update" ]; then
 		einfo "Running $cmdupdate"
@@ -171,7 +171,7 @@ tla_src_unpack() {
 
 	einfo "Fetching tla version $ETLA_VERSION into $ETLA_TOP_DIR ..."
 	tla_fetch
-	
+
 	einfo "Copying $ETLA_CACHE_DIR from $ETLA_TOP_DIR ..."
 	debug-print "Copying $ETLA_CACHE_DIR from $ETLA_TOP_DIR ..."
 
@@ -195,7 +195,7 @@ tla_src_unpack() {
 	#	# tla_src_unpack may be called several times
 	#	export PATCHES=""
 	#fi
-	
+
 	einfo "Version ${ETLA_VERSION} is now in ${WORKDIR}/${P}"
 
 }

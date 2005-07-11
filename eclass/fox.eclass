@@ -1,22 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.3 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.4 2005/07/11 15:08:06 swegener Exp $
 
 # fox eclass
 #
-# This eclass allows building SLOT-able FOX Toolkit installations 
-# (x11-libs/fox: headers, libs, and docs), which are by design 
-# parallel-installable, while installing only one version of the utils 
+# This eclass allows building SLOT-able FOX Toolkit installations
+# (x11-libs/fox: headers, libs, and docs), which are by design
+# parallel-installable, while installing only one version of the utils
 # (dev-util/reswrap) and apps (app-editors/adie, sci-calculators/calculator,
 # x11-misc/pathfinder, and x11-misc/shutterbug).
 #
 # Version numbering follows the kernel-style odd-even minor version
-# designation.  Even-number minor versions are API stable, which patch 
-# releases aimed mostly at the library; apps generally won't need to be 
+# designation.  Even-number minor versions are API stable, which patch
+# releases aimed mostly at the library; apps generally won't need to be
 # bumped for a patch release.
 #
-# Odd-number versions are development branches with their own SLOT and 
-# are API unstable; changes are made to the apps, and likely need to be 
+# Odd-number versions are development branches with their own SLOT and
+# are API unstable; changes are made to the apps, and likely need to be
 # bumped together with the library.
 #
 # Here are sample [R]DEPENDs for the fox apps, based on the first versions
@@ -49,7 +49,7 @@ IUSE="debug doc profile"
 # from fox-1.0
 FOX_APPS="adie calculator pathfinder"
 # from fox-1.2+
-if [ "${FOXVER}" != "1.0" ] ; then 
+if [ "${FOXVER}" != "1.0" ] ; then
 	FOX_APPS="${FOX_APPS} shutterbug"
 	FOX_CHART="chart"
 fi
@@ -66,8 +66,7 @@ if [ "${PN}" != reswrap ] ; then
 	RESWRAP_DEP="dev-util/reswrap"
 fi
 
-DEPEND="${RDEPEND}
-	${DOXYGEN_DEP}
+DEPEND="${DOXYGEN_DEP}
 	${RESWRAP_DEP}
 	=sys-devel/automake-1.4*
 	>=sys-apps/sed-4"
@@ -127,7 +126,7 @@ fox_src_unpack() {
 fox_src_compile() {
 	local myconf
 	use debug && myconf="${myconf} --enable-debug" \
-		|| myconf="${myconf} --enable-release" 
+		|| myconf="${myconf} --enable-release"
 
 	econf \
 		${FOXCONF} \
@@ -196,7 +195,7 @@ fox_src_install () {
 }
 
 fox_pkg_postinst() {
-	if [ -z "${FOX_COMPONENT}" ] ; then 
+	if [ -z "${FOX_COMPONENT}" ] ; then
 		echo
 		einfo "Multiple versions of the FOX Toolkit library may now be installed"
 		einfo "in parallel SLOTs on the same system."

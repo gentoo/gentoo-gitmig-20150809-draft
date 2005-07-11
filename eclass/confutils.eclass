@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.16 2005/06/11 15:44:03 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.17 2005/07/11 15:08:06 swegener Exp $
 #
 # eclass/confutils.eclass
 #		Utility functions to help with configuring a package
@@ -12,7 +12,7 @@
 #
 # ========================================================================
 
-IUSE="$IUSE sharedext"
+IUSE="sharedext"
 
 # ========================================================================
 
@@ -179,7 +179,7 @@ enable_extension_disable () {
 }
 
 # ========================================================================
-# enable_extension_enable () 
+# enable_extension_enable ()
 #
 # This function is like use_enable(), except that it knows about
 # enabling modules as shared libraries, and it supports passing
@@ -219,7 +219,7 @@ enable_extension_enable () {
 }
 
 # ========================================================================
-# enable_extension_enableonly () 
+# enable_extension_enableonly ()
 #
 # This function is like use_enable(), except that it knows about
 # enabling modules as shared libraries, and it supports passing

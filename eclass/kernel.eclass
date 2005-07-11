@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.58 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.59 2005/07/11 15:08:06 swegener Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -17,7 +17,7 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 	fi
 fi
 
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 IUSE="build"
 
@@ -101,7 +101,7 @@ kernel_universal_unpack() {
 
 	if kernel_is_2_4 || [ ${ETYPE} == "headers" ]
 	then
-		# this file is required for other things to build properly, 
+		# this file is required for other things to build properly,
 		# so we autogenerate it
 		set_arch_to_kernel
 		make mrproper || die "make mrproper died"
@@ -177,7 +177,7 @@ kernel_src_install() {
 }
 
 kernel_pkg_preinst() {
-	if [ "$ETYPE" = "headers" ] 
+	if [ "$ETYPE" = "headers" ]
 	then
 		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
 		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm

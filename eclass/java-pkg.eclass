@@ -1,9 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.25 2005/07/06 20:23:20 agriffis Exp $
-
-IUSE="${IUSE}"
-SLOT="${SLOT}"
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.26 2005/07/11 15:08:06 swegener Exp $
 
 pkglistpath="${T}/java-pkg-list"
 
@@ -193,7 +190,7 @@ java-pkg_dojar()
 	java-pkg_do_write_
 }
 
-java-pkg_newjar() 
+java-pkg_newjar()
 {
 	if [ -z "${T}" ] || [ -z "${2}" ] ; then
 		die "java-pkg_newjar: Nothing defined to do"
@@ -347,7 +344,7 @@ java-pkg_sointo()
 java-pkg_dosrc() {
 	java-pkg_do_init_
 
-	[ $# -lt 1 ] && die "${FUNCNAME[0]}: at least one argument needed" 
+	[ $# -lt 1 ] && die "${FUNCNAME[0]}: at least one argument needed"
 
 	local target="${shareroot}/source/"
 

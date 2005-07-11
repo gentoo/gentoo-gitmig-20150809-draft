@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.11 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.12 2005/07/11 15:08:06 swegener Exp $
 
 inherit depend.apache
 
@@ -162,9 +162,9 @@ apache1_src_compile() {
 ## this function can also set the executable permission on files listed in EXECFILES.
 ## The configuration file name is listed in APACHE1_MOD_CONF without the .conf extensions,
 ## so if you configuration is 55_mod_foo.conf, APACHE1_MOD_CONF would be 55_mod_foo.
-## DOCFILES contains the list of files you want filed as documentation. The name of the 
+## DOCFILES contains the list of files you want filed as documentation. The name of the
 ## module can also be specified using the APACHE1_MOD_FILE or defaults to
-## .libs/${PN}.so. 
+## .libs/${PN}.so.
 ####
 apache1_src_install() {
 	debug-print-function apache1_src_install
@@ -182,7 +182,7 @@ apache1_src_install() {
 		insinto ${APACHE1_MODULES_CONFDIR}
 		doins ${FILESDIR}/${APACHE1_MOD_CONF}.conf || die "internal ebuild error: '${FILESDIR}/${APACHE1_MOD_CONF}.conf' not found."
 	fi
-	
+
 	cd ${S}
 
 	if [ -n "${DOCFILES}" ] ; then
@@ -251,7 +251,7 @@ apache2_pkg_setup() {
 	fi
 
 }
-				
+
 ####
 ## apache2_src_compile
 ##
@@ -337,7 +337,7 @@ apache2_pkg_postinst() {
 		else
 			INSTALLED_MPM_SAFE="${INSTALLED_MPM_SAFE} ${mpm}"
 		fi
-		
+
 		if [ -n "${INSTALLED_MPM_UNSAFE}" ] ; then
 			ewarn "You have one or more MPMs installed that will not work with"
 			ewarn "this module (${PN}). Please make sure that you only enable"
@@ -347,7 +347,6 @@ apache2_pkg_postinst() {
 
 	fi
 
-	
 }
 
 ######

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.28 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.29 2005/07/11 15:08:06 swegener Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -15,13 +15,13 @@
 
 # A Couple of env vars are available to effect usage of this eclass
 # These are as follows:
-# 
+#
 # Env Var	Option		Description
 # KERNEL_DIR	<string>	The directory containing kernel the target kernel
 #				sources.
 # CONFIG_CHECK	<string>	a list of .config options to check for before
 #				proceeding with the install. ie: CONFIG_CHECK="MTRR"
-#				You can also check that an option doesn't exist by 
+#				You can also check that an option doesn't exist by
 #				prepending it with an exclamation mark (!).
 #				ie: CONFIG_CHECK="!MTRR"
 # ERROR_CFG		<string>	The error message to display when the above check
@@ -34,7 +34,7 @@
 
 # There are also a couple of variables which are set by this, and shouldn't be
 # set by hand. These are as follows:
-# 
+#
 # Env Var		Option		Description
 # KV_FULL		<string>	The full kernel version. ie: 2.6.9-gentoo-johnm-r1
 # KV_MAJOR		<integer>	The kernel major version. ie: 2
@@ -61,8 +61,8 @@ KERNEL_DIR="${KERNEL_DIR:-${ROOT}usr/src/linux}"
 # Bug fixes
 # fix to bug #75034
 case ${ARCH} in
-    ppc)     	BUILD_FIXES="${BUILD_FIXES} TOUT=${T}/.tmp_gas_check";;
-    ppc64)      BUILD_FIXES="${BUILD_FIXES} TOUT=${T}/.tmp_gas_check";;
+	ppc)	BUILD_FIXES="${BUILD_FIXES} TOUT=${T}/.tmp_gas_check";;
+	ppc64)	BUILD_FIXES="${BUILD_FIXES} TOUT=${T}/.tmp_gas_check";;
 esac
 
 # These are legacy wrappers for toolchain-funcs.
@@ -189,12 +189,12 @@ kernel_is() {
 		esac
 	done
 
-	[ ${test} ${operator} ${value} ] && return 0 || return 1 
+	[ ${test} ${operator} ${value} ] && return 0 || return 1
 }
 
 get_version() {
 	local kbuild_output
-	
+
 	# no need to execute this twice assuming KV_FULL is populated.
 	# we can force by unsetting KV_FULL
 	[ -n "${KV_FULL}" ] && return 0
@@ -207,7 +207,7 @@ get_version() {
 	qeinfo "Determining the location of the kernel source code"
 	[ -h "${KERNEL_DIR}" ] && KV_DIR="$(readlink -f ${KERNEL_DIR})"
 	[ -d "${KERNEL_DIR}" ] && KV_DIR="${KERNEL_DIR}"
-	
+
 	if [ -z "${KV_DIR}" ]
 	then
 		qeerror "Unable to find kernel sources at ${KERNEL_DIR}"
@@ -231,17 +231,17 @@ get_version() {
 		qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
 		return 1
 	fi
-	
+
 	# OK so now we know our sources directory, but they might be using
 	# KBUILD_OUTPUT, and we need this for .config and localversions-*
 	# so we better find it eh?
 	# do we pass KBUILD_OUTPUT on the CLI?
 	OUTPUT_DIR="${OUTPUT_DIR:-${KBUILD_OUTPUT}}"
-	
+
 	# And if we didn't pass it, we can take a nosey in the Makefile
 	kbuild_output="$(getfilevar KBUILD_OUTPUT ${KV_DIR}/Makefile)"
 	OUTPUT_DIR="${OUTPUT_DIR:-${kbuild_output}}"
-	
+
 	# And contrary to existing functions I feel we shouldn't trust the
 	# directory name to find version information as this seems insane.
 	# so we parse ${KV_DIR}/Makefile
@@ -249,14 +249,14 @@ get_version() {
 	KV_MINOR="$(getfilevar PATCHLEVEL ${KV_DIR}/Makefile)"
 	KV_PATCH="$(getfilevar SUBLEVEL ${KV_DIR}/Makefile)"
 	KV_EXTRA="$(getfilevar EXTRAVERSION ${KV_DIR}/Makefile)"
-	
+
 	if [ -z "${KV_MAJOR}" -o -z "${KV_MINOR}" -o -z "${KV_PATCH}" ]
 	then
 		qeerror "Could not detect kernel version."
 		qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources."
 		return 1
 	fi
-	
+
 	# and in newer versions we can also pull LOCALVERSION if it is set.
 	# but before we do this, we need to find if we use a different object directory.
 	# This *WILL* break if the user is using localversions, but we assume it was
@@ -270,7 +270,7 @@ get_version() {
 	then
 		qeinfo "Found kernel object directory:"
 		qeinfo "    ${KV_OUT_DIR}"
-		
+
 		KV_LOCAL="$(cat ${KV_OUT_DIR}/localversion* 2>/dev/null)"
 	fi
 	# and if we STILL haven't got it, then we better just set it to KV_DIR
@@ -329,7 +329,7 @@ get_running_version() {
 check_kernel_built() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
-	
+
 	if [ ! -f "${KV_OUT_DIR}/include/linux/version.h" ]
 	then
 		eerror "These sources have not yet been prepared."
@@ -348,7 +348,7 @@ check_kernel_built() {
 check_modules_supported() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
-	
+
 	if ! linux_chkconfig_builtin "MODULES"
 	then
 		eerror "These sources do not support loading external modules."
@@ -406,13 +406,13 @@ check_extra_config() {
 				# Support the new syntax first.
 				local_error="ERROR_${config}"
 				local_error="${!local_error}"
-				
+
 				# then fall back on the older syntax.
 				if [[ -z ${local_error} ]] ; then
 					local_error="${config}_ERROR"
 					local_error="${!local_error}"
 				fi
-				
+
 				[[ -n ${local_error} ]] && eerror "  ${local_error}" || \
 					eerror "  CONFIG_${config}:\tshould be set in the kernel configuration, but isn't"
 				error=1
@@ -432,7 +432,7 @@ check_extra_config() {
 check_zlibinflate() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
-	
+
 	# although I restructured this code - I really really really dont support it!
 
 	# bug #27882 - zlib routines are only linked into the kernel
@@ -441,28 +441,27 @@ check_zlibinflate() {
 	# plus, for the cloop module, it appears that there's no way
 	# to get cloop.o to include a static zlib if CONFIG_MODVERSIONS
 	# is on
-	
-local	INFLATE
-local	DEFLATE
+
+	local INFLATE
+	local DEFLATE
 
 	einfo "Determining the usability of ZLIB_INFLATE support in your kernel"
-	
+
 	ebegin "checking ZLIB_INFLATE"
 	getfilevar_isbuiltin CONFIG_ZLIB_INFLATE ${KV_DIR}/.config
 	eend $?
 	[ "$?" != 0 ] && die
-	
+
 	ebegin "checking ZLIB_DEFLATE"
 	getfilevar_isbuiltin CONFIG_ZLIB_DEFLATE ${KV_DIR}/.config
 	eend $?
 	[ "$?" != 0 ] && die
-	
-	
+
 	local LINENO_START
 	local LINENO_END
 	local SYMBOLS
 	local x
-	
+
 	LINENO_END="$(grep -n 'CONFIG_ZLIB_INFLATE y' ${KV_DIR}/lib/Config.in | cut -d : -f 1)"
 	LINENO_START="$(head -n $LINENO_END ${KV_DIR}/lib/Config.in | grep -n 'if \[' | tail -n 1 | cut -d : -f 1)"
 	(( LINENO_AMOUNT = $LINENO_END - $LINENO_START ))
@@ -478,7 +477,7 @@ local	DEFLATE
 			return 0
 		fi
 	done
-	
+
 	eerror
 	eerror "This kernel module requires ZLIB library support."
 	eerror "You have enabled zlib support in your kernel, but haven't enabled"

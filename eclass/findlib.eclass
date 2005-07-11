@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/findlib.eclass,v 1.4 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/findlib.eclass,v 1.5 2005/07/11 15:08:06 swegener Exp $
 #
 # Author : Matthieu Sozeau <mattam@gentoo.org>
 #
 # ocamlfind (a.k.a. findlib) eclass
-# 
+#
 
 
 # From this findlib version there is proper stublibs support.
@@ -29,7 +29,7 @@ findlib_src_preinst() {
 	# destdir is the ocaml sitelib
 	local destdir=`ocamlfind printconf destdir`
 
-	dodir ${destdir} || die "dodir failed"	
+	dodir ${destdir} || die "dodir failed"
 	export OCAMLFIND_DESTDIR=${D}${destdir}
 
 	# stublibs style

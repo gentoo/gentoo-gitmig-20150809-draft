@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.8 2005/07/06 20:20:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: David Holm <dholm@gentoo.org>
 #
@@ -10,6 +10,7 @@
 
 inherit flag-o-matic
 
+EXPORT_FUNCTIONS pkg_setup
 
 DEPEND="dev-lang/gnat"
 
@@ -27,7 +28,7 @@ gnat_filter_flags() {
 		-fsigned-char -fno-strict-aliasing -pipe
 }
 
-pkg_setup() {
+gnat_pkg_setup() {
 	export ADAC=${ADAC:-gnatgcc}
 	export ADAMAKE=${ADAMAKE:-gnatmake}
 	export ADABIND=${ADABIND:-gnatbind}

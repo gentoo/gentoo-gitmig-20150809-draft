@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.32 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.33 2005/07/11 15:08:06 swegener Exp $
 #
 # The gtk-engines eclass is inherited by all gtk-engines-* ebuilds.
 #
@@ -29,7 +29,7 @@ inherit eutils
 
 KEYWORDS="x86 ppc alpha sparc hppa amd64"
 
-DEPEND="${DEPEND} virtual/x11"
+DEPEND="virtual/x11"
 
 case "${SLOT}" in
 	"1" )
@@ -51,22 +51,22 @@ ENGINE=${PN/gtk-engines-/}
 case "${ENGINE}" in
 	"cleanice" )
 		[ "$SLOT" -eq "2" ] && MY_PN="gtk-engines-cleanice2" ;;
-		
+
 	"crux" )
 		MY_PN="crux" ;;
-		
+
 	"eazel" )
 		MY_PN="eazel-engine" ;;
 
 	"flat" )
 		[ "$SLOT" -eq "2" ] && MY_PN="gtk-flat-theme-2.0" ;;
-	
+
 	"geramik" )
 		MY_PN="3952-Geramik" ;;
-		
+
 	"lighthouseblue" )
 		MY_PN="lighthouseblue" ;;
-		
+
 	"metal" | "notif" | "pixbuf" | "pixmap" | "raleigh" | "redmond95" )
 		MY_PN="gtk-engines"
 		if [ "$SLOT" -eq "2" ]
@@ -80,23 +80,23 @@ case "${ENGINE}" in
 			# force debug information
 			CFLAGS="${CFLAGS} -g"
 			CXXFLAGS="${CXXFLAGS} -g"
-			
+
 		else
 			DEPEND="${DEPEND} >=media-libs/imlib-1.8"
 		fi
 		;;
-		
+
 	"mist" )
 		MY_PN="GTK-mist-engine" ;;
-	
+
 	"thinice" )
 		[ "$SLOT" -eq "2" ] && MY_PN="gtk-thinice-engine" ;;
-		
+
 	"xenophilia" )
 		MY_PN="xenophilia"
 		INSTALL_FONTS=1
 		;;
-		
+
 	"xfce" )
 		MY_PN="gtk-xfce-engine" ;;
 esac
@@ -108,32 +108,32 @@ MY_P="${MY_PN}-${PV}"
 if [ "X${ENGINE}" = "Xthinice" ] && [ "$SLOT" -eq "2" ]
 then
 	SRC_URI="http://thinice.sourceforge.net/${MY_P}.tar.gz"
-	
+
 elif [ "X${ENGINE}" = "Xmist" ]
 then
 	SRC_URI="http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/${MY_P}.tar.gz"
-	
+
 elif [ "X${ENGINE}" = "Xflat" ] && [ "$SLOT" -eq "2" ]
 then
 	SRC_URI="http://download.freshmeat.net/themes/gtk2flat/gtk2flat-default.tar.gz"
-	
+
 elif [ "X${ENGINE}" = "Xgeramik" ]
 then
 	SRC_URI="http://www.kde-look.org/content/files/${MY_P}.tar.gz"
-	
+
 elif [ "X${ENGINE}" = "Xxfce" ]
 then
 	SRC_URI="mirror://sourceforge/xfce/${MY_P}.tar.gz"
-	
+
 elif [ "X${ENGINE}" = "Xlighthouseblue" ]
 then
 	SRC_URI="mirror://sourceforge/lighthouseblue/${MY_P}.tar.gz"
-	
+
 elif [ "X${ENGINE}" = "Xcrux" ]
 then
 	PVP=(${PV//[-\._]/ })
 	SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
-	
+
 elif [ "X${MY_PN}" = "Xgtk-engines" ] && [ "$SLOT" -eq "2" ]
 then
 	PVP=(${PV//[-\._]/ })
@@ -159,9 +159,9 @@ gtk-engines_src_unpack() {
 
 gtk-engines_src_compile() {
 	econf || die "./configure failed"
-	
+
 	[ "X${MY_PN}" = "Xgtk-engines" ] && cd ${ENGINE}
-	
+
 	emake || die "Compilation failed"
 }
 
@@ -172,7 +172,7 @@ gtk-engines_src_install() {
 	if [ "X${ENGINE}" = "Xxenophilia" ]
 	then
 		dodir /usr/X11R6/$(get_libdir)/X11/fonts/misc
-		
+
 		mv fonts/Makefile fonts/Makefile.orig
 		sed -e 's:/usr:${D}/usr:' \
 			-e 's:local:misc:' \
@@ -212,7 +212,7 @@ gtk-engines_src_install() {
 		else
 			rm -rf ${D}/usr/$(get_libdir)/gtk-2.0 ${D}/usr/share/themes/Geramik/gtk-2.0
 		fi
-		
+
 	elif [ "X${ENGINE}" = "Xlighthouseblue" ]
 	then
 		if [ "$SLOT" -eq "2" ]
@@ -224,7 +224,7 @@ gtk-engines_src_install() {
 				${D}/usr/share/themes/LighthouseBlue/gtk-2.0
 		fi
 	fi
-	
+
 	for doc in AUTHORS BUGS ChangeLog CONFIGURATION COPYING CUSTOMIZATION \
 		NEWS README THANKS TODO
 	do
@@ -256,5 +256,5 @@ fonts_notice() {
 	einfo ""
 	einfo "  xset fp rehash"
 }
-										
+
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst pkg_postrm

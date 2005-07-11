@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.12 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.13 2005/07/11 15:08:07 swegener Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
 # This eclass helps you find the correct wx-config script so ebuilds
-# can use gtk, gtk2 or gtk2+unicode versions of wxGTK 
+# can use gtk, gtk2 or gtk2+unicode versions of wxGTK
 
 # FUNCTIONS:
 # need-wxwidgets:

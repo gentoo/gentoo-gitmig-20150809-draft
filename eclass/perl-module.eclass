@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.75 2005/07/07 01:22:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.76 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -41,7 +41,7 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 # of file collision features by giving us a single exportable function to deal
 # with the pods. Modifications to the eclass provided by Yaakov S
 # <yselkowitz@hotmail.com> in bug 83622
-# 
+#
 # <later the same day>
 # The long awaited (by me) fix for automagically detecting and dealing
 # with module-build dependancies. I've chosen not to make it a default dep since
@@ -121,11 +121,11 @@ perl-module_src_test() {
 }
 
 perl-module_src_install() {
-	
+
 	perlinfo
-	
+
 	test -z ${mytargets} && mytargets="install"
-					 
+
 	if [ -z ${BUILDER_VER} ]; then
 		make ${myinst} ${mytargets} || die
 	else
@@ -157,7 +157,7 @@ perl-module_pkg_setup() {
 
 
 perl-module_pkg_preinst() {
-	
+
 	perlinfo
 }
 
@@ -167,7 +167,7 @@ perl-module_pkg_postinst() {
 }
 
 perl-module_pkg_prerm() {
-	
+
 	updatepod
 }
 
@@ -180,22 +180,22 @@ perlinfo() {
 
 	eval `perl '-V:version'`
 	PERL_VERSION=${version}
-	
+
 	eval `perl '-V:installsitearch'`
 	SITE_ARCH=${installsitearch}
-	
+
 	eval `perl '-V:installsitearch'`
 	SITE_LIB=${installsitearch}
-	
+
 	eval `perl '-V:installarchlib'`
 	ARCH_LIB=${installarchlib}
-	
+
 	eval `perl '-V:installvendorlib'`
 	VENDOR_LIB=${installvendorlib}
 
 	eval `perl '-V:installvendorarch'`
 	VENDOR_ARCH=${installvendorarch}
-	
+
 	if [ -f ${S}/Build.PL ]; then
 		if [ ${PN} == "module-build" ]; then
 			BUILDER_VER="1" # A bootstrapping if you will
@@ -205,7 +205,7 @@ perlinfo() {
 	fi
 
 	if [ -f /usr/bin/perl ]
-	then 
+	then
 		POD_DIR="/usr/share/perl/gentoo-pods/${version}"
 	fi
 }
@@ -223,9 +223,9 @@ fixlocalpod() {
 		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.arch
 		rm -f ${D}/${ARCH_LIB}/perllocal.pod
 	fi
-	
+
 	if [ -f ${D}${SITE_LIB}/perllocal.pod ];
-	then 
+	then
 		touch ${D}/${POD_DIR}/${P}.pod
 		sed -e "s:${D}::g" \
 			${D}${SITE_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
@@ -235,7 +235,7 @@ fixlocalpod() {
 	fi
 
 	if [ -f ${D}${VENDOR_LIB}/perllocal.pod ];
-	then 
+	then
 		touch ${D}/${POD_DIR}/${P}.pod
 		sed -e "s:${D}::g" \
 			${D}${VENDOR_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod

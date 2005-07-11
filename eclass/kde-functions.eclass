@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.116 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.117 2005/07/11 15:08:06 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -423,7 +423,7 @@ deprange-list() {
 	if [ "${MAXVER%.*}" != "$BASEVER" ]; then
 		die "deprange(): unsupported parameters $MINVER $MAXVER - BASEVER must be identical"
 	fi
-	
+
 	# Get version suffixes
 	local MINSUFFIX MAXSUFFIX
 	if [ "$MINVER" != "${MINVER/_}" ]; then
@@ -438,7 +438,7 @@ deprange-list() {
 	else
 		SUFFIXLESSMAXVER=$MAXVER
 	fi
-	
+
 	# Separate out the optional lower bound revision number
 	if [ "$MINVER" != "${MINVER/-}" ]; then
 		local MINREV=${MINVER##*-}
@@ -462,13 +462,13 @@ deprange-list() {
 		# If the range bounds differ only by their suffixes
 		elif [ "$MINMINOR" == "$MAXMINOR" ]; then
 			NEWDEP="$(deprange-iterate-suffixes ~$PACKAGE-$BASEVER.$MINMINOR $MINSUFFIX $MAXSUFFIX)"
-			
+
 			# Revision constraint on lower bound
 			if [ -n "$MINREV" ]; then
 				NEWDEP="$NEWDEP
 						$(deprange-iterate-numbers =$PACKAGE-$BASEVER.${MINMINOR}_$MINSUFFIX-r $MINREV 99)"
 			fi
-			
+
 		# If the minor version numbers are different too
 		else
 
@@ -476,14 +476,14 @@ deprange-list() {
 			if [ -n "$MAXSUFFIX" ]; then
 				NEWDEP="$(deprange-iterate-suffixes ~$PACKAGE-$BASEVER.$MAXMINOR alpha1 $MAXSUFFIX)"
 			fi
-			
+
 			# regular versions in between
 			if [ -n "$MINREV" -a -z "$MINSUFFIX" ]; then
 				let MAXMINOR++
 			fi
 			NEWDEP="$NEWDEP
 					$(deprange-iterate-numbers ~${PACKAGE}-${BASEVER}. $MINMINOR $MAXMINOR)"
-		
+
 			# Min version's allowed suffixes
 			if [ -n "$MINSUFFIX" ]; then
 				NEWDEP="$NEWDEP
@@ -500,7 +500,7 @@ deprange-list() {
 						$(deprange-iterate-numbers $BASE ${MINREV#r} 99)"
 			fi
 		fi
-		
+
 		# Output
 		echo -n $NEWDEP
 	done
@@ -522,13 +522,13 @@ deprange-iterate-numbers() {
 # eg: deprange-iterate-suffixes ~kde-base/libkonq-3.4.0 alpha8 beta2
 deprange-iterate-suffixes() {
 	local NAME=$1 MINSUFFIX=$2 MAXSUFFIX=$3
-	
+
 	# Separate out the optional lower bound revision number
 	if [ "$MINSUFFIX" != "${MINSUFFIX/-}" ]; then
 		local MINREV=${MINSUFFIX##*-}
 	fi
 	MINSUFFIX=${MINSUFFIX%-*}
-	
+
 	# Separate out the version suffixes
 	local MINalpha MINbeta MINpre MINrc
 	if [ "$MINSUFFIX" != "${MINSUFFIX/alpha}" ]; then
@@ -554,20 +554,20 @@ deprange-iterate-suffixes() {
 	else
 		die "deprange(): version suffix $MAXSUFFIX (probably _pN) not supported"
 	fi
-	
+
 	local started="" NEWDEP="" var
-	
+
 	# Loop over version suffixes
 	for suffix in rc pre beta alpha; do
 		local upper="" lower=""
-		
+
 		# If -n $started, we've encountered the upper bound in a previous iteration
 		# and so we use the maximum allowed upper bound for this prefix
 		if [ -n "$started" ]; then
 			upper=10
-			
+
 		else
-		
+
 			# Test for the upper bound in the current iteration
 			var=MAX$suffix
 			if [ -n "${!var}" ]; then
@@ -575,29 +575,29 @@ deprange-iterate-suffixes() {
 				started=yes
 			fi
 		fi
-		
+
 		# If the upper bound has been found
 		if [ -n "$upper" ]; then
-		
+
 			# Test for the lower bound in the current iteration (of the loop over prefixes)
 			var=MIN$suffix
 			if [ -n "${!var}" ]; then
 				lower=${!var}
-				
+
 				# If the lower bound has a revision number, don't touch that yet
 				if [ -n "$MINREV" ]; then
 					let lower++
 				fi
-				
+
 			# If not found, we go down to the minimum allowed for this prefix
 			else
 				lower=1
 			fi
-			
+
 			# Add allowed versions with this prefix
 			NEWDEP="$NEWDEP
 					$(deprange-iterate-numbers ${NAME}_${suffix} $lower $upper)"
-					
+
 			# If we've encountered the lower bound on this iteration, don't consider additional prefixes
 			if [ -n "${!var}" ]; then
 				break
@@ -929,7 +929,7 @@ kde_remove_flag() {
 }
 
 # is this a kde-base ebuid?
-if [ "$CATEGORY" == "kde-base" ]; then
-	debug-print "$ECLASS: KDEBASE ebuild recognized"
+if [ "${CATEGORY}" == "kde-base" ]; then
+	debug-print "${ECLASS}: KDEBASE ebuild recognized"
 	export KDEBASE="true"
 fi

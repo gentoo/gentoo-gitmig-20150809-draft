@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.18 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.19 2005/07/11 15:08:07 swegener Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -17,8 +17,8 @@ else
 fi
 
 if [[ ${GOODIES_PLUGIN} = "1" ]]; then
-	[[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"    
-	SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}${COMPRESS}"    
+	[[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"
+	SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}${COMPRESS}"
 	[[ -z ${XFCE_VERSION} ]] && XFCE_VERSION="4.2.0"
 	RDEPEND="${RDEPEND} >=xfce-base/xfce4-panel-${XFCE_VERSION}"
 fi
@@ -63,13 +63,13 @@ DEPEND="${RDEPEND}
 
 xfce4_src_compile() {
 	if [[ "${DEBUG_OFF}" = "1" ]] && use debug; then
-	    XFCE_CONFIG="${XFCE_CONFIG}" 
+	    XFCE_CONFIG="${XFCE_CONFIG}"
 	elif use debug; then
 	    XFCE_CONFIG="${XFCE_CONFIG} --enable-debug=yes"
-	fi 
-	
+	fi
+
 	if [[ ${XFCE_META} = "1" ]]; then
-	    einfo "Meta Build, Nothing to compile."   
+	    einfo "Meta Build, Nothing to compile."
 	else
 	    econf ${XFCE_CONFIG} || die
 
@@ -84,13 +84,13 @@ xfce4_src_compile() {
 xfce4_src_install() {
 	if [[ ${XFCE_META} = "1" ]]; then
 	    einfo "Meta Build, Nothing to install."
-	else    
+	else
 	    if [[ "${WANT_EINSTALL}" = "1" ]]; then
 		einstall || die
 	    else
 		make DESTDIR=${D} install || die
 	    fi
-	
+
 	    if use doc; then
 		dodoc ${XFCE_DOCS} AUTHORS INSTALL README COPYING ChangeLog HACKING NEWS THANKS TODO
 	    fi

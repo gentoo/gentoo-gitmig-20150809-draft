@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.28 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.29 2005/07/11 15:08:06 swegener Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -21,7 +21,7 @@ DEPEND="dev-util/pkgconfig
 RDEPEND="nls? ( sys-devel/gettext )
 	x11-misc/commonbox-utils
 	x11-themes/commonbox-styles"
-	
+
 PROVIDE="virtual/blackbox"
 
 myconf=""
@@ -59,7 +59,7 @@ commonprep() {
 		       -e "s:/styles/mbdtex:/styles/Fury-NG:" \
 		       -e "s:/styles/Clean:/styles/Fury-NG:" ${i}
 	done
-	
+
 }
 
 commonbox_src_compile() {
@@ -109,10 +109,10 @@ commonbox_src_compile() {
 	fi
 
 	[ ! -z "${FORCEXFT}" ] && echo "#define XFT 1" >> ${S}/config.h
-	
+
 	emake \
 		pkgdatadir=/usr/share/commonbox || die
-		
+
 }
 
 
@@ -127,7 +127,7 @@ commonbox_src_install() {
 	if [ "${MYBIN}" != "${PN}" ]
 	then
 		mv ${D}/usr/bin/${PN} ${D}/usr/bin/${MYBIN}
-	
+
 		# same to manpage
 		rm ${D}/usr/share/man/man1/${PN}.1
 		mv doc/${PN}.1 doc/${MYBIN}.1
@@ -141,9 +141,9 @@ commonbox_src_install() {
 		dodir /usr/share/commonbox/${MYBIN}
 		mv ${D}/usr/share/${PN}/nls ${D}/usr/share/commonbox/${MYBIN}
 	)
-	
+
 	rmdir ${D}/usr/share/${MYBIN}
-	
+
 	dodir /etc/X11/Sessions
 	echo "/usr/bin/${MYBIN}" > ${D}/etc/X11/Sessions/${MYBIN}
 	fperms a+x /etc/X11/Sessions/${MYBIN}

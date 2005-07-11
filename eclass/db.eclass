@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.19 2005/07/06 20:28:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.20 2005/07/11 15:08:06 swegener Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
 IUSE="doc"
@@ -44,7 +44,7 @@ db_fix_so () {
 		ln -sf ${target}/db.h .
 		ln -sf ${target}/db_185.h .
 	elif [ ! -e "${target}/db.h" ]; then
-		if [ -n ${target} ]; then 
+		if [ -n ${target} ]; then
 			ewarn "Could not find ${target}/db.h"
 		else
 			einfo "Apparently you just removed the last instance of $PN. Removing the symlinks"
@@ -81,7 +81,7 @@ db_src_install_headerslot() {
 db_src_install_usrlibcleanup() {
 	# Clean out the symlinks so that they will not be recorded in the
 	# contents (bug #60732)
-	
+
 	if [ "${D}" = "" ]; then
 		die "Calling clean_links while \$D not defined"
 	fi
@@ -89,6 +89,6 @@ db_src_install_usrlibcleanup() {
 	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*so' -exec rm \{} \;
 	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*so.[23]' -exec rm \{} \;
 	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*a' -exec rm \{} \;
-	
+
 	rm -f ${D}/usr/include/db.h ${D}/usr/include/db_185.h
 }

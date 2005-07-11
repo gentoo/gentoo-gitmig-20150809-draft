@@ -1,34 +1,32 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.18 2005/07/06 20:49:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.19 2005/07/11 15:08:06 swegener Exp $
 
 inherit base java-pkg
 
-IUSE="${IUSE} jikes junit"
+IUSE="jikes junit"
 
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://jakarta.apache.org/"
 
 # deps on the build tools
-DEPEND="$DEPEND
-        >=virtual/jdk-1.3
-        >=dev-java/ant-1.4
-        >=dev-java/log4j-1.2
-        junit? ( >=dev-java/junit-3.7 )
-        jikes? ( >=dev-java/jikes-1.18 )"
+DEPEND=">=virtual/jdk-1.3
+	>=dev-java/ant-1.4
+	>=dev-java/log4j-1.2
+	junit? ( >=dev-java/junit-3.7 )
+	jikes? ( >=dev-java/jikes-1.18 )"
 
-RDEPEND="$RDEPEND >=virtual/jdk-1.3"
-SLOT="$SLOT"
+RDEPEND=">=virtual/jdk-1.3"
 
 #jakarta-commons_src_unpack() {
 #
 #	debug-print-function $FUNCNAME $*
-#	
+#
 #	# call base_src_unpack, which implements most of the functionality and has sections,
 #	# unlike this function. The change from base_src_unpack to kde_src_unpack is thus
 #	# wholly transparent for ebuilds.
 #	base_src_unpack $*
-#	
+#
 #	cd ${S}
 #	debug-print "$FUNCNAME: Unpacked to $PWD"
 #}

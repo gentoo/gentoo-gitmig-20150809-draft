@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.33 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.34 2005/07/11 15:08:06 swegener Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -201,7 +201,7 @@ function webapp_runbycgibin ()
 #
 # The ownership of the file is NOT set until the application is installed
 # using the webapp-config tool.
-# 
+#
 # @param	$1 - file to be owned by the webserver user:group combo
 #
 # ------------------------------------------------------------------------
@@ -209,9 +209,9 @@ function webapp_runbycgibin ()
 function webapp_serverowned ()
 {
 	webapp_checkfileexists "$1" "$D"
-	local MY_FILE="`webapp_strip_appdir \"$1\"`" 
+	local MY_FILE="`webapp_strip_appdir \"$1\"`"
 	MY_FILE="`webapp_strip_cwd \"$MY_FILE\"`"
-	
+
 	einfo "(server owned) $MY_FILE"
 	echo "$MY_FILE" >> "${D}${WA_SOLIST}"
 }
@@ -248,7 +248,7 @@ function webapp_server_configfile ()
 	#
 	# do NOT change the naming convention used here without changing all
 	# the other scripts that also rely upon these names
- 
+
 	einfo "($1) config file '$my_file'"
 	cp "$2" "${D}${MY_SERVERCONFIGDIR}/${my_file}"
 }
@@ -282,7 +282,7 @@ function webapp_sqlscript ()
 	#
 	# do NOT change the naming convention used here without changing all
 	# the other scripts that also rely upon these names
- 
+
 	# are we dealing with an 'upgrade'-type script?
 	if [ -n "$3" ]; then
 		# yes we are
@@ -347,7 +347,7 @@ function webapp_pkg_setup ()
 	G_HOSTNAME="localhost"
 	. "${ETC_CONFIG}" || die "Unable to open file ${ETC_CONFIG}"
 
-	# are we installing a webapp-config solution over the top of a 
+	# are we installing a webapp-config solution over the top of a
 	# non-webapp-config solution?
 
 	if ! use vhosts ; then
@@ -466,7 +466,7 @@ function webapp_pkg_postinst ()
 
 	# if 'vhosts' is not set in your USE flags, we install a copy of
 	# this application in /var/www/localhost/htdocs/${PN}/ for you
-	
+
 	if ! use vhosts ; then
 		echo
 		einfo "vhosts USE flag not set - auto-installing using webapp-config"
@@ -487,7 +487,7 @@ function webapp_pkg_postinst ()
 		else
 			einfo "${PN}-${PVR} is not installed - using install mode"
 		fi
-	
+
 		my_cmd="/usr/sbin/webapp-config $my_mode -h localhost -u root -d $INSTALL_DIR ${PN} ${PVR}"
 		einfo "Running $my_cmd"
 		$my_cmd

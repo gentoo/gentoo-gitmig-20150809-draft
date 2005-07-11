@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freedict.eclass,v 1.12 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freedict.eclass,v 1.13 2005/07/11 15:08:06 swegener Exp $
 
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # This eclass exists to ease the installation of freedict translation
@@ -9,7 +9,6 @@
 # respectively.
 
 inherit eutils
-
 
 IUSE=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.16 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.17 2005/07/11 15:08:06 swegener Exp $
 
 # !!!!!!!!!!
 #
@@ -22,7 +22,7 @@
 
 # Variables you can use to change behavior
 #
-# KMOD_SOURCES - space seperated list of source to unpack in 
+# KMOD_SOURCES - space seperated list of source to unpack in
 #					   src_unpack() if you don't want ${A} unpacked.
 #
 # KMOD_KOUTPUT_PATCH - Patch to apply in src_unpack() if a seperate output
@@ -46,7 +46,7 @@ kmod_get_make_var ()
 }
 
 # getconfigvar() - Prints the value of a certain config varaible from the
-#				current kernel's config file. Will return "n" for an unset 
+#				current kernel's config file. Will return "n" for an unset
 #				option
 
 kmod_get_config_var()
@@ -128,7 +128,7 @@ get_kernel_info()
 		KV_MK_OUTPUT="${KV_MK_OUTPUT/\$(SUBLEVEL)/${KV_MK_PATCH}}"
 		KV_MK_OUTPUT="${KV_MK_OUTPUT/\$(EXTRAVERSION)/${KV_MK_TYPE}}"
 	fi
-	
+
 	if [ "$KV_MK_VERSION_FULL" != "${KV_DIR_VERSION_FULL}" ]; then
 		ewarn
 		ewarn "The kernel Makefile says that this is a ${KV_MK_VERSION_FULL} kernel"
@@ -233,7 +233,7 @@ kmod_do_buildpatches()
 			epatch ${KMOD_KOUTPUT_PATCH}
 	fi
 }
-	
+
 kmod_src_unpack ()
 {
 	check_KV
@@ -302,9 +302,9 @@ is_kernel() {
 	fi
 
 	if [ "${KV_MAJOR}" -eq "${1}" -a "${KV_MINOR}" -eq "${2}" ]
-	then    
+	then
 		return 0
-	else    
+	else
 		return 1
 	fi
 }
