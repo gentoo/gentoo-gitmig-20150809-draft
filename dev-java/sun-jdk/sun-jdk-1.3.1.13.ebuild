@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.13.ebuild,v 1.8 2005/07/11 13:21:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.13.ebuild,v 1.9 2005/07/11 18:18:03 axxo Exp $
 
 inherit java eutils
 
@@ -53,7 +53,7 @@ src_unpack() {
 	sed "s/head -1/head -n 1/" -i ${MY_P}/bin/.java_wrapper
 }
 
-src_install () {
+src_install() {
 	local dirs="bin include include-old jre lib man"
 	dodir /opt/${P}
 
