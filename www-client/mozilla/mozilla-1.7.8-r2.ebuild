@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.8-r1.ebuild,v 1.10 2005/07/11 21:52:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.8-r2.ebuild,v 1.1 2005/07/11 21:52:02 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -21,9 +21,10 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/s
 	crypt? ( !moznomail? (
 		http://www.mozilla-enigmail.org/downloads/src/ipc-${IPCVER}.tar.gz
 		http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz
-	) )"
+	) )
+	mirror://gentoo/mozilla-jslibmath-alpha.patch"
 
-KEYWORDS="-alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -92,6 +93,9 @@ src_unpack() {
 	# Mozilla crashes under some rare cases when plugin.default_plugin_disabled
 	# is true. This patch fixes that. Backported by hansmi@gentoo.org.
 	epatch ${FILESDIR}/${P}-objectframefix.diff
+
+	# Fix math functions on alpha so that maps.google.com works correctly
+	epatch ${DISTDIR}/mozilla-jslibmath-alpha.patch
 
 	# Fix scripts that call for /usr/local/bin/perl #51916
 	ebegin "Patching smime to call perl from /usr/bin"
