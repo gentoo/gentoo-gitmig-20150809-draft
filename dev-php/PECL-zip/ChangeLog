@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PECL-zip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-zip/ChangeLog,v 1.1 2005/03/15 17:35:42 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-zip/ChangeLog,v 1.2 2005/07/11 18:33:27 sebastian Exp $
+
+  11 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PECL-zip-1.0.ebuild:
+  Stable on x86.
 
 *PECL-zip-1.0 (15 Mar 2005)
 
