@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 dbae12450343e30e77aca7a7f2832478 3ddesktop-0.2.8.ebuild 603
+MD5 8aa7ca0644ca18f03e2b1791059e5ada 3ddesktop-0.2.9.ebuild 606
 MD5 13cc481b5ea2303d1d1c13849385d88e ChangeLog 3365
-MD5 e465243d3626f791491c00b7913a36d6 metadata.xml 436
-MD5 9eeb7debe58e39c911ea6a443d2dbabd 3ddesktop-0.2.9.ebuild 679
-MD5 51a065b7831ecd75b7a51f41d0e318aa 3ddesktop-0.2.8.ebuild 676
 MD5 f00452b9de2da5a9e4d981f2f03f48c5 files/digest-3ddesktop-0.2.8 67
 MD5 120616a127fefe09adc8c8400335f0d9 files/digest-3ddesktop-0.2.9 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0vfCl5AvwDPiUowRAtClAJ9T1lxcukgYCjTkHgiWgehoDtEY2ACgwhRM
-+t7MmGqN2fdSNkczMlIgvnc=
-=F6i5
------END PGP SIGNATURE-----
+MD5 e465243d3626f791491c00b7913a36d6 metadata.xml 436
