@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ids-0.83_beta2-r1.ebuild,v 1.4 2005/04/27 13:34:31 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ids-0.83_beta2-r1.ebuild,v 1.5 2005/07/11 01:15:35 rl03 Exp $
 
 inherit webapp
 
@@ -14,6 +14,7 @@ KEYWORDS="~x86 ~sparc ~ppc"
 RDEPEND="net-www/apache
 	>=dev-lang/perl-5.6.1
 	dev-perl/ImageInfo
+	dev-perl/Archive-Zip
 	>=media-gfx/imagemagick-6.2.2.0"
 
 S=${WORKDIR}/${PN}
@@ -25,9 +26,6 @@ src_install() {
 
 	cp -R . ${D}/${MY_HTDOCSDIR}
 	webapp_serverowned ${MY_HTDOCSDIR}/image-cache
-
-	# add post-installation instructions
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
-
 	webapp_src_install
 }

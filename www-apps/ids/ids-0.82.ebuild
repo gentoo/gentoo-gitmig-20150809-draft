@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ids-0.82.ebuild,v 1.2 2005/07/10 01:16:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ids-0.82.ebuild,v 1.3 2005/07/11 01:15:35 rl03 Exp $
 
 inherit webapp-apache
 
