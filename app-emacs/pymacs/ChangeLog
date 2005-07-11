@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.8 2005/04/24 11:04:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.9 2005/07/11 18:30:46 mkennedy Exp $
+
+  11 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  files/50pymacs-gentoo.el:
+  Add site-lisp path to load-path; Enables non-Portage Emacs builds to use
+  /usr/share/emacs/site-lisp/
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pymacs-0.22.ebuild:
   Stable on ppc.
