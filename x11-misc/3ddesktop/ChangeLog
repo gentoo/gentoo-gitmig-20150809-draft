@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/3ddesktop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.26 2005/07/11 17:13:02 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.27 2005/07/11 22:34:44 josejx Exp $
+
+  11 Jul 2005; Joseph Jezak <josejx@gentoo.org> 3ddesktop-0.2.8.ebuild:
+  Marked ppc stable.
 
   11 Jul 2005; Jonathan Smith <smithj@gentoo.org> 3ddesktop-0.2.8.ebuild:
   #98677: marked x86 and amd64 stable
