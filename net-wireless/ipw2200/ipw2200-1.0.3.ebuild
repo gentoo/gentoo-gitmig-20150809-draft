@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-1.0.3.ebuild,v 1.4 2005/06/20 10:26:41 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-1.0.3.ebuild,v 1.5 2005/07/11 16:47:50 brix Exp $
 
 inherit eutils linux-mod
 
@@ -20,9 +20,11 @@ SLOT="0"
 KEYWORDS="x86 ~amd64"
 
 IUSE="debug"
-RDEPEND="=net-wireless/ipw2200-firmware-${FW_VERSION}
-		net-wireless/wireless-tools
+DEPEND="!net-wireless/ieee80211
 		!net-wireless/ipw2100"
+RDEPEND="${DEPEND}
+		=net-wireless/ipw2200-firmware-${FW_VERSION}
+		net-wireless/wireless-tools"
 
 BUILD_TARGETS="all"
 

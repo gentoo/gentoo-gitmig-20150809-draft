@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.76 2005/06/24 21:31:21 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.77 2005/07/11 16:45:03 brix Exp $
+
+  11 Jul 2005; <brix@gentoo.org> ipw2100-1.0.5.ebuild, ipw2100-1.1.0.ebuild:
+  Block upcoming net-wireless/ieee80211 package.
 
   24 Jun 2005; <brix@gentoo.org>
   +files/ipw2100-1.0.5-is_multicast_ether_addr.patch,
