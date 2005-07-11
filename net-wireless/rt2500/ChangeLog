@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/rt2500
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.12 2005/07/07 05:02:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.13 2005/07/11 17:00:44 genstef Exp $
+
+  11 Jul 2005; Stefan Schweizer <genstef@gentoo.org> +files/RT2500STA.dat,
+  rt2500-1.1.0_beta2-r2.ebuild:
+  Convert RT2500STA.dat to unix format thanks to Kevin Parent
+  <kparent@enersea.net> in bug 98574 and made it fail on SMP kernels thanks to
+  Kevin Parent <kparent@enersea.net> in bug 98578
 
   07 Jul 2005; Caleb Tennis <caleb@gentoo.org> rt2500-1.1.0_beta1-r1.ebuild,
   rt2500-1.1.0_beta2.ebuild, rt2500-1.1.0_beta2-r1.ebuild,

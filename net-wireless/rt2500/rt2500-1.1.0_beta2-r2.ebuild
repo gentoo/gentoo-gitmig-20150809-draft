@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta2-r2.ebuild,v 1.4 2005/07/07 05:02:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta2-r2.ebuild,v 1.5 2005/07/11 17:00:44 genstef Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -18,7 +18,8 @@ DEPEND="net-wireless/wireless-tools
 
 S=${WORKDIR}/${MY_P/-b*}
 MODULE_NAMES="rt2500(net:${S}/Module)"
-CONFIG_CHECK="NET_RADIO"
+CONFIG_CHECK="NET_RADIO BROKEN_ON_SMP"
+SMP_ERROR="SMP Processors and Kernels are currently not supported"
 MODULESD_RT2500_ALIASES=('ra? rt2500')
 
 
@@ -53,7 +54,7 @@ src_install() {
 	use qt && dobin ${S}/Utilitys/RaConfig2500
 
 	insinto /etc/Wireless/RT2500STA
-	doins Module/RT2500STA.dat
+	doins ${FILESDIR}/RT2500STA.dat
 
 	dodoc Module/README Module/iwpriv_usage.txt LICENSE FAQ CHANGELOG
 }
