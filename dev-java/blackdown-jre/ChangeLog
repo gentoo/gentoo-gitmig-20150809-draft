@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.63 2005/06/20 12:55:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.64 2005/07/11 13:23:11 axxo Exp $
+
+  11 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
+  blackdown-jre-1.3.1-r9.ebuild, blackdown-jre-1.4.1-r1.ebuild,
+  blackdown-jre-1.4.2.01-r1.ebuild, blackdown-jre-1.4.2.02.ebuild:
+  bug 94056: useflag rename mozilla -> browserplugin
 
   20 Jun 2005; Thomas Matthijs <axxo@gentoo.org>
   blackdown-jre-1.4.2.02.ebuild:

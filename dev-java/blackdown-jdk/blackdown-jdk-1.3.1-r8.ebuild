@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.21 2005/06/06 18:37:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.22 2005/07/11 13:24:41 axxo Exp $
 
 inherit java
 
@@ -13,8 +13,8 @@ SRC_URI="x86? ( mirror://blackdown.org/JDK-${PV}/i386/FCS/j2sdk-${PV}-FCS-linux-
 
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
-KEYWORDS="x86 ~ppc sparc"
-IUSE="doc mozilla"
+KEYWORDS="x86 ~ppc sparc -*"
+IUSE="doc browserplugin mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
@@ -49,7 +49,7 @@ src_install() {
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html
 
-	if use mozilla; then
+	if use browserplugin || use mozilla; then
 		if [ "${ARCH}" == "x86" ] ; then
 			PLATFORM="i386"
 		elif [ "${ARCH}" == "ppc" ] ; then
@@ -77,9 +77,15 @@ pkg_postinst() {
 	# Set as default system VM if none exists
 	java_pkg_postinst
 
-	if use mozilla; then
+	if use browserplugin || use mozilla; then
 		einfo "The java mozilla plugin supplied by this package does not"
 		einfo "work with newer version mozilla/firefox."
 		einfo "You need >=${PN}-1.4 for them."
+	fi
+
+	if ! use browserplugin && use mozilla; then
+		ewarn
+		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
+		ewarn "has been renamed to 'browserplugin' please update your USE"
 	fi
 }

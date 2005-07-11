@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.10 2005/06/06 18:37:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.11 2005/07/11 13:24:41 axxo Exp $
 
 
 inherit java
@@ -21,7 +21,7 @@ CHPAX_CONSERVATIVE_FLAGS="pemsv"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.4.1"
 KEYWORDS="-* x86 sparc amd64"
-IUSE="doc emul-linux-x86 mozilla"
+IUSE="doc emul-linux-x86 browserplugin mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.6
@@ -77,7 +77,7 @@ src_install() {
 	# do not install plugins, security vulnerability   #72221
 	rm -rf ${D}/opt/${P}/jre/plugin/
 
-	#if use mozilla; then
+	#if use browserplugin || use mozilla; then
 	#	if [ "${ARCH}" = "x86" ] ; then
 	#		PLATFORM="i386"
 	#	fi
@@ -111,9 +111,9 @@ pkg_postinst() {
 	# Set as default system VM if none exists
 	java_pkg_postinst
 
-	if use mozilla; then
+	if use browserplugin || use mozilla; then
 		echo
-		einfo "mozilla plugin NOT installed"
+		einfo "browserplugin plugin NOT installed"
 		einfo "http://www.blackdown.org/java-linux/java2-status/security/Blackdown-SA-2004-01.txt"
 	fi
 	# if chpax is on the target system, set the appropriate PaX flags
@@ -126,11 +126,11 @@ pkg_postinst() {
 
 		for paxkills in "jar" "javac" "java" "javah" "javadoc"
 		do
-			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
+			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/bin/$paxkills
 		done
 
 		# /opt/blackdown-jdk-1.4.1/jre/bin/java_vm
-		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/jre/bin/java_vm
+		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/jre/bin/java_vm
 
 		einfo "you should have seen lots of chpax output above now"
 		ewarn "make sure the grsec ACL contains those entries also"
@@ -138,4 +138,10 @@ pkg_postinst() {
 		ewarn "on the physical files - help for PaX and grsecurity"
 		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
 	fi
+	if ! use browserplugin && use mozilla; then
+		ewarn
+		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
+		ewarn "has been renamed to 'browserplugin' please update your USE"
+	fi
+
 }

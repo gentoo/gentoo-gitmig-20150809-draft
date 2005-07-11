@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.28 2005/05/18 15:45:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.29 2005/07/11 13:25:54 axxo Exp $
+
+  11 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
+  ibm-jdk-bin-1.4.1-r2.ebuild, ibm-jdk-bin-1.4.2.ebuild:
+  bug 94056: useflag rename mozilla -> browserplugin
 
   18 May 2005; Thomas Matthijs <axxo@gentoo.org>
   ibm-jdk-bin-1.4.1-r2.ebuild, ibm-jdk-bin-1.4.2.ebuild:

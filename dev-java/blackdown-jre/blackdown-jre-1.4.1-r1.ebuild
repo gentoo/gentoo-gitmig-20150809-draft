@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.9 2005/06/06 18:34:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.10 2005/07/11 13:23:11 axxo Exp $
 
 inherit java toolchain-funcs
 
@@ -29,8 +29,8 @@ RDEPEND="${DEPEND}
 PROVIDE="virtual/jre"
 SLOT="0"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="x86 sparc amd64"
-IUSE="emul-linux-x86 mozilla"
+KEYWORDS="x86 sparc amd64 -*"
+IUSE="emul-linux-x86 browserplugin mozilla"
 
 src_unpack () {
 	typeset a want_gcc_ver
@@ -69,7 +69,7 @@ src_install () {
 	# Install mozilla plugin
 	# do not install plugins, security vulnerability   #72221
 	rm -rf ${D}/opt/${P}/plugin/
-	#if use mozilla; then
+	#if use browserplugin || use mozilla; then
 	#	case ${ARCH} in
 	#		amd64|x86) platform="i386" ;;
 	#		ppc) platform="ppc" ;;
@@ -90,9 +90,15 @@ src_install () {
 }
 
 pkg_postinst() {
-	if use mozilla; then
+	if use browserplugin || use mozilla; then
 		echo
 		einfo "mozilla plugin NOT installed"
 		einfo "http://www.blackdown.org/java-linux/java2-status/security/Blackdown-SA-2004-01.txt"
+	fi
+
+	if ! use browserplugin && use mozilla; then
+		ewarn
+		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
+		ewarn "has been renamed to 'browserplugin' please update your USE"
 	fi
 }
