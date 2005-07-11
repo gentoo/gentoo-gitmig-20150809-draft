@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/bbmail-0.8.2.ebuild,v 1.8 2004/06/24 22:13:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/bbmail-0.8.2.ebuild,v 1.9 2005/07/11 22:47:35 swegener Exp $
 
 IUSE=""
 DESCRIPTION="blackbox mail notification"
@@ -13,13 +13,8 @@ KEYWORDS="x86 sparc ppc"
 
 DEPEND="virtual/blackbox"
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dobin scripts/bbmailparsefm.pl
 	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL NEWS README TODO
 }

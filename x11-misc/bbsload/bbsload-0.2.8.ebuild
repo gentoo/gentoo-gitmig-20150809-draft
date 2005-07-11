@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.8.ebuild,v 1.9 2005/05/06 10:32:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.8.ebuild,v 1.10 2005/07/11 23:00:24 swegener Exp $
 
 DESCRIPTION="blackbox load monitor"
 SRC_URI="http://bbtools.windsofstorm.net/sources/${P}.tar.gz"
@@ -20,6 +20,6 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README COPYING AUTHORS BUGS INSTALL ChangeLog NEWS TODO data/README.bbsload
 }
