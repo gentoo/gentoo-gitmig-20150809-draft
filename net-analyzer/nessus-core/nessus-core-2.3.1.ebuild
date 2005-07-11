@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.3.1.ebuild,v 1.1 2005/05/15 13:51:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.3.1.ebuild,v 1.2 2005/07/11 21:05:32 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.nessus.org/pub/nessus/experimental/nessus-${PV}/src/${P}.tar.
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ppc64"
-IUSE="tcpd gtk gtk2 debug"
+IUSE="tcpd gtk gtk2 debug prelude"
 
 DEPEND="=net-analyzer/nessus-libraries-${PV}
 	=net-analyzer/libnasl-${PV}
