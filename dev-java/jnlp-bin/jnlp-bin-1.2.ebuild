@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-bin/jnlp-bin-1.2.ebuild,v 1.7 2005/06/11 11:42:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-bin/jnlp-bin-1.2.ebuild,v 1.8 2005/07/11 21:17:56 axxo Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 DEPEND="app-arch/unzip"
-RDEPEND="virtual/jre"
+RDEPEND=">=virtual/jre-1.3"
 RESTRICT="fetch"
 
 S=${WORKDIR}
@@ -24,8 +24,6 @@ pkg_nofetch() {
 	einfo "Please download ${A} and place it in ${DISTDIR}"
 	einfo "${DOWNLOAD_URL}"
 }
-
-src_compile() { :; }
 
 src_install() {
 	java-pkg_dojar *.jar
