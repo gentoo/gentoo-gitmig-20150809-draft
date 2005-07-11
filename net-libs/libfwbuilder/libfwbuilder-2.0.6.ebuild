@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-2.0.6.ebuild,v 1.7 2005/07/07 04:54:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-2.0.6.ebuild,v 1.8 2005/07/11 10:55:37 carlo Exp $
 
 DESCRIPTION="Firewall Builder 2.0 API library and compiler framework"
 HOMEPAGE="http://www.fwbuilder.org/"
@@ -18,6 +18,7 @@ DEPEND=">=dev-libs/libxml2-2.4.10
 	=x11-libs/qt-3*"
 
 src_compile() {
+	export QMAKE="${QTDIR}/bin/qmake"
 	econf `use_with ssl openssl` `use_with snmp ucdsnmp` || die
 	emake || die
 }
