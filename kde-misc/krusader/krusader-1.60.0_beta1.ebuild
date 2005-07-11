@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.60.0_beta1.ebuild,v 1.3 2005/03/05 16:36:18 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.60.0_beta1.ebuild,v 1.4 2005/07/11 21:22:51 swegener Exp $
 
 inherit kde
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
-IUSE="kde"
+IUSE="javascript kde"
 # Adds support for Konqueror's right-click actions
 
 DEPEND="kde? ( || ( ( kde-base/libkonq kde-base/kdebase-kioslaves )
