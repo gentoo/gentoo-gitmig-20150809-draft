@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.5-r1.ebuild,v 1.2 2005/05/01 17:05:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.5-r1.ebuild,v 1.3 2005/07/11 22:10:02 axxo Exp $
 
 inherit java-pkg
 
@@ -48,8 +48,7 @@ src_compile() {
 }
 
 src_install() {
-	mv forms-${PV}.jar forms.jar
-	java-pkg_dojar forms.jar
+	java-pkg_newjar forms-${PV}.jar forms.jar
 
 	dodoc LICENSE.txt RELEASE-NOTES.txt
 
