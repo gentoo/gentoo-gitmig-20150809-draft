@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.76 2005/07/11 15:37:17 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.77 2005/07/11 18:01:03 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -43,7 +43,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.6-includepath.diff http://dev.gentoo
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp mssql debug"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp mssql debug"
 
 # Hardened-PHP support
 #
@@ -91,8 +91,6 @@ RDEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	pam? ( >=sys-libs/pam-0.75 )
-	pdflib? ( =media-libs/pdflib-5* >=media-libs/jpeg-6b
-		>=media-libs/libpng-1.2.5 >=media-libs/tiff-3.5.5 )
 	png? ( >=media-libs/libpng-1.2.5 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	qt? ( >=x11-libs/qt-2.3.0 )
@@ -322,17 +320,12 @@ php-sapi_src_compile() {
 	myconf="${myconf} `use_with gmp`"
 	myconf="${myconf} `use_with mssql mssql /usr`"
 
+	myconf="${myconf} --without-pdflib"
+
 	# This chunk is intended for png/tiff/jpg, as there are several things that need them, indepentandly!
 	REQUIREPNG=
 	REQUIREJPG=
 	REQUIRETIFF=
-	if use pdflib; then
-		myconf="${myconf} --with-pdflib=/usr"
-		REQUIREPNG=1 REQUIREJPG=1 REQUIRETIFF=1
-	else
-		myconf="${myconf} --without-pdflib"
-	fi
-
 	if use gd-external; then
 		myconf="${myconf} --with-gd=/usr"
 		REQUIREPNG=1
