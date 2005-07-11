@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4179 2005/07/11 01:45:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4180 2005/07/11 01:46:14 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -397,7 +397,7 @@ net-mail/mailer-config
 =mail-mta/postfix-2.2.2-r2
 >=mail-mta/postfix-2.2.3
 =mail-mta/sendmail-8.13.4-r1
-=mail-mta/exim-4.50-r999.ebuild
+=mail-mta/exim-4.50-r999
 
 # Martin Schlemmer <azarah@gentoo.org> (23 Apr 2005)
 # Testing release for gcc-4.0.0.
