@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acf03566c551d5b70067a54ee63db6d8 ChangeLog 862
-MD5 e805f1b0f77fb7bf86f61e9e74180f9a apple-java-extensions-bin-1.2.ebuild 948
+MD5 5b173e847ca623c1b655ca547a76773b apple-java-extensions-bin-1.2.ebuild 926
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 6ecb4788796eea6212f907356bd5ebf5 files/digest-apple-java-extensions-bin-1.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0tRo/rLF9B432nYRAmYhAKC5rPm8PUrFaWm5asc8r3dfiph+cgCfZtzX
+tyFRcR4yJwGdCoup0ruk6Q8=
+=NNzQ
+-----END PGP SIGNATURE-----
