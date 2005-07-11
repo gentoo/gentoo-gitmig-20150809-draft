@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.46 2005/07/11 15:49:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.47 2005/07/11 21:06:45 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -873,6 +873,7 @@ host_def_setup() {
 
 		# Make xprint optional
 		use_build xprint BuildXprint
+		use_build xprint BuildXprintClients
 		# Build libXp even when xprint is off. It's just for clients, server
 		if ! use xprint; then
 			echo "#define BuildXprintLib YES" >> ${HOSTCONF}
