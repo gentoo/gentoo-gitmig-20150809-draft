@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.4 2005/06/21 09:49:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.5 2005/07/11 15:11:00 genstef Exp $
+
+*loop-aes-3.0d (11 Jul 2005)
+
+  11 Jul 2005; Stefan Schweizer <genstef@gentoo.org> +loop-aes-3.0d.ebuild:
+  Version bump thanks to Alon Bar-Lev <alon.barlev@gmail.com> in bug 98389
 
   21 Jun 2005; Simon Stelling <blubb@gentoo.org> loop-aes-3.0c.ebuild:
   added ~amd64 keyword
