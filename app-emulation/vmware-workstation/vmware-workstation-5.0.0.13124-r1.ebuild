@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124-r1.ebuild,v 1.1 2005/06/20 21:38:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124-r1.ebuild,v 1.2 2005/07/11 14:27:19 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -30,7 +30,7 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* x86 amd64"
 RESTRICT="nostrip"
 
 DEPEND="${RDEPEND} virtual/os-headers"
