@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b803d4ecb502dd370c5cf7ef1cd1c344 gnome-desktop-2.10.0.ebuild 1164
+MD5 6e2b0e6752ef3ae228e26ea1f24932cb gnome-desktop-2.6.2.ebuild 1235
+MD5 527372db6ac3daa5ddfc243286890690 gnome-desktop-2.10.0.ebuild 1164
+MD5 1266d45839c6349005114df8d7112824 gnome-desktop-2.8.3.ebuild 1149
+MD5 6b1682c64651512969300669c43ce309 gnome-desktop-2.8.0.ebuild 1236
+MD5 f1f3a2a0b28c9ae2b6e1153851242223 gnome-desktop-2.10.1.ebuild 1171
+MD5 713f41bf433361703e7477e63675a42f ChangeLog 12118
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 2d5013fde71bd8a995935763112b651b gnome-desktop-2.8.1.ebuild 1225
-MD5 6e2b0e6752ef3ae228e26ea1f24932cb gnome-desktop-2.6.2.ebuild 1235
-MD5 1266d45839c6349005114df8d7112824 gnome-desktop-2.8.3.ebuild 1149
-MD5 8daeb3cc4f128e009b29a5fc907a1b6c ChangeLog 12015
-MD5 f1f3a2a0b28c9ae2b6e1153851242223 gnome-desktop-2.10.1.ebuild 1171
-MD5 6b1682c64651512969300669c43ce309 gnome-desktop-2.8.0.ebuild 1236
 MD5 7da730c589038e00931bb8894d5a9054 files/digest-gnome-desktop-2.6.2 73
 MD5 d2aa408f8ca1d7a5a752c31886b97213 files/digest-gnome-desktop-2.8.0 73
 MD5 39610cc4df959402bbc9a7426eb94566 files/digest-gnome-desktop-2.8.1 73
-MD5 fc33ae327ce643e23d6cd59cf5773f27 files/digest-gnome-desktop-2.10.1 74
-MD5 79c8cb7777a1a9aaee6cf55091178161 files/digest-gnome-desktop-2.10.0 74
 MD5 6c5c7db8959b2137a1cc8c5522472243 files/digest-gnome-desktop-2.8.3 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzLjCgIKl8Uu19MoRAitRAJ0Xpwm/+EwRZcS2lI3c+CPM84OOPQCfQw/i
-DhkjQUETioRAvi8/7RaaoWQ=
-=7JUL
------END PGP SIGNATURE-----
+MD5 79c8cb7777a1a9aaee6cf55091178161 files/digest-gnome-desktop-2.10.0 74
+MD5 fc33ae327ce643e23d6cd59cf5773f27 files/digest-gnome-desktop-2.10.1 74
