@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.36.ebuild,v 1.2 2005/07/10 21:38:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.38.ebuild,v 1.1 2005/07/11 03:54:57 voxus Exp $
 
 inherit eutils
 
@@ -17,12 +17,6 @@ DEPEND="dev-lang/perl
 	pcre? ( >=dev-libs/libpcre-4.2 )
 	ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	use ppc && epatch ${FILESDIR}/nginx-0.1.35-ppc.patch
-}
 
 src_compile() {
 	local myconf
