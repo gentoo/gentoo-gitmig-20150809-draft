@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.8 2005/07/11 18:02:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.9 2005/07/11 19:15:35 dertobi123 Exp $
+
+  11 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org> ogdi-3.1.4.ebuild:
+  ppc stable, #98593
 
   11 Jul 2005; Markus Rothe <corsair@gentoo.org> ogdi-3.1.4.ebuild:
   Stable on ppc64 (bug #98593)

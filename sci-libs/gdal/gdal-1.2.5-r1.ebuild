@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.5-r1.ebuild,v 1.2 2005/07/11 17:29:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.5-r1.ebuild,v 1.3 2005/07/11 19:12:15 dertobi123 Exp $
 
 inherit eutils libtool gnuconfig distutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://dl.maptools.org/dl/gdal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc64 sparc x86"
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7.0
