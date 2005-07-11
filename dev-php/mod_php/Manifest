@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 82a690b536a33e9aee81d6bab92dbb0b mod_php-4.4.0.ebuild 6283
 MD5 bc61d0a7ca0fa2b489073275c1cb9d28 mod_php-5.1.0_beta-r1.ebuild 2431
 MD5 2b6e8a15d7fd5d82d50db473856a5333 mod_php-4.3.11.ebuild 6203
@@ -13,7 +10,7 @@ MD5 225b57325cbdf582288a8796da9d72f5 files/digest-mod_php-4.3.11 287
 MD5 4efe4b530f5c86d8d9252a414ecd5abe files/digest-mod_php-5.1.0_beta-r1 65
 MD5 79ed63479c494aeb2ed0bc7f5c059fb9 files/70_mod_php.conf 1022
 MD5 058042718bc876bf27ab902673919ca9 files/php5-prefork.patch 850
-MD5 4be0d508dc94458d213843099979f970 files/digest-mod_php-4.4.0 205
+MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-mod_php-4.4.0 285
 MD5 74a728966bc5ec6d37ad89f4182ee135 files/digest-mod_php-5.0.4 143
 MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
 MD5 3bf664b414787f8f3c1dcbda5750aef4 files/mod_php-4.3.5-apache1security.diff 425
@@ -25,10 +22,3 @@ MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
 MD5 60cfe0c621237790195bafe595ddcbee files/5.0.4/70_mod_php5.conf 536
 MD5 158cb07377a3e2a0028947b0aeb505cb files/4.3.10-r1/70_mod_php.conf 1017
 MD5 2dfe55aa49dbca0c3316e859f8bebcb1 files/4.3.11-r2/70_mod_php.conf 1125
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0oq9aGfFFLhbXWkRAsQYAJ9BSFOoKnrNYXsYVRLXZ7NHYCRrZQCfRZil
-fMqmfLKdH/PhOeACE/O6PeE=
-=TG1w
------END PGP SIGNATURE-----
