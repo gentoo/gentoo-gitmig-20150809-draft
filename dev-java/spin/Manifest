@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c85f3836502f24c5128505b1f060cf82 spin-1.3.1.ebuild 1006
 MD5 891028dd42bd215553ca8913a64617f4 ChangeLog 961
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 71f72cff8e3f6d99ba9c9e9c6b7b777b files/digest-spin-1.3.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0uyO/rLF9B432nYRAp3PAJ9ZlRtnB7xxPmEkU++xYGnwuUhC1wCeKmet
+ZMKQScqb4zkDiqLlEyNTpnI=
+=6NQF
+-----END PGP SIGNATURE-----
