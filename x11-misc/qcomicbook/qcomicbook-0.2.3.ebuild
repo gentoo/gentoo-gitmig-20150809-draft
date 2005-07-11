@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.2.3.ebuild,v 1.1 2005/07/11 23:15:20 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.2.3.ebuild,v 1.2 2005/07/11 23:19:07 smithj Exp $
 
 inherit eutils
 
@@ -15,11 +15,12 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/x11
-	>=x11-libs/qt-3.3.3
+	>=x11-libs/qt-3.3.3"
+
+RDEPEND="${DEPEND}
 	app-arch/unrar
 	app-arch/rar
 	app-arch/zip"
-
 
 src_compile() {
 	econf --with-Qt-dir=${QTDIR} || die "Configure failed"

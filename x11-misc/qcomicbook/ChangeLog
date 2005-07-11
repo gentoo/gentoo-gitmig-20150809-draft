@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.1 2005/07/11 23:15:20 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.2 2005/07/11 23:19:07 smithj Exp $
+
+  11 Jul 2005; Jonathan Smith <smithj@gentoo.org> qcomicbook-0.2.3.ebuild:
+  moved unrar, rar, zip to RDEPEND (instead of DEPEND)
 
 *qcomicbook-0.2.3 (11 Jul 2005)
 
