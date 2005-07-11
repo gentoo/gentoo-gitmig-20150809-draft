@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.11 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp.eclass,v 1.12 2005/07/11 12:40:25 swegener Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -11,6 +11,8 @@ inherit common-lisp-common
 
 CLPACKAGE=
 DEPEND="dev-lisp/common-lisp-controller"
+
+EXPORT_FUNCTIONS pkg_postinst pkg_postrm
 
 common-lisp_pkg_postinst() {
 	if [ -z "${CLPACKAGE}" ]; then
@@ -37,14 +39,6 @@ common-lisp_pkg_postrm() {
 	fi
 }
 
-pkg_postinst() {
-	common-lisp_pkg_postinst
-}
-
-pkg_postrm() {
-	common-lisp_pkg_postrm
-}
-
 #
 # In pkg_preinst, we remove the FASL files for the previous version of
 # the source.
@@ -61,7 +55,7 @@ pkg_preinst() {
 }
 
 common-lisp-install() {
-	insinto ${CLSOURCEROOT}/$CLPACKAGE
+	insinto ${CLSOURCEROOT}/${CLPACKAGE}
 	doins $@
 }
 
@@ -69,9 +63,9 @@ common-lisp-system-symlink() {
 	dodir ${CLSYSTEMROOT}/`dirname ${CLPACKAGE}`
 	if [ $# -eq 0 ]; then
 		dosym ${CLSOURCEROOT}/${CLPACKAGE}/${CLPACKAGE}.asd \
-			${CLSYSTEMROOT}/$CLPACKAGE.asd
+			${CLSYSTEMROOT}/${CLPACKAGE}.asd
 	else
-		for package in $@ ; do
+		for package in "$@" ; do
 			dosym ${CLSOURCEROOT}/$CLPACKAGE/${package}.asd \
 				${CLSYSTEMROOT}/${package}.asd
 		done
