@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 2005 The Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-darwin.sh,v 1.3 2005/02/26 18:47:34 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-darwin.sh,v 1.4 2005/07/11 20:17:42 kito Exp $
 
 trap 'exit 1' TERM KILL INT QUIT ABRT
 
@@ -26,9 +26,9 @@ ROOT=""
 PORTDIR=${ROOT}/usr/portage
 DISTDIR=${PORTDIR}/distfiles
 PORTAGE_TMPDIR=${ROOT}/var/tmp
-PORTAGEURL="http://gentoo.twobit.net/portage"
-PORTAGEVERSION=2.0.51.16
-PYTHONVERSION=2.3.4
+PORTAGEURL="http://dev.gentoo.org/~jstubbs/releases/"
+PORTAGEVERSION=2.0.51.22
+PYTHONVERSION=2.4.1
 DMGURL="http://www.metadistribution.org/gentoo/macos"
 DMGVERSION=20041118
 BOOTSTRAPSCRIPT="`pwd`/${0##*/}"
@@ -93,16 +93,16 @@ bootstrap_portage()  {
 		rm -rf ${S}
 		mkdir -p ${S}
 		cd ${S}
-		tar -jxvf ${DISTDIR}/${A}
+		tar -jxvf ${DISTDIR}/${A} || exit 1
 
 		S=${S}/portage-${PV}
 		cd ${S}
 
-		cd ${S}/src ; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
+		cd ${S}/src ; gcc ${CFLAGS} tbz2tool.c -o tbz2tool || exit 1
 		cd ${S}/cnf
-		[ -d ${TARGET}/etc ] || sudo mkdir -p ${TARGET}/etc
-		cp make.globals.mac ${TARGET}/etc/make.globals
-		cp make.conf ${TARGET}/etc/make.conf
+		[ -e ${TARGET}/etc ] || sudo mkdir -p ${TARGET}/etc
+		cp make.globals ${TARGET}/etc/make.globals
+		[ -e ${TARGET}/etc/make.conf ] || cp make.conf ${TARGET}/etc/make.conf
 		cp etc-update.conf dispatch-conf.conf ${TARGET}/etc/
 
 		mkdir -p ${TARGET}/usr/lib/portage/pym
@@ -213,6 +213,7 @@ bootstrap_python() {
 		cd ${S}
 
 		sudo ./configure \
+			--disable-toolbox-glue \
 			--enable-unicode=ucs4 \
 			--prefix=${TARGET}/usr \
 			--host=${CHOST} \
@@ -232,7 +233,7 @@ bootstrap_python() {
 			sudo make ${MAKEOPTS} || exit 1
 			sudo make altinstall || exit 1
 			cd ${TARGET}/usr/bin
-			sudo ln -sf python2.3 python
+			sudo ln -sf python2.4 python
 			
 		echo
 		echo -e "Python succesfully bootstrapped"
