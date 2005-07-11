@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.63.ebuild,v 1.2 2005/06/15 18:32:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.63.ebuild,v 1.3 2005/07/11 15:17:18 blubb Exp $
 
 inherit eutils games
 
@@ -21,6 +21,13 @@ DEPEND="virtual/libc
 	>=media-libs/libsdl-1.2.0
 	>=media-libs/sdl-net-1
 	media-libs/sdl-sound"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	use amd64 && epatch ${FILESDIR}/${PV}-64bit.patch
+}
 
 src_compile() {
 	local myconf=

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.18 2005/06/15 18:32:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.19 2005/07/11 15:17:18 blubb Exp $
+
+  11 Jul 2005; Simon Stelling <blubb@gentoo.org> +files/0.63-64bit.patch,
+  dosbox-0.63.ebuild:
+  fix bug 89876
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> dosbox-0.58.ebuild,
   dosbox-0.62.ebuild, dosbox-0.63.ebuild:

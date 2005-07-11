@@ -1,0 +1,11 @@
+--- src/dos/drive_local.cpp	2005-07-11 17:06:44.000000000 +0200
++++ src/dos/drive_local.cpp	2005-07-11 17:07:16.000000000 +0200
+@@ -409,7 +409,7 @@
+ 	//TODO Give some doserrorcode;
+ 		return false;//ERROR
+ 	}
+-	int ret=fseek(fhandle,*pos,seektype);
++	int ret=fseek(fhandle,*reinterpret_cast<Bit32s*>(pos),seektype);
+ 	if (ret!=0) {
+ 		// Out of file range, pretend everythings ok 
+ 		// and move file pointer top end of file... ?! (Black Thorne)
