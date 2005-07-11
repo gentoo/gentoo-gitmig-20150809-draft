@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.384 2005/07/10 21:57:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.385 2005/07/11 17:09:09 corsair Exp $
+
+  11 Jul 2005; <markus@gentoo.org> apache-2.0.54-r8.ebuild:
+  Stable on ppc64 (bug #98358)
 
   10 Jul 2005; Jason Wever <weeve@gentoo.org> apache-2.0.54-r8.ebuild:
   Stable on SPARC wrt security bug #98358.
