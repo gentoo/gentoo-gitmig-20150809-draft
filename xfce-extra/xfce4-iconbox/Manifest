@@ -1,10 +1,20 @@
-MD5 1e9dbbf03132ef8c5abfbdabe720614d xfce4-iconbox-4.2.1.ebuild 394
-MD5 89da5b358ccae7e1f0db1c4c4e997a3d ChangeLog 6673
-MD5 930a93dd1a5fc36f5e859a2d2fd886ad xfce4-iconbox-4.0.6.ebuild 841
-MD5 614ae65759e37b2e0c3ed26ff42ead08 xfce4-iconbox-4.2.2.ebuild 388
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b126b3fafeb79b2c80595bb10da6caaa xfce4-iconbox-4.2.2.ebuild 383
+MD5 94a06b54f5355127cb406e6d5b4ebb41 ChangeLog 6780
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 b4afd620a72f5c74c41c0aebd74dabff xfce4-iconbox-4.2.0.ebuild 393
-MD5 68ea90dcca1e6c0b4b14af49f5232865 files/digest-xfce4-iconbox-4.0.6 71
-MD5 5f893748301a580b15184398cf6613bc files/digest-xfce4-iconbox-4.2.1 71
+MD5 930a93dd1a5fc36f5e859a2d2fd886ad xfce4-iconbox-4.0.6.ebuild 841
+MD5 1e9dbbf03132ef8c5abfbdabe720614d xfce4-iconbox-4.2.1.ebuild 394
 MD5 aa53567f90f6508bc2d48db4fdeda41c files/digest-xfce4-iconbox-4.2.2 71
 MD5 b3d9957586020c5efecd0607e3491765 files/digest-xfce4-iconbox-4.2.0 72
+MD5 5f893748301a580b15184398cf6613bc files/digest-xfce4-iconbox-4.2.1 71
+MD5 68ea90dcca1e6c0b4b14af49f5232865 files/digest-xfce4-iconbox-4.0.6 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0s69Kf2g/qXtneoRAuMiAJ90pMuMTNmVJgrTiTGB1g2y/47FDACeMVX2
+8wd2BEkb9rvJqjknuSlbkeA=
+=A/8Q
+-----END PGP SIGNATURE-----
