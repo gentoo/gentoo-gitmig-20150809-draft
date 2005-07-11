@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
 MD5 4acb8be80aad485449eae8d8bc32a246 qcomicbook-0.2.3.ebuild 756
 MD5 34dc52dd302458ece5c75f5c394c1429 ChangeLog 363
 MD5 27d2555a7178e21251900d5be1d6c466 files/digest-qcomicbook-0.2.3 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0v2al5AvwDPiUowRAmsAAJwJd10txKx7/XzKw6uwssSVqm/cswCg05Fa
+giEf7tEpLwiT1W7jzVm8mkM=
+=uD1p
+-----END PGP SIGNATURE-----

@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/qcomicbook
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.1 2005/07/11 23:15:20 smithj Exp $
+
+*qcomicbook-0.2.3 (11 Jul 2005)
+
+  11 Jul 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml,
+  +qcomicbook-0.2.3.ebuild:
+  #79598: initial commit
+
