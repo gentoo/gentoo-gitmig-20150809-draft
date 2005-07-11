@@ -1,29 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4d27f1b46a1694b51ae599db8bcaeab5 ChangeLog 6255
-MD5 5770afeac4496095cec26d13745be3b4 files/10realplayer 48
-MD5 8291d652d9b4c505375c4e6e977c939a files/digest-realplayer-10.0.2 85
-MD5 3fb0dc52c07cedbd4b0825051155645f files/digest-realplayer-10.0.3 85
-MD5 3fb0dc52c07cedbd4b0825051155645f files/digest-realplayer-10.0.3-r1 85
-MD5 a53fa71f4e97a1e9d684a1c377a086f3 files/digest-realplayer-10.0.4 85
-MD5 8e95959358b49ce9fda7d512cf334e46 files/digest-realplayer-10.0.5 85
+MD5 c47627c38f1db6ae47f166fd239b627f realplayer-10.0.3.ebuild 1730
+MD5 3ba87b0927a90886a901d6d1591e77d1 realplayer-8-r7.ebuild 2917
+MD5 65572d5146b188aedd61f076872f6609 realplayer-10.0.5.ebuild 1960
+MD5 e8e6c079c29f7f7bc4f275f87c2a4988 realplayer-10.0.3-r1.ebuild 1733
+MD5 06e9d3a4482679215b78095fe4b6778c realplayer-10.0.2.ebuild 1466
+MD5 2da4c19c9e0b955b432840679f924051 realplayer-8-r6.ebuild 3901
+MD5 8ebc39d0c235a50324bd193c331fb771 realplayer-10.0.4.ebuild 1731
+MD5 0be4b820a37133de4d1616c4f0c3ecd8 ChangeLog 6366
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 b1f07ef9de78ae97ad9d42a6971b0d40 files/digest-realplayer-8-r6 357
 MD5 17ab63668e0e7e3ddf931fe0985e085f files/digest-realplayer-8-r7 290
 MD5 db1abde793632464b694bc07794630a5 files/mimeinfo 367
+MD5 3fb0dc52c07cedbd4b0825051155645f files/digest-realplayer-10.0.3-r1 85
+MD5 5770afeac4496095cec26d13745be3b4 files/10realplayer 48
+MD5 8291d652d9b4c505375c4e6e977c939a files/digest-realplayer-10.0.2 85
+MD5 3fb0dc52c07cedbd4b0825051155645f files/digest-realplayer-10.0.3 85
+MD5 a53fa71f4e97a1e9d684a1c377a086f3 files/digest-realplayer-10.0.4 85
+MD5 8e95959358b49ce9fda7d512cf334e46 files/digest-realplayer-10.0.5 85
 MD5 cc3251234e6be88a6554a5f08c0f98d9 files/realplayer.desktop 359
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 06e9d3a4482679215b78095fe4b6778c realplayer-10.0.2.ebuild 1466
-MD5 e8e6c079c29f7f7bc4f275f87c2a4988 realplayer-10.0.3-r1.ebuild 1733
-MD5 c47627c38f1db6ae47f166fd239b627f realplayer-10.0.3.ebuild 1730
-MD5 8ebc39d0c235a50324bd193c331fb771 realplayer-10.0.4.ebuild 1731
-MD5 9756c5aafd2f6b1381a4e36d23c8924d realplayer-10.0.5.ebuild 1960
-MD5 2da4c19c9e0b955b432840679f924051 realplayer-8-r6.ebuild 3901
-MD5 3ba87b0927a90886a901d6d1591e77d1 realplayer-8-r7.ebuild 2917
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0BVQI1lqEGTUzyQRAvOUAJ9zz5zWhF4Cgv01DV+jdD5NWlfwowCgtFkL
-XBhS6Lmc9At96RsCZoMqLrE=
-=VTJ0
+iD8DBQFC0ko22G5bA0cA/ScRAoMLAKDLks8kiyP9ymx+QSF/6MOFf1v+BQCguEt6
+1Im4whsY8gZ9u7VxGvZzcLU=
+=x++L
 -----END PGP SIGNATURE-----
