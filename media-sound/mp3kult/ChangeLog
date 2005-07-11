@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mp3kult
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/ChangeLog,v 1.10 2004/08/03 08:20:40 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/ChangeLog,v 1.11 2005/07/11 20:22:07 fvdpol Exp $
+
+*mp3kult-0.7-r2 (11 Jul 2005)
+
+  11 Jul 2005; Frank van de Pol <fvdpol@gentoo.org> +mp3kult-0.7-r2.ebuild:
+  Added fake homedir to fix kde/qt sandbox problems. Closes bug #82376.
 
   03 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mp3kult-0.7-r1.ebuild:

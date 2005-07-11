@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 37c4702755812d109bc1f9e8018721ad mp3kult-0.7-r2.ebuild 1389
+MD5 91ca08c7677742ce321ce3d7bf250419 mp3kult-0.7-r1.ebuild 917
+MD5 4f63780f4fd4072af5188f78b599d15b ChangeLog 632
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 6e8d33506f7eb66458944d68987a0de9 mp3kult-0.7-r1.ebuild 920
-MD5 0d2bd44dc3a8167e1d490dc1c6e5fdde ChangeLog 456
 MD5 7b989c066e996f89f577698ff23a71ed files/digest-mp3kult-0.7-r1 63
+MD5 7b989c066e996f89f577698ff23a71ed files/digest-mp3kult-0.7-r2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0tWGvpz1081QvMkRAswEAKCSmT0URpt+K63TCSRt615Doq+VuwCfVkWP
+HAVhHfDeySS+2CBapxGe9g8=
+=4KJb
+-----END PGP SIGNATURE-----
