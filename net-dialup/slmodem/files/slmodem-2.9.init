@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.12 2005/03/14 15:42:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.13 2005/07/11 15:15:30 genstef Exp $
 
+if [ "${MODULE}" = "alsa" ];
+then
+	needalsasound="alsasound1"
+fi
 depend() {
-	need logger
-	if [ "${MODULE}" = "alsa" ];
-	then
-		need alsasound
-	fi
+	need logger $needalsasound
 }
 
 

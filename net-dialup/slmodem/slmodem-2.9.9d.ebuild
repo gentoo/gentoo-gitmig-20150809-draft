@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9d.ebuild,v 1.4 2005/07/10 21:29:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9d.ebuild,v 1.5 2005/07/11 15:15:30 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -24,9 +24,9 @@ pkg_setup() {
 		MODULE_NAMES="${MODULE_NAMES} slusb(net:${S}/drivers)"
 		CONFIG_CHECK="USB"
 	fi
-	BUILD_PARAMS="KERNEL_DIR=${KV_DIR}"
 	BUILD_TARGETS="all"
 	linux-mod_pkg_setup
+	BUILD_PARAMS="KERNEL_DIR=${KV_DIR}"
 }
 
 src_unpack() {

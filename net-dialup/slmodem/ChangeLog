@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.47 2005/07/10 21:29:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.48 2005/07/11 15:15:30 genstef Exp $
+
+  11 Jul 2005; Stefan Schweizer <genstef@gentoo.org> files/slmodem-2.9.init,
+  slmodem-2.9.9d.ebuild:
+  Fix init script problem on livecd and move useage of KV_DIR after
+  linux-mod_pkg_setup.
 
   10 Jul 2005; Daniel Drake <dsd@gentoo.org> slmodem-2.9.9d.ebuild:
   Do linux-mod_pkg_setup after setting variables, fixes config check.
