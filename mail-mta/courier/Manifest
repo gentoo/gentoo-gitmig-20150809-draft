@@ -1,26 +1,36 @@
-MD5 56198520fa7931c16e8d819d1d18c7a7 ChangeLog 21158
-MD5 8de8434ea05e6a76656ba7f1d08fecb5 courier-0.48.1.ebuild 8510
-MD5 34312418fdc6c5037592fa0cb0bccf8c courier-0.48.2.20050224.ebuild 10500
-MD5 52b9e1c79d37a4168e98834570a20839 courier-0.49.0.20050405.ebuild 10507
-MD5 113c9a1725a437cf9aea85f9fa662fda courier-0.49.0.ebuild 10498
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5d832fe124f547679c9fbe29cfd18b34 ChangeLog 21273
 MD5 b287829e2f9edbcf1ff7bb349055e77e metadata.xml 392
-MD5 3a2f9f27d297109c2ef2785a420fcf1c courier-0.48.1-r1.ebuild 8962
-MD5 9e00ca77d50c701246cbeb7807cbede4 courier-0.50.0.ebuild 10501
+MD5 52b9e1c79d37a4168e98834570a20839 courier-0.49.0.20050405.ebuild 10507
 MD5 e43ff2b2b410fe1cab3ba04c3bc19dfe courier-0.50.1.ebuild 11199
-MD5 d8967dea60963b1c0abaccbb2c57ea64 files/apache-sqwebmail.inc 347
-MD5 a546a21f960e4f921e71f614f719a2ce files/bofh 23
-MD5 9d570961b398a1a8e3724947c7205943 files/courier-init 5182
-MD5 6f47a6ec3b49ab38118513207c008eac files/digest-courier-0.48.1 68
-MD5 cc4c7fbf5c664bea35e209920137bf7a files/digest-courier-0.48.2.20050224 77
-MD5 9d17c84c8f8fbd96f3f51f81336a3ef6 files/digest-courier-0.49.0 68
-MD5 80dd58e050ca3d9071ddaf741857cf5a files/digest-courier-0.49.0.20050405 77
-MD5 4eb96413bfbc91629bdf43526716cd1e files/dot_courier 26
-MD5 d41d8cd98f00b204e9800998ecf8427e files/locallowercase 0
-MD5 098e16e61446aceb242735b1ca70509a files/norewrite.patch 489
-MD5 52f032e570c6f5f9f69b4e4bdfa562a1 files/password.dist 247
-MD5 e3a4ab031bd750b7ce2c7b85fee83d8e files/set-mime 741
-MD5 810650e3b52f7d93e59fd987e235381e files/courier-0.48.1-spf-error-handling.patch 318
-MD5 6f47a6ec3b49ab38118513207c008eac files/digest-courier-0.48.1-r1 68
-MD5 35a514d415bc8ddd679970634a95d435 files/digest-courier-0.50.0 68
+MD5 9e00ca77d50c701246cbeb7807cbede4 courier-0.50.0.ebuild 10501
+MD5 113c9a1725a437cf9aea85f9fa662fda courier-0.49.0.ebuild 10498
+MD5 8de8434ea05e6a76656ba7f1d08fecb5 courier-0.48.1.ebuild 8510
+MD5 684399cf97b724099222a88434701c6a courier-0.48.1-r1.ebuild 8956
+MD5 34312418fdc6c5037592fa0cb0bccf8c courier-0.48.2.20050224.ebuild 10500
 MD5 b8da99ca8d9720c84f1f4dcd3921f93f files/digest-courier-0.50.1 68
+MD5 810650e3b52f7d93e59fd987e235381e files/courier-0.48.1-spf-error-handling.patch 318
+MD5 d41d8cd98f00b204e9800998ecf8427e files/locallowercase 0
+MD5 52f032e570c6f5f9f69b4e4bdfa562a1 files/password.dist 247
+MD5 d8967dea60963b1c0abaccbb2c57ea64 files/apache-sqwebmail.inc 347
+MD5 6f47a6ec3b49ab38118513207c008eac files/digest-courier-0.48.1 68
+MD5 9d17c84c8f8fbd96f3f51f81336a3ef6 files/digest-courier-0.49.0 68
 MD5 9bd0825e1ea931d82349ec13d74df657 files/mailer.conf 199
+MD5 e3a4ab031bd750b7ce2c7b85fee83d8e files/set-mime 741
+MD5 6f47a6ec3b49ab38118513207c008eac files/digest-courier-0.48.1-r1 68
+MD5 80dd58e050ca3d9071ddaf741857cf5a files/digest-courier-0.49.0.20050405 77
+MD5 cc4c7fbf5c664bea35e209920137bf7a files/digest-courier-0.48.2.20050224 77
+MD5 098e16e61446aceb242735b1ca70509a files/norewrite.patch 489
+MD5 9d570961b398a1a8e3724947c7205943 files/courier-init 5182
+MD5 35a514d415bc8ddd679970634a95d435 files/digest-courier-0.50.0 68
+MD5 4eb96413bfbc91629bdf43526716cd1e files/dot_courier 26
+MD5 a546a21f960e4f921e71f614f719a2ce files/bofh 23
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0vdzKf2g/qXtneoRAvQ2AKC4Pz0tVbpUhoGhn6Vz0HRwlyLdQACgpl+p
+Z+Lva1GhJBp5ypaoVF4yAos=
+=mg79
+-----END PGP SIGNATURE-----
