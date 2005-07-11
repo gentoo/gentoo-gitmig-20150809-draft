@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.1-r1.ebuild,v 1.5 2005/07/11 11:36:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.1-r1.ebuild,v 1.6 2005/07/11 18:30:17 dertobi123 Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ S="${WORKDIR}/${P%%_pre}"
 SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies: ~arm ~s390 ~ppc64
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc sparc x86"
 IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite mailwrapper"
 
 PROVIDE="virtual/mta
