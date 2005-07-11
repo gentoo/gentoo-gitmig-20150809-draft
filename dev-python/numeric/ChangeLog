@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.21 2005/07/02 23:04:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.22 2005/07/11 23:09:21 geoman Exp $
+
+  11 Jul 2005; Stephen P. Becker <geoman@gentoo.org> numeric-23.7.ebuild,
+  numeric-23.8.ebuild:
+  added mips keywords to satisfy gnome repoman deps
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> numeric-23.7.ebuild:
   Stable on alpha.

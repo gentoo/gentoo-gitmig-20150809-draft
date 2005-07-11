@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-23.8.ebuild,v 1.1 2005/04/25 17:20:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-23.8.ebuild,v 1.2 2005/07/11 23:09:21 geoman Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.pfdubois.com/numpy/"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 LICENSE="as-is"
 
 # 2.1 gave sandbox violations see #21
