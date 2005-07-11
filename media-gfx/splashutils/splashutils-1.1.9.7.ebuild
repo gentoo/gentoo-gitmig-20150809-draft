@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.7.ebuild,v 1.2 2005/07/11 12:30:26 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.7.ebuild,v 1.3 2005/07/11 14:46:21 swegener Exp $
 
 inherit multilib linux-mod
 
@@ -45,7 +45,7 @@ SM="${WORKDIR}/${MISCSPLASH}"
 
 pkg_setup() {
 	check_kernel_built
-	
+
 	if use hardened; then
 		ewarn "Due to problems with klibc, it is currently impossible to compile splashutils"
 		ewarn "with 'hardened' GCC flags. As a workaround, the package will be compiled with"
