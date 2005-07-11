@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-lirc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-lirc/ChangeLog,v 1.1 2005/03/19 18:13:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-lirc/ChangeLog,v 1.2 2005/07/11 14:28:32 blubb Exp $
+
+  11 Jul 2005; Simon Stelling <blubb@gentoo.org> bmp-lirc-0.2.2.ebuild:
+  added ~amd64 keyword
 
 *bmp-lirc-0.2.2 (19 Mar 2005)
 

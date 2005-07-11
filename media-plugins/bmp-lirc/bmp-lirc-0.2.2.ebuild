@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-lirc/bmp-lirc-0.2.2.ebuild,v 1.1 2005/03/19 18:13:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-lirc/bmp-lirc-0.2.2.ebuild,v 1.2 2005/07/11 14:28:32 blubb Exp $
 
 MY_P=${P/lirc/extra-plugins}
 S=${WORKDIR}/${MY_P}/general/lirc
@@ -10,7 +10,7 @@ SRC_URI="http://www.t17.ikarnet.pl/~wiget/bmp-extra-plugins/download/${MY_P}.tar
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-sound/beep-media-player-0.9.7
