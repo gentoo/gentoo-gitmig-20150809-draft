@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.2.ebuild,v 1.2 2005/07/02 19:22:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.2.ebuild,v 1.3 2005/07/11 09:55:58 greg_g Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -110,6 +110,6 @@ src_install() {
 pkg_postinst() {
 	echo
 	einfo "Make sure you have proper read/write permissions on the cdrom device(s)."
-	einfo "Usually, it is sufficient to be in the cdrom or cdrw group."
+	einfo "Usually, it is sufficient to be in the cdrom group."
 	echo
 }
