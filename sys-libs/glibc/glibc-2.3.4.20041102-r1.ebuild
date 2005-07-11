@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.16 2005/07/09 21:11:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.17 2005/07/11 15:07:17 azarah Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -51,7 +51,7 @@ LICENSE="LGPL-2"
 	&& SLOT="${CTARGET}-2.2" \
 	|| SLOT="2.2"
 KEYWORDS="alpha amd64 -hppa ia64 ~mips ppc ppc64 ~sparc x86"
-IUSE="build erandom hardened multilib nls nomalloccheck nptl nptlonly pic userlocales"
+IUSE="build erandom hardened multilib nls nomalloccheck nptl nptlonly pic userlocales selinux"
 RESTRICT="nostrip multilib-pkg-force" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -63,9 +63,11 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	virtual/os-headers
 	nptl? ( >=sys-kernel/linux-headers-2.6.5 )
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	selinux? ( !build? ( sys-libs/libselinux ) )"
 RDEPEND="virtual/os-headers
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	selinux? ( !build? ( sys-libs/libselinux ) )"
 # until amd64's 2004.3 is purged out of existence
 PDEPEND="amd64? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
 
@@ -685,6 +687,12 @@ glibc_do_configure() {
 		myconf="${myconf} --enable-kernel=${MIN_KERNEL_VERSION}"
 	else
 		die "invalid pthread option"
+	fi
+
+	if ! use build && use selinux; then
+		myconf="${myconf} --with-selinux"
+	else
+		myconf="${myconf} --without-selinux"
 	fi
 
 	# Who knows if this works :)
