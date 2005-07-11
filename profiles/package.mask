@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4182 2005/07/11 17:59:54 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4183 2005/07/11 18:53:53 sebastian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -520,10 +520,6 @@ media-video/qce-ga
 # Joe McCann <joem@gentoo.org> (30 April 2005)
 #Gnome-2.10.1 mask
 >=gnome-base/gnome-light-2.10.1
-
-# Sebastian Bergmann <sebastian@gentoo.org> (05 Mar 2005)
-# Segfaults on module shutdown.
-=dev-php/PECL-imagick-0.9.11
 
 # solar <solar@gentoo> (01 Mar 2005)
 # security masked by request of bug #79720
