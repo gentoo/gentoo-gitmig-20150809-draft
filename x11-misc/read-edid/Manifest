@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f15f36109f93448693d593fd7a466999 ChangeLog 929
 MD5 6a94ca0c575dabfc65a7ade5f4fc8aef files/digest-read-edid-1.4.1 66
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
 MD5 05bf6ba2a0588bc062e37163cc12494c read-edid-1.4.1.ebuild 587
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0vyRI1lqEGTUzyQRAl/fAJ9xC4zsSg7skQOha0fEjRR9qAZqaQCfebb9
+ZA8FvbaKsxelUwNnXNNdYoA=
+=BRus
+-----END PGP SIGNATURE-----
