@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4ae5fc405c77b981f0a964f231a1c9b6 ChangeLog 2663
 MD5 e3c514ca94bb602609999e14469ed3d5 xfce4-icon-theme-4.2.1.ebuild 359
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
@@ -6,3 +9,10 @@ MD5 431d9619ef6dc8aa4126ca0ac173e688 xfce4-icon-theme-4.2.0.ebuild 362
 MD5 395f217d637cc3bb8d1d3ef81244d0ff files/digest-xfce4-icon-theme-4.2.0 76
 MD5 8c987fb00f1a32cdf0cef9020b4936e3 files/digest-xfce4-icon-theme-4.2.1 75
 MD5 e92b83a4cdb4400d15f7061e1569aa02 files/digest-xfce4-icon-theme-4.2.2 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0tHcKf2g/qXtneoRArpCAJ9CN8ezhUbmvvtiqKJ7810X+DxWCwCfUUqa
+75P3+W5cxOTe4MMGhwM3FNM=
+=HJQO
+-----END PGP SIGNATURE-----

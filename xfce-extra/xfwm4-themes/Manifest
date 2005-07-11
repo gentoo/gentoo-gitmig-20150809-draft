@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a5ceeef52170c8c5d54d8a56038b4d5 ChangeLog 6213
 MD5 1ac6cd5881ddea6f0c94ffde321c9427 xfwm4-themes-4.0.6.ebuild 749
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
@@ -8,3 +11,10 @@ MD5 bb1cffc84649fb09c4999e7cb2cdc782 files/digest-xfwm4-themes-4.2.2 70
 MD5 d4eb558579e68c9b60f916c299e109bd files/digest-xfwm4-themes-4.2.1 70
 MD5 94f03e5cc6d8a4acfa777856df167e00 files/digest-xfwm4-themes-4.0.6 70
 MD5 1ef688fa46fc9d1b4f496e89180b0d00 files/digest-xfwm4-themes-4.2.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0tMyKf2g/qXtneoRAu3ZAJ9FY99DRAATp6/xbvVXuBkPSBmh0ACgiLLT
+8Yw5PvOZhy34GA0/WvHlcpM=
+=ExIT
+-----END PGP SIGNATURE-----

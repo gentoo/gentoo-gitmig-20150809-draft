@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4274516c97e1d7c1d7a05c7be6ecd38e ChangeLog 4831
 MD5 4fff57e40bac7c621e8e05e819441045 xfcalendar-4.2.2.ebuild 375
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
@@ -8,3 +11,10 @@ MD5 4571c4e24da4f2fb380ae0bc37fe5435 files/digest-xfcalendar-4.2.2 68
 MD5 690835d5453daf3b97361abad49bc24f files/digest-xfcalendar-4.2.0 69
 MD5 0047196ef8e2fe442f00cdff0c61907f files/digest-xfcalendar-4.2.1 68
 MD5 3d32c35a893af6e0a6a859974e561d41 files/digest-xfcalendar-0.1.9 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0tQYKf2g/qXtneoRAh9IAJ9SOwe6LDRSEBNMusF98J+0DY8rfwCghess
+5JwpJgmSoBJU2Yxcex9Lo9Q=
+=ZY2v
+-----END PGP SIGNATURE-----
