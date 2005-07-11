@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0642b0cd6a13c17236990affe381a1f3 ChangeLog 3286
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 254844247e8ddaf9bdad25dd52dc11db dmapi-2.2.1.ebuild 1067
+MD5 a683706b0c4600f000dbacabd942e373 dmapi-2.2.1.ebuild 1062
 MD5 c38b511afc9ceb131628d5d903ee3834 files/digest-dmapi-2.2.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0cJmBXaUFmZvwyMRArixAJ9iwuqyLGjMZ++PKaYMRVtDAjpoeQCfX17Z
+arai+FzQ+pkHFXnC5/LnGc4=
+=RJ+6
+-----END PGP SIGNATURE-----
