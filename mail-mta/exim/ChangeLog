@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.34 2005/07/05 18:47:08 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.35 2005/07/11 01:47:44 ticho Exp $
+
+*exim-4.50-r999 (11 Jul 2005)
+
+  11 Jul 2005; Andrej Kacian <ticho@gentoo.org> files/mailer.conf,
+  +exim-4.50-r999.ebuild:
+  Committed a mailer-config aware ebuild, to be masked until all other MTAs
+  are ready to be unmasked all at once. Bug #97657.
 
   05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> exim-4.50-r1.ebuild:
   Stable on hppa.
