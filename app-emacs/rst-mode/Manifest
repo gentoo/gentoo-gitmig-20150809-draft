@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1440e4a3a0e6684d07753e25a7f7eb17 rst-mode-0.2.6.ebuild 559
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 f30abbab2d3b74edc205896385dea000 ChangeLog 443
+MD5 a74a91f0c306260617bfa0377d7c0f01 files/50rst-mode-gentoo.el 263
+MD5 b3bd2a773fc3b939a2461175b978dd33 files/digest-rst-mode-0.2.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0gnXyiNZaEAZA+ARAoJOAJ9sybtJFHZDu4jmFnWDP4ajcf3roACfe1VY
+vhUXcrcPJISWD+eHQ/u8Y84=
+=AfwO
+-----END PGP SIGNATURE-----
