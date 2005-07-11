@@ -1,5 +1,15 @@
-MD5 1a4fe334ab18c84dc9c12f7e6268f966 xastir-1.4.0.ebuild 794
-MD5 04253c9d67e39e01ae363538fa1a766f xastir-1.2.0.ebuild 540
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7597ede40fe23199dcfcd8ccda9587b1 ChangeLog 874
 MD5 28c8839ac6e0340f6d489f1104c0fea7 files/digest-xastir-1.2.0 65
 MD5 1450b2c9ffcaae7ac5bf5854b83a6867 files/digest-xastir-1.4.0 65
+MD5 04253c9d67e39e01ae363538fa1a766f xastir-1.2.0.ebuild 540
+MD5 77483a805432c55c1f025718be220499 xastir-1.4.0.ebuild 814
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0t3SI1lqEGTUzyQRAnVSAKCLwgZdh12s4vMGMV/iyAEWV1CCnACghdcd
+UiyDFVNr1UI0sPjTHR4U7+A=
+=4VRY
+-----END PGP SIGNATURE-----
