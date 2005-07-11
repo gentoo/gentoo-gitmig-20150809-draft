@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r1.ebuild,v 1.5 2005/06/09 10:18:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r1.ebuild,v 1.6 2005/07/11 11:23:27 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -11,14 +11,14 @@ DESCRIPTION="Programmer's editor written in Java"
 HOMEPAGE="http://www.jedit.org"
 SRC_URI="mirror://sourceforge/jedit/jedit${MY_PV}source.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 SLOT="0"
 IUSE="doc jikes"
 
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
 	doc? (
-		>=app-text/docbook-xml-dtd-4.3
+		=app-text/docbook-xml-dtd-4.3*
 		>=app-text/docbook-xsl-stylesheets-1.65.1
 		dev-libs/libxslt
 	)
@@ -31,20 +31,16 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	local xsl=$(best_version docbook-xsl-stylesheets);
-	xml=${xml/docbook-};
-	xml=${xml/*\/}
-
-	local xml=$(best_version docbook-xml-dtd)
-	xsl=${xsl/docbook-}
-	xsl=${xsl/*\/}
-
 	if use doc; then
+		local xsl=$(echo /usr/share/sgml/docbook/xsl-stylesheets-*)
+		xsl=${xsl// *}
+
+		local xml=$(echo /usr/share/sgml/docbook/xml-dtd-4.3*)
+		xml=${xml// *}
+
 		echo "build.directory=." > build.properties
-		echo "docbook.dtd.catalog=/usr/share/sgml/docbook/${xml}/docbook.cat" \
-			 >> build.properties
-		echo "docbook.xsl=/usr/share/sgml/docbook/${xsl}" \
-			 >> build.properties
+		echo "docbook.dtd.catalog=${xml}/docbook.cat" >> build.properties
+		echo "docbook.xsl=${xsl}" >> build.properties
 	fi
 }
 src_compile() {
@@ -59,11 +55,11 @@ src_install () {
 	dodir /usr/bin
 
 	insinto /usr/share/jedit
-	doins -r jedit.jar jars doc modes properties startup
+	doins -r jedit.jar jars doc modes properties startup macros
 	keepdir /usr/share/jedit/jars
 
 	echo "#!/bin/bash" > ${PN}
-	echo "\$(java-config -J) -jar /usr/share/jedit/jedit.jar \$@" >> ${PN}
+	echo "java -jar /usr/share/jedit/jedit.jar \$@" >> ${PN}
 	dobin ${PN}
 
 	insinto /usr/share/icons/hicolor/128x128/apps
