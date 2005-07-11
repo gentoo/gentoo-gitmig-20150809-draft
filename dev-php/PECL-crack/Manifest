@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 38bedfb10bd6c1d185fe7869d6f2f5ab PECL-crack-0.2.ebuild 479
 MD5 0bee020af69fd73e5825fa1b09fbf206 ChangeLog 744
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 23b550fda581d450144e8ef0ca019082 files/digest-PECL-crack-0.2 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0roVaGfFFLhbXWkRAt0GAJ9SE6+9yQ2fOqtwDKTbXGWZHv9WWwCgjD/K
+OcF/gjR6PsPZKBXlVT16CmQ=
+=kH3l
+-----END PGP SIGNATURE-----

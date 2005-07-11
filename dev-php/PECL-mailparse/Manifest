@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dddb30df6db0a4a16d73c424a0f265ed PECL-mailparse-2.1.1.ebuild 527
 MD5 3d8e3c8e0fd8e2095b3b0d3da5e1a7e3 ChangeLog 1473
 MD5 90addd9e0cd39bebc1ca9eef0185f6fd metadata.xml 268
 MD5 0e0417ccc35d51d676d71b0cf958ec46 files/digest-PECL-mailparse-2.1.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0rqeaGfFFLhbXWkRApHFAJ4xma69wtknRX5nTag6lm9Wlph/xgCffrKm
+TP8PBzT1PZ/7gW0QsiPWQzM=
+=L+vh
+-----END PGP SIGNATURE-----

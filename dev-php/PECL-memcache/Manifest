@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 00cd9dbedb4d064eb802f4451d3f3036 PECL-memcache-1.4.ebuild 441
 MD5 f78cb93e88d071739837a14a81a1d1a6 ChangeLog 493
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 430df133b11a86ff398481433e6f19eb files/digest-PECL-memcache-1.4 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0rsBaGfFFLhbXWkRApVYAJ9sfam+yK+NRO2H3w3dznQko0MDOACfY0BO
+jXWm3mIDUIIYiyDRx6WgAis=
+=uDfa
+-----END PGP SIGNATURE-----
