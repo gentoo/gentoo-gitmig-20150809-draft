@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a9d10b6597038e9cf7266e9ec6f09ef5 jitac-0.2.0.ebuild 718
+MD5 44605199f3571cd6aca90a08a8093ab2 jitac-0.2.0-r1.ebuild 1184
 MD5 c9092737d801ea12d8388300ad253c66 ChangeLog 1385
-MD5 0777e699574d3acdc76cc23f8bddf96c jitac-0.2.0-r1.ebuild 1138
-MD5 1d3b41431a23f1c2281980720742a10f jitac-0.2.0.ebuild 719
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 8dcdfdedcc6a0d4523838724b5cb4191 files/digest-jitac-0.2.0 60
 MD5 59824e552045d142e071c4ebb6b7b55e files/digest-jitac-0.2.0-r1 64
+MD5 8dcdfdedcc6a0d4523838724b5cb4191 files/digest-jitac-0.2.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0t7z/rLF9B432nYRAoAxAJ9L+PVVFGQR6UESnSjZTEJyTAPVRwCaAlNC
+NZqWfLQ4x9Mo1l84TAZdzYI=
+=gUCv
+-----END PGP SIGNATURE-----
