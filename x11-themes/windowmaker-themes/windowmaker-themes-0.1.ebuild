@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.10 2004/12/13 00:05:13 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.11 2005/07/11 17:14:32 blubb Exp $
 
 # TODO: Break themes up by author and into sub-dirs named after
 # the author
@@ -94,7 +94,7 @@ IUSE="offensive"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha ~amd64"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 DEPEND=""
 RDEPEND="x11-wm/windowmaker"
