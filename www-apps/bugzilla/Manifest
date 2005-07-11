@@ -1,24 +1,24 @@
-MD5 7a7d795c8a930ae737c3044287285efd ChangeLog 7748
-MD5 e83882209c32f6592197405c0d7c9a06 bugzilla-2.18.1-r1.ebuild 1795
-MD5 bd4baac1be5d5efd4fe4dbc1e4dddc51 bugzilla-2.18.1.ebuild 1856
-MD5 91653eed08d2b051ea910cad4942c413 bugzilla-2.18.3.ebuild 1799
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 80ce7aeb494bf824439dd9b58eb16e5c bugzilla-2.20_rc1.ebuild 1836
+MD5 91653eed08d2b051ea910cad4942c413 bugzilla-2.18.3.ebuild 1799
+MD5 d97c1949fb45b5e543f93cd71c2b0170 ChangeLog 7985
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 4a9b1a263f16b2a53b44bce45350b373 files/bugzilla.conf 148
-MD5 0be5a588dc7fdfc9e4898a855bd32361 files/bugzilla.cron.daily 115
-MD5 b38d67b03726b84833bd8c5f632e4020 files/bugzilla.cron.tab 54
-MD5 4cfe13b7191883a74bd70a21e39db5db files/bz.cfg.templ 155
-MD5 0606a9da89d19a505c52818d14de61e3 files/cronset.sh 70
-MD5 69de0903f09253375e69f72695675172 files/digest-bugzilla-2.18.1 68
-MD5 69de0903f09253375e69f72695675172 files/digest-bugzilla-2.18.1-r1 68
-MD5 df412a960ab7899d10f4fc42b8a3cc5f files/digest-bugzilla-2.18.3 68
 MD5 dbfa20dc9adfb7a85a47811b12d6d86e files/digest-bugzilla-2.20_rc1 69
-MD5 a001fc92584de0cd6f1a0d8de99ee6ce files/firstcheck.sh 48
-MD5 42151252d49e42c9839f80c80dff9138 files/2.18.1-r1/apache.htaccess 94
-MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18.1-r1/bugzilla.cron.daily 115
+MD5 df412a960ab7899d10f4fc42b8a3cc5f files/digest-bugzilla-2.18.3 68
 MD5 b38d67b03726b84833bd8c5f632e4020 files/2.18.1-r1/bugzilla.cron.tab 54
+MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18.1-r1/bugzilla.cron.daily 115
+MD5 42151252d49e42c9839f80c80dff9138 files/2.18.1-r1/apache.htaccess 94
 MD5 5d26668841a63cf6ba69e8f191a5c50a files/2.18.1-r1/reconfig 3661
-MD5 42151252d49e42c9839f80c80dff9138 files/2.20_rc1/apache.htaccess 94
-MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.20_rc1/bugzilla.cron.daily 115
 MD5 b38d67b03726b84833bd8c5f632e4020 files/2.20_rc1/bugzilla.cron.tab 54
+MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.20_rc1/bugzilla.cron.daily 115
+MD5 42151252d49e42c9839f80c80dff9138 files/2.20_rc1/apache.htaccess 94
 MD5 7d9b3c0019bbcfd85f9398ecdc2eaa39 files/2.20_rc1/reconfig 5084
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0tPMEzitwsaoONoRAoecAJ9+6F7SIzOpoT0R/vyAWwxV/FjbvQCglGYF
+msV99mRMoQlv7Q7FdXzqb0o=
+=frpx
+-----END PGP SIGNATURE-----

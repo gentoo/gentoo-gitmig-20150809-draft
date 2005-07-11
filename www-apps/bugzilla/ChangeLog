@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.34 2005/07/11 18:21:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.35 2005/07/11 20:16:50 rl03 Exp $
+
+  11 Jul 2005; Renat Lumpau <rl03@gentoo.org> -files/bugzilla.conf,
+  -files/bugzilla.cron.daily, -files/bugzilla.cron.tab, -files/bz.cfg.templ,
+  -files/firstcheck.sh, -bugzilla-2.18.1.ebuild, -bugzilla-2.18.1-r1.ebuild:
+  Cleaning house
 
   11 Jul 2005; Markus Rothe <corsair@gentoo.org> bugzilla-2.18.3.ebuild:
   Stable on ppc64 (bug #98348)
