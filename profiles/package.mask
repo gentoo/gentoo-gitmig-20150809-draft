@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4180 2005/07/11 01:46:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4181 2005/07/11 17:09:31 fvdpol Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -230,11 +230,6 @@ sys-libs/nss-mysql
 # Masked for testing, it includes an experimental patch to make Gtk+
 # dependency optional. See bug #40453.
 =media-libs/imlib-1.9.15
-
-# Frank van de Pol <fvdpol@gentoo.org> (30 May 2005)
-# masked for testing (linuxsampler still fails on my systems)
->=media-sound/qsampler-0.1.0
->=media-sound/linuxsampler-0.3.1
 
 # Harald van Dĳk <truedfx@gentoo.org> (29 May 2005)
 # masked for testing
