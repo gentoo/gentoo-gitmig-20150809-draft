@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.3.ebuild,v 1.8 2005/02/06 18:05:16 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.3.ebuild,v 1.9 2005/07/11 23:07:15 swegener Exp $
 
 SLOT="0"
 DESCRIPTION="A tool for recording Shock wave Flash movies from vnc sessions"
@@ -13,13 +13,7 @@ DEPEND=">=media-libs/ming-0.2a
 KEYWORDS="x86 ppc"
 IUSE=""
 
-src_compile() {
-	econf || die "Configure Failed"
-	emake || die "Make Failed"
-}
-
 src_install () {
-	insinto /usr/bin
 	dobin vnc2swf || die "Install Failed"
 	dodoc README TODO
 }

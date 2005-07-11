@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.4.2-r1.ebuild,v 1.3 2005/06/20 00:15:41 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.4.2-r1.ebuild,v 1.4 2005/07/11 23:07:15 swegener Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/ming-0.2a
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -ie "s:docs:html:" README
 	sed -ie "s:-mouse ::" recordwin.sh
 }

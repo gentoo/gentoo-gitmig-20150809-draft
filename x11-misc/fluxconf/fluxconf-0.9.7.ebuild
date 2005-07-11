@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/fluxconf-0.9.7.ebuild,v 1.10 2004/12/16 10:06:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/fluxconf-0.9.7.ebuild,v 1.11 2005/07/11 23:14:03 swegener Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="=x11-libs/gtk+-1.2*"
 
 src_install () {
 	einstall || die
-	rm ${D}/usr/bin/fluxkeys ${D}/usr/bin/fluxmenu
+	rm "${D}"/usr/bin/fluxkeys "${D}"/usr/bin/fluxmenu
 
 	dosym /usr/bin/fluxconf /usr/bin/fluxkeys
 	dosym /usr/bin/fluxconf /usr/bin/fluxmenu

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.0.11.ebuild,v 1.4 2004/10/01 12:27:37 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.0.11.ebuild,v 1.5 2005/07/11 23:09:11 swegener Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND=">=x11-libs/gtk+-2.2"
 RDEPEND="virtual/x11"
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ABOUT-NLS COPYING ChangeLog README INSTALL
 
