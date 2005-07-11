@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2.ebuild,v 1.5 2005/04/22 08:42:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2.ebuild,v 1.6 2005/07/11 20:22:19 axxo Exp $
 
 inherit java-pkg
 
@@ -23,10 +23,11 @@ S=${WORKDIR}/
 src_unpack() {
 	jar xf ${DISTDIR}/${A}
 	sed -e "s:clean, compile, test:clean, compile:" -i metadata-extractor.build || die "sed failed"
+	mv metadata-extractor.build build.xml
 }
 
 src_compile() {
-	local antflags="-f metadata-extractor.build dist-binaries"
+	local antflags="dist-binaries"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use junit && antflags="${antflags} test"
 	ant ${antflags} || die "failed to compile"
