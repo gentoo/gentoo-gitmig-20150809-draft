@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/rt2500
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.13 2005/07/11 17:00:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.14 2005/07/11 20:17:00 genstef Exp $
+
+  11 Jul 2005; Stefan Schweizer <genstef@gentoo.org>
+  rt2500-1.1.0_beta2-r2.ebuild:
+  Check for 4kstacks to be disabled thanks to Dan Capizzi
+  <SentientCitrus@gmail.com> in bug 98701
 
   11 Jul 2005; Stefan Schweizer <genstef@gentoo.org> +files/RT2500STA.dat,
   rt2500-1.1.0_beta2-r2.ebuild:
