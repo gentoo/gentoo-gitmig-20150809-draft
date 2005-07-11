@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-toys
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-toys/ChangeLog,v 1.53 2005/07/11 17:44:39 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-toys/ChangeLog,v 1.54 2005/07/11 20:05:43 kloeri Exp $
+
+  11 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  xfce4-toys-4.2.2.ebuild:
+  Stable on alpha + ia64.
 
   11 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
   xfce4-toys-4.2.2.ebuild:
