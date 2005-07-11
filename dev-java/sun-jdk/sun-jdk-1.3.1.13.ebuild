@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.13.ebuild,v 1.7 2005/05/18 15:48:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.13.ebuild,v 1.8 2005/07/11 13:21:55 axxo Exp $
 
 inherit java eutils
 
@@ -21,10 +21,10 @@ PROVIDE="virtual/jre
 	virtual/jdk"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
-KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa"
+KEYWORDS="x86 -*"
 RESTRICT="fetch"
 
-IUSE="doc mozilla"
+IUSE="doc browserplugin mozilla"
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
@@ -87,8 +87,8 @@ src_install () {
 	dodir /opt/${P}/share/
 	cp -a demo src.jar ${D}/opt/${P}/share/
 
-	if use mozilla ; then
-		install_mozilla_plugin /opt/${P}/jre/plugin/i386/ns600/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
+	if use browserplugin || use mozilla; then
+		install_mozilla_plugin  /opt/${P}/jre/plugin/i386/ns600/libjavaplugin_oji.so
 	fi
 
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
@@ -108,11 +108,11 @@ pkg_postinst () {
 
 		for paxkills in "jar" "javac" "java" "javah" "javadoc"
 		do
-			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
+			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/bin/$paxkills
 		done
 
 		# /opt/sun-jdk-1.3.1.09/jre/bin/java_vm
-		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/jre/bin/java_vm
+		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/jre/bin/java_vm
 
 		einfo "you should have seen lots of chpax output above now"
 		ewarn "make sure the grsec ACL contains those entries also"
@@ -122,9 +122,6 @@ pkg_postinst () {
 	fi
 
 	echo
-	eerror "Some parts of Sun's JDK require XFree86 to be installed."
+	eerror "Some parts of Sun's JDK require X11 to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
-
-	ebeep 5
-	epause 8
 }

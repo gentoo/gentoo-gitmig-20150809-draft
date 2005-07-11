@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.04.ebuild,v 1.1 2005/06/28 11:18:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.04.ebuild,v 1.2 2005/07/11 13:21:55 axxo Exp $
 
 inherit java eutils
 
@@ -25,9 +25,9 @@ SRC_URI="x86? ( $x86file ) amd64? ( $amd64file )
 		jce? ( $jcefile )"
 SLOT="1.5"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 -*"
 RESTRICT="fetch nostrip"
-IUSE="doc gnome kde mozilla jce"
+IUSE="doc browserplugin jce mozilla"
 
 #
 DEPEND=">=dev-java/java-config-1.2
@@ -129,7 +129,7 @@ src_install() {
 		dosym /opt/${P}/jre/lib/security/unlimited-jce/local_policy.jar /opt/${P}/jre/lib/security/
 	fi
 
-	if use mozilla; then
+	if use browserplugin || use mozilla; then
 		local plugin_dir="ns7-gcc29"
 		if has_version '>=gcc-3*' ; then
 			plugin_dir="ns7"
@@ -195,11 +195,11 @@ pkg_postinst() {
 
 		for paxkills in "jar" "javac" "java" "javah" "javadoc"
 		do
-			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
+			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/bin/$paxkills
 		done
 
 		# /opt/$VM/jre/bin/java_vm
-		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/jre/bin/java_vm
+		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/jre/bin/java_vm
 
 		einfo "you should have seen lots of chpax output above now"
 		ewarn "make sure the grsec ACL contains those entries also"
@@ -218,6 +218,9 @@ pkg_postinst() {
 	einfo " are not valid identifiers any more in that mode,"
 	einfo " which can cause incompatibility with certain sources."
 
-	ebeep 5
-	epause 8
+	if ! use browserplugin && use mozilla; then
+		ewarn
+		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
+		ewarn "has been renamed to 'browserplugin' please update your USE"
+	fi
 }

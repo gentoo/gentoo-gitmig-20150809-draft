@@ -1,30 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7f861d0d853e5d5e71a97ea7573cadb0 sun-jdk-1.3.1.13.ebuild 3785
-MD5 6d442e148f395e4101ee4640a95c7c54 sun-jdk-1.5.0.03.ebuild 6969
-MD5 cc6b8f9c01104fa009af2bf90aec953e sun-jdk-1.2.2.017.ebuild 3114
-MD5 9bd6795e36b20d7f21d86322a9b2e81c sun-jdk-1.4.2.08.ebuild 6203
-MD5 7ea5e277c360811313944beb6de383bb sun-jdk-1.5.0.04.ebuild 6969
+MD5 7ce6ecf5d389f473404b4c25c04eeea6 sun-jdk-1.4.2.08-r1.ebuild 6480
+MD5 1edf120dea46f2d448d9abf064c95446 sun-jdk-1.3.1.13.ebuild 3733
+MD5 c7441ce1291766a1ee5494d80881ee63 sun-jdk-1.2.2.017.ebuild 2931
+MD5 0efd31e7e1a2ba243c0fb9281770c55b sun-jdk-1.4.2.08.ebuild 6181
+MD5 3d20bc08df0d9d3905245c0fc191f13b sun-jdk-1.5.0.04.ebuild 6951
 MD5 ad17d20968ce10e4ee84bfffba820ad6 ChangeLog 23710
-MD5 645ed5bb0daa7a4507172022736897e6 sun-jdk-1.5.0.02-r1.ebuild 6972
 MD5 16c9e337522b7e477aece60ff98dde54 metadata.xml 239
 MD5 0f94a657aa38fbca24dd767967474bc4 files/sun-jdk-1.3.1.13 475
 MD5 a9fa8b3f17e5639d26a53ab0c163e25c files/sun-jdk-1.4.2.08 495
-MD5 7e47512a18f9af78546d9b528b3bfd47 files/sun-jdk-1.5.0.02 471
-MD5 42c1ef4e10df8f6d1f01a9c95973b7e3 files/sun-jdk-1.5.0.03 476
 MD5 57bd74c36bf2f6202cb9b470ae6ff365 files/sun-jdk-1.5.0.04 471
 MD5 ac1c6e8860b4cb03e284664cacf7a977 files/sun-jdk-1.2.2.017 328
 MD5 92fc551c12c9a260dd9ced69d15cf0f3 files/digest-sun-jdk-1.2.2.017 78
+MD5 49cf0d15bb5d59149d1828735355d139 files/digest-sun-jdk-1.4.2.08-r1 140
 MD5 d1e29e8acce3cfec9912e23aa366478a files/digest-sun-jdk-1.3.1.13 76
 MD5 49cf0d15bb5d59149d1828735355d139 files/digest-sun-jdk-1.4.2.08 140
-MD5 160b416ee657e71dda6bdfb888696231 files/digest-sun-jdk-1.5.0.03 212
 MD5 3bb18cb5771d0bf04e97de8d08d41117 files/digest-sun-jdk-1.5.0.04 212
-MD5 dc0cdafb5c99594fb0ef9daa13b35fcf files/digest-sun-jdk-1.5.0.02-r1 212
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCwTIw/rLF9B432nYRAuQgAJ9WBd3eELSMRrNATIC8/Qo5H3pumACgo8Mn
-BY9oexwRev4Em4EeDqFN3Wk=
-=r8av
------END PGP SIGNATURE-----
+MD5 64ade01a917993ba9712b2c0d2f4a580 files/javaws-waitid.c 833

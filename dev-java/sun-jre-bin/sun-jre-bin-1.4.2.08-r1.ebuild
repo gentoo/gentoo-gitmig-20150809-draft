@@ -1,68 +1,59 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.04.ebuild,v 1.3 2005/07/11 13:20:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.08-r1.ebuild,v 1.1 2005/07/11 13:20:24 axxo Exp $
 
 inherit java eutils
 
-MY_PVL=${PV%.*}_${PV##*.}
-MY_PVA=${PV//./_}
-
-amd64file="jre-${MY_PVA}-linux-amd64.bin"
-x86file="jre-${MY_PVA}-linux-i586.bin"
-
-if use x86; then
-	At=${x86file}
-elif use amd64; then
-	At=${amd64file}
-fi
-
-S="${WORKDIR}/jre${MY_PVL}"
+MY_PV=${PV%.*}_${PV##*.}
+MY_PV2=${PV//./_}
+At="j2re-${MY_PV2}-linux-i586.bin"
+S="${WORKDIR}/j2re${MY_PV}"
 DESCRIPTION="Sun's J2SE Platform"
-HOMEPAGE="http://java.sun.com/j2se/"
-SRC_URI="x86? ( $x86file ) amd64? ( $amd64file )"
-SLOT="1.5"
-LICENSE="sun-bcla-java-vm"
-KEYWORDS="~x86 ~amd64 -*"
+HOMEPAGE="http://java.sun.com/j2se/1.4.2/"
+SRC_URI=${At}
+SLOT="1.4"
+LICENSE="sun-bcla-java-vm-1.4.2"
+KEYWORDS="-* ~x86"
 RESTRICT="fetch"
 IUSE="browserplugin mozilla"
 
-DEPEND=">=dev-java/java-config-1.2
+DEPEND=">=dev-java/java-config-1.1.5
 	sys-apps/sed"
 
-RDEPEND="x86? ( sys-libs/lib-compat )"
+RDEPEND="sys-libs/lib-compat"
 
 PROVIDE="virtual/jre"
 
-PACKED_JARS="lib/rt.jar lib/jsse.jar lib/charsets.jar lib/ext/localedata.jar lib/plugin.jar lib/javaws.jar lib/deploy.jar"
+PACKED_JARS="lib/rt.jar lib/jsse.jar lib/charsets.jar
+lib/ext/localedata.jar lib/plugin.jar javaws/javaws.jar"
 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
-FETCH_SDK="http://javashoplm.sun.com:80/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jre-${MY_PVL}-oth-JPR&SiteId=JSC&TransactionId=noreg"
-
+DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=j2re-${MY_PV}-oth-JPR&SiteId=JSC&TransactionId=noreg"
 
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
-	einfo ${FETCH_SDK}
-	einfo "(Select the Linux or Linux AMD64 Self-extracting (.bin), depending on your arch)"
+	einfo ${DOWNLOAD_URL}
+	einfo "(select the \"Linux self-extracting file\" package format of the JRE"
 	einfo "and move it to ${DISTDIR}"
 }
 
 src_unpack() {
 	if [ ! -r ${DISTDIR}/${At} ]; then
-		die "cannot read ${At}. Please check the permission and try again."
+		eerror "cannot read ${At}. Please check the permission and try again."
+		die
 	fi
-
 	#Search for the ELF Header
-	testExp=`echo -e "\105\114\106"`
+	testExp=`echo -e "\177\105\114\106\001\001\001"`
 	startAt=`grep -aonm 1 ${testExp}  ${DISTDIR}/${At} | cut -d: -f1`
 	tail -n +${startAt} ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
 	./install.sfx || die
 	rm install.sfx
 
-	if [ -f ${S}/bin/unpack200 ]; then
-		UNPACK_CMD=${S}/bin/unpack200
+	if [ -f ${S}/lib/unpack ]; then
+		UNPACK_CMD=${S}/lib/unpack
 		chmod +x $UNPACK_CMD
 		sed -i 's#/tmp/unpack.log#/dev/null\x00\x00\x00\x00\x00\x00#g' $UNPACK_CMD
 		for i in $PACKED_JARS; do
@@ -73,41 +64,33 @@ src_unpack() {
 				rm -f ${PACK_FILE}
 			fi
 		done
-		rm -f ${UNPACK_CMD}
-	else
-		die "unpack not found"
 	fi
+	cd ${S}
+	sed -i "s,^exec,export LD_PRELOAD=/opt/${P}/javaws/javaws-waitid.so\nexec," javaws/javaws || die "javaws sed failed"
 }
 
-src_install() {
-
-	if use amd64; then
-		local dirs="bin lib man"
-	else
-		local dirs="bin lib man plugin javaws"
-	fi
+src_compile() {
+	gcc -O2 -fPIC -g0 -shared -o ${S}/javaws/javaws-waitid.so ${FILESDIR}/javaws-waitid.c || die "failed to compile javaws hack"
+}
 
 
+src_install () {
+	local dirs="bin lib man javaws plugin"
 	dodir /opt/${P}
 
 	for i in $dirs ; do
-		cp -a $i ${D}/opt/${P}/ || die "failed to build"
+		cp -a $i ${D}/opt/${P}/
 	done
 
-	dodoc COPYRIGHT LICENSE README
-	dohtml Welcome.html
+	dodoc CHANGES COPYRIGHT README LICENSE THIRDPARTYLICENSEREADME.txt
+	dohtml Welcome.html ControlPanel.html
 
 	if use browserplugin || use mozilla; then
-		local plugin_dir="ns7-gcc29"
-		if has_version '>=gcc-3*' ; then
-			plugin_dir="ns7"
+		local plugin_dir="ns610"
+		if has_version '>=gcc-3.2*' ; then
+			plugin_dir="ns610-gcc32"
 		fi
-
-		if use x86 ; then
-			install_mozilla_plugin /opt/${P}/plugin/i386/$plugin_dir/libjavaplugin_oji.so
-		else
-			eerror "No plugin available for amd64 arch"
-		fi
+		install_mozilla_plugin /opt/${P}/plugin/i386/$plugin_dir/libjavaplugin_oji.so
 	fi
 
 	# create dir for system preferences
@@ -118,26 +101,22 @@ src_install() {
 		-e "s/\(Name=Java\)/\1 Control Panel/" \
 		${D}/opt/${P}/plugin/desktop/sun_java.desktop > \
 		${T}/sun_java-jre.desktop
-
 	domenu ${T}/sun_java-jre.desktop
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
+
+	# TODO prepman "fixes" symlink ja -> ja__JP.eucJP in 'man' directory,
+	#      creating ja.gz -> ja_JP.eucJP.gz. This is broken as ja_JP.eucJP
+	#      is a directory and will not be gzipped ;)
 }
 
-pkg_postinst() {
+pkg_postinst () {
 	# Create files used as storage for system preferences.
-	PREFS_LOCATION=/opt/${P}/
-	mkdir -p ${PREFS_LOCATION}/.systemPrefs
-	if [ ! -f ${PREFS_LOCATION}/.systemPrefs/.system.lock ] ; then
-		touch $PREFS_LOCATION/.systemPrefs/.system.lock
-		chmod 644 $PREFS_LOCATION/.systemPrefs/.system.lock
-	fi
-	if [ ! -f $PREFS_LOCATION/.systemPrefs/.systemRootModFile ] ; then
-		touch $PREFS_LOCATION/.systemPrefs/.systemRootModFile
-		chmod 644 $PREFS_LOCATION/.systemPrefs/.systemRootModFile
-	fi
+	touch /opt/${P}/.systemPrefs/.system.lock
+	chmod 644 /opt/${P}/.systemPrefs/.system.lock
+	touch /opt/${P}/.systemPrefs/.systemRootModFile
+	chmod 644 /opt/${P}/.systemPrefs/.systemRootModFile
 
-	# Set as default VM if none exists
 	java_pkg_postinst
 
 	#Show info about netscape
@@ -146,7 +125,7 @@ pkg_postinst() {
 		einfo "If you want to install the plugin for Netscape 4.x, type"
 		einfo
 		einfo "   cd /usr/lib/nsbrowser/plugins/"
-		einfo "   ln -sf /opt/${P}/plugin/i386/ns4/libjavaplugin.so"
+		einfo "   ln -sf /opt/${P}/jre/plugin/i386/ns4/libjavaplugin.so"
 	fi
 
 	# if chpax is on the target system, set the appropriate PaX flags
@@ -162,7 +141,7 @@ pkg_postinst() {
 			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/bin/$paxkills
 		done
 
-		# /opt/$VM/bin/java_vm
+		# /opt/sun-jdk-1.4.2.03/bin/java_vm
 		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/bin/java_vm
 
 		einfo "you should have seen lots of chpax output above now"
@@ -173,7 +152,7 @@ pkg_postinst() {
 	fi
 
 	echo
-	eerror "Some parts of Sun's JRE require virtual/x11 and virtual/lpr to be installed."
+	eerror "Some parts of Sun's JDK require virtual/x11 to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
 
 	if ! use browserplugin && use mozilla; then

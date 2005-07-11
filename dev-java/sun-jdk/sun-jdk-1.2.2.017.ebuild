@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.2.2.017.ebuild,v 1.5 2005/05/18 15:48:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.2.2.017.ebuild,v 1.6 2005/07/11 13:21:55 axxo Exp $
 
 inherit java
 
@@ -13,9 +13,9 @@ PROVIDE="virtual/jre
 	virtual/jdk"
 LICENSE="sun-bcla-java-vm-1.2"
 SLOT="1.2"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
+KEYWORDS="~x86 -*"
 RESTRICT="fetch"
-IUSE="doc mozilla X"
+IUSE="doc X"
 # NOTE:  Sun's JDK also requires the XFree86 be installed to use the graphical
 # libraries.  Even some non-graphical libraries (such as JavaMail) have bizarre
 # dependencies on windowing toolkits.
@@ -80,13 +80,6 @@ src_install() {
 pkg_postinst() {
 	# Set as default VM if none exists
 	java_pkg_postinst
-
-	# Again, this will not work as a Mozilla plugin.
-	if use mozilla ; then
-		echo
-		einfo "JDK 1.2.2 does not work with Mozilla.  A more recent JDK is"
-		einfo "required."
-	fi
 
 	# Warn the user if they don't appear to have XFree86 installed.
 	if ! use X ; then

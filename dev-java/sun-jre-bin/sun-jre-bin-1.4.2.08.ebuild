@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.08.ebuild,v 1.2 2005/05/18 15:48:38 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.08.ebuild,v 1.3 2005/07/11 13:20:24 axxo Exp $
 
 inherit java eutils
 
@@ -15,7 +15,7 @@ SLOT="1.4"
 LICENSE="sun-bcla-java-vm-1.4.2"
 KEYWORDS="x86 -*"
 RESTRICT="fetch"
-IUSE="mozilla"
+IUSE="browserplugin mozilla"
 
 DEPEND=">=dev-java/java-config-1.1.5
 	sys-apps/sed"
@@ -78,7 +78,7 @@ src_install () {
 	dodoc CHANGES COPYRIGHT README LICENSE THIRDPARTYLICENSEREADME.txt
 	dohtml Welcome.html ControlPanel.html
 
-	if use mozilla ; then
+	if use browserplugin || use mozilla; then
 		local plugin_dir="ns610"
 		if has_version '>=gcc-3.2*' ; then
 			plugin_dir="ns610-gcc32"
@@ -131,11 +131,11 @@ pkg_postinst () {
 
 		for paxkills in "java"
 		do
-			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
+			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/bin/$paxkills
 		done
 
 		# /opt/sun-jdk-1.4.2.03/bin/java_vm
-		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/java_vm
+		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/bin/java_vm
 
 		einfo "you should have seen lots of chpax output above now"
 		ewarn "make sure the grsec ACL contains those entries also"
@@ -147,7 +147,9 @@ pkg_postinst () {
 	echo
 	eerror "Some parts of Sun's JDK require virtual/x11 to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
-
-	ebeep 5
-	epause 8
+	if ! use browserplugin && use mozilla; then
+		ewarn
+		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
+		ewarn "has been renamed to 'browserplugin' please update your USE"
+	fi
 }
