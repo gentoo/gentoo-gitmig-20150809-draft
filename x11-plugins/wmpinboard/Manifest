@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b7154ac28fd39be2b6594aa27b3aed0b ChangeLog 1176
 MD5 45429fba57096382c86e58733f1f0385 files/digest-wmpinboard-1.0 67
 MD5 b7532acbb5f32e091d85cf67e343fd30 files/wmpinboard-1.0-segfault.patch 320
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
 MD5 1286449f1cd4f17b8a52f543803f1f4f wmpinboard-1.0.ebuild 708
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0wIaI1lqEGTUzyQRAjZ/AKCAfrah7Y8WwJDvypB04KWPS3JMTwCgmY1z
+UkE/X1kyy2go0p1yEDqgsE8=
+=sLKt
+-----END PGP SIGNATURE-----
