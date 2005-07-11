@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 12935cfd66151bd25854bb558c26ea78 PECL-pdflib-2.0.4.ebuild 474
-MD5 58f7f8c950475763daeb01cead53ff1f ChangeLog 451
+MD5 32a29372016a94a66bffcb5203a55aa2 PECL-pdflib-2.0.4.ebuild 473
+MD5 818c59962a9c220c9fa20813e4eb80c1 ChangeLog 554
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 1ffaf58e4d052d47b48b8490ca92efaf files/digest-PECL-pdflib-2.0.4 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCqRbhaGfFFLhbXWkRAhEJAJ9pfDtHw/6LL+mRRtM/WGhGqkPxngCdHqag
-EtIXVxNVgFQEjandx63dYGw=
-=QNxr
+iD8DBQFC0racaGfFFLhbXWkRAg0VAJ9t6wuRMR+qMiWSHKTb3WHrwSMH2wCfXUQZ
+AJc5xEqe2tfz9TUyB7qrRd4=
+=hhXV
 -----END PGP SIGNATURE-----
