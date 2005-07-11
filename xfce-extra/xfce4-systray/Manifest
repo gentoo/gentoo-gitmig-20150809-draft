@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 51d08ab5c96bfe33da5c521f4f941954 xfce4-systray-4.0.6.ebuild 878
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 f7344f46b658f9f776eb02a449a048b4 xfce4-systray-4.2.2.ebuild 390
-MD5 a7466a11d8acb482e674e2468f649a77 xfce4-systray-4.2.1.ebuild 398
-MD5 96db269256becd9be5d0dfdb508aa8c7 ChangeLog 6563
 MD5 1a7ea563eab66c3fae7999cbe85ee178 xfce4-systray-4.2.0.ebuild 397
-MD5 0aa5db9678036981185253b94aeec8c7 files/digest-xfce4-systray-4.2.1 71
-MD5 752f77ba62486a16f4c5ccf533c6ac1d files/digest-xfce4-systray-4.2.2 71
-MD5 e85fda8f975f52b28b8a6db70e898b21 files/digest-xfce4-systray-4.2.0 72
+MD5 ea37a577a05db534566217448fe194e1 ChangeLog 6667
+MD5 a7466a11d8acb482e674e2468f649a77 xfce4-systray-4.2.1.ebuild 398
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 e46118d874174cf17a4575bab1be5b0a xfce4-systray-4.2.2.ebuild 392
 MD5 f4e5b4968d8a9aa9bf0990bc82674656 files/digest-xfce4-systray-4.0.6 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzynIgIKl8Uu19MoRAszgAJ4g5X3Rv4A1veu1eh0vtolFJkFacwCdG7Cu
-sYVOqLlWgngX6h4AiXp2DA4=
-=vqpn
------END PGP SIGNATURE-----
+MD5 e85fda8f975f52b28b8a6db70e898b21 files/digest-xfce4-systray-4.2.0 72
+MD5 752f77ba62486a16f4c5ccf533c6ac1d files/digest-xfce4-systray-4.2.2 71
+MD5 0aa5db9678036981185253b94aeec8c7 files/digest-xfce4-systray-4.2.1 71

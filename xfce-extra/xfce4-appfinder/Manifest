@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 1239ee306d75cd039ab6dcd1d4de8d1b ChangeLog 2596
 MD5 327b69989ecb09b4693fdd5ae9d0f301 xfce4-appfinder-4.2.0.ebuild 407
 MD5 a21173dc8cfdee45d47ff15bbcbf6f58 xfce4-appfinder-4.2.1.ebuild 404
-MD5 ecacbef8df44f59ea54a581ec2a1f7f2 xfce4-appfinder-4.2.2.ebuild 400
-MD5 e327c4bd5692ad001ee33d53d47312fd ChangeLog 2490
-MD5 d7d11e06640cff428e402ceac7f7a9fe files/digest-xfce4-appfinder-4.2.0 74
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 9aac9920d2da2d8ca63ed84957ffa9e3 xfce4-appfinder-4.2.2.ebuild 402
 MD5 40caedb5905dd010d04ffcbb0c4f9073 files/digest-xfce4-appfinder-4.2.2 73
 MD5 2b2b57f0a3081b3994ca2a75b18bda75 files/digest-xfce4-appfinder-4.2.1 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzylwgIKl8Uu19MoRAtLrAJwLaUodQb6M79HuxsoWFdSUyIH4LACfebpX
-mZi8RtOo2+oYXwDVQzkiKv4=
-=xhc0
------END PGP SIGNATURE-----
+MD5 d7d11e06640cff428e402ceac7f7a9fe files/digest-xfce4-appfinder-4.2.0 74
