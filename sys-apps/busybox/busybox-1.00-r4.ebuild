@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.14 2005/06/11 13:53:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.15 2005/07/11 22:02:07 vapier Exp $
 
 inherit eutils
 
@@ -52,6 +52,7 @@ busybox_config_option() {
 }
 
 src_unpack() {
+	busybox_set_env
 	unpack ${A}
 	cd "${S}"
 
