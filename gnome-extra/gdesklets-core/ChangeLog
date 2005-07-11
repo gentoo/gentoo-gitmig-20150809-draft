@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.40 2005/07/11 03:14:43 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.41 2005/07/11 04:18:49 nixphoeni Exp $
+
+*gdesklets-core-0.35.1-r1 (11 Jul 2005)
+*gdesklets-core-0.35-r1 (11 Jul 2005)
+*gdesklets-core-0.35_rc1-r1 (11 Jul 2005)
+
+  11 Jul 2005; Joe Sapp <nixphoeni@gentoo.org>
+  +files/gdesklets-migration-tool, +gdesklets-core-0.35_rc1-r1.ebuild,
+  +gdesklets-core-0.35-r1.ebuild, +gdesklets-core-0.35.1-r1.ebuild:
+  Added the migration tool to the older versions
 
 *gdesklets-core-0.35.2 (11 Jul 2005)
 
