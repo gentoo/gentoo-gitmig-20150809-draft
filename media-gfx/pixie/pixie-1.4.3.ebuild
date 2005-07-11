@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.3.25.ebuild,v 1.2 2004/12/29 06:07:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.4.3.ebuild,v 1.1 2005/07/11 05:42:23 eradicator Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-src-${PV}.tgz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc -amd64"
+KEYWORDS="-amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="media-libs/jpeg
 	 sys-libs/zlib
@@ -35,30 +35,28 @@ src_unpack() {
 	# "right way" -- eradicator
 	epatch ${FILESDIR}/${PN}-1.3.11-math.patch
 
-	# Gentoo-specific stuff to fix the build/install process
-	epatch ${FILESDIR}/${PN}-1.3.11-gentoo.patch
+	# Make the build process more cross-platform...
+	# Also rejected upstream -- eradicator
+	epatch ${FILESDIR}/${PN}-1.4.3-libtool.patch
 
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
-	aclocal
-	libtoolize --force --copy
-	automake -a -f -c
-	autoconf
+	libtoolize --force --copy || die
+	aclocal || die
+	automake -a -f -c || die
+	autoconf || die
 }
 
 src_compile() {
-	./configure --prefix=/opt/pixie || die
-	emake || die
+	econf --disable-static || die
+	emake -j1 || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog DEVNOTES NEWS README
 
-	insinto /etc/env.d
-	doins ${FILESDIR}/50pixie
-
-	edos2unix ${D}/opt/pixie/shaders/*
-
-	mv ${D}/opt/pixie/doc ${D}/usr/share/doc/${PF}/html
+	edos2unix ${D}/usr/share/pixie/shaders/*
+	mv ${D}/usr/share/pixie/doc/html ${D}/usr/share/doc/${PF}/html
+	rmdir ${D}/usr/share/pixie/doc
 }

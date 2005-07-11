@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/pixie
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.14 2005/06/19 21:11:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.15 2005/07/11 05:42:23 eradicator Exp $
+
+*pixie-1.4.3 (11 Jul 2005)
+
+  11 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/pixie-1.3.11-gentoo.patch, +files/pixie-1.4.3-libtool.patch,
+  -files/50pixie, -pixie-1.3.13.ebuild, -pixie-1.3.25.ebuild,
+  +pixie-1.4.3.ebuild:
+  Version bump closes bug #98469.
 
   19 Jun 2005; Jeremy Huddleston <eradicator@gentoo.org>
   pixie-1.4.1-r1.ebuild:
