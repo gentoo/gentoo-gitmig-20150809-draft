@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.77 2005/07/11 18:01:03 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.78 2005/07/11 18:07:35 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -43,7 +43,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.6-includepath.diff http://dev.gentoo
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp mssql debug"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam png postgres snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp mssql debug"
 
 # Hardened-PHP support
 #
@@ -93,7 +93,6 @@ RDEPEND="${RDEPEND}
 	pam? ( >=sys-libs/pam-0.75 )
 	png? ( >=media-libs/libpng-1.2.5 )
 	postgres? ( >=dev-db/postgresql-7.1 )
-	qt? ( >=x11-libs/qt-2.3.0 )
 	snmp? ( net-analyzer/net-snmp )
 	spell? ( app-text/aspell )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
@@ -381,7 +380,7 @@ php-sapi_src_compile() {
 		myconf="${myconf} --without-ttf --without-t1lib"
 	fi
 
-	myconf="${myconf} `use_with nls gettext` `use_with qt qtdom /usr/qt/3`"
+	myconf="${myconf} `use_with nls gettext`"
 	myconf="${myconf} `use_with spell pspell /usr` `use_with ssl openssl /usr`"
 	myconf="${myconf} `use_with imap imap /usr` `use_with ldap ldap /usr`"
 	myconf="${myconf} `use_with xml2 dom /usr` `use_with xml2 dom-xslt /usr`"
