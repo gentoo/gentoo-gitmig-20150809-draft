@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/wmcoincoin-2.5.0g.ebuild,v 1.1 2005/06/25 13:29:51 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/wmcoincoin-2.5.0g.ebuild,v 1.2 2005/07/11 23:30:03 swegener Exp $
 
 IUSE=""
 
@@ -15,12 +15,6 @@ KEYWORDS="~amd64 ~ppc ~x86"
 DEPEND="virtual/libc
 		virtual/x11
 		media-libs/imlib2"
-
-src_compile() {
-	econf || die "configure failed"
-	emake || die "parallel make failed"
-}
-
 
 src_install () {
 	einstall || die "make install failed"
