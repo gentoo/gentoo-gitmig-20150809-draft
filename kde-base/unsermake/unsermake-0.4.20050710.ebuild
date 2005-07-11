@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/unsermake-0.4.20050628-r1.ebuild,v 1.1 2005/06/29 14:53:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/unsermake-0.4.20050710.ebuild,v 1.1 2005/07/11 23:07:11 caleb Exp $
 
 inherit python
 
