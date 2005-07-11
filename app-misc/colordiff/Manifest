@@ -1,8 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9c7a775b72ac9e8a0c69c4393c0412c0 colordiff-1.0.3.ebuild 694
-MD5 38190c27135abef961e53690f7e140b6 colordiff-1.0.5.ebuild 824
+MD5 39acc6784ac8861ce0019be300c83e1d colordiff-1.0.5.ebuild 821
 MD5 6debd60f9e133e2063d5b00e454453f6 colordiff-1.0.4.ebuild 784
-MD5 2ea2799d3f3fee0d5fef7092e6a2afb9 ChangeLog 3805
+MD5 8aa2e06a75a2cf6c04dad42885be0654 ChangeLog 4196
 MD5 8114f79f8735648770d8f37c32861c88 metadata.xml 252
+MD5 59369e6cc21a622b22be0c3cf4634033 colordiff-1.0.5-r1.ebuild 900
 MD5 c2d6494ef389461d2fdfdce78184e4da files/digest-colordiff-1.0.3 66
 MD5 aacbfa4b314f437baac1ee478ff3996a files/digest-colordiff-1.0.4 66
 MD5 bfff6fd1ace0929c4d81692c93b0eaee files/digest-colordiff-1.0.5 66
+MD5 bfff6fd1ace0929c4d81692c93b0eaee files/digest-colordiff-1.0.5-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0ekpBXaUFmZvwyMRAnSUAJ0ZrYvhX2OJWdT/V9QzpWG8dWSP9ACgmblT
+GyadvjtUGkmPPurTQoaTptI=
+=B90O
+-----END PGP SIGNATURE-----
