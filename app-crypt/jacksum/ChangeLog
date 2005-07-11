@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/jacksum
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.9 2005/01/01 12:32:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.10 2005/07/11 12:32:27 axxo Exp $
+
+  11 Jul 2005; Thomas Matthijs <axxo@gentoo.org> jacksum-1.4.0.ebuild,
+  jacksum-1.5.0.ebuild, jacksum-1.5.1.ebuild:
+  keyword x86
 
 *jacksum-1.5.1 (19 Dec 2004)
 
