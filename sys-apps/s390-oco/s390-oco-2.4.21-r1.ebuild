@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.4.21-r1.ebuild,v 1.1 2005/01/22 01:18:04 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.4.21-r1.ebuild,v 1.2 2005/07/11 02:40:34 agriffis Exp $
 
 DESCRIPTION="Object-code only (OCO) modules for s390"
 SRC_URI="s390x? ( tape3590-2.4.21-s390x-02-june2003.tar.gz )
@@ -10,7 +10,7 @@ LICENSE="IBM-ILNWP"
 KEYWORDS="~s390"
 SLOT="${KV}"
 DEPEND="=sys-kernel/vanilla-sources-2.4.21"
-IUSE=""
+IUSE="s390x"
 
 RESTRICT="fetch"
 
