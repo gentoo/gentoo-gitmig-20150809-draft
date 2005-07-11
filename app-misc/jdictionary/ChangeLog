@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jdictionary
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/ChangeLog,v 1.9 2005/04/21 19:20:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/ChangeLog,v 1.10 2005/07/11 20:50:25 axxo Exp $
+
+  11 Jul 2005; Thomas Matthijs <axxo@gentoo.org> jdictionary-1.8-r1.ebuild:
+  style fixes
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> jdictionary-1.8.ebuild:
   stable on amd64
