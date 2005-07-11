@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.52 2005/07/09 21:11:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.53 2005/07/11 22:01:42 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -48,7 +48,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 LICENSE="LGPL-2"
 
-IUSE="build erandom hardened multilib nls nomalloccheck nptl nptlonly pic userlocales"
+IUSE="build erandom hardened multilib nls nomalloccheck nptl nptlonly pic userlocales selinux"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -870,6 +870,12 @@ glibc_do_configure() {
 		die "invalid pthread option"
 	fi
 
+	if ! use build && use selinux ; then
+		myconf="${myconf} --with-selinux"
+	else
+		myconf="${myconf} --without-selinux"
+	fi
+
 	myconf="${myconf}
 		--without-cvs
 		--enable-bind-now
@@ -1061,9 +1067,11 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/gcc-config-1.3.9
 	virtual/os-headers
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	selinux? ( !build? ( sys-libs/libselinux ) )"
 RDEPEND="virtual/os-headers
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	selinux? ( !build? ( sys-libs/libselinux ) )"
 
 if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 	DEPEND="${DEPEND}

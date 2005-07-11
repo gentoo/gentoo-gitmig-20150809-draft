@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.355 2005/07/11 15:07:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.356 2005/07/11 22:01:42 azarah Exp $
+
+  11 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  glibc-2.3.4.20050125-r1.ebuild:
+  Update to support selinux USE flag.
 
   11 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
   glibc-2.3.4.20041102-r1.ebuild, glibc-2.3.5.ebuild,
