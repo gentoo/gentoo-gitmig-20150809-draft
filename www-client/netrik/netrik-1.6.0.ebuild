@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.6.0.ebuild,v 1.1 2005/03/23 16:46:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/netrik-1.6.0.ebuild,v 1.2 2005/07/11 23:28:29 swegener Exp $
 
 DESCRIPTION="A text based web browser with no ssl support."
 HOMEPAGE="http://netrik.sourceforge.net/"
@@ -15,16 +15,11 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3
 	nls? ( sys-devel/gettext )"
 
-src_compile() {
-	econf || die
-	emake || die "Compile problem"
-}
-
 src_install() {
 	make \
-		prefix=${D}/usr \
-		datadir=${D}/usr/share \
-		mandir=${D}/usr/share/man \
-		libdir=${D} install \
+		prefix="${D}"/usr \
+		datadir="${D}"/usr/share \
+		mandir="${D}"/usr/share/man \
+		libdir="${D}" install \
 		|| die "Unablr to do install"
 }

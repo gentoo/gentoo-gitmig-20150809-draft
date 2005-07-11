@@ -1,7 +1,17 @@
-MD5 de21bb0678ec6aa539866822c5c305ef netrik-1.10.2.ebuild 741
-MD5 97f8933a12ac76edcbb10e115b2e14e4 netrik-1.15.3.ebuild 748
-MD5 8d83f9da1e37e2cbb92c0fb6ea2460b4 netrik-1.6.0.ebuild 733
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8cbeaa63715e731d922e3fc80818d655 ChangeLog 1100
 MD5 3ddf9fe835b417c6390365fa463ccd0d files/digest-netrik-1.10.2 65
 MD5 abff8f695e3284d6605299cb35b79fd4 files/digest-netrik-1.15.3 65
 MD5 25304c28085761fdc17a4e0c5de07591 files/digest-netrik-1.6.0 64
+MD5 52557ca46cc6cc2e423b93b793da473a netrik-1.10.2.ebuild 685
+MD5 a211debe47730e5ad09aff69ddd5b77e netrik-1.15.3.ebuild 692
+MD5 57e3827ecc82e8a661a6189b7fd3a7d5 netrik-1.6.0.ebuild 677
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0wCqI1lqEGTUzyQRAnE7AKC3Nxp0m5mreeda3+XlOjBaJqhg7ACgpJRe
+D5Jb/iz7mbK4FDWwqXZGTCo=
+=whEY
+-----END PGP SIGNATURE-----
