@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.10 2005/05/17 18:24:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.11 2005/07/11 15:44:31 genstef Exp $
+
+  11 Jul 2005; Stefan Schweizer <genstef@gentoo.org> davfs2-0.2.3-r1.ebuild:
+  Fixing bug 96901 by making the patch conditional (only 2.4 kernel) thanks to
+  Michal Januszewski <spock@gentoo.org> and Stuart Grimshaw
+  <stuart.gentoo@smgsystems.co.uk>
 
   17 May 2005; Stefan Schweizer <genstef@gentoo.org> davfs2-0.2.3-r1.ebuild:
   More verbose message thanks to R. May <Tinitus1@onlinehome.de> in bug 92876

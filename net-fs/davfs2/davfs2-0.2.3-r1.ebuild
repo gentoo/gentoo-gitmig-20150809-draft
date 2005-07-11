@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.3-r1.ebuild,v 1.3 2005/05/17 18:24:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.3-r1.ebuild,v 1.4 2005/07/11 15:44:31 genstef Exp $
 
 inherit linux-info eutils
 
@@ -23,7 +23,7 @@ CODA_FS_ERROR="${P} requires kernel support for Coda to be found in filesystems,
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}.nokernelsrc.patch
+	kernel_is 2 4 && epatch ${FILESDIR}/${PN}.nokernelsrc.patch
 }
 
 src_compile() {
@@ -33,7 +33,8 @@ src_compile() {
 		myconf="--with-debug"
 	fi
 
-	econf $(use_with ssl) \
+	econf --with-kernel-src=${KV_DIR} \
+		$(use_with ssl) \
 		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
