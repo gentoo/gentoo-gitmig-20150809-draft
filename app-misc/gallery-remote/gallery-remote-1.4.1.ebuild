@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/gallery-remote-1.4.1.ebuild,v 1.4 2005/01/20 15:33:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/gallery-remote-1.4.1.ebuild,v 1.5 2005/07/11 20:27:59 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -11,15 +11,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="jikes"
-DEPEND=">=virtual/jdk-1.4
+RDEPEND=">=virtual/jre-1.4
 		dev-java/apple-java-extensions-bin
-		dev-java/jsx
 		dev-java/metadata-extractor
-		dev-java/java-config
-		jikes? ( dev-java/jikes )"
-RDEPEND="${DEPEND}
 		media-gfx/imagemagick
 		media-libs/jpeg"
+DEPEND=">=virtual/jdk-1.4
+		${RDEPEND}
+		jikes? ( dev-java/jikes )"
 
 S=${WORKDIR}/gallery_remote
 
@@ -27,11 +26,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}.patch
-	sed -e "s:lib/metadata-extractor-2.1.jar img/:$(java-config -p metadata-extractor) ../img/:" -i build.xml || die "sed failed"
 	cd ${S}/lib
+	rm -f *.jar
 	java-pkg_jar-from apple-java-extensions-bin AppleJavaExtensions.jar
-	java-pkg_jar-from jsx jsx.jar JSX1.0.7.4.jar
-	java-pkg_jar-from metadata-extractor metadata-extractor-2.2.2.jar metadata-extractor-2.1.jar
+	java-pkg_jar-from metadata-extractor metadata-extractor.jar metadata-extractor-2.1.jar
 }
 
 src_compile() {
@@ -41,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc ChangeLog LICENSE README
+	dodoc ChangeLog README
 	java-pkg_dojar GalleryRemote.jar
 
 	dodir /usr/share/gallery-remote/{imagemagick,jpegtran}
@@ -49,9 +47,8 @@ src_install() {
 	cp jpegtran/jpegtran.preinstalled ${D}/usr/share/gallery-remote/jpegtran/jpegtran.properties
 	cp -r img ${D}/usr/share/gallery-remote/
 
-	dodir /usr/bin/
-	echo "#!/bin/bash" > ${D}/usr/bin/gallery-remote
-	echo "cd /usr/share/gallery-remote/" >> ${D}/usr/bin/gallery-remote
-	echo "\$(java-config -J) -jar lib/GalleryRemote.jar"  >> ${D}/usr/bin/gallery-remote
-	chmod 755 ${D}/usr/bin/gallery-remote
+	echo "#!/bin/bash" > gallery-remote
+	echo "cd /usr/share/gallery-remote/" >> gallery-remote
+	echo "java -jar lib/GalleryRemote.jar"  >> gallery-remote
+	dobin gallery-remote
 }
