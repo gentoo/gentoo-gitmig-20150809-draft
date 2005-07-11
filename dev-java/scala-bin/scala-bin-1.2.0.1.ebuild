@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.5 2005/05/19 13:51:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.6 2005/07/11 00:34:41 agriffis Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://scala.epfl.ch/downloads/distrib/files/scala-1.2.0.1.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="doc jikes"
+IUSE=""
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}/scala-${PV}
