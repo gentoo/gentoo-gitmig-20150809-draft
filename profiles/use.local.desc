@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1302 2005/07/10 18:40:46 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1303 2005/07/11 13:17:19 axxo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -209,6 +209,12 @@ dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
+dev-java/sun-jdk:browserplugin - Enable Java browser plugin for (applets)
+dev-java/sun-jre-bin:browserplugin - Enable Java browser plugin (applets)
+dev-java/blackdown-jdk:browserplugin - Enable Java browser plugin (applets)
+dev-java/blackdown-jre:browserplugin - Enable Java browser plugin (applets)
+dev-java/ibm-jdk-bin:browserplugin - Enable Java browser plugin (applets)
+dev-java/ibm-jre-bin:browserplugin - Enable Java browser plugin (applets)
 dev-java/swt:cairo - Enable Cairo rendering backend
 dev-java/swt:firefox - Build the Mozilla Embeded Component against firefox rather than mozilla
 dev-java/velocity:j2ee - Add j2ee support
