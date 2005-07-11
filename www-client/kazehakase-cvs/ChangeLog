@@ -1,6 +1,12 @@
 # ChangeLog for www-client/kazehakase-cvs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/ChangeLog,v 1.7 2005/03/30 17:21:31 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/ChangeLog,v 1.8 2005/07/11 11:41:10 nakano Exp $
+
+*kazehakase-cvs-20050711 (11 Jul 2005)
+
+  11 Jul 2005; Masatomo Nakano <nakano@gentoo.org>
+  +kazehakase-cvs-20050711.ebuild:
+  Added selectable SSL support. (#98423)
 
 *kazehakase-cvs-20050330 (30 Mar 2005)
 
