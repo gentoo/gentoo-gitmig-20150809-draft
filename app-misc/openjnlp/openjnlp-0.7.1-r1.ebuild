@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r1.ebuild,v 1.4 2005/01/01 15:18:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r1.ebuild,v 1.5 2005/07/11 21:40:01 axxo Exp $
 
 inherit java-pkg
 
@@ -9,15 +9,16 @@ HOMEPAGE="http://openjnlp.nanode.org/"
 SRC_URI="mirror://sourceforge/openjnlp/OpenJNLP-src-rel_ver-${PV//./-}.zip"
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
-DEPEND="virtual/jdk
-	app-arch/unzip
-	>=dev-java/ant-1.6
-	dev-java/sax
-	dev-java/jnlp-bin
-	dev-java/nanoxml"
-RDEPEND="virtual/jre"
+RDEPEND=">=virtual/jre-1.3
+		dev-java/sax
+		dev-java/jnlp-bin
+		dev-java/nanoxml"
+DEPEND=">=virtual/jdk-1.3
+		${RDEPEND}
+		app-arch/unzip
+		>=dev-java/ant-1.6"
 
 S=${WORKDIR}/OpenJNLP-src-rel_ver-${PV//./-}
 
