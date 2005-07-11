@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.156 2005/06/23 09:41:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.157 2005/07/11 23:48:11 geoman Exp $
+
+  11 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
+  gnome-vfs-2.10.0-r2.ebuild:
+  stable on mips
 
   23 Jun 2005; Guy Martin <gmsoft@gentoo.org> gnome-vfs-2.10.0-r2.ebuild:
   Stable on hppa.
