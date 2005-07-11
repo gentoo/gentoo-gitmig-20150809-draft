@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.27 2005/06/04 19:00:02 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.28 2005/07/11 05:44:53 mkennedy Exp $
+
+  11 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/50docutils-gentoo.el, docutils-0.3.7.ebuild:
+  Support emacs USE flag.
 
   04 Jun 2005; Stephen Bennett <spb@gentoo.org> docutils-0.3.7.ebuild:
   ~mips keywords
