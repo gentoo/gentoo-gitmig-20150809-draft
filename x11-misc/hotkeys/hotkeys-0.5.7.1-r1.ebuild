@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.10 2005/06/25 15:29:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.11 2005/07/11 23:05:34 swegener Exp $
 
 inherit eutils
 
@@ -20,30 +20,21 @@ DEPEND="X? ( virtual/x11 )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PF}-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${PF}-gentoo.diff
 }
 
 src_compile() {
-
-	use X \
-		&& myconf="${myconf} --with-X" \
-		|| myconf="${myconf} --without-X"
-
-	use xosd \
-		&& myconf="${myconf} --with-xosd" \
-		|| myconf="${myconf} --without-xosd"
-
-	use gtk \
-		&& myconf="${myconf} --with-gtk" \
-		|| myconf="${myconf} --without-gtk"
-
-	econf ${myconf} --disable-db3test || die "./configure failed"
-
+	econf \
+		--disable-db3test \
+		$(use_with X) \
+		$(use_with xosd) \
+		$(use_with gtk) \
+		|| die "./configure failed"
 	emake || die
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS ChangeLog COPYING README TODO
 }

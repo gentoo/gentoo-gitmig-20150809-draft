@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 ce048051d4c4e86b3727e7cfb59494b7 ChangeLog 2612
-MD5 03109b4be44d95accc2b42f3e35e6db8 hotkeys-0.5.7.1-r1.ebuild 1153
-MD5 2b1987adcf943427133e4f897782604c files/hotkeys-0.5.7.1-r1-gentoo.diff 1379
+MD5 9c359f23befcae63972b0edced764724 ChangeLog 2722
 MD5 26aa28d3165265b8153adbb4a071d0af files/digest-hotkeys-0.5.7.1-r1 67
 MD5 ceb23c573710586557d5f664975c6740 files/hotkeys-0.5.7.1-gentoo.diff 538
+MD5 2b1987adcf943427133e4f897782604c files/hotkeys-0.5.7.1-r1-gentoo.diff 1379
+MD5 5719c86b1bdfd3769cd1b6725b49dff6 hotkeys-0.5.7.1-r1.ebuild 958
+MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCvXhemOfEJZHYOKcRAudoAJ42aAQBukF5N3tQAkv+ib5aSkk8NACgzqA4
-gVibi8JC+W9BpxrCXdwA+6M=
-=xVUn
+iD8DBQFC0vtLI1lqEGTUzyQRAqygAKCyeulVREThm4yGeMAeMWOSyCkP5QCg0rXc
+egD6TZniXq7NnxK3IuLvdao=
+=0Q+q
 -----END PGP SIGNATURE-----

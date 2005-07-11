@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/hotkeys
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.22 2005/06/25 15:29:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.23 2005/07/11 23:05:34 swegener Exp $
+
+  11 Jul 2005; Sven Wegener <swegener@gentoo.org> hotkeys-0.5.7.1-r1.ebuild:
+  QA: Use use_with for econf.
 
   25 Jun 2005; Olivier Crête <tester@gentoo.org> hotkeys-0.5.7.1-r1.ebuild:
   Stable on amd64
