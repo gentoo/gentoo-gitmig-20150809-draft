@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e75278f1b3907d16d3bdd60a5e626f03 xpp-1.5.ebuild 762
-MD5 8c2554a4c58d6e02bbef0687cfaccef2 ChangeLog 2185
+MD5 3de41bbb8db82a4557a2192041c21dc6 ChangeLog 2272
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 0b6762aa0c82c7b1b9680c9b6e964e3b xpp-1.5.ebuild 771
 MD5 8d0b2e1426766ac3ae959549107569a6 files/cups.diff 1254
 MD5 51635db8c284ad110323e4243ee0bb81 files/digest-xpp-1.5 59
 MD5 0abfa945e442348aa10b77ee9ff60d48 files/inputslider.h.patch 622
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCpNgeevY57Fted3ERArEKAKC6YrLs86TVfD/EzCZtCfxeqy1lNwCfd7Lf
-wK+64rvyNecfO4xb2tRd0aU=
-=skJx
------END PGP SIGNATURE-----
