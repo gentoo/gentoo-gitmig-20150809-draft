@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.0-r2.ebuild,v 1.3 2005/01/01 20:15:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.0-r3.ebuild,v 1.1 2005/07/11 13:49:09 leonardop Exp $
 
 inherit sgml-catalog eutils
 
 MY_P="docbk40"
 DESCRIPTION="Docbook SGML DTD 4.0"
-HOMEPAGE="http://www.oasis-open.org/docbook/sgml/${PV}/index.html"
+HOMEPAGE="http://www.docbook.org/sgml/index.html"
 SRC_URI="http://www.oasis-open.org/docbook/sgml/${PV}/${MY_P}.zip"
 
 LICENSE="X11"
@@ -19,15 +19,17 @@ RDEPEND="app-text/sgml-common"
 
 S="${WORKDIR}"
 
+pkg_setup() {
+	sgml-catalog_cat_include "/etc/sgml/sgml-docbook-${PV}.cat" \
+		"/usr/share/sgml/docbook/sgml-dtd-${PV}/catalog"
+	sgml-catalog_cat_include "/etc/sgml/sgml-docbook-${PV}.cat" \
+		"/etc/sgml/sgml-docbook.cat"
+}
+
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-catalog.diff || die
 }
-
-sgml-catalog_cat_include "/etc/sgml/sgml-docbook-${PV}.cat" \
-	"/usr/share/sgml/docbook/sgml-dtd-${PV}/catalog"
-sgml-catalog_cat_include "/etc/sgml/sgml-docbook-${PV}.cat" \
-	"/etc/sgml/sgml-docbook.cat"
 
 src_install () {
 	insinto /usr/share/sgml/docbook/sgml-dtd-${PV}

@@ -5,7 +5,7 @@ diff -uNr 4.2/docbook.cat 4.2-gentoo/docbook.cat
    -- ...................................................................... --
    -- DocBook driver file .................................................. --
  
-+SGMLDECL "docbook.dcl"
++DTDDECL "-//OASIS//DTD DocBook V4.2//EN" "docbook.dcl"
 +
  PUBLIC "-//OASIS//DTD DocBook V4.2//EN"
         "docbook.dtd"

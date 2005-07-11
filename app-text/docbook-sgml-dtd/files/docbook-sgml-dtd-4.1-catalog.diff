@@ -1,14 +1,5 @@
 --- docbook.cat	Mon May 22 22:38:05 2000
 +++ catalog	Mon May 22 22:12:36 2000
-@@ -19,7 +19,7 @@
-   -- ...................................................................... --
-   -- SGML declaration associated with DocBook ............................. --
- 
--DTDDECL "-//OASIS//DTD DocBook V4.1//EN" "docbook.dcl"
-+SGMLDECL "docbook.dcl"
- 
-   -- ...................................................................... --
-   -- DocBook driver file .................................................. --
 @@ -35,29 +35,6 @@
  PUBLIC "-//OASIS//ENTITIES DocBook Additional General Entities V4.1//EN" "dbgenent.mod"
  PUBLIC "-//OASIS//ENTITIES DocBook Notations V4.1//EN" "dbnotn.mod"
