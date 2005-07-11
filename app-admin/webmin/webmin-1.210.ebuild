@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.210.ebuild,v 1.1 2005/06/24 17:07:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.210.ebuild,v 1.2 2005/07/11 03:14:41 eradicator Exp $
 
 IUSE="apache2 pam postgres ssl webmin-minimal"
 
@@ -64,6 +64,9 @@ src_unpack() {
 }
 
 src_install() {
+	# Bug #97212
+	addpredict /var/lib/rpm
+
 	rm -f mount/freebsd-mounts*
 	rm -f mount/openbsd-mounts*
 	rm -f mount/macos-mounts*
