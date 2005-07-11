@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.210.ebuild,v 1.2 2005/07/11 03:14:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.210.ebuild,v 1.3 2005/07/11 03:16:42 eradicator Exp $
 
 IUSE="apache2 pam postgres ssl webmin-minimal"
 
@@ -129,7 +129,8 @@ pkg_postinst() {
 	sed -i -e "s/root:XXX/root:${crypt}/" /etc/webmin/miniserv.users
 
 	einfo "To make webmin start at boot time, run: 'rc-update add webmin default'."
-	einfo "Point your web browser to http://localhost:10000 to use webmin."
+	use ssl && einfo "Point your web browser to https://localhost:10000 to use webmin."
+	use ssl || einfo "Point your web browser to http://localhost:10000 to use webmin."
 }
 
 pkg_prerm() {
