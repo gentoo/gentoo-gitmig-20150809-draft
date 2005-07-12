@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.30 2005/06/30 23:21:55 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.31 2005/07/12 00:16:41 geoman Exp $
+
+  12 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
+  gtk-engines-2.6.3.ebuild:
+  stable on mips
 
   30 Jun 2005; Leonardo Boshell <leonardop@gentoo.org>
   gtk-engines-2.2.0.ebuild, gtk-engines-2.6.2.ebuild,
