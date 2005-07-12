@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r2.ebuild,v 1.4 2005/07/07 11:47:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r2.ebuild,v 1.5 2005/07/12 08:10:36 robbat2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -69,4 +69,12 @@ src_install() {
 	#newinitd ${FILESDIR}/pbs-init.d pbs
 	#newconfd ${FILESDIR}/pbs-conf.d pbs
 	dosym /usr/$(get_libdir)/pbs/libpbs.a /usr/$(get_libdir)/libpbs.a
+
+}
+
+pkg_postinst() {
+	# this file MUST exist for PBS/Torque to work
+	touch ${ROOT}/etc/pbs_environment
+	# likewise for these directories
+	mkdir -p ${ROOT}/usr/spool/PBS/{spool,mom_{priv/jobs,logs},sched_{priv,logs},server_priv/{jobs,queues,accounting}}
 }

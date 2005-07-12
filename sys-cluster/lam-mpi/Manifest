@@ -3,9 +3,9 @@ MD5 861dcc1aa59b0e097079f547c7fe6b88 lam-mpi-7.0.6.ebuild 1616
 MD5 2fd75cb9d36d397b7b3bcfa6a5c07a0a lam-mpi-7.1.1-r1.ebuild 1662
 MD5 ae841b28d60b0120213eb738f4a05c73 lam-mpi-7.1.ebuild 1619
 MD5 3153a7853eaf73aa32f5fc141111ba3a lam-mpi-7.1.1.ebuild 1455
-MD5 153f44e60ef539d554ce77e18798b070 lam-mpi-7.1.1-r2.ebuild 2525
+MD5 14dcc046ab4db00fb50f2a6b101e1bdf lam-mpi-7.1.1-r2.ebuild 2708
 MD5 09cdcdb1957de0316945e360f642c9f2 lam-mpi-7.0.4.ebuild 1442
-MD5 81a9baace4b6f5c14c7e990d0f0fb73c ChangeLog 7122
+MD5 0f3a8246d92a1b54eee8f2e5cc2fb013 ChangeLog 7305
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
 MD5 8f2271274cdef6f58358e701c71663c9 files/digest-lam-mpi-7.1 61
 MD5 14d6b11ac532da9b84fb41053033edd2 files/lam-mpi-7.1.1-shared-romio.patch 1427
