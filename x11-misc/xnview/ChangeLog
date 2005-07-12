@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xnview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.13 2005/04/10 11:57:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.14 2005/07/12 02:15:28 josejx Exp $
+
+  12 Jul 2005; Joseph Jezak <josejx@gentoo.org> xnview-1.68.ebuild:
+  PPC still doesn't have a 1.68 binary so the ppc marking was incorrect. I've
+  removed it.
 
   10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> xnview-1.68.ebuild:
   Stable on ppc.
