@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.4.0.ebuild,v 1.4 2005/07/12 09:11:21 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.4.0.ebuild,v 1.5 2005/07/12 14:48:40 sebastian Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -60,7 +60,7 @@ DEPEND="${DEPEND} ${DEPEND_EXTRA}"
 RDEPEND="${RDEPEND} ${DEPEND_EXTRA}"
 IUSE="${IUSE} debug"
 # for this revision only
-PDEPEND=">=${PHP_PROVIDER_PKG}-4.3.11"
+PDEPEND=">=${PHP_PROVIDER_PKG}-4.4.0"
 PROVIDE="${PROVIDE} virtual/httpd-php"
 
 # Add a 'return 0' as we DON'T want the return code checked
@@ -98,8 +98,11 @@ src_compile() {
 		esac;
 	fi
 
-	#use apache2 \
+	# use apache2
 	myconf="${myconf} --with-apxs${USE_APACHE2}=/usr/sbin/apxs${USE_APACHE2}"
+
+	# Do not build CLI SAPI module.
+	myconf="${myconf} --disable-cli --without-pear"
 
 	php-sapi_src_compile
 }
