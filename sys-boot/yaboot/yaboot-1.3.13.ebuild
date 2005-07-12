@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.13.ebuild,v 1.6 2005/07/10 18:37:29 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.13.ebuild,v 1.7 2005/07/12 00:55:18 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,20 +19,6 @@ RDEPEND="!ibm? ( sys-fs/hfsutils )
 
 PROVIDE="virtual/bootloader"
 
-MAKEOPTS='PREFIX=/usr MANDIR=share/man'
-
-pkg_setup() {
-	case "$(uname -r)" in
-		2.5.*|2.6.0*|2.6.1|2.6.1-*|2.6.2|2.6.2-*)
-		eerror "You are running Linux kernel `uname -r` which is not supported"
-		eerror "Please note if you are running a 2.6 kernel the verison"
-		eerror "of ofpath included in this revision of yaboot requires"
-		eerror "that you run a kernel >= 2.6.3."
-		die
-		;;
-	esac
-}
-
 src_compile() {
 	export -n CFLAGS
 	export -n CXXFLAGS
@@ -43,18 +29,18 @@ src_compile() {
 	epatch ${FILESDIR}/yaboot-3.4.patch
 	epatch ${FILESDIR}/yaboot-${PV}-ofpath.patch
 	epatch ${FILESDIR}/yaboot-nopiessp.patch
-	emake ${MAKEOPTS} CC="$(tc-getCC)" || die
+	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" || die
 }
 
 src_install() {
 	cp etc/yaboot.conf etc/yaboot.conf.bak
 	sed -e 's/\/local//' etc/yaboot.conf >| etc/yaboot.conf.edit
 	mv -f etc/yaboot.conf.edit etc/yaboot.conf
-	make ROOT=${D} ${MAKEOPTS} install || die
+	make ROOT=${D} PREFIX=/usr MANDIR=share/man install || die
 }
 
 pkg_postinst() {
 	ewarn "Please note if you are running a 2.6 kernel the verison"
 	ewarn "of ofpath included in this revision of yaboot requires"
-	ewarn "that you run a kernel >= 2.6.3 Prior versions are unsupported."
+	ewarn "that you run a kernel >= 2.6.3, prior versions are unsupported."
 }
