@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.13 2005/05/22 19:10:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.14 2005/07/12 16:49:53 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -18,7 +18,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ppc sparc x86"
-IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows xosd lirc joystick mozilla hal stream mad xv bidi gtk2 sdl threads ssl"
+IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows xosd lirc joystick nsplugin hal stream mad xv bidi gtk2 sdl threads ssl"
 
 DEPEND="hal? ( =sys-apps/hal-0.4* )
 		cdio? ( >=dev-libs/libcdio-0.70 )
@@ -52,7 +52,7 @@ DEPEND="hal? ( =sys-apps/hal-0.4* )
 		wxwindows? ( =x11-libs/wxGTK-2.4* )
 		xosd? ( x11-libs/xosd )
 		lirc? ( app-misc/lirc )
-		mozilla? ( www-client/mozilla )
+		nsplugin? ( www-client/mozilla )
 		3dfx? ( media-libs/glide-v3 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		gnutls? ( >=net-libs/gnutls-1.0.0 )
@@ -123,7 +123,7 @@ src_compile () {
 	# mozilla-config is not in ${PATH}
 	# so the configure script won't find it
 	# unless we setup the proper variable
-	if use mozilla ; then
+	if use nsplugin ; then
 		myconf="${myconf} --enable-mozilla MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config"
 	else
 		myconf="${myconf} --disable-mozilla"
@@ -190,7 +190,7 @@ src_compile () {
 	# looks for xpidl in /usr/lib/mozilla/xpidl
 	# and doesn't find it there because it's
 	# in /usr/bin! - ChrisWhite
-	if use mozilla; then
+	if use nsplugin; then
 		sed -e "s:^XPIDL = .*:XPIDL = /usr/bin/xpidl:" -i mozilla/Makefile \
 		|| die "could not fix XPIDL path"
 	fi

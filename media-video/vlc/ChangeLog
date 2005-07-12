@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.97 2005/07/11 23:39:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.98 2005/07/12 16:49:53 flameeyes Exp $
+
+  12 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/mpeg2dec-20030612-configure.in-fpic.patch,
+  -files/0.6.2-mozilla-fix.patch, -files/glide.patch, -vlc-0.6.2.ebuild,
+  -vlc-0.6.2-r1.ebuild, -vlc-0.7.2.ebuild, vlc-0.8.1-r1.ebuild,
+  vlc-0.8.1-r2.ebuild, vlc-0.8.1-r3.ebuild, vlc-0.8.2.ebuild:
+  Rename mozilla useflag into nsplugin. Removed old (bugged) versions.
 
 *vlc-0.8.2-r1 (11 Jul 2005)
 

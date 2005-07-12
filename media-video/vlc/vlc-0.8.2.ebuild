@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2.ebuild,v 1.4 2005/07/10 00:16:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2.ebuild,v 1.5 2005/07/12 16:49:53 flameeyes Exp $
 
 # Missing USE-flags due to missing deps:
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
@@ -81,11 +81,6 @@ RDEPEND="hal? ( =sys-apps/hal-0.4* )
 		svg? ( >=gnome-base/librsvg-2.5.0 )"
 #		threads? ( dev-libs/pth )
 #		portaudio? ( >=media-libs/portaudio-0.19 )
-# 		mozilla? ( || (
-# 			www-client/mozilla
-# 			www-client/mozilla-firefox
-# 			net-libs/gecko-sdk
-# 			) )
 # 		slp? ( net-libs/openslp )
 
 DEPEND="${RDEPEND}
@@ -142,19 +137,6 @@ src_compile () {
 	# Therefore it's being disabled for the standard wxwindows
 	# interface which isn't
 	myconf="${myconf} --disable-skins2"
-
-#	if use mozilla; then
-#		if has_version www-client/mozilla; then
-#			XPIDL="/usr/bin/xpidl"
-#			myconf="${myconf} MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config"
-#		elif has_version www-client/mozilla-firefox; then
-#			XPIDL="/usr/lib/MozillaFirefox/xpidl"
-#			append-flags "-I/usr/$(get_libdir)/MozillaFirefox/include"
-#		elif has_version net-libs/gecko-sdk; then
-#			XPIDL="/usr/share/gecko-sdk/bin/xpidl"
-#			append-flags "-I/usr/share/gecko-sdk/include"
-#		fi
-#	fi
 
 	if use wxwindows; then
 		myconf="${myconf} --with-wx-config=$(basename ${WX_CONFIG}) --with-wx-config-path=$(dirname ${WX_CONFIG})"
@@ -243,9 +225,6 @@ src_compile () {
 	if [[ $(gcc-major-version) == 2 ]]; then
 		sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"
 	fi
-
-#	use mozilla && sed -i -e "s:^XPIDL = .*:XPIDL = ${XPIDL}:" mozilla/Makefile \
-#			|| die "could not fix XPIDL path"
 
 	emake -j1 || die "make of VLC failed"
 }
