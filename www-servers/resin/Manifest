@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8356c627fd372e6c18452a216158615b resin-3.0.12.ebuild 3420
-MD5 f30b4353ab29205891c46b86edc8099c resin-3.0.8-r1.ebuild 3397
+MD5 4baa0b83e12c697b4562bb0163dd5b45 resin-3.0.12.ebuild 3436
+MD5 b4e4cbeb7b1ec150b329006833f1dce3 resin-3.0.8-r1.ebuild 3417
 MD5 3638217ea99b079b7849e1be156329d7 ChangeLog 3464
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 7d0e7af24cc7fdb3db11cfd3eda1a55e resin-2.1.14.ebuild 2980
@@ -25,7 +25,7 @@ MD5 fc791301841bde6c69ec74e35fcc07e9 files/3.0.12/wrapper.pl.diff 526
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1DvE/rLF9B432nYRAqEXAJ98SNso7R4ukCGr14D5kuYrHXl6gACfWheF
-Zk5QIDHsBiUwrzSGvuePTYw=
-=F/Cr
+iD8DBQFC1D7l/rLF9B432nYRAuquAKCuadkZw6fm9XgsjeQGrrPTfQ7cywCfWMRN
+iJIbxX6bG7VwZUxoqdsVFuA=
+=/pzj
 -----END PGP SIGNATURE-----
