@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.13-r3.ebuild,v 1.2 2005/07/02 12:44:23 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.13-r3.ebuild,v 1.3 2005/07/12 13:46:30 ka0ttic Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-pam-name.diff
 	epatch ${FILESDIR}/${P}-valid-user.diff
 	epatch ${FILESDIR}/${P}-ldap-binddn.diff
-	use php && epatch ${FILESDIR}/${PN}-1.3.11-php.diff
+	use php && epatch ${FILESDIR}/${P}-php.diff
 }
 
 src_compile() {
