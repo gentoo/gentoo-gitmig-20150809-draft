@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r1.ebuild,v 1.5 2005/07/10 15:12:17 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r1.ebuild,v 1.6 2005/07/12 08:02:44 corsair Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2 http://dev.gentoo.org/~jstubbs/rele
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ppc64 ~s390 ~sh ~sparc x86"
 IUSE="build selinux"
 
 DEPEND=">=dev-lang/python-2.2.1"
