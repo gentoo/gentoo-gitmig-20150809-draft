@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.2-r1.ebuild,v 1.6 2005/07/06 19:01:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.2-r1.ebuild,v 1.7 2005/07/12 18:51:17 agriffis Exp $
 
 inherit makeedit flag-o-matic nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -9,7 +9,9 @@ S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 MY_PV=${PV/_rc/rc}
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2"
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2
+	mirror://gentoo/mozilla-firefox-1.0-4ft2.patch.bz2
+	http://dev.gentoo.org/~agriffis/dist/mozilla-firefox-1.0-4ft2.patch.bz2"
 
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
@@ -49,7 +51,7 @@ src_unpack() {
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
-	epatch ${FILESDIR}/mozilla-firefox-1.0-4ft2.patch
+	epatch ${DISTDIR}/mozilla-firefox-1.0-4ft2.patch.bz2
 
 	# patch to fix separate character on euro keyboards, bug 68995
 	epatch ${FILESDIR}/mozilla-firefox-1.0-kp_separator.patch

@@ -1,6 +1,14 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.38 2005/07/11 21:00:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.39 2005/07/12 18:51:17 agriffis Exp $
+
+  12 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  -files/mozilla-firefox-1.0-4ft2.patch, mozilla-firefox-1.0.2.ebuild,
+  mozilla-firefox-1.0.2-r1.ebuild, mozilla-firefox-1.0.3.ebuild,
+  mozilla-firefox-1.0.3-r1.ebuild, mozilla-firefox-1.0.4.ebuild,
+  mozilla-firefox-1.0.4-r1.ebuild:
+  Move mozilla-firefox-1.0-4ft2.patch to mirrors. Put patches in
+  d.g.o/~agriffis/dist as a secondary source
 
 *mozilla-firefox-1.0.4-r1 (11 Jul 2005)
 
