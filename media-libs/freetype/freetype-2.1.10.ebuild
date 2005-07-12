@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.10.ebuild,v 1.1 2005/07/12 17:05:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.10.ebuild,v 1.2 2005/07/12 17:43:33 foser Exp $
 
 inherit eutils flag-o-matic gnuconfig libtool
 
@@ -61,7 +61,7 @@ src_install() {
 
 	dodoc ChangeLog README
 	dodoc docs/{CHANGES,CUSTOMIZE,DEBUG,*.txt,PATENTS,TODO}
-	
+
 	cd ${WORKDIR}/${PN}-doc-${PV}
 	use doc && dohtml -r docs/*
 
