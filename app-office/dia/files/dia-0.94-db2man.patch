@@ -1,0 +1,21 @@
+diff -NurdB dia-0.94/configure.in dia-0.94-patched/configure.in
+--- dia-0.94/configure.in	2005-07-12 02:54:25.000000000 -0500
++++ dia-0.94-patched/configure.in	2005-07-12 02:57:37.000000000 -0500
+@@ -386,14 +386,9 @@
+ 
+ dnl Have to have the nwalsh docbook.xsl, which does manpages.
+ dnl RedHat installs it in a version-numbered place.  Grumpf.
+-db2man_file=
+-for file in \
+-  /usr/share/sgml/docbook/stylesheet/xsl/nwalsh/manpages/docbook.xsl \
+-  /usr/share/sgml/docbook/xsl-stylesheets-\*/manpages/docbook.xsl; do
+-  if test -f $file; then db2man_file=$file; break; fi
+-done
+-AM_CONDITIONAL(HAVE_DB2MAN, test "x$db2man_file" != x)
+-AC_SUBST(DB2MAN, "$db2man_file")
++AC_PATH_PROG(XSLTPROC, xsltproc, no)
++AM_CONDITIONAL(HAVE_DB2MAN, test "x$XSLTPROC" != xno)
++AC_SUBST(DB2MAN, "http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl")
+ 
+ dnl Handling for Python
+ AC_ARG_WITH(python,

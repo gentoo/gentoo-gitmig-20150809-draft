@@ -1,6 +1,13 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.53 2005/06/13 19:20:44 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.54 2005/07/12 09:51:05 leonardop Exp $
+
+*dia-0.94-r2 (12 Jul 2005)
+
+  12 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> dia-0.94-r2.ebuild,
+  files/dia-0.94-db2man.patch:
+  New revision. Added patch from upstream's CVS repository to correctly
+  generate the man page, resolves bug #98610.
 
   13 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> dia-0.94-r1.ebuild:
   alpha stable
