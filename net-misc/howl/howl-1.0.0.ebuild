@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-1.0.0.ebuild,v 1.1 2005/07/12 02:49:27 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-1.0.0.ebuild,v 1.2 2005/07/12 19:02:21 smithj Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,4 +68,7 @@ pkg_postinst() {
 	# inform user about library changes
 	preserve_old_lib_notify /usr/$(get_libdir)/libhowl-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]
 	preserve_old_lib_notify /usr/$(get_libdir)/libmDNSResponder-[0-9].[0-9].[0-9].so.[0-9].[0-9].[0-9]
+	einfo
+	einfo "you may need to rememerge gnome-vfs for everything to work correctly"
+	einfo
 }
