@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gquilt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.4 2005/07/06 09:09:32 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.5 2005/07/12 07:19:41 ka0ttic Exp $
+
+*gquilt-0.10 (12 Jul 2005)
+
+  12 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> +gquilt-0.10.ebuild:
+  Version bump.
 
 *gquilt-0.08 (06 Jul 2005)
 
