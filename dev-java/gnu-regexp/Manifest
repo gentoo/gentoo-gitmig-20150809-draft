@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 37ff68ea2b387791af4235cc9ac7675c gnu-regexp-1.1.4-r1.ebuild 798
-MD5 2b1f433ff7505813123cd70c3856018c gnu-regexp-1.1.4.ebuild 791
-MD5 de671e9ffae91b627fcd30fc17d080db ChangeLog 1354
+MD5 4799b4a01cae867420f550606c657aba gnu-regexp-1.1.4-r1.ebuild 836
+MD5 310d7b46564dc3a14b40c407e6197869 gnu-regexp-1.1.4.ebuild 830
+MD5 59bb88c2b24502eec3394bc10b899bd6 ChangeLog 1473
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 e3f41708bcacefe69992a1f46bc22fd7 files/digest-gnu-regexp-1.1.4-r1 68
 MD5 e3f41708bcacefe69992a1f46bc22fd7 files/digest-gnu-regexp-1.1.4 68
@@ -11,7 +11,7 @@ MD5 5383ac0e1424b916c5f8641b7d8227dd files/1.1.4/Makefile.diff 522
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCiygR/rLF9B432nYRAq3+AJ96ei+Vb0/dQFnRLleNypOWN3m/tgCfe1K6
-Z0ZoP5ZrudlsIdk9kjFQSKY=
-=iOxC
+iD8DBQFC0+Yg/rLF9B432nYRAsL+AJ9aAu3/xHA/t0bReyG2RxY+oeugEACfSlcY
+4+S+xtI8UXXCkkCE3/y5nw0=
+=PA5S
 -----END PGP SIGNATURE-----
