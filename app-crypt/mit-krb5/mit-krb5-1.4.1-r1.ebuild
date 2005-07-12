@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.1.ebuild,v 1.10 2005/07/09 19:34:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.1-r1.ebuild,v 1.1 2005/07/12 18:26:34 seemant Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -9,7 +9,9 @@ P_DIR=$(get_version_component_range 1-2)
 S=${WORKDIR}/${MY_P}/src
 DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
-SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
+SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar
+	http://web.mit.edu/kerberos/advisories/2005-002-patch_${PV}.txt
+	http://web.mit.edu/kerberos/advisories/2005-003-patch_${PV}.txt"
 
 LICENSE="as-is"
 SLOT="0"
@@ -28,8 +30,13 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/krb5"
 
 src_unpack() {
-	unpack ${A}; tar zxf ${MY_P}.tar.gz; cd ${S}
+	unpack ${MY_P}-signed.tar; tar zxf ${MY_P}.tar.gz; cd ${S}
 	epatch ${FILESDIR}/${P}-lazyldflags.patch
+
+	EPATCH_SUFFIX="txt" \
+		epatch ${DISTDIR}/2005-002-patch_${PV}.txt
+	EPATCH_SUFFIX="txt" \
+		epatch ${DISTDIR}/2005-003-patch_${PV}.txt
 }
 
 src_compile() {
@@ -59,6 +66,10 @@ src_compile() {
 			make || die
 		fi
 	fi
+}
+
+src_test() {
+	einfo "Testing is being debugged, disabled for now"
 }
 
 src_install() {
@@ -108,15 +119,16 @@ pkg_postinst() {
 	if use doc
 	then
 		einfo "See /usr/share/doc/${PF}/html/admin.html for documentation."
-		echo
+		echo ""
 	fi
 	einfo "The client apps are installed with the mit- prefix"
 	einfo "(ie. mit-ftp, mit-ftpd, mit-telnet, mit-telnetd, etc...)"
-	echo
+	echo ""
+	ewarn "PLEASE READ THIS"
 	einfo "This release of mit-krb5 now depends on an external version"
 	einfo "of the com_err library.  Please make sure to run revdep-rebuild"
 	einfo "to ensure the integrity of the linking on your system"
-	echo
+	echo ""
 	epause 10
 	ebeep
 

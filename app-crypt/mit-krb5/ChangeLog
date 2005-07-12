@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.93 2005/07/06 18:23:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.94 2005/07/12 18:26:33 seemant Exp $
+
+*mit-krb5-1.4.1-r1 (12 Jul 2005)
+
+  12 Jul 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/mit-krb5-1.3.6-64bit.patch, -files/mit-krb5-1.3.6-gcc4.patch,
+  -files/mit-krb5-1.3.6-telnet.patch.bz2, -mit-krb5-1.3.6-r2.ebuild,
+  -mit-krb5-1.4.1.ebuild, +mit-krb5-1.4.1-r1.ebuild:
+  revision bump straight to stable for all architectures. This fixes two
+  security holes, as per bug #98799 by Thierry Carrez <koon@gentoo.org>
 
   06 Jul 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/mit-krb5-1.4-2005-001.patch, -files/mit-krb5-1.4-lazyldflags.patch,
