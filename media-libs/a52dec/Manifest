@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ecfbe04a40597235b146193457a86b8b ChangeLog 4628
+MD5 46ee40d593a09b2e9164dd2c83a7c917 ChangeLog 4732
 MD5 d9d27d749c949442c5e8c65664c893a1 a52dec-0.7.4-r3.ebuild 1382
 MD5 97be851b9a6223645b3f0c1a14160717 a52dec-0.7.4-r4.ebuild 1352
 MD5 de290c0400384a59257ecb5b48147c87 a52dec-0.7.4.ebuild 941
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 37c4962f18a58a06b7089d03b8e8dfbc a52dec-0.7.4-r5.ebuild 1425
+MD5 9733578b3265df7dda40efd6de78a804 a52dec-0.7.4-r5.ebuild 1424
 MD5 3bb61e4ec18824ddab0068807ad43de8 files/a52dec-0.7.4-build.patch 1232
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4 64
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r3 64
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r4 64
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r5 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFClUsWj5H05b2HAEkRAn4xAJ0XDSLvRqgZ2uD0YeIbNlEuxUemOgCeNL90
-IhKK5A4lXKD+ES/+2H3/2u0=
-=S7ox
------END PGP SIGNATURE-----
