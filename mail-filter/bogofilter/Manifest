@@ -3,14 +3,16 @@ Hash: SHA1
 
 MD5 e4bfdf5d18231412651867d6506c9d53 bogofilter-0.94.14.ebuild 2446
 MD5 e2285a40ab55c158c5b275ff758c520c bogofilter-0.92.8.ebuild 1572
-MD5 b712636d663d8ed749e776ba4861b79a ChangeLog 12246
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 53336aa6ed90327e7413c01c1c95b9d1 ChangeLog 12528
+MD5 48bd0f185b30f8151e8da04a025e0373 metadata.xml 424
+MD5 5c37618a8b15dd2b250f78aaa0d20a54 bogofilter-0.95.2.ebuild 2482
 MD5 5d294556f965d8a34f818dd691028d3a files/digest-bogofilter-0.94.14 71
 MD5 1970df6e6d8dabe53d04a6f120d0b8bb files/digest-bogofilter-0.92.8 70
+MD5 36abbe0564d3ec8d59dabd4c15f21f25 files/digest-bogofilter-0.95.2 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCqJt3V3J2n04EauwRAhVMAKCcpTf9cIJmqGARcrqSuIg82/HhnQCgyv+q
-tLnop2dG0FcV2bvOX0doPNc=
-=GAx7
+iD8DBQFC04leV3J2n04EauwRAr+AAJ9q4YNv2vL5nf9WVql/pxW1C/IvPQCdGAZP
+dHZMpRuCDTrAvi+B8p7n21I=
+=P0+A
 -----END PGP SIGNATURE-----
