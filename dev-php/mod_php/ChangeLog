@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.255 2005/07/12 19:07:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.256 2005/07/12 21:00:11 killerfox Exp $
+
+  12 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> mod_php-4.4.0.ebuild:
+  Stable on hppa. bug #97655
 
   12 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   mod_php-4.4.0.ebuild:

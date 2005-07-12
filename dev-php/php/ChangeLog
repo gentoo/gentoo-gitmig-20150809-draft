@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.180 2005/07/12 19:09:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.181 2005/07/12 20:57:52 killerfox Exp $
+
+  12 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> php-4.4.0.ebuild:
+  Stable on hppa. bug #97655
 
   12 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org> php-4.4.0.ebuild:
   ppc stable, #97655
