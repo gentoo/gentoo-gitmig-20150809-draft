@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0cfbe8f1f454d093caad60ae3920f537 jdom-1.0.ebuild 1558
 MD5 f9e78799bd0809a94b1db0aae35964a7 jdom-1.0_beta10-r3.ebuild 1566
 MD5 b26d606c13d0fffb25e9ee37d6eb48ba jdom-1.0_beta6.ebuild 1553
@@ -8,3 +11,10 @@ MD5 bb9b91ebd19835161b889abf889afda2 files/digest-jdom-1.0_beta6 60
 MD5 cad484f43c69253a8823f7d668b6c0ab files/digest-jdom-1.0_beta10-r3 61
 MD5 8841cddf25b660d205766f7468ba608d files/digest-jdom-1.0 61
 MD5 5387342ae9576c96d6fab009ed1c306f files/digest-jdom-1.0_beta9-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1AXp/rLF9B432nYRAlQxAKC2XwP7BD5ERpxzkPPQ8rYdx3bBrQCeMzDY
+gy4X6Z9/KTHvCfQuw1XhLms=
+=wi6M
+-----END PGP SIGNATURE-----
