@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/gml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gml/ChangeLog,v 1.3 2005/01/03 23:53:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gml/ChangeLog,v 1.4 2005/07/12 04:27:17 weeve Exp $
+
+  12 Jul 2005; Jason Wever <weeve@gentoo.org> gml-0.5.ebuild:
+  Added ~sparc keyword.
 
   04 Jan 2005; Andrej Kacian <ticho@gentoo.org> gml-0.5.ebuild:
   Stable on x86. Optimized the ebuild a bit.

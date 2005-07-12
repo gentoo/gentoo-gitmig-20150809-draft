@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gml/gml-0.5.ebuild,v 1.2 2005/01/03 23:53:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gml/gml-0.5.ebuild,v 1.3 2005/07/12 04:27:17 weeve Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.marklyon.org/gmail"
 SRC_URI="http://www.marklyon.org/gmail/gmlw.tar"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~sparc x86"
 IUSE=""
 DEPEND="dev-python/pmw
 	app-text/dos2unix"
