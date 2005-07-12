@@ -1,2 +1,8 @@
 # needs gcc-3.3.3
 =dev-lang/gpc-20040516
+
+# We need to keep emul-glibc up to date for the upgrade process to work, so
+# 2.3.5 will be the last glibc release supported under 2004.3 unless someone
+# wants to volunteer maintaining emul-glibc until 2004.3 is removed from
+# portage.
+>=sys-libs/glibc-2.3.5.20050421
