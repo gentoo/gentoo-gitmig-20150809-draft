@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.0.ebuild,v 1.2 2005/05/04 16:59:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/commons-io-1.0.ebuild,v 1.3 2005/07/12 12:01:29 axxo Exp $
 
 inherit java-pkg eutils
 
 DESCRIPTION="Commons-IO contains utility classes  , stream implementations, file filters  , and endian classes."
 HOMEPAGE="http://jakarta.apache.org/commons/io"
-SRC_URI="mirror://apache/jakarta/commons/io/source/${PN}-${PV}-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/commons/io/source/${P}-src.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="1"
@@ -24,10 +24,10 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-${PV}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	mkdir -p target/lib
 	cd target/lib
-	java-pkg_jar-from junit
+	use junit && java-pkg_jar-from junit
 }
 
 src_compile() {
@@ -39,8 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	mv target/${PN}-${PV}.jar target/${PN}.jar
-	java-pkg_dojar target/${PN}.jar
+	java-pkg_newjar target/${P}.jar ${PN}.jar
 
 	dodoc RELEASE-NOTES.txt
 	dohtml PROPOSAL.html STATUS.html usersguide.html
