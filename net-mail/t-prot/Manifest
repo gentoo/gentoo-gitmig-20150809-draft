@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a947f7fdcf6117f01c483cc2800db60f ChangeLog 1527
-MD5 9d7120f9b92852e129ad7428da4971ba metadata.xml 251
-MD5 130534d180b95d8e00d6b0bb342c46f7 t-prot-2.0.ebuild 1009
+MD5 5116c3c67668e2278b3909fe93f81406 t-prot-2.0.1.ebuild 917
+MD5 043f5983cccbacce5773ba98a503ee0c ChangeLog 1803
+MD5 9ea1ad3baad4b37210fd82afadf6fc78 metadata.xml 560
+MD5 0caca6e3e153b4fed3d32d2de2f3ebfc t-prot-2.0.ebuild 1004
+MD5 cf6272e0c7cdabe0c56cfe9636b8afb9 files/digest-t-prot-2.0.1 63
 MD5 a6123387e473e0b9e733e644118c33b1 files/digest-t-prot-2.0 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFCuRqPV3J2n04EauwRApvYAJjSJYj+stT7SN1LKOh6Z3B0orpRAJ9A3P9/
-iET8wg/XS2MZgYt9cKf5WA==
-=PiXN
+iD8DBQFC02dWV3J2n04EauwRAvc5AJ9BKJLP+z9QA6h7tSxf+408LEtwggCgzvhM
+w9OlxOVVQvyfZM5/0NbMEww=
+=RutZ
 -----END PGP SIGNATURE-----

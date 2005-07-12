@@ -3,7 +3,13 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <maintainer>
-  <email>tove@gentoo.org</email>
-  <name>Torsten Veller</name>
+	<email>tove@gentoo.org</email>
+	<name>Torsten Veller</name>
 </maintainer>
+<longdescription>
+	This program is a filter which shall improve the readability for messages
+	(emails and usenet postings) by *hiding* some annoying parts, e.g. mailing
+	list footers, signatures, and TOFU (see definition below), as well as
+	squeezing sequences of blank lines or punctuation.
+</longdescription>
 </pkgmetadata>
