@@ -2,16 +2,17 @@
 Hash: SHA1
 
 MD5 b7fb1b86ca699823a4f1b49e84d6d31c ding-1.2.ebuild 748
-MD5 877a262d530121eb88f7db17b81163fb ding-1.4.ebuild 815
-MD5 7364e67106ffa313b1c8dc5fe17703af ChangeLog 937
+MD5 1884e46344c613e9860269f14cdef6a1 ding-1.4.ebuild 911
+MD5 ab53dcb6ae73f8c3cc16996c6669e998 ChangeLog 1033
 MD5 a8c3f2daa825bc10aedc1be3770b08d3 ding-1.3.ebuild 833
+MD5 b358653d1cbe719b45976881ed8f5914 metadata.xml 363
 MD5 02bac7944b3b02c4392f7e114cfc2ba4 files/digest-ding-1.2 61
 MD5 1ecbab9edd2d9044bec08bb2b9fcc06e files/digest-ding-1.3 61
 MD5 1be0a64edb5832ed24e85d38160aa773 files/digest-ding-1.4 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCeuUwI1lqEGTUzyQRAvVYAKCxtHY0s9ezOEUlslsaGFvkqV+O8QCgow+c
-wL05Xu5bXOMC4hBi2kZ1Rxk=
-=daD/
+iD8DBQFC042oV3J2n04EauwRAuarAKCpnutD0ydlNg+MRbUO6kQNYiJUYQCglU48
+E2gZyPf3XqOUUVYoq9SO3aU=
+=od7s
 -----END PGP SIGNATURE-----
