@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a92d776cde3686cca83f5e95e1fd1a6e metadata.xml 487
 MD5 f2130f47be86d7ea60ceaf9f86cc8768 gnome-system-tools-1.0.2-r1.ebuild 1230
-MD5 bcbb32ce09882f096518ac0d9dc5fd20 gnome-system-tools-1.2.0-r1.ebuild 1276
-MD5 de2c68981d59d1237211589c8bdeca67 ChangeLog 5544
+MD5 7cb8925e6054c17d58c856c8bbe5c404 gnome-system-tools-1.2.0-r1.ebuild 1281
+MD5 8a17fe4e83e98beb1595404078778a26 ChangeLog 5653
+MD5 a92d776cde3686cca83f5e95e1fd1a6e metadata.xml 487
 MD5 791a751973698f6f84222f0ab66c0dd5 files/digest-gnome-system-tools-1.0.2-r1 78
 MD5 8f3bbbc7f997b708423731b971c9500e files/digest-gnome-system-tools-1.2.0-r1 78
 MD5 d260438372974645549ff9e1490cc855 files/gnome-system-tools-1.0.2-ntp.patch 11173
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzLftgIKl8Uu19MoRAhSEAJ9DYLxlSMft4QFx6HOGhofZYfTfQgCfRTiI
-xa7KX997RijLqqWAsxu4DRI=
-=aBx9
------END PGP SIGNATURE-----
