@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 297061ed07916c1c9246448b4127d3e5 ChangeLog 2040
 MD5 5cea9eb51313cd2025f6d9788058a887 aqhbci-qt-tools-0.9.14_beta.ebuild 769
 MD5 ebbe3559ebe2966780b39c7231913038 aqhbci-qt-tools-0.9.17_beta.ebuild 726
@@ -12,3 +15,10 @@ MD5 c74f8a7c0acd0e10dbcf41e8c48dc9ce files/digest-aqhbci-qt-tools-1.0.1_beta 77
 MD5 5071f652618d4a591537c79db5de43c6 files/digest-aqhbci-qt-tools-1.0.2_beta 77
 MD5 31c4b7d10b76d0d8ed702665fb3e33a2 files/digest-aqhbci-qt-tools-1.0.4_beta 77
 MD5 2baeaf25c98f300e5af53dfa6105bbc5 files/digest-aqhbci-qt-tools-1.0.6_beta 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1Dydr2QksT29OyARAvR7AKCcHNJy83HqE7Wf063jT0fLNgqj3ACfW9tm
+utn2Cu5G13VaZYnu+620I+U=
+=TUcd
+-----END PGP SIGNATURE-----
