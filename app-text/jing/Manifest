@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f83767fae2ddb27a01fa70a324cd5be8 ChangeLog 1694
-MD5 ea817bd303fcf4baaab2f33dcbbeea83 jing-20030619-r1.ebuild 1374
+MD5 162e3d4c99303c8b2389bfaa53ad5b2a ChangeLog 1782
+MD5 7e154f1bbc76c938f7177842559dc38d jing-20030619-r1.ebuild 1431
 MD5 79a5dd1b805e5bca495aec6d6a73826b metadata.xml 176
 MD5 a2004d054506b2ec4e8add35ec84dc44 files/digest-jing-20030619-r1 63
 MD5 9ca0559020eae581281496f04c53dd7b files/build.xml 710
 MD5 60267d864fc6a05822d8b732ff12e8dd files/manifest.mf 136
 MD5 4e01494f4274dfe8fbed0b4982405537 files/build-patch.diff 1484
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCg86T06ebR+OMO78RAooNAJ9T0DvirLZvUgmUA0978rhEljk9EQCghLqA
-cjoy/gBLKtvtzZbniQLA24Y=
-=wXR6
+iD8DBQFC1Aff/rLF9B432nYRAtvSAJ4t1GOKZOwOgSlPyTN6zLr0Tqg6qACfSEFx
+0x/Xd+u+l5CBXYK8yaIotBE=
+=T4Zd
 -----END PGP SIGNATURE-----
