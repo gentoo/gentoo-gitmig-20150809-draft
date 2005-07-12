@@ -1,4 +1,4 @@
-MD5 9aff80e30ffb126878493a7cd73a9111 ChangeLog 13325
-MD5 5b9d644316adef4e17b420bd3702b408 catalyst-1.1.10.1.ebuild 2241
+MD5 ed464b2a425cf99880c0449c3e0df8bd ChangeLog 13512
+MD5 b38f99446e1bae13b35f17d618872480 catalyst-1.1.10.2.ebuild 2223
 MD5 8c971ca7e043237b69754a9d88238bd4 metadata.xml 223
-MD5 3d9d30483b9e59d7a559dbb380d1f943 files/digest-catalyst-1.1.10.1 70
+MD5 955517ea88f0cb19c0b575165b295b62 files/digest-catalyst-1.1.10.2 70
