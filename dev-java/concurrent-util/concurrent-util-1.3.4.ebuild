@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/concurrent-util-1.3.4.ebuild,v 1.8 2005/05/18 10:53:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/concurrent-util-1.3.4.ebuild,v 1.9 2005/07/12 13:34:44 axxo Exp $
 
 inherit java-pkg
 
@@ -26,6 +26,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar build/lib/concurrent.jar
+	use source && java-pkg_dosrc src/java/*
 
 	if use doc ; then
 		cd build
@@ -33,5 +34,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}/demo
 		doins demo/*
 	fi
-	use source && java-pkg_dosrc src/java/*
 }
