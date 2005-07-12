@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fda4f5a09b14707711a0a913d1577d55 ChangeLog 1386
-MD5 d55652d32c45ec851b0f8eb4d2c9a36a files/digest-qbankmanager-0.9.15 71
-MD5 e3cda0cc27c7334fb0436460a016a249 files/digest-qbankmanager-0.9.16 71
-MD5 bb75af9177fa95f1e08ca120f7201a65 files/digest-qbankmanager-0.9.18 71
-MD5 aad47dfd1ec1139f8b32cfefc1646a5a files/digest-qbankmanager-0.9.21 71
+MD5 967e223ac275f2a60a0d5b916bdef670 ChangeLog 1515
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 9c041edcbecafa04c4ef4b45c485c5cf qbankmanager-0.9.15.ebuild 710
 MD5 8da09a3383d6a4615634971a780f71a6 qbankmanager-0.9.16.ebuild 710
 MD5 eb108816475b66d6fa28ae93df346af3 qbankmanager-0.9.18.ebuild 732
 MD5 c22a5f356eab41bf56a99588c812944e qbankmanager-0.9.21.ebuild 727
+MD5 e6565a97843dfacd8359a060db7f1ccd qbankmanager-0.9.23.ebuild 728
+MD5 d55652d32c45ec851b0f8eb4d2c9a36a files/digest-qbankmanager-0.9.15 71
+MD5 e3cda0cc27c7334fb0436460a016a249 files/digest-qbankmanager-0.9.16 71
+MD5 bb75af9177fa95f1e08ca120f7201a65 files/digest-qbankmanager-0.9.18 71
+MD5 aad47dfd1ec1139f8b32cfefc1646a5a files/digest-qbankmanager-0.9.21 71
+MD5 bd3243960ca82d06bdc8dbcc1a661b6a files/digest-qbankmanager-0.9.23 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0HVhI1lqEGTUzyQRAvAqAJ0R9h72wB4pcKFiDP05l2+7+nDMhQCgxv/h
-2qOd3CfYZyAerPo8f5/aInw=
-=GkuU
+iD8DBQFC1D5cr2QksT29OyARAq2cAJ4l8xvFUytl8H6P3ZRnRi4+KH+7vQCfW9mu
+slVTUcxJp0aghbRqwQe/xmc=
+=5paR
 -----END PGP SIGNATURE-----
