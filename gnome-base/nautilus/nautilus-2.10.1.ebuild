@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.1.ebuild,v 1.8 2005/07/12 00:00:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.1.ebuild,v 1.9 2005/07/12 12:39:57 leonardop Exp $
 
 inherit gnome2 eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="oggvorbis gstreamer mad flac"
-#IUSE="oggvorbis gstreamer cups mad flac"
+# cups
 
 RDEPEND=">=dev-libs/glib-2.6
 	>=x11-libs/pango-1.2
@@ -37,6 +37,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	gstreamer? (
 		>=media-libs/gstreamer-0.8
 		>=media-libs/gst-plugins-0.8
+		>=media-plugins/gst-plugins-gnomevfs-0.8
 		mad? ( >=media-plugins/gst-plugins-mad-0.8 )
 		oggvorbis? (
 			>=media-plugins/gst-plugins-ogg-0.8
@@ -83,9 +84,6 @@ src_unpack() {
 
 	# stop nautilus linking to cdda/paranoia
 	sed -i -e "/^CORE_LIBS/s/\$CDDA_LIBS//" configure.in
-
-	# and we always need to regenerate now, because we
-	# always apply the libexif patch <obz@gentoo.org>
 
 	if use gstreamer; then
 	WANT_AUTOCONF=2.5 autoheader || die

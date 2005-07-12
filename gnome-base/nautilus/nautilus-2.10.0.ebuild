@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.0.ebuild,v 1.20 2005/07/12 00:00:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.0.ebuild,v 1.21 2005/07/12 12:39:57 leonardop Exp $
 
 inherit gnome2 eutils
 
@@ -38,6 +38,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	gstreamer? (
 		>=media-libs/gstreamer-0.8
 		>=media-libs/gst-plugins-0.8
+		>=media-plugins/gst-plugins-gnomevfs-0.8
 		mad? ( >=media-plugins/gst-plugins-mad-0.8 )
 		oggvorbis? (
 			>=media-plugins/gst-plugins-ogg-0.8
@@ -82,16 +83,8 @@ src_unpack() {
 #		fi
 #	fi
 
-
-	#applied in 2.9.91
-	# patch to support libexif versions 0.5 and 0.6
-	#epatch ${FILESDIR}/${PN}-2.9.90-libexif.patch
-
 	# stop nautilus linking to cdda/paranoia
 	sed -i -e "/^CORE_LIBS/s/\$CDDA_LIBS//" configure.in
-
-	# and we always need to regenerate now, because we
-	# always apply the libexif patch <obz@gentoo.org>
 
 	if use gstreamer; then
 	WANT_AUTOCONF=2.5 autoheader || die
