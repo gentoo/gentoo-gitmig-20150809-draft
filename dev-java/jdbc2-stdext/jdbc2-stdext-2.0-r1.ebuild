@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-stdext/jdbc2-stdext-2.0-r1.ebuild,v 1.5 2005/07/09 18:08:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-stdext/jdbc2-stdext-2.0-r1.ebuild,v 1.6 2005/07/12 19:52:13 axxo Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ppc amd64"
 IUSE="doc"
 RESTRICT="fetch"
 DEPEND="app-arch/unzip"
-RDEPEND=">=virtual/jdk-1.4"
+RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}
 
@@ -40,7 +40,7 @@ pkg_nofetch() {
 src_unpack() {
 	if use doc; then
 		cd ${S}
-		unzip ${DISTDIR}/${stdext_doc}
+		unzip ${DISTDIR}/${stdext_doc} || die "failed too build"
 	fi
 }
 
