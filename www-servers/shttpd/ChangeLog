@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/shttpd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.4 2005/07/01 04:49:16 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.5 2005/07/12 13:32:01 ka0ttic Exp $
+
+  12 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> files/digest-shttpd-1.25,
+  Manifest:
+  Fix digest (bug 98652).
 
 *shttpd-1.25 (01 Jul 2005)
 
