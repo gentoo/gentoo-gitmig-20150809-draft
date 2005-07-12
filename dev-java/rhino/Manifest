@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 ffada4f238f8cbf3ee67e1bd469e9f7b rhino-1.5.5-r1.ebuild 1411
-MD5 25fba24bfccc5ba930d867415b35523b rhino-1.6.1-r1.ebuild 1426
-MD5 b6ed334698dbd1a7a62acc82cc5141fa ChangeLog 3808
+MD5 f07c7e3b3f2d3a033281458319eff5ef rhino-1.6.1-r1.ebuild 1425
+MD5 b61427f87ef5b3e8c88de4be1e00feca ChangeLog 3895
 MD5 4622606981d4aa0930c917b65cf2f202 metadata.xml 350
 MD5 c663f3b82777d7ee2506dc0a03955198 files/jsscript 123
 MD5 6d48e39fc85ff462180102a36f8fc589 files/digest-rhino-1.5.5-r1 126
@@ -14,7 +14,7 @@ MD5 5ab916fbf55d8587da8547b2d264a383 files/1.5.5_jdk15.patch 1217
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCz/ZT/rLF9B432nYRAh3MAJ90i8/V/NvQoVZmJb6lbXb7AB7bcgCgpyfN
-t8+JyKD30mSa6gyF1RBTpJM=
-=grH0
+iD8DBQFC1DgH/rLF9B432nYRAkSQAKCeINme/xFdgYvImG0mp5+QexBnUACfYbza
+t5K1Sbr/9SytSWS2SqgiwQ8=
+=cDgG
 -----END PGP SIGNATURE-----
