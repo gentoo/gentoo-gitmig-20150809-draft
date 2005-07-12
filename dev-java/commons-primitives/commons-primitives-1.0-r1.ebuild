@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/commons-primitives-1.0.ebuild,v 1.8 2005/04/22 08:22:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/commons-primitives-1.0-r1.ebuild,v 1.1 2005/07/12 12:28:26 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="The Jakarta-Commons Primitives Component"
 HOMEPAGE="http://jakarta.apache.org/commons/primitives/"
-SRC_URI="mirror://apache/jakarta/commons/primitives/source/${PN}-${PV}-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/commons/primitives/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-1.4
+	dev-java/ant-core
 	jikes? ( dev-java/jikes )"
-RDEPEND=">=virtual/jdk-1.3"
+RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 amd64"
@@ -24,7 +24,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar target/${PN}-${PV}.jar
+	java-pkg_newjar target/${P}.jar ${PN}.jar
 
 	use doc && java-pkg_dohtml -r target/docs/api/*
 	use source && java-pkg_dosrc src/java/*
