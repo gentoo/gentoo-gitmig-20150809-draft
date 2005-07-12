@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim-kdehelper
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-kdehelper/ChangeLog,v 1.4 2005/06/20 04:41:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-kdehelper/ChangeLog,v 1.5 2005/07/12 13:37:16 matsuu Exp $
+
+  12 Jul 2005; MATSUU Takuto <matsuu@gentoo.org>
+  uim-kdehelper-0.1.0-r1.ebuild:
+  Added ~amd64.
 
   20 Jun 2005; Mamoru KOMACHI <usata@gentoo.org>
   -uim-kdehelper-0.1.0.ebuild, uim-kdehelper-0.1.0-r1.ebuild:
