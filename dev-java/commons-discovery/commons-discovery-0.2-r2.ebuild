@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.2-r2.ebuild,v 1.2 2005/04/17 14:41:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.2-r2.ebuild,v 1.3 2005/07/12 11:53:53 axxo Exp $
 
 inherit java-pkg eutils
 DESCRIPTION="Commons Discovery: Service Discovery component"
@@ -12,12 +12,15 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc amd64"
 IUSE="source junit jikes doc"
 
-DEPEND="source? ( app-arch/zip )
+RDEPEND=">=virtual/jre-1.4
+	dev-java/commons-logging"
+
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	dev-java/ant
+	source? ( app-arch/zip )
 	jikes? ( >=dev-java/jikes-1.21 )
-	junit? ( >=dev-java/junit-3.8 >=virtual/jdk-1.4 dev-java/ant )
-	dev-java/commons-logging
-	!junit? ( >=virtual/jdk-1.3 dev-java/ant-core )"
-RDEPEND=">=virtual/jdk-1.3"
+	junit? ( >=dev-java/junit-3.8 )"
 
 S="${WORKDIR}/${P}-src/discovery"
 
@@ -26,11 +29,11 @@ src_unpack() {
 	cd ${S}
 
 	chmod u+w ${S}/../discovery
-	epatch ${FILESDIR}/${PN}-${PV}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	mkdir -p ${S}/target/lib && cd ${S}/target/lib
-	java-pkg_jar-from junit junit.jar || die "Could not link to junit"
-	java-pkg_jar-from commons-logging || die "Could not link to commons-logging"
+	use junit && java-pkg_jar-from junit junit.jar
+	java-pkg_jar-from commons-logging
 }
 
 src_compile() {
