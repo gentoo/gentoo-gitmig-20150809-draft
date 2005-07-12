@@ -1,13 +1,23 @@
-MD5 ddc5d7d2de64e5c660bfd1992d53df21 libowfat-0.15.ebuild 957
-MD5 92af42d6723337d6118d892a5792536f metadata.xml 354
-MD5 6473eb145025403fc0e51c48c0a3a7c1 ChangeLog 1822
-MD5 f05f71b57bd709a36769ea54f740dea3 libowfat-0.16.ebuild 954
-MD5 8609392f6e09b854ac7f6a0da5dae137 libowfat-0.22.ebuild 952
-MD5 2d9502325d7bd67c9d6a14bf6eb2edad libowfat-0.19.2.ebuild 956
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6816bab392894929a2ebdb14511bc95a libowfat-0.14.ebuild 941
-MD5 6e194d32917af481cc544938039dc75d files/digest-libowfat-0.14 65
-MD5 a630ba842b562f97f5708ae1094e9de7 files/digest-libowfat-0.22 66
-MD5 d34ae5ae8ef118c01b2791f4182f50aa files/digest-libowfat-0.19.2 68
+MD5 f05f71b57bd709a36769ea54f740dea3 libowfat-0.16.ebuild 954
+MD5 4eb9a0525784aebc465b19be43ce3a17 libowfat-0.22.ebuild 958
+MD5 ddc5d7d2de64e5c660bfd1992d53df21 libowfat-0.15.ebuild 957
+MD5 2d9502325d7bd67c9d6a14bf6eb2edad libowfat-0.19.2.ebuild 956
+MD5 dc3a09610d308fc84f56dcb7fd9b1412 ChangeLog 1916
+MD5 92af42d6723337d6118d892a5792536f metadata.xml 354
 MD5 9173da18e7718b0a54badcd643d9434d files/libowfat-0.10-gentoo.diff 545
-MD5 3949199f3f38c6c9e92332e28ea47f9c files/digest-libowfat-0.16 65
+MD5 d34ae5ae8ef118c01b2791f4182f50aa files/digest-libowfat-0.19.2 68
+MD5 6e194d32917af481cc544938039dc75d files/digest-libowfat-0.14 65
 MD5 7371e320359e7e54f806b70090d61012 files/digest-libowfat-0.15 65
+MD5 3949199f3f38c6c9e92332e28ea47f9c files/digest-libowfat-0.16 65
+MD5 a630ba842b562f97f5708ae1094e9de7 files/digest-libowfat-0.22 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC044/QlM6RnzZP+IRAjlrAKCzPmFOuttcSHD656S6gBFpGXJOywCfe4v9
+MtuANq4KkI3ELgh7Hxp1bGc=
+=Cgic
+-----END PGP SIGNATURE-----
