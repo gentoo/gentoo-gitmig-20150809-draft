@@ -1,6 +1,9 @@
 # ChangeLog for app-text/trang
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.11 2005/05/15 01:13:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.12 2005/07/12 18:35:58 axxo Exp $
+
+  12 Jul 2005; Thomas Matthijs <axxo@gentoo.org> trang-20030619-r1.ebuild:
+  Deps/Style fixs
 
   15 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   trang-20030619-r1.ebuild:
