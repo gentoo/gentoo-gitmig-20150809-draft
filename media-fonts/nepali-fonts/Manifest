@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ff600674bd23e4f4fea7293965648ebe ChangeLog 1424
-MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
-MD5 7b477f2ae396469a765e633dd8584f50 nepali-fonts-1-r1.ebuild 616
 MD5 dd8bfa69cb93ddd4b0a181d014c28282 files/digest-nepali-fonts-1-r1 67
+MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 6e6e14e9f6700e508cc4db18654b8c35 nepali-fonts-1-r1.ebuild 614
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1Cj9I1lqEGTUzyQRAiIcAJwIF0ZK+kk4l8h/1PhKpvYMlnbu9ACdHppk
+J7REw7ftOXoGkQmj5xqKzro=
+=H1MF
+-----END PGP SIGNATURE-----
