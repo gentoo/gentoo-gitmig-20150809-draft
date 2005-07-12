@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2-r2.ebuild,v 1.1 2005/05/20 19:47:23 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2-r2.ebuild,v 1.2 2005/07/12 12:28:37 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -11,12 +11,15 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="doc jikes source"
-RDEPEND=">=dev-java/commons-collections-2.1
+RDEPEND=">=virtual/jre-1.4
+	>=dev-java/commons-collections-2.1
 	>=dev-java/commons-primitives-1.0
 	>=dev-java/commons-codec-1.2
 	>=dev-java/log4j-1.2
 	=dev-java/jakarta-regexp-1.3*"
-DEPEND="${RDEPEND}
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	dev-java/javacc
 	jikes? ( >=dev-java/jikes-1.19 )
 	source? ( app-arch/zip )
 	>=dev-java/ant-1.5.4"
@@ -29,19 +32,16 @@ src_unpack() {
 
 	epatch ${FILESDIR}/commons-codec.patch
 
-	mkdir lib test
-	(
-		cd lib
-		java-pkg_jar-from commons-collections || die commons-collections
-		java-pkg_jar-from commons-primitives || die commons-primitives
-		java-pkg_jar-from commons-logging || die commons-logging
-		java-pkg_jar-from commons-codec || die commons-codec
-		java-pkg_jar-from log4j || die log4j
-		java-pkg_jar-from jakarta-regexp-1.3 || die jakarta-regexp-1.3
-	)
+	echo javacc.home=/usr/share/javacc/lib/ > build.properties
 
-	echo javacc.home=/usr/share/javacc/lib \
-		> build.properties
+	mkdir lib test
+	cd lib
+	java-pkg_jar-from commons-collections
+	java-pkg_jar-from commons-primitives
+	java-pkg_jar-from commons-logging
+	java-pkg_jar-from commons-codec
+	java-pkg_jar-from log4j
+	java-pkg_jar-from jakarta-regexp-1.3
 }
 
 src_compile() {
@@ -52,8 +52,7 @@ src_compile() {
 }
 
 src_install() {
-	mv bin/axion-1.0-M2.jar ${PN}.jar
-	java-pkg_dojar ${PN}.jar
+	java-pkg_newjar bin/axion-1.0-M2.jar ${PN}.jar
 	use doc && java-pkg_dohtml -r bin/docs/api
 	use source && java-pkg_dosrc src/*
 }

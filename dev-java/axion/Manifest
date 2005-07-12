@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 695ac377e6506a73d9e226549c7eb44c axion-1.0_rc2-r2.ebuild 1529
 MD5 5c4fb6f8bd137222c9d3921053e1b733 ChangeLog 1995
 MD5 1efa58c8ec21eb8f929a4abccb0a543e metadata.xml 515
 MD5 40a767f2792e03e5e7b536b901a4417d files/digest-axion-1.0_rc2-r2 68
 MD5 da11842a1e904d37a02a64d8dfa3ed48 files/commons-codec.patch 2452
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC07eL/rLF9B432nYRAotAAJwJn4lrtvll1Sn9MBMsRCmXdXkrCACguyvf
+O5vdt+R9gtrB5LyqtP4+dYE=
+=kpBN
+-----END PGP SIGNATURE-----
