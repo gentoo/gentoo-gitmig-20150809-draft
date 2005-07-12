@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r4.ebuild,v 1.5 2005/06/28 01:44:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r4.ebuild,v 1.6 2005/07/12 19:58:14 axxo Exp $
 
 inherit java-pkg
 
@@ -13,13 +13,14 @@ SLOT="1.5.1"
 KEYWORDS="x86 sparc ppc amd64"
 IUSE="doc"
 
-DEPEND=">=virtual/jdk-1.3
-	app-arch/unzip
-	dev-java/ant-core"
 RDEPEND=">=virtual/jdk-1.3
 	=dev-java/rhino-1.5*
 	=dev-java/xerces-2.6*
 	dev-java/xml-commons"
+DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
+	app-arch/unzip
+	dev-java/ant-core"
 
 S=${WORKDIR}/xml-batik
 
@@ -37,7 +38,7 @@ src_compile() {
 	ant ${antflags} || die "compile problem"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar ${P}/batik*.jar
 
 	cd ${P}/lib

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.ebuild,v 1.11 2005/06/12 20:06:00 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.ebuild,v 1.12 2005/07/12 19:58:14 axxo Exp $
 
 inherit java-pkg
 
@@ -8,15 +8,18 @@ DESCRIPTION="Batik is a Java(tm) technology based toolkit for applications or ap
 SRC_URI="mirror://apache/xml/batik/${PN}-src-${PV}.zip"
 HOMEPAGE="http://xml.apache.org/batik/"
 IUSE="doc"
-DEPEND=">=virtual/jdk-1.3
-		=dev-java/rhino-1.5*
-		app-arch/unzip
-		>=dev-java/xerces-2.6.2-r1
-		dev-java/ant"
-RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="1.5"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+
+RDEPEND=">=virtual/jdk-1.3
+	=dev-java/rhino-1.5*
+	=dev-java/xerces-2.6*
+	dev-java/xml-commons"
+DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
+	app-arch/unzip
+	dev-java/ant-core"
 
 S=${WORKDIR}/xml-batik
 
@@ -34,7 +37,7 @@ src_compile() {
 	ant ${antflags} || die "compile problem"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar ${P}/batik*.jar
 
 	cd ${P}/lib
