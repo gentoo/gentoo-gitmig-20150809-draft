@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/gnu-jaxp-1.3.ebuild,v 1.2 2005/07/02 19:04:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/gnu-jaxp-1.3.ebuild,v 1.3 2005/07/12 14:02:42 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -30,8 +30,8 @@ src_compile() {
 	make ${makeflags} || die "compile failed!"
 }
 
-src_install () {
-	java-pkg_dojar gnujaxp.jar || die "Unable to Install"
+src_install() {
+	java-pkg_dojar gnujaxp.jar
 	dodoc README
 	use doc && java-pkg_dohtml -r apidoc/*
 }

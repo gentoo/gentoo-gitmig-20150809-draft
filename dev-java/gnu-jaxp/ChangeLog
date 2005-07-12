@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-jaxp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.16 2005/07/02 19:04:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.17 2005/07/12 14:02:42 axxo Exp $
+
+  12 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
+  gnu-jaxp-1.0_beta1-r1.ebuild, gnu-jaxp-1.3.ebuild:
+  Dependency/style fixes
 
   02 Jul 2005; Thomas Matthijs <axxo@gentoo.org> gnu-jaxp-1.3.ebuild:
   fix deps, thanks too Josh Nichols <nichoj@alum.rpi.edu> in 97753
