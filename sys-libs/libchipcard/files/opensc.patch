@@ -1,0 +1,11 @@
+--- libchipcard-old/configure	2005-07-02 10:34:27.599223456 +0200
++++ libchipcard/configure	2005-07-02 10:35:56.705677216 +0200
+@@ -22426,7 +22426,7 @@
+         opensc_versionstring="`$opensc_dir/bin/opensc-config --version`"
+         echo "$as_me:$LINENO: result: found $opensc_versionstring" >&5
+ echo "${ECHO_T}found $opensc_versionstring" >&6
+-        if test "$wantedversion" \< "${opensc_versionstring}"; then
++        if test "$wantedversion" \> "${opensc_versionstring}"; then
+           { { echo "$as_me:$LINENO: error: Your OpenSC version is too old.
+           Please update from http://www.opensc.org/" >&5
+ echo "$as_me: error: Your OpenSC version is too old.
