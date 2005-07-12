@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/emul-linux-x86-glibc-2.3.5.ebuild,v 1.1 2005/07/12 10:22:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/emul-linux-x86-glibc-2.3.5.ebuild,v 1.2 2005/07/12 19:55:16 eradicator Exp $
 
 IUSE="nptl nptlonly"
 
@@ -13,11 +13,11 @@ SRC_URI="!nptl? ( ${BASE_URI}/${P}-lt.tar.bz2 )
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 DEPEND=""
 RDEPEND="!<app-emulation/emul-linux-x86-baselibs-1.2
-	 >=sys-libs/glibc-${PV}"
+	 ~sys-libs/glibc-${PV}"
 
 S=${WORKDIR}
 
