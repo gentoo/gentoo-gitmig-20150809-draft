@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 51b6d0e7dcdc622c1e4f974444f8cb6b libpq-8.0.1.ebuild 3078
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 9d7c11d82b76f8c85a4823fe5ae901c7 libpq-8.0.3.ebuild 3081
@@ -12,3 +15,10 @@ MD5 a29e8334813c549e8d3d7bcc2e364a66 files/libpq-8.0.1-gentoo.patch 2306
 MD5 07e1154edfd02b73a7772384ce2238b2 files/libpq-7.3.10-gentoo.patch 2072
 MD5 f7905db93301407b9caf37581e270d1f files/digest-libpq-7.3.10 76
 MD5 5256293555f24dec0d84734c19784174 files/libpq-7.4.8-gentoo.patch 2599
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC0+PFKRy60XGEcJIRAnzHAJ9PV0NReooUaSMW7W2Uwxrz0UhSQwCgqn3v
+XtS8j4JrMXbeJF/Bp9gVEIg=
+=gt3T
+-----END PGP SIGNATURE-----
