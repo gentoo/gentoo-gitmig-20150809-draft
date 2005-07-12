@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/remind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.7 2005/07/01 22:03:53 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.8 2005/07/12 15:47:16 mcummings Exp $
+
+  12 Jul 2005; Michael Cummings <mcummings@gentoo.org>
+  remind-03.00.23-r1.ebuild:
+  Keywording for ~sparc
 
 *remind-03.00.23-r1 (01 Jul 2005)
 

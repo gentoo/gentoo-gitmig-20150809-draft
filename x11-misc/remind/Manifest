@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 41ab06bf29d40531b19f04ad9c357751 ChangeLog 956
+MD5 53506e8c9c98995be3c5ef9b378a97bc ChangeLog 1068
+MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167
+MD5 a090bdcc40c984b8ca82c58301f0be5c remind-03.00.22.ebuild 535
+MD5 e81674a1ff854a6309d43111caeaeac1 remind-03.00.23.ebuild 543
+MD5 04761df517895637d5f9236e44d25f50 remind-03.00.23-r1.ebuild 688
 MD5 375c9caf7bde9ce5f35f13bdeda4ca17 files/digest-remind-03.00.22 67
 MD5 e303deb68b9bb5fad91b5fce2901bf56 files/digest-remind-03.00.23 67
 MD5 e303deb68b9bb5fad91b5fce2901bf56 files/digest-remind-03.00.23-r1 67
-MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167
-MD5 a090bdcc40c984b8ca82c58301f0be5c remind-03.00.22.ebuild 535
-MD5 41743786b978abdabae029dd7da75848 remind-03.00.23-r1.ebuild 680
-MD5 e81674a1ff854a6309d43111caeaeac1 remind-03.00.23.ebuild 543
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0vkBI1lqEGTUzyQRAgt7AJ9ysy15w/QcFx2uTlETQq3b62Kj9ACeL2In
-2dx2iU4S96CLDo/ZC+BSQus=
-=PERr
+iD8DBQFC0+XktG5z4I8BtQoRArWeAJ9jTbpI6202WuyGf6BMycF/waPUUwCeMEJj
+pZCrUlRECTd5bhH3qsXbQh0=
+=WisN
 -----END PGP SIGNATURE-----
