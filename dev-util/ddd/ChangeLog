@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.30 2005/04/08 16:43:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.31 2005/07/12 18:55:29 mholzer Exp $
+
+*ddd-3.3.11 (12 Jul 2005)
+
+  12 Jul 2005; Martin Holzer <mholzer@gentoo.org> +ddd-3.3.11.ebuild:
+  version bumped. closes #92116
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> ddd-3.3.10.ebuild:
   Stable on ppc64
