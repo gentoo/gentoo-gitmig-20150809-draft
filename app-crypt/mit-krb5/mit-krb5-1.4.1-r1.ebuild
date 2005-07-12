@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.1-r1.ebuild,v 1.1 2005/07/12 18:26:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.1-r1.ebuild,v 1.2 2005/07/12 20:40:00 seemant Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -48,6 +48,7 @@ src_compile() {
 		$(use_with tcltk tcl) \
 		$(use_enable ipv6) \
 		$(use_enable static) \
+		--localstatedir=/etc \
 		--enable-shared \
 		--with-system-et --with-system-ss \
 		--with-system-db \
