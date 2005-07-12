@@ -1,4 +1,14 @@
-MD5 52245b34169348fe1edb166efe9e4144 ChangeLog 491
-MD5 856d74b689b285cf795843fba4794576 gnudoku-0.9.ebuild 717
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 c4752c2388b072ddb8f53b282205abfc gnudoku-0.9.ebuild 725
+MD5 52245b34169348fe1edb166efe9e4144 ChangeLog 491
 MD5 cc85a018b42ae1815e95ffdf93c6c053 files/digest-gnudoku-0.9 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0zfxgIKl8Uu19MoRAgLTAJ4zdzTddrHLpKpA1BCqodd3BVvFkQCfcY5K
+JOqpwrVXbpov7n6B/YuE1xc=
+=vXzo
+-----END PGP SIGNATURE-----
