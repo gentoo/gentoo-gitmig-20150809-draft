@@ -1,5 +1,15 @@
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 f385f2ec39d6d04b791a2afe08e22871 octopus-3.0.1.ebuild 1668
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7bbfe5529e7716311942c9d3eba28827 octopus-3.0.1.ebuild 1662
 MD5 bf1ac18409b43ef6567046c0f89bc353 ChangeLog 528
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 24925210eca628235c1f8a498f261dc2 files/octopus-3.0.1-gentoo-build.xml 15173
 MD5 a634674c47f2213dc1b3903c4f9a1264 files/digest-octopus-3.0.1 141
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1Dgp/rLF9B432nYRAuiTAJ9OK8ufiN20OdqMka7u4VwBAk/lfACffcTA
+BqSwoGYyVj7Qj8dJ3dS1fIU=
+=aDrw
+-----END PGP SIGNATURE-----
