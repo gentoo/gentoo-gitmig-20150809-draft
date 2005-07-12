@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 55d6dab7f2004d02c59638155ae86cec ChangeLog 722
 MD5 c558971b688496ca772b8fd80640e3e3 metadata.xml 432
-MD5 c124815a59bb5f7f3ca85bdcf141bd1d kunststoff-2.0.2.ebuild 1018
+MD5 28914278be23bebca741239727f276de kunststoff-2.0.2.ebuild 970
 MD5 e8ddfb7120b8efa5fdaa52e166306e81 files/build.xml 1453
 MD5 59f0e167a8125279da4aa129e2b558eb files/digest-kunststoff-2.0.2 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCX+7B06ebR+OMO78RAk82AJ4shB4Burb2Qr49o98HK491gqxsogCcDEN5
-z68r1hxyGjFugW5/4dRhiDM=
-=R9XV
+iD8DBQFC1By4/rLF9B432nYRAvLIAJ4rTeHP7QIWfTIefpYpd+DsD/MENQCeP+Yo
+tSB8egGi+/lx0o8b1Z8WFkc=
+=qKEy
 -----END PGP SIGNATURE-----
