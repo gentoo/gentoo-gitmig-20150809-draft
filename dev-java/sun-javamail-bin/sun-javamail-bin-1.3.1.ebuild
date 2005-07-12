@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/sun-javamail-bin-1.3.1.ebuild,v 1.8 2005/07/09 16:59:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/sun-javamail-bin-1.3.1.ebuild,v 1.9 2005/07/12 23:37:10 axxo Exp $
 
 inherit java-pkg
 
@@ -34,30 +34,11 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	if [ ! -f "${DISTDIR}/${At}" ] ; then
-		echo  " "
-		echo  "!!! Missing ${DISTDIR}/${At}"
-		echo  " "
-		einfo
-		einfo " Due to license restrictions, we cannot fetch the"
-		einfo " distributables automagically."
-		einfo
-		einfo " 1. Visit ${HOMEPAGE}"
-		einfo " 2. Download ${At}"
-		einfo " 3. Move file to ${DISTDIR}"
-		einfo " 4. Run emerge on this package again to complete"
-		einfo
-		die "User must manually download distfile"
-	fi
-	unzip -qq ${DISTDIR}/${At}
-}
-
-src_compile() {
-	einfo " This is a binary-only ebuild."
+	unzip -qq ${DISTDIR}/${At} || die "failed too unpack"
 }
 
 src_install() {
-	dodoc CHANGES.txt README.txt LICENSE.txt NOTES.txt
+	dodoc CHANGES.txt README.txt NOTES.txt
 	use doc && java-pkg_dohtml -r docs/
 	java-pkg_dojar mail.jar lib/*.jar
 }
