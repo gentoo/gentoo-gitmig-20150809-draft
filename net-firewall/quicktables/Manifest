@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 23d681afa1c67bbdf5e580ebb7ea3359 quicktables-2.3.ebuild 535
 MD5 4f0e61f76f31a204c0bcfdc4b105f85b ChangeLog 375
 MD5 00a0c3461c456b01bfbc44b3210b6b5f files/digest-quicktables-2.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0y4mgIKl8Uu19MoRAowGAJ4zMP03ox30GkbnicG5naTWcpPpqwCdH6gq
+PfVADidyezzR4SnKuqEOu/0=
+=cyox
+-----END PGP SIGNATURE-----

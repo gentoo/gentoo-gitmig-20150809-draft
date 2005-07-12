@@ -1,0 +1,8 @@
+# ChangeLog for net-firewall/quicktables
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/quicktables/ChangeLog,v 1.1 2005/07/12 02:41:30 vapier Exp $
+
+*quicktables-2.3 (11 Jul 2005)
+
+  11 Jul 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by ali3n@eliteitminds.com #63085.
