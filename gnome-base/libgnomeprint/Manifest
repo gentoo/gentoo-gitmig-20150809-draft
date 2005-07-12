@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44126d8e4079baa53a3824caf062911f libgnomeprint-2.8.2.ebuild 949
+MD5 9d629c56ee024031ebdfa52fdd21c7b4 libgnomeprint-2.6.2.ebuild 924
+MD5 9bcf006d65f2f7aef49a8ca21b8db3a5 libgnomeprint-2.10.3.ebuild 966
+MD5 eec52c4a6edaad9ac6b4a016e1759f13 libgnomeprint-2.8.0.ebuild 955
+MD5 e3aa420a4766e515120647e38338b358 libgnomeprint-2.10.0.ebuild 957
 MD5 0a8786b8144818f8825ce58ed21225a7 libgnomeprint-1.116.1.ebuild 1503
+MD5 44126d8e4079baa53a3824caf062911f libgnomeprint-2.8.2.ebuild 949
+MD5 fbf30986ec8d5e4eccde57f0f8d5484d ChangeLog 10841
+MD5 c0afd4a51e1092b9b3ac634e21e4a66e libgnomeprint-1.116.0.ebuild 1556
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 39b55d77c59dc0b889a4dccc16943d21 libgnomeprint-2.8.1.ebuild 934
-MD5 c0afd4a51e1092b9b3ac634e21e4a66e libgnomeprint-1.116.0.ebuild 1556
-MD5 eec52c4a6edaad9ac6b4a016e1759f13 libgnomeprint-2.8.0.ebuild 955
-MD5 9bcf006d65f2f7aef49a8ca21b8db3a5 libgnomeprint-2.10.3.ebuild 966
-MD5 65ba93d124b5818f9914c6efb9ded3b5 libgnomeprint-2.10.0.ebuild 958
-MD5 982c3c890d44df4a476a6378e01d93cc ChangeLog 10739
-MD5 9d629c56ee024031ebdfa52fdd21c7b4 libgnomeprint-2.6.2.ebuild 924
-MD5 a4298187c695d7c2e27ff13ff758fde3 files/digest-libgnomeprint-2.8.1 72
-MD5 241b2c37189bda4907e2b1ec34ed8c55 files/digest-libgnomeprint-2.8.0 72
-MD5 a4a49169985a280ea122cc58e74778a6 files/digest-libgnomeprint-2.10.3 73
-MD5 53ecaee2659e6985044799935baf09a9 files/digest-libgnomeprint-2.10.0 73
-MD5 f0d2d73b96d61f4385cbfc86554cb098 files/digest-libgnomeprint-1.116.1 74
 MD5 2097b4ad7684953eb08aa3cef747286b files/digest-libgnomeprint-1.116.0 74
+MD5 f0d2d73b96d61f4385cbfc86554cb098 files/digest-libgnomeprint-1.116.1 74
+MD5 53ecaee2659e6985044799935baf09a9 files/digest-libgnomeprint-2.10.0 73
+MD5 a4a49169985a280ea122cc58e74778a6 files/digest-libgnomeprint-2.10.3 73
 MD5 cb1c47c1aca0b88a857425ab4b16ff48 files/libgnomeprint-2.4.2-gtkdoc_fixes.patch 1830
-MD5 ce728de81a4c2cd722688a92ad4c9b65 files/digest-libgnomeprint-2.8.2 72
 MD5 e849922b2383e0dd3fb60e254d9bdf17 files/digest-libgnomeprint-2.6.2 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzewwgIKl8Uu19MoRAvHJAJ9H6xDkO9OKQyoLQ8HaPjK88VM+aQCcDmVE
-XAmojM8YPfxtDd44MtSwWsM=
-=djqZ
------END PGP SIGNATURE-----
+MD5 241b2c37189bda4907e2b1ec34ed8c55 files/digest-libgnomeprint-2.8.0 72
+MD5 a4298187c695d7c2e27ff13ff758fde3 files/digest-libgnomeprint-2.8.1 72
+MD5 ce728de81a4c2cd722688a92ad4c9b65 files/digest-libgnomeprint-2.8.2 72
