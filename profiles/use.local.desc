@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1306 2005/07/12 15:08:24 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1307 2005/07/12 16:55:46 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -515,6 +515,8 @@ media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/ffmpeg:dts - Enables libdts (5.1 surround sound audio) support
 media-video/ffmpeg:network - Enables network streaming support
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
+media-video/gxine:nsplugin - Builds plugins for Netscape compatible browsers
+media-video/helixplayer:nsplugin - Builds plugins for Netscape compatible browsers
 media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
 media-video/mkvtoolnix:lzo - Enables support for lzo compression
@@ -546,6 +548,7 @@ media-video/mplayer:v4l2 - Enables video4linux2 support
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/nvidia-glx:dlloader - Enable dynamic module loader instead of ELF loader.  Installs nvidia_drv.so instead of nvidia_drv.o.
+media-video/realplayer:nsplugin - Builds plugins for Netscape compatible browsers
 media-video/transcode:fame - Enables libfame support
 media-video/transcode:lzo - Enables LZO compression support
 media-video/transcode:mjpeg - Enables mjpegtools support
