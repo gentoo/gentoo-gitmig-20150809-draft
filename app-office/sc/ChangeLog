@@ -1,6 +1,14 @@
 # ChangeLog for app-office/sc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/ChangeLog,v 1.12 2005/04/21 20:00:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/ChangeLog,v 1.13 2005/07/12 07:48:13 spyderous Exp $
+
+*sc-7.16 (12 Jul 2005)
+
+  12 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/sc-7.16-amd64.patch, +sc-7.16.ebuild:
+  Bump to a version that's only two and a half years old. This appears
+  unmaintained and I intend to leave it that way for now, so please kick me if
+  I'm wrong.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> sc-7.12.ebuild:
   stable on amd64
