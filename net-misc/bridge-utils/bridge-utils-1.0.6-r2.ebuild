@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.0.6-r1.ebuild,v 1.1 2005/07/12 03:37:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.0.6-r2.ebuild,v 1.1 2005/07/12 05:51:46 uberlord Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
+
+inherit eutils
 
 DESCRIPTION="Tools for configuring the Linux kernel 802.1d Ethernet Bridge"
 HOMEPAGE="http://bridge.sourceforge.net/"
