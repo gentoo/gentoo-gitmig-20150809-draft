@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/umix-1.0.2.ebuild,v 1.7 2005/03/26 00:23:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/umix-1.0.2.ebuild,v 1.8 2005/07/12 20:33:26 swegener Exp $
 
 IUSE="ncurses oss"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 sparc x86 sparc ppc"
+KEYWORDS="~alpha amd64 sparc x86 ppc"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )"
 
