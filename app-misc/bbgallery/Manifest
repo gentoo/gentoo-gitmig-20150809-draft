@@ -1,5 +1,15 @@
-MD5 aed55b65b279a599f0d13e3702f1221d ChangeLog 1677
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 77d01344e15d68a9ee99040721efb3c8 ChangeLog 1989
 MD5 8ab44a22557668c057203e329e8efe4c bbgallery-1.2.0.ebuild 921
-MD5 ec29b2423631bbba0cb61b09b384aa3f bbgallery-1.1.0.ebuild 860
-MD5 ab55eb64198bb6963c81c372ba1fc89f files/digest-bbgallery-1.1.0 61
+MD5 fbcca62ff45e8bd3f2f938441632b073 bbgallery-1.2.0-r1.ebuild 940
 MD5 31ff20ac926abd35946a38db6afeaa5f files/digest-bbgallery-1.2.0 67
+MD5 31ff20ac926abd35946a38db6afeaa5f files/digest-bbgallery-1.2.0-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0ycRl5AvwDPiUowRAs9VAJ9neMzEDg7f6LSo8PJF26j8G4NDIgCg38PK
+0EY9pqosLR/CWNdQAPMSqIY=
+=3iEn
+-----END PGP SIGNATURE-----
