@@ -1,10 +1,20 @@
-MD5 a4dca703f6ec1c353fadd640ec7a43dd ChangeLog 1855
-MD5 84d41809a827ec0c2e3b3e0804c14886 autoconf-wrapper-2-r1.ebuild 811
-MD5 86b25802cbfd3edfe9e69e51c24a0560 autoconf-wrapper-3-r1.ebuild 822
-MD5 5893addbc67d6e0d2fff9560a7e5198f autoconf-wrapper-3.ebuild 821
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f6a660ddde9ffbfb5bce9d4f72e01c24 autoconf-wrapper-3-r1.ebuild 822
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d4c9467b972dd2b40aa7a1b89d2226b6 files/ac-wrapper-2.sh 2717
+MD5 84d41809a827ec0c2e3b3e0804c14886 autoconf-wrapper-2-r1.ebuild 811
+MD5 5893addbc67d6e0d2fff9560a7e5198f autoconf-wrapper-3.ebuild 821
+MD5 275990dd37ef5c98bf72cd4b71f12728 ChangeLog 1961
 MD5 baa08513b5000a1ecf58715b8d654eae files/ac-wrapper-3.sh 3077
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-autoconf-wrapper-2-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-autoconf-wrapper-3 0
+MD5 d4c9467b972dd2b40aa7a1b89d2226b6 files/ac-wrapper-2.sh 2717
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-autoconf-wrapper-3-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-autoconf-wrapper-2-r1 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC09lvKRy60XGEcJIRAkepAJ9PLIYoZnH84UP4VOSkiUC+yDjKzwCfRg6U
+EsflNjPjeLxFKzfZh8hsc4M=
+=SjO+
+-----END PGP SIGNATURE-----
