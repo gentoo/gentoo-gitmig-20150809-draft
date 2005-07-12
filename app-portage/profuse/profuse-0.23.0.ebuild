@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/profuse-0.23.0.ebuild,v 1.5 2005/07/09 02:35:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/profuse-0.23.0.ebuild,v 1.6 2005/07/12 12:53:42 blubb Exp $
 
 DESCRIPTION="use flags editor, with good features and 3 GUIs (dialog, ncurses and gtk2)."
 HOMEPAGE="http://libconf.net/profuse/"
@@ -8,7 +8,7 @@ SRC_URI="http://libconf.net/profuse/download/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE="gtk ncurses"
 
 RDEPEND="dev-lang/perl

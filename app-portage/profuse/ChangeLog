@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/profuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.37 2005/07/09 17:32:34 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.38 2005/07/12 12:53:42 blubb Exp $
+
+  12 Jul 2005; Simon Stelling <blubb@gentoo.org> profuse-0.23.0.ebuild:
+  stable on amd64
 
   09 Jul 2005; <dams@gentoo.org> -profuse-0.1.ebuild, -profuse-0.11.ebuild,
   -profuse-0.12.ebuild, -profuse-0.13.ebuild, -profuse-0.14.ebuild,
