@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4fbf15c1d5f8654743afed78287e2519 ChangeLog 5199
 MD5 e7e292bd9b33c877797d54c58b4db1b1 gxine-0.3.3-r1.ebuild 1377
 MD5 22728c51302c891a3077b841066cf3e1 gxine-0.4.1.ebuild 1339
@@ -19,3 +22,10 @@ MD5 a0134d60cfc89d88f7f76826e3728379 files/digest-gxine-0.3.3-r2 64
 MD5 69140a1cb8cc6acb6ffdca76e9301493 files/digest-gxine-0.4.1-r1 64
 MD5 bd3744a1ecbba9a89f8fb1ded2e58e30 files/digest-gxine-0.4.4 64
 MD5 fb579db8b42db43fb5c027ca8c78e951 files/digest-gxine-0.4.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC0/Zhj5H05b2HAEkRAvcQAJ4m3ilZhc3DbmyBJYqlREhsm28KwQCgoYJ7
+cbdbC2kPie5AFReq/DhONj0=
+=HSBC
+-----END PGP SIGNATURE-----
