@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20050128.ebuild,v 1.9 2005/07/09 17:56:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20050128.ebuild,v 1.10 2005/07/12 04:52:54 geoman Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 
 IUSE=""
 DEPEND=">=sys-apps/sed-4"
