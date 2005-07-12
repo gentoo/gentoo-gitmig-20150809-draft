@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.13 2005/05/21 14:14:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.14 2005/07/12 02:23:26 killsoft Exp $
+
+*hamlib-1.2.4 (12 Jul 2005)
+
+  12 Jul 2005; Robb Romans <killsoft@gentoo.org> +hamlib-1.2.4.ebuild:
+  - New upstream version
+  - New in 1.2.4:
+    * frontend API: port_t renamed as hamlib_port_t
+    * new models: TS-480, VR5000, FT1000MkV Fld
+    * fixes: TS-570S, AR7030, AR3000A, Orion, FT-897, IC746
+    * port: fixed 64bit int handling which potentially fixes backends
+      kenwood/alinco/pcr/uniden/aor/jrc/tentec,
+      added xBSD parallel port support
 
   21 May 2005; Simon Stelling <blubb@gentoo.org> hamlib-1.2.3.ebuild:
   added ~amd64 and made multilib-strict save
