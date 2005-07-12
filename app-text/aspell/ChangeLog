@@ -1,6 +1,11 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.71 2005/02/19 23:57:08 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.72 2005/07/12 16:14:51 arj Exp $
+
+*aspell-0.60.3 (12 Jul 2005)
+
+  12 Jul 2005; Anders Rune Jensen <arj@gentoo.org> +aspell-0.60.3.ebuild:
+  Version bump.
 
   20 Feb 2005; David Holm <dholm@gentoo.org> :
   Added to ~ppc.
