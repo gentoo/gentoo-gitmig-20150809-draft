@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.6.12.2_p2.ebuild,v 1.2 2005/07/03 14:05:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.6.12.2_p2.ebuild,v 1.3 2005/07/12 18:07:14 dertobi123 Exp $
 
 ETYPE="sources"
 
@@ -17,9 +17,10 @@ DESCRIPTION="Full sources for the Linux kernel with patch for hppa"
 PATCH_LEVEL="${PV/${CKV}_p/}"
 SRC_URI="${KERNEL_URI}
 http://ftp.parisc-linux.org/cvs/linux-2.6/patch-${OKV}-pa${PATCH_LEVEL}.gz"
-UNIPATCH_LIST="${T}/patch-${OKV}-pa${PATCH_LEVEL}.patch"
+UNIPATCH_LIST="${T}/patch-${OKV}-pa${PATCH_LEVEL}.patch
+${FILESDIR}/4705_squashfs-2.1.patch.bz2"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org"
-KEYWORDS="~hppa -*"
+KEYWORDS="hppa -*"
 
 
 src_unpack() {

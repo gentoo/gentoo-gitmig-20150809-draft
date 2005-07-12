@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.55 2005/07/03 14:05:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.56 2005/07/12 18:07:14 dertobi123 Exp $
+
+  12 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/4705_squashfs-2.1.patch.bz2, hppa-sources-2.6.12.2_p2.ebuild:
+  Add squashfs patch, marked stable.
 
   03 Jul 2005; Guy Martin <gmsoft@gentoo.org>
   hppa-sources-2.6.12.2_p2.ebuild:
