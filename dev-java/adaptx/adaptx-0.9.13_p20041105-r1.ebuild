@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r1.ebuild,v 1.3 2005/07/01 10:35:02 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r1.ebuild,v 1.4 2005/07/12 23:27:07 axxo Exp $
 
 inherit java-pkg
 
@@ -19,7 +19,7 @@ DEPEND="virtual/jdk
 	>=dev-java/ant-1.4
 	${RDEPEND}"
 SLOT="0.9"
-KEYWORDS="~x86 ~amd64 ~ppc64 ~sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="doc"
 
 S=${WORKDIR}/adaptx-20041105
@@ -40,9 +40,9 @@ src_compile() {
 	# tried to build sources with jikes but
 	# failed all the time on different
 	# plattforms (amd64, x86)
-	antflags="jar"
+	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
-	ant ${antflags}
+	ant ${antflags} || die "failed too build"
 }
 
 src_install() {

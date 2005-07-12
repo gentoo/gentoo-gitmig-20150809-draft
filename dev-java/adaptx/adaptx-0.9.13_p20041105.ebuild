@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105.ebuild,v 1.10 2005/07/01 09:02:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105.ebuild,v 1.11 2005/07/12 23:27:07 axxo Exp $
 
 inherit java-pkg
 
@@ -38,14 +38,14 @@ src_compile() {
 	# tried to build sources with jikes but
 	# failed all the time on different
 	# plattforms (amd64, x86)
-	antflags="jar"
+	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
-	ant ${antflags}
+	ant ${antflags} || die "failed too build"
 }
 
 src_install() {
 	java-pkg_dojar dist/*.jar
 	use doc && java-pkg_dohtml -r build/doc/javadoc/*
 	cd build/classes
-	dodoc CHANGELOG README LICENSE
+	dodoc CHANGELOG README
 }
