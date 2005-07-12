@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/memoir
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/memoir/ChangeLog,v 1.12 2005/07/08 08:16:24 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/memoir/ChangeLog,v 1.13 2005/07/12 08:14:26 brix Exp $
+
+  12 Jul 2005; <brix@gentoo.org> memoir-20050606.ebuild:
+  Stable on x86.
 
   08 Jul 2005; <brix@gentoo.org> memoir-20050523.ebuild:
   Stable on x86.

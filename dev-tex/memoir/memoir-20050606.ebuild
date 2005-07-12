@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/memoir/memoir-20050606.ebuild,v 1.2 2005/06/15 07:57:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/memoir/memoir-20050606.ebuild,v 1.3 2005/07/12 08:14:26 brix Exp $
 
 inherit latex-package
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="LPPL-1.3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
 
