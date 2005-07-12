@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.80 2005/07/12 09:02:42 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.81 2005/07/12 19:18:25 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -260,8 +260,11 @@ php-sapi_src_unpack() {
 
 	sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i configure
 
-	# bug 47498
+	# Bug 47498
 	[ "${PV//4.3.6}" != "${PV}" ] && EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/php-4.3.6-pcrealloc.patch
+
+	# Bug 46768
+	use kerberos && sed -i "s:-lgssapi_krb5:-lgssapi:" configure
 
 	use hardenedphp && [ -n "$HARDENEDPHP_PATCH" ] && epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
 }
