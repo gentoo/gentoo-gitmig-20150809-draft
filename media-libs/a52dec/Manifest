@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 46ee40d593a09b2e9164dd2c83a7c917 ChangeLog 4732
 MD5 d9d27d749c949442c5e8c65664c893a1 a52dec-0.7.4-r3.ebuild 1382
 MD5 97be851b9a6223645b3f0c1a14160717 a52dec-0.7.4-r4.ebuild 1352
@@ -9,3 +12,10 @@ MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4 64
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r3 64
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r4 64
 MD5 d98b1ff993cc74290d145feadc2542ff files/digest-a52dec-0.7.4-r5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1CPbj5H05b2HAEkRAqkBAKCLPvitVSgqjL0xCfpbLu5nfsKrnACfWr3L
+jRPFIF4bZrsnXx3/X1yDszA=
+=KOud
+-----END PGP SIGNATURE-----
