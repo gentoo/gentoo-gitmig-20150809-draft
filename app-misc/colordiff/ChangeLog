@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.37 2005/07/11 16:19:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.38 2005/07/12 07:51:06 corsair Exp $
+
+  12 Jul 2005; Markus Rothe <corsair@gentoo.org> colordiff-1.0.5.ebuild:
+  Stable on ppc64
 
 *colordiff-1.0.5-r2 (11 Jul 2005)
 
