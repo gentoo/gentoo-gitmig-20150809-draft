@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd></herd>
+<maintainer>
+<email>mcummings@gentoo.org</email>
+<name>Michael Cummings</name>
+</maintainer>
+<longdescription lang="en">
+Wyrd is a curses front end to the reminder programer, ideal for use in clients like mutt.  
+</longdescription>
+</pkgmetadata>
+
