@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 686f1f839bde788f08f6a1193b860a10 php-cgi-5.0.4.ebuild 1100
-MD5 0d3f323852aae7dedc9934b2530f646d php-cgi-4.4.0.ebuild 987
+MD5 42ba1642e30a6442cb1a701ee365c85c php-cgi-4.4.0.ebuild 986
 MD5 307aab11df88d8308b9f240d02d54759 php-cgi-4.3.11-r1.ebuild 1117
-MD5 75f89515238c929b5fcd43ab89cde0f4 ChangeLog 11314
+MD5 09a20f625eef49fd063dd41f5f3d3e01 ChangeLog 11447
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 225b57325cbdf582288a8796da9d72f5 files/digest-php-cgi-4.3.11-r1 287
 MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-php-cgi-4.4.0 285
@@ -15,10 +12,3 @@ MD5 f7a7898637874593f519c336db79fa45 files/php-cgi-5.0.3-missing-arches.patch 52
 MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
 MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
 MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0pKWaGfFFLhbXWkRAnVpAJ9EHuwMWFz6fGg79VFQRx9rI0ByyQCfRB7p
-EjlbOfFIqAgxgPirl51dIDg=
-=IGci
------END PGP SIGNATURE-----
