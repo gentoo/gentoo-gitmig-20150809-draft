@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.2.3.ebuild,v 1.2 2005/07/11 23:19:07 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.2.3.ebuild,v 1.3 2005/07/12 07:34:57 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://linux.bydg.org/~yogin/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 IUSE=""
 
@@ -19,7 +19,7 @@ DEPEND="virtual/x11
 
 RDEPEND="${DEPEND}
 	app-arch/unrar
-	app-arch/rar
+	!ppc? ( app-arch/rar )
 	app-arch/zip"
 
 src_compile() {
