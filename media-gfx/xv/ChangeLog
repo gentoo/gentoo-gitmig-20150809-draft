@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.63 2005/05/31 20:15:37 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.64 2005/07/12 04:31:46 geoman Exp $
+
+  12 Jul 2005; Stephen P. Becker <geoman@gentoo.org> xv-3.10a-r11.ebuild,
+  xv-3.10a-r12.ebuild:
+  -r11 mips, -r12 ~mips
 
   31 May 2005; Rene Nussbaumer <killerfox@gentoo.org> xv-3.10a-r11.ebuild:
   Stable on hppa. bug #88742
