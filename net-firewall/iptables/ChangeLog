@@ -1,17 +1,15 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.73 2005/05/30 17:21:42 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.74 2005/07/12 02:38:29 vapier Exp $
 
-  30 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
-  iptables-1.3.1-r4.ebuild:
-  marked ~alpha wrt bug #91285
+*iptables-1.3.2 (12 Jul 2005)
 
-  15 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
-  iptables-1.3.1-r4.ebuild:
-  added ~hppa
-
-  09 May 2005; Aron Griffis <agriffis@gentoo.org> iptables-1.3.1-r4.ebuild:
-  add ~ia64 #91285
+  12 Jul 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/ip6tables-1.3.2.confd, +files/iptables-1.3.2.confd,
+  +files/iptables-1.3.2.init, +iptables-1.3.2.ebuild:
+  Version bump #98641 by Lars (Polynomial-C).  Unified the iptables/ip6tables
+  init.d scripts.  Added a new 'panic' option to init.d #72033 by Colin 
+  Kingsley.
 
 *iptables-1.3.1-r4 (05 May 2005)
 
