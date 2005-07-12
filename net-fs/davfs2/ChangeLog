@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.11 2005/07/11 15:44:31 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.12 2005/07/12 15:32:57 blubb Exp $
+
+  12 Jul 2005; Simon Stelling <blubb@gentoo.org>
+  +files/include_compiler.patch, davfs2-0.2.3-r1.ebuild:
+  fix bug 81507 and keyword ~amd64
 
   11 Jul 2005; Stefan Schweizer <genstef@gentoo.org> davfs2-0.2.3-r1.ebuild:
   Fixing bug 96901 by making the patch conditional (only 2.4 kernel) thanks to

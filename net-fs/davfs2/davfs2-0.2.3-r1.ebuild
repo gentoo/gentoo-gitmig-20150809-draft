@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.3-r1.ebuild,v 1.4 2005/07/11 15:44:31 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.3-r1.ebuild,v 1.5 2005/07/12 15:32:57 blubb Exp $
 
 inherit linux-info eutils
 
@@ -9,7 +9,7 @@ IUSE="ssl debug"
 DESCRIPTION="a Linux file system driver that allows you to mount a WebDAV server as a local disk drive. Davfs2 uses Coda for kernel driver and neon for WebDAV interface"
 SRC_URI="mirror://sourceforge/dav/${P}.tar.gz"
 HOMEPAGE="http://dav.sourceforge.net"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 
 LICENSE="GPL-2"
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -24,6 +24,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	kernel_is 2 4 && epatch ${FILESDIR}/${PN}.nokernelsrc.patch
+
+	epatch ${FILESDIR}/include_compiler.patch #81507
 }
 
 src_compile() {
