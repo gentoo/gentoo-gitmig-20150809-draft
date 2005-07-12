@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 25a08d2512eb535701f578043964bed6 commons-jxpath-1.1-r1.ebuild 1233
+MD5 53b0dd95594e1315f466ae4d02012267 commons-jxpath-1.1-r1.ebuild 1275
 MD5 c15bd2194c281f898d87c016c169b775 ChangeLog 1253
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 6bee458c65c0dad2d6afd4bb6c5464d7 files/digest-commons-jxpath-1.1-r1 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFChiL006ebR+OMO78RAuBHAJ0STdjn2H6HEFLnR8R7rEioq2IRSwCgmH4k
-2z/C9nDG+Pyd8fF+rcTt6vw=
-=BMS2
+iD8DBQFC07Qh/rLF9B432nYRApWiAJwMLwl+nlJbWwPgwO8qNm8UKszYxwCgh2dM
+31+5b7gJHlZN9JBOIWqEBS4=
+=ejpd
 -----END PGP SIGNATURE-----
