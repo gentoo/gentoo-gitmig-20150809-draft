@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.4.ebuild,v 1.6 2005/06/25 13:26:54 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.4.ebuild,v 1.7 2005/07/12 20:54:40 stkn Exp $
 
 IUSE="devfs26"
 
@@ -99,9 +99,7 @@ src_unpack() {
 }
 
 src_compile() {
-	set_arch_to_kernel
-	make || die
-	set_arch_to_portage
+	make ARCH=$(tc-arch-kernel) || die
 }
 
 src_install() {

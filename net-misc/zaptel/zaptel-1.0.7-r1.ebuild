@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.8 2005/06/28 21:00:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.9 2005/07/12 20:54:40 stkn Exp $
 
 IUSE="devfs26 bri florz"
 
@@ -111,16 +111,14 @@ src_unpack() {
 src_compile() {
 	# TODO: bristuff modules
 
-	set_arch_to_kernel
-	make KERNEL_SOURCE=/usr/src/linux || die
+	make ARCH=$(tc-arch-kernel) KERNEL_SOURCE=/usr/src/linux || die
 
 	if use bri; then
 		cd ${WORKDIR}/bristuff-${BRI_VERSION}
-		make -C qozap  || die
-		make -C zaphfc || die
-		make -C cwain  || die
+		make ARCH=$(tc-arch-kernel) -C qozap  || die
+		make ARCH=$(tc-arch-kernel) -C zaphfc || die
+		make ARCH=$(tc-arch-kernel) -C cwain  || die
 	fi
-	set_arch_to_portage
 }
 
 src_install() {
@@ -157,7 +155,7 @@ src_install() {
 		newins cwain/zapata.conf  zapata.conf.E1
 
 		docinto bristuff
-		dodoc CHANGES INSTALL README-ZAPHFC-USERS.1st
+		dodoc CHANGES INSTALL
 
 		docinto bristuff/qozap
 		dodoc qozap/LICENSE qozap/TODO qozap/*.conf*

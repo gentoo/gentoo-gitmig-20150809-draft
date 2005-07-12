@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.49 2005/06/28 21:00:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.50 2005/07/12 20:54:40 stkn Exp $
+
+  12 Jul 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.3.ebuild,
+  zaptel-1.0.4-r1.ebuild, zaptel-1.0.4.ebuild, zaptel-1.0.6-r1.ebuild,
+  zaptel-1.0.6.ebuild, zaptel-1.0.7-r1.ebuild, zaptel-1.0.7.ebuild,
+  zaptel-1.0.8.ebuild:
+  Changed ebuilds to use tc-arch-kernel instead of set_arch_to_* and removed
+  non-existent docs file from dodoc lines.
 
   28 Jun 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.7-r1.ebuild:
   Marking stable on x86.
