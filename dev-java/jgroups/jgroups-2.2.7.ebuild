@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.4 2005/05/04 22:39:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.5 2005/07/12 19:33:14 axxo Exp $
 
 inherit java-pkg
 
@@ -13,8 +13,8 @@ KEYWORDS="x86 amd64 ~ppc"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/concurrent-util
 	dev-java/jms"
-DEPEND="${RDEPEND}
-	=virtual/jdk-1.4*
+DEPEND=">=virtual/jdk-1.4*
+	${RDEPEND}
 	>=dev-java/ant-core-1.5
 	app-arch/unzip
 	junit? (
@@ -25,9 +25,10 @@ DEPEND="${RDEPEND}
 	jikes? ( dev-java/jikes )"
 IUSE="doc junit jikes"
 
+S=${WORKDIR}/JGroups-${PV}.src
+
 src_unpack() {
 	unpack ${A}
-	mv JGroups-${PV}.src ${P}
 	cd ${S}/lib
 	rm *.jar
 	java-pkg_jar-from concurrent-util
