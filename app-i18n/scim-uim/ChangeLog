@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-uim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.18 2005/02/01 07:22:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.19 2005/07/12 13:53:41 matsuu Exp $
+
+  12 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> scim-uim-0.1.3.ebuild:
+  Added ~amd64.
 
   01 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> scim-uim-0.1.3.ebuild:
   Added libtoolize --copy --force; bug #78751.
