@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1-r2.ebuild,v 1.3 2005/07/07 11:49:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1-r2.ebuild,v 1.4 2005/07/12 08:12:42 robbat2 Exp $
 
 inherit fortran flag-o-matic
 
@@ -44,7 +44,7 @@ src_unpack() {
 }
 
 pkg_setup() {
-	use fortran && fortran_pkg_setup
+	: # make sure fortran_pkg_setup does NOT run
 }
 
 src_compile() {
@@ -60,6 +60,9 @@ src_compile() {
 	use pbs && append-ldflags -L/usr/lib/pbs
 
 	if use fortran; then
+		fortran_pkg_setup 
+		# this is NOT in pkg_setup as it is NOT needed for RDEPEND right away it
+		# can be installed after merging from binary, and still have things fine
 		myconf="${myconf} --with-fc=${FORTRANC}"
 	else
 		myconf="${myconf} --without-fc"
