@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-transaction/commons-transaction-1.0.1.ebuild,v 1.1 2005/05/22 14:56:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-transaction/commons-transaction-1.0.1.ebuild,v 1.2 2005/07/12 13:12:03 axxo Exp $
 
 inherit java-pkg
 
@@ -13,24 +13,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc jikes source"
 
-DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
-	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/commons-codec
 	dev-java/log4j"
-S="${WORKDIR}"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	dev-java/ant-core
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 
-COMMONS_CODEC="commons-codec commons-codec.jar commons-codec-1.2.jar"
-LOG4J="log4j log4j.jar log4j-1.2.8.jar"
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}/lib
-	java-pkg_jar-from ${COMMONS_CODEC}
-	java-pkg_jar-from ${LOG4J}
+	rm -f *.jar
+	java-pkg_jar-from commons-codec
+	java-pkg_jar-from log4j
 }
 
 src_compile() {
