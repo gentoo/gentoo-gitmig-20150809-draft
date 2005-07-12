@@ -151,17 +151,17 @@ if [[ ! -f step2 ]]; then
 fi
 
 if [[ ! -f step3 ]]; then
-	[ -L /lib32 ] && rm /lib32 && mkdir /lib32
-	[ -L /usr/lib32 ] && rm /usr/lib32 && mkdir /usr/lib32
-	[ -L /usr/X11R6/lib32 ] && rm /usr/X11R6/lib32 && mkdir /usr/X11R6/lib32
+	[[ -L /lib32 ]] && rm /lib32 && mkdir /lib32
+	[[ -L /usr/lib32 ]] && rm /usr/lib32 && mkdir /usr/lib32
+	[[ -L /usr/X11R6/lib32 ]] && rm /usr/X11R6/lib32 && mkdir /usr/X11R6/lib32
 	cp /emul/linux/x86/{usr/,}lib32/libsandbox.so* /usr/lib32 &> /dev/null
 	[[ -f /usr/lib32/libsandbox.so ]] || myDie "Failed to copy over 32bit libsandbox."
 	cp /emul/linux/x86/usr/lib32/libc.so /usr/lib32 || myDie "Failed to copy 32bit libc"
 	cp /emul/linux/x86/usr/lib32/libpthread.so /usr/lib32 || myDie "Failed to copy 32bit libpthread."
 	cp /emul/linux/x86/usr/lib32/*crt*.o /usr/lib32 || myDie "Failed to copy 32bit *crt*.o"
-	[ -d /emul/linux/x86/usr/lib32/nptl ] && mkdir /usr/lib32/nptl
-	[ -d /emul/linux/x86/usr/lib32/nptl ] && cp /emul/linux/x86/usr/lib32/nptl/libc.so /usr/lib32/nptl
-	[ -d /emul/linux/x86/usr/lib32/nptl ] && cp /emul/linux/x86/usr/lib32/nptl/libpthread.so /usr/lib32/nptl
+	[[ -d /emul/linux/x86/usr/lib32/nptl ]] && mkdir /usr/lib32/nptl
+	[[ -d /emul/linux/x86/usr/lib32/nptl ]] && cp /emul/linux/x86/usr/lib32/nptl/libc.so /usr/lib32/nptl
+	[[ -d /emul/linux/x86/usr/lib32/nptl ]] && cp /emul/linux/x86/usr/lib32/nptl/libpthread.so /usr/lib32/nptl
 	env-update || myDie "env-update failed"
 
 	touch step3
