@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.17 2005/05/30 19:09:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.18 2005/07/12 20:14:15 axxo Exp $
+
+  12 Jul 2005; Thomas Matthijs <axxo@gentoo.org> -fop-0.20.5.ebuild,
+  fop-0.20.5-r1.ebuild, fop-0.20.5-r3.ebuild:
+  Dep fixes
 
   30 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> fop-0.20.5-r1.ebuild:
   Stable on sparc

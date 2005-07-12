@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r3.ebuild,v 1.1 2005/04/09 14:12:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r3.ebuild,v 1.2 2005/07/12 20:14:15 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -12,9 +12,6 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples jai jimi" # jikes support currently not possible :/
-DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-1.5.4
-	!dev-java/fop-bin"
 RDEPEND=">=virtual/jre-1.4
 	jai? ( dev-java/sun-jai-bin )
 	jimi? ( dev-java/sun-jimi )
@@ -22,6 +19,10 @@ RDEPEND=">=virtual/jre-1.4
 	~dev-java/batik-1.5
 	dev-java/xalan
 	~dev-java/xerces-2.6.2"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	>=dev-java/ant-1.5.4
+	!dev-java/fop-bin"
 
 S=${WORKDIR}/${P/_/}
 
@@ -48,13 +49,13 @@ src_compile() {
 	ant ${antflags} || die "compile failed"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar build/fop.jar
 
 	newbin fop.sh fop
 
 	if use doc; then
-		dodoc CHANGES STATUS README LICENSE
+		dodoc CHANGES STATUS README
 		java-pkg_dohtml -r ReleaseNotes.html build/javadocs/*
 	fi
 
