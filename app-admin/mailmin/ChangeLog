@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/mailmin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/ChangeLog,v 1.10 2005/01/01 11:10:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/ChangeLog,v 1.11 2005/07/12 02:18:34 smithj Exp $
+
+  12 Jul 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml,
+  mailmin-0.0.1-r2.ebuild:
+  fixed metadata
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> mailmin-0.0.1-r1.ebuild,
   mailmin-0.0.1-r2.ebuild:

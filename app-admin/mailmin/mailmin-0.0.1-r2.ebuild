@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/mailmin-0.0.1-r2.ebuild,v 1.7 2005/01/01 11:10:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/mailmin-0.0.1-r2.ebuild,v 1.8 2005/07/12 02:18:34 smithj Exp $
 
 inherit webapp-apache
 
@@ -29,10 +29,6 @@ pkg_setup() {
 		die "need to unmerge old version first"
 	fi
 	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
-}
-
-src_unpack() {
-	unpack ${A}
 }
 
 src_compile() {
