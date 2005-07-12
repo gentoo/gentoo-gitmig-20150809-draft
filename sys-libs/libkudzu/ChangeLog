@@ -1,0 +1,12 @@
+# ChangeLog for sys-libs/libkudzu
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.1 2005/07/12 14:17:35 wolf31o2 Exp $
+
+*libkudzu-1.1.62 (12 Jul 2005)
+
+  12 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org> +files/sunlance.patch,
+  +metadata.xml, +libkudzu-1.1.62.ebuild:
+  Initial import. Since this ebuild was hacked from the kudzu-knoppix ebuild,
+  and the first step of building kudzu on any platform is to build libkudzu,
+  I'm going ahead with the same KEYWORDS from that ebuild.
+
