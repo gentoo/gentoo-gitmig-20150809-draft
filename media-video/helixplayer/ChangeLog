@@ -1,6 +1,10 @@
 # ChangeLog for media-video/helixplayer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.13 2005/07/06 10:04:25 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.14 2005/07/12 16:57:29 flameeyes Exp $
+
+  12 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  helixplayer-1.0.4.ebuild, helixplayer-1.0.5.ebuild:
+  Rename mozilla useflag into nsplugin.
 
   06 Jul 2005; John Mylchreest <johnm@gentoo.org> helixplayer-1.0.5.ebuild:
   Marking ~x86 as per bug #96923

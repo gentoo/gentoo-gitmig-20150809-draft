@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.36 2005/05/26 10:26:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.37 2005/07/12 16:56:37 flameeyes Exp $
+
+  12 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> gxine-0.4.1.ebuild,
+  gxine-0.4.1-r1.ebuild, gxine-0.4.3.ebuild, gxine-0.4.4.ebuild,
+  gxine-0.4.5.ebuild:
+  Rename mozilla useflag into nsplugin.
 
   26 May 2005; Jan Brinkmann <luckyduck@gentoo.org> gxine-0.4.1-r1.ebuild:
   stable on x86 wrt #93532

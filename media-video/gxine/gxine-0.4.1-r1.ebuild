@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.1-r1.ebuild,v 1.3 2005/05/26 10:26:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.1-r1.ebuild,v 1.4 2005/07/12 16:56:37 flameeyes Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -16,7 +16,7 @@ DEPEND="media-libs/libpng
 	X? ( virtual/x11 )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
-IUSE="nls lirc mozilla"
+IUSE="nls lirc nsplugin"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
@@ -36,7 +36,7 @@ src_compile() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable lirc) \
-		$(use_with mozilla browser-plugin) \
+		$(use_with nsplugin browser-plugin) \
 		--disable-dependency-tracking || die
 	emake || die
 }
@@ -55,7 +55,7 @@ src_install() {
 	insinto /usr/share/pixmaps
 	doins pixmaps/gxine-logo.png
 
-	use mozilla && inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
+	use nsplugin && inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
 }
 
 pkg_postinst() {

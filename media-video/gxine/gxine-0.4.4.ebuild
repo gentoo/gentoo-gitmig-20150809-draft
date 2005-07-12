@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.4.ebuild,v 1.1 2005/05/24 14:01:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.4.ebuild,v 1.2 2005/07/12 16:56:37 flameeyes Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -18,7 +18,7 @@ DEPEND="media-libs/libpng
 RDEPEND="nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
 
-IUSE="nls lirc mozilla"
+IUSE="nls lirc nsplugin"
 
 SLOT="0"
 # Those needs spidermonkey: ~ppc64 ~sparc
@@ -57,7 +57,7 @@ src_install() {
 	insinto /usr/share/icons/hicolor/48x48/apps
 	newins pixmaps/gxine-logo.png gxine.png
 
-	use mozilla && inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
+	use nsplugin && inst_plugin /usr/$(get_libdir)/gxine/gxineplugin.so
 }
 
 pkg_postinst() {

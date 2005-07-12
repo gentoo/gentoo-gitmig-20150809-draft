@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.2.ebuild,v 1.3 2005/04/11 12:10:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.2.ebuild,v 1.4 2005/07/12 16:59:52 flameeyes Exp $
 
 inherit nsplugins eutils rpm
 
@@ -11,7 +11,7 @@ SRC_URI="https://helixcommunity.org/download.php/801/${MY_PN}-${PV}.608-20041214
 LICENSE="HBRL"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="mozilla"
+IUSE="nsplugin"
 RDEPEND="!media-video/realplayer
 		>=dev-libs/glib-2
 		>=x11-libs/pango-1.2
@@ -34,7 +34,7 @@ src_install() {
 	domenu realplay.desktop
 
 	# mozilla plugin
-	if use mozilla ; then
+	if use nsplugin ; then
 		cd ${D}/opt/${MY_PN}/mozilla
 		exeinto /opt/netscape/plugins
 		doexe nphelix.so
