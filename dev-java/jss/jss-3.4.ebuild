@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4.ebuild,v 1.4 2005/04/26 01:26:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4.ebuild,v 1.5 2005/07/12 22:16:08 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -14,20 +14,20 @@ SLOT="3.4"
 KEYWORDS="x86 amd64 sparc"
 IUSE=""
 
-S=${WORKDIR}/${P}-src
-
-DEPEND=">=virtual/jdk-1.4
-	app-arch/zip
-	>=sys-apps/sed-4"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-libs/nspr-4.3
 	>=dev-libs/nss-3.9.2"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	app-arch/zip
+	>=sys-apps/sed-4"
+
+S=${WORKDIR}/${P}-src
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/mozilla/security/coreconf
 	cp Linux2.5.mk Linux2.6.mk
-
 
 	echo "INCLUDES += -I${ROOT}usr/include/nss -I${ROOT}usr/include/nspr" \
 		>> ${S}/mozilla/security/coreconf/headers.mk
@@ -52,9 +52,9 @@ src_compile() {
 	emake -j1 BUILD_OPT=1 || die "nss make failed"
 }
 
-src_install () {
+src_install() {
 	cd ${S}/mozilla/dist/classes*
-	zip -q -r ../jss34.jar .
+	zip -q -r ../jss34.jar . || die "zip failed"
 	java-pkg_dojar ../jss34.jar
 
 	cd ${S}
