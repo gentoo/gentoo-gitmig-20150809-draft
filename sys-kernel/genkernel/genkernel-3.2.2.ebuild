@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.2.1.ebuild,v 1.1 2005/07/10 00:41:05 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.2.2.ebuild,v 1.1 2005/07/12 17:41:37 plasmaroo Exp $
 
 VERSION_DMAP='1.00.17'
-VERSION_DMRAID='1.0.0.rc6'
+VERSION_DMRAID='1.0.0.rc8'
 VERSION_LVM2='2.00.25'
 VERSION_UNIONFS='1.0.12a'
 
