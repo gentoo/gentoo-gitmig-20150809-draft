@@ -6,13 +6,13 @@ MD5 099c4bec61b25509119be3611e139c11 iptables-1.2.7a-r3.ebuild 1981
 MD5 ec86656320117bca34ac66944d47a0f8 iptables-1.3.1-r4.ebuild 5611
 MD5 9e0f8c58618de88773070af5a1522cdd iptables-1.2.9-r4.ebuild 5422
 MD5 156b80272ca92ece8d8dcff494cde59f iptables-1.2.9-r1.ebuild 3516
-MD5 dd371445494d361f781d41e264afe43c iptables-1.3.2.ebuild 5121
+MD5 65eba7f8c1029f4dfb75050ce4069c2a iptables-1.3.2.ebuild 5098
 MD5 9895e3a55df2ef6533205b1ed5c2ce7c iptables-1.2.11-r3.ebuild 5500
 MD5 16422469f0e4336f1e84ba6f46644050 iptables-1.2.9.ebuild 2798
 MD5 0341fc17c9ed455b366dd4c686424acb ChangeLog 18372
 MD5 db00dffc05d70ea96abce1c50171c51e files/iptables-1.3.2.init 2547
 MD5 9366ae3d4d34c4dbf665b8539c609dd0 files/digest-iptables-1.2.9 67
-MD5 b428a4b8ebd4353f3f2365bdf4da7a04 files/digest-iptables-1.3.2 206
+MD5 396ad08a192cd926417a200569060278 files/digest-iptables-1.3.2 206
 MD5 dd4f4563c89d33fc6987043d95531e05 files/ip6tables-1.2.9-r1.confd 266
 MD5 e16ca98d9b770d5e61b3eb760b13b7c7 files/ip6tables.confd 384
 MD5 8ac77b3fbebfb5ceb9c6166823afe21d files/iptables-1.2.9-r1.init 1829
@@ -56,7 +56,7 @@ MD5 c4f9d5d795f4ab2c221681e55ebac8dd files/1.2.7a-files/02_all_imq.patch.bz2 293
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0y/ggIKl8Uu19MoRAomIAJ9zcXPH8Ci8MqvUtkY/wgG4Ax/oeQCfUH9d
-gLqIAKRDJJxTOKH3wcSellY=
-=J+Bw
+iD8DBQFC0zOMgIKl8Uu19MoRAke2AJ9CfHPu5qVQkFl657nglude5DzeAACeP3uv
+0ZH/N9CkttKclJvjufwTZM4=
+=3vo7
 -----END PGP SIGNATURE-----
