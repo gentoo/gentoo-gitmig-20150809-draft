@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f6263e1d43ae6f2b13e8bd52a1254dee ChangeLog 1126
+MD5 300fff7dea7fe9bf533e67f75ad60c34 ChangeLog 1299
 MD5 75701bb6f376247fef2884655262fddf metadata.xml 517
 MD5 946b85bc6354ad84a36f62a302334628 selinux-clamav-20050505.ebuild 420
+MD5 0e11a0a133f6758d22107567b05caef6 selinux-clamav-20050712.ebuild 482
 MD5 17b5473f4c32c2fb1e70422031fb759b selinux-clamav-20050626.ebuild 472
 MD5 88760f930acbd5d9b0e53ce121f7adbe files/digest-selinux-clamav-20050505 74
 MD5 4d6e3fa1429f442d1a108cf62d0020d3 files/digest-selinux-clamav-20050626 74
+MD5 64a57c4a6c7a37644288ba91d52179ba files/digest-selinux-clamav-20050712 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCvvJbGSBEIeh4AEYRAoaBAJ9WVEZPJj67wXKZ2bT6hwEvXWgpYgCeM9uK
-a4Ya7clBjVc/S3iPiF/VfrU=
-=J37b
+iD8DBQFC0+XvGSBEIeh4AEYRAjiSAJ4zmjI/fChsCro+2SM7kXKQdeaJ6ACePPyA
+ZBLirhtNKHfDU/V7UkLzv/k=
+=V5OA
 -----END PGP SIGNATURE-----
