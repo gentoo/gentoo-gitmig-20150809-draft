@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 0fd3e62624b3c29d90d52ab45dc2ad07 ChangeLog 2042
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 865bea845d1e42199618c75ccf1115ac sqlite-ruby-1.0.ebuild 645
-MD5 dd0dbd2502feb69d5a567df79e086d99 sqlite-ruby-2.2.2.ebuild 1050
-MD5 70556a0ea391c5750f1fbe2668936292 sqlite-ruby-2.2.3.ebuild 1052
 MD5 470b6f7b0ac0760bf720c14e802e4055 files/digest-sqlite-ruby-1.0 66
 MD5 cebb7186058a6704c874654d77f343a9 files/digest-sqlite-ruby-2.2.2 69
 MD5 f9ffaa6169a50eeab589e21784b0ae4c files/digest-sqlite-ruby-2.2.3 69
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 029205484cc7ab933ce7a6bc57a83536 sqlite-ruby-1.0.ebuild 637
+MD5 dd0dbd2502feb69d5a567df79e086d99 sqlite-ruby-2.2.2.ebuild 1050
+MD5 70556a0ea391c5750f1fbe2668936292 sqlite-ruby-2.2.3.ebuild 1052
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCFkSsz2gxt1z4IGYRAutMAKDlFnkgkKeUcdfCx/Weh8N7q+B04QCfbq53
-QbItzwuTDZ1OUJ/ixuzoWD8=
-=tc4U
+iD8DBQFC1CjNI1lqEGTUzyQRAtFvAJwK4X1fN3mmpJ+9D64t1poBRszjLgCcDju4
+CeLxqz/H0lEV9BoFIVPraqw=
+=naEl
 -----END PGP SIGNATURE-----
