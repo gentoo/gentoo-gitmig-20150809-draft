@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.30 2005/05/06 00:44:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.31 2005/07/12 22:35:34 mattam Exp $
+
+  13 Jul 2005; Matthieu Sozeau <mattam@gentoo.org> lablgtk-1.2.7.ebuild,
+  lablgtk-2.4.0.ebuild:
+  Versions 1.2.7 and 2.4.0 stable on x86 and ppc
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> lablgtk-2.2.0.ebuild,
   lablgtk-2.4.0.ebuild:

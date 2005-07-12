@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.7 2005/05/06 00:44:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.8 2005/07/12 22:35:34 mattam Exp $
 
 IUSE="debug doc glade gnome opengl svg"
 
@@ -20,7 +20,7 @@ DEPEND=">=x11-libs/gtk+-2.4
 		>=x11-libs/gtkglarea-1.9 )"
 
 SLOT="2"
-KEYWORDS="amd64 ~x86 ~ppc ~alpha ia64 ~sparc"
+KEYWORDS="amd64 x86 ppc ~alpha ia64 ~sparc"
 
 src_compile() {
 	use debug && myconf="$myconf --enable-debug"
