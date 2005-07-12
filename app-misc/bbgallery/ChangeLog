@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bbgallery
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bbgallery/ChangeLog,v 1.15 2005/07/12 02:12:00 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bbgallery/ChangeLog,v 1.16 2005/07/12 15:28:22 smithj Exp $
+
+  12 Jul 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml:
+  added metadata. this package needs a maintainer
 
 *bbgallery-1.2.0-r1 (12 Jul 2005)
 
