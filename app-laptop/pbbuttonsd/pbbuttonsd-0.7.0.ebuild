@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.0.ebuild,v 1.1 2005/07/11 22:41:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.0.ebuild,v 1.2 2005/07/12 04:22:22 josejx Exp $
 
-inherit eutils
+inherit eutils linux-info
 
 DESCRIPTION="program to map special Powerbook/iBook keys"
 HOMEPAGE="http://pbbuttons.sf.net"
@@ -18,6 +18,12 @@ DEPEND="virtual/libc
 RDEPEND=""
 
 src_compile() {
+	if ! linux_chkconfig_present INPUT_EVDEV ; then
+		eerror "Please enable CONFIG_INPUT_EVDEV in your kernel"
+		eerror "pbbuttonsd will not work without it."
+		die "Kernel not compiled with CONFIG_INPUT_EVDEV support"
+	fi
+
 	econf || die "Sorry, failed to configure pbbuttonsd"
 	emake || die "Sorry, failed to compile pbbuttonsd"
 }
@@ -31,6 +37,12 @@ src_install() {
 }
 
 pkg_postinst() {
+	if linux_chkconfig_module INPUT_EVDEV ; then
+		ewarn "Ensure that the evdev kernel module is loaded otherwise"
+		ewarn "pbbuttonsd won't work."
+	fi
+
+	einfo
 	einfo "This version of pbbuttonsd can replace PMUD functionality."
 	einfo "If you want PMUD installed and running, you should set"
 	einfo "replace_pmud=no in /etc/pbbuttonsd.conf. Otherwise you can"
