@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facets
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.1 2005/04/20 15:26:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.2 2005/07/12 11:15:06 dholm Exp $
+
+  12 Jul 2005; David Holm <dholm@gentoo.org> facets-0.6.3.ebuild:
+  Added to ~ppc.
 
 *facets-0.6.3 (20 Apr 2005)
 
