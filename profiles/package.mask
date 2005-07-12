@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4184 2005/07/11 21:23:31 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4185 2005/07/12 09:14:30 sebastian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Sebastian Bergmann (sebastian@gentoo.org) (12 Jul 2005)
+# Unmaintained upstream for over two years and binary-only, thus
+# not compatible with recent PHP versions.
+dev-php/php-accelerator
 
 # Chris White (chriswhite@gentoo.org) (08 Jul 2005)
 # Masking initial import of ipodder as it has some issues
