@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1f433d03b3e2f45172f7ac5cfa35dc04 commons-transaction-1.0.1.ebuild 1392
 MD5 aa9b6fd3377be94b56f783eca943229b ChangeLog 593
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 f09738e95a2701a10c8bc3d084c9aaad files/digest-commons-transaction-1.0.1 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC08W1/rLF9B432nYRAu5DAJkBcdwNK4aqCBJHSIUNd1ase6YAIgCdEnvj
+e0l1NHSTydKMNrA76xVs97c=
+=bUCh
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-transaction
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-transaction/ChangeLog,v 1.1 2005/05/22 14:56:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-transaction/ChangeLog,v 1.2 2005/07/12 13:29:02 axxo Exp $
+
+  12 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
+  commons-transaction-1.0.1.ebuild:
+  missing dep: dev-java/jta
 
 *commons-transaction-1.0.1 (22 May 2005)
 
