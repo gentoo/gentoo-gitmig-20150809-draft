@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.2.ebuild,v 1.1 2005/07/12 02:38:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.2.ebuild,v 1.2 2005/07/12 02:48:52 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -155,4 +155,8 @@ pkg_postinst() {
 		einfo "  echo \"1\" > /proc/sys/net/ipv6/conf/all/forwarding"
 		einfo "for ipv6."
 	fi
+	echo
+	ewarn "When upgrading from iptables-1.2.x, you may be unable to remove"
+	ewarn "rules added with iptables-1.3.x.  This is a known issue, please see:"
+	ewarn "http://bugs.gentoo.org/show_bug.cgi?id=92535"
 }
