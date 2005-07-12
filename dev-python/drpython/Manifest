@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 32523975d65de46a0967c858df40430a ChangeLog 1256
-MD5 e0398e4fe713935f5761036dde04b7dd drpython-3.10.12.ebuild 804
+MD5 834dcdd1b2628f387d66a5459e2f7247 ChangeLog 1339
 MD5 948a940cc7f534cf1b0b136f02d51a66 metadata.xml 381
-MD5 9af71277d21323629135d581763c72ea drpython-3.10.13.ebuild 1119
-MD5 8f97fad63e509cc0537b92bedec9c731 files/drpython.py-3.10.12.patch 370
+MD5 e0398e4fe713935f5761036dde04b7dd drpython-3.10.12.ebuild 804
+MD5 ce991927f8fbb931c2b9accaf9f3fcd7 drpython-3.10.13.ebuild 1119
 MD5 1ad88fcbeefa623214abdbbbc5305509 files/digest-drpython-3.10.12 65
-MD5 8f97fad63e509cc0537b92bedec9c731 files/drpython.py-3.10.13.patch 370
+MD5 8f97fad63e509cc0537b92bedec9c731 files/drpython.py-3.10.12.patch 370
 MD5 d50979dcdc996758a4e570dc82d0a015 files/digest-drpython-3.10.13 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjU5qHOCQyz1WCXYRAoz5AKCzQebV6+bY9//b4erWnecmz/cE7wCg0Iew
-8OFna8LhNFgWm4r3OnuEiMw=
-=eXBe
------END PGP SIGNATURE-----
+MD5 8f97fad63e509cc0537b92bedec9c731 files/drpython.py-3.10.13.patch 370

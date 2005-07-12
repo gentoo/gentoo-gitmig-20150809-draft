@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0fc8a393669d7547bcd042dda7445785 cherrytemplate-1.0.0.ebuild 557
+MD5 5876f50286a59cca12e656d94119c614 ChangeLog 455
+MD5 dbf157e7ad3a901d8ebfd2b9f25b0406 cherrytemplate-1.0.0.ebuild 557
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
-MD5 fd1ee51a311c77239ec00ffc502ad6a2 ChangeLog 368
 MD5 897a607d9821fa7f856cfae7008075e2 files/digest-cherrytemplate-1.0.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNw/iz2gxt1z4IGYRAk0NAJ9CYF0gdcdampglDpmytHPQMKsaxgCeLY5V
-CYwIg7WLk6FFmuU3PHz0/bE=
-=GFCh
------END PGP SIGNATURE-----
