@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r4.ebuild,v 1.6 2005/07/12 19:58:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r4.ebuild,v 1.7 2005/07/12 19:59:33 axxo Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ SLOT="1.5.1"
 KEYWORDS="x86 sparc ppc amd64"
 IUSE="doc"
 
-RDEPEND=">=virtual/jdk-1.3
+RDEPEND=">=virtual/jre-1.3
 	=dev-java/rhino-1.5*
 	=dev-java/xerces-2.6*
 	dev-java/xml-commons"
