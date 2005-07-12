@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ldapsdk-4.1.7-r1.ebuild,v 1.3 2005/04/26 01:27:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ldapsdk-4.1.7-r1.ebuild,v 1.4 2005/07/12 23:19:55 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -13,13 +13,14 @@ SLOT="4.1"
 KEYWORDS="x86 amd64 sparc"
 IUSE="doc"
 
-S=${WORKDIR}/mozilla/directory/java-sdk
-
-DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.6.2"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/jss-3.4*
 	=dev-java/jakarta-oro-2.0*"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	>=dev-java/ant-core-1.6.2"
+
+S=${WORKDIR}/mozilla/directory/java-sdk
 
 src_unpack() {
 	unpack ${A}
@@ -28,8 +29,8 @@ src_unpack() {
 	epatch ${FILESDIR}/ldapsdk-gentoo.patch
 
 	cd ${S}
-	echo "ororegexp.jar=`java-config -p jakarta-oro-2.0`" > build.properties
-	echo "jss.jar=`java-config -p jss-3.4`" >> build.properties
+	echo "ororegexp.jar=$(java-pkg_getjars jakarta-oro-2.0)" > build.properties
+	echo "jss.jar=$(java-pkg_getjars jss-3.4)" >> build.properties
 
 	cd ${S}/ldapjdk/lib
 	rm -f *.jar
@@ -45,7 +46,7 @@ src_compile() {
 	ant ${antflags} || die "compile failed"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar dist/packages/*.jar
 
 	use doc && java-pkg_dohtml -r dist/doc/*
