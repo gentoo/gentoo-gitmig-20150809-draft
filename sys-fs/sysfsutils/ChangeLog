@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.25 2005/07/03 20:37:41 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.26 2005/07/12 13:39:26 blubb Exp $
+
+  12 Jul 2005; Simon Stelling <blubb@gentoo.org> sysfsutils-1.2.0-r2.ebuild:
+  stable on amd64
 
   03 Jul 2005; Olivier Crête <tester@gentoo.org>
   sysfsutils-1.2.0-r2.ebuild:
