@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.8-r1.ebuild,v 1.6 2005/07/09 17:50:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.8-r1.ebuild,v 1.7 2005/07/12 21:52:56 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -40,8 +40,8 @@ pkg_preinst() {
 }
 
 src_compile() {
-	./configure --prefix=${D}${RESIN_HOME}
-	make
+	./configure --prefix=${D}${RESIN_HOME} || die "configure failed"
+	make || die "make failed"
 }
 
 src_install() {
