@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 4a4d8b63d58b9dc3c8582d9ad4d45c6c ChangeLog 760
 MD5 f9c07e93fd234c2f2dc46e7ed1ccdca3 metadata.xml 253
-MD5 af22f0d8c57f5b3eb876c6234ff3ec0f perl-support-2.5.ebuild 574
+MD5 be4fdee34e61040e215e508e86adb531 perl-support-2.5.ebuild 517
 MD5 f15ebd69c09087f435ceab5f330963a9 files/digest-perl-support-2.5 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCwpFLtG5z4I8BtQoRAgZ+AJ0eDyUt1RXS9ViFx1zndqK2PWTzDACfaYcO
-uiTl8sZqo11EOEYWfYiZJ6Y=
-=jX91
+iD8DBQFC0+/8tG5z4I8BtQoRApWLAJ44Z7kPpgNVY0hTBNuRLWMQ8H7m0gCfcmeq
+5e/JyXLmMtkY+jGicYoUiHI=
+=oLXA
 -----END PGP SIGNATURE-----
