@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/files/gkrellmd,v 1.4 2004/07/14 21:13:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/files/gkrellmd,v 1.5 2005/07/12 18:50:30 mholzer Exp $
 
 depend() {
 	need net
+	after lm_sensors
 }
 
 start() {

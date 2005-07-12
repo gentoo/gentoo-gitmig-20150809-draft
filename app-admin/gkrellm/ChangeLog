@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.117 2005/06/13 17:34:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.118 2005/07/12 18:50:30 mholzer Exp $
+
+  12 Jul 2005; Martin Holzer <mholzer@gentoo.org> files/gkrellmd:
+  adding lm-sensors in init script. closes #95514
 
   13 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> gkrellm-2.2.5.ebuild:
   alpha stable
@@ -26,7 +29,7 @@
 
   18 May 2005; Martin Holzer <mholzer@gentoo.org> -gkrellm-2.1.28.ebuild,
   gkrellm-2.1.28-r1.ebuild:
-  changing depend. closes 65969
+  changing depend. closes #65969
 
 *gkrellm-2.2.6 (18 May 2005)
 
@@ -51,7 +54,7 @@
 *gkrellm-2.2.5 (28 Mar 2005)
 
   28 Mar 2005; Martin Holzer <mholzer@gentoo.org> +gkrellm-2.2.5.ebuild:
-  Version bumped. Closes 86622
+  Version bumped. Closes #86622
 
   25 Mar 2005; Danny van Dyk <kugelfang@gentoo.org> gkrellm-2.2.4.ebuild:
   Marked stable on amd64.
@@ -75,12 +78,12 @@
 *gkrellm-2.2.4 (10 Sep 2004)
 
   10 Sep 2004; Martin Holzer <mholzer@gentoo.org> +gkrellm-2.2.4.ebuild:
-  Version bumped. Closes 63368
+  Version bumped. Closes #63368
 
 *gkrellm-2.2.2 (20 Jul 2004)
 
   20 Jul 2004; Martin Holzer <mholzer@gentoo.org> gkrellm-2.2.2.ebuild:
-  Version bumped. Closes 57312
+  Version bumped. Closes #57312
 
   12 Jul 2004; Tom Gall <tgall@gentoo.org> gkrellm-2.2.1.ebuild:
   added ~ppc64, bug #55264
@@ -91,7 +94,7 @@
 *gkrellm-2.2.1 (15 Jun 2004)
 
   15 Jun 2004; Martin Holzer <mholzer@gentoo.org> gkrellm-2.2.1.ebuild:
-  Version bumped. Closes 52955.
+  Version bumped. Closes #52955.
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> gkrellm-1.2.13.ebuild,
   gkrellm-2.1.25.ebuild, gkrellm-2.1.28-r1.ebuild, gkrellm-2.1.28.ebuild,
@@ -101,7 +104,7 @@
 *gkrellm-2.2.0 (01 Jun 2004)
 
   01 Jun 2004; Martin Holzer <mholzer@gentoo.org> gkrellm-2.2.0.ebuild:
-  Version bumped. Cloeses 51313
+  Version bumped. Cloeses #51313
 
   14 May 2004; Lars Weiler <pylon@gentoo.org> gkrellm-2.1.28-r1.ebuild:
   Stable on ppc
@@ -136,7 +139,7 @@
 *gkrellm-2.1.28 (18 Mar 2004)
 
   18 Mar 2004; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.28.ebuild:
-  Version bumped. Closes 45029
+  Version bumped. Closes #45029
 
   18 Mar 2004; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.27.ebuild:
   x86 stable.
@@ -152,7 +155,7 @@
 
   01 Mar 2004; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.27.ebuild,
   files/gkrellm-2.1.27-dotkeep.patch:
-  Version bumped. Closes 43232
+  Version bumped. Closes #43232
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> gkrellm-2.1.25.ebuild:
   Stable on sparc.
@@ -163,7 +166,7 @@
 *gkrellm-2.1.26 (24 Feb 2004)
 
   24 Feb 2004; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.26.ebuild:
-  Version bumped. Closes 42747
+  Version bumped. Closes #42747
 
   18 Feb 2004; Aron Griffis <agriffis@gentoo.org> gkrellm-2.1.24.ebuild,
   gkrellm-2.1.25.ebuild:
@@ -174,7 +177,7 @@
 
   23 Jan 2004; Martin Holzer <mholzer@gentoo.org>
   files/gkrellm-2.1.24-mail.patch, files/gkrellm-dotkeep.patch:
-  fixing patch. Closes =39076
+  fixing patch. Closes #39076
 
 *gkrellm-2.1.25 (22 Jan 2004)
 
@@ -201,7 +204,7 @@
   Stable on sparc.
 
   26 Dec 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.24.ebuild:
-  adding ssl. closes 36363.
+  adding ssl. closes #36363.
 
 *gkrellm-2.1.24 (20 Dec 2003)
 
