@@ -1,4 +1,14 @@
-MD5 205330f2f46f156c0ffa7a5e7da6e7dc ChangeLog 1430
-MD5 00040612ff4eaf564701ab729fb3d4dc gnu-activation-1.0.ebuild 885
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5956060baf57236d5fb4bd23d0b5173c gnu-activation-1.0.ebuild 826
+MD5 1ca175ee6473d8b7c7dab0375bdb8669 ChangeLog 1520
 MD5 c448668ea8e648a4c33769a7b8abf74c metadata.xml 1000
 MD5 7645f60d5936a5bac43a832d3aa143fc files/digest-gnu-activation-1.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC08iR/rLF9B432nYRAgJQAJwPWVPqyeb5v+3WIABsDWfE08EMQACgwoNK
+UeTsxQRrls4X3yypMZnvLJY=
+=BYe1
+-----END PGP SIGNATURE-----
