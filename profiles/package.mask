@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4185 2005/07/12 09:14:30 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4186 2005/07/12 17:15:25 chriswhite Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -30,7 +30,7 @@ dev-php/php-accelerator
 # Masking initial import of ipodder as it has some issues
 # with the episode cleanup window.  However, those that don't use
 # it should be ok.
-media-sound/ippoder
+media-sound/ipodder
 
 # Donnie Berkholz <spyderous@gentoo.org> (08 Jul 2005)
 # Development versions
