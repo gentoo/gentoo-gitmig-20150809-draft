@@ -2,16 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>java</herd>
-  <maintainer>
-    <email>aether@gentoo.org</email>
-    <name>Jason Mobarak</name>
-    <description>Maintainer</description>
-  </maintainer>
-  <maintainer>
-    <email>strider@gentoo.org</email>
-    <name>Adrian Almenar</name>
-    <description>Maintainer</description>
-  </maintainer>
   <longdescription>
   java-config is used to configure the Java subsystem on your Gentoo 
   installation. In particular, it can be used to configure system-wide and
