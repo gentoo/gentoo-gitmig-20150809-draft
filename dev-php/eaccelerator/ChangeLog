@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/eaccelerator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.14 2005/07/02 05:42:10 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.15 2005/07/12 17:12:30 sebastian Exp $
+
+  12 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  eaccelerator-0.9.3-r1.ebuild:
+  Fix bug 98276.
 
 *eaccelerator-0.9.3-r1 (02 Jul 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3-r1.ebuild,v 1.1 2005/07/02 05:42:10 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3-r1.ebuild,v 1.2 2005/07/12 17:12:30 sebastian Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_ZENDEXT="yes"
@@ -87,18 +87,19 @@ src_install() {
 	php-ext-base_addtoinifiles "eaccelerator.keys" '"shm_and_disk"'
 	php-ext-base_addtoinifiles "eaccelerator.sessions" '"shm_and_disk"'
 	php-ext-base_addtoinifiles "eaccelerator.content" '"shm_and_disk"'
-	php-ext-base_addtoinifiles "eaccelerator.admin.name" '"yourusername"'
-	php-ext-base_addtoinifiles "eaccelerator.admin.password" '"yourpassword"'
+	php-ext-base_addtoinifiles ";eaccelerator.admin.name" '"username"'
+	php-ext-base_addtoinifiles ";eaccelerator.admin.password" '"hashed_password"'
 }
 
 pkg_postinst () {
-	einfo "You need to restart Apache to activate eAccelerator"
+	einfo "You need to restart your webserver to activate eAccelerator."
 	einfo
-	einfo 'A web interface is available to manage the eAccelerator cache.'
-	einfo 'Copy /usr/share/eaccelerator/*.php to somewhere'
-	einfo 'where your web server can see it.'
+	einfo "A web interface is available to manage the eAccelerator cache."
+	einfo "Copy /usr/share/eaccelerator/*.php to somewhere"
+	einfo "where your web server can see it. See the documentation on how"
+	einfo "to secure this web interface with authentication."
 	einfo
-	einfo 'A PHP script encoder is available to encode your PHP scripts.'
-	einfo 'The encoder is available as /usr/share/eaccelerator/encoder.php'
-	einfo 'The encoded file format is not yet considered stable'
+	einfo "A PHP script encoder is available to encode your PHP scripts."
+	einfo "The encoder is available as /usr/share/eaccelerator/encoder.php"
+	einfo "The encoded file format is not yet considered stable."
 }
