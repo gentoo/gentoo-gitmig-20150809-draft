@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 11a51408cb55be1db55c1ff194e8b210 commons-betwixt-0.6-r1.ebuild 1462
+MD5 42497afa88c2cf81d6402ee3451bf7fc commons-betwixt-0.6-r1.ebuild 1462
 MD5 8cb658f6607db38744a63b8b626f96dd ChangeLog 981
 MD5 1eb638c237e8835b9fe6b49a60e42d9d metadata.xml 739
 MD5 c4db26920b75dccce46c479139741605 files/digest-commons-betwixt-0.6-r1 75
 MD5 3b892742ca91101232da276492fa254c files/commons-betwixt-0.6-noget.patch 980
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrIwS06ebR+OMO78RAianAJ9DxeJZu/n5YOooPgrzqkWa3JDvfQCeJZ5t
-Vr0ncXOGx6ZsjKSoLLOFAIQ=
-=UcUA
+iD8DBQFC05L8/rLF9B432nYRAnfqAJ9ZIBTg+RE5B+SfQNz0cUW55948kQCePj1y
+SuAQ9jTDFi7Dp63gR/pVhHw=
+=vneM
 -----END PGP SIGNATURE-----
