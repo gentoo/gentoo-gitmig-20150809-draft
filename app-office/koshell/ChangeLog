@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koshell
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/ChangeLog,v 1.9 2005/07/04 23:53:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koshell/ChangeLog,v 1.10 2005/07/12 19:34:51 josejx Exp $
+
+  12 Jul 2005; Joseph Jezak <josejx@gentoo.org> koshell-1.3.5.ebuild:
+  Marked ppc stable, thanks bambam.
 
   04 Jul 2005; Jason Wever <weeve@gentoo.org> koshell-1.4.0.ebuild:
   Added ~sparc keyword.
