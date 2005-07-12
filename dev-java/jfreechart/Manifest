@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a0fa502270417b01a869f222abc2ccb2 ChangeLog 1137
+MD5 78ce8531285708ef385fda842c7eab2b ChangeLog 1226
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 c22ede67872e8580931e1267297ecb3a jfreechart-0.9.21.ebuild 1172
+MD5 97f0174c9d1bd584fefa407bae6d14c0 jfreechart-0.9.21.ebuild 1191
 MD5 bf02d5178ac7f252a84e57281be0e085 files/digest-jfreechart-0.9.21 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFChmQd06ebR+OMO78RAozxAKCPACTPhhf/osYc1bvw0yIuR2swQQCgiZ/I
-JrUryXzaTZTSBhFwnL0lKeg=
-=42vA
------END PGP SIGNATURE-----
