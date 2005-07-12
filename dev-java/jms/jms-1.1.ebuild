@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jms/jms-1.1.ebuild,v 1.10 2005/07/12 19:23:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jms/jms-1.1.ebuild,v 1.11 2005/07/12 19:25:25 axxo Exp $
 
 inherit java-pkg
 
@@ -38,7 +38,7 @@ src_compile() {
 	local javac_cmd="javac"
 	use jikes && java_cmd="jikes -bootclasspath ${JAVA_HOME}/jre/lib/rt.jar"
 
-	${javac_cmd} -nowarn -d ${S}/build $(find -name "*.java")
+	${javac_cmd} -nowarn -d ${S}/build $(find -name "*.java") || die "failed too build"
 	if use doc ; then
 		mkdir ${S}/api
 		javadoc -d ${S}/api -quiet javax.jms
