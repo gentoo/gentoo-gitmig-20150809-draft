@@ -183,6 +183,7 @@ if [[ ! -f step5 ]]; then
 fi
 
 if [[ ! -f step6 ]] ; then
+	rm -f /emul/linux/x86/usr/lib/libsandbox.* &> /dev/null
 	emerge unmerge emul-linux-x86-glibc || myDie "emerge emul-glibc failed"
 	touch step6
 fi
