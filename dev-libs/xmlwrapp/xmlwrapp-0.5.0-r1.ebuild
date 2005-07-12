@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.5.0-r1.ebuild,v 1.8 2005/06/13 17:20:36 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.5.0-r1.ebuild,v 1.9 2005/07/12 07:59:49 ka0ttic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ doc? ( http://pmade.org/software/xmlwrapp/download/documentation/${PN}-api.tar.g
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ppc x86"
+KEYWORDS="alpha ~amd64 ~hppa ppc ~sparc x86"
 IUSE="doc test"
 
 RDEPEND="virtual/libc
