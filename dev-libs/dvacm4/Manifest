@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e770f770eae4573fb68491a2cc858257 dvacm4-0.3.5-r1.ebuild 728
+MD5 3f51016151379a853da09b4ac3da655f dvacm4-0.3.5-r1.ebuild 726
 MD5 2bda1f5888ffcf0d92932223445e1473 dvacm4-0.3.5.ebuild 612
-MD5 d713ada68dc44e9f394f696aacaa1193 ChangeLog 1553
+MD5 48aebcb58e46aa06b04e57ed22a5f8e3 ChangeLog 1650
 MD5 e95d8deaaecfc489effa2663fad68493 files/digest-dvacm4-0.3.5-r1 64
 MD5 70555dec8bfe119d1b8c3c60f009daa9 files/dvacm4-0.3.5-fix-underquoted-m4.diff 3564
 MD5 e95d8deaaecfc489effa2663fad68493 files/digest-dvacm4-0.3.5 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjdtaEZCkKN40op4RAvYsAKCwhUdAMU2mI5AIBWFxN3Y98gMMSwCgspkm
-kK7D4Zp/P3cMC/4kSdRIoKE=
-=81qX
+iD8DBQFC0+HKEZCkKN40op4RAlv5AJ0WbBN+DV6fqehF0dNeits94p9GDACfY3Uz
+jjjiEXlp+PJZ7+fBHiH8RcA=
+=UB9g
 -----END PGP SIGNATURE-----
