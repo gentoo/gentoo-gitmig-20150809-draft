@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.3.5-r1.ebuild,v 1.1 2005/03/21 03:47:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.3.5-r1.ebuild,v 1.2 2005/07/12 20:34:28 swegener Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/directory/acct.html"
 SRC_URI="http://www.physik3.uni-rostock.de/tim/kernel/utils/acct/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~ppc"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="virtual/libc"
 S="${WORKDIR}/${MY_P}"
