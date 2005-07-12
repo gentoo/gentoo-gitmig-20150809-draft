@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1307 2005/07/12 16:55:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1308 2005/07/12 19:25:21 rphillips Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -477,6 +477,9 @@ media-plugins/bmp-wma:wma123 - Installs optional commandline wma player
 media-plugins/eq-xmms:sse-filters - Enable SSE-based equalizer's implementation
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-plugins/mythphone:festival - Enable festival support
+media-radio/xastir:festival - Enable festival support
+media-radio/xastir:ax25 - Enable ax25 support
+media-radio/xastir:shape - Enable shapelib support
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
