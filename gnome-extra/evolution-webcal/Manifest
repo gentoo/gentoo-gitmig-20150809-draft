@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4fd723161ef947ce5adc371f97ffcb90 ChangeLog 2875
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 29844bae2ecf81b2924fd95d7101db51 evolution-webcal-2.0.1.ebuild 691
 MD5 2f32241b1bf782e6b828e3dd357737ca evolution-webcal-2.2.1.ebuild 721
-MD5 688d50910b6096fc1b1bbe41e4c4613a evolution-webcal-2.2.0.ebuild 718
-MD5 9f6faeb1745918c02fcc2629df67905b files/digest-evolution-webcal-2.2.1 75
+MD5 ce560caa553ee7f23ef1c115ad20463c evolution-webcal-2.2.0.ebuild 717
+MD5 29844bae2ecf81b2924fd95d7101db51 evolution-webcal-2.0.1.ebuild 691
+MD5 3453065817af7dce9f69d26d116e2d35 ChangeLog 2979
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 cf90204d66f7ac8860f2a301c9fcc388 files/digest-evolution-webcal-2.0.1 75
 MD5 81473745179587b420446621b5344a4b files/digest-evolution-webcal-2.2.0 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxo3pKf2g/qXtneoRAt14AJ0S4gZhRH0aAoEXw2VQdBf/Lcib0ACdEhNi
-On16LcDjWjGGe9QAuznupjU=
-=Dn0p
------END PGP SIGNATURE-----
+MD5 9f6faeb1745918c02fcc2629df67905b files/digest-evolution-webcal-2.2.1 75
