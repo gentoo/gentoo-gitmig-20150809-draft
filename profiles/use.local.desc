@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1305 2005/07/11 23:39:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1306 2005/07/12 15:08:24 smithj Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -95,6 +95,7 @@ app-i18n/uim-svn:immqt - Enable immodule for Qt support
 app-i18n/uim:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/uim:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
+app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
 app-misc/booh:transcode - Use transcode to extract video thumbnails
 app-misc/lirc:streamzap - add the streamzap driver to lirc
 app-misc/mc:7zip - add support for 7zip archives
