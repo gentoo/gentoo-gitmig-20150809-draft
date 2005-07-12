@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.10.2.ebuild,v 1.3 2005/02/18 11:03:35 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.13.0.ebuild,v 1.1 2005/07/12 22:37:16 mattam Exp $
 
 inherit eutils
 
-IUSE="gtk gtk2"
+IUSE="gtk gtk2 doc static debug"
 
 DESCRIPTION="Two-way cross-platform file synchronizer"
 HOMEPAGE="http://www.cis.upenn.edu/~bcpierce/unison/"
@@ -18,7 +18,9 @@ DEPEND=">=dev-lang/ocaml-3.04
 RDEPEND="gtk? ( gtk2? ( >=dev-ml/lablgtk-2.2 ) !gtk2? ( =dev-ml/lablgtk-1.2* )
 || ( net-misc/x11-ssh-askpass net-misc/gtk2-ssh-askpass ) )"
 
-SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/beta-test/${P}/${P}.tar.gz"
+SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/releases/beta/${P}.tar.gz
+doc? ( http://www.cis.upenn.edu/~bcpierce/unison/download/releases/beta/${P}-manual.pdf
+	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/beta/${P}-manual.html )"
 
 pkg_setup() {
 	ewarn "This is a beta release, use at your very own risk"
@@ -33,7 +35,15 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
+	local myconf="THREADS=true"
+
+	if use static; then
+		myconf="$myconf STATIC=true"
+	fi
+
+	if use debug; then
+		myconf="$myconf DEBUGGING=true"
+	fi
 
 	if use gtk; then
 		if use gtk2; then
@@ -45,13 +55,18 @@ src_compile() {
 		myconf="$myconf UISTYLE=text"
 	fi
 
-	make $myconf CFLAGS="" || die
+	make $myconf CFLAGS="" || die "error making unsion"
 }
 
 src_install () {
 	# install manually, since it's just too much
 	# work to force the Makefile to do the right thing.
-	dobin unison
+	dobin unison || die
 	dodoc BUGS.txt CONTRIB COPYING INSTALL NEWS \
-	      README ROADMAP.txt TODO.txt
+	      README ROADMAP.txt TODO.txt || die
+
+	if use doc; then
+		dohtml ${DISTDIR}/${P}-manual.html || die
+		dodoc ${DISTDIR}/${P}-manual.pdf || die
+	fi
 }
