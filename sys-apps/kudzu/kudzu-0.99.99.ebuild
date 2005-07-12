@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-0.99.99.ebuild,v 1.10 2005/06/23 14:20:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-0.99.99.ebuild,v 1.11 2005/07/12 16:52:52 wolf31o2 Exp $
 
 DESCRIPTION="Red Hat Hardware detection tools"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
@@ -16,6 +16,7 @@ DEPEND="$RDEPEND
 	sys-devel/gettext
 	sys-apps/pciutils
 	>=dev-libs/dietlibc-0.20
+	!sys-libx/libkudzu
 	!sys-apps/kudzu-knoppix"
 
 src_compile() {
