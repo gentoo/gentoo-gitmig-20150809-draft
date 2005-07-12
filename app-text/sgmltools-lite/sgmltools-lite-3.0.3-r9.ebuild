@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r8.ebuild,v 1.1 2005/05/29 14:23:03 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r9.ebuild,v 1.1 2005/07/12 04:00:33 leonardop Exp $
 
 inherit python sgml-catalog
 
@@ -14,18 +14,30 @@ SLOT="0"
 KEYWORDS="~alpha ~arm ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="tetex"
 
-DEPEND="virtual/python
+DEPEND=">=virtual/python-1.5
 	app-text/sgml-common
 	~app-text/docbook-sgml-dtd-3.1
 	app-text/docbook-dsssl-stylesheets
 	app-text/openjade
-	tetex? ( app-text/jadetex )"
+	tetex? ( app-text/jadetex )
+	|| (
+		www-client/w3m
+		www-client/lynx
+	)"
+
+
+pkg_setup() {
+	sgml-catalog_cat_include "/etc/sgml/sgml-lite.cat" \
+		"/usr/share/sgml/stylesheets/sgmltools/sgmltools.cat"
+	sgml-catalog_cat_include "/etc/sgml/linuxdoc.cat" \
+		"/usr/share/sgml/dtd/sgmltools/catalog"
+}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	#remove CVS directories from the tree
+	# Remove CVS directories from the tree
 	find . -name CVS | xargs rm -rf
 }
 
@@ -83,6 +95,3 @@ pkg_postrm() {
 	python_mod_cleanup ${ROOT}usr/share/sgml/misc/sgmltools/python
 	sgml-catalog_pkg_postrm
 }
-
-sgml-catalog_cat_include "/etc/sgml/sgml-lite.cat" \
-	"/usr/share/sgml/stylesheets/sgmltools/sgmltools.cat"
