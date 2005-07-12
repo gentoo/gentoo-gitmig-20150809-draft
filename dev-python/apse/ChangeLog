@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.1 2005/01/24 17:58:59 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.2 2005/07/12 11:00:37 dholm Exp $
+
+  12 Jul 2005; David Holm <dholm@gentoo.org> apse-0.2.ebuild:
+  Added to ~ppc.
 
 *apse-0.2 (24 Jan 2005)
 

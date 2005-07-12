@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fxpy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/ChangeLog,v 1.7 2005/05/07 19:59:51 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/ChangeLog,v 1.8 2005/07/12 11:03:10 dholm Exp $
+
+  12 Jul 2005; David Holm <dholm@gentoo.org> fxpy-1.0.5-r1.ebuild:
+  Added to ~ppc.
 
 *fxpy-1.0.5-r1 (07 May 2005)
 
