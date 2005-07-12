@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.15 2005/06/24 00:32:26 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.16 2005/07/12 04:21:11 geoman Exp $
 
 inherit eutils gnustep-funcs
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc amd64 ~mips alpha"
+KEYWORDS="alpha amd64 mips ppc sparc x86"
 
 if use gnustep; then
 	egnustep_install_domain "System"

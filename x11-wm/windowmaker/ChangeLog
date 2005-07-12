@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.56 2005/07/06 23:07:18 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.57 2005/07/12 04:21:11 geoman Exp $
+
+  12 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
+  windowmaker-0.91.0-r1.ebuild:
+  stable on mips
 
 *windowmaker-0.92.0-r1 (06 Jul 2005)
 
