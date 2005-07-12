@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r1.ebuild,v 1.4 2005/07/12 23:27:07 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r1.ebuild,v 1.5 2005/07/12 23:31:11 axxo Exp $
 
 inherit java-pkg
 
@@ -14,6 +14,7 @@ RDEPEND="virtual/jre
 	=dev-java/rhino-1.5*
 	=dev-java/log4j-1.2*
 	dev-java/gnu-jaxp
+	dev-java/xml-commons
 	=dev-java/xerces-2.6*"
 DEPEND="virtual/jdk
 	>=dev-java/ant-1.4
@@ -28,7 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 	java-pkg_jar-from xerces-2 xercesImpl.jar
-	java-pkg_jar-from xerces-2 xml-apis.jar
+	java-pkg_jar-from xml-commons xml-apis.jar
 	java-pkg_jar-from rhino-1.5
 	java-pkg_jar-from gnu-jaxp
 	java-pkg_jar-from ant-core ant.jar
