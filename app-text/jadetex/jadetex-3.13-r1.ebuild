@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r1.ebuild,v 1.2 2005/04/15 12:45:34 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r1.ebuild,v 1.3 2005/07/12 03:55:30 leonardop Exp $
 
 inherit latex-package
 
@@ -40,9 +40,8 @@ src_install() {
 	addwrite /usr/share/texmf/ls-R
 	addwrite /usr/share/texmf/fonts
 	addwrite /var/cache/fonts
-	make \
-		DESTDIR=${D} \
-		install || die
+
+	make DESTDIR=${D} install || die
 
 	dodoc ChangeLog*
 	doman *.1
@@ -58,7 +57,7 @@ src_install() {
 		dosym /usr/bin/pdfvirtex /usr/bin/pdfjadetex
 	fi
 
-	dohtml -r doc/*
+	dohtml -r .
 }
 
 src_test() {

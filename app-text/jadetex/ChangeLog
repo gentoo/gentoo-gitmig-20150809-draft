@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.26 2005/04/15 12:45:34 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.27 2005/07/12 03:55:30 leonardop Exp $
+
+  11 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> jadetex-3.13-r1.ebuild:
+  Small correction for installation of HTML docs.
 
   15 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> jadetex-3.13-r1.ebuild:
   Stable on amd64.
