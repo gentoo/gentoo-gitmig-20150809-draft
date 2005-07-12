@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.5.3-r1.ebuild,v 1.1 2005/05/19 20:50:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.5.3-r1.ebuild,v 1.2 2005/07/12 23:33:29 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -12,11 +12,7 @@ KEYWORDS="x86 amd64 sparc"
 SLOT="0.9"
 IUSE="doc jikes postgres source"
 
-DEPEND=">=virtual/jdk-1.4
-	${RDEPEND}"
-
 RDEPEND=">=virtual/jre-1.4
-	>=dev-java/ant-core-1.5
 	>=dev-java/adaptx-0.9.5.3
 	>=dev-java/commons-logging-1.0.4
 	=dev-java/jakarta-oro-2.0*
@@ -28,6 +24,10 @@ RDEPEND=">=virtual/jre-1.4
 	=dev-java/servletapi-2.3*
 	=dev-java/xerces-1.3*
 	postgres? ( =dev-java/jdbc2-postgresql-7.3* )"
+
+DEPEND=">=virtual/jdk-1.4
+	>=dev-java/ant-core-1.5
+	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -53,7 +53,6 @@ src_unpack() {
 	use postgres && java-pkg_jar-from jdbc2-postgresql-5
 }
 
-
 src_compile() {
 	cd ${S}/src
 	local antflags="jar"
@@ -63,9 +62,8 @@ src_compile() {
 }
 
 src_install() {
-	mv dist/${P}-xml.jar ${PN}-xml.jar
-	mv dist/${P}.jar ${PN}.jar
-	java-pkg_dojar *.jar
+	java-pkg_newjar dist/${P}-xml.jar ${PN}-xml.jar
+	java-pkg_newjar dist/${P}.jar ${PN}.jar
 
 	use doc && java-pkg_dohtml -r build/doc/javadoc/*
 	use source && java-pkg_dosrc src/main/*
