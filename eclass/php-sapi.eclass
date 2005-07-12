@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.79 2005/07/11 18:24:44 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.80 2005/07/12 09:02:42 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -652,6 +652,12 @@ php-sapi_pkg_postinst() {
 		ewarn "The dev-php/php-core package is now obsolete. You should unmerge"
 		ewarn "it, and re-merge >=dev-php/php-4.3.4-r2 afterwards to ensure"
 		ewarn "your PHP installation is consistant."
+	fi
+	if has_version "<${PV}"; then
+		ewarn "The php, php-cgi, and mod_php ebuilds no longer supply the"
+		ewarn "crack and pdflib extensions. If you need these, please use"
+		ewarn "the corresponding PECL packages by emerging PECL-crack or"
+		ewarn "PECL-pdflib, respectively."
 	fi
 	ewarn "If you have additional third party PHP extensions (such as"
 	ewarn "dev-php/eaccelerator) you may need to recompile them now."
