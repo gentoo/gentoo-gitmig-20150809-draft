@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/noia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.17 2005/07/09 23:08:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.18 2005/07/12 23:42:25 flameeyes Exp $
+
+*noia-1.0-r1 (12 Jul 2005)
+
+  12 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +noia-1.0-r1.ebuild:
+  Took over maintainership. Added -r1 version not depending on kde, installing
+  on noia theme folder (instead of noia-1.0).
 
   09 Jul 2005; Jason Wever <weeve@gentoo.org> noia-1.0.ebuild:
   Added ~sparc keyword.

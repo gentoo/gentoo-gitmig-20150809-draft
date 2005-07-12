@@ -2,5 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<longdescription>The Noia icon theme.</longdescription>
+<maintainer>
+<email>flameeyes@gentoo.org</email>
+<name>Diego Pettenò</name>
+</maintainer>
 </pkgmetadata>
+

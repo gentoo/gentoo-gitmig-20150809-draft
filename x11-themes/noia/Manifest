@@ -1,4 +1,16 @@
-MD5 9572e0a5effef866076a7ef304edd43a ChangeLog 1751
-MD5 ae0ae422e1ab784652b5a6f96a3d3ad5 metadata.xml 216
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 edba5dbc4da6eb03301ec26b8e44e241 ChangeLog 1999
+MD5 c430b8e9d173bf89a4358a1c43de87e9 metadata.xml 252
+MD5 41ac256ca78bbcc79f456df9e8ec239c noia-1.0-r1.ebuild 611
 MD5 1d4054c78c862f64b9d86e4063532696 noia-1.0.ebuild 700
 MD5 884dfb32fad4d7b33c07b1f1326bcdfc files/digest-noia-1.0 70
+MD5 884dfb32fad4d7b33c07b1f1326bcdfc files/digest-noia-1.0-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1FV6j5H05b2HAEkRAuQyAJ0QmZrsLxhiKYI19NLMkyiveNpJOwCfTHX2
+t2MqQekI4xuekyyN4VAw0MI=
+=Us7E
+-----END PGP SIGNATURE-----
