@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2.ebuild,v 1.5 2005/05/04 22:18:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2.ebuild,v 1.6 2005/07/13 00:00:52 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -17,9 +17,7 @@ SLOT="1"
 KEYWORDS="x86 amd64"
 IUSE="debug doc jikes"
 
-RDEPEND=">=virtual/jre-1.4"
-DEPEND=">=virtual/jdk-1.4
-		>=dev-java/ant-1.6
+RDEPEND=">=virtual/jre-1.4
 		=dev-java/servletapi-2.4*
 		dev-java/commons-logging
 		dev-java/commons-discovery
@@ -32,8 +30,12 @@ DEPEND=">=virtual/jdk-1.4
 		=dev-java/commons-httpclient-2*
 		=dev-java/bsf-2.3*
 		dev-java/sun-jaf-bin
-		dev-java/sun-javamail-bin
+		dev-java/sun-javamail-bin"
+DEPEND=">=virtual/jdk-1.4
+		${RDEPEND}
+		>=dev-java/ant-1.6
 		jikes? ( >=dev-java/jikes-1.21 )"
+
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
@@ -42,10 +44,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/axis-1.2-gentoo.patch
 
-	for i in `find . -name "*.jar"`
-	do
-		rm -f $i
-	done
+	find . -name "*.jar" -exec rm {} \;
 
 	cd ${S}/lib
 	java-pkg_jar-from commons-discovery
