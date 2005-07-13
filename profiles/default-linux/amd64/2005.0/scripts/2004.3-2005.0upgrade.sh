@@ -91,9 +91,10 @@ if [[ ! -f step0 ]]; then
 	fi
 
 	if [[ "$(gcc -m32 -print-multi-directory)" != "32" ]]; then
-		eerror "Your compiler does not have multilib support."
-		eerror "Please emerge gcc with USE=multilib:"
-		eerror "FEATURES=-sandbox USE=multilib emerge gcc."
+		eerror "Your compiler does not have multilib support. Pleasse switch to a multilib"
+		eerror "enabled compiler with gcc-config.  If yo don't have one on your system, you can"
+		eerror "emerga a multilib gcc by executing the following line:"
+		eerror "FEATURES=-sandbox USE=multilib emerge gcc"
 		exit 1
 	fi
 
