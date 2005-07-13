@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.33 2005/07/03 20:40:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.34 2005/07/13 05:25:35 geoman Exp $
+
+  13 Jul 2005; Stephen P. Becker <geoman@gentoo.org> brltty-3.5.ebuild,
+  brltty-3.6.ebuild, brltty-3.6.1-r1.ebuild:
+  removing mips keywords, as accessibility is masked for us, and I can not
+  test this
 
 *brltty-3.6.1-r1 (03 Jul 2005)
 
