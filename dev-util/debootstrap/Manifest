@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 33075c04a2d1f0834913fd1b72c7b323 debootstrap-0.2.45.ebuild 827
-MD5 2f8e3f443e421cdbb56c070090bb1068 debootstrap-0.2.45-r1.ebuild 831
-MD5 422abd3076e30f5df3d545e41fa39cbf debootstrap-0.2.41.ebuild 832
 MD5 719b928ff6f4f9b659b4e2452a2b344c ChangeLog 2636
-MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 87e52d4186fe402689fd0ee696bcafd8 files/digest-debootstrap-0.2.45-r1 131
+MD5 422abd3076e30f5df3d545e41fa39cbf debootstrap-0.2.41.ebuild 832
+MD5 6745dd1182b69492cbfaa09c2612364d debootstrap-0.2.45-r1.ebuild 808
+MD5 33075c04a2d1f0834913fd1b72c7b323 debootstrap-0.2.45.ebuild 827
 MD5 3645961adfa8ca0fedba837f677d623c files/digest-debootstrap-0.2.41 131
 MD5 a6ff3d4eafa9f103d12d1427399e6ba6 files/digest-debootstrap-0.2.45 127
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCpEXeevY57Fted3ERAr7pAJ9ssLEIYrJdfl08aSpsXmgLREOueACdGUVr
-RVZPdOe1gjQGAzdaLdHwHPE=
-=p9d7
------END PGP SIGNATURE-----
+MD5 87e52d4186fe402689fd0ee696bcafd8 files/digest-debootstrap-0.2.45-r1 131
+MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
