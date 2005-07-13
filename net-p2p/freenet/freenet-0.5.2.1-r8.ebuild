@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.7 2004/07/30 19:06:10 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.8 2005/07/13 14:28:48 swegener Exp $
 
 inherit eutils
 
@@ -63,8 +63,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if [ -z has_version ]; then
-		einfo "Please remove /var/freenet manually if you are't going to"
+	if ! has_version net-p2p/freenet; then
+		einfo "Please remove /var/freenet manually if you are not going to"
 		einfo "continue to use Freenet on this machine!"
 	fi
 }
