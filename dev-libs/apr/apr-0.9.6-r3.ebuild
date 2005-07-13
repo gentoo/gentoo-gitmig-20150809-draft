@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.6-r3.ebuild,v 1.1 2005/05/09 14:44:25 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.6-r3.ebuild,v 1.2 2005/07/13 04:24:33 psi29a Exp $
 
 inherit flag-o-matic libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/apr/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="ipv6"
 RESTRICT="test"
 
