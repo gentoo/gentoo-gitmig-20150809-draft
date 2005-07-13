@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.164 2005/07/07 08:47:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.165 2005/07/13 09:37:54 dsd Exp $
+
+*gentoo-sources-2.6.12-r5 (13 Jul 2005)
+
+  13 Jul 2005; Daniel Drake <dsd@gentoo.org>
+  -gentoo-sources-2.6.11-r11.ebuild, -gentoo-sources-2.6.12-r3.ebuild,
+  +gentoo-sources-2.6.12-r5.ebuild:
+  Fix buggy netfilter conntrack behaviour, where applications took ages to
+  load. Fix gameport probe order. Fix inconsistent NTP behaviour on PPC.
 
   07 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gentoo-sources-2.6.12-r4.ebuild:

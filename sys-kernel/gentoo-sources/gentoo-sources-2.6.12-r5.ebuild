@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.12-r3.ebuild,v 1.3 2005/07/05 21:15:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.12-r5.ebuild,v 1.1 2005/07/13 09:37:55 dsd Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="5"
+K_GENPATCHES_VER="8"
 IUSE="ultra1"
 inherit kernel-2
 detect_version
 detect_arch
 
-KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches"
 
