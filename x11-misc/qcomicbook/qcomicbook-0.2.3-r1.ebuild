@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.2.3.ebuild,v 1.3 2005/07/12 07:34:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.2.3-r1.ebuild,v 1.1 2005/07/13 15:15:15 smithj Exp $
 
 inherit eutils
 
@@ -29,5 +29,14 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+
+	# makes a pretty desktop icon and such
+	dodir /usr/share/pixmaps
+	cp icons/${PN}.png ${D}/usr/share/pixmaps
+	make_desktop_entry qcomicbook
+	epause
+	epause
+	epause
+
 	dodoc README TODO ChangeLog AUTHORS
 }

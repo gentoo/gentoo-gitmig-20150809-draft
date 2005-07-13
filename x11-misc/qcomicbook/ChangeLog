@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.3 2005/07/12 07:34:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.4 2005/07/13 15:15:15 smithj Exp $
+
+*qcomicbook-0.2.3-r1 (13 Jul 2005)
+
+  13 Jul 2005; Jonathan Smith <smithj@gentoo.org> -qcomicbook-0.2.3.ebuild,
+  +qcomicbook-0.2.3-r1.ebuild:
+  added icon and desktop entry
 
   12 Jul 2005; David Holm <dholm@gentoo.org> qcomicbook-0.2.3.ebuild:
   Added to ~ppc.
