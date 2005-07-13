@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-0.9.4.1-r1.ebuild,v 1.1 2005/05/29 21:48:03 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-0.9.4.1-r1.ebuild,v 1.2 2005/07/13 13:54:57 swegener Exp $
 
 inherit python gnome.org eutils
 
@@ -26,7 +26,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 
-	if ! built_with_use pygtk gnome ; then
+	if ! built_with_use dev-python/pygtk gnome ; then
 		einfo ""
 		einfo "Meld requires pygtk be built with the gnome use flag set."
 		einfo "Please re-emerge pygtk with the gnome use flag set."

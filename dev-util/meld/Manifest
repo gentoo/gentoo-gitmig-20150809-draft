@@ -1,23 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 96ed5fd3c9961f4e4787f897e666bddb meld-0.9.2.ebuild 1538
-MD5 eeabce0c4942083a42738302deb53c3c meld-0.9.4.1-r1.ebuild 2071
-MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
-MD5 d3c2c25cbc4a8994ae2ca7bf61ef2b33 meld-0.9.4.1.ebuild 1786
 MD5 59069fe1646d4ae56dacc6868416eee7 ChangeLog 3885
-MD5 95d5cc3937d94454d4c5f0aab4baf129 meld-1.0.0.ebuild 1553
-MD5 d84b937a4b699901bd79b64c52a7a4c5 meld-0.9.5.ebuild 1996
-MD5 a594b965f0dc8995e79d245c4cb37fd3 files/digest-meld-0.9.4.1 65
-MD5 1bd76e477a20630600aeb1d8ff952dc7 files/digest-meld-1.0.0 63
 MD5 204fd0bd70dc55fec4d8b060a3165d94 files/digest-meld-0.9.2 63
+MD5 a594b965f0dc8995e79d245c4cb37fd3 files/digest-meld-0.9.4.1 65
 MD5 a594b965f0dc8995e79d245c4cb37fd3 files/digest-meld-0.9.4.1-r1 65
-MD5 e2cf0267e1fb705025019ee2840d509b files/meld-1.0.0-frpo.patch 377
 MD5 f5c312891794c9078a4c034256c3901c files/digest-meld-0.9.5 63
+MD5 1bd76e477a20630600aeb1d8ff952dc7 files/digest-meld-1.0.0 63
+MD5 e2cf0267e1fb705025019ee2840d509b files/meld-1.0.0-frpo.patch 377
+MD5 96ed5fd3c9961f4e4787f897e666bddb meld-0.9.2.ebuild 1538
+MD5 89ff1bd3f22c6fd40a90e9cb18970b4b meld-0.9.4.1-r1.ebuild 2081
+MD5 d3c2c25cbc4a8994ae2ca7bf61ef2b33 meld-0.9.4.1.ebuild 1786
+MD5 979d593ab87d2d50229a50d20d27ac4e meld-0.9.5.ebuild 2006
+MD5 4de644f9ced5982d1df40763c72846b7 meld-1.0.0.ebuild 1563
+MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCyssAKRy60XGEcJIRAuLrAJwPqwlgRHi8YCuQNiHRkEZYFnW+vQCgjDZ7
-+NY6Dof6zAwoDaP48C5/kLQ=
-=W+W1
+iD8DBQFC1R1II1lqEGTUzyQRAinlAJwPXq6BhbMHrHcqcz6maali5QgBlgCgtGJc
+F97qtC9OW/vsYpoarCzhc20=
+=U5Ds
 -----END PGP SIGNATURE-----
