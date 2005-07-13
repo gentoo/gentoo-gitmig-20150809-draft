@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.6-r2.ebuild,v 1.7 2005/06/17 20:37:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.6-r2.ebuild,v 1.8 2005/07/13 14:35:35 swegener Exp $
 
 inherit gnome2
 
@@ -33,7 +33,7 @@ DOCS="AUTHORS COPYING* ChangeLog* INSTALL NEWS README* TODO"
 pkg_setup () {
 
 	# Set up X11 implementation
-	X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
+	X11_IMPLEM_P="$(best_version virtual/x11)"
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
 	X11_IMPLEM="${X11_IMPLEM##*\/}"
 	einfo "X11 implementation is ${X11_IMPLEM}."
