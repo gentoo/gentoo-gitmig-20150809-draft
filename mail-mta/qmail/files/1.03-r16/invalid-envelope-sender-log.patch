@@ -1,0 +1,13 @@
+--- qmail-smtpd.c.orig	2005-07-13 12:42:16.998697299 +0200
++++ qmail-smtpd.c	2005-07-13 12:42:35.393412418 +0200
+@@ -621,7 +621,9 @@
+   }
+ 
+   switch(mfcheck()) {
+-    case DNS_HARD: err_hmf(); return;
++    case DNS_HARD:
++        strerr_warn4("qmail-smtpd: invalid envelope sender: <",addr.s,"> at ",remoteip,0);
++        err_hmf(); return;
+     case DNS_SOFT: err_smf(); return;
+     case DNS_MEM: die_nomem();
+   }

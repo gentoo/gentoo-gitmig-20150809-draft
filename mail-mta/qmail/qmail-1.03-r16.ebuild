@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.23 2005/06/19 19:31:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.24 2005/07/13 10:57:26 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -203,7 +203,6 @@ src_unpack() {
 
 	# add mail from DNS check
 	EPATCH_SINGLE_MSG="check envelope sender's domain for validity" \
-	#EPATCH_OPTS="${EPATCH_OPTS} -F 3" \
 	epatch ${DISTDIR}/qmail-1.03-r16-mfcheck.diff
 
 	# log relay attempts
@@ -243,6 +242,10 @@ src_unpack() {
 
 	# See bug 94257
 	epatch ${FILESDIR}/${PVR}/qmail-1.03-env-servercert.patch
+
+	# Log invalid envelope senders (MAIL FROM:)
+	EPATCH_SINGLE_MSG="Log invalid envelope senders" \
+	epatch ${FILESDIR}/${PVR}/invalid-envelope-sender-log.patch
 
 	# See bug #90631
 	if use logmail; then
