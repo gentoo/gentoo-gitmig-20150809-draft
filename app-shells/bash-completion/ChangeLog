@@ -1,6 +1,16 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.126 2005/06/28 05:30:06 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.127 2005/07/13 13:17:58 ka0ttic Exp $
+
+*bash-completion-20050712 (13 Jul 2005)
+
+  13 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/20050121-gentoo.diff, +files/20050712/01_all_gkrellm.diff,
+  -files/gentoo-bashcomp-20050117-equery.diff,
+  +files/20050712/02_all_cvs.diff, +files/20050712/03_all_find.diff,
+  +files/20050712/04_all_command.diff, -bash-completion-20050121-r1.ebuild,
+  +bash-completion-20050712.ebuild:
+  Version bump; removed old ebuild/patches.
 
   28 Jun 2005; Joshua Kinard <kumba@gentoo.org>
   bash-completion-20050121-r9.ebuild:
