@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.9.ebuild,v 1.8 2005/05/05 23:09:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.9.ebuild,v 1.9 2005/07/13 15:22:05 swegener Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -12,8 +12,6 @@ SLOT="0"
 LICENSE="Apache-1.1"
 KEYWORDS="x86 sparc ppc amd64 alpha hppa ia64"
 IUSE="ssl apache2 berkdb python emacs perl java"
-
-S=${WORKDIR}/${PN}-${PV}
 
 #Allow for custion repository locations
 if [ "${SVN_REPOS_LOC}x" = "x" ]; then
