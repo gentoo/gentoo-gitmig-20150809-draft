@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.21 2005/05/16 05:44:22 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.22 2005/07/13 17:37:14 kito Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -25,7 +25,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${P}-ppc-macos.diff
 		cp ${S}/lib/error.c ${S}/lib/xstrdup.c ${S}/src/ || die "file copy failed"
 		elibtoolize
-		LDFLAGS="${LDFLAGS} -L${S}/lib -liconv -lintl"
+		LDFLAGS="${LDFLAGS} -lgettextlib"
 	fi
 }
 
