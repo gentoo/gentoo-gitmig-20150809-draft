@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2.ebuild,v 1.5 2005/06/12 21:49:25 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2.ebuild,v 1.6 2005/07/13 14:26:23 swegener Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 	# Use the correct includedir for pkg-config
 	epatch "${FILESDIR}/${PV}-ftgl.pc.in.patch"
-	if ! has_version doxygen; then
+	if ! has_version app-doc/doxygen; then
 		cd FTGL/docs
 		tar xzf html.tar.gz || die "unpack html.tar.gz"
 		ln -fs ../../docs/html "${S}/docs"
