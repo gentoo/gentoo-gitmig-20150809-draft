@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 804371dcf55ea2eb2f606b7c0089d316 sms-1.9.2m.ebuild 797
-MD5 36d922fa1a3b4e05d3bfdb37a1ac2e37 sms-2.0.3.ebuild 865
-MD5 aae654c8c9b635a7cfcd31acd320e7ef ChangeLog 2297
+MD5 f7b82d7996b8c9c54e0536d54a10b08b ChangeLog 2458
 MD5 0c6931ac86bfdd99e623b600cfa74821 metadata.xml 626
-MD5 d5c218a66c4b257f2c0b06daa234f78c files/digest-sms-1.9.2m 61
+MD5 52e642d8f6c3fd07f7c3a52aa03009c3 sms-2.0.3.ebuild 868
 MD5 0a3f42f5ceada89211f4a27766eff6e7 files/digest-sms-2.0.3 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCh6gajiC39V7gKu0RAqPzAKCLQVOVgYsDuAcp2LdUkmOITrz4CwCcCcp3
-MT32ZE8zeGnEwye+ztutMj4=
-=cUlS
+iD8DBQFC1ZEfmdTrptrqvGERAkE0AJ94WfRSUChGDPKdSx0DF2QnCsVyMACfX4TX
+cWfD2ch5qA16ElYKQBundFA=
+=Dl3y
 -----END PGP SIGNATURE-----
