@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.27 2005/06/18 18:23:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.28 2005/07/13 18:48:21 kito Exp $
+
+  13 Jul 2005; Kito <kito@gentoo.org> evilwm-0.99.18.ebuild:
+  ~ppc-macos keywords, fix motif includes closes 58845
 
 *evilwm-0.99.18 (18 Jun 2005)
 
