@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.13 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.14 2005/07/13 05:24:52 sebastian Exp $
 #
 # eclass/php5-sapi-r1.eclass
 #               Eclass for building different php5 SAPI instances
@@ -214,7 +214,7 @@ php5-sapi-r1_check_awkward_uses() {
 	fi
 
 	if useq odbc ; then
-		enable_extension_with		"unixODBC"		"odbc"			1
+		enable_extension_with		"unixODBC"		"odbc"			1 "/usr"
 
 		enable_extension_with		"adabas"		"adabas"		1
 		enable_extension_with		"birdstep"		"birdstep"		1
@@ -225,7 +225,7 @@ php5-sapi-r1_check_awkward_uses() {
 		fi
 		enable_extension_with		"esoob"			"esoob"			1
 		enable_extension_with		"ibm-db2"		"db2"			1
-		enable_extension_with		"iodbc"			"iodbc"			1
+		enable_extension_with		"iodbc"			"iodbc"			1 "/usr"
 		enable_extension_with		"sapdb"			"sapdb"			1
 		enable_extension_with		"solid"			"solid"			1
 	fi
