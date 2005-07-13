@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-1.2_beta1-r1.ebuild,v 1.2 2005/07/13 10:43:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-1.2_beta1-r1.ebuild,v 1.3 2005/07/13 10:45:34 axxo Exp $
 
 inherit java-pkg
 
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_compile() {
-	local antflags="-Dbuild.dir=build -Dbuild.dest=dest -Dsrc.dir=src \
+	local antflags="jar -Dbuild.dir=build -Dbuild.dest=dest -Dsrc.dir=src \
 		-Djavadoc.destdir=api -Dfinal.name=xmlrpc-${MY_PV}"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadocs"
