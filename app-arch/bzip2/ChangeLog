@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.26 2005/05/25 22:12:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.27 2005/07/13 10:14:45 azarah Exp $
+
+*bzip2-1.0.3-r5 (13 Jul 2005)
+
+  13 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/bzip2-1.0.3-shared-largefile-support.patch, +bzip2-1.0.3-r5.ebuild:
+  Fix shared build to also use large file support, bug #98802.
 
 *bzip2-1.0.3-r4 (25 May 2005)
 
