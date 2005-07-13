@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qsampler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/ChangeLog,v 1.5 2005/07/11 21:00:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/ChangeLog,v 1.6 2005/07/13 19:20:18 fvdpol Exp $
+
+  13 Jul 2005; Frank van de Pol <fvdpol@gentoo.org> qsampler-0.1.2.ebuild:
+  Unmasked amd64
 
   11 Jul 2005; Frank van de Pol <fvdpol@gentoo.org> qsampler-0.1.0.ebuild,
   qsampler-0.1.2.ebuild:
