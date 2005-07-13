@@ -1,13 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1a99ebe131e96068e203878289057ecc usermode-sources-2.6.12.ebuild 883
+MD5 022e16f7f3153fc675535ae063775516 usermode-sources-2.6.12-r1.ebuild 886
 MD5 aa34b8764539acfc458342524f7ac787 usermode-sources-2.4.27.ebuild 1647
-MD5 fcf5d0ab2744341896112022a8fadc80 usermode-sources-2.6.11-r1.ebuild 1017
-MD5 de25e5edbd4b54572bb27971becc576f ChangeLog 19349
+MD5 ce729ac605c2c624440efababb309f74 ChangeLog 19600
 MD5 a76f13cb946fc2720c04b189616da2de metadata.xml 159
 MD5 f751a3e304cbed92529ab6783b91e7ba files/digest-usermode-sources-2.4.27 134
-MD5 cec996197a9143fe67a6d30a7fe95085 files/digest-usermode-sources-2.6.12 211
 MD5 60d25ff310fc6abfdce39ec9e47345af files/usermode-sources-2.4.CAN-2004-0685.patch 2809
 MD5 1e1fe7bb98c80db4644f4b7fd7dd5d32 files/usermode-sources-2.4.smbfs.patch 3434
 MD5 757ee1239c3f14645ccea3640d551e11 files/usermode-sources-2.4.CAN-2004-1056.patch 11249
@@ -16,7 +14,7 @@ MD5 b0a1f80aff51d6601e8924329023b241 files/usermode-sources.AF_UNIX.patch 515
 MD5 915e8d7a0618736caa44d96968015467 files/usermode-sources-2.4.binfmt_elf.patch 2346
 MD5 d4a740ae56c2049247083af387a22a85 files/usermode-sources-2.4.26.CAN-2004-0394.patch 350
 MD5 2b3ddb8b8b15f8da35ade38544b57857 files/usermode-sources-2.4.XDRWrapFix.patch 1499
-MD5 15d9f03b236fe1ac1ae9ba00b5b37042 files/digest-usermode-sources-2.6.11-r1 214
+MD5 ead6f3b52ff4aa4bf6c38cc2f8abe1e3 files/digest-usermode-sources-2.6.12-r1 211
 MD5 0f66013f643c79c97fda489618a4e2fd files/usermode-sources-2.4.CAN-2004-0535.patch 476
 MD5 dc18e982f8149588a291956481885a8c files/usermode-sources-2.4.CAN-2004-0495.patch 17549
 MD5 b6cd2468a246169a6e2f969c44e3f341 files/usermode-sources-2.4.78362.patch 10372
@@ -33,7 +31,7 @@ MD5 c27699e9d62f7d46213bd51f87636163 files/usermode-sources-2.4.vma.patch 8143
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzAUQTOXg++0VvJQRAtepAJ9f8MwM3A66LAVxuiuqoUq86V6WlACgx2VV
-NGZEEN3xweoUlH22FKE/URM=
-=zklV
+iD8DBQFC1SwLTOXg++0VvJQRAhi3AKCv7L5X3Sl8qhtiS4wl4lPI2c7vYgCdExR7
+PsgsRZBpgyAtW0DMqF3fj4U=
+=P5qo
 -----END PGP SIGNATURE-----
