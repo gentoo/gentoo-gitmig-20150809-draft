@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 f797d990a7e45c3f95475dcd5063fee9 ChangeLog 1036
-MD5 ca493bbd2dac96464aff867334b16905 xmlsec-1.2.8.ebuild 1242
-MD5 d0451d43bae3ccd019b5ec73550a0fad xmlsec-1.2.5.ebuild 1408
+MD5 a1e47b5acaab9e8403826080e78f56a5 files/digest-xmlsec-1.2.5 66
 MD5 8d267af575cd797af0e273430c12f7a4 files/digest-xmlsec-1.2.8 66
 MD5 19c95ef82bbe44f2aba5f597b1f083dc files/xmlsec-1.2.2-nss-nspr-configure.in.patch 3407
-MD5 a1e47b5acaab9e8403826080e78f56a5 files/digest-xmlsec-1.2.5 66
+MD5 dbb1b209a1da128099150e08440f42b8 xmlsec-1.2.5.ebuild 1421
+MD5 ca493bbd2dac96464aff867334b16905 xmlsec-1.2.8.ebuild 1242
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCvnuLmdTrptrqvGERArwaAKCM3i3+72g9VeCyTaK+90CXnHdv0gCcCfqT
-L43Yog9FIhsrrql8IYQzmZE=
-=pQiu
+iD8DBQFC1R2FI1lqEGTUzyQRAsSCAJ4mLgiNxzNDTtQIJrUiKEJ1RSk6PQCgmcnR
+SvV6PRySZTHPm+H6itmzics=
+=ZSWG
 -----END PGP SIGNATURE-----

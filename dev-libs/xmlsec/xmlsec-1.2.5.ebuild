@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.5.ebuild,v 1.5 2005/01/01 22:31:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.5.ebuild,v 1.6 2005/07/13 13:55:58 swegener Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 
 	local myconf
 
-	if use ssl && [ "`best_version openssl | awk -F- '{print $3}' | sed 's/[a-z]//'`" == "0.9.7" ]; then
+	if use ssl && [ "`best_version dev-libs/openssl | awk -F- '{print $3}' | sed 's/[a-z]//'`" == "0.9.7" ]; then
 		myconf="--enable-aes"
 	else
 		myconf="--disable-aes"
