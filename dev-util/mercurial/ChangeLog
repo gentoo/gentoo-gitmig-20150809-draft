@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.5 2005/07/13 16:28:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.6 2005/07/13 20:47:51 josejx Exp $
+
+  13 Jul 2005; Joseph Jezak <josejx@gentoo.org> mercurial-0.6.ebuild:
+  Marked ppc stable for bug #98896.
 
 *mercurial-0.6b (13 Jul 2005)
 
