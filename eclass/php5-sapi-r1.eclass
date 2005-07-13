@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.14 2005/07/13 05:24:52 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.15 2005/07/13 05:36:32 sebastian Exp $
 #
 # eclass/php5-sapi-r1.eclass
 #               Eclass for building different php5 SAPI instances
@@ -429,6 +429,10 @@ php5-sapi-r1_src_compile() {
 
 	# optimization/setting stuff
 	my_conf="${my_conf} --enable-versioning"
+
+	if [ "${PHPSAPI}" != "cli" ]; then
+		my_conf="${my_conf} --disable-cli"
+	fi
 
 	# all done
 

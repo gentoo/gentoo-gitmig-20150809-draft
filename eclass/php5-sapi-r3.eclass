@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.15 2005/07/13 05:24:52 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.16 2005/07/13 05:36:32 sebastian Exp $
 #
 # ########################################################################
 #
@@ -480,6 +480,10 @@ php5-sapi-r3_src_compile() {
 	if has_pic ; then
 		einfo "Enabling PIC support"
 		my_conf="${my_conf} --with-pic"
+	fi
+
+	if [ "${PHPSAPI}" != "cli" ]; then
+		my_conf="${my_conf} --disable-cli"
 	fi
 
 	# all done
