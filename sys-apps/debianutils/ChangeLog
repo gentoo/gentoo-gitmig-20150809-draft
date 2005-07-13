@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.42 2005/07/02 17:36:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.43 2005/07/13 09:25:23 azarah Exp $
+
+*debianutils-2.14.1-r1 (13 Jul 2005)
+
+  13 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/debianutils-2.14.1-no-bs-namespace.patch,
+  +debianutils-2.14.1-r1.ebuild:
+  Allow dots in the names, bug #95173.  Patch by Kerin Millar.
 
 *debianutils-2.14.1 (02 Jul 2005)
 
