@@ -1,4 +1,7 @@
 #!/bin/bash
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/scripts/2004.3-2005.0upgrade.sh,v 1.5 2005/07/13 22:12:23 eradicator Exp $
 
 TMPDIR="$(portageq envvar PORTAGE_TMPDIR)"
 PORTDIR="$(portageq envvar PORTDIR)"
@@ -92,7 +95,7 @@ if [[ ! -f step0 ]]; then
 
 	if [[ "$(gcc -m32 -print-multi-directory)" != "32" ]]; then
 		eerror "Your compiler does not have multilib support. Pleasse switch to a multilib"
-		eerror "enabled compiler with gcc-config.  If yo don't have one on your system, you can"
+		eerror "enabled compiler with gcc-config.  If you don't have one on your system, you can"
 		eerror "emerga a multilib gcc by executing the following line:"
 		eerror "FEATURES=-sandbox USE=multilib emerge gcc"
 		exit 1
