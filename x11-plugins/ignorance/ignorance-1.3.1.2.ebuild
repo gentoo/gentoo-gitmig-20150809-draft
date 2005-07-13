@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ignorance/ignorance-1.3.1.1.ebuild,v 1.1 2005/06/21 02:27:02 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ignorance/ignorance-1.3.1.2.ebuild,v 1.1 2005/07/13 22:58:32 gothgirl Exp $
 
 inherit eutils
 
@@ -15,7 +15,13 @@ IUSE=""
 
 DEPEND=">=net-im/gaim-1.0.1"
 
+src_unpack() {
+	unpack ${A}
+	# Set correct plugindir
+	sed -i -e "s:^\(plugindir = \$(prefix)/\)lib/:\1$(get_libdir)/:" \
+		${S}/Makefile.in || die "sed failed"
+}
 src_install() {
-	make install DESTDIR=${D} || die "Install failed"
+	emake install DESTDIR=${D} || die "Install failed"
 	dodoc ChangeLog INSTALL README AUTHORS
 }
