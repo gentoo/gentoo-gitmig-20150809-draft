@@ -1,5 +1,15 @@
-MD5 42bfe19e110fe40a99448b1d670acdd4 pcre++-0.9.5.ebuild 723
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc9f4aac5afe357426c3dab59188173f ChangeLog 661
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
-MD5 278a15c4158b589b080a1c7edd9c1cfc ChangeLog 535
+MD5 a62798cd85eb5125233b077e36b74ce8 pcre++-0.9.5.ebuild 722
 MD5 4abca25583b6d315ef1ca74222ece764 files/digest-pcre++-0.9.5 64
 MD5 81e100144358d97f6cda45624c4b507a files/pcre++-0.9.5-nodoc.patch 390
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1ZC4mdTrptrqvGERAhZPAKCEepqG+r/gh3Kdl0JE3sVVwhBBEwCeM2t1
+RwzbW3BMQmeOZvOjBt7LfqM=
+=Y3nq
+-----END PGP SIGNATURE-----
