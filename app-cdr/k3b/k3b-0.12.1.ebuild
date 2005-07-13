@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.1.ebuild,v 1.2 2005/06/19 17:07:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.1.ebuild,v 1.3 2005/07/13 13:44:10 swegener Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -58,8 +58,8 @@ for X in ${LANGS}; do
 done
 
 pkg_setup() {
-	use hal && if ! built_with_use dbus qt ; then
-		eerror "You are trying to compile ${CATEGORY}/${P} with the \"hal\" USE flag enabled,"
+	use hal && if ! built_with_use sys-apps/dbus qt ; then
+		eerror "You are trying to compile ${CATEGORY}/${PF} with the \"hal\" USE flag enabled,"
 		eerror "but sys-apps/dbus is not built with Qt support."
 		die
 	fi
