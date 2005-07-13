@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.27 2005/07/12 22:37:16 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.28 2005/07/13 01:39:15 mattam Exp $
+
+  13 Jul 2005; Matthieu Sozeau <mattam@gentoo.org> unison-2.12.0.ebuild,
+  unison-2.13.0.ebuild:
+  Make thread support configurable, minor fixes (doc flag, wrong cd).
 
 *unison-2.13.0 (12 Jul 2005)
 

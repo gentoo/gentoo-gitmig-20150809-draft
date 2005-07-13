@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.12.0.ebuild,v 1.1 2005/07/12 22:37:16 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.12.0.ebuild,v 1.2 2005/07/13 01:39:15 mattam Exp $
 
 inherit eutils
 
-IUSE="gtk gtk2 static debug"
+IUSE="gtk gtk2 doc static debug threads"
 
 DESCRIPTION="Two-way cross-platform file synchronizer"
 HOMEPAGE="http://www.cis.upenn.edu/~bcpierce/unison/"
@@ -31,7 +31,11 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="THREADS=true"
+	local myconf
+
+	if use threads; then
+		myconf="$myconf THREADS=true"
+	fi
 
 	if use static; then
 		myconf="$myconf STATIC=true"
@@ -57,7 +61,6 @@ src_compile() {
 src_install () {
 	# install manually, since it's just too much
 	# work to force the Makefile to do the right thing.
-	cd src
 	dobin unison || die
 	dodoc BUGS.txt CONTRIB COPYING INSTALL NEWS \
 	      README ROADMAP.txt TODO.txt || die
