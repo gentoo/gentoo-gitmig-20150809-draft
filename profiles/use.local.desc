@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1309 2005/07/13 15:22:13 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1310 2005/07/13 17:58:02 tove Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -606,6 +606,9 @@ net-dialup/freeradius:frascend - Enables Ascend binary mode
 net-dialup/freeradius:frnothreads - Disables thread support
 net-dialup/freeradius:frxp - Enables experimental modules
 net-dialup/freeradius:udpfromto - Compile in UDPFROMTO support
+net-dialup/isdn4k-utils:ipppd - Build the (ISDN) PPP daemon for synchronous PPP for ISDN connections
+net-dialup/isdn4k-utils:isdnlog - Installs the isdn log system
+net-dialup/isdn4k-utils:eurofile - Support for EUROFILE Transfer Protocol
 net-dialup/ivcall:softfax - Enables soft fax support
 net-dialup/ppp:activefilter - Enables activefilter support
 net-dialup/ppp:atm - Enables support for pppoatm
