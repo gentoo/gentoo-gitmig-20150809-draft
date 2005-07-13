@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8b408240f5e194695a1a9fd84856a80a ChangeLog 1441
 MD5 f3d88c9c9bb8a1b5375a1f1be1ac0dba files/digest-prokyon3-0.9.2 66
 MD5 36244c92298faae6859f3d5903662043 files/prokyon3-0.9.2-configure.patch 842
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 12d81af9906679a243a4e8f9586920f2 prokyon3-0.9.2.ebuild 1241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1RxSI1lqEGTUzyQRApg9AJ9g7dktv7LIyMtFILBNj8ko4j+5IgCcC9+I
+6ee0cvA7QFUq6ppgVDY23tg=
+=Vigu
+-----END PGP SIGNATURE-----
