@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/ktorrent
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.1 2005/07/13 15:37:54 greg_g Exp $
+
+*ktorrent-1.0 (13 Jul 2005)
+
+  13 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> +metadata.xml,
+  +ktorrent-1.0.ebuild:
+  Initial import. Ebuild suggested by Pat Double <double@inebraska.com> and
+  Christian Hartmann <christian.hartmann@email.de>.
+
