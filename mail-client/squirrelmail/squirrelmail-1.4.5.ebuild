@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.4.ebuild,v 1.7 2005/05/24 14:46:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.5.ebuild,v 1.1 2005/07/13 20:50:39 eradicator Exp $
 
 IUSE="crypt ldap spell ssl virus-scan mysql postgres"
 
@@ -35,7 +35,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 HOMEPAGE="http://www.squirrelmail.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ~ppc sparc x86"
 
 DEPEND=""
 
