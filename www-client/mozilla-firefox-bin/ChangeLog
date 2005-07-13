@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.12 2005/05/14 17:41:33 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.13 2005/07/13 05:41:57 anarchy Exp $
+
+*mozilla-firefox-bin-1.0.5 (13 Jul 2005)
+
+  13 Jul 2005; Jory A. Pratt <anarchy@gentoo.org>
+  -mozilla-firefox-bin-1.0.3.ebuild, +mozilla-firefox-bin-1.0.5.ebuild:
+  Security update bug#95199
 
   14 May 2005; Olivier Crête <tester@gentoo.org>
   mozilla-firefox-bin-1.0.4.ebuild:
