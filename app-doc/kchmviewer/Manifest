@@ -1,4 +1,14 @@
-MD5 bc5757868e9f06d6048259da3a5918aa metadata.xml 157
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7e0d4d25916e060f06a136547e66fd8f ChangeLog 783
-MD5 eeb757aadd5f3946f1e24cbc6fc600f7 kchmviewer-0.92.ebuild 1096
 MD5 592da28c4b1d813c7bfaa5315b6f144b files/digest-kchmviewer-0.92 67
+MD5 2768634ce7ae5ae7b882b49a980145ff kchmviewer-0.92.ebuild 1126
+MD5 bc5757868e9f06d6048259da3a5918aa metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1RfFI1lqEGTUzyQRAqc/AKCQI7Y/4wfyXPwlAYiW+kyMSNgQXACdH+5V
+9jeeohIvEGMCvHei8YdCu1s=
+=7Y2b
+-----END PGP SIGNATURE-----
