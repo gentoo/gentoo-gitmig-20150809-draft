@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.1-r2.ebuild,v 1.1 2005/07/12 21:03:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.1-r2.ebuild,v 1.2 2005/07/13 13:08:28 seemant Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -31,7 +31,7 @@ PROVIDE="virtual/krb5"
 
 src_unpack() {
 	unpack ${MY_P}-signed.tar; tar zxf ${MY_P}.tar.gz; cd ${S}
-	epatch ${FILESDIR}/${P}-lazyldflags.patch
+	epatch ${FILESDIR}/${PN}-lazyldflags.patch
 
 	EPATCH_SUFFIX="txt" \
 		epatch ${DISTDIR}/2005-002-patch_${PV}.txt

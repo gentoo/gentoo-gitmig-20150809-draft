@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.95 2005/07/12 21:03:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.96 2005/07/13 13:08:28 seemant Exp $
+
+*mit-krb5-1.3.6-r3 (13 Jul 2005)
+
+  13 Jul 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/mit-krb5-1.4.1-lazyldflags.patch,
+  +files/mit-krb5-lazyldflags.patch, +mit-krb5-1.3.6-r3.ebuild,
+  mit-krb5-1.4.1-r2.ebuild:
+  restore 1.3.6 at the request of: WGi <wgi@muenster.de> in bug #98303, but
+  I'll like to get 1.4.1 solved and working for people
 
 *mit-krb5-1.4.1-r2 (12 Jul 2005)
 
