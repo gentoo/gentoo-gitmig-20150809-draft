@@ -1,6 +1,16 @@
-MD5 256e9d83c76a33cdd610a2ac813f3887 ChangeLog 502
-MD5 2e6709fc044b947a46b5b8b948a5f7d8 astmanproxy-1.1.ebuild 932
-MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5212a9bd42d2d6e16886a133dc8146e9 ChangeLog 679
+MD5 2b78ddf922db447f37f62bf7f3996a13 astmanproxy-1.1.ebuild 873
 MD5 4670d4323365e584a57d8bfb44139d9b files/astmanproxy-1.1-gentoo.diff 1051
 MD5 f368b0dbbb0802aed2ce900086e5982a files/astmanproxy.rc6 480
 MD5 5bbca9db1db666ffad0f311a8e144f3a files/digest-astmanproxy-1.1 77
+MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1PVLI1lqEGTUzyQRAt/AAJ9ZTskTLXNRpsMTex0sXip0sslNYQCfa5y1
+sfmopJcY4A2aR8/pkbzP3Uo=
+=LLnc
+-----END PGP SIGNATURE-----
