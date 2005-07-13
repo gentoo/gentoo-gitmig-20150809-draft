@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/xml-im-exporter-1.1.ebuild,v 1.2 2005/05/22 14:33:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/xml-im-exporter-1.1.ebuild,v 1.3 2005/07/13 12:06:46 axxo Exp $
 
 inherit java-pkg
 
@@ -12,8 +12,6 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc jikes source"
-
-RESTRICT="primaryuri"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
