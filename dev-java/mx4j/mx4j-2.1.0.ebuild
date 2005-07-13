@@ -1,16 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0.ebuild,v 1.6 2005/06/09 01:07:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0.ebuild,v 1.7 2005/07/13 10:20:40 axxo Exp $
 
 inherit eutils java-pkg
 
 DESCRIPTION="MX4J is a project to build an Open Source implementation of the Java(TM) Management Extensions (JMX) and of the JMX Remote API (JSR 160) specifications, and to build tools relating to JMX."
 HOMEPAGE="http://mx4j.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
-DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-1.6
-	jikes? ( >=dev-java/jikes-1.21 )
-	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/commons-logging-1.0.4
 	>=dev-java/sun-jaf-bin-1.0.2
@@ -19,7 +15,12 @@ RDEPEND=">=virtual/jre-1.4
 	=dev-java/servletapi-2.3*
 	=dev-java/xmlunit-1*
 	=www-servers/axis-1*
-	>=www-servers/resin-3.0.8"
+	=www-servers/resin-3.0.8*" # api incompatbile with at least resin .12
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	>=dev-java/ant-1.6
+	jikes? ( >=dev-java/jikes-1.21 )
+	source? ( app-arch/zip )"
 LICENSE="mx4j"
 SLOT="2.1"
 KEYWORDS="x86 amd64"
@@ -29,7 +30,7 @@ src_unpack(){
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/mx4j-2.1.0-gentoo.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	cd ${S}/lib
 	java-pkg_jar-from sun-jaf-bin
@@ -51,7 +52,7 @@ src_compile() {
 	ant ${antflags} || die "ant failed"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar dist/lib/*.jar
 	java-pkg_dowar dist/lib/*.war
 
