@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0.ebuild,v 1.7 2005/07/13 10:20:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0.ebuild,v 1.8 2005/07/13 10:21:59 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -58,7 +58,7 @@ src_install() {
 
 	dodoc LICENSE README
 	if use doc ; then
-		java_pkg-dohtml -r dist/docs/api/*
+		java-pkg_dohtml -r dist/docs/api/*
 	fi
 	if use source; then
 		java-pkg_dosrc ${S}/src/core/*
