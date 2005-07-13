@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.2.ebuild,v 1.3 2005/07/10 01:18:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.2.ebuild,v 1.4 2005/07/13 23:10:12 stuart Exp $
 
 inherit webapp eutils
 
@@ -72,16 +72,6 @@ src_install() {
 	# create the files upload directory
 	mkdir ${D}/${MY_HTDOCSDIR}/files
 	webapp_serverowned ${MY_HTDOCSDIR}/files
-
-	# Identify any script files that need #! headers adding to run under
-	# a CGI script (such as PHP/CGI)
-	#
-	# for drupal, we *assume* that all .php files need to have CGI/BIN
-	# support added
-
-	for x in `find . -name '*.php' -print ` ; do
-		webapp_runbycgibin php ${MY_HTDOCSDIR}/$x
-	done
 
 	#All files must be owned by server
 	for x in `find . -type f -print` ; do
