@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5f6e64e4066ae63417bd3afa33045cbf ciphire-mail-1.0.0.ebuild 3526
+MD5 695c9b7173ed44459d14f12cc66193e8 ChangeLog 378
+MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
+MD5 3ba822caed60cb1af266084b7298fe80 files/digest-ciphire-mail-1.0.0 83
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1WPb1ZcsMnZjRyIRAtUwAKCsypzFGYc9nWwOYkIYKzPtfmwOGQCgikj9
+ivCjud8qKxsMuKIUcm1HM6Y=
+=B/dV
+-----END PGP SIGNATURE-----
