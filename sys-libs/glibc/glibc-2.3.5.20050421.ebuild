@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.21 2005/07/12 20:02:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.22 2005/07/13 15:16:04 nigoro Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -275,7 +275,7 @@ toolchain-glibc_pkg_preinst() {
 	# 2005.0 is setup properly, and this is executed as part of the
 	# 2004.3 -> 2005.0 upgrade script.
 	# It can be removed after 2004.3 has been purged from portage.
-	use amd64 && [ "$(get_libdir)" == "lib64" ] && ! has_multilib_profile && fix_lib64_symlinks
+	{ use amd64 || use ppc64; } && [ "$(get_libdir)" == "lib64" ] && ! has_multilib_profile && fix_lib64_symlinks
 
 	# it appears that /lib/tls is sometimes not removed. See bug
 	# 69258 for more info.
@@ -956,7 +956,8 @@ fix_lib64_symlinks() {
 		rm ${ROOT}/lib64
 		# now that lib64 is gone, nothing will run without calling ld.so
 		# directly. luckily the window of brokenness is almost non-existant
-		/lib/ld-linux-x86-64.so.2 /bin/mv ${ROOT}/lib ${ROOT}/lib64
+		use amd64 && /lib/ld-linux-x86-64.so.2 /bin/mv ${ROOT}/lib ${ROOT}/lib64
+		use ppc64 && /lib/ld64.so.1 /bin/mv ${ROOT}/lib ${ROOT}/lib64
 		# all better :)
 		ldconfig
 		ln -s lib64 ${ROOT}/lib
@@ -1054,7 +1055,7 @@ crosscompile_setup() {
 			powerpc64*)
 				export CFLAGS_ppc="${CFLAGS_ppc--m32}"
 				export CHOST_ppc="powerpc-unknown-linux-gnu"
-				export CDEFINE_ppc="__powerpc__"
+				export CDEFINE_ppc="!__powerpc64__"
 				export LIBDIR_ppc="lib"
 
 				export CFLAGS_ppc64="${CFLAGS_ppc64--m64}"
@@ -1319,12 +1320,18 @@ src_install() {
 		LIBDIR_x86="lib"
 	fi
 
+	if [[ $(tc-arch) == "ppc64" && ${ABI} == "ppc" && $(get_libdir) != "lib" ]] && ! is_crosscompile; then
+		OLD_LIBDIR="$(get_libdir)"
+		LIBDIR_ppc="lib"
+	fi
+
 	toolchain-glibc_src_install
 
-	# Handle stupid lib32 BS on amd64
+	# Handle stupid lib32 BS on amd64 and ppc64
 	if [[ -n ${OLD_LIBDIR} ]] ; then
 		cd ${S}
-		LIBDIR_x86="${OLD_LIBDIR}"
+		[[ $(tc-arch) == "amd64" ]] && LIBDIR_x86="${OLD_LIBDIR}"
+		[[ $(tc-arch) == "ppc64" ]] && LIBDIR_ppc="${OLD_LIBDIR}"
 		unset OLD_LIBDIR
 
 		mv ${D}/lib ${D}/$(get_libdir)
@@ -1332,7 +1339,8 @@ src_install() {
 		dodir /lib
 		dodir /usr/lib
 		mv ${D}/usr/$(get_libdir)/locale ${D}/usr/lib
-		dosym ../$(get_libdir)/ld-linux.so.2 /lib/ld-linux.so.2
+		[[ $(tc-arch) == "amd64" ]] && dosym ../$(get_libdir)/ld-linux.so.2 /lib/ld-linux.so.2
+		[[ $(tc-arch) == "ppc64" ]] && dosym ../$(get_libdir)/ld.so.1 /lib/ld.so.1
 
 		for f in ${D}/usr/$(get_libdir)/*.so; do
 			local basef=$(basename ${f})

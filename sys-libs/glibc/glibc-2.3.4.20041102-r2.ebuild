@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.31 2005/07/13 15:16:04 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r2.ebuild,v 1.1 2005/07/13 15:16:04 nigoro Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -16,18 +16,20 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="amd64 arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+# This version supports only PPC64!
+# Other architecture needs addition of patches.
+KEYWORDS="-* ~ppc64"
 
-BRANCH_UPDATE=""
+BRANCH_UPDATE="20041102"
 
 # From linuxthreads/man
-GLIBC_MANPAGE_VERSION="2.3.5"
+GLIBC_MANPAGE_VERSION="2.3.4"
 
 # From manual
-GLIBC_INFOPAGE_VERSION="2.3.4-r1"
+GLIBC_INFOPAGE_VERSION="2.3.4"
 
 # Gentoo patchset
-PATCH_VER="1.4"
+PATCH_VER="1.0"
 
 # C Stubbs addon (contained in fedora, so ignoring)
 #CSTUBS_VER="2.1.2"
@@ -35,9 +37,9 @@ PATCH_VER="1.4"
 #CSTUBS_URI="http://dev.gentoo.org/~eradicator/glibc/${CSTUBS_TARBALL}"
 
 # Fedora addons (from RHEL's glibc-2.3.4-2.src.rpm)
-FEDORA_VER="20041219T2331"
-FEDORA_TARBALL="glibc-fedora-${FEDORA_VER}.tar.bz2"
-FEDORA_URI="http://dev.gentoo.org/~eradicator/glibc/${FEDORA_TARBALL}"
+#FEDORA_VER="20041219T2331"
+#FEDORA_TARBALL="glibc-fedora-${FEDORA_VER}.tar.bz2"
+#FEDORA_URI="http://dev.gentoo.org/~eradicator/glibc/${FEDORA_TARBALL}"
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~eradicator/glibc"
 
@@ -65,10 +67,17 @@ is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
 }
 
-GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
-
 # Don't set this to :-, - allows BRANCH_UPDATE=""
 BRANCH_UPDATE=${BRANCH_UPDATE-$(get_version_component_range 4)}
+
+if [ -z "${BRANCH_UPDATE}" ]; then
+	GLIBC_RELEASE_VER="$(get_version_component_range 1-3)"
+	NEW_PV="${GLIBC_RELEASE_VER}"
+else
+	GLIBC_RELEASE_VER="2.3.3"
+	NEW_PV="$(get_version_component_range 1-3)"
+	PATCH_GLIBC_VER="$(get_version_component_range 1-4)"
+fi
 
 # (Recent snapshots fails with 2.6.5 and earlier with NPTL)
 NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.6"}
@@ -124,13 +133,14 @@ get_glibc_src_uri() {
 #	GLIBC_SRC_URI="http://ftp.gnu.org/gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
 #	               http://ftp.gnu.org/gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
 #	               http://ftp.gnu.org/gnu/glibc/${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2
-	GLIBC_SRC_URI="mirror://gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
-	               mirror://gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
-	               mirror://gnu/glibc/${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2"
+#	GLIBC_SRC_URI="mirror://gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
+#	               mirror://gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
+#	               mirror://gnu/glibc/${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2"
+	GLIBC_SRC_URI="http://dev.gentoo.org/~lv/${PN}-${GLIBC_RELEASE_VER}.tar.bz2"
 
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
-			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${NEW_PV}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 	fi
 
 	if [[ -n ${PATCH_VER} ]] ; then
@@ -170,8 +180,8 @@ toolchain-glibc_src_unpack() {
 	unpack ${PN}-${GLIBC_RELEASE_VER}.tar.bz2
 
 	cd "${S}"
-	unpack ${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
-	unpack ${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2
+	#unpack ${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
+	#unpack ${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2
 
 	[[ -n ${CSTUBS_TARBALL} ]] && unpack ${CSTUBS_TARBALL}
 	[[ -n ${FEDORA_TARBALL} ]] && unpack ${FEDORA_TARBALL}
@@ -186,19 +196,24 @@ toolchain-glibc_src_unpack() {
 	# to them with branchupdate)
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		cd "${WORKDIR}"
-		unpack ${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
+		unpack ${PN}-${NEW_PV}-branch-update-${BRANCH_UPDATE}.patch.bz2
 
 		cd "${S}"
-		epatch "${WORKDIR}"/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch
+		epatch "${WORKDIR}"/${PN}-${NEW_PV}-branch-update-${BRANCH_UPDATE}.patch
 
 		# Snapshot date patch
 		einfo "Patching version to display snapshot date ..."
 		sed -i -e "s:\(#define RELEASE\).*:\1 \"${BRANCH_UPDATE}\":" version.h
 	fi
 
+	# Version patch
+	sed -i -e "s:\(#define VERSION\).*:\1 \"${NEW_PV}\":" version.h
+
 	if [[ ${GLIBC_MANPAGE_VERSION} != "none" ]] ; then
-		cd "${WORKDIR}"
+		mkdir -p ${S}/man
+		cd "${S}/man"
 		unpack ${PN}-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
+		cd ${S}
 	fi
 
 	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
@@ -206,12 +221,17 @@ toolchain-glibc_src_unpack() {
 		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
 	fi
 
+	# taken from 2.3.4.20041102-r1.ebuild do_fedora_patches
+	rm -rf ${S}/glibc-compat
+
 	# XXX: do not package ssp up into tarballs, leave it in FILESDIR
 	cd "${S}"
-	cp "${FILESDIR}"/2.3.5/ssp.c sysdeps/unix/sysv/linux/ || die "could not find ssp.c"
-	rm -f "${WORKDIR}"/patches/2*
-	epatch "${FILESDIR}"/2.3.5/glibc-2.3.5-propolice-guard-functions.patch
-	epatch "${FILESDIR}"/2.3.5/glibc-2.3.5-frandom-detect.patch
+	cp "${FILESDIR}"/2.3.3/ssp.c sysdeps/unix/sysv/linux/ || die "could not find ssp.c"
+	#rm -f "${WORKDIR}"/patches/2*
+	#epatch "${FILESDIR}"/2.3.5/glibc-2.3.5-propolice-guard-functions.patch
+	#epatch "${FILESDIR}"/2.3.5/glibc-2.3.5-frandom-detect.patch
+
+	want_nptl && epatch ${S}/fedora/glibc-nptl-check.patch
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		cd "${S}"
@@ -874,7 +894,8 @@ glibc_do_configure() {
 
 	# set addons
 	pushd ${S} > /dev/null
-	ADDONS=$(echo */configure | sed -e 's!/configure!!g;s!\(linuxthreads\|nptl\|rtkaio\|glibc-compat\)\( \|$\)!!g;s! \+$!!;s! !,!g;s!^!,!;/^,\*$/d')
+	#ADDONS=$(echo */configure | sed -e 's!/configure!!g;s!\(linuxthreads\|nptl\|rtkaio\|glibc-compat\)\( \|$\)!!g;s! \+$!!;s! !,!g;s!^!,!;/^,\*$/d')
+	ADDONS=$(echo */configure | sed -e 's!/configure!!g;s!\(linuxthreads\|nptl\|rtkaio\)\( \|$\)!!g;s! \+$!!;s! !,!g;s!^!,!;/^,\*$/d')
 	popd > /dev/null
 
 	use nls || myconf="${myconf} --disable-nls"
