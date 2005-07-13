@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f3f4def473990c9f15d580ac28c01ea2 rsbac-sources-2.6.99.ebuild 1687
-MD5 686fca154725981809c13a1fd2d2ad58 rsbac-sources-2.6.11-r4.ebuild 1407
+MD5 8b0da50482b842dbf1cc0e37d0cbbcfd rsbac-sources-2.6.11-r4.ebuild 1407
 MD5 8a560d9bf7e7caf7887d3ca4e63d82f1 rsbac-sources-2.6.11-r1.ebuild 1406
 MD5 764f223bee5b4a93ea7a617815abdb4f rsbac-sources-2.4.29-r2.ebuild 1489
 MD5 f1d810aa731493b1f01fccb30a7581d5 rsbac-sources-2.6.11-r3.ebuild 1406
 MD5 2ea5dd64e3bb09237176fa509c187366 rsbac-sources-2.4.99.ebuild 1677
 MD5 b6c09200650a7e8b43089a9a975b5466 rsbac-sources-2.4.29.ebuild 1552
-MD5 741375594d7cb68ed9b8b55359e47565 ChangeLog 8507
+MD5 61e54a12f6187f4cee80d8fed5e0ee66 rsbac-sources-2.6.11-r5.ebuild 1407
+MD5 f1bba6e036b656d6b8db0394e9efb354 ChangeLog 8744
 MD5 34d3565353bba30eb2aaf3571f99453a rsbac-sources-2.4.29-r1.ebuild 1489
 MD5 fee9abc7797fef753c42454679bae9a7 metadata.xml 456
 MD5 e30f9434535aee12c197af0b01d3a2b1 rsbac-sources-2.6.11-r2.ebuild 1406
@@ -20,11 +18,5 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-rsbac-sources-2.6.99 0
 MD5 25759272ccf2b77c8c1b97c6fec1956b files/digest-rsbac-sources-2.6.11-r1 143
 MD5 356911440f4a8fc9bac5a56678caa599 files/digest-rsbac-sources-2.6.11-r2 142
 MD5 4152bb193118991ca773898423ac6d2c files/digest-rsbac-sources-2.6.11-r3 142
-MD5 3b332d8daf3128121c0a2bffb72b5216 files/digest-rsbac-sources-2.6.11-r4 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCohKWI1lqEGTUzyQRAuInAKCRZUENUcsG6kl6WiPzek7VtBeVdgCeKcbb
-cU79w20JssJyWaiHhJCYq/g=
-=FQf/
------END PGP SIGNATURE-----
+MD5 e1d5deb430420463b4a846a104a14cf1 files/digest-rsbac-sources-2.6.11-r4 142
+MD5 3b332d8daf3128121c0a2bffb72b5216 files/digest-rsbac-sources-2.6.11-r5 142

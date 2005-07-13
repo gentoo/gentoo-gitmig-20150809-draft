@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.6.11-r4.ebuild,v 1.2 2005/07/13 09:14:07 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.6.11-r5.ebuild,v 1.1 2005/07/13 09:14:07 kang Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -13,7 +13,7 @@ detect_version
 RSBACV=1.2.4
 
 # Gentoo rsbac kernel patches
-RGPV=11.4
+RGPV=11.5
 RGPV_SRC="http://dev.gentoo.org/~kang/rsbac/patches/${RSBACV}/2.6/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2"
 UNIPATCH_STRICTORDER="yes"
 UNIPATCH_LIST="${DISTDIR}/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2"
