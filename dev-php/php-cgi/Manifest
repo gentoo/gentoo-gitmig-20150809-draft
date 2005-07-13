@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5330a65e5fa5eccca33cf0697bec2c78 ChangeLog 11892
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 307aab11df88d8308b9f240d02d54759 php-cgi-4.3.11-r1.ebuild 1117
@@ -12,3 +15,10 @@ MD5 74a728966bc5ec6d37ad89f4182ee135 files/digest-php-cgi-5.0.4 143
 MD5 f7a7898637874593f519c336db79fa45 files/php-cgi-5.0.3-missing-arches.patch 524
 MD5 09d7dee078c684b0de0e4de6209ef634 files/digest-php-cgi-4.4.0 285
 MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1WASKf2g/qXtneoRAvRkAJ9y6YXX7HXkiUC9m+Q67TsFKGMlJgCdHTrS
+/T5OS2kwM3m0snulg/tCYYY=
+=5PuR
+-----END PGP SIGNATURE-----
