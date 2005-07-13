@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ab52eec921de82adf401e4c1ab723de ChangeLog 2491
+MD5 0675f70bef88f02360396cbd12736495 ChangeLog 2627
+MD5 c6358f7020eb93f97580e33e2a7f2856 spim-7.0.ebuild 1460
+MD5 f180f948f41e347de9ebca387391018e metadata.xml 476
+MD5 143d981e1c05b3988326914f6e2b727b spim-6.5-r1.ebuild 1419
 MD5 d71d66b98121e4e42ca59fa94310ed1e files/6.5-parser.patch 266
 MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5-r1 60
 MD5 e2af6a0e5ca4267cfad9f1bf5e954655 files/digest-spim-7.0 60
 MD5 687579cae8dc43834d01a92be664c826 files/spim-6.5-font.patch 362
 MD5 d07cf1bbff97319734f9f85a3395ffa8 files/spim-7.0-font.patch 441
-MD5 f180f948f41e347de9ebca387391018e metadata.xml 476
-MD5 af23fbac684b3e24fcdbfa73b40d834e spim-6.5-r1.ebuild 1396
-MD5 c6358f7020eb93f97580e33e2a7f2856 spim-7.0.ebuild 1460
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0C1UI1lqEGTUzyQRAlUdAKCXWXwqRhK9On/QsDMQIAzZI0BnvQCgw7j7
-l4daBKbJcvXzVcomUGTwtfE=
-=N7Nr
------END PGP SIGNATURE-----
