@@ -1,6 +1,17 @@
-MD5 ba64d7cfb73fbbc86dc7a92871e5b9f4 ChangeLog 2261
-MD5 53feeb1701d1f86a2cb0285867192f64 dchub-0.5.2.ebuild 879
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 484a1cde65a2e84549247ebf524f8875 dchub-0.5.2.ebuild 1025
+MD5 ba4eeb52b331d81aa3134359ec825b4a ChangeLog 2429
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 3be14814c18259089fe0aa301a4eb6af files/dchub.conf.d 1610
 MD5 8c69e07d3efd31080f8cd768d75dd7ad files/dchub.init.d 1018
+MD5 b2219de91d4f964a6cbb9a0939048c66 files/dchub-0.5.2-amd64.patch 458
 MD5 592f7f777a42dffa24db7fde87dc2dcb files/digest-dchub-0.5.2 63
+MD5 3be14814c18259089fe0aa301a4eb6af files/dchub.conf.d 1610
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1T2MZ/iYVBmujdURAsCBAKCK9iIR/3unCNHSPBQAnLAB3RH2KwCgg29M
+Hpg/r1kDRMvHE8iYSVcfPkw=
+=xayp
+-----END PGP SIGNATURE-----
