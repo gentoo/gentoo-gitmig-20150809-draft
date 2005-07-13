@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4186 2005/07/12 17:15:25 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4187 2005/07/13 16:43:48 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -39,7 +39,7 @@ media-sound/ipodder
 
 # Diego Pettenò <flameeyes@gentoo.org> (08 Jul 2005)
 # Probably it's incompatible with previous versions, needs testing
-=media-video/transcode-1.0.0_rc*
+>=media-video/transcode-1
 
 # Stefan Schweizer <genstef@gentoo.org> (08 Jul 2005)
 # Masked because of "UnixAppOpenFilePerform() Buffer Overflow", #98101
