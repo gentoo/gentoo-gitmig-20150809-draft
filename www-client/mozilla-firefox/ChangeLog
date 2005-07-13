@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.41 2005/07/13 17:28:33 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.42 2005/07/13 20:57:34 herbs Exp $
+
+  13 Jul 2005; Herbie Hopkins <herbs@gentoo.org>
+  mozilla-firefox-1.0.5.ebuild:
+  Stable on amd64 wrt bug #95199.
 
   13 Jul 2005; Jory A. Pratt <anarchy@gentoo.org>
   mozilla-firefox-1.0.5.ebuild:
