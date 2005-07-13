@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.41 2005/06/18 19:06:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.42 2005/07/13 04:13:56 psi29a Exp $
+
+  13 Jul 2005; bret curtis <psi29a@gentoo.org> afterstep-2.1.1.ebuild:
+  added to mips testing
 
   18 Jun 2005; Markus Rothe <corsair@gentoo.org> afterstep-2.1.1.ebuild:
   added ~ppc64
