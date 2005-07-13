@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-primitives
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.11 2005/07/12 12:28:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.12 2005/07/13 09:15:02 dholm Exp $
+
+  13 Jul 2005; David Holm <dholm@gentoo.org>
+  commons-primitives-1.0-r1.ebuild:
+  Added to ~ppc.
 
 *commons-primitives-1.0-r1 (12 Jul 2005)
 
