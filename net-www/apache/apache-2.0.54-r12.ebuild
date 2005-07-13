@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r12.ebuild,v 1.2 2005/07/13 02:53:48 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r12.ebuild,v 1.3 2005/07/13 04:26:12 psi29a Exp $
 
 inherit eutils gnuconfig
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
 
 LICENSE="Apache-2.0"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="apache2 debug doc ldap mpm-leader mpm-peruser mpm-prefork mpm-threadpool mpm-worker no-suexec ssl static-modules threads selinux"
 
 RDEPEND="dev-lang/perl
