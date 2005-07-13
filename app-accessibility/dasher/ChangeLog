@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.42 2005/07/02 15:11:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.43 2005/07/13 05:29:55 geoman Exp $
+
+  13 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
+  dasher-3.2.10-r1.ebuild, dasher-3.2.15.ebuild:
+  removing mips keywords, as accessibility is masked for us, and I can not
+  test this
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> dasher-3.2.15.ebuild:
   Stable on alpha.
