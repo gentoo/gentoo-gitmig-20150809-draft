@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.3.2.ebuild,v 1.1 2004/12/24 03:44:58 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.3.2.ebuild,v 1.2 2005/07/13 14:32:35 swegener Exp $
 
 inherit eutils flag-o-matic gnome2 kde-functions
 
@@ -42,7 +42,7 @@ pkg_setup() {
 	fi
 
 	# Get X11 implementation
-	X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
+	X11_IMPLEM_P="$(best_version virtual/x11)"
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
 	X11_IMPLEM="${X11_IMPLEM##*\/}"
 
