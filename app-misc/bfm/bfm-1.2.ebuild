@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2.ebuild,v 1.3 2005/04/04 17:04:20 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2.ebuild,v 1.4 2005/07/13 14:31:11 swegener Exp $
 
 inherit java-pkg
 
@@ -28,9 +28,9 @@ src_unpack() {
 	cp ${FILESDIR}/${PV}-build.xml ./build.xml
 
 	mkdir ${S}/lib && cd ${S}/lib
-	if has_version sun-java3d-bin; then
+	if has_version dev-java/sun-java3d-bin; then
 		java-pkg_jar-from sun-java3d-bin
-	elif has_version blackdown-java3d-bin; then
+	elif has_version dev-java/blackdown-java3d-bin; then
 		java-pkg_jar-from blackdown-java3d-bin
 	fi
 }
@@ -46,9 +46,9 @@ src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
 	local java3d=""
-	if has_version blackdown-java3d-bin; then
+	if has_version dev-java/blackdown-java3d-bin; then
 		java3d="blackdown-java3d-bin"
-	elif has_version sun-java3d-bin; then
+	elif has_version dev-java/sun-java3d-bin; then
 		java3d="sun-java3d-bin"
 	fi
 
