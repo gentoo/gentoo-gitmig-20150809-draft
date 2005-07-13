@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.11 2005/05/25 14:38:06 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.12 2005/07/13 21:21:03 swegener Exp $
+
+*x11vnc-0.7.2 (13 Jul 2005)
+
+  13 Jul 2005; Sven Wegener <swegener@gentoo.org> +x11vnc-0.7.2.ebuild:
+  Version bump, bug #95629.
 
   25 May 2005; Ferris McCormick <fmccor@gentoo.org> x11vnc-0.7.1-r1.ebuild:
   Add ~sparc keyword at user request (Bug 93917).  Package
