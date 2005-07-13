@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/libdsp-4.9.2-r1.ebuild,v 1.3 2005/01/09 11:11:15 swegener Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/libdsp-4.9.2-r1.ebuild,v 1.4 2005/07/13 14:25:11 swegener Exp $
 
 inherit eutils
 
@@ -16,14 +14,10 @@ SLOT="0"
 
 # -amd64, -sparc: 4.9.2-r1 - uses x86 assembly
 KEYWORDS="x86 -amd64 -sparc"
+IUSE="doc"
 DEPEND=""
 
 S=${WORKDIR}/${PN}-src-${PV}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
 
 src_compile() {
 	# fixes some Makefile weirdness
@@ -39,7 +33,7 @@ src_compile() {
 	sed -e "s:^PREFIX.*:PREFIX = ${D}/usr:" -i DynThreads/Makefile
 
 	# libtool only supports the --tag option from v1.5 onwards
-	if ! has_version >= sys-devel/libtool-1.5.0; then
+	if ! has_version ">=sys-devel/libtool-1.5.0"; then
 		sed -e "s/^LIBTOOL = libtool --tag=CXX/LIBTOOL = libtool/" -i libDSP/Makefile
 	fi
 

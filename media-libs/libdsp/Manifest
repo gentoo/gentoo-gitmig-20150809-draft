@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 900ca47026dd214786570ef16024fc3d libdsp-4.9.2-r1.ebuild 1790
 MD5 a01b90fed05a410b3bc6aecc2601067a ChangeLog 1510
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 8e472d29f67151e2a3266ab8ba84faf8 libdsp-4.9.2.ebuild 1528
-MD5 7026d7f1b8c75423ecfad3ceaf859760 files/digest-libdsp-4.9.2-r1 136
 MD5 0f21eaa6e644359d7a33dad21b8f330d files/Makefile.patch 2012
 MD5 7026d7f1b8c75423ecfad3ceaf859760 files/digest-libdsp-4.9.2 136
+MD5 7026d7f1b8c75423ecfad3ceaf859760 files/digest-libdsp-4.9.2-r1 136
+MD5 0c16f3a3a111ff2472aa617647db1a9f libdsp-4.9.2-r1.ebuild 1750
+MD5 5ef7d9899fe4576ed2dffab23d597019 libdsp-4.9.2.ebuild 1488
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZMIbKf2g/qXtneoRAlVvAJwIaJP2XY/btMnGfBKlYw+Anhj+wQCfaS7q
-g9WgzcQnjuxujtNxvzb0UM4=
-=9rrF
+iD8DBQFC1SRfI1lqEGTUzyQRAnEeAJsFfFF5UqWVV9mUcgfaju6mPj/ZWwCeMS/f
+V4jaSSVzEG5pVNj8epj6MMI=
+=bavn
 -----END PGP SIGNATURE-----
