@@ -1,6 +1,17 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.141 2005/07/12 12:39:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.142 2005/07/13 02:14:42 leonardop Exp $
+
+*nautilus-2.10.1-r1 (12 Jul 2005)
+
+  12 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  nautilus-2.10.1-r1.ebuild, files/nautilus-2.10.1-font_sizes.patch,
+  files/nautilus-2.10.1-deselect.patch:
+  New revision. Added patch from upstream's CVS repository to improve font
+  sizes for the icon view, resolves bug #96721. Added upstream patch to fix
+  deselecting items in list view and single click mode, resolves bug #95606.
+  Added RESTRICT=test since the only implemented check requires write
+  permissions on $HOME, among other things.
 
   12 Jul 2005; Leonardo Boshell <geoman@gentoo.org> nautilus-2.10.0.ebuild,
   nautilus-2.10.1.ebuild:
