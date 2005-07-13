@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fa3c40e917272ac2c405256df1bc8146 ChangeLog 1997
-MD5 28bf3dd79e9d4eed2a8e1bb1e7fb6907 avalon-logkit-1.2.ebuild 1809
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 375cd8efb8a98e99fb491fe1aa4592d6 avalon-logkit-2.0.ebuild 2309
+MD5 73046026260ffe72d37a2423dab2f4c1 avalon-logkit-1.2.ebuild 1849
+MD5 9583b92ff1f93b02abefaa7fcbcb4734 avalon-logkit-2.0.ebuild 2349
 MD5 1d4fb92234d539c16377690ccc278dbb files/2.0-build.xml 1931
 MD5 59f31286545f93f7dfa4a5e40cfb19a4 files/digest-avalon-logkit-1.2 66
 MD5 f5ee024795ce428b5418141110096d4d files/digest-avalon-logkit-2.0 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCz/Ro/rLF9B432nYRAgqdAJ90cXnr6r7hMih15d1sMSEwkisb+QCfXHxf
-WvXc8ikQ1JKJ/WYBV4dNlPg=
-=WnUX
------END PGP SIGNATURE-----
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
