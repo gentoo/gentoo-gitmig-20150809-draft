@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.29 2005/07/13 16:05:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.30 2005/07/13 16:06:04 sebastian Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -510,7 +510,7 @@ php5-sapi-r2_src_install() {
 	fi
 
 	einfo "Setting correct include_path"
-	sed -e 's|^;include_path .*|include_path = ".:/usr/lib/php"|' -i ${phpinisrc}
+	sed -e 's|^;include_path .*|include_path = ".:/usr/share/php"|' -i ${phpinisrc}
 
 	if useq sharedext; then
 		for x in `ls ${D}${PHPEXTDIR}/*.so | sort`; do
