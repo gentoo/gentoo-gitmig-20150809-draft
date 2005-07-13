@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/xjavadoc-1.1.ebuild,v 1.4 2005/05/14 17:31:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/xjavadoc-1.1.ebuild,v 1.5 2005/07/13 12:09:14 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -14,13 +14,15 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="jikes source"
 
+RDEPEND=">=virtual/jre-1.4
+	dev-java/commons-collections
+	dev-java/javacc"
 DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
 	app-arch/unzip
 	>=dev-java/ant-core-1.6
-	dev-java/javacc
 	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
 	unpack ${A}
