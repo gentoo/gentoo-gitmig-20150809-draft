@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.16 2005/07/13 05:36:32 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.17 2005/07/13 16:05:16 stuart Exp $
 #
 # ########################################################################
 #
@@ -472,9 +472,6 @@ php5-sapi-r3_src_compile() {
 	# you can use readline or libedit, but you can't use both
 	enable_extension_with		"readline"		"readline"		0
 	enable_extension_with		"libedit"		"libedit"		1
-
-	# optimization/setting stuff
-	my_conf="${my_conf} --enable-versioning"
 
 	# fix ELF-related problems
 	if has_pic ; then
