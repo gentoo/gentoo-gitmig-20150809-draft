@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.190 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.191 2005/07/13 19:15:05 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1498,14 +1498,14 @@ preserve_old_lib_notify() {
 	if [ -n "${LIB}" -a -f "${ROOT}${LIB}" ]; then
 		SONAME=`basename ${LIB}`
 
-		einfo "An old version of an installed library was detected on your system."
-		einfo "In order to avoid breaking packages that link against it, this older version"
-		einfo "is not being removed.  In order to make full use of this newer version,"
-		einfo "you will need to execute the following command:"
-		einfo "  revdep-rebuild --soname ${SONAME}"
-		einfo
-		einfo "After doing that, you can safely remove ${LIB}"
-		einfo "Note: 'emerge gentoolkit' to get revdep-rebuild"
+		ewarn "An old version of an installed library was detected on your system."
+		ewarn "In order to avoid breaking packages that link against it, this older version"
+		ewarn "is not being removed.  In order to make full use of this newer version,"
+		ewarn "you will need to execute the following command:"
+		ewarn "  revdep-rebuild --soname ${SONAME}"
+		ewarn
+		ewarn "After doing that, you can safely remove ${LIB}"
+		ewarn "Note: 'emerge gentoolkit' to get revdep-rebuild"
 	fi
 }
 
