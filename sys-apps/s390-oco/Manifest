@@ -6,12 +6,12 @@ MD5 440db7d822a493f9b4c0dc14d0885bb7 files/digest-s390-oco-2.4.21-r1 83
 MD5 700694cda50a18f342978f1e84c6e2a7 files/digest-s390-oco-2.6.5 81
 MD5 b43c4c5b51c43d85b1aab3939e18ea03 files/s390-oco 65
 MD5 64ff0642bc91fe55820a19224b0f6cd4 metadata.xml 300
-MD5 a033521e808b1ff4e946cfa8a73f2fbd s390-oco-2.4.21-r1.ebuild 1178
-MD5 d67270abbe3d9d768c92854065a3da45 s390-oco-2.6.5.ebuild 1184
+MD5 429ba8558e6415fd8364af6045e4ed76 s390-oco-2.4.21-r1.ebuild 1122
+MD5 19054bd0384dc94a101c53f2d4a3afe4 s390-oco-2.6.5.ebuild 1128
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1E59I1lqEGTUzyQRAlBhAKCTrRN1VdbmvUW1J+aMLfEnlmVExwCfcheo
-Uf/b/jxneg4lPUhxBP4sofA=
-=+lCF
+iD8DBQFC1Q4yI1lqEGTUzyQRAtPKAJ9UCtZ1Fe0ih3UCYCpmh4tAhIr5bgCdGu0n
+IVeT8BehI5dP/xe6kzelAro=
+=rkmc
 -----END PGP SIGNATURE-----

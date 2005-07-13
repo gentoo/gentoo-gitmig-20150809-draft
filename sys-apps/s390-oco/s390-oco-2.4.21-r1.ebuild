@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.4.21-r1.ebuild,v 1.4 2005/07/12 22:05:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/s390-oco-2.4.21-r1.ebuild,v 1.5 2005/07/13 12:50:32 swegener Exp $
 
 DESCRIPTION="Object-code only (OCO) modules for s390"
 HOMEPAGE="http://oss.software.ibm.com/developerworks/opensource/linux390/june2003_recommended.shtml"
@@ -22,9 +22,9 @@ S=${WORKDIR}
 
 pkg_nofetch() {
 	einfo "Please download ${A} from"
-	einfo ""
+	einfo
 	einfo " o ${HOMEPAGE}"
-	einfo ""
+	einfo
 	einfo "and put it into ${DISTDIR}"
 }
 
@@ -38,11 +38,9 @@ src_compile() {
 }
 
 src_install() {
-	dodir /etc/modules.d
 	insinto /etc/modules.d
 	doins "${FILESDIR}"/s390-oco || die
 
-	dodir /lib/modules/${KV}/OCO
 	insinto /lib/modules/${KV}/OCO
 	doins tape_3590.o || die
 
