@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.1.0_beta-r1.ebuild,v 1.1 2005/07/05 04:40:43 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.1.0_beta-r2.ebuild,v 1.1 2005/07/13 15:16:24 sebastian Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -19,7 +19,7 @@ PROVIDE="virtual/httpd-php"
 SLOT="${APACHE_VERSION}"
 
 PHPSAPI="apache${APACHE_VERSION}"
-MY_PVR="5.1.0b2"
+MY_PVR="5.1.0b3"
 MY_PHP_P="php-${MY_PVR}"
 PHP_S="${WORKDIR}/php-${MY_PVR}"
 PHP_PACKAGE=1
