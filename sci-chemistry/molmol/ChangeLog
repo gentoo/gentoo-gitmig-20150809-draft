@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/molmol
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.1 2005/07/13 10:12:46 spyderous Exp $
+
+*molmol-2k_p2 (13 Jul 2005)
+
+  13 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/pjf_RH9_molmol2k2.diff, +metadata.xml, +molmol-2k_p2.ebuild:
+  Initial commit.
+
