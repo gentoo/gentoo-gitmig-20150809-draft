@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.5.ebuild,v 1.1 2005/06/11 14:06:06 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.5.ebuild,v 1.2 2005/07/13 09:11:36 herbs Exp $
 
-inherit distutils eutils
+inherit distutils eutils multilib
 
 MY_P=${P/imaging/Imaging}
 S=${WORKDIR}/${MY_P}
@@ -23,6 +23,13 @@ DEPEND="virtual/python
 	tcltk? ( dev-lang/tk )
 	scanner? ( media-gfx/sane-backends )
 	X? ( media-gfx/xv )"
+
+src_unpack() {
+	unpack ${A}
+	# look for 64bit libs in lib64
+	sed -i -e "s:\"/usr/lib\":\"/usr/$(get_libdir)\":" \
+		${S}/setup.py || die "sed failed"
+}
 
 src_compile() {
 	distutils_src_compile
