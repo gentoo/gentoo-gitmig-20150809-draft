@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.7 2005/06/19 15:59:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.8 2005/07/13 11:16:00 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -82,15 +82,12 @@ src_unpack() {
 
 	# Run autotools...
 	cd ${S}
-	[[ -f configure.ac && -f configure.in ]] && rm configure.in
+	[[ -f configure.ac ]] && rm -f configure.in
+	# acinclude have a broken SDL test that clobber '/usr/lib64' to '4'
+	rm -f acinclude.m4
 
-	export WANT_AUTOMAKE=1.6
-	export WANT_AUTOCONF=2.5
-	libtoolize --force --copy || die "libtoolize failed"
-	aclocal -I ${S}/m4 || die "aclocal failed"
-	autoheader || die "autoheader failed"
-	automake --gnu --add-missing --include-deps --force-missing --copy || die "automake failed"
-	autoconf || die "autoconf failed"
+	# Reconfigure autotools
+	ACLOCAL_FLAGS="-I m4" ./autogen.sh --copy --force || die "autogen.sh failed"
 
 	# fixes mad FPM detection
 	epatch ${FILESDIR}/${PN}-mad.patch

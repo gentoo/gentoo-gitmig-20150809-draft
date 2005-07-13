@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r2.ebuild,v 1.1 2005/06/28 22:13:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r2.ebuild,v 1.2 2005/07/13 11:16:00 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -82,9 +82,9 @@ src_unpack() {
 
 	# Run autotools...
 	cd ${S}
-	[[ -f configure.ac && -f configure.in ]] && rm -f configure.in
+	[[ -f configure.ac ]] && rm -f configure.in
 	# acinclude have a broken SDL test that clobber '/usr/lib64' to '4'
-	[[ -f acinclude.m4 ]] && rm -f acinclude.m4
+	rm -f acinclude.m4
 
 	# Reconfigure autotools
 	ACLOCAL_FLAGS="-I m4" ./autogen.sh --copy --force || die "autogen.sh failed"
