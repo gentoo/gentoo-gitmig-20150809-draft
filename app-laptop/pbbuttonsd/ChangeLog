@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.27 2005/07/12 04:22:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.28 2005/07/13 20:05:11 josejx Exp $
+
+  13 Jul 2005; Joseph Jezak <josejx@gentoo.org> -pbbuttonsd-0.7_pre1.ebuild,
+  -pbbuttonsd-0.7_pre2.ebuild:
+  Removed pre-release versions.
 
   12 Jul 2005; Joseph Jezak <josejx@gentoo.org> pbbuttonsd-0.7.0.ebuild:
   Added check for INPUT_EVDEV for bug #98050.
