@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.2.1.ebuild,v 1.12 2005/07/10 21:01:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.2.1.ebuild,v 1.13 2005/07/13 14:19:52 swegener Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug
 
@@ -76,7 +76,7 @@ print_gaim_warning() {
 
 pkg_setup() {
 	print_gaim_warning
-	if use krb4 && ! built_with_use mit-krb5 krb4 ; then
+	if use krb4 && ! built_with_use app-crypt/mit-krb5 krb4 ; then
 		eerror
 		eerror You need to rebuild app-crypt/mit-krb5 with USE=krb4 in order to
 		eerror enable krb4 support for the zephyr protocol in gaim.

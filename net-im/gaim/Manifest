@@ -7,14 +7,14 @@ MD5 34466df05198ffffaa36d5469babd2aa files/digest-gaim-1.3.1 64
 MD5 20166c600c6de257f42af05bea6efd22 files/digest-gaim-1.4.0 64
 MD5 afc682711efed5d09a9229bd06a7a13b files/gaim-0.76-xinput.patch 644
 MD5 7eeaeb97528ef69941cf3fa3d04dea3e files/gaim-1.3.0-silc-ft.patch 567
-MD5 5ea38df35b915cb91290c9e5052833db gaim-1.2.1.ebuild 4109
-MD5 087db6a0481d7a0d9957c3cd6049f83d gaim-1.3.1.ebuild 4265
-MD5 9d34d138499344ca1deab5890ee3bf8e gaim-1.4.0.ebuild 4143
+MD5 53ef3ee810584a04c75bb6de1a048d62 gaim-1.2.1.ebuild 4119
+MD5 f0320b012e455c11a4ff683409df1309 gaim-1.3.1.ebuild 4275
+MD5 279052265304f7caa3db961253bc0910 gaim-1.4.0.ebuild 4153
 MD5 6727d140d07549b6be4b0ca9886e2514 metadata.xml 414
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0YzQI1lqEGTUzyQRAjZtAKCwfuPtAm9deMeJ7159EcFDNZ0sUgCgrA58
-/BD3dh3MxyMBomOmjHEl9Eo=
-=jmzD
+iD8DBQFC1SMgI1lqEGTUzyQRAsUGAJ961Q7+9Bd4sNAGXaKLK8jEbCZ2VQCfWkhE
+9fP+RpMgQYjx2CA3sb1H2D4=
+=9V7O
 -----END PGP SIGNATURE-----
