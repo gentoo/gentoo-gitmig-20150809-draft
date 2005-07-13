@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.4.ebuild,v 1.3 2005/06/11 13:26:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.4.ebuild,v 1.4 2005/07/13 09:38:52 stuart Exp $
 
 PHPSAPI="cgi"
 MY_PHP_P="php-${PV}"
@@ -33,7 +33,7 @@ src_unpack() {
 }
 
 src_compile () {
-	my_conf="--disable-cli --enable-cgi"
+	my_conf="--disable-cli --enable-cgi --enable-fastcgi"
 	php5-sapi-r2_src_compile
 }
 
