@@ -55,7 +55,7 @@ diff -ru molmol_rh9_unpatched/makedef.lnx molmol_rh9/makedef.lnx
  MOTIFDEF = -DFUNCPROTO
  
 -SYSLIB   = -L/usr/X11R6/lib -lXm -lXt -lXpm -lX11 -lm -lc -lieee
-+SYSLIB   = -lGLw -lGLU -lGL -lXm -lXp -lXt -lXext -lX11 -lm
++SYSLIB   = -lGLw -lGLU -lGL -lXm -lXpm -lXt -lXext -lX11 -lm
  
  TOOLSDIR = $(TOP)/tools
 -SGDIR    = $(TOP)/sg
