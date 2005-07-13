@@ -1,32 +1,12 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.45 2005/07/12 08:01:00 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.46 2005/07/13 15:28:51 ka0ttic Exp $
 
-  12 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> herdstat-1.1.1_p2.ebuild:
-  Added ~sparc.
+*herdstat-1.1.1_p3 (13 Jul 2005)
 
-*herdstat-1.1.1_p2 (30 Jun 2005)
-
-  30 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> -herdstat-1.1.1_p1.ebuild,
-  +herdstat-1.1.1_p2.ebuild:
-  Version bump; several bug fixes as well as the addition of some regression
-  tests.
-
-  24 Jun 2005; Aron Griffis <agriffis@gentoo.org> herdstat-1.1.1_p1.ebuild:
-  fowners root:portage in src_install doesn't work. Use chgrp in pkg_preinst
-  instead
-
-*herdstat-1.1.1_p1 (24 Jun 2005)
-
-  24 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> -herdstat-1.1.0.ebuild,
-  -herdstat-1.1.1.ebuild, +herdstat-1.1.1_p1.ebuild:
-  Bug-fix release.  Tidy old ebuilds.
-
-*herdstat-1.1.1 (19 Jun 2005)
-
-  19 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> -herdstat-1.1.1_rc9.ebuild,
-  +herdstat-1.1.1.ebuild:
-  1.1.1 final.
+  13 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> -herdstat-1.1.1_p2.ebuild,
+  +herdstat-1.1.1_p3.ebuild:
+  Version bump.
 
 *herdstat-1.1.1_rc9 (15 Jun 2005)
 
