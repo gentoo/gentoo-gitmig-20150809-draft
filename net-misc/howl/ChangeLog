@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.28 2005/07/12 19:02:21 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.29 2005/07/13 03:42:07 compnerd Exp $
+
+  12 Jul 2005; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml,
+  howl-1.0.0.ebuild:
+  Updated the warning, updated metadata for maintainership
 
   12 Jul 2005; Jonathan Smith <smithj@gentoo.org> howl-1.0.0.ebuild:
   added warning about gnome-vfs
