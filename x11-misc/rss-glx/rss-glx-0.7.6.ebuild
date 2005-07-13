@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.19 2005/03/15 18:25:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.20 2005/07/13 14:34:12 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -98,7 +98,7 @@ pkg_postinst() {
 pkg_postrm() {
 	local XSCREENSAVER_CONF="${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver"
 
-	has_version rss-glx && return 0
+	has_version x11-misc/rss-glx && return 0
 	if [ -f ${XSCREENSAVER_CONF} ]; then
 		einfo "Removing Really Slick Screensavers from XScreenSaver configuration."
 		sed \
