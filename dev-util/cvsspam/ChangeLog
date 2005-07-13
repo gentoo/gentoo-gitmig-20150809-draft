@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cvsspam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsspam/ChangeLog,v 1.8 2005/06/24 15:03:29 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsspam/ChangeLog,v 1.9 2005/07/13 15:22:33 nakano Exp $
+
+*cvsspam-0.2.12 (13 Jul 2005)
+
+  13 Jul 2005; Masatomo Nakano <nakano@gentoo.org> +cvsspam-0.2.12.ebuild:
+  Version bump.
 
   24 Jun 2005; Masatomo Nakano <nakano@gentoo.org> cvsspam-0.2.11-r1.ebuild:
   Marked stable on x86.
