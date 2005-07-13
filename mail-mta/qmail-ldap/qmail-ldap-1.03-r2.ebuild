@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r2.ebuild,v 1.5 2005/03/03 18:46:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r2.ebuild,v 1.6 2005/07/13 15:10:03 swegener Exp $
 
 IUSE="ssl"
 
@@ -301,7 +301,7 @@ pkg_postinst() {
 	fi
 
 	echo -e "\e[32;01m Please do not forget to run, the following syntax :\033[0m"
-	echo -e "\e[32;01m ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}-${PR}/${PN}-${PV}-${PR}.ebuild config \033[0m"
+	echo -e "\e[32;01m ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config \033[0m"
 	echo -e "\e[32;01m This will setup qmail to run out-of-the-box on your system. \033[0m"
 	echo -e ""
 	echo -e "\e[32;01m To start qmail at boot you have to enable the /etc/init.d/svscan rc file \033[0m"
@@ -313,7 +313,7 @@ pkg_postinst() {
 	echo -e "\e[32;01m NOTE: Please check your /var/qmail/control/ldap* files to match your local \033[0m"
 	echo -e "\e[32;01m ldap settings and add the qmail.schema along with \"allow bind_v2\" to your \033[0m"
 	echo -e "\e[32;01m slapd.conf. For sample ldifs, please check \033[0m"
-	echo -e "\e[32;01m /usr/share/doc/${PN}-${PV}-${PR}/samples.ldif.gz \033[0m"
+	echo -e "\e[32;01m /usr/share/doc/${PF}/samples.ldif.gz \033[0m"
 
 	if  use ssl; then
 		echo "Creating a self-signed ssl-cert:"

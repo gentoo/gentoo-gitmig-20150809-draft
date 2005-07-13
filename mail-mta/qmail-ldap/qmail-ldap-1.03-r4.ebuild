@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.4 2005/03/03 18:46:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.5 2005/07/13 15:10:03 swegener Exp $
 
 IUSE="ssl"
 
@@ -315,7 +315,7 @@ pkg_postinst() {
 
 
 	einfo "Please do not forget to run, the following syntax :"
-	einfo "ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}-${PR}/${PN}-${PV}-${PR}.ebuild config "
+	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config "
 	einfo "This will setup qmail to run out-of-the-box on your system including SSL. "
 	echo
 	einfo "To start qmail at boot you have to enable the /etc/init.d/svscan rc file "
@@ -327,7 +327,7 @@ pkg_postinst() {
 	einfo "NOTE: Please check your /var/qmail/control/ldap* files to match your local "
 	einfo "ldap settings and add the qmail.schema along with \"allow bind_v2\" to your "
 	einfo "slapd.conf. For sample ldifs, please check "
-	einfo "/usr/share/doc/${PN}-${PV}-${PR}/samples.ldif.gz "
+	einfo "/usr/share/doc/${PF}/samples.ldif.gz "
 
 
 }
