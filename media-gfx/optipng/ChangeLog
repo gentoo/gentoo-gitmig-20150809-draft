@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.19 2005/06/12 17:23:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.20 2005/07/13 19:27:29 blubb Exp $
+
+  13 Jul 2005; Simon Stelling <blubb@gentoo.org> optipng-0.4.8.ebuild:
+  added ~amd64 keyword
 
   12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> optipng-0.4.7.ebuild:
   Stable on alpha.
