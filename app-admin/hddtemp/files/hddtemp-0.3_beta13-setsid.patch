@@ -1,0 +1,12 @@
+diff -Naur hddtemp-0.3-beta13/src/daemon.c hddtemp-0.3-beta13-setsid/src/daemon.c
+--- hddtemp-0.3-beta13/src/daemon.c	2005-03-15 00:43:52.000000000 +0100
++++ hddtemp-0.3-beta13-setsid/src/daemon.c	2005-07-13 02:19:01.000000000 +0200
+@@ -294,6 +294,8 @@
+         close(i);
+   }
+ 
++  setsid();
++
+   /* redirect signals */
+   for(i = 0; i <= _NSIG; i++) {
+     switch(i) {

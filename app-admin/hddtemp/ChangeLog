@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.23 2005/04/29 23:45:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.24 2005/07/13 16:30:52 spock Exp $
+
+*hddtemp-0.3_beta13 (13 Jul 2005)
+
+  13 Jul 2005; Michał Januszewski <spock@gentoo.org>
+  +files/hddtemp-0.3_beta13-setsid.patch, metadata.xml,
+  +hddtemp-0.3_beta13.ebuild:
+  Version bump. Closes bugs #86550 and #91972.
 
   29 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   hddtemp-0.3_beta12.ebuild:
