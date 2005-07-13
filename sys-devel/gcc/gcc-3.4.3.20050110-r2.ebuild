@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110-r2.ebuild,v 1.8 2005/07/10 04:10:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110-r2.ebuild,v 1.9 2005/07/13 02:30:47 vapier Exp $
 
 MAN_VER="3.4.3"
 PATCH_VER="1.3"
@@ -16,6 +16,9 @@ HTB_EXCLUSIVE="true"
 GCC_LIBSSP_SUPPORT="true"
 
 ETYPE="gcc-compiler"
+
+# Punt redhat patch #87631
+GENTOO_PATCH_EXCLUDE="08_all_gcc34-chk.patch"
 
 # arch/libc configurations known to be stable with {PIE,SSP}-by-default
 SSP_STABLE="x86 sparc amd64 ppc ppc64"

@@ -1,9 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.436 2005/07/12 16:14:31 agriffis Exp $
-
-  12 Jul 2005; Aron Griffis <agriffis@gentoo.org> gcc-3.4.4.ebuild:
-  Add ~alpha to gcc-3.4.4
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.437 2005/07/13 02:30:47 vapier Exp $
 
   10 Jul 2005; Mike Frysinger <vapier@gentoo.org> gcc-3.3.5-r1.ebuild,
   gcc-3.3.5.20050130-r1.ebuild, gcc-3.3.5.20050130-r2.ebuild,
@@ -17,9 +14,6 @@
   10 Jul 2005; Mark Loeser <halcy0n@gentoo.org>
   -gcc-4.1.0_beta20050702.ebuild, +gcc-4.1.0_beta20050709.ebuild:
   Bumping gcc-4.1 snapshot
-
-  08 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> gcc-3.4.4.ebuild:
-  Added to ~sparc.
 
   08 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -gcc-2.95.3-r8.ebuild, -gcc-3.3.2.ebuild, -gcc-3.3.2-r5.ebuild,
@@ -50,7 +44,6 @@
   -files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers.patch,
   -files/3.4.3/35_all_pr18987-fix.patch:
   Removing old ebuilds and cleaned out unused old patches.
-
 
 *gcc-4.0.1 (08 Jul 2005)
 
