@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.1.ebuild,v 1.2 2005/06/18 00:59:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.1.ebuild,v 1.3 2005/07/13 14:29:50 swegener Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-lang/python-2.2
 	>=sys-apps/portage-2.0.50"
 
 pkg_setup() {
-	if ! built_with_use python readline ; then
+	if ! built_with_use dev-lang/python readline ; then
 		eerror "Python has to be build with 'readline' support!"
 		eerror "To do so: USE=\"readline\" emerge python"
 		eerror "Or, add \"readline\" to your USE string in"
