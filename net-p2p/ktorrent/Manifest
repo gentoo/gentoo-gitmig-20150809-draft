@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eaab96481d1a8fe8cba85bcf96f23302 ChangeLog 452
+MD5 aa4bd474ee9d858df36723559f87fc8d files/digest-ktorrent-1.0 64
+MD5 d910910074037313c9bea9d59c5138d4 ktorrent-1.0.ebuild 432
+MD5 bf8ab600a2fff921893e3612f5ceaf83 metadata.xml 177
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1U6dI1lqEGTUzyQRAnVPAJ0cmTg+BGE/uySF2rA5PubteYF9FgCeOB92
+HYhTnGN2Q5f/i80esTT90U4=
+=T6f8
+-----END PGP SIGNATURE-----
