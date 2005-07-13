@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.1 2005/06/01 02:04:13 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.2 2005/07/13 23:54:23 tercel Exp $
+
+  13 Jul 2005; <colin@gentoo.org> visual-3.2.1.ebuild:
+  3.2.1 moved to stable on x86
 
 *visual-3.2.1 (01 Jun 2005)
 
