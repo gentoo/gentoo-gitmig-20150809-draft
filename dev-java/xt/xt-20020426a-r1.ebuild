@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20020426a-r1.ebuild,v 1.1 2005/06/04 16:02:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20020426a-r1.ebuild,v 1.2 2005/07/13 10:32:08 axxo Exp $
 
 inherit java-pkg
 
-MY_P="${PN}-${PV}-src"
+MY_P="${P}-src"
 
 DESCRIPTION="Java Implementation of XSL-Transformations"
 SRC_URI="http://www.blnz.com/xt/${MY_P}.tgz"
@@ -14,13 +14,14 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc jikes"
 
-DEPEND=">=virtual/jdk-1.4
-	dev-java/ant-core
+RDEPEND=">=virtual/jre-1.4
 	>=dev-java/xp-0.5
 	~dev-java/servletapi-2.3
-	dev-java/xml-commons
+	dev-java/xml-commons"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	dev-java/ant-core
 	jikes? ( dev-java/jikes )"
-RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/${MY_P}"
 
