@@ -1,11 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.7 2005/04/15 14:33:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.8 2005/07/13 18:23:45 kugelfang Exp $
 
-GRP_STAGE23_USE="${STAGE1_USE} ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses readline zlib -java"
-
-# Sane, functional, almost-but-not-quite-minimal default for USE
-USE="${GRP_STAGE23_USE} bitmap-fonts truetype-fonts type1-fonts font-server oss alsa crypt fortran jpeg mp3 nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xrandr xv"
+# Default USE flags for amd64 (Systems and GRP)
+USE="alsa avi berkdb crypt cups encode foomaticdb gif gnome gpm gtk gtk2 imlib ipv6 jpeg kde lzw lzw-tiff mp3 mpeg ncurses nls opengl pam pdflib perl png python qt quicktime readline sdl spell ssl tcpd tiff usb userlocales zlib X xpm xv -java"
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
