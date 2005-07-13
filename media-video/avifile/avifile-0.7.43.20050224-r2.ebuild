@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r2.ebuild,v 1.2 2005/07/13 11:16:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r2.ebuild,v 1.3 2005/07/13 11:59:24 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -66,6 +66,8 @@ src_unpack() {
 	# fix building with gcc4
 	# http://debian-amd64.alioth.debian.org/gcc-3.4/patches/avifile_0.7.43.20050224-1.0.0.1.gcc4.patch
 	epatch ${FILESDIR}/${P}-1.0.0.1.gcc4.patch
+	# Fix pic building (bug #88582)
+	epatch ${FILESDIR}/${P}-pic.patch
 
 	if ! use qt ; then
 		sed -i -e 's/qtvidcap\ qtrecompress//g' \

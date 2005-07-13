@@ -1,0 +1,50 @@
+--- avifile-0.7-0.7.43/samples/qtvidcap/deinterlace-rgb.cpp.orig	2005-04-10 13:26:01.000000000 +0200
++++ avifile-0.7-0.7.43/samples/qtvidcap/deinterlace-rgb.cpp	2005-04-10 13:26:38.000000000 +0200
+@@ -17,10 +17,10 @@
+ 	    memcpy(outp, inp, xdim);
+ 	    continue;
+ 	}
+-	int count=xdim/8;
+ 	__asm__ __volatile__ (
+-	"movl %2, %%esi\n\t"
+-	"movl %3, %%edi\n\t"	
++	"movl %2, %%esi\n\t"	// xdim
++	"shr  $3, %2\n\t"
++	"movl %2, %%edi\n\t"	// count = xdim/8
+ 	"pxor %%mm3, %%mm3\n\t"
+ 	"1:\n\t"
+ 	"movq (%%ecx, %%esi), %%mm0\n\t"
+@@ -39,7 +39,7 @@
+ 	"decl %%edi\n\t"
+ 	"jnz 1b\n\t"
+     	:
+-	: "c" (inp-xdim), "d" (outp), "r" (xdim), "r" (count)
++	: "c" (inp-xdim), "d" (outp), "r" (xdim)
+ 	: "esi", "edi"
+ 	);
+     }
+--- avifile-0.7-0.7.43/samples/qtvidcap/qtrenderer.cpp.orig	2005-04-10 14:01:44.000000000 +0200
++++ avifile-0.7-0.7.43/samples/qtvidcap/qtrenderer.cpp	2005-04-10 14:02:36.000000000 +0200
+@@ -160,10 +160,10 @@
+ 	    memcpy(outp, inp, xdim);
+ 	    continue;
+ 	}
+-	int count=xdim/8;
+ 	__asm__ __volatile__ (
+-	"movl %2, %%esi\n\t"
+-	"movl %3, %%edi\n\t"
++	"movl %2, %%esi\n\t"	// xdim
++	"shr  $3,%2\n\t"
++	"movl %2, %%edi\n\t"	// count = xdim/8
+ 	"pxor %%mm3, %%mm3\n\t"
+ 	"1:\n\t"
+ 	"movq (%%ecx, %%esi), %%mm0\n\t"
+@@ -182,7 +182,7 @@
+ 	"decl %%edi\n\t"
+ 	"jnz 1b\n\t"
+     	:
+-	: "c" (inp-xdim), "d" (outp), "r" (xdim), "r" (count)
++	: "c" (inp-xdim), "d" (outp), "r" (xdim)
+ 	: "esi", "edi"
+ 	);
+     }

@@ -1,6 +1,12 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.106 2005/07/13 11:16:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.107 2005/07/13 11:59:24 flameeyes Exp $
+
+  13 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/avifile-0.7.43.20050224-pic.patch,
+  avifile-0.7.43.20050224-r2.ebuild:
+  Add pic patch for x86 as per bug #88582. Thanks to Kevin F. Quinn
+  <kevquinn@gentoo.org> for the patch.
 
   13 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
   avifile-0.7.43.20050224-r1.ebuild, avifile-0.7.43.20050224-r2.ebuild:
