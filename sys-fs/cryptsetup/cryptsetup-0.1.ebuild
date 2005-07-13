@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1.ebuild,v 1.9 2005/03/14 10:06:29 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1.ebuild,v 1.10 2005/07/13 15:26:18 swegener Exp $
 
 inherit kernel-mod
 
@@ -15,8 +15,6 @@ IUSE=""
 
 DEPEND=">=sys-fs/device-mapper-1.00.07-r1
 	>=dev-libs/libgcrypt-1.1.42"
-
-S=${WORKDIR}/${PN}-${PV}
 
 pkg_setup() {
 	if ! kernel-mod_configoption_present DM_CRYPT ; then
