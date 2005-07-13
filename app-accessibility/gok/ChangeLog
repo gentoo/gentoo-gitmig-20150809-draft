@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.51 2005/07/02 14:13:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.52 2005/07/13 05:35:08 geoman Exp $
+
+  13 Jul 2005; Stephen P. Becker <geoman@gentoo.org> gok-0.10.2.ebuild,
+  gok-0.11.17.ebuild, gok-1.0.3.ebuild, gok-1.0.5.ebuild:
+  removing mips keyword, as accessibility is masked
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> gok-1.0.5.ebuild:
   Stable on alpha.
