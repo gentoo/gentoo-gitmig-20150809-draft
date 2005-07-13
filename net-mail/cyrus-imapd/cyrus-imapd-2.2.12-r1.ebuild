@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12-r1.ebuild,v 1.3 2005/04/06 19:01:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12-r1.ebuild,v 1.4 2005/07/13 14:18:33 swegener Exp $
 
 inherit eutils ssl-cert gnuconfig fixheadtails
 
@@ -78,7 +78,7 @@ net-snmp_check() {
 		tcpd_flag_check net-analyzer/ucd-snmp
 	fi
 
-	if has_version net-snmp; then
+	if has_version net-analyzer/net-snmp; then
 		tcpd_flag_check net-analyzer/net-snmp
 		# check for minimal USE flag.
 		local has_minimal
