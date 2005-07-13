@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.12.0.ebuild,v 1.2 2005/07/13 01:39:15 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.12.0.ebuild,v 1.3 2005/07/13 21:34:22 mattam Exp $
 
 inherit eutils
 
@@ -28,6 +28,8 @@ src_unpack() {
 	# Fix for coreutils change of tail syntax
 	cd ${S}
 	sed -i -e 's/tail -1/tail -n 1/' Makefile.OCaml
+	# Fix for bad button behavior
+	epatch ${FILESDIR}/${P}-gtk2-bug.patch
 }
 
 src_compile() {
