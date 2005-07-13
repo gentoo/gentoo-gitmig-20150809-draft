@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1-r1.ebuild,v 1.16 2005/07/11 13:27:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1-r1.ebuild,v 1.17 2005/07/13 14:07:00 swegener Exp $
 
 inherit java
 
@@ -50,7 +50,7 @@ src_install() {
 
 	if use browserplugin || use mozilla; then
 		local plugin="libjavaplugin_oji.so"
-		if has_version '>=gcc-3*' ; then
+		if has_version '>=sys-devel/gcc-3' ; then
 			plugin="libjavaplugin_ojigcc3.so"
 		fi
 		install_mozilla_plugin /opt/${P}/bin/${plugin}

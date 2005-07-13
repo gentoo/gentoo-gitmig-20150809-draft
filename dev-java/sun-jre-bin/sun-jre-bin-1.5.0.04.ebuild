@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.04.ebuild,v 1.3 2005/07/11 13:20:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.04.ebuild,v 1.4 2005/07/13 14:00:54 swegener Exp $
 
 inherit java eutils
 
@@ -99,7 +99,7 @@ src_install() {
 
 	if use browserplugin || use mozilla; then
 		local plugin_dir="ns7-gcc29"
-		if has_version '>=gcc-3*' ; then
+		if has_version '>=sys-devel/gcc-3' ; then
 			plugin_dir="ns7"
 		fi
 
@@ -141,7 +141,7 @@ pkg_postinst() {
 	java_pkg_postinst
 
 	#Show info about netscape
-	if has_version '>=netscape-navigator-4.79-r1' || has_version '>=netscape-communicator-4.79-r1' ; then
+	if has_version '>=www-client/netscape-navigator-4.79-r1' || has_version '>=www-client/netscape-communicator-4.79-r1' ; then
 		echo
 		einfo "If you want to install the plugin for Netscape 4.x, type"
 		einfo
@@ -152,7 +152,7 @@ pkg_postinst() {
 	# if chpax is on the target system, set the appropriate PaX flags
 	# this will not hurt the binary, it modifies only unused ELF bits
 	# but may confuse things like AV scanners and automatic tripwire
-	if has_version "sys-apps/chpax"
+	if has_version sys-apps/chpax
 	then
 		echo
 		einfo "setting up conservative PaX flags for jar, javac and java"

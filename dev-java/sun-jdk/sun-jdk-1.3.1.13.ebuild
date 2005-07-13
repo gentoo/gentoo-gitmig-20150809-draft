@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.13.ebuild,v 1.9 2005/07/11 18:18:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.13.ebuild,v 1.10 2005/07/13 14:03:49 swegener Exp $
 
 inherit java eutils
 
@@ -101,7 +101,7 @@ pkg_postinst () {
 	# if chpax is on the target system, set the appropriate PaX flags
 	# this will not hurt the binary, it modifies only unused ELF bits
 	# but may confuse things like AV scanners and automatic tripwire
-	if has_version "sys-apps/chpax"
+	if has_version sys-apps/chpax
 	then
 		echo
 		einfo "setting up conservative PaX flags for jar, javac and java"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.12 2005/07/09 15:59:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.13 2005/07/13 14:05:58 swegener Exp $
 
 inherit java-pkg
 
@@ -43,9 +43,9 @@ src_unpack() {
 	# decide which mail implementation we use
 	local javamail=""
 	if use javamail; then
-		if has_version gnu-javamail; then
+		if has_version dev-java/gnu-javamail; then
 			javamail="gnu-javamail"
-		elif has_version sun-javamail-bin; then
+		elif has_version dev-java/sun-javamail-bin; then
 			javamail="sun-javamail-bin"
 		fi
 	fi
@@ -53,9 +53,9 @@ src_unpack() {
 	# decide which jms implementation we use
 	local jms=""
 	if use jms; then
-		if has_version openjms; then
+		if has_version dev-java/openjms; then
 			jms="openjms"
-		elif has_version jms; then
+		elif has_version dev-java/jms; then
 			jms="jms"
 		fi
 	fi
