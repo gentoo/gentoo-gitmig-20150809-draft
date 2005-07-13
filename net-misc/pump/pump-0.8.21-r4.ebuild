@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21-r3.ebuild,v 1.1 2005/07/01 13:52:29 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21-r4.ebuild,v 1.1 2005/07/13 10:15:57 uberlord Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	# metric applied to routes
 	# Enable the --script option to specify a script to run on DHCP actions
 	# Enable the --keep-up option to keep interfaces up when we release
+	# Enable the creation of /etc/ntp.conf and the --no-ntp option
 	epatch "${FILESDIR}/pump-${PV}-gentoo.diff"
 }
 
