@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r12.ebuild,v 1.1 2005/07/10 09:02:32 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r12.ebuild,v 1.2 2005/07/13 02:53:48 vericgar Exp $
 
 inherit eutils gnuconfig
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050710"
+GENTOO_PATCHSTAMP="20050712"
 GENTOO_DEVSPACE="vericgar"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
@@ -269,6 +269,9 @@ src_install () {
 	insinto /etc/apache2
 	doins ${GENTOO_PATCHDIR}/conf/apache2-builtin-mods
 	doins ${GENTOO_PATCHDIR}/conf/httpd.conf
+
+	insinto /etc/apache2/vhosts.d
+	doins ${GENTOO_PATCHDIR}/conf/vhosts.d/00_default_vhost.conf
 
 	keepdir /etc/apache2/vhosts.d
 	keepdir /etc/apache2/modules.d

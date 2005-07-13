@@ -1,6 +1,12 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.389 2005/07/12 16:25:15 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.390 2005/07/13 02:53:48 vericgar Exp $
+
+  13 Jul 2005; Michael Stewart <vericgar@gentoo.org>
+  apache-1.3.33-r10.ebuild, apache-2.0.54-r12.ebuild:
+  New tarball: Splits the default vhost into it's own file, makes all
+  references to configuration files absolute, clears up general user
+  confusion. Fixes bugs 84133, 91745, 92024, 92891, 94168.
 
   12 Jul 2005; Michael Stewart <vericgar@gentoo.org>
   apache-2.0.54-r8.ebuild:

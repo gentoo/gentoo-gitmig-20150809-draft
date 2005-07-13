@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r10.ebuild,v 1.1 2005/07/12 03:58:27 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r10.ebuild,v 1.2 2005/07/13 02:53:48 vericgar Exp $
 
 inherit eutils fixheadtails
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050711"
+GENTOO_PATCHSTAMP="20050712"
 GENTOO_DEVSPACE="vericgar"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
@@ -199,6 +199,9 @@ src_install() {
 	insinto /etc/apache
 	doins ${GENTOO_PATCHDIR}/conf/apache-builtin-mods
 	doins ${GENTOO_PATCHDIR}/conf/httpd.conf
+
+	insinto /etc/apache/vhosts.d
+	doins ${GENTOO_PATCHDIR}/conf/vhosts.d/00_default_vhost.conf
 
 	keepdir /etc/apache/vhosts.d
 	keepdir /etc/apache/modules.d
