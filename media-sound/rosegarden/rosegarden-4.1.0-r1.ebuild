@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.0-r1.ebuild,v 1.5 2005/07/09 19:15:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.0-r1.ebuild,v 1.6 2005/07/13 13:52:06 swegener Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -31,7 +31,7 @@ pkg_setup() {
 	if use arts ; then
 		einfo "aRts support enabled"
 		ewarn "ALSA support disabled, USE=-arts enables ALSA"
-		built_with_use arts jack && einfo "aRts was built with Jack support" \
+		built_with_use kde-base/arts jack && einfo "aRts was built with Jack support" \
 					|| ewarn "aRts wasn't built with Jack support"
 	else
 		einfo "ALSA support enabled"

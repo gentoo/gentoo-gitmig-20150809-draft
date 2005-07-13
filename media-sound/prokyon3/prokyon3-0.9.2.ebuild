@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.2.ebuild,v 1.8 2005/07/07 04:45:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/prokyon3-0.9.2.ebuild,v 1.9 2005/07/13 13:50:51 swegener Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="=x11-libs/qt-3*
 		>=media-libs/libvorbis-1.0 )"
 
 pkg_setup() {
-	if has_version qt && ! built_with_use qt mysql ; then
+	if has_version x11-libs/qt && ! built_with_use x11-libs/qt mysql ; then
 		eerror "You have installed Qt without MySQL support."
 		eerror "Please make sure "mysql" is in your USE variable"
 		eerror "and reemerge Qt"
