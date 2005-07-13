@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/nestra
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/ChangeLog,v 1.6 2005/07/13 21:48:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/ChangeLog,v 1.7 2005/07/13 21:57:09 mr_bones_ Exp $
+
+  13 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  nestra-0.66-r1.ebuild:
+  call games_pkg_setup more; error check sed; use default src_compile
 
   13 Jul 2005; Simon Stelling <blubb@gentoo.org> nestra-0.66-r1.ebuild:
   fixed bug 94871

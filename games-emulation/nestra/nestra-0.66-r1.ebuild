@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.8 2005/07/13 21:48:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.9 2005/07/13 21:57:09 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 
 pkg_setup() {
+	games_pkg_setup
 	use amd64 || return 0
 	export ABI=x86
 	if has_m32 ; then
@@ -34,7 +35,6 @@ pkg_setup() {
 		eerror "    USE=multilib FEATURES=-sandbox"
 		die "Cannot produce 32bit code"
 	fi
-	games_pkg_setup
 }
 
 src_unpack() {
@@ -45,16 +45,14 @@ src_unpack() {
 		-e 's:-O2 ::' \
 		-e "s:ld:$(tc-getLD) ${LDFLAGS}:" \
 		-e "s:gcc:$(tc-getCC) ${CFLAGS}:" Makefile \
-		|| die "sed Makefile failed"
-	
+		|| die "sed failed"
+
 	#94871
 	if use amd64 ; then
-		sed -i -e "s:-L/usr/X11R6/lib:-L/emul/linux/x86/usr/lib32:" Makefile
+		sed -i \
+			-e "s:-L/usr/X11R6/lib:-L/emul/linux/x86/usr/lib32:" Makefile \
+			|| die "sed failed"
 	fi
-}
-
-src_compile() {
-	emake || die "emake failed"
 }
 
 src_install() {
