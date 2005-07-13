@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.9.ebuild,v 1.3 2005/04/26 02:15:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.9.ebuild,v 1.4 2005/07/13 14:20:59 swegener Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if has_version '>=linux-headers-2.6' ; then
+	if has_version '>=sys-kernel/linux-headers-2.6' ; then
 		epatch ${FILESDIR}/${P}-sparc_cpu.patch
 	fi
 
