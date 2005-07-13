@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0.ebuild,v 1.5 2005/07/08 12:19:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0.ebuild,v 1.6 2005/07/13 16:13:26 caleb Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 SRCTYPE="opensource-desktop"
 DESCRIPTION="QT version ${PV}"
@@ -87,7 +87,12 @@ src_unpack() {
 	epatch ${FILESDIR}/qt4-rpath.patch
 	epatch ${FILESDIR}/qt4-nomkdir.patch
 
-	sed -i -e "s:CFG_REDUCE_EXPORTS=auto:CFG_REDUCE_EXPORTS=no:" configure
+	if [[ $(gcc-major-version = "4") ]]; then
+		einfo "Visibility support: auto"
+	else
+		einfo "Visibility support: disabled"
+		sed -i -e "s:CFG_REDUCE_EXPORTS=auto:CFG_REDUCE_EXPORTS=no:" configure
+	fi
 }
 
 src_compile() {

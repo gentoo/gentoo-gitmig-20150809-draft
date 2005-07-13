@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0b2185dc5083c6626071d26ef79383f5 qt-3.3.4-r3.ebuild 9050
 MD5 88875c77c2482de25169850cfc19faf5 qt-3.3.3-r1.ebuild 7987
 MD5 94ed6ea2c0cd61ef0ccf21a1fa10796a qt-3.3.4-r5.ebuild 9197
-MD5 2eee5cc92ed819607456f3c10bce5776 qt-4.0.0.ebuild 5574
+MD5 49460a843baee3fa6e7e30dca3ad999b qt-4.0.0.ebuild 5715
 MD5 98c2c897d6bb5fd3f7c6af49cd8decb7 qt-3.3.4-r2.ebuild 8565
 MD5 29e408b179271fd0fdec5a0dbc752627 qt-3.3.4-r4.ebuild 9408
-MD5 2ec08b7da4a92d3a653b9bd983d2fea2 ChangeLog 39221
+MD5 6aeb37d272debe2b628574af0be5abbb ChangeLog 39347
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 1080e569e9b9579b8e8a85f95cd6c18d qt-3.3.4-r6.ebuild 9197
 MD5 74acd4c098f2c4bd70bdea585f0cb096 files/qt-no-rpath.patch 352
@@ -40,10 +37,3 @@ MD5 8f75ba0e151481962fcb239dc216cf39 files/qt-3.3.4-0051-qtoolbar_77047.patch 12
 MD5 471c09f2792eec732d715a983b7f7244 files/qt-3.3.3-immodule-20040819-event-inversion-20040908.diff 4150
 MD5 eb6eb6b68c8f747b12a3a53efc4b6480 files/0038-dragobject-dont-prefer-unknown.patch 2551
 MD5 e0a483959b1d3dad0fc58adc242624c1 files/qt-3.3.3-amd64-fullscreen.patch 1220
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzm9cBXaUFmZvwyMRApfMAKCOp3NULhbqwcXcxr/V+uT8UVOSQwCdHhj8
-9MQCR7wQCQwRjUS7wp6bWtA=
-=9zmJ
------END PGP SIGNATURE-----
