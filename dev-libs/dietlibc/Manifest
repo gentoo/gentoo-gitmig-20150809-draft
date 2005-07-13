@@ -1,27 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 03ba76feaf5d31e633ffa06ddbf9b227 ChangeLog 6512
-MD5 d1bbb0d303687c9d15e7d1f28893bb21 dietlibc-0.28.ebuild 1484
-MD5 6d7429e88eda74e2e5a1d89dcda32c33 metadata.xml 400
+MD5 b94d8f853d48325206b9a0191ce09156 dietlibc-0.28.ebuild 1477
 MD5 980bbcf54d614e6da13205de20ea7e78 dietlibc-0.25.ebuild 1579
 MD5 5d0a9f95d5fdcfaacf56c046a76c41f2 dietlibc-0.27.ebuild 2631
-MD5 e326170b86e838c08e64d75b8d6d0f67 files/dietlibc-0.28-Makefile.patch 529
-MD5 483744830092f64a7f5fefc773ced02a files/digest-dietlibc-0.28 66
-MD5 2d0f660abd258d75417ef8abd8ab5eb7 files/0.24-dirent-prototype.patch 668
+MD5 dc180adc362a4107b215105ccf96747a ChangeLog 6594
+MD5 6d7429e88eda74e2e5a1d89dcda32c33 metadata.xml 400
 MD5 ee309afd4c5bd953a5133fb3383124de files/gcc-33-r3.patch 451
-MD5 9247251c0adc5ce1b626d7092ae0c903 files/gcc-33.patch 482
 MD5 8c25662fd30d966f24ec20ef491075a6 files/dietlibc-sparc64-makefile.patch 499
 MD5 65a68ed33fd14d52b23a2fe28e06dfc9 files/ssp.c 3065
+MD5 9022467ec4210d62330f0eb1d8c93394 files/dietlibc-0.26-ssp.patch 1632
+MD5 9247251c0adc5ce1b626d7092ae0c903 files/gcc-33.patch 482
+MD5 2d0f660abd258d75417ef8abd8ab5eb7 files/0.24-dirent-prototype.patch 668
 MD5 a6911c79e510ea03173a809f5d7e6a40 files/digest-dietlibc-0.25 66
 MD5 771865efe3795f379b15c0bb6d61a857 files/digest-dietlibc-0.27 66
+MD5 483744830092f64a7f5fefc773ced02a files/digest-dietlibc-0.28 66
 MD5 02d59156de2a7a0f914dc5769e26cdcf files/0.25-gcc34.patch 3454
-MD5 9022467ec4210d62330f0eb1d8c93394 files/dietlibc-0.26-ssp.patch 1632
+MD5 e326170b86e838c08e64d75b8d6d0f67 files/dietlibc-0.28-Makefile.patch 529
 MD5 ea791631782529db92c7b23198391a7a files/gcc-33-r2.patch 1077
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCiFZMmdTrptrqvGERAvgRAJ44lWEdbgMCkNlWKM955qSMk8IWdQCeNVg4
-BU3aH+Fa3I6ODAUzaiRUWtk=
-=2Fn9
+iQCVAwUBQtR7gp4WFLgrx1GWAQKY5QQAlQAhYWjECwMVfF6fk+ykNURaYNRVhcrw
+JBtmGJwtR4ziOLiHp1AQ829jij/IV+LOkN4U7PGgb1d5TIrrfC3Lu0zoqA0/BlbH
+uzj0nMMeTtPzIq2XImee8BzD1azlXiuF6P/a4SpB6ntBundXICD8V4bjGB2Z8/Vo
+g9KcLmHfUd0=
+=eIPC
 -----END PGP SIGNATURE-----
