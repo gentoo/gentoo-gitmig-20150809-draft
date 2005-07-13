@@ -1,32 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3bbc7854d9970468fa600c574754acd0 sitecopy-0.10.12-r1.ebuild 977
-MD5 23d7221e79fb41bc66a1331a25910a50 sitecopy-0.12.1.ebuild 1125
-MD5 d3286f6a00ba6935bf983d28040f63d0 sitecopy-0.13.4-r2.ebuild 1951
-MD5 c18e86bcfbcff4453e8fab1e21006828 sitecopy-0.13.4.ebuild 1123
-MD5 bbfe5ddadf3db2c87e363c97bceec92b sitecopy-0.14.2.ebuild 1499
-MD5 c10a3f88d16f4f8362713b2e67da7819 sitecopy-0.13.4-r1.ebuild 1797
-MD5 2fbf9f996b007377f17c7c9c56347c92 sitecopy-0.14.1.ebuild 1564
-MD5 1271754e148b8069eaf418273140abe8 sitecopy-0.14.3.ebuild 1639
 MD5 55a8bf057c5166307372f2a73f4660a9 ChangeLog 4409
-MD5 70eb740fba56cc29ce75be53dc2f3bec sitecopy-0.15.1.ebuild 2757
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 9d2f1b627c2e64ada7b81ea3fa5ee51d files/sitecopy-0.14.1-nls.patch 598
-MD5 1dfe28809075352e0eed13c4a713b728 files/sitecopy-gcc3.4.patch 493
-MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4-r1 67
-MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4-r2 67
 MD5 09b3e7444248285b787fa3635d41aedc files/digest-sitecopy-0.10.12-r1 68
 MD5 3ee0433186f6f3224dff93ab6818a119 files/digest-sitecopy-0.12.1 67
 MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4 67
+MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4-r1 67
+MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4-r2 67
 MD5 4d13e53c5bae73ede477e5e63cfc3aa1 files/digest-sitecopy-0.14.1 67
 MD5 288fac1555c5aa6689f3e3e4e9e2c5e9 files/digest-sitecopy-0.14.2 67
 MD5 d4ee82cb6aac0ea4d36d55c0194229df files/digest-sitecopy-0.14.3 67
 MD5 fdd1c7334ee674439936fa8eed17cfcc files/digest-sitecopy-0.15.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCqD6CI1lqEGTUzyQRAiTiAJ44ctpIz6ePWKYv71an8FSbq9BXdgCfTGun
-axNaglbjofRV4O9U9S0r/Uo=
-=ty+a
------END PGP SIGNATURE-----
+MD5 9d2f1b627c2e64ada7b81ea3fa5ee51d files/sitecopy-0.14.1-nls.patch 598
+MD5 1dfe28809075352e0eed13c4a713b728 files/sitecopy-gcc3.4.patch 493
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 3bbc7854d9970468fa600c574754acd0 sitecopy-0.10.12-r1.ebuild 977
+MD5 23d7221e79fb41bc66a1331a25910a50 sitecopy-0.12.1.ebuild 1125
+MD5 c10a3f88d16f4f8362713b2e67da7819 sitecopy-0.13.4-r1.ebuild 1797
+MD5 d3286f6a00ba6935bf983d28040f63d0 sitecopy-0.13.4-r2.ebuild 1951
+MD5 c18e86bcfbcff4453e8fab1e21006828 sitecopy-0.13.4.ebuild 1123
+MD5 2fbf9f996b007377f17c7c9c56347c92 sitecopy-0.14.1.ebuild 1564
+MD5 bbfe5ddadf3db2c87e363c97bceec92b sitecopy-0.14.2.ebuild 1499
+MD5 1271754e148b8069eaf418273140abe8 sitecopy-0.14.3.ebuild 1639
+MD5 a5aaa1005bcb0bec44f71e07c5e26006 sitecopy-0.15.1.ebuild 2793
