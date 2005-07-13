@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.8.ebuild,v 1.5 2005/07/10 01:08:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.8.ebuild,v 1.6 2005/07/13 14:13:11 swegener Exp $
 
 inherit eutils perl-module
 
@@ -79,7 +79,7 @@ pkg_setup() {
 	if use resperl; then
 		# res_perl pre-flight check...
 		if ! $(perl -V | grep -q "usemultiplicity=define") ||\
-		   ! built_with_use perl ithreads || ! built_with_use libperl ithreads
+		   ! built_with_use dev-lang/perl ithreads || ! built_with_use sys-devel/libperl ithreads
 		then
 			eerror "Embedded perl add-on needs Perl and libperl with built-in threads support"
 			eerror "(rebuild perl and libperl with ithreads use-flag enabled)"
@@ -97,12 +97,12 @@ pkg_setup() {
 
 	# check if zaptel and libpri have been built with bri enabled
 	if use bri; then
-		if ! built_with_use zaptel bri; then
+		if ! built_with_use net-misc/zaptel bri; then
 			eerror "Re-emerge zaptel with bri use-flag enabled!"
 			die "Zaptel without bri support detected"
 		fi
 
-		if ! built_with_use libpri bri; then
+		if ! built_with_use net-libs/libpri bri; then
 			eerror "Re-emerge libpri with bri use-flag enabled!"
 			die "Libpri without bri support detected"
 		fi

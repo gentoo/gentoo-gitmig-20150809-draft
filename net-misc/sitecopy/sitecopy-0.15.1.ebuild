@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.15.1.ebuild,v 1.2 2005/06/09 13:04:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.15.1.ebuild,v 1.3 2005/07/13 14:14:46 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -50,20 +50,20 @@ src_compile() {
 	einfo "therefore support must be built into neon."
 
 	if use zlib ; then
-		built_with_use neon zlib || die "neon needs zlib support"
+		built_with_use net-misc/neon zlib || die "neon needs zlib support"
 	fi
 
 	if use ssl ; then
-		built_with_use neon ssl || die "neon needs ssl support"
+		built_with_use net-misc/neon ssl || die "neon needs ssl support"
 		myconf="${myconf} --with-ssl=openssl"
 	fi
 
 	if use expat ; then
-		built_with_use neon expat || die "neon needs expat support"
+		built_with_use net-misc/neon expat || die "neon needs expat support"
 	fi
 
 	if use xml2 ; then
-		built_with_use neon expat && die "neon needs expat support disabled for
+		built_with_use net-misc/neon expat && die "neon needs expat support disabled for
 		xml2 support to be enabled"
 	fi
 

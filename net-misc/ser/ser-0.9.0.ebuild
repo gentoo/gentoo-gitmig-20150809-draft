@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.0.ebuild,v 1.5 2005/06/26 13:16:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.0.ebuild,v 1.6 2005/07/13 14:15:36 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -88,7 +88,7 @@ src_unpack() {
 	done
 
 	# remove sasl if openldap hasn't been built with it
-	if use ldap && ! built_with_use openldap sasl; then
+	if use ldap && ! built_with_use net-nds/openldap sasl; then
 		sed -i -e "s:-lsasl::g" \
 			${S}/modules/ldap/Makefile
 
