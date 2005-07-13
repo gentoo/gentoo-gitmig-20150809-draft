@@ -1,6 +1,11 @@
 # ChangeLog for net-print/fax4cups
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.7 2005/04/16 10:29:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.8 2005/07/13 17:39:59 lanius Exp $
+
+*fax4cups-1.24 (13 Jul 2005)
+
+  13 Jul 2005; Heinrich Wendel <lanius@gentoo.org> +fax4cups-1.24.ebuild:
+  version bump
 
   16 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> fax4cups-1.23.ebuild:
   added ~amd64 to KEYWORDS, fixes #82878
