@@ -1,0 +1,11 @@
+diff -ur Omni/DeviceScaling.cpp ../../Omni.patch/DeviceScaling.cpp
+--- Omni/DeviceScaling.cpp	2003-12-12 00:11:28.000000000 +0100
++++ ../../Omni.patch/DeviceScaling.cpp	2005-06-27 17:01:30.000000000 +0200
+@@ -16,6 +16,7 @@
+  *   along with this library; if not, write to the Free Software
+  *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+  */
++#include <errno.h>
+ #include "DeviceScaling.hpp"
+ #include "JobProperties.hpp"
+ 

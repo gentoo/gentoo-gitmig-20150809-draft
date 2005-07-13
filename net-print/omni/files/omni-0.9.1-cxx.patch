@@ -1,0 +1,12 @@
+diff -ur Omni/OmniPDCProxy.cpp ../../Omni.patch2/OmniPDCProxy.cpp
+--- Omni/OmniPDCProxy.cpp	2003-11-18 00:13:21.000000000 +0100
++++ ../../Omni.patch2/OmniPDCProxy.cpp	2005-06-28 01:51:11.000000000 +0200
+@@ -787,7 +787,7 @@
+          && PDCCMD_ACK == pCmd_d->getCommandType ()
+          )
+       {
+-          pCmd_d->getCommandInt ((int)eOmniClass_d);
++          pCmd_d->getCommandInt ((int&)eOmniClass_d);
+       }
+       else
+       {

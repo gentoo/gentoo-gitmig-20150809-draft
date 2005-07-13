@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.1.ebuild,v 1.3 2005/07/10 15:56:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.1.ebuild,v 1.4 2005/07/13 17:51:09 lanius Exp $
+
+inherit eutils
 
 DESCRIPTION="Omni provides support for many printers with a pluggable framework (easy to add devices)"
 HOMEPAGE="http://sourceforge.net/projects/omniprint"
@@ -20,6 +22,13 @@ RDEPEND="virtual/ghostscript
 S="${WORKDIR}/Omni"
 
 IUSE="cups X ppds foomaticdb static"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-errno.patch
+	epatch ${FILESDIR}/${P}-cxx.patch
+}
 
 src_compile() {
 	local myconf=" \
