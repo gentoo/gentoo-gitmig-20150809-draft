@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libosip
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.17 2004/12/29 03:19:51 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.18 2005/07/14 18:49:32 johnm Exp $
+
+*libosip-2.2.1 (14 Jul 2005)
+
+  14 Jul 2005; John Mylchreest <johnm@gentoo.org> -libosip-0.8.8.ebuild,
+  -libosip-0.8.8-r1.ebuild, -libosip-2.0.6.ebuild, -libosip-2.0.7.ebuild,
+  +libosip-2.2.1.ebuild:
+  Bumping to latest version.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
