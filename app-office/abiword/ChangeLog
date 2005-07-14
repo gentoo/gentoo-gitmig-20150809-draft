@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.117 2005/07/03 20:28:37 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.118 2005/07/14 16:34:03 gmsoft Exp $
+
+  14 Jul 2005; Guy Martin <gmsoft@gentoo.org> abiword-2.2.7-r1.ebuild:
+  Stable on hppa.
 
 *abiword-2.2.8-r1 (03 Jul 2005)
 *abiword-2.2.7-r1 (03 Jul 2005)
