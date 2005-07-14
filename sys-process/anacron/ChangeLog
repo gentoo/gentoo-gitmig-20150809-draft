@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/anacron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/ChangeLog,v 1.3 2005/06/22 01:20:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/ChangeLog,v 1.4 2005/07/14 06:45:14 ka0ttic Exp $
+
+*anacron-2.3-r2 (14 Jul 2005)
+
+  14 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> files/anacrontab,
+  -anacron-2.3-r1.ebuild, +anacron-2.3-r2.ebuild:
+  Revert previous --lsbsysinit changes as they did not fix the issue. See bugs
+  96730 and 95173.
 
 *anacron-2.3-r1 (22 Jun 2005)
 
