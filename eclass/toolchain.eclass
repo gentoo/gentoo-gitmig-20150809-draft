@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.175 2005/07/13 21:06:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.176 2005/07/14 03:28:12 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -444,8 +444,9 @@ glibc_have_pie() {
 # smashing protection support.
 libc_has_ssp() {
 	local libc_prefix
-	[[ $(tc-arch) == "ppc64" ]] && [[ -z ${ABI} ]] && libc_prefix="/lib64/"
-	libc_prefix=${libc_prefix:-/$(get_libdir)/}
+	[[ $(tc-arch) == "ppc64" ]] && [[ -z ${ABI} ]] && libc_prefix="lib64"
+	libc_prefix=${libc_prefix:-$(get_libdir)}
+	libc_prefix=${libc_prefix:-lib}
 
 	echo 'int main(){}' > "${T}"/libctest.c
 	gcc "${T}"/libctest.c -lc -o libctest
@@ -461,7 +462,7 @@ libc_has_ssp() {
 	            grep 'FUNC.*GLOBAL.*__stack_smash_handler') ]]
 	then
 		return 0
-	elif is_crosscompile; then
+	elif is_crosscompile ; then
 		die "'${my_libc}' was detected w/out ssp, that sucks (a lot)"
 	else
 		return 1
@@ -1551,6 +1552,8 @@ gcc-compiler_src_install() {
 		doexe ${FILESDIR}/fix_libtool_files.sh
 	fi
 
+	# use gid of 0 because some stupid ports don't have
+	# the group 'root' set to gid 0
 	chown -R root:0 "${D}"${LIBPATH}
 }
 
