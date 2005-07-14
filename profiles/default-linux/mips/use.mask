@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.32 2005/07/08 04:59:45 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.33 2005/07/14 08:40:00 hardave Exp $
+
+# Hardave Riar <hardave@gentoo.org>
+# No hardware support
+lm_sensors
 
 # Hardave Riar <hardave@gentoo.org>
 # Temporarily masking wifi until I can test it
