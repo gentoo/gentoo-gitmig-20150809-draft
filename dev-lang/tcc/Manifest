@@ -1,9 +1,19 @@
-MD5 b7e1fbf86d87042515759a804fd7bed3 ChangeLog 3175
-MD5 35cfb4925871295b467051c44fb24cc7 metadata.xml 329
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bf5fd7682dfe9747af2fdf7af2dedcc7 tcc-0.9.19.ebuild 1161
-MD5 019c1b16d396020995c5b01f92ec2f69 tcc-0.9.20.ebuild 1257
+MD5 3a6369455c29465e6c21898a9e157416 tcc-0.9.20.ebuild 1259
+MD5 b7e1fbf86d87042515759a804fd7bed3 ChangeLog 3175
 MD5 fe021b0a69a2ef1e49712995066e84af tcc-0.9.22.ebuild 1231
+MD5 35cfb4925871295b467051c44fb24cc7 metadata.xml 329
 MD5 c69cb4d253c0594ac5714ddaffc65511 files/digest-tcc-0.9.19 62
 MD5 d2230252f3e3cd1d63e2b08a02260473 files/digest-tcc-0.9.20 62
 MD5 931e2a2a3184dcc20df3be0bd4ce9382 files/digest-tcc-0.9.22 62
 MD5 5029153e4761d98be0cda03a73e57e80 files/tcc-0.9.20-gcc34.patch 2901
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1tebBXaUFmZvwyMRAsPNAJ4za047deixwPnkTuKSchsLsNmp1wCgyL1q
+RL8z02c15CAdQ0IN81+251U=
+=0SrU
+-----END PGP SIGNATURE-----
