@@ -2,15 +2,16 @@
 Hash: SHA1
 
 MD5 2b5efde1aec9c08808519c8fd5c66234 ChangeLog 6690
+MD5 b6ca9be0d72ea5342eaadd2229b22b3e files/0.9.8.1-utf8.patch 322
 MD5 969471685aa7412bc60869649312618f files/0.9.8.1/slrn-0.9.8.1-fetch.diff 920
 MD5 01717350eabdcda662ff2444d8b3e560 files/0.9.8.1/slrn-0.9.8.1-lastchar2.diff 4732
 MD5 ee69dcaa439926ef61572ab61825bf74 files/digest-slrn-0.9.8.1 66
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 bdc87122fbc4256b12b1c64ea75fa0f6 slrn-0.9.8.1.ebuild 1520
+MD5 846f144c56d6ac669e1444d89b33ae61 slrn-0.9.8.1.ebuild 1516
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1sxxI1lqEGTUzyQRAp1lAKCdhzzRn5No4VZ13RykGrOTcRGshACffkou
-f4Bxix3ANRDUTeu7H9KaTkM=
-=sCrr
+iD8DBQFC1s1II1lqEGTUzyQRAqQNAKDWkEQm/rMH3ElyRe0Pfa9CELZQggCgyLlY
+dIbm4SiL3uY8gIYod+6BIwk=
+=Xyan
 -----END PGP SIGNATURE-----
