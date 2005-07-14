@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.1.1.ebuild,v 1.5 2004/12/28 11:29:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.1.1.ebuild,v 1.6 2005/07/14 21:07:36 agriffis Exp $
 
 DESCRIPTION="The virtual machine that perl6 relies on."
 HOMEPAGE="http://www.parrotcode.org/"
@@ -35,8 +35,4 @@ src_install() {
 
 	#TODO:
 	#dodoc ...
-}
-
-src_test() {
-	emake test || die "test failed"
 }

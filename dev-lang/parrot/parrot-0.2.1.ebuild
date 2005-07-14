@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.2.1.ebuild,v 1.2 2005/07/11 21:11:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.2.1.ebuild,v 1.3 2005/07/14 21:07:36 agriffis Exp $
 
 inherit base eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
-IUSE="test gdbm gmp python"
+IUSE="gdbm gmp python"
 
 #this ebuild has been tested with the given perl
 #if we trust the README then 5.6 should also be ok.
@@ -61,8 +61,3 @@ src_install()	{
 	dodir /usr/share/doc/${P}
 	dodoc README RESPONSIBLE_PARTIES ABI_CHANGES ChangeLog CREDITS
 }
-
-src_test()	{
-	emake test || die "test failed"
-}
-
