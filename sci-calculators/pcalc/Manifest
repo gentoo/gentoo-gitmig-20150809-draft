@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 25822404d543970f374c03c190602347 metadata.xml 217
 MD5 3d187157454a413764f19cc250cdccdd pcalc-1.0.0-r1.ebuild 1163
 MD5 050e9516a42e9449715ec6231865ed4a pcalc-1.0.0.ebuild 703
@@ -13,3 +16,10 @@ MD5 37048896f8eadea6e20d6d4ba67c2d5f files/pcalc-1.0.0-operator-updates.patch 37
 MD5 b6ec72ff82cd4a5d80a40e5f8ccc6d67 files/pcalc-1.0.0-error-handler.patch 746
 MD5 4d66ff33f60981fcadd27d915a6c0c7f files/pcalc-1.0.0-input-overflow-check.patch 974
 MD5 a7bff3af96ba061b61898f898ee3a1ab files/pcalc-1.0.0-tmpfile.patch 2110
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1cyYgIKl8Uu19MoRAtSuAJ0UYaGrdYOVDWzQApjWNI8ZJCW1WgCeNnKX
+v0N2KbfqP3YpxBCxMp/gUNc=
+=qUSg
+-----END PGP SIGNATURE-----

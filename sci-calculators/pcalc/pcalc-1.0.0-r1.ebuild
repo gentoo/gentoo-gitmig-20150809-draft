@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/pcalc-1.0.0-r1.ebuild,v 1.2 2005/06/24 11:23:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/pcalc-1.0.0-r1.ebuild,v 1.3 2005/07/14 02:21:54 vapier Exp $
 
 inherit eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-usage.patch
 	epatch "${FILESDIR}"/${P}-string-overflow-checks.patch
 	epatch "${FILESDIR}"/${P}-duplicated-case.patch
+	epatch "${FILESDIR}"/${P}-flex.patch
 }
 
 src_test() {
