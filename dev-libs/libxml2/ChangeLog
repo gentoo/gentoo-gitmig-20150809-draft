@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.125 2005/07/13 01:26:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.126 2005/07/14 11:48:37 azarah Exp $
+
+  14 Jul 2005; Martin Schlemmer <azarah@gentoo.org> libxml2-2.6.20.ebuild:
+  Fix post install to use $ROOT.
 
 *libxml2-2.6.20 (13 Jul 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.20.ebuild,v 1.1 2005/07/13 01:26:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.20.ebuild,v 1.2 2005/07/14 11:48:37 azarah Exp $
 
 inherit libtool gnome.org flag-o-matic eutils
 
@@ -68,12 +68,12 @@ src_install() {
 pkg_postinst() {
 
 	# need an XML catalog, so no-one writes to a non-existent one
-	CATALOG=/etc/xml/catalog
+	CATALOG="${ROOT}/etc/xml/catalog"
 	# we dont want to clobber an existing catalog though,
 	# only ensure that one is there
 	# <obz@gentoo.org>
 	if [ ! -e ${CATALOG} ]; then
-		[ -d /etc/xml ] || mkdir /etc/xml
+		[ -d "${ROOT}/etc/xml" ] || mkdir -p "${ROOT}/etc/xml"
 		/usr/bin/xmlcatalog --create > ${CATALOG}
 		einfo "Created XML catalog in ${CATALOG}"
 	fi
