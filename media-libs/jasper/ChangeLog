@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.16 2005/07/04 22:26:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.17 2005/07/14 07:38:03 hardave Exp $
+
+  14 Jul 2005; Hardave Riar <hardave@gentoo.org> jasper-1.701.0.ebuild:
+  Keyworded ~mips
 
   04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> jasper-1.701.0.ebuild:
   Add ~alpha keyword.
