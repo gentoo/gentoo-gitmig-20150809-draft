@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 280ac30723bc915148734ac0cb8e4026 ChangeLog 8252
-MD5 0cd85247a802c1f569a1a0608574f0ce rdesktop-1.4.1.ebuild 840
+MD5 5abf2e105b0281a7cc8b81e7bc5f7c74 ChangeLog 8344
 MD5 6c6c99858d7cd726a669b18be5e25ef3 metadata.xml 556
-MD5 523e9b810345c3cd5fca0eb54db9ce85 rdesktop-1.4.0-r1.ebuild 1001
 MD5 e8ec9629caa0d0271830c94c56df7ff0 rdesktop-1.3.1-r1.ebuild 1190
-MD5 a843f83ff14be3e87d5528c3c31416ed files/rdesktop-1.3.1-kde.patch 2409
-MD5 70717a72188f467d67a86be52598bdd5 files/digest-rdesktop-1.4.1 66
-MD5 cc065e1d7df4180f2596bb76bff5aa8c files/rdesktop-1.4.0-configure-with_arg.patch 1744
-MD5 0af2b98117bd38ebe2c579b741d67e79 files/digest-rdesktop-1.4.0-r1 66
+MD5 523e9b810345c3cd5fca0eb54db9ce85 rdesktop-1.4.0-r1.ebuild 1001
+MD5 e28dd1949d5706a38fb73e738e6d3d51 rdesktop-1.4.1.ebuild 847
 MD5 3f26cdcaa9d46e40bcf78e879cac3d14 files/digest-rdesktop-1.3.1-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrFohKf2g/qXtneoRAhdPAJ4ixhxvMNRjSHjxkZDeORXvkeb9HQCgjfz9
-goojirjTxis0mtj+Td5DILE=
-=S5qg
------END PGP SIGNATURE-----
+MD5 0af2b98117bd38ebe2c579b741d67e79 files/digest-rdesktop-1.4.0-r1 66
+MD5 70717a72188f467d67a86be52598bdd5 files/digest-rdesktop-1.4.1 66
+MD5 a843f83ff14be3e87d5528c3c31416ed files/rdesktop-1.3.1-kde.patch 2409
+MD5 cc065e1d7df4180f2596bb76bff5aa8c files/rdesktop-1.4.0-configure-with_arg.patch 1744
