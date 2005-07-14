@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 33abd09eb578369e96ec83a56bb7c5a5 libbtctl-0.4.1.ebuild 1249
 MD5 b066f31c87f259a29f4a351d2103877f libbtctl-0.4.1-r1.ebuild 1043
 MD5 b6d146ee15ee1b84bb14b9564b072000 libbtctl-0.3.ebuild 875
@@ -7,3 +10,10 @@ MD5 6fd25ef01add3d4f6b205a586233e783 files/digest-libbtctl-0.3 64
 MD5 2f18fdc85cff32fc3b1eb5dcf7376b3a files/libbtctl-0.4.1-enable_python.patch 1292
 MD5 89c026311c1c9a92f14e59fe40698804 files/digest-libbtctl-0.4.1 66
 MD5 89c026311c1c9a92f14e59fe40698804 files/digest-libbtctl-0.4.1-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1vNQBXaUFmZvwyMRAvhMAJ9SKqLxJimG9G8rqLmqpnEas5uZ4QCfZiYR
+7EXQiyiVa1X0kNVwwjY32NA=
+=QUM6
+-----END PGP SIGNATURE-----
