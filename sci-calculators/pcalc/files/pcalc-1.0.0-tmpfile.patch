@@ -25,7 +25,7 @@ Patch by Mike Frysinger <vapier@gentoo.org>
  
          for(cnt = args+1; cnt < argc; cnt++)
              {
-@@ -207,19 +209,24 @@
+@@ -207,19 +209,27 @@
          //printf("CMDLINE='%s'\n", buff);
  
          len = strlen(buff);
@@ -56,6 +56,9 @@ Patch by Mike Frysinger <vapier@gentoo.org>
 -        yyin = fopen("pcalc.tmp", "r");
 -        comm = 1;
 +        yyin = fdopen(tmpfile, "r");
++        /* XXX: hack! unlink here because if parsing fails, flex will
++         * exit and we won't be able to unlink the file below */
++        unlink(template);
          }
  
      init_sym() ;
