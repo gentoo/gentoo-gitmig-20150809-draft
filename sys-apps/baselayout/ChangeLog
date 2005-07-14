@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.254 2005/07/13 17:55:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.255 2005/07/14 13:36:57 azarah Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.12.0_pre1 (14 Jul 2005)
+
+  14 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  +baselayout-1.12.0_pre1.ebuild:
+  New testing release.
 
 *baselayout-1.11.13 (13 Jul 2005)
 
