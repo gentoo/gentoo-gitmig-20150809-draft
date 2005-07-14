@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/netpanzer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.18 2005/07/01 17:50:00 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.19 2005/07/14 02:24:00 vapier Exp $
+
+*netpanzer-0.8-r1 (14 Jul 2005)
+
+  14 Jul 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/netpanzer-0.8-min-size-check.patch,
+  +files/netpanzer-0.8-robust.patch, +netpanzer-0.8-r1.ebuild:
+  Fix DoS in server #98922 by Stefan Cornelius.
 
   01 Jul 2005; Ferris McCormick <fmccor@gentoo.org> netpanzer-0.8.ebuild:
   Add ~sparc keyword --- Users report success running it, and it does build

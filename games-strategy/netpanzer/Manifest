@@ -3,16 +3,20 @@ Hash: SHA1
 
 MD5 00d7302016b989bd8a8f1cca48f6967b netpanzer-0.8.ebuild 1957
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 71d2fec96bd64587155b6b7f64e93cad ChangeLog 3184
+MD5 c1d25b73c6d0c16bad58ceaf594297e8 netpanzer-0.8-r1.ebuild 2020
+MD5 0b214dc61d9bf3a083226965821d8bf2 ChangeLog 3424
 MD5 a254cf85014dab1f14a620fc3549355f files/netpanzer.rc 891
+MD5 616b3d065523e34fd3e0d5d8ada5d053 files/netpanzer-0.8-min-size-check.patch 1385
 MD5 52b3f20dca70a177cc63da9903b5f5fb files/physfs.patch 553
+MD5 b31fb3b6d8c97b5f87ef8a825a60db2e files/digest-netpanzer-0.8-r1 139
 MD5 31c24932718cd34666bf4e1b800772fb files/netpanzer-ded.ini 1261
 MD5 b31fb3b6d8c97b5f87ef8a825a60db2e files/digest-netpanzer-0.8 139
+MD5 c40c9070d28732d4ca56e37277e5807f files/netpanzer-0.8-robust.patch 8203
 MD5 e45870d0456ec36ed692b70fada22bb5 files/netpanzer-ded 353
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1cTPgIKl8Uu19MoRAiU3AJ9PFTETGiG3BwdaVcCXryrQdUzrWQCfeaBn
-jyISBs7516GdtpeAnwRghj8=
-=hBAi
+iD8DBQFC1c0VgIKl8Uu19MoRAs5aAJ9x+GAuyC9QE8aLr6TUxxuQV2IzGQCePQIQ
+uSAgwmU1x3Xj/f02Yx5nnsQ=
+=8myL
 -----END PGP SIGNATURE-----
