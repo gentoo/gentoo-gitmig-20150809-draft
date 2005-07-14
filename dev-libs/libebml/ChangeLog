@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.47 2005/07/02 20:25:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.48 2005/07/14 12:23:45 flameeyes Exp $
+
+*libebml-0.7.5 (14 Jul 2005)
+
+  14 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +libebml-0.7.5.ebuild:
+  New upstream version. Dropped -fPIC workaround (fixed upstream, too).
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> libebml-0.7.3.ebuild:
   Stable on alpha.
