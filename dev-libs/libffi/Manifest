@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 52f4764d7a851b50cf81d20d495d090a libffi-3.4.1-r1.ebuild 5812
 MD5 ea5e2ecd7602d6f2fb898c3f25f6e353 libffi-1.20.ebuild 604
 MD5 c247e17bcee3c174dbbbd00d88d30a7a libffi-3.4.1.ebuild 7055
@@ -12,3 +15,10 @@ MD5 03a0e46a8ce1aff598b68a731112c13a files/digest-libffi-3.4.1-r1 64
 MD5 595fc5d3e417d76d1f7e7f0a8439535a files/digest-libffi-3.3.5 64
 MD5 03a0e46a8ce1aff598b68a731112c13a files/digest-libffi-3.4.1 64
 MD5 2ca380cbcf0547fb5d2a671c1c0296de files/digest-libffi-3.4.3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1t3jBXaUFmZvwyMRAi51AKCw4zrTb+voHRZnnE7kZtDn37qVMwCbB7OT
+hcYx/ozOoYQOVWssBY+vcx0=
+=f3ad
+-----END PGP SIGNATURE-----
