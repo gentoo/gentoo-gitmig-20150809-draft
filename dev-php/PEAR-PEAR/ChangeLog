@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.17 2005/07/04 05:29:52 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.18 2005/07/14 05:08:32 sebastian Exp $
+
+  14 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-PEAR-1.3.5-r1.ebuild:
+  Better safe than sorry: Add SNMP fix from php-pear.eclass.
 
   04 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-PEAR-1.3.5-r1.ebuild:

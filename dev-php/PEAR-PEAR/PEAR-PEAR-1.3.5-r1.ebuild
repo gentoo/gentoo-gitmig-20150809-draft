@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.9 2005/07/04 05:29:52 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.10 2005/07/14 05:08:32 sebastian Exp $
 
 ARCHIVE_TAR="1.2"
 CONSOLE_GETOPT="1.2"
@@ -43,6 +43,10 @@ pkg_preinst() {
 }
 
 src_install() {
+	# Prevent SNMP related sandbox violoation.
+	addpredict /usr/share/snmp/mibs/.index
+	addpredict /var/lib/net-snmp/
+
 	if has_version "dev-php/PEAR-PEAR"; then
 		install_pear_without_bootstrap
 	else
