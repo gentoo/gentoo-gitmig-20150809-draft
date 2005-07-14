@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1-r1.ebuild,v 1.1 2005/03/20 23:00:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1-r1.ebuild,v 1.2 2005/07/14 03:11:22 vapier Exp $
 
 inherit flag-o-matic eutils gnuconfig toolchain-funcs
 
@@ -20,8 +20,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 #IUSE="no-old-linux"
 
-DEPEND="virtual/libc
-	sys-libs/zlib
+DEPEND="sys-libs/zlib
 	!virtual/modutils"
 PROVIDE="virtual/modutils"
 
@@ -37,11 +36,10 @@ src_unpack() {
 	#
 	# <drobbins@gentoo.org> (26 Mar 2003)
 #	if ! use no-old-linux ; then
-		cd ${WORKDIR}/modutils-${MODUTILS_PV}
-		epatch ${FILESDIR}/modutils-2.4.22-no-above-below.patch
-		epatch ${FILESDIR}/modutils-2.4.27-PATH_MAX.patch
-		epatch ${FILESDIR}/modutils-2.4.27-gcc34.patch
-		epatch ${FILESDIR}/modutils-2.4.27-gcc4.patch
+		cd "${WORKDIR}"/modutils-${MODUTILS_PV}
+		epatch "${FILESDIR}"/modutils-2.4.27-alias.patch
+		epatch "${FILESDIR}"/modutils-2.4.27-gcc.patch
+		epatch "${FILESDIR}"/modutils-2.4.27-flex.patch
 #	fi
 
 	# Support legacy .o modules

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c6146091819c95f076dda74301490884 module-init-tools-3.2_pre7.ebuild 5804
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 e83f62cb5788d9adca663ea556665e87 module-init-tools-3.1-r1.ebuild 5790
@@ -13,3 +16,10 @@ MD5 813f2779e10e8f29d9e1d58dda93a5e3 files/digest-module-init-tools-3.1-r1 142
 MD5 34f20e2837caff74cef9cca766e1e0c4 files/3.1-modprobe.d.5.bz2 2288
 MD5 0562a7a338175d0b6100ef7958b0ef5e files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3766
 MD5 07aa415fd57ac42cd0c11527edc9782d files/module-init-tools-0.9.15-legacy-modext-support.patch 481
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1dgwgIKl8Uu19MoRAmQtAJwKUoFbSD+y2B6t3kroibpZSluzuACfbmRl
+ypJ3yXoMbZ/W29wkUhtzDfw=
+=rDUm
+-----END PGP SIGNATURE-----
