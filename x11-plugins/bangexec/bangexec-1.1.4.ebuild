@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/bangexec-1.1.4.ebuild,v 1.1 2005/04/03 20:53:55 anarchy Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/bangexec-1.1.4.ebuild,v 1.2 2005/07/14 23:24:44 swegener Exp $
 
 DESCRIPTION="GAIM Shell OutPut Plugin"
 HOMEPAGE="http://bard.sytes.net/bangexec/"
@@ -16,6 +14,6 @@ IUSE=""
 DEPEND=">=net-im/gaim-1.0.1"
 
 src_install() {
-	make install DESTDIR=${D} || die "Install failed"
+	make install DESTDIR="${D}" || die "Install failed"
 	dodoc ChangeLog INSTALL README AUTHORS
 }

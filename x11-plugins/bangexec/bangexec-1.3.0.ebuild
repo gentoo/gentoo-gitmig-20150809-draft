@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/bangexec-1.3.0.ebuild,v 1.2 2005/04/22 01:24:05 herbs Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/bangexec-1.3.0.ebuild,v 1.3 2005/07/14 23:24:44 swegener Exp $
 
 DESCRIPTION="GAIM Shell OutPut Plugin"
 HOMEPAGE="http://bard.sytes.net/bangexec/"
@@ -19,10 +17,10 @@ src_unpack() {
 	unpack ${A}
 	# Set correct plugindir
 	sed -i -e "s:^\(plugindir = \$(prefix)/\)lib/:\1$(get_libdir)/:" \
-		${S}/Makefile.in || die "sed failed"
+		"${S}"/Makefile.in || die "sed failed"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "Install failed"
+	make install DESTDIR="${D}" || die "Install failed"
 	dodoc ChangeLog INSTALL README AUTHORS
 }
