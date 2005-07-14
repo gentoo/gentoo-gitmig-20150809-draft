@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.14 2005/04/21 09:56:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.15 2005/07/14 21:44:28 agriffis Exp $
 
 inherit flag-o-matic libtool eutils multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
-IUSE="debug"
+IUSE=""
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.5 2005/06/25 09:20:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.6 2005/07/14 21:39:46 agriffis Exp $
 
 # Comments/fixes to lloyd@randombit.net (author)
 
@@ -13,7 +13,7 @@ SRC_URI="http://botan.randombit.net/files/Botan-${PV}.tgz"
 KEYWORDS="ppc sparc x86"
 SLOT="0"
 LICENSE="BSD"
-IUSE="bzip2 zlib gmp ssl debug"
+IUSE="bzip2 gmp ssl zlib"
 
 S="${WORKDIR}/Botan-${PV}"
 
