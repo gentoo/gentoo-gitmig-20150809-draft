@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wlassistant/wlassistant-0.3.9.ebuild,v 1.1 2005/05/17 10:41:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wlassistant/wlassistant-0.5.0.ebuild,v 1.1 2005/07/14 12:54:11 genstef Exp $
 
 inherit kde
 need-kde 3.3
@@ -13,10 +13,5 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 IUSE=""
-RDEPEND="net-wireless/wireless-tools
+RDEPEND=">=net-wireless/wireless-tools-27-r1
 	virtual/dhcpc"
-
-src_unpack() {
-	kde_src_unpack
-	sed -i "s:/sbin/iw:/usr/sbin/iw:" src/waconfig.kcfg
-}
