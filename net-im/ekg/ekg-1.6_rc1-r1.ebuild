@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6_rc1-r1.ebuild,v 1.2 2005/07/07 18:53:21 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6_rc1-r1.ebuild,v 1.3 2005/07/14 20:07:27 killerfox Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.null.pl/ekg/${P/_/}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ia64 ~amd64"
+KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ~ppc ~sparc x86"
 
 S="${WORKDIR}/${P/_/}"
 
