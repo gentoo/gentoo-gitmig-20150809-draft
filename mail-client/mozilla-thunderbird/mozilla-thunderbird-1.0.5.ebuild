@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.5.ebuild,v 1.1 2005/07/14 16:18:08 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.5.ebuild,v 1.2 2005/07/14 18:10:36 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozconfig mozilla-launcher makeedit multilib
@@ -129,6 +129,11 @@ pkg_postinst() {
 	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
 	# thunderbird-bin ebuilds.
 	update_mozilla_launcher_symlinks
+
+	ewarn "Enigmail Support has been dropped seeing it is busted on fresh install"
+	ewarn "Mozilla herd is working on making enigmail its own build, sorry for any"
+	ewarn "inconvience this might have caused you please download enigmail from"
+	ewarn "http://enigmail.mozdev.org if you wish to use gnupg"
 }
 
 pkg_postrm() {
