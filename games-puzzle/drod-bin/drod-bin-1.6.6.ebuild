@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.1 2005/04/16 10:13:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.2 2005/07/14 19:59:34 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -32,6 +32,7 @@ src_install() {
 }
 
 pkg_preinst() {
+	games_pkg_preinst
 	if [ -d "${ROOT}${GDIR}/bin/Data" ] ; then
 		mv "${ROOT}${GDIR}"/{bin/Data,Data.backup}
 		echo
