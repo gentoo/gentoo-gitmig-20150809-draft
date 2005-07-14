@@ -1,6 +1,9 @@
 # ChangeLog for games-server/monopd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.14 2004/12/28 23:34:45 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.15 2005/07/14 03:05:45 mr_bones_ Exp $
+
+  14 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org> monopd-0.9.3.ebuild:
+  use doinitd as suggested by Nikolas Garofil via bug #98751
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

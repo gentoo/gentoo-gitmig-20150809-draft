@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/monopd-0.9.3.ebuild,v 1.2 2004/11/08 11:30:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/monopd-0.9.3.ebuild,v 1.3 2005/07/14 03:05:45 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://unixcode.org/downloads/monopd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND=">=net-libs/libcapsinetwork-0.3.0
@@ -19,9 +19,6 @@ DEPEND=">=net-libs/libcapsinetwork-0.3.0
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc doc/api/gameboard API AUTHORS ChangeLog NEWS README* TODO
-
-	exeinto /etc/init.d
-	doexe "${FILESDIR}/monopd" || die "doexe failed"
-
+	doinitd "${FILESDIR}"/monopd || die "doinitd failed"
 	prepgamesdirs
 }
