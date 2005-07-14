@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b7af809b4d627dc06e78bfb7fabdbfb linux-wlan-ng-0.2.1_pre23.ebuild 3719
-MD5 4e7188e26c21b7ffe20d42040211b449 linux-wlan-ng-0.2.1_pre20.ebuild 4255
-MD5 17305bbc3aad56b77cd57185e3e34299 linux-wlan-ng-0.2.0-r3.ebuild 4752
+MD5 21251b2c392036ac17876ba4d345b422 linux-wlan-ng-0.2.1_pre23.ebuild 3718
+MD5 1d27e6e859600c0c1a310b3dbd11c274 linux-wlan-ng-0.2.1_pre20.ebuild 4254
+MD5 e67cea130653fc787a96bb81b00a6733 linux-wlan-ng-0.2.0-r3.ebuild 4752
 MD5 f8feecc7b03a51a0f9759d410393a6c5 ChangeLog 10150
 MD5 32831d719499c83f7942f6432ef58278 metadata.xml 252
 MD5 44bd75f98be313622f43eb03b494e125 files/digest-linux-wlan-ng-0.2.1_pre20 517
 MD5 b11e06135cc8790abe78af54fa4fe95d files/digest-linux-wlan-ng-0.2.1_pre23 147
 MD5 296af9529b8492a5a12f1ba06d2a71de files/digest-linux-wlan-ng-0.2.0-r3 511
 MD5 e2ca4c6c0bc3d8daef9ea0f822b88dca files/linux-wlan-2.6.10-fix.diff 3670
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe4GII1lqEGTUzyQRAkIfAJoCuhexmqwtPAYZ1Rx7wu5AruQR1wCgqqk4
-O6s45dAohURl2/9kbMDjUPQ=
-=wnni
------END PGP SIGNATURE-----
