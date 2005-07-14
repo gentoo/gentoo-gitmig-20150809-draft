@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.209 2005/07/08 02:18:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.210 2005/07/14 10:07:18 hardave Exp $
+
+  14 Jul 2005; Hardave Riar <hardave@gentoo.org> kdebase-3.4.1-r1.ebuild:
+  Keyworded ~mips
 
   08 Jul 2005; Jason Wever <weeve@gentoo.org> kdebase-3.4.1-r1.ebuild:
   Stable on SPARC.
