@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1.ebuild,v 1.3 2005/07/10 02:51:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1.ebuild,v 1.4 2005/07/14 03:59:10 vapier Exp $
 
 PATCH_VER="1.0"
 PATCH_GCC_VER=4.0.1_pre20050616
@@ -9,6 +9,8 @@ UCLIBC_GCC_VER="4.0.0"
 PIE_VER="8.7.8"
 PIE_GCC_VER="4.0.0"
 PP_VER=""
+HTB_VER="1.00"
+
 ETYPE="gcc-compiler"
 
 inherit toolchain
