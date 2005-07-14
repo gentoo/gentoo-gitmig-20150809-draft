@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>no-herd</herd>
-  <maintainer>
-    <email>aether@gentoo.org</email>
-    <name>Jason A Mobarak</name>
-  </maintainer>
   <longdescription>
     A run utility intended to replace grun or gnome-run. Most prominent
     features include slim design and bash style auto-completion.
