@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050712.ebuild,v 1.1 2005/07/13 13:17:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050712.ebuild,v 1.2 2005/07/14 07:34:59 ka0ttic Exp $
 
 inherit eutils
 
@@ -44,8 +44,9 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Add the following to the beginning of your ~/.bashrc"
-	einfo "to activate completion support:"
+	einfo "Add the following to your ~/.bashrc to enable completion support."
+	einfo "NOTE: to avoid things like Gentoo bug #98627, you should set aliases"
+	einfo "after sourcing /etc/profile.d/bash-completion."
 	einfo
 	einfo "[[ -f /etc/profile.d/bash-completion ]] && \\ "
 	einfo "    source /etc/profile.d/bash-completion"

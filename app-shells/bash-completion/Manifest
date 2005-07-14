@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 50d47f99bf2bb864365907452e36ff51 bash-completion-20050712.ebuild 1903
-MD5 ebcfc3ffedea1fed2a323797c62bb5f5 bash-completion-20050121-r9.ebuild 1868
-MD5 375e20254a1612a19bd9574a00f01e60 ChangeLog 21795
+MD5 d72109805df2defafbbb6e4d81a07f00 bash-completion-20050712.ebuild 2009
+MD5 1a735c13e1224ab9d4841820fa92b4dd bash-completion-20050121-r9.ebuild 2003
+MD5 548f52117335a4edbe9cf155b9685ff8 ChangeLog 22237
 MD5 08ab540760a142dbc2af127d5f71be07 metadata.xml 1019
 MD5 8872557b2357f405c7c702497b2fdf68 files/digest-bash-completion-20050121-r9 76
 MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
@@ -24,7 +24,7 @@ MD5 bb517a3e3dea3755291f4629330481f2 files/20050712/04_all_command.diff 492
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1RTcEZCkKN40op4RAr5sAJ0eAx4biPjpQ4Ymj68ZtVoBHxDAPgCeIc3N
-NjQbrZaxt+48Ex635J0uvvE=
-=Egkc
+iD8DBQFC1hXtEZCkKN40op4RAg3bAKDBkzHaJNkLl1v46JEfMK5xNKbGMQCeN1ry
+xB4X0LE3HsEBoMAYG7v+sYc=
+=hIte
 -----END PGP SIGNATURE-----

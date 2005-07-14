@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050121-r9.ebuild,v 1.9 2005/07/07 00:22:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050121-r9.ebuild,v 1.10 2005/07/14 07:34:59 ka0ttic Exp $
 
 inherit eutils
 
@@ -44,12 +44,15 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Add the following line to your ~/.bashrc to"
-	einfo "activate completion support in your bash:"
-	einfo "[ -f /etc/profile.d/bash-completion ] && . /etc/profile.d/bash-completion"
+	einfo "Add the following to your ~/.bashrc to enable completion support."
+	einfo "NOTE: to avoid things like Gentoo bug #98627, you should set aliases"
+	einfo "after sourcing /etc/profile.d/bash-completion."
 	einfo
-	einfo "Additional complete functions can be enabled by symlinking them from"
-	einfo "/usr/share/bash-completion to /etc/bash_completion.d"
+	einfo "[[ -f /etc/profile.d/bash-completion ]] && \\ "
+	einfo "    source /etc/profile.d/bash-completion"
+	einfo
+	einfo "Additional completion functions can be enabled by installing"
+	einfo "app-admin/eselect and using the included bashcomp module."
 	echo
 
 	if has_version 'app-shells/zsh' ; then

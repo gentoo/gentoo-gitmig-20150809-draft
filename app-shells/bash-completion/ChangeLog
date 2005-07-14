@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.127 2005/07/13 13:17:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.128 2005/07/14 07:34:58 ka0ttic Exp $
+
+  14 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
+  bash-completion-20050121-r9.ebuild, bash-completion-20050712.ebuild:
+  Update pkg_postinst instructions to explicitly state that
+  /etc/profile.d/bsh-completion should be sourced towards the beginning of
+  your ~/.bashrc, or at least before any aliases are set to avoid a)
+  unintentional misuse (bug 98627), or b) clobbering (as bashcomp does set
+  some aliases under certain conditions).
 
 *bash-completion-20050712 (13 Jul 2005)
 
