@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.3 2005/07/14 00:49:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.4 2005/07/14 00:52:44 vapier Exp $
 
 inherit eutils games
 
@@ -39,9 +39,11 @@ src_unpack() {
 }
 
 src_compile() {
+	# the fugly --with-vorbis is to work around #98689
 	egamesconf \
 		--disable-dependency-tracking \
 		--disable-py-debug \
+		--with-vorbis="${T}" \
 		$(use_enable nls) \
 		$(use_enable doc) \
 		|| die

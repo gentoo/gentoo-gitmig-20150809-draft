@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4d494c5baf9cff4561cd9a34a2ee16dd adonthell-0.3.4a.ebuild 1335
+MD5 47b1922be8c7e82000af8d01e57b0814 adonthell-0.3.4a.ebuild 1412
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 73d4b7e27d435af64ffcc6b24b1d43f7 adonthell-0.3.3-r1.ebuild 1217
 MD5 4ac8b7dfa3b21c4089f6ae23918fd572 ChangeLog 1697
@@ -12,7 +12,7 @@ MD5 9b2f86f7d5729fd1944524672760f256 files/digest-adonthell-0.3.4a 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1bbTgIKl8Uu19MoRAtfpAJ9U6KuLw/gGc8h4s4T3fU7ZPb1lPwCgg7u6
-ssMBIysDNhIR1kcjjig7tlg=
-=GvuE
+iD8DBQFC1bevgIKl8Uu19MoRArOaAJ48eGawKJNYUYd9mK6PeZWJRrS9YACfcGuF
+gd3UZh3hXLdJXFCQLpKj30E=
+=DgE/
 -----END PGP SIGNATURE-----
