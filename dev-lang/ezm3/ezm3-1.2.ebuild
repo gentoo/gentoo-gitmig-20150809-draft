@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ezm3/ezm3-1.2.ebuild,v 1.2 2004/07/13 00:40:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ezm3/ezm3-1.2.ebuild,v 1.3 2005/07/14 20:59:42 agriffis Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/ezm3/${P}-src.tar.b
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-* x86 ppc"
-IUSE="X opengl static"
+IUSE="X opengl"
 
 DEPEND="virtual/libc
 	dev-util/yacc
