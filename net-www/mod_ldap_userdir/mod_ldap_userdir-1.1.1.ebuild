@@ -1,7 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/mod_ldap_userdir-1.1.1.ebuild,v 1.5 2005/07/10 00:54:56 swegener Exp $
-IUSE="apache2"
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/mod_ldap_userdir-1.1.1.ebuild,v 1.6 2005/07/14 22:48:04 agriffis Exp $
+IUSE="apache2 ssl"
 
 DESCRIPTION="Apache module that enables ~/public_html from an LDAP directory."
 HOMEPAGE="http://horde.net/~jwm/software/mod_ldap_userdir/"
