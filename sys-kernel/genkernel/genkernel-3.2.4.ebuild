@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.2.3.ebuild,v 1.1 2005/07/14 00:14:34 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.2.4.ebuild,v 1.1 2005/07/14 21:33:22 plasmaroo Exp $
 
 VERSION_DMAP='1.00.17'
 VERSION_DMRAID='1.0.0.rc8'
+VERSION_E2FSPROGS='1.38'
 VERSION_LVM2='2.00.25'
 VERSION_UNIONFS='1.0.12a'
 
@@ -13,7 +14,8 @@ SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/${P}.tar.bz2
 	 http://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-${VERSION_DMRAID}.tar.bz2
 	 ftp://sources.redhat.com/pub/lvm2/old/LVM2.${VERSION_LVM2}.tgz
 	 ftp://sources.redhat.com/pub/dm/old/device-mapper.${VERSION_DMAP}.tgz
-	 ftp://ftp.fsl.cs.sunysb.edu/pub/unionfs/unionfs-${VERSION_UNIONFS}.tar.gz"
+	 ftp://ftp.fsl.cs.sunysb.edu/pub/unionfs/unionfs-${VERSION_UNIONFS}.tar.gz
+	 mirror://sourceforge/e2fsprogs/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -45,7 +47,7 @@ src_install() {
 	doman genkernel.8
 	rm genkernel.8
 
-	cp ${DISTDIR}/dmraid-${VERSION_DMRAID}.tar.bz2 ${DISTDIR}/LVM2.${VERSION_LVM2}.tgz ${DISTDIR}/device-mapper.${VERSION_DMAP}.tgz ${DISTDIR}/unionfs-${VERSION_UNIONFS}.tar.gz ${D}/usr/share/genkernel/pkg
+	cp ${DISTDIR}/dmraid-${VERSION_DMRAID}.tar.bz2 ${DISTDIR}/LVM2.${VERSION_LVM2}.tgz ${DISTDIR}/device-mapper.${VERSION_DMAP}.tgz ${DISTDIR}/unionfs-${VERSION_UNIONFS}.tar.gz ${DISTDIR}/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz ${D}/usr/share/genkernel/pkg
 }
 
 pkg_postinst() {
