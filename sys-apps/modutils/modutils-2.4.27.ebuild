@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.27.ebuild,v 1.8 2005/06/30 03:46:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.27.ebuild,v 1.9 2005/07/14 02:59:09 vapier Exp $
 
 inherit eutils
 
@@ -19,11 +19,10 @@ PROVIDE="virtual/modutils"
 
 src_unpack() {
 	unpack ${A}
-
-	EPATCH_OPTS="-d ${S}/util" \
-	epatch ${FILESDIR}/alias.h.diff
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc34.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-alias.patch
+	epatch "${FILESDIR}"/${P}-gcc.patch
+	epatch "${FILESDIR}"/${P}-flex.patch
 }
 
 src_compile() {

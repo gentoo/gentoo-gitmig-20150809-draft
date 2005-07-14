@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.49 2005/06/30 03:46:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.50 2005/07/14 02:59:09 vapier Exp $
+
+  14 Jul 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/modutils-2.4.27-alias.patch, +files/modutils-2.4.27-flex.patch,
+  +files/modutils-2.4.27-gcc.patch, modutils-2.4.27.ebuild:
+  Grab changes from Debian to fix building with newer gcc / flex.
 
   29 Jun 2005; Joshua Kinard <kumba@gentoo.org> modutils-2.4.27.ebuild:
   Marked stable on mips.
