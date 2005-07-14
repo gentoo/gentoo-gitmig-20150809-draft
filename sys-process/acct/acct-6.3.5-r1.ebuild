@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.3.5-r1.ebuild,v 1.2 2005/07/12 20:34:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.3.5-r1.ebuild,v 1.3 2005/07/14 02:29:42 vapier Exp $
 
 inherit eutils
 
@@ -9,12 +9,15 @@ MY_P=${P}-${PATCH_VER}
 DESCRIPTION="GNU system accounting utilities"
 HOMEPAGE="http://www.gnu.org/directory/acct.html"
 SRC_URI="http://www.physik3.uni-rostock.de/tim/kernel/utils/acct/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc x86"
 IUSE=""
-DEPEND="virtual/libc"
-S="${WORKDIR}/${MY_P}"
+
+DEPEND=""
+
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	econf --enable-linux-multiformat || die "econf failed"
