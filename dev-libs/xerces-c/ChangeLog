@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.23 2005/07/08 03:35:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.24 2005/07/14 00:00:46 halcy0n Exp $
+
+  13 Jul 2005; Mark Loeser <halcy0n@gentoo.org> -xerces-c-2.3.0-r6.ebuild,
+  -xerces-c-2.4.0.ebuild, -xerces-c-2.5.0.ebuild, xerces-c-2.6.0-r1.ebuild:
+  Removed -j1 from the call to emake.  xerces-c might have had problems with
+  parallel builds before, but in my tests, it seems fine.  Also removed some old
+  ebuilds.
 
 *xerces-c-2.6.0-r1 (08 Jul 2005)
 
