@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4187 2005/07/13 16:43:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4188 2005/07/14 08:10:08 eradicator Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jeremy Huddleston (eradicator@gentoo.org) (14 Jul 2005)
+# Patchset still being tweaked and subject to change
+=sys-libs/glibc-2.3.5-r1
 
 # Sebastian Bergmann (sebastian@gentoo.org) (12 Jul 2005)
 # Unmaintained upstream for over two years and binary-only, thus
