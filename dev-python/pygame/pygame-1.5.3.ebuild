@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.5.3.ebuild,v 1.16 2005/05/06 09:59:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.5.3.ebuild,v 1.17 2005/07/14 13:14:17 swegener Exp $
+
+inherit distutils
 
 DESCRIPTION="python bindings to sdl and other libs that facilitate game production"
 SRC_URI="http://www.pygame.org/ftp/${P}.tar.gz"
@@ -18,8 +20,6 @@ DEPEND="virtual/python
 	>=media-libs/sdl-mixer-1.2.3
 	>=dev-python/numeric-21.0
 	>=media-libs/smpeg-0.4.4-r1"
-
-inherit distutils
 
 src_install () {
 	mydoc=WHATSNEW
