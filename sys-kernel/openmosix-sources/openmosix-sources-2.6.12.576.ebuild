@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.6.11.570-r1.ebuild,v 1.1 2005/07/01 21:19:14 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.6.12.576.ebuild,v 1.1 2005/07/14 18:32:16 voxus Exp $
 
 ETYPE="sources"
 
@@ -19,7 +19,7 @@ detect_arch
 KV_FULL=${OKV}-openmosix-r${OMR}
 
 # version of gentoo patchset
-GPV="11-14"
+GPV="12-8"
 GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.base.tar.bz2
 	mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.extras.tar.bz2"
 
@@ -29,15 +29,15 @@ HOMEPAGE="http://openmosix.snarc.org/"
 
 UNIPATCH_LIST="${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.base.tar.bz2
 			${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.extras.tar.bz2
-			${DISTDIR}/patch-${OKV}.12-om-r${OMR}.bz2"
+			${DISTDIR}/patch-${OKV}-om-r${OMR}.bz2"
 
 UNIPATCH_STRICTORDER="genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.base.tar.bz2
 			${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.extras.tar.bz2
-			${DISTDIR}/patch-${OKV}.12-om-r${OMR}.bz2"
+			${DISTDIR}/patch-${OKV}-om-r${OMR}.bz2"
 
 UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}/0000_README"
 
-OM_SRC="http://openmosix.snarc.org/files/releases/2.6/patch-${OKV}.12-om-r${OMR}.bz2"
+OM_SRC="http://openmosix.snarc.org/files/releases/2.6/patch-${OKV}-om-r${OMR}.bz2"
 
 DESCRIPTION="Full sources for the Gentoo openMosix Linux kernel ${KV_MAJOR}.${KV_MINOR} kernel tree"
 SRC_URI="${KERNEL_URI} ${GPV_SRC} ${ARCH_URI} ${OM_SRC}"
