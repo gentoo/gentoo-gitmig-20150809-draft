@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b4d2c65dec49fc9dde3d44ea74b8a407 mod_auth_pam-1.1.1-r1.ebuild 2113
 MD5 20192e709f597716244231698695bf64 mod_auth_pam-1.1.1.ebuild 1396
 MD5 720f66ee12801df5e78f3e47d5f11375 ChangeLog 1693
@@ -10,3 +13,10 @@ MD5 5283c3d19faf5167133286041b5e3815 files/digest-mod_auth_pam-1.1.1-r1 141
 MD5 33ba9becf231dd55db43de324796964d files/mod_auth_pam-1.1.1-compile-fix.patch 1073
 MD5 27b47f69f0ca69417b22030379e47cd4 files/1.1.1-r1-1/10_mod_auth_pam.conf 642
 MD5 6d39291f46444e6f9b7dbb3627ca5e78 files/1.1.1-r1/10_mod_auth_pam.conf 761
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1uR8BXaUFmZvwyMRAnnBAKCWFXltCV7ChI++mf/UBpddiu2fSgCfRWdi
+zD5d00Ga747JUOMFG/rawYY=
+=Wgua
+-----END PGP SIGNATURE-----
