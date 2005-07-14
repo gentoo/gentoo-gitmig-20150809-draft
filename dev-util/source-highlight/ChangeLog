@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/source-highlight
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.14 2005/05/24 16:03:08 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.15 2005/07/14 16:36:50 ka0ttic Exp $
+
+  14 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
+  source-highlight-2.0.ebuild:
+  Add check to see if boost is built with USE=threadsonly, otherwise in those
+  cases it will try to use the (non-existent) non-threaded version.
 
 *source-highlight-2.0 (24 May 2005)
 
