@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.12.0.ebuild,v 1.3 2005/07/02 02:03:29 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.12.0.ebuild,v 1.4 2005/07/14 23:31:28 swegener Exp $
 
-inherit eutils python
+inherit python
 
 DESCRIPTION="TreeLine is a structured information storage program."
 HOMEPAGE="http://www.bellz.org/treeline/"
@@ -35,7 +35,6 @@ src_install() {
 	insinto /usr/lib/treeline
 	doins ${S}/source/*.py ${S}/doc/README.html
 
-	dodir /usr/share/icons/treeline
 	insinto /usr/share/icons/treeline
 	doins ${S}/icons/*.png
 
