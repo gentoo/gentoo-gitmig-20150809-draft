@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 94ca0a2d12c631ad5a3e350e4673bba8 adaptx-0.9.13_p20041105-r1.ebuild 1484
-MD5 34badd7f18cbd8f08e66c39dc0447fc4 ChangeLog 1670
+MD5 834e9a8d93d145c48cd8bc1ef2c94903 adaptx-0.9.13_p20041105-r1.ebuild 1487
 MD5 2d1041fb0d459f9ca2614faa69da0e09 metadata.xml 310
 MD5 9e0e860c57b784a8f3d4088bcac89b79 adaptx-0.9.13_p20041105.ebuild 1409
-MD5 ca47883984cfaf4d74be2ed06fbd1d2e files/digest-adaptx-0.9.13_p20041105 75
+MD5 c66f9d93d205884d72886ae78cf99c2b ChangeLog 1784
 MD5 ca47883984cfaf4d74be2ed06fbd1d2e files/digest-adaptx-0.9.13_p20041105-r1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1FL+/rLF9B432nYRAqeeAJ4tErrAGck+cEBbhgpjjkHj9PAq2QCgzQKG
-87FXTEuk4HUTWgnUbFm9Qc4=
-=BSG6
------END PGP SIGNATURE-----
+MD5 ca47883984cfaf4d74be2ed06fbd1d2e files/digest-adaptx-0.9.13_p20041105 75
