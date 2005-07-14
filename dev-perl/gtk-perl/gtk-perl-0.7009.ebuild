@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7009.ebuild,v 1.9 2005/06/09 01:06:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7009.ebuild,v 1.10 2005/07/14 23:23:17 agriffis Exp $
 
 inherit perl-module eutils
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="Perl bindings for GTK"
 SRC_URI="mirror://cpan/authors/id/M/ML/MLEHMANN/${MY_P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~mlehmann/${MY_P}/"
-IUSE="gnome opengl"
+IUSE="gnome gtkhtml opengl"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
