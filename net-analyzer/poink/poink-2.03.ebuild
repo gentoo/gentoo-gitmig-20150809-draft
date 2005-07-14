@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/poink/poink-2.03.ebuild,v 1.1 2005/05/17 21:06:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/poink/poink-2.03.ebuild,v 1.2 2005/07/14 13:08:56 swegener Exp $
 
 inherit eutils toolchain-funcs
+
+DESCRIPTION="TCP/IP-based ping implementation"
 HOMEPAGE="http://directory.fsf.org/security/system/poink.html"
 SRC_URI="http://ep09.pld-linux.org/~mmazur/poink/${P}.tar.gz"
 LICENSE="GPL-2"
