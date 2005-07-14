@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 ee4ce7ea42a153f8c56801c86c0b0de2 ChangeLog 447
+MD5 78ed2a042d5e56c28f159c9f9db0ad88 krconlinux-0.2.ebuild 490
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 ea6e4ef09b5560e1bfebf0191ba24577 krconlinux-0.2.ebuild 486
-MD5 afa96ba850bd1692f0cd853588c5c791 ChangeLog 362
 MD5 ef05e2dfcada204ffa8250c5ff396875 files/digest-krconlinux-0.2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1eTEgIKl8Uu19MoRAigZAJ4oKKIdXcxigjv5dM9fcG7WDgsMtQCfRQDw
-74UswUfLer5Ov7N7OCI39UE=
-=xoPd
------END PGP SIGNATURE-----
