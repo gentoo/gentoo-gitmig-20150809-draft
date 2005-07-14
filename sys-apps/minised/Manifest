@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9b925f619ca1e57db32e3035734af348 minised-1.5.ebuild 551
+MD5 1f985367b3c825f79bf2828b6b2e354a metadata.xml 186
+MD5 2fd7b9b6b4f8d4b7ccc8a0f4c8519403 ChangeLog 328
+MD5 f88d8b9b4197fc6400fcb7c8c7b2b098 files/digest-minised-1.5 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1e3EgIKl8Uu19MoRAnjCAJ4hi+S4QUeTOQbL8j3XsWojBYHzBQCePSaE
+BX8LCZpi02w2XTy0I3VRapY=
+=Z+TR
+-----END PGP SIGNATURE-----
