@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.23 2005/07/14 11:36:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.24 2005/07/14 15:35:23 jstubbs Exp $
+
+  15 Jul 2005; Jason Stubbs <jstubbs@gentoo.org> sandbox-1.2.9.ebuild,
+  sandbox-1.2.10.ebuild, sandbox-1.2.11.ebuild:
+  Removed ppc-macos from keywords as sandbox does not work there yet.
 
 *sandbox-1.2.11 (14 Jul 2005)
 
