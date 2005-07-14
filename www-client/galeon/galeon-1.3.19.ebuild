@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.19.ebuild,v 1.8 2005/07/10 00:41:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.19.ebuild,v 1.9 2005/07/14 23:33:14 swegener Exp $
 
-inherit gnome2 debug libtool eutils
+inherit gnome2 debug libtool
 
 DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
 HOMEPAGE="http://galeon.sourceforge.net"
