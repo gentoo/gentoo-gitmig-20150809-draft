@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 6a46a133faac10cf9e245f5c8991dbee mozilla-thunderbird-1.0.2.ebuild 6179
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 4da1d13c17b5bfdc1393015b2b88d103 ChangeLog 8000
-MD5 01a44f526842cc55036367ba4a9d6813 mozilla-thunderbird-1.0.5.ebuild 4244
+MD5 31628936fc042e3d06acb7005d1640d8 mozilla-thunderbird-1.0.5.ebuild 4213
 MD5 560ee30f3e0c90a1f094f58b2233e6bd mozilla-thunderbird-1.0.2-r1.ebuild 6291
 MD5 988cdabe4b288a0ace4b12d1815b667e mozilla-thunderbird-1.0.2-r10.ebuild 3964
 MD5 f014f20584305e86670ed50e990745db files/thunderbird-0.7-init.tar.bz2 3345
@@ -20,7 +20,7 @@ MD5 04115f0e204444eac76a092a63c89027 files/icon/thunderbird-icon.png 6499
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1qtPBXaUFmZvwyMRAj8TAKCIl2pXP9C4m9SgN5jXYSaG8Z/qpQCbBoNy
-wtx/tNrPTtBUUIRfwZ4bDDk=
-=t12H
+iD8DBQFC1quVBXaUFmZvwyMRAtZYAJ92tZCXiDURigW0czg33FCnIQOsEwCfXfGk
+9yR3NnBRjdNlMu5fEe+rOVk=
+=px+Z
 -----END PGP SIGNATURE-----
