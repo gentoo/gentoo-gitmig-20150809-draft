@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.18 2005/07/13 16:06:04 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.19 2005/07/14 16:20:35 sebastian Exp $
 #
 # ########################################################################
 #
@@ -418,7 +418,7 @@ php5-sapi-r3_src_compile() {
 	# iodbc support added by Tim Haynes <gentoo@stirfried.vegetable.org.uk>
 	enable_extension_with 		"iodbc" 		"iodbc" 		0 "/usr"
 	# ircg extension not supported on Gentoo at this time
-	enable_extension_with		"kerberos"		"kerberos"		0 "/usr"
+	enable_extension_with		"kerberos"		"kerberos"		0
 	enable_extension_disable	"libxml"		"xml2"			0
 	enable_extension_enable		"mbstring"		"nls"			1
 	enable_extension_with		"mcrypt"		"crypt"			1

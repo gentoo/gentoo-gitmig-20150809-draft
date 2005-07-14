@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.16 2005/07/13 16:06:04 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.17 2005/07/14 16:20:35 sebastian Exp $
 #
 # eclass/php5-sapi-r1.eclass
 #               Eclass for building different php5 SAPI instances
@@ -370,7 +370,7 @@ php5-sapi-r1_src_compile() {
 	enable_extension_with		"ingres"		"ingres"		1
 	enable_extension_with		"interbase"		"firebird"		1
 	# ircg extension not supported on Gentoo at this time
-	enable_extension_with		"kerberos"		"kerberos"		0 "/usr"
+	enable_extension_with		"kerberos"		"kerberos"		0
 	enable_extension_disable	"libxml"		"xml2"			0
 	enable_extension_enable		"mbstring"		"nls"			1
 	enable_extension_with		"mcrypt"		"crypt"			1

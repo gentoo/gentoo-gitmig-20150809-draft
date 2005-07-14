@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.81 2005/07/12 19:18:25 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.82 2005/07/14 16:20:35 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -387,7 +387,7 @@ php-sapi_src_compile() {
 	myconf="${myconf} `use_with imap imap /usr` `use_with ldap ldap /usr`"
 	myconf="${myconf} `use_with xml2 dom /usr` `use_with xml2 dom-xslt /usr`"
 	myconf="${myconf} `use_with xml2 dom-exslt /usr`"
-	myconf="${myconf} `use_with kerberos kerberos /usr` `use_with pam`"
+	myconf="${myconf} `use_with kerberos` `use_with pam`"
 	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable ipv6`"
 	myconf="${myconf} `use_with yaz` `use_enable debug`"
