@@ -1,24 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5330a65e5fa5eccca33cf0697bec2c78 ChangeLog 11892
-MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
-MD5 307aab11df88d8308b9f240d02d54759 php-cgi-4.3.11-r1.ebuild 1117
+MD5 b0abc433de48dad86cce6647f6510f25 php-cgi-5.0.4.ebuild 1311
+MD5 e42859576d80bd6623cf4d889562fbc1 php-cgi-4.4.0-r1.ebuild 981
 MD5 ff2863a4bc96f2e0e7a4e8ea63ebc3ed php-cgi-4.4.0.ebuild 979
-MD5 51972dccf5217964e25e8bff75343961 php-cgi-5.0.4.ebuild 1117
-MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
-MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
-MD5 cd07c33356df77acd61cd300f2869d19 files/php-5.0.0-httpauthfix.patch 518
-MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
-MD5 cc21a816357d93a1d31cd44f861183c7 files/digest-php-cgi-4.3.11-r1 287
-MD5 74a728966bc5ec6d37ad89f4182ee135 files/digest-php-cgi-5.0.4 143
-MD5 f7a7898637874593f519c336db79fa45 files/php-cgi-5.0.3-missing-arches.patch 524
+MD5 307aab11df88d8308b9f240d02d54759 php-cgi-4.3.11-r1.ebuild 1117
+MD5 d2ca882f1c7202202f19683e9e6068b8 ChangeLog 12176
+MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
+MD5 225b57325cbdf582288a8796da9d72f5 files/digest-php-cgi-4.3.11-r1 287
 MD5 09d7dee078c684b0de0e4de6209ef634 files/digest-php-cgi-4.4.0 285
+MD5 74a728966bc5ec6d37ad89f4182ee135 files/digest-php-cgi-5.0.4 143
+MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-php-cgi-4.4.0-r1 285
+MD5 cd07c33356df77acd61cd300f2869d19 files/php-5.0.0-httpauthfix.patch 518
+MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
+MD5 f7a7898637874593f519c336db79fa45 files/php-cgi-5.0.3-missing-arches.patch 524
+MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
 MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
+MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1WASKf2g/qXtneoRAvRkAJ9y6YXX7HXkiUC9m+Q67TsFKGMlJgCdHTrS
-/T5OS2kwM3m0snulg/tCYYY=
-=5PuR
+iD8DBQFC1iboaGfFFLhbXWkRAs7gAJsG9gpDxNxim5oGmRIOmoVBZpb1PQCcDvcK
+EqPJdlTkvY0XllWEc+84A98=
+=k7fL
 -----END PGP SIGNATURE-----

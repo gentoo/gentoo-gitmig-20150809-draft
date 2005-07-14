@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.4.ebuild,v 1.4 2005/07/13 09:38:52 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.4.ebuild,v 1.5 2005/07/14 08:48:19 sebastian Exp $
 
 PHPSAPI="cgi"
 MY_PHP_P="php-${PV}"
@@ -16,6 +16,7 @@ DEPEND="$DEPEND"
 RDEPEND="$RDEPEND"
 PROVIDE="virtual/httpd-php"
 SLOT="0"
+IUSE="$IUSE fastcgi force-cgi-redirect"
 
 PHP_INSTALLTARGETS="install"
 
@@ -33,7 +34,16 @@ src_unpack() {
 }
 
 src_compile () {
-	my_conf="--disable-cli --enable-cgi --enable-fastcgi"
+	my_conf="${my_conf} --enable-cgi --disable-cli"
+
+	if use fastcgi; then
+		my_conf="${my_conf} --enable-fastcgi"
+	fi
+
+	if use force-cgi-redirect; then
+		my_conf="${my_conf} --enable-force-cgi-redirect"
+	fi
+
 	php5-sapi-r2_src_compile
 }
 
