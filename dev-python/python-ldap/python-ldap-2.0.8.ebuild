@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.8.ebuild,v 1.1 2005/06/27 10:47:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.8.ebuild,v 1.2 2005/07/14 09:12:43 blubb Exp $
 
 inherit distutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/python
 
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="~alpha ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="doc sasl ssl"
 
 PYTHON_MODNAME="ldap"
