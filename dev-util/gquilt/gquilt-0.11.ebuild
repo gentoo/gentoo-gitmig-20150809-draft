@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/gquilt-0.08.ebuild,v 1.1 2005/07/06 09:09:32 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/gquilt-0.11.ebuild,v 1.1 2005/07/14 10:01:28 ka0ttic Exp $
 
 DESCRIPTION="A Python/GTK wrapper for quilt"
 HOMEPAGE="http://users.bigpond.net.au/Peter-Williams/"
