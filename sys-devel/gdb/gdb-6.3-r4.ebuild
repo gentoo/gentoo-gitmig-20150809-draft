@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3-r4.ebuild,v 1.1 2005/07/09 23:44:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3-r4.ebuild,v 1.2 2005/07/14 04:00:45 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,16 +15,15 @@ DEB_VER=6
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
 SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2
-	mirror://debian/pool/main/g/gdb/gdb_${PV}-${DEB_VER}.diff.gz
+	!vanilla? ( mirror://debian/pool/main/g/gdb/gdb_${PV}-${DEB_VER}.diff.gz )
 	mirror://gentoo/gdb_init.txt.bz2"
-#SRC_URI="${SRC_URI} mirror://gentoo/gdb-6.1-hppa-01.patch.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~s390"
-IUSE="nls test"
+IUSE="nls test vanilla"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 DEPEND="${RDEPEND}
@@ -35,23 +34,26 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	mv "${WORKDIR}"/gdb_init.txt . || die
-	epatch "${WORKDIR}"/gdb_${PV}-${DEB_VER}.diff
-	for f in $(<debian/patches/series) ; do
-		EPATCH_SINGLE_MSG="Applying Debian's ${f}" \
-		epatch debian/patches/${f}
-	done
-	epatch "${FILESDIR}"/gdb-6.3-uclibc.patch
-	epatch "${FILESDIR}"/gdb-6.3-relative-paths.patch
-	#epatch "${FILESDIR}"/gdb-6.x-crash.patch
-	epatch "${FILESDIR}"/gdb-6.2.1-pass-libdir.patch
-	epatch "${FILESDIR}"/gdb-6.3-scanmem.patch
-	epatch "${FILESDIR}"/gdb-6.3-gdbinit-stat.patch
-	# sec bug 91398
-	epatch "${FILESDIR}"/bfd-malloc-wrap.patch
 
-	epatch "${FILESDIR}"/gdb-6.2.1-200-uclibc-readline-conf.patch
-	epatch "${FILESDIR}"/gdb-6.2.1-400-mips-coredump.patch
-	epatch "${FILESDIR}"/gdb-6.2.1-libiberty-pic.patch
+	if ! use vanilla ; then
+		epatch "${WORKDIR}"/gdb_${PV}-${DEB_VER}.diff
+		for f in $(<debian/patches/series) ; do
+			EPATCH_SINGLE_MSG="Applying Debian's ${f}" \
+			epatch debian/patches/${f}
+		done
+		epatch "${FILESDIR}"/gdb-6.3-uclibc.patch
+		epatch "${FILESDIR}"/gdb-6.3-relative-paths.patch
+		#epatch "${FILESDIR}"/gdb-6.x-crash.patch
+		epatch "${FILESDIR}"/gdb-6.2.1-pass-libdir.patch
+		epatch "${FILESDIR}"/gdb-6.3-scanmem.patch
+		epatch "${FILESDIR}"/gdb-6.3-gdbinit-stat.patch
+		# sec bug 91398
+		epatch "${FILESDIR}"/bfd-malloc-wrap.patch
+
+		epatch "${FILESDIR}"/gdb-6.2.1-200-uclibc-readline-conf.patch
+		epatch "${FILESDIR}"/gdb-6.2.1-400-mips-coredump.patch
+		epatch "${FILESDIR}"/gdb-6.2.1-libiberty-pic.patch
+	fi
 
 	strip-linguas -u bfd/po opcodes/po
 }
