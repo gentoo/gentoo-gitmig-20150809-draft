@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/freewheeling
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/ChangeLog,v 1.1 2005/07/14 20:57:08 fvdpol Exp $
+
+*freewheeling-0.5_pre4 (14 Jul 2005)
+
+  14 Jul 2005; Frank van de Pol <fvdpol@gentoo.org> +metadata.xml,
+  +freewheeling-0.5_pre4.ebuild:
+  New ebuild for freewheeling, kindly submitted by Ron Widler
+  <ron@einfach.org>. Closes bug #93154.
+

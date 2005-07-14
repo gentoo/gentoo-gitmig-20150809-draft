@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c172496a21dd3d429f0e154be78aff8c freewheeling-0.5_pre4.ebuild 980
+MD5 2db0774736b2ed03bd9b238415d0a99b ChangeLog 462
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 9c1ff5e41342fba4d582fa173b7b8ea3 files/digest-freewheeling-0.5_pre4 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1tJrvpz1081QvMkRAhsfAJwJxOSqJLhcihYvUI43hHc/7q2G7wCdEbiu
+EmHJv5rO8SSEAmPNX9C/vH0=
+=WR6t
+-----END PGP SIGNATURE-----
