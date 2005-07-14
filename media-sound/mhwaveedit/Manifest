@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a07bb6413cfb4ef11e37b41ec4cffaf8 ChangeLog 1611
-MD5 3054b375be4b8501057e7dfa7c05cd3c mhwaveedit-1.4.1.ebuild 967
+MD5 05687d3877d565155ca49563d6f76803 ChangeLog 1698
 MD5 3d396644f49363450640af614648d74a metadata.xml 227
 MD5 612220fac03cb84ed6a909dd28bb4154 mhwaveedit-1.3.3.ebuild 833
+MD5 8a6015332fe4653a9492dd82a1315123 mhwaveedit-1.4.1.ebuild 971
 MD5 7ca7e59ea083c20a28e0886347bcca9c files/digest-mhwaveedit-1.3.3 68
 MD5 0a8c9cc0089d3e4f69e46ebc925ba355 files/digest-mhwaveedit-1.4.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1XnVl5AvwDPiUowRAt65AKCzB5CwUd3FPnxaY08wvzlxkkPEFwCdGC61
-U59RRs397pb8B5/KSKXh08w=
-=X0Iy
------END PGP SIGNATURE-----
