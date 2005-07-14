@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.01.09.ebuild,v 1.2 2005/07/06 14:15:42 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.01.09.ebuild,v 1.3 2005/07/14 16:54:14 xmerlin Exp $
 
 MY_P="${PN/clvm/LVM2}.${PV}"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://sources.redhat.com/pub/lvm2/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 "
-IUSE="readline nolvmstatic nocman "
+IUSE="readline nocman "
 
 DEPEND=">=sys-fs/device-mapper-1.00.17
 	!nocman? ( =sys-cluster/cman-1.00.00 )"
@@ -25,11 +25,7 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	# Static compile of lvm2 so that the install described in the handbook works
-	# http://www.gentoo.org/doc/en/lvm2.xml
-	# fixes http://bugs.gentoo.org/show_bug.cgi?id=84463
 	local myconf=""
-	use nolvmstatic || myconf="$(use_enable static_link)"
 	if use nocman; then
 		myconf="${myconf} --with-clvmd=gulm"
 	else
@@ -45,8 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall sbindir="${D}/sbin" staticdir="${D}/sbin" confdir="${D}/etc/lvm"
-	mv -f "${D}/sbin/lvm.static" "${D}/sbin/lvm"
+	einstall sbindir="${D}/sbin" confdir="${D}/etc/lvm"
 
 	dodoc COPYING* INSTALL README VERSION WHATS_NEW doc/*.{conf,c,txt}
 

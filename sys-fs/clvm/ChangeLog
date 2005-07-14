@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/clvm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.6 2005/07/06 14:15:42 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.7 2005/07/14 16:54:14 xmerlin Exp $
+
+  14 Jul 2005; Christian Zoffoli <xmerlin@gentoo.org> clvm-2.01.09.ebuild:
+  removed static stuff. Closed bug #98530.
 
   06 Jul 2005; Christian Zoffoli <xmerlin@gentoo.org> clvm-2.01.09.ebuild:
   temporary removed gulm dependency.
