@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f320ba4911c3328eaec73bcf2f165b9d ChangeLog 770
 MD5 630236cddf69bb537e5b04c4cc34406c files/digest-wmdiskmon-0.0.1 66
 MD5 5a911acf5f3d1a8e9877487700a830de metadata.xml 251
 MD5 736ecf1ba02310963cbd895704cc1c83 wmdiskmon-0.0.1.ebuild 613
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1vCFI1lqEGTUzyQRAoLYAKCX6Ap0ZerY7rvOCQuthJkUaBXIPQCfRer3
+tcmPpfr2wJcxFIINsi2CueI=
+=IJuD
+-----END PGP SIGNATURE-----
