@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.0.ebuild,v 1.1 2005/06/15 08:22:01 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.0.ebuild,v 1.2 2005/07/14 20:55:00 agriffis Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SRC_URI="http://grass.itc.it/grass60/source/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="6"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
-IUSE="tcltk png jpeg tiff postgres odbc motif gd X
-	mysql blas lapack fftw truetype readline opengl"
+IUSE="X blas fftw gd gdal jpeg lapack motif mysql nls odbc opengl png postgres readline tcltk tiff truetype"
 RESTRICT="nostrip"
 
 DEPEND=">=sys-devel/make-3.80
