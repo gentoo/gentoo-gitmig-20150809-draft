@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/cl-tbnl-0.5.5.ebuild,v 1.2 2005/05/24 18:48:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/cl-tbnl-0.5.5.ebuild,v 1.3 2005/07/14 22:22:28 agriffis Exp $
 
 inherit common-lisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/tbnl_${PV}.orig.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
-IUSE="apache2"
+IUSE=""
 
 DEPEND="dev-lisp/cl-kmrcl
 	dev-lisp/cl-md5
