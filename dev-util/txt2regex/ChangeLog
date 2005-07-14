@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/txt2regex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/txt2regex/ChangeLog,v 1.15 2005/07/11 15:03:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/txt2regex/ChangeLog,v 1.16 2005/07/14 19:52:08 killerfox Exp $
+
+  14 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  txt2regex-0.8-r1.ebuild:
+  Stable on hppa.
 
   11 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   txt2regex-0.8-r1.ebuild:
