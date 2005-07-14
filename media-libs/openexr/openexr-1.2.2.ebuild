@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2.ebuild,v 1.10 2005/07/04 22:20:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2.ebuild,v 1.11 2005/07/14 06:44:03 hardave Exp $
 
 MY_P=OpenEXR-${PV}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/openexr/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~mips ppc ppc64 sparc x86"
 IUSE="doc"
 
 DEPEND="x11-libs/fltk"
