@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.7 2005/05/05 15:55:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.8 2005/07/14 22:17:24 agriffis Exp $
 
 inherit eutils apache-module
 
@@ -13,7 +13,7 @@ LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 DEPEND="sys-libs/pam"
 SLOT="0"
-IUSE=""
+IUSE="apache2"
 
 APXS1_ARGS="-c ${PN}.c -lpam -ldl"
 APXS2_ARGS="-c ${PN}.c -lpam"

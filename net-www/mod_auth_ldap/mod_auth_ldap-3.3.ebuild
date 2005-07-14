@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-3.3.ebuild,v 1.2 2005/02/19 03:44:27 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-3.3.ebuild,v 1.3 2005/07/14 22:14:49 agriffis Exp $
 
 inherit eutils apache-module
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.muquit.com/muquit/software/${PN}/${PN}${PV}.tar.gz"
 KEYWORDS="~x86 ~ppc ~sparc"
 LICENSE="as-is"
 SLOT="0"
-IUSE="disk-cache mem-cache berkdb gdbm"
+IUSE="apache2 berkdb disk-cache gdbm mem-cache"
 
 DEPEND=">=net-nds/openldap-2.0.25"
 RDEPEND=""
