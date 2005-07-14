@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 446f02b3c73cc6b4cc3e7753ce9fae54 xjavac-20041208-r1.ebuild 1033
+MD5 af0180a1ccadbc5d5e005e778fd02731 xjavac-20041208-r1.ebuild 1033
 MD5 4fb7bb4b617cb765f5a1e64b61229aa1 ChangeLog 1146
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 be3862beac63be44381318b441bc3ac6 files/xjavac-20041208-build.xml 1060
@@ -9,7 +9,7 @@ MD5 369103c55427946f5c2896d78a39a78b files/digest-xjavac-20041208-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCz8tz/rLF9B432nYRAvchAKCmkOguNUccGKufUDLJ5LubSkBm1ACgwEdI
-cAyDLE0lljyfOOoxGC463gQ=
-=7MdI
+iD8DBQFC1maXBXaUFmZvwyMRAoRcAKCxW6xM6DUzfUzfonxfyVUdz/w9qgCdERaD
+1NvBnaM8Nf6PZ161A2MPrqU=
+=hNMN
 -----END PGP SIGNATURE-----

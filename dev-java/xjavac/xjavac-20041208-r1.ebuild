@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208-r1.ebuild,v 1.1 2005/07/09 13:04:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208-r1.ebuild,v 1.2 2005/07/14 13:20:04 agriffis Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://cvs.apache.org/viewcvs.cgi/xml-xerces/java/tools/src/XJavac.jav
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="x86 amd64 ppc64 sparc ~ppc"
-IUSE="doc jikes"
+IUSE="jikes"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
 	>=dev-java/ant-core-1.4"
