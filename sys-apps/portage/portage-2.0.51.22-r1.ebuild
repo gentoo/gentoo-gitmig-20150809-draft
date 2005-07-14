@@ -1,18 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r1.ebuild,v 1.6 2005/07/12 08:02:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r1.ebuild,v 1.7 2005/07/14 15:30:01 jstubbs Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="The Portage Package Management System. The primary package management and distribution system for Gentoo."
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2 http://dev.gentoo.org/~jstubbs/releases/${PN}-${PV}.tar.bz2"
-
 LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ppc64 ~s390 ~sh ~sparc x86"
-IUSE="build selinux"
 
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ppc-macos ppc64 ~s390 ~sh ~sparc x86"
+
+SLOT="0"
+IUSE="build selinux"
 DEPEND=">=dev-lang/python-2.2.1"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) !x86-fbsd? ( !ppc-macos? ( sys-apps/sandbox ) ) selinux? ( >=dev-python/python-selinux-2.15 )"
 
