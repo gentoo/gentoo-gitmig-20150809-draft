@@ -6,11 +6,7 @@
 <!-- portage lacks a herd.  correct this when we have one. -->
 
 <maintainer>
-  <email>dev-portage@gentoo.org</email>
-  <description>Primary contact</description>
-</maintainer>
-<maintainer>
-  <email>azarah@gentoo.org</email>
-  <description>Sandbox guru extraordinare</description>
+  <email>sandbox@gentoo.org</email>
+  <description>Sandbox Maintainers</description>
 </maintainer>
 </pkgmetadata>
