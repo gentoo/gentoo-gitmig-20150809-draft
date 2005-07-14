@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27-r2.ebuild,v 1.1 2005/06/06 22:53:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27-r2.ebuild,v 1.2 2005/07/14 23:41:00 agriffis Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="nls kerberos"
+IUSE="foomaticdb kerberos nls"
 
 MY_PN=LPRng
 
