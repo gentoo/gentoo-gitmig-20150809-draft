@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4188 2005/07/14 08:10:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4189 2005/07/14 13:10:01 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -297,11 +297,6 @@ gnome-extra/gnome-network
 =dev-dotnet/gtk-sharp-2.5*
 =dev-dotnet/rsvg-sharp-2.5*
 =dev-dotnet/vte-sharp-2.5*
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (18 May 2005)
-# This ebuild is totally broken, but I have not had time to look into the issue.
-# I am adding it here so I can get some assistance on it.
->=net-misc/pxes-1.0
 
 # Robin Johnson <robbat2@gentoo.org> (17 May 2005)
 # This new 4.0 series ebuild is similar to the 4.1 series stuff, 
