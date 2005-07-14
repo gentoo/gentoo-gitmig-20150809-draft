@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.29 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.30 2005/07/14 19:33:52 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -192,6 +192,21 @@ kernel_is() {
 	[ ${test} ${operator} ${value} ] && return 0 || return 1
 }
 
+get_localversion() {
+	local lv_list i x
+
+	# ignore files with ~ in it.
+	for i in $(ls ${1}/localversion* 2>/dev/null); do
+		[[ -n ${i//*~*} ]] && lv_list="${lv_list} ${i}"
+	done
+
+	for i in ${lv_list}; do
+		x="${x}$(<${i})"
+	done
+	x=${x/ /}
+	echo ${x}
+}
+
 get_version() {
 	local kbuild_output
 
@@ -271,12 +286,12 @@ get_version() {
 		qeinfo "Found kernel object directory:"
 		qeinfo "    ${KV_OUT_DIR}"
 
-		KV_LOCAL="$(cat ${KV_OUT_DIR}/localversion* 2>/dev/null)"
+		KV_LOCAL="$(get_localversion ${KV_OUT_DIR})"
 	fi
 	# and if we STILL haven't got it, then we better just set it to KV_DIR
 	KV_OUT_DIR="${KV_OUT_DIR:-${KV_DIR}}"
 
-	KV_LOCAL="${KV_LOCAL}$(cat ${KV_DIR}/localversion* 2>/dev/null)"
+	KV_LOCAL="${KV_LOCAL}$(get_localversion ${KV_OUT_DIR})"
 	KV_LOCAL="${KV_LOCAL}$(linux_chkconfig_string LOCALVERSION)"
 	KV_LOCAL="${KV_LOCAL//\"/}"
 
