@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.34 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.35 2005/07/14 15:38:16 dju Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -339,7 +339,9 @@ function webapp_pkg_setup ()
 	# add sanity checks here
 
 	if [ "$SLOT+" != "${PVR}+" ]; then
-		die "ebuild sets SLOT, overrides webapp.eclass"
+		if [ "$WEBAPP_MANUAL_SLOT" != "yes" ]; then
+			die "ebuild sets SLOT, overrides webapp.eclass"
+		fi
 	fi
 
 	# pull in the shared configuration file
