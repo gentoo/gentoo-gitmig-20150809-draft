@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8b99b3e3bc1f6840241e7524a3dcd38 ChangeLog 1717
+MD5 ab19e50a0b5b7d368001a43a995f34d2 ChangeLog 1811
+MD5 57fb14a6edfe58489b8bbec1b169baf2 mDNSResponder-98.ebuild 1011
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 3725184aad6033c3e554b5635f964149 mDNSResponder-98.ebuild 1004
-MD5 4a7563064011fa39c2d87b7f4f3c5b6b files/mdnsd.init.d 688
-MD5 7087496865b0e264a209619124877965 files/mDNSResponder-98-Makefiles.patch 3631
 MD5 854ae89c0e0738fa68590659fe262309 files/digest-mDNSResponder-98 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCybhfKf2g/qXtneoRAi1/AJ9HoMdv1SZgeFIQjL/pwtUgbiMNSACfVzPp
-x6k9AUmx1j0aMJEpQFucaqA=
-=nSdQ
------END PGP SIGNATURE-----
+MD5 7087496865b0e264a209619124877965 files/mDNSResponder-98-Makefiles.patch 3631
+MD5 4a7563064011fa39c2d87b7f4f3c5b6b files/mdnsd.init.d 688

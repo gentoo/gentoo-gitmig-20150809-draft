@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.13 2005/07/04 22:29:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.14 2005/07/14 06:05:20 hardave Exp $
+
+  14 Jul 2005; Hardave Riar <hardave@gentoo.org> mDNSResponder-98.ebuild:
+  Keyworded ~mips
 
   04 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   mDNSResponder-98.ebuild:
