@@ -1,8 +1,18 @@
-MD5 6443bd8ffa7efedbda1b9aea956264a2 vde-1.5.8.ebuild 739
-MD5 02eeae6d05076c460f02c0d4ddb4d0f2 vde-1.5.7.ebuild 1074
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ad5b416aa3600c7972a73954b476ab7c ChangeLog 609
-MD5 98727198655490ad4bf4b8a2bcc8d5db metadata.xml 293
-MD5 be0314f824da3e7ae0ca64c4c791b600 files/vde-qemu-Makefile.in.diff 362
 MD5 1f08cfb4e6c7ac2cdf36de3515171dfb files/digest-vde-1.5.7 58
 MD5 1bb099a717f163a56a1ec18919e4e93a files/digest-vde-1.5.8 58
+MD5 be0314f824da3e7ae0ca64c4c791b600 files/vde-qemu-Makefile.in.diff 362
 MD5 9f6d117cccae4215334a4485ba469e96 files/vde.init.d 564
+MD5 98727198655490ad4bf4b8a2bcc8d5db metadata.xml 293
+MD5 7983b29b84f31064b69cfe3115c628af vde-1.5.7.ebuild 1071
+MD5 abd5e8ba34bda25a4fc48fc9da80b97d vde-1.5.8.ebuild 736
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1mOYI1lqEGTUzyQRAuQDAJ92v8UdzJXRDQrrrmtg75UUwbTcMQCg023Q
+0eN4Ynss9xLtl9Banri1Pak=
+=1TRV
+-----END PGP SIGNATURE-----
