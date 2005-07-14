@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.39 2005/06/23 21:55:52 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.40 2005/07/14 10:21:56 sekretarz Exp $
+
+  14 Jul 2005; <sekretarz@gentoo.org> files/gtk-gnutella.desktop,
+  gtk-gnutella-0.94.ebuild, gtk-gnutella-0.95.3.ebuild:
+  Moved desktop file to proper place, bug #97734. Thanks Joe Gallo
+  <jsg8pitt@yahoo.com>.
 
 *gtk-gnutella-0.95.3 (23 Jun 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.95.3.ebuild,v 1.1 2005/06/23 21:55:52 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.95.3.ebuild,v 1.2 2005/07/14 10:21:56 sekretarz Exp $
 
 inherit eutils
 
@@ -65,7 +65,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 
 	if use gnome; then
-		insinto /usr/share/gnome/apps/Internet
+		insinto /usr/share/applications
 		doins ${FILESDIR}/gtk-gnutella.desktop || die
 	fi
 }

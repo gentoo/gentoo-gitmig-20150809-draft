@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.94.ebuild,v 1.7 2005/04/07 16:48:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.94.ebuild,v 1.8 2005/07/14 10:21:56 sekretarz Exp $
 
 IUSE="gnome gtk2 xml2 nls"
 
@@ -58,7 +58,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 
 	if use gnome; then
-		insinto /usr/share/gnome/apps/Internet
+		insinto /usr/share/applications
 		doins ${FILESDIR}/gtk-gnutella.desktop || die
 	fi
 }
