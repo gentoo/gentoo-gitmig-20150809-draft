@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ca3150e1c2d5ab08bd5eda750fb5c611 ChangeLog 3063
+MD5 e2507f7ba7c7a904ee70862d032ace21 linphone-1.0.1.ebuild 1309
+MD5 de0086c1f53a825df1cfa28b327a527a linphone-0.10.2.ebuild 1288
+MD5 bf329e2b298c08082a3ff4dfe6c236b3 metadata.xml 315
+MD5 010826ca4bcd77c7ab6649618e2d24ee ChangeLog 3308
 MD5 29e56d450d4aa47d230872e2b18eae40 files/digest-linphone-0.10.2 68
 MD5 339685aec8a9df716c358f64f877a2f6 files/digest-linphone-1.0.1 67
-MD5 de0086c1f53a825df1cfa28b327a527a linphone-0.10.2.ebuild 1288
-MD5 5729527db5d5b7493562ce1f40c50319 linphone-1.0.1.ebuild 1226
-MD5 bf329e2b298c08082a3ff4dfe6c236b3 metadata.xml 315
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1saZI1lqEGTUzyQRAgNiAJ0QUsjqg1R7kAWs2O3WFViZ6m8gsQCgoLeF
-OV71Z5MHlrJ/HIhh8VdZdSQ=
-=617J
------END PGP SIGNATURE-----

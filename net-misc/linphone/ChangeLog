@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/linphone
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/ChangeLog,v 1.2 2005/07/14 20:09:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/ChangeLog,v 1.3 2005/07/14 22:02:13 stkn Exp $
+
+  14 Jul 2005; Stefan Knoblich <stkn@gentoo.org> linphone-1.0.1.ebuild:
+  Indentation fixes, added missing dodoc, replaced einstall with make
+  (einstall completely broke file locations), added missing
+  dev-perl/XML-Parser and speex dependencies.
 
 *linphone-1.0.1 (14 Jul 2005)
 

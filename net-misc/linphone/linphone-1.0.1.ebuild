@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.0.1.ebuild,v 1.1 2005/07/14 19:01:14 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.0.1.ebuild,v 1.2 2005/07/14 22:02:13 stkn Exp $
 
 MY_DPV="${PV%.*}.x"
 
@@ -14,16 +14,19 @@ KEYWORDS="~x86 ~ppc"
 IUSE="xv ipv6 gnome alsa"
 
 DEPEND="dev-libs/glib
-		>=net-libs/libosip-2.2
-		x86? 	( xv? ( dev-lang/nasm ) )
-		gnome? 	( 	>=gnome-base/gnome-panel-2
-					>=gnome-base/libgnome-2
-					>=gnome-base/libgnomeui-2
-					>=x11-libs/gtk+-2 )
-		alsa? 	( media-libs/alsa-lib )"
+	dev-perl/XML-Parser
+	>=net-libs/libosip-2.2.0
+	|| ( >=media-libs/speex-1.1.6
+	     <media-libs/speex-1.1.0 )
+	x86? 	( xv? ( dev-lang/nasm ) )
+	gnome? 	( >=gnome-base/gnome-panel-2
+		  >=gnome-base/libgnome-2
+		  >=gnome-base/libgnomeui-2
+		  >=x11-libs/gtk+-2 )
+	alsa? 	( media-libs/alsa-lib )"
 
 src_compile() {
-	local myconf withgnome
+	local withgnome
 
 	if use gnome; then
 		einfo "Building with GNOME interface."
@@ -32,17 +35,18 @@ src_compile() {
 		withgnome="no"
 	fi
 
-	myconf="--enable-glib \
-			--enable-gnome_ui=${withgnome} \
-			`use_enable ipv6` \
-			`use_enable alsa`"
+	econf --enable-glib \
+		--with-speex=/usr \
+		--enable-gnome_ui=${withgnome} \
+		`use_enable ipv6` \
+		`use_enable alsa` \
+		|| die "Unable to configure"
 
-	econf ${myconf} || die "Unable to configure"
 	emake || die "Unable to make"
 }
 
 src_install () {
 	dodoc ABOUT-NLS AUTHORS BUGS ChangeLog COPYING INSTALL NEWS README
-	README.arm TODO
-	einstall DESTDIR=${D} || die "Failed to install"
+	dodoc README.arm TODO
+	make DESTDIR=${D} install || die "Failed to install"
 }
