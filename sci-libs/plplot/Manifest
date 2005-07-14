@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2b8f9f15d556aee5da3f589d5d9168d9 plplot-5.5.1.ebuild 5558
-MD5 063cc71405f1b29f44e8b8a4b6151e1f plplot-5.3.1.ebuild 5549
-MD5 678b50754bb344c29adfd02b4f8657e8 plplot-5.5.2.ebuild 5565
+MD5 7a5ca986d182a3b55d25c0121050fafe plplot-5.5.1.ebuild 5561
+MD5 5409744b0f1bb11fd1bfdead8a8ca2d1 plplot-5.3.1.ebuild 5552
+MD5 0be1a967fcdc6ba750c4d9e659c0d85f plplot-5.5.2.ebuild 5568
 MD5 89bbb5f45df19bcd6b9305046c4d34da ChangeLog 1018
 MD5 c3b6ebfa4bc606e61260dba27014f49a metadata.xml 1063
 MD5 41a5eade36ce8c6f875dc087ba1fc40a files/plplot-5.5.1-gcc-3.4-fix.patch 1396
@@ -14,7 +14,7 @@ MD5 b6e5603460b46e4264006f08a3a66d27 files/digest-plplot-5.5.2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCd6AUntT9W3vfTuoRApkIAKCnhEmKScX/3Vp0gVDlQjG9/jnuygCggbo+
-PZZ1+Opo5ts4vAc7SZMUrJw=
-=anjU
+iD8DBQFC1mWzBXaUFmZvwyMRAsnMAKCY9/BRJm+EBdASAxTT1fSLFIqO+QCfdujw
+0z9cnoY2ZGoLD4G9eMHIzQs=
+=vH3w
 -----END PGP SIGNATURE-----
