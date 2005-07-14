@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 b0abc433de48dad86cce6647f6510f25 php-cgi-5.0.4.ebuild 1311
 MD5 e42859576d80bd6623cf4d889562fbc1 php-cgi-4.4.0-r1.ebuild 981
-MD5 ff2863a4bc96f2e0e7a4e8ea63ebc3ed php-cgi-4.4.0.ebuild 979
+MD5 ea9c8e1ca3e5ac38d628293c43ecaf03 php-cgi-4.4.0.ebuild 981
 MD5 307aab11df88d8308b9f240d02d54759 php-cgi-4.3.11-r1.ebuild 1117
-MD5 d2ca882f1c7202202f19683e9e6068b8 ChangeLog 12176
+MD5 46f4a8da021632fbaaf4e9a4432c6466 ChangeLog 12274
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 225b57325cbdf582288a8796da9d72f5 files/digest-php-cgi-4.3.11-r1 287
 MD5 09d7dee078c684b0de0e4de6209ef634 files/digest-php-cgi-4.4.0 285
@@ -20,7 +20,7 @@ MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1iboaGfFFLhbXWkRAs7gAJsG9gpDxNxim5oGmRIOmoVBZpb1PQCcDvcK
-EqPJdlTkvY0XllWEc+84A98=
-=k7fL
+iD8DBQFC1idiaGfFFLhbXWkRAsFzAKCRIwCMaMxo39KXqMO6zqLmUfDzOQCeNogt
+tP3NFHmbQstG3Dlt9oP0MtU=
+=2iM/
 -----END PGP SIGNATURE-----
