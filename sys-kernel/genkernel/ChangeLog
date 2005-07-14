@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.99 2005/07/12 17:41:37 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.100 2005/07/14 00:14:34 plasmaroo Exp $
+
+*genkernel-3.2.3 (14 Jul 2005)
+
+  14 Jul 2005; <plasmaroo@gentoo.org> -genkernel-3.2.2.ebuild,
+  +genkernel-3.2.3.ebuild:
+  Fix #97672, #98886, #98893, #98897; fix real_root=/dev/mdX.
 
 *genkernel-3.2.2 (12 Jul 2005)
 
