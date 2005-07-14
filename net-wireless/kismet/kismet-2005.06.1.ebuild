@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2005.06.1.ebuild,v 1.2 2005/07/07 09:56:30 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2005.06.1.ebuild,v 1.3 2005/07/14 12:43:10 brix Exp $
 
 inherit linux-info
 
@@ -24,8 +24,8 @@ RDEPEND="net-wireless/wireless-tools
 		ncurses? ( sys-libs/ncurses )
 		ethereal? ( >=net-analyzer/ethereal-${ETHEREAL_VERSION}
 				sys-libs/zlib
-				gtk2? ( =dev-libs/glib-1.2* )
-				!gtk2? ( >=dev-libs/glib-2.0.4 ) )
+				gtk2? ( >=dev-libs/glib-2.0.4 )
+				!gtk2? ( =dev-libs/glib-1.2* ) )
 		gps? ( app-misc/gpsdrive
 				>=dev-libs/expat-1.95.4
 				dev-libs/gmp
