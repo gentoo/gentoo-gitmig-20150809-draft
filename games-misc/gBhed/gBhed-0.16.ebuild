@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gBhed/gBhed-0.16.ebuild,v 1.2 2005/07/14 08:45:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gBhed/gBhed-0.16.ebuild,v 1.3 2005/07/14 12:18:32 swegener Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk"
 
-DEPEND="gtk? ( >=x11-libs/gtk+-2.2* >=dev-libs/glib-2.2* )"
+DEPEND="gtk? ( >=x11-libs/gtk+-2.2 >=dev-libs/glib-2.2 )"
 
 src_compile() {
 	egamesconf $(use_enable gtk gbhed) || die
