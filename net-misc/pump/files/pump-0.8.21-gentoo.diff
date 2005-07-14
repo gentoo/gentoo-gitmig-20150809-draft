@@ -1,124 +1,108 @@
---- config.c	2002-06-18 18:03:59.000000000 +0100
-+++ config.c	2005-07-13 10:23:35.000000000 +0100
-@@ -200,6 +200,12 @@
- 		return 1;
- 	    }
- 	    override->flags |= OVERRIDE_FLAG_NONISDOMAIN;
+diff -r -U 0 pump-0.8.21/config.c pump-0.8.21-r5/config.c
+--- pump-0.8.21/config.c	2005-07-14 15:18:08.000000000 +0100
++++ pump-0.8.21-r5/config.c	2005-07-14 15:13:49.000000000 +0100
+@@ -158 +158,18 @@
+-	} else if (!strcmp(start, "domainsearch")) {
++	} else if (!strcmp(start, "routemetric")) {
++	    poptParseArgvString(rest, &argc, &argv);
++
++	    if (argc != 1) {
++		parseError(*lineNum, "routemetric directive expects a "
++			   "single argument");
++		return 1;
++	    }
++
++	    num = strtol(argv[0], &chptr, 0);
++	    if (*chptr) {
++		parseError(*lineNum, "routemetric requires a numeric "
++			   "argument");
++		return 1;
++	    }
++
++	    override->routeMetric = num;
++	} else if (!strcmp(start, "etcdir")) {
+@@ -161,3 +178,11 @@
+-	    if (overrideList != override) {
+-		parseError(*lineNum, "domainsearch directive may not occur "
+-			   "inside of device specification");
++	    poptParseArgvString(rest, &argc, &argv);
++
++	    if (argc != 1) {
++		parseError(*lineNum, "etcdir directive expects a "
++			   "single argument");
++		return 1;
++	    }
++
++	    len = strlen(argv[0]);
++	    if (len >= sizeof(override->etcDir)) {
++		parseError(*lineNum, "etcdir directive is too long");
+@@ -166,0 +192,10 @@
++	    /*
++		We don't free this as other configurations may have inherited 
++		it. This could be the wrong decision, but leak would be tiny
++		so why worry?
++	    */
++	    memcpy(override->etcDir, argv[0], len + 1);
++	    free(argv);
++	} else if (!strcmp(start, "domainsearch")) {
++	    size_t len;
++
+@@ -211,0 +247,6 @@
 +	} else if (!strcmp(start, "nontp")) {
 +	    if (*rest) {
-+		parseError(*lineNum, "unexpected argument to nonisdomain directive");
++		parseError(*lineNum, "unexpected argument to nontp directive");
 +		return 1;
 +	    }
 +	    override->flags |= OVERRIDE_FLAG_NONTP;
- 	} else if (!strcmp(start, "script")) {
- 	    if (overrideList != override) {
- 		parseError(*lineNum, "script directive may not occur "
---- dhcp.c	2004-09-21 16:19:06.000000000 +0100
-+++ dhcp.c	2005-07-13 10:14:12.000000000 +0100
-@@ -203,13 +203,62 @@
-     return err;
- }
- 
+@@ -222,6 +262,0 @@
+-	} else if (!strcmp(start, "noresolvconf")) {
+-	    if (*rest) {
+-		parseError(*lineNum, "unexpected argument to noresolvconf directive");
+-		return 1;
+-	    }
+-	    override->flags |= OVERRIDE_FLAG_NORESOLVCONF;
+@@ -231,6 +265,0 @@
+-	    if (overrideList != override) {
+-		parseError(*lineNum, "script directive may not occur "
+-			   "inside of device specification");
+-		return 1;
+-	    }
 -
- char * pumpDisableInterface(char * device) {
+Only in pump-0.8.21: debian
+diff -r -U 0 pump-0.8.21/dhcp.c pump-0.8.21-r5/dhcp.c
+--- pump-0.8.21/dhcp.c	2005-07-14 15:18:08.000000000 +0100
++++ pump-0.8.21-r5/dhcp.c	2005-07-14 11:58:49.000000000 +0100
+@@ -205,0 +206 @@
 +    struct sockaddr_in * addrp;
-     struct ifreq req;
-     int s;
-+    struct rtentry route;
-+    
-+    /* Instead of downing the interface, we erase the addresses
-+     * This is important as other daemons such as ifplugd and/or
-+     * wpa_supplicant may be using it */
- 
-     s = socket(AF_INET, SOCK_DGRAM, 0);
+@@ -212,2 +212,0 @@
 -	
-+
+-    memset(&req,0,sizeof(req));
+@@ -214,0 +214 @@
 +    memset(&req,0,sizeof(req));
+@@ -215,0 +216,14 @@
++
 +    addrp = (struct sockaddr_in *) &req.ifr_addr;
 +    addrp->sin_family = AF_INET;
-+    strcpy(req.ifr_name, device);
-+   
-+    while(! ioctl(s, SIOCGIFADDR, &req)) {
-+	addrp->sin_addr.s_addr = 0;
-+	if (ioctl(s, SIOCSIFADDR, &req)) {
-+	    close(s);
-+	    return perrorstr("SIOCSIFADDR");
-+	}
++    addrp->sin_addr.s_addr = 0;
++    if (ioctl(s, SIOCSIFADDR, &req)) {
++	close(s);
++	return perrorstr("SIOCSIFADDR");
 +    }
-+  
-+    /* Delete the broadcast route that we may have added earlier */
-+    memset(&route, 0, sizeof(route));
-+    memcpy(&route.rt_gateway, addrp, sizeof(*addrp));
 +
-+    addrp->sin_family = AF_INET;
-+    addrp->sin_port = 0;
-+    addrp->sin_addr.s_addr = INADDR_ANY;
-+    memcpy(&route.rt_dst, addrp, sizeof(*addrp));
-+    memcpy(&route.rt_genmask, addrp, sizeof(*addrp));
-+
-+    route.rt_dev = device;
-+    route.rt_flags = RTF_UP;
-+    route.rt_metric = 0;
-+
-+    if (ioctl(s, SIOCDELRT, &route)) {
-+        if (errno != EEXIST) {
-+            close(s);
-+            return perrorstr("SIOCADDRT 3");
-+        }
-+    }
-+    
-+    close(s);
-+    return NULL;
-+}
-+
-+char * pumpDownInterface(char * device) {
-+    struct ifreq req;
-+    int s;
-+
-+    s = socket(AF_INET, SOCK_DGRAM, 0);
-+
-     memset(&req,0,sizeof(req));
- 
-     strcpy(req.ifr_name, device);
-@@ -229,17 +278,18 @@
-     return NULL;
- }
- 
--char * pumpSetupInterface(struct pumpNetIntf * intf) {
-+char * pumpSetupInterface(struct pumpNetIntf * intf, int metric) {
-     char * rc;
-     struct sockaddr_in * addrp;
-     struct ifreq req;
-     struct rtentry route;
-     int s;
- 
-+    if ((rc = pumpDisableInterface(intf->device))) return rc;
-+    
-     s = socket(AF_INET, SOCK_DGRAM, 0);
- 	
-     memset(&req,0,sizeof(req));
--    memset(&route,0,sizeof(route));
-     /* we have to have basic information to get this far */
-     addrp = (struct sockaddr_in *) &req.ifr_addr;
-     addrp->sin_family = AF_INET;
-@@ -267,29 +317,45 @@
-     if (ioctl(s, SIOCSIFFLAGS, &req))
- 	return perrorstr("SIOCSIFFLAGS");
- 
--    if (!strcmp(intf->device, "lo") || oldKernel()) {
--	/* add a route for this network */
--	route.rt_dev = intf->device;
--	route.rt_flags = RTF_UP;
-+    /* If the we're on a modern kernel and the metric we want is not zero
-+     * then we don't need todo anything else */
-+    if (! oldKernel() && metric == 0) {
++    if (intf->override.flags & OVERRIDE_FLAG_KEEPUP) {
++	close(s);
 +	return NULL;
 +    }
 +    
-+    /* Prepare the route */
-+    memset(&route,0,sizeof(route));
+@@ -285,5 +299,17 @@
+-    if (!strcmp(intf->device, "lo")) {
+-	/* add a route for this network */
+-	route.rt_dev = intf->device;
+-	route.rt_flags = RTF_UP;
+-	route.rt_metric = 0;
 +    route.rt_dev = intf->device;
 +    route.rt_flags = RTF_UP;
++    route.rt_metric = 0;
 +
 +    addrp->sin_family = AF_INET;
 +    addrp->sin_port = 0;
@@ -126,427 +110,559 @@
 +    memcpy(&route.rt_dst, addrp, sizeof(*addrp));
 +    addrp->sin_addr = intf->netmask;
 +    memcpy(&route.rt_genmask, addrp, sizeof(*addrp));
-+
-+    /* Modern kernels automatically add a default route with a metric of zero
-+     * we need to delete this route and add our own */
-+    if (! oldKernel()) {
- 	route.rt_metric = 0;
- 
++    
++    if (strcmp(intf->device,"lo") && intf->override.routeMetric) {
++	if (ioctl(s, SIOCDELRT, &route)) {
++	    rc = perrorstr("SIOCDELRT");
++	    goto out;
++	}
++    }
+@@ -291,6 +317,3 @@
 -	addrp->sin_family = AF_INET;
 -	addrp->sin_port = 0;
 -	addrp->sin_addr = intf->network;
 -	memcpy(&route.rt_dst, addrp, sizeof(*addrp));
 -	addrp->sin_addr = intf->netmask;
 -	memcpy(&route.rt_genmask, addrp, sizeof(*addrp));
--
--	if (ioctl(s, SIOCADDRT, &route)) {
--	    /* the route cannot already exist, as we've taken the device down */
--	    return perrorstr("SIOCADDRT 1");
-+	if (ioctl(s, SIOCDELRT, &route)) {
-+	    return perrorstr("SIOCADDRT");
- 	}
-     }
- 
-+    /* Now add our route */
-+    if (metric > 0) metric++;
-+    route.rt_metric = metric;
-+    if (ioctl(s, SIOCADDRT, &route)) {
-+	return perrorstr("SIOCADDRT 1");
-+    }
-+    
-     return NULL;
- }
- 
++    if (!strcmp(intf->device, "lo") || intf->override.routeMetric) {
++	if (intf->override.routeMetric)
++	    route.rt_metric = intf->override.routeMetric + 1;
+@@ -310 +333 @@
 -int pumpSetupDefaultGateway(struct in_addr * gw) {
-+int pumpSetupDefaultGateway(struct pumpNetIntf * intf, int metric) {
-     struct sockaddr_in addr;
-     struct rtentry route;
-     int s;
-@@ -303,12 +369,12 @@
-     addr.sin_addr.s_addr = INADDR_ANY;
-     memcpy(&route.rt_dst, &addr, sizeof(addr));
-     memcpy(&route.rt_genmask, &addr, sizeof(addr));
++int pumpSetupDefaultGateway(struct pumpNetIntf * intf) {
+@@ -313,0 +337 @@
++    int i;
+@@ -316,14 +339,0 @@
+-	
+-    memset(&addr,0,sizeof(addr));
+-    memset(&route,0,sizeof(route));
+-    addr.sin_family = AF_INET;
+-    addr.sin_port = 0;
+-    addr.sin_addr.s_addr = INADDR_ANY;
+-    memcpy(&route.rt_dst, &addr, sizeof(addr));
+-    memcpy(&route.rt_genmask, &addr, sizeof(addr));
 -    addr.sin_addr = *gw;
-+    addr.sin_addr = intf->gateway;
-     memcpy(&route.rt_gateway, &addr, sizeof(addr));
-     
-     route.rt_flags = RTF_UP | RTF_GATEWAY;
+-    memcpy(&route.rt_gateway, &addr, sizeof(addr));
+-    
+-    route.rt_flags = RTF_UP | RTF_GATEWAY;
 -    route.rt_metric = 0;
 -    route.rt_dev = NULL;
-+    route.rt_metric = metric + 1;
-+    route.rt_dev = intf->device;
- 
-     if (ioctl(s, SIOCADDRT, &route)) {
- 	syslog(LOG_ERR, "failed to set default route: %s", strerror(errno));
-@@ -1423,7 +1489,7 @@
- char * pumpDhcpRun(char * device, int flags, int reqLease,
-                   char * reqHostname, struct pumpNetIntf * intf,
-                   struct pumpOverrideInfo * override) {
--    pumpDhcpClassRun(device, flags, reqLease, reqHostname, NULL, intf,
-+    return pumpDhcpClassRun(device, flags, reqLease, reqHostname, NULL, intf,
-                      override);
- }
- 
---- pump.8	2001-02-01 22:58:16.000000000 +0000
-+++ pump.8	2005-07-13 10:24:33.000000000 +0100
-@@ -43,14 +43,17 @@
- 		/etc/pump.conf
- -h	--hostname=hostname	Hostname to request
- -i	--interface=iface	Interface to configure (normally eth0)
-+-u	--keep-up	Keep the interface up when releasing it
- -k	--kill	Kill daemon (and disable all interfaces)
- -l	--lease=hours	Lease time to request (in hours)
- 	--lookup-hostname	Always look up hostname and domain in DNS
- -r	--release	Release interface
- -R	--renew	Force immediate lease renewal
-+	--script=script		Script to run when on DHCP actions
- -s	--status	Display interface status
- -d	--no-dns	Don't update resolv.conf
-   	--no-gateway	Don't configurate a default route for this interface
-+	--no-ntp	Don't update ntp.conf
- 	--win-client-id	Specify a Windows-like client identifier
- -?	--help	Show this help message
- 	--usage	Display brief usage message
-@@ -111,13 +114,6 @@
- directive may only be used globally. 
- 
- .TP
--\fBnonisdomain\fR
--Don't set a new NIS domain. Normally \fBpump\fR sets the system's NIS domain
--if an NIS domain is specified by the dhcp server and the current NIS domain 
--is empty or \fBlocaldomain\fR.
+@@ -331,4 +341,23 @@
+-    if (ioctl(s, SIOCADDRT, &route)) {
+-	close(s);
+-	syslog(LOG_ERR, "failed to set default route: %s", strerror(errno));
+-	return -1;
++    for (i = intf->numGateways - 1; i >= 0; i--) {
++	memset(&addr,0,sizeof(addr));
++	memset(&route,0,sizeof(route));
++	addr.sin_family = AF_INET;
++	addr.sin_port = 0;
++	addr.sin_addr.s_addr = INADDR_ANY;
++	memcpy(&route.rt_dst, &addr, sizeof(addr));
++	memcpy(&route.rt_genmask, &addr, sizeof(addr));
++	addr.sin_addr = intf->gateways[i];
++	memcpy(&route.rt_gateway, &addr, sizeof(addr));
++
++	route.rt_flags = RTF_UP | RTF_GATEWAY;
++	route.rt_dev = intf->device;
++	if (intf->override.routeMetric)
++	    route.rt_metric = intf->override.routeMetric + 1;
++	else
++	    route.rt_metric = 0;
++
++	if (ioctl(s, SIOCADDRT, &route)) {
++	    close(s);
++	    syslog(LOG_ERR, "failed to set default route: %s", strerror(errno));
++	    return -1;
++	}
+diff -r -U 0 pump-0.8.21/pump.8 pump-0.8.21-r5/pump.8
+--- pump-0.8.21/pump.8	2005-07-14 15:18:08.000000000 +0100
++++ pump-0.8.21-r5/pump.8	2005-07-14 15:10:58.000000000 +0100
+@@ -2,0 +3 @@
++.\" July 2005: Updated by Roy Marples <uberlord@gentoo.org>
+@@ -31,0 +33,2 @@
++.BR "" [ \-m | \-\-route\-metric
++.IR METRIC ]
+@@ -33 +36 @@
+-.BR "" [ \-\-no\-dns "] [" \-\-no\-gateway "] [" \-\-no\-setup "] [" \-\-no\-resolvconf ]
++.BR "" [ \-\-no\-dns "] [" \-\-no\-gateway "] [" \-\- no\-ntp "] [" \-\-no\-setup "]
+@@ -67 +70,2 @@
+-\-d	\-\-no\-dns	Don't update DNS resolver configuration
++\-e	\-\-etc\-dir=\fIDIR\fR	Directory to create conf files (normally /etc)
++\-d	\-\-no\-dns	Don't update resolv.conf
+@@ -69,0 +74 @@
++	\-\-keep\-up	Keep the interface up when released
+@@ -74,0 +80 @@
++\-m	\-\-route-metric=\fIMETRIC\fR	Metric to use on routes (normally 0)
+@@ -76 +82 @@
+-  	\-\-no\-resolvconf	Don't use the \fBresolvconf\fR program to update resolv.conf
++  	\-\-no\-ntp	Don't update ntp.conf
+@@ -162,0 +169,4 @@
++\fBetcdir\fR \fIETCDIRECTORY\fR
++Store resolv.conf and/or ntp.conf in this directory (normally /etc).
++
++.TP
+@@ -167,2 +177,7 @@
+-As a machine only has a single DNS search path, this directive may
+-only be used globally. 
++
++.TP
++\fBkeepup\fR
++Keep the interface up when released.
++Normally \fBpump\fR brings the interface down when it releases its
++lease, but some daemons such as ifplugd or wpa_supplicant still need the
++interface to be up so that they can still work.
+@@ -176 +190,0 @@
 -This directive may only be used within a \fBdevice\fR directive.
--
--.TP
- \fBnodns\fR
- Don't create a new /etc/resolv.conf when this interface is configured. This
- directive may only be used within a \fBdevice\fR directive.
-@@ -128,6 +124,18 @@
- can be usefull on machines with multiple ethernet cards.
- 
- .TP
-+\fBnonisdomain\fR
-+Don't set a new NIS domain. Normally \fBpump\fR sets the system's NIS domain
-+if an NIS domain is specified by the dhcp server and the current NIS domain 
-+is empty or \fBlocaldomain\fR.
-+This directive may only be used within a \fBdevice\fR directive.
+@@ -181 +194,0 @@
+-This directive may only be used within a \fBdevice\fR directive.
+@@ -186 +199,5 @@
+-This can be useful on machines with multiple Ethernet cards.
++This can be useful on machines with multiple devices.
 +
 +.TP
 +\fBnontp\fR
-+Don't create a new /etc/ntp.conf when this interface is configured. This
-+directive may only be used within a \fBdevice\fR directive.
++Don't update /etc/ntp.conf when the interface is configured.
+@@ -191 +208 @@
+-This implies \fBnodns\fR, \fBnonisdomain\fR and \fBnogateway\fR.
++This implies \fBnodns\fR, \fBnonisdomain\fR, \fBnogateway\fR and \fBnontp\fR.
+@@ -196,8 +212,0 @@
+-\fBnoresolvconf\fR
+-Don't use the resolvconf program to update /etc/resolv.conf;
+-instead, update /etc/resolv.conf directly.
+-(This option is only relevant if
+-.B \-\-nodns
+-is not used.)
+-
+-.TP
+@@ -207,0 +217,6 @@
++\fBroutemetric\fR \fIMETRIC\fR
++Metric assigned to each route (normally 0).
++Metric decide a priority when choosing where to route network traffic.
++Lower metrics take a higher priority.
 +
 +.TP
- \fBretries\fR \fIcount\fR
- Retry each phase of the DHCP process \fIcount\fR times.
- 
---- pump.c	2002-06-18 18:03:59.000000000 +0100
-+++ pump.c	2005-07-13 10:12:28.000000000 +0100
-@@ -69,10 +69,16 @@
- 	    int flags;
- 	    int reqLease;			/* in seconds */
- 	    char reqHostname[200];
-+	    struct {
-+		char resolv[MAX_PATH];
-+		char ntp[MAX_PATH];
-+	    } files;
-+	    int routeMetric;
- 	} start;
- 	int result;				/* 0 for success */
- 	struct {
- 	    char device[20];
+diff -r -U 0 pump-0.8.21/pump.c pump-0.8.21-r5/pump.c
+--- pump-0.8.21/pump.c	2005-07-14 15:18:08.000000000 +0100
++++ pump-0.8.21-r5/pump.c	2005-07-14 15:07:26.000000000 +0100
+@@ -82,0 +83 @@
 +	    int keepUp;
- 	} stop;
- 	struct {
- 	    char device[20];
-@@ -92,13 +98,14 @@
- 
- static int openControlSocket(char * configFile, struct pumpOverrideInfo * override);
- 
+@@ -100,111 +101,2 @@
 -char * readSearchPath(void) {
-+char * readSearchPath(char *file) {
-     int fd;
-     struct stat sb;
-     char * buf;
-     char * start;
- 
+-    int fd;
+-    struct stat sb;
+-    char * buf;
+-    char * start;
+-
 -    fd = open("/etc/resolv.conf", O_RDONLY);
-+    if (! file) return NULL;
-+    fd = open(file, O_RDONLY);
-     if (fd < 0) return NULL;
- 
-     fstat(fd, &sb);
-@@ -132,8 +139,42 @@
-     return NULL;
- }
- 
--static void createResolvConf(struct pumpNetIntf * intf, char * domain,
--			     int isSearchPath) {
-+void createNtpConf(char *file, struct pumpNetIntf * intf) {
+-    if (fd < 0) return NULL;
+-
+-    fstat(fd, &sb);
+-    buf = alloca(sb.st_size + 2);
+-    if (read(fd, buf, sb.st_size) != sb.st_size) return NULL;
+-    buf[sb.st_size] = '\n';
+-    buf[sb.st_size + 1] = '\0';
+-    close(fd);
+-
+-    start = buf;
+-    while (start && *start) {
+-	while (isspace(*start) && (*start != '\n')) start++;
+-	if (*start == '\n') {
+-	    start++;
+-	    continue;
+-	}
+-
+-	if (!strncmp("search", start, 6) && isspace(start[6])) {
+-	    start += 6;
+-	    while (isspace(*start) && *start != '\n') start++;
+-	    if (*start == '\n') return NULL;
+-
+-	    buf = strchr(start, '\n');
+-	    *buf = '\0';
+-	    return strdup(start);
+-	}
+-
+-	while (*start && (*start != '\n')) start++;
+-    }
+-
+-    return NULL;
+-}
+-
+-static void createResolvConf(struct pumpNetIntf * intf, struct pumpOverrideInfo * override, char * domain) {
+-    FILE * f;
+-    int i;
+-    char * chptr;
+-    int resolvconf;
+-
+-    /* force a reread of /etc/resolv.conf if we need it again */
+-    res_close();
+-    endhostent();
+-
+-    if (!domain) {
+-	domain = readSearchPath();
+- 	if (domain) {
+-	    chptr = alloca(strlen(domain) + 1);
+-	    strcpy(chptr, domain);
+-	    free(domain);
+-	    domain = chptr;
+-	}
+-    }
+-
+-    resolvconf = !(override->flags & OVERRIDE_FLAG_NORESOLVCONF);
+-    if (resolvconf) {
+-	struct stat buf;
+-
+-	if (stat("/sbin/resolvconf", &buf) < 0)
+-	    resolvconf = 0;
+-    }
+-
+-    if (resolvconf) {
+-	char *arg;
+-
+-	f = NULL;
+-	if (asprintf(&arg, "/sbin/resolvconf -a %s >/dev/null 2>&1", intf->device) >= 0) {
+-	    f = popen(arg, "w");
+-	    free(arg);
+-	}
+-	if (!f) {
+-	    syslog(LOG_ERR, "error starting resolvconf: %s\n", strerror(errno));
+-	    return;
+-	}
+-    } else {
+-	f = fopen("/etc/resolv.conf", "w");
+-	if (!f) {
+-	    syslog(LOG_ERR, "error opening resolv.conf: %s\n", strerror(errno));
+-	    return;
+-	}
+-    }
+-
+-
+-    errno = 0;
+-
+-    if (domain)
+-	if(fprintf(f, "search %s\n", domain) < 0)
+-	    syslog(LOG_ERR, "failed to write resolver configuration data\n");
+-
+-    for (i = 0; i < intf->numDns; i++)
+-	if(fprintf(f, "nameserver %s\n", inet_ntoa(intf->dnsServers[i])) < 0)
+-	    syslog(LOG_ERR, "failed to write resolver configuration data\n");
+-
+-    if (resolvconf) {
+-	if(pclose(f) != 0) /* errno not useful on pclose failure */
+-	    syslog(LOG_ERR, "error running resolvconf\n");
+-    } else {
+-	if(fclose(f) != 0)
+-	    syslog(LOG_ERR, "error closing resolv.conf: %s\n", strerror(errno));
+-    }
+-
+-}
+-
+-void setupDomain(struct pumpNetIntf * intf, 
+-		 struct pumpOverrideInfo * override) {
++void setupDomain(struct pumpNetIntf * intf) {
++    struct pumpOverrideInfo *o = &intf->override;
+@@ -214 +106 @@
+-    if (override->flags & OVERRIDE_FLAG_NONISDOMAIN)
++    if (o->flags & OVERRIDE_FLAG_NONISDOMAIN)
+@@ -242,7 +134,5 @@
+-void setupDns(struct pumpNetIntf * intf, struct pumpOverrideInfo * override) {
+-    char * hn, * dn = NULL;
+-    struct hostent * he;
+-
+-    if (override->flags & OVERRIDE_FLAG_NODNS) {
+-	return;
+-    }
++void createResolvConf(struct pumpNetIntf * intf, char * domain) {
++    struct pumpOverrideInfo *o = &intf->override;
 +    FILE * f;
++    char resolv[1024];
 +    int i;
-+
-+    f = fopen(file, "w");
+@@ -250,2 +140,4 @@
+-    if (override->searchPath[0]) {
+-	createResolvConf(intf, override, override->searchPath);
++    sprintf(resolv, "%s/resolv.conf", o->etcDir);
++    f = fopen(resolv, "w");
 +    if (!f) {
-+	syslog(LOG_ERR, "cannot create %s: %s\n", file,
-+	       strerror(errno));
-+	return;
++	syslog(LOG_ERR, "cannot create %s: %s", resolv, strerror(errno));
+@@ -254,22 +146,5 @@
+-
+-    if (intf->set & PUMP_NETINFO_HAS_DNS) {
+-	if (!(intf->set & PUMP_NETINFO_HAS_DOMAIN))  {
+-	    if (intf->set & PUMP_NETINFO_HAS_HOSTNAME) {
+-		hn = intf->hostname;
+-	    } else {
+-		createResolvConf(intf, override, NULL);
+-
+-		he = gethostbyaddr((char *) &intf->ip, sizeof(intf->ip),
+-				   AF_INET);
+-		if (he) {
+-		    hn = he->h_name;
+-		} else {
+-		    hn = NULL;
+-		}
+-	    }
+-
+-	    if (hn) {
+-		dn = strchr(hn, '.');
+-		if (dn)
+-		    dn++;
+-	    }
++    
++    fprintf(f, "# Generated by pump for interface %s\n", intf->device);
++    if (*domain) {
++	if (strchr(domain, ' ')) {
++	    fprintf(f, "search %s\n", domain);
+@@ -277 +152 @@
+-	    dn = intf->domain;
++	    fprintf(f, "domain %s\n", domain);
+@@ -278,0 +154 @@
++    }
+@@ -280 +156,2 @@
+-	createResolvConf(intf, override, dn);
++    for (i = 0; i < intf->numDns; i++) {
++       fprintf(f, "nameserver %s\n", inet_ntoa(intf->dnsServers[i]));
+@@ -281,0 +159,2 @@
++    
++    fclose(f);
+@@ -284,3 +163,4 @@
+-void unsetupDns(struct pumpNetIntf * intf, struct pumpOverrideInfo * override) {
+-    struct stat buf;
+-    char *arg;
++void setupDns(struct pumpNetIntf * intf) {
++    struct pumpOverrideInfo *o = &intf->override;
++    char * hn, * dn = NULL;
++    struct hostent * he;
+@@ -288,3 +168 @@
+-    if (override->flags & OVERRIDE_FLAG_NODNS)
+-	return;
+-    if (override->flags & OVERRIDE_FLAG_NORESOLVCONF)
++    if (o->flags & OVERRIDE_FLAG_NODNS)
+@@ -292,4 +170,2 @@
+-    if (stat("/sbin/resolvconf", &buf) < 0)
+-	return;
+-    if (asprintf(&arg, "/sbin/resolvconf -d %s", intf->device) < 0) {
+-	syslog(LOG_ERR, "failed to release resolvconf: %s", strerror(errno));
++
++    if (!intf->set & PUMP_NETINFO_HAS_DNS)
+@@ -296,0 +173,22 @@
++    
++    if (o->searchPath[0]) {
++	dn = o->searchPath;
++    } else if (intf-> set & PUMP_NETINFO_HAS_DOMAIN) {
++	dn = intf->domain;
++    } else if (intf->set & PUMP_NETINFO_HAS_HOSTNAME) {
++	hn = intf->hostname;
++    } else {
++	createResolvConf(intf, NULL);
++
++	he = gethostbyaddr((char *) &intf->ip, sizeof(intf->ip), AF_INET);
++	if (he) {
++	    hn = he->h_name;
++	} else {
++	    hn = NULL;
++	}
 +    }
 +
++    if (hn) {
++	dn = strchr(hn, '.');
++	if (dn)
++	    dn++;
+@@ -299,3 +197 @@
+-    if (system(arg) != 0)
+-	syslog(LOG_ERR, "resolvconf -d %s failed", intf->device);
+-    free(arg);
++    createResolvConf(intf, dn);
+@@ -304,8 +200,5 @@
+-static void callIfupPost(struct pumpNetIntf* intf) {
+-#ifdef debian
+-    /* can/should we call a debian one? */
+-    return;
+-#else
+-    pid_t child;
+-    char * argv[3];
+-    char arg[64];
++void setupNtp(struct pumpNetIntf * intf) {
++    struct pumpOverrideInfo *o = &intf->override;
++    FILE * f;
++    char ntp[1024];
++    int i;
+@@ -313,4 +206,2 @@
+-    argv[0] = "/etc/sysconfig/network-scripts/ifup-post";
+-    snprintf(arg,64,"ifcfg-%s",intf->device);
+-    argv[1] = arg;
+-    argv[2] = NULL;
++    if (o->flags & OVERRIDE_FLAG_NONTP)
++        return;
+@@ -318,3 +209,2 @@
+-    if (!(child = fork())) {
+-	/* send the script to init */
+-	if (fork()) _exit(0);
++    if (! intf->set & PUMP_NETINFO_HAS_NTPSRVS)
++        return;
+@@ -322 +212,6 @@
+-	execvp(argv[0], argv);
++    sprintf(ntp, "%s/ntp.conf", o->etcDir);
++    f = fopen(ntp, "w");
++    if (!f) {
++	syslog(LOG_ERR, "cannot create %s: %s\n", ntp, strerror(errno));
++	return;
++    }
+@@ -324 +219,4 @@
+-	syslog(LOG_ERR,"failed to run %s: %s", argv[0], strerror(errno));
 +    fprintf(f, "# Generated by pump for interface %s\n", intf->device);
 +    fprintf(f, "restrict default noquery notrust nomodify\n"
-+		"restrict 127.0.0.1\n"
-+		"driftfile /var/lib/ntp/ntp.drift\n");
-+
++	    "restrict 127.0.0.1\n"
++	    "driftfile /var/lib/ntp/ntp.drift\n");
+@@ -326 +224,4 @@
+-	_exit(0);
 +    for (i = 0; i < intf->numNtp; i++) {
 +	fprintf(f, "restrict %s nomodify notrap noquery\n"
 +		"server %s\n", inet_ntoa(intf->ntpServers[i]),
 +		inet_ntoa(intf->ntpServers[i]));
-+    }
-+ 
+@@ -329,2 +230 @@
+-    waitpid(child, NULL, 0);
+-#endif
 +    fclose(f);
-+}
-+
-+void setupNtp(char *file, struct pumpNetIntf * intf, struct pumpOverrideInfo * override) {
-+
-+    if (override->flags & OVERRIDE_FLAG_NONTP)
-+        return;
-+
-+    if (intf->set & PUMP_NETINFO_HAS_NTPSRVS)
-+        createNtpConf(file, intf);
-+}
-+
-+static void createResolvConf(char * file, struct pumpNetIntf * intf,
-+			char * domain, int isSearchPath) {
-     FILE * f;
-     int i;
-     char * chptr;
-@@ -142,7 +183,7 @@
-     res_close();
- 
-     if (!domain) {
--	domain = readSearchPath();
-+	domain = readSearchPath(file);
-  	if (domain) {
- 	    chptr = alloca(strlen(domain) + 1);
- 	    strcpy(chptr, domain);
-@@ -152,19 +193,21 @@
- 	}
-     }
- 
--    f = fopen("/etc/resolv.conf", "w");
-+    f = fopen(file, "w");
-     if (!f) {
--	syslog(LOG_ERR, "cannot create /etc/resolv.conf: %s\n",
-+	syslog(LOG_ERR, "cannot create %s: %s\n", file,
- 	       strerror(errno));
- 	return;
-     }
- 
-+    fprintf(f, "# Generated by pump for interface %s\n", intf->device);
-+
-     if (domain && isSearchPath) {
- 	fprintf(f, "search %s\n", domain);
-     } else if (domain && !strchr(domain, '.')) {
--	fprintf(f, "search %s\n", domain);
-+	fprintf(f, "domain %s\n", domain);
-     } else if (domain) {
--	fprintf(f, "search");
-+	fprintf(f, "domain");
- 	chptr = domain;
- 	do {
- 	    /* If there is a single . in the search path, write it out
-@@ -240,7 +283,7 @@
-     return;
- }
- 
--void setupDns(struct pumpNetIntf * intf, struct pumpOverrideInfo * override) {
-+void setupDns(char *file, struct pumpNetIntf * intf, struct pumpOverrideInfo * override) {
-     char * hn, * dn = NULL;
-     struct hostent * he;
- 
-@@ -249,7 +292,7 @@
-     }
- 
-     if (override->searchPath) {
--	createResolvConf(intf, override->searchPath, 1);
-+	createResolvConf(file, intf, override->searchPath, 1);
- 	return;
-     }
- 
-@@ -258,7 +301,7 @@
- 	    if (intf->set & PUMP_NETINFO_HAS_HOSTNAME) {
- 		hn = intf->hostname;
- 	    } else {
--		createResolvConf(intf, NULL, 0);
-+		createResolvConf(file, intf, NULL, 0);
- 
- 		he = gethostbyaddr((char *) &intf->ip, sizeof(intf->ip),
- 				   AF_INET);
-@@ -278,7 +321,7 @@
- 	    dn = intf->domain;
- 	}
- 
--	createResolvConf(intf, dn, 0);
-+	createResolvConf(file, intf, dn, 0);
-     }
- }
- 
-@@ -360,7 +403,7 @@
- static void runDaemon(int sock, char * configFile, struct pumpOverrideInfo * overrides) {
-     int conn;
-     struct sockaddr_un addr;
--    int addrLength = sizeof(struct sockaddr_un);
-+    socklen_t addrLength = sizeof(struct sockaddr_un);
-     struct command cmd;
-     struct pumpNetIntf intf[20];
-     int numInterfaces = 0;
-@@ -529,17 +572,20 @@
- 			        intf + numInterfaces, o)) {
- 		    cmd.u.result = 1;
- 		} else {
--		    pumpSetupInterface(intf + numInterfaces);
-+		    pumpSetupInterface(intf + numInterfaces,
-+			    cmd.u.start.routeMetric);
- 		    i = numInterfaces;
- 
- 		    syslog(LOG_INFO, "configured interface %s", intf[i].device);
- 
- 		    if ((intf[i].set & PUMP_NETINFO_HAS_GATEWAY) &&
- 			 !(o->flags & OVERRIDE_FLAG_NOGATEWAY))
--			pumpSetupDefaultGateway(&intf[i].gateway);
-+			 pumpSetupDefaultGateway(intf + i,
-+				 cmd.u.start.routeMetric);
- 
--		    setupDns(intf + i, o);
-+		    setupDns(cmd.u.start.files.resolv, intf + i, o);
- 		    setupDomain(intf + i, o);
-+		    setupNtp(cmd.u.start.files.ntp, intf + i, o);
- 
- 		    callScript(o->script, PUMP_SCRIPT_NEWLEASE, 
- 			       intf + numInterfaces);
-@@ -570,6 +616,7 @@
- 		    cmd.u.result = RESULT_UNKNOWNIFACE;
- 		else {
- 		    cmd.u.result = pumpDhcpRelease(intf + i);
-+		    if (! cmd.u.stop.keepUp) pumpDownInterface(intf[i].device);
- 		    callScript(o->script, PUMP_SCRIPT_DOWN, intf + i);
- 		    if (numInterfaces == 1) {
- 			cmd.type = CMD_RESULT;
-@@ -808,20 +855,27 @@
-     int killDaemon = 0;
-     int winId = 0;
-     int release = 0, renew = 0, status = 0, lookupHostname = 0, nodns = 0;
+@@ -333 +233 @@
+-static void callScript(char* script,int msg,struct pumpNetIntf* intf) {
++static void callScript(struct pumpNetIntf *intf, int msg) {
+@@ -337,0 +238 @@
++    char * script = intf->override.script;
+@@ -388 +288,0 @@
+-
+@@ -397,4 +297 @@
+-	int i;
+-
+-	for (i = intf->numGateways - 1; i >= 0; i--)
+-	    pumpSetupDefaultGateway(&intf->gateways[i]);
++	pumpSetupDefaultGateway(intf);
+@@ -403,8 +300,3 @@
+-    setupDns(intf, o);
+-    setupDomain(intf, o);
+-
+-    callScript(o->script, PUMP_SCRIPT_NEWLEASE, intf);
+-}
+-
+-static void killLease(struct pumpNetIntf *intf) {
+-    struct pumpOverrideInfo *o = &intf->override;
++    setupDns(intf);
++    setupDomain(intf);
++    setupNtp(intf);
+@@ -412,2 +304 @@
+-    unsetupDns(intf, o);
+-    callScript(o->script, PUMP_SCRIPT_DOWN, intf);
++    callScript(intf, PUMP_SCRIPT_NEWLEASE);
+@@ -502 +393 @@
+-				killLease(intf + closest);
++				callScript(intf + closest, PUMP_SCRIPT_DOWN);
+@@ -504 +395 @@
+-				killLease(intf + closest);
++				callScript(intf + closest, PUMP_SCRIPT_DOWN);
+@@ -511,3 +402 @@
+-			callScript(intf[closest].override.script,
+-				   PUMP_SCRIPT_RENEWAL, &intf[closest]);
+-			callIfupPost(&intf[closest]);
++			callScript(&intf[closest], PUMP_SCRIPT_RENEWAL);
+@@ -576 +465 @@
+-		    killLease(intf + i);
++		    callScript(intf + i, PUMP_SCRIPT_DOWN);
+@@ -614,3 +503 @@
+-			callScript(intf[i].override.script,
+-				   PUMP_SCRIPT_RENEWAL, intf + i);
+-			callIfupPost(intf + i);
++			callScript(intf + 1, PUMP_SCRIPT_RENEWAL);
+@@ -626,0 +514,2 @@
++		    if (cmd.u.stop.keepUp)
++			intf[i].override.flags |= OVERRIDE_FLAG_KEEPUP; 
+@@ -628 +517 @@
+-		    killLease(intf + i);
++		    callScript(intf + i, PUMP_SCRIPT_DOWN);
+@@ -922 +810,0 @@
+-    int flags = 0;
+@@ -928 +816 @@
 -    int nogateway = 0, nobootp = 0;
-+    int nogateway = 0, nobootp = 0, nontp=1;
-     struct command cmd, response;
-     char * configFile = "/etc/pump.conf";
++    int nogateway = 0, nobootp = 0, nontp = 0;
+@@ -930 +818,2 @@
+-    int noresolvconf = 0;
++    int routeMetric = 0;
++    int keepUp = 0;
+@@ -933,0 +823,2 @@
 +    char * etcDir = "/etc";
-+    int routeMetric = 0, keepUp = 0;
-+    char * script = "";
-     struct pumpOverrideInfo * overrides;
-     int cont;
-     struct poptOption options[] = {
- 	    { "config-file", 'c', POPT_ARG_STRING, &configFile, 0,
- 			N_("Configuration file to use instead of "
- 			   "/etc/pump.conf") },
++    char * searchPath = NULL;
+@@ -939,0 +831,2 @@
 +	    { "etc-dir", 'e', POPT_ARG_STRING, &etcDir, 0,
 +			N_("Directory to store resolv.conf (normally /etc)") },
-             { "hostname", 'h', POPT_ARG_STRING, &hostname, 0, 
- 			N_("Hostname to request"), N_("hostname") },
-             { "interface", 'i', POPT_ARG_STRING, &device, 0, 
- 			N_("Interface to configure (normally eth0)"), 
- 			N_("iface") },
+@@ -944,0 +838,2 @@
 +	    { "keep-up", 'u', POPT_ARG_NONE, &keepUp, 0,
 +			N_("Keep the interface up when releasing it") },
- 	    { "kill", 'k', POPT_ARG_NONE, &killDaemon, 0,
- 			N_("Kill daemon (and disable all interfaces)"), NULL },
- 	    { "lease", 'l', POPT_ARG_INT, &lease_hrs, 0,
-@@ -834,14 +888,20 @@
- 			N_("Release interface"), NULL },
- 	    { "renew", 'R', POPT_ARG_NONE, &renew, 0,
- 			N_("Force immediate lease renewal"), NULL },
+@@ -957 +852,3 @@
+-            { "verbose", 'v', POPT_ARG_NONE, &verbose, 0,
 +	    { "route-metric", 'm', POPT_ARG_INT, &routeMetric, 0,
-+			N_("Metric applied to routes (normally 0)") },
-+	    { "script", '\0', POPT_ARG_STRING, &script, 0,
-+			N_("Script to run when on DHCP actions") },
- 	    { "status", 's', POPT_ARG_NONE, &status, 0,
- 			N_("Display interface status"), NULL },
-+	    { "no-bootp", '\0', POPT_ARG_NONE, &nobootp, 0,
-+	                N_("Ignore non-DHCP BOOTP responses"), NULL },
- 	    { "no-dns", 'd', POPT_ARG_NONE, &nodns, 0,
- 			N_("Don't update resolv.conf"), NULL },
- 	    { "no-gateway", '\0', POPT_ARG_NONE, &nogateway, 0,
- 			N_("Don't set a gateway for this interface"), NULL },
--	    { "no-bootp", '\0', POPT_ARG_NONE, &nobootp, 0,
--	                N_("Ignore non-DHCP BOOTP responses"), NULL },
++			N_("Metric applied to routes (normally 0)"), N_("(metric)") },
++	    { "verbose", 'v', POPT_ARG_NONE, &verbose, 0,
+@@ -964,0 +862,2 @@
 +	    { "no-ntp", '\0', POPT_ARG_NONE, &nontp, 0,
 +			N_("Don't update ntp.conf"), NULL },
- 	    { "win-client-ident", '\0', POPT_ARG_NONE, &winId, 0,
- 			N_("Set the client identifier to match Window's") },
- 	    /*{ "test", 't', POPT_ARG_NONE, &test, 0,
-@@ -889,6 +949,10 @@
- 	overrides->flags |= OVERRIDE_FLAG_NOBOOTP;
-     if (nogateway)
- 	overrides->flags |= OVERRIDE_FLAG_NOGATEWAY;
-+    if (nontp)
-+	overrides->flags |= OVERRIDE_FLAG_NONTP;
-+    if (strlen(script))
-+	overrides->script = script;	
- 
-     cont = openControlSocket(configFile, overrides);
-     if (cont < 0) 
-@@ -905,6 +969,7 @@
-     } else if (release) {
- 	cmd.type = CMD_STOPIFACE;
- 	strcpy(cmd.u.stop.device, device);
-+	cmd.u.stop.keepUp = keepUp;
-     } else {
- 	cmd.type = CMD_STARTIFACE;
- 	strcpy(cmd.u.start.device, device);
-@@ -914,6 +979,9 @@
- 	else
- 		cmd.u.start.reqLease = lease;
- 	strcpy(cmd.u.start.reqHostname, hostname);
-+	snprintf(cmd.u.start.files.resolv, MAX_PATH, "%s/resolv.conf", etcDir);
-+	snprintf(cmd.u.start.files.ntp, MAX_PATH, "%s/ntp.conf", etcDir);
-+	cmd.u.start.routeMetric = routeMetric;
-     }
- 
-     write(cont, &cmd, sizeof(cmd));
---- pump.h	2003-10-24 20:37:53.000000000 +0100
-+++ pump.h	2005-07-13 09:55:41.000000000 +0100
-@@ -13,6 +13,8 @@
- #define MAX_XFS_SERVERS		3
- #define MAX_XDM_SERVERS		3
- 
-+#define MAX_PATH		256
+@@ -967,2 +865,0 @@
+-	    { "no-resolvconf", '\0', POPT_ARG_NONE, &noresolvconf, 0,
+-			N_("Don't set up resolvconf"), NULL },
+@@ -970,0 +868,2 @@
++	    { "search-path", 'p', POPT_ARG_STRING, &searchPath, 0,
++			N_("Use this DNS search path instead of the supplied one"), NULL },
+@@ -1016,0 +916,10 @@
++    if (etcDir && strlen(etcDir) + 12 > sizeof(overrides->etcDir)) {
++	fprintf(stderr, _("%s: --etc-dir argument is to long\n"), PROGNAME);
++	return 1;
++    }
 +
- #define PUMP_INTFINFO_HAS_IP		(1 << 0)
- #define PUMP_INTFINFO_HAS_NETMASK	(1 << 1)
- #define PUMP_INTFINFO_HAS_BROADCAST	(1 << 2)
-@@ -83,6 +85,7 @@
- #define OVERRIDE_FLAG_NONISDOMAIN	(1 << 1)
- #define OVERRIDE_FLAG_NOGATEWAY		(1 << 2)
- #define OVERRIDE_FLAG_NOBOOTP           (1 << 3)
-+#define OVERRIDE_FLAG_NONTP		(1 << 4)
- 
- struct pumpOverrideInfo {
-     struct pumpNetIntf intf;
-@@ -100,13 +103,14 @@
- char * pumpDhcpRun(char * device, int flags, int lease,
- 		     char * reqHostname, struct pumpNetIntf * intf,
- 		     struct pumpOverrideInfo * override);
--char * pumpSetupInterface(struct pumpNetIntf * intf);
-+char * pumpSetupInterface(struct pumpNetIntf * intf, int metric);
- /* setup an interface for sending a broadcast -- uses all 0's address */
- char * pumpPrepareInterface(struct pumpNetIntf * intf, int s);
- char * pumpDisableInterface(char * device);
-+char * pumpDownInterface(char * device);
- int pumpDhcpRenew(struct pumpNetIntf * intf);
- int pumpDhcpRelease(struct pumpNetIntf * intf);
++    if (searchPath && strlen(searchPath) > sizeof(overrides->searchPath)) {
++	fprintf(stderr, _("%s: --search-path argument is to long\n"), PROGNAME);
++	return 1;
++    }
++    
+@@ -1030,7 +938,0 @@
+-    if (test)
+-	flags = PUMP_FLAG_NODAEMON | PUMP_FLAG_NOCONFIG;
+-    if (winId)
+-	flags |= PUMP_FLAG_WINCLIENTID;
+-    if (lookupHostname)
+-	flags |= PUMP_FLAG_FORCEHNLOOKUP;
+-
+@@ -1047,0 +950 @@
++	cmd.u.stop.keepUp = keepUp;
+@@ -1053 +955,0 @@
+-	cmd.u.start.flags = flags;
+@@ -1065,0 +968,8 @@
++	if (etcDir)
++	    strcpy(o->etcDir, etcDir);
++	if (test)
++	    o->flags = PUMP_FLAG_NODAEMON | PUMP_FLAG_NOCONFIG;
++	if (winId)
++	    o->flags |= PUMP_FLAG_WINCLIENTID;
++	if (lookupHostname)
++	    o->flags |= PUMP_FLAG_FORCEHNLOOKUP;
+@@ -1071,0 +982,2 @@
++	if (nontp)
++	    o->flags |= OVERRIDE_FLAG_NONTP;
+@@ -1076,0 +989 @@
++		OVERRIDE_FLAG_NONTP |
+@@ -1078,2 +991,3 @@
+-	if (noresolvconf)
+-	    o->flags |= OVERRIDE_FLAG_NORESOLVCONF;
++	o->routeMetric = routeMetric;
++	if (searchPath)
++	    strcpy(o->searchPath, searchPath);
+diff -r -U 0 pump-0.8.21/pump.h pump-0.8.21-r5/pump.h
+--- pump-0.8.21/pump.h	2005-07-14 15:18:08.000000000 +0100
++++ pump-0.8.21-r5/pump.h	2005-07-14 11:54:32.000000000 +0100
+@@ -57 +57,3 @@
+-#define OVERRIDE_FLAG_NORESOLVCONF	(1 << 5)
++/* #define OVERRIDE_FLAG_NORESOLVCONF	(1 << 5) */
++#define OVERRIDE_FLAG_NONTP		(1 << 6)
++#define OVERRIDE_FLAG_KEEPUP		(1 << 7)
+@@ -65,0 +68,2 @@
++    char etcDir[1024];
++    int routeMetric;
+@@ -116 +120 @@
 -int pumpSetupDefaultGateway(struct in_addr * gw);
-+int pumpSetupDefaultGateway(struct pumpNetIntf * intf, int metric);
- time_t pumpUptime(void);
- 
- #define RESULT_OKAY		0
++int pumpSetupDefaultGateway(struct pumpNetIntf * intf);
