@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 8ea784b866e4421123f5e2101d6979ce php-4.4.0.ebuild 1078
+MD5 eaa1a899f214a9ad1a095e9f6a4f5fc5 php-4.3.11.ebuild 1214
+MD5 4caabdb658f828fedbbb1fdfc0dd0787 php-5.1.0_beta-r2.ebuild 966
 MD5 47897b0231033ecac196f1b218c2c5e8 php-5.0.4-r1.ebuild 952
 MD5 192ac7273eb770aca486215bed982b70 ChangeLog 24863
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
-MD5 eaa1a899f214a9ad1a095e9f6a4f5fc5 php-4.3.11.ebuild 1214
-MD5 4caabdb658f828fedbbb1fdfc0dd0787 php-5.1.0_beta-r2.ebuild 966
-MD5 8ea784b866e4421123f5e2101d6979ce php-4.4.0.ebuild 1078
-MD5 50dc25cd1389330b0e562a4d42d9cb07 files/digest-php-5.1.0_beta-r2 65
-MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
-MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
-MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
-MD5 522f94bfc40f65c2263785f960035875 files/libmbfl-headers.patch 309
-MD5 f25bbe20f37a0eb83f7a57ca2c3a25e3 files/digest-php-4.4.0 211
-MD5 289778209b2df87dbc5052351e604b1a files/digest-php-4.3.11 213
 MD5 7515e9b1dc298a0fb1c12d35a58c265d files/php-4.3.4-amd64hack.diff 1028
-MD5 40aa32876cfd159c95572b24ce39a7ce files/digest-php-5.0.4-r1 143
+MD5 34c8c0361c81f5aedd386d228ccfe728 files/digest-php-5.1.0_beta-r2 65
+MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
 MD5 6fb14885b5124b2bb92eb7a02ac24b01 files/php-5.0.3-gcc4.patch 432
+MD5 522f94bfc40f65c2263785f960035875 files/libmbfl-headers.patch 309
+MD5 40aa32876cfd159c95572b24ce39a7ce files/digest-php-5.0.4-r1 143
+MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
+MD5 f25bbe20f37a0eb83f7a57ca2c3a25e3 files/digest-php-4.4.0 211
 MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1V8TKf2g/qXtneoRAtD/AKCHPODpXN4fhfhF8TrX0mZnQGQRLwCgs7DN
-WxN9KensKjjyptSM370g/ek=
-=7A4Q
------END PGP SIGNATURE-----
+MD5 289778209b2df87dbc5052351e604b1a files/digest-php-4.3.11 213
+MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
