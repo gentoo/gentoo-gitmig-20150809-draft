@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a1b93d8bdfb97f8e82cec5680c0d7adf mozilla-thunderbird-bin-1.0.2.ebuild 3312
 MD5 7b5fa01382e052dd3f74b5f620061a99 ChangeLog 6000
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 552a6947de77bfa4e290acdb23a872a5 files/thunderbird-bin-0.7-init.tar.bz2 3339
+MD5 a1b93d8bdfb97f8e82cec5680c0d7adf mozilla-thunderbird-bin-1.0.2.ebuild 3312
+MD5 a1b93d8bdfb97f8e82cec5680c0d7adf mozilla-thunderbird-bin-1.0.5.ebuild 3312
 MD5 b45ad1c0970314d565c8674885fdedbb files/digest-mozilla-thunderbird-bin-1.0.2 71
-MD5 a622df770b03edce7d158cfe97e8e315 files/icon/mozillathunderbird-bin.desktop 205
+MD5 552a6947de77bfa4e290acdb23a872a5 files/thunderbird-bin-0.7-init.tar.bz2 3339
+MD5 cac57af7f63e97aed3c1be35a58f7ea9 files/digest-mozilla-thunderbird-bin-1.0.5 71
 MD5 04115f0e204444eac76a092a63c89027 files/icon/mozillathunderbird-bin-icon.png 6499
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0W0V8zY1VwezZiERAlJtAKCaA4nvSPhEKbrD9ywkhfHkpS2nsQCfRILt
-/txdxiZOmFmqjB8RStU6wPM=
-=a59o
------END PGP SIGNATURE-----
+MD5 a622df770b03edce7d158cfe97e8e315 files/icon/mozillathunderbird-bin.desktop 205
