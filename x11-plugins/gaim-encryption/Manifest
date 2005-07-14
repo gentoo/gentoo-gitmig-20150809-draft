@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8aafd85bd35967561f706314d749e322 ChangeLog 12746
 MD5 ff64a30a61d21ad47aab6594e4b1325b files/digest-gaim-encryption-2.32-r1 72
 MD5 69dd2444e1c1a7c90b61128c9912f975 files/digest-gaim-encryption-2.34 72
@@ -12,3 +15,10 @@ MD5 1d87e2e19db2674121a0ac6fd1729946 gaim-encryption-2.36.ebuild 973
 MD5 89dc5f0c668b2281d7914d72cc4d2931 gaim-encryption-2.37.ebuild 978
 MD5 ac9aff64c48fbe61f0aa149e57791b32 gaim-encryption-2.38.ebuild 973
 MD5 f9adb0cad926cb239205a2b354cbda8b metadata.xml 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1vOfI1lqEGTUzyQRAmNkAKDF31hBtLEO6L9IXfLEkhv8QFITtgCeIeCw
+uS86tbiKMpPfvfo0sb028eE=
+=pfdo
+-----END PGP SIGNATURE-----
