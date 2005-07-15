@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c7e432f48a9d747886a721183bcccb06 ChangeLog 637
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 16991bff74b6a37bc47da05f4fbd3c72 jmock-1.0.1.ebuild 1221
+MD5 f5269c7a5863f37ac57c0ba097cf9c17 jmock-1.0.1.ebuild 1236
 MD5 0fd831ae4b7efbc9184522cf832aeb2f files/digest-jmock-1.0.1 64
 MD5 b69ef29942edee112378f7c04e0a0df1 files/jmock-1.0.1-buildxml.patch 1816
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCijNB06ebR+OMO78RAvh5AJ0TSWVZy8iEBhAsUsY0Ue93P160lACgi8hh
-wkNCyvQOpCPM5NmvVQURTFs=
-=rbp3
------END PGP SIGNATURE-----
