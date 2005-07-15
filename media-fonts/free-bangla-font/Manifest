@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fcaf5753bc04efd8f8d2022fa47c0808 ChangeLog 754
-MD5 aaaa44b3ec89f860c7fb07f984eec5ca free-bangla-font-0.2.ebuild 1102
+MD5 0523b63b5023dbbc79ac6da84789cb7e ChangeLog 862
+MD5 cb84c5bfb09fd7c537e50fa9f891ae7d free-bangla-font-0.2.ebuild 1105
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 d349548cac315a1df2f5cb9934467aeb files/digest-free-bangla-font-0.2 250
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBWlEeVWNWqTUmv+0RAkfNAKCP9BYmrkFIvEx36tZZCRmQyg9piwCgsQbt
-iRNtg8JGvmXWzBm9Uk9NqDU=
-=RsEj
------END PGP SIGNATURE-----
