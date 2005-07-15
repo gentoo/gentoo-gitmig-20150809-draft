@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>web-apps</herd>
+<maintainer>
+  <email>maintainer-needed@gentoo.org</email>
+</maintainer>
+<longdescription>
+  This is the disc-cover web interface. This package is tightly
+  bound to app-cdr/disc-cover by the fact that they come from the
+  same source package. That's why the web application ebuild is
+  /manually slotted to 0.
+</longdescription>
+</pkgmetadata>

@@ -1,0 +1,11 @@
+# ChangeLog for www-apps/disc-cover
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/disc-cover/ChangeLog,v 1.1 2005/07/15 19:07:00 dju Exp $
+
+*disc-cover-1.5.4-r1 (15 Jul 2005)
+
+  15 Jul 2005; Julien Allanos <dju@gentoo.org> +files/postinst-en.txt,
+  +metadata.xml, +disc-cover-1.5.4-r1.ebuild:
+  New ebuild due to bug #61374. This ebuild only provides the web interface
+  to app-cdr/disc-cover.
+

@@ -1,0 +1,7 @@
+To use disc-cover on an Apache server, you can use the following
+for your vhost configuration:
+
+	ScriptAlias /disc-cover/online.cgi ${VHOST_ROOT}/cgi-bin/online.cgi
+	ScriptAlias /disc-cover/ ${VHOST_ROOT}/cgi-bin/index.cgi
+
+Adjust for the webserver of your choice.
