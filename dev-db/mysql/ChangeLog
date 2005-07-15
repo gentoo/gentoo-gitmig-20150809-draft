@@ -1,6 +1,25 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.203 2005/07/15 13:07:03 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.204 2005/07/15 19:09:50 vivo Exp $
+
+*mysql-5.0.9_beta (15 Jul 2005)
+*mysql-4.1.12-r1 (15 Jul 2005)
+
+  15 Jul 2005; portage <vivo@gentoo.org>
+  +files/mysql-4.0.25-asm-pic-fixes.patch, +mysql-4.0.25.ebuild,
+  +mysql-4.1.12-r1.ebuild, +mysql-5.0.9_beta.ebuild,
+  +files/035_x86_asm-pic-fixes-r2.patch:
+  Added big-tables USE flag, the previous mysql-4.1.12 version had it
+  enabled by default.
+  Patches for hardened installations.
+  A brand new MySQL-5.0 ebuild to start play with it.
+
+*mysql-4.0.25 (15 Jul 2005)
+
+  15 Jul 2005; portage <vivo@gentoo.org>
+  +files/mysql-4.0.25-asm-pic-fixes.patch, +mysql-4.0.25.ebuild:
+  MySQL-4.0.25, based off MySQL-4.0.24-r2. Added big-tables USE flag.
+  Added patches for hardened installations.
 
   13 Jul 2005; portage <vivo@gentoo.org> mysql-4.1.12.ebuild:
   Fix permissions, see bug #95320
