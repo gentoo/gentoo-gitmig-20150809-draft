@@ -1,15 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.15 2005/07/11 21:09:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.16 2005/07/15 00:51:33 agriffis Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
-
-IUSE="java gnome ldap debug xinerama xprint moznoxft"
-case ${PN} in
-	mozilla)	IUSE="${IUSE} mozdevelop mozxmlterm mozsvg" ;;
-	*firefox)	IUSE="${IUSE} mozdevelop mozxmlterm" ;;
-esac
+IUSE="debug gnome ipv6 moznoxft truetype xinerama xprint"
 
 RDEPEND="virtual/x11
 	!moznoxft? ( virtual/xft )
