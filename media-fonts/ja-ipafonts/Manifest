@@ -1,4 +1,14 @@
-MD5 1099b4ffffbe57f0dd6599114b602964 ChangeLog 894
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 15076a79d4fa96d942a0a99444b39dea ChangeLog 1009
+MD5 a5aec2cf32421c147dcbb170a8738bf9 ja-ipafonts-0.0.20040715.ebuild 777
 MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175
-MD5 6e7c13dee2a6ee3a385903eafd39bcd6 ja-ipafonts-0.0.20040715.ebuild 778
 MD5 c19b58423afef6262b7a71ede3192d2b files/digest-ja-ipafonts-0.0.20040715 99
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1+3pj5H05b2HAEkRAgaEAJ9gQq7N6PqgU21pk7L4oqJkw0ZhngCgodXS
+g+IrXOuarjK6zQUMMa7cybE=
+=HJW5
+-----END PGP SIGNATURE-----
