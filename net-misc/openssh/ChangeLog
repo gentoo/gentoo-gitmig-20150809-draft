@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.124 2005/06/26 07:54:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.125 2005/07/15 12:30:13 lcars Exp $
+
+*openssh-4.1_p1-r1 (15 Jul 2005)
+*openssh-4.0_p1-r2 (15 Jul 2005)
+*openssh-3.9_p1-r3 (15 Jul 2005)
+
+  15 Jul 2005; Andrea Barisani <lcars@gentoo.org> metadata.xml,
+  +openssh-3.9_p1-r3.ebuild, +openssh-4.0_p1-r2.ebuild,
+  +openssh-4.1_p1-r1.ebuild:
+  Updating openssh-lpk ldap patches to version 0.3.6.
 
   26 Jun 2005; Mike Frysinger <vapier@gentoo.org> openssh-3.9_p1-r2.ebuild,
   openssh-4.0_p1-r1.ebuild, openssh-4.1_p1.ebuild:
@@ -23,15 +32,15 @@
   conflict #58579.
 
   22 May 2005; Mike Frysinger <vapier@gentoo.org> openssh-4.0_p1-r1.ebuild:
-  Add support for RSA SecurID tokens #92233 by Antti M�kel�.
+  Add support for RSA SecurID tokens #92233 by Antti Mäkelä.
 
-  20 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  20 May 2005; Diego PettenÃ² <flameeyes@gentoo.org>
   openssh-3.9_p1-r2.ebuild, openssh-4.0_p1.ebuild, openssh-4.0_p1-r1.ebuild:
   Inherit pam eclass for newpamd.
 
 *openssh-4.0_p1-r1 (29 Apr 2005)
 
-  29 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  29 Apr 2005; Diego PettenÃ² <flameeyes@gentoo.org>
   +files/sshd.pam_include, +openssh-4.0_p1-r1.ebuild:
   Added a new revision depending on virtual/pam (>=pam-0.78) and uses the
   include syntax instead of pam_stack.so.
@@ -72,7 +81,7 @@
   openssh-3.9_p1-r1.ebuild:
   Fix terminal restoration after breaking out from sftp and scp, closing #63544.
 
-  30 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  30 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   openssh-3.9_p1-r1.ebuild:
   Stable on alpha, bug 59361.
 
@@ -176,7 +185,7 @@
   + Added sftp-logging patch, closing #52168.
   + Added patch for large keys, closing #55013.
 
-  08 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  08 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   openssh-3.8.1_p1-r1.ebuild:
   Stable on alpha.
 
@@ -197,7 +206,7 @@
   15 Jun 2004; <solar@gentoo.org> openssh-3.8.1_p1-r1.ebuild:
   pam & uclibc updates
 
-  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> openssh-3.8.1_p1.ebuild:
+  07 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> openssh-3.8.1_p1.ebuild:
   Stable on alpha.
 
   05 Jun 2004; Hanselmann Michael <hansmi@gentoo.org>
