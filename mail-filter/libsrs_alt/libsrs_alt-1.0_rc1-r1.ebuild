@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/libsrs_alt-1.0_rc1.ebuild,v 1.2 2005/07/15 09:22:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/libsrs_alt-1.0_rc1-r1.ebuild,v 1.1 2005/07/15 17:20:50 peitolm Exp $
 
 MY_PV=${PV%_rc*}
 MY_RC=${PV#*_rc}
@@ -12,11 +12,11 @@ SRC_URI="http://srs.mirtol.com/libsrs_alt-${MY_PV}rc${MY_RC}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc"
-RDEPEND=">=mail-mta/exim-4.50-r2"
+RDEPEND=""
 
 src_compile() {
 	# Since the primary intended consumers of this library are MTAs,
