@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.ebuild,v 1.6 2005/05/19 21:27:47 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.ebuild,v 1.7 2005/07/15 14:49:13 axxo Exp $
 
 inherit java-pkg
 
@@ -13,17 +13,17 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="jikes source"
 
-DEPEND="${RDEPEND}
-	>=virtual/jdk-1.4
+RDEPEND=">=virtual/jre-1.4
+	 dev-java/toolbar"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
 	dev-java/ant-core
 	jikes? ( dev-java/jikes )
 	app-arch/unzip
 	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jre-1.4
-	 dev-java/toolbar"
 
 src_unpack() {
-	unpack ${A} || die "Unpack failed!"
+	unpack ${A}
 
 	# Remove the CVS directories
 	find . -name 'CVS' | xargs rmdir
@@ -41,7 +41,7 @@ src_unpack() {
 		dest=dest
 		build=build
 		version=${PV}
-		classpath=$(java-config -p toolbar)
+		classpath=$(java-pkg_getjars toolbar)
 	EOF
 }
 
@@ -52,7 +52,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar dest/swidgets-${PV}.jar
+	java-pkg_newjar dest/swidgets-${PV}.jar ${PN}.jar
 
 	use source && java-pkg_dosrc org
 }
