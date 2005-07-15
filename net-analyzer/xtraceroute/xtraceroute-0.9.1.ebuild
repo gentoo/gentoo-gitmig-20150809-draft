@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.1.ebuild,v 1.10 2005/07/09 18:28:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.1.ebuild,v 1.11 2005/07/15 10:53:47 george Exp $
 
 DESCRIPTION="neat graphical traceroute displaying route on the globe"
 SRC_URI="http://www.dtek.chalmers.se/~d3august/xt/dl/${P}.tar.gz
@@ -18,7 +18,7 @@ DEPEND="virtual/x11
 	net-analyzer/traceroute
 	<x11-libs/gtkglarea-1.99.0
 	media-libs/gdk-pixbuf
-	net-misc/host"
+	net-dns/host"
 
 src_compile() {
 
