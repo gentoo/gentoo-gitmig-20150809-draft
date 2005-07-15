@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0523b63b5023dbbc79ac6da84789cb7e ChangeLog 862
 MD5 cb84c5bfb09fd7c537e50fa9f891ae7d free-bangla-font-0.2.ebuild 1105
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 d349548cac315a1df2f5cb9934467aeb files/digest-free-bangla-font-0.2 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1+rZj5H05b2HAEkRArjQAJ93DVwaT7E6blnX7nfgfwNAo24MVACaA57B
+AcuoOUSZW1ZfadekB8oDZNs=
+=LyxE
+-----END PGP SIGNATURE-----
