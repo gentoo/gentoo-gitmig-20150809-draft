@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3da17364cbeccf6ef2147f34a869c867 cglib-2.0.2.ebuild 1134
-MD5 bfbfe531ce8394437cfd4321b7419050 cglib-2.0.2-r1.ebuild 1434
+MD5 5042f2b668a3f30252361101f0b1567e cglib-2.0.2.ebuild 1090
+MD5 08f268309694824b43538cb366557dff cglib-2.0.2-r1.ebuild 1406
 MD5 6d68d1265ebe249c78b6dc1fd0d0d4f8 ChangeLog 1108
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 b6f8a58fff30e586496183aa9f0af130 files/digest-cglib-2.0.2 64
 MD5 b6f8a58fff30e586496183aa9f0af130 files/digest-cglib-2.0.2-r1 64
 MD5 a7a4f8f597ccfc2d44762869fa7e983f files/cglib-2.0.2-asm-1.4.3.patch 721
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCc+mj06ebR+OMO78RArByAJ90A98tQFJ0p5/keMl+VOf3/sLRcwCfQ4Rb
-SORAymYDP1WsmVyHNoa2rds=
-=Ef9D
------END PGP SIGNATURE-----
