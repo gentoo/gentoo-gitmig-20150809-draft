@@ -1,0 +1,13 @@
+--- linphone-1.0.1/coreapi/linphonecore.c.orig	2005-07-15 17:49:55.000000000 +0200
++++ linphone-1.0.1/coreapi/linphonecore.c	2005-07-15 17:50:23.000000000 +0200
+@@ -34,9 +34,8 @@
+ #include <arpa/inet.h>
+ #include <time.h>
+ 
+-#ifdef INET6  
++/* once again, the ipv6 include fix - stkn */
+ #include <netdb.h>  
+-#endif
+ 
+ #include "enum.h"
+ 

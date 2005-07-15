@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.0.1.ebuild,v 1.2 2005/07/14 22:02:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.0.1.ebuild,v 1.3 2005/07/15 16:09:23 stkn Exp $
+
+inherit eutils
 
 MY_DPV="${PV%.*}.x"
 
@@ -24,6 +26,14 @@ DEPEND="dev-libs/glib
 		  >=gnome-base/libgnomeui-2
 		  >=x11-libs/gtk+-2 )
 	alsa? 	( media-libs/alsa-lib )"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	# fix #99083
+	epatch ${FILESDIR}/${P}-ipv6-include.diff
+}
 
 src_compile() {
 	local withgnome
