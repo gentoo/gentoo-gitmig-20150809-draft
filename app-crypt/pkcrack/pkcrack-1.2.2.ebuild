@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcrack/pkcrack-1.2.2.ebuild,v 1.1 2005/07/15 15:16:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcrack/pkcrack-1.2.2.ebuild,v 1.2 2005/07/15 16:56:26 swegener Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack.html"
 SRC_URI="http://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack/${P}.tar.gz"
 LICENSE="pkcrack"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="test"
 DEPEND="test? ( app-arch/zip )
 	virtual/libc"
@@ -42,12 +42,12 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Author DEMANDS :-) a postcard be sent to:"
-	einfo ""
+	einfo
 	einfo "    Peter Conrad"
 	einfo "    Am Heckenberg 1"
 	einfo "    56727 Mayen"
 	einfo "    Germany"
-	einfo ""
+	einfo
 	einfo "See: http://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack/pkcrack-readme.html"
 	epause 5
 }
