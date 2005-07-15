@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.8.1.ebuild,v 1.1 2005/06/01 22:49:00 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.8.1.ebuild,v 1.2 2005/07/15 12:30:44 greg_g Exp $
 
 inherit kde
 
@@ -8,12 +8,12 @@ MY_P="${P/_beta/b}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A Latex Editor and TeX shell for kde"
-HOMEPAGE="http://kile.sourceforge.net"
+HOMEPAGE="http://kile.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kile/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT=0
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="kde"
 
 RDEPEND="dev-lang/perl
