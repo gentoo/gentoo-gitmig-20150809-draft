@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/vindaloo
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/vindaloo/ChangeLog,v 1.1 2005/07/15 17:45:51 fafhrd Exp $
+
+*vindaloo-0.1 (15 Jul 2005)
+
+  15 Jul 2005; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +vindaloo-0.1.ebuild:
+  Original package import
+
