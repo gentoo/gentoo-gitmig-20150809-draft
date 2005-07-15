@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.5_pre4.ebuild,v 1.1 2005/07/14 20:57:08 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.5_pre4.ebuild,v 1.2 2005/07/15 09:02:26 dholm Exp $
 
 IUSE="fluidsynth"
 MY_P="fweelin-0.5pre4"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 # don't keyword it stable on amd64 before talking to fvdpol@gentoo.org
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="
 	virtual/libc
