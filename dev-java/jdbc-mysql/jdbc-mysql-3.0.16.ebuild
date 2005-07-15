@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.0.16.ebuild,v 1.1 2005/07/10 18:32:08 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.0.16.ebuild,v 1.2 2005/07/15 13:15:33 gustavoz Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dev.mysql.com/downloads/connector/j/3.0.html"
 SRC_URI="http://mysql.mirrors.key2network.com/Downloads/Connector-J/mysql-connector-java-${PV}-ga.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ~ppc amd64 ~sparc"
 IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.4
