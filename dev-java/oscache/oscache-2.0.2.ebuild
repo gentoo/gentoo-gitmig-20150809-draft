@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2.ebuild,v 1.3 2005/01/20 19:40:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2.ebuild,v 1.4 2005/07/15 18:40:28 axxo Exp $
 
 inherit java-pkg
 
@@ -16,9 +16,9 @@ RDEPEND=">=virtual/jre-1.3
 		=dev-java/servletapi-2.3*
 		dev-java/jms
 		dev-java/jgroups"
-DEPEND="${RDEPEND}
+DEPEND=">=virtual/jdk-1.3
+		${RDEPEND}
 		app-arch/unzip
-		>=virtual/jdk-1.3
 		jikes? ( dev-java/jikes )"
 IUSE="doc jikes"
 
@@ -30,28 +30,28 @@ src_unpack() {
 }
 
 src_compile() {
-	javac_cmd="javac"
+	local javac_cmd="javac"
 	use jikes && javac_cmd="jikes -bootclasspath ${JAVA_HOME}/jre/lib/rt.jar"
 
-	build_dir=${S}/build
-	local classpath="-classpath $(java-config -p commons-logging,commons-collections,servletapi-2.3,jms,jgroups):${build_dir}:."
+	local build_dir=${S}/build
+	local classpath="-classpath $(java-pkg_getjars commons-logging,commons-collections,servletapi-2.3,jms,jgroups):${build_dir}:."
 	mkdir ${build_dir}
 
-	einfo "Building core..."
+	echo "Building core..."
 	cd ${S}/src/core/java
-	${javac_cmd} ${classpath} -nowarn -d ${build_dir} `find -name "*.java"`
+	${javac_cmd} ${classpath} -nowarn -d ${build_dir} $(find -name "*.java") || die
 
-	einfo "Building cluster support plugin..."
+	echo "Building cluster support plugin..."
 	cd ${S}/src/plugins/clustersupport/java
 	find -name "*.java" -exec sed -i -e "s/org.javagroups/org.jgroups/g" {} \;
-	${javac_cmd} ${classpath} -nowarn -d ${build_dir} `find -name "*.java"`
+	${javac_cmd} ${classpath} -nowarn -d ${build_dir} $(find -name "*.java") || die
 
-	einfo "Building disk persistence plugin..."
+	echo "Building disk persistence plugin..."
 	cd ${S}/src/plugins/diskpersistence/java
 	${javac_cmd} ${classpath} -nowarn -d ${build_dir} `find -name "*.java"` || die "compile failed"
 
 	if use doc ; then
-		einfo "Building documentation..."
+		echo "Building documentation..."
 		mkdir ${S}/javadoc
 		cd ${build_dir}
 		local sourcepath="${S}/src/core/java:${S}/src/plugins/diskpersistence/java:${S}/src/plugins/clustersupport/java"
@@ -60,7 +60,6 @@ src_compile() {
 			|| die "failed to create javadoc"
 	fi
 
-	einfo "Building JAR..."
 	cd ${S}
 	jar cf ${PN}.jar -C build .
 }
