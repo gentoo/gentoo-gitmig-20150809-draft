@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.9 2005/05/12 12:15:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.10 2005/07/15 14:09:03 flameeyes Exp $
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  unreal-tournament-451.ebuild:
+  stable on amd64.
 
   12 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   unreal-tournament-436.ebuild, unreal-tournament-451.ebuild:
