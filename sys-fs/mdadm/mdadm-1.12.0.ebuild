@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-1.12.0.ebuild,v 1.1 2005/07/07 23:23:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-1.12.0.ebuild,v 1.2 2005/07/15 03:57:40 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="A useful tool for running RAID systems - it can be used as a replacement for the raidtools"
 HOMEPAGE="http://cgi.cse.unsw.edu.au/~neilb/mdadm"
-SRC_URI="mirror://kernel/utils/raid/mdadm/${P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/utils/raid/mdadm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
