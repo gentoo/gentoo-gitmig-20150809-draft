@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/odmg/odmg-3.0.ebuild,v 1.3 2005/02/13 22:54:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/odmg/odmg-3.0.ebuild,v 1.4 2005/07/15 20:21:08 axxo Exp $
 
 inherit java-pkg
 
@@ -27,7 +27,7 @@ src_unpack() {
 	cd ${S}
 	cp ${FILESDIR}/build-odmg.xml .
 	sed -i -r -e "/import/d" -e "s/EnhancedOQL/OQL/g" \
-		src/java/org/odmg/Implementation.java
+		src/java/org/odmg/Implementation.java || die
 }
 
 src_compile() {
@@ -39,6 +39,6 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/odmg.jar
-	dodoc LICENSE NOTICE
+	dodoc NOTICE
 	use doc && java-pkg_dohtml -r target/javadoc/*
 }
