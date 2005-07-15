@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/com_err
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/ChangeLog,v 1.13 2005/07/14 17:38:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/ChangeLog,v 1.14 2005/07/15 17:51:34 gustavoz Exp $
+
+  15 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> com_err-1.38.ebuild:
+  Stable on sparc
 
   14 Jul 2005; Seemant Kulleen <seemant@gentoo.org> com_err-1.38.ebuild:
   bumping to stable, fixes bug #98303 by WGi <wgi@muenster.de>
