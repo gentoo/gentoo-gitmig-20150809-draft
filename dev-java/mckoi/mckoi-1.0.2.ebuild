@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.2.ebuild,v 1.6 2004/12/21 11:42:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.2.ebuild,v 1.7 2005/07/15 19:16:35 axxo Exp $
 
 inherit java-pkg
 
@@ -11,9 +11,11 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86"
 IUSE="doc"
-DEPEND="=dev-java/gnu-regexp-1.1*
+RDEPEND=">=virtual/jre-1.4
+		=dev-java/gnu-regexp-1.1*"
+DEPEND=">=virtual/jdk-1.4
+		${RDEPEND}
 		app-arch/unzip"
-#RDEPEND=""
 S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
@@ -27,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	javac -classpath src:lib:$(java-config -p gnu-regexp-1) -d lib/ \
+	javac -classpath src:lib:$(java-pkg_getjars gnu-regexp-1) -d lib/ \
 		src/com/mckoi/runtime/McKoiDBMain.java \
 		src/com/mckoi/JDBCDriver.java \
 		src/com/mckoi/database/jdbcserver/DefaultLocalBootable.java \
@@ -35,11 +37,10 @@ src_compile() {
 		src/com/mckoi/database/control/*.java \
 		src/com/mckoi/tools/*.java \
 		src/com/mckoi/database/regexbridge/GNURegex.java || die
-	(
-		cd lib
-		jar cf mckoidb-${PV}.jar com
-	)
-	if (use doc) ; then
+	cd lib
+	jar cf mckoidb.jar com || die "failed too make jar"
+	cd ${S}
+	if use doc; then
 		javadoc \
 			src/com/mckoi/runtime/McKoiDBMain.java \
 			src/com/mckoi/JDBCDriver.java \
@@ -52,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc LICENSE.txt README.txt db.conf
-	java-pkg_dojar lib/mckoidb-${PV}.jar
+	dodoc README.txt db.conf
+	java-pkg_dojar lib/mckoidb.jar
 	use doc && java-pkg_dohtml -r docs
 }
