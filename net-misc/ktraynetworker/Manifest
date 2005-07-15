@@ -1,6 +1,4 @@
-MD5 3a614772f42b5df84d706e3918c5acbd ktraynetworker-0.7.ebuild 681
+MD5 bc5757868e9f06d6048259da3a5918aa metadata.xml 157
 MD5 c3c66fa5a4d5f0de64096ef095f37f29 ktraynetworker-0.8c.ebuild 939
 MD5 e9e39687965b3e379c6423f90234add7 ChangeLog 630
-MD5 bc5757868e9f06d6048259da3a5918aa metadata.xml 157
 MD5 77b602d2d94875ea5de8e1b235f16ce0 files/digest-ktraynetworker-0.8c 153
-MD5 dcd792e90193b4961cbdeeaf13bde03f files/digest-ktraynetworker-0.7 71
