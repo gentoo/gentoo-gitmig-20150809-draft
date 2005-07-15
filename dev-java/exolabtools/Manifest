@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 29a4bca54d2c79f54d7b811f54008929 exolabtools-1.0_p20050205.ebuild 1120
 MD5 96d52058b0809db64e1dfeb653ce68f3 ChangeLog 999
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 8e2b4680eb3eb7e08537642cade5c598 files/digest-exolabtools-1.0_p20050205 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2AYE/rLF9B432nYRAiYsAKCAWVoyEn3ZYg4AmfqVrrH/o2RcTACgsiEt
+gCb7TtWLquaJJ46q3JH0+ss=
+=TB22
+-----END PGP SIGNATURE-----
