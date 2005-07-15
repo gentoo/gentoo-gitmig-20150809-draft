@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4191 2005/07/14 18:27:46 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4192 2005/07/15 07:21:42 greg_g Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -144,10 +144,6 @@ gnome-extra/gnobog
 >=net-analyzer/nessus-core-2.3.0
 >=net-analyzer/nessus-plugins-2.3.0
 >=net-analyzer/nessus-2.3.0
-
-# Gregorio Guidi <greg_g@gentoo.org> (19 Jun 2005)
-# Not available upstream anymore (see bug 92278). Pending removal.
-kde-misc/kcpuload
 
 # Marcelo Goes <vanquirius@gentoo.org (18 Jun 2005)
 # Masked for testing
