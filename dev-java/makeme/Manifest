@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4bfe256be3378e3d76b5df6acb295ab4 makeme-0.02-r2.ebuild 936
 MD5 fae6df78fc3cd7201af0dc4d162618ad ChangeLog 1930
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 42073845f19719593374d19b9e93b70d files/makeme.sh 832
 MD5 ca96d8806318e98767f9637b1720bb11 files/digest-makeme-0.02-r2 62
 MD5 5e4b953bd1a2fdf03070ac9c38a12e90 files/makeme-0.02-r2-gentoo.diff 893
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2CHu/rLF9B432nYRAjZFAKDMvlgGo3tnAGozF3+qV9N1K5FzXwCdFYFb
+Dy7RMEh8K+IyFnW8qTPh+wY=
+=jS/S
+-----END PGP SIGNATURE-----
