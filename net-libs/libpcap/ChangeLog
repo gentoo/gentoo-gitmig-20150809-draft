@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.36 2005/05/06 13:43:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.37 2005/07/15 13:25:00 ka0ttic Exp $
+
+*libpcap-0.9.3 (15 Jul 2005)
+
+  15 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> +libpcap-0.9.3.ebuild:
+  Version bump for bug 99099.
 
   06 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   libpcap-0.8.3-r1.ebuild:
