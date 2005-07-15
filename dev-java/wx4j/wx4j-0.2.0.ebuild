@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wx4j/wx4j-0.2.0.ebuild,v 1.1 2005/04/17 15:32:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wx4j/wx4j-0.2.0.ebuild,v 1.2 2005/07/15 13:27:53 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -13,17 +13,19 @@ SLOT="1"
 KEYWORDS="-amd64 ~x86 ~ppc" #segfaults on amd64
 IUSE="examples gtk2 source"
 
-DEPEND=">=virtual/jdk-1.4
-	gtk2? ( dev-util/pkgconfig )
-	>=dev-java/ant-1.6.2-r6"
 RDEPEND=">=virtual/jre-1.4
-	>=x11-libs/wxGTK-2.4.2-r2
+	=x11-libs/wxGTK-2.4*
 	gtk2? ( >=x11-libs/gtk+-2.0
 		>=x11-libs/pango-1.2
 		>=dev-libs/glib-2.0 )
 	!gtk2? ( =x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2* )
 	>=dev-lang/swig-1.3.21"
+
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	gtk2? ( dev-util/pkgconfig )
+	>=dev-java/ant-1.6.2-r6"
 
 src_unpack() {
 	unpack ${A}

@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e8de1342d5c32114f0335435674e04fb wx4j-0.2.0.ebuild 1278
+MD5 ba9e9c75b38ef28e918c0e6e743b3a51 wx4j-0.2.0.ebuild 1281
 MD5 e95d7d1f38e75953b87dfe4af9fe7d41 ChangeLog 460
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 1eb2e7bb0ca1b9e6c8644243652d077c files/wx4j-0.2.0-build.patch 642
 MD5 bca1747c76e3a9f5bf4c98914efea047 files/digest-wx4j-0.2.0 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCYoGi06ebR+OMO78RAm5YAJ4yfbmCK7F2ZcQVRWWyrzaGqbpJ1QCdEnzy
-1oeiyIMhZdcjDd5YN2m5K5Q=
-=XCRt
+iD8DBQFC17n3/rLF9B432nYRAvtPAJ48NDzSLMDSyYdseMyofjVREC2dOwCfXibc
+8WkzL0Ow+em8QS7SyR2GIC8=
+=Txeg
 -----END PGP SIGNATURE-----
