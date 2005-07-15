@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.28 2005/07/11 15:17:01 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.29 2005/07/15 10:48:10 george Exp $
+
+  15 Jul 2005; George Shapovalov <george@gentoo.org> strongswan-*.ebuild:
+  changed dependency net-misc/host -> net-dns/host to account for package move
 
   11 Jul 2005; Jay Pfeifer <pfeifer@gentoo.org> strongswan-2.4.4.ebuild:
   Mark stable on x86.
