@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 93c1c61a8d308d24a40cc33e79d1fb37 cryptix-asn1-bin-20011119.ebuild 760
+MD5 57e4fea979f91cdc90a1374342a7eb92 cryptix-asn1-bin-20011119.ebuild 721
 MD5 49238a36692e8521a02ea671ee5a2ba5 ChangeLog 555
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 e12a54bb0c509e9473ddb6a5ad883b1b files/digest-cryptix-asn1-bin-20011119 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCdP/T06ebR+OMO78RAlW6AJ9DleeM0WgNIhsMFYBYdi95fHHhwACfTVf+
-Y9fXbgfzTURJj0PtcBTKJzE=
-=9RLs
------END PGP SIGNATURE-----
