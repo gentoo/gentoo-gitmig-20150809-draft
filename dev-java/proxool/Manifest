@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 09d4c06361632571ba7ce18e8e38557d ChangeLog 820
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d303b103d7c2520be3aa7230345c86a6 proxool-0.8.3.ebuild 971
 MD5 477f7231c4a79d0e4e369a66ac0004cb files/digest-proxool-0.8.3 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1/gu/rLF9B432nYRAuzTAJ9ZRM6kVASvym9vSoZUvbP0la/E0ACdGfz3
+7nOiCvMgNtF8xe3teMqabX0=
+=xkUe
+-----END PGP SIGNATURE-----
