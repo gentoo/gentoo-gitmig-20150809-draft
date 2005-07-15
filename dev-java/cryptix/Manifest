@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cd068b95241e9b1926165bc2459798f6 cryptix-3.2.0.ebuild 1103
 MD5 bfa317faca82bf91dbc3be69a437f1ad ChangeLog 605
 MD5 ec34637975de7c59e149725d52afa8b3 metadata.xml 389
 MD5 d20542d18312644d253e3c2349b66942 files/digest-cryptix-3.2.0 75
 MD5 50e231b8e21227a58a4c66ee830ccdbb files/build.xml 427
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1/MF/rLF9B432nYRAstVAJ0TMQewDie0bHm6KGOkKllOtKZ8GACfadFL
+MmyHvCHDr7ICvtkXLO1yPUA=
+=2jQi
+-----END PGP SIGNATURE-----
