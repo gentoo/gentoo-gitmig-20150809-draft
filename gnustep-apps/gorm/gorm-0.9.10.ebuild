@@ -1,22 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-0.9.3_pre20050312.ebuild,v 1.1 2005/03/17 21:07:59 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-0.9.10.ebuild,v 1.1 2005/07/15 18:01:39 fafhrd Exp $
 
-ECVS_CVS_COMMAND="cvs -q"
-ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
-ECVS_USER="anoncvs"
-ECVS_AUTH="ext"
-ECVS_MODULE="gnustep/dev-apps/${PN/g/G}"
-ECVS_CO_OPTS="-P -D ${PV/*_pre}"
-ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-gnustep"
-inherit gnustep cvs
+inherit gnustep
 
-S=${WORKDIR}/${ECVS_MODULE}
+S=${WORKDIR}/${P/g/G}
 
 IUSE="${IUSE} doc"
 DESCRIPTION="Gorm is a clone of the NeXTstep Interface Builder application for GNUstep."
 HOMEPAGE="http://www.gnustep.org/experience/Gorm.html"
+SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/dev-apps/${P/g/G}.tar.gz"
 
 KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
@@ -26,10 +19,11 @@ DEPEND="${GS_DEPEND}
 	doc? ( sys-apps/sed )"
 RDEPEND="${GS_RDEPEND}"
 
-egnustep_install_domain "System"
+egnustep_install_domain "Local"
 
 src_unpack() {
-	cvs_src_unpack
+	unpack ${A}
+	cd ${S}
 	sed -i -e "/DOCUMENT_NAME =.*/a \Gorm_DOC_INSTALL_DIR=Developer/Gorm" \
 		-e "/DOCUMENT_TEXT_NAME =.*/a \ANNOUNCE_DOC_INSTALL_DIR=Developer/Gorm/ReleaseNotes" \
 		-e "/DOCUMENT_TEXT_NAME =.*/a \README_DOC_INSTALL_DIR=Developer/Gorm/ReleaseNotes" \
