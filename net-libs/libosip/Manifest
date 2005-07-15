@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 28f1c7cffd12a5d0759f74918aafc446 libosip-0.9.6.ebuild 778
-MD5 383dd7b9e89de1f3c616acb8f59143a2 libosip-2.2.1.ebuild 903
-MD5 47f2b91416fca0c9dd42b5eb7799148d libosip-0.9.7.ebuild 543
-MD5 d2cb4ff0f6c2063bc610f0ce5e4f67ed ChangeLog 2719
+MD5 ac431a00e6d378b190d682af321e6618 libosip-0.9.6.ebuild 774
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+MD5 ba6341d2dad97a91cea39396b8534fcf ChangeLog 3039
+MD5 c0d8ab00ea6020885db60269c083c77f libosip-2.2.1.ebuild 815
+MD5 bef19142522b953ef2e7488cb01a82e3 libosip-0.9.7.ebuild 543
 MD5 bdae20c3d071939ffd92629f5d3c00f5 files/digest-libosip-0.9.6 65
-MD5 c31b44fd220e0d9aa00d0639d6a9ff9b files/digest-libosip-0.9.7 65
 MD5 5249f8f6a6158f8730e719f07b021acb files/digest-libosip-2.2.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1rNhz7mlh8wQzGMRAkirAJ9LRhPrOA0SK54rLknlIDRiZ7FingCgloLZ
-j/lJv66VwAwlUYUhF061QU4=
-=I6YT
------END PGP SIGNATURE-----
+MD5 c31b44fd220e0d9aa00d0639d6a9ff9b files/digest-libosip-0.9.7 65
