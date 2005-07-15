@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3fb7cc65a4b86d5d9e00267d2af37dce puretls-0.94_beta4.ebuild 1354
+MD5 31a6bba9fa28ad5127e314ecab174f4d puretls-0.94_beta4.ebuild 1360
 MD5 e2e1925e2366f0729bf757fca2604220 ChangeLog 1145
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 43e263db222e5890f2e0729a94f7c380 files/digest-puretls-0.94_beta4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCdQBZ06ebR+OMO78RAn5jAJwMuSGfVyeG290hrd2p2TV3bSzcLQCePiLU
-wDE+RlmB/1HPRYkAZqg0ei0=
-=W2py
------END PGP SIGNATURE-----
