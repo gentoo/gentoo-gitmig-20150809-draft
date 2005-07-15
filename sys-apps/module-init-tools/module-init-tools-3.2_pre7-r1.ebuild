@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r2.ebuild,v 1.16 2005/07/15 09:42:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2_pre7-r1.ebuild,v 1.1 2005/07/15 09:42:17 azarah Exp $
 
-# This ebuild includes backwards compatability for stable 2.4 kernels
-
-inherit flag-o-matic eutils gnuconfig
+inherit flag-o-matic eutils gnuconfig toolchain-funcs
 
 MYP="${P/_pre/-pre}"
 S="${WORKDIR}/${MYP}"
@@ -18,7 +16,7 @@ SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MYP}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 #IUSE="no-old-linux"
 
@@ -51,14 +49,16 @@ src_unpack() {
 	# accept the --assume-kernel=x.x.x option for generating livecds.
 	# This is a companion to a patch in baselayout-1.9.0 which allows
 	# the same flag to modules-update.
-	cd ${S}; epatch ${FILESDIR}/generate-modprobe-assume-kernel.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-3.1_generate-modprobe-assume-kernel.patch
 
 	# Abort if we fail to run modprobe, bug #68689
-	cd ${S}; epatch ${FILESDIR}/${PN}-3.2_pre7-abort-on-modprobe-failure.patch
+	cd ${S}; epatch ${FILESDIR}/${P}-abort-on-modprobe-failure.patch
 
 	cd ${S}
+	# make sure we don't try to regen the manpages
+	touch *.5
+
 	rm -f missing
-	export WANT_AUTOMAKE=1.6
 	automake --add-missing
 
 	cd ${S}
@@ -69,6 +69,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export BUILDCC="$(tc-getBUILD_CC)"
 
 #	if ! use no-old-linux ; then
 		einfo "Building modutils..."
@@ -90,7 +91,10 @@ src_compile() {
 		--prefix=/ \
 		--enable-zlib \
 		|| die "econf failed"
-	emake || die "emake module-init-tools failed"
+
+	# Our zlib.so is in /lib vs /usr/lib so it's safe to link with.
+	# this also fixes text relocations that were showing up in this pkg
+	emake LDADD="-lz" || die "emake module-init-tools failed"
 }
 
 src_install() {

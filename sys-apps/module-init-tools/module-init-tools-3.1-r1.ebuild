@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1-r1.ebuild,v 1.2 2005/07/14 03:11:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1-r1.ebuild,v 1.3 2005/07/15 09:42:17 azarah Exp $
 
 inherit flag-o-matic eutils gnuconfig toolchain-funcs
 
@@ -50,6 +50,9 @@ src_unpack() {
 	# This is a companion to a patch in baselayout-1.9.0 which allows
 	# the same flag to modules-update.
 	cd ${S}; epatch ${FILESDIR}/${PN}-3.1_generate-modprobe-assume-kernel.patch
+
+	# Abort if we fail to run modprobe, bug #68689
+	cd ${S}; epatch ${FILESDIR}/${PN}-3.2_pre7-abort-on-modprobe-failure.patch
 
 	cd ${S}
 	# make sure we don't try to regen the manpages
