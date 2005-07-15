@@ -1,20 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fde1eb8ace7b1556d37f2ec764075984 kmobiletools-0.4.3.1.ebuild 543
-MD5 f3ad95e9653ec65744268a237b4edac2 kmobiletools-0.4.0.ebuild 528
-MD5 bbba2f50fc5dece10fccf395ba823320 kmobiletools-0.4.2.ebuild 534
-MD5 ccdbe9600c6ade799d4b05d457a6ab9b ChangeLog 1432
 MD5 1ac8d8cc2a0fdd0d3aab66d6d48d1cb0 metadata.xml 451
-MD5 bf2777180aacdf98be5e0e347685a868 kmobiletools-0.4.1.ebuild 529
-MD5 397f64c4fa66082c9be34c09235e8b0d files/digest-kmobiletools-0.4.0 71
-MD5 ee486024ea07a16276e7f51ba1f99e84 files/digest-kmobiletools-0.4.1 71
-MD5 2f0e7ccea2f63261c97a532fae6c2571 files/digest-kmobiletools-0.4.2 71
+MD5 ccdbe9600c6ade799d4b05d457a6ab9b ChangeLog 1432
 MD5 72fcd91701a563504359dc4a4d6cf8bf files/digest-kmobiletools-0.4.3.1 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCouaTjiC39V7gKu0RAo6vAJ9fcerEzRbPbyfkOBxRIWjNnhos/ACfRk2x
-EXRuBm5iWl5TqtqsjLhOlRM=
-=hcjJ
------END PGP SIGNATURE-----
