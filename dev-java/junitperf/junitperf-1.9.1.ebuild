@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1.ebuild,v 1.6 2005/07/10 19:20:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1.ebuild,v 1.7 2005/07/15 17:37:17 axxo Exp $
 
 inherit java-pkg
 
@@ -17,10 +17,10 @@ DEPEND=">=virtual/jdk-1.3
 	junit? ( >=dev-java/junit-3.8.1 dev-java/ant )
 	!junit? ( >=dev-java/ant-core-1.4 )
 	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jdk-1.3"
+RDEPEND=">=virtual/jre-1.3"
 
 src_compile() {
-	antflags="jar"
+	local antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use junit && antflags="${antflags} test"
 	ant ${antflags} || die "failed to compile"

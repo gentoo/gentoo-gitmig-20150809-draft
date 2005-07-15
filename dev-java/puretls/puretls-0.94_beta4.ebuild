@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/puretls/puretls-0.94_beta4.ebuild,v 1.7 2005/05/01 16:13:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/puretls/puretls-0.94_beta4.ebuild,v 1.8 2005/07/15 17:32:20 axxo Exp $
 
 inherit java-pkg
 
@@ -11,12 +11,13 @@ LICENSE="puretls"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc jikes source"
-DEPEND=">=virtual/jdk-1.4
+RDEPEND=">=virtual/jre-1.4
 	=dev-java/cryptix-asn1-bin-20011119
-	=dev-java/cryptix-3.2.0
+	=dev-java/cryptix-3.2.0"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
 	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${PN}-0.9b4
 
@@ -38,7 +39,7 @@ src_compile() {
 	ant ${antflags} || die "Unable to compile"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar ${S}/build/${PN}.jar
 
 	dodoc ChangeLog CREDITS INSTALL README
