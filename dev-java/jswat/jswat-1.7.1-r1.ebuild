@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-1.7.1-r1.ebuild,v 1.5 2005/07/13 15:21:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-1.7.1-r1.ebuild,v 1.6 2005/07/15 22:10:03 axxo Exp $
 
 inherit java-pkg
 
@@ -12,21 +12,14 @@ SLOT="1"
 KEYWORDS="x86 sparc ppc"
 DEPEND=">=virtual/jdk-1.3
 	app-arch/unzip"
-RDEPEND=">=virtual/jdk-1.3"
+RDEPEND=">=virtual/jre-1.3"
 IUSE="doc"
 
-src_compile() {
-	einfo " This is a binary (bytecode) only ebuild."
-}
-
-src_install () {
-	# install jswat classes
+src_install() {
 	java-pkg_dojar jswat.jar parser.jar
 
-	# prepare and install jswat script
 	dobin ${FILESDIR}/jswat
 
-	# install documents
 	dodoc AUTHORS.txt BUGS.txt HISTORY.txt LICENSE.txt TODO.txt
 	dohtml README.html
 	use doc && java-pkg_dohtml -r docs
