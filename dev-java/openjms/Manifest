@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 80fd9d4c0af1efc42272d3e7bc4f75c8 openjms-0.7.6.1.ebuild 2263
 MD5 e238a4531bbfc3bee06a8f69722f2b70 ChangeLog 774
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
@@ -7,3 +10,10 @@ MD5 fdae6fd4595f87aba37b3a3674faf490 files/0.7.6.1/conf 21
 MD5 2b897d3922776b256092ce64beb2792c files/0.7.6.1/source.patch.bz2 2628
 MD5 11397a4bdb1b5d7d6a489766a6c58279 files/0.7.6.1/buildfile.patch.bz2 797
 MD5 c515bd2931ce697be23219be4556b62e files/0.7.6.1/10openjms-0.7.6.1 37
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2BUy/rLF9B432nYRAn1nAJ46F+g+dukp2Ev+9AEtKqUQfGUxSwCdG65+
+EvVjGUgzj/APfQojcA3XZf0=
+=vD9X
+-----END PGP SIGNATURE-----
