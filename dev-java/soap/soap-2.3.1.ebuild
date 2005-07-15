@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1.ebuild,v 1.5 2005/05/25 18:43:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1.ebuild,v 1.6 2005/07/15 16:36:07 axxo Exp $
 
 inherit java-pkg
 
@@ -14,14 +14,15 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="doc jikes source"
 
-DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-1.6.0
-	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/sun-javamail-bin
 	dev-java/sun-jaf-bin
 	~dev-java/servletapi-2.4"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	>=dev-java/ant-1.6.0
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -29,7 +30,7 @@ src_compile() {
 	local antflags="compile"
 	use doc && antflags="${antflags} javadocs"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	antflags="${antflags} -lib $(java-config -p xerces-2,sun-javamail-bin,sun-jaf-bin,servletapi-2.4)"
+	antflags="${antflags} -lib $(java-pkg_getjars xerces-2,sun-javamail-bin,sun-jaf-bin,servletapi-2.4)"
 	ant ${antflags} || die "compile failed"
 }
 
