@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/qat-2.7.1-r1.ebuild,v 1.5 2005/05/16 22:26:23 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/qat-2.7.1-r1.ebuild,v 1.6 2005/07/15 17:26:30 axxo Exp $
 
 inherit java-pkg
 
@@ -13,12 +13,14 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ppc amd64"
 IUSE="doc examples jikes"
 
-DEPEND=">=virtual/jdk-1.3
-	app-arch/unzip
-	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3
 	dev-java/jlfgr
 	dev-java/junit"
+
+DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
+	app-arch/unzip
+	jikes? ( dev-java/jikes )"
 
 S=${WORKDIR}
 
@@ -37,8 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	mv build/jar/${PN}-${PV}.jar build/jar/${PN}.jar
-	java-pkg_dojar build/jar/${PN}.jar
+	java-pkg_newjar build/jar/${P}.jar ${PN}.jar
 
 	echo "#!/bin/sh" > ${PN}
 	echo "java -classpath \$(java-config -p qat,junit,jlfgr) QAT" >> ${PN}
