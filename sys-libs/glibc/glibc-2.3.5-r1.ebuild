@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.1 2005/07/15 20:54:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.2 2005/07/15 21:04:52 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -848,7 +848,7 @@ glibc_do_configure() {
 
 	use glibc-omitfp && myconf="${myconf} --enable-omitfp"
 	use profile && myconf="${myconf} --enable-profiling"
-	
+
 	if [ "$1" == "linuxthreads" ] ; then
 		if want_tls ; then
 			myconf="${myconf} --with-tls"
@@ -1104,9 +1104,6 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 		;;
 	esac
 fi
-
-# until amd64's 2004.3 is purged out of existence
-PDEPEND="amd64? ( multilib? ( ~app-emulation/emul-linux-x86-glibc-${PV} ) )"
 
 pkg_setup() {
 	if use nptlonly && ! use nptl ; then
