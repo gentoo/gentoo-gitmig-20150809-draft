@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6f1240b7358d51550b8ba6c4b4bd0ac2 jlfgr-1.0.ebuild 638
+MD5 d27e56776fd607c755ae17022e35acab jlfgr-1.0.ebuild 567
 MD5 a7efbb812985fc8d7152798cd9006aaf ChangeLog 635
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 12a131c53ea77ca695754e2250b1ad11 files/digest-jlfgr-1.0 57
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCehRK06ebR+OMO78RAg5HAJ4wGz8AqSQEb1vPlanFk6TS3RdbsACdGORr
-6N02UJIHHVc77HxHdPnN7LE=
-=gnq6
+iD8DBQFC1/GY/rLF9B432nYRAuIDAJ4sa6+ag2CjRHYLbQ4QMFm24SXBgwCfcFrs
+HUiCE0jn0thyggcFzoklLzo=
+=oCW/
 -----END PGP SIGNATURE-----

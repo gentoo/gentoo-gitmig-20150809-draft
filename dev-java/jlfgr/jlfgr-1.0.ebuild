@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/jlfgr-1.0.ebuild,v 1.6 2005/05/05 12:40:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/jlfgr-1.0.ebuild,v 1.7 2005/07/15 17:25:18 axxo Exp $
 
 inherit java-pkg
 
@@ -17,13 +17,6 @@ DEPEND="app-arch/unzip"
 RDEPEND=""
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	mv jlfgr-1_0.jar ${PN}.jar
-}
-
-src_compile() { :; }
-
 src_install() {
-	java-pkg_dojar ${PN}.jar
+	java-pkg_newjar jlfgr-1_0.jar ${PN}.jar
 }
