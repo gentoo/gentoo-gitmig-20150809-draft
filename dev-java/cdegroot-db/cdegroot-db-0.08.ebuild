@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/cdegroot-db-0.08.ebuild,v 1.7 2005/05/18 11:32:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/cdegroot-db-0.08.ebuild,v 1.8 2005/07/15 18:49:31 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -23,9 +23,9 @@ S=${WORKDIR}/com.${P/-/.}
 
 src_unpack() {
 	unpack ${A}
-	rm -rf ${S}/src/db/test
-
 	cd ${S}
+	rm -rf src/db/test
+
 	cp ${FILESDIR}/build.xml ${S}/build.xml
 	epatch ${FILESDIR}/${P}-gentoo.patch
 }
