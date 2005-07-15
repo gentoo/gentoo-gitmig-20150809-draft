@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/javolution-2.2.4.ebuild,v 1.1 2005/04/16 21:41:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/javolution-2.2.4.ebuild,v 1.2 2005/07/15 22:22:33 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -9,14 +9,14 @@ SRC_URI="http://javolution.org/${P}-src.zip"
 HOMEPAGE="http://javolution.org"
 LICENSE="LGPL-2.1"
 SLOT="2.2.4"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="doc source"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.4
 	app-arch/unzip
 	source? ( app-arch/zip )"
 	#jikes?( >=dev-java/jikes-1.21 )"
-RDEPEND=">=virtual/jdk-1.4"
+RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/javolution-${PV%.*}
 

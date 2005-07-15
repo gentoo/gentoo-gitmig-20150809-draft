@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 576759745ace72c46e2ad3b268e864c3 javolution-2.2.4.ebuild 1105
-MD5 9a42b0dd72a459573481d76fc00f6813 javolution-3.2.4.ebuild 1087
-MD5 954dcffff6870bff71efe763bde60f7a ChangeLog 1057
-MD5 46bf681ff429d8927ec8b3d79c9ba385 javolution-2.2.0.ebuild 1076
+MD5 02ebe26af973eeb1e85eb519ca47e019 javolution-2.2.4.ebuild 1099
+MD5 1d040144bf9e9feab3ea589371cb3999 javolution-3.2.4.ebuild 1081
+MD5 499cb7b59fd8d1d81c19583d1ee3fcfa ChangeLog 1193
+MD5 b78478cf4211c7b13011dcb271dde646 javolution-2.2.0.ebuild 1071
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 006daea0c5cc5edcc45fcccc17f6101b files/digest-javolution-2.2.0 69
 MD5 7e1ab0fb2d84befdc65d1d04a503893a files/digest-javolution-2.2.4 69
 MD5 d9715c64410d14ad1cc01802dff9c108 files/digest-javolution-3.2.4 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCYYaW06ebR+OMO78RAip+AJ9tKDFPBz3dQ87o2lee6oBbGfqA4QCdF0S/
-8ySAa3wpCIU6MrnHIu+4Mgo=
-=nWvM
+iD8DBQFC2Dc1/rLF9B432nYRApyQAKDEDfAlp9lvLtiWk/OU2O72XQi7bQCeLwQs
+AKbDJUBWLwVDB++os35GtOw=
+=LNgn
 -----END PGP SIGNATURE-----
