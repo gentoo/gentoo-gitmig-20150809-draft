@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8081669d73a0167aa1fee82f86a1466 ChangeLog 363
-MD5 5e7dc1e1287f48e6d59858ac6a695851 files/digest-libsrs_alt-1.0_rc1 69
-MD5 e096416016dbc3fe02f2ae959eb936b7 libsrs_alt-1.0_rc1.ebuild 967
+MD5 a961040b8e3dff376fd923fce51178ee ChangeLog 451
+MD5 4f74132113ee5afebab585e2b49312a8 libsrs_alt-1.0_rc1.ebuild 970
 MD5 ae8ed326545606db951ae5e263a3af91 metadata.xml 577
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1utDI1lqEGTUzyQRAkczAKDaAFyybSvMRT5Eu/HqMy34z4SIowCggnez
-Dc05jm0wY8ZQMR/O8B5XhCw=
-=e6x6
------END PGP SIGNATURE-----
+MD5 5e7dc1e1287f48e6d59858ac6a695851 files/digest-libsrs_alt-1.0_rc1 69
