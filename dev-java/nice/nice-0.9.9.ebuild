@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nice/nice-0.9.9.ebuild,v 1.2 2004/12/07 14:51:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nice/nice-0.9.9.ebuild,v 1.3 2005/07/15 20:40:08 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -12,19 +12,21 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RDEPEND=">=virtual/jdk-1.3"
-DEPEND=">=virtual/jre-1.3
+RDEPEND=">=virtual/jre-1.3
 		sys-apps/groff
 		>=dev-java/javacc-3.2"
+DEPEND=">=virtual/jdk-1.3
+		${RDEPEND}"
 NICE="nice-${PV}.orig"
 S="${WORKDIR}/${NICE}"
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}.patch
 	cp bin/nicec bin/nicec-gentoo
-	sed -i 's/NICEC_JAR=.*/NICEC_JAR=`java-config -p nice`/' bin/nicec-gentoo || die "sed failed"
+	sed -i 's/NICEC_JAR=.*/NICEC_JAR=$(java-config -p nice)/' bin/nicec-gentoo || die "sed failed"
 
 	cd ${S}/external
 	java-pkg_jar-from javacc
@@ -37,8 +39,6 @@ src_compile() {
 	./bin/niceunit --man > man/niceunit.1
 	groff -mandoc -Thtml man/nicec.1 > man/nicec.html
 }
-
-src_test() { :; }
 
 src_install() {
 	newbin bin/nicec-gentoo nicec || die "nicec is missing"
