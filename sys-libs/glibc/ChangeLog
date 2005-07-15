@@ -1,6 +1,20 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.359 2005/07/14 07:39:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.360 2005/07/15 20:54:27 eradicator Exp $
+
+*glibc-2.3.5-r1 (15 Jul 2005)
+
+  15 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +glibc-2.3.5-r1.ebuild:
+  Revision bump to address bugs #52374, #82424, and #95351.  Adds support for
+  the 'profile' USE flag which causes profiling glibc libs to be build.  The
+  glibc-omitfp USE flag is now used instead of the !debug flag and CFLAGS
+  checking to determine if we should pass --enable-omitfp to configure.  The
+  glibc-compat20 USE flag has been introduced to enable the glibc-compat
+  addon and force the linuxthreads glibc to be compiled with
+  --without-__thread.  This will allow better support for legacy (and in some
+  cases "broken") binaries to work with this glibc.  If you aren't using such
+  binaries, you're better off not using this USE flag.  See bug #95351.
 
   14 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -files/glibc-2.2.4-string2.h.diff,
