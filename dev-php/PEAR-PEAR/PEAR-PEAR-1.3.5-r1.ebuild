@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.10 2005/07/14 05:08:32 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.11 2005/07/15 05:59:05 sebastian Exp $
 
 ARCHIVE_TAR="1.2"
 CONSOLE_GETOPT="1.2"
@@ -47,7 +47,7 @@ src_install() {
 	addpredict /usr/share/snmp/mibs/.index
 	addpredict /var/lib/net-snmp/
 
-	if has_version "dev-php/PEAR-PEAR"; then
+	if [[ -d "${ROOT}"/usr/bin/pear ]] ; then
 		install_pear_without_bootstrap
 	else
 		bootstrap_pear
@@ -56,10 +56,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "The location of the local PEAR repository has been changed"
-	ewarn "from /usr/lib/php to /usr/share/php."
-	ewarn "If you had a standard setup previously installed PEAR packages"
-	ewarn "have been moved to the new location."
+	if has_version "<${PV}"; then
+		ewarn "The location of the local PEAR repository has been changed"
+		ewarn "from /usr/lib/php to /usr/share/php."
+		ewarn "If you had a standard setup previously installed PEAR packages"
+		ewarn "have been moved to the new location."
+	fi
 }
 
 bootstrap_pear() {
