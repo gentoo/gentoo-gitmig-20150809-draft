@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.35 2005/07/11 01:47:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.36 2005/07/15 09:19:57 dholm Exp $
+
+  15 Jul 2005; David Holm <dholm@gentoo.org> exim-4.50-r2.ebuild:
+  Added to ~ppc.
 
 *exim-4.50-r999 (11 Jul 2005)
 
