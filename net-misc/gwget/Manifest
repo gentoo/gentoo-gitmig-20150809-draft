@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7dad3a4c063279990c526e6a2cde18ff gwget-0.14.ebuild 863
 MD5 2937d78df4fe6f060e4ce978fe796f2f gwget-0.6.ebuild 1139
-MD5 e8e160774cc3ed129b45e7e882640c20 gwget-0.94.ebuild 1194
+MD5 400dd9531662965972187a30f42fb5e3 gwget-0.94.ebuild 1189
 MD5 944787436c98a5f41836a0de5c203f67 ChangeLog 2377
 MD5 2871435fe9d9e7934d0cd7433e03a668 metadata.xml 602
 MD5 1f48614db94467a3d2842b4d8d4be1fc files/digest-gwget-0.6 62
 MD5 9e5678c1bf80bae932e4a8d852ec0d1a files/gwget-0.94-epiphany-path-fix.patch 1546
 MD5 e2185bfe2f306641a8e808ec17d0e643 files/digest-gwget-0.14 62
 MD5 42e6477db803e061dd7312208cad32d2 files/digest-gwget-0.94 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2CoaBXaUFmZvwyMRAm7PAJ0dRaM4ZbSKL3jgACBDVD0+5ckelgCgroTn
+W6rkBy5cpDrj9CBr67pZsdQ=
+=SXiu
+-----END PGP SIGNATURE-----
