@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.12.1.ebuild,v 1.1 2005/07/13 00:02:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.12.1.ebuild,v 1.2 2005/07/15 17:55:50 r3pek Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ IUSE="mozsha1 ppcsha1 doc"
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
 	!dev-util/git
+	!app-misc/git
 	doc? ( app-text/asciidoc app-text/xmlto )"
 
 RDEPEND="net-misc/rsync
