@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-dsssl-stylesheets
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.26 2005/07/12 17:26:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.27 2005/07/15 16:49:17 leonardop Exp $
+
+  15 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  docbook-dsssl-stylesheets-1.79.ebuild:
+  Call sgml-catalog_cat_include() from the global scope again (bug #98680).
 
   12 Jul 2005; Guy Martin <gmsoft@gentoo.org>
   docbook-dsssl-stylesheets-1.79.ebuild:
