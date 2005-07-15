@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/gnomba-0.6.2-r1.ebuild,v 1.5 2005/05/27 19:26:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/gnomba-0.6.2-r1.ebuild,v 1.6 2005/07/15 01:21:48 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
 SLOT="0"
 
-IUSE="debug nls"
+IUSE="debug"
 DEPEND="gnome-base/gnome-libs"
 
 src_compile() {
