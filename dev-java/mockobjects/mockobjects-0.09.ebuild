@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.11 2005/05/04 20:10:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.12 2005/07/15 11:33:47 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -32,6 +32,7 @@ src_unpack() {
 		cd lib
 		java-pkg_jar-from junit
 	fi
+	cd ${S}
 	mkdir -p out/jdk/classes
 }
 
