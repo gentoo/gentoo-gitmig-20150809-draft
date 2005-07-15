@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1314 2005/07/15 18:38:54 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1315 2005/07/15 19:05:17 vivo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -146,6 +146,7 @@ dev-db/mysql:cluster - Add support for NDB clustering.
 dev-db/mysql:extraengine - Add support for alternative storage engines.
 dev-db/mysql:geometry - Add support for geometry data.
 dev-db/mysql:utf8 - Use UTF8 encoding instead of LATIN1.
+dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/pgcluster:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgis:geos - Add the GEOS library for exact topological tests.
 dev-db/postgis:proj - Add the Proj library for reprojection features.
