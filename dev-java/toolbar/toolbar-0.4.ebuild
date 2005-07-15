@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/toolbar-0.4.ebuild,v 1.7 2005/07/15 14:30:09 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/toolbar-0.4.ebuild,v 1.8 2005/07/15 14:34:20 axxo Exp $
 
 inherit java-pkg
 
@@ -21,7 +21,7 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
-	unpack ${A} || die "Unpack failed"
+	unpack ${A}
 
 	# Remove the CVS directories
 	find . -name 'CVS' | xargs rmdir
@@ -43,5 +43,5 @@ src_compile() {
 src_install() {
 	java-pkg_newjar dest/toolbar-${PV}.jar ${PN}.jar
 
-	use source && java-pkg_dosrc src/*
+	use source && java-pkg_dosrc tigris
 }
