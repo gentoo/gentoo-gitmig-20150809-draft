@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.4.ebuild,v 1.1 2005/07/12 02:26:16 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-4.4.ebuild,v 1.2 2005/07/15 16:54:46 leonardop Exp $
 
 inherit sgml-catalog eutils
 
@@ -19,12 +19,10 @@ RDEPEND="app-text/sgml-common"
 
 S=${WORKDIR}
 
-pkg_setup() {
-	sgml-catalog_cat_include "/etc/sgml/sgml-docbook-${PV}.cat" \
-		"/usr/share/sgml/docbook/sgml-dtd-${PV}/catalog"
-	sgml-catalog_cat_include "/etc/sgml/sgml-docbook-${PV}.cat" \
-		"/etc/sgml/sgml-docbook.cat"
-}
+sgml-catalog_cat_include "/etc/sgml/sgml-docbook-${PV}.cat" \
+	"/usr/share/sgml/docbook/sgml-dtd-${PV}/catalog"
+sgml-catalog_cat_include "/etc/sgml/sgml-docbook-${PV}.cat" \
+	"/etc/sgml/sgml-docbook.cat"
 
 src_unpack() {
 	unpack ${A}

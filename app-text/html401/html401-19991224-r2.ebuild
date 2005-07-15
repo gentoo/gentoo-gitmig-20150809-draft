@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/html401-19991224-r2.ebuild,v 1.6 2005/07/10 00:22:29 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/html401-19991224-r2.ebuild,v 1.7 2005/07/15 16:56:07 leonardop Exp $
 
 inherit sgml-catalog eutils
 
@@ -14,10 +14,8 @@ KEYWORDS="~ppc s390 x86"
 IUSE=""
 DEPEND="app-text/sgml-common"
 
-pkg_setup() {
-	sgml-catalog_cat_include "/etc/sgml/${PN}.cat" \
-		"/usr/share/sgml/${PN}/HTML4.cat"
-}
+sgml-catalog_cat_include "/etc/sgml/${PN}.cat" \
+	"/usr/share/sgml/${PN}/HTML4.cat"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.36 2005/07/12 04:00:33 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.37 2005/07/15 17:00:57 leonardop Exp $
+
+  15 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  sgmltools-lite-3.0.3-r9.ebuild:
+  Call sgml-catalog_cat_include() from the global scope again (bug #98680).
 
 *sgmltools-lite-3.0.3-r9 (11 Jul 2005)
 
