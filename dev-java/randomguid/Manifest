@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1e4f3e6bdad7eb514f8931b4c5a43c67 randomguid-1.2.1.ebuild 1537
 MD5 f446ae501677487b988dc7fb51529986 ChangeLog 867
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 b5583f7d6a1cc067f378884eb215cbec randomguid-1.2.1.ebuild 1531
 MD5 a60d43cd2a306df09b970c7c3b69c529 files/digest-randomguid-1.2.1 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1+5t/rLF9B432nYRAueiAJ9Plx0JQTaEowUkuBQXwQAVAM7SxQCgg/mN
+j42htprioa77HtEuOz2DrGg=
+=jU7I
+-----END PGP SIGNATURE-----
