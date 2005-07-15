@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/violinstrings-1.0.2.ebuild,v 1.9 2005/04/22 08:49:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/violinstrings-1.0.2.ebuild,v 1.10 2005/07/15 14:24:36 axxo Exp $
 
 inherit java-pkg
 
@@ -11,9 +11,9 @@ LICENSE="X11"
 SLOT="0"
 KEYWORDS="x86 ~ppc amd64"
 IUSE="jikes doc"
-RDEPEND=">=virtual/jdk-1.4
+DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )"
-DEPEND=">=virtual/jre-1.4"
+RDEPEND=">=virtual/jre-1.4"
 
 src_compile() {
 	local antflags="jar"
@@ -23,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar *.jar
+	java-pkg_newjar ${P}.jar ${PN}.jar
 	dodoc CHANGES
 	use doc && java-pkg_dohtml -r docs/*
 }
