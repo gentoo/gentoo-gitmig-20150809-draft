@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 22d1f596ac7242bca71304cbfb2d530c telnetd-1.0.ebuild 839
-MD5 7218ab1a2ef0d634570ddcaa7693b2ed telnetd-1.0-r1.ebuild 955
+MD5 e9a92de96f8ec68178e4bc9bdd1d80b0 telnetd-1.0-r1.ebuild 969
 MD5 ff81e7cb3ce2a8b916787c43aadc8196 ChangeLog 1304
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 c0973530f5566713608d4abf3b0908ed files/digest-telnetd-1.0-r1 61
-MD5 c0973530f5566713608d4abf3b0908ed files/digest-telnetd-1.0 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCjQpW06ebR+OMO78RAus8AJ0Yz4XRKetHPueIqPf7tko6ipURVgCggnxN
-7mhixxq1i2D/Bu2cHRI/Rl4=
-=neJ7
------END PGP SIGNATURE-----

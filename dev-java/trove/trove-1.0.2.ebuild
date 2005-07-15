@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2.ebuild,v 1.5 2005/07/14 13:12:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2.ebuild,v 1.6 2005/07/15 14:28:53 axxo Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,6 @@ KEYWORDS="x86 amd64 ~ppc"
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant
-	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )"
 IUSE="doc jikes source"
 
@@ -26,8 +25,6 @@ src_unpack() {
 
 src_compile() {
 	mkdir build
-	javac_cmd="javac"
-	use jikes && javac_cmd="jikes -bootclasspath ${JAVA_HOME}/jre/lib/rt.jar"
 
 	cd src
 	javac -nowarn -d ${S}/build $(find -name "*.java") \
