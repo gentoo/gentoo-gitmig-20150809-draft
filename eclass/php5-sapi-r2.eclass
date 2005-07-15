@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.31 2005/07/14 16:20:35 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.32 2005/07/15 05:38:24 sebastian Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -386,7 +386,7 @@ php5-sapi-r2_src_compile() {
 
 	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR}"
 	if [ "$PHPSAPI" == "cli" ]; then
-		my_conf="${my_conf} --with-pear"
+		my_conf="${my_conf} --with-pear=/usr/share/php"
 	else
 		my_conf="${my_conf} --disable-cli --without-pear"
 	fi
