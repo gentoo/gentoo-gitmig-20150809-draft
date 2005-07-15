@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/nuvola
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.8 2005/07/15 14:14:55 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.9 2005/07/15 16:44:50 flameeyes Exp $
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> nuvola-1.0-r1.ebuild:
+  Stable on amd64.
 
   15 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> nuvola-1.0-r1.ebuild:
   Stable on x86.
