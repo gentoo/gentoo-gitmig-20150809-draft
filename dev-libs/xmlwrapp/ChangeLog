@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xmlwrapp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.19 2005/07/12 07:59:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.20 2005/07/15 04:19:29 ka0ttic Exp $
+
+  15 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> -xmlwrapp-0.4.4.ebuild,
+  -xmlwrapp-0.5.0.ebuild:
+  Tidy old ebuilds.
 
   12 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> xmlwrapp-0.5.0-r1.ebuild:
   Added ~sparc.
