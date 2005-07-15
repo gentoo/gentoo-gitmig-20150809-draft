@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.13 2005/05/10 13:12:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.14 2005/07/15 13:23:18 flameeyes Exp $
 
 IUSE=""
 
@@ -10,8 +10,8 @@ MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Console based speech recognition system"
-HOMEPAGE="http://www.kiecza.de/daniel/linux/cvoicecontrol/index.html"
-SRC_URI="http://www.kiecza.de/daniel/linux/${MY_P}.tar.bz2"
+HOMEPAGE="http://www.kiecza.net/daniel/linux/"
+SRC_URI="http://www.kiecza.net/daniel/linux/${MY_P}.tar.bz2"
 
 DEPEND="virtual/libc"
 
