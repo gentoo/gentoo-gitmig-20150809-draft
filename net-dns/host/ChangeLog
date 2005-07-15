@@ -1,0 +1,51 @@
+# ChangeLog for net-misc/host
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/host/ChangeLog,v 1.1 2005/07/15 10:19:20 george Exp $
+
+  15 Jul 2005; George Shapovalov <george@gentoo.org> host-991529.ebuild:
+  moved the package to net-dns from net-misc (#80805)
+  as new "maketest" feature became available for portage, disabled it for this package
+  (causes problems here, see #91515)
+
+  02 Oct 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml:
+  Moved maintainer from ChangeLog to metadata.xml.
+
+  02 Mar 2004; Tom Gall <tgall@gentoo.org> host-991529.ebuild:
+  stable on ppc64
+
+  13 Jan 2004; Chuck Short <zul@gentoo.org> host-991529.ebuild:
+  Marked stable on amd64, closes #37063.
+
+  24 Dec 2003; Chuck Short <zul@gentoo.org> host-991529.ebuild:
+  Added ~amd64 keyword, closes #35854.
+
+  10 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> host-991529.ebuild:
+  remove DEPEND on bind-tools;  The whole point of this ebuild is that it
+  supplies an independent host command; use sed >= 4; more error messages;
+  tidy Prompted by bug 30741
+
+  28 Jun 2003; Tavis Ormandy <taviso@gentoo.org> host-991529.ebuild:
+  stable on alpha
+
+  01 Mar 2003; Brandon Low <lostlogic@gentoo.org> host-991529.ebuild:
+  Switch to emake and make use CC/CXX environment variables
+
+  27 Feb 2003; Guy Martin <gmsoft@gentoo.org> host-991529.ebuild :
+  Added hppa to keywords.
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> host-991529.ebuild :
+  Added stable mips keyword to the ebuild.
+
+  21 Jan 2003; Will Woods <wwoods@gentoo.org> host-991529.ebuild :
+  added ~alpha keyword
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> host-991529.ebuild :
+  changed sparc ~sparc keywords
+
+  06 Jul 2002; phoen][x <phoenix@gentoo.org> host-991529.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
+
+  11 May 2002; G Shapovalov <george@gentoo.org> host-991529.ebuild :
+  initial release
+
+*host-991529 (11 May 2002)
