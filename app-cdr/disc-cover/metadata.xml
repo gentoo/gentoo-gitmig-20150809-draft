@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-    <description>A user ebuild that I felt obliged to include. Please take over if you want 
-it</description>
-</maintainer>
-<maintainer>
-  <email>webapps-unmaintained@gentoo.org</email>
-    <name>Web Applications</name>
-    <description>There is a web application component to this ebuild. If bugs relate to the web application side of 
-it assign to the webapps-unmaintained and cc dragonheart. Thanks.
-    </description>
-</maintainer>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>maintainer-needed@gentoo.org</email>
+  </maintainer>
+  <longdescription>
+    This is the disc-cover CLI only. For the web application,
+    see www-apps/disc-cover. These two packages are tightly
+    bound by the fact that they come from the same source package.
+    That's why the web application ebuild is manually slotted to 0.
+  </longdescription>
 </pkgmetadata>

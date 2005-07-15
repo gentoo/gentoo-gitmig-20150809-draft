@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/disc-cover
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.21 2005/01/01 12:12:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.22 2005/07/15 18:41:42 dju Exp $
+
+*disc-cover-1.5.4-r1 (15 Jul 2005)
+
+  15 Jul 2005; Julien Allanos <dju@gentoo.org> metadata.xml,
+  +disc-cover-1.5.4-r1.ebuild:
+  Updated ebuild to make use of the webapp eclass, fixing bug #61374.
+  This ebuild only provide the disc-cover CLI. Emerge www-apps/disc-cover
+  to get the web interface.
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> disc-cover-1.5.4.ebuild:
   stable on amd64
