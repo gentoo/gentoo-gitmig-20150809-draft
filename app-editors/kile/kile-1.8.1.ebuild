@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.8.1.ebuild,v 1.2 2005/07/15 12:30:44 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.8.1.ebuild,v 1.3 2005/07/15 18:59:14 gustavoz Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/kile/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT=0
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="kde"
 
 RDEPEND="dev-lang/perl
