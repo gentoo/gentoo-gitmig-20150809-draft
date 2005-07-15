@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 28cd97b5fb1560ba68a8f89cbf0117df ChangeLog 20723
+MD5 62d42c0435d8629004f9913c0d559bd8 ChangeLog 20723
 MD5 85bae951b6afcb791e94c005ea0ca85e avifile-0.7.41.20041001-r2.ebuild 4601
 MD5 76b95bd390c69f39e5e7b028b3ff69a5 metadata.xml 272
 MD5 b7d85c26d57a14836a0c667ccba2aa0a avifile-0.7.43.20050224-r1.ebuild 4711
@@ -31,7 +31,7 @@ MD5 6cab3d2acc1d30f101f100f9549613d8 files/avifile-0.7.43.20050224-sdllibs.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2D2dKf2g/qXtneoRAjzQAJ98psIS6zO0wno1Wwnqzfbh/HKqxQCgnQho
-ehM4p1d8zrtxrFFiJLtkWfI=
-=BNBR
+iD8DBQFC2D6eKf2g/qXtneoRAjBDAJ9PIpptT2FPah07M4WqDKH1IHsujQCfSpQq
+xhaG4pao8RaXC5B/qVvh/HE=
+=iswd
 -----END PGP SIGNATURE-----
