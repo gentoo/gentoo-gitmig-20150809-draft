@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.3.0.ebuild,v 1.1 2005/01/21 02:49:24 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.3.0.ebuild,v 1.2 2005/07/15 10:44:27 george Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="!net-misc/strongswan
 	virtual/libc
 	virtual/linux-sources
 	>=dev-libs/gmp-3.1.1
-	net-misc/host
+	net-dns/host
 	sys-apps/iproute2"
 RDEPEND=""
 

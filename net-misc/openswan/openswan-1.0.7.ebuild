@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-1.0.7.ebuild,v 1.4 2005/01/21 02:49:24 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-1.0.7.ebuild,v 1.5 2005/07/15 10:44:27 george Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.openswan.org/code/${MY_P}.tar.gz
 DEPEND="!net-misc/strongswan
 	virtual/libc
 	virtual/linux-sources
-	net-misc/host
+	net-dns/host
 	>=dev-libs/gmp-3.1.1"
 LICENSE="GPL-2"
 RDEPEND=""

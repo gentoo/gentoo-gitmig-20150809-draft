@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.4.1.ebuild,v 1.2 2005/05/10 01:28:42 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.4.1.ebuild,v 1.3 2005/07/15 10:41:17 george Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="!net-misc/openswan
 	ldap? ( =net-nds/openldap-2* )
 	smartcard? ( dev-libs/opensc )
 	>=dev-libs/gmp-3.1.1
-	net-misc/host
+	net-dns/host
 	sys-apps/iproute2"
 RDEPEND=""
 
