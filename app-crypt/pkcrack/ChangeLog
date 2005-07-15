@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/pkcrack
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcrack/ChangeLog,v 1.1 2005/07/15 15:16:26 dragonheart Exp $
+
+*pkcrack-1.2.2 (15 Jul 2005)
+
+  15 Jul 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +pkcrack-1.2.2.ebuild:
+  initial import
+

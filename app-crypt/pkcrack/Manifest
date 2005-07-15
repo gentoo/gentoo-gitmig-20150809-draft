@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cb46fe85d0275204b282f2e3c811cd88 pkcrack-1.2.2.ebuild 1257
+MD5 9c45f6a8bc141e118261d128d895d337 metadata.xml 293
+MD5 7956ef6400580290ebac9d8a16757419 ChangeLog 353
+MD5 a7516ee7cacf204c68e7480dfda6c114 files/digest-pkcrack-1.2.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC19NkmdTrptrqvGERAsitAJ9MmQCR98Ob/kR8L6CFL5/b+hRmogCfdET/
+bAAeI8CiM2QjVkLn3G3Jia0=
+=YFm+
+-----END PGP SIGNATURE-----
