@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-isbn
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-isbn/ChangeLog,v 1.1 2005/07/15 15:14:07 mkennedy Exp $
+
+*cl-isbn-0.1 (15 Jul 2005)
+
+  15 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-isbn-0.1.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
