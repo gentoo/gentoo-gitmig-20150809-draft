@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.ebuild,v 1.10 2005/05/05 23:00:14 swegener Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.ebuild,v 1.11 2005/07/15 00:15:19 swegener Exp $
 
 MDK_EXTRAVERSION="2mdk"
 
@@ -21,28 +19,26 @@ DEPEND="app-arch/rpm2targz
 	=x11-libs/gtk+-1.2*
 	>=kde-base/kdebase-3.1"
 
+S="${WORKDIR}"/galaxy-${PV}
+
 src_unpack() {
-		cd ${WORKDIR}
-		rpm2targz ${DISTDIR}/${A}
-		tar xz --no-same-owner -f galaxy-${PV}-${MDK_EXTRAVERSION}.src.tar.gz
-		tar xj --no-same-owner -f galaxy-${PV}.tar.bz2
+	rpm2targz ${DISTDIR}/${A}
+	tar xz --no-same-owner -f galaxy-${PV}-${MDK_EXTRAVERSION}.src.tar.gz
+	tar xj --no-same-owner -f galaxy-${PV}.tar.bz2
 }
 
 src_compile() {
-		cd ${WORKDIR}/galaxy-${PV}
-		make distclean
-		KDE_PLACE_TO_INSTALL=$(echo $KDEDIR | cut -d/ -f4)
-		mv thememdk/mandrake_client/Makefile.in thememdk/mandrake_client/Makefile.in.orig
-		cat thememdk/mandrake_client/Makefile.in.orig | sed s:\$\{libdir\}\/kwin.la:/usr/kde/$KDE_PLACE_TO_INSTALL/lib/kwin.la:g > thememdk/mandrake_client/Makefile.in
-		rm thememdk/mandrake_client/Makefile.in.orig
-		econf --with-qt-dir=/usr/qt/3 || die "econf failed"
-		emake || die
+	make distclean
+	KDE_PLACE_TO_INSTALL=$(echo $KDEDIR | cut -d/ -f4)
+	mv thememdk/mandrake_client/Makefile.in thememdk/mandrake_client/Makefile.in.orig
+	cat thememdk/mandrake_client/Makefile.in.orig | sed s:\$\{libdir\}\/kwin.la:/usr/kde/$KDE_PLACE_TO_INSTALL/lib/kwin.la:g > thememdk/mandrake_client/Makefile.in
+	rm thememdk/mandrake_client/Makefile.in.orig
+	econf --with-qt-dir=/usr/qt/3 || die "econf failed"
+	emake || die
 }
 
 src_install () {
-		cd ${WORKDIR}/galaxy-${PV}
-		einstall || die
+	einstall || die
 
-		cd ${WORKDIR}/galaxy-${PV}
-		dodoc AUTHORS COPYING README ChangeLog
+	dodoc AUTHORS COPYING README ChangeLog
 }

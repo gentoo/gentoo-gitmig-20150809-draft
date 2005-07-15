@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-1.0.0.ebuild,v 1.5 2005/05/05 23:00:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-1.0.0.ebuild,v 1.6 2005/07/15 00:15:19 swegener Exp $
 
 inherit eutils kde-functions kde
 
@@ -22,18 +22,18 @@ DEPEND="app-arch/rpm2targz
 	=x11-libs/gtk+-1.2*
 	kde? ( >=kde-base/kdebase-3.1 )"
 
+S="${WORKDIR}"/galaxy-${PV}
+
 src_unpack() {
 	rpm2targz ${DISTDIR}/${A}
 	tar xz --no-same-owner -f galaxy-${PV}-${MDK_EXTRAVERSION}.src.tar.gz
 	tar xj --no-same-owner -f galaxy-${PV}.tar.bz2
+
+	cd "${S}"
+	epatch ${FILESDIR}/galaxy-gtk24.patch
 }
 
 src_compile() {
-	cd ${WORKDIR}/galaxy-${PV}
-	#make distclean
-
-	epatch ${FILESDIR}/galaxy-gtk24.patch
-
 	if use kde; then
 		KDE_PLACE_TO_INSTALL=$(echo $KDEDIR | cut -d/ -f4)
 		mv thememdk/mandrake_client/Makefile.in thememdk/mandrake_client/Makefile.in.orig
@@ -56,7 +56,6 @@ src_compile() {
 }
 
 src_install () {
-	cd ${WORKDIR}/galaxy-${PV}
 	einstall || die
 	dodoc AUTHORS COPYING README ChangeLog
 }

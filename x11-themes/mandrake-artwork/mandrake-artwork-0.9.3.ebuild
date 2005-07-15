@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.3.ebuild,v 1.9 2005/05/05 23:00:14 swegener Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-0.9.3.ebuild,v 1.10 2005/07/15 00:15:19 swegener Exp $
 
 MDK_EXTRAVERSION="1mdk"
 
@@ -14,6 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~alpha"
 IUSE="kde"
+
+S="${WORKDIR}"/galaxy-${PV}
 
 # Needed to build...
 DEPEND="app-arch/rpm2targz
@@ -29,9 +29,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${WORKDIR}/galaxy-${PV}
-	#make distclean
-
 	if use kde; then
 		KDE_PLACE_TO_INSTALL=$(echo $KDEDIR | cut -d/ -f4)
 		mv thememdk/mandrake_client/Makefile.in thememdk/mandrake_client/Makefile.in.orig
@@ -51,7 +48,6 @@ src_compile() {
 }
 
 src_install () {
-	cd ${WORKDIR}/galaxy-${PV}
 	einstall || die
 	dodoc AUTHORS COPYING README ChangeLog
 }
