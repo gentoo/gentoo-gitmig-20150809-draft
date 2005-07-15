@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix/cryptix-3.2.0.ebuild,v 1.4 2005/06/09 00:52:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix/cryptix-3.2.0.ebuild,v 1.5 2005/07/15 17:31:24 axxo Exp $
 
 inherit java-pkg
 
@@ -30,9 +30,9 @@ src_unpack() {
 }
 
 src_compile() {
-	antflags="jar"
+	local antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	ant ${antflags}
+	ant ${antflags} || die "failed too build"
 }
 
 src_install() {
