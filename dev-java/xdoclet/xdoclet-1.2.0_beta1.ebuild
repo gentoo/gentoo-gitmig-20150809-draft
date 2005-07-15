@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.0_beta1.ebuild,v 1.11 2005/04/03 03:59:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.0_beta1.ebuild,v 1.12 2005/07/15 12:02:38 axxo Exp $
 
 inherit java-pkg
 
@@ -22,9 +22,7 @@ S=${WORKDIR}/
 src_unpack() {
 	unpack ${A}
 	if use jikes ; then
-		einfo "Configuring build for Jikes"
-		cp build.properties build.properties~ \
-			&& sed -e 's/compiler = modern/compiler = jikes/' <build.properties~ >build.properties
+		sed -e 's/compiler = modern/compiler = jikes/' -i build.properties
 	fi
 }
 
@@ -34,6 +32,5 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar target/lib/*.jar
-	dodoc LICENSE.txt
 	cp -r target/docs target/generated-xdocs samples ${D}/usr/share/doc/${P}
 }
