@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.10.2.ebuild,v 1.7 2005/05/29 22:53:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.10.2.ebuild,v 1.8 2005/07/15 23:33:48 george Exp $
 
 IUSE=""
 
@@ -11,6 +11,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
+
+RESTRICT="maketest"
 
 DEPEND="app-doc/doxygen
 	media-gfx/graphviz"

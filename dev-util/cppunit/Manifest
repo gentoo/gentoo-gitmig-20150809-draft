@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2088e693ce5dc24d9d17c07ab0abe304 cppunit-1.8.0.ebuild 915
-MD5 91c81ce310e163df8609bb6d8852476c cppunit-1.10.2.ebuild 913
+MD5 d95a4f0c195c9d10afc2755c16dff014 cppunit-1.10.2.ebuild 935
 MD5 e8ec012041dd43590a9ff9becfe18a5b ChangeLog 1481
 MD5 c4c708e3dc384f836a21bfea63ae3288 metadata.xml 162
 MD5 2f66c625e1f7de63458cfb987e9b0d9d files/digest-cppunit-1.10.2 66
 MD5 b71249733f097340c7893dfdc0538885 files/digest-cppunit-1.8.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmkgRntT9W3vfTuoRAmYiAKCOvFvjZqBhvOIbmCGHEMlh5frhBACghdST
-/gvzo55zpUoucSL7yyiPJbU=
-=pQaB
------END PGP SIGNATURE-----
