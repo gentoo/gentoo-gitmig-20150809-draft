@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/tengwar-fonts
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/tengwar-fonts/ChangeLog,v 1.5 2004/12/14 16:54:01 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/tengwar-fonts/ChangeLog,v 1.6 2005/07/15 18:36:32 flameeyes Exp $
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  tengwar-fonts-1.9d.ebuild:
+  Added ~amd64.
 
   14 Dec 2004; Markus Rothe <corsair@gentoo.org> tengwar-fonts-1.9d.ebuild:
   Stable on ppc64
