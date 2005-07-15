@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/jscience-1.0.4.ebuild,v 1.2 2005/06/09 00:50:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/jscience-1.0.4.ebuild,v 1.3 2005/07/15 22:26:07 axxo Exp $
 
 inherit java-pkg
 
@@ -9,15 +9,16 @@ SRC_URI="http://jscience.org/${P}-src.zip"
 HOMEPAGE="http://jscience.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="doc jikes source"
+RDEPEND=">=virtual/jdk-1.3
+	~dev-java/javolution-2.2.4"
 DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
 	>=dev-java/ant-core-1.4
 	app-arch/unzip
 	jikes? ( >=dev-java/jikes-1.21 )
 	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jdk-1.3
-	~dev-java/javolution-2.2.4"
 
 S=${WORKDIR}/jscience-${PV%.*}
 

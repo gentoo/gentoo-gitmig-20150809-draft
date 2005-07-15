@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7293a2b6d1b5e0f7fd51f750d3735dcd jscience-1.0.4.ebuild 1140
 MD5 a346120d0edc8faba99ba5e0248e90f6 ChangeLog 864
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 da229ccef72ffdfd69fdc6eebdbe4d20 jscience-1.0.3.ebuild 1136
 MD5 d0072fb2be1b4b15dce54241d96b3829 files/digest-jscience-1.0.3 67
 MD5 33275f3418d3c3be7c6c67e761db9f0c files/digest-jscience-1.0.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2DgL/rLF9B432nYRAgXHAJ9bWXvQJ5jGeO+gYhypjTvKx3dXrwCePggn
+BNi4wlZbSS+kGs2+8C43QLs=
+=7zCJ
+-----END PGP SIGNATURE-----
