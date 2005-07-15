@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/middleman/middleman-2.0.1.ebuild,v 1.2 2005/07/14 23:30:06 agriffis Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/middleman/middleman-2.0.1.ebuild,v 1.3 2005/07/15 00:02:47 swegener Exp $
 
 DESCRIPTION="Advanced HTTP/1.1 proxy server with features designed to increase privacy and remove unwanted content"
 SRC_URI="mirror://sourceforge/middle-man/${P}.tar.gz"
@@ -13,51 +11,28 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="pam zlib"
 
-#S=${WORKDIR}/
-
 DEPEND="virtual/libc
 	dev-libs/libpcre
-	 pam? (	sys-libs/pam )
-	zlib? (	sys-libs/zlib )
-"
-
-src_unpack() {
-	unpack ${A}
-	[ -f ${FILESDIR}/${P}-gentoo.diff ] && epatch ${FILESDIR}/${P}-gentoo.diff
-	cd ${S}
-	#if [ "$PV" = "1.9" ]; then
-	#	einfo "Patching Makefile.in to avoid sandbox problems"
-	#	sed -i -e s:"INSTALL) -d /var":"INSTALL) -d \$(DESTDIR)/var":g Makefile.in
-	#fi
-}
+	pam? ( sys-libs/pam )
+	zlib? (	sys-libs/zlib )"
 
 src_compile() {
-	local myconf=""
-	MAKEOPTS="-j1"
-
-	cd ${S}
-	for opt in ${IUSE}; do
-		use ${opt} &&
-			myconf="${myconf} --enable-${opt}" ||
-			myconf="$myconf --disable-${opt}"
-	done
-
-	econf --sysconfdir=/etc/mman ${myconf} || die "econf failed: ${myconf}"
-	emake || die "emake failed"
+	econf \
+		--sysconfdir=/etc/mman \
+		$(use_enable pam) \
+		$(use_enable zlib) \
+		|| die "econf failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	cd ${S}
-	# mkdir -p ${D}/usr/share/man/man8/
 	make DESTDIR="${D}" install || die "einstall failed"
 
 	dodoc CHANGELOG COPYING
 	dohtml README.html
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/conf.d/mman mman
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/init.d/mman mman
+	newconfd "${FILESDIR}"/conf.d/mman mman
+	newinitd "${FILESDIR}"/init.d/mman mman
 }
 
 #pkg_preinst() {
