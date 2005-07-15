@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.22 2005/07/13 15:16:04 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.23 2005/07/15 21:37:10 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -49,7 +49,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 LICENSE="LGPL-2"
 
-IUSE="nls pic build nptl nptlonly erandom hardened debug userlocales multilib selinux"
+IUSE="nls pic build nptl nptlonly erandom hardened userlocales multilib selinux glibc-compat20 glibc-omitfp profile"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -207,13 +207,6 @@ toolchain-glibc_src_unpack() {
 		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
 	fi
 
-	# XXX: do not package ssp up into tarballs, leave it in FILESDIR
-	cd "${S}"
-	cp "${FILESDIR}"/2.3.5/ssp.c sysdeps/unix/sysv/linux/ || die "could not find ssp.c"
-	rm -f "${WORKDIR}"/patches/2*
-	epatch "${FILESDIR}"/2.3.3/glibc-2.3.2-propolice-guard-functions-v3.patch
-	epatch "${FILESDIR}"/2.3.3/glibc-2.3.3-frandom-detect.patch
-
 	if [[ -n ${PATCH_VER} ]] ; then
 		cd "${S}"
 		EPATCH_MULTI_MSG="Applying Gentoo Glibc Patchset ${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-${PATCH_VER} ..." \
@@ -227,10 +220,6 @@ toolchain-glibc_src_unpack() {
 toolchain-glibc_src_compile() {
 	# Set gconvdir to /usr/$(get_libdir)/gconv on archs with multiple ABIs
 	has_multilib_profile && MAKEFLAGS="gconvdir=$(alt_usrlibdir)/gconv"
-
-	# -fomit-frame-pointer gets stripped in setup_flags, so we do this
-	# now to cache the value
-	want_omitfp
 
 	if want_linuxthreads ; then
 		glibc_do_configure linuxthreads
@@ -814,30 +803,6 @@ want__thread() {
 	return ${WANT__THREAD}
 }
 
-# Under what conditions should we optimize glibc with --enable-omitfp.
-# We strip -fomit-frame-pointer from CFLAGS and let the build system decide
-# where it's safe to use
-want_omitfp() {
-	[[ -n ${WANT_OMITFP} ]] && return ${WANT_OMITFP}
-
-	WANT_OMITFP=1
-	if is-flag -fomit-frame-pointer && ! use debug; then
-		case $(tc-arch) in
-			x86)
-				case ${CTARGET/-*} in
-					i386|i486|i586)	WANT_OMITFP=1 ;;
-					*) WANT_OMITFP=0 ;;
-				esac
-			;;
-			*)
-				WANT_OMITFP=0
-			;;
-		esac
-	fi
-
-	return ${WANT_OMITFP}
-}
-
 install_locales() {
 	unset LANGUAGE LANG LC_ALL
 	cd ${WORKDIR}/${MYMAINBUILDDIR} || die "${WORKDIR}/${MYMAINBUILDDIR}"
@@ -883,18 +848,20 @@ glibc_do_configure() {
 	# set addons
 	pushd ${S} > /dev/null
 	ADDONS=$(echo */configure | sed -e 's!/configure!!g;s!\(linuxthreads\|nptl\|rtkaio\|glibc-compat\)\( \|$\)!!g;s! \+$!!;s! !,!g;s!^!,!;/^,\*$/d')
+	use glibc-compat20 && [[ -d glibc-compat ]] && ADDONS="${ADDONS},glibc-compat"
 	popd > /dev/null
 
 	use nls || myconf="${myconf} --disable-nls"
 	use erandom || myconf="${myconf} --disable-dev-erandom"
 
-	want_omitfp && myconf="${myconf} --enable-omitfp"
+	use glibc-omitfp && myconf="${myconf} --enable-omitfp"
+	use profile && myconf="${myconf} --enable-profiling"
 
 	if [ "$1" == "linuxthreads" ] ; then
 		if want_tls ; then
 			myconf="${myconf} --with-tls"
 
-			if want__thread ; then
+			if want__thread && ! use glibc-compat20 ; then
 				myconf="${myconf} --with-__thread"
 			else
 				myconf="${myconf} --without-__thread"
@@ -1201,6 +1168,13 @@ src_unpack() {
 	esac
 
 	toolchain-glibc_src_unpack
+
+	# XXX: do not package ssp up into tarballs, leave it in FILESDIR
+	cd "${S}"
+	cp "${FILESDIR}"/2.3.5/ssp.c sysdeps/unix/sysv/linux/ || die "could not find ssp.c"
+	rm -f "${WORKDIR}"/patches/2*
+	epatch "${FILESDIR}"/2.3.5/glibc-2.3.5-propolice-guard-functions.patch
+	epatch "${FILESDIR}"/2.3.5/glibc-2.3.5-frandom-detect.patch
 
 	case $(tc-arch) in
 		alpha)
