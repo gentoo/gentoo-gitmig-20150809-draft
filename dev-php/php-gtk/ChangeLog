@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/php-gtk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/ChangeLog,v 1.7 2005/05/06 08:39:41 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/ChangeLog,v 1.8 2005/07/15 20:31:26 sebastian Exp $
+
+*php-gtk-1.0.2 (15 Jul 2005)
+
+  15 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -php-gtk-1.0.0.ebuild, -php-gtk-1.0.1.ebuild, +php-gtk-1.0.2.ebuild:
+  Version bump.
 
 *php-gtk-1.0.1 (06 May 2005)
 
