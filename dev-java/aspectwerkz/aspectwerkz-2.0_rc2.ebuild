@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2.ebuild,v 1.4 2005/07/15 17:48:07 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2.ebuild,v 1.5 2005/07/15 18:04:56 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -36,8 +36,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
+	find . -name '*.jar' -exec rm {} \; || die
 	cd ${S}/lib
-	rm *.jar
+	#rm *.jar
 	java-pkg_jar-from asm-1.5
 	java-pkg_jar-from bcel
 	java-pkg_jar-from concurrent-util
