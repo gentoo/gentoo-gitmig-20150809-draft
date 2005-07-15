@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.3.1.ebuild,v 1.6 2005/04/21 18:48:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.3.1.ebuild,v 1.7 2005/07/15 13:40:08 axxo Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ IUSE="doc jikes"
 KEYWORDS="x86 ~sparc ppc amd64"
 
 DEPEND=">=virtual/jdk-1.4
-	 >=dev-java/ant-1.5.4
+	 dev-java/ant-core
 	 jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
 
@@ -27,8 +27,7 @@ src_compile() {
 }
 
 src_install() {
-	mv ${P}.jar ${PN}.jar
-	java-pkg_dojar ${PN}.jar
+	java-pkg_newjar ${P}.jar ${PN}.jar
 	use doc && java-pkg_dohtml -r docs/*
 	dodoc CHANGES README
 }
