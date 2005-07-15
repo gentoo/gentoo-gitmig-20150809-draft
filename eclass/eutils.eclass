@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.191 2005/07/13 19:15:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.192 2005/07/15 22:16:49 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -730,7 +730,7 @@ edos2unix() {
 #			this can be relative (to /usr/share/pixmaps) or
 #			a full path to an icon
 # type:		what kind of application is this ?  for categories:
-#			http://www.freedesktop.org/wiki/Standards_2fmenu_2dspec
+#			http://www.freedesktop.org/Standards/desktop-entry-spec
 # path:		if your app needs to startup in a specific dir
 make_desktop_entry() {
 	[[ -z $1 ]] && eerror "make_desktop_entry: You must specify the executable" && return 1
@@ -766,8 +766,6 @@ make_desktop_entry() {
 				;;
 
 			games)
-				[[ -z ${path} ]] && path=${GAMES_BINDIR}
-
 				case ${catmin} in
 					action)     type=ActionGame;;
 					arcade)     type=ArcadeGame;;
@@ -1329,8 +1327,8 @@ cdrom_load_next_cd() {
 # (2) the user hits CTRL+C
 cdrom_locate_file_on_cd() {
 	while [[ -z ${CDROM_ROOT} ]] ; do
-		local dir="$(dirname ${@})"
-		local file="$(basename ${@})"
+		local dir=$(dirname "$*")
+		local file=$(basename "$*")
 		local mline=""
 		local showedmsg=0
 
