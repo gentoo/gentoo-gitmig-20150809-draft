@@ -1,0 +1,12 @@
+diff -urNad viewglob-2.0.2/common/x11-stuff.c viewglob-2.0.2_fixed/common/x11-stuff.c
+--- viewglob-2.0.2/common/x11-stuff.c	2005-05-05 17:21:23.000000000 -0400
++++ viewglob-2.0.2_fixed/common/x11-stuff.c	2005-07-14 19:22:56.000000000 -0400
+@@ -267,7 +267,7 @@
+ 		if ( (client_list = get_client_list(disp, &client_list_size)) == NULL)
+ 			return 0;
+ 
+-		for (j = 0; j < client_list_size / 4; j++) {
++		for (j = 0; j < client_list_size / sizeof(Window); j++) {
+ 			gchar* window_title = get_window_title(disp, client_list[j]);
+ 			/* title can appear anywhere in the window's title. */
+ 			if (window_title && strstr(window_title, title))
