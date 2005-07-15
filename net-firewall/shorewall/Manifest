@@ -5,7 +5,7 @@ MD5 f0fd2bf75f451107ad8e34202e06061a shorewall-2.2.0_rc5.ebuild 2390
 MD5 ad0387886c40902b6858c8bf82210c16 shorewall-2.0.7.ebuild 1872
 MD5 bfb451784c14bcb640cdd7fbcf986081 shorewall-2.2.3.ebuild 2242
 MD5 64e09120a596516712c34342a1420bb4 shorewall-2.2.0.ebuild 2246
-MD5 42b976b81858eec889d8f6ff4dac20bd shorewall-2.4.1.ebuild 2251
+MD5 177a4a1f893a5abf9c252ac6bab80062 shorewall-2.4.1.ebuild 2252
 MD5 fd7a8869be5c3b7315f5334409377c6e shorewall-2.0.13.ebuild 1877
 MD5 8010fd484ffe30192dcdd7c458e00a82 ChangeLog 10240
 MD5 e86ce27deb7eabac5c4cb909cde5b138 shorewall-2.2.4.ebuild 2250
@@ -23,7 +23,7 @@ MD5 886a46dd1ca55990686be5bf42b776de files/shorewall 1041
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1yXgEZCkKN40op4RAtkYAKCIywrMuWhQKb6iDIc8GUZkCmRfwQCfSOpT
-HB2qCBoTqHeGeSmXC85+4Wg=
-=9ZCO
+iD8DBQFC1yYYEZCkKN40op4RAq2hAKCxeWc2sNUPxZxQx7T23XrqlidJQgCfYueq
+je3Evdb47cIhPZwAECQJATw=
+=j00P
 -----END PGP SIGNATURE-----
