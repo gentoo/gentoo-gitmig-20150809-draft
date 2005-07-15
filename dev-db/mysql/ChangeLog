@@ -1,8 +1,8 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.202 2005/07/13 07:59:47 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.203 2005/07/15 13:07:03 vivo Exp $
 
-  13 Jul 2005; portage <portage@gentoo.org> mysql-4.1.12.ebuild:
+  13 Jul 2005; portage <vivo@gentoo.org> mysql-4.1.12.ebuild:
   Fix permissions, see bug #95320
 
   17 May 2005; Markus Rothe <corsair@gentoo.org> mysql-4.1.12.ebuild:
