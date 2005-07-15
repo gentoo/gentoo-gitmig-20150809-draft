@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0ae88a0eb5096504adc451ff9d76e9cb lucene-1.4.1.ebuild 1179
+MD5 d8d2ca7642c62102d493f0ee7534da07 lucene-1.4.1.ebuild 1121
 MD5 13d9fe2045a2d004b01fbde2ccaa698e ChangeLog 1903
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 4fdbc4ba2c58937fae943f0efc7f411b lucene-1.4.3.ebuild 1173
+MD5 387822bd4a8c9432c0278a7433117a2a lucene-1.4.3.ebuild 1155
 MD5 84b227f88b109a09a80f28cdc619bebc files/digest-lucene-1.4.1 68
 MD5 cbf4009f520eea7048444d3c15497b21 files/digest-lucene-1.4.3 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0YaaBXaUFmZvwyMRAmM8AKCazvI1GN4I/ltSC5MaXy0t+MPaaACeObKJ
-RHb0P0fRkc8amMRzfJrNzvs=
-=DAfd
+iD8DBQFC2Cai/rLF9B432nYRAkctAKCRSNcM8aTxIz9CRzxTfup4uC9n6QCgl+6D
+PJu0s0FeeM60APzKC4lyEGA=
+=Yo4o
 -----END PGP SIGNATURE-----
