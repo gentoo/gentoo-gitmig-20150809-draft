@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d3c33ecba9eda9bb89c68d502a417116 ChangeLog 727
-MD5 1d4702bd32af915f31b4c18129bb6d04 intlfonts-1.2.1.ebuild 889
+MD5 51d4588fdb77dbd53eedb254044478d1 ChangeLog 828
+MD5 259b56782bb29505ec47e9de55ee91a5 intlfonts-1.2.1.ebuild 892
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 b81591a58577a4d0ea391884198b7dce files/digest-intlfonts-1.2.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBWlIHVWNWqTUmv+0RAm+xAJ9BWsD8w+CKGzat44n3qdhAsvQO+ACbB6ni
-egDgn5DBcYUWH05nzYCxW9o=
-=7HEG
------END PGP SIGNATURE-----

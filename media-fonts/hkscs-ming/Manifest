@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8762c4a6211ecc260e0d08a84a8673e9 ChangeLog 883
-MD5 b66bf4237a488e7a47d627d47d5ceb7f files/digest-hkscs-ming-1.0_pre20030919-r1 56
+MD5 2c01351eea6f5b36a744a5ec5b8250cb ChangeLog 971
 MD5 57077e02bea33571e7fd8de743c93f9f hkscs-ming-1.0_pre20030919-r1.ebuild 1448
 MD5 b1119d84c7a4c3535572b94ec508e907 metadata.xml 215
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0BSxI1lqEGTUzyQRAq9WAJ9tNqhg351FeQqNJexsiY2OBo1NqACcDbSI
-6vZwWaMudxtRlLtNwaCpzsw=
-=M5/g
------END PGP SIGNATURE-----
+MD5 b66bf4237a488e7a47d627d47d5ceb7f files/digest-hkscs-ming-1.0_pre20030919-r1 56
