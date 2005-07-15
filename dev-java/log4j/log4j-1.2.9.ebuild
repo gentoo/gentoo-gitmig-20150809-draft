@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.9.ebuild,v 1.10 2005/07/09 16:07:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.9.ebuild,v 1.11 2005/07/15 09:54:33 axxo Exp $
 
 inherit java-pkg
 
@@ -33,9 +33,8 @@ src_unpack() {
 src_compile() {
 	local antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	use javamail && antflags="${antflags} -Djavamail.jar=$(java-pkg_getjar sun-javamail-bin mail.jar) -Dactivation.jar$(java-pkg_getjar sun-jaf-bin activation.jar)"
+	use javamail && antflags="${antflags} -Djavamail.jar=$(java-pkg_getjar sun-javamail-bin mail.jar) -Dactivation.jar=$(java-pkg_getjar sun-jaf-bin activation.jar)"
 	use jmx && antflags="${antflags} -Djmx.jar=$(java-pkg_getjar jmx jmxri.jar) -Djmx-extra.jar=$(java-pkg_getjar jmx jmxtools.jar)"
-	use jms && die "axxo fix openjms!"
 	use jms && antflags="${antflags} -Djms.jar=$(java-pkg_getjar openjms jms.jar)"
 	ant ${antflags} || die "compilation error"
 }
