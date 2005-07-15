@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ced89db59a55a3aa7e6dc8dcb924a33e ChangeLog 4192
-MD5 8841cddf25b660d205766f7468ba608d files/digest-jdom-1.0 61
-MD5 cad484f43c69253a8823f7d668b6c0ab files/digest-jdom-1.0_beta10-r3 61
-MD5 bb9b91ebd19835161b889abf889afda2 files/digest-jdom-1.0_beta6 60
-MD5 5387342ae9576c96d6fab009ed1c306f files/digest-jdom-1.0_beta9-r1 60
 MD5 9f57f02eed410a2318d4fbffa7e5220d jdom-1.0.ebuild 1580
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 2039386f3ef20ddcdcb9fb0781431e60 jdom-1.0_beta9-r1.ebuild 1593
 MD5 38a530183bd29214d1b87b9b724998f2 jdom-1.0_beta10-r3.ebuild 1588
 MD5 a538cebc4d8903fe4ca40f98193f9bf9 jdom-1.0_beta6.ebuild 1575
-MD5 3726f5f4a75899488d85097dbb68772c jdom-1.0_beta9-r1.ebuild 1594
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1SB0I1lqEGTUzyQRAkR3AKCV/sHoRn0MX1tsuj2FOhYHVSLtUACeKOd/
-FhYutV51/KmiIcOQcfduEOk=
-=bwn8
------END PGP SIGNATURE-----
+MD5 aac4abe215eb6ef00359346f0080923d ChangeLog 4297
+MD5 cad484f43c69253a8823f7d668b6c0ab files/digest-jdom-1.0_beta10-r3 61
+MD5 5387342ae9576c96d6fab009ed1c306f files/digest-jdom-1.0_beta9-r1 60
+MD5 8841cddf25b660d205766f7468ba608d files/digest-jdom-1.0 61
+MD5 bb9b91ebd19835161b889abf889afda2 files/digest-jdom-1.0_beta6 60
