@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/asterisk-chan_capi-0.4.0_pre1.ebuild,v 1.2 2005/05/10 12:11:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/asterisk-chan_capi-0.4.0_pre1.ebuild,v 1.3 2005/07/15 01:07:13 agriffis Exp $
 
-IUSE="fax"
+IUSE=""
 
 inherit eutils
 
