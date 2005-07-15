@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 61e8b34e798e392ac432a9f763b3fee8 ChangeLog 696
-MD5 267ae9bfed7e065d98d3fff2eea4fc19 gobby-0.1.1.ebuild 784
+MD5 6964ab8378e34a154588cd7c5eabe009 gobby-0.1.1.ebuild 791
+MD5 05f72b45a9e82d2a4c0f3bd9294f0282 ChangeLog 794
 MD5 08b59cdb7488971fc1ab89cfc860eee9 metadata.xml 287
 MD5 430dcccb6cc929a0851b1b7bfa53c9d0 files/digest-gobby-0.1.1 63
 MD5 e35d10904c6f4ce67f5d497121f5b49d files/gobby.desktop 349
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCtX9Z8zY1VwezZiERArJYAJ9qeryjhx77MTUPnbtDw6e+aVBWdwCglhaM
-ZBmfMJ6j2XK/vk3dR8AGoJI=
-=CE02
+iD8DBQFC1+JW8zY1VwezZiERAn/eAJ9PULrNlr28JmAFQ0XwCS/pYFUXngCdHD+B
+NYIALV2XLUZLQ44Eglax1Kg=
+=Sx4J
 -----END PGP SIGNATURE-----
