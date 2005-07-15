@@ -2,7 +2,7 @@ MD5 c641b62350591f9f09ded26eb38ee93f strongswan-2.2.2.ebuild 3664
 MD5 d7c37c82e6e91cb3ce146c7df8cca555 strongswan-2.3.0.ebuild 3664
 MD5 21c0dcfd8fcfc7e0993a1da74d0f1a56 strongswan-2.3.2.ebuild 3668
 MD5 bd9c3f30d8e904b8ed95affe2b7db9d1 strongswan-2.4.4.ebuild 3709
-MD5 20d20a4745c816b30fe961d58ef226a7 ChangeLog 4708
+MD5 91b13a8d9e92b93bde88de18f1de028c ChangeLog 4861
 MD5 48d78406890387afe4b0d4bba793f8d1 metadata.xml 634
 MD5 c6bc1878bdba6c8552b1ea8a2d2ddcaf strongswan-2.4.1.ebuild 3709
 MD5 8b7ed8cba35db92918e4929869e4c282 files/strongswan-2.4.4-gentoo.patch 11561

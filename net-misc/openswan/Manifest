@@ -5,7 +5,7 @@ MD5 e1253081a5b5628d2ba97f3105ad1337 openswan-1.0.6.ebuild 1885
 MD5 e6a4ddf50bc70c5914c43d5e81ce78bf openswan-2.2.0.ebuild 3120
 MD5 f492596a5a93fa8b13a8a895a6efc27a openswan-2.1.4.ebuild 3120
 MD5 3abefb31506d8191a4cc28cb960f5a8c openswan-2.3.0.ebuild 3073
-MD5 dda87c2c0d3ad5dfec11ff3e6faced40 ChangeLog 3503
+MD5 61871662cc956e12d3cec4c242e88672 ChangeLog 3654
 MD5 0f26f5619b06afba5889ea1982b99557 metadata.xml 568
 MD5 d35f8aea878066e110e6ff3d09a4f50e files/ipsec 1538
 MD5 cd5f8cc1a1e4a42483b45bc18c87f95b files/openswan-2.3.0-gentoo.patch 19127
