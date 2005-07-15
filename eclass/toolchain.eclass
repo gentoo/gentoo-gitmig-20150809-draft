@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.176 2005/07/14 03:28:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.177 2005/07/15 03:08:45 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1088,6 +1088,8 @@ gcc_do_configure() {
 	# disable a bunch of features or gcc goes boom
 	if is_crosscompile && [[ ${GCC_LANG} == "c" ]] ; then
 		confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
+	elif is_crosscompile && [[ ${CTARGET} == "avr" ]] ; then
+		confgcc="${confgcc} $(use_enable !static shared) --disable-threads"
 	else
 		confgcc="${confgcc} $(use_enable !static shared) --enable-threads=posix"
 	fi
