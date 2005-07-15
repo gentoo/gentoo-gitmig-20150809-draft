@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/jisx0213-fonts
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/ChangeLog,v 1.5 2004/08/03 17:49:28 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/ChangeLog,v 1.6 2005/07/15 17:10:53 flameeyes Exp $
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  jisx0213-fonts-20040425.ebuild:
+  Stable on amd64.
 
 *jisx0213-fonts-20040425 (04 Aug 2004)
 

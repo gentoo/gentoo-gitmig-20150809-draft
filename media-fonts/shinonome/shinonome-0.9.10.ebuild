@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/shinonome/shinonome-0.9.10.ebuild,v 1.7 2005/02/12 14:32:51 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/shinonome/shinonome-0.9.10.ebuild,v 1.8 2005/07/15 17:14:00 flameeyes Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://openlab.jp/efont/shinonome/"
 
 LICENSE="public-domain"
 SLOT=0
-KEYWORDS="x86 alpha sparc ppc ~amd64"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 DEPEND="virtual/libc
 	virtual/x11

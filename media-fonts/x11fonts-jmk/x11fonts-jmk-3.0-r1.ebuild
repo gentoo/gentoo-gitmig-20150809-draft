@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/x11fonts-jmk-3.0-r1.ebuild,v 1.8 2005/03/28 10:40:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/x11fonts-jmk-3.0-r1.ebuild,v 1.9 2005/07/15 17:22:42 flameeyes Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.pobox.com/~jmknoble/fonts/${MY_P}.tar.gz"
 HOMEPAGE="http://www.jmknoble.net/fonts/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~amd64 ppc alpha"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11"

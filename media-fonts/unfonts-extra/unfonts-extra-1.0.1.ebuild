@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts-extra/unfonts-extra-1.0.1.ebuild,v 1.3 2004/09/29 06:58:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts-extra/unfonts-extra-1.0.1.ebuild,v 1.4 2005/07/15 17:17:51 flameeyes Exp $
 
 inherit font
 
@@ -14,7 +14,7 @@ SRC_URI="http://kldp.net/download.php/1435/${MY_PN}-extra-${PV}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ppc alpha ~amd64"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
 
 FONT_SUFFIX="ttf"

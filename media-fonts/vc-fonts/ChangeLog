@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/vc-fonts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/ChangeLog,v 1.4 2005/01/04 08:33:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/ChangeLog,v 1.5 2005/07/15 17:21:41 flameeyes Exp $
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  vc-fonts-20020207.ebuild:
+  Stable on amd64.
 
   04 Jan 2005; Markus Rothe <corsair@gentoo.org> vc-fonts-20020207.ebuild:
   Stable on ppc64

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/x11fonts-jmk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/ChangeLog,v 1.8 2005/03/28 10:40:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/ChangeLog,v 1.9 2005/07/15 17:22:42 flameeyes Exp $
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  x11fonts-jmk-3.0-r1.ebuild:
+  Stable on amd64.
 
   28 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +files/gzip.patch,
   x11fonts-jmk-3.0-r1.ebuild:
