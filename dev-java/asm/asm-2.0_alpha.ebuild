@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-2.0_alpha.ebuild,v 1.3 2005/05/18 22:58:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-2.0_alpha.ebuild,v 1.4 2005/07/15 17:46:06 axxo Exp $
 
 inherit java-pkg
 
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install() {
 	for x in output/dist/lib/*.jar ; do
-		java-pkg_dojar $x
+		java-pkg_newjar ${x} $(basename ${x/-${PV}})
 	done
 	use doc && java-pkg_dohtml -r output/dist/doc/javadoc/user/*
 }

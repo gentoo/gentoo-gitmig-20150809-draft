@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2dd7c3c1e2391c94447e8b0a0e6934f9 aspectwerkz-2.0_rc2.ebuild 1504
+MD5 3c815be17dc75428a08af8e41c845708 aspectwerkz-2.0_rc2.ebuild 1511
 MD5 54afe3e02ddcb51704821a683b12c16a ChangeLog 722
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 1bcde0233ea72230e5b78958ff1a30f9 files/aspectwerkz-2.0_rc2-gentoo.patch 4866
 MD5 b52e8ab0f4ac5139bc047f5f9a8844aa files/digest-aspectwerkz-2.0_rc2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCc+iP06ebR+OMO78RAnVzAJ97nuP6Y+3zo+AMJRT+EN9IOwEdaQCfehSL
-JTXFQlUZqyDYmnz77+q3U4U=
-=0Aqu
------END PGP SIGNATURE-----
