@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/shared-objects-1.4.ebuild,v 1.6 2005/04/22 08:14:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/shared-objects-1.4.ebuild,v 1.7 2005/07/15 16:52:01 axxo Exp $
 
 inherit java-pkg
 
@@ -24,10 +24,9 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar shared-objects-1.4.jar
+	java-pkg_newjar shared-objects-${PV}.jar ${PN}.jar
 
-	exeinto /usr/bin
-	doexe shared-objects-config
+	dobin shared-objects-config
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL
 }
