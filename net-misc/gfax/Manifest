@@ -1,7 +1,17 @@
-MD5 964acf268e1f39272cbe289d47247055 gfax-0.7.3.ebuild 913
-MD5 f2d29c80a67f7a267f16fdc4e4eb241b gfax-0.7.2.ebuild 1048
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a64f9f011488bf936f4e6bb34e07b531 gfax-0.7.3.ebuild 907
+MD5 32b902cc32b603267fb83db662f258e1 gfax-0.7.2.ebuild 1042
 MD5 4800854ac25d81ab970ca81efca3ddef ChangeLog 1319
 MD5 c53eee9a4a730fba7506b48bf7f2ab65 metadata.xml 266
 MD5 6e2fdfadf79ed929912a994520275152 files/digest-gfax-0.7.2 64
 MD5 e119c81dd1130aed1e0fb01e7e41c5bd files/digest-gfax-0.7.3 64
 MD5 36c102163f847ff2cad2fb2d1dd17b10 files/gfax-0.7.3-sandbox.diff 1812
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1w5aBXaUFmZvwyMRArUyAJ0c01JhUwDX/S0RtQQjmRU6kqk0fQCguuBY
+BYJRoj7j0Hco4RAcKH6Gmy8=
+=ly8z
+-----END PGP SIGNATURE-----
