@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1.ebuild,v 1.5 2005/05/11 06:36:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1.ebuild,v 1.6 2005/07/15 14:11:44 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -12,17 +12,19 @@ SLOT="0.9"
 KEYWORDS="x86 ~ppc amd64"
 IUSE="doc jikes source"
 
-DEPEND=">=virtual/jdk-1.4
-	>=dev-java/javacc-3
-	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
-
-RDEPEND=">=virtual/jdk-1.4
+RDEPEND=">=virtual/jre-1.4
 	=dev-java/fastutil-4.3*
 	>=dev-java/jal-20031117
 	=dev-java/colt-1.1*
 	=dev-java/java-getopt-1.0*
 	=dev-java/libreadline-java-0.8*"
+
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	>=dev-java/javacc-3
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
+
 
 src_unpack() {
 	unpack ${A}
@@ -46,8 +48,7 @@ src_compile () {
 }
 
 src_install() {
-	mv ${P}.jar ${PN}.jar
-	java-pkg_dojar ${PN}.jar
+	java-pkg_newjar ${P}.jar ${PN}.jar
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc java/it
 }
