@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.42 2005/07/06 19:17:46 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.43 2005/07/15 14:21:47 mholzer Exp $
+
+*phppgadmin-3.5.4 (15 Jul 2005)
+
+  15 Jul 2005; Martin Holzer <mholzer@gentoo.org> +phppgadmin-3.5.4.ebuild:
+  Version bumped.
 
   06 Jul 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
   phppgadmin-3.5.3.ebuild:
