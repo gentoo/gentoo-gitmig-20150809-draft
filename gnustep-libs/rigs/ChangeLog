@@ -1,0 +1,11 @@
+# ChangeLog for gnustep-libs/rigs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/rigs/ChangeLog,v 1.1 2005/07/15 15:25:46 fafhrd Exp $
+
+*rigs-0.2.2.20050714 (15 Jul 2005)
+
+  15 Jul 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  +files/rigs-0.2.2.20050714-install-rb.patch, +metadata.xml,
+  +rigs-0.2.2.20050714.ebuild:
+  Original package import
+
