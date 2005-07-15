@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21-r6.ebuild,v 1.1 2005/07/14 19:02:57 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21-r7.ebuild,v 1.1 2005/07/15 16:32:16 uberlord Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make pump || die
+	make DEB_CFLAGS="-fPIC ${CFLAGS}" pump || die
 }
 
 src_install() {

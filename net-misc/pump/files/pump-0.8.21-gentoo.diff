@@ -1,6 +1,6 @@
-diff -U 0 -r pump-0.8.21/config.c pump-0.8.21-r6/config.c
---- pump-0.8.21/config.c	2005-07-14 19:26:30.000000000 +0100
-+++ pump-0.8.21-r6/config.c	2005-07-14 18:49:34.000000000 +0100
+diff -U 0 pump-0.8.21/config.c pump-0.8.21-r7/config.c
+--- pump-0.8.21/config.c	2005-07-15 17:14:04.000000000 +0100
++++ pump-0.8.21-r7/config.c	2005-07-15 14:48:32.000000000 +0100
 @@ -158 +158,18 @@
 -	} else if (!strcmp(start, "domainsearch")) {
 +	} else if (!strcmp(start, "routemetric")) {
@@ -68,9 +68,10 @@ diff -U 0 -r pump-0.8.21/config.c pump-0.8.21-r6/config.c
 -		return 1;
 -	    }
 -
-diff -U 0 -r pump-0.8.21/dhcp.c pump-0.8.21-r6/dhcp.c
---- pump-0.8.21/dhcp.c	2005-07-14 19:26:30.000000000 +0100
-+++ pump-0.8.21-r6/dhcp.c	2005-07-14 19:12:34.000000000 +0100
+Common subdirectories: pump-0.8.21/debian and pump-0.8.21-r7/debian
+diff -U 0 pump-0.8.21/dhcp.c pump-0.8.21-r7/dhcp.c
+--- pump-0.8.21/dhcp.c	2005-07-15 17:14:04.000000000 +0100
++++ pump-0.8.21-r7/dhcp.c	2005-07-15 14:48:32.000000000 +0100
 @@ -205,0 +206 @@
 +    struct sockaddr_in * addrp;
 @@ -212,2 +212,0 @@
@@ -177,9 +178,10 @@ diff -U 0 -r pump-0.8.21/dhcp.c pump-0.8.21-r6/dhcp.c
 @@ -1435 +1464 @@
 -    pumpDhcpClassRun(device, flags, reqLease, reqHostname, NULL, intf,
 +    return pumpDhcpClassRun(device, flags, reqLease, reqHostname, NULL, intf,
-diff -U 0 -r pump-0.8.21/pump.8 pump-0.8.21-r6/pump.8
---- pump-0.8.21/pump.8	2005-07-14 19:26:30.000000000 +0100
-+++ pump-0.8.21-r6/pump.8	2005-07-14 18:49:34.000000000 +0100
+Common subdirectories: pump-0.8.21/po and pump-0.8.21-r7/po
+diff -U 0 pump-0.8.21/pump.8 pump-0.8.21-r7/pump.8
+--- pump-0.8.21/pump.8	2005-07-15 17:14:04.000000000 +0100
++++ pump-0.8.21-r7/pump.8	2005-07-15 14:48:32.000000000 +0100
 @@ -2,0 +3 @@
 +.\" July 2005: Updated by Roy Marples <uberlord@gentoo.org>
 @@ -31,0 +33,2 @@
@@ -244,9 +246,9 @@ diff -U 0 -r pump-0.8.21/pump.8 pump-0.8.21-r6/pump.8
 +Lower metrics take a higher priority.
 +
 +.TP
-diff -U 0 -r pump-0.8.21/pump.c pump-0.8.21-r6/pump.c
---- pump-0.8.21/pump.c	2005-07-14 19:26:30.000000000 +0100
-+++ pump-0.8.21-r6/pump.c	2005-07-14 19:41:33.000000000 +0100
+diff -U 0 pump-0.8.21/pump.c pump-0.8.21-r7/pump.c
+--- pump-0.8.21/pump.c	2005-07-15 17:14:04.000000000 +0100
++++ pump-0.8.21-r7/pump.c	2005-07-15 17:09:01.000000000 +0100
 @@ -100,111 +100,2 @@
 -char * readSearchPath(void) {
 -    int fd;
@@ -433,25 +435,25 @@ diff -U 0 -r pump-0.8.21/pump.c pump-0.8.21-r6/pump.c
 -    char *arg;
 +void setupDns(struct pumpNetIntf * intf) {
 +    struct pumpOverrideInfo *o = &intf->override;
-+    char * hn, * dn = NULL;
++    char * hn = NULL, * dn = NULL;
 +    struct hostent * he;
-@@ -288,5 +167 @@
+@@ -288 +167 @@
 -    if (override->flags & OVERRIDE_FLAG_NODNS)
--	return;
++    if (o->flags & OVERRIDE_FLAG_NODNS)
+@@ -290,6 +169,2 @@
 -    if (override->flags & OVERRIDE_FLAG_NORESOLVCONF)
 -	return;
 -    if (stat("/sbin/resolvconf", &buf) < 0)
-+    if (o->flags & OVERRIDE_FLAG_NODNS)
-@@ -294,2 +169,2 @@
+-	return;
 -    if (asprintf(&arg, "/sbin/resolvconf -d %s", intf->device) < 0) {
 -	syslog(LOG_ERR, "failed to release resolvconf: %s", strerror(errno));
 +
 +    if (!intf->set & PUMP_NETINFO_HAS_DNS)
-@@ -296,0 +172,16 @@
+@@ -296,0 +172,22 @@
 +    
 +    if (o->searchPath[0]) {
 +	dn = o->searchPath;
-+    } else if (intf-> set & PUMP_NETINFO_HAS_DOMAIN) {
++    } else if (intf->set & PUMP_NETINFO_HAS_DOMAIN) {
 +	dn = intf->domain;
 +    } else if (intf->set & PUMP_NETINFO_HAS_HOSTNAME) {
 +	hn = intf->hostname;
@@ -464,16 +466,16 @@ diff -U 0 -r pump-0.8.21/pump.c pump-0.8.21-r6/pump.c
 +	} else {
 +	    hn = NULL;
 +	}
-@@ -299,3 +190,7 @@
--    if (system(arg) != 0)
--	syslog(LOG_ERR, "resolvconf -d %s failed", intf->device);
--    free(arg);
++    }
++
 +    if (hn) {
 +	dn = strchr(hn, '.');
 +	if (dn)
 +	    dn++;
-+    }
-+
+@@ -299,3 +196 @@
+-    if (system(arg) != 0)
+-	syslog(LOG_ERR, "resolvconf -d %s failed", intf->device);
+-    free(arg);
 +    createResolvConf(intf, dn);
 @@ -304,8 +199,5 @@
 -static void callIfupPost(struct pumpNetIntf* intf) {
@@ -638,9 +640,9 @@ diff -U 0 -r pump-0.8.21/pump.c pump-0.8.21-r6/pump.c
 +	    strcpy(o->etcDir, etcDir);
 +	if (searchPath)
 +	    strcpy(o->searchPath, searchPath);
-diff -U 0 -r pump-0.8.21/pump.h pump-0.8.21-r6/pump.h
---- pump-0.8.21/pump.h	2005-07-14 19:26:30.000000000 +0100
-+++ pump-0.8.21-r6/pump.h	2005-07-14 18:49:34.000000000 +0100
+diff -U 0 pump-0.8.21/pump.h pump-0.8.21-r7/pump.h
+--- pump-0.8.21/pump.h	2005-07-15 17:14:04.000000000 +0100
++++ pump-0.8.21-r7/pump.h	2005-07-15 14:48:32.000000000 +0100
 @@ -57 +57,3 @@
 -#define OVERRIDE_FLAG_NORESOLVCONF	(1 << 5)
 +/* #define OVERRIDE_FLAG_NORESOLVCONF	(1 << 5) */

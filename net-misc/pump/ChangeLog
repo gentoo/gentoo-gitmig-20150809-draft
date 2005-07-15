@@ -1,10 +1,14 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.19 2005/07/15 15:40:30 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.20 2005/07/15 16:32:16 uberlord Exp $
+
+*pump-0.8.21-r7 (15 Jul 2005)
 
   15 Jul 2005; Roy Marples <uberlord@gentoo.org>
-  files/pump-0.8.21-gentoo.diff:
-  Fixed a bad domain pointer - thanks to DaPhreak in IRC
+  files/pump-0.8.21-gentoo.diff, -pump-0.8.21-r6.ebuild,
+  +pump-0.8.21-r7.ebuild:
+  Fixed two bad pointers - thanks to DaPhreak in IRC.
+  Re-enabled building with -fPIC and CFLAGS.
 
 *pump-0.8.21-r6 (14 Jul 2005)
 
