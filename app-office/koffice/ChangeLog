@@ -1,6 +1,11 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.107 2005/07/01 20:26:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.108 2005/07/15 07:32:42 greg_g Exp $
+
+*koffice-1.4.0-r2 (15 Jul 2005)
+
+  15 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> +koffice-1.4.0-r2.ebuild:
+  Add patchset 1.4.0b from koffice.org (#98803).
 
   01 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   koffice-1.4.0-r1.ebuild:
