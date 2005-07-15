@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/nget-0.26.ebuild,v 1.1 2005/01/17 20:05:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/nget-0.26.ebuild,v 1.2 2005/07/15 00:26:15 agriffis Exp $
 
 NPVER=20011209
 DESCRIPTION="Network utility to retrieve files from an NNTP news server"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nget/${P}+uulib.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 arm"
-IUSE="static debug"
+IUSE="static"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
