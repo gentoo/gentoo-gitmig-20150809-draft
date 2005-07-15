@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 515c26be4250ab1126e09deeabc56053 ChangeLog 1758
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 MD5 6e125ca5e703c96a1797187d6f764484 shinonome-0.9.10.ebuild 1265
@@ -6,3 +9,10 @@ MD5 b4fef7122f9b7d7ea6a9677512b48f40 shinonome-0.9.8.ebuild 1214
 MD5 d772a5082a7c835baae47530b8c4842c files/digest-shinonome-0.9.10 70
 MD5 b6be087c6f6d6b7f70f7e867d9403adc files/digest-shinonome-0.9.11 70
 MD5 2647e9b5a2b98f5aebff355368dcdccd files/digest-shinonome-0.9.8 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC1+72j5H05b2HAEkRAsmeAKCJo7lO/gL0I077FV9DZf2vFjXKHACdE1Ul
+ne2gyppq3L8IjCmV/rsryT4=
+=PbkN
+-----END PGP SIGNATURE-----
