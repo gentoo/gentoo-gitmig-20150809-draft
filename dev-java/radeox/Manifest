@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ae8e2ff95c27cc2d188992180a7ea35a ChangeLog 1033
 MD5 51b360ad1459b4dae2f08ec2c406e915 metadata.xml 581
-MD5 3d73908618a8dade78d628628363f79d radeox-1.0_beta2.ebuild 1383
+MD5 b79707c3a075b6f6fc632f66e3011001 radeox-1.0_beta2.ebuild 1369
 MD5 af5915048f26e92415eed2a0302e4184 files/digest-radeox-1.0_beta2 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCeP4006ebR+OMO78RAvgaAJ4soYQ7uSqbEgAHIy2jLgGS3kVMGACgiF+M
-0zDvbe4tF8YYUIi0hYsKoYU=
-=MmU6
------END PGP SIGNATURE-----
