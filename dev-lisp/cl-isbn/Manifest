@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5db79c15c5395f2310d79226ef5f9ca9 cl-isbn-0.1.ebuild 717
 MD5 a25b8fc98e7689cb8a06a9b68e4535c7 ChangeLog 403
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 d0926f4b1f5aa0de1f6cc8b53e8a1c73 cl-isbn-0.1.ebuild 718
 MD5 e532323d59fd0b9a495d89a9a666e008 files/digest-cl-isbn-0.1 62
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC19LYyiNZaEAZA+ARAlKiAJ9V89sBUKsoUiTaKyfAoIuCkW0P2gCfY0RY
-wUrmSffUHDKF9dlzUisozTs=
-=/nyl
+iD8DBQFC1+seI1lqEGTUzyQRApaQAJ92ifK0kadywm+IyH8g3ePYHcQ27gCgifTs
+7czr+DpS7r/qQztc8P0oHJQ=
+=IXc1
 -----END PGP SIGNATURE-----

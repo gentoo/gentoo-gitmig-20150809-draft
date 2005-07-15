@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-isbn/cl-isbn-0.1.ebuild,v 1.1 2005/07/15 15:14:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-isbn/cl-isbn-0.1.ebuild,v 1.2 2005/07/15 16:57:41 swegener Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ljosa.com/~ljosa/software/cl-isbn/"
 SRC_URI="http://www.ljosa.com/~ljosa/software/cl-isbn/download/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-lisp/cl-iterate
