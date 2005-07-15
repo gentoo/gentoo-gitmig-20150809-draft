@@ -1,4 +1,14 @@
-MD5 d14af1b6fe7499740099775f5f84ceaa xmlc-2.2.5.ebuild 1469
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6c756b0df39891079b85704e023a2fbb xmlc-2.2.5.ebuild 1450
 MD5 5f295e62ee364d06ae7d4d8183cb5b9d ChangeLog 390
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 eed4979f4b129344eb1689be1c6485b5 files/digest-xmlc-2.2.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC15Jj/rLF9B432nYRApI/AJ4xK9RUH2PSrLHh2bkv8j2zT2nscwCgpGJw
+ENmU20HN284krpqnqQAjOY4=
+=IV4P
+-----END PGP SIGNATURE-----

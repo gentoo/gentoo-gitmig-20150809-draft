@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/xmlc-2.2.5.ebuild,v 1.1 2005/04/16 18:44:19 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/xmlc-2.2.5.ebuild,v 1.2 2005/07/15 10:39:11 axxo Exp $
 
 inherit java-pkg
 
@@ -8,20 +8,16 @@ DESCRIPTION="Enhydra XMLC is the presentation technology that supports the needs
 HOMEPAGE="http://xmlc.objectweb.org/"
 SRC_URI="http://download.forge.objectweb.org/${PN}/${PN}-src-${PV}.zip
 	http://download.us.forge.objectweb.org/${PN}/${PN}-src-${PV}.zip"
-DEPEND=">=dev-java/ant-core-1.4
+DEPEND=">=virtual/jdk-1.3
+	>=dev-java/ant-core-1.4
 	jikes? ( >=dev-java/jikes-1.21 )"
-RDEPEND=">=virtual/jdk-1.3"
+RDEPEND=">=virtual/jre-1.3"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE="doc jikes"
 
 S="${WORKDIR}/${PN}-src-${PV}/"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
 
 src_compile() {
 	local antflags="all-libs"
