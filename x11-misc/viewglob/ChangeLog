@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/viewglob
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.1 2005/07/15 12:43:33 slarti Exp $
+
+*viewglob-2.0.2 (15 Jul 2005)
+
+  15 Jul 2005; Tom Martin <slarti@gentoo.org> +metadata.xml,
+  +viewglob-2.0.2.ebuild:
+  Initial import, resolves bug 63484. Thanks to Stephen Bach
+  <sjbach@users.sourceforge.net> for the submission.
+
