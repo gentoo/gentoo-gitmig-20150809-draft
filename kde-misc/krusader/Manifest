@@ -1,20 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c29393239954124f107a1b2e4b93fd8 ChangeLog 6637
-MD5 c9aff7a8169497eabac2f817f2aec7a3 files/digest-krusader-1.51 66
-MD5 5114fe81b3da50dc171889c659b60a34 files/digest-krusader-1.60.0 68
-MD5 c89433445bc2707b78c75dc36deb4e79 files/digest-krusader-1.60.0_beta1 74
-MD5 b79ae1ced5d32e11178553a3ea6c74cd files/digest-krusader-1.60.0_beta2 74
-MD5 6cf3762e2ea71b82078ba9bcbfb6aac1 krusader-1.51.ebuild 1318
-MD5 c3ffd24cedf0d73449c0ad9546575686 krusader-1.60.0.ebuild 1451
-MD5 fcfe9b31181a29d791c84f404f02565e krusader-1.60.0_beta1.ebuild 1298
-MD5 68926a16be42024d80464cba93c4d7ae krusader-1.60.0_beta2.ebuild 1298
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0uM3I1lqEGTUzyQRArYbAJ9saglqqyOIPNOTRAdNJgZYUdsHYACfYIVV
-f0FPEkcLdI5hmtsaW161oc8=
-=10rf
------END PGP SIGNATURE-----
+MD5 c3ffd24cedf0d73449c0ad9546575686 krusader-1.60.0.ebuild 1451
+MD5 9c29393239954124f107a1b2e4b93fd8 ChangeLog 6637
+MD5 6cf3762e2ea71b82078ba9bcbfb6aac1 krusader-1.51.ebuild 1318
+MD5 5114fe81b3da50dc171889c659b60a34 files/digest-krusader-1.60.0 68
+MD5 c9aff7a8169497eabac2f817f2aec7a3 files/digest-krusader-1.51 66
