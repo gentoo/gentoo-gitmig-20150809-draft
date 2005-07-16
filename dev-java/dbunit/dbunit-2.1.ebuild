@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.1.ebuild,v 1.4 2005/07/09 23:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.1.ebuild,v 1.5 2005/07/16 14:21:10 axxo Exp $
 
 inherit java-pkg
 
@@ -13,16 +13,17 @@ SLOT="0"
 KEYWORDS="x86 amd64 ppc"
 IUSE="doc jikes source"
 
-DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.6
-	jikes? ( >=dev-java/jikes-1.21 )
-	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/crimson-1*
 	>=dev-db/hsqldb-1.7.2.4
 	=dev-java/mockmaker-1.12.0*
 	>=dev-java/mockobjects-0.09
 	>=dev-java/poi-2.0"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	>=dev-java/ant-core-1.6
+	jikes? ( >=dev-java/jikes-1.21 )
+	source? ( app-arch/zip )"
 
 src_unpack() {
 	unpack ${A}
