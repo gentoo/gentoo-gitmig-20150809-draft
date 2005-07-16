@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/pylize-1.1b.ebuild,v 1.8 2005/05/31 23:42:49 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/pylize-1.1b.ebuild,v 1.9 2005/07/16 16:22:33 josejx Exp $
 
 DESCRIPTION="Python HTML Slideshow Generator using HTML and CSS"
 HOMEPAGE="http://www.chrisarndt.de/en/software/pylize/"
@@ -9,7 +9,7 @@ SRC_URI="http://www.chrisarndt.de/en/software/pylize/download/${P}.tar.bz2"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 
 DEPEND="virtual/python
 	dev-python/imaging

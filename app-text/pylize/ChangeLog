@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pylize
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.7 2005/05/31 23:42:49 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.8 2005/07/16 16:22:33 josejx Exp $
+
+  16 Jul 2005; Joseph Jezak <josejx@gentoo.org> pylize-1.1b.ebuild:
+  Marked ppc stable for bug #99218.
 
   31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   pylize-1.1b.ebuild:
