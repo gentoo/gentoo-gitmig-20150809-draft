@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/sr
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/ChangeLog,v 1.3 2004/06/24 22:57:20 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/ChangeLog,v 1.4 2005/07/16 12:37:18 griffon26 Exp $
+
+*sr-2.3.3 (16 Jul 2005)
+
+  16 Jul 2005; Maurice van der Pot <griffon26@gentoo.org> +sr-2.3.3.ebuild:
+  Added new version of sr ebuild provided by George. Modified slightly to 
+  prevent file collisions and enable running tests. Closing bug #38987 
+  reported by Kirill Vasiliev <redled@ornet.ru>
 
 *sr-2.3.2 (01 Nov 2002)
 
