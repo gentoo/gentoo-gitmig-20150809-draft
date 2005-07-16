@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 14fc75164006768eee653bf836d72577 ChangeLog 4325
 MD5 341828835de325e6f8e44726b9b5e9bf files/digest-gworkspace-0.7.0 69
 MD5 0f2b6d5ad90e11612f0cbbf2a1e2e9dc files/digest-gworkspace-0.7.1 69
@@ -5,3 +8,10 @@ MD5 660807348555935d3d149797044803b3 files/seperate-desktop-recycler.patch 316
 MD5 60a4f8270f0c5a5650ded14c808eadac gworkspace-0.7.0.ebuild 736
 MD5 edb787eac19f3d7447e572187cc918c9 gworkspace-0.7.1.ebuild 820
 MD5 144bf372071e2a59ced95e82e91531bd metadata.xml 391
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2SvmI1lqEGTUzyQRAsNiAJ0fTO1Vu/Kw9xCFKnlTITVAof17GgCgmM9b
+xcZQWugqBAWpXtZSaZdxeZE=
+=5EyR
+-----END PGP SIGNATURE-----
