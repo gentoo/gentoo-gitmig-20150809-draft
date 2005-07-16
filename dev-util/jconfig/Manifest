@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 29fbef871b4e7ac3cfc7f15ad43f11e6 jconfig-2.8-r1.ebuild 1051
 MD5 0f574aab80d81514264612bb3a8ed83f ChangeLog 1086
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 5989812c8bb90bb2d2de5ce82e273665 files/digest-jconfig-2.8-r1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2Vmq/rLF9B432nYRAlxRAJ4+TnNgeCImhMRYV7UIM2WzXVz1pwCfW6s7
+N41vZT8O3TfvbqLijBx0VG8=
+=9EdO
+-----END PGP SIGNATURE-----
