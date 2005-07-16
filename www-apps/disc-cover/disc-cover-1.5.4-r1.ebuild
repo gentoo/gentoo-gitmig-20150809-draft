@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/disc-cover/disc-cover-1.5.4-r1.ebuild,v 1.1 2005/07/15 19:07:00 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/disc-cover/disc-cover-1.5.4-r1.ebuild,v 1.2 2005/07/16 11:40:50 dholm Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://homepages.inf.ed.ac.uk/jvanheme/disc-cover.html"
 SRC_URI="http://homepages.inf.ed.ac.uk/jvanheme/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 SLOT="0"
