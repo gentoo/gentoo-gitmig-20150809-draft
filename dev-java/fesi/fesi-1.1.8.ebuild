@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.8.ebuild,v 1.5 2005/05/01 10:00:30 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.8.ebuild,v 1.6 2005/07/16 13:42:24 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -11,15 +11,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ppc"
 IUSE="doc examples jikes source"
-DEPEND=">=virtual/jdk-1.3
-	dev-java/ant-core
-	jikes? ( >=dev-java/jikes-1.21 )
-	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jdk-1.3
+RDEPEND=">=virtual/jre-1.3
 	=dev-java/bsf-2.3*
 	=dev-java/jakarta-oro-2.0*
 	>=dev-java/javacc-3.2
 	=dev-java/gnu-regexp-1.1*"
+DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
+	dev-java/ant-core
+	jikes? ( >=dev-java/jikes-1.21 )
+	source? ( app-arch/zip )"
 
 src_unpack() {
 	unpack ${A}
@@ -29,10 +30,10 @@ src_unpack() {
 
 	bf=build.properties
 	cd ant/
-	echo "javaccdir=`java-config -p javacc`" > ${bf}
-	echo "ororegexp=`java-config -p jakarta-oro-2.0`" >> ${bf}
-	echo "gnuregexp=`java-config -p gnu-regexp-1`" >> ${bf}
-	echo "bsfdir=`java-config -p bsf-2.3`" >> ${bf}
+	echo "javaccdir=$(java-pkg_getjars javacc)" > ${bf}
+	echo "ororegexp=$(java-pkg_getjars jakarta-oro-2.0)" >> ${bf}
+	echo "gnuregexp=$(java-pkg_getjars gnu-regexp-1)" >> ${bf}
+	echo "bsfdir=$(java-pkg_getjars bsf-2.3)" >> ${bf}
 }
 
 src_compile() {

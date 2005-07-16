@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.1.ebuild,v 1.2 2005/05/28 23:43:21 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.1.ebuild,v 1.3 2005/07/16 13:44:52 axxo Exp $
 
 inherit java-pkg
 
@@ -13,19 +13,20 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc junit jikes"
 
-DEPEND=">=virtual/jdk-1.4
-		>=dev-java/ant-core-1.5
-		jikes? ( dev-java/jikes )
-		junit? ( dev-java/junit	)"
 RDEPEND=">=virtual/jre-1.4
 		dev-java/commons-collections
 		dev-java/concurrent-util
 		dev-java/commons-logging"
+DEPEND=">=virtual/jdk-1.4
+		${RDEPEND}
+		>=dev-java/ant-core-1.5
+		jikes? ( dev-java/jikes )
+		junit? ( dev-java/junit	)"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	unzip ${P}-src.zip
+	unzip ${P}-src.zip || die
 	rm *.jar
 	rm -rf src/net/sf/ehcache/hibernate
 }
@@ -35,9 +36,9 @@ src_compile() {
 	cd ${S}/src
 
 	find . -name "*.java"| xargs javac -d ${S}/classes \
-		-classpath `java-config -p commons-logging,commons-collections`
+		-classpath $(java-pkg_getjars commons-logging,commons-collections)
 	cd ${S}/classes
-	jar cf ${S}/${P}.jar *
+	jar cf ${S}/${P}.jar * || die
 }
 
 src_install() {
@@ -45,7 +46,7 @@ src_install() {
 	java-pkg_newjar ${S}/${P}.jar ${PN}.jar
 	dodoc *.txt ehcache.xml ehcache.xsd
 	if use doc ; then
-		unzip ${P}-javadoc.zip
+		unzip ${P}-javadoc.zip || die
 		java-pkg_dohtml -r docs
 	fi
 }
