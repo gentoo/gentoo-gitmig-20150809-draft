@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.7 2005/07/09 22:35:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.8 2005/07/16 14:27:27 axxo Exp $
 
 inherit java-pkg
 
@@ -11,9 +11,6 @@ IUSE="doc jikes junit mysql postgres"
 SLOT="0.8"
 LICENSE="Apache-1.1"
 KEYWORDS="~x86" #karltk: missing some deps for ~amd64 ~ppc"
-DEPEND=">=virtual/jdk-1.4
-	junit? ( >=dev-java/junit-3.7 )
-	jikes? ( >=dev-java/jikes-1.21 )"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/itext-1.02b
 	>=dev-java/jruby-0.7.0
@@ -22,6 +19,10 @@ RDEPEND=">=virtual/jre-1.4
 	=dev-java/minml2-0.3*
 	mysql? ( >=dev-java/jdbc-mysql-3.0 )
 	postgres? ( >=dev-java/jdbc2-postgresql-7.3 )"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	junit? ( >=dev-java/junit-3.7 )
+	jikes? ( >=dev-java/jikes-1.21 )"
 
 src_unpack() {
 	unpack ${A}
@@ -57,13 +58,9 @@ src_unpack() {
 
 src_compile() {
 	local antflags="jar"
-	if use doc; then
-		antflags="${antflags} docs"
-	fi
-	if use jikes; then
-		antflags="${antflags} -Dbuild.compiler=jikes"
-	fi
-	ant ${antflags}
+	use doc && antflags="${antflags} docs"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	ant ${antflags} || die "failed too build"
 }
 
 src_install() {
@@ -71,7 +68,7 @@ src_install() {
 
 	newbin datavision.sh datavision
 
-	dodoc COPYING ChangeLog Credits INSTALL README TODO
+	dodoc ChangeLog Credits INSTALL README TODO
 	if use doc; then
 		java-pkg_dohtml docs/DataVision/*
 	fi
