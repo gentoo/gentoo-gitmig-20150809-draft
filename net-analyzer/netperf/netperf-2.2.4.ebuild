@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.4.ebuild,v 1.16 2005/02/14 21:38:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.4.ebuild,v 1.17 2005/07/16 19:42:29 swegener Exp $
 
 inherit flag-o-matic
 
@@ -35,8 +35,8 @@ src_install () {
 	dobin netperf
 
 	# init.d / conf.d
-	exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}-2.2-init netperf
-	insinto /etc/conf.d ; newins ${FILESDIR}/${PN}-2.2-conf netperf
+	newinitd ${FILESDIR}/${PN}-2.2-init netperf
+	newconfd ${FILESDIR}/${PN}-2.2-conf netperf
 
 	# man pages
 	newman netserver.man netserver.1
@@ -44,6 +44,6 @@ src_install () {
 
 	# documentation and example scripts
 	dodoc ACKNWLDGMNTS COPYRIGHT README Release_Notes netperf.ps
-	mkdir ${D}/usr/share/doc/${PF}/examples
+	dodir /usr/share/doc/${PF}/examples
 	cp *_script ${D}/usr/share/doc/${PF}/examples
 }

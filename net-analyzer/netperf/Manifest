@@ -1,15 +1,25 @@
-MD5 d4ff3035829f3cbfd7ace5f78784cf49 netperf-2.4.0_rc2.ebuild 1365
-MD5 3199cd789548c182a064544db15f3168 netperf-2.3.ebuild 1394
-MD5 8e4293bf35bf5b25f607ce5d6869b9e5 netperf-2.2.4.ebuild 1398
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 53719c1581da93658fec00eabf8b0427 ChangeLog 3412
-MD5 30d5cfe18ce7d4cb8ebe539cff03e82c netperf-2.4.0_rc3.ebuild 1365
-MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
-MD5 fffdf838ae22c0f43c6f68b22a2925f7 netperf-2.4.0.ebuild 1338
-MD5 5b39a4d1bbad0a785afc512f8a35e87d files/netperf-2.2alpha.diff 686
+MD5 787949efbc227966fa6a5609799cbf97 files/digest-netperf-2.2.4 66
 MD5 201084fb8da044398f8a0459f1e7c4b5 files/digest-netperf-2.3 63
-MD5 f7a086a9cdee9e3d6ed0e8976b678dbf files/netperf-2.2-conf 103
-MD5 35791611e593b4e8cefdfd56031e759d files/netperf-2.2-init 434
+MD5 1ee55df152ab363e932c73e6155604b1 files/digest-netperf-2.4.0 66
 MD5 5b8fcf5721bc37329f6af346c347f2ba files/digest-netperf-2.4.0_rc2 70
 MD5 9c2b856854f3542c3e0a3595d4fb59ca files/digest-netperf-2.4.0_rc3 70
-MD5 787949efbc227966fa6a5609799cbf97 files/digest-netperf-2.2.4 66
-MD5 1ee55df152ab363e932c73e6155604b1 files/digest-netperf-2.4.0 66
+MD5 f7a086a9cdee9e3d6ed0e8976b678dbf files/netperf-2.2-conf 103
+MD5 35791611e593b4e8cefdfd56031e759d files/netperf-2.2-init 434
+MD5 5b39a4d1bbad0a785afc512f8a35e87d files/netperf-2.2alpha.diff 686
+MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
+MD5 8cff92ac02087bc24cdebec08eb62a3a netperf-2.2.4.ebuild 1353
+MD5 6d14aac9d803bf952c9a70094e39495c netperf-2.3.ebuild 1351
+MD5 906e80bd9cf0afb06622cd91dd59d9f8 netperf-2.4.0.ebuild 1246
+MD5 ab7b8d7bbb3c51fce8949fe3cfb2d6a4 netperf-2.4.0_rc2.ebuild 1273
+MD5 4ef631e53d11899c995f7a35094d956f netperf-2.4.0_rc3.ebuild 1273
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2WNAI1lqEGTUzyQRAjT2AJ0cmggXHqQt8aUZZC53i4uK9h7Z+wCgmKcC
+s7Mh5gnb00p97XC6jE2fwkM=
+=vXaC
+-----END PGP SIGNATURE-----

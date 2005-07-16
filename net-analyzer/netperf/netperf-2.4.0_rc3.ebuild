@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.0_rc3.ebuild,v 1.2 2005/04/19 21:53:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.0_rc3.ebuild,v 1.3 2005/07/16 19:42:29 swegener Exp $
 
 inherit flag-o-matic
 
@@ -22,11 +22,6 @@ IUSE=""
 
 DEPEND="virtual/libc"
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install () {
 	einstall || die
 
@@ -36,11 +31,11 @@ src_install () {
 	mv ${D}/usr/{bin,sbin}/netserver || die
 
 	# init.d / conf.d
-	exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}-2.2-init netperf
-	insinto /etc/conf.d ; newins ${FILESDIR}/${PN}-2.2-conf netperf
+	newinitd ${FILESDIR}/${PN}-2.2-init netperf
+	newconfd ${FILESDIR}/${PN}-2.2-conf netperf
 
 	# documentation and example scripts
 	dodoc AUTHORS ChangeLog COPYING NEWS README Release_Notes doc/netperf.pdf
-	mkdir ${D}/usr/share/doc/${PF}/examples
-	mv ${D}/usr/bin/*_script ${D}//usr/share/doc/${PF}/examples
+	dodir /usr/share/doc/${PF}/examples
+	mv ${D}/usr/bin/*_script ${D}/usr/share/doc/${PF}/examples
 }
