@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2fec701ef92403a72fb229d2d25cb487 jimi-1.0.ebuild 1305
 MD5 af12b4e6934ae3f248b3c47bf9c9e1e0 ChangeLog 1085
 MD5 d3368883f3e359f54f63ee8dbf1f5f61 metadata.xml 592
 MD5 8ec838971f780c36dfcd2850a7276f7d files/digest-jimi-1.0 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2NX+/rLF9B432nYRAmOdAJ9eNIT1uKBU/xIfGwBjWJLcHn5/xQCeNJ08
+mI/5bPI9hQ43qNazpgU6Vno=
+=vmT7
+-----END PGP SIGNATURE-----

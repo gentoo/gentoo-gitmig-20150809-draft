@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/jimi-1.0.ebuild,v 1.8 2004/12/23 12:05:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/jimi-1.0.ebuild,v 1.9 2005/07/16 09:39:55 axxo Exp $
 
 inherit java-pkg
 
@@ -17,8 +17,9 @@ LICENSE="sun-bcla-jimi"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc amd64"
 IUSE="doc"
-DEPEND="virtual/jre
+DEPEND=">=virtual/jdk-1.2
 		app-arch/unzip"
+RDEPEND=">=virtual/jre-1.2"
 RESTRICT="fetch"
 
 S=${WORKDIR}/Jimi
@@ -38,7 +39,7 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}/src
-	javac -target 1.2 -classpath . -d classes $(cat main_classes.txt) || die "failes to	compile"
+	javac -source 1.2 -target 1.2 -classpath . -d classes $(cat main_classes.txt) || die "failes to	compile"
 	jar -cf ${PN}.jar -C classes . || die "failed to create jar"
 }
 
