@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 a3981ddd3ce58c9b7a22c2b668730c6a ChangeLog 741
 MD5 92797bcb47c13ca4661d0ed2de6de765 metadata.xml 832
 MD5 8149fece39504036eda5e55f8b1331f7 ploticus-2.30.ebuild 3868
-MD5 77b7cf5ea56803008ff4474cec6c4d70 ChangeLog 662
-MD5 82151b81ccc42d0b1a20d4111bfdd70b ploticus-2.31.ebuild 4061
+MD5 6cc4c11de961ccdbfdaf6597a14c9492 ploticus-2.31.ebuild 4060
 MD5 bfc66e7cb49aceece8fe2c25a022b7c6 files/11ploticus 47
 MD5 7e62aeab46857cc9d3f9b4678476dc98 files/digest-ploticus-2.30 60
 MD5 24f51384258b69ce8e94bd28c9814370 files/pl230src.patch 5532
-MD5 4a69c9d66d8e90c187efe21f77bcb494 files/pl231src.patch 6185
 MD5 dad8b1e68cbc5385a3f936a2d96083e8 files/digest-ploticus-2.31 124
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2KAwmdTrptrqvGERAk0vAJ9kyFv+aiYnrlnc0NzATURgA+qADgCeIAQh
-5JqXrBa+30Ip7Wg5B46swGo=
-=TZxI
------END PGP SIGNATURE-----
+MD5 4a69c9d66d8e90c187efe21f77bcb494 files/pl231src.patch 6185
