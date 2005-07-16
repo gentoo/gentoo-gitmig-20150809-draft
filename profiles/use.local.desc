@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1316 2005/07/15 20:16:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1317 2005/07/16 21:33:11 weeve Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -646,7 +646,9 @@ net-ftp/proftpd:softquota - Enable support for the mod_quotatab
 net-ftp/proftpd:xinetd - Enable support for starting from xinetd
 net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risc)
 net-ftp/vsftpd:xinetd - Add support for running under xinetd
+net-im/bitlbee:aimextras - Enables extra AIM patches not supported by upstream
 net-im/bitlbee:flood - Enable flood protection support
+net-im/bitlbee:msnextras - Enables extra MSN patches not supported by upstream
 net-im/bitlbee:openssl - Use OpenSSL for SSL support in MSN and Jabber.
 net-im/centericq:gg - Enable support for the Gadu-Gadu IM protocol
 net-im/centericq:irc - Enable support for the IRC protocol
