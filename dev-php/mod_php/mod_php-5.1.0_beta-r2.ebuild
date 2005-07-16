@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.1.0_beta-r2.ebuild,v 1.1 2005/07/13 15:16:24 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.1.0_beta-r2.ebuild,v 1.2 2005/07/16 15:23:54 swegener Exp $
 
-IUSE="${IUSE} apache2"
+IUSE="apache2"
 
 # this duplicates the code from depend.apache.eclass, but it's the
 # only way to do this here
