@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/c3p0-0.9.0_pre6.ebuild,v 1.1 2005/06/29 17:18:21 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/c3p0-0.9.0_pre6.ebuild,v 1.2 2005/07/16 14:46:15 axxo Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ DESCRIPTION="c3p0 is a java component to provide an jdbc database pool"
 HOMEPAGE="http://c3p0.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.src.tgz"
 DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-1.4
+	dev-java/ant-core
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="LGPL-2"
@@ -23,7 +23,7 @@ S=${WORKDIR}/${PN}-${MY_PV}.src
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	echo "j2ee.jar.base.dir=`java-config --jdk-home`" > build.properties
+	echo "j2ee.jar.base.dir=${JAVA_HOME}" > build.properties
 }
 
 src_compile() {
@@ -33,8 +33,8 @@ src_compile() {
 	ant ${antflags} || die "compilation failed"
 }
 
-src_install () {
-	java-pkg_newjar build/${PN}*.jar ${PN}.jar || die "installation failed"
+src_install() {
+	java-pkg_newjar build/${PN}*.jar ${PN}.jar
 	dodoc README-SRC
 	use doc && java-pkg_dohtml -r build/apidocs/*
 }
