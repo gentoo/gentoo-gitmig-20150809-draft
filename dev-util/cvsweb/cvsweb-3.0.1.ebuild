@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/cvsweb-3.0.1.ebuild,v 1.2 2004/08/25 09:10:04 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/cvsweb-3.0.1.ebuild,v 1.3 2005/07/16 15:35:45 swegener Exp $
 
 inherit webapp
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/scop/${P}.tar.g
 HOMEPAGE="http://www.freebsd.org/projects/cvsweb.html"
 IUSE=""
 
-DEPEND="$DEPEND"
+DEPEND=""
 RDEPEND=">=dev-lang/perl-5.8
 		>=dev-util/cvs-1.11
 		>=app-text/rcs-5.7
