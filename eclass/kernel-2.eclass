@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.135 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.136 2005/07/16 01:28:27 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -74,7 +74,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 
 # set LINUX_HOSTCFLAGS if not already set
-[ -z "$LINUX_HOSTCFLAGS" ] && \
+[[ -z ${LINUX_HOSTCFLAGS} ]] && \
 	LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
 
 #Eclass functions only from here onwards ...
@@ -289,16 +289,23 @@ fi
 #==============================================================
 unpack_2_4() {
 	# Kernel ARCH != portage ARCH
-	local ARCH=$(tc-arch-kernel)
+	local KARCH=$(tc-arch-kernel)
 
-	cd ${S}
+	# When cross-compiling, we need to set the ARCH/CROSS_COMPILE
+	# variables properly or bad things happen !
+	local xmakeopts="ARCH=${KARCH}"
+	if [[ ${CTARGET} != ${CHOST} ]]; then
+		xmakeopts="${xmakeopts} CROSS_COMPILE=${CTARGET}-"
+	elif type -p ${CHOST}-ar; then
+		xmakeopts="${xmakeopts} CROSS_COMPILE=${CHOST}-"
+	fi
+
+	cd "${S}"
 	# this file is required for other things to build properly,
 	# so we autogenerate it
-	make mrproper || die "make mrproper died"
-	make include/linux/version.h || die "make include/linux/version.h failed"
+	make mrproper ${xmakeopts} || die "make mrproper died"
+	make include/linux/version.h ${xmakeopts} || die "make include/linux/version.h failed"
 	echo ">>> version.h compiled successfully."
-
-	ARCH=$(tc-arch)
 }
 
 universal_unpack() {
@@ -308,7 +315,7 @@ universal_unpack() {
 		mv linux-${OKV} linux-${KV_FULL} \
 			|| die "Unable to move source tree to ${KV_FULL}."
 	fi
-	cd ${S}
+	cd "${S}"
 
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
@@ -316,11 +323,11 @@ universal_unpack() {
 	# fix a problem on ppc where TOUT writes to /usr/src/linux breaking sandbox
 	use ppc && \
 		sed -ie 's|TOUT	:= .tmp_gas_check|TOUT	:= $(T).tmp_gas_check|' \
-		${S}/arch/ppc/Makefile
+		"${S}"/arch/ppc/Makefile
 }
 
 unpack_set_extraversion() {
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
 	cd ${OLDPWD}
 }
@@ -328,13 +335,13 @@ unpack_set_extraversion() {
 # Should be done after patches have been applied
 # Otherwise patches that modify the same area of Makefile will fail
 unpack_fix_install_path() {
-	cd ${S}
+	cd "${S}"
 	sed	-i -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' Makefile
 }
 
 unpack_fix_docbook() {
 	if [[ -d ${S}/Documentation/DocBook ]]; then
-		cd ${S}/Documentation/DocBook
+		cd "${S}"/Documentation/DocBook
 		sed -ie "s:db2:docbook2:g" Makefile
 		cd ${OLDPWD}
 	fi
@@ -349,7 +356,7 @@ compile_headers() {
 
 	# if we couldnt obtain HOSTCFLAGS from the Makefile,
 	# then set it to something sane
-	local HOSTCFLAGS=$(getfilevar HOSTCFLAGS ${S}/Makefile)
+	local HOSTCFLAGS=$(getfilevar HOSTCFLAGS "${S}"/Makefile)
 	HOSTCFLAGS=${HOSTCFLAGS:--Wall -Wstrict-prototypes -O2 -fomit-frame-pointer}
 
 	# Kernel ARCH != portage ARCH
@@ -409,55 +416,55 @@ install_universal() {
 install_headers() {
 	local ddir=$(kernel_header_destdir)
 
-	cd ${S}
+	cd "${S}"
 	dodir ${ddir}/linux
-	cp -ax ${S}/include/linux/* ${D}/${ddir}/linux
+	cp -ax "${S}"/include/linux/* ${D}/${ddir}/linux
 	rm -rf ${D}/${ddir}/linux/modules
 
 	# Handle multilib headers
 	case $(tc-arch-kernel) in
 		sparc64)
 			dodir ${ddir}/asm-sparc
-			cp -ax ${S}/include/asm-sparc/* ${D}/${ddir}/asm-sparc
+			cp -ax "${S}"/include/asm-sparc/* ${D}/${ddir}/asm-sparc
 
 			dodir ${ddir}/asm-sparc64
-			cp -ax ${S}/include/asm-sparc64/* ${D}/${ddir}/asm-sparc64
+			cp -ax "${S}"/include/asm-sparc64/* ${D}/${ddir}/asm-sparc64
 
 			create_ml_includes ${ddir}/asm !__arch64__:${ddir}/asm-sparc __arch64__:${ddir}/asm-sparc64
 			;;
 		x86_64)
 			dodir ${ddir}/asm-i386
-			cp -ax ${S}/include/asm-i386/* ${D}/${ddir}/asm-i386
+			cp -ax "${S}"/include/asm-i386/* ${D}/${ddir}/asm-i386
 
 			dodir ${ddir}/asm-x86_64
-			cp -ax ${S}/include/asm-x86_64/* ${D}/${ddir}/asm-x86_64
+			cp -ax "${S}"/include/asm-x86_64/* ${D}/${ddir}/asm-x86_64
 
 			create_ml_includes ${ddir}/asm __i386__:${ddir}/asm-i386 __x86_64__:${ddir}/asm-x86_64
 			;;
 		ppc64)
 			dodir ${ddir}/asm-ppc
-			cp -ax ${S}/include/asm-ppc/* ${D}/${ddir}/asm-ppc
+			cp -ax "${S}"/include/asm-ppc/* ${D}/${ddir}/asm-ppc
 
 			dodir ${ddir}/asm-ppc64
-			cp -ax ${S}/include/asm-ppc64/* ${D}/${ddir}/asm-ppc64
+			cp -ax "${S}"/include/asm-ppc64/* ${D}/${ddir}/asm-ppc64
 
 			create_ml_includes ${ddir}/asm !__powerpc64__:${ddir}/asm-ppc __powerpc64__:${ddir}/asm-ppc64
 			;;
 		arm)
 			dodir ${ddir}/asm
-			cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
+			cp -ax "${S}"/include/asm/* ${D}/${ddir}/asm
 			[[ ! -e ${D}/${ddir}/asm/arch ]] && ln -s arch-ebsa285 ${D}/${ddir}/asm/arch
 			[[ ! -e ${D}/${ddir}/asm/proc ]] && ln -s proc-armv ${D}/${ddir}/asm/proc
 			;;
 		*)
 			dodir ${ddir}/asm
-			cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
+			cp -ax "${S}"/include/asm/* ${D}/${ddir}/asm
 			;;
 	esac
 
 	if kernel_is 2 6; then
 		dodir ${ddir}/asm-generic
-		cp -ax ${S}/include/asm-generic/* ${D}/${ddir}/asm-generic
+		cp -ax "${S}"/include/asm-generic/* ${D}/${ddir}/asm-generic
 	fi
 
 	# clean up
@@ -469,18 +476,18 @@ install_headers() {
 install_sources() {
 	local doc docs file
 
-	cd ${S}
+	cd "${S}"
 	dodir /usr/src
 	echo ">>> Copying sources ..."
 
 	file="$(find ${WORKDIR} -iname "docs" -type d)"
 	if [[ -n ${file} ]]; then
 		for file in $(find ${file} -type f); do
-			echo "${file//*docs\/}" >> ${S}/patches.txt
-			echo "===================================================" >> ${S}/patches.txt
-			cat ${file} >> ${S}/patches.txt
-			echo "===================================================" >> ${S}/patches.txt
-			echo "" >> ${S}/patches.txt
+			echo "${file//*docs\/}" >> "${S}"/patches.txt
+			echo "===================================================" >> "${S}"/patches.txt
+			cat ${file} >> "${S}"/patches.txt
+			echo "===================================================" >> "${S}"/patches.txt
+			echo "" >> "${S}"/patches.txt
 		done
 	fi
 
@@ -488,7 +495,7 @@ install_sources() {
 		# patches.txt is empty so lets use our ChangeLog
 		[[ -f ${FILESDIR}/../ChangeLog ]] && \
 			echo "Please check the ebuild ChangeLog for more details." \
-			> ${S}/patches.txt
+			> "${S}"/patches.txt
 	fi
 
 	for doc in ${UNIPATCH_DOCS}; do	[[ -f ${doc} ]] && docs="${docs} ${doc}"; done
@@ -909,7 +916,7 @@ kernel-2_src_unpack() {
 }
 
 kernel-2_src_compile() {
-	cd ${S}
+	cd "${S}"
 	[[ ${ETYPE} == headers ]] && compile_headers
 	[[ ${ETYPE} == sources ]] && \
 		use doc && ! use arm && ! use s390 && compile_manpages
