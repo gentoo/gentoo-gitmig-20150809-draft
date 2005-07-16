@@ -1,4 +1,4 @@
-diff -ur gamin-0.1.2/libgamin/gam_api.c gamin-0.1.2-fbsd/libgamin/gam_api.c
+diff -ur -x '*~' gamin-0.1.2/libgamin/gam_api.c gamin-0.1.2-fbsd/libgamin/gam_api.c
 --- gamin-0.1.2/libgamin/gam_api.c	2005-06-15 12:53:25.000000000 +0200
 +++ gamin-0.1.2-fbsd/libgamin/gam_api.c	2005-07-16 00:15:37.317345328 +0200
 @@ -421,7 +421,7 @@
@@ -29,10 +29,21 @@ diff -ur gamin-0.1.2/libgamin/gam_api.c gamin-0.1.2-fbsd/libgamin/gam_api.c
      {
          int on = 1;
 Only in gamin-0.1.2-fbsd/libgamin: gam_api.c.orig
-diff -ur gamin-0.1.2/libgamin/gam_data.c gamin-0.1.2-fbsd/libgamin/gam_data.c
+diff -ur -x '*~' gamin-0.1.2/libgamin/gam_data.c gamin-0.1.2-fbsd/libgamin/gam_data.c
 --- gamin-0.1.2/libgamin/gam_data.c	2005-05-18 16:45:04.000000000 +0200
-+++ gamin-0.1.2-fbsd/libgamin/gam_data.c	2005-07-16 00:15:37.321344720 +0200
-@@ -471,7 +471,7 @@
++++ gamin-0.1.2-fbsd/libgamin/gam_data.c	2005-07-16 12:06:58.586806112 +0200
+@@ -17,6 +17,10 @@
+ #ifdef HAVE_PTHREAD_H
+ #include <pthread.h>
+ 
++# ifdef __GLIBC__
++#  define PTHREAD_MUTEX_RECURSIVE PTHREAD_MUTEX_RECURSIVE_NP
++# endif
++
+ static int is_threaded = -1;
+ #endif
+ 
+@@ -471,7 +475,7 @@
      }
      if (is_threaded > 0) {
  	pthread_mutexattr_init(&attr);
@@ -41,7 +52,7 @@ diff -ur gamin-0.1.2/libgamin/gam_data.c gamin-0.1.2-fbsd/libgamin/gam_data.c
  	pthread_mutex_init(&ret->lock, &attr);
  	pthread_mutexattr_destroy(&attr);
      }
-diff -ur gamin-0.1.2/server/gam_channel.c gamin-0.1.2-fbsd/server/gam_channel.c
+diff -ur -x '*~' gamin-0.1.2/server/gam_channel.c gamin-0.1.2-fbsd/server/gam_channel.c
 --- gamin-0.1.2/server/gam_channel.c	2005-06-15 13:02:34.000000000 +0200
 +++ gamin-0.1.2-fbsd/server/gam_channel.c	2005-07-16 00:15:37.326343960 +0200
 @@ -29,7 +29,7 @@
@@ -71,7 +82,7 @@ diff -ur gamin-0.1.2/server/gam_channel.c gamin-0.1.2-fbsd/server/gam_channel.c
      /* Set the socket to receive credentials on the next message */
      {
          int on = 1;
-diff -ur gamin-0.1.2/server/gam_connection.c gamin-0.1.2-fbsd/server/gam_connection.c
+diff -ur -x '*~' gamin-0.1.2/server/gam_connection.c gamin-0.1.2-fbsd/server/gam_connection.c
 --- gamin-0.1.2/server/gam_connection.c	2005-06-14 14:31:19.000000000 +0200
 +++ gamin-0.1.2-fbsd/server/gam_connection.c	2005-07-16 00:15:37.332343048 +0200
 @@ -30,10 +30,7 @@
@@ -95,7 +106,7 @@ diff -ur gamin-0.1.2/server/gam_connection.c gamin-0.1.2-fbsd/server/gam_connect
      *size = sizeof(GAMPacket) - conn->request_len;
  
      return (0);
-diff -ur gamin-0.1.2/tests/testing.c gamin-0.1.2-fbsd/tests/testing.c
+diff -ur -x '*~' gamin-0.1.2/tests/testing.c gamin-0.1.2-fbsd/tests/testing.c
 --- gamin-0.1.2/tests/testing.c	2005-06-13 10:59:29.000000000 +0200
 +++ gamin-0.1.2-fbsd/tests/testing.c	2005-07-16 00:15:37.337342288 +0200
 @@ -436,9 +436,9 @@

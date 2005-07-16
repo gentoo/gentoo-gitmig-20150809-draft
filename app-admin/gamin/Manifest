@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 953a39c639fab8ae825404b7a36dee87 gamin-0.1.2.ebuild 1810
-MD5 6ca2d5e408a7462bf27a5025d7f1a671 ChangeLog 4780
-MD5 03f3bc849895689c9635a6a7e8c11d0b gamin-0.1.1.ebuild 1345
+MD5 b124950dfdb50063a36adab8741871bc ChangeLog 4933
 MD5 875135e8740bafa4dab79ee592cf9744 metadata.xml 279
+MD5 03f3bc849895689c9635a6a7e8c11d0b gamin-0.1.1.ebuild 1345
+MD5 4dcf9ef178820168a4233e6f8fbbd6ee gamin-0.1.2.ebuild 1812
 MD5 fd8dba98fd1b79aed73e3b6f17e0a779 files/digest-gamin-0.1.1 63
 MD5 50691da4c01bbd32e1397b8873180986 files/gamin-0.1.1-inotify-fix.patch 14533
-MD5 34c4d5ec0d78793575451f664d9de425 files/gamin-0.1.2-freebsd.patch 4312
 MD5 2ab0167c306465e140ebfe2d8151fced files/digest-gamin-0.1.2 63
+MD5 6e519de04a1b260384534977bb6ba1f6 files/gamin-0.1.2-freebsd.patch 4550
 MD5 67e42fe9ea88f0a3a0bc59377d43aab5 files/gamin-0.1.2-inotify-legacy-backend.patch 27593
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2N2L1ZcsMnZjRyIRAjCAAKCDJafgm77O0GeluB9ZMZnDw8xMggCeLLYO
-8Iznu+pL76wprOuxqP8mQkY=
-=kNHo
+iD8DBQFC2N2Dj5H05b2HAEkRAvGHAJ9awhETpVMUroBJb85CyTPzvNQKogCfeG1A
+5Q1QlxUxXk13Q8gNz76UG8Y=
+=8Vku
 -----END PGP SIGNATURE-----

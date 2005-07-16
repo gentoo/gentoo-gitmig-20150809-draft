@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.25 2005/07/16 10:09:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.26 2005/07/16 10:11:47 flameeyes Exp $
+
+  16 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  files/gamin-0.1.2-freebsd.patch:
+  Updated freebsd patch to build fine on GLIBC systems, too.
 
   16 Jul 2005; Martin Schlemmer <azarah@gentoo.org> gamin-0.1.2.ebuild:
   Remove fbsd patch for now.
