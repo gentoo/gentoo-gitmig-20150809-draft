@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.2.0.ebuild,v 1.4 2005/02/06 16:48:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.2.0.ebuild,v 1.5 2005/07/16 18:36:38 axxo Exp $
 
 MY_PV="${PV//./_}"
 MY_PNB="Fujaba_${PV:0:1}"
@@ -17,7 +17,8 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/log4j
 	~dev-java/jdom-1.0_beta10
 	=dev-java/xerces-1.3*"
-DEPEND=">=virtual/jdk-1.4"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}"
 
 S=${WORKDIR}
 
