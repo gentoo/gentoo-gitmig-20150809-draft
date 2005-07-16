@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/posh-0.2.28.ebuild,v 1.8 2005/01/01 15:58:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/posh-0.3.18.ebuild,v 1.1 2005/07/16 09:45:08 dragonheart Exp $
 
 DESCRIPTION="stripped-down version of pdksh"
 HOMEPAGE="http://packages.debian.org/posh/"
@@ -14,6 +14,5 @@ IUSE=""
 DEPEND=""
 
 src_install() {
-	einstall bindir=${D}/bin
-	dodoc BUG-REPORTS CONTRIBUTORS ChangeLog NEWS NOTES PROJECTS README
+	emake DESTDIR=${D} bindir=/bin install || die
 }
