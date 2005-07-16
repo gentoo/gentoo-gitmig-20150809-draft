@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e5b99b220f35fcd8a51fec3c014ac9f3 fscript-1.15.ebuild 926
 MD5 7e4d626930a0cf29d55b870037ecc211 fscript-1.14.ebuild 925
 MD5 6f5c31b6fdf519d855ddb4451b8f1d5b ChangeLog 1274
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 103dbcb0b2f1efbcf4e91ba1c978e5f6 files/digest-fscript-1.14 61
 MD5 bf48481be411a104fdb421903ac733d1 files/digest-fscript-1.15 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2Qws/rLF9B432nYRAgtVAJ9UZWTcmQilzvkp4jY1OulEqicNfACcDoAV
+Oxt0PvRZfZWbU5OE92m6I4w=
+=TZB9
+-----END PGP SIGNATURE-----
