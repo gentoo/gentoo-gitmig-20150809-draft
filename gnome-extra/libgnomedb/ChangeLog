@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.38 2005/07/04 18:45:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.39 2005/07/16 11:47:09 leonardop Exp $
+
+  16 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> libgnomedb-1.2.2.ebuild:
+  Stable on x86.
 
   04 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   libgnomedb-1.2.1.ebuild:

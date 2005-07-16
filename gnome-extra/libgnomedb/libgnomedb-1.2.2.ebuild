@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.2.2.ebuild,v 1.1 2005/06/16 23:03:18 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.2.2.ebuild,v 1.2 2005/07/16 11:47:09 leonardop Exp $
 
-inherit gnome2 eutils
+inherit eutils gnome2
 
 DESCRIPTION="Database widget library."
 HOMEPAGE="http://www.gnome-db.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="doc static"
 
 RDEPEND=">=gnome-extra/libgda-1.1.99
