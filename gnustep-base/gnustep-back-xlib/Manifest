@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5b7a0629c95e63b97299eae1d03f1d28 ChangeLog 4033
 MD5 14c86d6ff5e83af36ad3d54266af5c99 files/config-gnustep-back-xlib.sh 181
 MD5 886a210bb5db57775f15aa3261c8e632 files/digest-gnustep-back-xlib-0.9.5 70
@@ -9,3 +12,10 @@ MD5 d862869f8b422dc78bdbd3fbde701db8 gnustep-back-xlib-0.9.5.ebuild 1229
 MD5 8b97b14ec925e2a4b4d6745ad221f898 gnustep-back-xlib-0.9.5_pre20050312.ebuild 1356
 MD5 e66fe0da752b2026ca12ca178aba35ae gnustep-back-xlib-0.9.6.ebuild 1230
 MD5 ef356714ab02a84c6e88fe3720749aea metadata.xml 1022
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2S0HI1lqEGTUzyQRAtljAJ0cVIdIXpN7h5mL5HMahrrWbzHyMwCfbiyI
+e5zBtPax19bFVWVAm5C8qqM=
+=rcoC
+-----END PGP SIGNATURE-----
