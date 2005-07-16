@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/nautilus-cd-burner
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.83 2005/07/14 07:49:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.84 2005/07/16 09:53:01 leonardop Exp $
+
+*nautilus-cd-burner-2.10.2 (16 Jul 2005)
+
+  16 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  nautilus-cd-burner-2.10.2.ebuild,
+  files/nautilus-cd-burner-2.10.2-configure.patch:
+  New version. Added 'static' USE flag. Added patch to fix a small issue in
+  the configure script that broke compilation without 'hal' enabled.
 
   12 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
   nautilus-cd-burner-2.10.0.ebuild, nautilus-cd-burner-2.10.1:

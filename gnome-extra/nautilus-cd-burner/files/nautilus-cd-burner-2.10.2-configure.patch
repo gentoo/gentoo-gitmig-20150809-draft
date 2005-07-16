@@ -1,0 +1,31 @@
+diff -NurdB nautilus-cd-burner-2.10.2/configure.in nautilus-cd-burner-2.10.2-patched/configure.in
+--- nautilus-cd-burner-2.10.2/configure.in	2005-06-22 10:53:19.000000000 -0500
++++ nautilus-cd-burner-2.10.2-patched/configure.in	2005-07-16 04:19:23.000000000 -0500
+@@ -99,13 +99,6 @@
+ esac],
+ [ENABLE_HAL=yes]) dnl Default value
+ 
+-HAL=""
+-if test "x$ENABLE_HAL" = "xyes"; then
+-	PKG_CHECK_MODULES(HAL, hal >= $HAL_REQUIRED,
+-		[ AC_DEFINE([USE_HAL], 1, [Use the HAL library])]
+-		[HAL="hal >= $HAL_REQUIRED" ], :)
+-fi
+-
+ dnl ===========================================================================
+ dnl Check for modules and libraries
+ 
+@@ -113,6 +106,13 @@
+  gnome-vfs-2.0 >= $GNOME_VFS_REQUIRED dnl
+  gnome-vfs-module-2.0 >= $GNOME_VFS_REQUIRED)
+ 
++HAL=""
++if test "x$ENABLE_HAL" = "xyes"; then
++	PKG_CHECK_MODULES(HAL, hal >= $HAL_REQUIRED,
++		[ AC_DEFINE([USE_HAL], 1, [Use the HAL library])]
++		[HAL="hal >= $HAL_REQUIRED" ], :)
++fi
++
+ PKG_CHECK_MODULES(DAEMON, glib-2.0 >= $GLIB_REQUIRED)
+ AC_CHECK_LIB(socket, bind, 
+     DAEMON_LIBS="$DAEMON_LIBS -lsocket",
