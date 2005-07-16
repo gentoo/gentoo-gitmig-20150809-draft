@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.17 2005/06/25 14:05:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.18 2005/07/16 23:40:44 eradicator Exp $
+
+  16 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -mythtv-themes-0.13.ebuild, -mythtv-themes-0.14.ebuild,
+  -mythtv-themes-0.15.ebuild, -mythtv-themes-0.17.ebuild,
+  mythtv-themes-0.18.ebuild:
+  Stable amd64, x86.  Deleted old versions.
 
   25 Jun 2005; Sven Wegener <swegener@gentoo.org> mythtv-themes-0.13.ebuild,
   mythtv-themes-0.14.ebuild, mythtv-themes-0.15.ebuild,
