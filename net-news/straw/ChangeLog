@@ -1,6 +1,14 @@
 # ChangeLog for net-news/straw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.3 2005/03/18 14:35:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.4 2005/07/16 14:35:14 allanonjl Exp $
+
+*straw-0.25.1-r1 (16 Jul 2005)
+*straw-0.19.2-r1 (16 Jul 2005)
+
+  16 Jul 2005; John N. Laliberte <allanonjl@gentoo.org>
+  -straw-0.19.2.ebuild, +straw-0.19.2-r1.ebuild, -straw-0.25.1.ebuild,
+  +straw-0.25.1-r1.ebuild:
+  add deps on gnome-python-extras because gtkhtml2 module moved.  fixes #97764
 
 *straw-0.25.1 (18 Mar 2005)
 *straw-0.23 (18 Mar 2005)

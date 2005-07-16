@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.25.1.ebuild,v 1.2 2005/06/21 13:52:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.25.1-r1.ebuild,v 1.1 2005/07/16 14:35:14 allanonjl Exp $
 
 inherit gnome2 python distutils virtualx
 
@@ -22,6 +22,7 @@ RDEPEND="${DEPEND}
 	>=dev-python/pygtk-1.99.13-r1
 	>=dev-python/bsddb3-3.4.0
 	>=dev-python/egenix-mx-base-2
+	dev-python/gnome-python-extras
 	!ppc? ( >=dev-python/adns-python-1.0.0 )"
 
 # REMIND : egenix-mx-base is only needed for the conversion of

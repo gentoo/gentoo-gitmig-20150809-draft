@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.19.2.ebuild,v 1.1 2005/03/18 14:22:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.19.2-r1.ebuild,v 1.1 2005/07/16 14:35:14 allanonjl Exp $
 
 inherit python distutils
 
@@ -19,7 +19,9 @@ RDEPEND=">=dev-lang/python-2.2.3-r3
 	>=dev-python/bsddb3-3.4.0
 	>=dev-python/pyxml-0.8.1
 	>=dev-python/egenix-mx-base-2
-	=dev-python/adns-python-1.0.0"
+	=dev-python/adns-python-1.0.0
+	dev-python/gnome-python-extras
+	"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
