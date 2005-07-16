@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 16d424006d10bcb234f87bdb561d15c8 ChangeLog 621
-MD5 3be443df0c73ba023ba1b75d762d48b7 jarwizard-2.34.ebuild 1073
+MD5 f902525463042384e040f835df2ba223 jarwizard-2.34.ebuild 1059
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 bffd856964a56ec09c114dc502ea8a72 files/digest-jarwizard-2.34 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBiMVy/rLF9B432nYRAuBvAKCvdv77iK+8qo+/NunBzD/+Kai+XgCgzxEO
-ycGJXS9vHxtoxPIJ8mapQb0=
-=Lrv2
+iD8DBQFC2Vig/rLF9B432nYRAtTUAKCFD10CMgBIoOHn2OF6sFku/2gOKgCfVADn
+WG4WceIACBrMDZNIMtWpFho=
+=UtdV
 -----END PGP SIGNATURE-----
