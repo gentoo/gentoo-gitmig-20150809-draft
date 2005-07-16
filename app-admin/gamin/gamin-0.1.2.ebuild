@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.2.ebuild,v 1.1 2005/07/16 08:09:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.2.ebuild,v 1.2 2005/07/16 08:16:46 azarah Exp $
 
 inherit eutils libtool
 
@@ -24,12 +24,14 @@ PROVIDE="virtual/fam"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
+	# Fixup FreeBSD support, bug #99158
+	epatch ${FILESDIR}/${P}-freebsd.patch
 	# Add support for legacy inotify interface
 	epatch ${FILESDIR}/${P}-inotify-legacy-backend.patch
 
-	# Needed by above patch
+	# Needed by above 'legacy inotify' patch
 	aclocal || die "aclocal failed"
 	autoheader || die "autoheader failed"
 	libtoolize --automake -c -f || die "libtoolize failed"

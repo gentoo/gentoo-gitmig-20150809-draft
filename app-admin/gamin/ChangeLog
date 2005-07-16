@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.23 2005/07/16 08:09:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.24 2005/07/16 08:16:46 azarah Exp $
+
+  16 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/gamin-0.1.2-freebsd.patch, gamin-0.1.2.ebuild:
+  Fixup FreeBSD support, bug #99158.
 
 *gamin-0.1.2 (16 Jul 2005)
 
