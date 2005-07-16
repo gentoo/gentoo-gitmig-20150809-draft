@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.2.ebuild,v 1.6 2005/01/01 18:08:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.2.ebuild,v 1.7 2005/07/16 17:18:31 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -9,6 +9,7 @@ SRC_URI="mirror://gentoo/aspectj-CVS-V1_2_0.tar.bz2"
 HOMEPAGE="http://www.eclipse.org/aspectj/"
 DEPEND=">=virtual/jdk-1.3
 	dev-java/ant"
+RDEPEND=">=virtual/jre-1.3"
 SLOT="0"
 LICENSE="CPL-1.0 Apache-1.1"
 KEYWORDS="x86 ~ppc amd64"
@@ -50,7 +51,7 @@ src_compile() {
 	ant -f build.xml || die "build failed"
 }
 
-src_install () {
+src_install() {
 	mkdir aspectj-unpack
 	java -jar aj-build/dist/aspectj-${PV}.jar -to aspectj-unpack
 	cd aspectj-unpack
