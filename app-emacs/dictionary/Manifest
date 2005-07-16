@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b1d8ebf9f8000c61b98aefb3bc783657 ChangeLog 974
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 265781dc2ef9898be6096639f101ae13 dictionary-1.8.7.ebuild 617
 MD5 2f40890c9ee96d59722cb378c5ea0d34 files/digest-dictionary-1.8.7 67
 MD5 fed8cfe9cc0c1eb524b5f8b91ab593c6 files/50dictionary-gentoo.el 208
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2SybcsIHjyDViGQRAujpAKCdUps+EEhhcy7qnFfn10c9H2ZcJACg55i+
+LzOuLXKj5dyPHm5aX3NLeCw=
+=t2c0
+-----END PGP SIGNATURE-----
