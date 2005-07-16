@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.102 2005/07/14 22:03:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.103 2005/07/16 20:31:01 plasmaroo Exp $
+
+*genkernel-3.2.7 (16 Jul 2005)
+
+  16 Jul 2005; <plasmaroo@gentoo.org> +genkernel-3.2.7.ebuild:
+  Fix #98886.
 
 *genkernel-3.2.5 (14 Jul 2005)
 
