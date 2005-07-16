@@ -1,4 +1,14 @@
-MD5 3f5a3e8b8045babff18698753fe6696b planet-20040808.ebuild 882
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 802e43746f8c0a14a04b92876f606319 ChangeLog 598
-MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
 MD5 371f6c7211b7d50e30aa0eab41346953 files/digest-planet-20040808 68
+MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
+MD5 651425a92ef02181daa4731fcb847430 planet-20040808.ebuild 863
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2SeuI1lqEGTUzyQRAu+RAKDdAZCrzs/uSNlqnDprTq3j/U/VBACgmpBX
+dwJO7SBu+d6CkZfFatw9Lzs=
+=CZkF
+-----END PGP SIGNATURE-----
