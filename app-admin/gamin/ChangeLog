@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.22 2005/07/02 08:56:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.23 2005/07/16 08:09:15 azarah Exp $
+
+*gamin-0.1.2 (16 Jul 2005)
+
+  16 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/gamin-0.1.2-inotify-legacy-backend.patch, +gamin-0.1.2.ebuild:
+  Update version.  Add support for legacy inotify (patch from me).
 
   02 Jul 2005; Doug Goldstein <cardoe@gentoo.org> gamin-0.1.1.ebuild:
   some FreeBSD fix-ups
