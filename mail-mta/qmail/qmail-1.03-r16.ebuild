@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.25 2005/07/14 21:35:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.26 2005/07/16 14:12:50 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -12,7 +12,6 @@ HOMEPAGE="http://www.qmail.org/
 SRC_URI="mirror://qmail/${P}.tar.gz
 	mirror://qmail/qmailqueue-patch
 	http://qmail.null.dk/big-todo.103.patch
-	http://www.jedi.claranet.fr/qmail-link-sync.patch
 	mirror://qmail/big-concurrency.patch
 	http://www.suspectclass.com/~sgifford/qmail/qmail-1.03-0.0.0.0-0.2.patch
 	http://david.acz.org/software/sendmail-flagf.patch
@@ -107,7 +106,8 @@ src_unpack() {
 	epatch ${DISTDIR}/qmail-local-tabs.patch
 
 	# Account for Linux filesystems lack of a synchronus link()
-	epatch ${DISTDIR}/qmail-link-sync.patch
+	# hansmi, 2005-07-16: taken out because of bug 56124, see esp. comment 23
+	# epatch ${DISTDIR}/qmail-link-sync.patch
 
 	# Increase limits for large mail systems
 	epatch ${DISTDIR}/big-concurrency.patch
@@ -237,8 +237,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PVR}/double-bounce-trim.patch
 
 	# Fix bug 49971
-	EPATCH_SINGLE_MSG="Applying fix for a special case with courier-imapd" \
-	epatch ${FILESDIR}/${PVR}/famd-dnotify.patch
+	# hansmi, 2005-07-16: taken out because of bug 56124, see esp. comment 23
+	# (the code this patch modifies isn't anymore in qmail after taking out the
+	# link-sync patch)
+	# EPATCH_SINGLE_MSG="Applying fix for a special case with courier-imapd" \
+	# epatch ${FILESDIR}/${PVR}/famd-dnotify.patch
 
 	# See bug 94257
 	epatch ${FILESDIR}/${PVR}/qmail-1.03-env-servercert.patch
