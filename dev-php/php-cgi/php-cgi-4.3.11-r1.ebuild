@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.11-r1.ebuild,v 1.5 2005/07/08 04:41:23 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.11-r1.ebuild,v 1.6 2005/07/16 15:30:12 swegener Exp $
 
 PHPSAPI="cgi"
 inherit php-sapi eutils
 
 DESCRIPTION="PHP CGI"
 SLOT="0"
-IUSE="${IUSE} force-cgi-redirect"
+IUSE="force-cgi-redirect"
 KEYWORDS="alpha amd64 hppa ia64 mips ppc sparc x86"
 
 # for this revision only
