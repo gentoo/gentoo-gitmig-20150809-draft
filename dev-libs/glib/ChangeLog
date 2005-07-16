@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.143 2005/07/02 13:51:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.144 2005/07/16 21:16:06 flameeyes Exp $
+
+  16 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> glib-1.2.10-r5.ebuild:
+  Don't use -ldl when using FreeBSD's libc, as it's not present.
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> glib-2.6.4.ebuild:
   Stable on alpha.
