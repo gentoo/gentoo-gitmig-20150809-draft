@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.1.ebuild,v 1.7 2005/04/22 08:32:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.1.ebuild,v 1.8 2005/07/16 11:51:30 axxo Exp $
 
 inherit java-pkg
 
@@ -13,15 +13,16 @@ KEYWORDS="x86 ~ppc ~sparc amd64"
 
 IUSE="jikes doc"
 
-DEPEND=">=virtual/jdk-1.1
-	jikes? ( >=dev-java/jikes-1.19 )"
 RDEPEND=">=dev-lang/tcl-8.4.5
-	>=virtual/jdk-1.1"
+	>=virtual/jre-1.1"
+DEPEND=">=virtual/jdk-1.1
+	${RDEPEND}
+	jikes? ( >=dev-java/jikes-1.19 )"
 
 S=${WORKDIR}/${P//-}
 
 src_compile() {
-	econf --enable-jacl `use_with jikes` || die
+	econf --enable-jacl $(use_with jikes) || die
 	emake DESTDIR="/usr/share/${PN}" || die "emake failed"
 }
 
