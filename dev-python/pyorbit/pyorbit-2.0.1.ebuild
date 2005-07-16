@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/pyorbit-2.0.1.ebuild,v 1.2 2005/04/16 23:33:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/pyorbit-2.0.1.ebuild,v 1.3 2005/07/16 14:21:36 allanonjl Exp $
 
 inherit python gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.daa.com.au/~james/pygtk/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.2
