@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4194 2005/07/16 12:30:45 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4195 2005/07/16 21:38:33 axxo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,23 @@
 ##
 ##   End example
 ##
+
+
+# <axxo@gentoo.org> (15 Jul 2005)
+# Masked pending removal
+# unmaintained cvs gui client + unmaintained jedit plugins you can easily (and better) install outside portage
+dev-util/gruntspud
+dev-java/plugspud 
+dev-java/cvslib-bin
+dev-java/gruntspudplugin
+dev-java/errorlist
+dev-java/console
+dev-java/jakartacommons
+dev-java/jdiffplugin
+dev-java/xml
+dev-java/netcomponents-bin
+dev-java/htmlparser
+dev-java/sidekick
 
 # Konstantin Arkhipov <voxus@gentoo.org> (14 Jul 2005)
 # Masked for security reasons.
