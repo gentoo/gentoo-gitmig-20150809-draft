@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.7.0-r1.ebuild,v 1.2 2005/04/02 21:43:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.7.0-r1.ebuild,v 1.3 2005/07/16 14:28:28 axxo Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,8 @@ RDEPEND=">=virtual/jre-1.4
 	=dev-java/bsf-2.3*
 	=dev-java/jakarta-oro-2.0*
 	=dev-java/gnu-regexp-1.1*"
-DEPEND="${RDEPEND}
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
 	>=dev-java/ant-1.4
 	jikes? ( dev-java/jikes )
 	junit? ( dev-java/junit )
