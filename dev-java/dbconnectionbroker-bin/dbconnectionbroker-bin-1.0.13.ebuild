@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbconnectionbroker-bin/dbconnectionbroker-bin-1.0.13.ebuild,v 1.5 2005/04/22 08:24:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbconnectionbroker-bin/dbconnectionbroker-bin-1.0.13.ebuild,v 1.6 2005/07/16 14:22:45 axxo Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ IUSE="doc"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc amd64"
-RDEPEND=">=virtual/jdk-1.2"
+RDEPEND=">=virtual/jre-1.2"
 DEPEND=">=virtual/jdk-1.2"
 
 S=${WORKDIR}
