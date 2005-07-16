@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.30 2005/07/02 23:32:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.31 2005/07/16 15:19:12 josejx Exp $
+
+  16 Jul 2005; Joseph Jezak <josejx@gentoo.org> pysqlite-2.0.2.ebuild:
+  Marked ~ppc for bug #98814.
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> pysqlite-2.0.2.ebuild:
   Add ~alpha keyword.
