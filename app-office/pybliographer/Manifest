@@ -1,7 +1,17 @@
-MD5 a1a27fa48f7f89614f70997672480dd6 ChangeLog 1319
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cf18947ebe119b670ff5d92ac1caebfd ChangeLog 1433
+MD5 a093c3da7b945d656d4546b1ad0f5fa4 pybliographer-1.2.4.ebuild 934
 MD5 684b7118ace06f88d4bdca2407ddc818 metadata.xml 184
-MD5 1f1156faac4330e991746000a0a0d738 pybliographer-1.2.4.ebuild 934
 MD5 a546c39aa4f3d663078f822f72507001 pybliographer-1.2.6.2.ebuild 944
 MD5 6dae340ffb9ad302fa14fc5098ca48d4 files/digest-pybliographer-1.2.4 71
 MD5 f7fc4731f103ab717d15a45fbddd01af files/pybliographer-1.2.4-gentoo.diff 1255
 MD5 e91367c36c5694e58a92c601b6d71614 files/digest-pybliographer-1.2.6.2 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2StdcsIHjyDViGQRAo5bAKCf5CMk5pGUetZn7w5FqOa4YpKF8QCdEh9B
+6YmeMh0JU9iT9A0LL4kaK8Q=
+=1cye
+-----END PGP SIGNATURE-----
