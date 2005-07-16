@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/jasmin-sable-1.2.7.ebuild,v 1.8 2005/04/22 08:34:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/jasmin-sable-1.2.7.ebuild,v 1.9 2005/07/16 10:49:00 axxo Exp $
 
 inherit java-pkg
 
@@ -22,14 +22,14 @@ src_compile() {
 	# for this in #46267.
 
 	cd classes
-	jar cf jas.jar jas/
-	jar cf jasmin.jar jasmin/
-	jar cf javacup.jar java_cup/
-	jar cf scm.jar scm/
+	jar cf jas.jar jas/ || die
+	jar cf jasmin.jar jasmin/ || die
+	jar cf javacup.jar java_cup/ || die
+	jar cf scm.jar scm/ || die
 	cd ${S}
 
 	if use doc ; then
-		javadoc -d doc `find . -name "*.java"` || die "Failed to build docs"
+		javadoc -d doc $(find . -name "*.java") || die "Failed to build docs"
 	fi
 }
 
