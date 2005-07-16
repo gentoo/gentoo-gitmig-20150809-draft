@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/gridlock-1.9.ebuild,v 1.3 2004/11/12 03:53:29 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/gridlock-1.9.ebuild,v 1.4 2005/07/16 15:47:34 swegener Exp $
 
 inherit gnustep
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-IUSE="${IUSE} doc"
+IUSE="doc"
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
 
@@ -27,4 +27,3 @@ src_install() {
 	fi
 	egnustep_package_config
 }
-
