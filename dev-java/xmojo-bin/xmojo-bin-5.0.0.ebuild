@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/xmojo-bin-5.0.0.ebuild,v 1.7 2005/07/09 12:59:57 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmojo-bin/xmojo-bin-5.0.0.ebuild,v 1.8 2005/07/16 12:32:36 axxo Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,9 @@ LICENSE="LGPL-2.1"
 SLOT="5.0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc"
-RDEPEND="=dev-java/crimson-1.1*
+DEPEND=""
+RDEPEND=">=virtual/jre-1.4
+	=dev-java/crimson-1.1*
 	>=dev-java/xalan-2.5
 	>=dev-java/gnu-jaxp-1.0"
 #	=dev-java/jetty-4.2*
