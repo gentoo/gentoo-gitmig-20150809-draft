@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.5.ebuild,v 1.4 2005/06/09 14:42:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.5.ebuild,v 1.5 2005/07/16 15:49:54 swegener Exp $
 
 inherit gnustep
 
@@ -12,7 +12,7 @@ KEYWORDS="~ppc x86 ~amd64 sparc ~alpha"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-IUSE="${IUSE} jpeg gif png gsnd doc cups"
+IUSE="cups gif gsnd jpeg png"
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	~gnustep-base/gnustep-make-1.10.0
 	~gnustep-base/gnustep-base-1.10.3
