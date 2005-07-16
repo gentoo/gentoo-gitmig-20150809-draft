@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222-r1.ebuild,v 1.16 2005/01/01 15:01:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222-r1.ebuild,v 1.17 2005/07/16 10:48:11 dragonheart Exp $
 
 inherit eutils
 
@@ -13,10 +13,10 @@ SRC_URI="http://fdutils.linux.lu/${PN}-5.4.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="tetex"
+IUSE="doc"
 
 DEPEND=">=sys-fs/mtools-3
-	tetex? ( virtual/tetex )"
+	doc? ( virtual/tetex )"
 
 src_unpack() {
 	unpack ${A}
@@ -30,7 +30,7 @@ src_unpack() {
 src_compile() {
 	econf --enable-fdmount-floppy-only || die
 
-	if use tetex
+	if use doc
 	then
 		make || die
 	else
