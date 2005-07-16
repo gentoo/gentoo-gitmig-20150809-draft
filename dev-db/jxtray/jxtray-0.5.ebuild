@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5.ebuild,v 1.7 2005/06/12 18:08:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5.ebuild,v 1.8 2005/07/16 16:33:34 axxo Exp $
 
 inherit java-pkg
 
@@ -12,9 +12,6 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc jikes firebird mssql mysql postgres"
 
-DEPEND=">=virtual/jdk-1.3
-	dev-java/ant-core
-	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3
 	~dev-java/jdom-1.0_beta9
 	>=dev-java/kunststoff-2.0.2
@@ -27,6 +24,10 @@ RDEPEND=">=virtual/jre-1.3
 	mysql? ( dev-java/jdbc-mysql )
 	postgres? ( dev-java/jdbc3-postgresql )
 	!firebird? ( !mssql? ( !postgres? ( dev-java/jdbc-mysql ) ) )"
+DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
+	dev-java/ant-core
+	jikes? ( dev-java/jikes )"
 
 S="${WORKDIR}/${PN}-src-${PV}"
 
@@ -37,22 +38,22 @@ src_unpack() {
 
 	cd ${S}/lib
 	rm *.jar
-	cp="${cp}:$(java-config -p jdom-1.0_beta9)"
-	cp="${cp}:$(java-config -p xerces-2)"
-	cp="${cp}:$(java-config -p xml-commons)"
-	cp="${cp}:$(java-config -p sax)"
-	cp="${cp}:$(java-config -p poi)"
+	cp="${cp}:$(java-pkg_getjars jdom-1.0_beta9)"
+	cp="${cp}:$(java-pkg_getjars xerces-2)"
+	cp="${cp}:$(java-pkg_getjars xml-commons)"
+	cp="${cp}:$(java-pkg_getjars sax)"
+	cp="${cp}:$(java-pkg_getjars poi)"
 
 	cd ${S}/lib/lookandfeel
 	rm *.jar
-	cp="${cp}:$(java-config -p kunststoff-2.0)"
+	cp="${cp}:$(java-pkg_getjars kunststoff-2.0)"
 
 	cd ${S}/lib/drivers
 	rm *.jar
-	use firebird && cp="${cp}:$(java-config -p jdbc3-firebird)"
-	use mssql && cp="${cp}:$(java-config -p jtds-0.9)"
-	use mysql && cp="${cp}:$(java-config -p jdbc-mysql)"
-	use postgres && cp="${cp}:$(java-config -p jdbc3-postgresql)"
+	use firebird && cp="${cp}:$(java-pkg_getjars jdbc3-firebird)"
+	use mssql && cp="${cp}:$(java-pkg_getjars jtds-0.9)"
+	use mysql && cp="${cp}:$(java-pkg_getjars jdbc-mysql)"
+	use postgres && cp="${cp}:$(java-pkg_getjars jdbc3-postgresql)"
 
 	echo "classpath=${cp}" > ${S}/build.properties
 }
@@ -72,7 +73,7 @@ src_install() {
 	use mysql && cp="${cp},jdbc-mysql"
 	use postgres && cp="${cp},jdbc3-postgresql"
 
-	java-pkg_dojar ${S}/dist/${PN}-${PV}.jar
+	java-pkg_newjar ${S}/dist/${P}.jar ${PN}.jar
 
 	echo "#!/bin/sh" > ${PN}
 	echo "java -cp \$(${cp}) jxtray.Jxtray" >> ${PN}
