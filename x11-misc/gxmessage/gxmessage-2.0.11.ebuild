@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.0.11.ebuild,v 1.5 2005/07/11 23:09:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.0.11.ebuild,v 1.6 2005/07/16 17:40:29 smithj Exp $
 
 IUSE=""
 
