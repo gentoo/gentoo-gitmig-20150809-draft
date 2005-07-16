@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-bibtex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.4 2005/07/02 08:12:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.5 2005/07/16 15:25:23 josejx Exp $
+
+  16 Jul 2005; Joseph Jezak <josejx@gentoo.org> python-bibtex-1.2.1.ebuild:
+  Marked ppc stable.
 
   02 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> python-bibtex-1.2.1.ebuild:
   Stable on x86.
