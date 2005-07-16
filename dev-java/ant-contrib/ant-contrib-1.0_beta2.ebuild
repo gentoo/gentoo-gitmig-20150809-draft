@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2.ebuild,v 1.1 2005/05/18 11:49:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2.ebuild,v 1.2 2005/07/16 15:02:23 axxo Exp $
 
 inherit java-pkg
 
@@ -9,12 +9,15 @@ HOMEPAGE="http://ant-contrib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ant-contrib/${PN}-${PV/_beta/b}-src.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="jikes doc"
-DEPEND=">=dev-java/ant-1.6.2
-	>=virtual/jdk-1.4
-	>=dev-java/bcel-5.1
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	>=dev-java/ant-1.6.2
 	jikes? ( dev-java/jikes )"
+RDEPEND=">=virtual/jre-1.4
+	>=dev-java/bcel-5.1
+	dev-java/xerces"
 
 S=${WORKDIR}/${PN}
 
