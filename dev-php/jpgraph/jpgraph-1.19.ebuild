@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.18.ebuild,v 1.2 2005/07/03 08:22:53 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.19.ebuild,v 1.1 2005/07/16 14:08:14 sebastian Exp $
 
 inherit php-lib
 
@@ -13,10 +13,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 IUSE=""
 
-DEPEND="$DEPEND
-	=dev-php/php-4*"
-RDEPEND="virtual/php
-	>=media-libs/gd-1.8"
+DEPEND="$DEPEND =dev-php/php-4*"
+RDEPEND="virtual/php"
 
 JPGRAPH_CACHE_DIR="/var/cache/jpgraph"
 
