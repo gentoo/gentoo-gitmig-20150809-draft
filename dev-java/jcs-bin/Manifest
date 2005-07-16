@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f87ea852c497a5670e02f460e9feb27e jcs-bin-1.2.5.ebuild 704
+MD5 5ed1772aad90338abe2e673914b7adcb jcs-bin-1.2.5.ebuild 620
 MD5 4aef4799bc14dd9d6708d139a7749581 ChangeLog 428
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 03546fbbc2d8cbb4624b4b8c644e3206 files/digest-jcs-bin-1.2.5 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0XMfBXaUFmZvwyMRAraHAJ438YPxJO7aG9q16azgRJGJ53/QkgCfa6NA
-D1at0V/4sHDKZOD7WmARNLI=
-=Ax3M
+iD8DBQFC2N9e/rLF9B432nYRAsVZAJ0SV6DLkSQheI6hfg3h50MpdCTDsgCgs/cC
+sn4E6lfugZA2W5twpw7GxHk=
+=Jxif
 -----END PGP SIGNATURE-----
