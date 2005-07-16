@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javamake-bin/javamake-bin-1.3.2.ebuild,v 1.4 2005/05/14 17:24:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javamake-bin/javamake-bin-1.3.2.ebuild,v 1.5 2005/07/16 10:44:15 axxo Exp $
 
 inherit java-pkg
 
@@ -17,10 +17,8 @@ IUSE="doc"
 DEPEND="doc? ( app-arch/unzip )"
 RDEPEND=">=virtual/jre-1.4"
 
+S=${WORKDIR}
 src_unpack() {
-	mkdir -p ${S}
-	cd ${S}
-
 	cp ${DISTDIR}/javamake${PV}.jar javamake.jar
 	use doc && unpack javamake-doc.zip
 }

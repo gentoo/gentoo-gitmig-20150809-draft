@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1f05fb849fd6518108017fe3c0b2db88 ChangeLog 674
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 71f2ea248479de7ba8717542629c8d30 javamake-bin-1.3.2.ebuild 822
 MD5 57385fd8d804edd862c6296b857acbba files/digest-javamake-bin-1.3.2 121
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2OUT/rLF9B432nYRAvdZAJ9j1o+mkTZwZ/MF7eDmy2pe4gF0BwCeOzUM
+X9NodATV7/AEu6KSHVrK6dU=
+=3Xu8
+-----END PGP SIGNATURE-----
