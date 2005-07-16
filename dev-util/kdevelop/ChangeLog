@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.89 2005/07/08 07:50:45 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.90 2005/07/16 07:58:37 greg_g Exp $
+
+*kdevelop-3.2.1-r1 (16 Jul 2005)
+
+  16 Jul 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdevelop-3.2.1-makefiles.patch, +kdevelop-3.2.1-r1.ebuild:
+  Add patch to fix support for custom makefiles (#86780). Update the template
+  for KDE projects (see kde bug 104386).
 
   03 Jul 2005; Carsten Lohrke <carlo@gentoo.org> kdevelop-3.2.1.ebuild:
   we depend on cervisia for cvs support

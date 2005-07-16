@@ -1,0 +1,12 @@
+diff -Nur kdevelop-3.2.1.orig/buildtools/custommakefiles/customprojectpart.cpp kdevelop-3.2.1/buildtools/custommakefiles/customprojectpart.cpp
+--- kdevelop-3.2.1.orig/buildtools/custommakefiles/customprojectpart.cpp	2005-05-23 14:09:32.000000000 +0200
++++ kdevelop-3.2.1/buildtools/custommakefiles/customprojectpart.cpp	2005-07-15 12:10:59.000000000 +0200
+@@ -188,7 +188,7 @@
+ 
+     if( fcontext->urls().size() == 1 )
+     {
+-        QString contextFileName = URLUtil::canonicalPath(fcontext->urls().first().fileName());
++        QString contextFileName = URLUtil::canonicalPath(fcontext->urls().first().path());
+         bool inProject = project()->isProjectFile(contextFileName);
+         QString popupstr = QFileInfo(contextFileName).fileName();
+         if (contextFileName.startsWith(projectDirectory()+ "/"))
