@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.6.1-r1.ebuild,v 1.1 2005/03/18 18:23:49 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.6.1-r1.ebuild,v 1.2 2005/07/16 15:54:14 josejx Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sqlobject.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="postgres mysql sqlite firebird doc"
 RDEPEND=">=dev-lang/python-2.2
 		postgres? ( >=dev-python/psycopg-1.1.11 )
