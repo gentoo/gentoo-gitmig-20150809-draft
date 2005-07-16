@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.15-r1.ebuild,v 1.3 2005/05/16 16:58:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.15-r1.ebuild,v 1.4 2005/07/16 08:54:54 mrness Exp $
 
 inherit fixheadtails eutils
 
@@ -21,6 +21,7 @@ RDEPEND="virtual/libc
 	selinux? ( sec-policy/selinux-dante )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
+	sys-devel/libtool
 	>=sys-devel/automake-1.9"
 
 S=${WORKDIR}/${PN}-${MY_PV}
