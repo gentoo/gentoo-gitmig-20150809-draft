@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 5f6e98287500cfc37da18d54502ce130 ChangeLog 432
-MD5 33e5b145a09bd1c00e463ac9dc78a6d5 helpgui-1.1.ebuild 1028
+MD5 5174a3dd1b02762c23918b1dad904b4d helpgui-1.1.ebuild 1006
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 393d394a44c38cfbf7fb311f6e30b061 files/digest-helpgui-1.1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCkK1B06ebR+OMO78RAjDyAJ9JdkXmcJHstUew9yIT2kQ32h5EMQCfZvlW
-Qbf0KCOr5MAG1JouRYifE7A=
-=8r7y
+iD8DBQFC2Pts/rLF9B432nYRAismAKDMusEfiWAXP2PyMnWZd/aJveb3igCgpnT8
+gtEU6e/iWt+yFxjJi1ToK4Y=
+=Z40n
 -----END PGP SIGNATURE-----

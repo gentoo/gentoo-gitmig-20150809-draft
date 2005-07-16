@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/helpgui/helpgui-1.1.ebuild,v 1.1 2005/05/22 16:02:45 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/helpgui/helpgui-1.1.ebuild,v 1.2 2005/07/16 12:19:34 axxo Exp $
 
 inherit java-pkg
 
@@ -10,10 +10,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.jar"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc jikes source"
-
-RESTRICT="primaryuri"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
@@ -22,7 +20,7 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
-	jar xf ${DISTDIR}/${A}
+	jar xf ${DISTDIR}/${A} || die
 }
 
 src_compile() {
