@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.1-r1.ebuild,v 1.7 2005/05/05 17:54:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.1-r1.ebuild,v 1.8 2005/07/16 19:25:38 swegener Exp $
 
 inherit gnustep
 
@@ -12,7 +12,7 @@ KEYWORDS="ppc x86 amd64 sparc ~alpha"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
-IUSE="${IUSE} doc gcc-libffi"
+IUSE="doc gcc-libffi"
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	~gnustep-base/gnustep-make-1.10.0
 	|| (
@@ -101,4 +101,3 @@ src_install() {
 	fi
 	egnustep_package_config
 }
-

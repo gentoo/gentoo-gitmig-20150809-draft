@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.6.ebuild,v 1.1 2005/06/06 05:00:12 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.6.ebuild,v 1.2 2005/07/16 19:23:26 swegener Exp $
 
 inherit gnustep
 
@@ -16,7 +16,7 @@ LICENSE="LGPL-2.1"
 
 PROVIDE="virtual/gnustep-back"
 
-IUSE="${IUSE} opengl xim doc"
+IUSE="opengl xim doc"
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	~gnustep-base/gnustep-make-1.10.0
 	~gnustep-base/gnustep-base-1.10.3
