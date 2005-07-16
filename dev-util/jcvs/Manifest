@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 a5846a47409b656fdda6891bb02bc555 jcvs-5.4.2.ebuild 1471
 MD5 b176a53bace9077082e09c38a864eaf9 ChangeLog 714
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 6a02d202407141d460b688f1864631e8 files/digest-jcvs-5.4.2 62
 MD5 2f143ca8baaf367e3232b727a33f1b8b files/MANIFEST.MF 56
 MD5 a02de83b7550636d4dc89a7ec266a9f5 files/build.xml 969
-MD5 6a02d202407141d460b688f1864631e8 files/digest-jcvs-5.4.2 62
-MD5 1b3daa9857149d5cb5b518bc19dfabf0 jcvs-5.4.2.ebuild 1463
-MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0uTQI1lqEGTUzyQRAr5tAKCr23IUjSLM7Nz1n3341uom/CcKKgCdEctM
-nor1xxwDJZ/hVqQVaOzlDpM=
-=CJYz
------END PGP SIGNATURE-----
