@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/gdeskcal-0.57.1-r1.ebuild,v 1.2 2005/07/09 19:24:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/gdeskcal-0.57.1-r1.ebuild,v 1.3 2005/07/16 17:36:18 smithj Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~ppc64 ~amd64"
+KEYWORDS="x86 ~ppc ~ppc64 amd64"
 
 IUSE="gnome"
 
