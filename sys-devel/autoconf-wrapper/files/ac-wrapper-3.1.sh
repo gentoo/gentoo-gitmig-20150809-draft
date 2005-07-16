@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-3.1.sh,v 1.1 2005/07/16 20:28:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-3.1.sh,v 1.2 2005/07/16 20:31:59 azarah Exp $
 
 # Based on the ac-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -56,6 +56,7 @@ acprereq_version() {
 		#asort(VERSIONS)
 		#
 		VERSION = VERSIONS[0]
+		# We need to get the biggest version and print that
 		for (x = 0; x <= COUNT;x++)
 			if (VERSIONS[x] > VERSION)
 				VERSION=VERSIONS[x]
