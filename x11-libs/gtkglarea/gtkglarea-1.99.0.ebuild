@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.27 2005/05/30 20:04:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.28 2005/07/16 01:07:43 allanonjl Exp $
 
 inherit gnome2 gnuconfig multilib
 
@@ -39,5 +39,5 @@ src_compile() {
 }
 
 src_install() {
-	gnome2_src_install libdir=${D}/$(get_libdir)
+	gnome2_src_install libdir=${D}/usr/$(get_libdir)
 }

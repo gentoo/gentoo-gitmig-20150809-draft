@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.27 2005/05/30 20:04:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.28 2005/07/16 01:07:43 allanonjl Exp $
+
+  16 Jul 2005; John N. Laliberte <allanonjl@gentoo.org>
+  gtkglarea-1.99.0.ebuild:
+  add /usr prefix to get_libdir, fixes #98511
 
   30 May 2005; Simon Stelling <blubb@gentoo.org> gtkglarea-1.99.0.ebuild:
   make src_install use the function provided by the gnome2 ebuild
