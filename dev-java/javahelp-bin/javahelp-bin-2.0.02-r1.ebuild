@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp-bin/javahelp-bin-2.0.02-r1.ebuild,v 1.2 2005/05/04 22:22:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp-bin/javahelp-bin-2.0.02-r1.ebuild,v 1.3 2005/07/16 19:16:42 axxo Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc amd64"
 IUSE="doc"
 
 DEPEND=">=app-arch/unzip-5.50-r1"
-RDEPEND=">=virtual/jdk-1.3"
+RDEPEND=">=virtual/jre-1.3"
 RESTRICT="fetch"
 
 S="${WORKDIR}/jh2.0"
