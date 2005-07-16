@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/jexcelapi-2.5.1.ebuild,v 1.4 2005/05/16 00:26:05 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/jexcelapi-2.5.1.ebuild,v 1.5 2005/07/16 10:00:34 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -42,8 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	mv jxl.jar ${PN}.jar
-	java-pkg_dojar ${PN}.jar
+	java-pkg_newjar jxl.jar  ${PN}.jar
 
 	java-pkg_dohtml index.html tutorial.html
 	use doc && java-pkg_dohtml -r docs/*
