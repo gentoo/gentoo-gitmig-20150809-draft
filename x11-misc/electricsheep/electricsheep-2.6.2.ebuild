@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.2.ebuild,v 1.2 2005/06/19 13:37:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.2.ebuild,v 1.3 2005/07/16 09:31:13 dragonheart Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic kde-functions
 
 DESCRIPTION="realize the collective dream of sleeping computers from all over the internet"
 HOMEPAGE="http://electricsheep.org/"
 SRC_URI="http://electricsheep.org/${P}.tar.gz"
-IUSE=""
+IUSE="kde"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64"
@@ -79,7 +79,15 @@ src_install() {
 	dodir /usr/bin
 	make install DESTDIR=${D} || die "make install failed"
 	dodir /usr/share/electricsheep
-	mv ${D}/usr/share/electricsheep-* ${D}/usr/share/electricsheep/
+
+	if use kde;
+	then
+		set-kdedir
+		insinto /usr/share/applications
+		doins ${FILESDIR}/${PN}.desktop
+		insinto ${KDEDIR}//share/applnk/System/ScreenSavers
+		doins ${FILESDIR}/${PN}.desktop
+	fi
 
 	# remove header files that are installed over libmpeg2
 	rm -rf ${D}/usr/include
