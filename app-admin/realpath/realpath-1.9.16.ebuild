@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.9.16.ebuild,v 1.7 2005/04/08 10:24:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.9.16.ebuild,v 1.8 2005/07/16 03:02:44 kito Exp $
 
 DESCRIPTION="Return the canonicalized absolute pathname"
 HOMEPAGE="http://packages.debian.org/unstable/utils/realpath.html"
@@ -14,7 +14,7 @@ IUSE=""
 S=${WORKDIR}/dwww-${PV}
 
 src_unpack() {
-	if use ppc-macos; then
+	if use userland_Darwin; then
 		local dirname="dwww-${PV}"
 		tar xzf ${DISTDIR}/${A} \
 			${dirname}/Makefile \
