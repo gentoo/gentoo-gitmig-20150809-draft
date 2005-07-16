@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.24.ebuild,v 1.8 2005/04/21 18:32:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.24.ebuild,v 1.9 2005/07/16 20:07:46 josejx Exp $
 
 inherit elisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ecb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ecb/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE="java"
 DEPEND="virtual/emacs
 	|| (

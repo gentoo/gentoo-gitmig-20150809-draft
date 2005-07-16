@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 11b98de14611a2c4d1ffbda7d8877e8d ChangeLog 3001
 MD5 996c2bd11a77ce0937f530ca197da214 ecb-2.24.ebuild 1251
 MD5 6d75917438d32406c49a1b6f350088d5 metadata.xml 1354
@@ -9,3 +12,10 @@ MD5 6d1127de5ae48c2d2092034ecd59f58c files/digest-ecb-2.27 60
 MD5 0b8c1a7b616d52c17714d0278ef04945 files/digest-ecb-2.31 60
 MD5 eaf88c4204fa1150d1e9ee41b7c8dd9f files/digest-ecb-2.24 60
 MD5 55d3c6fd5bb0cfbfea6600fc4340226b files/digest-ecb-2.21 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2WkmcsIHjyDViGQRAuBJAJoDjwPNCsNpJoYjKcJ7I3bOCAiIRgCgt+hq
+clRJtgJnRaak9QzxQoJiJw8=
+=lZAA
+-----END PGP SIGNATURE-----
