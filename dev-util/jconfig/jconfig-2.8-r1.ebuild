@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/jconfig-2.8-r1.ebuild,v 1.1 2004/10/30 21:21:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/jconfig-2.8-r1.ebuild,v 1.2 2005/07/16 19:01:35 axxo Exp $
 
 inherit java-pkg
 
@@ -9,13 +9,14 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-v${PV}.tar.gz"
 HOMEPAGE="http://www.jconfig.org/"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="doc jikes"
+RDEPEND=">=virtual/jre-1.3
+		dev-java/jmx"
 DEPEND=">=virtual/jdk-1.3
-		dev-java/jmx
-		>=dev-java/ant-1.4.1
+		${RDEPEND}
+		dev-java/ant-core
 		jikes? ( dev-java/jikes )"
-RDEPEND=">=virtual/jre-1.3"
 
 S="${WORKDIR}/${PN/c/C}"
 
