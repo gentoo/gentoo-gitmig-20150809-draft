@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 da5e4dd1ca002c438e8508f6b1954c6c ChangeLog 2008
-MD5 83ce7739dfceca0db4e4630d95a79306 adesklets-0.4.10.ebuild 1643
+MD5 aea0e1a3eaf22c6cfc408443925d3c6d ChangeLog 2104
 MD5 ba2766b0b67886a694c4c93cdab3c972 metadata.xml 551
 MD5 8b1c21e27d7f5e1f2a8c32cf83ef48a1 adesklets-0.4.9.ebuild 1640
+MD5 c5d4235a2406d4030b4230d9b082cb31 adesklets-0.4.10.ebuild 1640
 MD5 839460212be7bda6ee217722c08b579a files/digest-adesklets-0.4.10 69
 MD5 a5b3edf29b8646c8cef37a92cc390a91 files/digest-adesklets-0.4.9 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCtbG1l5AvwDPiUowRAgQhAJ9gTjEiMYz6gxzsW2V/OjHh9TFTAQCfcfex
-cZwsxN4J90DrA/ksTiuBdHo=
-=MCTV
+iD8DBQFC2TnPl5AvwDPiUowRAvw6AKDT23ITXZxe8NclPlhHULJ4NTwkmACeJZg6
+spp3W6Oey23RHEatMcgxWs0=
+=fjM+
 -----END PGP SIGNATURE-----

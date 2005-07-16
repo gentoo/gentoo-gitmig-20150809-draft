@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/adesklets
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.11 2005/06/19 17:54:34 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.12 2005/07/16 16:45:29 smithj Exp $
+
+  16 Jul 2005; Jonathan Smith <smithj@gentoo.org> adesklets-0.4.10.ebuild:
+  stable x86, amd64
 
   19 Jun 2005; Jonathan Smith <smithj@gentoo.org> adesklets-0.4.9.ebuild:
   0.4.9 stable x86
