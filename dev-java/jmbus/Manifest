@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b98753b4ee1ce7aef56af6f130123d35 jmbus-1.0.7.ebuild 903
 MD5 a3cc129aa996a6bc77734f7536b0ffd6 ChangeLog 494
-MD5 50e061d3fc4f7019af182e35bc512739 jmbus-1.0.7.ebuild 870
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d1415a7310e102f6f2f3765abe372ed4 files/digest-jmbus-1.0.7 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2NOU/rLF9B432nYRAsh+AJ43coAyV0YoCYm/csqA8Jq35QAyOACeOdXu
+F5QiKWJca3MqNt0YJKxwouQ=
+=0hH1
+-----END PGP SIGNATURE-----
