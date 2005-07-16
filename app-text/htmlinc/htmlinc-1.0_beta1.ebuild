@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlinc/htmlinc-1.0_beta1.ebuild,v 1.13 2005/01/01 16:20:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlinc/htmlinc-1.0_beta1.ebuild,v 1.14 2005/07/16 16:29:10 josejx Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://meybohm.de/files/${PN}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc"
+KEYWORDS="~ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
