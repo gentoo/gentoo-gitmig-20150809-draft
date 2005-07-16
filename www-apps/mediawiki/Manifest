@@ -2,10 +2,10 @@ MD5 091c6d680f84099e227dc1968468cb0e ChangeLog 3571
 MD5 9b808d7d4184d4e1c6e4dc157b12e159 mediawiki-1.3.11.ebuild 2899
 MD5 e680f264ec262a15045a77a124a4009e mediawiki-1.3.12.ebuild 2899
 MD5 f50afab86724625e0c724143fccbfcb5 mediawiki-1.4.4.ebuild 2781
-MD5 0e201daa491640c742b312e06075cbc5 metadata.xml 225
 MD5 1ecb081f1c270870be038f4bf733f298 mediawiki-1.3.13.ebuild 2899
 MD5 3d67b83a5babf38f023af6da71590814 mediawiki-1.4.5.ebuild 2787
 MD5 4fdadbc34a0bae3bc044cc7e4a6f259c mediawiki-1.4.7.ebuild 2788
+MD5 4ce25f8911fa68ab85e31b0953266511 metadata.xml 226
 MD5 5d9fc5f361dabb5aef718a1670539e00 files/digest-mediawiki-1.3.11 69
 MD5 523b0d7461f6cdd093cbb3fa50ae14fc files/digest-mediawiki-1.3.12 69
 MD5 1b33599dca6666d2bc6a987efea36d1a files/digest-mediawiki-1.4.4 68
