@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6da8cf56705fd36fb7aa6b56c1c9aec3 ChangeLog 1027
 MD5 8114238320af66caa1e90d5c8f67dce8 pstotext-1.8g.ebuild 681
 MD5 84a047e65494c9f47e4af70d3276320f files/digest-pstotext-1.8g 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2TKhcsIHjyDViGQRAkgdAKDE3zMkp/ogtKor1UuRe33dSNsIWwCeKJTZ
+IIKHJ5EWhw7am9uAALpVvQ8=
+=xfG/
+-----END PGP SIGNATURE-----

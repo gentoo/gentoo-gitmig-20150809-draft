@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pstotext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.11 2005/06/02 06:00:57 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.12 2005/07/16 16:13:38 josejx Exp $
+
+  16 Jul 2005; Joseph Jezak <josejx@gentoo.org> pstotext-1.8g.ebuild:
+  Marked ppc stable for bug #99218.
 
   02 Jun 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   pstotext-1.8g.ebuild:
