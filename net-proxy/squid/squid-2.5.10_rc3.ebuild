@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10_rc3.ebuild,v 1.9 2005/06/08 00:49:35 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10_rc3.ebuild,v 1.10 2005/07/16 10:14:17 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -176,7 +176,7 @@ src_install() {
 	insinto /etc/pam.d
 	newins ${FILESDIR}/squid.pam squid
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/squid.rc6 squid
+	newexe ${FILESDIR}/squid.initd squid
 	insinto /etc/conf.d
 	newins ${FILESDIR}/squid.confd squid
 	if use logrotate; then
@@ -184,7 +184,7 @@ src_install() {
 		newins ${FILESDIR}/squid-logrotate squid
 	else
 		exeinto /etc/cron.weekly
-		newexe ${FILESDIR}/squid-r1.cron squid.cron
+		newexe ${FILESDIR}/squid.cron squid.cron
 	fi
 
 	diropts -m0755 -o squid -g squid

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10.ebuild,v 1.2 2005/05/22 13:44:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10.ebuild,v 1.3 2005/07/16 10:14:17 mrness Exp $
 
 inherit eutils pam toolchain-funcs
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/${S_PP}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~mips"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="pam ldap ssl sasl snmp debug selinux underscores logrotate customlog zero-penalty-hit"
 
 RDEPEND="pam? ( virtual/pam )
@@ -168,14 +168,14 @@ src_install() {
 	dodoc helpers/basic_auth/SASL/squid_sasl_auth*
 
 	newpamd "${FILESDIR}/squid.pam-include" squid
-	newinitd "${FILESDIR}/squid.rc6" squid
+	newinitd "${FILESDIR}/squid.initd" squid
 	newconfd "${FILESDIR}/squid.confd" squid
 	if use logrotate; then
 		insinto /etc/logrotate.d
 		newins ${FILESDIR}/squid-logrotate squid
 	else
 		exeinto /etc/cron.weekly
-		newexe ${FILESDIR}/squid-r1.cron squid.cron
+		newexe ${FILESDIR}/squid.cron squid.cron
 	fi
 
 	rm -rf ${D}/var
