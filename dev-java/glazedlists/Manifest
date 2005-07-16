@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ba8d6f1f4b4714c58589b62fde7fbdc9 glazedlists-0.9.6.ebuild 1047
-MD5 ae8904e3a27cba7acf253e9458d6c209 ChangeLog 418
+MD5 84f7a5c5e65e62ec341aa2d433fa0474 glazedlists-0.9.6.ebuild 1052
+MD5 a461319a306c1be0b27cf66a91051492 ChangeLog 521
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 cee8e95e1a46c1daaae4e98ab1bb4757 files/digest-glazedlists-0.9.6 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2Qqg/rLF9B432nYRApzdAJwIoNSl4gDWRktbhoxVDL5hkmlHvACfR7ML
-cxx/KSqbl0vipNdDXk2g4PU=
-=LNqs
+iD8DBQFC2Qs8/rLF9B432nYRAnQiAJ9FVDIe4tCg7+FEcngDCvjdDpx33QCeNo5d
+PIKVnhH4+ipXoXYEhkuLFGU=
+=7lpf
 -----END PGP SIGNATURE-----

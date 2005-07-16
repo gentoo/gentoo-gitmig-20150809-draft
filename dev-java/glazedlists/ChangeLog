@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/glazedlists
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.1 2005/04/20 05:21:58 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.2 2005/07/16 13:26:48 axxo Exp $
+
+  16 Jul 2005; Thomas Matthijs <axxo@gentoo.org> glazedlists-0.9.6.ebuild:
+  disable junit, needs X
 
 *glazedlists-0.9.6 (20 Apr 2005)
 
