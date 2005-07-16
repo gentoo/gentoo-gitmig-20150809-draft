@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2.ebuild,v 1.4 2005/07/13 14:31:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2.ebuild,v 1.5 2005/07/16 19:45:18 axxo Exp $
 
 inherit java-pkg
 
@@ -10,16 +10,17 @@ SRC_URI="http://bfm.webhop.net/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="doc jikes source"
 
-DEPEND=">=virtual/jre-1.4
+RDEPEND=">=virtual/jre-1.4
 	|| ( >=dev-java/blackdown-java3d-bin-1.3.1-r1
-		>=dev-java/sun-java3d-bin-1.3 )
+		>=dev-java/sun-java3d-bin-1.3 )"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
 	dev-java/ant-core
 	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
 	unpack ${A}
