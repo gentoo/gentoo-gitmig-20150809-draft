@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e55a5cb1e2cc73687839f9769530f715 ChangeLog 526
-MD5 f6a49795ab64f5be3439c584c51a7de5 files/digest-urlgfe-0.98a 64
+MD5 c7ce0420b5b944058336fffde23c3b72 ChangeLog 607
 MD5 02c76c4d6ee14a5634bba6f72032d3ce metadata.xml 533
-MD5 5d3d2940efb27e911af800f1ec1608cb urlgfe-0.98a.ebuild 784
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC16CiI1lqEGTUzyQRAqt7AKCYhJPJYTNp5PSOrhRFD8t6O9zgHwCbBshL
-ZApqGRZ3IS8wCGEZCMDdM2Y=
-=5JYd
------END PGP SIGNATURE-----
+MD5 127c35f7a2a88ed98bb7bcac2b801814 urlgfe-0.98a.ebuild 786
+MD5 f6a49795ab64f5be3439c584c51a7de5 files/digest-urlgfe-0.98a 64
