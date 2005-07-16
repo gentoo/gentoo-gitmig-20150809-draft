@@ -1,6 +1,16 @@
-MD5 0e2f3a06a2ff6224615a4f0bf5f0579a ChangeLog 800
-MD5 f4f27007b826a5342eb103ec373b98ec catdoc-0.93.3.ebuild 886
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1be99fc23fe9eb6d15bcb92db7be47a7 ChangeLog 908
 MD5 29be17ce906a6dcc14914b8fefc51020 catdoc-0.93.4.ebuild 887
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 f65b135b332c831fcdd6264f329bbecb catdoc-0.93.3.ebuild 886
 MD5 60451dd724fa0edf679f65a182b9e2ac files/digest-catdoc-0.93.3 65
 MD5 5c619ae22412c8c0983c9e9328fd78d9 files/digest-catdoc-0.93.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2S7KcsIHjyDViGQRAs+nAKCa5ZSGhcB9p09zkjQ7A4dxhaxuaACcCWuy
+NlvOq5G7dbbzcWuqplUE1VI=
+=odu6
+-----END PGP SIGNATURE-----
