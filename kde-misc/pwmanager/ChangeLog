@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/pwmanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.1 2005/05/12 20:52:36 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.2 2005/07/16 07:31:57 greg_g Exp $
+
+*pwmanager-1.2.3 (16 Jul 2005)
+
+  16 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> +pwmanager-1.2.3.ebuild:
+  New version.
 
 *pwmanager-1.2.1 (12 May 2005)
 
