@@ -1,6 +1,9 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.19 2005/06/01 00:57:37 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.20 2005/07/16 16:20:01 josejx Exp $
+
+  16 Jul 2005; Joseph Jezak <josejx@gentoo.org> vilistextum-2.6.7.ebuild:
+  Marked ppc stable for bug #99221.
 
   31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   vilistextum-2.6.7.ebuild:
