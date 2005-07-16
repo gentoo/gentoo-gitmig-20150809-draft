@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/kbarcode-1.8.1.ebuild,v 1.4 2005/04/21 20:23:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/kbarcode-1.8.1.ebuild,v 1.5 2005/07/16 16:09:45 josejx Exp $
 
 inherit kde
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.kbarcode.net/"
 SRC_URI="mirror://sourceforge/kbarcode/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=app-text/barcode-0.98"
