@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4_p1.ebuild,v 1.1 2005/07/03 00:05:42 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4_p1.ebuild,v 1.2 2005/07/16 15:37:02 swegener Exp $
 
 inherit webapp
 MY_P="${PN}6.4r1"
@@ -14,10 +14,8 @@ SRC_URI="http://download.metadot.com/${MY_P}.tar.gz"
 
 KEYWORDS="~x86"
 
-DEPEND="$DEPEND"
-RDEPEND="
-	${DEPEND}
-	>=dev-db/mysql-3.23
+DEPEND=""
+RDEPEND=">=dev-db/mysql-3.23
 	>=net-www/apache-1.3.6
 	>=dev-lang/perl-5.6
 	>=www-apache/mod_perl-1.21

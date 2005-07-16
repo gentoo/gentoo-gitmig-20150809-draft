@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/issue-tracker-4.0.3-r1.ebuild,v 1.1 2004/09/08 15:58:15 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/issue-tracker-4.0.3-r1.ebuild,v 1.2 2005/07/16 15:37:56 swegener Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND="$DEPEND"
+DEPEND=""
 RDEPEND="virtual/php
 	|| ( dev-db/mysql dev-db/postgresql )"
 
