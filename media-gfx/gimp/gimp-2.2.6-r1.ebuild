@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.6-r1.ebuild,v 1.9 2005/07/12 04:25:55 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.6-r1.ebuild,v 1.10 2005/07/16 02:18:13 allanonjl Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime
 
@@ -79,7 +79,8 @@ src_compile() {
 	replace-flags "-march=k6*" "-march=i586"
 
 	# gimp uses inline functions (plug-ins/common/grid.c) (#23078)
-	filter-flags "-fno-inline"
+	# gimp uses floating point math, needs accuracy (#98685)
+	filter-flags "-fno-inline" "-ffast-math"
 
 	if use hardened; then
 		ewarn "hardened use flag suppressing mmx use flag"

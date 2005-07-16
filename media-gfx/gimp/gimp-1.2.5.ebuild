@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.21 2005/02/03 04:18:25 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.22 2005/07/16 02:18:13 allanonjl Exp $
 
 inherit eutils flag-o-matic
 
@@ -44,7 +44,8 @@ src_compile() {
 	# over-optimisations (#21787)
 	replace-flags -Os -O2
 	# gimp has inline functions (plug-ins/common/grid.c) (#23078)
-	filter-flags "-fno-inline"
+	# gimp uses floating point math, needs accuracy (#98685)
+	filter-flags "-fno-inline" "-ffast-math"
 
 	local mymake=""
 	local AA
