@@ -1,6 +1,16 @@
-MD5 c7833568228e58de7af12f463902cb47 mylibrary-0.4.5g-r1.ebuild 1001
-MD5 f58cb3b4cff677a6c4247c4bb5c042e1 mylibrary-0.4.5g.ebuild 962
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b1c8cf82d8d7d526da0fa0c16c668422 ChangeLog 949
-MD5 736733135b93a9e519c669cffc25096a metadata.xml 557
 MD5 69e7780507872ff90ffae36a37ec8d6f files/digest-mylibrary-0.4.5g 68
 MD5 69e7780507872ff90ffae36a37ec8d6f files/digest-mylibrary-0.4.5g-r1 68
+MD5 736733135b93a9e519c669cffc25096a metadata.xml 557
+MD5 1dcf7f70a13a4df485f1a0c80200a532 mylibrary-0.4.5g-r1.ebuild 995
+MD5 7c6495e1583e0d4ed371a7faa1b67b3c mylibrary-0.4.5g.ebuild 956
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2SsKI1lqEGTUzyQRAkQLAKCR3ICZkOBGQwtXWhqcOdMwHJGxIwCcDepu
+D0NYTY4PmuJa4MJ88ByJshw=
+=CvID
+-----END PGP SIGNATURE-----

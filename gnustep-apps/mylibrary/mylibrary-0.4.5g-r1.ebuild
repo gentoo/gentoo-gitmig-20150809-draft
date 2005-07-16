@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/mylibrary/mylibrary-0.4.5g-r1.ebuild,v 1.1 2004/11/12 03:54:39 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/mylibrary/mylibrary-0.4.5g-r1.ebuild,v 1.2 2005/07/16 15:42:41 swegener Exp $
 
 inherit gnustep
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-IUSE="${IUSE} doc"
+IUSE="doc"
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
 
