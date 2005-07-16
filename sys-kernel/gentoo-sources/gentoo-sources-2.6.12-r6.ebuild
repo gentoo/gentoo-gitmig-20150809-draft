@@ -1,28 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.11-r8.ebuild,v 1.4 2005/05/12 02:34:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.12-r6.ebuild,v 1.1 2005/07/16 21:51:34 dsd Exp $
 
 ETYPE="sources"
+K_WANT_GENPATCHES="base extras"
+K_GENPATCHES_VER="10"
 IUSE="ultra1"
 inherit kernel-2
 detect_version
 detect_arch
 
-#version of gentoo patchset
-GPV="11.11"
-GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
-	 mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-KEYWORDS="~amd64 ia64 ~ppc ppc64 ~sparc x86"
-
-HOMEPAGE="http://dev.gentoo.org/~dsd/gentoo-sources"
-
-UNIPATCH_LIST="${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
-	       ${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
-UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}/0000_README"
+HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches"
 
 DESCRIPTION="Full sources including the gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
-SRC_URI="${KERNEL_URI} ${GPV_SRC} ${ARCH_URI}"
+SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}"
 
 pkg_setup() {
 	if use sparc; then

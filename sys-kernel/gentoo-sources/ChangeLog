@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.166 2005/07/13 15:23:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.167 2005/07/16 21:51:34 dsd Exp $
+
+*gentoo-sources-2.6.12-r6 (16 Jul 2005)
+
+  16 Jul 2005; Daniel Drake <dsd@gentoo.org>
+  -gentoo-sources-2.6.11-r8.ebuild, -gentoo-sources-2.6.12-r5.ebuild,
+  +gentoo-sources-2.6.12-r6.ebuild:
+  Linux 2.6.12.3. Add irqpoll boot workaround. Correct modpost on sparc.
 
   13 Jul 2005; Aron Griffis <agriffis@gentoo.org>
   gentoo-sources-2.6.12-r4.ebuild:
