@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-1.2.3.ebuild,v 1.3 2005/05/20 20:05:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-1.2.3.ebuild,v 1.4 2005/07/16 11:59:59 axxo Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.lowagie.com/iText/build.xml
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
