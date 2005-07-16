@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore-bin/oscore-bin-2.2.4.ebuild,v 1.6 2005/04/22 08:44:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore-bin/oscore-bin-2.2.4.ebuild,v 1.7 2005/07/16 20:03:55 axxo Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc ~ppc amd64"
 IUSE="doc"
 DEPEND="app-arch/unzip"
-RDEPEND="virtual/jdk"
+RDEPEND=">=virtual/jre-1.4"
 SLOT="0"
 
 S=${WORKDIR}
