@@ -49,6 +49,7 @@ lesspipe() {
 	*.ace)        unace l -- "$1" ;;
 	*.arj)        unarj l -- "$1" ;;
 	*.cab)        cabextract -l -- "$1" ;;
+	*.7z)         7z l -- "$1" ;;
 
 	### Media ###
 	*.gif|*.jpeg|*.jpg|*.pcd|*.png|*.tga|*.tiff|*.tif|*.bmp)
