@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/php-gtk-1.0.2.ebuild,v 1.1 2005/07/15 20:31:26 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/php-gtk-1.0.2.ebuild,v 1.2 2005/07/16 15:32:23 swegener Exp $
 
 PHP_EXT_NAME="php_gtk"
 PHP_EXT_ZENDEXT="no"
@@ -10,13 +10,13 @@ inherit php-ext-source
 DESCRIPTION="GTK+ bindings for PHP"
 HOMEPAGE="http://gtk.php.net/"
 SRC_URI="http://gtk.php.net/distributions/${P}.tar.gz"
-S="$WORKDIR/php_gtk-$PV"
+S="${WORKDIR}/php_gtk-${PV}"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
-DEPEND="$DEPEND"
+DEPEND=""
 RDEPEND="=x11-libs/gtk+-1.2*
 	=gnome-base/libglade-0.17*
 	=dev-php/php-4*"
