@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.8.3_pre20050312.ebuild,v 1.1 2005/03/17 21:09:32 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.8.3_pre20050312.ebuild,v 1.2 2005/07/16 15:41:21 swegener Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -21,7 +21,7 @@ KEYWORDS="~x86 ~ppc"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-IUSE="${IUSE} doc"
+IUSE="doc"
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
 
@@ -44,4 +44,3 @@ src_install() {
 	fi
 	egnustep_package_config
 }
-
