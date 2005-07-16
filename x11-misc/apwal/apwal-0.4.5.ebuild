@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/apwal-0.4.5.ebuild,v 1.1 2005/06/19 18:01:30 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/apwal-0.4.5.ebuild,v 1.2 2005/07/16 17:19:02 smithj Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="A simple application launcher and combined editor"
@@ -9,7 +9,7 @@ SRC_URI="http://apwal.free.fr/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0
