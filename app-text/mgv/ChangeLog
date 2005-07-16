@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mgv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/ChangeLog,v 1.14 2005/05/31 21:06:30 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/ChangeLog,v 1.15 2005/07/16 16:26:51 josejx Exp $
+
+  16 Jul 2005; Joseph Jezak <josejx@gentoo.org> mgv-3.1.5.ebuild:
+  Marked ~ppc at the request of bug #99216.
 
   31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   mgv-3.1.5-r1.ebuild:
