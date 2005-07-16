@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.19 2005/05/18 22:58:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.20 2005/07/16 13:11:42 axxo Exp $
+
+*asm-1.4.1 (16 Jul 2005)
+
+  16 Jul 2005; Thomas Matthijs <axxo@gentoo.org> +asm-1.4.1.ebuild:
+  readd 1.4.1 needed by groovy
 
   18 May 2005; Jan Brinkmann <luckyduck@gentoo.org> asm-2.0_alpha.ebuild:
   stable on amd64, ppc and x86

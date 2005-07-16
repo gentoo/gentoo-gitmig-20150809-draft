@@ -3,16 +3,18 @@ Hash: SHA1
 
 MD5 dfeb20f2d93d00fb289b080e966cda31 asm-2.0_alpha.ebuild 1085
 MD5 0b845e60965c6adda2824e7ce7257598 asm-1.5.2.ebuild 986
+MD5 6415bb8e6125ba50b9e020e224c9bf38 asm-1.4.1.ebuild 1030
 MD5 9c035ffb905e4c706079f3791f04436d asm-1.4.3-r1.ebuild 987
-MD5 51e0f33a3ae589228f16940b6be762ad ChangeLog 1927
+MD5 84388aa99e8f2ef1d53de9f1dfc40c9e ChangeLog 2048
 MD5 b7f9b7d59df453c8c330bff15bf5508b metadata.xml 888
 MD5 cb47be4ec4aec6ac7229dbcb0c09da0a files/digest-asm-2.0_alpha 65
 MD5 bab3b96826160bc8cf16cdce85e62adc files/digest-asm-1.4.3-r1 61
+MD5 351a824f800a6f89e9e6eb967a63c796 files/digest-asm-1.4.1 62
 MD5 7d7bc01bc5c7f583f0ab7ef377b4823b files/digest-asm-1.5.2 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1/Z3/rLF9B432nYRAuSzAJ9b9vF8djmQWmlTtwBu+53tbWPr1gCfQdjZ
-upJobho4Gs1Nvi7nhEz7qoE=
-=Fp1N
+iD8DBQFC2Qel/rLF9B432nYRAsZxAJ9YytzbZnAhRrOpwjkgj63PR3phsACfQIXx
+E7zt1ER0EXiEBpo8vPMAl4E=
+=BrPI
 -----END PGP SIGNATURE-----
