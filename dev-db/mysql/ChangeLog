@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.204 2005/07/15 19:09:50 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.205 2005/07/16 02:41:28 vivo Exp $
+
+*mysql-5.0.9_beta-r1 (16 Jul 2005)
+*mysql-4.1.12-r2 (16 Jul 2005)
+*mysql-4.0.25-r1 (16 Jul 2005)
+
+  16 Jul 2005; portage <vivo@gentoo.org>
+  +files/mysql-4.0.25-r1-asm-pic-fixes.patch,
+  +files/035_x86_asm-pic-fixes-r1.patch, +mysql-4.0.25-r1.ebuild,
+  +mysql-4.1.12-r2.ebuild, +mysql-5.0.9_beta-r1.ebuild:
+  Going back to patches from "PaX Team" since the upstream one give unexpected
+  results running the test suite.
 
 *mysql-5.0.9_beta (15 Jul 2005)
 *mysql-4.1.12-r1 (15 Jul 2005)
