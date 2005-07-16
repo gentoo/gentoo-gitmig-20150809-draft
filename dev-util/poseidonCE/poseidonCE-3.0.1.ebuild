@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-3.0.1.ebuild,v 1.4 2005/05/04 11:03:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-3.0.1.ebuild,v 1.5 2005/07/16 19:11:25 axxo Exp $
 
 inherit eutils
 
@@ -9,8 +9,8 @@ SRC_URI="ftp://download.gentleware.biz/${P}.zip"
 HOMEPAGE="http://www.gentleware.com/"
 LICENSE="PoseidonCommon.pdf"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
-RDEPEND=">=virtual/jdk-1.4.1"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
+RDEPEND=">=virtual/jre-1.4.1"
 DEPEND="app-arch/unzip"
 RESTRICT="nomirror"
 IUSE="doc"
