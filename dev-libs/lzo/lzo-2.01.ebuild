@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-2.00.ebuild,v 1.1 2005/06/25 22:34:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-2.01.ebuild,v 1.1 2005/07/16 23:58:29 dragonheart Exp $
 
 DESCRIPTION="An extremely fast compression and decompression library"
 HOMEPAGE="http://www.oberhumer.com/opensource/lzo/"
