@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3e7a477ef61f94e4b212473e374182b7 jgoodies-animation-1.1.3.ebuild 1265
 MD5 6389ca0e73406df3c88bfe182b73704c ChangeLog 866
 MD5 0a7e021f886fb1b2e57c3ceb9eb8f9e7 metadata.xml 308
 MD5 1927a2ddc87063bc3a874c03869761bf files/digest-jgoodies-animation-1.1.3 64
 MD5 10eed29030757ce0187080b12e9923c6 files/build.xml 2276
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2Nim/rLF9B432nYRAsrgAJ0T9f1qf2F9ALoVkJYIjmmzNpIemACgq9GD
+BCDODT8fKBsPA6BpJRCjo/c=
+=viWL
+-----END PGP SIGNATURE-----
