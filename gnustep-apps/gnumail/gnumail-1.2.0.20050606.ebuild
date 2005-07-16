@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20050606.ebuild,v 1.1 2005/06/10 21:06:24 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0.20050606.ebuild,v 1.2 2005/07/16 15:43:56 swegener Exp $
 
 inherit gnustep
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="${IUSE} xface crypt emoticon"
+IUSE="crypt doc emoticon xface"
 DEPEND="${GS_DEPEND}
 	=gnustep-libs/pantomime-${PV}
 	gnustep-apps/addresses"
