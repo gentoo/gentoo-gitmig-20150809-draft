@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r2.ebuild,v 1.4 2005/06/27 22:15:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r2.ebuild,v 1.5 2005/07/16 04:16:47 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -35,12 +35,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-no_rpath.patch
 	epatch "${FILESDIR}"/${P}-self-insert.patch
 	epatch "${FILESDIR}"/${P}-del-backspace-policy.patch
+	epatch "${FILESDIR}"/${P}-darwin.patch
 
 	# force ncurses linking #71420
 	sed -i -e 's:^SHLIB_LIBS=:SHLIB_LIBS=-lncurses:' support/shobj-conf || die "sed"
 
 	# fix building in parallel
-	epatch ${FILESDIR}/readline-5.0-parallel.patch
+	epatch "${FILESDIR}"/readline-5.0-parallel.patch
 }
 
 src_compile() {
