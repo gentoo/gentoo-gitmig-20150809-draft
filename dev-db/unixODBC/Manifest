@@ -2,26 +2,26 @@
 Hash: SHA1
 
 MD5 a0b37f0f189f504b863229620a2a09bd ChangeLog 5732
-MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
-MD5 eea61e477011ec918b75ba766aaad67a unixODBC-2.0.8.ebuild 969
-MD5 6b993e56b0c08a88fccb44abfc1ed502 unixODBC-2.2.2.ebuild 1282
-MD5 b9f4602957a14f85748533d4f1fcfd4b unixODBC-2.2.6.ebuild 1566
-MD5 7956dac74a0516140e437590070a0150 unixODBC-2.2.6-r1.ebuild 1638
-MD5 83a56fac1dc29fabea067942e93f768f unixODBC-2.2.8.ebuild 2083
-MD5 d02152bdf8ebda3a78b43e42d9bc074d unixODBC-2.2.11.ebuild 1953
 MD5 f383c7806ba5f687ba55d5f1bc6a36aa files/digest-unixODBC-2.0.8 67
+MD5 4baf7bca71abaad73ebb6a576517f435 files/digest-unixODBC-2.2.11 68
 MD5 0f7614b93d6ede252ed2f7d7ff1aac90 files/digest-unixODBC-2.2.2 67
 MD5 4eaaa819fc28ee784da166d14e9f7fad files/digest-unixODBC-2.2.6 67
-MD5 ffd3cee4e2a1f6dffc130557ccda934b files/gentoo-yac.diff 316
 MD5 4eaaa819fc28ee784da166d14e9f7fad files/digest-unixODBC-2.2.6-r1 67
-MD5 89baf6f14a595b00635ca0b91ee525de files/unixODBC-2.2.6-configure.in.patch 239
 MD5 a60388d8cb9cb0dca3df5429fb364051 files/digest-unixODBC-2.2.8 67
+MD5 ffd3cee4e2a1f6dffc130557ccda934b files/gentoo-yac.diff 316
 MD5 89baf6f14a595b00635ca0b91ee525de files/unixODBC-2.2.11-configure.in.patch 239
-MD5 4baf7bca71abaad73ebb6a576517f435 files/digest-unixODBC-2.2.11 68
+MD5 89baf6f14a595b00635ca0b91ee525de files/unixODBC-2.2.6-configure.in.patch 239
+MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
+MD5 eea61e477011ec918b75ba766aaad67a unixODBC-2.0.8.ebuild 969
+MD5 1379d79c407a0ccbf9a7c0b6263e4bcd unixODBC-2.2.11.ebuild 1949
+MD5 6b993e56b0c08a88fccb44abfc1ed502 unixODBC-2.2.2.ebuild 1282
+MD5 7956dac74a0516140e437590070a0150 unixODBC-2.2.6-r1.ebuild 1638
+MD5 b9f4602957a14f85748533d4f1fcfd4b unixODBC-2.2.6.ebuild 1566
+MD5 83a56fac1dc29fabea067942e93f768f unixODBC-2.2.8.ebuild 2083
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2FCXmdTrptrqvGERAmy+AJ9mSEJmtVymZawZ5NhD7fco+vbv7gCeKa/t
-rAh3ljTwkY58uX7KYHhyHyQ=
-=kWv1
+iD8DBQFC2RGrI1lqEGTUzyQRAswYAKDPQ1zTxy+YvpFm0czUmjw4sJ7dbwCgg1vy
+QbzOQ/sgc0dXhq2QrKPg3TE=
+=343T
 -----END PGP SIGNATURE-----
