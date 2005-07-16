@@ -15,7 +15,7 @@ MD5 6b4e7861f8acedbd5f7675160efb9dfb mysql-5.0.9_beta-r1.ebuild 16096
 MD5 be85068e1f8dd9340882814ae10e1763 mysql-4.0.23-r1.ebuild 9160
 MD5 950a2a955947846b03dbb285f5a53daf mysql-4.1.12.ebuild 15584
 MD5 f26f6906248f45f5f0d23248a39c03a4 mysql-4.0.24.ebuild 9816
-MD5 8a23894d7a9fa3d37451fb5dcfef2012 ChangeLog 33274
+MD5 474c59290c9171861cf87a8525b58bdc ChangeLog 33390
 MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
@@ -39,12 +39,14 @@ MD5 ee67067f786849424c4591e278819bbc files/digest-mysql-4.1.12 66
 MD5 ee578e3021841ef9dba4175403564136 files/mysql-4.0-db-3.2.1.diff 1047
 MD5 f2905bbcc3f148a2ad689792917bd78d files/mysql-4.0.16-install-db-sh.diff 1429
 MD5 ff80a5d8d87212046e89f2f8ae779af4 files/mysql-4.0-nisam.h.diff 452
+MD5 9209843349ac5e9560f9ad7450c49769 files/703_all_test-rpl_rotate_logs.patch 802
 MD5 73be6460f548f6f73c70246a4cfd13a0 files/mysql.init 886
 MD5 6d4fc135a2143e95681416795d1948d9 files/mysql-4.0.23-install-db-sh.diff 1055
 MD5 d20c23adca5b8731ebfab4d1b5771dab files/mysql-4.0.18-mysqld-safe-sh.diff 1307
 MD5 fc80f877fa97f0f3a52ee684ce7f54b2 files/mysql-4.0.16-mysqld-safe-sh.diff 1562
 MD5 5701dee85af16e5d7aa821853ec8cda5 files/digest-mysql-4.1.8 65
 MD5 f635289f8422fdf26ba3c3dbdf99c4e2 files/mysql-4.0.14-mysqld-safe-sh.diff 1503
+MD5 46b0857fe11abf1015f0db6da26614ff files/010_all_my-print-defaults-r2.patch 907
 MD5 6f8de46485ea7dcf886e1747fb117427 files/mysql-gentoo-nptl.diff 654
 MD5 e68c5d7e3c48028c4cf7e55ea8396013 files/mysql-4.0-install-db-sh.diff 1271
 MD5 e501d0f33d9d0be73b37c310099011d2 files/mysql-4.0.14-security-28394.patch 654
@@ -62,6 +64,7 @@ MD5 f599e8b3eb4636bb61721525dc15f5f5 files/mysql-4.0.18-thrssl.patch 723
 MD5 c4785801e45235c28d7a4139bfbd73af files/my.cnf-4.1 3667
 MD5 8d51cbf3afa8349839380aa0986704c0 files/mysql-3.23-safe-mysqld-sh.diff 1557
 MD5 7a5badec9c28c2f4d434d6aed0a5103b files/mysql-3.23-my-print-defaults.diff 218
+MD5 a9f61fe89f1a43f6c5a8de100176d2dc files/701_all_test-myisam-geometry.patch 1239
 MD5 a76ec36b83c2f0dbfba65c993f75d135 files/mysql-4.0.18-mysqlbugsecurity.diff 672
 MD5 66b1e90f93ae0adc106e7b62a2c4043b files/mysql-4.1.9-thrssl.patch 905
 MD5 6e0ae36e30287df25336d8bd71c0e764 files/digest-mysql-3.23.58 67

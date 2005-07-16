@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.206 2005/07/16 02:54:38 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.207 2005/07/16 03:13:25 vivo Exp $
 
   16 Jul 2005; portage <vivo@gentoo.org>
   -files/mysql-4.0.25-asm-pic-fixes.patch,
@@ -15,7 +15,9 @@
   16 Jul 2005; portage <vivo@gentoo.org>
   +files/mysql-4.0.25-r1-asm-pic-fixes.patch,
   +files/035_x86_asm-pic-fixes-r1.patch, +mysql-4.0.25-r1.ebuild,
-  +mysql-4.1.12-r2.ebuild, +mysql-5.0.9_beta-r1.ebuild:
+  +mysql-4.1.12-r2.ebuild, +mysql-5.0.9_beta-r1.ebuild,
+  +010_all_my-print-defaults-r2.patch,  +701_all_test-myisam-geometry.patch,
+  +703_all_test-rpl_rotate_logs.patch:
   Going back to patches from "PaX Team" since the upstream one give unexpected
   results running the test suite.
 

@@ -1,0 +1,18 @@
+###MY_VER_RANGE  [5.0.6_beta,5.1.0_alpha) [5.1.0_alpha,)
+
+# MySQL Bugs: #9763: Test rpl_rotate_logs fails in default mode and with --force
+# Error: 1201 SQLSTATE: HY000 (ER_MASTER_INFO)
+# Message: Could not initialize master info structure; more error messages can be found in the MySQL
+# error log
+
+--- mysql.orig/mysql-test/t/rpl_rotate_logs.test	2005-05-26 16:55:48.000000000 +0200
++++ mysql.fix/mysql-test/t/rpl_rotate_logs.test	2005-06-03 20:21:51.000000000 +0200
+@@ -24,7 +24,7 @@
+ # START SLAVE will fail because it can't read the file (mode 000)
+ # (system error 13)
+ --replace_result $MYSQL_TEST_DIR TESTDIR
+---error 1105,1105,29
++--error 1201,1105,29
+ start slave;
+ system chmod 600 var/slave-data/master.info;
+ # It will fail again because the file is empty so the slave cannot get valuable
