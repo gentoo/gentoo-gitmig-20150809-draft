@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.16 2005/05/15 02:18:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.17 2005/07/16 18:48:38 halcy0n Exp $
 
 inherit libtool flag-o-matic toolchain-funcs
 
@@ -44,6 +44,13 @@ src_compile() {
 
 	# over optimization causes horrible audio artifacts #26463
 	filter-flags -march=pentium?
+
+	# gcc-3.4 and k6 with -ftracer causes code generation problems #49472
+	if [ $(gcc-major-version) -eq 3 -a $(gcc-minor-version) -eq 4 ];
+	then
+		is-flag -march=k6* && filter-flags -ftracer
+		is-flag -mtune=k6* && filter-flags -ftracer
+	fi
 
 	# gcc on hppa causes issues when assembling
 	use hppa && replace-flags -march=2.0 -march=1.0
