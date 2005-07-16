@@ -1,4 +1,14 @@
-MD5 03e5f71426cdffc7efbab1d57fddfa35 java-wakeonlan-0.3.0.ebuild 1211
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cba6992f0036d8a0c91c2efe46c0ed20 java-wakeonlan-0.3.0.ebuild 1204
 MD5 d15fff6718b66570403494ed08bfb610 ChangeLog 934
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 1bd00f96eeec73cd7015b5d6563291a1 files/digest-java-wakeonlan-0.3.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2WvM/rLF9B432nYRApaeAJwLaoNAWuVfVzrYakFEcQXTn7u6UACeK4k2
+xjzSUcELpB2/TJU0b+rEZE8=
+=4lgl
+-----END PGP SIGNATURE-----
