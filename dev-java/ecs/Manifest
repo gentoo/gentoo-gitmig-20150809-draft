@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1e5cf661dcad7ddeb681f0371f02d500 ecs-1.4.1-r1.ebuild 1279
 MD5 7c81e3712c026b020666a957c06e023a ecs-1.4.2.ebuild 1279
 MD5 e1b8aeba5ef1030d3b048244b715f7e5 ChangeLog 1465
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 a9060f0311fe1863e9b4060dfda897f8 files/digest-ecs-1.4.1-r1 62
 MD5 df482eb2495f04b61ed8242919fb8607 files/digest-ecs-1.4.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2RHs/rLF9B432nYRApCTAJ95epNqlr24wHMhXSnPfkp2DgaRpACfQxlD
+U8gIibiya8gzdt9lBXzfp9w=
+=9w/K
+-----END PGP SIGNATURE-----
