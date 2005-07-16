@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.41 2005/06/22 21:34:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.42 2005/07/16 14:23:57 allanonjl Exp $
+
+  16 Jul 2005; John N. Laliberte <allanonjl@gentoo.org>
+  gnome-python-2.10.0.ebuild:
+  marking stable on x86. ( necessary for gnome-python-extras and straw )
 
 *gnome-python-2.10.0 (22 Jun 2005)
 
