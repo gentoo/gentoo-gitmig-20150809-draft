@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9df0f006664d6469c38f7baf77eb3106 ehcache-1.1.ebuild 1200
+MD5 678bbda39744517df1c91226a16c7922 ehcache-1.1.ebuild 1232
 MD5 1dd3004ab563f820bdb86b68d8597df3 ChangeLog 504
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 46925579cf0f0bf56acedeb53f753cac files/digest-ehcache-1.1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCmQIn06ebR+OMO78RAhZMAJ9es42+9rS6bvq32nWs0hvM5CL51ACfeg4F
-aQW9FIdVuoK6LaT5lqIwk0M=
-=yzEc
------END PGP SIGNATURE-----
