@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4d70173bdc7eb8e550e887fb58fb0f1d baselayout-1.12.0_pre1.ebuild 18259
+MD5 3ae3f539512947c7741b45a09fa80461 baselayout-1.12.0_pre1.ebuild 18259
 MD5 63063133efc82df82db512614030ba19 baselayout-1.9.4-r6.ebuild 16993
-MD5 6a5739527acc4e1c578142f190a13ff5 ChangeLog 58267
+MD5 30d7825abaae4eb74638289b6a0f8621 ChangeLog 58401
 MD5 ae244ebc2bb4221e2ef7fbbab8d3d807 baselayout-1.12.0_alpha2-r1.ebuild 18947
 MD5 1527df07925e1672a7769b239aebd85c baselayout-1.11.13.ebuild 18465
 MD5 451f8ce496238c2fd0fa9fa2852ad16c baselayout-1.9.4-r7.ebuild 17999
@@ -43,7 +43,7 @@ MD5 87842ac605d85289eba63ac1c2e16142 files/baselayout-1.11.10-wireless.patch 321
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1msQ1ZcsMnZjRyIRAgScAKC9lhKSeuNfqA/Bjm6CKLr5OIoeXACdEEHa
-YlGqqbs5g4UnQK+eHgtHoB8=
-=bQYY
+iD8DBQFC2S6Q1ZcsMnZjRyIRAuO4AJ9eamXc4mEkiuF7IY0ckgjWL3TuTQCfdiVE
+SEaIdcfEq7eo+7mXCkMbVrg=
+=eXTm
 -----END PGP SIGNATURE-----

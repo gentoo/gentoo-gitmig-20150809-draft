@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre1.ebuild,v 1.1 2005/07/14 13:36:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre1.ebuild,v 1.2 2005/07/16 15:55:29 azarah Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -276,7 +276,7 @@ src_install() {
 	cp -r "${S}"/rc-lists "${D}"/usr/share/baselayout
 
 	# rc-scripts version for testing of features that *should* be present
-	echo "Gentoo Base System version ${SV}" > ${D}/etc/gentoo-release
+	echo "Gentoo Base System version ${PV}" > ${D}/etc/gentoo-release
 
 	#
 	# Setup files related to /dev
