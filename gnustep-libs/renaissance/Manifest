@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 885a5a43f8f309eeedd949cfcf550c3e ChangeLog 2588
 MD5 6709d704408c68519a5daac2cb335e81 files/digest-renaissance-0.8.0 69
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-renaissance-0.8.1_pre20041203 0
@@ -6,3 +9,10 @@ MD5 0f403a91142d23fc03f71dbbbf7c14f1 metadata.xml 1190
 MD5 a0fe7ce633bedfd4f6b6560f43ab7e9f renaissance-0.8.0.ebuild 1130
 MD5 a30342eb74181167912d7aec43a3a620 renaissance-0.8.1_pre20041203.ebuild 1360
 MD5 4c8e74c5e493782856be22c7c1037577 renaissance-0.8.1_pre20050312.ebuild 1360
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2SqAI1lqEGTUzyQRAjRXAJ0fG2EcGRoUqWip8XtSLW7NvqKarQCeLS1G
+XtNCVJLJT4vuGtmmPziTOvo=
+=1RjM
+-----END PGP SIGNATURE-----
