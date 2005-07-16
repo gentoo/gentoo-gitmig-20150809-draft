@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/forehead-1.0_beta5.ebuild,v 1.1 2005/03/29 23:46:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/forehead-1.0_beta5.ebuild,v 1.2 2005/07/16 13:33:54 axxo Exp $
 
 inherit java-pkg
 
@@ -34,12 +34,11 @@ src_compile() {
 	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 
-	ant -f build.xml ${antflags} || die "Compile failed!"
+	ant ${antflags} || die "Compile failed!"
 }
 
 src_install() {
-	java-pkg_dojar ${S}/dest/forehead-${PV}.jar
+	java-pkg_newjar ${S}/dest/forehead-${PV}.jar ${PN}.jar
 
-	dodoc LICENSE.txt
 	use doc && java-pkg_dohtml docs/*
 }
