@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3abcc79c5dcc9c2d1d7fb4a6442897f1 itext-1.3.ebuild 1183
-MD5 3f96ee8e03288b7fba731e677f47c335 itext-1.2.3.ebuild 1247
 MD5 5f412d9fb2b86f9cd02b8a1d7f5220f5 ChangeLog 1946
-MD5 f4bcbe202d039f3aeef294666a30e5fb metadata.xml 366
-MD5 9efb9a777cb4b6f8d0125f5140432bdf files/digest-itext-1.3 176
 MD5 c90c9fb4765b01afdd1fb33582805da1 files/digest-itext-1.2.3 178
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2PbZ/rLF9B432nYRAhLNAKCguJo9HEAdYX4QnoXj5ZvEjmAEmgCeJR2G
-wKyEnPwpE23ViMJhpHEtYoE=
-=V0kP
------END PGP SIGNATURE-----
+MD5 9efb9a777cb4b6f8d0125f5140432bdf files/digest-itext-1.3 176
+MD5 3f96ee8e03288b7fba731e677f47c335 itext-1.2.3.ebuild 1247
+MD5 22baa21bef94099d3dfcb306e628b5cc itext-1.3.ebuild 1185
+MD5 f4bcbe202d039f3aeef294666a30e5fb metadata.xml 366

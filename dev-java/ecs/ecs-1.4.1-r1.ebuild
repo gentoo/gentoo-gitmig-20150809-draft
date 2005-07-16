@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.1-r1.ebuild,v 1.6 2005/06/12 18:27:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.1-r1.ebuild,v 1.7 2005/07/16 13:55:33 axxo Exp $
 
 inherit java-pkg
 
@@ -10,16 +10,17 @@ SRC_URI="http://jakarta.apache.org/builds/jakarta-ecs/release/v${PV}/${P}.tar.gz
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc jikes source"
 
-DEPEND=">=virtual/jdk-1.3
-	dev-java/ant-core
-	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/jakarta-regexp-1.3*
 	=dev-java/xerces-2.6*"
+DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
+	dev-java/ant-core
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 
 src_unpack() {
 	unpack ${A}
@@ -37,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar bin/*.jar
+	java-pkg_newjar bin/${P}.jar ${PN}.jar
 
 	dodoc AUTHORS ChangeLog INSTALL README
 	use doc && java-pkg_dohtml -r docs/*
