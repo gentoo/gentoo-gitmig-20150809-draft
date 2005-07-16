@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 20b560eac327c4e7113ea9b17d041aab jmf-bin-2.1.1e-r1.ebuild 1293
 MD5 e53a759e9f86f713ff7bb8c3b321fdee ChangeLog 1410
-MD5 ac10f570840222bc9e1815908fe02b4a files/digest-jmf-bin-2.1.1e 68
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 ac93b98c6a37bc7d9cf98e4ba8c154d1 files/jmfinit 801
 MD5 ac10f570840222bc9e1815908fe02b4a files/digest-jmf-bin-2.1.1e-r1 68
 MD5 323c4e791ffe63129f18b06f6f14876b files/jmfcustomizer 819
-MD5 ac93b98c6a37bc7d9cf98e4ba8c154d1 files/jmfinit 801
-MD5 dd61ae1de6ff6e0c1aae7d75ef4ecc67 files/jmfregistry 813
 MD5 2592b60b76309bed70aeed7df1214107 files/jmstudio 804
-MD5 01b0b951999bca31d37e3aec1c873226 jmf-bin-2.1.1e-r1.ebuild 1816
-MD5 8ca771cf4de715e0e5be33231b5bad5f jmf-bin-2.1.1e.ebuild 1813
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0AL4I1lqEGTUzyQRAnPdAKCVMCiKu8NxEAe/ddIhS1h/o4FB4gCfd8U8
-E8ExfqAkRBe6inl5BKbLdkY=
-=+/+q
------END PGP SIGNATURE-----
+MD5 dd61ae1de6ff6e0c1aae7d75ef4ecc67 files/jmfregistry 813
