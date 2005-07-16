@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.7667.ebuild,v 1.1 2005/07/07 14:33:32 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.7667.ebuild,v 1.2 2005/07/16 23:30:44 azarah Exp $
 
 inherit eutils linux-mod
 
@@ -94,9 +94,16 @@ src_unpack() {
 		# epatch ${NV_PATCH_PREFIX//7174/7167}-conftest-koutput-includes.patch
 		# Fix calling of smp_processor_id() when preempt is enabled
 		epatch ${NV_PATCH_PREFIX//7667/7167}-disable-preempt-on-smp_processor_id.patch
+		epatch ${NV_PATCH_PREFIX}-KERNEL_VERSION-moved.patch
 	fi
 
-	# if you set this then it's your own fault when stuff breaks :)
+	# Quiet down warnings the user do not need to see
+	sed -i \
+		-e 's:-Wpointer-arith::g' \
+		-e 's:-Wsign-compare::g' \
+		${S}/Makefile.kbuild
+
+	# If you set this then it's your own fault when stuff breaks :)
 	[[ -n ${USE_CRAZY_OPTS} ]] && sed -i "s:-O:${CFLAGS}:" Makefile.*
 
 	# If greater than 2.6.5 use M= instead of SUBDIR=
