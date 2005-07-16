@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3.ebuild,v 1.6 2005/04/22 08:14:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3.ebuild,v 1.7 2005/07/16 09:35:50 axxo Exp $
 
 inherit java-pkg
 
@@ -26,10 +26,9 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar src/jjtraveler-0.4.3.jar
+	java-pkg_newjar src/${P}.jar ${PN}.jar
 
-	exeinto /usr/bin
-	doexe jjtraveler-config
+	dobin jjtraveler-config
 
 	dodoc AUTHORS COPYING INSTALL NEWS TODO ChangeLog
 }
