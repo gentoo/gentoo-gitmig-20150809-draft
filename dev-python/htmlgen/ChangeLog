@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/htmlgen
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.6 2005/05/31 23:44:28 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.7 2005/07/16 16:20:42 josejx Exp $
+
+  16 Jul 2005; Joseph Jezak <josejx@gentoo.org> htmlgen-2.2.2.ebuild:
+  Marked ppc stable.
 
   31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   htmlgen-2.2.2.ebuild:

@@ -1,4 +1,14 @@
-MD5 6a29a99dbb00c3a813fdf45bc6ef72ae ChangeLog 762
-MD5 47cc36e204ed5c1a89c286963cb6550a htmlgen-2.2.2.ebuild 1384
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 02dbad21c1218b3c03d7ebd282b188a5 ChangeLog 855
+MD5 bc6773afff54e8bd355ab8f8a73fc80f htmlgen-2.2.2.ebuild 1385
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 43b1948d8e565b8bfc50541f916b1311 files/digest-htmlgen-2.2.2 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2TPicsIHjyDViGQRAijnAKDDSTVrV2ZIEgdlNmUg8ZlZpLOrTQCgwmgp
+uKij7tUwXZX4lBEkl+vB6Pw=
+=906K
+-----END PGP SIGNATURE-----
