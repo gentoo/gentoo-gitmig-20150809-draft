@@ -1,0 +1,10 @@
+# ChangeLog for net-proxy/pingtunnel
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/pingtunnel/ChangeLog,v 1.1 2005/07/16 09:51:50 mrness Exp $
+
+*pingtunnel-0.61 (16 Jul 2005)
+
+  16 Jul 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +pingtunnel-0.61.ebuild:
+  Initial import from bug #98294.
+
