@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 6cf66c6ef5acdbfa7452e9f4ba4a3d62 ChangeLog 498
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 bfcf604904ce14c09999f52c95244072 jakarta-jstl-1.1.2.ebuild 1707
+MD5 ce103fb427d3ca62ec8fc8ad47998cd3 jakarta-jstl-1.1.2.ebuild 1714
 MD5 8c701edd23836a70f273903ebfa44382 files/digest-jakarta-jstl-1.1.2 86
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCeJCD06ebR+OMO78RAn3OAJ90uL9S9ivac8UcNQ8Q2HbwRryy6wCfWLDT
-mn792TRoQWDWPnnMAaJRjFU=
-=E0kA
+iD8DBQFC2PHl/rLF9B432nYRAvKmAJwI3IFi8/DnaBur085XU3kV2BPYpACeNhWh
+gdEvpazPcbU1fbLoqxCPNRU=
+=GLwS
 -----END PGP SIGNATURE-----
