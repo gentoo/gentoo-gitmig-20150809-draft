@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0de91f4dfdea5f7d144b9a8e7387c186 jakarta-slide-webdavclient-2.1.ebuild 1692
+MD5 f8e316ebc4322ea453b34933e38b01c5 jakarta-slide-webdavclient-2.1.ebuild 1700
 MD5 c584a64e8e70ce74a41517bedc091c39 ChangeLog 562
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 e3a02e14fa71493c6d109fcd3ed318e7 files/jakarta-slide-webdavclient-2.1-gentoo.patch 3717
 MD5 760042f08a0a2acaa81dd12e1a267154 files/digest-jakarta-slide-webdavclient-2.1 87
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCkKk/06ebR+OMO78RAueTAJ47Y0JBh3/yTY+kO6zeuY3u85WeIACdF7rW
-OtvXFOvqrzAunX2zFlxH9Kc=
-=r4mY
+iD8DBQFC2UfI/rLF9B432nYRAl85AJ44F/XdZ81eE9mbmyFmzFlPCNM6HQCbBE3h
+LuNfEibGFQEcZC7ct3NNGjM=
+=0Wx7
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/jakarta-slide-webdavclient-2.1.ebuild,v 1.1 2005/05/22 15:45:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/jakarta-slide-webdavclient-2.1.ebuild,v 1.2 2005/07/16 17:45:18 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -14,15 +14,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc jikes source"
 
-DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4
-	dev-java/ant-core
 	dev-java/antlr
 	dev-java/commons-httpclient
 	dev-java/commons-logging
 	dev-java/commons-transaction
 	~dev-java/jdom-1.0
 	dev-java/xml-im-exporter"
+DEPEND=">=virtual/jdk-1.4
+	dev-java/ant-core
+	${RDEPEND}"
+
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
