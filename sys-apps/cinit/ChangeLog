@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/ChangeLog,v 1.3 2005/06/24 01:09:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/ChangeLog,v 1.4 2005/07/17 18:23:00 killerfox Exp $
+
+  17 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> cinit-0.1.ebuild:
+  Added to ~hppa.
 
 *cinit-0.1 (24 Jun 2005)
 

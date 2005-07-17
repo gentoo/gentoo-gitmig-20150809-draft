@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 384bfc2dc9cdefe7c16e38767dd30159 ChangeLog 620
 MD5 5c4b235a4ffb161f5834a25d7c958f51 cinit-0.0.8.ebuild 787
-MD5 534d08322f01f3e4f8585ac21f0151cb cinit-0.1.ebuild 716
-MD5 434ea33ea8e2bad22c13bca3229b6ead ChangeLog 526
+MD5 52442675a9d611d10ee12e3116bba92a cinit-0.1.ebuild 725
 MD5 23d3591d17fc9401915a32d6cd4fbce8 files/digest-cinit-0.0.8 63
 MD5 db3d44148177c00798504f679618b927 files/digest-cinit-0.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCu113gIKl8Uu19MoRAjAkAJ4jmUMQFtjNfX1PCOL5iRgpn6JHrwCfT3Jn
-7HfESUe8TfUFTkM+XV/lNB4=
-=mLJg
------END PGP SIGNATURE-----
