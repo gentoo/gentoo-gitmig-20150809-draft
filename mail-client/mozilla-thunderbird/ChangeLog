@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.69 2005/07/17 18:32:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.70 2005/07/17 19:48:52 anarchy Exp $
+
+  17 Jul 2005; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-thunderbird-1.0.5.ebuild:
+  Marked stable wrt Security BUG #98855.
 
   17 Jul 2005; Danny van Dyk <kugelfang@gentoo.org>
   mozilla-thunderbird-1.0.5.ebuild:
