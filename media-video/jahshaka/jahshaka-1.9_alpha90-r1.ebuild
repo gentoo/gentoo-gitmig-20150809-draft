@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-1.9_alpha90-r1.ebuild,v 1.2 2005/07/07 04:50:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-1.9_alpha90-r1.ebuild,v 1.3 2005/07/17 18:57:36 kugelfang Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jahshaka.com/downloads/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
