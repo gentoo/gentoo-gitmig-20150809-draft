@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.19 2005/07/14 16:20:35 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r3.eclass,v 1.20 2005/07/17 16:01:24 sebastian Exp $
 #
 # ########################################################################
 #
@@ -492,6 +492,7 @@ php5-sapi-r3_src_compile() {
 php5-sapi-r3_src_install() {
 	cd ${PHP_S}
 	addpredict /usr/share/snmp/mibs/.index
+	addpredict /etc/krb5.conf
 
 	useq sharedext && PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules"
 	make INSTALL_ROOT=${D} $PHP_INSTALLTARGETS || die "install failed"

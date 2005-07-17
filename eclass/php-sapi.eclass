@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.82 2005/07/14 16:20:35 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.83 2005/07/17 16:01:24 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -528,6 +528,7 @@ php-sapi_src_install() {
 
 	addpredict /usr/share/snmp/mibs/.index
 	addpredict /var/lib/net-snmp/
+	addpredict /etc/krb5.conf
 	dodir /usr/bin
 	dodir /usr/${libdir}/php
 	dodir /usr/include/php
