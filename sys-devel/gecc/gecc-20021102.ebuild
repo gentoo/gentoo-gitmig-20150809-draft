@@ -1,22 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021102.ebuild,v 1.5 2004/08/24 04:00:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021102.ebuild,v 1.6 2005/07/17 13:39:31 vapier Exp $
 
-IUSE=""
-DESCRIPTION="gecc is a tool to speed up compilation of C/C++ sources. It distributes the compilation on a cluster of compilation nodes. It also caches the object files to save some unneeded work."
+DESCRIPTION="tool to speed up compilation of C/C++ sources with compilation distribution and caches"
 HOMEPAGE="http://gecc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-DEPEND="sys-devel/gcc"
+IUSE=""
 
-src_compile() {
-#	rm -rf test
-	econf || die "configure failed"
-#	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
-	emake || die "make failed"
-}
+DEPEND=""
 
 src_install() {
 	einstall || die "Install failed"
@@ -28,20 +23,15 @@ src_install() {
 	dosym /usr/bin/gecc /usr/bin/gecc_link/c++
 	dosym /usr/bin/gecc /usr/bin/gecc_link/cc
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/conf.geccd geccd
-
-	insinto /etc/env.d
-	newins ${FILESDIR}/env.geccd 06geccd
-
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/rc.geccd geccd
+	newconfd ${FILESDIR}/conf.geccd geccd
+	newenvd ${FILESDIR}/env.geccd 06geccd
+	newinitd ${FILESDIR}/rc.geccd geccd
 }
 
 pkg_postinst() {
 	einfo
 	einfo "To use gecc for you local compiles you will need to add"
-	einfo "/usr/bin/gecc to the front of your path, and add geccd"
+	einfo "/usr/bin/gecc/ to the front of your path, and add geccd"
 	einfo "to your default runlevel"
 	einfo
 }
