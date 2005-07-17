@@ -8,7 +8,7 @@ MD5 248488cc2cb6484a305e8108b4eaaa6a metadata.xml 489
 MD5 681c761c0afe60e1022ac44d37d3370a linux-headers-2.0.40.ebuild 1820
 MD5 952afa5ec1d18abb7dcf9d4e26970d5a linux-headers-2.4.21-r1.ebuild 3947
 MD5 f77cd054b7e25a44bfe8c83094de0b7e linux-headers-2.2.26.ebuild 2514
-MD5 1977099ee7f0217372ef6c789432ee9d linux-headers-2.4.26-r1.ebuild 399
+MD5 35a0fdb9c2d49cd00f58d0e4133130f8 linux-headers-2.4.26-r1.ebuild 445
 MD5 9ae3b02531558d26bc6aa4fbceda38f6 linux-headers-2.6.11-r2.ebuild 1482
 MD5 06eb1588f23861450f2d8b2e8379352b linux-headers-2.4.23_p3.ebuild 1267
 MD5 cd10168775609812266f3f571928cde1 linux-headers-2.4.21.ebuild 3733
@@ -31,13 +31,14 @@ MD5 545a151ce959e51f4e528e3c27cb5a65 files/digest-linux-headers-2.4.23_p3 131
 MD5 556c7008fbfdf81750bbd4ab2beb111e files/digest-linux-headers-2.2.26 67
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21-r1 67
 MD5 459bc20c4015796630e3a9f3dc9125e6 files/linux-headers-strict-ansi-fix.patch 1486
+MD5 76c239f03201f79b357eafb37e213bb6 files/linux-headers-2.4-armeb-stat.patch 1406
 MD5 df6b4c19f4a4cb2b3d3a2a0107d7853d files/digest-linux-headers-2.4.25 67
 MD5 14c583e9ea29b2a3fc88349685cce2f4 files/linux-headers-soundcard-ppc64.patch 722
 MD5 48ebb9368ff477da66306503da02c6fd files/digest-linux-headers-2.6.8.1-r4 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2GNHgIKl8Uu19MoRAhZJAJ4+rUImyh7wmrBu1cNsbm4Ts91HywCeIzHU
-dbboGZArpR7n3XzbM3ffTMA=
-=YoJW
+iD8DBQFC2fqqgIKl8Uu19MoRAu5VAJ9AthEZn1Hz/3Wka2q+FggXVsCmXgCfb/vB
+Z7ntYWnow2obxyQnnui3SgI=
+=LsC0
 -----END PGP SIGNATURE-----
