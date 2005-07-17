@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/kiosktool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kiosktool/ChangeLog,v 1.16 2005/07/17 10:54:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kiosktool/ChangeLog,v 1.17 2005/07/17 11:42:47 voxus Exp $
+
+  17 Jul 2005; Konstantin Arkhipov <voxus@gentoo.org> -kiosktool-0.9.ebuild,
+  kiosktool-1.0.ebuild:
+  1.0 stable on amd64.
 
   17 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   kiosktool-1.0.ebuild:
