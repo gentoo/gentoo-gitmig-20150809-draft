@@ -1,5 +1,17 @@
-MD5 70999e390ecb095550b21608da1fe5f3 ChangeLog 1103
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cfb43c02f4ed5d9b15f60f7aff7e1ace came-1.9.ebuild 730
 MD5 b1a58a9eebfee381f6414ee4125be12b came-1.7.ebuild 846
 MD5 3ab58c86719dde2a493f617bed8aa556 metadata.xml 219
+MD5 ce1e7a0ed7dca08c38f9ebc892807d00 ChangeLog 1214
+MD5 c56b3f3e9001377bd3df60c9274718c1 files/digest-came-1.9 59
 MD5 789d8429d5cdaa27f79660c1511ed047 files/1.7-true-false.patch 391
 MD5 1fa59c4f95015feb3cb965f4c9951304 files/digest-came-1.7 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2jwOgIKl8Uu19MoRAtSzAJ9+Ak/PtA+BaZjB0Jr+n8+a5QKKTwCggwbH
+/S17iJDtyjKnOQdApnkn9VQ=
+=5k+s
+-----END PGP SIGNATURE-----
