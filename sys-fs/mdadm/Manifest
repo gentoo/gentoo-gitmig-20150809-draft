@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 94fe10944db60ee57aec6ed38d743a0f mdadm-1.11.0.ebuild 1190
-MD5 205db0f00bc362c093f3f23fbce16d52 mdadm-1.12.0.ebuild 1200
+MD5 3f7d0c4f3fe7370b7018501acfa2ec33 ChangeLog 4263
+MD5 705be1ed8b35e4b13754a069b074a83d mdadm-1.11.0.ebuild 1193
 MD5 087b416e7f17ebbe4f6eb4c96d2519a2 mdadm-1.9.0-r1.ebuild 1235
-MD5 cadf44b363c1f48243e49092ad8adf84 ChangeLog 4170
-MD5 2f8e7421a23b99428a0f7ed81360532b files/digest-mdadm-1.12.0 64
-MD5 1e1df57960f4ac52fb4ca327048bbcaa files/raid-stop.sh 805
-MD5 94803322fcea6ec0f31f730af32df156 files/digest-mdadm-1.9.0-r1 59
-MD5 b29646ea704acba09b98ff59f87ebff3 files/raid-start.sh 1518
-MD5 77fed3360e9b6bdfd0721b77c495b750 files/mdadm.rc 849
-MD5 c0f39d9acef8dee3159359691bf76b94 files/mdadm-1.9.0-dont-make-man.patch 260
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 205db0f00bc362c093f3f23fbce16d52 mdadm-1.12.0.ebuild 1200
 MD5 29424204ff8bad1b89969061398f354e files/digest-mdadm-1.11.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1zSOgIKl8Uu19MoRAjH+AJ9yY1K9udJ1XBCQnkzQ8CEH+TUEgQCfadzT
-H0urYW7sfOmKNGGqAd1zozI=
-=N6W7
------END PGP SIGNATURE-----
+MD5 94803322fcea6ec0f31f730af32df156 files/digest-mdadm-1.9.0-r1 59
+MD5 c0f39d9acef8dee3159359691bf76b94 files/mdadm-1.9.0-dont-make-man.patch 260
+MD5 77fed3360e9b6bdfd0721b77c495b750 files/mdadm.rc 849
+MD5 b29646ea704acba09b98ff59f87ebff3 files/raid-start.sh 1518
+MD5 1e1df57960f4ac52fb4ca327048bbcaa files/raid-stop.sh 805
+MD5 2f8e7421a23b99428a0f7ed81360532b files/digest-mdadm-1.12.0 64
