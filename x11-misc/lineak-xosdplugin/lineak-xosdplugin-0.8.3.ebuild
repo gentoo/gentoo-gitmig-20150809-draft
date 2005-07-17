@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/lineak-xosdplugin-0.8.3.ebuild,v 1.3 2005/06/19 20:37:33 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/lineak-xosdplugin-0.8.3.ebuild,v 1.4 2005/07/17 16:09:49 genstef Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 
 RDEPEND="virtual/x11
-		x11-misc/lineakd
+		=x11-misc/lineakd-${PV}*
 		x11-libs/xosd"
 
 src_compile() {
