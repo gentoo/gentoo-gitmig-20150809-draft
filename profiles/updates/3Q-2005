@@ -36,3 +36,4 @@ move dev-java/connectorj dev-java/jdbc-mysql
 slotmove =dev-java/jdbc-mysql-3.0.16 3 0
 move net-im/linphone net-misc/linphone
 move net-misc/host net-dns/host
+move sys-kernel/pegasos-sources sys-kernel/gentoo-sources
