@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dd83b0b768c45902190f5dfa8ceaf60f beep-media-player-0.9.7-r6.ebuild 2776
-MD5 0ba359507ccc5af98b25adff15bd1249 beep-media-player-0.9.7-r5.ebuild 2771
-MD5 d94dcceb4500ad25a6f020e33e414e41 ChangeLog 10338
-MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
 MD5 ce8c0101520de38dfa531388e8e249bc beep-media-player-0.9.7-r4.ebuild 2657
-MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
-MD5 32c2097467512370b951158b88abbeda files/0.9.7-hidden-window.patch 658
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r4 62
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r5 62
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r6 62
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+MD5 8e86661fa60fd4d44ca25442a5ef22b9 ChangeLog 10450
+MD5 c28079e6fee6171715e3d2c982283a45 beep-media-player-0.9.7-r6.ebuild 2775
+MD5 0ba359507ccc5af98b25adff15bd1249 beep-media-player-0.9.7-r5.ebuild 2771
 MD5 d14dde91067c784f210c19e1e4024650 files/0.9.7-desktop-icon.patch 535
-MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
-MD5 539d031b4930b4ce080fbe0804edfc28 files/0.9.7-window-focus.patch 850
+MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r6 62
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r5 62
+MD5 07dd84987f30f2cbb9ca16ec80cb6962 files/0.9.7-playlist-deadfile-delete.patch 540
+MD5 4fe36295e02a77ccc81d9f710ebcc9fb files/0.9.7-bogus-songinfo.patch 517
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r4 62
 MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
 MD5 893b0d5bce79831b0f71aae51af7440d files/0.9.7-vorbis-date.patch 637
-MD5 4fe36295e02a77ccc81d9f710ebcc9fb files/0.9.7-bogus-songinfo.patch 517
-MD5 07dd84987f30f2cbb9ca16ec80cb6962 files/0.9.7-playlist-deadfile-delete.patch 540
+MD5 32c2097467512370b951158b88abbeda files/0.9.7-hidden-window.patch 658
+MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
+MD5 539d031b4930b4ce080fbe0804edfc28 files/0.9.7-window-focus.patch 850
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCreVtI1lqEGTUzyQRAiBTAJ4jZma2V/1ZUrB4X073x1tEuKYqFwCfYrEm
-gMptE8Rbh8r8G61kXQyI3iI=
-=hQPH
+iD8DBQFC2r6sp5vW4rUFj5oRAsjvAJsGXWZFHmFF0/RCfUk7KoWhKHCgjwCeJEOR
+v8llqVPY+xBXvtTc8Yxx9dU=
+=uoij
 -----END PGP SIGNATURE-----
