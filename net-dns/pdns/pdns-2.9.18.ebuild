@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.2 2005/07/17 05:05:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.3 2005/07/17 08:46:07 swegener Exp $
+
+inherit eutils
 
 DESCRIPTION="The PowerDNS Daemon"
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
@@ -14,13 +16,20 @@ DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
 	postgres? ( >=dev-cpp/libpqpp-4.0-r1 )
 	ldap? ( >=net-nds/openldap-2.0.27-r4 )
 	sqlite? ( =dev-db/sqlite-2.8* )
-	recursor? ( dev-libs/boost )
+	recursor? ( >=dev-libs/boost-1.31 )
 	tdb? ( dev-libs/tdb )"
 
 RDEPEND="${DEPEND}"
 
 DEPEND="${DEPEND}
 	doc? ( app-doc/doxygen )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch ${FILESDIR}/${PV}-default-mysql-options.patch
+}
 
 src_compile() {
 	local modules="pipe geo" myconf=""
