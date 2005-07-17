@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 68ca5172569fb2c1daa73002c1911beb ChangeLog 1666
+MD5 1e7dded402e236d45bd25a38c70c995c metadata.xml 223
+MD5 1d713c31d88121ad36e7bef544335581 SVN-Mirror-0.57.ebuild 861
 MD5 de62a581e714b9bd0e5fcb9ba39a7e6d SVN-Mirror-0.59.ebuild 883
 MD5 ab13af6616f3a6e71af81cf772c5a869 SVN-Mirror-0.61.ebuild 887
-MD5 1d713c31d88121ad36e7bef544335581 SVN-Mirror-0.57.ebuild 861
-MD5 45abfd0ce24c19a9c9932c3f99c93f65 ChangeLog 1524
-MD5 1e7dded402e236d45bd25a38c70c995c metadata.xml 223
+MD5 43c43f0357b6c415163c286ad372a0dc SVN-Mirror-0.64.ebuild 934
+MD5 56845abf867f604ee48260c65a65540f files/digest-SVN-Mirror-0.64 67
 MD5 457dbcb5377b66a9ca898bf01935fa01 files/digest-SVN-Mirror-0.57 67
 MD5 6cffa3c74c65722b9bca20e75c4752ec files/digest-SVN-Mirror-0.59 67
 MD5 aa712754d6ec3ad735c3ecded651e18b files/digest-SVN-Mirror-0.61 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCiJJh06ebR+OMO78RAreAAJ9uU8Z9oIk+UbMPs2q/XW0z8l84SQCfQ4Js
-zUejz67CFi1NSa4bAVUjBqI=
-=+Ygo
+iD8DBQFC2u7otG5z4I8BtQoRAmhVAJsEZq4Szxt3u0OdcbYcomxLBfcTjwCdH2I4
+J1Z1s8iBWS2NsD7ZjHHdb1Y=
+=W/co
 -----END PGP SIGNATURE-----
