@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/posh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/ChangeLog,v 1.6 2005/07/16 09:45:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/ChangeLog,v 1.7 2005/07/17 18:45:58 dholm Exp $
+
+  17 Jul 2005; David Holm <dholm@gentoo.org> posh-0.3.18.ebuild:
+  Added to ~ppc.
 
 *posh-0.3.18 (16 Jul 2005)
 
