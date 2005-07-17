@@ -1,0 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cd64ff55e455e15e2679e082181d3817 File-chdir-0.06.ebuild 498
+MD5 18e8b919d6f8bb3fdc4f4c2ebc2faa25 ChangeLog 354
+MD5 0a594f65f714a0cbb9e7a5324011a9c4 files/digest-File-chdir-0.06 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2u2xtG5z4I8BtQoRAgnuAJ9XVzzdIzzdNzudjvVIZbIvX9WTQQCfbfjK
+pgze+sTHAbGlGCa3nJ8NMlg=
+=BqyT
+-----END PGP SIGNATURE-----
