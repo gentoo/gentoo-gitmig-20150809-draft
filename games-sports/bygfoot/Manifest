@@ -1,6 +1,14 @@
-MD5 c3622e6de5833f13b54c385d0eb6e58e bygfoot-1.8.1.ebuild 1074
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 32c070dcf0fdda5ac767f6ac1ec03d32 bygfoot-1.8.2.ebuild 835
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 e2490d57add6bcd851e871a9888ed139 bygfoot-1.8.2.ebuild 1046
 MD5 970565040c1b58eb3c4640d026a9a89a ChangeLog 958
 MD5 4dec3ea79f46ac6b28360da40f932d9a files/digest-bygfoot-1.8.2 66
-MD5 f71ade099de0bbf385c53bfe555d3373 files/digest-bygfoot-1.8.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2fTfgIKl8Uu19MoRApQmAJ9qtc03kF1vNuPxm2+8c0jSFUk4FgCfWn0u
+1Rbt9Jt3gtGAtaQmz0XVgqs=
+=0yN/
+-----END PGP SIGNATURE-----
