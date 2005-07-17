@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/mbuffer-20050321.ebuild,v 1.1 2005/03/24 04:04:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/mbuffer-20050321.ebuild,v 1.2 2005/07/17 13:21:53 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="M(easuring)buffer is a replacement for buffer with additional functionality."
+DESCRIPTION="M(easuring)buffer is a replacement for buffer with additional functionality"
 HOMEPAGE="http://www.rcs.ei.tum.de/~maierkom/privat/software/mbuffer/"
 SRC_URI="http://www.rcs.ei.tum.de/~maierkom/privat/software/mbuffer/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug mhash"
 
 RDEPEND="mhash? ( app-crypt/mhash )"
