@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.4.1.ebuild,v 1.10 2005/07/14 23:20:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.4.1.ebuild,v 1.11 2005/07/17 13:45:43 dertobi123 Exp $
 
 inherit gnome2 mono
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.usefulinc.com/libbtctl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ppc"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2
