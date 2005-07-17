@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.5 2005/07/17 12:02:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.6 2005/07/17 12:09:38 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -42,6 +42,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
+	rm -f 3rdparty/*/lib/*.jar
 	cd ${S}/lib
 
 	rm -f *.jar */*.jar

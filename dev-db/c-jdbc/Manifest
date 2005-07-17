@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c5bf842cdafb6639b73cd4fd13b815f1 c-jdbc-1.0.4-r1.ebuild 3699
+MD5 383bd95a8f302c4c20f81817a4ba16c8 c-jdbc-1.0.4-r1.ebuild 3727
 MD5 93efc67352da22a498552ed3036acf56 ChangeLog 1140
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 62ac24f25532a4183e3ed1e1480878e7 files/console.sh 606
@@ -13,7 +13,7 @@ MD5 9c7589e63d5760dde9a3d56fdc58e6a7 files/cjdbc-init 926
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2kjm/rLF9B432nYRAhg8AKCTYfLQ9rEkyOvhHHBmqtC4EUojRACeJ2yG
-PKfrXXOoygtrsHjgIVqMQTQ=
-=ubMY
+iD8DBQFC2kqY/rLF9B432nYRAptgAKC/P7g8mB/s84me1J4xU1NofiQpSACgsVmf
+S2Yi/V6vSFjNjHNynGdfaCw=
+=AbBv
 -----END PGP SIGNATURE-----
