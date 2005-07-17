@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.2 2005/01/04 23:43:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.3 2005/07/17 02:41:01 vapier Exp $
 
 inherit eutils games
 
@@ -19,7 +19,6 @@ RDEPEND="zlib? ( sys-libs/zlib )
 	opengl? ( virtual/opengl )
 	3dfx? ( media-libs/glide-v3 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	x86? ( dev-lang/nasm )"
 
 S="${WORKDIR}/${P}-src"
@@ -41,8 +40,10 @@ src_compile() {
 	local vid=
 
 	mkdir mybins
-	for vid in 3dfx opengl X ; do
-		use ${vid} || continue
+	for vid in 3dfx opengl X fallback ; do
+		if [[ ${vid} != "fallback" ]] ; then
+			use ${vid} || continue
+		fi
 		cd "${S}"/snes9x
 		case ${vid} in
 			3dfx)
@@ -51,7 +52,7 @@ src_compile() {
 			opengl)
 				vidconf="--with-opengl --without-glide --without-x"
 				target=osnes9x;;
-			X)
+			fallback|X)
 				vidconf="--with-x --without-glide --without-opengl"
 				target=snes9x;;
 		esac
