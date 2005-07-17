@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.6.1.ebuild,v 1.10 2005/07/05 18:31:56 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.6.1.ebuild,v 1.11 2005/07/17 01:38:42 ka0ttic Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/libsigc++-2.0.11
-	>=dev-libs/glib-2.4"
+	>=dev-libs/glib-2.6"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
