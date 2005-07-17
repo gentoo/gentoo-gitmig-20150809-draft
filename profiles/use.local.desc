@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1317 2005/07/16 21:33:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1318 2005/07/17 04:45:00 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -628,6 +628,8 @@ net-dns/djbdns:ipv6arpa - enables ipv6 arpa patch
 net-dns/djbdns:multipleip - enables multi-IP patch
 net-dns/djbdns:roundrobin - enables round robin patch
 net-dns/djbdns:semanticfix - makes tinydns-data handle more semantic errors
+net-dns/pdns:recursor - Enable the recursing nameserver
+net-dns/pdns:tdb - Enable the Trivial Database (xdb) backend
 net-dns/pdnsd:isdn - enable isdn features
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
 net-fs/netatalk:cracklib - Support for cracklib strong password checking
