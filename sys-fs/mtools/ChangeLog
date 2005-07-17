@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mtools
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.13 2005/02/13 17:20:54 lanius Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.14 2005/07/17 13:26:13 vapier Exp $
+
+*mtools-3.9.10 (17 Jul 2005)
+
+  17 Jul 2005; Mike Frysinger <vapier@gentoo.org> +mtools-3.9.10.ebuild:
+  Version bump.
 
   13 Feb 2005; Heinrich Wendel <lanius@gentoo.org> -mtools-3.9.8-r1.ebuild,
   mtools-3.9.9.ebuild:
