@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.0-r1.ebuild,v 1.10 2005/04/08 16:05:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.0-r1.ebuild,v 1.11 2005/07/17 01:02:25 vapier Exp $
 
-inherit gnuconfig eutils
+inherit libtool eutils
 
 DESCRIPTION="Contains error handling functions used by GnuPG software"
 HOMEPAGE="http://www.gnupg.org/(en)/download/index.html#libgpg-error"
@@ -13,25 +13,23 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sparc x86"
 IUSE="nls"
 
-DEPEND="virtual/libc
-	!ppc-macos? ( >=sys-devel/autoconf-2.59 )"
+DEPEND="!ppc-macos? ( >=sys-devel/autoconf-2.59 )"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/libgpg-error-1.0-locale.h.patch
-	if ! useq ppc-macos
-	then
+	cd "${S}"
+	epatch "${FILESDIR}"/libgpg-error-1.0-locale.h.patch
+	if ! use ppc-macos ; then
 		env WANT_AUTOCONF=2.59 autoconf || die "autoconf failed"
 		autoheader || die "autoheader failed"
 	fi
-	gnuconfig_update
+	uclibctoolize
 }
 
 src_compile() {
-	econf `use_enable nls` || die
+	econf $(use_enable nls) || die
 	emake || die
 }
 
