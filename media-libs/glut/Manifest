@@ -1,6 +1,16 @@
-MD5 dfa56ed74d000a39f3d2178646feabde ChangeLog 2155
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5e945d3fac1d6f55eb0adb7f14013872 glut-3.7-r2.ebuild 1237
-MD5 e3e19f36c8bdfb11eac5c21f0a942dba glut-3.7.1.ebuild 1196
-MD5 18422995bf2dc2a319cb0d41a6af2542 files/digest-glut-3.7-r2 135
+MD5 cd0dfb80ebe9d370655d5d4d220c7ecc glut-3.7.1.ebuild 1160
+MD5 a5a691c11be3308a58ec5bb579feedae ChangeLog 2251
 MD5 a0cb6a15efc7e677e7ce9d58b66417a8 files/digest-glut-3.7.1 131
 MD5 e721299e4a30ba46f1edcd8b8510bcb6 files/glutscript.sh 978
+MD5 18422995bf2dc2a319cb0d41a6af2542 files/digest-glut-3.7-r2 135
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2fRtgIKl8Uu19MoRAltgAJ0Tg+Rjrm9AK091czZphSdHPraJ9ACfSLjr
+NmzmRzNaC4PW/iO9MERAs50=
+=1gUy
+-----END PGP SIGNATURE-----
