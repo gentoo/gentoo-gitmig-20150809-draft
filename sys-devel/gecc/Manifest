@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 9e21db96bdcd6f5cfc31f3fd777b9c73 gecc-20021102.ebuild 1052
+MD5 fc92b92b16df5da3209467a8544bd6a7 gecc-20021102.ebuild 1052
 MD5 59327139a1cedec1359a341cd2786b45 ChangeLog 541
 MD5 00ef9b1c6a002f83fb096be1238489c8 files/digest-gecc-20021102 65
 MD5 c4c746f382351fcddd32f5cfd4aa172c files/rc.geccd 718
@@ -11,7 +11,7 @@ MD5 f67688363174d942ba9780b190ba09fa files/conf.geccd 611
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2l+qgIKl8Uu19MoRAhAPAJ4vbu0jdeSZyuUGG9whbwIFBVMK1QCfZgVP
-M3hcgcht2J8X8OpgzvtkiBs=
-=2t7H
+iD8DBQFC2l/NgIKl8Uu19MoRAnYGAJsFxbIL+s9wvnhZVHbIOwvOC0F4JgCfdifs
+JaqFlV2XGv0gbSa4LAAemnQ=
+=F86K
 -----END PGP SIGNATURE-----
