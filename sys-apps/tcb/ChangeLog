@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/tcb
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcb/ChangeLog,v 1.6 2004/10/02 15:33:32 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcb/ChangeLog,v 1.7 2005/07/17 13:36:45 vapier Exp $
+
+*tcb-0.9.8.8 (17 Jul 2005)
+
+  17 Jul 2005; Mike Frysinger <vapier@gentoo.org> +tcb-0.9.8.8.ebuild:
+  Version bump.
 
 *tcb-0.9.8.7 (08 Jan 2004)
 
