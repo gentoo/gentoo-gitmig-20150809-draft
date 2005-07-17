@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.16 2005/07/17 19:20:42 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.17 2005/07/17 19:42:50 kloeri Exp $
+
+  17 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
+  mozilla-launcher-1.34.ebuild:
+  Stable on alpha + ia64.
 
   17 Jul 2005; Jory A. Pratt <anarchy@gentoo.org>
   mozilla-launcher-1.34.ebuild:
