@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.13-r1.ebuild,v 1.4 2005/07/17 11:57:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.15.ebuild,v 1.1 2005/07/17 11:57:52 ka0ttic Exp $
 
 inherit eutils
 
@@ -39,9 +39,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.3.11-gentoo.diff
-	epatch ${FILESDIR}/${P}-no-mysql-means-no-mysql.diff
-	epatch ${FILESDIR}/${P}-zope-deserves-lovins-too.diff
-	use php && epatch ${FILESDIR}/${P}-php.diff
+	epatch ${FILESDIR}/${PN}-1.3.13-no-mysql-means-no-mysql.diff
+	epatch ${FILESDIR}/${PN}-1.3.13-zope-deserves-lovins-too.diff
+	epatch ${FILESDIR}/${PN}-1.3.13-valid-user.diff
+	epatch ${FILESDIR}/${PN}-1.3.13-ldap-binddn.diff
+	use php && epatch ${FILESDIR}/${PN}-1.3.13-php.diff
 }
 
 src_compile() {
