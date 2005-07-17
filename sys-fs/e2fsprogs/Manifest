@@ -5,7 +5,7 @@ MD5 ebc8234a7bc9fc34fffbba6ecc5c3487 e2fsprogs-1.37-r1.ebuild 3446
 MD5 37cb0ccd95b17f3838109fb5c07bdd5c e2fsprogs-1.35-r1.ebuild 3377
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 54432110b1e54ba458f618f72d355216 e2fsprogs-1.36.ebuild 3400
-MD5 b57c21121dc14c86701f0bfb2a8c5af7 e2fsprogs-1.38.ebuild 3216
+MD5 d3b64cb08c1f74c197bc32e121ac9060 e2fsprogs-1.38.ebuild 3210
 MD5 3175f69bbef8d8d5b28da5e04acf22e6 e2fsprogs-1.36-r2.ebuild 2626
 MD5 16abf7164842210613638e00be980f16 ChangeLog 11856
 MD5 92cb7d0ad3274ae7ecae662e1cd428c3 e2fsprogs-1.37.ebuild 3087
@@ -23,7 +23,7 @@ MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0FIugIKl8Uu19MoRAiLgAJ9Eixiga+DV5VUCDX0OEU/2AVWQbwCeN5p6
-Wv3WzxfgztdOHwu7LydINyI=
-=0sB/
+iD8DBQFC2fvrgIKl8Uu19MoRAkarAJ9ui4zG7dXTTkKAz7LmkOWfbDpiGwCfRGls
+xMOXD5fe0G1JxNMNXPxYMJ8=
+=dbql
 -----END PGP SIGNATURE-----
