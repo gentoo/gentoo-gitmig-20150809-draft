@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f51bd36a5d072d9dc49c6700b0502fca partysip-2.1.1.ebuild 1583
-MD5 6e47ae9f5e883ef74070ac1387d4b64b ChangeLog 1213
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
-MD5 0293eef57b96944ba281314e53623dd1 files/partysip-2.1.1-libosip2fix.diff 1866
-MD5 2a6297d7481da765074b92d31c2f596e files/partysip.rc6 559
+MD5 d7f2eb10b40bc05622695571b12ef41e partysip-2.2.3.ebuild 1702
+MD5 e9dfc9e975db7001bf6a6b9efb806692 ChangeLog 1506
+MD5 28c1c4c474314301b9ae5a6df3bd96d8 files/digest-partysip-2.2.3 66
+MD5 683b0ac31fb45361c565e39861b10edb files/partysip-2.2.3-configure.diff 1121
+MD5 3d8b82c59417e2b2174a12728fe8ce10 files/partysip.rc6 556
 MD5 af1cd5cfc31c0ad22707ebfb4c5d4a42 files/partysip.confd 51
-MD5 3f15dc7dc0d0499a5b0ad25d6e592d3d files/digest-partysip-2.1.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBpQR2I1lqEGTUzyQRAr7CAJ9qvrd7ZcPxm+FLHKg1sDF/n39EoACglHFQ
-kD1d2OR8GcFVysC09IxyIfM=
-=GT/+
------END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/partysip
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/ChangeLog,v 1.8 2004/10/23 02:18:38 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/ChangeLog,v 1.9 2005/07/17 22:20:22 stkn Exp $
+
+*partysip-2.2.3 (18 Jul 2005)
+
+  18 Jul 2005; Stefan Knoblich <stkn@gentoo.org>
+  -files/partysip-2.1.1-libosip2fix.diff,
+  +files/partysip-2.2.3-configure.diff, files/partysip.rc6,
+  -partysip-2.1.1.ebuild, +partysip-2.2.3.ebuild:
+  Version bump and removed old non-working version (#92831).
 
   22 Oct 2004; Jason Wever <weeve@gentoo.org> partysip-2.1.1.ebuild:
   Added ~sparc keyword.
