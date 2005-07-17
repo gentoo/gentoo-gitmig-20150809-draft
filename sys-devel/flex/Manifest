@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 7296fa301156c1dd1ae2879ba9ab1e64 flex-2.5.31.ebuild 1083
+MD5 59cf0f07912483de7c559a713910a54a flex-2.5.31.ebuild 1083
 MD5 3f4500ac9117f90f14a3a82e3a5dc488 flex-2.5.4a-r5.ebuild 1304
 MD5 4448164288e262093358c29b1f2ea4df flex-2.5.4a-r6.ebuild 1476
 MD5 3bb1e21ed864cc93f499455ef8f8a345 ChangeLog 2124
@@ -11,12 +11,12 @@ MD5 28010d818ed73f21c9d37fd955c9f25b files/flex-2.5.4a-skel.patch 350
 MD5 06f3fd21134a6d82073ce64e2ad60274 files/flex-2.5.4-glibc22.patch 2241
 MD5 497470663c67fc14a2eb95b51f7f9614 files/flex-2.5.4a-gcc3.patch 277
 MD5 483b62e5eb13bbcf72e8ec7aaa34f554 files/digest-flex-2.5.4a-r6 137
-MD5 97ae1074cc29d946f31dea4a06703195 files/digest-flex-2.5.31 131
+MD5 71c579c7b57e64f789b7c64801144cdf files/digest-flex-2.5.31 131
 MD5 a50411d58e9407414db98087253bdacd files/digest-flex-2.5.4a-r5 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0F/PgIKl8Uu19MoRAuf5AJ9m0VIt0izwNRhUu35L5t7bVhowdQCeKhLI
-r8F2O+XrvORLNB7f+B5/3SA=
-=9GSg
+iD8DBQFC2lWGgIKl8Uu19MoRAvkwAJ9h85kv9AS6LFBfjpUpgnTZQCx2XQCdH56b
+WmWEdHk5R8aOrMXEQRomgYw=
+=aQmU
 -----END PGP SIGNATURE-----
