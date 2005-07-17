@@ -10,11 +10,11 @@ MD5 558969af8e34a040723147fe14a53a44 files/precursor 488
 MD5 bbb2b0b25869b840d8fa2d242a8b20c2 files/recursor.conf 392
 MD5 56567ddcaf248499457a1ce74277c910 metadata.xml 573
 MD5 172c916f2af3e12be9af6f65bc4ab881 pdns-2.9.17.ebuild 1313
-MD5 5beed1eaed0bfd724a94c4d75909857c pdns-2.9.18.ebuild 2179
+MD5 fae7bde2896ef25204d424b717e303d9 pdns-2.9.18.ebuild 2181
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2ePBI1lqEGTUzyQRAn/SAJ4izwQ/EdUvdvDOX4pIseZUgnkQPACgvosI
-etQDAjRI+ZbhlXuM1FpOvIE=
-=FQ3u
+iD8DBQFC2ec9I1lqEGTUzyQRAuofAJ9tpODPO0nEaKotbS40wAtb5rq94QCfZHPG
+usqwxxeZii02+8C/fPVWY+Y=
+=nTUp
 -----END PGP SIGNATURE-----

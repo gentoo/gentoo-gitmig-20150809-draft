@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.1 2005/07/17 04:50:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.2 2005/07/17 05:05:48 swegener Exp $
 
 DESCRIPTION="The PowerDNS Daemon"
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
@@ -13,7 +13,7 @@ IUSE="debug doc ldap mysql postgres recursor sqlite static tdb"
 DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
 	postgres? ( >=dev-cpp/libpqpp-4.0-r1 )
 	ldap? ( >=net-nds/openldap-2.0.27-r4 )
-	sqlite? ( >=dev-db/sqlite-3 )
+	sqlite? ( =dev-db/sqlite-2.8* )
 	recursor? ( dev-libs/boost )
 	tdb? ( dev-libs/tdb )"
 
