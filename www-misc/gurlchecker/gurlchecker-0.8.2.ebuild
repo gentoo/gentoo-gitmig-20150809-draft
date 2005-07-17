@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.8.2.ebuild,v 1.2 2005/07/10 00:57:04 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.8.2.ebuild,v 1.3 2005/07/17 13:17:29 dertobi123 Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gurlchecker.labs.libre-entreprise.org/"
 SRC_URI="http://labs.libre-entreprise.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 SLOT="0"
 IUSE="doc gnutls"
 
