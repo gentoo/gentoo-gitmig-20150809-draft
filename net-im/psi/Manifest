@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1769f596b6946b498e6f5850a4d5ed6f psi-0.9.3-r2.ebuild 9431
-MD5 9a91ad08953450a985b6f893bfe76667 psi-0.9.3-r4.ebuild 9122
-MD5 12c2c3a9493d869049a357f863646c88 psi-0.9.3-r1.ebuild 8145
-MD5 303d49d1d74fe87961051612047246bc psi-0.9.3-r3.ebuild 9830
-MD5 3490d983b48552c1e70f075b2c4bdb78 ChangeLog 9800
+MD5 65ed9ff815411dadfaad0e0e57058afb ChangeLog 9893
 MD5 9b91ead14acbf0da98d3b33e75c67e79 metadata.xml 306
-MD5 b35105d488f11cae19484290159023b1 files/psi-add-status-history.patch 13703
+MD5 8cead10d962528f367d36ae8108da803 psi-0.9.3-r4.ebuild 9124
+MD5 12c2c3a9493d869049a357f863646c88 psi-0.9.3-r1.ebuild 8145
+MD5 1769f596b6946b498e6f5850a4d5ed6f psi-0.9.3-r2.ebuild 9431
+MD5 303d49d1d74fe87961051612047246bc psi-0.9.3-r3.ebuild 9830
+MD5 55307aeb75ba675468f91832d951eff7 files/digest-psi-0.9.3-r4 1975
 MD5 fc8fae7a49b592b4f2c2914c21494c11 files/digest-psi-0.9.3-r1 1924
 MD5 db2a4c5b68dbb0147392a4657f2dbc92 files/digest-psi-0.9.3-r2 2132
 MD5 839e6fa5502e1f03a660918bc30e48b5 files/digest-psi-0.9.3-r3 2211
-MD5 55307aeb75ba675468f91832d951eff7 files/digest-psi-0.9.3-r4 1975
-MD5 0d5cafd17325fc912c4855252d73378f files/psi-indicator.png 300
-MD5 0250867fe42d1dc91e798336869a09d6 files/vcard-photo-interface.patch 32494
-MD5 4195bf9d000383fae25545249a3f8709 files/psi-desktop_file_and_icons_directories.patch 1454
-MD5 18253b59a4622a06bc3a17a4eef93d22 files/psi-status_indicator++_add-on_roster-nr.patch 9821
-MD5 5fa629c5177a7b1c5090428e22b7ec30 files/psi-emergency.png 295
-MD5 76f5cc28b75698adddaa068e5f4593f5 files/psi-pathfix.patch 462
-MD5 893421922de588e6a40fbe8357976279 files/psi-reverse_trayicon.patch 937
 MD5 1c741813b6d820d43475058dbfab3100 files/psi-desktop.patch 492
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0G/c8zY1VwezZiERAh20AJ9EUtJQRVRkPUFHfxtLhi7jWoWrsACgnObR
-+9daJB2z4ejA7LOp1P7IUE4=
-=/GtI
------END PGP SIGNATURE-----
+MD5 4195bf9d000383fae25545249a3f8709 files/psi-desktop_file_and_icons_directories.patch 1454
+MD5 76f5cc28b75698adddaa068e5f4593f5 files/psi-pathfix.patch 462
+MD5 5fa629c5177a7b1c5090428e22b7ec30 files/psi-emergency.png 295
+MD5 0d5cafd17325fc912c4855252d73378f files/psi-indicator.png 300
+MD5 893421922de588e6a40fbe8357976279 files/psi-reverse_trayicon.patch 937
+MD5 18253b59a4622a06bc3a17a4eef93d22 files/psi-status_indicator++_add-on_roster-nr.patch 9821
+MD5 0250867fe42d1dc91e798336869a09d6 files/vcard-photo-interface.patch 32494
+MD5 b35105d488f11cae19484290159023b1 files/psi-add-status-history.patch 13703
