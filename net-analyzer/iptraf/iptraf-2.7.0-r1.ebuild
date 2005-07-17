@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.19 2005/06/25 22:33:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.20 2005/07/17 14:36:42 ka0ttic Exp $
 
-inherit eutils
+inherit eutils check-kernel
 
 V6PATCH_LEVEL=alpha11
 DESCRIPTION="IPTraf is an ncurses-based IP LAN monitor"
@@ -22,6 +22,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/iptraf-2.7.0-atheros.patch
 	use ipv6 && epatch ${DISTDIR}/${P}-ipv6-${V6PATCH_LEVEL}.diff
+
+	# bug 89458
+	is_2_6_kernel && epatch ${FILESDIR}/${P}-2.6.patch
 
 	cd src
 	cp dirs.h dirs.h.orig
