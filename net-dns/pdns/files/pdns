@@ -1,20 +1,39 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/files/pdns,v 1.3 2004/07/14 23:25:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/files/pdns,v 1.4 2005/07/17 04:50:51 swegener Exp $
+
+opts="${opts} reload"
+
+# Default instance
+PDNS_INSTANCE="default"
+PDNS_CONFIG=""
+
+# Multiple instances support
+if [[ "${myservice:0:5}" = "pdns-" && -n "${myservice:5}" ]]
+then
+	PDNS_INSTANCE="${myservice:5}"
+	PDNS_CONFIG="--config-name=${PDNS_INSTANCE}"
+fi
 
 depend() {
 	need net
 }
 
 start() {
-	ebegin "Starting PowerDNS"
-	start-stop-daemon --start --quiet --exec /usr/bin/env -- /usr/sbin/pdns_server --daemon --guardian=yes
+	ebegin "Starting PowerDNS (${PDNS_INSTANCE})"
+	/usr/sbin/pdns_server ${PDNS_CONFIG} --daemon --guardian=yes
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping PowerDNS"
-	start-stop-daemon --stop --quiet --pidfile=/var/run/pdns.pid
+	ebegin "Stopping PowerDNS (${PDNS_INSTANCE})"
+	start-stop-daemon --stop --quiet --pidfile /var/run/${myservice}.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading PowerDNS (${PDNS_INSTANCE})"
+	/usr/bin/pdns_control ${PDNS_CONFIG} cycle &>/dev/null
 	eend $?
 }
