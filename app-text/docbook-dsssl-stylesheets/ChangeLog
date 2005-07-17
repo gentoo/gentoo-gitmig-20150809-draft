@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-dsssl-stylesheets
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.27 2005/07/15 16:49:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.28 2005/07/17 12:06:16 dertobi123 Exp $
+
+  17 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  docbook-dsssl-stylesheets-1.79.ebuild:
+  ppc stable
 
   15 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
   docbook-dsssl-stylesheets-1.79.ebuild:
