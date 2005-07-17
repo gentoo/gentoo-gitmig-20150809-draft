@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/windowlab
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.13 2005/07/02 06:50:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.14 2005/07/17 12:58:42 dertobi123 Exp $
+
+  17 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  windowlab-1.30.ebuild:
+  ppc stable
 
 *windowlab-1.31 (02 Jul 2005)
 
