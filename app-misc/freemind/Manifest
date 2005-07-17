@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 334e7776237031e2afd8ba41709614fe freemind-0.8.0_rc2.ebuild 1279
-MD5 5a179740f25fca845490650178174b42 freemind-0.7.1.ebuild 1060
-MD5 fe5c4ee4bca337712045056c63177302 freemind-0.7.1-r1.ebuild 1254
+MD5 38c029232018c4ab238b446f794c4926 freemind-0.8.0_rc2.ebuild 1284
+MD5 7f0d22f70b499a40a1dd5b89fb7bef66 freemind-0.7.1-r1.ebuild 1259
 MD5 d983460f677666f1d6a1a92078b084cb ChangeLog 2615
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 615ccb469eb93e22c5e84358d55e6c0f files/digest-freemind-0.7.1-r1 70
-MD5 615ccb469eb93e22c5e84358d55e6c0f files/digest-freemind-0.7.1 70
 MD5 4aa9844e77246a548def155d68fd8395 files/digest-freemind-0.8.0_rc2 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCxt0q/rLF9B432nYRAk3yAKCN1kah0tIAw7GcopD/xNUFGDmytgCeNQTB
-Bo6NUMsv/nGzwKqTr86fh3Q=
-=uCPx
+iD8DBQFC2j+q/rLF9B432nYRAujlAJ44ABqfsPNApqKRSY5HdCnVilBMLgCeJthH
+L55/NXvUcGmu/3Ie6tSfelE=
+=AJ57
 -----END PGP SIGNATURE-----
