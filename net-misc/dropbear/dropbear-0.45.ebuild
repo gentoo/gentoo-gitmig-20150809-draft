@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.45.ebuild,v 1.3 2005/05/14 18:31:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.45.ebuild,v 1.4 2005/07/17 10:05:44 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~sh ~x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~sparc sh x86"
 IUSE="minimal multicall pam static zlib"
 
 RDEPEND="zlib? ( sys-libs/zlib )
