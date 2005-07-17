@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r6.ebuild,v 1.2 2005/07/07 13:51:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r6.ebuild,v 1.3 2005/07/17 18:20:38 gongloo Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,11 +13,10 @@ IMMQT_P="qt-x11-immodule-unified-qt3.3.4-20041203"
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
 	immqt? ( http://freedesktop.org/~daisuke/${IMMQT_P}.diff.bz2 )
 	immqt-bc? ( http://freedesktop.org/~daisuke/${IMMQT_P}.diff.bz2 )"
-#	ppc-macos? ( http://dev.gentoo.org/~usata/distfiles/${P}-darwin-fink.patch.gz )"
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 
 SLOT="3"
-KEYWORDS="~x86 ~amd64 ~hppa ~mips ~ppc64 ~sparc ~ia64 ~ppc ~alpha"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="cups debug doc examples firebird gif ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt immqt-bc"
 
 DEPEND="virtual/x11 virtual/xft
@@ -68,10 +67,6 @@ pkg_setup() {
 		PLATNAME="linux"
 	elif use kernel_FreeBSD && use elibc_FreeBSD; then
 		PLATNAME="freebsd"
-	elif use ppc-macos; then
-		PLATNAME=macx
-#		export DYLD_LIBRARY_PATH="${QTDIR}/lib:/usr/X11R6/lib:${DYLD_LIBRARY_PATH}"
-#		export INSTALL_ROOT=""
 	elif use kernel_Darwin && use elibc_Darwin; then
 		PLATNAME="darwin"
 	else
@@ -111,8 +106,7 @@ src_unpack() {
 	fi
 
 	if use ppc-macos ; then
-		gzcat ${FILESDIR}/${P}-darwin-fink.patch.gz | sed -e "s:@QTBASE@:${QTBASE}:g" > ${T}/${P}-darwin-fink.patch
-		epatch ${T}/${P}-darwin-fink.patch
+		epatch ${FILESDIR}/${P}-macos.patch || die "MacOS X11 patch failed!"
 	fi
 
 	# known working flags wrt #77623
@@ -253,13 +247,23 @@ src_install() {
 	done
 
 	# environment variables
-	cat <<EOF > ${T}/45qt3
+	if use ppc-macos; then
+		cat <<EOF > ${T}/45qt3
+PATH=${QTBASE}/bin
+ROOTPATH=${QTBASE}/bin
+DYLD_LIBRARY_PATH=${libdirs:1}
+QMAKESPEC=${PLATFORM}
+MANPATH=${QTBASE}/doc/man
+EOF
+	else
+		cat <<EOF > ${T}/45qt3
 PATH=${QTBASE}/bin
 ROOTPATH=${QTBASE}/bin
 LDPATH=${libdirs:1}
 QMAKESPEC=${PLATFORM}
 MANPATH=${QTBASE}/doc/man
 EOF
+	fi
 	cat <<EOF > ${T}/50qtdir3
 QTDIR=${QTBASE}
 EOF
