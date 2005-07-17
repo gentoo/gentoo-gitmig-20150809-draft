@@ -1,6 +1,6 @@
-diff -Naurp Curses-1.08/CursesFun.c.old Curses-1.08/CursesFun.c
---- Curses-1.08/CursesFun.c.old	2005-03-05 09:15:20.714006864 -0500
-+++ Curses-1.08/CursesFun.c	2005-03-05 09:16:14.501829872 -0500
+diff -Naurp CursesFun.c.old CursesFun.c
+--- CursesFun.c.old	2005-03-05 09:15:20.714006864 -0500
++++ CursesFun.c	2005-03-05 09:16:14.501829872 -0500
 @@ -1276,8 +1276,8 @@ XS(XS_Curses_newterm)
      c_exactargs("newterm", items, 3);
      {
