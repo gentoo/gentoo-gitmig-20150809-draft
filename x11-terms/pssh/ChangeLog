@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/pssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/ChangeLog,v 1.4 2005/05/24 23:44:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/ChangeLog,v 1.5 2005/07/17 12:17:24 voxus Exp $
+
+  17 Jul 2005; Konstantin Arkhipov <voxus@gentoo.org> -pssh-1.0.0.ebuild,
+  -pssh-1.1.1.ebuild, pssh-1.2.0.ebuild:
+  Cleaned out old ebuilds, added ~amd64 keyword to 1.2.0.
 
 *pssh-1.2.0 (24 May 2005)
 
