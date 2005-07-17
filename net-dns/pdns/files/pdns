@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/files/pdns,v 1.4 2005/07/17 04:50:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/files/pdns,v 1.5 2005/07/17 05:25:53 swegener Exp $
 
 opts="${opts} reload"
 
@@ -28,7 +28,7 @@ start() {
 
 stop() {
 	ebegin "Stopping PowerDNS (${PDNS_INSTANCE})"
-	start-stop-daemon --stop --quiet --pidfile /var/run/${myservice}.pid
+	/usr/bin/pdns_control ${PDNS_CONFIG} quit &>/dev/null
 	eend $?
 }
 

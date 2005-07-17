@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 0ebb85e67da1eda32defbb9ca7563254 ChangeLog 2543
 MD5 62a8267bd54fd7edf57908299088c96a files/digest-pdns-2.9.17 63
 MD5 e59bb419d93a7d7bdcb13764c57b3f6d files/digest-pdns-2.9.18 63
-MD5 e10a1edfe9c924d90863ad2b3769df8f files/pdns 904
+MD5 60d7355f48410a77e8df555a089025cb files/pdns 889
 MD5 2d29230247ff445cea2a20fbdd25a219 files/pdns-2.9.17-amd64-fix.diff 1155
 MD5 558969af8e34a040723147fe14a53a44 files/precursor 488
 MD5 bbb2b0b25869b840d8fa2d242a8b20c2 files/recursor.conf 392
@@ -14,7 +14,7 @@ MD5 fae7bde2896ef25204d424b717e303d9 pdns-2.9.18.ebuild 2181
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2ec9I1lqEGTUzyQRAuofAJ9tpODPO0nEaKotbS40wAtb5rq94QCfZHPG
-usqwxxeZii02+8C/fPVWY+Y=
-=nTUp
+iD8DBQFC2ev1I1lqEGTUzyQRAhXPAJ9a61Q2IbBjjKMzUAPqi3ZPwSPliwCfbcgt
+wsWmjlAYFdpNWQzgzjjyKsg=
+=T001
 -----END PGP SIGNATURE-----
