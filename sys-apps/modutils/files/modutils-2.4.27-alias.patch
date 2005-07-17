@@ -36,28 +36,6 @@ Update misc alias cruft.
  	"char-major-10-200 tun",	/* Universal TUN/TAP device driver */
  	"char-major-10-250 hci_vhci",
  
-@@ -153,6 +162,21 @@
- 	"char-major-206 osst",  /* OnStream SCSI tape */
- 	"char-major-216 rfcomm",
- 
-+        /* agpgart like 2.6 */
-+	"ali-agp agpgart",
-+	"ati-agp agpgart",
-+	"amd-k7-agp agpgart",
-+	"amd64-agp agpgart",
-+	"alpha-agp agpgart",
-+	"hp-agp agpgart",
-+	"i460-agp agpgart",
-+	"intel-agp agpgart",
-+	"nvidia-agp agpgart",
-+	"sis-agp agpgart",
-+	"sworks-agp agpgart",
-+	"uninorth-agp agpgart",
-+	"via-agp agpgart",
-+
- 	"dos msdos",
- 	"dummy0 dummy",
- 	"dummy1 dummy",
 @@ -179,6 +203,11 @@
  	/* next two from <dairiki@matthews.dairiki.org>  Thanks! */
  	"net-pf-17 af_packet",
