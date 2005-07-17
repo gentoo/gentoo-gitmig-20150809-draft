@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f1cc6cce9b0a866c060abc9a7f56a50 ChangeLog 78170
+MD5 f6fa08a7719bb532fbaa9cc0ea34318d ChangeLog 78343
 MD5 27fdc1158ea8cb334742f6b3d4a1c087 glibc-2.3.2-r12.ebuild 22297
 MD5 3b73a40944514533bab9ee36370dd062 glibc-2.3.3.20040420-r2.ebuild 21681
 MD5 44c27cc7abe11dd4962146851f9cd2ba glibc-2.3.4.20040619-r2.ebuild 21356
 MD5 3ec5d17c9cfd78688ca51a889dd354a7 glibc-2.3.4.20040808-r1.ebuild 27705
-MD5 6e47fda8e00c9c1bb0ba0d524eebea73 glibc-2.3.5-r1.ebuild 39997
+MD5 4565f5dc6d4d808c672dfcf1c39a45e5 glibc-2.3.5-r1.ebuild 39994
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 45b53d55a7990f579c81cc9698091b8b glibc-2.2.5-r10.ebuild 4454
 MD5 90fe324466be29f9a8d0aeaaf2c5195c glibc-2.3.4.20050125-r1.ebuild 38956
-MD5 3347120b029dc986107809f6a456edd5 glibc-2.3.5.ebuild 40545
+MD5 507da134f81e643ebaef9233b994455a glibc-2.3.5.ebuild 40586
 MD5 81a143838a5609f6234ddc3e81528e55 glibc-2.3.5.20050421.ebuild 40634
 MD5 eecc93f8d5fd4a51f0d455a75ad917d1 glibc-2.3.4.20041102-r1.ebuild 34259
 MD5 2d538b6127a106ba8c43319ffe3f816d glibc-2.3.4.20041102-r2.ebuild 41249
@@ -18,7 +18,7 @@ MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r12 312
 MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r2 312
 MD5 470f57fe18dd0a94cb4a4d6cf51528af files/digest-glibc-2.3.4.20040619-r2 307
 MD5 2f05d3181e9a9ded61e074147af47e8e files/digest-glibc-2.3.4.20040808-r1 382
-MD5 c4e875a781a4250b5fd7ae9ac4ea27c6 files/digest-glibc-2.3.5-r1 518
+MD5 75a0b557cb509aa85c10d0e277679125 files/digest-glibc-2.3.5-r1 515
 MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
 MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
 MD5 b712a49b5113fccb4c8b0ada2a30d390 files/glibc-manpages-2.2.5.tar.bz2 14610
@@ -131,7 +131,7 @@ MD5 ee692cfc6e7c810a2785093948638bbc files/2.3.4/glibc234-alpha-xstat.patch 7653
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2CyTArHZZzCEUG0RAmUdAJ9hnNTszOpVwxvzcQhEeL/j2iFYyQCfZsB/
-dV/BItcmZ82zDK3a5fxPggo=
-=aGCu
+iD8DBQFC2j49ArHZZzCEUG0RAtZAAJ4q7JdK6yYAJCwv+D4QZb9a4q8XuQCgg59k
+pKN8AaqwDTJb7vqqV0usL3Q=
+=3VD+
 -----END PGP SIGNATURE-----

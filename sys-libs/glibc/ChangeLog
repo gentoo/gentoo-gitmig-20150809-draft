@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.363 2005/07/15 21:37:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.364 2005/07/17 11:16:32 eradicator Exp $
+
+  17 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> glibc-2.3.5.ebuild,
+  glibc-2.3.5-r1.ebuild:
+  Workaround for bug #90236 in 2.3.5.  Bump of infopages in 2.3.5-r1.
 
   15 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> glibc-2.3.5.ebuild:
   Stable on x86. This pushes fixes for the nslookup bug and bugs #74555,
