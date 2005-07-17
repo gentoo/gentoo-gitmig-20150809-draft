@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4195 2005/07/16 21:38:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4196 2005/07/17 00:22:14 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -133,8 +133,12 @@ net-im/kpopper
 dev-db/xmysqladmin
 
 # Daniel Black <dragonheart@gentoo.org> (26 Jun 2005)
-# ABI different - masked for further testing
+# zlo ABI different - masked until packages that depend on this have been fixed.
 >=dev-libs/lzo-2
+
+# Daniel Black <dragonheart@gentoo.org> (17 July 2005)
+# masked due to lzo-2 dependancy
+>=net-libs/gnutls-1.2.5
 
 # John N. Laliberte <allanonjl@gentoo.org> (24 Jun 2005)
 # old, unmaintained ebuilds with dead upstream
@@ -145,10 +149,6 @@ gnome-extra/gnobog
 # Andrea Barisani <lcars@gentoo.org> (23 Jun 2005)
 # Masked for testing
 =mail-mta/sendmail-8.13.4-r1
-
-# Daniel Black <dragonheart@gentoo.org> (21 Jun 2005)
-# New serpent/rc6 encryption in c for testing on amd64
-=app-crypt/bestcrypt-1.6_p1-r1
 
 # Aaron Walker <ka0ttic@gentoo.org> (20 Jun 2005)
 # testing releases/cvs snaps
@@ -1000,9 +1000,6 @@ net-misc/zebra
 # alpha branch of gnupg.
 >=app-crypt/gnupg-1.9.0
 # <dragonheart@gentoo.org> (27 Aug 2004)
-# Masked due to gnupg-1.9 dependancy
-# <dragonheart@gentoo.org> (25 Oct 2004)
-=app-crypt/gpgme-1.0.1-r1
 
 # <hattya@gentoo.org> (05 May 2005)
 # development branch.
