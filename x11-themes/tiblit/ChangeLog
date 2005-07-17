@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/tiblit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tiblit/ChangeLog,v 1.6 2005/07/09 22:58:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tiblit/ChangeLog,v 1.7 2005/07/17 11:48:11 voxus Exp $
+
+  17 Jul 2005; Konstantin Arkhipov <voxus@gentoo.org> tiblit-1.2.ebuild:
+  Stable on amd64.
 
   09 Jul 2005; Jason Wever <weeve@gentoo.org> tiblit-2.0_beta.ebuild:
   Added ~sparc keyword.
