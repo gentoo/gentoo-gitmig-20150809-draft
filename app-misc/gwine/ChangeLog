@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gwine
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gwine/ChangeLog,v 1.4 2005/01/01 15:06:41 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gwine/ChangeLog,v 1.5 2005/07/17 14:56:38 vapier Exp $
+
+*gwine-0.10.1 (17 Jul 2005)
+
+  17 Jul 2005; Mike Frysinger <vapier@gentoo.org> +gwine-0.10.1.ebuild:
+  Version bump.
 
   06 Mar 2004; Michael Cummings <mcummings@gentoo.org> gwine-0.7.1.ebuild:
   All clear, closing bug 27301
