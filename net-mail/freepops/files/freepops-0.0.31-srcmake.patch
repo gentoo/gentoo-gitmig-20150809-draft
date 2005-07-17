@@ -1,0 +1,13 @@
+--- src/Makefile
++++ src/Makefile	
+@@ -41,8 +41,8 @@
+ #	CFLAGS+= -DFREEPOPSLUA_PATH_UNOFFICIAL=\"$HOME/config/settings/freepops/lua_unofficial/\"
+ #
+ #else
+-	CFLAGS+= -DFREEPOPSLUA_PATH=\"$(PREFIX)share/freepops/lua/\"
+-	CFLAGS+= -DFREEPOPSLUA_PATH_UNOFFICIAL=\"$(PREFIX)share/freepops/lua_unofficial/\"
++	CFLAGS+= -DFREEPOPSLUA_PATH=\"/usr/share/freepops/lua/\"
++	CFLAGS+= -DFREEPOPSLUA_PATH_UNOFFICIAL=\"/usr/share/freepops/lua_unofficial/\"
+ #endif
+ endif
+ endif
