@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.2.3.ebuild,v 1.4 2005/07/08 02:47:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.2.3.ebuild,v 1.5 2005/07/17 14:38:09 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -20,6 +20,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gconf-2
 	>=dev-libs/libxml2-2
 	>=net-libs/libsoup-2.2.3
+	gnome-base/libgnomeui
 	ldap? ( >=net-nds/openldap-2.0 )
 	ssl? ( mozilla? ( www-client/mozilla )
 		  !mozilla? ( >=dev-libs/nspr-4.4
