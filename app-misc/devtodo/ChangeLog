@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.47 2005/07/09 06:04:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.48 2005/07/17 12:02:14 dertobi123 Exp $
+
+  17 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  devtodo-0.1.19.ebuild:
+  ppc stable
 
   09 Jul 2005; Markus Rothe <corsair@gentoo.org> devtodo-0.1.19.ebuild:
   Stable on ppc64
