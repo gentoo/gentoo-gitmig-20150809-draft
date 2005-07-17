@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Class-Virtual
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Virtual/ChangeLog,v 1.3 2005/05/17 15:21:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Virtual/ChangeLog,v 1.4 2005/07/17 21:40:08 mcummings Exp $
+
+*Class-Virtual-0.05 (17 Jul 2005)
+
+  17 Jul 2005; Michael Cummings <mcummings@gentoo.org>
+  +Class-Virtual-0.05.ebuild:
+  Version bump upstream
 
   17 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   Class-Virtual-0.04.ebuild:
