@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9db626f03c9644e6b28a1f12107035bc ChangeLog 2231
+MD5 edc51bbd1f9402b885b78dc1b4b7a07b amsynth-1.0.0-r1.ebuild 1581
 MD5 a33d519eeaf9796c2c62ddca0e73b75a amsynth-1.0.0.ebuild 1532
+MD5 8203e4187f5ac16ce5adee85c49be148 ChangeLog 2462
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 4fb13c78eeda484932c012ef45935845 files/amsynth-1.0.0-ALSAMidiDriver.patch 269
 MD5 2f7dc56770343abd47f6fcc7bca6938e files/amsynth-pthread.patch 256
 MD5 d7a734ec324ae5b115669d858666fb58 files/digest-amsynth-1.0.0 65
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 d7a734ec324ae5b115669d858666fb58 files/digest-amsynth-1.0.0-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0CDuI1lqEGTUzyQRAk+aAKDIl7R/3+z0GGJlao7UasIqDSj/IACePwzl
-5SA2/UT98XpT15sIhpVUVGo=
-=BCyV
+iD8DBQFC2oRDvpz1081QvMkRAlnXAJ0Y7i/TgR+mLoYzYZid3cIFonkPOQCfaqHC
+86cEFxCP0gxzOSJ5+540ywk=
+=sQvj
 -----END PGP SIGNATURE-----
