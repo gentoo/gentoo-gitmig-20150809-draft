@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-1.9.1.ebuild,v 1.7 2005/01/01 12:04:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-1.9.1.ebuild,v 1.8 2005/07/17 11:14:12 axxo Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/jmeter/source/jakarta-${P}.src.tgz"
 DEPEND=">=virtual/jdk-1.3
 	dev-java/ant
 	jikes? ( dev-java/jikes )"
-RDEPEND=">=virtual/jdk-1.3"
+RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86"
@@ -25,7 +25,7 @@ src_compile () {
 	ant ${antflags} || die "build failed"
 }
 
-src_install () {
+src_install() {
 	# Can't think of a better way to deal with this for now...
 	DIROPTIONS="--mode=0775"
 	dodir /opt/${PN}
