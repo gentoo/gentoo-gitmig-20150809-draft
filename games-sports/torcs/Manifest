@@ -1,6 +1,18 @@
-MD5 5b87276e65e828ae73ba60b5b26c84da ChangeLog 1688
-MD5 fffbf3e75c353b0eaa63846b0148fa3e torcs-1.2.2.ebuild 2149
-MD5 0e6e9a3aee3d146a749a1457a87f7391 torcs-1.2.1.ebuild 1342
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 125c19e6b9889e10e9782bbd327c1d02 torcs-1.2.3.ebuild 974
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 f1cf989071a4da657bd3a2a1412e8bc7 files/digest-torcs-1.2.1 448
+MD5 0e6e9a3aee3d146a749a1457a87f7391 torcs-1.2.1.ebuild 1342
+MD5 fffbf3e75c353b0eaa63846b0148fa3e torcs-1.2.2.ebuild 2149
+MD5 45d65f809b4b5fd8567666235de62363 ChangeLog 1833
 MD5 ed4ac123405f9d16d8e88fe36d37bcd6 files/digest-torcs-1.2.2 1394
+MD5 f1cf989071a4da657bd3a2a1412e8bc7 files/digest-torcs-1.2.1 448
+MD5 f9c3d5ae44d825094b2f38e057c5a967 files/digest-torcs-1.2.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2gZXgIKl8Uu19MoRAvw+AJ0ZXHP6MORvl40Zg20tjaW41mST6gCeKtZp
+aUiAEiXqPjclaf5CEQxTBWk=
+=tPim
+-----END PGP SIGNATURE-----
