@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.123 2005/07/15 00:29:50 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.124 2005/07/17 06:10:06 kumba Exp $
+
+  17 Jul 2005; Joshua Kinard <kumba@gentoo.org> udev-062.ebuild,
+  udev-063.ebuild:
+  Remove sparc keywords from udev-062 and udev-063 until bus error in Bug #99290
+  is fixed.
 
 *udev-063 (15 Jul 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-062.ebuild,v 1.2 2005/07/09 16:21:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-062.ebuild,v 1.3 2005/07/17 06:10:06 kumba Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~x86"
 IUSE="static selinux"
 
 DEPEND="sys-apps/hotplug-base"
