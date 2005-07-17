@@ -1,6 +1,16 @@
-MD5 e9fa3c86403630b533a289ad34643887 ChangeLog 4669
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a2092216ddb5b43181d2289cb5b176a ncftp-3.1.8-r2.ebuild 959
 MD5 2f4035e2a68bf680d7e936f9f4676b0c metadata.xml 715
 MD5 ebddd1bb3487b7c87cd45936b8666221 ncftp-3.1.8-r1.ebuild 949
-MD5 ed8d9d415eccf2536778a160ffcb2955 ncftp-3.1.8.ebuild 829
-MD5 1436077c34d3a623944d848639bd92dd files/digest-ncftp-3.1.8 142
+MD5 041421cbc2d80e38f737c5021a1d184e ChangeLog 4829
+MD5 8b830a0b00ba44486f82bcd625c4ffa5 files/digest-ncftp-3.1.8-r2 210
 MD5 227dd25b59511575f40096932da897f1 files/digest-ncftp-3.1.8-r1 210
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC2jo+gIKl8Uu19MoRAqUFAJ0XPGFqLNg8ULzkton9FeHsevRC1wCfSulg
+TiuAdHUCgffHZmqlIPWzUdI=
+=mMNa
+-----END PGP SIGNATURE-----
