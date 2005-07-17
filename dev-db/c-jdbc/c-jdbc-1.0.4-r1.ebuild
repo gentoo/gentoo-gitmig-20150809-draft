@@ -1,25 +1,23 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.4 2005/06/08 19:25:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.5 2005/07/17 12:02:24 axxo Exp $
 
 inherit java-pkg eutils
 
 DESCRIPTION="Transparent Database Clustering Middleware"
 HOMEPAGE="http://c-jdbc.objectweb.org"
 SRC_URI="http://download.forge.objectweb.org/${PN}/${P}-src.tar.gz"
-LICENSE="BSD"
+LICENSE="LGPL-2.1"
 SLOT="1"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc jikes examples"
-DEPEND=">=virtual/jdk-1.3
-	jikes? ( >=dev-java/jikes-1.21 )"
 RDEPEND=">=virtual/jre-1.3
 	dev-java/ant
 	=dev-java/commons-cli-1*
 	=dev-java/crimson-1*
 	=dev-java/dom4j-1.5*
 	=dev-java/dtdparser-1.21*
-	=dev-java/jaxen-1.1_beta2*
+	~dev-java/jaxen-1.1_beta2
 	>=dev-java/jcommon-0.9.7
 	>=dev-java/jdepend-2.6
 	>=dev-java/jdbc2-stdext-2.0
@@ -31,8 +29,10 @@ RDEPEND=">=virtual/jre-1.3
 	=dev-java/jakarta-regexp-1.3*
 	>=dev-java/xalan-2.5.2
 	dev-java/xml-commons
-	dev-java/xml-commons
 	=dev-db/octopus-3.0*"
+DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
+	jikes? ( >=dev-java/jikes-1.21 )"
 
 S=${WORKDIR}/${P}-src
 
@@ -43,10 +43,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	cd ${S}/lib
-	for i in `find . -name "*.jar"`
-	do
-		rm -f *.jar
-	done
+
+	rm -f *.jar */*.jar
 
 	java-pkg_jar-from commons-cli-1
 	java-pkg_jar-from crimson-1
