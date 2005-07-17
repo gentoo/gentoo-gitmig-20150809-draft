@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3-r1.ebuild,v 1.2 2005/07/12 17:12:30 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3-r1.ebuild,v 1.3 2005/07/17 09:51:18 sebastian Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_ZENDEXT="yes"
@@ -56,6 +56,8 @@ src_compile() {
 	if use !inode; then
 		myconf="${myconf} --without-eaccelerator-use-inode"
 	fi
+
+	export WANT_AUTOMAKE=1.6
 
 	php-ext-source_src_compile
 }
