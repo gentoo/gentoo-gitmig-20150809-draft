@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11.ebuild,v 1.2 2005/07/16 13:54:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11.ebuild,v 1.3 2005/07/17 13:02:55 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~s390 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="qt gnome"
 
 DEPEND="virtual/libc
@@ -27,8 +27,10 @@ src_unpack() {
 	# braindead check in configure fails - hack approach
 	epatch ${FILESDIR}/${P}-configure.in.patch
 
-	libtoolize --copy --force || die "libtoolize failed"
-	autoconf || die "autoconf failed"
+	aclocal && \
+	libtoolize -c -f && \
+	automake && \
+	autoconf || die "autotools failed"
 }
 
 src_compile() {
