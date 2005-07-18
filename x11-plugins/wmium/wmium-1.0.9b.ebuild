@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b.ebuild,v 1.1 2005/07/17 00:51:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b.ebuild,v 1.2 2005/07/18 13:51:15 dragonheart Exp $
 
 IUSE="gtk"
 
@@ -10,7 +10,6 @@ SRC_URI="http://www.earthmagic.org/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-S=${WORKDIR}/${PN}
 DEPEND="virtual/libc
 	virtual/x11
 	media-libs/xpm
