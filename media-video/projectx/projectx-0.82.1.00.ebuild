@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.82.1.00.ebuild,v 1.3 2005/07/18 22:18:20 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.82.1.00.ebuild,v 1.4 2005/07/18 23:42:04 swegener Exp $
 
 inherit eutils java-pkg
 
@@ -31,7 +31,7 @@ src_unpack() {
 	cd ${S}
 
 	cp ${FILESDIR}/${PV}-build.xml ./build.xml
-	
+
 	cd lib
 	rm -f *.jar
 	java-pkg_jar-from jakarta-oro-2.0

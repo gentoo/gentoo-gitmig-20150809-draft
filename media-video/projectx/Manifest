@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f2afc8b55e8ff32cd0d4684fb8d620a0 projectx-0.82.1.00.ebuild 1509
 MD5 b2ea60680eec1466be88c7f384f50d25 ChangeLog 2198
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 44bea3e2eb7c5e3f8863bd77f717d89a projectx-0.82.0.00.ebuild 1493
-MD5 b4ae51238511bfc67e1a8cdec24ab3eb files/0.82.1.00-build.xml 2213
 MD5 b4ae51238511bfc67e1a8cdec24ab3eb files/0.82.0.00-build.xml 2213
+MD5 b4ae51238511bfc67e1a8cdec24ab3eb files/0.82.1.00-build.xml 2213
 MD5 66747c7e41172eca650581213ea161d5 files/build.xml 1069
 MD5 6a180b8fda8939d8800a994fa0b2ca2e files/digest-projectx-0.82.0.00 74
 MD5 a9f5f57962fa9f8b9a3b87e6d6ee2397 files/digest-projectx-0.82.1.00 74
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 44bea3e2eb7c5e3f8863bd77f717d89a projectx-0.82.0.00.ebuild 1493
+MD5 14e4a9d8b3fe46fb500530232db81965 projectx-0.82.1.00.ebuild 1512
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC3Cq4/rLF9B432nYRAjxLAJ9cu521LYTueKZV4GeLAzZgBcV+EQCgg3Jk
-0Hxywt8rHlx0RNknL/VeNu4=
-=9cTy
+iD8DBQFC3D5cI1lqEGTUzyQRAhTbAKC5jcmnVLVQxGvdILRwOM37uL5g6gCdEGlH
+I8lzQv2v0SnyKiVGNOUleug=
+=UeYI
 -----END PGP SIGNATURE-----
