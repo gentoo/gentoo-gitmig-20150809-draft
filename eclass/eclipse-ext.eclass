@@ -1,13 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.11 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.12 2005/07/18 22:02:57 axxo Exp $
 
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
 
-inherit base eutils
-IUSE="${IUSE}"
-SLOT="${SLOT}"
+inherit eutils
 
 # Must be listed in oldest->newest order!
 known_eclipse_slots="2 3 3.1"
