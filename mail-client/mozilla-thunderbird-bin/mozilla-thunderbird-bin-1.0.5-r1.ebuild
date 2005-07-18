@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.0.5.ebuild,v 1.2 2005/07/15 01:38:06 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.0.5-r1.ebuild,v 1.1 2005/07/18 15:07:34 agriffis Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -29,7 +29,7 @@ RDEPEND="virtual/x11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	>=www-client/mozilla-launcher-1.28
+	>=www-client/mozilla-launcher-1.35
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.1.1
 			 >=app-emulation/emul-linux-x86-gtklibs-2.1 )"
 
@@ -41,19 +41,8 @@ src_install() {
 	# Fixing permissions
 	chown -R root:root ${D}/opt/thunderbird
 
-	# Create stub to call mozilla-launcher
-	dodir /usr/bin
-	cat <<EOF >${D}/usr/bin/thunderbird-bin
-#!/bin/sh
-# 
-# Stub script to run mozilla-launcher.  We used to use a symlink here but
-# OOo brokenness makes it necessary to use a stub instead:
-# http://bugs.gentoo.org/show_bug.cgi?id=78890
-
-export MOZILLA_LAUNCHER=thunderbird-bin
-exec /usr/libexec/mozilla-launcher "\$@"
-EOF
-chmod 0755 ${D}/usr/bin/thunderbird-bin
+	# Install /usr/bin/thunderbird-bin
+	install_mozilla_launcher_stub thunderbird-bin /opt/thunderbird
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps
