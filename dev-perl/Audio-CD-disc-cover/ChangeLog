@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Audio-CD-disc-cover
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.14 2005/05/25 14:08:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.15 2005/07/18 13:09:20 mcummings Exp $
+
+  18 Jul 2005; Michael Cummings <mcummings@gentoo.org>
+  Audio-CD-disc-cover-0.05.ebuild:
+  Moving src to our mirrors - disappeared upstream for now, but still a dep for
+  other packages. Bug 99044
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   Audio-CD-disc-cover-0.05.ebuild:
