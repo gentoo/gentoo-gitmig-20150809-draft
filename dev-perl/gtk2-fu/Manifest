@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e7df4d287bd206c50cecac76396cb7f9 gtk2-fu-0.05-r1.ebuild 661
 MD5 08b0bed77b800a81ab295da75bf91e83 gtk2-fu-0.08.ebuild 645
 MD5 8a487db2af4fee760b23e1ac102047b0 metadata.xml 240
@@ -20,3 +23,10 @@ MD5 d169d5602336492a9683ed18e7758aef files/digest-gtk2-fu-0.02 64
 MD5 51f70bce99cafbe26a1810600f879f0e files/digest-gtk2-fu-0.03 62
 MD5 cf51897b3e7009d202fc719eea116f11 files/digest-gtk2-fu-0.05-r1 61
 MD5 81438b08bda59c4c04ab7fd62912a3ad files/digest-gtk2-fu-0.06 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC2/PWKRy60XGEcJIRAqX2AJ4kNXZg+AFgUI08EHskS6x7Afg+PQCfR37H
+nsXE+m7aH01onfJf82CpzuM=
+=nhGt
+-----END PGP SIGNATURE-----
