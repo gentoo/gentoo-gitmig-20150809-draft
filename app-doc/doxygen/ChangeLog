@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.74 2005/07/06 00:42:08 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.75 2005/07/18 18:27:54 j4rg0n Exp $
+
+  18 Jul 2005; Lina Pezzella <j4rg0n@gentoo.org> doxygen-1.4.3-r1.ebuild:
+  Updated ebuild to support USE=qt on ppc-macos
 
   05 Jul 2005; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
   doxygen-1.4.3-r1.ebuild:

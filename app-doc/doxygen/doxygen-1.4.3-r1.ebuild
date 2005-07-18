@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.3 2005/07/09 18:50:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.4 2005/07/18 18:27:54 j4rg0n Exp $
 
 inherit eutils
 
@@ -29,7 +29,11 @@ src_unpack() {
 		tmake/lib/linux-g++/tmake.conf
 	epatch ${FILESDIR}/${P}-cp1251.patch
 	epatch ${FILESDIR}/${P}-nls.patch
-	use ppc-macos && epatch ${FILESDIR}/bsd-configure.patch
+	if use ppc-macos; then
+		epatch ${FILESDIR}/bsd-configure.patch
+		[[ "$MACOSX_DEPLOYMENT_TARGET" == "10.4" ]] && 	sed -i -e 's:-D__FreeBSD__:-D__FreeBSD__=5:' \
+			tmake/lib/macosx-c++/tmake.conf
+	fi
 }
 
 src_compile() {
