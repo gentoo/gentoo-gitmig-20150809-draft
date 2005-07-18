@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.5.ebuild,v 1.2 2005/07/18 18:30:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.5.ebuild,v 1.3 2005/07/18 19:01:35 axxo Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,6 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="doc jikes"
-RESTRICT="primaryuri"
 
 RDEPEND=">=virtual/jre-1.3
 		dev-java/antlr
