@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.2-r1.ebuild,v 1.7 2005/07/12 18:51:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.5-r1.ebuild,v 1.1 2005/07/18 15:15:38 agriffis Exp $
 
 inherit makeedit flag-o-matic nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -11,11 +11,15 @@ HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 MY_PV=${PV/_rc/rc}
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2
 	mirror://gentoo/mozilla-firefox-1.0-4ft2.patch.bz2
+	mirror://gentoo/mozilla-firefox-1.0.3-ia64.patch.bz2
+	mirror://gentoo/mozilla-jslibmath-alpha.patch
+	http://dev.gentoo.org/~agriffis/dist/mozilla-firefox-1.0.3-ia64.patch.bz2
+	http://dev.gentoo.org/~agriffis/dist/mozilla-jslibmath-alpha.patch
 	http://dev.gentoo.org/~agriffis/dist/mozilla-firefox-1.0-4ft2.patch.bz2"
 
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc sparc x86"
 IUSE="gnome java mozdevelop mozsvg"
 
 # xrender.pc appeared for the first time in xorg-x11-6.7.0-r2
@@ -26,7 +30,7 @@ RDEPEND="java? ( virtual/jre )
 		>=x11-base/xorg-x11-6.7.0-r2
 		x11-libs/cairo
 	)
-	>=www-client/mozilla-launcher-1.28"
+	>=www-client/mozilla-launcher-1.35"
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"
@@ -56,9 +60,25 @@ src_unpack() {
 	# patch to fix separate character on euro keyboards, bug 68995
 	epatch ${FILESDIR}/mozilla-firefox-1.0-kp_separator.patch
 
+	# some patches from Debian to set default preferences:
+	# - inherit LANG from env
+	# - shut off SSLv2 and 40-bit ciphers by default
+	# - disable application auto-updating
+	epatch ${FILESDIR}/mozilla-firefox-1.0.3-prefs.patch
+
+	# patch to solve segfaults on ia64, from Debian, originally from David
+	# Mosberger
+	epatch ${DISTDIR}/mozilla-firefox-1.0.3-ia64.patch.bz2
+
+	# patch to fix math operations on alpha, makes maps.google.com work!
+	epatch ${DISTDIR}/mozilla-jslibmath-alpha.patch
+
 	if has_version '>=x11-libs/cairo-0.3.0'; then
 		epatch ${FILESDIR}/svg-cairo-0.3.0-fix.patch
 	fi
+
+	# GCC4 compile fix, bug #87800
+	epatch ${FILESDIR}/mozilla-firefox-1.0.4-gcc4.patch
 }
 
 src_compile() {
@@ -141,8 +161,7 @@ src_install() {
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in *.pc; do
 			if [[ -f ${x} ]]; then
-					sed -i -e
-					"s:/lib/firefox-${MY_PV}:/$(get_libdir)/MozillaFirefox:g" ${x}
+					sed -i -e "s:/lib/firefox-${MY_PV}:/$(get_libdir)/MozillaFirefox:g" ${x}
 					sed -i -e "s:/firefox-${MY_PV}:/MozillaFirefox:g" ${x}
 					doins ${x}
 			fi
@@ -156,20 +175,16 @@ src_install() {
 	# Plugin path setup (rescuing the existent plugins)
 	src_mv_plugins /usr/$(get_libdir)/MozillaFirefox/plugins
 
-	dodir /usr/bin
-	cat <<EOF >${D}/usr/bin/firefox
-#!/bin/sh
-# 
-# Stub script to run mozilla-launcher.  We used to use a symlink here but
-# OOo brokenness makes it necessary to use a stub instead:
-# http://bugs.gentoo.org/show_bug.cgi?id=78890
+	# Install /usr/bin/firefox
+	install_mozilla_launcher_stub firefox /usr/$(get_libdir)/MozillaFirefox
 
-export MOZILLA_LAUNCHER=firefox
-exec /usr/libexec/mozilla-launcher "\$@"
-EOF
-chmod 0755 ${D}/usr/bin/firefox
+	# Install env.d snippet, which isn't necessary for running firefox, but
+	# might be necessary for programs linked against firefox
 	insinto /etc/env.d
 	doins ${FILESDIR}/10MozillaFirefox
+
+	# Set correct libdir in env.d file
+	dosed "s:/usr/lib:/usr/$(get_libdir):" /etc/env.d/10MozillaFirefox
 
 	# Fix icons to look the same everywhere
 	insinto /usr/$(get_libdir)/MozillaFirefox/icons
