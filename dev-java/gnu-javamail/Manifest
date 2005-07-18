@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3d693318d5e4f169b645f59a968a601e gnu-javamail-20040331.ebuild 1260
+MD5 bee8dad5bb9a72a1db7de42f5c20bd6f gnu-javamail-20040331.ebuild 1245
 MD5 711faad46cc016a86365261635f33518 ChangeLog 1299
 MD5 1abfa0b375cbfc010259917a4d3f57b7 metadata.xml 1094
 MD5 cb7f0ddae1ab50f81f5bbb9b6a67753d files/digest-gnu-javamail-20040331 77
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB4R/iI1lqEGTUzyQRAgxFAJ9f78Ho5UCmEbM4BcMDAQJyT0+hzwCfTvB2
-0z7xDbgHtfysoQhfXyzSgG8=
-=MvrU
+iD8DBQFC27av/rLF9B432nYRAoc+AJsFcsZi3QpUCOXOlIod9SlfGOF85ACfYjxE
+qTcEliykY0hgGyaU4w9wGVo=
+=d7UG
 -----END PGP SIGNATURE-----

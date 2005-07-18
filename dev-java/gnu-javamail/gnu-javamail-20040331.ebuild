@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-20040331.ebuild,v 1.9 2005/01/09 12:13:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-20040331.ebuild,v 1.10 2005/07/18 14:03:02 axxo Exp $
 
 inherit java-pkg
 
@@ -10,13 +10,14 @@ SRC_URI="http://www.gentoo.org/~karltk/java/distfiles/javamail-${PV}-gentoo.tar.
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="doc javadoc jikes"
+IUSE="doc jikes"
 RDEPEND=">=virtual/jre-1.3
 	dev-java/gnu-activation
 	>=dev-java/gnu-classpath-inetlib-1.0"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
 	jikes? ( >=dev-java/jikes-1.19 )"
+
 S=${WORKDIR}/javamail-${PV}
 
 src_compile() {
@@ -33,7 +34,7 @@ src_compile() {
 		--enable-maildir \
 		|| die
 	emake || die
-	if use javadoc ; then
+	if use doc; then
 		emake javadoc
 	fi
 }
