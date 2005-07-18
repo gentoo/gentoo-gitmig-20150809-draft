@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.82.0.00.ebuild,v 1.6 2005/05/13 12:37:30 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.82.0.00.ebuild,v 1.7 2005/07/18 22:10:33 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -14,13 +14,14 @@ SRC_URI="mirror://sourceforge/project-x/${MY_P}.zip"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc amd64"
-DEPEND=">=virtual/jdk-1.4
-	app-arch/unzip
-	jikes? ( dev-java/jikes )
-	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/commons-net
 	=dev-java/jakarta-oro-2.0*"
+DEPEND=">=virtual/jdk-1.4
+	${RDEPEND}
+	app-arch/unzip
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 
 IUSE="doc jikes source"
 S="${WORKDIR}/${MY_P}"
