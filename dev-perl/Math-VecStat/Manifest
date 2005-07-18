@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1988cd4e7a6efbb4582ae189687fe759 Math-VecStat-0.08.ebuild 503
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 10952d4ebd6f9a7c1bfb6aafddf8f25a ChangeLog 496
 MD5 61653f39a13bbe405f13b8dd3c56113f files/digest-Math-VecStat-0.08 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC2+8mKRy60XGEcJIRAniFAKCq8MwNkxS+HwFNrBbfYMzVHLDzYgCdFNoO
+EIG+/VdCA5/P0V4QmUGi/4A=
+=CW5Z
+-----END PGP SIGNATURE-----
