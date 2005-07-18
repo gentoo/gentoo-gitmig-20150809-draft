@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.5.ebuild,v 1.9 2005/07/17 19:48:52 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.5.ebuild,v 1.10 2005/07/18 15:21:31 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozconfig mozilla-launcher makeedit multilib
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="ldap"
 
-RDEPEND=">=www-client/mozilla-launcher-1.34"
+RDEPEND=">=www-client/mozilla-launcher-1.35"
 
 S=${WORKDIR}/mozilla
 
