@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.5 2005/07/18 14:13:32 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.6 2005/07/18 14:34:33 axxo Exp $
 
 inherit java-pkg
 
@@ -109,7 +109,7 @@ src_unpack() {
 	# JCS support
 	# JCS is deprecated, so don't compile it
 	if use jcs ; then
-		java-pkg_jar-from jcs-bin
+		java-pkg_jar-from jcs-bin-1.0
 	else
 		find ${S}/src -name "JCS*" -exec rm {} \;
 	fi

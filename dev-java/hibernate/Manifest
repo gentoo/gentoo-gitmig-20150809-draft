@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 73c6e3b9088ea598e414864157f09c2f hibernate-3.0_rc1.ebuild 3674
-MD5 4e518c4ffcaac138bbec054f0c2f15fc hibernate-2.1.8.ebuild 3703
+MD5 ec9df843800829eacef054aa03a7b8f8 hibernate-3.0_rc1.ebuild 3678
+MD5 d67638df88a990e4c8966f649465cf2a hibernate-2.1.8.ebuild 3707
 MD5 f4c045c7f2bb47047eacd8c73bd19e1b ChangeLog 2644
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 b442a0c8138baf4b3737d0a382cfe360 files/digest-hibernate-2.1.8 69
@@ -10,7 +10,7 @@ MD5 e5aa0a8633b0ef9e280d35213fd5254f files/digest-hibernate-3.0_rc1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC27kj/rLF9B432nYRApLHAJsF1fhEc1c7cZEjs/OBjDF+wYMkhwCeMj4G
-lDsS39WDcouhHosEWL7Mf+0=
-=2M9L
+iD8DBQFC274Q/rLF9B432nYRAriZAKCF+0n6Ny7fHB98sL/601JmQcFR+ACfSpQJ
+VZmAtOJcs16F8XV8v1V3Ypo=
+=8TBz
 -----END PGP SIGNATURE-----
