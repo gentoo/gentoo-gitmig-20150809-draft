@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/jdbc2-oracle-9.2.0.5.ebuild,v 1.2 2005/07/09 16:38:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/jdbc2-oracle-9.2.0.5.ebuild,v 1.3 2005/07/18 15:35:58 axxo Exp $
 
 inherit java-pkg
 
@@ -28,7 +28,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 LICENSE="oracle-jdbc"
 SLOT="7"
 DEPEND=">=app-arch/unzip-5.50-r1"
-RDEPEND=">=virtual/jdk-1.2"
+RDEPEND=">=virtual/jre-1.2"
 RESTRICT="fetch"
 
 pkg_nofetch() {
@@ -64,10 +64,6 @@ src_unpack() {
 		cd ${S}/javadoc
 		tar -xf ${DISTDIR}/${file_doc}
 	fi
-}
-
-src_compile() {
-	einfo " This is a binary-only (bytecode) ebuild."
 }
 
 src_install() {
