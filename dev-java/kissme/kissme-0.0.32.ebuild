@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/kissme-0.0.32.ebuild,v 1.5 2004/10/16 17:28:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/kissme-0.0.32.ebuild,v 1.6 2005/07/18 16:14:19 axxo Exp $
 
 inherit java-pkg
 
@@ -12,19 +12,18 @@ DEPEND="virtual/libc
 		>=dev-libs/gmp-3.1.1
 		>=dev-java/jikes-1.19
 		>=dev-java/gnu-classpath-0.08_rc1"
-RDEPEND=""
+RDEPEND="${DEPEND}"
 IUSE="doc"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
 src_compile() {
-	econf \
-		--with-java-compiler=/usr/bin/jikes || die "conf failed"
+	econf --with-java-compiler=/usr/bin/jikes || die "conf failed"
 	emake || die "make failed"
 }
 
-src_install () {
+src_install() {
 	einstall || die "install failed"
 	dodoc AUTHORS COPYING NEWS
 	dodoc doc/*.txt

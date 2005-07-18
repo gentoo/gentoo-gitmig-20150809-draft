@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 871574fa5aa72b45e836bd593a4cbcc5 kissme-0.0.32.ebuild 877
+MD5 d7bbb4f3d46ecaeb2c833c051c33f50f kissme-0.0.32.ebuild 881
 MD5 16e26cd8e652d09f22351ce36a5e25c7 ChangeLog 1530
-MD5 5044eb359d48d092e5bd0bf5eea239cb kissme-0.0.32-r1.ebuild 915
+MD5 25d8c7abdf4bc372449d6b2c3fadcd75 kissme-0.0.32-r1.ebuild 919
 MD5 084af74c4077e514cd92029f9593eeb3 metadata.xml 444
 MD5 b268918dd98780a2910e9245c982fbea files/kissme.sh 310
 MD5 1a9c5f0bad311e5d386337e398e9c357 files/digest-kissme-0.0.32 65
@@ -11,7 +11,7 @@ MD5 1a9c5f0bad311e5d386337e398e9c357 files/digest-kissme-0.0.32-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0YZSBXaUFmZvwyMRAh/DAJ935RW5jSnpawSstWtXFiU/sZ9mGACgvv5s
-/jDyp7q4E4sKSYbrD1ja4Ow=
-=Ff4C
+iD8DBQFC29Vz/rLF9B432nYRAnIJAKCAJ1HTgMPwbUq8/QZ2AKkmxMxLDwCbBY2U
+npBlYaKrWtTmUfOrxJXT4qM=
+=8BHZ
 -----END PGP SIGNATURE-----

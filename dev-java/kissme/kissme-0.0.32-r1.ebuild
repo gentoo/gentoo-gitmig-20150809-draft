@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/kissme-0.0.32-r1.ebuild,v 1.2 2005/07/10 20:34:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/kissme-0.0.32-r1.ebuild,v 1.3 2005/07/18 16:14:19 axxo Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ DEPEND="virtual/libc
 		>=dev-libs/gmp-3.1.1
 		>=dev-java/jikes-1.19
 		>=dev-java/gnu-classpath-0.08_rc1"
-RDEPEND=""
+RDEPEND="${DEPEND}"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
@@ -27,7 +27,7 @@ src_compile() {
 	emake all classes.zip || die "make failed"
 }
 
-src_install () {
+src_install() {
 	einstall || die "install failed"
 
 	dodoc AUTHORS COPYING NEWS ChangeLog
