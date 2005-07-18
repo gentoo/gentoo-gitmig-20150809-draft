@@ -8,7 +8,6 @@ MD5 221e33deb3e1e1959d0db0c86f6f98bc uim-0.4.7.1.ebuild 3070
 MD5 43709db248e2be1d40952ce99d3cae00 files/uim-gtk-query-immodules-gentoo.diff 552
 MD5 4661795c7be34416dbbb12571cb9f585 files/digest-uim-0.4.7 127
 MD5 b9c8399a56165f6cfe164b17a273ea2a files/digest-uim-0.3.4.2 63
-MD5 8441b16a6e27ce2428f377da2a8eb07e files/uim-pinyin-big5-gentoo.diff 275
 MD5 7cadb3ed63d5414354b4c5aec5fefc04 files/digest-uim-0.4.7.1 129
 MD5 cc10c5d38fe1cce5a6e17fad95da53d7 files/uim-0.4.6-gtk2_4-gentoo.diff 441
 MD5 7f949b6287f391906786f248a64ec0b3 files/digest-uim-0.4.6-r2 192
