@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f8b02d941214e9ac6b67978dafcdc604 ChangeLog 748
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 4e291c2a3b9606bc8100ee4516592330 ChangeLog 834
 MD5 948685a43508c913dd9c0ae36cd39008 Class-Virtual-0.04.ebuild 554
-MD5 9ae8556eb5ce298ed7cdbeb8e0ea4e38 Class-Virtual-0.05.ebuild 557
-MD5 6b16f35b97df09a1926903caee2dd3d1 files/digest-Class-Virtual-0.05 68
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 b401c7ab36d75ad5d621d7a8f2212fd2 Class-Virtual-0.05.ebuild 558
 MD5 85ee09a0d7fa97f2bf40a952f56b72ac files/digest-Class-Virtual-0.04 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2tAitG5z4I8BtQoRAtzaAJ9c8EThkm8GjUXZf1SigNcOlBhS5QCeJg26
-3y1ITm6SgEHEXrmbnBVd1o0=
-=+Poa
------END PGP SIGNATURE-----
+MD5 6b16f35b97df09a1926903caee2dd3d1 files/digest-Class-Virtual-0.05 68
