@@ -1,6 +1,20 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.20 2005/07/02 22:01:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.21 2005/07/18 20:21:03 mkennedy Exp $
+
+  18 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/10.2.6-manpage-emacs-gentoo.patch, files/50erlang-gentoo.el,
+  metadata.xml, erlang-10.2.6.ebuild:
+  Added Emacs Herd to metadata.xml.
+
+  18 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/10.2.6-manpage-emacs-gentoo.patch, files/50erlang-gentoo.el,
+  erlang-10.2.6.ebuild:
+  Support man-page documentation in Emacs erlang-mode; Install Erlang
+  man-pages and HTML documentation via "doc" USE flag; Add missing
+  dependencies for Java and ODBC support via "odbc" and "java" USE flags;
+  Rename Erlang man-pages with "erl" suffix to avoid namespace collision; New
+  upstream version.
 
 *erlang-10.2.6 (02 Jul 2005)
 
