@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.3.0.ebuild,v 1.1 2005/05/29 02:32:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.0.ebuild,v 1.1 2005/07/18 11:00:39 usata Exp $
 
 inherit kde
 
@@ -11,15 +11,23 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="|| ( >=app-i18n/scim-1.3 >=app-i18n/scim-cvs-1.3 )"
+DEPEND="|| ( >=app-i18n/scim-1.3.3 >=app-i18n/scim-cvs-1.3.3 )"
 
 need-kde 3.2
 
+src_compile() {
+	#sed -i -e "/=.*DESTDIR/s@\(\['DESTDIR'\]\)@\1 + '/usr'@" bksys/generic.py || die
+	#sed -i -e "/basedir =.*DESTDIR/s@\(\['DESTDIR'\]\)@\1 + '/usr'@g" bksys/generic.py || die
+	#sed -i -e "s@\(basedir+subdir\)@\1+'/usr'@g" bksys/generic.py || die
+	./configure prefix=/usr || die
+	./scons || die
+}
+
 src_install() {
-	kde_src_install
+	DESTDIR=${D} ./scons prefix=/usr install || die
 
 	mv ${D}/usr/share/doc/HTML ${D}/usr/share/doc/${PF}/html
 }
