@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.81 2005/07/18 17:17:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.82 2005/07/18 17:31:52 seemant Exp $
+
+  18 Jul 2005; Seemant Kulleen <seemant@gentoo.org> -files/heimdal-kadmind,
+  -files/heimdal-kdc, -files/heimdal-kpasswdd, -files/krb4-build.patch,
+  -files/krb5-kdc.schema, -files/krb5.conf, heimdal-0.6.5.ebuild:
+  move patches to tarballs, and remove configs, which are already in tarballs
 
 *heimdal-0.7 (18 Jul 2005)
 

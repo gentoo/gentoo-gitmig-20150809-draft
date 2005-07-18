@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.5.ebuild,v 1.8 2005/06/30 02:28:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.5.ebuild,v 1.9 2005/07/18 17:31:52 seemant Exp $
 
 inherit libtool eutils virtualx toolchain-funcs
 
-PATCHVER=0.2
+PATCHVER=0.3
 PATCH_P=${P%.*}-gentoo-patches-${PATCHVER}
 
 DESCRIPTION="Kerberos 5 implementation from KTH"
@@ -42,7 +42,6 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" \
 		epatch ${GENTOODIR}/patches
-	epatch ${FILESDIR}/krb4-build.patch
 }
 
 src_compile() {
