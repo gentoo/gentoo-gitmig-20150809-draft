@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1.ebuild,v 1.8 2005/07/06 03:04:23 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1.ebuild,v 1.9 2005/07/18 17:54:14 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -18,10 +18,6 @@ LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
 IUSE="accessibility cairo firefox gnome mozilla"
-DEPEND="${RDEPEND}
-		>=virtual/jdk-1.4
-		  dev-java/ant-core
-		  app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4
 		 mozilla? (
 		 			 firefox? ( >=www-client/mozilla-firefox-1.0.3 )
@@ -29,6 +25,10 @@ RDEPEND=">=virtual/jre-1.4
 				  )
 		 gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )
 		 cairo? ( >=x11-libs/cairo-0.3.0 )"
+DEPEND=">=virtual/jdk-1.4
+		${RDEPEND}
+		  dev-java/ant-core
+		  app-arch/unzip"
 
 S=${WORKDIR}
 
@@ -56,14 +56,14 @@ src_unpack() {
 	fi
 
 	# Clean up the directory structure
-	for f in $(ls) ; do
+	for f in *; do
 		if [[ "${f}" != "src.zip" ]] ; then
 			rm -rf ${f}
 		fi
 	done
 
 	# Unpack the sources
-	einfo "Unpacking src.zip to ${S}"
+	echo "Unpacking src.zip to ${S}"
 	unzip src.zip &> /dev/null || die "Unable to extract sources"
 
 	# Cleanup the redirtied directory structure
@@ -97,19 +97,19 @@ src_compile() {
 	# Fix the pointer size for AMD64
 	[[ ${ARCH} == 'amd64' ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
 
-	einfo "Building AWT library"
+	echo "Building AWT library"
 	emake -f make_linux.mak make_awt || die "Failed to build AWT support"
 
-	einfo "Building SWT library"
+	echo "Building SWT library"
 	emake -f make_linux.mak make_swt || die "Failed to build SWT support"
 
 	if use accessibility ; then
-		einfo "Building JAVA-AT-SPI bridge"
+		echo "Building JAVA-AT-SPI bridge"
 		emake -f make_linux.mak make_atk || die "Failed to build ATK support"
 	fi
 
 	if use gnome ; then
-		einfo "Building GNOME VFS support"
+		echo "Building GNOME VFS support"
 		emake -f make_linux.mak make_gnome || die "Failed to build GNOME VFS support"
 	fi
 
@@ -130,37 +130,37 @@ src_compile() {
 						-I${GECKO_SDK}/include/embedstring -I${GECKO_SDK}/include/embedstring/include"
 		export GECKO_LIBS="-L${GECKO_SDK} -lgtkembedmoz"
 
-		einfo "Building the Mozilla component"
+		echo "Building the Mozilla component"
 		emake -f make_linux.mak make_mozilla || die "Failed to build Mozilla support"
 	fi
 
 	if use cairo ; then
-		einfo "Building CAIRO support"
+		echo "Building CAIRO support"
 		emake -f make_linux.mak make_cairo || die "Unable to build CAIRO support"
 	fi
 
-	einfo "Building JNI libraries"
+	echo "Building JNI libraries"
 	ant compile || die "Failed to compile JNI interfaces"
 
-	einfo "Creating missing files"
+	echo "Creating missing files"
 	echo "version 3.138" > ${S}/build/version.txt
 	cp ${FILESDIR}/SWTMessages.properties ${S}/build/org/eclipse/swt/internal/
 
-	einfo "Packing JNI libraries"
+	echo "Packing JNI libraries"
 	ant jar || die "Failed to create JNI jar"
 }
 
 src_install() {
-	java-pkg_dojar swt.jar || die "Unable to install SWT Java interfaces"
+	java-pkg_dojar swt.jar
 
 	java-pkg_sointo /usr/lib
-	java-pkg_doso *.so || die "Unable to install SWT libraries"
+	java-pkg_doso *.so
 
 	dohtml about.html
 }
 
 pkg_postinst() {
-	if [[ $(use_enable cairo) ]] ; then
+	if use cairo; then
 		ewarn
 		ewarn "CAIRO Support is experimental! We are not responsible if"
 		ewarn "enabling support for CAIRO corrupts your Gentoo install,"
