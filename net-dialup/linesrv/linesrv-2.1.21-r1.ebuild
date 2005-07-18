@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21-r1.ebuild,v 1.1 2005/07/17 12:40:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.21-r1.ebuild,v 1.2 2005/07/18 11:51:18 dholm Exp $
 
 inherit webapp flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://linecontrol.srf.ch/down/${P}.src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 # if someone disables pam but wants user authentication
 # to be supported, then crypt is needed.
 IUSE="pam mysql crypt"
