@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/partysip-2.2.3.ebuild,v 1.1 2005/07/17 22:20:22 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/partysip-2.2.3.ebuild,v 1.2 2005/07/18 11:51:31 dholm Exp $
 
 IUSE="berkdb debug syslog"
 
@@ -12,7 +12,7 @@ SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2" # not 100% about -2, but core is LGPL
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~ppc ~sparc ~x86"
 
 DEPEND="virtual/libc
 	>=net-libs/libosip-2.2.1
