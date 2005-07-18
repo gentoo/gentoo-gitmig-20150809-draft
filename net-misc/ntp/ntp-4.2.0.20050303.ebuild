@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20050303.ebuild,v 1.1 2005/07/18 22:58:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20050303.ebuild,v 1.2 2005/07/18 23:50:12 vapier Exp $
 
 inherit eutils
 
@@ -46,7 +46,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/ntp-4.1.1b-syscall-libc.patch
 	epatch "${FILESDIR}"/4.2.0-linux-config-phone.patch #13001
 	epatch "${FILESDIR}"/4.2.0.20040617-hostname.patch
 	epatch "${FILESDIR}"/4.2.0.20040617-errno-fix.patch
