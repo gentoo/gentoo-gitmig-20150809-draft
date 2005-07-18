@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.1.ebuild,v 1.2 2005/01/01 18:25:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.1.ebuild,v 1.3 2005/07/18 13:01:14 axxo Exp $
 
 inherit java-pkg
 
@@ -11,22 +11,21 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc jikes"
-DEPEND=">=virtual/jdk-1.3
-	jikes? ( >=dev-java/jikes-1.19 )"
 RDEPEND=">=virtual/jre-1.3
 	>=dev-java/jessie-0.9.7
 	>=dev-java/gnu-crypto-2.0.1
 	"
+DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
+	jikes? ( >=dev-java/jikes-1.19 )"
 S=${WORKDIR}/inetlib
 
 src_unpack() {
 	unpack ${A}
 	cd ${S} ; mkdir ext
-	(
-		cd ext
-		java-pkg_jar-from jessie
-		java-pkg_jar-from gnu-crypto
-	)
+	cd ext
+	java-pkg_jar-from jessie
+	java-pkg_jar-from gnu-crypto
 }
 
 
@@ -40,12 +39,12 @@ src_compile() {
 		--enable-nntp \
 		--enable-ftp \
 		--enable-gopher \
-		--with-jsse-jar=$(pwd)/ext \
-		--with-javax-security-jar=$(pwd)/ext \
+		--with-jsse-jar=${S}/ext \
+		--with-javax-security-jar=${S}/ext \
 		|| die
 	make || die
 	if use doc ; then
-		make javadoc
+		make javadoc || die
 	fi
 }
 
