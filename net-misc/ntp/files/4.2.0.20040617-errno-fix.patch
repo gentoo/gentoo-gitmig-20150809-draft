@@ -1,6 +1,7 @@
-diff -Nur ntp-stable-4.2.0a-20040617/ntpd/ntp_io.c ntp-stable-4.2.0a-20040617-errno-fix/ntpd/ntp_io.c
---- ntp-stable-4.2.0a-20040617/ntpd/ntp_io.c	2004-05-25 11:02:24.000000000 +0000
-+++ ntp-stable-4.2.0a-20040617-errno-fix/ntpd/ntp_io.c	2005-05-06 15:35:23.433595492 +0000
+https://ntp.isc.org/bugs/show_bug.cgi?id=465
+
+--- ntpd/ntp_io.c
++++ ntpd/ntp_io.c
 @@ -1795,16 +1795,16 @@
  				   sizeof(rb->recv_space), 0,
  				   (struct sockaddr *)&rb->recv_srcadr,

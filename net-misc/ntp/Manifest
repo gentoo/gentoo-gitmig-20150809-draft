@@ -15,10 +15,10 @@ MD5 59c70b7499e588d6a24901a951c1bcd8 files/digest-ntp-4.2.0.20040617-r2 166
 MD5 0ce27073d67a016693a77314b6bfd4f5 files/ntpd.rc 741
 MD5 5bd3924f5720b97837969ec4ec4d5e09 files/ntp.conf 1451
 MD5 0c3a6df816f448a870e070797c22f72e files/4.2.0.20040617-hostname.patch 8476
-MD5 4cbbcd5bcd303b10c047314fa3d6bba4 files/4.2.0.20040617-freebsd.patch 1207
+MD5 2bc77f5ebab9804cdc2dff52ab4c267a files/4.2.0.20040617-freebsd.patch 803
 MD5 df7cdf79440109a1535f013c796aabce files/digest-ntp-4.2.0.20050303 166
 MD5 5fc28af5c2a508eeb67a4d5d0ffab341 files/digest-ntp-4.2.0-r2 135
-MD5 4404af9ccf7ecc7005c46dc43d9ae80a files/4.2.0.20040617-debug-fix.patch 430
+MD5 5fecd7747324b76551f514df62a4d78d files/4.2.0.20040617-debug-fix.patch 232
 MD5 047fe77e01bc9335b07bcc5d963d8683 files/4.1.2-droproot.patch 12672
 MD5 b8fc232f85be1313aee4c5a6f0048ca7 files/ntp-client-4.1.2.rc 840
 MD5 83dde3b948b28c278d496252494c935f files/ntpd.confd 393
@@ -32,12 +32,12 @@ MD5 4e13c1a5fa0fa54e3b65ec311dd7270a files/broadcastclient.patch 451
 MD5 0ac690ae52fe02f336ae73f9857461ec files/4.2.0-droproot.patch 13908
 MD5 e327d521e4dfb0c967941eeb84ad9207 files/ntp-4.1.1b-syscall-libc.patch 424
 MD5 24574e6ad1b468152839c10361b51a0f files/4.2.0-linux-config-phone.patch 711
-MD5 abb390de7ada49ef21ae18598b5eddb2 files/4.2.0.20040617-errno-fix.patch 685
+MD5 759c1adb57e9c61f519fe938902f1df7 files/4.2.0.20040617-errno-fix.patch 493
 MD5 59c70b7499e588d6a24901a951c1bcd8 files/digest-ntp-4.2.0.20040617 166
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC3DQugIKl8Uu19MoRAoQGAJ9RmFCCdPqrpfIs4c3Di9QENwOrGgCggPTU
-1/Ll+OYoKk335NDUuLIOvrQ=
-=Vlrb
+iD8DBQFC3D/egIKl8Uu19MoRAu9dAJ4u2QxabUu1cw2nHTLQg/5l6Nkc4QCdG4E+
+7YjoUFZeltTTfwU6BZ0eZ4g=
+=XJH5
 -----END PGP SIGNATURE-----

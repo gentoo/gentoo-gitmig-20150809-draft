@@ -1,6 +1,7 @@
-diff -ur ntp-stable-4.2.0a-20040617/ntpdc/ntpdc.c ntp-stable-4.2.0a-20040617-fbsd/ntpdc/ntpdc.c
---- ntp-stable-4.2.0a-20040617/ntpdc/ntpdc.c	2004-05-25 13:02:25.000000000 +0200
-+++ ntp-stable-4.2.0a-20040617-fbsd/ntpdc/ntpdc.c	2005-05-26 07:25:33.091870920 +0200
+https://ntp.isc.org/bugs/show_bug.cgi?id=438
+
+--- ntpdc/ntpdc.c
++++ ntpdc/ntpdc.c
 @@ -449,7 +449,11 @@
  	hints.ai_flags = AI_NUMERICHOST;
  
@@ -14,9 +15,8 @@ diff -ur ntp-stable-4.2.0a-20040617/ntpdc/ntpdc.c ntp-stable-4.2.0a-20040617-fbs
  		hints.ai_flags = AI_CANONNAME;
  #ifdef AI_ADDRCONFIG
  		hints.ai_flags |= AI_ADDRCONFIG;
-diff -ur ntp-stable-4.2.0a-20040617/ntpq/ntpq.c ntp-stable-4.2.0a-20040617-fbsd/ntpq/ntpq.c
---- ntp-stable-4.2.0a-20040617/ntpq/ntpq.c	2004-05-25 13:02:25.000000000 +0200
-+++ ntp-stable-4.2.0a-20040617-fbsd/ntpq/ntpq.c	2005-05-26 07:26:33.276721432 +0200
+--- ntpq/ntpq.c
++++ ntpq/ntpq.c
 @@ -631,7 +631,11 @@
  	hints.ai_flags = AI_NUMERICHOST;
  
