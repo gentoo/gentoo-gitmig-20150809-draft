@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f9e7c0d8a2f90faae5396cbc37ffc148 ChangeLog 546
 MD5 ebe9107b21e3ad6b7065a0a95a118869 metadata.xml 364
-MD5 5ab70fbd6b13fd49bf14dd929176d6b6 cacao-0.91.ebuild 1036
+MD5 d41dadf23172e54e78056b01d88ebedf cacao-0.91.ebuild 1185
 MD5 1b8ece1ea129936e89b66052a7f28b0c files/digest-cacao-0.91 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC249B/rLF9B432nYRAu9RAJ9smWM9UmSrnbSNUllsoXoBATypRACgzbxq
+TWA8WHAufVzhYCBNRN3M8nU=
+=ot23
+-----END PGP SIGNATURE-----
