@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Net-Domain-TLD
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/ChangeLog,v 1.1 2005/07/18 12:28:14 mcummings Exp $
+
+*Net-Domain-TLD-1.5 (18 Jul 2005)
+
+  18 Jul 2005; Michael Cummings <mcummings@gentoo.org>
+  +Net-Domain-TLD-1.5.ebuild:
+  Missing dep for Email-Valid - pure perl call to TLDs. Bug 99088
+
