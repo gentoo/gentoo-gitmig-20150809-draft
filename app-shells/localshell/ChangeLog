@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/localshell
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/ChangeLog,v 1.1 2005/07/18 04:50:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/ChangeLog,v 1.2 2005/07/18 11:49:23 dholm Exp $
+
+  18 Jul 2005; David Holm <dholm@gentoo.org> localshell-1.1.ebuild:
+  Added to ~ppc.
 
 *localshell-1.1 (18 Jul 2005)
 
