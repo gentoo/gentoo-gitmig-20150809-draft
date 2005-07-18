@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 acb017e3b8562b19701834c477fe0bd8 jxplorer-3.1_rc4.ebuild 1517
-MD5 4acaea9c2b78e1d4117f3900e6e1d0be jxplorer-3.1.ebuild 1511
+MD5 a5a295f030b955f9f89313c263855d81 jxplorer-3.1_rc4.ebuild 1504
+MD5 7a6c6c87e866803cfbf69262c3818be5 jxplorer-3.1.ebuild 1516
 MD5 da8a921f138d67ab1719efe675bef081 ChangeLog 1155
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 02193c618856347b1d7ec23ec21e4475 files/jxplorer-log4j.patch 613
@@ -12,9 +12,9 @@ MD5 b04073e642024032d31552ae958c3149 files/digest-jxplorer-3.1_rc4 134
 MD5 19c309ed0cfd34dc531818b1607a2a47 files/build.xml 1871
 MD5 c71a48763e3bab86565e7c87fd7034b1 files/jxplorer.sh 888
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCeUuK06ebR+OMO78RArPTAKCB5UvjOWEMJgkmoMK/kW5HieXWJACfaz9a
-vaUi9hwF7dmS40IjVHvWuGA=
-=lYIj
+iD8DBQFC3Cv1/rLF9B432nYRAp4hAJ4qEXC8FkFHV9Nyzxr1VHzdZdbwSgCgyDmm
+hAAX6RPda1+3EXwi2PkMglU=
+=9Os+
 -----END PGP SIGNATURE-----

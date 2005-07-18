@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1.ebuild,v 1.1 2005/05/04 22:24:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1.ebuild,v 1.2 2005/07/18 22:23:36 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -10,9 +10,8 @@ SRC_URI="mirror://sourceforge/${PN}/JXv${PV}src.tar.bz2
 	mirror://sourceforge/${PN}/JXv${PV}deploy.tar.bz2"
 LICENSE="CAOSL"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="doc"
-DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/commons-discovery-0.2
 	>=dev-java/commons-logging-1.0.4
@@ -23,7 +22,9 @@ RDEPEND=">=virtual/jre-1.4
 	>=dev-java/sun-jaf-bin-1.0.2
 	>=dev-java/sun-javamail-bin-1.3.1
 	>=www-servers/axis-1.1"
-RESTRICT="nomirror"
+DEPEND=">=virtual/jdk-1.4
+	dev-java/ant-core
+	${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
@@ -51,8 +52,7 @@ src_install() {
 	java-pkg_dojar dist/${PN}.jar jars/help.jar
 
 	dodir /usr/share/${PN}
-	for i in "icons images htmldocs language templates security connections.txt
-log4j.xml"
+	for i in "icons images htmldocs language templates security connections.txt log4j.xml"
 	do
 		cp -r ${i} ${D}/usr/share/${PN}
 	done
