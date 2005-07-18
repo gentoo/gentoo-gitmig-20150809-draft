@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcmciautils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.3 2005/07/07 10:48:50 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.4 2005/07/18 13:40:48 brix Exp $
+
+*pcmciautils-006 (18 Jul 2005)
+
+  18 Jul 2005; <brix@gentoo.org> +pcmciautils-006.ebuild:
+  Version bump.
 
   07 Jul 2005; <brix@gentoo.org> pcmciautils-004.ebuild,
   pcmciautils-005.ebuild:
