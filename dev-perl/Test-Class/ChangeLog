@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Class
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.10 2005/05/25 15:52:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.11 2005/07/18 18:18:43 gustavoz Exp $
+
+  18 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  Test-Class-0.11.ebuild:
+  Stable on sparc
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> Test-Class-0.03.ebuild,
   Test-Class-0.11.ebuild:
