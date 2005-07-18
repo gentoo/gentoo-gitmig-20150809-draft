@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 5565914520f30ec1e8e16acbfa4764d2 sun-dsml-bin-2.1.2_pre1.ebuild 1140
 MD5 cea7cf9969765ee1a5c63e1e8d57d906 ChangeLog 578
-MD5 6f3e4531e708512232da17b80a275adc files/digest-sun-dsml-bin-2.1.2_pre1 63
 MD5 619b45d8d2e5c02366535df76d3cfce2 metadata.xml 675
-MD5 ab4f71245f1cde005c944b65a45d5d0a sun-dsml-bin-2.1.2_pre1.ebuild 1674
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0BM2I1lqEGTUzyQRAnXxAJ4vKP4PQo2IB9hmk9gWIlpNw4AzZwCgmemZ
-C/tLboeiRzi8BRbbIWsN8ms=
-=ZZ9p
------END PGP SIGNATURE-----
+MD5 6f3e4531e708512232da17b80a275adc files/digest-sun-dsml-bin-2.1.2_pre1 63
