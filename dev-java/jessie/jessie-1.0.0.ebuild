@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-1.0.0.ebuild,v 1.6 2005/07/18 13:14:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-1.0.0.ebuild,v 1.7 2005/07/18 13:45:31 axxo Exp $
 
 inherit java-pkg
 
@@ -21,7 +21,7 @@ DEPEND=">=virtual/jdk-1.4
 src_compile() {
 	use jikes && export JAVAC=$(which jikes)
 
-	use ssl && export CLASSPATH=${CLASSPATH}:$(java-pkg_getjars gnu-crypto)
+	use ssl && export CLASSPATH=${CLASSPATH}:.:$(java-pkg_getjars gnu-crypto)
 	export CLASSPATH=${CLASSPATH}:/usr/share/classpath/glibj.zip
 
 	# Must check later that this actually works
