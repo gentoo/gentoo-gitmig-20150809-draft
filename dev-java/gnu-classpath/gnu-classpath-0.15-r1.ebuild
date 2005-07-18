@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.15-r1.ebuild,v 1.4 2005/05/22 14:18:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.15-r1.ebuild,v 1.5 2005/07/18 12:04:45 axxo Exp $
 
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the Java programming language"
 SRC_URI="ftp://ftp.gnu.org/gnu/classpath/classpath-${PV}.tar.gz"
@@ -11,11 +11,12 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="cairo gtk xml2"
 
-DEPEND="app-arch/zip
-	    dev-java/jikes"
 RDEPEND="cairo? ( >=x11-libs/cairo-0.3.0 )
 		 gtk? ( >=x11-libs/gtk+-2 >=media-libs/libart_lgpl-2.1 media-libs/gdk-pixbuf )
 		 xml2? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
+DEPEND="${RDEPEND}
+	app-arch/zip
+	dev-java/jikes"
 
 S=${WORKDIR}/classpath-${PV}
 
@@ -37,7 +38,7 @@ src_compile() {
 	emake || die "make failed"
 }
 
-src_install () {
+src_install() {
 	einstall || die "make install failed"
 
 	if use cairo; then
