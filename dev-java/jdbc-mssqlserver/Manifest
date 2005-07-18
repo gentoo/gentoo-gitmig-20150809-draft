@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 acde40a4b85c1cac40a0ef1fd124551a jdbc-mssqlserver-2.2.0040.ebuild 1000
 MD5 66977e6a60d7c18e6a362c476523f2a1 ChangeLog 1271
-MD5 61f5848c0906588828e0643b3475260c jdbc-mssqlserver-2.2.0029.ebuild 1042
-MD5 59c864f6143ec8d68f97869e71127d8b jdbc-mssqlserver-2.2.0040.ebuild 964
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 e5f43f0911295336d8eac64f32dcb1be files/digest-jdbc-mssqlserver-2.2.0029 61
 MD5 e9661f926c81d87f2f27d6116fd774ab files/digest-jdbc-mssqlserver-2.2.0040 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClxzJKRy60XGEcJIRAhntAJ0d/HZbfSE8PYo+ewswS7Y34a9v1ACePHTS
-mxFYFBbU+NMFmt8kCQoPyao=
-=HVt8
+iD8DBQFC28p9/rLF9B432nYRAoYyAJwO8Qq9/a3TpX2iJNwKJ3937OEtXgCeNV89
+xhQnHfDpQwofl2gI3LDXbxE=
+=Z39M
 -----END PGP SIGNATURE-----
