@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a05975d1bd51508dde4de67db775bc77 jdbm-0.12.ebuild 1149
-MD5 c3b9352ff10d497f530afa819c631d4e ChangeLog 587
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 155294fe8bedeae313e3be7956259f08 jdbm-0.12.ebuild 1152
+MD5 2641e37119520ddc009c25f338b7beca ChangeLog 677
 MD5 05e6cb1009ca10279b6991417778254b files/jdbm-0.12-buildfile.patch 2260
 MD5 cdc880fb1002d9e6832ae598f4398b16 files/digest-jdbm-0.12 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2BU6/rLF9B432nYRAvjQAJwOA4inJDY3Tih+gWXy5Gcm8OvYEgCeIDd6
-AunJo2qBU22+6Mox/3B5hIQ=
-=I/GL
------END PGP SIGNATURE-----

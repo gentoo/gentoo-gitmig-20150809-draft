@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.4 2005/07/09 22:26:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.5 2005/07/18 14:13:32 axxo Exp $
 
 inherit java-pkg
 
@@ -10,8 +10,7 @@ HOMEPAGE="http://hibernate.bluemars.net"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~amd64"
-RDEPEND="
-		>=virtual/jre-1.4
+RDEPEND=">=virtual/jre-1.4
 
 		=dev-java/cglib-2*
 		dev-java/commons-collections
@@ -47,8 +46,8 @@ RDEPEND="
 		)
 
 		"
-DEPEND="${RDEPEND}
-		>=virtual/jdk-1.4
+DEPEND=">=virtual/jdk-1.4
+		${RDEPEND}
 		>=dev-java/ant-core-1.5
 		junit? (
 			dev-java/ant
