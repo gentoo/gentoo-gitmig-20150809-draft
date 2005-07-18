@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617-r2.ebuild,v 1.9 2005/06/30 03:58:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617-r2.ebuild,v 1.10 2005/07/18 22:57:25 vapier Exp $
 
 inherit eutils
 
-MY_P="${PN}-stable-${PV:0:5}a-${PV:6}"
+MY_P=${PN}-stable-${PV:0:5}a-${PV:6}
 DESCRIPTION="Network Time Protocol suite/programs"
 HOMEPAGE="http://www.ntp.org/"
 SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/snapshots/ntp-stable/${PV:6:4}/${PV:10:2}/${MY_P}.tar.gz
@@ -53,8 +53,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-ipv6-fixes.patch
 	epatch "${FILESDIR}"/${PV}-debug-fix.patch
 	epatch "${FILESDIR}"/${PV}-freebsd.patch
-
-	#GCC 4 compile fixes
 	epatch "${FILESDIR}"/ntp-4.2.0-gcc4.patch
 
 	sed -i \
@@ -139,11 +137,11 @@ pkg_postinst() {
 	einfo "Now you can use /etc/init.d/ntp-client to set your time at"
 	einfo "boot while you can use /etc/init.d/ntpd to maintain your time"
 	einfo "while your machine runs"
-	if [ ! -z "$(egrep '^[^#].*notrust' ${ROOT}/etc/ntp.conf)" ] ; then
+	if [[ -n $(egrep '^[^#].*notrust' "${ROOT}"/etc/ntp.conf) ]] ; then
 		echo
 		eerror "The notrust option was found in your /etc/ntp.conf!"
 		ewarn "If your ntpd starts sending out weird responses,"
 		ewarn "then make sure you have keys properly setup and see"
-		ewarn "http://bugs.gentoo.org/show_bug.cgi?id=41827"
+		ewarn "http://bugs.gentoo.org/41827"
 	fi
 }
