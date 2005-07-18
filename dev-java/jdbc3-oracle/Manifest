@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 2875ed6cc9e875265b819b1ca78d4626 jdbc3-oracle-9.2.0.4.ebuild 2146
+MD5 93055eabd0a51e3eabc50bdbf7ac1f15 jdbc3-oracle-9.2.0.3.ebuild 2146
+MD5 5cb7f4639798daeaee79dc846f6bdd0d jdbc3-oracle-9.2.0.5.ebuild 2148
 MD5 89c1ab3f0bf190581fadbb23f61f3ef6 ChangeLog 1755
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 5c7d8ab08871e9cd7610159835e96fa1 files/digest-jdbc3-oracle-9.2.0.3 311
 MD5 5854a3e42f6450f9502c27a474bd1dda files/digest-jdbc3-oracle-9.2.0.4 311
 MD5 d08db17cfc179339aac5b7549d5007ff files/digest-jdbc3-oracle-9.2.0.5 311
-MD5 dd88c0ecf56ead7d13445915330bb780 jdbc3-oracle-9.2.0.3.ebuild 2220
-MD5 09911a3cb90333bbe8a065c80102572b jdbc3-oracle-9.2.0.4.ebuild 2220
-MD5 697651a55f1c10d067f4aef3e2bf4d53 jdbc3-oracle-9.2.0.5.ebuild 2222
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCz/4YI1lqEGTUzyQRAoe/AJ9ACF+3DCJwOpDSUJUW62yu1e21hACfcVlB
-bAxmKwdMNHm2BV/ysUPDpi8=
-=+oey
------END PGP SIGNATURE-----

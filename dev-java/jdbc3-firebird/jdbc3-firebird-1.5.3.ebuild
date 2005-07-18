@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-firebird/jdbc3-firebird-1.5.3.ebuild,v 1.3 2005/05/14 21:53:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-firebird/jdbc3-firebird-1.5.3.ebuild,v 1.4 2005/07/18 15:42:36 axxo Exp $
 
 inherit java-pkg
 
@@ -12,14 +12,9 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc amd64"
 IUSE="doc"
-DEPEND=">=virtual/jdk-1.4
-		app-arch/unzip"
-RDEPEND=">=virtual/jdk-1.4"
+DEPEND="app-arch/unzip"
+RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}
-
-src_compile() {
-	:;
-}
 
 src_install() {
 	java-pkg_dojar *.jar
