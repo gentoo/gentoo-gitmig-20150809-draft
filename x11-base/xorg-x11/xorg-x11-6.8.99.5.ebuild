@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.5.ebuild,v 1.15 2005/06/29 01:13:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.5.ebuild,v 1.16 2005/07/18 23:45:26 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1352,6 +1352,9 @@ xprint_init_install() {
 	newinitd ${FILES_DIR}/xprint.init xprint
 	# patch profile scripts
 	sed -i -e "s:/bin/sh.*get_xpserverlist:/usr/$(get_libdir)/misc/xprint get_xpserverlist:g" ${D}/etc/profile.d/xprint*
+	# move profile scripts, we can't touch /etc/profile.d/ in Gentoo
+	dodoc ${D}/etc/profile.d/xprint*
+	rm -f ${D}/etc/profile.d/xprint*
 }
 
 config_files_install() {
