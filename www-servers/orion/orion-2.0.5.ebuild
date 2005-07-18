@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.5 2005/07/09 17:52:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.6 2005/07/18 23:59:33 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,7 @@ At=${PN}${PV}.zip
 DESCRIPTION="Orion EJB/J2EE application webserver"
 SRC_URI="http://www.orionserver.com/distributions/${At}"
 HOMEPAGE="http://www.orionserver.com/"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 LICENSE="ORIONSERVER"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.3
@@ -72,7 +72,7 @@ src_install() {
 
 	# INSTALL JARS
 	cd ${S}
-	for i in `ls *.jar` ; do
+	for i in *.jar ; do
 		java-pkg_dojar $i
 	done
 
