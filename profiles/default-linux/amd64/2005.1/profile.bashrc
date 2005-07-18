@@ -21,7 +21,7 @@ if [[ (-L /lib32 || -L /usr/lib32 ) && ( ${PORTAGE_CALLER} != "repoman" ) ]] ; t
 fi
 
 if [[ -z "${IWILLFIXITMYSELF}" ]] ; then
-	eerror "Youa re using a development profile.  If you REALLY want to do this, then set the following in /etc/make.conf:"
+	eerror "You are using a development profile.  If you REALLY want to do this, then set the following in /etc/make.conf:"
 	eerror "IWILLFIXITMYSELF=1"
 	exit 1
 fi
