@@ -1,0 +1,11 @@
+# ChangeLog for app-shells/localshell
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/ChangeLog,v 1.1 2005/07/18 04:50:47 robbat2 Exp $
+
+*localshell-1.1 (18 Jul 2005)
+
+  18 Jul 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +localshell-1.1.ebuild:
+  Initial commit. Ebuild and upstream package by Robin H. Johnson
+  <robbat2@gentoo.org>
+
