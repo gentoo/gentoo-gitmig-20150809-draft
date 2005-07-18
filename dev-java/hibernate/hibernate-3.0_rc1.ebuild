@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.7 2005/07/18 14:34:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.8 2005/07/18 14:57:41 axxo Exp $
 
 inherit java-pkg
 
@@ -132,7 +132,7 @@ src_unpack() {
 
 	# SwarmCache support
 	if use swarmcache ; then
-		java-pkg_jar-from swarmcache
+		java-pkg_jar-from swarmcache-1.0
 	else
 		find ${S}/src -name "SwarmCache*" -exec rm {} \;
 	fi
