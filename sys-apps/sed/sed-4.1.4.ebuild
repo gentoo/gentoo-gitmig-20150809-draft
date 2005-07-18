@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.9 2005/06/17 03:31:14 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.10 2005/07/18 05:07:43 vapier Exp $
 
 inherit flag-o-matic
 
@@ -40,6 +40,9 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-makeinfo-c-locale.patch
 	epatch "${FILESDIR}"/${P}-fix-invalid-ref-error.patch
+	sed -i \
+		-e "/docdir =/s:/doc:/doc/${PF}/html:" \
+		doc/Makefile.in || die "sed html doc"
 }
 
 src_compile() {
