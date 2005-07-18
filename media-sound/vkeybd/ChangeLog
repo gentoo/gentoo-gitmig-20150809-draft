@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/vkeybd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.17 2004/12/19 07:18:56 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.18 2005/07/18 17:58:19 fvdpol Exp $
+
+*vkeybd-0.1.15-r1 (18 Jul 2005)
+
+  18 Jul 2005; Frank van de Pol <fvdpol@gentoo.org> +vkeybd-0.1.15-r1.ebuild:
+  Fixed compilation problem when use=ladcca. Closes bug #99445, #85914.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   vkeybd-0.1.15.ebuild:

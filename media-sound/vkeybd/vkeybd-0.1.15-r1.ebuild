@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15.ebuild,v 1.10 2005/07/18 17:58:19 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15-r1.ebuild,v 1.1 2005/07/18 17:58:19 fvdpol Exp $
 
 IUSE="alsa oss ladcca"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.alsa-project.org/~iwai/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~sparc x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.5.0 )
 	>=dev-lang/tk-8.3
@@ -33,6 +33,9 @@ src_compile() {
 		myconf="${myconf} USE_ALSA=0 USE_AWE=1 USE_MIDI=1"
 	fi
 	use ladcca && myconf="${myconf} USE_LADCCA=1"
+
+	use ladcca && sed -i "s/USE_LADCCA *=.*$/USE_LADCCA = 1/" ${S}/Makefile || \
+		die "Error altering Makefile"
 
 	make ${myconf} TCL_VERSION=$TCL_VERSION || die "Make failed."
 }
