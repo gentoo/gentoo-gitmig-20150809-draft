@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20050114_alpha.ebuild,v 1.3 2005/07/18 16:54:09 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20050401_alpha.ebuild,v 1.1 2005/07/18 16:54:09 axxo Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/prefuse/${PN}-alpha-${PV/_alpha/}.zip"
 HOMEPAGE="http://prefuse.sourceforge.net/"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
