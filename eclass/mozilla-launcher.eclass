@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.10 2005/07/18 14:57:28 agriffis Exp $
 
 
 # update_mozilla_launcher_symlinks
@@ -52,8 +52,8 @@ update_mozilla_launcher_symlinks() {
 	done
 }
 
-# install_mozilla_launcher_stub name
-# ----------------------------------
+# install_mozilla_launcher_stub name libdir
+# -----------------------------------------
 # Install a stub called /usr/bin/$name that executes mozilla-launcher
 #
 install_mozilla_launcher_stub() {
