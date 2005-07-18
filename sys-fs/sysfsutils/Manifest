@@ -1,22 +1,32 @@
-MD5 fe874165e9e353a2d52589818309bb25 ChangeLog 3868
-MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
-MD5 3090a149b97070cb953800ed13e16f89 sysfsutils-0.2.0.ebuild 968
-MD5 91867476ef02cbfbbe71fe37f8518a83 sysfsutils-0.3.0.ebuild 987
-MD5 ea883f19a1a1c2dd7768d2fc272b9c97 sysfsutils-0.4.0.ebuild 1009
-MD5 a828cb4b6a8eafcb5d09183b4c19324f sysfsutils-1.0.0.ebuild 1163
-MD5 5bad6609c165bea1fa4f294f84195d08 sysfsutils-1.2.0.ebuild 707
-MD5 7e7075f23dac634652d9ba42796bba14 sysfsutils-1.2.0-r1.ebuild 801
-MD5 7fcfef4d67cca0d27c9603285c9e9efb sysfsutils-1.2.0-r2.ebuild 1037
-MD5 430a40d47c755fd06b072a76d87e4186 sysfsutils-1.2.0-r3.ebuild 1262
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c242005f8b1ec3d5d8f384d9c057aaa3 sysfsutils-1.3.0.ebuild 1246
+MD5 b06bf3c0f85bec41712fc8674e288f7f ChangeLog 3967
+MD5 5bad6609c165bea1fa4f294f84195d08 sysfsutils-1.2.0.ebuild 707
+MD5 3090a149b97070cb953800ed13e16f89 sysfsutils-0.2.0.ebuild 968
+MD5 7e7075f23dac634652d9ba42796bba14 sysfsutils-1.2.0-r1.ebuild 801
+MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
+MD5 a828cb4b6a8eafcb5d09183b4c19324f sysfsutils-1.0.0.ebuild 1163
+MD5 ea883f19a1a1c2dd7768d2fc272b9c97 sysfsutils-0.4.0.ebuild 1009
+MD5 430a40d47c755fd06b072a76d87e4186 sysfsutils-1.2.0-r3.ebuild 1262
+MD5 aa3ee230050945b58ca15b704b4e7bee sysfsutils-1.2.0-r2.ebuild 1037
+MD5 91867476ef02cbfbbe71fe37f8518a83 sysfsutils-0.3.0.ebuild 987
 MD5 3aeda907194d0ce63ad841586ea3187f files/digest-sysfsutils-0.2.0 67
-MD5 0384b6e5908a20cdcd66447733b28194 files/digest-sysfsutils-0.3.0 68
-MD5 ae9dcbf820cd304b04eb37505fbc3831 files/digest-sysfsutils-0.4.0 68
-MD5 e3fe8d4ec06f785ffc6cf54df2ca4599 files/digest-sysfsutils-1.0.0 68
 MD5 f258b9fe54d64e883cd7cb0e8bcf7a27 files/digest-sysfsutils-1.2.0 68
 MD5 5a161d5fa015560dcecb0f489399350d files/sysfsutils-1.0.0-dont-check-for-libsysfs.patch 386
-MD5 f258b9fe54d64e883cd7cb0e8bcf7a27 files/digest-sysfsutils-1.2.0-r1 68
-MD5 7816e44cfd51440f0f295ccdd7103856 files/sysfsutils-1.2.0-write-attribute.patch 998
-MD5 f258b9fe54d64e883cd7cb0e8bcf7a27 files/digest-sysfsutils-1.2.0-r2 68
 MD5 f258b9fe54d64e883cd7cb0e8bcf7a27 files/digest-sysfsutils-1.2.0-r3 68
+MD5 ae9dcbf820cd304b04eb37505fbc3831 files/digest-sysfsutils-0.4.0 68
+MD5 e3fe8d4ec06f785ffc6cf54df2ca4599 files/digest-sysfsutils-1.0.0 68
 MD5 6402e7a36646daee6c641c005ab6935b files/digest-sysfsutils-1.3.0 68
+MD5 f258b9fe54d64e883cd7cb0e8bcf7a27 files/digest-sysfsutils-1.2.0-r1 68
+MD5 0384b6e5908a20cdcd66447733b28194 files/digest-sysfsutils-0.3.0 68
+MD5 f258b9fe54d64e883cd7cb0e8bcf7a27 files/digest-sysfsutils-1.2.0-r2 68
+MD5 7816e44cfd51440f0f295ccdd7103856 files/sysfsutils-1.2.0-write-attribute.patch 998
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC29UccsIHjyDViGQRAhCBAJ43I/QjQA4y76tNDnBQPBBveJw2HgCfaVSO
+Z9Dj4pKT2GAPAkJWTgRGUHo=
+=VXSD
+-----END PGP SIGNATURE-----
