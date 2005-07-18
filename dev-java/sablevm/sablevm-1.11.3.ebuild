@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/sablevm-1.11.3.ebuild,v 1.2 2005/05/15 03:22:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/sablevm-1.11.3.ebuild,v 1.3 2005/07/18 17:02:16 axxo Exp $
 
 DESCRIPTION="A robust, clean, extremely portable, efficient, and specification-compliant Java virtual machine."
 HOMEPAGE="http://sablevm.org/"
@@ -23,7 +23,7 @@ DEPEND=">=dev-libs/libffi-1.20
 		>=media-libs/libart_lgpl-2.1
 		>=media-libs/gdk-pixbuf-0.22
 	)"
-#RDEPEND=""
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
