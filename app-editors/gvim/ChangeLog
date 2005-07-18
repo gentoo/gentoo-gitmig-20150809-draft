@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.132 2005/06/09 14:09:48 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.133 2005/07/18 01:11:00 agriffis Exp $
+
+  18 Jul 2005; Aron Griffis <agriffis@gentoo.org> gvim-6.3.075.ebuild:
+  Stable alpha amd64 hppa ia64 mips sparc x86
 
   09 Jun 2005; Aaron Walker <ka0ttic@gentoo.org> gvim-6.3.075.ebuild:
   Add missing ${VIM_RUNTIME_SNAP} to SRC_URI.
