@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/sun-dsml-bin-2.1.2_pre1.ebuild,v 1.4 2005/07/09 18:10:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/sun-dsml-bin-2.1.2_pre1.ebuild,v 1.5 2005/07/18 17:10:07 axxo Exp $
 
 inherit java-pkg
 
@@ -32,30 +32,6 @@ pkg_nofetch() {
 	einfo " 2. Download ${At}"
 	einfo " 3. Move file to ${DISTDIR}"
 	einfo
-}
-
-src_unpack() {
-	if [ ! -f "${DISTDIR}/${At}" ] ; then
-		echo
-		echo  "!!! Missing ${DISTDIR}/${At}"
-		echo
-		einfo
-		einfo " Due to license restrictions, we cannot fetch the"
-		einfo " distributables automagically."
-		einfo
-		einfo " 1. Visit ${HOMEPAGE}"
-		einfo " 2. Download ${At}"
-		einfo " 3. Move file to ${DISTDIR}"
-		einfo " 4. Run emerge on this package again to complete"
-		einfo
-		die "User must manually download distfile"
-	fi
-
-	unzip -qq ${DISTDIR}/${At}
-}
-
-src_compile() {
-	einfo " This is a binary-only ebuild."
 }
 
 src_install() {
