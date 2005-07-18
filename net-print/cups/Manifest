@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9ed3d5f241e1c197d5cc8b4518b9ca08 cups-1.1.23-r2.ebuild 4025
-MD5 a09a1d8a150f429927c4cbf171f09c01 cups-1.1.23-r4.ebuild 4430
+MD5 918b57894b3d5f386af520b2fe00da03 cups-1.1.23-r4.ebuild 4448
 MD5 e36ac7a30dd61a5a58142aaec1fc6ddb cups-1.1.23-r1.ebuild 3916
 MD5 6f652e0b3b9f5ac46cf76863abc9a103 cups-1.1.23-r3.ebuild 4327
-MD5 4f77bde4ae66b52d994a7edcd4068dbe ChangeLog 17697
+MD5 702029b95b6e4b90e80eb72aa3ea6de0 ChangeLog 17832
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 85bc20d893f097ef0f13947179c3838c files/cups-1.1.22-xpdf2-underflow.patch 2301
 MD5 a097b6a9c53c9ef50a6f3662d802cdfa files/xpdf-pl3.patch 348
@@ -22,10 +19,3 @@ MD5 7bce495a238ee9dbebb61496f3b3ae51 files/disable-strip.patch 422
 MD5 f6149424fd2880c5017da501e876de59 files/pdftops.pl 5630
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 b041836e6ee51876ca7ec86869643018 files/cups.xinetd 368
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrgj6evY57Fted3ERAvTCAKDWMvPz5ffey5jzfxWLbd7JYKusLgCgygsY
-lF5Rfh1f2Y7wZl/yQTdl3/c=
-=O73b
------END PGP SIGNATURE-----

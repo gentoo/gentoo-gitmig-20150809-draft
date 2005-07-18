@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.135 2005/06/12 13:07:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.136 2005/07/18 10:04:43 carlo Exp $
+
+  18 Jul 2005; Carsten Lohrke <carlo@gentoo.org> cups-1.1.23-r4.ebuild:
+  Let's be a bit more careful what to rm -fR in pkg_preinst().
 
   12 Jun 2005; Heinrich Wendel <lanius@gentoo.org> cups-1.1.23-r3.ebuild,
   cups-1.1.23-r4.ebuild:
