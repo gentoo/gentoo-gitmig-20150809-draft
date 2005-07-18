@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b645cc4a4464bbe7a38eb5661982cd49 quartz-1.4.5.ebuild 2243
 MD5 096ab829921c11fac98c1d825b8cae4d ChangeLog 2181
 MD5 70b5c4b2ad5de8b5ad59a27a446c29ff metadata.xml 221
 MD5 fc455689610396655039a37e986770b5 files/digest-quartz-1.4.5 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC29+P/rLF9B432nYRAtZWAKCyBZfcRYqxcqo3kTAHyHK5hObITACggsvv
+RXNOcBxorAMvADckosSq7pQ=
+=FQK7
+-----END PGP SIGNATURE-----
