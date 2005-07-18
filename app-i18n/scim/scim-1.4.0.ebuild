@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.3.2.ebuild,v 1.1 2005/06/29 17:45:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.0.ebuild,v 1.1 2005/07/18 10:23:37 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -47,6 +47,8 @@ src_compile() {
 	filter-flags -fvisibility-inlines-hidden
 	filter-flags -fvisibility=hidden
 
+	sed -i -e '/Languages/s/"\*"/"ko:ja:zh"/' extras/gtk2_immodule/imscim.cpp || die
+
 	use gtk || use immqt || use immqt-bc || myconf="${myconf} --disable-panel-gtk --disable-setup-ui"
 	has_gtk || myconf="${myconf} --disable-gtk2-immodule"
 	econf ${myconf} || die
@@ -66,6 +68,8 @@ pkg_postinst() {
 	einfo
 	einfo "LANG='your_language' scim -d"
 	einfo "export XMODIFIERS=@im=SCIM"
+	einfo "export GTK_IM_MODULE=\"scim\""
+	einfo "export QT_IM_MODULE=\"scim\""
 	einfo
 	einfo "where 'your_language' can be zh_CN, zh_TW, ja_JP.eucJP or any other"
 	einfo "UTF-8 locale such as en_US.UTF-8 or ja_JP.UTF-8"
