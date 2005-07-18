@@ -1,4 +1,4 @@
-# Config file for /etc/init.d/gpm
+# /etc/init.d/gpm
 
 # Please uncomment the type of mouse you have and the appropriate MOUSEDEV entry
 
@@ -17,7 +17,7 @@
 
 #APPEND="-l \"a-zA-Z0-9_.:~/\300-\326\330-\366\370-\377\""
 
-# Various other options
+# Various other options, see gpm(8) manpage for more.
 
-#APPEND="-g 1 -A 60"
-#APPEND="-l \"a-zA-Z0-9_.:~/\300-\326\330-\366\370-\377\" -g 1 -A 60"
+#APPEND="-g 1 -A60"
+#APPEND="-l \"a-zA-Z0-9_.:~/\300-\326\330-\366\370-\377\" -g 1 -A60"
