@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/jdbc3-postgresql-8.0_p311.ebuild,v 1.2 2005/07/18 15:50:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/jdbc3-postgresql-8.0_p311.ebuild,v 1.3 2005/07/18 15:53:09 axxo Exp $
 
 inherit java-pkg
 
@@ -29,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar jars/postgresql.jar ${PN}.jar
+	java-pkg_newjar jars/postgresql.jar ${PN}.jar
 
 	use doc && java-pkg_dohtml -r ${S}/build/publicapi/*
 	if use examples; then

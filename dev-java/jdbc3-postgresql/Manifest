@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 98cb328066999b594230b6e544816bae jdbc3-postgresql-8.0_p311.ebuild 1212
+MD5 eb7d4ed436a7828c51d208d6c71828b2 jdbc3-postgresql-8.0_p311.ebuild 1213
 MD5 c0e70fd65659f997858c599af06372e2 jdbc3-postgresql-7.4.5.ebuild 1115
 MD5 3d80aae0ac6bc38c96a1eb2756a7d62b jdbc3-postgresql-7.3.ebuild 577
 MD5 2a794fc57ede763e55b018afca23eaf1 ChangeLog 1245
@@ -12,7 +12,7 @@ MD5 e71acb8b196dc2466141bfe8dabe0eee files/digest-jdbc3-postgresql-7.4.5 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC28/T/rLF9B432nYRAg9mAKDAln0NpLqui8ojHb9KNyWQlw6N7QCgul9Y
-adirrgZMfNmplO61ARUM6JA=
-=nC9R
+iD8DBQFC29B+/rLF9B432nYRAl++AJ97TqbNVZWpuSmFBKKBdT9dUb016gCggPB8
+TgX8A4pVDNew/pwh8KR0YPM=
+=7vZN
 -----END PGP SIGNATURE-----
