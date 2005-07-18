@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.68 2005/05/17 03:05:11 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.69 2005/07/18 18:16:00 seemant Exp $
+
+  18 Jul 2005; Seemant Kulleen <seemant@gentoo.org> wget-1.9.1-r5.ebuild:
+  adjust patches: debian CAN fix and Mandrake largefile to compile with
+  gcc-2.95. Thanks to Az in irc and solar@gentoo.org in bug #93703
 
   16 May 2005; Tom Gall <tgall@gentoo.org> wget-1.9.1-r5.ebuild:
   ppc64 stable, for #83920

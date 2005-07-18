@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r5.ebuild,v 1.11 2005/05/29 02:55:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r5.ebuild,v 1.12 2005/07/18 18:16:00 seemant Exp $
 
 inherit eutils flag-o-matic
 
-PATCHVER=0.3
+PATCHVER=0.4
 DESCRIPTION="Network utility to retrieve files from the WWW"
 HOMEPAGE="http://wget.sunsite.dk/"
 SRC_URI="mirror://gnu/wget/${P}.tar.gz
@@ -23,8 +23,7 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	unpack ${A} ; cd "${S}"
 	local PATCHDIR=${WORKDIR}/patches
 	EPATCH_SUFFIX="patch"
 	EPATCH_MULTI_MSG="Applying Gentoo patches ..." epatch "${PATCHDIR}"/gentoo
