@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.76 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.77 2005/07/18 23:00:34 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -141,12 +141,9 @@ perl-module_src_install() {
 		fi
 	done
 
-	for doc in Change* MANIFEST* README*; do
+	for doc in Change* MANIFEST* README* ${mydoc}; do
 		[ -s "$doc" ] && dodoc $doc
 	done
-	if [ -s "${mydoc}" ]; then
-		dodoc ${mydoc}
-	fi
 }
 
 
