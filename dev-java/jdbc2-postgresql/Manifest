@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4051bb5cfc35d085f4de1b388d3b5a6c jdbc2-postgresql-7.4.ebuild 589
 MD5 7c0fd811037b04a8781ee0fa85b55c0e jdbc2-postgresql-7.3.ebuild 576
 MD5 e7c75ecf2a18533551149ea2f755cfd4 ChangeLog 2092
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 97025d204bd6ed6c78530c5131b95b23 files/digest-jdbc2-postgresql-7.3 58
 MD5 8f46467bc39bf8bade1e2b26c05ede02 files/digest-jdbc2-postgresql-7.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC281N/rLF9B432nYRApoTAJ40ACIwOgqEHeA/vpKK73Y//+t1ogCeISvl
+oPurkCQT4c0zxTe2CFB5uPg=
+=Ugb2
+-----END PGP SIGNATURE-----
