@@ -4,16 +4,17 @@ Hash: SHA1
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 edd73f617380f3348b063fe7f2889a5f mbuffer-20050321.ebuild 946
 MD5 248fdcee7fee310d8fdaaf533e8ca937 mbuffer-20011008.ebuild 836
-MD5 3f47428ce3588ab69c29740f606783c8 mbuffer-20050510.ebuild 962
+MD5 945a4ac3977317219cba2e662c9bff56 mbuffer-20050510.ebuild 1021
 MD5 42f922f2818a2ac0a6cd80dae63e6748 ChangeLog 1536
 MD5 2731a15bfb4f3b21e1f653810d4d4132 files/mbuffer-20050321-configure.patch 399
 MD5 82bcd2234960ee105a356be2fd973111 files/digest-mbuffer-20050510 64
 MD5 2fd068ce5b49368d06316e42628d7895 files/digest-mbuffer-20050321 64
 MD5 99fb482d24377d87942e30e3ab9c73a9 files/digest-mbuffer-20011008 65
+MD5 009a5d692035ef0f55db183ac9b9d246 files/mbuffer-20050510-md5-type.patch 294
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2lupgIKl8Uu19MoRAmHzAJ9wgVRd3maOaWGC7wiE+cf3DO+gPACfRIoc
-Ou1I7inLF9jPyOo6S3hv/TQ=
-=nOsR
+iD8DBQFC2zs7gIKl8Uu19MoRAmgQAJ9TIfBSmt/g0o0UDzynK+N/bq4f2QCeKt8v
+ypzTBzhBWRS59WI1ESpmvN4=
+=Q9/L
 -----END PGP SIGNATURE-----

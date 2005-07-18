@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/mbuffer-20050510.ebuild,v 1.1 2005/07/17 13:22:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/mbuffer-20050510.ebuild,v 1.2 2005/07/18 05:16:23 vapier Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-20050321-configure.patch
+	epatch "${FILESDIR}"/${PN}-20050510-md5-type.patch #99347
 }
 
 src_compile() {
