@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/esvn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.7 2005/06/28 08:31:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/ChangeLog,v 1.8 2005/07/18 07:09:30 mrness Exp $
+
+*esvn-0.6.11 (18 Jul 2005)
+
+  18 Jul 2005; Alin Nastac <mrness@gentoo.org> -esvn-0.6.8-r1.ebuild,
+  +esvn-0.6.11.ebuild:
+  Version bump.
 
   28 Jun 2005; Markus Rothe <corsair@gentoo.org> esvn-0.6.9.ebuild:
   added ~ppc64
