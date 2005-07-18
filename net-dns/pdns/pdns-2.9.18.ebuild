@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.3 2005/07/17 08:46:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.4 2005/07/18 14:15:17 swegener Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
 HOMEPAGE="http://www.powerdns.com/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="debug doc ldap mysql postgres recursor sqlite static tdb"
 
 DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${PV}-default-mysql-options.patch
+	epatch "${FILESDIR}"/${PV}-default-mysql-options.patch
 }
 
 src_compile() {

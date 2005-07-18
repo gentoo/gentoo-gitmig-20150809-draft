@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.17 2005/07/17 08:46:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.18 2005/07/18 14:15:17 swegener Exp $
+
+  18 Jul 2005; Sven Wegener <swegener@gentoo.org> pdns-2.9.18.ebuild:
+  Marked stable on x86, security bug #99352.
 
   17 Jul 2005; Sven Wegener <swegener@gentoo.org>
   +files/2.9.18-default-mysql-options.patch, pdns-2.9.18.ebuild:
