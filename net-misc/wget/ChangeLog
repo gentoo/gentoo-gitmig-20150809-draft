@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.69 2005/07/18 18:16:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.70 2005/07/18 19:33:05 seemant Exp $
+
+*wget-1.10 (18 Jul 2005)
+
+  18 Jul 2005; Seemant Kulleen <seemant@gentoo.org> +wget-1.10.ebuild:
+  version bump thanks to Tijs Zwinkels <gentoobugs@tumblecow.net> for
+  notifying me in bug #96716, and to: emanuele.giaquinta@gmail.com for porting
+  the patchset over in the same bug
 
   18 Jul 2005; Seemant Kulleen <seemant@gentoo.org> wget-1.9.1-r5.ebuild:
   adjust patches: debian CAN fix and Mandrake largefile to compile with
