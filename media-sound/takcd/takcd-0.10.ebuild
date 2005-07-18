@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.8 2005/05/09 13:22:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.9 2005/07/18 16:05:31 seemant Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ DEPEND="sys-devel/autoconf
 
 src_compile() {
 	export WANT_AUTOMAKE=1.4
-	export WANT_AUTOCONF=2.1
+	export WANT_AUTOCONF=2.5
 	./autogen.sh
 	emake || die
 }
