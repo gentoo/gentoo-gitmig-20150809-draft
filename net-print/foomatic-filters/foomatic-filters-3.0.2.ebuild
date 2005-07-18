@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.2.ebuild,v 1.11 2005/06/08 10:01:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.2.ebuild,v 1.12 2005/07/18 17:40:12 herbs Exp $
+
+inherit eutils
 
 DESCRIPTION="Foomatic wrapper scripts"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
@@ -21,12 +23,20 @@ DEPEND="samba? ( net-fs/samba )
 	)
 	virtual/ghostscript"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# Search for libs in ${libdir}, not just /usr/lib
+	epatch ${FILESDIR}/${P}-multilib.patch
+	autoconf || die "autoconf failed"
+}
+
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	if use cups; then
-		dosym /usr/bin/foomatic-gswrapper /usr/lib/cups/filter/foomatic-gswrapper
-		dosym /usr/bin/foomatic-rip /usr/lib/cups/filter/cupsomatic
+		dosym /usr/bin/foomatic-gswrapper /usr/$(get_libdir)/cups/filter/foomatic-gswrapper
+		dosym /usr/bin/foomatic-rip /usr/$(get_libdir)/cups/filter/cupsomatic
 	fi
 	dosym /usr/bin/foomatic-rip /usr/bin/lpdomatic
 }
