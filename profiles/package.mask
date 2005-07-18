@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4196 2005/07/17 00:22:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4197 2005/07/18 13:38:20 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# Benedikt Boehm <hollow@gentoo.org> (17 Jul 2005)
+# lock issues with rc8, don't use this kernel!
+=sys-kernel/vserver-sources-2.0_rc8
 
 # <axxo@gentoo.org> (15 Jul 2005)
 # Masked pending removal
