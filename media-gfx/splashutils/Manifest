@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 63d706b4d331d6c91ce6dae86adff587 splashutils-1.1.9.8.ebuild 6294
+MD5 e3369aa34c21ed7f717cf5efd0edaf22 splashutils-1.1.9.8.ebuild 6289
 MD5 1409e15605d9e85ecd9e151911beacfd splashutils-1.1.9.6-r1.ebuild 6008
 MD5 13b41917218dff90a78e1d3a582b86f7 splashutils-0.9.1.ebuild 3195
 MD5 d0432e12ee1e700736e8510a45a72679 ChangeLog 9006
@@ -14,7 +14,7 @@ MD5 d4d393d10196781338f83d0a795065ae files/digest-splashutils-0.9.1 378
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC3A7+chej4aZK9/cRApqSAKCEFqFstcrDhhZhXvwOUc8M8O8fkACfeuGX
-kd/w/FBweKGwQllFwHMBc/o=
-=7qej
+iD8DBQFC3A9Xchej4aZK9/cRAmkNAJ9AYmw8lOoxIemyRb8IQIsgOgZwYACfdDQo
+WUt/Q70NM3y4OhmzbmelRbg=
+=OguU
 -----END PGP SIGNATURE-----

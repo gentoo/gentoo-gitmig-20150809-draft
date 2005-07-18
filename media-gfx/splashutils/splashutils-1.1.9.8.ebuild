@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.8.ebuild,v 1.1 2005/07/18 20:19:35 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.8.ebuild,v 1.2 2005/07/18 20:21:21 spock Exp $
 
 inherit multilib linux-mod
 
@@ -105,7 +105,7 @@ src_unpack() {
 
 	# Use tty16 as the default silent tty.
 	sed -i -e 's/#define TTY_SILENT.*/#define TTY_SILENT 16/' ${S}/splash.h
-	
+
 	# Setup the kernel object directory
 	echo "KRNLOBJ = ${KV_OUT_DIR}" >> ${S}/libs/klibc-${V_KLIBC}/MCONFIG
 }
@@ -143,7 +143,7 @@ src_install() {
 
 	insinto /usr/share/${PN}
 	doins ${SG}/initrd.splash
-	
+
 	insinto /sbin
 	doins ${SG}/splash-functions.sh
 
@@ -159,7 +159,7 @@ src_install() {
 pkg_postinst() {
 	ebegin "Checking whether /dev/tty1 is in place"
 	mount --bind / ${T}
-	
+
 	if [[ ! -c ${T}/dev/tty1 ]]; then
 		eend 1
 		ewarn "It appears that the /dev/tty1 character device doesn't exist on"
@@ -182,7 +182,7 @@ pkg_postinst() {
 		ewarn "  http://www.gentoo.org/doc/en/udev-guide.xml"
 		echo ""
 	fi
-		
+
 	ewarn "If you upgrade your kernel from pre-2.6.12 to 2.6.12 or higher, please"
 	ewarn "make sure that you remerge this package and rebuild your initrds. You"
 	ewarn "can use the splash_geninitramfs script to do that."
