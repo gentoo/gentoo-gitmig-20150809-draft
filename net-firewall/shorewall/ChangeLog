@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.78 2005/07/18 15:44:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.79 2005/07/18 18:11:12 killerfox Exp $
+
+  18 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  shorewall-2.4.1.ebuild:
+  Stable on hppa. bug #99398
 
   18 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   shorewall-2.4.1.ebuild:
