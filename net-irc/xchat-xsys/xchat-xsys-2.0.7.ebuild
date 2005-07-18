@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.0.7.ebuild,v 1.1 2005/07/17 18:45:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.0.7.ebuild,v 1.2 2005/07/18 21:15:39 chainsaw Exp $
 
 inherit toolchain-funcs eutils
 
 MY_P="${P/xchat-/}"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Sysinfo plugin for X-Chat."
-SRC_URI="mirror://gentoo/${MY_P}.tar.bz2 http://dev.gentoo.org/~chainsaw/xsys/download/${MY_P}.tar.bz2"
+SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 HOMEPAGE="http://dev.gentoo.org/~chainsaw/xsys/"
 
 LICENSE="GPL-2"
@@ -32,6 +32,7 @@ src_unpack() {
 	if use bmp; then
 		sed -i -e "s:# FOR BMP # ::g" ${S}/Makefile
 	elif use xmms; then
+		epatch ${FILESDIR}/${PV}-glib_version.patch
 		sed -i -e "s:# FOR XMMS # ::g" ${S}/Makefile
 	fi
 }

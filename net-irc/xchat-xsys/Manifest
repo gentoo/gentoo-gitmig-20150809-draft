@@ -2,16 +2,17 @@
 Hash: SHA1
 
 MD5 42cef2da59c81f792584c3f9048a1930 metadata.xml 250
-MD5 e9956c4fdc2d72020ce359d1d552d7ea ChangeLog 4572
+MD5 0636dad3b53f4b5ee561736b037e6295 ChangeLog 4803
 MD5 1a8ae9f549ce7731b976188f906ec733 xchat-xsys-2.0.6-r1.ebuild 1117
-MD5 b7ff64e81e3c7de720f7ba7574e8126b xchat-xsys-2.0.7.ebuild 1260
+MD5 043721afae30357ef6beaf2923d7ec9d xchat-xsys-2.0.7.ebuild 1244
+MD5 9265f3c810174109111187f857dfdb8f files/2.0.7-glib_version.patch 728
 MD5 f0b1aadf9019a28c3ba07db0e7d4dba5 files/2.0.6-localisation.patch 357
 MD5 cfd00aeca2a4bbf333f23e4f44bb9feb files/digest-xchat-xsys-2.0.6-r1 62
 MD5 842385c4ed19ac2862c9357e7692236b files/digest-xchat-xsys-2.0.7 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC2qctp5vW4rUFj5oRAp+ZAKCm9fi1+1VOAxX2SITDwXCMpQFVvQCff8ab
-vYll6Wi8qQKMitwbYaAzM7M=
-=k5U7
+iD8DBQFC3BvEp5vW4rUFj5oRAmsIAKDBMy20JwobFsiQ/gWxYe+dgoMvgQCggc15
+zL6adYvEegQpY0i9DWV+kbY=
+=y4Lq
 -----END PGP SIGNATURE-----

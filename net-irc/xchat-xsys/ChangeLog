@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.22 2005/07/17 18:45:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.23 2005/07/18 21:15:39 chainsaw Exp $
+
+  18 Jul 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/2.0.7-glib_version.patch, xchat-xsys-2.0.7.ebuild:
+  Make the XMMS side of things actually work, thanks to a patch from Morten
+  Cools <morten@cools.no>; closes bug #99460.
 
 *xchat-xsys-2.0.7 (17 Jul 2005)
 
