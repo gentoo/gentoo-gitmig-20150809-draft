@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.7_beta1.ebuild,v 1.1 2005/06/20 04:36:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.7.1.ebuild,v 1.1 2005/07/18 10:30:16 usata Exp $
 
 inherit eutils kde-functions
 
@@ -9,8 +9,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="a simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
-SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz
-	http://prime.sourceforge.jp/src/prime-1.0.0.1.tar.gz"
+SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
@@ -26,9 +25,10 @@ RDEPEND="X? ( virtual/x11 )
 	canna? ( app-i18n/canna )
 	immqt? ( >=x11-libs/qt-3.3.3-r1 )
 	immqt-bc? ( >=x11-libs/qt-3.3.3-r1 )
-	qt? ( >=x11-libs/qt-3.3.3-r1
-		!app-i18n/uim-kdehelper )
-	!<app-i18n/prime-0.9.4"
+	qt? ( >=x11-libs/qt-3.3.3-r1 )
+	!<app-i18n/prime-0.9.4
+	!app-i18n/uim-qt
+	!app-i18n/uim-kdehelper"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-perl/XML-Parser
@@ -75,17 +75,10 @@ src_compile() {
 	# --with-scim is not stable enough
 	econf ${myconf} --without-scim || die "econf failed"
 	emake -j1 || die "emake failed"
-
-	cd ${WORKDIR}/prime-1.0.0.1
-	econf || die
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-
-	cd ${WORKDIR}/prime-1.0.0.1
-	make DESTDIR="${D}" install-uim || die "make install-uim failed"
-	cd -
 
 	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
 	dodoc doc/{HELPER-CANDWIN,KEY,UIM-SH}

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.7.ebuild,v 1.1 2005/06/26 14:56:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.7.ebuild,v 1.2 2005/07/18 10:30:16 usata Exp $
 
 inherit eutils kde-functions
 
@@ -14,7 +14,7 @@ SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="gtk qt immqt immqt-bc nls X m17n-lib canna"
 #IUSE="${IUSE} scim"
 
@@ -26,9 +26,10 @@ RDEPEND="X? ( virtual/x11 )
 	canna? ( app-i18n/canna )
 	immqt? ( >=x11-libs/qt-3.3.3-r1 )
 	immqt-bc? ( >=x11-libs/qt-3.3.3-r1 )
-	qt? ( >=x11-libs/qt-3.3.3-r1
-		!app-i18n/uim-kdehelper )
-	!<app-i18n/prime-0.9.4"
+	qt? ( >=x11-libs/qt-3.3.3-r1 )
+	!<app-i18n/prime-0.9.4
+	!app-i18n/uim-kdehelper
+	!app-i18n/uim-qt"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-perl/XML-Parser
