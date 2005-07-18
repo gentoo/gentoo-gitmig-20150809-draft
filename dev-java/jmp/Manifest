@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 659ebe683fd7facb39f2ab7f5effffa2 jmp-0.46.ebuild 768
-MD5 46059671cfc4285e2a75fff78c83b853 jmp-0.43.ebuild 761
+MD5 4385e8e24eeb190fd2a7555df00dae99 jmp-0.46.ebuild 732
 MD5 e841bbe2f03bdbe0483ff85d2717093a ChangeLog 1210
 MD5 d811c962363333fe29e3b73da7ecdd88 metadata.xml 408
-MD5 0ca0d64d09e666e956b70a54b03bb9b6 jmp-0.47.ebuild 771
-MD5 3bd5014c45cc1b4ef005e98a8af62bce files/digest-jmp-0.43 60
+MD5 f607aa3629602d866c305e77558dff9a jmp-0.47.ebuild 734
 MD5 b9e9bdbd1af527ae3f924dbb9d414ec4 files/digest-jmp-0.46 60
 MD5 aa8e14b3acb24d1f380a808c4bb5aa2e files/digest-jmp-0.47 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrwGt06ebR+OMO78RApfvAKCDcB5PmmnzE/ZZxRqwjWKOz4C0ZQCgkcls
-GGCDfdXOgcJASmQK94gZV3Q=
-=3h1l
+iD8DBQFC29Qp/rLF9B432nYRAhvIAJ9X1VxX2oVHP4MQwmQHVeaSEnCyLwCdFCcn
+t9dHjdqRS0LQqs9QGnf8N9E=
+=Kghe
 -----END PGP SIGNATURE-----
