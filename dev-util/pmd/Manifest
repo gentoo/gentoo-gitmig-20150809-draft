@@ -5,7 +5,7 @@ MD5 501caf5c892ae6feed82b0f05193c3ff pmd-3.1.ebuild 1446
 MD5 b131da5bb636d0aa455f681cad502d75 pmd-1.5-r1.ebuild 1092
 MD5 7faad7f167c57f6ac51df35d38fc2e56 ChangeLog 1415
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 598ec5629feaaa1f84006cfac34542e9 pmd-1.5.ebuild 791
+MD5 de5629bb3e4f74880b7481c1db6d1d2f pmd-1.5.ebuild 790
 MD5 f4fd6e2650f6d50125b3e546a7c0a54b files/digest-pmd-1.5 61
 MD5 9cd4c2c64ebddf354fb7475e86887505 files/digest-pmd-3.1 61
 MD5 f4fd6e2650f6d50125b3e546a7c0a54b files/digest-pmd-1.5-r1 61
@@ -13,7 +13,7 @@ MD5 a4e38ad08909deab5987c12fe5e59d8d files/pmd-3.1-gentoo.patch 3808
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC3Bca/rLF9B432nYRAmiOAKDDmmvWuKu5wGjVIszRqv5h6Gqt3wCgkTvW
-9/7fF0dP1fscjv0w4vaa1RE=
-=Uu8e
+iD8DBQFC3D4T/rLF9B432nYRAhweAKCnOxuVNkh4DC/Kf362MPLnnzOqbwCglMEJ
+PdywtGOTy4njsMt8sVZgh5E=
+=vdnn
 -----END PGP SIGNATURE-----
