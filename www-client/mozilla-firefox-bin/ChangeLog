@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.17 2005/07/18 14:59:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.18 2005/07/18 15:22:28 agriffis Exp $
+
+  18 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-1.0.5-r1.ebuild:
+  Update dependency to mozilla-launcher-1.35 to help with #99084
 
 *mozilla-firefox-bin-1.0.5-r1 (18 Jul 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.0.5-r1.ebuild,v 1.1 2005/07/18 14:59:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.0.5-r1.ebuild,v 1.2 2005/07/18 15:22:28 agriffis Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -25,7 +25,7 @@ RDEPEND="virtual/x11
 		>=app-emulation/emul-linux-x86-baselibs-1.0
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 	)
-	>=www-client/mozilla-launcher-1.28"
+	>=www-client/mozilla-launcher-1.35"
 
 S=${WORKDIR}/firefox
 
