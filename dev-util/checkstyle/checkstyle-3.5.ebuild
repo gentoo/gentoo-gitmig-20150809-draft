@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.5.ebuild,v 1.1 2005/06/29 17:39:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.5.ebuild,v 1.2 2005/07/18 18:30:31 axxo Exp $
 
 inherit java-pkg
 
@@ -10,13 +10,10 @@ SRC_URI="mirror://sourceforge/checkstyle/${PN}-src-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="doc jikes"
 RESTRICT="primaryuri"
 
-DEPEND=">=virtual/jdk-1.4
-		dev-java/ant-core
-		jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3
 		dev-java/antlr
 		=dev-java/commons-beanutils-1.6*
@@ -24,6 +21,10 @@ RDEPEND=">=virtual/jre-1.3
 		dev-java/commons-collections
 		dev-java/commons-logging
 		=dev-java/jakarta-regexp-1.3*"
+DEPEND=">=virtual/jdk-1.4
+		${RDEPEND}
+		dev-java/ant-core
+		jikes? ( dev-java/jikes )"
 S=${WORKDIR}/${PN}-src-${PV}
 
 src_unpack() {
@@ -47,7 +48,7 @@ src_compile() {
 
 src_install() {
 	insinto /usr/share/checkstyle
-	jar cfm ${PN}.jar config/manifest.mf -C target/checkstyle .
+	jar cfm ${PN}.jar config/manifest.mf -C target/checkstyle . || die
 	java-pkg_dojar ${PN}.jar
 	use doc && java-pkg_dohtml -r docs/*
 	dodoc README RIGHTS.antlr TODO
@@ -59,7 +60,6 @@ src_install() {
 	echo '' >> checkstyle
 	echo '`java-config -J` -cp `java-config -p checkstyle,antlr,commons-beanutils-1.6,commons-cli-1,commons-collections,commons-logging,jakarta-regexp-1.3` com.puppycrawl.tools.checkstyle.Main "$@"' >> checkstyle
 
-	insinto /usr
 	dobin checkstyle
 
 	dodir /usr/share/ant-core/lib
