@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.97 2005/07/17 10:58:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.98 2005/07/18 23:10:53 eradicator Exp $
+
+  18 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-utils-1.0.9a.ebuild:
+  Fixed dependency on alsa-lib to 1.0.9 for snd_timer_ginfo_alloca and
+  snd_timer_ginfo_set_tid in names.c. Closes bug #99340.
 
   17 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-utils-1.0.9a.ebuild:
