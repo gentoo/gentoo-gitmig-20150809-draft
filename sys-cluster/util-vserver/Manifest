@@ -1,28 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cfb26bc3d642e861226c0ba046394f44 ChangeLog 3553
+MD5 2f6a05c20b55e64025ca50105c9b792c ChangeLog 4163
 MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
-MD5 3d6eec0e3d10c7a6e4a95e448c03a06e util-vserver-0.30.196.ebuild 1268
-MD5 5eb10d9678fd96a1f56d1eb157b3994a util-vserver-0.30.204.ebuild 1285
-MD5 48ce588c1f3255fa31e1a4cee82c1d27 util-vserver-0.30.205-r1.ebuild 1763
-MD5 5460093cd5050c0938518baa9a56cb55 util-vserver-0.30.205.ebuild 1284
-MD5 85072d17078116476bbf1d4a642c1231 util-vserver-0.30.207.ebuild 2287
-MD5 7bae473a0bf1ad73103118220c3fa924 files/vservers.confd 1739
-MD5 8de53dd957127f3ba125f733c1b7389b files/vservers.initd 1792
-MD5 0f34731a7d8119fc5e3f9322bf727521 files/digest-util-vserver-0.30.196 74
-MD5 12cd58b1dedc5d8f583cf66aad57ac51 files/digest-util-vserver-0.30.204 74
+MD5 63305730c069d9dbe9776caaf1a4150e util-vserver-0.30.205-r1.ebuild 1926
+MD5 a7c1cab65b8e8af19ee8951c484e4948 util-vserver-0.30.207.ebuild 1962
+MD5 fa2efdab74039371d79f859843ac0f1f util-vserver-0.30.208.ebuild 1962
+MD5 30d0e165963778b642e6b52a6fd8a341 files/vservers.confd 1569
+MD5 9f45fd567b0b82deb30b950b680d983a files/vservers.initd 1692
+MD5 09276c3e50cf5c0f8d30ef0422f05fd8 files/vprocunhide 570
 MD5 4bd7088cb72bd60e8ed7b7e562f3ea95 files/digest-util-vserver-0.30.205-r1 74
-MD5 4bd7088cb72bd60e8ed7b7e562f3ea95 files/digest-util-vserver-0.30.205 74
 MD5 e9f396453e3aeb9f364489b7baec4238 files/digest-util-vserver-0.30.207 74
-MD5 4096356a4cb49d0ec50eee25c925d24f files/0.30.205/vprocunhide 579
-MD5 30d0e165963778b642e6b52a6fd8a341 files/0.30.205/vservers.confd 1569
-MD5 acd935ab2632dfa0f2213d11b0025f97 files/0.30.205/vservers.initd 1701
-MD5 16d2c34a9a86dbb4ffa033a2969c6c39 files/0.30.205/vshelper-shutdown-hack 12
+MD5 0fb2840471aeb47987109d913eb11413 files/digest-util-vserver-0.30.208 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrBWgmPFBzbX68WERAvQnAJwIkZQID4/WPAYgBl6+q8RObZnZfwCeNr/n
-KrERyVfaVnhpPdrCxAH8vQw=
-=AkRL
+iD8DBQFC28pymPFBzbX68WERAqinAJ99ByiDDy4tHMikDLFtzPcoQYSN4QCeMp9m
+6UYoMxF2CSpD3rGJt0hEQxc=
+=PEy/
 -----END PGP SIGNATURE-----
