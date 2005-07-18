@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.30 2005/07/05 20:48:03 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.31 2005/07/18 10:27:06 leonardop Exp $
+
+  18 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> pkgconfig-0.18.1.ebuild,
+  files/pkg-config-0.18.1-checks.patch:
+  Fix compilation-time tests, resolves bug #98651.
 
   05 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> pkgconfig-0.18.1.ebuild,
   files/pkg-config-0.18.1-pc_path.patch:

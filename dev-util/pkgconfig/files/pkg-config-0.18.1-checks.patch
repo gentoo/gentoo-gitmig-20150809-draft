@@ -1,0 +1,26 @@
+diff -NurdB pkg-config-0.18.1/check/Makefile.am pkg-config-0.18.1-patched/check/Makefile.am
+--- pkg-config-0.18.1/check/Makefile.am	2005-06-27 14:37:41.000000000 -0500
++++ pkg-config-0.18.1-patched/check/Makefile.am	2005-07-18 03:46:37.000000000 -0500
+@@ -1,6 +1,9 @@
+ 
+-TESTS = check-cflags check-libs check-define-variable	\
+-	check-libs-private check-requires-private
++TESTS = check-cflags check-define-variable check-libs-private
++
++if !ENABLE_INDIRECT_DEPS
++TESTS += check-libs check-requires-private
++endif
+ 
+ EXTRA_DIST = $(TESTS) common simple.pc requires-test.pc public-dep.pc	\
+ 	private-dep.pc
+diff -NurdB pkg-config-0.18.1/configure.in pkg-config-0.18.1-patched/configure.in
+--- pkg-config-0.18.1/configure.in	2005-06-29 06:07:14.000000000 -0500
++++ pkg-config-0.18.1-patched/configure.in	2005-07-18 03:32:07.000000000 -0500
+@@ -59,6 +59,7 @@
+ AC_MSG_RESULT($use_indirect_deps)
+ 
+ AC_DEFINE_UNQUOTED(ENABLE_INDIRECT_DEPS, `test $use_indirect_deps = no; echo $?`, [Link library to all dependent libraries, not only directly needed ones])
++AM_CONDITIONAL(ENABLE_INDIRECT_DEPS, test x$use_indirect_deps = xyes)
+ 
+ AC_MSG_CHECKING([for Win32])
+ case "$host" in

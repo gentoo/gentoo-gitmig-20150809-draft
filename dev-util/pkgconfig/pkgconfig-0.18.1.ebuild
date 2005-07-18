@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.18.1.ebuild,v 1.2 2005/07/05 20:48:03 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.18.1.ebuild,v 1.3 2005/07/18 10:27:06 leonardop Exp $
 
 inherit eutils flag-o-matic gnome.org
 
@@ -26,9 +26,13 @@ src_unpack() {
 
 	# Set the default search path correctly
 	epatch ${FILESDIR}/${MY_P}-pc_path.patch
+	# Fix compilation-time tests. See bug #98651.
+	epatch ${FILESDIR}/${MY_P}-checks.patch
 
 	einfo "Running autoconf"
 	autoconf || die "Autoconf failed"
+	einfo "Running automake"
+	WANT_AUTOMAKE=1.7 automake || die "Autoconf failed"
 }
 
 src_compile() {
