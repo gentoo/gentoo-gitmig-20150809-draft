@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/pixie
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.15 2005/07/11 05:42:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.16 2005/07/18 12:12:46 eradicator Exp $
+
+*pixie-1.4.4 (18 Jul 2005)
+
+  18 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/pixie-1.4.3-libtool.patch, +files/pixie-1.4.4-libtool.patch,
+  +files/pixie-1.4.4-math.patch, -pixie-1.4.3.ebuild, +pixie-1.4.4.ebuild:
+  Version bump.
 
 *pixie-1.4.3 (11 Jul 2005)
 

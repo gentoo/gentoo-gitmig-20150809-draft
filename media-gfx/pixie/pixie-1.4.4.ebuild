@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.4.3.ebuild,v 1.1 2005/07/11 05:42:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.4.4.ebuild,v 1.1 2005/07/18 12:12:46 eradicator Exp $
 
 inherit eutils
 
@@ -33,30 +33,29 @@ src_unpack() {
 	cd ${S}
 	# These have been sent upstream, and rejected, but this is the
 	# "right way" -- eradicator
-	epatch ${FILESDIR}/${PN}-1.3.11-math.patch
+	epatch ${FILESDIR}/${PN}-1.4.4-math.patch
 
 	# Make the build process more cross-platform...
-	# Also rejected upstream -- eradicator
-	epatch ${FILESDIR}/${PN}-1.4.3-libtool.patch
+	epatch ${FILESDIR}/${PN}-1.4.4-libtool.patch
 
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
 	libtoolize --force --copy || die
 	aclocal || die
 	automake -a -f -c || die
+	autoheader || die
 	autoconf || die
-}
-
-src_compile() {
-	econf --disable-static || die
-	emake -j1 || die
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog DEVNOTES NEWS README
 
-	edos2unix ${D}/usr/share/pixie/shaders/*
-	mv ${D}/usr/share/pixie/doc/html ${D}/usr/share/doc/${PF}/html
-	rmdir ${D}/usr/share/pixie/doc
+	keepdir /usr/$(get_libdir)/Pixie/procedurals
+	keepdir /usr/share/Pixie/models
+
+	insinto /usr/share/Pixie/textures
+	doins ${S}/textures/checkers.tif
+
+	edos2unix ${D}/usr/share/Pixie/shaders/*
+	mv ${D}/usr/share/doc/Pixie ${D}/usr/share/doc/${PF}
 }

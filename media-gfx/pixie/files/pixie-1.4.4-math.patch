@@ -1,0 +1,37 @@
+diff -Naurp Pixie.orig/src/common/global.h Pixie/src/common/global.h
+--- Pixie.orig/src/common/global.h	2005-07-18 11:49:02.000000000 +0000
++++ Pixie/src/common/global.h	2005-07-18 12:00:41.000000000 +0000
+@@ -47,6 +47,9 @@
+ #ifndef GLOBAL_H
+ #define	GLOBAL_H
+ 
++#include <math.h>
++#include <values.h>
++
+ // The Pixie version
+ #define	VERSION_RELEASE	1
+ #define	VERSION_BETA	4
+@@ -63,9 +66,23 @@
+ #undef C_EPSILON
+ #endif
+ 
++#ifndef INFINITY
+ #define	C_INFINITY							(float) 1e30
++#else
++#define C_INFINITY	INFINITY
++#endif
++
++#ifndef MINFLOAT
+ #define	C_EPSILON							(float) 1e-6
++#else
++#define C_EPSILON	MINFLOAT
++#endif
++
++#ifndef M_PI
+ #define C_PI                                3.141592653589793238462643383279502884197169399375105820974944592308
++#else
++#define C_PI		M_PI
++#endif
+ 
+ // Logic constants
+ #define	TRUE								1
