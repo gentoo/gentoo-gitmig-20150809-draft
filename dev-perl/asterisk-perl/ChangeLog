@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/asterisk-perl/ChangeLog,v 1.1 2005/07/18 19:44:17 stkn Exp $
+
+*asterisk-perl-0.08 (18 Jul 2005)
+
+  18 Jul 2005; Stefan Knoblich <stkn@gentoo.org> +metadata.xml,
+  +asterisk-perl-0.08.ebuild:
+  New package, ebuild submitted by Fernando Garrido Vaz (#98172).
+
