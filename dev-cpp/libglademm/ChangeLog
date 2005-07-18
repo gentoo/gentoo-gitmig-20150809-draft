@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.23 2005/05/18 12:04:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.24 2005/07/18 21:48:07 ka0ttic Exp $
+
+*libglademm-2.6.0 (18 Jul 2005)
+
+  18 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> libglademm-2.4.1.ebuild,
+  +libglademm-2.6.0.ebuild:
+  Version bump for bug 91843; 2.4.1 stable on x86. Also removed unnecessary
+  eutils inherit.
 
   18 May 2005; Markus Rothe <corsair@gentoo.org> libglademm-2.2.0.ebuild,
   libglademm-2.4.1.ebuild:
