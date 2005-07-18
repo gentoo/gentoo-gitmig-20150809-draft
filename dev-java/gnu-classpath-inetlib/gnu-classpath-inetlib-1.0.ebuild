@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.0.ebuild,v 1.5 2005/07/18 13:01:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.0.ebuild,v 1.6 2005/07/18 14:05:45 axxo Exp $
 
 inherit java-pkg
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 	mkdir ext && cd ext
 	java-pkg_jar-from jessie
-		
+
 	java-pkg_jar-from gnu-crypto javax-security.jar javax-security-auth-callback.jar
 	java-pkg_jar-from gnu-crypto javax-security.jar javax-security-sasl.jar
 }
