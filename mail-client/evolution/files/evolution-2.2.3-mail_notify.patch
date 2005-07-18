@@ -1,0 +1,13 @@
+diff -NurdB evolution-2.2.3/plugins/new-mail-notify/new-mail-notify.c evolution-2.2.3-patched/plugins/new-mail-notify/new-mail-notify.c
+--- evolution-2.2.3/plugins/new-mail-notify/new-mail-notify.c	2005-04-05 03:13:45.000000000 -0500
++++ evolution-2.2.3-patched/plugins/new-mail-notify/new-mail-notify.c	2005-07-17 00:38:22.000000000 -0500
+@@ -111,6 +111,9 @@
+ 						   DBUS_INTERFACE,
+ 						   message_name);
+ 
++		if (message == NULL)
++			return;
++
+ 		/* Appends the data as an argument to the message */
+ 		dbus_message_append_args (message,
+ #if DBUS_VERSION >= 310

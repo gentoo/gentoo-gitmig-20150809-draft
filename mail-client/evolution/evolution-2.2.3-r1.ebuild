@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.3.ebuild,v 1.1 2005/07/08 10:00:54 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.3-r1.ebuild,v 1.1 2005/07/18 05:07:16 leonardop Exp $
 
 inherit eutils flag-o-matic alternatives gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="crypt dbus debug doc gstreamer ipv6 kerberos ldap mono mozilla nntp pda spell ssl static"
+IUSE="crypt dbus debug doc gstreamer ipv6 kerberos krb4 ldap mono mozilla nntp pda spell ssl static"
 
 # Top stanza are ximian deps
 # Pango dependency required to avoid font rendering problems
@@ -43,6 +43,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.6.2
 			>=dev-libs/nss-3.9.2 ) )
 	ldap? ( >=net-nds/openldap-2 )
 	kerberos? ( virtual/krb5 )
+	krb4? ( virtual/krb5 )
 	gstreamer? ( =media-libs/gstreamer-0.8*
 		=media-libs/gst-plugins-0.8* )
 	dbus? ( <sys-apps/dbus-0.30 )
@@ -60,14 +61,41 @@ USE_DESTDIR="1"
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 ELTCONF="--reverse-deps"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix potential crash in the DBUS notification plugin. See bug #95917.
+	epatch ${FILESDIR}/${P}-mail_notify.patch
+	# Fix display of credits. See bug #98491.
+	epatch ${FILESDIR}/${P}-credits.patch
+	# Accept the list of plugins separated by commas instead of spaces.
+	epatch ${FILESDIR}/${P}-configure_plugins.patch
+
+	einfo "Running autoconf"
+	autoconf || die "Autoconf failed"
+}
+
 src_compile() {
-	local myconf="--disable-default-binary --enable-plugins=all \
-		--without-kde-applnk-path $(use_enable static) $(use_enable ssl nss) \
-		$(use_enable ssl smime) $(use_enable ipv6) $(use_enable mono) \
-		$(use_enable nntp) $(use_enable pda pilot-conduits) \
-		$(use_with ldap openldap) $(use_with kerberos krb5 /usr)"
+	local myconf="--disable-default-binary --without-kde-applnk-path \
+	$(use_enable static) $(use_enable ssl nss) $(use_enable ssl smime) \
+	$(use_enable ipv6) $(use_enable mono) $(use_enable nntp) \
+	$(use_enable pda pilot-conduits) $(use_with ldap openldap) \
+	$(use_with kerberos krb5 /usr)"
 
 	use ldap && myconf="${myconf} $(use_with static static-ldap)"
+
+	if use krb4 && ! built_with_use virtual/krb5 krb4; then
+		ewarn
+		ewarn "In order to add kerberos 4 support, you have to emerge"
+		ewarn "virtual/krb5 with the 'krb4' USE flag enabled as well."
+		ewarn
+		ewarn "Skipping for now."
+		ewarn
+		myconf="${myconf} --without-krb4"
+	else
+		myconf="${myconf} $(use_with krb4 krb4 /usr)"
+	fi
 
 	# problems with -O3 on gcc-3.3.1
 	replace-flags -O3 -O2
@@ -106,6 +134,29 @@ src_compile() {
 		myconf="${myconf} --without-nspr-libs --without-nspr-includes \
 		--without-nss-libs --without-nss-includes"
 	fi
+
+	# Plug-ins to install. Normally we would want something similar to
+	# --enable-plugins=all (plugins_base + plugins_standard), except for some
+	# special cases.
+	local plugins="calendar-file calendar-http calendar-weather \
+	groupwise-account-setup itip-formatter plugin-manager send-options \
+	shared-folder groupwise-send-options exchange-account-setup \
+	groupwise-status-tracking default-source addressbook-file \
+	addressbook-groupwise startup-wizard bbdb subject-thread save-attachments \
+	prefer-plain save-calendar select-one-source copy-tool mail-to-task \
+	folder-unsubscribe mark-calendar-offline mailing-list-actions"
+
+	# The special cases
+	use gstreamer && plugins="${plugins} audio-inline"
+	use dbus && plugins="${plugins} new-mail-notify"
+
+	local pluginlist=""
+	for p in $plugins; do
+		[ "x$pluginlist" != "x" ] && pluginlist="${pluginlist},"
+		pluginlist="${pluginlist}${p}"
+	done
+
+	myconf="${myconf} --enable-plugins=${pluginlist}"
 
 	G2CONF="${G2CONF} ${myconf}"
 
