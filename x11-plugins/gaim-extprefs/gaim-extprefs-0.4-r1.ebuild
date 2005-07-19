@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-extprefs/gaim-extprefs-0.4-r1.ebuild,v 1.2 2005/06/16 13:43:17 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-extprefs/gaim-extprefs-0.4-r1.ebuild,v 1.3 2005/07/19 03:21:02 tester Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 
 IUSE=""
 
