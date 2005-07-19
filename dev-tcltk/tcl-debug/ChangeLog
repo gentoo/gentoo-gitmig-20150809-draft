@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcl-debug
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-debug/ChangeLog,v 1.5 2005/03/10 15:02:40 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-debug/ChangeLog,v 1.6 2005/07/19 14:05:28 dholm Exp $
+
+  19 Jul 2005; David Holm <dholm@gentoo.org> tcl-debug-2.0.ebuild:
+  Added to ~ppc.
 
   10 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> tcl-debug-2.0.ebuild:
   added ~amd64 to KEYWORDS, fixes #83052
