@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0917fddebedb848873e532062de5d0e6 ChangeLog 3609
-MD5 7e026c4094a86901bdc1b10c4e0a1dbc faac-1.24.ebuild 906
+MD5 c9e7ce19505b75e0cfe9a69ffb0cf495 ChangeLog 3700
+MD5 63a6e9a824de6ca515ca1eae605cb2fa faac-1.24.ebuild 905
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 be244107bee74141f7bf9cf21feea2f2 faac-1.23.5.ebuild 871
 MD5 927d4973537500e758398d0dd1daae88 files/digest-faac-1.24 61
@@ -12,7 +12,7 @@ MD5 3c7304d2a11a89df8123f8c096d11725 files/digest-faac-1.23.5 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrIjwKf2g/qXtneoRAr3MAKCG/Uksz4e8DUZr2mKKq4jMrOtF+QCggMeP
-AaGZHsIDM/71b8BAMsPm8OM=
-=y5GD
+iD8DBQFC3ZMDKf2g/qXtneoRAnpAAJ9hOrchHRttwgr+BLPZHMPnwRS8pQCgpWS1
+jH6+C5J1XSFCybnYTfAG6z0=
+=TUYB
 -----END PGP SIGNATURE-----
