@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.9.11-r1.ebuild,v 1.3 2005/06/27 20:41:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.9.11-r1.ebuild,v 1.4 2005/07/19 21:35:46 caleb Exp $
 
 inherit eutils
 
@@ -25,6 +25,9 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
+
+	# Installs docs into stray directory
+	rm -rf ${D}/usr/share/doc/valgrind
 
 	dodoc AUTHORS ChangeLog README TODO
 	dohtml docs/*.html
