@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.29 2005/07/13 21:34:22 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.30 2005/07/19 16:16:49 mattam Exp $
+
+  19 Jul 2005; Matthieu Sozeau <mattam@gentoo.org>
+  +files/ocaml-3.08-extnames.patch, +unison-2.9.1-r1.ebuild:
+  Resurrected old stable version.
 
   13 Jul 2005; Matthieu Sozeau <mattam@gentoo.org>
   +files/unison-2.12.0-gtk2-bug.patch, unison-2.12.0.ebuild:
