@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.10.1.ebuild,v 1.1 2005/07/19 11:26:11 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.10.1.ebuild,v 1.2 2005/07/19 16:48:24 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -47,10 +47,12 @@ src_unpack() {
 	# --without-jpeg switch
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
+	export WANT_AUTOMAKE=1.7
+	cp aclocal.m4 old_macros.m4
 	einfo "Running aclocal"
-	aclocal || die "Aclocal failed"
+	aclocal -I . || die "Aclocal failed"
 	einfo "Running autoconf"
 	autoconf || die "Autoconf failed"
 	einfo "Running automake"
-	WANT_AUTOMAKE=1.7 automake || die "Automake failed"
+	automake || die "Automake failed"
 }
