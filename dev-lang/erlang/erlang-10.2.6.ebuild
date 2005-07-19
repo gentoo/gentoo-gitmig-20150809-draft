@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.6.ebuild,v 1.2 2005/07/18 20:21:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.6.ebuild,v 1.3 2005/07/19 01:54:15 swegener Exp $
 
 inherit eutils toolchain-funcs flag-o-matic elisp-common
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-lang/perl-5.6.1
 	X? ( virtual/x11 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	emacs? ( virtual/emacs )
-	java? ( >=virtual/jdk-1.2* )
+	java? ( >=virtual/jdk-1.2 )
 	odbc? ( dev-db/unixODBC )"
 
 S=${WORKDIR}/${MY_P}
