@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 360c1314d6fe677a56248d2d21f55484 libgtk-java-2.4.9.ebuild 2892
-MD5 2aa276fc15573e0c60aa5900b9f72a36 libgtk-java-2.4.8.1.ebuild 3350
-MD5 67cd286bfd2c9ebc9102d15fde8afc56 libgtk-java-2.6.2-r1.ebuild 2820
+MD5 b022186c8e04efb63e91009731c12120 libgtk-java-2.4.9.ebuild 2892
+MD5 894895a802ebec44935045bc8f800c2f libgtk-java-2.4.8.1.ebuild 3350
+MD5 856b0e851f16dddc9002d7e1ee2c603e libgtk-java-2.6.2-r1.ebuild 2820
 MD5 265e93e30683f886018d493130cda3cd ChangeLog 4030
 MD5 23e70539fce4ef96d51e3043420acb8c metadata.xml 975
 MD5 5447d20adb67dacfc4ecd80c88386343 files/digest-libgtk-java-2.6.2-r1 70
@@ -20,7 +20,7 @@ MD5 e8a6ddb689376b8e04d3bc41cca48253 files/libgtk-java-2.4.6_no-docbook-autoconf
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCwrn3/rLF9B432nYRAn0MAKCiX0WovtjI57En5WUlJNkTFRL2NQCguRvt
-Osn2zG8LoRilZw32YLlVosI=
-=eLQE
+iD8DBQFC3Mlo/rLF9B432nYRAt7wAJ9BVmHhC+s1v1j8XZYqcY3JVnFcgACfY9M0
+V25etx3ZOsLFKVkUtdmniDc=
+=kZGT
 -----END PGP SIGNATURE-----
