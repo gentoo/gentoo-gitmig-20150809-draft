@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c4f78688bb6af5eebdd69c980743e432 commons-beanutils-1.7.0-r1.ebuild 1436
-MD5 0d800d6d8569d6babb4a2deddb2fff78 commons-beanutils-1.6.1-r2.ebuild 1439
+MD5 9d55903cfe454825866af2edb21a2c9b commons-beanutils-1.7.0-r1.ebuild 1435
+MD5 d000996910bd31fa7e5849cc9dfd94f0 commons-beanutils-1.6.1-r2.ebuild 1438
 MD5 a0d9772c70984085ab957411b4a09ce2 ChangeLog 3728
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 a65fcfbd83466bf025820b316482b38a files/digest-commons-beanutils-1.6.1-r2 79
 MD5 776456ec1cdc342af0507027a94da5d3 files/digest-commons-beanutils-1.7.0-r1 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCz/S0/rLF9B432nYRAq5NAJ44qX9jjJnXpAUYV67v8T++6D2s0QCfRoXI
-93I+9o/1WygNlM0FueYNHNk=
-=QEa7
------END PGP SIGNATURE-----
