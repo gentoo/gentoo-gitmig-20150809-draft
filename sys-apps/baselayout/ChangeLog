@@ -1,9 +1,21 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.257 2005/07/19 18:31:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.258 2005/07/19 20:58:57 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.12.0_pre1-r1 (19 Jul 2005)
+
+  19 Jul 2005; Roy Marples <uberlord@gentoo.org>
+  -files/baselayout-1.12.0-alpha2-netscripts-1.patch,
+  +files/baselayout-1.12.0_pre1-r1.patch,
+  -baselayout-1.12.0_alpha2-r1.ebuild, -baselayout-1.12.0_pre1.ebuild,
+  +baselayout-1.12.0_pre1-r1.ebuild:
+  Bring us up to SVN r1317 which fixes a fair few buglets mainly with
+  networking.
+  
+  Marked as unstable on all arches.
 
   19 Jul 2005; Roy Marples <uberlord@gentoo.org> baselayout-1.11.13.ebuild:
   Marked stable for all arches
