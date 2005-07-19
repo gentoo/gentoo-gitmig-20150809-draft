@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.34 2005/07/14 10:05:18 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.35 2005/07/19 00:23:20 geoman Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# masking mono because it doesn't work on mips
+mono
 
 # Hardave Riar <hardave@gentoo.org>
 # Temporarily masking ieee1394 until it can be tested
