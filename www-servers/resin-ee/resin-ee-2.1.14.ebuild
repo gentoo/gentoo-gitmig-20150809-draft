@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/resin-ee-2.1.14.ebuild,v 1.4 2005/07/19 00:01:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/resin-ee-2.1.14.ebuild,v 1.5 2005/07/19 00:04:29 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.caucho.com"
 KEYWORDS="~ppc ~sparc x86"
 LICENSE="CAUCHO"
 SLOT="0"
-DEPEND="!net-www/resin"
+DEPEND="!www-servers/resin"
 RDEPEND=">=virtual/jdk-1.2"
 IUSE=""
 
