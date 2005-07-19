@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1321 2005/07/19 03:31:43 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1322 2005/07/19 04:47:26 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -161,6 +161,7 @@ dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace-cvs:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/guichan:allegro - Build the Allegro frontend
+dev-games/ode:double-precision - more precise calculations at the expense of speed
 dev-games/ogre:cegui - build the cegui samples
 dev-games/ogre:cg - nvidia toolkit plugin
 dev-games/ogre:devil - image loading support with DevIL
