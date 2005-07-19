@@ -1,15 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1d345068e61e85081c015b5a3a39563a ChangeLog 2753
-MD5 26712009a9dca9b76c6ec30a760d6552 g-wrap-1.3.4-r1.ebuild 851
+MD5 8deb7692868fd754661629cf6faa087a ChangeLog 2970
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
+MD5 8d412c15a04f18bc1d028e11752f7612 g-wrap-1.3.4-r1.ebuild 884
 MD5 0fddc83a9af8d261128fa62b47fad1ab files/digest-g-wrap-1.3.4-r1 64
 MD5 05abd740e0c2fe308fd53514de5442e0 files/g-wrap-1.3.4-direntry.patch 2202
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB8Om/Rkyva5PS18kRAhJiAJ4iN3EcuddUnV8Ov3wo/SseSa4wUgCgl5Kb
-zAoEL8qrGDvVsu/XMtdC3Vk=
-=Sqdk
------END PGP SIGNATURE-----
+MD5 31673db259ce2252708ef8d6353cc096 files/g-wrap-1.3.4-m4.patch 501

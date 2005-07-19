@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.4-r1.ebuild,v 1.2 2004/10/05 13:58:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.4-r1.ebuild,v 1.3 2005/07/19 18:23:19 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,6 +20,7 @@ DEPEND=">=dev-util/guile-1.4
 src_unpack() {
 	unpack ${A}; cd ${S}
 	epatch ${FILESDIR}/${P}-direntry.patch
+	epatch ${FILESDIR}/${P}-m4.patch
 }
 
 src_compile() {

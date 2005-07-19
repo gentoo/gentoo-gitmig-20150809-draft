@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/g-wrap
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.19 2004/07/02 21:32:27 seemant Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.20 2005/07/19 18:23:19 seemant Exp $
+
+  19 Jul 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/g-wrap-1.3.4-m4.patch, g-wrap-1.3.4-r1.ebuild:
+  fix the underquoted definition warnings, thanks to: Joel Konkle-Parker
+  <jjk3@msstate.edu> in bug #92172
 
 *g-wrap-1.3.4-r1 (02 Jul 2004)
 
