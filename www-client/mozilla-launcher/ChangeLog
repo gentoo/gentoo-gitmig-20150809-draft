@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.21 2005/07/19 16:46:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.22 2005/07/19 19:49:04 agriffis Exp $
+
+  19 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/mozilla-launcher-1.37-multilib.patch:
+  Doh!  Forgot to update the (deprecated) multilib patch
 
 *mozilla-launcher-1.37 (19 Jul 2005)
 
