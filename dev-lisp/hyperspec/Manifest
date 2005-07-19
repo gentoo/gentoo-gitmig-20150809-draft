@@ -1,6 +1,6 @@
 MD5 a8281633caee97b3ec43880ce444fa20 ChangeLog 677
 MD5 38e9622890ba833c9589afa340e8a68a hyperspec-6.0.ebuild 1127
+MD5 b26aa5ca458a657a4e73c337f0317fab hyperspec-7.0.ebuild 1200
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
-MD5 fc38c55dda590c055896f6ec04ec4ef3 hyperspec-7.0.ebuild 1194
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hyperspec-6.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hyperspec-7.0 0
