@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5.ebuild,v 1.17 2005/02/03 22:11:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5-r4.ebuild,v 1.1 2005/07/19 19:27:08 carlo Exp $
 
-inherit gnuconfig elisp-common
+inherit gnuconfig elisp-common eutils
 
-DESCRIPTION="interactively examine a C program"
+DESCRIPTION="Interactively examine a C program"
 HOMEPAGE="http://cscope.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cscope/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="emacs"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
@@ -20,6 +20,20 @@ DEPEND="${RDEPEND}
 	emacs? ( virtual/emacs )"
 
 SITEFILE=50xcscope-gentoo.el
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	#rphillips - tempfile security patch
+	epatch ${FILESDIR}/${PN}-${PV}-tempfile.patch
+
+	# make it happy with ansi c (from azarah)
+	epatch ${FILESDIR}/${PN}-${PV}-gcc295.patch
+
+	# build progress patch  (bug 94150)
+	epatch ${FILESDIR}/${PN}-${PV}-prog-info.patch
+}
 
 src_compile() {
 	gnuconfig_update
@@ -48,7 +62,7 @@ src_install() {
 		elisp-site-file-install ${FILESDIR}/${SITEFILE} xcscope || die
 		dobin cscope-indexer || die
 	fi
-	cp -r ${S}/contrib/webcscope ${D}/usr/share/doc/${P}/ || die
+	cp -r ${S}/contrib/webcscope ${D}/usr/share/doc/${PF}/ || die
 }
 
 pkg_postinst() {

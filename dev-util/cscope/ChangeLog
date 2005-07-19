@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.47 2005/02/07 00:17:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.48 2005/07/19 19:27:08 carlo Exp $
+
+*cscope-15.5-r4 (19 Jul 2005)
+
+  19 Jul 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/cscope-15.5-prog-info.patch, -cscope-15.5.ebuild,
+  -cscope-15.5-r1.ebuild, -cscope-15.5-r2.ebuild, +cscope-15.5-r4.ebuild:
+  build progress patch, clean up
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> cscope-15.5-r3.ebuild:
   Marked stable on mips.
