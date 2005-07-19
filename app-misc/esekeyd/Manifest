@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6f4144a9c6e0e3100690f6b1c03ec946 esekeyd-1.2.1.ebuild 595
-MD5 89bab1c6e4e63cfe361c55de90601f7c ChangeLog 555
+MD5 997b6aee967d6f55b8e18d4b0b1425a4 ChangeLog 644
+MD5 473b88e469eee6d11d9755f1d361fde6 esekeyd-1.2.1.ebuild 592
 MD5 3e22c883db32384466af4a4db61aca02 metadata.xml 222
 MD5 c0036814b4daee11094ee813cce56737 files/digest-esekeyd-1.2.1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCnilVI1lqEGTUzyQRAmYCAJ4u/+4LMYOIDoimXVBqa0/X9kstZQCgmLxQ
-vi3Z5WUrPMwlUp6PzuPYohU=
-=5pBP
+iD8DBQFC3HFsmOfEJZHYOKcRAlF2AJ92vi2Ftr7IKjlQNxBEaI7VlpqOyACdGMba
+lxetytYgeBWKiq726iNAL7Y=
+=Ar/K
 -----END PGP SIGNATURE-----
