@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.118 2005/07/17 10:57:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.119 2005/07/19 06:44:24 eradicator Exp $
+
+  19 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-lib-0.9.8.ebuild, -alsa-lib-1.0.2.ebuild, alsa-lib-1.0.9.ebuild:
+  Removing old 1.0.2 and making 0.9.8 KEWORDS only alpha.
 
   17 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-lib-1.0.9.ebuild:
@@ -11,7 +15,7 @@
 
   07 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -alsa-lib-1.0.9_rc3.ebuild, alsa-lib-1.0.9.ebuild:
-  Removing old version.  -sparc 1.0.9
+  Removing old version. -sparc (upstream bug #1268)
 
 *alsa-lib-1.0.9 (27 May 2005)
 

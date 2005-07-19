@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.8.ebuild,v 1.15 2005/01/02 06:24:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.8.ebuild,v 1.16 2005/07/19 06:44:24 eradicator Exp $
 
 inherit libtool
 
@@ -8,7 +8,7 @@ DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="http://www.alsa-project.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc alpha amd64 -sparc ia64"
+KEYWORDS="alpha"
 LICENSE="GPL-2 LGPL-2.1"
 
 IUSE="jack"
