@@ -1,4 +1,14 @@
-MD5 ff3008d4e197e061e99f7189c65f2dac ChangeLog 497
-MD5 26c214e5e507bfb464cffc920cf85906 gentoo-bugger-0.09.2.ebuild 598
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e3654262fbd9f597af82343105be5a87 ChangeLog 695
 MD5 c8ea960a74b7d45fe928837fbd074756 metadata.xml 313
-MD5 63995274b01b80a823d0119087202acd files/digest-gentoo-bugger-0.09.2 71
+MD5 1be19deef1478ec11b41308b7cea3142 gentoo-bugger-0.09.3.ebuild 602
+MD5 16d0e41f50c50d285f2c2f3dcffcc943 files/digest-gentoo-bugger-0.09.3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFC3QtOtG5z4I8BtQoRAntfAJ4rA4S0uQ6WXwpHcrHlHLvZkeCh9wCeOtQq
+qHbx442e4xCPVBXNzcOVYGw=
+=Gy2b
+-----END PGP SIGNATURE-----
