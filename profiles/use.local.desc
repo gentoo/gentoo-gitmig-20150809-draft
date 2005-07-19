@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1320 2005/07/18 14:04:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1321 2005/07/19 03:31:43 anarchy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -389,6 +389,7 @@ mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:gmailtimestamps - Enable support for Gmail timestamps
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
+mail-client/mozilla-thunderbird:mozcalendar - Enable build in calendar (also firefox, thunderbird)
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:nntp - Adds support for nntp via patch
 mail-client/muttng:gpgme - Enable support for gpgme
@@ -947,6 +948,7 @@ www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g.
 www-client/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 www-client/mozilla-firefox:mozsvg - Enable SVG support in mozilla and firefox
 www-client/mozilla-firefox:mozxmlterm - Enable mozilla's XML-based command-line terminal
+www-client/mozilla-firefox:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 www-client/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 www-client/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla:moznocompose - Disable building of mozilla's HTML editor component
