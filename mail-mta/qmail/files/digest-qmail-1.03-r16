@@ -1,7 +1,6 @@
 MD5 622f65f982e380dbe86e6574f3abcb7c qmail-1.03.tar.gz 220668
 MD5 5a8d7a5863b0c56236af945dedd45754 qmailqueue-patch 2510
 MD5 39b6f70f65056472ff97ab40c1dba7b4 big-todo.103.patch 5546
-MD5 1d5b0aafb651ce2ad02aac6af80758c0 qmail-link-sync.patch 1403
 MD5 2ff58c3570870a8ff9a1d9eb9aec05a6 big-concurrency.patch 9331
 MD5 999e360e4b1571663b995ce51f6e056e qmail-1.03-0.0.0.0-0.2.patch 734
 MD5 4e1f2d8315e7e2a5482798c9d19fac4d sendmail-flagf.patch 863
