@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.4.0.ebuild,v 1.3 2005/07/13 14:19:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.4.0.ebuild,v 1.4 2005/07/19 16:28:23 herbs Exp $
 
-inherit flag-o-matic eutils toolchain-funcs debug
+inherit flag-o-matic eutils toolchain-funcs debug multilib
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -114,14 +114,14 @@ src_compile() {
 		einfo "Disabling NSS, using GnuTLS"
 		myconf="${myconf} --enable-nss=no"
 		myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
-		myconf="${myconf} --with-gnutls-libs=/usr/lib"
+		myconf="${myconf} --with-gnutls-libs=/usr/$(get_libdir)"
 	else
 		einfo "Disabling GnuTLS, using NSS"
 		myconf="${myconf} --enable-gnutls=no"
 		myconf="${myconf} --with-nspr-includes=/usr/include/nspr"
 		myconf="${myconf} --with-nss-includes=/usr/include/nss"
-		myconf="${myconf} --with-nspr-libs=/usr/lib/nspr"
-		myconf="${myconf} --with-nss-libs=/usr/lib/nss"
+		myconf="${myconf} --with-nspr-libs=/usr/$(get_libdir)/nspr"
+		myconf="${myconf} --with-nss-libs=/usr/$(get_libdir)/nss"
 	fi
 
 
