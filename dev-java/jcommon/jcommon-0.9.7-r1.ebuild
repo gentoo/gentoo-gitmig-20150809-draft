@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-0.9.7-r1.ebuild,v 1.2 2005/07/12 19:44:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/jcommon-0.9.7-r1.ebuild,v 1.3 2005/07/19 19:48:23 axxo Exp $
 
 inherit java-pkg
 
@@ -20,11 +20,12 @@ RDEPEND=">=virtual/jdk-1.3"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	rm -f junit/*
+	rm *.jar
 }
 
 src_compile() {
-	local antflags="compile javadoc"
+	local antflags="compile"
+	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant -f ant/build.xml ${antflags} || die "compile failed"
 }
