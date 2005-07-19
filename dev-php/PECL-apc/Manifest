@@ -1,6 +1,18 @@
-MD5 20ed0c3cd69997b2acfa768ded3d6d0e ChangeLog 2513
-MD5 d1d5fd8c28cc435d5fb24dcb4f8fd3e6 PECL-apc-2.0.4.ebuild 991
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0c235015290dc65b36e65bc6cd3872ff PECL-apc-3.0.3.ebuild 1188
+MD5 d1d5fd8c28cc435d5fb24dcb4f8fd3e6 PECL-apc-2.0.4.ebuild 991
+MD5 d35d2b031a764a41d237c474715594d7 ChangeLog 2643
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 844baae246c79a296071f7d0d0f5f69d PECL-apc-3.0.4.ebuild 1189
 MD5 7603dc56a299fce545e20b1db52b0b45 files/digest-PECL-apc-2.0.4 57
 MD5 14f3bef4db4b1a62492f9e0fc60ece6e files/digest-PECL-apc-3.0.3 57
+MD5 f73b6d200a90c19f570f40f7dbd3d427 files/digest-PECL-apc-3.0.4 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3Hu0aGfFFLhbXWkRAlDsAJ9+yLLIa7tLs5ylXHj/ae/OpRHIsQCeM7EF
+5pR+K5tO1OnfEKaNHlFa06g=
+=IKTI
+-----END PGP SIGNATURE-----
