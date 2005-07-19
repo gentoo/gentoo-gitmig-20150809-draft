@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.98 2005/07/19 12:19:29 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.99 2005/07/19 12:32:42 taviso Exp $
+
+  19 Jul 2005; Tavis Ormandy <taviso@gentoo.org>
+  -files/fvwm-2.5.10-FvwmCommand.diff, -files/fvwm-2.5.10-Test-update.diff,
+  -files/fvwm-2.5.10-mips-compat.diff, -files/fvwm-2.5.10-post-release.diff,
+  -files/fvwm-iconman.diff, -files/fvwmtabs-2.8-insecure-tmp-handling.diff,
+  -files/iconfile-2.5.10.diff, -fvwm-2.5.13.ebuild:
+  remove stale patches
 
 *fvwm-2.5.13-r1 (19 Jul 2005)
 
