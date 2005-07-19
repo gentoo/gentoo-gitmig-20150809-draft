@@ -1,16 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8e7ace92670359de10b0bdf4cfebef84 ChangeLog 2742
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 e248f5298ffd75b4c56fba430f29b261 ChangeLog 2998
+MD5 863c1c3d604838110fc49f5ebc390871 Class-MethodMaker-2.07.ebuild 885
+MD5 2c3db64e9b5051b91e858c37b5c0dd13 Class-MethodMaker-2.07-r1.ebuild 888
 MD5 c3906a462f3e92f442550ed7884c79d7 Class-MethodMaker-1.11.ebuild 538
-MD5 ba3b690b3a6657c19898db4fdc52d4d3 Class-MethodMaker-2.07.ebuild 554
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 aa928f76f2d2487439ef3f4e5b43e360 files/0-signature.t 616
 MD5 8e850cd4da47af44dddb828b7d3f430e files/digest-Class-MethodMaker-2.07 73
+MD5 d8961ba39f7b4c438e50e2ea83300e50 files/C-MM-Build.patch 352
 MD5 a2a1bcd1e4774ec6755462b1bc3795c2 files/digest-Class-MethodMaker-1.11 73
+MD5 8e850cd4da47af44dddb828b7d3f430e files/digest-Class-MethodMaker-2.07-r1 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCa9QWtG5z4I8BtQoRAuIQAJ9lwrME4sL3KwDzCs1pzINhddUU1gCcCFvC
-zDiPb4sOVN51GDiY2exlsy0=
-=vFqv
+iD8DBQFC3OJatG5z4I8BtQoRAiM8AJ4qIrY6GyArCVx8arLAhhp42Fd1pQCghAXX
+4t1dnvIG3vAk5SrPXsvOEBQ=
+=MCxt
 -----END PGP SIGNATURE-----
