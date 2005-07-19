@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre1-r1.ebuild,v 1.1 2005/07/19 20:58:58 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre1-r1.ebuild,v 1.2 2005/07/19 21:40:07 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -32,7 +32,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Bring us up to SVN r1317 which fixes a fair few buglets
+	# Bring us up to SVN r1318 which fixes a fair few buglets
 	epatch "${FILESDIR}/${PN}-${PV}-r1.patch"
 
 	# Setup unicode defaults for silly unicode users

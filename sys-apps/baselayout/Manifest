@@ -1,6 +1,6 @@
 MD5 b29ee10252c38491f413f36a51c014f3 ChangeLog 58930
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
-MD5 0cdd2cce1c820571f3ecdaa774559ae2 baselayout-1.12.0_pre1-r1.ebuild 18441
+MD5 d977b6d1fea2e0503d1acf41a2463bd8 baselayout-1.12.0_pre1-r1.ebuild 18441
 MD5 451f8ce496238c2fd0fa9fa2852ad16c baselayout-1.9.4-r7.ebuild 17999
 MD5 7d6f28f70034d87817939d447d40d39e baselayout-1.11.11-r3.ebuild 18759
 MD5 4e7b0fb1a5daa54e4f8de4637b447fcd baselayout-1.11.12-r4.ebuild 19260
@@ -11,7 +11,7 @@ MD5 08ade596f939beaf9f7b3657c5811593 files/rc-scripts-1.6.9-checkfs-lvm.patch 57
 MD5 6d37e93641eee6754b93dde3324ae23b files/baselayout-1.11.11-wpa_supplicant.patch 1223
 MD5 2d89f41d8e2a27bb9c413ce38c5c95fb files/baselayout-1.11.12-profile.patch 1847
 MD5 ba767b33145b4614cf9b760516c51895 files/digest-baselayout-1.11.12-r4 70
-MD5 7d806cb49c3f9459e8b1c7f83895339f files/baselayout-1.12.0_pre1-r1.patch 17098
+MD5 9dea6001a08f1b04bb1b4be1dd78fb98 files/baselayout-1.12.0_pre1-r1.patch 18327
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r7 134
 MD5 f96ffe6b44684809b8ec0e4450093f59 files/baselayout-1.11.10-iwconfig-2.patch 925
 MD5 333c983dc00cb352f4725cacc0378fea files/baselayout-1.11.10-bridge.patch 3547

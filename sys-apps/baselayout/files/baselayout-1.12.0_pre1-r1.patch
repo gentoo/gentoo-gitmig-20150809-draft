@@ -1,7 +1,309 @@
+Index: lib/rcscripts/net.modules.d/system
+===================================================================
+--- lib/rcscripts/net.modules.d/system	(revision 1296)
++++ lib/rcscripts/net.modules.d/system	(working copy)
+@@ -2 +2 @@
+-# Copyright (c) 2004-2005 Gentoo Foundation
++# Copyright (c) 2005 Gentoo Foundation
+@@ -38 +38 @@
+-    echo "dns_servers_$1 dns_domain_$1 dns_search_domains_$1 ntp_servers_$1 nis_domain_$1 nis_servers_$1"
++    echo "dns_servers_$1 dns_domain_$1 dns_search_path_$1 ntp_servers_$1 nis_domain_$1 nis_servers_$1"
+@@ -60 +60 @@
+-    eval x=\"\$\{dns_search_domains_${ifvar}\}\"
++    eval x=\"\$\{dns_search_path_${ifvar}\}\"
+Index: lib/rcscripts/net.modules.d/pump
+===================================================================
+--- lib/rcscripts/net.modules.d/pump	(revision 1296)
++++ lib/rcscripts/net.modules.d/pump	(working copy)
+@@ -79 +79 @@
+-    pump --release --keep-up --interface "${iface}"
++    pump --release --interface "${iface}"
+@@ -91 +91 @@
+-    local iface="$1" opts d ifvar=$( bash_variable "$1" )
++    local iface="$1" opts d ifvar=$( bash_variable "$1" ) search
+@@ -103,0 +104,3 @@
++    eval search=\"\$\{dns_search_path_${ifvar}\}\"
++    [[ -n ${search} ]] && opts="${opts} --search-path='"${search}"'"
++
+@@ -112 +115 @@
+-    opts="${opts} --interface ${iface}"
++    opts="${opts} --keep-up --interface ${iface}"
+@@ -122 +125 @@
+-   
++  
+Index: lib/rcscripts/net.modules.d/helpers.d/dhcpcd-wrapper
+===================================================================
+--- lib/rcscripts/net.modules.d/helpers.d/dhcpcd-wrapper	(revision 1296)
++++ lib/rcscripts/net.modules.d/helpers.d/dhcpcd-wrapper	(working copy)
+@@ -10,2 +9,0 @@
+-service="net.${interface}"
+-
+@@ -17,0 +16,30 @@
++. /lib/rcscripts/net.modules.d/helpers.d/module-loader
++
++if [[ ${action} == "up" ]]; then
++    # Map MAC address variables to interface variables
++    macnet_pre_start "${interface}" 1>/dev/null
++
++    # Map wireless ESSID variables to interface variables
++    if [[ -n ${wireless_module} ]]; then
++	if wireless_check_extensions "${interface}" ; then
++	    essidnet_pre_start "${interface}" 1>/dev/null
++	fi
++    fi
++
++    # Add any search paths if we have any defined
++    ifvar=$( bash_variable "${interface}" )
++    eval d=\" \$\{dhcp_${ifvar}\} \"
++    [[ ${d} == "  " ]] && d=" ${dhcp} "
++
++    if [[ ${d} != *" nodns "* ]]; then
++	eval search=\"\$\{dns_search_path_${ifvar}\}\"
++	if [[ -n ${search} ]]; then
++	    resolv="${statedir}/${interface}/resolv.conf"
++	    tmp="${revolv}.$$"
++	    egrep -v "^[ \t]*(search|domain)[ \t]*" "${resolv}" > "${tmp}"
++	    echo "search ${search}" >> "${tmp}" 
++	    mv "${tmp}" "${resolv}"
++	fi
++    fi
++fi
++
+Index: lib/rcscripts/net.modules.d/helpers.d/dhcp-state
+===================================================================
+--- lib/rcscripts/net.modules.d/helpers.d/dhcp-state	(revision 1296)
++++ lib/rcscripts/net.modules.d/helpers.d/dhcp-state	(working copy)
+@@ -2 +2 @@
+-# Copyright (c) 2004-2005 Gentoo Foundation
++# Copyright (c) 2005 Gentoo Foundation
+@@ -7 +7,5 @@
+-. /lib/rcscripts/net.modules.d/helpers.d/module-loader
++MODULES_DIR="/lib/rcscripts/net.modules.d"
++. /lib/rcscripts/sh/rc-services.sh
++. "${MODULES_DIR}/helpers.d/functions"
++conf=$(add_suffix "/etc/conf.d/net")
++[[ -e ${conf} ]] && source "${conf}"
+@@ -16,5 +20,2 @@
+-    if [[ ${RC_AUTO_INTERFACE} == "yes" ]]; then
+-	best_interface=$( select_best_interface )
+-	apply_state "${best_interface}"
+-    fi
+-    exit 0
++else
++    ! service_stopping "${service}" && mark_service_started "${service}"
+@@ -23,8 +24,3 @@
+-# Map MAC address variables to interface variables
+-macnet_pre_start "${interface}" 1>/dev/null
+-
+-# Map wireless ESSID variables to interface variables
+-if [[ -n ${wireless_module} ]]; then
+-    if wireless_check_extensions "${interface}" ; then
+-	essidnet_pre_start "${interface}" 1>/dev/null
+-    fi
++if [[ ${RC_AUTO_INTERFACE} == "yes" ]]; then
++    best_interface=$( select_best_interface )
++    apply_state "${best_interface}"
+@@ -32,22 +27,0 @@
+-
+-# Add any search domains if we have any defined
+-ifvar=$( bash_variable "${interface}" )
+-eval d=\" \$\{dhcp_${ifvar}\} \"
+-[[ ${d} == "  " ]] && d=" ${dhcp} "
+-
+-if [[ ${d} != *" nodns "* ]]; then
+-    eval search=\"\$\{dns_search_domains_${ifvar}\}\"
+-    if [[ -n ${search} ]]; then
+-        resolv="${statedir}/${interface}/resolv.conf"
+-	tmp="${revolv}.$$"
+-	egrep -v "^[ \t]*search" "${resolv}" > "${tmp}"
+-	domain=$( sed -n -e 's/^[ \t]*domain[ \t]*\(.*\)[ \t]*.*/\1/p' ${tmp} )
+-	echo "search ${domain} ${search}" >> "${tmp}" 
+-	mv "${tmp}" "${resolv}"
+-    fi
+-fi
+-
+-! service_stopping "${service}" && mark_service_started "${service}"
+-
+-[[ ${RC_AUTO_INTERFACE} == "yes" ]] && interface=$( select_best_interface )
+-apply_state "${interface}"
+Index: lib/rcscripts/net.modules.d/dhcpcd
+===================================================================
+--- lib/rcscripts/net.modules.d/dhcpcd	(revision 1296)
++++ lib/rcscripts/net.modules.d/dhcpcd	(working copy)
+@@ -147,0 +148,2 @@
++    [[ ! -d "${statedir}/${iface}" ]] && mkdir -p "${statedir}/${iface}"
++    
+Index: lib/rcscripts/net.modules.d/wpa_supplicant
+===================================================================
+--- lib/rcscripts/net.modules.d/wpa_supplicant	(revision 1296)
++++ lib/rcscripts/net.modules.d/wpa_supplicant	(working copy)
+@@ -39 +39 @@
+-	${report} && eerror "For WPA support (wpa_supplicant) support, emerge net-wireless/wpa-supplicant"
++	${report} && eerror "For WPA support (wpa_supplicant) support, emerge net-wireless/wpa_supplicant"
+@@ -181,0 +182,4 @@
++
++    # exit without error with wpa_supplicant-0.4.x as we may get kickstarted
++    # when an AP comes in range
++    ${action} && exit 0
+@@ -183 +187 @@
+-    # We now need to kill the process
++    # Kill wpa_supplicant for 0.3.x
+@@ -185,4 +188,0 @@
+-
+-    # We need to mark the service as stopped as we may be have been marked
+-    # as inactive previously
+-    ${action} && mark_service_stopped "net.${iface}"
+@@ -204 +204 @@
+-	ESSID=$( wpa_supplicant_get_essid "$1" )
++	ESSID=$( wpa_supplicant_get_essid "${iface}" )
+@@ -273 +273 @@
+-	[[ ${RC_PARALLEL_STARTUP} == "yes" ]] && background=yes
++	 [[ ${RC_PARALLEL_STARTUP} == "yes" ]] && background=no
+@@ -334,10 +333,0 @@
+-# bool wpa_supplicant_pre_stop(char *iface)
+-#
+-# Gets the last set ESSID if we have one
+-# We don't query for the current ESSID as it may have changed to another
+-# one
+-wpa_supplicant_pre_stop() {
+-    ESSID=$( get_options "ESSID" )
+-    ESSIDVAR=$( bash_variable "${ESSID}" )
+-}	
+-
+Index: lib/rcscripts/net.modules.d/iwconfig
+===================================================================
+--- lib/rcscripts/net.modules.d/iwconfig	(revision 1296)
++++ lib/rcscripts/net.modules.d/iwconfig	(working copy)
+@@ -906,10 +905,0 @@
+-
+-# bool iwconfig_pre_stop(char *iface)
+-#
+-# Gets the last set ESSID if we have one
+-# We don't query for the current ESSID as it may have changed to another
+-# one
+-iwconfig_pre_stop() {
+-    ESSID=$( get_options "ESSID" )
+-    ESSIDVAR=$( bash_variable "${ESSID}" )
+-}
+Index: lib/rcscripts/net.modules.d/macnet
+===================================================================
+--- lib/rcscripts/net.modules.d/macnet	(revision 1296)
++++ lib/rcscripts/net.modules.d/macnet	(working copy)
+@@ -2 +2 @@
+-# Copyright (c) 2004-2005 Gentoo Foundation
++# Copyright (c) 2005 Gentoo Foundation
+@@ -56,0 +57,4 @@
++    # We need to bring the interface up for some interfaces, otherwise the MAC
++    # address isn't consistent - mainly wireless cards with firmware uploading.
++    interface_up "${iface}"
++
+Index: lib/rcscripts/net.modules.d/rename
+===================================================================
+--- lib/rcscripts/net.modules.d/rename	(revision 1296)
++++ lib/rcscripts/net.modules.d/rename	(working copy)
+@@ -2 +2 @@
+-# Copyright (c) 2004-2005 Gentoo Foundation
++# Copyright (c) 2005 Gentoo Foundation
+@@ -18 +18,2 @@
+-    before macchanger interface
++    after macchanger macnet
++    before wireless interface
+@@ -34,0 +36,8 @@
++# char* rename_get_vars(char *interface)
++#
++# Returns a string spaced with possible user set
++# configuration variables
++rename_get_vars() {
++    echo "rename_$1"
++}
++
+@@ -42,4 +51,2 @@
+-    
+-    mac=$( interface_get_mac_address "${iface}" )
+-    eval newname=\"\$\{rename_${mac//:/}\}\"
+-    [[ -z ${newname} ]] && eval newname=\"\$\{rename_${ifvar}\}\"
++
++    eval newname=\"\$\{rename_${ifvar}\}\"
+@@ -47,0 +55,10 @@
++    # We cannot rename vlan interfaces as /proc/net/vlan/config always
++    # returns the old interface name. We don't bail out though as it's
++    # not critical that the interface gets renamed.
++    if [[ -d /proc/net/vlan/config ]] ; then
++	if grep -q "^eth0.2 " /proc/net/vlan/config ; then
++	    eerror "Cannot rename VLAN interfaces"
++	    return 0
++	fi
++    fi
++    
+Index: etc/conf.d/wireless.example
+===================================================================
+--- etc/conf.d/wireless.example	(revision 1296)
++++ etc/conf.d/wireless.example	(working copy)
+@@ -172 +172 @@
+-#dns_search_domains_ESSID="search.this.domain search.that.domain"
++#dns_search_path_ESSID="search.this.domain search.that.domain"
+Index: etc/conf.d/net.example
+===================================================================
+--- etc/conf.d/net.example	(revision 1296)
++++ etc/conf.d/net.example	(working copy)
+@@ -188,3 +188,3 @@
+-#nameservers_ESSID=( "192.168.0.1" "192.168.0.2" )
+-#domain_ESSID="some.domain"
+-#searchdomains_ESSID="search.this.domain search.that.domain"
++#dns_servers_ESSID=( "192.168.0.1" "192.168.0.2" )
++#dns_domain_ESSID="some.domain"
++#dns_search_path_ESSID="search.this.domain search.that.domain"
+@@ -192,2 +192 @@
+-# as domain and search (searchdomains) are mutually exclusive and
+-# searchdomains takes precedence
++# as domain and search are mutually exclusive.
+@@ -201 +200 @@
+-#mac_nameservers_001122334455=( "192.168.0.1" "192.168.0.2" )
++#mac_dns_servers_001122334455=( "192.168.0.1" "192.168.0.2" )
+@@ -437 +436 @@
+-# dns_search_domains_eth0="this.domain that.domain"
++# dns_search_path_eth0="this.domain that.domain"
+Index: init.d/net.lo
+===================================================================
+--- init.d/net.lo	(revision 1296)
++++ init.d/net.lo	(working copy)
+@@ -785,0 +786,5 @@
++    # Load our ESSID variable so users can use it in predown() instead
++    # of having to write code.
++    local ESSID=$( get_options "ESSID" ) ESSIDVAR
++    [[ -n ${ESSID} ]] && ESSIDVAR=$( bash_variable "${ESSID}" )
++
+Index: init.d/modules
+===================================================================
+--- init.d/modules	(revision 1296)
++++ init.d/modules	(working copy)
+@@ -79,7 +78,0 @@
+-	# Here we should fail, as a modular kernel do need
+-	# depmod command ...
+-	if [[ ! -x /sbin/depmod ]]; then
+-		eerror "ERROR:  system is missing /sbin/depmod !"
+-		return 1
+-	fi
+-
+@@ -88,2 +81,3 @@
+-	if [[ -z "${CDBOOT}" ]] && [[ $(get_KV) -lt $(KV_to_int '2.5.48') || \
+-	     -x /sbin/modprobe.old ]] && [[ ! -e /etc/modules.conf ]] ; then
++	if [[ -z "${CDBOOT}" ]] && [[ ! -e /etc/modules.conf ]] && \
++	   [[ $(get_KV) -lt $(KV_to_int '2.5.48') || -x /sbin/modprobe.old ]]
++	then
+@@ -97,2 +91,3 @@
+-	if [[ -z "${CDBOOT}" ]] && [[ -f /etc/modules.conf || \
+-	      $(get_KV) -ge $(KV_to_int '2.5.48') ]]; then
++	if [[ -z "${CDBOOT}" ]] && \
++	   [[ -f /etc/modules.conf || $(get_KV) -ge $(KV_to_int '2.5.48') ]]
++	then
+@@ -120 +115 @@
+-	[[ -n $(modprobe -l -t boot) ]] && modprobe -a -t boot \*  &>/dev/null
++	[[ -n $(modprobe -l -t boot) ]] && modprobe -a -t boot \* &>/dev/null
 Index: init.d/keymaps
 ===================================================================
---- init.d/keymaps	(.../trunk)	(revision 1296)
-+++ init.d/keymaps	(.../branches/baselayout-1_12)	(working copy)
+--- init.d/keymaps	(revision 1296)
++++ init.d/keymaps	(working copy)
 @@ -37 +37,5 @@
 -	# New kbd support.
 +	# Turn on unicode if user wants it
@@ -13,9 +315,9 @@ Index: init.d/keymaps
 -		/usr/bin/kbd_mode -u
 Index: ChangeLog
 ===================================================================
---- ChangeLog	(.../trunk)	(revision 1296)
-+++ ChangeLog	(.../branches/baselayout-1_12)	(working copy)
-@@ -3,0 +4,22 @@
+--- ChangeLog	(revision 1296)
++++ ChangeLog	(working copy)
+@@ -3,0 +4,28 @@
 +  19 Jul 2005; Roy Marples <uberlord@gentoo.org>:
 +
 +    ${ESSID} and ${ESSIDVAR} are now available in predown() - fixes #99106
@@ -36,12 +338,18 @@ Index: ChangeLog
 +
 +    Do not run depmod in modules-update if System.map is missing, bug #59188.
 +
-+* baselayout-1.12.0_pre1 (14 Jul 2005)
++  14 Jul 2005; Mike Frysinger <vapier@gentoo.org>:
++
++    Remove pointless check of depmod existence in modules init.d since the 
++    modules-update script checks for it.
++
++    Run kbd_mode earlier for unicode users so initial loadkeys doesn't 
++    trigger a warning #94048 by Eugene Pavlovsky.
 +
 Index: src/start-stop-daemon.c
 ===================================================================
---- src/start-stop-daemon.c	(.../trunk)	(revision 1296)
-+++ src/start-stop-daemon.c	(.../branches/baselayout-1_12)	(working copy)
+--- src/start-stop-daemon.c	(revision 1296)
++++ src/start-stop-daemon.c	(working copy)
 @@ -30,0 +31,3 @@
 + * Updated by Kito <kito@gentoo.org>:
 + *   Add support for Darwin, additional patches from opendarwin.org
@@ -133,272 +441,10 @@ Index: src/start-stop-daemon.c
 +	}
 +}
 +#endif /* OSDarwin */
-Index: lib/rcscripts/net.modules.d/pump
-===================================================================
---- lib/rcscripts/net.modules.d/pump	(.../trunk)	(revision 1296)
-+++ lib/rcscripts/net.modules.d/pump	(.../branches/baselayout-1_12)	(working copy)
-@@ -79 +79 @@
--    pump --release --keep-up --interface "${iface}"
-+    pump --release --interface "${iface}"
-@@ -91 +91 @@
--    local iface="$1" opts d ifvar=$( bash_variable "$1" )
-+    local iface="$1" opts d ifvar=$( bash_variable "$1" ) search
-@@ -103,0 +104,3 @@
-+    eval search=\"\$\{dns_search_path_${ifvar}\}\"
-+    [[ -n ${search} ]] && opts="${opts} --search-path='"${search}"'"
-+
-@@ -112 +115 @@
--    opts="${opts} --interface ${iface}"
-+    opts="${opts} --keep-up --interface ${iface}"
-@@ -122 +125 @@
--   
-+  
-Index: lib/rcscripts/net.modules.d/helpers.d/dhcpcd-wrapper
-===================================================================
---- lib/rcscripts/net.modules.d/helpers.d/dhcpcd-wrapper	(.../trunk)	(revision 1296)
-+++ lib/rcscripts/net.modules.d/helpers.d/dhcpcd-wrapper	(.../branches/baselayout-1_12)	(working copy)
-@@ -10,2 +9,0 @@
--service="net.${interface}"
--
-@@ -17,0 +16,30 @@
-+. /lib/rcscripts/net.modules.d/helpers.d/module-loader
-+
-+if [[ ${action} == "up" ]]; then
-+    # Map MAC address variables to interface variables
-+    macnet_pre_start "${interface}" 1>/dev/null
-+
-+    # Map wireless ESSID variables to interface variables
-+    if [[ -n ${wireless_module} ]]; then
-+	if wireless_check_extensions "${interface}" ; then
-+	    essidnet_pre_start "${interface}" 1>/dev/null
-+	fi
-+    fi
-+
-+    # Add any search paths if we have any defined
-+    ifvar=$( bash_variable "${interface}" )
-+    eval d=\" \$\{dhcp_${ifvar}\} \"
-+    [[ ${d} == "  " ]] && d=" ${dhcp} "
-+
-+    if [[ ${d} != *" nodns "* ]]; then
-+	eval search=\"\$\{dns_search_path_${ifvar}\}\"
-+	if [[ -n ${search} ]]; then
-+	    resolv="${statedir}/${interface}/resolv.conf"
-+	    tmp="${revolv}.$$"
-+	    egrep -v "^[ \t]*(search|domain)[ \t]*" "${resolv}" > "${tmp}"
-+	    echo "search ${search}" >> "${tmp}" 
-+	    mv "${tmp}" "${resolv}"
-+	fi
-+    fi
-+fi
-+
-Index: lib/rcscripts/net.modules.d/helpers.d/dhcp-state
-===================================================================
---- lib/rcscripts/net.modules.d/helpers.d/dhcp-state	(.../trunk)	(revision 1296)
-+++ lib/rcscripts/net.modules.d/helpers.d/dhcp-state	(.../branches/baselayout-1_12)	(working copy)
-@@ -2 +2 @@
--# Copyright (c) 2004-2005 Gentoo Foundation
-+# Copyright (c) 2005 Gentoo Foundation
-@@ -7 +7,5 @@
--. /lib/rcscripts/net.modules.d/helpers.d/module-loader
-+MODULES_DIR="/lib/rcscripts/net.modules.d"
-+. /lib/rcscripts/sh/rc-services.sh
-+. "${MODULES_DIR}/helpers.d/functions"
-+conf=$(add_suffix "/etc/conf.d/net")
-+[[ -e ${conf} ]] && source "${conf}"
-@@ -16,5 +20,2 @@
--    if [[ ${RC_AUTO_INTERFACE} == "yes" ]]; then
--	best_interface=$( select_best_interface )
--	apply_state "${best_interface}"
--    fi
--    exit 0
-+else
-+    ! service_stopping "${service}" && mark_service_started "${service}"
-@@ -23,8 +24,3 @@
--# Map MAC address variables to interface variables
--macnet_pre_start "${interface}" 1>/dev/null
--
--# Map wireless ESSID variables to interface variables
--if [[ -n ${wireless_module} ]]; then
--    if wireless_check_extensions "${interface}" ; then
--	essidnet_pre_start "${interface}" 1>/dev/null
--    fi
-+if [[ ${RC_AUTO_INTERFACE} == "yes" ]]; then
-+    best_interface=$( select_best_interface )
-+    apply_state "${best_interface}"
-@@ -32,22 +27,0 @@
--
--# Add any search domains if we have any defined
--ifvar=$( bash_variable "${interface}" )
--eval d=\" \$\{dhcp_${ifvar}\} \"
--[[ ${d} == "  " ]] && d=" ${dhcp} "
--
--if [[ ${d} != *" nodns "* ]]; then
--    eval search=\"\$\{dns_search_domains_${ifvar}\}\"
--    if [[ -n ${search} ]]; then
--        resolv="${statedir}/${interface}/resolv.conf"
--	tmp="${revolv}.$$"
--	egrep -v "^[ \t]*search" "${resolv}" > "${tmp}"
--	domain=$( sed -n -e 's/^[ \t]*domain[ \t]*\(.*\)[ \t]*.*/\1/p' ${tmp} )
--	echo "search ${domain} ${search}" >> "${tmp}" 
--	mv "${tmp}" "${resolv}"
--    fi
--fi
--
--! service_stopping "${service}" && mark_service_started "${service}"
--
--[[ ${RC_AUTO_INTERFACE} == "yes" ]] && interface=$( select_best_interface )
--apply_state "${interface}"
-Index: lib/rcscripts/net.modules.d/system
-===================================================================
---- lib/rcscripts/net.modules.d/system	(.../trunk)	(revision 1296)
-+++ lib/rcscripts/net.modules.d/system	(.../branches/baselayout-1_12)	(working copy)
-@@ -2 +2 @@
--# Copyright (c) 2004-2005 Gentoo Foundation
-+# Copyright (c) 2005 Gentoo Foundation
-Index: lib/rcscripts/net.modules.d/dhcpcd
-===================================================================
---- lib/rcscripts/net.modules.d/dhcpcd	(.../trunk)	(revision 1296)
-+++ lib/rcscripts/net.modules.d/dhcpcd	(.../branches/baselayout-1_12)	(working copy)
-@@ -147,0 +148,2 @@
-+    [[ ! -d "${statedir}/${iface}" ]] && mkdir -p "${statedir}/${iface}"
-+    
-Index: lib/rcscripts/net.modules.d/wpa_supplicant
-===================================================================
---- lib/rcscripts/net.modules.d/wpa_supplicant	(.../trunk)	(revision 1296)
-+++ lib/rcscripts/net.modules.d/wpa_supplicant	(.../branches/baselayout-1_12)	(working copy)
-@@ -39 +39 @@
--	${report} && eerror "For WPA support (wpa_supplicant) support, emerge net-wireless/wpa-supplicant"
-+	${report} && eerror "For WPA support (wpa_supplicant) support, emerge net-wireless/wpa_supplicant"
-@@ -181,0 +182,4 @@
-+
-+    # exit without error with wpa_supplicant-0.4.x as we may get kickstarted
-+    # when an AP comes in range
-+    ${action} && exit 0
-@@ -183 +187 @@
--    # We now need to kill the process
-+    # Kill wpa_supplicant for 0.3.x
-@@ -185,4 +188,0 @@
--
--    # We need to mark the service as stopped as we may be have been marked
--    # as inactive previously
--    ${action} && mark_service_stopped "net.${iface}"
-@@ -204 +204 @@
--	ESSID=$( wpa_supplicant_get_essid "$1" )
-+	ESSID=$( wpa_supplicant_get_essid "${iface}" )
-@@ -273 +273 @@
--	[[ ${RC_PARALLEL_STARTUP} == "yes" ]] && background=yes
-+	 [[ ${RC_PARALLEL_STARTUP} == "yes" ]] && background=no
-@@ -334,10 +333,0 @@
--# bool wpa_supplicant_pre_stop(char *iface)
--#
--# Gets the last set ESSID if we have one
--# We don't query for the current ESSID as it may have changed to another
--# one
--wpa_supplicant_pre_stop() {
--    ESSID=$( get_options "ESSID" )
--    ESSIDVAR=$( bash_variable "${ESSID}" )
--}	
--
-Index: lib/rcscripts/net.modules.d/iwconfig
-===================================================================
---- lib/rcscripts/net.modules.d/iwconfig	(.../trunk)	(revision 1296)
-+++ lib/rcscripts/net.modules.d/iwconfig	(.../branches/baselayout-1_12)	(working copy)
-@@ -906,10 +905,0 @@
--
--# bool iwconfig_pre_stop(char *iface)
--#
--# Gets the last set ESSID if we have one
--# We don't query for the current ESSID as it may have changed to another
--# one
--iwconfig_pre_stop() {
--    ESSID=$( get_options "ESSID" )
--    ESSIDVAR=$( bash_variable "${ESSID}" )
--}
-Index: lib/rcscripts/net.modules.d/macnet
-===================================================================
---- lib/rcscripts/net.modules.d/macnet	(.../trunk)	(revision 1296)
-+++ lib/rcscripts/net.modules.d/macnet	(.../branches/baselayout-1_12)	(working copy)
-@@ -2 +2 @@
--# Copyright (c) 2004-2005 Gentoo Foundation
-+# Copyright (c) 2005 Gentoo Foundation
-@@ -56,0 +57,4 @@
-+    # We need to bring the interface up for some interfaces, otherwise the MAC
-+    # address isn't consistent - mainly wireless cards with firmware uploading.
-+    interface_up "${iface}"
-+
-Index: lib/rcscripts/net.modules.d/rename
-===================================================================
---- lib/rcscripts/net.modules.d/rename	(.../trunk)	(revision 1296)
-+++ lib/rcscripts/net.modules.d/rename	(.../branches/baselayout-1_12)	(working copy)
-@@ -2 +2 @@
--# Copyright (c) 2004-2005 Gentoo Foundation
-+# Copyright (c) 2005 Gentoo Foundation
-@@ -18 +18,2 @@
--    before macchanger interface
-+    after macchanger macnet
-+    before wireless interface
-@@ -34,0 +36,8 @@
-+# char* rename_get_vars(char *interface)
-+#
-+# Returns a string spaced with possible user set
-+# configuration variables
-+rename_get_vars() {
-+    echo "rename_$1"
-+}
-+
-@@ -42,4 +51,2 @@
--    
--    mac=$( interface_get_mac_address "${iface}" )
--    eval newname=\"\$\{rename_${mac//:/}\}\"
--    [[ -z ${newname} ]] && eval newname=\"\$\{rename_${ifvar}\}\"
-+
-+    eval newname=\"\$\{rename_${ifvar}\}\"
-@@ -47,0 +55,10 @@
-+    # We cannot rename vlan interfaces as /proc/net/vlan/config always
-+    # returns the old interface name. We don't bail out though as it's
-+    # not critical that the interface gets renamed.
-+    if [[ -d /proc/net/vlan/config ]] ; then
-+	if grep -q "^eth0.2 " /proc/net/vlan/config ; then
-+	    eerror "Cannot rename VLAN interfaces"
-+	    return 0
-+	fi
-+    fi
-+    
-Index: init.d/net.lo
-===================================================================
---- init.d/net.lo	(.../trunk)	(revision 1296)
-+++ init.d/net.lo	(.../branches/baselayout-1_12)	(working copy)
-@@ -785,0 +786,5 @@
-+    # Load our ESSID variable so users can use it in predown() instead
-+    # of having to write code.
-+    local ESSID=$( get_options "ESSID" ) ESSIDVAR
-+    [[ -n ${ESSID} ]] && ESSIDVAR=$( bash_variable "${ESSID}" )
-+
-Index: etc/conf.d/net.example
-===================================================================
---- etc/conf.d/net.example	(.../trunk)	(revision 1296)
-+++ etc/conf.d/net.example	(.../branches/baselayout-1_12)	(working copy)
-@@ -188,3 +188,3 @@
--#nameservers_ESSID=( "192.168.0.1" "192.168.0.2" )
--#domain_ESSID="some.domain"
--#searchdomains_ESSID="search.this.domain search.that.domain"
-+#dns_servers_ESSID=( "192.168.0.1" "192.168.0.2" )
-+#dns_domain_ESSID="some.domain"
-+#dns_search_path_ESSID="search.this.domain search.that.domain"
-@@ -192,2 +192 @@
--# as domain and search (searchdomains) are mutually exclusive and
--# searchdomains takes precedence
-+# as domain and search are mutually exclusive.
-@@ -201 +200 @@
--#mac_nameservers_001122334455=( "192.168.0.1" "192.168.0.2" )
-+#mac_dns_servers_001122334455=( "192.168.0.1" "192.168.0.2" )
-@@ -437 +436 @@
--# dns_search_domains_eth0="this.domain that.domain"
-+# dns_search_path_eth0="this.domain that.domain"
 Index: sbin/runscript.sh
 ===================================================================
---- sbin/runscript.sh	(.../trunk)	(revision 1296)
-+++ sbin/runscript.sh	(.../branches/baselayout-1_12)	(working copy)
+--- sbin/runscript.sh	(revision 1296)
++++ sbin/runscript.sh	(working copy)
 @@ -257 +257,6 @@
 -	if ! service_inactive "${myservice}" ; then
 +	if service_inactive "${myservice}" ; then
@@ -443,23 +489,23 @@ Index: sbin/runscript.sh
 +	end_service "${myservice}" "${retval}"
 Index: sbin/rc
 ===================================================================
---- sbin/rc	(.../trunk)	(revision 1296)
-+++ sbin/rc	(.../branches/baselayout-1_12)	(working copy)
+--- sbin/rc	(revision 1296)
++++ sbin/rc	(working copy)
 @@ -830,2 +830 @@
 -	service_started "${myservice}" || \
 -		schedule_service_startup "${myservice}"
 +	service_stopped "${myservice}" && schedule_service_startup "${myservice}"
 Index: sbin/modules-update
 ===================================================================
---- sbin/modules-update	(.../trunk)	(revision 1296)
-+++ sbin/modules-update	(.../branches/baselayout-1_12)	(working copy)
+--- sbin/modules-update	(revision 1296)
++++ sbin/modules-update	(working copy)
 @@ -233 +233 @@
 -			depmod -a ${KV}
 +			ewarn "System.map not found - unable to check symbols"
 Index: sbin/rc-services.sh
 ===================================================================
---- sbin/rc-services.sh	(.../trunk)	(revision 1296)
-+++ sbin/rc-services.sh	(.../branches/baselayout-1_12)	(working copy)
+--- sbin/rc-services.sh	(revision 1296)
++++ sbin/rc-services.sh	(working copy)
 @@ -383 +382,0 @@
 -		! service_inactive && end_service "${service}" "${retval}"
 @@ -391 +389,0 @@
