@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.28 2005/06/12 07:45:41 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.29 2005/07/19 19:23:36 brix Exp $
+
+  19 Jul 2005; <brix@gentoo.org> lm_sensors-2.9.1.ebuild:
+  Stable on x86.
 
   12 Jun 2005; <brix@gentoo.org> lm_sensors-2.9.1.ebuild:
   Instruct users to run sensors-detect even when upgrading.
