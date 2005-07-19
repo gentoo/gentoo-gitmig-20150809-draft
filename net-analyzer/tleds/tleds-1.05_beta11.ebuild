@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11.ebuild,v 1.14 2005/01/17 20:38:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11.ebuild,v 1.15 2005/07/19 16:38:14 dholm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.hut.fi/~jlohikos/tleds/public/${MY_P/11/10}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="X"
 
 DEPEND="X? ( virtual/x11 )"

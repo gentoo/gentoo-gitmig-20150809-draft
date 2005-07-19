@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ttt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ChangeLog,v 1.8 2005/05/15 00:27:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ChangeLog,v 1.9 2005/07/19 16:41:39 dholm Exp $
+
+  19 Jul 2005; David Holm <dholm@gentoo.org> ttt-1.8.1.ebuild:
+  Added to ~ppc.
 
   14 May 2005; Marcelo Goes <vanquirius@gentoo.org> ttt-1.8.1.ebuild:
   Marked x86 stable.

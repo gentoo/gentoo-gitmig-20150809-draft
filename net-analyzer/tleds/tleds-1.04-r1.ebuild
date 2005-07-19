@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.04-r1.ebuild,v 1.12 2005/01/17 20:38:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.04-r1.ebuild,v 1.13 2005/07/19 16:38:14 dholm Exp $
 
 IUSE="X"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.hut.fi/~jlohikos/tleds/public/${P}.tgz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="~ppc sparc x86"
 
 DEPEND="X? ( virtual/x11 )"
 

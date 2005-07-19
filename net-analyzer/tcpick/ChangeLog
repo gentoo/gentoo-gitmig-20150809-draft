@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpick
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/ChangeLog,v 1.7 2005/02/09 10:26:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/ChangeLog,v 1.8 2005/07/19 16:34:44 dholm Exp $
+
+  19 Jul 2005; David Holm <dholm@gentoo.org> tcpick-0.2.1.ebuild:
+  Added to ~ppc.
 
 *tcpick-0.2.1 (09 Feb 2005)
 
