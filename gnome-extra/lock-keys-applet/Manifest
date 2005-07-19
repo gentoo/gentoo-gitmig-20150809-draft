@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 57af48c432c26b81f0adeddd5e506467 lock-keys-applet-1.0.ebuild 725
-MD5 687a86a228197ca924e98f733fc64e5b ChangeLog 824
+MD5 426452899105ab8f4b2c50bb12cacba5 lock-keys-applet-1.0.ebuild 724
+MD5 8d556ca56c525367bb0a0628f862ae1d ChangeLog 924
 MD5 0ac58e2f9959469d4d95da3276a4c2c6 files/digest-lock-keys-applet-1.0 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFColnfmOfEJZHYOKcRAtjlAJ9CM8OC2WIl0Wk03yVXni1La9rt8ACgmNb2
-P4Y8K3silpIaNR3Yj6GmaE0=
-=Fj15
------END PGP SIGNATURE-----
