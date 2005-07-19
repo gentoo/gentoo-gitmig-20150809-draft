@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.7.0-r1.ebuild,v 1.2 2005/07/09 16:00:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.7.0-r1.ebuild,v 1.3 2005/07/19 18:44:00 axxo Exp $
 
 inherit java-pkg
 
@@ -39,7 +39,7 @@ src_compile() {
 	ant ${antflags} || die "failed to compile"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar dist/${PN}*.jar
 
 	dodoc RELEASE-NOTES.txt
