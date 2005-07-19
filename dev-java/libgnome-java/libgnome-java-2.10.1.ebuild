@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.10.1.ebuild,v 1.2 2005/06/29 15:10:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.10.1.ebuild,v 1.3 2005/07/19 11:13:38 axxo Exp $
 
 #
 # WARNING: Because java-gnome is a set of bindings to native GNOME libraries, 
@@ -22,8 +22,8 @@ RDEPEND=">=gnome-base/libgnome-2.10.0
 	>=dev-java/libgtk-java-2.6.2
 	>=virtual/jre-1.2"
 
-DEPEND="${RDEPEND}
-	>=virtual/jdk-1.2
+DEPEND=">=virtual/jdk-1.2
+	${RDEPEND}
 	app-arch/zip"
 
 #
