@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.29 2005/07/17 14:36:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.30 2005/07/19 09:14:45 ka0ttic Exp $
+
+  18 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/iptraf-2.7.0-2.6.patch, iptraf-2.7.0-r1.ebuild:
+  Update ipv6 patch revision, which can now be applied unconditionally. This
+  fixes the USE=ipv6 compile failure that resulted from the bug 89458 fix.
+  Both patches can now live in harmony.
 
   17 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
   +files/iptraf-2.7.0-2.6.patch, iptraf-2.7.0-r1.ebuild:

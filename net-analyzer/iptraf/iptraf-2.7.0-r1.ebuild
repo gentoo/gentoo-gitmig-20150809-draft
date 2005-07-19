@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.21 2005/07/17 14:40:07 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.22 2005/07/19 09:14:45 ka0ttic Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
-V6PATCH_LEVEL=alpha11
+V6PATCH_LEVEL=alpha12
 DESCRIPTION="IPTraf is an ncurses-based IP LAN monitor"
 HOMEPAGE="http://cebu.mozcom.com/riker/iptraf/"
 SRC_URI="ftp://ftp.cebu.mozcom.com/pub/linux/net/${P}.tar.gz
@@ -20,8 +20,9 @@ DEPEND=">=sys-libs/ncurses-5.2-r1"
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
-	epatch ${FILESDIR}/iptraf-2.7.0-atheros.patch
-	use ipv6 && epatch ${DISTDIR}/${P}-ipv6-${V6PATCH_LEVEL}.diff
+	epatch ${FILESDIR}/${P}-atheros.patch
+	epatch ${DISTDIR}/${P}-ipv6-${V6PATCH_LEVEL}.diff
+#    use ipv6 && epatch ${DISTDIR}/${P}-ipv6-${V6PATCH_LEVEL}.diff
 
 	# bug 89458
 	has_version '>=sys-kernel/linux-headers-2.6.11-r2' && \
@@ -34,6 +35,7 @@ src_unpack() {
 
 src_compile() {
 	cd src
+	use ipv6 && append-flags -DUSE_IPV6
 	emake -j1 CFLAGS="$CFLAGS" DEBUG="" TARGET="/usr/sbin" WORKDIR="/var/lib/iptraf" \
 	clean all || die "emake failed"
 }

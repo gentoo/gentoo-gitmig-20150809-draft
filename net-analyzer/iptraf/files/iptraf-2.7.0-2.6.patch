@@ -1,46 +1,19 @@
-diff -ur iptraf-2.7.0/src/packet.c iptraf-2.7.0-2.6.11-r2/src/packet.c
---- iptraf-2.7.0/src/packet.c   2005-07-17 05:45:44.000000000 +0200
-+++ iptraf-2.7.0-2.6.11-r2/src/packet.c 2005-07-17 05:43:50.000000000 +0200
-@@ -32,6 +32,9 @@
- #include <sys/time.h>
- #include <net/if_arp.h>
- #include <net/if.h>
-+#ifdef _NET_IF_H
-+#define  _LINUX_IF_H
-+#endif
- #include <sys/ioctl.h>
- #include <linux/if_packet.h>
- #include <linux/if_ether.h>
-diff -ur iptraf-2.7.0/src/tcptable.h iptraf-2.7.0-2.6.11-r2/src/tcptable.h
---- iptraf-2.7.0/src/tcptable.h 2001-12-28 03:16:39.000000000 +0100
-+++ iptraf-2.7.0-2.6.11-r2/src/tcptable.h       2005-07-17 05:44:02.000000000 +0200
-@@ -20,11 +20,15 @@
- #include <arpa/inet.h>
- #include <net/if_arp.h>
- #include <asm/types.h>
-+#include <net/if.h>
-+#ifdef _NET_IF_H
-+#define  _LINUX_IF_H
-+#endif
- #include <linux/if_packet.h>
- #include <linux/if_ether.h>
- #include <linux/if_fddi.h>
- #include <linux/if_tr.h>
--#include <net/if.h>
-+//#include <net/if.h>
- #include <netinet/ip.h>
- #include <netinet/udp.h>
- #include "servname.h"
-diff -ur iptraf-2.7.0/src/othptab.c iptraf-2.7.0-2.6.11-r2/src/othptab.c
---- iptraf-2.7.0/src/othptab.c  2001-12-28 03:23:59.000000000 +0100
-+++ iptraf-2.7.0-2.6.11-r2/src/othptab.c        2005-07-17 14:24:00.000000000 +0200
-@@ -17,13 +17,10 @@
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN iptraf-2.7.0.orig/src/othptab.c iptraf-2.7.0/src/othptab.c
+--- iptraf-2.7.0.orig/src/othptab.c	2005-07-18 18:55:28.000000000 -0400
++++ iptraf-2.7.0/src/othptab.c	2005-07-18 18:57:39.000000000 -0400
+@@ -17,9 +17,6 @@
  ***/
-
+ 
  #include <asm/types.h>
 -#include <linux/if_ether.h>
 -#include <linux/if_tr.h>
 -#include <linux/if_fddi.h>
+ 
+ #ifdef USE_IPV6
+ # include <netinet/ip6.h>
+@@ -27,9 +24,9 @@
+ #endif
+ 
  #include <winops.h>
 +#include "tcptable.h"
  #include "arphdr.h"
@@ -49,4 +22,35 @@ diff -ur iptraf-2.7.0/src/othptab.c iptraf-2.7.0-2.6.11-r2/src/othptab.c
  #include "othptab.h"
  #include "deskman.h"
  #include "attrs.h"
-
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN iptraf-2.7.0.orig/src/packet.c iptraf-2.7.0/src/packet.c
+--- iptraf-2.7.0.orig/src/packet.c	2005-07-18 18:55:28.000000000 -0400
++++ iptraf-2.7.0/src/packet.c	2005-07-18 18:56:13.000000000 -0400
+@@ -35,6 +35,9 @@
+ #include <sys/time.h>
+ #include <net/if_arp.h>
+ #include <net/if.h>
++#ifdef _NET_IF_H
++#define _LINUX_IF_H
++#endif
+ #include <sys/ioctl.h>
+ #include <linux/if_packet.h>
+ #include <linux/if_ether.h>
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN iptraf-2.7.0.orig/src/tcptable.h iptraf-2.7.0/src/tcptable.h
+--- iptraf-2.7.0.orig/src/tcptable.h	2005-07-18 18:55:28.000000000 -0400
++++ iptraf-2.7.0/src/tcptable.h	2005-07-18 18:57:01.000000000 -0400
+@@ -20,11 +20,14 @@
+ #include <arpa/inet.h>
+ #include <net/if_arp.h>
+ #include <asm/types.h>
++#include <net/if.h>
++#ifdef _NET_IF_H
++#define _LINUX_IF_H
++#endif
+ #include <linux/if_packet.h>
+ #include <linux/if_ether.h>
+ #include <linux/if_fddi.h>
+ #include <linux/if_tr.h>
+-#include <net/if.h>
+ #include <netinet/ip.h>
+ #include <netinet/udp.h>
+ #include "servname.h"
