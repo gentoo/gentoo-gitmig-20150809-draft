@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.13 2005/01/25 01:54:54 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.14 2005/07/19 10:36:01 lucass Exp $
+
+*pycrypto-2.0.1 (19 Jul 2005)
+
+  19 Jul 2005; Lukasz Strzygowski <lucass@gentoo.org>
+  pycrypto-2.0-r1.ebuild, +pycrypto-2.0.1.ebuild:
+  Version bump. pycrypto-2.0-r1 marked stable on x86.
 
 *pycrypto-2.0-r1 (25 Jan 2005)
 
