@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.95 2005/07/09 06:06:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.96 2005/07/19 22:51:24 malc Exp $
+
+  19 Jul 2005; Malcolm Lashley <malc@gentoo.org> screen-4.0.2-r4.ebuild:
+  Stable on amd64, bug #99587
 
   09 Jul 2005; Markus Rothe <corsair@gentoo.org> screen-4.0.2-r4.ebuild:
   Stable on ppc64
