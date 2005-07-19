@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gossip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.26 2005/05/27 21:14:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.27 2005/07/19 03:29:30 tester Exp $
+
+  19 Jul 2005; Olivier Crête <tester@gentoo.org> gossip-0.8.ebuild:
+  Marking amd64 (it is as stable as on x86)
 
   27 May 2005; foser <foser@gentoo.org> gossip-0.8.ebuild :
   Fix Xss configure check (#77241(
