@@ -7,10 +7,12 @@ MD5 9076a50201009e7f130c64691cae1d92 cherokee-0.4.23.ebuild 1589
 MD5 9866faff941afcb8b5834588c14c0b3e cherokee-0.4.19.ebuild 1413
 MD5 8a190d1da8b8cac0b51a645ca36517cb cherokee-0.4.21-r1.ebuild 1885
 MD5 2a338274e3b176bc1b83221670a84b46 cherokee-0.4.5.ebuild 1723
-MD5 cb15862d433e5dbe262a879ab255acd5 ChangeLog 6754
+MD5 be9aab789b526484473e11da10c45c17 ChangeLog 6917
 MD5 4a186842848d9c384e2d12785ba426bc metadata.xml 165
+MD5 122a7f85162e14925a82292f4797a31e cherokee-0.4.24-r1.ebuild 1669
 MD5 e0af76fef298222ff6ad8e6e5aeb10d7 files/cherokee-0.4.21-no-handler_admin.diff 1151
 MD5 fbddeb3fc079036d82ba359c98cc4bf1 files/digest-cherokee-0.4.21-r1 68
+MD5 90214e6f2bb27a3eae7e97e5d90dbe68 files/digest-cherokee-0.4.24-r1 68
 MD5 289de164081060280437629085fce186 files/digest-cherokee-0.4.17.1 69
 MD5 8278b4acda7637c68885863ddd58f712 files/cherokee-0.4.5-cherokee.conf 2769
 MD5 b44b2de7ebfdc07ee94d54a514a738f0 files/cherokee-0.4.17-cherokee.conf 2611
