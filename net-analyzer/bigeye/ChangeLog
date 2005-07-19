@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bigeye
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.6 2005/05/16 00:36:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.7 2005/07/19 12:52:34 dholm Exp $
+
+  19 Jul 2005; David Holm <dholm@gentoo.org> bigeye-0.3.ebuild:
+  Added to ~ppc.
 
   15 May 2005; Marcelo Goes <vanquirius@gentoo.org> bigeye-0.3.ebuild:
   Use toolchain-funcs.eclass instead of gcc.eclass. See bug 92745.

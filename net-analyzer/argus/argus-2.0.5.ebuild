@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.11 2005/04/10 20:37:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.12 2005/07/19 12:47:30 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.qosient.com/argus/"
 SRC_URI="ftp://ftp.qosient.com/pub/argus/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc-macos"
+KEYWORDS="~amd64 ~ppc ~ppc-macos x86"
 IUSE=""
 RDEPEND="virtual/libc
 	virtual/libpcap"
