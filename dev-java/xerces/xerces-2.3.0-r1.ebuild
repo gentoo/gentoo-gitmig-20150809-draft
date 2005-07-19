@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r1.ebuild,v 1.12 2005/07/09 15:56:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r1.ebuild,v 1.13 2005/07/19 18:30:03 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -44,7 +44,7 @@ src_compile() {
 	ant ${antflags} || die "ant build failed"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar build/x*.jar
 
 	dodoc TODO STATUS README ISSUES

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/struts-legacy-1.0-r1.ebuild,v 1.12 2005/07/10 15:14:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/struts-legacy-1.0-r1.ebuild,v 1.13 2005/07/19 18:34:36 axxo Exp $
 
 inherit java-pkg
 
@@ -31,7 +31,7 @@ src_compile() {
 	ant ${antflags} || die "compile problem"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar dist/${PN}.jar
 	dodoc STATUS.txt
 	use doc && java-pkg_dohtml -r dist/docs/

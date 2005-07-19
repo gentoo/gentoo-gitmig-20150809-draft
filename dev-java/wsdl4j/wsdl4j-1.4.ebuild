@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/wsdl4j-1.4.ebuild,v 1.10 2005/07/11 21:28:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/wsdl4j-1.4.ebuild,v 1.11 2005/07/19 18:31:29 axxo Exp $
 
 inherit java-pkg
 
@@ -23,7 +23,7 @@ RDEPEND=">=virtual/jre-1.4"
 S="${WORKDIR}/${PN}"
 
 src_compile() {
-	antflags="compile"
+	local antflags="compile"
 	use doc && antflags="${antflags} javadocs"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "failed to build"
