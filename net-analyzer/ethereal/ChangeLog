@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.125 2005/06/13 19:14:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.126 2005/07/19 12:22:08 kaiowas Exp $
+
+*ethereal-0.10.11-r1 (19 Jul 2005)
+
+  19 Jul 2005; petre rodan <kaiowas@gentoo.org> +files/fifo.patch,
+  +ethereal-0.10.11-r1.ebuild:
+  fix for #83429. fifo.patch should be part of the next upstream version
 
   13 Jun 2005; Simon Stelling <blubb@gentoo.org> ethereal-0.10.11.ebuild:
   replacing -Os with -O too, fixes bug 91660
