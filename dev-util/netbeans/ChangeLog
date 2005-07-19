@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.32 2005/06/19 18:57:06 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.33 2005/07/19 18:39:17 axxo Exp $
+
+*netbeans-4.0-r2 (19 Jul 2005)
+
+  19 Jul 2005; Thomas Matthijs <axxo@gentoo.org> +files/4.0/startscript.sh,
+  +files/emptyunscramble.xsl, -netbeans-4.0-r1.ebuild,
+  +netbeans-4.0-r2.ebuild:
+  Commiting for Petteri Räty, changes by him: Version bump because of Bug
+  #98603, Bug #96646 and Bug 99545. This version now depends on the corrected
+  version of jmi-interface and doesn't fail with access violations if the
+  system jars are dated older then the files in the Netbeans tarball. Also
+  more information messages about the progress of the ebuild.
 
   19 Jun 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   -netbeans-4.0.ebuild:
