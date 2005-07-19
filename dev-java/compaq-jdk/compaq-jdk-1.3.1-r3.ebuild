@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1-r3.ebuild,v 1.6 2005/05/18 15:42:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1-r3.ebuild,v 1.7 2005/07/19 15:10:00 axxo Exp $
 
 inherit java fixheadtails
 
@@ -24,22 +24,22 @@ KEYWORDS="-* alpha"
 IUSE="doc"
 
 src_unpack() {
-	rpm2targz ${DISTDIR}/jdk-${PV}-1-linux-alpha.rpm
-	tar xzf jdk-${PV}-1-linux-alpha.tar.gz >& /dev/null
+	rpm2targz ${DISTDIR}/jdk-${PV}-1-linux-alpha.rpm || die
+	tar xzf jdk-${PV}-1-linux-alpha.tar.gz >& /dev/null || die
 	mv usr/java/jdk${PV} .
 	ht_fix_file jdk${PV}/bin/.java_wrapper jdk${PV}/jre/bin/.java_wrapper
 }
 
-src_install () {
+src_install() {
 	dodir /opt/${P}
-	cp -a bin include include-old jre lib ${D}/opt/${P}
+	cp -a bin include include-old jre lib ${D}/opt/${P} || die
 
 	dodoc COPYRIGHT README LICENSE
 	dohtml README.html
 	doman man/man1/*.1
 
 	dodir /opt/${P}/share
-	cp -a demo src.jar ${D}/opt/${P}/share
+	cp -a demo src.jar ${D}/opt/${P}/share || die
 
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
 }

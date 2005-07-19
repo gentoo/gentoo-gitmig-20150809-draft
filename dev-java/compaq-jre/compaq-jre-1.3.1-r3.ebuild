@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1-r3.ebuild,v 1.7 2005/05/18 15:42:46 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1-r3.ebuild,v 1.8 2005/07/19 15:11:38 axxo Exp $
 
 IUSE="doc"
 
@@ -24,15 +24,15 @@ SLOT="1.3"
 KEYWORDS="-* alpha"
 
 src_unpack() {
-	rpm2targz ${DISTDIR}/jre-${PV}-1-linux-alpha.rpm
-	tar zxf jre-${PV}-1-linux-alpha.tar.gz >& /dev/null
+	rpm2targz ${DISTDIR}/jre-${PV}-1-linux-alpha.rpm || die
+	tar zxf jre-${PV}-1-linux-alpha.tar.gz >& /dev/null || die
 	mv usr/java/jre${PV} .
 	ht_fix_file jre${PV}/bin/.java_wrapper
 }
 
-src_install () {
+src_install() {
 	dodir /opt/${P}
-	cp -a bin lib ${D}/opt/${P}
+	cp -a bin lib ${D}/opt/${P} || die
 
 	dodoc COPYRIGHT CHANGES LICENSE
 	dohtml readme.html Welcome.html
