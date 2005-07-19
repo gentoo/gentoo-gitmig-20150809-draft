@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.24.7.ebuild,v 1.12 2005/02/24 01:41:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.24.7.ebuild,v 1.13 2005/07/19 20:40:07 kito Exp $
 
 DESCRIPTION="HTTP and WebDAV client library"
 HOMEPAGE="http://www.webdav.org/neon/"
@@ -15,6 +15,13 @@ DEPEND="expat? ( dev-libs/expat )
 	!expat? ( dev-libs/libxml2 )
 	ssl? ( >=dev-libs/openssl-0.9.6f )
 	zlib? ( sys-libs/zlib )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use userland_Darwin && sed -i -e "s:GXX:GCC:g" configure \
+		|| die "sed failed"
+}
 
 src_compile() {
 	local myc=""
