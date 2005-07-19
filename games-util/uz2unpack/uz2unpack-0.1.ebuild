@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/uz2unpack/uz2unpack-0.1.ebuild,v 1.5 2004/11/29 18:40:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/uz2unpack/uz2unpack-0.1.ebuild,v 1.6 2005/07/19 08:18:24 dholm Exp $
 
 DESCRIPTION="UZ2 Decompressor for UT2003/UT2004"
 HOMEPAGE="http://icculus.org/cgi-bin/ezmlm/ezmlm-cgi?42:mss:1013:200406:kikgppboefcimdbadcdo"
@@ -8,7 +8,7 @@ SRC_URI="http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 ~ppc x86"
 RESTRICT=""
 IUSE=""
 
