@@ -1,0 +1,42 @@
+diff -NurdB libgnome-2.10.1/configure.in libgnome-2.10.1-patched/configure.in
+--- libgnome-2.10.1/configure.in	2005-06-09 04:00:33.000000000 -0500
++++ libgnome-2.10.1-patched/configure.in	2005-07-19 07:05:55.000000000 -0500
+@@ -119,19 +119,29 @@
+ dnl
+ dnl Start of pkg-config checks
+ dnl
++
++PKG_PROG_PKG_CONFIG()
++
+ dnl We first check for esound and audiofile (which has conditional
+ dnl support built in)
+ dnl
+ 
+-SOUND_MODULES="esound >= esound_required_version dnl
+- audiofile >= audiofile_required_version"
+-PKG_CHECK_MODULES(SOUND_TEST, [$SOUND_MODULES],
+-[
+-  AC_DEFINE(HAVE_LIBAUDIOFILE,, [Compile with audiofile support])
+-  AC_DEFINE(HAVE_ESD,, [Compile with esd support])
+-],[
+-  SOUND_MODULES=""
+-])
++AC_MSG_CHECKING([whether ESounD support is requested])
++AC_ARG_ENABLE([esd],
++    AS_HELP_STRING([--enable-esd],[Enable ESounD (default=yes)]),
++    [enable_esd=$enableval],
++    [enable_esd=yes])
++AC_MSG_RESULT([$enable_esd])
++
++if test x$enable_esd = xyes; then
++	SOUND_MODULES="esound >= esound_required_version dnl
++		audiofile >= audiofile_required_version"
++	PKG_CHECK_MODULES(SOUND_TEST, [$SOUND_MODULES])
++	AC_DEFINE(HAVE_LIBAUDIOFILE,, [Compile with audiofile support])
++	AC_DEFINE(HAVE_ESD,, [Compile with esd support])
++else
++	SOUND_MODULES=""
++fi
+ 
+ PKG_CHECK_MODULES(LIBGNOME, dnl
+  [glib-2.0 >= glib_required_version dnl
