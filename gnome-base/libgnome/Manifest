@@ -1,5 +1,5 @@
-MD5 5e7484a54c8084207ec5dcb285d66b90 ChangeLog 10084
-MD5 2558e2a12459ab6af30202b1053ae120 libgnome-2.10.1-r1.ebuild 1257
+MD5 217ee2ecc532adf843119e4648027189 ChangeLog 10273
+MD5 7e212831d66759017890a672d628be6e libgnome-2.10.1-r1.ebuild 1317
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 838e34b163bd061ae18b4899e3a7813c libgnome-2.10.0.ebuild 961
 MD5 1be586cdc4d2e5cb606b6efd70db2e33 files/libgnome-2.10.1-esd_switch.patch 1346
