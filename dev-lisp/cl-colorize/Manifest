@@ -1,5 +1,15 @@
-MD5 3bfb7ca98c4698d6b1c66899c7319359 cl-colorize-1.0.ebuild 871
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 308797d82ff1c6a7f48d68d0c00d7b8d ChangeLog 467
-MD5 27db7b5eb056698e66bf57bdd0bec8f9 files/digest-cl-colorize-1.0 63
+MD5 185eac5106f9e7a2246e361eb5d8ebfa cl-colorize-1.0.ebuild 872
 MD5 6c56aea6ca91bc51b8512d0fe3b8d931 files/1.0-hyperspec-pathname-gentoo.patch 594
+MD5 27db7b5eb056698e66bf57bdd0bec8f9 files/digest-cl-colorize-1.0 63
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3VOyI1lqEGTUzyQRApTnAKDdoBC3VKbClCqxJrgZcnCisFrIbwCgs9r1
++3wMXGgi9lSrZRjEM5uKE+o=
+=wApS
+-----END PGP SIGNATURE-----
