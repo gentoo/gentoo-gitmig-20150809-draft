@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 efeb9d61d9c3dfeee3ab781d929fe291 struts-legacy-1.0-r1.ebuild 1165
+MD5 c23fbe0ed7ddf797fa5e6e3440b410e5 struts-legacy-1.0-r1.ebuild 1164
 MD5 5add856e9eac1e1ec2cf58db40df4c19 ChangeLog 1847
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 2459923e54f157c4320980a9c75c49e1 files/digest-struts-legacy-1.0-r1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0Tt7/rLF9B432nYRAuCcAJ96gtHc3LWcqjzQTsjpBPjUUtjywgCggEBH
-fYpPokV50WJNdKTcAguxrDc=
-=0zo4
------END PGP SIGNATURE-----
