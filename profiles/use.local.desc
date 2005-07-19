@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1322 2005/07/19 04:47:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1323 2005/07/19 22:53:16 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -21,18 +21,18 @@ app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
 app-admin/testdisk:reiserfs - include reiserfs capabilities
 app-admin/torsmo:seti - include seti monitoring capabilities if the correct config is edited ~/.torsmorc
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
-app-backup/kdar:dar32 - Support libdar32.so to use.
-app-backup/kdar:dar64 - Support libdar64.so to use.
 app-arch/pdv:nomotif - Disable motif frontend.
 app-backup/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
-app-backup/bacula:client-only - Disable DB support, and just build a client
 app-backup/bacula:bacula-clientonly - Disable DB support, and just build a client
 app-backup/bacula:bacula-console - Build console only bits, no gui
 app-backup/bacula:bacula-split - NFC what this does
+app-backup/bacula:client-only - Disable DB support, and just build a client
 app-backup/bacula:logrotate - Install support files for logrotate
 app-backup/bacula:logwatch - Install support files for logwatch
 app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinint by 32 bits integers.
 app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinint by 64 bits integers.
+app-backup/kdar:dar32 - Support libdar32.so to use.
+app-backup/kdar:dar64 - Support libdar64.so to use.
 app-cdr/cdrdao:pccts - Use dev-util/pccts instead of the built-in substitution.
 app-cdr/cdrtools:on-the-fly-crypt - On the fly AES encryption for CD-Rs.
 app-cdr/disc-cover:cdrom - Enable audio CD support. This is not needed to make www-apps/disc-cover work.
@@ -101,8 +101,8 @@ app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
 app-misc/booh:transcode - Use transcode to extract video thumbnails
 app-misc/lirc:streamzap - add the streamzap driver to lirc
 app-misc/mc:7zip - add support for 7zip archives
-app-misc/note:general - add support for ascii flatfile backend
 app-misc/note:dbm - add support for dbm backend
+app-misc/note:general - add support for ascii flatfile backend
 app-misc/note:text - add support for text backend
 app-misc/screen:nethack - Express error messages in nethack style
 app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home banking software
@@ -142,11 +142,11 @@ app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) sett
 dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/hk_classes:sqlite3 - Enable sqlite3 plugin.
+dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql:cluster - Add support for NDB clustering.
 dev-db/mysql:extraengine - Add support for alternative storage engines.
 dev-db/mysql:geometry - Add support for geometry data.
 dev-db/mysql:utf8 - Use UTF8 encoding instead of LATIN1.
-dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/pgcluster:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgis:geos - Add the GEOS library for exact topological tests.
 dev-db/postgis:proj - Add the Proj library for reprojection features.
@@ -186,6 +186,8 @@ dev-java/ant-tasks:noxalan - Disable Xalan Ant task -- Warning: Enabling this co
 dev-java/ant-tasks:noxerces - Disable Xerces Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/avalon-logkit:javamail - Enable support for javamail
 dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
+dev-java/blackdown-jdk:browserplugin - Enable Java browser plugin (applets)
+dev-java/blackdown-jre:browserplugin - Enable Java browser plugin (applets)
 dev-java/bsf:jython - Enable Jython support
 dev-java/bsf:rhino - Enable Rhino support
 dev-java/commons-logging:avalon - Add optional support for the avalon-framework
@@ -199,9 +201,11 @@ dev-java/hibernate:jcs - Java Cache Support
 dev-java/hibernate:oscache - Enable OSCache support
 dev-java/hibernate:proxool - Enable Proxool support
 dev-java/hibernate:swarmcache - Enable SwarmCache support
+dev-java/ibm-jdk-bin:browserplugin - Enable Java browser plugin (applets)
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
-dev-java/jdbc-mysql:log4j - Enable log4 support
+dev-java/ibm-jre-bin:browserplugin - Enable Java browser plugin (applets)
 dev-java/jdbc-mysql:c3p0 - Enable c3p0 support
+dev-java/jdbc-mysql:log4j - Enable log4 support
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/log4j:jmx - Build org.apace.log4j.jmx
@@ -212,13 +216,9 @@ dev-java/quartz:jta - Enable jta support
 dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
-dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/sun-jdk:browserplugin - Enable Java browser plugin for (applets)
+dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/sun-jre-bin:browserplugin - Enable Java browser plugin (applets)
-dev-java/blackdown-jdk:browserplugin - Enable Java browser plugin (applets)
-dev-java/blackdown-jre:browserplugin - Enable Java browser plugin (applets)
-dev-java/ibm-jdk-bin:browserplugin - Enable Java browser plugin (applets)
-dev-java/ibm-jre-bin:browserplugin - Enable Java browser plugin (applets)
 dev-java/swt:cairo - Enable Cairo rendering backend
 dev-java/swt:firefox - Build the Mozilla Embeded Component against firefox rather than mozilla
 dev-java/velocity:j2ee - Add j2ee support
@@ -283,6 +283,7 @@ dev-python/docutils:glep - Install support for GLEPs
 dev-python/epydoc:pdf - enable support for exporting to pdf
 dev-python/gnome-python-extras:firefox - allow building against firefox libs
 dev-python/ipython:gnuplot - enable gnuplot support
+dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
 dev-python/pycairo:numeric - enable Numeric support
 dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
 dev-python/soya:ode - include support for Open Dynamics Engine
@@ -297,10 +298,10 @@ dev-util/catalyst:ccache - Enables ccache support
 dev-util/cogito:mozsha1 - Make use of a bundled routine commit with Mozilla that should be fast on non-x86 archs 
 dev-util/cogito:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arc
 dev-util/devhelp:firefox - Build against firefox rather than mozilla
+dev-util/eclipse-sdk:atk - Enable atk (accessibility) support
+dev-util/eclipse-sdk:firefox - Pick embedded browser from Mozilla Firefox
 dev-util/eclipse-sdk:nodoc - Don't include documentation
 dev-util/eclipse-sdk:nosrc - Don't include source code
-dev-util/eclipse-sdk:firefox - Pick embedded browser from Mozilla Firefox
-dev-util/eclipse-sdk:atk - Enable atk (accessibility) support
 dev-util/eric:idl - Enable omniorb support
 dev-util/git:mozsha1 - Make use of a bundled routine commit with Mozilla that should be fast on non-x86 archs
 dev-util/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arc
@@ -389,8 +390,8 @@ kde-base/krdc:rdesktop - Enable remote desktop functionality
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:gmailtimestamps - Enable support for Gmail timestamps
-mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:mozcalendar - Enable build in calendar (also firefox, thunderbird)
+mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:nntp - Adds support for nntp via patch
 mail-client/muttng:gpgme - Enable support for gpgme
@@ -482,8 +483,8 @@ media-plugins/bmp-wma:wma123 - Installs optional commandline wma player
 media-plugins/eq-xmms:sse-filters - Enable SSE-based equalizer's implementation
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-plugins/mythphone:festival - Enable festival support
-media-radio/xastir:festival - Enable festival support
 media-radio/xastir:ax25 - Enable ax25 support
+media-radio/xastir:festival - Enable festival support
 media-radio/xastir:shape - Enable shapelib support
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
@@ -611,9 +612,9 @@ net-dialup/freeradius:frascend - Enables Ascend binary mode
 net-dialup/freeradius:frnothreads - Disables thread support
 net-dialup/freeradius:frxp - Enables experimental modules
 net-dialup/freeradius:udpfromto - Compile in UDPFROMTO support
+net-dialup/isdn4k-utils:eurofile - Support for EUROFILE Transfer Protocol
 net-dialup/isdn4k-utils:ipppd - Build the (ISDN) PPP daemon for synchronous PPP for ISDN connections
 net-dialup/isdn4k-utils:isdnlog - Installs the isdn log system
-net-dialup/isdn4k-utils:eurofile - Support for EUROFILE Transfer Protocol
 net-dialup/ivcall:softfax - Enables soft fax support
 net-dialup/ppp:activefilter - Enables activefilter support
 net-dialup/ppp:atm - Enables support for pppoatm
@@ -798,8 +799,8 @@ sci-biology/hmmer:pvm - Adds support for parallel virtual machine.
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities.
 sci-chemistry/ghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
-sci-chemistry/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
 sci-chemistry/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
+sci-chemistry/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
 sci-chemistry/libghemical:openbabel - Use the OpenBabel package for file conversions
 sci-geosciences/gmt:gmtfull - Full resolution bathimetry database;
 sci-geosciences/gmt:gmthigh - Adds high resolution bathimetry database
@@ -862,8 +863,8 @@ sys-boot/arcboot:ip28 - Disables support for SGI Indigo2 Impact R10000 (IP28)
 sys-boot/arcboot:ip30 - Disables support for SGI Octane (IP30)
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
-sys-boot/yaboot:ibm - Indicate the usage of ibm based ppc64 hardware
 sys-boot/yaboot-static:ibm - Indicate the usage of ibm based ppc64 hardware
+sys-boot/yaboot:ibm - Indicate the usage of ibm based ppc64 hardware
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/lam-mpi:pbs - Add support for PBS scheduling stuff
 sys-cluster/magma-plugins:nogulm - Removes gulm support to magma-plugins
@@ -936,8 +937,8 @@ www-apps/viewcvs:cvsgraph - Add cvsgraph support to show graphical views of revi
 www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the repository
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
 www-client/elinks:lua - enable lua support
-www-client/epiphany:firefox - build against firefox instead of mozilla
 www-client/epiphany-extensions:firefox - build against firefox instead of mozilla
+www-client/epiphany:firefox - build against firefox instead of mozilla
 www-client/galeon:firefox - build against firefox instead of mozilla
 www-client/kazehakase-cvs:estraier - enable estraier support for full-text search in history.
 www-client/kazehakase-cvs:firefox - Use firefox's Gecko engine.
@@ -945,11 +946,11 @@ www-client/kazehakase-cvs:thumbnail - enable thumbnail support.
 www-client/kazehakase:estraier - enable estraier support for full-text search in history.
 www-client/kazehakase:firefox - Use firefox's Gecko engine.
 www-client/kazehakase:thumbnail - enable thumbnail support.
+www-client/mozilla-firefox:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 www-client/mozilla-firefox:mozsvg - Enable SVG support in mozilla and firefox
 www-client/mozilla-firefox:mozxmlterm - Enable mozilla's XML-based command-line terminal
-www-client/mozilla-firefox:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 www-client/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 www-client/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla:moznocompose - Disable building of mozilla's HTML editor component
@@ -1023,4 +1024,3 @@ x11-wm/icewm:silverxp - Apply ybuttons.cc.patch necessary for SilverXP theme
 x11-wm/openbox:pango - Enable pango support
 x11-wm/openbox:startup-notification - Enable application startup notification
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
-dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
