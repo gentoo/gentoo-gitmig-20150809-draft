@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/prewikka
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.4 2005/07/02 09:33:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.5 2005/07/19 10:08:27 dragonheart Exp $
+
+*prewikka-0.9.0_rc8 (19 Jul 2005)
+
+  19 Jul 2005; Daniel Black <dragonheart@gentoo.org>
+  prewikka-0.9.0_rc5.ebuild, prewikka-0.9.0_rc7.ebuild,
+  +prewikka-0.9.0_rc8.ebuild:
+  version bump. Dependancies added as per bug #99494.
 
   02 Jul 2005; David Holm <dholm@gentoo.org> prewikka-0.9.0_rc7.ebuild:
   Added to ~ppc.
