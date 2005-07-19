@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.15.ebuild,v 1.8 2005/07/19 14:45:47 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.15.ebuild,v 1.9 2005/07/19 16:01:24 swegener Exp $
 
 inherit java-pkg
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 s390 sparc x86"
 IUSE="java doc nls emacs"
 
-DEPEND="java? (>=virtual/jdk-1.4)"
-RDEPEND="java? (>=virtual/jre-1.4)"
+DEPEND="java? ( >=virtual/jdk-1.4 )"
+RDEPEND="java? ( >=virtual/jre-1.4 )"
 
 src_compile() {
 	local jdkhome
