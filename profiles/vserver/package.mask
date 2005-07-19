@@ -1,2 +1,3 @@
 # Prevent users from installing baselayout on a vserver
-=sys-apps/baselayout
+# Use baselayout-vserver instead!
+sys-apps/baselayout
