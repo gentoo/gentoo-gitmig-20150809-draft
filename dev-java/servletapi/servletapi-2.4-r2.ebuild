@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r2.ebuild,v 1.2 2005/06/04 22:04:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4-r2.ebuild,v 1.3 2005/07/19 17:31:54 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -35,7 +35,7 @@ src_compile() {
 	ant ${antflags} -f jsr152/build.xml || die "compilation problem"
 }
 
-src_install () {
+src_install() {
 	mv jsr{154,152}/dist/lib/*.jar ${S}
 
 	if use doc ; then
