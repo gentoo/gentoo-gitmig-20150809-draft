@@ -1,4 +1,6 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 f25ed429ffe7495a2a74f9a3ed855573 ChangeLog 648
+MD5 1c7c359ae381338917e94eaea241f38a metabar-0.8.ebuild 692
+MD5 ebb4e87149e8144edbba6b48047e5bb9 ChangeLog 772
 MD5 f0376e6426fe9fd5d520907262d42b46 metabar-0.7.ebuild 833
 MD5 e7ca82d62ed7be0b7a72c7c6fad010f2 files/digest-metabar-0.7 63
+MD5 f72587cee0737f72b18ad3eff6f06608 files/digest-metabar-0.8 63
