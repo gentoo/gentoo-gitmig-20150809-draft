@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vlock
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.18 2005/07/17 12:06:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.19 2005/07/19 23:04:58 kloeri Exp $
+
+  19 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> vlock-1.3-r2.ebuild:
+  Stable on alpha.
 
   17 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org> vlock-1.3-r2.ebuild:
   ppc stable
