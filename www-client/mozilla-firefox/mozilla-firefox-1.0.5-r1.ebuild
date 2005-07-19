@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.5-r1.ebuild,v 1.1 2005/07/18 15:15:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.5-r1.ebuild,v 1.2 2005/07/19 03:37:24 anarchy Exp $
 
 inherit makeedit flag-o-matic nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -20,7 +20,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc sparc x86"
-IUSE="gnome java mozdevelop mozsvg"
+IUSE="gnome java mozdevelop mozsvg mozcalendar"
 
 # xrender.pc appeared for the first time in xorg-x11-6.7.0-r2
 # and is required to build with support for cairo.  #71504
@@ -100,6 +100,7 @@ src_compile() {
 	mozconfig_use_extension mozdevelop venkman
 	mozconfig_use_enable gnome gnomevfs
 	mozconfig_use_extension gnome gnomevfs
+	mozconfig_use_enable mozcalendar calendar
 	mozconfig_use_enable mozsvg svg
 	mozconfig_use_enable mozsvg svg-renderer-cairo
 	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/$(get_libdir)/MozillaFirefox
