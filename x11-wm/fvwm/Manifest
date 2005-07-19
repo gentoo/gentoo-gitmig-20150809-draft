@@ -4,7 +4,6 @@ MD5 60a24f01d6dc86f7d8230f805d81a573 fvwm-2.5.13.ebuild 7656
 MD5 201f236ca280a1a073f5fed3343a1754 ChangeLog 17063
 MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
 MD5 ba8d61baf42b7f21be2488b3581ff51d fvwm-2.4.18.ebuild 2956
-MD5 2a5b6dde57161daa48ec5946e78554d7 files/fvwm-2.5.10-fvwmbuttonshover.diff.gz 9994
 MD5 d91fb7d2af57653fc93a70e6e1c0a0ea files/fvwm-menu-xlock-xlockmore-compat.diff 550
 MD5 d8a3811b3a9581c42119cdc86dff4c7d files/fvwm-2.5.10-Test-update.diff 702
 MD5 e2ceb5d855c5406a09d82442196efad8 files/README.transluceny.gz 5788
