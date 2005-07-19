@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qmatplot/qmatplot-0.4.2-r1.ebuild,v 1.4 2005/07/07 05:17:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qmatplot/qmatplot-0.4.2-r1.ebuild,v 1.5 2005/07/19 11:30:40 dholm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://qmatplot.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 SLOT="0"
 
