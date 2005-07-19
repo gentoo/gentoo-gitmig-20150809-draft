@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mirmon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/ChangeLog,v 1.1 2005/02/02 16:07:07 jforman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mirmon/ChangeLog,v 1.2 2005/07/19 13:30:44 dholm Exp $
+
+  19 Jul 2005; David Holm <dholm@gentoo.org> mirmon-1.36.ebuild:
+  Added to ~ppc.
 
   02 Feb 2005; Jeffrey Forman <jforman@gentoo.org> :
   Initial version of mirmon ebuild, version 1.36. To monitor mirrors update

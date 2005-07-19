@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/midas-nms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.5 2005/04/12 03:18:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.6 2005/07/19 13:31:20 dholm Exp $
+
+  19 Jul 2005; David Holm <dholm@gentoo.org> midas-nms-2.2f.ebuild:
+  Added to ~ppc.
 
   12 Apr 2005; Jason Wever <weeve@gentoo.org> :
   Added ~sparc keyword.

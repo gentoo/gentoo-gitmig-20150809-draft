@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.8 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.9 2005/07/19 13:31:20 dholm Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/midas-nms/MIDAS-${PV}.tar.gz"
 HOMEPAGE="http://midas-nms.sf.net"
 LICENSE="MIT"
 
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 DEPEND="dev-db/mysql
 	virtual/libpcap

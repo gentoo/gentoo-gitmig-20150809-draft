@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ipaudit-1.0_beta2.ebuild,v 1.1 2005/04/29 23:12:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ipaudit-1.0_beta2.ebuild,v 1.2 2005/07/19 13:22:17 dholm Exp $
 
 inherit eutils
 DESCRIPTION="IPAudit monitors network activity on a network by host, protocol and port."
@@ -9,7 +9,7 @@ MY_P="${PN}-${PV/_beta/BETA}"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="mysql"
 DEPEND="virtual/libpcap
 		mysql? ( dev-db/mysql )"

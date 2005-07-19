@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ippl-1.4.14.ebuild,v 1.8 2005/04/02 13:15:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ippl-1.4.14.ebuild,v 1.9 2005/07/19 13:24:34 dholm Exp $
 
 DESCRIPTION="A daemon which logs TCP/UDP/ICMP packets"
 HOMEPAGE="http://pltplp.net/ippl/"
@@ -8,7 +8,7 @@ SRC_URI="http://pltplp.net/ippl/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=dev-util/yacc-1.9.1-r1
