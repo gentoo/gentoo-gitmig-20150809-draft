@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.05.ebuild,v 1.3 2005/07/19 12:39:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.05.ebuild,v 1.4 2005/07/19 14:22:26 axxo Exp $
 
 IUSE=""
 
@@ -66,6 +66,7 @@ src_install() {
 
 pkg_postinst () {
 	# Set as default VM if none exists
+	java_pkg_postinst
 	einfo "Please review the license agreement in /usr/doc/${P}/LICENSE"
 	einfo "If you do not agree to the terms of this license, please uninstall this package"
 }
