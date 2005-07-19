@@ -1,5 +1,5 @@
-MD5 9f79571dcb2b48e4ca1ad8e1cbd9eb75 ChangeLog 721
-MD5 64d0a60381a283a9958f8a4b6efaeb33 thcrut-1.2.5.ebuild 806
+MD5 4094def72f4f7899c44c65de42fa5a69 ChangeLog 799
+MD5 69f564d3d5def38e5ac1fa4895572578 thcrut-1.2.5.ebuild 810
 MD5 6664b0723808cc3aad5658e88d5a7ac7 metadata.xml 236
 MD5 7a44d04c4783a23f9ed07cc597b21a94 files/1.2.5-libnet.patch 9428
 MD5 c71ac3757388c2ad736d8f1b5134aaac files/digest-thcrut-1.2.5 64

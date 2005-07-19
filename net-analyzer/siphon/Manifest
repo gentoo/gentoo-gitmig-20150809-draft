@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8f14e6d829d0096d5363fafd627f92a8 ChangeLog 1011
+MD5 2cce4c4a896096d732498255a6e3cfae ChangeLog 1087
 MD5 2b8321d62a71d97cae0220a04507ff84 metadata.xml 235
-MD5 259913426b8489380cd4777bd1e9932f siphon-666.ebuild 805
+MD5 ec8ab49bccc3ef132dafd9e01e5a41a0 siphon-666.ebuild 804
 MD5 330e3afc0b46d6b4c991352efa731333 files/digest-siphon-666 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+xtcmdTrptrqvGERAvFNAKCfcOaUbdzRFuCsqB7zGj7ry1IeOgCfVXQu
-lNp/mc47b7zeHNpWuynF/WM=
-=d50B
------END PGP SIGNATURE-----

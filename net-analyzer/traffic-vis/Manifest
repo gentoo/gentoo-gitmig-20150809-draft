@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b74d2247e0ffbca4f33a2d937cd459ff ChangeLog 1452
-MD5 028fa1d52741b34f0d49ee4c932c02af traffic-vis-0.35.ebuild 1337
+MD5 3d94f7693591abc77df68c136602773d ChangeLog 1534
+MD5 ae8e03095061706c47ed9f424e840aa8 traffic-vis-0.35.ebuild 1336
 MD5 75e5dd9e5ff826e83948079bd120a0c9 metadata.xml 250
 MD5 8d9d8f0ea07c61e6e39221fd8a5715bb files/digest-traffic-vis-0.35 67
 MD5 4e1b8460642e4424a4db9e724c550f68 files/traffic-vis-0.35-gentoo.patch 3759
+MD5 f3f89a74aafd87072c83981d568ad1d2 files/traffic-vis-0.35-libpcap-header-fix.patch 280
 MD5 a7bbcd2076e8850fd4f6d359c9dada26 files/traffic-vis.conf.d 365
 MD5 d68a0880f31210ead13247ad3de0961d files/traffic-vis.init.d 744
-MD5 f3f89a74aafd87072c83981d568ad1d2 files/traffic-vis-0.35-libpcap-header-fix.patch 280
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+xtbmdTrptrqvGERAsXbAJ0bK45Slg1gKg3FhqYAbLIQD4BWygCfUIL7
-0KRfMR0UL6ULiJ/Ere/7UyI=
-=5Qct
------END PGP SIGNATURE-----
