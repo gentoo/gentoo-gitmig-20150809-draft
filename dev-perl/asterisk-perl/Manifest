@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 46bff299b639a3501806f39475aa3018 ChangeLog 415
-MD5 e4f0f40dc61f9a07d7e45965b4a05edf asterisk-perl-0.08.ebuild 919
-MD5 b0de050d9069fa220f41f8c567f4a0ec files/digest-asterisk-perl-0.08 69
+MD5 66d47148fbaa61c8da7f4fbb7bd309a5 ChangeLog 502
+MD5 5158a245e6cfae088541ef5876e913f7 asterisk-perl-0.08.ebuild 925
 MD5 191ae8930833c75970dca5f341aad5d6 metadata.xml 266
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3F3HI1lqEGTUzyQRAmeuAJ0VN/iNQlIT32z/ydnjFRNoS8b6NACgg1ri
-pBIdx3EdBOcH5C0lvZagK34=
-=rXZi
------END PGP SIGNATURE-----
+MD5 b0de050d9069fa220f41f8c567f4a0ec files/digest-asterisk-perl-0.08 69
