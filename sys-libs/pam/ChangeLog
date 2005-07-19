@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.88 2005/07/09 05:03:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.89 2005/07/19 21:40:26 kloeri Exp $
+
+  19 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> pam-0.78-r2.ebuild:
+  Stable on alpha.
 
   09 Jul 2005; Joseph Jezak <josejx@gentoo.org> pam-0.78-r2.ebuild:
   Marked ppc stable.
