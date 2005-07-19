@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim-blogger
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-blogger/ChangeLog,v 1.16 2005/03/22 10:20:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-blogger/ChangeLog,v 1.17 2005/07/19 20:14:49 herbs Exp $
+
+  19 Jul 2005; Herbie Hopkins <herbs@gentoo.org> gaim-blogger-1.0.0.ebuild:
+  Stable on amd64.
 
   22 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gaim-blogger-1.0.0.ebuild:
