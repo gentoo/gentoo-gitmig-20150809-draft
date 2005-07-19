@@ -1,6 +1,14 @@
 # ChangeLog for app-forensics/airt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/airt/ChangeLog,v 1.1 2005/01/26 01:55:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/airt/ChangeLog,v 1.2 2005/07/19 10:56:59 dragonheart Exp $
+
+*airt-0.4-r1 (19 Jul 2005)
+
+  19 Jul 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/airt-0.4-dismod.patch, +files/airt-0.4-kernelupdate.patch,
+  +airt-0.4-r1.ebuild:
+  patch to fix with newer kernels. dismod perl script modified to find the
+  System.map and dismod executables
 
   26 Jan 2005; Daniel Black <dragonheart@gentoo.org> +airt-0.4.ebuild,
   +metadata.xml:

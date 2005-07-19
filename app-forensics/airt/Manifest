@@ -3,12 +3,16 @@ Hash: SHA1
 
 MD5 df3e59ec816b16c961e26b502ed7bf1e airt-0.4.ebuild 1066
 MD5 dd09b3d3602805b1bbcac35ef93e82c6 metadata.xml 707
-MD5 51c610e08d33ffa49e4e32729eb97770 ChangeLog 389
+MD5 19bbba1defccb85f3602773e0e97b286 ChangeLog 673
+MD5 fc66b30754270e8dc4be294a126a9342 airt-0.4-r1.ebuild 1149
 MD5 827cc186dcaac15ec33e2fdf18c78399 files/digest-airt-0.4 60
+MD5 d22f2ab7a3eb68a1a10927e0817498dd files/airt-0.4-kernelupdate.patch 6178
+MD5 827cc186dcaac15ec33e2fdf18c78399 files/digest-airt-0.4-r1 60
+MD5 466eea11f18af7adea2700516d1661af files/airt-0.4-dismod.patch 641
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB9vmSmdTrptrqvGERAhPXAJ9SOUaqq1coPD//WsAAEIvVwAlujwCfR/R2
-pjEswzI8w66xlcsYLzmNGZg=
-=Duyg
+iD4DBQFC3NyRmdTrptrqvGERAtvyAJ4qZvtD4MHhnTidW2pqjk8UpHRzTgCXZwsZ
+dC7AbtLlU1DrgahR1vSKTg==
+=8TZH
 -----END PGP SIGNATURE-----
