@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/yaz++
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz++/ChangeLog,v 1.1 2005/07/19 20:48:38 robbat2 Exp $
+
+*yaz++-0.9 (19 Jul 2005)
+
+  19 Jul 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +yaz++-0.9.ebuild:
+  Initial commit. Based on ebuild submitted by Paul Berens <pjb8774@rit.edu>,
+  bug #97767.
+
