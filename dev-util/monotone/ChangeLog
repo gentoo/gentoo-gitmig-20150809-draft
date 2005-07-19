@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.16 2005/07/07 00:50:16 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.17 2005/07/19 06:17:26 leonardop Exp $
+
+*monotone-0.21 (19 Jul 2005)
+
+  19 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> monotone-0.21.ebuild:
+  New release.
 
 *monotone-0.20 (06 Jul 2005)
 
