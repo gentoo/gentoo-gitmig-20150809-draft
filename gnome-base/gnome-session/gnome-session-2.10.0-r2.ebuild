@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.10.0-r2.ebuild,v 1.1 2005/07/19 16:56:46 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.10.0-r2.ebuild,v 1.2 2005/07/19 19:49:42 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -22,8 +22,8 @@ RDEPEND=">=x11-libs/gtk+-2.3.1
 
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.10.40
-	>=dev-util/pkgconfig-0.12.0
-	>=dev-util/intltool-0.29
+	dev-util/pkgconfig
+	dev-util/intltool
 	!gnome-base/gnome-core"
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
 
@@ -49,8 +49,10 @@ src_unpack() {
 	# for http://bugzilla.gnome.org/show_bug.cgi?id=116814
 	epatch ${FILESDIR}/${PN}-2.8.1-hide_splash.patch
 
+	export WANT_AUTOMAKE=1.7
+	cp aclocal.m4 old_macros.m4
 	einfo "Running aclocal"
-	aclocal || die "Aclocal failed"
+	aclocal -I . || die "Aclocal failed"
 	einfo "Running autoconf"
 	autoconf || die "Autoconf failed"
 	einfo "Running libtoolize"
