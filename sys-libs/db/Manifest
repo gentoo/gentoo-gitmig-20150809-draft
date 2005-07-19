@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 74f280853789512d578b7cb488c28733 db-4.3.27.ebuild 2917
 MD5 6f9b8f054235426e239efa7ad5269ab3 db-4.0.14-r2.ebuild 2227
 MD5 e574abbab6354ac0587c957eb5ac8690 ChangeLog 20995
@@ -38,3 +41,10 @@ MD5 75ba5de97737693cfdfe85908b5adfbd files/db-4.1.25-uclibc.patch 731
 MD5 f029f70f531ca67c16b62573d61de49e files/digest-db-4.1.25_p1-r3 118
 MD5 f029f70f531ca67c16b62573d61de49e files/digest-db-4.1.25_p1-r4 118
 MD5 194200b3295b95b46b4564980af27f1f files/db-3.2.9-fix-dep-link.patch 1005
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3XJ2Kf2g/qXtneoRAlGGAJ9UHWV4O+N5Pa4i8U3QDFeHU/mnxQCdENBt
+goaZZXCBGPCFKkfNtvEQz6Y=
+=BF0e
+-----END PGP SIGNATURE-----
