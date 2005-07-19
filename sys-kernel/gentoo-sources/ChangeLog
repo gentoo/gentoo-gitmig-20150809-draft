@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.169 2005/07/17 10:07:37 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.170 2005/07/19 13:24:02 corsair Exp $
+
+  19 Jul 2005; Markus Rothe <corsair@gentoo.org>
+  gentoo-sources-2.6.12-r6.ebuild:
+  Stable on ppc64 (bug #99274)
 
   17 Jul 2005; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.6.12-r6.ebuild:
