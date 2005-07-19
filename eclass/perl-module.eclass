@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.77 2005/07/18 23:00:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.78 2005/07/19 13:10:36 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -54,6 +54,17 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 # DEPEND on module-build<-version> as needed, but there should be no need for
 # the style directive any more (especially since it isn't in the eclass
 # anymore). Enjoy!
+#
+# 2005.07.18 mcummings
+# Fix for proper handling of $mydoc - thanks to stkn for noticing we were
+# bombing out there
+#
+# 2005.07.19 mcummings
+# Providing an override var for the use of Module::Build. While it is being
+# incorporated in more and more modules, not module authors have working
+# Build.PL's in place. The override is to allow for a fallback to the "classic"
+# Makfile.PL - example is Class::MethodMaker, which provides a Build.PL that is
+# severely broken.
 
 
 
@@ -61,6 +72,7 @@ DEPEND=">=dev-lang/perl-5.8.2 !<perl-core/ExtUtils-MakeMaker-6.17"
 RDEPEND="${DEPEND}"
 SRC_PREP="no"
 SRC_TEST="skip"
+USE_BUILDER="yes"
 
 PERL_VERSION=""
 SITE_ARCH=""
@@ -79,7 +91,8 @@ perl-module_src_prep() {
 
 
 	SRC_PREP="yes"
-	if [ -f ${S}/Build.PL ]; then
+	if [ -f ${S}/Build.PL ] && [ "${USE_BUILDER}" == "yes" ]; then
+		einfo "Using Module::Build"
 		if [ -z ${BUILDER_VER} ]; then
 			eerror
 			eerror "Please post a bug on http://bugs.gentoo.org assigned to"
@@ -92,6 +105,7 @@ perl-module_src_prep() {
 			perl ${S}/Build.PL installdirs=vendor destdir=${D}
 		fi
 	else
+		einfo "Using ExtUtils::MakeMaker"
 		perl Makefile.PL ${myconf} \
 		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
 	fi
@@ -193,11 +207,13 @@ perlinfo() {
 	eval `perl '-V:installvendorarch'`
 	VENDOR_ARCH=${installvendorarch}
 
-	if [ -f ${S}/Build.PL ]; then
-		if [ ${PN} == "module-build" ]; then
-			BUILDER_VER="1" # A bootstrapping if you will
-		else
-			BUILDER_VER=`perl -MModule::Build -e 'print "$Module::Build::VERSION;"' `
+	if [ "${USE_BUILDER}" == "yes" ]; then
+		if [ -f ${S}/Build.PL ]; then
+			if [ ${PN} == "module-build" ]; then
+				BUILDER_VER="1" # A bootstrapping if you will
+			else
+				BUILDER_VER=`perl -MModule::Build -e 'print "$Module::Build::VERSION;"' `
+			fi
 		fi
 	fi
 
