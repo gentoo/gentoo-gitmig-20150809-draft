@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-5.0.ebuild,v 1.4 2005/05/18 15:46:07 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-5.0.ebuild,v 1.5 2005/07/19 12:39:30 axxo Exp $
 
 # WARNING: This is the default VM on ia64, so treat this ebuild
 # with proper care.
@@ -39,17 +39,17 @@ src_unpack() {
 
 	cd ${S}
 	for z in *.zip ; do
-		unzip $z
+		unzip $z || die
 		rm $z
 	done
 }
 
-src_install () {
+src_install() {
 	local dirs="bin console include jre lib"
 	dodir /opt/${P}
 
 	for i in ${dirs} ; do
-		cp -dR $i ${D}/opt/${P}/
+		cp -dR $i ${D}/opt/${P}/ || die
 	done
 
 	newdoc README.TXT README
