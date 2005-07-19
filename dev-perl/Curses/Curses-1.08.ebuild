@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.08.ebuild,v 1.9 2005/07/03 12:40:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.08.ebuild,v 1.10 2005/07/19 13:41:53 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -27,6 +27,7 @@ myconf="${myconf} GEN PANELS MENUS"
 #Add gaurd as necessary...
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/Curses-1.08-p5.8-fixes.diff
 	cd ${S}
 	einfo "Copying hints/c-linux.ncurses.h to c-config.h"
