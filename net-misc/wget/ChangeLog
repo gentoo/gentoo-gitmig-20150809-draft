@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.70 2005/07/18 19:33:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.71 2005/07/19 11:32:37 seemant Exp $
+
+  19 Jul 2005; Seemant Kulleen <seemant@gentoo.org> wget-1.10.ebuild:
+  added a patch for uclibc and bumped the patchball version. Thanks to
+  solar@gentoo.org in bug #96716
 
 *wget-1.10 (18 Jul 2005)
 
