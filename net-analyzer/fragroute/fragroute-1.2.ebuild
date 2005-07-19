@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/fragroute-1.2.ebuild,v 1.8 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/fragroute-1.2.ebuild,v 1.9 2005/07/19 13:09:35 dholm Exp $
 
 DESCRIPTION="fragroute was written to aid in the testing of network intrusion detection systems, firewalls and basic TCP/IP stack behaviour."
 HOMEPAGE="http://www.monkey.org/~dugsong/fragroute/"
 SRC_URI="http://www.monkey.org/~dugsong/fragroute/${P}.tar.gz"
 LICENSE="DSNIFF"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 DEPEND="virtual/libc
 		>=dev-libs/libevent-0.6

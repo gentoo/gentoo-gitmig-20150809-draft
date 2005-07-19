@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethstatus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.5 2005/06/26 03:58:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.6 2005/07/19 13:04:06 dholm Exp $
+
+  19 Jul 2005; David Holm <dholm@gentoo.org> ethstatus-0.4.2-r2.ebuild:
+  Added to ~ppc.
 
   26 Jun 2005; Marcelo Goes <vanquirius@gentoo.org>
   ethstatus-0.4.2-r2.ebuild:

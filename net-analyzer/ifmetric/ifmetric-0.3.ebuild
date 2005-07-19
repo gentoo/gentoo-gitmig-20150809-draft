@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ifmetric-0.3.ebuild,v 1.2 2005/06/09 14:20:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ifmetric-0.3.ebuild,v 1.3 2005/07/19 13:14:48 dholm Exp $
 
 DESCRIPTION="A Linux tool for setting the metrics of all IPv4 routes attached to a given network interface at once."
 HOMEPAGE="http://0pointer.de/lennart/projects/ifmetric/"
@@ -8,7 +8,7 @@ SRC_URI="http://0pointer.de/lennart/projects/ifmetric/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 # NOTE: this app is linux-only, virtual/os-headers therefore is incorrect
