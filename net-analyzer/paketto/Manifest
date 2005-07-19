@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 afaa3ab65af1297a43625b3f33c3863d ChangeLog 1149
-MD5 d7c524e55d33d373fefc90ebaf0052a5 paketto-1.10-r1.ebuild 948
+MD5 7d879a48977b4d8cf130ce4d16b80d35 ChangeLog 1231
 MD5 95051bf20b7a347505eff3b097fa2bb8 metadata.xml 812
+MD5 71cdd57828dda72bb897e005d715ee96 paketto-1.10-r1.ebuild 948
 MD5 2f623e420e838cda4b64f6f1d48e2f04 files/1.10-gcc3.patch 785
-MD5 c516fafec2f15be22b14097832e91054 files/digest-paketto-1.10-r1 64
 MD5 c41694742a0abb115eec2c9acfc2c127 files/1.10-libnet-1.0.patch 1944
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+xtcmdTrptrqvGERAvB5AJ9I8DKtP679bqRDWRDRMJJrJzQUEACaA8H0
-DMAYN5qvnDtpctsfBej5puc=
-=6EJF
------END PGP SIGNATURE-----
+MD5 c516fafec2f15be22b14097832e91054 files/digest-paketto-1.10-r1 64

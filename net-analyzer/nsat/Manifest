@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 43e39f22f30270b8e784dc2366ff98c5 ChangeLog 995
-MD5 cfd03d689521fe0787f77e2aa48abcb1 nsat-1.5.ebuild 1335
+MD5 8abf40c82fb8e14327de8810200ce88d ChangeLog 1069
+MD5 829d599f4ab2f859509a4c6503b0c0a3 nsat-1.5.ebuild 1334
 MD5 e5a78f2f9a0dd2c74696935d8b9347c9 metadata.xml 272
 MD5 99fbec45790d1b3bcdc76807e592f1bf files/digest-nsat-1.5 57
 MD5 dd2688ef10995aad69fac0669f7413eb files/nsat-1.5-configure.patch 566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+xtcmdTrptrqvGERAlhEAJ9gf9kMKKCWD6/PuMW2VBstmawsLgCfbSFK
-lKNyJZDWvoTsEFVwUq/FIUo=
-=k54/
------END PGP SIGNATURE-----

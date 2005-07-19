@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 69bfea8c37997d10a2ac2d6c55813828 ChangeLog 407
-MD5 0f64adc3e6d4d1bf7973db67124e5b99 files/digest-poink-2.03 61
+MD5 d1d89a1f60d345cad023a16d93bbcb21 ChangeLog 487
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
-MD5 b357e4c924fab5a437e0a25faa02d61c poink-2.03.ebuild 660
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1mP+I1lqEGTUzyQRAj1vAKDP2V+cUhCC3GZNM7VFV4/CAqzMigCfTHe9
-Zq3Q7PWUJj5yLn9LxiPTX6A=
-=TaFq
------END PGP SIGNATURE-----
+MD5 c00be32cd1e0a43aa640d79b5cab3081 poink-2.03.ebuild 662
+MD5 0f64adc3e6d4d1bf7973db67124e5b99 files/digest-poink-2.03 61
