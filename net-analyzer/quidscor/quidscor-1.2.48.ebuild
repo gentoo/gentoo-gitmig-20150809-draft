@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.5 2005/04/17 20:28:28 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.6 2005/07/19 15:35:31 dholm Exp $
 
 DESCRIPTION="IDS/VA Correlation engine"
 HOMEPAGE="http://quidscor.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/quidscor/${P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/libxml2-2.4
