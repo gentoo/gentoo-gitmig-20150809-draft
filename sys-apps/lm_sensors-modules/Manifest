@@ -1,5 +1,5 @@
-MD5 905705aa0e4a134693b02269da4909d1 lm_sensors-modules-2.9.1.ebuild 1632
-MD5 2af81a680c3d80fb0d66bee81b879a98 ChangeLog 502
+MD5 82ff1f2350519a0a2d066c06c791ca65 lm_sensors-modules-2.9.1.ebuild 1631
+MD5 9cb4f1e6bffd7a56e56752442694f063 ChangeLog 586
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 bc5cf1f60bec6bdb0fb095a5a361d1c1 files/lm_sensors-2.9.1-module-path.patch 4167
 MD5 3239330829a0de6eb11ba47d95662763 files/lm_sensors-2.9.1-modules-only.patch 524
