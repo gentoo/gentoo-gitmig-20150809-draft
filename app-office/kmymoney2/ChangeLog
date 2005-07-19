@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.30 2005/07/13 19:56:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.31 2005/07/19 19:19:36 carlo Exp $
+
+*kmymoney2-0.7.4 (19 Jul 2005)
+
+  19 Jul 2005; Carsten Lohrke <carlo@gentoo.org> +kmymoney2-0.7.4.ebuild:
+  version bump
 
   13 Jul 2005; Joseph Jezak <josejx@gentoo.org> kmymoney2-0.6.4.ebuild:
   Marked ppc stable for bug #98809.
