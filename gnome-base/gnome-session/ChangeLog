@@ -1,6 +1,18 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.100 2005/07/12 03:38:37 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.101 2005/07/19 16:56:45 leonardop Exp $
+
+*gnome-session-2.10.0-r2 (19 Jun 2005)
+
+  19 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gnome-session-2.10.0-r2.ebuild,
+  files/gnome-session-2.10.0-esd_switch.patch:
+  New revision, including a patch to enable/disable esound support, related
+  to bug #6920.
+
+  19 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gnome-session-2.10.0-r1.ebuild:
+  Stable on x86.
 
   12 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
   gnome-session-2.10.0.ebuild:

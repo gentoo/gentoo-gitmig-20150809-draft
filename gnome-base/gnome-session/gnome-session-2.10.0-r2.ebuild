@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.10.0-r1.ebuild,v 1.3 2005/07/19 16:56:46 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.10.0-r2.ebuild,v 1.1 2005/07/19 16:56:46 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -11,10 +11,10 @@ SRC_URI="${SRC_URI} mirror://gentoo/gentoo-splash.png"
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
-IUSE="ipv6"
+IUSE="esd ipv6"
 
 RDEPEND=">=x11-libs/gtk+-2.3.1
-	>=media-sound/esound-0.2.26
+	esd? ( >=media-sound/esound-0.2.26 )
 	>=gnome-base/libgnomeui-2.2
 	>=sys-apps/tcp-wrappers-7.6
 	>=gnome-base/gconf-2
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	!gnome-base/gnome-core"
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
 
-G2CONF="${G2CONF} $(use_enable ipv6)"
+G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable esd)"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
@@ -42,10 +42,19 @@ src_unpack() {
 	# (#42687)
 	epatch ${FILESDIR}/${P}-schema_defaults.patch
 
+	# Implement switch to enable/disable esound support. See bug #6920.
+	epatch ${FILESDIR}/${P}-esd_switch.patch
+
 	# Hide the splash after defaults have been loaded, a temp workaround
 	# for http://bugzilla.gnome.org/show_bug.cgi?id=116814
 	epatch ${FILESDIR}/${PN}-2.8.1-hide_splash.patch
 
+	einfo "Running aclocal"
+	aclocal || die "Aclocal failed"
+	einfo "Running autoconf"
+	autoconf || die "Autoconf failed"
+	einfo "Running libtoolize"
+	libtoolize --copy --force
 }
 
 src_install() {
