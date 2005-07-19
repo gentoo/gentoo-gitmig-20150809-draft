@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.5-r1.ebuild,v 1.1 2005/07/18 23:56:38 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.5-r1.ebuild,v 1.2 2005/07/19 03:32:16 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozconfig mozilla-launcher makeedit multilib
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/sourc
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
-IUSE="ldap"
+IUSE="mozcalendar ldap"
 
 RDEPEND=">=www-client/mozilla-launcher-1.35"
 
@@ -57,9 +57,9 @@ src_compile() {
 	mozconfig_init
 
 	# tb-specific settings
+	mozconfig_use_enable mozcalendar calendar
 	mozconfig_use_enable ldap
 	mozconfig_use_enable ldap ldap-experimental
-	mozconfig_use_enable mozcalendar calendar
 	mozconfig_annotate '' \
 		--with-default-mozilla-five-home=${MOZILLA_FIVE_HOME} \
 		--with-user-appdir=.thunderbird

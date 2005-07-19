@@ -2,7 +2,7 @@ MD5 7f70e9a6a99c97067f1aefba03cfa3ae ChangeLog 8997
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 988cdabe4b288a0ace4b12d1815b667e mozilla-thunderbird-1.0.2-r10.ebuild 3964
 MD5 ea0f38433a6bf55556b77e719de82178 mozilla-thunderbird-1.0.5.ebuild 4208
-MD5 1bddeada6b1dacfda2516dd72fe22632 mozilla-thunderbird-1.0.5-r1.ebuild 4258
+MD5 d26ec0c78b836d1aa484fc4cc4d71152 mozilla-thunderbird-1.0.5-r1.ebuild 4270
 MD5 99df508a69b6283098fcf48cc2dd2456 files/digest-mozilla-thunderbird-1.0.2-r10 79
 MD5 a7504ac2a67cca6f3732cdaa3fd17711 files/digest-mozilla-thunderbird-1.0.5 79
 MD5 23d6b685fd5e49a07cc4a1786871bf47 files/mozilla-alpha-xpcom-subs-fix.patch 4953
