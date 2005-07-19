@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.6.ebuild,v 1.1 2005/07/08 20:13:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.6.ebuild,v 1.2 2005/07/19 00:10:59 vapier Exp $
 
 inherit games
 
@@ -12,13 +12,14 @@ SRC_URI="mirror://sourceforge/mindless/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
-RESTRICT="nomirror" # for the card database.
+RESTRICT="mirror" # for the card database
 
 RDEPEND="media-libs/gdk-pixbuf
 	>=x11-libs/gtk+-2"
 DEPEND="${RDEPEND}
+	gnome-base/librsvg
 	dev-util/pkgconfig"
 
 src_unpack() {

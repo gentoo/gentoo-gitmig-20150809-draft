@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 4442b8976465aea6cc20b670af64b545 mindless-1.6.ebuild 1353
 MD5 77bd308df843dca1e4a99c0f8992eddf mindless-1.5-r1.ebuild 1358
+MD5 39f8b5b5883f881bc00e22d338c3b19f mindless-1.6.ebuild 1366
 MD5 dec1d8f66f765120b4f1b806b2932abc ChangeLog 1270
-MD5 68b8ad4c5f179e599b7bc5cdf52af9af files/mindless 379
-MD5 e06a3b3f916cc0bffe0452fd34915fca files/digest-mindless-1.5-r1 126
 MD5 d9f43f5c2d40c20152d3ff1cae5f7525 files/digest-mindless-1.6 129
+MD5 e06a3b3f916cc0bffe0452fd34915fca files/digest-mindless-1.5-r1 126
+MD5 68b8ad4c5f179e599b7bc5cdf52af9af files/mindless 379
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3EUngIKl8Uu19MoRAptuAJ0URKlNdTbgI51QXc9JZVe/d+EKyACeKbKH
+8zSbYAOOS9HXYDbmYgYRkrI=
+=iROk
+-----END PGP SIGNATURE-----
