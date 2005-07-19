@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.28 2005/07/18 05:13:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.29 2005/07/19 15:41:24 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -251,7 +251,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PVR}/invalid-envelope-sender-log.patch
 
 	# See bug 98961
-	epatch ${FILESDIR}/${PVR}/virtual-domain-outgoing-IP-address.patch
+	# hansmi, 2005-07-19: This patch is broken, needs fixing, #99497
+	# epatch ${FILESDIR}/${PVR}/virtual-domain-outgoing-IP-address.patch
 
 	# See bug #90631
 	if use logmail; then
