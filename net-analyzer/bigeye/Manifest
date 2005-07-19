@@ -1,5 +1,5 @@
-MD5 d6922f2ccd000f24aa6abb3d3f6b5770 bigeye-0.3.ebuild 951
-MD5 f6f01b11d48353a0288a183ada265c16 ChangeLog 786
+MD5 1b3e1d5a025d75b801b4c934617748f8 ChangeLog 863
+MD5 2e0f685b69156d6cf8d174530fcbaf28 bigeye-0.3.ebuild 951
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 8ef1b063fc9655f3f06781a2eeaa785d files/0.3-gcc3.patch 525
 MD5 dcc42b28916e9e2c9b9d9aff3b156684 files/digest-bigeye-0.3 58
