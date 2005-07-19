@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.ebuild,v 1.13 2005/05/29 15:31:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.ebuild,v 1.14 2005/07/19 18:07:12 axxo Exp $
 
 inherit java-pkg
 
@@ -32,7 +32,7 @@ src_compile() {
 	ant ${antflags} || die "compilation problem"
 }
 
-src_install () {
+src_install() {
 	dobin src/native/unix/jsvc
 	java-pkg_dojar dist/${PN}.jar || die "Unable to install"
 	dodoc README RELEASE-NOTES.txt *.html
