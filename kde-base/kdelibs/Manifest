@@ -1,10 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5ddc74a659d413e4df654e7b422932e7 ChangeLog 41471
+MD5 d2e597de98a0d6ee8c50a90cba274380 ChangeLog 41580
+MD5 32fa38e337bdc93fc7fef176e76c18d6 kdelibs-3.2.3-r7.ebuild 3565
+MD5 5f037b266d49d92331b2b449e8b10fab kdelibs-3.2.3-r9.ebuild 3830
+MD5 a22f453221b250479669277a770541f5 kdelibs-3.3.2-r9.ebuild 4238
+MD5 35642afad936bc4714ea938c1152c7ee kdelibs-3.4.0-r2.ebuild 3471
+MD5 3e2e72f881b6bd72528922777d0b0b35 kdelibs-3.4.1-r1.ebuild 3367
+MD5 02f2da44089df832481a6066c2a71fb3 kdelibs-3.4.1-r2.ebuild 3358
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 54f1fe94a5ea57c2f44a88ddcb11e33f kdelibs-3.3.2-r10.ebuild 4322
 MD5 02c4482bb15fc1a504621c2627a4deee files/digest-kdelibs-3.2.3-r7 529
 MD5 99b6a0719a376a17b6edea6555e3e5ae files/digest-kdelibs-3.2.3-r9 601
-MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r10 517
 MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r9 517
 MD5 2f2e57269ffc653aa3c0884c9492fb16 files/digest-kdelibs-3.4.0-r2 148
 MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r1 68
@@ -23,19 +27,5 @@ MD5 b174d4e6ed2d0fd78fa43a40654f9ea4 files/post-3.2.3-kdelibs-idn.patch 2337
 MD5 5e9c627e4e9e367ce88ed62a0a9ac162 files/post-3.2.3-kdelibs-khtml.diff 2411
 MD5 b93484486086ff60f9633f48ed311877 files/post-3.2.3-kdelibs-kimgio.diff 39789
 MD5 7e082af5fd71b9b01d01a86f31646499 files/post-3.3.2-kdelibs-htmlframes2.patch 989
+MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r10 517
 MD5 138c3252883171d55ec24ed0318950fd files/post-3.3.2-kdelibs-kate.diff 2212
-MD5 32fa38e337bdc93fc7fef176e76c18d6 kdelibs-3.2.3-r7.ebuild 3565
-MD5 5f037b266d49d92331b2b449e8b10fab kdelibs-3.2.3-r9.ebuild 3830
-MD5 5b8f57c745ff8863ce89fbfbe19462b1 kdelibs-3.3.2-r10.ebuild 4324
-MD5 a22f453221b250479669277a770541f5 kdelibs-3.3.2-r9.ebuild 4238
-MD5 35642afad936bc4714ea938c1152c7ee kdelibs-3.4.0-r2.ebuild 3471
-MD5 3e2e72f881b6bd72528922777d0b0b35 kdelibs-3.4.1-r1.ebuild 3367
-MD5 02f2da44089df832481a6066c2a71fb3 kdelibs-3.4.1-r2.ebuild 3358
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2+7QI1lqEGTUzyQRAgflAJ9N5RLkSQl2WGKT1l5zJkFTXmtkEACfUuol
-XwKpH4W1Xy+j4c/n0L2LrME=
-=YwH5
------END PGP SIGNATURE-----
