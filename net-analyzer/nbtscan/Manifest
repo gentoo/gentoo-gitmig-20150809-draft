@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 2edb842a1b531e48846997918ddd28dd ChangeLog 2227
 MD5 7438d043252eb213c0ffc92d035d6438 nbtscan-1.0.3.ebuild 676
 MD5 9553ea981aa9b1495ce341ac8112dd72 nbtscan-1.5.1.ebuild 708
-MD5 96c053853d5f882b0ec472fe5a371452 ChangeLog 2141
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
-MD5 904285388b2d557d0ebed945cb0f9109 nbtscan-1.5.1-r1.ebuild 819
+MD5 65ce1fccfeef35934cf3b6506bbefc8a nbtscan-1.5.1-r1.ebuild 822
 MD5 cf7eaedc7093ec3f2c0aca3848d73798 files/digest-nbtscan-1.0.3 64
 MD5 8e3778c37bb9f7f1e27633860cd1b2f2 files/digest-nbtscan-1.5.1 64
 MD5 8e3778c37bb9f7f1e27633860cd1b2f2 files/digest-nbtscan-1.5.1-r1 64
 MD5 8554973b956e4dc879eee3520b4be142 files/nbtscan-1.5.1-script-whitespace.patch 4023
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCKWb2EZCkKN40op4RAqOlAKCdU2/Y8GOw5JNOG+kxkKG2NOLpbACeKaOP
-mfNERPv3/GUi/20y4iDIoUg=
-=kjHf
------END PGP SIGNATURE-----
