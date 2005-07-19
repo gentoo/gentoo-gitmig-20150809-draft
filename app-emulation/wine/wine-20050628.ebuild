@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050628.ebuild,v 1.1 2005/07/10 04:05:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050628.ebuild,v 1.2 2005/07/19 04:40:59 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -111,6 +111,7 @@ src_compile() {
 	emake -j1 depend || die "depend"
 	emake all || die "all"
 #	if use doc ; then
+#		VARTEXFONTS=${T} \
 #		emake -j1 -C documentation doc || die "docs"
 #	fi
 }
