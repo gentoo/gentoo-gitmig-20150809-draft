@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 00fe5ef792175fa9ae1a6942fd48fbf6 ChangeLog 2801
 MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
-MD5 b276e7efecacdd1d747aa5c6edebbd4d gtkpbbuttons-0.6.4.ebuild 660
 MD5 da451e6ce7a703af367540a1ca70342f gtkpbbuttons-0.6.7.ebuild 695
-MD5 b1463d1b0e129df47ea9bf11d1d9b847 gtkpbbuttons-0.6.3.ebuild 659
 MD5 ee3f326530e4a7cddbb8af59538626f5 gtkpbbuttons-0.6.5.ebuild 746
-MD5 1e2db5a4c5cdf08b15a6b5b88f5de5a7 ChangeLog 2668
-MD5 08a2fd92d835c74c29b7e227292b9706 files/ipc-fix.patch 569
-MD5 836ac73cab7be389e3808db2ebecc00c files/digest-gtkpbbuttons-0.6.5 70
-MD5 4ec9e976560c94358676474b4559d414 files/digest-gtkpbbuttons-0.6.7 70
+MD5 b1463d1b0e129df47ea9bf11d1d9b847 gtkpbbuttons-0.6.3.ebuild 659
+MD5 b276e7efecacdd1d747aa5c6edebbd4d gtkpbbuttons-0.6.4.ebuild 660
+MD5 3225f807ab1798656f0d5bf0ca41ceeb gtkpbbuttons-0.6.8.ebuild 689
 MD5 62dcf1c91e38dcdc13c885236c5050e7 files/digest-gtkpbbuttons-0.6.4 70
+MD5 4ec9e976560c94358676474b4559d414 files/digest-gtkpbbuttons-0.6.7 70
+MD5 08a2fd92d835c74c29b7e227292b9706 files/ipc-fix.patch 569
 MD5 7e032d534717854928b847cc47b399cc files/digest-gtkpbbuttons-0.6.3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2j1ogIKl8Uu19MoRAqfsAJ9BJorpU4EwUOkzJLbxeOCqBHF00gCeIjCT
-yUNdoK6YfvQKOIoGCqt1zDs=
-=ItSc
------END PGP SIGNATURE-----
+MD5 d8b070f83a11778fd7411f805515f366 files/digest-gtkpbbuttons-0.6.8 67
+MD5 836ac73cab7be389e3808db2ebecc00c files/digest-gtkpbbuttons-0.6.5 70
