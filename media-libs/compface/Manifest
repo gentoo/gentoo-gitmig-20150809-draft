@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e736643be35711dbed25229a50015d08 ChangeLog 3080
 MD5 eec73fbea3403356a034bd509fe1a022 metadata.xml 436
 MD5 861aa412b6d6ce7ffc5c5300e5588332 compface-1.5.ebuild 828
@@ -10,3 +13,10 @@ MD5 bfbda4c57251fde19873b043d920fef7 files/compface-1.5.1-destdir.diff 1648
 MD5 bc74c4ff7219b259c15153a1ce23ef76 files/compface-1.5-destdir.diff 1680
 MD5 99136b248ff383abec90471de2c701ac files/compface-1.4-errno.diff 908
 MD5 f7f2d3f516dc4843604ade194eb8ccf5 files/digest-compface-1.5.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3ZAzKf2g/qXtneoRAp1YAKCKMoMZIpBhUdxSstF9FLv0ooYKJQCfY++P
+epCkmbiDPyQzJKNmE7g7Cvc=
+=WMc+
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2120445221c8a91f1b31eca9501cd737 libfame-0.9.0.ebuild 1022
 MD5 fcd8d2bd06fc2b752b54ee220a257be1 ChangeLog 4601
 MD5 f16673def2a067c14bb4357f55ee1ee6 libfame-0.9.1.ebuild 1328
@@ -10,3 +13,10 @@ MD5 0631609809520953d425ea1b77009300 files/digest-libfame-0.9.0 65
 MD5 0631609809520953d425ea1b77009300 files/digest-libfame-0.9.0-r1 65
 MD5 c3a2bb99aa1812617fb10c1738955aad files/digest-libfame-0.8.10 66
 MD5 275232f27240b6980578d85b8b3d66ff files/digest-libfame-0.9.1-r1 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3ZCzKf2g/qXtneoRAuqFAJwOsJBPaWwSBVg3A/Y5e6tQ3uamyACgotrK
+p9FZfTk5EAYmMpmuYLpdSfo=
+=GUkt
+-----END PGP SIGNATURE-----
