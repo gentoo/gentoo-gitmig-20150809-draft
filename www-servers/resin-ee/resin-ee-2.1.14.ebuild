@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/resin-ee-2.1.14.ebuild,v 1.3 2005/07/09 17:51:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/resin-ee-2.1.14.ebuild,v 1.4 2005/07/19 00:01:11 axxo Exp $
 
 inherit java-pkg eutils
 
 DESCRIPTION="The Enterprise Edition of Resin"
 SRC_URI="http://www.caucho.com/download/${P}.tar.gz"
 HOMEPAGE="http://www.caucho.com"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~ppc ~sparc x86"
 LICENSE="CAUCHO"
 SLOT="0"
 DEPEND="!net-www/resin"
