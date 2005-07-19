@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.9b.ebuild,v 1.4 2005/07/17 10:59:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.9b.ebuild,v 1.5 2005/07/19 06:10:59 eradicator Exp $
 
 inherit linux-mod flag-o-matic eutils
 
@@ -11,16 +11,14 @@ SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-# -sparc: snd-ioctl32 issues in 1.0.9b --eradicator
-KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc -sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc ~sparc x86"
 IUSE="oss doc"
 
 RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}"
 DEPEND="${RDEPEND}
-	sys-devel/patch
 	virtual/linux-sources
-	>=sys-devel/autoconf-2.50
+	sparc? ( >=sys-devel/autoconf-2.50 )
 	sys-apps/debianutils"
 
 PROVIDE="virtual/alsa"
@@ -59,6 +57,11 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	if use sparc ; then
+		epatch ${FILESDIR}/alsa-driver-1.0.9b-sparc64-ioctl-detect.patch
+		WANT_AUTOCONF=2.5 autoconf || die
+	fi
 
 	convert_to_m ${S}/Makefile
 }
