@@ -1,0 +1,17 @@
+diff -NurpP --minimal linux-2.6.12.3-vs2.0-rc8/fs/locks.c linux-2.6.12.3-vs2.0-rc8.1/fs/locks.c
+--- linux-2.6.12.3-vs2.0-rc8/fs/locks.c	2005-07-17 03:01:38 +0200
++++ linux-2.6.12.3-vs2.0-rc8.1/fs/locks.c	2005-07-17 15:40:11 +0200
+@@ -461,9 +461,10 @@ static int lease_alloc(struct file *filp
+ 	if (fl == NULL)
+ 		return -ENOMEM;
+ 
+-	vxd_assert(filp->f_xid == vx_current_xid(),
+-		"f_xid(%d) == current(%d)", filp->f_xid, vx_current_xid());
+-	fl->fl_xid = filp->f_xid;
++	fl->fl_xid = vx_current_xid();
++	if (filp)
++		vxd_assert(filp->f_xid == fl->fl_xid,
++			"f_xid(%d) == fl_xid(%d)", filp->f_xid, fl->fl_xid);
+ 	vx_locks_inc(fl);
+ 	error = lease_init(filp, type, fl);
+ 	if (error)
