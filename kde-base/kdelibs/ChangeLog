@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.261 2005/07/20 20:23:15 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.262 2005/07/20 22:32:18 herbs Exp $
+
+  20 Jul 2005; Herbie Hopkins <herbs@gentoo.org> kdelibs-3.3.2-r10.ebuild:
+  Stable on amd64 wrt bug #98735.
 
   20 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
   kdelibs-3.3.2-r10.ebuild:
