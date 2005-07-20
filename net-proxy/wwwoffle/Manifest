@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 57e4c31d427acf4dbbc0a9e552b1d682 wwwoffle-2.8b.ebuild 4523
 MD5 4b09298e5985619e8a4ff7c7a0c40a87 ChangeLog 6587
 MD5 2f092f7d958b226c98713d29cff08f9d metadata.xml 502
@@ -9,3 +12,10 @@ MD5 9976f6cc21d8fd01b67cb72fc7cf3198 files/wwwoffle.initd 539
 MD5 009de7420924ad30ca9611df2d1d6299 files/digest-wwwoffle-2.8b 62
 MD5 a627d44111b7ff1d162ac248f5c35376 files/digest-wwwoffle-2.8e 63
 MD5 5460db8b11a1189b90e0b88980fe4e2d files/wwwoffled 506
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3eMoNSP4Vda7IdsRAuaZAJ9BZ4uNpWMwBz8r7Tsrc0+VbD6DzACeO7Ta
+fMBcpoQz74W3MKRJYJRbTWs=
+=AibC
+-----END PGP SIGNATURE-----
