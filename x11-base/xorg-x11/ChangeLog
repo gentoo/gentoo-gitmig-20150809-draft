@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.436 2005/07/20 21:21:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.437 2005/07/20 21:26:33 spyderous Exp $
 
   20 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.99.15.ebuild:
@@ -15,7 +15,12 @@
 
   20 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xorg-x11-6.8.99.15.ebuild:
-  New snapshot.
+  New snapshot. Pull mmx, sse and 3dnow USE flags. They're pointless, since what
+  they do is cause Mesa to support them, but Mesa already does runtime checks.
+  (#99534) Fix up return-code check on ttmkfdir, so we don't overwrite its files
+  with mkfontscale. mkfontscale cannot correctly generate CP1251 encodings,
+  among probable others. (#61940) Also, on sparc we can start using the kbd
+  driver like everyone else.
 
   18 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xorg-x11-6.8.99.5.ebuild, -xorg-x11-6.8.99.8.ebuild:
