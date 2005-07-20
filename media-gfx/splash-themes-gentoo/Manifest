@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4937cb257cab2dd30c57dd2ad3d66474 splash-themes-gentoo-20050429.ebuild 780
-MD5 ad30cb3430f21ab4629e74dff0596ee6 ChangeLog 669
+MD5 62a9815ac13c9a5498d0a1c061b113fe splash-themes-gentoo-20050429.ebuild 779
+MD5 abd30b2a5631b252c9e258a957e9c60f ChangeLog 793
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 36933970a8a86c439254e145516dbb3e files/digest-splash-themes-gentoo-20050429 159
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzXkachej4aZK9/cRAg4bAJ4ulakyCBTWC+YEcIsftzdTp1wtiQCaA2T7
-Bpo8yGPlmt9EP3hqFx6K+f0=
-=L3Z+
+iD8DBQFC3rky2G5bA0cA/ScRAoniAJ9wAm5n8aKQDeULgcs5Yy7KKjrDzwCfdIrw
+L4Apuj4m49M39etTqClOFaA=
+=AtuF
 -----END PGP SIGNATURE-----
