@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r2.ebuild,v 1.2 2005/05/22 15:38:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r2.ebuild,v 1.3 2005/07/20 09:28:12 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -245,6 +245,13 @@ want_tls() {
 
 	# If we've got nptl, we've got tls
 	built_with_use sys-libs/glibc nptl && return 0
+
+	# 2.3.5 turned off tls for linuxthreads glibc on i486 and i586
+	if use x86 && has_version '>=sys-libs/glibc-2.3.5' ; then
+		case ${CHOST/-*} in
+			i486|i586) return 1 ;;
+		esac
+	fi
 
 	# These versions built linuxthreads version to support tls, too
 	has_version '>=sys-libs/glibc-2.3.4.20040619-r2' && return 0
