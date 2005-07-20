@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 d5acf192d1eb4337b4932032e2712b88 ChangeLog 495
 MD5 8e6557d777542beebd0e35c01bdc156c metadata.xml 389
-MD5 123807c53b5d87c5c299ed318a0b5ff2 kannel-1.4.0.ebuild 2222
+MD5 c57fb2c5b4d0781a086ea18d51eb2577 kannel-1.4.0.ebuild 2214
 MD5 a7c05f05df99dd759d119b393cbe59e0 files/digest-kannel-1.4.0 66
 MD5 b77f55cded4c364d155c302e81eb07c6 files/kannel-confd 366
 MD5 0b79d37344165b8743061f68a18959ce files/kannel-initd 1529
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCot0bjiC39V7gKu0RAqqSAKCIJqlrZmblJfe9eg259cgYAYkRoACfSE10
-LIDTLfQAFrcRb81MySkLWQY=
-=ymYR
+iD8DBQFC3eXwNSP4Vda7IdsRAl0HAJ91sJye4SuJlIWlFRRZyzuhVAvYNgCfaiFj
+n27hYqBckFRSZsmLNj+aId4=
+=RwMo
 -----END PGP SIGNATURE-----
