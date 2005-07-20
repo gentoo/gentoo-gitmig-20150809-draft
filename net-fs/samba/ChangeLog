@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.178 2005/06/20 09:50:57 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.179 2005/07/20 13:18:37 satya Exp $
+
+  20 Jul 2005; Christian Andreetta <satya@gentoo.org> samba-3.0.10.ebuild,
+  samba-3.0.11.ebuild, samba-3.0.14a-r1.ebuild:
+  Stale doc removal (if present): bug #99375 (thanks to carlo@gentoo.org)
 
   20 Jun 2005; Christian Andreetta <satya@gentoo.org> samba-3.0.10.ebuild,
   samba-3.0.11.ebuild, samba-3.0.14a-r1.ebuild:
