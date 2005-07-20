@@ -1,12 +1,13 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.98 2005/07/20 09:28:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.99 2005/07/20 11:15:54 eradicator Exp $
 
   20 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> -files/libGL.la,
   -nvidia-glx-1.0.6111-r1.ebuild, nvidia-glx-1.0.6111-r2.ebuild,
   -nvidia-glx-1.0.6629-r1.ebuild, -nvidia-glx-1.0.6629-r5.ebuild,
   nvidia-glx-1.0.6629-r6.ebuild, nvidia-glx-1.0.7167-r2.ebuild,
-  nvidia-glx-1.0.7174-r4.ebuild, -nvidia-glx-1.0.7664.ebuild:
+  nvidia-glx-1.0.7174-r4.ebuild, -nvidia-glx-1.0.7664.ebuild,
+  nvidia-glx-1.0.7667.ebuild:
   Removing old versions. Fixing want_tls to work with 2.3.5 on CHOST=i486 and
   i586.
 
