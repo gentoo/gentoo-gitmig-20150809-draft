@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/freetts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.17 2005/06/09 09:34:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.18 2005/07/20 22:05:32 eradicator Exp $
+
+  20 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -freetts-1.2_beta.ebuild, freetts-1.2.ebuild:
+  Added app-arch/sharutils to DEPEND and removed old version.  Closes bug #73668.
 
   09 Jun 2005; Markus Rothe <corsair@gentoo.org> freetts-1.2.ebuild:
   Stable on ppc64
