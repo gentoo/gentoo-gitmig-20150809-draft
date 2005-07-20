@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-1.0b.ebuild,v 1.3 2005/03/28 21:22:32 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-1.0b.ebuild,v 1.4 2005/07/20 10:00:30 dragonheart Exp $
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="simple program to view pictures on a linux framebuffer device"
 HOMEPAGE="http://s-tech.elsat.net.pl/fbv/"
-SRC_URI="http://s-tech.elsat.net.pl/fbv//${P}.tar.gz"
+SRC_URI="http://s-tech.elsat.net.pl/fbv/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc64"
+KEYWORDS="x86 ~ppc64"
 IUSE="png gif jpeg"
 
 DEPEND="gif? ( media-libs/giflib )

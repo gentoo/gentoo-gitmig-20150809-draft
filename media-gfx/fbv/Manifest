@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 90b7a197b405efc6ab10450a7bca0088 ChangeLog 1459
-MD5 0829f5af1e35b9121b8d75dd7d15980a fbv-1.0b.ebuild 1173
+MD5 c7edbdf4a52dc2255c18ec2ee2c805c7 ChangeLog 1623
+MD5 05fc9c473ec7ab25d74a1f81f9fd783c fbv-1.0b.ebuild 1177
 MD5 036b6a9a8adfb4f25c886ebdb6bb9f14 metadata.xml 456
-MD5 577496df87336cf941e139f65e396ddd fbv-0.99.ebuild 1065
+MD5 56c570264fa3d43dfa201b55ee3431ba fbv-0.99.ebuild 1061
 MD5 d0fa687199799a3f1c51f0bbbb3a0be3 files/digest-fbv-1.0b 59
 MD5 fddf15ff0ff3ee14782881f4425e8b36 files/digest-fbv-0.99 59
 MD5 c646a46a19f73a342c92c6f3cb003193 files/oob-segfault-fbv-1.0b.diff 559
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCazjOmdTrptrqvGERApczAKCdohMSSRR0L5wv1WjBWjka+L5aEwCfdOpD
-SMW5ZoPihPJSKZV2dWaWKhY=
-=T0kW
+iD8DBQFC3iDTmdTrptrqvGERAiR6AJwIQJ8Y4tRnjmtoYOTYzt8vvEMf5gCfZ1T1
+fv5LF71DJqypwsJF5VqFQGg=
+=fDb1
 -----END PGP SIGNATURE-----
