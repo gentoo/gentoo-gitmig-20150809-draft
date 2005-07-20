@@ -1,115 +1,109 @@
-diff -NuarbBw qmail-1.03.orig/qmail-qmqpc.c qmail-1.03/qmail-qmqpc.c
---- qmail-1.03.orig/qmail-qmqpc.c	1998-06-15 03:53:16.000000000 -0700
-+++ qmail-1.03/qmail-qmqpc.c	2005-07-14 01:00:24.000000000 -0700
+diff -u -r qmail-1.03.orig/qmail-qmqpc.c qmail-1.03/qmail-qmqpc.c
+--- qmail-1.03.orig/qmail-qmqpc.c	2005-07-19 22:25:48.000000000 +0200
++++ qmail-1.03/qmail-qmqpc.c	2005-07-19 22:34:27.000000000 +0200
 @@ -109,7 +109,7 @@
    qmqpfd = socket(AF_INET,SOCK_STREAM,0);
    if (qmqpfd == -1) die_socket();
  
 -  if (timeoutconn(qmqpfd,&ip,PORT_QMQP,10) != 0) {
-+  if (timeoutconn(qmqpfd,&ip, ( struct ip_address * ) 0, PORT_QMQP,10) != 0) { // JAK
++  if (timeoutconn(qmqpfd,&ip,(struct ip_address*)0,PORT_QMQP,10) != 0) {
      lasterror = 73;
      if (errno == error_timeout) lasterror = 72;
      close(qmqpfd);
-diff -NuarbBw qmail-1.03.orig/qmail-remote.c qmail-1.03/qmail-remote.c
---- qmail-1.03.orig/qmail-remote.c	2005-07-14 00:50:58.000000000 -0700
-+++ qmail-1.03/qmail-remote.c	2005-07-14 01:01:22.000000000 -0700
+diff -u -r qmail-1.03.orig/qmail-remote.c qmail-1.03/qmail-remote.c
+--- qmail-1.03.orig/qmail-remote.c	2005-07-19 22:25:48.000000000 +0200
++++ qmail-1.03/qmail-remote.c	2005-07-20 14:51:20.000000000 +0200
 @@ -52,6 +52,9 @@
  stralloc auth_b64_pass = {0};
  stralloc auth_status = {0};
  
-+stralloc                smtphost = { 0 }; // JAK
-+ipalloc                 smtpip   = { 0 }; // JAK
++stralloc smtphost = {0};
++ipalloc smtpip = {0};
 +
  saa reciplist = {0};
  
  struct ip_address partner;
-@@ -902,9 +905,27 @@
- 
-   addrmangle(&sender,argv[2],&flagalias,0);
+@@ -904,6 +907,20 @@
   
-+   // 'canonhost' now should contain the canonical name of the sender's host.
-+   // Most of the time this is a local domain name, but sometimes the domain
-+   // name of a forwarded email.
-+
-+   stralloc_copy ( &smtphost, &canonhost ); // JAK
-+   dns_ip ( &smtpip, &smtphost );           // JAK
-+
    if (!saa_readyplus(&reciplist,0)) temp_nomem();
    if (ipme_init() != 1) temp_oserr();
++  
++  // 'canonhost' now should contain the canonical name of the sender's host.
++  // Most of the time this is a local domain name, but sometimes the domain
++  // name of a forwarded email.
++  if(!stralloc_copy(&smtphost, &canonhost)) temp_nomem();
++  dns_ip(&smtpip, &smtphost);
++
++  // Check if the obtained SMTP IP address is one of the addresses
++  // on this machine. If it is, set 'helohost' to 'smtphost'.
++  if(smtpip.len > 0 && ipme_is(&smtpip.ix->ip)) {
++    stralloc_copy(&helohost, &smtphost);
++  }else{
++    byte_zero(smtpip.ix->ip.d, sizeof(smtpip.ix->ip.d));
++  }
   
-+   // JAK =>
-+   // Check if the obtained SMTP IP address is one of the addresses
-+   // on this machine. If it is, set 'helohost' to 'smtphost'.
-+
-+   if ( ipme_is ( &smtpip.ix -> ip ) )
-+      stralloc_copy ( &helohost, &smtphost );
-+   else                                        
-+      smtpip.ix -> ip.d [ 0 ] = smtpip.ix -> ip.d [ 1 ] = smtpip.ix -> ip.d [ 2 ] = smtpip.ix -> ip.d [ 3 ] = 0;
-+
-+   // JAK <=
-+
    flagallaliases = 1;
    recips = argv + 3;
-   while (*recips) {
-@@ -951,7 +972,7 @@
+@@ -951,7 +968,7 @@
      if (smtpfd == -1) temp_oserr();
   
      if (qmtp_priority(ip.ix[i].pref)) {
 -      if (timeoutconn(smtpfd,&ip.ix[i].ip,(unsigned int) qmtp_port,timeoutconnect) == 0) {
-+      if (timeoutconn(smtpfd,&ip.ix[i].ip, &smtpip.ix -> ip, (unsigned int) port,timeoutconnect) == 0) { // JAK
++      if (timeoutconn(smtpfd,&ip.ix[i].ip,&smtpip.ix->ip,(unsigned int) qmtp_port,timeoutconnect) == 0) {
  	tcpto_err(&ip.ix[i].ip,0);
  	partner = ip.ix[i].ip;
  	qmtp(); /* does not return */
-diff -NuarbBw qmail-1.03.orig/remoteinfo.c qmail-1.03/remoteinfo.c
---- qmail-1.03.orig/remoteinfo.c	1998-06-15 03:53:16.000000000 -0700
-+++ qmail-1.03/remoteinfo.c	2005-07-14 01:00:24.000000000 -0700
+@@ -960,7 +977,7 @@
+       smtpfd = socket(AF_INET,SOCK_STREAM,0);
+       if (smtpfd == -1) temp_oserr();
+     }
+-    if (timeoutconn(smtpfd,&ip.ix[i].ip,(unsigned int) smtp_port,timeoutconnect) == 0) {
++    if (timeoutconn(smtpfd,&ip.ix[i].ip,&smtpip.ix->ip,(unsigned int) smtp_port,timeoutconnect) == 0) {
+       tcpto_err(&ip.ix[i].ip,0);
+       partner = ip.ix[i].ip;
+ #ifdef TLS
+diff -u -r qmail-1.03.orig/remoteinfo.c qmail-1.03/remoteinfo.c
+--- qmail-1.03.orig/remoteinfo.c	2005-07-19 22:25:48.000000000 +0200
++++ qmail-1.03/remoteinfo.c	2005-07-19 22:33:05.000000000 +0200
 @@ -49,7 +49,7 @@
    byte_copy(&sin.sin_addr,4,ipl);
    sin.sin_port = 0;
    if (bind(s,(struct sockaddr *) &sin,sizeof(sin)) == -1) { close(s); return 0; }
 -  if (timeoutconn(s,ipr,113,timeout) == -1) { close(s); return 0; }
-+  if (timeoutconn(s,ipr,ipl,113,timeout) == -1) { close(s); return 0; } // JAK
++  if (timeoutconn(s,ipr,ipl,113,timeout) == -1) { close(s); return 0; }
    fcntl(s,F_SETFL,fcntl(s,F_GETFL,0) & ~O_NDELAY);
   
    len = 0;
-diff -NuarbBw qmail-1.03.orig/timeoutconn.c qmail-1.03/timeoutconn.c
---- qmail-1.03.orig/timeoutconn.c	1998-06-15 03:53:16.000000000 -0700
-+++ qmail-1.03/timeoutconn.c	2005-07-14 01:00:24.000000000 -0700
+diff -u -r qmail-1.03.orig/timeoutconn.c qmail-1.03/timeoutconn.c
+--- qmail-1.03.orig/timeoutconn.c	2005-07-19 22:25:48.000000000 +0200
++++ qmail-1.03/timeoutconn.c	2005-07-20 14:27:50.000000000 +0200
 @@ -10,9 +10,10 @@
  #include "byte.h"
  #include "timeoutconn.h"
  
 -int timeoutconn(s,ip,port,timeout)
-+int timeoutconn(s,ip,smtpip,port,timeout) // JAK
++int timeoutconn(s,ip,localip,port,timeout)
  int s;
  struct ip_address *ip;
-+struct ip_address *smtpip;             // JAK
++struct ip_address *localip;
  unsigned int port;
  int timeout;
  {
-@@ -22,6 +23,25 @@
+@@ -22,6 +23,17 @@
    fd_set wfds;
    struct timeval tv;
   
-+   // JAK =>
-+   // If 'smtpip' != 0.0.0.0 bind () it as outgoing SMTP IP address.
++  // If 'smtpip' != 0.0.0.0 bind () it as outgoing SMTP IP address.
++  if(localip && (localip->d[0] || localip->d[1] || localip->d[2] || localip->d[3])) {
++    byte_zero(&sin, sizeof(sin));
++    byte_copy(&sin.sin_addr.s_addr, 4, localip);
++    sin.sin_family = AF_INET;
 +
-+   if ( ( smtpip            != 0 ) &&
-+        ( smtpip -> d [ 0 ] != 0 ) && 
-+        ( smtpip -> d [ 1 ] != 0 ) && 
-+        ( smtpip -> d [ 2 ] != 0 ) && 
-+        ( smtpip -> d [ 3 ] != 0 )    )
-+   {
-+      byte_zero ( &sin, sizeof ( sin ) );
-+      byte_copy ( &sin.sin_addr.s_addr, 4, smtpip );
-+      sin.sin_family = AF_INET;
-+
-+      if ( bind ( s, ( struct sockaddr * ) &sin, sizeof ( sin ) ) )
-+         return ( -1 );
-+   }
-+
-+   // JAK <=
-+
++    // Don't return if it doesn't work out. Otherwise, it would
++    // fail if the user uses the moreipme functionality.
++    bind(s, (struct sockaddr*)&sin, sizeof(sin));
++  }
++  
    byte_zero(&sin,sizeof(sin));
    byte_copy(&sin.sin_addr,4,ip);
    x = (char *) &sin.sin_port;

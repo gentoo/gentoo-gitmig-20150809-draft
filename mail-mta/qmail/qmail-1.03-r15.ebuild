@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.29 2005/07/18 05:13:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.30 2005/07/20 14:11:05 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -434,6 +434,11 @@ buildtcprules() {
 }
 
 pkg_postinst() {
+	if [[ ! -x /var/qmail/bin/queue-fix ]]; then
+		eerror "Can't find /var/qmail/bin/queue-fix -- have you rm -rf'd /var/qmail?"
+		einfo "Please remerge net-mail/queue-fix and don't do that again!"
+		die "Can't find /var/qmail/bin/queue-fix"
+	fi
 
 	einfo "Setting up the message queue hierarchy ..."
 	# queue-fix makes life easy!
@@ -485,7 +490,7 @@ pkg_preinst() {
 			else
 				fail=1
 			fi
-			if [ "${fail}" = "1" ]; then
+			if [ "${fail}" = 1 -a -f ${old} ]; then
 				eerror "Error moving $old to $new, be sure to check the"
 				eerror "configuration! You may have already moved the files,"
 				eerror "in which case you can delete $old"

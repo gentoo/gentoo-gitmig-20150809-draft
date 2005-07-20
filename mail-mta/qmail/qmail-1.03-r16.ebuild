@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.29 2005/07/19 15:41:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.30 2005/07/20 14:11:05 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -251,8 +251,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PVR}/invalid-envelope-sender-log.patch
 
 	# See bug 98961
-	# hansmi, 2005-07-19: This patch is broken, needs fixing, #99497
-	# epatch ${FILESDIR}/${PVR}/virtual-domain-outgoing-IP-address.patch
+	# Sort-of rewritten by hansmi@g.o, because the old patch was heavily broken
+	# (caused qmail-remote to segfault)
+	epatch ${FILESDIR}/${PVR}/virtual-domain-outgoing-IP-address.patch
 
 	# See bug #90631
 	if use logmail; then
@@ -380,7 +381,7 @@ src_install() {
 
 	for i in mailer-daemon postmaster root
 	do
-		if [ ! -f ${ROOT}/var/qmail/alias/.qmail-${i} ]; then
+		if [[ ! -f ${ROOT}/var/qmail/alias/.qmail-${i} ]]; then
 			touch ${D}/var/qmail/alias/.qmail-${i}
 			fowners alias:qmail /var/qmail/alias/.qmail-${i}
 		fi
@@ -477,7 +478,7 @@ buildtcprules() {
 		src=${ROOT}${TCPRULES_DIR}/${f}
 		cdb=${ROOT}${TCPRULES_DIR}/${f}.cdb
 		tmp=${ROOT}${TCPRULES_DIR}/.${f}.tmp
-		cat ${src} 2>/dev/null | tcprules ${cdb} ${tmp}
+		cat ${src} 2>/dev/null | tcprules ${cdb} ${tmp} < ${src}
 	done
 }
 
@@ -546,7 +547,7 @@ pkg_preinst() {
 			else
 				fail=1
 			fi
-			if [ "${fail}" = "1" ]; then
+			if [ "${fail}" = 1 -a -f ${old} ]; then
 				eerror "Error moving $old to $new, be sure to check the"
 				eerror "configuration! You may have already moved the files,"
 				eerror "in which case you can delete $old"
