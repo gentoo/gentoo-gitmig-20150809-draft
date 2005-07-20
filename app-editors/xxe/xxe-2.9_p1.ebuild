@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.9_p1.ebuild,v 1.1 2005/04/05 13:47:10 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.9_p1.ebuild,v 1.2 2005/07/20 16:08:30 axxo Exp $
 
 MY_PV="${PV/./}"
 MY_PV="${MY_PV/_p/p}"
@@ -15,7 +15,7 @@ LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 RESTRICT="nostrip nomirror"
-RDEPEND=">=virtual/jdk-1.4.1"
+RDEPEND=">=virtual/jre-1.4.1"
 DEPEND=""
 INSTALLDIR=/opt/${PN}
 
