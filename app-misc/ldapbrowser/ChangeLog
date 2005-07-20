@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ldapbrowser
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ldapbrowser/ChangeLog,v 1.7 2005/01/01 15:10:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ldapbrowser/ChangeLog,v 1.8 2005/07/20 16:20:46 axxo Exp $
+
+  20 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
+  ldapbrowser-282_beta2.ebuild, ldapbrowser-282_beta2-r1.ebuild:
+  java dep fixes
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   ldapbrowser-282_beta2-r1.ebuild, ldapbrowser-282_beta2.ebuild:
