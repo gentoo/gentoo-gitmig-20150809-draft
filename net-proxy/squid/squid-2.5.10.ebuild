@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10.ebuild,v 1.6 2005/07/19 23:23:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10.ebuild,v 1.7 2005/07/20 05:04:23 mrness Exp $
 
 inherit eutils pam toolchain-funcs
 
@@ -30,6 +30,11 @@ RDEPEND="pam? ( virtual/pam )
 	selinux? ( sec-policy/selinux-squid )
 	!mips? ( logrotate? ( app-admin/logrotate ) )"
 DEPEND="${RDEPEND} dev-lang/perl"
+
+pkg_setup() {
+	enewgroup squid 31
+	enewuser squid 31 /bin/false /var/cache/squid squid
+}
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
@@ -181,6 +186,11 @@ src_install() {
 	rm -rf ${D}/var
 	diropts -m0755 -o squid -g squid
 	dodir /var/cache/squid /var/log/squid
+}
+
+pkg_preinst() {
+	enewgroup squid 31
+	enewuser squid 31 /bin/false /var/cache/squid squid
 }
 
 pkg_postinst() {

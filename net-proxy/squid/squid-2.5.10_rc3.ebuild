@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10_rc3.ebuild,v 1.10 2005/07/16 10:14:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10_rc3.ebuild,v 1.11 2005/07/20 05:04:23 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,6 +31,11 @@ RDEPEND="virtual/libc
 	selinux? ( sec-policy/selinux-squid )
 	!mips? ( logrotate? ( app-admin/logrotate ) )"
 DEPEND="${RDEPEND} dev-lang/perl"
+
+pkg_setup() {
+	enewgroup squid 31
+	enewuser squid 31 /bin/false /var/cache/squid squid
+}
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
@@ -189,6 +194,11 @@ src_install() {
 
 	diropts -m0755 -o squid -g squid
 	dodir /var/cache/squid /var/log/squid
+}
+
+pkg_preinst() {
+	enewgroup squid 31
+	enewuser squid 31 /bin/false /var/cache/squid squid
 }
 
 pkg_postinst() {
