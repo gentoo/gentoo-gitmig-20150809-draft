@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e016ffeb410d1f3c244a9f5137e2caaa smtm-1.6.5.ebuild 657
 MD5 a27e102879d6db0e486a0e097f1f9126 smtm-1.4.0.ebuild 684
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 fc4e28f1d4246e718d8df78133f6a79c ChangeLog 631
 MD5 3aa2ff5aded6e0799bba906dccbe1b1d files/digest-smtm-1.6.5 61
 MD5 5d23e9d4a07799215de9f32d28b587ee files/digest-smtm-1.4.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC3mMNKRy60XGEcJIRAuMdAJ4xbI+853qYA+DNZ/tlSiTrcA3BagCgkziS
+NApAgjfJifmHikvUCPpPdBs=
+=LTdt
+-----END PGP SIGNATURE-----
