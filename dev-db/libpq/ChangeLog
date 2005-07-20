@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.13 2005/07/14 19:26:04 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.14 2005/07/20 18:11:16 nakano Exp $
+
+  20 Jul 2005; Masatomo Nakano <nakano@gentoo.org> libpq-8.0.3.ebuild:
+  Stable on x86.
+
+  20 Jul 2005; Masatomo Nakano <nakano@gentoo.org> libpq-8.0.3.ebuild:
+  Marked stable on x86.
 
   14 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> libpq-8.0.1.ebuild:
   Stable on hppa.
