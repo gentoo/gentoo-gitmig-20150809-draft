@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.9.0_beta2.ebuild,v 1.2 2005/06/28 05:26:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.9.0_beta2.ebuild,v 1.3 2005/07/20 14:14:04 dholm Exp $
 
 inherit flag-o-matic eutils
 
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${PN}-${MY_PV}.tar.gz
+	cd ${S}
+	epatch ${FILESDIR}/${P}-fix.patch
 }
 
 src_compile() {
