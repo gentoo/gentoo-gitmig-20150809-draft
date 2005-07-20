@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/phpBB
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.16 2005/07/10 20:11:16 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.17 2005/07/20 12:10:03 rl03 Exp $
+
+*phpBB-2.0.17 (20 Jul 2005)
+
+  20 Jul 2005; Renat Lumpau <rl03@gentoo.org>
+  +files/2.0.17-postinstall-en.txt, -files/2.0.16-postinstall-en.txt,
+  -phpBB-2.0.16.ebuild, +phpBB-2.0.17.ebuild:
+  Version bump wrt bug #98058
 
   10 Jul 2005; Renat Lumpau <rl03@gentoo.org>
   +files/2.0.16-postinstall-en.txt, -files/2.0.10-postinstall-en.txt,

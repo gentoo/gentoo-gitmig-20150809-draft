@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/phpBB-2.0.16.ebuild,v 1.3 2005/07/10 20:11:16 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/phpBB-2.0.17.ebuild,v 1.1 2005/07/20 12:10:03 rl03 Exp $
 
 inherit webapp
 
@@ -32,7 +32,7 @@ src_install() {
 	webapp_serverowned ${MY_HTDOCSDIR}/language
 	webapp_serverowned ${MY_HTDOCSDIR}/templates
 
-	webapp_postinst_txt en ${FILESDIR}/2.0.16-postinstall-en.txt
+	webapp_postinst_txt en ${FILESDIR}/${PV}-postinstall-en.txt
 
 	webapp_src_install
 }
