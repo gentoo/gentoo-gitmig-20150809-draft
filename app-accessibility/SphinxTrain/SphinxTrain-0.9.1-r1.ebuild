@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.7 2005/01/01 10:53:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.8 2005/07/20 21:59:59 eradicator Exp $
 
 inherit eutils
 
@@ -23,10 +23,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/gcc.patch
+	epatch ${FILESDIR}/gcc34.patch
 }
 
 src_install() {
-	dobin bin.*/* || die
+	# dobin bin.*/* fails ... see bug #73586
+	find bin.* -mindepth 1 -maxdepth 1 -type f -exec dobin '{}' \; || die
+
 	dodoc README etc/*cfg
 	dohtml doc/*[txt html sgml]
 }

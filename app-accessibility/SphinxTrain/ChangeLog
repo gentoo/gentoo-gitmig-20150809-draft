@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/SphinxTrain
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.7 2005/01/01 10:53:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.8 2005/07/20 21:59:59 eradicator Exp $
+
+  20 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> +files/gcc34.patch,
+  SphinxTrain-0.9.1-r1.ebuild:
+  gcc-3.4 and installation fix thanks to laughingplant
+  <hsggebhardt@ucdavis.edu> in bug #73586.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   SphinxTrain-0.9.1-r1.ebuild:
