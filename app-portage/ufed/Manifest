@@ -2,7 +2,7 @@ MD5 80273c72fd8ec519ae2ce1e87338419b ChangeLog 4182
 MD5 5ccf37e59ee3f6c65bd263050cf2d85e metadata.xml 265
 MD5 e0b0654bdb84c335b99618eb130b606f ufed-0.36.ebuild 661
 MD5 b5afc70abeaaee4f62f36a700488fe7e ufed-0.39.ebuild 674
-MD5 01a57bb7a049a3d9c8e925b56f12d295 ufed-0.40_pre1.ebuild 1108
+MD5 3b70a46bb4fec3fabff29ec7786bbdaf ufed-0.40_pre2.ebuild 1007
 MD5 4c94b074dd20cd29d231b0bf50bea06c files/digest-ufed-0.36 61
 MD5 773221c03c705b595a0aa42d003532ab files/digest-ufed-0.39 61
-MD5 84fcb638f27f1a35dba310801a5d9e36 files/digest-ufed-0.40_pre1 66
+MD5 5e310bd926a799d50c751aee591ad915 files/digest-ufed-0.40_pre2 66

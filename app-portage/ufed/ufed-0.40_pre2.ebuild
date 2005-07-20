@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40_pre1.ebuild,v 1.1 2005/05/29 05:20:32 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40_pre2.ebuild,v 1.1 2005/07/20 09:13:54 truedfx Exp $
 
 inherit flag-o-matic
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
-DEPEND="sys-apps/sed
-	sys-libs/ncurses"
+DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
 	dev-lang/perl"
 S=${WORKDIR}/${P%_pre*}
@@ -26,12 +25,6 @@ add_flag() {
 			return
 		fi
 	done
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	sed -i -e '/\.\/\$interface/d' ufed.pl || die
 }
 
 src_compile() {
