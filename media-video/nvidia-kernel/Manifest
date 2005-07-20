@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3191fb9a4e02d29dc0975f03ac7dff01 ChangeLog 30949
 MD5 075fe48a4f1fc90d2c3814e7bcd1d1ab metadata.xml 313
 MD5 31dc5b8d10b1e9dc8bff64fd56fd642a nvidia-kernel-1.0.6111-r3.ebuild 4494
@@ -42,3 +45,10 @@ MD5 7ae487fba8a81fb91d53f35b9066512f files/1.0.7167/NVIDIA_kernel-1.0-7167-conft
 MD5 9df3fbed7af6fcb4ad13b1b5c3851381 files/1.0.7167/NVIDIA_kernel-1.0-7167-disable-preempt-on-smp_processor_id.patch 419
 MD5 6c6bd7d2e4589cf3f4725082bb413a43 files/1.0.7167/NVIDIA_kernel-1.0-7167-x86-shutup-warnings.patch 742
 MD5 e1718c0414288a04c27b70a124947613 files/1.0.7667/NVIDIA_kernel-1.0-7667-KERNEL_VERSION-moved.patch 1764
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3hm1ArHZZzCEUG0RAvT8AJ9EXIesTttYtZikRziXSCPAU5CjHgCZAdHF
+/ihaTBRZ8hSZRfa8mT+6Flw=
+=9RTK
+-----END PGP SIGNATURE-----
