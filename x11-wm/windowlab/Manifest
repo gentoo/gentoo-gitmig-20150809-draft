@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e7d0ba949b27c0a6499dc090936e6a4 windowlab-1.30.ebuild 830
 MD5 4eaf83f518dcccfea94515364ae213c7 windowlab-1.31.ebuild 833
 MD5 94ddcecb8cc21af9a6b5c9ab323008c3 windowlab-1.24.ebuild 831
@@ -6,3 +9,10 @@ MD5 631a87a06351ea5153017bd01ef1a90a metadata.xml 744
 MD5 aaaec4eef2ed6342a0b232f8944a7eb8 files/digest-windowlab-1.24 63
 MD5 4e0ae4fc74cdb9ef64f7728a866f5de3 files/digest-windowlab-1.30 63
 MD5 551da740ce3ac4670d224ff312df9d39 files/digest-windowlab-1.31 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3sAe2G5bA0cA/ScRAmnMAJ0Wq4IwNxYu4atIli+NWCILck9ROgCeMMXw
+LEE/SNnS3TfcM6T+F+lrKAo=
+=6zkc
+-----END PGP SIGNATURE-----

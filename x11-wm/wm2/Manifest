@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9dc902b53d7e6fa21f917ae099167fc2 wm2-4.ebuild 1325
 MD5 4bc79404907d4fb259c08b6861392161 ChangeLog 891
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
 MD5 9e0ac0452d3a84e7f4837c7f0f08ff37 files/wm2-4-gentoo.patch 3430
 MD5 b06be8523fb665cee575914e6b788265 files/digest-wm2-4 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3sDl2G5bA0cA/ScRAsACAJ9uM6/IECPdYzejWDb5ZZeLAy8ysQCgtEug
+qIAu+wj7TK+fj22wzGxkpME=
+=mVZp
+-----END PGP SIGNATURE-----
