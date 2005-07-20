@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portagemaster
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.16 2005/04/24 11:32:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.17 2005/07/20 16:25:57 axxo Exp $
+
+  20 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
+  -portagemaster-0.2.0.ebuild, portagemaster-0.2.1.ebuild:
+  java fixes
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   portagemaster-0.2.1.ebuild:
