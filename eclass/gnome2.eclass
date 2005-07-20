@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.53 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.54 2005/07/20 16:30:36 leonardop Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -108,6 +108,25 @@ gnome2_gconf_uninstall() {
 
 }
 
+gnome2_icon_cache_update() {
+	local updater=`which gtk-update-icon-cache`
+	if ! grep -q "obj /usr/share/icons" ${ROOT}/var/db/pkg/*/${PF}/CONTENTS \
+	|| [ ! -x "$updater" ]; then
+		# Nothing to update
+		return
+	fi
+
+	ebegin "Updating icons cache"
+
+	local retval=0
+	for dir in \
+	$(find ${ROOT}/usr/share/icons -maxdepth 1 -mindepth 1 -type d); do
+		$updater -qf $dir || retval=$?
+	done
+
+	eend $retval
+}
+
 gnome2_omf_fix() {
 
 	# workaround/patch against omf.make or omf-install/Makefile.in
@@ -152,6 +171,7 @@ gnome2_pkg_postinst() {
 	gnome2_scrollkeeper_update
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+	gnome2_icon_cache_update
 
 }
 
@@ -166,6 +186,7 @@ gnome2_pkg_postrm() {
 	gnome2_scrollkeeper_update
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+	gnome2_icon_cache_update
 
 }
 
