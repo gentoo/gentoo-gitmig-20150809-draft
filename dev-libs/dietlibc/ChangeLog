@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.46 2005/07/20 11:57:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.47 2005/07/20 21:02:12 killerfox Exp $
+
+  20 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> dietlibc-0.28.ebuild:
+  Stable on hppa. Added fix for hppa of not available gcc option.
 
   20 Jul 2005; Markus Rothe <corsair@gentoo.org> dietlibc-0.28.ebuild:
   Stable on ppc64

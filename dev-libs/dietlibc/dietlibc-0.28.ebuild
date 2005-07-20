@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.28.ebuild,v 1.4 2005/07/20 11:57:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.28.ebuild,v 1.5 2005/07/20 21:02:12 killerfox Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/libs/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~mips ~ppc ppc64 ~sparc x86"
 IUSE="debug"
 
 DEPEND=""
@@ -31,7 +31,8 @@ src_unpack() {
 
 	replace-sparc64-flags #45716
 
-	append-flags -D__dietlibc__ -fno-stack-protector-all -fno-stack-protector
+	# Fix for not available gcc option on hppa (20 Jul 2005) KillerFox
+	test_flag -fno-stack-protector && append-flags -D__dietlibc__ -fno-stack-protector-all -fno-stack-protector
 	epatch "${FILESDIR}"/dietlibc-0.28-Makefile.patch
 }
 
