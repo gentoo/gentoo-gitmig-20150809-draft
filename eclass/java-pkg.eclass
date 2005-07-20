@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.26 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.27 2005/07/20 11:05:55 axxo Exp $
 
 pkglistpath="${T}/java-pkg-list"
 
@@ -276,23 +276,23 @@ java-pkg_jar-from()
 		destjar=${jar}
 	fi
 
-	for x in `java-config --classpath=${pkg} | tr ':' ' '`; do
+	for x in $(java-config --classpath=${pkg} | tr ':' ' '); do
 		if [ ! -f ${x} ] ; then
-			eerror "Installation problems with jars in ${pkg} - is it installed?"
+			die "Installation problems with jars in ${pkg} - is it installed?"
 			return 1
 		fi
 		_record-jar ${pkg} ${x}
 		if [ -z "${jar}" ] ; then
 			ln -sf ${x} $(basename ${x})
-		elif [ "`basename ${x}`" == "${jar}" ] ; then
+		elif [ "$(basename ${x})" == "${jar}" ] ; then
 			ln -sf ${x} ${destjar}
 			return 0
 		fi
 	done
 	if [ -z "${jar}" ] ; then
-	        return 0
+		return 0
 	else
-		return 1
+		die "failed too find ${destjar}"
 	fi
 }
 
