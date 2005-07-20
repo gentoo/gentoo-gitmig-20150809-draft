@@ -1,10 +1,9 @@
-# Copyright 2004 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/virtuals,v 1.20 2005/05/20 12:23:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/virtuals,v 1.21 2005/07/20 00:16:08 vapier Exp $
 
 # Use this virtuals file to either overload the base profile's defined
 # virtuals, or add virtuals that are specific to this family of profiles
 
-virtual/kernel				sys-kernel/vanilla-sources
 virtual/os-headers			sys-kernel/linux-headers
 virtual/dev-manager			sys-fs/udev

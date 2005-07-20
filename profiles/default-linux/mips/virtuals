@@ -1,9 +1,8 @@
-# Copyright 2004 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/virtuals,v 1.5 2005/02/22 01:20:51 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/virtuals,v 1.6 2005/07/20 00:16:08 vapier Exp $
 
 virtual/alsa				sys-kernel/mips-sources
 virtual/bootloader			sys-boot/dvhtool
-virtual/kernel				sys-kernel/mips-headers
 virtual/linux-sources		sys-kernel/mips-sources
 virtual/os-headers			sys-kernel/mips-headers
