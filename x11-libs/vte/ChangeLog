@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.77 2005/07/11 23:11:04 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.78 2005/07/20 21:51:45 leonardop Exp $
+
+*vte-0.11.13-r2 (20 Jul 2005)
+
+  20 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  vte-0.11.13-r2.ebuild, files/vte-no_lazy_bindings.patch:
+  Added patch to avoid lazy bindings in gnome-pty-helper, as it's a setgid
+  binary. See bug #91617.
 
   11 Jul 2005; Stephen P. Becker <geoman@gentoo.org> vte-0.11.12.ebuild,
   vte-0.11.13-r1.ebuild:
