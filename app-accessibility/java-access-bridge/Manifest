@@ -1,6 +1,16 @@
-MD5 24e5cd8084a0bd3826e7aa57aef9740e java-access-bridge-1.4.2.ebuild 1883
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
-MD5 aea90f0db08d11ba5a8b98d042e31f18 ChangeLog 2137
-MD5 f6188c274e4664c69e36788bc6570b07 java-access-bridge-1.4.5.ebuild 1903
-MD5 1bf8622275334c6034c3559741193e41 files/digest-java-access-bridge-1.4.2 76
+MD5 7e8669298a33efb1dde38c132442c5c9 java-access-bridge-1.4.5.ebuild 1904
+MD5 24e5cd8084a0bd3826e7aa57aef9740e java-access-bridge-1.4.2.ebuild 1883
+MD5 b48839e96da817108a9ecde8e25d06c9 ChangeLog 2247
 MD5 c7357cc9f0d10edc0c93b1e3b5467b9b files/digest-java-access-bridge-1.4.5 77
+MD5 1bf8622275334c6034c3559741193e41 files/digest-java-access-bridge-1.4.2 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC3l4sKRy60XGEcJIRAv5oAJsEGXoX6kl8AoFGBk4WmGUoKfLo6QCgo1EC
+lwubhWcp0gp3Sm4S0LbfYAY=
+=CW6r
+-----END PGP SIGNATURE-----
