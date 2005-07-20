@@ -1,13 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/files/shorewall,v 1.7 2004/11/21 09:59:51 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/files/shorewall,v 1.8 2005/07/20 02:17:12 gustavoz Exp $
 
 opts="start stop restart clear"
 
 depend() {
 	need net
 	provide firewall
+	after ulogd
 }
 
 start() {
