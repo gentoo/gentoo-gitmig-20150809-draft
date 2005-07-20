@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-20050415.ebuild,v 1.1 2005/05/24 20:59:55 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-20050415-r1.ebuild,v 1.1 2005/07/20 17:35:20 ribosome Exp $
 
 DESCRIPTION="Spectral visualisation, analysis and Fourier processing"
 # The specific terms of this license are printed automatically on startup
@@ -68,17 +68,21 @@ pkg_nofetch() {
 
 src_unpack() {
 	# The installation script will unpack the package. We just provide symlinks
-	# to the archive files (and installation scripts).
-	for i in ${A}; do
+	# to the archive files, ...
+	for i in ${PN}.linux9.tar.Z xview_fonts.tar.Z xview.linux9.tar.Z \
+		dyn.tar.Z mfr.tar.Z pdbH.tar.Z valpha.tar acme.tar.Z; do
 		ln -s "${DISTDIR}/${i}" "${i}"
 	done
-	# Make the installation scripts executable.
+	# ... copy the installation scripts ...
+	cp ${DISTDIR}/{binval.com,install.com} .
+	# ... and make the installation scripts executable.
 	chmod +x "binval.com" "install.com"
 }
 
 src_compile() {
 	# Unset DISPLAY to avoid the interactive graphical test.
 	DISPLAY="" ./install.com "${S}" || die
+	# Remove the symlinks for the archives and the installation scripts.
 	for i in ${A}; do
 		rm "${i}"
 	done
@@ -103,6 +107,7 @@ src_install() {
 	insinto "/opt/${PN}"
 	insopts "-m0755"
 	doins -r *
+	dosym "/opt/${PN}/nmrbin.linux9" "/opt/${PN}/bin"
 }
 
 pkg_postinst() {
