@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/scripts/2004.3-2005.0upgrade.sh,v 1.5 2005/07/13 22:12:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/scripts/2004.3-2005.0upgrade.sh,v 1.6 2005/07/20 19:53:40 eradicator Exp $
 
 TMPDIR="$(portageq envvar PORTAGE_TMPDIR)"
 PORTDIR="$(portageq envvar PORTDIR)"
@@ -101,6 +101,27 @@ if [[ ! -f step0 ]]; then
 		exit 1
 	fi
 
+	if [[ -f /proc/config.gz ]] ; then
+		KERNEL_CONFIG="gunzip -dc /proc/config.gz"
+	elif [[ -f /proc/config.bz2 ]] ; then
+		KERNEL_CONFIG="bunzip2 -dc /proc/config.bz2"
+	elif [[ -f /proc/config ]] ; then
+		KERNEL_CONFIG="cat /proc/config"
+	elif [[ -f /lib/modules/$(uname -r)/build/.config ]] ; then
+		KERNEL_CONFIG="cat /lib/modules/$(uname -r)/build/.config"
+	elif [[ -f /lib/modules/$(uname -r)/source/.config ]] ; then
+		KERNEL_CONFIG="cat /lib/modules/$(uname -r)/source/.config"
+	else
+		ewarn "Can't find a config for the running kernel, so we're assuminig"
+		ewarn "you correctly have CONFIG_IA32_EMULATION (support for 32bit"
+		ewarn "applications) enabled."
+		KERNEL_CONFIG="echo CONFIG_IA32_EMULATION=y"
+	fi
+
+	if ! eval ${KERNEL_CONFIG} | grep -q CONFIG_IA32_EMULATION=y ; then
+		myDie "Running kernel does not have support for executing 32bit applications.  You need to enable CONFIG_IA32_EMULATION in your running kernel."
+	fi
+
 	# Always install portage since current might not be multilib friendly
 	USE=multilib FEATURES=-sandbox emerge -v --oneshot ${PORTAGE_REQ} || \
 		myDie "emerge portage failed"
@@ -150,7 +171,16 @@ if [[ ! -f step2 ]]; then
 	fi
 	
 	env-update || myDie "env-update failed"
-	
+
+	echo "int main(){return 0;}" > ${TMPDIR}/32test.c
+	if ! gcc -m32 ${TMPDIR}/32test.c -o ${TMPDIR}/32test >& ${TMPDIR}/32test.comp.log ; then
+		myDie "Error compiling 32bit executable.  Please see ${TMPDIR}/32test.comp.log"
+	fi
+
+	if ! ${TMPDIR}/32test >& ${TMPDIR}/32test.exec.log ; then
+		myDie "Error executing 32bit executable.  Please see ${TMPDIR}/32test.exec.log"
+	fi
+
 	touch step2
 fi
 
