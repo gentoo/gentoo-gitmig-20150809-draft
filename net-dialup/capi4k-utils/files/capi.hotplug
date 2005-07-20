@@ -1,11 +1,14 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.8 2005/05/31 19:41:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.9 2005/07/20 18:47:52 sbriesen Exp $
 
 . /etc/conf.d/capi
 
 [ "$CAPI_HOTPLUG_USB" = "yes" ] || exit 0
+
+# possible firmware locations (list and order taken from 'capiinit')
+FWDIRS=(/lib/firmware/isdn /lib/firmware /usr/share/isdn /usr/lib/isdn /lib/isdn)
 
 # Syslog output
 syslog() {  # <msg>
@@ -29,13 +32,24 @@ cardinfo() {  # <driver>
 		/proc/capi/controller 2>/dev/null
 }
 
+# Firmware search
+findfw() {  # <fw_name>
+	local DIR
+	for DIR in ${FWDIRS[*]}; do
+		if [ -f "${DIR}/${1}" ]; then
+			echo "${DIR}/${1}"; return 0
+		fi
+	done
+	return 1
+}
+
 # AVM firmware loader
 avmusb() {  # <driver> <usbdev> <firmware>
 	local CARD NAME STATUS TYPE VER DEV FIRMWARE
 	while read CARD NAME STATUS TYPE VER DEV; do  # AVM cardinfo
 		if [ "${STATUS}" = "detected" -a ${DEV} -eq ${2} ]; then
-			syslog "loading firmware '${3}' onto controller ${CARD} (${NAME})"
-			/usr/sbin/avmcapictrl load "/lib/firmware/${3}" "${CARD}" || return 1
+			syslog "loading firmware '${3##*/}' onto controller ${CARD} (${NAME})"
+			/usr/sbin/avmcapictrl load "${3}" "${CARD}" || return 1
 			break
 		fi
 	done < <(cardinfo "${1}")
@@ -145,13 +159,14 @@ case "$ACTION" in
 			while [ ! -e /dev/capi20 -a $CNT -lt 20 ]; do
 				sleep 0.5; : $((CNT++))
 			done
-			if [ -f "/lib/firmware/${FIRMWARE}" ]; then
-				if ! $LOADER $DRIVER $USBDEV $FIRMWARE; then
+			FW=$(findfw "${FIRMWARE}")
+			if [ -n "${FW}" ]; then
+				if ! $LOADER $DRIVER $USBDEV $FW; then
 					syslog "could not load firmware!"
 					beep_error; exit 1
 				fi
 			else
-				syslog "firmware ${FIRMWARE} not found in /lib/firmware!"
+				syslog "firmware ${FIRMWARE} not found in ${FWDIRS[0]}"
 				beep_error; exit 1
 			fi
 		fi

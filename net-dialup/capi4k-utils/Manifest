@@ -1,7 +1,7 @@
 MD5 5dc6f506ad44aae8328d0690e94eb688 capi4k-utils-20041006-r5.ebuild 3736
 MD5 03243c209893699ce44a97f2090546fe capi4k-utils-20050322-r1.ebuild 4014
 MD5 2c1a45b850f5072a7e30fb95cada2fa0 capi4k-utils-20050718.ebuild 3978
-MD5 519ddd06ee3a9c01ed7e5e73cbc67ae7 ChangeLog 7249
+MD5 f0a3e90be72747b99cc7b0e310deefd2 ChangeLog 7432
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 aa0258d1e27f2b71ec2a6a950127831f capi4k-utils-20050509.ebuild 3977
 MD5 c1f67e98c19fe5ece86b9242a00e6a38 files/README.gentoo 2800
@@ -16,7 +16,7 @@ MD5 2fe94d2623c5b129780b72bacaf4a7bc files/rcapid.xinetd 236
 MD5 239b613eb69255eead19892de760db8d files/digest-capi4k-utils-20050509 75
 MD5 2ab6ed3bc0de68c33e2ade1979dd4c0a files/digest-capi4k-utils-20050718 75
 MD5 97a56dd67a012daab67041ed96a6d44d files/capi.blacklist 530
-MD5 da21db7a9d1b9fdfb20e73409660143e files/capi.hotplug 4730
+MD5 c573d252a8c70f78956fbdd3985e1d92 files/capi.hotplug 5045
 MD5 709e4079ecd09537691845755cb9136d files/digest-capi4k-utils-20050322-r1 75
 MD5 e74f9b822b6f485ca6ff834c2699151a files/20041006/README.gentoo 1492
 MD5 fb9f9b4003d8d1647e23cf7b329386f6 files/20041006/capi.confd 424
