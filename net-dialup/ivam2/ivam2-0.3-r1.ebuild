@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/ivam2-0.3-r1.ebuild,v 1.2 2005/07/04 07:43:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/ivam2-0.3-r1.ebuild,v 1.3 2005/07/20 05:49:00 mrness Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ src_install() {
 
 pkg_preinst() {
 	enewgroup ivam || die "Problem adding ivam group"
-	enewuser ivam -1 /bin/false /dev/null ivam || die "Problem adding ivam user"
+	enewuser ivam -1 -1 /dev/null ivam || die "Problem adding ivam user"
 }
 
 pkg_postinst() {

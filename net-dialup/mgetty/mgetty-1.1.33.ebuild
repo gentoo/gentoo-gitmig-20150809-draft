@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.33.ebuild,v 1.3 2005/05/06 11:40:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.33.ebuild,v 1.4 2005/07/20 05:49:00 mrness Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -25,7 +25,7 @@ IUSE="doc"
 
 pkg_setup() {
 	enewgroup fax
-	enewuser fax -1 /bin/false /dev/null fax
+	enewuser fax -1 -1 /dev/null fax
 }
 
 src_unpack() {
