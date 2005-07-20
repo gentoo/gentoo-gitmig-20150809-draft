@@ -1,15 +1,15 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.208 2005/07/20 09:12:11 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.209 2005/07/20 12:06:52 vivo Exp $
 
 *mysql-4.0.25-r2 (20 Jul 2005)
 
-  20 Jul 2005; portage <vivo@gentoo.org>
+  20 Jul 2005; Francesco Riosa <vivo@gentoo.org>
   +files/mysql-4.0.25-r2-asm-pic-fixes.patch, +mysql-4.0.25-r2.ebuild:
   Gladly to add the upstream version of the patch against text-relocation.
   Again many thanks to bug #42968 people.
 
-  16 Jul 2005; portage <vivo@gentoo.org>
+  16 Jul 2005; Francesco Riosa <vivo@gentoo.org>
   -files/mysql-4.0.25-asm-pic-fixes.patch,
   -files/035_x86_asm-pic-fixes-r2.patch, -mysql-4.0.25.ebuild,
   -mysql-4.1.12-r1.ebuild, -mysql-5.0.9_beta.ebuild:
@@ -19,7 +19,7 @@
 *mysql-4.1.12-r2 (16 Jul 2005)
 *mysql-4.0.25-r1 (16 Jul 2005)
 
-  16 Jul 2005; portage <vivo@gentoo.org>
+  16 Jul 2005; Francesco Riosa <vivo@gentoo.org>
   +files/mysql-4.0.25-r1-asm-pic-fixes.patch,
   +files/035_x86_asm-pic-fixes-r1.patch, +mysql-4.0.25-r1.ebuild,
   +mysql-4.1.12-r2.ebuild, +mysql-5.0.9_beta-r1.ebuild,
@@ -31,7 +31,7 @@
 *mysql-5.0.9_beta (15 Jul 2005)
 *mysql-4.1.12-r1 (15 Jul 2005)
 
-  15 Jul 2005; portage <vivo@gentoo.org>
+  15 Jul 2005; Francesco Riosa <vivo@gentoo.org>
   +files/mysql-4.0.25-asm-pic-fixes.patch, +mysql-4.0.25.ebuild,
   +mysql-4.1.12-r1.ebuild, +mysql-5.0.9_beta.ebuild,
   +files/035_x86_asm-pic-fixes-r2.patch:
@@ -42,12 +42,12 @@
 
 *mysql-4.0.25 (15 Jul 2005)
 
-  15 Jul 2005; portage <vivo@gentoo.org>
+  15 Jul 2005; Francesco Riosa <vivo@gentoo.org>
   +files/mysql-4.0.25-asm-pic-fixes.patch, +mysql-4.0.25.ebuild:
   MySQL-4.0.25, based off MySQL-4.0.24-r2. Added big-tables USE flag.
   Added patches for hardened installations.
 
-  13 Jul 2005; portage <vivo@gentoo.org> mysql-4.1.12.ebuild:
+  13 Jul 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.12.ebuild:
   Fix permissions, see bug #95320
 
   17 May 2005; Markus Rothe <corsair@gentoo.org> mysql-4.1.12.ebuild:
