@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.434 2005/07/20 07:28:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.435 2005/07/20 17:18:51 spyderous Exp $
+
+  20 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.99.15.ebuild:
+  (#61940) No need for sparc to be stuck on the old keyboard driver anymore.
 
 *xorg-x11-6.8.99.15 (20 Jul 2005)
 

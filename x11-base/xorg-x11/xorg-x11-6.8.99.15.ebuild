@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15.ebuild,v 1.1 2005/07/20 07:28:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15.ebuild,v 1.2 2005/07/20 17:18:51 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -738,8 +738,6 @@ host_def_setup() {
 			if ( [ -e "${ROOT}/usr/src/linux" ] \
 				&& ! kernel_is "2" "6" ) \
 				|| [ "$(uname -r | cut -d. -f1,2)" != "2.6" ]; then
-				einfo "Building for kernels less than 2.6 requires special treatment."
-				echo "#define UseDeprecatedKeyboardDriver YES" >> ${HOSTCONF}
 				einfo "Avoid bug #46593 for sparc32-SMP with kernel 2.4.xx."
 				echo "/* Add a line to avoid bug #56593 on sparc32 */" >> \
 				  programs/Xserver/hw/xfree86/drivers/ati/r128_driver.c
