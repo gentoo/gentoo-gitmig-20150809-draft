@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 43f8f1b6656109f4fdaa57f0d957c877 gtk-engines-magicchicken-1.1.1.ebuild 568
 MD5 0fada2446a06c3209f346b3f27bc6889 ChangeLog 1010
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ae3f776563a5240dafb2eb905d9ee532 files/digest-gtk-engines-magicchicken-1.1.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3rtD2G5bA0cA/ScRAp1TAJ9AIFDdLR+77IM4R1oSQBv1o9QN9gCfcjsa
+2Uc+ikFEZdxfwHSSN7v3fcw=
+=KUkR
+-----END PGP SIGNATURE-----
