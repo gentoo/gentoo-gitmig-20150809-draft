@@ -1,0 +1,11 @@
+# ChangeLog for sys-libs/libvserver
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libvserver/ChangeLog,v 1.1 2005/07/20 06:25:03 hollow Exp $
+
+*libvserver-0.2 (20 Jul 2005)
+*libvserver-0.1 (20 Jul 2005)
+
+  20 Jul 2005; Benedikt Boehm <hollow@gentoo.org> +metadata.xml,
+  +libvserver-0.1.ebuild, +libvserver-0.2.ebuild:
+  initial ebuilds
+
