@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.111 2005/07/12 02:54:54 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.112 2005/07/20 14:41:14 leonardop Exp $
+
+*gconf-2.10.1 (20 Jul 2005)
+
+  20 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> gconf-2.10.1.ebuild:
+  New version. Added 'static' and 'gtk' USE flags.
 
   12 Jul 2005; Stephen P. Becker <geoman@gentoo.org> gconf-2.10.0.ebuild:
   stable on mips
