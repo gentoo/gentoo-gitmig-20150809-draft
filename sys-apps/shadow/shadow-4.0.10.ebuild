@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.10.ebuild,v 1.4 2005/07/11 03:50:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.10.ebuild,v 1.5 2005/07/20 01:00:14 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -93,7 +93,7 @@ src_install() {
 	#   Currently, libshadow.a is for internal use only, so if you see
 	#   -lshadow in a Makefile of some other package, it is safe to
 	#   remove it.
-	rm -f "${D}"/lib/lib{misc,shadow}.{a,la}
+	rm -f "${D}"/{,usr/}$(get_libdir)/lib{misc,shadow}.{a,la}
 
 	if use pam; then
 		# These is now shipped with pam-login, and login
@@ -114,11 +114,13 @@ src_install() {
 	insopts -m0600 ; doins "${FILESDIR}"/securetty
 	insopts -m0600 ; doins etc/login.access
 	insopts -m0600 ; doins etc/limits
-	# Only output hvc ibm cruft for ppc64 machines
-	if [[ $(tc-arch) == "ppc64" ]] ; then
-		echo "hvc0" >> "${D}"/etc/securetty
-		echo "hvsi0" >> "${D}"/etc/securetty
-	fi
+	# Output arch-specific cruft
+	case $(tc-arch) in
+		ppc64) echo "hvc0" >> "${D}"/etc/securetty
+		       echo "hvsi0" >> "${D}"/etc/securetty;;
+		hppa)  echo "ttyB0" >> "${D}"/etc/securetty;;
+		arm)   echo "ttyFB0" >> "${D}"/etc/securetty;;
+	esac
 
 	# needed for 'adduser -D'
 	insinto /etc/default
@@ -188,15 +190,10 @@ src_install() {
 		'(' -name id.1 -o -name passwd.5 -o -name getspnam.3 ')' \
 		-exec rm {} \;
 
-	cd ${S}/doc
+	cd "${S}"/doc
 	dodoc INSTALL README WISHLIST
 	docinto txt
 	dodoc HOWTO LSM README.* *.txt
-
-	# ttyB0 is the PDC software console
-	if [ "${ARCH}" = "hppa" ]; then
-		echo "ttyB0" >> "${D}"/etc/securetty
-	fi
 }
 
 pkg_preinst() {

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r3.ebuild,v 1.6 2005/07/19 22:53:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r3.ebuild,v 1.7 2005/07/20 01:00:14 vapier Exp $
 
-inherit eutils libtool toolchain-funcs flag-o-matic
+inherit eutils libtool toolchain-funcs flag-o-matic multilib
 
 # We should remove this login after pam-0.78 goes stable.
 FORCE_SYSTEMAUTH_UPDATE="no"
@@ -33,46 +33,46 @@ pkg_preinst() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# uclibc support, corrects NIS usage
-	epatch ${FILESDIR}/shadow-4.0.4.1-nonis.patch
+	epatch "${FILESDIR}"/shadow-4.0.4.1-nonis.patch
 
 	# If su should not simulate a login shell, use '/bin/sh' as shell to enable
 	# running of commands as user with /bin/false as shell, closing bug #15015.
 	# *** This one could be a security hole; disable for now ***
-	#epatch ${FILESDIR}/${P}-nologin-run-sh.patch
+	#epatch "${FILESDIR}"/${P}-nologin-run-sh.patch
 
 	# don't install manpages if USE=-nls
-	epatch ${FILESDIR}/shadow-4.0.5-nls-manpages.patch
+	epatch "${FILESDIR}"/shadow-4.0.5-nls-manpages.patch
 
 	# tweak the default login.defs
-	epatch ${FILESDIR}/shadow-4.0.5-login.defs.patch
+	epatch "${FILESDIR}"/shadow-4.0.5-login.defs.patch
 
 	# skeychallenge call needs updating #69741
-	epatch ${FILESDIR}/shadow-4.0.5-skey.patch
+	epatch "${FILESDIR}"/shadow-4.0.5-skey.patch
 
 	# The new configure changes do not detect utmp/logdir properly
-	epatch ${FILESDIR}/shadow-4.0.6-fix-configure.patch
+	epatch "${FILESDIR}"/shadow-4.0.6-fix-configure.patch
 
 	# Tweak manpages #70880
-	epatch ${FILESDIR}/shadow-4.0.6-manpages.patch
+	epatch "${FILESDIR}"/shadow-4.0.6-manpages.patch
 
 	# Fix SU_WHEEL_ONLY behavior #80345
-	epatch ${FILESDIR}/${P}-iswheel.patch
+	epatch "${FILESDIR}"/${P}-iswheel.patch
 
 	# Fix lastlog not logged for tty's
-	epatch ${FILESDIR}/${P}-lastlog.patch
+	epatch "${FILESDIR}"/${P}-lastlog.patch
 
 	# Make user/group names more flexible #3485 / #22920
 	epatch "${FILESDIR}"/shadow-4.0.6-dots-in-usernames.patch
 	epatch "${FILESDIR}"/shadow-4.0.6-long-groupnames.patch
 
 	# Newer glibc's have a different nscd socket location #74395
-	epatch ${FILESDIR}/${P}-nscd-socket-path.patch
+	epatch "${FILESDIR}"/${P}-nscd-socket-path.patch
 
 	# Fix EPIPE failure when writing to nscd, bug #80413
-	epatch ${FILESDIR}/${P}-nscd-EPIPE-failure.patch
+	epatch "${FILESDIR}"/${P}-nscd-EPIPE-failure.patch
 
 	elibtoolize
 	epunt_cxx
@@ -97,7 +97,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install problem"
+	make DESTDIR="${D}" install || die "install problem"
 	dosym useradd /usr/sbin/adduser
 
 	# lock down setuid perms #47208
@@ -109,17 +109,17 @@ src_install() {
 	#   Currently, libshadow.a is for internal use only, so if you see
 	#   -lshadow in a Makefile of some other package, it is safe to
 	#   remove it.
-	rm -f ${D}/lib/lib{misc,shadow}.{a,la}
+	rm -f "${D}"/{,usr/}$(get_libdir)/lib{misc,shadow}.{a,la}
 
 	if use pam; then
 		# These is now shipped with pam-login, and login
 		# had/have a serious root exploit with pam support
 		# enabled.
-		for x in ${D}/bin/login \
-		         ${D}/usr/bin/faillog ${D}/usr/bin/lastlog \
-		         ${D}/usr/share/man/man5/faillog.5* \
-		         ${D}/usr/share/man/man8/lastlog.8* \
-		         ${D}/usr/share/man/man8/faillog.8*; do
+		for x in "${D}"/bin/login \
+		         "${D}"/usr/bin/faillog "${D}"/usr/bin/lastlog \
+		         "${D}"/usr/share/man/man5/faillog.5* \
+		         "${D}"/usr/share/man/man8/lastlog.8* \
+		         "${D}"/usr/share/man/man8/faillog.8*; do
 				 [[ -f ${x} ]] && rm -f ${x}
 		done
 	fi
@@ -127,22 +127,24 @@ src_install() {
 	insinto /etc
 	# Using a securetty with devfs device names added
 	# (compat names kept for non-devfs compatibility)
-	insopts -m0600 ; doins ${FILESDIR}/securetty
+	insopts -m0600 ; doins "${FILESDIR}"/securetty
 	insopts -m0600 ; doins etc/login.access
 	insopts -m0644 ; doins etc/limits
-	# Only output hvc ibm cruft for ppc64 machines
-	if [[ $(tc-arch-kernel) == "ppc64" ]] ; then
-		echo "hvc0" >> "${D}"/etc/securetty
-		echo "hvsi0" >> "${D}"/etc/securetty
-	fi
+	# Output arch-specific cruft
+	case $(tc-arch) in
+		ppc64) echo "hvc0" >> "${D}"/etc/securetty
+		       echo "hvsi0" >> "${D}"/etc/securetty;;
+		hppa)  echo "ttyB0" >> "${D}"/etc/securetty;;
+		arm)   echo "ttyFB0" >> "${D}"/etc/securetty;;
+	esac
 
 	# needed for 'adduser -D'
 	insinto /etc/default
 	insopts -m0600
-	doins ${FILESDIR}/default/useradd
+	doins "${FILESDIR}"/default/useradd
 
 	# move passwd to / to help recover broke systems #64441
-	mv ${D}/usr/bin/passwd ${D}/bin/
+	mv "${D}"/usr/bin/passwd "${D}"/bin/
 	dosym /bin/passwd /usr/bin/passwd
 
 	if use pam ; then
@@ -152,7 +154,7 @@ src_install() {
 		portageq has_version / '>=sys-libs/pam-0.78' && \
 			INSTALL_SYSTEM_PAMD="no"
 
-		for x in ${FILESDIR}/pam.d-include/*; do
+		for x in "${FILESDIR}"/pam.d-include/*; do
 			case "${x##*/}" in
 				"login")
 					# We do no longer install this one, as its from
@@ -178,19 +180,19 @@ src_install() {
 		done
 		for x in chage chsh chfn chpasswd newusers \
 		         user{add,del,mod} group{add,del,mod} ; do
-			newpamd ${FILESDIR}/pam.d-include/shadow ${x}
+			newpamd "${FILESDIR}"/pam.d-include/shadow ${x}
 		done
 
 		# Only add this one if needed.
 		if [ "${FORCE_SYSTEMAUTH_UPDATE}" = "yes" ]; then
-			newpamd ${FILESDIR}/pam.d-include/system-auth-1.1 system-auth.new || \
+			newpamd "${FILESDIR}"/pam.d-include/system-auth-1.1 system-auth.new || \
 				die "Failed to install system-auth.new!"
 		fi
 
 		# remove manpages that pam will install for us
 		# and/or don't apply when using pam
 
-		find ${D}/usr/share/man \
+		find "${D}"/usr/share/man \
 			'(' -name 'login.1' -o -name 'suauth.5' ')' \
 			-exec rm {} \;
 	else
@@ -200,19 +202,14 @@ src_install() {
 	fi
 
 	# Remove manpages that are handled by other packages
-	find ${D}/usr/share/man \
+	find "${D}"/usr/share/man \
 		'(' -name id.1 -o -name passwd.5 -o -name getspnam.3 ')' \
 		-exec rm {} \;
 
-	cd ${S}/doc
+	cd "${S}"/doc
 	dodoc INSTALL README WISHLIST
 	docinto txt
 	dodoc HOWTO LSM README.* *.txt
-
-	# ttyB0 is the PDC software console
-	if [ "${ARCH}" = "hppa" ]; then
-		echo "ttyB0" >> ${D}/etc/securetty
-	fi
 }
 
 pkg_postinst() {
