@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.44 2005/06/22 18:28:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.45 2005/07/20 21:03:47 herbs Exp $
+
+  20 Jul 2005; Herbie Hopkins <herbs@gentoo.org> tor-0.0.9.10.ebuild:
+  Stable on amd64.
 
   22 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> tor-0.0.9.10.ebuild:
   Stable on sparc
