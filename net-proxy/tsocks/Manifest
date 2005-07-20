@@ -1,6 +1,16 @@
-MD5 594ea834843510a3091c4e8e11ccf519 ChangeLog 1953
-MD5 dcd6e2fd781d4984dfd0a5c89343847b metadata.xml 471
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1b52045b9f925fb39d0c6625413ab6af tsocks-1.8_beta4.ebuild 1214
-MD5 1ca3860d2df8610c63ad7f022c03114c tsocks-1.8_beta5.ebuild 1301
+MD5 d5208a73d05aff258a3d6d540cec324b tsocks-1.8_beta5.ebuild 1298
+MD5 0088a9397692e4e22d9a09b2f606c6b1 ChangeLog 2045
+MD5 dcd6e2fd781d4984dfd0a5c89343847b metadata.xml 471
 MD5 1aa2efdb2fe949b6f3323e6b512fbef9 files/digest-tsocks-1.8_beta4 66
 MD5 d90e48e1c5e026d671a6b0bc9aa09574 files/digest-tsocks-1.8_beta5 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3rwY2G5bA0cA/ScRAsH3AJ9lwi3R6qywVuEeNb3kzSWhNQp2YwCg3CQU
+hqAMU44ry4cEg8UyrHneWcE=
+=HcPL
+-----END PGP SIGNATURE-----
