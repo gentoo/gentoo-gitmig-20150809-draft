@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bdf37b226b9c579b537fc9e8675a431b rlocate-0.3.1-r1.ebuild 1383
-MD5 54f252fa644750b0ff8b2f93e427b2be rlocate-0.3.1.ebuild 1087
-MD5 dd5a5a269d18a4ea00f6c59e266ac2a6 ChangeLog 625
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 1ec3228b5629dfb2b893f3b05322a055 rlocate-0.3.0.ebuild 1087
+MD5 982f66ba9fc3ee72519efd2e9d81803b rlocate-0.3.1.ebuild 1094
+MD5 bdf37b226b9c579b537fc9e8675a431b rlocate-0.3.1-r1.ebuild 1383
+MD5 dd5a5a269d18a4ea00f6c59e266ac2a6 ChangeLog 625
+MD5 7864056c1293832c38d25cce49a1ed33 rlocate-0.3.0.ebuild 1094
 MD5 3df7d026a132a54c32b590868c901eee files/digest-rlocate-0.3.0 65
-MD5 de57aa1ae3c55df794f8a28eaea3a826 files/digest-rlocate-0.3.1 65
 MD5 de57aa1ae3c55df794f8a28eaea3a826 files/digest-rlocate-0.3.1-r1 65
+MD5 de57aa1ae3c55df794f8a28eaea3a826 files/digest-rlocate-0.3.1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0ZUtTOXg++0VvJQRAoXUAJ4ze+jR1HCeawPRdNHCmnnsKSSSQQCfXL1i
-H4KTY/nOOtV6mqTCP2CuvcU=
-=cwZp
+iD8DBQFC3Zf8gIKl8Uu19MoRAtrmAJ45qCZ0/u/D60jnI88isbCMYfkfkwCfY/zD
+Xfi+L0PjsrQiwaBGDeuRaeE=
+=6S44
 -----END PGP SIGNATURE-----
