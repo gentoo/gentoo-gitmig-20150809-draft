@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.2-r1.ebuild,v 1.5 2005/05/24 18:48:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.2-r2.ebuild,v 1.1 2005/07/20 21:36:09 mkennedy Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DESCRIPTION="Common Lisp bindings to the SDL graphics library, and OpenGL libraries"
 HOMEPAGE="http://cl-sdl.sourceforge.net/"
@@ -22,6 +22,11 @@ S=${WORKDIR}/${PN}
 
 SUB_PACKAGES="sdl sdl-ttf sdl-img sdl-mix opengl"
 CLPACKAGE="sdl-ffi sdl-demos ${SUB_PACKAGES}"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PV}-CD-STATUS-gentoo.patch || die
+}
 
 src_compile() {
 	make clean

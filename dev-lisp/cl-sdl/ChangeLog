@@ -1,6 +1,15 @@
 # ChangeLog for dev-lisp/cl-sdl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/ChangeLog,v 1.9 2005/05/24 18:48:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/ChangeLog,v 1.10 2005/07/20 21:36:09 mkennedy Exp $
+
+*cl-sdl-0.2.2-r2 (20 Jul 2005)
+
+  20 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.2.2-CD-STATUS-gentoo.patch, -files/cl-sdl-0.2.1-gentoo.patch,
+  -cl-sdl-0.2.2-r1.ebuild, +cl-sdl-0.2.2-r2.ebuild:
+  Included patch to remove STATUS accessor from CD structure which would
+  create a function CD-STATUS which later conflicts with CD-STATUS (the
+  foreign function for SDL_CDStatus).
 
   24 May 2005; <mkennedy@gentoo.org> cl-sdl-0.2.2-r1.ebuild:
   Keywording ~sparc
