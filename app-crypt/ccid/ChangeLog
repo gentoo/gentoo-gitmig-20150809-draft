@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/ccid
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.1 2005/07/20 21:44:06 dragonheart Exp $
+
+*ccid-0.9.3.1 (20 Jul 2005)
+
+  20 Jul 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +ccid-0.9.3.1.ebuild:
+  Initial import as per bug #95956. Ebuild contributed by Alon Bar-Lev
+
