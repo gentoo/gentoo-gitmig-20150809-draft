@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/gmult
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/ChangeLog,v 1.5 2005/05/26 02:25:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/ChangeLog,v 1.6 2005/07/20 05:00:34 mr_bones_ Exp $
+
+*gmult-5.1 (20 Jul 2005)
+
+  20 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org> +gmult-5.1.ebuild:
+  version bump
 
   26 May 2005; Michael Sterrett <mr_bones_@gentoo.org> -gmult-2.1.ebuild,
   -gmult-3.0.ebuild:
