@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e331d10e32c171e21abba67ceea2e655 ChangeLog 4324
-MD5 4a6b419321a7e1ee609c8af41905ff1b metadata.xml 337
-MD5 e4104d4fe29e0c87a1558bbbeea5d74d sandbox-1.2.11.ebuild 2807
-MD5 42654caf9e8783b88919fd8a7160476e sandbox-1.2.9.ebuild 2782
 MD5 df321dbbd5765b57a8f5dcf9ad78721b sandbox-1.2.10.ebuild 2682
-MD5 a3b2897eb709807fa36afb0c7b23c01d files/digest-sandbox-1.2.11 67
-MD5 36e3d59477310a00b5b240377e4e47dd files/sandbox-1.2.10-uclibc-getcwd.patch 751
-MD5 76e3fe575f6739c3a9de06eb2dcdd1ac files/sandbox-1.2.9-uclibc-getcwd.patch 508
-MD5 0b9d8a3302f89af8fcb328f02eb16824 files/digest-sandbox-1.2.9 66
+MD5 42654caf9e8783b88919fd8a7160476e sandbox-1.2.9.ebuild 2782
+MD5 4a6b419321a7e1ee609c8af41905ff1b metadata.xml 337
+MD5 32055c672e87531f3d5e3f1cd99c589b sandbox-1.2.11.ebuild 2805
+MD5 11d0c6ebb6dbac260da8f735acf158c1 ChangeLog 4430
 MD5 9fe5eef00b6290f1c9fb750c3bfc1fad files/digest-sandbox-1.2.10 67
+MD5 0b9d8a3302f89af8fcb328f02eb16824 files/digest-sandbox-1.2.9 66
+MD5 76e3fe575f6739c3a9de06eb2dcdd1ac files/sandbox-1.2.9-uclibc-getcwd.patch 508
+MD5 36e3d59477310a00b5b240377e4e47dd files/sandbox-1.2.10-uclibc-getcwd.patch 751
+MD5 a3b2897eb709807fa36afb0c7b23c01d files/digest-sandbox-1.2.11 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC3nwG5mJXAu5GbtIRAgqeAJ0braf2IFsQBA1dGx1ozwpK6xMS/wCfYkEM
-O3t9fp7/U2R8qTuU75Kbok8=
-=UrMb
+iD8DBQFC3o0dKRy60XGEcJIRAsunAKCDb3BIN7Fw3c3hLV6BNeI8YvmQEgCeN1OC
++WdRn4LaeQJgija39NEO6T4=
+=cldn
 -----END PGP SIGNATURE-----
