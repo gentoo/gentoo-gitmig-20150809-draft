@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.40 2005/06/30 03:58:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.41 2005/07/20 22:38:40 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -72,7 +72,7 @@ src_compile() {
 
 pkg_preinst() {
 	enewgroup ntp 123
-	enewuser ntp 123 /bin/false /dev/null ntp
+	enewuser ntp 123 -1 /dev/null ntp
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617.ebuild,v 1.5 2005/04/15 22:22:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617.ebuild,v 1.6 2005/07/20 22:38:40 flameeyes Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ hax_bitkeeper() {
 
 pkg_setup() {
 	enewgroup ntp 123
-	enewuser ntp 123 /bin/false /dev/null ntp
+	enewuser ntp 123 -1 /dev/null ntp
 }
 
 src_unpack() {
