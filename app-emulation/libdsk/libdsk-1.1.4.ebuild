@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/libdsk-1.1.4.ebuild,v 1.1 2005/06/26 11:00:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/libdsk-1.1.4.ebuild,v 1.2 2005/07/20 16:17:20 axxo Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="sys-libs/zlib
 	app-arch/bzip2
-	java? ( virtual/jdk dev-java/java-config )"
+	java? ( >=virtual/jdk-1.4 )"
 
 src_unpack() {
 	unpack ${A}
@@ -29,7 +29,7 @@ src_compile() {
 		--with-bzlib \
 		--enable-floppy \
 		$(use_with java jni) \
-		--with-java-prefix=$(java-config -O) \
+		--with-java-prefix=${JAVA_HOME} \
 		|| die
 	emake || die "libdsk make failed!"
 }
