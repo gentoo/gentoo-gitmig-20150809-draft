@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/lbreakout2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.14 2005/03/30 19:40:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.15 2005/07/20 19:53:07 mr_bones_ Exp $
+
+  20 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  lbreakout2-2.5.2.ebuild:
+  use a png for the icon instead of a gif.  latest gtk+ doesn't like gifs
+  all that much (bug #99555); tidy
 
   30 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   lbreakout2-2.5.2.ebuild:
