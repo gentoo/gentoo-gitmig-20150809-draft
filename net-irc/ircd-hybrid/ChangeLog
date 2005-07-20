@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/ircd-hybrid
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.13 2004/10/17 01:18:07 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ChangeLog,v 1.14 2005/07/20 19:11:02 swegener Exp $
+
+*ircd-hybrid-7.1.0 (20 Jul 2005)
+
+  20 Jul 2005; Sven Wegener <swegener@gentoo.org> +files/init.d_ircd-7.1.0,
+  +files/7.1.0-default-config.patch, files/conf.d_ircd, files/init.d_ircd,
+  +ircd-hybrid-7.1.0.ebuild:
+  Version bump, bug #98493.
 
   17 Oct 2004; Sven Wegener <swegener@gentoo.org> -files/config-ipv4.diff,
   -files/config-ipv6.diff, -files/ircd-hybrid-7.0.diff,

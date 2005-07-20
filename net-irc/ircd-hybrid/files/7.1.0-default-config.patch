@@ -1,0 +1,29 @@
+--- include/defaults.h.orig	2005-07-20 16:37:34.918105546 +0000
++++ include/defaults.h	2005-07-20 16:38:51.034577293 +0000
+@@ -46,12 +46,12 @@
+  */
+ 
+ /* dirs */
+-#define DPATH   IRCD_PREFIX                                                     
++#define DPATH   IRCD_PREFIX
+ #define BINPATH IRCD_PREFIX "/bin/"
+-#define MSGPATH IRCD_PREFIX "/messages/"
+-#define ETCPATH IRCD_PREFIX "/etc"
+-#define LOGPATH IRCD_PREFIX "/logs"
+-#define MODPATH IRCD_PREFIX "/modules/"
++#define MSGPATH IRCD_PREFIX "/share/ircd-hybrid-7/messages/"
++#define ETCPATH "/etc/ircd"
++#define LOGPATH "/var/log/ircd"
++#define MODPATH IRCD_PREFIX "/lib/ircd-hybrid-7/modules/"
+ 
+ /* files */
+ #define SPATH   BINPATH "/ircd"                 /* ircd executable */
+@@ -65,7 +65,7 @@
+ #define XPATH   ETCPATH "/xline.conf"           /* xline file */
+ #define MPATH   ETCPATH "/ircd.motd"            /* MOTD file */
+ #define LPATH   LOGPATH "/ircd.log"             /* ircd logfile */
+-#define PPATH   ETCPATH "/ircd.pid"             /* pid file */
++#define PPATH   "/var/run/ircd/ircd.pid"             /* pid file */
+ #define OPATH   ETCPATH "/opers.motd"           /* oper MOTD file */
+ #define LIPATH  ETCPATH "/links.txt"            /* cached links file */
+ 
