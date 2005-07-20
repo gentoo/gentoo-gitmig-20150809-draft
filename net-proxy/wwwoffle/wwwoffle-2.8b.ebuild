@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.8b.ebuild,v 1.1 2005/04/22 19:15:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.8b.ebuild,v 1.2 2005/07/20 05:37:20 mrness Exp $
 
 inherit eutils
 
@@ -71,7 +71,7 @@ pkg_preinst() {
 
 	# Add a wwwoffle user - required here for binary packages
 	enewgroup wwwoffle
-	enewuser wwwoffle -1 /bin/false /var/spool/wwwoffle wwwoffle
+	enewuser wwwoffle -1 -1 /var/spool/wwwoffle wwwoffle
 
 	# TODO maybe rootjail ${ROOT}
 	source /etc/init.d/functions.sh

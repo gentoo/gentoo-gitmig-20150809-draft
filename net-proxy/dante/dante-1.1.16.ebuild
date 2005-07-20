@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.16.ebuild,v 1.3 2005/07/16 08:54:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.16.ebuild,v 1.4 2005/07/20 05:37:20 mrness Exp $
 
 inherit fixheadtails eutils
 
@@ -82,5 +82,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	enewuser sockd -1 /bin/false /etc/socks daemon
+	enewuser sockd -1 -1 /etc/socks daemon
 }

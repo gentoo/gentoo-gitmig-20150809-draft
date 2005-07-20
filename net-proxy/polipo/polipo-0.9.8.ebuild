@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-0.9.8.ebuild,v 1.1 2005/04/22 19:15:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-0.9.8.ebuild,v 1.2 2005/07/20 05:37:20 mrness Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	enewgroup polipo
-	enewuser polipo -1 /bin/false /var/cache/polipo polipo
+	enewuser polipo -1 -1 /var/cache/polipo polipo
 }
 
 src_unpack() {
