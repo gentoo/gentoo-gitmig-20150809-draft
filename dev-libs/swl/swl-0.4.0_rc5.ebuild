@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/swl/swl-0.4.0_rc5.ebuild,v 1.1 2005/07/19 13:40:35 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/swl/swl-0.4.0_rc5.ebuild,v 1.2 2005/07/20 11:05:19 dholm Exp $
 
 inherit flag-o-matic multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://swl.trapni-akane.org/"
 SRC_URI="http://upstream.trapni-akane.org/swl/${P/_/-}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0.4"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="acl crypt debug doc ipv6"
 
 DEPEND="acl? ( >=sys-apps/acl-2.2.27 )
