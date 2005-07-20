@@ -1,4 +1,6 @@
+MD5 00f1fd996ac7261e8d023c5bc8428539 lincity-ng-1.0.1.ebuild 1381
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 d4b32967a19f4bd37e69f9f9041935a6 lincity-ng-1.0.ebuild 1366
-MD5 9c1f2f596c2c4fb840aa8aae95b3d1f2 ChangeLog 429
+MD5 5d74ee25b2c31da6e2f843bc4a3f61cd ChangeLog 574
+MD5 90275fb9355cbf89c868aeef77e2d598 files/digest-lincity-ng-1.0.1 71
 MD5 27b868ce0b069751e5b02f4861acca4d files/digest-lincity-ng-1.0 69
