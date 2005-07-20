@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.0.ebuild,v 1.2 2005/07/14 20:55:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.0.ebuild,v 1.3 2005/07/20 02:07:35 nerdboy Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND=">=sys-devel/make-3.80
 	>=sci-libs/proj-4.4.7
 	blas? ( virtual/blas )
 	fftw? ( =sci-libs/fftw-2* )
-	sci-libs/gdal
+	gdal? ( sci-libs/gdal )
 	gd? ( >=media-libs/gd-1.8.3 )
 	jpeg? ( media-libs/jpeg )
 	lapack? ( virtual/lapack )

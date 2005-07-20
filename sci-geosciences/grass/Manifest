@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 61bbfbc01bab6d1de078f9df119e8bad grass-5.0.3.ebuild 3257
-MD5 cdff4734696262b9046f7840f15a9de4 grass-6.0.0.ebuild 3022
+MD5 0a3f5f5f518419dd7326a5a9abf0cabf ChangeLog 2848
 MD5 3bd6e46846f23339b4e13fb95dc58a71 grass-5.0.2.ebuild 2644
-MD5 01c8e1eda92bc6231ad2893ca89b5f72 ChangeLog 2721
+MD5 61bbfbc01bab6d1de078f9df119e8bad grass-5.0.3.ebuild 3257
 MD5 e3525ea07aea3bae2424110708012cd1 metadata.xml 480
+MD5 24ec31c9164e39f6437cf209f9bbc208 grass-6.0.0.ebuild 3031
+MD5 b61d36004b3bf19f8357e5b2f3a5c8dc files/99grass-6 109
 MD5 bdf9112abfe51ff3b2cd0547318640df files/digest-grass-5.0.2 69
 MD5 0595fca992dc9e3ab6f3ddf331323b79 files/digest-grass-5.0.3 209
 MD5 c0ab8e2beb1ed62c15e81642c2f99eba files/digest-grass-6.0.0 64
-MD5 b61d36004b3bf19f8357e5b2f3a5c8dc files/99grass-6 109
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1tE+BXaUFmZvwyMRAiipAJ950vZ7ie3gFkiRMyDiqrljFVC5OgCg25/O
-KT96l6tWPgUNQlWZ7V9it/c=
-=RYZZ
------END PGP SIGNATURE-----
