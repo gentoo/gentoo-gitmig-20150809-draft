@@ -15,12 +15,14 @@ MD5 6b4e7861f8acedbd5f7675160efb9dfb mysql-5.0.9_beta-r1.ebuild 16096
 MD5 be85068e1f8dd9340882814ae10e1763 mysql-4.0.23-r1.ebuild 9160
 MD5 950a2a955947846b03dbb285f5a53daf mysql-4.1.12.ebuild 15584
 MD5 f26f6906248f45f5f0d23248a39c03a4 mysql-4.0.24.ebuild 9816
-MD5 474c59290c9171861cf87a8525b58bdc ChangeLog 33390
+MD5 212dbd8e32d5e7174d420ae049b75de4 ChangeLog 33652
 MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
+MD5 f4a2004c75583965cc4f86d71ff96352 mysql-4.0.25-r2.ebuild 13786
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
 MD5 93827506c0de13cf7b5023847a4afd95 files/digest-mysql-5.0.9_beta-r1 70
 MD5 a755fb5a3ed724046a4f83fafd819c77 files/mysql-test-myisam-geometry.patch 1217
+MD5 76446c512e91b2f8e9e69a0379178e5c files/mysql-4.0.25-r2-asm-pic-fixes.patch 7295
 MD5 e37e03b4ce894ff87fda12ce6f7b31a6 files/mysql-4.0.21-install-db-sh.diff 585
 MD5 ee67067f786849424c4591e278819bbc files/digest-mysql-4.1.12-r2 66
 MD5 3e399acddc48f209b53e260eec64938c files/mysql-4.0.rc6 933
@@ -84,6 +86,7 @@ MD5 ce711c0d8387720dbb85de1d756daa75 files/digest-mysql-4.0.23-r2 67
 MD5 547fab43da8e59a03a5f3e4a500cca45 files/digest-mysql-4.0.24-r1 66
 MD5 547fab43da8e59a03a5f3e4a500cca45 files/digest-mysql-4.0.24-r2 66
 MD5 06a7c1ead0dfe570f7c67d525c45f7c3 files/digest-mysql-4.0.25-r1 66
+MD5 06a7c1ead0dfe570f7c67d525c45f7c3 files/digest-mysql-4.0.25-r2 66
 MD5 c5fcb05dcc3f2d093efd55bd96af2423 files/035_x86_asm-pic-fixes-r1.patch 4093
 MD5 152b9a8feef16df47b56c316c5c0601e files/mysql-4.0.13-thrssl.patch 813
 MD5 ad5636b398982a23f6fc58f18a2114fc files/mysql-4.0.18-mysqldmultisecurity.diff 3863

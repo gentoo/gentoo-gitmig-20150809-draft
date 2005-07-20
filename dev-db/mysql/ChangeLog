@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.207 2005/07/16 03:13:25 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.208 2005/07/20 09:12:11 vivo Exp $
+
+*mysql-4.0.25-r2 (20 Jul 2005)
+
+  20 Jul 2005; portage <vivo@gentoo.org>
+  +files/mysql-4.0.25-r2-asm-pic-fixes.patch, +mysql-4.0.25-r2.ebuild:
+  Gladly to add the upstream version of the patch against text-relocation.
+  Again many thanks to bug #42968 people.
 
   16 Jul 2005; portage <vivo@gentoo.org>
   -files/mysql-4.0.25-asm-pic-fixes.patch,
