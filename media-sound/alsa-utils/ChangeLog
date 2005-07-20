@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.98 2005/07/18 23:10:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.99 2005/07/20 12:11:58 corsair Exp $
+
+  20 Jul 2005; Markus Rothe <corsair@gentoo.org> alsa-utils-1.0.9a.ebuild:
+  Stable on ppc64
 
   18 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-utils-1.0.9a.ebuild:
