@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6-r1.ebuild,v 1.8 2005/07/07 18:52:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6-r1.ebuild,v 1.9 2005/07/20 12:32:21 solar Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -80,7 +80,7 @@ KEYWORDS="alpha ~amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 
 RESTRICT="test"
 
-DEPEND="!nocxx? ( sys-apps/groff )
+DEPEND="!nocxx? ( !elibc_uclibc? ( sys-apps/groff ) )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
