@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.4 2005/07/18 14:15:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.5 2005/07/20 23:15:40 swegener Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PV}-default-mysql-options.patch
+	epatch "${FILESDIR}"/${PV}-ldap-fix.patch
 }
 
 src_compile() {
