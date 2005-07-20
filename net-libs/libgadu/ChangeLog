@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.5 2004/12/31 23:42:56 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.6 2005/07/20 19:22:46 sekretarz Exp $
+
+*libgadu-20050719 (20 Jul 2005)
+
+  20 Jul 2005; <sekretarz@gentoo.org> +libgadu-20050719.ebuild:
+  Version bump due security bug, #99583
 
 *libgadu-20041230 (01 Jan 2005)
 
