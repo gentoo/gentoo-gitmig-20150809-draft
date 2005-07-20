@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1324 2005/07/19 22:54:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1325 2005/07/20 02:00:53 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -807,9 +807,10 @@ sci-geosciences/gmt:gmtfull - Full resolution bathimetry database;
 sci-geosciences/gmt:gmthigh - Adds high resolution bathimetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT;
 sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient;
+sci-geosciences/grass:gdal - Enables gdal support from within Grass 6
 sci-libs/fftw:sse2 - Enables sse2 support
-sci-libs/gdal:fits - enables support for NASA's cfitsio library
-sci-libs/gdal:ogdi - enables support for the open geographic datastore interface
+sci-libs/gdal:fits - Enables support for NASA's cfitsio library
+sci-libs/gdal:ogdi - Enables support for the open geographic datastore interface
 sci-libs/hdf5:hlapi - Enables support for high-level library
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
