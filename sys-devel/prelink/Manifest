@@ -1,6 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 47b7b741ab3aa2749cfdad8aeb69c358 prelink-20050314.ebuild 1849
-MD5 167e578ffb7afdad1216fe26de3a3e2a ChangeLog 4429
+MD5 369b8c64b5baf0307cea6695e6fde1fd prelink-20050610.ebuild 1811
+MD5 21e12894bf571d97385d6a8e58817450 ChangeLog 4573
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e7b084a6fd6b4ef980a0d67d79ee8733 files/prelink-20050314-amd64-gcc4.patch 6816
-MD5 e044ee8e67c7ef50523a1ccd4dd08e90 files/digest-prelink-20050314 69
 MD5 23dd82792b9637171b3f2fffc51eeea9 files/prelink-20040707-init.patch 1471
+MD5 e044ee8e67c7ef50523a1ccd4dd08e90 files/digest-prelink-20050314 69
+MD5 f624545fb4e6fe08e8fb45d9ace1d32f files/digest-prelink-20050610 69
+MD5 e7b084a6fd6b4ef980a0d67d79ee8733 files/prelink-20050314-amd64-gcc4.patch 6816
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3o9z1ZcsMnZjRyIRAnEmAJ9IITzot7U32boEpvvvBfeLdLOtvwCgr1Xu
+w+N/kaKoWqltJMJIl8FmBsE=
+=ymHi
+-----END PGP SIGNATURE-----
