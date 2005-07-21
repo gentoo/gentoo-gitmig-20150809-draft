@@ -5,5 +5,5 @@
 	<email>pyrania@gentoo.org</email>
 	<name>Markus Nigbur</name>
 </maintainer>
-<herd>gnome</herd>
+<herd>gnome-mm</herd>
 </pkgmetadata>
