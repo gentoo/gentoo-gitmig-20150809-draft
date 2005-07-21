@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre1-r1.ebuild,v 1.2 2005/07/19 21:40:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre1-r1.ebuild,v 1.3 2005/07/21 00:59:17 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -12,8 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
-~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="bootstrap build static unicode"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
@@ -25,7 +24,8 @@ RDEPEND=">=sys-apps/sysvinit-2.84
 		>=app-shells/bash-3.0-r10
 		>=sys-apps/coreutils-5.2.1
 	) )"
-DEPEND="virtual/os-headers"
+DEPEND="virtual/os-headers
+	>=sys-apps/portage-2.0.51"
 PROVIDE="virtual/baselayout"
 
 src_unpack() {
@@ -53,14 +53,14 @@ src_unpack() {
 src_compile() {
 	use static && append-ldflags -static
 
-	make -C ${S}/src CC="$(tc-getCC)" LD="$(tc-getCC) ${LDFLAGS}" \
+	make -C "${S}"/src CC="$(tc-getCC)" LD="$(tc-getCC) ${LDFLAGS}" \
 		CFLAGS="${CFLAGS}" || die
 }
 
 # ${PATH} should include where to get MAKEDEV when calling this
 # function
 create_dev_nodes() {
-	case ${ARCH} in
+	case $(tc-arch) in
 		# amd64 must use generic-i386 because amd64/x86_64 does not have
 		# a generic option at this time, and the default 'generic' ends
 		# up erroring out, because MAKEDEV internally doesn't know what
@@ -78,7 +78,7 @@ create_dev_nodes() {
 		x86)	suffix=-i386 ;;
 	esac
 
-	einfo "Using generic${suffix} to make ${ARCH} device nodes..."
+	einfo "Using generic${suffix} to make $(tc-arch) device nodes..."
 	MAKEDEV generic${suffix}
 	MAKEDEV sg scd rtc hde hdf hdg hdh input audio video
 }
@@ -247,18 +247,15 @@ src_install() {
 	# attempting to merge files, (3) accidentally packaging up personal files
 	# with quickpkg
 	fperms 0600 /etc/shadow
-	mv ${D}/etc/{passwd,shadow,group,fstab,hosts,issue.devfix} ${D}/usr/share/baselayout
+	mv "${D}"/etc/{passwd,shadow,group,fstab,hosts,issue.devfix} "${D}"/usr/share/baselayout
 
-	cp -P ${S}/init.d/* ${D}/etc/init.d
-	chmod a+x ${D}/etc/init.d/*
-	insinto /etc/conf.d
-	doins ${S}/etc/conf.d/*
-	insinto /etc/env.d
-	doins ${S}/etc/env.d/*
+	doinitd "${S}"/init.d/* || die "doinitd"
+	doconfd "${S}"/etc/conf.d/* || die "doconfd"
+	doenvd "${S}"/etc/env.d/* || die "doenvd"
 	insinto /etc/modules.autoload.d
-	doins ${S}/etc/modules.autoload.d/*
+	doins "${S}"/etc/modules.autoload.d/*
 	insinto /etc/modules.d
-	doins ${S}/etc/modules.d/*
+	doins "${S}"/etc/modules.d/*
 
 	# Special-case uglyness... For people updating from lib32 -> lib amd64
 	# profiles, keep lib32 in the search path while it's around
@@ -286,20 +283,20 @@ src_install() {
 	# Setup files related to /dev
 	#
 	into /
-	dosbin ${S}/sbin/MAKEDEV
+	dosbin "${S}"/sbin/MAKEDEV
 	dosym ../../sbin/MAKEDEV /usr/sbin/MAKEDEV
 	dosym ../sbin/MAKEDEV /dev/MAKEDEV
 
 	#
 	# Setup files in /bin
 	#
-	cd ${S}/bin
+	cd "${S}"/bin
 	dobin rc-status
 
 	#
 	# Setup files in /sbin
 	#
-	cd ${S}/sbin
+	cd "${S}"/sbin
 	into /
 	dosbin rc rc-update
 	# Need this in /sbin, as it could be run before
@@ -323,7 +320,7 @@ src_install() {
 	# These are support files for other things in baselayout that needn't be
 	# under CONFIG_PROTECTed /etc
 	#
-	cd ${S}/sbin
+	cd "${S}"/sbin
 	exeinto ${rcscripts_dir}/sh
 	doexe rc-services.sh rc-daemon.sh rc-help.sh
 
@@ -334,34 +331,34 @@ src_install() {
 	if ! use build; then
 		# This is for new depscan.sh and env-update.sh
 		# written in awk
-		cd ${S}/sbin
+		cd "${S}"/sbin
 		into /
 		dosbin depscan.sh
 		dosbin env-update.sh
 		insinto ${rcscripts_dir}/awk
-		doins ${S}/src/awk/*.awk
+		doins "${S}"/src/awk/*.awk
 	fi
 
 	# Original design had these in /etc/net.modules.d but that is too
 	# problematic with CONFIG_PROTECT
 	dodir ${rcscripts_dir}
-	cp -a ${S}/lib/rcscripts/net.modules.d ${D}${rcscripts_dir}
+	cp -a "${S}"/lib/rcscripts/net.modules.d ${D}${rcscripts_dir}
 	chown -R root:root ${D}${rcscripts_dir}
 
 	#
 	# Install baselayout documentation
 	#
 	if ! use build ; then
-		doman ${S}/man/*.*
+		doman "${S}"/man/*.*
 		docinto /
 		dodoc ${FILESDIR}/copyright
-		dodoc ${S}/ChangeLog
+		dodoc "${S}"/ChangeLog
 	fi
 
 	#
 	# Install baselayout utilities
 	#
-	cd ${S}/src
+	cd "${S}"/src
 	make DESTDIR="${D}" install || die
 
 	# Hack to fix bug 9849, continued in pkg_postinst
@@ -540,7 +537,7 @@ pkg_postinst() {
 	# write it here so that the new version is immediately in the file
 	# (without waiting for the user to do etc-update)
 	rm -f ${ROOT}/etc/._cfg????_gentoo-release
-	echo "Gentoo Base System version ${SV}" > ${ROOT}/etc/gentoo-release
+	echo "Gentoo Base System version ${PV}" > ${ROOT}/etc/gentoo-release
 
 	echo
 	einfo "Please be sure to update all pending '._cfg*' files in /etc,"
