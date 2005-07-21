@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10.ebuild,v 1.9 2005/07/20 12:20:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10.ebuild,v 1.10 2005/07/21 20:24:47 mrness Exp $
 
 inherit eutils pam toolchain-funcs
 
@@ -198,7 +198,7 @@ pkg_postinst() {
 	ewarn "Squid authentication helpers have been installed suid root"
 	ewarn "This allows shadow based authentication, see bug #52977 for more"
 	echo
-	einfo "To winbind auth work with your squid your should change the"
+	einfo "For winbind authentication to work with squid you should change the"
 	einfo "/var/cache/samba/winbindd_privileged group to the same one you use"
 	einfo "in the cache_effective_group option on your squid.conf:"
 	einfo "    chgrp squid /var/cache/samba/winbindd_privileged"
