@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.13 2005/06/24 05:06:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.14 2005/07/21 18:09:02 mrness Exp $
+
+*hsfmodem-7.18.00.05-r1 (21 Jul 2005)
+
+  21 Jul 2005; Alin Nastac <mrness@gentoo.org>
+  +files/hsf-7.18.00.05-errno.patch, +files/hsf-7.18.00.05-kernconfig.patch,
+  +files/hsf-7.18.00.05-simple_class.patch, +hsfmodem-7.18.00.05-r1.ebuild:
+  Fix problems with kernel 2.6.12 by adding upstream patches (#99607).
 
 *hsfmodem-7.18.00.05 (24 Jun 2005)
 

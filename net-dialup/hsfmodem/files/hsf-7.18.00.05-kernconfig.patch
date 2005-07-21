@@ -1,0 +1,36 @@
+diff -urN hsfmodem-7.18.00.05full/scripts/cnxtconfig.in hsfmodem-7.18.00.05full-kernconfig/scripts/cnxtconfig.in
+--- hsfmodem-7.18.00.05full/scripts/cnxtconfig.in	2005-06-20 16:04:02.000000000 -0400
++++ hsfmodem-7.18.00.05full-kernconfig/scripts/cnxtconfig.in	2005-07-05 21:29:21.177824944 -0400
+@@ -649,7 +649,7 @@
+ 	missing=
+ 	nb=0
+ 	for opt in ${KERN_CONFIG_REQUIRED}; do
+-		if ! kernel_option_set "${opt}"; then
++		if kernel_option_exists "${opt}" && ! kernel_option_set "${opt}"; then
+ 			if [ ${nb} -eq 0 ]; then
+ 				missing="CONFIG_${opt}"
+ 				nb=1
+@@ -676,8 +676,8 @@
+ 		echo 1>&2
+ 		echo 1>&2 "ERROR: The kernel at '${KERNELSRC}' was compiled without the following"
+ 		echo 1>&2 "option${plurial} enabled: ${missing}"
+-		echo 1>&2 "${This} option${plurial} ${is} needed for DriverLoader. Please enable ${this} kernel"
+-		echo 1>&2 "option${plurial}, re-compile the kernel and try again."
++		echo 1>&2 "${This} option${plurial} ${is} needed for the @CNXTTARGET@ modem driver. Please enable"
++		echo 1>&2 "${this} kernel option${plurial}, re-compile the kernel and try again."
+ 		return 1
+ 	fi
+ 
+@@ -720,6 +720,12 @@
+ 	return 0
+ }
+ 
++kernel_option_exists()
++{
++	grep -q "CONFIG_${1}[= ]" "${KERNELSRC}/.config"
++	return $?
++}
++
+ kernel_option_set()
+ {
+ 	grep -q "^CONFIG_${1}=[yYmM]" "${KERNELSRC}/.config"
