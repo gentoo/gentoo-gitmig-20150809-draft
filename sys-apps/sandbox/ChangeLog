@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.35 2005/07/21 15:50:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.36 2005/07/21 18:51:54 killerfox Exp $
+
+  21 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> sandbox-1.2.11.ebuild:
+  Stable on hppa. bug #96782
 
   21 Jul 2005; Aron Griffis <agriffis@gentoo.org> sandbox-1.2.11.ebuild:
   stable on alpha
