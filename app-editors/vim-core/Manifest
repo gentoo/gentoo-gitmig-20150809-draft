@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b4d7c84717bbeb50829c07aca2219845 ChangeLog 21748
 MD5 e3bd3fbd47b779a02d6977dc95fda06b vim-core-6.3.075.ebuild 1049
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
@@ -16,3 +19,10 @@ MD5 266f8b682476da0ec6c4d39de5a79264 files/vimrc-r1 5728
 MD5 09ddb27b09622238519d236eee139298 files/digest-vim-core-7.0_alpha20050721 156
 MD5 2ad354160ca3635ea115beb56e237e7c files/vimrc 3879
 MD5 ba542e54d91a04a85435253ae35301b6 files/xxd-completion 461
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4COYcsIHjyDViGQRAmTyAJ9oj2xh74G4jNSl4zsV6CIMSDjIdwCgimDf
+G9yTu3jFPcoYJMt1/Q3Cb6M=
+=0/ev
+-----END PGP SIGNATURE-----
