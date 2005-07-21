@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r3.ebuild,v 1.1 2005/07/21 01:08:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r3.ebuild,v 1.2 2005/07/21 03:38:17 robbat2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,7 +26,7 @@ DEPEND="${DEPEND_COMMON}
 		sys-apps/ed"
 RDEPEND="${DEPEND_COMMON}
 		 net-misc/openssh"
-PDEPEND="sys-cluster/openpbs-common"
+PDEPEND=">=sys-cluster/openpbs-common-1.1.0"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -72,21 +72,29 @@ src_compile() {
 # you and fail strangely. Likewise it also barfs on our .keep files!
 pbs_createspool() {
 	root="$1"
-	s="${root}${SPOOL_LOCATION}"
-	h="${root}${PBS_SERVER_HOME}"
-	install -d -m0755 "${h}"
-	install -d -m1777 "${h}/spool" "${h}/undelivered"
-	install -d -m0700 "${h}/checkpoint"
-	install -d -m0755 "${h}/aux" "${h}/mom_logs" "${h}/sched_logs" "${h}/server_logs"
-	install -d -m0750 "${h}/sched_priv" "${h}/server_priv"
-	install -d -m0751 "${h}/mom_priv" "${h}/mom_priv/jobs"
+	s="${SPOOL_LOCATION}"
+	h="${PBS_SERVER_HOME}"
 	sp="${h}/server_priv"
-	install -d -m0755 "${sp}/accounting"
-	install -d -m0750 "${sp}/acl_groups" "${sp}/acl_hosts" "${sp}/acl_svr" "${sp}/acl_users" "${sp}/jobs" "${sp}/queues"
-	# this file MUST exist for PBS/Torque to work
-	install -d -m0755 "${root}/etc"
-	touch ${root}/etc/pbs_environment
-	chmod 644 ${root}/etc/pbs_environment
+
+	for a in \
+			0755:${h} 0755:${h}/aux 0700:${h}/checkpoint \
+			0755:${h}/mom_logs 0751:${h}/mom_priv 0751:${h}/mom_priv/jobs \
+			0755:${h}/sched_logs 0750:${h}/sched_priv \
+			0755:${h}/server_logs \
+			0750:${h}/server_priv 0755:${h}/server_priv/accounting \
+			0750:${h}/server_priv/acl_groups 0750:${h}/server_priv/acl_hosts \
+			0750:${h}/server_priv/acl_svr 0750:${h}/server_priv/acl_users \
+			0750:${h}/server_priv/jobs 0750:${h}/server_priv/queues \
+			1777:${h}/spool 1777:${h}/undelivered ;
+	do
+		d="${a/*:}"
+		m="${a/:*}"
+		if [ ! -d "${d}" ]; then
+			install -d -m${m} ${root}${d}
+		else
+			chmod ${m} ${root}${d}
+		fi
+	done
 }
 
 src_install() {
@@ -100,6 +108,15 @@ src_install() {
 	#newinitd ${FILESDIR}/pbs-init.d pbs
 	#newconfd ${FILESDIR}/pbs-conf.d pbs
 	dosym /usr/$(get_libdir)/pbs/libpbs.a /usr/$(get_libdir)/libpbs.a
+
+	# this file MUST exist for PBS/Torque to work
+	# but try to preserve any customatizations that the user has made
+	dodir /etc
+	if [ -f ${ROOT}/etc/pbs_environment ]; then
+		cp ${ROOT}/etc/pbs_environment ${D}/etc/pbs_environment
+	else
+		touch ${D}/etc/pbs_environment
+	fi
 }
 
 pkg_postinst() {
