@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 04077ca57c880f8cdad51f309a4d35fa ChangeLog 2161
+MD5 ac2672228c2fd84ea2aa24abd7433440 ChangeLog 2307
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 28555fa0e69ed8a77bb2e612534fadfb portaudio-18.1-r1.ebuild 1481
 MD5 3acc2c12b931f8f2859d856e405d4d5f portaudio-18.1.ebuild 1006
-MD5 df63aa257659d062d90c70c0011bf6d9 portaudio-18.1-r1.ebuild 1423
 MD5 24037d452fff400001cf4a3a4dec3585 files/digest-portaudio-18.1 64
-MD5 8461b4a89f5c56d005f6818a8bf410f3 files/portaudio-18.1-use-fpic.patch 3420
-MD5 4099a0cd35fe029240c0349570c61731 files/portaudio-Makefile.macos 971
-MD5 18d9bba97a0da6eb457678c0ea20aa4b files/portaudio-use-fpic.patch 323
 MD5 24037d452fff400001cf4a3a4dec3585 files/digest-portaudio-18.1-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3tTDArHZZzCEUG0RAtPvAJ4qb0Upa1UdGkTEH67lLb1mdlKnDgCfWPYZ
-988/sCA2k6J1EqnfE7QmrEA=
-=eN52
------END PGP SIGNATURE-----
+MD5 8461b4a89f5c56d005f6818a8bf410f3 files/portaudio-18.1-use-fpic.patch 3420
+MD5 ee10715cfed25ac4af5bb05bdcf816e3 files/portaudio-Makefile.macos 1050
+MD5 18d9bba97a0da6eb457678c0ea20aa4b files/portaudio-use-fpic.patch 323

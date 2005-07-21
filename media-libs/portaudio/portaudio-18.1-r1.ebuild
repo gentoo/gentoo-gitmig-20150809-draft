@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.1-r1.ebuild,v 1.1 2005/07/20 22:47:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.1-r1.ebuild,v 1.2 2005/07/21 04:13:47 kito Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.portaudio.com/archives/${MY_P}.zip"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc-macos ~sparc ~x86"
 
 IUSE=""
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-use-fpic.patch
-	use ppc-macos && cp ${FILESDIR}/${PN}-Makefile.macos ${S}/Makefile || \
+	use userland_Darwin  && cp ${FILESDIR}/${PN}-Makefile.macos ${S}/Makefile || \
 	cp ${S}/Makefile.linux ${S}/Makefile
 }
 
@@ -32,18 +32,19 @@ src_compile() {
 	cd ${S}
 	make sharedlib || die
 
-	echo gcc -c ${CFLAGS} -fPIC -Ipa_common pablio/pablio.c -o pablio/pablio.o
-	gcc -c ${CFLAGS} -fPIC -Ipa_common pablio/pablio.c -o pablio/pablio.o || die
-	echo gcc -shared -o pablio/libpablio.so pablio/pablio.o
-	gcc -shared -o pablio/libpablio.so pablio/pablio.o -Lpa_common -lportaudio || die
+	if ! use userland_Darwin ; then
+		echo gcc -c ${CFLAGS} -fPIC -Ipa_common pablio/pablio.c -o pablio/pablio.o
+		gcc -c ${CFLAGS} -fPIC -Ipa_common pablio/pablio.c -o pablio/pablio.o || die
+		echo gcc -shared -o pablio/libpablio.so pablio/pablio.o
+		gcc -shared -o pablio/libpablio.so pablio/pablio.o -Lpa_common -lportaudio || die
+	fi
 }
 
 src_install() {
-	if ! use ppc-macos
-	then
-		dolib pa_unix_oss/libportaudio.so pablio/libpablio.so
-	else
+	if use userland_Darwin ; then
 		dolib pa_mac_core/libportaudio.dylib
+	else
+		dolib pa_unix_oss/libportaudio.so pablio/libpablio.so
 	fi
 
 	insinto /usr/include/portaudio
