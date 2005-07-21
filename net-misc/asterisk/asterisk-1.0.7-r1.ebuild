@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.13 2005/07/13 14:13:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.14 2005/07/21 00:57:17 stkn Exp $
 
 inherit eutils perl-module
 
@@ -372,51 +372,46 @@ src_install() {
 		sed -i -e "s:/etc/asterisk/perl:/var/lib/asterisk/perl:" \
 			${D}${VENDOR_LIB}/AstAPI/LoadFile.pm ${D}${VENDOR_LIB}/AstAPI/WebServer.pm
 	fi
+}
 
-	if [[ -z "$(egetent passwd asterisk)" ]]; then
-		einfo "Adding asterisk user and group"
-		enewgroup asterisk
-		enewuser asterisk -1 /bin/false /var/lib/asterisk asterisk
-	fi
-
-	# fix permissions
-	for x in spool run lib log; do
-		chown -R asterisk:asterisk ${D}/var/${x}/asterisk
-		chmod -R u=rwX,g=rX,o=     ${D}/var/${x}/asterisk
-	done
-
-	chown -R root:asterisk ${D}/etc/asterisk
-	chmod -R u=rwX,g=rX,o= ${D}/etc/asterisk
+pkg_preinst() {
+	einfo "Adding asterisk user and group"
+	enewgroup asterisk
+	enewuser asterisk -1 /bin/false /var/lib/asterisk asterisk
 }
 
 pkg_postinst() {
-	if has_version "net-misc/asterisk"; then
-		#
-		# Change permissions and ownerships of asterisk
-		# directories and files
-		#
-		einfo "Fixing permissions and ownerships"
-		# fix permissions in /var/...
-		for x in spool run lib log; do
-			chown -R asterisk:asterisk ${ROOT}var/${x}/asterisk
-			chmod -R u=rwX,g=rX,o=     ${ROOT}var/${x}/asterisk
-		done
+	#
+	# Change permissions and ownerships of asterisk
+	# directories and files
+	#
+	einfo "Fixing permissions and ownerships"
+	# fix permissions in /var/...
+	for x in spool run lib log; do
+		chown -R asterisk:asterisk ${ROOT}var/${x}/asterisk
+		chmod -R u=rwX,g=rX,o=     ${ROOT}var/${x}/asterisk
+	done
 
-		chown -R root:asterisk ${ROOT}etc/asterisk
-		chmod -R u=rwX,g=rX,o= ${ROOT}etc/asterisk
+	chown -R root:asterisk ${ROOT}etc/asterisk
+	chmod -R u=rwX,g=rX,o= ${ROOT}etc/asterisk
 
-		if [[ -z "$(grep "/var/run/asterisk" ${ROOT}etc/asterisk/asterisk.conf)" ]]
-		then
-			einfo "Fixing astrundir in ${ROOT}etc/asterisk/asterisk.conf"
-			mv -f ${ROOT}etc/asterisk/asterisk.conf \
-				${ROOT}etc/asterisk/asterisk.conf.bak
-			sed -e "s:^\(astrundir[\t ]=>\).*:\1 /var/run/asterisk:" \
-				${ROOT}etc/asterisk/asterisk.conf.bak >\
-				${ROOT}etc/asterisk/asterisk.conf
-			einfo "Backup has been saved as ${ROOT}etc/asterisk/asterisk.conf.bak"
-		fi
+	#
+	# Fix locations of old installations (pre-non-root versions)
+	#
+	if [[ -z "$(grep "/var/run/asterisk" ${ROOT}etc/asterisk/asterisk.conf)" ]]
+	then
+		einfo "Fixing astrundir in ${ROOT}etc/asterisk/asterisk.conf"
+		mv -f ${ROOT}etc/asterisk/asterisk.conf \
+			${ROOT}etc/asterisk/asterisk.conf.bak
+		sed -e "s:^\(astrundir[\t ]=>\).*:\1 /var/run/asterisk:" \
+			${ROOT}etc/asterisk/asterisk.conf.bak >\
+			${ROOT}etc/asterisk/asterisk.conf
+		einfo "Backup has been saved as ${ROOT}etc/asterisk/asterisk.conf.bak"
 	fi
 
+	#
+	# Some messages
+	#
 	einfo "Asterisk has been installed"
 	einfo ""
 	einfo "to add new Mailboxes use: /usr/sbin/addmailbox"

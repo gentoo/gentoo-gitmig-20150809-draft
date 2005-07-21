@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.66 2005/06/28 21:05:33 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.67 2005/07/21 00:57:17 stkn Exp $
+
+  21 Jul 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.5-r2.ebuild,
+  asterisk-1.0.6-r1.ebuild, asterisk-1.0.7-r1.ebuild, asterisk-1.0.8.ebuild:
+  Moved user+group creation to pkg_preinst() as suggested by Gabe in bug #99466,
+  permissions and ownerships are changed in pkg_postinst() now.
 
   28 Jun 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.7-r1.ebuild:
   Marking stable on x86, closing #88732 and #96826.
