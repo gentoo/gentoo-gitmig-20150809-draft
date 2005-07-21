@@ -1,19 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d070cb818ca051a18167f819a3816e8c libgnomemm-2.10.0.ebuild 719
 MD5 c4d899e2094ca55aed3d61b4ae4f0029 libgnomemm-2.0.0-r1.ebuild 740
-MD5 34c944e9632d31b92389cd325a1e6b84 libgnomemm-2.6.0.ebuild 716
+MD5 c4825527d06ccb455d86b0729dce4142 libgnomemm-2.6.0.ebuild 715
 MD5 37ba655bb9aa3a198b5ab1f8105dd324 libgnomemm-2.0.1.ebuild 766
-MD5 752c7ab615a19f2ad8fff1d55e304064 ChangeLog 4085
+MD5 e2c38083967880f850ee5835d81a16d7 ChangeLog 4281
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
 MD5 2d32d65a8f8c930689fc0c23f769946e files/libgnomemm-2.0.0-pkgconfig.patch 1083
+MD5 7cd607992587f719817cfeb3b59ea70e files/digest-libgnomemm-2.10.0 70
 MD5 24c2db8638fe53dba09a9a20ca0844e9 files/digest-libgnomemm-2.0.0-r1 68
 MD5 18cc8e18bd644eca9920325ea0147cd7 files/digest-libgnomemm-2.0.1 69
 MD5 a4d6f8f16b66a52e759a36889b37a078 files/digest-libgnomemm-2.6.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3xCTEZCkKN40op4RAuOhAJ43pHyAbYFa8jVYj8rOxZ5FT8r96wCfS4eM
-/fb1XWSfrOsyABOjz9RO4jk=
-=Mn40
------END PGP SIGNATURE-----
