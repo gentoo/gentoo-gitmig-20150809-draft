@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/beancounter-0.8.1.ebuild,v 1.3 2005/05/05 15:38:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/beancounter-0.8.1.ebuild,v 1.4 2005/07/21 17:16:38 dholm Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://eddelbuettel.com/dirk/code/beancounter/beancounter_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="mysql postgres sqlite"
 
 DEPEND=">=dev-lang/perl-5

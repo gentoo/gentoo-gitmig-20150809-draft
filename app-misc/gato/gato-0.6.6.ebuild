@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gato/gato-0.6.6.ebuild,v 1.3 2005/04/07 16:48:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gato/gato-0.6.6.ebuild,v 1.4 2005/07/21 17:18:32 dholm Exp $
 
 DESCRIPTION="An interface to the at UNIX command"
 HOMEPAGE="http://www.arquired.es/users/aldelgado/proy/gato/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.arquired.es/users/aldelgado/proy/gato/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 RDEPEND="=x11-libs/gtk+-1*"

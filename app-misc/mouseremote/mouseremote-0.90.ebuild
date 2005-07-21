@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.13 2005/05/25 15:22:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.14 2005/07/21 17:22:38 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www4.pair.com/gribnif/ha/MouseRemote.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="perl-core/Time-HiRes"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.4.ebuild,v 1.8 2005/01/01 15:15:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.4.ebuild,v 1.9 2005/07/21 17:24:04 dholm Exp $
 
 DESCRIPTION="A gtk2 frontend and drivers for mpman f50/55/60 mp3 players"
 HOMEPAGE="http://mplinuxman.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-source-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2.2.4-r1
