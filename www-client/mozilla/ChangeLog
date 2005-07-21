@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.40 2005/07/11 21:52:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.41 2005/07/21 21:41:38 anarchy Exp $
+
+*mozilla-1.7.10 (21 Jul 2005)
+
+  21 Jul 2005; Jory A. Pratt <anarchy@gentoo.org> +mozilla-1.7.10.ebuild:
+  wrt #98846, modifications needed before p.mask is removed
 
 *mozilla-1.7.8-r2 (11 Jul 2005)
 
