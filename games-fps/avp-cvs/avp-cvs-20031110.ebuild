@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/avp-cvs-20031110.ebuild,v 1.10 2005/02/12 01:23:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/avp-cvs-20031110.ebuild,v 1.11 2005/07/21 17:09:26 mr_bones_ Exp $
 
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
 ECVS_PASS="anonymous"
@@ -16,13 +16,11 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/x11
+DEPEND="virtual/x11
 	media-libs/openal
 	media-libs/libsdl"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
-S="${WORKDIR}/${ECVS_MODULE}"
+S=${WORKDIR}/${ECVS_MODULE}
 
 pkg_setup() {
 	if has_version 'media-video/nvidia-glx' && has_version '<media-video/nvidia-glx-1.0.5328' ; then
@@ -39,20 +37,16 @@ src_unpack() {
 		cvs_src_unpack
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
-		-e "/^CFLAGS =/s:=.*:=${CFLAGS}:" Makefile || \
-			die "sed Makefile failed"
-}
-
-src_compile() {
-	emake || die "make failed"
+		-e "/^CFLAGS =/s:=.*:=${CFLAGS}:" Makefile \
+		|| die "sed Makefile failed"
 }
 
 src_install() {
-	dogamesbin AvP    || die "dogamesbin failed"
-	dodoc README TODO || die "dodoc failed"
+	dogamesbin AvP || die "dogamesbin failed"
+	dodoc README TODO
 	prepgamesdirs
 }
 

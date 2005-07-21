@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/avp-cvs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/ChangeLog,v 1.7 2004/06/24 22:40:50 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/ChangeLog,v 1.8 2005/07/21 17:09:26 mr_bones_ Exp $
+
+  21 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  avp-cvs-20031110.ebuild:
+  use default src_compile; tidy
 
   03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
   avp-cvs-20031110.ebuild:
