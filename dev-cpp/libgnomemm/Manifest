@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d070cb818ca051a18167f819a3816e8c libgnomemm-2.10.0.ebuild 719
 MD5 c4d899e2094ca55aed3d61b4ae4f0029 libgnomemm-2.0.0-r1.ebuild 740
 MD5 c4825527d06ccb455d86b0729dce4142 libgnomemm-2.6.0.ebuild 715
@@ -9,3 +12,10 @@ MD5 7cd607992587f719817cfeb3b59ea70e files/digest-libgnomemm-2.10.0 70
 MD5 24c2db8638fe53dba09a9a20ca0844e9 files/digest-libgnomemm-2.0.0-r1 68
 MD5 18cc8e18bd644eca9920325ea0147cd7 files/digest-libgnomemm-2.0.1 69
 MD5 a4d6f8f16b66a52e759a36889b37a078 files/digest-libgnomemm-2.6.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC39b2EZCkKN40op4RAup8AJ0egDfIts5EMYBeyCLJ35GGlgxHQgCgtb2K
+5RKc/k2SS7l2xiAf5WJ+3Ng=
+=XFTn
+-----END PGP SIGNATURE-----
