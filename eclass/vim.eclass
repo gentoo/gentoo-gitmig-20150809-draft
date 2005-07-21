@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.113 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.114 2005/07/21 20:39:27 rphillips Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -89,7 +89,8 @@ fi
 # vimpager (this is in vim6 as well, but the ebuilds don't handle it). There
 # is now a spellchecker too.
 if [[ $(get_major_version ) -ge 7 ]] ; then
-	IUSE="${IUSE} spell"
+	# removed the SPELL use flag support until we have a decent patch
+	IUSE="${IUSE}"
 
 	if [[ "${MY_PN}" != "vim-core" ]] ; then
 		IUSE="${IUSE} tcltk mzscheme"
@@ -215,18 +216,18 @@ vim_pkg_setup() {
 		die "${PF} not supported."
 	fi
 
-	if [[ $(get_major_version ) -ge 7 ]] ; then
-		if [[ ${MY_PN} != "vim-core" ]] && use spell ; then
-			if ! built_with_use "app-editors/vim-core" spell ; then
-				echo
-				ewarn "You have asked for spell checking but did not build vim-core"
-				ewarn "with USE=\"spell\". This means you will not have any dictionary"
-				ewarn "files installed."
-				echo
-			fi
-			epause 5
-		fi
-	fi
+	#if [[ $(get_major_version ) -ge 7 ]] ; then
+	#	if [[ ${MY_PN} != "vim-core" ]] && use spell ; then
+	#		if ! built_with_use "app-editors/vim-core" spell ; then
+	#			echo
+	#			ewarn "You have asked for spell checking but did not build vim-core"
+	#			ewarn "with USE=\"spell\". This means you will not have any dictionary"
+	#			ewarn "files installed."
+	#			echo
+	#		fi
+	#		epause 5
+	#	fi
+	#fi
 
 	# people with broken alphabets run into trouble. bug 82186.
 	unset LANG LC_ALL
@@ -391,11 +392,12 @@ vim_src_compile() {
 				myconf="${myconf} `use_enable netbeans`"
 			fi
 
+			# rphillips - removed spell disable until decent patch
 			# spell checking is turned on when we have syntax.
-			if ! use spell ; then
-				sed -i -e '/# \+define FEAT_SPELL/d' src/feature.h || \
-					die "couldn't disable spell"
-			fi
+			#if ! use spell ; then
+			#	sed -i -e '/# \+define FEAT_SPELL/d' src/feature.h || \
+			#		die "couldn't disable spell"
+			#fi
 		fi
 
 		# --with-features=huge forces on cscope even if we --disable it. We need
