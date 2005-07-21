@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.3 2005/07/17 02:41:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.4 2005/07/21 04:36:01 vapier Exp $
+
+# 3dfx support (glide) is disabled because it requires
+# glide-v2 while we only provide glide-v3 in portage
+# http://bugs.gentoo.org/show_bug.cgi?id=93097
 
 inherit eutils games
 
@@ -11,17 +15,16 @@ SRC_URI="http://www.lysator.liu.se/snes9x/${PV}/snes9x-${PV}-src.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="3dfx opengl X joystick zlib dga"
+IUSE="opengl X joystick zlib dga"
 
 RDEPEND="zlib? ( sys-libs/zlib )
 	virtual/x11
 	media-libs/libpng
-	opengl? ( virtual/opengl )
-	3dfx? ( media-libs/glide-v3 )"
+	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
-S="${WORKDIR}/${P}-src"
+S=${WORKDIR}/${P}-src
 
 src_unpack() {
 	unpack ${A}
@@ -40,15 +43,15 @@ src_compile() {
 	local vid=
 
 	mkdir mybins
-	for vid in 3dfx opengl X fallback ; do
+	for vid in opengl X fallback ; do
 		if [[ ${vid} != "fallback" ]] ; then
 			use ${vid} || continue
 		fi
 		cd "${S}"/snes9x
 		case ${vid} in
-			3dfx)
-				vidconf="--with-glide --without-opengl --without-x"
-				target=gsnes9x;;
+#			3dfx)
+#				vidconf="--with-glide --without-opengl --without-x"
+#				target=gsnes9x;;
 			opengl)
 				vidconf="--with-opengl --without-glide --without-x"
 				target=osnes9x;;

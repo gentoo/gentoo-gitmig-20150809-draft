@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/snes9x
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.15 2005/01/04 23:43:35 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.16 2005/07/21 04:36:01 vapier Exp $
+
+  21 Jul 2005; Mike Frysinger <vapier@gentoo.org> snes9x-1.43.ebuild:
+  Punt 3dfx support since it requires glide-2 but we only have glide-3 #93097.
 
   04 Jan 2005; Mike Frysinger <vapier@gentoo.org> snes9x-1.43.ebuild:
   Add support for USE=dga. Also remove forced linking with X libs (let
