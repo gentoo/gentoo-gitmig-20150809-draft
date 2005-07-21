@@ -1,7 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fcc54fa53eee467a5623e0af26286a2b ChangeLog 2989
-MD5 14c01f1a97437245ebac86e2d1906a00 glide-v3-3.10-r3.ebuild 1997
-MD5 ffbee135da1abc7b6258e91bfe4502d2 glide-v3-3.10-r4.ebuild 2173
-MD5 7fdeefd89269976f35269e66213a607c metadata.xml 156
-MD5 768d204d12c78e272cffb63c0b193f47 files/digest-glide-v3-3.10-r3 128
 MD5 fdd303f0ee6622cb6e52a415a19d7819 files/digest-glide-v3-3.10-r4 200
 MD5 f6673af0af631c9e33d4bfd4a3473c4e files/glide-v3-3.10-2.6-headers-fix.patch 2459
+MD5 ffbee135da1abc7b6258e91bfe4502d2 glide-v3-3.10-r4.ebuild 2173
+MD5 7fdeefd89269976f35269e66213a607c metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC35JEI1lqEGTUzyQRAkTGAJ4huQlEOGlomIxS/h4atjKp6yjXbwCfT3by
+XLO6DfDlMtoC53Eq6WLMX8Y=
+=jaAc
+-----END PGP SIGNATURE-----
