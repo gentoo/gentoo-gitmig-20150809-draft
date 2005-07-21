@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/mdf2iso
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mdf2iso/ChangeLog,v 1.5 2005/05/30 18:44:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mdf2iso/ChangeLog,v 1.6 2005/07/21 21:10:49 pylon Exp $
+
+*mdf2iso-0.3.0 (21 Jul 2005)
+
+  21 Jul 2005; Lars Weiler <pylon@gentoo.org> +mdf2iso-0.3.0.ebuild:
+  Version bump; bug #97019.
 
   30 May 2005; Lars Weiler <pylon@gentoo.org> mdf2iso-0.2.1.ebuild:
   Changed to toolchain-funcs; bug #92745.
