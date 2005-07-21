@@ -22,8 +22,8 @@ MD5 89cc8ab9525284af6babcb9c86122443 files/2.2.5/pam.d/gdmconfig 288
 MD5 2edddb54af0c3c979b9ef73ba52deb4a files/2.6.0/pam.d/gdm 425
 MD5 6c45b586e2cf16cf89ab544197b12bae files/2.6.0/pam.d/gdm-autologin 406
 MD5 89cc8ab9525284af6babcb9c86122443 files/2.6.0/pam.d/gdmconfig 288
-MD5 ed7d4952b87826da0024f44aecbc7331 files/2.6.0-openpam/pam.d/gdm 245
-MD5 99d0e82470c4aefa1f634d092dede615 files/2.6.0-openpam/pam.d/gdm-autologin 248
+MD5 b2405ff4fa9986e422dc852758b861f6 files/2.6.0-openpam/pam.d/gdm 206
+MD5 e04c0ff690eadb92a48cf14718bf9df4 files/2.6.0-openpam/pam.d/gdm-autologin 209
 MD5 b5443ee5f9012cd5ee4eed831b6c7e9a files/2.6.0-openpam/pam.d/gdmconfig 193
 MD5 114395565e31f41b44d31d731f1478b0 files/2.2.5/security/console.apps/gdmconfig 66
 MD5 114395565e31f41b44d31d731f1478b0 files/2.6.0/security/console.apps/gdmconfig 66
