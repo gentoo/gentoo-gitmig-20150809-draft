@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/bashmark
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bashmark/ChangeLog,v 1.6 2005/06/12 18:29:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bashmark/ChangeLog,v 1.7 2005/07/21 16:01:21 genstef Exp $
+
+*bashmark-0.6.2 (21 Jul 2005)
+
+  21 Jul 2005; Stefan Schweizer <genstef@gentoo.org> +bashmark-0.6.2.ebuild:
+  version bump
 
 *bashmark-0.6.1 (12 Jun 2005)
 
