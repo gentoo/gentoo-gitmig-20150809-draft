@@ -1,8 +1,20 @@
-MD5 f592178a43bcce50870d912cfd84a746 ChangeLog 1594
-MD5 c3e1c808b2afe90339d280490cfba6c6 linux-atm-2.4.1.ebuild 857
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f732d6fae5a323cee63bcc2e26bf89fc linux-atm-2.4.1-r1.ebuild 1401
+MD5 f07cf7282ffbaa62721cf2b1501bc1d6 ChangeLog 1818
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 0e1e8bc5bee49d24aa78e2f8f0a1a0a9 linux-atm-2.4.1-r1.ebuild 995
-MD5 6a54ce48b2a9cb74b5b968847fe7a1ea files/digest-linux-atm-2.4.1 67
+MD5 c3e1c808b2afe90339d280490cfba6c6 linux-atm-2.4.1.ebuild 857
 MD5 377f9a635f2f11c0d0e8b5c6b83d14d7 files/2.4.1-gcc34.patch 1175
-MD5 2513dd16d6943f14795364d0d71aab50 files/2.4.1-uclibc.patch 497
+MD5 6a54ce48b2a9cb74b5b968847fe7a1ea files/digest-linux-atm-2.4.1 67
+MD5 d7dd6d910e147168b4d1204e618f5a79 files/2.4.1-stdlib.patch 1216
 MD5 6a54ce48b2a9cb74b5b968847fe7a1ea files/digest-linux-atm-2.4.1-r1 67
+MD5 2513dd16d6943f14795364d0d71aab50 files/2.4.1-uclibc.patch 497
+MD5 30ac2602fbe634b8719307df79b1f4cb files/2.4.1-gcc4.patch 3394
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3/zpNSP4Vda7IdsRAlnAAJ9wdpHViii7MNvZban9bWDq6JyatwCeN7zD
+U2FeKIrI2RIJkZUr6X+TGU0=
+=xbPe
+-----END PGP SIGNATURE-----

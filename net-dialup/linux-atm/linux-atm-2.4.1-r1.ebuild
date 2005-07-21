@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1-r1.ebuild,v 1.7 2005/06/18 21:32:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1-r1.ebuild,v 1.8 2005/07/21 19:51:37 mrness Exp $
 
 inherit eutils
 
@@ -18,13 +18,26 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
+
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc34.patch ${FILESDIR}/${PV}-uclibc.patch
+
+	# Fix labels at end of compound statement errors
+	epatch ${FILESDIR}/${PV}-gcc34.patch
+
+	# Fedora patch to fix gcc-4 compilation issues
+	# In particular, this corrects "invalid lvalue in assignment" errors
+	epatch ${FILESDIR}/${PV}-gcc4.patch
+
+	# Fedora patch: include stdlib.h for strtol prototype in sigd/cfg_y.y
+	epatch ${FILESDIR}/${PV}-stdlib.patch
+
+	# Fixed broken compilation on uclibc env (bug #61184)
+	epatch ${FILESDIR}/${PV}-uclibc.patch
 }
 
 src_compile() {
 	econf || die "configure failed"
-	sed -i 's:hosts.atm :hosts.atm ${D}:' src/config/Makefile || die "fail seding the Makefile"
+	sed -i 's:cp hosts.atm /etc:cp hosts.atm ${D}/etc:' src/config/Makefile || die "sed operation on Makefile failed"
 	emake || die "make failed"
 }
 
