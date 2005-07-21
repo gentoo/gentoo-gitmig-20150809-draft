@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/joystick-20050720.ebuild,v 1.1 2005/07/21 03:58:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/joystick-20050720.ebuild,v 1.2 2005/07/21 07:53:07 dholm Exp $
 
 DESCRIPTION="joystick testing utilities"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~vojtech/input/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="sdl"
 
 DEPEND="sdl? ( media-libs/libsdl )"
