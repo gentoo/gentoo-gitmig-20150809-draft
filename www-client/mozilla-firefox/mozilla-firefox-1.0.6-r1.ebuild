@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r1.ebuild,v 1.1 2005/07/21 22:19:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r1.ebuild,v 1.2 2005/07/21 23:12:21 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -80,6 +80,7 @@ src_unpack() {
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
 	epatch ${DISTDIR}/mozilla-firefox-1.0-4ft2.patch.bz2
 
+	# Patch for newer versions of cairo #80301
 	if has_version '>=x11-libs/cairo-0.3.0'; then
 		epatch ${FILESDIR}/svg-cairo-0.3.0-fix.patch
 	fi
@@ -209,17 +210,16 @@ src_install() {
 
 	# Fix firefox-config and install it
 	cd ${S}/build/unix
-	sed -i -e "s|/lib/firefox-${PV}|/$(get_libdir)/${MOZILLA_FIVE_HOME##*/}|g
-		s|/firefox-${PV}|/${MOZILLA_FIVE_HOME##*/}|g" firefox-config
+	sed -i -e "s|/usr/lib/firefox-${PV}|${MOZILLA_FIVE_HOME}|g
+		s|/usr/include/firefox-${PV}|${MOZILLA_FIVE_HOME}/include|g" firefox-config
 	exeinto ${MOZILLA_FIVE_HOME}
 	doexe firefox-config
 
 	# Fix pkgconfig files and install them
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in *.pc; do
-		[[ -f ${x} ]] || continue
-		sed -i -e "s|/lib/firefox-${PV}|/$(get_libdir)/${MOZILLA_FIVE_HOME##*/}|g
-			s|/firefox-${PV}|/${MOZILLA_FIVE_HOME##*/}|g" ${x}
+		sed -i -e "s|^libdir=.*|libdir=${MOZILLA_FIVE_HOME}|
+			s|^includedir=.*|includedir=${MOZILLA_FIVE_HOME}/include|" ${x}
 		doins ${x}
 	done
 	cd ${S}
