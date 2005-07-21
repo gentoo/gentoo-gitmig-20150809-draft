@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-infopipe
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-infopipe/ChangeLog,v 1.6 2005/06/14 06:30:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-infopipe/ChangeLog,v 1.7 2005/07/21 14:10:56 corsair Exp $
+
+  21 Jul 2005; Markus Rothe <corsair@gentoo.org> bmp-infopipe-1.3.ebuild:
+  Stable on ppc64
 
   14 Jun 2005; Markus Rothe <corsair@gentoo.org> bmp-infopipe-1.3.ebuild:
   Added ~ppc64
