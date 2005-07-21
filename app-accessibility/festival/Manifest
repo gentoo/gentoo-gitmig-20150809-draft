@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8aef0da5f2604f7e4a467ad640993356 ChangeLog 7241
 MD5 46db43791444b3bd68c0c435c132dda7 festival-1.4.3-r2.ebuild 5847
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
@@ -9,3 +12,10 @@ MD5 70fe1c867e8782c7ff288056677fda0c files/festival-gcc3.3.diff 5257
 MD5 8517199b1c2ba4350258e5511e93c2ea files/festival.rc 621
 MD5 957439462cff84152bc18202042e65c8 files/server.scm 773
 MD5 f38f904b9dfc77c788a63f51ccd2abb7 files/digest-festival-1.4.3-r3 863
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC32WuArHZZzCEUG0RArCIAKCFV03McLFt3I5CUBfaZlgzugO9AACcCnHQ
+G5v44hd+sd5AlhS7tAgEe9Q=
+=HPQ7
+-----END PGP SIGNATURE-----
