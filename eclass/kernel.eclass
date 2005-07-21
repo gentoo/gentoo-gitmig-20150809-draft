@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.59 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.60 2005/07/21 17:14:26 mr_bones_ Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -37,7 +37,7 @@ elif [[ ${CTARGET} == ${CHOST} ]]
 then
 	if [ "${ETYPE}" = "headers" ]
 	then
-		PROVIDE="virtual/kernel virtual/os-headers"
+		PROVIDE="virtual/os-headers"
 	else
 		eerror "Unknown ETYPE=\"${ETYPE}\"!"
 		die
