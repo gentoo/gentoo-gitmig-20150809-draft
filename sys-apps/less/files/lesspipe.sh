@@ -50,6 +50,9 @@ lesspipe() {
 	*.arj)        unarj l -- "$1" ;;
 	*.cab)        cabextract -l -- "$1" ;;
 	*.7z)         7z l -- "$1" ;;
+	*.a)          ar tv "$1" ;;
+	*.deb)        ar tv "$1"
+	              ar p "$1" data.tar.gz | tar tzvvf - ;;
 
 	### Media ###
 	*.gif|*.jpeg|*.jpg|*.pcd|*.png|*.tga|*.tiff|*.tif|*.bmp)
