@@ -1,6 +1,6 @@
 MD5 b6013b5c2efcf21b8e2a1964aba24838 gnomemm-1.2.4.ebuild 901
 MD5 240bbc528be6fecd6a3e95b5726e122a ChangeLog 3538
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
 MD5 c00c48d1761eff3e980ff2c34a46bd24 files/gnomemm-1.2.3-gcc33.patch 656
 MD5 c00c48d1761eff3e980ff2c34a46bd24 files/gnomemm-1.2.4-gcc33.patch 656
 MD5 f408d0639f010848578e8ec4f44a879f files/digest-gnomemm-1.2.4 66

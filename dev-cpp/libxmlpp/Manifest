@@ -2,7 +2,7 @@ MD5 f3893471a4182b1fd0340f5f6d9576b8 libxmlpp-0.27.0.ebuild 890
 MD5 6f406de127feaf6d750a665fa85e21b4 libxmlpp-1.0.2.ebuild 893
 MD5 d151ee2e2dbdbe62eb2c5a6326d57654 libxmlpp-1.0.4-r2.ebuild 896
 MD5 743d94f31713109e385d6a823a969874 ChangeLog 5724
-MD5 09d3293038c3ef6ba2ff98ef6609680a metadata.xml 252
+MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
 MD5 01d672605a1e96a89cd59358985d3b27 libxmlpp-2.10.0-r1.ebuild 1354
 MD5 2725f93a53655a21ce7bd8dd2d6de41d libxmlpp-2.8.0-r2.ebuild 1348
 MD5 d8908feca35d34dbd88eab2dc2eaa621 files/digest-libxmlpp-1.0.2 67
