@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e1b31375320f0eb879fca04084ad7179 ringtonetools-2.24.ebuild 682
+MD5 72c3d1117195a2b531b920991ffbcd6e ringtonetools-2.24.ebuild 681
 MD5 adc1df48332d62fa6e69d5c202a2d245 ringtonetools-2.23.ebuild 673
-MD5 c6e6b3a75f5dd2911664cbfcc23c417e ChangeLog 1279
+MD5 7b6af56dcfd1aab0c8882861c8bb94cf ringtonetools-2.25.ebuild 682
+MD5 7b32e9ff2e72979afb0c453ebc92ce51 ChangeLog 1453
 MD5 9f4b7bdab0d7e16d6fd653428be6b131 metadata.xml 448
 MD5 cd8e37aec51a49ca41c79aaf35457b05 files/digest-ringtonetools-2.23 69
 MD5 3384ef83a7b688b2929385bb8960576f files/digest-ringtonetools-2.24 69
+MD5 7a05a2ff80ea525ec5fb1b64716fdc87 files/digest-ringtonetools-2.25 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFChv4pjiC39V7gKu0RAsBOAKCHQ1aX5sPHYXL0t8Kv5ht3ff1imwCeL0PC
-1yn7wT5nquwjrgkkSCrPqgs=
-=Izjb
+iD8DBQFC4AzxNSP4Vda7IdsRAlLhAJ9FX2MmYJuD4HMHQxrW+r9VnRZToACePh2T
+lbOutOyfDJc8wW1kVJOAMng=
+=S8YE
 -----END PGP SIGNATURE-----
