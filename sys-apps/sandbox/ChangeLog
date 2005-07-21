@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.34 2005/07/21 15:47:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.35 2005/07/21 15:50:12 agriffis Exp $
+
+  21 Jul 2005; Aron Griffis <agriffis@gentoo.org> sandbox-1.2.11.ebuild:
+  stable on alpha
 
   21 Jul 2005; Aron Griffis <agriffis@gentoo.org> sandbox-1.2.11.ebuild:
   stable on ia64
