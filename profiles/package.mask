@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4203 2005/07/21 21:34:53 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4204 2005/07/21 22:41:30 ka0ttic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# <ka0ttic@gentoo.org> (21 Jul 2005)
+# Masked for testing.
+=dev-cpp/gtkglextmm-1.1.0
 
 # <anarchy@gentoo.org> (21 Jul 2005)
 # Masked for modifications in ebuild before release
@@ -120,10 +124,6 @@ gnome-extra/gnome-db
 # Aron Griffis <agriffis@gentoo.org> (28 Jun 2005)
 # Mask for testing
 =mail-client/mozilla-thunderbird-1.0.2-r10
-
-# Aaron Walker <ka0ttic@gentoo.org> (28 Jun 2005)
-# Masked for testing.
-=dev-cpp/glibmm-2.7.1
 
 # Guillaume Destuynder <kang@gentoo.org> (27 Jun 2005)
 # Masking for security reasons, pending removal, bug #89196
