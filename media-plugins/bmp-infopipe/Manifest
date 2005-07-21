@@ -1,5 +1,5 @@
-MD5 63f7d8066c28fc9ce096ba57d6327df9 ChangeLog 991
-MD5 3fb4eb85ec907506ae75ae355c1c85ce bmp-infopipe-1.3.ebuild 1127
+MD5 6d5497509ec5059c069cac06bd63e1dc ChangeLog 1084
+MD5 6085f4cbc9edb6225967bac6d211c27a bmp-infopipe-1.3.ebuild 1126
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 44ace0114de0b3fe95af00c736d1bbd1 files/1.3-includes.patch 405
 MD5 8e38192b2a16d55fd9d4b8cf8843be7c files/digest-bmp-infopipe-1.3 149
