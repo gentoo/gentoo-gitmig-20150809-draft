@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.9_p1.ebuild,v 1.2 2005/07/20 16:08:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.11.ebuild,v 1.1 2005/07/21 04:35:52 rizzo Exp $
 
 MY_PV="${PV/./}"
 MY_PV="${MY_PV/_p/p}"
@@ -24,7 +24,7 @@ src_install() {
 	cp -a ${S}/* ${D}/${INSTALLDIR}
 
 	dodir /etc/env.d
-	echo -e "PATH=${INSTALLDIR}\nROOTPATH=${INSTALLDIR}" > ${D}/etc/env.d/10xxe
+	echo -e "PATH=${INSTALLDIR}/bin\nROOTPATH=${INSTALLDIR}" > ${D}/etc/env.d/10xxe
 
 	insinto /usr/share/applications
 	doins ${FILESDIR}/xxe.desktop

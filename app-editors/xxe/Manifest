@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 efe28a5fa7466bd595c3d25d23022826 xxe-2.9_p1.ebuild 1259
-MD5 20136a2146203a2a61cf21723059605e ChangeLog 3406
+MD5 7b7bef198e0017cde20de86eba1fc4d8 ChangeLog 3581
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 9b5ec08b94a265a99dfc8dcee5849cde files/digest-xxe-2.9_p1 66
-MD5 c0efedfb73e48162d44f28ff140e07b8 files/xxe.desktop 206
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3ncf/rLF9B432nYRAm32AJ4xBrm5aqFVVCMS2Gd/uSFL/16+fwCfYXwh
-pkjndwgd5f1hIGY63hYXPk0=
-=ObIK
------END PGP SIGNATURE-----
+MD5 d4ad7164600b219734f677cbe0e69fcb xxe-2.11.ebuild 1262
+MD5 6b8c0a97a9d219161697e0541abd639f files/digest-xxe-2.11 65
+MD5 c6cc8ce1e745ada03637082cac1f0347 files/xxe.desktop 219
