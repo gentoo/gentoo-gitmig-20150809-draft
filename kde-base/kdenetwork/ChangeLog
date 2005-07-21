@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.151 2005/07/14 15:00:47 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.152 2005/07/21 14:13:29 greg_g Exp $
+
+*kdenetwork-3.4.1-r1 (21 Jul 2005)
+*kdenetwork-3.3.2-r2 (21 Jul 2005)
+
+  21 Jul 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +kdenetwork-3.3.2-r2.ebuild, +kdenetwork-3.4.1-r1.ebuild:
+  Fix vulnerabilities in libgadu (#99754).
 
   14 Jul 2005; Hardave Riar <hardave@gentoo.org> kdenetwork-3.4.1.ebuild:
   Keyworded ~mips

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.15 2005/07/08 04:17:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.16 2005/07/21 14:12:20 greg_g Exp $
+
+*kopete-3.4.1-r1 (21 Jul 2005)
+
+  21 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> +kopete-3.4.1-r1.ebuild:
+  Fix vulnerabilities in libgadu (#99754).
 
   08 Jul 2005; Jason Wever <weeve@gentoo.org> kopete-3.4.1.ebuild:
   Stable on SPARC.
