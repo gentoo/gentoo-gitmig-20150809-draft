@@ -1,6 +1,14 @@
-MD5 6ad16dd918f4708f65649b564244e959 ChangeLog 5450
-MD5 3c5ce0a1140d14e473353bcd3b818515 cl-ppcre-1.2.7.ebuild 748
-MD5 9bb0f3953b72b949d6b749a3f9f9c529 cl-ppcre-1.2.8.ebuild 748
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bffc3d20b6196f910473e777f78fe513 ChangeLog 5635
 MD5 11927dbc9b84347135f9609d09bd08ce metadata.xml 457
-MD5 6f34ad1337b0cce7c5ea3c719a79353c files/digest-cl-ppcre-1.2.7 71
-MD5 64ff94bf826a2765e83b39e346114b5c files/digest-cl-ppcre-1.2.8 71
+MD5 ce525a057cc5fcaa819465822d774ce8 cl-ppcre-1.2.10.ebuild 749
+MD5 1633b67849a6077900a616292cc5fe03 files/digest-cl-ppcre-1.2.10 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC30vUyiNZaEAZA+ARAlDCAJ412Yuqpo5aW/Q9Gl91iCFvp3GEiQCfeFqJ
+vnJ0H2xXdqrbRBG8cVVzfH8=
+=AURS
+-----END PGP SIGNATURE-----
