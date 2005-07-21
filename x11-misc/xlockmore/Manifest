@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 38486e843cd2ea804407188f259256b0 xlockmore-5.12.ebuild 1948
+MD5 e88140b996f8f80be04a6213f6eefb19 ChangeLog 7037
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
-MD5 badb7f8cb139f50fe3abdc38f0520c3f xlockmore-5.17-r1.ebuild 1697
+MD5 38486e843cd2ea804407188f259256b0 xlockmore-5.12.ebuild 1948
+MD5 f83216d3e2573fd115fbd557c44d301c xlockmore-5.17-r1.ebuild 1695
 MD5 9efe3bc795b4c904bf2b194862d4a25d xlockmore-5.18-r2.ebuild 1917
-MD5 f55ad6ca8740ddc7ffe9e0cbbc508037 ChangeLog 6944
 MD5 65f2645fbf61038ec856ee0a3897c587 files/XLock.ad.patch 773
 MD5 be40cedb5d46e442958e0a182a87380c files/digest-xlockmore-5.12 68
 MD5 9f4d2fc6b5d4094cf494e606b957e8a4 files/digest-xlockmore-5.17-r1 68
 MD5 69d208099f30b11e0bffa0fcfd210cac files/digest-xlockmore-5.18-r2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC3lgjKRy60XGEcJIRAjSnAJ9X4B9Ol3i7awjRyyerPEtAiSi/ngCgkWwV
-Oq/AulhyPBFFh3qTLNNQhqw=
-=Rdqf
------END PGP SIGNATURE-----
