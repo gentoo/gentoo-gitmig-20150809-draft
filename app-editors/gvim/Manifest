@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1fa7d12898c9ea3c8ee710fffd9ca86c gvim-6.3.084.ebuild 1184
 MD5 8e5fedb5e54139b1a1bdcbc5328fbf41 gvim-6.3.075.ebuild 1182
 MD5 c0d87d0e84388c628270bde56762735e gvim-6.3.068.ebuild 1096
@@ -17,3 +20,10 @@ MD5 94d109de61a8e47f057a1a07ecbc491e files/digest-gvim-6.3.075 349
 MD5 d4fb34453773bf6b99743f752860a6f5 files/digest-gvim-6.3.084 350
 MD5 5fedc57d438147906375b2ef60daa4b9 files/gvim.xpm 1371
 MD5 99367dbfe85f20e78e648bdcf0760d86 files/gvim-completion 1200
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4AQ02G5bA0cA/ScRAnNZAJ47L+80FF4DnZh03l8dIPwFPS90DwCgrR8D
+lH1obFUW3aTE1zTpWi1hJsQ=
+=e3XC
+-----END PGP SIGNATURE-----
