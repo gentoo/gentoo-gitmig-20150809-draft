@@ -9,20 +9,20 @@ case "$BUILDTYPE" in
 	"jahshaka")
 		echo build jahshaka
 		cp -vf jahshakaSettings.pro Settings.pro
-		qmake jahshaka.pro
+		${QTDIR}/bin/qmake jahshaka.pro
 		CONFIGURED="true"
 	;;
 	"jahplayer")
 		echo build jahplayer
 		cp -vf jahplayerSettings.pro Settings.pro
-		qmake jahplayer.pro
+		${QTDIR}/bin/qmake jahplayer.pro
 		CONFIGURED="true"
 	;;
 	* )
 		echo nothing entered or invalid entry
 		echo build jahshaka
 		cp -vf jahshakaSettings.pro Settings.pro
-		qmake jahshaka.pro
+		${QTDIR}/bin/qmake jahshaka.pro
 		CONFIGURED="true"
 	;;
 esac

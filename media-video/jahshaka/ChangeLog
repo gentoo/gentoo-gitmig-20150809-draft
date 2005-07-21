@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jahshaka
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.9 2005/07/17 18:57:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.10 2005/07/21 15:48:15 caleb Exp $
+
+  21 Jul 2005; Caleb Tennis <caleb@gentoo.org> files/configure:
+  Patching configure to follow bug #97535
 
   17 Jul 2005; Danny van Dyk <kugelfang@gentoo.org>
   jahshaka-1.9_alpha90-r1.ebuild:
