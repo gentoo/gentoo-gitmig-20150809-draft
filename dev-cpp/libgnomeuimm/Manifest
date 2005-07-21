@@ -1,7 +1,17 @@
-MD5 f10053541c6e2ce1b0e4a9e516387086 ChangeLog 3625
-MD5 e4861327af9d2365b3420e1fc10d594a libgnomeuimm-2.0.0.ebuild 990
-MD5 1fd27828a5fe65c39c23efbd4e09dc4e libgnomeuimm-2.6.0.ebuild 836
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a00640acccc80734310db2aea298333 libgnomeuimm-2.6.0.ebuild 837
+MD5 6290c5174a658c93834d322514e2bba1 ChangeLog 3721
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
+MD5 e4861327af9d2365b3420e1fc10d594a libgnomeuimm-2.0.0.ebuild 990
+MD5 e4bafc3bf0fd1bb08c2fadcb67af456e files/libgnomeuimm-2.0.0-gcc2_fix.patch 1237
 MD5 c83a0a49099d8d0393c0aaff4cfffcfa files/digest-libgnomeuimm-2.0.0 70
 MD5 a31cbb5db3510846c6a7d2ecba43c4c3 files/digest-libgnomeuimm-2.6.0 71
-MD5 e4bafc3bf0fd1bb08c2fadcb67af456e files/libgnomeuimm-2.0.0-gcc2_fix.patch 1237
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4DacEZCkKN40op4RAv4OAJ9EYJOQbOPFEy+hEhJBbpAZwOMyawCfZOmA
+yTSDmUorhX1zR18hjgQzAkM=
+=p99z
+-----END PGP SIGNATURE-----
