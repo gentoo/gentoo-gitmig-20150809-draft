@@ -1,0 +1,126 @@
+diff -Naur src/kmod/ptaccess.c mol-rsync/src/kmod/ptaccess.c
+--- src/kmod/ptaccess.c	2004-07-24 18:44:02.000000000 +0200
++++ mol-rsync/src/kmod/ptaccess.c	2005-07-15 00:38:28.000000000 +0200
+@@ -22,6 +22,7 @@
+ #include "performance.h"
+ 
+ extern int do_intercept_tlbie( kernel_vars_t *kv, ulong pte0, ulong pte1, ulong pteoffs );
++extern int do_intercept_tlbie_block( kernel_vars_t *kv, ulong pteoffs, ulong length );
+ 
+ #define	MMU	(kv->mmu)
+ #define	MREGS	(kv->mregs)
+@@ -49,6 +50,37 @@
+ 	return RVEC_NOP;
+ }
+ 
++int
++do_intercept_tlbie_block( kernel_vars_t *kv, ulong pteoffs, ulong length )
++{
++	unsigned int finish;
++
++	//printk("do_intercept_tlbie_block: pteoffs %08lX length %08lX\n", pteoffs, length);
++
++	if (pteoffs + length > MMU.hash_mask) {
++		printk("do_intercept_tlbie_block: length exceeding hash!\n");
++		finish = MMU.hash_mask + 1;
++	} else
++		finish = pteoffs + length;
++
++	if (MMU.pthash_inuse_bits == NULL)
++		return RVEC_NOP;
++
++	while (pteoffs < finish) {
++		if (check_bit_mol(pteoffs >> 3, MMU.pthash_inuse_bits)) {
++			ulong pte0, pte1;
++
++			pte0 = *((unsigned int *) (MMU.hash_base + pteoffs));
++			pte1 = *((unsigned int *) (MMU.hash_base + pteoffs + 4));
++			do_intercept_tlbie(kv, pte0, pte1, pteoffs);
++		} 
++
++		pteoffs += 8;
++	}
++
++	return RVEC_NOP;
++}
++
+ #ifdef EMULATE_603
+ 
+ extern int do_tlbli( kernel_vars_t *kv, ulong ea );
+diff -Naur src/kmod/ptintercept.S mol-rsync/src/kmod/ptintercept.S
+--- src/kmod/ptintercept.S	2004-07-24 18:44:02.000000000 +0200
++++ mol-rsync/src/kmod/ptintercept.S	2005-07-15 00:31:21.000000000 +0200
+@@ -157,7 +157,6 @@
+ do_stfiw:
+ do_stswi:
+ do_stswx:
+-do_stmw:
+ 	lwz	r6,xNIP(r1)
+ 	DEBUGGER_SAVE(0x1882)			// unimplemented store instruction
+ 
+@@ -258,3 +257,47 @@
+ 	// r4=PTE0, r5=PTE1
+ 	LOADI	r3,EXTERN(do_intercept_tlbie)
+ 	b	call_kernel
++
++	// stmw uses another emulator entry point because it might overwrite a bunch of PTEs
++do_stmw:
++	mtlr	r4
++
++	// save some debugging info
++//	stw	r2,xDBG_TRACE_SPACE(r1)
++
++	SET_MSR_DR /**/ r6
++
++	// now do the stmw. we do that manually since we have to access emulator regs.
++	mr	r4,r2				// r4: memory pointer
++	srwi	r6,r5,3				// r6: rS
++1:	cmpwi	r5,32 << 3			// loop condition
++	bge	2f
++	EMU_LOAD_GPR r5, /**/ R3		// r0 = value
++	stw	r0,0(r4)			// store the value
++	addi	r5,r5,1 << 3			// update register counter
++	addi	r4,r4,4				// and memory pointer
++	b	1b
++
++2:	CLEAR_MSR_DR /**/ r0
++
++	// load up r4 and r5 for do_intercept_tlbie_block (see below)
++	subfic	r5,r6,32			// number of registers (=words) stored
++	slwi	r5,r5,2				// number of bytes stored
++	add	r4,r2,r5			// last byte stored
++	addi	r4,r4,7				// alignment to
++	rlwinm  r5,r4,0,~0x7			// PTE size
++	rlwinm	r4,r2,0,~0x7			// pte block pointer
++	sub	r5,r5,r4			// substract block pointer -> length (in bytes)
++	lwz	r3,K_TLBHASH_BASE_EA(r1)	// calculate tlb offset
++	sub	r4,r4,r3			// tlb offset
++	b	st_block_continue
++
++	// transfer to C-function [r2=dar, r4=pte block offset, r5=pte block length]
++st_block_continue:
++	BUMP("pt_intercept_taken")
++	lwz	r6,xNIP(r1)
++	addi	r6,r6,4				// inc NIP
++	bl	save_middle_regs
++
++	LOADI 	r3,EXTERN(do_intercept_tlbie_block)
++	b	call_kernel
+diff -Naur src/kmod/include/misc.h mol-rsync/kmod/include/misc.h
+--- src/kmod/include/misc.h	2004-07-24 18:44:02.000000000 +0200
++++ mol-rsync/src/kmod/include/misc.h	2005-06-19 18:56:51.000000000 +0200
+@@ -62,6 +68,14 @@
+ 	*p &= ~mask;
+ }
+ 
++static inline int 
++check_bit_mol( int nr, char *addr )
++{
++	ulong mask = 1 << (nr & 0x1f);
++	ulong *p = ((ulong*)addr) + (nr >> 5);
++	return (*p & mask) != 0;
++}
++
+ /* typesafe min/max (stolen from kernel.h) */
+ #define min_mol(x,y) ({ \
+         const typeof(x) _x = (x);       \
