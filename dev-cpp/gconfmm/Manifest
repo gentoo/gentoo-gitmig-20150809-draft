@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d718e1b648380ef39ac7fc97b24da12b gconfmm-2.6.1.ebuild 822
+MD5 ff889bbdd33b76dd6278360f5ca2dd29 gconfmm-2.6.1.ebuild 822
 MD5 5974237ecce8d0fe48ae7965215dae39 gconfmm-2.0.2.ebuild 618
-MD5 88215b6041140c4bab3d16348f12f34f ChangeLog 3692
+MD5 46130bc5284bf73ed7ad4d23e26763ff ChangeLog 3782
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
 MD5 d07f27847b386ccdeb24dea3d89a270e files/gconfmm-2.6.1-amd64-gcc4.patch 864
 MD5 f44b8472013beb3feb14d08ede70ce34 files/digest-gconfmm-2.0.2 66
@@ -11,7 +11,7 @@ MD5 650778e47af5167c7095cfc924e6e697 files/digest-gconfmm-2.6.1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC3xCTEZCkKN40op4RAgEwAJ4/7yq3BvxXoLIcBLBiNIAKxNOybACgkc7+
-k9LNWTA69YFKuoczRKjUzqA=
-=4UDF
+iD8DBQFC38bhEZCkKN40op4RAsOAAJ4up1aKP/0FQzG5mA6ZIdVaWVweNgCeNcnT
+oecW2rsU1nf1FEPZbWV8n3s=
+=BENW
 -----END PGP SIGNATURE-----
