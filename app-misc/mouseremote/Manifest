@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 25e5fb8db4f9db260c005e251752bc41 ChangeLog 686
-MD5 ac862f30c70c39868625994bfe787b9a mouseremote-0.90.ebuild 1942
+MD5 99df08cf11c666de641354a2df4037fb ChangeLog 770
+MD5 e67c0f17ed93dc58f0654a7a2f217cc6 mouseremote-0.90.ebuild 1943
 MD5 c709aaca16c43e7662c05de02cdb8770 files/digest-mouseremote-0.90 62
 MD5 b67ffda5eb975f4fcd47331b3e90f211 files/mouseremote-gentoo.diff 1553
 MD5 c91644d4bb301a552885ba5447345ced files/mouseremote.conf 581
 MD5 7d79e15bc3392cdc5bce712d6aa0d8f2 files/mouseremote.start 718
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClJhntG5z4I8BtQoRAnC2AJ9Hdp7eip7QfHbasViKsAXO7mcLYACfb4rE
-rBqKQhypwnAH02i+4fkdew4=
-=X5HV
------END PGP SIGNATURE-----

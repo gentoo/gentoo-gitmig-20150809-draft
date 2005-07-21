@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4ab301833f2f21d5a97a1a17bbfa48b6 ChangeLog 2788
+MD5 635415cd0898aa3b29e202e434505ae2 ChangeLog 2868
+MD5 ffe47150ae96ba5bbaa2bf20afb45d54 rioutil-1.4.4.ebuild 836
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 f3c0e7e3edcacac69e96df5fc22ea047 rioutil-1.4.7.ebuild 648
-MD5 6c2bcb3a7b8a92a78c60b655372a804e rioutil-1.5.0b.ebuild 730
-MD5 ffe47150ae96ba5bbaa2bf20afb45d54 rioutil-1.4.4.ebuild 836
+MD5 8a131acc5b3ec013614a1b84c76d87ce rioutil-1.5.0b.ebuild 729
 MD5 72a43d60ff9736ade5cf03ea35853db7 files/digest-rioutil-1.4.4 66
+MD5 980de0f7000d1b646ff0ce96a4f795b2 files/rioutil-1.4.4-26headers.patch 2266
 MD5 0fbddb3e5c5bd6da73cc55af0c24b144 files/digest-rioutil-1.4.7 66
 MD5 7fbb242da1f8ed82bfac439c62d507e3 files/digest-rioutil-1.5.0b 66
-MD5 980de0f7000d1b646ff0ce96a4f795b2 files/rioutil-1.4.4-26headers.patch 2266
 MD5 b099d79346e545c4c2ec06f76d9e85f4 files/rioutil-1.5.0b-time.patch 1399
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCaL3dmdTrptrqvGERAt5cAJ4+RnkINDMHRAxAz73bULripjgUCQCeJ6hH
-emZrUOMEvcP4AiE2bkAiN/w=
-=4REn
------END PGP SIGNATURE-----
