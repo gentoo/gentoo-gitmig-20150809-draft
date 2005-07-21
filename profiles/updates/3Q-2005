@@ -38,3 +38,5 @@ move net-im/linphone net-misc/linphone
 move net-misc/host net-dns/host
 move sys-kernel/pegasos-sources sys-kernel/gentoo-sources
 move games-board/gnocatan games-board/pio
+slotmove =dev-cpp/gtkglextmm-1.0.0 0 1.0
+slotmove =dev-cpp/gtkglextmm-1.0.1 0 1.0
