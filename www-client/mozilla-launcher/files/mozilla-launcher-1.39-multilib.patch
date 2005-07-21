@@ -1,5 +1,5 @@
---- mozilla-launcher-1.37.multilib	2005-07-19 15:43:47.000000000 -0400
-+++ mozilla-launcher-1.37	2005-07-19 15:44:20.000000000 -0400
+--- mozilla-launcher-1.39.multilib	2005-07-19 15:43:47.000000000 -0400
++++ mozilla-launcher-1.39	2005-07-19 15:44:20.000000000 -0400
 @@ -136,28 +136,28 @@
    # just drops through for binary-based browsers.
    case $zero in
