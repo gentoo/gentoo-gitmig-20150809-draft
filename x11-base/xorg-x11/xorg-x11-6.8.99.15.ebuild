@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15.ebuild,v 1.3 2005/07/20 21:21:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15.ebuild,v 1.4 2005/07/21 19:37:57 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -32,9 +32,8 @@ inherit eutils flag-o-matic toolchain-funcs x11 linux-info multilib
 RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
-IUSE="3dfx bitmap-fonts cjk debug dlloader doc font-server insecure-drivers
-	ipv6 minimal nls nocxx opengl pam sdk static truetype-fonts type1-fonts
-	uclibc xprint xv"
+IUSE="3dfx bitmap-fonts cjk debug doc font-server insecure-drivers ipv6 minimal
+	nls nocxx opengl pam sdk static truetype-fonts type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.1"
@@ -349,12 +348,6 @@ cflag_setup() {
 		# according to ciaranm
 		# And hardened compiler must be softened. -- fmccor, 20.viii.04
 		sparc)	filter-flags "-fomit-frame-pointer" "-momit-leaf-frame-pointer"
-			if has_hardened && ! use dlloader; then
-				einfo "Softening gcc for sparc."
-				ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-pie -fno-PIE"
-				append-flags -fno-pie -fno-PIE
-			fi
-
 			if [[ ${ABI} == "sparc64" ]]; then
 				ALLOWED_FLAGS="${ALLOWED_FLAGS} -D__sparc_v9__ -D__linux_sparc_64__"
 				append-flags -D__sparc_v9__ -D__linux_sparc_64__
@@ -407,14 +400,6 @@ check_use_combos() {
 		if use sdk; then
 			die "The static USE flag is incompatible with the sdk USE flag."
 		fi
-	fi
-
-	# (#90672)
-	if use sdk && ! use dlloader; then
-		MSG="The sdk and -dlloader USE flags are temporarily incompatible and result in a dead build."
-		einfo ${MSG}
-		einfo "See http://bugs.gentoo.org/show_bug.cgi?id=90672."
-		die ${MSG}
 	fi
 
 	# (#77949)
@@ -634,15 +619,8 @@ host_def_setup() {
 			einfo "Setting DoLoadableServer to YES."
 			echo "#define DoLoadableServer  YES" >> ${HOSTCONF}
 
-			if use dlloader; then
-				einfo "Setting MakeDllModules to YES."
-				echo "#define MakeDllModules    YES" >> ${HOSTCONF}
-				if has_hardened; then
-					echo "#define HardenedGccSpecs YES" >> ${HOSTCONF}
-				fi
-			else
-				einfo "Setting MakeDllModules to NO."
-				echo "#define MakeDllModules    NO" >> ${HOSTCONF}
+			if has_hardened; then
+				echo "#define HardenedGccSpecs YES" >> ${HOSTCONF}
 			fi
 		fi
 
@@ -730,11 +708,6 @@ host_def_setup() {
 			suntcx sunbw2 glint mga tdfx ati savage vesa vga fbdev \
 			XF86OSCardDrivers XF86ExtraCardDrivers \
 			DevelDrivers" >> ${HOSTCONF}
-			if has_hardened && ! use dlloader; then
-				einfo "Softening the assembler so cfb modules will play nice with sunffb."
-				echo "#define AsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}
-				echo "#define ModuleAsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}
-			fi
 			if ( [ -e "${ROOT}/usr/src/linux" ] \
 				&& ! kernel_is "2" "6" ) \
 				|| [ "$(uname -r | cut -d. -f1,2)" != "2.6" ]; then

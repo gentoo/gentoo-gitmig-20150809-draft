@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.437 2005/07/20 21:26:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.438 2005/07/21 19:37:57 spyderous Exp $
+
+  21 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.99.15.ebuild:
+  Remove dlloader USE flag. dlloader is now the default upstream and we'll no
+  longer support elfloader. Binary drivers are already broken for other
+  reasons.
 
   20 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.99.15.ebuild:
