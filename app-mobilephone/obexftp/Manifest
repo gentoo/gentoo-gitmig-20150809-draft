@@ -2,18 +2,14 @@
 Hash: SHA1
 
 MD5 0f94884c4d742fbf2e3badf0a3e2015d obexftp-0.10.7-r1.ebuild 975
-MD5 d6e525cae17af866688e5549f199199f obexftp-0.10.6.ebuild 832
-MD5 67c797f31fdabc00e56a2f8e5009efa4 obexftp-0.10.7.ebuild 861
-MD5 fda4ed2432999bfc4b0aa79e64680aa0 ChangeLog 3922
+MD5 6a6bdaf6018a1bd6c9ae7272fa3db4c4 ChangeLog 4043
 MD5 9860ed702775ec6730786768ec7c1abb metadata.xml 337
-MD5 4f052623c34ea5070306f62688ea7e2b files/digest-obexftp-0.10.6 66
-MD5 c133b8829ba299b03a0e6ab757ab5f22 files/digest-obexftp-0.10.7 66
 MD5 520b09e250d549cadd0b0a39118225ec files/obexftp-0.10.7-t610-jpg.patch 307
 MD5 c133b8829ba299b03a0e6ab757ab5f22 files/digest-obexftp-0.10.7-r1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCh31NjiC39V7gKu0RArQHAKCPvU/nGLEzJNbDDMU95wupbf9KVgCgmNIG
-0+4yKt+b76iXXDKRSu8deWE=
-=dqoM
+iD8DBQFC4A4QNSP4Vda7IdsRAnSpAJ9n7cqbzzjgFIJcaLxQ1AbS83ibXACfWqYt
+Gt/b1hzwecd75KjJ0Wy3zA4=
+=+b/k
 -----END PGP SIGNATURE-----

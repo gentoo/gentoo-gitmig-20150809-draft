@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.1 2005/05/15 16:47:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.2 2005/07/21 21:05:08 mrness Exp $
+
+  21 Jul 2005; Alin Nastac <mrness@gentoo.org> -obexftp-0.10.6.ebuild,
+  -obexftp-0.10.7.ebuild:
+  Remove old versions.
 
   15 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
   -obexftp-0.10.3.ebuild, -obexftp-0.10.4.ebuild, obexftp-0.10.7-r1.ebuild:
