@@ -1,6 +1,20 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.48 2005/07/20 03:50:05 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.49 2005/07/21 22:19:43 agriffis Exp $
+
+*mozilla-firefox-1.0.6-r1 (21 Jul 2005)
+
+  21 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-firefox-1.0.6.ebuild, +mozilla-firefox-1.0.6-r1.ebuild:
+  Stop using the nsplugins eclass in favor of the nsplugins patch which adds
+  additional plugin search paths. The plugin symlink madness stops here.
+  
+  Move firefox to /usr/lib/mozilla-firefox just as thunderbird has moved to
+  /usr/lib/mozilla-thunderbird (instead of MozillaFirefox and
+  MozillaThunderbird respectively)
+  
+  Use new mozilla-launcher registration code instead of the drop-in tarball.
+  This should allow us to eventually package up extensions as ebuilds ;-)
 
 *mozilla-firefox-1.0.6 (20 Jul 2005)
 
