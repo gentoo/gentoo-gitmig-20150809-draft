@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r1.ebuild,v 1.2 2005/07/21 23:12:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r1.ebuild,v 1.3 2005/07/21 23:49:54 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -191,8 +191,6 @@ src_install() {
 	#
 	####################################
 
-	# Copy the include and idl files so that applications can build against
-	# firefox just like they have traditionally built against mozilla
 	einfo "Installing includes and idl files..."
 	dodir ${MOZILLA_FIVE_HOME}/include/idl /usr/include
 	cd ${S}/dist
@@ -209,30 +207,32 @@ src_install() {
 	dosym ${MOZILLA_FIVE_HOME##*/} ${MOZILLA_FIVE_HOME%/*}/MozillaFirefox
 
 	# Fix firefox-config and install it
-	cd ${S}/build/unix
 	sed -i -e "s|/usr/lib/firefox-${PV}|${MOZILLA_FIVE_HOME}|g
-		s|/usr/include/firefox-${PV}|${MOZILLA_FIVE_HOME}/include|g" firefox-config
+		s|/usr/include/firefox-${PV}|${MOZILLA_FIVE_HOME}/include|g" \
+		${S}/build/unix/firefox-config
 	exeinto ${MOZILLA_FIVE_HOME}
-	doexe firefox-config
+	doexe ${S}/build/unix/firefox-config
 
 	# Fix pkgconfig files and install them
 	insinto /usr/$(get_libdir)/pkgconfig
-	for x in *.pc; do
+	for x in ${S}/build/unix/*.pc; do
 		sed -i -e "s|^libdir=.*|libdir=${MOZILLA_FIVE_HOME}|
 			s|^includedir=.*|includedir=${MOZILLA_FIVE_HOME}/include|" ${x}
 		doins ${x}
 	done
-	cd ${S}
 
 	# Install env.d snippet, which isn't necessary for running firefox, but
 	# might be necessary for programs linked against firefox
 	insinto /etc/env.d
 	doins ${FILESDIR}/10MozillaFirefox
 	dosed "s|/usr/lib|/usr/$(get_libdir)|" /etc/env.d/10MozillaFirefox
+
+	# Install docs
+	dodoc LEGAL LICENSE
 }
 
 pkg_postinst() {
-	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-firefox"
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/mozilla-firefox
 
 	# Update the component registry
 	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=firefox \
@@ -245,5 +245,11 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/mozilla-firefox
+
+	# Update the component registry
+	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=firefox \
+		/usr/libexec/mozilla-launcher -register
+
 	update_mozilla_launcher_symlinks
 }
