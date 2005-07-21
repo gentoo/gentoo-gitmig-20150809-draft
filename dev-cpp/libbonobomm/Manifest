@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 150e5da5e773bb63c3afb542eccbfd38 libbonobomm-1.3.8.ebuild 605
 MD5 5c1babbef0637f902b70a8a466bf751d ChangeLog 755
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
 MD5 9ae4cbebe70b30acd694dd3783da0252 files/digest-libbonobomm-1.3.8 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3xCTEZCkKN40op4RAusSAJ9ZPwgNKIbEEhAaxijBSC7GxZ4a2wCcC+av
+HLb1H3xyjMKYrZdrmJ/TiVY=
+=cqw1
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b6013b5c2efcf21b8e2a1964aba24838 gnomemm-1.2.4.ebuild 901
 MD5 240bbc528be6fecd6a3e95b5726e122a ChangeLog 3538
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
@@ -5,3 +8,10 @@ MD5 c00c48d1761eff3e980ff2c34a46bd24 files/gnomemm-1.2.3-gcc33.patch 656
 MD5 c00c48d1761eff3e980ff2c34a46bd24 files/gnomemm-1.2.4-gcc33.patch 656
 MD5 f408d0639f010848578e8ec4f44a879f files/digest-gnomemm-1.2.4 66
 MD5 cf8799d03c3fffb48bd6f118cf84b869 files/gnomemm-1.2.3-gentoo.patch 512
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3xCTEZCkKN40op4RAsODAKDAsrdURl0rT6e13jdlbe4kIwF6LwCeKsDP
+fbd12YQR2rGeO9x0LhyDxEs=
+=SzU5
+-----END PGP SIGNATURE-----
