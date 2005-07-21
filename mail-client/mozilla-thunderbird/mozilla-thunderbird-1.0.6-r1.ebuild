@@ -1,23 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2-r10.ebuild,v 1.3 2005/07/06 18:56:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.6-r1.ebuild,v 1.1 2005/07/21 15:30:57 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozconfig mozilla-launcher makeedit multilib
 
-EMVER="0.92.0"
-IPCVER="1.1.3"
-
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2"
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2
+	mirror://gentoo/mozilla-firefox-1.0-4ft2.patch.bz2
+	mirror://gentoo/mozilla-jslibmath-alpha.patch"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
-IUSE="ldap"
+IUSE="mozcalendar ldap"
 
-RDEPEND=">=www-client/mozilla-launcher-1.34"
+RDEPEND=">=www-client/mozilla-launcher-1.39"
 
 S=${WORKDIR}/mozilla
 
@@ -29,7 +28,7 @@ export MOZILLA_OFFICIAL=1
 export MOZ_THUNDERBIRD=1
 
 src_unpack() {
-	unpack ${A} || die "unpack failed"
+	unpack thunderbird-${PV}-source.tar.bz2 || die "unpack failed"
 	cd ${S} || die "cd failed"
 
 	if [[ $(gcc-major-version) -eq 3 ]]; then
@@ -39,17 +38,20 @@ src_unpack() {
 		fi
 	fi
 
+	# patch to fix math operations on alpha, makes maps.google.com work!
+	epatch ${DISTDIR}/mozilla-jslibmath-alpha.patch
+
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
-	epatch ${FILESDIR}/mozilla-thunderbird-0.9-4ft2.patch
+	epatch ${DISTDIR}/mozilla-firefox-1.0-4ft2.patch.bz2
 
 	# GCC 4 compile patch ; bug #87800
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${FILESDIR}/${PN}-1.0.2-gcc4.patch
 }
 
 src_compile() {
-	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/thunderbird
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/mozilla-thunderbird
 
 	####################################
 	#
@@ -62,42 +64,39 @@ src_compile() {
 	# tb-specific settings
 	mozconfig_use_enable ldap
 	mozconfig_use_enable ldap ldap-experimental
-	mozconfig_annotate '' \
-		--with-default-mozilla-five-home=${MOZILLA_FIVE_HOME} \
-		--with-user-appdir=.thunderbird
+	mozconfig_use_enable mozcalendar calendar
+	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
+	mozconfig_annotate '' --with-user-appdir=.thunderbird
 
 	# Finalize and report settings
 	mozconfig_final
 
-	# hardened GCC uses -fstack-protector-all by default, and this breaks
-	# thunderbird
+	# hardened GCC uses -fstack-protector-all by default, which breaks us
 	has_hardened && append-flags -fno-stack-protector-all
 	replace-flags -fstack-protector-all -fstack-protector
 
 	####################################
 	#
-	#  Configure and build Thunderbird
+	#  Configure and build
 	#
 	####################################
 
-	econf || die "econf failed"
+	LD="$(tc-getLD)" CC="$(tc-getCC)" CXX="$(tc-getCXX)" \
+	econf || die
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
 	edit_makefiles
 
-	emake || die "emake failed"
+	emake || die
 }
 
 src_install() {
-	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/thunderbird
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/mozilla-thunderbird
 
 	# Most of the installation happens here
 	dodir ${MOZILLA_FIVE_HOME}
 	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}${MOZILLA_FIVE_HOME}
-
-	# Chromes will live in /var, registered in pkg_postinst
-	keepdir ${MOZILLA_FIVE_HOME/usr/var}
 
 	# Create /usr/bin/thunderbird
 	install_mozilla_launcher_stub thunderbird $MOZILLA_FIVE_HOME
@@ -115,11 +114,11 @@ src_install() {
 pkg_preinst() {
 	# Remove entire installed instance to solve various
 	# problems, for example see bug 27719
-	rm -rf ${ROOT}/usr/$(get_libdir)/thunderbird
+	rm -rf ${ROOT}/usr/$(get_libdir)/mozilla-thunderbird
 }
 
 pkg_postinst() {
-	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/thunderbird"
+	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-thunderbird"
 
 	# Update the component registry
 	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=thunderbird \
@@ -129,6 +128,11 @@ pkg_postinst() {
 	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
 	# thunderbird-bin ebuilds.
 	update_mozilla_launcher_symlinks
+
+	ewarn "Enigmail Support has been dropped since it doesn't work on fresh install."
+	ewarn "The Gentoo Mozilla team is working on making enigmail its own build,"
+	ewarn "sorry for the inconvenience.  For now, you can download enigmail from"
+	ewarn "http://enigmail.mozdev.org"
 }
 
 pkg_postrm() {
