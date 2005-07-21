@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 6863859d71a0439232d7be39fb9ae07d openmosixview-1.5-r1.ebuild 2022
+MD5 fa585118cece038541c0b437898b31bf openmosixview-1.4-r1.ebuild 2292
+MD5 1a7532d8e3e655988101b2532dc37c61 ChangeLog 2432
 MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
-MD5 d2f8c887298027b199d6505a23c64114 openmosixview-1.5-r1.ebuild 2029
-MD5 7a952963556e7f823c23affbf82d4bf2 ChangeLog 2295
-MD5 54b92f0364d2c55be1b778996c8b359a openmosixview-1.4-r1.ebuild 2299
-MD5 fa2bdec7a865ea57b111efb92da5910f files/openmosixview-1.5-logdirectory.diff 4538
-MD5 36d55cc173a3505d4605028e44916ae9 files/digest-openmosixview-1.5-r1 69
-MD5 083d52867bbb40018618629f5c9263c4 files/openmosixview-1.5-usesyslog.diff 2698
 MD5 d61ecf92714eac96e7d05665ea2cf911 files/openmosixview-1.5-nonodestmp.diff 2724
+MD5 083d52867bbb40018618629f5c9263c4 files/openmosixview-1.5-usesyslog.diff 2698
 MD5 d5017d88ab775aaf821cb3e426827008 files/digest-openmosixview-1.4-r1 70
+MD5 36d55cc173a3505d4605028e44916ae9 files/digest-openmosixview-1.5-r1 69
 MD5 c825cce4d4bc77595bb8d6584d4a1c25 files/openmosixview-1.5-typos.patch 999
+MD5 fa2bdec7a865ea57b111efb92da5910f files/openmosixview-1.5-logdirectory.diff 4538
 MD5 40351f8cbabc76e8c9b6860e8d92025a files/openmosixcollector.init 499
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjw9cKtJO8LeSoosRAs5gAKCN+VvfkD+DGFi8icZ1u3mNbSGahgCgp8Wd
-9H/k4diNhcdsRfymHuTPR5I=
-=XJWK
------END PGP SIGNATURE-----
