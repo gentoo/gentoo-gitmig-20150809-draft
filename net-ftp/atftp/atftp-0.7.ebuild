@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7.ebuild,v 1.2 2005/06/14 10:13:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7.ebuild,v 1.3 2005/07/21 14:42:43 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.mamalinux.com/pub/atftp/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 arm ~ppc ppc64 ~sparc ~x86"
 IUSE="tcpd"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
