@@ -1,6 +1,10 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.22 2005/04/21 20:17:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.23 2005/07/21 15:32:08 caleb Exp $
+
+  21 Jul 2005; Caleb Tennis <caleb@gentoo.org> djvu-3.5.12.ebuild,
+  djvu-3.5.14.ebuild, djvu-3.5.14-r1.ebuild:
+  Change Qt deps per bug #98180
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> djvu-3.5.14.ebuild:
   stable on amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.14-r1.ebuild,v 1.2 2005/04/15 14:34:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.14-r1.ebuild,v 1.3 2005/07/21 15:32:08 caleb Exp $
 
 inherit nsplugins flag-o-matic fdo-mime
 
@@ -17,7 +17,7 @@ IUSE="xml qt jpeg tiff debug threads nls nsplugin kde"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( media-libs/tiff )
-	qt? ( >=x11-libs/qt-2.3 )"
+	qt? ( <x11-libs/qt-4 )"
 
 S=${WORKDIR}/${MY_P}
 
