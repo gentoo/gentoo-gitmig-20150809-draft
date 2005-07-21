@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.35.ebuild,v 1.1 2005/07/21 07:15:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.35.ebuild,v 1.2 2005/07/21 07:20:03 eradicator Exp $
 
 IUSE="portaudio"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 
-RDEPEND="portaudio? ( >=media-libs/portaudio-18.1-r1 )"
+RDEPEND="portaudio? ( >=media-libs/portaudio-18.1-r2 )"
 DEPEND="app-text/sgmltools-lite
 	>=sys-devel/autoconf-2.57
 	=sys-devel/automake-1.7*
