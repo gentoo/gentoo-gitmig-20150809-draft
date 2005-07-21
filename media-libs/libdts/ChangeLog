@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.14 2005/05/09 00:52:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.15 2005/07/21 10:17:46 flameeyes Exp $
+
+*libdts-0.0.2-r2 (21 Jul 2005)
+
+  21 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libdts-0.0.2-libtool2.patch, +libdts-0.0.2-r2.ebuild:
+  Updated libtool patch to compile the shared libraries with -fPIC on all
+  platforms.
 
   08 May 2005; Aron Griffis <agriffis@gentoo.org> libdts-0.0.2-r1.ebuild:
   stable on ia64
