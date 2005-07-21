@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 6316d39d891fd39b07c8c860d1f151b7 ChangeLog 414
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 d0b5f72433cbe9eea6570d93a942fa56 qjoypad-3.4.ebuild 1187
-MD5 e2a0cbad89f567689633c850b686f773 ChangeLog 332
+MD5 70147f2f0db00391bb418edd162cb40c qjoypad-3.4.ebuild 1191
 MD5 8235ab81791feb29ee2ed26ca07d1b96 files/digest-qjoypad-3.4 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFC3xjWgIKl8Uu19MoRAlcxAJYq3RzlYTSzhpsmOMxe+A9UWKKtAJ0bxPNx
-Y4xFDqSq18G2HbJfAYghBQ==
-=n3iq
------END PGP SIGNATURE-----
