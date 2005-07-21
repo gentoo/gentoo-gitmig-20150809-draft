@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.6-r1.ebuild,v 1.1 2005/07/21 15:30:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.6-r2.ebuild,v 1.1 2005/07/21 22:02:13 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozconfig mozilla-launcher makeedit multilib
@@ -31,6 +31,12 @@ src_unpack() {
 	unpack thunderbird-${PV}-source.tar.bz2 || die "unpack failed"
 	cd ${S} || die "cd failed"
 
+	####################################
+	#
+	# architecture patches
+	#
+	####################################
+
 	if [[ $(gcc-major-version) -eq 3 ]]; then
 		# ABI Patch for alpha/xpcom for gcc-3.x
 		if [[ ${ARCH} == alpha ]]; then
@@ -41,13 +47,19 @@ src_unpack() {
 	# patch to fix math operations on alpha, makes maps.google.com work!
 	epatch ${DISTDIR}/mozilla-jslibmath-alpha.patch
 
+	####################################
+	#
+	# general compilation and run-time fixes
+	#
+	####################################
+
+	# GCC 4 compile patch ; bug #87800
+	epatch ${FILESDIR}/${PN}-1.0.2-gcc4.patch
+
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
 	epatch ${DISTDIR}/mozilla-firefox-1.0-4ft2.patch.bz2
-
-	# GCC 4 compile patch ; bug #87800
-	epatch ${FILESDIR}/${PN}-1.0.2-gcc4.patch
 }
 
 src_compile() {
@@ -98,8 +110,15 @@ src_install() {
 	dodir ${MOZILLA_FIVE_HOME}
 	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}${MOZILLA_FIVE_HOME}
 
+	# Create directory structure to support portage-installed extensions.
+	# See update_chrome() in mozilla-launcher
+	keepdir ${MOZILLA_FIVE_HOME}/chrome.d
+	keepdir ${MOZILLA_FIVE_HOME}/extensions.d
+	cp ${D}${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt \
+		${D}${MOZILLA_FIVE_HOME}/chrome.d/0_base-chrome.txt
+
 	# Create /usr/bin/thunderbird
-	install_mozilla_launcher_stub thunderbird $MOZILLA_FIVE_HOME
+	install_mozilla_launcher_stub thunderbird ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps
@@ -109,12 +128,6 @@ src_install() {
 	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
 	insinto /usr/share/applications
 	doins ${FILESDIR}/icon/mozillathunderbird.desktop
-}
-
-pkg_preinst() {
-	# Remove entire installed instance to solve various
-	# problems, for example see bug 27719
-	rm -rf ${ROOT}/usr/$(get_libdir)/mozilla-thunderbird
 }
 
 pkg_postinst() {

@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.5.ebuild,v 1.10 2005/07/18 15:21:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.5.ebuild,v 1.11 2005/07/21 22:02:13 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozconfig mozilla-launcher makeedit multilib
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2"
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2
+	mirror://gentoo/mozilla-firefox-1.0-4ft2.patch.bz2"
 
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 SLOT="0"
@@ -39,7 +40,7 @@ src_unpack() {
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
-	epatch ${FILESDIR}/mozilla-thunderbird-0.9-4ft2.patch
+	epatch ${DISTDIR}/mozilla-firefox-1.0-4ft2.patch.bz2
 
 	# GCC 4 compile patch ; bug #87800
 	epatch ${FILESDIR}/${PN}-1.0.2-gcc4.patch
