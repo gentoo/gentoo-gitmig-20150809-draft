@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomemm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.32 2005/07/21 17:09:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.33 2005/07/21 18:02:32 pylon Exp $
+
+  21 Jul 2005; Lars Weiler <pylon@gentoo.org> libgnomemm-2.6.0.ebuild:
+  Stable on ppc.
 
 *libgnomemm-2.10.0 (21 Jul 2005)
 
