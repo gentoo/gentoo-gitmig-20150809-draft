@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.102 2005/07/18 14:50:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.103 2005/07/21 14:30:17 usata Exp $
+
+*uim-0.4.7.1-r1 (21 Jul 2005)
+
+  21 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> +uim-0.4.7.1-r1.ebuild:
+  Fixed qt immodule.
 
   18 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> uim-0.4.7.ebuild:
   Stable on sparc
