@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.35 2005/06/19 10:36:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.36 2005/07/21 15:41:52 herbs Exp $
+
+  21 Jul 2005; Herbie Hopkins <herbs@gentoo.org> lablgl-1.00.ebuild:
+  get_libdir-ized
 
   19 Jun 2005; David Holm <dholm@gentoo.org> lablgl-1.00.ebuild:
   Updated to use virtual/glut, bug #92613

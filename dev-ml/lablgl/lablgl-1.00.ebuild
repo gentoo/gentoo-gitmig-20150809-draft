@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.20 2005/06/19 10:36:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.21 2005/07/21 15:41:52 herbs Exp $
 
-inherit eutils
+inherit multilib eutils
 
 IUSE="tcltk glut doc"
 
@@ -60,15 +60,15 @@ src_compile() {
 }
 
 src_install () {
-	# Makefile do not use mkdir so the library is not installed 
+	# Makefile do not use mkdir so the library is not installed
 	# but copied as a 'stublibs' file.
-	dodir /usr/lib/ocaml/stublibs
+	dodir /usr/$(get_libdir)/ocaml/stublibs
 
 	# Same for lablglut's toplevel
 	dodir /usr/bin
 
 	BINDIR=${D}/usr/bin
-	BASE=${D}/usr/lib/ocaml
+	BASE=${D}/usr/$(get_libdir)/ocaml
 	make BINDIR=${BINDIR} INSTALLDIR=${BASE}/lablGL DLLDIR=${BASE}/stublibs install || die
 
 	dodoc README CHANGES COPYRIGHT
