@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4943519915dbc1cdac7679e1538d5487 PEAR-XML_RSS-0.9.2.ebuild 435
 MD5 bf8410050f88db2d081bdbb5d98be407 ChangeLog 1356
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 fac4c5bf921e5a1e4facb83c622ebf50 files/digest-PEAR-XML_RSS-0.9.2 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3zzbaGfFFLhbXWkRAhxYAJ4hX1f8xFUrtCJcP2Aae4KwaspldwCeM4u1
+EocTjgdJ+Z9R9gXoNtap4WU=
+=Qi8P
+-----END PGP SIGNATURE-----

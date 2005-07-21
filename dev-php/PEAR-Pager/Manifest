@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 31f88fad0a786529badda4fbb7b24314 PEAR-Pager-2.3.3.ebuild 378
 MD5 6c7aa4436267d394abde99e87a53fd1c ChangeLog 364
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 1a49e5e359575eca7d4433bb1339f278 files/digest-PEAR-Pager-2.3.3 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3zzbaGfFFLhbXWkRAvRNAKCA9oYqN5Coch7kZ9j9RkIpBErQqwCePgm7
+UWkLs9u5PeDMQZQhZkPhuVU=
+=+Mxi
+-----END PGP SIGNATURE-----

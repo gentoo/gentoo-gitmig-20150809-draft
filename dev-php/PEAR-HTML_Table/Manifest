@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 41b73a16c8873749f4e6b60f4d57f192 PEAR-HTML_Table-1.5.ebuild 480
 MD5 5188dcaa942170ba7fc7ff139f78f6ee ChangeLog 380
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 2ac9be7c14ab2bb6869db7d3c4aecf5b files/digest-PEAR-HTML_Table-1.5 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3zzbaGfFFLhbXWkRAsubAJ9/PgMTcxIt90qk6AN+/jl6fZu+SACfdsz7
+AGgzoHaKHBRiNtEeVcY9jE8=
+=pTJW
+-----END PGP SIGNATURE-----
