@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_transform
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_transform/ChangeLog,v 1.5 2005/02/09 16:37:30 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_transform/ChangeLog,v 1.6 2005/07/21 17:58:45 trapni Exp $
+
+  21 Jul 2005; Christian Parpart <trapni@gentoo.org>
+  mod_transform-0.6.0.ebuild:
+  added to ~amd64
 
   09 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
   mod_transform-0.6.0.ebuild:
