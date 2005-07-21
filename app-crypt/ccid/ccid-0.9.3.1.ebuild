@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-0.9.3.1.ebuild,v 1.1 2005/07/20 21:44:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-0.9.3.1.ebuild,v 1.2 2005/07/21 07:52:29 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/c/ccid/ccid_${MY_PV}.orig.tar.gz
 	mirror://debian/pool/main/c/ccid/ccid_${MY_PV}-${MY_PV_P}.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 S="${WORKDIR}/ccid-${MY_PV}.orig"
 RDEPEND=">=sys-apps/pcsc-lite-1.2.9_beta6
