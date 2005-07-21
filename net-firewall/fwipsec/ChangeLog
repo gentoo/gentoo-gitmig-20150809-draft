@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/fwipsec
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwipsec/ChangeLog,v 1.4 2005/04/01 15:00:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwipsec/ChangeLog,v 1.5 2005/07/21 20:10:51 seemant Exp $
+
+  21 Jul 2005; Seemant Kulleen <seemant@gentoo.org> fwipsec-0.4.2-r1.ebuild:
+  use newinitd for the initscript
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> fwipsec-0.4.2-r1.ebuild:
   stable on ia64
