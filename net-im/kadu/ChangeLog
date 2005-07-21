@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kadu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.28 2005/07/20 18:36:00 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.29 2005/07/21 23:06:08 anarchy Exp $
+
+  21 Jul 2005; Jory A. Pratt <anarchy@gentoo.org> kadu-0.4.1.ebuild:
+  Stable on PPC. bug #99853
 
 *kadu-0.4.1 (20 Jul 2005)
 
