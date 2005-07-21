@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.192 2005/07/15 22:16:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.193 2005/07/21 02:16:45 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -596,15 +596,15 @@ enewuser() {
 		fi
 		;;
 	esac
-	export SANDBOX_ON=${oldsandbox}
 
-	if [ ! -e "${ehome}" ] && [ ! -e "${D}/${ehome}" ]
-	then
-		einfo " - Creating ${ehome} in ${D}"
-		dodir ${ehome}
-		fowners ${euser} ${ehome}
-		fperms 755 ${ehome}
+	if [[ ! -e ${ROOT}/${ehome} ]] ; then
+		einfo " - Creating ${ehome} in ${ROOT}"
+		mkdir -p "${ROOT}/${ehome}"
+		chown ${euser} "${ROOT}/${ehome}"
+		chmod 755 "${ROOT}/${ehome}"
 	fi
+
+	export SANDBOX_ON=${oldsandbox}
 }
 
 # Simplify/standardize adding groups to the system
