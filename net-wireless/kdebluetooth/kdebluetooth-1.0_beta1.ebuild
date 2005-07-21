@@ -1,6 +1,7 @@
+
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta1.ebuild,v 1.1 2005/07/21 15:17:24 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta1.ebuild,v 1.2 2005/07/21 15:52:11 puggy Exp $
 
 inherit kde
 
@@ -23,7 +24,7 @@ DEPEND=">=dev-libs/openobex-1
 	xmms? ( >=media-sound/xmms-1.2.10 )
 	irmc? ( || ( >=kde-base/kitchensync-3.4_beta1 >=kde-base/kdepim-3.4_beta1 ) )"
 
-RDEPEND="|| ( kde-base/kdialog kde-base/kdebase )"
+RDEPEND="|| ( ( kde-base/kdialog kde-base/konqueror )  kde-base/kdebase )"
 
 need-kde 3
 
