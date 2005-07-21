@@ -5,7 +5,7 @@ MD5 9589aef756de4a8f79c3bce97557a3fa ChangeLog 17709
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 b2259070b8a46420311e3ae6d33057ad net-snmp-5.1.1-r1.ebuild 3622
 MD5 318dd6febb5aa55bdfa9a501049b5f8b net-snmp-5.1.3.ebuild 4774
-MD5 49f2a8cbf6b03c2568bdd6dafe5a3933 net-snmp-5.2.1.2.ebuild 4952
+MD5 1c61461454aa282c05baa2a515559473 net-snmp-5.2.1.2.ebuild 4909
 MD5 c8a2626c32745f6ac38463b0a5edaf98 net-snmp-5.2.1-r1.ebuild 5026
 MD5 7f7e48543a02433b465b31961ac95fc3 net-snmp-5.3.20050624.ebuild 4929
 MD5 a31eeb8af378e385491966360f79a5a7 files/digest-net-snmp-5.1.3 67
@@ -22,7 +22,7 @@ MD5 cf7d3f5d505c262b2477f1759b908bad files/digest-net-snmp-5.3.20050624 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC3sdymdTrptrqvGERAmzWAKCauFfliDDWPdyJhWot/huPBz7VCQCfbcxo
-fUKUTMCKGf3AKzWferjUOU4=
-=TsE3
+iD8DBQFC33xDmdTrptrqvGERArzDAJ9A1fVDtsSuuy/B3vaQzaLGOaES5wCeK9m6
+jFHy+5pVBhK6JKF5zHqIl04=
+=BhdD
 -----END PGP SIGNATURE-----

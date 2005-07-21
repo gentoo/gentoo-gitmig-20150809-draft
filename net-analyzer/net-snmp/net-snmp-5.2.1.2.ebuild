@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.2.ebuild,v 1.1 2005/07/20 21:51:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.2.ebuild,v 1.2 2005/07/21 10:42:53 dragonheart Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
 IUSE="perl ipv6 ssl tcpd X lm_sensors minimal smux selinux doc rpm elf"
 
 DEPEND=">=sys-libs/zlib-1.1.4
@@ -20,7 +20,6 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	lm_sensors? (
 		x86?   ( sys-apps/lm_sensors )
 		amd64? ( sys-apps/lm_sensors )
-		ppc? ( sys-apps/lm_sensors )
 	)
 	rpm? ( app-arch/rpm
 		dev-libs/popt
@@ -47,7 +46,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-5.2.1-conf-elf-rpm-bz2.patch
 
 	if use lm_sensors; then
-		if use x86 || use amd64 || use ppc; then
+		if use x86 || use amd64; then
 			epatch ${FILESDIR}/${PN}-lm_sensors.patch
 		else
 			eerror "Unfortunatly you are trying to enable lm_sensors support for an unsupported arch."
