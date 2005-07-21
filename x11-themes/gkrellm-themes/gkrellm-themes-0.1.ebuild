@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/gkrellm-themes-0.1.ebuild,v 1.10 2005/07/03 13:18:37 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/gkrellm-themes-0.1.ebuild,v 1.11 2005/07/21 20:11:58 corsair Exp $
 
 DESCRIPTION="A pack of ~200 themes for GKrellM"
 HOMEPAGE="http://www.muhri.net/gkrellm"
@@ -205,7 +205,7 @@ SRC_URI="${THEME_URI}/3051.tar.gz
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~sparc"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 RESTRICT="nostrip"
 
