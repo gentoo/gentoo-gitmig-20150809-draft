@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.137 2005/07/21 01:55:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.138 2005/07/21 13:55:11 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -260,6 +260,9 @@ if [[ ${ETYPE} == sources ]]; then
 					  >=sys-devel/binutils-2.11.90.0.31 )
 			doc? ( app-text/docbook-sgml-utils
 				   app-text/xmlto )"
+	kernel_is ge 2 6 13 && \
+		DEPEND="${DEPEND}
+			sys-fs/udev"
 	RDEPEND="${DEPEND}
 			!build? ( >=sys-libs/ncurses-5.2
 					  sys-devel/make )"
@@ -564,6 +567,11 @@ postinst_sources() {
 	einfo "in the following documents:"
 	einfo "  - General upgrade guide: http://www.gentoo.org/doc/en/kernel-upgrade.xml"
 	kernel_is_2_6 && einfo "  - 2.4 to 2.6 migration guide: http://www.gentoo.org/doc/en/migration-to-2.6.xml"
+	if kernel_is ge 2 6 13; then
+		ewarn "As of 2.6.13 the support for devfs has been removed."
+		ewarn "You will be required to either manage a static /dev"
+		ewarn "or to ensure that udev is starting on boot."
+	fi
 	echo
 
 	# if K_EXTRAEINFO is set then lets display it now
