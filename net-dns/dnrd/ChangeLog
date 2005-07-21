@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnrd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.4 2005/04/19 10:21:03 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.5 2005/07/21 15:11:48 chriswhite Exp $
+
+*dnrd-2.19.1 (21 Jul 2005)
+
+  21 Jul 2005; Chris White <chriswhite@gentoo.org> files/dnrd,
+  -dnrd-2.17.2.ebuild, -dnrd-2.18.ebuild, +dnrd-2.19.1.ebuild:
+  Fix for security bug #99520. Thanks to Anarchy for confirming ~ppc. Removed
+  older vulnerable versions.
 
   19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.

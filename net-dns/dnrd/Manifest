@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 cf032ad013c47f578bfbdd363ab2a423 ChangeLog 1227
 MD5 6efe55b5bdb519265c5f988e988be965 metadata.xml 373
-MD5 e563768727a4c965013e06510b0d997d dnrd-2.18.ebuild 743
-MD5 15ddcf474c41f888e80c3d67a39b844a ChangeLog 958
-MD5 7a4e4dab2fd918ab73a67810a68ebc31 dnrd-2.17.2.ebuild 707
-MD5 37af42cf55f4b5e709d87a79e89fd760 files/dnrd 465
-MD5 59a8af5b8e044f741c3077e196ab080d files/digest-dnrd-2.18 61
+MD5 a14580cf7095380143a8cd158c04767d dnrd-2.19.1.ebuild 832
+MD5 eb8a7236afb2e7c90d7bc1500cfd2783 files/digest-dnrd-2.19.1 63
+MD5 1a7c6063be69d8859ed77fedb8b78d5f files/dnrd 476
 MD5 7d30e0bd4d61ae20ed63339d3cc5739d files/dnrd.conf 250
-MD5 adabeaf8e108dbbac72ac51528b3fc12 files/digest-dnrd-2.17.2 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZNuwjUHll2nfF60RAt0MAKCxXYREtg+sHfER411r7NmkkdeMRQCbBz8b
-XMuAmfvgcPos6ccEL+UTw3c=
-=RC+6
+iD8DBQFC4DMoFdQwWVoAgN4RApAaAKDBYWGU0I2I4Sy3tTSoboaKBO+kjACfTaLR
+ZYs6GuDnlxt1FUDpLxGwvLk=
+=Q3Qf
 -----END PGP SIGNATURE-----
