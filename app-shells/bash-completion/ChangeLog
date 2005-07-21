@@ -1,6 +1,17 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.128 2005/07/14 07:34:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.129 2005/07/21 22:24:16 ka0ttic Exp $
+
+*bash-completion-20050721 (21 Jul 2005)
+
+  21 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/20050712/01_all_gkrellm.diff, -files/20050712/03_all_find.diff,
+  +files/20050721/01_all_gkrellm.diff, -files/20050712/02_all_cvs.diff,
+  -files/20050712/04_all_command.diff, +files/20050721/02_all_cvs.diff,
+  +files/20050721/03_all_find.diff, +files/20050721/04_all_command.diff,
+  -bash-completion-20050712.ebuild, +bash-completion-20050721.ebuild:
+  Version bump; this version disables code that triggers a bash-3 bug (see bug
+  99540).
 
   14 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
   bash-completion-20050121-r9.ebuild, bash-completion-20050712.ebuild:
