@@ -1,11 +1,11 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.50 2005/07/21 08:17:06 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.51 2005/07/21 11:47:58 taviso Exp $
 
 *zlib-1.2.3 (21 Jul 2005)
 
   21 Jul 2005; Tavis Ormandy <taviso@gentoo.org> +zlib-1.2.3.ebuild:
-  security bump #63740
+  security bump #99751
 
   06 Jul 2005; Stephen Bennett <spb@gentoo.org> zlib-1.2.2-r1.ebuild:
   mips stable for bug #98121
