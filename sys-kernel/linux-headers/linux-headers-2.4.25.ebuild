@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.25.ebuild,v 1.12 2005/05/18 20:16:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.25.ebuild,v 1.13 2005/07/21 17:14:04 mr_bones_ Exp $
 
 ETYPE="headers"
 inherit eutils kernel
@@ -20,7 +20,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
-PROVIDE="virtual/kernel virtual/os-headers"
+PROVIDE="virtual/os-headers"
 KEYWORDS="-*"
 IUSE=""
 
