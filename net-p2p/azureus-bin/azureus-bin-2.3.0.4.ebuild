@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.3.0.4.ebuild,v 1.1 2005/06/27 22:21:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.3.0.4.ebuild,v 1.2 2005/07/21 08:43:04 eradicator Exp $
 
 inherit eutils java-pkg
 
@@ -31,6 +31,7 @@ DEPEND="virtual/libc
 
 RDEPEND="${DEPEND}
 	kde? ( dev-java/systray4j )
+	net-libs/linc
 	=x11-libs/gtk+-2*
 	>=virtual/jre-1.4"
 
