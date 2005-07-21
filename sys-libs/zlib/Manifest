@@ -1,7 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 efe93e20bc888ec8bf234c75314379c2 zlib-1.2.2-r1.ebuild 1861
-MD5 6644f953c816a2f2d66b5e69c749811e zlib-1.2.3.ebuild 1793
+MD5 63805c0d6d10c2154c6477beedb430c0 zlib-1.2.3.ebuild 1791
 MD5 8064f3ee210d73a2f545ca908f6e6863 zlib-1.2.2.ebuild 1779
-MD5 bd3529817b17087f2d677faa54d61d2a ChangeLog 7324
+MD5 e45a764bb372946df3a2f81bec45a3eb ChangeLog 7425
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3ccc7437df1921bba1a37d42a70e711f files/digest-zlib-1.2.2 63
 MD5 8040cf924143b9328aa2d584222e0f51 files/digest-zlib-1.2.3 63
@@ -12,3 +15,12 @@ MD5 3ccc7437df1921bba1a37d42a70e711f files/digest-zlib-1.2.2-r1 63
 MD5 9d3fdd73e1997aa5c823fc210f29919d files/zlib-1.2.1-configure.patch 3149
 MD5 a337d1727a4f6f9ed8d29e43cde40e89 files/zlib-1.2.1-fPIC.patch 662
 MD5 d821453623869d6d8f7de1eca8b12e2f files/zlib-1.2.1-build-fPIC.patch 2211
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iQCVAwUBQt+N7J4WFLgrx1GWAQLgHQQAk53uDglAK+3BsAb5O93rExVhfPe45/Jz
+v2bVp454DeSqgd4HVtEa6MwkHV6gJwBc27WrgHwjF6CiA4qhv4/j2jr4tPvjva6l
+YgfjvXsYqIuLcqXjwNcWR1fCAw9wLAWu9Zi4s7RMK1VCkhAVjouJ2V2Yy68ayY3t
+Wn9FEyIBiqo=
+=R2XJ
+-----END PGP SIGNATURE-----
