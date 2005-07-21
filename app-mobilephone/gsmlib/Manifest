@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 ede64d111ad9daedeb8b34b0d655b716 gsmlib-1.11_pre030826.ebuild 811
 MD5 7d26b4ade36bb8155f0c3cfef600655b gsmlib-1.10.ebuild 600
-MD5 24778415e443073e29bfa2b02a11f031 gsmlib-1.11_pre041028.ebuild 850
-MD5 1a062d88fce3118cb9a751c65ce40dfe ChangeLog 1901
+MD5 1d7afe3a0cda88e92ffd4dfd70e52e7e gsmlib-1.11_pre041028.ebuild 847
+MD5 5afa4c8097bb305163e2374f8bee61b2 ChangeLog 1997
 MD5 000da42d4ab1227504f2505b02064951 metadata.xml 254
 MD5 ca07bc08da15e439dfee58227b2255f5 files/digest-gsmlib-1.10 63
 MD5 9358266ac12314de9a89dc071fbd6485 files/digest-gsmlib-1.11_pre030826 73
@@ -13,7 +13,7 @@ MD5 5cf9803b268e78717cf97deb06f9a2ce files/gsmlib-1.11-include-gcc34-fix.patch 1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCug1MBXaUFmZvwyMRApW4AJ9fxGOENlxp1NoPDJ+MA/SIZanQvgCfWtVK
-8Rt5nFut7u9eqVeXP7Sq/a0=
-=luID
+iD8DBQFC4BF2NSP4Vda7IdsRAlhQAJ9vgoapLNpHMh4b780BfAdgEfjtbwCdFL9l
+sn8lAO6zMcax+m8LhAoS3iI=
+=34Wn
 -----END PGP SIGNATURE-----
