@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.136 2005/07/16 01:28:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.137 2005/07/21 01:55:43 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -275,7 +275,7 @@ elif [[ ${ETYPE} == headers ]]; then
 
 	if [[ ${CTARGET} = ${CHOST} ]]; then
 		DEPEND="!virtual/os-headers"
-		PROVIDE="virtual/kernel virtual/os-headers"
+		PROVIDE="virtual/os-headers"
 		SLOT="0"
 	else
 		SLOT="${CTARGET}"
@@ -421,34 +421,24 @@ install_headers() {
 	cp -ax "${S}"/include/linux/* ${D}/${ddir}/linux
 	rm -rf ${D}/${ddir}/linux/modules
 
-	# Handle multilib headers
+	# Handle multilib headers and crap
+	local multi_dirs="" multi_defs=""
 	case $(tc-arch-kernel) in
 		sparc64)
-			dodir ${ddir}/asm-sparc
-			cp -ax "${S}"/include/asm-sparc/* ${D}/${ddir}/asm-sparc
-
-			dodir ${ddir}/asm-sparc64
-			cp -ax "${S}"/include/asm-sparc64/* ${D}/${ddir}/asm-sparc64
-
-			create_ml_includes ${ddir}/asm !__arch64__:${ddir}/asm-sparc __arch64__:${ddir}/asm-sparc64
+			multi_dirs="sparc sparc64"
+			multi_defs="!__arch64__ __arch64__"
 			;;
 		x86_64)
-			dodir ${ddir}/asm-i386
-			cp -ax "${S}"/include/asm-i386/* ${D}/${ddir}/asm-i386
-
-			dodir ${ddir}/asm-x86_64
-			cp -ax "${S}"/include/asm-x86_64/* ${D}/${ddir}/asm-x86_64
-
-			create_ml_includes ${ddir}/asm __i386__:${ddir}/asm-i386 __x86_64__:${ddir}/asm-x86_64
+			multi_dirs="i386 x86_64"
+			multi_defs="__i386__ __x86_64__"
 			;;
 		ppc64)
-			dodir ${ddir}/asm-ppc
-			cp -ax "${S}"/include/asm-ppc/* ${D}/${ddir}/asm-ppc
-
-			dodir ${ddir}/asm-ppc64
-			cp -ax "${S}"/include/asm-ppc64/* ${D}/${ddir}/asm-ppc64
-
-			create_ml_includes ${ddir}/asm !__powerpc64__:${ddir}/asm-ppc __powerpc64__:${ddir}/asm-ppc64
+			multi_dirs="ppc ppc64"
+			multi_defs="!__powerpc64__ __powerpc64__"
+			;;
+		s390x)
+			multi_dirs="s390 s390x"
+			multi_defs="!__s390x__ __s390x__"
 			;;
 		arm)
 			dodir ${ddir}/asm
@@ -461,6 +451,17 @@ install_headers() {
 			cp -ax "${S}"/include/asm/* ${D}/${ddir}/asm
 			;;
 	esac
+	if [[ -n ${multi_dirs} ]] ; then
+		local d ml_inc=""
+		for d in ${multi_dirs} ; do
+			dodir ${ddir}/asm-${d}
+			cp -ax "${S}"/include/asm-${d}/* ${D}/${ddir}/asm-${d}/ || die "cp asm-${d} failed"
+
+			ml_inc="${ml_inc} ${multi_defs%% *}:${ddir}/asm-${d}"
+			multi_defs=${multi_defs#* }
+		done
+		create_ml_includes ${ddir}/asm ${ml_inc} 
+	fi
 
 	if kernel_is 2 6; then
 		dodir ${ddir}/asm-generic
