@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-OLE
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/ChangeLog,v 1.10 2005/04/22 14:44:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-OLE/ChangeLog,v 1.11 2005/07/21 06:12:10 sebastian Exp $
+
+  21 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-OLE-0.5.ebuild:
+  Add missing keywords.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> PEAR-OLE-0.5.ebuild:
   stable on amd64

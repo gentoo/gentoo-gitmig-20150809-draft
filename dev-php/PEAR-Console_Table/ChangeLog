@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Console_Table
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Table/ChangeLog,v 1.1 2005/07/21 06:12:10 sebastian Exp $
+
+*PEAR-Console_Table-1.0.2 (21 Jul 2005)
+
+  21 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-Console_Table-1.0.2.ebuild:
+  Initial ebuild.
+
