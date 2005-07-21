@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-1.3.2-r1.ebuild,v 1.8 2005/07/21 14:38:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-1.3.2-r2.ebuild,v 1.1 2005/07/21 14:38:12 ticho Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://elmo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="alpha x86"
+KEYWORDS="~alpha ~x86"
 SLOT="0"
 
 RDEPEND="ssl? ( dev-libs/openssl )
@@ -22,6 +22,7 @@ src_compile() {
 	local myconf
 
 	epatch ${FILESDIR}/configure.in.patch || die "epatch failed"
+	epatch ${FILESDIR}/${P}-stats.patch || die "epatch failed"
 
 	ebegin "Rebuilding configure"
 		autoconf || die "autoconf failed"

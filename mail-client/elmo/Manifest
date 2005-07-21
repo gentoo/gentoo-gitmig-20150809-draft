@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 020d411bf6a8baefd9357f6da39e22e0 elmo-1.3.2-r1.ebuild 1226
-MD5 42a20b4de76fa4af37174e7eec5a7357 ChangeLog 2678
+MD5 309f8a35ba5c734195e07aacda8303a8 elmo-1.3.2-r2.ebuild 1297
+MD5 e3681d2f86da08f7b9bcc4fa69743b8d elmo-1.3.2-r1.ebuild 1235
+MD5 9b465132cd8a2fc16e7a0bef71525efa ChangeLog 3029
 MD5 6f02c7ca1840e1d899cf15f645456f7f metadata.xml 165
+MD5 189bbebbc02998206d1bff70a3bdcbb1 files/elmo-1.3.2-stats.patch 1074
 MD5 ae516ca333aa45e8df3b9964414f04ff files/digest-elmo-1.3.2-r1 62
+MD5 ae516ca333aa45e8df3b9964414f04ff files/digest-elmo-1.3.2-r2 62
 MD5 030a20e67a5eb594c5aa4216043285d0 files/configure.in.patch 1991
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClc8eViELBEf1JB0RAnqYAJoCTo2aHnGIoEMBTCBkq7KTjOT3/QCeJhQN
-a2m+IeRevwrn9acjFhg86uQ=
-=PpHt
+iD8DBQFC37NtQlM6RnzZP+IRAppnAJ9ar6GCywkgP+HW41EhdZjzj9tk2gCeKik6
+fKuAIKY4AVGN++VdJabotsY=
+=emdM
 -----END PGP SIGNATURE-----
