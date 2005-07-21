@@ -2,15 +2,17 @@
 Hash: SHA1
 
 MD5 d539a30d1ddf8f2928d1022563c8c5da gtkglextmm-1.0.0.ebuild 539
-MD5 cb4fa3e0efa71ae329b6bb3889b03f04 gtkglextmm-1.0.1.ebuild 712
-MD5 eb38db287cf387e878d94751a819da98 ChangeLog 1407
+MD5 f438bf9204577d50e10654825d89eb89 gtkglextmm-1.1.0.ebuild 1088
+MD5 a3f6a80c7f9d4a9ee15d3888d28e25c5 gtkglextmm-1.0.1.ebuild 1061
+MD5 86c2da3f191f1f15ece9b338f074295a ChangeLog 1694
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
 MD5 3b565cc8d1c575d13c6fc66f5e946ddb files/digest-gtkglextmm-1.0.0 69
 MD5 7bd2838f49af53c883df274edbcebd0f files/digest-gtkglextmm-1.0.1 69
+MD5 a0a57e33e2ff195f8f7520532e437726 files/digest-gtkglextmm-1.1.0 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC3xCTEZCkKN40op4RAhqPAKCZ2OvfQvTabOPwoEEZdODuu01JagCgm6S4
-GJ88ZXj8k3rVA7OGxuw3BN0=
-=38Mj
+iD8DBQFC4C06EZCkKN40op4RAkl0AJwPRDD80lu/4AUo4NobFy9mTmD/sgCeImax
+L+XVTJEtqcBoAY0T90OeaW8=
+=RZhC
 -----END PGP SIGNATURE-----
