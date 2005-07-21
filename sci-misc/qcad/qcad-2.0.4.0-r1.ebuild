@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r1.ebuild,v 1.4 2005/03/17 02:40:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r1.ebuild,v 1.5 2005/07/21 15:55:20 caleb Exp $
 
 inherit kde-functions eutils
 
@@ -21,7 +21,8 @@ KEYWORDS="x86 ppc amd64"
 need-qt 3.3
 
 DEPEND="${DEPEND}
-		>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	!=x11-libs/qt-4*"
 
 src_unpack() {
 	unpack ${A}
