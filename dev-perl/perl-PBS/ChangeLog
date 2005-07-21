@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/perl-PBS
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/ChangeLog,v 1.1 2005/07/21 19:43:22 robbat2 Exp $
+
+*perl-PBS-0.23 (21 Jul 2005)
+
+  21 Jul 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +perl-PBS-0.23.ebuild:
+  Initial submission, ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
