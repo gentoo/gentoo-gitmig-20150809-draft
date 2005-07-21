@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.5.ebuild,v 1.1 2005/07/18 14:46:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.10.6.ebuild,v 1.1 2005/07/21 15:07:40 wolf31o2 Exp $
 
 inherit eutils
 
@@ -17,6 +17,8 @@ DEPEND=""
 RDEPEND="dev-lang/python
 	amd64? (
 		sys-apps/linux32 )
+	ppc64? (
+		sys-devel/ppc32 )
 	ccache? (
 		dev-util/ccache )
 	cdr? (
@@ -62,7 +64,7 @@ src_install() {
 	if use doc;	then
 		DOCDESTTREE="." dohtml -A spec,msg,example -r examples files
 	fi
-	dodoc README ChangeLog ChangeLog.old AUTHORS COPYING
+	dodoc README ChangeLog ChangeLog.old AUTHORS
 	doman files/catalyst.1
 }
 
