@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.21 2005/07/21 04:13:47 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.22 2005/07/21 07:07:48 eradicator Exp $
+
+*portaudio-18.1-r2 (21 Jul 2005)
+
+  21 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -portaudio-18.1-r1.ebuild, +portaudio-18.1-r2.ebuild:
+  Whoops... forgot to include ringbuffer.c
 
   21 Jul 2005; Kito <kito@gentoo.org> files/portaudio-Makefile.macos,
   portaudio-18.1-r1.ebuild:
