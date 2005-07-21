@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 133ab723aa5c071d67866b00facfef56 ChangeLog 4213
+MD5 099fd9eb37b716b221a997f9bf539463 ChangeLog 4098
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
+MD5 4ffd23c3ded99e85692162aeb531e04c speech-tools-1.2.3-r1.ebuild 3007
 MD5 6a79347d216ee0db49beb8028d9b3b7d speech-tools-1.2.3-r2.ebuild 3104
 MD5 a143fa8cb76f282bdd72ae3ad821f9c5 files/58speech-tools 34
+MD5 dbb77def95ba86c97fb18472325f2e18 files/digest-speech-tools-1.2.3-r1 224
 MD5 19e3325adc92d921d82884fe58485055 files/speech-tools-gcc3.3.diff 25787
 MD5 dbb77def95ba86c97fb18472325f2e18 files/digest-speech-tools-1.2.3-r2 224
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC32PDArHZZzCEUG0RAnhRAKCGTUhkL3PZyiZONNCWXzOd6JBvbgCfSMDi
-ofVbRIxjjU1OCsaFc9QlJEo=
-=H75q
+iD8DBQFC32TcArHZZzCEUG0RAiNxAJ4rMBg4CMkxeqWX4M5dKX673ClkVQCfcf+k
+uD9gaNJrbUyLYznZh44HYrE=
+=vtrw
 -----END PGP SIGNATURE-----
