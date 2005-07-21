@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.15 2005/07/12 09:36:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.16 2005/07/21 01:08:16 robbat2 Exp $
+
+*torque-1.2.0_p1-r3 (21 Jul 2005)
+
+  21 Jul 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +torque-1.2.0_p1-r3.ebuild:
+  Redo spool directory stuff again, as torque still complains at me. Also move
+  patches to mirrors, esp as the one is larger than the size limit.
 
   12 Jul 2005; Robin H. Johnson <robbat2@gentoo.org>
   torque-1.2.0_p1-r2.ebuild:
