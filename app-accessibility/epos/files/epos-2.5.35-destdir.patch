@@ -1,0 +1,32 @@
+diff -Naurp epos-2.5.35.orig/cfg/Makefile.am epos-2.5.35/cfg/Makefile.am
+--- epos-2.5.35.orig/cfg/Makefile.am	2005-05-22 23:23:38.000000000 +0000
++++ epos-2.5.35/cfg/Makefile.am	2005-07-20 22:22:51.000000000 +0000
+@@ -17,23 +17,23 @@ version: $(top_srcdir)/configure.ac
+ 
+ install-data-local: installdirs
+ 	@cd $(srcdir) && for i in $(DATA_DIRS); do \
+-		$(mkinstalldirs) $(pkgdatadir)/$$i;\
++		$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/$$i;\
+ 	done
+ 	cd $(srcdir) && for i in $(DATA_FILES); do \
+-		$(INSTALL_DATA) $$i $(pkgdatadir)/$$i;\
++		$(INSTALL_DATA) $$i $(DESTDIR)$(pkgdatadir)/$$i;\
+ 	done
+ 
+ uninstall-local:
+ 	for i in $(DATA_FILES); do \
+-		rm -f $(pkgdatadir)/$$i;\
++		rm -f $(DESTDIR)$(pkgdatadir)/$$i;\
+ 	done
+ 	DATA_DIRS_REVERSED=;\
+ 	for i in $(DATA_DIRS); do \
+ 		DATA_DIRS_REVERSED="$$i $$DATA_DIRS_REVERSED";\
+ 	done;\
+ 	for i in $$DATA_DIRS_REVERSED; do \
+-		chmod o+w $(pkgdatadir)/$$i/..;\
+-		rmdir $(pkgdatadir)/$$i;\
++		chmod o+w $(DESTDIR)$(pkgdatadir)/$$i/..;\
++		rmdir $(DESTDIR)$(pkgdatadir)/$$i;\
+ 	done
+ 
+ 

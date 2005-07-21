@@ -1,0 +1,43 @@
+diff -Naurp epos-2.5.35.orig/configure.ac epos-2.5.35/configure.ac
+--- epos-2.5.35.orig/configure.ac	2005-07-02 01:01:47.000000000 -0700
++++ epos-2.5.35/configure.ac	2005-07-20 15:58:24.000000000 -0700
+@@ -42,7 +42,7 @@ AC_ARG_ENABLE(portaudio, AC_HELP_STRING(
+ 			;;
+ 		xyes)
+ 			EXTRA_PORTAUDIO_DEFS=""
+-			EXTRA_PORTAUDIO_LIBS="-lportaudio -lpablio -L../libs/portaudio/lib -lpthread"
++			EXTRA_PORTAUDIO_LIBS="-lportaudio -lpablio -lpthread"
+ 			;;
+ 		*)	AC_MSG_ERROR(bad value $enableval for --enable-portaudio) ;;
+ 	esac],
+diff -Naurp epos-2.5.35.orig/libs/Makefile.am epos-2.5.35/libs/Makefile.am
+--- epos-2.5.35.orig/libs/Makefile.am	2005-04-07 13:13:53.000000000 -0700
++++ epos-2.5.35/libs/Makefile.am	2005-07-20 15:57:51.000000000 -0700
+@@ -3,12 +3,6 @@
+ include $(top_srcdir)/Makefile.common
+ include data_files.am
+ 
+-if PORTAUDIO
+-MAYBE_PORTAUDIO=portaudio
+-else !PORTAUDIO
+-MAYBE_PORTAUDIO=
+-endif !PORTAUDIO
+-
+-SUBDIRS = regex $(MAYBE_PORTAUDIO)
++SUBDIRS = regex
+ 
+ EXTRA_DIST = $(DATA_FILES)
+diff -Naurp epos-2.5.35.orig/src/waveform.cc epos-2.5.35/src/waveform.cc
+--- epos-2.5.35.orig/src/waveform.cc	2005-07-02 02:09:34.000000000 -0700
++++ epos-2.5.35/src/waveform.cc	2005-07-20 15:57:51.000000000 -0700
+@@ -396,8 +396,8 @@ wavefm::written_bytes()
+ 
+ #ifdef WANT_PORTAUDIO_PABLIO
+ 
+-#include "../libs/portaudio/pa_common/portaudio.h"
+-#include "../libs/portaudio/pablio/pablio.h"
++#include <portaudio/portaudio.h>
++#include <portaudio/pablio.h>
+ 
+ inline const char *pa_get_error_text(PaError err)
+ {

@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/epos
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.8 2005/01/01 10:47:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.9 2005/07/21 07:15:25 eradicator Exp $
+
+*epos-2.5.35 (20 Jul 2005)
+
+  20 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/epos-2.5.35-destdir.patch, +files/epos-2.5.35-sysportaudio.patch,
+  +epos-2.5.35.ebuild:
+  Version bump for bug #78983.  Added support for portaudio.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   epos-2.5.23-r1.ebuild:
