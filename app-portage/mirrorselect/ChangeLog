@@ -1,42 +1,49 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.42 2005/07/18 20:18:01 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.43 2005/07/21 03:59:45 tercel Exp $
+
+*mirrorselect-1.1.4 (21 Jul 2005)
+
+  21 Jul 2005; <tercel@gentoo.org> -mirrorselect-1.1.3.ebuild,
+  +mirrorselect-1.1.4.ebuild:
+  New release, fixes bug #99632. Now make.conf is not touched at all when
+  runing in output mode.
 
 *mirrorselect-1.1.3 (18 Jul 2005)
 
-  18 Jul 2005; <colin@gentoo.org> -mirrorselect-1.1.2.ebuild,
+  18 Jul 2005; <tercel@gentoo.org> -mirrorselect-1.1.2.ebuild,
   +mirrorselect-1.1.3.ebuild:
   fixed minor bug that caused a traceback if make.conf did not exist.
 
 *mirrorselect-1.1.2 (11 Jul 2005)
 
-  11 Jul 2005; <colin@gentoo.org> -mirrorselect-1.1.1.ebuild,
+  11 Jul 2005; <tercel@gentoo.org> -mirrorselect-1.1.1.ebuild,
   +mirrorselect-1.1.2.ebuild:
   bugfix for liveCD usage and OSX compatibility.
 
 *mirrorselect-1.1.1 (10 Jul 2005)
 
-  10 Jul 2005; <colin@gentoo.org> -mirrorselect-1.0.3.ebuild,
+  10 Jul 2005; <tercel@gentoo.org> -mirrorselect-1.0.3.ebuild,
   -mirrorselect-1.1.ebuild, +mirrorselect-1.1.1.ebuild:
   new version including more code cleanups and revisions. Make.conf is now
   auto-backup'd, and bug #98141 is fixed.
 
 *mirrorselect-1.1 (01 Jul 2005)
 
-  01 Jul 2005; <colin@gentoo.org> -mirrorselect-1.0.4_rc2.ebuild,
+  01 Jul 2005; <tercel@gentoo.org> -mirrorselect-1.0.4_rc2.ebuild,
   +mirrorselect-1.1.ebuild:
   New version 1.1. feature upgrades and massive code cleanups.
 
 *mirrorselect-1.0.4_rc2 (30 Jun 2005)
 
-  30 Jun 2005; <colin@gentoo.org> +mirrorselect-1.0.4_rc2.ebuild:
+  30 Jun 2005; <tercel@gentoo.org> +mirrorselect-1.0.4_rc2.ebuild:
   Version 1.0.4_rc2 commited for testing. Many thanks to Marien Zwart for some
   serious code clean-up, and better option parsing. Thank you also to Dan
   Dickey for catching a performance bug.
 
 *mirrorselect-1.0.3 (12 Jun 2005)
 
-  12 Jun 2005; <colin@gentoo.org> +mirrorselect-1.0.3.ebuild:
+  12 Jun 2005; <tercel@gentoo.org> +mirrorselect-1.0.3.ebuild:
   added support for protocall selection. bug 62798
 
   11 Jun 2005; Joseph Jezak <josejx@gentoo.org> mirrorselect-1.0.2.ebuild:
@@ -62,19 +69,19 @@
 
 *mirrorselect-1.0.2 (06 Jun 2005)
 
-  06 Jun 2005; <colin@gentoo.org> +mirrorselect-1.0.2.ebuild:
+  06 Jun 2005; <tercel@gentoo.org> +mirrorselect-1.0.2.ebuild:
   fixed bug that clobbers any make.conf variable containing *SYNC*
 
 *mirrorselect-1.0.1 (06 Jun 2005)
 
-  06 Jun 2005; <colin@gentoo.org> +mirrorselect-1.0.1.ebuild:
+  06 Jun 2005; <tercel@gentoo.org> +mirrorselect-1.0.1.ebuild:
   bugfix for fbsd applied to testing version.
 
-  06 Jun 2005; <colin@gentoo.org> ChangeLog:
+  06 Jun 2005; <tercel@gentoo.org> ChangeLog:
   added new version. this is a complete rewrite, so it is under package.mask
   for testing
 
-  03 Jun 2005; <colin@gentoo.org> metadata.xml:
+  03 Jun 2005; <tercel@gentoo.org> metadata.xml:
   updating maintainer info in metadata.xml
 
 *mirrorselect-0.89 (19 Apr 2005)
