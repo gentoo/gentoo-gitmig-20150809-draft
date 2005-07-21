@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.ebuild,v 1.1 2005/07/21 03:22:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.ebuild,v 1.2 2005/07/21 03:28:11 vapier Exp $
 
 DESCRIPTION="translate gamepad/joystick input into key strokes/mouse actions in X"
 HOMEPAGE="http://qjoypad.sourceforge.net/"
@@ -19,6 +19,8 @@ src_unpack() {
 	cd "${S}"/src
 	# makefile has silly dependencies
 	sed -i \
+		-e "/^CFLAGS/s:-pipe -Wall -W -O2:${CFLAGS}:" \
+		-e "/^CXXFLAGS/s:-pipe -Wall -W -O2:${CXXFLAGS}:" \
 		-e '/^Makefile:/s|:.*||' \
 		Makefile || die "sed make depends failed"
 }
