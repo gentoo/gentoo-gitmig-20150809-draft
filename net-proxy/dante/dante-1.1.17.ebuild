@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.17.ebuild,v 1.3 2005/07/20 05:37:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.17.ebuild,v 1.4 2005/07/21 00:33:25 vapier Exp $
 
 inherit fixheadtails eutils
 
@@ -25,10 +25,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-socksify.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-socksify.patch
 
-	ht_fix_file configure configure.ac
+	ht_fix_file configure
 	sed -i \
 		-e 's:/etc/socks\.conf:/etc/socks/socks.conf:' \
 		-e 's:/etc/sockd\.conf:/etc/socks/sockd.conf:' \
@@ -36,7 +36,6 @@ src_unpack() {
 }
 
 src_compile() {
-	libtoolize --copy --force
 	econf \
 		`use_enable debug` \
 		`use_enable tcpd libwrap` \
