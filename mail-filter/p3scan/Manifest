@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 855e5cf6d556040bf46dbef3dc0f8fd5 p3scan-2.1.ebuild 2029
 MD5 25c44b0bdc90cdc1e40b85f6a2f43941 ChangeLog 681
 MD5 36d9f272b13fc5cb611787183970922e metadata.xml 409
 MD5 360cf261a5fa438c27e1d3febac36c87 files/digest-p3scan-2.1 62
 MD5 ccbcdd1c08592b87665d4d1dd4f394fa files/p3scan.init 612
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4QtIQlM6RnzZP+IRAqwkAKCElFlrfLM+KUhAAixQ3i6BfXMrMwCgmoi9
+LzUPxrumvtXf4DKDWnNyHkQ=
+=ttHY
+-----END PGP SIGNATURE-----
