@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/cfg-update
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.1 2005/04/29 08:07:13 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.2 2005/07/22 14:42:00 dang Exp $
+
+  22 Jul 2005; <dang@gentoo.org> cfg-update-1.7.1.ebuild:
+  Added ~amd64
 
   29 Apr 2005; Harald van Dĳk <truedfx@gentoo.org> :
   initial version, modified ebuild from <xentric@zeelandnet.nl>
