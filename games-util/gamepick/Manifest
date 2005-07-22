@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e38a9135b99a8e90796fdf29b271defc ChangeLog 435
+MD5 645d56f3f7bf056bc0a40947f3c6a5e8 gamepick-0.30.ebuild 1078
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 7bd2a50a3364c7764ca8aba2b6880de5 ChangeLog 351
-MD5 8414e45619aeb0d062a904ed31cbd90e gamepick-0.30.ebuild 1074
-MD5 86bcdc14d7b121d7104e62e56b976113 files/gamepick-0.30-paths.patch 765
 MD5 59ba428bb01df2957f9e905fc90ccb3a files/digest-gamepick-0.30 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC4HQugIKl8Uu19MoRAqkeAJsH3A+lDQgb+ag8xtqJbTdMBAlOIACfR8dZ
-SsImlCMxpShE17EGa4okLso=
-=p4Et
------END PGP SIGNATURE-----
+MD5 86bcdc14d7b121d7104e62e56b976113 files/gamepick-0.30-paths.patch 765
