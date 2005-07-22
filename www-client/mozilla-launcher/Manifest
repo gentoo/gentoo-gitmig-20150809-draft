@@ -3,6 +3,7 @@ MD5 87d8dd0713a496457139755e103fe12f mozilla-launcher-1.41.ebuild 1025
 MD5 c307b3d566c34722995678f11b525fbf ChangeLog 14578
 MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
 MD5 70a19e8491ee4674aaa4c92412570584 mozilla-launcher-1.39.ebuild 1025
+MD5 be5a0ad8bb87165cb87a3b52b109b0f5 files/mozilla-launcher-1.41-multilib.patch 1457
 MD5 a69b664a54ef105f276f52f14670092d files/digest-mozilla-launcher-1.35 68
 MD5 a0bbf60e5a59de57c03c4a23e5e3d22d files/digest-mozilla-launcher-1.39 68
 MD5 75b4e03263918476c53b6cac8bac2e9d files/digest-mozilla-launcher-1.41 68
