@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.103 2005/07/21 14:30:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.104 2005/07/22 12:08:38 usata Exp $
+
+  22 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> uim-0.4.6-r2.ebuild,
+  uim-0.4.7.ebuild:
+  Prevent uim from creating /share/uim when you do not have app-i18n/prime;
+  bug #99824.
 
 *uim-0.4.7.1-r1 (21 Jul 2005)
 

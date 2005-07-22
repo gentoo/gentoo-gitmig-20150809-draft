@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r2.ebuild,v 1.7 2005/07/18 10:30:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r2.ebuild,v 1.8 2005/07/22 12:08:38 usata Exp $
 
 inherit eutils kde-functions
 
@@ -80,16 +80,20 @@ src_compile() {
 	econf ${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
 
-	cd ${WORKDIR}/prime-1.0.0.1
-	econf || die
+	if has_version '>=app-i18n/prime-1.0' ; then
+		cd ${WORKDIR}/prime-1.0.0.1
+		econf || die
+	fi
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	cd ${WORKDIR}/prime-1.0.0.1
-	make DESTDIR="${D}" install-uim || die "make install-uim failed"
-	cd -
+	if has_version '>=app-i18n/prime-1.0' ; then
+		cd ${WORKDIR}/prime-1.0.0.1
+		make DESTDIR="${D}" install-uim || die "make install-uim failed"
+		cd -
+	fi
 
 	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
 	dodoc doc/{HELPER-CANDWIN,KEY,UIM-SH}
