@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24-r2.ebuild,v 1.2 2005/05/17 17:16:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24-r2.ebuild,v 1.3 2005/07/22 11:11:07 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -23,6 +23,7 @@ IUSE="berkdb debug doc minimal perl readline selinux ssl static tcpd"
 RESTRICT="primaryuri"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
+		bdb? ( sys-apps/ed )
 		tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
 		ssl? ( >=dev-libs/openssl-0.9.6d )
 		perl? ( dev-lang/perl )

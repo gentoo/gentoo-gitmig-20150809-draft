@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.12.ebuild,v 1.6 2005/07/13 07:59:47 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13.ebuild,v 1.1 2005/07/22 11:11:07 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -19,10 +19,11 @@ SRC_URI="mirror://mysql/Downloads/MySQL-${SVER}/${NEWP}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~sparc ~ia64 ~ppc ~ppc64"
-IUSE="berkdb debug doc minimal perl readline selinux ssl static tcpd cluster utf8 geometry extraengine"
+IUSE="berkdb debug doc minimal perl readline selinux ssl static tcpd cluster utf8 geometry extraengine big-tables"
 RESTRICT="primaryuri"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
+		bdb? ( sys-apps/ed )
 		tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
 		ssl? ( >=dev-libs/openssl-0.9.6d )
 		perl? ( dev-lang/perl )
@@ -114,8 +115,7 @@ src_unpack() {
 
 	# PIC fixes
 	# bug #42968
-	#EPATCH_OPTS="-p1 -d ${S}" \
-	#epatch ${FILESDIR}/${PN}-4.1.12-asm-pic-fixes.patch || die
+	epatch "${FILESDIR}/035_x86_asm-pic-fixes-r1.patch"
 
 	if use tcpd; then
 		epatch "${FILESDIR}/${PN}-4.0.14-r1-tcpd-vars-fix.diff"
@@ -211,7 +211,7 @@ src_compile() {
 				|| myconf="${myconf} --without-berkeley-db"
 		fi
 		myconf="${myconf} $(use_with geometry) $(use_with cluster ndbcluster)"
-		myconf="${myconf} --with-big-tables"
+		myconf="${myconf} $(use_with big-tables)"
 	else
 		for i in ${minimal_exclude_list}; do
 			myconf="${myconf} --without-${i}"
@@ -268,15 +268,15 @@ src_install() {
 	make install DESTDIR="${D}" benchdir_root="/usr/share/mysql" || die
 
 	diropts "-m0750"
+	dodir "${DATADIR}" /var/run/mysqld /var/log/mysql
 
-	dodir "${DATADIR}" /var/log/mysql
+	diropts "-m0755"
+	dodir /var/run/mysqld
+
 	keepdir "${DATADIR}" /var/run/mysqld /var/log/mysql
 	chown -R mysql:mysql ${D}/var/lib/mysql \
 		${D}/var/run/mysqld \
 		${D}/var/log/mysql
-
-	diropts "-m0755"
-	dodir "${DATADIR}" /var/run/mysqld
 
 	# move client libs, install a couple of missing headers
 	local lib=$(get_libdir)
@@ -411,9 +411,14 @@ pkg_config() {
 	chmod 0750 ${ROOT}/${DATADIR}
 
 	local sqltmp="$(emktemp)"
+	local help_tables="${ROOT}/usr/share/mysql/fill_help_tables.sql"
 	# Filling timezones, see
 	# http://dev.mysql.com/doc/mysql/en/time-zone-support.html
 	${ROOT}/usr/bin/mysql_tzinfo_to_sql ${ROOT}/usr/share/zoneinfo > "${sqltmp}"
+
+	if [[ -r "${help_tables}" ]] ; then
+		cat "${help_tables}" >> "${sqltmp}"
+	fi
 
 	local socket=${ROOT}/var/run/mysqld/mysqld.sock
 	local mysqld="${ROOT}/usr/sbin/mysqld \

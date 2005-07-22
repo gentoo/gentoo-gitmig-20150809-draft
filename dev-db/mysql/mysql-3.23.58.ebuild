@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58.ebuild,v 1.7 2005/03/03 17:08:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58.ebuild,v 1.8 2005/07/22 11:11:07 vivo Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,6 +21,7 @@ KEYWORDS="~x86 ~sparc ~alpha ~hppa ppc"
 IUSE="berkdb debug innodb perl readline ssl static tcpd"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
+	bdb? ( sys-apps/ed )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	>=sys-libs/zlib-1.1.3

@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.209 2005/07/20 12:06:52 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.210 2005/07/22 11:11:07 vivo Exp $
+
+*mysql-4.1.13 (22 Jul 2005)
+
+  22 Jul 2005; Francesco Riosa <vivo@gentoo.org> mysql-3.23.58.ebuild,
+  mysql-3.23.58-r1.ebuild, mysql-4.0.22.ebuild, mysql-4.0.22-r1.ebuild,
+  mysql-4.0.22-r2.ebuild, mysql-4.0.23.ebuild, mysql-4.0.23-r1.ebuild,
+  mysql-4.0.23-r2.ebuild, mysql-4.0.24.ebuild, mysql-4.0.24-r1.ebuild,
+  mysql-4.0.24-r2.ebuild, mysql-4.0.25-r1.ebuild, mysql-4.0.25-r2.ebuild,
+  mysql-4.1.8.ebuild, mysql-4.1.8-r1.ebuild, -mysql-4.1.12.ebuild,
+  -mysql-4.1.12-r2.ebuild, +mysql-4.1.13.ebuild:
+  Added sys-apps/ed to dependancies, it's used in configure phase of bdb storage
+  engine.
+  New version of 4.1 series
 
 *mysql-4.0.25-r2 (20 Jul 2005)
 
