@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c4e0e0040478074eaddccbb26c0893dc ChangeLog 773
+MD5 9d59dc053842156f92efc96f6bf7e522 ChangeLog 863
 MD5 6e27642eb774b668fe48a47e475f2495 metadata.xml 400
-MD5 f19bf7504df6c645ea7e25475620720f ooqstart-gnome-0.8.3.ebuild 1111
+MD5 6db62b4aff56a6bb7a2d976611e76ac2 ooqstart-gnome-0.8.3.ebuild 1114
 MD5 d262aad066c0dd58486d7a8a095b598d files/digest-ooqstart-gnome-0.8.3 62
 MD5 b8e5e4d8a4016a754ab52481fc66a00d files/gnome-ooqstart.png 3962
 MD5 6e3446ddec68a391cd1f63851e4942c6 files/gnome2update.patch.bz2 8004
 MD5 d44da1879b15d8fd3f96d3cbfd54d0d1 files/ooqstart-gnome-0.8.3-gcc4.patch 350
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCoNv7CRZPokWLroQRAs+lAKCqV8aTsldp6VxtajQAIExrc9/0CQCgtGhl
-KXW8z56zgO7yZuHCckgnync=
-=7iXN
------END PGP SIGNATURE-----

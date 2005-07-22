@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3c4a5a77a9d468c7901baa4ec47c87e ChangeLog 515
-MD5 ae05902c161c9bcc3d4c16d70182e53c tedia2sql-1.2.8.ebuild 817
+MD5 1345e32672a436955f79fd16b6e6f066 ChangeLog 598
+MD5 5e5ea1b731cfe3b4ff2db4581eab0fdf tedia2sql-1.2.8.ebuild 818
 MD5 b7216ba0bec6c1dedf761cd7e98d8bfb files/digest-tedia2sql-1.2.8 64
 MD5 b4240fe6e788b7ed6a160bc21f254664 files/tedia2sql-gentoo.patch 664
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCk0k5tG5z4I8BtQoRAjNyAJ96IszmTl5tLF5bVGtWzr609rWzoACdHhTJ
-0H+tUotVGY5cGJ6N6nb+GPw=
-=TF4L
------END PGP SIGNATURE-----
