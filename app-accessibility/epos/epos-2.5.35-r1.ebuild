@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.35.ebuild,v 1.2 2005/07/21 07:20:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.35-r1.ebuild,v 1.1 2005/07/22 10:17:57 eradicator Exp $
 
 IUSE="portaudio"
 
@@ -12,9 +12,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 
-RDEPEND="portaudio? ( >=media-libs/portaudio-18.1-r2 )"
+RDEPEND="portaudio? ( =media-libs/pablio-18* )"
 DEPEND="app-text/sgmltools-lite
 	>=sys-devel/autoconf-2.57
 	=sys-devel/automake-1.7*
@@ -47,7 +47,7 @@ src_install() {
 	mv ${D}/usr/bin/say ${D}/usr/bin/epos_say
 
 	exeinto /etc/init.d
-	doexe ${FILESDIR}/epos
+	doexe ${FILESDIR}/eposd
 
 	dodoc WELCOME THANKS Changes ${FILESDIR}/README.gentoo
 }
