@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.66 2005/07/22 13:13:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.67 2005/07/22 15:24:54 herbs Exp $
+
+  22 Jul 2005; Herbie Hopkins <herbs@gentoo.org> fetchmail-6.2.5.2.ebuild:
+  Stable on amd64 wrt bug #99865.
 
   22 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   fetchmail-6.2.5.2.ebuild:
