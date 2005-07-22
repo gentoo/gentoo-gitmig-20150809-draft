@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.10.ebuild,v 1.1 2005/07/22 17:20:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.10.ebuild,v 1.2 2005/07/22 18:31:34 agriffis Exp $
 
-inherit nsplugins eutils mozilla-launcher
+inherit eutils mozilla-launcher
 
 IUSE=""
 
@@ -33,7 +33,7 @@ RDEPEND="virtual/x11
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 	)
 	virtual/x11
-	>=www-client/mozilla-launcher-1.28"
+	>=www-client/mozilla-launcher-1.41"
 
 # This is a binary x86 package => ABI=x86
 # Please keep this in future versions
@@ -41,29 +41,14 @@ RDEPEND="virtual/x11
 has_multilib_profile && ABI="x86"
 
 src_install() {
+	declare MOZILLA_FIVE_HOME=/opt/mozilla
+
 	# Install mozilla in /opt
-	dodir /opt
-	mv ${S} ${D}/opt/mozilla
+	dodir ${MOZILLA_FIVE_HOME%/*}
+	mv ${S} ${D}${MOZILLA_FIVE_HOME}
 
-	# Plugin path setup (rescuing the existing plugins)
-	src_mv_plugins /opt/mozilla/plugins
-
-	# Fixing permissions
-	chown -R root:root ${D}/opt/mozilla
-
-	# mozilla-launcher-1.8 supports -bin versions
-	dodir /usr/bin
-	cat <<EOF >${D}/usr/bin/mozilla-bin
-#!/bin/sh
-# 
-# Stub script to run mozilla-launcher.  We used to use a symlink here but
-# OOo brokenness makes it necessary to use a stub instead:
-# http://bugs.gentoo.org/show_bug.cgi?id=78890
-
-export MOZILLA_LAUNCHER=mozilla-bin
-exec /usr/libexec/mozilla-launcher "\$@"
-EOF
-	chmod 0755 ${D}/usr/bin/mozilla-bin
+	# Install /usr/bin/mozilla-bin
+	install_mozilla_launcher_stub mozilla-bin ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps
@@ -73,19 +58,14 @@ EOF
 }
 
 pkg_preinst() {
-	export MOZILLA_FIVE_HOME=${ROOT}/opt/mozilla
-
-	# Remove the old plugins dir
-	pkg_mv_plugins ${MOZILLA_FIVE_HOME}/plugins
+	declare MOZILLA_FIVE_HOME=/opt/mozilla
 
 	# Remove entire installed instance to prevent all kinds of
 	# problems... see bug 44772 for example
-	rm -rf "${MOZILLA_FIVE_HOME}"
+	rm -rf "${ROOT}${MOZILLA_FIVE_HOME}"
 }
 
 pkg_postinst() {
-	export MOZILLA_FIVE_HOME=${ROOT}/opt/mozilla
-
 	update_mozilla_launcher_symlinks
 }
 
