@@ -1,6 +1,19 @@
-MD5 21a2b0c94395626588254c59c855fd7f ChangeLog 9270
-MD5 7f795e49e944fe6f3aa15fe53e8da366 metadata.xml 693
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9f3ed53018a2778cdbc20cb5544438e2 ChangeLog 9470
 MD5 f87bde9c0093587ef76f595a99652913 centericq-4.20.0-r2.ebuild 2492
-MD5 0f60514eff0a237cf8fbdd13fd88293e files/centericq-amd64.patch 6291
+MD5 7f795e49e944fe6f3aa15fe53e8da366 metadata.xml 693
+MD5 c73c7df4f218f994e2b04d3be14a2ea1 centericq-4.20.0-r3.ebuild 2557
 MD5 73abf7a5deb27baf431c12003caeb02d files/centericq-4.20.0.CAN-2005-1914.patch.bz2 576
+MD5 0f60514eff0a237cf8fbdd13fd88293e files/centericq-amd64.patch 6291
 MD5 cb21aa5d990cbba3ea7fde0c48731fe2 files/digest-centericq-4.20.0-r2 70
+MD5 487cf21de72d6434e5c0fff2a8bcc73b files/centericq-4.20.0-libgadu.patch 3413
+MD5 cb21aa5d990cbba3ea7fde0c48731fe2 files/digest-centericq-4.20.0-r3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4Ph6Z/iYVBmujdURAkgVAJ9cLx2PbpKoan+1kKqzCn1ZXxS9LwCfa/hO
+76Bf55wkI5lEdnWmPc30sdM=
+=G80c
+-----END PGP SIGNATURE-----
