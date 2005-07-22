@@ -1,5 +1,5 @@
-MD5 267e67301eb99bead756cb8a80617038 ChangeLog 1028
-MD5 9607b79cf50f7c27f5d27517536b256b coldsync-2.2.5-r1.ebuild 1160
+MD5 3c9fd1750151a212973314ab567644ef ChangeLog 1112
+MD5 e40087a9ead268a71c4523ea66418c15 coldsync-2.2.5-r1.ebuild 1160
 MD5 5b44e7598c5cfedaa73d9e14c8886d11 coldsync-2.2.5.ebuild 958
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 cc3ae92d1eed6d972a772c1682c1a1c9 files/coldsync-2.2.5-gcc3.diff 308
