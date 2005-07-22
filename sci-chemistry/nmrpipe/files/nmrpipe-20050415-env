@@ -3,6 +3,7 @@ BINTYPE="linux9"
 
 # NMRPipe
 NMRBASE="/opt/nmrpipe"
+NMRTXT="${NMRBASE}/nmrtxt"
 MANPATH="${NMRBASE}/man"
 PATH="${NMRBASE}/bin"
 # Auxiliary NMRPipe scripts

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-20050415-r1.ebuild,v 1.1 2005/07/20 17:35:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-20050616.ebuild,v 1.1 2005/07/22 16:57:30 ribosome Exp $
 
 DESCRIPTION="Spectral visualisation, analysis and Fourier processing"
 # The specific terms of this license are printed automatically on startup
