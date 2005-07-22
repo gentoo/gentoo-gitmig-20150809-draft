@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.7.ebuild,v 1.3 2005/06/07 23:34:34 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.7.ebuild,v 1.4 2005/07/22 23:10:15 battousai Exp $
 
-IUSE="gtk gtk2 tcltk sdk usb"
+IUSE="dlloader gtk gtk2 tcltk sdk usb"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Input driver for Wacom tablets and drawing devices"
 HOMEPAGE="http://linuxwacom.sourceforge.net/"
@@ -32,23 +32,11 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use sdk; then
-		if has_version ">=x11-base/xfree-4.3.0-r7"
+		if ! built_with_use xorg-x11 sdk
 		then
-			if [ ! "`grep sdk /var/db/pkg/x11-base/xfree-[0-9]*/USE`" ]
-			then
-				eerror "This package builds against the XFree86 SDK, and therefore requires"
-				eerror "that you have emerged xfree with the sdk USE flag enabled."
-				die "Please remerge xfree with the sdk USE flag enabled."
-			fi
-		elif has_version "x11-base/xorg-x11"
-		then
-			if [ ! "`grep sdk /var/db/pkg/x11-base/xorg-x11-[0-9]*/USE`" ]
-			then
-				eerror "This package builds against the X.Org SDK, and therefore requires"
-				eerror "that you have emerged xorg-x11 with the sdk USE flag enabled."
-				die "Please remerge xorg-x11 with the sdk USE flag enabled."
-			fi
-		else die "This build requires x11-base/xorg-x11 or x11-base/xfree to be installed to build against the SDK when USE=sdk."
+			eerror "This package builds against the X.Org SDK, and therefore requires"
+			eerror "that you have emerged xorg-x11 with the sdk USE flag enabled."
+			die "Please remerge xorg-x11 with the sdk USE flag enabled."
 		fi
 		einfo "Building against the X11 SDK. This will install updated X drivers and userland tools."
 	else
@@ -90,14 +78,11 @@ src_compile() {
 	if use amd64 ; then
 		myconf="${myconf} --enable-xserver64"
 	fi
+	myconf="${myconf} --with-xorg-sdk=/usr/$(get_libdir)/Server/ --with-xlib=/usr/$(get_libdir)"
 
 	if use sdk; then
 		myconf="${myconf} --enable-wacomdrv --enable-wacdump --enable-xsetwacom"
-		if [ -f "/usr/$(get_libdir)/Server/include/xf86Version.h" ]; then
-			myconf="${myconf} --with-xf86=/usr/$(get_libdir)/Server --with-xorg-sdk=/usr/$(get_libdir)/Server"
-		else
-			myconf="${myconf} --with-xf86=/usr/X11R6/$(get_libdir)/Server --with-xorg-sdk=/usr/X11R6/$(get_libdir)/Server"
-		fi
+		myconf="${myconf} --with-xf86=/usr/$(get_libdir)/Server --with-xorg-sdk=/usr/$(get_libdir)/Server"
 
 		econf ${myconf} || die "configure failed."
 
@@ -111,10 +96,21 @@ src_compile() {
 	cd ${S}
 	unset ARCH
 	emake || die "build failed."
+	if use dlloader || has_version ">=x11-base/xorg-x11-6.8.99.15"
+	then
+		cd ${S}/src
+		$(tc-getCC) -shared -nostdlib -o wacom_drv.so wacom_drv.o -Bstatic -lgcc
+	fi
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed."
+	if use dlloader || has_version ">=x11-base/xorg-x11-6.8.99.15"
+	then
+		exeinto /usr/$(get_libdir)/modules/input
+		newexe src/wacom_drv.so wacom_drv.so
+		rm ${D}/usr/$(get_libdir)/modules/input/wacom_drv.o
+	fi
 	dohtml -r docs/*
 	dodoc AUTHORS ChangeLog NEWS README
 }

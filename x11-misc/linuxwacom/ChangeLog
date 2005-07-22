@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.28 2005/06/07 23:34:34 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.29 2005/07/22 23:10:15 battousai Exp $
+
+  22 Jul 2005; Bryan Stine <battousai@gentoo.org>
+  -files/linuxwacom-0.6.4-nonx86.patch, -linuxwacom-0.6.3.ebuild,
+  -linuxwacom-0.6.4.ebuild, linuxwacom-0.6.6.ebuild,
+  linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild:
+  Add dlloader USE flag, which installs a DSO linuxwacom Xorg driver.
+  Furthermore, conform to Gentoo xorg migration, /usr/X11R6 -> /usr.
 
 *linuxwacom-0.6.8 (07 Jun 2005)
 
