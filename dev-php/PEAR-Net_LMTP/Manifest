@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5ad5e920b0eee50c6f00bc2f58dbfab8 PEAR-Net_LMTP-1.0.1.ebuild 456
+MD5 024d06d38e52bbab6e39959c01cf40c4 ChangeLog 376
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 276f87de9d17878b35bce2baf6dd46d1 files/digest-PEAR-Net_LMTP-1.0.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4VMDaGfFFLhbXWkRAvZQAKCTtCnlA5u1JdObesgZU2YEYFVjfACglzdl
+e3+NNe9OfB/aMzUzHWBl+Ts=
+=TV5r
+-----END PGP SIGNATURE-----
