@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.177 2005/07/21 23:02:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.178 2005/07/22 08:10:18 corsair Exp $
+
+  22 Jul 2005; Markus Rothe <corsair@gentoo.org> vim-6.3.084.ebuild:
+  Stable on ppc64 (bug #99578)
 
   21 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> vim-6.3.084.ebuild:
   Stable on sparc wrt #99578
