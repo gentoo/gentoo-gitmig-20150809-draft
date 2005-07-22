@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.49 2005/07/20 22:21:10 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.50 2005/07/22 19:28:09 rl03 Exp $
+
+  22 Jul 2005; Renat Lumpau <rl03@gentoo.org> -phppgadmin-3.5.1.ebuild,
+  -phppgadmin-3.5.2.ebuild, -phppgadmin-3.5.3.ebuild:
+  Removing old versions
 
   20 Jul 2005; Danny van Dyk <kugelfang@gentoo.org> ChangeLog:
   Marked stable on amd64.
