@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firestarter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.23 2005/06/12 16:04:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.24 2005/07/22 11:05:38 corsair Exp $
+
+  22 Jul 2005; Markus Rothe <corsair@gentoo.org> firestarter-1.0.3.ebuild:
+  Stable on ppc64 (bug #99688)
 
   12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
   firestarter-0.9.3.ebuild, firestarter-1.0.3.ebuild:
