@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/detachtty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/ChangeLog,v 1.9 2005/03/27 11:30:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/ChangeLog,v 1.10 2005/07/22 20:27:48 mkennedy Exp $
+
+  22 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> detachtty-9.ebuild:
+  Keywording ~amd64, ~sparc; Removed old ebuilds; Added common-lisp herd; 
+  Expanded metadata.xml longdescription.
 
   27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> detachtty-9.ebuild:
   Stable on ppc.
