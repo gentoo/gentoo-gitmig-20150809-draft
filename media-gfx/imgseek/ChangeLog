@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imgseek
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/ChangeLog,v 1.9 2005/04/21 16:05:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/ChangeLog,v 1.10 2005/07/22 20:47:45 dholm Exp $
+
+  22 Jul 2005; David Holm <dholm@gentoo.org> imgseek-0.8.5.ebuild:
+  Added to ~ppc.
 
 *imgseek-0.8.5 (21 Apr 2005)
 

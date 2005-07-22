@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/imgseek-0.8.5.ebuild,v 1.1 2005/04/21 16:05:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/imgseek-0.8.5.ebuild,v 1.2 2005/07/22 20:47:45 dholm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/imgseek/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2
