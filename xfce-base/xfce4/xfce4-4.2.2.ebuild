@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.2.ebuild,v 1.9 2005/07/12 12:47:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.2.2.ebuild,v 1.10 2005/07/22 03:11:18 bcowan Exp $
 
 DESCRIPTION="Xfce 4 base ebuild"
 LICENSE="GPL-2 BSD LGPL-2"
@@ -27,6 +27,12 @@ RDEPEND="~xfce-base/xfce-mcs-plugins-${PV}
 XFCE_META=1
 
 inherit xfce4
+
+src_install() {
+	dodir /etc/X11/Sessions
+	echo startxfce4 > ${D}/etc/X11/Sessions/Xfce-4
+	fperms 755 /etc/X11/Sessions/Xfce-4
+}
 
 pkg_postinst() {
 	einfo
