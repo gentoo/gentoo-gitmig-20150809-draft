@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.68 2005/07/22 05:53:37 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.69 2005/07/22 08:37:36 corsair Exp $
+
+  22 Jul 2005; Markus Rothe <corsair@gentoo.org> cdrdao-1.2.0.ebuild:
+  Stable on ppc64 (bug #92494)
 
   22 Jul 2005; Lars Weiler <pylon@gentoo.org> cdrdao-1.2.0.ebuild:
   Stable on x86 and ppc; security bug #92494.
