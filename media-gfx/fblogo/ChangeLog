@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fblogo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.7 2004/06/24 22:36:47 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.8 2005/07/22 18:23:49 dholm Exp $
+
+  22 Jul 2005; David Holm <dholm@gentoo.org> fblogo-0.5.2.ebuild:
+  Added to ~ppc.
 
   27 Mar 2004; Michal Januszewski <spock@gentoo.org> fblogo-0.5.0.ebuild,
   fblogo-0.5.1.ebuild, fblogo-0.5.2.ebuild:
