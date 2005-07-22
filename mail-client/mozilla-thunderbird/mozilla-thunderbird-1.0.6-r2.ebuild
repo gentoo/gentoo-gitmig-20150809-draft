@@ -1,15 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.6-r2.ebuild,v 1.1 2005/07/21 22:02:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.6-r2.ebuild,v 1.2 2005/07/22 00:00:36 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
-inherit flag-o-matic toolchain-funcs eutils nsplugins mozconfig mozilla-launcher makeedit multilib
+inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2
 	mirror://gentoo/mozilla-firefox-1.0-4ft2.patch.bz2
-	mirror://gentoo/mozilla-jslibmath-alpha.patch"
+	mirror://gentoo/mozilla-jslibmath-alpha.patch
+	mirror://gentoo/mozilla-firefox-1.0.6-nsplugins.patch
+	http://dev.gentoo.org/~agriffis/dist/mozilla-firefox-1.0.6-nsplugins.patch"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
@@ -28,7 +30,12 @@ export MOZILLA_OFFICIAL=1
 export MOZ_THUNDERBIRD=1
 
 src_unpack() {
-	unpack thunderbird-${PV}-source.tar.bz2 || die "unpack failed"
+	declare x
+
+	for x in ${A}; do
+		[[ $x == *.tar.* ]] || continue
+		unpack $x || die "unpack failed"
+	done
 	cd ${S} || die "cd failed"
 
 	####################################
@@ -53,17 +60,20 @@ src_unpack() {
 	#
 	####################################
 
-	# GCC 4 compile patch ; bug #87800
+	# GCC4 compile fix, bug #87800
 	epatch ${FILESDIR}/${PN}-1.0.2-gcc4.patch
 
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
 	epatch ${DISTDIR}/mozilla-firefox-1.0-4ft2.patch.bz2
+
+	# look in /usr/lib/nsplugins for plugins, in addition to the usual places
+	epatch ${DISTDIR}/mozilla-firefox-1.0.6-nsplugins.patch
 }
 
 src_compile() {
-	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/mozilla-thunderbird
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	####################################
 	#
@@ -104,7 +114,7 @@ src_compile() {
 }
 
 src_install() {
-	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/mozilla-thunderbird
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	# Most of the installation happens here
 	dodir ${MOZILLA_FIVE_HOME}
@@ -131,7 +141,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-thunderbird"
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	# Update the component registry
 	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=thunderbird \
@@ -149,5 +159,11 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
+
+	# Update the component registry
+	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=thunderbird \
+		/usr/libexec/mozilla-launcher -register
+
 	update_mozilla_launcher_symlinks
 }
