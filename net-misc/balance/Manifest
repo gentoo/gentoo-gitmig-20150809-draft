@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 d0bf3b5ac6c9f85ab572801f481da471 balance-3.19.ebuild 572
-MD5 14eb1eff9e2b60d8f8548fa58015af56 balance-3.24.ebuild 573
+MD5 52ca188da6662bac6122bf8857c44c35 balance-3.24.ebuild 709
 MD5 3cc5b4ebbbf10d3d9e6bca6b9e769054 ChangeLog 638
 MD5 1d240110decb7e81c75494407a26d6bb files/digest-balance-3.19 63
 MD5 85ccbebb4e4992ee1b77f80ae2270ec2 files/digest-balance-3.24 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCyyH4gIKl8Uu19MoRAk75AJ9zc65LcGOUOW9qeUbc2qGI/UNKnQCbBTYl
-gFh6v0Hgbmsi1KJmzBxGXxQ=
-=nsB1
+iD8DBQFC4HOZgIKl8Uu19MoRAr3CAJ9KZNEauc+EZLUl1Ebgf+f3lVBgowCdGbS5
+ZDnF/ZgREMyx5ER6fx2jFT8=
+=ZMge
 -----END PGP SIGNATURE-----
