@@ -1,0 +1,35 @@
+--- evolution-2.2.3/calendar/gui/Makefile.am	2005-01-07 06:38:57.000000000 -0500
++++ evolution-2.2.3.new/calendar/gui/Makefile.am	2005-07-19 17:30:27.000000000 -0400
+@@ -216,6 +216,7 @@
+ libevolution_calendar_la_LIBADD =					\
+ 	$(top_builddir)/widgets/menus/libmenus.la			\
+ 	$(top_builddir)/shell/libeshell.la				\
++	$(top_builddir)/mail/libevolution-mail.la			\
+ 	$(top_builddir)/calendar/common/libevolution-calendarprivate.la	\
+ 	$(top_builddir)/calendar/gui/dialogs/libcal-dialogs.la		\
+ 	$(top_builddir)/widgets/e-timezone-dialog/libetimezonedialog.la	\
+--- evolution-2.2.3/Makefile.am	2005-02-25 13:02:09.000000000 -0500
++++ evolution-2.2.3.new/Makefile.am	2005-07-19 18:00:43.000000000 -0400
+@@ -40,10 +40,10 @@
+ 	filter			\
+ 	$(SMIME_DIR)		\
+ 	addressbook		\
+-	calendar		\
+-        art                     \
+ 	composer		\
+ 	mail			\
++	calendar		\
++        art                     \
+ 	plugins			\
+ 	ui			\
+ 	views			\
+--- evolution-2.2.1.1/mail/Makefile.am	2005-01-24 22:06:54.000000000 -0500
++++ evolution-2.2.1.1.new/mail/Makefile.am	2005-07-18 21:59:53.000000000 -0400
+@@ -197,6 +197,7 @@
+ 	$(top_builddir)/filter/libfilter.la			\
+ 	$(top_builddir)/widgets/menus/libmenus.la		\
+ 	$(top_builddir)/addressbook/util/libeabutil.la		\
++	$(top_builddir)/addressbook/gui/component/libevolution-addressbook.la \
+ 	$(top_builddir)/addressbook/gui/contact-editor/libecontacteditor.la \
+ 	$(top_builddir)/addressbook/gui/contact-list-editor/libecontactlisteditor.la \
+ 	$(SMIME_LIB)						\

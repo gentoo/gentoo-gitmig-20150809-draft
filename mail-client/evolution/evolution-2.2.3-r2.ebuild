@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.3-r1.ebuild,v 1.1 2005/07/18 05:07:16 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.3-r2.ebuild,v 1.1 2005/07/22 02:21:56 allanonjl Exp $
 
 inherit eutils flag-o-matic alternatives gnome2
 
@@ -71,8 +71,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-credits.patch
 	# Accept the list of plugins separated by commas instead of spaces.
 	epatch ${FILESDIR}/${P}-configure_plugins.patch
+	# Fix for linking problems, #85013 and #92682
+	epatch ${FILESDIR}/${P}-linking-fix.patch
 
-	einfo "Running autoconf"
+	einfo "Running automake/autoconf"
+	automake || die "Automake failed"
 	autoconf || die "Autoconf failed"
 }
 
