@@ -1,6 +1,20 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.24 2005/07/21 12:46:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.25 2005/07/22 18:15:55 agriffis Exp $
+
+*mozilla-launcher-1.41 (22 Jul 2005)
+
+  22 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-launcher-1.41.ebuild:
+  Set MOZ_PLUGIN_PATH as a workaround since
+   (1) the nsplugins patch isn't working in mozilla/firefox/thunderbird,
+   (2) we can't patch the binary stuff anyway
+  Eventually it would be nice to set MOZ_PLUGIN_PATH only for the binary stuff,
+  once the patch is fixed.
+  
+  Add remove_chrome() and the associated -unregister command-line arg that will
+  eventually allow firefox/thunderbird to be uninstalled completely without
+  leaving droppings on the filesystem.
 
 *mozilla-launcher-1.39 (21 Jul 2005)
 
