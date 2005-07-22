@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23-r3.ebuild,v 1.8 2005/07/07 05:03:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23-r3.ebuild,v 1.9 2005/07/22 15:13:06 gustavoz Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono python multilib
@@ -15,7 +15,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
-KEYWORDS="x86 ppc amd64 ppc64 ia64 ~sparc"
+KEYWORDS="x86 ppc amd64 ppc64 ia64 sparc"
 
 RDEPEND=">=dev-libs/glib-2
 	xml2? ( >=dev-libs/libxml2-2.6 )
