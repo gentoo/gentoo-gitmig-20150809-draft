@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e366557e171494239270155e191663a9 ChangeLog 1438
+MD5 fb01e47de4760379a240337adc23c8ae ChangeLog 1520
 MD5 dc7c6ff33b80be4d1a2a531695afe9cc kimdaba-1.0.1.ebuild 427
 MD5 898bbf6eed174d47dd8edfc45733a76b kimdaba-1.1.ebuild 432
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 2587dbb10e3ba41ced856eb681ee62cb kimdaba-2.0.ebuild 600
-MD5 4933db5a3230fae33eba203e6993d759 kimdaba-2.1.ebuild 768
+MD5 9956500b4e584ec65efb83b1f021e06b kimdaba-2.1.ebuild 772
 MD5 f7537f536c58778617d45603885dea95 files/digest-kimdaba-1.0.1 67
 MD5 a0c23d1c1a7d12d827d49be92dd64d14 files/digest-kimdaba-1.1 65
 MD5 068b53375139f12577924c84d3bd43be files/digest-kimdaba-2.0 65
 MD5 740491e5fe1d75d66eea3600a5a676d4 files/digest-kimdaba-2.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCob3E7IRIh26aCTkRAvmoAJ9pn0s7FL+s3sAnclX6Wh14R2saowCgh2XD
-BPRswjJ+f/B7ubZjNMfl2Qs=
-=oIEm
------END PGP SIGNATURE-----
