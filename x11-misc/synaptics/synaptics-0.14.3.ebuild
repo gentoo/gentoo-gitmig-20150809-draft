@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.14.3.ebuild,v 1.2 2005/07/22 22:44:45 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.14.3.ebuild,v 1.3 2005/07/22 23:23:12 battousai Exp $
 
 inherit toolchain-funcs eutils
 
@@ -36,15 +36,15 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib/modules/input
+	dodir /usr/$(get_libdir)/modules/input
 
 	# Yes, they got the DESTDIR stuff going. And there was much rejoicing.
 	make DESTDIR=${D} install || die
 	if use dlloader || has_version ">=x11-base/xorg-x11-6.8.99.15"
 	then
-		exeinto /usr/lib/modules/input
+		exeinto /usr/$(get_libdir)/modules/input
 		doexe synaptics_drv.so
-		rm ${D}/usr/lib/modules/input/synaptics_drv.o
+		rm ${D}/usr/$(get_libdir)/modules/input/synaptics_drv.o
 	fi
 	dodoc {script/usbmouse,alps.patch,COMPATIBILITY,FILES,INSTALL{,.DE},LICENSE,NEWS,TODO,README{,.alps}}
 	# Stupid new daemon, didn't work for me because of shm issues
