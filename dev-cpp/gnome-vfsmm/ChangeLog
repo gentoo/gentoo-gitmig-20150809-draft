@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.15 2005/07/21 21:43:01 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.16 2005/07/22 12:38:39 herbs Exp $
+
+  22 Jul 2005; Herbie Hopkins <herbs@gentoo.org> gnome-vfsmm-2.6.1.ebuild:
+  Stable on amd64.
 
   21 Jul 2005; Markus Nigbur <pyrania@gentoo.org> gnome-vfsmm-2.6.1.ebuild:
   Stable on x86.
