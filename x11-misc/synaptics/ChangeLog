@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.40 2005/07/22 22:39:09 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.41 2005/07/22 22:44:45 battousai Exp $
+
+  22 Jul 2005; Bryan Stine <battousai@gentoo.org> synaptics-0.14.1.ebuild,
+  synaptics-0.14.2.ebuild, synaptics-0.14.3.ebuild:
+  Way to quote, Bryan. Moron.
 
 *synaptics-0.14.3 (22 Jul 2005)
 
