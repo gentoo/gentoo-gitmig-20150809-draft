@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.04b.ebuild,v 1.4 2005/06/10 00:51:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.04b.ebuild,v 1.5 2005/07/22 04:06:54 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="http://ezix.sourceforge.net/software/files/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="gtk"
+IUSE="gtk static"
 
 DEPEND="gtk? ( >=x11-libs/gtk+-2 )
 	>=sys-devel/binutils-2.15"
@@ -27,11 +27,16 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	use static && append-ldflags -static
 	sed -i \
 		-e "/^CXXFLAGS/s:-Os:${CXXFLAGS}:" \
+		-e '/^LDFLAGS=/s:-Os -s::' \
 		-e '/^CXX=/d' -e '/^CC=/d' \
 		src/{gui/,core/,}/Makefile \
 		|| die "sed failed"
+	sed -i \
+		-e "/^LDFLAGS=/s:$: ${LDFLAGS}:" \
+		src/Makefile || die "sed ldflags failed"
 
 	#epatch ${FILESDIR}/${PV}-dev.patch #75168
 	epatch "${FILESDIR}"/02.00b-cpuid-PIC.patch #61947
@@ -52,5 +57,5 @@ src_install() {
 		make DESTDIR="${D}" install-gui || die "install gui failed"
 	fi
 
-	dodoc README TODO docs/*
+	dodoc README docs/*
 }
