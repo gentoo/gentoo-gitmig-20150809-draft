@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.8 2005/07/21 23:00:47 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.9 2005/07/22 08:30:33 sekretarz Exp $
+
+  22 Jul 2005; <sekretarz@gentoo.org> libgadu-20050719.ebuild:
+  Stable on x86
 
   21 Jul 2005; Jory A. Pratt <anarchy@gentoo.org> libgadu-20050719.ebuild:
   Stable on ppc
