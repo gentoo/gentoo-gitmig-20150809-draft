@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.6 2005/07/10 15:55:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.7 2005/07/22 14:48:11 wolf31o2 Exp $
 
 inherit eutils games
 
-DESCRIPTION="Return to Castle Wolfenstein: Enemy Territory - standalone multi-player game based on Return to Castle Wolfenstein"
+DESCRIPTION="standalone multi-player game based on Return to Castle Wolfenstein"
 HOMEPAGE="http://www.idsoftware.com/"
-SRC_URI="mirror://3dgamers/pub/3dgamers4/games/wolfensteinet/et-linux-${PV}.x86.run
-	mirror://3dgamers/pub/3dgamers/games/wolfensteinet/et-linux-${PV}.x86.run
+SRC_URI="mirror://3dgamers/pub/3dgamers/games/wolfensteinet/et-linux-${PV}.x86.run
 	ftp://ftp.idsoftware.com/idstuff/et/linux/et-linux-${PV}.x86.run
 	dedicated? (
 		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.1.tar.bz2
