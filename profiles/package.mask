@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4204 2005/07/21 22:41:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4205 2005/07/22 01:07:48 anarchy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,10 +24,6 @@
 # <ka0ttic@gentoo.org> (21 Jul 2005)
 # Masked for testing.
 =dev-cpp/gtkglextmm-1.1.0
-
-# <anarchy@gentoo.org> (21 Jul 2005)
-# Masked for modifications in ebuild before release
-=www-client/mozilla-1.7.10
 
 # <uberlord@gentoo.org> (21 Jul 2005)
 # Masked as some serious bugs have arisen when init scripts fail
