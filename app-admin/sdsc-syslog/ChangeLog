@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sdsc-syslog
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.5 2005/01/01 11:24:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.6 2005/07/22 09:59:23 dholm Exp $
+
+  22 Jul 2005; David Holm <dholm@gentoo.org> sdsc-syslog-1.0.2.ebuild:
+  Added to ~ppc.
 
   19 Nov 2004; Daniel Black <dragonheart@gentoo.org> sdsc-syslog-1.0.2.ebuild:
   Changed install from einstall to make DESTDIR=... as per bug #71550. Removed
