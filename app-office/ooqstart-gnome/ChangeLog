@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ooqstart-gnome
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooqstart-gnome/ChangeLog,v 1.4 2005/06/03 22:36:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooqstart-gnome/ChangeLog,v 1.5 2005/07/22 17:12:12 dholm Exp $
+
+  22 Jul 2005; David Holm <dholm@gentoo.org> ooqstart-gnome-0.8.3.ebuild:
+  Added to ~ppc.
 
   03 Jun 2005; <halcyon@gentoo.org> +files/ooqstart-gnome-0.8.3-gcc4.patch,
   ooqstart-gnome-0.8.3.ebuild:
