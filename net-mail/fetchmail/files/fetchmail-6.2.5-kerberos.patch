@@ -1,5 +1,5 @@
---- /tmp/configure.in	2004-02-22 10:23:16.711353561 +0000
-+++ configure.in	2004-02-22 10:26:37.916800464 +0000
+--- fetchmail-6.2.5.orig/configure.in	2004-02-22 10:23:16.711353561 +0000
++++ fetchmail-6.2.5/configure.in	2004-02-22 10:26:37.916800464 +0000
 @@ -465,15 +465,13 @@
          else
            AC_MSG_RESULT([found])
