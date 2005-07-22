@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.53 2005/07/22 20:38:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.54 2005/07/22 22:52:13 anarchy Exp $
+
+  22 Jul 2005; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-1.0.6-r1.ebuild:
+  Stable ppc wrt bug #99957
 
   22 Jul 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-1.0.6-r1.ebuild:
