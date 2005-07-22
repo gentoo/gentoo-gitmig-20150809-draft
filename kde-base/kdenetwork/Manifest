@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 55a0e3505463c3505deee74cc8907398 kdenetwork-3.4.0-r1.ebuild 1534
 MD5 71fccce18dbad84d8054b36d08c0ba2c kdenetwork-3.2.3.ebuild 1226
 MD5 f427a70c9c59e822edf276e15d133d95 ChangeLog 20807
@@ -30,3 +33,10 @@ MD5 e07566eb35cec7afdfa2e38edf7cdcd1 files/kdenetwork-3.3.2-kwifimanager-configl
 MD5 622d3497792334fa87e483e249da693d files/digest-kdenetwork-3.4.0-r1 70
 MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
 MD5 732cc856c1e48585781d79173f5d271b files/lisa 538
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4UB4Kf2g/qXtneoRAiZMAJsGpoksNjvFVyuAxN4MbYqTNUQicwCfSBmY
+4rJB4ZzbfzSgv5Og99vOQNs=
+=8g9R
+-----END PGP SIGNATURE-----
