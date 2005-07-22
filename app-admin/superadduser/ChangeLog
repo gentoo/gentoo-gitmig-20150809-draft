@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/superadduser
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.35 2005/03/18 12:45:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.36 2005/07/22 12:39:10 omkhar Exp $
+
+  22 Jul 2005; <omkhar@gentoo.org> superadduser-1.0.9.ebuild:
+  Marked stable on ppc64
 
   18 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/1.0.7/superadduser, -superadduser-1.0.7.ebuild:
