@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.10.0.ebuild,v 1.3 2005/06/05 19:07:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.10.3-r1.ebuild,v 1.1 2005/07/22 12:36:15 foser Exp $
 
 inherit eutils gnome2
 
-DESCRIPTION="A text editor for the Gnome2 desktop"
+DESCRIPTION="A text editor for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="spell"
 
 RDEPEND=">=dev-libs/glib-2.6
@@ -31,4 +31,16 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.31"
 
 DOCS="AUTHORS BUGS ChangeLog README THANKS TODO"
+
 USE_DESTDIR="1"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# fix save as (http://bugzilla.gnome.org/show_bug.cgi?id=311187)
+	epatch ${FILESDIR}/${P}-save_as.patch
+
+}
+

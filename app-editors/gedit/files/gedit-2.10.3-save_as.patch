@@ -1,0 +1,172 @@
+Index: gedit/gedit-file-selector-util.c
+===================================================================
+RCS file: /cvs/gnome/gedit/gedit/gedit-file-selector-util.c,v
+retrieving revision 1.34
+diff -u -r1.34 gedit-file-selector-util.c
+--- gedit/gedit-file-selector-util.c	8 Jun 2005 15:37:27 -0000	1.34
++++ gedit/gedit-file-selector-util.c	22 Jul 2005 02:08:23 -0000
+@@ -312,7 +312,7 @@
+ 		     FileselMode mode,
+ 		     const char *title,
+ 		     const char *default_path,
+-		     const char *default_filename,
++		     const char *default_uri,
+ 		     const char *untitled_name,
+ 		     gboolean use_encoding,
+ 		     const GeditEncoding *encoding)
+@@ -400,27 +400,16 @@
+ 	}
+ 	else
+ 	{
+-		if (default_filename == NULL)
++		if (default_uri == NULL)
+ 		{
+ 			if (default_path != NULL)
+-			{
+ 				gtk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER (filesel), default_path);
+-			}
+ 
+ 			g_return_val_if_fail (untitled_name != NULL, GTK_WINDOW (filesel));
+ 			gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (filesel), untitled_name);
+ 		}
+ 		else
+-		{
+-			if (default_path != NULL)
+-			{
+-				gchar *uri;
+-
+-				uri = g_strconcat (default_path, "/", default_filename, NULL);
+-				gtk_file_chooser_set_uri (GTK_FILE_CHOOSER (filesel), uri);
+-				g_free (uri);
+-			}
+-		}
++			gtk_file_chooser_set_uri (GTK_FILE_CHOOSER (filesel), default_uri);
+ 	}
+ 
+ 	if (mode == FILESEL_OPEN_MULTI) 
+@@ -435,7 +424,7 @@
+ 		   FileselMode mode, 
+ 		   const char *title,
+ 		   const char *default_path, 
+-		   const char *default_filename,
++		   const char *default_uri,
+ 		   const char *untitled_name,
+ 		   const GeditEncoding **encoding)
+ 
+@@ -448,7 +437,7 @@
+ 				      mode,
+ 				      title,
+ 				      default_path, 
+-				      default_filename, 
++				      default_uri, 
+ 				      untitled_name,
+ 				      (encoding != NULL),
+ 				      (encoding != NULL) ? *encoding : NULL);
+@@ -541,12 +530,16 @@
+  * @enable_vfs: if FALSE, restrict files to local paths.
+  * @title: optional window title to use
+  * @default_path: optional directory to start in (must be an URI)
+- * @default_filename: optional file name to default to
++ * @default_uri: optional URI to default to
+  * @untitled_name: optional untitled name (valid UTF-8)
+  *
+  * Creates and shows a modal save file dialog, waiting for the user to
+  * select a file or cancel before returning.
+  *
++ * If @default_uri is %NULL, then only @default_path and @untitled_name will be
++ * used.  Otherwise, only the @default_uri will be used; the starting directory
++ * will correspond to the last directory component of that URI.
++ *
+  * Return value: the URI of the file selected, or NULL if cancel
+  * was pressed.
+  **/
+@@ -555,14 +548,14 @@
+ 			   gboolean    enable_vfs,
+ 			   const char *title,
+ 			   const char *default_path, 
+-			   const char *default_filename,
++			   const char *default_uri,
+ 			   const char *untitled_name,
+ 			   const GeditEncoding **encoding)
+ {
+-	g_return_val_if_fail (((default_filename != NULL) && (untitled_name == NULL)) ||
+-                              ((default_filename == NULL) && (untitled_name != NULL)), NULL);
++	g_return_val_if_fail (((default_uri != NULL) && (untitled_name == NULL)) ||
++                              ((default_uri == NULL) && (untitled_name != NULL)), NULL);
+ 
+ 	return run_file_selector (parent, enable_vfs, FILESEL_SAVE,
+ 				  title ? title : _("Select a filename to save"),
+-				  default_path, default_filename, untitled_name, encoding);
++				  default_path, default_uri, untitled_name, encoding);
+ }
+Index: gedit/gedit-file-selector-util.h
+===================================================================
+RCS file: /cvs/gnome/gedit/gedit/gedit-file-selector-util.h,v
+retrieving revision 1.5
+diff -u -r1.5 gedit-file-selector-util.h
+--- gedit/gedit-file-selector-util.h	25 Jun 2004 15:05:00 -0000	1.5
++++ gedit/gedit-file-selector-util.h	22 Jul 2005 02:08:23 -0000
+@@ -68,7 +68,7 @@
+ 					gboolean    enable_vfs,
+ 					const char *title,
+ 					const char *default_path,
+-					const char *default_filename,
++					const char *default_uri,
+ 					const char *untitled_name,
+ 					const GeditEncoding **encoding);
+ 
+Index: gedit/gedit-file.c
+===================================================================
+RCS file: /cvs/gnome/gedit/gedit/gedit-file.c,v
+retrieving revision 1.89
+diff -u -r1.89 gedit-file.c
+--- gedit/gedit-file.c	8 Jun 2005 15:37:27 -0000	1.89
++++ gedit/gedit-file.c	22 Jul 2005 02:08:23 -0000
+@@ -306,7 +306,7 @@
+ 	gboolean ret = FALSE;
+ 	GeditDocument *doc;
+ 	GtkWidget *view;
+-	gchar *fname = NULL;
++	gchar *uri = NULL;
+ 	gchar *untitled_name = NULL;
+ 	gchar *path = NULL;
+ 	const GeditEncoding *encoding;
+@@ -349,21 +349,19 @@
+ 
+ 		if (gedit_utils_uri_has_file_scheme (raw_uri))
+ 		{
+-			fname = gedit_utils_uri_get_basename (raw_uri);
+-			g_return_val_if_fail (fname != NULL, FALSE);
+-
++			uri = raw_uri;
+ 			path = gedit_utils_uri_get_dirname (raw_uri);
+ 		}
+ 		else
+ 		{
++			g_free (raw_uri);
++
+ 			untitled_name = gedit_document_get_short_name (doc);
+ 			g_return_val_if_fail (untitled_name != NULL, FALSE);
+ 
+ 			path = (gedit_default_path != NULL) ? 
+ 				g_strdup (gedit_default_path) : NULL;
+ 		}
+-
+-		g_free (raw_uri);
+ 	}
+ 
+ 	encoding = gedit_document_get_encoding (doc);
+@@ -373,11 +371,11 @@
+ 			FALSE,
+ 		        _("Save as..."), 
+ 			path,
+-			fname,
++			uri,
+ 			untitled_name,
+ 			&encoding);
+ 
+-	g_free (fname);
++	g_free (uri);
+ 	g_free (untitled_name);
+ 	g_free (path);
+ 
