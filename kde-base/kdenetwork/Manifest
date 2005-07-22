@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 55a0e3505463c3505deee74cc8907398 kdenetwork-3.4.0-r1.ebuild 1534
 MD5 71fccce18dbad84d8054b36d08c0ba2c kdenetwork-3.2.3.ebuild 1226
-MD5 f427a70c9c59e822edf276e15d133d95 ChangeLog 20807
+MD5 335c5604fafd5e4cec80fc9948f9e140 ChangeLog 20920
 MD5 81f23a5351dde1e232267fee2eb18a91 kdenetwork-3.4.1-r1.ebuild 1712
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 fc193fdc9c2f4ed3191665ec65521aa6 kdenetwork-3.2.3-r1.ebuild 1305
 MD5 6c221b3a47365c80128793cb7d3bca9a kdenetwork-3.4.1.ebuild 1506
-MD5 502df0b521db4dcbb11ea20803a1b7d4 kdenetwork-3.3.2-r2.ebuild 1643
+MD5 c7193df16ddf0b66963e907f864b3f56 kdenetwork-3.3.2-r2.ebuild 1642
 MD5 d22479e68fa6bc29a21f12cc64d6ae53 kdenetwork-3.3.2-r1.ebuild 1451
 MD5 ef1e3eb9e3060247262db53c06c1e4af kdenetwork-3.3.2.ebuild 1217
 MD5 31dac3fbdeb3364fcce65b88012ce236 kdenetwork-3.4.0-r2.ebuild 1608
@@ -36,7 +36,7 @@ MD5 732cc856c1e48585781d79173f5d271b files/lisa 538
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC4UB4Kf2g/qXtneoRAiZMAJsGpoksNjvFVyuAxN4MbYqTNUQicwCfSBmY
-4rJB4ZzbfzSgv5Og99vOQNs=
-=8g9R
+iD8DBQFC4WwVKf2g/qXtneoRAshJAKDCAPtWT7XYu/jl+ChHbFGl0/Op0ACfeEqs
+tJcMVpMHg7t5u5QAkVNWCoY=
+=hH/Z
 -----END PGP SIGNATURE-----
