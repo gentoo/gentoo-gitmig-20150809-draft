@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.10.ebuild,v 1.18 2005/07/20 13:18:37 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.10.ebuild,v 1.19 2005/07/22 09:16:12 satya Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -404,5 +404,5 @@ pkg_postinst() {
 }
 
 pkg_postrm(){
-	[ -n "${PF}" ] && rm -rf /usr/share/doc/${PF}
+	[ -n "${PF}" ] && rm -rf ${ROOT}/usr/share/doc/${PF}
 }
