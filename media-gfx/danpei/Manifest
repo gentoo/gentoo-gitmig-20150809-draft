@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1753aceb6d1fc62b1270e55e54f95218 ChangeLog 411
+MD5 0cb8ebfb6ff6240c909b8c2ed3150a07 ChangeLog 495
+MD5 6fcd2330c8df04964d0a75302606f84a danpei-2.9.6.ebuild 848
 MD5 833c06ec7ce9069259dc528b9d462a31 metadata.xml 451
-MD5 867e8bb7238fad9eb0862057644cd74c danpei-2.9.6.ebuild 843
 MD5 b8c69e662afea1e0ea08d48fde3ee841 files/digest-danpei-2.9.6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB5F1UQlM6RnzZP+IRAnikAJ9+2ZN0FuullQCcadxEUJFT0q6DqACgrbBJ
-2m2MY4J+vmPu2ssfGdsWnfc=
-=6QsP
------END PGP SIGNATURE-----
