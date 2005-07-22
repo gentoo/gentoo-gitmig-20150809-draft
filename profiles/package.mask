@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4205 2005/07/22 01:07:48 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4206 2005/07/22 04:47:17 ka0ttic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -107,10 +107,6 @@ www-apps/phpBB
 # <dang@gentoo.org> (29 Jun 2005)
 # Masked until stable upstream
 app-text/evince
-
-# Aaron Walker <ka0ttic@gentoo.org> (29 Jun 2005)
-# Masked due to some pretty big bugs (Goto Line/Search is broken)
-=sys-apps/most-4.10.1
 
 # Leonardo Boshell <leonardop@gentoo.org> (28 Jun 2005)
 # Obsolete package, is now replaced by libgnomedb/mergeant. Queuing for
