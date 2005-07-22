@@ -2,7 +2,7 @@ MD5 1d538a6f1063076e0c1152a7989eb39b ChangeLog 10811
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 9f8a30a5db14358d2dc4415696e127af mozilla-thunderbird-1.0.5-r1.ebuild 4322
 MD5 4bc9516d4d3a8f835aedb450aa72caf4 mozilla-thunderbird-1.0.5.ebuild 4259
-MD5 0fb15f551065c4d20e6848ed3879b7e9 mozilla-thunderbird-1.0.6-r2.ebuild 5292
+MD5 4efa0653dc41dabcaf77002676e48a96 mozilla-thunderbird-1.0.6-r2.ebuild 5292
 MD5 360f4688625a7f73f782b59d4b9575bd files/digest-mozilla-thunderbird-1.0.5 156
 MD5 360f4688625a7f73f782b59d4b9575bd files/digest-mozilla-thunderbird-1.0.5-r1 156
 MD5 7bb4144812a01ca4baebba3acc63b143 files/digest-mozilla-thunderbird-1.0.6-r2 307
