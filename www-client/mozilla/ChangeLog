@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.41 2005/07/21 21:41:38 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.42 2005/07/22 00:05:09 agriffis Exp $
+
+  22 Jul 2005; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.10.ebuild:
+  Sync major changes from firefox and thunderbird ebuilds, including new
+  mozilla-launcher based registration.
 
 *mozilla-1.7.10 (21 Jul 2005)
 
