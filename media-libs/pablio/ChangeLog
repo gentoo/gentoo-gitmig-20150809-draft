@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/pablio
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pablio/ChangeLog,v 1.1 2005/07/22 10:09:08 eradicator Exp $
+
+*pablio-18.1 (22 Jul 2005)
+
+  22 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/pablio-18.1-Makefile.linux, +metadata.xml, +pablio-18.1.ebuild:
+  New package for portaudio blocking i/o library. Ebuild and all that stuff by
+  me.
+

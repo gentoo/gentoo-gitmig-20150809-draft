@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c27aafb74eacbc9f8563af1cb5dd2546 pablio-18.1.ebuild 1009
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 1e90c4403b814af16cbc8af20dbf32a1 ChangeLog 455
 MD5 24037d452fff400001cf4a3a4dec3585 files/digest-pablio-18.1 64
 MD5 e8a78131e0509237cf7bd5906b60d8aa files/pablio-18.1-Makefile.linux 1494
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4MXXArHZZzCEUG0RAqCIAJ4xSPK5OVjC+yzLFerGPbETGrtyPgCcDAAV
+zkFsxrXijGLbif7wR+TD+8M=
+=/6sj
+-----END PGP SIGNATURE-----
