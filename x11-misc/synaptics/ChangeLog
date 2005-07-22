@@ -1,6 +1,16 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.39 2005/05/19 04:01:05 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.40 2005/07/22 22:39:09 battousai Exp $
+
+*synaptics-0.14.3 (22 Jul 2005)
+
+  22 Jul 2005; Bryan Stine <battousai@gentoo.org>
+  -files/synaptics-0.13.4-amd64.patch, -synaptics-0.13.6.ebuild,
+  -synaptics-0.14.0.ebuild, synaptics-0.14.1.ebuild,
+  synaptics-0.14.2.ebuild, +synaptics-0.14.3.ebuild:
+  Purge old versions, bump to 0.14.3. Add dlloader USE flag, which installs a
+  DSO xorg module (.so); closes bug #81213. Furthermore, conform to Gentoo
+  xorg migration, /usr/X11R6 -> /usr.
 
   19 May 2005; Bryan Stine <battousai@gentoo.org> synaptics-0.14.1.ebuild:
   Mark 0.14.1 x86 stable.
