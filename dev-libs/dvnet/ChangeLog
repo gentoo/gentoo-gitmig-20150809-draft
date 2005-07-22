@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.12 2005/06/05 12:24:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.13 2005/07/22 00:10:31 ka0ttic Exp $
+
+  22 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> dvnet-0.9.11-r2.ebuild:
+  Stable on x86.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> dvnet-0.9.11.ebuild:
   Stable on ppc.
