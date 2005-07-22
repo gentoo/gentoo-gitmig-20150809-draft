@@ -1,6 +1,18 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.19 2005/07/20 04:03:40 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.20 2005/07/22 19:01:29 agriffis Exp $
+
+*mozilla-firefox-bin-1.0.6-r1 (22 Jul 2005)
+
+  22 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-firefox-bin-1.0.6-r1.ebuild:
+  Require mozilla-launcher-1.41 so that we can get rid of nsplugins.eclass and
+  stop calling src_mv_plugins and pkg_mv_plugins.  Don't drop in initial tarball
+  because it is no longer necessary.  However, don't attempt to call
+  mozilla-launcher -register either, because the -bin packages don't provide
+  regchrome and regxpcom.  This is fine, doesn't matter for a fresh install, just
+  means that we won't be able to install extensions via portage for the -bin
+  ebuilds.
 
 *mozilla-firefox-bin-1.0.6 (20 Jul 2005)
 
