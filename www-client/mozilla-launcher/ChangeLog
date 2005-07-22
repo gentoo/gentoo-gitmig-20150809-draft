@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.25 2005/07/22 18:15:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.26 2005/07/22 20:35:46 agriffis Exp $
+
+  22 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-launcher-1.41.ebuild:
+  Start the stable push for mozilla/firefox/thunderbird security and extension
+  issues
 
 *mozilla-launcher-1.41 (22 Jul 2005)
 
