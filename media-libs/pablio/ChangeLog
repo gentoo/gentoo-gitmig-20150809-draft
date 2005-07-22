@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/pablio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pablio/ChangeLog,v 1.1 2005/07/22 10:09:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pablio/ChangeLog,v 1.2 2005/07/22 14:38:06 mr_bones_ Exp $
+
+  22 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org> pablio-18.1.ebuild:
+  don't put use-expanded use flags in IUSE
 
 *pablio-18.1 (22 Jul 2005)
 

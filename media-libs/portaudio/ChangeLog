@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.24 2005/07/22 10:07:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.25 2005/07/22 14:36:14 mr_bones_ Exp $
+
+  22 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  portaudio-18.1-r3.ebuild:
+  don't put use-expanded use flags in IUSE
 
 *portaudio-18.1-r3 (22 Jul 2005)
 
