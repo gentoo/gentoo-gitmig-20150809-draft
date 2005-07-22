@@ -1,18 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.10.ebuild,v 1.2 2005/07/22 18:31:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.10.ebuild,v 1.3 2005/07/22 18:45:14 agriffis Exp $
 
 inherit eutils mozilla-launcher
 
 IUSE=""
 
-# handle _rc versions
-MY_PV=${PV/_alpha/a} 	# handle alpha
-MY_PV=${MY_PV/_beta/b}	# handle beta
-MY_PV=${MY_PV/_rc/rc}	# handle rc
-
-MY_PN=${PN/-bin/}
-S=${WORKDIR}/mozilla
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
 HOMEPAGE="http://www.mozilla.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla${PV}/mozilla-i686-pc-linux-gnu-${PV}.tar.gz"
@@ -34,6 +27,8 @@ RDEPEND="virtual/x11
 	)
 	virtual/x11
 	>=www-client/mozilla-launcher-1.41"
+
+S=${WORKDIR}/mozilla
 
 # This is a binary x86 package => ABI=x86
 # Please keep this in future versions
