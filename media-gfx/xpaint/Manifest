@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2ce70a417cc61a21d6eca55c6eebe9fb ChangeLog 1172
 MD5 534b9691669912b8235ddf00e104154a xpaint-2.6.2-r1.ebuild 895
-MD5 e2c059920d1dc7cfba68426e4a849f57 xpaint-2.7.0.ebuild 1453
+MD5 d284a284449cfac0f9466973f4f94798 xpaint-2.7.0.ebuild 1458
 MD5 1671c54c16cb8c22422283dbe56c88e3 xpaint-2.6.9.ebuild 1298
+MD5 444e9bf0570587e6a35f439a7c8664a1 ChangeLog 1274
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 cc2d31e2b0dd3d23351d9a7083e30438 files/xpaint-2.7.0.patch 3104
 MD5 a5a84ca3757c5b7c1c548fcc6e4fa4d2 files/digest-xpaint-2.6.9 65
-MD5 4302427d27ae29264bde31507e3a7122 files/digest-xpaint-2.6.2-r1 64
 MD5 3c20cc0f202977da7d96cadc7557b9d2 files/digest-xpaint-2.7.0 65
+MD5 4302427d27ae29264bde31507e3a7122 files/digest-xpaint-2.6.2-r1 64
 MD5 9e9f3e735d4ceda26c1ab79a710edd05 files/Local.config-2.6.2.diff 622
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBXp+bI7fK2cqeyXkRAlEHAJ4o6/rJ+xzXFxQqEgUpId+QrlAw+ACeL/6W
-ceFdEEEdWoiwukmmEJWDCEU=
-=JBDV
+iD8DBQFC4XHT2G5bA0cA/ScRArm5AJ48SgoKFH4Y56xeVVu9UGG6TcN+tgCguApR
+/Jo2+fbfKllW4WlOQ0mLXgY=
+=zoAy
 -----END PGP SIGNATURE-----
