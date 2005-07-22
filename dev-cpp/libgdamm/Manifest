@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 294f5e7bbfa8a2aa4aff6e96e34a0b75 libgdamm-1.3.6.ebuild 725
 MD5 ffa12cc3b92f298e2db67b99dd1da1c9 ChangeLog 360
 MD5 e1f2511030c19628dbfd68a7b1cd5c82 metadata.xml 162
 MD5 97a1df4c52bdc963ce47b31f9de198de files/digest-libgdamm-1.3.6 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4D8SEZCkKN40op4RAnaWAJ9vF2/6gV0EzoH5Rxb0STmTVx7IuQCePSdC
+pFqYp7eVrB8lFNVWu8Kq9tk=
+=lRaQ
+-----END PGP SIGNATURE-----
