@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8936d3bd6fa66e747aa6ce2f7c491281 ChangeLog 647
+MD5 6c2ea5a795a931f463ad296fc0861af8 ChangeLog 726
 MD5 814c0587d8d7041675958b406bdcb54e dirvish-1.2.ebuild 1092
 MD5 3bfba3ea1075e17cdda89a971cf88bdb metadata.xml 557
-MD5 6063482deaee16eacc0f0d45520c7c4f dirvish-1.2.1.ebuild 1034
+MD5 f71c36b715ddc4010f819d2245d38043 dirvish-1.2.1.ebuild 1033
 MD5 7be1a480a5e7bf8dce3128e2b83b846b files/digest-dirvish-1.2 67
 MD5 a399a37efc2b176bec46e04da41e89bf files/master.conf.example 639
 MD5 e2a253bfde3003bed6d7ac622618e5b8 files/digest-dirvish-1.2.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcKhvmdTrptrqvGERAtuzAJ9emzzia1wjg/zJ9MOkEoT9+YRXIQCffDLm
-YRGw7Nkp8BKtW1zk365q2IU=
-=8BEL
------END PGP SIGNATURE-----

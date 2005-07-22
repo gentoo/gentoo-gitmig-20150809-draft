@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8689698415b392efaff0e2ab551951c3 ChangeLog 552
+MD5 c6d47c8e0e7bec4be5076e8162c27fee ChangeLog 638
+MD5 0a281662b3c68380e48587c46dd896a7 filewatcher-2.4.0.ebuild 1156
+MD5 586d4486e3a7f80383b4b78fa54d78ad metadata.xml 220
 MD5 6ec1ed3554e3a4ae226a000e4dac38b9 files/digest-filewatcher-2.4.0 65
 MD5 fbf9df1c96f8cd963174f35d7c80d01d files/filewatcher.conf 567
-MD5 90ac65bcd8c23a9fa3b1509b533321d2 filewatcher-2.4.0.ebuild 1154
-MD5 586d4486e3a7f80383b4b78fa54d78ad metadata.xml 220
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0BAuI1lqEGTUzyQRAi0bAJkBBVujA76tfnr6o63rVjeYrgdthgCdHPex
-QELyMRq9zO+Afx13+QypLt4=
-=5u5e
------END PGP SIGNATURE-----
