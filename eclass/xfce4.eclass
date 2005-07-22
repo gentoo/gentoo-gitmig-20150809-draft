@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.19 2005/07/11 15:08:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.20 2005/07/22 03:33:25 bcowan Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -19,6 +19,7 @@ fi
 if [[ ${GOODIES_PLUGIN} = "1" ]]; then
 	[[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"
 	SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}${COMPRESS}"
+	[[ -z ${HOMEPAGE} ]] && HOMEPAGE="http://xfce-goodies.berlios.de/"
 	[[ -z ${XFCE_VERSION} ]] && XFCE_VERSION="4.2.0"
 	RDEPEND="${RDEPEND} >=xfce-base/xfce4-panel-${XFCE_VERSION}"
 fi
@@ -29,9 +30,11 @@ if [[ ${PLUGIN} = "1" ]]; then
 	RDEPEND="${RDEPEND} >=xfce-base/xfce4-panel-${XFCE_VERSION}"
 fi
 
-[[ ${GOODIES} = "1" ]] \
-	&& SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P:-${P}}${COMPRESS}"
-
+if [[ ${GOODIES} = "1" ]]; then
+	SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P:-${P}}${COMPRESS}"
+	[[ -z ${HOMEPAGE} ]] && HOMEPAGE="http://xfce-goodies.berlios.de/"
+fi
+	
 [[ -n ${SRC_URI} ]] \
 	|| SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src${ZIP}/${P}${COMPRESS}"
 
