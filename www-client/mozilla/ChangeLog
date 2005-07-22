@@ -1,6 +1,15 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.42 2005/07/22 00:05:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.43 2005/07/22 16:15:04 agriffis Exp $
+
+*mozilla-1.7.10-r1 (22 Jul 2005)
+
+  22 Jul 2005; Aron Griffis <agriffis@gentoo.org> -mozilla-1.7.10.ebuild,
+  +mozilla-1.7.10-r1.ebuild:
+  Repair installation to actually work.  Now that we're using the firefox-style
+  installation method, we can drop the raw installation target patch.  Revert to
+  using mozilla-rebuild-databases.pl since mozilla doesn't support -register like
+  firefox and thunderbird.  Oh well.
 
   22 Jul 2005; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.10.ebuild:
   Sync major changes from firefox and thunderbird ebuilds, including new

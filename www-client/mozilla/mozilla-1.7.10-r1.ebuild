@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.10.ebuild,v 1.2 2005/07/22 00:05:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.10-r1.ebuild,v 1.1 2005/07/22 16:15:04 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -114,10 +114,6 @@ src_unpack() {
 
 	# Fix stack growth logic
 	epatch ${FILESDIR}/${PN}-stackgrowth.patch
-
-	# Fix logic error when using RAW target
-	# <azarah@gentoo.org> (23 Feb 2003)
-	epatch ${FILESDIR}/1.3/${PN}-1.3-fix-RAW-target.patch
 
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
@@ -259,10 +255,8 @@ src_install() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	# Most of the installation happens here
-	dodir ${MOZILLA_FIVE_HOME%%/*}
-	cd ${S}/xpinstall/packager
-	make MOZ_PKG_FORMAT="RAW" TAR_CREATE_FLAGS="-chf" > /dev/null || die "make failed"
-	mv -f ${S}/dist/mozilla ${D}${MOZILLA_FIVE_HOME}
+	dodir ${MOZILLA_FIVE_HOME}
+	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}${MOZILLA_FIVE_HOME}
 
 	# Create directory structure to support portage-installed extensions.
 	# See update_chrome() in mozilla-launcher
@@ -349,6 +343,10 @@ src_install() {
 	doins ${FILESDIR}/10mozilla
 	dosed "s|/usr/lib|/usr/$(get_libdir)|" /etc/env.d/10mozilla
 
+	# Install rebuild script since mozilla-bin doesn't support registration yet
+	exeinto ${MOZILLA_FIVE_HOME}
+	doexe ${FILESDIR}/mozilla-rebuild-databases.pl
+
 	# Install docs
 	dodoc LEGAL LICENSE
 
@@ -357,12 +355,29 @@ src_install() {
 	doins ${FILESDIR}/google.src
 }
 
+pkg_preinst() {
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
+
+	# Remove entire installed instance to solve various problems,
+	# for example see bug 27719
+	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
+}
+
 pkg_postinst() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
-	# Update the component registry
-	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=mozilla \
-		/usr/libexec/mozilla-launcher -register
+#	Unfortunately this doesn't work for mozilla ... maybe seamonkey will fix
+#	it!
+#
+#	# Update the component registry
+#	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=mozilla \
+#		/usr/libexec/mozilla-launcher -register
+
+	# Register Components and Chrome
+	einfo "Registering Components and Chrome..."
+	umask 022
+	MOZILLA_FIVE_HOME=${ROOT}${MOZILLA_FIVE_HOME} \
+		${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl
 
 	# This should be called in the postinst and postrm of all the
 	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
@@ -373,9 +388,20 @@ pkg_postinst() {
 pkg_postrm() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
-	# Update the component registry
-	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=mozilla \
-		/usr/libexec/mozilla-launcher -register
+#	Unfortunately this doesn't work for mozilla ... maybe seamonkey will fix
+#	it!
+#
+#	# Update the component registry
+#	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=mozilla \
+#		/usr/libexec/mozilla-launcher -register
+
+	# Register Components and Chrome
+	if [[ -x ${ROOT}${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl ]]; then
+		einfo "Registering Components and Chrome..."
+		umask 022
+		MOZILLA_FIVE_HOME=${ROOT}${MOZILLA_FIVE_HOME} \
+			${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl
+	fi
 
 	update_mozilla_launcher_symlinks
 }
