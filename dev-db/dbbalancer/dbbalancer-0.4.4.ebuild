@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.13 2005/06/05 18:40:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/dbbalancer-0.4.4.ebuild,v 1.14 2005/07/22 23:22:25 nakano Exp $
+
+inherit eutils
 
 DESCRIPTION="Load balancing multithreaded PostgreSQL connection pool.
 Also has a replication mode to keep in sync the load balanced backend
@@ -23,6 +25,7 @@ S="${WORKDIR}/DBBalancer"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.patch
 	patch ./Makefile.in ${FILESDIR}/${P}-Makefile.in-gentoo.diff
 	patch ./src/tests/postgres_cc/pgtest.cc ${FILESDIR}/${P}-pgtest.cc-gentoo.diff
 	patch ./docs/manual/chapter2.sgml ${FILESDIR}/${P}-chapter2.sgml-gentoo.diff
