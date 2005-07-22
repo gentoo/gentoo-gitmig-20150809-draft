@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.439 2005/07/21 19:41:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.440 2005/07/22 21:00:39 spyderous Exp $
+
+  22 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r2.ebuild:
+  Fileset 0.7. (#99534) Check the right return value on ttmkfdir in the ebuild
+  and in the xfs init script. Otherwise, mkfontscale overwrites the
+  fonts.alias files and breaks encodings including CP1251. Thanks to Alexander
+  Glyzov <isee@inbox.ru>.
 
   21 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xorg-x11-6.8.99.13.ebuild:
