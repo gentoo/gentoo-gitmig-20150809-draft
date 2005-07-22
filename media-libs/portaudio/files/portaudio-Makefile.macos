@@ -1,24 +1,24 @@
 LIBS =  -lm
 
-CDEFINES = -I../pa_common -I../pablio
+CDEFINES = -I../pa_common
 CFLAGS = 
 LIBINST = /usr/lib
 
 TESTS:= $(wildcard pa_tests/pa*.c pa_tests/debug*.c)
 TESTO:= $(wildcard pa_tests/pa*.o pa_tests/debug*.o)
 
-LIBFILES:= ./pa_common/pa_lib.c ./pa_common/pa_convert.c ./pablio/ringbuffer.c ./pablio/pablio.c ./pa_mac_core/pa_mac_core.c
+LIBFILES:= ./pa_common/pa_lib.c ./pa_common/pa_convert.c ./pa_mac_core/pa_mac_core.c
 
 all: sharedlib libinstall testo testq
 
 .c.o:
-		-gcc -c -I./pablio -I./pa_common $< -o $*.o
+		-gcc -c -I./pa_common $< -o $*.o
 
 .o:
 		-gcc $*.o -o $* -Lpa_mac_core $(LIBS) -lportaudio
 
 sharedlib:      $(LIBFILES:.c=.o)
-		gcc  -framework CoreAudio -framework AudioToolbox -framework AudioUnit -dynamiclib -o ./pa_mac_core/libportaudio.dylib -install_name /usr/lib/libportaudio.dylib ./pablio/pablio.o ./pablio/ringbuffer.o ./pa_common/pa_lib.o ./pa_common/pa_convert.o ./pa_mac_core/pa_mac_core.o
+		gcc  -framework CoreAudio -framework AudioToolbox -framework AudioUnit -dynamiclib -o ./pa_mac_core/libportaudio.dylib -install_name /usr/lib/libportaudio.dylib ./pa_common/pa_lib.o ./pa_common/pa_convert.o ./pa_mac_core/pa_mac_core.o
 
 libinstall:     ./pa_mac_core/libportaudio.dylib
 		@cp -f ./pa_mac_core/libportaudio.dylib $(LIBINST)
