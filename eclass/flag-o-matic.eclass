@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.90 2005/07/11 19:28:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.91 2005/07/22 21:47:51 vapier Exp $
 
 
 # need access to emktemp()
@@ -89,6 +89,7 @@ setup-allowed-flags() {
 		-mips1 -mips2 -mips3 -mips4 -mips32 -mips64 -mips16 \
 		-msoft-float -mno-soft-float -mhard-float -mno-hard-float -mfpu \
 		-mieee -mieee-with-inexact \
+		-mtls-direct-seg-refs -mno-tls-direct-seg-refs \
 		-mflat -mno-flat -mno-faster-structs -mfaster-structs \
 		-m32 -m64 -mabi -mlittle-endian -mbig-endian -EL -EB -fPIC \
 		-mlive-g0 -mcmodel -mstack-bias -mno-stack-bias"
