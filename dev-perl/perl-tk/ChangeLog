@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.34 2005/04/27 15:00:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.35 2005/07/22 18:56:32 herbs Exp $
+
+  22 Jul 2005; Herbie Hopkins <herbs@gentoo.org> perl-tk-804.027.ebuild:
+  Multilib fix.
 
   27 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -perl-tk-800.024-r1.ebuild, -perl-tk-800.024-r2.ebuild,
