@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.54 2005/07/21 15:51:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.55 2005/07/22 06:22:47 hardave Exp $
+
+  22 Jul 2005; Hardave Riar <hardave@gentoo.org> zlib-1.2.3.ebuild:
+  Stable on mips, bug #99751.
 
   21 Jul 2005; Aron Griffis <agriffis@gentoo.org> zlib-1.2.3.ebuild:
   stable on ia64
