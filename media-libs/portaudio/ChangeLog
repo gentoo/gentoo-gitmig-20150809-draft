@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.25 2005/07/22 14:36:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.26 2005/07/22 21:27:35 kito Exp $
+
+  22 Jul 2005; Kito <kito@gentoo.org> +files/portaudio-18.1-Makefile.macos,
+  portaudio-18.1-r3.ebuild:
+  ~ppc-macos keyword. New Makefile.macos to support -r3 updates.
 
   22 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
   portaudio-18.1-r3.ebuild:
