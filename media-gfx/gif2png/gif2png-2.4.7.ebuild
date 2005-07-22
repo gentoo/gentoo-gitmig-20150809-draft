@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/gif2png-2.4.7.ebuild,v 1.7 2004/10/04 23:29:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/gif2png-2.4.7.ebuild,v 1.8 2005/07/22 20:28:33 gongloo Exp $
 
 DESCRIPTION="gif2png"
 SRC_URI="http://catb.org/~esr/${PN}/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://catb.org/~esr/gif2png/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="ppc ~ppc-macos x86"
 IUSE=""
 
 DEPEND="media-libs/libpng"
