@@ -1,4 +1,9 @@
 # /etc/bash/bash_logout
-# $Id: bash_logout,v 1.1 2005/04/29 04:16:38 vapier Exp $
 
-# this file is executed when a login shell exits
+# This file is sourced when a login shell terminates.
+
+# You may wish to clear everyone's screen when they logout.
+#clear
+
+# Or maybe you want to leave a thoughtful note.
+#fortune
