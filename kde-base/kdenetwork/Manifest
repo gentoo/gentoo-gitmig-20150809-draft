@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fc193fdc9c2f4ed3191665ec65521aa6 kdenetwork-3.2.3-r1.ebuild 1305
 MD5 0bc9ea6b41a4d764d2f15881dca8d8a0 ChangeLog 20306
 MD5 55a0e3505463c3505deee74cc8907398 kdenetwork-3.4.0-r1.ebuild 1534
@@ -30,3 +33,10 @@ MD5 28c3ba792f8a0ce436216062cefa7908 files/reslisa 549
 MD5 a32555833318266feb7ea1f68742fdf7 files/yahoo-fix-connect-062404.patch 1139
 MD5 cb87d2a81f7430f823e9173c3f478523 files/kdenetwork-3.3.2-kopete-msn.patch 34696
 MD5 622d3497792334fa87e483e249da693d files/digest-kdenetwork-3.4.0-r2 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4FPHcsIHjyDViGQRAjr+AJsEa9Lvfvcxw8iah5Dfr7fDlV/bzACg3QDC
+v1WwxY5lKqaEipD3DSJP4Y8=
+=c8OU
+-----END PGP SIGNATURE-----
