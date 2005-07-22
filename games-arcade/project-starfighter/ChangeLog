@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/project-starfighter
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/ChangeLog,v 1.8 2005/02/12 19:46:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/ChangeLog,v 1.9 2005/07/22 04:12:40 mr_bones_ Exp $
+
+  22 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/1.1-ammo.patch, project-starfighter-1.1.ebuild:
+  add patch to fix ammo overflow from Jason Bucata (bug #99395)
 
   12 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org>
   -project-starfighter-1.00.ebuild, project-starfighter-1.1.ebuild:

@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1.ebuild,v 1.10 2005/02/12 19:46:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1.ebuild,v 1.11 2005/07/22 04:12:40 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 MY_P=${P/project-/}
-S="${WORKDIR}/${MY_P}"
 DESCRIPTION="A space themed shooter"
 HOMEPAGE="http://www.parallelrealities.co.uk/starfighter.php"
 # FIXME: Parallel Realities uses a lame download script.
@@ -20,12 +19,15 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
 
+S=${WORKDIR}/${MY_P}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i \
 		-e "s-O3${CXXFLAGS}"  makefile \
 		|| die "sed makefile failed"
+	epatch "${FILESDIR}"/${PV}-ammo.patch
 }
 
 src_compile() {
