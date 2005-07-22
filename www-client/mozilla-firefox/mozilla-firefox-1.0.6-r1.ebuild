@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r1.ebuild,v 1.3 2005/07/21 23:49:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r1.ebuild,v 1.4 2005/07/22 00:01:59 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -42,7 +42,12 @@ export MOZILLA_OFFICIAL=1
 export MOZ_PHOENIX=1
 
 src_unpack() {
-	unpack firefox-${PV}-source.tar.bz2 || die "unpack failed"
+	declare x
+
+	for x in ${A}; do
+		[[ $x == *.tar.* ]] || continue
+		unpack $x || die "unpack failed"
+	done
 	cd ${S} || die "cd failed"
 
 	####################################
@@ -105,7 +110,7 @@ src_unpack() {
 }
 
 src_compile() {
-	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/mozilla-thunderbird
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	####################################
 	#
@@ -155,7 +160,7 @@ src_compile() {
 }
 
 src_install() {
-	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/mozilla-firefox
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	# Most of the installation happens here
 	dodir ${MOZILLA_FIVE_HOME}
@@ -232,7 +237,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/mozilla-firefox
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	# Update the component registry
 	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=firefox \
@@ -245,7 +250,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/mozilla-firefox
+	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	# Update the component registry
 	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=firefox \

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.51 2005/07/21 23:49:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.52 2005/07/22 00:01:59 agriffis Exp $
+
+  22 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-1.0.6-r1.ebuild:
+  More synchronization goodness from mozilla and thunderbird ebuilds
 
   21 Jul 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-1.0.6-r1.ebuild:
