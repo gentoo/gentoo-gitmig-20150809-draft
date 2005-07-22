@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/gtkglextmm-1.1.0.ebuild,v 1.1 2005/07/21 23:18:07 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/gtkglextmm-1.1.0.ebuild,v 1.2 2005/07/22 08:18:45 dholm Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ DESCRIPTION="C++ bindings for gtkglext"
 HOMEPAGE="http://gtkglext.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gtkglext/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="1.2"
 LICENSE="GPL-2 LGPL-2.1"
 IUSE="doc"
