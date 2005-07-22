@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.14 2005/07/09 21:11:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.15 2005/07/22 00:33:59 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -281,6 +281,11 @@ glibc_setup() {
 src_unpack() {
 
 	unpack glibc-${MY_PV}.tar.bz2
+
+	# Needed for s390/linux-2.6 headers
+	cp ${FILESDIR}/2.3.2/posix_fadvise64.c \
+		${S}/sysdeps/unix/sysv/linux/s390/s390-32/posix_fadvise64.c \
+		|| die
 
 	# we only need to check this one time. Bug #61856
 	glibc_setup
