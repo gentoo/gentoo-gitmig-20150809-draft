@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/filewatcher-2.4.0.ebuild,v 1.3 2005/07/09 17:57:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/filewatcher-2.4.0.ebuild,v 1.4 2005/07/22 09:04:41 dholm Exp $
 
 DESCRIPTION="This is a configuration file control system and IDS"
 HOMEPAGE="http://www.willingminds.com/resources/filewatcher.html"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="dev-perl/MailTools
 	app-text/rcs
