@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/ChangeLog,v 1.13 2005/05/14 17:43:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/ChangeLog,v 1.14 2005/07/22 17:20:03 anarchy Exp $
+
+*mozilla-bin-1.7.10 (22 Jul 2005)
+
+  22 Jul 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +mozilla-bin-1.7.10.ebuild:
+  security bump. bug #98846
 
   14 May 2005; Olivier Crête <tester@gentoo.org> mozilla-bin-1.7.8.ebuild:
   Stable on x86 per security bug #92394
