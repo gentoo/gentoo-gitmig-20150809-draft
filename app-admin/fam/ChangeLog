@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.31 2005/05/29 11:05:50 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.32 2005/07/22 19:20:19 dams Exp $
+
+  22 Jul 2005; Damien Krotkine <dams@gentoo.org> ChangeLog:
+  corrected malformed ChangeLog
 
 *fam-2.7.0-r4 (28 May 2005)
 
@@ -177,15 +180,15 @@
   20 Oct 2002; Martin Schlemmer <azarah@gento.org> fam-oss-2.6.9.ebuild :
   Fix the automake/autoconf stuff.
 
-  03 Sep 2002; Spider <spider@gentoo.org>
+  03 Sep 2002; Spider <spider@gentoo.org> :
   backported security hardening from the -r1 to this
 
-  16 Aug 2002; Daniel Ahlberg <aliz@gentoo.org>
+  16 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump. Ebuild submitted by Felix Kurth <felix@fkurth.de>.
 
 *fam-oss-2.6.7-r1 (25 Jul 2002)
 
-  25 Jul 2002; seemant Kulleen <seemant@gentoo.org>
+  25 Jul 2002; seemant Kulleen <seemant@gentoo.org> :
   Added LICENSE tag and elibtoolize'd.
 
 *fam-oss-2.6.7-r1 (28 Mar 2002)
@@ -193,7 +196,7 @@
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
   Added KEYWORDS="x86 ppc".
 
-  2 Jun 2002: Preston A. Elder <prez@gentoo.org>
+  2 Jun 2002; Preston A. Elder <prez@gentoo.org> 
   fam-oss-2.6.7-r1.ebuild, files/fam-oss-2.6.7-r1-aclocal.m4:
   Added aclocal.m4, as the one that comes with the package
   does not support AM_CONDITIONAL.
@@ -217,4 +220,4 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
-  Author Joshua Pierre <joshua@swool.com
+  Author Joshua Pierre <joshua@swool.com>
