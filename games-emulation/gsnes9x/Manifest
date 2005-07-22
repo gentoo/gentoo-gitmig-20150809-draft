@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 8defa3fe3e41c4dede73ed3691b74da2 gsnes9x-3.12.ebuild 1044
 MD5 e9d4468df7a7b1cfe62c00f6733665fa ChangeLog 343
 MD5 00c283f42012e8878622c7bf630a16c3 files/digest-gsnes9x-3.12 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4DougIKl8Uu19MoRAho+AJ9+FXRf40YAiwWDplvirzOaaa5/WACeOEEP
+yo0SF4FsOWG1HhnhrRtCauc=
+=9zTW
+-----END PGP SIGNATURE-----
