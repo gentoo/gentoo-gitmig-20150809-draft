@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.4 2005/07/21 04:36:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.5 2005/07/22 00:05:03 vapier Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
 # http://bugs.gentoo.org/show_bug.cgi?id=93097
 
-inherit eutils games
+inherit eutils games flag-o-matic
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"
@@ -15,7 +15,7 @@ SRC_URI="http://www.lysator.liu.se/snes9x/${PV}/snes9x-${PV}-src.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="opengl X joystick zlib dga"
+IUSE="opengl X joystick zlib dga debug"
 
 RDEPEND="zlib? ( sys-libs/zlib )
 	virtual/x11
@@ -31,13 +31,21 @@ src_unpack() {
 	cd "${S}"/snes9x
 	epatch "${FILESDIR}"/nojoy.patch
 	sed -i 's:png_jmpbuf:png_write_info:g' configure
-	sed -i \
-		-e 's:@OPTIMIZE@:@CFLAGS@:' \
-		-e 's:-lXext -lX11::' \
-		Makefile.in
+
+	rm offsets # stupid prebuilt file
+	sed -i -e 's:-lXext -lX11::' Makefile.in
+	sed -i -e '/X_LDFLAGS=/d' configure
+	cp Makefile.in{,.orig}
+	epatch "${FILESDIR}"/${P}-build.patch
 }
 
 src_compile() {
+	if use amd64 ; then
+		export ABI=x86
+		append-flags -m32
+		append-ldflags -m32
+	fi
+
 	local vidconf=
 	local target=
 	local vid=
