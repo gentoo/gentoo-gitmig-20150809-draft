@@ -1,18 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-2.0.2.ebuild,v 1.2 2005/07/18 06:31:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-2.0.2.ebuild,v 1.3 2005/07/22 00:03:16 vapier Exp $
 
 inherit eutils
 
 MY_P=${PN}-small-${PV}
 DESCRIPTION="graphical frontend for WineX"
 HOMEPAGE="http://www.transgaming.com/"
-SRC_URI="${MY_P}.tgz"
+SRC_URI="!emerald? ( ${MY_P}.tgz )
+	emerald? ( ${MY_P}_emerald.tgz )"
 
 LICENSE="point2play"
 SLOT="0"
 KEYWORDS="-* ~amd64 x86"
-IUSE=""
+IUSE="emerald"
 RESTRICT="fetch"
 
 RDEPEND="virtual/x11
@@ -25,7 +26,9 @@ S=${WORKDIR}
 
 pkg_nofetch() {
 	einfo "Please download the appropriate Point2Play archive:"
-	einfo "   ${MY_P}.tgz"
+	use emerald \
+		&& einfo "   ${MY_P}_emerald.tgz" \
+		|| einfo "   ${MY_P}.tgz"
 	einfo "from ${HOMEPAGE} (requires a Transgaming subscription)"
 	echo
 	einfo "The archive should then be placed into ${DISTDIR}"
