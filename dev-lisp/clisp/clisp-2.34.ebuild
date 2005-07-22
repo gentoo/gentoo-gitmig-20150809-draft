@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33.2-r2.ebuild,v 1.7 2005/07/22 19:25:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.34.ebuild,v 1.1 2005/07/22 19:25:22 mkennedy Exp $
 
 inherit flag-o-matic common-lisp-common-2 eutils toolchain-funcs
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/clisp/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc ~ppc-macos ~amd64 ~sparc"
-IUSE="X fastcgi nls pcre postgres readline"
+KEYWORDS="~x86 ~ppc ~ppc-macos ~amd64 ~sparc"
+IUSE="X fastcgi nls pcre postgres readline unicode zlib"
 
 DEPEND="dev-libs/libsigsegv
 	dev-lisp/common-lisp-controller
@@ -20,7 +20,8 @@ DEPEND="dev-libs/libsigsegv
 	X? ( virtual/x11 )
 	readline? ( sys-libs/readline )
 	nls? ( sys-devel/gettext )
-	pcre? ( dev-libs/libpcre )"
+	pcre? ( dev-libs/libpcre )
+	zlib? ( sys-libs/zlib )"
 
 PROVIDE="virtual/commonlisp"
 
@@ -28,7 +29,6 @@ src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${PV}/fastcgi-Makefile.in-gentoo.patch || die
 	epatch ${FILESDIR}/${PV}/glibc-linux.lisp-sigpause-gentoo.patch || die
-	epatch ${FILESDIR}/${PV}/compilefix.patch || die
 }
 
 src_compile() {
@@ -68,21 +68,21 @@ src_compile() {
 	# Let CLISP use its own set of optimizations
 	unset CFLAGS CXXFLAGS
 	local myconf="--with-dynamic-ffi
-		--with-unicode
-		--with-module=regexp
-		--with-module=syscalls
-		--with-module=wildcard"
+		--with-module=wildcard
+		--with-module=rawsock
+		$(use_with unicode)"
 	use ppc-macos || myconf="${myconf} --with-module=bindings/glibc"
 	use readline || myconf="${myconf} --with-noreadline"
 	use nls || myconf="${myconf} --with-nogettext"
-#	use X && myconf="${myconf} --with-module=clx/new-clx"
-	use X && myconf="${myconf} --with-module=clx/mit-clx"
+	use X && myconf="${myconf} --with-module=clx/new-clx"
 	if use postgres; then
 		myconf="${myconf} --with-module=postgresql"
 		CC="${CC} -I $(pg_config --includedir)"
 	fi
 	use fastcgi && myconf="${myconf} --with-module=fastcgi"
 	use pcre && myconf="${myconf} --with-module=pcre"
+	use zlib && myconf="${myconf} --with-module=zlib"
+	einfo "Configuring with ${myconf}"
 	./configure --prefix=/usr ${myconf} build || die "./configure failed"
 	cd build
 	./makemake ${myconf} >Makefile

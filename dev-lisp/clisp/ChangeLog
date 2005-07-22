@@ -1,6 +1,17 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.36 2005/06/21 20:32:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.37 2005/07/22 19:25:22 mkennedy Exp $
+
+*clisp-2.34 (22 Jul 2005)
+
+  22 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/clisp-2.30-gentoo.patch, +files/2.34/README.Gentoo,
+  +files/2.34/clisp.sh, -files/clisp-2.30-linux.lisp-upstream.patch,
+  +files/2.34/fastcgi-Makefile.in-gentoo.patch,
+  +files/2.34/glibc-linux.lisp-sigpause-gentoo.patch,
+  +files/2.34/install-clc.lisp, -files/clisp.sh, clisp-2.33.2-r2.ebuild,
+  +clisp-2.34.ebuild:
+  New upstream version.
 
   21 Jun 2005; Simon Stelling <blubb@gentoo.org>
   +files/2.33.2/compilefix.patch, clisp-2.33.2-r2.ebuild:
