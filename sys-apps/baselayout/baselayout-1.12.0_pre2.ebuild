@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre2.ebuild,v 1.1 2005/07/22 13:24:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre2.ebuild,v 1.2 2005/07/22 22:00:36 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -250,7 +250,10 @@ src_install() {
 	fperms 0600 /etc/shadow
 	mv "${D}"/etc/{passwd,shadow,group,fstab,hosts,issue.devfix} "${D}"/usr/share/baselayout
 
-	doinitd "${S}"/init.d/* || die "doinitd"
+	# doinitd doesnt respect symlinks
+	dodir /etc/init.d
+	cp -P "${S}"/init.d/* "${D}"/etc/init.d/ || die "doinitd"
+	#doinitd "${S}"/init.d/* || die "doinitd"
 	doconfd "${S}"/etc/conf.d/* || die "doconfd"
 	doenvd "${S}"/etc/env.d/* || die "doenvd"
 	insinto /etc/modules.autoload.d
