@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomad-tool/nomad-tool-1.3.ebuild,v 1.6 2005/01/01 15:17:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomad-tool/nomad-tool-1.3.ebuild,v 1.7 2005/07/22 12:38:20 george Exp $
 
 DESCRIPTION="Controls the Nomad II MG and IIc portable MP3 players"
-HOMEPAGE="http://www.swiss.ai.mit.edu/~cph/nomad.php"
+HOMEPAGE="http://www.swiss.ai.mit.edu/~cph/nomad.ssp"
 SRC_URI="http://www.swiss.ai.mit.edu/~cph/nomad/${P}.tar.gz"
 
 SLOT="0"
