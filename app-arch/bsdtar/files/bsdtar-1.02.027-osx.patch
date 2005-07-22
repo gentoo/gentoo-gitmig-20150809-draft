@@ -1,0 +1,15 @@
+diff -ur bsdtar-1.02.027/bsdtar_platform.h bsdtar-1.02.027-osx/bsdtar_platform.h
+--- bsdtar-1.02.027/bsdtar_platform.h	2005-07-23 00:19:59.000000000 +0200
++++ bsdtar-1.02.027-osx/bsdtar_platform.h	2005-07-23 00:21:15.000000000 +0200
+@@ -122,9 +122,11 @@
+  */
+ #if HAVE_SYS_ACL_H && HAVE_ACL_PERMSET_T
+ #if HAVE_ACL_GET_PERM || HAVE_ACL_GET_PERM_NP
++#if ! __APPLE__
+ #define	HAVE_POSIX_ACL	1
+ #endif
+ #endif
++#endif
+ 
+ #if HAVE_ACL_GET_PERM
+ #define ACL_GET_PERM acl_get_perm
