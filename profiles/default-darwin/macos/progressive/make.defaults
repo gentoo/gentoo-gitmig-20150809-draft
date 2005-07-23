@@ -3,6 +3,7 @@
 
 # System-wide defaults for all ppc-macos progressive profiles
 
-USE="bitmap-fonts dvd gif jpeg ldap nls pam png truetype truetype-fonts type1-fonts unicode"
-
-FEATURES="-collision-protect fakeroot -sandbox userpriv"
+KERNEL=Darwin
+ELIBC=Darwin
+USERLAND=Darwin
+FEATURES="-collision-protect -fakeroot -sandbox -userpriv"

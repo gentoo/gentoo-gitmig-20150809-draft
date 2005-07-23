@@ -14,10 +14,10 @@ PLATFORM=$CHOST
 FETCHCOMMAND="/usr/bin/curl -f --connect-timeout 15 -# -o \${DISTDIR}/\${FILE} \${URI}"
 RESUMECOMMAND="/usr/bin/curl -f --connect-timeout 15 -# -C - -o \${DISTDIR}/\${FILE} \${URI}"
 
-FEATURES="-sandbox userpriv"
+FEATURES="-sandbox -userpriv"
 
 USE="emboss"
-
+USE_EXPAND="LINGUAS USERLAND KERNEL ELIBC"
 USERLAND="Darwin"
 KERNEL="Darwin"
 ELIBC="Darwin"

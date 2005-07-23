@@ -92,4 +92,4 @@ pcre
 fastcgi
 
 # USE_EXPANDed flags used only by other profiles
-userland_GNU
+#userland_GNU
