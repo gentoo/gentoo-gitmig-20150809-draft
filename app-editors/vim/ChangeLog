@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.179 2005/07/22 21:08:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.180 2005/07/23 13:58:03 kloeri Exp $
+
+  23 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> vim-6.3.084.ebuild:
+  Stable on ia64, bug 99578.
 
   22 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> vim-6.3.084.ebuild:
   Stable on alpha, bug 99578.
