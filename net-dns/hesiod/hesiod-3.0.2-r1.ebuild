@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2-r1.ebuild,v 1.13 2005/07/22 15:23:52 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2-r1.ebuild,v 1.14 2005/07/23 06:52:02 anarchy Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://athena-dist.mit.edu/pub/ATHENA/${PN}/${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
