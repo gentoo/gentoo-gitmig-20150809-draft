@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/epos
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.10 2005/07/22 10:17:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.11 2005/07/23 20:11:12 eradicator Exp $
+
+  23 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  epos-2.5.35-r1.ebuild:
+  Setting versioned dep for portaudio so it gets the newer version which has
+  the include files in the expected locations.
 
 *epos-2.5.35-r1 (22 Jul 2005)
 
