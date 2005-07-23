@@ -1,4 +1,6 @@
+MD5 dc56f5d75556cdbcd7c4024288ef8fcb metadata.xml 481
+MD5 1b71003597dccee29175008870a9d5a3 gdal-1.2.6.ebuild 3930
 MD5 4823bed30b1b47098e3b92f5a76415d7 ChangeLog 1098
 MD5 cffffd06d2205813df3407b5a2fdc341 gdal-1.2.5-r1.ebuild 3209
-MD5 dc56f5d75556cdbcd7c4024288ef8fcb metadata.xml 481
 MD5 82ada11f44c42ddedbfa5426ad7991d2 files/digest-gdal-1.2.5-r1 63
+MD5 4d15ffbcc89c38a4e5a7bbbe698207a1 files/digest-gdal-1.2.6 63
