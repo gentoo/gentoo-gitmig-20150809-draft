@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+<email>flameeyes@gentoo.org</email>
+<name>Diego Pettenò</name>
+</maintainer>
+<longdescription lang="en">
+Drop-in replacement for sys-apps/eject command, which works on FreeBSD
+as well as Linux.
+</longdescription>
+</pkgmetadata>
