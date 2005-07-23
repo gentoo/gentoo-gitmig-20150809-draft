@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/update-nsplugins/update-nsplugins-1.0.ebuild,v 1.2 2005/07/23 09:19:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/update-nsplugins/update-nsplugins-1.0.ebuild,v 1.3 2005/07/23 13:18:39 azarah Exp $
 
 inherit nsplugins
 
@@ -18,10 +18,10 @@ RDEPEND=
 
 src_install() {
 	newsbin ${FILESDIR}/${P} ${PN}
-
-	dodir /etc
-	cat > ${D}/etc/nsplugins.conf <<-EOF
-		NSPLUGINS_DIR="${NSPLUGINS_DIR}"
-		NSBROWSERS_DIR="${NSBROWSERS_DIR}"
-	EOF
+	dosed \
+		-e "s:@NSPLUGINS_DIR@:${NSPLUGINS_DIR}:" \
+		/usr/sbin/${PN}
+	dosed \
+		-e "s:@NSBROWSERS_DIR@:${NSBROWSERS_DIR}:" \
+		/usr/sbin/${PN}
 }

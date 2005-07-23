@@ -1,14 +1,13 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/update-nsplugins/files/update-nsplugins-1.0,v 1.1 2005/07/23 09:17:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/update-nsplugins/files/update-nsplugins-1.0,v 1.2 2005/07/23 13:18:39 azarah Exp $
 
 ROOT=${ROOT:-/}
 
-source "${ROOT}/etc/nsplugins.conf"
+NSPLUGINS_DIR="${ROOT}@NSPLUGINS_DIR@"
+NSBROWSERS_DIR="${ROOT}@NSBROWSERS_DIR@"
 
-NSPLUGINS_DIR="${ROOT}${NSPLUGINS_DIR}"
-NSBROWSERS_DIR="${ROOT}${NSBROWSERS_DIR}"
 CACHE_DIR="${NSPLUGINS_DIR}/.cache"
 
 install_plugins() {
