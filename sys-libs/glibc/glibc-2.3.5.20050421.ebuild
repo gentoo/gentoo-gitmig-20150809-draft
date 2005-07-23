@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.23 2005/07/15 21:37:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.24 2005/07/23 20:01:18 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -49,7 +49,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 LICENSE="LGPL-2"
 
-IUSE="nls pic build nptl nptlonly erandom hardened userlocales multilib selinux glibc-compat20 glibc-omitfp profile"
+IUSE="nls pic build nptl nptlonly erandom hardened userlocales multilib selinux glibc-compat20 glibc-omitfp linuxthreads-tls profile"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -861,7 +861,7 @@ glibc_do_configure() {
 		if want_tls ; then
 			myconf="${myconf} --with-tls"
 
-			if want__thread && ! use glibc-compat20 ; then
+			if want__thread && use linuxthreads-tls ; then
 				myconf="${myconf} --with-__thread"
 			else
 				myconf="${myconf} --without-__thread"
