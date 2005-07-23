@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kompose
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.10 2005/07/22 19:26:19 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.11 2005/07/23 16:00:24 carlo Exp $
+
+  23 Jul 2005; Carsten Lohrke <carlo@gentoo.org> kompose-0.5.3.ebuild:
+  reissued tarball
 
 *kompose-0.5.3 (22 Jul 2005)
 
