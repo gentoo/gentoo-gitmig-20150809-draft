@@ -1,6 +1,18 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.47 2005/07/23 18:01:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.48 2005/07/23 20:25:51 agriffis Exp $
+
+*mozilla-1.7.10-r2 (23 Jul 2005)
+
+  23 Jul 2005; Aron Griffis <agriffis@gentoo.org> +mozilla-1.7.10-r2.ebuild:
+  Now that mozilla-launcher-1.42 handles -register gracefully for mozilla (by
+  calling mozilla-rebuild-databases.pl) we can use the same registration code
+  in the pkg_* functions that we use for firefox and thunderbird. 
+  
+  Refrain from unpacking the enigmail tarball unless USE=crypt
+  
+  Note: This is ~arch and should go through the standard soak period since
+  there's no pressing (e.g. security) reason to push it to stable sooner.
 
   23 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   mozilla-1.7.10-r1.ebuild:
