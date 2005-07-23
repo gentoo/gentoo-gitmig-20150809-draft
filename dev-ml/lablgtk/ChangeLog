@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.31 2005/07/12 22:35:34 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.32 2005/07/23 19:54:11 sekretarz Exp $
+
+  23 Jul 2005; <sekretarz@gentoo.org> +files/lablgtk-2.4.0-gcc34.patch,
+  lablgtk-2.4.0.ebuild:
+  Fixed problems with gcc-3.4, bug #94816
 
   13 Jul 2005; Matthieu Sozeau <mattam@gentoo.org> lablgtk-1.2.7.ebuild,
   lablgtk-2.4.0.ebuild:

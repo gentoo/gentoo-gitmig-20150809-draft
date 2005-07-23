@@ -1,0 +1,14 @@
+diff -Naur lablgtk-2.4.0.orig/configure.in lablgtk-2.4.0/configure.in
+--- lablgtk-2.4.0.orig/configure.in	2004-07-08 11:20:01.000000000 +0200
++++ lablgtk-2.4.0/configure.in	2005-07-23 14:40:42.975416096 +0200
+@@ -180,8 +180,8 @@
+ AC_PROG_RANLIB
+ # get the C compiler used by ocamlc
+ if test -z "$CC" ; then
+-  touch conftest.c
+-  CC=$($CAMLC -verbose -c conftest.c 2>&1 | sed ['s/^+ \([^ ]*\) .*$/\1/'])
++#  touch conftest.c
++#  CC=$($CAMLC -verbose -c conftest.c 2>&1 | sed ['s/^+ \([^ ]*\) .*$/\1/'])
+   echo [OCaml uses $CC to compile C files]
+ fi
+ AC_PROG_CC

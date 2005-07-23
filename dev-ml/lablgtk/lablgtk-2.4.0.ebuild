@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.8 2005/07/12 22:35:34 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.9 2005/07/23 19:54:11 sekretarz Exp $
+
+inherit eutils
 
 IUSE="debug doc glade gnome opengl svg"
 
@@ -21,6 +23,14 @@ DEPEND=">=x11-libs/gtk+-2.4
 
 SLOT="2"
 KEYWORDS="amd64 x86 ppc ~alpha ia64 ~sparc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc34.patch
+	autoreconf
+}
 
 src_compile() {
 	use debug && myconf="$myconf --enable-debug"
