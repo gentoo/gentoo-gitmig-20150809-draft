@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/update-nsplugins/update-nsplugins-1.0.ebuild,v 1.1 2005/07/23 09:17:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/update-nsplugins/update-nsplugins-1.0.ebuild,v 1.2 2005/07/23 09:19:58 azarah Exp $
 
 inherit nsplugins
 
@@ -10,7 +10,7 @@ SRC_URI=
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE=
 
 DEPEND=
