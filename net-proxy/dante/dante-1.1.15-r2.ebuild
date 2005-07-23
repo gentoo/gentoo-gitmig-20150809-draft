@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.15-r2.ebuild,v 1.9 2005/07/20 05:37:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.15-r2.ebuild,v 1.10 2005/07/23 08:23:21 mrness Exp $
 
 inherit fixheadtails eutils
 
@@ -16,7 +16,8 @@ IUSE="tcpd debug selinux pam"
 RDEPEND="virtual/libc
 	pam? ( sys-libs/pam )
 	tcpd? ( sys-apps/tcp-wrappers )
-	selinux? ( sec-policy/selinux-dante )"
+	selinux? ( sec-policy/selinux-dante )
+	userland_GNU? ( sys-apps/shadow )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	sys-devel/libtool
