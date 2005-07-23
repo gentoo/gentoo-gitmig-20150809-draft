@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.19 2005/07/22 17:53:02 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.20 2005/07/23 13:35:00 gustavoz Exp $
+
+  23 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  kopete-3.4.1-r1.ebuild:
+  Stable on sparc wrt #99754
 
   22 Jul 2005; Danny van Dyk <kugelfang@gentoo.org> kopete-3.4.1-r1.ebuild:
   Marked stable on amd64.
