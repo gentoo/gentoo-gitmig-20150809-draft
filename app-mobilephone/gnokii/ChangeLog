@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.8 2005/07/21 21:29:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.9 2005/07/23 10:10:48 mrness Exp $
+
+*gnokii-0.6.7-r1 (23 Jul 2005)
+
+  23 Jul 2005; Alin Nastac <mrness@gentoo.org>
+  +files/gnokii-0.6.7-smsd-glib2.patch, +gnokii-0.6.7-r1.ebuild:
+  Add dependency of glib-2 for sms daemon (#99950). Disable debug information.
+  Fix path to gnokiid in /etc/gnokiirc.
 
   21 Jul 2005; Alin Nastac <mrness@gentoo.org> gnokii-0.6.7.ebuild:
   Stable on x86.

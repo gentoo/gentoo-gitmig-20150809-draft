@@ -1,0 +1,22 @@
+diff -Nru gnokii-0.6.7.orig/smsd/Makefile gnokii-0.6.7/smsd/Makefile
+--- gnokii-0.6.7.orig/smsd/Makefile	2005-05-16 21:55:13.000000000 +0300
++++ gnokii-0.6.7/smsd/Makefile	2005-07-23 12:46:44.410168616 +0300
+@@ -6,14 +6,14 @@
+ # $Id: gnokii-0.6.7-smsd-glib2.patch,v 1.1 2005/07/23 10:10:48 mrness Exp $
+ #
+ 
+-GLIBCFLAGS = glib-config --cflags
+-GLIBLDLIBS = glib-config --libs
++#GLIBCFLAGS = glib-config --cflags
++#GLIBLDLIBS = glib-config --libs
+ 
+ # Comment out above lines and uncomment below lines if you want compile smsd
+ # with glib2 instead of glib1.
+ #
+-#GLIBCFLAGS = pkg-config --cflags glib-2.0
+-#GLIBLDLIBS = pkg-config --libs glib-2.0
++GLIBCFLAGS = pkg-config --cflags glib-2.0
++GLIBLDLIBS = pkg-config --libs glib-2.0
+ 
+ TOPDIR=..
+ include $(TOPDIR)/Makefile.global
