@@ -1,0 +1,206 @@
+diff -Nur vdr-1.3.21/config.c vdr-1.3.21-SC/config.c
+--- vdr-1.3.21/config.c	2005-02-05 11:43:04.000000000 +0100
++++ vdr-1.3.21-SC/config.c	2005-02-16 00:29:02.631359088 +0100
+@@ -14,6 +14,7 @@
+ #include "interface.h"
+ #include "plugin.h"
+ #include "recording.h"
++#include "sources.h"
+ 
+ // IMPORTANT NOTE: in the 'sscanf()' calls there is a blank after the '%d'
+ // format characters in order to allow any number of blanks after a numeric
+@@ -297,6 +298,7 @@
+   MultiSpeedMode = 0;
+   ShowReplayMode = 0;
+   ResumeID = 0;
++  memset(SourceCaps, 0, sizeof(SourceCaps));
+   CurrentChannel = -1;
+   CurrentVolume = MAXVOLUME;
+   CurrentDolby = 0;
+@@ -363,6 +365,54 @@
+   return false;
+ }
+ 
++void cSetup::StoreSourceCaps(const char *Name)
++{
++  cSetupLine *l;
++  while ((l = Get(Name)) != NULL)
++        Del(l);
++
++  for(int i = 0; i < MAXDEVICES; i++)
++  {
++     char buffer[MAXPARSEBUFFER]={0,}, *q = buffer;
++     int j = 0;
++     while(SourceCaps[i][j] && j < MAXSOURCECAPS)
++     {
++         if(j==0) q += snprintf(buffer, sizeof(buffer), "%i ", i+1);
++         q += snprintf(q, sizeof(buffer) - (q-buffer), "%s ",
++            *cSource::ToString(SourceCaps[i][j++]));
++     }
++     if(*buffer)
++         Store(Name, buffer, NULL, true);
++  }
++
++}
++
++bool cSetup::ParseSourceCaps(const char *Value)
++{
++  bool erg = true;
++  char *p;
++  int d = strtol(Value, &p, 10), i = 0;
++  d--;
++  while(p<Value+strlen(Value))
++  {
++     if(*p==0) return erg;
++     if(isblank(*p)) ++p;
++     if(isalpha(*p))
++     {
++        int source = cSource::FromString(p);
++        if(source != cSource::stNone)
++            SourceCaps[d][i++] = source;
++        else
++            return false;
++        //printf("SourceCaps[%i][%i] = %i ... p = %s\n", d, i-1, SourceCaps[d][i-1], p);
++        while(!isblank(*p) && *p)
++            ++p;
++        if(i>MAXSOURCECAPS) return false;
++     }
++  }
++  return true;
++}
++
+ void cSetup::StoreLanguages(const char *Name, int *Values)
+ {
+   char buffer[I18nNumLanguages * 4];
+@@ -453,6 +503,7 @@
+   else if (!strcasecmp(Name, "MultiSpeedMode"))      MultiSpeedMode     = atoi(Value);
+   else if (!strcasecmp(Name, "ShowReplayMode"))      ShowReplayMode     = atoi(Value);
+   else if (!strcasecmp(Name, "ResumeID"))            ResumeID           = atoi(Value);
++  else if (!strcasecmp(Name, "SourceCaps"))          return ParseSourceCaps(Value);
+   else if (!strcasecmp(Name, "CurrentChannel"))      CurrentChannel     = atoi(Value);
+   else if (!strcasecmp(Name, "CurrentVolume"))       CurrentVolume      = atoi(Value);
+   else if (!strcasecmp(Name, "CurrentDolby"))        CurrentDolby       = atoi(Value);
+@@ -516,6 +567,7 @@
+   Store("MultiSpeedMode",     MultiSpeedMode);
+   Store("ShowReplayMode",     ShowReplayMode);
+   Store("ResumeID",           ResumeID);
++  StoreSourceCaps("SourceCaps");
+   Store("CurrentChannel",     CurrentChannel);
+   Store("CurrentVolume",      CurrentVolume);
+   Store("CurrentDolby",       CurrentDolby);
+diff -Nur vdr-1.3.21/config.h vdr-1.3.21-SC/config.h
+--- vdr-1.3.21/config.h	2005-02-08 12:22:14.000000000 +0100
++++ vdr-1.3.21-SC/config.h	2005-02-16 00:29:02.634358632 +0100
+@@ -198,6 +198,8 @@
+ private:
+   void StoreLanguages(const char *Name, int *Values);
+   bool ParseLanguages(const char *Value, int *Values);
++  void StoreSourceCaps(const char *Name);
++  bool ParseSourceCaps(const char *Value);
+   bool Parse(const char *Name, const char *Value);
+   cSetupLine *Get(const char *Name, const char *Plugin = NULL);
+   void Store(const char *Name, const char *Value, const char *Plugin = NULL, bool AllowMultiple = false);
+@@ -251,6 +253,7 @@
+   int MultiSpeedMode;
+   int ShowReplayMode;
+   int ResumeID;
++  int SourceCaps[MAXDEVICES][MAXSOURCECAPS];
+   int CurrentChannel;
+   int CurrentVolume;
+   int CurrentDolby;
+diff -Nur vdr-1.3.21/device.c vdr-1.3.21-SC/device.c
+--- vdr-1.3.21/device.c	2005-02-13 10:51:48.000000000 +0100
++++ vdr-1.3.21-SC/device.c	2005-02-16 00:29:02.639357872 +0100
+@@ -175,8 +175,10 @@
+   for (int i = 0; i < MAXRECEIVERS; i++)
+       receiver[i] = NULL;
+ 
+-  if (numDevices < MAXDEVICES)
++  if (numDevices < MAXDEVICES) {
+      device[numDevices++] = this;
++     SetSourceCaps(cardIndex);
++  }
+   else
+      esyslog("ERROR: too many devices!");
+ }
+@@ -313,6 +315,17 @@
+   return d;
+ }
+ 
++void cDevice::SetSourceCaps(int Index)
++{
++  for (int d = 0; d < numDevices; d++) {
++      if (Index < 0 || Index == device[d]->CardIndex()) {
++         for (int i = 0; i < MAXSOURCECAPS; i++)
++             device[d]->sourceCaps[i] = Setup.SourceCaps[device[d]->CardIndex()][i];
++         }
++      }
++}
++
++
+ void cDevice::Shutdown(void)
+ {
+   primaryDevice = NULL;
+diff -Nur vdr-1.3.21/device.h vdr-1.3.21-SC/device.h
+--- vdr-1.3.21/device.h	2005-02-06 12:43:04.000000000 +0100
++++ vdr-1.3.21-SC/device.h	2005-02-16 00:29:02.644357112 +0100
+@@ -22,6 +22,7 @@
+ #include "tools.h"
+ 
+ #define MAXDEVICES         16 // the maximum number of devices in the system
++#define MAXSOURCECAPS     128 // the maximum number of different sources per device
+ #define MAXPIDHANDLES      64 // the maximum number of different PIDs per device
+ #define MAXRECEIVERS       16 // the maximum number of receivers per device
+ #define MAXVOLUME         255
+@@ -122,6 +123,9 @@
+          ///< given Priority.
+          ///< See ProvidesChannel() for more information on how
+          ///< priorities are handled, and the meaning of NeedsDetachReceivers.
++  static void SetSourceCaps(int Index = -1);
++         ///< Sets the SourceCaps of the given device according to the Setup data.
++         ///< By default the SourceCaps of all devices are set.         
+   static void Shutdown(void);
+          ///< Closes down all devices.
+          ///< Must be called at the end of the program.
+@@ -129,6 +133,8 @@
+   static int nextCardIndex;
+   int cardIndex;
+ protected:
++  int sourceCaps[MAXSOURCECAPS];
++protected:
+   cDevice(void);
+   virtual ~cDevice();
+   static int NextCardIndex(int n = 0);
+diff -Nur vdr-1.3.21/dvbdevice.c vdr-1.3.21-SC/dvbdevice.c
+--- vdr-1.3.21/dvbdevice.c	2005-02-13 15:26:37.000000000 +0100
++++ vdr-1.3.21-SC/dvbdevice.c	2005-02-16 00:29:02.647356656 +0100
+@@ -707,9 +707,16 @@
+ bool cDvbDevice::ProvidesSource(int Source) const
+ {
+   int type = Source & cSource::st_Mask;
++  if(type == cSource::stSat  && frontendType == FE_QPSK)
++  {
++      for(int i = 0;i<MAXSOURCECAPS; i++)
++          if(sourceCaps[i] == Source)
++              return true;
++      return false;
++  }
++  else
+   return type == cSource::stNone
+       || type == cSource::stCable && frontendType == FE_QAM
+-      || type == cSource::stSat   && frontendType == FE_QPSK
+       || type == cSource::stTerr  && frontendType == FE_OFDM;
+   return true;
+ }
+diff -Nur vdr-1.3.21/sources.c vdr-1.3.21-SC/sources.c
+--- vdr-1.3.21/sources.c	2004-12-26 12:58:52.000000000 +0100
++++ vdr-1.3.21-SC/sources.c	2005-02-16 00:29:02.652355896 +0100
+@@ -68,7 +68,7 @@
+      int pos = 0;
+      bool dot = false;
+      bool neg = false;
+-     while (*++s) {
++     while (*++s && !isblank(*s)) {
+            switch (toupper(*s)) {
+              case '0' ... '9': pos *= 10;
+                                pos += *s - '0';
