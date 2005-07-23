@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.83 2005/07/17 16:01:24 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.84 2005/07/23 05:25:50 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -512,6 +512,9 @@ php-sapi_src_compile() {
 	replace-flags "-march=k6-2" "-march=i586"
 	replace-flags "-march=k6" "-march=i586"
 
+	# Bug 98694
+	addpredict /etc/krb5.conf
+
 	if [ -z "${PHP_SKIP_CONFIGURE}" ]; then
 		LDFLAGS="${LDFLAGS} -L/usr/${libdir}" LIBS="${LIBS}" econf \
 		${myconf} || die "bad ./configure, please include ${MY_P}/config.log in any bug reports."
@@ -528,7 +531,6 @@ php-sapi_src_install() {
 
 	addpredict /usr/share/snmp/mibs/.index
 	addpredict /var/lib/net-snmp/
-	addpredict /etc/krb5.conf
 	dodir /usr/bin
 	dodir /usr/${libdir}/php
 	dodir /usr/include/php

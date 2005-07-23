@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.18 2005/07/17 16:01:24 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.19 2005/07/23 05:25:50 sebastian Exp $
 #
 # eclass/php5-sapi-r1.eclass
 #               Eclass for building different php5 SAPI instances
@@ -434,6 +434,9 @@ php5-sapi-r1_src_compile() {
 		my_conf="${my_conf} --disable-cli"
 	fi
 
+	# Bug 98694
+	addpredict /etc/krb5.conf
+
 	# all done
 
 	econf ${my_conf} || die "configure failed"
@@ -442,7 +445,6 @@ php5-sapi-r1_src_compile() {
 
 php5-sapi-r1_src_install() {
 	addpredict /usr/share/snmp/mibs/.index
-	addpredict /etc/krb5.conf
 
 	useq sharedext && PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules"
 	make INSTALL_ROOT=${D} $PHP_INSTALLTARGETS || die "install failed"
