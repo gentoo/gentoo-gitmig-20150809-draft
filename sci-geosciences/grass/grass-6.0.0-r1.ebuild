@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.0.ebuild,v 1.3 2005/07/20 02:07:35 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.0-r1.ebuild,v 1.1 2005/07/23 06:42:03 nerdboy Exp $
 
 inherit eutils
 
@@ -12,8 +12,11 @@ SRC_URI="http://grass.itc.it/grass60/source/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="6"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
-IUSE="X blas fftw gd gdal jpeg lapack motif mysql nls odbc opengl png postgres readline tcltk tiff truetype"
+KEYWORDS="~x86 ~amd64 ~ppc ~ppc64 ~sparc"
+
+# add gdal back to use flags once grass is fixed
+IUSE="blas fftw jpeg lapack motif mysql nls odbc opengl png postgres readline tcltk tiff truetype"
+
 RESTRICT="nostrip"
 
 DEPEND=">=sys-devel/make-3.80
@@ -27,15 +30,12 @@ DEPEND=">=sys-devel/make-3.80
 	>=sci-libs/proj-4.4.7
 	blas? ( virtual/blas )
 	fftw? ( =sci-libs/fftw-2* )
-	gdal? ( sci-libs/gdal )
-	gd? ( >=media-libs/gd-1.8.3 )
+	sci-libs/gdal
 	jpeg? ( media-libs/jpeg )
 	lapack? ( virtual/lapack )
 	motif? ( x11-libs/openmotif )
-	|| (
-	    postgres? ( >=dev-db/postgresql-7.3 )
-	    mysql? ( dev-db/mysql )
-	)
+	postgres? ( >=dev-db/postgresql-7.3 )
+	mysql? ( dev-db/mysql )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	png? ( >=media-libs/libpng-1.2.2 )
 	readline? ( sys-libs/readline )
@@ -43,10 +43,9 @@ DEPEND=">=sys-devel/make-3.80
 		>=dev-lang/tk-8.3.4 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	truetype? ( >=media-libs/freetype-2.0 )
-	X? ( virtual/x11 )
-	nls? ( x11-terms/mlterm )"
-	# Mesa 3.5 is currenlty borked on x86
-	#nviz? ( >=media-libs/mesa-3.5 )"
+	nls? ( x11-terms/mlterm )
+	opengl? ( virtual/opengl )
+	virtual/x11"
 
 src_unpack() {
 	unpack ${A}
@@ -57,7 +56,7 @@ src_unpack() {
 
 src_compile() {
 
-	MYCONF=" --with-cxx --enable-shared"
+	MYCONF=" --with-cxx --enable-shared --with-gdal=/usr/bin/gdal-config"
 
 	if use truetype; then
 		MYCONF="${MYCONF} --with-freetype-includes=/usr/include/freetype2/ "
@@ -71,6 +70,14 @@ src_compile() {
 	if use opengl; then
 	    MYCONF="${MYCONF} --with-opengl-libs=/usr/lib/opengl/xorg-x11/lib/"
 	fi
+
+# apparently gdal isn't optional with this version
+# we'll temporarily make it a hard dep for now
+#	if use gdal; then
+#	    MYCONF="${MYCONF} --with-gdal=/usr/bin/gdal-config"
+#	else
+#	    MYCONF="${MYCONF} --without-gdal"
+#	fi
 
 	export LD_LIBRARY_PATH="/${WORKDIR}/image/usr/grass60/lib:${LD_LIBRARY_PATH}"
 	./configure \
@@ -86,11 +93,8 @@ src_compile() {
 		`use_with tiff` \
 		`use_with odbc` \
 		`use_enable amd64 64bit` \
-		`use_with opengl opengl` \
-		`use_with gd` \
-		`use_with gdal` \
+		`use_with opengl` \
 		`use_with readline` \
-		`use_with X` \
 		${MYCONF} || die "Error: configure failed!"
 	emake -j1 || die "Error: emake failed!"
 }

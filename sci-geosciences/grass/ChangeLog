@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.6 2005/07/20 02:07:35 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.7 2005/07/23 06:42:03 nerdboy Exp $
+
+*grass-6.0.0-r1 (23 Jul 2005)
+
+  23 Jul 2005; Steve Arnold <nerdboy@gentoo.org> +grass-6.0.0-r1.ebuild:
+  fixed for use with gdal, ogdi, proj, etc (gdal is apparently no
+  longer optional)
 
   20 Jul 2005; Steve Arnold <nerdboy@gentoo.org> grass-6.0.0.ebuild:
   fixed up gdal use flag handling and added to use.local
