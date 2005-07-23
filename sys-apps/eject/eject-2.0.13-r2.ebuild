@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13-r2.ebuild,v 1.3 2005/05/28 00:44:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13-r2.ebuild,v 1.4 2005/07/23 15:12:30 solar Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-toggle.patch
 	epatch "${FILESDIR}"/${P}-fstab-error.patch
 	epatch "${FILESDIR}"/${P}-pumount.patch
+	epatch "${FILESDIR}"/${P}-i18n-uclibc.patch
 
 	sed -i '/^AM_CFLAGS/s:-O3::' Makefile.in
 	if ! use nls ; then

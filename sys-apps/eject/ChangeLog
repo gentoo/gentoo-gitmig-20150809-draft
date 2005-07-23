@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/eject
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.32 2005/05/28 00:44:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.33 2005/07/23 15:12:30 solar Exp $
+
+  23 Jul 2005; <solar.@gentoo.org> +files/eject-2.0.13-i18n-uclibc.patch,
+  eject-2.0.13-r2.ebuild:
+  - handle uclibc minimal exceptions when i18n/nls/gettext is not active
 
   28 May 2005; Diego Pettenò <flameeyes@gentoo.org> eject-2.0.13.ebuild,
   eject-2.0.13-r1.ebuild, eject-2.0.13-r2.ebuild:
