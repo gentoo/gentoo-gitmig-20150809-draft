@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/bitpim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.2 2005/06/05 09:38:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.3 2005/07/23 21:39:07 mrness Exp $
+
+*bitpim-0.7.34 (23 Jul 2005)
+
+  23 Jul 2005; Alin Nastac <mrness@gentoo.org> -bitpim-0.7.27.ebuild,
+  -bitpim-0.7.32.ebuild, bitpim-0.7.33.ebuild, +bitpim-0.7.34.ebuild:
+  Mark version 0.7.33 stable on x86. Remove obsolete versions. Version bump
+  (#99986).
 
 *bitpim-0.7.33 (05 Jun 2005)
 

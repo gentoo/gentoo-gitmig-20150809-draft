@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.7.27.ebuild,v 1.1 2005/05/15 08:41:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-0.7.34.ebuild,v 1.1 2005/07/23 21:39:07 mrness Exp $
 
 inherit eutils rpm
 DESCRIPTION="BitPim is a program that allows you to view and manipulate data on selected cellular phones."
