@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.45 2005/07/22 22:50:37 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.46 2005/07/23 14:01:00 killerfox Exp $
+
+  23 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  mozilla-1.7.10-r1.ebuild:
+  Stable on hppa. bug 98846
 
   22 Jul 2005; Jory A. Pratt <anarchy@gentoo.org> mozilla-1.7.10-r1.ebuild:
   Stable ppc wrt bug #98846
