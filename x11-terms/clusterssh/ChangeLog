@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/clusterssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/ChangeLog,v 1.10 2005/07/21 22:16:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/ChangeLog,v 1.11 2005/07/23 02:53:23 spyderous Exp $
+
+  23 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  clusterssh-2.20.ebuild:
+  (#99833) Create a manpage with perldoc, install crsh as a symlink. Thanks to
+  Kevin Korb <gentoobugs@sanitarium.net>.
 
   21 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
   clusterssh-2.20.ebuild:

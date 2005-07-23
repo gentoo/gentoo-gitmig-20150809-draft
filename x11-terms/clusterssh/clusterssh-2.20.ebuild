@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/clusterssh-2.20.ebuild,v 1.2 2005/07/21 22:16:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/clusterssh-2.20.ebuild,v 1.3 2005/07/23 02:53:23 spyderous Exp $
 
 DESCRIPTION="Concurrent Multi-Server Terminal Access."
 HOMEPAGE="http://clusterssh.sourceforge.net"
@@ -17,7 +17,9 @@ DEPEND=">=dev-lang/perl-5.6.1
 
 src_install() {
 	cd ${WORKDIR}/clusterssh_${PV}
+	perldoc -onroff -T ./cssh > cssh.1
 	dodoc LICENSE
-	dobin {cchp,crsh,cssh}
+	doman cssh.1
+	dobin {cchp,cssh}
+	dosym cssh /usr/bin/crsh
 }
-
