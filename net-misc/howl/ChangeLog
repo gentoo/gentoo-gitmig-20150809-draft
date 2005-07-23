@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.29 2005/07/13 03:42:07 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.30 2005/07/23 21:55:23 compnerd Exp $
+
+  23 Jul 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  howl-0.9.6-r2.ebuild, howl-0.9.8.ebuild, howl-1.0.0.ebuild:
+  Adding a RESTRICT="maketest" to all versions, as the logging library is not
+  provided by upstream.  Resolves bug #87436.
 
   12 Jul 2005; Saleem Abdulrasool <compnerd@gentoo.org> metadata.xml,
   howl-1.0.0.ebuild:
