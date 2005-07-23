@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.3 2005/07/09 18:48:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.4 2005/07/23 21:49:41 mrness Exp $
 
 inherit flag-o-matic
 
@@ -21,6 +21,9 @@ RDEPEND=">=net-dialup/ppp-2.4.1"
 
 src_unpack() {
 	unpack ${A}
+
+	# Patch to fix gcc-4.* compile error (bug #99759)
+	epatch ${FILESDIR}/${P}-gcc4.patch
 
 	#Increase minlevel of reports in atm.c
 	#At least one of the reports could affect performance due to call frequency
