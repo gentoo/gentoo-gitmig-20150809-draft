@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.28 2005/05/31 15:18:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.29 2005/07/23 23:10:31 kito Exp $
+
+  23 Jul 2005; Kito <kito@gentoo.org> unzip-5.52.ebuild:
+  ~ppc-macos keyword
 
   31 May 2005; Sven Wegener <swegener@gentoo.org> unzip-5.50-r2.ebuild,
   unzip-5.52.ebuild:
