@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.3-r1.ebuild,v 1.2 2005/06/14 00:00:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.3-r1.ebuild,v 1.3 2005/07/23 08:14:49 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s39
 IUSE="X"
 
 DEPEND="X? ( virtual/x11 )
-	!<=media-libs/ligungif-4.1.3"
+	!media-libs/libungif"
 
 src_unpack() {
 	unpack ${A}
