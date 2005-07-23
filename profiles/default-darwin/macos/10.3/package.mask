@@ -1,7 +1,8 @@
 ##
 # These packages will, or depend on packages that will overwrite collision-protected files 
 ##
-
+app-arch/zip
+app-arch/unzip-5.52
 app-editors/nano
 app-editors/vim-core
 app-shells/zsh
