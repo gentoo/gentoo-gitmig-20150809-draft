@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.4 2005/07/22 19:40:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.5 2005/07/23 20:07:50 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -16,7 +16,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 BRANCH_UPDATE=""
 
@@ -850,7 +850,7 @@ glibc_do_configure() {
 	use profile && myconf="${myconf} --enable-profiling"
 
 	if [ "$1" == "linuxthreads" ] ; then
-		if want_tls ; then
+		if want_tls && [[ ${CTARGET} != "i486-pc-linux-gnu" && ${CTARGET} != "i586-pc-linux-gnu" ]] ; then
 			myconf="${myconf} --with-tls"
 
 			if want__thread && use linuxthreads-tls ; then

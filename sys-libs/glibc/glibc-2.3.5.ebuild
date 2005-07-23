@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.36 2005/07/22 05:11:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.37 2005/07/23 20:07:50 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -883,7 +883,7 @@ glibc_do_configure() {
 	want_omitfp && myconf="${myconf} --enable-omitfp"
 
 	if [ "$1" == "linuxthreads" ] ; then
-		if want_tls && [[ ${CHOST} != "i486-pc-linux-gnu" && ${CHOST} != "i586-pc-linux-gnu" ]] ; then
+		if want_tls && [[ ${CTARGET} != "i486-pc-linux-gnu" && ${CTARGET} != "i586-pc-linux-gnu" ]] ; then
 			myconf="${myconf} --with-tls"
 
 			if want__thread ; then

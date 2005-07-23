@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.366 2005/07/23 20:01:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.367 2005/07/23 20:07:50 eradicator Exp $
+
+  23 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> glibc-2.3.5.ebuild,
+  glibc-2.3.5-r1.ebuild:
+  Changed CHOST->CTARGET for 486/586 linuxthreads workaround. Set keywords in
+  2.3.5-r1 to ~amd64 ~sparc ~x86 in prep to remove from package.mask.
 
   22 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.5-r1.ebuild, glibc-2.3.5.20050421.ebuild:
