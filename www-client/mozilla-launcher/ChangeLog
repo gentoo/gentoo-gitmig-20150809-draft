@@ -1,6 +1,14 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.26 2005/07/22 20:35:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.27 2005/07/23 20:20:42 agriffis Exp $
+
+*mozilla-launcher-1.42 (23 Jul 2005)
+
+  23 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-launcher-1.42.ebuild:
+  Handle -register gracefully for mozilla and -bin packages instead of
+  screwing things up. This should help people that installed the very really
+  broken mozilla-1.7.10 #99874
 
   22 Jul 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-launcher-1.41.ebuild:
