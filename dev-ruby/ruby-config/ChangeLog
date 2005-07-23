@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-config
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.27 2005/04/08 16:37:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.28 2005/07/23 11:55:20 matsuu Exp $
+
+  23 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> ruby-config-0.3.1.ebuild:
+  Stable on sh.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> ruby-config-0.3.1.ebuild:
   Stable on ppc64
