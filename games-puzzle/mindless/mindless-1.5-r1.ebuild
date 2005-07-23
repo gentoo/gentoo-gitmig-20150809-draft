@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.5-r1.ebuild,v 1.1 2004/12/10 12:22:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.5-r1.ebuild,v 1.2 2005/07/23 22:01:37 mr_bones_ Exp $
 
 inherit games
 
