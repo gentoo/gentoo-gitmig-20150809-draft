@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.15 2005/07/09 21:18:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.16 2005/07/23 23:39:38 chainsaw Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -190,7 +190,7 @@ src_compile() {
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
 
-	(has_multlib_profile || use multilib) || myconf="${myconf} --disable-multilib"
+	(has_multilib_profile || use multilib) || myconf="${myconf} --disable-multilib"
 
 	do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
