@@ -1,8 +1,9 @@
 /*
  * Copyright 1999-2005 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.6.c,v 1.3 2005/07/07 23:03:40 vapier Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.6.c,v 1.4 2005/07/23 05:05:52 vapier Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
+ * az's lackey: Mike Frysinger <vapier@gentoo.org>
  */
 
 #define _REENTRANT
@@ -20,15 +21,14 @@
 #include <stdarg.h>
 #include <errno.h>
 
-#define GCC_CONFIG	"/usr/bin/gcc-config"
-#define ENVD_BASE	"/etc/env.d/05gcc"
+#define GCC_CONFIG "/usr/bin/gcc-config"
+#define ENVD_BASE  "/etc/env.d/05gcc"
 
 struct wrapper_data {
 	char name[MAXPATHLEN + 1];
 	char fullname[MAXPATHLEN + 1];
 	char bin[MAXPATHLEN + 1];
 	char tmp[MAXPATHLEN + 1];
-	
 	char *path;
 };
 
@@ -325,8 +325,6 @@ static char **getNewArgv(char **argv, const char *newflagsStr) {
 	return newargv;
 }
 
-#define lastOfStr(str, n) ((str) + strlen(str) - (n))
-
 int main(int argc, char *argv[])
 {
 	struct wrapper_data *data;
@@ -377,11 +375,12 @@ int main(int argc, char *argv[])
 	/* If this is g{cc,++}{32,64}, we need to add -m{32,64}
 	 * otherwise  we need to add ${CFLAGS_${ABI}}
 	 */
-	if(!strcmp(lastOfStr(data->bin, 2), "32") ) {
-		data->bin[strlen(data->bin) - 2] = '\0';
+	size = strlen(data->bin) - 2;
+	if(!strcmp(data->bin + size, "32") ) {
+		*(data->bin + size) = '\0';
 		newargv = getNewArgv(argv, "-m32");
-	} else if (!strcmp(lastOfStr(data->bin, 2), "64") ) {
-		data->bin[strlen(data->bin) - 2] = '\0';
+	} else if (!strcmp(data->bin + size, "64") ) {
+		*(data->bin + size) = '\0';
 		newargv = getNewArgv(argv, "-m64");
 	} else if(getenv("ABI")) {
 		char *envar = (char *)malloc(sizeof(char) * (strlen("CFLAGS_") + strlen(getenv("ABI")) + 1 ));
