@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.20 2005/07/23 09:17:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.21 2005/07/23 09:38:21 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -15,9 +15,23 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 NSPLUGINS_DIR="/usr/$(get_libdir)/nsplugins"
 NSBROWSERS_DIR="${NSPLUGINS_DIR}/nsbrowsers"
 
-# This function installs a plugin with dosym to NSPLUGINS_DIR.
-# First argument should be the plugin file.
+
+# This function installs a plugin in ${S} to NSPLUGINS_DIR.
+# First argument should be the plugin file.  This is for stuff like
+# mplayerplug-in that you can move the plugin to any directory ...
 install_nsplugin() {
+	local plugin=$1
+
+	dodir "${NSPLUGINS_DIR}"
+	exeinto "${NSPLUGINS_DIR}"
+	doexe "${plugin}"
+}
+
+# This function installs a plugin with dosym to NSPLUGINS_DIR.
+# First argument should be the plugin file.  This is for stuff like
+# the java plugins that should be symlinked, and not moved from the VM
+# directory ...
+symlink_nsplugin() {
 	local plugin=$1
 	
 	dodir "${NSPLUGINS_DIR}"
