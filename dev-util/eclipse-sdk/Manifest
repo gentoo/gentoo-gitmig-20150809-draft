@@ -1,10 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a2d7d204d16c0363da6429bad390431a eclipse-sdk-3.0.0-r3.ebuild 12081
 MD5 bd095d6adf821b8d13a860abce96705f eclipse-sdk-3.1.ebuild 10915
 MD5 819818fb9914fe0dccf2af4c89d94452 eclipse-sdk-3.0.1-r2.ebuild 14287
 MD5 784f7f8fdf82be12bba512c56169050e eclipse-sdk-2.1.3-r5.ebuild 9905
 MD5 b7835429b6a12c387636babaedc3aaa9 eclipse-sdk-3.0.2.ebuild 13831
-MD5 12372197d30cac1925ddd53ddcbaf4ff ChangeLog 19265
+MD5 83903d2d4c46b736647e7346e50648b4 ChangeLog 19478
 MD5 8de14dda7d318d8fb514fdbcecd4058b metadata.xml 782
+MD5 5d347c0f103c8f0c566c3daeff986a0b eclipse-sdk-3.1-r1.ebuild 11198
 MD5 ab0f6620b4767e065bd533b06245b0fc files/01-distribute_ant_target-2.1.patch 1103
 MD5 69ee2069b0260e40c6fa93315ff759cc files/eclipse-3.1.desktop 226
 MD5 a9f983102fa1b491ad4c4f154123d509 files/06-path-fixups.patch 4707
@@ -15,6 +19,7 @@ MD5 0e815a2260dbd0153de35c6de26fbd05 files/digest-eclipse-sdk-3.0.0-r3 86
 MD5 486d232cbe9d4b75d915bb6bf8b5f0d2 files/digest-eclipse-sdk-3.0.1-r2 88
 MD5 35725caa2b42f4ca3ee05c49b03d47ea files/digest-eclipse-sdk-3.0.2 88
 MD5 ed33fd609db26b85ef9b0c2a82a06b22 files/01-distribute_ant_target-3.0.patch 726
+MD5 0805c4d31f80b5ebb2f52456273d0d44 files/digest-eclipse-sdk-3.1-r1 86
 MD5 21bde556ac55c5e22578cf4998135913 files/digest-eclipse-sdk-2.1.3-r5 176
 MD5 429b757eb766856a6b29094b06402576 files/eclipse-3.desktop 222
 MD5 8f66a016be8f50dc8f57353c8207c669 files/03-motif-java1.5-build.patch 1848
@@ -25,3 +30,10 @@ MD5 de999f62aa03505bfd16a01f7e1a28a3 files/eclipse-2 956
 MD5 a158c2a70562122805ec2ffa055a8271 files/eclipse-3 950
 MD5 32be5292ce0af7ff9c1866c1f59e1859 files/eclipse.1 2607
 MD5 e4ee97056b94052240fb360db6ffaef9 files/eclipse-3.1 1438
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4rbn/rLF9B432nYRAvVDAKCsH54TNLbo4LQlbx/A5O+84Mz1NQCgwZm3
+6XdZekRyToigGIFPEsBK7cQ=
+=glWy
+-----END PGP SIGNATURE-----
