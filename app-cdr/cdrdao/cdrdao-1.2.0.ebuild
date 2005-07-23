@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.0.ebuild,v 1.8 2005/07/22 13:41:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.0.ebuild,v 1.9 2005/07/23 12:33:36 pylon Exp $
 
 inherit flag-o-matic eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 	[[ $(gcc-major-version) -eq 4 ]] && epatch ${FILESDIR}/${P}-gcc4.patch
 
 	# Add gentoo to version
-	sed -i -e "s:^PACKAGE_STRING='cdrdao 1.1.9':PACKAGE_STRING='cdrdao 1.1.9 gentoo':" configure
+	sed -i -e "s:^PACKAGE_STRING='cdrdao ${PV}':PACKAGE_STRING='cdrdao ${PV} gentoo':" configure
 
 	# Display better SCSI messages (advise from Bug 43003)
 	cd scsilib/include
