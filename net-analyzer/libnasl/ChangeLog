@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.58 2005/06/19 21:21:19 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.59 2005/07/24 03:31:15 vanquirius Exp $
+
+*libnasl-2.2.5 (24 Jul 2005)
+
+  24 Jul 2005; Marcelo Goes <vanquirius@gentoo.org> +libnasl-2.2.5.ebuild:
+  Version bump for bug 100024. Thanks to ChazeFroy <chazefroy@gmail.com>.
 
   19 Jun 2005; Marcelo Goes <vanquirius@gentoo.org> -libnasl-2.0.12.ebuild,
   -libnasl-2.2.0.ebuild, -libnasl-2.3.0.ebuild:
