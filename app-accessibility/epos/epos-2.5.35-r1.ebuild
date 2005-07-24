@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.35-r1.ebuild,v 1.3 2005/07/24 00:59:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.35-r1.ebuild,v 1.4 2005/07/24 22:44:03 eradicator Exp $
 
 IUSE="portaudio"
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="portaudio? ( =media-libs/pablio-18*
 	              >=media-libs/portaudio-18.1-r3
 	              <media-libs/portaudio-19_alpha1 )"
-DEPEND="app-text/sgmltools-lite
+DEPEND=">=app-text/sgmltools-lite-3.0.3-r9
 	>=sys-devel/autoconf-2.57
 	=sys-devel/automake-1.7*
 	sys-devel/libtool
@@ -40,7 +40,6 @@ src_unpack() {
 }
 
 src_compile() {
-	addpredict /usr/share/sgml/misc/sgmltools/python/
 	econf $(use_enable portaudio) --enable-charsets
 	emake || die
 }
