@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r5.ebuild,v 1.2 2005/06/13 19:58:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r7.ebuild,v 1.1 2005/07/24 00:32:22 chainsaw Exp $
 
 IUSE="nls gnome mp3 oggvorbis alsa oss esd mmx old-eq"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/beepmp/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~hppa ~mips ~ppc64 ~alpha ~ia64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 # beep-config has a runtime depend on pkg-config
 RDEPEND="app-arch/unzip
@@ -43,12 +43,14 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${PV}-noclick-resize.patch
-	epatch ${FILESDIR}/${PV}-bigendian.patch
 	epatch ${FILESDIR}/${PV}-desktop-icon.patch
 	epatch ${FILESDIR}/${PV}-vorbis-date.patch
 	epatch ${FILESDIR}/${PV}-hidden-window.patch
 	epatch ${FILESDIR}/${PV}-playlist-deadfile-delete.patch
 	epatch ${FILESDIR}/${PV}-window-focus.patch
+	epatch ${FILESDIR}/${PV}-bogus-songinfo.patch
+	epatch ${FILESDIR}/${PV}-ipv6.patch
+	epatch ${FILESDIR}/${PV}-unicode.patch
 
 	elibtoolize
 }

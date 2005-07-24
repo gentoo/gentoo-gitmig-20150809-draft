@@ -1,0 +1,324 @@
+diff -Nur bmp-0.9.7.orig/configure.ac bmp-0.9.7/configure.ac
+--- bmp-0.9.7.orig/configure.ac	2004-12-02 22:12:54.000000000 +0100
++++ bmp-0.9.7/configure.ac	2005-05-20 16:57:02.000000000 +0200
+@@ -191,6 +191,17 @@
+ AM_CONDITIONAL(USE_SIMD, test "$USE_SIMD" = "yes")
+ AC_SUBST(USE_SIMD_TRUE)
+ 
++dnl IPv6 support
++dnl ========================
++AC_ARG_ENABLE(ipv6,
++	[  --enable-ipv6		  enable IPv6 support (default=no)],
++			enable_ipv6=$enableval, enable_ipv6=no)
++if test "x$enable_ipv6" = xyes; then
++    AC_DEFINE(USE_IPV6,, [Define if building with IPv6 support] )
++fi
++AM_CONDITIONAL(USE_IPV6,test "x$enable_ipv6" = xyes)
++AC_SUBST(USE_IPV6)
++
+ 
+ # Check if socklen_t is defined
+ 
+diff -Nur bmp-0.9.7.orig/Input/cdaudio/http.c bmp-0.9.7/Input/cdaudio/http.c
+--- bmp-0.9.7.orig/Input/cdaudio/http.c	2004-06-20 20:48:50.000000000 +0200
++++ bmp-0.9.7/Input/cdaudio/http.c	2005-05-20 17:01:59.000000000 +0200
+@@ -26,9 +26,45 @@
+ http_open_connection(const gchar * server, gint port)
+ {
+     gint sock;
++#ifdef USE_IPV6
++    struct addrinfo hints, *res, *res0;
++    char service[6];
++#else
+     struct hostent *host;
+     struct sockaddr_in address;
++#endif
+ 
++#ifdef USE_IPV6
++    snprintf(service, 6, "%d", port);
++    memset(&hints, 0, sizeof(hints));
++    hints.ai_socktype = SOCK_STREAM;
++
++    if (getaddrinfo(server, service, &hints, &res0))
++        return 0;
++
++    for (res = res0; res; res = res->ai_next) {
++        sock = socket (res->ai_family, res->ai_socktype, res->ai_protocol);
++        if (sock < 0) {
++            if (res->ai_next)
++                continue;
++            else {
++                freeaddrinfo(res0);
++                return 0;
++            }
++        }
++        if (connect(sock, res->ai_addr, res->ai_addrlen) < 0) {
++            if (res->ai_next) {
++                close(sock);
++                continue;
++            } else {
++                freeaddrinfo(res0);
++                return 0;
++            }
++        }
++        freeaddrinfo(res0);
++        return sock;
++    }
++#else
+     sock = socket(AF_INET, SOCK_STREAM, 0);
+     address.sin_family = AF_INET;
+ 
+@@ -43,6 +79,7 @@
+         (sock, (struct sockaddr *) &address,
+          sizeof(struct sockaddr_in)) == -1)
+         return 0;
++#endif
+ 
+     return sock;
+ }
+diff -Nur bmp-0.9.7.orig/Input/mpg123/http.c bmp-0.9.7/Input/mpg123/http.c
+--- bmp-0.9.7.orig/Input/mpg123/http.c	2004-12-04 10:29:05.000000000 +0100
++++ bmp-0.9.7/Input/mpg123/http.c	2005-05-20 17:20:43.000000000 +0200
+@@ -345,8 +345,13 @@
+     gboolean redirect;
+     gint udp_sock = 0;
+     fd_set set;
++#ifdef USE_IPV6
++    struct addrinfo hints, *res, *res0;
++    char service[6];
++#else
+     struct hostent *hp;
+     struct sockaddr_in address;
++#endif
+     struct timeval tv;
+ 
+     url = (gchar *) arg;
+@@ -367,6 +372,45 @@
+         chost = mpg123_cfg.use_proxy ? mpg123_cfg.proxy_host : host;
+         cport = mpg123_cfg.use_proxy ? mpg123_cfg.proxy_port : port;
+ 
++#ifdef USE_IPV6
++        snprintf(service, 6, "%d", cport);
++        memset(&hints, 0, sizeof(hints));
++        hints.ai_socktype = SOCK_STREAM;
++        if (! getaddrinfo(chost, service, &hints, &res0)) {
++            eof = TRUE;
++            for (res = res0; res; res = res->ai_next) {
++                if ((sock = socket (res->ai_family, res->ai_socktype, res->ai_protocol)) < 0)
++                    continue;
++                fcntl(sock, F_SETFL, O_NONBLOCK);
++                status = g_strdup_printf(_("CONNECTING TO %s:%d"), chost, cport);
++                mpg123_ip.set_info_text(status);
++                g_free(status);
++                ((struct sockaddr_in6 *)res->ai_addr)->sin6_port = htons(cport);
++                if (connect(sock, res->ai_addr, res->ai_addrlen) < 0) {
++                    if (errno != EINPROGRESS) {
++                        close(sock);
++                        continue;
++                    }
++                }
++                eof = FALSE;
++                break;
++            }
++            freeaddrinfo(res0);
++            if (eof) {
++                status = g_strdup_printf(_("Couldn't connect to host %s:%d"), chost, cport);
++                show_error_message(status);
++                g_free(status);
++                mpg123_ip.set_info_text(NULL);
++            }
++        } else {
++            status = g_strdup_printf(_("Couldn't look up host %s"), chost);
++            show_error_message(status);
++            g_free(status);
++
++            mpg123_ip.set_info_text(NULL);
++            eof = TRUE;
++        }
++#else
+         sock = socket(AF_INET, SOCK_STREAM, 0);
+         fcntl(sock, F_SETFL, O_NONBLOCK);
+         address.sin_family = AF_INET;
+@@ -383,8 +427,10 @@
+             mpg123_ip.set_info_text(NULL);
+             eof = TRUE;
+         }
++#endif
+ 
+         if (!eof) {
++#ifndef USE_IPV6
+             memcpy(&address.sin_addr.s_addr, *(hp->h_addr_list),
+                    sizeof(address.sin_addr.s_addr));
+             address.sin_port = g_htons(cport);
+@@ -406,6 +452,7 @@
+                     eof = TRUE;
+                 }
+             }
++#endif
+             while (going) {
+                 tv.tv_sec = 0;
+                 tv.tv_usec = 10000;
+@@ -710,22 +757,35 @@
+ static gint
+ udp_establish_listener(gint * sock)
+ {
++#ifdef USE_IPV6
++    struct sockaddr_in6 sin;
++    socklen_t sinlen = sizeof(struct sockaddr_in6);
++#else
+     struct sockaddr_in sin;
+     socklen_t sinlen = sizeof(struct sockaddr_in);
++#endif
+ 
+ #ifdef DEBUG_UDP
+     fprintf(stderr, "Establishing udp listener\n");
+ #endif
+ 
++#ifdef USE_IPV6
++    if ((*sock = socket(AF_INET6, SOCK_DGRAM, 0)) < 0) {
++#else
+     if ((*sock = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
++#endif
+         g_log(NULL, G_LOG_LEVEL_CRITICAL,
+               "udp_establish_listener(): unable to create socket");
+         return -1;
+     }
+ 
+     memset(&sin, 0, sinlen);
++#ifdef USE_IPV6
++    sin.sin6_family = AF_INET6;
++#else
+     sin.sin_family = AF_INET;
+     sin.sin_addr.s_addr = g_htonl(INADDR_ANY);
++#endif
+ 
+     if (bind(*sock, (struct sockaddr *) &sin, sinlen) < 0) {
+         g_log(NULL, G_LOG_LEVEL_CRITICAL,
+@@ -755,7 +815,11 @@
+             g_ntohs(sin.sin_port));
+ #endif
+ 
++#ifdef USE_IPV6
++    return g_ntohs(sin.sin6_port);
++#else
+     return g_ntohs(sin.sin_port);
++#endif
+ }
+ 
+ static int
+@@ -765,10 +829,14 @@
+     char *valptr;
+     gchar *title;
+     gint len, i;
++#ifdef USE_IPV6
++    struct sockaddr_in6 from;
++#else
+     struct sockaddr_in from;
++#endif
+     socklen_t fromlen;
+ 
+-    fromlen = sizeof(struct sockaddr_in);
++    fromlen = sizeof from;
+ 
+     if ((len =
+          recvfrom(sock, buf, 1024, 0, (struct sockaddr *) &from,
+@@ -850,9 +918,18 @@
+ #ifdef DEBUG_UDP
+             else
+                 fprintf(stderr, "Sent ack: %s", obuf);
++#ifdef USE_IPV6
++            {
++                char adr[INET6_ADDRSTRLEN];
++                inet_ntop(AF_INET6, &from.sin6_addr, adr, INET6_ADDRSTRLEN);
++                fprintf(stderr, "Remote: [%s]:%d\n", adr,
++                        g_ntohs(from.sin6_port));
++            }
++#else
+             fprintf(stderr, "Remote: %s:%d\n", inet_ntoa(from.sin_addr),
+                     g_ntohs(from.sin_port));
+ #endif
++#endif
+         }
+     }
+     g_strfreev(lines);
+diff -Nur bmp-0.9.7.orig/Input/vorbis/http.c bmp-0.9.7/Input/vorbis/http.c
+--- bmp-0.9.7.orig/Input/vorbis/http.c	2004-12-04 10:29:06.000000000 +0100
++++ bmp-0.9.7/Input/vorbis/http.c	2005-05-20 17:16:39.000000000 +0200
+@@ -297,8 +297,13 @@
+     gint cnt, written, error, err_len, port, cport;
+     gboolean redirect;
+     fd_set set;
++#ifdef USE_IPV6
++    struct addrinfo hints, *res, *res0;
++    char service[6];
++#else
+     struct hostent *hp;
+     struct sockaddr_in address;
++#endif
+     struct timeval tv;
+ 
+     url = (gchar *) arg;
+@@ -319,6 +324,44 @@
+         chost = vorbis_cfg.use_proxy ? vorbis_cfg.proxy_host : host;
+         cport = vorbis_cfg.use_proxy ? vorbis_cfg.proxy_port : port;
+ 
++#ifdef USE_IPV6
++        snprintf(service, 6, "%d", cport);
++        memset(&hints, 0, sizeof(hints));
++        hints.ai_socktype = SOCK_STREAM;
++        if (! getaddrinfo(chost, service, &hints, &res0)) {
++            eof = TRUE;
++            for (res = res0; res; res = res->ai_next) {
++                if ((sock = socket (res->ai_family, res->ai_socktype, res->ai_protocol)) < 0)
++                    continue;
++                fcntl(sock, F_SETFL, O_NONBLOCK);
++                status = g_strdup_printf(_("CONNECTING TO %s:%d"), chost, cport);
++                vorbis_ip.set_info_text(status);
++                g_free(status);
++                ((struct sockaddr_in6 *)res->ai_addr)->sin6_port = htons(cport);
++                if (connect(sock, res->ai_addr, res->ai_addrlen) < 0) {
++                    if (errno != EINPROGRESS) {
++                        close(sock);
++                        continue;
++                    }
++                }
++                eof = FALSE;
++                break;
++            }
++            freeaddrinfo(res0);
++            if (eof) {
++                status = g_strdup_printf(_("Couldn't connect to host %s:%d"), chost, cport);
++                vorbis_ip.set_info_text(status);
++                g_free(status);
++                eof = TRUE;
++                break;
++            }
++        } else {
++            status = g_strdup_printf(_("Couldn't look up host %s"), chost);
++            vorbis_ip.set_info_text(status);
++            g_free(status);
++            eof = TRUE;
++        }
++#else
+         sock = socket(AF_INET, SOCK_STREAM, 0);
+         fcntl(sock, F_SETFL, O_NONBLOCK);
+         address.sin_family = AF_INET;
+@@ -335,8 +378,10 @@
+             vorbis_ip.set_info_text(NULL);
+             eof = TRUE;
+         }
++#endif
+ 
+         if (!eof) {
++#ifndef USE_IPV6
+             memcpy(&address.sin_addr.s_addr, *(hp->h_addr_list),
+                    sizeof(address.sin_addr.s_addr));
+             address.sin_port = g_htons(cport);
+@@ -358,6 +403,7 @@
+                     eof = TRUE;
+                 }
+             }
++#endif
+             while (going) {
+                 tv.tv_sec = 0;
+                 tv.tv_usec = 10000;

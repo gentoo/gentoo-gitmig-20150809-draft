@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.60 2005/07/21 03:48:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.61 2005/07/24 00:32:22 chainsaw Exp $
+
+*beep-media-player-0.9.7-r7 (24 Jul 2005)
+
+  24 Jul 2005; Tony Vroon <chainsaw@gentoo.org> +files/0.9.7-ipv6.patch,
+  +files/0.9.7-unicode.patch, -beep-media-player-0.9.7-r5.ebuild,
+  +beep-media-player-0.9.7-r7.ebuild:
+  Revision bump. Proper IPv6 support in HTTP streams, closes bug #94493 (BMP
+  bug #293), patch by Christophe Saout. UTF16 support for ID3v2 tags, closes
+  bug #99882 (BMP bug #101). -r5 ebuild removed.
 
   21 Jul 2005; Joseph Jezak <josejx@gentoo.org>
   beep-media-player-0.9.7-r6.ebuild:
