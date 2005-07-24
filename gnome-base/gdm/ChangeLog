@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.100 2005/07/12 03:13:49 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.101 2005/07/24 19:45:44 leonardop Exp $
+
+*gdm-2.8.0.1 (24 Jul 2005)
+
+  24 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> gdm-2.8.0.1.ebuild :
+  New release. Added 'static' USE flag. Updated HOMEPAGE. Now gentoo
+  specific files are distributed in an extra tarball. Adjusted references to
+  some binaries installed by GDM, as they are installed in different
+  locations. For more information, see the NEWS file.
 
   12 Jul 2005; Stephen P. Becker <geoman@gentoo.org> gdm-2.6.0.9-r2.ebuild:
   stable onmips

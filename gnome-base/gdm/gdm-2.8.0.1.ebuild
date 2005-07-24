@@ -1,0 +1,144 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.1.ebuild,v 1.1 2005/07/24 19:45:44 leonardop Exp $
+
+inherit eutils pam versionator gnome2
+
+DESCRIPTION="GNOME Display Manager"
+HOMEPAGE="http://yippi.hypermall.com/gdm/index.shtml"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
+IUSE="ipv6 pam selinux static tcpd xinerama"
+
+# Name of the tarball with gentoo specific files
+GDM_EXTRA="${PN}-$(get_version_component_range 1-2)-gentoo-files-r1"
+SRC_URI="${SRC_URI}
+	mirror://gentoo/gentoo-gdm-theme-r2.tar.bz2
+	mirror://gentoo/${GDM_EXTRA}.tar.bz2"
+
+RDEPEND="pam? ( virtual/pam )
+	!pam? ( sys-apps/shadow )
+	>=dev-libs/glib-2.6
+	>=x11-libs/gtk+-2.3
+	>=x11-libs/pango-1.3
+	>=gnome-base/libglade-1.99.2
+	>=gnome-base/libgnome-1.96
+	>=gnome-base/libgnomeui-1.96
+	>=gnome-base/libgnomecanvas-1.109
+	>=gnome-base/librsvg-1.1.1
+	>=dev-libs/libxml2-2.4.12
+	>=media-libs/libart_lgpl-2.3.11
+	selinux? ( sys-libs/libselinux )
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	>=dev-util/intltool-0.28
+	>=app-text/scrollkeeper-0.1.4"
+
+DOCS="AUTHORS ChangeLog NEWS README* TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# remove unneeded linker directive for selinux (#41022)
+	epatch ${FILESDIR}/${PN}-2.4.4-selinux_remove_attr.patch
+
+	einfo "Running autoconf"
+	autoconf || die "autoconf failed"
+}
+
+src_compile() {
+	local myconf="--sysconfdir=/etc/X11 --localstatedir=/var \
+	--with-pam-prefix=/etc --with-xdmcp $(use_enable ipv6) \
+	$(use_with tcpd tcp-wrappers) $(use_with xinerama) $(use_with selinux) \
+	$(use_enable static)"
+
+	if use pam; then
+		myconf="${myconf} --with-pam-prefix=/etc \
+		--enable-authentication-scheme=pam"
+	else
+		myconf="${myconf} --enable-console-helper=no \
+		--enable-authentication-scheme=shadow"
+	fi
+
+	G2CONF="${G2CONF} ${myconf}"
+
+	gnome2_src_compile
+}
+
+src_install() {
+	local gentoodir="${WORKDIR}/${GDM_EXTRA}"
+	local pam_prefix=""
+
+	use pam && pam_prefix="PAM_PREFIX=${D}/etc"
+
+	gnome2_src_install ${pam_prefix} sysconfdir=${D}/etc/X11 \
+		localstatedir=${D}/var
+
+	# gdm-binary should be gdm to work with our init (#5598)
+	rm -f ${D}/usr/sbin/gdm
+	dosym /usr/sbin/gdm-binary /usr/sbin/gdm
+	# our x11's scripts point to /usr/bin/gdm
+	dosym /usr/sbin/gdm-binary /usr/bin/gdm
+
+	# log, etc.
+	keepdir /var/log/gdm
+	keepdir /var/gdm
+	chown root:gdm ${D}/var/gdm
+	chmod 1770 ${D}/var/gdm
+
+	# use our own session script
+	rm -f ${D}/etc/X11/gdm/Xsession
+	exeinto /etc/X11/gdm
+	doexe ${gentoodir}/Xsession
+
+	# add a custom xsession .desktop by default (#44537)
+	exeinto /etc/X11/dm/Sessions
+	doexe ${gentoodir}/custom.desktop
+
+	# We replace the pam stuff by our own
+	rm -f ${D}/etc/pam.d/gdm
+
+	dopamd ${gentoodir}/pam.d/*
+	dopamsecurity console.apps ${gentoodir}/security/console.apps/gdmsetup
+
+	# use graphical greeter local
+	dosed "s:#Greeter=/usr/libexec/gdmlogin:Greeter=/usr/libexec/gdmgreeter:" \
+		/etc/X11/gdm/gdm.conf
+
+	# Move Gentoo theme in
+	mv ${WORKDIR}/gentoo-*  ${D}/usr/share/gdm/themes
+}
+
+pkg_postinst() {
+
+	gnome2_pkg_postinst
+
+	# Soft restart, assumes Gentoo defaults for file locations
+	FIFOFILE=/var/gdm/.gdmfifo
+	PIDFILE=/var/run/gdm.pid
+	if [ -w ${FIFOFILE} ] ; then
+		if [ -f ${PIDFILE} ] ; then
+			if kill -0 `cat ${PIDFILE}`; then
+				(echo;echo SOFT_RESTART) >> ${FIFOFILE}
+			fi
+		fi
+	fi
+
+	einfo "To make GDM start at boot, edit /etc/rc.conf"
+	einfo "and then execute 'rc-update add xdm default'."
+
+}
+
+pkg_postrm() {
+
+	gnome2_pkg_postrm
+
+	einfo "To remove GDM from startup please execute"
+	einfo "'rc-update del xdm default'"
+
+}
