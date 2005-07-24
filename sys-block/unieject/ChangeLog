@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/unieject
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.2 2005/07/24 00:33:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.3 2005/07/24 07:42:51 corsair Exp $
+
+  24 Jul 2005; Markus Rothe <corsair@gentoo.org> unieject-2.1.ebuild:
+  added ~ppc64
 
 *unieject-2.1 (24 Jul 2005)
 
