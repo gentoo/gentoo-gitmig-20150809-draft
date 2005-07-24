@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.20 2005/04/11 18:34:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.21 2005/07/24 15:46:31 herbs Exp $
 
 inherit multilib
 
@@ -19,6 +19,16 @@ DEPEND="virtual/libc
 	=x11-libs/gtk+-1.2*
 	virtual/glu
 	virtual/opengl"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if [ $(get_libdir) != "lib" ] ; then
+		libtoolize --copy --force || die "libtoolize failed"
+		aclocal || die "aclocal failed"
+		autoconf || die "autoconf failed"
+	fi
+}
 
 src_compile() {
 	./configure --prefix=/usr \
