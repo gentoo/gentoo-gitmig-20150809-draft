@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 a91d5f2459c3e4e8729668a7ccda42cf ant-core-1.5.4-r2.ebuild 3088
 MD5 3cfecf9dbb1e8ae16fe19fdb8a17f8a2 ant-core-1.6.2-r3.ebuild 2059
-MD5 1a36ea1ae648505366d4d609f8a79612 ChangeLog 17829
+MD5 a776aab701d9fd161d27b9f6cb39a790 ChangeLog 17996
 MD5 cc58025c7f0be0f1bdec26617063b698 ant-core-1.6.5-r1.ebuild 1945
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 d7186edf4c71dc0531330f90e2c08fe9 files/1.5.4-ant 2283
@@ -18,7 +18,7 @@ MD5 8c69a473b88559829069ac80730f2f1b files/1.6.2-scp.patch 877
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC4rRa/rLF9B432nYRAmPFAJ4pIMXhIpAzDAqx7hrPWAHUTARJNACgyLcy
-gpYcR6OCgVsFdyCBe4vWNRo=
-=L/w9
+iD8DBQFC43yT/rLF9B432nYRAoPFAJ4+8pMt4vVEcapRhNkVAh1NBeXcpQCfWtjI
+AcQRqD4XbLgGG4F1jmxndI8=
+=KMSp
 -----END PGP SIGNATURE-----
