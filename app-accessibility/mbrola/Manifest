@@ -4,13 +4,13 @@ Hash: SHA1
 MD5 f276201ebbdf24a02247bfaa9fd73691 ChangeLog 2723
 MD5 91c58b8e208c8000117987eea30b0a00 mbrola-3.0.1h-r1.ebuild 1690
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
-MD5 8ec2ba2bc1b731553da0366173d394ca mbrola-3.0.1h-r2.ebuild 2333
+MD5 82361d3c0cc8c38afaeb812b5aa60cea mbrola-3.0.1h-r2.ebuild 2332
 MD5 d8e16d3a58393097a056fe4342968b55 files/digest-mbrola-3.0.1h-r1 236
 MD5 8fe36cd238dc7d4e89e3e6b8733cf770 files/digest-mbrola-3.0.1h-r2 991
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC4u+5ArHZZzCEUG0RAk7jAJ4zXKe5KgyN8fRBpuw2HgxjtCsUOgCffDQy
-92FbTcUkTS2evXbxCBabDDE=
-=Yx4V
+iD8DBQFC4u/gArHZZzCEUG0RAtVgAJwLbivrsq6fw4wfpCRclNObkmKCagCfbZml
+XNsEwHNZztJXK8WADzGIrg0=
+=+qsM
 -----END PGP SIGNATURE-----
