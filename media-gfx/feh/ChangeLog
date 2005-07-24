@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/feh
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.19 2005/07/18 05:51:14 josejx Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.20 2005/07/24 09:23:42 vapier Exp $
+
+*feh-1.3.4 (24 Jul 2005)
+
+  24 Jul 2005; Mike Frysinger <vapier@gentoo.org> +feh-1.3.4.ebuild:
+  Version bump #99973 by Joshua Jackson.
 
   18 Jul 2005; Joseph Jezak <josejx@gentoo.org> feh-1.3.1.ebuild:
   Marked ppc stable.

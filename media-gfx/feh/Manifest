@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 26e5e16354f08bdf2da6e0a8c35241a0 ChangeLog 2379
 MD5 6c9f94613437cd65762f7330c0b20ad1 metadata.xml 326
+MD5 ca72a81816f81c6aaae2d4d54c1a63a2 feh-1.3.4.ebuild 774
 MD5 f19339432f551b761ba5a35cab142e25 feh-1.3.3.ebuild 774
-MD5 d882e1f4c8fd5b3ef686dd71919c25a9 feh-1.2.9.ebuild 747
 MD5 5b64998a4d8efc4fa4f5e8fc6dd5e160 feh-1.3.1.ebuild 743
 MD5 e0d4aca410d17861a09d506d641fa1cd feh-1.2.6.ebuild 698
-MD5 0fc5a46b6b7d9f077f8ac14d46a46bb3 files/digest-feh-1.3.1 61
-MD5 d2ef582d2dc9a45d501fa022fe9c8907 files/digest-feh-1.2.6 61
+MD5 ac635d3872a2c9d8bac723915fbfe940 ChangeLog 2516
+MD5 d882e1f4c8fd5b3ef686dd71919c25a9 feh-1.2.9.ebuild 747
 MD5 ca6131785eed7cfb47bdbf8608043649 files/digest-feh-1.3.3 61
+MD5 0fc5a46b6b7d9f077f8ac14d46a46bb3 files/digest-feh-1.3.1 61
+MD5 312971fb12bccd6a985f23011fdc9974 files/digest-feh-1.3.4 61
 MD5 e154ee6156d1e139365a57801918a7d6 files/digest-feh-1.2.9 61
+MD5 d2ef582d2dc9a45d501fa022fe9c8907 files/digest-feh-1.2.6 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC20NtcsIHjyDViGQRAlqnAKDNyPOIfvvAr61Ac1TbNYHomr03IQCeNr/i
-unevbDFF48jsRQ2fiwOM9sM=
-=ZmwR
+iD8DBQFC4142gIKl8Uu19MoRAmawAJ4uUUc9bdA0jOtl/pDkc0W9YPQe2ACeOxYs
+M+5+9ZBdgVHPJVA1ZAdhFgI=
+=+JL/
 -----END PGP SIGNATURE-----
