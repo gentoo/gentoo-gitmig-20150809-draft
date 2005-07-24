@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1-r1.ebuild,v 1.3 2005/07/24 17:03:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1-r1.ebuild,v 1.4 2005/07/24 22:57:59 karltk Exp $
 
 inherit eutils java-utils
 
@@ -104,10 +104,10 @@ src_compile() {
 	einfo "Bootstrapping ecj"
 	ant -lib jdtcoresrc/ecj.jar -q -f jdtcoresrc/compilejdtcore.xml || die "Failed to bootstrap ecj"
 
-	einfo "Building launcher"
-	build-native
-	cp features/org.eclipse.platform.launchers/library/gtk/eclipse \
-		eclipse-gtk || die "Failed to copy launcher"
+#	einfo "Building launcher"
+#	build-native
+#	cp features/org.eclipse.platform.launchers/library/gtk/eclipse \
+#		eclipse-gtk || die "Failed to copy launcher"
 
 	einfo "Compiling Eclipse -- see ${S}/compilelog.txt for details"
 	ant -lib jdtcoresrc/ecj.jar -q -f build.xml \
@@ -115,7 +115,10 @@ src_compile() {
 		-DinstallWs=gtk \
 		-DinstallArch=${eclipsearch} \
 		-Dbootclasspath=${bootclasspath} \
+		-Dlibsconfig=true \
 		|| die "Failed to compile Eclipse"
+
+	cp launchertmp/eclipse eclipse-gtk || die "Cannot find eclipse binary"
 
 	einfo "Creating .desktop entry"
 	create-desktop-entry
