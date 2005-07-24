@@ -2,9 +2,10 @@
 # These packages will, or depend on packages that will overwrite collision-protected files 
 ##
 app-arch/zip
-app-arch/unzip-5.52
+app-arch/unzip
 app-editors/nano
 app-editors/vim-core
+app-shells/bash
 app-shells/zsh
 dev-libs/libxml2
 media-libs/a52dec
@@ -19,7 +20,7 @@ sys-devel/automake
 sys-devel/automake-wrapper
 sys-devel/bison
 sys-devel/flex
-
+sys-libs/ncurses
 ##
 # end collision-protect
 ##
