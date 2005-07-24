@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1-r1.ebuild,v 1.2 2005/07/24 09:59:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1-r1.ebuild,v 1.3 2005/07/24 17:03:17 karltk Exp $
 
 inherit eutils java-utils
 
@@ -22,7 +22,7 @@ RDEPEND=">=virtual/jre-1.4.2
 
 DEPEND="${RDEPEND}
 	!jikes? ( >=virtual/jdk-1.4.2 )
-	>=dev-java/ant-1.6.5
+	>=dev-java/ant-1.6.2
 	>=sys-apps/findutils-4.1.7
 	app-arch/unzip
 	app-arch/zip"
@@ -113,7 +113,7 @@ src_compile() {
 	ant -lib jdtcoresrc/ecj.jar -q -f build.xml \
 		-DinstallOs=linux \
 		-DinstallWs=gtk \
-		-DinstallArch=x86 \
+		-DinstallArch=${eclipsearch} \
 		-Dbootclasspath=${bootclasspath} \
 		|| die "Failed to compile Eclipse"
 
@@ -232,7 +232,8 @@ function process-build() {
 
 function build-native() {
 	sh features/org.eclipse.platform.launchers/library/gtk/build.sh \
-		-os linux -ws gtk -arch x86 || die "Failed to build launcher"
+		-os linux -ws gtk \
+		-arch ${eclipsearch} || die "Failed to build launcher"
 }
 
 function process-makefiles() {
