@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 00444662fc3bd23040472bda49d5e8b0 ChangeLog 9580
+MD5 46ce3ffc8f7cfe7c234b7ac74d2d0747 ChangeLog 9693
 MD5 f87bde9c0093587ef76f595a99652913 centericq-4.20.0-r2.ebuild 2492
+MD5 5c62810cadb99037971dc6eea08c19d8 centericq-4.20.0-r3.ebuild 2565
 MD5 7f795e49e944fe6f3aa15fe53e8da366 metadata.xml 693
-MD5 dac5ac55f006e6626a45265a89072bcc centericq-4.20.0-r3.ebuild 2565
-MD5 73abf7a5deb27baf431c12003caeb02d files/centericq-4.20.0.CAN-2005-1914.patch.bz2 576
 MD5 0f60514eff0a237cf8fbdd13fd88293e files/centericq-amd64.patch 6291
 MD5 cb21aa5d990cbba3ea7fde0c48731fe2 files/digest-centericq-4.20.0-r2 70
-MD5 487cf21de72d6434e5c0fff2a8bcc73b files/centericq-4.20.0-libgadu.patch 3413
 MD5 cb21aa5d990cbba3ea7fde0c48731fe2 files/digest-centericq-4.20.0-r3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC43XYZ/iYVBmujdURAoCiAJ9K5JkiG1Sd6bB7XV28bxr28YxaFgCg1W4C
-tThzObLmq8ap6PEcxPvPt1E=
-=EcUh
------END PGP SIGNATURE-----
+MD5 487cf21de72d6434e5c0fff2a8bcc73b files/centericq-4.20.0-libgadu.patch 3413
+MD5 73abf7a5deb27baf431c12003caeb02d files/centericq-4.20.0.CAN-2005-1914.patch.bz2 576
