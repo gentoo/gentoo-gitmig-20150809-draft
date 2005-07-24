@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-2.1.ebuild,v 1.3 2005/07/24 08:27:31 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-2.1.ebuild,v 1.4 2005/07/24 17:33:04 dholm Exp $
 
 DESCRIPTION="Multiplatform command to eject and load CD-Rom drives"
 HOMEPAGE="http://dev.gentoo.org/~flameeyes/projects.xhtml"
@@ -8,7 +8,7 @@ SRC_URI="http://digilander.libero.it/dgp85/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libcdio-0.75-r1
