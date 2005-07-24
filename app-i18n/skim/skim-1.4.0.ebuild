@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 2000-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.0.ebuild,v 1.1 2005/07/18 11:00:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.0.ebuild,v 1.2 2005/07/24 12:28:48 flameeyes Exp $
 
-inherit kde
+inherit kde multilib
 
 DESCRIPTION="Smart Common Input Method (SCIM) optimized for KDE"
 HOMEPAGE="http://www.scim-im.org/"
@@ -22,7 +22,7 @@ src_compile() {
 	#sed -i -e "/=.*DESTDIR/s@\(\['DESTDIR'\]\)@\1 + '/usr'@" bksys/generic.py || die
 	#sed -i -e "/basedir =.*DESTDIR/s@\(\['DESTDIR'\]\)@\1 + '/usr'@g" bksys/generic.py || die
 	#sed -i -e "s@\(basedir+subdir\)@\1+'/usr'@g" bksys/generic.py || die
-	./configure prefix=/usr || die
+	./configure prefix=/usr libdir=/usr/$(get_libdir) || die
 	./scons || die
 }
 
