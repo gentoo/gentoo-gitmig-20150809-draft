@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.2-r1.ebuild,v 1.4 2005/05/04 17:56:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.2-r1.ebuild,v 1.5 2005/07/24 22:41:49 dcoutts Exp $
 
 inherit eutils java-pkg
 
@@ -15,8 +15,7 @@ KEYWORDS="x86 -sparc ~ppc"
 IUSE="readline"
 
 DEPEND="virtual/libc
-	!>=virtual/ghc-6.4
-	virtual/ghc
+	<virtual/ghc-6.4
 	readline? ( sys-libs/readline )"
 RDEPEND="virtual/libc
 	virtual/jdk
