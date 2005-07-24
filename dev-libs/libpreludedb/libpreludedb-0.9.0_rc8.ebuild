@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0_rc5.ebuild,v 1.3 2005/05/17 21:35:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0_rc8.ebuild,v 1.1 2005/07/24 23:09:24 vanquirius Exp $
 
 inherit versionator
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.prelude-ids.org/download/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE="debug doc mysql postgres perl python"
 
 DEPEND="virtual/libc
@@ -39,6 +39,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
+	# prevent file collision
+	rm ${D}/usr/lib/perl5/5.8.6/i686-linux/perllocal.pod
 }
 
 pkg_postinst() {
