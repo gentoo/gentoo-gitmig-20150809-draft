@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.7-r1.ebuild,v 1.1 2005/07/23 10:10:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.7-r1.ebuild,v 1.2 2005/07/24 08:51:57 mrness Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnokii.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="nls X bluetooth irda sms postgres mysql"
 
 RDEPEND="X? ( =x11-libs/gtk+-1.2* )
