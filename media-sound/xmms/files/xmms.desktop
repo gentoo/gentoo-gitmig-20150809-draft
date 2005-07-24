@@ -19,5 +19,5 @@ Icon=mini/xmms_mini.xpm
 MimeType=audio/x-scpls;audio/x-mpegurl;audio/mpegurl;audio/mp3;audio/x-mp3;audio/mpeg;audio/x-mpeg;audio/x-wav;application/x-ogg
 Terminal=0
 Type=Application
-Categories=Application;AudioVideo;
+Categories=Application;Multimedia;AudioVideo;Player
 
