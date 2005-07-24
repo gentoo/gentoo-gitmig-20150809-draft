@@ -3,3 +3,4 @@ MD5 1d6205bf7449fcdcae08cc1db524760d mozilla-firefox-1.0-4ft2.patch.bz2 5601
 MD5 39c7b08477b68fe0cb3fba75970c8125 mozilla-firefox-1.0.3-ia64.patch.bz2 2531
 MD5 7960994910bda4c14a52bc119f9ceefc mozilla-jslibmath-alpha.patch 625
 MD5 9dfe0379cb62cc623c7f5752fb4dd849 mozilla-firefox-1.0.6-nsplugins.patch 1167
+MD5 e0442e619add9045d0d04e97c274bc85 embed-typeaheadfind.patch 41038
