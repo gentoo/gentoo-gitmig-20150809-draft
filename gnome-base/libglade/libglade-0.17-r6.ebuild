@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.29 2005/05/12 19:52:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.30 2005/07/24 15:49:26 herbs Exp $
 
 #provide Xmake and Xemake
 
-inherit libtool virtualx gnome.org
+inherit libtool virtualx gnome.org multilib
 
 DESCRIPTION="Allow programs to load their UIs from an XML description at runtime."
 HOMEPAGE="http://developer.gnome.org/doc/API/libglade/libglade.html"
@@ -36,6 +36,7 @@ src_compile() {
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
 		--disable-gnomedb \
@@ -46,6 +47,7 @@ src_compile() {
 
 src_install() {
 	make prefix=${D}/usr \
+	     libdir=${D}/usr/$(get_libdir) \
 	     sysconfdir=${D}/etc \
 	     localstatedir=${D}/var/lib \
 	     install || die
