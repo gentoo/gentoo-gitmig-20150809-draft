@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1336 2005/07/24 02:24:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1337 2005/07/24 09:14:53 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -929,6 +929,7 @@ sys-libs/pam:pam_console - Builds the pam_console module (enables per-user devic
 sys-libs/pam:pam_timestamp - Builds the pam_timestamp module (enables recent successful attempt authentication)
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 sys-libs/uclibc:pregen - Use pregenerated locales
+sys-libs/uclibc:userlocales - build only the locales specified in /etc/locales.build
 sys-libs/uclibc:wordexp - add support for word expansion (wordexp.h)
 sys-power/acpid:logrotate - Use logrotate for rotating logs
 sys-power/apcupsd:cgi - Add CGI script support
