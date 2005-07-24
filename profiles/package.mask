@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4214 2005/07/23 21:45:07 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4215 2005/07/24 02:14:12 karltk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Karl Trygve Kalleberg <karltk@gentoo.org> (23 Jul 2005)
+# Not available to the general public
+=dev-lang/icc-9.0.023
 
 # Armando Di Cianno <fafhrd@gentoo.org> (23 Jul 2005)
 # Masked until upgrade path is established
