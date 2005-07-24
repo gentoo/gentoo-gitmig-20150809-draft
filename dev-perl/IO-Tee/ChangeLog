@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/IO-Tee
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tee/ChangeLog,v 1.1 2005/07/24 13:53:49 mcummings Exp $
+
+*IO-Tee-0.64 (24 Jul 2005)
+
+  24 Jul 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +IO-Tee-0.64.ebuild:
+  Dep for DBI::Shell
+
