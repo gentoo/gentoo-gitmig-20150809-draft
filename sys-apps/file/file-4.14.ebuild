@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.14.ebuild,v 1.1 2005/07/17 11:30:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.14.ebuild,v 1.2 2005/07/24 12:57:43 azarah Exp $
 
 inherit flag-o-matic eutils distutils libtool toolchain-funcs
 
@@ -29,6 +29,9 @@ src_unpack() {
 	# This tweaks the output format for mips binaries so things like 
 	# libtool don't barf all over the place when trying to parse it.
 	epatch "${FILESDIR}"/${PN}-4.xx-mips-gentoo.patch
+
+	# Fix building with gcc2
+	epatch "${FILESDIR}"/${P}-gcc2.patch
 
 	# The build process tries to run the compiled file ... not a good
 	# thing if file was cross compiled ;)
