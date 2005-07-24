@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 ac02697055b744dca696bbb1f5047e38 ChangeLog 528
 MD5 f1a65c84bfa8bcd0b8a1fa0dbb76c577 metadata.xml 365
-MD5 4594c4538cb8a4a46cf005006986a51e txt2man-1.4.8.ebuild 639
-MD5 b7393fe802e7dda8f70f0732d06e2b17 ChangeLog 442
+MD5 85821d40fb8911f95dd6c70e66f8461b txt2man-1.4.8.ebuild 645
 MD5 5ff264ac56ae570fa0194d37f171066d files/digest-txt2man-1.4.8 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC4taAp5vW4rUFj5oRAhCNAJ4+BDfIxZJTV866nhvb66XUbEMywgCfX9Z5
-JWLM5oMfrXpcaoWZF5Psk7s=
-=AX++
------END PGP SIGNATURE-----
