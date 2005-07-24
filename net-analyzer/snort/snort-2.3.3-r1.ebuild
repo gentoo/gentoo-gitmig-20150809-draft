@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.4 2005/07/09 18:37:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.5 2005/07/24 22:43:15 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -44,7 +44,7 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.0-libnet-1.0.patch
 	fi
 
-	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" \
+	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort/rules:" \
 		etc/snort.conf || die "sed snort.conf failed"
 
 	if use prelude ; then

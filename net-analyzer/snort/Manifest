@@ -1,41 +1,31 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1d0de32091ea9a86e17e2c34ed627aa2 ChangeLog 13529
-MD5 fe6a25fdd3c6d4b527d89c51d78b8f36 files/2.0.6-libnet-1.0.patch 2753
-MD5 fe6a25fdd3c6d4b527d89c51d78b8f36 files/2.1.2-libnet-1.0.patch 2753
+MD5 f6d6531ed3eeae3536ad6c9d7283dceb snort-2.2.0.ebuild 4370
+MD5 45aadbffae0e3986ec20670571892242 snort-2.3.3.ebuild 4147
+MD5 0ee736821e1141642d8d94cd4d0f4b13 snort-2.0.6.ebuild 3121
+MD5 aea5be2e973264027fb5b16ec5750873 snort-2.3.0-r1.ebuild 4443
+MD5 698f0f4adeb7ab6a3f30e1cf9c9e89d5 snort-2.3.0.ebuild 4164
+MD5 e96deaf625cf26e46fe5549663f58ca0 snort-2.3.3-r1.ebuild 4227
+MD5 9b2bebc98da0c3d9557772760ab3bcba snort-2.3.2.ebuild 4449
+MD5 dd314de61f3497fa360bebeb27422f36 snort-2.1.3.ebuild 4363
+MD5 e5dc3d5a6745cbd0ccfda56cf06450bf snort-2.4.20050508.ebuild 4048
+MD5 314fb6c0c09b741f68b77ade49e130b9 snort-2.3.0_rc2.ebuild 3970
+MD5 f556b1137ea9169cf32e10926854ef06 ChangeLog 13705
+MD5 53edc4328d9adeaf087c65ea94b1594b metadata.xml 246
+MD5 04f9ed946469f7954b6bd27f8f1aca39 files/digest-snort-2.3.3-r1 284
+MD5 08107e2e3ce78a19d7df4c78b9461303 files/digest-snort-2.3.0_rc2 221
+MD5 919058894f4983c35900bc8bb98a96d4 files/snort.rc6 764
+MD5 ea783bd276257a20df5b6537d3ff5d49 files/snort-drop-calculation.diff 4957
 MD5 564bfdf90fe29f5924c68885ccfcddb8 files/2.3.0-libnet-1.0.patch 5424
+MD5 fe6a25fdd3c6d4b527d89c51d78b8f36 files/2.0.6-libnet-1.0.patch 2753
 MD5 202dd3be05b16c852303a04284eba720 files/digest-snort-2.0.6 150
 MD5 ca486c6119dbf106f900a3b51e4f3985 files/digest-snort-2.1.3 129
 MD5 a654db9256f89b77a9ce482c976dc896 files/digest-snort-2.2.0 129
 MD5 20c2ec2c963cca8c0abe1b6ee2b5b9f7 files/digest-snort-2.3.0 218
-MD5 a9fc70d50c4512c835aa428f4b198fae files/digest-snort-2.3.0-r1 287
-MD5 08107e2e3ce78a19d7df4c78b9461303 files/digest-snort-2.3.0_rc2 221
 MD5 5d26c971694357c500d666e68622a120 files/digest-snort-2.3.2 287
 MD5 24851ef65be2d80a70ba4bebe3e8c0ff files/digest-snort-2.3.3 287
-MD5 04f9ed946469f7954b6bd27f8f1aca39 files/digest-snort-2.3.3-r1 284
 MD5 60c507a31d5c83c9ddf7fde2a91a7bb8 files/digest-snort-2.4.20050508 208
 MD5 513637a4fadce14177bf85e97e5931f8 files/snort-2.0.6-gcc3.patch 350
+MD5 446f8d2b3435b8a6be738da978670605 files/snort.confd 423
+MD5 fe6a25fdd3c6d4b527d89c51d78b8f36 files/2.1.2-libnet-1.0.patch 2753
 MD5 513637a4fadce14177bf85e97e5931f8 files/snort-2.1.2-gcc3.patch 350
 MD5 513637a4fadce14177bf85e97e5931f8 files/snort-2.1.3-gcc3.patch 350
-MD5 ea783bd276257a20df5b6537d3ff5d49 files/snort-drop-calculation.diff 4957
-MD5 446f8d2b3435b8a6be738da978670605 files/snort.confd 423
-MD5 919058894f4983c35900bc8bb98a96d4 files/snort.rc6 764
-MD5 53edc4328d9adeaf087c65ea94b1594b metadata.xml 246
-MD5 0ee736821e1141642d8d94cd4d0f4b13 snort-2.0.6.ebuild 3121
-MD5 dd314de61f3497fa360bebeb27422f36 snort-2.1.3.ebuild 4363
-MD5 f6d6531ed3eeae3536ad6c9d7283dceb snort-2.2.0.ebuild 4370
-MD5 aea5be2e973264027fb5b16ec5750873 snort-2.3.0-r1.ebuild 4443
-MD5 698f0f4adeb7ab6a3f30e1cf9c9e89d5 snort-2.3.0.ebuild 4164
-MD5 314fb6c0c09b741f68b77ade49e130b9 snort-2.3.0_rc2.ebuild 3970
-MD5 9b2bebc98da0c3d9557772760ab3bcba snort-2.3.2.ebuild 4449
-MD5 0d951e1b49a914bff96f0c4dcaa1758e snort-2.3.3-r1.ebuild 4219
-MD5 45aadbffae0e3986ec20670571892242 snort-2.3.3.ebuild 4147
-MD5 e5dc3d5a6745cbd0ccfda56cf06450bf snort-2.4.20050508.ebuild 4048
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0Bl9I1lqEGTUzyQRAv1UAKCLKE5itcSetCD+RrgqVz8R4WgYRgCgmXn0
-O3H214hz1SsWWyK1nlAcLf0=
-=BRAw
------END PGP SIGNATURE-----
+MD5 a9fc70d50c4512c835aa428f4b198fae files/digest-snort-2.3.0-r1 287
