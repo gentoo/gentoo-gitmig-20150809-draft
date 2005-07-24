@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gauche
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/ChangeLog,v 1.15 2005/07/24 14:21:07 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/ChangeLog,v 1.16 2005/07/24 14:24:23 hattya Exp $
+
+  24 Jul 2005; Akinori Hattori <hattya@gentoo.org> -gauche-0.8.4.ebuild:
+  0.8.5 is the bug fix release of this.
 
 *gauche-0.8.5 (24 Jul 2005)
 
