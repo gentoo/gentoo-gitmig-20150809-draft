@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI-Shell
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI-Shell/ChangeLog,v 1.1 2005/07/24 13:59:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI-Shell/ChangeLog,v 1.2 2005/07/24 17:28:17 dholm Exp $
+
+  24 Jul 2005; David Holm <dholm@gentoo.org> DBI-Shell-11.93.ebuild:
+  Added to ~ppc.
 
 *DBI-Shell-11.93 (24 Jul 2005)
 
