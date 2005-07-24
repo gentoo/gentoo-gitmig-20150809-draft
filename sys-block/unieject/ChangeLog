@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/unieject
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.1 2005/07/23 19:27:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.2 2005/07/24 00:33:58 flameeyes Exp $
+
+*unieject-2.1 (24 Jul 2005)
+
+  24 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> -unieject-2.ebuild,
+  +unieject-2.1.ebuild:
+  New quick release to (hopefully) address problems with SCSI devices as
+  pointed out by Chainsaw.
 
 *unieject-2 (23 Jul 2005)
 
