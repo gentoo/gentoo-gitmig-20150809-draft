@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r12.ebuild,v 1.1 2005/07/10 10:02:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r12.ebuild,v 1.2 2005/07/24 10:53:28 azarah Exp $
 
 inherit flag-o-matic eutils
 
@@ -56,6 +56,9 @@ src_unpack() {
 
 	# Stop a possible DoS issue - fixes #98394
 	epatch "${FILESDIR}"/${P}-security.patch
+
+	# Fix compiling on gcc2
+	epatch "${FILESDIR}"/${P}-gcc2.patch
 
 	# Make sure we use paths from configure rather than hardcoded crap
 	sed -i \

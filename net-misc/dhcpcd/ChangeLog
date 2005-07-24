@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.52 2005/07/12 12:19:38 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.53 2005/07/24 10:53:28 azarah Exp $
+
+  24 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/dhcpcd-1.3.22_p4-gcc2.patch, dhcpcd-1.3.22_p4-r12.ebuild:
+  Fix building with gcc2.
 
   12 Jul 2005; Stephen Bennett <spb@gentoo.org> dhcpcd-1.3.22_p4-r11.ebuild:
   mips stable for #98394
