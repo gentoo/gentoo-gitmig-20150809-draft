@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.8 2005/06/27 18:54:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.9 2005/07/24 10:23:55 dragonheart Exp $
+
+  24 Jul 2005; Daniel Black <dragonheart@gentoo.org> -avrdude-4.4.0.ebuild,
+  avrdude-4.4.0-r1.ebuild:
+  avrdude-4.4.0-r1 x86 stable. old broken version removed. thanks brix
 
   27 Jun 2005; Simon Stelling <blubb@gentoo.org> avrdude-4.4.0-r1.ebuild:
   added ~amd64 keyword
