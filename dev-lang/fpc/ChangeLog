@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.21 2005/07/03 17:42:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.22 2005/07/24 21:38:33 herbs Exp $
+
+  24 Jul 2005; Herbie Hopkins <herbs@gentoo.org> fpc-2.0.0-r1.ebuild:
+  Added amd64 support thanks to Matthias Jansen.
 
 *fpc-2.0.0-r1 (03 Jul 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0-r1.ebuild,v 1.1 2005/07/03 17:42:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0-r1.ebuild,v 1.2 2005/07/24 21:38:33 herbs Exp $
 
 inherit eutils
 
@@ -9,13 +9,14 @@ STABLE="2.0.0"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-FPC"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 DESCRIPTION="Free Pascal Compiler"
 HOMEPAGE="http://www.freepascal.org/"
 IUSE="doc"
 SRC_URI="mirror://sourceforge/freepascal/fpc-${MY_PV}.source.tar.gz
 	 x86? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.i386-linux.tar )
-	 ppc? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.powerpc-linux.tar )"
+	 ppc? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.powerpc-linux.tar )
+	 amd64? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.x86_64-linux.tar )"
 DEPEND="!dev-lang/fpc-bin
 	doc? ( dev-tex/tex4ht )"
 RDEPEND="!dev-lang/fpc-bin"
@@ -32,6 +33,10 @@ src_unpack() {
 		tar -xf binary.powerpc-linux.tar || die "Unpacking binary.powerpc-linux.tar failed!"
 		tar -zxf base.powerpc-linux.tar.gz || die "Unpacking base.powerpc-linux.tar.gz failed!"
 		;;
+	amd64)
+		tar -xf binary.x86_64-linux.tar || die "Unpacking binary.x86_64-linux.tar failed!"
+		tar -zxf base.x86_64-linux.tar.gz || die "Unpacking base.x86_64-linux.tar.gz failed!"
+		;;
 	esac
 }
 
@@ -42,6 +47,9 @@ set_pp() {
 		;;
 	ppc)
 		FPCARCH=ppc
+		;;
+	amd64)
+		FPCARCH=x64
 		;;
 	esac
 
@@ -105,6 +113,9 @@ pkg_preinst() {
 	ppc)
 		FPCARCH=ppc
 		;;
+	amd64)
+		FPCARCH=x64
+		;;
 	esac
 	ln -s ../lib/fpc/${MY_PV}/ppc${FPCARCH} ${IMAGE}/usr/bin/
 }
@@ -124,6 +135,9 @@ pkg_postinst() {
 		;;
 	ppc)
 		FPCARCH=ppc
+		;;
+	amd64)
+		FPCARCH=x64
 		;;
 	esac
 	einfo "/usr/bin/ppc${FPCARCH} now points to the new binary:"
