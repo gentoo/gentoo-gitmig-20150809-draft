@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.104 2005/07/22 12:08:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.105 2005/07/24 14:13:52 corsair Exp $
+
+  24 Jul 2005; Markus Rothe <corsair@gentoo.org> uim-0.4.7.ebuild:
+  Stable on ppc64
 
   22 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> uim-0.4.6-r2.ebuild,
   uim-0.4.7.ebuild:
