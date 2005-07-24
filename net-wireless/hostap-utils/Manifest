@@ -1,5 +1,5 @@
-MD5 7b655e541fc16ed52f25574ae00eef6f hostap-utils-0.3.7.ebuild 693
-MD5 a662ed274bc94b243c70a72846951a64 hostap-utils-0.4.0.ebuild 693
+MD5 4f4b13d8b57878a737653135f3593e44 hostap-utils-0.3.7.ebuild 747
+MD5 89441bb6aedc88458d5d1485d562c786 hostap-utils-0.4.0.ebuild 748
 MD5 dbc8821ef0ae39d6a021adae1a00146d ChangeLog 3833
 MD5 0d08d740672bf3b41532938b6f9c0a19 metadata.xml 337
 MD5 eb77fca21ee97178487299633c12fdd8 files/digest-hostap-utils-0.3.7 69
