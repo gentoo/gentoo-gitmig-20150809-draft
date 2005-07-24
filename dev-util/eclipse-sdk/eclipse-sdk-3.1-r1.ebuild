@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1-r1.ebuild,v 1.1 2005/07/23 20:38:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1-r1.ebuild,v 1.2 2005/07/24 09:59:30 axxo Exp $
 
 inherit eutils java-utils
 
@@ -22,7 +22,7 @@ RDEPEND=">=virtual/jre-1.4.2
 
 DEPEND="${RDEPEND}
 	!jikes? ( >=virtual/jdk-1.4.2 )
-	>=dev-java/ant-1.6.2
+	>=dev-java/ant-1.6.5
 	>=sys-apps/findutils-4.1.7
 	app-arch/unzip
 	app-arch/zip"
