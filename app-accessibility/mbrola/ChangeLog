@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.16 2005/07/24 01:32:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.17 2005/07/24 02:23:41 eradicator Exp $
+
+  24 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  mbrola-3.0.1h-r2.ebuild:
+  Changing tts USE flags to linguas_.
 
 *mbrola-3.0.1h-r2 (24 Jul 2005)
 

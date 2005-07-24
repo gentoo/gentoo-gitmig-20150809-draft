@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r2.ebuild,v 1.2 2005/07/24 01:32:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r2.ebuild,v 1.3 2005/07/24 02:23:41 eradicator Exp $
 
-IUSE="tts-de tts-es tts-fr"
+IUSE=""
 
 S=${WORKDIR}
 
@@ -14,16 +14,16 @@ SRC_URI="${TCTS}/${PN}/bin/pclinux/mbr${MY_PV}.zip
 	${TCTS}/mbrola/dba/us1/us1-980512.zip
 	${TCTS}/mbrola/dba/us1/us2-980812.zip
 	${TCTS}/mbrola/dba/us3/us3-990208.zip
-	tts-de? ( ${TCTS}/mbrola/dba/de1/de1-980227.zip
+	linguas_de? ( ${TCTS}/mbrola/dba/de1/de1-980227.zip
 		${TCTS}/mbrola/dba/de2/de2-990106.zip
 		${TCTS}/mbrola/dba/de3/de3-000307.zip
 		${TCTS}/mbrola/dba/de4/de4.zip
 		${TCTS}/mbrola/dba/de5/de5.zip
 		${TCTS}/mbrola/dba/de8/de8.zip )
-	tts-es? ( ${TCTS}/mbrola/dba/es1/es1-980610.zip
+	linguas_es? ( ${TCTS}/mbrola/dba/es1/es1-980610.zip
 		${TCTS}/mbrola/dba/es2/es2-989825.zip
 		${TCTS}/mbrola/dba/es4/es4.zip )
-	tts-fr? ( ${TCTS}/mbrola/dba/fr1/fr1-990204.zip
+	linguas_fr? ( ${TCTS}/mbrola/dba/fr1/fr1-990204.zip
 		${TCTS}/mbrola/dba/fr2/fr2-980806.zip
 		${TCTS}/mbrola/dba/fr3/fr3-990324.zip
 		${TCTS}/mbrola/dba/fr6/fr6-010330.zip )"
