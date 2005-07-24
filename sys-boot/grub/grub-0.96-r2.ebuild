@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.4 2005/07/04 11:35:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.5 2005/07/24 13:43:10 azarah Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -66,6 +66,9 @@ src_unpack() {
 
 	# fix PIC issues in netboot code #85566
 	epatch "${FILESDIR}"/${P}-netboot-pic.patch
+
+	# fix building with gcc2
+	epatch "${FILESDIR}"/${P}-gcc2.patch
 
 	# a bunch of patches apply to raw autotool files
 	autoconf || die "autoconf failed"
