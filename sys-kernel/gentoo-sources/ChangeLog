@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.172 2005/07/20 15:13:05 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.173 2005/07/24 15:56:43 plasmaroo Exp $
+
+  24 Jul 2005; <plasmaroo@gentoo.org> gentoo-sources-2.6.12-r6.ebuild:
+  Stable on IA64.
 
 *gentoo-sources-2.4.31-r1 (20 Jul 2005)
 
