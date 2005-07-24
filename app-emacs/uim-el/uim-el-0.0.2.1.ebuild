@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uim-el/uim-el-0.0.2.1.ebuild,v 1.1 2005/07/22 11:19:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uim-el/uim-el-0.0.2.1.ebuild,v 1.2 2005/07/24 17:20:10 dholm Exp $
 
 inherit elisp eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://garakuta.homelinux.org/~nosuke/tsubo/pukiwiki.php?%CA%AA%C3%D6%
 SRC_URI="http://garakuta.homelinux.org/~nosuke/tsubo/files/linux/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 SLOT="0"
 
 DEPEND="|| ( >=app-i18n/uim-0.4.6 app-i18n/uim-svn )"
