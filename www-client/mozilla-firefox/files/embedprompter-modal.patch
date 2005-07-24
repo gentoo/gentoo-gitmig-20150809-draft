@@ -1,0 +1,35 @@
+Index: embedding/browser/gtk/src/EmbedPrompter.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/embedding/browser/gtk/src/EmbedPrompter.cpp,v
+retrieving revision 1.14
+diff -p -u -u -p -U10 -r1.14 EmbedPrompter.cpp
+--- embedding/browser/gtk/src/EmbedPrompter.cpp	15 Jan 2005 19:25:25 -0000	1.14
++++ embedding/browser/gtk/src/EmbedPrompter.cpp	24 Jan 2005 22:27:31 -0000
+@@ -97,20 +97,27 @@ EmbedPrompter::~EmbedPrompter(void)
+         delete[] mItemList;
+ }
+ 
+ nsresult
+ EmbedPrompter::Create(PromptType aType, GtkWindow* aParentWindow)
+ {
+     mWindow = gtk_dialog_new_with_buttons(mTitle.get(), aParentWindow,
+                                           GTK_DIALOG_DESTROY_WITH_PARENT,
+                                           NULL);
+ 
++    /* only add the dialog to the window group if the parent already has a window group,
++     * so as not to break app's expectations about modal dialogs.
++     */
++    if (aParentWindow && GTK_WINDOW(aParentWindow)->group) {
++        gtk_window_group_add_window (GTK_WINDOW(aParentWindow)->group, GTK_WINDOW (mWindow));
++    }
++
+     // gtk will resize this for us as necessary
+     gtk_window_set_default_size(GTK_WINDOW(mWindow), 100, 50);
+ 
+     // this HBox will contain the icon, and a vbox which contains the
+     // dialog text and other widgets.
+     GtkWidget* dialogHBox = gtk_hbox_new(FALSE, 12);
+ 
+ 
+     // Set up dialog properties according to the GNOME HIG
+     // (http://developer.gnome.org/projects/gup/hig/1.0/windows.html#alert-windows)

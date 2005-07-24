@@ -1,0 +1,138 @@
+? p
+Index: embedding/browser/gtk/src/GtkPromptService.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/embedding/browser/gtk/src/GtkPromptService.cpp,v
+retrieving revision 1.6
+diff -p -u -U10 -r1.6 GtkPromptService.cpp
+--- embedding/browser/gtk/src/GtkPromptService.cpp	29 Sep 2003 06:03:48 -0000	1.6
++++ embedding/browser/gtk/src/GtkPromptService.cpp	26 Oct 2004 14:02:19 -0000
+@@ -68,20 +68,22 @@ GtkPromptService::Alert(nsIDOMWindow* aP
+     prompter.Run();
+     return NS_OK;
+ }
+ 
+ NS_IMETHODIMP
+ GtkPromptService::AlertCheck(nsIDOMWindow* aParent,
+                              const PRUnichar* aDialogTitle,
+                              const PRUnichar* aDialogText,
+                              const PRUnichar* aCheckMsg, PRBool* aCheckValue)
+ {
++    NS_ENSURE_ARG_POINTER(aCheckValue);
++
+     EmbedPrompter prompter;
+     prompter.SetTitle(aDialogTitle ? aDialogTitle : NS_LITERAL_STRING("Alert").get());
+     prompter.SetMessageText(aDialogText);
+     prompter.SetCheckMessage(aCheckMsg);
+     prompter.SetCheckValue(*aCheckValue);
+     prompter.Create(EmbedPrompter::TYPE_ALERT_CHECK,
+                     GetGtkWindowForDOMWindow(aParent));
+     prompter.Run();
+     prompter.GetCheckValue(aCheckValue);
+     return NS_OK;
+@@ -102,20 +104,22 @@ GtkPromptService::Confirm(nsIDOMWindow* 
+     return NS_OK;
+ }
+ 
+ NS_IMETHODIMP
+ GtkPromptService::ConfirmCheck(nsIDOMWindow* aParent,
+                                const PRUnichar* aDialogTitle,
+                                const PRUnichar* aDialogText,
+                                const PRUnichar* aCheckMsg,
+                                PRBool* aCheckValue, PRBool* aConfirm)
+ {
++    NS_ENSURE_ARG_POINTER(aCheckValue);
++
+     EmbedPrompter prompter;
+     prompter.SetTitle(aDialogTitle ? aDialogTitle : NS_LITERAL_STRING("Confirm").get());
+     prompter.SetMessageText(aDialogText);
+     prompter.SetCheckMessage(aCheckMsg);
+     prompter.SetCheckValue(*aCheckValue);
+     prompter.Create(EmbedPrompter::TYPE_CONFIRM_CHECK,
+                     GetGtkWindowForDOMWindow(aParent));
+     prompter.Run();
+     prompter.GetCheckValue(aCheckValue);
+     prompter.GetConfirmValue(aConfirm);
+@@ -164,24 +168,25 @@ GtkPromptService::ConfirmEx(nsIDOMWindow
+ NS_IMETHODIMP
+ GtkPromptService::Prompt(nsIDOMWindow* aParent, const PRUnichar* aDialogTitle,
+                          const PRUnichar* aDialogText, PRUnichar** aValue,
+                          const PRUnichar* aCheckMsg, PRBool* aCheckValue,
+                          PRBool* aConfirm)
+ {
+     EmbedPrompter prompter;
+     prompter.SetTitle(aDialogTitle ? aDialogTitle : NS_LITERAL_STRING("Prompt").get());
+     prompter.SetMessageText(aDialogText);
+     prompter.SetTextValue(*aValue);
+-    if (aCheckMsg) {
++    if (aCheckMsg)
+         prompter.SetCheckMessage(aCheckMsg);
++    if (aCheckValue)
+         prompter.SetCheckValue(*aCheckValue);
+-    }
++
+     prompter.Create(EmbedPrompter::TYPE_PROMPT,
+                     GetGtkWindowForDOMWindow(aParent));
+     prompter.Run();
+     if (aCheckValue)
+         prompter.GetCheckValue(aCheckValue);
+     prompter.GetConfirmValue(aConfirm);
+     if (aConfirm) {
+         if (*aValue)
+             nsMemory::Free(*aValue);
+         prompter.GetTextValue(aValue);
+@@ -197,24 +202,25 @@ GtkPromptService::PromptUsernameAndPassw
+                                             PRUnichar** aPassword,
+                                             const PRUnichar* aCheckMsg,
+                                             PRBool* aCheckValue,
+                                             PRBool* aConfirm)
+ {
+     EmbedPrompter prompter;
+     prompter.SetTitle(aDialogTitle ? aDialogTitle : NS_LITERAL_STRING("Prompt").get());
+     prompter.SetMessageText(aDialogText);
+     prompter.SetUser(*aUsername);
+     prompter.SetPassword(*aPassword);
+-    if (aCheckMsg) {
++    if (aCheckMsg)
+         prompter.SetCheckMessage(aCheckMsg);
++    if (aCheckValue)
+         prompter.SetCheckValue(*aCheckValue);
+-    }
++
+     prompter.Create(EmbedPrompter::TYPE_PROMPT_USER_PASS,
+                     GetGtkWindowForDOMWindow(aParent));
+     prompter.Run();
+     if (aCheckValue)
+         prompter.GetCheckValue(aCheckValue);
+     prompter.GetConfirmValue(aConfirm);
+     if (*aConfirm) {
+         if (*aUsername)
+             nsMemory::Free(*aUsername);
+         prompter.GetUser(aUsername);
+@@ -231,24 +237,25 @@ GtkPromptService::PromptPassword(nsIDOMW
+                                  const PRUnichar* aDialogTitle,
+                                  const PRUnichar* aDialogText,
+                                  PRUnichar** aPassword,
+                                  const PRUnichar* aCheckMsg,
+                                  PRBool* aCheckValue, PRBool* aConfirm)
+ {
+     EmbedPrompter prompter;
+     prompter.SetTitle(aDialogTitle ? aDialogTitle : NS_LITERAL_STRING("Prompt").get());
+     prompter.SetMessageText(aDialogText);
+     prompter.SetPassword(*aPassword);
+-    if (aCheckMsg) {
++    if (aCheckMsg)
+         prompter.SetCheckMessage(aCheckMsg);
++    if (aCheckValue)
+         prompter.SetCheckValue(*aCheckValue);
+-    }
++
+     prompter.Create(EmbedPrompter::TYPE_PROMPT_PASS,
+                     GetGtkWindowForDOMWindow(aParent));
+     prompter.Run();
+     if (aCheckValue)
+         prompter.GetCheckValue(aCheckValue);
+     prompter.GetConfirmValue(aConfirm);
+     if (*aConfirm) {
+         if (*aPassword)
+             nsMemory::Free(*aPassword);
+         prompter.GetPassword(aPassword);

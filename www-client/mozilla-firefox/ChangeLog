@@ -1,6 +1,15 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.57 2005/07/23 16:07:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.58 2005/07/24 06:20:07 anarchy Exp $
+
+*mozilla-firefox-1.0.6-r3 (24 Jul 2005)
+
+  24 Jul 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +files/embedprompter-modal.patch, +files/gtk-prompt-service.patch, 
+  +files/gtk-tooltips.patch, +files/securebrowserui-iirq.patch, 
+  +mozilla-firefox-1.0.6-r3.ebuild:
+  updated to contain patches need to compile epiphany against. Reference
+  bug#86872
 
   23 Jul 2005; Guy Martin <gmsoft@gentoo.org>
   mozilla-firefox-1.0.6-r2.ebuild:

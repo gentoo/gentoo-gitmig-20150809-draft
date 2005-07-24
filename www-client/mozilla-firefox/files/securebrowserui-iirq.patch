@@ -1,0 +1,32 @@
+Index: security/manager/boot/src/nsSecureBrowserUIImpl.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/security/manager/boot/src/nsSecureBrowserUIImpl.cpp,v
+retrieving revision 1.34.2.2
+diff -p -u -u -p -U10 -r1.34.2.2 nsSecureBrowserUIImpl.cpp
+--- security/manager/boot/src/nsSecureBrowserUIImpl.cpp	8 Oct 2004 22:59:03 -0000	1.34.2.2
++++ security/manager/boot/src/nsSecureBrowserUIImpl.cpp	8 Jan 2005 22:30:09 -0000
+@@ -1278,20 +1278,24 @@ NS_IMETHODIMP nsUIContext::GetInterface(
+   nsresult rv;
+ 
+   if (uuid.Equals(NS_GET_IID(nsIPrompt))) {
+     nsCOMPtr<nsIDOMWindowInternal> internal = do_QueryInterface(mWindow, &rv);
+     if (NS_FAILED(rv)) return rv;
+ 
+     nsIPrompt *prompt;
+ 
+     rv = internal->GetPrompter(&prompt);
+     *result = prompt;
++  } else if (uuid.Equals(NS_GET_IID(nsIDOMWindow))) {
++    *result = mWindow;
++    NS_ADDREF ((nsISupports*) *result);
++    rv = NS_OK;
+   } else {
+     rv = NS_ERROR_NO_INTERFACE;
+   }
+ 
+   return rv;
+ }
+ 
+ nsresult nsSecureBrowserUIImpl::
+ GetNSSDialogs(nsISecurityWarningDialogs **result)
+ {
