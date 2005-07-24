@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.83 2005/07/23 20:07:48 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.84 2005/07/24 09:16:51 sekretarz Exp $
+
+  24 Jul 2005; <sekretarz@gentoo.org> mldonkey-2.6.0.ebuild:
+  Turned off batch configure option, cought by Phil
 
 *mldonkey-2.6.0 (23 Jul 2005)
 

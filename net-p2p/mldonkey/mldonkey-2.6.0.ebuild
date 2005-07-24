@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.0.ebuild,v 1.1 2005/07/23 20:07:48 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.0.ebuild,v 1.2 2005/07/24 09:16:51 sekretarz Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_compile() {
 		--sharedstatedir=/var/mldonkey \
 		--localstatedir=/var/mldonkey \
 		--enable-checks \
-		--enable-batch \
+		--disable-batch \
 		--enable-pthread \
 		`use_enable gtk2` \
 		`use_enable X gui` \
