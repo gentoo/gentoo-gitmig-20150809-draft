@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.35-r1.ebuild,v 1.2 2005/07/23 20:11:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.35-r1.ebuild,v 1.3 2005/07/24 00:59:39 eradicator Exp $
 
 IUSE="portaudio"
 
@@ -40,6 +40,7 @@ src_unpack() {
 }
 
 src_compile() {
+	addpredict /usr/share/sgml/misc/sgmltools/python/
 	econf $(use_enable portaudio) --enable-charsets
 	emake || die
 }

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 394662430162d317d81d6f54794ada78 ChangeLog 1931
 MD5 ed1c8a94add02640c0b860edb1c3071e epos-2.5.23-r1.ebuild 755
 MD5 050ab8f1df8b68e12e804df6698c533d metadata.xml 231
@@ -10,3 +13,10 @@ MD5 9318068877f92ebdc37fbb8d0258b05c files/eposd 554
 MD5 c8df3770b8aa63afc1ffde3af9922208 files/digest-epos-2.5.35-r1 63
 MD5 ef0ee59a21cd088198c030a2fc5c6fd5 files/epos-2.5.35-destdir.patch 1038
 MD5 365c1b4554293b822779986973f88ac5 files/epos-2.5.35-sysportaudio.patch 1517
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC4ugQArHZZzCEUG0RAgQgAJ9MjzRpfRct8aJg3lvY1AWE23+IDgCfZGnQ
+XS8NeaiIrBcCsDP3MpVEDBc=
+=HvH+
+-----END PGP SIGNATURE-----
