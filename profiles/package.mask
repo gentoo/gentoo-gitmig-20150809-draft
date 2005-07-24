@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4215 2005/07/24 02:14:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4216 2005/07/24 02:36:24 karltk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -276,10 +276,6 @@ sys-libs/nss-mysql
 # Danny van Dyk <kugelfang@gentoo.org> (27 May 2005)
 # Needs some testing and love before going gold
 =dev-lang/ifc-8.1*
-
-# Karl Trygve Kalleberg <karltk@gentoo.org> (27 May 2005)
-# Needs cleaning
-=dev-lang/icc-8.1.030
 
 # Joe Sapp <nixphoeni@gentoo.org> (22 May 2005)
 # Removing old desklets that use deprecated functionality.
