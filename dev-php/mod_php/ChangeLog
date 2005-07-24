@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.260 2005/07/14 15:44:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.261 2005/07/24 05:24:40 hardave Exp $
+
+  24 Jul 2005; Hardave Riar <hardave@gentoo.org> mod_php-4.4.0.ebuild,
+  mod_php-4.4.0-r1.ebuild:
+  Stable on mips, bug #97655. Also added back the ~mips keyword that was dropped.
 
   14 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
   files/digest-mod_php-5.1.0_beta-r2, Manifest:
