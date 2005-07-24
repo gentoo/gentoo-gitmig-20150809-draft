@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.73 2005/07/23 12:33:36 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.74 2005/07/24 00:53:36 pylon Exp $
+
+  24 Jul 2005; Lars Weiler <pylon@gentoo.org> cdrdao-1.2.0.ebuild:
+  Adding missing dependency to media-libs/libao as described in bug #100040.
 
   23 Jul 2005; Lars Weiler <pylon@gentoo.org> cdrdao-1.2.0.ebuild:
   Small fix for version information.

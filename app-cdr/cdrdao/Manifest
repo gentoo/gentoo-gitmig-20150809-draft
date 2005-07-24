@@ -2,8 +2,8 @@ MD5 eabea7c61116301e189d721177fe8a48 cdrdao-1.1.7-r3.ebuild 3011
 MD5 682de67a4d49d634eadcb022c280a0e1 metadata.xml 488
 MD5 71328287f8bdbbfefbab9cc9334dd1f3 cdrdao-1.1.9.ebuild 1946
 MD5 64512dea0ed843a5ef724b3c56703c20 cdrdao-1.1.9-r2.ebuild 1970
-MD5 062a94d4a797d6deec3d9eb444b96699 ChangeLog 10264
-MD5 1ffdbc5bc4cee371c6eb85da67e5be82 cdrdao-1.2.0.ebuild 1715
+MD5 d29b15a34da726ee5cf076557717c415 ChangeLog 10409
+MD5 587622474a4e8e9759bc4bc963323baa cdrdao-1.2.0.ebuild 1736
 MD5 6f398aabdbd1ed1aa966f460fdbac3d2 files/1.1.8-gcc34.patch 10476
 MD5 46fb619628173aa68a337e7d49dd25b6 files/cdrdao-1.1.7-gentoo-version.patch 753
 MD5 a7dc4823c3a7d7582f9b87afdddb51e0 files/cdrdao-1.1.7-r2-mp32dao-gentoo.diff 779
