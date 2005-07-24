@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1338 2005/07/24 10:36:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1339 2005/07/24 22:09:50 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -861,6 +861,7 @@ sys-apps/pcmcia-cs:trusted - Assume all users are trusted (Build unsafe user-spa
 sys-apps/pcmcia-cs:xforms - Enable building the xforms based cardinfo binary
 sys-apps/pcmciautils:cis - Include CIS override files
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
+sys-apps/shadow:nousuid - When nousuid is enabled only su from the shadow package will be installed with the setuid bit (mainly for single user systems)
 sys-apps/suspend2-userui:fbsplash - Add support for framebuffer splash
 sys-apps/sysvinit:ibm - adds support for hvc consoles
 sys-apps/tcng:tcsim - enable traffic simulator
