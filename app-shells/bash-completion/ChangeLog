@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.129 2005/07/21 22:24:16 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.130 2005/07/24 11:44:44 ka0ttic Exp $
+
+*bash-completion-20050121-r10 (24 Jul 2005)
+
+  24 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/20050121/06_all_tar.diff, -bash-completion-20050121-r9.ebuild,
+  +bash-completion-20050121-r10.ebuild:
+  Revision bump; updated tar patch so 'tar tf' works as expected on
+  uncompressed .tar files (bug 99996). Keeping keywords.
 
 *bash-completion-20050721 (21 Jul 2005)
 
