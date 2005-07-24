@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.20.0-r3.ebuild,v 1.1 2005/07/22 13:16:10 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.20.0-r3.ebuild,v 1.2 2005/07/24 08:33:31 sekretarz Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~hppa"
 
 DEPEND="virtual/libc
-	>=net-libs/libgadu-20050719
+	gg? ( >=net-libs/libgadu-20050719 )
 	>=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
 	jabber? ( crypt? ( >=app-crypt/gpgme-1.0.2 ) )
