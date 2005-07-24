@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.25 2005/07/21 09:06:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.26 2005/07/24 01:59:17 eradicator Exp $
+
+*festival-1.4.3-r4 (24 Jul 2005)
+
+  24 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +festival-1.4.3-r4.ebuild:
+  Revision bump with cleanups thanks to Vincent Poinot
+  <vincent.poinot@wanadoo.fr>. Also, it now uses the correct toolchain
+  compiler.
 
   21 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -festival-1.4.3-r1.ebuild, festival-1.4.3-r3.ebuild:
