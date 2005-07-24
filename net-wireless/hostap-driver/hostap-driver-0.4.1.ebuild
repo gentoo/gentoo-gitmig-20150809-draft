@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.1.ebuild,v 1.1 2005/05/23 11:44:02 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.1.ebuild,v 1.2 2005/07/24 12:43:29 brix Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
-DESCRIPTION="HostAP wireless drivers"
+DESCRIPTION="Driver for Intersil Prism2/2.5/3 based IEEE 802.11b wireless LAN products"
 HOMEPAGE="http://hostap.epitest.fi"
 SRC_URI="${SRC_URI} http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="GPL-2"

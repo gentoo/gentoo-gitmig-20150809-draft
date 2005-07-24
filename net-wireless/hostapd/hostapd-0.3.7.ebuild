@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.3.7.ebuild,v 1.3 2005/06/27 09:05:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.3.7.ebuild,v 1.4 2005/07/24 12:46:23 brix Exp $
 
 inherit toolchain-funcs
 
 MADWIFI_VERSION="2005-01-07"
 
-DESCRIPTION="HostAP wireless daemon"
+DESCRIPTION="IEEE 802.11 wireless LAN Host AP daemon"
 HOMEPAGE="http://hostap.epitest.fi"
 SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz
 		mirror://gentoo/madwifi-cvs-snapshot-${MADWIFI_VERSION}.tar.bz2"
