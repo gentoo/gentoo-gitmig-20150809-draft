@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.108-r1.ebuild,v 1.1 2005/07/20 17:37:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.108-r1.ebuild,v 1.2 2005/07/24 13:05:26 azarah Exp $
 
 inherit eutils
 
 DESCRIPTION="Libraries/utilities to handle ELF objects (drop in replacement for libelf)"
 HOMEPAGE="http://people.redhat.com/drepper/"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	http://dev.gentoo.org/~azarah/${PN}/${P}-robustify3.patch.bz2
+	mirror://gentoo/${P}-robustify3.patch.bz2"
 
 LICENSE="OpenSoftware"
 SLOT="0"
@@ -25,12 +27,13 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
+
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.101-bswap.patch
 	epatch "${FILESDIR}"/${P}-portability.patch
 
-	#the next 2 patches should not be needed in 0.109
-	epatch ${FILESDIR}/${P}-robustify3.patch
+	# The next patch should not be needed in 0.109
+	epatch ${DISTDIR}/${P}-robustify3.patch.bz2
 
 	# Needed by ${P}-portability.patch
 	autoreconf || die
