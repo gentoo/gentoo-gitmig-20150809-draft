@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-amazon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-amazon/ChangeLog,v 1.11 2005/03/25 23:37:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-amazon/ChangeLog,v 1.12 2005/07/24 22:34:44 citizen428 Exp $
+
+  24 Jul 2005; Michael Kohl <citizen428@gentoo.org>
+  ruby-amazon-0.9.0.ebuild:
+  Marked stable on x86.
 
   26 Mar 2005; <blubb@gentoo.org> ruby-amazon-0.9.0.ebuild:
   added ~amd64
