@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-8.1.032.ebuild,v 1.1 2005/05/31 19:17:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-8.1.028.ebuild,v 1.1 2005/07/24 02:35:16 karltk Exp $
 
 inherit rpm
 
 DESCRIPTION="Intel C++ Compiler - Intel's Pentium optimized compiler for Linux"
-SRC_URI="l_cc_pc_${PV}.tar.gz"
+SRC_URI="ftp://download.intel.com/software/products/compilers/downloads/l_cc_pc_${PV}.tar.gz"
 HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
-LICENSE="icc-7.0"
+LICENSE="icc-8.1"
 RDEPEND=">=sys-libs/glibc-2.2.5
 	x86? ( sys-libs/lib-compat )"
 SLOT="8.1"
@@ -36,8 +36,6 @@ src_unpack() {
 		# WORKDIR must be set properly for rpm_unpack()
 		rpm_unpack ${S}/${x}
 	done
-
-	mv ${WORKDIR}/opt ${S}/
 
 }
 

@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.28 2005/07/05 13:35:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.29 2005/07/24 02:35:16 karltk Exp $
+
+*icc-8.1.028 (24 Jul 2005)
+
+  24 Jul 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/8.1.028/icpc, -files/8.1.030/05icc-ifc, -files/8.1.030/icc,
+  -files/8.1.030/iccifc.conf, -files/8.1.030/icpc, +files/8.1.028/05icc-ifc,
+  +files/8.1.028/icc, +files/8.1.028/iccifc.conf, -files/8.1.032/05icc-ifc,
+  -files/8.1.032/icc, -files/8.1.032/iccifc.conf, -files/8.1.032/icpc,
+  +icc-8.1.028.ebuild, -icc-8.1.030.ebuild, -icc-8.1.032.ebuild:
+  Removed unavailable 8.1.x versions, added the publicly available
+  8.1.028 version.
 
 *icc-9.0.021 (05 Jul 2005)
 

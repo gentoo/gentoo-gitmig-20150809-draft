@@ -1,6 +1,0 @@
-IA32ROOT=/opt/intel/compiler81
-INTEL_FLEXLM_LICENSE=/opt/intel/compiler81/licenses
-LDPATH=/opt/intel/compiler81/lib
-MANPATH=/opt/intel/compiler81/man
-PATH=/opt/intel/compiler81/bin
-ROOTPATH=/opt/intel/compiler81/bin
