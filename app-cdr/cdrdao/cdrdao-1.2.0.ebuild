@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.0.ebuild,v 1.10 2005/07/24 00:53:36 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.0.ebuild,v 1.11 2005/07/24 01:58:33 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,7 +19,7 @@ RDEPEND="encode? ( >=media-sound/lame-3.90 )
 		>=dev-cpp/libgnomemm-2.6
 		>=dev-cpp/libgnomecanvasmm-2.6
 		>=dev-cpp/gconfmm-2.6
-		>=dev-cpp/libgnomeuimm-2.6 
+		>=dev-cpp/libgnomeuimm-2.6
 		media-libs/libao )"
 DEPEND="pccts? ( >=dev-util/pccts-1.33.24-r1 )
 	virtual/cdrtools
