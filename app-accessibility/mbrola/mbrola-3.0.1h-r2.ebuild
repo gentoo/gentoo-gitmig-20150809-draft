@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r2.ebuild,v 1.1 2005/07/24 01:32:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r2.ebuild,v 1.2 2005/07/24 01:32:40 eradicator Exp $
 
 IUSE="tts-de tts-es tts-fr"
 
@@ -55,7 +55,7 @@ src_unpack () {
 			*)
 				einfo "mbrola binary not available on this architecture.  Still installing voices."
 		esac
-	fi	
+	fi
 }
 
 src_install () {
