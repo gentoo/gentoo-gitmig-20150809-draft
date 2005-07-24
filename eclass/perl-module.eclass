@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.78 2005/07/19 13:10:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.79 2005/07/24 13:14:53 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -189,21 +189,27 @@ perl-module_pkg_postrm() {
 
 perlinfo() {
 
+	local version
 	eval `perl '-V:version'`
 	PERL_VERSION=${version}
 
+	local installsitearch
 	eval `perl '-V:installsitearch'`
 	SITE_ARCH=${installsitearch}
 
-	eval `perl '-V:installsitearch'`
-	SITE_LIB=${installsitearch}
+	local installsitelib
+	eval `perl '-V:installsitelib'`
+	SITE_LIB=${installsitelib}
 
+	local installarchlib
 	eval `perl '-V:installarchlib'`
 	ARCH_LIB=${installarchlib}
 
+	local installvendorlib
 	eval `perl '-V:installvendorlib'`
 	VENDOR_LIB=${installvendorlib}
 
+	local installvendorarch
 	eval `perl '-V:installvendorarch'`
 	VENDOR_ARCH=${installvendorarch}
 
