@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.10 2005/07/25 11:08:21 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.11 2005/07/25 14:26:22 mattam Exp $
 
 inherit eutils
 
-IUSE="debug doc glade gnome opengl svg"
+IUSE="debug doc glade gnome gnomecanvas opengl svg"
 
 DESCRIPTION="Objective CAML interface for Gtk+2"
 HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html"
@@ -15,8 +15,8 @@ DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-lang/ocaml-3.07
 	svg? ( >=gnome-base/librsvg-2.2 )
 	glade? ( >=gnome-base/libglade-2.0.1 )
-	gnome? ( >=gnome-base/libgnomecanvas-2.2
-		>=gnome-base/gnome-panel-2.4.0
+	gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 )
+	gnome? ( >=gnome-base/gnome-panel-2.4.0
 		>=gnome-base/libgnomeui-2.4.0 )
 	opengl? ( >=dev-ml/lablgl-0.98
 		>=x11-libs/gtkglarea-1.9 )"
@@ -34,13 +34,22 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+
 	use debug && myconf="$myconf --enable-debug"
 
 	myconf="$myconf $(use_with svg rsvg)"
 
 	myconf="$myconf $(use_with glade)"
 
-	myconf="$myconf $(use_with gnome gnomecanvas)"
+	# libgnomeui already depends on libgnomecanvas
+	if use gnomecanvas || use gnome
+	then
+		myconf="$myconf --with-gnomecanvas"
+	else
+		myconf="$myconf --without-gnomecanvas"
+	fi
+
 	myconf="$myconf $(use_with gnome gnomeui)"
 	myconf="$myconf $(use_with gnome panel)"
 

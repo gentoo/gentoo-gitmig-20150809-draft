@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.34 2005/07/25 11:08:21 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.35 2005/07/25 14:26:22 mattam Exp $
+
+  25 Jul 2005; Matthieu Sozeau <mattam@gentoo.org> lablgtk-2.4.0.ebuild:
+  Use new gnomecanvas USE flag (fixes bug #87426).
 
   25 Jul 2005; Matthieu Sozeau <mattam@gentoo.org> lablgtk-2.4.0.ebuild:
   Added use_with code for optional features so that users get all control over
