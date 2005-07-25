@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.5.2.ebuild,v 1.7 2005/04/18 16:25:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.5.2.ebuild,v 1.8 2005/07/25 16:11:49 caleb Exp $
 
 inherit kde eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc ~alpha ~amd64 ~sparc"
 IUSE=""
 
 DEPEND="|| ( kde-base/kwin >=kde-base/kdebase-3.2 )
-	>=x11-libs/qt-3.3.0"
+	$(qt_min_version 3.3)"
 need-kde 3.2
 
 src_unpack() {
