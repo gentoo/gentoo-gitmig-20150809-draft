@@ -1,0 +1,49 @@
+diff -Nrup src/Makefile.am src/Makefile.am
+--- src/Makefile.am	2005-07-24 12:33:11.000000000 -0400
++++ src/Makefile.am	2005-07-24 14:45:52.000000000 -0400
+@@ -46,6 +46,8 @@ noinst_PROGRAMS = id sulogin
+ 
+ suidbins = su
+ suidubins = chage chfn chsh expiry gpasswd newgrp passwd
++suidbinperms  = 4711
++suidubinperms = 4711
+ 
+ LDADD = $(top_builddir)/libmisc/libmisc.a \
+ 	$(top_builddir)/lib/libshadow.la
+@@ -71,8 +73,8 @@ install-am: all-am
+ 	ln -sf newgrp	$(DESTDIR)$(ubindir)/sg
+ 	ln -sf vipw	$(DESTDIR)$(usbindir)/vigr
+ 	for i in $(suidbins); do \
+-		chmod -f 4755 $(DESTDIR)$(bindir)/$$i; \
++		chmod -f $(suidbinperms) $(DESTDIR)$(bindir)/$$i; \
+ 	done
+ 	for i in $(suidubins); do \
+-		chmod -f 4755 $(DESTDIR)$(ubindir)/$$i; \
++		chmod -f $(suidubinperms) $(DESTDIR)$(ubindir)/$$i; \
+ 	done
+diff -Nrup src/Makefile.in src/Makefile.in
+--- src/Makefile.in	2005-07-24 12:33:56.000000000 -0400
++++ src/Makefile.in	2005-07-24 14:46:07.000000000 -0400
+@@ -352,6 +352,9 @@ INCLUDES = \
+ # id and groups are from gnu, sulogin from sysvinit
+ suidbins = su
+ suidubins = chage chfn chsh expiry gpasswd newgrp passwd
++suidbinperms  = 4711
++suidubinperms = 4711
++
+ LDADD = $(top_builddir)/libmisc/libmisc.a \
+ 	$(top_builddir)/lib/libshadow.la
+ 
+@@ -835,10 +838,10 @@ install-am: all-am
+ 	ln -sf newgrp	$(DESTDIR)$(ubindir)/sg
+ 	ln -sf vipw	$(DESTDIR)$(usbindir)/vigr
+ 	for i in $(suidbins); do \
+-		chmod -f 4755 $(DESTDIR)$(bindir)/$$i; \
++		chmod -f $(suidbinperms) $(DESTDIR)$(bindir)/$$i; \
+ 	done
+ 	for i in $(suidubins); do \
+-		chmod -f 4755 $(DESTDIR)$(ubindir)/$$i; \
++		chmod -f $(suidubinperms) $(DESTDIR)$(ubindir)/$$i; \
+ 	done
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

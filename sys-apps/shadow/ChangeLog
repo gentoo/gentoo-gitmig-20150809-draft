@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.114 2005/07/19 22:53:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.115 2005/07/25 12:02:21 solar Exp $
+
+*shadow-4.0.7-r4 (25 Jul 2005)
+
+  25 Jul 2005; <solar.@gentoo.org> +files/shadow-4.0.7-perms.patch,
+  shadow-4.0.10.ebuild, +shadow-4.0.7-r4.ebuild:
+  - added no /usr/bin suid option as local use flag nousuid for single user
+  systems
 
   19 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> shadow-4.0.7-r3.ebuild:
   Stable on alpha.

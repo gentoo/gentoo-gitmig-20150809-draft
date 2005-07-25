@@ -1,25 +1,25 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.10.ebuild,v 1.6 2005/07/25 12:02:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r4.ebuild,v 1.1 2005/07/25 12:02:21 solar Exp $
 
-inherit eutils libtool toolchain-funcs flag-o-matic
+inherit eutils libtool toolchain-funcs flag-o-matic multilib
 
 # We should remove this login after pam-0.78 goes stable.
 FORCE_SYSTEMAUTH_UPDATE="no"
 
 DESCRIPTION="Utilities to deal with user accounts"
 HOMEPAGE="http://shadow.pld.org.pl/"
-SRC_URI="ftp://ftp.pld.org.pl/software/${PN}/${P}.tar.bz2"
+SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-*"
-#"~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="nls pam selinux skey nousuid"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="pam selinux nls skey nousuid"
 
 RDEPEND=">=sys-libs/cracklib-2.7-r3
 	pam? ( virtual/pam )
 	!pam? ( !sys-apps/pam-login )
+	skey? ( app-admin/skey )
 	selinux? ( sys-libs/libselinux )"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51-r2
@@ -27,12 +27,16 @@ DEPEND="${RDEPEND}
 # We moved /etc/pam.d/login to pam-login
 PDEPEND="pam? ( >=sys-apps/pam-login-3.17 )"
 
+pkg_preinst() {
+	rm -f ${ROOT}/etc/pam.d/system-auth.new
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	# uclibc support, corrects NIS usage
-	epatch "${FILESDIR}"/${PN}-4.0.10-nonis.patch
+	epatch "${FILESDIR}"/shadow-4.0.4.1-nonis.patch
 
 	# If su should not simulate a login shell, use '/bin/sh' as shell to enable
 	# running of commands as user with /bin/false as shell, closing bug #15015.
@@ -40,23 +44,35 @@ src_unpack() {
 	#epatch "${FILESDIR}"/${P}-nologin-run-sh.patch
 
 	# don't install manpages if USE=-nls
-	epatch "${FILESDIR}"/${PN}-4.0.10-nls-manpages.patch
+	epatch "${FILESDIR}"/shadow-4.0.5-nls-manpages.patch
 
 	# tweak the default login.defs
-	epatch "${FILESDIR}"/${PN}-4.0.5-login.defs.patch
+	epatch "${FILESDIR}"/shadow-4.0.5-login.defs.patch
+
+	# skeychallenge call needs updating #69741
+	epatch "${FILESDIR}"/shadow-4.0.5-skey.patch
 
 	# The new configure changes do not detect utmp/logdir properly
-	epatch "${FILESDIR}"/${PN}-4.0.10-fix-configure.patch
+	epatch "${FILESDIR}"/shadow-4.0.6-fix-configure.patch
+
+	# Tweak manpages #70880
+	epatch "${FILESDIR}"/shadow-4.0.6-manpages.patch
+
+	# Fix SU_WHEEL_ONLY behavior #80345
+	epatch "${FILESDIR}"/${P}-iswheel.patch
+
+	# Fix lastlog not logged for tty's
+	epatch "${FILESDIR}"/${P}-lastlog.patch
 
 	# Make user/group names more flexible #3485 / #22920
-	epatch "${FILESDIR}"/${PN}-4.0.10-dots-in-usernames.patch
-	epatch "${FILESDIR}"/${PN}-4.0.10-long-groupnames.patch
+	epatch "${FILESDIR}"/shadow-4.0.6-dots-in-usernames.patch
+	epatch "${FILESDIR}"/shadow-4.0.6-long-groupnames.patch
 
 	# Newer glibc's have a different nscd socket location #74395
-	epatch "${FILESDIR}"/${PN}-4.0.7-nscd-socket-path.patch
+	epatch "${FILESDIR}"/${P}-nscd-socket-path.patch
 
 	# Fix EPIPE failure when writing to nscd, bug #80413
-	epatch "${FILESDIR}"/${PN}-4.0.7-nscd-EPIPE-failure.patch
+	epatch "${FILESDIR}"/${P}-nscd-EPIPE-failure.patch
 
 	# lock down setuid perms #47208
 	epatch "${FILESDIR}"/${PN}-4.0.7-perms.patch
@@ -86,8 +102,11 @@ src_compile() {
 src_install() {
 	local perms=4711
 	use nousuid && perms=711
-	make DESTDIR=${D} suiduperms=${perms} install || die "install problem"
+	make DESTDIR="${D}" suidubinperms=${perms} install || die "install problem"
 	dosym useradd /usr/sbin/adduser
+
+	fperms go-r /bin/su /usr/bin/ch{fn,sh,age} \
+		/usr/bin/{expiry,newgrp,passwd,gpasswd} || die "fperms"
 
 	# Remove libshadow and libmisc; see bug 37725 and the following
 	# comment from shadow's README.linux:
@@ -114,7 +133,7 @@ src_install() {
 	# (compat names kept for non-devfs compatibility)
 	insopts -m0600 ; doins "${FILESDIR}"/securetty
 	insopts -m0600 ; doins etc/login.access
-	insopts -m0600 ; doins etc/limits
+	insopts -m0644 ; doins etc/limits
 	# Output arch-specific cruft
 	case $(tc-arch) in
 		ppc64) echo "hvc0" >> "${D}"/etc/securetty
@@ -195,10 +214,6 @@ src_install() {
 	dodoc INSTALL README WISHLIST
 	docinto txt
 	dodoc HOWTO LSM README.* *.txt
-}
-
-pkg_preinst() {
-	rm -f "${ROOT}"/etc/pam.d/system-auth.new
 }
 
 pkg_postinst() {
