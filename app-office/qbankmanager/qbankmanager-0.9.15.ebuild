@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.15.ebuild,v 1.3 2005/07/10 01:09:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.15.ebuild,v 1.4 2005/07/25 15:37:18 caleb Exp $
 
-inherit eutils kde-functions
-need-qt 3
+inherit eutils qt3
 
 DESCRIPTION="Onlinebanking frontend for aqbanking"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
