@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.43 2005/07/16 00:10:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.44 2005/07/25 15:38:13 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> unixODBC-2.2.11.ebuild:
+  Fix qt dep
 
 *unixODBC-2.2.11 (16 Jul 2005)
 
