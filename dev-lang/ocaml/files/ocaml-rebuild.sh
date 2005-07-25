@@ -2,13 +2,6 @@
 # run like this: ocaml-rebuild.sh [-h | -f] [emerge_options]
 
 emerge=/usr/bin/emerge
-qpkg=/usr/bin/qpkg
-
-if [ ! -x $qpkg ]
-then
-	echo "You need to emerge gentoolkit for this script to work"
-	exit 1
-fi
 
 if [ "$1" = "-h" ]
 then
