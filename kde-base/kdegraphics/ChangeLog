@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.169 2005/07/08 05:33:17 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.170 2005/07/25 20:23:53 gmsoft Exp $
+
+  25 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdegraphics-3.4.1.ebuild:
+  Stable on hppa.
 
   08 Jul 2005; Hardave Riar <hardave@gentoo.org>
   kdegraphics-3.3.2-r2.ebuild:
