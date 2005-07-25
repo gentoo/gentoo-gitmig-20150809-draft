@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmacpiload-ac
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpiload-ac/ChangeLog,v 1.2 2004/09/05 22:22:19 s4t4n Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpiload-ac/ChangeLog,v 1.3 2005/07/25 19:07:09 smithj Exp $
+
+  25 Jul 2005; Jonathan Smith <smithj@gentoo.org>
+  wmacpiload-ac-0.1.2_p3.ebuild:
+  #100255: changed homepage
 
   06 Sep 2004; Michele Noberasco <s4t4n@gentoo.org> wmacpiload-ac-0.1.2_p3.ebuild:
   Stable for x86.
