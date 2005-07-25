@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 322ecf46e4c0e1062a965650c23d2c6e ChangeLog 2919
+MD5 a0d9351a049e9610e28828184b8d3531 ChangeLog 3019
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 887ee7c2c631f1f41e38a8ce383a84b6 hpoj-0.91-r3.ebuild 3218
+MD5 cb912f1282ece93fd290cf041a04c013 hpoj-0.91-r3.ebuild 3220
 MD5 e78c4ef74538d9b47f113f580ce4bf28 files/hpoj-0.91-kernel26.patch.bz2 1191
 MD5 7b10c1855f92a1d1551de2c65128176f files/digest-hpoj-0.91-r3 58
 MD5 2b8258745c95cdde3dc7d0293aaaf0c4 files/hpoj.init 210
 MD5 4f722c5c6fcc7d16dcf56c5c52db9874 files/udev.patch 349
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCpsPZevY57Fted3ERAu5YAJ94O26ttUSylceIgJIrokt47SDKLwCfd6Sw
-rgVSzTQo6+t56EQ4h0pWCUg=
-=a7xt
------END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.10 2005/06/08 10:08:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r3.ebuild,v 1.11 2005/07/25 18:04:13 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 DESCRIPTION="HP OfficeJet Linux driver"
 HOMEPAGE="http://hpoj.sourceforge.net/"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="ssl scanner qt X snmp cups usb"
 
-DEPEND="qt?      ( >=x11-libs/qt-3.1.0-r1 )
+DEPEND="qt?      ( $(qt_min_version 3.1) )
 	ssl?     ( >=dev-libs/openssl-0.9.6h )
 	scanner? ( >=media-gfx/sane-backends-1.0.9 )
 	scanner? ( || ( X? ( >=media-gfx/xsane-0.89 ) >=media-gfx/sane-frontends-1.0.9 ) )
