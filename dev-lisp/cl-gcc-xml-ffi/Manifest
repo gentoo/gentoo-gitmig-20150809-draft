@@ -1,0 +1,5 @@
+MD5 ec93b7f864edb9f9eec1614b43a0ef83 cl-gcc-xml-ffi-0.1.2.20050724.ebuild 1200
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 a361fc8e7f9319e857a24f12e0571550 ChangeLog 505
+MD5 9ca6553abd673e617fbf39edbcad8e8a files/0.1.2.20050724-fasl-output-gentoo.patch 827
+MD5 8ddb4339caa081455ec0d3b5f6f7993d files/digest-cl-gcc-xml-ffi-0.1.2.20050724 77
