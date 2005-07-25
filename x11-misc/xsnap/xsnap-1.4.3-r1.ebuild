@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3-r1.ebuild,v 1.1 2005/07/25 22:06:38 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3-r1.ebuild,v 1.2 2005/07/25 22:09:55 smithj Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.4-gentoo.patch
+	# i notified upstream about it... should be fixed soon
 	epatch ${FILESDIR}/${PN}-this-should-be-fixed-updstream.patch
 }
 
