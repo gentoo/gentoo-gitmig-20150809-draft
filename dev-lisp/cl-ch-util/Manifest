@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cae1fb574188dff3f8cf7acd28609534 cl-ch-util-0.1.4.20050724.ebuild 1056
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 57b436e1ffe48daad21523f0d3dcb509 ChangeLog 488
+MD5 0ce6b51f0162512cfe9ae43b9f73db01 files/digest-cl-ch-util-0.1.4.20050724 72
+MD5 1cd754672d755dfaabb81c59238b65a4 files/0.1.4.20050724-fasl-output-gentoo.patch 2323
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5IVpyiNZaEAZA+ARAiRJAJ9NXGJp8bpZOPsXE9DNqpH6IrHPxgCfW7+X
+2CqJO7F/qggRxKYdEYhfaTQ=
+=KIIR
+-----END PGP SIGNATURE-----
