@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bd7e8f471a5d48b0b4140a887177f3ff cdmp3-0.5.0.ebuild 709
+MD5 cef58dee7ba4d8a6eb75cc01f8c59ab1 ChangeLog 1073
 MD5 0074ad103192624fd16e5490d75620f2 cdmp3-0.4.1.ebuild 706
-MD5 2c5cfb07d98b8c44b36a820da66ed494 ChangeLog 994
 MD5 e04729f5c4d3e5799eb0aab8ce67fe88 metadata.xml 498
+MD5 e84bd32d334f141f41b49a4161cbd143 cdmp3-0.5.0.ebuild 710
 MD5 2e0a4d59a5adc8792d86200bdc4ce8de files/digest-cdmp3-0.4.1 62
 MD5 19dd060f5782d2ea9a2f23010f386cf5 files/digest-cdmp3-0.5.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFChnVY06ebR+OMO78RAm5CAJ9oX7YwcjVSZmvv5uz57Px3S5G33QCfY8Ah
-ubPe4uVpcO+L/UTKUm3TxBk=
-=I1MM
------END PGP SIGNATURE-----

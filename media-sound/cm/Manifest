@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 275ff48eda9a68de2758c5895fc2ab6b ChangeLog 1220
-MD5 8895ed193b4115521a7b9d35ea71822b cm-2.4.2.ebuild 966
+MD5 76d3d1cf698ec9337fce239938cf8b57 ChangeLog 1296
+MD5 753ffd7bf6711cb5c626b19aafacc0d8 cm-2.4.2.ebuild 966
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 39b2e2aa6a9ea57538cfaf1b1967f197 files/cm-2.4.0-exec 160
 MD5 96488265785c0bf4e9e394238f5b8e23 files/digest-cm-2.4.2 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD4DBQFBdi5bArHZZzCEUG0RAtWuAJ9zLU8cLnRnvXuj2xycRzfBfPo7TgCXQrNl
-CINMPBBDh9LpJVVabFGBhA==
-=+T1e
------END PGP SIGNATURE-----
+MD5 39b2e2aa6a9ea57538cfaf1b1967f197 files/cm-2.4.0-exec 160

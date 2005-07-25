@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3b08d17aa1bb6ce810f8d567603db123 dir2ogg-0.9.1.ebuild 694
+MD5 36e3f0a784b2d698295c371eb56ad2b4 ChangeLog 844
 MD5 894ea2276b999998ce510c2ed07cbc51 dir2ogg-0.8.ebuild 708
-MD5 fd866865b4d92b1850cca7d609d3126e ChangeLog 763
 MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
+MD5 bd402c5339a2e6bf4e188c687fb57b78 dir2ogg-0.9.1.ebuild 695
 MD5 7b57084575150811bffbfa840c520ad2 files/digest-dir2ogg-0.8 61
 MD5 ba3646bdab28c0c3788100d82c9ce9a9 files/digest-dir2ogg-0.9.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCiLTf06ebR+OMO78RAqCkAJ9QmR6kFUSYndJBuvtkaOhw+92GCQCcDiWc
-BwuCNLhRNuXTjcYbQA97Q2o=
-=cCml
------END PGP SIGNATURE-----
