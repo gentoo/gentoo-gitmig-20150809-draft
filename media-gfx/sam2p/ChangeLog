@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sam2p
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.10 2005/06/05 12:21:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.11 2005/07/25 12:42:37 twp Exp $
+
+  25 Jul 2005; Tom Payne <twp@gentoo.org> sam2p-0.44.ebuild:
+  Update DESCRIPTION and RDEPEND. Bug # 99718.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> sam2p-0.44.ebuild:
   Stable on ppc.
