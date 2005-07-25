@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3.ebuild,v 1.2 2005/03/29 11:53:35 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3-r1.ebuild,v 1.1 2005/07/25 22:06:38 smithj Exp $
 
 inherit eutils
 
@@ -15,14 +15,20 @@ IUSE=""
 
 DEPEND="virtual/x11"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-1.4-gentoo.patch
+	epatch ${FILESDIR}/${PN}-this-should-be-fixed-updstream.patch
+}
+
 src_compile() {
-	epatch ${FILESDIR}/${PN}-1.4-gentoo.patch || die "epatch failed."
-	xmkmf || die
-	make || die
+	xmkmf || die "xmkmf failed"
+	make || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	make DESTDIR=${D} install.man || die
+	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR=${D} install.man || die "make install.man failed"
 	dodoc README INSTALL AUTHORS
 }

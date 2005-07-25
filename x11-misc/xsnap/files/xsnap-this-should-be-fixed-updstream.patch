@@ -1,0 +1,55 @@
+diff -Naur xsnap-1.4.3/xsnap.c xsnap-1.4.3_patched/xsnap.c
+--- xsnap-1.4.3/xsnap.c	2004-09-30 07:59:15.000000000 +0100
++++ xsnap-1.4.3_patched/xsnap.c	2005-07-22 03:38:23.000000000 +0100
+@@ -558,7 +558,7 @@
+ 
+ 	for (i = 1; i < argc; i++)
+ 	{
+-		if (strncmp(argv[i], "-h", 2) == 0)
++		if (strcmp(argv[i], "-h") == 0)
+ 		{
+ 			usage();
+ 			continue;
+@@ -1920,27 +1920,28 @@
+ 	if (display_in_window) {
+             XMapRaised(display, snapshot);   
+ 	    XFlush (display);
+-	}
++	
+ 
+-	if (!*win_name0) 
+-            strcpy(win_name0, "xsnap");
++	    if (!*win_name0) 
++			strcpy(win_name0, "xsnap");
+ 
+-	sprintf(win_name, "%s %d x %d", 
++			sprintf(win_name, "%s %d x %d", 
+                           win_name0, width_return, height_return);
+-	XStoreName(display, snapshot, win_name);
+-
++			XStoreName(display, snapshot, win_name);
++	}
+     save_file:
+         if (save_in_file) {
+ 	    save_image_file(display, screen, window_to_snap,
+ 		 	   snap_pixmap, reg_width, reg_height, reg_depth);
+-	    if (!root_name) 
+-                strcpy(output_name, "(stdout)");
+-	    sprintf(win_name, "%s %d x %d -> %s", 
+-                            win_name0, width_return, height_return,
+-                            output_name);
+-	    XStoreName(display, snapshot, win_name);
+-	    draw_dialog(display, dialog_window, copy_gc,
+-                                 50, 96+30*i0);
++
++		if (display_in_window) {
++			if (!root_name) 
++				strcpy(output_name, "(stdout)");
++
++			sprintf(win_name, "%s %d x %d -> %s", win_name0, width_return, height_return, output_name);
++			XStoreName(display, snapshot, win_name);
++			draw_dialog(display, dialog_window, copy_gc, 50, 96+30*i0);
++		}
+ 	}
+ 
+ 	if (!display_in_window)
