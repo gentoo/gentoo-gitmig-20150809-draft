@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/quickplot/quickplot-0.8.5.ebuild,v 1.4 2005/03/17 01:26:59 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/quickplot/quickplot-0.8.5.ebuild,v 1.5 2005/07/25 09:10:58 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://quickplot.sourceforge.net/"
 IUSE="sndfile"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND=">=dev-cpp/gtkmm-2.4.5
 	sndfile? ( >=media-libs/libsndfile-1.0.5 )"

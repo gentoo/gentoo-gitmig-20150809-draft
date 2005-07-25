@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 866b6933a075cbaee6b86ae544d46272 quickplot-0.8.5.ebuild 1652
-MD5 24723fd9465168df90ac117e13dd7349 ChangeLog 1217
+MD5 d1b060ad1d63952a89493f3a47b9e002 ChangeLog 1304
 MD5 f7ccf447ef7110a72f7c987c517942bd metadata.xml 689
+MD5 c6a4f1c68783336f056e24f21d7730ff quickplot-0.8.5.ebuild 1657
 MD5 161b412e414642dbef003cb31c9584b0 files/digest-quickplot-0.8.5 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCONzqntT9W3vfTuoRAsB7AKCVKX+sEILSlSon+TxB9W1Wpi3FfgCghl7O
-Wkq9uAvtRYqc/7BswKKPPhU=
-=Ncnx
------END PGP SIGNATURE-----
