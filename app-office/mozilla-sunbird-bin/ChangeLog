@@ -1,6 +1,15 @@
 # ChangeLog for app-office/mozilla-sunbird-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.6 2005/03/23 20:03:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.7 2005/07/25 03:37:46 agriffis Exp $
+
+*mozilla-sunbird-bin-0.2 (25 Jul 2005)
+
+  25 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-sunbird-bin-0.2.ebuild, -mozilla-sunbird-bin-0.2.20040812.ebuild,
+  -mozilla-sunbird-bin-0.2.20041112.ebuild:
+  Bump to 0.2 release, which doesn't work any better for me than the previous
+  stuff, but hey maybe this pmasked package will work for somebody #75167
+  #78374 #80902 #80829
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
   mozilla-sunbird-bin-0.2.20040812.ebuild,

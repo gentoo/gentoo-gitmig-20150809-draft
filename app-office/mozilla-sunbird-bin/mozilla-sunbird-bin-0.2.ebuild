@@ -1,21 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.2.20040812.ebuild,v 1.5 2005/03/23 20:03:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.2.ebuild,v 1.1 2005/07/25 03:37:46 agriffis Exp $
 
-inherit mozilla-launcher
+inherit mozilla-launcher multilib
 
-MY_PV=${PV##*.} ; MY_PV=${MY_PV:0:4}-${MY_PV:4:2}-${MY_PV:6:2}
 DESCRIPTION="The Mozilla Sunbird Calendar"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/calendar/sunbird/nightly/${MY_PV}/sunbird-i686-linux-gtk2+xft.tar.gz"
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV}/sunbird-${PV}-i686-linux-gtk2+xft.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/calendar/sunbird.html"
-# can't mirror because the name isn't unique
-RESTRICT="nostrip nomirror"
+RESTRICT="nostrip"
 
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE=""
-S=${WORKDIR}/sunbird
 
 DEPEND="virtual/libc"
 RDEPEND="virtual/x11
@@ -27,20 +24,24 @@ RDEPEND="virtual/x11
 		>=app-emulation/emul-linux-x86-baselibs-1.0
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 	)
-	virtual/x11
-	>=www-client/mozilla-launcher-1.18"
+	>=www-client/mozilla-launcher-1.42"
+
+S=${WORKDIR}/sunbird
+
+# This is a binary x86 package => ABI=x86
+# Please keep this in future versions
+# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
+has_multilib_profile && ABI="x86"
 
 src_install() {
+	declare MOZILLA_FIVE_HOME=/opt/sunbird
+
 	# Install sunbird in /opt
-	dodir /opt
-	mv ${S} ${D}/opt/sunbird
+	dodir ${MOZILLA_FIVE_HOME%/*}
+	mv ${S} ${D}${MOZILLA_FIVE_HOME}
 
-	# Fixing permissions
-	chown -R root:root ${D}/opt/sunbird
-
-	# mozilla-launcher-1.8 supports -bin versions
-	dodir /usr/bin
-	dosym /usr/libexec/mozilla-launcher /usr/bin/sunbird-bin
+	# Create /usr/bin/sunbird-bin
+	install_mozilla_launcher_stub sunbird-bin ${MOZILLA_FIVE_HOME}
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps
@@ -50,16 +51,14 @@ src_install() {
 }
 
 pkg_preinst() {
-	export MOZILLA_FIVE_HOME=${ROOT}/opt/sunbird
+	declare MOZILLA_FIVE_HOME=/opt/sunbird
 
 	# Remove entire installed instance to prevent all kinds of
 	# problems... see bug 44772 for example
-	rm -rf "${MOZILLA_FIVE_HOME}"
+	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
 }
 
 pkg_postinst() {
-	export MOZILLA_FIVE_HOME=${ROOT}/opt/sunbird
-
 	update_mozilla_launcher_symlinks
 }
 

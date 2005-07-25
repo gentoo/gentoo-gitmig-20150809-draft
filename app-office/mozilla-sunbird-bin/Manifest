@@ -1,8 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ea63e8b96dcfea5185ce681d1e92357b ChangeLog 1668
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 686cec612a65525a5bcb1a09dae34709 mozilla-sunbird-bin-0.2.20040812.ebuild 1821
-MD5 ef93cadd3ea2b8e08c555d16289765ea ChangeLog 1280
-MD5 1552ba9c32baa1dfa16313e06d353142 mozilla-sunbird-bin-0.2.20041112.ebuild 1821
-MD5 f7ff8c3d10e4af0dc6b1cff980261255 files/digest-mozilla-sunbird-bin-0.2.20041112 80
-MD5 e0bba3fd8ec5b2e7a7894d053162e4ad files/digest-mozilla-sunbird-bin-0.2.20040812 80
+MD5 b0c021e1c7393ba57e37ef1aa4c46f4a mozilla-sunbird-bin-0.2.ebuild 1796
+MD5 4b0b77beb6e9d3122c6101aa5f37b6a2 files/digest-mozilla-sunbird-bin-0.2 84
 MD5 4496a3c35ce5936332ac41702c3e32f7 files/icon/mozillasunbird-bin.desktop 199
 MD5 fa424078d248f495300ecc507858beb2 files/icon/mozillasunbird-bin-icon.png 6418
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5F6WBXaUFmZvwyMRAh/CAJ9MTYZ0ViV1/PXlxKY+bCKXoQxfywCfcqXa
+35gUa1fBhYfLEVGT0uRHqys=
+=lmB8
+-----END PGP SIGNATURE-----
