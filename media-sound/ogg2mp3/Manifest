@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d7eb1ce08c5825aea648dca10aac298b ChangeLog 747
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 6a622aa5d22ef44ad4f8e300c97fa494 ChangeLog 667
-MD5 63d8dadb2404f809fb5a8d510a2bcdeb ogg2mp3-0.5.ebuild 596
+MD5 eebf151dd55670ee9dc097bbe30a517e ogg2mp3-0.5.ebuild 598
 MD5 94ab85f7f30706aa09034b3839c38a86 files/digest-ogg2mp3-0.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCqMg0p5vW4rUFj5oRAmkUAJ9oU54Y5W9qRejKwBXlGDHK3ERW2wCghfkh
-Zb35x0KY8iYywklxg128Dk4=
-=2vGV
------END PGP SIGNATURE-----
