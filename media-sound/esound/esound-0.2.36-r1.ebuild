@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36.ebuild,v 1.1 2005/07/03 16:12:33 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.1 2005/07/25 00:08:19 leonardop Exp $
 
 inherit libtool gnome.org eutils
 
@@ -42,8 +42,7 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR="${D}" install sysconfdir=${D}/etc/esd || \
-		die "Installation failed"
+	make DESTDIR="${D}" install  || die "Installation failed"
 
 	dodoc AUTHORS ChangeLog MAINTAINERS NEWS README TIPS TODO
 
