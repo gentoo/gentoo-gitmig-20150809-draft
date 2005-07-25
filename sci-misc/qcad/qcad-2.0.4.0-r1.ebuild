@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r1.ebuild,v 1.5 2005/07/21 15:55:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r1.ebuild,v 1.6 2005/07/25 16:33:10 phosphan Exp $
 
 inherit kde-functions eutils
 
@@ -21,8 +21,7 @@ KEYWORDS="x86 ppc amd64"
 need-qt 3.3
 
 DEPEND="${DEPEND}
-	>=sys-apps/sed-4
-	!=x11-libs/qt-4*"
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -32,6 +31,10 @@ src_unpack() {
 	echo >> defs.pro "CONFIG += thread release"
 	echo >> defs.pro "QMAKE_CFLAGS_RELEASE += ${CFLAGS}"
 	echo >> defs.pro "QMAKE_CXXFLAGS_RELEASE += ${CXXFLAGS}"
+	for file in */Makefile scripts/build_qcad.sh; do
+		sed -i -e 's~qmake~${QTDIR}/bin/qmake~g' $file || \
+			die "unable to correct path to qmake in $file"
+	done
 	epatch ${FILESDIR}/${MY_P}-gentoo.patch
 	epatch ${FILESDIR}/manual.patch-r1
 	cd ${S}/scripts

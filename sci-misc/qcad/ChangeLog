@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/qcad
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.7 2005/07/21 15:55:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/ChangeLog,v 1.8 2005/07/25 16:33:10 phosphan Exp $
+
+  25 Jul 2005; Patrick Kursawe <phosphan@gentoo.org> qcad-2.0.4.0-r1.ebuild:
+  Patching Makefiles and scripts to contain full path to qmake (bug #99808)
 
   21 Jul 2005; Caleb Tennis <caleb@gentoo.org> qcad-2.0.4.0-r1.ebuild:
   Put a blocker on Qt4 until the Makefiles are patched
