@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.28 2005/07/24 11:33:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.29 2005/07/25 23:56:27 karltk Exp $
 
 # ant-core blocks lower versions of ant-tasks, 
 # since it will not run when there is a version mismatch betwean the 2
@@ -11,6 +11,13 @@
   23 Jul 2005; Thomas Matthijs <axxo@gentoo.org> -ant-core-1.6.5.ebuild,
   +ant-core-1.6.5-r1.ebuild:
   revision bump too make sure ppl have the new wrapper
+
+*ant-core-1.6.2-r4 (25 Jul 2005)
+
+  25 Jul 2005;  Karl Trygve Kalleberg <karltk@gentoo.org>
+  ant-core-1.6.2-r4.ebuild:
+  Fixed -lib issue in the script file. Can now depend on the new
+  script. Gone straight to stable since it's pretty major.
 
   09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> ant-core-1.5.4-r2.ebuild,
   ant-core-1.6.2-r3.ebuild, ant-core-1.6.5.ebuild:
