@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.10.ebuild,v 1.1 2005/07/20 16:38:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.10.ebuild,v 1.2 2005/07/25 23:28:27 vapier Exp $
 
 inherit eutils games
 
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-alsa-pkg-config.patch
 	use x86 && ln -s $(which nasm) "${T}/${CHOST}-nasm"
 	use sdl && ln -s $(which sdl-config) "${T}/${CHOST}-sdl-config"
 	use truetype && ln -s $(which freetype-config) "${T}/${CHOST}-freetype-config"
