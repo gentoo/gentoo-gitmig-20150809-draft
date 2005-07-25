@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.6 2005/07/13 21:54:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.7 2005/07/25 09:52:37 flameeyes Exp $
+
+*xdtv-2.2.0-r1 (25 Jul 2005)
+
+  25 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +xdtv-2.2.0-r1.ebuild:
+  Added new theme (carbone) and bumped the versions of aqua theme and i18n
+  support. Thanks to Sir Pingus <pingus_77@yahoo.fr> for the update.
 
   13 Jul 2005; Matthias Schwarzott <zzam@gentoo.org> xdtv-2.2.0.ebuild:
   Changed dependency on dvb according to Bug #98672
