@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/skippy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/ChangeLog,v 1.7 2005/07/25 23:20:40 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/ChangeLog,v 1.8 2005/07/25 23:31:49 smithj Exp $
+
+  25 Jul 2005; Jonathan Smith <smithj@gentoo.org> skippy-0.5.0.ebuild:
+  #99426: ~amd64
 
   25 Jul 2005; Jonathan Smith <smithj@gentoo.org>
   +files/skippy-pointer-size.patch, skippy-0.5.0.ebuild:
