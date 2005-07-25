@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b0bc6f22a16ce01b8a6256d1c687425b ezstream-0.2.0.ebuild 771
-MD5 03058ac505373446fbc87e256cfbe5ee ChangeLog 461
+MD5 a5719df6b25a8cf28d588d975e287d19 ChangeLog 543
+MD5 f0fb34f24ec59d8866e279fcadd05d01 ezstream-0.2.0.ebuild 772
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 493472d9222fd2005bcdf752923fbc23 files/digest-ezstream-0.2.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCjMwb06ebR+OMO78RAszCAJ9Uhix1AcoGpo4OxoQ8Vrd8gM6jHACfZOlN
-KH7v6DM7eNvx+ne4mpJTIl4=
-=yKPc
------END PGP SIGNATURE-----
