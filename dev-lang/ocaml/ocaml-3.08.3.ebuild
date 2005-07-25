@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.3.ebuild,v 1.3 2005/07/06 23:32:21 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.3.ebuild,v 1.4 2005/07/25 23:42:30 mattam Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -22,6 +22,14 @@ pkg_setup() {
 	ewarn "Building ocaml with unsafe CFLAGS can have unexpected results"
 	ewarn "Please retry building with safer CFLAGS before reporting bugs"
 	ewarn
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	#GCC4 patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {
