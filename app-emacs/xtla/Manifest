@@ -1,9 +1,21 @@
-MD5 f7f8fe909384fe5b23133bcc12b16f96 ChangeLog 1039
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2a519cefb511119999e24797b4a6fc1 ChangeLog 1182
 MD5 094ab00c3ae34d1849f33aae814c3800 metadata.xml 902
 MD5 2b9ad1ba683e17c8a12b79864a8db79c xtla-0.1_p525.ebuild 1030
 MD5 dfda331f1493722643281b4541eb76ba xtla-0.9_p38.ebuild 1401
 MD5 76701b3ee1f492698dec2270b5ca35d8 xtla-1.0.ebuild 884
+MD5 5a7a1586f6c425a6b5f3312f3c009e2a xtla-1.1.ebuild 907
 MD5 9181bb41442bc68d9bfc04290119deb4 files/digest-xtla-1.0 60
 MD5 97549d768f0a5fc02b8bd7606945ca79 files/50xtla-gentoo.el 108
 MD5 aa9b1d3b7c614204ad32409cd52dde31 files/digest-xtla-0.1_p525 79
 MD5 df81bd139642a4e4713ba7dbb261cd62 files/digest-xtla-0.9_p38 78
+MD5 2f6e112697864ab93e51a7cdd552214f files/digest-xtla-1.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5TSHyiNZaEAZA+ARAiyOAJwJGEsqnFLGSsBXIh04dTzdxcyFhwCfWlhQ
+KdEGl4xp5C6vwImHTa6wVNk=
+=yK41
+-----END PGP SIGNATURE-----
