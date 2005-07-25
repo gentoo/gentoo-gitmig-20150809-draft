@@ -1,6 +1,14 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.16 2005/04/15 19:27:16 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.17 2005/07/25 06:38:55 mkennedy Exp $
+
+*cmucl-19b (25 Jul 2005)
+
+  25 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/19b/README.Gentoo, +files/19b/cmucl.sh,
+  +files/19b/herald-save.lisp-gentoo.patch, +files/19b/install-clc.lisp,
+  +files/19b/site-init.lisp.in, +cmucl-19b.ebuild:
+  New upstream version.
 
   15 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> -cmucl-18e.ebuild,
   -cmucl-18e-r1.ebuild, -cmucl-18e-r2.ebuild, -cmucl-18e-r3.ebuild,

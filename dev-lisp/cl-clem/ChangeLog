@@ -1,0 +1,11 @@
+# ChangeLog for dev-lisp/cl-clem
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clem/ChangeLog,v 1.1 2005/07/25 06:40:46 mkennedy Exp $
+
+*cl-clem-0.1.3.20050724 (25 Jul 2005)
+
+  25 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.1.3.20050724-fasl-output-gentoo.patch, +metadata.xml,
+  +cl-clem-0.1.3.20050724.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
