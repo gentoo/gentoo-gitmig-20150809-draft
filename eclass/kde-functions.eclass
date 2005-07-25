@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.117 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.118 2005/07/25 15:11:49 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
 # This contains everything except things that modify ebuild variables
 # and functions (e.g. $P, src_compile() etc.)
 
+inherit qt3
 
 # map of the monolithic->split ebuild derivation; used to build deps describing
 # the relationships between them
@@ -803,41 +804,17 @@ need-qt() {
 			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} =x11-libs/${QT}-2.3*"
 			;;
 	    3*)
-			DEPEND="${DEPEND} >=x11-libs/${QT}-${QTVER}"
-			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} >=x11-libs/${QT}-${QTVER}"
+			DEPEND="${DEPEND} $(qt_min_version ${QTVER})"
+			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} $(qt_min_version ${QTVER})"
 			;;
 	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
 	esac
 
-	set-qtdir ${QTVER}
-
 }
 
 set-qtdir() {
-
-	debug-print-function $FUNCNAME $*
-
-
-	# select 1st element in dot-separated string
-	IFSBACKUP=$IFS
-	IFS="."
-	QTMAJORVER=""
-	for x in $1; do
-		[ -z "$QTMAJORVER" ] && QTMAJORVER=$x
-	done
-	IFS=$IFSBACKUP
-
-	# Don't se the QTDIR if it's already set
-	# See bug #61967
-	if [ ! $QTDIR ]; then
-		export QTDIR="/usr/qt/$QTMAJORVER"
-	fi
-
-	# i'm putting this here so that the maximum amount of qt/kde apps gets it -- danarmak
-	# if $QTDIR/etc/settings/qtrc file exists, the qt build tools try to create
-	# a .qtrc.lock file in that directory. It's easiest to allow them to do so.
-	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
-	addpredict "$QTDIR/etc/settings"
+	DONOTHING=1
+	# Functionality not needed anymore
 }
 
 # returns minimal qt version needed for specified kde version
