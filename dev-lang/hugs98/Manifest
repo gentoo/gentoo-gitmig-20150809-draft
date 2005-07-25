@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 ba73c59a7dd935ecb0312384a17b2d3c hugs98-2005.3-r1.ebuild 2237
 MD5 82baad88b726920518455a0b2c393f89 hugs98-2003.11.ebuild 2498
 MD5 9dc6f3b3a7078e9c867754ba5110989e hugs98-2005.3.ebuild 2126
-MD5 fce2a2a8b23eb32acedcd9c566db8c64 ChangeLog 4457
+MD5 87abdb4432d7f2dc975d8d4bed7a2807 ChangeLog 4654
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 eb7ae57bb23e867135381cbd99c5c1c0 files/digest-hugs98-2003.11 67
 MD5 4c6e27fe15252dea9f141e0f6b06ed36 files/hugs98-2003.11-gcc34.patch 303
 MD5 6a471250900fa1157b523eea5bbbe54d files/digest-hugs98-2005.3 67
+MD5 0f560de47a443f3bea9cf87df2e85b81 files/digest-hugs98-2005.3-r1 133
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCPB1SOKSBj1ObwosRAlpzAJ0eMioY880F86J41J7fuetEbxIC/ACeNg4/
-RBndusEEauP/x3WriL4EY4I=
-=3p9K
+iD8DBQFC5RFKkyZuKN4EQ6YRAkkdAJ9wVqfoPJ6RfbsTXDESc6cSdwC+hwCdG0yd
+116hxbp97SvmEtuwZvRqkS0=
+=sdKR
 -----END PGP SIGNATURE-----
