@@ -1,4 +1,9 @@
 # 25 Jul 2005 Guy Martin <gmsoft@gentoo.org>
+# lm_sensors not supported on hppa and ieee1394 not tested
+lm_sensors
+ieee1394
+
+# 25 Jun 2005 Guy Martin <gmsoft@gentoo.org>
 # mono is not yet supported on hppa
 mono
 
