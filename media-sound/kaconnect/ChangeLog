@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kaconnect
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/ChangeLog,v 1.8 2004/12/19 05:50:20 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/ChangeLog,v 1.9 2005/07/25 15:55:24 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> kaconnect-1.1.1.ebuild:
+  Change dep per bug #100235
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   kaconnect-1.1.1.ebuild:
