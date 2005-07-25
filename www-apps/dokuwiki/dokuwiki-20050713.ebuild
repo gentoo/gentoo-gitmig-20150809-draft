@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20050713.ebuild,v 1.1 2005/07/24 22:21:20 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20050713.ebuild,v 1.2 2005/07/25 08:01:11 dholm Exp $
 
 inherit webapp
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://wiki.splitbrain.org/wiki:dokuwiki"
 SRC_URI="http://www.splitbrain.org/Programming/PHP/DokuWiki/${PN}-${MY_PV}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/php"
