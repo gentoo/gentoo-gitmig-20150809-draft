@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clem/cl-clem-0.1.3.20050724.ebuild,v 1.1 2005/07/25 06:40:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clem/cl-clem-0.1.3.20050724.ebuild,v 1.2 2005/07/25 14:34:17 mkennedy Exp $
 
 inherit common-lisp
 
@@ -11,7 +11,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
-DEPEND=""
+DEPEND="dev-lisp/cl-ch-util"
 S=${WORKDIR}/clem
 
 CLPACKAGE='clem clem-test'
