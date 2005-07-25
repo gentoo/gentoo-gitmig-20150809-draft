@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5081a02f13e2880ded249b2390e3921 pd-cyclone-0.1_alpha54.ebuild 996
-MD5 a1834217471d737834e394829b20d665 ChangeLog 508
+MD5 722275017a756b00ebd5cc9ff1d3bd3a ChangeLog 598
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 642218962d130a23e773d99eb65b64a8 pd-cyclone-0.1_alpha54.ebuild 997
 MD5 71d33b7ecd8f7939281e25313e6a8f9e files/digest-pd-cyclone-0.1_alpha54 75
 MD5 858c3f5d3a131a247f63e3a7c648bc09 files/pd-cyclone-0.1_alpha54-fPIC.patch 886
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCY+GD06ebR+OMO78RAkZsAJ9DBoQCr3cJBGCh3uDGHmSRI5++ZQCfZIJ6
-Ea1LH7S6T8VbdqNNm9KMSuQ=
-=uBDs
------END PGP SIGNATURE-----

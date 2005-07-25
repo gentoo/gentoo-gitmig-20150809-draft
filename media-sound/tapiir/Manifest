@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 909c07b2ac966927239b54305fd6b9d2 ChangeLog 424
+MD5 25d7c647b0e7ec03c1f5508294eb8999 ChangeLog 507
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 ecbd48a366051583db953e28c2584f99 tapiir-0.7.1.ebuild 1072
+MD5 a3934d9819ad95cb16f6132eef741675 tapiir-0.7.1.ebuild 1072
 MD5 129400b384f4804d81050abef03da3e8 files/digest-tapiir-0.7.1 64
 MD5 e9418ac273accb63dde90b8282224b25 files/tapiir-0.7.1-gcc3.patch 4632
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZL41Kf2g/qXtneoRAn/IAJ902QnlCzkSoixPhYppdR5vt4fC9gCeP4YR
-f1DrkxeR/rzFvSYTg20GsUs=
-=cr69
------END PGP SIGNATURE-----

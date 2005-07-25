@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 857fc1d9f2fabdbd03e6d1ba976dc4cb ChangeLog 602
+MD5 865666a461c5714d57b172b557a8769d ChangeLog 682
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
-MD5 7cf204aae4344c97ab846967861fc62f workman-1.3.4.ebuild 1271
+MD5 227aeb6c6b8420d618a15a20420a33be workman-1.3.4.ebuild 1271
 MD5 3c168de039634f9f132518cd40c49ccc files/digest-workman-1.3.4 138
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZhnjArHZZzCEUG0RAua6AJ9I/mDL9hJW0fGkyUKYtLZQ6HDPaACfSRf1
-ZXVIlQz3+iRbQXtMwQqevJk=
-=Liln
------END PGP SIGNATURE-----

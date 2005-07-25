@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5fec6d6227127d4de673d26191cd2e8f sooperlooper-1.0.3.ebuild 817
+MD5 f500faba056275cfe16bd09f9bfdf3c7 ChangeLog 528
 MD5 ae2f0ce6b633cd6e8ea199bdabb85098 metadata.xml 227
-MD5 eee708755a41244852e575d3424b010e ChangeLog 439
+MD5 4b53b4a96d7ced2800b59a0c7742fd8f sooperlooper-1.0.3.ebuild 821
 MD5 4c1fc7d5dc09b84ab6f452c0ba4bdf76 files/digest-sooperlooper-1.0.3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdrOwvpz1081QvMkRAtQkAJ0UuaZx2px59uOljN0+DtfzwvMFUQCePgBe
-8cBgs0tJKnMih1vqEKOqeOQ=
-=oTcE
------END PGP SIGNATURE-----
