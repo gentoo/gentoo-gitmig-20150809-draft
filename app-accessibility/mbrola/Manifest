@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fbdfa0106c92a14feafec6f0b3e1bc60 ChangeLog 2846
+MD5 0e2c0c9caaad8fe2286ffe0319625233 ChangeLog 3082
 MD5 91c58b8e208c8000117987eea30b0a00 mbrola-3.0.1h-r1.ebuild 1690
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
-MD5 ff3efa7835654acfaf51d63719e77faf mbrola-3.0.1h-r2.ebuild 2324
+MD5 eb5a71845c47f868f4df88c862f86ac0 mbrola-3.0.1h-r3.ebuild 2292
 MD5 d8e16d3a58393097a056fe4342968b55 files/digest-mbrola-3.0.1h-r1 236
-MD5 8fe36cd238dc7d4e89e3e6b8733cf770 files/digest-mbrola-3.0.1h-r2 991
+MD5 8fe36cd238dc7d4e89e3e6b8733cf770 files/digest-mbrola-3.0.1h-r3 991
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFC4vvTArHZZzCEUG0RAvUSAJ9ntJ2Ri0yMuBW/OLZrImwv3YtSYACY4enO
-/VjlrQg6stH+lundQ9S9cw==
-=ePIU
+iD8DBQFC5UM8ArHZZzCEUG0RAkrHAJ97qfyzcsBMkpWHewQNJx50qupD0QCeIAdp
+PW/f8WGOmZQZ/LEmmaEV6Sk=
+=hsmW
 -----END PGP SIGNATURE-----

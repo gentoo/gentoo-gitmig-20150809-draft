@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r2.ebuild,v 1.3 2005/07/24 02:23:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r3.ebuild,v 1.1 2005/07/25 19:52:31 eradicator Exp $
 
 IUSE=""
 
@@ -36,50 +36,48 @@ LICENSE="MBROLA"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 src_unpack () {
-	if [ "${A}" != "" ]; then
-		unpack ${A}
+	unpack ${A}
 
-		case ${ARCH} in
-			x86|amd64)
-				cp mbrola-linux-i386 mbrola || die
-				;;
-			ppc)
-				cp mbrola206a-linux-ppc mbrola || die
-				;;
-			sparc)
-				cp mbrola-SuSElinux-ultra1.dat mbrola || die
-				;;
-			alpha)
-				cp mbrola-linux-alpha mbrola || die
-				;;
-			*)
-				einfo "mbrola binary not available on this architecture.  Still installing voices."
-		esac
-	fi
+	case ${ARCH} in
+		x86|amd64)
+			cp mbrola-linux-i386 mbrola || die
+			;;
+		ppc)
+			cp mbrola206a-linux-ppc mbrola || die
+			;;
+		sparc)
+			cp mbrola-SuSElinux-ultra1.dat mbrola || die
+			;;
+		alpha)
+			cp mbrola-linux-alpha mbrola || die
+			;;
+		*)
+			einfo "mbrola binary not available on this architecture.  Still installing voices."
+	esac
 }
 
 src_install () {
-	exeinto /opt/${PN}/bin
+	exeinto /opt/${PN}
 
 	# Take care of main binary
-	[ -f mbrola ] && doexe mbrola
+	[[ -f "mbrola" ]] && doexe mbrola
 
 	dodoc readme.txt
 
 	for voice in ??[0-9]; do
 		insinto /opt/${PN}/${voice}
-		[ -f ${voice}/license.txt ] && doins ${voice}/license.txt
-		[ -f ${voice}/${voice} ] && doins ${voice}/${voice}
-		[ -f ${voice}/${voice}mrpa ] && doins ${voice}/${voice}mrpa
+		[[ -f "${voice}/license.txt" ]] && doins ${voice}/license.txt
+		[[ -f "${voice}/${voice}" ]] && doins ${voice}/${voice}
+		[[ -f "${voice}/${voice}mrpa" ]] && doins ${voice}/${voice}mrpa
 
-		if [ -d ${voice}/TEST ]; then
+		if [[ -d "${voice}/TEST" ]]; then
 			insinto /opt/${PN}/${voice}/TEST
 			doins ${voice}/TEST/*
 		fi
 
-		[ -f ${voice}/${voice}.txt ] && dodoc ${voice}/${voice}.txt
+		[[ -f "${voice}/${voice}.txt" ]] && dodoc ${voice}/${voice}.txt
 	done
 
 	dodir /opt/bin
-	dosym /opt/${PN}/bin/mbrola /opt/bin/mbrola
+	dosym /opt/${PN}/mbrola /opt/bin/mbrola
 }
