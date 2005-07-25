@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jsynthlib/jsynthlib-0.19_pre20041220.ebuild,v 1.1 2005/01/10 04:50:56 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jsynthlib/jsynthlib-0.19_pre20041220.ebuild,v 1.2 2005/07/25 12:47:46 dholm Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.jsynthlib.org/"
 SRC_URI="http://dev.gentoo.org/~jnc/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="jikes"
 
 DEPEND=">=virtual/jdk-1.4
