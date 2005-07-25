@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.1.3.ebuild,v 1.4 2005/06/17 21:05:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.1.3.ebuild,v 1.5 2005/07/25 17:44:16 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 DESCRIPTION="Luma is a graphical utility for accessing and managing data stored on LDAP servers."
 HOMEPAGE="http://luma.sourceforge.net/"
@@ -13,12 +13,12 @@ SLOT="0"
 KEYWORDS="ppc ~sparc x86"
 IUSE="samba"
 
-RDEPEND=">=x11-libs/qt-3.2
+RDEPEND="$(qt_min_version 3.2)
 	>=dev-lang/python-2.3
 	>=dev-python/PyQt-3.10
 	>=dev-python/python-ldap-2.0.1
 	samba? ( >=dev-python/py-smbpasswd-1.0 )"
-DEPEND=">=x11-libs/qt-3.2
+DEPEND="$(qt_min_version 3.2)
 	>=dev-lang/python-2.3
 	>=dev-python/PyQt-3.10
 	>=dev-python/python-ldap-2.0.1
