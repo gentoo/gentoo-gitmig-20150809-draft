@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.14.1.ebuild,v 1.5 2005/07/22 23:23:12 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.14.1.ebuild,v 1.6 2005/07/25 18:09:09 battousai Exp $
 
 inherit toolchain-funcs eutils
 
@@ -18,6 +18,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	epatch ${FILESDIR}/${PN}-0.14.x-gcc4-the-sentinels-have-attacked.patch
 
 	# Put stuff into /usr, also switch up the CC and CFLAGS stuff.
 	sed -i -e "s:BINDIR = \\\$(DESTDIR)/usr/local/bin:BINDIR = ${D}/usr/bin:g" ${S}/Makefile

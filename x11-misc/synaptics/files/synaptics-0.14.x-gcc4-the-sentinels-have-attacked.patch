@@ -1,0 +1,16 @@
+--- Xincludes/usr/X11R6/include/X11/Xfuncproto.h.orig	2005-07-02 12:50:40.000000000 +0200
++++ Xincludes/usr/X11R6/include/X11/Xfuncproto.h	2005-07-25 08:13:46.000000000 +0200
+@@ -69,4 +69,12 @@
+ #endif
+ #endif /* _XFUNCPROTOBEGIN */
+ 
++#if defined(__GNUC__) && (__GNUC__ >= 4)
++# define _X_SENTINEL(x) __attribute__ ((__sentinel__(x)))
++# define _X_ATTRIBUTE_PRINTF(x,y) __attribute__((__format__(__printf__,x,y)))
++#else
++# define _X_SENTINEL(x)
++# define _X_ATTRIBUTE_PRINTF(x,y)
++#endif /* GNUC >= 4 */
++
+ #endif /* _XFUNCPROTO_H_ */
+
