@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.10 2005/07/15 22:49:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.11 2005/07/25 17:51:35 caleb Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic qt3
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:0:6}
@@ -30,7 +30,7 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	esd? ( >=media-sound/esound-0.2.28 )
 	mad? ( media-libs/libmad )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
-	qt? ( >=x11-libs/qt-3.0.3 )
+	qt? ( $(qt_min_version 3.1) )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
 	truetype? ( >=media-libs/freetype-2.1 )
 	xv? ( virtual/x11 )
