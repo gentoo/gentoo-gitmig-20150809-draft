@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1339 2005/07/24 22:09:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1340 2005/07/25 09:52:50 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -514,6 +514,7 @@ media-tv/mythtv:nvidia - Enable nVidia XvMC decoding support
 media-tv/mythtv:unichrome - Enable VIA Unichrome hardware MPEG decoding
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/xdtv:aqua_theme - Enable graphic theme Aqua-style
+media-tv/xdtv:carbone_theme - Adds the Carbone pixmaps theme for the GUI
 media-tv/xdtv:zvbi - Enable VBI Decoding Library for Zapping
 media-video/avifile:dmalloc - Enable support for the Debug Malloc Library
 media-video/avifile:dpms - Enable support for DPMS
