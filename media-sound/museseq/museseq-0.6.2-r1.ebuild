@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.8 2005/07/09 19:10:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.9 2005/07/25 15:54:45 caleb Exp $
 
 IUSE="jack fluidsynth ladcca doc alsa"
 
 inherit virtualx eutils kde-functions
-need-qt 3
 
 MY_P=muse-${PV}
 DESCRIPTION="The Linux (midi) MUSic Editor (a sequencer)"
@@ -18,7 +17,7 @@ KEYWORDS="x86 amd64 ~sparc"
 
 DEPEND="alsa? ( media-libs/alsa-lib )
 	>=media-libs/libsndfile-1.0.4
-	>=x11-libs/qt-3.1.0
+	$(qt_min_version 3.1)
 	ladcca? ( >=media-libs/ladcca-0.4.0 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	fluidsynth? ( media-sound/fluidsynth )

@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.4.2.ebuild,v 1.4 2005/05/11 07:37:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.4.2.ebuild,v 1.5 2005/07/25 15:50:15 caleb Exp $
 
 IUSE="alsa jack"
 
-inherit eutils
+inherit eutils qt3
 
 S="${WORKDIR}/${P}/src"
 
@@ -17,7 +17,7 @@ SLOT="0"
 # -amd64: 1.4.2 - static noise comes out of speakers at startup - eradicator
 KEYWORDS="-amd64 sparc x86 ~ppc"
 
-DEPEND=">=x11-libs/qt-3.1.0
+DEPEND="$(qt_min_version 3.1)
 	media-sound/madplay
 	media-libs/libogg
 	media-libs/libvorbis

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.29 2005/05/11 07:37:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.30 2005/07/25 15:50:15 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> mixxx-1.2.1.ebuild,
+  mixxx-1.4.1.ebuild, mixxx-1.4.2.ebuild:
+  Fix qt dep per bug #100235
 
   11 May 2005; David Holm <dholm@gentoo.org> mixxx-1.4.2.ebuild:
   Added to ~ppc.

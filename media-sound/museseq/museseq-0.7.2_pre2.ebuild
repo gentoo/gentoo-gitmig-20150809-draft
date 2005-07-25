@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.2_pre2.ebuild,v 1.2 2005/07/25 07:59:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.2_pre2.ebuild,v 1.3 2005/07/25 15:54:45 caleb Exp $
 
 inherit kde-functions virtualx eutils
-need-qt 3
 
 MY_P=${P/museseq/muse}
 MY_P=${MY_P/_/}
@@ -17,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc ladcca debug"
 
-DEPEND=">=x11-libs/qt-3.2.0
+DEPEND="$(qt_min_version 3.2)
 	>=media-libs/alsa-lib-0.9.0
 	media-sound/fluidsynth
 	doc? ( app-text/openjade

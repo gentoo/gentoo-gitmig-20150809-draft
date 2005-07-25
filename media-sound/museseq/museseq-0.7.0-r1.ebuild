@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.0-r1.ebuild,v 1.4 2005/05/15 14:43:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.0-r1.ebuild,v 1.5 2005/07/25 15:54:45 caleb Exp $
 
 inherit kde-functions virtualx eutils
-need-qt 3
 
 MY_P=${P/museseq/muse}
 DESCRIPTION="The Linux (midi) MUSic Editor (a sequencer)"
@@ -16,7 +15,7 @@ KEYWORDS="~x86"
 #IUSE="fluidsynth doc ladcca sdk debug"
 IUSE="fluidsynth doc ladcca debug"
 
-DEPEND=">=x11-libs/qt-3.2.0
+DEPEND="$(qt_min_version 3.2)
 	>=media-libs/alsa-lib-0.9.0
 	fluidsynth?	( media-sound/fluidsynth )
 	doc? ( app-text/openjade
