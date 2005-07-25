@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7.ebuild,v 1.13 2004/06/24 22:28:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7.ebuild,v 1.14 2005/07/25 19:28:10 smithj Exp $
 
 _P=Login.app-2.0.0-Alpha-7
 S=${WORKDIR}/${_P}
@@ -13,7 +13,7 @@ DEPEND=">=x11-libs/libPropList-0.10.1
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2
 	>=media-libs/tiff-3.5.7
-	>=media-libs/libungif-4.1.0
+	media-libs/giflib
 	>=x11-wm/windowmaker-0.80.0"
 
 LICENSE="GPL-2"

@@ -1,7 +1,17 @@
-MD5 657bfb2f9e6f672e349e33620baeb7e2 ChangeLog 872
-MD5 88f2b98fbe0bdc359d83cc5320e381be login-app-2.0.0_alpha7.ebuild 859
-MD5 0bb6bab2808ee05279a4d3d28a7c0509 login-app-2.0.0_alpha7-r1.ebuild 1041
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 75be0af751a7793e1bcc24fe4ad748f9 ChangeLog 1037
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
+MD5 961f9ca6c4230c399cd9db7e935f6b9a login-app-2.0.0_alpha7-r1.ebuild 1031
+MD5 f9207ee4dfc6e0a8ebd82d953210ec8b login-app-2.0.0_alpha7.ebuild 847
 MD5 242ad5512ec9aa8ae4a655379ae0baa2 files/digest-login-app-2.0.0_alpha7 75
 MD5 242ad5512ec9aa8ae4a655379ae0baa2 files/digest-login-app-2.0.0_alpha7-r1 75
 MD5 acba8cb6c040d505ef53f616b5d1f2d9 files/login-app-windowmaker.patch 737
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5T10l5AvwDPiUowRAsj1AJ9VYFqzdlYEIBx0Z40d6sAn5DQOqwCgxsM6
+MpsGU1XKP/CBJtKhUNTv1/g=
+=nYcd
+-----END PGP SIGNATURE-----
