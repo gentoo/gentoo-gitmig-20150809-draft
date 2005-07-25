@@ -1,6 +1,9 @@
 # ChangeLog for games-board/mahjongg3d
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.6 2005/05/21 23:19:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.7 2005/07/25 15:44:50 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> mahjongg3d-0.96.ebuild:
+  Fix qt dep per bug #100235
 
   21 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
   -mahjongg3d-0.95.ebuild, mahjongg3d-0.96.ebuild:
