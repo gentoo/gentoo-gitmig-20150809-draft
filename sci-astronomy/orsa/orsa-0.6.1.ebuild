@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.6.1.ebuild,v 1.5 2004/12/29 03:04:03 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.6.1.ebuild,v 1.6 2005/07/25 17:46:22 caleb Exp $
 
-inherit base flag-o-matic
+inherit base flag-o-matic qt3
 
 DESCRIPTION="Orbit Reconstruction, Simulation and Analysis"
 HOMEPAGE="http://orsa.sourceforge.net/"
@@ -18,7 +18,7 @@ S="${WORKDIR}/${P/_/-}"
 DEPEND="virtual/libc
 	fftw? ( =sci-libs/fftw-2.1* )
 	>=sci-libs/gsl-1.3
-	qt? ( >=x11-libs/qt-3.3 )
+	qt? ( $(qt_min_version 3.3) )
 	>=sys-libs/readline-4.2
 	mpi? ( sys-cluster/lam-mpi )
 	ginac? ( >=sci-mathematics/ginac-1.2.0 )
