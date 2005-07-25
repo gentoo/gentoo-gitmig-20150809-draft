@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.9 2005/07/23 19:54:11 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.10 2005/07/25 11:08:21 mattam Exp $
 
 inherit eutils
 
@@ -29,11 +29,22 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-gcc34.patch
+	aclocal
 	autoreconf
 }
 
 src_compile() {
 	use debug && myconf="$myconf --enable-debug"
+
+	myconf="$myconf $(use_with svg rsvg)"
+
+	myconf="$myconf $(use_with glade)"
+
+	myconf="$myconf $(use_with gnome gnomecanvas)"
+	myconf="$myconf $(use_with gnome gnomeui)"
+	myconf="$myconf $(use_with gnome panel)"
+
+	myconf="$myconf $(use_with opengl gl)"
 
 	econf $myconf || die "configure failed"
 	make all opt || die "make failed"
