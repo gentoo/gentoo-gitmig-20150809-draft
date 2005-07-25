@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0-r2.ebuild,v 1.3 2005/07/25 22:21:54 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0-r2.ebuild,v 1.4 2005/07/25 23:52:31 herbs Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="kde sse 3dnow openal xscreensaver"
 
 DEPEND="virtual/x11
@@ -65,9 +65,14 @@ src_compile() {
 		myconf="${myconf} --with-kdessconfigdir=/usr/share/applnk/System/ScreenSavers"
 	fi
 
+	# Hardenable SIMD extensions on amd64
+	if use amd64 ; then
+		myconf="${myconf} --enable-sse --enable-3dnow"
+	elif use x86 ; then
+		myconf="${myconf} $(use_enable sse) $(use_enable 3dnow)"
+	fi
+
 	econf \
-		$(use_enable sse) \
-		$(use_enable 3dnow) \
 		$(use_enable openal sound) \
 		${myconf} || die "econf failed"
 	emake || die "emake failed"

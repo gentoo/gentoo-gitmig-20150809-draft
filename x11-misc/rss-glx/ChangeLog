@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.34 2005/07/25 22:21:54 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.35 2005/07/25 23:52:31 herbs Exp $
+
+  25 Jul 2005; Herbie Hopkins <herbs@gentoo.org> rss-glx-0.8.0-r2.ebuild:
+  Stable on amd64 wrt bug #100298.
 
   25 Jul 2005; Jonathan Smith <smithj@gentoo.org> -rss-glx-0.7.6-r1.ebuild,
   -rss-glx-0.8.0.ebuild, rss-glx-0.8.0-r2.ebuild:
