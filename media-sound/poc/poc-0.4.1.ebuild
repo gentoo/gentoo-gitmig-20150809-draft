@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/poc/poc-0.4.1.ebuild,v 1.2 2005/05/07 08:47:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/poc/poc-0.4.1.ebuild,v 1.3 2005/07/25 19:05:39 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.bl0rg.net/software/poc/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="sys-devel/flex

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8-r1.ebuild,v 1.2 2005/02/06 03:20:00 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8-r1.ebuild,v 1.3 2005/07/25 19:15:53 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="${P}.tar.gz ${P}-updated_tcl2c.patch.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 IUSE=""
 

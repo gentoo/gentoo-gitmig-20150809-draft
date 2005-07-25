@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.11-r1.ebuild,v 1.1 2005/06/04 11:09:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.11-r1.ebuild,v 1.2 2005/07/25 19:09:07 dholm Exp $
 
 inherit virtualx
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.sacredchao.net/~piman/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE="alsa mad vorbis"
 
 DEPEND=">=virtual/python-2.3

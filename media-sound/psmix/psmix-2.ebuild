@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/psmix/psmix-2.ebuild,v 1.10 2004/09/15 17:19:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/psmix/psmix-2.ebuild,v 1.11 2005/07/25 19:06:44 dholm Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.geocities.com/pssoft7/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 DEPEND="x11-libs/gtk+
 	sys-libs/gdbm"

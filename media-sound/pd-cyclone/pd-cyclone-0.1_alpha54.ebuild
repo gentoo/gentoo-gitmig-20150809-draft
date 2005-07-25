@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd-cyclone/pd-cyclone-0.1_alpha54.ebuild,v 1.1 2005/04/18 16:33:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd-cyclone/pd-cyclone-0.1_alpha54.ebuild,v 1.2 2005/07/25 19:05:38 dholm Exp $
 
 inherit eutils versionator
 
@@ -11,7 +11,7 @@ SRC_URI="http://suita.chopin.edu.pl/~czaja/miXed/externs/cyclone-${MY_PV}-src.ta
 
 LICENSE="|| ( BSD as-is )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 S=${WORKDIR}/cyclone

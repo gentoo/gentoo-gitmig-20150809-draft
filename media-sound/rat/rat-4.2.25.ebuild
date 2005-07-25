@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/rat-4.2.25.ebuild,v 1.1 2004/11/23 04:39:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/rat-4.2.25.ebuild,v 1.2 2005/07/25 19:10:17 dholm Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/releases/${PV}/${P
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 
 DEPEND="=dev-lang/tcl-8.4*
 	=dev-lang/tk-8.4*"

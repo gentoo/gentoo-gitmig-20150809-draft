@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/workman/workman-1.3.4.ebuild,v 1.3 2004/10/08 04:38:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/workman/workman-1.3.4.ebuild,v 1.4 2005/07/25 19:18:20 dholm Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://debian/pool/main/w/workman/${PN}_${PV}.orig.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 #-amd64: 1.3.4: nothing displayed - eradicator
-KEYWORDS="-amd64 ~sparc ~x86"
+KEYWORDS="-amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=x11-libs/xview-3.2
 	sys-apps/groff"

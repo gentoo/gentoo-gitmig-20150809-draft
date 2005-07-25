@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/splay
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.10 2005/04/04 17:00:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.11 2005/07/25 19:12:32 dholm Exp $
+
+  25 Jul 2005; David Holm <dholm@gentoo.org> splay-0.9.5.2.ebuild:
+  Added to ~ppc.
 
   04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   +files/splay-0.9.5.2-external-id3lib.diff, splay-0.9.5.2.ebuild:
