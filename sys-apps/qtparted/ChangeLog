@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/qtparted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.18 2005/07/25 14:43:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.19 2005/07/25 18:58:13 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> qtparted-0.4.4.ebuild,
+  qtparted-0.4.4-r1.ebuild:
+  Change Qt dep per bug #100235
 
   25 Jul 2005; Caleb Tennis <caleb@gentoo.org> -qtparted-0.4.0.ebuild:
   Remove old version

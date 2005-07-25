@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.4.ebuild,v 1.7 2005/03/11 21:05:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.4.ebuild,v 1.8 2005/07/25 18:58:13 caleb Exp $
 
-inherit kde
-need-qt 3.1
+inherit qt3
 
 DESCRIPTION="nice Qt partition tool for Linux"
 HOMEPAGE="http://qtparted.sourceforge.net/"
@@ -14,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-3.1.0
+DEPEND="$(qt_min_version 3.1.0)
 	>=sys-apps/parted-1.6.6
 	>=sys-fs/e2fsprogs-1.33
 	>=sys-fs/xfsprogs-2.3.9
