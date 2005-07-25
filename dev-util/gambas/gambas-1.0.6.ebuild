@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.6.ebuild,v 1.3 2005/06/05 19:00:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.6.ebuild,v 1.4 2005/07/25 15:42:56 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 DESCRIPTION="a RAD tool for BASIC"
 HOMEPAGE="http://gambas.sourceforge.net/"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 -amd64"
 IUSE="postgres mysql sdl doc curl sqlite xml xsl zlib kde bzip2"
 
-RDEPEND=">=x11-libs/qt-3.2
+RDEPEND="$(qt_min_version 3.2)
 	kde? ( >=kde-base/kdelibs-3.2 )
 	sdl? ( media-libs/libsdl media-libs/sdl-mixer sys-libs/gpm )
 	mysql? ( dev-db/mysql )

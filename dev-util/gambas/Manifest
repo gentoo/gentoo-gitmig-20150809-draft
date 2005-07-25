@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 959e00bd378d2b72d34d3dad55c28e94 gambas-1.0.5.ebuild 2140
+MD5 b5b25e3218c0134b7780c76920fe96bb gambas-1.0.4.ebuild 2351
+MD5 d73ef6460482905beb6c1c9e370194d9 gambas-1.0.6.ebuild 2206
+MD5 6125a86030a1cfb4c92c36fd1eeccbae ChangeLog 5891
 MD5 622720c5c5e309d4457ff037f8a4175f metadata.xml 222
-MD5 d8b7442f0367dd85ce1f240966883c9e gambas-1.0.6.ebuild 2199
-MD5 e36236df3cf8b26b5e8ac1b6f45fb41a ChangeLog 5747
-MD5 33d0e74f564ecce5e64b845e6c2566ed gambas-1.0.4.ebuild 2344
-MD5 9e69535f56b0579bbc292b2d1e905310 gambas-1.0.5.ebuild 2133
 MD5 39016f3bbaf4069a963b10796d8f48f1 files/WebHome.html 692
-MD5 13a65dd33d4fd1d346206b80aaf3a1ff files/Makefile.am-0.97a 1528
-MD5 cb40c4d6cc8de988f3e5d60e53108472 files/Makefile.am-1.0_rc2 1508
+MD5 26e90319af1c1f8fb9b241d343873450 files/gambas-1.0.6-configure-CFLAGS.patch 1084
 MD5 0b4e0cd89a1d1ed6a2250a19918528f9 files/digest-gambas-1.0.4 66
 MD5 265e986859806469c43d4ad4cebbf967 files/digest-gambas-1.0.5 66
 MD5 c80f56d2c20740d7fc88680854d7d36f files/digest-gambas-1.0.6 66
-MD5 26e90319af1c1f8fb9b241d343873450 files/gambas-1.0.6-configure-CFLAGS.patch 1084
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCo0096J2i8a8J4okRAi3oAJ9FD0ZB/4Z/RpjbF5z/sB3GY+th+wCgjAPX
-qZgLaEbs4iX5Acp+q3TcV1k=
-=k7kM
------END PGP SIGNATURE-----
+MD5 cb40c4d6cc8de988f3e5d60e53108472 files/Makefile.am-1.0_rc2 1508
+MD5 13a65dd33d4fd1d346206b80aaf3a1ff files/Makefile.am-0.97a 1528
