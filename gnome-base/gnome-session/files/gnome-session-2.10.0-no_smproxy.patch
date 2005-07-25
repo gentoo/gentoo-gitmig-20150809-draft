@@ -1,0 +1,61 @@
+diff -NurdB gnome-session-2.10.0/Makefile.am gnome-session-2.10.0-patched/Makefile.am
+--- gnome-session-2.10.0/Makefile.am	2004-10-06 20:28:43.000000000 -0500
++++ gnome-session-2.10.0-patched/Makefile.am	2005-07-25 14:48:44.000000000 -0500
+@@ -1,7 +1,6 @@
+ SUBDIRS =			\
+ 	po 			\
+ 	gnome-session		\
+-	smproxy 		\
+ 	man
+ 
+ EXTRA_DIST =			\
+diff -NurdB gnome-session-2.10.0/README gnome-session-2.10.0-patched/README
+--- gnome-session-2.10.0/README	2004-10-12 11:42:25.000000000 -0500
++++ gnome-session-2.10.0-patched/README	2005-07-25 14:49:42.000000000 -0500
+@@ -2,16 +2,13 @@
+ ===================
+ 
+ 	This package is free software and is part of the
+-GNOME 2.0 project.
++GNOME project.
+ 
+ 	Contained here are
+ 	   * the GNOME session manager
+ 	   * the GNOME session manager configuration program
+ 	     and several other session management related
+ 	     utilities.  
+-	   * the GNOME session manager proxy, which handles
+-	     basic session management for applications that
+-	     do not support XSM. 
+ 
+ You may download updates to the package from:
+    ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/gnome-session
+diff -NurdB gnome-session-2.10.0/configure.in gnome-session-2.10.0-patched/configure.in
+--- gnome-session-2.10.0/configure.in	2005-03-07 06:35:25.000000000 -0500
++++ gnome-session-2.10.0-patched/configure.in	2005-07-25 14:48:37.000000000 -0500
+@@ -59,8 +59,6 @@
+ 
+ PKG_CHECK_MODULES(GNOME_SESSION, gtk+-2.0 >= $GTK_REQUIRED libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED $ESOUND_MODULE)
+ 
+-PKG_CHECK_MODULES(SMPROXY, libgnome-2.0)
+-
+ dnl gconf checks
+ AC_PATH_PROG(GCONFTOOL, gconftool-2, no)
+ 
+@@ -376,7 +374,6 @@
+ man/default.session.5
+ man/gnome-session.1
+ po/Makefile.in
+-smproxy/Makefile
+ man/Makefile
+ ])
+ 
+diff -NurdB gnome-session-2.10.0/man/Makefile.am gnome-session-2.10.0-patched/man/Makefile.am
+--- gnome-session-2.10.0/man/Makefile.am	2002-12-09 18:35:30.000000000 -0500
++++ gnome-session-2.10.0-patched/man/Makefile.am	2005-07-25 14:50:07.000000000 -0500
+@@ -1,5 +1,4 @@
+ man_MANS =			\
+-	gnome-smproxy.1		\
+ 	gnome-session-save.1	\
+ 	session-properties.1	\
+ 	gnome-wm.1		\
