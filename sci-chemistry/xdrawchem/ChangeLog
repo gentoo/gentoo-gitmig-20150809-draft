@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/xdrawchem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.14 2005/06/16 15:14:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.15 2005/07/25 17:43:03 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> xdrawchem-1.9.4.ebuild,
+  xdrawchem-1.9.5.ebuild, xdrawchem-1.9.6.ebuild:
+  Change qt dep per bug #100235
 
   16 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   xdrawchem-1.9.5.ebuild:
