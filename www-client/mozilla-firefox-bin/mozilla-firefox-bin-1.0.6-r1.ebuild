@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.0.6-r1.ebuild,v 1.3 2005/07/22 20:39:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.0.6-r1.ebuild,v 1.4 2005/07/25 02:55:25 agriffis Exp $
 
-inherit eutils mozilla-launcher
+inherit eutils mozilla-launcher multilib
 
 DESCRIPTION="Firefox Web Browser"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/linux-i686/en-US/firefox-${PV}.tar.gz"

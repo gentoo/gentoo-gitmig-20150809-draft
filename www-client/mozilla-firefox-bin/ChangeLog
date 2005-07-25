@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.21 2005/07/22 20:39:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.22 2005/07/25 02:55:24 agriffis Exp $
+
+  25 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-bin-1.0.5-r1.ebuild, -mozilla-firefox-bin-1.0.6.ebuild,
+  mozilla-firefox-bin-1.0.6-r1.ebuild:
+  Need to inherit multilib for has_multilib_profile. Remove obsolete ~arch
+  ebuild
 
   22 Jul 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-bin-1.0.6-r1.ebuild:

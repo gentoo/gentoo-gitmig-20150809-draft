@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.0.5-r1.ebuild,v 1.2 2005/07/18 15:22:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.0.5-r1.ebuild,v 1.3 2005/07/25 02:55:25 agriffis Exp $
 
-inherit nsplugins eutils mozilla-launcher
+inherit nsplugins eutils mozilla-launcher multilib
 
 IUSE="gnome"
 
