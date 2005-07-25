@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.8-r1.ebuild,v 1.2 2005/06/29 22:15:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.8-r1.ebuild,v 1.3 2005/07/25 15:56:14 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 S="${WORKDIR}/quickrip"
 DESCRIPTION="Basic DVD ripper written in Python with Qt and command line interfaces."
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 -mips -ppc x86"
 IUSE=""
 DEPEND="virtual/libc
 	>=dev-lang/python-2.2
-	>=x11-libs/qt-3.1
+	$(qt_min_version 3.1)
 	>=dev-python/PyQt-3.5-r1
 	media-video/mplayer
 	media-video/transcode"
