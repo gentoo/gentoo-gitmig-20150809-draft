@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d69f3181478521713750b1df501674d dc-qt-0.1.2.ebuild 749
-MD5 041d3ffcca63a2487034d0f0d3ea7126 dc-qt-0.1.1.ebuild 592
-MD5 993414cafa80d167b7ba68584afcb701 ChangeLog 1005
+MD5 94164c12feae1fd62f9d3d9bb4aeb7d1 dc-qt-0.1.2.ebuild 753
+MD5 a7ffd9d3735d05b5c61c234a426bd6fc dc-qt-0.1.1.ebuild 605
+MD5 1c6d4a69a91e8bbaa25a468b84af1f3e ChangeLog 1123
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 fe34adba3eb30acbaad41e5a3810e43d files/digest-dc-qt-0.1.1 63
 MD5 ef47fcbc65c62e42221344d25cbf0da4 files/digest-dc-qt-0.1.2 63
 MD5 09f64448af1ec94a4d7aa3681d61bd8d files/dc-qt-0.1.2-xine.patch 932
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1XFRZ/iYVBmujdURAtbRAKDbq/X/B1vCvwa3ZN56o9E4Y6brdgCgkwFU
-WG0D6pCwtLB+rB9eKV6MJXI=
-=He7t
------END PGP SIGNATURE-----
