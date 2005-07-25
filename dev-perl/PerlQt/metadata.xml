@@ -3,8 +3,12 @@
 <pkgmetadata>
 	<herd>perl</herd>
 	<maintainer>
-		<email>perl@gentoo.org</email>
+		<email>caleb@gentoo.org</email>
 		<description>Primary Maintainer</description>
+	</maintainer>
+	<maintainer>
+		<email>perl@gentoo.org</email>
+		<description>Secondary Maintainer</description>
 	</maintainer>
 	<longdescription></longdescription>
 </pkgmetadata>
