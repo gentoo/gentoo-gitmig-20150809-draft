@@ -1,4 +1,4 @@
-MD5 c7a39ad588724754b1bd88726a551b30 ChangeLog 352
-MD5 e7a10e54d000133a1a34609fbe647806 xwgui2-2.08.ebuild 1349
-MD5 52fe5f4a1d13e28251612ad711a68354 files/xwgui2-2.08-makefilediff.patch 866
+MD5 7041709cffbb0b8eeebcb7fc41496634 ChangeLog 432
+MD5 9e1d07bdaa719f67a236153262d12506 xwgui2-2.08.ebuild 1350
 MD5 3c20b8804ee3f88f145aafa599c07b43 files/digest-xwgui2-2.08 62
+MD5 52fe5f4a1d13e28251612ad711a68354 files/xwgui2-2.08-makefilediff.patch 866
