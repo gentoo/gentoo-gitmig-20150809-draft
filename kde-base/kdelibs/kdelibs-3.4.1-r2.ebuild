@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.1-r2.ebuild,v 1.1 2005/07/10 20:16:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.1-r2.ebuild,v 1.2 2005/07/25 15:19:25 caleb Exp $
 
 inherit kde flag-o-matic eutils multilib
-set-qtdir 3
 set-kdedir 3.4
 
 DESCRIPTION="KDE libraries needed by all kde programs"
@@ -18,7 +17,7 @@ IUSE="alsa arts cups doc jpeg2k kerberos openexr spell ssl tiff zeroconf"
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
 RDEPEND="arts? ( ~kde-base/arts-${PV} )
-	>=x11-libs/qt-3.3.3
+	$(qt_min_version 3.3.3)
 	app-arch/bzip2
 	>=dev-libs/libxslt-1.1.4
 	>=dev-libs/libxml2-2.6.6

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.3-r9.ebuild,v 1.7 2005/07/08 23:20:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.3-r9.ebuild,v 1.8 2005/07/25 15:19:25 caleb Exp $
 
 inherit kde eutils
 
@@ -41,7 +41,7 @@ DEPEND=">=sys-devel/autoconf-2.58
 	media-libs/libart_lgpl
 	sys-devel/gettext
 	~kde-base/arts-1.2.3
-	>=x11-libs/qt-3.2.3"
+	$(qt_min_version 3.2.3)"
 RDEPEND="${DEPEND}
 	app-text/sgml-common
 	cups? ( net-print/cups )

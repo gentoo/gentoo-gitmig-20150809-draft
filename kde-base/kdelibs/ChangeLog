@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.264 2005/07/22 21:53:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.265 2005/07/25 15:19:25 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> kdelibs-3.2.3-r7.ebuild,
+  kdelibs-3.2.3-r9.ebuild, kdelibs-3.3.2-r9.ebuild,
+  kdelibs-3.3.2-r10.ebuild, kdelibs-3.4.0-r2.ebuild,
+  kdelibs-3.4.1-r1.ebuild, kdelibs-3.4.1-r2.ebuild:
+  Remove set-qtdir statements and change qt deps to use qt_min_version per bug
+  #100235
 
   22 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   kdelibs-3.3.2-r10.ebuild:

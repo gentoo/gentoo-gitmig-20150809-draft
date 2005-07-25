@@ -1,41 +1,31 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 35642afad936bc4714ea938c1152c7ee kdelibs-3.4.0-r2.ebuild 3471
-MD5 975751f6e12745a21729369a32d9bc5b ChangeLog 42347
+MD5 04b84a845382b98dd9d9dde7f97149ff kdelibs-3.4.1-r1.ebuild 3357
+MD5 ee740b36764083b6ddebea5c336fdf93 kdelibs-3.3.2-r9.ebuild 4239
+MD5 a0a423eb46bcca9f140b0a97645a0177 kdelibs-3.3.2-r10.ebuild 4318
+MD5 97766212645b832cda19843b15698607 kdelibs-3.2.3-r7.ebuild 3566
+MD5 4c8133984e9f62c27f374d6d9bfad4fa kdelibs-3.4.1-r2.ebuild 3350
+MD5 a2754ea94836037eda37593282978e6c kdelibs-3.2.3-r9.ebuild 3831
+MD5 46e30b6cf3af4a8a8ddc40e721334b10 ChangeLog 42665
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 32fa38e337bdc93fc7fef176e76c18d6 kdelibs-3.2.3-r7.ebuild 3565
-MD5 02f2da44089df832481a6066c2a71fb3 kdelibs-3.4.1-r2.ebuild 3358
-MD5 5f037b266d49d92331b2b449e8b10fab kdelibs-3.2.3-r9.ebuild 3830
-MD5 60569a39779d2dc6df0e10b7fba66412 kdelibs-3.3.2-r10.ebuild 4315
-MD5 3e2e72f881b6bd72528922777d0b0b35 kdelibs-3.4.1-r1.ebuild 3367
-MD5 a22f453221b250479669277a770541f5 kdelibs-3.3.2-r9.ebuild 4238
-MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r9 517
-MD5 b174d4e6ed2d0fd78fa43a40654f9ea4 files/post-3.2.3-kdelibs-idn.patch 2337
-MD5 296419fbb169c4d87ace85d1e1645652 files/kdelibs-3.4.0-form-freeze.patch 660
-MD5 2f2e57269ffc653aa3c0884c9492fb16 files/digest-kdelibs-3.4.0-r2 148
-MD5 40783b984dcb127c8852246f7eb0a1e8 files/kdelibs-3.3.2-ppc64.patch 957
-MD5 7e082af5fd71b9b01d01a86f31646499 files/post-3.3.2-kdelibs-htmlframes2.patch 989
-MD5 b291a4a134cac9072ad1140a78eee9ce files/kdelibs-3.4.1-kntlm.patch 1323
-MD5 5e9c627e4e9e367ce88ed62a0a9ac162 files/post-3.2.3-kdelibs-khtml.diff 2411
-MD5 998641088387e630d4ab9e9013caa539 files/kdelibs-3.4.0-imagemap.patch 546
-MD5 138c3252883171d55ec24ed0318950fd files/post-3.3.2-kdelibs-kate.diff 2212
-MD5 02c4482bb15fc1a504621c2627a4deee files/digest-kdelibs-3.2.3-r7 529
-MD5 4d3faaf48564cde79aac52957f7e6278 files/kdelibs-3.4.1-ktoolbar-crash.patch 2215
-MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r10 517
-MD5 119cc73926dceafff9107b5f916277ee files/post-3.2.3-kdelibs-htmlframes.patch 15435
-MD5 581be8df4ecfd3cf649bb36b6f57e35a files/kdelibs-3.4.1-configure.patch 4558
-MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r2 68
-MD5 d3df6d042148fd884422822aaf4ffbab files/kdelibs-3.3.2-aspell-dir.patch 467
-MD5 b93484486086ff60f9633f48ed311877 files/post-3.2.3-kdelibs-kimgio.diff 39789
-MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r1 68
-MD5 a5d3cb18c9572d8ca3dd06cbe5d226f1 files/kde3-dcopidlng.patch 681
-MD5 99b6a0719a376a17b6edea6555e3e5ae files/digest-kdelibs-3.2.3-r9 601
+MD5 e85156dc15d10eb25692b02392f6bfee kdelibs-3.4.0-r2.ebuild 3460
 MD5 25ab050b323a8efb2049fd770f50058b files/kdelibs-3.3.2-anchor-fix.patch 5947
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC4WsqKf2g/qXtneoRAgCSAKCd35j72bPoLdel2JVajXTEVCfUqwCgpYS5
-VkWk5KosoGInd+pr/caOdRc=
-=e4zV
------END PGP SIGNATURE-----
+MD5 b291a4a134cac9072ad1140a78eee9ce files/kdelibs-3.4.1-kntlm.patch 1323
+MD5 b93484486086ff60f9633f48ed311877 files/post-3.2.3-kdelibs-kimgio.diff 39789
+MD5 4d3faaf48564cde79aac52957f7e6278 files/kdelibs-3.4.1-ktoolbar-crash.patch 2215
+MD5 998641088387e630d4ab9e9013caa539 files/kdelibs-3.4.0-imagemap.patch 546
+MD5 a5d3cb18c9572d8ca3dd06cbe5d226f1 files/kde3-dcopidlng.patch 681
+MD5 119cc73926dceafff9107b5f916277ee files/post-3.2.3-kdelibs-htmlframes.patch 15435
+MD5 296419fbb169c4d87ace85d1e1645652 files/kdelibs-3.4.0-form-freeze.patch 660
+MD5 7e082af5fd71b9b01d01a86f31646499 files/post-3.3.2-kdelibs-htmlframes2.patch 989
+MD5 5e9c627e4e9e367ce88ed62a0a9ac162 files/post-3.2.3-kdelibs-khtml.diff 2411
+MD5 581be8df4ecfd3cf649bb36b6f57e35a files/kdelibs-3.4.1-configure.patch 4558
+MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r10 517
+MD5 40783b984dcb127c8852246f7eb0a1e8 files/kdelibs-3.3.2-ppc64.patch 957
+MD5 d3df6d042148fd884422822aaf4ffbab files/kdelibs-3.3.2-aspell-dir.patch 467
+MD5 138c3252883171d55ec24ed0318950fd files/post-3.3.2-kdelibs-kate.diff 2212
+MD5 b174d4e6ed2d0fd78fa43a40654f9ea4 files/post-3.2.3-kdelibs-idn.patch 2337
+MD5 02c4482bb15fc1a504621c2627a4deee files/digest-kdelibs-3.2.3-r7 529
+MD5 99b6a0719a376a17b6edea6555e3e5ae files/digest-kdelibs-3.2.3-r9 601
+MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r9 517
+MD5 2f2e57269ffc653aa3c0884c9492fb16 files/digest-kdelibs-3.4.0-r2 148
+MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r1 68
+MD5 b6eeb54c84f336414abfd45f4fa6a156 files/digest-kdelibs-3.4.1-r2 68
