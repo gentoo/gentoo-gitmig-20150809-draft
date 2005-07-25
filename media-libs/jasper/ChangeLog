@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.17 2005/07/14 07:38:03 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.18 2005/07/25 19:27:19 gmsoft Exp $
+
+  25 Jul 2005; Guy Martin <gmsoft@gentoo.org> jasper-1.701.0.ebuild:
+  Stable on hppa.
 
   14 Jul 2005; Hardave Riar <hardave@gentoo.org> jasper-1.701.0.ebuild:
   Keyworded ~mips
