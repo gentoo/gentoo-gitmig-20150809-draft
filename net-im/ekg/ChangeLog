@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ekg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.22 2005/07/21 23:03:13 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.23 2005/07/25 14:09:45 sekretarz Exp $
+
+  25 Jul 2005; <sekretarz@gentoo.org> ekg-1.6_rc3.ebuild:
+  Stable on x86 due security bug #99583
 
   21 Jul 2005; Jory A. Pratt <anarchy@gentoo.org> ekg-1.6_rc3.ebuild:
   Stable on PPC. bug #99583
