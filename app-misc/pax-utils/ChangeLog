@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.30 2005/07/03 22:26:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.31 2005/07/25 23:45:58 vapier Exp $
+
+*pax-utils-0.1.3 (25 Jul 2005)
+
+  25 Jul 2005; Mike Frysinger <vapier@gentoo.org> +pax-utils-0.1.3.ebuild:
+  Fix building with gcc-2, dont bomb with alignment errors on some arches, and
+  add support for SONAME scanning in scanelf.
 
 *pax-utils-0.1.2 (03 Jul 2005)
 
