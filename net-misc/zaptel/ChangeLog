@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.52 2005/07/25 22:43:32 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.53 2005/07/25 23:49:43 stkn Exp $
+
+  26 Jul 2005; <stkn@gentoo.org> files/zaptel.devfsd:
+  Updated devfsd rules file, fixes incorrect permissions on span subdirectories.
 
   26 Jul 2005; <stkn@gentoo.org> zaptel-1.0.8.ebuild:
   Stable on x86 and fixed SRC_URI.
