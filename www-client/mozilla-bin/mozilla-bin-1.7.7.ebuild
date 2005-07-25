@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.7.ebuild,v 1.2 2005/04/17 21:03:22 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.7.ebuild,v 1.3 2005/07/25 02:53:46 agriffis Exp $
 
-inherit nsplugins eutils mozilla-launcher
+inherit nsplugins eutils mozilla-launcher multilib
 
 IUSE=""
 
