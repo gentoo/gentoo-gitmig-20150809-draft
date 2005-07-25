@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44742fe1ddc2dfa09cff6435d7963f3d ChangeLog 3763
+MD5 42b38ad91f48abaee56a479dbd9bac19 mixxx-1.2.1.ebuild 1490
+MD5 1ec99256c93cf572fa331e0d0caed42f mixxx-1.4.2.ebuild 1438
+MD5 66057fe9c210feb358a22f8cc29a61d8 mixxx-1.4.1.ebuild 1445
+MD5 09f32a099835defb0821676985c429f1 ChangeLog 3902
+MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
+MD5 e7c3a488b82537d2e1912239a42453c0 files/mixxx.pro 13666
 MD5 f3543ce61c9d39860076bad6d555d3bb files/digest-mixxx-1.2.1 64
 MD5 f25d0518f6fa31ce0950ba6960246f49 files/digest-mixxx-1.4.1 64
 MD5 a17a2d5788ac463f0c92292648430f77 files/digest-mixxx-1.4.2 64
 MD5 5794a39e6d1cd6f615c7c853b050f19d files/mixxx-1.3.2-gentoo.patch 3606
-MD5 e7c3a488b82537d2e1912239a42453c0 files/mixxx.pro 13666
-MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 dbaaeaad031a5fb811de1daa8a2740b4 mixxx-1.2.1.ebuild 1478
-MD5 cfa87804ff32619b4689512f3363995e mixxx-1.4.1.ebuild 1444
-MD5 29148aff87f2be3d855d0592f5c5ef9b mixxx-1.4.2.ebuild 1432
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0CI6I1lqEGTUzyQRAqCwAKDARlRwa4Qw4yMIkbi7mCyx4nicyACfYoOx
-n/292mX9RnXspSosPLrE984=
-=Nmc4
------END PGP SIGNATURE-----
