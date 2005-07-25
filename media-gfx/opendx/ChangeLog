@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/opendx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/ChangeLog,v 1.12 2005/05/24 23:01:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/ChangeLog,v 1.13 2005/07/25 13:04:04 spyderous Exp $
+
+  25 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  opendx-4.3.2-r1.ebuild:
+  Update to use linux-info.eclass and to check for SMP properly.
 
   24 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
   opendx-4.3.2-r1.ebuild:

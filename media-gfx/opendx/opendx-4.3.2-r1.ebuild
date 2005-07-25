@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/opendx-4.3.2-r1.ebuild,v 1.6 2005/05/24 23:01:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/opendx-4.3.2-r1.ebuild,v 1.7 2005/07/25 13:04:04 spyderous Exp $
 
 # Set SMP="no" to force disable of SMP compilation.
 # Set SMP="yes" to force enable of SMP compilation.
 # Otherwise it will be autodetected from /usr/src/linux.
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic linux-info
 
 DESCRIPTION="A 3D data visualization tool"
 HOMEPAGE="http://www.opendx.org/"
@@ -48,17 +48,7 @@ smp() {
 }
 
 smp_check() {
-	if [ -e /usr/src/linux/.config ]
-	then
-		if [ "`grep SMP /usr/src/linux/.config | cut -d= -f2`" = "y" ]
-		then
-			return 0
-		else
-			return 1
-		fi
-	else
-		die "SMP check failed. Make sure /usr/src/linux/.config exists."
-	fi
+	linux_chkconfig_present SMP
 }
 
 src_compile() {
