@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.2.ebuild,v 1.11 2004/12/19 05:33:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.2.ebuild,v 1.12 2005/07/25 11:57:53 dholm Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.apolloplayer.org"
 SLOT="2"
 LICENSE="GPL-2"
 # -amd64: weird segfaults... try a later version...
-KEYWORDS="-amd64 sparc x86"
+KEYWORDS="-amd64 ~ppc sparc x86"
 
 DEPEND="virtual/mpg123
 	media-libs/id3lib
