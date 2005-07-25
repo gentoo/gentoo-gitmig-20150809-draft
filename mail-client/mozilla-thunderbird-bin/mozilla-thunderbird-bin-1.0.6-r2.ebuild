@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.0.6-r2.ebuild,v 1.1 2005/07/23 20:16:33 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.0.6-r2.ebuild,v 1.2 2005/07/25 02:56:39 agriffis Exp $
 
-inherit eutils mozilla-launcher
+inherit eutils mozilla-launcher multilib
 
 DESCRIPTION="The Mozilla Thunderbird Mail & News Reader"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/linux-i686/en-US/thunderbird-${PV}.tar.gz"
