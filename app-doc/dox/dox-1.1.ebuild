@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.16 2005/01/01 13:06:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.17 2005/07/25 19:01:17 caleb Exp $
 
-inherit kde-functions
-need-qt 3
+inherit qt3
 
 DESCRIPTION="graphical documentation browser for Unix/X11"
 SRC_URI="http://download.berlios.de/dox/${P}.tar.gz"

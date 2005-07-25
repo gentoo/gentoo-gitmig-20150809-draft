@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/dox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.9 2005/01/02 19:33:32 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.10 2005/07/25 19:01:17 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> dox-1.1.ebuild:
+  Change qt dep per bug #100235
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
