@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-midi/bmp-midi-0.01-r1.ebuild,v 1.1 2005/01/09 13:45:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-midi/bmp-midi-0.01-r1.ebuild,v 1.2 2005/07/25 11:47:48 dholm Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://mitglied.lycos.de/mldoering/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 
 DEPEND="media-sound/beep-media-player
 	media-sound/timidity++"
