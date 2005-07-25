@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.5 2005/07/24 22:43:15 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.6 2005/07/25 20:08:39 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -34,6 +34,12 @@ RDEPEND="${DEPEND}
 	dev-lang/perl
 	selinux? ( sec-policy/selinux-snort )
 	snortsam? ( net-analyzer/snortsam )"
+
+pkg_setup() {
+	enewgroup snort
+	enewuser snort -1 /bin/false /dev/null snort
+	echo "Ignore any messages about CREATE_HOME above."
+}
 
 src_unpack() {
 	unpack ${A}
@@ -91,15 +97,6 @@ src_compile() {
 		${myconf} || die "bad ./configure"
 
 	emake || die "compile problem"
-}
-
-pkg_preinst() {
-	enewgroup snort
-	enewuser snort -1 /bin/false /var/log/snort snort
-	usermod -d "/var/log/snort" snort || die "usermod problem"
-	usermod -g "snort" snort || die "usermod problem"
-	usermod -s "/bin/false" snort || die "usermod problem"
-	echo "ignore any message about CREATE_HOME above..."
 }
 
 src_install() {
