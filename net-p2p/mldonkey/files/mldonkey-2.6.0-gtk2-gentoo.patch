@@ -1,0 +1,10 @@
+--- src/gtk2/chat/chat_art.ml.orig	2005-07-25 15:56:52.000000000 +0200
++++ src/gtk2/chat/chat_art.ml	2005-07-25 15:57:33.000000000 +0200
+@@ -22,6 +22,7 @@
+ (*                          Icons ressources of mlchat                            *)
+ (*                                                                                *)
+ (**********************************************************************************)
++open CommonGlobals
+ 
+ let table = [
+   "icon_settings", (Menu_settings_svg.t, "");

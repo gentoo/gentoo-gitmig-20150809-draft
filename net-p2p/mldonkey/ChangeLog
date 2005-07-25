@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.84 2005/07/24 09:16:51 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.85 2005/07/25 21:22:32 sekretarz Exp $
+
+  25 Jul 2005; <sekretarz@gentoo.org>
+  +files/mldonkey-2.6.0-gtk2-gentoo.patch, mldonkey-2.6.0.ebuild:
+  Fixed compile problems with enabled ekg2, thanks Marcin Kryczek
+  <aye@gentoo.pl> in bug #100120
 
   24 Jul 2005; <sekretarz@gentoo.org> mldonkey-2.6.0.ebuild:
   Turned off batch configure option, cought by Phil
