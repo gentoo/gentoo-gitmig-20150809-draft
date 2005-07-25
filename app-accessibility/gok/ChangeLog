@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.52 2005/07/13 05:35:08 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.53 2005/07/25 17:45:46 gmsoft Exp $
+
+  25 Jul 2005; Guy Martin <gmsoft@gentoo.org> gok-1.0.5.ebuild:
+  Stable on hppa.
 
   13 Jul 2005; Stephen P. Becker <geoman@gentoo.org> gok-0.10.2.ebuild,
   gok-0.11.17.ebuild, gok-1.0.3.ebuild, gok-1.0.5.ebuild:
