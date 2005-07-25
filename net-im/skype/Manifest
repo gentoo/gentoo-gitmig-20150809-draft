@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a7a1cbf3e78ee29cd8db8e39da1a5f8a skype-1.1.0.20.ebuild 2976
-MD5 f55d394958fdb3e8c4fd6ed911836b2c skype-1.1.0.13.ebuild 2977
-MD5 6524491cd9b2c559b6065b1114bacbfb skype-1.1.0.20-r1.ebuild 2982
-MD5 8529ca7d83fe1dc0add402e4ba4972c2 skype-1.1.0.3.ebuild 2752
-MD5 0a7ebb2b6a4d7e9a01f898a2c707a1c2 skype-1.1.0.3-r1.ebuild 2834
-MD5 0a879f7e34570f2403b341f9b38377c9 ChangeLog 7878
+MD5 7a77aef36d72b428a798026106314da1 skype-1.1.0.20.ebuild 2981
+MD5 982e11a41cec6c3914d763f4d2e1d6c8 skype-1.1.0.13.ebuild 2981
+MD5 db6138e9f1c3f6ece7c686dd00c7b792 skype-1.1.0.20-r1.ebuild 2987
+MD5 1741039a31320efdcea62457b1f16822 skype-1.1.0.3.ebuild 2756
+MD5 5bd398238feee26ddcb938304182df83 skype-1.1.0.3-r1.ebuild 2838
+MD5 815ee09720ac83d9601052848b2fffbf ChangeLog 8078
 MD5 dbaa6f09202bfea8c248e1f7c222d40f metadata.xml 488
 MD5 0fd51a0eb686552fb6ec45a0bc151d75 files/digest-skype-1.1.0.3 209
 MD5 5105ec59acb037592219bdc10c0f09b7 files/skype.debus.config 436
@@ -16,10 +13,3 @@ MD5 775f4eceb67dc9859f7d9a671f3b7216 files/sDaemonWrapper-r1 1984
 MD5 25e2e1abc5814695e1a6d9691fe61b5d files/digest-skype-1.1.0.20-r1 211
 MD5 38aacc11c3b797c1f3b6008b73fcc881 files/digest-skype-1.1.0.13 211
 MD5 25e2e1abc5814695e1a6d9691fe61b5d files/digest-skype-1.1.0.20 211
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0SsH8zY1VwezZiERAiM8AJ44de44xz8uqR7ht/uDX2GoQABUXACfeVkz
-maZe1pnIxwlb8OfmSiur2ag=
-=4uzt
------END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.1.0.20.ebuild,v 1.1 2005/07/07 16:51:13 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.1.0.20.ebuild,v 1.2 2005/07/25 17:49:09 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 
 #If you want to know when this package will be marked stable please see the Changelog
@@ -22,7 +22,7 @@ DEPEND="
 		>=app-emulation/emul-linux-x86-xlibs-1.2
 		>=app-emulation/emul-linux-x86-baselibs-2.1.1
 		!static? ( >=app-emulation/emul-linux-x86-qtlibs-1.1 ) )
-	x86? ( !static? ( >=x11-libs/qt-3.2 )
+	x86? ( !static? ( $(qt_min_version 3.2) )
 		>=sys-libs/glibc-2.3.2 )"
 RDEPEND="${DEPEND}
 	>=sys-apps/dbus-0.23.4"
