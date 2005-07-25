@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.0.0.ebuild,v 1.1 2005/07/13 18:53:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ciphire-mail-1.0.0.ebuild,v 1.2 2005/07/25 15:47:09 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 LOC="/opt/ciphire-mail"
 DESCRIPTION="Ciphire Mail is an email encryption tool, operating seamlessly in the background."
@@ -17,7 +17,7 @@ IUSE="X gnome kde"
 
 DEPEND=
 RDEPEND="X? ( virtual/x11 )
-	x86? ( >=x11-libs/qt-3.2 )
+	x86? ( $(qt_min_version 3.2) )
 	amd64? ( app-emulation/emul-linux-x86-glibc
 			 >=app-emulation/emul-linux-x86-baselibs-2.1.1
 			 X? ( >=app-emulation/emul-linux-x86-xlibs-1.2
