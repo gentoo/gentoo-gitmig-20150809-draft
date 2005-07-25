@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f0cd42c6c25e1e81ff8e16105f59cd2d rss-glx-0.7.6.ebuild 4057
 MD5 c4e421bd6c594fa16e72208b912d1526 rss-glx-0.8.0-r2.ebuild 4934
 MD5 978010d8c37b6af78754527192ac835f ChangeLog 6431
@@ -11,3 +14,10 @@ MD5 6c580284e5773f292a32a5a30fcf539a files/digest-rss-glx-0.8.0-r2 67
 MD5 b50c007842cc6ee24f667e1755b2bb6c files/rss-glx-0.8.0-hyperspace-install-fix.patch 1574
 MD5 4dbe321921028a106a05564a14b2f814 files/jwz-vroot.h 6234
 MD5 2f47a2d4b9947332e2817ec81f2ec0d7 files/rss-glx-0.7.4-kdedesktop.patch 833
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5XtL2G5bA0cA/ScRAkytAKDv5Lq/odn3k3EmERXk3QvwvNzuIgCgpqTl
+d5guyzryFojk0IJ2tjiioDc=
+=/u5H
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 30baa75aa8ad6b15fa87c15cce9d3f40 xscreensaver-4.20.ebuild 4842
 MD5 8fb8ce398d7f5be215918a0c2549fee9 ChangeLog 16918
 MD5 3ad663b1382db497f19d2c540eb91ff8 xscreensaver-4.22-r2.ebuild 5474
@@ -15,3 +18,10 @@ MD5 24bb039b898635c9224f9866f29757ed files/digest-xscreensaver-4.22-r2 70
 MD5 23c5d8085eb70d6dc6168857a31cc284 files/xscreensaver-4.14-fortune.patch 348
 MD5 cd227d954dff63ea80266d1db213b15f files/xscreensaver-4.16-nsfw.patch 1586
 MD5 6eb40b28a36f889d0f1919cdbf160ef7 files/pam.d/xscreensaver 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5Xr22G5bA0cA/ScRAisvAJ9LYGYgj7eW8o/A+lAoRTScQcxKpQCeJ1o3
+9ktmITN7JLJ5kTEKtCQFIDY=
+=YeJC
+-----END PGP SIGNATURE-----
