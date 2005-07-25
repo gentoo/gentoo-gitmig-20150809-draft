@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.5.ebuild,v 1.1 2005/07/24 03:31:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.5.ebuild,v 1.2 2005/07/25 18:57:13 vanquirius Exp $
 
 inherit toolchain-funcs eutils gnuconfig
 
@@ -35,7 +35,7 @@ src_compile() {
 		`use_enable debug` \
 		`use_enable X gtk` \
 		|| die "configure failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 
 }
 

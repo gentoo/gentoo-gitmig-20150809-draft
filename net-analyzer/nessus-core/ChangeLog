@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.80 2005/07/24 03:31:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.81 2005/07/25 18:57:13 vanquirius Exp $
+
+  25 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
+  nessus-core-2.2.5.ebuild:
+  Add -j1 to emake since parallel compilation fails. Fixes bug 100193. Thanks
+  to Triffid Hunter <triffid_hunter@funkmunch.net>.
 
 *nessus-core-2.2.5 (24 Jul 2005)
 
