@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.0.ebuild,v 1.4 2005/07/09 19:18:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.0.ebuild,v 1.5 2005/07/25 13:51:38 dholm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.arkkra.com/pub/unix/mup${PV//.}src.tar.gz
 
 LICENSE="Arkkra"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X svga"
 
 RDEPEND="X? ( virtual/x11 )
