@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/klapjack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/klapjack/ChangeLog,v 1.1 2005/06/30 12:34:51 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/klapjack/ChangeLog,v 1.2 2005/07/25 16:16:25 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> klapjack-0.4.2.ebuild:
+  Change qt dep
 
 *net-misc/klapjack-0.4.2 (30 Jun 2005)
 

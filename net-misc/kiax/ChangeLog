@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kiax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.2 2005/07/10 18:33:30 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.3 2005/07/25 16:12:41 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> kiax-0.8.4.ebuild:
+  Change qt dep per #100235
 
   10 Jul 2005; Stefan Knoblich <stkn@gentoo.org> kiax-0.8.4.ebuild:
   Stable on x86.

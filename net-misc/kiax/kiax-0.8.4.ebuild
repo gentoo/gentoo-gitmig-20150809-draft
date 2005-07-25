@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.4.ebuild,v 1.2 2005/07/10 18:33:30 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.4.ebuild,v 1.3 2005/07/25 16:12:41 caleb Exp $
 
 inherit eutils kde-functions
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND=">=x11-libs/qt-3.2"
+DEPEND="$(qt_min_version 3.2)"
 
 src_unpack() {
 	unpack ${A}
@@ -28,8 +28,6 @@ src_unpack() {
 }
 
 src_compile() {
-	set-qtdir 3
-
 	econf || die "configure failed"
 	emake || die "make failed"
 }
