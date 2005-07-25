@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/sara
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.12 2005/06/22 17:08:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.13 2005/07/25 19:04:47 vanquirius Exp $
+
+  25 Jul 2005; Marcelo Goes <vanquirius@gentoo.org> -sara-5.1.1a.ebuild,
+  -sara-5.2.0a.ebuild, -sara-6.0.1.ebuild, sara-6.0.4.ebuild:
+  Marked 6.0.4 x86 stable, removed previous versions. It should fix bug 69638.
+  Thanks to Michael Forbes <miforbes-gentoo-org@mbhs.edu>, Kyle England
+  <kengland@gentoo.org> and others.
 
 *sara-6.0.4 (22 Jun 2005)
 
