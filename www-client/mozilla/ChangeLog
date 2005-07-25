@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.48 2005/07/23 20:25:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.49 2005/07/25 01:37:41 agriffis Exp $
+
+  25 Jul 2005; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.10-r2.ebuild:
+  Don't attempt to build enigmail when USE=moznomail #100101 #100155
 
 *mozilla-1.7.10-r2 (23 Jul 2005)
 

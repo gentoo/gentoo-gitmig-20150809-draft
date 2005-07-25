@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.10-r2.ebuild,v 1.1 2005/07/23 20:25:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.10-r2.ebuild,v 1.2 2005/07/25 01:37:41 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -239,7 +239,7 @@ src_compile() {
 	#
 	####################################
 
-	if use crypt; then
+	if use crypt && ! use moznomail; then
 		for x in ipc enigmail; do
 			emake -C ${S}/extensions/${x} || die "emake ${x} failed"
 		done
