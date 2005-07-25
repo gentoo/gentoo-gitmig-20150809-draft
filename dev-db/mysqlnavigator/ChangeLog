@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysqlnavigator
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.14 2005/04/24 12:26:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.15 2005/07/25 15:39:15 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> mysqlnavigator-1.4.1.ebuild,
+  mysqlnavigator-1.4.2.ebuild:
+  Fix qt dep per bug #100235
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   mysqlnavigator-1.4.1.ebuild:
