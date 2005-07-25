@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.20.0-r3.ebuild,v 1.4 2005/07/25 12:20:54 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.20.0-r3.ebuild,v 1.5 2005/07/25 17:27:28 sekretarz Exp $
 
-inherit eutils libtool
+inherit eutils
 
-IUSE="bidi nls ssl crypt icq jabber aim msn yahoo gg irc rss lj"
+IUSE="bidi nls ssl crypt icq jabber aim msn yahoo irc rss lj"
 
 DESCRIPTION="A ncurses ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client"
 SRC_URI="http://thekonst.net/download/${P}.tar.bz2"
@@ -14,7 +14,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc ~amd64 ppc ~hppa"
 
 DEPEND="virtual/libc
-	gg? ( >=net-libs/libgadu-20050719 )
 	>=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
 	jabber? ( crypt? ( >=app-crypt/gpgme-1.0.2 ) )
@@ -27,13 +26,9 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	export WANT_AUTOCONF=2.5
 	# security fix, see CAN-2005-1914 -- from CenterICQ CVS, 20050718
 	epatch ${FILESDIR}/${P}.CAN-2005-1914.patch.bz2
 
-	epatch ${FILESDIR}/${P}-libgadu.patch
-	autoreconf --force
-	autoreconf --install
 	use amd64 && epatch ${FILESDIR}/${PN}-amd64.patch
 }
 
@@ -60,7 +55,6 @@ src_compile() {
 		die "Please either activate the 'ssl' USE flag or deactivate the 'msn' USE flag for net-im/centericq"
 	fi
 	use yahoo >&/dev/null || myopts="${myopts} --disable-yahoo"
-	use gg >&/dev/null || myopts="${myopts} --disable-gg"
 	use irc >&/dev/null || myopts="${myopts} --disable-irc"
 	use rss >&/dev/null || myopts="${myopts} --disable-rss"
 	use lj >&/dev/null || myopts="${myopts} --disable-lj"
