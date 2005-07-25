@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsystray
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/ChangeLog,v 1.6 2005/06/26 08:49:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/ChangeLog,v 1.7 2005/07/25 15:00:41 blubb Exp $
+
+  25 Jul 2005; Simon Stelling <blubb@gentoo.org> wmsystray-0.1.1.ebuild:
+  stable on amd64
 
   26 Jun 2005; Simon Stelling <blubb@gentoo.org> wmsystray-0.1.1.ebuild:
   added ~amd64 keyword
