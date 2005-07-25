@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.14 2005/07/21 00:57:17 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.15 2005/07/25 22:22:48 stkn Exp $
 
 inherit eutils perl-module
 
@@ -21,6 +21,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc x86"
 
 DEPEND="dev-libs/newt
+	dev-libs/openssl
 	media-sound/mpg123
 	media-sound/sox
 	doc? ( app-doc/doxygen )
