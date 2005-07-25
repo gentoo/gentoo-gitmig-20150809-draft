@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/lxbank-0.1.8.ebuild,v 1.4 2005/01/01 15:36:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/lxbank-0.1.8.ebuild,v 1.5 2005/07/25 15:34:45 caleb Exp $
+
+inherit qt3
 
 DESCRIPTION="Graphical HBCI online banking tool"
 HOMEPAGE="http://lxbank.sourceforge.net/"
@@ -10,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 DEPEND=">=net-libs/openhbci-0.9.11
-	>=x11-libs/qt-3.0.5
+	$(qt_min_version 3.1)
 	>=sys-libs/libchipcard-0.9
 	app-misc/ktoblzcheck"
 

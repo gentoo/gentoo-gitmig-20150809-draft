@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lxbank
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/ChangeLog,v 1.10 2005/01/01 15:36:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/ChangeLog,v 1.11 2005/07/25 15:34:45 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org> lxbank-0.1.8.ebuild,
+  lxbank-0.1.9.ebuild:
+  Change qt dep per bug #100235
 
   01 Jul 2004; Aron Griffis <agriffis@gentoo.org> lxbank-0.1.9.ebuild:
   inherit eutils
