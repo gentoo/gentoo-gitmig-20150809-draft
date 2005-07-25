@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.14 2005/07/13 17:03:01 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.15 2005/07/25 08:22:02 brix Exp $
+
+  25 Jul 2005; Henrik Brix Andersen <brix@gentoo.org>
+  hibernate-script-1.09.ebuild:
+  Stable on x86.
 
 *hibernate-script-1.10 (13 Jul 2005)
 
