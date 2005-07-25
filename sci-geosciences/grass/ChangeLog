@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.7 2005/07/23 06:42:03 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.8 2005/07/25 01:22:29 nerdboy Exp $
+
+*grass-6.0.0-r2 (25 Jul 2005)
+
+  25 Jul 2005; Steve Arnold <nerdboy@gentoo.org> files/99grass-6,
+  -grass-6.0.0-r1.ebuild, +grass-6.0.0-r2.ebuild:
+  fixed environment glitch (bug 100105)
 
 *grass-6.0.0-r1 (23 Jul 2005)
 
