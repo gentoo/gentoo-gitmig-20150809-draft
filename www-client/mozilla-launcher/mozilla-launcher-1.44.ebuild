@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.43.ebuild,v 1.1 2005/07/25 03:43:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.44.ebuild,v 1.1 2005/07/25 03:47:26 agriffis Exp $
 
 inherit eutils
 
