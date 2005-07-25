@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/qjackconnect-0.0.3b-r1.ebuild,v 1.15 2004/12/19 06:15:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/qjackconnect-0.0.3b-r1.ebuild,v 1.16 2005/07/25 15:51:03 caleb Exp $
+
+inherit qt3
 
 IUSE=""
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 
 DEPEND="virtual/libc
-	>=x11-libs/qt-3.0.5
+	$(qt_min_version 3.1)
 	media-libs/alsa-lib
 	media-sound/jack-audio-connection-kit"
 

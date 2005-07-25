@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qjackconnect
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.16 2004/12/19 06:15:55 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackconnect/ChangeLog,v 1.17 2005/07/25 15:51:03 caleb Exp $
+
+  25 Jul 2005; Caleb Tennis <caleb@gentoo.org>
+  qjackconnect-0.0.3b-r1.ebuild:
+  Fix dep per bug #100235
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   qjackconnect-0.0.3b-r1.ebuild:
