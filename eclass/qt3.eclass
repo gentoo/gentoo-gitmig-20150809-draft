@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.6 2005/07/25 14:50:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt3.eclass,v 1.7 2005/07/25 14:53:25 caleb Exp $
 #
 # Author Caleb Tennis <caleb@gentoo.org>
 #
@@ -46,7 +46,6 @@ qt_min_version_list() {
 				fi
 			done
 			;;
-		4|4.0|4.0.0) VERSIONS="=${QTPKG}4*";;
 		3*)
 			for x in $QT3VERSIONS; do
 				if $(version_is_at_least $MINVER $x); then
@@ -54,16 +53,7 @@ qt_min_version_list() {
 				fi
 			done
 			;;
-		4*)
-			for x in $QT4VERSIONS; do
-				if $(version_is_at_least $MINVER $x); then
-					VERSIONS="${VERSIONS} =${QTPKG}${x}"
-				fi
-			done
-			;;
-		*)
-			die "qt_min_version called with invalid parameter: \"$1\""
-			;;
+		*) VERSIONS="=${QTPKG}3*";;
 	esac
 
 	echo "$VERSIONS"
