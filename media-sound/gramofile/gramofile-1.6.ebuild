@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.15 2004/12/29 03:00:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.16 2005/07/25 12:37:29 dholm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://panic.et.tudelft.nl/~costar/gramofile/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses \

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.06.ebuild,v 1.8 2004/12/19 05:49:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.06.ebuild,v 1.9 2005/07/25 12:37:54 dholm Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/horgand/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 DEPEND=">=x11-libs/fltk-1.1.2
 	media-libs/libsndfile

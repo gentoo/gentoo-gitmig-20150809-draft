@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/id3tool
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3tool/ChangeLog,v 1.7 2004/10/05 02:54:05 tgall Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3tool/ChangeLog,v 1.8 2005/07/25 12:38:31 dholm Exp $
+
+  25 Jul 2005; David Holm <dholm@gentoo.org> id3tool-1.2.ebuild:
+  Added to ~ppc.
 
   04 Oct 2004; Tom Gall <tgall@gentoo.org> id3tool-1.2.ebuild:
   stable on ppc64, bug #64244

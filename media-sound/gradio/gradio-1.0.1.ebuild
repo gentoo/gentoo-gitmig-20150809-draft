@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gradio/gradio-1.0.1.ebuild,v 1.12 2004/11/12 08:33:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gradio/gradio-1.0.1.ebuild,v 1.13 2005/07/25 12:35:18 dholm Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://foobazco.org/projects/gradio/"
 SLOT="0"
 LICENSE="GPL-2"
 
-KEYWORDS="amd64 sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 
