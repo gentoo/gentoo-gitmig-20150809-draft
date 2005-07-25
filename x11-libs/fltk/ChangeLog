@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.49 2005/07/10 02:16:18 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.50 2005/07/25 19:20:59 gmsoft Exp $
+
+  25 Jul 2005; Guy Martin <gmsoft@gentoo.org> fltk-1.1.4.ebuild,
+  fltk-1.1.6.ebuild:
+  Stable on hppa.
 
   10 Jul 2005; Jonathan Smith <smithj@gentoo.org> fltk-1.1.6.ebuild:
   #89558: fixed licence

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4.ebuild,v 1.16 2005/05/17 12:38:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4.ebuild,v 1.17 2005/07/25 19:20:59 gmsoft Exp $
 
 IUSE="opengl debug nptl"
 
@@ -10,7 +10,7 @@ DESCRIPTION="C++ user interface toolkit for X and OpenGL."
 HOMEPAGE="http://www.fltk.org"
 SRC_URI="ftp://ftp.easysw.com/pub/fltk/${PV}/${P}-source.tar.bz2"
 
-KEYWORDS="x86 ppc sparc alpha amd64 ~mips ppc64 ~ia64"
+KEYWORDS="x86 ppc sparc alpha amd64 ~mips ppc64 ~ia64 hppa"
 LICENSE="FLTK LGPL-2"
 
 PV_MAJOR=${PV/.*/}
