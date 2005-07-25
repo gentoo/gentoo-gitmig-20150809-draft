@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.2.2.ebuild,v 1.1 2005/07/04 18:57:26 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.2.2.ebuild,v 1.2 2005/07/25 17:39:30 caleb Exp $
 
 inherit kde-functions eutils
-need-qt 3
 
 DESCRIPTION="Desktop Publishing (DTP) and Layout program for Linux."
 HOMEPAGE="http://www.scribus.net"
@@ -13,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-3.3.3
+DEPEND="$(qt_min_version 3.3.3)
 	>=media-libs/freetype-2.1
 	>=media-libs/lcms-1.09
 	media-libs/tiff
