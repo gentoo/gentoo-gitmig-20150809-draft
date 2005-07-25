@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0db4901b830e970e27142d227774b3cd mt-daapd-0.2.1.1.ebuild 1935
-MD5 8e54b712e6db5ca9827e49490c3d5d06 ChangeLog 676
+MD5 275290f731f502f3d778c53bf5515bf4 ChangeLog 760
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 880127a188cf908b0ad84221e48eeebf mt-daapd-0.2.1.1.ebuild 1936
 MD5 804311ec22b1fba76a61411d0c752a15 files/digest-mt-daapd-0.2.1.1 68
 MD5 d14aca83cf21b8c519b42962ba276e42 files/mt-daapd.init 540
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCmHUd06ebR+OMO78RAlTKAKCJ/oWnT2WpJlvvuB900CXJFH7SaACfR99R
-q0O6TH3fpe5C1LoLd0me0Qs=
-=2Wmi
------END PGP SIGNATURE-----

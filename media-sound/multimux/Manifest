@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a47a9ed51db4f13e1417ed0e349a825 ChangeLog 484
+MD5 3875adccf057215e94f04356686dafc5 ChangeLog 563
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
-MD5 33a917cd0fa721d83f60f31e2e13a16c multimux-0.1.ebuild 632
+MD5 038529ded9a3d6817e13b22d43055f2d multimux-0.1.ebuild 632
 MD5 004e8cfcff5f02f9f588de131f43f552 files/digest-multimux-0.1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZhDwArHZZzCEUG0RAq/DAJ9vKu18im3iUHECgFSdoyC87RlivwCeMtlc
-MD10nP5hb0nPq83lGl51HAo=
-=gQS6
------END PGP SIGNATURE-----
