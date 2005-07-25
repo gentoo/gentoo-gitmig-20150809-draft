@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.20.0-r3.ebuild,v 1.3 2005/07/24 17:09:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.20.0-r3.ebuild,v 1.4 2005/07/25 12:20:54 sekretarz Exp $
 
-inherit eutils
+inherit eutils libtool
 
 IUSE="bidi nls ssl crypt icq jabber aim msn yahoo gg irc rss lj"
 
@@ -11,7 +11,7 @@ SRC_URI="http://thekonst.net/download/${P}.tar.bz2"
 HOMEPAGE="http://thekonst.net/en/centericq"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~amd64 ppc ~hppa"
+KEYWORDS="x86 ~sparc ~amd64 ppc ~hppa"
 
 DEPEND="virtual/libc
 	gg? ( >=net-libs/libgadu-20050719 )
@@ -27,11 +27,13 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
+	export WANT_AUTOCONF=2.5
 	# security fix, see CAN-2005-1914 -- from CenterICQ CVS, 20050718
 	epatch ${FILESDIR}/${P}.CAN-2005-1914.patch.bz2
 
 	epatch ${FILESDIR}/${P}-libgadu.patch
+	autoreconf --force
+	autoreconf --install
 	use amd64 && epatch ${FILESDIR}/${PN}-amd64.patch
 }
 
