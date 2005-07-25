@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.7 2005/07/04 23:54:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.8 2005/07/25 20:20:11 greg_g Exp $
+
+*kexi-1.4.1 (25 Jul 2005)
+
+  25 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> +kexi-1.4.1.ebuild:
+  New version.
 
   04 Jul 2005; Jason Wever <weeve@gentoo.org> kexi-1.4.0.ebuild:
   Added ~sparc keyword.
