@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/com_err
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/ChangeLog,v 1.16 2005/07/20 12:25:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/ChangeLog,v 1.17 2005/07/25 19:47:46 killerfox Exp $
+
+  25 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> com_err-1.38.ebuild:
+  Stable on hppa.
 
   20 Jul 2005; Markus Rothe <corsair@gentoo.org> com_err-1.38.ebuild:
   Stable on ppc64
