@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/dotproject-1.0.2.ebuild,v 1.6 2005/07/16 15:33:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/dotproject-1.0.2.ebuild,v 1.7 2005/07/25 12:57:23 blubb Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ MY_SQL_PV="${PV//\./}"
 DESCRIPTION="dotProject is a PHP web-based project management framework"
 HOMEPAGE="http://www.dotproject.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
-KEYWORDS="ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 DEPEND=""
 S=${WORKDIR}/${PN}
 LICENSE="BSD"
