@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/asunder
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.1 2005/03/29 13:02:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.2 2005/07/25 12:03:49 dholm Exp $
+
+  25 Jul 2005; David Holm <dholm@gentoo.org> asunder-0.1.0.ebuild:
+  Added to ~ppc.
 
 *asunder-0.1.0 (29 Mar 2005)
 

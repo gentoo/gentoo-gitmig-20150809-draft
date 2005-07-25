@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmix/cmix-1.6.ebuild,v 1.11 2004/07/06 07:16:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmix/cmix-1.6.ebuild,v 1.12 2005/07/25 12:15:37 dholm Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://antipoder.dyndns.org/downloads/${P}.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
 #-amd64: 1.6: 'cmix list' gives: MIXER_READ(SOUND_MIXER_OUTSRC): Input/output error 
-KEYWORDS="x86 sparc -amd64"
+KEYWORDS="-amd64 ~ppc sparc x86"
 
 DEPEND="virtual/libc"
 
