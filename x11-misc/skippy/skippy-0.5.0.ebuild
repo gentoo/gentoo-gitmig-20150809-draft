@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.6 2004/08/14 13:51:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.7 2005/07/25 23:20:40 smithj Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -17,6 +19,12 @@ RDEPEND="virtual/x11
 
 DEPEND="${RDEPEND}
 	>=media-libs/imlib2-1.1.0"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-pointer-size.patch
+}
 
 src_compile() {
 	emake || die "emake failed"
