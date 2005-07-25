@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.210 2005/07/14 10:07:18 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.211 2005/07/25 19:44:23 gmsoft Exp $
+
+  25 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdebase-3.4.1-r1.ebuild:
+  Stable on hppa.
 
   14 Jul 2005; Hardave Riar <hardave@gentoo.org> kdebase-3.4.1-r1.ebuild:
   Keyworded ~mips

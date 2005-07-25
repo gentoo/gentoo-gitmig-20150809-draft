@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.125 2005/07/14 09:03:21 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.126 2005/07/25 19:47:12 gmsoft Exp $
+
+  25 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdeartwork-3.4.1.ebuild:
+  Stable on hppa.
 
   14 Jul 2005; Hardave Riar <hardave@gentoo.org> kdeartwork-3.4.1.ebuild:
   Keyworded ~mips
