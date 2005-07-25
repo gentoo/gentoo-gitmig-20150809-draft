@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.51 2005/07/25 22:31:20 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.52 2005/07/25 22:43:32 stkn Exp $
+
+  26 Jul 2005; <stkn@gentoo.org> zaptel-1.0.8.ebuild:
+  Stable on x86 and fixed SRC_URI.
 
   26 Jul 2005; <stkn@gentoo.org>
   -files/zaptel-0.9.1-experimental-devfs26.diff,
