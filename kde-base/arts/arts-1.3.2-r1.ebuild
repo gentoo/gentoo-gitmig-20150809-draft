@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.2-r1.ebuild,v 1.8 2005/06/12 23:27:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.2-r1.ebuild,v 1.9 2005/07/25 15:29:11 caleb Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
@@ -21,7 +21,7 @@ DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 	mad? ( media-libs/libmad media-libs/libid3tag )
 	media-libs/audiofile
 	>=dev-libs/glib-2
-	>=x11-libs/qt-3.3"
+	$(qt_min_version 3.3)"
 
 # patch to configure.in.in that makes the vorbis, libmad deps optional
 # has no version number in its filename because it's the same for all

@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.1.ebuild,v 1.5 2005/07/01 21:17:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.1.ebuild,v 1.6 2005/07/25 15:29:11 caleb Exp $
 
 inherit kde flag-o-matic eutils
-set-qtdir 3
 set-kdedir 3.4
 
 MY_PV=${PV/#3/1}
@@ -25,7 +24,7 @@ DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 	mp3? ( media-libs/libmad )
 	media-libs/audiofile
 	>=dev-libs/glib-2
-	>=x11-libs/qt-3.3"
+	$(qt_min_version 3.3)"
 
 src_unpack() {
 	kde_src_unpack
