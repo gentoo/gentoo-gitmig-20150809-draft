@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1-r1.ebuild,v 1.4 2005/07/24 22:57:59 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1-r1.ebuild,v 1.5 2005/07/25 20:58:31 karltk Exp $
 
 inherit eutils java-utils
 
@@ -8,7 +8,7 @@ MY_A="eclipse-sourceBuild-srcIncluded-3.1.zip"
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/eclipse/downloads/drops/R-3.1-200506271435/${MY_A}"
-IUSE="gnome mozilla firefox nosrc nodoc atk"
+IUSE="gnome mozilla firefox jikes nosrc nodoc atk"
 SLOT="3.1"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86 ~ppc ~amd64"
@@ -21,7 +21,8 @@ RDEPEND=">=virtual/jre-1.4.2
 	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )"
 
 DEPEND="${RDEPEND}
-	!jikes? ( >=virtual/jdk-1.4.2 )
+	>=virtual/jdk-1.4.2
+	jikes? ( >=dev-java/jikes-1.21 )
 	>=dev-java/ant-1.6.2
 	>=sys-apps/findutils-4.1.7
 	app-arch/unzip
@@ -98,8 +99,10 @@ src_compile() {
 
 	${use_gtk} && use mozilla && setup-mozilla-opts
 
+	use jikes && bootstrap_ant_opts="-Dbuild.compiler=jikes"
+
 	einfo "Bootstrapping bootstrap ecj"
-	ant -q -f jdtcoresrc/compilejdtcorewithjavac.xml || die "Failed to bootstrap ecj"
+	ant ${bootstrap_ant_opts} -q -f jdtcoresrc/compilejdtcorewithjavac.xml || die "Failed to bootstrap ecj"
 
 	einfo "Bootstrapping ecj"
 	ant -lib jdtcoresrc/ecj.jar -q -f jdtcoresrc/compilejdtcore.xml || die "Failed to bootstrap ecj"
