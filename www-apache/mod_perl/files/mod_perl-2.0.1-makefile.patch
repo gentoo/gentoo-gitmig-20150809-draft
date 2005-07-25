@@ -1,0 +1,11 @@
+--- Makefile.orig	2005-07-25 11:37:50.000000000 -0400
++++ Makefile	2005-07-25 11:38:12.000000000 -0400
+@@ -966,7 +966,7 @@ run_tests : test_clean
+ 	$(PASSENV) \
+ 	$(FULLPERL) -I$(INST_ARCHLIB) -I$(INST_LIB) \
+ 	t/TEST -bugreport -verbose=$(TEST_VERBOSE) $(TEST_FILES)
+-	cd ModPerl-Registry && $(MAKE) test
++	cd ModPerl-Registry && TMPDIR=$(HOME) $(MAKE) test
+ 
+ test :: pure_all run_tests test_clean
+ 

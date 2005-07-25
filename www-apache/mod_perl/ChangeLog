@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.5 2005/06/04 18:15:28 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.6 2005/07/25 18:16:25 mcummings Exp $
+
+*mod_perl-2.0.1 (25 Jul 2005)
+
+  25 Jul 2005; Michael Cummings <mcummings@gentoo.org> files/75_mod_perl.conf,
+  files/apache2-mod_perl-startup.pl, +mod_perl-2.0.1.ebuild:
+  Thanks to rendhalver for the legwork here. This installs cleanly and launches
+  w/o issue. Please test.
 
 *mod_perl-2.0.0 (04 Jun 2005)
 
