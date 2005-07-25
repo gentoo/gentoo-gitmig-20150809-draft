@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/eject
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.33 2005/07/23 15:12:30 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.34 2005/07/25 20:05:51 flameeyes Exp $
+
+  25 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> eject-2.0.13.ebuild,
+  eject-2.0.13-r1.ebuild, eject-2.0.13-r2.ebuild:
+  Block virtual/eject else it conflicts with sys-block/unieject.
 
   23 Jul 2005; <solar.@gentoo.org> +files/eject-2.0.13-i18n-uclibc.patch,
   eject-2.0.13-r2.ebuild:
