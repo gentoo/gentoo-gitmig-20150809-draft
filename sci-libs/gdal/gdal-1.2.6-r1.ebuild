@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6.ebuild,v 1.1 2005/07/23 06:33:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r1.ebuild,v 1.1 2005/07/25 01:47:20 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils
 
@@ -20,7 +20,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7.0
 	sci-libs/libgeotiff
 	jpeg? ( media-libs/jpeg )
-	gif? ( media-libs/libungif )
+	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	python? ( dev-lang/python )
 	fits? ( sci-libs/cfitsio )
@@ -46,7 +46,7 @@ src_unpack() {
 	gnuconfig_update
 	if useq netcdf && useq hdf; then
 		einfo	"Checking is HDF4 compiled with szip..."
-		if grep -c szip /var/db/pkg/sci-libs/hdf-4*/USE; then
+		if built_with_use hdf szip ; then
 			einfo	"Found HDF4 compiled with szip. Nice."
 		else
 			ewarn 	"HDF4 must be compiled with szip USE flag!"
@@ -104,6 +104,8 @@ src_compile() {
 
 	# Patch libtool here since it's not created until after configure runs
 	sed -i -e "s:hardcode_into_libs=yes:hardcode_into_libs=no:g" libtool
+	echo '#undef GDAL_PREFIX' >> port/cpl_config.h
+	echo '#define GDAL_PREFIX "/usr"' >> port/cpl_config.h
 	make || die "make failed"
 }
 
