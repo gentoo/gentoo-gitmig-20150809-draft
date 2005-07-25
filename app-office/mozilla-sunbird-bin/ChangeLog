@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mozilla-sunbird-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.7 2005/07/25 03:37:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.8 2005/07/25 03:49:18 agriffis Exp $
+
+  25 Jul 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-sunbird-bin-0.2.ebuild:
+  Require mozilla-launcher-1.44 which has the -calendar hack
 
 *mozilla-sunbird-bin-0.2 (25 Jul 2005)
 
