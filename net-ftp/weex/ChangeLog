@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/weex
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.8 2004/11/17 23:05:26 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.9 2005/07/26 13:48:49 dholm Exp $
+
+  26 Jul 2005; David Holm <dholm@gentoo.org> weex-2.6.1.5.ebuild:
+  Added to ~ppc.
 
   17 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> weex-2.6.1.5.ebuild:
   fix inherit for bug #71472; tidy

@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ChangeLog,v 1.16 2004/10/19 10:45:40 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ChangeLog,v 1.17 2005/07/26 13:41:40 dholm Exp $
+
+  26 Jul 2005; David Holm <dholm@gentoo.org> ftpd-0.17-r1.ebuild:
+  Added to ~ppc.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> ftpd-0.17-r1.ebuild:
   Stable on amd64.
