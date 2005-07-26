@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wx-xmingw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wx-xmingw/ChangeLog,v 1.1 2005/05/18 23:04:38 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wx-xmingw/ChangeLog,v 1.2 2005/07/26 22:55:16 pythonhead Exp $
+
+  26 Jul 2005; Rob Cakebread <pythonhead@gentoo.org> wx-xmingw-2.4.2.ebuild:
+  Fixed gdb flag. bug# 100412
 
 *wx-xmingw-2.4.2 (18 May 2005)
 

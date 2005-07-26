@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wx-xmingw/wx-xmingw-2.4.2.ebuild,v 1.2 2005/07/14 22:15:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wx-xmingw/wx-xmingw-2.4.2.ebuild,v 1.3 2005/07/26 22:55:16 pythonhead Exp $
 
 
 DESCRIPTION="Win32 version of wxWidgets for xmingw cross-compiler"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.wxwidgets.org/"
 LICENSE="wxWinLL-3"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="debug gdb monolithic mslu odbc opengl shared threads unicode"
+IUSE="debug gdb shared threads monolithic mslu unicode opengl odbc"
 DEPEND=">=dev-util/xmingw-runtime-3.2
 	dev-util/xmingw-w32api
 	dev-util/xmingw-gcc"

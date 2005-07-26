@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ad9b2c359117efaa262e9ceaa7561020 wx-xmingw-2.4.2.ebuild 1436
-MD5 f60789dc2609337752ff30d097b04791 ChangeLog 442
+MD5 d2da03eedae0ec8f5a6f63c23a9aa49b wx-xmingw-2.4.2.ebuild 1438
 MD5 34a3c9a403196f569f63f0f608007f6e metadata.xml 163
+MD5 54e4d39897cc3a3ff6ee92060778c435 ChangeLog 550
 MD5 f66da5ca87ac90c10f7cc07618c7e082 files/digest-wx-xmingw-2.4.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1uP6BXaUFmZvwyMRAllvAJwJCo/Vsij6D6CYYE2igB0CJt0ASgCgnek0
-KLTLi+YzQtciHFyCW2BJkoE=
-=AVhR
------END PGP SIGNATURE-----
