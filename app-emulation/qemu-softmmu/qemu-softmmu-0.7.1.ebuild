@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.7.1.ebuild,v 1.2 2005/07/26 08:06:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.7.1.ebuild,v 1.3 2005/07/26 13:51:13 lu_zero Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -56,7 +56,7 @@ src_unpack() {
 	einfo "if you want it released under GPL"
 	mv ${S}/../kqemu ${S}
 	cd ${S}/kqemu
-	#epatch ${FILESDIR}/kqemu-sysfs.patch
+	epatch ${FILESDIR}/kqemu-${PV}-sysfs.patch
 	sed -i -e "s:#ifndef PAGE_KERNEL_EXEC:#if 1:" ${S}/kqemu/kqemu-linux.c
 	fi
 	#	if use qvm86; then
