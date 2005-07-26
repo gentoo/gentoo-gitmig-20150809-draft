@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.124 2005/07/17 06:10:06 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.125 2005/07/26 18:56:43 gregkh Exp $
+
+*udev-064 (26 Jul 2005)
+
+  26 Jul 2005; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-064.ebuild:
+  064 release
+  
+  Fixes sparc and other 64 bit arch issues.
+  Added another udev helper program, create_floppy_devices, which requires a
+  kernel patch to work properly.
 
   17 Jul 2005; Joshua Kinard <kumba@gentoo.org> udev-062.ebuild,
   udev-063.ebuild:
