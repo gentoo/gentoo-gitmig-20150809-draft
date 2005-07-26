@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.80 2005/07/22 02:21:55 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.81 2005/07/26 03:50:15 leonardop Exp $
+
+  25 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  evolution-2.2.3-r2.ebuild:
+  Stable on x86.
 
 *evolution-2.2.3-r2 (21 Jul 2005)
 
