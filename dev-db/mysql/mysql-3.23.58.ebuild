@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58.ebuild,v 1.9 2005/07/22 18:52:33 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58.ebuild,v 1.10 2005/07/26 17:14:23 vivo Exp $
 
 inherit flag-o-matic eutils
 
@@ -24,7 +24,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	bdb? ( sys-apps/ed )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
-	>=sys-libs/zlib-1.2.2-r1
+	>=sys-libs/zlib-1.2.3
 	dev-lang/perl
 	sys-process/procps"
 PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"

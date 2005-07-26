@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.212 2005/07/22 18:52:33 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.213 2005/07/26 17:14:23 vivo Exp $
+
+  26 Jul 2005; Francesco Riosa <vivo@gentoo.org> files/my.cnf-4.1,
+  mysql-3.23.58.ebuild, mysql-3.23.58-r1.ebuild, mysql-4.0.22.ebuild,
+  mysql-4.0.22-r1.ebuild, mysql-4.0.22-r2.ebuild, mysql-4.0.23.ebuild,
+  mysql-4.0.23-r1.ebuild, mysql-4.0.23-r2.ebuild, mysql-4.0.24.ebuild,
+  mysql-4.0.24-r1.ebuild, mysql-4.0.24-r2.ebuild, mysql-4.0.25-r1.ebuild,
+  mysql-4.0.25-r2.ebuild, mysql-4.1.8.ebuild, mysql-4.1.8-r1.ebuild,
+  mysql-4.1.13-r1.ebuild, mysql-5.0.9_beta-r2.ebuild:
+  bug #100220 mysqlbinlog my.cnf error, Temporary fix
+  bug #99922
 
   22 Jul 2005; Francesco Riosa <vivo@gentoo.org> mysql-3.23.58.ebuild,
   mysql-3.23.58-r1.ebuild, mysql-4.0.22.ebuild, mysql-4.0.22-r1.ebuild,

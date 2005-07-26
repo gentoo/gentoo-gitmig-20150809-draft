@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8.ebuild,v 1.13 2005/07/22 18:52:33 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8.ebuild,v 1.14 2005/07/26 17:14:23 vivo Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -30,7 +30,7 @@ DEPEND="
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( dev-lang/perl )
-	>=sys-libs/zlib-1.2.2-r1
+	>=sys-libs/zlib-1.2.3
 	sys-process/procps
 	>=sys-apps/texinfo-4.7
 	>=sys-apps/sed-4"

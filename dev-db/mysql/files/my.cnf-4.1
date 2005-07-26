@@ -1,14 +1,41 @@
 # /etc/mysql/my.cnf: The global mysql configuration file.
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/my.cnf-4.1,v 1.1 2005/05/17 09:08:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/my.cnf-4.1,v 1.2 2005/07/26 17:14:23 vivo Exp $
 
 # The following options will be passed to all MySQL clients
 [client]
-character_set				= utf8
-default-character-set		= utf8
-
 #password					= your_password
 port						= 3306
 socket						= /var/run/mysqld/mysqld.sock
+
+[mysql]
+character-sets-dir=utf8
+default-character-set=utf8
+
+[mysqladmin]
+character-sets-dir=utf8
+default-character-set=utf8
+
+[mysqlcheck]
+character-sets-dir=utf8
+default-character-set=utf8
+
+[mysqldump]
+character-sets-dir=utf8
+default-character-set=utf8
+
+[mysqlimport]
+character-sets-dir=utf8
+default-character-set=utf8
+
+[mysqlshow]
+character-sets-dir=utf8
+default-character-set=utf8
+
+[myisamchk]
+character-sets-dir=utf8
+
+[myisampack]
+character-sets-dir=utf8
 
 # use [safe_mysqld] with mysql-3
 [mysqld_safe]
