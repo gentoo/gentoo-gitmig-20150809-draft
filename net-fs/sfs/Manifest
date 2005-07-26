@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 df1dca51a4b49f2f5301828d05ac295d ChangeLog 1340
 MD5 02b6a4f338d3ffcbb4199c06168d4708 metadata.xml 255
-MD5 14c88b4748b4273514d17b2378cb3f70 sfs-0.7.2.ebuild 2036
-MD5 b763077f284e109f183481b4f44eee18 ChangeLog 1263
+MD5 1d5afef5f12243e37ca90eec472bf998 sfs-0.7.2.ebuild 2037
 MD5 577ce14c65c9362770201f0539b18419 files/digest-sfs-0.7.2 62
 MD5 552da0c94c1441c082125c5dfc99f863 files/sfscd 491
 MD5 70eec8c63f81fc56660d6d36e61f68bf files/sfsrwsd_config 561
 MD5 d57d6347e4a2c9a143eaa72df2b64d97 files/sfssd 702
 MD5 795a30d0ea62ad3bab95022fa2fe8443 files/sfs-0.7.2-gcc3.patch.bz2 12797
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsIl8MGnpIbeahxwRAt6mAKCCaHb0m0S0b6Q8JlIxpTbCjwhgBQCcCsDo
-AyVA8BHK5MyhtRRHS6COe3g=
-=8NQM
------END PGP SIGNATURE-----
