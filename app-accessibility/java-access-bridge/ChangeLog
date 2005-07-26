@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/java-access-bridge
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.19 2005/07/20 14:22:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.20 2005/07/26 00:17:38 leonardop Exp $
+
+*java-access-bridge-1.4.5-r1 (25 Jul 2005)
+
+  25 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  java-access-bridge-1.4.5-r1.ebuild:
+  New revision with improvements suggested by Thomas Matthijs (bug #100237).
+  Things are not installed into $JAVA_HOME anymore.
 
   20 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   java-access-bridge-1.4.5.ebuild:

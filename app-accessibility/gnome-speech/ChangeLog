@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.33 2005/07/25 17:39:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.34 2005/07/26 00:15:00 leonardop Exp $
+
+*gnome-speech-0.3.7-r1 (25 Jul 2005)
+
+  25 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gnome-speech-0.3.7-r1.ebuild:
+  New revision, with improvements from Thomas Matthijs on bug #100237. Added
+  festival to RDEPEND so gnome-speech is usable by default.
 
   25 Jul 2005; Guy Martin <gmsoft@gentoo.org> gnome-speech-0.3.7.ebuild:
   Stable on hppa.
