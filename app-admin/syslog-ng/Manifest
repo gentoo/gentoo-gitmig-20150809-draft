@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6c2dbb020749666ec5b29ce60d0bb242 syslog-ng-1.6.5-r2.ebuild 1662
 MD5 6524969344522cc4e6120345283bb8ad ChangeLog 14351
 MD5 06a2fa1e0308f065f818db6fae959fe9 metadata.xml 257
@@ -13,3 +16,10 @@ MD5 fe66a527c7f36a560197b4187ad6d9db files/syslog-ng.logrotate 342
 MD5 b9cf104e2020c2d8c5fa164b6f54de5c files/syslog-ng.conf.debian 5445
 MD5 16631a83d959b680a453099a5dee73a8 files/digest-syslog-ng-1.6.6 67
 MD5 a4c1bbda13638dd57de807e22553ae49 files/syslog-ng.conf.gentoo.hardened 4350
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFC5qohKf2g/qXtneoRAoP4AJ4vObid6mZU9UVtmN6GYwhqspJx/ACUCjWm
+4SMufvd2uDG02C4w3GoVMQ==
+=p32t
+-----END PGP SIGNATURE-----
