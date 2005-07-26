@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 273718ad3a91623d0f6323f47b62426f drgeo-1.0.0.ebuild 1271
 MD5 a0c9cb4e26e9e054f3f7adcef3a4dc81 ChangeLog 1946
 MD5 b7754813bc9622131031666d24ae5db7 metadata.xml 635
 MD5 2517f39945f64a2eafa7c8cd288efbec files/digest-drgeo-1.0.0 130
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5sHdntT9W3vfTuoRAnCsAKCIo8LrzVOuUiPLSTyg4mTwMij2tACeJnqc
+p538JChgq4PoEmOivNB3Buk=
+=NZsx
+-----END PGP SIGNATURE-----
