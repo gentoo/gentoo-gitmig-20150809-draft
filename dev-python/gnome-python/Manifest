@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cc11fe99ce250fba7a08cc26300fa223 ChangeLog 5877
 MD5 1e2e39e780cb5a4348242df3ab9bcae5 gnome-python-1.4.4-r1.ebuild 1175
 MD5 aab7d8b8a9c5777f5acad94eb998f367 metadata.xml 178
@@ -16,3 +19,10 @@ MD5 7fd6852037c022d0f0f2413aabae59b4 files/digest-gnome-python-1.4.2 70
 MD5 ce53c6cf0fe7655ed7c57a31f4bb34a1 files/digest-gnome-python-2.10.0 72
 MD5 aa76f5d8b6e152a3b22f18773e522f80 files/digest-gnome-python-2.0.0-r1 71
 MD5 aa76f5d8b6e152a3b22f18773e522f80 files/digest-gnome-python-2.0.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5q+0Kf2g/qXtneoRApH9AJ9Fy3OL3krO2mullku6kD6wUwzsAwCeO/yO
+HAT176z1wjmifqOu4xHu2Ks=
+=QwEB
+-----END PGP SIGNATURE-----
