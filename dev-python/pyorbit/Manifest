@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 298bd2018001959da4c10fbdae381be0 pyorbit-2.0.0.ebuild 614
+MD5 c909c3bf53f5261421870f56ff5bbac5 ChangeLog 2179
 MD5 7f4b1ac767214657b085c4951227af02 metadata.xml 178
-MD5 d8ee63b4e974fc6050cd30bf315f5723 pyorbit-2.0.1.ebuild 1172
-MD5 dd09ee316ad73772ef1153501da46b6e ChangeLog 2086
-MD5 e95549f9bb22fc658bfede9a5690dd2a files/digest-pyorbit-2.0.1 66
+MD5 7894ab85bca4571459b79017ac04400a pyorbit-2.0.1.ebuild 1169
+MD5 298bd2018001959da4c10fbdae381be0 pyorbit-2.0.0.ebuild 614
 MD5 9d3297219d639bea2af5b40eac57dd24 files/digest-pyorbit-2.0.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC27N9KRy60XGEcJIRAjk5AJ9DTYqXz6nBr3hShPYlDaHK04rpMwCaAkko
-sSNuwoetiEB37qKLHM2yWxE=
-=cjKr
------END PGP SIGNATURE-----
+MD5 e95549f9bb22fc658bfede9a5690dd2a files/digest-pyorbit-2.0.1 66
