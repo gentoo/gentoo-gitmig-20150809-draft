@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.232 2005/07/26 21:26:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.233 2005/07/26 22:32:29 flameeyes Exp $
+
+*xine-lib-1.1.0 (26 Jul 2005)
+
+  26 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +xine-lib-1.1.0.ebuild:
+  Added upstrea 1.1.0 version, external FFMPEG disabled as it needs a newer
+  version than the snapshot we have.
 
 *xine-lib-1.0.2 (26 Jul 2005)
 
