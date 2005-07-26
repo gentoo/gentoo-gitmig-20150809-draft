@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bcdc7d42d49a3336eec8f4e707e613d0 ChangeLog 693
-MD5 b31cd2e4ddd92ff63ef4cf89f0c9e4d7 switcher-0.3.7a.ebuild 506
+MD5 3e75545d88679c94e7bcd641b443b72b ChangeLog 779
+MD5 a661584bd15aa998ae229347210b2f95 switcher-0.3.7a.ebuild 508
 MD5 93f02cf17e28c71ad2a43ecc2399b56f metadata.xml 279
 MD5 4b88c82302a17d21af18a3226f03d327 files/digest-switcher-0.3.7a 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCyI2Nl5AvwDPiUowRAoH5AJ4rINOhcfEvrbE5H7NAlqdAwEbnzACbBcHJ
-XpmQxTy3Q2BUq5RaWUcCv5E=
-=m2cD
------END PGP SIGNATURE-----

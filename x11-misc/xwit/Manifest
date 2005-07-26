@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 49394c979b0eb7034be36d34c08fcd94 xwit-3.4.ebuild 784
-MD5 6cea4b70ee8adefafff3698d6e98b360 ChangeLog 579
+MD5 913d4c8ca9bf6dcee92b660b38eaa5f6 ChangeLog 657
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
-MD5 78197b7ebd98561a622ed0c63705e0d1 files/malloc.patch 284
+MD5 559194b455353ad5773607b7dc64e902 xwit-3.4.ebuild 786
 MD5 86f9cfab9b1b64db4bd58e94cc8148fb files/digest-xwit-3.4 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCoxWnI1lqEGTUzyQRAlu5AKCC6ADDodxebDLHH72N3Gox0aysAgCg2mrd
-P/Hnvum8mOf6RnFoSq/wyGA=
-=LyYN
------END PGP SIGNATURE-----
+MD5 78197b7ebd98561a622ed0c63705e0d1 files/malloc.patch 284
