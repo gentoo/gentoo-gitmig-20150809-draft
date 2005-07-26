@@ -9,7 +9,7 @@ MD5 3ec5d17c9cfd78688ca51a889dd354a7 glibc-2.3.4.20040808-r1.ebuild 27705
 MD5 a8ef559af232bec164fd51b9d3f6ae53 glibc-2.3.5-r1.ebuild 40316
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 45b53d55a7990f579c81cc9698091b8b glibc-2.2.5-r10.ebuild 4454
-MD5 b9cc3e95f610fd3888ede72feb1e9482 glibc-2.3.5.20050722.ebuild 41220
+MD5 3a8af3ea3d6ecee2bd906e9287eb1943 glibc-2.3.5.20050722.ebuild 41027
 MD5 c46d5f4a68631ce78b555bd9be702516 glibc-2.3.4.20050125-r1.ebuild 38954
 MD5 56a134feccf1d00adf6dbb7db25a6c4d glibc-2.3.5.ebuild 40622
 MD5 d54fedd583d604a192de3ba7cf7f3ae0 glibc-2.3.5.20050421.ebuild 40653
@@ -134,7 +134,7 @@ MD5 ee692cfc6e7c810a2785093948638bbc files/2.3.4/glibc234-alpha-xstat.patch 7653
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC5sSwArHZZzCEUG0RAi2bAJ0QthZwPPc8U8co43sWrmd47w6opACfXq+E
-nniaR1XX9PpRvPDTOUvrzB4=
-=k+bP
+iD8DBQFC5sZsArHZZzCEUG0RAlK/AJ9gY6V3HSmmpl8JyvntCrGEbNTPTwCfUfOV
+01vF2Cv43KAfWbg4v8P14iU=
+=cg1r
 -----END PGP SIGNATURE-----

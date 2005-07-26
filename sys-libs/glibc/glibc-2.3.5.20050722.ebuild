@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.2 2005/07/26 22:20:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.3 2005/07/26 23:25:20 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -18,9 +18,8 @@
 
 KEYWORDS="-*"
 
-# Do not define this, and name the ebuild glibc-<ver>.<branch update>.ebuild,
-# and it should  just work.
-BRANCH_UPDATE=""
+# This is taken from ${PV}
+# BRANCH_UPDATE=""
 
 # From linuxthreads/man
 GLIBC_MANPAGE_VERSION="2.3.5"
@@ -69,17 +68,12 @@ is_crosscompile() {
 
 GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
 
-## Don't set this to :-, - allows BRANCH_UPDATE=""
-#
-# Above is _WRONG_ .. from the bash manual:
+# Don't set this to :-, - allows us to override BRANCH_UPDATE to be empty:
 #
 #   ${parameter:-word}
 #     Use  Default Values.  If parameter is unset or null, the expansion of
 #     word is substituted.
-#
-# So, '-' will only work if $BRANCH_UPDATE is _UNSET_, and we _HAVE_ to
-# use ':-' instead ...
-BRANCH_UPDATE=${BRANCH_UPDATE:-$(get_version_component_range 4)}
+BRANCH_UPDATE=${BRANCH_UPDATE-$(get_version_component_range 4)}
 
 # (Recent snapshots fails with 2.6.5 and earlier with NPTL)
 NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.6"}
