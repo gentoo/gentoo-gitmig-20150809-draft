@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice-ximian-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/ChangeLog,v 1.10 2005/05/07 16:33:14 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/ChangeLog,v 1.11 2005/07/26 06:44:13 suka Exp $
+
+*openoffice-ximian-bin-1.3.15 (26 Jul 2005)
+
+  26 Jul 2005; Andreas Proschofsky <suka@gentoo.org>
+  +openoffice-ximian-bin-1.3.15.ebuild:
+  New release.
 
 *openoffice-ximian-bin-1.3.11 (07 May 2005)
 
