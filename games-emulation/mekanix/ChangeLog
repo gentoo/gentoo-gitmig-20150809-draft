@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/mekanix
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mekanix/ChangeLog,v 1.4 2004/06/24 22:30:53 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mekanix/ChangeLog,v 1.5 2005/07/26 22:06:39 mr_bones_ Exp $
+
+*mekanix-070 (26 Jul 2005)
+
+  26 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org> +mekanix-070.ebuild:
+  version bump (bug #93214)
 
   26 May 2004; Michael Sterrett <mr_bones_@gentoo.org> mekanix-065.ebuild:
   IUSE; use games_make_wrapper; tidy
