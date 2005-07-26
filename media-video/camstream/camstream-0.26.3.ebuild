@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.9 2005/07/07 04:51:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.10 2005/07/26 18:29:57 blubb Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Collection of tools for webcams and other video devices"
 HOMEPAGE="http://www.smcc.demon.nl/camstream/"
 SRC_URI="http://www.smcc.demon.nl/camstream/download/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 -ppc"
+KEYWORDS="amd64 -ppc x86"
 SLOT="0"
 IUSE="doc"
 
