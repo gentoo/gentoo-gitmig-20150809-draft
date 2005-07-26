@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/qucs-0.0.6.ebuild,v 1.2 2005/06/18 18:19:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/qucs-0.0.7.ebuild,v 1.1 2005/07/26 23:36:56 cryos Exp $
 
-DESCRIPTION="Qt Universal Circuit Simulator is a Qt based circuit simulator"
+DESCRIPTION="Quite Universal Circuit Simulator is a Qt based circuit simulator"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://qucs.sourceforge.net/"
 LICENSE="GPL-2"
