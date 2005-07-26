@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/poppassd_ceti
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/ChangeLog,v 1.5 2005/05/24 16:56:50 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/ChangeLog,v 1.6 2005/07/26 23:18:20 cryos Exp $
+
+  26 Jul 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  -files/poppassd_ceti-gcc-3.4.patch, -files/poppassd.pam,
+  -poppassd_ceti-1.8.4.ebuild:
+  Stablised 1.8.5-r1 on amd64 and x86. Removed old version.
 
 *poppassd_ceti-1.8.5-r1 (24 May 2005)
 

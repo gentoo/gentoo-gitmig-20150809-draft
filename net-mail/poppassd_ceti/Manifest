@@ -1,19 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9d4b2a75461d556a576c30026c7d520d poppassd_ceti-1.8.4.ebuild 1229
-MD5 6224fe09a030ed87d985d3c8c8aa7cd9 poppassd_ceti-1.8.5-r1.ebuild 1153
-MD5 40b9f2ad0f263175cd28f3c129e0e002 ChangeLog 1086
+MD5 4a9233394295d80fe6b4d31a3d05f51f poppassd_ceti-1.8.5-r1.ebuild 1151
+MD5 f6c9c003cca742faf7e130bfd7d7e475 ChangeLog 1290
 MD5 fe827b79b11c155518347e67d1b1af8a metadata.xml 762
-MD5 397ccdd516d577d12da910571053d732 files/digest-poppassd_ceti-1.8.4 64
-MD5 4254be91fe5aa08165875c23ec84af59 files/poppassd_ceti-gcc-3.4.patch 616
-MD5 3c5bb8c91acf9e91343716da1f3c244d files/poppassd.pam 249
 MD5 76b89dba95c6cc1a368e5e09b1cd5d38 files/digest-poppassd_ceti-1.8.5-r1 64
 MD5 3527c23e84a922b8615f073ee22b400a files/poppassd.xinetd 245
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCk1z3ntT9W3vfTuoRAm0KAKCdYTeMmVYTQSVWiRsC1/hNN62s2gCfWiPs
-n7BpwSb6yYFa8REdeBRvn1A=
-=JJ9z
+iD8DBQFC5sTIntT9W3vfTuoRAo0+AJ9k5lYuJw3MEibd4GtNu6/jvQiTwACcCmRz
+GXwYcgqBFuyZQKpYKgczhsI=
+=pa/y
 -----END PGP SIGNATURE-----
