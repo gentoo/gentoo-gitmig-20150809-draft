@@ -1,6 +1,16 @@
-MD5 f796d858562a19254817d70bbf7c22a5 ChangeLog 8862
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 1c774424ba0806e57967fd611977e2c2 gnome-icon-theme-2.10.0.ebuild 744
-MD5 87d38f61921d8cc061c7b46309d36c16 gnome-icon-theme-2.10.1.ebuild 755
+MD5 2bf73177851c6949008fc8d82771c448 ChangeLog 8968
+MD5 39e0ea6f30ef328916705565ae65219f gnome-icon-theme-2.10.1.ebuild 753
 MD5 c9c1b85c1ecabbaaecc7ba5b6d3074e2 files/digest-gnome-icon-theme-2.10.0 77
 MD5 6decb2c1ce82613691218d8a8f1f8428 files/digest-gnome-icon-theme-2.10.1 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC5kirKRy60XGEcJIRAtcBAJ946tsU1HqH9Brnhgn1oWzeH5Mn/ACcDfrv
+2nKA4iNjly7J/MZcqKTJBXc=
+=/sPu
+-----END PGP SIGNATURE-----
