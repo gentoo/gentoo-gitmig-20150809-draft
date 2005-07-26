@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18.ebuild,v 1.4 2005/03/12 13:40:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18.ebuild,v 1.5 2005/07/26 12:56:28 dholm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://frox.sourceforge.net/download/${MY_P}.tar.bz2"
 HOMEPAGE="http://frox.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 sparc"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 DEPEND="clamav? ( >=app-antivirus/clamav-0.80 )"
 

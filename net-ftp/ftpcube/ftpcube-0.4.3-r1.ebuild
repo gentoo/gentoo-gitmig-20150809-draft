@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.4.3-r1.ebuild,v 1.8 2004/12/14 21:15:58 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.4.3-r1.ebuild,v 1.9 2005/07/26 12:59:32 dholm Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ DEPEND="virtual/python
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="~amd64 ~ppc sparc x86"
 
 src_unpack() {
 	unpack ${A}

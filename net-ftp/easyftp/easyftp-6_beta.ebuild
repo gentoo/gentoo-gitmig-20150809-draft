@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/easyftp/easyftp-6_beta.ebuild,v 1.10 2004/07/14 23:55:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/easyftp/easyftp-6_beta.ebuild,v 1.11 2005/07/26 12:53:44 dholm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DEPEND="=x11-libs/qt-3*"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 src_unpack() {
