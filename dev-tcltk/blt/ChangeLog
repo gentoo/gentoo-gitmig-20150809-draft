@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.15 2005/05/08 22:00:30 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.16 2005/07/26 03:32:25 cretin Exp $
+
+*blt-2.4z-r1 (25 Jul 2005):
+
+  25 Jul 2005; Stefan Jones <cretin@gentoo.org> blt-2.4z-r1.ebuild:
+  Rename man pages to .nblt so fix bug #88629
 
   08 May 2005; Herbie Hopkins <herbs@gentoo.org> blt-2.4z.ebuild:
   Multilib fixes.
