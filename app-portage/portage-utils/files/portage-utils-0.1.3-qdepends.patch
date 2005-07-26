@@ -1,0 +1,16 @@
+Index: qdepends.c
+===================================================================
+RCS file: /var/cvsroot/gentoo-projects/portage-utils/qdepends.c,v
+retrieving revision 1.5
+diff -u -p -r1.5 qdepends.c
+--- qdepends.c	20 Jun 2005 06:25:29 -0000	1.5
++++ qdepends.c	26 Jul 2005 01:25:04 -0000
+@@ -374,7 +374,7 @@ int qdepends_main(int argc, char **argv)
+ 
+ 			snprintf(buf, sizeof(buf), "%s/%s/%s/USE", portvdb,
+ 			         dentry->d_name, de->d_name);
+-			assert(eat_file(buf, use, sizeof(use)) == 0);
++			assert(eat_file(buf, use, sizeof(use)) == 1);
+ 			for (ptr = use; *ptr; ++ptr)
+ 				if (*ptr == '\n' || *ptr == '\t')
+ 					*ptr = ' ';
