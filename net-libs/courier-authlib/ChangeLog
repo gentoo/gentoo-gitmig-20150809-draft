@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.37 2005/07/02 23:45:13 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.38 2005/07/26 23:57:43 vivo Exp $
+
+*courier-authlib-0.57 (26 Jul 2005)
+
+  26 Jul 2005; Francesco Riosa <vivo@gentoo.org>
+  +courier-authlib-0.57.ebuild:
+  version bump
+  fix Bug #88415 : courier-authlib-0.5* doesn't compile using mysql when 
+                   LDFLAGS are set in system
 
 *courier-authlib-0.56 (02 Jul 2005)
 
