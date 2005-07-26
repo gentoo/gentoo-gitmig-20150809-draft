@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.1 2005/07/02 21:20:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.2 2005/07/26 11:25:36 seemant Exp $
+
+  26 Jul 2005; Seemant Kulleen <seemant@gentoo.org>
+  pam_krb5-20030601-r1.ebuild:
+  change to econf and some other cleanups.  Also add ~amd64 to KEYWORDS
 
   02 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/pam_krb5-1.0-errno_h.patch, +files/pam_krb5-1.0-gentoo.diff,
