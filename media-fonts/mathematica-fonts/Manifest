@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6f54ae943bdf143a5de484d262b3e23c ChangeLog 771
 MD5 671fdaff86db3c8aa47a0e69269ed964 mathematica-fonts-4.2.ebuild 1744
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 d7b8a0d330ffc8cade747364055e362f files/digest-mathematica-fonts-4.2 138
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5fmKj5H05b2HAEkRAmeLAKCT9Y5blhjKOemRQ57Fyk37GN8H6gCePjbl
+g7/NrIYW/C/OBsl/LymRkos=
+=vZA/
+-----END PGP SIGNATURE-----

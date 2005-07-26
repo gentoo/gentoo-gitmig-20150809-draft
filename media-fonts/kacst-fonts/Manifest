@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4b7df555bfc4336dd5a8e2ffc9d03940 ChangeLog 782
 MD5 882cd22e5756b1157b18ee86ee1d6f5d kacst-fonts-1.6.2.ebuild 574
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 2d70e05fff14ed2767c84d78762722d0 files/digest-kacst-fonts-1.6.2 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5fjyj5H05b2HAEkRAs5eAJ0fVCq4PdZEHQ7AbFiDxIEGFoyi7QCfVTxC
+kvmRkGulAb4RXNYNCN73y3w=
+=JBm+
+-----END PGP SIGNATURE-----
