@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b01adffb48b5f52d37913ac86d424002 ChangeLog 672
+MD5 7f5cdfa7f8475c00843cfc29882af870 ChangeLog 754
 MD5 54822d5f9ce695807e5587b4599508a3 metadata.xml 286
-MD5 f608cf6421bc5f408be7f1bfacf5c0c6 seyon-2.20c.ebuild 1131
+MD5 69bc2c550ccd78c78e022b28e4d2f300 seyon-2.20c.ebuild 1135
 MD5 e638de11183c1abccec465cff58508e1 files/digest-seyon-2.20c 68
 MD5 9792d7b3377e4ed0c863e97f7a5a143b files/seyon-2.20c-compile-fix.patch 1739
 MD5 9bbb1e4fc0479e80b82ac13caacd30e6 files/seyon-2.20c-lock-file-fix.patch 976
 MD5 e83cc993ec4221c12a63f259e10fb4d7 files/seyon-2.20c-makefile-patch.patch 562
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtgREl5AvwDPiUowRAk5yAJ99Is9JaSZzayCCkstClzEuJPE2pgCeO3op
-JOIqwb0bbjqXh2rirS0uyDo=
-=gshi
------END PGP SIGNATURE-----

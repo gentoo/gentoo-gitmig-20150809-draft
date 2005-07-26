@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dc01cd101c68509cf5d0d48d86c8f2a2 ChangeLog 666
-MD5 2131c721e2af21732b6a1febbe43e4ce kpasman-0.2.ebuild 466
+MD5 91536775f677eebd766b7dde81bebda3 ChangeLog 748
+MD5 efcfe5dc12447f0bc8393149d458aea3 kpasman-0.2.ebuild 469
 MD5 0c077108207f661273efebd07e3b74e8 metadata.xml 213
 MD5 0a462a69b2c9c6fe80e5b7bdb4955929 files/digest-kpasman-0.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCyIjvl5AvwDPiUowRAhQtAJ9RGnfkU1uuOTv2NyzQzw6vSDvIogCgtU5H
-w21NZPvObOFmI/hhPlxq3LM=
-=90Sm
------END PGP SIGNATURE-----

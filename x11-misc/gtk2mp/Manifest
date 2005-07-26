@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c521fb491fb17023bd390153f493298b ChangeLog 527
+MD5 d5584533ce47d49f971547762573b1ba ChangeLog 610
+MD5 e538e6a5a14dea60f421a4cbe267864f gtk2mp-0.8.0.ebuild 620
 MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167
-MD5 45be445ad14534fa75173c34d1b14172 gtk2mp-0.8.0.ebuild 616
 MD5 575343e392ef8ac77889ea3ca10d7a4c files/digest-gtk2mp-0.8.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBf2eRCHk4+ZoBpvsRAlmLAJ0VQfH8ozvowUu7vxqiVffamJYrWACguZzd
-F7gX1RpG3edk+vrTCWepK3s=
-=OW7r
------END PGP SIGNATURE-----
