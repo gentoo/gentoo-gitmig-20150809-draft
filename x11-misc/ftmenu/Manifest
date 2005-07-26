@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f004e6d3552a85645c641b40ed0d171d ftmenu-0.1.ebuild 1123
-MD5 eb0b3ffd711fbd924b7284a407fef757 ChangeLog 350
+MD5 dd267440bb6b1687c5c4ef2414a6ed61 ChangeLog 430
+MD5 61d499341bc1de2c6c4d1ae3dacc1b91 ftmenu-0.1.ebuild 1126
 MD5 6d984fdc3a2bfe09ec7cb86b38267de3 metadata.xml 256
 MD5 3587a1963fd831a08df5e91380233084 files/digest-ftmenu-0.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB/4ivEZCkKN40op4RAhRFAJ98grjeEAyUP3JT2zqoWHeM6lj/xgCeJ1J6
-yIv3X0tRuXpUaKvWMU918wM=
-=3K6s
------END PGP SIGNATURE-----
