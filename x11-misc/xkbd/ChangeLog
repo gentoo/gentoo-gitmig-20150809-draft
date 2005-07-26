@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkbd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/ChangeLog,v 1.6 2004/08/09 17:08:42 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/ChangeLog,v 1.7 2005/07/26 15:12:21 dholm Exp $
+
+  26 Jul 2005; David Holm <dholm@gentoo.org> xkbd-0.8.12.ebuild:
+  Added to ~ppc.
 
   09 Aug 2004; Tom Martin <slarti@gentoo.org> xkbd-0.8.12.ebuild:
   Marked ~amd64 for bug 58972

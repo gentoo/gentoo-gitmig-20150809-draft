@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdaf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaf/ChangeLog,v 1.6 2004/06/24 22:39:25 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaf/ChangeLog,v 1.7 2005/07/26 15:10:34 dholm Exp $
+
+  26 Jul 2005; David Holm <dholm@gentoo.org> xdaf-0.01.11.01.ebuild:
+  Added to ~ppc.
 
   26 Jan 2004; Markus Nigbur <pyrania@gentoo.org> xdaf-0.01.10.ebuild,
   xdaf-0.01.11.01.ebuild:

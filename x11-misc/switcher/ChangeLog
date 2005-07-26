@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/switcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/switcher/ChangeLog,v 1.5 2005/07/04 01:14:24 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/switcher/ChangeLog,v 1.6 2005/07/26 14:59:58 dholm Exp $
+
+  26 Jul 2005; David Holm <dholm@gentoo.org> switcher-0.3.7a.ebuild:
+  Added to ~ppc.
 
   04 Jul 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml:
   added metadata
