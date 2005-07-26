@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b696df9b30ac7c359ea4b0237fa7cd3b gst-plugins-sidplay-0.8.10.ebuild 332
+MD5 6a1910d2a12db7bfbfdbc245cfde224f ChangeLog 499
+MD5 1268fd56437265541c92e6392e73429f gst-plugins-sidplay-0.8.10.ebuild 337
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 b63f1587e3201629292d581126e9e577 ChangeLog 399
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-sidplay-0.8.10 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5WW/r2QksT29OyARArNwAKCGMz73PnZOLBmo4i3I4hpVEp2iJACcCeFD
-2zbYuS1gd3dFFGgqOAmlmNs=
-=jL3b
------END PGP SIGNATURE-----
