@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-4.2.ebuild,v 1.3 2005/05/21 21:10:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-4.2.ebuild,v 1.4 2005/07/26 08:50:47 flameeyes Exp $
 
 inherit font
 
@@ -16,7 +16,7 @@ SRC_URI="truetype? ( $TRUETYPE_FILE )
 LICENSE="WRI-EULA"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="truetype"
 DEPEND="app-arch/unzip"
 RDEPEND=""
