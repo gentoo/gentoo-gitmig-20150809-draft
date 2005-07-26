@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.1-r1.ebuild,v 1.1 2005/07/13 02:14:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.1-r1.ebuild,v 1.2 2005/07/26 23:25:35 leonardop Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="oggvorbis gstreamer mad flac"
 # cups
 
@@ -79,18 +79,8 @@ src_unpack() {
 	# mode. See bug #95606.
 	epatch ${FILESDIR}/${P}-deselect.patch
 
-	# -- Component architecture has changed in 2.9 -- this 
-# -- patch no longer applies.
-
-	# add libgnomeprint support
-	# With extra 2.8 fun - fixes #65604
-#	if use cups; then
-#		if has_version ">=net-print/gnome-cups-manager-0.28"; then
-#			epatch ${FILESDIR}/${PN}-2.8-x-printers.patch
-#		else
-#			epatch ${FILESDIR}/${PN}-2-x-printers.patch
-#		fi
-#	fi
+	# -- Component architecture has changed in 2.9 -- libgnomeprint patches
+	# no longer apply.
 
 	# stop nautilus linking to cdda/paranoia
 	sed -i -e "/^CORE_LIBS/s/\$CDDA_LIBS//" configure.in
