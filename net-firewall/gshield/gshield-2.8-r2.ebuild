@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/gshield-2.8-r2.ebuild,v 1.4 2004/07/14 23:42:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/gshield-2.8-r2.ebuild,v 1.5 2005/07/26 11:54:59 dholm Exp $
 
 # re-capitalize gShield
 S=${WORKDIR}/gShield-${PV}
@@ -11,7 +11,7 @@ SRC_URI="ftp://muse.linuxmafia.org/pub/gShield/v2/gShield-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 RDEPEND="net-firewall/iptables
