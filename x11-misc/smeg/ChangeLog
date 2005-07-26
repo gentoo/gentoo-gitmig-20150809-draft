@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/smeg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/smeg/ChangeLog,v 1.4 2005/07/04 16:44:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/smeg/ChangeLog,v 1.5 2005/07/26 14:53:59 dholm Exp $
+
+  26 Jul 2005; David Holm <dholm@gentoo.org> smeg-0.7.5.ebuild:
+  Added to ~ppc.
 
   04 Jul 2005; Heinrich Wendel <lanius@gentoo.org> smeg-0.7.5.ebuild:
   add missing pygtk dep
