@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.36 2005/05/10 21:47:41 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.37 2005/07/26 21:23:05 kosmikus Exp $
+
+*darcs-1.0.3 (26 Jul 2005)
+
+  26 Jul 2005; Andres Loeh <kosmikus@gentoo.org> +darcs-1.0.3.ebuild:
+  New version.
 
   10 May 2005; Andres Loeh <kosmikus@gentoo.org> darcs-1.0.3_rc1.ebuild:
   darcs-1.0.3_rc1 must be built with ghc-6.2.2 or later, fixing bug #92152.
