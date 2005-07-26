@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/arptables
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.4 2005/01/31 16:26:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.5 2005/07/26 11:24:57 dholm Exp $
+
+  26 Jul 2005; David Holm <dholm@gentoo.org> arptables-0.0.3.ebuild:
+  Added to ~ppc.
 
   31 Jan 2005; Simon Stelling <blubb@gentoo.org> arptables-0.0.3.ebuild:
   added ~amd64
