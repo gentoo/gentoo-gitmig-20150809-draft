@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.1c.ebuild,v 1.1 2005/05/09 00:11:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.1c.ebuild,v 1.2 2005/07/26 22:26:15 mr_bones_ Exp $
 
 inherit games
 
@@ -42,4 +42,11 @@ src_install() {
 
 	dodoc ../${PDATA}/{README.txt,README-stereo.txt}
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	einfo "After running ${PN} for the first time, a config file is"
+	einfo "available in ~/.trigger/trigger.config"
+	echo
 }

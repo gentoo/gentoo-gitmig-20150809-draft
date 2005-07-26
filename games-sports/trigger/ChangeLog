@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/trigger
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.5 2005/07/26 18:47:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.6 2005/07/26 22:26:15 mr_bones_ Exp $
+
+  26 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  trigger-0.5.1c.ebuild:
+  mention ~/.trigger/trigger.config in pkg_postinst
 
   26 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
   -trigger-0.5.0.ebuild, -trigger-0.5.1.ebuild:
