@@ -1,9 +1,6 @@
 # ChangeLog for sys-apps/lkcp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/ChangeLog,v 1.3 2005/07/26 23:01:14 r3pek Exp $
-
-  26 Jul 2005; Carlos Silva <r3pek@gentoo.org> +lkcp-0.4.0.ebuild:
-  New upstream release
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/ChangeLog,v 1.4 2005/07/26 23:55:45 swegener Exp $
 
 *lkcp-0.4.0 (26 Jul 2005)
 
