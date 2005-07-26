@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1342 2005/07/25 20:56:32 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1343 2005/07/26 21:39:59 peitolm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -428,6 +428,8 @@ mail-mta/exim:exiscan - Patch providing support for content scanning backward-co
 mail-mta/exim:exiscan-acl - Patch providing support for content scanning
 mail-mta/exim:lmtp - Adds support for lmtp
 mail-mta/exim:syslog - defines syslog as the default log path if none is specified in the conf file.
+mail-mta/exim:srs - Adds support for Sender Rewriting Scheme
+mail-mta/exim:spf - Adds support for Sendr Policy Framework
 mail-mta/postfix:vda - Adds support for virtual delivery agent quota enforcing
 mail-mta/qmail:logmail - Enable logging all E-Mails via ~alias/.qmail-log
 mail-mta/qmail:noauthcram - If you do NOT want AUTHCRAM to be available
