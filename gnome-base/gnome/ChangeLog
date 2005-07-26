@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.175 2005/07/08 10:56:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.176 2005/07/26 23:42:09 leonardop Exp $
+
+*gnome-2.10.2 (26 Jul 2005)
+
+  26 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> gnome-2.10.2.ebuild:
+  GNOME 2.10.2 release.
+
+  26 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> gnome-2.10.1.ebuild:
+  Stable on x86.
 
 *gnome-2.10.1 (08 Jul 2005)
 
