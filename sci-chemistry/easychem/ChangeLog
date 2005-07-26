@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/easychem
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.4 2005/07/13 09:30:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.5 2005/07/26 23:22:47 cryos Exp $
+
+  26 Jul 2005; Marcus D. Hanwell <marcus@gentoo.org> easychem-0.6.ebuild:
+  Stable on amd64 and x86.
 
   13 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>; easychem-0.6.ebuild:
   Use a little trickery to allow virtual/ghostscript instead of just
