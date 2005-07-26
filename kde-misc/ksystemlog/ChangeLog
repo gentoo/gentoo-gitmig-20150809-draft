@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/ksystemlog
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksystemlog/ChangeLog,v 1.1 2005/07/26 04:07:40 trapni Exp $
+
+*ksystemlog-0.3.1 (26 Jul 2005)
+
+  26 Jul 2005; Christian Parpart <trapni@gentoo.org> +metadata.xml,
+  +ksystemlog-0.3.1.ebuild:
+  Initial import; ebuild provided by Nicolas Ternisien
+
