@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.9 2005/05/22 16:48:49 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.10 2005/07/26 17:33:14 jhhudso Exp $
+
+  26 Jul 2005; Jared Hudson <jhhudso@gentoo.org> xmlrpc-c-1.2.ebuild:
+  Modified latest ebuild to force make -j1 since greater than -j1 fails to
+  compile
 
   22 May 2005; Jared Hudson <jhhudso@gentoo.org> : Version bump.
 	
