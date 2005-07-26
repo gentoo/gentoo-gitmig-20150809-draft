@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.440 2005/07/22 21:00:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.441 2005/07/26 20:18:19 spyderous Exp $
+
+  26 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r2.ebuild, xorg-x11-6.8.99.15.ebuild:
+  Add MAKE="make" on debug build for BSD.
 
   22 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r2.ebuild:
