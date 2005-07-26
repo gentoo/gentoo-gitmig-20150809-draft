@@ -1,6 +1,16 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.96 2005/07/25 23:51:03 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.97 2005/07/26 19:47:06 smithj Exp $
+
+*xscreensaver-4.22-r3 (26 Jul 2005)
+
+  26 Jul 2005; Jonathan Smith <smithj@gentoo.org>
+  -files/xscreensaver-4.14-analogtv_tmp.patch,
+  -files/xscreensaver-4.14-icc.patch, -files/xscreensaver-4.21-norpm.patch,
+  -files/xscreensaver-4.21-settings.patch, +xscreensaver-4.22-r3.ebuild:
+  #100362: dropped gtk USE flag. gtk is now *mandatory* since all non-gtk
+  versions are woefully unmaintained and broken. this is still experimental,
+  so please don't mark -r3 stable or any such sillyness
 
   25 Jul 2005; Herbie Hopkins <herbs@gentoo.org>
   xscreensaver-4.22-r2.ebuild:
