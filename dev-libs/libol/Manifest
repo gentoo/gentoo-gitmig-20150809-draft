@@ -1,8 +1,18 @@
-MD5 53b1b8ad66d0e32298726705eaf5aa3d libol-0.3.16.ebuild 806
-MD5 913f3ec6c06c0956f2518a9ca26cc0e1 libol-0.3.15.ebuild 801
-MD5 94b60ed17e173faa6bdb9a53cf5f878c ChangeLog 7194
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb8ae1bfe3036e62c7295f504ce70e18 ChangeLog 7288
 MD5 06a2fa1e0308f065f818db6fae959fe9 metadata.xml 257
+MD5 913f3ec6c06c0956f2518a9ca26cc0e1 libol-0.3.15.ebuild 801
 MD5 8f4bb0158cf07734f9746358b3b1af6c libol-0.3.14.ebuild 813
+MD5 2ec78d3b3bb059a7f1f6b57ea80a0a36 libol-0.3.16.ebuild 805
+MD5 433d272f48bb1d9cd086043a6f156e44 files/digest-libol-0.3.16 64
 MD5 97641a59419d9cb5551d1a2f00cc4f42 files/digest-libol-0.3.14 64
 MD5 2d94f0190f9dabe682e52944f6d0f07c files/digest-libol-0.3.15 64
-MD5 433d272f48bb1d9cd086043a6f156e44 files/digest-libol-0.3.16 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5qLDKf2g/qXtneoRAv6TAKCyhzU4YOp/p6rvW/G+vqsMGDpCDgCcCqZL
+e9Hfwfbl89m40sQoNU3ihWk=
+=0622
+-----END PGP SIGNATURE-----
