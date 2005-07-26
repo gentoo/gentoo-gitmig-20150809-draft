@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ftmenu-0.1.ebuild,v 1.1 2005/02/01 13:48:23 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ftmenu-0.1.ebuild,v 1.2 2005/07/26 14:14:59 dholm Exp $
 
 DESCRIPTION="A tray menu for the Fluxbox toolbar"
 HOMEPAGE="http://ftmenu.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-util/pkgconfig"
