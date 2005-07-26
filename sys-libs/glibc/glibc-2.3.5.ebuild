@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.37 2005/07/23 20:07:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.38 2005/07/26 22:20:42 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1105,21 +1105,19 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	virtual/os-headers
 	nls? ( sys-devel/gettext )
 	selinux? ( !build? ( sys-libs/libselinux ) )"
-
 RDEPEND="virtual/os-headers
 	nls? ( sys-devel/gettext )
 	selinux? ( !build? ( sys-libs/libselinux ) )"
 
 if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-	DEPEND="${DEPEND}
-	        >=${CATEGORY}/gcc-3.3.5-r1"
+	DEPEND="${DEPEND} ${CATEGORY}/gcc"
 
-	if [[ ${CATEGORY/mips} != ${CATEGORY} ]] ; then
-		DEPEND="${DEPEND}
-		        >=${CATEGORY}/mips-headers-2.6.10"
-	else
-		DEPEND="${DEPEND}
-		        >=${CATEGORY}/linux-headers-2.6.8"
+	if [[ ${CATEGORY} == *-linux* ]] ; then
+		if [[ ${CATEGORY/mips} != ${CATEGORY} ]] ; then
+			DEPEND="${DEPEND} >=${CATEGORY}/mips-headers-2.6.10"
+		else
+			DEPEND="${DEPEND} ${CATEGORY}/linux-headers"
+		fi
 	fi
 
 	case ${CTARGET} in
