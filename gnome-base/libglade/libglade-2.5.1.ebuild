@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.5.1.ebuild,v 1.1 2005/03/20 23:13:52 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.5.1.ebuild,v 1.2 2005/07/26 05:23:14 leonardop Exp $
 
 # FIXME : catalog stuff
 inherit gnome2 eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="2.0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.5
