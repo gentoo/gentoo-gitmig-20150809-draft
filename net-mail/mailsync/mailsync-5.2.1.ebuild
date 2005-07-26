@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailsync/mailsync-5.2.1.ebuild,v 1.2 2005/07/26 16:19:04 swegener Exp $
 
 DESCRIPTION="A mailbox synchronizer"
 HOMEPAGE="http://mailsync.sourceforge.net/"
@@ -12,11 +12,6 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/imap-c-client"
-
-src_compile() {
-	econf || die
-	emake || die
-}
 
 src_install() {
 	make DESTDIR=${D} install pkgdocdir=/usr/share/doc/${P} || die

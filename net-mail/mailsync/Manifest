@@ -1,4 +1,14 @@
-MD5 685ed759c3bac9212ad5768f4d9803ad mailsync-5.2.1.ebuild 495
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f51d3eb68a283842d2ef8700da154fac ChangeLog 388
-MD5 a5fc7ede55210ee025d051fa9f2731b6 metadata.xml 257
 MD5 2177045d39e1f0dbaa532cc335d548e5 files/digest-mailsync-5.2.1 71
+MD5 7686e84d6bafe84544e8c39fd48e92cb mailsync-5.2.1.ebuild 553
+MD5 a5fc7ede55210ee025d051fa9f2731b6 metadata.xml 257
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC5mKUI1lqEGTUzyQRAmrxAJ9AumNs25VfL58S6jcPt1SWvYDHqwCdFjPH
+QnZcfuExBVe/yMARdZiVosY=
+=FRTJ
+-----END PGP SIGNATURE-----
