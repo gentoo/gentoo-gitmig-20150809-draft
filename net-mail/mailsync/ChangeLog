@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/mailsync
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailsync/ChangeLog,v 1.1 2005/07/26 14:36:28 strerror Exp $
+
+*mailsync-5.2.1 (26 Jul 2005)
+
+  26 Jul 2005; Benjamin Smee <strerror@gentoo.org> +metadata.xml,
+  +mailsync-5.2.1.ebuild:
+  Initial import. Thanks to Michael Krelin for ebuild.
+
