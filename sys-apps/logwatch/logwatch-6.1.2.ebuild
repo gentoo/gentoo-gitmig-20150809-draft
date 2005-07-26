@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-6.1.2.ebuild,v 1.1 2005/06/18 03:48:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-6.1.2.ebuild,v 1.2 2005/07/26 05:19:37 vapier Exp $
 
 inherit eutils
 
@@ -59,8 +59,9 @@ src_install() {
 	insinto /etc/log.d/conf/services
 	doins conf/services/*
 
+	# Make sure logwatch is run before anything else #100243
 	exeinto /etc/cron.daily
-	newexe "${FILESDIR}"/logwatch logwatch
+	newexe "${FILESDIR}"/logwatch 00-logwatch
 
 	doman logwatch.8
 	dodoc License project/CHANGES README HOWTO-Make-Filter

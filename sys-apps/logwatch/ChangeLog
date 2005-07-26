@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.23 2005/06/18 03:48:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.24 2005/07/26 05:19:37 vapier Exp $
+
+  26 Jul 2005; Mike Frysinger <vapier@gentoo.org> logwatch-6.1.2.ebuild:
+  Install logwatch file as 00-logwatch so it will be run before other cronjobs
+  #100243 by Brian G. Peterson.
 
 *logwatch-6.1.2 (18 Jun 2005)
 
