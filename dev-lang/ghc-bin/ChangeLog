@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.25 2005/05/20 13:40:00 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.26 2005/07/26 16:31:44 dcoutts Exp $
+
+  26 Jul 2005; <duncan@gentoo.org> ghc-bin-6.2.2-r1.ebuild,
+  ghc-bin-6.4.ebuild:
+  Added new binary packages that are built against readline-5. Also Added
+  a missing dependency on >=dev-libs/gmp-4.1.
 
 *ghc-bin-6.2.2-r1 (20 May 2005)
 
