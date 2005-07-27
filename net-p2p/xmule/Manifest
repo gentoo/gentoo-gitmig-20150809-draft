@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 77714261db72c1d0647008b61fed3c18 ChangeLog 7867
+MD5 dc2337927d836ccf372b906288bf4305 ChangeLog 8022
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 0d8a39bcff32bccb63a37704a7f079bd xmule-1.8.4-r1.ebuild 1030
 MD5 ac772dd3ddd27d3637f09b1c23673eac xmule-1.9.0.ebuild 1040
@@ -10,7 +10,7 @@ MD5 fc178c02be80f691b52248e5b5304573 xmule-1.9.2.ebuild 1040
 MD5 a110bede2c7ff748820f7d5f90f4d01f xmule-1.9.3.ebuild 1038
 MD5 f85484f4c2a59ccdd83eb034e2db18bf xmule-1.9.4.ebuild 1075
 MD5 b9a11eca73cdaaec68c8fee13cc3ce42 xmule-1.9.4b.ebuild 1052
-MD5 7fa7c378e5aba9c588d3bf201e4abaa3 xmule-1.10.0.ebuild 1134
+MD5 844b76538d1d1aa69cb187642efe44fb xmule-1.10.0.ebuild 1242
 MD5 196bcbbfbdaaaaf0a59fefae64628be6 files/digest-xmule-1.10.0 66
 MD5 7af93e9c27cecc95812aaf13b2579dc9 files/digest-xmule-1.8.4-r1 65
 MD5 83413c32a94e2597771601d45b4ac116 files/digest-xmule-1.9.0 65
@@ -24,7 +24,7 @@ MD5 326ee9b15e4c7613d50ac2916f6b0920 files/xmule-1.10.0-crypto-gentoo.patch 616
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6BotZ/iYVBmujdURAmjxAKDoVmuyD2phFzOBxR5fVy2JO80yjwCgzUUh
-Ikv5zffsonqwLvccnlKnOeE=
-=BuDu
+iD8DBQFC6B63Z/iYVBmujdURAhpqAJ91YNgcQaUZNIfcxbkRRtv1hUwNuQCfRCvv
+mZXNyd7fk2IwiE91tSm4AYA=
+=ajcF
 -----END PGP SIGNATURE-----

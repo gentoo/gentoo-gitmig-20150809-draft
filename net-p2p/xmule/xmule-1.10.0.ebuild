@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.10.0.ebuild,v 1.3 2005/07/27 21:32:38 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.10.0.ebuild,v 1.4 2005/07/27 21:52:01 sekretarz Exp $
 
 inherit wxwidgets eutils
 
@@ -31,6 +31,9 @@ src_unpack() {
 
 src_compile () {
 	local myconf=
+	# replace flags -O3 with -O2 because amule can crash with this 
+	# flag, bug #87437
+	replace-flags -O3 -O2
 
 	if ! use gtk2 ; then
 		need-wxwidgets gtk
