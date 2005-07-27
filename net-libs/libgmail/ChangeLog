@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libgmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/ChangeLog,v 1.4 2005/02/02 16:26:31 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/ChangeLog,v 1.5 2005/07/27 19:26:47 vanquirius Exp $
+
+*libgmail-0.0.8-r1 (27 Jul 2005)
+
+  27 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +libgmail-0.0.8-r1.ebuild:
+  Adding patches from cvs, attempting to fix bug 96425.
 
   02 Feb 2005; Jon Hood <squinky86@gentoo.org> libgmail-0.0.8.ebuild:
   Install one copy of the docs, #79187; thanks James Rowe <jnrowe@ukfsn.org>.
