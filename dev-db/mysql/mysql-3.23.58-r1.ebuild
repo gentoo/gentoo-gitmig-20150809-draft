@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.14 2005/07/26 17:14:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.15 2005/07/27 00:22:45 vivo Exp $
 
 inherit flag-o-matic eutils
 
@@ -47,6 +47,14 @@ src_unpack() {
 	# security fix from http://lists.mysql.com/internals/15185
 	# gentoo bug #60744
 	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-4.0-mysqlhotcopy-security.patch
+
+	# upstream bug http://bugs.mysql.com/bug.php?id=7971
+	# names conflict with stuff in 2.6.10 kernel headers
+	echo ${S}/client/mysqltest.c ${S}/extra/replace.c | xargs -n1 \
+	sed -i \
+		-e "s/set_bit/my__set_bit/g" \
+		-e "s/clear_bit/my__clear_bit/g" \
+		|| die "Failed to fix bitops"
 
 }
 

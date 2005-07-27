@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.213 2005/07/26 17:14:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.214 2005/07/27 00:22:45 vivo Exp $
+
+  27 Jul 2005; Francesco Riosa <vivo@gentoo.org> mysql-3.23.58.ebuild,
+  mysql-3.23.58-r1.ebuild:
+  Bug 98210
 
   26 Jul 2005; Francesco Riosa <vivo@gentoo.org> files/my.cnf-4.1,
   mysql-3.23.58.ebuild, mysql-3.23.58-r1.ebuild, mysql-4.0.22.ebuild,
