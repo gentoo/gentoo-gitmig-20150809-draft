@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.46 2005/05/22 19:07:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.47 2005/07/27 11:02:39 eradicator Exp $
+
+  27 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> xosd-2.2.14.ebuild:
+  Properly run auto*.
 
   22 May 2005; Jason Wever <weeve@gentoo.org> xosd-2.2.8-r1.ebuild:
   Stable on SPARC.

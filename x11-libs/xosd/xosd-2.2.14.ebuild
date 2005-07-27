@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14.ebuild,v 1.3 2005/05/16 11:11:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14.ebuild,v 1.4 2005/07/27 11:02:39 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="xinerama xmms bmp"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	bmp? (
 		media-sound/beep-media-player
 	)
@@ -23,6 +23,10 @@ DEPEND="virtual/x11
 		>=media-libs/gdk-pixbuf-0.22.0
 	)"
 
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.57
+	>=sys-devel/automake-1.8"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -30,8 +34,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/2.2.8-xmms-trackpos.patch
 	epatch "${DISTDIR}"/${PN}_${PV}-1.diff.gz
 	epatch ${FILESDIR}/xosd-2.2.14-bmp-fixes.patch
-	automake
-	autoconf
+
+	export WANT_AUTOMAKE=1.8
+	export WANT_AUTOCONF=2.5
+	libtoolize --force --copy || die
+	aclocal || die
+	automake -a -f -c || die
+	autoconf || die
 }
 
 src_compile() {
