@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1345 2005/07/27 18:15:32 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1346 2005/07/27 21:55:30 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -907,6 +907,7 @@ sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problem
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
 sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
+sys-fs/ntfsprogs:fuse - Build a FUSE module
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-kernel/ck-sources:ck-server - Tune the kernel for servers
 sys-kernel/genkernel:bootsplash - Installs bootsplash support if you request it and it is not already available.
