@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.1.ebuild,v 1.8 2005/07/27 08:22:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.1-r1.ebuild,v 1.1 2005/07/27 08:22:19 phosphan Exp $
 
 inherit eutils
 
 DESCRIPTION="Teletext viewer for X11"
 HOMEPAGE="http://www.goron.de/~froese/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/apps/video/${P}.tar.gz
-	 http://fresh.t-systems-sfr.com/linux/src/${P}.tar.gz"
+	 http://fresh.t-systems-sfr.com/linux/src/${P}.tar.gz
+	 http://www.baycom.org/~tom/${PN}-dvb.patch"
 
 IUSE=""
 LICENSE="GPL-2"
@@ -22,6 +23,7 @@ src_unpack() {
 	cd ${S}
 	sed -i -e "s:^OPT=.*:OPT = ${CFLAGS} -s:" Makefile
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${DISTDIR}/${PN}-dvb.patch
 }
 
 src_compile() {
