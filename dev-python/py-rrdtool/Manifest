@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e338c6bb512752dbdf2e016359e958c2 py-rrdtool-0.2.1-r1.ebuild 541
 MD5 2b83c4820c2e2533cf5d59152c608f8d py-rrdtool-0.2.1.ebuild 500
-MD5 c73bf005887396a987eddda77269e8b5 ChangeLog 742
-MD5 61da3c68a3ae57136cdc2a17fbaedfaf metadata.xml 223
+MD5 a3fb0c6b8ac50ed66ef716198d79027f ChangeLog 941
+MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 7c39c6d40c0cc6a40fd3809a9ea3a7e9 files/digest-py-rrdtool-0.2.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBqfnNT+MN7JbqCpMRAkvTAJ91mN2zn9OULlHVyEUvjwrLOUNlZACfcwhV
-60Dtbh/IUenOK2j7e8CKciA=
-=x7sZ
------END PGP SIGNATURE-----
+MD5 7c39c6d40c0cc6a40fd3809a9ea3a7e9 files/digest-py-rrdtool-0.2.1-r1 67
