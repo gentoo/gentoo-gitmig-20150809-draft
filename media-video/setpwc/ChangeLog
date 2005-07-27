@@ -1,6 +1,9 @@
 # ChangeLog for media-video/setpwc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/setpwc/ChangeLog,v 1.4 2005/04/27 07:22:04 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/setpwc/ChangeLog,v 1.5 2005/07/27 09:53:12 phosphan Exp $
+
+  27 Jul 2005; Patrick Kursawe <phosphan@gentoo.org> setpwc-0.9.ebuild:
+  Latest stable for x86
 
 *setpwc-0.9 (27 Apr 2005)
 
