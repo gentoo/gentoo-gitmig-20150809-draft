@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.10.3.ebuild,v 1.5 2005/07/26 18:58:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.10.3.ebuild,v 1.6 2005/07/27 18:03:17 gmsoft Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://fileroller.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.6
