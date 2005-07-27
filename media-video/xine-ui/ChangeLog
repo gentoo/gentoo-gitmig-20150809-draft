@@ -1,6 +1,12 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.82 2005/07/20 08:47:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.83 2005/07/27 09:21:45 flameeyes Exp $
+
+*xine-ui-0.99.4 (27 Jul 2005)
+
+  27 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +xine-ui-0.99.4.ebuild:
+  Updated to latest xine-ui version upstream. Install xpm file in
+  /usr/share/pixmaps for *box compatibility.
 
 *xine-ui-0.99.3-r2 (20 Jul 2005)
 
