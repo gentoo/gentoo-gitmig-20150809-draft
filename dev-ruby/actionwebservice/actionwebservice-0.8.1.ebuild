@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/actionwebservice-0.8.1.ebuild,v 1.2 2005/07/12 13:56:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/actionwebservice-0.8.1.ebuild,v 1.3 2005/07/27 13:07:37 caleb Exp $
 
 inherit ruby gems
 
@@ -13,7 +13,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/5172/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.2
