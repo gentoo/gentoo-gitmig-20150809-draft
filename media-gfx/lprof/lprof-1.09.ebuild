@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/lprof-1.09.ebuild,v 1.5 2004/06/24 22:45:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/lprof-1.09.ebuild,v 1.6 2005/07/27 13:20:04 blubb Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.littlecms.com/profilers.htm"
 SRC_URI="http://www.littlecms.com/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 DEPEND="x11-libs/qt
 	>=media-libs/lcms-1.09"
