@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0.ebuild,v 1.1 2005/07/26 22:32:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0.ebuild,v 1.2 2005/07/27 07:30:58 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -61,7 +61,7 @@ src_unpack() {
 	cd ${S}
 
 	# That patch is highly experimental!
-	EPATCH_EXCLUDE="07_all_vidix64.patch 03_all_kernel26.patch"
+	EPATCH_EXCLUDE="06_all_vidix-gcc4.patch"
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/
 
 	elibtoolize
