@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.27-r1.ebuild,v 1.1 2005/07/03 19:14:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.27-r1.ebuild,v 1.2 2005/07/27 06:02:17 robbat2 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -50,7 +50,7 @@ RDEPEND="${RDEPEND}
 	)"
 
 DEPEND="${RDEPEND}
-		sys-devel/libtool
+		>=sys-devel/libtool-1.5.18-r1
 		>=sys-apps/sed-4"
 
 # for tracking versions
@@ -247,7 +247,7 @@ src_compile() {
 	# now build old compat lib
 	cd ${OLD_S} && \
 	econf \
-		--enable-static --enable-shared \
+		--disable-static --enable-shared \
 		--libexecdir=/usr/$(get_libdir)/openldap \
 		--disable-slapd --disable-aci --disable-cleartext --disable-crypt \
 		--disable-lmpasswd --disable-spasswd --enable-modules \
@@ -327,7 +327,8 @@ src_install() {
 	if use ssl || use samba; then
 		dodir /etc/openldap/ssl
 		exeinto /etc/openldap/ssl
-		newexe ${FILESDIR}/gencert.sh-2.2.27 gencert.sh
+		#newexe ${FILESDIR}/gencert.sh-2.2.27 gencert.sh
+		doexe ${FILESDIR}/gencert.sh
 	fi
 
 	dolib.so ${OLD_S}/libraries/liblber/.libs/liblber.so.2.0.130 || \
