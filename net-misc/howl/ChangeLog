@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.30 2005/07/23 21:55:23 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.31 2005/07/27 10:59:18 pvdabeel Exp $
+
+  27 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  howl-0.9.8.ebuild:
+  Stable masking. I'd love to put 1.0.0 in stable too but it's only two weeks
+  in unstable. 0.9.8 is required by a newer GnomeMeeting.
 
   23 Jul 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   howl-0.9.6-r2.ebuild, howl-0.9.8.ebuild, howl-1.0.0.ebuild:
