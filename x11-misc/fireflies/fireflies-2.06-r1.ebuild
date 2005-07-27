@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.06-r1.ebuild,v 1.1 2005/07/27 14:51:35 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.06-r1.ebuild,v 1.2 2005/07/27 23:23:56 smithj Exp $
 
 inherit eutils
 
@@ -18,9 +18,6 @@ RDEPEND="virtual/x11
 	virtual/opengl
 	media-libs/libsdl"
 
-DEPEND="${RDEPEND}
-	x11-libs/fltk"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -30,33 +27,15 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	local -a mycflagsarr
-	local mycppflags
 
-	myconf="${myconf}
-		--with-bindir=/usr/lib/misc/xscreensaver
-		--with-configdir=/usr/share/xscreensaver/config/"
-	mycflagsarr=($CFLAGS `fltk-config --cflags`)
-	mycppflags="${mycflagsarr[@]##-[^I]*}"
+	myconf="--with-bindir=/usr/lib/misc/xscreensaver
+		--with-confdir=/usr/share/xscreensaver/config/"
 
-	econf ${myconf} || die
-	emake \
-		CFLAGS="$CFLAGS `fltk-config --cflags`" \
-		LDLIBS="$LDLIBS `fltk-config --ldflags`" \
-		LDFLAGS="$LDFLAGS `fltk-config --ldflags`" \
-		CPPFLAGS="$CPPFLAGS ${mycppflags}" \
-		|| die
+	econf ${myconf} || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
 	dodoc COPYING COMPILE README TODO
-	dobin add-xscreensaver
-}
-
-pkg_postinst() {
-	einfo
-	einfo "To use fireflies with XScreensaver you need to run"
-	einfo "/usr/bin/add-xscreensaver <path to your .xscreensaver file>"
-	einfo
 }

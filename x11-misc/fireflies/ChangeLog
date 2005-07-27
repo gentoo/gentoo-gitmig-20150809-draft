@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fireflies
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.7 2005/07/27 14:51:35 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.8 2005/07/27 23:23:56 smithj Exp $
+
+  27 Jul 2005; Jonathan Smith <smithj@gentoo.org> fireflies-2.06-r1.ebuild:
+  #100529: dependency fixes. thanks to Ed Catmur <ed@catmur.co.uk> for the patch
 
 *fireflies-2.06-r1 (27 Jul 2005)
 
