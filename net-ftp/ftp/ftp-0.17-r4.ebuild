@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r4.ebuild,v 1.1 2005/02/12 00:18:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r4.ebuild,v 1.2 2005/07/27 08:53:44 eradicator Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P=netkit-${P}
 S=${WORKDIR}/${MY_P}
@@ -39,7 +39,7 @@ src_compile() {
 		$(use_enable ipv6) \
 		${EXTRA_ECONF} \
 		|| die "configure failed"
-	emake || die "make failed"
+	emake CC="$(tc-getCC)" || die "make failed"
 }
 
 src_install() {

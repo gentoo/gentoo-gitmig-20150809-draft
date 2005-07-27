@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.17 2005/02/12 00:18:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.18 2005/07/27 08:53:44 eradicator Exp $
+
+  27 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> ftp-0.17-r4.ebuild:
+  Use the correct toolchain compiler.
 
 *ftp-0.17-r4 (11 Feb 2005)
 
