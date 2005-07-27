@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.61 2005/07/14 14:38:35 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.62 2005/07/27 18:53:51 gmsoft Exp $
+
+  27 Jul 2005; Guy Martin <gmsoft@gentoo.org> rdesktop-1.4.1.ebuild:
+  Stable on hppa.
 
   14 Jul 2005; Hardave Riar <hardave@gentoo.org> rdesktop-1.4.1.ebuild:
   Keyworded ~mips
