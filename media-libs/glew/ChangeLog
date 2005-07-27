@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/glew
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.1 2005/07/27 04:46:42 joshuabaergen Exp $
+
+*glew-1.3.3 (27 Jul 2005)
+
+  27 Jul 2005; Joshua Baergen <joshuabaergen@gentoo.org> +glew-1.3.3.ebuild:
+  Initial import. Thanks to Derek Young, Vinicius Dias dos Santos, Philip
+  Allison, Wojciech Milkowski, Robert Schuster, Charles Moad and Lawrence Lee
+  for their ebuilds and testing.
+
