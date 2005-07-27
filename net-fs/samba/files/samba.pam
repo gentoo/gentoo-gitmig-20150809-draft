@@ -5,6 +5,6 @@
 auth       required     pam_smbpass.so nodelay
 #account    include      system-auth
 #session    include      system-auth
-account    required     /lib/security/pam_stack.so service=system-auth
-session    required     /lib/security/pam_stack.so service=system-auth
+account    required     pam_stack.so service=system-auth
+session    required     pam_stack.so service=system-auth
 password   required     pam_smbpass.so nodelay smbconf=/etc/samba/smb.conf

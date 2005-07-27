@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.182 2005/07/26 06:58:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.183 2005/07/27 12:44:41 satya Exp $
+
+  27 Jul 2005; Christian Andreetta <satya@gentoo.org> files/samba.pam:
+  pam library location fix in /etc/pam.d/samba
 
   26 Jul 2005; Markus Rothe <corsair@gentoo.org> samba-3.0.14a-r2.ebuild:
   Stable on ppc64 (bug #95327)
