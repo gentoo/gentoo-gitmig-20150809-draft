@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.18.1.ebuild,v 1.7 2005/06/08 23:17:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.18.1.ebuild,v 1.8 2005/07/27 11:24:59 pvdabeel Exp $
 
 inherit mythtv-plugins flag-o-matic toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mythtv.org/mc/mythplugins-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 
 IUSE="aac fftw opengl sdl"
 
