@@ -4,7 +4,7 @@
 # You can copy this file to .dir_colors in your $HOME directory to override
 # the system defaults.
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.10 2005/05/04 22:05:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.11 2005/07/27 22:01:58 vapier Exp $
 
 # COLOR needs one of these arguments: 'tty' colorizes output to ttys, but not
 # pipes. 'all' adds color characters to all output. 'none' shuts colorization
@@ -36,6 +36,7 @@ TERM cons25
 TERM gnome
 TERM xterm
 TERM xterm-color
+TERM xterm-256color
 TERM xterm-debian
 TERM color-xterm
 TERM color_xterm

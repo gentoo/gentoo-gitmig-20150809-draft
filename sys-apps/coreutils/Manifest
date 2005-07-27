@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f5452568b06a3e62b059d8bedf9d39c7 coreutils-5.2.1-r2.ebuild 4367
-MD5 00d467d0c9d336ccbfca84e3d31f5e5f coreutils-5.2.1-r6.ebuild 4362
-MD5 b27ae798f4b4d7ec96707d7f68e55ab6 coreutils-5.2.1-r5.ebuild 4603
-MD5 dd13a743b4aae11455f3a8b8ae2d4b90 ChangeLog 22030
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 b27ae798f4b4d7ec96707d7f68e55ab6 coreutils-5.2.1-r5.ebuild 4603
+MD5 f5452568b06a3e62b059d8bedf9d39c7 coreutils-5.2.1-r2.ebuild 4367
+MD5 dd13a743b4aae11455f3a8b8ae2d4b90 ChangeLog 22030
+MD5 00d467d0c9d336ccbfca84e3d31f5e5f coreutils-5.2.1-r6.ebuild 4362
+MD5 562be8875293fa477947cff0cc46d37e files/DIR_COLORS 4073
 MD5 77947b96aaadc6a33d53156b5b5e4630 files/digest-coreutils-5.2.1-r2 225
-MD5 a35ffb7e8488a498124e0a4c144102bc files/digest-coreutils-5.2.1-r5 227
 MD5 a7f49f56e12b6b16a5c347a666fb9b37 files/digest-coreutils-5.2.1-r6 149
-MD5 c63fee729a210ba400b1fb34bbbe76c5 files/DIR_COLORS 4053
+MD5 a35ffb7e8488a498124e0a4c144102bc files/digest-coreutils-5.2.1-r5 227
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0cBZBXaUFmZvwyMRAj3lAKDOV/DbEVSQM0nMTUyVBDgbMrEnUgCeKzI4
-G7sQkiYyGTd1cmymk02EXK4=
-=+s5u
+iD8DBQFC6ARkgIKl8Uu19MoRAswDAKCCh5VG+ruPhuISCCiiboNNw8pMhwCggbdp
+EBKjRWKQDoOhydmpHse/kCY=
+=hNns
 -----END PGP SIGNATURE-----
