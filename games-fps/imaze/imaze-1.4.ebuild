@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.7 2004/12/16 15:45:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.8 2005/07/27 01:51:35 mr_bones_ Exp $
 
 inherit games
 
@@ -13,24 +13,21 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 IUSE="Xaw3d joystick"
 
-RDEPEND="virtual/x11
-	virtual/libc
+DEPEND="virtual/x11
 	|| (
 		Xaw3d? ( x11-libs/Xaw3d )
 		x11-libs/xview
 	)"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
-S="${WORKDIR}/${P}/source"
+S=${WORKDIR}/${P}/source
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e s:'DEFINES=-DDEFAULT_SOUND_DIR=\\"`pwd`/../sounds\\"':\
 'DEFINES=-DDEFAULT_SERVER=\\"localhost\\" -DDEFAULT_SOUND_DIR=\\"${GAMES_DATADIR}/${PN}/sounds\\"': Makefile.in \
-		|| die "src_unpack failed"
+		|| die "sed failed"
 }
 
 src_compile() {
