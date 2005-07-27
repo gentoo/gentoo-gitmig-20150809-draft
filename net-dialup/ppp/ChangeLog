@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.116 2005/07/09 05:12:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.117 2005/07/27 21:52:31 mrness Exp $
+
+*ppp-2.4.3-r7 (27 Jul 2005)
+*ppp-2.4.2-r13 (27 Jul 2005)
+
+  27 Jul 2005; Alin Nastac <mrness@gentoo.org> +ppp-2.4.2-r13.ebuild,
+  +ppp-2.4.3-r7.ebuild:
+  Add fixes for activefilter support (#99190) and remove interface name check
+  in rp-pppoe plugin (#100437). Add upstream CVS patches to ppp-2.4.3.
 
   09 Jul 2005; Joseph Jezak <josejx@gentoo.org> ppp-2.4.2-r12.ebuild:
   Marked ppc stable.
