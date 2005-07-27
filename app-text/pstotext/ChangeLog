@@ -1,6 +1,13 @@
 # ChangeLog for app-text/pstotext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.12 2005/07/16 16:13:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.13 2005/07/27 16:39:41 solar Exp $
+
+*pstotext-1.8g-r1 (27 Jul 2005)
+
+  27 Jul 2005; <solar.@gentoo.org> +files/pstotext-1.8g-dsafer.patch,
+  +pstotext-1.8g-r1.ebuild:
+  - add patch from bug #100245 discovered by Max Vozeler to prevent arbitrary
+  code execution by pstotext
 
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> pstotext-1.8g.ebuild:
   Marked ppc stable for bug #99218.
