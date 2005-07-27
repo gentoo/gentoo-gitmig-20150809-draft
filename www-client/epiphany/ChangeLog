@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.25 2005/07/27 18:28:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.26 2005/07/27 18:49:26 gmsoft Exp $
+
+  27 Jul 2005; Guy Martin <gmsoft@gentoo.org> epiphany-1.6.4.ebuild:
+  Added ~hppa to KEYWORDS.
 
   27 Jul 2005; Guy Martin <gmsoft@gentoo.org> epiphany-1.6.3.ebuild:
   Stable on hppa.
