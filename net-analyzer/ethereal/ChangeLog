@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.129 2005/07/27 13:02:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.130 2005/07/27 17:57:43 dertobi123 Exp $
+
+  27 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  ethereal-0.10.12.ebuild:
+  ppc stable, bug #100316
 
   27 Jul 2005; Simon Stelling <blubb@gentoo.org> ethereal-0.10.12.ebuild:
   marked stable wrt bug #100316
