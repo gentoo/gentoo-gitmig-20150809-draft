@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5595b7808960616f0a2f2500fbf78a39 ChangeLog 1308
-MD5 280da13cd2da1bd03d4b328428aa5dc1 epstool-3.04.ebuild 685
 MD5 3e579ef0a2134f696bbf981ac9c8a90b epstool-3.06.ebuild 685
-MD5 4074e3d346c741d829872422f54a2b0a files/digest-epstool-3.04 64
-MD5 d21818037203a765bf43e79e92bc215c files/digest-epstool-3.06 64
+MD5 a4485e4b127cea5749908f550bc78ef8 epstool-3.08.ebuild 688
+MD5 966594fba5c4629d1905ade268fc4f86 ChangeLog 1455
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzzmLI1lqEGTUzyQRAhziAJ9j4/orlTtXKoFqbaDYQ00soivQvgCfSrES
-nCqenGOrvhc9ath9SkgSKxw=
-=nqsU
------END PGP SIGNATURE-----
+MD5 d21818037203a765bf43e79e92bc215c files/digest-epstool-3.06 64
+MD5 28a75c27e1ebf2da6285850167a8659b files/digest-epstool-3.08 64
