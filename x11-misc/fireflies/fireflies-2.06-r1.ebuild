@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.06.ebuild,v 1.7 2005/07/26 14:01:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.06-r1.ebuild,v 1.1 2005/07/27 14:51:35 smithj Exp $
 
 inherit eutils
 
@@ -34,8 +34,8 @@ src_compile() {
 	local mycppflags
 
 	myconf="${myconf}
-		--with-bindir=/usr/lib/xscreensaver
-		--with-configdir=/usr/share/control-center/screensavers/"
+		--with-bindir=/usr/lib/misc/xscreensaver
+		--with-configdir=/usr/share/xscreensaver/config/"
 	mycflagsarr=($CFLAGS `fltk-config --cflags`)
 	mycppflags="${mycflagsarr[@]##-[^I]*}"
 
