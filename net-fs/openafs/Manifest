@@ -1,29 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5cfc2253bb720fba50198859337e4511 openafs-1.2.11.ebuild 3381
-MD5 8162ba9448d69122dffc83f7c85ed71a openafs-1.2.10-r2.ebuild 3504
-MD5 97b59abb1ec5436b0ccf6cfb3bd128e2 openafs-1.2.10.ebuild 2236
-MD5 253b2d108b125755ae5fe870cd93908c ChangeLog 6637
+MD5 cf2588fbf8f6e98e719b37d072cacd9c ChangeLog 6820
 MD5 1d3c436cc14252035bf2d97228cd3f58 metadata.xml 224
 MD5 9106d1f894ff97e7f12f6bca2efec680 openafs-1.2.10-r1.ebuild 2426
+MD5 8162ba9448d69122dffc83f7c85ed71a openafs-1.2.10-r2.ebuild 3504
 MD5 4584cc6910401787e1ebd81cfa06f060 files/CellServDB 41
-MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10-r1 73
-MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10-r2 73
 MD5 c620f50b47424c46f59dc847eb8c0dd3 files/README 8735
 MD5 1903c6a5e0aeedf794939945536341cd files/ThisCell 7
-MD5 19d17f83fbb3cc6c491476dba77eaad7 files/openafs-1.2.6.patch 822
-MD5 9554c33f806d3f69d9497d6c56d55b4e files/openafs-pinstall-execve.patch 1766
-MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10 73
-MD5 b8e545b3b694eccaba3c69029e768987 files/digest-openafs-1.2.11 73
 MD5 4f3ec773401fff6eeeacd14345ba89c1 files/afs.rc.rc6 5429
-MD5 28ae5081e8e323cd402a659ac5e0730c files/openafs-typechange.patch 1371
-MD5 36dc33d8c6e647e8aacf8e69849a28a3 files/openafs-pinstall-execve-env.patch 1242
+MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10-r1 73
+MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10-r2 73
+MD5 19d17f83fbb3cc6c491476dba77eaad7 files/openafs-1.2.6.patch 822
 MD5 36dc33d8c6e647e8aacf8e69849a28a3 files/openafs-pinstall-execve-1.2.10.patch 1242
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCm2JLI1lqEGTUzyQRAjUYAJ0VUPHPa8iaDCTUbT7CmSV3jvXTtgCfbvZq
-O5rPhgd9jWfDy2w9d9AhT5Q=
-=zyWk
------END PGP SIGNATURE-----
+MD5 36dc33d8c6e647e8aacf8e69849a28a3 files/openafs-pinstall-execve-env.patch 1242
+MD5 9554c33f806d3f69d9497d6c56d55b4e files/openafs-pinstall-execve.patch 1766
+MD5 28ae5081e8e323cd402a659ac5e0730c files/openafs-typechange.patch 1371
