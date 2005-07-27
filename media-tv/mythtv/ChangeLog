@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.73 2005/07/01 15:06:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.74 2005/07/27 11:11:44 pvdabeel Exp $
+
+  27 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  mythtv-0.18.1-r1.ebuild:
+  Stable mask for mythtv. -r2 needs some further testing.
 
   01 Jul 2005; Caleb Tennis <caleb@gentoo.org> mythtv-0.18.1-r1.ebuild,
   mythtv-0.18.1-r2.ebuild:
