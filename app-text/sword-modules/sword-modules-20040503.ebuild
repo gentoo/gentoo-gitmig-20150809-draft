@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.11 2005/06/09 13:31:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.12 2005/07/27 03:22:09 vanquirius Exp $
 
 DESCRIPTION="a collection of modules for the sword project"
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -19,9 +19,6 @@ SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/KJV.zip
 	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Packard.zip
 	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Vulgate.zip
 	http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/Josephus.zip
-	offensive? ( mirror://gentoo/BoM.zip
-		mirror://gentoo/Jasher.zip
-		mirror://gentoo/Quran.zip )
 	intl? ( http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerElb.zip
 		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerElb1871.zip
 		http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/GerLut.zip
@@ -34,7 +31,7 @@ RESTRICT="nomirror"
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="x86 ppc amd64"
-IUSE="offensive intl"
+IUSE="intl"
 
 S=${WORKDIR}
 
@@ -67,16 +64,6 @@ src_unpack() {
 		unpack GerLut1545.zip > /dev/null
 		unpack GerSch.zip > /dev/null
 	fi
-
-	if use offensive; then
-		unpack BoM.zip > /dev/null
-		unpack Jasher.zip > /dev/null
-		# uh oh, the quran is only availabe for windows; extract the data
-		unpack Quran.zip > /dev/null
-		unzip ${S}/data.zip > /dev/null
-#		unpack QuranShakir.zip > /dev/null
-#		unzip ${S}/data.zip > /dev/null
-	fi
 }
 
 src_compile() {
@@ -88,12 +75,6 @@ src_install () {
 	cp -a ${S}/modules/* ${D}/usr/share/sword/modules/ || die
 	dodir /usr/share/sword/mods.d || die
 	cp ${S}/mods.d/* ${D}/usr/share/sword/mods.d/ || die
-
-	# there are windows-only modules in the offensive flag that put
-	# config files into /newmods instead of /mods.d
-	if use offensive; then
-		cp ${S}/newmods/* ${D}/usr/share/sword/mods.d/ || die
-	fi
 }
 
 pkg_postinst() {
@@ -101,12 +82,6 @@ pkg_postinst() {
 	einfo "You should now have modules for The SWORD Project."
 	einfo "You can download more modules from the SWORD homepage:"
 	einfo "  http://www.crosswire.org/sword/"
-	if ! use offensive; then
-		echo
-		einfo "You do not have the offensive USE flag enabled."
-		einfo "Questionable texts were not installed. To install them,"
-		einfo "USE=\"offensive\" emerge ${PN}"
-	fi
 	if ! use intl; then
 		echo
 		einfo "To enable different languages of selected texts contained"
