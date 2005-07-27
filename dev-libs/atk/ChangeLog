@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.78 2005/07/27 01:27:05 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.79 2005/07/27 14:02:39 gustavoz Exp $
+
+  27 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> atk-1.10.1.ebuild:
+  Stable on sparc
 
   26 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> atk-1.10.1.ebuild:
   Stable on x86.
