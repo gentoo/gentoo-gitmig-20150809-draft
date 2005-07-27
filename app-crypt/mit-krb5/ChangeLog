@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.96 2005/07/13 13:08:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.97 2005/07/27 15:55:38 kanaka Exp $
+
+  27 Jul 2005; Joel Martin <kanaka@gentoo.org> mit-krb5-1.4.1-r2.ebuild:
+  If doc and tetex use flags set, add dep on tetex
 
 *mit-krb5-1.3.6-r3 (13 Jul 2005)
 
