@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.3.ebuild,v 1.2 2005/07/10 01:06:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.3.ebuild,v 1.3 2005/07/27 10:36:50 pvdabeel Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.gnomemeeting.org/admin/downloads/latest/sources/sources/${P}
 IUSE="ssl novideo noaudio debug"
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
+KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.8.4
