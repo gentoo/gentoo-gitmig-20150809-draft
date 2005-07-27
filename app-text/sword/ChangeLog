@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.22 2005/04/24 11:43:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.23 2005/07/27 21:19:12 greg_g Exp $
+
+*sword-1.5.8 (27 Jul 2005)
+
+  27 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> metadata.xml,
+  sword-1.5.8_pre1.ebuild, +sword-1.5.8.ebuild:
+  New version (#94873). Ebuild cleanup.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   sword-1.5.8_pre1.ebuild:
