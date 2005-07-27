@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
+MD5 c39cc94a8cf53dd5ee1154198149a4f1 ethereal-0.10.12.ebuild 3477
 MD5 c197a642ecd8faf1ac997c497a965b3b ethereal-0.10.11.ebuild 3478
+MD5 d60b75d9ad73c4b7bcec713db5c8e5c9 ChangeLog 10254
+MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
 MD5 d654937d7e27a24b2ddfa68e276a64dc ethereal-0.10.11-r1.ebuild 3679
-MD5 1491d9babc6b85a8922f3e584b429f4a ChangeLog 10137
-MD5 ad0dbecc622f35f3e054e581f0df89fe ethereal-0.10.12.ebuild 3481
-MD5 5f6da5f1fabdf39da22bbb5ea224fab1 files/digest-ethereal-0.10.11-r1 70
-MD5 a4d5fb3621ed4e86f311718f1447a870 files/fifo.patch 1138
-MD5 34bd8a0285aea402be479f40304aa947 files/digest-ethereal-0.10.12 70
 MD5 5f6da5f1fabdf39da22bbb5ea224fab1 files/digest-ethereal-0.10.11 70
+MD5 34bd8a0285aea402be479f40304aa947 files/digest-ethereal-0.10.12 70
+MD5 a4d5fb3621ed4e86f311718f1447a870 files/fifo.patch 1138
+MD5 5f6da5f1fabdf39da22bbb5ea224fab1 files/digest-ethereal-0.10.11-r1 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC5+FtKRy60XGEcJIRAsIKAJ9HlA9o+L2DmT+piOtbP8Kwvt6D9gCdG0LA
-Ws80c/DdcnNuSIUaUZXNWsw=
-=dw++
+iD8DBQFC6BvsKf2g/qXtneoRAl+hAJ9gU9++Vob5tp3rEn3ni8Eeo4gILgCgmBVn
+u2EAMxy2E3QsiY10IjrjgAY=
+=x9he
 -----END PGP SIGNATURE-----
