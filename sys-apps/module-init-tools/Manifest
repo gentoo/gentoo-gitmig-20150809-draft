@@ -5,7 +5,7 @@ MD5 c6146091819c95f076dda74301490884 module-init-tools-3.2_pre7.ebuild 5804
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 5cef5e6d53d94ddb0cca31a488c3d3b1 module-init-tools-3.1-r1.ebuild 5915
 MD5 3e2546d3dcec80540a104faf7767b449 module-init-tools-3.0-r2.ebuild 5628
-MD5 cc38d863a376b05910516acd8e6ac1a8 module-init-tools-3.2_pre7-r1.ebuild 5872
+MD5 63f402cc2e523db9e431e1a7ef216405 module-init-tools-3.2_pre7-r1.ebuild 5793
 MD5 8e41f4e5e963eb4637dd9a93ef79218f ChangeLog 16763
 MD5 469d7fc1f915c60585afc8d895b1668a files/digest-module-init-tools-3.0-r2 142
 MD5 95f5372a9e15db429a6db167289d7d6e files/digest-module-init-tools-3.2_pre7 147
@@ -22,7 +22,7 @@ MD5 95f5372a9e15db429a6db167289d7d6e files/digest-module-init-tools-3.2_pre7-r1 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFC5cd7gIKl8Uu19MoRAgWvAJj9co/irLc2/GebvPeG5QUvOxTuAJ9KKn5R
-m3QF4QZUWqkqNb9YmIbuvg==
-=QZxQ
+iD8DBQFC540SgIKl8Uu19MoRAl/uAJ9SQd+x0/DG+q0/6SEEMjKbJoPzPACePPWq
+YER91SSVa4aM2XLozTEnh2s=
+=HBdt
 -----END PGP SIGNATURE-----

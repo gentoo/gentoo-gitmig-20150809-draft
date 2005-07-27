@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2_pre7-r1.ebuild,v 1.4 2005/07/26 05:17:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2_pre7-r1.ebuild,v 1.5 2005/07/27 13:31:52 vapier Exp $
 
 inherit flag-o-matic eutils gnuconfig toolchain-funcs fixheadtails
 
@@ -40,7 +40,6 @@ src_unpack() {
 	ht_fix_file "${S}"/tests/test-depmod/10badcommand.sh
 	# Test fails due since it needs to write to /lib/modules so disable it
 	rm -f "${S}"/tests/test-depmod/01backcompat.sh
-	cd "${S}"; epatch "${FILESDIR}"/module-init-tools-3.2_pre7-test-updates.patch
 
 	# Support legacy .o modules
 	cd ${S}; epatch ${FILESDIR}/${PN}-0.9.15-legacy-modext-support.patch
