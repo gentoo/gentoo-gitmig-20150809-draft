@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0dac5ec2fb0372dee5d0a3b48c92246c ChangeLog 20755
+MD5 1ffe1a9e6e68328840734407d5eebb4a ChangeLog 20893
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 bf3e149586a22921294d54a1e42c6f4d transcode-0.6.11.ebuild 4046
 MD5 4dfdd082324f06e210bfcf4ee8fb3962 transcode-0.6.12-r1.ebuild 3699
@@ -9,7 +9,7 @@ MD5 46e0c738eb271123641d26c90a7eb818 transcode-0.6.12-r2.ebuild 4396
 MD5 89bfa93308a46f45e9b41adb7747ad0f transcode-0.6.13-r1.ebuild 2843
 MD5 e97949cd70518cd2be35695196861320 transcode-0.6.14-r2.ebuild 4201
 MD5 119a7d425650a2c2ad7ee46ed133bcda transcode-0.6.14.ebuild 3566
-MD5 e90e096d2df1d2a48d9ea6a34cf2ffb1 transcode-1.0.0.ebuild 4093
+MD5 bac77dfc414a424cc5e55cae60f33830 transcode-1.0.0.ebuild 4053
 MD5 bc1cb5a39d56ce5216c803c74e73545d files/digest-transcode-0.6.11 69
 MD5 8fde4803c96e026f6caa94fa0e42687f files/digest-transcode-0.6.12-r1 69
 MD5 8fde4803c96e026f6caa94fa0e42687f files/digest-transcode-0.6.12-r2 69
@@ -26,7 +26,7 @@ MD5 b6f2a8da6e68f2f63c32aaaa39e1428b files/digest-transcode-1.0.0 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1UUHj5H05b2HAEkRAipcAJ9xN6YCtew9z2owb5UfBOjuIKnhAgCfVxZe
-StDzt++rkc6zZyK3DXLlUjE=
-=Ax8F
+iD8DBQFC59HYj5H05b2HAEkRAo8/AJ9NNc5F5L1lHAu59rz2ntqVeiLHnwCgjRNs
+uB6Fj/s4bvNMzlZXeJU8fvM=
+=Svr/
 -----END PGP SIGNATURE-----

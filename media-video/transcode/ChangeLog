@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.111 2005/07/13 16:44:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.112 2005/07/27 18:25:40 flameeyes Exp $
+
+  27 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> transcode-1.0.0.ebuild:
+  Removed gcc-3 dependency from 1.0 series. Closes #100495.
 
 *transcode-1.0.0 (13 Jul 2005)
 
