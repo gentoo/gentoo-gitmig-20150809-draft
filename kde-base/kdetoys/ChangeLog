@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.113 2005/07/14 15:12:47 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.114 2005/07/27 20:27:40 gmsoft Exp $
+
+  27 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdetoys-3.4.1.ebuild:
+  Stable on hppa.
 
   14 Jul 2005; Hardave Riar <hardave@gentoo.org> kdetoys-3.4.1.ebuild:
   Keyworded ~mips

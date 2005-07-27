@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.127 2005/07/14 15:20:50 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.128 2005/07/27 20:32:33 gmsoft Exp $
+
+  27 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdeadmin-3.4.1.ebuild:
+  Stable on hppa.
 
   14 Jul 2005; Hardave Riar <hardave@gentoo.org> kdeadmin-3.4.1.ebuild:
   Keyworded ~mips
