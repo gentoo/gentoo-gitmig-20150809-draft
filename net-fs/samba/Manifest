@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5b9c636d2f1fc770a26082261df91333 samba-3.0.11.ebuild 8918
-MD5 1b526d7b4c2c85e1bbf47d33cc2439f6 samba-3.0.14a-r2.ebuild 8921
+MD5 ad65c968f491df4954c818c76478f0f6 samba-3.0.14a-r2.ebuild 8918
 MD5 640f25d1da6364e934a26b3ccd504d90 samba-3.0.10.ebuild 16686
 MD5 c0db762241c44be0cdf52c7c4e870d97 samba-3.0.14a-r1.ebuild 8920
-MD5 9759a4b1a8c80be9a8eab3e4ebd7ae2a ChangeLog 32648
+MD5 3ef7c418fa632c5c7715bcd060e7fc53 ChangeLog 32757
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
 MD5 fa1dcd2c95a81c22c2ad68de6698a85e files/digest-samba-3.0.10 206
 MD5 498babc5e33f61369f42201f25eb35c0 files/digest-samba-3.0.11 215
@@ -25,3 +28,10 @@ MD5 239ef0e21552896faeef21c685561245 files/smb.conf.example-samba3.gz 7808
 MD5 3685eadb817d185b06476eca6c0c15c4 files/smbusers 204
 MD5 09195dd8ab25ce77ac51c0c05b4ab93c files/system-auth-winbind 869
 MD5 9f9da063cb02079a8f205bc365426170 files/samba.pam 513
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC541N2G5bA0cA/ScRAsmKAJ9tEgYTHXg944w+qqcIU6psGwTmZQCginbp
+nX8Idkl6DPaWfV5Q3w3JnK4=
+=R642
+-----END PGP SIGNATURE-----
