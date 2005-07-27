@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.7.0.ebuild,v 1.1 2005/07/19 21:18:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.7.0-r1.ebuild,v 1.1 2005/07/27 07:54:34 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -17,6 +17,14 @@ RDEPEND=">=dev-libs/libsigc++-2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.11"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Upstream patch for 0.7.0-1 version
+	epatch ${FILESDIR}/${P}-1.diff
+}
 
 src_compile() {
 	[[ $(tc-arch) = "x86" ]] && filter-flags -fomit-frame-pointer

@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.16 2005/07/19 21:18:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.17 2005/07/27 07:54:34 flameeyes Exp $
+
+*libtorrent-0.7.0-r1 (27 Jul 2005)
+
+  27 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libtorrent-0.6.2-fbsd.patch, -files/libtorrent-0.6.2-warns.patch,
+  +files/libtorrent-0.7.0-1.diff, -libtorrent-0.7.0.ebuild,
+  +libtorrent-0.7.0-r1.ebuild:
+  Added upstream patch to 0.7.0. Removed old stale patches.
 
 *libtorrent-0.7.0 (19 Jul 2005)
 
