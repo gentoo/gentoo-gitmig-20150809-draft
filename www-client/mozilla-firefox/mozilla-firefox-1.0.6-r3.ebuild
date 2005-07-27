@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r3.ebuild,v 1.2 2005/07/24 06:50:53 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r3.ebuild,v 1.3 2005/07/27 00:38:06 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -79,7 +79,7 @@ src_unpack() {
 	####################################
 
 	# GCC4 compile fix, bug #87800
-	epatch ${FILESDIR}/mozilla-firefox-1.0.4-gcc4.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
