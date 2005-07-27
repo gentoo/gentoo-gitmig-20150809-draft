@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/txt2man-1.4.8.ebuild,v 1.5 2005/07/25 19:13:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/txt2man-1.4.8-r1.ebuild,v 1.1 2005/07/27 08:07:44 flameeyes Exp $
+
+inherit eutils
 
 DESCRIPTION="A simple script to convert ASCII text to man page."
 HOMEPAGE="http://mvertes.free.fr/"
@@ -15,9 +17,17 @@ RDEPEND="app-shells/bash
 	sys-apps/gawk"
 DEPEND="${RDEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Escape hyphens and add section info to txt2man manpage
+	epatch ${FILESDIR}/${P}-debian.patch
+}
+
 src_compile() {
 	cd ${S}
-	gmake txt2man.1
+	make txt2man.1
 }
 
 src_install() {

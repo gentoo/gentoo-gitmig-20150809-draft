@@ -1,6 +1,15 @@
 # ChangeLog for app-text/txt2man
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.5 2005/07/25 19:13:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.6 2005/07/27 08:07:44 flameeyes Exp $
+
+*txt2man-1.4.8-r1 (27 Jul 2005)
+
+  27 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/txt2man-1.4.8-debian.patch, -txt2man-1.4.8.ebuild,
+  +txt2man-1.4.8-r1.ebuild:
+  Added patch from Debian for hyphens escaping. Thanks to Fredrik Steen
+  <stone@debian.org> (Debian maintainer) and Wesley J. Landaker (original
+  submitter of the patch).
 
   25 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> txt2man-1.4.8.ebuild:
   ~sparc as a dep for bug #100058
