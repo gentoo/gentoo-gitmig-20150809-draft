@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.82 2005/04/10 22:03:32 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.83 2005/07/27 10:35:08 pvdabeel Exp $
+
+  27 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  pwlib-1.8.3.ebuild, pwlib-1.8.3-r1.ebuild, pwlib-1.8.4.ebuild:
+  Marked 1.8.3-5 stable. Used in the Freescale DES. Dependency for openh323.
 
 *pwlib-1.8.4 (11 Apr 2005)
 
