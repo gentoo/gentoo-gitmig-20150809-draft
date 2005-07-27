@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7014cb548327db765bf3f012654feee5 glibmm-2.6.1.ebuild 1164
+MD5 fa2d22731dd21c9e70658119be917e88 glibmm-2.6.1.ebuild 1170
 MD5 a5c80b4da787fb69e1a0700d39ac04a2 glibmm-2.4.7-r1.ebuild 1054
 MD5 99d38f342fc31bd084bdb61bf3603ae1 glibmm-2.4.4.ebuild 538
-MD5 b564aa4fa396078845ca7e6a75bfeb43 ChangeLog 4780
+MD5 6034d3ed779bca735af888ea0ee2461b ChangeLog 4883
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
 MD5 d645a289371e18df9c33719baa37d25d files/digest-glibmm-2.4.7-r1 65
 MD5 6228c75d9e841f3fc6883a344a98e7c3 files/digest-glibmm-2.4.4 65
@@ -12,7 +12,7 @@ MD5 df31c402a8203f95b628cad41a9bafa0 files/digest-glibmm-2.6.1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC371CEZCkKN40op4RApVgAJ9HQfjBltb7MI514m0CKkahj7f7ygCgukjy
-3P/VZo/maI9wcBPjMy/6Lro=
-=tsUt
+iD8DBQFC57dqEZCkKN40op4RAmVZAKCPlX7PFWJPddeqhA9WkdfNQRvwDgCeLsXi
+n0auhNQkBrppQg/F5XRbn6Y=
+=lxrr
 -----END PGP SIGNATURE-----
