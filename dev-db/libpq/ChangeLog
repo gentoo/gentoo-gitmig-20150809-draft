@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.16 2005/07/21 15:08:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.17 2005/07/27 19:32:59 nakano Exp $
+
+*libpq-8.0.3-r1 (27 Jul 2005)
+*libpq-8.0.1-r1 (27 Jul 2005)
+*libpq-7.4.8-r1 (27 Jul 2005)
+*libpq-7.3.10-r1 (27 Jul 2005)
+
+  27 Jul 2005; Masatomo Nakano <nakano@gentoo.org> +libpq-7.3.10-r1.ebuild,
+  +libpq-7.4.8-r1.ebuild, +libpq-8.0.1-r1.ebuild, +libpq-8.0.3-r1.ebuild:
+  Version bump to make sure fixing previous bugs.
 
   21 Jul 2005; Markus Rothe <corsair@gentoo.org> libpq-8.0.3.ebuild:
   Stable on ppc64
