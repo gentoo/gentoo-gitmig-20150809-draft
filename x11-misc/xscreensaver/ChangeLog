@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.98 2005/07/27 19:47:02 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.99 2005/07/27 21:49:50 josejx Exp $
+
+  27 Jul 2005; Joseph Jezak <josejx@gentoo.org> xscreensaver-4.22-r2.ebuild:
+  Marked ppc stable for bug #100298.
 
   27 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
   xscreensaver-4.22-r2.ebuild:
