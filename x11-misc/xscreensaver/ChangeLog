@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.97 2005/07/26 19:47:06 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.98 2005/07/27 19:47:02 killerfox Exp $
+
+  27 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  xscreensaver-4.22-r2.ebuild:
+  Stable on hppa.
 
 *xscreensaver-4.22-r3 (26 Jul 2005)
 
