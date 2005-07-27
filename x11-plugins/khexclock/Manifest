@@ -1,4 +1,16 @@
-MD5 afe69e4914dfb55c5ede67fbfcfe768c khexclock-0.0.4.ebuild 464
-MD5 44f186a60fd6e05f9a922432809acbc8 ChangeLog 849
-MD5 76790bc57ed641dc79ad018411b179cf metadata.xml 224
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 76b17e9994305d216598a0cff2dcc80f ChangeLog 1042
+MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
+MD5 5b219e0abd1ec896c4e14ba2f8e35add khexclock-0.0.4.ebuild 513
+MD5 c6a8788d4dd2196e289039afb36d340b khexclock-0.1.5.ebuild 504
+MD5 b24363e04cf2e3c2ef94d41033a4e0be files/digest-khexclock-0.1.5 65
 MD5 0bfcfd82e6f99a49ee4617c9e669ad8e files/digest-khexclock-0.0.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC58NOl5AvwDPiUowRAhNGAJ4qdn+MdujnLalIWIJRza/NbYeyuwCgjbqi
+woGx8SE1JspWeb2Cg+Hur3Y=
+=svjb
+-----END PGP SIGNATURE-----
