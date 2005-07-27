@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.108 2005/07/27 16:34:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.109 2005/07/27 21:55:45 leonardop Exp $
+
+*libxslt-1.1.14-r1 (27 Jul 2005)
+
+  27 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
+  libxslt-1.1.14-r1.ebuild:
+  New revision. Always pass --with-debugger to make libxslt useful for
+  external development tools (bug #98345).
 
   27 Jul 2005; Guy Martin <gmsoft@gentoo.org> libxslt-1.1.14.ebuild:
   Stable on hppa.
