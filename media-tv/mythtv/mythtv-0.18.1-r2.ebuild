@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.7 2005/07/01 15:06:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.8 2005/07/28 14:23:31 caleb Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -16,7 +16,7 @@ IUSE="alsa altivec arts debug dvb frontendonly ieee1394 jack joystick lcd lirc m
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
 	virtual/x11
-	>=x11-libs/qt-3.1.1
+	=x11-libs/qt-3*
 	dev-db/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	arts? ( kde-base/arts )
