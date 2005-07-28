@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/kylixlibs3-borqt-3.0.ebuild,v 1.5 2004/06/24 22:03:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/kylixlibs3-borqt-3.0.ebuild,v 1.6 2005/07/28 21:10:20 caleb Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Kylix 3 OE libraries"
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-DEPEND="x11-libs/qt"
+DEPEND="=x11-libs/qt-3*"
 
 src_compile() {
 	echo "Nothing to compile for ${P}."
