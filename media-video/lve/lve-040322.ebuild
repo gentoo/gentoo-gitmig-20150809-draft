@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.11 2005/05/15 14:15:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.12 2005/07/28 14:21:48 caleb Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs qt3
 
 # This is the version of ffmpeg lve must currently be compiled against
 FFMPEG="ffmpeg-0.4.8"
@@ -19,7 +19,7 @@ IUSE=""
 KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND="virtual/x11
 	>=media-libs/libsdl-1.2.6-r3
-	>=x11-libs/qt-3.3.0-r1
+	$(qt_min_version 3.3)
 	media-libs/libmpeg2"
 
 
