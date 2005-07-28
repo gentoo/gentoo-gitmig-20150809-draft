@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/rlocate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/ChangeLog,v 1.3 2005/07/10 21:32:36 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/ChangeLog,v 1.4 2005/07/28 23:22:41 chriswhite Exp $
+
+*rlocate-0.3.2 (29 Jul 2005)
+
+  29 Jul 2005; Chris White <chriswhite@gentoo.org> +rlocate-0.3.2.ebuild:
+  Version bump.  Upstream bug fixes mainly.  Released to work with kernel 2.6.13.
 
 *rlocate-0.3.1-r1 (10 Jul 2005)
 
