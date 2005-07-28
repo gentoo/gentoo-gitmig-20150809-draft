@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_alpha20-r1.ebuild,v 1.1 2005/07/28 14:07:17 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_alpha20-r1.ebuild,v 1.2 2005/07/28 14:23:13 tigger Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ src_install() {
 #		dodoc docs/boa.dvi || die
 #	fi
 
-	dodir /var/log/boa
+	keepdir /var/log/boa
 	dodir /var/www/localhost/htdocs
 	dodir /var/www/localhost/cgi-bin
 	dodir /var/www/localhost/icons
