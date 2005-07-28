@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6.ebuild,v 1.24 2005/01/12 22:28:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6.ebuild,v 1.25 2005/07/28 14:25:23 seemant Exp $
 
 inherit gnuconfig eutils
 
@@ -8,8 +8,7 @@ DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}.tar.gz
-	mirror://gentoo/${PF}-gentoo.tar.bz2
-	http://dev.gentoo.org/~seemant/extras/${PF}-gentoo.tar.bz2"
+	mirror://gentoo/${PF}-gentoo.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

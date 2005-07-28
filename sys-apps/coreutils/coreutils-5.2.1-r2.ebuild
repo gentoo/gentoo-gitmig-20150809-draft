@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r2.ebuild,v 1.13 2005/05/30 02:56:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r2.ebuild,v 1.14 2005/07/28 14:24:25 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,11 +11,8 @@ PATCHDIR=${WORKDIR}/patch
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
-	mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
-	mirror://gentoo/${P}-${I18N_VER}.patch.bz2
-	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCH_VER}.tar.bz2
-	http://dev.gentoo.org/~seemant/distfiles/${P}-${I18N_VER}.patch.bz2"
+	mirror://gentoo/${P}-${I18N_VER}.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
