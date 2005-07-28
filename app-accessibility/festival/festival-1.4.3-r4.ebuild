@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r4.ebuild,v 1.2 2005/07/24 02:22:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r4.ebuild,v 1.3 2005/07/28 07:07:33 gmsoft Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,7 +24,7 @@ SRC_URI="${SITE}/${P}-release.tar.gz
 
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~hppa"
 IUSE="asterisk doc mbrola"
 
 RDEPEND=">=app-accessibility/speech-tools-1.2.3-r2
