@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bpmdj
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.20 2005/07/17 19:24:46 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.21 2005/07/28 21:06:09 caleb Exp $
+
+  28 Jul 2005; Caleb Tennis <caleb@gentoo.org> bpmdj-2.6.ebuild,
+  bpmdj-2.7.ebuild:
+  Fix qt dep per bug #100235
 
   17 Jul 2005; Frank van de Pol <fvdpol@gentoo.org> :
   Version bump to 2.7 + cleanup old versions. Closes bug #84810.

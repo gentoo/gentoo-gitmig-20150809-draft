@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.6.ebuild,v 1.6 2005/07/09 15:26:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.6.ebuild,v 1.7 2005/07/28 21:06:09 caleb Exp $
 
 IUSE="mp3 oggvorbis"
 
@@ -15,7 +15,7 @@ SLOT="0"
 #-amd64: 2.6 - kbpm-play: common.cpp:42: void common_init(): Assertion `sizeof(signed4)==4' failed. - eradicator
 KEYWORDS="-amd64 x86 ~ppc"
 
-DEPEND="x11-libs/qt"
+DEPEND="=x11-libs/qt-3*"
 
 RDEPEND="${DEPEND}
 	 mp3? ( dev-perl/MP3-Tag )
