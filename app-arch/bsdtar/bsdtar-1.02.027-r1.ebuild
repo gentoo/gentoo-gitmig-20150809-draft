@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.02.027-r1.ebuild,v 1.3 2005/07/22 22:48:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.02.027-r1.ebuild,v 1.4 2005/07/28 15:29:32 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.freebsd.org/~kientzle/libarchive/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
+KEYWORDS="amd64 ~ppc ~ppc-macos ~x86"
 IUSE="build static"
 
 # This is told to be used ( !elibc_glibc? ( dev-libs/libgnugetopt ) ) but isn't
