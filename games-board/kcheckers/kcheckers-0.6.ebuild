@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.6.ebuild,v 1.2 2005/07/13 13:48:22 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.6.ebuild,v 1.3 2005/07/28 14:20:11 caleb Exp $
 
 inherit qt3 games
 
@@ -10,7 +10,7 @@ SRC_URI="http://kcheckers.org/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="=x11-libs/qt-3*"
