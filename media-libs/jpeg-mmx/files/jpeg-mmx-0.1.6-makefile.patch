@@ -1,0 +1,10 @@
+--- makefile.cfg
++++ makefile.cfg
+@@ -250,6 +250,7 @@
+ 
+ 
+ %.o: %.s ; 	$(AS) $(ASFLAGS) -o $@ $<
++%.lo: %.s ; 	$(AS) $(ASFLAGS) -o $@ $< ; cp $@ $(patsubst %.lo, %.o, $@)
+ 
+ # Mistake catcher:
+ 

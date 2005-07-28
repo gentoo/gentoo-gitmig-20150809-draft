@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/jpeg-mmx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.12 2005/05/11 15:18:09 azarah Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.13 2005/07/28 03:46:40 vapier Exp $
+
+*jpeg-mmx-0.1.6 (28 Jul 2005)
+
+  28 Jul 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/jpeg-mmx-0.1.6-makefile.patch, -files/1.1.2-gcc34.patch,
+  +files/jpeg-mmx-0.1.6-PIC.patch, +jpeg-mmx-0.1.6.ebuild,
+  -jpeg-mmx-1.1.2-r1.ebuild:
+  Version 1.1.2 was a typo and broken so clean up and add latest version #55353.
 
   11 May 2005; Martin Schlemmer <azarah@gentoo.org>
   jpeg-mmx-1.1.2-r1.ebuild:
