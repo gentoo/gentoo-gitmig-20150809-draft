@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecamegapedal/ecamegapedal-0.4.3.ebuild,v 1.11 2005/07/25 12:30:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecamegapedal/ecamegapedal-0.4.3.ebuild,v 1.12 2005/07/28 20:57:19 caleb Exp $
 
 DESCRIPTION="Ecamegapedal is a real-time effect processor."
 HOMEPAGE="http://www.wakkanet.fi/~kaiv/ecamegapedal/"
@@ -11,7 +11,7 @@ KEYWORDS="amd64 ~ppc sparc x86"
 
 IUSE="jack"
 
-DEPEND="x11-libs/qt
+DEPEND="=x11-libs/qt-3*
 	jack? ( media-sound/jack-audio-connection-kit )
 	media-sound/ecasound"
 
