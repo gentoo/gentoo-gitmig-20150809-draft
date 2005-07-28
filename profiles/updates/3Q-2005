@@ -41,4 +41,4 @@ move games-board/gnocatan games-board/pio
 slotmove =dev-cpp/gtkglextmm-1.0.0 0 1.0
 slotmove =dev-cpp/gtkglextmm-1.0.1 0 1.0
 slotmove =media-libs/portaudio-18* 0 18
-
+move sys-cluster/ganglia-monitor-core sys-cluster/ganglia
