@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1348 2005/07/28 11:59:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1349 2005/07/28 20:17:47 sbriesen Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -114,6 +114,9 @@ app-misc/workrave:noexperimental - Compile without experimental features
 app-mobilephone/gammu:irda - Enable infrared support
 app-mobilephone/gnokii:irda - Enable infrared support
 app-mobilephone/gnokii:sms - Enable SMS support
+app-mobilephone/yaps:capi - Enable CAPI support
+app-mobilephone/yaps:lua - Enable Lua scripting support
+app-mobilephone/yaps:slang - Enable SLang scripting support
 app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
