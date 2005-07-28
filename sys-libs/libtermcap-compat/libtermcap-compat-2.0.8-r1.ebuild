@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r1.ebuild,v 1.10 2004/07/02 08:48:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r1.ebuild,v 1.11 2005/07/28 14:37:45 seemant Exp $
 
 inherit eutils
 
@@ -14,8 +14,6 @@ PATCHDIR="${WORKDIR}/patch"
 DESCRIPTION="Compatibility package for old termcap-based programs"
 HOMEPAGE="http://www.catb.org/~esr/terminfo/"
 SRC_URI="http://www.catb.org/~esr/terminfo/termtypes.tc.gz
-	http://dev.gentoo.org/~seemant/extras/${MY_P}.tar.bz2
-	http://dev.gentoo.org/~seemant/extras/${P}-gentoo-${PATCHVER}.tar.bz2
 	mirror://gentoo/${MY_P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2"
 
