@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2.ebuild,v 1.1 2005/07/22 04:46:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2.ebuild,v 1.2 2005/07/28 17:21:34 ka0ttic Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="An extremely excellent text file reader"
 HOMEPAGE="http://freshmeat.net/projects/most/"
@@ -18,6 +20,8 @@ DEPEND=">=sys-libs/slang-1.4.2
 	>=sys-libs/ncurses-5.2-r2"
 
 src_compile() {
+	gnuconfig-update
+
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \

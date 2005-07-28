@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/most
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.16 2005/07/22 04:46:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.17 2005/07/28 17:21:34 ka0ttic Exp $
+
+  28 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> most-4.9.5.ebuild,
+  most-4.10.2.ebuild:
+  Run gnuconfig-update, otherwise the config.{sub,guess} will be too old to
+  recognize certain mips64 machines.
 
 *most-4.10.2 (22 Jul 2005)
 
