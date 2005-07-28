@@ -1,6 +1,9 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.94 2005/07/24 06:06:05 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.95 2005/07/28 22:54:46 rl03 Exp $
+
+  28 Jul 2005; Renat Lumpau <rl03@gentoo.org> webapp-config-1.11-r1.ebuild:
+  Fixed SRC_URI and S
 
   24 Jul 2005; Hardave Riar <hardave@gentoo.org> webapp-config-1.11.ebuild:
   Stable on mips, bug #91785.
