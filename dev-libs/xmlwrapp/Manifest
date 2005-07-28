@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7138d3741c358f0ff3ba0f513121ac68 xmlwrapp-0.5.0-r1.ebuild 1453
-MD5 24ca79338b0f7b5a84f08536553ecf84 ChangeLog 2569
+MD5 ae735e4184e681fe928624ff1b02d728 xmlwrapp-0.5.0-r1.ebuild 1460
+MD5 d368a3e262af1f81eac25eface5e6dba ChangeLog 2660
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 55066e7026cd8b9a9f6820015d0a986c files/xmlwrapp-gentoo.diff 469
 MD5 bbba6eba8abf58b5f9bed1fc32ae8214 files/digest-xmlwrapp-0.5.0-r1 130
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1zmfEZCkKN40op4RAjwMAJ4mKaT2V+Ni4hWk3tmZIbuRwlCp6gCePJyp
-4LrnZqkvRFRZDR9gDI745Y8=
-=27kK
+iD8DBQFC6ITeEZCkKN40op4RAuEuAJ9zYJLgtOy09NUiGbugdR0I+KIk0ACfZLoI
+iNBQ20X0u5aBeK2OaGmTqAw=
+=WnLZ
 -----END PGP SIGNATURE-----
