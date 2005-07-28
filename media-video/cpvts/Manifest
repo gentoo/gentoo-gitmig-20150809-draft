@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 60ef4544301307b78b8da9aaca5c23f7 cpvts-1.2.ebuild 596
+MD5 1786d83501a6a8719a664b5a81bf3c32 ChangeLog 600
+MD5 97220db3fca11df4a604d03ef85ef2cb cpvts-1.2.ebuild 596
 MD5 446c2ccebfd17f0cf3aa8e8d8b815635 metadata.xml 233
-MD5 f1aba94ee362a4d81cead15250bc42f4 ChangeLog 522
 MD5 cbb33c789712e1a80054963c6d74928d files/digest-cpvts-1.2 56
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBZVpoI1lqEGTUzyQRApAHAKDb189lxfASqTtjUp9oCocujY4XsgCggB9Y
-jlIgKCimJbXZR5p58FXZ8aA=
-=JgZg
------END PGP SIGNATURE-----

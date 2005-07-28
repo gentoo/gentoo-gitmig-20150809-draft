@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7c27f47e6ce7a6145ed7816a33e452d7 ChangeLog 589
 MD5 446c2ccebfd17f0cf3aa8e8d8b815635 metadata.xml 233
-MD5 2bacf426cf5168d7b22b3b21e436cd90 mpglen-0.1.ebuild 673
-MD5 dcb275658542e3c1a182000806d26a9f ChangeLog 510
+MD5 b777354c61c5237bbf44fa802c5ed007 mpglen-0.1.ebuild 673
 MD5 f2eedfb2e2a712991121c442e5465a9c files/digest-mpglen-0.1 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBZVqwI1lqEGTUzyQRAuHGAJ9urRBJWJF24uDD1is2fbzdBAf5qgCgx37p
-3s/zyGAu+A3oGjyLKTvLpPA=
-=OZfZ
------END PGP SIGNATURE-----

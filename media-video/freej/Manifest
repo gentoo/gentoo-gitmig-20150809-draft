@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 100072e0633e6930b2c0501bf9d0f3c8 ChangeLog 821
-MD5 f8881c3927d02eb557bd23eff579db39 freej-0.7.ebuild 1419
+MD5 ee3cff7251150e04f256491e517140d4 ChangeLog 901
+MD5 b0c859655c99284cb51bda1304d79358 freej-0.7.ebuild 1419
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 e5641ba29fa7159b9329480d820c1a9a files/digest-freej-0.7 61
-MD5 fbc899d7160ab39e47de15461a90b452 files/freej-0.7-v4l.patch 256
-MD5 e6a0544f5627d624dcc6d314be575360 files/freej-0.7-fastmemcpy.patch 2554
 MD5 0060b7f722bb0974847d296ef8403ebd files/freej-0.7-errno.patch 741
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZMojKf2g/qXtneoRAi0hAJ9Q9fKgNojsKK7vioiMAMs7cM6trQCgrMwr
-fGJLvRvrt0H/8176bYez0qI=
-=+DVm
------END PGP SIGNATURE-----
+MD5 e6a0544f5627d624dcc6d314be575360 files/freej-0.7-fastmemcpy.patch 2554
+MD5 fbc899d7160ab39e47de15461a90b452 files/freej-0.7-v4l.patch 256

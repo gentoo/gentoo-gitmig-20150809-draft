@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 198ad29b9e8f52fab210297158dbe009 ChangeLog 3768
+MD5 24292e67bab5214f651b4bd75a874f2f ChangeLog 3846
 MD5 82306868b6a6fb63db8c971fc0b52a9d drip-0.8.1-r5.ebuild 3091
-MD5 2cbaf3c877b0616661d8c1b63cd4c4a9 drip-0.9.0.ebuild 2736
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 0de4f872cb0978a32cbb8ffb00fb1808 drip-0.9.0.ebuild 2757
 MD5 39f83fd93ac2e8bb8b9b89afcbcaedcd files/digest-drip-0.8.1-r5 62
-MD5 7f9daf1e0ac3dae373c1c892c46d1476 files/digest-drip-0.9.0 137
 MD5 636fd81a0bb66385faca9b7c72cb1cbc files/drip-0.8.1-fix-dvd-symlink.patch 1305
 MD5 e85fdab29910541239d107476ff1a592 files/drip-0.8.1-gcc-3.1.patch 546
 MD5 030a52bd54594455f9d77f959575036d files/drip-0.8.1-missing-stdio.patch 567
-MD5 5a5df6046a26634c3fc453c01d52db4b files/drip-0.9.0-cflags.patch 712
-MD5 6a8907bd9031fcf440cba36e784faff6 files/drip-0.9.0-gcc34.patch 2795
 MD5 062194efdad2b8a1e02ded8b66d86fc3 files/drip.desktop 154
 MD5 a7d5edb693cf81b8e5fbc833cf221516 files/dripgetdvd.sh 1330
 MD5 27ca218152ac3b83a6f59a84c7a7f539 files/libmpeg2.patch 3677
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCl8Tmj5H05b2HAEkRAvOWAKCKLYImKrUY60XWaVRZrfmU6DnjUACfQ1j4
-TshP5/Q872jRwlXXqlB435Y=
-=bi6X
------END PGP SIGNATURE-----
+MD5 7f9daf1e0ac3dae373c1c892c46d1476 files/digest-drip-0.9.0 137
+MD5 5a5df6046a26634c3fc453c01d52db4b files/drip-0.9.0-cflags.patch 712
+MD5 6a8907bd9031fcf440cba36e784faff6 files/drip-0.9.0-gcc34.patch 2795

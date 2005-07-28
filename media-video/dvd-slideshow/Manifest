@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 306c70ac1342068e7df3bc47e370bee3 dvd-slideshow-0.7.1.ebuild 872
-MD5 a3cae7086798f0729176684506a85692 dvd-slideshow-0.7.0.ebuild 870
-MD5 c44a36815e48718bd35928df2bdff4dd ChangeLog 1015
+MD5 3ee1ae835d2970c2b8a22611c59fe6e7 ChangeLog 1102
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 a3cae7086798f0729176684506a85692 dvd-slideshow-0.7.0.ebuild 870
+MD5 f252ad303df13f1cfcff79fd8d7b4f58 dvd-slideshow-0.7.1.ebuild 873
 MD5 9eeaa96206c49f0ce3f0c96b946cc478 files/digest-dvd-slideshow-0.7.0 70
 MD5 c671c24f2d3103c2e3ff212c656385d2 files/digest-dvd-slideshow-0.7.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCl0lD06ebR+OMO78RAnqPAJ0S2Rl7bI23fGFnZ6HqPq0ATgxo6QCdHyKi
-SM5xKGWI4//ZCImThmv22Ow=
-=CZIW
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 3098747a97ee8c9835c386a52c17e9b0 ChangeLog 635
 MD5 446c2ccebfd17f0cf3aa8e8d8b815635 metadata.xml 233
-MD5 f402e518b71e9c6d319aa2a4e463a118 pgmfindclip-1.13.ebuild 588
-MD5 0f1c17d062af7c7a7a56ca4b2c52fd3c ChangeLog 550
+MD5 64289fd189a18608b55775ca6aaa4079 pgmfindclip-1.13.ebuild 588
 MD5 0351f6c53e368be0a0435311d7102767 files/digest-pgmfindclip-1.13 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBZVryI1lqEGTUzyQRAsJgAJ0fsgUrcc4AilzaK64hk5+bZ1nLxgCgnq5b
-LbXDe7jSdnImo3u/b/rZQZU=
-=khMz
------END PGP SIGNATURE-----

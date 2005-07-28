@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77c2c4b885fcb0d58373606c831759f5 ksubtile-1.1.ebuild 486
-MD5 2eb12aa67b2a053b810adc42db9c5c7d ChangeLog 608
+MD5 33c8e553a2bbafdb529a3c44c2b6130f ChangeLog 692
+MD5 32dbb91a92c13545d36e23531e188939 ksubtile-1.1.ebuild 491
 MD5 01ba4a24c895931d11a8e08565712090 metadata.xml 175
 MD5 adb768142f4f9e60195bdab2a3c1e581 files/digest-ksubtile-1.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCd7g52G5bA0cA/ScRAhIrAJwNdxrA9WPIOpCWDyVUzbl0qOVDEACeLK9L
-O0zXQDsOF8cBlUHB5OzymBQ=
-=lhTj
------END PGP SIGNATURE-----
