@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.12 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.13 2005/07/28 23:44:27 leonardop Exp $
 
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -56,9 +56,8 @@ fi
 
 if has_version ">=x11-libs/gtk+-2" || use gtk2; then
 	HAS_GTK2=1
-	GTK2_FULL_VER=$(pkg-config gtk+-2.0 --modversion 2>/dev/null)
-	GTK2_MAJOR_VER=${GTK2_FULL_VER%.*}.0
-	GTK2_ENGINES_DIR=/usr/$(get_libdir)/gtk-2.0/${GTK2_MAJOR_VER}/engines
+	GTK_VERSION=$(pkg-config --variable=gtk_binary_version gtk+-2.0)
+	GTK2_ENGINES_DIR=/usr/$(get_libdir)/gtk-2.0/${GTK_VERSION}/engines
 fi
 
 # --- define some deps for binary packages
@@ -104,7 +103,7 @@ gtk-engines2_src_compile() {
 	fi
 }
 
-DEFAULT_DOCS="COPYING README NEWS AUTHORS ChangeLog INSTALL"
+DEFAULT_DOCS="AUTHORS ChangeLog NEWS README"
 
 gtk-engines2_src_install() {
 
