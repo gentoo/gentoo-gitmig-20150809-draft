@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ermixer
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.21 2004/12/16 09:10:00 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.22 2005/07/28 20:55:22 caleb Exp $
+
+  28 Jul 2005; Caleb Tennis <caleb@gentoo.org> ermixer-0.8.ebuild:
+  made qt dep qt3 explicit per bug #100235
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> ermixer-0.8.ebuild:
   Stable on ppc64
