@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.23 2005/05/23 11:09:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.24 2005/07/28 12:50:37 dragonheart Exp $
+
+  28 Jul 2005; Daniel Black <dragonheart@gentoo.org>
+  -sdcc-2.4.0_p20041215.ebuild, sdcc-2.5.0.ebuild,
+  -sdcc-2.5.0_p20050522.ebuild:
+  x86 stable and old version removal
 
 *sdcc-2.5.0_p20050522 (23 May 2005)
 *sdcc-2.5.0 (23 May 2005)
