@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/boa
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.4 2004/10/22 14:51:00 solar Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.5 2005/07/28 14:07:17 tigger Exp $
+
+*boa-0.94.14_alpha20-r1 (28 Jul 2005)
+
+  28 Jul 2005; Rob Holland <tigger@gentoo.org>
+  +files/boa-0.94.14_alpha20-64bit.patch, +boa-0.94.14_alpha20-r1.ebuild:
+  Small tidy ups. 64bit fixes. Don't stop the boa service when installing.
 
 *boa-0.94.14_alpha20 (22 Oct 2004)
 
