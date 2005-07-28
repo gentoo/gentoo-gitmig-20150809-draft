@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-0.1.6.ebuild,v 1.1 2005/07/28 03:46:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-0.1.6.ebuild,v 1.2 2005/07/28 22:34:09 vapier Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--include-dir=/usr/include/jpeg-mmx \
+		--includedir=/usr/include/jpeg-mmx \
 		--enable-shared \
 		--enable-static \
 		|| die "configure failed"
