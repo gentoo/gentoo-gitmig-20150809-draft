@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.11 2005/05/28 09:19:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.12 2005/07/28 20:53:55 caleb Exp $
 
 inherit flag-o-matic eutils games
 
@@ -21,7 +21,7 @@ DEPEND="virtual/x11
 		virtual/glut
 	)
 	vorbis? ( media-libs/libvorbis )
-	qt? ( x11-libs/qt )
+	qt? ( =x11-libs/qt-3* )
 	media-libs/openal"
 
 S="${WORKDIR}/Chromium-0.9"
