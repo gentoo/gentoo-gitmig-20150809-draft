@@ -1,5 +1,5 @@
-MD5 305a1ed36bb3b540db3bb40fbca12105 ChangeLog 4313
-MD5 737a833a4046a2f9eb8f5ab5a0ddca8d Compress-Zlib-1.35.ebuild 608
+MD5 37794a47e1a20147dad156a291664957 ChangeLog 4422
+MD5 8d3d3f7c8cc9656c65b4b3cf5637bb62 Compress-Zlib-1.35.ebuild 608
 MD5 3fb735e3cd9f73246beb001733e8d3d3 Compress-Zlib-1.33.ebuild 598
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 0921cce8e2c5aee3d13b8c33d8f2200a files/digest-Compress-Zlib-1.35 70
