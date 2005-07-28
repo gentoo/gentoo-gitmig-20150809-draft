@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>base-system</herd>
+	<maintainer>
+		<email>solar@gentoo.org</email>
+		<description>housemate needed it</description>
+	</maintainer>
+	<longdescription>This software discovers, activates, deactivates and displays properties of software RAID sets eg: ATARAID and contained DOS partitions.</longdescription>
+</pkgmetadata>

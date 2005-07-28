@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/dmraid
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.1 2005/07/28 02:24:07 solar Exp $
+
+*dmraid-1.0.0_rc8-r1 (27 Jul 2005)
+
+  27 Jul 2005; <solar.@gentoo.org> +metadata.xml, +dmraid-1.0.0_rc8-r1.ebuild:
+  - initial version of dmraid. bug #63041 - This software discovers, activates,
+  deactivates and displays properties of software RAID sets (eg, ATARAID) and
+  contained DOS partitions.
+
