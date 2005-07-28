@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.81 2005/07/25 18:57:13 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.82 2005/07/28 22:46:18 vanquirius Exp $
+
+  28 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
+  nessus-core-2.2.4.ebuild, nessus-core-2.2.4-r1.ebuild,
+  nessus-core-2.3.1.ebuild:
+  Propagate -j1 through other ebuilds for bug 100193. Thanks to Jakub Moc
+  <jakub@gentoo.org> for pointing it out.
 
   25 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
   nessus-core-2.2.5.ebuild:
