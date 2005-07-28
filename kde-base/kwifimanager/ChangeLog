@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwifimanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.12 2005/07/28 21:16:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwifimanager/ChangeLog,v 1.13 2005/07/28 22:16:44 danarmak Exp $
+
+  28 Jul 2005; Dan Armak <danarmak@gentoo.org> kwifimanager-3.4.2.ebuild:
+  Don't try to apply patch that is already in 3.4.2.
 
 *kwifimanager-3.4.2 (28 Jul 2005)
 
