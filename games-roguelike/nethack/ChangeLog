@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/nethack
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.14 2005/05/17 18:43:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.15 2005/07/28 20:54:41 caleb Exp $
+
+  28 Jul 2005; Caleb Tennis <caleb@gentoo.org> nethack-3.4.3-r1.ebuild:
+  made qt dep qt3 explicit per bug #100235
 
   17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   nethack-3.4.3-r1.ebuild:
