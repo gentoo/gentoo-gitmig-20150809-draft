@@ -1,7 +1,9 @@
-MD5 11a8bb736645ef4f638403111db20dcb ChangeLog 14190
+MD5 b2099e2597371412a5d1a6e5748825ca ChangeLog 14321
 MD5 b0eacbb6edb031d87f33ed0b08f5916d metadata.xml 226
 MD5 265cdebdd7e789aa0f65ece937b6f3d9 grub-0.96-r1.ebuild 5102
 MD5 81ff3c533676c996778973eb2d0bbe9a grub-0.96-r2.ebuild 5240
+MD5 b165e525893777a4509f5425e4059d50 grub-0.92-r1.ebuild 2533
+MD5 d9f0e36ffad22b3ea5ea6eebf2eedd3f grub-0.94-r1.ebuild 3604
 MD5 8d898cd9d1928916596cc3f9883eac67 files/grub-0.93-gcc3.3.diff 639
 MD5 e9e73f57d9f9d5c550792980b2635f94 files/grub-0.94-gcc3.4.patch 479
 MD5 7357395b0d223c0bbf0675a9af31f9c3 files/grub-0.94-grub.conf.patch 7574
@@ -18,3 +20,5 @@ MD5 2170f54e53dea24426369c0154d46fc0 files/digest-grub-0.96-r2 140
 MD5 5c12894c0a8cfd4a46a67e631dd45804 files/grub-0.96-netboot-pic.patch 446
 MD5 fb0f1b7cf2bf8055ee45f1e44c793cb7 files/grub-0.96-xfs-writable-string.patch 519
 MD5 3c201afcdacfff41b196d3d56ef07866 files/grub-0.96-gcc2.patch 573
+MD5 16039704cf1e6b6f46b4413532af082c files/digest-grub-0.92-r1 133
+MD5 0b52e1b3a6a9f3c9b86742580eabf28d files/digest-grub-0.94-r1 131

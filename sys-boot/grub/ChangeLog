@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.46 2005/07/28 14:29:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.47 2005/07/28 14:52:47 seemant Exp $
+
+  28 Jul 2005; Seemant Kulleen <seemant@gentoo.org> +grub-0.92-r1.ebuild,
+  +grub-0.94-r1.ebuild:
+  add back 92 and 94 for vapier
 
   28 Jul 2005; Seemant Kulleen <seemant@gentoo.org> -grub-0.92-r1.ebuild,
   -grub-0.93.20030118.ebuild, -grub-0.94-r1.ebuild, -grub-0.94-r2.ebuild,
