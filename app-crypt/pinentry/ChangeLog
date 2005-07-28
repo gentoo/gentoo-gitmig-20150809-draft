@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.25 2005/05/08 05:49:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.26 2005/07/28 20:53:16 caleb Exp $
+
+  28 Jul 2005; Caleb Tennis <caleb@gentoo.org> pinentry-0.7.2.ebuild:
+  Made qt dep qt3 explicit per bug #100235
 
   08 May 2005; Sven Wegener <swegener@gentoo.org>
   -files/qt-compile-fix.diff, -pinentry-0.7.1-r1.ebuild:

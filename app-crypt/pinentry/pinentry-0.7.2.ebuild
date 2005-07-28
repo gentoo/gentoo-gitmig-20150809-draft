@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2.ebuild,v 1.5 2005/04/01 20:07:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2.ebuild,v 1.6 2005/07/28 20:53:16 caleb Exp $
 
 inherit flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND="gtk? (
 		gtk2? ( =x11-libs/gtk+-2* )
 	)
 	ncurses? ( sys-libs/ncurses )
-	qt? ( x11-libs/qt )
+	qt? ( =x11-libs/qt-3* )
 	!gtk? ( !qt? ( !ncurses? ( sys-libs/ncurses ) ) )"
 
 src_compile() {
