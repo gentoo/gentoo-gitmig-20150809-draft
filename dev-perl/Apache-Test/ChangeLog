@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.24 2005/07/28 10:25:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.25 2005/07/28 15:11:02 mcummings Exp $
+
+  28 Jul 2005; Michael Cummings <mcummings@gentoo.org>
+  Apache-Test-1.26.ebuild:
+  Adding a block against mod-perl-2. Here's the gist: mod-perl-2.0.1 comes with
+  its own version of Apache-Test. It installs to a different place, and is
+  largely incompatible with the standalone version of Apache-Test. However,
+  Apache-Test has value outside of the Mod-Perl-2 arena, so it is being retained
+  as a separate ebuild.
 
 *Apache-Test-1.26 (28 Jul 2005)
 
