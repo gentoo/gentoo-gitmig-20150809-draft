@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.11 2005/07/25 02:49:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.12 2005/07/28 21:06:03 agriffis Exp $
 
+inherit nsplugins multilib
 
 # update_mozilla_launcher_symlinks
 # --------------------------------
@@ -56,6 +57,8 @@ update_mozilla_launcher_symlinks() {
 # -----------------------------------------
 # Install a stub called /usr/bin/$name that executes mozilla-launcher
 #
+# Note: $PLUGINS_DIR comes from nsplugins (specifically the deprecated section).
+#
 install_mozilla_launcher_stub() {
 	[[ -n $2 ]] || die "install_launcher_stub requires two arguments"
 	declare name=$1
@@ -71,6 +74,7 @@ install_mozilla_launcher_stub() {
 
 export MOZILLA_LAUNCHER=${name}
 export MOZILLA_LIBDIR=${libdir}
+export MOZ_PLUGIN_PATH=\${MOZ_PLUGIN_PATH:-/usr/$(get_libdir)/$PLUGINS_DIR}
 exec /usr/libexec/mozilla-launcher "\$@"
 EOF
 	chmod 0755 ${D}/usr/bin/${name}
