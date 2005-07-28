@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ganglia-monitor-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.1 2005/07/28 23:01:16 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.2 2005/07/28 23:20:38 tantive Exp $
+
+*ganglia-2.5.7 (28 Jul 2005)
+
+  28 Jul 2005; Michael Imhof <tantive@gentoo.org> +ganglia-2.5.7.ebuild:
+  Adapted the last old ebuild.
 
 *ganglia-3.0.1 (29 Jul 2005)
 

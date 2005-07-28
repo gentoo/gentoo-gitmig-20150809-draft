@@ -3,12 +3,14 @@ Hash: SHA1
 
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
 MD5 16d45b033e883fb008d6f832d9527569 ganglia-3.0.1.ebuild 1152
-MD5 d06e7d53c256924ac000c1969e57a5c3 ChangeLog 1995
+MD5 b756c1b6f1a65455236551d1befef2a0 ganglia-2.5.7.ebuild 1206
+MD5 1eeba4972dc13a5b7387e1bec7e2d070 ChangeLog 2130
+MD5 74ecbeb128e34713e09439d74152b8e3 files/digest-ganglia-2.5.7 78
 MD5 d55d7372c5a81de843fe58ccf4fc0212 files/digest-ganglia-3.0.1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6WPoKtJO8LeSoosRAhzWAJ450g5QfZvHSXJMmuqdAu+550fO7QCgmSh/
-Dhxcuux2uBGa9D04lT86bKY=
-=iN6r
+iD8DBQFC6WhxKtJO8LeSoosRAkNsAJ93jh1LLXV3O2i2Bh9by6oetXWXsACfWe2k
+SU+wFu3NDAEyuWi1w6k2Q5s=
+=Q14K
 -----END PGP SIGNATURE-----
