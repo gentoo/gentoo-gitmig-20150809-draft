@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpbase
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.2 2005/07/27 20:24:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.3 2005/07/28 14:59:35 gustavoz Exp $
+
+  28 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> ftpbase-0.00.ebuild:
+  Stable on sparc
 
   27 Jul 2005; Roy Marples <uberlord@gentoo.org> ftpbase-0.00.ebuild:
   Stable on amd64 and x86.
