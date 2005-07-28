@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.4 2005/07/18 18:27:54 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.3-r1.ebuild,v 1.5 2005/07/28 20:52:24 caleb Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~pp
 IUSE="doc qt tetex"
 
 RDEPEND="media-gfx/graphviz
-	qt? ( x11-libs/qt )
+	qt? ( =x11-libs/qt-3* )
 	doc? ( tetex? ( virtual/tetex )
 	virtual/ghostscript )"
 DEPEND=">=sys-apps/sed-4

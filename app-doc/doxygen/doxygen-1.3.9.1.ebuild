@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.9.1.ebuild,v 1.13 2005/07/09 18:50:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.9.1.ebuild,v 1.14 2005/07/28 20:52:24 caleb Exp $
 
 DESCRIPTION="Documentation and analysis tool for C++, C, Java, IDL, PHP and C#"
 HOMEPAGE="http://www.doxygen.org/"
@@ -12,7 +12,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE="doc qt tetex"
 
 RDEPEND="media-gfx/graphviz
-	qt? ( x11-libs/qt )
+	qt? ( =x11-libs/qt-3* )
 	doc? ( tetex? ( virtual/tetex )
 	virtual/ghostscript )"
 DEPEND=">=sys-apps/sed-4
