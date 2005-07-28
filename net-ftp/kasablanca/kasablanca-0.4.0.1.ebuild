@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/kasablanca-0.4.0.1.ebuild,v 1.6 2005/05/05 02:42:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/kasablanca-0.4.0.1.ebuild,v 1.7 2005/07/28 21:08:08 caleb Exp $
 
 inherit kde eutils
 
@@ -28,7 +28,7 @@ COMMONDEPENDS="dev-libs/expat
 	sys-libs/glibc
 	sys-libs/zlib
 	virtual/x11
-	x11-libs/qt"
+	=x11-libs/qt-3*"
 
 DEPEND="${DEPEND}
 	sys-apps/gawk
