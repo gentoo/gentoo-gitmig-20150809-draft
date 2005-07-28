@@ -1,9 +1,19 @@
-MD5 47054972cb68630b517f34aee7621b68 ChangeLog 3808
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
 MD5 c7482ce8c7b3a0f4db80922c05d2052d ymessenger-1.0.4.1-r1.ebuild 1962
 MD5 b062290f98b50642a5c4682f2a65c410 ymessenger-1.0.4.1.ebuild 1986
-MD5 ed543f25c5165af6e41e0d6d7514d87d ymessenger-1.0.6.1.ebuild 1708
+MD5 7d2a90e6c70e8cb72aaded6247188e3d ymessenger-1.0.6.1.ebuild 1385
+MD5 fbc86690491f9ad0516f7bf3aa1c5e7a ChangeLog 3931
 MD5 d416ac8894dad827f0118284570e6c8a files/97ymessenger 16
 MD5 9d2442330a088c7361e8dc86a27c1822 files/digest-ymessenger-1.0.4.1 76
 MD5 b69edc7762d559e271bdb36ce8a79691 files/digest-ymessenger-1.0.4.1-r1 76
 MD5 937f77bd00c614a42cb55008b0bf677c files/digest-ymessenger-1.0.6.1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6SgcZ/iYVBmujdURAlY/AKC8wBDnW4vD7IHT7sR2R9JvSXO51ACfR+LF
+fpwkva0H5riBoONkptRJtQQ=
+=Cn1S
+-----END PGP SIGNATURE-----

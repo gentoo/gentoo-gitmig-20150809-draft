@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-1.0.6.1.ebuild,v 1.1 2005/01/25 19:36:29 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-1.0.6.1.ebuild,v 1.2 2005/07/28 18:46:10 sekretarz Exp $
 
-inherit kde-functions rpm
+inherit rpm eutils
 
-IUSE="kde gnome"
+IUSE=""
 
 MY_P=${PN}-${PV%.*}-${PV#*.*.*.*}
 S=${WORKDIR}
@@ -12,11 +12,9 @@ DESCRIPTION="Yahoo's instant messenger client"
 HOMEPAGE="http://public.yahoo.com/~mmk/index.html"
 SRC_URI="http://public.yahoo.com/~mmk/rh9.${MY_P}.i386.rpm"
 
-
-DEPEND="media-libs/gdk-pixbuf
+RDEPEND="virtual/x11
+	media-libs/gdk-pixbuf
 	dev-libs/openssl"
-
-RDEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="yahoo"
@@ -28,37 +26,24 @@ src_install () {
 	exeinto /opt/ymessenger/bin
 	doexe ymessenger.bin ymessenger
 
-	insinto /opt/ymessenger/bin
-	doins yahoo_kde.xpm yahoo_gnome.png
-	doins ymessenger.desktop
+	insinto /usr/share/icons/hicolor/48x48/apps
+	newins yahoo_gnome.png yahoo.png
 
-	if use gnome
-	then
-		insinto /usr/share/gnome/apps/Internet
-		doins ymessenger.desktop
-		insinto /opt/ymessenger/bin
-		doins ymessenger.desktop
-	fi
-
-	if use kde
-	then
-		insinto /usr/share/applnk/Internet
-		doins ymessenger.kdelnk
-
-		insinto /opt/ymessenger/bin
-		doins ymessenger.kdelnk
-	fi
+	sed -e 's:Icon=.*:Icon=yahoo:' -i ymessenger.desktop
+	domenu ymessenger.desktop
 
 	into /opt/ymessenger
 	dolib ${S}/opt/ymessenger/lib/libgtkhtml.so.0
 
-	cd ${T}
-	echo "#!/bin/sh" > ymessenger.gentoo
-	echo "LD_LIBRARY_PATH=/opt/ymessenger/lib:$LD_LIBRARY_PATH" >> ymessenger.gentoo
-	echo "export LD_LIBRARY_PATH" >> ymessenger.gentoo
-	echo "exec /opt/ymessenger/bin/ymessenger.bin $@" >> ymessenger.gentoo
+	echo >${T}/ymessenger.gentoo <<EOF
+#!/bin/sh
+LD_LIBRARY_PATH=/opt/ymessenger/lib:\$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+exec /opt/ymessenger/bin/ymessenger.bin $@
+EOF
+
 	exeinto /usr/bin
-	newexe ymessenger.gentoo ymessenger
+	newexe ${T}/ymessenger.gentoo ymessenger
 }
 
 pkg_postinst() {
