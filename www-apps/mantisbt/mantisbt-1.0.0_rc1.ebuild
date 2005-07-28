@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.0_alpha3.ebuild,v 1.1 2005/07/04 00:26:53 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.0_rc1.ebuild,v 1.1 2005/07/28 13:56:59 rl03 Exp $
 
 inherit webapp
 
 IUSE=""
-MY_PV=${PV/_alpha/a}
+MY_PV=${PV/_rc/rc}
 
 DESCRIPTION="PHP/MySQL/Web based bugtracking system"
 HOMEPAGE="http://www.mantisbt.org/"
@@ -33,7 +33,6 @@ src_install() {
 	mv ${D}/${MY_HTDOCSDIR}/config_inc.php.sample ${D}/${MY_HTDOCSDIR}/config_inc.php
 
 	webapp_configfile ${MY_HTDOCSDIR}/config_inc.php
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
-	webapp_sqlscript mysql ${S}/sql/db_generate.sql
+	webapp_postinst_txt en ${FILESDIR}/postinstall-en-1.0.0.txt
 	webapp_src_install
 }
