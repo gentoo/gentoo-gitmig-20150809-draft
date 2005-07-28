@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.23 2005/05/29 16:07:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.24 2005/07/28 10:25:11 mcummings Exp $
+
+*Apache-Test-1.26 (28 Jul 2005)
+
+  28 Jul 2005; Michael Cummings <mcummings@gentoo.org> metadata.xml,
+  -Apache-Test-1.22.ebuild, Apache-Test-1.23.ebuild, +Apache-Test-1.26.ebuild:
+  Version bump; unmasking 1.23 for sparc and x86, no bugs in 30+ days
 
   29 May 2005; Markus Rothe <corsair@gentoo.org> Apache-Test-1.22.ebuild:
   Stable on ppc64

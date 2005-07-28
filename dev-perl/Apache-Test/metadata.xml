@@ -6,5 +6,7 @@
 		<email>perl@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
-	<longdescription></longdescription>
+	<longdescription>Provides a suite of Apache tests, including tests for the
+		different mod_perls. Testing is disabled at this time - interactive,
+		requires interaction with the live filesystem.</longdescription>
 </pkgmetadata>
