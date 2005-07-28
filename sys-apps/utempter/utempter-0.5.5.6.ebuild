@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.2 2005/05/13 21:06:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.3 2005/07/28 14:26:39 seemant Exp $
 
 inherit rpm eutils flag-o-matic
 
@@ -8,12 +8,11 @@ MY_P=${P%.*}-${PV##*.}
 S=${WORKDIR}/${P%.*}
 DESCRIPTION="App that allows non-privileged apps to write utmp (login) info"
 HOMEPAGE="http://www.redhat.com/"
-SRC_URI="mirror://gentoo/${MY_P}.src.rpm
-	http://dev.gentoo.org/~seemant/distfiles/${MY_P}.src.rpm"
+SRC_URI="mirror://gentoo/${MY_P}.src.rpm"
 
 LICENSE="|| ( MIT LGPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
