@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.88 2005/07/27 17:30:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.89 2005/07/28 18:10:36 wolf31o2 Exp $
+
+*catalyst-1.1.10.9 (28 Jul 2005)
+
+  28 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -catalyst-1.1.10.8.ebuild, +catalyst-1.1.10.9.ebuild:
+  Version bumped to include newer Getting_Online.txt and also to fix some
+  issues with building Pegasos kernels.
 
 *catalyst-1.1.10.8 (27 Jul 2005)
 
