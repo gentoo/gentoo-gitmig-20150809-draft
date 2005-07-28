@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/kdewebdev-3.4.2.ebuild,v 1.1 2005/07/28 12:59:21 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/kdewebdev-3.4.2.ebuild,v 1.2 2005/07/28 21:18:31 greg_g Exp $
 
 inherit kde-dist
 
@@ -9,7 +9,7 @@ DESCRIPTION="KDE web development - Quanta"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE="doc tidy"
 
-DEPEND="dev-libs/libxslt
+DEPEND=">=dev-libs/libxslt-1.1.14-r1
 	dev-libs/libxml2"
 
 RDEPEND="${DEPEND}
