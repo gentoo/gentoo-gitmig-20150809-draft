@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmag
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.13 2005/07/08 03:31:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.14 2005/07/28 21:16:18 danarmak Exp $
+
+*kmag-3.4.2 (28 Jul 2005)
+
+  28 Jul 2005; Dan Armak <danarmak@gentoo.org> +kmag-3.4.2.ebuild:
+  Version bump to 3.4.2.
 
   08 Jul 2005; Jason Wever <weeve@gentoo.org> kmag-3.4.1.ebuild:
   Stable on SPARC.

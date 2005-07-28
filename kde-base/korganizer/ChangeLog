@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.12 2005/07/08 04:35:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.13 2005/07/28 21:16:20 danarmak Exp $
+
+*korganizer-3.4.2 (28 Jul 2005)
+
+  28 Jul 2005; Dan Armak <danarmak@gentoo.org> +korganizer-3.4.2.ebuild:
+  Version bump to 3.4.2.
 
   08 Jul 2005; Jason Wever <weeve@gentoo.org> korganizer-3.4.1.ebuild:
   Stable on SPARC.

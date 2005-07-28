@@ -1,4 +1,5 @@
 MD5 d262cbbae3cf2786f68f81d732b6371d kmail-3.4.0.ebuild 1616
+MD5 0628df135e430ab313479fc73bce7d61 kmail-3.4.2.ebuild 1643
 MD5 aa82a9cf16faab980f09bd8763b742d1 kmail-3.4.1.ebuild 1610
 MD5 e4212be29b738a31386cf593b043007a kmail-3.4.1-r1.ebuild 1677
 MD5 8bff20a8c0124ba1777e7483ab604a93 ChangeLog 2453
@@ -7,3 +8,4 @@ MD5 465fb4ad98b38e7c5328429eaabb1000 files/kmail-3.4.1-shift+click-crash.diff 51
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmail-3.4.1-r1 208
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kmail-3.4.0 67
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmail-3.4.1 208
+MD5 0ff2af5e4e7ab4d292ff00305302b6b2 files/digest-kmail-3.4.2 67

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.16 2005/07/08 03:32:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.17 2005/07/28 21:16:12 danarmak Exp $
+
+*kdeaccessibility-meta-3.4.2 (28 Jul 2005)
+
+  28 Jul 2005; Dan Armak <danarmak@gentoo.org>
+  +kdeaccessibility-meta-3.4.2.ebuild:
+  Version bump to 3.4.2.
 
   08 Jul 2005; Jason Wever <weeve@gentoo.org>
   kdeaccessibility-meta-3.4.1.ebuild:
