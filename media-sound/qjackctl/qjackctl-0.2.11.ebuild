@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.2.11.ebuild,v 1.4 2005/01/30 02:01:55 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.2.11.ebuild,v 1.5 2005/07/28 14:48:35 caleb Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND="virtual/libc
 	media-libs/alsa-lib
-	>=x11-libs/qt-3.1.1
+	=x11-libs/qt-3*
 	media-sound/jack-audio-connection-kit"
 
 src_compile() {

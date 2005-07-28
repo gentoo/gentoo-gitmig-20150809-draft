@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmbtagger
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/ChangeLog,v 1.11 2005/05/28 14:56:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/ChangeLog,v 1.12 2005/07/28 14:46:14 caleb Exp $
+
+  28 Jul 2005; Caleb Tennis <caleb@gentoo.org> qmbtagger-0.07.ebuild:
+  Fix qt per bug #100235
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -qmbtagger-0.06.ebuild,
   qmbtagger-0.07.ebuild:

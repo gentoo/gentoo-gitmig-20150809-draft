@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.4 2005/05/28 14:56:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.5 2005/07/28 14:46:14 caleb Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="ogg"
 
 DEPEND="
->=x11-libs/qt-3.1.2
+	=x11-libs/qt-3*
 	media-libs/flac
 	media-libs/id3lib
 	media-libs/musicbrainz

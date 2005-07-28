@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.1.2.ebuild,v 1.5 2005/07/13 19:20:18 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.1.2.ebuild,v 1.6 2005/07/28 14:47:07 caleb Exp $
 
 inherit kde eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND="virtual/libc
-	>=x11-libs/qt-3.1.1
+	=x11-libs/qt-3*
 	>=media-libs/liblscp-0.3.0
 	>=media-libs/libgig-2.0.1
 	>=media-sound/linuxsampler-0.3.2

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/madman
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.10 2004/09/15 19:48:58 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.11 2005/07/28 14:45:31 caleb Exp $
+
+  28 Jul 2005; Caleb Tennis <caleb@gentoo.org> madman-0.91.1.ebuild,
+  madman-0.93.ebuild:
+  Fix qt dep per bug #100235
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> madman-0.93.ebuild:
   Fixed dependency to require libid3tag.  Closes bug #63158.
