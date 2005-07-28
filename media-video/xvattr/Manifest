@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c16d1dc4caee96669e7a4984e4022cf ChangeLog 1312
-MD5 44660bcb29da5b39475b4006a7cf3217 xvattr-1.3-r1.ebuild 1321
+MD5 d850fa83379bf4a476ec6d7a987e865b ChangeLog 1393
+MD5 a87640d6ea0155b9bdb83b53ea7eb1b6 xvattr-1.3-r1.ebuild 1322
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 fd84f844012dd8c0aca7748aeaf2797f files/digest-xvattr-1.3-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB8Wz15mJXAu5GbtIRAoc4AJwJNRZrSLDB+xIcx1PP9RRVFe82gwCeKtUY
-bViXN1oVugrnpicisQSly6A=
-=5JRl
------END PGP SIGNATURE-----

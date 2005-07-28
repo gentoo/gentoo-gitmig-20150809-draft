@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 55693eeabca883e7219794f3189914f4 ChangeLog 768
-MD5 70a1844aca3922d0adb32bd312b52635 winki-0.3.2.ebuild 1245
+MD5 e3cde5af4401aea143ffc3269ca09b13 ChangeLog 850
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 21ee3b43023ecd3b693b409550874e56 files/winki-0.3.2.patch 1263
+MD5 6b27c61b37927d21c97e7910f84a67a9 winki-0.3.2.ebuild 1245
 MD5 f6f98eafb0ce381e16d7e1ce00d35505 files/digest-winki-0.3.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZMsMKf2g/qXtneoRAth7AJ9wX179zk361KLnxD2ptuvv9+7jrQCffkPD
-koQSz5b2AJu/sWY4UaBI+O0=
-=FXQT
------END PGP SIGNATURE-----
+MD5 21ee3b43023ecd3b693b409550874e56 files/winki-0.3.2.patch 1263
