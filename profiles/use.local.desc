@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1347 2005/07/28 10:45:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1348 2005/07/28 11:59:14 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -374,16 +374,19 @@ kde-base/kcontrol:logitech-mouse - Enable Control Center module for configuring 
 kde-base/kdeartwork-kscreensaver:xscreensaver - Enable detection of xscreensavers
 kde-base/kdeartwork:xscreensaver - Enable detection of xscreensavers
 kde-base/kdebase:logitech-mouse - Enable Control Center module for configuring logitech mice
+kde-base/kdebase:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
 kde-base/kdegraphics:jpeg2k - Enable support for jpeg2k (jasper)
 kde-base/kdegraphics:kadmos - Enable support for the kadmos OCR engine in kooka
 kde-base/kdegraphics:nodrm - Disable DRM support in kpdf
+kde-base/kdegraphics:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics:povray - Enable povray dependency - needed for kpovmodeler
 kde-base/kdelibs:jpeg2k - Enable support for jpeg2k (jasper)
 kde-base/kdelibs:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdelibs:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
+kde-base/kdemultimedia:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 kde-base/kdenetwork:rdesktop - Enable remote desktop functionality
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
 kde-base/kdesdk-meta:subversion - Enable support for the subversion ioslave
