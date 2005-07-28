@@ -2,8 +2,8 @@ MD5 e499ffca984d9aa3b99803b11e42835d libpq-8.0.3-r1.ebuild 3084
 MD5 769c87b4c1e3ea2a25e870842d1d7e65 libpq-8.0.1.ebuild 3078
 MD5 923fe3a7c29dc71c373f77fb26bd6f16 libpq-7.4.8.ebuild 3078
 MD5 d409e4f7643212a8765cc3e7a2987740 libpq-7.3.10-r1.ebuild 3085
-MD5 f180b46f5c3493d138a0ec028e634aa7 libpq-8.0.3.ebuild 3074
-MD5 e845aad8443e5ecba5365162624612fb ChangeLog 2893
+MD5 b0839d17b3f6e6eddad116058eddb627 libpq-8.0.3.ebuild 3073
+MD5 aaed46e4a9ef67ba5242eb0d95e87195 ChangeLog 2987
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 5f020ce0e3eebe655d184ae1bf7805fc libpq-8.0.1-r1.ebuild 3084
 MD5 5a35081c2ebdf81155554643603d8e78 libpq-7.4.8-r1.ebuild 3084
