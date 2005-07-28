@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.5.0.ebuild,v 1.3 2005/07/01 15:14:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.5.0.ebuild,v 1.4 2005/07/28 14:31:48 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 DESCRIPTION="View Your Mind -- a mindmap tool"
 HOMEPAGE="http://www.insilmaril.de/vym/"
@@ -22,7 +22,7 @@ DEPEND="
 	>=sys-libs/glibc-2.3.4.20040808-r1 \
 	>=sys-libs/zlib-1.2.1-r3 \
 	>=x11-base/xorg-x11-6.8.0-r3 \
-	>=x11-libs/qt-3.3.3 \
+	$(qt_min_version 3.3) \
 	dev-lang/perl"
 #RDEPEND=""
 #S=${WORKDIR}/${P}

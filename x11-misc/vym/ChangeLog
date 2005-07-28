@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.3 2005/07/01 15:14:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.4 2005/07/28 14:31:48 caleb Exp $
+
+  28 Jul 2005; Caleb Tennis <caleb@gentoo.org> vym-1.5.0.ebuild:
+  Fix qt dep per bug #100235
 
   01 Jul 2005; Caleb Tennis <caleb@gentoo.org> vym-1.5.0.ebuild:
   Fix qmake dir per bug #97535

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.2.3-r1.ebuild,v 1.1 2005/07/13 15:15:15 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.2.3-r1.ebuild,v 1.2 2005/07/28 14:34:36 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 DESCRIPTION="QComicBook is a viewer for comic book archives containing jpeg/png images."
 HOMEPAGE="http://linux.bydg.org/~yogin/"
@@ -15,7 +15,7 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/x11
-	>=x11-libs/qt-3.3.3"
+	$(qt_min_version 3.3)"
 
 RDEPEND="${DEPEND}
 	app-arch/unrar
