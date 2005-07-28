@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.2.7.ebuild,v 1.3 2005/05/18 17:20:59 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.2.7.ebuild,v 1.4 2005/07/28 14:49:06 seemant Exp $
 
 inherit gtk-engines2
 
@@ -10,8 +10,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="GTK+2 Xfce Theme Engine"
 HOMEPAGE="http://xfce.sourceforge.net/"
 SRC_URI="http://www.xfce.org/archive/xfce-4.2.2/src/${MY_P}.tar.gz
-	mirror://gentoo/${MY_P}.tar.gz
-	http://dev.gentoo.org/~seemant/distfiles/${MY_P}.tar.gz"
+	mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
