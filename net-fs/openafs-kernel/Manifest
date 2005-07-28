@@ -1,0 +1,6 @@
+MD5 79b0b4097fd5f63ee27e9bd403223ac3 metadata.xml 397
+MD5 21ad0d0a569c1875efbe57c3d1fd1ae0 openafs-kernel-1.3.85.ebuild 1476
+MD5 89e0c54eaac5d27b1a42440d998707eb openafs-kernel-1.2.13.ebuild 1482
+MD5 f2849548fae14fbd07536a982fc7d6b0 ChangeLog 643
+MD5 66e82087fc3fd2a25ecef92a3b4f1a41 files/digest-openafs-kernel-1.2.13 143
+MD5 9e0e5410e19daba36b5d6a1c255c27be files/digest-openafs-kernel-1.3.85 143
