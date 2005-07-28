@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 35db01b2e63d49cf91f7bc9d4b7faac5 ChangeLog 3857
+MD5 a00921fc27974df41c3b870f58ca48da ChangeLog 3964
+MD5 02387db4afccee6eacbd916ac4e68085 Compress-Zlib-1.35.ebuild 610
 MD5 3fb735e3cd9f73246beb001733e8d3d3 Compress-Zlib-1.33.ebuild 598
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 7a15c0f3b470632c520205406b5737e9 Compress-Zlib-1.35.ebuild 613
-MD5 adfedebe00c231192055ecb16652ffae files/digest-Compress-Zlib-1.33 70
 MD5 0921cce8e2c5aee3d13b8c33d8f2200a files/digest-Compress-Zlib-1.35 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC6KUvtG5z4I8BtQoRApYIAJ9JpOC8u+GuJpYVcN9nG9SnHGm9jgCfRNtS
-RMag6/EKKMl6IF+j5q90WO8=
-=pbrk
------END PGP SIGNATURE-----
+MD5 adfedebe00c231192055ecb16652ffae files/digest-Compress-Zlib-1.33 70
