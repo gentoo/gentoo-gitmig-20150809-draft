@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/kflog-2.1.1.ebuild,v 1.11 2005/07/10 14:52:45 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/kflog-2.1.1.ebuild,v 1.12 2005/07/28 21:11:06 caleb Exp $
 
 inherit kde
 
@@ -30,7 +30,7 @@ RDEPEND="dev-libs/expat
 	sys-devel/gcc
 	virtual/libc
 	sys-libs/zlib
-	x11-libs/qt"
+	=x11-libs/qt-3*"
 
 need-kde 3
 
