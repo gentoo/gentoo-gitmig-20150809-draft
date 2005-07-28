@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.141 2005/07/07 18:51:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.142 2005/07/28 12:07:43 herbs Exp $
+
+  28 Jul 2005; Herbie Hopkins <herbs@gentoo.org> perl-5.8.6-r5.ebuild:
+  Stable on amd64.
 
   07 Jul 2005; Markus Rothe <corsair@gentoo.org> perl-5.8.6-r5.ebuild:
   Stable on ppc64

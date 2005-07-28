@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e38095be581ed3f415e8477a71af2b7b perl-5.8.7.ebuild 17372
-MD5 1e73e4f00c9633194a5b3bbbd537d317 perl-5.8.6-r5.ebuild 17618
+MD5 c50aa39ed42b8e4f478edef3c7100dd2 perl-5.8.6-r5.ebuild 17615
 MD5 bfe453d4dae98e783d63a545786ce3a5 perl-5.8.5-r5.ebuild 13052
 MD5 0208c8cb4b9ebe7d8ac80f8e1c5cdb70 perl-5.8.6-r4.ebuild 17625
-MD5 90460b6a9250f9413e0d6f3e11eaa700 ChangeLog 40718
+MD5 249f134b673b154698a17af2e722edba ChangeLog 40807
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 26a1e7c48c7f68f39db4262500f6a1d8 files/perl-5.8.7-tempfiles.patch 1007
 MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-picdl.patch 250
@@ -26,3 +29,10 @@ MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r5 64
 MD5 060e9f10466fdc1268c75a7cf4dcbc7c files/perl-h2ph-ansi-header.patch 446
 MD5 44e1f1420947cc552c66fb434ba4c855 files/perl-5.8.4-NDBM-GDBM-compat.patch 428
 MD5 154013a841cbb251d7b63fb006b4006f files/file_path_rmtree.patch 1068
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6Mqr2G5bA0cA/ScRAowyAJwOzbxAj+31pU/xZ4+2PwlzhdQJ6gCff53V
+X+Yzj1B+D01zOXQ04EIDf6Y=
+=Chyb
+-----END PGP SIGNATURE-----
