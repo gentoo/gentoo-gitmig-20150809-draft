@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.24 2005/05/17 22:31:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.25 2005/07/28 09:10:44 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -18,7 +18,7 @@ IUSE="gtk avi dv quicktime sdl X yv12 3dnow mmx sse v4l dga"
 
 RDEPEND="media-libs/jpeg
 	x86? ( media-libs/libmovtar
-		mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 )
+		mmx? ( >=media-libs/jpeg-mmx-0.1.6 )
 	)
 	gtk? ( =x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2* )
