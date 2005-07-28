@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.18 2005/07/25 19:52:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.19 2005/07/28 07:06:40 gmsoft Exp $
+
+  28 Jul 2005; Guy Martin <gmsoft@gentoo.org> mbrola-3.0.1h-r3.ebuild:
+  Added ~hppa to KEYWORDS.
 
 *mbrola-3.0.1h-r3 (25 Jul 2005)
 
