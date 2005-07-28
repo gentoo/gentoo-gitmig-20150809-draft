@@ -1,6 +1,6 @@
 MD5 d104eb29f13a498c62812d06852923ef xparts-3.4.0.ebuild 1193
 MD5 ca9550c47090fc658c5e454dc7069f9c xparts-3.3.1.ebuild 1244
-MD5 7f2d1ed38d1800b3aa976a35d5b56b9e xparts-3.4.1.ebuild 1199
+MD5 92ee2419393e21bf14476ae717a81312 xparts-3.4.1.ebuild 1201
 MD5 4db956b81bc310d1025aaad7bf1d091c ChangeLog 1887
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
