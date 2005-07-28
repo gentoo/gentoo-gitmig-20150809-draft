@@ -1,15 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.7.1.ebuild,v 1.1 2005/07/18 10:30:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.7.1-r2.ebuild,v 1.1 2005/07/28 15:32:51 usata Exp $
 
-inherit eutils kde-functions
+inherit eutils kde-functions flag-o-matic
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="a simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
-SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz"
+SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz
+	http://prime.sourceforge.jp/src/prime-1.0.0.1.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
@@ -55,11 +56,11 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+	use qt && set-qtdir 3
 	if use immqt || use immqt-bc ; then
 		myconf="${myconf} --with-qt-immodule"
-		export CPPFLAGS="${CPPFLAGS} -I${S}/qt"
+		export CPPFLAGS="${CPPFLAGS} -DQT_THREAD_SUPPORT"
 	fi
-	use qt && set-qtdir 3
 
 	myconf="${myconf}
 		$(use_enable nls)
@@ -75,10 +76,21 @@ src_compile() {
 	# --with-scim is not stable enough
 	econf ${myconf} --without-scim || die "econf failed"
 	emake -j1 || die "emake failed"
+
+	if has_version '>=app-i18n/prime-1.0' ; then
+		cd ${WORKDIR}/prime-1.0.0.1
+		econf || die
+	fi
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
+
+	if has_version '>=app-i18n/prime-1.0' ; then
+		cd ${WORKDIR}/prime-1.0.0.1
+		make DESTDIR="${D}" install-uim || die "make install-uim failed"
+		cd -
+	fi
 
 	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
 	dodoc doc/{HELPER-CANDWIN,KEY,UIM-SH}
@@ -96,6 +108,7 @@ pkg_postinst() {
 	ewarn "New input method switcher has been introduced. You need to set"
 	ewarn
 	ewarn "% GTK_IM_MODULE=uim ; export GTK_IM_MODULE"
+	ewarn "% QT_IM_MODULE=uim ; export QT_IM_MODULE"
 	ewarn "% XMODIFIERS=@im=uim ; export XMODIFIERS"
 	ewarn
 	ewarn "If you would like to use uim-anthy as default input method, put"
