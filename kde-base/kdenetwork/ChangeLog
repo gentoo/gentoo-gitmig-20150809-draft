@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.161 2005/07/27 18:57:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.162 2005/07/28 13:03:19 greg_g Exp $
+
+*kdenetwork-3.4.2 (28 Jul 2005)
+
+  28 Jul 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdenetwork-3.4-configure.patch, +kdenetwork-3.4.2.ebuild:
+  New version. Add configure patch (#81966).
 
   27 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdenetwork-3.4.1-r1.ebuild:
   Stable on hppa.

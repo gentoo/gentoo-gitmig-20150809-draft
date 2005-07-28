@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.266 2005/07/25 19:29:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.267 2005/07/28 12:52:34 greg_g Exp $
+
+*kdelibs-3.4.2 (28 Jul 2005)
+
+  28 Jul 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdelibs-3.4.2-gmail-fix.patch, +kdelibs-3.4.2.ebuild:
+  New version. Add fix for Gmail (#100267).
 
   25 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdelibs-3.4.1-r1.ebuild,
   kdelibs-3.4.1-r2.ebuild:

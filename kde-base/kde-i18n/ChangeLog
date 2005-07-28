@@ -1,9 +1,14 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.72 2005/07/28 12:02:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.73 2005/07/28 13:09:19 greg_g Exp $
 
   28 Jul 2005; Guy Martin <gmsoft@gentoo.org> kde-i18n-3.4.1.ebuild:
   Stable on hppa.
+
+*kde-i18n-3.4.2 (28 Jul 2005)
+
+  28 Jul 2005; Gregorio Guidi <greg_g@gentoo.org> +kde-i18n-3.4.2.ebuild:
+  New version.
 
   08 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> kde-i18n-3.4.1.ebuild:
   To sparc stable

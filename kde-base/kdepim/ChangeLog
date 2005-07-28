@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.161 2005/07/25 19:55:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.162 2005/07/28 12:58:14 greg_g Exp $
+
+*kdepim-3.4.2 (28 Jul 2005)
+
+  28 Jul 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdepim-3.4.2-gcc32.patch, +files/kdepim-3.4-configure.patch,
+  +kdepim-3.4.2.ebuild:
+  New version. Add configure patch (#81966). Add patch to fix compilation with
+  gcc 3.2 (#99643).
 
   25 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdepim-3.4.1-r1.ebuild,
   kdepim-3.4.1-r2.ebuild:

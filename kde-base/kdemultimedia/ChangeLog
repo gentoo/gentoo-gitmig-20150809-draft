@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.165 2005/07/27 20:22:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.166 2005/07/28 12:57:23 greg_g Exp $
+
+*kdemultimedia-3.4.2 (28 Jul 2005)
+
+  28 Jul 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdemultimedia-3.4-configure.patch, +kdemultimedia-3.4.2.ebuild:
+  New version. Add configure patch (#81966). Make support for MusicBrainz
+  optional.
 
   27 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdemultimedia-3.4.1-r1.ebuild:
   Stable on hppa.
