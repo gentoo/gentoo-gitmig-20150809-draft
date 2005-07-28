@@ -3,12 +3,14 @@ Hash: SHA1
 
 MD5 8c50d379ff493eeb34eaca8a15a72d46 cmospwd-4.4.ebuild 652
 MD5 7294342c2d2b7beb07120906dd76011a metadata.xml 750
-MD5 87fcddac58b37cd72e5e75f61aa40175 ChangeLog 329
+MD5 2a4a88433a28923e25ec0125af8bf3c1 ChangeLog 447
+MD5 94be5f3eb37353c38796a3716b51e9bd cmospwd-4.6.ebuild 665
 MD5 1ca3acd7a0cc94c59a81c4ffa987369e files/digest-cmospwd-4.4 62
+MD5 df64eb704687cb1c07f4176eb6ce955d files/digest-cmospwd-4.6 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB9xeamdTrptrqvGERAgATAJ4xBRK9t9B+w22SO8jjBB+tIV3jzwCfRWgF
-1w0l0JHhE1ncU9No5SxmjpM=
-=YCWx
+iD8DBQFC6NG4mdTrptrqvGERAt8LAJ95vyLOtKggAKoCKXnL2G78MnVKlgCfZf+W
+EtF4Hew2tU9vjaUa8q397L0=
+=4JnF
 -----END PGP SIGNATURE-----
