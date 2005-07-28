@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
+MD5 16d45b033e883fb008d6f832d9527569 ganglia-3.0.1.ebuild 1152
+MD5 d06e7d53c256924ac000c1969e57a5c3 ChangeLog 1995
+MD5 d55d7372c5a81de843fe58ccf4fc0212 files/digest-ganglia-3.0.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6WPoKtJO8LeSoosRAhzWAJ450g5QfZvHSXJMmuqdAu+550fO7QCgmSh/
+Dhxcuux2uBGa9D04lT86bKY=
+=iN6r
+-----END PGP SIGNATURE-----
