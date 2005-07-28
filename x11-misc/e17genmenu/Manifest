@@ -1,4 +1,14 @@
-MD5 0c6fa8704bc3ae581a7c8d4d7571862b ChangeLog 380
-MD5 758fbc9429954db80db4c84c32a0b944 e17genmenu-0.1.7.ebuild 504
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
-MD5 55835d257449f0bde697014f4caebf4f files/digest-e17genmenu-0.1.7 68
+MD5 8b7bc185b45fb3739d06de579b7e0841 e17genmenu-2.0.1.ebuild 504
+MD5 42fea3e098175325fdd25408a675e9c5 ChangeLog 506
+MD5 2893446c3a268262362ccc3c6586fe7f files/digest-e17genmenu-2.0.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6EttgIKl8Uu19MoRAkM7AJ90sNkqi1ysEHtQt6/1s7ng/C8o7ACffFuR
+OjN+gKwTcQSeycG+MsyKPsE=
+=gVxg
+-----END PGP SIGNATURE-----

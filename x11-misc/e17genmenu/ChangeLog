@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/e17genmenu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e17genmenu/ChangeLog,v 1.1 2005/04/29 01:59:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e17genmenu/ChangeLog,v 1.2 2005/07/28 03:05:01 vapier Exp $
+
+*e17genmenu-2.0.1 (28 Jul 2005)
+
+  28 Jul 2005; Mike Frysinger <vapier@gentoo.org> +e17genmenu-2.0.1.ebuild:
+  Version bump.
 
 *e17genmenu-0.1.7 (28 Apr 2005)
 
