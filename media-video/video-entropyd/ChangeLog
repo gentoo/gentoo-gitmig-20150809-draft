@@ -1,6 +1,9 @@
 # ChangeLog for media-video/video-entropyd
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/ChangeLog,v 1.1 2004/11/21 02:30:07 robbat2 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/ChangeLog,v 1.2 2005/07/28 11:26:34 dholm Exp $
+
+  28 Jul 2005; David Holm <dholm@gentoo.org> video-entropyd-0.7.ebuild:
+  Added to ~ppc.
 
 *video-entropyd-0.7 (20 Nov 2004)
 
