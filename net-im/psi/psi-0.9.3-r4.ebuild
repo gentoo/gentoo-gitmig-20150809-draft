@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r4.ebuild,v 1.11 2005/07/28 12:04:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r4.ebuild,v 1.12 2005/07/28 14:28:38 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 VER="${PV}"
 REV=""
@@ -56,7 +56,7 @@ KEYWORDS="amd64 hppa ppc ~ppc64 sparc x86"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND=">=app-crypt/qca-1.0-r2
-	>=x11-libs/qt-3.3.1"
+	$(qt_min_version 3.3)"
 
 RDEPEND="ssl? ( >=app-crypt/qca-tls-1.0-r2 )
 		crypt? ( >=app-crypt/gnupg-1.2.2 )"
