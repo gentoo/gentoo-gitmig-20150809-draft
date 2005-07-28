@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.2.1.ebuild,v 1.2 2005/06/09 01:00:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.2.1.ebuild,v 1.3 2005/07/28 10:34:32 dholm Exp $
 
 inherit wxwidgets flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="amr debug divx4linux jpeg mad mozilla mpeg oss png sdl truetype xml2 xvid"
 S=${WORKDIR}/${PN}
 

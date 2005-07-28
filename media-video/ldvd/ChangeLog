@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ldvd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ldvd/ChangeLog,v 1.1 2005/03/29 05:11:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ldvd/ChangeLog,v 1.2 2005/07/28 10:37:52 dholm Exp $
+
+  28 Jul 2005; David Holm <dholm@gentoo.org> ldvd-1.9.4.ebuild:
+  Added to ~ppc.
 
 *ldvd-1.9.4 (29 Mar 2005)
 

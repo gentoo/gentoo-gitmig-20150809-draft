@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/freej/freej-0.7.ebuild,v 1.1 2004/11/20 02:03:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/freej/freej-0.7.ebuild,v 1.2 2005/07/28 10:33:41 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://freej.dyne.org/freej/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="avi v4l debug"
 
 DEPEND=">=media-libs/libsdl-1.2.0

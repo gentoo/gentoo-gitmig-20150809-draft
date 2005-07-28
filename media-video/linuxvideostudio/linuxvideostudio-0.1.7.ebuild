@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxvideostudio/linuxvideostudio-0.1.7.ebuild,v 1.4 2004/06/28 03:29:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxvideostudio/linuxvideostudio-0.1.7.ebuild,v 1.5 2005/07/28 10:38:49 dholm Exp $
 
 DESCRIPTION="small-'n-simple GUI for the MJPEG-tools"
 HOMEPAGE="http://ronald.bitfreak.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://ronald.bitfreak.net/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 IUSE="lirc"
 

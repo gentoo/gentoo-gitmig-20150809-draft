@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0.ebuild,v 1.5 2005/05/28 01:14:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0.ebuild,v 1.6 2005/07/28 10:30:25 dholm Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -11,12 +11,12 @@ SRC_URI="http://drip.sourceforge.net/files/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls"
 
 	#>=media-libs/divx4linux-20020418
 RDEPEND="gnome-base/gnome-libs
-	>=media-video/avifile-0.7.34
+	!ppc? ( >=media-video/avifile-0.7.34 )
 	>=media-libs/a52dec-0.7.3
 	>=media-libs/libdvdcss-1.2.2
 	>=media-libs/libdvdread-0.9.3
@@ -28,7 +28,7 @@ RDEPEND="gnome-base/gnome-libs
 	virtual/eject
 	>=sys-devel/gcc-3"
 DEPEND="${RDEPEND}
-	dev-lang/nasm
+	!ppc? ( dev-lang/nasm )
 	>=sys-devel/automake-1.5-r1"
 
 src_unpack() {

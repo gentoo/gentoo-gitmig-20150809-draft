@@ -1,6 +1,9 @@
 # ChangeLog for media-video/fame
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/fame/ChangeLog,v 1.6 2004/08/12 20:33:03 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/fame/ChangeLog,v 1.7 2005/07/28 10:31:30 dholm Exp $
+
+  28 Jul 2005; David Holm <dholm@gentoo.org> fame-0.9.0.ebuild:
+  Added to ~ppc.
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding missing metadata.xml.

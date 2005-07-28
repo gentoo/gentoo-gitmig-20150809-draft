@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/maven-poke/maven-poke-0.0.1.ebuild,v 1.3 2004/07/01 08:40:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/maven-poke/maven-poke-0.0.1.ebuild,v 1.4 2005/07/28 10:39:41 dholm Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 src_compile() {
 	cd ${S}

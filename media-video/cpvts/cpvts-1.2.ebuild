@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpvts/cpvts-1.2.ebuild,v 1.2 2004/10/06 21:19:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpvts/cpvts-1.2.ebuild,v 1.3 2005/07/28 10:25:56 dholm Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.lallafa.de/bp/cpvts.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="media-libs/libdvdread"
 

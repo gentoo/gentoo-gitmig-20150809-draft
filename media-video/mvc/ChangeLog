@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mvc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mvc/ChangeLog,v 1.1 2005/03/28 03:15:28 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mvc/ChangeLog,v 1.2 2005/07/28 10:44:32 dholm Exp $
+
+  28 Jul 2005; David Holm <dholm@gentoo.org> mvc-0.8.7.ebuild:
+  Added to ~ppc.
 
 *mvc-0.8.7 (28 Mar 2005)
 
