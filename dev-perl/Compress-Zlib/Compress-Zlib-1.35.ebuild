@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/Compress-Zlib-1.34.ebuild,v 1.1 2005/05/10 01:28:49 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/Compress-Zlib-1.35.ebuild,v 1.1 2005/07/28 09:28:31 mcummings Exp $
 
 inherit perl-module
 
