@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cac96a324bf229caf21f4eafdac6da4c qjackctl-0.2.11.ebuild 1159
-MD5 eb66e83a8793a83b7619e3c6888d16f7 qjackctl-0.2.8.ebuild 1118
-MD5 c80df4d935b8352618f7030e15ba3a3f qjackctl-0.2.13.ebuild 1163
-MD5 2e4a2695e59ff0c94938608ee756eabf qjackctl-0.2.15.ebuild 724
-MD5 205e70d987eac94daf423b8ee219b17b qjackctl-0.2.17.ebuild 690
-MD5 a9eae3906d31b0881cd7d7785e1cdd17 qjackctl-0.2.9.ebuild 1155
-MD5 e181438eebe37eb2c0fd042992d5d045 qjackctl-0.2.14.ebuild 1163
-MD5 89717e941b407b773130775d282288f0 ChangeLog 3378
+MD5 07ce8ae0b55e49504e49a60d47313188 qjackctl-0.2.11.ebuild 1157
+MD5 7781109af7a0962cdb1d368b2c32b7f2 qjackctl-0.2.8.ebuild 1116
+MD5 977c6e47ab995531fe0311e56f2d1797 qjackctl-0.2.13.ebuild 1161
+MD5 bd55e26724d667e8a4e7e03262174e9b qjackctl-0.2.15.ebuild 722
+MD5 9690416b9b0c9a6c7d2b6d5918a62e93 qjackctl-0.2.17.ebuild 674
+MD5 ed9db084578afd029b5f3fd2142e02e0 qjackctl-0.2.9.ebuild 1153
+MD5 ef737ebdaa0488a39fe1d99547b67e22 qjackctl-0.2.14.ebuild 1161
+MD5 7621156a7bf161f02e34fbaea1241c29 ChangeLog 3624
 MD5 958cdff6e2710ee30529dd9af63497de metadata.xml 257
 MD5 cef52c6870bf2937b679d196ad533f06 files/digest-qjackctl-0.2.8 66
 MD5 658e31cb9891082996e505b4eb3f608b files/digest-qjackctl-0.2.9 66
@@ -17,10 +14,3 @@ MD5 f1bdcaff4be30dcbde7c6e3f155ef655 files/digest-qjackctl-0.2.13 67
 MD5 a53f04b5b8747df625edd12914a92f05 files/digest-qjackctl-0.2.14 67
 MD5 fab3cc8702f72a83b63eca12c0985a6b files/digest-qjackctl-0.2.15 67
 MD5 636cdea4ba2b5fd942970726e3d9a6b2 files/digest-qjackctl-0.2.17 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0aBSvpz1081QvMkRAku3AJ4kcASXOW8wa3abE2AZhsMmsubQYgCfQrsv
-VlnZpxCYzgZEcQm3X+ch9IU=
-=PrSR
------END PGP SIGNATURE-----
