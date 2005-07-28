@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/yate-0.8.7.ebuild,v 1.3 2005/03/22 15:32:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/yate-0.8.7.ebuild,v 1.4 2005/07/28 20:54:31 stkn Exp $
 
 IUSE="h323 postgres zaptel fax qt gtk gsm ortp"
 
@@ -26,6 +26,14 @@ DEPEND="media-sound/sox
 	gtk? ( <x11-libs/gtk+-2.0.0 )
 	gsm? ( media-sound/gsm )
 	ortp? ( net-libs/ortp )"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	# patch for gcc3.4
+	epatch ${FILESDIR}/${P}-gcc34.patch
+}
 
 src_compile() {
 	econf \
