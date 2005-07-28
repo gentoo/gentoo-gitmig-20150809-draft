@@ -1,6 +1,9 @@
 # ChangeLog for media-video/qdvdauthor
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/ChangeLog,v 1.4 2005/07/01 15:06:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/ChangeLog,v 1.5 2005/07/28 11:03:28 dholm Exp $
+
+  28 Jul 2005; David Holm <dholm@gentoo.org> qdvdauthor-0.0.9.ebuild:
+  Added to ~ppc.
 
   01 Jul 2005; Caleb Tennis <caleb@gentoo.org> qdvdauthor-0.0.9.ebuild:
   Fix qmake dir per bug #97535

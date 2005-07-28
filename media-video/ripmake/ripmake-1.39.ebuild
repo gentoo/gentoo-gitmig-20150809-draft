@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ripmake/ripmake-1.39.ebuild,v 1.3 2004/11/30 22:17:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ripmake/ripmake-1.39.ebuild,v 1.4 2005/07/28 11:08:02 dholm Exp $
 
 IUSE="dvd"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.lallafa.de/bp/ripmake.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=""
 RDEPEND=">=dev-lang/perl-5.6.1-r1

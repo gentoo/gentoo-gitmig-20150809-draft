@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.0.9.ebuild,v 1.3 2005/07/01 15:06:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.0.9.ebuild,v 1.4 2005/07/28 11:03:28 dholm Exp $
 
 inherit kde-functions
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/qdvdauthor/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND=">=media-video/dvdauthor-0.6.10
 	>=media-gfx/imagemagick-5.5.7.11
