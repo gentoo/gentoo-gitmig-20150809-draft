@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.5 2005/05/20 13:10:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.6 2005/07/28 17:29:04 ka0ttic Exp $
+
+*fcron-2.9.7 (28 Jul 2005)
+
+  28 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> +fcron-2.9.7.ebuild:
+  Version bump.
 
   20 May 2005; Diego Pettenò <flameeyes@gentoo.org> fcron-2.9.5.1.ebuild,
   fcron-2.9.5.1-r3.ebuild, fcron-2.9.6.ebuild:
