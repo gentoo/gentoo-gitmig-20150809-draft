@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.2.ebuild,v 1.1 2005/05/16 14:23:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.2.ebuild,v 1.2 2005/07/28 14:15:47 seemant Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -9,8 +9,8 @@ PATCHVER=1
 DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 HOMEPAGE="http://www.isc.org/products/DHCP"
 SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P}.tar.gz
-	mirror://gentoo/${PN}-3-gentoo-${PATCHVER}.tar.bz2
-	http://dev.gentoo.org/~seemant/distfiles/${PN}-3-gentoo-${PATCHVER}.tar.bz2"
+	mirror://gentoo/${PN}-3-gentoo-${PATCHVER}.tar.bz2"
+
 
 LICENSE="isc-dhcp"
 SLOT="0"
