@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1346 2005/07/27 21:55:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1347 2005/07/28 10:45:08 danarmak Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -378,6 +378,7 @@ kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
 kde-base/kdegraphics:jpeg2k - Enable support for jpeg2k (jasper)
+kde-base/kdegraphics:kadmos - Enable support for the kadmos OCR engine in kooka
 kde-base/kdegraphics:nodrm - Disable DRM support in kpdf
 kde-base/kdegraphics:povray - Enable povray dependency - needed for kpovmodeler
 kde-base/kdelibs:jpeg2k - Enable support for jpeg2k (jasper)
@@ -388,6 +389,7 @@ kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with 
 kde-base/kdesdk-meta:subversion - Enable support for the subversion ioslave
 kde-base/kdesdk:subversion - Enable support for the subversion ioslave
 kde-base/kig:kig-scripting - Enable support for python scripting
+kde-base/kooka:kadmos - Enable support for the kadmos OCR engine
 kde-base/kpdf:nodrm - Disable DRM support in kpdf
 kde-base/krdc:rdesktop - Enable remote desktop functionality
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
