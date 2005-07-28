@@ -1,14 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.19 2005/05/17 11:30:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.20 2005/07/28 14:06:36 seemant Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="NetBSD's lightweight bourne shell"
 HOMEPAGE="http://cvsweb.netbsd.org/bsdweb.cgi/src/bin/sh/"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/tar_files/src/bin.tar.gz
-	mirror://gentoo/dash-ash-hetio-yacc.diff.bz2
-	http://cvs.gentoo.org/~seemant/dash-ash-hetio-yacc.diff.bz2"
+	mirror://gentoo/dash-ash-hetio-yacc.diff.bz2"
 
 LICENSE="BSD"
 SLOT="0"
