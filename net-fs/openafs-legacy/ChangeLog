@@ -1,12 +1,12 @@
 # ChangeLog for net-fs/openafs-legacy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/ChangeLog,v 1.1 2005/07/27 20:15:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/ChangeLog,v 1.2 2005/07/28 12:34:05 seemant Exp $
 
 *openafs-legacy-0.1 (27 Jul 2005)
 
   27 Jul 2005; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
   +openafs-legacy-0.1.ebuild:
-  New package, created by: Stefaan Deroeck <stefaan.deroeck@gmail.com>
+  New package, created by: Stefaan De Roeck <stefaan.deroeck@gmail.com>
   As a guide for these links, acinclude.m4 from the openafs package was
   used.  A README file exists as well, but at the time of writing, the
   afsbosserver-variable was inaccurately described.  The idea here is that the
