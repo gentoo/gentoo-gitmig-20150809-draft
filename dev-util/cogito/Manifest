@@ -1,4 +1,5 @@
-MD5 35bf9590b4f817781100c2369c32d441 ChangeLog 1680
-MD5 8e25ebaef0ae17cd85985bf4db627ca6 cogito-0.12.1.ebuild 1034
+MD5 f2ea498288fbd322640bdd6be8d64f2d ChangeLog 1828
+MD5 fab79856a5a34e10c8af43c3cfa96d71 cogito-0.12.1.ebuild 1127
 MD5 78c1b34edd1399c24d7d9e59212bc17a metadata.xml 221
+MD5 61cc18c197e159e18df086dcd8b65380 files/cogito-0.12.1-doc.patch 326
 MD5 00437278281ff60bd2fde483168d1e8d files/digest-cogito-0.12.1 66

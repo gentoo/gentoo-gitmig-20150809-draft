@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cogito
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.10 2005/07/15 17:55:50 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.11 2005/07/28 23:41:56 r3pek Exp $
+
+  28 Jul 2005; Carlos Silva <r3pek@gentoo.org>
+  +files/cogito-0.12.1-doc.patch, cogito-0.12.1.ebuild:
+  closing bug #100550 thx to Chris White :D
 
   15 Jul 2005; Carlos Silva <r3pek@gentoo.org> -files/Makefile.patch,
   -files/git-rev-list.patch, -cogito-0.10.ebuild, -cogito-0.11.1.ebuild,
