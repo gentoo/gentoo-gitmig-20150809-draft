@@ -1,0 +1,61 @@
+--- capiconn.c.orig	2004-06-13 14:57:42.000000000 +0200
++++ capiconn.c	2005-06-02 16:56:58.385211987 +0200
+@@ -912,7 +912,8 @@
+ 			    	0,	/* BChannelinformation */
+ 			    	0,	/* Keypadfacility */
+ 			    	0,	/* Useruserdata */
+-			    	0	/* Facilitydataarray */
++			    	0,	/* Facilitydataarray */
++				0	/* SendingComplete */
+ 				);
+ 		plcip->msgid = gcmsg.Messagenumber;
+ 		send_message(card, &gcmsg);
+@@ -964,6 +965,7 @@
+ 			       0,
+ 			       0,
+ 			       0,
++			       0,	/* Globalconfiguration */
+ 			       0,	/* ConnectedNumber */
+ 			       0,	/* ConnectedSubaddress */
+ 			       0,	/* LLC */
+@@ -1506,13 +1508,15 @@
+ 			      plcip->conninfo.b1config,
+ 			      plcip->conninfo.b2config,
+ 			      plcip->conninfo.b3config,
++			      0,	/* Globalconfiguration */
+ 			      0,	/* BC */
+ 			      0,	/* LLC */
+ 			      0,	/* HLC */
+ 			      plcip->conninfo.bchaninfo, /* BChannelinformation */
+ 			      0,	/* Keypadfacility */
+ 			      0,	/* Useruserdata */
+-			      0		/* Facilitydataarray */
++			      0,	/* Facilitydataarray */
++			      0		/* SendingComplete */
+ 			    );
+ 
+ 	plcip->msgid = cmdcmsg.Messagenumber;
+@@ -1564,6 +1568,7 @@
+ 			       plcip->conninfo.b1config,
+ 			       plcip->conninfo.b2config,
+ 			       plcip->conninfo.b3config,
++			       0,	/* Globalconfiguration */
+ 			       0,	/* ConnectedNumber */
+ 			       0,	/* ConnectedSubaddress */
+ 			       0,	/* LLC */
+@@ -1597,6 +1602,7 @@
+ 			       0,
+ 			       0,
+ 			       0,
++			       0,	/* Globalconfiguration */
+ 			       0,	/* ConnectedNumber */
+ 			       0,	/* ConnectedSubaddress */
+ 			       0,	/* LLC */
+@@ -1630,6 +1636,7 @@
+ 			       0,
+ 			       0,
+ 			       0,
++			       0,	/* Globalconfiguration */
+ 			       0,	/* ConnectedNumber */
+ 			       0,	/* ConnectedSubaddress */
+ 			       0,	/* LLC */

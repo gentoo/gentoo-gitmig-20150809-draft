@@ -1,0 +1,11 @@
+# ChangeLog for app-mobilephone/yaps
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.1 2005/07/28 20:29:04 sbriesen Exp $
+
+*yaps-0.96 (28 Jul 2005)
+
+  28 Jul 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/yaps-0.96-capiv3.patch, +files/yaps-0.96.patch, +metadata.xml,
+  +yaps-0.96.ebuild:
+  initial commit. Implementing CAPI, Lua and SLang support.
+
