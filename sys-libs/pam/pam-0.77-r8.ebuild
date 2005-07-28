@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r8.ebuild,v 1.6 2005/06/30 10:29:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r8.ebuild,v 1.7 2005/07/28 14:46:40 seemant Exp $
 
 PATCH_LEVEL="1.9"
 BDB_VER="4.1.25"
@@ -44,7 +44,6 @@ S="${WORKDIR}/Linux-PAM-${PV}"
 S2="${WORKDIR}/pam-${PV}-patches"
 SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz
 	mirror://gentoo/pam-${PV}-patches-${PATCH_LEVEL}.tar.bz2
-	http://dev.gentoo.org/~seemant/distfiles/pam-${PV}-patches-${PATCH_LEVEL}.tar.bz2
 	berkdb? ( http://www.sleepycat.com/update/snapshot/db-${BDB_VER}.tar.gz )"
 
 LICENSE="PAM"
