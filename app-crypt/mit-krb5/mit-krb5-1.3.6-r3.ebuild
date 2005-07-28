@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.6-r3.ebuild,v 1.1 2005/07/13 13:08:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.6-r3.ebuild,v 1.2 2005/07/28 14:06:07 seemant Exp $
 
 inherit eutils
 
@@ -10,7 +10,6 @@ PATCHVER=0.1
 DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
 SRC_URI="http://web.mit.edu/kerberos/dist/krb5/1.3/${MY_P}-signed.tar
-	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCHVER}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2
 	http://web.mit.edu/kerberos/advisories/2005-002-patch_1.4.1.txt
 	http://web.mit.edu/kerberos/advisories/2005-003-patch_1.4.1.txt"
