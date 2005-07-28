@@ -1,13 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.21 2005/07/28 14:52:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.22 2005/07/28 17:53:38 seemant Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
+PATCHVER=0.1
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
-	mirror://gentoo/${P}-splash.patch.bz2"
+	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCHVER}.tar.bz2
+	http://dev.gentoo.org/~seemant/distfiles/splash.xpm.gz
+	mirror://gentoo/splash.xpm.gz
+	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,6 +24,8 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.5"
 PROVIDE="virtual/bootloader"
 
+PATCHDIR="${WORKDIR}/gentoo"
+
 pkg_setup() {
 	if use amd64; then
 		has_m32 || die "your compiler seems to be unable to compile 32bit code. if you are on amd64, make sure you compile gcc with USE=multilib FEATURES=-sandbox"
@@ -30,16 +36,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${A}; cd ${S}
 
-	epatch ${WORKDIR}/${P}-splash.patch
-	epatch ${FILESDIR}/${P}-gcc3.4.patch
+	EPATCH_SUFFIX="patch"
 
-	# This patchset is from SuSE -- hopefully fixes the acl symlink issue
-	# And should add some boot prettification
-#	epatch ${WORKDIR}/${PF}-gentoo.diff
-#	epatch ${FILESDIR}/${P}-test.patch
+	epatch ${PATCHDIR}
 }
 
 src_compile() {
@@ -98,11 +99,14 @@ src_install() {
 	doexe nbgrub pxegrub stage2/stage2 stage2/stage2.netboot
 
 	insinto /boot/grub
-	doins ${FILESDIR}/splash.xpm.gz
+	doins ${DISTDIR}/splash.xpm.gz
 	newins docs/menu.lst grub.conf.sample
 
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
 	newdoc docs/menu.lst grub.conf.sample
+
+	docinto gentoo
+	dodoc ${PATCHDIR}/README*
 }
 
 pkg_postinst() {

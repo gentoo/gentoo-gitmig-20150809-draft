@@ -1,15 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.92-r1.ebuild,v 1.12 2005/07/28 14:52:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.92-r1.ebuild,v 1.13 2005/07/28 17:53:38 seemant Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
-PATCHVER=0.1
+PATCHVER=0.2
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2
-	http://dev.gentoo.org/~seemant/extras/${P}-gentoo-${PATCHVER}.tar.bz2"
+	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCHVER}.tar.bz2
+	http://dev.gentoo.org/~seemant/distfiles/splash.xpm.gz
+	mirror://gentoo/splash.xpm.gz
+	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,14 +21,18 @@ IUSE=""
 DEPEND=">=sys-libs/ncurses-5.2-r5"
 PROVIDE="virtual/bootloader"
 
+PATCHDIR=${WORKDIR}/gentoo
+
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patch
+	unpack ${A} ; cd ${S}
+
+	EPATCH_SUFFIX="patch"
+
+	epatch ${PATCHDIR}
 
 	if [ "`gcc-version`" = "3.3" ]
 	then
-		epatch ${FILESDIR}/grub-0.93-gcc3.3.diff
+		epatch ${PATCHDIR}/gcc-3.3
 	fi
 }
 
@@ -54,14 +60,15 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr \
+	make \
+		prefix=${D}/usr \
 		sbindir=${D}/sbin \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die "Installation failed."
 
-	dodir /boot/grub
-	cp ${FILESDIR}/splash.xpm.gz ${D}/boot/grub
+	insinto /boot/grub
+	doins ${DISTDIR}/splash.xpm.gz
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
 }
 

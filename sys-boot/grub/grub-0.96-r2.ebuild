@@ -1,14 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.5 2005/07/24 13:43:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.6 2005/07/28 17:53:38 seemant Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
+PATCHVER=0.1
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
 	ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
-	mirror://gentoo/${PN}-0.95.20040823-splash.patch.bz2"
+	http://dev.gentoo.org/~seemant/distfiles/${PF}-gentoo-${PATCHVER}.tar.bz2
+	http://dev.gentoo.org/~seemant/distfiles/splash.xpm.gz
+	mirror://gentoo/splash.xpm.gz
+	mirror://gentoo/${PF}-gentoo-${PATCHVER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,6 +24,8 @@ DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.5"
 PROVIDE="virtual/bootloader"
+
+PATCHDIR="${WORKDIR}/gentoo"
 
 pkg_setup() {
 	if use amd64; then
@@ -37,38 +43,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	unpack ${A} ; cd "${S}"
 
-	epatch "${WORKDIR}"/${PN}-0.95.20040823-splash.patch
-
-	# PIC patch by psm & kevin f. quinn #80693
-	epatch "${FILESDIR}"/${P}-PIC.patch
-
-	# disable testing of FFS and UFS2 images that always fail (bug #71811)
-	epatch "${FILESDIR}"/${P}-bounced-checks.patch
-
-	# i2o RAID support #76143
-	epatch "${FILESDIR}"/${P}-i2o-raid.patch
-
-	# -fwritable-strings is deprecated; testing to see if we need it any more
-	epatch "${FILESDIR}"/${PN}-0.95.20040823-warnings.patch
-
-	# should fix NX segfaulting on amd64 and x86_64 by Peter Jones
-	# http://lists.gnu.org/archive/html/bug-grub/2005-03/msg00011.html
-	epatch "${FILESDIR}"/${P}-nxstack.patch
-
-	# Remove writable-string code from xfs support code (#90845)
-	epatch "${FILESDIR}"/${P}-xfs-writable-string.patch
-
-	# gcc4 patches; bug #85016
-	epatch "${FILESDIR}"/${P}-r1-gcc4.patch
-
-	# fix PIC issues in netboot code #85566
-	epatch "${FILESDIR}"/${P}-netboot-pic.patch
-
-	# fix building with gcc2
-	epatch "${FILESDIR}"/${P}-gcc2.patch
+	EPATCH_SUFFIX="patch"
+	epatch ${PATCHDIR}
 
 	# a bunch of patches apply to raw autotool files
 	autoconf || die "autoconf failed"
@@ -139,11 +117,14 @@ src_install() {
 	use netboot && doexe nbgrub pxegrub stage2/stage2.netboot
 
 	insinto /boot/grub
-	doins "${FILESDIR}"/splash.xpm.gz
+	doins ${DISTDIR}/splash.xpm.gz
 	newins docs/menu.lst grub.conf.sample
 
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
 	newdoc docs/menu.lst grub.conf.sample
+
+	docinto gentoo
+	dodoc ${PATCHDIR}/README*
 }
 
 pkg_postinst() {

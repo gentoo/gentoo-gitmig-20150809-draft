@@ -1,6 +1,20 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.47 2005/07/28 14:52:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.48 2005/07/28 17:53:38 seemant Exp $
+
+  28 Jul 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/grub-0.93-gcc3.3.diff, -files/grub-0.94-gcc3.4.patch,
+  -files/grub-0.94-grub.conf.patch,
+  -files/grub-0.95.20040823-warnings.patch, -files/grub-0.96-PIC.patch,
+  -files/grub-0.96-bounced-checks.patch, -files/grub-0.96-gcc2.patch,
+  -files/grub-0.96-gcc4.patch, -files/grub-0.96-i2o-raid.patch,
+  -files/grub-0.96-netboot-pic.patch, -files/grub-0.96-nxstack.patch,
+  -files/grub-0.96-r1-gcc4.patch,
+  -files/grub-0.96-xfs-writable-string.patch, -files/splash.xpm.gz,
+  grub-0.92-r1.ebuild, grub-0.94-r1.ebuild, grub-0.96-r1.ebuild,
+  grub-0.96-r2.ebuild:
+  patches, configs, splash screens are all now on mirrors and being tracked in
+  gentoo/src/patchsets/grub
 
   28 Jul 2005; Seemant Kulleen <seemant@gentoo.org> +grub-0.92-r1.ebuild,
   +grub-0.94-r1.ebuild:
