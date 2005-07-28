@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.2.ebuild,v 1.12 2005/07/25 11:57:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.2.ebuild,v 1.13 2005/07/28 20:56:30 caleb Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ KEYWORDS="-amd64 ~ppc sparc x86"
 DEPEND="virtual/mpg123
 	media-libs/id3lib
 	media-sound/madplay
-	qt?		( x11-libs/qt )"
+	qt?		( =x11-libs/qt-3* )"
 
 src_compile() {
 	epatch ${FILESDIR}/${P}-gentoo.diff
