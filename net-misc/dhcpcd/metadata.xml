@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>base-system</herd>
+	<maintainer>
+		<email>uberlord@gentoo.org</email>
+		<name>Roy Marples</name>
+	</maintainer>
+	<longdescription>A DHCP client</longdescription>
 </pkgmetadata>

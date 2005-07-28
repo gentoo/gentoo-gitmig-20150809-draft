@@ -2,7 +2,7 @@ MD5 6fbbdb8a3dfb1d323229fdd21cbbcb23 dhcpcd-1.3.22_p4-r5.ebuild 1944
 MD5 1ba76e2e7b3b97d733e33cecbc6cc734 dhcpcd-2.0.0.ebuild 990
 MD5 fdd16eb07a7e7971f0340ac3c9a81269 dhcpcd-1.3.22_p4-r12.ebuild 2908
 MD5 16dbea4aa04ab3e8ddf0018e6ee74f9e ChangeLog 9146
-MD5 6fe58567b648100d4ff11902921b6889 metadata.xml 165
+MD5 8f5546891831502f0667f11299937b8f metadata.xml 308
 MD5 b1103dd25a7cfdc577b6722ddcd0e7da dhcpcd-1.3.22_p4-r11.ebuild 2031
 MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r11 224
 MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r5 224
