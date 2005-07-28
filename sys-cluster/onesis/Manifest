@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b8b20d477d6cfb148fa4ebf04b91d2b4 onesis-2.0_rc10.ebuild 829
+MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
+MD5 ccc3c14aab1fe6f80754208be36d4164 ChangeLog 395
+MD5 7b8e2350a114bf1f75e753fef8f712cb files/digest-onesis-2.0_rc10 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6VpTKtJO8LeSoosRAiZRAKCN5B9JsnOtLV7hjB68RULWmqDVhwCgpE+Q
+NoixgsOVSo+wt8txFc0KuJU=
+=94TB
+-----END PGP SIGNATURE-----
