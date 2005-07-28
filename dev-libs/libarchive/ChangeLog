@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libarchive
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.3 2005/07/22 22:40:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.4 2005/07/28 15:28:43 flameeyes Exp $
+
+  28 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libarchive-1.02.027.ebuild:
+  Stable on amd64.
 
   22 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/libarchive-1.02.027-osx.patch, libarchive-1.02.027.ebuild:
