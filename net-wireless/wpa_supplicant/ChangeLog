@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.31 2005/07/20 12:31:31 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.32 2005/07/28 21:01:35 caleb Exp $
+
+  28 Jul 2005; Caleb Tennis <caleb@gentoo.org>
+  wpa_supplicant-0.4.3-r1.ebuild:
+  Fix qt dep per bug #100235
 
   20 Jul 2005; <brix@gentoo.org> -files/wpa_supplicant-0.3.8-conf.d,
   -files/wpa_supplicant-0.3.8-init.d, -wpa_supplicant-0.3.8.ebuild,

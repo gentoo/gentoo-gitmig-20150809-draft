@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.3-r1.ebuild,v 1.1 2005/07/13 18:18:51 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.3-r1.ebuild,v 1.2 2005/07/28 21:01:35 caleb Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug gsm qt readline ssl"
 
 DEPEND="gsm? ( sys-apps/pcsc-lite )
-		qt? ( x11-libs/qt )
+		qt? ( =x11-libs/qt-3* )
 		readline? ( sys-libs/ncurses
 					sys-libs/readline )
 		ssl? ( dev-libs/openssl )
