@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4219 2005/07/28 11:37:25 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4220 2005/07/28 11:58:35 greg_g Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,6 +23,26 @@
 
 # Dan Armak <danarmak@gentoo.org> (28 Jul 2005)
 # WIP, coordinating between team members - will unmask soon
+=kde-base/arts-3.4.2*
+=kde-base/kde-i18n-3.4.2*
+=kde-base/kdeaddons-3.4.2*
+=kde-base/kdeartwork-3.4.2*
+=kde-base/kdeedu-3.4.2*
+=kde-base/kdegraphics-3.4.2*
+=kde-base/kdemultimedia-3.4.2*
+=kde-base/kdepim-3.4.2*
+=kde-base/kdetoys-3.4.2*
+=kde-base/kdewebdev-3.4.2*
+=kde-base/kde-3.4.2*
+=kde-base/kdeaccessibility-3.4.2*
+=kde-base/kdeadmin-3.4.2*
+=kde-base/kdebase-3.4.2*
+=kde-base/kdegames-3.4.2*
+=kde-base/kdelibs-3.4.2*
+=kde-base/kdenetwork-3.4.2*
+=kde-base/kdesdk-3.4.2*
+=kde-base/kdeutils-3.4.2*
+
 =kde-base/akode-3.4.2*
 =kde-base/akregator-3.4.2*
 =kde-base/amor-3.4.2*
@@ -1415,3 +1435,4 @@ app-text/sgml2x
 
 # broken
 >=media-video/mpeg2-movie-1.5
+
