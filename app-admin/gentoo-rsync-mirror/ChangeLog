@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.25 2005/06/02 18:33:51 omkhar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.26 2005/07/28 22:31:42 tantive Exp $
+
+*gentoo-rsync-mirror-1.0-r5 (28 Jul 2005)
+
+  28 Jul 2005; Michael Imhof <tantive@gentoo.org>
+  files/rsync-gentoo-portage.sh, metadata.xml,
+  +gentoo-rsync-mirror-1.0-r5.ebuild:
+  Patched gentoo-rsync-mirror script. Changed metadata. Closes #88054.
 
   02 Jun 2005; Omkhar Arasaratnam <omkhar@gentoo.org>
   gentoo-rsync-mirror-1.0-r4.ebuild:
