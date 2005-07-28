@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/imlib2
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.39 2005/06/04 15:06:58 centic Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.40 2005/07/28 03:15:36 vapier Exp $
+
+  28 Jul 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/imlib-1.2.0-bounds-check.patch, imlib2-1.2.0-r2.ebuild,
+  imlib2-1.2.0.007.ebuild:
+  Fix an out of bounds crash when using Digikam #96065  by Quintin Pan.
 
   04 Jun 2005; Dominik Stadler <centic@gentoo.org> imlib2-1.1.2.ebuild,
   imlib2-1.2.0-r2.ebuild, imlib2-1.2.0.007.ebuild, imlib2-9999.ebuild:

@@ -1,0 +1,27 @@
+http://bugs.gentoo.org/show_bug.cgi?id=96065
+http://bugs.kde.org/show_bug.cgi?id=100894
+http://xcomputerman.com/bugs/view.php?id=275
+
+Index: src/lib/rend.c
+===================================================================
+RCS file: /cvsroot/enlightenment/e17/libs/imlib2/src/lib/rend.c,v
+retrieving revision 1.1
+retrieving revision 1.2
+diff -u -p -r1.1 -r1.2
+--- src/lib/rend.c	1 Nov 2004 09:45:31 -0000	1.1
++++ src/lib/rend.c	28 Jul 2005 03:10:16 -0000	1.2
+@@ -431,11 +431,11 @@ __imlib_RenderImage(Display * d, ImlibIm
+                           free(back);
+                        return;
+                     }
+-                  memcpy(buf, im->data + ((y + sy) * im->w) + sx,
++                  memcpy(buf, im->data + ((y + sy) * im->w),
+                          im->w * hh * sizeof(DATA32));
+                   __imlib_DataCmodApply(buf, dw, hh, im->w - dw, NULL, cmod);
+-                  pointer = buf;
+-                  jump = 0;
++                  pointer = buf + sx;
++                  jump = im->w - sw;
+                }
+              else
+                {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.0-r2.ebuild,v 1.3 2005/06/04 15:06:58 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.0-r2.ebuild,v 1.4 2005/07/28 03:15:36 vapier Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment
@@ -20,8 +20,9 @@ DEPEND="=media-libs/freetype-2*
 
 src_unpack() {
 	enlightenment_src_unpack
-	cd ${S}
-	epatch ${FILESDIR}/${P}-loaders.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-loaders.patch
+	epatch "${FILESDIR}"/imlib-1.2.0-bounds-check.patch
 }
 
 src_compile() {
