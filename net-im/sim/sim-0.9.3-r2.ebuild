@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.3-r2.ebuild,v 1.10 2005/01/29 18:53:24 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.3-r2.ebuild,v 1.11 2005/07/28 20:58:47 caleb Exp $
 
 inherit kde-functions
 
@@ -15,7 +15,7 @@ IUSE="ssl kde debug"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	kde? ( || ( kde-base/kdebase-meta kde-base/kdebase ) )
-	!kde? ( x11-libs/qt )
+	!kde? ( =x11-libs/qt-3* )
 	app-text/sablotron
 	sys-devel/flex
 	>=sys-devel/automake-1.7
