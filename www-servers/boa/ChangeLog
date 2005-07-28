@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/boa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.5 2005/07/28 14:07:17 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/ChangeLog,v 1.6 2005/07/28 15:36:15 tigger Exp $
+
+*boa-0.94.14_rc21 (28 Jul 2005)
+
+  28 Jul 2005; Rob Holland <tigger@gentoo.org> +boa-0.94.14_rc21.ebuild:
+  Version bump. Correct alpha vs rc naming
 
 *boa-0.94.14_alpha20-r1 (28 Jul 2005)
 
