@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.13.ebuild,v 1.1 2005/07/28 12:13:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.13.ebuild,v 1.2 2005/07/28 18:17:43 seemant Exp $
 
 inherit check-kernel fixheadtails flag-o-matic eutils toolchain-funcs versionator
 
@@ -45,7 +45,8 @@ src_compile() {
 		--enable-full-vos-listvol-switch \
 		|| die econf
 
-	emake CC="$(tc-getCC) -fPIC" MT_CC="$(tc-getCC)" all_nolibafs || die "Build failed"
+	MAKEOPTS="-j1" \
+		emake CC="$(tc-getCC) -fPIC" MT_CC="$(tc-getCC)" all_nolibafs || die "Build failed"
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.3.85.ebuild,v 1.1 2005/07/28 12:13:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.3.85.ebuild,v 1.2 2005/07/28 18:17:43 seemant Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator
 
@@ -49,7 +49,7 @@ src_compile() {
 		$(use_enable debug) \
 		${myconf} || die econf
 
-	emake all_nolibafs || die "Build failed"
+	MAKEOPTS="-j1" emake all_nolibafs || die "Build failed"
 }
 
 src_install() {
