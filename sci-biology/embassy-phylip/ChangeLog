@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-phylip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-phylip/ChangeLog,v 1.8 2005/06/26 21:08:09 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-phylip/ChangeLog,v 1.9 2005/07/28 02:21:23 ribosome Exp $
+
+  28 Jul 2005; Olivier Fisette <ribosome@gentoo.org>
+  -embassy-phylip-3.57c.ebuild:
+  Removed old version.
 
   26 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org>
   embassy-phylip-3.57c-r1.ebuild:
