@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.12.ebuild,v 1.6 2005/07/27 23:42:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.12.ebuild,v 1.7 2005/07/28 17:13:04 ka0ttic Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -37,6 +37,12 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
 	sys-apps/sed"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-fix-encrypted-conflict.diff
+}
 
 src_compile() {
 

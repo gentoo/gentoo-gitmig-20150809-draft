@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.132 2005/07/27 23:42:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.133 2005/07/28 17:13:04 ka0ttic Exp $
+
+  28 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/ethereal-0.10.12-fix-encrypted-conflict.diff,
+  ethereal-0.10.12.ebuild:
+  Add patch from upstream to fix encrypt conflicts, bug 100488.
 
   27 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   ethereal-0.10.12.ebuild:
