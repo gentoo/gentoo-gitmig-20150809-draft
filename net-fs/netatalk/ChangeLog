@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.27 2005/07/09 22:40:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.28 2005/07/28 16:49:14 flameeyes Exp $
+
+  28 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> netatalk-2.0.3.ebuild:
+  Disable openafs support for now.
 
   09 Jul 2005; Jason Wever <weeve@gentoo.org> netatalk-2.0.3.ebuild:
   Added ~sparc keyword wrt bug #97586.

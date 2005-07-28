@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3.ebuild,v 1.4 2005/07/09 22:40:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3.ebuild,v 1.5 2005/07/28 16:49:14 flameeyes Exp $
 
 inherit eutils pam flag-o-matic
-IUSE="ssl pam tcpd slp cups kerberos krb4 afs debug cracklib"
+IUSE="ssl pam tcpd slp cups kerberos krb4 debug cracklib"
 
 DESCRIPTION="Kernel level implementation of the AppleTalk Protocol Suite"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -20,7 +20,6 @@ DEPEND=">=sys-libs/db-4.2.52
 	tcpd? ( sys-apps/tcp-wrappers )
 	slp? ( net-libs/openslp )
 	cups? ( net-print/cups )
-	afs? ( net-fs/openafs )
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )"
 
@@ -43,17 +42,10 @@ src_unpack() {
 }
 
 src_compile() {
-	# openafs installs in /usr/afsws "prefix" so we must add that manually
-	if use afs; then
-		append-flags -I/usr/afsws/include
-		append-ldflags -L/usr/afsws/lib
-	fi
-
 	# Ignore --enable-gentoo, we install the init.d by hand and we avoid having to
 	# sed the Makefiles to not do rc-update.
 	econf \
 		$(use_with pam) \
-		$(use_enable afs) \
 		$(use_enable cups) \
 		$(use_enable ssl) \
 		$(use_enable debug) \
@@ -63,6 +55,7 @@ src_compile() {
 		$(use_enable slp srvloc) \
 		$(use_with cracklib) \
 		$(use_with elibc_glibc shadow) \
+		--disable-afs \
 		--enable-fhs \
 		--with-bdb=/usr \
 		${myconf} || die "netatalk configure failed"
