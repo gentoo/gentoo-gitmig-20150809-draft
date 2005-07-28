@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/phex
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/ChangeLog,v 1.5 2004/10/13 22:59:30 squinky86 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/ChangeLog,v 1.6 2005/07/28 20:21:18 sekretarz Exp $
+
+*phex-2.6.0.87 (28 Jul 2005)
+
+  28 Jul 2005; <sekretarz@gentoo.org> +phex-2.6.0.87.ebuild:
+  Version bump, bug #96135. Moved phex wrapper to /usr/bin
 
 *phex-2.1.4.80 (13 Oct 2004)
 
