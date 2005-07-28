@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f172ce94125c23dd9ab8aeb34c7d13cd ChangeLog 640
+MD5 7ec71d8d2c0f11252621bb17472dd81f rabbitticker-1.0_beta4.ebuild 606
+MD5 1aad918c6c05067faaf605fed7bbc7c9 ChangeLog 748
 MD5 42188de3dae20546d82c655723d5998e metadata.xml 230
-MD5 d629fde18c8b51753a2080030d419975 rabbitticker-1.0_beta4.ebuild 604
 MD5 8c28161bdef762ba9842129ccacf4ddf files/digest-rabbitticker-1.0_beta4 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCgh0bxvWNPsk/ZP4RArACAJ9hv6Cm/xmv254ecKonJshBMzET0ACffLxx
-BZilrpqmaaoaZszoWepvH3o=
-=+Qq/
------END PGP SIGNATURE-----
