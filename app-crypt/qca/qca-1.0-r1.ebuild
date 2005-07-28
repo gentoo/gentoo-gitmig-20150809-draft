@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r1.ebuild,v 1.6 2005/01/21 22:23:33 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r1.ebuild,v 1.7 2005/07/28 14:13:06 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 DESCRIPTION="Qt Cryptographic Architecture (QCA)"
 HOMEPAGE="http://delta.affinix.com/qca/"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86 sparc ppc ~ia64 ~hppa ~alpha"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-3.3.0-r1
+DEPEND="$(qt_min_version 3.3.0)
 	>=dev-libs/openssl-0.9.6i"
 
 src_unpack() {

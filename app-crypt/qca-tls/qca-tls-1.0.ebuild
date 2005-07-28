@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0.ebuild,v 1.20 2005/07/09 13:54:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0.ebuild,v 1.21 2005/07/28 14:14:05 caleb Exp $
 
-inherit eutils
+inherit eutils qt3
 
 DESCRIPTION="plugin to provide SSL/TLS capability to programs that utilize the Qt Cryptographic Architecture (QCA)"
 HOMEPAGE="http://psi.affinix.com/"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-3.3.0-r1
+DEPEND="$(qt_min_version 3.3)
 	>=dev-libs/openssl-0.9.6i"
 
 src_unpack() {
