@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.8 2004/07/01 08:43:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.9 2005/07/28 12:03:28 dholm Exp $
 
 #
 # You can set the default device that vidcat and w3camd use by setting
@@ -16,7 +16,7 @@ SRC_URI="http://mpx.freeshell.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE="truetype"
 
 DEPEND="virtual/libc
