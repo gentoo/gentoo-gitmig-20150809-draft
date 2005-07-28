@@ -1,10 +1,13 @@
 # ChangeLog for net-misc/yate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/ChangeLog,v 1.5 2005/07/28 20:54:31 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/ChangeLog,v 1.6 2005/07/28 21:00:05 caleb Exp $
 
   28 Jul 2005; <stkn@gentoo.org> +files/yate-0.8.7-gcc34.patch,
   yate-0.8.7.ebuild:
   Patch from yate cvs fixes compiling with >=gcc-3.4.
+
+  28 Jul 2005; Caleb Tennis <caleb@gentoo.org> yate-0.8.7.ebuild:
+  fix qt dep per bug #100235
 
   22 Mar 2005; Stefan Knoblich <stkn@gentoo.org> +files/yate.confd,
   +files/yate.rc6:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/yate-0.8.7.ebuild,v 1.4 2005/07/28 20:54:31 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/yate-0.8.7.ebuild,v 1.5 2005/07/28 21:00:05 caleb Exp $
 
 IUSE="h323 postgres zaptel fax qt gtk gsm ortp"
 
@@ -22,7 +22,7 @@ DEPEND="media-sound/sox
 	       >=net-misc/zaptel-1.0.0 )
 	h323? ( >=net-libs/openh323-1.13.0 )
 	fax? ( media-libs/spandsp )
-	qt? ( x11-libs/qt )
+	qt? ( =x11-libs/qt-3* )
 	gtk? ( <x11-libs/gtk+-2.0.0 )
 	gsm? ( media-sound/gsm )
 	ortp? ( net-libs/ortp )"
