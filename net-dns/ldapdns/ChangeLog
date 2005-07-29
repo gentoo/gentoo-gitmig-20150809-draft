@@ -1,6 +1,15 @@
 # ChangeLog for net-dns/ldapdns
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ChangeLog,v 1.12 2005/04/13 17:45:53 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ChangeLog,v 1.13 2005/07/29 21:03:11 vanquirius Exp $
+
+*ldapdns-2.06 (29 Jul 2005)
+
+  29 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/ldapdns-2.06-gentoo.patch, -ldapdns-2.03.ebuild,
+  ldapdns-2.05.ebuild, +ldapdns-2.06.ebuild:
+  Remove old version, version bump and patch with fixes. See bug 87104. Thanks
+  to Andrew Knott <aknott@cvent.com>, Stian Skjelstad <stian@nixia.no> and
+  others.
 
   13 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> ldapdns-2.05.ebuild:
   Use enewuser/enewgroup instead of useradd. Thanks to Diego in bug 84730.

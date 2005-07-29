@@ -1,18 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd0730f2812fb85dfa0f0e324431862f ldapdns-2.03.ebuild 1109
-MD5 f811004d1d9f4d645ab8e9328e46aa18 ldapdns-2.05.ebuild 1027
+MD5 731c1335cb3d5af6290064403fad7d93 ldapdns-2.05.ebuild 1046
 MD5 80f8122e9b9d4289312277eebf2ef2f7 ldapdns-2.04.ebuild 1108
-MD5 27e2a2759b756f842eeb578c69ef7544 ChangeLog 1466
+MD5 564679ec3be7eac9d104f01edba3687f ldapdns-2.06.ebuild 1093
+MD5 37f13db8f5fb1b6eae9e471f8a83af21 ChangeLog 1818
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 87c558c39b51b905f9272fd860140816 files/digest-ldapdns-2.03 63
 MD5 c6ce7d541758b912a1c8fe354c3e40be files/digest-ldapdns-2.04 64
 MD5 ec37ba5cecd0875e155be6aaf955726e files/digest-ldapdns-2.05 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZX27V3J2n04EauwRAkhmAKCYI40RZQZWDI439m0SZokU6eYdEwCg0EU2
-pf5GGesIwKxUmOyJ7VTjXp0=
-=AsrC
------END PGP SIGNATURE-----
+MD5 8a1918bcbbf60f3919c57b45110f230e files/digest-ldapdns-2.06 64
+MD5 5bc2ba46693dafcbcd9621f4221b14e0 files/ldapdns-2.06-gentoo.patch 3676
