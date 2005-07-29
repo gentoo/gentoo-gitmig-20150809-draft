@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r13.ebuild,v 1.1 2005/07/27 21:52:31 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r14.ebuild,v 1.1 2005/07/29 10:27:21 mrness Exp $
 
-inherit eutils gnuconfig flag-o-matic
+inherit eutils gnuconfig flag-o-matic linux-info
 
 DESCRIPTION="Point-to-point protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20050727.tar.gz
+	mirror://gentoo/${P}-patches-20050729.tar.gz
 	mppe-mppc? ( http://www.polbox.com/h/hs001/ppp-2.4.2-mppe-mppc-1.1.patch.gz )
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
@@ -24,6 +24,10 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 pkg_setup() {
+	CONFIG_CHECK="PPP"
+	use activefilter && CONFIG_CHECK="${CONFIG_CHECK} PPP_FILTER"
+	linux-info_pkg_setup
+
 	if ! use radius; then
 		echo
 		ewarn "RADIUS plugins installation is now controled by radius useflag!"
