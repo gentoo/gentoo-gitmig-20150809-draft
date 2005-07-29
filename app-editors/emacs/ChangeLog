@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.69 2005/07/17 11:48:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.70 2005/07/29 21:03:37 matsuu Exp $
+
+  29 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> +files/emacs-21.2-sh.patch,
+  emacs-21.4-r1.ebuild:
+  Added emacs-21.2-sh.patch and ~sh to KEYWORDS.
 
   17 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   emacs-21.4-r1.ebuild:
