@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.2.13.ebuild,v 1.3 2005/07/29 17:50:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.2.13.ebuild,v 1.4 2005/07/29 17:50:44 seemant Exp $
 
 inherit eutils linux-mod versionator check-kernel
 
@@ -23,7 +23,6 @@ DEPEND="virtual/linux-sources"
 PATCHDIR=${WORKDIR}/gentoo/patches/$(get_version_component_range 1-2)/kernel
 
 pkg_setup() {
-	
 	if is_2_5_kernel || is_2_6_kernel
 	then
 		die "Linux 2.6 kernels do not use this version of openafs.  Use the 1.3 series"
