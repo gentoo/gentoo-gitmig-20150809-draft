@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/kth-krb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.30 2005/01/26 21:35:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.31 2005/07/29 13:16:08 seemant Exp $
+
+  29 Jul 2005; Seemant Kulleen <seemant@gentoo.org> metadata.xml,
+  -kth-krb-1.2.ebuild, -kth-krb-1.2.1.ebuild, -kth-krb-1.2.2.ebuild,
+  -kth-krb-1.2.2-r1.ebuild:
+  remove crufty ebuilds
 
   26 Jan 2005; <rphillips@gentoo.org> kth-krb-1.2.2-r2.ebuild:
   Added Simone's patch for compilation errors. #79634
