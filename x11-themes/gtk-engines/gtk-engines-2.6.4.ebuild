@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.6.2.ebuild,v 1.3 2005/06/30 23:21:55 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.6.4.ebuild,v 1.1 2005/07/29 00:40:06 leonardop Exp $
 
 inherit gtk-engines2 gnuconfig
 
@@ -14,10 +14,10 @@ SRC_URI="mirror://gnome/sources/${PN}/${GTK1_VER}/${PN}-${GTK1_VER}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64 ~arm"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="${DEPEND}
+DEPEND=">=x11-libs/gtk+-2.6
 	!x11-themes/gtk-engines-crux
 	!x11-themes/gtk-engines-lighthouseblue
 	!x11-themes/gtk-engines-metal
@@ -34,6 +34,8 @@ GTK2_S=${WORKDIR}/${PN}-${GTK2_VER}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+
 	if use alpha || use amd64 || use ppc64 ; then
 		gnuconfig_update || die 'gnuconfig_update failed'
 		( cd $GTK1_S && libtoolize --force ) || die 'libtoolize1 failed'
