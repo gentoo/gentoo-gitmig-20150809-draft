@@ -1,0 +1,285 @@
+--- heartbeat-1.2.3.orig/heartbeat/lib/BasicSanityCheck.in	2004-09-17 08:36:27.000000000 +0200
++++ heartbeat-1.2.3/heartbeat/lib/BasicSanityCheck.in	2005-07-13 21:20:57.000000000 +0200
+@@ -43,7 +43,8 @@ DEFAULTINTERFACE=eth0	# But we really gu
+ IDENTSTRING="Linux-HA TEST configuration file - REMOVEME!!"
+ DUMMYNODE=ImAlwaysDead.com
+ LOCALNODE=`uname -n`
+-LOGFILE=/tmp/linux-ha.testlog
++LOGFILE=`tempfile -p l-ha. -s testlog`
++TMPFILE=`tempfile -p l-ha.`
+ RSCDIR=$HADIR/resource.d
+ errcount=0
+ 
+@@ -228,9 +229,9 @@ else print $0 ; next } \
+ if (done ==1 || $1 == "#" || $1 == " ") next; \
+ if ($1 == "auth") {method = $2; next} \
+ if ($1 !=  method) {done=1; method =$1;  pass=2; nextfile}}' \
+-$HADIR/authkeys $HADIR/authkeys >/tmp/tmpfile
++$HADIR/authkeys $HADIR/authkeys >$TMPFILE
+ 
+-mv /tmp/tmpfile  $HADIR/authkeys
++mv $TMPFILE  $HADIR/authkeys
+ chmod 600 $HADIR/authkeys
+ }
+ #	Check for the given count of the given string
+@@ -532,7 +533,7 @@ StonithCheck() {
+ 
+ 
+ AppHBCheck() {
+-	CFFILE=/tmp/$$.apphbd.cf
++	CFFILE=`tempfile`
+ 	clientcount=5
+ 	cat <<-! >$CFFILE
+ 		realtime yes
+--- heartbeat-1.2.3.orig/heartbeat/resource.d/WAS.in	2002-03-24 00:39:42.000000000 +0100
++++ heartbeat-1.2.3/heartbeat/resource.d/WAS.in	2005-07-13 21:26:00.000000000 +0200
+@@ -302,7 +302,7 @@ WAS_report_status() {
+ #	This is actually faster than WAS_status above...
+ #
+ WAS_monitor() {
+-  tmpfile=/tmp/$$.was-mon
++  tmpfile=`tempfile`
+   SnoopPort=`GetWASSnoopPort $1`
+   output=`$WGET -nv -O$tmpfile  http://localhost:$SnoopPort/servlet/snoop 2>&1`
+   rc=$?
+--- heartbeat-1.2.3.orig/lib/plugins/stonith/meatware.c	2004-04-20 10:50:06.000000000 +0200
++++ heartbeat-1.2.3/lib/plugins/stonith/meatware.c	2005-07-13 21:13:06.000000000 +0200
+@@ -308,7 +308,7 @@ static int
+ meatware_reset_req(Stonith * s, int request, const char * host)
+ {
+ 	int fd, rc;
+-	const char *	meatpipe_pr = "/tmp/.meatware"; /* if you intend to
++	const char *	meatpipe_pr = "/var/run/meatware"; /* if you intend to
+ 							change this, modify
+ 							meatclient.c as well */
+ 
+--- heartbeat-1.2.3.orig/lib/stonith/meatclient.c	2004-04-20 11:08:51.000000000 +0200
++++ heartbeat-1.2.3/lib/stonith/meatclient.c	2005-07-13 21:12:35.000000000 +0200
+@@ -55,7 +55,7 @@ int
+ main(int argc, char** argv)
+ {
+ 	char *		cmdname;
+-	const char *	meatpipe_pr = "/tmp/.meatware";	/* if you intend to
++	const char *	meatpipe_pr = "/var/run/meatware";	/* if you intend to
+ 							 change this, modify
+ 							 meatware.c as well */
+ 	char *		opthost = NULL;
+--- heartbeat-1.2.3.orig/cts/CM_hb.py.in
++++ heartbeat-1.2.3/cts/CM_hb.py.in
+@@ -57,7 +57,7 @@
+             "StartDRBDCmd"   : "@sysconfdir@/init.d/drbd start >/dev/null 2>&1",
+             "StopDRBDCmd"    : "@sysconfdir@/init.d/drbd stop",
+             "StatusDRBDCmd"  : "@sysconfdir@/init.d/drbd status",
+-            "DRBDCheckconf"  : "@sysconfdir@/init.d/drbd checkconfig >/tmp/drbdconf 2>&1",
++            "DRBDCheckconf"  : "@sysconfdir@/init.d/drbd checkconfig >/var/run/drbdconf 2>&1",
+             "BreakCommCmd"   : "@libdir@/heartbeat/TestHeartbeatComm break-communication >/dev/null 2>&1",
+             "FixCommCmd"     : "@libdir@/heartbeat/TestHeartbeatComm fix-communication >/dev/null 2>&1",
+             "IPaddrCmd"      : "@sysconfdir@/ha.d/resource.d/IPaddr %s status",
+only in patch2:
+unchanged:
+--- heartbeat-1.2.3.orig/cts/CTStests.py.in
++++ heartbeat-1.2.3/cts/CTStests.py.in
+@@ -870,7 +870,7 @@
+             time.sleep(5)  # We get extra messages right after startup.
+ 
+ 
+-        fstmpfile = "/tmp/band_estimate"
++        fstmpfile = "/var/run/band_estimate"
+         dumpcmd = "tcpdump -p -n -c 102 -i any udp port %d > %s 2>&1" \
+ 	%		(port, fstmpfile);
+  
+@@ -1073,9 +1073,9 @@
+         while 1:
+             if (time.time()>done):
+                 return self.failure("the drbd could't sync")
+-            self.CM.rsh(node,"cp /proc/drbd /tmp >/dev/null 2>&1")
+-            if self.CM.rsh.cp("%s:/tmp/drbd" % node,"/tmp"):
+-                line = open("/tmp/drbd").readlines()[2]
++            self.CM.rsh(node,"cp /proc/drbd /var/run >/dev/null 2>&1")
++            if self.CM.rsh.cp("%s:/var/run/drbd" % node,"/var/run"):
++                line = open("/tmp/var/run").readlines()[2]
+                 p = line.find("Primary")
+                 s1 = line.find("Secondary")
+                 s2 = line.rfind("Secondary")
+@@ -1111,8 +1111,8 @@
+     def getdevice(self,node):
+         device=None
+         if self.CM.rsh(node,self.CM["DRBDCheckconf"])==0:
+-            self.CM.rsh.cp("%s:/tmp/drbdconf" % node, "/tmp")
+-            lines=open("/tmp/drbdconf","r")
++            self.CM.rsh.cp("%s:/var/run/drbdconf" % node, "/var/run")
++            lines=open("/var/run/drbdconf","r")
+             for line in lines:
+                 if line.find("%s:device" % node)!=-1:
+                     device=string.split(line," ")[8]
+--- a/heartbeat/resource.d/IPaddr.in	12 Sep 2004 00:06:10 -0000	1.52.2.7
++++ b/heartbeat/resource.d/IPaddr.in	16 Jul 2005 14:46:19 -0000
+@@ -24,7 +24,6 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ HA_D=@sysconfdir@/ha.d
+-CONF_D=@sysconfdir@/ha.d/conf
+ . ${HA_D}/shellfuncs
+ 
+ IFCONFIG=@IFCONFIG@
+@@ -564,8 +563,8 @@
+ 
+   ha_log "info: Sending Gratuitous Arp for $BASEIP on $IF [$TARGET_INTERFACE]"
+ 
+-  [ -r ${CONF_D}/arp_config ] && . ${CONF_D}/arp_config
+-  [ -r "${CONF_D}/arp_config:${TARGET_INTERFACE}" ] && . "${CONF_D}/arp_config:${TARGET_INTERFACE}"
++  [ -r ${HA_CONFDIR}/arp_config ] && . ${HA_CONFDIR}/arp_config
++  [ -r "${HA_CONFDIR}/arp_config:${TARGET_INTERFACE}" ] && . "${HA_CONFDIR}/arp_config:${TARGET_INTERFACE}"
+ 
+   # Set default values (can be overridden as described above)
+ 
+--- a/heartbeat/resource.d/IPaddr2.in	4 Apr 2005 08:28:09 -0000	1.8.2.6
++++ b/heartbeat/resource.d/IPaddr2.in	16 Jul 2005 14:46:19 -0000
+@@ -254,10 +254,10 @@
+     #
+     # Run send_arp to note peers about new mac address
+     #
+-    [ -r ${CONF_D}/arp_config ] && . ${CONF_D}/arp_config
+-    if [ -r "${CONF_D}/arp_config:${TARGET_INTERFACE}" ]
++    [ -r ${HA_CONFDIR}/arp_config ] && . ${HA_CONFDIR}/arp_config
++    if [ -r "${HA_CONFDIR}/arp_config:${TARGET_INTERFACE}" ]
+     then
+-	. "${CONF_D}/arp_config:${TARGET_INTERFACE}"
++	. "${HA_CONFDIR}/arp_config:${TARGET_INTERFACE}"
+     fi
+ 
+     # Set default values (can be overridden as described above)
+--- a/heartbeat/resource.d/SendArp.in	20 Apr 2004 05:05:29 -0000	1.1.2.1
++++ b/heartbeat/resource.d/SendArp.in	16 Jul 2005 14:46:19 -0000
+@@ -70,10 +70,10 @@
+ 	    ;;
+     esac
+ 
+-    [ -r ${CONF_D}/arp_config ] && . ${CONF_D}/arp_config
+-    if [ -r "${CONF_D}/arp_config:${TARGET_INTERFACE}" ]
++    [ -r ${HA_CONFDIR}/arp_config ] && . ${HA_CONFDIR}/arp_config
++    if [ -r "${HA_CONFDIR}/arp_config:${TARGET_INTERFACE}" ]
+     then
+-	. "${CONF_D}/arp_config:${TARGET_INTERFACE}"
++	. "${HA_CONFDIR}/arp_config:${TARGET_INTERFACE}"
+     fi
+ 
+     # Set default values
+--- a/heartbeat/shellfuncs.in	24 Jun 2003 07:18:20 -0000	1.6
++++ b/heartbeat/shellfuncs.in	16 Jul 2005 14:46:19 -0000
+@@ -6,6 +6,7 @@
+ exec_prefix=@exec_prefix@
+ : ${HA_DIR=@sysconfdir@/ha.d}
+ : ${HA_RCDIR=$HA_DIR/rc.d}
++: ${HA_CONFDIR=$HA_DIR/conf}
+ : ${HA_CF=$HA_DIR/ha.cf}
+ : ${HA_VARLIB=@localstatedir@/lib/heartbeat}
+ : ${HA_RSCTMP=@localstatedir@/lib/heartbeat/rsctmp}
+--- a/heartbeat/resource.d/IPaddr2.in	30 Aug 2004 09:08:24 -0000	1.8.2.5
++++ b/heartbeat/resource.d/IPaddr2.in	4 Apr 2005 08:28:09 -0000	1.8.2.6
+@@ -356,12 +356,16 @@
+ 	esac
+     fi
+ 
+-    if
+-	[ -z "$IF" ]
+-    then
+-	: Requested interface not in use
+-	exit 0
+-    fi
++    #
++    #	Do we already service this IP address?
++    #
++    case `status $1` in
++	stopped|loopback)
++	    : Requested interface not in use
++	    exit 0
++	    ;;
++    esac
++
+ 
+     #
+     #	If there is local_giveip script, run it.
+--- a/heartbeat/resource.d/LVM.in	20 Apr 2004 05:05:29 -0000	1.2.4.1
++++ b/heartbeat/resource.d/LVM.in	10 Jun 2005 07:46:28 -0000
+@@ -102,8 +102,15 @@ LVM_methods() {
+ #
+ LVM_status() {
+ 
+-  vgdisplay $1 | grep -i 'Status.*available' >/dev/null
+-  
++  if 
++    [ "$LVM_VERSION" -eq "200" ]
++  then
++  	vgdisplay -v $1 | grep -i 'Status[ \t]*available' &>/dev/null
++	return $?
++  else
++  	vgdisplay $1 | grep -i 'Status.*available' >/dev/null
++	return $?
++  fi
+ }
+ 
+ #
+@@ -111,15 +118,27 @@ LVM_status() {
+ #
+ LVM_report_status() {
+ 
+-  VGOUT=`vgdisplay $1 2>&1`
++  if 
++    [ "$LVM_VERSION" -eq "200" ]
++  then
++  	VGOUT=`vgdisplay -v $1 2>&1`
++	echo "$VGOUT" | grep -i 'Status[ \t]*available' >/dev/null
++	rc=$?
++  else
++  	VGOUT=`vgdisplay $1 2>&1`
++  	echo "$VGOUT" | grep -i 'Status.*available' >/dev/null
++	rc=$?
++  fi
++
+   if
+-    echo "$VGOUT" | grep -i 'Status.*available' >/dev/null
++    [ $rc -eq 0 ]
+   then
+     : Volume $1 is available
+   else
+     echo "LVM Volume $1 is not available (stopped)"
+     return 1
+   fi
++
+   if
+     echo "$VGOUT" | grep -i 'Access.*read/write' >/dev/null
+   then
+@@ -155,7 +174,15 @@ LVM_monitor() {
+ LVM_start() {
+ 
+   ha_log "Activating volume group $1"
+-  run vgscan $1
++
++  if 
++    [ "$LVM_VERSION" -eq "200" ]
++  then
++  	run vgscan
++  else
++  	run vgscan $1
++  fi
++
+   run vgchange -a y $1 || return 1
+ 
+   if
+@@ -196,6 +223,15 @@ if
+ then
+   LVM_methods
+   exit $?
++fi
++
++LVM_VERSION=`/sbin/lvmiopversion`
++rc=$?
++if 
++  [ $rc -ne 0 ]
++then
++  ha_log "ERROR: LVM: $1 could not determine LVM version"
++  return  $rc
+ fi
+ 
+ VOLUME=$1
