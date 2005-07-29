@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.13.ebuild,v 1.3 2005/07/28 18:46:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.13.ebuild,v 1.4 2005/07/29 18:04:50 seemant Exp $
 
-inherit check-kernel fixheadtails flag-o-matic eutils toolchain-funcs versionator
+inherit linux-info fixheadtails flag-o-matic eutils toolchain-funcs versionator
 
 PATCHVER=0.1
 DESCRIPTION="The OpenAFS distributed file system"
@@ -22,9 +22,10 @@ PATCHDIR=${WORKDIR}/gentoo/patches/$(get_version_component_range 1-2)
 CONFDIR=${WORKDIR}/gentoo/configs
 
 pkg_setup() {
-	if is_2_5_kernel || is_2_6_kernel
-	then
-		die "Linux 2.6 kernels do not support this openafs version, use 1.3.x"
+	if kernel_is gt 2 4; then
+		eeror "openafs-1.2 does not support kernels newer than Linux 2.4"
+		einfo "please try the openafs-1.3 series"
+		die "Kernel is too new!"
 	fi
 }
 
