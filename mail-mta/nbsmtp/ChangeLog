@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/nbsmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.27 2005/07/29 01:10:12 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.28 2005/07/29 12:27:41 dertobi123 Exp $
+
+  29 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org> nbsmtp-1.00.ebuild:
+  ppc stable, #100274
 
 *nbsmtp-1.00 (29 Jul 2005)
 
