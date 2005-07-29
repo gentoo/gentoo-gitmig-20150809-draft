@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96.ebuild,v 1.1 2005/07/28 20:29:04 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96.ebuild,v 1.2 2005/07/29 10:41:25 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="capi? ( mirror://sourceforge/capi4yaps/${P}.c2.tgz )
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="capi lua slang unicode"
 DEPEND="capi? ( net-dialup/capi4k-utils )
 	slang? ( sys-libs/slang )
