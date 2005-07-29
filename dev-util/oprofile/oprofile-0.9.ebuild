@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.ebuild,v 1.4 2005/07/28 14:16:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.ebuild,v 1.5 2005/07/29 02:03:31 swegener Exp $
 
-inherit eutils
+inherit eutils qt3
 
 DESCRIPTION="A transparent low-overhead system-wide profiler"
 HOMEPAGE="http://oprofile.sourceforge.net"
