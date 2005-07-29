@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1349 2005/07/28 20:17:47 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1350 2005/07/29 01:11:44 stkn Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -787,6 +787,7 @@ net-misc/yate:zaptel - Build zaptel Channel plugin
 net-misc/zaptel:bri - Enable ISDN BRI support (bristuff)
 net-misc/zaptel:devfs26 - Devfs support for Linux-2.6
 net-misc/zaptel:florz - Enable florz enhancement patches for ISDN BRI
+net-misc/zaptel:rtc - Use the realtime clock on x86 and amd64 systems instead of kernel timers
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
