@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.6-r1.ebuild,v 1.1 2005/04/29 21:35:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.6-r1.ebuild,v 1.2 2005/07/29 17:59:58 flameeyes Exp $
 
 inherit libtool eutils
 
@@ -32,8 +32,11 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}
 
-	autoreconf -I ${WORKDIR}/${PV}/m4
+	aclocal -I ${WORKDIR}/${PV}/m4 || die "aclocal failed"
+	autoconf || die "autoconf failed"
+	automake || die "automake failed"
 	elibtoolize
+	libtoolize --copy --force || die "libtoolize failed"
 }
 
 src_compile() {
