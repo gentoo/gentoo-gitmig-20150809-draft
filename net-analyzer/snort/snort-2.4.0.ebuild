@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.2 2005/07/29 16:54:30 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.3 2005/07/29 23:52:25 dragonheart Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -57,8 +57,8 @@ src_unpack() {
 	fi
 
 	if use sguil ; then
-		epatch ${WORKDIR}/2.4.0-spp_portscan_sguil.patch || die
-		epatch ${WORKDIR}/2.4.0-spp_stream4_sguil.patch || die
+		epatch ${WORKDIR}/2.4.0-spp_portscan_sguil.patch
+		epatch ${WORKDIR}/2.4.0-spp_stream4_sguil.patch
 	fi
 
 	if use snortsam ; then

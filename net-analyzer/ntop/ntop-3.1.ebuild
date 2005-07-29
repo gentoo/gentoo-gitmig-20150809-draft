@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.5 2005/05/10 05:32:43 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.6 2005/07/29 23:53:20 dragonheart Exp $
 
 inherit gnuconfig eutils
 
@@ -38,7 +38,7 @@ src_unpack() {
 	mv ${WORKDIR}/ntop ${WORKDIR}/ntop-3.1
 	cd ${S}
 	gnuconfig_update
-	epatch ${FILESDIR}/globals-core.c.diff || die "patch failed"
+	epatch ${FILESDIR}/globals-core.c.diff
 }
 
 src_compile() {

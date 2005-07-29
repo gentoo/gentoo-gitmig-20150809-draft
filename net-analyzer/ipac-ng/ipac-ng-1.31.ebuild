@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31.ebuild,v 1.3 2005/07/09 18:28:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31.ebuild,v 1.4 2005/07/29 23:49:18 dragonheart Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ RDEPEND="net-firewall/iptables
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-iptables.patch || die "patch failed"
+	epatch ${FILESDIR}/${P}-iptables.patch
 }
 
 src_compile() {
