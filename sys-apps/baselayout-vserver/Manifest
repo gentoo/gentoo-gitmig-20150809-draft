@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d387e650e74a4eb510f960eb62a8d54a baselayout-vserver-1.11.12-r4.ebuild 12241
+MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
 MD5 e5f89593def3451ba323f4cfe1f3acea ChangeLog 1475
-MD5 74c5aadf8e3e9d642a20e64d1afefec8 metadata.xml 239
-MD5 51a97031d54d767b45fb247d60727e9d files/fakelog.initd 449
-MD5 76a9437d29bd77c416f76fbcf0cf2af2 files/vserver-changes 1642
+MD5 d387e650e74a4eb510f960eb62a8d54a baselayout-vserver-1.11.12-r4.ebuild 12241
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
+MD5 76a9437d29bd77c416f76fbcf0cf2af2 files/vserver-changes 1642
+MD5 51a97031d54d767b45fb247d60727e9d files/fakelog.initd 449
 MD5 53ec83d5ccc83d7f3dc430db626cb464 files/digest-baselayout-vserver-1.11.12-r4 78
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0b6TBXaUFmZvwyMRArLCAKCYidpVwHZ/k2qZr7O4pj7E/JZUhwCfZ7Oh
-aIiVO1XvtPdMU/TVRNqjWi4=
-=S03a
+iD8DBQFC6nt0mPFBzbX68WERAmLpAJ0c9sSFhy0mrEOiHMi069BGymLiBwCfaCL5
+Q6Imcdwg1mtxQZWOua3wzCc=
+=2lE8
 -----END PGP SIGNATURE-----
