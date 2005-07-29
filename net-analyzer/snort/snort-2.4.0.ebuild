@@ -1,15 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.1 2005/07/29 04:06:17 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.2 2005/07/29 16:54:30 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 HOMEPAGE="http://www.snort.org/"
 SRC_URI="http://www.snort.org/dl/current/${P}.tar.gz
-	http://dev.gentoo.org/~vanquirius/files/snort-2.4.0-genpatches.tar.bz2
+	mirror://gentoo/snort-2.4.0-genpatches.tar.bz2
 	snortsam? ( mirror://gentoo/snortsam-20050110.tar.gz )"
-	# mirror://gentoo/snort-2.4.0-genpatches.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
