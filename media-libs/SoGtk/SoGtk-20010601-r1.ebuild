@@ -1,17 +1,16 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.18 2004/06/24 23:23:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.19 2005/07/29 20:19:14 vanquirius Exp $
 
-IUSE="nls doc"
+inherit eutils
 
-S=${WORKDIR}/${PN}
 DESCRIPTION="A Gtk Interface for coin"
-SRC_URI="ftp://ftp.coin3d.org/pub/snapshots/${P}.tar.gz"
 HOMEPAGE="http://www.coin3d.org"
-
-SLOT="0"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc "
+SLOT="0"
+KEYWORDS="x86 sparc"
+IUSE="doc nls"
 
 DEPEND="virtual/x11
 	<x11-libs/gtkglarea-1.99.0
@@ -19,6 +18,13 @@ DEPEND="virtual/x11
 	=sys-apps/sed-4*
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
+
+S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}; cd ${S}
+	epatch ${FILESDIR}/${P}-string.patch
+}
 
 src_compile() {
 
