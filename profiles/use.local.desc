@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1352 2005/07/29 11:44:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1353 2005/07/29 18:46:15 danarmak Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -380,6 +380,7 @@ kde-base/kdeartwork-kscreensaver:xscreensaver - Enable detection of xscreensaver
 kde-base/kdeartwork:xscreensaver - Enable detection of xscreensavers
 kde-base/kdebase:logitech-mouse - Enable Control Center module for configuring logitech mice
 kde-base/kdebase:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
+kde-base/kdebase-kioslaves:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
