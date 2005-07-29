@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.1 2005/07/29 22:16:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.2 2005/07/29 22:38:28 dragonheart Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -52,14 +52,14 @@ src_unpack() {
 	cd ${S}
 
 	# we can do better security ourselves
-	epatch ${FILESDIR}/${P}-nodumbpermchecks.diff || die
-	epatch ${FILESDIR}/${P}-chown.patch || die
-	epatch ${FILESDIR}/${P}-not_install_info.patch || die
-	epatch ${FILESDIR}/${P}-fixserverargs.diff || die
-	epatch ${FILESDIR}/${P}-lib64.patch || die
-	epatch ${FILESDIR}/${P}-fflush-before-re-read-partition-table.patch || die
-	epatch ${FILESDIR}/${P}-LP64-fixes.patch || die
-	epatch ${FILESDIR}/${P}-save_all_and_rest_all_actions.patch || die
+	epatch ${FILESDIR}/${P}-nodumbpermchecks.diff
+	epatch ${FILESDIR}/${P}-chown.patch
+	epatch ${FILESDIR}/${P}-not_install_info.patch
+	epatch ${FILESDIR}/${P}-fixserverargs.diff
+	epatch ${FILESDIR}/${P}-lib64.patch
+	epatch ${FILESDIR}/${P}-fflush-before-re-read-partition-table.patch
+	epatch ${FILESDIR}/${P}-LP64-fixes.patch
+	epatch ${FILESDIR}/${P}-save_all_and_rest_all_actions.patch
 }
 
 src_compile() {

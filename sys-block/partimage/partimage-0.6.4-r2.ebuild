@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r2.ebuild,v 1.5 2005/04/18 00:12:49 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r2.ebuild,v 1.6 2005/07/29 22:38:28 dragonheart Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -42,10 +42,10 @@ src_unpack() {
 	cd ${S}
 
 	# we can do better security ourselves
-	epatch ${FILESDIR}/${P}-nodumbpermchecks.diff || die
-	epatch ${FILESDIR}/${P}-chown.patch || die
-	epatch ${FILESDIR}/${P}-not_install_info.patch || die
-	epatch ${FILESDIR}/${P}-fixserverargs.diff || die
+	epatch ${FILESDIR}/${P}-nodumbpermchecks.diff
+	epatch ${FILESDIR}/${P}-chown.patch
+	epatch ${FILESDIR}/${P}-not_install_info.patch
+	epatch ${FILESDIR}/${P}-fixserverargs.diff
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4.ebuild,v 1.1 2005/03/06 17:58:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4.ebuild,v 1.2 2005/07/29 22:38:28 dragonheart Exp $
 
 inherit gnuconfig eutils
 
@@ -39,7 +39,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-fixserverargs.diff || die
+	epatch ${FILESDIR}/${P}-fixserverargs.diff
 	# Patch Makefile.am so we can take over some of is install work
 	#patch -p1 < ${FILESDIR}/${PF}-gentoo.patch || die "patch failed"
 	sed '18d' -i configure.ac
