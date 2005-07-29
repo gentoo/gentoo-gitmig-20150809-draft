@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.12.ebuild,v 1.4 2005/01/02 02:52:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.12.ebuild,v 1.5 2005/07/29 23:30:05 dragonheart Exp $
 
 inherit eutils
 
@@ -38,6 +38,6 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install
+	emake DESTDIR=${D} install || die
 	prepalldocs.new || prepalldocs
 }

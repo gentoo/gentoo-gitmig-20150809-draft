@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.8 2005/01/02 02:52:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.9 2005/07/29 23:30:05 dragonheart Exp $
 
 inherit eutils
 
@@ -22,11 +22,11 @@ DEPEND="doc? ( >=app-doc/doxygen-1.2.15
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/makefile.doc.am.patch || die "failed to patch"
-	epatch ${FILESDIR}/makefile.doc.in.patch || die "failed to patch"
-	epatch ${FILESDIR}/configure.in.patch || die "failed to patch"
-	epatch ${FILESDIR}/log4c_1.0.11_test.patch  || die "failed to patch"
-	epatch ${FILESDIR}/${P}-function.patch || die "failed to patch"
+	epatch ${FILESDIR}/makefile.doc.am.patch
+	epatch ${FILESDIR}/makefile.doc.in.patch
+	epatch ${FILESDIR}/configure.in.patch
+	epatch ${FILESDIR}/log4c_1.0.11_test.patch 
+	epatch ${FILESDIR}/${P}-function.patch
 }
 
 src_compile() {
@@ -49,6 +49,6 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install
+	emake DESTDIR=${D} install || die
 	prepalldocs.new || prepalldocs
 }

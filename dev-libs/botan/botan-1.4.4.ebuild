@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.6 2005/07/14 21:39:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.7 2005/07/29 23:26:25 dragonheart Exp $
 
 # Comments/fixes to lloyd@randombit.net (author)
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc34.patch || die "patch failed"
+	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 src_compile() {

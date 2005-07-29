@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.10-r1.ebuild,v 1.7 2005/07/10 20:28:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.10-r1.ebuild,v 1.8 2005/07/29 23:30:05 dragonheart Exp $
 
 inherit eutils
 
@@ -29,15 +29,15 @@ src_unpack() {
 	cd ${S}
 	if use doc;
 	then
-		epatch ${FILESDIR}/makefile.doc.in.patch ||  die "patch failed"
-		epatch ${FILESDIR}/makefile.doc.am.patch ||  die "patch failed"
+		epatch ${FILESDIR}/makefile.doc.in.patch
+		epatch ${FILESDIR}/makefile.doc.am.patch
 	else
 		### comment out the docs with this patch to minimize depenencies
-		epatch ${FILESDIR}/${P}-nodocs.patch || die "patch failed"
+		epatch ${FILESDIR}/${P}-nodocs.patch
 	fi
 	# fixes gcc-3.4 problems
-	epatch ${FILESDIR}/log4c-1.0.11-function.patch || die "patch failed"
-	epatch ${FILESDIR}/log4c_1.0.11_test.patch || die "patch failed"
+	epatch ${FILESDIR}/log4c-1.0.11-function.patch
+	epatch ${FILESDIR}/log4c_1.0.11_test.patch
 }
 
 src_compile() {
