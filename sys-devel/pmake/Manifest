@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 f5fc0ad80d71d1573bbfc9ecf30bfb08 ChangeLog 3223
-MD5 f452b142802fc6ec5d75004af15d01e6 metadata.xml 258
+MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 MD5 4cd1d984bba137c30bc8f99818124ddd pmake-1.45-r4.ebuild 1706
 MD5 3a9944914582767b4cdd9dae662a06f6 pmake-1.98.ebuild 1897
 MD5 4c53889635d50badabd1acbfa51142c5 pmake-1.111.1.ebuild 2210
@@ -15,7 +15,7 @@ MD5 1078bf3b75a5e56a467359e69f73ed6b files/digest-pmake-1.111.1 133
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6hsUj5H05b2HAEkRAp3AAKCartnFHAh0+mzAiwwJKF5zpKporACaAobt
-edt/AUTTTaqeMPaBjiJgCDI=
-=Ybrh
+iD8DBQFC6hvAj5H05b2HAEkRAloRAJ4pOtDWMIh9HXw+0Z1iwSCt17ayxACdFH/t
+FrGxNhqmmccIBDZ4eqtjooA=
+=l2aR
 -----END PGP SIGNATURE-----
