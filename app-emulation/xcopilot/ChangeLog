@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xcopilot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/ChangeLog,v 1.4 2005/01/01 14:21:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/ChangeLog,v 1.5 2005/07/29 23:15:05 vanquirius Exp $
+
+  29 Jul 2005; Marcelo Goes <vanquirius@gentoo.org> xcopilot-0.6.6.ebuild:
+  Use DESTDIR instead of einstall.
 
   02 Mar 2004; David Holm <dholm@gentoo.org> xcopilot-0.6.6.ebuild:
   Added to ~ppc.

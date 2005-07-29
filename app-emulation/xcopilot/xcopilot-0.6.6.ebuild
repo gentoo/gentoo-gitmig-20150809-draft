@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/xcopilot-0.6.6.ebuild,v 1.5 2005/01/01 14:21:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xcopilot/xcopilot-0.6.6.ebuild,v 1.6 2005/07/29 23:15:05 vanquirius Exp $
 
 MY_P="xcopilot-0.6.6-uc0"
 
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die
 	dodoc AUTHORS README NEWS README.uClinux
 }
 
