@@ -161,7 +161,7 @@ diff -u -r -N netkit-ftp-0.17/ftp/ftp.c netkit-ftp-0.17+ssl-0.2/ftp/ftp.c
  	int r;
  	void (*oldintr)(int);
 +#ifdef USE_SSL
-+        char outputbuf[2048];        /* allow for a 2k command string */
++        char outputbuf[8192];
 +#endif /* USE_SSL */
  
  	abrtflag = 0;
@@ -172,7 +172,7 @@ diff -u -r -N netkit-ftp-0.17/ftp/ftp.c netkit-ftp-0.17+ssl-0.2/ftp/ftp.c
  	va_start(ap, fmt);
 +#ifdef USE_SSL
 +        /* assemble the output into a buffer */
-+	vsprintf(outputbuf,fmt,ap);
++	vsnprintf(outputbuf,sizeof(outputbuf),fmt,ap);
 +	strcat(outputbuf,"\r\n");
 +	if (ssl_active_flag) {
 +	    SSL_write(ssl_con,outputbuf,strlen(outputbuf));
@@ -866,7 +866,7 @@ diff -u -r -N netkit-ftp-0.17/ftp/main.c.~1~ netkit-ftp-0.17+ssl-0.2/ftp/main.c.
 + * from: @(#)main.c	5.18 (Berkeley) 3/1/91
 + */
 +char main_rcsid[] = 
-+  "$Id: netkit-ftp-0.17+ssl-0.2.diff,v 1.1 2002/11/23 07:31:44 raker Exp $";
++  "$Id: netkit-ftp-0.17+ssl-0.2.diff,v 1.2 2005/07/29 01:38:43 vapier Exp $";
 +
 +
 +/*
