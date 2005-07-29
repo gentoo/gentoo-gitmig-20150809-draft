@@ -1,12 +1,15 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.39 2005/07/29 23:07:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.40 2005/07/29 23:13:46 dragonheart Exp $
 
 *seahorse-0.7.9 (29 Jul 2005)
 
   29 Jul 2005; Daniel Black <dragonheart@gentoo.org>
-  seahorse-0.6.3-r1.ebuild, seahorse-0.7.5.ebuild, +seahorse-0.7.9.ebuild:
-  version bump. removed die from epatch || die
+  seahorse-0.6.3-r1.ebuild, seahorse-0.7.5.ebuild, +seahorse-0.7.9.ebuild
+  -files/seahorse-0.7.5-gpg1.4.patch, -seahorse-0.7.5.ebuild,
+  -seahorse-0.7.7.ebuild:
+  version bump. removed die from epatch || die. removed old versions.
+  re-added ~alpha keyword to seahorse-0.7.9
 
 *seahorse-0.7.8 (10 May 2005)
 
