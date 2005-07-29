@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.6.1.ebuild,v 1.19 2005/07/22 12:33:12 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.6.1.ebuild,v 1.20 2005/07/29 16:34:04 gmsoft Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86 hppa"
 
 RDEPEND=">=gnome-base/gconf-2.4
 	>=dev-cpp/glibmm-2.4

@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.29 2005/07/22 12:33:12 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.30 2005/07/29 16:34:04 gmsoft Exp $
+
+  29 Jul 2005; Guy Martin <gmsoft@gentoo.org> gconfmm-2.6.1.ebuild,
+  gconfmm-2.10.0.ebuild:
+  Stable on hppa.
 
   22 Jul 2005; Herbie Hopkins <herbs@gentoo.org> gconfmm-2.6.1.ebuild:
   Stable on amd64.

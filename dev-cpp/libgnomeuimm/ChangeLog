@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.29 2005/07/22 12:39:52 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.30 2005/07/29 16:45:06 gmsoft Exp $
+
+  29 Jul 2005; Guy Martin <gmsoft@gentoo.org> libgnomeuimm-2.6.0.ebuild,
+  libgnomeuimm-2.10.0.ebuild:
+  Stable on hppa.
 
   22 Jul 2005; Herbie Hopkins <herbs@gentoo.org> libgnomeuimm-2.6.0.ebuild:
   Stable on amd64.
