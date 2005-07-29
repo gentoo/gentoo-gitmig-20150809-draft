@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.23 2005/01/27 18:55:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.24 2005/07/29 22:41:54 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -47,7 +47,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# Certain sparc32 machines seem to have trouble building correctly with 
+	# Certain sparc32 machines seem to have trouble building correctly with
 	# -mcpu enabled.  While this is not a gnupg problem, it is a temporary
 	# fix until the gcc problem can be tracked down.
 	if [ "${ARCH}" == "sparc" ] && [ "${PROFILE_ARCH}" == "sparc" ]; then

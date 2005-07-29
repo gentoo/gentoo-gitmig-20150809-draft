@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0.ebuild,v 1.21 2005/07/28 14:14:05 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0.ebuild,v 1.22 2005/07/29 22:45:05 dragonheart Exp $
 
 inherit eutils qt3
 
@@ -19,7 +19,7 @@ DEPEND="$(qt_min_version 3.3)
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/qca-pathfix.patch || die "bad patch"
+	epatch ${FILESDIR}/qca-pathfix.patch
 }
 
 src_compile() {

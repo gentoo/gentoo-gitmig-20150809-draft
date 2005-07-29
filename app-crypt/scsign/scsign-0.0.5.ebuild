@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/scsign/scsign-0.0.5.ebuild,v 1.2 2005/07/08 16:01:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/scsign/scsign-0.0.5.ebuild,v 1.3 2005/07/29 22:43:47 dragonheart Exp $
 
 inherit toolchain-funcs eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-libs/opensc-0.8.1
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-printid.patch || die "patch failed"
+	epatch ${FILESDIR}/${P}-printid.patch
 }
 
 src_compile() {

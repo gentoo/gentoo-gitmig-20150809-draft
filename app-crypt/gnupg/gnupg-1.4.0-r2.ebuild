@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r2.ebuild,v 1.5 2005/06/24 22:01:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r2.ebuild,v 1.6 2005/07/29 22:41:54 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -57,7 +57,7 @@ src_unpack() {
 
 	cd ${S}
 	if use ecc; then
-		epatch ${WORKDIR}/${P}-ecc${ECCVER}.diff || die "ecc patch failed"
+		epatch ${WORKDIR}/${P}-ecc${ECCVER}.diff
 	fi
 	sed -i -e 's:PIC:__PIC__:' mpi/i386/mpih-{add,sub}1.S intl/relocatable.c
 	sed -i -e 's:if PIC:ifdef __PIC__:' mpi/sparc32v8/mpih-mul{1,2}.S
