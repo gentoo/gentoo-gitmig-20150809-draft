@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/asterisk-chan_sccp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/ChangeLog,v 1.1 2005/07/29 03:03:25 stkn Exp $
+
+*asterisk-chan_sccp-0.0.20050725 (29 Jul 2005)
+
+  29 Jul 2005; <stkn@gentoo.org> +files/chan_sccp-20050725-gentoo.diff,
+  +metadata.xml, +asterisk-chan_sccp-0.0.20050725.ebuild:
+  Version bump of asterisk-sccp, renamed package to match asterisk plugin
+  naming scheme in portage.
+
