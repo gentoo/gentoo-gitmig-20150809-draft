@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/File-Spec
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.9 2005/07/07 19:44:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.10 2005/07/29 13:30:37 kugelfang Exp $
+
+  29 Jul 2005; Danny van Dyk <kugelfang@gentoo.org> File-Spec-0.87.ebuild:
+  Marked stable on amd64.
 
   07 Jul 2005; Markus Rothe <corsair@gentoo.org> File-Spec-3.06.ebuild:
   Stable on ppc64
