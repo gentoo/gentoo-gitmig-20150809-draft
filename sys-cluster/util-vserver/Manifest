@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 2f6a05c20b55e64025ca50105c9b792c ChangeLog 4163
-MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
+MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
 MD5 63305730c069d9dbe9776caaf1a4150e util-vserver-0.30.205-r1.ebuild 1926
 MD5 a7c1cab65b8e8af19ee8951c484e4948 util-vserver-0.30.207.ebuild 1962
 MD5 fa2efdab74039371d79f859843ac0f1f util-vserver-0.30.208.ebuild 1962
@@ -15,7 +15,7 @@ MD5 0fb2840471aeb47987109d913eb11413 files/digest-util-vserver-0.30.208 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC3SswmPFBzbX68WERAij/AJ9JTs6Pa2SsliV+JaJj7zR995USfwCeJE0O
-iZCUXh1lsThjNu5HmpHnKuE=
-=KGHL
+iD8DBQFC6npomPFBzbX68WERAvy0AKCArSPG7kpIvOF8hN2G/0rU+X7KTwCeN0fa
+SUw8U3ogZxb17RxvB3jiemY=
+=YH38
 -----END PGP SIGNATURE-----
