@@ -1,0 +1,10 @@
+-mmx
+-mmx2
+-mmxext
+-sse
+-sse2
+-3dnow
+-3dnowext
+-win32codecs
+-divx4linux
+-kqemu
