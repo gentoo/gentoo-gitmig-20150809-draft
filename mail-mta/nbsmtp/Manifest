@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 a31c894c54c13b1785998b21198b5c49 nbsmtp-1.00.ebuild 866
 MD5 62f07f89b3880777c6876773075fcb33 nbsmtp-0.99-r1.ebuild 1404
 MD5 7117dfb6011515df130151f036f766fc nbsmtp-0.99.ebuild 933
-MD5 e56eeec0f9d7417b7f16ca9806d5e3ec ChangeLog 4930
+MD5 c8fdc4076d05deafa60584869bc16131 ChangeLog 5066
 MD5 2fc9863fa18fa7e25fedaa87a92a3c43 metadata.xml 259
 MD5 6649306b0229bcb3e7392bfeed69bed1 files/nbsmtp-CRAM-MD5.diff 679
 MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99-r1 64
 MD5 02906beafefaf79dd565570de5541a06 files/mailer.conf 348
 MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCr/TOViELBEf1JB0RAtsUAJ9a1o1Da/s9q7S6QllzwZcO/zpVSwCdEbTL
-OMp96905jxB78XrLGgDmnao=
-=NuX7
------END PGP SIGNATURE-----
+MD5 614757dbf694f3253b5ed3865f127ba1 files/digest-nbsmtp-1.00 64
