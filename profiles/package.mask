@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4221 2005/07/28 23:07:25 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4222 2005/07/29 04:09:00 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marcelo Goes <vanquirius@gentoo.org> (29 Jul 2005)
+# Masked for testing
+=net-analyzer/snort-2.4.0
 
 # Dan Armak <danarmak@gentoo.org> (28 Jul 2005)
 # WIP, coordinating between team members - will unmask soon
@@ -684,10 +688,6 @@ gnome-extra/gnome-network
 # the the tree
 <dev-lang/icc-7.1.006
 <dev-lang/ifc-7.0.064-r1
-
-# Marcelo Goes <vanquirius@gentoo.org> (08 May 2005)
-# Masked for testing
-=net-analyzer/snort-2.4.20050508
 
 # Ryan Phillips <rphillips@gentoo.org> (07 May 2005)
 # New fox layout.  In testing
