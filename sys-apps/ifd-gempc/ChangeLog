@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ifd-gempc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.7 2005/06/21 12:22:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.8 2005/07/29 08:09:07 dragonheart Exp $
+
+*ifd-gempc-1.0.0 (29 Jul 2005)
+
+  29 Jul 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/ifd-gempc-1.0.0-pcsc-lite-include.patch, +ifd-gempc-1.0.0.ebuild:
+  version bump inspired to help Shawn Rutledge in bug #100654
 
   21 Jun 2005; Daniel Black <dragonheart@gentoo.org> ifd-gempc-0.9.3.ebuild,
   ifd-gempc-0.9.1.ebuild:

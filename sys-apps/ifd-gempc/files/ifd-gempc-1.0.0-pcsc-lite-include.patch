@@ -1,0 +1,33 @@
+--- ./ifd-gempc-1.0.0/common/Makefile.orig	2004-07-04 06:30:30.000000000 +1000
++++ ./ifd-gempc-1.0.0/common/Makefile	2005-07-29 17:59:10.000000000 +1000
+@@ -18,7 +18,7 @@
+ 
+ dep: dep_stamp
+ dep_stamp:
+-	makedepend -f - -I. -I../GemPC410 -DGEMPC=410 *.c > .dependencies || true
++	makedepend -f - -I. `pkg-config --cflags libpcsclite` -I../GemPC410 -DGEMPC=410 *.c > .dependencies || true
+ 	touch dep_stamp
+ 
+ .dependencies: dep
+--- ./ifd-gempc-1.0.0/GemPC410/Makefile.orig	2005-06-17 20:58:23.000000000 +1000
++++ ./ifd-gempc-1.0.0/GemPC410/Makefile	2005-07-29 17:59:10.000000000 +1000
+@@ -72,7 +72,7 @@
+ dep: dep_stamp
+ dep_stamp:
+ 	@echo "Making dependencies..."
+-	makedepend -f - -I. -I../common -DGEMPC=410 *.c > .dependencies || true
++	makedepend -f - -I. `pkg-config --cflags libpcsclite` -I../common -DGEMPC=410 *.c > .dependencies || true
+ 	$(MAKE) -C ../common dep
+ 	touch dep_stamp
+ 
+--- ./ifd-gempc-1.0.0/GemPC430/Makefile.orig	2005-06-17 22:39:26.000000000 +1000
++++ ./ifd-gempc-1.0.0/GemPC430/Makefile	2005-07-29 17:59:10.000000000 +1000
+@@ -72,7 +72,7 @@
+ dep: dep_stamp
+ dep_stamp:
+ 	@echo "Making dependencies..."
+-	makedepend -f - -I. -I../common -DGEMPC=430 GCUSBTransport.c \
++	makedepend -f - -I. `pkg-config --cflags libpcsclite` -I../common -DGEMPC=430 GCUSBTransport.c \
+ 		GemPC430Utils.c libusb_wrap.c > .dependencies || true
+ 	$(MAKE) -C ../common dep
+ 	touch dep_stamp
