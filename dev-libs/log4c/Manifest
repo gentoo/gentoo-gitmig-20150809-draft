@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7f7f7ec0b38f854144081c34d3cd7135 ChangeLog 4082
+MD5 ea2f2a72633a899ef7da13f514e43418 ChangeLog 4274
+MD5 8794983717b81a43ba85d7dedc22649d log4c-1.0.11.ebuild 1413
+MD5 40ffeeafa00fb76f595b5bd962b6922f log4c-1.0.12.ebuild 1181
+MD5 47bcb101a6d5b94977305f73c8dbdbb0 log4c-1.0.6-r1.ebuild 1011
+MD5 4eafc1e08f52712fd036e73730b0a172 metadata.xml 435
+MD5 bd02de18ebdc2fcf0e8cff7b8fccec35 log4c-1.0.10-r1.ebuild 1704
 MD5 37d8d5f4cc1cf6074bcd576c3c294b99 files/configure.in.patch 854
-MD5 a9fba68dfd5dea143cfe49ccb0662fc1 files/digest-log4c-1.0.10-r1 64
 MD5 1f0fac7267c1cff0be0ee973376e272e files/digest-log4c-1.0.11 64
 MD5 fef7d3e32cce5efd15a56a6dcff9c4d1 files/digest-log4c-1.0.12 64
 MD5 fcc031971422d4234f3de52e34fcf256 files/digest-log4c-1.0.6-r1 63
-MD5 2debb494dcd9f4261f707e22e453f391 files/log4c-1.0.10-nodocs.patch 838
-MD5 80234f09351af06e9eda20bf7dd1c2bd files/log4c-1.0.11-function.patch 998
-MD5 80234f09351af06e9eda20bf7dd1c2bd files/log4c-1.0.12-function.patch 998
 MD5 81e6117c525d7118531b1868a13738fc files/log4c_1.0.11_test.patch 464
 MD5 1902a2badd2a965f9e4072f4b6e7adfe files/makefile.doc.am.patch 350
 MD5 028648da7dc4850b5dbc3ec0469eba94 files/makefile.doc.in.patch 352
-MD5 e45fea94876bb55468fbc54110ac3441 log4c-1.0.10-r1.ebuild 1813
-MD5 5a8170fab84628b043e5fb94bb663f24 log4c-1.0.11.ebuild 1531
-MD5 18cd38ca1baee2e12e1ea8d8deec7d1d log4c-1.0.12.ebuild 1174
-MD5 47bcb101a6d5b94977305f73c8dbdbb0 log4c-1.0.6-r1.ebuild 1011
-MD5 4eafc1e08f52712fd036e73730b0a172 metadata.xml 435
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0YT6I1lqEGTUzyQRApNMAKDdpMkj15hLd+CqKP+8p52m9RRGYgCg2OY+
-b7Zb58L2xjlrTE9h4JgoFYc=
-=2DXQ
------END PGP SIGNATURE-----
+MD5 a9fba68dfd5dea143cfe49ccb0662fc1 files/digest-log4c-1.0.10-r1 64
+MD5 80234f09351af06e9eda20bf7dd1c2bd files/log4c-1.0.12-function.patch 998
+MD5 80234f09351af06e9eda20bf7dd1c2bd files/log4c-1.0.11-function.patch 998
+MD5 2debb494dcd9f4261f707e22e453f391 files/log4c-1.0.10-nodocs.patch 838
