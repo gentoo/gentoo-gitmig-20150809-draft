@@ -1,4 +1,4 @@
-MD5 311eba8ab3f6db32cc63df8c2ebd9deb ChangeLog 15838
+MD5 4c90e9c48dac6d5790ce6daa1f49f87f ChangeLog 15947
 MD5 b47207aedd0149443faa2152950714ed metadata.xml 401
 MD5 47c7909cf9d623eaa77933d997bdb7c1 proftpd-1.2.10-r1.ebuild 4422
 MD5 49ff4274614a4ecc736e8674b47b9d2b proftpd-1.2.10-r2.ebuild 4505
@@ -7,7 +7,7 @@ MD5 0215c43fd279ba334fe05f9761ec8293 proftpd-1.2.10.ebuild 4166
 MD5 032f9750ce490f668ca047a660bd099b proftpd-1.2.9-r2.ebuild 3466
 MD5 9cd5b3f274033c4ed06ac8c36b143353 proftpd-1.2.10-r5.ebuild 4393
 MD5 a8c4e478e33928ef12d4786d72dbe3d0 proftpd-1.2.10-r6.ebuild 4444
-MD5 904cbd8500f0437c83a38984314ec8a7 proftpd-1.2.10-r7.ebuild 4580
+MD5 204736d50b0c1588498d01c390e6b494 proftpd-1.2.10-r7.ebuild 4582
 MD5 e558f099037d359da5f855285542246e files/1.2.9_rc3-reversedns.diff 1974
 MD5 fa041c7b343099eef454338152a04ea7 files/digest-proftpd-1.2.10 67
 MD5 52697b758d9c85e63c881592c5a8bb02 files/digest-proftpd-1.2.10-r1 213
