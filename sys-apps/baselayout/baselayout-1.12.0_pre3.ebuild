@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre1-r1.ebuild,v 1.5 2005/07/22 22:00:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre3.ebuild,v 1.1 2005/07/29 11:22:48 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
 DESCRIPTION="Filesystem baselayout and init scripts"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
+	http://dev.gentoo.org/~uberlord/baselayout/${P}.tar.bz2
 	http://dev.gentoo.org/~azarah/baselayout/${P}.tar.bz2
 	http://dev.gentoo.org/~vapier/dist/${P}.tar.bz2"
 
@@ -31,9 +32,6 @@ PROVIDE="virtual/baselayout"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# Bring us up to SVN r1318 which fixes a fair few buglets
-	epatch "${FILESDIR}/${PN}-${PV}-r1.patch"
 
 	# Setup unicode defaults for silly unicode users
 	if use unicode ; then
