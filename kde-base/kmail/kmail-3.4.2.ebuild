@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.4.2.ebuild,v 1.1 2005/07/28 21:16:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.4.2.ebuild,v 1.2 2005/07/29 08:47:17 greg_g Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -10,17 +10,17 @@ inherit kde-meta eutils
 DESCRIPTION="KDE mail client"
 KEYWORDS=" ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
-DEPEND="$(deprange 3.4.1-r1 $MAXKDEVER kde-base/libkdenetwork)
+DEPEND="$(deprange 3.4.1 $MAXKDEVER kde-base/libkdenetwork)
 $(deprange $PV $MAXKDEVER kde-base/libkdepim)
-$(deprange 3.4.1-r1 $MAXKDEVER kde-base/libkpimidentities)
+$(deprange 3.4.1 $MAXKDEVER kde-base/libkpimidentities)
 $(deprange $PV $MAXKDEVER kde-base/mimelib)
-$(deprange 3.4.1-r1 $MAXKDEVER kde-base/libksieve)
+$(deprange 3.4.1 $MAXKDEVER kde-base/libksieve)
 $(deprange $PV $MAXKDEVER kde-base/certmanager)
 $(deprange $PV $MAXKDEVER kde-base/libkcal)
 $(deprange $PV $MAXKDEVER kde-base/kontact)"
 RDEPEND="${DEPEND}
 $(deprange $PV $MAXKDEVER kde-base/kdepim-kioslaves)
-$(deprange 3.4.1-r1 $MAXKDEVER kde-base/kmailcvt)
+$(deprange 3.4.1 $MAXKDEVER kde-base/kmailcvt)
 $(deprange-dual $PV $MAXKDEVER kde-base/kdebase-kioslaves)"
 
 KMCOPYLIB="

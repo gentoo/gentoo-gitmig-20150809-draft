@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.2.ebuild,v 1.1 2005/07/28 21:16:12 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.2.ebuild,v 1.2 2005/07/29 08:45:11 greg_g Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -23,9 +23,9 @@ DEPEND="ssl? ( dev-libs/openssl )
 	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )"
 
 RDEPEND="${DEPEND}
-$(deprange 3.4.1-r1 $MAXKDEVER kde-base/kcminit)
+$(deprange 3.4.1 $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-data)
-$(deprange 3.4.1-r1 $MAXKDEVER kde-base/kdesu)
+$(deprange 3.4.1 $MAXKDEVER kde-base/kdesu)
 $(deprange $PV $MAXKDEVER kde-base/khelpcenter)
 $(deprange $PV $MAXKDEVER kde-base/khotkeys)"
 
