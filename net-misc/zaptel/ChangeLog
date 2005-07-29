@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.53 2005/07/25 23:49:43 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.54 2005/07/29 01:12:43 stkn Exp $
+
+*zaptel-1.0.9_p1 (28 Jul 2005)
+
+  28 Jul 2005; <stkn@gentoo.org> +files/zaptel-bristuff-0.2.0-RC8l.patch,
+  -files/zaptel-1.0.0-modulesd.diff, -files/zaptel-1.0.1-modulesd.diff,
+  -files/zaptel-1.0.1-skbuff.diff, +files/zaptel-1.0.9-gentoo.diff,
+  +files/zaptel-1.0.9-rtc.patch, -files/zaptel-install_prefix-typo.patch,
+  -files/zaptel-mkdir-usrincludelinux.patch, +zaptel-1.0.9_p1.ebuild:
+  Version bump and unused files cleanup.
 
   26 Jul 2005; <stkn@gentoo.org> files/zaptel.devfsd:
   Updated devfsd rules file, fixes incorrect permissions on span subdirectories.
