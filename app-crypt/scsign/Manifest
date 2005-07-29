@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 499ebfc5ff843ff021584ec779cb7a80 scsign-0.0.4.ebuild 777
 MD5 9979c4e501313f0e6346ec660ba7e698 metadata.xml 373
 MD5 ee9ddb70558a561fd47b78cd5c2f7ed6 ChangeLog 804
@@ -6,3 +9,10 @@ MD5 217fea83a8ef8ad72f02e1c2acfbbab4 files/digest-scsign-0.0.4 63
 MD5 b414df7baf1e76821f5f09d4777e6420 files/scsign-0.0.4-printid.patch 555
 MD5 9fcabefb1789c950571b1ddc667dd65f files/digest-scsign-0.0.5 63
 MD5 84fe8e26c60b6919c0c5ca93262f5f79 files/scsign-0.0.5-printid.patch 570
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6rEwmdTrptrqvGERAm+/AJ4ictNWw5c0GwFQWajNcdcGqhqcbACfWWaM
+UB2PC/GrTeje3zSyCyTxtig=
+=SsiL
+-----END PGP SIGNATURE-----
