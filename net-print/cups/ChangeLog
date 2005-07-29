@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.136 2005/07/18 10:04:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.137 2005/07/29 15:54:28 smithj Exp $
+
+  29 Jul 2005; Jonathan Smith <smithj@gentoo.org> cups-1.1.23-r1.ebuild,
+  cups-1.1.23-r2.ebuild, cups-1.1.23-r3.ebuild, cups-1.1.23-r4.ebuild:
+  #71202: make test is broken due to an interactive testing mechanism, so i
+  replaced the default src_test with a dummy one
 
   18 Jul 2005; Carsten Lohrke <carlo@gentoo.org> cups-1.1.23-r4.ebuild:
   Let's be a bit more careful what to rm -fR in pkg_preinst().

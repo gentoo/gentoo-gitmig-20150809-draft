@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r2.ebuild,v 1.2 2005/05/10 16:17:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r2.ebuild,v 1.3 2005/07/29 15:54:28 smithj Exp $
 
 inherit eutils flag-o-matic
 
@@ -60,6 +60,13 @@ src_compile() {
 	make || die "compile problem"
 }
 
+src_test() {
+	# upstream includes an interactive test which is a nono for gentoo.
+	# therefore, since the printing herd has bigger fish to fry, for now,
+	# we just leave it out, even if FEATURES=test
+	true
+}
+
 src_install() {
 	dodir /var/spool /var/log/cups /etc/cups
 
@@ -113,6 +120,7 @@ src_install() {
 	sed -i -e "s:#application/octet-stream:application/octet-stream" ${D}/etc/cups/mime.types
 	sed -i -e "s:#application/octet-stream:application/octet-stream" ${D}/etc/cups/mime.conv
 }
+
 
 pkg_postinst() {
 	install -d -m0755 ${ROOT}/var/log/cups
