@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.20.ebuild,v 1.2 2005/07/14 11:48:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.20-r1.ebuild,v 1.1 2005/07/29 22:20:57 allanonjl Exp $
 
 inherit libtool gnome.org flag-o-matic eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 LICENSE="MIT"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="python readline ipv6"
+IUSE="python readline ipv6 doc debug"
 
 RDEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
@@ -41,6 +41,7 @@ src_compile() {
 	econf --with-zlib \
 		$(use_with python) \
 		$(use_with readline) \
+		$(use_with debug) \
 		$(use_enable ipv6) || die
 
 	# Patching the Makefiles to respect get_libdir
@@ -63,6 +64,7 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
+	use doc || rm -rf ${D}/usr/share/doc/${PF}/html
 }
 
 pkg_postinst() {
