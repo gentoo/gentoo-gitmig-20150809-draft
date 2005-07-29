@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.8.ebuild,v 1.9 2005/07/25 22:45:03 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.8.ebuild,v 1.10 2005/07/29 19:51:57 stkn Exp $
 
 inherit eutils perl-module
 
@@ -121,6 +121,10 @@ src_unpack() {
 
 	# hppa patch for gsm codec
 	epatch ${FILESDIR}/1.0.0/${PN}-1.0.8-hppa.patch
+
+	# mark adsi functions as weak references, things will blow
+	# on hardened otherwise (bug #100697 and possibly #85655)
+	epatch ${FILESDIR}/1.0.0/${PN}-1.0.9-weak-references.diff
 
 	# gsm codec still uses -fomit-frame-pointer, and other codecs have their
 	# own flags. We only change the arch.

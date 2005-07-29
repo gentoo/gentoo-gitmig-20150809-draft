@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.71 2005/07/29 01:19:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.72 2005/07/29 19:51:57 stkn Exp $
+
+  29 Jul 2005; <stkn@gentoo.org>
+  +files/1.0.0/asterisk-1.0.9-weak-references.diff, asterisk-1.0.9.ebuild,
+  asterisk-1.0.8.ebuild:
+  Added patch to mark adsi_* functions as weak references, this fixes loading
+  of res_features.so (= asterisk startup) on ssp enabled systems. Many thanks
+  to Uberlord (Roy Marples <uberlord@gentoo.org>) for examining the problem
+  and providing a patch. Closing #100697 and #85655.
 
 *asterisk-1.0.9 (29 Jul 2005)
 
