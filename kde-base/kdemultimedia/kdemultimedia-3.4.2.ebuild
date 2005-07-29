@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.2.ebuild,v 1.1 2005/07/28 12:57:23 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.2.ebuild,v 1.2 2005/07/29 11:53:04 danarmak Exp $
 
 inherit kde-dist eutils
 
@@ -25,7 +25,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	gstreamer? ( >=media-libs/gstreamer-0.8
 	             >=media-libs/gst-plugins-0.8 )
 	>=media-libs/taglib-1.2
-	musicbrainz? ( media-libs/tunepimp )"
+	musicbrainz? ( media-libs/tunepimp media-libs/musicbrainz )"
 
 RDEPEND="${DEPEND}
 	gstreamer? ( mp3? ( >=media-plugins/gst-plugins-mad-0.8 )
