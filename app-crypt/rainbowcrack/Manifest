@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9a09ec39830f7d99ccc059e7efcf892e rainbowcrack-1.2.ebuild 1595
-MD5 f6160113bef03fb0ccfad4d0d7156d22 ChangeLog 738
 MD5 b501021113660333d344a4fa18808e5c metadata.xml 988
-MD5 a24acbb0c808a455a647bb18ba9dc99b files/digest-rainbowcrack-1.2 150
+MD5 c43ed6dd7b6047493b2a8394257f233d ChangeLog 855
+MD5 dcd72c51ec500f8b1362293fbf5497de rainbowcrack-1.2.ebuild 1575
 MD5 d13ce783ad640b04752c5f0bce77d0ee files/rainbowcrack-1.2-makefile.patch 1134
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCjjv906ebR+OMO78RAo4/AJsHojmGyRrXdFGVwD3mRITdMHhOSACeNx/b
-+0vjM33Yuy4r8f8CIoYicbc=
-=aJSd
------END PGP SIGNATURE-----
+MD5 a24acbb0c808a455a647bb18ba9dc99b files/digest-rainbowcrack-1.2 150
