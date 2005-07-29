@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r2.ebuild,v 1.12 2005/07/29 00:42:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r2.ebuild,v 1.13 2005/07/29 16:26:13 gmsoft Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -443,7 +443,7 @@ src_unpack() {
 		cd ${WORKDIR}
 		unpack ${LOCAL_P}-hppa-patches-p1.tar.bz2
 		cd ${S}
-		epatch "${FILESDIR}"/files/2.3.4/hppa-no-pie.patch
+		epatch "${FILESDIR}"/2.3.4/hppa-no-pie.patch
 		EPATCH_EXCLUDE="0[123459]0* 055* 1[2379]0* 200* 230*"
 		for x in ${EPATCH_EXCLUDE}
 		do
