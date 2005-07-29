@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.50 2005/07/26 20:18:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.51 2005/07/29 23:52:04 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -971,11 +971,11 @@ build() {
 		FAST=1 ${S}/config/util/makeg.sh World WORLDOPTS="" MAKE="make" \
 			|| die "debug make World failed"
 	else
-		FAST=1 emake World WORLDOPTS="" MAKE="make" || die "make World failed"
+		FAST=1 emake -j1 World WORLDOPTS="" MAKE="make" || die "make World failed"
 	fi
 
 	if use nls; then
-		emake -C ${S}/nls MAKE="make" || die "nls build failed"
+		emake -j1 -C ${S}/nls MAKE="make" || die "nls build failed"
 	fi
 }
 
