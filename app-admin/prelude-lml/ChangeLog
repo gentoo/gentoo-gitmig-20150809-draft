@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.16 2005/07/24 22:32:28 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.17 2005/07/29 02:27:18 vanquirius Exp $
+
+  29 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
+  -prelude-lml-0.9.0_rc4.ebuild:
+  Removing old version.
 
 *prelude-lml-0.9.0_rc5 (24 Jul 2005)
 
