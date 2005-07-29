@@ -1,0 +1,15 @@
+--- lib/rcscripts/net.modules.d/dhclient	2005-07-29 19:48:12.000000000 +0200
++++ lib/rcscripts/net.modules.d/dhclient	2005-07-29 19:47:50.000000000 +0200
+@@ -149,11 +149,10 @@ dhclient_start() {
+     # Send our hostname by editing cffile
+     if ${edit} && [[ -e ${cffile} && ${d} != *" nosendhost "* ]] ; then
+ 	local hostname=$( hostname )
+-	hostname="fu2"
+ 	if [[ ${hostname} != "(none)" && ${hostname} != "localhost" ]]; then
+ 	    sed -i '/^[ \t]*send[ \t]*host-name[ \t]*/d' "${cffile}"
+ 	    if [[ -s ${cffile} ]]; then
+-		sed -i '1 isend host-name "'"${hostname}"'"' "${cffile}"
++		sed -i '1 isend host-name "'"${hostname}"'";' "${cffile}"
+ 	    else
+ 		echo "send host-name \"${hostname}\";" > "${cffile}"
+ 	    fi
