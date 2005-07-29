@@ -1,31 +1,30 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-1.99.10.ebuild,v 1.2 2005/05/24 14:30:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r1.ebuild,v 1.1 2005/07/29 11:18:36 mcummings Exp $
 
-inherit eutils
-
-front=${PV%\.*}
-back=\_${PV##*\.}
-MY_PV=${PV:0:${#front}}${back}
-
-MY_P=${PN}-${MY_PV}
-S=${WORKDIR}/${MY_P}
+inherit apache-module perl-module eutils
 DESCRIPTION="An embedded Perl interpreter for Apache2"
-SRC_URI="http://perl.apache.org/dist/${MY_P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/G/GO/GOZER/${P}.tar.gz"
 HOMEPAGE="http://perl.apache.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 amd64"
+KEYWORDS="~x86 ~amd64 ~alpha ~ia64 ~sparc ~ppc ~ppc64"
 IUSE=""
 SLOT="1"
 
 # see bug 30087 for why sudo is in here
+need_apache2
 
-DEPEND="dev-lang/perl
-	=net-www/apache-2*
-	>=perl-core/CGI-2.93
-	>=sys-apps/sed-4
+DEPEND="!dev-perl/Apache-Test
+	dev-lang/perl
+	>=perl-core/CGI-3.08
+	>=dev-perl/Compress-Zlib-1.09
+	>=net-www/apache-2.0.47
 	app-admin/sudo"
+
+APACHE2_MOD_CONF="75_${PN}.conf apache2-mod_perl-startup.pl"
+DOCFILES="Changes INSTALL LICENSE README STATUS"
+APACHE2_MOD_DEFINE="PERL"
 
 src_unpack() {
 	unpack ${A}
@@ -61,9 +60,11 @@ src_unpack() {
 
 	sed -i -e "s/sleep \$_/sleep \$_ << 2/" ${S}/Apache-Test/lib/Apache/TestServer.pm || die "problem editing TestServer.pm"
 
-	# this one is because of sandbox problems trying to uninstall test.pm
+	# i wonder if this is the same sandbox issue, but TMPDIR is not
+	# getting through via SetEnv.  sneak it through here.
 
-	epatch ${FILESDIR}/${P}-nonukes.patch || die
+	# rendhalver - this got redone for 2.0.1 and seems to fix the make test problems
+	epatch ${FILESDIR}/${P}-sneak-tmpdir.patch
 }
 
 src_compile() {
@@ -71,45 +72,63 @@ src_compile() {
 		PREFIX=${D}/usr \
 		MP_TRACE=1 \
 		MP_DEBUG=1 \
-		MP_AP_PREFIX=/usr \
 		MP_USE_DSO=1 \
-		MP_INST_APACHE2=1 \
 		MP_APXS=/usr/sbin/apxs2  \
 		CCFLAGS="${CFLAGS} -fPIC" \
+		TMPDIR=${T} \
 		INSTALLDIRS=vendor </dev/null || die
 
-	emake || die
+	# reported that parallel make is broken in bug 30257
+	emake -j1 || die
 
+	# mcummings - disabling tests right, there's a bug i haven't found an override for
+	# rendhalver - i seem to have fixed this so turning them back on again. 
+	# yet that sets /tmp as your tmp dir
+	#hasq maketest $FEATURES && src_test
+}
+
+src_test() {
 	# make test notes whether it is running as root, and drops
 	# privileges all the way to "nobody" if so, so we must adjust
 	# write permissions accordingly in this case.
+
+	# IF YOU SUDO TO EMERGE AND HAVE !env_reset set testing will fail!
 
 	if [ "`id -u`" == '0' ]; then
 		chown nobody:nobody ${WORKDIR}
 		chown nobody:nobody ${T}
 	fi
 
-	# these next two stanzas avoid sandbox problems with make test
-	# tell mod_cgid to make the socket here instead of /var/run/cgisock
-	echo -e "\nScriptSock logs/cgisock" >> ${S}/t/conf/extra.conf.in
-	echo -e "\nScriptSock logs/cgisock" >> ${S}/ModPerl-Registry/t/conf/extra.conf.in
-	# tell CGI.pm to create new tmpfiles in this directory
-	echo -e "\nSetEnv TMPDIR ${T}" >> ${S}/t/conf/extra.conf.in
+	# this does not || die because of bug 21325.  kudos to smark for
+	# the idea of setting HOME.
 
-	# this does not || die because of bug 21325.
-
-	make test
+	TMPDIR="${T}" HOME="${T}/" make test
 }
 
 src_install() {
-	dodir /usr/lib/apache2-extramodules
+	dodir /usr/lib/apache2/modules
 	make install \
-		MODPERL_AP_LIBEXECDIR=${D}/usr/lib/apache2-extramodules \
+		MODPERL_AP_LIBEXECDIR=${D}/usr/lib/apache2/modules \
 		MODPERL_AP_INCLUDEDIR=${D}/usr/include/apache2 \
 		MP_INST_APACHE2=1 \
 		INSTALLDIRS=vendor || die
 
-	insinto /etc/apache2/conf/modules.d
+	# rendhalver - fix the perllocal.pod that gets installed
+	# it seems to me that this has been getting installed for ages
+
+	fixlocalpod
+
+	# this is an attempt to get @INC in line with /usr/bin/perl.
+	# there is blib garbage in the mainstream one that can only be
+	# useful during internal testing, so we wait until here and then
+	# just go with a clean slate.  should be much easier to see what's
+	# happening and revert if problematic.
+
+	# this is not needed anymore because Apache2.pm no longer exists
+	#eval $(perl -V:vendorarch)
+	#cp ${FILESDIR}/${P}-Apache2.pm ${D}/${vendorarch}/Apache2.pm
+
+	insinto /etc/apache2/modules.d
 	doins ${FILESDIR}/75_mod_perl.conf \
 		${FILESDIR}/apache2-mod_perl-startup.pl
 
@@ -117,4 +136,7 @@ src_install() {
 		INSTALL LICENSE README STATUS
 	cp -a docs ${D}/usr/share/doc/${PF}
 	cp -a todo ${D}/usr/share/doc/${PF}
+	for FILE in `grep -lr portage ${D}/*|grep -v ".so"`; do
+		sed -i -e "s:${D}:/:g" ${FILE}
+	done
 }

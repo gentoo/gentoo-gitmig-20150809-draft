@@ -1,6 +1,19 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.6 2005/07/25 18:16:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.7 2005/07/29 11:18:36 mcummings Exp $
+
+*mod_perl-2.0.1-r1 (29 Jul 2005)
+
+  29 Jul 2005; Michael Cummings <mcummings@gentoo.org>
+  -files/mod_perl-2.0.1-makefile.patch, -mod_perl-1.99.10.ebuild,
+  -mod_perl-1.99.17-r1.ebuild, -mod_perl-1.99.17.ebuild,
+  -mod_perl-2.0.0.ebuild, +mod_perl-2.0.1-r1.ebuild, -mod_perl-2.0.1.ebuild:
+  Sorry for the version bump, but this is a corrected ebuild (see viewcvs for
+  some bad diffs). The issue with testing has been resolved - if you run sudo
+  emerge and you have !env_reset set in your /etc/sudoers (and have testing
+  enabled), expect to have trouble. sudo su - and then emerging has no problems
+  with the tests (somewhere along the line the uid and euid get muddled). Thanks
+  again to rendhalver for a lot of work and patience.
 
 *mod_perl-2.0.1 (25 Jul 2005)
 
