@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.4.2.ebuild,v 1.1 2005/07/28 21:16:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.4.2.ebuild,v 1.2 2005/07/29 08:15:46 greg_g Exp $
 
 KMNAME=kdebase
 # Note: we need >=kdelibs-3.3.2-r1, but we don't want 3.3.3!
@@ -10,7 +10,7 @@ inherit kde-meta eutils
 
 DESCRIPTION="KDE: Web browser, file manager, ..."
 KEYWORDS=" ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="java"
 
 OLDDEPEND="~kde-base/libkonq-3.3.1"
 DEPEND="
@@ -19,7 +19,7 @@ $(deprange $PV $MAXKDEVER kde-base/libkonq)"
 RDEPEND="${DEPEND}
 $(deprange $PV $MAXKDEVER kde-base/kcontrol)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-kioslaves)
-java? ( || ( virtual/jdk virtual/jre ) )"
+java? ( >=virtual/jre-1.4 )"
 
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY=kdesktop/KDesktopIface.h
