@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/asterisk-chan_sccp-0.0.20050725.ebuild,v 1.1 2005/07/29 03:03:25 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/asterisk-chan_sccp-0.0.20050725.ebuild,v 1.2 2005/07/29 10:42:10 dholm Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/chan-sccp/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 LICENSE="GPL-2"
 
 DEPEND=">=net-misc/asterisk-1.0.5-r2"
