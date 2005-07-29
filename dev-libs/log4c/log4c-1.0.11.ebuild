@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.9 2005/07/29 23:30:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.10 2005/07/29 23:31:09 dragonheart Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 	epatch ${FILESDIR}/makefile.doc.am.patch
 	epatch ${FILESDIR}/makefile.doc.in.patch
 	epatch ${FILESDIR}/configure.in.patch
-	epatch ${FILESDIR}/log4c_1.0.11_test.patch 
+	epatch ${FILESDIR}/log4c_1.0.11_test.patch
 	epatch ${FILESDIR}/${P}-function.patch
 }
 

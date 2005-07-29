@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 ea2f2a72633a899ef7da13f514e43418 ChangeLog 4274
-MD5 8794983717b81a43ba85d7dedc22649d log4c-1.0.11.ebuild 1413
+MD5 a09d35383d42c89f3c485eace2503404 log4c-1.0.11.ebuild 1413
 MD5 40ffeeafa00fb76f595b5bd962b6922f log4c-1.0.12.ebuild 1181
 MD5 47bcb101a6d5b94977305f73c8dbdbb0 log4c-1.0.6-r1.ebuild 1011
 MD5 4eafc1e08f52712fd036e73730b0a172 metadata.xml 435
@@ -21,7 +21,7 @@ MD5 2debb494dcd9f4261f707e22e453f391 files/log4c-1.0.10-nodocs.patch 838
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6rwLmdTrptrqvGERArIxAJ93TRACCMTtPbckL+jGNB8osYmmFACfXhgh
-FuIv74REmuvCHLihEQuiKxc=
-=Za/P
+iD8DBQFC6rxLmdTrptrqvGERAv8hAJ9wOdZaTII3u7up/G7F5xJKiuEFegCfQpBR
+0MDuqchTwByTfigZNnwIEUQ=
+=SgcN
 -----END PGP SIGNATURE-----
