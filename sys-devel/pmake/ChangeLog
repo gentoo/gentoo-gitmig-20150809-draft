@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/pmake
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.23 2005/06/17 21:28:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.24 2005/07/29 12:02:41 flameeyes Exp $
+
+*pmake-1.111.1 (29 Jul 2005)
+
+  29 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +pmake-1.111.1.ebuild:
+  New version (latest from Debian testing). Install as make for BSD userland
+  systems, install mk files only on GNU userland systems. Maintainership took
+  over by bsd herd.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> pmake-1.98.ebuild:
   Stable on ppc.
