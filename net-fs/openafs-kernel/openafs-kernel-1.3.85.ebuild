@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.3.85.ebuild,v 1.3 2005/07/29 10:01:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.3.85.ebuild,v 1.4 2005/07/29 17:32:06 dsd Exp $
 
 inherit eutils linux-mod versionator
 
@@ -33,7 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-linux-kernel-headers=$KERNEL_DIR || die "Failed: econf"
+	econf --with-linux-kernel-headers=${KV_DIR} || die "Failed: econf"
 	# unset ARCH, because else it will be used as an incent to start
 	# cross-compiling the kernel module
 	env -u ARCH make only_libafs || die "Failed: make"
