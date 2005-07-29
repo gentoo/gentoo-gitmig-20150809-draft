@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.8.ebuild,v 1.4 2005/03/23 15:33:49 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.8.ebuild,v 1.5 2005/07/29 23:17:43 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/blitz-0.8-makefile.patch || die "patch failed"
+	epatch ${FILESDIR}/blitz-0.8-makefile.patch
 }
 
 src_compile() {
