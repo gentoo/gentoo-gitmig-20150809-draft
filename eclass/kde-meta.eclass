@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.42 2005/07/25 09:58:13 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.43 2005/07/29 08:34:59 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -123,21 +123,6 @@ else
 	DEPEND="${DEPEND} !$(get-parent-package ${CATEGORY}/${PN})"
 	RDEPEND="${RDEPEND} !$(get-parent-package ${CATEGORY}/${PN})"
 fi
-
-# TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
-
-# kdebase: all configure.in's talk about java. Need to investigate which ones
-# actually need it.
-if [ "$KMNAME" == "kdebase" ]; then
-	IUSE="$IUSE java"
-	DEPEND="$DEPEND java? ( || ( virtual/jdk virtual/jre ) )"
-	RDEPEND="$RDEPEND java? ( || ( virtual/jdk virtual/jre ) )"
-
-	# bug 82032: the configure check for java is unnecessary as well as broken
-	myconf="$myconf --without-java"
-fi
-
-# TODO FIX ends
 
 # Set the following variables in the ebuild. Only KMNAME must be set, the rest are optional.
 # A directory or file can be a path with any number of components (eg foo/bar/baz.h).
@@ -391,18 +376,9 @@ function kde-meta_src_compile() {
 
 	set_common_variables
 
-	# kdebase: all configure.in's talk about java. Need to investigate which ones
-	# actually need it.
 	if [ "$KMNAME" == "kdebase" ]; then
-		if use java ; then
-			if has_version virtual/jdk ; then
-				myconf="$myconf --with-java=$(java-config --jdk-home)"
-			else
-				myconf="$myconf --with-java=$(java-config --jre-home)"
-			fi
-		else
-			myconf="$myconf --without-java"
-		fi
+		# bug 82032: the configure check for java is unnecessary as well as broken
+		myconf="$myconf --without-java"
 	fi
 
 	# confcache support. valid only for my (danarmak's) port of stuart's confcache to portage .51,
