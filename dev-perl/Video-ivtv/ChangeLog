@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Video-ivtv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/ChangeLog,v 1.4 2005/04/20 15:33:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/ChangeLog,v 1.5 2005/07/29 16:01:45 pvdabeel Exp $
+
+  29 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  PowerPC keyworded
 
   20 Apr 2005; Simon Stelling <blubb@gentoo.org> Video-ivtv-0.13.ebuild:
   added ~amd64

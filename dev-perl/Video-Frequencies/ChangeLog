@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Video-Frequencies
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Frequencies/ChangeLog,v 1.3 2005/04/18 19:30:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Frequencies/ChangeLog,v 1.4 2005/07/29 15:59:45 pvdabeel Exp $
+
+  29 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  PowerPC keyworded
 
   18 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   Video-Frequencies-0.03.ebuild:
