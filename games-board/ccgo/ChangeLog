@@ -1,0 +1,10 @@
+# ChangeLog for games-board/ccgo
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ChangeLog,v 1.1 2005/07/29 05:28:00 mr_bones_ Exp $
+
+*ccgo-0.3.6.2 (29 Jul 2005)
+
+  29 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +ccgo-0.3.6.2.ebuild:
+  initial commit - ebuild supplied by Dustin Koupal via bug #100642
+
