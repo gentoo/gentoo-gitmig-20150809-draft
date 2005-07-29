@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.371 2005/07/26 23:17:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.372 2005/07/29 00:42:54 vapier Exp $
+
+  29 Jul 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/2.3.4/hppa-no-pie.patch, glibc-2.3.2-r12.ebuild,
+  glibc-2.3.3.20040420-r2.ebuild, glibc-2.3.4.20040619-r2.ebuild,
+  glibc-2.3.4.20040808-r1.ebuild, glibc-2.3.4.20041102-r1.ebuild:
+  Add patch to disable building nscd as PIE on hppa since PIE support is
+  broken in glibc for parisc.
 
   26 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.5-r1.ebuild:
