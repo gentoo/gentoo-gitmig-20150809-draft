@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.1-r1.ebuild,v 1.18 2005/05/07 11:14:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.1-r1.ebuild,v 1.19 2005/07/29 23:41:08 dragonheart Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PF}.diff || die "epatch failed."
+	epatch ${FILESDIR}/${PF}.diff
 }
 
 src_compile() {

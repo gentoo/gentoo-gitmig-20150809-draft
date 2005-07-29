@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.32-r1.ebuild,v 1.16 2005/02/06 17:20:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.32-r1.ebuild,v 1.17 2005/07/29 23:44:11 dragonheart Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="app-arch/unzip"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PF}-gentoo.diff || die "epatch failed."
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
