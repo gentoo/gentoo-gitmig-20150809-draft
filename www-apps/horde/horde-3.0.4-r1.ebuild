@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.0.4-r1.ebuild,v 1.1 2005/05/07 23:28:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.0.4-r1.ebuild,v 1.2 2005/07/29 00:10:38 vapier Exp $
 
 inherit horde
 
@@ -11,7 +11,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="mysql"
 
 DEPEND=""
-RDEPEND=">=dev-php/mod_php-4.1.0
+RDEPEND="virtual/php
 	>=sys-devel/gettext-0.10.40
 	>=dev-libs/libxml2-2.4.21
 	>=www-apps/horde-pear-1.3
@@ -22,7 +22,7 @@ RDEPEND=">=dev-php/mod_php-4.1.0
 EHORDE_PATCHES="${FILESDIR}/horde-3.0.4-freebusy.patch"
 
 pkg_setup() {
-	has_version '>=dev-php/mod_php-5' \
+	has_version '>=virtual/php-5' \
 		&& HORDE_PHP_FEATURES="nls session xml2" \
 		|| HORDE_PHP_FEATURES="nls"
 	horde_pkg_setup
