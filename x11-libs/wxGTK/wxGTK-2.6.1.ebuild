@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.1.ebuild,v 1.2 2005/07/12 20:09:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.1.ebuild,v 1.3 2005/07/29 12:17:12 swegener Exp $
 
 inherit wxlib gnuconfig
 
@@ -17,9 +17,9 @@ RDEPEND="${RDEPEND}
 		>=dev-libs/glib-2.0 )
 	wxgtk1? ( =x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2* )
-	wxgtk1? ( gtk2? (media-libs/libpng
+	wxgtk1? ( gtk2? ( media-libs/libpng
 		media-libs/jpeg
-		media-libs/tiff))
+		media-libs/tiff ) )
 	odbc? ( dev-db/unixODBC )
 	!mips? ( !arm? ( !hppa? ( !ia64? ( !ppc64? ( !alpha? ( !sparc? ( sdl? ( media-libs/sdl-sound ) ) ) ) ) ) ) )"
 
