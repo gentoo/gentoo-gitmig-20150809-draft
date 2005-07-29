@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.2.1.ebuild,v 1.1 2005/05/13 21:05:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.2.1.ebuild,v 1.2 2005/07/29 12:08:43 seemant Exp $
 
 inherit rpm eutils flag-o-matic versionator
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.altlinux.ru/pub/distributions/ALTLinux/Sisyphus/SRPMS.classic
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
