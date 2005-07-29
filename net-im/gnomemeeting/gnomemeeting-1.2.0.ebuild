@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.2.0.ebuild,v 1.8 2005/07/27 11:00:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.2.0.ebuild,v 1.9 2005/07/29 18:45:27 stkn Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils flag-o-matic
 
 DESCRIPTION="H.323 videoconferencing and VoIP softphone"
 HOMEPAGE="http://www.gnomemeeting.org/"
@@ -56,8 +56,10 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
+
+	# filter -O3, causes trouble with plugins (bug #88710)
+	replace-flags -O3 -O2
 
 	myconf="${myconf} --with-ptlib-includes=/usr/include/ptlib"
 	myconf="${myconf} --with-ptlib-libs=/usr/lib"

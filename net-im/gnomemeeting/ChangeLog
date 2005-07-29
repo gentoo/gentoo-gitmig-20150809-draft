@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.57 2005/07/27 11:00:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.58 2005/07/29 18:45:27 stkn Exp $
+
+  29 Jul 2005; <stkn@gentoo.org> gnomemeeting-1.2.1.ebuild,
+  gnomemeeting-1.2.0.ebuild:
+  -O3 causes trouble with audio plugins, replace with -O2
+  (bug #88710).
 
   27 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gnomemeeting-1.2.0.ebuild, gnomemeeting-1.2.1.ebuild:
