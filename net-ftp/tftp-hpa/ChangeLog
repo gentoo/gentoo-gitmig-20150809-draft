@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.4 2005/02/27 22:31:41 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.5 2005/07/29 22:05:36 vanquirius Exp $
+
+  29 Jul 2005; Marcelo Goes <vanquirius@gentoo.org> -tftp-hpa-0.33.ebuild,
+  -tftp-hpa-0.40.ebuild, tftp-hpa-0.40-r1.ebuild:
+  Really fix bug 83325. Thanks to Dan Eisenhut <daniel.eisenhut@med.ge.com>.
 
 *tftp-hpa-0.40-r1 (27 Feb 2005)
 
