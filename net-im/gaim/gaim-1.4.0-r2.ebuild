@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.4.0-r1.ebuild,v 1.1 2005/07/21 04:43:02 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.4.0-r2.ebuild,v 1.1 2005/07/29 14:02:31 rizzo Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="nls perl spell nas cjk gnutls silc eds krb4 tcltk debug"
 
 RDEPEND=">=x11-libs/gtk+-2.0
@@ -92,6 +92,9 @@ src_unpack() {
 	use cjk && epatch ${FILESDIR}/gaim-0.76-xinput.patch
 	epatch ${FILESDIR}/gaim-1.4.0-oscar-ssi.diff
 	epatch ${FILESDIR}/gaim-1.4.0-msn-userlist.diff
+
+	cd ${S}/src/protocols/gg
+	epatch ${FILESDIR}/gaim-1.4.0-libgg-mem.patch
 }
 
 src_compile() {
