@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.3 2005/07/26 23:25:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.4 2005/07/29 22:28:41 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1099,21 +1099,6 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 			DEPEND="${DEPEND} ${CATEGORY}/linux-headers"
 		fi
 	fi
-
-	case ${CTARGET} in
-		x86_64-pc-linux-gnu)
-			[[ ${CHOST/-*/} == "i686" ]] || RDEPEND="${RDEPEND} cross-i686-pc-linux-gnu/${PN}"
-		;;
-		sparc64-unknown-linux-gnu)
-			[[ ${CHOST/-*/} == "sparc" ]] || RDEPEND="${RDEPEND} cross-sparc-unknown-linux-gnu/${PN}"
-		;;
-		powerpc64-unknown-linux-gnu)
-			[[ ${CHOST/-*/} == "powerpc" ]] || RDEPEND="${RDEPEND} cross-powerpc-unknown-linux-gnu/${PN}"
-		;;
-		mips64-unknown-linux-gnu)
-			[[ ${CHOST/-*/} == "mips" ]] || RDEPEND="${RDEPEND} cross-mips-unknown-linux-gnu/${PN}"
-		;;
-	esac
 fi
 
 pkg_setup() {
