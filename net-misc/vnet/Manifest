@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 0aec7c5bc8fb10f96118bf6b40d0cbfb vnet-0.03.ebuild 577
-MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
+MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
 MD5 6f2e974683139025454c289781d6a017 ChangeLog 331
 MD5 ec41c5cccfd91f18dd09b00c755e4283 files/digest-vnet-0.03 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCqB8nmPFBzbX68WERAiTzAJ4rTqS7ZWvwSg2ompkI/sfdWLOCeACcDRGh
-1bczqe32Il1+SS8S5KvWUZc=
-=9SU8
+iD8DBQFC6nrdmPFBzbX68WERAqHjAKCNP1gx1mX1c5v9AZ4UhAde+UaCjQCaA+yJ
+I7pq2yhvi/x0wWmdSSNKXnk=
+=14Sl
 -----END PGP SIGNATURE-----
