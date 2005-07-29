@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/torsmo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.35 2005/06/22 11:00:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.36 2005/07/29 22:35:19 dragonheart Exp $
+
+  29 Jul 2005; Daniel Black <dragonheart@gentoo.org> torsmo-0.18-r1.ebuild:
+  removed epatch || die
 
 *torsmo-0.18-r6 (22 Jun 2005)
 
