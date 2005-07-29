@@ -108,7 +108,6 @@ pda
 svga
 trusted
 wavelan
-x86
 firebird
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"

@@ -4,7 +4,6 @@
 svga
 icc
 icc-pgo
-x86
 
 # These are debatable, since technically an ia64 could support this hardware
 pcmcia
