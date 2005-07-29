@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.2.13.ebuild,v 1.4 2005/07/29 17:50:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.2.13.ebuild,v 1.5 2005/07/29 18:01:27 dsd Exp $
 
-inherit eutils linux-mod versionator check-kernel
+inherit eutils linux-mod versionator toolchain-funcs
 
 PATCHVER=0.1
 MY_PN=${PN/-kernel}
@@ -18,14 +18,13 @@ LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ia64"
 
-DEPEND="virtual/linux-sources"
-
 PATCHDIR=${WORKDIR}/gentoo/patches/$(get_version_component_range 1-2)/kernel
 
 pkg_setup() {
-	if is_2_5_kernel || is_2_6_kernel
-	then
-		die "Linux 2.6 kernels do not use this version of openafs.  Use the 1.3 series"
+	if kernel_is gt 2 4; then
+		eerror "openafs-1.2 does not support kernels newer than Linux 2.4."
+		einfo "Please try the openafs-1.3 series"
+		die "Kernel is too new!"
 	fi
 	linux-mod_pkg_setup
 }
@@ -38,9 +37,7 @@ src_unpack() {
 
 src_compile() {
 	econf --with-linux-kernel-headers=${KV_DIR} || die "Failed: econf"
-	# unset ARCH, because else it will be used as an incent to start
-	# cross-compiling the kernel module
-	env -u ARCH make only_libafs || die "Failed: make"
+	ARCH="$(tc-arch-kernel)" make only_libafs || die "Failed: make"
 }
 
 src_install() {
