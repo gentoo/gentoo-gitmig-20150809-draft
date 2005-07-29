@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2.ebuild,v 1.4 2005/05/20 19:34:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2.ebuild,v 1.5 2005/07/29 22:59:06 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A} || die "unpack failed"
 	mv ${P}-src-algorithmpatch/Hash* ${S}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-makefile.patch || die "patch failed"
+	epatch ${FILESDIR}/${P}-makefile.patch
 }
 
 src_compile() {
