@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.3.ebuild,v 1.7 2005/07/28 16:59:08 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.3.ebuild,v 1.8 2005/07/29 16:28:55 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -21,7 +21,7 @@ IUSE="ssl nls python tcltk perl libg++ pam readline xml2 zlib doc selinux kerber
 
 S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc
-	=dev-db/libpq-8.0.3
+	=dev-db/libpq-8.0.3*
 	sys-devel/autoconf
 	>=sys-libs/ncurses-5.2
 	>=sys-devel/bison-1.875
@@ -35,7 +35,7 @@ DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
 	kerberos? ( virtual/krb5 )"
 RDEPEND="virtual/libc
-	=dev-db/libpq-8.0.3
+	=dev-db/libpq-8.0.3*
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
