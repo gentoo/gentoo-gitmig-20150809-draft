@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.75 2005/07/20 12:28:47 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.76 2005/07/29 21:39:44 solar Exp $
+
+  29 Jul 2005; <solar.@gentoo.org> wireless-tools-27-r1.ebuild,
+  wireless-tools-28_pre8-r1.ebuild:
+  - please please stop breaking the depends here. wireless-tools does not need
+  to depend on anything new
 
   20 Jul 2005; <brix@gentoo.org> -wireless-tools-27.ebuild,
   -wireless-tools-28_pre8.ebuild:
