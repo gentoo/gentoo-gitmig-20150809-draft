@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.43 2005/07/29 08:34:59 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.44 2005/07/29 13:45:05 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -392,12 +392,12 @@ function kde-meta_src_compile() {
 		if [ "$section" == "configure" ]; then
 			# don't log makefile.common stuff in confcache
 			[ ! -f "Makefile.in" ] && make -f admin/Makefile.common
-			confcache_start
+			[ "`type -t confcache_start`" == "function" ] && confcache_start
 			myconf="$EXTRA_ECONF $myconf"
 		fi
 		kde_src_compile $section
 		if [ "$section" == "configure" ]; then
-			confcache_stop
+			[ "`type -t confcache_stop`" == "function" ] && confcache_stop
 		fi
 	done
 }
