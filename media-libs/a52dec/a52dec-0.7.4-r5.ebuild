@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r5.ebuild,v 1.4 2005/07/16 20:20:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r5.ebuild,v 1.5 2005/07/29 13:38:31 flameeyes Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -23,6 +23,8 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-build.patch
+	epatch ${FILESDIR}/${P}-freebsd.patch
+
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
 	libtoolize --force --copy --automake || die "libtoolize"
