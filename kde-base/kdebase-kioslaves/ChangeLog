@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.19 2005/07/28 21:16:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.20 2005/07/29 18:44:34 danarmak Exp $
+
+  29 Jul 2005; Dan Armak <danarmak@gentoo.org>
+  +files/configure-fix-kdebase-openexr.patch,
+  kdebase-kioslaves-3.4.2.ebuild:
+  Add configure patch that fixes our control of whether openexr support is
+  compiled or not. Add optional dep on openexr.
 
 *kdebase-kioslaves-3.4.2 (28 Jul 2005)
 
