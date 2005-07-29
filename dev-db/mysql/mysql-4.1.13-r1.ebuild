@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13-r1.ebuild,v 1.2 2005/07/26 17:14:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13-r1.ebuild,v 1.3 2005/07/29 11:39:14 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -73,6 +73,19 @@ mysql_get_datadir() {
 		einfo "Using default DATADIR"
 	fi
 	einfo "MySQL DATADIR is ${DATADIR}"
+
+	if [ -z "${PREVIOUS_DATADIR}" ] ; then
+		if [ -a "${DATADIR}" ] ; then
+			ewarn "Previous datadir found, it's YOUR job to change"
+			ewarn "ownership and have care of it"
+			PREVIOUS_DATADIR="yes"
+			export PREVIOUS_DATADIR
+		else
+			PREVIOUS_DATADIR="no"
+			export PREVIOUS_DATADIR
+		fi
+	fi
+
 	export DATADIR
 }
 
@@ -268,13 +281,19 @@ src_install() {
 	make install DESTDIR="${D}" benchdir_root="/usr/share/mysql" || die
 
 	diropts "-m0750"
-	dodir "${DATADIR}" /var/run/mysqld /var/log/mysql
+	if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
+		dodir "${DATADIR}"
+		keepdir "${DATADIR}"
+		chown -R "${D}/${DATADIR}"
+	fi
+
+	dodir /var/log/mysql
 
 	diropts "-m0755"
 	dodir /var/run/mysqld
 
-	keepdir "${DATADIR}" /var/run/mysqld /var/log/mysql
-	chown -R mysql:mysql ${D}/var/lib/mysql \
+	keepdir /var/run/mysqld /var/log/mysql
+	chown -R mysql:mysql \
 		${D}/var/run/mysqld \
 		${D}/var/log/mysql
 
@@ -406,7 +425,7 @@ pkg_config() {
 
 	${ROOT}/usr/bin/mysql_install_db || die "MySQL databases not installed"
 
-	# MySQL 5.0 don't ned this
+	# MySQL 5.0 don't need this
 	chown -R mysql:mysql ${DATADIR}
 	chmod 0750 ${ROOT}/${DATADIR}
 
@@ -473,7 +492,8 @@ pkg_postinst() {
 
 	if ! useq minimal; then
 		#empty dirs...
-		[ -d "${ROOT}/${DATADIR}" ] || install -d -m0750 -o mysql -g mysql ${ROOT}/var/lib/mysql
+		[[ "${PREVIOUS_DATADIR}" != "yes" ]] \
+		&& [ -d "${ROOT}/${DATADIR}" ] || install -d -m0750 -o mysql -g mysql ${ROOT}/var/lib/mysql
 		[ -d "${ROOT}/var/run/mysqld" ] || install -d -m0755 -o mysql -g mysql ${ROOT}/var/run/mysqld
 		[ -d "${ROOT}/var/log/mysql" ] || install -d -m0755 -o mysql -g mysql ${ROOT}/var/log/mysql
 
@@ -490,6 +510,10 @@ pkg_postinst() {
 		einfo "\"ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config\""
 		einfo "if this is a new install."
 		einfo
+		if [[ "${PREVIOUS_DATADIR}" == "yes" ]] ; then
+			ewarn "Previous datadir found, it's YOUR job to change"
+			ewarn "ownership and have care of it"
+		fi
 	fi
 
 	mysql_upgrade_warning

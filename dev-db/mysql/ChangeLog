@@ -1,6 +1,24 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.214 2005/07/27 00:22:45 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.215 2005/07/29 11:39:14 vivo Exp $
+
+  29 Jul 2005; Francesco Riosa <vivo@gentoo.org>
+  mysql-4.0.25-r2.ebuild:
+  missing $DATADIR in src_install() .
+
+*mysql-5.0.10_beta (29 Jul 2005)
+
+  29 Jul 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.13-r1.ebuild,
+  mysql-5.0.9_beta-r2.ebuild, +mysql-5.0.10_beta.ebuild,
+  +files/035_x86_asm-pic-fixes-r2.patch:
+  New beta version of MySQL 5.0.10
+  This new versions use a different patch to avoid text relocations in the x86
+  assembler files. The new patch has been extracted from upstream one, in the
+  future will be applied to 4.1 series too.
+  
+  fix bug #99891 if datadir (usually "/var/lib/mysql") is in place don't touch
+  it. Applied to MySQL versions 4.1 and 5.0 this change defer to the user the
+  responsibility to manage his own datadir.
 
   27 Jul 2005; Francesco Riosa <vivo@gentoo.org> mysql-3.23.58.ebuild,
   mysql-3.23.58-r1.ebuild:

@@ -3,9 +3,10 @@ MD5 e43e3bc71ccf6832470f216636dd156b mysql-4.0.24-r2.ebuild 13747
 MD5 44dc5280381a06b8ce48d2a92d8bc416 mysql-3.23.58.ebuild 6947
 MD5 4934e2f34bd00ba4dd037222836a3697 mysql-4.0.23.ebuild 9059
 MD5 0cfe352d9d7ac0595951401ad80c72eb mysql-4.0.25-r1.ebuild 13809
-MD5 1148c79dcf415b3e5d500376a1962e6c mysql-5.0.9_beta-r2.ebuild 16096
+MD5 e430eaffa5d4bdd93e99c0e4379ec594 mysql-5.0.9_beta-r2.ebuild 16671
 MD5 d7ff11dcd8af325be5a80286307e5a56 mysql-4.0.23-r2.ebuild 9427
-MD5 b5d7a4268d3c13fb157d5e1f807747f4 mysql-4.1.13-r1.ebuild 15737
+MD5 37e6225722bee3143be5102fd0615b79 mysql-4.1.13-r1.ebuild 16296
+MD5 768db2f57552ab30e9914b714fd8b9fa mysql-5.0.10_beta.ebuild 16669
 MD5 1b9b5ba4d58d54c962b3592dd26900e8 mysql-4.1.8-r1.ebuild 9243
 MD5 a9cebc508de69f6c21bad7776432d9f8 mysql-4.0.24-r1.ebuild 11918
 MD5 72f1eb68e70c1bccc2d4972a7e155412 mysql-4.0.22.ebuild 8776
@@ -14,9 +15,9 @@ MD5 82eebc79341497bc468d529ecac22ab1 mysql-3.23.58-r1.ebuild 7064
 MD5 1f8d9a7c214e1f7ce3227fc915a44d8c mysql-4.1.8.ebuild 9105
 MD5 344659e307cb1ee515bc0cabc4ac9015 mysql-4.0.23-r1.ebuild 9179
 MD5 7a2300e4b7c4f1c68d680ea6fa75aab1 mysql-4.0.24.ebuild 9835
-MD5 e98d3e590d7386a06be088d98c3bb346 ChangeLog 35637
+MD5 433359a98b13ddcf52a911a0befc261e ChangeLog 36397
 MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
-MD5 68090c6d3dc6b561b360b9d3659e542c mysql-4.0.25-r2.ebuild 13809
+MD5 40616a826638aeea1f00ecf5e2a6d190 mysql-4.0.25-r2.ebuild 13806
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
 MD5 93827506c0de13cf7b5023847a4afd95 files/digest-mysql-5.0.9_beta-r2 70
@@ -24,9 +25,11 @@ MD5 a755fb5a3ed724046a4f83fafd819c77 files/mysql-test-myisam-geometry.patch 1217
 MD5 76446c512e91b2f8e9e69a0379178e5c files/mysql-4.0.25-r2-asm-pic-fixes.patch 7295
 MD5 e37e03b4ce894ff87fda12ce6f7b31a6 files/mysql-4.0.21-install-db-sh.diff 585
 MD5 ad883e978e48b2040477a12951c01806 files/digest-mysql-4.1.13-r1 66
+MD5 2a38459933c8b182b2b7ee08ac4e4509 files/035_x86_asm-pic-fixes-r2.patch 8162
 MD5 3e399acddc48f209b53e260eec64938c files/mysql-4.0.rc6 933
 MD5 625b4007f035e3da9a4f1eeee1db6b9c files/mysql-4.0.15.rc6 1187
 MD5 6e0ae36e30287df25336d8bd71c0e764 files/digest-mysql-3.23.58-r1 67
+MD5 49aaf02181386f4a7d8c97c7e21f7d66 files/digest-mysql-5.0.10_beta 71
 MD5 8eaeb1372c41d2fef1622dd707a7a9d0 files/mysql-3.23-nisam.h.diff 452
 MD5 d3830060b3f74d6c0916ed85a6bbf02d files/mysql-3.23-install-db-sh.diff 1368
 MD5 58c4d09c5c2712254b1881a6fcc7abff files/mysql-4.0.18-gentoo-nptl.diff 587

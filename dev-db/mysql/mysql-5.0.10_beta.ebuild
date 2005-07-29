@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.9_beta-r2.ebuild,v 1.3 2005/07/29 11:39:14 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.10_beta.ebuild,v 1.1 2005/07/29 11:39:14 vivo Exp $
 
 inherit flag-o-matic versionator
 
@@ -129,7 +129,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/010_all_my-print-defaults-r2.patch"
-	epatch "${FILESDIR}/035_x86_asm-pic-fixes-r1.patch"
+	epatch "${FILESDIR}/035_x86_asm-pic-fixes-r2.patch"
 	epatch "${FILESDIR}/701_all_test-myisam-geometry.patch"
 	epatch "${FILESDIR}/703_all_test-rpl_rotate_logs.patch"
 
