@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/svk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.12 2005/07/29 02:40:35 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.13 2005/07/29 02:49:36 pclouds Exp $
+
+  29 Jul 2005; <pclouds@gentoo.org> -svk-0.26.ebuild, -svk-0.29.ebuild,
+  svk-1.00.ebuild:
+  Dropped 0.26, 0.29
 
 *svk-1.01 (29 Jul 2005)
 
