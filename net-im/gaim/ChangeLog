@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.354 2005/07/29 14:02:31 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.355 2005/07/29 15:36:19 dertobi123 Exp $
+
+  29 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  gaim-1.4.0-r2.ebuild:
+  ppc stable, #99881
 
 *gaim-1.4.0-r2 (29 Jul 2005)
 
