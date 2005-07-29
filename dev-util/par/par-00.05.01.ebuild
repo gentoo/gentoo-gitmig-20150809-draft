@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/par/par-00.05.01.ebuild,v 1.3 2005/05/07 16:20:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/par/par-00.05.01.ebuild,v 1.4 2005/07/29 02:06:49 swegener Exp $
 
 DESCRIPTION="par manipulates PalmOS database files"
 HOMEPAGE="http://www.djw.org/product/palm/par/"
@@ -20,6 +20,5 @@ src_install () {
 	dobin par
 	dolib *.a *.so
 
-	mv par.man par.1
-	doman par.1
+	newman par.man par.1
 }
