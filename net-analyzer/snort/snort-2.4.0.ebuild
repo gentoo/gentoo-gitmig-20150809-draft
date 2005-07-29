@@ -1,16 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.20050508.ebuild,v 1.3 2005/07/09 18:37:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.1 2005/07/29 04:06:17 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
-# Note: This is a experimental CVS build
-
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 HOMEPAGE="http://www.snort.org/"
-SRC_URI="mirror://gentoo/${P}.tar.gz
-	snortsam? ( mirror://gentoo/snortsam-20050110.tar.gz )
-	sguil? ( mirror://sourceforge/sguil/sguil-sensor-0.5.3.tar.gz )"
+SRC_URI="http://www.snort.org/dl/current/${P}.tar.gz
+	http://dev.gentoo.org/~vanquirius/files/snort-2.4.0-genpatches.tar.bz2
+	snortsam? ( mirror://gentoo/snortsam-20050110.tar.gz )"
+	# mirror://gentoo/snort-2.4.0-genpatches.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,14 +26,19 @@ DEPEND="virtual/libc
 	prelude? ( >=dev-libs/libprelude-0.9.0_rc1 )
 	odbc? ( dev-db/unixODBC )
 	inline? (
-				~net-libs/libnet-1.0.2a
-				net-firewall/iptables
-			)"
+		~net-libs/libnet-1.0.2a
+		net-firewall/iptables
+		)"
 
 RDEPEND="${DEPEND}
 	dev-lang/perl
 	selinux? ( sec-policy/selinux-snort )
 	snortsam? ( net-analyzer/snortsam )"
+
+pkg_setup() {
+	enewgroup snort
+	enewuser snort -1 /bin/false /dev/null snort
+}
 
 src_unpack() {
 	unpack ${A}
@@ -42,10 +46,10 @@ src_unpack() {
 	gnuconfig_update
 
 	if use flexresp || use inline ; then
-		epatch ${FILESDIR}/2.3.0-libnet-1.0.patch
+		epatch ${WORKDIR}/2.4.0-libnet-1.0.patch
 	fi
 
-	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" \
+	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort/rules:" \
 		etc/snort.conf || die "sed snort.conf failed"
 
 	if use prelude ; then
@@ -54,10 +58,8 @@ src_unpack() {
 	fi
 
 	if use sguil ; then
-		cd ${S}/src/preprocessors
-		epatch ${WORKDIR}/sguil-0.5.3/sensor/snort_mods/2_1/spp_portscan_sguil.patch || die
-		epatch ${WORKDIR}/sguil-0.5.3/sensor/snort_mods/2_1/spp_stream4_sguil.patch || die
-		cd ${S}
+		epatch ${WORKDIR}/2.4.0-spp_portscan_sguil.patch || die
+		epatch ${WORKDIR}/2.4.0-spp_stream4_sguil.patch || die
 	fi
 
 	if use snortsam ; then
@@ -93,15 +95,6 @@ src_compile() {
 	emake || die "compile problem"
 }
 
-pkg_preinst() {
-	enewgroup snort
-	enewuser snort -1 /bin/false /var/log/snort snort
-	usermod -d "/var/log/snort" snort || die "usermod problem"
-	usermod -g "snort" snort || die "usermod problem"
-	usermod -s "/bin/false" snort || die "usermod problem"
-	echo "ignore any message about CREATE_HOME above..."
-}
-
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
@@ -111,17 +104,20 @@ src_install() {
 	docinto schemas ; dodoc schemas/*
 
 	insinto /etc/snort
-	doins etc/reference.config etc/classification.config rules/*.rules \
+	doins etc/reference.config etc/classification.config \
 		etc/*.map etc/threshold.conf
 	newins etc/snort.conf snort.conf.distrib
 
-	use prelude && doins etc/prelude-classification.config
+	# use prelude && doins etc/prelude-classification.config
 
 	newinitd ${FILESDIR}/snort.rc6 snort
 	newconfd ${FILESDIR}/snort.confd snort
 
 	chown snort:snort ${D}/var/log/snort
 	chmod 0770 ${D}/var/log/snort
+
+	# create directory to store rules in
+	dodir ${D}/etc/snort/rules
 }
 
 pkg_postinst() {
@@ -139,4 +135,7 @@ pkg_postinst() {
 		einfo "Also, read the following Gentoo forums article:"
 		einfo '   http://forums.gentoo.org/viewtopic.php?t=78718'
 	fi
+	ewarn "Rules are no longer included with snort."
+	ewarn "Please add your rules to /etc/snort/rules."
+	ewarn "For more information, visit ${HOMEPAGE}."
 }
