@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.14-r1.ebuild,v 1.1 2005/07/27 21:55:45 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.14-r2.ebuild,v 1.1 2005/07/29 23:08:23 allanonjl Exp $
 
 inherit libtool gnome.org eutils python
 
@@ -23,6 +23,9 @@ src_unpack() {
 	# we still require the 1.1.8 patch for the .m4 file, to add
 	# the CXXFLAGS defines <obz@gentoo.org>
 	epatch "${FILESDIR}"/libxslt.m4-${PN}-1.1.8.patch
+
+	# Patch Makefile to fix bug #99382 so that html gets installed in ${PF}
+	sed -i -e 's:libxslt-$(VERSION):${PF}:' doc/Makefile.in
 
 	epunt_cxx
 	elibtoolize
