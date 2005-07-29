@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/sawfish-themes
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/ChangeLog,v 1.7 2004/08/30 19:44:42 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/ChangeLog,v 1.8 2005/07/29 19:57:10 mkennedy Exp $
+
+  29 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  sawfish-themes-0.0.1-r3.ebuild:
+  Keywording ~amd64.
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   sawfish-themes-0.0.1-r1.ebuild, sawfish-themes-0.0.1-r3.ebuild:
