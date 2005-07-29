@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.1-r1.ebuild,v 1.1 2005/07/27 08:22:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.1-r1.ebuild,v 1.2 2005/07/29 18:00:27 phosphan Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd ${S}
 	sed -i -e "s:^OPT=.*:OPT = ${CFLAGS} -s:" Makefile
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gcc4.patch
 	epatch ${DISTDIR}/${PN}-dvb.patch
 }
 

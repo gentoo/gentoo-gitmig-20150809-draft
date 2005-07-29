@@ -1,6 +1,10 @@
 # ChangeLog for media-video/alevt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.15 2005/07/27 08:22:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.16 2005/07/29 18:00:27 phosphan Exp $
+
+  29 Jul 2005; Patrick Kursawe <phosphan@gentoo.org>
+  +files/alevt-1.6.1-gcc4.patch, alevt-1.6.1-r1.ebuild:
+  Patch against gcc4 trouble, see bug #100587
 
 *alevt-1.6.1-r1 (27 Jul 2005)
 
