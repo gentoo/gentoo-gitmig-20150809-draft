@@ -5,8 +5,8 @@ Please follow the Gentoo install guide found at
 http://wiki.bestpractical.com/index.cgi?GentooInstallGuide
 
 Your local config files are located here:
-${VHOST_ROOT}/${P}/etc/RT_Config.pm
-${VHOST_ROOT}/${P}/etc/RT_SiteConfig.pm
+${VHOST_ROOT}/${PV}-${PVR}/etc/RT_Config.pm
+${VHOST_ROOT}/${PV}-${PVR}/etc/RT_SiteConfig.pm
 
 If you need more help, consider searching the mailing list (Google site:lists.fsck.com )
 

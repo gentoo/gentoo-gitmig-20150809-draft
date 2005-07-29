@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.2-r1.ebuild,v 1.1 2005/06/21 02:12:38 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.2-r1.ebuild,v 1.2 2005/07/29 18:21:25 rl03 Exp $
 
 inherit webapp eutils
 
@@ -12,9 +12,10 @@ SRC_URI="http://download.bestpractical.com/pub/${PN}/release/${P}.tar.gz
 	ftp://ftp.eu.uu.net/pub/unix/ticketing/${PN}/release/${P}.tar.gz
 	ftp://rhinst.ece.cmu.edu/${PN}/release/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="
+	>=net-www/webapp-config-1.11-r1
 	>=dev-lang/perl-5.8.3
 	>=dev-perl/Params-Validate-0.02
 	dev-perl/Cache-Cache
@@ -143,8 +144,8 @@ src_unpack() {
 
 	# add Gentoo-specific layout
 	cat ${FILESDIR}/${PV}/config.layout-gentoo >> config.layout
-	sed -e "s|PREFIX|${D}/${MY_HOSTROOTDIR}/${P}|
-			s|HTMLDIR|${D}/${MY_HTDOCSDIR}|g" -i ./config.layout
+	sed -e "s|PREFIX|${D}/${MY_HOSTROOTDIR}/${PF}|
+			s|HTMLDIR|${D}/${MY_HTDOCSDIR}|g" -i ./config.layout || die
 }
 
 src_compile() {
@@ -177,10 +178,10 @@ src_install() {
 	make install
 
 	# make sure we don't clobber existing site configuration
-	rm -f ${D}/${MY_HOSTROOTDIR}/${P}/etc/RT_SiteConfig.pm
+	rm -f ${D}/${MY_HOSTROOTDIR}/${PF}/etc/RT_SiteConfig.pm
 
 	# copy upgrade files
-	cp -R etc/upgrade ${D}/${MY_HOSTROOTDIR}/${P}
+	cp -R etc/upgrade ${D}/${MY_HOSTROOTDIR}/${PF}
 
 	cd ${D}
 	grep -Rl "${D}" * | xargs dosed

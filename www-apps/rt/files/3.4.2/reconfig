@@ -1,33 +1,29 @@
 #!/bin/bash
+PF=${PN}-${PVR}
 if [ $1 = "install" ]; then
 	# fix location
-	cd ${VHOST_ROOT}/${P}
-	sed -e "s|${MY_HOSTROOTDIR}/${P}|${VHOST_ROOT}/${P}|g
-		s|${MY_HTDOCSDIR}|${MY_INSTALLDIR}|g" -i bin/* lib/RT.pm sbin/* etc/RT_Config.pm
+	cd ${VHOST_ROOT}/${PF}
+	sed -e "s|${MY_HOSTROOTDIR}/${PF}|${VHOST_ROOT}/${PF}|g
+		s|${MY_HTDOCSDIR}|${MY_INSTALLDIR}|g" -i bin/* lib/RT.pm sbin/* etc/RT_Config.pm || die
 
 	# fix Apache configs
-	sed -e "s|RT_DIR|${VHOST_ROOT}/${P}|g
-		s|HTDOCS|${MY_INSTALLDIR}|g" -i ${MY_SERVERCONFIGDIR}/apache*
+	sed -e "s|RT_DIR|${VHOST_ROOT}/${PF}|g
+		s|HTDOCS|${MY_INSTALLDIR}|g" -i ${MY_SERVERCONFIGDIR}/apache* || die
 
 	# check for upgrades
-	cd ${VHOST_ROOT}/${P}/upgrade
+	cd ${VHOST_ROOT}/${PF}/upgrade
 	echo "You may need to update your database."
 	echo "For each item in the output below"
 	echo "whose name is greater than your previously installed RT version,"
-	echo "rt-setup-database --action schema --datadir ${VHOST_ROOT}/${P}/upgrade/<version>"
-	echo "rt-setup-database --action acl --datadir ${VHOST_ROOT}/${P}/upgrade/<version>"
-	echo "rt-setup-database --action insert --datadir ${VHOST_ROOT}/${P}/upgrade/<version>"
+	echo "rt-setup-database --action schema --datadir ${VHOST_ROOT}/${PF}/upgrade/<version>"
+	echo "rt-setup-database --action acl --datadir ${VHOST_ROOT}/${PF}/upgrade/<version>"
+	echo "rt-setup-database --action insert --datadir ${VHOST_ROOT}/${PF}/upgrade/<version>"
 	echo "Don't forget to read the online installation guide for more details"
 	ls
 
 elif [ $1 = "clean" ]; then
-	# braindead - set ${P}
-	MY_PV=$(basename $(dirname ${MY_HOSTROOTDIR}))
-	MY_PN=$(basename $(dirname $(dirname ${MY_HOSTROOTDIR})))
-	MY_P="${MY_PN}-${MY_PV}"
-
-	if [[ "${VHOST_ROOT}${MY_P}" ]]; then 
-		rm -rf ${VHOST_ROOT}/${MY_P}/bin ${VHOST_ROOT}/${MY_P}/lib/RT.pm ${VHOST_ROOT}/${MY_P}/sbin ${VHOST_ROOT}/${MY_P}/etc/RT_Config.pm
+	if [[ "${VHOST_ROOT}${PF}" ]]; then 
+		rm -rf ${VHOST_ROOT}/${PF}/bin ${VHOST_ROOT}/${PF}/lib/RT.pm ${VHOST_ROOT}/${PF}/sbin
 	else
 		echo "Variables not set!"
 	fi
