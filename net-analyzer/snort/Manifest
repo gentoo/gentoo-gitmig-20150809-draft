@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fdf686bc337486096bf207a4d7bb99c8 ChangeLog 14776
 MD5 53edc4328d9adeaf087c65ea94b1594b metadata.xml 246
 MD5 554318bcd25a63edcf875e34135c32fc snort-2.4.0.ebuild 3872
@@ -13,3 +16,10 @@ MD5 24851ef65be2d80a70ba4bebe3e8c0ff files/digest-snort-2.3.3 287
 MD5 04f9ed946469f7954b6bd27f8f1aca39 files/digest-snort-2.3.3-r1 284
 MD5 446f8d2b3435b8a6be738da978670605 files/snort.confd 423
 MD5 919058894f4983c35900bc8bb98a96d4 files/snort.rc6 764
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6sFHmdTrptrqvGERAuxpAJ0R/aFX78PbfxvbOOmuS6IW2pNOQACgiwch
+g85vtdAzjp/my0PIYxIzn9k=
+=JzWQ
+-----END PGP SIGNATURE-----
