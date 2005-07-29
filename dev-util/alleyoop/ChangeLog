@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/alleyoop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.8 2005/03/03 21:00:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.9 2005/07/29 23:50:48 dragonheart Exp $
+
+*alleyoop-0.9.0 (29 Jul 2005)
+
+  29 Jul 2005; Daniel Black <dragonheart@gentoo.org> alleyoop-0.8.2.ebuild,
+  +alleyoop-0.9.0.ebuild:
+  version bump and removed "die" from epatch
 
 *alleyoop-0.8.3 (04 Mar 2005)
 

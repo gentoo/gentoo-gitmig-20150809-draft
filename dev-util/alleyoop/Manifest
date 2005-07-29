@@ -2,16 +2,18 @@
 Hash: SHA1
 
 MD5 11eff369ca0276e86a953a3bfdd3d13a alleyoop-0.8.3.ebuild 797
+MD5 99bcb7dba2ad462107d67f7c75da6d45 alleyoop-0.9.0.ebuild 803
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 05a72a2d1c76c49b735d57d5eb6d8f92 ChangeLog 1313
-MD5 d3be1b9015661fd94459f54110d0ffb0 alleyoop-0.8.2.ebuild 888
+MD5 9a414bd27ba50f46b1f41d9979875fb5 ChangeLog 1492
+MD5 1fa342712ee74706a8ad6e04ba92fc30 alleyoop-0.8.2.ebuild 866
 MD5 4412525210d04bac0e622ac922819f81 files/digest-alleyoop-0.8.2 66
 MD5 7cb824cbf3377062fa4ba3963f159e8e files/alleyoop-0.8.2.patch 598
 MD5 56d6e2c63d429b457e3873a79071d5d6 files/digest-alleyoop-0.8.3 66
+MD5 ac74f3df01bdb6aa940d853084dc9936 files/digest-alleyoop-0.9.0 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCJ3r3mdTrptrqvGERAjnCAKCbBk457EJ7azfX9EYAoIXkI0xeDQCcC7rj
-3iy2elWOq9kUuAK4u/+7NaQ=
-=In+h
+iD8DBQFC6sDomdTrptrqvGERAikvAJ912xAuqt5JuGWJtW3z33rCdkjMAQCbBKnD
+TdHbcpt1gjO0ofXzp8KNCCE=
+=IZQE
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.8.2.ebuild,v 1.8 2005/07/29 23:50:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.0.ebuild,v 1.1 2005/07/29 23:50:48 dragonheart Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/alleyoop/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc -sparc -alpha"
+KEYWORDS="~x86 ~ppc -sparc -alpha"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.2
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.2
 	>=gnome-base/libgnomeui-2.2
 	>=gnome-base/libglade-2.2
 	sys-devel/binutils
-	dev-util/valgrind
+	>=dev-util/valgrind-2.4
 	virtual/libc"
 
 DEPEND="${RDEPEND}
@@ -27,8 +27,3 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}.patch
-}
