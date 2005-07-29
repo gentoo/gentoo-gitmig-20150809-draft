@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.3-r1.ebuild,v 1.11 2005/07/07 00:47:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.3-r1.ebuild,v 1.12 2005/07/29 23:07:08 dragonheart Exp $
 
 inherit gnome2 eutils
 
@@ -28,7 +28,7 @@ DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gpg1.4.patch || die "patch failed"
+	epatch ${FILESDIR}/${P}-gpg1.4.patch
 }
 
 src_compile() {

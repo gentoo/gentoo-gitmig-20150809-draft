@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.5.ebuild,v 1.9 2005/07/29 23:07:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.9.ebuild,v 1.1 2005/07/29 23:07:08 dragonheart Exp $
 
 inherit gnome2 eutils
 
@@ -9,23 +9,24 @@ HOMEPAGE="http://seahorse.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
 
 RDEPEND="virtual/x11
 	>=app-crypt/gnupg-1.2.0
 	>=app-crypt/gpgme-1.0.0
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
-	>=x11-libs/gtk+-2
-	>=gnome-base/eel-2
+	>=x11-libs/gtk+-2.4
 	>=gnome-base/gnome-mime-data-2
 	>=gnome-base/libbonobo-2
 	>=gnome-base/libbonoboui-2
 	>=gnome-base/gnome-vfs-2
 	>=app-editors/gedit-2.8.0
+	>=gnome-base/nautilus-2.10
 	dev-util/intltool
 	dev-libs/glib
-	x11-misc/shared-mime-info"
+	x11-misc/shared-mime-info
+	ldap? ( net-nds/openldap )"
 
 #no ~ppc64 keyword yet 	>=gnome-base/bonobo-activation-2
 
@@ -34,14 +35,18 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
-IUSE=""
+IUSE="ldap"
 
+src_compile() {
+	# autoconf
+	# note below doesn't work - need to fix
+	append-ldflags -Wl,-z,now
+	export LDFLAGS
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gpg1.4.patch
+	G2CONF=`use_enable ldap`
+	gnome2_src_compile
 }
+
 
 src_install() {
 	gnome2_src_install
