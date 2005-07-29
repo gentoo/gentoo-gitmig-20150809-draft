@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.3.85.ebuild,v 1.3 2005/07/28 18:46:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.3.85.ebuild,v 1.4 2005/07/29 10:03:24 dholm Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://openafs.org/dl/${PN}/${PV}/${P}-src.tar.bz2
 
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~alpha"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="debug kerberos pam"
 
 RDEPEND="=net-fs/openafs-kernel-${PV}

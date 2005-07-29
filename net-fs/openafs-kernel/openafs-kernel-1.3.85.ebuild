@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.3.85.ebuild,v 1.2 2005/07/28 12:11:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.3.85.ebuild,v 1.3 2005/07/29 10:01:55 dholm Exp $
 
 inherit eutils linux-mod versionator
 
@@ -16,7 +16,7 @@ SRC_URI="http://openafs.org/dl/${MY_PN}/${PV}/${MY_P}-src.tar.bz2
 
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~alpha"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 
 DEPEND="virtual/linux-sources"
 
