@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 889eb81974e4a8e8ec01c1bb74bf7e03 gconfmm-2.6.1.ebuild 818
-MD5 cf7fe6b2db022ed6435b7eafc4fc815a gconfmm-2.10.0.ebuild 831
+MD5 fb3942e378ad1894bbd680a878fabe91 ChangeLog 4191
 MD5 04e0b04e8469f6c00860b0daefac04a2 gconfmm-2.0.2.ebuild 563
-MD5 f1988201807e69959187a2480cf065b8 ChangeLog 4078
+MD5 c6964ff76acb6772fbcaf8b1b799e228 gconfmm-2.6.1.ebuild 824
 MD5 d55015f2e0ee69e92ab287320c27c5b2 metadata.xml 161
-MD5 d07f27847b386ccdeb24dea3d89a270e files/gconfmm-2.6.1-amd64-gcc4.patch 864
-MD5 c32b92b4f327ed1589eca80a19330fe9 files/digest-gconfmm-2.10.0 67
+MD5 b09a50725b2e4e2c71e7449730fc6b03 gconfmm-2.10.0.ebuild 836
 MD5 f44b8472013beb3feb14d08ede70ce34 files/digest-gconfmm-2.0.2 66
 MD5 650778e47af5167c7095cfc924e6e697 files/digest-gconfmm-2.6.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC4Oeg2G5bA0cA/ScRAn3AAKDq0KDKehlvO23Z/KZtEFuwn/9FnACgnAs3
-BxI38N440Mu8fAgERzscACc=
-=ARpz
------END PGP SIGNATURE-----
+MD5 d07f27847b386ccdeb24dea3d89a270e files/gconfmm-2.6.1-amd64-gcc4.patch 864
+MD5 c32b92b4f327ed1589eca80a19330fe9 files/digest-gconfmm-2.10.0 67
