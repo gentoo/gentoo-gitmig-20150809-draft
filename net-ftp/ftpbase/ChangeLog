@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpbase
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.5 2005/07/29 18:36:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.6 2005/07/30 09:44:41 killerfox Exp $
+
+  30 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> ftpbase-0.00.ebuild:
+  Stable on hppa. bug #100364
 
   29 Jul 2005; Markus Rothe <corsair@gentoo.org> ftpbase-0.00.ebuild:
   Stable on ppc64 (bug #100364)
