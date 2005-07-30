@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/quanta-3.4.2.ebuild,v 1.1 2005/07/28 21:16:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/quanta-3.4.2.ebuild,v 1.2 2005/07/30 09:07:54 greg_g Exp $
 KMNAME=kdewebdev
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -9,7 +9,8 @@ inherit kde-meta eutils
 DESCRIPTION="KDE: Quanta Plus Web Development Environment"
 KEYWORDS=" ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc tidy"
-DEPEND="dev-libs/libxml2"
+DEPEND="dev-libs/libxslt
+	dev-libs/libxml2"
 RDEPEND="$DEPEND
 $(deprange $PV $MAXKDEVER kde-base/kfilereplace)
 $(deprange $PV $MAXKDEVER kde-base/kimagemapeditor)
