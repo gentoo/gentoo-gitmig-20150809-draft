@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 22ed471970f155703b2d4028f2ec6a5a sash-3.7.ebuild 1139
-MD5 26bb0155523835e427e7834d61e17d93 ChangeLog 4014
-MD5 e8758a0d35504ea0420262b58acc5a62 files/sash-3.6-fix-includes.patch 334
-MD5 0fa262804299a7ba80c5266f578722eb files/sash-3.7-builtin.patch 465
-MD5 ed10e67a2e293993478c999f67c612b8 files/digest-sash-3.7 59
+MD5 5938cf5de50d64eee004dde1200896a9 sash-3.7-r1.ebuild 1139
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 5f4e23910d9ed1148a538ddadddb3d58 ChangeLog 4169
 MD5 d33602f9d3d89db4b3ea2adad619fdf2 files/sash-3.6-readline.patch 7507
+MD5 0fa262804299a7ba80c5266f578722eb files/sash-3.7-builtin.patch 465
+MD5 e8758a0d35504ea0420262b58acc5a62 files/sash-3.6-fix-includes.patch 334
+MD5 ed10e67a2e293993478c999f67c612b8 files/digest-sash-3.7-r1 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCnIGVI1lqEGTUzyQRAu6/AKCHzls61dZ2DFnpwdQ+el2KrhHh0QCdHE72
-NLNzPtsmTECaTwQaiWqXLeA=
-=KzQh
+iD8DBQFC6xrmgIKl8Uu19MoRAnhEAJ9pfe8px1fpqjcBL+bivlwRrqdXnQCbBlvM
+9U0pruMs1AcRfDOamLR6nJw=
+=nCSM
 -----END PGP SIGNATURE-----

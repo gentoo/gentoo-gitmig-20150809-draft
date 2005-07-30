@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/sash
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.35 2005/05/31 15:23:41 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.36 2005/07/30 06:14:45 vapier Exp $
+
+*sash-3.7-r1 (30 Jul 2005)
+
+  30 Jul 2005; Mike Frysinger <vapier@gentoo.org> +sash-3.7-r1.ebuild:
+  Version bump to force linking with newer zlib #100683.
 
   31 May 2005; Sven Wegener <swegener@gentoo.org> sash-3.7.ebuild:
   Let portage handle the stripping of binaries.
