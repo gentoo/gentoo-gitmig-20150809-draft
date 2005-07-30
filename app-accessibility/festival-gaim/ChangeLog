@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/festival-gaim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.22 2005/07/30 15:20:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.23 2005/07/30 15:21:17 eradicator Exp $
+
+  30 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/festival-gaim-0.71-gentoo.patch, -festival-gaim-0.81.ebuild,
+  -festival-gaim-1.00.ebuild:
+  Removing old versions.
 
 *festival-gaim-1.1-r1 (30 Jul 2005)
 
