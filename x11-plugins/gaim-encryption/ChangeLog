@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gaim-encryption
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.70 2005/07/19 16:37:23 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.71 2005/07/30 12:29:28 gmsoft Exp $
+
+  30 Jul 2005; Guy Martin <gmsoft@gentoo.org> gaim-encryption-2.38.ebuild:
+  Stable on hppa.
 
   19 Jul 2005; Herbie Hopkins <herbs@gentoo.org>
   gaim-encryption-2.38.ebuild:
