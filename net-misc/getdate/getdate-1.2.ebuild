@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/getdate-1.2.ebuild,v 1.8 2005/05/01 17:04:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/getdate-1.2.ebuild,v 1.9 2005/07/30 17:57:36 swegener Exp $
+
+inherit toolchain-funcs
 
 MY_PN=${PN}_rfc868
 MY_P=${MY_PN}-${PV}
@@ -18,17 +20,12 @@ KEYWORDS="x86 ~mips ppc"
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-}
-
 src_compile() {
-	gcc ${CFLAGS} -DHAVE_ADJTIME -s -o getdate getdate.c || die
+	$(tc-getCC) ${CFLAGS} -DHAVE_ADJTIME -s -o getdate getdate.c || die
 }
 
 src_install() {
-	doman getdate.8
 	dobin getdate
+	doman getdate.8
 	dodoc README getdate-cron
 }
-
