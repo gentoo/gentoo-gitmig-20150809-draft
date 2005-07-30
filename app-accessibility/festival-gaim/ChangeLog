@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/festival-gaim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.21 2005/02/10 07:16:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.22 2005/07/30 15:20:12 eradicator Exp $
+
+*festival-gaim-1.1-r1 (30 Jul 2005)
+
+  30 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-gaim-1.00.ebuild, festival-gaim-1.1.ebuild,
+  +festival-gaim-1.1-r1.ebuild:
+  Revbump to be compatible with festival-1.4.3-r4. 1.1 stable on amd64, sparc,
+  x86.
 
 *festival-gaim-1.1 (09 Feb 2005)
 

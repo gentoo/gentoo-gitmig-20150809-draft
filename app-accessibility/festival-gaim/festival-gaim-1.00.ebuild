@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/festival-gaim-1.00.ebuild,v 1.5 2005/01/01 10:48:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/festival-gaim-1.00.ebuild,v 1.6 2005/07/30 15:20:12 eradicator Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64 sparc"
 
 RDEPEND=">=app-accessibility/festival-1.4.3
+	 <=app-accessibility/festival-1.4.3-r3
 	 >=net-im/gaim-1"
 
 src_unpack() {
