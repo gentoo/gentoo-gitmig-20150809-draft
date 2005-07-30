@@ -1,0 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 00828e18150a55cf942e429db4869a78 renameutils-0.6.0.ebuild 695
+MD5 9665cd529a82d6acc1716d0655b938e6 ChangeLog 372
+MD5 c1343b4747e27ed1136ab3e6cba70938 files/digest-renameutils-0.6.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6yBogIKl8Uu19MoRApmTAJkBD/8+dRt3mvfru7A6Wfpqhl1ExACeKOwE
+bSlglU7nqQbM0ZB3Lh715OQ=
+=2Uqn
+-----END PGP SIGNATURE-----
