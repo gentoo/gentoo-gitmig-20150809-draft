@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/quilt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.10 2005/07/05 22:51:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.11 2005/07/30 00:07:09 ka0ttic Exp $
+
+*quilt-0.42 (30 Jul 2005)
+
+  30 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> +quilt-0.42.ebuild:
+  Version bump.
 
   05 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> -quilt-0.37.ebuild,
   quilt-0.40.ebuild:
