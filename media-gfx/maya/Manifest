@@ -1,21 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c9f13cd882977464d80ff9e2b2e95dbf maya-6.0.ebuild 10269
-MD5 8726b0413ddd66aad337ad73b524dabd ChangeLog 2171
-MD5 f422d319e0dfe4e202808fa7dbe43f04 maya-5.0.1-r1.ebuild 9014
+MD5 c7ee5f18d037a294e8d1968f5b855db0 ChangeLog 2486
+MD5 c5350f1744d77bf7ee725e5174610195 maya-5.0.1-r1.ebuild 9147
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
+MD5 1368e4e902dcfc9d5e5b3fcb0c0f56cb files/aw_flexlm 1142
+MD5 ed8559691fb165588d7db943242e7157 files/aw_flexlm.conf.d 132
 MD5 4c7815a2fa0bc842f364c812ac9beb29 files/digest-maya-5.0.1-r1 142
-MD5 792b77516f1b9b3bda5c456df14fed13 files/maya-docs 314
 MD5 d47d06f98fae1230e4a0e5db03745c90 files/maya-5.0.1.md5sum 62023
-MD5 b9b7f8bf9757bdb6de05d61af9743df3 files/aw_flexlm.conf.d 125
-MD5 8b9549e3f5f144fc3f8f366fd87da751 files/aw_flexlm 1132
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-maya-6.0 0
-MD5 d3754c36723d75c00053d626e4b2ea54 files/maya-6.0.md5sum 332
+MD5 aa3d8c97154f1ce2d263a2a071811c28 files/maya-docs 314
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCe4A5I1lqEGTUzyQRAsnCAKCA8biDcikFBrUvZa4zLhvnkwmBcgCg14Ms
-bNFxwRJ/j4YBoxdFT4DzI1g=
-=hKNs
+iD8DBQFC6+b+ArHZZzCEUG0RAuesAJoD73r/zsKd9mEa0Q5U3lXgA8QNgwCfTxvp
+esqV5MIXK3eyh6Coa/TWzpE=
+=k7fq
 -----END PGP SIGNATURE-----

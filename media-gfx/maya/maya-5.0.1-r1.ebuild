@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.11 2005/05/06 14:33:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.12 2005/07/30 20:45:10 eradicator Exp $
 
 # Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
 # variable to the location of your maya RPMS and documentation:
@@ -193,6 +193,11 @@ src_install() {
 
 	# Fix permissions
 	find ${D}/usr/aw -type d -exec chmod 755 {} \;
+
+	# Actually place everything in /opt since this is a binary package
+	dodir /opt
+	mv ${D}/usr/aw ${D}/opt
+	dosym ../opt/aw /usr/aw
 }
 
 pkg_postinst() {

@@ -6,12 +6,12 @@ depend() {
 
 start() {
 	ebegin "Starting Maya Doc Server"
-	start-stop-daemon --start --quiet --exec /usr/aw/maya/docs/startDocServer.sh
+	start-stop-daemon --start --quiet --exec /opt/aw/maya/docs/startDocServer.sh
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping Maya Doc Server"
-	start-stop-daemon --start --quiet --exec /usr/aw/maya/docs/shutdownDocServer.sh
+	start-stop-daemon --start --quiet --exec /opt/aw/maya/docs/shutdownDocServer.sh
 	eend $?
 }
