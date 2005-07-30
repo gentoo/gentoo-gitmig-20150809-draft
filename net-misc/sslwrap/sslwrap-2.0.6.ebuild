@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6.ebuild,v 1.10 2004/07/15 03:37:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6.ebuild,v 1.11 2005/07/30 18:39:17 swegener Exp $
 
 inherit eutils
 
@@ -34,13 +34,7 @@ src_unpack () {
 		*.h *.c
 }
 
-src_compile() {
-	emake || die
-}
-
 src_install() {
-	cd ${S}
-	into /usr
 	dosbin sslwrap
 	dodoc README
 	dohtml -r ./

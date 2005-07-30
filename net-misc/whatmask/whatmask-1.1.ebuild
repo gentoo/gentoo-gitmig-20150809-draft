@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/whatmask-1.1.ebuild,v 1.13 2004/07/01 22:10:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/whatmask-1.1.ebuild,v 1.14 2005/07/30 18:41:26 swegener Exp $
 
 IUSE=""
 DESCRIPTION="little C program to compute different subnet mask notations"
@@ -13,12 +13,7 @@ KEYWORDS="x86 sparc"
 
 DEPEND="virtual/libc"
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README INSTALL AUTHORS ChangeLog NEWS
 }
