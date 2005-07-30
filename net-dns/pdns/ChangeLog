@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.20 2005/07/22 15:48:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.21 2005/07/30 00:02:40 swegener Exp $
+
+  30 Jul 2005; Sven Wegener <swegener@gentoo.org>
+  -files/pdns-2.9.17-amd64-fix.diff, -pdns-2.9.17.ebuild,
+  pdns-2.9.18.ebuild:
+  Added --with-pgsql-includes=/usr/include for older postgresql versions.
+  Removed old ebuild.
 
   22 Jul 2005; Danny van Dyk <kugelfang@gentoo.org> pdns-2.9.18.ebuild:
   Marked stable on amd64.

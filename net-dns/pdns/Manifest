@@ -1,22 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 36ab9f34213602fc7c379db812f662bf ChangeLog 3123
-MD5 56567ddcaf248499457a1ce74277c910 metadata.xml 573
-MD5 172c916f2af3e12be9af6f65bc4ab881 pdns-2.9.17.ebuild 1313
-MD5 af96d8df0fe94b63047a94fa65b10bcf pdns-2.9.18.ebuild 2345
-MD5 62a8267bd54fd7edf57908299088c96a files/digest-pdns-2.9.17 63
-MD5 2d29230247ff445cea2a20fbdd25a219 files/pdns-2.9.17-amd64-fix.diff 1155
+MD5 b126006b34186e50cb4f1b1dfb7fdef1 ChangeLog 3349
 MD5 90fb32e843326d14359c508cef855929 files/2.9.18-default-mysql-options.patch 606
 MD5 48d0e8119d1617f7ab3594f836cd98fb files/2.9.18-ldap-fix.patch 853
-MD5 60d7355f48410a77e8df555a089025cb files/pdns 889
 MD5 e59bb419d93a7d7bdcb13764c57b3f6d files/digest-pdns-2.9.18 63
+MD5 60d7355f48410a77e8df555a089025cb files/pdns 889
 MD5 558969af8e34a040723147fe14a53a44 files/precursor 488
 MD5 bbb2b0b25869b840d8fa2d242a8b20c2 files/recursor.conf 392
+MD5 56567ddcaf248499457a1ce74277c910 metadata.xml 573
+MD5 7e3f6249fc15cbedf45e33ba7167427c pdns-2.9.18.ebuild 2383
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC4RZY5mJXAu5GbtIRAtvUAJ9hPy1DZ3sdotSXhSAXSiyWbFotmwCcDQiq
-qd3XyJWGyIPi+OL3bGlRWvA=
-=pPoG
+iD8DBQFC6sO2I1lqEGTUzyQRAsiAAJ9H+8bCkar5GqgHpsos38qHw+GhPACdGK5y
+Yn5wkZJr8lqnicWQJoUHge0=
+=7GpC
 -----END PGP SIGNATURE-----

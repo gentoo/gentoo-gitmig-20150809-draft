@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.6 2005/07/22 15:48:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.18.ebuild,v 1.7 2005/07/30 00:02:40 swegener Exp $
 
 inherit eutils
 
@@ -45,6 +45,7 @@ src_compile() {
 	econf \
 		--with-modules= \
 		--with-dynmodules="${modules}" \
+		--with-pgsql-includes=/usr/include \
 		$(use_enable static static-binaries) \
 		$(use_enable recursor) \
 		${myconf} \
