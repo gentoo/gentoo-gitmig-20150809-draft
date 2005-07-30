@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/MIME-Lite-3.01.ebuild,v 1.8 2005/04/28 17:13:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/MIME-Lite-3.01.ebuild,v 1.9 2005/07/30 12:57:05 pvdabeel Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://search.cpan.org/author/ERYQ/${P}/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ~ppc sparc alpha"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 src_install() {
 	perl-module_src_install

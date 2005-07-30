@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-Lite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/ChangeLog,v 1.9 2005/04/28 17:13:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/ChangeLog,v 1.10 2005/07/30 12:57:05 pvdabeel Exp $
+
+  30 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  MIME-Lite-3.01.ebuild:
+  PowerPC Stable
 
   28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -MIME-Lite-2.117.ebuild, MIME-Lite-3.01.ebuild:

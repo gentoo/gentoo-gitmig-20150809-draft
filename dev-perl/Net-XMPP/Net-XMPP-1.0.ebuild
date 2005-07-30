@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/Net-XMPP-1.0.ebuild,v 1.8 2005/04/29 01:31:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/Net-XMPP-1.0.ebuild,v 1.9 2005/07/30 13:00:32 pvdabeel Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~reatmon/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 sparc alpha ~ppc amd64"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"

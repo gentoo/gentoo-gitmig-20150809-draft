@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SOAP-Lite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.18 2005/05/25 14:13:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.19 2005/07/30 13:02:49 pvdabeel Exp $
+
+  30 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  SOAP-Lite-0.55.ebuild, SOAP-Lite-0.60a.ebuild, SOAP-Lite-0.60a-r1.ebuild:
+  PowerPC Stable
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> SOAP-Lite-0.60a.ebuild:
   dev-perl/MIME-Base64 => perl-core/MIME-Base64 migration
