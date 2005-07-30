@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-hmmer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-hmmer/ChangeLog,v 1.9 2005/07/28 02:17:49 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-hmmer/ChangeLog,v 1.10 2005/07/30 00:44:02 ribosome Exp $
+
+  30 Jul 2005; Olivier Fisette <ribosome@gentoo.org>
+  embassy-hmmer-2.1.1-r1.ebuild:
+  Fixed bug #100672.
 
   28 Jul 2005; Olivier Fisette <ribosome@gentoo.org>
   -embassy-hmmer-2.1.1.ebuild:
