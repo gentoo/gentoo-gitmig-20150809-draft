@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 348a21fea3800942b827285b9c3f5ecb libmutil-0.3.0.ebuild 586
 MD5 dff61af49d4d99e50aba44dfba4a623f ChangeLog 375
-MD5 d620cd424e6c6553736cc5304899deae metadata.xml 253
 MD5 ede97580340af52cea3ae79948b397d3 files/digest-libmutil-0.3.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCnl09KRy60XGEcJIRAg3GAKCIcdDIe7bitubDHdJP4jYpGQYnmQCgiWUi
-nUr4vxLDkqWwz86WVwFmwVA=
-=lEvc
------END PGP SIGNATURE-----
+MD5 1f75f8f0c54dc8a9aebe78415e7ea84b libmutil-0.3.0.ebuild 495
+MD5 d620cd424e6c6553736cc5304899deae metadata.xml 253

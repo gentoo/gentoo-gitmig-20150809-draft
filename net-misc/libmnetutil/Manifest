@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 76145da1397e5de907493e0ec521aa07 ChangeLog 387
-MD5 2a8df6f3ceaacf70c4a96c04b75ae155 libmnetutil-0.3.0.ebuild 595
-MD5 d620cd424e6c6553736cc5304899deae metadata.xml 253
 MD5 2c9a316a817d2772892b5f76ddca13e6 files/digest-libmnetutil-0.3.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCnl3aKRy60XGEcJIRAuqaAJ4rxLHZYHAfZPUTiYNwBmZ6g5rPxACeL+Z9
-jEwVnlJyVEUm9uhfxEeHbug=
-=2tUN
------END PGP SIGNATURE-----
+MD5 913a8945efbe1d307e02334fa9c3e2e3 libmnetutil-0.3.0.ebuild 503
+MD5 d620cd424e6c6553736cc5304899deae metadata.xml 253
