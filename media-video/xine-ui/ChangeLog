@@ -1,6 +1,13 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.84 2005/07/30 11:06:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.85 2005/07/30 11:21:30 flameeyes Exp $
+
+  30 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/xine-ui-desktop-fixes.patch, -xine-ui-0.99.1.ebuild,
+  -xine-ui-0.99.3_pre20041022.ebuild, -xine-ui-0.99.3_pre20041022-r1.ebuild,
+  -xine-ui-0.99.3-r2.ebuild:
+  Removed old versions. 0.99.3-r2 was a fix for GCC4, just use 0.99.4 that is
+  already fixed.
 
   30 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> xine-ui-0.99.4.ebuild:
   Added patches to build on Gentoo/FreeBSD.
