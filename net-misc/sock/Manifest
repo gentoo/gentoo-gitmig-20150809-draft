@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 875fa0e4407ca80c8adf67689399694b ChangeLog 678
 MD5 2bc4fcd6ae2552966bd3cfd3e25e0f65 files/digest-sock-1.1 59
 MD5 5fd3934cf33c72130c1e246413f5dd58 sock-1.1.ebuild 548
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC68kBI1lqEGTUzyQRAth6AKDA60SZOe3lBjM32+eATzLV9WeaCQCeJSHO
+DG1L/+pCSo8mbqybRzU+Mfc=
+=qMLq
+-----END PGP SIGNATURE-----

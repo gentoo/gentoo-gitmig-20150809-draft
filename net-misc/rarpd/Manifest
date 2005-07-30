@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a9fb6a8368c975fb30fe7a85758ebf32 ChangeLog 1078
 MD5 b2e7b89b4346f002ca151f34bff15082 files/1.1-daemon.patch 678
 MD5 1db5831c32ce2ee5dc3cf38532019001 files/1.1-libnet-1.0.patch 2428
@@ -5,3 +8,10 @@ MD5 63ddb9a48ecf47479223ee4525142f44 files/digest-rarpd-1.1-r2 60
 MD5 40f2763a6c0a2c8469daa2fd46752149 files/rarpd.conf.d 310
 MD5 f4aa40f55704fd28592c39b96ae6afc9 files/rarpd.init.d 643
 MD5 8ed864f1c242395eb06e5bfdfe25529b rarpd-1.1-r2.ebuild 906
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC68bHI1lqEGTUzyQRAoaLAJ9VGza4fw8/HDzNt5c8pF0IpT3cAACgjQdv
+QMD21o4IIRS+nDArwSktCdU=
+=vEkf
+-----END PGP SIGNATURE-----
