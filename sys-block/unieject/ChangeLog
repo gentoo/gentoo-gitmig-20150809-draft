@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/unieject
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.6 2005/07/25 19:25:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.7 2005/07/30 23:42:37 flameeyes Exp $
+
+*unieject-3 (30 Jul 2005)
+
+  30 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> +unieject-3.ebuild:
+  New version, need libconfuse, ~sparc and ~ppc64 keywords dropped. Requires
+  gettext (for nls support).
 
   25 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> unieject-2.1.ebuild:
   ~sparc wrt #100058
