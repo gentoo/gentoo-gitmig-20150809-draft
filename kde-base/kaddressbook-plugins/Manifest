@@ -1,6 +1,4 @@
-MD5 8bda478c4caed1eb7df68564c966f1db kaddressbook-plugins-3.4.0.ebuild 547
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c81b2122007fa2cf936edf6c2e066872 kaddressbook-plugins-3.4.1.ebuild 540
 MD5 a3cd21592243db4ba1456e8f224c78f9 ChangeLog 1843
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 231586b7509d98416a3043180cebfe60 files/digest-kaddressbook-plugins-3.4.0 69
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-kaddressbook-plugins-3.4.1 215

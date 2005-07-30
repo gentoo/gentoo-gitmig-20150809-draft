@@ -1,6 +1,4 @@
-MD5 3ea74b714db7f5c6b0a0a712d742c1a8 kmtrace-3.4.0.ebuild 527
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 065ca200c929a4399aa27fd3afab98d3 kmtrace-3.4.1.ebuild 526
 MD5 39ecea4ce275a3e3b55ba55952a4f77e ChangeLog 1747
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-kmtrace-3.4.0 66
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kmtrace-3.4.1 206

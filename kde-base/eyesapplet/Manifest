@@ -1,6 +1,4 @@
-MD5 b69daaaf50408e5f5e9b8d5a1b6d3337 eyesapplet-3.4.0.ebuild 440
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c7f8d81dd667f1a41e545aafea62f76e eyesapplet-3.4.1.ebuild 438
 MD5 ea6e7f9a4ed49e97426b19163ade7397 ChangeLog 1991
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 5b4e3adba5796dc0f4ac34763f6e0bff files/digest-eyesapplet-3.4.0 67
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-eyesapplet-3.4.1 208

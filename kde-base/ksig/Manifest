@@ -1,6 +1,4 @@
-MD5 6d029000db669a24368b511be70c339e ksig-3.4.0.ebuild 395
 MD5 e40def6aecef0ec2ac9ddfa25aaef5c5 ksig-3.4.1.ebuild 393
-MD5 151e3c8f7e8d9f72562c9871e66eb8cf ChangeLog 1769
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 231586b7509d98416a3043180cebfe60 files/digest-ksig-3.4.0 69
+MD5 151e3c8f7e8d9f72562c9871e66eb8cf ChangeLog 1769
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-ksig-3.4.1 215
