@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.12.0.ebuild,v 1.11 2005/04/02 04:30:36 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.12.0.ebuild,v 1.12 2005/07/30 12:30:26 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -20,7 +20,6 @@ IUSE="doc ssl"
 RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/popt-1.5
 	>=dev-libs/libIDL-0.8.2
-	dev-util/indent
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 #libIDL dep in configure.in is wrong
