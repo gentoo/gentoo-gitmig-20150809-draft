@@ -1,0 +1,55 @@
+--- ./sharutils-4.4/doc/shar.1.orig	2005-07-01 23:43:44.000000000 +1000
++++ ./sharutils-4.4/doc/shar.1	2005-07-30 12:39:00.000000000 +1000
+@@ -48,7 +48,7 @@
+ the list of files to be packed.  For example:
+ .nf
+ 
+-find . \-type f \-print | sort | shar \-S \-Z \-L50 \-o /tmp/big
++find . \-type f \-print | sort | shar \-S \-Z \-L50 \-o /somewhere/big
+ 
+ .fi
+ If \f2\-p\f1 is specified on the command line, then the options
+--- ./sharutils-4.4/doc/sharutils.texi.orig	2005-01-24 05:06:05.000000000 +1100
++++ ./sharutils-4.4/doc/sharutils.texi	2005-07-30 12:39:00.000000000 +1000
+@@ -279,7 +279,7 @@
+ the list of files to be packed.  For example:
+ 
+ @example
+-find . -type f -print | shar -S -o /tmp/big.shar
++find . -type f -print | shar -S -o /somewhere/big.shar
+ @end example
+ 
+ If @code{-p} is specified on the command line, then the options
+--- ./sharutils-4.4/src/remsync.in.orig	2005-06-08 07:45:50.000000000 +1000
++++ ./sharutils-4.4/src/remsync.in	2005-07-30 12:44:44.000000000 +1000
+@@ -1785,8 +1785,11 @@
+ 	}
+     }
+ 
++    $findtempfile = `tempfile`;
++    chop $findtempfile;
++
+     open (SCAN,
+-	  "find$list -type f 2> /tmp/$$.find | xargs -r $checksum_command |")
++	  "find$list -type f 2> $findtempfile | xargs -r $checksum_command |")
+ 	|| &interrupt ('Cannot launch program `find\'');
+ 
+     # Process each existing file in turn.
+@@ -1817,7 +1820,7 @@
+ 
+     # Clean out scanning for inexisting files.
+ 
+-    open (SCAN, "/tmp/$$.find");
++    open (SCAN, "$findtempfile");
+     while (<SCAN>)
+     {
+ 	chop;
+@@ -1843,7 +1846,7 @@
+ 	}
+     }
+     close SCAN;
+-    unlink "/tmp/$$.find";
++    unlink "$findtempfile";
+ 
+     $study_files = 0;
+ }
