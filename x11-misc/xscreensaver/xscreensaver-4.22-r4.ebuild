@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r3.ebuild,v 1.1 2005/07/26 19:47:06 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r4.ebuild,v 1.1 2005/07/30 02:58:32 smithj Exp $
 
-inherit eutils flag-o-matic pam
+inherit eutils flag-o-matic pam fixheadtails
 
-IUSE="gnome jpeg kde kerberos krb4 motif new-login nls offensive opengl pam xinerama"
+IUSE="gnome jpeg kde kerberos krb4 insecure-savers new-login nls offensive opengl pam xinerama"
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -42,7 +42,6 @@ DEPEND="${RDEPEND}
 	sys-devel/bc
 	dev-lang/perl
 	dev-util/pkgconfig
-	motif? ( virtual/motif )
 	nls? ( sys-devel/gettext )"
 
 # simple workaround for the flurry screensaver
@@ -74,12 +73,22 @@ src_unpack() {
 	# disable rpm -q checking, otherwise it breaks sandbox if rpm is installed
 	# use gnome-terminal in tests rather than gnome-open (bug #94708)
 	epatch ${FILESDIR}/${PN}-4.22-configure.patch
+
 	# tweaks the default configuration (driver/XScreenSaver.ad.in)
 	epatch ${FILESDIR}/${PN}-4.22-settings.patch
+
+	# makes the blank screen REALLY blank
+	epatch ${FILESDIR}/${PN}-blank-screen.patch
+
 	# fixes wrong argument for inter-aggregate screensaver
 	epatch ${FILESDIR}/${PN}-4.22-interaggregate.patch
+
 	# disable not-safe-for-work xscreensavers
 	use offensive || epatch ${FILESDIR}/${PN}-4.16-nsfw.patch
+
+	# change old head/tail to POSIX ones
+	#cd hacks
+	ht_fix_all
 }
 
 src_compile() {
@@ -104,7 +113,7 @@ src_compile() {
 		--enable-locking \
 		--with-gtk \
 		--with-xml \
-		$(use_with motif) \
+		$(use_with insecure-savers setuid-hacks) \
 		$(use_with new-login login-manager) \
 		$(use_with xinerama xinerama-ext) \
 		$(use_with pam) \
@@ -123,11 +132,20 @@ src_install() {
 
 	dodoc README
 
-	# install correctly in gnome
+	# install correctly in gnome, including info about configuration preferences
 	if use gnome ; then
 		dodir /usr/share/gnome/capplets
 		insinto /usr/share/gnome/capplets
 		doins driver/screensaver-properties.desktop
+
+		dodir /usr/share/pixmaps
+		insinto /usr/share/pixmaps
+		newins ${S}/utils/images/logo-50.xpm
+		xscreensaver.xpm
+
+		dodir /usr/share/control-center-2.0/capplets
+		insinto /usr/share/control-center-2.0/capplets
+		newins ${FILESDIR}/desktop_entries/screensaver-properties.desktop
 	fi
 
 	# install symlink to satisfy kde
@@ -135,11 +153,6 @@ src_install() {
 
 	# Remove "extra" capplet
 	rm -f ${D}/usr/share/applications/gnome-screensaver-properties.desktop
-
-	if use gnome ; then
-		insinto /usr/share/pixmaps
-		newins ${S}/utils/images/logo-50.xpm xscreensaver.xpm
-	fi
 
 	use pam && fperms 755 /usr/bin/xscreensaver
 	pamd_mimic_system xscreensaver auth
@@ -155,6 +168,16 @@ pkg_postinst() {
 		einfo "screen is locked to another account. If you want this"
 		einfo "feature, please recompile with USE=\"new-login\"."
 		einfo
+	fi
+
+	if use insecure-savers;then
+		ewarn
+		ewarn "You have chosen USE=insecure-savers. While upstream"
+		ewarn "has made every effort to make sure these savers do not"
+		ewarn "abuse their setuid root status, the possibilty exists that"
+		ewarn "someone will exploit xscreensaver and will be able to gain"
+		ewarn "root privledges. You have been warned."
+		ewarn
 	fi
 
 	einfo

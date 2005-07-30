@@ -1,6 +1,17 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.99 2005/07/27 21:49:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.100 2005/07/30 02:58:32 smithj Exp $
+
+*xscreensaver-4.22-r4 (30 Jul 2005)
+
+  30 Jul 2005; Jonathan Smith <smithj@gentoo.org>
+  +files/desktop_entries/screensaver-properties.desktop,
+  +files/xscreensaver-blank-screen.patch, -xscreensaver-4.22-r3.ebuild,
+  +xscreensaver-4.22-r4.ebuild:
+  motif USE flag dropped; insecure-savers use flag added, which enables setuid
+  root on a few savers for cool effects. stopped debug messages from appearing
+  on blank screens for bug #100465; installs gnome configure option correctly;
+  fixes head-tail for bug #100589
 
   27 Jul 2005; Joseph Jezak <josejx@gentoo.org> xscreensaver-4.22-r2.ebuild:
   Marked ppc stable for bug #100298.
