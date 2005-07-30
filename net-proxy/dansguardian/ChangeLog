@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.4 2005/05/30 00:03:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.5 2005/07/30 07:37:52 mrness Exp $
+
+  30 Jul 2005; Alin Nastac <mrness@gentoo.org> -dansguardian-2.8.0.2.ebuild:
+  Remove obsolete version.
 
   30 May 2005; Marcus D. Hanwell <marcus@gentoo.org>
   dansguardian-2.8.0.4.ebuild:
