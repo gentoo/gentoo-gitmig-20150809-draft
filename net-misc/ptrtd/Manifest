@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1f861ceda638a89c0e1b2d74ed150696 ChangeLog 480
 MD5 2bf2484cf9bc9fb2d9d22e3a2079b4ba files/digest-ptrtd-0.5.2 62
 MD5 9569d7878b02ed7917f13f2713dc0166 files/ptrtd.confd 383
 MD5 8d040162995360c626e14c2acec32613 files/ptrtd.initd 755
 MD5 40ceee5f15cf85ea235ae5556fc2e2f7 ptrtd-0.5.2.ebuild 934
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC68WyI1lqEGTUzyQRAvyXAJwMuLflp2a0tvM4XzYj4vAo7vaT7QCdHhq1
+iZX+DIIJL8vpHi4GXizVYj8=
+=5CG8
+-----END PGP SIGNATURE-----
