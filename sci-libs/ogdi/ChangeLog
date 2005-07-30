@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.11 2005/07/23 02:20:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.12 2005/07/30 22:11:12 nerdboy Exp $
+
+  30 Jul 2005; Steve Arnold <nerdboy@gentoo.org> ogdi-3.1.1-r1.ebuild,
+  ogdi-3.1.4-r1.ebuild, ogdi-3.1.5.ebuild:
+  fixed sparc install issues (sandbox violations) so it should work
+  correctly on other arches (in theory).  This is a mostly stealth update,
+  since it won't help people for whom it already worked...
 
 *ogdi-3.1.5 (23 Jul 2005)
 *ogdi-3.1.1-r1 (23 Jul 2005)
