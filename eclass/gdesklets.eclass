@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.9 2005/07/30 18:15:36 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -91,8 +91,8 @@ gdesklets_src_install() {
 			insinto ${GD_INSDIR}
 			doins ${DSP}
 
-			SCRIPTS=$(grep "script uri" ${DSP} | \
-				sed -e 's:.*<script uri=": :g' -e 's:"/>.*: :g')
+			SCRIPTS=$(grep "script .*uri" ${DSP} | \
+				sed -e 's:.*<script .*uri=": :g' -e 's:"/>.*: :g')
 
 			# For each one of the scripts, change to its
 			# base directory and change the install location
