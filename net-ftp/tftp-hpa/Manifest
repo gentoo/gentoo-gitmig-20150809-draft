@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6beaaff025cc211c3776bf3c633e4c1f tftp-hpa-0.34-r1.ebuild 766
-MD5 fd8ae783b2fd54e4b437c65ccaa3a398 ChangeLog 3412
-MD5 ebde07d7d9b1c603428806489254c116 tftp-hpa-0.40-r1.ebuild 839
+MD5 982fb58cbcecc16480892ac21a5f33d4 tftp-hpa-0.40-r1.ebuild 830
 MD5 f0b3c514a598fdff8dffc93723f41068 metadata.xml 300
-MD5 b528d4bed168103c99134196bee5b274 files/in.tftpd.rc6 515
-MD5 4cf3b73c8361f35562a6933865d78e5f files/in.tftpd.confd 138
-MD5 2f7c453cd0fde112ffac93387966fad3 files/digest-tftp-hpa-0.34-r1 65
+MD5 d7871f18053cd9774ee4b79016d94aa4 ChangeLog 3595
+MD5 9e0867241bab97104a2d82fb8035725b files/in.tftpd.confd 145
+MD5 0deba94161c48e49f0e2ee02afde4940 files/in.tftpd.rc6 443
 MD5 64b89cea2b9b468a4c4068b0ec5382a4 files/digest-tftp-hpa-0.40-r1 65
+MD5 2f7c453cd0fde112ffac93387966fad3 files/digest-tftp-hpa-0.34-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6x5LgIKl8Uu19MoRAjm0AJ0ejApNDq0QaPgSocscURVzTP6BIgCfTS+g
+hjcZ0Nnc+eKYd0sAD/FGNnA=
+=AUWl
+-----END PGP SIGNATURE-----

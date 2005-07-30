@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/tftp-hpa
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.5 2005/07/29 22:05:36 vanquirius Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.6 2005/07/30 06:29:14 vapier Exp $
+
+  30 Jul 2005; Mike Frysinger <vapier@gentoo.org> files/in.tftpd.confd,
+  files/in.tftpd.rc6, tftp-hpa-0.40-r1.ebuild:
+  Clean up init scripts and stabilize for #90784 by Daniel Webert.
 
   29 Jul 2005; Marcelo Goes <vanquirius@gentoo.org> -tftp-hpa-0.33.ebuild,
   -tftp-hpa-0.40.ebuild, tftp-hpa-0.40-r1.ebuild:
