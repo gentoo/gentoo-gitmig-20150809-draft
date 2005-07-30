@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6f99e149638c5199ff5ea0fc386990a2 ussp-push-0.4.ebuild 937
+MD5 1f4f5719089c5fcfe6d5650c0b8d8958 ChangeLog 420
+MD5 8463fa22a03e7df1b9c9cfabec3efc42 metadata.xml 278
+MD5 5b8c2d636a3e3483791343b49067a341 files/digest-ussp-push-0.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC657WNSP4Vda7IdsRAmecAJ4y4a6wTlNOA5xJfViS/Sss9cHRsgCgi0E6
+zWS5sQDyWTjTySarTknocSg=
+=G1jo
+-----END PGP SIGNATURE-----
