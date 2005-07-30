@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.75.ebuild,v 1.11 2005/04/24 02:47:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.75.ebuild,v 1.12 2005/07/30 18:14:44 swegener Exp $
 
 MY_PN="gateway"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -29,13 +29,11 @@ src_compile() {
 }
 
 src_install () {
-	exeinto /usr/bin
-	doexe upnpd
+	dobin upnpd
 	insinto /etc/linuxigd
 	doins etc/*
 	doins ${FILESDIR}/upnpd.conf
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/rc_upnpd upnpd
+	newinitd ${FILESDIR}/rc_upnpd upnpd
 	dodoc CHANGELOG LICENSE README SECURITY TODO
 }
 

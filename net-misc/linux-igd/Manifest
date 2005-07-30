@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 38a450bdcdfad817facbf8145cd5174c ChangeLog 957
 MD5 d558a748e7a1149c2afdf329e5c24a73 files/digest-linux-igd-0.75 60
 MD5 7801e26a39bae60e7cfbfe5277a9a7c8 files/digest-linux-igd-0.92 61
@@ -5,3 +8,10 @@ MD5 3e13c42283a75a030090b2c87ff2fe65 files/rc_upnpd 601
 MD5 09036e3385f54dd26f318a44cf5b3d27 files/upnpd.conf 68
 MD5 7b0e3a4957196c1a35980212b26930d0 linux-igd-0.75.ebuild 1264
 MD5 f0ebbb2d3fdf608a763a95b6331a085a linux-igd-0.92.ebuild 1260
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC68OwI1lqEGTUzyQRAk5pAKDC7cIIHAvtMcdIPJrLaa05FQ47xgCfdp/b
+lOi+BRsqWWuqUDiuT5SERiI=
+=/Cwr
+-----END PGP SIGNATURE-----

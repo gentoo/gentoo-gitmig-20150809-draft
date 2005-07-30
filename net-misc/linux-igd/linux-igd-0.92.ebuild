@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.92.ebuild,v 1.6 2004/07/15 02:57:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.92.ebuild,v 1.7 2005/07/30 18:14:44 swegener Exp $
 
 MY_PN="linuxigd"
 S="${WORKDIR}/${PN}"
@@ -18,8 +18,6 @@ DEPEND="net-misc/upnp
 	net-firewall/iptables"
 
 src_compile() {
-	cd ${S}
-
 	mv Makefile Makefile.orig
 	sed <Makefile.orig >Makefile \
 		-e "s|/etc/linuxigd|${D}/etc/linuxigd|" \
@@ -33,13 +31,11 @@ src_compile() {
 }
 
 src_install () {
-	exeinto /usr/bin
-	doexe upnpd
+	dobin upnpd
 	insinto /etc/linuxigd
 	doins etc/*
 	doins ${FILESDIR}/upnpd.conf
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/rc_upnpd upnpd
+	newinitd ${FILESDIR}/rc_upnpd upnpd
 	dodoc CHANGELOG LICENSE README SECURITY TODO
 }
 
