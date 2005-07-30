@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 88567158773e3a17584bedcb25e329fd ChangeLog 913
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-MD5 094a0dd8726803add089493c6ed49718 unshield-0.2.ebuild 579
-MD5 c129bec55413860d440c68c5b69c57da unshield-0.4.ebuild 686
 MD5 2931b9ac6f33b6ea4501b2bbf73b6081 files/digest-unshield-0.2 64
 MD5 691824e8b834caba40e95f0bb3d67ee4 files/digest-unshield-0.4 64
 MD5 7cb6ba62d0a279c13813ec18a9e8c7e8 files/unshield-gcc-3.4.patch 410
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+MD5 06f45ea87e6e5c9bd9c9131af2ae7a25 unshield-0.2.ebuild 517
+MD5 e47f6b6524870bb53dbe777780bfcb65 unshield-0.4.ebuild 633
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6+UQI1lqEGTUzyQRArWEAJ42fJgkkqZgGe/9Fi7XKDFNee3uqQCfWUN1
+z4BwV2zC5wO7nZ3byUkdF0Q=
+=C8wS
+-----END PGP SIGNATURE-----
