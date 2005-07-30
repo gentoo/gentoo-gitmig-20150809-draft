@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r1.ebuild,v 1.1 2005/07/25 01:47:20 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r2.ebuild,v 1.1 2005/07/30 23:46:05 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils
 
@@ -62,7 +62,7 @@ src_compile() {
 	# it doesn't work without ${D} (or with econf and einstall).
 	pkg_conf="--datadir=${D}usr/share/gdal --includedir=${D}usr/include/gdal \
 		--enable-shared --with-gnu-ld --with-pic"
-	[ "${ARCH}" = "x86" ] && pkg_conf="${pkg_conf} --without-libtool"
+
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
 		$(use_with postgres pg) $(use_with fits cfitsio) \
 		$(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
@@ -106,7 +106,7 @@ src_compile() {
 	sed -i -e "s:hardcode_into_libs=yes:hardcode_into_libs=no:g" libtool
 	echo '#undef GDAL_PREFIX' >> port/cpl_config.h
 	echo '#define GDAL_PREFIX "/usr"' >> port/cpl_config.h
-	make || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install() {
