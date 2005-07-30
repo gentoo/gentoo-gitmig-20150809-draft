@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 776a71e43518b0241d0db59d6e0c09ba libnjb-2.2.ebuild 1052
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
 MD5 2b5f4961b5605b47023f3f221250b5a5 ChangeLog 2809
 MD5 08a6b13091c718edd325a42cb2e7a997 libnjb-1.2.ebuild 1207
 MD5 9a2970f26d984d01b0129725337d2cbc libnjb-2.1.2.ebuild 1089
@@ -16,7 +16,7 @@ MD5 abf7c2c90f2fa0bda8417050514e1e2d files/libnjb-1.2-gentoo-multilib.patch 640
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC65c9p5vW4rUFj5oRAnm6AKCC22SJzBGSj3pU5/QLK4OKYmdZ+QCcCQmq
-iNUgbM9mJspT3nD1jFn+GiE=
-=wu1u
+iD8DBQFC65eYp5vW4rUFj5oRAu2aAKC/XiHIACnOwyUuNZujx6UQlXTJnQCglKRm
+G05wCqoeBOUfEprQjcot1vk=
+=Z6px
 -----END PGP SIGNATURE-----
