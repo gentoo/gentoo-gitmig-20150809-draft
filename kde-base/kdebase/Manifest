@@ -6,9 +6,9 @@ MD5 0f2f33973ed5a7183c9eb24339ee57e5 kdebase-3.4.0-r1.ebuild 3639
 MD5 3e5f9d9151b0e949e220754c4466d29c kdebase-3.3.2-r1.ebuild 3843
 MD5 f93f6f327b300509d077b23fd30b3332 kdebase-3.4.0.ebuild 3470
 MD5 acf208f77b0607c97763d9f91cb8da35 kdebase-3.3.2-r3.ebuild 3751
-MD5 5988f133923c9496b7452a6d3b22705a ChangeLog 37054
+MD5 8bec4f169b622806e20ff7315efcf7b4 ChangeLog 37305
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 1862e07bf4a1045df565def97911bcad kdebase-3.4.2.ebuild 4090
+MD5 d97f07ad36c0135703d7d85d89fe8785 kdebase-3.4.2.ebuild 4086
 MD5 49ebf63cda60ba3265f1231f295bc51b files/kdebase-3.4.1-configure.patch 6497
 MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
 MD5 78fb451ad534b71fc3e541e9e5759dac files/kde.desktop 3910
