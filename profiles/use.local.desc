@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1353 2005/07/29 18:46:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1354 2005/07/30 10:07:53 sekretarz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -463,6 +463,7 @@ media-gfx/gwenview:kipi - add support for kipi plugins
 media-gfx/imagemagick:fpx - enable libfpx support
 media-gfx/imagemagick:graphviz - enable graphviz support
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
+media-gfx/inkscape:effects - enables additional scripts (effects)
 media-gfx/inkscape:inkjar - enables inkjar support
 media-gfx/inkscape:plugin - enables extra plugins
 media-gfx/labplot:cdf - Adds cdf data exchange format support
