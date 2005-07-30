@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.2.ebuild,v 1.2 2005/07/29 08:45:11 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.2.ebuild,v 1.3 2005/07/30 09:16:15 greg_g Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -16,7 +16,9 @@ IUSE="ssl arts ieee1394 logitech-mouse opengl"
 PATCHES="$FILESDIR/configure.in.in-kdm-settings.diff
 	$FILESDIR/kdebase-3.4.1-configure.patch"
 
-DEPEND="ssl? ( dev-libs/openssl )
+DEPEND=">=media-libs/freetype-2
+	media-libs/fontconfig
+	ssl? ( dev-libs/openssl )
 	arts? ( $(deprange $PV $MAXKDEVER kde-base/arts) )
 	opengl? ( virtual/opengl )
 	ieee1394? ( sys-libs/libraw1394 )
