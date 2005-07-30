@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libmnetutil/libmnetutil-0.3.0.ebuild,v 1.1 2005/06/02 01:15:57 gustavoz Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libmnetutil/libmnetutil-0.3.0.ebuild,v 1.2 2005/07/30 18:10:25 swegener Exp $
 
 IUSE=""
 DESCRIPTION="Minisip basic networking library"
@@ -14,12 +12,6 @@ KEYWORDS="~x86"
 
 DEPEND="~net-misc/libmutil-0.3.0"
 
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
-
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
