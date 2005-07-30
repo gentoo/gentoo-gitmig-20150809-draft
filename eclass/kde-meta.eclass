@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.44 2005/07/29 13:45:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.45 2005/07/30 10:54:21 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -379,6 +379,11 @@ function kde-meta_src_compile() {
 	if [ "$KMNAME" == "kdebase" ]; then
 		# bug 82032: the configure check for java is unnecessary as well as broken
 		myconf="$myconf --without-java"
+	fi
+
+	if [ "$KMNAME" == "kdegames" ]; then
+		# make sure games are not installed with setgid bit, as it is a security risk.
+		myconf="$myconf --disable-setgid"
 	fi
 
 	# confcache support. valid only for my (danarmak's) port of stuart's confcache to portage .51,
