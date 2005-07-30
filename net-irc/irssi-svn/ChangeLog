@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.11 2005/06/28 14:41:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.12 2005/07/30 11:24:25 ka0ttic Exp $
+
+  30 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> irssi-svn-0.3.ebuild:
+  Added ~mips.
 
   28 Jun 2005; Sven Wegener <swegener@gentoo.org> irssi-svn-0.3.ebuild:
   Added NOCONFIGURE=1 to avoid running configure during bootstrap.
