@@ -1,10 +1,13 @@
 # ChangeLog for games-action/gltron
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.9 2005/07/30 04:37:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.10 2005/07/30 04:53:52 vapier Exp $
+
+*gltron-0.70-r1 (30 Jul 2005)
 
   30 Jul 2005; Mike Frysinger <vapier@gentoo.org>
   +files/gltron-0.70-configure.patch, +files/gltron-0.70-prototypes.patch,
-  gltron-0.70.ebuild:
+  +files/gltron-0.70-debian.patch, +gltron-0.70-r1.ebuild:
+  Add fixes from Debian for amd64 support #100109 Micha Wiernowolski.
   Fix CFLAGS breakage and sync some mismatched prototypes.
 
   31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> gltron-0.70.ebuild:
