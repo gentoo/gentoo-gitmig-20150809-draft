@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 c7ee5f18d037a294e8d1968f5b855db0 ChangeLog 2486
-MD5 c5350f1744d77bf7ee725e5174610195 maya-5.0.1-r1.ebuild 9147
+MD5 35237686a26e4acbd35d6113afce8836 maya-5.0.1-r1.ebuild 9453
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
-MD5 1368e4e902dcfc9d5e5b3fcb0c0f56cb files/aw_flexlm 1142
+MD5 bb9ba615ef3e351208b07cea7a5683f6 files/aw_flexlm 1165
 MD5 ed8559691fb165588d7db943242e7157 files/aw_flexlm.conf.d 132
 MD5 4c7815a2fa0bc842f364c812ac9beb29 files/digest-maya-5.0.1-r1 142
 MD5 d47d06f98fae1230e4a0e5db03745c90 files/maya-5.0.1.md5sum 62023
@@ -12,7 +12,7 @@ MD5 aa3d8c97154f1ce2d263a2a071811c28 files/maya-docs 314
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6+b+ArHZZzCEUG0RAuesAJoD73r/zsKd9mEa0Q5U3lXgA8QNgwCfTxvp
-esqV5MIXK3eyh6Coa/TWzpE=
-=k7fq
+iD8DBQFC6/LKArHZZzCEUG0RAr/vAJ9RYEaynm03chrrrYjj7YObm7CW/QCfX/wY
+5SPo9reaFJv/YkvoOZuhzI4=
+=0FAq
 -----END PGP SIGNATURE-----

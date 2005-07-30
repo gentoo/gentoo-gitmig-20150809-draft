@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.12 2005/07/30 20:45:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.13 2005/07/30 21:34:14 eradicator Exp $
 
 # Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
 # variable to the location of your maya RPMS and documentation:
@@ -236,4 +236,9 @@ pkg_postinst() {
 	# http://www.highend2d.com/boards/showthreaded.php?Cat=&Board=linuxforum&Number=174726&page=&view=&sb=&o=
 	ewarn "You should disable klipper, xfce4-clipman, and any other clipboard"
 	ewarn "utilities as they have been shown to cause maya to crash."
+
+	ewarn "You need to have a linuxthreads (without tls) glibc installed to"
+	ewarn "use this package.  In otherwords, you need to NOT have linuxthreads-tls"
+	ewarn "or nptlonly in your USE flags when you emerge glibc.  If you use nptl,"
+	ewarn "you'll need to start maya with 'LD_ASSUME_KERNEL=2.4.1 maya'"
 }
