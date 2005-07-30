@@ -2,15 +2,13 @@
 Hash: SHA1
 
 MD5 576524c6cc2644aa59e8d1171f14a9eb coda-kernel-6.2.ebuild 1046
-MD5 66c34a68f19def8947ff68b1280f9b1f coda-kernel-6.0.0.ebuild 1412
-MD5 38e8406c0c71353d9313d5c6e339b380 ChangeLog 580
+MD5 f19290f945e523d2719192d991886967 ChangeLog 685
 MD5 47cb41aa35e40830d5874d3214268770 metadata.xml 332
 MD5 aa24351ff473d8b3def550fdede285ed files/digest-coda-kernel-6.2 63
-MD5 c7f6a115db65915dee65cd11dba37b64 files/digest-coda-kernel-6.0.0 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6nUNTOXg++0VvJQRAhaGAKDXw2FiQRlSei0FYYMisx68Z92xbgCaAv5/
-T02m2a55s/CHqql3mEAd9kE=
-=+Vry
+iD8DBQFC63VyTOXg++0VvJQRAseLAJ0QTtfmYQN+4r6b8cNiy5SVIBpEZQCfQRdS
+F7F/84GNZPiUXgT47mpKlsE=
+=APO7
 -----END PGP SIGNATURE-----
