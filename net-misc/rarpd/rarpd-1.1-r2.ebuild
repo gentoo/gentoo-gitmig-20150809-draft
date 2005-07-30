@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/rarpd-1.1-r2.ebuild,v 1.6 2005/07/25 18:36:47 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/rarpd-1.1-r2.ebuild,v 1.7 2005/07/30 18:27:56 swegener Exp $
 
 inherit eutils
 
@@ -24,18 +24,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-daemon.patch
 }
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install() {
 	#make install DESTDIR=${D} || die # only installs rarpd to /
 	dosbin rarpd
 	doman rarpd.8
 	dodoc AUTHORS COPYING README TODO VERSION INSTALL
-	insinto /etc/conf.d
-	newins ${FILESDIR}/rarpd.conf.d rarpd
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/rarpd.init.d rarpd
+	newconfd ${FILESDIR}/rarpd.conf.d rarpd
+	newinitd ${FILESDIR}/rarpd.init.d rarpd
 }
