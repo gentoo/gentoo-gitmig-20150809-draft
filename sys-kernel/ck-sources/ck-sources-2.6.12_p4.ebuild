@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.11_p10.ebuild,v 1.1 2005/06/13 02:07:56 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.12_p4.ebuild,v 1.1 2005/07/30 02:27:37 marineam Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
-
-#K_NOSETEXTRAVERSION="no"
 K_NOUSENAME="yes"
+K_WANT_GENPATCHES="base"
+K_GENPATCHES_VER="10"
 ETYPE="sources"
 inherit kernel-2
 detect_version
@@ -18,6 +18,7 @@ MY_PR=${MY_PR/-r0/}
 EXTRAVERSION=-ck${PV/*_p/}${MY_PR}
 KV_FULL=${OKV}${EXTRAVERSION}
 KV_CK=${KV_FULL/-r*/}
+detect_version
 
 IUSE="ck-server"
 if use ck-server; then
@@ -26,34 +27,24 @@ else
 	CK_PATCH="patch-${KV_CK}.bz2"
 fi
 
-#version of gentoo patchset
-GPV="11-14"
-GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.base.tar.bz2"
-
-UNIPATCH_LIST="
-	${DISTDIR}/${CK_PATCH}
-	${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.base.tar.bz2"
+UNIPATCH_LIST="${DISTDIR}/${CK_PATCH}"
+#UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE}
+#	1900_pci-driver-typo.patch
+#	2100_e1000-spinlock.patch
+#	2300_qla2xxx-initialization.patch
+#	10" #All of the 2.6.x.y patches (in ck or manual edit) start with 10
 UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE}
-	10" #All of the 2.6.x.y patches (already in ck) start with 10
-
-UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}/0000_README"
+	1001
+	1002
+	1003"
 
 DESCRIPTION="Full sources for the Stock Linux kernel and Con Kolivas's high performance patchset"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
-SRC_URI="${KERNEL_URI} ${GPV_SRC}
+SRC_URI="${KERNEL_URI} ${GENPATCHES_URI}
 	ck-server? ( http://ck.kolivas.org/patches/2.6/${OKV}/${KV_CK}/patch-${KV_CK}-server.bz2 )
 	!ck-server? ( http://ck.kolivas.org/patches/2.6/${OKV}/${KV_CK}/patch-${KV_CK}.bz2 )"
 
-KEYWORDS="~x86 ~amd64"
-
-# Left out for now because ck-sources isn't keyworded for sparc
-# (from gentoo-sources)
-#pkg_setup() {
-#	if use sparc; then
-#		# hme lockup hack on ultra1
-#		use ultra1 || UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1399_sparc-U1-hme-lockup.patch"
-#	fi
-#}
+KEYWORDS="~amd64 ~ppc64 ~x86"
 
 pkg_postinst() {
 	postinst_sources
