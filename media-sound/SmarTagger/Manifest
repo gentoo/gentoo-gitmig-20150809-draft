@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c135df98d92fca3fb46e3f95c6f9d8a0 ChangeLog 789
 MD5 b5bc22159b822b521e3b6953a56f914c SmarTagger-0.1.ebuild 694
 MD5 63c44af40da2528472d68da85257c9b7 files/digest-SmarTagger-0.1 64
 MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC69ytI1lqEGTUzyQRAsqDAJ9G4GQ7d/woZjAgvBV9mdt9DSS8GACffbli
+RumO5Sx7c4Lx4MzR0DV8SJw=
+=rL8T
+-----END PGP SIGNATURE-----
