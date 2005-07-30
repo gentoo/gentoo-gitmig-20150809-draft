@@ -1,5 +1,15 @@
-MD5 89706da895a75c2c58be935de8ad4d49 htpdate-0.8.2.ebuild 726
-MD5 ff2b63df63e17d0b2714390e4c9ff1e1 metadata.xml 256
-MD5 6cce5876e7e57f8ca6847cd00613ee47 ChangeLog 1024
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 31f21246e801265b4f5af63f6f759520 ChangeLog 1139
 MD5 86ea7c47156ba3ab7bd460ad939b1d57 files/digest-htpdate-0.8.2 64
 MD5 ec81f587e402abf72a7e9e7f7f35e31b files/ppc.patch 474
+MD5 f30454af8956145e3493e48d2cca064f htpdate-0.8.2.ebuild 768
+MD5 ff2b63df63e17d0b2714390e4c9ff1e1 metadata.xml 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC68DcI1lqEGTUzyQRAtxsAKDarlvXcnhBSHdWQoM/vIlZlFJ+6wCdE/Et
+Vpk/gGp9PssBP1+Vf4sTsAM=
+=8HuG
+-----END PGP SIGNATURE-----

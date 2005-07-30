@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-0.8.2.ebuild,v 1.5 2005/07/02 11:02:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-0.8.2.ebuild,v 1.6 2005/07/30 18:02:41 swegener Exp $
 
 inherit toolchain-funcs eutils
 
-DESCRIPTION="Synchronize local workstation with time offered by remote web
-servers"
+DESCRIPTION="Synchronize local workstation with time offered by remote webservers"
 HOMEPAGE="http://www.clevervest.com/htp/"
 SRC_URI="http://www.clevervest.com/htp/archive/c/${P}.tar.gz"
 
@@ -17,8 +16,14 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/ppc.patch
+}
+
 src_compile() {
-	epatch ${FILESDIR}/ppc.patch
 	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die
 }
 
