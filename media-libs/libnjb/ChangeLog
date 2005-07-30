@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.19 2005/07/16 21:03:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.20 2005/07/30 15:06:24 chainsaw Exp $
+
+  30 Jul 2005; Tony Vroon <chainsaw@gentoo.org> +libnjb-2.1.2.ebuild:
+  Last ebuild with the old API was removed. Readding.
 
 *libnjb-2.2 (16 Jul 2005)
 
