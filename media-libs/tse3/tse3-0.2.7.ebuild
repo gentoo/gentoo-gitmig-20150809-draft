@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.7.ebuild,v 1.14 2005/05/05 02:38:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.7.ebuild,v 1.15 2005/07/30 16:56:30 chainsaw Exp $
 
 inherit eutils
 
@@ -24,6 +24,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-size_t-64bit.patch
 	# gcc-3.4 patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
+	# gcc-4 patch (bug #100708)
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {
