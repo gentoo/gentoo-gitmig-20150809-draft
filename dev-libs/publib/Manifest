@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 489170372c2d27ac5d3970612d000213 ChangeLog 1614
+MD5 2b5bc8938f79a43b4b5fcd248fcbc689 ChangeLog 1715
 MD5 5697e0977abfa463066ef3835193c341 publib-0.31.ebuild 1295
-MD5 e186be4ee35d8ab6e55ac6d630e200de publib-0.38.2.ebuild 1608
 MD5 0faafb3665d09b8e2b0fc2a0cbc29c2a metadata.xml 247
+MD5 8c115baa00d4d3ba9594e93f961fdb99 publib-0.38.2.ebuild 1583
 MD5 520a52a67a4ded579319584f1fcf9046 files/digest-publib-0.31 63
 MD5 047c8cf89ab3ca02545fc8fc7d651e1b files/digest-publib-0.38.2 132
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCpAxOj5H05b2HAEkRAgWaAKCa4beU08gA8x7N+RUQZ3EBd9RFAwCdFEwv
-qFKVFbfhTnWpby3j+KlMO6k=
-=Btjt
+iD8DBQFC61SGj5H05b2HAEkRAnhUAJ9KcyDy9//AEE9DbwYduKeJjIN23gCgmR18
+KFYZmTySrrN1FxwjUWEye1Y=
+=hial
 -----END PGP SIGNATURE-----

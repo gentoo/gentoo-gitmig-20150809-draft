@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/publib/publib-0.38.2.ebuild,v 1.1 2005/06/06 08:46:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/publib/publib-0.38.2.ebuild,v 1.2 2005/07/30 10:20:31 flameeyes Exp $
 
 inherit versionator eutils
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
@@ -28,7 +28,7 @@ src_unpack() {
 
 	epatch ${WORKDIR}/${DEBIAN_PATCH/.gz/}
 
-	mkdir objs
+	mkdir ${S}/objs
 }
 
 src_compile() {
@@ -45,7 +45,7 @@ src_compile() {
 
 src_install() {
 	# install extra docs
-	dodoc Changes framework/README framework/COPYING framework/TODO
+	dodoc Changes framework/README framework/TODO
 	dodoc framework/Blurb debian/changelog
 
 	# main install
