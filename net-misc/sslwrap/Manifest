@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3295bca0da892269bac953acae97d553 ChangeLog 1572
 MD5 8480b7cb00993d70ddb3950fa5e6e808 files/2.0.6-openssl-0.9.7.patch 459
 MD5 e510f94c5cb1d70ab6da66c674c1fff3 files/digest-sslwrap-2.0.6 127
 MD5 52709e671d08b02633a280be1b47a56e sslwrap-2.0.6.ebuild 946
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC68lxI1lqEGTUzyQRAnrTAKCitPwK4pDnp1jM13uLraAFrDor0ACgppDo
+V4JYzxHSgmF90wCKx+0+95c=
+=o74l
+-----END PGP SIGNATURE-----
