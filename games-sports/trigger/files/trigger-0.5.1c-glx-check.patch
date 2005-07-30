@@ -1,0 +1,15 @@
+Make sure strings like 2.0 aren't misdetected as 0.0 or 1.0.
+
+http://bugs.gentoo.org/100374
+
+--- src/pengine/glew.c
++++ src/pengine/glew.c
+@@ -5737,7 +5737,7 @@
+   s = glGetString(GL_VERSION);
+   if (!s) return GLEW_ERROR_NO_GL_VERSION;
+   i = _glewStrCLen(s, '.')+1;
+-  if (s+i-1 == NULL || s+i == NULL || s[i] < '1')
++  if (s+i-1 == NULL || s+i == NULL || (s[0] < '2' && s[i] < '1'))
+   {
+     return GLEW_ERROR_GL_VERSION_10_ONLY;
+   }
