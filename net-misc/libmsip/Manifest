@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9f87128ef842bf45559e9861088440e8 ChangeLog 371
 MD5 4654f9ade28e619565c6677e77d6b493 files/digest-libmsip-0.3.0 65
 MD5 6ab404afeb8efdf77e59f8a08b9f37db libmsip-0.3.0.ebuild 557
 MD5 d620cd424e6c6553736cc5304899deae metadata.xml 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC68LoI1lqEGTUzyQRAhYGAKDVyU2o7zmX5Dkk5DT7o5v+NOafCwCgik5t
+jsSuEanYdMypIhNVa4KV+QM=
+=kA0E
+-----END PGP SIGNATURE-----

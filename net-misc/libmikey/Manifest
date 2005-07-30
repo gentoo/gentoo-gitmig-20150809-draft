@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e298c0971d3b4dea467139e5122f1b96 ChangeLog 375
 MD5 09b5da0ff7e7ed894526f9a3dac391c4 files/digest-libmikey-0.4.0 66
 MD5 7cc9bb94e704c016f3c1b857054ea7dc libmikey-0.4.0.ebuild 523
 MD5 d620cd424e6c6553736cc5304899deae metadata.xml 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC68JyI1lqEGTUzyQRAuMvAKDA5E0Wd+P2Os6uZWIbbKIgF6lecACeIy3C
+0StHIJgGanUn3eWSDlFZ6I0=
+=sGPS
+-----END PGP SIGNATURE-----
