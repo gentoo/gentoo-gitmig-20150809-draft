@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d6f4d74afc8c909f59cd9581684251c9 6tunnel-0.10.ebuild 499
 MD5 f9a558f6e0e08188ca9d562453293c77 6tunnel-0.11_rc1.ebuild 533
 MD5 78bd53078c0f7d64c866fccf6e9d7807 ChangeLog 1175
 MD5 44eb384b283c07b3a4336dd2d3ace579 files/digest-6tunnel-0.10 63
 MD5 4a05bf43a8529501279f1b3afc45e835 files/digest-6tunnel-0.11_rc1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC671AI1lqEGTUzyQRAhdHAJ4rg+PP2rC5SmyzsjvuJye+5plL2QCcCGwI
+0swJe73feENjgPYBs7+Au2Y=
+=6jiW
+-----END PGP SIGNATURE-----
