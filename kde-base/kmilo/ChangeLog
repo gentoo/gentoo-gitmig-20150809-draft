@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmilo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.13 2005/07/28 21:16:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.14 2005/07/30 09:54:46 greg_g Exp $
+
+  30 Jul 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/configure-fix-kdeutils-powerbook.patch, kmilo-3.4.2.ebuild:
+  Add configure patch for pbbuttonsd detection (#94731).
 
 *kmilo-3.4.2 (28 Jul 2005)
 
