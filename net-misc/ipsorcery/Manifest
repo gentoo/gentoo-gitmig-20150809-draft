@@ -1,5 +1,18 @@
-MD5 3cde1faff1816b0ad472957dd7bfdbd9 ipsorcery-1.6.ebuild 724
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a214f93430b11d805cedb02ebec9a8e ChangeLog 1247
 MD5 9d9c902333ddd5f3b90bc9b874fdf5b1 ipsorcery-1.5.ebuild 724
-MD5 e3dda893dc963e6c802211d4976d3359 ChangeLog 1101
+MD5 3cde1faff1816b0ad472957dd7bfdbd9 ipsorcery-1.6.ebuild 724
+MD5 8fddb14362f25e6d3ba32d972ab2e064 ipsorcery-2.0.9.ebuild 827
+MD5 89edb769612add8464eb3c324f09e197 metadata.xml 374
 MD5 0ffd8c88864f9f333664963239beb0b2 files/digest-ipsorcery-1.5 61
 MD5 be8d49bd5c18316dd424981be66f3c1a files/digest-ipsorcery-1.6 61
+MD5 a6106adff3cf07fe3b50520a915414ac files/digest-ipsorcery-2.0.9 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC60YymdTrptrqvGERAi6VAJ4n67ndXml/hkIrDMChFOFhejUV9wCeNuEb
+lmY2/j+4oQvRa+B0jJAi9nQ=
+=/JLo
+-----END PGP SIGNATURE-----
