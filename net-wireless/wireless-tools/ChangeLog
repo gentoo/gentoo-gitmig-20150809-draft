@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.76 2005/07/29 21:39:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.77 2005/07/30 08:44:19 brix Exp $
+
+  30 Jul 2005; Henrik Brix Andersen <brix@gentoo.org> metadata.xml,
+  wireless-tools-27-r1.ebuild, wireless-tools-28_pre8-r1.ebuild:
+  Properly work-around for bug #100698.
 
   29 Jul 2005; <solar.@gentoo.org> wireless-tools-27-r1.ebuild,
   wireless-tools-28_pre8-r1.ebuild:

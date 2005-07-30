@@ -11,10 +11,5 @@
   <email>brix@gentoo.org</email>
   <name>Henrik Brix Andersen</name>
 </maintainer>
-<maintainer>
-  <email>solar@gentoo.org</email>
-  <name>Ned Ludd</name>
-  <description>embedded - minimal support</description>
-</maintainer>
 <longdescription>This package provides all the command line tools for configuring wireless networking devices with drivers that implement the Linux Wireless Extensions (almost all recent IEEE 802.11a/b/g drivers).</longdescription>
 </pkgmetadata>

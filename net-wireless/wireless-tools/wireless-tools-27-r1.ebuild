@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27-r1.ebuild,v 1.4 2005/07/29 21:39:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27-r1.ebuild,v 1.5 2005/07/30 08:44:19 brix Exp $
 
 # The following works with both pre-releases and releases
 MY_P=${PN/-/_}.${PV/_/.}
@@ -14,8 +14,8 @@ KEYWORDS="amd64 hppa ~mips ppc ppc64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-# Please stop breaking these depends. -solar
-DEPEND="sys-apps/sed"
+DEPEND="sys-apps/sed
+		!elibc_uclibc? ( >=sys-apps/baselayout-1.11.13 )"
 RDEPEND="virtual/libc"
 IUSE="nls"
 
