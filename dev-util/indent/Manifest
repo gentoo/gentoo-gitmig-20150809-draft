@@ -1,4 +1,15 @@
-MD5 ca76268e7eb064d9d090a071a66307e7 ChangeLog 2805
-MD5 4294c3bcbd3c46000fb88579f3b2d29a indent-2.2.9-r2.ebuild 927
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 796b411ea4cbd7d4ad6038f039ab43b3 ChangeLog 2997
+MD5 f00bf131224652b7d0b7d1e5f278d6d0 indent-2.2.9-r2.ebuild 972
 MD5 f57a7b304fcdb32c40bc002f52ea398d files/2.2.9-deb-gentoo.patch 2703
 MD5 0301409622291766d3a875aebcfed9b5 files/digest-indent-2.2.9-r2 64
+MD5 a7cd813d36e121a62668a70b548ba191 files/2.2.9-malloc.patch 350
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC60eXj5H05b2HAEkRAv50AKCcVrTYH+cMgQSmIOjSqXgRqHscowCfVYeY
+MFT1NM27Sg6yV5FnXUWuVlY=
+=CazA
+-----END PGP SIGNATURE-----
