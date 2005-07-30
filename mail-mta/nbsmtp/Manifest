@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 79a69c449906a32bdd50396fb0b61bea nbsmtp-1.00.ebuild 867
+MD5 5ed8fefe692b9e646fa6efcc3e0881f9 ChangeLog 5379
 MD5 2fc9863fa18fa7e25fedaa87a92a3c43 metadata.xml 259
-MD5 7117dfb6011515df130151f036f766fc nbsmtp-0.99.ebuild 933
+MD5 542c744aef06ef42eeb7a5aee6e34cdb nbsmtp-1.00.ebuild 867
 MD5 62f07f89b3880777c6876773075fcb33 nbsmtp-0.99-r1.ebuild 1404
-MD5 7e1a01e1c6c44e3b3dc122f0059b581b ChangeLog 5273
-MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99 64
+MD5 7117dfb6011515df130151f036f766fc nbsmtp-0.99.ebuild 933
 MD5 6649306b0229bcb3e7392bfeed69bed1 files/nbsmtp-CRAM-MD5.diff 679
-MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99-r1 64
 MD5 614757dbf694f3253b5ed3865f127ba1 files/digest-nbsmtp-1.00 64
+MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99 64
+MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99-r1 64
 MD5 02906beafefaf79dd565570de5541a06 files/mailer.conf 348
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC6jwxKRy60XGEcJIRAnduAJ9+nW1UH2WduoVsVK20FncWCUHdyQCfbE2A
-TaNkS3dijbP6Z8vBJGc0FaQ=
-=XCc/
------END PGP SIGNATURE-----
