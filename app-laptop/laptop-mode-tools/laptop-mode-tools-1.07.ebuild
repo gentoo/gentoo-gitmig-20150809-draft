@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.06.ebuild,v 1.1 2005/07/29 09:24:33 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.07.ebuild,v 1.1 2005/07/30 12:13:51 brix Exp $
 
 inherit linux-info
 
