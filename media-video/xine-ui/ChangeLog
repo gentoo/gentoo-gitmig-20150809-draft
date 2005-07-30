@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.83 2005/07/27 09:21:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.84 2005/07/30 11:06:36 flameeyes Exp $
+
+  30 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> xine-ui-0.99.4.ebuild:
+  Added patches to build on Gentoo/FreeBSD.
 
 *xine-ui-0.99.4 (27 Jul 2005)
 
