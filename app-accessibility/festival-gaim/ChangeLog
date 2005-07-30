@@ -1,18 +1,18 @@
 # ChangeLog for app-accessibility/festival-gaim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.24 2005/07/30 15:24:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.25 2005/07/30 20:24:19 eradicator Exp $
 
   30 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
-  -festival-gaim-0.81.ebuild,
+  -festival-gaim-0.81.ebuild, -festival-gaim-1.00.ebuild,
+  -files/festival-gaim-0.71-gentoo.patch:
   Removing old version.
 
 *festival-gaim-1.1-r1 (30 Jul 2005)
 
   30 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
-  festival-gaim-1.00.ebuild, festival-gaim-1.1.ebuild,
-  +festival-gaim-1.1-r1.ebuild:
-  Revbump to be compatible with festival-1.4.3-r4. 1.1 stable on amd64, sparc,
-  x86.
+  festival-gaim-1.1.ebuild, +festival-gaim-1.1-r1.ebuild:
+  Revbump to be compatible with festival-1.4.3-r4. 1.1 stable on amd64, ppc
+  (per JoseJX), sparc, and x86.
 
 *festival-gaim-1.1 (09 Feb 2005)
 

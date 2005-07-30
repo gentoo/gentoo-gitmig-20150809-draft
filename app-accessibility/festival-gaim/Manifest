@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 da814f2fc8dad0f570a866eaad511282 ChangeLog 3294
 MD5 1846f613d6d41e3b8ad07c732edeafe1 metadata.xml 205
 MD5 5e75530a189fdd85fc2469b8ec8723f3 festival-gaim-1.1.ebuild 1054
 MD5 3b50bbaba4f54669ea7c69ad866079ff festival-gaim-1.1-r1.ebuild 1152
 MD5 7aed20e85b6947be6eb5912946b33068 files/digest-festival-gaim-1.1 65
 MD5 7aed20e85b6947be6eb5912946b33068 files/digest-festival-gaim-1.1-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6+IcArHZZzCEUG0RAoQFAJwIvpFA3Vl03RupkNWvn2GmkHzIDgCfRvwF
+R7UqRXqF+RcA0fmaUlSV4bk=
+=zkEa
+-----END PGP SIGNATURE-----
