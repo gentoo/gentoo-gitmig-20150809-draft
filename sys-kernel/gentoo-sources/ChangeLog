@@ -1,6 +1,26 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.173 2005/07/24 15:56:43 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.174 2005/07/30 19:53:25 dsd Exp $
+
+*gentoo-sources-2.6.12-r7 (30 Jul 2005)
+
+  30 Jul 2005; Daniel Drake <dsd@gentoo.org>
+  -gentoo-sources-2.6.10-r6.ebuild, +gentoo-sources-2.6.12-r7.ebuild:
+  Support network on iMac G5
+  Support Promise TX4200 SATA
+  Fix touchpad on Alienware sentia
+  Fix matroxfb vs fbsplash conflict
+  Fix bringing up of VLANs
+  Fix gconfig crash
+  Fix powernow oops on dual-core athlon
+  Fix possible bio-clone corruption
+  Fix qla2xxx failure handling
+  Fix network skb signedness problem
+  Fix elf-related memory leak on AMD64
+  Fix possible overflow in IPSEC policy code
+  Fix possible corruption in memory NAT
+  Fix possible deadlock in ipv6
+  Fix crash on conntrac unload
 
   24 Jul 2005; <plasmaroo@gentoo.org> gentoo-sources-2.6.12-r6.ebuild:
   Stable on IA64.
