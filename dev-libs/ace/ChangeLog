@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.29 2005/05/30 19:07:39 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.30 2005/07/30 01:52:58 dragonheart Exp $
+
+*ace-5.4.6 (30 Jul 2005)
+
+  30 Jul 2005; Daniel Black <dragonheart@gentoo.org> -ace-5.3.ebuild,
+  -ace-5.4.ebuild, -ace-5.4-r1.ebuild, ace-5.4.3.ebuild, +ace-5.4.6.ebuild:
+  version bump + old version cleanout
 
   30 May 2005; Michael Imhof <tantive@gentoo.org> metadata.xml:
   Fixed metadata.

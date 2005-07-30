@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.4.3.ebuild,v 1.2 2005/07/30 01:52:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.4.6.ebuild,v 1.1 2005/07/30 01:52:58 dragonheart Exp $
 
 inherit eutils
 
@@ -12,27 +12,19 @@ HOMEPAGE="http://www.cs.wustl.edu/~schmidt/ACE.html"
 SLOT="0"
 LICENSE="BSD as-is"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
-IUSE="ipv6 X ssl"
+IUSE="ipv6"
 
 DEPEND="virtual/libc
 	X? ( virtual/x11 )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}/ace
-	use ipv6 && sed -e "s/#define ACE_HAS_PTHREADS$/#define ACE_HAS_PTHREADS\n#define ACE_HAS_IPV6/" config-linux.h >config.h \
-		|| cp config-linux.h config.h
-	cd ${S}/include/makeinclude
-	sed -e "s:-O3:${CFLAGS}:" platform_linux.GNU >platform_macros.GNU
-	sed -i -e "s:-O3::" ${S}/configure
-}
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	export ACE_ROOT=${S}
 	mkdir build
 	cd build
 	ECONF_SOURCE=${S}
-	econf --enable-lib-all `use_with X` `use_with ssl`
+	econf --enable-lib-all $(use_with X) $(use_enable ipv6)
 	# --with-qos needs ACE_HAS_RAPI
 	emake static_libs=1 || die
 }
