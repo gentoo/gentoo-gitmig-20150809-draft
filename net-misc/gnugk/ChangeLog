@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/gnugk
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnugk/ChangeLog,v 1.6 2005/07/29 23:45:26 stkn Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnugk/ChangeLog,v 1.7 2005/07/30 00:33:14 stkn Exp $
+
+*gnugk-2.2.2 (30 Jul 2005)
+
+  30 Jul 2005; <stkn@gentoo.org> gnugk-2.2.1.ebuild, +gnugk-2.2.2.ebuild:
+  Version bump, cleanups, gnugk-2.2.x doesn't support ldap at the moment, ldap
+  flag removed. Fixes bug #48565 and #92976. Readded ~x86 flag.
 
 *gnukg-2.2.1 (24 Mar 2005)
 
