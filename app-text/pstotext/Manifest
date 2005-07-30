@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 15309aebd05fad0325dac952c6747e40 pstotext-1.8g-r1.ebuild 784
 MD5 8114238320af66caa1e90d5c8f67dce8 pstotext-1.8g.ebuild 681
-MD5 a734ee1b2d6ed61da6ae0d3198111653 pstotext-1.8g-r1.ebuild 788
-MD5 006adc9c4b2e04a93f42e85b25b1a93f ChangeLog 1595
-MD5 84a047e65494c9f47e4af70d3276320f files/digest-pstotext-1.8g-r1 58
+MD5 80b8520799108315ee518c8804343ddf ChangeLog 1688
 MD5 7959110be19f6b828a6c39a43b79354f files/pstotext-1.8g-dsafer.patch 668
 MD5 84a047e65494c9f47e4af70d3276320f files/digest-pstotext-1.8g 58
+MD5 84a047e65494c9f47e4af70d3276320f files/digest-pstotext-1.8g-r1 58
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC5+p/KRy60XGEcJIRAnC7AKCrRh5gRlJeCPCKkgLpb4/KMzNF/ACdG8zk
-LGEuGx1VRcjadB94Qb+ysUk=
-=UvyH
+iQCVAwUBQuvCzp4WFLgrx1GWAQJE/wQAx4oZV3pGaqXhfRkODMVMz1gQAxvyanev
+yJV7zjNP1n+ey30EZiTj91ulWnZZ8G5xDyTQZXKGL6cUBf1PigbsNH4e0lBs7QrT
+maTM99TEB9twDFXe+/xGJ72Te4NydeN9sHCOqAGQJ/61zLOjxawkI5Bw89aJ8NeC
++5t2vEEgtP4=
+=sPgL
 -----END PGP SIGNATURE-----
