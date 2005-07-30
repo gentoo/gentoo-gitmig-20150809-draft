@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r5.ebuild,v 1.4 2005/07/30 05:09:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r5.ebuild,v 1.5 2005/07/30 05:18:34 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,10 +29,11 @@ src_unpack() {
 		-e 's:-march=486::' \
 		-e 's:-march=pentium -mcpu=pentiumpro::' \
 		configure || die "sed configure failed"
-	# GCC 3.1 fix from bug #5558 (cardoe 08/03/02)
+	# Bundled libtool doesnt properly add C++ libs even
+	# though the shared library includes C++ objects
 	sed -i \
-		-e '/^libsmpeg_la_LIBADD =/s:$: -lsupc++:' Makefile.in \
-		|| die "sed Makefile.in failed"
+		-e '/^libsmpeg_la_LIBADD =/s:$: -lstdc++:' \
+		Makefile.in || die "sed Makefile.in failed"
 }
 
 src_compile() {
