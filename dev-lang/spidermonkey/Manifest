@@ -1,8 +1,18 @@
-MD5 3eca06c2e26ab50714f16f199c2f57ec ChangeLog 1151
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d7a0c0da95983654b453ab63836b062a ChangeLog 1282
 MD5 58a66a4afd410f29e7507a837e4a12e6 spidermonkey-1.5_rc5.ebuild 795
-MD5 06e4b77f52d4e7419147efd0b5cd40bf spidermonkey-1.5_rc6-r1.ebuild 1306
+MD5 2e06ce86f90556e29c9b87fe686be0f5 spidermonkey-1.5_rc6-r1.ebuild 1307
 MD5 b0a39d97a54b44ecd77f8b5671cd7fdd spidermonkey-1.5_rc6.ebuild 1147
 MD5 e7bfb72073e1ade3470d60ba93042804 files/digest-spidermonkey-1.5_rc5 63
 MD5 8e216cdd6972fcc5206162ef5f0a9702 files/digest-spidermonkey-1.5_rc6 64
 MD5 8e216cdd6972fcc5206162ef5f0a9702 files/digest-spidermonkey-1.5_rc6-r1 64
 MD5 432f897c13753f70b1dea5c066c10ac1 files/spidermonkey-1.5_rc6-va_copy-fix.patch 1129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6/DPj5H05b2HAEkRArC0AJ9cLt6WqIhFNMHwlOF1tDud0BFWEwCgiYXF
+iXlGkuV7uku8NdMFWJGXu4o=
+=SPI+
+-----END PGP SIGNATURE-----
