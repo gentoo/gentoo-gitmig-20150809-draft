@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Kakasi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/ChangeLog,v 1.9 2005/05/06 14:42:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/ChangeLog,v 1.10 2005/07/30 12:46:58 pvdabeel Exp $
+
+  30 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  Text-Kakasi-2.04.ebuild:
+  PowerPC Stable
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   Text-Kakasi-2.04.ebuild:

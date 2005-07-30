@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-SAX-Base
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Base/ChangeLog,v 1.6 2005/04/29 16:08:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Base/ChangeLog,v 1.7 2005/07/30 12:41:43 pvdabeel Exp $
+
+  30 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  XML-SAX-Base-1.04.ebuild:
+  PowerPC Stable
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   XML-SAX-Base-1.04.ebuild:
