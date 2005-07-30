@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sipsak/sipsak-0.8.6.ebuild,v 1.8 2005/05/07 14:23:24 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipsak/sipsak-0.8.6.ebuild,v 1.9 2005/07/30 18:34:10 swegener Exp $
 
 IUSE=""
 
@@ -13,12 +13,6 @@ SLOT="0"
 KEYWORDS="x86 ~sparc"
 
 DEPEND="virtual/libc"
-
-src_compile() {
-	econf || die
-
-	emake || die
-}
 
 src_install() {
 	einstall || die
