@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/desklet-ftb
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ftb/ChangeLog,v 1.1 2005/07/30 18:32:18 nixphoeni Exp $
+
+*desklet-ftb-0.3 (30 Jul 2005)
+
+  30 Jul 2005; Joe Sapp <nixphoeni@gentoo.org> +metadata.xml,
+  +desklet-ftb-0.3.ebuild:
+  Initial commit
+
