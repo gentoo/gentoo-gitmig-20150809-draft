@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f92a01ee8caf73b7b4f4a3372c2c5d34 ChangeLog 3302
+MD5 d639a2c23e8088638cac57f8cf82771a ChangeLog 3231
+MD5 5bcf47524cd7ffe2d71f1201d4a6567c festival-gaim-1.00.ebuild 829
 MD5 1846f613d6d41e3b8ad07c732edeafe1 metadata.xml 205
 MD5 a77b6388fc4d0bb71b6e606be4d5b20c festival-gaim-1.1.ebuild 1055
 MD5 3b50bbaba4f54669ea7c69ad866079ff festival-gaim-1.1-r1.ebuild 1152
+MD5 dcb2796b5c841c223bc2508ef85795ab files/digest-festival-gaim-1.00 69
+MD5 1a5f43e004ec0bfa631cc7628f65a91b files/festival-gaim-0.71-gentoo.patch 1073
 MD5 7aed20e85b6947be6eb5912946b33068 files/digest-festival-gaim-1.1 65
 MD5 7aed20e85b6947be6eb5912946b33068 files/digest-festival-gaim-1.1-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC65sGArHZZzCEUG0RAmeIAJ0Tra7srz3yHUgmah7/M0k8g51H+wCdFoQr
-DilF8v1vCneIJXSCQQvXljM=
-=qffu
+iD8DBQFC65usArHZZzCEUG0RAr2nAJ9OkjyTNjpYHLdEeNcKp8lyrtBSZwCeJ7zh
+/qy0maZBdeRgokRlmFgYGM4=
+=RpbI
 -----END PGP SIGNATURE-----
