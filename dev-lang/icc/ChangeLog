@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.29 2005/07/24 02:35:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.30 2005/07/30 18:56:36 karltk Exp $
+
+  30 Jul 2005; Karl Trygve Kalleberg <karltk@gentoo.org> icc-9.0.021.ebuild:
+  -m Regened digest. Fixed a few minor details. Fixes #100757.
 
 *icc-8.1.028 (24 Jul 2005)
 

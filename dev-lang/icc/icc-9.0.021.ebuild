@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.0.021.ebuild,v 1.1 2005/07/05 13:35:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-9.0.021.ebuild,v 1.2 2005/07/30 18:56:36 karltk Exp $
 
 inherit rpm
 
@@ -58,8 +58,8 @@ src_compile() {
 	if [ -f ${SUPPORTFILE} ]
 	then
 		einfo "Untagging: ${SUPPORTFILE}"
-		sed s@\<installpackageid\>@${PACKAGEID}@g ${SUPPORTFILE} > ${SUPPORTFILE}.abs
-		mv ${SUPPORTFILE}.abs ${SUPPORTFILE}
+		sed "s|<installpackageid>|${PACKAGEID}|g" \
+			-i ${SUPPORTFILE}
 		chmod 644 ${SUPPORTFILE}
 	fi
 
@@ -68,15 +68,15 @@ src_compile() {
 	if [ -f ${SUPPORTFILE} ]
 	then
 		einfo "Untagging: ${SUPPORTFILE}"
-		sed s@\<INSTALLTIMECOMBOPACKAGEID\>@${PACKAGEID}@g ${SUPPORTFILE} > ${SUPPORTFILE}.abs
-		mv ${SUPPORTFILE}.abs ${SUPPORTFILE}
+		sed -e "s|<INSTALLTIMECOMBOPACKAGEID>|${PACKAGEID}|g" \
+			-i ${SUPPORTFILE}
 		chmod 644 ${SUPPORTFILE}
 	fi
 
 	# These should not be executable
-	find "${S}/opt/intel/cc*/9.0/"{doc,man,include} -type f -exec chmod -x "{}" ";"
-	find "${S}/opt/intel/cc*/9.0/lib" -name \*.a -exec chmod -x "{}" ";"
-	find "${S}/opt/intel/idb*/9.0/"{doc,man} -type f -exec chmod -x "{}" ";"
+	find "${S}/opt/intel/cc/9.0/"{doc,man,include} -type f -exec chmod -x "{}" ";"
+	find "${S}/opt/intel/cc/9.0/lib" -name \*.a -exec chmod -x "{}" ";"
+	find "${S}/opt/intel/idb/9.0/"{doc,man} -type f -exec chmod -x "{}" ";"
 }
 
 src_install () {
