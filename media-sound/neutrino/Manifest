@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+MD5 598c4564f791cc02718bf16ad418d2c2 ChangeLog 373
+MD5 b95a7b67fbfde4414d530bc2bb776af7 neutrino-0.8.3.ebuild 858
+MD5 a640d6a1e8c22c49f019eaae79c51ea0 files/digest-neutrino-0.8.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC65kVp5vW4rUFj5oRAscmAJ434CsIVKr/DWKv6EvagrIi25fhpQCfQWPE
+PaYP12ali3CuQ3vOhcL58d4=
+=ke1w
+-----END PGP SIGNATURE-----

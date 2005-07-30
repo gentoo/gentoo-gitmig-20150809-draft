@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/neutrino
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/neutrino/ChangeLog,v 1.1 2005/07/30 15:14:15 chainsaw Exp $
+
+*neutrino-0.8.3 (30 Jul 2005)
+
+  30 Jul 2005; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +neutrino-0.8.3.ebuild:
+  Initial commit, closes bug #65162.
+
