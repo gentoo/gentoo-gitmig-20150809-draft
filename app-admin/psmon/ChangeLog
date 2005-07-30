@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/psmon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.7 2005/05/25 13:58:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.8 2005/07/30 02:16:02 dragonheart Exp $
+
+*psmon-1.29 (30 Jul 2005)
+
+  30 Jul 2005; Daniel Black <dragonheart@gentoo.org> psmon-1.0.4.ebuild,
+  +psmon-1.29.ebuild:
+  version bump thanks to meatoo and bug #74390 thanks to Nicola Worthington
+  <nicolaw@lilacup.2x4b.com>
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> psmon-1.0.4.ebuild:
   dev-perl/Getopt-Long => perl-core/Getopt-Long migration
