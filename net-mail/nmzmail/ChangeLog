@@ -1,0 +1,9 @@
+# ChangeLog for net-mail/nmzmail
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/ChangeLog,v 1.1 2005/07/30 13:43:23 g2boojum Exp $
+
+*nmzmail-0.1.3 (30 Jul 2005)
+
+  30 Jul 2005; Grant Goodyear <g2boojum@gentoo.org> +nmzmail-0.1.3.ebuild:
+  New package
+
