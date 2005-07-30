@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 89edb769612add8464eb3c324f09e197 metadata.xml 374
-MD5 01cff1a2962028994f6f40584967e13b ChangeLog 2864
-MD5 54fe868c352cfa29b41499c1b435eb7b l7-protocols-2005.07.17.ebuild 1504
+MD5 f9d23580ff5ed009ee655f2fbc8fff5c ChangeLog 2965
+MD5 a562404ee22ce7290fd6f7a600f44af0 l7-protocols-2005.07.17.ebuild 1503
 MD5 0cbc54110aaab6ac790397ae8297ea73 l7-protocols-2005.07.28.ebuild 1499
 MD5 fcf227032ec244c8114886ea1141f96a l7-protocols-2005.06.04.ebuild 1497
 MD5 a328041c762d80804c793979b160a538 files/digest-l7-protocols-2005.07.28 74
@@ -12,7 +12,7 @@ MD5 df9a9c3778a213e81067e0c0e88ad849 files/digest-l7-protocols-2005.07.17 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC61WjmdTrptrqvGERAivRAKCGQvSZvyMtQLcNBbSYs+0FxtbtIQCgmSoS
-nrgqscIZkhhxKtLMujB+Ggg=
-=l0As
+iD8DBQFC64GwmdTrptrqvGERAin6AJwLSrHUNz+hIT2xdF5yeV1PTaxUvQCdFlBT
+qIgTlwosvchRGHtIiTPbq54=
+=Ah2p
 -----END PGP SIGNATURE-----
