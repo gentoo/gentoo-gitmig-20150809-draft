@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/PECL-apc-3.0.5.ebuild,v 1.1 2005/07/28 06:20:45 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/PECL-apc-3.0.6.ebuild,v 1.1 2005/07/30 17:14:34 sebastian Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_PKG="APC"
@@ -21,6 +21,9 @@ DEPEND="${DEPEND}
 
 src_install () {
 	php-ext-pecl_src_install
+
+	insinto /usr/share/apc
+	doins apc.php
 	dodoc CHANGELOG INSTALL LICENSE NOTICE
 
 	php-ext-base_addtoinifiles "apc.enabled" '"1"'
@@ -34,4 +37,14 @@ src_install () {
 	php-ext-base_addtoinifiles "apc.filters" '""'
 	php-ext-base_addtoinifiles "apc.mmap_file_mask" '""'
 	php-ext-base_addtoinifiles "apc.slam_defense" '"0"'
+	php-ext-base_addtoinifiles "apc.file_update_protection" '"2"'
+}
+
+pkg_postinst () {
+	einfo "You need to restart your webserver to activate APC."
+	einfo
+	einfo "A web interface is available to manage the APC cache."
+	einfo "Copy /usr/share/apc/apc.php to somewhere where your"
+	einfo "webserver can see it. See the documentation on how"
+	einfo "to secure this web interface with authentication."
 }
