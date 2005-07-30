@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20-r1.ebuild,v 1.2 2005/07/30 20:50:33 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.28.ebuild,v 1.1 2005/07/30 20:50:33 sekretarz Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
