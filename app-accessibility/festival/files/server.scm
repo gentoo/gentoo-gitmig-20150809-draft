@@ -4,8 +4,8 @@
 ;(Parameter.set 'Audio_Method 'mplayeraudio)
 ;(Parameter.set 'Audio_Method 'sunaudio)
 
-; For a list of voices, look in /usr/lib/festival/voices/
-; To use the mbrola voices, you must emerge the 'mbrola' package
+; For a list of voices, look in /usr/share/festival/voices/
+; To use the mbrola voices, you must emerge festival with USE='mbrola'
 ; us1_mbrola is my (eradicator) personal favorite voice.
 ;(voice_us1_mbrola)
 
