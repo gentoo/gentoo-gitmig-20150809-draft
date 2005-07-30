@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sambasentinel/sambasentinel-0.1.ebuild,v 1.7 2004/06/25 00:09:38 agriffis Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sambasentinel/sambasentinel-0.1.ebuild,v 1.8 2005/07/30 18:31:08 swegener Exp $
 
 DESCRIPTION="SambaSentinel is a GTK frontend to smbstatus"
 HOMEPAGE="http://kling.mine.nu/sambasentinel.htm"
@@ -14,16 +13,8 @@ IUSE=""
 
 DEPEND=">=x11-libs/gtk+-1.2"
 
-src_unpack() {
-	unpack ${A}
-	mv ${WORKDIR}/SambaSentinel ${WORKDIR}/${P}
-}
-
-src_compile() {
-	emake || die
-}
+S="${WORKDIR}"/SambaSentinel
 
 src_install() {
-	cd ${S}
 	dobin SambaSentinel
 }

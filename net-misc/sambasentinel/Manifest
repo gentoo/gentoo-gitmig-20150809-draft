@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 28eace0fe3cf046f59e0bc0b0310b478 ChangeLog 481
-MD5 15b8737fbdd87586aa0f6a1486c4ee6c sambasentinel-0.1.ebuild 651
 MD5 f5b4bf41975cdd405aaf3756ae7206bc files/digest-sambasentinel-0.1 68
+MD5 6dbd55930f9e64b2214ff384dabe2e06 sambasentinel-0.1.ebuild 562
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC68eHI1lqEGTUzyQRAlJaAKCIMQNjWToTawdQh2lk02HsnKEVKwCeOYNC
+/VGnXn54RluLJaHayej0AwI=
+=q2Nb
+-----END PGP SIGNATURE-----
