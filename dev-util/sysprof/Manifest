@@ -1,0 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 daf49bff783b56d005079fd65a2bf10d sysprof-0.91.ebuild 974
+MD5 fb6802cb35b394b554244f937cede153 ChangeLog 329
+MD5 adee278e0e445f2badb640ef691c2caf files/digest-sysprof-0.91 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC6v77gIKl8Uu19MoRAk7IAJ9uG1crePnOxg6Cn2C91shhJi09+ACdH8iM
+SJcfddDFF+joSfsbCrbVt7g=
+=8p9Y
+-----END PGP SIGNATURE-----
