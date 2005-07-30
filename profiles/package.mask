@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4226 2005/07/30 14:14:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4227 2005/07/30 17:47:41 karltk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+
+# Karl Trygve Kallebreg <karltk@gentoo.org> (30 Jul 2005)
+# all version contains a static copy of zlib-1.2.1.1 which has security
+# issues
+net-misc/zsync
 
 # Brian Jackson <iggy@gentoo.org> (29 Jul 2005)
 # original maintainer dropped off the face of the planet and it has security
