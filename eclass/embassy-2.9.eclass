@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/embassy-2.9.eclass,v 1.7 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/embassy-2.9.eclass,v 1.8 2005/07/30 00:39:02 ribosome Exp $
 
 # Author Olivier Fisette <ribosome@gentoo.org>
 
@@ -39,7 +39,7 @@ DEPEND="=sci-biology/emboss-${EBOV}
 
 S=${WORKDIR}/EMBOSS-${EBOV}/embassy/${EF}
 
-embassy_src_unpack() {
+embassy-2.9_src_unpack() {
 	unpack ${A}
 	mkdir EMBOSS-${EBOV}/embassy
 	mv ${EF} EMBOSS-${EBOV}/embassy/
@@ -49,7 +49,7 @@ embassy_src_unpack() {
 	cp /usr/$(get_libdir)/libnucleus.la EMBOSS-${EBOV}/nucleus/
 }
 
-embassy_src_compile() {
+embassy-2.9_src_compile() {
 	local EXTRA_CONF
 	! use X && EXTRA_CONF="${EXTRA_CONF} --without-x"
 	! use png && EXTRA_CONF="${EXTRA_CONF} --without-pngdriver"
@@ -68,7 +68,7 @@ embassy_src_compile() {
     without \"png\" support, compilation will fail when linking the binaries."
 }
 
-embassy_src_install() {
+embassy-2.9_src_install() {
 	einstall || die
 	dodoc AUTHORS ChangeLog NEWS README
 }
