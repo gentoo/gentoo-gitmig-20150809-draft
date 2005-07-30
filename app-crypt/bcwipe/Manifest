@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2dc972c11bd3c7d4bb061ca00c11346 bcwipe-1.5_p3.ebuild 954
+MD5 b3bd623f215d1a89202f4948106e18f1 ChangeLog 1810
 MD5 1cb44787bc3abdc22830e2e0eadd6e74 bcwipe-1.3_p1.ebuild 741
+MD5 9ec3113914ea3fddb038f77e855ddd79 bcwipe-1.5_p2.ebuild 757
 MD5 1c3665b87d1e39c6799909da58f41b26 metadata.xml 160
-MD5 4bf3b411fd5dc3061cac3b965d0ddbee bcwipe-1.5_p2.ebuild 764
-MD5 cd6ff824e061fca9132d7731f040695a ChangeLog 1702
-MD5 8be6835c3a75263a6c2fdd66ca9bbc62 files/digest-bcwipe-1.5_p3 121
-MD5 471318482fcd15b5faf79fc5bfea66c9 files/digest-bcwipe-1.5_p2 118
+MD5 53a2e0747cec91d5740d348601111d60 bcwipe-1.5_p3.ebuild 947
 MD5 d4e66dc21986379a0e6157599ab8a2c8 files/digest-bcwipe-1.3_p1 121
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvRRvmdTrptrqvGERAk/FAJ9f5ILx9Ze2M/grT8bp/qwnL5eHzACgnuy1
-DWwz0Quu9IMSJBldem9J4rI=
-=pmbd
------END PGP SIGNATURE-----
+MD5 471318482fcd15b5faf79fc5bfea66c9 files/digest-bcwipe-1.5_p2 118
+MD5 8be6835c3a75263a6c2fdd66ca9bbc62 files/digest-bcwipe-1.5_p3 121
