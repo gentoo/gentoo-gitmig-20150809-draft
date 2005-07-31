@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.21 2005/07/25 20:05:12 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.22 2005/07/31 11:47:55 mrness Exp $
+
+*squid-2.5.10-r1 (31 Jul 2005)
+
+  31 Jul 2005; Alin Nastac <mrness@gentoo.org> +squid-2.5.10-r1.ebuild:
+  Apply follow X-Forwarded-For patch, selected by follow-xff useflag (#100700).
 
   25 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> squid-2.5.10.ebuild:
   Stable on hppa.
