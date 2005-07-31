@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-all
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/ChangeLog,v 1.7 2004/12/29 00:10:25 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/ChangeLog,v 1.8 2005/07/31 15:36:28 corsair Exp $
+
+  31 Jul 2005; Markus Rothe <corsair@gentoo.org> fortune-mod-all-1.ebuild:
+  Added ~ppc64 (bug #100217)
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
