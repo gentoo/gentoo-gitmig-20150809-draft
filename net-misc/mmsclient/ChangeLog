@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mmsclient
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/ChangeLog,v 1.10 2004/07/01 21:29:40 squinky86 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/ChangeLog,v 1.11 2005/07/31 03:51:25 vanquirius Exp $
+
+  31 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/mmsclient-0.0.3-fbsd.patch, mmsclient-0.0.3-r1.ebuild:
+  Add patch from FreeBSD.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> mmsclient-0.0.3-r1.ebuild,
   mmsclient-0.0.3.ebuild:

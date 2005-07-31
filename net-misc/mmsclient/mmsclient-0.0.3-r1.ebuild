@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/mmsclient-0.0.3-r1.ebuild,v 1.6 2004/07/01 21:29:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/mmsclient-0.0.3-r1.ebuild,v 1.7 2005/07/31 03:51:25 vanquirius Exp $
 
 inherit eutils
 
@@ -22,10 +22,11 @@ DEPEND="virtual/libc"
 S=${WORKDIR}/mms_client-${PV}
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A}; cd ${S}
 	epatch ${FILESDIR}/${PF}.patch
+	epatch ${FILESDIR}/${P}-fbsd.patch
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "make install failed"
+	make DESTDIR=${D} install || die
 }
