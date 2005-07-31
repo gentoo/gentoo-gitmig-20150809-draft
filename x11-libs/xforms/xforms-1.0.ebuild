@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.ebuild,v 1.9 2005/05/19 01:23:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.ebuild,v 1.10 2005/07/31 04:22:27 vanquirius Exp $
 
 S=${WORKDIR}/${P}-release
 DESCRIPTION="A graphical user interface toolkit for X"
@@ -12,7 +12,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND="virtual/x11
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	media-libs/jpeg"
 IUSE=""
 
 src_unpack() {
