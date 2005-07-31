@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.4a.ebuild,v 1.4 2005/07/07 19:15:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.4a.ebuild,v 1.5 2005/07/31 16:31:27 dertobi123 Exp $
 
 IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir xface kde" # mbox
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 
 COMMONDEPEND="=x11-libs/gtk+-1.2*
 	pda? ( >=app-pda/jpilot-0.99 )
