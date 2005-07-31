@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.1.2.ebuild,v 1.2 2005/07/31 11:59:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.1.2.ebuild,v 1.3 2005/07/31 15:28:05 st_lim Exp $
 
 inherit eutils java-pkg
 
@@ -31,9 +31,6 @@ src_unpack() {
 	java-pkg_jar-from asm-1.5
 	java-pkg_jar-from aspectwerkz-2
 	java-pkg_jar-from jarjar-1
-
-	ln -sf asm-1.5*.jar asm.jar
-	ln -sf asm-attrs-1.5*.jar asm-attrs.jar
 }
 
 src_compile() {
