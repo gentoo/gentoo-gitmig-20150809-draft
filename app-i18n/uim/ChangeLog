@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.106 2005/07/28 15:32:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.107 2005/07/31 09:18:09 usata Exp $
+
+  31 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> uim-0.4.6-r2.ebuild,
+  uim-0.4.7.ebuild, -uim-0.4.7.1-r1.ebuild, uim-0.4.7.1-r2.ebuild,
+  uim-0.4.8_alpha1.ebuild:
+  Added qt_min_version; bug #100235.
 
 *uim-0.4.8_alpha1 (28 Jul 2005)
 *uim-0.4.7.1-r2 (28 Jul 2005)

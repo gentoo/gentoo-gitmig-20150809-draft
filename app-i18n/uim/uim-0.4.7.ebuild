@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.7.ebuild,v 1.5 2005/07/24 14:13:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.7.ebuild,v 1.6 2005/07/31 09:18:09 usata Exp $
 
 inherit eutils kde-functions
 
@@ -24,9 +24,9 @@ RDEPEND="X? ( virtual/x11 )
 	!app-i18n/uim-svn
 	!app-i18n/uim-fep
 	canna? ( app-i18n/canna )
-	immqt? ( >=x11-libs/qt-3.3.3-r1 )
-	immqt-bc? ( >=x11-libs/qt-3.3.3-r1 )
-	qt? ( >=x11-libs/qt-3.3.3-r1 )
+	immqt? ( $(qt_min_version 3.3.4) )
+	immqt-bc? ( $(qt_min_version 3.3.4) )
+	qt? ( $(qt_min_version 3.3.4) )
 	!<app-i18n/prime-0.9.4
 	!app-i18n/uim-kdehelper
 	!app-i18n/uim-qt"
