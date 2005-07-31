@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/bastille
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.15 2005/04/21 14:12:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.16 2005/07/31 05:21:10 battousai Exp $
+
+*bastille-3.0.2 (31 Jul 2005)
+
+  31 Jul 2005; Bryan Stine <battousai@gentoo.org>
+  +files/bastille-3.0.2-firewall.init, +bastille-3.0.2.ebuild:
+  Bump to 3.0.2. Major patch updates. Also added new preset configuration
+  files, based on the retrofitted configs from the original distribution.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> bastille-2.1.1-r3.ebuild:
   stable on amd64
