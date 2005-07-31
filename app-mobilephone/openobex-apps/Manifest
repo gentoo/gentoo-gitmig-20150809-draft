@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7026b77dd35493fcb238f4953a6fb3f2 openobex-apps-1.0.0.ebuild 1055
-MD5 bd340775f64c6eb5d9ff139abd0c6e92 ChangeLog 512
+MD5 298fc6dcaf57f5d0a8b16aa99c328a35 ChangeLog 602
 MD5 8ccd87448a7e71f2b05e92d9e3a72445 metadata.xml 368
-MD5 24b07ddc1d28f613f17c722a55b7700d files/digest-openobex-apps-1.0.0 70
+MD5 c9c3c153ffd9d8d3f4751d380eee94ae openobex-apps-1.0.0.ebuild 1059
 MD5 81eade8beeebeeb548bc2d032e069736 files/add-obexserver.patch 4019
+MD5 24b07ddc1d28f613f17c722a55b7700d files/digest-openobex-apps-1.0.0 70
 MD5 5e2f505367cca8710e097baeb88a0870 files/openobex-apps-printf-fixes.patch 4573
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC66rdNSP4Vda7IdsRAtFsAJ0SSei//JDH92dhgjxtxprLMkIFAACfcVPI
-Q/VKfIMgOA60fUh9hKhc9rs=
-=LC/K
------END PGP SIGNATURE-----
