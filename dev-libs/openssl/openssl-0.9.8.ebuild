@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8.ebuild,v 1.3 2005/07/06 02:40:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8.ebuild,v 1.4 2005/07/31 23:22:07 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -30,6 +30,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.9.7-alpha-default-gcc.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-parallel-build.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-make-engines-dir.patch
+
+	# allow openssl to be cross-compiled
+	cp "${FILESDIR}"/gentoo.config-0.9.7g gentoo.config || die "cp cross-compile failed"
+	chmod a+rx gentoo.config
 
 	case $(gcc-version) in
 		3.2)
@@ -78,7 +82,13 @@ src_compile() {
 	local confopts=""
 	use bindist && confopts="no-idea no-rc5 no-mdc2 -no-ec"
 
-	./config \
+	local sslout=$(./gentoo.config)
+	einfo "Use configuration ${sslout}"
+
+	local config="Configure"
+	[[ -z ${sslout} ]] && config="config"
+	./${config} \
+		${sslout} \
 		${confopts} \
 		--prefix=/usr \
 		--openssldir=/etc/ssl \
@@ -130,6 +140,12 @@ src_install() {
 	fperms a+x /usr/$(get_libdir)/pkgconfig #34088
 }
 
+pkg_preinst() {
+	if [[ -e ${ROOT}/usr/$(get_libdir)/libcrypto.so.0.9.7 ]] ; then
+		cp -a "${ROOT}"/usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.7 "${IMAGE}"/usr/$(get_libdir)/
+	fi	
+}
+
 pkg_postinst() {
 	local BN_H="${ROOT}$(gcc-config -L)/include/openssl/bn.h"
 	# Breaks things one some boxen, bug #13795.  The problem is that
@@ -148,6 +164,5 @@ pkg_postinst() {
 		ewarn "# revdep-rebuild --soname libcrypto.so.0.9.7"
 		ewarn "After this, you can delete /usr/$(get_libdir)/libssl.so.0.9.7"
 		ewarn "and /usr/$(get_libdir)/libcrypto.so.0.9.7"
-		touch -c "${ROOT}"/usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.7
 	fi
 }
