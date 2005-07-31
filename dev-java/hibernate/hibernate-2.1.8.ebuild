@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.7 2005/07/18 14:57:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.8 2005/07/31 05:22:31 st_lim Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Hibernate is a powerful, ultra-high performance object / relational persistence and query service for Java."
 SRC_URI="mirror://sourceforge/hibernate/${P}.tar.gz"
-HOMEPAGE="http://hibernate.bluemars.net"
+HOMEPAGE="http://www.hibernate.org"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~amd64"
@@ -14,12 +14,14 @@ RDEPEND=">=virtual/jre-1.4
 
 		=dev-java/cglib-2*
 		dev-java/commons-collections
+		dev-java/commons-lang
 		dev-java/commons-logging
 		dev-java/concurrent-util
 		>=dev-java/dom4j-1.5
 		dev-java/ehcache
-		dev-java/odmg
+		dev-java/jcs-bin
 		dev-java/jta
+		dev-java/odmg
 
 		c3p0? (
 			dev-java/c3p0
@@ -31,9 +33,6 @@ RDEPEND=">=virtual/jre-1.4
 		jboss? (
 			>=www-servers/jboss-3.2.5
 			dev-java/jmx
-		)
-		jcs? (
-			dev-java/jcs-bin
 		)
 		proxool? (
 			dev-java/proxool
@@ -68,10 +67,12 @@ src_unpack() {
 
 	java-pkg_jar-from cglib-2
 	java-pkg_jar-from commons-collections
+	java-pkg_jar-from commons-lang
 	java-pkg_jar-from commons-logging
 	java-pkg_jar-from concurrent-util
 	java-pkg_jar-from dom4j-1
 	java-pkg_jar-from ehcache
+	java-pkg_jar-from jcs-bin-1.0
 	java-pkg_jar-from jta
 	java-pkg_jar-from odmg
 
@@ -104,14 +105,6 @@ src_unpack() {
 		fi
 	else
 		find ${S}/src -name "Tree*" -exec rm {} \;
-	fi
-
-	# JCS support
-	# JCS is deprecated, so don't compile it
-	if use jcs ; then
-		java-pkg_jar-from jcs-bin-1.0
-	else
-		find ${S}/src -name "JCS*" -exec rm {} \;
 	fi
 
 	# JUnit support
