@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7_alpha4-r1.ebuild,v 1.4 2004/06/24 23:40:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.1 2005/07/31 07:59:10 usata Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ MY_P="${P/_/-}"
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A clean, light window manager."
-#SRC_URI="http://ctwm.free.lp.se/dist/${MY_P}.tar.gz"
-SRC_URI="http://ctwm.free.lp.se/preview/${MY_P}.tar.gz"
+SRC_URI="http://ctwm.free.lp.se/dist/${MY_P}.tar.gz"
+#SRC_URI="http://ctwm.free.lp.se/preview/${MY_P}.tar.gz"
 HOMEPAGE="http://ctwm.free.lp.se/"
 
 SLOT="0"
@@ -21,13 +21,9 @@ LICENSE="MIT"
 DEPEND="virtual/x11
 	media-libs/jpeg"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-}
-
 src_compile() {
+	sed -i -e "s@\(CONFDIR =\).*@\1 /etc/X11/twm@g" Imakefile || die
+	cp Imakefile.local-template Imakefile.local || die
 	xmkmf || die
 	make TWMDIR=/usr/share/${PN} || die
 }
