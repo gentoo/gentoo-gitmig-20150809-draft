@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.20 2005/07/16 13:11:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.21 2005/07/31 06:24:48 st_lim Exp $
+
+*asm-2.0 (31 Jul 2005)
+
+  31 Jul 2005; Lim Swee Tat <st_lim@gentoo.org> +asm-2.0.ebuild:
+  Version bumped to 2.0.  Needed for jarjar 0.6 which is needed by cglib-2.1
+  which is needed by hibernate-3.0
 
 *asm-1.4.1 (16 Jul 2005)
 
