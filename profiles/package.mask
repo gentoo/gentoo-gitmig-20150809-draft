@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4230 2005/07/31 10:16:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4231 2005/07/31 10:48:09 axxo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -75,22 +75,6 @@ net-misc/powerd
 # <axxo@gentoo.org> (18 Jul 2005)
 # broken, unless someone submits a fixed ebuilds in the next 30 days, this package will be removed.
 dev-java/hibernate
-
-# <axxo@gentoo.org> (15 Jul 2005)
-# Masked pending removal
-# unmaintained cvs gui client + unmaintained jedit plugins you can easily (and better) install outside portage
-dev-util/gruntspud
-dev-java/plugspud 
-dev-java/cvslib-bin
-dev-java/gruntspudplugin
-dev-java/errorlist
-dev-java/console
-dev-java/jakartacommons
-dev-java/jdiffplugin
-dev-java/xml
-dev-java/netcomponents-bin
-dev-java/htmlparser
-dev-java/sidekick
 
 # Konstantin Arkhipov <voxus@gentoo.org> (14 Jul 2005)
 # Masked for security reasons.
