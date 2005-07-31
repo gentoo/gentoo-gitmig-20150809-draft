@@ -1,6 +1,19 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.125 2005/07/26 18:56:43 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.126 2005/07/31 07:01:29 gregkh Exp $
+
+*udev-064-r1 (31 Jul 2005)
+
+  31 Jul 2005; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +files/udev.rules-064-r1, +udev-064-r1.ebuild:
+  Start moving to a sane /dev naming scheme.
+  This release removes the devfs names for the tty and consolde devices, and the
+  symlinks that were implementing the LSB standard names.  We only implement the
+  LSB names now, which saves over 3Mb of RAM on /dev.
+  
+  This rule change also speeds up udev init time by a order of magnitude 
+  (my slow box went from 5 seconds to .5 seconds, your mileage will vary, 
+  'time udevstart' as root before and after this release to see your difference.)
 
 *udev-064 (26 Jul 2005)
 
