@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.7 2005/04/30 20:24:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.8 2005/07/31 06:48:09 st_lim Exp $
+
+*cglib-2.1.2 (31 Jul 2005)
+
+  31 Jul 2005; Lim Swee Tat <st_lim@gentoo.org> +cglib-2.1.2.ebuild:
+  Version bumped to 2.1_2.  Required for hibernate-3.0
 
   30 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> cglib-2.0.2-r1.ebuild:
   added ~ppc to KEYWORDS, introduced support for the source useflag
