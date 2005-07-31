@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.56 2005/07/31 10:02:49 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.57 2005/07/31 12:16:01 corsair Exp $
+
+  31 Jul 2005; Markus Rothe <corsair@gentoo.org> netpbm-10.28.ebuild:
+  Stable on ppc64 (bug #100398)
 
   31 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
   netpbm-10.20-r1.ebuild:
