@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b46ff50d76030bd09f46221f0e267128 ChangeLog 1511
+MD5 b43193413e1e29af164d614d8cd0d9b7 ChangeLog 1629
 MD5 1a637353d98b39791d0761ba1e777259 files/digest-nzbget-0.1.2 64
 MD5 a7c5c3790c55545e3636e4f19b579556 files/digest-nzbget-0.2.0 64
 MD5 f3bf97880fea528e8a26a16e08fefdbb files/digest-nzbget-0.2.1 64
+MD5 88d9ae003fdf33ff5833ef271200b209 files/digest-nzbget-0.2.2 64
 MD5 14594f19e320cd8f1735a5e2e9a00f88 metadata.xml 357
 MD5 1d4dbb2dfdeff2bcff4f830fb3ad4a41 nzbget-0.1.2.ebuild 816
 MD5 eac50d69e3305c8f1acc660dc5f4b4f2 nzbget-0.2.0.ebuild 816
 MD5 16e9d0074458ba32202ea9fa82d9e3a4 nzbget-0.2.1.ebuild 817
+MD5 9b68c95bdb840f692809083f6b8c92c6 nzbget-0.2.2.ebuild 817
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0Cz8I1lqEGTUzyQRAo77AJ9aUWBu0d5VOb1frDspJKCbC+xgxgCg0GjQ
-5jxW7U2wHCQcLk+WfdY+Sew=
-=3wFU
+iD8DBQFC7TwOI1lqEGTUzyQRAh1AAJ9gAna77po7ApT+hl9klJmwtnJOFgCg3hfI
++8KnV3WlHkaJHpoEfaK99s8=
+=pV2Z
 -----END PGP SIGNATURE-----
