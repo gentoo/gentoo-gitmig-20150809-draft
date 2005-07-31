@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0c1bc759b6cafc454c336cb35fd05550 metadata.xml 257
-MD5 2a7f87be2060bc10f5449e71f639f00e jedit-4.2-r1.ebuild 2102
+MD5 b49b58255b14be3d9bd4e0aa220b7d35 ChangeLog 8237
+MD5 04566fa365506445aa264b56c0693508 jedit-4.2-r1.ebuild 2103
 MD5 fc8cdf5ee10d9f48cbea1da239bc9e9d jedit-4.2.ebuild 2374
-MD5 d6c0ac407c20009af2a4626d2a2f6681 ChangeLog 8144
+MD5 0c1bc759b6cafc454c336cb35fd05550 metadata.xml 257
 MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2 66
-MD5 c8305f25e0689d0224f1c0f565a92709 files/jedit-4.1-jikes-fix.patch 492
 MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2-r1 66
+MD5 c8305f25e0689d0224f1c0f565a92709 files/jedit-4.1-jikes-fix.patch 492
 MD5 e4b1187284c6be90f0acaa0d919da8ba files/jedit.desktop 186
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC0q0RKRy60XGEcJIRAkaoAJ4sy+mAOsdejPGKqAq6ILszZKRt6wCdGhOM
-pPPnzlhhRy4yBNXeK9DRxIQ=
-=qoHm
------END PGP SIGNATURE-----
