@@ -1,30 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/qimhangul-0.0.1.ebuild,v 1.5 2005/07/31 09:01:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/qimhangul-0.0.2.ebuild,v 1.1 2005/07/31 09:01:32 usata Exp $
 
-inherit eutils qt3
+inherit qt3
 
 DESCRIPTION="Korean input method plugin for Qt immodules"
 HOMEPAGE="http://kldp.net/projects/qimhangul/"
-SRC_URI="http://kldp.net/download.php/1529/${P}.tar.gz"
+SRC_URI="http://kldp.net/frs/download.php/1800/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="$(qt_min_version 3.3.3-r1)"
+DEPEND="$(qt_min_version 3.3.4)"
 
 pkg_setup() {
 	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
 		die "You need to rebuild >=x11-libs/qt-3.3.3-r1 with immqt-bc or immqt USE flag enabled."
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-thread-gentoo.diff
 }
 
 src_compile() {
