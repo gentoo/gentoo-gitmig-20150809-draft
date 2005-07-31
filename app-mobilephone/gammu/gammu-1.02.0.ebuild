@@ -1,17 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.00.04.ebuild,v 1.1 2005/05/14 12:56:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.02.0.ebuild,v 1.1 2005/07/31 07:43:46 mrness Exp $
 
 inherit eutils
 
+MY_MAJOR_VER=${PV:0:3}
+
 DESCRIPTION="a fork of the gnokii project, a tool to handle your cellular phone"
-SRC_URI="http://www.mwiacek.com/zips/gsm/gammu/test/${P}.tar.gz"
+SRC_URI="http://www.mwiacek.com/zips/gsm/${PN}/stable/${MY_MAJOR_VER/./_}x/${P}.tar.gz"
 HOMEPAGE="http://www.gammu.net/projects/gammu.php"
 
 IUSE="bluetooth irda mysql nls ssl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="mysql? ( dev-db/mysql )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
