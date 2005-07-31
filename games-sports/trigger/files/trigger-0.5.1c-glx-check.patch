@@ -4,7 +4,7 @@ http://bugs.gentoo.org/100374
 
 --- src/pengine/glew.c
 +++ src/pengine/glew.c
-@@ -5737,7 +5737,7 @@
+@@ -5737,13 +5737,13 @@
    s = glGetString(GL_VERSION);
    if (!s) return GLEW_ERROR_NO_GL_VERSION;
    i = _glewStrCLen(s, '.')+1;
@@ -13,3 +13,10 @@ http://bugs.gentoo.org/100374
    {
      return GLEW_ERROR_GL_VERSION_10_ONLY;
    }
+   else
+   {
+-    if (s[i] >= '5')
++    if (s[0] >= '2' || s[i] >= '5')
+     {
+       GLEW_VERSION_1_1 = GL_TRUE;
+       GLEW_VERSION_1_2 = GL_TRUE;
