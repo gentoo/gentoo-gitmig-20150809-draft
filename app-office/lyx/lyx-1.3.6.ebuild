@@ -1,20 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5.ebuild,v 1.11 2005/07/07 04:25:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.6.ebuild,v 1.1 2005/07/31 10:23:53 usata Exp $
 
-inherit kde-functions eutils libtool
+inherit kde-functions eutils libtool flag-o-matic
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 	http://movementarian.org/latex-xft-fonts-0.1.tar.gz
 	http://www.math.tau.ac.il/~dekelts/lyx/files/hebrew.bind
-	http://www.math.tau.ac.il/~dekelts/lyx/files/preferences"
+	http://www.math.tau.ac.il/~dekelts/lyx/files/preferences
+	cjk? ( qt? ( ftp://cellular.phys.pusan.ac.kr/CJK-LyX/qt/CJK-LyX-qt-${PV}-1.patch )
+		!qt? ( ftp://cellular.phys.pusan.ac.kr/CJK-LyX/xforms/CJK-LyX-xforms-${PV}-1.patch ) )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
-IUSE="nls cups qt debug gnome"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE="cjk cups debug nls qt"
 
 # these dependencies need looking at.
 # does lyx only need qt to compile but not run ?
@@ -24,7 +26,9 @@ DEPEND="virtual/x11
 	>=dev-lang/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus
-	qt? ( =x11-libs/qt-3* ) !qt? ( =x11-libs/xforms-1* )"
+	qt? ( =x11-libs/qt-3* )
+	!qt? ( cjk? ( =x11-libs/xforms-1.0-r1 )
+		!cjk? ( =x11-libs/xforms-1* ) )"
 
 RDEPEND="${DEPEND}
 	virtual/ghostscript
@@ -34,8 +38,6 @@ RDEPEND="${DEPEND}
 	dev-tex/latex2html
 	media-gfx/imagemagick
 	cups? ( virtual/lpr )
-	app-text/rcs
-	dev-util/cvs
 	app-text/sgmltools-lite
 	app-text/noweb
 	dev-tex/chktex"
@@ -46,9 +48,23 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 	unpack latex-xft-fonts-0.1.tar.gz
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.3.2-nomktex.patch
-	epatch ${FILESDIR}/${PN}-1.3.3-configure-diff
-	epatch ${FILESDIR}/${P}-boost.patch
+	epatch ${FILESDIR}/${P}-gentoo.diff
+	if use cjk && use qt ; then
+		epatch ${DISTDIR}/CJK-LyX-qt-${PV}-1.patch
+	elif use cjk && built_with_use '=x11-libs/xforms-1.0-r1' cjk ; then
+		epatch ${DISTDIR}/CJK-LyX-xforms-${PV}-1.patch
+	elif use cjk ; then
+		eerror
+		eerror 'CJK-LyX requires qt USE flag enabled or x11-libs/xforms-1.0-r1'
+		eerror 'built with cjk USE flag. You should either'
+		eerror '1) USE="cjk qt" emerge lyx'
+		eerror 'or'
+		eerror '2) USE="cjk" emerge xforms-1.0-r1; USE="cjk -qt" emerge lyx'
+		eerror 'or'
+		eerror '3) USE="-cjk" emerge lyx (normal LyX will be built)'
+		eerror
+		die "Please remerge xforms-1.0-r1 with cjk USE flag enabled."
+	fi
 	elibtoolize || die
 }
 
@@ -58,12 +74,13 @@ src_compile() {
 		set-qtdir 3
 		myconf="$myconf --with-frontend=qt --with-qt-dir=${QTDIR}"
 	else
+		export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/include/X11"
 		myconf="$myconf --with-frontend=xforms"
 	fi
 
 	export WANT_AUTOCONF=2.5
 
-	local flags="${CXXFLAGS} -fno-stack-protector"
+	local flags="${CXXFLAGS} $(test_flag -fno-stack-protector) $(test_flag -fno-stack-protector-all)"
 	unset CFLAGS
 	unset CXXFLAGS
 	econf \
@@ -84,11 +101,7 @@ src_install() {
 	insinto /usr/share/lyx/bind
 	doins ${DISTDIR}/hebrew.bind
 
-	# gnome menu entry
-	if use gnome; then
-		insinto /usr/share/applications
-		doins ${FILESDIR}/lyx.desktop
-	fi
+	domenu ${FILESDIR}/lyx.desktop
 
 	# install the latex-xft fonts, which should fix
 	# the problems outlined in bug #15629
@@ -102,9 +115,17 @@ src_install() {
 		-e /usr/X11R6/$(get_libdir)/X11/fonts/encodings \
 		${D}/usr/share/fonts/latex-xft-fonts
 	HOME=/root fc-cache -f ${D}/usr/share/fonts/latex-xft-fonts
+
+	# fix for bug 91108
+	dodir /usr/share/texmf/tex/latex
+	cd ${D}/usr/share/texmf/tex/latex
+	ln -s ../../../lyx/tex lyx
 }
 
 pkg_postinst() {
+
+	# fix for bug 91108
+	texhash
 
 	draw_line
 	einfo ""
