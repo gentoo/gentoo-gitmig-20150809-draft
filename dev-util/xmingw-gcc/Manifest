@@ -2,7 +2,7 @@ MD5 51c9829ea5ffe852b05c7fb68609118d ChangeLog 1340
 MD5 d5a08b81c465636d4c7fd5286c6e6e00 metadata.xml 225
 MD5 c020d6bd409512e0398ce16b1e0960c5 xmingw-gcc-3.4.2.ebuild 2298
 MD5 b776e904c8864c3826985b30d0eb1f0d xmingw-gcc-3.4.4.ebuild 2535
-MD5 3d1ec8667e8069e87613daa218063288 xmingw-gcc-3.4.2-r1.ebuild 2365
+MD5 6df4ce06eff74a78d888888414198846 xmingw-gcc-3.4.2-r1.ebuild 2368
 MD5 6bc5f9fc08e5d56d7e7da8e47796753e files/05xmingw 96
 MD5 a04fdd426a92bfc7c5f621be7c095eca files/digest-xmingw-gcc-3.4.2-r1 281
 MD5 8f19d88fb59c78e728862642831634ab files/gcc-3.4.1-includefix.diff 682

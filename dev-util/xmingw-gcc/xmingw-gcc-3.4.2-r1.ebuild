@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.2-r1.ebuild,v 1.2 2005/07/31 02:53:33 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.2-r1.ebuild,v 1.3 2005/07/31 02:55:21 cretin Exp $
 
 MY_P=${P/xmingw-/}
 S=${WORKDIR}/${MY_P}
@@ -73,7 +73,7 @@ src_compile() {
 		--disable-win32-registry \
 		--enable-sjlj-exceptions \
 		--without-x \
-		--with-newlib \
+		--without-newlib \
 		${myconf} \
 			|| die "configure failed"
 
