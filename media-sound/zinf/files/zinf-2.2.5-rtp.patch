@@ -1,0 +1,17 @@
+--- orig/io/obs/obsinput.cpp
++++ mod/io/obs/obsinput.cpp
+@@ -176,13 +176,10 @@
+     int    iReuse=0;
+     char   szAddr[100], szSourceAddr[100];
+     bool   bUseTitleStreaming = false, bUseAltNIC = false;;
+-    char *path2 = new char[PATH_MAX];
+ 
+     ReportStatus(_("Setting up RTP stream..."));
+ 
+-    iRet = sscanf(path2, "rtp://%[^:]:%d", szAddr, &iPort);
+-    m_path = path2;
+-    delete [] path2;
++    iRet = sscanf(m_path.c_str(), "rtp://%[^:]:%d", szAddr, &iPort);
+     if (iRet < 2)
+     {
+         ReportError(_("Invalid URL. URL format: rtp://<multicast addr>[:port]"));

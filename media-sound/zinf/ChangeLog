@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/zinf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.32 2005/05/27 15:13:05 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.33 2005/07/31 20:17:22 vanquirius Exp $
+
+*zinf-2.2.5-r2 (31 Jul 2005)
+
+  31 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
+  -files/zinf-2.2.3-id3.patch.bz2, -files/zinf-2.2.4-pref.patch,
+  +files/zinf-2.2.5-rtp.patch, +zinf-2.2.5-r2.ebuild:
+  Attempting to fix UI plugin bug in bug 97674 and Invalid URL bug in bug
+  69311. Thanks to samx <gentoo@die-genossen.de>, Markus <bugs@rennings.net>
+  and others.
 
   27 May 2005; Jan Brinkmann <luckyduck@gentoo.org> zinf-2.2.5-r1.ebuild:
   added libtoolize call, fixes #94149. also introduced support for the xosd
