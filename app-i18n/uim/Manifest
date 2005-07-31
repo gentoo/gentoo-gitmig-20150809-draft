@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ab3df0062870b2681c0978b5eb4ffb98 ChangeLog 15784
 MD5 f5659d73ef347dcb529d867d6d5b4272 metadata.xml 642
 MD5 aba2854f37eeb7084c9d7321b84e187c uim-0.4.7.ebuild 3372
@@ -17,3 +20,10 @@ MD5 7f949b6287f391906786f248a64ec0b3 files/digest-uim-0.4.6-r2 192
 MD5 cc10c5d38fe1cce5a6e17fad95da53d7 files/uim-0.4.6-gtk2_4-gentoo.diff 441
 MD5 faf7d637e9266fbc6613cdf8ee56e427 files/uim-0.4.6-nls.diff 404
 MD5 a9eb508109eca1b8de35c91baad214ab files/digest-uim-0.4.7.1-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7E+2VWNWqTUmv+0RAhj4AJ9se6qjmZNuTynuWFsuTvE/QHaPxQCgsr31
+lkuYwn7D+wsZ/ufoo/AaSMI=
+=Hf7U
+-----END PGP SIGNATURE-----
