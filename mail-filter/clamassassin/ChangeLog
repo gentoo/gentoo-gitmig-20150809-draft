@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/clamassassin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.18 2005/05/17 19:25:33 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.19 2005/07/31 12:17:43 mcummings Exp $
+
+  31 Jul 2005; Michael Cummings <mcummings@gentoo.org>
+  clamassassin-1.2.2.ebuild:
+  Keywording sparc
 
   17 May 2005; Tom Martin <slarti@gentoo.org> clamassassin-1.2.2.ebuild:
   Add missing IUSE.
