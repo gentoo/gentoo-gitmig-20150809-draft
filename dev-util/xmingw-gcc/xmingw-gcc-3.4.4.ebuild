@@ -1,10 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.2-r1.ebuild,v 1.2 2005/07/31 02:53:33 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.4.ebuild,v 1.1 2005/07/31 02:53:33 cretin Exp $
+
+inherit eutils
 
 MY_P=${P/xmingw-/}
 S=${WORKDIR}/${MY_P}
-MINGW_PATCH=gcc-3.4.2-20040916-1-src.diff.gz
+MINGW_PATCH=gcc-3.4.4-20050522-1-src.diff.gz
 RUNTIME=mingw-runtime-3.7
 W32API=w32api-3.2
 
@@ -13,7 +15,8 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${MY_P}/${MY_P}.tar.bz2
 		mirror://sourceforge/mingw/${MINGW_PATCH}
 		mirror://sourceforge/mingw/${RUNTIME}-src.tar.gz
-		mirror://sourceforge/mingw/${W32API}-src.tar.gz"
+		mirror://sourceforge/mingw/${W32API}-src.tar.gz
+		mirror://gentoo/gcc-3.4.4-crossfix.diff.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
@@ -28,6 +31,7 @@ src_unpack() {
 	unpack ${W32API}-src.tar.gz
 	cd ${S}; gzip -dc ${DISTDIR}/${MINGW_PATCH} | patch -p1
 	patch -p1 < ${FILESDIR}/gcc-3.4.1-includefix.diff
+	epatch ${DISTDIR}/gcc-3.4.4-crossfix.diff.bz2
 
 	mkdir -p ${S}/winsup/cygwin ${S}/winsup/w32api
 	cd ${S}/winsup/cygwin;ln -s ${WORKDIR}/${RUNTIME}/include .
@@ -73,7 +77,7 @@ src_compile() {
 		--disable-win32-registry \
 		--enable-sjlj-exceptions \
 		--without-x \
-		--with-newlib \
+		--without-newlib \
 		${myconf} \
 			|| die "configure failed"
 
@@ -84,4 +88,5 @@ src_install() {
 	export PATH=$PATH:/opt/xmingw/bin:/opt/xmingw/i386-mingw32msvc/bin
 	make DESTDIR="${D}" install || die "make install failed"
 	doenvd ${FILESDIR}/05xmingw
+	rm ${D}/opt/xmingw/info/dir ${D}/opt/xmingw/lib/libiberty.a
 }
