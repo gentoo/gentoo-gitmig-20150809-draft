@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.237 2005/07/15 19:51:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.238 2005/07/31 12:23:51 chainsaw Exp $
+
+*mm-sources-2.6.13_rc4-r1 (31 Jul 2005)
+
+  31 Jul 2005; Tony Vroon <chainsaw@gentoo.org>
+  -mm-sources-2.6.12-r1.ebuild, -mm-sources-2.6.12-r2.ebuild,
+  +mm-sources-2.6.13_rc4-r1.ebuild:
+  Bump to 2.6.13-rc4-mm1. Old 2.6.12 ebuilds cleaned.
 
 *mm-sources-2.6.13_rc3-r1 (15 Jul 2005)
 
