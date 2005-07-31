@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.6.0.ebuild,v 1.2 2005/07/31 10:50:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.6.0.ebuild,v 1.3 2005/07/31 10:56:28 foser Exp $
 
-#inherit eutils
+inherit eutils
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
@@ -20,21 +20,24 @@ RDEPEND="X? (
 		media-libs/fontconfig
 		>=media-libs/freetype-2
 		>=media-libs/libpixman-0.1.5
-		png? ( media-libs/libpng )"
-# no snapshot available
+		png? ( media-libs/libpng )
+	!<x11-libs/cairo-0.2"
+# the block fixes the issue described in #85285 without patching
+
+# no snapshot available yet
 #		glitz? ( >=media-libs/glitz-0.4.4 )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-#src_unpack() {
+src_unpack() {
 
-#	unpack ${A}
+	unpack ${A}
 
-#	cd ${S}
-#	epatch ${FILESDIR}/${P}-makefile.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-0.4.0-makefile.patch
 
-#}
+}
 
 src_compile() {
 

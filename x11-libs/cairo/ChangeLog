@@ -1,11 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.38 2005/07/31 10:34:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.39 2005/07/31 10:56:28 foser Exp $
 
 *cairo-0.6.0 (31 Jul 2005)
 
   31 Jul 2005; Marinus Schraal <foser@gentoo.org> cairo-0.6.0.ebuild :
-  New release
+  New release, add block instead of patch (see #85285 for details)
 
   09 May 2005; Aron Griffis <agriffis@gentoo.org> cairo-0.3.0.ebuild:
   stable on ia64
