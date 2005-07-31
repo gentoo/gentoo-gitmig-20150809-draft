@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.10.1-r1.ebuild,v 1.7 2005/07/27 18:07:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.10.1-r1.ebuild,v 1.8 2005/07/31 09:12:49 dertobi123 Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="alsa gstreamer"
 
 MAKEOPTS="${MAKEOPTS} -j1"
