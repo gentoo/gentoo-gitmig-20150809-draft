@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4228 2005/07/30 21:01:24 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4229 2005/07/31 00:40:37 battousai Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# Bryan Stine <battousai@gentoo.org> (30 Jul 2005)
+# Gotta test this new patch and ebuild out first
+>=app-admin/bastille-3.0.0
 
 # Karl Trygve Kallebreg <karltk@gentoo.org> (30 Jul 2005)
 # all version contains a static copy of zlib-1.2.1.1 which has security
