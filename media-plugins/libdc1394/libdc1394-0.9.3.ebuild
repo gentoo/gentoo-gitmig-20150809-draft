@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/libdc1394-0.9.3.ebuild,v 1.7 2005/05/06 17:27:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/libdc1394-0.9.3.ebuild,v 1.8 2005/07/31 21:39:57 swegener Exp $
 
 DESCRIPTION="libdc1394 is a library that is intended to provide a high level programming interface for application developers who wish to control IEEE 1394 based cameras that conform to the 1394-based Digital Camera Specification (found at http://www.1394ta.org/)"
 HOMEPAGE="http://sourceforge.net/projects/libdc1394/"
@@ -13,11 +13,6 @@ IUSE=""
 
 DEPEND=">=sys-libs/libraw1394-0.9.0
 	sys-devel/libtool"
-
-src_compile() {
-	econf || die
-	emake || die
-}
 
 src_install() {
 	einstall || die
