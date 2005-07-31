@@ -1,6 +1,11 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.42 2005/07/25 17:49:09 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.43 2005/07/31 20:30:54 sekretarz Exp $
+
+*skype-1.2.0.11 (31 Jul 2005)
+
+  31 Jul 2005; <sekretarz@gentoo.org> +skype-1.2.0.11.ebuild:
+  Version bump due security bug #99173
 
   25 Jul 2005; Caleb Tennis <caleb@gentoo.org> skype-1.1.0.3.ebuild,
   skype-1.1.0.3-r1.ebuild, skype-1.1.0.13.ebuild, skype-1.1.0.20.ebuild,
