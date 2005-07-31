@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.2.1.ebuild,v 1.4 2005/07/26 20:24:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.2.1.ebuild,v 1.5 2005/07/31 10:53:07 dertobi123 Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ia64 ~ppc ~ppc64"
+KEYWORDS="x86 ~amd64 ~ia64 ppc ~ppc64"
 IUSE=""
 
 # we just require the latest of the utopia stack to be on the safe side
