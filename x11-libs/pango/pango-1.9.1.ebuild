@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.9.1.ebuild,v 1.1 2005/07/31 14:37:17 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.9.1.ebuild,v 1.2 2005/07/31 14:46:14 foser Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Text rendering and layout library"
 HOMEPAGE="http://www.pango.org/"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.7/${P}.tar.bz2"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
