@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5714c7c6d6d67a7241384a6924bfd30b ChangeLog 1258
 MD5 08f268309694824b43538cb366557dff cglib-2.0.2-r1.ebuild 1406
-MD5 4832bb3bb71f2c393c98d8ecaac33d55 cglib-2.1.2.ebuild 1440
 MD5 5042f2b668a3f30252361101f0b1567e cglib-2.0.2.ebuild 1090
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 ed8024c1d5b268d0d0b670b08b967f4a files/digest-cglib-2.1.2 65
+MD5 f654496fe791d9ceb9dfb20e8345ea84 cglib-2.1.2.ebuild 1440
 MD5 a7a4f8f597ccfc2d44762869fa7e983f files/cglib-2.0.2-asm-1.4.3.patch 721
-MD5 b6f8a58fff30e586496183aa9f0af130 files/digest-cglib-2.0.2-r1 64
 MD5 b6f8a58fff30e586496183aa9f0af130 files/digest-cglib-2.0.2 64
+MD5 b6f8a58fff30e586496183aa9f0af130 files/digest-cglib-2.0.2-r1 64
+MD5 ed8024c1d5b268d0d0b670b08b967f4a files/digest-cglib-2.1.2 65
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7L0wI1lqEGTUzyQRAsqNAJsHIYQIT0afQJLcHu4IIBZUy97JYgCgqnv2
+xPQ9JuS12cTQzJKEs6Zi1bM=
+=TKuJ
+-----END PGP SIGNATURE-----
