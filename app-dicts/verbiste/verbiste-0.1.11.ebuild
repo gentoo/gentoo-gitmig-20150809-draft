@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.11.ebuild,v 1.2 2005/07/19 03:08:54 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.11.ebuild,v 1.3 2005/07/31 20:58:13 dertobi123 Exp $
 
 DESCRIPTION="French conjugation system"
 HOMEPAGE="http://www3.sympatico.ca/sarrazip/dev/verbiste.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www3.sympatico.ca/sarrazip/dev/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 
 IUSE="gnome"
 
