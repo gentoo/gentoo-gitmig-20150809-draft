@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/kvdr-0.62.ebuild,v 1.5 2005/07/28 21:07:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/kvdr-0.62.ebuild,v 1.6 2005/07/31 21:42:03 swegener Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Kvdr the KDE GUI for VDR (VideoDiskRecorder)"
@@ -18,12 +18,7 @@ DEPEND=">=media-tv/xawtv-3.86
 	|| ( kde-base/kdebase-meta kde-base/kdebase )
 	=x11-libs/qt-3*"
 
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
-
 src_install() {
-	emake DESTDIR=${D} install
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 }
