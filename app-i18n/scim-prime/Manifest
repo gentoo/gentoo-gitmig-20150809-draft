@@ -1,10 +1,18 @@
-MD5 d85439b875c90e47735f12c1fe4bac2b ChangeLog 1543
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 a22cad8d1d5b83a596e0d70f6b6c694d scim-prime-0.2.7.ebuild 987
-MD5 7005b8549a10c465e5ffafcb63fa7118 scim-prime-0.2.1.ebuild 935
-MD5 fcef4732764839dbb9167868acdab45b scim-prime-0.2.6.ebuild 941
+MD5 26591db9c2a44ba3eabfd55f23ecb82c ChangeLog 1751
+MD5 d4f2d76d9380af3c376b98820d84c581 scim-prime-0.2.7.ebuild 986
 MD5 92fce5120be2d782fd7d88e0973e7c98 scim-prime-0.2.5.ebuild 935
-MD5 6ef12a17378cbeb30708592b20456bc6 files/digest-scim-prime-0.2.6 68
+MD5 42c5145b3cef4ee5558cbdbd01deaa9b scim-prime-0.2.8.ebuild 987
 MD5 df5414cdf3c403c3b79ac5a112db165d files/digest-scim-prime-0.2.7 68
-MD5 eaba02fca1baba460d0ba183cb51df31 files/digest-scim-prime-0.2.1 68
+MD5 78c7f56fce922ca21b42ea549f7f20dd files/digest-scim-prime-0.2.8 68
 MD5 da2fb0dcb60c48928fa0aa52648156e3 files/digest-scim-prime-0.2.5 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7Ip6VWNWqTUmv+0RAqStAKCowRk8b6M68MFcYnSOAZdA6Bd6aACfUU0T
+POuFSPatsproS6vnOxkTmKk=
+=uRPw
+-----END PGP SIGNATURE-----
