@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.3.ebuild,v 1.4 2005/06/17 16:34:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.3.ebuild,v 1.5 2005/07/31 12:33:50 flameeyes Exp $
 
 inherit kde eutils
 
@@ -59,7 +59,7 @@ src_compile() {
 	# amarok does not respect kde coding standards, and makes a lot of
 	# assuptions regarding its installation directory. For this reason,
 	# it must be installed in the KDE install directory.
-	PREFIX="`kde-config --prefix`"
+	PREFIX="${KDEDIR}"
 
 	myconf="$(use_with arts) $(use_with xine)
 		$(use_with gstreamer) $(use_enable mysql)
