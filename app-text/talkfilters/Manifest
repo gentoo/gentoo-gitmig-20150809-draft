@@ -1,8 +1,18 @@
-MD5 04dd89c8a028320b9a99a26009d14065 talkfilters-2.3.4-r1.ebuild 1071
-MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
-MD5 8a22f9dc3cf7fa6cc511e57d2602618e ChangeLog 1717
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 18632d683ac61b3ddf25ce253cadba94 talkfilters-2.3.3-r1.ebuild 1074
+MD5 3337ff5a20e5a022ac74c71573749e18 talkfilters-2.3.4-r1.ebuild 1078
+MD5 47ee39b1a674af6fccbe2000bbcede93 ChangeLog 1814
+MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 4809f10362a70a5b8bf4ef98d804cb83 talkfilters-2.1.ebuild 1046
 MD5 2bf3bf8d8322640c5c4580ccd2f233c9 files/digest-talkfilters-2.3.3-r1 69
-MD5 e98c05d941b1703fe449023656b827f0 files/digest-talkfilters-2.1 67
 MD5 533f25dd0383144c11961b639d2588c4 files/digest-talkfilters-2.3.4-r1 69
+MD5 e98c05d941b1703fe449023656b827f0 files/digest-talkfilters-2.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7DAoEZCkKN40op4RAgNiAJkB/fAKG5WtfwTTHvO9N6Ikt3fwWwCfYLY1
+cDoXTJxYVVJiWu5vtZlQZPU=
+=DsVv
+-----END PGP SIGNATURE-----
