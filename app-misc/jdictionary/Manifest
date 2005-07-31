@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d4dab676366b6dafbbb3933fe32e3d4 jdictionary-1.8-r1.ebuild 1010
+MD5 cc1637323fad77d6a2903d664afa50ff ChangeLog 1337
+MD5 5060a4072c3b474f36dc862f5b3e6efc jdictionary-1.8-r1.ebuild 1015
 MD5 7727c0dc99eb2f8c66ee1bfc352a31a2 jdictionary-1.8.ebuild 715
-MD5 e1960ebe9c7cfd09b17e173e8c846ab1 ChangeLog 1232
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 f42d455b9c7914cebe2225f9130bd15b files/digest-jdictionary-1.8 64
 MD5 f42d455b9c7914cebe2225f9130bd15b files/digest-jdictionary-1.8-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0tut/rLF9B432nYRAjCoAJ9wRUxTq0L5++AJDhYJBOLH/FI8aACfZzLW
-u37XfWqSK7aV8vMOJF2mRyg=
-=DDkl
------END PGP SIGNATURE-----
