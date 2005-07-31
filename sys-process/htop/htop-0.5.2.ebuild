@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.5.2.ebuild,v 1.5 2005/07/28 22:30:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.5.2.ebuild,v 1.6 2005/07/31 21:28:16 swegener Exp $
 
-inherit eutils flag-o-matic
+inherit flag-o-matic
 
 DESCRIPTION="interactive process viewer"
 HOMEPAGE="http://htop.sourceforge.net"
@@ -12,11 +12,6 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="debug"
 DEPEND="sys-libs/ncurses"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
 
 src_compile() {
 	use debug && {
