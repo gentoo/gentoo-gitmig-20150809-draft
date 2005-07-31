@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.14 2005/04/22 09:32:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.15 2005/07/31 14:17:04 ka0ttic Exp $
+
+  31 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> libassuan-0.6.9.ebuild:
+  Added ~mips for bug 76381.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> libassuan-0.6.9.ebuild:
   stable on amd64
