@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.27 2005/07/07 01:15:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.28 2005/07/31 14:51:52 mcummings Exp $
+
+  31 Jul 2005; Michael Cummings <mcummings@gentoo.org> metadata.xml,
+  genlop-0.30.3.ebuild:
+  I've been asked by upstream to readminster this package. I've updated the
+  metadata to reflect this, leaving portage-tools as secondary maintainers. I
+  accept all responsibility for this switch out.
 
   07 Jul 2005; Michael Cummings <mcummings@gentoo.org> genlop-0.30.2.ebuild,
   genlop-0.30.3.ebuild:

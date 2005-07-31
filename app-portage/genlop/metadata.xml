@@ -2,4 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>tools-portage</herd>
+<maintainer>
+	<email>mcummings@gentoo.org</email>
+	<description>Primary Maintainer</description>
+</maintainer>
+<maintainer>
+	<email>tools-portage@gentoo.org</email>
+	<description>Secondary Maintainer</description>
+</maintainer>
 </pkgmetadata>
