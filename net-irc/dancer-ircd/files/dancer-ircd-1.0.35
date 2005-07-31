@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/files/dancer-ircd-1.0.35,v 1.1 2005/01/23 22:07:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/files/dancer-ircd-1.0.35,v 1.2 2005/07/31 20:41:03 swegener Exp $
 
 depend() {
 	use net
+	provide ircd
 }
 
 start() {
