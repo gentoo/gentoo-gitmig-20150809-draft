@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.2.ebuild,v 1.1 2005/07/08 09:13:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.2.ebuild,v 1.2 2005/07/31 08:48:53 usata Exp $
 
 inherit kde-functions
-
-need-qt 3.3.4
 
 DESCRIPTION="Qt immodules input method framework plugin for SCIM"
 HOMEPAGE="http://scim.freedesktop.org/"
@@ -18,7 +16,8 @@ IUSE="nls arts"
 
 DEPEND="|| ( >=app-i18n/scim-1.3 >=app-i18n/scim-cvs-1.3 )
 	nls? ( sys-devel/gettext )
-	arts? ( kde-base/arts )"
+	arts? ( kde-base/arts )
+	$(qt_min_version 3.3.4)"
 
 S="${WORKDIR}/${PN}"
 

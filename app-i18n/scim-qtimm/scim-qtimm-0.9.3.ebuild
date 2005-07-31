@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.9.ebuild,v 1.3 2005/06/17 20:32:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.3.ebuild,v 1.1 2005/07/31 08:48:54 usata Exp $
 
 inherit kde-functions
-
-need-qt 3.3.4
 
 DESCRIPTION="Qt immodules input method framework plugin for SCIM"
 HOMEPAGE="http://scim.freedesktop.org/"
@@ -13,18 +11,17 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls arts"
 
-DEPEND="|| ( >=app-i18n/scim-1.2.2 >=app-i18n/scim-cvs-1.2.2 )
-	!>=app-i18n/scim-1.3
-	!>=app-i18n/scim-cvs-1.3
+DEPEND="|| ( >=app-i18n/scim-1.3 >=app-i18n/scim-cvs-1.3 )
 	nls? ( sys-devel/gettext )
-	arts? ( kde-base/arts )"
+	arts? ( kde-base/arts )
+	$(qt_min_version 3.3.4)"
 
 pkg_setup() {
 	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
-		die "You need to rebuild >=x11-libs/qt-3.3.3-r1 with immqt-bc(recommended) or immqt USE flag enabled."
+		die "You need to rebuild >=x11-libs/qt-3.3.4 with immqt-bc(recommended) or immqt USE flag enabled."
 	fi
 }
 

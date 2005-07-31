@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c19a2904caf2d22e46f4a02d2514058a ChangeLog 4219
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 50fc97705d18f9761da49152ea5e8a27 ChangeLog 3958
-MD5 c6faec95455e1819478b36710f225383 scim-qtimm-0.8.9.ebuild 1540
-MD5 22747485a8aa4d8fc02e5188970ad8e0 scim-qtimm-0.8.95.ebuild 1541
-MD5 22fb2bfe76405707340ace4030e77793 scim-qtimm-0.9.1.ebuild 1520
-MD5 ff1bdc7c6000cc05a78119c2f59f7ba6 scim-qtimm-0.9.2.ebuild 1518
-MD5 950e54af1528a6bd79c51074b4cb9b1d files/digest-scim-qtimm-0.8.9 69
+MD5 e1612d44a75fa0ec21b5a758a1b480ca scim-qtimm-0.8.95.ebuild 1550
+MD5 3b657b4f7ad12ce1cd47b30490c87643 scim-qtimm-0.9.2.ebuild 1528
+MD5 1672fc59e7841f9b3987a00d99849670 scim-qtimm-0.9.1.ebuild 1530
+MD5 9b0f5052547f3c924bf85aa7ba1a99b1 scim-qtimm-0.9.3.ebuild 1503
 MD5 ca25d0f0af2f019b21e0153c1f1b50aa files/digest-scim-qtimm-0.8.95 70
-MD5 3811b7ea72abdefe6b02dce2c8318fe5 files/digest-scim-qtimm-0.9.1 69
 MD5 b436588150ad1499ad64007ddfa75679 files/digest-scim-qtimm-0.9.2 69
+MD5 3811b7ea72abdefe6b02dce2c8318fe5 files/digest-scim-qtimm-0.9.1 69
+MD5 49e66ba94592a548a5812cf2eb90e05e files/digest-scim-qtimm-0.9.3 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7I1DVWNWqTUmv+0RAum7AJ92KtXoyt+yVv9M5J3Jm9sA/GbPGgCfV6Wc
+pBjyJEu1na9T+b5SyBaVhL8=
+=l2K+
+-----END PGP SIGNATURE-----
