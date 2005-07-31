@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.6.0.ebuild,v 1.3 2005/07/31 10:56:28 foser Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.6.0.ebuild,v 1.4 2005/07/31 13:55:21 foser Exp $
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
@@ -29,15 +27,6 @@ RDEPEND="X? (
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-src_unpack() {
-
-	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.4.0-makefile.patch
-
-}
 
 src_compile() {
 
