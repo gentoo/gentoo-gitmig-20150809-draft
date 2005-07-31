@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.236 2005/07/30 10:12:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.237 2005/07/31 10:35:49 flameeyes Exp $
+
+  31 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -xine-lib-1.0-r3.ebuild, -xine-lib-1.0-r4.ebuild,
+  -xine-lib-1.0.1-r1.ebuild, -xine-lib-1.0.1-r2.ebuild:
+  Removed old versions.
 
   30 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> xine-lib-1.1.0.ebuild:
   Exclude two fbsd patches that are going to be dropped in the next patchset.
