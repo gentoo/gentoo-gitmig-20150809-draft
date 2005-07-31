@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/skstream-0.2.5.ebuild,v 1.10 2005/02/04 08:29:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/skstream-0.2.5.ebuild,v 1.11 2005/07/31 21:24:59 swegener Exp $
 
 DESCRIPTION="FreeSockets - Portable C++ classes for IP (sockets) applications"
 SRC_URI="ftp://victor.worldforge.org/pub/worldforge/libs/${PN}/${P}.tar.bz2"
@@ -13,14 +13,8 @@ IUSE=""
 
 DEPEND="virtual/libc"
 
-src_compile() {
-	econf || die "configure died"
-	emake || die "make died"
-}
-
 src_install() {
-
-	make DESTDIR=${D} install || die "make install died"
+	make DESTDIR="${D}" install || die "make install died"
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }

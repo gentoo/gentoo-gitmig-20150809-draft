@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ac56c37d0613b7e9576bf44c8e20530 ChangeLog 1193
 MD5 19977e75ba6ce344a1637411ce218555 files/digest-skstream-0.2.2 66
 MD5 ae677990cc4a969e711043a4160ced69 files/digest-skstream-0.2.4 66
@@ -7,3 +10,10 @@ MD5 5b4761353e276c31bdfaa4a01c6faf53 skstream-0.2.2.ebuild 608
 MD5 c814df3892f6e5c059c0cffd925e1910 skstream-0.2.4.ebuild 600
 MD5 0bf32c3d41e605555e8e011bbb1d95f2 skstream-0.2.5.ebuild 631
 MD5 ef105220a5213f0597a6e4bed6341656 skstream-0.3.3.ebuild 609
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7UG3I1lqEGTUzyQRAqkQAJ9UH+BdrG2vKcEHbPoliQ4cG/3ZKgCeLS9k
+W9t/sXF2cqp6XXHfq7Azn0U=
+=FEXX
+-----END PGP SIGNATURE-----
