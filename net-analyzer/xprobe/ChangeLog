@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/xprobe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/ChangeLog,v 1.15 2005/07/19 16:43:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/ChangeLog,v 1.16 2005/07/31 17:52:34 vanquirius Exp $
+
+*xprobe-0.3 (31 Jul 2005)
+
+  31 Jul 2005; Marcelo Goes <vanquirius@gentoo.org> metadata.xml,
+  +xprobe-0.3.ebuild:
+  Version bump. Moved description from ebuild to metadata.xml, where it
+  belongs. I also did some layout clean up on the ebuild. Fixes bug 100865.
+  Thanks to Garrett Hoxie <shoegoo@gmail.com>.
 
   19 Jul 2005; David Holm <dholm@gentoo.org> xprobe-0.2.2.ebuild:
   Added to ~ppc.
