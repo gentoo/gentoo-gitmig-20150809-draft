@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.2.0.ebuild,v 1.6 2005/05/22 14:34:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.2.0.ebuild,v 1.7 2005/07/31 04:59:55 usata Exp $
 
 inherit eutils
 
@@ -69,7 +69,7 @@ pkg_postinst() {
 	einfo "If you prefer KDE/Qt interface, try emerge app-i18n/skim."
 	einfo
 	einfo "To use Chinese input methods:"
-	einfo "	# emerge app-i18n/scim-tables app-i18n/scim-chinese"
+	einfo "	# emerge app-i18n/scim-tables app-i18n/scim-pinyin"
 	einfo "To use Korean input methods:"
 	einfo "	# emerge app-i18n/scim-hangul"
 	einfo "To use Japanese input methods:"

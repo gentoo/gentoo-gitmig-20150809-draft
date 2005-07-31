@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.71 2005/07/18 10:23:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.72 2005/07/31 04:59:55 usata Exp $
+
+  31 Jul 2005; Mamoru KOMACHI <usata@gentoo.org> scim-1.2.0.ebuild,
+  scim-1.2.2.ebuild, scim-1.2.3.ebuild, scim-1.3.3.ebuild,
+  scim-1.4.0.ebuild:
+  Refer to scim-pinyin instead of scim-chinese; bug #98703.
 
 *scim-1.4.0 (18 Jul 2005)
 
