@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-forums
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.9 2005/01/09 10:51:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.10 2005/07/31 14:28:11 corsair Exp $
+
+  31 Jul 2005; Markus Rothe <corsair@gentoo.org>
+  fortune-mod-gentoo-forums-20041207.ebuild:
+  Added ~ppc64 (bug #100217)
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org>
   fortune-mod-gentoo-forums-20040922.ebuild,

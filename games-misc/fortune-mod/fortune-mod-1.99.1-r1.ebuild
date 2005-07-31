@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1-r1.ebuild,v 1.4 2005/06/15 18:42:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1-r1.ebuild,v 1.5 2005/07/31 14:13:24 corsair Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.redellipse.net/code/downloads/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa mips ppc ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 hppa mips ppc ~ppc-macos ~ppc64 sparc x86"
 IUSE="offensive"
 
 DEPEND="virtual/libc
