@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 911f0e59c4cd3f7aa0b47769828169d0 ChangeLog 1982
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 186c07859da3429d6257a0f05ef8689b nbench-2.2.1.ebuild 956
-MD5 26477138c46f55caf5080a1e0e2fa416 nbench-2.2.2.ebuild 970
-MD5 be28c7777c33c6c469a3936e138cdc67 ChangeLog 1888
-MD5 c8f60a4dafe846f33033a3fd7241e562 files/digest-nbench-2.2.2 69
+MD5 41245b32536abffcca49cce0a56bbe8b nbench-2.2.2.ebuild 971
 MD5 5c6e1c5a2f7f22dc451ad34130730183 files/digest-nbench-2.2.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC3lbmKRy60XGEcJIRAkwHAKCp1ovsJDVUU+QHe3llU8xWTvKwEQCfa4CL
-LBU/4ydfuRn0kF46SRGnqGE=
-=Hud7
------END PGP SIGNATURE-----
+MD5 c8f60a4dafe846f33033a3fd7241e562 files/digest-nbench-2.2.2 69
