@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.31 2005/06/14 17:15:04 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.32 2005/07/31 18:39:17 sekretarz Exp $
+
+  31 Jul 2005; <sekretarz@gentoo.org> firebird-1.5.1.ebuild,
+  firebird-1.5.2.ebuild:
+  Firebird provide now symlink libfbclient.so to libgds.so in
+  /opt/firebird/lib directory for back compablity, bug #96636. Fixed harmless
+  sed errors, bug #99079
 
   14 Jun 2005; <sekretarz@gentoo.org> files/70firebird,
   firebird-1.5.1.ebuild, firebird-1.5.2.ebuild:

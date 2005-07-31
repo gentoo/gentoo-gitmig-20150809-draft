@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.1.ebuild,v 1.10 2005/06/14 17:15:04 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.1.ebuild,v 1.11 2005/07/31 18:39:17 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 
 	NOCONFIGURE=1
 	./autogen.sh ${myconf} || die "couldn't run autogen.sh"
-	find . -exec sed -i -e "s/-lcurses/-lncurses/g" {} \;
+	find . -type f -exec sed -i -e "s/-lcurses/-lncurses/g" {} \;
 	econf ${myconf} || die "./configure failed"
 	emake -j 1 || die "error during make"
 }
@@ -101,6 +101,8 @@ src_install() {
 	# create links for back compatibility
 	dosym /opt/firebird/lib/libfbclient.so /usr/lib/libgds.so
 	dosym /opt/firebird/lib/libfbclient.so /usr/lib/libgds.so.0
+	dosym /opt/firebird/lib/libfbclient.so /opt/firebird/lib/libgds.so
+	dosym /opt/firebird/lib/libfbclient.so /opt/firebird/lib/libgds.so.0
 
 	# move and link config files to /etc/firebird so they'll be protected
 	dodir /etc/firebird
