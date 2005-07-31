@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1355 2005/07/30 21:53:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1356 2005/07/31 09:56:08 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -799,9 +799,10 @@ net-p2p/amule:remote - enable remote controlling of the client
 net-p2p/amule:stats - enable statistic reporting
 net-print/omni:epson - include the epson drivers
 net-proxy/squid:customlog - Adds support for custom log file formats
+net-proxy/squid:follow-xff - Adds follow X-Forwarded-For patch (http://squid.sourceforge.net/follow_xff/)
 net-proxy/squid:logrotate - Use logrotate for rotating logs
 net-proxy/squid:underscores - Enables support for domain names containing underscores
-net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch
+net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch (http://www.it-academy.bg/zph/)
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/wepattack:john - Build with johntheripper support
