@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.12 2005/07/08 08:12:32 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.13 2005/07/31 23:21:34 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.9.7g-ptr-casting.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7g-mem-clr-ptr-cast.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7g-ABI-compat.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7g-superh.patch
 
 	# allow openssl to be cross-compiled
 	cp "${FILESDIR}"/gentoo.config-0.9.7g gentoo.config || die "cp cross-compile failed"
