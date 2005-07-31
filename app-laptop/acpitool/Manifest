@@ -1,17 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 56555fe1c9c2c5daf611d33cd54882f7 acpitool-0.2.6.ebuild 821
+MD5 3409329283a0eb5bc22a0a50b419fa41 ChangeLog 1117
 MD5 bef17e15dd04e689b0ab7990676d06bd acpitool-0.2.5.ebuild 672
-MD5 725ebeb6ccb4d23b7fd131dd37b2294a ChangeLog 958
+MD5 56555fe1c9c2c5daf611d33cd54882f7 acpitool-0.2.6.ebuild 821
 MD5 8629d3ef30ef3be4b273182406eef4f2 metadata.xml 224
+MD5 be3913d1e7295dd15d9cba7da59428d7 acpitool-0.2.7.ebuild 811
+MD5 5b1fe7a8b6adfcf261f4131004973a83 files/acpitool-0.2.6-gentoo.patch 823
 MD5 138ad9564f4baf72faa419739abf111c files/digest-acpitool-0.2.5 66
 MD5 451f8882f44f7b7dc0967841a64dcac0 files/digest-acpitool-0.2.6 66
-MD5 5b1fe7a8b6adfcf261f4131004973a83 files/acpitool-0.2.6-gentoo.patch 823
+MD5 3447a67e1cb95e7aac594a530eb4646e files/acpitool-0.2.7-gentoo.patch 898
+MD5 8b9f311205786b4bc4413caca0101be7 files/digest-acpitool-0.2.7 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfJIWZ/iYVBmujdURAgUIAKDwJrKkNtPyJgIshgyNHm8KfipORQCfRelb
-+U9fj2IfZaIaf9C7b4CR3As=
-=tZNM
+iD8DBQFC7L+bZ/iYVBmujdURAug9AJ4lOaGbZuAm6bJ84xr37Phdw3i6pACfaayD
+Gr9mjgpOQLrwZzKvseHIrrI=
+=Czg/
 -----END PGP SIGNATURE-----
