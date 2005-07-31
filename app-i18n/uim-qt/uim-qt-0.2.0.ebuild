@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.2.0.ebuild,v 1.6 2005/07/12 13:33:10 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.2.0.ebuild,v 1.7 2005/07/31 08:54:04 usata Exp $
 
-inherit eutils
+inherit eutils qt3
 
 DESCRIPTION="Qt immodules input method framework plugin for UIM"
 HOMEPAGE="http://freedesktop.org/Software/UimQt"
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=app-i18n/uim-0.4.4
 	!>=app-i18n/uim-0.4.6-r2
-	>=x11-libs/qt-3.3.3-r1"
+	$(qt_min_version 3.3.3-r1)"
 
 pkg_setup() {
 	einfo
