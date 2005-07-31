@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblscp/liblscp-0.3.0.ebuild,v 1.2 2005/07/11 18:50:58 dholm Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblscp/liblscp-0.3.0.ebuild,v 1.3 2005/07/31 21:19:02 swegener Exp $
 
 DESCRIPTION="liblscp is a C++ library for the Linux Sampler control protocol."
 HOMEPAGE="http://www.linuxsampler.org/"
@@ -15,11 +13,6 @@ RDEPEND="virtual/libc
 	doc? ( app-doc/doxygen )"
 
 DEPEND="${RDEPEND}"
-
-src_compile() {
-	econf || die "./configure failed"
-	emake || die "make failed"
-}
 
 src_install() {
 	einstall || die "einstall failed"
