@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.06.ebuild,v 1.1 2005/07/29 21:03:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.06.ebuild,v 1.2 2005/07/31 11:15:34 dholm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nimh.org/code/ldapdns/"
 SRC_URI="http://www.nimh.org/dl/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
