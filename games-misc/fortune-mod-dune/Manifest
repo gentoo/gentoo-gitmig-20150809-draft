@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0d88cc0de316c293a34f11ebf4b43e98 ChangeLog 494
-MD5 05ee67a5c49720526ee53d87a7c9bb26 fortune-mod-dune-2.0.1.ebuild 601
+MD5 9a6c909c95c9194c8cdbbc80fb9d6332 ChangeLog 606
+MD5 f0038ef79cc43a43e278959fa61e4df3 fortune-mod-dune-2.0.1.ebuild 607
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 5f7da43fb303ef25500f801faff3badd files/digest-fortune-mod-dune-2.0.1 80
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB6m+nroRuSHgZdywRArEsAKCOKV/B4o6vPiQQo7oUS8vLccg3EACeL9rC
-LfGoPhn5WqC2bYualtpkzOU=
-=3ll4
------END PGP SIGNATURE-----
