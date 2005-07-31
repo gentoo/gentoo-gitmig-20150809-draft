@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/vanessa-logger-0.0.6.ebuild,v 1.8 2005/04/01 04:39:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/vanessa-logger-0.0.6.ebuild,v 1.9 2005/07/31 21:34:24 swegener Exp $
 
 MY_PN="${PN/-/_}"
 MY_P="${MY_PN}-${PV}"
@@ -17,12 +17,7 @@ DEPEND="virtual/libc"
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile() {
-	econf || die "error configure"
-	emake || die "error compiling"
-}
-
 src_install() {
-	make DESTDIR=${D} install || die "error installing"
+	make DESTDIR="${D}" install || die "error installing"
 	dodoc AUTHORS NEWS README TODO sample/*.c sample/*.h
 }
