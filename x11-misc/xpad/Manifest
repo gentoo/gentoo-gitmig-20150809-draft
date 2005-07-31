@@ -1,8 +1,18 @@
-MD5 bec94149899ec6cc9d70d755445b50cd metadata.xml 263
-MD5 6cbdff32ffc38c858986cfbac6cb2691 ChangeLog 4590
-MD5 330d3f01e15d5864a550389b57190d3c xpad-2.8.ebuild 614
-MD5 682a9191a39ddf9c2c61f4ba72ed1fe6 xpad-1.13.ebuild 722
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1f6bce16512ef9fc6a5ca5efb92d5c71 xpad-2.6.ebuild 659
+MD5 58103b13a288702fc498eeac66403764 xpad-2.8.ebuild 612
+MD5 682a9191a39ddf9c2c61f4ba72ed1fe6 xpad-1.13.ebuild 722
+MD5 9c52ceff3698d00a03a9b7c05da484a2 ChangeLog 4686
+MD5 bec94149899ec6cc9d70d755445b50cd metadata.xml 263
 MD5 116f1b1db749a9f8d0b7c8d075e5759d files/digest-xpad-2.6 61
-MD5 d0f0a44ba012c5a3d6863afb093890d7 files/digest-xpad-1.13 62
 MD5 f5bcc36fc73693201d9f866161a46638 files/digest-xpad-2.8 61
+MD5 d0f0a44ba012c5a3d6863afb093890d7 files/digest-xpad-1.13 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7NDmViELBEf1JB0RAi3zAJwN7/LivURGlj0ePIdRuFwyCzELqgCfVtLy
+gvNKzs7oH9j316H0es6nfkk=
+=VTDs
+-----END PGP SIGNATURE-----
