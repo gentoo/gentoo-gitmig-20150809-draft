@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.5-r1.ebuild,v 1.3 2005/05/15 18:48:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.5-r1.ebuild,v 1.4 2005/07/31 00:10:41 matsuu Exp $
 
 inherit toolchain-funcs eutils perl-module distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ppc64 ~ia64 hppa"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 sh ~sparc x86"
 IUSE="perl cjk python"
 
 DEPEND="virtual/libc"
