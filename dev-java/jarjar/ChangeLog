@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jarjar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.2 2005/05/18 22:58:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.3 2005/07/31 06:33:00 st_lim Exp $
+
+*jarjar-0.6 (31 Jul 2005)
+
+  31 Jul 2005; Lim Swee Tat <st_lim@gentoo.org> +jarjar-0.6.ebuild:
+  Version bump.  Need to support cglib-2.1 which is needed for hibernate-3.0
 
   18 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   jarjar-0.4_p20050105.ebuild:
