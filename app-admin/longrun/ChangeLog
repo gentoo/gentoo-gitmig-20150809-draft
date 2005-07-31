@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/longrun
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.9 2005/01/01 11:09:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.10 2005/07/31 19:10:25 betelgeuse Exp $
+
+*longrun-0.9-r2 (31 Jul 2005)
+
+  31 Jul 2005; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +longrun-0.9-r2.ebuild:
+  Added Debian patches. Resolves bug #55369.
+  Also added checks for the right kernel config.
 
   20 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> longrun-0.9-r1.ebuild:
   inherit eutils for epatch; error check
