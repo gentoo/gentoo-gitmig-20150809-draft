@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6-r1.ebuild,v 1.10 2005/07/28 12:08:53 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6-r1.ebuild,v 1.11 2005/08/01 20:23:03 vapier Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -52,7 +52,7 @@
 #
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
-IUSE="berkdb debug gdbm ithreads nocxx"
+IUSE="berkdb debug gdbm ithreads"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -80,7 +80,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 
 RESTRICT="test"
 
-DEPEND="!nocxx? ( !elibc_uclibc? ( sys-apps/groff ) )
+DEPEND="!features_noman? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
