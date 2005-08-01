@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libdc1394
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.14 2005/05/17 22:20:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.15 2005/08/01 16:31:03 seemant Exp $
+
+  01 Aug 2005; Seemant Kulleen <seemant@gentoo.org> -libdc1394-0.9.1.ebuild,
+  -libdc1394-0.9.5.ebuild:
+  remove cruft ebuilds
 
   17 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   libdc1394-1.0.0.ebuild:
