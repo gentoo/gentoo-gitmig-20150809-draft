@@ -1,6 +1,9 @@
 # ChangeLog for media-video/thoggen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/ChangeLog,v 1.1 2005/07/25 20:57:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/ChangeLog,v 1.2 2005/08/01 16:47:16 herbs Exp $
+
+  01 Aug 2005; Herbie Hopkins <herbs@gentoo.org> thoggen-0.3.ebuild:
+  Marked ~amd64 wrt bug #100896.
 
 *thoggen-0.3 (25 Jul 2005)
 
