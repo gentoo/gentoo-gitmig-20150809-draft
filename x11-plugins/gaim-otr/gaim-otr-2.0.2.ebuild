@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/gaim-otr-2.0.2.ebuild,v 1.2 2005/07/10 20:43:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/gaim-otr-2.0.2.ebuild,v 1.3 2005/08/01 18:25:30 josejx Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cypherpunks.ca/otr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=net-libs/libotr-2.0.2
