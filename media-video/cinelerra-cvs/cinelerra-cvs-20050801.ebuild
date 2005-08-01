@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20050801.ebuild,v 1.1 2005/08/01 13:35:19 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20050801.ebuild,v 1.2 2005/08/01 18:44:30 zypher Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -29,6 +29,7 @@ RDEPEND="!media-video/cinelerra
 	>=media-libs/openexr-1.2.1
 	>=media-libs/libvorbis-1.0.1-r2
 	>=media-libs/libogg-1.0
+	>=media-libs/libtheora-1.0_alpha4-r1
 	!media-video/cinelerra"
 
 DEPEND="${RDEPEND}
