@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.19.ebuild,v 1.1 2005/06/28 12:14:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.19.ebuild,v 1.2 2005/08/01 11:08:48 swegener Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="On-Screen Display for XChat"
 HOMEPAGE="http://sourceforge.net/projects/xchatosd/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~amd64 ~ia64"
 IUSE="iconv"
 
 RDEPEND=">=x11-libs/xosd-2.2.5
