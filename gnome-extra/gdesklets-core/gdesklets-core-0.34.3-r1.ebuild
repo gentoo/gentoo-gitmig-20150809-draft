@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3.ebuild,v 1.12 2005/08/01 10:17:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3-r1.ebuild,v 1.1 2005/08/01 23:33:32 nixphoeni Exp $
 
 inherit gnome2 eutils multilib
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~alpha amd64 ppc ~sparc x86"
+KEYWORDS="x86 ppc amd64 ~sparc ~alpha"
 
 RDEPEND=">=dev-lang/python-2.3
 	>=dev-libs/glib-2
@@ -62,6 +62,10 @@ src_install() {
 
 	# Install the Developer's book documentation
 	use doc && dohtml -r ${WORKDIR}/develbook/*
+
+	# Remove conflicts with x11-misc/shared-mime-info
+	rm -rf ${D}/usr/share/mime/aliases ${D}/usr/share/mime/magic ${D}/usr/share/mime/globs \
+		${D}/usr/share/mime/subclasses ${D}/usr/share/mime/XMLnamespaces
 
 }
 
