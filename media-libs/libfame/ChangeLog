@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libfame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.40 2005/07/19 23:45:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.41 2005/08/01 12:52:41 flameeyes Exp $
+
+  01 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libfame-0.9.1-r1.ebuild:
+  Properly fix underquoted definition of AM_PATH_LIBFAME.
 
   19 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   libfame-0.9.1-r1.ebuild:
