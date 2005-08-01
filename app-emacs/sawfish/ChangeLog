@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/sawfish
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.3 2005/01/01 13:59:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sawfish/ChangeLog,v 1.4 2005/08/01 16:40:30 mkennedy Exp $
+
+*sawfish-1.32 (01 Aug 2005)
+
+  01 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org> +sawfish-1.32.ebuild:
+  New upstream version.
 
   26 Jun 2004; <mkennedy@gentoo.org> files/50sawfish-gentoo.el:
   Added autoloads for sawfish-interaction and sawfish-console
