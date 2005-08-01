@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r3.ebuild,v 1.9 2005/07/30 20:22:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r3.ebuild,v 1.10 2005/08/01 02:54:14 eradicator Exp $
 
 inherit eutils
 
@@ -187,7 +187,8 @@ src_install() {
 	fi
 
 	# We used to put stuff here, so be safe for now...
-	dosym /usr/share/festival /usr/lib/festival
+	dodir /usr/lib
+	dosym ../share/festival /usr/lib/festival
 }
 
 pkg_postinst() {

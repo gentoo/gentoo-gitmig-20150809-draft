@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.29 2005/07/30 20:22:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.30 2005/08/01 02:54:14 eradicator Exp $
+
+  01 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3-r3.ebuild:
+  Properly create the /usr/lib/festival symlink.
 
   30 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -files/festival-1.4.2.patch, files/server.scm, -festival-1.4.3-r2.ebuild,
