@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.25 2005/08/01 23:16:17 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.26 2005/08/01 23:46:14 foser Exp $
 #
 # Author: Spider
 #
@@ -8,7 +8,7 @@
 # and to remove "bad" flags from CFLAGS
 
 # Debug ECLASS
-IUSE="debuginfo"
+IUSE="debug"
 
 if useq debuginfo; then
 	# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
