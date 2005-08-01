@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>fonts</herd>
+<herd>cjk</herd>
+<maintainer>
+  <email>ming@gentoo.org</email>
+</maintainer>
+<longdescription>
+	This project aims to provide full sized CJK unicode truetype fontset,
+	supporting all CJK characters in Unicode plane 0 (BMP) and plane 2.
+</longdescription>
+</pkgmetadata>

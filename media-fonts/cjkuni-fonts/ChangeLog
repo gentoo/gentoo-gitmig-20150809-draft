@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/cjkuni-fonts
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cjkuni-fonts/ChangeLog,v 1.1 2005/08/01 06:48:35 ming Exp $
+
+*cjkuni-fonts-0.0.20050501 (01 Aug 2005)
+
+  01 Aug 2005; Ming Zhao <ming@gentoo.org> +metadata.xml,
+  +cjkuni-fonts-0.0.20050501.ebuild:
+  Initial import. Ebuild submitmed by sunmoon1997 <sunmoon1997@gmail.com>(bug
+  #97831).
+
