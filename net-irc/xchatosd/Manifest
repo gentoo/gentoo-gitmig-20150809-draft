@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e52e09bf99b2fc88126cc1e08bb279ea ChangeLog 2234
+MD5 71ff68cf19609bc00b833577e1c7b256 ChangeLog 2324
 MD5 4a469b706c4100d15151e114918362f9 files/digest-xchatosd-5.18 64
 MD5 7c7bda25fddb101d0ca9ced34251e234 files/digest-xchatosd-5.19 64
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 eb2f8590f988863dfd44911276a3e282 xchatosd-5.18.ebuild 1179
-MD5 98c2237f89fad5208c604299d1bc0e3d xchatosd-5.19.ebuild 1184
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCwT8nI1lqEGTUzyQRAk+sAKDLOEDCEtmMf02zeUemEirQLEBC5QCgrRBY
-ANOlXXmZEfFYZAEu9efPTL4=
-=A4hm
------END PGP SIGNATURE-----
+MD5 b6ce816666c989c422adbd0bb0c15c01 xchatosd-5.19.ebuild 1176
