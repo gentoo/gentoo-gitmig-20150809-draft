@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/h4x0r
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/h4x0r/ChangeLog,v 1.6 2005/07/02 09:32:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/h4x0r/ChangeLog,v 1.7 2005/08/01 13:05:08 josejx Exp $
+
+  01 Aug 2005; Joseph Jezak <josejx@gentoo.org> h4x0r-0.13.ebuild:
+  Marked ppc stable for bug #99251.
 
   02 Jul 2005; David Holm <dholm@gentoo.org> h4x0r-0.13.ebuild:
   Added to ~ppc.
