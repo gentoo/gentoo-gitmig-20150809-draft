@@ -1,6 +1,11 @@
 # ChangeLog for www-misc/htdig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.10 2005/07/10 00:40:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/htdig/ChangeLog,v 1.11 2005/08/01 12:54:13 kugelfang Exp $
+
+  01 Aug 2005; Danny van Dyk <kugelfang@gentoo.org>
+  htdig-3.2.0_beta6.ebuild:
+  Removed -fPIC patch and the real cause for BUG #98357. -Wno-deprecated made
+  configure misbehave.
 
   10 Jul 2005; Danny van Dyk <kugelfang@gentoo.org>
   +files/htdig-3.2.0-fpic.patch, htdig-3.2.0_beta6.ebuild:
