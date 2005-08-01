@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.8.1.ebuild,v 1.6 2005/07/18 19:01:29 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.8.1.ebuild,v 1.7 2005/08/01 04:02:55 smithj Exp $
 
 DESCRIPTION="Console based AIM client that looks like ircII"
 HOMEPAGE="http://dev.ojnk.net/"
@@ -16,10 +16,8 @@ DEPEND="perl? ( dev-lang/perl )
 
 src_compile() {
 	local myconf=""
-	use perl || myconf="${myconf} --disable-perl"
-	einfo "Configure options: ${myconf}"
-	econf ${myconf} || die "econf failed"
-	emake
+	econf $(use_enable perl) || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
