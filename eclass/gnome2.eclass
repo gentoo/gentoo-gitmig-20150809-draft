@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.55 2005/07/23 14:04:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.56 2005/08/01 23:12:15 foser Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -14,7 +14,9 @@ G2CONF=""               # extra configure opts passed to econf
 ELTCONF=""              # extra options passed to elibtoolize
 SCROLLKEEPER_UPDATE="1" # whether to run scrollkeeper for this package
 USE_DESTDIR=""          # use make DESTDIR=${D} install rather than einstall
+
 IUSE="debug"
+
 use debug && G2CONF="${G2CONF} --enable-debug=yes"
 
 DEPEND=">=sys-apps/sed-4"
@@ -48,10 +50,10 @@ gnome2_src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 
 	if [ -z "${USE_DESTDIR}" -o "${USE_DESTDIR}" = "0" ]; then
-		einstall "scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/" "$@"
+		einstall "scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/" "$@" || die "einstall failed"
 	else
 		make DESTDIR=${D} \
-		   	"$@" install
+		   	"$@" install || die "make DESTDIR install failed"
 	fi
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
