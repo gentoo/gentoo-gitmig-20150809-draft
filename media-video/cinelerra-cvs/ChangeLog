@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.10 2005/05/18 10:59:44 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.11 2005/08/01 13:35:19 zypher Exp $
+
+*cinelerra-cvs-20050801 (01 Aug 2005)
+
+  01 Aug 2005; Marc Hildebrand <zypher@gentoo.org> cinelerra-cvs-20050801.ebuild:
+  Version bump. Removed four old ebuilds.
 
   18 May 2005; <zypher@gentoo.org> cinelerra-cvs-20050506.ebuild:
   Marked ~ppc.
