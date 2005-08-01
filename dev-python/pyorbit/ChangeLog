@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyorbit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.19 2005/07/26 21:47:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.20 2005/08/01 12:06:47 blubb Exp $
+
+  01 Aug 2005; Simon Stelling <blubb@gentoo.org> pyorbit-2.0.1.ebuild:
+  stable on amd64
 
   26 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> pyorbit-2.0.1.ebuild:
   Stable on alpha.
