@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.91 2005/07/22 21:47:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.92 2005/08/01 10:50:55 kevquinn Exp $
 
 
 # need access to emktemp()
@@ -58,6 +58,23 @@ inherit eutils toolchain-funcs multilib
 # when a package is filtering -fstack-protector, -fstack-protector-all
 # notice: modern automatic specs files will also suppress -fstack-protector-all
 # when only -fno-stack-protector is given
+#
+#
+################ DEPRECATED functions ################
+# The following are still present to avoid breaking existing
+# code more than necessary; however they are deprecated. Please
+# use gcc-specs-* from toolchain-funcs.eclass instead, if you
+# need to know which hardened techs are active in the compiler.
+# See bug #100974
+#
+#### has_hardened ####
+# Returns true if the compiler has 'Hardened' in its version string,
+# (note; switched-spec vanilla compilers satisfy this condition) or
+# the specs file name contains 'hardened'.
+#
+#### has_pie ####
+# Returns true if the compiler by default or with current CFLAGS
+# builds position-independent code.
 #
 #### has_pic ####
 # Returns true if the compiler by default or with current CFLAGS
@@ -317,6 +334,7 @@ get-flag() {
 	return 1
 }
 
+# DEPRECATED - use gcc-specs-relro or gcc-specs-now from toolchain-funcs
 has_hardened() {
 	test_version_info Hardened && return 0
 	# the specs file wont exist unless gcc has GCC_SPECS support
@@ -325,6 +343,7 @@ has_hardened() {
 	return 1
 }
 
+# DEPRECATED - use gcc-specs-pie from toolchain-funcs
 # indicate whether PIC is set
 has_pic() {
 	[ "${CFLAGS/-fPIC}" != "${CFLAGS}" ] && return 0
@@ -333,6 +352,7 @@ has_pic() {
 	return 1
 }
 
+# DEPRECATED - use gcc-specs-pie from toolchain-funcs
 # indicate whether PIE is set
 has_pie() {
 	[ "${CFLAGS/-fPIE}" != "${CFLAGS}" ] && return 0
@@ -343,19 +363,23 @@ has_pie() {
 	return 1
 }
 
+# DEPRECATED - use gcc-specs-ssp from toolchain-funcs
 # indicate whether code for SSP is being generated for all functions
 has_ssp_all() {
 	# note; this matches only -fstack-protector-all
 	[ "${CFLAGS/-fstack-protector-all}" != "${CFLAGS}" ] && return 0
 	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP_ALL__)" ] && return 0
+	gcc-specs-ssp && return 0
 	return 1
 }
 
+# DEPRECATED - use gcc-specs-ssp from toolchain-funcs
 # indicate whether code for SSP is being generated
 has_ssp() {
 	# note; this matches both -fstack-protector and -fstack-protector-all
 	[ "${CFLAGS/-fstack-protector}" != "${CFLAGS}" ] && return 0
 	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP__)" ] && return 0
+	gcc-specs-ssp && return 0
 	return 1
 }
 
@@ -440,7 +464,7 @@ filter-ldflags() {
 }
 
 fstack-flags() {
-	if has_ssp; then
+	if gcc-specs-ssp; then
 		[ -z "`is-flag -fno-stack-protector`" ] &&
 			export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
 	fi
