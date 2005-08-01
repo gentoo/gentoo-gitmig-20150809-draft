@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3.ebuild,v 1.11 2005/07/31 13:25:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3.ebuild,v 1.12 2005/08/01 10:17:55 blubb Exp $
 
 inherit gnome2 eutils multilib
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="doc"
-KEYWORDS="x86 ppc ~amd64 ~sparc ~alpha"
+KEYWORDS="~alpha amd64 ppc ~sparc x86"
 
 RDEPEND=">=dev-lang/python-2.3
 	>=dev-libs/glib-2
