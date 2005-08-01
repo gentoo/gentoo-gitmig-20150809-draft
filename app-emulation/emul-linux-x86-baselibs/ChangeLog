@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.31 2005/07/31 21:00:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.32 2005/08/01 00:26:55 herbs Exp $
+
+*emul-linux-x86-baselibs-2.1.2 (31 Jul 2005)
+
+  31 Jul 2005; Herbie Hopkins <herbs@gentoo.org>
+  +emul-linux-x86-baselibs-2.1.2.ebuild,
+  -emul-linux-x86-baselibs-2.2.ebuild,
+  -emul-linux-x86-baselibs-2.2.2.ebuild,
+  -emul-linux-x86-baselibs-2.2.3.ebuild:
+  Made 2.1.2 release based on 2.1.1 with upgraded libz (to satisfy security
+  bug #100686). Shunted 2.2* as they proved to be too buggy.
 
 *emul-linux-x86-baselibs-2.2.3 (31 Jul 2005)
 
