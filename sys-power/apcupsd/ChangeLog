@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.5 2005/05/05 02:31:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.6 2005/08/01 17:04:16 tantive Exp $
+
+*apcupsd-3.10.18 (01 Aug 2005)
+
+  01 Aug 2005; Michael Imhof <tantive@gentoo.org>
+  +files/3.10.18/apache.conf, +files/3.10.18/apcupsd.in.patch,
+  +files/3.10.18/smtp.patch, +apcupsd-3.10.18.ebuild:
+  Version bumped. Should close #100614.
 
   05 May 2005; Mike Frysinger <vapier@gentoo.org> apcupsd-3.10.15-r1.ebuild,
   apcupsd-3.10.16-r3.ebuild, apcupsd-3.10.17.ebuild:
