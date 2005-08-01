@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/dancer-ircd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/ChangeLog,v 1.16 2005/07/31 20:41:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/ChangeLog,v 1.17 2005/08/01 11:12:28 swegener Exp $
+
+  01 Aug 2005; Sven Wegener <swegener@gentoo.org> -files/dancer-ircd,
+  -dancer-ircd-1.0.31_p8-r1.ebuild:
+  Removed old ebuild.
 
   31 Jul 2005; Sven Wegener <swegener@gentoo.org> dancer-ircd-1.0.35.ebuild:
   Marked stable on x86.

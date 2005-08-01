@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 20a4b58983858ee8cdac61d19c7f2513 ChangeLog 2530
 MD5 02950812d55534c766b1605024e1692a dancer-ircd-1.0.35.ebuild 1723
 MD5 d157b5905d12f83b8c1e8faf82729a9e files/dancer-ircd-1.0.35 555
 MD5 415dcb7adbfdcd61acd1d4832a962eaa files/dancer-ircd.confd 249
 MD5 28bb2d973862b88bf5a475afbe8dbd3a files/digest-dancer-ircd-1.0.35 70
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7gOyI1lqEGTUzyQRAgxhAJwMFll1peI/kTBjMOYLhCIfaZ9igQCbBMLn
+H3XqwTEcVzoHI70Zlxkp5Zw=
+=fbRQ
+-----END PGP SIGNATURE-----
