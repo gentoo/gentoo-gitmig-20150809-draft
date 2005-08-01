@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/nbsmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.31 2005/08/01 13:17:18 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.32 2005/08/01 13:20:54 ferdy Exp $
+
+  01 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  -files/nbsmtp-CRAM-MD5.diff, -nbsmtp-0.99.ebuild, -nbsmtp-0.99-r1.ebuild:
+  removing innecesary versions and files
 
 *nbsmtp-1.00-r1 (01 Aug 2005)
 
