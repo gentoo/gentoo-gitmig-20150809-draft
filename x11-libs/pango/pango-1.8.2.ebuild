@@ -1,40 +1,38 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.6.0.ebuild,v 1.8 2005/01/22 06:03:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.8.2.ebuild,v 1.1 2005/08/01 03:15:25 leonardop Exp $
 
-inherit gnome2 eutils
+inherit eutils gnome2
 
 DESCRIPTION="Text rendering and layout library"
 HOMEPAGE="http://www.pango.org/"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64 ~ppc64"
-IUSE="doc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="doc static"
 
 RDEPEND="virtual/x11
 	virtual/xft
-	>=dev-libs/glib-2.4
+	>=dev-libs/glib-2.5.7
 	>=media-libs/fontconfig-1.0.1
 	>=media-libs/freetype-2"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0
+	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1 )"
 
+DOCS="AUTHORS ChangeLog NEWS README TODO*"
+G2CONF="${G2CONF} $(use_enable static)"
+USE_DESTDIR="1"
+
 src_unpack() {
-
 	unpack ${A}
-
 	cd ${S}
-	# Some enhancements from Redhat
-	epatch ${FILESDIR}/pango-1.0.99.020606-xfonts.patch
-	epatch ${FILESDIR}/${PN}-1.2.2-slighthint.patch
 
-	cd ${S}/pango
-	# Fix cjk issue (http://mail.gnome.org/archives/desktop-devel-list/2004-September/msg00160.html)
-	epatch ${FILESDIR}/${P}-cjk_space_as_char.patch
+	# Some enhancements from Redhat
+	epatch ${FILESDIR}/${PN}-1.0.99.020606-xfonts.patch
+	epatch ${FILESDIR}/${PN}-1.2.2-slighthint.patch
 
 	# make config file location host specific so that a 32bit and 64bit pango
 	# wont fight with each other on a multilib system
@@ -43,9 +41,8 @@ src_unpack() {
 	# easier, so even this should be amd64 specific.
 	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${FILESDIR}/pango-1.2.5-lib64.patch
 
+	epunt_cxx
 }
-
-DOCS="AUTHORS ChangeLog README INSTALL NEWS TODO*"
 
 src_install() {
 
@@ -68,5 +65,3 @@ pkg_postinst() {
 	fi
 
 }
-
-USE_DESTDIR="1"
