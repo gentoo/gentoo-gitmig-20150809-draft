@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.6.7-r1.ebuild,v 1.1 2005/07/16 23:30:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.6.7-r1.ebuild,v 1.2 2005/08/01 01:09:33 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -25,7 +25,10 @@ src_compile() {
 		$(use_enable debug) \
 		--disable-dependency-tracking \
 		|| die "econf failed"
-	emake || die "emake failed"
+
+	# This is needed until the proper cflags patch is applied
+	# Saves us from running autoconf and stuff.
+	emake AM_CXXFLAGS="${CXXFLAGS}" || die "emake failed"
 }
 
 src_install() {
