@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 2fe660690536890a3e3f8162c4d635ad ChangeLog 749
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 b1ac0aee9bc112655cad5a6d8aa88f78 ChangeLog 661
 MD5 36a4e10d5ce88189790160eace26f3ea scim-canna-0.1.0.ebuild 996
-MD5 c6301c754c8611d5d46423280d3d0b5a scim-canna-0.1.1.ebuild 996
+MD5 1d4a3112121cb7a9856c57398c9ec928 scim-canna-0.1.1.ebuild 1001
 MD5 492faef56f61528c9a6eb9d059397c06 files/digest-scim-canna-0.1.0 68
 MD5 337d721354f87a800c5730374ecdc7d4 files/digest-scim-canna-0.1.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC7IrSVWNWqTUmv+0RAkj3AKCNeYICAyiwiYX5bNiXDzBS9GLrZACfUAai
-sc/Zm/L54Zy1dbIIBMwzz+I=
-=Wvyk
------END PGP SIGNATURE-----
