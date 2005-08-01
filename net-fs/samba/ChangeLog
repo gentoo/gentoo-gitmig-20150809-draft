@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.185 2005/07/28 16:13:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.186 2005/08/01 15:25:56 josejx Exp $
+
+  01 Aug 2005; Joseph Jezak <josejx@gentoo.org> samba-3.0.14a-r2.ebuild:
+  Marked ppc stable for bug #95327.
 
   28 Jul 2005; Guy Martin <gmsoft@gentoo.org> samba-3.0.14a-r2.ebuild:
   Stable on hppa.
