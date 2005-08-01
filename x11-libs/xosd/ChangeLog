@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.47 2005/07/27 11:02:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.48 2005/08/01 17:03:34 eradicator Exp $
+
+  01 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/m4/gdk-pixbuf.m4, xosd-2.2.14.ebuild:
+  Make aclocal work for systems without gdk-pixbuf already installed.
 
   27 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> xosd-2.2.14.ebuild:
   Properly run auto*.
