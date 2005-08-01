@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16.ebuild,v 1.13 2005/07/12 04:28:32 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16.ebuild,v 1.14 2005/08/01 21:51:05 sekretarz Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -41,7 +41,7 @@ src_unpack() {
 	if ! use ppc-macos; then
 		#EPATCH_OPTS="-p1 -d${S}" epatch ${FILESDIR}/${P}-fontconfig-externalgd.diff || die "Failed to patch"
 		einfo "Running aclocal/automake/autoconf"
-		aclocal && libtoolize --copy --force && automake && autoconf || die "Failed	to aclocal/libtoolize/automake/autoconf"
+		aclocal && libtoolize --copy --force && automake -a && autoconf || die "Failed	to aclocal/libtoolize/automake/autoconf"
 	fi
 }
 
