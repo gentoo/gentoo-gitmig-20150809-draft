@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/lin-seti
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/lin-seti/ChangeLog,v 1.4 2005/05/23 09:59:03 s4t4n Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/lin-seti/ChangeLog,v 1.5 2005/08/01 10:07:53 blubb Exp $
+
+  01 Aug 2005; Simon Stelling <blubb@gentoo.org> lin-seti-0.8.3.ebuild:
+  added ~amd64 keyword
 
   23 May 2005; Michele Noberasco <s4t4n@gentoo.org> lin-seti-0.8.3.ebuild:
   Stable for x86.
