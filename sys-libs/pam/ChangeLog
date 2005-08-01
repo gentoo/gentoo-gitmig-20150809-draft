@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.90 2005/07/28 14:45:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.91 2005/08/01 12:07:19 azarah Exp $
+
+  01 Aug 2005; Martin Schlemmer <azarah@gentoo.org> files/pam.d/system-auth:
+  Add some password sanity checking to system-auth.
 
   28 Jul 2005; Seemant Kulleen <seemant@gentoo.org> -pam-0.77.ebuild,
   -pam-0.77-r1.ebuild, -pam-0.77-r2.ebuild, -pam-0.77-r3.ebuild,
