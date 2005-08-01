@@ -1,6 +1,10 @@
 # ChangeLog for net-print/fax4cups
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.10 2005/08/01 18:31:38 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.11 2005/08/01 19:08:10 metalgod Exp $
+
+  01 Aug 2005; <metalgod@gentoo.org> ChangeLog:
+  Version bump to 1.25 thanks to Francisco Javier <ffelix@sshinf.com> in bug
+  #100789
 
 *fax4cups-1.25 (01 Aug 2005)
 
