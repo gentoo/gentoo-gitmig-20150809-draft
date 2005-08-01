@@ -36,7 +36,7 @@ MD5 67882892030fed7383fe01d89f9539bd files/baselayout-1.11.12-runscript-boot.pat
 MD5 7b2f5e48c4d9056df539620299c20641 files/rc-scripts-1.4.16-splash.patch 11251
 MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
 MD5 50816019be7cc03120fa58d075eb07f7 files/sysvinit-2.84-selinux1.patch 3612
-MD5 bc7f131347a5833b137ceee910a2aaa7 files/baselayout-1.12.0_pre3-dhclient.patch 724
+MD5 000da8c75f9d92743df0add40d4c7f15 files/baselayout-1.12.0_pre3-dhclient.patch 1002
 MD5 f69a22a2120638279fe6d5aa9aa8a835 files/digest-baselayout-1.12.0_pre3 75
 MD5 df9f21385df40467a0bff0b3d1e5285f files/baselayout-1.11.10-selinux-udev.patch 413
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
