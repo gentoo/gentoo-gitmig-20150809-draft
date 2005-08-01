@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 8e6888a355e8c2df8d09a75ac8eba8cd ChangeLog 952
+MD5 0809394e095f38f4ca1531ed6f3f823d ChangeLog 1188
 MD5 60b50b90019bc88bb3a5985fc66df013 closetag-0.9.ebuild 514
+MD5 0c6f1773baa43181cb806bb05d7e2780 closetag-0.9.1.ebuild 524
 MD5 05ea3f4d858217528a59a1c78c389780 files/digest-closetag-0.9 63
+MD5 48322941bd07bc38e2bc8af2530c5880 files/digest-closetag-0.9.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7ogWBXaUFmZvwyMRAgAMAJ0UM1duImSdkgqcnXY83IQVmoclxgCdGnOg
+f1P2U77A9I5yNCBCUEbNZ1I=
+=t2i+
+-----END PGP SIGNATURE-----

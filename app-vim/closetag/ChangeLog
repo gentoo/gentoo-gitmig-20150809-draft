@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/closetag
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/closetag/ChangeLog,v 1.9 2005/04/24 11:53:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/closetag/ChangeLog,v 1.10 2005/08/01 20:37:08 agriffis Exp $
+
+*closetag-0.9.1 (01 Aug 2005)
+
+  01 Aug 2005; Aron Griffis <agriffis@gentoo.org> +closetag-0.9.1.ebuild:
+  Bump to 0.9.1 which changes function names to be script-local to avoid
+  conflicts with other scripts' stack implementations
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> closetag-0.9.ebuild:
   Stable on ppc.
