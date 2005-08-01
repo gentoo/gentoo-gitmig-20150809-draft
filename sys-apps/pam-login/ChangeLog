@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.51 2005/07/19 22:51:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.52 2005/08/01 11:48:13 azarah Exp $
+
+*pam-login-4.0.11.1 (01 Aug 2005)
+
+  01 Aug 2005; Martin Schlemmer <azarah@gentoo.org> +files/login.defs-4.0,
+  +files/login.pamd-4.0, +files/pam-login-4.0.10-fix-configure.patch,
+  +pam-login-4.0.11.1.ebuild:
+  Sync with Shadow ... too many changes these days to keep track. Redo pamd
+  file, as the PAM enabled version no longer use LASTLOG, etc.
 
   19 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> pam-login-3.17.ebuild:
   Stable on alpha.
