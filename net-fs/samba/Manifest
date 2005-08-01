@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6bfe76c8816fe7ab2f3ad1c31ea4e266 ChangeLog 32958
 MD5 640f25d1da6364e934a26b3ccd504d90 samba-3.0.10.ebuild 16686
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
@@ -25,3 +28,10 @@ MD5 9f9da063cb02079a8f205bc365426170 files/samba.pam 513
 MD5 341521b710d02d57a70acd49b1d4c06b files/samba-conf 1291
 MD5 bf268fdddc8ef677b6fa78661a094eac files/samba.schema 16044
 MD5 e17a1638ad9f30f2e39db4c8981a2fcd files/vscan-0.3.5-libclamav.patch 523
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7kSEcsIHjyDViGQRAiUiAKCqCvBpMvHOEL4kaCWMhoMhiyvZ5ACg1bOk
+UYTaZLW8EEiO5j0kg0r9r7g=
+=SMSv
+-----END PGP SIGNATURE-----
