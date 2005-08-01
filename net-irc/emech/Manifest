@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30062d4bbbf3246e2fccf3cfb129631b ChangeLog 750
 MD5 448f534e313933e0d0dcab586e4285f8 emech-2.8.5.1.ebuild 1244
-MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 11486e6c2c025c198e4e74a04f9feac9 ChangeLog 636
+MD5 d8b0ae178976ee303e6a4aafd5d001e0 emech-3.0.ebuild 1746
 MD5 b60e84a422092ec3fcf1c2d21bc4e113 files/digest-emech-2.8.5.1 66
+MD5 40532dbc16711345af7716a9dd5909d1 files/digest-emech-3.0 61
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7nh5I1lqEGTUzyQRAhZeAKCwE6MOLyYV04DFuvTC0BTBWwdZUgCgmdrl
+utoVNoGMy+y5NechPl7jDT0=
+=mqe6
+-----END PGP SIGNATURE-----
