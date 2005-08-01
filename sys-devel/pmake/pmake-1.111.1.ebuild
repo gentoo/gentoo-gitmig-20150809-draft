@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.1.ebuild,v 1.1 2005/07/29 12:02:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.1.ebuild,v 1.2 2005/08/01 21:31:21 kito Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/p/pmake/${DEBIAN_SOURCE}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc-macos ~sparc ~x86"
 IUSE=""
 
 RDEPEND=""
@@ -69,5 +69,8 @@ src_install() {
 	if [[ "${USERLAND}" == "BSD" ]]; then
 		dosym pmake /usr/bin/make
 		dosym pmake.1.gz /usr/share/man/man1/make.1.gz
+	elif [[ "${USERLAND}" == "Darwin" ]]; then
+		dosym pmake /usr/bin/bsdmake
+		doym pmake.1.gz /usr/share/man/man1/bsdmake.1.gz
 	fi
 }
