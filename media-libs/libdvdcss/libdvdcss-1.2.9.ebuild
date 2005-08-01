@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.1 2005/07/14 10:26:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.2 2005/08/01 20:16:36 chriswhite Exp $
 
 inherit eutils
 
@@ -34,6 +34,7 @@ src_unpack() {
 	# add configure switches to enable/disable doc building
 	epatch ${FILESDIR}/${P}-doc.patch
 
+	einfo "Rebuilding autotools files"
 	autoreconf || die "autoreconf failed"
 	libtoolize --copy --force || die "libtoolize failed"
 }

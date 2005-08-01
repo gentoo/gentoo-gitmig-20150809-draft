@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.41 2005/07/14 10:26:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.42 2005/08/01 20:16:36 chriswhite Exp $
+
+  01 Aug 2005; Chris White <chriswhite@gentoo.org> libdvdcss-1.2.9.ebuild:
+  Added einfo line before autotools rebuild so people don't think their system
+  is frozen.
 
 *libdvdcss-1.2.9 (14 Jul 2005)
 
