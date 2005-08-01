@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.8-r1.ebuild,v 1.2 2005/08/01 16:09:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.9.ebuild,v 1.1 2005/08/01 16:09:24 foser Exp $
 
 inherit eutils fdo-mime alternatives
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.abisource.com"
 
 SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.bz2"
 
-KEYWORDS="x86 ~sparc ~alpha ~ppc ~amd64 ~hppa ~ppc64 ~ia64"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ~hppa ~ppc64 ~ia64"
 LICENSE="GPL-2"
 SLOT="2"
 
@@ -33,7 +33,6 @@ RDEPEND="virtual/x11
 	gnome? ( >=gnome-base/libgnomeui-2.2
 		>=gnome-base/libgnomeprint-2.2.1
 		>=gnome-base/libgnomeprintui-2.2.1
-		>=gnome-base/libbonobo-2
 		>=gnome-extra/gucharmap-1.4 )"
 
 DEPEND="${RDEPEND}
@@ -47,19 +46,12 @@ src_compile() {
 	cat configure.old |sed s:-pedantic::g >configure
 	rm -f configure.old
 
-	# Fix compilation on GCC4; upstream patch
-	epatch ${FILESDIR}/2.2.8-gcc4.patch
-
-	# fix for security, see #96991
-	epatch ${FILESDIR}/${PN}-security-fix.patch
-
 	econf \
 		`use_enable gnome` \
 		`use_enable gnome gucharmap` \
 		`use_with xml2 libxml2` \
 		`use_enable spell enchant` \
 		`use_enable debug` \
-		--enable-bidi \
 		--enable-threads \
 		--without-ImageMagick \
 		--disable-scripting \
@@ -96,7 +88,6 @@ src_install() {
 	dodoc COPYING *.TXT docs/build/BUILD.TXT user/wp/readme.txt
 
 	# install plugins
-
 	cd ${S_P}
 
 	make DESTDIR=${D} install || die
