@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 13092603e0aba28da90d29f5786b88bf ChangeLog 1170
+MD5 674807f3313711e97e6fc9f513018bdb ChangeLog 1269
+MD5 4960b7ce7bcd7469b57d90f916c27296 libotr-2.0.2.ebuild 788
+MD5 f336d73adb9eb04864ae3f5e98787c12 metadata.xml 223
+MD5 c90715a3123a8698777768fe9f5525d7 libotr-1.0.4.ebuild 779
+MD5 28a0f6549bd851ee71dc274d40f7f163 libotr-2.0.1.ebuild 786
+MD5 6a72458eeb7b7a2993640621d4fa7ad7 libotr-2.0.0.ebuild 779
 MD5 ce21e4bf4ffd89512e4a9e32f0539761 files/digest-libotr-1.0.4 64
+MD5 9ac9da4794ae9d04101fa632dadcf886 files/digest-libotr-2.0.2 64
 MD5 acbf6ed5147acb3329e98ff711a7262a files/digest-libotr-2.0.0 64
 MD5 f600de0b44d3f4e5416d3b62f3391d48 files/digest-libotr-2.0.1 64
-MD5 9ac9da4794ae9d04101fa632dadcf886 files/digest-libotr-2.0.2 64
-MD5 c90715a3123a8698777768fe9f5525d7 libotr-1.0.4.ebuild 779
-MD5 6a72458eeb7b7a2993640621d4fa7ad7 libotr-2.0.0.ebuild 779
-MD5 28a0f6549bd851ee71dc274d40f7f163 libotr-2.0.1.ebuild 786
-MD5 93b99c4014c5db7b881785683aed2040 libotr-2.0.2.ebuild 786
-MD5 f336d73adb9eb04864ae3f5e98787c12 metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0Y1sI1lqEGTUzyQRAguyAKDfZVjZzD5V3ddss6c+ukndEBuHiQCgw2tv
-mUbCykN2Ei8cgeYd1DS0W/Y=
-=H/FJ
+iD8DBQFC7mLncsIHjyDViGQRAqPtAKCXUNpMDxTVDGsmk5sTT8QO38+CwwCfd93a
+aNzZIrKS7XA4hkcQNO1WDko=
+=zSmX
 -----END PGP SIGNATURE-----
