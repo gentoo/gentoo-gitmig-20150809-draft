@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.6.ebuild,v 1.2 2005/03/03 04:29:09 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.6.ebuild,v 1.3 2005/08/01 18:31:03 pythonhead Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ IUSE="postgres mysql sqlite firebird doc"
 RDEPEND=">=dev-lang/python-2.2
 		postgres? ( >=dev-python/psycopg-1.1.11 )
 		mysql? ( >=dev-python/mysql-python-0.9.2-r1 )
-		sqlite? ( >=dev-python/pysqlite-0.5.0 )
+		sqlite? ( <dev-python/pysqlite-2.0 )
 		firebird? ( >=dev-python/kinterbasdb-3.0.2 )"
 
 S=${WORKDIR}/${MY_P}
