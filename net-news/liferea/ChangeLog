@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.8 2005/07/24 22:55:26 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.9 2005/08/01 11:03:11 citizen428 Exp $
+
+*liferea-0.9.5 (01 Aug 2005)
+
+  01 Aug 2005; Michael Kohl <citizen428@gentoo.org> +liferea-0.9.5.ebuild:
+  Version bump.
 
 *liferea-0.9.4 (24 Jul 2005)
 
