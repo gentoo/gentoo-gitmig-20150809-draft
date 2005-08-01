@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.73 2005/07/03 09:39:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.74 2005/08/01 15:37:14 ka0ttic Exp $
+
+*gtkmm-2.7.3 (01 Aug 2005)
+
+  01 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> +gtkmm-2.7.3.ebuild:
+  Version bump.
 
   03 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> gtkmm-2.4.11.ebuild,
   gtkmm-2.6.3.ebuild:
