@@ -1,0 +1,16 @@
+diff --exclude='*~' -Naur trafshow-5.2.1.orig/Makefile.in trafshow-5.2.1/Makefile.in
+--- trafshow-5.2.1.orig/Makefile.in	2005-08-01 15:12:34.000000000 -0300
++++ trafshow-5.2.1/Makefile.in	2005-08-01 15:17:29.000000000 -0300
+@@ -73,9 +73,9 @@
+ 	@echo 'char compiled[] = "$(CC) $(CFLAGS) $(LIBS)";' >> $@
+ 
+ install:
+-	./install-sh -c -s -m 555 -o bin -g bin $(PROG) $(BINDEST)/$(PROG)
+-	./install-sh -c -m 444 -o bin -g bin $(PROG).1 $(MANDEST)/man1/$(PROG).1
+-	[ -f /etc/$(PROG) ] || ./install-sh -c -m 444 .trafshow /etc/$(PROG)
++	./install-sh -c -s -m 555 -o root -g bin $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
++	./install-sh -c -m 444 -o root -g bin $(PROG).1 $(DESTDIR)$(MANDEST)/man1/$(PROG).1
++	[ -f $(DESTDIR)/etc/$(PROG) ] || ./install-sh -c -o root -m 444 .trafshow $(DESTDIR)/etc/$(PROG)
+ 
+ clean:
+ 	rm -f $(CLEANFILES)
