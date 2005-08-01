@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.9.ebuild,v 1.1 2005/07/31 08:12:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.9.ebuild,v 1.2 2005/08/01 09:39:39 dholm Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cihar.com/gammu/wammu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND=">=dev-lang/python-2.3.0
 	>=dev-python/wxpython-2.4.1.2
