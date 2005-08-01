@@ -2,7 +2,6 @@
 Hash: SHA1
 
 MD5 dcdb08f3063aa2ddfdaa38fe69bf20a9 pam-login-4.0.11.1-r1.ebuild 3553
-MD5 080856750b39e5e4ff407da09d3dcd4f pam-login-4.0.11.1.ebuild 3434
 MD5 c1a4d7808f13b9eb272ef64bb9266e29 ChangeLog 7716
 MD5 2595d9d5d585309a961d44bb056d46fe pam-login-3.17.ebuild 2876
 MD5 f6a4f4c2e8300f1db0e4daf8fc8999b6 pam-login-3.14.ebuild 2801
@@ -12,7 +11,6 @@ MD5 bd631a67641c2ecb9f2da34226ca80a8 files/digest-pam-login-3.14 67
 MD5 128c7d12948df01d7348a7edede0c2fb files/pam-login-3.14-query_user_context.diff 635
 MD5 68c71aba21339235407b7b913885d667 files/login.defs-4.0 6041
 MD5 97fac4bd3167fadfc2abaeaa819ccbde files/pam_login-Werror-off-ppc64.patch 511
-MD5 9375147f78a25196b654616c969af9a5 files/digest-pam-login-4.0.11.1 69
 MD5 95f7b8980169e81352229bd548909ea7 files/pam-login-4.0.10-fix-configure.patch 579
 MD5 e01e197ed3b6d2ec6ae83d23b33088b8 files/login.pamd-4.0 1019
 MD5 0021ec2d8f5fc517f0e74f7233fc16c9 files/pam-login-3.11-gcc33.patch 527
@@ -24,7 +22,7 @@ MD5 e7f9dde204926c73a570b344556e4b1e files/digest-pam-login-3.17 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC7ib91ZcsMnZjRyIRAsdCAKCJX82M3b0gzXi1pp5RyribZQjiDQCfRO/3
-NYSb2fD57beJiGPPEMlquSI=
-=eH1a
+iD8DBQFC7ieG1ZcsMnZjRyIRArjIAJ0RfV2BzI6ZGobWoU0Sr4cJjzKxqQCfeIGE
+Hfc0bFx3MJ+Vk9YKSPatwt4=
+=E9Zc
 -----END PGP SIGNATURE-----
