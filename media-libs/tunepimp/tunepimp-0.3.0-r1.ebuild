@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0-r1.ebuild,v 1.11 2005/06/17 20:38:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0-r1.ebuild,v 1.12 2005/08/01 23:34:07 flameeyes Exp $
 
 inherit eutils distutils perl-module
 
@@ -25,11 +25,18 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/lib${P}
 
-src_compile() {
-	# do not try to link against obsolete libtermcap
-	sed -i -e 's,-ltermcap,-lncurses,' configure
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 
 	epatch ${FILESDIR}/thread.patch
+
+	# do not try to link against obsolete libtermcap
+	sed -i -e 's,-ltermcap,-lncurses,' configure
+	sed -i -e 's:-lthr:-lpthread:g' ${S}/lib/threads/posix/Makefile.in
+}
+
+src_compile() {
 	econf || die "configure failed"
 	emake || die "emake failed"
 	if use perl; then
