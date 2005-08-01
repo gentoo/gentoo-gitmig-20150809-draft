@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.60 2005/08/01 10:17:20 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.61 2005/08/01 14:45:46 gustavoz Exp $
+
+  01 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> netpbm-10.28.ebuild:
+  Stable on sparc wrt #100398
 
   01 Aug 2005; Herbie Hopkins <herbs@gentoo.org> netpbm-10.28.ebuild:
   Stable on amd64 wrt bug #100398.
