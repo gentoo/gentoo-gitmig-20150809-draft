@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/nbsmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.30 2005/07/30 20:48:45 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.31 2005/08/01 13:17:18 ferdy Exp $
+
+*nbsmtp-1.00-r1 (01 Aug 2005)
+
+  01 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> +nbsmtp-1.00-r1.ebuild:
+  mailer.eclass aware ebuild
 
   30 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> nbsmtp-1.00.ebuild:
   Stable on hppa. bug #100274
