@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.37 2005/07/09 23:15:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.38 2005/08/01 15:13:31 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -70,6 +70,10 @@ mono
 
 # pyste has untested/unkeyworded deps on sparc
 pyste
+
+# They're borked <gustavoz> 
+dar32
+dar64
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
