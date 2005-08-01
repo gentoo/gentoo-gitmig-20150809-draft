@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.40 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.41 2005/08/01 07:27:27 kevquinn Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -172,3 +172,43 @@ gcc-minor-version() {
 gcc-micro-version() {
 	echo "$(gcc-fullversion | cut -f3 -d. | cut -f1 -d-)"
 }
+
+# Returns requested gcc specs directive
+# Note; if a spec exists more than once (e.g. in more than one specs file)
+# the last one read is the active definition - i.e. they do not accumulate,
+# each new definition replaces any previous definition.
+gcc-specs-directive() {
+	local specfiles=$($(tc-getCC) -v 2>&1 | grep "^Reading" | awk '{print $NF}')
+	awk -v spec=$1 \
+'BEGIN	{ sstr=""; outside=1 }
+	$1=="*"spec":"  { sstr=""; outside=0; next }
+	outside || NF==0 || ( substr($1,1,1)=="*" && substr($1,length($1),1)==":" ) { outside=1; next }
+	{ sstr=sstr $0 }
+END	{ print sstr }' ${specfiles}
+}
+
+# Returns true if gcc sets relro
+gcc-specs-relro() {
+	local directive
+	directive=$(gcc-specs-directive link_command)
+	return $([[ ${directive/\{!norelro:} != ${directive} ]])
+}
+# Returns true if gcc sets now
+gcc-specs-now() {
+	local directive
+	directive=$(gcc-specs-directive link_command)
+	return $([[ ${directive/\{!nonow:} != ${directive} ]])
+}
+# Returns true if gcc builds PIEs
+gcc-specs-pie() {
+	local directive
+	directive=$(gcc-specs-directive cc1)
+	return $([[ ${directive/\{!nopie:} != ${directive} ]])
+}
+# Returns true if gcc builds with the stack protector
+gcc-specs-ssp() {
+	local directive
+	directive=$(gcc-specs-directive cc1)
+	return $([[ ${directive/\{!fno-stack-protector:} != ${directive} ]])
+}
+
