@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.69 2005/07/20 00:15:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.70 2005/08/01 15:17:55 vapier Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -18,7 +18,7 @@ virtual/blas				sci-libs/blas-atlas
 virtual/cdrtools			app-cdr/cdrtools
 virtual/commonlisp			dev-lisp/sbcl
 virtual/cron				sys-process/vixie-cron
-virtual/dev-manager			sys-fs/devfsd
+virtual/dev-manager			sys-fs/udev
 virtual/dhcpc				net-misc/dhcpcd
 virtual/editor				app-editors/nano
 virtual/eject				sys-apps/eject
