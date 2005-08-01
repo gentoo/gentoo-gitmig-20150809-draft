@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/netspeed_applet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.21 2005/05/02 00:55:52 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.22 2005/08/01 12:03:41 foser Exp $
+
+*netspeed_applet-0.13 (01 Aug 2005)
+
+  01 Aug 2005; Marinus Schraal <foser@gentoo.org> :
+  New release
 
 *netspeed_applet-0.12.1 (02 May 2005)
 
