@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/firestarter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.26 2005/08/01 16:54:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.27 2005/08/01 17:17:05 fmccor Exp $
+
+  01 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
+  firestarter-1.0.3.ebuild:
+  Stable for sparc, closing Bug 99688, at request of Mr_Bones_.
 
   01 Aug 2005; Joseph Jezak <josejx@gentoo.org> firestarter-1.0.3.ebuild:
   Marked ppc stable for bug #99688.
