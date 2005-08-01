@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.3 2005/07/29 23:52:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.4 2005/08/01 17:52:25 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -86,7 +86,7 @@ src_compile() {
 		$(use_with ssl openssl) \
 		$(use_with odbc) \
 		--without-oracle \
-		$(use_with prelude) \
+		$(use_enable prelude) \
 		$(use_with sguil) \
 		$(use_enable inline) \
 		${myconf} || die "bad ./configure"
