@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-1.0.1.ebuild,v 1.3 2005/05/27 21:08:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-1.0.1.ebuild,v 1.4 2005/08/01 18:54:46 pythonhead Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 sparc x86"
 LICENSE="pysqlite"
 SLOT="0"
 
-DEPEND="virtual/python
+DEPEND=">=dev-lang/python-2.2
 	=dev-db/sqlite-2*"
 
 src_unpack() {
