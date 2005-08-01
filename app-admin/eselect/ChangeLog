@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.4 2005/07/31 12:36:36 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.5 2005/08/01 11:15:27 ka0ttic Exp $
+
+  01 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> eselect-0.9.5.ebuild,
+  eselect-0.9.6.ebuild:
+  Since I'm an idiot, use newins rather than doins for installing the bashcomp.
 
   31 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> eselect-0.9.5.ebuild,
   eselect-0.9.6.ebuild:

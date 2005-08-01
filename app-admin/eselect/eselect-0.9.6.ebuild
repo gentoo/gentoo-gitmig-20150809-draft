@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-0.9.6.ebuild,v 1.2 2005/07/31 12:36:36 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-0.9.6.ebuild,v 1.3 2005/08/01 11:15:28 ka0ttic Exp $
 
 DESCRIPTION="Modular -config replacement utility"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -34,7 +34,7 @@ src_install() {
 	# is listed in RDEPEND.
 	if use bash-completion ; then
 		insinto /usr/share/bash-completion
-		doins misc/${PN}.bashcomp || die
+		newins misc/${PN}.bashcomp ${PN} || die
 	fi
 }
 
