@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gnome-ppp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.16 2005/07/31 12:13:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.17 2005/08/01 10:34:42 dholm Exp $
+
+  01 Aug 2005; David Holm <dholm@gentoo.org> gnome-ppp-0.3.23.ebuild:
+  Added to ~ppc.
 
 *gnome-ppp-0.3.23 (31 Jul 2005)
 
