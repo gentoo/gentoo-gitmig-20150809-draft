@@ -1,0 +1,83 @@
+--- a/heartbeat/resource.d/LVM.in	20 Apr 2004 05:05:29 -0000	1.2.4.1
++++ b/heartbeat/resource.d/LVM.in	10 Jun 2005 07:46:28 -0000
+@@ -102,8 +102,15 @@ LVM_methods() {
+ #
+ LVM_status() {
+ 
+-  vgdisplay $1 | grep -i 'Status.*available' >/dev/null
+-  
++  if 
++    [ "$LVM_VERSION" -gt "200" ]
++  then
++  	vgdisplay -v $1 | grep -i 'Status[ \t]*available' &>/dev/null
++	return $?
++  else
++  	vgdisplay $1 | grep -i 'Status.*available' >/dev/null
++	return $?
++  fi
+ }
+ 
+ #
+@@ -111,15 +118,27 @@ LVM_status() {
+ #
+ LVM_report_status() {
+ 
+-  VGOUT=`vgdisplay $1 2>&1`
++  if 
++    [ "$LVM_VERSION" -gt "200" ]
++  then
++  	VGOUT=`vgdisplay -v $1 2>&1`
++	echo "$VGOUT" | grep -i 'Status[ \t]*available' >/dev/null
++	rc=$?
++  else
++  	VGOUT=`vgdisplay $1 2>&1`
++  	echo "$VGOUT" | grep -i 'Status.*available' >/dev/null
++	rc=$?
++  fi
++
+   if
+-    echo "$VGOUT" | grep -i 'Status.*available' >/dev/null
++    [ $rc -eq 0 ]
+   then
+     : Volume $1 is available
+   else
+     echo "LVM Volume $1 is not available (stopped)"
+     return 1
+   fi
++
+   if
+     echo "$VGOUT" | grep -i 'Access.*read/write' >/dev/null
+   then
+@@ -155,7 +174,15 @@ LVM_monitor() {
+ LVM_start() {
+ 
+   ha_log "Activating volume group $1"
+-  run vgscan $1
++
++  if 
++    [ "$LVM_VERSION" -gt "200" ]
++  then
++  	run vgscan
++  else
++  	run vgscan $1
++  fi
++
+   run vgchange -a y $1 || return 1
+ 
+   if
+@@ -196,6 +223,15 @@ if
+ then
+   LVM_methods
+   exit $?
++fi
++
++LVM_VERSION=`LVM_VERSION=`/sbin/lvm version 2> /dev/null | awk '/LVM/ {print $3}' | awk -F"." '{print $1$2}'`
++rc=$?
++if 
++  [ $rc -ne 0 ]
++then
++  ha_log "ERROR: LVM: $1 could not determine LVM version"
++  return  $rc
+ fi
+ 
+ VOLUME=$1
