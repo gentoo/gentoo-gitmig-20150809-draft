@@ -1,0 +1,12 @@
+diff -ur gxine-0.4.6/src/post.c gxine-0.4.6-literals/src/post.c
+--- gxine-0.4.6/src/post.c	2005-05-19 02:25:43.000000000 +0200
++++ gxine-0.4.6-literals/src/post.c	2005-08-01 21:47:19.613011536 +0200
+@@ -432,7 +432,7 @@
+ {
+   const gxine_post_t *info = g_object_get_data (G_OBJECT(widget), "post");
+   memset (info->params + param->offset, 0, param->size);
+-  snprintf (info->params + param->offset, param->size,
++  snprintf (info->params + param->offset, param->size, "%s",
+ 	    gtk_editable_get_chars (widget, 0, -1));
+   return FALSE;
+ }

@@ -1,0 +1,43 @@
+diff -x '*~' -ur gxine-0.4.6/src/client.c gxine-0.4.6-mkstemp/src/client.c
+--- gxine-0.4.6/src/client.c	2005-03-17 01:55:23.000000000 +0100
++++ gxine-0.4.6-mkstemp/src/client.c	2005-08-01 22:35:54.497881680 +0200
+@@ -47,11 +47,11 @@
+ 
+ int main (int argc, char **argv) {
+ 
+-  int                fd;
++  int                fd, tfd;
+   struct sockaddr_un cli_adr, serv_adr;
+   int                length = sizeof(struct sockaddr_un);
+   char               filename [1024];
+-  char              *tstr;
++  char               *tstr;
+   int		     ret = 0;
+ 
+   signal (SIGPIPE, sigpipe);
+@@ -66,10 +66,14 @@
+   /* initialize the client address structure */
+   memset (&cli_adr, 0, sizeof (cli_adr));
+   cli_adr.sun_family = AF_UNIX;
+-  tstr = tmpnam (NULL);
+-  strcpy (cli_adr.sun_path, tstr);
+-  
++  tstr = strdup("/tmp/gxine_XXXXXX");
++  if ( (tfd = mkstemp(tstr)) < 0 ) {
++    perror ("mkstemp");
++    exit (EXIT_FAILURE);
++  }
++  close(tfd);
+   unlink (tstr);
++  strncpy(cli_adr.sun_path, tstr, 107);
+ 
+   /* bind the socket to the client's address */
+   if (bind (fd, (struct sockaddr*) &cli_adr, length) < 0) {
+@@ -139,6 +143,7 @@
+   close(fd);
+ 
+   unlink (tstr);
++  free(tstr);
+ 
+   return ret;
+ }
