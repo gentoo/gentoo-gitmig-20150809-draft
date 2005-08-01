@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.23 2005/05/07 23:45:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.24 2005/08/01 20:56:27 sekretarz Exp $
+
+  01 Aug 2005; <sekretarz@gentoo.org> +files/gtkxine.diff,
+  pornview-0.2.0_pre1.ebuild:
+  Fixed problems with libxine and gtk, thanks Roland Bär <roland@pinguin.tv> 
+  in bug #81179
 
   07 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   pornview-0.2.0_pre1.ebuild:
