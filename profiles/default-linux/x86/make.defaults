@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/make.defaults,v 1.8 2005/05/26 10:16:53 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/make.defaults,v 1.9 2005/08/01 22:54:06 wolf31o2 Exp $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
@@ -13,4 +13,4 @@ FEATURES="sandbox sfperms"
 
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses"
 
-USE="alsa apm arts avi berkdb bitmap-fonts crypt cups emboss encode fortran foomaticdb gdbm gif gnome gpm gtk gtk2 imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls oggvorbis opengl oss pam pdflib perl png python qt quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts X xml2 xmms xv zlib"
+USE="alsa apm arts avi berkdb bitmap-fonts crypt cups eds emboss encode fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls ogg oggvorbis opengl oss pam pdflib perl png python qt quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts vorbis X xml2 xmms xv zlib"
