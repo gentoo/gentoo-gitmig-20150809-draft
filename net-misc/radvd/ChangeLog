@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.13 2005/02/14 18:52:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.14 2005/08/02 18:03:04 vanquirius Exp $
+
+*radvd-0.8 (02 Aug 2005)
+
+  02 Aug 2005; Marcelo Goes <vanquirius@gentoo.org> +radvd-0.8.ebuild:
+  Version bump for bug 86879. Thanks to Kalin KOZHUHAROV <kalin@ThinRope.net>.
 
   14 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> radvd-0.7.2-r1.ebuild:
   Added to ~sparc and ~ppc.
