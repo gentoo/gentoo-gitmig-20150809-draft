@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.35 2005/07/25 14:26:22 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.36 2005/08/02 18:00:27 gustavoz Exp $
+
+  02 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> lablgtk-2.4.0.ebuild:
+  Stable on sparc
 
   25 Jul 2005; Matthieu Sozeau <mattam@gentoo.org> lablgtk-2.4.0.ebuild:
   Use new gnomecanvas USE flag (fixes bug #87426).

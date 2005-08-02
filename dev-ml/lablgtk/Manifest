@@ -1,13 +1,23 @@
-MD5 25aced94a16c8355422ee20a2abc9364 lablgtk-1.2.6.ebuild 1250
-MD5 0d7daad9bb07a500ab71d7157f2c4bfb lablgtk-2.4.0.ebuild 1929
-MD5 d6423eb2ebf301a6d918a8259a0099bc lablgtk-1.2.5.ebuild 1243
-MD5 f4b6fed96ff9eb04b6a27d77005cfb55 lablgtk-2.2.0.ebuild 1388
-MD5 f1675da04c14381dd31da8be11a51890 ChangeLog 4977
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 845dbbef4eb685e1bfd5f9e13a03f2b8 metadata.xml 225
+MD5 d6423eb2ebf301a6d918a8259a0099bc lablgtk-1.2.5.ebuild 1243
+MD5 25aced94a16c8355422ee20a2abc9364 lablgtk-1.2.6.ebuild 1250
+MD5 29e4b0f2edb31f70f4a749707f25f583 lablgtk-2.4.0.ebuild 1930
+MD5 f4b6fed96ff9eb04b6a27d77005cfb55 lablgtk-2.2.0.ebuild 1388
 MD5 fade34f7b933c0016abeb2e71cb774b4 lablgtk-1.2.7.ebuild 1306
+MD5 107e51bb36966e83f2086b4907c967c4 ChangeLog 5074
 MD5 581f9b34fc71deb0d4970288ac26d18e files/lablgtk-2.4.0-gcc34.patch 563
-MD5 58e497f72394c82abd2991deb196cb5d files/digest-lablgtk-1.2.5 65
-MD5 7942d753e9ae00567c6a9f7de0242d53 files/digest-lablgtk-1.2.6 65
-MD5 a31a4824fac7faf0a0df2d8b8705b67f files/digest-lablgtk-1.2.7 65
 MD5 b5ae3dc8963ec992c47b24ec7b529377 files/digest-lablgtk-2.2.0 65
+MD5 7942d753e9ae00567c6a9f7de0242d53 files/digest-lablgtk-1.2.6 65
+MD5 58e497f72394c82abd2991deb196cb5d files/digest-lablgtk-1.2.5 65
 MD5 7cbae54b1d8a667973bd4d3689f25605 files/digest-lablgtk-2.4.0 65
+MD5 a31a4824fac7faf0a0df2d8b8705b67f files/digest-lablgtk-1.2.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC77TYKRy60XGEcJIRAs/AAKCATnQA5LqsM3CruwZ5zADf+W5ogACfZoEt
+x6gbx7CuEmIMw6t2vrEizOw=
+=dk/K
+-----END PGP SIGNATURE-----
