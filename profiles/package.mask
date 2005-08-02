@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4241 2005/08/02 01:52:45 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4242 2005/08/02 02:12:22 rl03 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Renat Lumpau <rl03@gentoo.org> (01 Aug 2005)
+# Installs into /usr/local, ebuild should not have been committed
+www-apps/interchange
 
 # Luis Araujo <araujo@gentoo.org> (01 Aug 2005)
 # Added new packages to portage: 
