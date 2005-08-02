@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4247 2005/08/02 10:03:24 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4248 2005/08/02 12:37:28 leonardop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -32,7 +32,8 @@
 x11-themes/gtk-engines-pixbuf
 
 # Leonardo Boshell <leonardop@gentoo.org> (01 Aug 2005)
-# To be removed. Unmaintained and without a valid homepage/SRC_URI.
+# To be removed. Unmaintained and/or without a valid homepage/SRC_URI.
+<x11-themes/gtk-engines-smooth-0.6.0.1-r1
 x11-themes/gtk-engines-eazel
 x11-themes/gtk-engines-gtkstep
 x11-themes/gtk-engines-magicchicken
