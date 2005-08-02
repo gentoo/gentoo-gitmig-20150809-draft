@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1359 2005/08/02 10:10:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1360 2005/08/02 19:06:48 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -468,6 +468,7 @@ media-gfx/inkscape:inkjar - enables inkjar support
 media-gfx/inkscape:plugin - enables extra plugins
 media-gfx/labplot:cdf - Adds cdf data exchange format support
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
+media-gfx/maya:maya-shaderlibrary - Install the maya shader library
 media-gfx/opendx:cdf - Adds cdf data exchange format support
 media-gfx/opendx:hdf - Adds support for the Hierarchical Data Format
 media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled optimised version.
