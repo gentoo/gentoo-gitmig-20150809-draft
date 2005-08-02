@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.12 2005/07/30 22:11:12 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.13 2005/08/02 02:31:59 kugelfang Exp $
+
+*ogdi-3.1.5-r1 (02 Aug 2005)
+
+  02 Aug 2005; Danny van Dyk <kugelfang@gentoo.org>
+  +files/ogdi-3.1.5-fpic.patch, +ogdi-3.1.5-r1.ebuild:
+  Bumped to 3.1.5-r1 to fix build on PIC-dependent arches and affected shared
+  libraryies on all other arches.
 
   30 Jul 2005; Steve Arnold <nerdboy@gentoo.org> ogdi-3.1.1-r1.ebuild,
   ogdi-3.1.4-r1.ebuild, ogdi-3.1.5.ebuild:

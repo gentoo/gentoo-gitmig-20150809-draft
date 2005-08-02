@@ -1,8 +1,21 @@
-MD5 0e8383be9cf5bdba1db59f615d5bf092 ChangeLog 2465
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aca609e338ff8a0cab12f5773912f478 ChangeLog 2717
 MD5 3cd06cd3d8efbe532cd128301ca23678 metadata.xml 219
-MD5 3aa9258a795cb85642ac16549c8114c4 ogdi-3.1.4-r1.ebuild 1127
+MD5 928450d6ab07240df59980714fad4303 ogdi-3.1.5-r1.ebuild 1213
 MD5 e0eb462c28b33071556846a4ada0bfc6 ogdi-3.1.1-r1.ebuild 1126
+MD5 3aa9258a795cb85642ac16549c8114c4 ogdi-3.1.4-r1.ebuild 1127
 MD5 ad2790850aada6ff3c9a07c463bf921f ogdi-3.1.5.ebuild 1125
 MD5 59e695f13d9d346bdd13a22bde58a3a6 files/digest-ogdi-3.1.1-r1 62
-MD5 74a3ce4489f2fb78319ceeb5689e459c files/digest-ogdi-3.1.5 62
 MD5 e328cdec7e54dc60be77116181727d5a files/digest-ogdi-3.1.4-r1 62
+MD5 74a3ce4489f2fb78319ceeb5689e459c files/digest-ogdi-3.1.5 62
+MD5 071752cb51961701a22258f05c390413 files/ogdi-3.1.5-fpic.patch 7619
+MD5 74a3ce4489f2fb78319ceeb5689e459c files/digest-ogdi-3.1.5-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7twk5mJXAu5GbtIRAhEyAJ0a0qsqICqjVPJc8huW0f0arhCq8wCeJG0Y
+Q5JXqV3xuQ0JuojjRD8nrAU=
+=g2rv
+-----END PGP SIGNATURE-----
