@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/gtk-engines-notif2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-notif2/ChangeLog,v 1.7 2004/09/15 13:06:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-notif2/ChangeLog,v 1.8 2005/08/02 11:50:49 leonardop Exp $
+
+*gtk-engines-notif2-1.0-r1 (02 Aug 2005)
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-notif2-1.0-r1.ebuild:
+  Added 'static' USE flag.
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-notif2-1.0.ebuild:
+  Don't inherit from gtk-engines2.eclass.
 
   15 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gtk-engines-notif2-1.0.ebuild:
