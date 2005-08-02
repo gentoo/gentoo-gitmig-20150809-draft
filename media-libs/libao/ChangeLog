@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.49 2005/07/29 17:59:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.50 2005/08/02 00:00:22 flameeyes Exp $
+
+  02 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> libao-0.8.6-r1.ebuild:
+  Updated patches to fix compilation issues on Darwin/OSX.
 
   29 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> libao-0.8.6-r1.ebuild:
   Make sure that all of the autotool toolchain is called as we patch
