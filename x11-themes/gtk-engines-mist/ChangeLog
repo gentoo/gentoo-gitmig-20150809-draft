@@ -1,6 +1,21 @@
 # ChangeLog for x11-themes/gtk-engines-mist
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/ChangeLog,v 1.11 2005/01/28 04:52:40 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/ChangeLog,v 1.12 2005/08/02 11:30:04 leonardop Exp $
+
+*gtk-engines-mist-0.10-r2 (02 Aug 2005)
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-mist-0.10-r2.ebuild:
+  Added 'static' USE flag.
+
+*gtk-engines-mist-0.10-r1 (02 Aug 2005)
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-mist-0.10-r1.ebuild, files/gtk-engines-mist-0.10-autoconf.patch:
+  Don't inherit from gtk-engines2.eclass. Only install the GTK+ 1 engine,
+  since x11-themes/gtk-engines provides the GTK+ 2 Mist engine. Modified
+  patch to also avoid installing the metacity theme, it is provided by
+  gnome-themes; removed the blocking dependency.
 
   27 Jan 2005; Joe McCann <joem@gentoo.org> gtk-engines-mist-0.10.ebuild:
   fix libtool mismatch, but 79753

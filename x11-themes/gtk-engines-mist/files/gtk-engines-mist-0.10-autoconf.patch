@@ -60,4 +60,4 @@
 +++ gtk-mist-engine-0.10.new/Theme/Makefile.am	2003-10-04 18:11:22.363785944 +0100
 @@ -1 +1 @@
 -SUBDIRS = gtk gtk-2.0 metacity-1
-+SUBDIRS = @THEME_SUBDIRS@ metacity-1
++SUBDIRS = @THEME_SUBDIRS@
