@@ -1,6 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.13 2005/07/28 23:44:27 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.14 2005/08/02 10:31:09 leonardop Exp $
+
+# IMPORTANT:
+# This eclass is deprecated and should not be used in new ebuilds.
 
 # Author: Alastair Tse <liquidx@gentoo.org>
 #

@@ -1,6 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.33 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.34 2005/08/02 10:31:09 leonardop Exp $
+
+# IMPORTANT:
+# This eclass is deprecated and should not be used in new ebuilds.
+
 #
 # The gtk-engines eclass is inherited by all gtk-engines-* ebuilds.
 #
