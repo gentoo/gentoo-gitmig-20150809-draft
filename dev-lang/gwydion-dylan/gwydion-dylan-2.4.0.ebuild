@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan/gwydion-dylan-2.4.0.ebuild,v 1.1 2005/08/02 02:21:34 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan/gwydion-dylan-2.4.0.ebuild,v 1.2 2005/08/02 10:21:22 swegener Exp $
 
 inherit elisp-common
 
@@ -41,12 +41,11 @@ src_install() {
 		elisp-install ${PN} ${S}/tools/elisp/*.el ${S}/tools/elisp/*.elc
 		elisp-site-file-install ${FILESDIR}/${SITEFILE}
 	fi
-	insinto /etc/env.d
-	doins ${FILESDIR}/20gwydion-dylan
+	doenvd ${FILESDIR}/20gwydion-dylan
 }
 
 pkg_postinst() {
-    use emacs && elisp-site-regen
+	use emacs && elisp-site-regen
 }
 
 pkg_postrm() {
