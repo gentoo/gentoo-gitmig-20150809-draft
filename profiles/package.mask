@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4240 2005/08/01 15:36:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4241 2005/08/02 01:52:45 araujo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Luis Araujo <araujo@gentoo.org> (01 Aug 2005)
+# Added new packages to portage: 
+# The Dylan Programming Language.
+dev-lang/gwydion-dylan
+dev-lang/gwydion-dylan-bin
 
 # Aaron Walker <ka0ttic@gentoo.org> (01 Aug 2005)
 # Masked due to masked deps (gtk+|glib)-2.7
