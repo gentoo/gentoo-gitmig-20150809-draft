@@ -1,9 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.1 2005/08/02 14:44:35 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.2 2005/08/02 14:49:25 leonardop Exp $
 
   02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
-  gtk-qt-engine-0.6-r1.ebuild:
+  gtk-engines-qt-0.6-r1.ebuild:
   Moved from x11-themes/gtk-qt-engine. Don't inherit from the deprecated
   gtk-engines2.eclass.
 
