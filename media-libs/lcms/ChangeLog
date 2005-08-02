@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.45 2005/06/17 20:38:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.46 2005/08/02 02:19:24 metalgod Exp $
+
+*lcms-1.14-r1 (02 Aug 2005)
+*lcms-1.13-r2 (02 Aug 2005)
+
+  02 Aug 2005; <metalgod@gentoo.org> +lcms-1.13-r2.ebuild,
+  +lcms-1.14-r1.ebuild:
+  New revisions for remove '--includedir' to make sure the headers are in the
+  right place. Thanks to Hal Engel <hvengel@astound.net> and fix bug #100269 .
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> lcms-1.13-r1.ebuild:
   Stable on ppc.
