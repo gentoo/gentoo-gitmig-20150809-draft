@@ -1,7 +1,0 @@
-MD5 0473fb4c6c2cd2bc0f267cfa201f3fd8 kdelibs-3.3.2.tar.bz2 15623180
-MD5 7309e259ae1f29be08bbb70e580da3fb post-3.3.2-kdelibs-dcop.patch 1903
-MD5 b92182b7734e4ff145a08d9755448ec7 post-3.3.2-kdelibs-idn-2.patch 4212
-MD5 acc1153e58b45f92b43747dbc6693e41 post-3.3.2-kdelibs-kimgio-fixed.diff 53212
-MD5 d3658e90acec6ff140463ed2fd0e7736 post-3.3.2-kdelibs-kio.diff 1640
-MD5 d2e513a039ba44becf5728b983b78fc4 post-3.3.2-kdelibs-htmlframes2.patch 1202
-MD5 fe67157b26a8cdf5bcfa1898cdf3b154 post-3.3.2-kdelibs-kioslave.patch 663
