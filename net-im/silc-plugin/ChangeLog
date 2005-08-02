@@ -1,6 +1,12 @@
 # ChangeLog for net-im/silc-plugin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.13 2005/05/25 14:25:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.14 2005/08/02 14:04:12 ticho Exp $
+
+*silc-plugin-1.0.1-r3 (02 Aug 2005)
+
+  02 Aug 2005; Andrej Kacian <ticho@gentoo.org>
+  +silc-plugin-1.0.1-r3.ebuild:
+  Fix pic USEflag abuse. Bug #101050.
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   silc-plugin-1.0.1-r1.ebuild:
