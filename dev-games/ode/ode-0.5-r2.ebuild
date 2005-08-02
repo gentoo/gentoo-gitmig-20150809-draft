@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r2.ebuild,v 1.5 2005/07/19 04:47:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r2.ebuild,v 1.6 2005/08/02 22:50:53 chrb Exp $
 
 inherit eutils
 
@@ -47,6 +47,9 @@ src_install() {
 	insinto /usr/include/ode
 	doins include/ode/*.h || die "doins failed"
 	dolib lib/libode.a lib/libdrawstuff.a || die "dolib failed"
+	dodir /usr/share/${P}/config
+	insinto /usr/share/${P}/config
+	doins config/user-settings
 	if use doc; then
 		dodoc README CHANGELOG ode/doc/ode.pdf
 		dohtml ode/doc/ode.html

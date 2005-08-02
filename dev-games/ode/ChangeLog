@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.13 2005/04/03 16:40:41 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.14 2005/08/02 22:50:53 chrb Exp $
+
+  02 Aug 2005; Chris Bainbridge <chrb@gentoo.org> ode-0.5-r2.ebuild:
+  Store user-settings file for later use by future versions of pyode.
 
   03 Apr 2005; Chris Bainbridge <chrb@gentoo.org> ode-0.5-r2.ebuild:
   Fixed graphic paths so demos actually run. Re-added debug build.
