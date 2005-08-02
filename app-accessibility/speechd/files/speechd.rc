@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/files/speechd.rc,v 1.3 2004/08/14 14:33:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/files/speechd.rc,v 1.4 2005/08/02 08:08:10 eradicator Exp $
 
 depend() {
 	need festival
@@ -9,12 +9,19 @@ depend() {
 
 start() {
 	ebegin "Starting speechd"
-	start-stop-daemon --start --quiet --exec /usr/bin/speechd -- -Q
+	start-stop-daemon --start --group speech --exec /usr/bin/speechd -- -Q
+	if [[ -p /dev/speech ]] ; then
+		chmod 660 /dev/speech
+		chgrp speech /dev/speech
+	fi
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping speechd"
 	start-stop-daemon --stop --quiet --pidfile /var/run/speechd.pid
+	if [[ -p /dev/speech ]] ; then
+		rm /dev/speech
+	fi
 	eend $?
 }

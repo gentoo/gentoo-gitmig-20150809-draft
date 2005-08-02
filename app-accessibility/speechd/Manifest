@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d3cbe0bd33fa69ea144fd3bedb755364 ChangeLog 2457
+MD5 ee15f7074d46270217eb03b224e6e162 ChangeLog 2593
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
 MD5 40012b5c02e2f375cbcffe72bea7ed09 speechd-0.56-r1.ebuild 1190
 MD5 1a16aaa0593e7d62be70f4c9eab0e713 speechd-0.56-r2.ebuild 1054
 MD5 bc0a2d35e9d4d817f657a8aad30d3a14 files/digest-speechd-0.56-r1 63
-MD5 946d2d86e6a6b6640fcdd745d47a04d7 files/speechd.rc 500
+MD5 79cfb18265e6e5d54c677b101f289778 files/speechd.rc 649
 MD5 5ced99d95d106de24cd3e8e5e5851d86 files/speechd-0.56-catspeech-eof.patch 411
 MD5 bc0a2d35e9d4d817f657a8aad30d3a14 files/digest-speechd-0.56-r2 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC7ZLdArHZZzCEUG0RAo/tAJ0dPs1ComjPjCB/0qY63kf7zcbtPACfYDHx
-lCbjaWz7NcJBYz0TKsdPnPM=
-=JOoq
+iD8DBQFC7yn8ArHZZzCEUG0RAkwOAJ9qtDuc52JguEFNMKDihFZAgywamwCdFaWZ
+ZGMK5V3+ZYCG5Nx4GeBWmOE=
+=krPI
 -----END PGP SIGNATURE-----
