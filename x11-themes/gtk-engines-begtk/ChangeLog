@@ -1,7 +1,17 @@
 # ChangeLog for x11-themes/gtk-engines-begtk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-begtk/ChangeLog,v 1.8 2004/12/28 22:26:42 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-begtk/ChangeLog,v 1.9 2005/08/02 06:07:31 leonardop Exp $
 
+*gtk-engines-begtk-1.0.1-r2 (02 Aug 2005)
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-begtk-1.0.1-r2.ebuild:
+  Added 'static' USE flag.
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-begtk-1.0.1-r1.ebuild:
+  Don't inherit from gtk-engines2.
+  
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
 
