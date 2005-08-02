@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/gtk-engines-dwerg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-dwerg/ChangeLog,v 1.7 2005/07/20 20:56:43 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-dwerg/ChangeLog,v 1.8 2005/08/02 07:34:11 leonardop Exp $
+
+*gtk-engines-dwerg-0.8 (02 Aug 2005)
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-dwerg-0.8.ebuild:
+  New release. Added 'static' USE flag.
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-dwerg-0.6.ebuild:
+  Don't inherit from gtk-engines2.eclass.
 
   20 Jul 2005; Herbie Hopkins <herbs@gentoo.org>
   gtk-engines-dwerg-0.6.ebuild:
