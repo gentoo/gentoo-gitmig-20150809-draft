@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 efa285100ffb93646d96f3daf9cffbcc gwydion-dylan-bin-2.4.0.ebuild 685
+MD5 c034ae089c5a4cfad038e5385b8c3916 metadata.xml 829
+MD5 fc38d63ee79f8a0fec5295a722f5834c ChangeLog 460
+MD5 648d3e87acdb94c535f407c8d72cb7bd files/digest-gwydion-dylan-bin-2.4.0 78
+MD5 9087321ca0c7d1d3383ac85442009859 files/20gwydion-dylan 195
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC7taFBQBy/eDH5uERAt9xAJ4gdZBtPuwtm1mOqytDs/18n6gaBACg2QC3
+AXLlTnHvAHqpot+3d0OHMhE=
+=0mfu
+-----END PGP SIGNATURE-----
