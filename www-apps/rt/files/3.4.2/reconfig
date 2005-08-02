@@ -1,5 +1,13 @@
 #!/bin/bash
 PF=${PN}-${PVR}
+
+die() {
+	echo "#####"
+	echo $1
+	echo "#####"
+	exit 1
+}
+
 if [ $1 = "install" ]; then
 	# fix location
 	cd ${VHOST_ROOT}/${PF}
