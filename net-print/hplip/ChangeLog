@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.4 2005/07/28 21:00:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.5 2005/08/02 16:06:13 metalgod Exp $
+
+*hplip-0.9.4 (02 Aug 2005)
+
+  02 Aug 2005; <metalgod@gentoo.org> +hplip-0.9.4.ebuild:
+  Version Bump
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> hplip-0.9.3.ebuild:
   Fix qt dep per bug #100235
