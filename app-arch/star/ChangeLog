@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.21 2005/06/20 20:45:58 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.22 2005/08/02 18:32:25 slarti Exp $
+
+*star-1.5_alpha62 (02 Aug 2005)
+
+  02 Aug 2005; Tom Martin <slarti@gentoo.org> +star-1.5_alpha62.ebuild:
+  Version bump to 1.5_alpha62, resolves bug 66434.
 
 *star-1.5_alpha50-r1 (20 Jun 2005)
 
