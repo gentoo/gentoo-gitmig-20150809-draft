@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.10 2005/06/16 15:11:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.11 2005/08/02 18:42:02 gustavoz Exp $
 
 inherit kde-functions
 
-DESCRIPTION="A heirarchical text editor"
+DESCRIPTION="A hierarchical text editor"
 HOMEPAGE="http://www.tuxcards.de"
 
 SRC_URI="http://www.tifskom.de/tux/${PV}/${P}.tar.gz"
@@ -12,7 +12,7 @@ SRC_URI="http://www.tifskom.de/tux/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 DEPEND="${DEPEND}
 		=x11-libs/qt-3*

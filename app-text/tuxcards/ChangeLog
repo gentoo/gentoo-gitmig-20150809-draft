@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tuxcards
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.11 2005/06/16 15:11:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.12 2005/08/02 18:42:02 gustavoz Exp $
+
+  02 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> tuxcards-1.2.ebuild:
+  Fixed DESC typo, ~sparc wrt #101117
 
   16 Jun 2005; Andrej Kacian <ticho@gentoo.org> -tuxcards-1.1.ebuild,
   tuxcards-1.2.ebuild:
