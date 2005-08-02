@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 de36041fbd2a324b671c6e2bd6f39c0c ChangeLog 868
-MD5 b33389393b46858f60e15d60161f72e0 metadata.xml 834
+MD5 e36be68bace3b048566c29f0234e303a ChangeLog 1082
 MD5 907547ad547fa10e7e0ff404c03b120d jdictrayapi-0.8.7.ebuild 1337
-MD5 1970d31723d2629acdf909e4ecef05f0 files/digest-jdictrayapi-0.8.7 63
+MD5 b33389393b46858f60e15d60161f72e0 metadata.xml 834
+MD5 b826a9aca14cc3a2da353be863fd730e jdictrayapi-0.9.1.ebuild 1358
 MD5 9040a69edf0c8fe2af2c995957231c13 files/0.8.7-gentoo.patch 762
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCeSBu06ebR+OMO78RAglYAJ0evss76o3fv3ZUvkEVGqNqeTAOOQCePqfl
-zoCfqmvnJqNMbgexe6xtudc=
-=HJzm
------END PGP SIGNATURE-----
+MD5 1970d31723d2629acdf909e4ecef05f0 files/digest-jdictrayapi-0.8.7 63
+MD5 3f973224b5ff711d86d05565cf87c381 files/digest-jdictrayapi-0.9.1 63

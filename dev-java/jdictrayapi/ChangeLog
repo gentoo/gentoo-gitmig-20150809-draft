@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdictrayapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/ChangeLog,v 1.4 2005/05/04 19:19:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/ChangeLog,v 1.5 2005/08/02 19:46:36 betelgeuse Exp $
+
+*jdictrayapi-0.9.1 (02 Aug 2005)
+
+  02 Aug 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +jdictrayapi-0.9.1.ebuild:
+  Version bump, resolves bug 100539. Thanks to Derek Berube 
+  <derek.berube@wildstartech.com>.
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   jdictrayapi-0.8.7.ebuild:
