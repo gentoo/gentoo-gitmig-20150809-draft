@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/snmplib-0.5.1.ebuild,v 1.1 2005/08/01 11:14:03 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/snmplib-0.5.1.ebuild,v 1.2 2005/08/02 12:43:52 dholm Exp $
 
 inherit ruby
 
@@ -14,7 +14,7 @@ DESCRIPTION="SNMP library implemented in pure Ruby"
 HOMEPAGE="http://snmplib.rubyforge.org/"
 SRC_URI="http://rubyforge.org/frs/download.php/5337/${MY_P}.tgz"
 
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 LICENSE="Ruby"
 SLOT="0"
 
