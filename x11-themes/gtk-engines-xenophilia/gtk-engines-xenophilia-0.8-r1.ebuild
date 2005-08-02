@@ -1,20 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xenophilia/gtk-engines-xenophilia-0.8-r1.ebuild,v 1.10 2004/07/09 21:22:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xenophilia/gtk-engines-xenophilia-0.8-r1.ebuild,v 1.11 2005/08/02 13:48:33 leonardop Exp $
 
-inherit gtk-engines2
-
-IUSE=""
 DESCRIPTION="GTK+1 Xenophilia Theme Engine"
 HOMEPAGE="http://themes.freshmeat.net/projects/xenophilia/"
 SRC_URI="http://download.freshmeat.net/themes/xenophilia/xenophilia-${PV}.tar.gz"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="1"
+IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*
-	dev-util/pkgconfig
-	>=sys-apps/sed-4"
+	virtual/x11"
 
 S=${WORKDIR}/Xenophilia-${PV}
 
@@ -31,7 +28,7 @@ src_install() {
 		ENGINE_DIR=${D}/usr/lib/gtk/themes/engines \
 		|| die "Installation failed"
 
-	dodoc ${DEFAULT_DOCS}
+	dodoc AUTHORS BUGS CONFIGURATION ChangeLog README TODO
 
 	# FIXME: install fonts
 }
