@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.7 2005/07/16 11:59:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.8 2005/08/02 21:13:50 betelgeuse Exp $
+
+  02 Aug 2005; Petteri Räty <betelgeuse@gentoo.org> itext-1.3.ebuild:
+  Added source use flag support for bug 98042.
 
   16 Jul 2005; Thomas Matthijs <axxo@gentoo.org> -itext-1.1.4.ebuild,
   itext-1.2.3.ebuild, itext-1.3.ebuild:
