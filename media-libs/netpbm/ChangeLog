@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.62 2005/08/02 11:49:04 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.63 2005/08/02 14:47:49 killerfox Exp $
+
+  02 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org> netpbm-10.28.ebuild:
+  Stable on hppa. bug #100398 the second.
 
   02 Aug 2005; <sekretarz@gentoo.org> netpbm-10.28.ebuild:
   Stable on x86 due security bug #100398
