@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.26 2005/07/12 05:33:35 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.27 2005/08/02 21:40:30 sekretarz Exp $
+
+*libwmf-0.2.8.3-r1 (02 Aug 2005)
+
+  02 Aug 2005; <sekretarz@gentoo.org> +libwmf-0.2.8.3-r1.ebuild:
+  Ebuild clean up, added buildtime dependency on pkgconfig, as it's used.
+  Changed the way X and jpeg useflags are passed to configure, using use_with
+  instead of outer conditionals on . Added pic useflag. Added xml and xml2
+  useflags: they are used to request if we are going to use expat or libxml2.
+  If both are used, it defaults to expat, as the automatic ./configure do. It
+  also make optional dependency on them (before both where dependency, also if
+  only expat was used!). Added a debug useflag passed to configure. Added a
+  gtk useflag which makes it possible to avoid building gdk-pixbuf plugins
+  (and fixes the unlinked dependency on gtk2 of the old ebuild). Thanks 
+  Flameeyes in bug #82747
 
 *libwmf-0.2.8.3 (12 Jul 2005)
 
