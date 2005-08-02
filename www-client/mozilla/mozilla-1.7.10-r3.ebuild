@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.10-r3.ebuild,v 1.1 2005/08/02 03:15:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.10-r3.ebuild,v 1.2 2005/08/02 03:19:37 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -140,7 +140,7 @@ src_unpack() {
 	eend $? || die "sed failed"
 
 	# look in /usr/lib/nsplugins for plugins, in addition to the usual places
-	epatch ${DISTDIR}/mozilla-firefox-1.0.6-nsplugins.patch
+	epatch ${DISTDIR}/mozilla-1.7.10-nsplugins-v2.patch
 
 	WANT_AUTOCONF=2.1 autoconf || die "WANT_AUTOCONF failed"
 }
