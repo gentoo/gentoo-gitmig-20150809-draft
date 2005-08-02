@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.5-r1.ebuild,v 1.3 2005/07/11 19:12:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.5-r1.ebuild,v 1.4 2005/08/02 23:51:30 herbs Exp $
 
-inherit eutils libtool gnuconfig distutils
+inherit eutils libtool gnuconfig distutils multilib
 
 # libgrass support is coming soon...
 #	grass? ( >=sci-geosciences/grass-5.0 )
@@ -46,7 +46,7 @@ src_compile() {
 	distutils_python_version
 	# This package uses old borked automake/autoconf and libtool, so
 	# it doesn't work without ${D} (or with econf and einstall).
-	pkg_conf="--datadir=${D}usr/share/gdal --includedir=${D}usr/include/gdal --enable-shared --with-gnu-ld --with-pic"
+	pkg_conf="--datadir=${D}usr/share/gdal --includedir=${D}usr/include/gdal --libdir=${D}usr/$(get_libdir) --enable-shared --with-gnu-ld --with-pic"
 	[ "${ARCH}" = "x86" ] && pkg_conf="${pkg_conf} --without-libtool"
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) $(use_with postgres pg) $(use_with fits cfitsio) $(use_with ogdi)"
 

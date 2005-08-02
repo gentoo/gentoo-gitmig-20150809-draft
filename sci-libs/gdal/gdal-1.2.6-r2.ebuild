@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r2.ebuild,v 1.1 2005/07/30 23:46:05 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r2.ebuild,v 1.2 2005/08/02 23:51:30 herbs Exp $
 
-inherit eutils libtool gnuconfig distutils
+inherit eutils libtool gnuconfig distutils multilib
 
 IUSE="jpeg png geos gif grass jasper netcdf hdf python postgres mysql odbc sqlite ogdi fits debug"
 
@@ -61,7 +61,7 @@ src_compile() {
 	# This package uses old borked automake/autoconf and libtool, so
 	# it doesn't work without ${D} (or with econf and einstall).
 	pkg_conf="--datadir=${D}usr/share/gdal --includedir=${D}usr/include/gdal \
-		--enable-shared --with-gnu-ld --with-pic"
+		--libdir=${D}usr/$(get_libdir) --enable-shared --with-gnu-ld --with-pic"
 
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
 		$(use_with postgres pg) $(use_with fits cfitsio) \
@@ -70,7 +70,7 @@ src_compile() {
 
 	# It can't find this
 	if useq ogdi ; then
-		use_conf="--with-ogdi=/usr/lib ${use_conf}"
+		use_conf="--with-ogdi=/usr/$(get_libdir) ${use_conf}"
 	fi
 
 	if useq gif ; then
