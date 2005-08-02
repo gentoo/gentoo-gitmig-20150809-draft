@@ -1,0 +1,21 @@
+--- kcm_gtk/Makefile.am.orig	2005-01-14 10:52:16.000000000 +0000
++++ kcm_gtk/Makefile.am	2005-01-15 10:44:20.006738856 +0000
+@@ -2,8 +2,7 @@
+ METASOURCES = AUTO
+ 
+ # Install this plugin in the KDE modules directory
+-kcmgtkmoduledir = $(KDE_PREFIX)/lib/kde3/
+-kcmgtkmodule_LTLIBRARIES = kcm_kcmgtk.la
++kde_module_LTLIBRARIES = kcm_kcmgtk.la
+ 
+ kcm_kcmgtk_la_SOURCES = kcmgtkwidget.ui kcmgtk.cpp
+ kcm_kcmgtk_la_LIBADD = $(LIB_KDEUI)
+@@ -11,7 +10,7 @@
+ 
+ 
+ kcmgtk_DATA = kcmgtk.desktop
+-kcmgtkdir = $(KDE_PREFIX)/share/applnk/Settings/LookNFeel
++kcmgtkdir = $(kde_appsdir)/Settings/LookNFeel
+ 
+ kcmgtkdebian_DATA = kcmgtk.menu
+ kcmgtkdebiandir = /usr/lib/menu
