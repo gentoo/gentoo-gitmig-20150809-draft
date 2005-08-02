@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.2.1-r1.ebuild,v 1.2 2005/07/09 22:16:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.2.1-r1.ebuild,v 1.3 2005/08/02 19:31:15 sekretarz Exp $
 
 DESCRIPTION="Open Source Graph Visualization Software"
 HOMEPAGE="http://www.graphviz.org/"
@@ -35,6 +35,10 @@ src_install() {
 	make DESTDIR=${D} install || die "Install Failed!"
 
 	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
-	dodoc doc/*.pdf doc/Dot.ref
+	dodoc doc/Dot.ref
+
+	insinto /usr/share/doc/${PF}/
+	doins doc/*.pdf
+
 	dohtml -r .
 }

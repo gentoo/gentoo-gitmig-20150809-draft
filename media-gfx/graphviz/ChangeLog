@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.52 2005/08/01 21:51:05 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.53 2005/08/02 19:31:15 sekretarz Exp $
+
+  02 Aug 2005; <sekretarz@gentoo.org> graphviz-1.16.ebuild,
+  graphviz-2.2.1-r1.ebuild:
+  pdf files doesn't need to be gziped, bug #97095
 
   01 Aug 2005; <sekretarz@gentoo.org> graphviz-1.16.ebuild:
   Added -a switch to automake to add missing files, cought by Volkov Peter

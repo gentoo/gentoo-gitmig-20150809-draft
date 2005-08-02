@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16.ebuild,v 1.14 2005/08/01 21:51:05 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16.ebuild,v 1.15 2005/08/02 19:31:15 sekretarz Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -64,6 +64,9 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog FAQ.txt INSTALL*  MINTERMS.txt \
 		NEWS README*
+
+	insinto /usr/share/doc/${PF}/
+	doins doc/*.pdf
 
 	dohtml -r .
 	dodoc doc/*.pdf doc/Dot.ref
