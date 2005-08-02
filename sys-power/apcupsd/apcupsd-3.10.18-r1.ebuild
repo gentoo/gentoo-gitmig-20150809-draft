@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.18.ebuild,v 1.2 2005/08/01 17:25:04 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.18-r1.ebuild,v 1.1 2005/08/02 16:51:28 tantive Exp $
 
 inherit eutils depend.apache
 
@@ -70,7 +70,7 @@ src_install() {
 	rm -f "${D}"/etc/init.d/halt
 
 	if use cgi; then
-		insinto ${APACHE_MODULEDIR}
+		insinto ${APACHE2_MODULES_CONFDIR}
 		newins ${FILESDIR}/${PV}/apache.conf 60_apcupsd.conf
 	fi
 
