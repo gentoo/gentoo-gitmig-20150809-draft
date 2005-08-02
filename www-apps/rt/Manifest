@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 14fe0046e82aad3f7ea3637e4918e614 rt-3.4.2-r1.ebuild 5405
 MD5 e28b5c19f33196d18983e2db57aad44f rt-3.2.1.ebuild 4217
 MD5 4db85a9fff7cdcf30b77a1496812b030 ChangeLog 2855
@@ -14,3 +17,10 @@ MD5 c807deb11e08ab9f37a658bd5e971c7f files/3.4.2/rt.conf.d 405
 MD5 54a1cd04dc0d0788ce920d941e5601d0 files/3.4.2/rt.init.d 1019
 MD5 cdd30f8b9acde7b7ff5a686ea8fe66cc files/3.4.2/reconfig 1193
 MD5 73c354dd8ba0f64a74e5c6cd01b33834 files/3.4.2/rt_apache2_fcgi.conf 993
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC719tEzitwsaoONoRApFsAJ43q/nPEP6jJDeBSUhIrEB/vAr2iACfQ4mh
+bLPUM5xk7S5M6+INsHGjbyw=
+=J6rv
+-----END PGP SIGNATURE-----
