@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/gtk-engines-icegradient
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-icegradient/ChangeLog,v 1.7 2004/12/28 22:30:14 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-icegradient/ChangeLog,v 1.8 2005/08/02 09:45:54 leonardop Exp $
+
+*gtk-engines-icegradient-0.0.5-r2 (02 Aug 2005)
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-icegradient-0.0.5-r2.ebuild:
+  New revision. Added 'static' USE flag.
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-icegradient-0.0.5-r1.ebuild:
+  Don't inherit from gtk-engines2.eclass.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
