@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.27 2005/06/06 22:42:16 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.28 2005/08/02 00:07:29 metalgod Exp $
+
+  02 Aug 2005; <metalgod@gentoo.org> foomatic-db-20050606.ebuild:
+  Stable on amd64 and x86 thanks to Daniel Webert <rockoo@gmail.com> closes
+  bug #100993
 
 *foomatic-db-20050606 (06 Jun 2005)
 
