@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.6-r1.ebuild,v 1.2 2005/05/21 11:40:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.6-r1.ebuild,v 1.3 2005/08/02 17:11:53 sekretarz Exp $
 
 inherit libtool flag-o-matic perl-module
 replace-flags k6-3 i586
 replace-flags k6-2 i586
 replace-flags k6 i586
 
-IUSE="X gs jbig jp2 jpeg lcms lzw perl png tiff truetype wmf xml2"
+IUSE="X gs jbig jp2 jpeg lcms lzw perl png tiff truetype wmf xml2 doc"
 
 MY_PN=GraphicsMagick
 MY_P=${MY_PN}-${PV}
@@ -92,6 +92,11 @@ src_install() {
 	dosym /usr/lib/${MY_P}/ /usr/lib/GraphicsMagick
 
 	rm -f ${D}/usr/share/GraphicsMagick/*.txt
+	rm -rf ${D}/usr/share/${MY_P}/www
+
+	if use doc; then
+	    dohtml -r www/*
+	fi
 
 	dosed "s:-I/usr/include ::" /usr/bin/GraphicsMagick-config
 	dosed "s:-I/usr/include ::" /usr/bin/GraphicsMagick++-config
