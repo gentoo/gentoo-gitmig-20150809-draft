@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.16 2005/07/15 00:51:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.17 2005/08/02 03:09:49 agriffis Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -152,6 +152,10 @@ mozconfig_init() {
 
 	# Go a little faster; use less RAM
 	append-flags "$MAKEEDIT_FLAGS"
+
+	# Define our plugin dirs for nsplugins-v2.patch
+	append-flags "-DGENTOO_NSPLUGINS_DIR=\"/usr/$(get_libdir)/nsplugins\""
+	append-flags "-DGENTOO_NSBROWSER_PLUGINS_DIR=\"/usr/$(get_libdir)/nsbrowser/plugins\""
 
 	####################################
 	#
