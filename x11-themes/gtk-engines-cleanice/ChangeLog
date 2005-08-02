@@ -1,6 +1,26 @@
 # ChangeLog for x11-themes/gtk-engines-cleanice
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/ChangeLog,v 1.9 2004/06/24 23:28:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/ChangeLog,v 1.10 2005/08/02 08:48:00 leonardop Exp $
+
+*gtk-engines-cleanice-2.4.0 (02 Aug 2005)
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-cleanice-2.4.0.ebuild, files/cleanice-2-gtkrc:
+  New version. Added 'static' USE flag.
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-cleanice-1.2.7.ebuild:
+  Don't inherit from gtk-engines2.eclass.
+
+*gtk-engines-cleanice-0.8.5-r1 (02 Aug 2005)
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-cleanice-0.8.5-r1.ebuild:
+  New revision. Added 'static' USE flag.
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-cleanice-0.8.5.ebuild:
+  Don't inherit from gtk-engines.eclass.
 
   12 Jan 2004; <gustavoz@gentoo.org> gtk-engines-cleanice-1.2.7.ebuild:
   stable on hppa
