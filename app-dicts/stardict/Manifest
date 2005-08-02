@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 343a1f19e8a61a437b21e8e2dcee12c2 ChangeLog 3413
-MD5 3316b188ec45fd4d24db494c5990c20b files/digest-stardict-2.2.1 67
-MD5 38728c3a0ad675dd5f23d72cb143741a files/digest-stardict-2.4.1 67
-MD5 390090b978f088147ce59b0308822093 files/digest-stardict-2.4.2 67
-MD5 666d327d13233da6a7b9842e01a4eda7 files/digest-stardict-2.4.3 67
-MD5 0437329b647de88a34fa6bd46bf48cb7 files/digest-stardict-2.4.4 68
-MD5 b41107d5daeb5414fa21b3f9905e105c files/stardict-config.sh 565
-MD5 40e8df6800d5f7bf138a3a6692854a56 files/stardict-gentoo.patch 547
-MD5 9f2bc974d89734beae9aa192bafc68ef files/stardict-gtk24.patch 1210
-MD5 b1119d84c7a4c3535572b94ec508e907 metadata.xml 215
-MD5 3a6debc6341f864d7b2cdc9a2feefe42 stardict-2.2.1.ebuild 1801
 MD5 7e6e906efc68497a767d4f8718624a59 stardict-2.4.1.ebuild 1820
-MD5 06e09cbd0340b3922fcd67b9b5746a4c stardict-2.4.2.ebuild 1753
-MD5 7be97254fdc5b076b8a8a20ec97d0c99 stardict-2.4.3.ebuild 1770
-MD5 86f88b0fe088299fbe5053dd136ac8fd stardict-2.4.4.ebuild 1685
+MD5 b1119d84c7a4c3535572b94ec508e907 metadata.xml 215
+MD5 738f054045c75c5cb12c47fbe90a17fd stardict-2.4.4.ebuild 1692
+MD5 3a6debc6341f864d7b2cdc9a2feefe42 stardict-2.2.1.ebuild 1801
+MD5 25ae381b3687958f2b449ceb438f9444 stardict-2.4.2.ebuild 1760
+MD5 5a8412d51860398be2f93694bb3ad9dd ChangeLog 3559
+MD5 d9ea47072247d298ac52d2ccaf574321 stardict-2.4.3.ebuild 1777
+MD5 40e8df6800d5f7bf138a3a6692854a56 files/stardict-gentoo.patch 547
+MD5 390090b978f088147ce59b0308822093 files/digest-stardict-2.4.2 67
+MD5 9f2bc974d89734beae9aa192bafc68ef files/stardict-gtk24.patch 1210
+MD5 3316b188ec45fd4d24db494c5990c20b files/digest-stardict-2.2.1 67
+MD5 0437329b647de88a34fa6bd46bf48cb7 files/digest-stardict-2.4.4 68
+MD5 666d327d13233da6a7b9842e01a4eda7 files/digest-stardict-2.4.3 67
+MD5 38728c3a0ad675dd5f23d72cb143741a files/digest-stardict-2.4.1 67
+MD5 b41107d5daeb5414fa21b3f9905e105c files/stardict-config.sh 565
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC0A/7I1lqEGTUzyQRApVgAJ9siAg4g27ahUnv6K5zhnXqXOJG+ACePO0t
-Ti3bk4kq/jCJ90djlBxXNDE=
-=n5tT
+iD8DBQFC79BiKRy60XGEcJIRAj7VAJ4wleFHxcdumo2vG21EVAHn/0CvqQCeOZNZ
+01Lr54gaBdD4sZ8JIzL+ZvM=
+=CuZX
 -----END PGP SIGNATURE-----
