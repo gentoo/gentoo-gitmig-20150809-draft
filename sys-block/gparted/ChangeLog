@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.4 2005/07/10 22:00:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.5 2005/08/02 17:57:46 blubb Exp $
+
+  02 Aug 2005; Simon Stelling <blubb@gentoo.org> gparted-0.0.8.ebuild:
+  stable on amd64
 
   10 Jul 2005; Simon Stelling <blubb@gentoo.org> gparted-0.0.8.ebuild:
   (re-)added forgotten xfs use flag
