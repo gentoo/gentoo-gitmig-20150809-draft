@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-3.5.7.ebuild,v 1.1 2005/07/14 16:20:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-3.6.0.ebuild,v 1.1 2005/08/02 12:59:33 ka0ttic Exp $
 
 inherit flag-o-matic
 

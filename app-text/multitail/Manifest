@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 053e782d0bf5a711cfa8707445f11041 multitail-3.4.5.ebuild 1028
-MD5 8b7923012a975a9440e77b5961928ef1 multitail-3.5.7.ebuild 1034
-MD5 ab776fee8621344145803f2e36eaaee4 ChangeLog 4310
+MD5 03be3863051788adbd78ec1aff07832d multitail-3.6.0.ebuild 1034
+MD5 b6a43854a26846e7cccd79238c68da8a ChangeLog 4460
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 ad50e3b7620c6c5511d571e1c6f17adc multitail-3.4.8.ebuild 1030
 MD5 fe45a3a1567df9e06b0265479e02d163 files/digest-multitail-3.4.5 63
 MD5 63f24c0564928cd5d344cd6fec66852d files/digest-multitail-3.4.8 63
-MD5 3ccfaac913bf1e75f2cae32ac9909c0f files/digest-multitail-3.5.7 63
+MD5 aa61ec268c5872db4744a320f24cee3b files/digest-multitail-3.6.0 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1pDPEZCkKN40op4RAm0VAKCCjX4kS8ipxIxtUC4KHya9xkeFIQCgmXh6
-Iq5BtikHy2T3bDz0wOANvOk=
-=MddB
+iD8DBQFC7257EZCkKN40op4RAlTZAKC7fFY1O0eQN7D7vEL2D1MwUB2n7wCgkua/
+ZeYZb9iS8UqeYToRd32PBWc=
+=wqSm
 -----END PGP SIGNATURE-----
