@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.126 2005/07/31 07:01:29 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.127 2005/08/02 23:08:14 gregkh Exp $
+
+*udev-065 (02 Aug 2005)
+
+  02 Aug 2005; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-065.ebuild:
+  065 release
+  
+  Little bug fixes, new helper script "path_id".
+  
+  Also, we now have persistent block device names in /dev/disk/ try them out and
+  let me know if they are useful or not.
 
 *udev-064-r1 (31 Jul 2005)
 
