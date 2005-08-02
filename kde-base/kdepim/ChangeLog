@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.163 2005/07/28 19:53:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.164 2005/08/02 11:29:08 greg_g Exp $
+
+*kdepim-3.4.2-r1 (02 Aug 2005)
+
+  02 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdepim-3.4.2-partnode.patch, +kdepim-3.4.2-r1.ebuild:
+  Add patch to fix problem with attachments (kde bug 109003).
 
   28 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdepim-3.4.1-r2.ebuild:
   Stable on hppa.
