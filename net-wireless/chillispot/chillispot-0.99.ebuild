@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-0.99.ebuild,v 1.2 2005/05/05 22:41:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-0.99.ebuild,v 1.3 2005/08/02 02:56:09 solar Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.chillispot.org/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~x86"
-IUSE="pic"
+IUSE=""
 
 DEPEND="virtual/libc >=sys-apps/sed-4"
 RDEPEND=""
@@ -24,12 +24,8 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
 	export CFLAGS
-
-	use pic && myconf="${myconf} --with-pic"
-
-	econf ${myconf} || die "FAILED: econf ${myconf}"
+	econf || die "FAILED: econf"
 	emake || die "FAILED: emake"
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/chillispot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.6 2005/05/05 22:41:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.7 2005/08/02 02:56:09 solar Exp $
+
+  01 Aug 2005; <solar.@gentoo.org> -chillispot-0.94.ebuild,
+  -chillispot-0.95.ebuild, -chillispot-0.97.ebuild, chillispot-0.99.ebuild:
+  - removed some older ebuilds and updated the .99 a bit to keep spanky quiet
 
   05 May 2005; Sven Wegener <swegener@gentoo.org> chillispot-0.94.ebuild,
   chillispot-0.95.ebuild, chillispot-0.97.ebuild, chillispot-0.99.ebuild:
