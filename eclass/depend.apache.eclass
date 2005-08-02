@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.18 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.19 2005/08/02 23:26:14 vericgar Exp $
 
 ######
 ## Apache Common Variables
@@ -63,7 +63,7 @@ APACHE1_MODULES_CONFDIR="${APACHE1_CONFDIR}/modules.d"
 APACHE2_MODULES_CONFDIR="${APACHE2_CONFDIR}/modules.d"
 
 ####
-## APACHE1_MODULES_VHOSTDIR, APACHE2_MODULES_VHOSTDIR
+## APACHE1_VHOSTDIR, APACHE2_VHOSTDIR
 ##
 ## Paths where virtual host configuration files are kept
 ####

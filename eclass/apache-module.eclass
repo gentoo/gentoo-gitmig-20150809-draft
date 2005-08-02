@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.12 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.13 2005/08/02 23:26:14 vericgar Exp $
 
 inherit depend.apache
 
@@ -296,7 +296,7 @@ apache2_src_install() {
 	fi
 
 	if [ -n "${APACHE2_VHOSTFILE}" ]; then
-		insinto ${APACHE2_MODULES_VHOSTDIR}
+		insinto ${APACHE2_VHOSTDIR}
 		doins ${FILESDIR}/${APACHE2_VHOSTFILE}.conf
 	fi
 
