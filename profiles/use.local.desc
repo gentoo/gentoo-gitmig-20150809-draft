@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1358 2005/08/01 20:59:22 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1359 2005/08/02 10:10:59 carlo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -650,7 +650,7 @@ net-dialup/ppp:dhcp - Enables the dhcp plugin
 net-dialup/ppp:mppe-mppc - Enables support for mppe-mppc
 net-dns/bind:bind-mysql - enables mysql support for bind (non-dlz)
 net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
-net-dns/bind:idn - enables support for Internalized Domain Names
+net-dns/bind:idn - enables support for Internationalized Domain Names
 net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
 net-dns/djbdns:cnamefix - changes the CNAME behavior of dnscache
 net-dns/djbdns:fwdzone - enables forward zone patch
