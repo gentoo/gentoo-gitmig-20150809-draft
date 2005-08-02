@@ -1,6 +1,26 @@
 # ChangeLog for x11-themes/gtk-engines-flat
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/ChangeLog,v 1.10 2004/12/28 22:28:47 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/ChangeLog,v 1.11 2005/08/02 09:31:06 leonardop Exp $
+
+*gtk-engines-flat-2.0-r2 (02 Aug 2005)
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-flat-2.0-r2.ebuild:
+  New revision. Added 'static' USE flag.
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-flat-2.0-r1.ebuild:
+  Don't inherit from gtk-engines2.eclass.
+
+*gtk-engines-flat-0.1-r1 (02 Aug 2005)
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-flat-0.1-r1.ebuild:
+  New revision. Added 'static' USE flag.
+
+  02 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-flat-0.1.ebuild:
+  Don't inherit from gtk-engines.eclass.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
