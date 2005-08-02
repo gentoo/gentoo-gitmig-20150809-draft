@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4244 2005/08/02 03:10:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4245 2005/08/02 03:28:57 agriffis Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Aron Griffis <agriffis@gentoo.org> (01 Aug 2005)
+# Mask for testing
+=www-client/mozilla-1.7.10-r3
+=www-client/mozilla-firefox-1.0.6-r4
+=mail-client/mozilla-thunderbird-1.0.6-r4
 
 # Leonardo Boshell <leonardop@gentoo.org> (01 Aug 2005)
 # To be removed. Bundled with x11-libs/gtk+.
@@ -168,10 +174,6 @@ www-apps/phpBB
 # <dang@gentoo.org> (29 Jun 2005)
 # Masked until stable upstream
 app-text/evince
-
-# Aron Griffis <agriffis@gentoo.org> (28 Jun 2005)
-# Mask for testing
-=mail-client/mozilla-thunderbird-1.0.2-r10
 
 # Guillaume Destuynder <kang@gentoo.org> (27 Jun 2005)
 # Masking for security reasons, pending removal, bug #89196
