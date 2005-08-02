@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.80 2005/07/31 02:21:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.81 2005/08/02 12:48:47 agriffis Exp $
+
+*mozilla-thunderbird-1.0.6-r4 (02 Aug 2005)
+
+  02 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-thunderbird-1.0.6-r4.ebuild:
+  Update to v2 of the nsplugins patch, which actually works (even on multilib
+  systems). Define GENTOO_NSPLUGINS_DIR and GENTOO_NSBROWSER_PLUGINS_DIR in
+  the ebuild prior to emake, rather than in the eclass prior to econf, since
+  ./configure chokes on the definitions
 
 *mozilla-thunderbird-1.0.6-r3 (31 Jul 2005)
 
