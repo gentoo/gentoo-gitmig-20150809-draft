@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 f1b8ded8c1ce9cacc32aad24811f61da ChangeLog 908
-MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
-MD5 cf0526442b7714efd0d80e8c64a8b2e0 tic98-1.01-r1.ebuild 688
-MD5 ea29b649c56723cdcb113d0c8cc8ba68 tic98-1.01.ebuild 882
 MD5 b2419a7092da155e7165fec26d606e07 files/digest-tic98-1.01 62
 MD5 b2419a7092da155e7165fec26d606e07 files/digest-tic98-1.01-r1 62
 MD5 d20e8645219f4317f941051e02713f3b files/tic98-1.01-gentoo.diff 5452
+MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
+MD5 91082c83c7f92def599dce315d38bdf3 tic98-1.01-r1.ebuild 683
+MD5 ea29b649c56723cdcb113d0c8cc8ba68 tic98-1.01.ebuild 882
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC77OMZ/iYVBmujdURAnqqAKCWY6f1UEdYlwWAHm4gtl3fGVj+pACgpawG
-c0/+YoDmuNwC2sdHfu2FwKk=
-=O+jh
+iD8DBQFC77ZII1lqEGTUzyQRAqCLAJ98v5S+M2Y7gDbPhB6LnWFGfUQjTgCffM23
+I+uhI4lI2R2pzkF1+9gK7Ok=
+=J4Ap
 -----END PGP SIGNATURE-----
