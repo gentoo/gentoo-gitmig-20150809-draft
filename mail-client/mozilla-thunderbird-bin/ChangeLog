@@ -1,6 +1,16 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.30 2005/07/25 02:56:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.31 2005/08/02 15:07:48 agriffis Exp $
+
+*mozilla-thunderbird-bin-1.0.6-r3 (02 Aug 2005)
+
+  02 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  -files/thunderbird-bin-0.7-init.tar.bz2,
+  -mozilla-thunderbird-bin-1.0.5-r1.ebuild,
+  -mozilla-thunderbird-bin-1.0.6-r2.ebuild,
+  +mozilla-thunderbird-bin-1.0.6-r3.ebuild:
+  Bump rev to push out mozilla-launcher.eclass change which sets
+  MOZ_PLUGIN_PATH correctly in /usr/bin/thunderbird-bin #100378
 
   25 Jul 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-thunderbird-bin-1.0.6-r2.ebuild:

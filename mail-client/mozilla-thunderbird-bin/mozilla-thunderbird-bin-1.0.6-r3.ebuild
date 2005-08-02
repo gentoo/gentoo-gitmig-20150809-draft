@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.0.6-r2.ebuild,v 1.2 2005/07/25 02:56:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.0.6-r3.ebuild,v 1.1 2005/08/02 15:07:48 agriffis Exp $
 
 inherit eutils mozilla-launcher multilib
 
