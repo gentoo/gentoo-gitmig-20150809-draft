@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.10 2005/04/11 12:16:59 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.11 2005/08/02 02:09:01 rl03 Exp $
 
 inherit eutils
 
@@ -37,9 +37,8 @@ src_unpack () {
 	cd ${S}
 	sed -i s/apxs/apxs2/g configure
 	sed -i s,bin/httpd,bin/apache2,g configure
-	sed -i s/2.2\ 2.1/2.3\ 2.2\ 2.1/ configure
-
 	epatch ${FILESDIR}/${PV}-python.patch
+	epatch ${FILESDIR}/${P}-python24.patch
 }
 
 src_compile() {

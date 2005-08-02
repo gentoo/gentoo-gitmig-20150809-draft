@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.14.ebuild,v 1.3 2005/07/07 06:55:56 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.14.ebuild,v 1.4 2005/08/02 02:09:01 rl03 Exp $
 
 # Please note: apache, java, mono and ruby support disabled for now.
 # Fill a bug if you need it.
@@ -43,6 +43,7 @@ fi
 src_unpack () {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${P}-python24.patch
 	sed -i s,bin/httpd,bin/apache,g configure
 }
 
