@@ -1,6 +1,6 @@
-diff -ur -x '*~' gamin-0.1.2/libgamin/gam_api.c gamin-0.1.2-fbsd/libgamin/gam_api.c
---- gamin-0.1.2/libgamin/gam_api.c	2005-06-15 12:53:25.000000000 +0200
-+++ gamin-0.1.2-fbsd/libgamin/gam_api.c	2005-07-16 00:15:37.317345328 +0200
+diff -ur gamin-0.1.3/libgamin/gam_api.c gamin-0.1.3-fbsd/libgamin/gam_api.c
+--- gamin-0.1.3/libgamin/gam_api.c	2005-06-15 12:53:25.000000000 +0200
++++ gamin-0.1.3-fbsd/libgamin/gam_api.c	2005-08-02 23:09:22.416835112 +0200
 @@ -421,7 +421,7 @@
  {
      char data[2] = { 0, 0 };
@@ -28,10 +28,9 @@ diff -ur -x '*~' gamin-0.1.2/libgamin/gam_api.c gamin-0.1.2-fbsd/libgamin/gam_ap
      /* Set the socket to receive credentials on the next message */
      {
          int on = 1;
-Only in gamin-0.1.2-fbsd/libgamin: gam_api.c.orig
-diff -ur -x '*~' gamin-0.1.2/libgamin/gam_data.c gamin-0.1.2-fbsd/libgamin/gam_data.c
---- gamin-0.1.2/libgamin/gam_data.c	2005-05-18 16:45:04.000000000 +0200
-+++ gamin-0.1.2-fbsd/libgamin/gam_data.c	2005-07-16 12:06:58.586806112 +0200
+diff -ur gamin-0.1.3/libgamin/gam_data.c gamin-0.1.3-fbsd/libgamin/gam_data.c
+--- gamin-0.1.3/libgamin/gam_data.c	2005-05-18 16:45:04.000000000 +0200
++++ gamin-0.1.3-fbsd/libgamin/gam_data.c	2005-08-02 23:09:22.416835112 +0200
 @@ -17,6 +17,10 @@
  #ifdef HAVE_PTHREAD_H
  #include <pthread.h>
@@ -52,10 +51,10 @@ diff -ur -x '*~' gamin-0.1.2/libgamin/gam_data.c gamin-0.1.2-fbsd/libgamin/gam_d
  	pthread_mutex_init(&ret->lock, &attr);
  	pthread_mutexattr_destroy(&attr);
      }
-diff -ur -x '*~' gamin-0.1.2/server/gam_channel.c gamin-0.1.2-fbsd/server/gam_channel.c
---- gamin-0.1.2/server/gam_channel.c	2005-06-15 13:02:34.000000000 +0200
-+++ gamin-0.1.2-fbsd/server/gam_channel.c	2005-07-16 00:15:37.326343960 +0200
-@@ -29,7 +29,7 @@
+diff -ur gamin-0.1.3/server/gam_channel.c gamin-0.1.3-fbsd/server/gam_channel.c
+--- gamin-0.1.3/server/gam_channel.c	2005-08-01 23:04:50.000000000 +0200
++++ gamin-0.1.3-fbsd/server/gam_channel.c	2005-08-02 23:09:22.417834960 +0200
+@@ -30,7 +30,7 @@
  {
      char data[2] = { 0, 0 };
      int written;
@@ -64,7 +63,7 @@ diff -ur -x '*~' gamin-0.1.2/server/gam_channel.c gamin-0.1.2-fbsd/server/gam_ch
      struct {
  	    struct cmsghdr hdr;
  	    struct cmsgcred cred;
-@@ -53,7 +53,7 @@
+@@ -54,7 +54,7 @@
  #endif
  
  retry:
@@ -73,7 +72,7 @@ diff -ur -x '*~' gamin-0.1.2/server/gam_channel.c gamin-0.1.2-fbsd/server/gam_ch
      written = sendmsg(fd, &msg, 0);
  #else
      written = write(fd, &data[0], 1);
-@@ -100,7 +100,7 @@
+@@ -103,7 +103,7 @@
  
      s_uid = getuid();
  
@@ -82,9 +81,24 @@ diff -ur -x '*~' gamin-0.1.2/server/gam_channel.c gamin-0.1.2-fbsd/server/gam_ch
      /* Set the socket to receive credentials on the next message */
      {
          int on = 1;
-diff -ur -x '*~' gamin-0.1.2/tests/testing.c gamin-0.1.2-fbsd/tests/testing.c
---- gamin-0.1.2/tests/testing.c	2005-06-13 10:59:29.000000000 +0200
-+++ gamin-0.1.2-fbsd/tests/testing.c	2005-07-16 00:15:37.337342288 +0200
+Only in gamin-0.1.3-fbsd/server: gam_channel.c.orig
+diff -ur gamin-0.1.3/server/gam_pidname.c gamin-0.1.3-fbsd/server/gam_pidname.c
+--- gamin-0.1.3/server/gam_pidname.c	2005-08-01 17:27:19.000000000 +0200
++++ gamin-0.1.3-fbsd/server/gam_pidname.c	2005-08-02 23:05:34.795438824 +0200
+@@ -7,9 +7,9 @@
+ 
+ char *gam_get_pidname (int pid)
+ {
++    gchar *pidname = NULL;
+ #ifdef HAVE_LINUX
+     gchar *procname;
+-    gchar *pidname = NULL;
+     FILE *fp;
+ #endif
+ 
+diff -ur gamin-0.1.3/tests/testing.c gamin-0.1.3-fbsd/tests/testing.c
+--- gamin-0.1.3/tests/testing.c	2005-06-13 10:59:29.000000000 +0200
++++ gamin-0.1.3-fbsd/tests/testing.c	2005-08-02 23:09:22.417834960 +0200
 @@ -436,9 +436,9 @@
              return (-1);
          }
@@ -97,4 +111,3 @@ diff -ur -x '*~' gamin-0.1.2/tests/testing.c gamin-0.1.2-fbsd/tests/testing.c
              debugLoop(100);
  
  /*	    printf("+"); fflush(stdout); */
-Only in gamin-0.1.2-fbsd/tests: testing.c.orig
