@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/tic98
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/ChangeLog,v 1.2 2005/03/05 13:36:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/ChangeLog,v 1.3 2005/08/02 15:48:13 sekretarz Exp $
+
+  02 Aug 2005; <sekretarz@gentoo.org> -files/tic98.diff,
+  files/tic98-1.01-gentoo.diff, tic98-1.01-r1.ebuild:
+  Fixed compile problems, bug #84160. Merged tic98.diff to tic98-gentoo.diff
 
 *tic98-1.01 (05 Mar 2005)
 
