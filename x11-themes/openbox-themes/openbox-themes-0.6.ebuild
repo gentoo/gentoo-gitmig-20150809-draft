@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/openbox-themes-0.6.ebuild,v 1.5 2005/01/03 22:42:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/openbox-themes-0.6.ebuild,v 1.6 2005/08/02 03:07:41 leonardop Exp $
 
 DESCRIPTION="A set of themes for Openbox3."
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
@@ -11,7 +11,7 @@ IUSE="gnome"
 SLOT="0"
 
 DEPEND=">=x11-wm/openbox-3.0_beta6
-		gnome? ( >=x11-themes/gtk-engines-thinice-2 )"
+		gnome? ( >=x11-themes/gtk-engines-2.6 )"
 
 src_install() {
 	dodir /usr/share/themes

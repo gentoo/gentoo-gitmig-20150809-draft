@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b18eb054bcd02ecf3a8ada6937c78c7e ChangeLog 2382
-MD5 d4c4e2b629e12f855274ae2873000918 openbox-themes-0.6.ebuild 592
-MD5 dc69e46a7dcbc51382641a0b9588286e openbox-themes-0.5-r1.ebuild 595
-MD5 a1a867365fd2ad35a8c824395adf1b69 openbox-themes-0.6-r1.ebuild 639
+MD5 2811cbcbdcd635271daa5a4ea10360e9 ChangeLog 2704
 MD5 61ad40d51c45fcd58da9253bb8ec97b2 metadata.xml 289
-MD5 c83a80489e7b30ecbde835d764eb5909 files/digest-openbox-themes-0.6-r1 71
-MD5 c83a80489e7b30ecbde835d764eb5909 files/digest-openbox-themes-0.6 71
+MD5 97f864588ad8c0510081e69ca2e5bb1d openbox-themes-0.5-r1.ebuild 592
+MD5 8322d609b72649460d8d61ba8a4cc5db openbox-themes-0.6-r1.ebuild 636
+MD5 f980f46c9f92a1083a4893af891741a0 openbox-themes-0.6.ebuild 589
 MD5 6f91739eaaf26743ec860bb9d4787757 files/digest-openbox-themes-0.5-r1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2crbCHk4+ZoBpvsRAsZSAJ9ylN2XjTjwC6Y5YwVm44+TKmfrTwCgjzoB
-lIv5hcft1ZbaMB7CBxKpITc=
-=gaJX
------END PGP SIGNATURE-----
+MD5 c83a80489e7b30ecbde835d764eb5909 files/digest-openbox-themes-0.6 71
+MD5 c83a80489e7b30ecbde835d764eb5909 files/digest-openbox-themes-0.6-r1 71
