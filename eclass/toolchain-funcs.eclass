@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.41 2005/08/01 07:27:27 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.42 2005/08/02 13:26:59 azarah Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -179,6 +179,7 @@ gcc-micro-version() {
 # each new definition replaces any previous definition.
 gcc-specs-directive() {
 	local specfiles=$($(tc-getCC) -v 2>&1 | grep "^Reading" | awk '{print $NF}')
+	[[ -z ${specfiles} ]] && return 0
 	awk -v spec=$1 \
 'BEGIN	{ sstr=""; outside=1 }
 	$1=="*"spec":"  { sstr=""; outside=0; next }
