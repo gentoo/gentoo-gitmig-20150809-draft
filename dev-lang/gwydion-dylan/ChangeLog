@@ -1,0 +1,11 @@
+# ChangeLog for dev-lang/gwydion-dylan
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gwydion-dylan/ChangeLog,v 1.1 2005/08/02 02:21:34 araujo Exp $
+
+*gwydion-dylan-2.4.0 (02 Aug 2005)
+
+  02 Aug 2005; Luis F. Araujo <araujo@gentoo.org> +files/20gwydion-dylan,
+  +files/50gwydion-dylan-gentoo.el, +metadata.xml,
+  +gwydion-dylan-2.4.0.ebuild:
+  Added The Gwydion-Dylan Compiler for the Dylan Programming Language
+
