@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/elilo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.9 2005/05/06 04:03:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.10 2005/08/02 22:51:22 agriffis Exp $
+
+*elilo-3.4-r3 (02 Aug 2005)
+
+  02 Aug 2005; Aron Griffis <agriffis@gentoo.org> files/elilo.conf.sample,
+  -elilo-3.4-r1.ebuild, -elilo-3.4-r2.ebuild, +elilo-3.4-r3.ebuild:
+  Stabilize -r2 with vapier's ebuild updates, but bump it to -r3 at the same
+  time to push out repaired sample elilo.conf
 
 *elilo-3.4-r2 (06 May 2005)
 

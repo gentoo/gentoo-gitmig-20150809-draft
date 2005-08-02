@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4-r2.ebuild,v 1.2 2005/05/22 01:59:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4-r3.ebuild,v 1.1 2005/08/02 22:51:22 agriffis Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.hpl.hp.com/pub/linux-ia64/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ia64"
+KEYWORDS="ia64"
 IUSE=""
 
 # gnu-efi contains only static libs, so there's no run-time dep on it
@@ -47,10 +47,8 @@ src_install() {
 	exeinto /usr/lib/elilo
 	doexe elilo.efi || die "elilo.efi failed"
 
-	if [[ ! -e ${D}/etc/elilo.conf ]] ; then
-		insinto /etc
-		newins "${FILESDIR}"/elilo.conf.sample elilo.conf
-	fi
+	insinto /etc
+	newins "${FILESDIR}"/elilo.conf.sample elilo.conf
 
 	dodoc docs/* "${FILESDIR}"/elilo.conf.sample
 	newman "${FILESDIR}"/elilo.8-${PV} elilo.8
