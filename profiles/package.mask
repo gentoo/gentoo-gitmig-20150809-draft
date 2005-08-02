@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4242 2005/08/02 02:12:22 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4243 2005/08/02 02:45:49 leonardop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,24 @@
 ##
 ##   End example
 ##
+
+# Leonardo Boshell <leonardop@gentoo.org> (01 Aug 2005)
+# To be removed. Bundled with x11-libs/gtk+.
+x11-themes/gtk-engines-pixbuf
+
+# Leonardo Boshell <leonardop@gentoo.org> (01 Aug 2005)
+# To be removed. Unmaintained and without a valid homepage/SRC_URI.
+x11-themes/gtk-engines-gtkstep
+x11-themes/gtk-engines-magicchicken
+
+# Leonardo Boshell <leonardop@gentoo.org> (01 Aug 2005)
+# To be removed. These are provided by x11-themes/gtk-engines.
+x11-themes/gtk-engines-crux
+x11-themes/gtk-engines-metal
+x11-themes/gtk-engines-notif
+x11-themes/gtk-engines-pixmap
+x11-themes/gtk-engines-raleigh
+x11-themes/gtk-engines-redmond95
 
 # Renat Lumpau <rl03@gentoo.org> (01 Aug 2005)
 # Installs into /usr/local, ebuild should not have been committed
