@@ -5,6 +5,7 @@ die() {
 	echo "******"
 	echo $1
 	echo "******"
+	exit 1
 }
 
 if [ $1 = "install" ]; then
