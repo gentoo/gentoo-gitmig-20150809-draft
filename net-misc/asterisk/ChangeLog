@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.72 2005/07/29 19:51:57 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.73 2005/08/02 18:55:44 gustavoz Exp $
+
+  02 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> asterisk-1.0.8.ebuild:
+  Stable on sparc
 
   29 Jul 2005; <stkn@gentoo.org>
   +files/1.0.0/asterisk-1.0.9-weak-references.diff, asterisk-1.0.9.ebuild,
