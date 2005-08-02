@@ -1,6 +1,14 @@
 # ChangeLog for www-client/mozilla-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/ChangeLog,v 1.17 2005/07/25 02:53:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/ChangeLog,v 1.18 2005/08/02 14:50:09 agriffis Exp $
+
+*mozilla-bin-1.7.10-r1 (02 Aug 2005)
+
+  02 Aug 2005; Aron Griffis <agriffis@gentoo.org> -mozilla-bin-1.7.7.ebuild,
+  -mozilla-bin-1.7.8.ebuild, -mozilla-bin-1.7.10.ebuild,
+  +mozilla-bin-1.7.10-r1.ebuild:
+  Bump rev to push out mozilla-launcher.eclass change which sets
+  MOZ_PLUGIN_PATH correctly in /usr/bin/mozilla-bin #100378
 
   25 Jul 2005; Aron Griffis <agriffis@gentoo.org> mozilla-bin-1.7.7.ebuild,
   mozilla-bin-1.7.8.ebuild, mozilla-bin-1.7.10.ebuild:
