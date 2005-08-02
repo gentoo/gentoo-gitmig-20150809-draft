@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.26 2005/07/03 18:14:22 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.27 2005/08/02 12:30:57 matsuu Exp $
+
+  02 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> links-2.1_pre17-r1.ebuild:
+  Stable on sh.
 
   03 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
   links-2.1_pre17-r1.ebuild:
