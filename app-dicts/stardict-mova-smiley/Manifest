@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 d87f293521a91d54691a1d2115ceb199 stardict-mova-smiley-2.1.0.ebuild 370
 MD5 319dfde7144afff1b0f4e15a9eeb1eea stardict-mova-smiley-2.4.2.ebuild 523
 MD5 f26a85426bf0f777fdfbfe6cb4fd1236 ChangeLog 817
 MD5 ba057ab39426665e45b0c2629780bf1b files/digest-stardict-mova-smiley-2.4.2 91
 MD5 452e63b96be090bbf095d7eeafd5f1a2 files/digest-stardict-mova-smiley-2.1.0 91
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC79ZeKRy60XGEcJIRApdXAJ0d1JoEEAMiML9VLdZJx7+13yCv5gCgjtm5
+dY89KoIEm7JaH1jjAMVxfHI=
+=ow4H
+-----END PGP SIGNATURE-----
