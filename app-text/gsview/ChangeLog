@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gsview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.15 2005/06/08 10:52:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.16 2005/08/02 02:16:49 metalgod Exp $
+
+*gsview-4.7 (02 Aug 2005)
+
+  02 Aug 2005; <metalgod@gentoo.org> +gsview-4.7.ebuild:
+  Version bump
 
   08 Jun 2005; Heinrich Wendel <lanius@gentoo.org> +files/gsview-help,
   gsview-4.6-r1.ebuild:
