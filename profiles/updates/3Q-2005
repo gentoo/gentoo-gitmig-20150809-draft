@@ -44,3 +44,5 @@ slotmove =media-libs/portaudio-18* 0 18
 move sys-cluster/ganglia-monitor-core sys-cluster/ganglia
 move net-misc/asterisk-sccp net-misc/asterisk-chan_sccp
 move x11-themes/gtk-qt-engine x11-themes/gtk-engines-qt
+move x11-themes/gtk-engines-geramik x11-themes/geramik
+move x11-themes/qtpixmap x11-themes/gtk-engines-qtpixmap
