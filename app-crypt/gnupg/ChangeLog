@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.121 2005/08/03 00:54:55 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.122 2005/08/03 11:48:09 seemant Exp $
+
+  03 Aug 2005; Seemant Kulleen <seemant@gentoo.org> -gnupg-1.2.4.ebuild,
+  gnupg-1.2.6.ebuild, -gnupg-1.4.0-r1.ebuild, -gnupg-1.4.0-r2.ebuild,
+  gnupg-1.4.1.ebuild, gnupg-1.4.1-r1.ebuild, gnupg-1.4.2.ebuild,
+  -gnupg-1.9.14.ebuild, -gnupg-1.9.15.ebuild, gnupg-1.9.15-r1.ebuild,
+  -gnupg-1.9.16.ebuild:
+  change SRC_URI to reflect mirror://gnupg instead. Also removed a whole bunch
+  of cruft ebuilds.
 
 *gnupg-1.4.2 (03 Aug 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.15-r1.ebuild,v 1.3 2005/07/09 19:33:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.15-r1.ebuild,v 1.4 2005/08/03 11:48:09 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ ECCVER=0.1.6
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
-SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${P}.tar.bz2"
+SRC_URI="mirror://gnupg/alpha/gnupg/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
