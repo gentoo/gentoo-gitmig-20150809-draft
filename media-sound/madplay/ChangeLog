@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/madplay
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.36 2005/04/14 15:05:52 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.37 2005/08/03 20:17:01 kito Exp $
+
+  03 Aug 2005; Kito <kito@gentoo.org> +files/madplay-macos.patch,
+  madplay-0.15.2b.ebuild:
+  add Fink patch to audio_carbon.c to avoid conflicting types on OS X 10.4:
 
   14 Apr 2005; Stephen P. Becker <geoman@gentoo.org> madplay-0.15.0b.ebuild,
   madplay-0.15.0b-r1.ebuild, madplay-0.15.1b.ebuild, madplay-0.15.2b.ebuild:
