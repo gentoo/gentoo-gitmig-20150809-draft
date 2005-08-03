@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.11.1.ebuild,v 1.1 2005/08/01 11:47:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.11.1.ebuild,v 1.2 2005/08/03 01:24:01 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -19,6 +19,7 @@ IUSE="nls pam selinux skey nousuid"
 RDEPEND=">=sys-libs/cracklib-2.7-r3
 	pam? ( virtual/pam )
 	!pam? ( !sys-apps/pam-login )
+	skey? ( app-admin/skey )
 	selinux? ( sys-libs/libselinux )"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51-r2
@@ -46,6 +47,9 @@ src_unpack() {
 
 	# The new configure changes do not detect utmp/logdir properly
 	epatch "${FILESDIR}"/${PN}-4.0.10-fix-configure.patch
+
+	# skeychallenge call needs updating #69741
+	epatch "${FILESDIR}"/shadow-4.0.5-skey.patch
 
 	# Make user/group names more flexible #3485 / #22920
 	epatch "${FILESDIR}"/${PN}-4.0.10-dots-in-usernames.patch
