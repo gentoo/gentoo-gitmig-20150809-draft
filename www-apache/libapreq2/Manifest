@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c963ceb69bb70efa9f9563ba42af5158 libapreq2-2.04.03.ebuild 2917
-MD5 8276becfec27eb8cd65a7d1207e55cd0 ChangeLog 938
+MD5 36b8a6ef7c94ee2395db4823a5706f6e ChangeLog 1250
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 7e7f7ff87f41a04bb85b1bf4792eafd5 files/libapreq2-2.0-sandbox.patch 1169
+MD5 c963ceb69bb70efa9f9563ba42af5158 libapreq2-2.04.03.ebuild 2917
+MD5 8a3b9e4696b01ebf6658145174adea65 libapreq2-2.06.ebuild 2028
 MD5 b6b2398e58512016392bd02a5bd2b548 files/libapreq2-2.0-binloc.patch 3154
 MD5 1fad30fc51874d46cd39dd7ada8d17d8 files/digest-libapreq2-2.04.03 73
+MD5 7c185f467441ea2ade1d365a6a917343 files/digest-libapreq2-2.06 70
+MD5 7e7f7ff87f41a04bb85b1bf4792eafd5 files/libapreq2-2.0-sandbox.patch 1169
+MD5 72ff7fa68f0ab905336522c6398b4f17 files/76_mod_apreq.conf 384
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCgkWnI1lqEGTUzyQRAvMjAKDdJpCu0tyfLTa4ATt7kxKhn3IP3QCfeFr5
-eFJ8jP0guyouzny2Xjos290=
-=Db98
+iD8DBQFC8VYltG5z4I8BtQoRAs2cAJ9W1bvlYn2aL2fll4RYYw0/32smEQCeMZY/
+1HU+lRCGOjPH8HJAixudUlM=
+=yQNw
 -----END PGP SIGNATURE-----
