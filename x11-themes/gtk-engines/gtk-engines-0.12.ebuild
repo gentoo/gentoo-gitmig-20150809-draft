@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-0.12.ebuild,v 1.1 2005/08/03 06:38:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-0.12.ebuild,v 1.2 2005/08/03 09:34:37 leonardop Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org gnuconfig
@@ -22,7 +22,7 @@ src_unpack() {
 
 	if use alpha || use amd64 || use ppc64 ; then
 		gnuconfig_update || die 'gnuconfig_update failed'
-		libtoolize --force || die 'libtoolize failed'
+		libtoolize --copy --force || die 'libtoolize failed'
 	fi
 }
 

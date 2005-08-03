@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.33 2005/08/03 06:38:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.34 2005/08/03 09:34:37 leonardop Exp $
+
+  03 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-0.12.ebuild:
+  Pass the --copy option to libtoolize (bug #96242).
 
 *gtk-engines-2.6.4-r1 (03 Aug 2005)
 
