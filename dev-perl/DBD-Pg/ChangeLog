@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.33 2005/07/24 13:30:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.34 2005/08/03 22:24:31 kloeri Exp $
+
+  03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> DBD-Pg-1.43.ebuild:
+  Stable on alpha.
 
   24 Jul 2005; Michael Cummings <mcummings@gentoo.org> DBD-Pg-1.43.ebuild:
   Bumping to stable, see bug 99954
