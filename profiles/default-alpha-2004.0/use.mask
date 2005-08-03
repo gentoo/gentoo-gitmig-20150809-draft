@@ -97,3 +97,5 @@ pyste
 # can't test wireless currently
 wifi
 
+# dbus is not currently supported by alpha
+dbus
