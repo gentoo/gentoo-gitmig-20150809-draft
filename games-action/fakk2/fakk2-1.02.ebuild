@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.8 2005/06/09 20:41:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.9 2005/08/03 14:21:05 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -43,8 +43,9 @@ src_install() {
 	exeinto ${dir}/fakk
 	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/fakk/{c,f}game.so
 	if use nocd ; then
-		insinto ${dir}fakk
+		insinto ${dir}/fakk
 		doins ${CDROM_ROOT}/fakk/pak{0,1,2,3}.pk3
+		doins ${CDROM_ROOT}/fakk/default.cfg
 	fi
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
