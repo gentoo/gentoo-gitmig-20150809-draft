@@ -1,8 +1,18 @@
-MD5 61b597601bee1a7d6a3805044e856b18 htmldoc-1.8.24.ebuild 1324
-MD5 43894bc5d8432f559664896a6b1c3964 htmldoc-1.8.20-r1.ebuild 1347
-MD5 6ebb69ff06baf9bca8a94630140b25bc ChangeLog 3303
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2fcd7a8b4d2470d5ad7b7d19bcd161d ChangeLog 3399
 MD5 97590895b235e703505b5e203761757d htmldoc-1.8.23.ebuild 1289
-MD5 a1859265d921a0a2270b8db008396c83 files/digest-htmldoc-1.8.24 75
+MD5 43894bc5d8432f559664896a6b1c3964 htmldoc-1.8.20-r1.ebuild 1347
+MD5 672530eb7714edf90c31ed7331d9e3fa htmldoc-1.8.24.ebuild 1323
 MD5 06678439bd4de915b822ec99aa90b426 files/fonts.diff 353
-MD5 4fd3b7ec1b30af0be9c2fd4695062c0c files/digest-htmldoc-1.8.20-r1 77
 MD5 37ab4f0733aa74e1862ba433b9a56936 files/digest-htmldoc-1.8.23 75
+MD5 a1859265d921a0a2270b8db008396c83 files/digest-htmldoc-1.8.24 75
+MD5 4fd3b7ec1b30af0be9c2fd4695062c0c files/digest-htmldoc-1.8.20-r1 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8TB9Kf2g/qXtneoRApmDAJ9g7JQeJlJkUnbge8VmfR78olG4/gCfQoz9
+keepqhl01R369bJA5tOtWRY=
+=Qi9b
+-----END PGP SIGNATURE-----
