@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/beep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.17 2005/06/28 01:48:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.18 2005/08/03 22:57:06 slarti Exp $
+
+
+*beep-1.2.2-r1 (04 Aug 2004)
+
+  03 Aug 2005; Tom Martin <slarti@gentoo.org>
+  +files/beep-1.2.2-nosuid.patch, +beep-1.2.2-r1.ebuild:
+  New non-suid patch from Ned Ludd <solar@gentoo.org>.
 
   28 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> beep-1.2.2.ebuild:
   Stable on sparc

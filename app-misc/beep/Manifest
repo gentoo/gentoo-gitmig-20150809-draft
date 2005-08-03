@@ -1,14 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 05cd789d08366ed598b83f002441ff33 ChangeLog 1873
+MD5 14824e166af3dc18130d7a895acf634e beep-1.2.2-r1.ebuild 785
 MD5 dd3d9cc0fdfaa622a04cb071b1074feb metadata.xml 262
 MD5 314c91e1ae2eb056760aab61780e9e3d beep-1.2.2.ebuild 685
-MD5 5afa577d21ef40b948ae0067cbf6e2e9 ChangeLog 1685
+MD5 32c9843b54fcfb0268d6d8f197f84f4d files/digest-beep-1.2.2-r1 61
 MD5 32c9843b54fcfb0268d6d8f197f84f4d files/digest-beep-1.2.2 61
+MD5 38e2fc3ea98ced50038799ca80fdd9ee files/beep-1.2.2-nosuid.patch 1528
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCwKyJKRy60XGEcJIRAvuxAJ97XCMwFK2apUkt7Bx856XCBYWgBACcCOpL
-2eee5kB9uzbPKJxmFcIIW64=
-=bVT+
+iD8DBQFC8VnkCHk4+ZoBpvsRAv1AAKCt2jKND7HSIutQcYJoowQosjxoBACgi2UJ
+3ESdhhIxA3ZVI07atPhG3ME=
+=7dQi
 -----END PGP SIGNATURE-----
