@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.4 2005/08/01 17:52:25 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.5 2005/08/03 03:42:22 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -8,6 +8,7 @@ DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 HOMEPAGE="http://www.snort.org/"
 SRC_URI="http://www.snort.org/dl/current/${P}.tar.gz
 	mirror://gentoo/snort-2.4.0-genpatches.tar.bz2
+	${HOMEPAGE}/pub-bin/downloads.cgi/Download/comm_rules/Community-Rules.tar.gz
 	snortsam? ( mirror://gentoo/snortsam-20050110.tar.gz )"
 
 LICENSE="GPL-2"
@@ -115,8 +116,9 @@ src_install() {
 	chown snort:snort ${D}/var/log/snort
 	chmod 0770 ${D}/var/log/snort
 
-	# create directory to store rules in
-	dodir ${D}/etc/snort/rules
+	# install community rules
+	mkdir ${D}/etc/snort/rules
+	mv ${WORKDIR}/rules/* ${D}/etc/snort/rules/
 }
 
 pkg_postinst() {
@@ -134,7 +136,8 @@ pkg_postinst() {
 		einfo "Also, read the following Gentoo forums article:"
 		einfo '   http://forums.gentoo.org/viewtopic.php?t=78718'
 	fi
-	ewarn "Rules are no longer included with snort."
-	ewarn "Please add your rules to /etc/snort/rules."
-	ewarn "For more information, visit ${HOMEPAGE}."
+	einfo
+	ewarn "Only a basic set of rules was installed."
+	ewarn "Please add your other sets of rules to /etc/snort/rules."
+	ewarn "For more information on rules, visit ${HOMEPAGE}."
 }

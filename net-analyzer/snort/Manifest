@@ -2,14 +2,14 @@ MD5 d260806298835b9bfcc80b179e5b1eab snort-2.3.3.ebuild 4136
 MD5 6729044349818112d48229f571e0df26 snort-2.3.0-r1.ebuild 4432
 MD5 87eb5fabe8e71e96dfd07539dd506b7b snort-2.3.3-r1.ebuild 4039
 MD5 ce3a775cfe7b086e8634cfbc7378e29e snort-2.3.2.ebuild 4438
-MD5 8ab0818ae412fd44e275fefe81e86a2b snort-2.4.0.ebuild 3873
-MD5 3815088a8d53a294ea0e5069219a5871 ChangeLog 14995
+MD5 1c4f5ca045321cdbabff8c68c724cc98 snort-2.4.0.ebuild 4015
+MD5 763d458be455a26f51efe2e0c262708f ChangeLog 15095
 MD5 53edc4328d9adeaf087c65ea94b1594b metadata.xml 246
 MD5 04f9ed946469f7954b6bd27f8f1aca39 files/digest-snort-2.3.3-r1 284
 MD5 919058894f4983c35900bc8bb98a96d4 files/snort.rc6 764
 MD5 564bfdf90fe29f5924c68885ccfcddb8 files/2.3.0-libnet-1.0.patch 5424
 MD5 5d26c971694357c500d666e68622a120 files/digest-snort-2.3.2 287
 MD5 24851ef65be2d80a70ba4bebe3e8c0ff files/digest-snort-2.3.3 287
-MD5 19b0308c62da87468000788dcc7f4ee2 files/digest-snort-2.4.0 205
+MD5 aa391777096e34289f4f134153224986 files/digest-snort-2.4.0 271
 MD5 446f8d2b3435b8a6be738da978670605 files/snort.confd 423
 MD5 a9fc70d50c4512c835aa428f4b198fae files/digest-snort-2.3.0-r1 287
