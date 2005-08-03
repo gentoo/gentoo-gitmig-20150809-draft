@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.131 2005/07/19 21:36:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.132 2005/08/03 15:14:02 gustavoz Exp $
+
+  03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> db-3.2.9-r10.ebuild:
+  Stable on sparc #86985
 
   19 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> db-4.2.52_p2.ebuild:
   Stable on alpha.
