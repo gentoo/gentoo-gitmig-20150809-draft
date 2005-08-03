@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7b84d569786855226691bbcd373067bd enchant-1.1.3.ebuild 991
-MD5 80b858d7e671380d0fad094c3c4da616 enchant-1.1.5.ebuild 850
+MD5 2802e1c739c53c94b18190d58a4cbb1e ChangeLog 4857
+MD5 4eac764d0273b6613d35e97a919144dc enchant-1.1.6.ebuild 874
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 0c8d768b1b2ccb56112aff3f50342bb8 enchant-1.1.6.ebuild 877
-MD5 aa67f9c44798a04551608f534d528dd8 ChangeLog 4764
-MD5 cdba960f66d079da7010a9f923d08c3b files/enchant-1.0.0-alpha.patch 1233
+MD5 80b858d7e671380d0fad094c3c4da616 enchant-1.1.5.ebuild 850
+MD5 7b84d569786855226691bbcd373067bd enchant-1.1.3.ebuild 991
 MD5 8bccf06a05a9b80bd498b594b05cd31d files/digest-enchant-1.1.3 65
-MD5 add892a58d196e07677ca26ef24bad65 files/digest-enchant-1.1.5 65
 MD5 e5f6510c32081fd91a07712771bb061e files/digest-enchant-1.1.6 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC7mjMKRy60XGEcJIRAs7OAJ4iLhiZ4sKfV4uOnPg5A09FwZYmFQCfYd7C
-yrfqGt+mojxt/abA9lhpVBE=
-=eq9E
------END PGP SIGNATURE-----
+MD5 add892a58d196e07677ca26ef24bad65 files/digest-enchant-1.1.5 65
+MD5 cdba960f66d079da7010a9f923d08c3b files/enchant-1.0.0-alpha.patch 1233
