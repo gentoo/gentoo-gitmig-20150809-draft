@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.84 2005/07/21 15:42:28 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.85 2005/08/03 14:57:30 suka Exp $
+
+*openoffice-bin-1.9.122 (03 Aug 2005)
+
+  03 Aug 2005; Andreas Proschofsky <suka@gentoo.org>
+  +openoffice-bin-1.9.122.ebuild:
+  New testing release, ebuild simplified a bit, thanks to some saner packaging
+  on behalf of the OOo-people
 
 *openoffice-bin-1.9.118 (21 Jul 2005)
 
