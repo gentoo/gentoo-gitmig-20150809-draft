@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.10 2005/08/03 08:40:33 dholm Exp $
 #
 # Author: David Holm <dholm@gentoo.org>
 #
@@ -42,6 +42,7 @@ gnat_pkg_setup() {
 	export ADACFLAGS=${ADACFLAGS//athlon-tbird/i686}
 	export ADACFLAGS=${ADACFLAGS//athlon-4/i686}
 	export ADACFLAGS=${ADACFLAGS//athlon-[xm]p/i686}
+	export ADACFLAGS=${ADACFLAGS//athlon64/i686}
 	export ADACFLAGS=${ADACFLAGS//athlon/i686}
 	export ADACFLAGS=${ADACFLAGS//-Os/-O2}
 
