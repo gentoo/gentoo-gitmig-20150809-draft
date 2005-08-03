@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r12.ebuild,v 1.2 2005/07/07 18:36:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r12.ebuild,v 1.3 2005/08/03 02:55:34 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -59,6 +59,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-trap-fg-signals.patch
 	# Fix a problem when using pipes and PGRP_PIPE #92349
 	epatch "${FILESDIR}"/${P}-pgrp-pipe-fix.patch
+	# Make sure static linking always works #100138
+	epatch "${FILESDIR}"/${P}-force-static-linking.patch
 	# Log bash commands to syslog #91327
 	if use bashlogger ; then
 		echo

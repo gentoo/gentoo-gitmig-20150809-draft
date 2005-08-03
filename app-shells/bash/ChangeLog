@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.71 2005/07/07 18:36:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.72 2005/08/03 02:55:34 vapier Exp $
+
+  03 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/bash-3.0-force-static-linking.patch, bash-3.0-r12.ebuild:
+  Make sure Darwin links properly against included readline #100138.
 
   07 Jul 2005; Martin Schlemmer <azarah@gentoo.org> bash-3.0-r12.ebuild:
   Add parallel build fix patch back again.
