@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.28 2005/07/31 14:51:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.29 2005/08/03 15:24:32 killerfox Exp $
+
+  03 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org> genlop-0.30.3.ebuild:
+  Stable on hppa.
 
   31 Jul 2005; Michael Cummings <mcummings@gentoo.org> metadata.xml,
   genlop-0.30.3.ebuild:
