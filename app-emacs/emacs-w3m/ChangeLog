@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.35 2005/06/26 08:58:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.36 2005/08/03 18:52:04 kloeri Exp $
+
+  03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> emacs-w3m-1.4.4.ebuild:
+  Stable on alpha.
 
   26 Jun 2005; Simon Stelling <blubb@gentoo.org> emacs-w3m-1.4.4.ebuild:
   added ~amd64 keyword
