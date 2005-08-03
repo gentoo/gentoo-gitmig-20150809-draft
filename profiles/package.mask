@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4255 2005/08/03 23:03:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4256 2005/08/03 23:43:18 mcummings Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -889,7 +889,7 @@ sys-kernel/config-kernel
 # in, but without the apache2 USE.  Also must decide whether or not to
 # depend on ApacheHandler2.
 =www-apache/mod_perl-1.99.16
-www-apache/libapreq2
+#www-apache/libapreq2
 
 # <chriswhite@gentoo.org> (25 Aug 2004)
 # alpha version, seems ok to ~arch, but just to be safe..
