@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/reinhardtstyle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/reinhardtstyle/ChangeLog,v 1.5 2005/03/08 15:31:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/reinhardtstyle/ChangeLog,v 1.6 2005/08/03 18:25:18 gustavoz Exp $
+
+  03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  reinhardtstyle-0.8.2.ebuild:
+  Stable on sparc
 
   08 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> reinhardtstyle-0.8.2.ebuild,
   -reinhardtstyle-0.8.ebuild:

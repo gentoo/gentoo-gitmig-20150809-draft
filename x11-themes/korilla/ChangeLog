@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/korilla
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/korilla/ChangeLog,v 1.6 2004/06/28 22:36:20 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/korilla/ChangeLog,v 1.7 2005/08/03 18:23:53 gustavoz Exp $
+
+  03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> korilla-1.3.4.ebuild:
+  Stable on sparc
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> korilla-1.3.3.ebuild,
   korilla-1.3.4.ebuild:
