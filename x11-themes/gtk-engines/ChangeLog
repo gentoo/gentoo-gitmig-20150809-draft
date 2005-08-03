@@ -1,6 +1,21 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.32 2005/07/29 00:40:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.33 2005/08/03 06:38:09 leonardop Exp $
+
+*gtk-engines-2.6.4-r1 (03 Aug 2005)
+
+  03 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-2.6.4-r1.ebuild:
+  Added 'static' and 'accessibility' USE flags. The latter controls the
+  installation of the HighContrast engine.
+
+*gtk-engines-2.6.3-r1 (03 Aug 2005)
+*gtk-engines-0.12 (03 Aug 2005)
+
+  03 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-0.12.ebuild, gtk-engines-2.6.3-r1.ebuild:
+  Don't inherit from gtk-engines2.eclass. Split and re-slot the ebuilds
+  accordingly. Removed unnecessary blocks. Resolves bug #24439.
 
 *gtk-engines-2.6.4 (28 Jul 2005)
 
