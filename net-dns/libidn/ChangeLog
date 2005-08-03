@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.33 2005/07/22 19:21:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.34 2005/08/03 13:56:24 carlo Exp $
+
+  03 Aug 2005; Carsten Lohrke <carlo@gentoo.org> libidn-0.5.18.ebuild:
+  Depend on Java >=1.4.
 
 *libidn-0.5.18 (22 Jul 2005)
 
