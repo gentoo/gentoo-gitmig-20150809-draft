@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.17 2005/07/17 13:40:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.18 2005/08/03 16:24:28 ferdy Exp $
+
+  03 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  autoconf-wrapper-3-r1.ebuild:
+  stable on alpha
 
   17 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   autoconf-wrapper-3-r1.ebuild:
