@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.38.ebuild,v 1.8 2005/07/25 19:46:48 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.38.ebuild,v 1.9 2005/08/03 03:14:01 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -32,8 +32,13 @@ src_unpack() {
 }
 
 src_compile() {
+	local libtype
+	case ${USERLAND} in
+		Darwin) libtype=bsd;;
+		*)      libtype=elf;;
+	esac
 	econf \
-		--enable-elf-shlibs \
+		--enable-${libtype}-shlibs \
 		--with-ldopts="${LDFLAGS}" \
 		$(use_enable nls) \
 		|| die
