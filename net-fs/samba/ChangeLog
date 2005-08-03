@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.186 2005/08/01 15:25:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.187 2005/08/03 13:30:42 seemant Exp $
+
+  03 Aug 2005; Seemant Kulleen <seemant@gentoo.org> samba-3.0.14a-r2.ebuild:
+  do not install a blank smb.conf.  Fixes bug #70686
 
   01 Aug 2005; Joseph Jezak <josejx@gentoo.org> samba-3.0.14a-r2.ebuild:
   Marked ppc stable for bug #95327.
