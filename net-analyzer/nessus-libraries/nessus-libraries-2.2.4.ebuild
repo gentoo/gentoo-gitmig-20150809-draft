@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-2.2.4.ebuild,v 1.8 2005/06/09 00:51:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-2.2.4.ebuild,v 1.9 2005/08/03 19:23:03 grobian Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nessus.org/"
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ~ppc-macos ppc64 sparc x86"
 IUSE=""
 
 # Hard dep on SSL since libnasl won't compile when this package is emerged -ssl.

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.60 2005/07/24 03:31:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.61 2005/08/03 19:23:02 grobian Exp $
+
+  03 Aug 2005; Fabian Groffen <grobian@gentoo.org>
+  nessus-libraries-2.2.4.ebuild:
+  Markin ~ppc-macos
 
 *nessus-libraries-2.2.5 (24 Jul 2005)
 
