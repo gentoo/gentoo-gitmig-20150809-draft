@@ -1,22 +1,32 @@
-MD5 5be7f894f83cbdfcf9d194880de19196 ChangeLog 3081
-MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 79ac70bf478934f08dd231e40931a324 libpq-7.3.10.ebuild 3079
-MD5 923fe3a7c29dc71c373f77fb26bd6f16 libpq-7.4.8.ebuild 3078
-MD5 769c87b4c1e3ea2a25e870842d1d7e65 libpq-8.0.1.ebuild 3078
-MD5 91a0a83522c4f3ef262b8d8ad33f9d44 libpq-8.0.3.ebuild 3077
-MD5 d409e4f7643212a8765cc3e7a2987740 libpq-7.3.10-r1.ebuild 3085
-MD5 5a35081c2ebdf81155554643603d8e78 libpq-7.4.8-r1.ebuild 3084
-MD5 5f020ce0e3eebe655d184ae1bf7805fc libpq-8.0.1-r1.ebuild 3084
 MD5 e499ffca984d9aa3b99803b11e42835d libpq-8.0.3-r1.ebuild 3084
-MD5 f7905db93301407b9caf37581e270d1f files/digest-libpq-7.3.10 76
-MD5 07e1154edfd02b73a7772384ce2238b2 files/libpq-7.3.10-gentoo.patch 2072
-MD5 5256293555f24dec0d84734c19784174 files/libpq-7.4.8-gentoo.patch 2599
-MD5 582e557cd0b0ea25adf5798062de0f76 files/digest-libpq-7.4.8 75
-MD5 0540e6c42fdd652b981e236ea835c524 files/digest-libpq-8.0.1 75
+MD5 7cb3d4c40ad6f6aa3ecc72fed0ca7aae ChangeLog 3170
+MD5 8d3bf6998403ad05b941b5251beca568 libpq-8.0.3.ebuild 3072
+MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+MD5 5a35081c2ebdf81155554643603d8e78 libpq-7.4.8-r1.ebuild 3084
+MD5 d409e4f7643212a8765cc3e7a2987740 libpq-7.3.10-r1.ebuild 3085
+MD5 923fe3a7c29dc71c373f77fb26bd6f16 libpq-7.4.8.ebuild 3078
+MD5 5f020ce0e3eebe655d184ae1bf7805fc libpq-8.0.1-r1.ebuild 3084
+MD5 769c87b4c1e3ea2a25e870842d1d7e65 libpq-8.0.1.ebuild 3078
 MD5 b8a68c8f7fbe4116f7d39a520a3da8c9 files/digest-libpq-8.0.3 75
-MD5 a29e8334813c549e8d3d7bcc2e364a66 files/libpq-8.0.1-gentoo.patch 2306
-MD5 91bb6f54ae3772de8b4b98ef69b79f95 files/libpq-8.0.3-gentoo.patch 2306
+MD5 f7905db93301407b9caf37581e270d1f files/digest-libpq-7.3.10 76
+MD5 5256293555f24dec0d84734c19784174 files/libpq-7.4.8-gentoo.patch 2599
 MD5 f7905db93301407b9caf37581e270d1f files/digest-libpq-7.3.10-r1 76
-MD5 582e557cd0b0ea25adf5798062de0f76 files/digest-libpq-7.4.8-r1 75
+MD5 0540e6c42fdd652b981e236ea835c524 files/digest-libpq-8.0.1 75
 MD5 0540e6c42fdd652b981e236ea835c524 files/digest-libpq-8.0.1-r1 75
+MD5 91bb6f54ae3772de8b4b98ef69b79f95 files/libpq-8.0.3-gentoo.patch 2306
+MD5 07e1154edfd02b73a7772384ce2238b2 files/libpq-7.3.10-gentoo.patch 2072
+MD5 582e557cd0b0ea25adf5798062de0f76 files/digest-libpq-7.4.8-r1 75
+MD5 582e557cd0b0ea25adf5798062de0f76 files/digest-libpq-7.4.8 75
 MD5 b8a68c8f7fbe4116f7d39a520a3da8c9 files/digest-libpq-8.0.3-r1 75
+MD5 a29e8334813c549e8d3d7bcc2e364a66 files/libpq-8.0.1-gentoo.patch 2306
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8TG8Kf2g/qXtneoRAl3dAKC81vsIVY5QlQfk4LOt0P5Stnn7zwCgsMUV
+xmRnuI9dBjhZNyqOwl8/ZaE=
+=mWKK
+-----END PGP SIGNATURE-----
