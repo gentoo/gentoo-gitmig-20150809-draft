@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/nwutil-1.4.ebuild,v 1.2 2005/05/29 03:54:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/nwutil-1.4.ebuild,v 1.3 2005/08/03 05:32:01 vapier Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch "${WORKDIR}"/${PN}_${PV}-${DEB_VER}.diff
 	epatch "${FILESDIR}"/${PV}-errno.patch
 	epatch "${FILESDIR}"/${PV}-rename-debug.patch
+	epatch "${FILESDIR}"/${P}-temp.patch
 	mv {,nw}debug.c
 	mv {,nw}debug.8
 }

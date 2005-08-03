@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/nwutil
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/ChangeLog,v 1.2 2005/03/06 11:57:15 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/ChangeLog,v 1.3 2005/08/03 05:32:01 vapier Exp $
+
+  03 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/nwutil-1.4-temp.patch, nwutil-1.4.ebuild:
+  Add support for /dev/temp.
 
 *nwutil-1.4 (06 Mar 2005)
 

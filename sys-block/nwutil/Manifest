@@ -1,6 +1,17 @@
-MD5 3f59e0f57a79be4a5eacc5eb3105ac03 ChangeLog 569
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 48834ccc5ffa5b7734f8cac702fcd38a metadata.xml 156
-MD5 2e670cddeea8a3c42cecfd1b90fc32bb nwutil-1.4.ebuild 1045
-MD5 9f531354a568f2d63816ddc8ebfa9494 files/1.4-errno.patch 276
-MD5 78ccbcfded4d224832705ac6aabfe671 files/1.4-rename-debug.patch 1496
+MD5 410923b66a49eeb88f9217983b673865 nwutil-1.4.ebuild 1083
+MD5 31eee1cece4f32ec94063ffd2e221684 ChangeLog 698
 MD5 1d309a746225866dceb538c121b2a30e files/digest-nwutil-1.4 129
+MD5 83b266f1561f7257ee4887deba20a8db files/nwutil-1.4-temp.patch 625
+MD5 78ccbcfded4d224832705ac6aabfe671 files/1.4-rename-debug.patch 1496
+MD5 9f531354a568f2d63816ddc8ebfa9494 files/1.4-errno.patch 276
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8FbkgIKl8Uu19MoRApk8AJ9cDgB8abR8SdfRo9Ug47nCjWDeFwCeL+bB
+m8DO1Z0x9nBF2fmMxuMmZ/A=
+=Smdw
+-----END PGP SIGNATURE-----
