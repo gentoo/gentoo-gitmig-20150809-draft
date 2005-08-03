@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.27 2005/08/03 16:03:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.28 2005/08/03 16:49:26 wolf31o2 Exp $
+
+  03 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3355-r2.ebuild:
+  Removed ed/sed since Default.ini and DefUser.ini are provided by ut2004-data
+  package.
 
 *ut2004-3355-r2 (03 Aug 2005)
 
