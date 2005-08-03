@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.6-r4.ebuild,v 1.1 2005/08/02 12:48:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.6-r4.ebuild,v 1.2 2005/08/03 13:55:55 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -10,7 +10,6 @@ HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2
 	mirror://gentoo/mozilla-firefox-1.0-4ft2.patch.bz2
 	mirror://gentoo/mozilla-jslibmath-alpha.patch
-	mirror://gentoo/mozilla-1.7.10-nsplugins-v2.patch
 	http://dev.gentoo.org/~agriffis/dist/mozilla-1.7.10-nsplugins-v2.patch"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
