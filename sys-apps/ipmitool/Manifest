@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b6962ecf6a6ea11370cc060c369875c ChangeLog 519
+MD5 84d5aba6bc251fc215f4bd7d01098009 ipmitool-1.8.2.ebuild 1378
+MD5 dca556937025c0e40db45429ba04ba65 ChangeLog 658
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 810778c03057c7b602bf8db839167cd7 ipmitool-1.6.0.ebuild 1271
 MD5 9e684edfb59e7bdfdf6543de51308e5a files/digest-ipmitool-1.6.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCkzmqCHk4+ZoBpvsRArEKAJ4tc48yCz9LLN7PH8ml0NIIZGFeywCghmSn
-CXIe+hRIf8sWaM3TFdnDhIg=
-=aiHs
------END PGP SIGNATURE-----
+MD5 189b9507213ce05a1e7e1674b6c95b94 files/digest-ipmitool-1.8.2 66
