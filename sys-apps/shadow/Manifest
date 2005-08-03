@@ -3,10 +3,11 @@ MD5 db870979ea0f600d0bd8137520e2251a shadow-4.0.4.1-r4.ebuild 5961
 MD5 a51d02eb155feb33913816239bb3cf57 shadow-4.0.7.ebuild 5602
 MD5 c2ab407aa2ff8ce76a2600f2d4c6a3b2 shadow-4.0.7-r3.ebuild 7074
 MD5 0faad34d69a5e1bba61af947618ae795 shadow-4.0.7-r4.ebuild 7206
-MD5 5c67a171ae58363c905c519129df38c4 ChangeLog 21557
-MD5 fe05ae3df6e7ba8f80c93d14ed85ab2a shadow-4.0.11.1-r1.ebuild 6969
+MD5 b77171d0f44cc7fca9087783686e5a5e ChangeLog 21911
+MD5 9207341a86bfedb9b013c51841923921 shadow-4.0.11.1-r1.ebuild 7104
 MD5 ad25974e54da8203a96dddffef6a46ce shadow-4.0.10.ebuild 6753
 MD5 ac3c5c29460f248d06d4ef83c96ca912 shadow-4.0.7-r1.ebuild 6602
+MD5 45dacbf514dc7fc556ac8088d18ceda2 shadow-4.0.11.1.ebuild 6787
 MD5 fad39eceb7fd04f2805c6acc16c59d57 shadow-4.0.5-r2.ebuild 5440
 MD5 06049e2959c62c88aee32422a37bf07f shadow-4.0.6-r1.ebuild 5641
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
@@ -17,10 +18,10 @@ MD5 d14e133da535d64d1b397784e17c213a files/shadow-4.0.5-login.defs.patch 766
 MD5 b4d0fc0f54800978591791493d6b2ec3 files/shadow-4.0.6-dots-in-usernames.patch 1993
 MD5 46c2be2ed8b26ec007e3ed1f476491d8 files/digest-shadow-4.0.7-r4 66
 MD5 46c2be2ed8b26ec007e3ed1f476491d8 files/digest-shadow-4.0.7-r3 66
-MD5 e983d3bcaf48f607dc79c9c69b5238a5 files/shadow-4.0.11.1-SUPATH.patch 878
+MD5 44f064b586ea49c8e2dc1fca8b9e4599 files/shadow-4.0.11.1-SUPATH.patch 1614
 MD5 6355d65b618395c4adf46f733269546c files/shadow-4.0.10-dots-in-usernames.patch 1894
 MD5 d8b8542a7bc013011a293732ca504a50 files/digest-shadow-4.0.5-r2 66
-MD5 3a50ee0f5e03479ab7db7f3987cd8107 files/shadow-4.0.11.1-ngettext.patch 1064
+MD5 450a2289f2a383296ad9af005e46da74 files/shadow-4.0.11.1-ngettext.patch 1038
 MD5 c5e9081ed43837797e2f1617b7ce1c24 files/shadow-4.0.5-fix-adding-of-pam_env-set-env-vars.patch 285
 MD5 c87c0968ace90b32753b91f93ad7bab1 files/shadow-4.0.11.1-uclibc-missing-l64a.patch 1269
 MD5 391991f50203bd8b7738474051befdee files/shadow-4.0.5-remove-else.patch 531
