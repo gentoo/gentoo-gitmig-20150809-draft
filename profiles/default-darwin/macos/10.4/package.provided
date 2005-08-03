@@ -113,7 +113,7 @@ sys-devel/libtool-1.5
 sys-devel/m4-1.4
 sys-devel/make-3.80
 sys-devel/patch-2.5.8
-sys-libs/db-1.85-r2
+sys-libs/db-4.2.52.1
 sys-libs/db-6
 sys-libs/ncurses-8.1
 sys-libs/pam-1.9

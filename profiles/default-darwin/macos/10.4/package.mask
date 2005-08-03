@@ -1,0 +1,30 @@
+##
+# These packages will, or depend on packages that will overwrite collision-protected files 
+##
+app-arch/zip
+app-arch/unzip
+app-editors/nano
+app-editors/vim-core
+app-shells/bash
+app-shells/zsh
+dev-libs/libprelude
+dev-libs/libxml2
+media-libs/a52dec
+net-misc/curl
+sys-apps/diffutils
+sys-apps/grep
+sys-apps/texinfo
+sys-devel/gcc-apple
+sys-devel/autoconf
+sys-devel/autoconf-wrapper
+sys-devel/automake
+sys-devel/automake-wrapper
+sys-devel/bison
+sys-devel/flex
+sys-libs/ncurses
+##
+# end collision-protect
+##
+
+
+app-arch/cpio
