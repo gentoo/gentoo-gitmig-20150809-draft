@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 311606b5a29f0e9dec326da2e0fa384c reinhardtstyle-0.8.2.ebuild 606
 MD5 75802b48054cb3eddc5575454e4798a8 ChangeLog 946
 MD5 953776f9d36d0ae63bbb815edd2487f4 files/digest-reinhardtstyle-0.8.2 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC8QwqKRy60XGEcJIRAq9cAJ9mNqaycHSu3US1o8CC6cA16nPP2QCeJEWj
+o1pVglflYP73a6QdQVuIc7Q=
+=D4ai
+-----END PGP SIGNATURE-----
