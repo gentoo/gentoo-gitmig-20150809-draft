@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6.ebuild,v 1.1 2005/07/31 06:33:00 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6.ebuild,v 1.2 2005/08/03 18:08:21 betelgeuse Exp $
 
 inherit eutils java-pkg
 
-DESCRIPTION="Reduce Java dependency headaches by repackaging third-party jars (evil!)."
+DESCRIPTION="Tool for repackaging third-party jars."
 SRC_URI="mirror://sourceforge/jarjar/${PN}-src-${PV}.zip"
 HOMEPAGE="http://jarjar.sourceforge.net"
 LICENSE="GPL-2"
