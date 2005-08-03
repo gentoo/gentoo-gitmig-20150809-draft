@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.11.ebuild,v 1.11 2005/07/22 09:16:12 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.11.ebuild,v 1.12 2005/08/03 14:02:15 satya Exp $
 
 inherit eutils versionator
 
@@ -304,5 +304,9 @@ pkg_postinst() {
 }
 
 pkg_postrm(){
-	[ -n "${PF}" ] && rm -rf ${ROOT}/usr/share/doc/${PF}
+	# If stale docs, and one isn't re-emerging the latest version, removes
+	# (this is really a portage bug, though)
+	[[ -n "${PF}" && ! -f ${ROOT}/usr/lib/${PN}/en.msg ]] && \
+		rm -rf ${ROOT}/usr/share/doc/${PF}
 }
+
