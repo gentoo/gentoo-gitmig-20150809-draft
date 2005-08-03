@@ -17,11 +17,11 @@ MD5 0fd51a0eb686552fb6ec45a0bc151d75 files/digest-skype-1.1.0.3-r1 209
 MD5 3ebd302142d17df643fa2055d99d0fc7 files/sDaemonWrapper 1740
 MD5 775f4eceb67dc9859f7d9a671f3b7216 files/sDaemonWrapper-r1 1984
 MD5 5105ec59acb037592219bdc10c0f09b7 files/skype.debus.config 436
-MD5 466c01f0230c46fea86d65b8bb775c39 files/digest-skype-1.2.0.11 210
+MD5 ee77a8f132435fc5acd0d4291c24262e files/digest-skype-1.2.0.11 211
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC7VJvZ/iYVBmujdURAsrmAKDBDRyvY0UAdqKXF/L9e9R89CAHMACg8t4E
-AccHqR9v3Nx3DzuspwqcOqs=
-=7G+C
+iD8DBQFC8TMnZ/iYVBmujdURAk6zAKDd4WtJQpM0bCgQqeM4sZR0ee6HiwCgkyF7
+irue17OUjyFHI5VtLge9KKA=
+=5+ku
 -----END PGP SIGNATURE-----
