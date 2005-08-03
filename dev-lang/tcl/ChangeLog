@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.58 2005/07/02 15:25:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.59 2005/08/03 22:08:10 kloeri Exp $
+
+  03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> tcl-8.4.9.ebuild:
+  Stable on alpha.
 
   02 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> tcl-8.4.11.ebuild:
   Added PDEPEND. Bug 97357.
