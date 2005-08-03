@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r5.ebuild,v 1.1 2005/07/30 06:20:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r5.ebuild,v 1.2 2005/08/03 23:30:21 vapier Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 MY_P=netkit-${P}
 S=${WORKDIR}/${MY_P}
@@ -22,14 +22,15 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${MY_P}-ssl-0.2.patch
-	epatch ${FILESDIR}/${MY_P}-ipv6.patch #47507
-	epatch ${FILESDIR}/${MY_P}-acct.patch #fedora
-	epatch ${FILESDIR}/${MY_P}-locale.patch #fedora
-	epatch ${FILESDIR}/${MY_P}-runique_mget.patch #fedora
-	epatch ${FILESDIR}/${MY_P}-security.patch #fedora
-	epatch ${FILESDIR}/${MY_P}-custom-cflags.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${MY_P}-ssl-0.2.patch
+	epatch "${FILESDIR}"/${MY_P}-ipv6.patch #47507
+	epatch "${FILESDIR}"/${MY_P}-acct.patch #fedora
+	epatch "${FILESDIR}"/${MY_P}-locale.patch #fedora
+	epatch "${FILESDIR}"/${MY_P}-runique_mget.patch #fedora
+	epatch "${FILESDIR}"/${MY_P}-security.patch #fedora
+	epatch "${FILESDIR}"/${MY_P}-custom-cflags.patch
+	append-lfs-flags #101038
 }
 
 src_compile() {

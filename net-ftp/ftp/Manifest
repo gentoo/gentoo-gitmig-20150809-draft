@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 80ca646c7ebf7d86e937294242836ea6 ftp-0.17-r3.ebuild 1034
-MD5 3f87b12ec2fd324d969252f9c79a7189 ftp-0.17-r5.ebuild 1358
-MD5 d82b626aa5debb440706a2a8e1f8c1a0 ChangeLog 3117
+MD5 45fd632e8f4c81f73a7ab97dac005132 ftp-0.17-r5.ebuild 1413
+MD5 113d82c24735402ad5beb99e5fe27f79 ChangeLog 3242
 MD5 c9de5d7e13b9b74cb2daf693a6536a78 ftp-0.17-r4.ebuild 1362
 MD5 fde0162cb11d557f9dee994e764ec49f files/netkit-ftp-0.17-ipv6.patch 22300
 MD5 a2ce6225bb6a68ca98d6ddec516237b9 files/netkit-ftp-0.17-security.patch 509
@@ -21,7 +21,7 @@ MD5 4396c484fc1661431ba229441923c274 files/netkit-ftp-0.17-custom-cflags.patch 5
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6xxYgIKl8Uu19MoRApd1AJsFJRXPCBsMW5l9I3lu8BAWG+s0bwCfSbL7
-Uf7MxcP9B8ZXI5KR1Mh/hNc=
-=dzDj
+iD8DBQFC8VOdgIKl8Uu19MoRAiubAJ0c2CTi2sWVxps9RVbthHNAWRhLlACeJgwp
+lMlXgURJSKBGWQuJEjiOJiw=
+=JS+3
 -----END PGP SIGNATURE-----
