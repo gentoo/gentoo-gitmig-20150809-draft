@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.122 2005/08/03 11:48:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.123 2005/08/03 11:49:33 seemant Exp $
+
+  03 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/gnupg-1.2.4-hppa_unaligned_constant.patch,
+  -files/gnupg-1.2.4.ppc64.patch:
+  remove unneeded patches as well
 
   03 Aug 2005; Seemant Kulleen <seemant@gentoo.org> -gnupg-1.2.4.ebuild,
   gnupg-1.2.6.ebuild, -gnupg-1.4.0-r1.ebuild, -gnupg-1.4.0-r2.ebuild,

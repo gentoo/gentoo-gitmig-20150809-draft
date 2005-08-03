@@ -4,10 +4,8 @@ MD5 cfe5a67b1204af18a6b03edbdbaa5363 gnupg-1.4.1.ebuild 6292
 MD5 25cc01bef564eb349af85dbb81aa06dc gnupg-1.4.1-r1.ebuild 6365
 MD5 d6aec47f51e77081e719189d9e51766d gnupg-1.4.2.ebuild 6362
 MD5 65762289b0895c03fa47da7283a216a6 gnupg-1.9.15-r1.ebuild 3050
-MD5 c80acfbf10e69d2ecd1627a64763c79f ChangeLog 19960
+MD5 52c9a98591ebf3ab57b8bab9993efd6c ChangeLog 20133
 MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
-MD5 c6114a5a40f10aeca63d07b59fed650f files/gnupg-1.2.4-hppa_unaligned_constant.patch 1213
-MD5 cdb57d67164c7a63a167c33426c0a7a3 files/gnupg-1.2.4.ppc64.patch 471
 MD5 dd317d852aed29e96c5a542f00d0766e files/gnupg-1.2.6-ppc64.patch 454
 MD5 4b92f911e900cfd1a37439bd19412f5d files/digest-gnupg-1.4.1 190
 MD5 e62b7134c5c0c1b3aad6a08bfdf99b48 files/digest-gnupg-1.9.15-r1 66
