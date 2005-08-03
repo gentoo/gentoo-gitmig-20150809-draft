@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.5-r1.ebuild,v 1.2 2005/08/02 23:35:36 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.5-r1.ebuild,v 1.3 2005/08/03 02:37:58 nerdboy Exp $
 
-inherit toolchain-funcs eutils multilib
+inherit toolchain-funcs eutils
 
 DESCRIPTION="OGDI - Open Geographical Datastore Interface, a GIS support library"
 HOMEPAGE="http://ogdi.sourceforge.net"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ogdi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="sci-libs/proj
@@ -29,7 +29,7 @@ src_compile() {
 	export CFG="release"
 	export LD_LIBRARY_PATH=$TOPDIR/bin/${TARGET}
 
-	econf --with-projlib="-L/usr/$(get_libdir) -lproj" \
+	econf --with-proj=/usr --with-projlib="-L/usr/lib -lproj" \
 	    --with-zlib --with-expat || die "econf failed"
 	make || die "make failed"
 }
@@ -40,6 +40,6 @@ src_install() {
 	insinto /usr/include
 	doins ogdi/include/ecs.h ogdi/include/ecs_util.h
 	dolib.so lib/Linux/*.so
-	dosym /usr/$(get_libdir)/libogdi31.so /usr/$(get_libdir)/libogdi.so
+	dosym libogdi31.so /usr/$(get_libdir)/libogdi.so || die "symlink failed"
 	dodoc ChangeLog LICENSE NEWS README VERSION
 }

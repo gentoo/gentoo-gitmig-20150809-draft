@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.5.ebuild,v 1.2 2005/07/30 22:11:12 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.5.ebuild,v 1.3 2005/08/03 02:37:58 nerdboy Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ogdi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="sci-libs/proj
@@ -34,6 +34,6 @@ src_install() {
 	insinto /usr/include
 	doins ogdi/include/ecs.h ogdi/include/ecs_util.h
 	dolib.so lib/Linux/*.so
-	dosym /usr/lib/libogdi31.so /usr/lib/libogdi.so
+	dosym libogdi31.so /usr/$(get_libdir)/libogdi.so || die "symlink failed"
 	dodoc ChangeLog LICENSE NEWS README VERSION
 }
