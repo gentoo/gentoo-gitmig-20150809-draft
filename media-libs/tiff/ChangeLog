@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.63 2005/08/02 12:32:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.64 2005/08/03 21:21:08 sekretarz Exp $
+
+*tiff-3.7.3 (03 Aug 2005)
+
+  03 Aug 2005; <sekretarz@gentoo.org> +tiff-3.7.3.ebuild:
+  Version bump, bug #100793
 
   02 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> tiff-3.7.2.ebuild:
   Stable on sh.
