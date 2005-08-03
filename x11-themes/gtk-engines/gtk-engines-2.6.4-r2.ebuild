@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.6.4-r1.ebuild,v 1.2 2005/08/03 07:40:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.6.4-r2.ebuild,v 1.1 2005/08/03 15:17:31 leonardop Exp $
 
 inherit gnome2
 
@@ -22,5 +22,6 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable static) $(use_enable accessibility hc)"
+	G2CONF="${G2CONF} $(use_enable static)"
+	use accessibility || G2CONF="${G2CONF} --disable-hc"
 }
