@@ -1,17 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3b853208a763c60409534dfea44fd374 ChangeLog 8765
 MD5 ce231fc033009fe5fec7c7cee5634165 clisp-2.33.2-r2.ebuild 4238
 MD5 485cde76397408cf913fc6d4c7a45a67 metadata.xml 882
-MD5 85c22f7cd00999cd279e0ab19c3cc825 clisp-2.34.ebuild 4235
+MD5 526ef74ef049559d5aaf99b7c55dac8b clisp-2.34-r1.ebuild 4162
 MD5 9a2df7725b74af8b8b9f3db39b350e79 files/digest-clisp-2.33.2-r2 66
-MD5 d8868b134ba5463d87df11818719fcec files/digest-clisp-2.34 64
-MD5 66e5b3968b3a6ad0301ca028447b26b3 files/2.34/README.Gentoo 334
-MD5 fe93240f140623bf55d2e503f6d8e01e files/2.34/clisp.sh 2792
-MD5 a68a303f8d8e4eec8542f36167df1377 files/2.34/fastcgi-Makefile.in-gentoo.patch 662
-MD5 e415e209cc23163e624face90f97e024 files/2.34/glibc-linux.lisp-sigpause-gentoo.patch 614
-MD5 2f431f5c714c00d04b55e02a9d54f452 files/2.34/install-clc.lisp 501
+MD5 d8868b134ba5463d87df11818719fcec files/digest-clisp-2.34-r1 64
 MD5 66e5b3968b3a6ad0301ca028447b26b3 files/2.33.2/README.Gentoo 334
 MD5 fe93240f140623bf55d2e503f6d8e01e files/2.33.2/clisp.sh 2792
 MD5 8d8449ba456d4f8b789d4349496845b6 files/2.33.2/compilefix.patch 1174
 MD5 a9325cfeff703a21e63dbd2b3aad34c1 files/2.33.2/fastcgi-Makefile.in-gentoo.patch 670
 MD5 3eb393d2fbfe2e395744f45ce0d3e4f0 files/2.33.2/glibc-linux.lisp-sigpause-gentoo.patch 622
 MD5 2f431f5c714c00d04b55e02a9d54f452 files/2.33.2/install-clc.lisp 501
+MD5 66e5b3968b3a6ad0301ca028447b26b3 files/2.34/README.Gentoo 334
+MD5 fe93240f140623bf55d2e503f6d8e01e files/2.34/clisp.sh 2792
+MD5 a68a303f8d8e4eec8542f36167df1377 files/2.34/fastcgi-Makefile.in-gentoo.patch 662
+MD5 e415e209cc23163e624face90f97e024 files/2.34/glibc-linux.lisp-sigpause-gentoo.patch 614
+MD5 2f431f5c714c00d04b55e02a9d54f452 files/2.34/install-clc.lisp 501
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8Rw1yiNZaEAZA+ARAkl6AJ9q2OtoIXR2hLq35traTBjHkioBUQCfT5Nj
+1xscBf2u5teBpw1DcHC3+6k=
+=sZCj
+-----END PGP SIGNATURE-----

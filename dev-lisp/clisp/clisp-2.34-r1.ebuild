@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.34.ebuild,v 1.1 2005/07/22 19:25:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.34-r1.ebuild,v 1.1 2005/08/03 19:33:45 mkennedy Exp $
 
 inherit flag-o-matic common-lisp-common-2 eutils toolchain-funcs
 
@@ -11,15 +11,16 @@ SRC_URI="mirror://sourceforge/clisp/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~ppc-macos ~amd64 ~sparc"
-IUSE="X fastcgi nls pcre postgres readline unicode zlib"
+IUSE="X fastcgi pcre postgres readline zlib"
 
 DEPEND="dev-libs/libsigsegv
 	dev-lisp/common-lisp-controller
+	sys-devel/gettext
+	virtual/tetex
 	fastcgi? ( dev-libs/fcgi )
 	postgres? ( dev-db/postgresql )
 	X? ( virtual/x11 )
 	readline? ( sys-libs/readline )
-	nls? ( sys-devel/gettext )
 	pcre? ( dev-libs/libpcre )
 	zlib? ( sys-libs/zlib )"
 
@@ -69,11 +70,9 @@ src_compile() {
 	unset CFLAGS CXXFLAGS
 	local myconf="--with-dynamic-ffi
 		--with-module=wildcard
-		--with-module=rawsock
-		$(use_with unicode)"
+		--with-module=rawsock"
 	use ppc-macos || myconf="${myconf} --with-module=bindings/glibc"
 	use readline || myconf="${myconf} --with-noreadline"
-	use nls || myconf="${myconf} --with-nogettext"
 	use X && myconf="${myconf} --with-module=clx/new-clx"
 	if use postgres; then
 		myconf="${myconf} --with-module=postgresql"
