@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.4.2.ebuild,v 1.3 2005/07/28 19:54:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.4.2.ebuild,v 1.4 2005/08/03 09:46:52 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -17,7 +17,8 @@ DEPEND="x86? ( dev-util/callgrind )
 	               =sys-libs/db-4.2* ) )"
 
 RDEPEND="${DEPEND}
-	dev-util/cvs"
+	dev-util/cvs
+	media-gfx/graphviz"
 
 src_unpack() {
 	kde_src_unpack

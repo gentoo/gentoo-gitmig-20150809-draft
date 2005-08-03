@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.91 2005/07/28 19:54:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.92 2005/08/03 09:46:52 greg_g Exp $
+
+  03 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> kdesdk-3.4.2.ebuild:
+  Add dependency on graphviz (#100916).
 
   28 Jul 2005; Guy Martin <gmsoft@gentoo.org> kdesdk-3.4.1.ebuild,
   kdesdk-3.4.2.ebuild:

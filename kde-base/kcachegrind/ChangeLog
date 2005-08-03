@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcachegrind
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.12 2005/07/28 21:16:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.13 2005/08/03 09:44:56 greg_g Exp $
+
+  03 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> kcachegrind-3.4.2.ebuild:
+  Add dependency on graphviz (#100916).
 
 *kcachegrind-3.4.2 (28 Jul 2005)
 
