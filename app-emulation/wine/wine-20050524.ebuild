@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050524.ebuild,v 1.7 2005/07/19 04:40:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050524.ebuild,v 1.8 2005/08/03 04:55:31 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -65,6 +65,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/wine-hangfix-bug2660.patch #98156
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 	epatch "${FILESDIR}"/20041019-no-stack.patch #66002
+	epatch "${FILESDIR}"/wine-20050725-gcc-32bit.patch
 }
 
 config_cache() {
