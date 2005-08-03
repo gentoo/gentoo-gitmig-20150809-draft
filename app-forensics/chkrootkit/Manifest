@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 284e06a95bc21ffb937aa0241754cfe2 chkrootkit-0.45.ebuild 1506
 MD5 ada3a40144dfe72cb9c42b83cb593f8d chkrootkit-0.43-r4.ebuild 1110
 MD5 c7cea09a0db1fd3022cd50ccc45f0429 ChangeLog 9600
@@ -13,3 +16,10 @@ MD5 1f4cc273611ca05137d997b8d4bad9de files/digest-chkrootkit-0.44-r1 140
 MD5 99d10c59971b4836291ff235c6f480a6 files/chkrootkit-0.44-coreutils-static-falsepositive.patch 793
 MD5 bb6a980a762d72e1928231eabf4a9304 files/chkrootkit.cron 78
 MD5 c67831eb3ec73b91c86f9f686b0e176b files/chkrootkit-0.45-makefile.diff 1866
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8RUTKf2g/qXtneoRAtx9AJ9YyQy5AnIoicAlXYAmUrV6dl+xkgCgtCit
+K+aQ0uTFHnBB/ZsTRVUl+KU=
+=F0jV
+-----END PGP SIGNATURE-----
