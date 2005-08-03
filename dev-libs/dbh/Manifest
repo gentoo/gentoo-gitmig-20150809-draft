@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 11c1319bc3d05e31ce6b560ebad92f3a dbh-1.0.18.ebuild 680
 MD5 198332632510d56c36c84cacd2cb1a44 dbh-1.0.14.ebuild 636
 MD5 04e89328f620313968196ae2d364128d ChangeLog 2933
@@ -16,3 +19,10 @@ MD5 1e11b57442cfb77f6781374a8c52252e files/digest-dbh-1.0.19 63
 MD5 4dcb0947111663f2629ddf879d20c206 files/digest-dbh-1.0.22 62
 MD5 afd8debfb4666f9cc38537457bf67cba files/digest-dbh-1.0.14 59
 MD5 d6205ad4cb6aa4a5ed05d3531e24f35c files/digest-dbh-1.0.21 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8UE2Kf2g/qXtneoRAkhRAJ42qmNgiuG5YWdkyOyHl1cgw2cZJACfSTDn
+eQSAILpTGSUr7+ZVetB8OPo=
+=urzo
+-----END PGP SIGNATURE-----
