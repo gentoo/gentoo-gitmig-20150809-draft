@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3395dd21d63314e45bb88c1f6469e0ca ChangeLog 9173
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 7e0a291f0ec3423c29f91b243ac8f7a5 prime-1.0.0.1.ebuild 827
 MD5 0f748e6f709ed30d5ac22b4e876be195 prime-0.8.6.1.ebuild 856
 MD5 fa6a28fd7901c0849b40770d4bb78d19 files/digest-prime-0.8.6.1 65
 MD5 224fb1ad2d4fafabab78a7aee65c0c9f files/digest-prime-1.0.0.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8SIxKf2g/qXtneoRAlX1AJ9x417Wq4ugdLF/pTHADmjuASpG+gCgndGC
+oxDp5o9TsSJ9I9FvEY4iheE=
+=8QX5
+-----END PGP SIGNATURE-----

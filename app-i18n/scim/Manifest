@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b459d1b1ca750e518154b60b58dae512 ChangeLog 10547
 MD5 4ccb50876b8b690cd906e2e802216e37 scim-1.2.2.ebuild 2593
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
@@ -11,3 +14,10 @@ MD5 84ed66110ce84283b196dd1a5c918400 files/digest-scim-1.2.0 63
 MD5 99b3eee4a8cc881197b9b4ecb14a60d4 files/digest-scim-1.2.3 63
 MD5 d0dc438b971197894dc1b298d2101311 files/digest-scim-1.2.2 63
 MD5 95e4d06699356649f034690e3c3e870e files/scim-0.6.1-gtk2immodule.patch 545
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8SKvKf2g/qXtneoRAvrcAKC+oCuR9W9uqhVI1Sv1Rz8Ce+jfggCgn1G+
+yD72z0EKU02GCJFV50sghH8=
+=k/UI
+-----END PGP SIGNATURE-----

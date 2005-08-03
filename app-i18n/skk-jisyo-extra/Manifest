@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e65c9e7e2c399148c3203b5a3b791c34 skk-jisyo-extra-200507.ebuild 1028
 MD5 6061bd404dc535576eb6f098766137cd ChangeLog 4235
 MD5 f36bc2b63ece5eb063361999f9f1cd04 skk-jisyo-extra-200410.ebuild 1029
@@ -8,3 +11,10 @@ MD5 d7581e16bc7ffd62ad8055478919af47 files/digest-skk-jisyo-extra-200507 75
 MD5 397c0379be0f890dbca35281e6d15561 files/digest-skk-jisyo-extra-200501 75
 MD5 63dd852c3dce5a3f2a32d6fa57f880f7 files/digest-skk-jisyo-extra-200410 75
 MD5 64b37cf9fa51b0b55fecb34b073e7602 files/digest-skk-jisyo-extra-200504 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8SE1Kf2g/qXtneoRAvh4AJ9l8/xIXZYF28A6q7xpPeqHVeYzfgCgq0it
+SytbQSIdWOw8x3bBhWW/vhk=
+=4umR
+-----END PGP SIGNATURE-----
