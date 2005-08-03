@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.5.2.ebuild,v 1.8 2005/07/25 16:11:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.5.2.ebuild,v 1.9 2005/08/03 18:49:44 gustavoz Exp $
 
 inherit kde eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kde-look.org/content/files/10605-${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~alpha ~amd64 ~sparc"
+KEYWORDS="x86 ppc ~alpha ~amd64 sparc"
 IUSE=""
 
 DEPEND="|| ( kde-base/kwin >=kde-base/kdebase-3.2 )
