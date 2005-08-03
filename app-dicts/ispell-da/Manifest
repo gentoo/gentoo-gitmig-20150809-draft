@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ed12243f2eccc77d0d2dcb246411a439 ChangeLog 6828
 MD5 fadb28235bb7171b540a4a0b4e3e3a85 metadata.xml 251
 MD5 10d9e16bb4ef0fede0d9cf4f3bcf1133 ispell-da-1.4.47.ebuild 592
@@ -18,3 +21,10 @@ MD5 6f0d940d020e844c1eb09fcbbbe18562 files/digest-ispell-da-1.4.45 68
 MD5 b52675a324d9cc53134385f84444afa5 files/digest-ispell-da-1.4.42 68
 MD5 b0b82485a23d03a4e4bda0f076580b93 files/digest-ispell-da-1.4.48 68
 MD5 22ad544b9b998d706ba76a96ee1306b1 files/digest-ispell-da-1.4.50 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8Q7+Kf2g/qXtneoRAqrzAJ4sp+Z9xlyUL2bWTczFKCPhGCYSQQCfZQoE
+8dqLwpse/+mCcTFOaYYBEP8=
+=7GIs
+-----END PGP SIGNATURE-----
