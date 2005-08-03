@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ebbb4e98f230e0b33d8b04a15bc170e4 ChangeLog 1729
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 a4d6370d4ba1cbd409cf5d3122c087b6 XML-GDOME-0.86.ebuild 631
 MD5 ed63dcc5e3bcdf1f8c56c846fedd89c6 XML-GDOME-0.85.ebuild 621
 MD5 f9eaccf237937fc90e3ddd5b920f3044 files/digest-XML-GDOME-0.85 65
 MD5 2cdbde03077a5bc4653bf0bdd4f44ab1 files/digest-XML-GDOME-0.86 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8UcvKf2g/qXtneoRAgn/AJ9Hl2G+RRaHxwk2sH0P1wsuuojEqACfXgi2
+6BBB0bxQ5ZefccXGqIcLm0I=
+=Kam7
+-----END PGP SIGNATURE-----
