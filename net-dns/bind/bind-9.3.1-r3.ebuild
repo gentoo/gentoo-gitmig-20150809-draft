@@ -1,23 +1,40 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1-r1.ebuild,v 1.2 2005/04/24 09:21:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1-r3.ebuild,v 1.1 2005/08/03 16:54:38 voxus Exp $
 
 inherit eutils libtool
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz"
+
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
+	dlz? ( http://projects.navynet.it/DLZ/ctrix_dlz_9.3.1-1.patch.gz )"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="ssl ipv6 doc selinux idn threads"
+IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads"
 
 DEPEND="sys-apps/groff
 	sys-devel/autoconf
-	ssl? ( >=dev-libs/openssl-0.9.6g )"
+	ssl? ( >=dev-libs/openssl-0.9.6g )
+	mysql? ( >=dev-db/mysql-4 )
+	odbc? ( >=dev-db/unixODBC-2.2.6 )
+	ldap? ( net-nds/openldap )"
+
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
+
+pkg_setup() {
+	if use dlz && use idn;
+	then
+		echo
+		eerror "DLZ currently doesn't supports IDN"
+		eerror "You should disable 'idn' or 'dlz' use flag to continue"
+
+		die "dlz doesn't support idn currently"
+	fi
+}
 
 src_unpack() {
 	unpack ${A} && cd ${S}
@@ -30,12 +47,15 @@ src_unpack() {
 		       ${i}
 	done
 
-	if use idn; then
-		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch
-	fi
+	use dlz && {
+		epatch ${DISTDIR}/ctrix_dlz_${PV}-1.patch.gz || \
+			die "dlz patch failed"
+	}
 
-	cp ${FILESDIR}/named.rc6 ${T}
-	cd ${T} && epatch ${FILESDIR}/named.rc6-smart_pid_fix
+	use idn && {
+		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch || \
+			die "idn patch failed"
+	}
 
 	# it should be installed by bind-tools
 	sed "s:nsupdate ::g" ${S}/bin/Makefile.in > ${T}/Makefile
@@ -50,7 +70,36 @@ src_compile() {
 
 	use ssl && myconf="${myconf} --with-openssl"
 
-	use threads && myconf="${myconf} --enable-linux-caps --enable-threads"
+	use dlz && {
+		myconf="${myconf} --with-dlz-filesystem --with-dlz-stub"
+		use postgres && myconf="${myconf} --with-dlz-postgres"
+		use mysql && myconf="${myconf} --with-dlz-mysql"
+		use berkdb && myconf="${myconf} --with-dlz-bdb"
+		use ldap  && myconf="${myconf} --with-dlz-ldap"
+		use odbc  && myconf="${myconf} --with-dlz-odbc"
+	}
+
+	if use threads; then
+		if use dlz && use mysql; then
+			echo
+			ewarn ""
+			einfo "MySQL uses thread local storage in its C api. Thus MySQL"
+			einfo "requires that each thread of an application execute a MySQL"
+			einfo "\"thread initialization\" to setup the thread local storage."
+			einfo "This is impossible to do safely while staying within the DLZ"
+			einfo "driver API. This is a limitation caused by MySQL, and not"
+			einfo "the DLZ API."
+			ewarn "Because of this BIND MUST only run with a single thread when"
+			ewarn "using the MySQL driver."
+			echo
+			myconf="${myconf} --disable-threads"
+			einfo "Threading support disabled"
+			epause 10
+		else
+			myconf="${myconf} --enable-linux-caps --enable-threads"
+			einfo "Threading support enabled"
+		fi
+	fi
 
 	econf \
 		--sysconfdir=/etc/bind \
@@ -61,11 +110,11 @@ src_compile() {
 
 	emake -j1 || die "failed to compile bind"
 
-	if use idn; then
+	use idn && {
 		cd ${S}/contrib/idn/idnkit-1.0-src
 		econf || die "idn econf failed"
 		emake || die "idn emake failed"
-	fi
+	}
 }
 
 src_install() {
@@ -74,20 +123,29 @@ src_install() {
 	dodoc CHANGES COPYRIGHT FAQ README
 
 	use doc && {
-		docinto misc ; dodoc doc/misc/*
-		docinto html ; dohtml doc/arm/*
-		docinto	draft ; dodoc doc/draft/*
-		docinto rfc ; dodoc doc/rfc/*
-		docinto contrib ; dodoc contrib/named-bootconf/named-bootconf.sh \
-		contrib/nanny/nanny.pl
+		docinto misc
+		dodoc doc/misc/*
+
+		docinto html
+		dohtml doc/arm/*
+
+		docinto	draft
+		dodoc doc/draft/*
+
+		docinto rfc
+		dodoc doc/rfc/*
+
+		docinto contrib
+		dodoc contrib/named-bootconf/named-bootconf.sh \
+			contrib/nanny/nanny.pl
+
+		# some handy-dandy dynamic dns examples
+		cd ${D}/usr/share/doc/${PF}
+		tar pjxf ${FILESDIR}/dyndns-samples.tbz2
 	}
 
 	insinto /etc/env.d
 	newins ${FILESDIR}/10bind.env 10bind
-
-	# some handy-dandy dynamic dns examples
-	cd ${D}/usr/share/doc/${PF}
-	tar pjxf ${FILESDIR}/dyndns-samples.tbz2
 
 	dodir /etc/bind /var/bind/{pri,sec}
 	keepdir /var/bind/sec
@@ -97,7 +155,7 @@ src_install() {
 	insinto /var/bind ; doins ${FILESDIR}/named.ca
 	insinto /var/bind/pri ; doins ${FILESDIR}/{127,localhost}.zone
 
-	exeinto /etc/init.d ; newexe ${T}/named.rc6 named
+	exeinto /etc/init.d ; newexe ${FILESDIR}/named.rc named
 	insinto /etc/conf.d ; newins ${FILESDIR}/named.confd named
 
 	dosym ../../var/bind/named.ca /var/bind/root.cache
@@ -114,6 +172,11 @@ src_install() {
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
 	rm -f ${D}/usr/share/man/man1/{dig.1,host.1,nslookup.1}
 	rm -f ${D}/usr/bin/{dig,host,nslookup}
+
+	ebegin "Creating named group and user"
+	enewgroup named
+	enewuser named -1 /bin/false /etc/bind named
+	eend ${?}
 }
 
 pkg_postinst() {
@@ -150,10 +213,15 @@ pkg_postinst() {
 	echo
 	einfo "	zone "com" IN { type delegation-only; };"
 	einfo "	zone "net" IN { type delegation-only; };"
+
+	echo
+	ewarn "BIND >=9.2.5 makes the priority argument to MX records mandatory"
+	ewarn "when it was previously optional.  If the priority is missing, BIND"
+	ewarn "won't load the zone file at all."
+	echo
 }
 
 pkg_config() {
-
 	CHROOT=`sed -n 's/^[[:blank:]]\?CHROOT="\([^"]\+\)"/\1/p' /etc/conf.d/named 2>/dev/null`
 	EXISTS="no"
 

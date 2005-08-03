@@ -1,6 +1,16 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.81 2005/07/02 09:49:20 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.82 2005/08/03 16:54:38 voxus Exp $
+
+
+*bind-9.2.5-r5 (03 Aug 2005)
+*bind-9.3.1-r3 (03 Aug 2005)
+
+  03 Aug 2005; Konstantin Arkhipov <voxus@gentoo.org> +bind-9.2.5-r5.ebuild,
+  +bind-9.3.1-r3.ebuild, -bind-9.3.1-r1.ebuild, -bind-9.3.1-r2.ebuild,
+  +files/named.rc:
+  Closing bug #99597 by adding enew{user,group}. Closing bug #99878 by new
+  init script. Cleanups also.
 
   02 Jul 2005; Konstantin Arkhipov <voxus@gentoo.org> -bind-9.2.2-r3.ebuild,
   -bind-9.2.5.ebuild, -files/bind-9.2.2-mysql.patch:
@@ -19,7 +29,7 @@
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> bind-9.2.5-r4.ebuild:
   Stable on ppc.
 
-  12 Jun 2005; Bryan ц≤stergaard <kloeri@gentoo.org> bind-9.2.5-r4.ebuild:
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> bind-9.2.5-r4.ebuild:
   Stable on alpha.
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> bind-9.2.5-r4.ebuild:
@@ -75,7 +85,7 @@
   10 Apr 2005; Joshua Kinard <kumba@gentoo.org> bind-9.2.5.ebuild:
   Added ~mips to keywords.
 
-  06 Apr 2005; Bryan ц≤stergaard <kloeri@gentoo.org> bind-9.2.5.ebuild:
+  06 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> bind-9.2.5.ebuild:
   Stable on alpha, bug 87902.
 
   04 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> bind-9.2.5.ebuild:
