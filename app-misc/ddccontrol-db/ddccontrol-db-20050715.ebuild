@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ddccontrol-db-20050715.ebuild,v 1.1 2005/08/03 19:54:53 robbat2 Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ddccontrol-db-20050715.ebuild,v 1.2 2005/08/03 20:08:54 swegener Exp $
 
 DESCRIPTION="DDCControl monitor database"
 HOMEPAGE="http://ddccontrol.sourceforge.net/"
@@ -24,6 +22,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 }
