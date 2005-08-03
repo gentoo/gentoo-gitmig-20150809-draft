@@ -12,14 +12,14 @@ MD5 9f45fd567b0b82deb30b950b680d983a files/vservers.initd 1692
 MD5 09276c3e50cf5c0f8d30ef0422f05fd8 files/vprocunhide 570
 MD5 4bd7088cb72bd60e8ed7b7e562f3ea95 files/digest-util-vserver-0.30.205-r1 74
 MD5 e9f396453e3aeb9f364489b7baec4238 files/digest-util-vserver-0.30.207 74
-MD5 199ea59779f458439e1500eecffbe3c3 files/digest-util-vserver-0.30.208-r1 154
+MD5 a71c848ecb606f355054a9fb34bb6970 files/digest-util-vserver-0.30.208-r1 154
 MD5 0fb2840471aeb47987109d913eb11413 files/digest-util-vserver-0.30.208 74
 MD5 697cd56c9853cbbaff1920b1d2e4deb9 files/0.30.208-r1/vservers.confd 1697
 MD5 31e730ae55387d6a9638f2107524630b files/0.30.208-r1/vservers.initd 1838
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC8Q5hmPFBzbX68WERAr2iAJ9sWfjnHUvcqoT+cJlWx0gEpnssYwCfU3Op
-z3qwJmBA1wR2ftpKZG3CLtU=
-=Anqx
+iD8DBQFC8SrlmPFBzbX68WERAvNBAJ94hXtZUmuXGNyEgvBnQ52S4jTUiACaAyQd
+TYDGXxlR76E+boOjGey8FHY=
+=KwKI
 -----END PGP SIGNATURE-----
