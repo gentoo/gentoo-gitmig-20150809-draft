@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2834f1cb97eea873f19ab95ccad6bc6d metadata.xml 216
-MD5 47a31fd05786892d277e0d78a12baeb1 ChangeLog 805
-MD5 3d871ffaa81f9a377f40b281e7eb767f activeheart-1.2.1.ebuild 522
+MD5 a8523c22c101df624b425db32f5a3c18 activeheart-1.2.1.ebuild 533
+MD5 70c9bb638724e3fed9e7d57dbd25e47c ChangeLog 910
 MD5 839c5ab41fc191686b7fffb5ff485df7 files/digest-activeheart-1.2.1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC8RGbKRy60XGEcJIRAnvkAKC0j3sSL5ErE220mJLV97I7ZePfJwCeP9w0
+VQIGZDVjN9K30ZoHBeulpTU=
+=gb9S
+-----END PGP SIGNATURE-----

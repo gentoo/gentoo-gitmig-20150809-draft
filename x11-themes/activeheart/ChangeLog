@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/activeheart
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.4 2005/02/03 21:29:19 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.5 2005/08/03 18:48:30 gustavoz Exp $
+
+  03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  activeheart-1.2.1.ebuild:
+  Keyworded ~sparc
 
   03 Feb 2005; Carsten Lohrke <carlo@gentoo.org> activeheart-1.2.1.ebuild:
   QA: inherit kde-base -> inherit kde, slot
