@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6f760844d541acb2dd4c92e22edc5759 nano-1.3.6.ebuild 1755
 MD5 d19e09c84b8f8d58faf85ee043128995 nano-1.3.7.ebuild 1744
 MD5 3bbdfed298bab8954dff2f617417236a ChangeLog 8419
@@ -17,3 +20,10 @@ MD5 c3684059e73752ce1f114e768ecbaa2b files/1.3.4-nanobrack.patch 557
 MD5 9ecacdb9e41a6ddb3200113238ca4b2b files/nanorc-sh 646
 MD5 b6b8e30beb4e577ac5d8d58bced6b326 files/digest-nano-1.3.6 62
 MD5 b075a7a5fe393380c5f00e4efd3146fb files/digest-nano-1.2.5 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8RBGKf2g/qXtneoRAm7dAJ9/z1rAVEZzyF2JduEarLmBBnGqhQCfZVbX
+Ue40EBUMRIVt0hwIih8dY0k=
+=A2kv
+-----END PGP SIGNATURE-----
