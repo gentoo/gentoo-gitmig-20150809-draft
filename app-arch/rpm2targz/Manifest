@@ -1,10 +1,20 @@
-MD5 131f79871a3b68cdfb200f99e55b3177 rpm2targz-9.0-r3.ebuild 1298
-MD5 448bca5e5f0e53872f20fc4464e9e0aa rpm2targz-9.0-r2.ebuild 1203
-MD5 cc4e6967051df384cca6bb4ff098be23 ChangeLog 4368
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d3e8aa75e444efc5b6f747cd74faf2da ChangeLog 4468
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 8330f5b78d10fc54fe334875adc8edaf files/rpm2targz-9.0-secure_temp_handling.patch 4068
-MD5 75217fcb7780c16c88ead1295d8e9d7b files/rpm2targz-9.0-bzip2.patch 800
+MD5 448bca5e5f0e53872f20fc4464e9e0aa rpm2targz-9.0-r2.ebuild 1203
+MD5 006a21895e7147d4591f44e4ab4d9bd8 rpm2targz-9.0-r3.ebuild 1297
 MD5 96b33b5b51d34b9764ed9c50ffac18d6 files/rpm2targz-9.0-bzip2_rpm2targz.patch 2100
+MD5 8330f5b78d10fc54fe334875adc8edaf files/rpm2targz-9.0-secure_temp_handling.patch 4068
 MD5 d0f2d521642a49ec038e441268ab6480 files/digest-rpm2targz-9.0-r2 63
+MD5 75217fcb7780c16c88ead1295d8e9d7b files/rpm2targz-9.0-bzip2.patch 800
 MD5 d0f2d521642a49ec038e441268ab6480 files/digest-rpm2targz-9.0-r3 63
 MD5 a850046e92cebae159a1a554cdab3f91 files/rpm2targz-9.0-gentoo.patch 554
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8Q6CKf2g/qXtneoRAoyGAJ0QvD3g6eF0GNDueQjRHPF/BO9CygCgt7qm
+V2afaeLSu0gR/mqakJhV/nI=
+=IpLq
+-----END PGP SIGNATURE-----
