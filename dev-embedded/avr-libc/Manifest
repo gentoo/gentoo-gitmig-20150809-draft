@@ -1,5 +1,17 @@
-MD5 d7ed2c3b485030768977deaa58b52eae ChangeLog 1714
-MD5 579951f6c5b40fd5347015286cfca429 avr-libc-1.2.3.ebuild 1009
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1463ed5a24616e5df931b5dd1c1030a7 avr-libc-1.2.5.ebuild 1093
 MD5 d05677e7bc0cae2e33f6a6736b9aca03 metadata.xml 486
+MD5 4286f0a7edd4a06a4d296a3cd54fdda4 avr-libc-1.2.3.ebuild 1006
+MD5 73b858860a631c387d539022f06ad8f4 ChangeLog 1858
 MD5 ee96360211c9e70e81677b740b1b139a files/digest-avr-libc-1.2.3 67
 MD5 a171e49ae4824538fe554c27b30d5fd0 files/avr-libc-macros.patch 497
+MD5 d42ca83e3a453900cd76b5b9d500fd65 files/digest-avr-libc-1.2.5 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8VX9gIKl8Uu19MoRAqKyAJ48tnl3zRuayUzujybYJEuuGUwpnQCdGQYP
+0uoXIOu7JP28zLeF3wFmH2Y=
+=llRj
+-----END PGP SIGNATURE-----
