@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.58 2005/08/01 23:20:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.59 2005/08/03 07:35:50 leonardop Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -10,14 +10,21 @@ inherit libtool gnome.org debug fdo-mime
 
 # Gnome 2 ECLASS
 
-G2CONF=""               # extra configure opts passed to econf
-ELTCONF=""              # extra options passed to elibtoolize
-SCROLLKEEPER_UPDATE="1" # whether to run scrollkeeper for this package
-USE_DESTDIR=""          # use make DESTDIR=${D} install rather than einstall
+# extra configure opts passed to econf
+[ -z "$G2CONF" ] && G2CONF=""
+
+# extra options passed to elibtoolize
+[ -z "$ELTCONF" ] && ELTCONF=""
+
+# whether to run scrollkeeper for this package
+[ -z "$SCROLLKEEPER_UPDATE" ] && SCROLLKEEPER_UPDATE="1"
+
+# use make DESTDIR=${D} install rather than einstall
+[ -z "$USE_DESTDIR" ] && USE_DESTDIR=""
+
 
 IUSE="debug"
 
-use debug && G2CONF="${G2CONF} --enable-debug=yes"
 
 DEPEND=">=sys-apps/sed-4"
 
@@ -25,6 +32,8 @@ gnome2_src_configure() {
 
 	# [ -n "${ELTCONF}" ] && elibtoolize ${ELTCONF}
 	elibtoolize ${ELTCONF}
+
+	use debug && G2CONF="${G2CONF} --enable-debug=yes"
 
 	# doc keyword for gtk-doc
 	G2CONF="${G2CONF} $(use_enable doc gtk-doc)"
