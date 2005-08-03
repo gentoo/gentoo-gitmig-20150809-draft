@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.63 2005/06/27 07:23:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.64 2005/08/03 20:41:32 sekretarz Exp $
+
+  03 Aug 2005; <sekretarz@gentoo.org> +files/dclib-0.3.7-hashfix.patch,
+  dclib-0.3.7.ebuild:
+  Applied patch which makes dclib to hash files propertly, thanks Kevin
+  Borgnis <soft.eng.ice@gmail.com> in bug #91451
 
   27 Jun 2005; Markus Rothe <corsair@gentoo.org> dclib-0.3.7.ebuild:
   Stable on ppc64
