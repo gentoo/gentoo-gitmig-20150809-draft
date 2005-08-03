@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r3.ebuild,v 1.15 2005/07/10 20:59:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r3.ebuild,v 1.16 2005/08/03 17:58:44 gustavoz Exp $
 
 inherit eutils gnuconfig db
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.sleepycat.com"
 IUSE="tcltk java doc"
 SLOT="4"
 LICENSE="DB"
-KEYWORDS="alpha amd64 ~hppa ia64 m68k ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 m68k ~mips ppc ppc64 sparc x86"
 
 DEPEND="tcltk? ( dev-lang/tcl )
 	java? ( virtual/jdk )"
