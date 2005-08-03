@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 693cd78a19d39e3159ffd4f9d614bc24 metadata.xml 230
 MD5 14fbeacf96f89e08ef3ec8045423685e fahrenheit-0.1.ebuild 534
 MD5 9f562a162b8e61629f6ff7c4ecc4d445 ChangeLog 554
 MD5 ffc00f2c857e6a2c88e0f4e6cb189003 files/digest-fahrenheit-0.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC8RgsKRy60XGEcJIRAn0EAJ9MGN/t3B6PVi4EVw7Z9PHiI9/eewCdGjKq
+L4HPwHxiyryecSk4aAbIC1c=
+=Zhwq
+-----END PGP SIGNATURE-----
