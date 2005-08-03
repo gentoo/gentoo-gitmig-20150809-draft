@@ -1,7 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dcdb08f3063aa2ddfdaa38fe69bf20a9 pam-login-4.0.11.1-r1.ebuild 3553
 MD5 b533aa78676060d0634e8df38fd6b2ca pam-login-4.0.11.1-r2.ebuild 3983
 MD5 3a31a96dbcbd9c5db8e7c04b941714be ChangeLog 8142
 MD5 2595d9d5d585309a961d44bb056d46fe pam-login-3.17.ebuild 2876
@@ -17,7 +13,6 @@ MD5 95f7b8980169e81352229bd548909ea7 files/pam-login-4.0.10-fix-configure.patch 
 MD5 e01e197ed3b6d2ec6ae83d23b33088b8 files/login.pamd-4.0 1019
 MD5 44f064b586ea49c8e2dc1fca8b9e4599 files/pam-login-4.0.11.1-SUPATH.patch 1614
 MD5 0021ec2d8f5fc517f0e74f7233fc16c9 files/pam-login-3.11-gcc33.patch 527
-MD5 9375147f78a25196b654616c969af9a5 files/digest-pam-login-4.0.11.1-r1 69
 MD5 2fdbabc344539e9dfd4955c061596a27 files/pam-login-3.17-query_user_context.patch 423
 MD5 450a2289f2a383296ad9af005e46da74 files/pam-login-4.0.11.1-ngettext.patch 1038
 MD5 2e7603feaff187884dd9b1e66601f02b files/login.pamd 382
@@ -25,10 +20,3 @@ MD5 636f233fa173a998195016c3808173d4 files/pam-login-4.0.5-skey.patch 395
 MD5 9375147f78a25196b654616c969af9a5 files/digest-pam-login-4.0.11.1-r2 69
 MD5 7761083b62bdcb822f1b9533aab2e06c files/pam-login-3.11-lastlog-fix.patch 362
 MD5 e7f9dde204926c73a570b344556e4b1e files/digest-pam-login-3.17 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8ROz1ZcsMnZjRyIRAoF7AJ4oatMxgA4HHXBjZaIeNWgOxPgq1ACeM7Ay
-44l1TxPACMMjN3L0UEFRr74=
-=KTiQ
------END PGP SIGNATURE-----
