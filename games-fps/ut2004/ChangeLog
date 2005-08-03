@@ -1,6 +1,15 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.26 2005/07/27 09:50:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.27 2005/08/03 16:03:59 wolf31o2 Exp $
+
+*ut2004-3355-r2 (03 Aug 2005)
+
+  03 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +ut2004-3355-r2.ebuild:
+  Added experimental version for testing. This should look visually much
+  better on x86. The amd64 version will come in an official patch based on
+  feedback from this test, so please test this and report any bugs to
+  https://bugzilla.icculus.org so it can be fixed.
 
   27 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   ut2004-3355-r1.ebuild:
