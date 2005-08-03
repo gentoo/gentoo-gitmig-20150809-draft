@@ -2,11 +2,11 @@
 Hash: SHA1
 
 MD5 145361578d518500a08aab2a95ba869b gdome2-0.8.1.ebuild 625
-MD5 e2dbb09319088c822b5f22c13c863bb6 ChangeLog 1755
+MD5 05d5ad4c25e1481b38a6c434c53b8299 ChangeLog 1852
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 baaa394c648bdda12e53fcc83518ac97 gdome2-0.7.2.ebuild 781
 MD5 f7f7c1291cddbbfac67f139a0c39052e gdome2-0.8.0.ebuild 889
-MD5 4f8742f552d0c6fe09e09809f1443a7d gdome2-0.8.1-r1.ebuild 740
+MD5 62802e3ff0667a8beb59e4682f43f2c0 gdome2-0.8.1-r1.ebuild 739
 MD5 2ce412c7611212f9c03468856fafb694 gdome2-0.7.4.ebuild 803
 MD5 5f9413aa7e0b6062f96137db96fac4e9 files/digest-gdome2-0.8.0 64
 MD5 adc1c918fc7ccbcab64ad23ef008641e files/gdome2-0.8.0-libxml.patch 658
@@ -17,7 +17,7 @@ MD5 0c58b375556cc80f671c0ed84e953051 files/digest-gdome2-0.8.1-r1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCc2GLKf2g/qXtneoRAlcnAJ9KVQRHLuBR1deqwcZGqqTShyqh5QCgiiWB
-Vijhltvznl8p/yhEy0oBjLc=
-=2ROA
+iD8DBQFC8UbpKf2g/qXtneoRAlYqAJ968Q19iAYG1cuXe7YAjZjAyM0mDgCfWOHc
+i1Tjmi76Qwi0pWRvo9i6wuI=
+=GGgs
 -----END PGP SIGNATURE-----
