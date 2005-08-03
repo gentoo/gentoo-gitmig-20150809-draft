@@ -1,4 +1,16 @@
-MD5 1819e9a2401edc40bd2f1f98719e865c ChangeLog 1009
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d73db67db681ead6bf80b5a7b91c846b ChangeLog 1153
 MD5 2eb9c018ae33afd2ca0783e3ccac4bd0 metadata.xml 237
 MD5 ba996ff361908e32377f065bc297769b netwatch-1.0a.ebuild 789
+MD5 726cbc458e88ce254abc0aa7cad381ad netwatch-1.0b_pre4.ebuild 838
 MD5 a238317b1c64ec35112135fe14a60e58 files/digest-netwatch-1.0a 66
+MD5 67a832b08ff6ca5c32e51797ff0f1657 files/digest-netwatch-1.0b_pre4 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8JgeArHZZzCEUG0RAhH5AJ45jQgdiIwLpDfNKIy5d0RuPM14FgCeJ0+a
+j9AMFeK8us8tXqhf+YTNseE=
+=kuxD
+-----END PGP SIGNATURE-----
