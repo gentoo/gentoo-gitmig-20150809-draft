@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4254 2005/08/03 18:19:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4255 2005/08/03 23:03:02 lu_zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Luca Barbato <lu_zero@gentoo.org> (03 Aug 2005)
+# First experimental ebuild with dlloader support, should be fixed
+=media-video/ati-drivers-8.14.13-r3
 
 # Jeremy Huddleston <eradicator@gentoo.org> (03 Aug 2005)
 # With 1.12.0_pre3-r2, your system may be left in an unbootable (or difficult
