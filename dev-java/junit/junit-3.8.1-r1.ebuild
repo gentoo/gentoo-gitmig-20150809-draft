@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1-r1.ebuild,v 1.8 2005/08/02 20:55:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1-r1.ebuild,v 1.9 2005/08/03 19:07:58 axxo Exp $
 
 inherit java-pkg
 
@@ -34,18 +34,11 @@ src_compile() {
 }
 
 src_install() {
+	use source && java-pkg_dosrc junit
 	cd ${MY_P}
 	java-pkg_dojar junit.jar
 	dodir /usr/share/ant-core/lib
 	dosym /usr/share/junit/lib/junit.jar /usr/share/ant-core/lib/
 	java-pkg_dohtml -r README.html cpl-v10.html || die "failed to install docs"
 	use doc && java-pkg_dohtml -r doc javadoc
-
-	if use source; then
-		#we need to clean so that we don't install useless class files to the 
-		#src zip file.
-		cd ${S}
-		ant clean || die "failed to clean the source tree"
-		java-pkg_dosrc junit
-	fi
 }
