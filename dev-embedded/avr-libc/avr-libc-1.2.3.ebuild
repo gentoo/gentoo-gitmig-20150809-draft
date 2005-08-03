@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.2.3.ebuild,v 1.5 2005/06/27 07:46:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.2.3.ebuild,v 1.6 2005/08/03 23:39:53 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/avr-libc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc64 ~x86"
+KEYWORDS="amd64 ppc64 x86"
 IUSE="nls"
 
 DEPEND=">=sys-devel/crossdev-0.9.1"
