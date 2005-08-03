@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 7de34f897fafe96fb35d20b96ccfdd09 memtest86+-1.51.ebuild 2045
-MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+MD5 6e4a562860cd8556ea460ac4682d01e3 metadata.xml 259
 MD5 9825a74db1fb5f8164fb1bda70de6c6d memtest86+-1.60.ebuild 1781
 MD5 9aa393aebe3e66f43cd0e48e332b2b1a memtest86+-1.50.ebuild 2040
 MD5 aab46bfc1008c591ff6353e7338f63b4 memtest86+-1.55.ebuild 1993
@@ -17,7 +17,7 @@ MD5 4a457f7856f268bf4efef17ca548d351 files/digest-memtest86+-1.60 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC8UFagIKl8Uu19MoRAk7LAJ0ROxoWj0I0WJkOdD/1idzt8f+AvwCfXpva
-P/AD+YpNLQ9CCKdZvgHj7M8=
-=XGDw
+iD8DBQFC8U04gIKl8Uu19MoRAmCgAJ9IMltX2euWQzWDm+rmXj3D2lb3RQCfRZyB
+5nSwo7MXUet8xFih43IBqqM=
+=R8Ln
 -----END PGP SIGNATURE-----
