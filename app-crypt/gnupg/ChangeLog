@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.120 2005/07/29 22:41:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.121 2005/08/03 00:54:55 vanquirius Exp $
+
+*gnupg-1.4.2 (03 Aug 2005)
+
+  03 Aug 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/gnupg-1.4.2-selftest.patch, +gnupg-1.4.2.ebuild:
+  Version and patch bump for bug 101120. Thanks to Erinn Looney-Triggs
+  <erinn.looneytriggs@gmail.com>.
 
   29 Jul 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.2.4.ebuild,
   gnupg-1.2.6.ebuild, gnupg-1.4.0-r1.ebuild, gnupg-1.4.0-r2.ebuild,
