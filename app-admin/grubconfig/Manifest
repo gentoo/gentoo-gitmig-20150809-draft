@@ -1,4 +1,16 @@
-MD5 3fcda04e8e28fc384481f0be0ab6d38d ChangeLog 1505
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c1541b2aeef8f77f14c80aaafd1ec4de grubconfig-1.24.ebuild 564
+MD5 3b2f3fd1476195e1ed584b971c16e692 grubconfig-1.26.ebuild 572
+MD5 c6b305f7041897b2acfac1aea4cc6bf9 ChangeLog 1653
+MD5 82f0ffed3af19e8c079b762ecd621bd0 files/digest-grubconfig-1.26 66
 MD5 604cd8068571b844106e78f0abdb63bb files/digest-grubconfig-1.24 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8VNSgIKl8Uu19MoRAkBqAJ95ly5PSFVnCEHRQQ6qDLbRONVAjwCfTY3l
+nZZKPNCazJFE5pAEf4nwys8=
+=C/fQ
+-----END PGP SIGNATURE-----
