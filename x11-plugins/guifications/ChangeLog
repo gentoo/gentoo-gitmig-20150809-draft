@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/guifications
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.31 2005/07/28 13:16:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.32 2005/08/03 03:29:12 rizzo Exp $
+
+*guifications-2.12 (03 Aug 2005)
+
+  03 Aug 2005; Don Seiler <rizzo@gentoo.org> +guifications-2.12.ebuild:
+  Version bump
 
   28 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   guifications-2.10.ebuild:

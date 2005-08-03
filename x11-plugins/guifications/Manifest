@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 fb88f1c452ac7d0b77e43f803adbc71c ChangeLog 5143
+MD5 83ddff6fa7da303fb3ccb30f794e4164 guifications-2.12.ebuild 836
 MD5 4b0340b0b3f10a3a2315e6628ddcd595 guifications-2.10.ebuild 837
 MD5 de00a008d8fa442c5dbb0b7003268702 metadata.xml 289
 MD5 fa2790ed399bfce44981c6acabafddc3 guifications-2.8.ebuild 836
-MD5 25844e1f464a7515324ec098c7891150 ChangeLog 5024
-MD5 bce0aae492d550fb0e1763ac9a05e046 files/digest-guifications-2.8 69
+MD5 b306095b9ea532481775501a4dc06428 files/digest-guifications-2.12 70
 MD5 9a0cf37e06bdff12bef1576f76ad8220 files/digest-guifications-2.10 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC6NrgKRy60XGEcJIRAjSDAJ4ixIw8uaOAZPgTEKbnuEJrBDb2LQCfRfwQ
-30XIv4vZp03TbsPdjYLNvuY=
-=7QQp
------END PGP SIGNATURE-----
+MD5 bce0aae492d550fb0e1763ac9a05e046 files/digest-guifications-2.8 69
