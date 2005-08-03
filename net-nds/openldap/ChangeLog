@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.127 2005/07/27 06:02:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.128 2005/08/03 20:17:44 robbat2 Exp $
+
+  03 Aug 2005; Robin H. Johnson <robbat2@gentoo.org>
+  openldap-2.1.30-r5.ebuild, openldap-2.2.27-r1.ebuild:
+  Bug #100579, USE=minimal Perl is bad for the perl backend.
 
   27 Jul 2005; Robin H. Johnson <robbat2@gentoo.org>
   openldap-2.2.27-r1.ebuild:
