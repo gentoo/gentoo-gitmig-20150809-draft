@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.20-r1.ebuild,v 1.1 2005/07/29 22:20:57 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.20-r2.ebuild,v 1.1 2005/08/03 09:23:43 leonardop Exp $
 
 inherit libtool gnome.org flag-o-matic eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 LICENSE="MIT"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="python readline ipv6 doc debug"
+IUSE="doc ipv6 python readline static"
 
 RDEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
@@ -26,6 +26,15 @@ src_unpack() {
 }
 
 src_compile() {
+	# USE zlib support breaks gnome2
+	# (libgnomeprint for instance fails to compile with
+	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).
+
+	# The 'debug' USE flag does not apply to the --with-debug option (enabling
+	# the libxml2 debug module). See bug #100898.
+
+	local myconf="--with-zlib $(use_with python) $(use_with readline) \
+		$(use_enable static) $(use_enable ipv6)"
 
 	# Please do not remove, as else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/python?.?/site-packages/libxml2mod.la among things.
@@ -34,15 +43,7 @@ src_compile() {
 	# filter seemingly problematic CFLAGS (#26320)
 	filter-flags -fprefetch-loop-arrays -funroll-loops
 
-	# USE zlib support breaks gnome2
-	# (libgnomeprint for instance fails to compile with
-	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).
-
-	econf --with-zlib \
-		$(use_with python) \
-		$(use_with readline) \
-		$(use_with debug) \
-		$(use_enable ipv6) || die
+	econf $myconf || die "Configuration failed"
 
 	# Patching the Makefiles to respect get_libdir
 	# Fixes BUG #86766, please keep this.
@@ -54,15 +55,15 @@ src_compile() {
 			|| die "sed failed"
 	done
 
-	emake || die
+	emake || die "Copilation failed"
 
 }
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "Installation failed"
 
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README* TODO*
 
 	use doc || rm -rf ${D}/usr/share/doc/${PF}/html
 }
