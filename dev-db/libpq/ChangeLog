@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.20 2005/08/03 21:05:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.21 2005/08/03 22:54:03 nakano Exp $
+
+  03 Aug 2005; Masatomo Nakano <nakano@gentoo.org> libpq-7.3.10-r1.ebuild,
+  libpq-7.4.8-r1.ebuild, libpq-8.0.1-r1.ebuild, libpq-8.0.3-r1.ebuild:
+  Added ${ROOT} value.
 
   03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> libpq-8.0.3.ebuild:
   Stable on alpha.

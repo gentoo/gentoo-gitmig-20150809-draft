@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.1-r1.ebuild,v 1.1 2005/07/27 19:32:59 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.1-r1.ebuild,v 1.2 2005/08/03 22:54:03 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
@@ -34,8 +34,8 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_preinst() {
 	# removing wrong symlink which is created by previous ebuild.
-	if [ -L /usr/include/libpq ]; then
-		rm /usr/include/libpq
+	if [ -L ${ROOT}/usr/include/libpq ]; then
+		rm ${ROOT}/usr/include/libpq
 	fi
 }
 
