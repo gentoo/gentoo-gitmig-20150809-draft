@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r2.ebuild,v 1.8 2005/08/03 14:02:15 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r2.ebuild,v 1.9 2005/08/03 14:20:49 seemant Exp $
 
 inherit eutils versionator
 
@@ -264,7 +264,7 @@ pkg_preinst() {
 	fi
 
 	if [[ ! -f "${ROOT}/etc/samba/smb.conf" ]]; then
-		cp "${ROOT}/etc/samba/smb.conf.example" "${ROOT}/etc/samba/smb.conf"
+		touch ${IMAGE}/etc/samba/smb.conf
 	fi
 }
 
