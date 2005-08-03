@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.16 2005/08/03 21:46:13 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.17 2005/08/03 22:16:13 herbs Exp $
+
+  03 Aug 2005; Herbie Hopkins <herbs@gentoo.org> ogdi-3.1.1-r1.ebuild,
+  ogdi-3.1.4-r1.ebuild, ogdi-3.1.5.ebuild, ogdi-3.1.5-r1.ebuild:
+  Removed --with-proj option so the --with-projlib option doesn't get ignored.
 
   03 Aug 2005; Steve Arnold <nerdboy@gentoo.org> ogdi-3.1.1-r1.ebuild,
   ogdi-3.1.4-r1.ebuild, ogdi-3.1.5.ebuild, ogdi-3.1.5-r1.ebuild:
