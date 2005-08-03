@@ -1,7 +1,7 @@
 #
 # /etc/login.defs - Configuration control definitions for the login package.
 #
-#	$Id: login.defs-4.0,v 1.1 2005/08/01 11:48:13 azarah Exp $
+#	$Id: login.defs-4.0,v 1.2 2005/08/03 18:57:22 azarah Exp $
 #
 # Three items must be defined:  MAIL_DIR, ENV_SUPATH, and ENV_PATH.
 # If unspecified, some arbitrary (and possibly incorrect) value will
@@ -76,6 +76,13 @@ MAIL_DIR	/var/spool/mail
 #
 HUSHLOGIN_FILE	.hushlogin
 #HUSHLOGIN_FILE	/etc/hushlogins
+
+#
+# *REQUIRED*  The default PATH settings, for superuser and normal users.
+#
+# (they are minimal, add the rest in the shell startup files)
+ENV_SUPATH	PATH=/sbin:/bin:/usr/sbin:/usr/bin
+ENV_PATH	PATH=/bin:/usr/bin
 
 #
 # Terminal permissions

@@ -1,0 +1,64 @@
+UCLIBC have the prototypes in stdlib.h, but not the actual functions (yes, you
+guys sucks once again.  The better way might be rather to add lib/rad64.c back,
+but its higher maintainence our side at least.
+
+--- shadow-4.0.11.1/libmisc/salt.c	2005-08-03 12:50:45.000000000 +0200
++++ shadow-4.0.11.1.az/libmisc/salt.c	2005-08-03 13:07:03.000000000 +0200
+@@ -14,6 +14,57 @@
+ #include "prototypes.h"
+ #include "defines.h"
+ #include "getdef.h"
++
++#ifndef HAVE_A64L
++
++/*
++ * i64c - convert an integer to a radix 64 character
++ */
++
++int
++i64c(int i)
++{
++	if (i <= 0)
++		return ('.');
++
++	if (i == 1)
++		return ('/');
++
++	if (i >= 2 && i < 12)
++		return ('0' - 2 + i);
++
++	if (i >= 12 && i < 38)
++		return ('A' - 12 + i);
++
++	if (i >= 38 && i < 63)
++		return ('a' - 38 + i);
++
++	return ('z');
++}
++
++/*
++ * l64a - convert a long to a string of radix 64 characters
++ */
++
++char *
++l64a(long l)
++{
++	static	char	buf[8];
++	int	i = 0;
++
++	if (l < 0L)
++		return ((char *) 0);
++
++	do {
++		buf[i++] = i64c ((int) (l % 64));
++		buf[i] = '\0';
++	} while (l /= 64L, l > 0 && i < 6);
++
++	return (buf);
++}
++
++#endif /* !HAVE_A64L */
++
+ /*
+  * Generate 8 base64 ASCII characters of random salt.  If MD5_CRYPT_ENAB
+  * in /etc/login.defs is "yes", the salt string will be prefixed by "$1$"

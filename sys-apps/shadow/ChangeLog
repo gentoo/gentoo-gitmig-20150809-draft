@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.116 2005/08/01 11:47:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.117 2005/08/03 18:56:46 azarah Exp $
+
+*shadow-4.0.11.1-r1 (03 Aug 2005)
+
+  03 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/shadow-4.0.11.1-SUPATH.patch,
+  +files/shadow-4.0.11.1-ngettext.patch,
+  +files/shadow-4.0.11.1-uclibc-missing-l64a.patch,
+  +shadow-4.0.11.1-r1.ebuild:
+  Checked with upstream .. SUPATH and PATH valid again for PAM (bug #101047).
+  Fix building on UCLIBC.
 
 *shadow-4.0.11.1 (01 Aug 2005)
 

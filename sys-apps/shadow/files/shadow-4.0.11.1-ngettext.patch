@@ -1,0 +1,28 @@
+New ngettext stuff borks on UCLIBC, as ngettext do not have a !ENABLE_NLS
+define.  Add a check for ngettext and add the ngettext define.  Both was
+inspired by coreutils.
+
+diff -urp shadow-4.0.11.1/configure.in shadow-4.0.11.1.az/configure.in
+--- shadow-4.0.11.1/configure.in	2005-08-03 00:59:56.000000000 +0200
++++ shadow-4.0.11.1.az/configure.in	2005-08-03 12:04:55.000000000 +0200
+@@ -280,6 +280,6 @@ if test "$with_libskey" = "yes"; then
+ fi
+ 
+ AM_GNU_GETTEXT_VERSION(0.12.1)
+-AM_GNU_GETTEXT([external])
++AM_GNU_GETTEXT([external], [need-ngettext])
+ 
+ AC_CONFIG_FILES([
+ 	Makefile
+diff -urp shadow-4.0.11.1/lib/defines.h shadow-4.0.11.1.az/lib/defines.h
+--- shadow-4.0.11.1/lib/defines.h	2005-06-14 22:27:48.000000000 +0200
++++ shadow-4.0.11.1.az/lib/defines.h	2005-08-03 12:06:42.000000000 +0200
+@@ -24,6 +24,8 @@
+ # undef textdomain
+ # define textdomain(Domain)	/* empty */
+ # define _(Text) Text
++# define ngettext(Msgid1, Msgid2, N) \
++    ((N) == 1 ? (const char *) (Msgid1) : (const char *) (Msgid2))
+ #endif
+ 
+ #if STDC_HEADERS

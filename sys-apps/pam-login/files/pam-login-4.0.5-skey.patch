@@ -1,0 +1,11 @@
+--- shadow-4.0.5.orig/lib/pwauth.c	2004-11-01 12:14:40.254524181 -0800
++++ shadow-4.0.5/lib/pwauth.c	2004-11-01 12:15:13.426532987 -0800
+@@ -152,7 +152,7 @@
+ 	 * If there is no SKEY information we default to not using SKEY.
+ 	 */
+ 
+-	if (skeychallenge (&skey, user, challenge_info) == 0)
++	if (skeychallenge (&skey, user, challenge_info, sizeof(challenge_info)) == 0)
+ 		use_skey = 1;
+ #endif
+ 
