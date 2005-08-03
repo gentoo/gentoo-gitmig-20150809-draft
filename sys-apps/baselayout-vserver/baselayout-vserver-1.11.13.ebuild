@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.13.ebuild,v 1.1 2005/08/03 18:59:23 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.13.ebuild,v 1.2 2005/08/03 23:15:53 mr_bones_ Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -212,7 +212,7 @@ src_install() {
 		libdirs_env="${libdirs_env}:/lib32:/usr/lib32:/usr/local/lib32"
 	fi
 
-	# List all the multilib libdirs in /etc/env/04multilib (only if they're 
+	# List all the multilib libdirs in /etc/env/04multilib (only if they're
 	# actually different from the normal
 	if has_multilib_profile || [[ $(get_libdir) != "lib" || -n ${CONF_MULTILIBDIR} ]]; then
 		echo "LDPATH=\"${libdirs_env}\"" > ${D}/etc/env.d/04multilib
@@ -312,7 +312,7 @@ src_install() {
 
 	if use build || use bootstrap; then
 		cd ${D}/dev || die
-		
+
 		ebegin "Making and populating /dev with safe device nodes..."
 		./MAKEDEV generic-vserver
 		eend $? || die

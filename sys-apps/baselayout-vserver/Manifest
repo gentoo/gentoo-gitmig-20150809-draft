@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
-MD5 5c3df01b4960075f2032ba3d475d0cee ChangeLog 1622
 MD5 d387e650e74a4eb510f960eb62a8d54a baselayout-vserver-1.11.12-r4.ebuild 12241
-MD5 9604bd3eb6599aa7f31b1cb3521ff99c baselayout-vserver-1.11.13.ebuild 12922
-MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
-MD5 76a9437d29bd77c416f76fbcf0cf2af2 files/vserver-changes 1642
-MD5 51a97031d54d767b45fb247d60727e9d files/fakelog.initd 449
-MD5 53ec83d5ccc83d7f3dc430db626cb464 files/digest-baselayout-vserver-1.11.12-r4 78
+MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
+MD5 950d64e36a5eefa925026472a0c4f251 baselayout-vserver-1.11.13.ebuild 12922
+MD5 5c3df01b4960075f2032ba3d475d0cee ChangeLog 1622
 MD5 a551ddae4bfb1b2bd7cbc16c57f481d3 files/digest-baselayout-vserver-1.11.13 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8RRumPFBzbX68WERArR9AJ4uk0xUc8OdN6Nc7w9LUHEeJLTwkwCdHIQp
-PgZbyi0eovij9agV1ph9vUM=
-=N7Aj
------END PGP SIGNATURE-----
+MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
+MD5 53ec83d5ccc83d7f3dc430db626cb464 files/digest-baselayout-vserver-1.11.12-r4 78
+MD5 51a97031d54d767b45fb247d60727e9d files/fakelog.initd 449
+MD5 76a9437d29bd77c416f76fbcf0cf2af2 files/vserver-changes 1642
