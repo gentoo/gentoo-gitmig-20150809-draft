@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.93 2005/07/18 10:27:40 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.94 2005/08/03 14:04:39 voxus Exp $
+
+*openmosix-sources-2.6.12.577 (03 Aug 2005)
+
+  03 Aug 2005; Konstantin Arkhipov <voxus@gentoo.org>
+  -openmosix-sources-2.6.12.576-r1.ebuild,
+  +openmosix-sources-2.6.12.577.ebuild:
+  Sync with tab's patchset and gentoo-sources-2.6.12-r7.
 
 *openmosix-sources-2.6.12.576-r1 (18 Jul 2005)
 

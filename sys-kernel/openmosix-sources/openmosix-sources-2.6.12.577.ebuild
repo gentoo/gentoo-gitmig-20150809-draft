@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.6.12.576-r1.ebuild,v 1.1 2005/07/18 10:27:40 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.6.12.577.ebuild,v 1.1 2005/08/03 14:04:39 voxus Exp $
 
 ETYPE="sources"
 
@@ -19,7 +19,7 @@ detect_arch
 KV_FULL=${OKV}-openmosix-r${OMR}
 
 # version of gentoo patchset
-GPV="12-10"
+GPV="12-11"
 GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.base.tar.bz2
 	mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}.${GPV}.extras.tar.bz2"
 
