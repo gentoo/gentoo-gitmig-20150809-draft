@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.15 2005/07/05 17:42:48 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.16 2005/08/03 18:41:51 voxus Exp $
+
+  03 Aug 2005; Konstantin Arkhipov <voxus@gentoo.org> -apg-2.3.0b.ebuild:
+  Cleanup.
 
   05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> apg-2.3.0b-r1.ebuild:
   Stable on hppa.
