@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.51 2005/08/02 12:46:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.52 2005/08/03 17:00:22 anarchy Exp $
+
+*mozilla-1.7.11 (03 Aug 2005)
+
+  03 Aug 2005; Jory A. Pratt <anarchy@gentoo.org> +mozilla-1.7.11.ebuild:
+  revsision bump repairs regressions in 1.7.10
 
   02 Aug 2005; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.10-r3.ebuild:
   Move GENTOO_NSPLUGINS_DIR and GENTOO_NSBROWSER_PLUGINS_DIR from the eclass
