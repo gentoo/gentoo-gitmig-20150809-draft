@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/swl/swl-0.4.0_rc5-r2.ebuild,v 1.1 2005/08/03 01:30:54 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/swl/swl-0.4.0_rc5-r2.ebuild,v 1.2 2005/08/03 01:38:36 trapni Exp $
 
 inherit flag-o-matic multilib
 
@@ -24,7 +24,7 @@ S="${WORKDIR}/${P/_/-}"
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	epatch "${DISTDIR}/0.4-rc5-post-20050729.diff" || die
+	epatch "${DISTDIR}/0.4-rc5-post-20050803.diff" || die
 }
 
 src_compile() {
