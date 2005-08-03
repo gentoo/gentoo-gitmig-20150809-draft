@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.50 2005/08/01 17:44:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.51 2005/08/03 20:03:36 kloeri Exp $
+
+  03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> devtodo-0.1.19.ebuild:
+  Stable on alpha.
 
   01 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
   files/digest-devtodo-0.1.19, Manifest:
