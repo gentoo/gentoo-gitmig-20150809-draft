@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.4.ebuild,v 1.1 2005/08/02 16:06:13 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.4.ebuild,v 1.2 2005/08/03 09:29:20 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
 	foomaticdb? ( http://www.linuxprinting.org/download/foomatic/foomatic-db-hpijs-${DB_V}.tar.gz )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="foomaticdb snmp X qt ppds scanner cups usb"
 
 DEPEND="dev-lang/python
