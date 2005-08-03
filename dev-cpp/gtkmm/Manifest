@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d3bca1f535a495901fab10b1e92ae62f gtkmm-2.4.11.ebuild 642
 MD5 19c1d68626cbf288158573c5b8f7d244 gtkmm-2.6.3.ebuild 644
 MD5 16f225f3c8fb270e719a0c248d34e7e5 ChangeLog 11315
@@ -22,3 +25,10 @@ MD5 53f860d6754e3cb516cc67a11c36fc7f files/gtkmm-1.2.9-gcc3.1-gentoo.patch 518
 MD5 e94dace49157531976d52e48b24e620d files/gtkmm-1.2.9-gcc3.4-gentoo.patch 2197
 MD5 dfbd0c61704c63a79aedfe5810297758 files/digest-gtkmm-2.7.3 65
 MD5 5e336fc4481d2ce2d35570b72d3a1555 files/digest-gtkmm-2.6.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8SzKKf2g/qXtneoRApjiAJ96l0VPjjk5EZdv48koOh9GhtbSSACgtGBF
+Cpc2jblRwRqfeUkl542Ic84=
+=L3Dm
+-----END PGP SIGNATURE-----
