@@ -2,17 +2,20 @@
 Hash: SHA1
 
 MD5 e2f7179d6bfc67f238e81ab035677b7b run-mailcap-3.28_p1.ebuild 1041
+MD5 b04edb69c8b6f8d69ad0bfff2c21d879 run-mailcap-3.34_p1.ebuild 1089
 MD5 d1daa7badb28af30e026129166852add run-mailcap-3.26_p1.ebuild 1040
 MD5 cd942fe7eab592993da30a710e566ed1 run-mailcap-3.28_p1-r1.ebuild 1023
-MD5 967067b1d9c532f342e6ec8f3667e66f ChangeLog 3974
+MD5 b22d3fce38e2e3b36ab26bfd27c6dd82 ChangeLog 4246
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
+MD5 d0088d928007afcc0011634c7df6693c files/run-mailcap-breakrecursion.patch 419
 MD5 319537083b6740e7f97520fa740a4154 files/digest-run-mailcap-3.28_p1-r1 70
 MD5 0c15db34fcdaa0b84d2df607d75542fa files/digest-run-mailcap-3.26_p1 70
 MD5 319537083b6740e7f97520fa740a4154 files/digest-run-mailcap-3.28_p1 70
+MD5 68bdc7fe3ebfb096e4e5a102636cc400 files/digest-run-mailcap-3.34_p1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCeuTDI1lqEGTUzyQRAkKBAJ4ifMrUWvdTt3A0mVubjYyOyHEHgwCfV8xP
-3LMv6oCHP41rcQYcLzoTono=
-=mOv7
+iD8DBQFC8R40BXaUFmZvwyMRArcKAJ9dVpfQWtNcu0E9GCr0QTNYpp2OVwCfQzXg
+ipQSLioDKI6Bq9GNSo+K2EY=
+=Fj+D
 -----END PGP SIGNATURE-----
