@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.27 2005/07/20 11:05:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.28 2005/08/03 19:07:21 axxo Exp $
 
 pkglistpath="${T}/java-pkg-list"
 
@@ -352,7 +352,7 @@ java-pkg_dosrc() {
 	local startdir=$(pwd)
 	for x in ${@}; do
 		cd $(dirname ${x})
-		zip -q -r ${T}/${PN}-src.zip $(basename ${x}) || die "zip failed"
+		zip -q -r ${T}/${PN}-src.zip $(basename ${x}) -i '*.java' || die "zip failed"
 		cd ${startdir}
 	done
 
