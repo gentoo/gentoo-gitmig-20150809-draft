@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.0.2-r2.ebuild,v 1.4 2005/07/24 12:52:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.0.2-r2.ebuild,v 1.5 2005/08/04 22:50:16 herbs Exp $
 
 inherit nsplugins eutils rpm versionator
 
@@ -21,10 +21,11 @@ KEYWORDS="-* amd64 x86"
 IUSE="mozilla ldap"
 RESTRICT="nostrip"
 
-RDEPEND="!amd64? ( virtual/libc
-	>=x11-libs/gtk+-2.0
-	ldap? ( net-nds/openldap ) )
-	amd64? ( >=app-emulation/emul-linux-x86-gtklibs-1.2-r1 )"
+RDEPEND="virtual/libc
+	!amd64? ( >=x11-libs/gtk+-2.0
+			ldap? ( net-nds/openldap ) )
+	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.0
+			>=app-emulation/emul-linux-x86-gtklibs-2.0 )"
 PROVIDE="virtual/pdfviewer"
 
 INSTALLDIR=/opt/Acrobat7
@@ -70,10 +71,10 @@ src_install() {
 
 	if use amd64 ; then
 		# Work around buggy 32bit glibc on amd64, bug 77229
-		dosed  "3i\export GCONV_PATH=\"/usr/lib32/gconv\"" ${INSTALLDIR}/acroread
+		dosed  "3i\export GCONV_PATH=\"/usr/$(get_libdir)/gconv\"" ${INSTALLDIR}/acroread
 	fi
 
-	if use amd64 || ! use ldap ; then
+	if ! use ldap ; then
 		rm ${D}${INSTALLDIR}/Reader/intellinux/plug_ins/PPKLite.api
 	fi
 
@@ -85,7 +86,5 @@ pkg_postinst () {
 	# fix wrong directory permissions (bug #25931)
 	find ${INSTALLDIR} -type d | xargs chmod 755 || die
 
-	einfo "The Acrobat(TM) Security Plugin will be enabled with USE=ldap, it"
-	einfo "does not work with amd64 because there is no x86 ldap-emulation"
-	einfo "package available in portage."
+	einfo "The Acrobat(TM) Security Plugin will be enabled with USE=ldap"
 }
