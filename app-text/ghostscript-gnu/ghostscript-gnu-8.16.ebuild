@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16.ebuild,v 1.2 2005/06/09 13:28:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.16.ebuild,v 1.3 2005/08/04 20:09:28 genstef Exp $
 
 inherit eutils
 
@@ -73,7 +73,7 @@ src_compile() {
 	if use cups; then
 		echo 'include pstoraster/cups.mak' >> Makefile
 		sed -i -e 's:DEVICE_DEVS17=:DEVICE_DEVS17=$(DD)cups.dev:' Makefile
-		sed -i -e 's:LDFLAGS=\(.*\)$(XLDFLAGS):LDFLAGS=\1-L/usr/include -lcups -lcupsimage $(XLDFLAGS):' Makefile
+		sed -i -e 's:EXTRALIBS=\(.*\):EXTRALIBS=\1 -lcups -lcupsimage:' Makefile
 	fi
 
 	# search path fix

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-gnu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.2 2005/06/07 17:54:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.3 2005/08/04 20:09:28 genstef Exp $
+
+  04 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
+  ghostscript-gnu-8.16.ebuild:
+  Fix linking with --as-needed, thanks to Diego Pettenò <flameeyes@gentoo.org>
+  in bug 101098
 
 *ghostscript-gnu-8.16 (07 Jun 2005)
 
