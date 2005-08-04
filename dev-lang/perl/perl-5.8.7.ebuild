@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.2 2005/08/01 20:23:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.3 2005/08/04 02:51:27 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -115,7 +115,12 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-tempfiles.patch
 
-
+	# Starting and hopefully ending with 5.8.7 we observe stack 
+	# corruption with the regexp handling in perls DynaLoader code 
+	# with ssp enabled. This become fatal during compile time so we 
+	# temporally disable ssp on two regexp files till upstream has a 
+	# chance to work it out. Bug #97452
+	epatch "${FILESDIR}"/${P}-regexp-nossp.patch
 }
 
 src_configure() {
