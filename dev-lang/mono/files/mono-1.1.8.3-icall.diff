@@ -1,0 +1,10 @@
+--- mono-1.1.8-orig/mono/metadata/icall.c	2005-07-27 21:27:32.000000000 -0700
++++ mono-1.1.8/mono/metadata/icall.c	2005-07-27 21:28:03.000000000 -0700
+@@ -2561,7 +2561,6 @@
+ 					else 
+ 						result = *((gpointer *)((char *)this + field->offset));
+ 				
+-					g_assert (result);
+ 					out_args = mono_array_new (domain, mono_defaults.object_class, 1);
+ 					*outArgs = out_args;
+ 					mono_array_set (out_args, gpointer, 0, result);

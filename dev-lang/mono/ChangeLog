@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.54 2005/07/06 15:25:00 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.55 2005/08/04 18:31:13 latexer Exp $
+
+*mono-1.1.8.3 (04 Aug 2005)
+
+  04 Aug 2005; Peter Johanson <latexer@gentoo.org>
+  +files/mono-1.1.8.3-array-getvalue.diff, +files/mono-1.1.8.3-icall.diff,
+  -mono-1.1.6.ebuild, -mono-1.1.6-r1.ebuild, -mono-1.1.7.ebuild,
+  +mono-1.1.8.3.ebuild:
+  Bump to new release, including fix for bug #100515. Remove some older 1.1.x
+  versions.
 
 *mono-1.1.8.2 (06 Jul 2005)
 
