@@ -6,12 +6,13 @@ MD5 db870979ea0f600d0bd8137520e2251a shadow-4.0.4.1-r4.ebuild 5961
 MD5 a51d02eb155feb33913816239bb3cf57 shadow-4.0.7.ebuild 5602
 MD5 c2ab407aa2ff8ce76a2600f2d4c6a3b2 shadow-4.0.7-r3.ebuild 7074
 MD5 0faad34d69a5e1bba61af947618ae795 shadow-4.0.7-r4.ebuild 7206
-MD5 b77171d0f44cc7fca9087783686e5a5e ChangeLog 21911
+MD5 797e33a3d6ec2503ae211bf4dfc8004e ChangeLog 22184
 MD5 9207341a86bfedb9b013c51841923921 shadow-4.0.11.1-r1.ebuild 7104
 MD5 ac3c5c29460f248d06d4ef83c96ca912 shadow-4.0.7-r1.ebuild 6602
 MD5 fad39eceb7fd04f2805c6acc16c59d57 shadow-4.0.5-r2.ebuild 5440
 MD5 06049e2959c62c88aee32422a37bf07f shadow-4.0.6-r1.ebuild 5641
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 3cd40efe130a97a1269ffa85cb44ffe8 shadow-4.0.11.1-r2.ebuild 7235
 MD5 20fd2dc35b8671b91e120b90281b4cf3 files/shadow-4.0.5-hack-X-envvars.patch 521
 MD5 d06833980d79d4f001b6064a3f52f938 files/shadow-4.0.7-iswheel.patch 416
 MD5 70b7c7f1725841e335e5f2361fc9ebab files/shadow-4.0.7-nscd-EPIPE-failure.patch 947
@@ -45,9 +46,11 @@ MD5 f9846ea2aeefba54443ef5d6796f0bbc files/shadow-4.0.10-nls-manpages.patch 367
 MD5 46c2be2ed8b26ec007e3ed1f476491d8 files/digest-shadow-4.0.7-r1 66
 MD5 058f760e522ab65e270293003805fe61 files/shadow-4.0.4.1-userdel-missing-brackets.patch 380
 MD5 b8efca60a25e256eebe54c3d0db0760f files/shadow-4.0.4.1-gcc34-xmalloc.patch 361
+MD5 9375147f78a25196b654616c969af9a5 files/digest-shadow-4.0.11.1-r2 69
 MD5 90e2ab53494f677dc23b5137d6e39110 files/shadow-4.0.6-fix-configure.patch 3047
 MD5 636f233fa173a998195016c3808173d4 files/shadow-4.0.5-skey.patch 395
 MD5 fdb23bff28b70bd53f200379c33dd27c files/shadow-4.0.10-nonis.patch 1434
+MD5 f4ae7cde924d5d91ce4010760439b836 files/shadow-4.0.11.1-su-fix-environment.patch 966
 MD5 13cddd2e24cbcaf5164e13f9105c222c files/shadow-4.0.7-perms.patch 1768
 MD5 cef6788bc7c8c5468c1b1f68df77ed9e files/digest-shadow-4.0.4.1-r4 67
 MD5 95f7b8980169e81352229bd548909ea7 files/shadow-4.0.10-fix-configure.patch 579
@@ -72,9 +75,9 @@ MD5 a5721c39446539b751dceae4b054542b files/pam.d/shadow 171
 MD5 8a59937d720a19824db6e4a8cd173a4b files/pam.d/passwd 172
 MD5 5bff4f2134b72dabc4afa5bb296e874d files/pam.d/other 142
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC8RSS1ZcsMnZjRyIRAn+lAKCrytMa0B2s9VsAADoZcuAFmwCe1gCgvwcH
-sgjWn6VCJEuz0HzRJhlS218=
-=o5h9
+iD8DBQFC8fKm1ZcsMnZjRyIRArawAJ9JkxRJdvGTP6UeUPzkz5JIWFeR7wCgrxsB
+NpGmeyDw5DA6TutCS2XJdzU=
+=phJ2
 -----END PGP SIGNATURE-----

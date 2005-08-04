@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.117 2005/08/03 18:56:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.118 2005/08/04 10:48:39 azarah Exp $
+
+*shadow-4.0.11.1-r2 (04 Aug 2005)
+
+  04 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/shadow-4.0.11.1-su-fix-environment.patch,
+  +shadow-4.0.11.1-r2.ebuild:
+  Patch from upstream enables the new environment too early for PAM, causing
+  segfaults in some cases.
 
 *shadow-4.0.11.1-r1 (03 Aug 2005)
 
