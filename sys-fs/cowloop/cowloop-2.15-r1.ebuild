@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-2.15.ebuild,v 1.2 2005/06/26 09:23:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-2.15-r1.ebuild,v 1.1 2005/08/04 08:56:41 dragonheart Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -32,11 +32,11 @@ pkg_setup() {
 
 src_compile() {
 	linux-mod_src_compile
-	CC="$(tc-getCC) ${CFLAGS}" emake cowdev cowrepair cowsync cowlist || die "make failed"
+	CC="$(tc-getCC) ${CFLAGS}" emake cowdev cowrepair cowsync cowlist cowmerge || die "make failed"
 }
 
 src_install() {
 	linux-mod_src_install
-	dosbin cowdev cowrepair cowsync cowlist
+	dosbin cowdev cowrepair cowsync cowlist cowmerge
 	doman man/*
 }

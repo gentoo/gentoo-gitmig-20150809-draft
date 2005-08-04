@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/cowloop
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/ChangeLog,v 1.7 2005/06/26 09:23:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/ChangeLog,v 1.8 2005/08/04 08:56:41 dragonheart Exp $
+
+*cowloop-2.15-r1 (04 Aug 2005)
+
+  04 Aug 2005; Daniel Black <dragonheart@gentoo.org> -cowloop-2.11.ebuild,
+  -cowloop-2.15.ebuild, +cowloop-2.15-r1.ebuild:
+  added cowmerge thanks to bug #101159 by Jérôme Poulin
 
   26 Jun 2005; David Holm <dholm@gentoo.org> cowloop-2.15.ebuild:
   Added to ~ppc.
