@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Technologies, Inc.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.06.ebuild,v 1.1 2005/08/03 23:41:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.06.ebuild,v 1.2 2005/08/04 02:23:47 mr_bones_ Exp $
 
 inherit perl-module
 
