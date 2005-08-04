@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.50 2005/08/04 21:38:19 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.51 2005/08/04 22:16:44 anarchy Exp $
+
+  04 Aug 2005; Jory A. Pratt <anarchy@gentoo.org> valgrind-3.0.0.ebuild:
+  Marked ~ppc and added -* as bug report requested
 
 *valgrind-3.0.0 (04 Aug 2005)
 *valgrind-2.4.1 (04 Aug 2005)
