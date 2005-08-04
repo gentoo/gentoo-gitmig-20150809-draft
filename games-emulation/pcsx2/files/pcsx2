@@ -2,22 +2,22 @@
 
 source /sbin/functions.sh
 
-if [ ! -f ${HOME}/.pcsx2/Pcsx2.cfg ]; then
+if [ ! -f "${HOME}/.pcsx2/Pcsx2.cfg" ]; then
 	einfo You are running PCSX2 for the first time.
 	einfo Setting up your PCSX2 environment... Please wait...
 
-	mkdir -p ${HOME}/.pcsx2
-	cd ${HOME}/.pcsx2
+	mkdir -p "${HOME}/.pcsx2"
+	cd "${HOME}/.pcsx2"
 	mkdir Bios Docs Plugins host memcards snap
 
-	ln -s /usr/games/bin/pcsx2.bin pcsx2
-	ln -s /usr/games/lib/ps2emu/plugins/* Plugins/
-	ln -s /usr/games/lib/ps2emu/Langs Langs
-	ln -s /usr/games/lib/ps2emu/cfg cfg
+	ln -s GAMES_BINDIR/pcsx2.bin pcsx2
+	ln -s GAMES_LIBDIR/ps2emu/plugins/* Plugins/
+	ln -s GAMES_LIBDIR/ps2emu/Langs Langs
+	ln -s GAMES_LIBDIR/ps2emu/cfg cfg
 
 	cd Bios
-	if [ -f /usr/games/lib/ps2emu/bios/scph1001.bin ]; then
-		ln -s /usr/games/lib/ps2emu/bios/scph1001.bin .
+	if [ -f GAMES_LIBDIR/ps2emu/bios/scph1001.bin ]; then
+		ln -s GAMES_LIBDIR/ps2emu/bios/scph1001.bin .
 		biosname=scph1001.bin
 	else
 		biosname=HLE
@@ -25,7 +25,7 @@ if [ ! -f ${HOME}/.pcsx2/Pcsx2.cfg ]; then
 	cd ..
 
 	firstplugin() { echo $(basename $(ls "$@" | cut -f1 -d\ ) ) 2>/dev/null ; }
-	cat >${HOME}/.pcsx2/Pcsx2.cfg <<EOF
+	cat > "${HOME}/.pcsx2/Pcsx2.cfg" <<EOF
 Bios = $biosname
 GS = $(firstplugin Plugins/libGS* )
 SPU2 = $(firstplugin Plugins/libSPU2* )
@@ -45,9 +45,9 @@ EOF
 
 fi
 
-cd ${HOME}/.pcsx2/
+cd "${HOME}/.pcsx2/"
 
-ln -s /usr/games/lib/ps2emu/cfg/* cfg/ &>/dev/null
-ln -s /usr/games/lib/ps2emu/plugins/* plugins/ &>/dev/null
+ln -s GAMES_LIBDIR/ps2emu/cfg/* cfg/ &> /dev/null
+ln -s GAMES_LIBDIR/ps2emu/plugins/* plugins/ &> /dev/null
 
 exec ./pcsx2 "$@"

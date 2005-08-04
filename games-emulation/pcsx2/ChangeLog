@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/pcsx2
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/ChangeLog,v 1.5 2004/06/24 22:32:22 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/ChangeLog,v 1.6 2005/08/04 04:49:29 mr_bones_ Exp $
+
+*pcsx2-0.8.1 (04 Aug 2005)
+
+  04 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> files/pcsx2,
+  pcsx2-0.6.ebuild, +pcsx2-0.8.1.ebuild:
+  Don't hardcode the games paths in the wrapper script; version bump
 
 *pcsx2-0.6 (05 Jun 2004)
 

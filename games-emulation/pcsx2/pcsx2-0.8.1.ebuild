@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.6.ebuild,v 1.4 2005/08/04 04:49:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.1 2005/08/04 04:49:29 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="Playstation2 emulator"
 HOMEPAGE="http://www.pcsx2.net/"
-SRC_URI="http://www.pcsx2.net/download/${PV}release/pcsx2_${PV}src.zip"
+SRC_URI="http://www.pcsx2.net/download/0.8release/${P}src.7z"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="virtual/x11
@@ -24,21 +24,26 @@ RDEPEND="virtual/x11
 	>=games-emulation/ps2emu-spu2null-0.21
 	>=games-emulation/ps2emu-dev9null-0.1"
 DEPEND="${RDEPEND}
-	app-arch/unzip
-	dev-lang/nasm"
+	app-arch/p7zip"
 
-S="${WORKDIR}/pcsx2_${PV}src"
+S=${WORKDIR}/${P}src
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	find . -name CVS -type d -print0 | xargs -0 rm -rf
+	cd "${WORKDIR}"
+	7z x "${DISTDIR}/${P}src.7z" || die "unpack failed"
+	cd "${S}"
+	sed -i \
+		-e "/^CC/d" \
+		Linux/Makefile \
+		|| die "sed failed"
+	sed -i \
+		-e "/non_linear_quantizer_scale/s/^/extern /" \
+		IPU/Mpeg.h \
+		|| die "sed failed"
 }
+
 src_compile() {
-	cd "${S}/ix86-32/GoldRec"
-	emake OPTIMIZE="${CFLAGS}" || die "goldrec building failed"
-	cd "${S}/Linux"
-	emake OPTIMIZE="${CFLAGS}" || die "linux building failed"
+	emake -C Linux OPTIMIZE="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
@@ -49,8 +54,6 @@ src_install() {
 		-e "s:GAMES_LIBDIR:${GAMES_LIBDIR}:" \
 		"${D}/${GAMES_BINDIR}/pcsx2" \
 		|| die "sed failed"
-	dodir "${GAMES_LIBDIR}/ps2emu/Langs"
-	cp -r Intl/Langs/* "${D}/${GAMES_LIBDIR}/ps2emu/Langs/" || die "cp failed"
 	dodoc Docs/*.txt
 	prepgamesdirs
 }
