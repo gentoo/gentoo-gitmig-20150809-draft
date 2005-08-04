@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.258 2005/07/30 21:53:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.259 2005/08/04 13:29:17 seemant Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -47,6 +47,7 @@ cdparanoia - Enables cdparanoia support
 cdr - Adds support for CD writer hardware
 chasen - Enable chasen support
 cjk - Adds support for Multi-byte character languages (Chinese, Japanese, Korean)
+clamav - Adds support for Clam AntiVirus software (usually with a plugin)
 cpdflib -  Adds support for clibpdf
 crypt - Add support for encryption -- using mcrypt or gpg where applicable
 cscope - Enables cscope interface -- in vim for example
