@@ -3,16 +3,16 @@ Hash: SHA1
 
 MD5 f7795d438fd180afa232d6fc88d3204d cowloop-1.4.ebuild 1175
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 0db6f9ed0e5eb96991ffba6873f8d892 ChangeLog 1426
+MD5 67146e70d6ebc1fb4961666dd913382a ChangeLog 1523
 MD5 2f48a1eac2e672a5b651efe97de1b57a cowloop-2.14.ebuild 1127
-MD5 6666a2b3c915782174580b554535853a cowloop-2.15-r1.ebuild 1154
+MD5 cec91612babe515d74c49b958dcc759e cowloop-2.15-r1.ebuild 1347
 MD5 c1f4e8a9d7f7054d5560717155944ba1 files/digest-cowloop-1.4 62
 MD5 30d42e2ee9dff210d34c789b62d48387 files/digest-cowloop-2.14 63
 MD5 0bb7bf2d5fe9317514e09af6dd0335fc files/digest-cowloop-2.15-r1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC8dhemdTrptrqvGERArNUAJ9tBT9kht3KR2YGz1PnD7ptQxoZqACePEwl
-Gx0dI4AQP8m77rvqyi3W/Bg=
-=/Wiz
+iD8DBQFC8o3ZmdTrptrqvGERAiEZAJ9PpEQldSDXQmbPlkBklEO3y8sEgwCfW0P6
+KBKjDAXXaDek2YjsbAv4Egc=
+=OlYM
 -----END PGP SIGNATURE-----

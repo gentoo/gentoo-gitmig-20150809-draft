@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cowloop
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/ChangeLog,v 1.8 2005/08/04 08:56:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/ChangeLog,v 1.9 2005/08/04 21:51:07 dragonheart Exp $
+
+  04 Aug 2005; Daniel Black <dragonheart@gentoo.org> cowloop-2.15-r1.ebuild:
+  added udev rules
 
 *cowloop-2.15-r1 (04 Aug 2005)
 
