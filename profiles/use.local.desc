@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1363 2005/08/04 17:27:29 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1364 2005/08/04 17:36:57 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -262,6 +262,7 @@ dev-lisp/cl-sql:sqlite3 - build support for sqlite3
 dev-lisp/cl-ucw:araneida - use the Araneida web-server backend
 dev-lisp/cl-ucw:aserve - use the Portable Allegro Serve web-server backend
 dev-lisp/cl-ucw:mod_lisp - use the mod_lisp web-server backend
+dev-lisp/cl-tbnl:standalone - use TBNL without a front-end (ie. no Apache dependency)
 dev-lisp/cmucl:nosource - don't include source code for CMUCL in installation
 dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl-cvs:dlopen - build a GCL which uses dlopen for linking
