@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Text_Wiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.17 2005/05/06 20:25:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.18 2005/08/04 07:24:25 sebastian Exp $
+
+*PEAR-Text_Wiki-1.0.0 (04 Aug 2005)
+
+  04 Aug 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -PEAR-Text_Wiki-0.8.2.ebuild, +PEAR-Text_Wiki-1.0.0.ebuild:
+  Version bump, remove old version.
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   PEAR-Text_Wiki-0.20.1.ebuild:
