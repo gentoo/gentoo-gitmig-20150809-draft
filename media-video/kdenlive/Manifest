@@ -1,5 +1,15 @@
-MD5 e82d6daaa86fa3b259f2d24b0e549f28 ChangeLog 1500
-MD5 b96f031332553c836fa874ec43e32769 kdenlive-0.2.4.ebuild 693
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1f60e4842c9c5725242b820c2fc46f97 ChangeLog 1641
 MD5 b930e21bf22fd73f984ae65f871fdc2d metadata.xml 253
+MD5 cfba341b66477d7e5a0fc81c2c8b0715 kdenlive-0.2.4.ebuild 642
 MD5 e0e37c5c67335b510278e92e08bb01d8 files/digest-kdenlive-0.2.4 67
 MD5 9b7f530fe5c63b0114d2445b9d352e43 files/kdenlive-0.2.4-gcc34.patch 3723
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8igDj5H05b2HAEkRAi7jAJ9bSaQZYQoYeZUvB2AgnEQhifeQvACdGDoh
+fhI4xP6n1ecpKg+ATwczqRk=
+=S4FK
+-----END PGP SIGNATURE-----

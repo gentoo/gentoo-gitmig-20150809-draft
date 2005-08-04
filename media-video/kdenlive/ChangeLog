@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.10 2005/05/15 14:11:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.11 2005/08/04 14:35:52 flameeyes Exp $
+
+  04 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> kdenlive-0.2.4.ebuild:
+  Don't depend on kdesdk, package builds and runs fine without.
 
   15 May 2005; Diego Pettenò <flameeyes@gentoo.org> kdenlive-0.2.4.ebuild:
   Removed use of gcc eclass. Patch applied unconditionally as it's sane.
