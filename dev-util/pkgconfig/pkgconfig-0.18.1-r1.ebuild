@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.18.1-r1.ebuild,v 1.1 2005/07/25 12:46:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.18.1-r1.ebuild,v 1.2 2005/08/04 03:41:11 leonardop Exp $
 
 inherit eutils flag-o-matic gnome.org
 
@@ -11,10 +11,11 @@ HOMEPAGE="http://pkgconfig.freedesktop.org/wiki/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="hardened"
 
-DEPEND=""
+# automake dependency is necessary (bug #99819)
+DEPEND="=sys-devel/automake-1.7*"
 
 S=${WORKDIR}/${MY_P}
 
@@ -29,23 +30,13 @@ src_unpack() {
 	# Fix compilation-time tests. See bug #98651.
 	epatch ${FILESDIR}/${MY_P}-checks.patch
 
-	einfo "Running autoconf"
-	autoconf || die "Autoconf failed"
-	einfo "Running automake"
-	WANT_AUTOMAKE=1.7 automake || die "Autoconf failed"
-
-}
-
-src_compile() {
-
-	econf || die "./configure step failed"
-	emake || die "Compilation failed"
-
+	export WANT_AUTOMAKE=1.7
+	autoconf || die "autoconf failed"
+	automake || die "automake failed"
 }
 
 src_install() {
+	make install DESTDIR="${D}" || die "Installation failed"
 
-	make install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS README
-
 }
