@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.15 2005/07/09 19:01:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.16 2005/08/04 18:48:31 lu_zero Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -62,7 +62,6 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	lirc? ( app-misc/lirc )
 	lzo? ( dev-libs/lzo )
 	mad? ( media-libs/libmad )
-	matroska? ( >=media-libs/libmatroska-0.7.0 )
 	nas? ( media-libs/nas )
 	nls? ( sys-devel/gettext )
 	vorbis? ( media-libs/libvorbis )
