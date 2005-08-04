@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 866773c59769035521638b8df6ce56a4 ChangeLog 664
+MD5 af1d6710a180c90500c5eb5171eea55a ChangeLog 739
 MD5 d048e6ca4c5bb4f0033622634913d32a viewglob-2.0.2.ebuild 1634
-MD5 ed2218e11eb0736073f55a23782dc17d viewglob-2.0.3.ebuild 1584
+MD5 d1928afc0d5f85ecbf2da5cc49082ac2 viewglob-2.0.3.ebuild 1591
 MD5 36272127e541b142357859de8c35a5a5 metadata.xml 643
 MD5 9f306a25df005f0a94069783f5a45f5d files/digest-viewglob-2.0.3 66
 MD5 8412a3da2bccdc3f0ad6df6be8732373 files/viewglob-2.0.2-64bit.patch 637
 MD5 191806273afbdb50baf9eb35843d8796 files/digest-viewglob-2.0.2 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC7znJCHk4+ZoBpvsRAqFHAJ9tdXX9pL9aCf/ZRDZEnv4W3iWo7ACgoLeG
-MLNbadbRsrjlYs764vmFW90=
-=osqp
+iD8DBQFC8oa7CHk4+ZoBpvsRAhrZAJ4utLORpHa0GFjy4NUhomkPw8POygCfUL3U
+QC83X5pjU/IUf6f1zDvIqoo=
+=ALer
 -----END PGP SIGNATURE-----

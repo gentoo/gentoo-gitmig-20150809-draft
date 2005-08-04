@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/viewglob
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.5 2005/08/02 09:15:32 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.6 2005/08/04 20:20:19 slarti Exp $
+
+  04 Aug 2005; Tom Martin <slarti@gentoo.org> ChangeLog:
+  Marked ~sparc.
 
 *viewglob-2.0.3 (02 Aug 2005)
 

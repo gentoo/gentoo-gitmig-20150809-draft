@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.3.ebuild,v 1.1 2005/08/02 09:15:32 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.3.ebuild,v 1.2 2005/08/04 20:20:19 slarti Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://viewglob.sourceforge.net/"
 SRC_URI="mirror://sourceforge/viewglob/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc"
 IUSE=""
 
 DEPEND=">=dev-libs/glib-2.2.0
