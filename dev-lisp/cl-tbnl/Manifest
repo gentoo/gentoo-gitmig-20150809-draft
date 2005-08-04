@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 1be6e7b0d70e74a912e46d5827c91529 ChangeLog 2082
-MD5 3ff22947fb46e59d9ef03afec33ca574 cl-tbnl-0.5.5.ebuild 980
-MD5 a2199253dbe57d398c785af8f7744485 metadata.xml 804
+MD5 258968ea5d81dab60459589a0c74f7c2 cl-tbnl-0.5.5.ebuild 981
 MD5 770ff213761e5b28c044713bba701d2a files/digest-cl-tbnl-0.5.5 66
+MD5 a2199253dbe57d398c785af8f7744485 metadata.xml 804
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC8luHyiNZaEAZA+ARAutFAJ0Sme3W8r/UCxd/RSKUqWre8mYFIwCfVxix
-Mj+TI8Jb0pYnHjqmJ6rsats=
-=vHlQ
+iD8DBQFC8mmgI1lqEGTUzyQRArQ/AJ0YOa1IVD336+aJge0B4KqIA4YuDQCdG8ni
+Fvh1vKRuF5BMvPEOFySOOTQ=
+=VAbD
 -----END PGP SIGNATURE-----
