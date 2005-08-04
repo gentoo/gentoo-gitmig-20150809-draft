@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.376 2005/07/31 06:42:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.377 2005/08/04 19:36:30 azarah Exp $
+
+  04 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
+  glibc-2.3.4.20050125-r1.ebuild, glibc-2.3.5-r1.ebuild,
+  glibc-2.3.5.20050421.ebuild, glibc-2.3.5.20050722.ebuild:
+  Fix typo, bug #101374.
 
   31 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> glibc-2.3.5-r1.ebuild:
   Added ~sh to KEYWORDS.

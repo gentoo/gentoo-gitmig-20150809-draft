@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.4 2005/07/29 22:28:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.5 2005/08/04 19:36:30 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -394,7 +394,7 @@ toolchain-glibc_src_install() {
 	if want_linuxthreads && want_nptl ; then
 		mkdir -p ${T}/thread-backup/tls
 		for x in ${D}$(alt_libdir)/tls/lib{pthread,thread_db}* ; do
-			[[ -f ${x} ]] && mv -f ${T}/thread-backup/tls
+			[[ -f ${x} ]] && mv -f ${x} ${T}/thread-backup/tls
 		done
 	fi
 	env -uRESTRICT CHOST=${CTARGET} prepallstrip
