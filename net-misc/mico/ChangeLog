@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/mico
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.10 2004/12/29 19:54:54 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.11 2005/08/04 20:33:58 azarah Exp $
+
+*mico-2.3.11-r1 (04 Aug 2005)
+
+  04 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/mico-2.3.11-build-fix.patch, +mico-2.3.11-r1.ebuild:
+  Add new cleaned up ebuild by Graham Hudspith <gwh@allinea.com> (adds Qt, Gtk
+  and Postgresql support). Add build fix by Malcolm MacLeod
+  <mmacleod@webmail.co.za>. Both bug #56798.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

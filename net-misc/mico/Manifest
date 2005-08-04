@@ -1,7 +1,20 @@
-MD5 33e7b2cebf65405b03ada7de89b50e0d ChangeLog 1292
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b1844ac1bb6944034afb8e9f3a600a8f ChangeLog 1621
+MD5 e12517e602ea525c7d741d5823d4797c mico-2.3.7.ebuild 1394
+MD5 17cf184ba5954b217b43429ecf2592d2 mico-2.3.11-r1.ebuild 1747
 MD5 611907b50de48923e75c344440d00480 mico-2.3.9.ebuild 1401
 MD5 9c8bb11952bdec1927f572db4af5d8ad mico-2.3.11.ebuild 1409
-MD5 e12517e602ea525c7d741d5823d4797c mico-2.3.7.ebuild 1394
 MD5 67a6622b9fa3dc37121f3a43f0234f79 files/digest-mico-2.3.11 64
-MD5 92deafe718f5328130a6a1238621343d files/digest-mico-2.3.7 63
+MD5 67a6622b9fa3dc37121f3a43f0234f79 files/digest-mico-2.3.11-r1 64
 MD5 e08b36b538bb6b3739f116f5219e17b9 files/digest-mico-2.3.9 63
+MD5 92deafe718f5328130a6a1238621343d files/digest-mico-2.3.7 63
+MD5 6d29929690decb760ef768a999c93bdf files/mico-2.3.11-build-fix.patch 353
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFC8nvi1ZcsMnZjRyIRAqn0AJ4ycCJVHQzI9LMa64YdgaFDm17m7gCYvipc
+ltKt647Q53qvnq8cCu/LZA==
+=Xgti
+-----END PGP SIGNATURE-----

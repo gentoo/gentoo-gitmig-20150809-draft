@@ -1,0 +1,10 @@
+diff -urN mico.orig/cpp/Makefile mico/cpp/Makefile
+--- mico.orig/cpp/Makefile	2003-10-13 11:49:24.000000000 +0200
++++ mico/cpp/Makefile	2005-06-10 11:04:16.147683648 +0200
+@@ -73,5 +73,5 @@
+ 
+ .depend :
+ 	echo '# Module dependencies' > .depend
+-	$(MKDEPEND) $(CPPFLAGS) $(CXXFLAGS) *.c >> .depend
++	$(MKDEPEND) $(CPPFLAGS) $(CXXFLAGS) *.cc >> .depend
+ 
