@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.21 2005/07/23 09:38:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.22 2005/08/04 21:55:06 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -9,52 +9,6 @@
 inherit eutils
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
-
-#DEPEND="www-client/update-nsplugins"
-
-NSPLUGINS_DIR="/usr/$(get_libdir)/nsplugins"
-NSBROWSERS_DIR="${NSPLUGINS_DIR}/nsbrowsers"
-
-
-# This function installs a plugin in ${S} to NSPLUGINS_DIR.
-# First argument should be the plugin file.  This is for stuff like
-# mplayerplug-in that you can move the plugin to any directory ...
-install_nsplugin() {
-	local plugin=$1
-
-	dodir "${NSPLUGINS_DIR}"
-	exeinto "${NSPLUGINS_DIR}"
-	doexe "${plugin}"
-}
-
-# This function installs a plugin with dosym to NSPLUGINS_DIR.
-# First argument should be the plugin file.  This is for stuff like
-# the java plugins that should be symlinked, and not moved from the VM
-# directory ...
-symlink_nsplugin() {
-	local plugin=$1
-	
-	dodir "${NSPLUGINS_DIR}"
-	dosym "${plugin}" "${NSPLUGINS_DIR}"
-}
-
-# First argument should be the browser name (usually $PN), second
-# is its plugin dir.  This basically just makes update-nsplugins aware
-# of the browser.
-register_nsbrowser() {
-	local browser=$1
-	local plugindir=$2
-	
-	dodir "${NSBROWSERS_DIR}"
-	echo "${plugindir}" > "${D}${NSBROWSERS_DIR}/${browser}"
-}
-
-
-###############################################################################
-#
-# Depriciated Functions - Please do not use any more !
-#
-###############################################################################
 
 PLUGINS_DIR="nsbrowser/plugins"
 
