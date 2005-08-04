@@ -1,6 +1,9 @@
 # ChangeLog for games-action/armagetron
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.9 2005/06/11 22:05:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.10 2005/08/04 08:04:37 blubb Exp $
+
+  04 Aug 2005; Simon Stelling <blubb@gentoo.org> armagetron-0.2.6.1.ebuild:
+  added ~amd64 keyword
 
 *armagetron-0.2.6.1 (11 Jun 2005)
 

@@ -1,5 +1,5 @@
-MD5 4331a4cb05e06151c5af8d942f64bcf5 ChangeLog 3304
-MD5 1f662d32eb194adfdb310860814d6251 armagetron-0.2.6.1.ebuild 1426
+MD5 bb650803d3199eb71fed034061871d55 ChangeLog 3404
 MD5 18f4639411b07b64d8b764c6af213eb5 metadata.xml 283
+MD5 c12f1d960f97699f2e5851203da7e660 armagetron-0.2.6.1.ebuild 1432
 MD5 c7df1b3501799155a9216e06be65be48 files/armagetron-0.2.6.1.sh 368
 MD5 af924b816d9b00d4bed102bebaf9c8a3 files/digest-armagetron-0.2.6.1 194
