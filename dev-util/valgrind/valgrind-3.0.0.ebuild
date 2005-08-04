@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.0.0.ebuild,v 1.2 2005/08/04 22:16:44 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.0.0.ebuild,v 1.3 2005/08/04 22:31:25 herbs Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.valgrind.org/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86 ~ppc"
+KEYWORDS="-* ~amd64 ~ppc ~x86"
 IUSE="X"
 
 # bug #49147 (bogus stacktrace in gdb with --db-attach=yes) does not seem to be applicable anymore
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	# -fomit-frame-pointer	"Assembler messages: Error: junk `8' after expression" 
+	# -fomit-frame-pointer	"Assembler messages: Error: junk `8' after expression"
 	#                       while compiling insn_sse.c in none/tests/x86
 	# -fstack-protector     ???
 	# -ggdb3                segmentation fault on startup
