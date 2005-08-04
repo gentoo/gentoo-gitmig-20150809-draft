@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.189 2005/08/04 12:16:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.190 2005/08/04 14:03:04 seemant Exp $
+
+*samba-3.0.14a-r3 (04 Aug 2005)
+
+  04 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
+  +samba-3.0.14a-r3.ebuild:
+  Add dependency on clamav with the 'clamav' and/or 'libclamav' USE flags. The
+  libclamav flag will *go away* soon. Additionally, make sure that
+  /use/lib/samba/{auth,idmap,rpc} stay around. Fixed bug #100766 with the
+  clamav/libclamav thing
 
   04 Aug 2005; Seemant Kulleen <seemant@gentoo.org> -samba-3.0.11.ebuild,
   -samba-3.0.14a-r1.ebuild:
