@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.9.3.ebuild,v 1.1 2005/07/15 13:25:00 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.9.3.ebuild,v 1.2 2005/08/04 09:39:05 dragonheart Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -45,8 +45,8 @@ src_install() {
 
 	insopts -m 755
 	insinto /usr/$(get_libdir) ; doins libpcap.so.${PV:0:3}
-	dosym /usr/$(get_libdir)/libpcap.so.${PV:0:3} /usr/$(get_libdir)/libpcap.so.0
-	dosym /usr/$(get_libdir)/libpcap.so.${PV:0:3} /usr/$(get_libdir)/libpcap.so
+	dosym libpcap.so.${PV:0:3} /usr/$(get_libdir)/libpcap.so.0
+	dosym libpcap.so.${PV:0:3} /usr/$(get_libdir)/libpcap.so
 
 	dodoc CREDITS CHANGES FILES README* VERSION
 }

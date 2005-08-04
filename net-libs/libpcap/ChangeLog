@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.37 2005/07/15 13:25:00 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.38 2005/08/04 09:39:05 dragonheart Exp $
+
+  04 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  libpcap-0.8.3-r1.ebuild, libpcap-0.9.3.ebuild:
+  fixed absolute symlinks as per bug #101216 thanks to Simon Stelling
 
 *libpcap-0.9.3 (15 Jul 2005)
 
