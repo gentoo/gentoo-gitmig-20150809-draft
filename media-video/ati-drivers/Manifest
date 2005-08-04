@@ -5,7 +5,7 @@ MD5 47d0a60400a6785be278b336b21b5209 ati-drivers-8.13.3.ebuild 6800
 MD5 c5dff4c727e2af27370a644010deacb9 ati-drivers-8.14.13.ebuild 6800
 MD5 68687aca2c12a22ee54a41c3e44474fa ati-drivers-8.14.13-r1.ebuild 6529
 MD5 093c6498a344252964268bae7f88487e ati-drivers-8.12.10.ebuild 6746
-MD5 7d29c49a439b2f58aaba974312da8240 ChangeLog 17740
+MD5 0817c4f16164ab017ac50c99a84be1cc ChangeLog 17846
 MD5 e7facf4c6e40ede98655179dbe98377f ati-drivers-8.13.4.ebuild 6916
 MD5 594314a4a5243fae95ca414ac615e93e ati-drivers-8.8.25-r3.ebuild 5753
 MD5 8784654c96339c98675ef8fb27db41e8 ati-drivers-8.14.13-r3.ebuild 7610
@@ -34,6 +34,6 @@ MD5 ca4e8654e3b880025b10ac15d2dbff41 files/fglrx-2.6-iminor.patch 847
 MD5 6ef03b4b2627a76f3893ce9a94d1ce56 files/fglrx-2.6-get-page.patch 1172
 MD5 0283465e3554a1316b63c1483abefdd6 files/fglrx-2.6-amd-adv-spec-fix.patch 1096
 MD5 28e1ac88033da1899a711d26c10d93b6 files/fglrx-2.6-pagetable.patch 5027
-MD5 1e882dac4462553bc8829eae7698d042 files/p1.patch 1504
+MD5 0a9c95a134ef4f317240c54f62e9480e files/p1.patch 1120
 MD5 2a93df06be0a03b771e0e980b37f7d7a files/3.2.5-linux-2.6.0-test6-mm.patch 309
 MD5 4db715bff794061bfa0f233b6291e372 files/fglrx-2.6-makefile.patch 571
