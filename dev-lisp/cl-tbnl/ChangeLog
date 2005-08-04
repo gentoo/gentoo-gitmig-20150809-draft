@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-tbnl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.10 2005/05/24 18:48:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.11 2005/08/04 17:41:36 mkennedy Exp $
+
+  04 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-tbnl-0.5.5.ebuild:
+  Add standalone USE flag.
 
   24 May 2005; <mkennedy@gentoo.org> cl-tbnl-0.5.5.ebuild:
   Keywording ~sparc
