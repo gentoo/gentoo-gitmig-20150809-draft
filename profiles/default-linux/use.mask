@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.14 2005/05/20 11:52:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.15 2005/08/04 14:20:28 josejx Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -34,6 +34,7 @@ sse2
 # ppc only:
 altivec
 ppcsha1
+pbbuttonsd
 
 # mips only:
 n32
