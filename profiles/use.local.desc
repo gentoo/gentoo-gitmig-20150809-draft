@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1362 2005/08/04 14:16:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1363 2005/08/04 17:27:29 pythonhead Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -321,6 +321,7 @@ dev-util/kdevelop:perforce - Enable support for the perforce version control sys
 dev-util/kdevelop:sql - Enable support for the sql language
 dev-util/kdevelop:subversion - Enable support for the subversion version control system
 dev-util/monodevelop:boo - Enable support for the boo programming language
+dev-util/pida:gvim - Enable gvim as embedded editor
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/subversion:nowebdav - Disables WebDAV support via neon library
 games-action/d2x:cdinstall - Enables copying files from the CD
