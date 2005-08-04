@@ -2,18 +2,19 @@
 Hash: SHA1
 
 MD5 56f1f46693079526f7ab0f14a037486b muttprint-0.72b.ebuild 832
-MD5 c299a5c394fa30e00d50f44de22ca322 muttprint-0.72d.ebuild 827
+MD5 303e8581c939a20c6cad3068538a39c5 muttprint-0.72d.ebuild 764
 MD5 0ee798d5ae90faf6dd44d485446eb07c muttprint-0.72a.ebuild 821
-MD5 d35ad1d1e46d3eabba526d294951c79a ChangeLog 3181
+MD5 08193360fffae43e65bfc5286286da26 ChangeLog 3335
 MD5 642e99d8f338a7f3dc3d6d0a3300c995 metadata.xml 258
 MD5 75129b19f90f3b9e9cd0a258fe884482 files/muttprint-0.72a-platex.patch 654
+MD5 4aba96c36395337654a8c0fb39ccb686 files/muttprint-rem_sig.patch 839
 MD5 4f1eb6f695cc9ae2070de833996803ad files/digest-muttprint-0.72a 67
 MD5 d14d2a961751226d19bdc060f2531929 files/digest-muttprint-0.72b 67
 MD5 a350c4428515da2c3e39246f7cd3b0d1 files/digest-muttprint-0.72d 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCtYZgViELBEf1JB0RAgT4AJ9jP0aSAHGUz8aEP1uaA1fIPEX32ACbBSbm
-aNf54cw0YtetzWryG1NCWHw=
-=gR8r
+iD8DBQFC8krlViELBEf1JB0RAgllAJ91WTxGuQZUiCnQ+/Wmjba8sA8+oACeIT5w
+HHNtZR63ah99bXc4DKgn8PA=
+=xqOf
 -----END PGP SIGNATURE-----
