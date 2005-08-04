@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/xe
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.1 2005/08/04 21:33:06 mr_bones_ Exp $
+
+*xe-20050801 (04 Aug 2005)
+
+  04 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> +files/xe-20050801,
+  +metadata.xml, +xe-20050801.ebuild:
+  initial commit (bug #74323)
+
