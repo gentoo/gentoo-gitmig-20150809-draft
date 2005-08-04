@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Net_DNSBL
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/ChangeLog,v 1.1 2005/08/04 08:07:55 sebastian Exp $
+
+*PEAR-Net_DNSBL-1.0.0 (04 Aug 2005)
+
+  04 Aug 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-Net_DNSBL-1.0.0.ebuild:
+  Initial version.
+
