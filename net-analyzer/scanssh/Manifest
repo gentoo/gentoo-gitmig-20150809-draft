@@ -1,9 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c3bdee987aa83cc3fa81c85e9e468a37 ChangeLog 1950
 MD5 5ef1334dd837ff015a4d3765d65d2f15 metadata.xml 319
-MD5 283029f5ae8c25d2beb7aed8ccce9e82 scanssh-2.1.ebuild 690
-MD5 a702464971350ba8af4ddaddd34a87e2 ChangeLog 1744
-MD5 a163cabfb0a686754085c235298ae5d6 scanssh-1.6b.ebuild 618
-MD5 a43231364ea3b1663406ea801c1baa59 scanssh-2.0.ebuild 687
-MD5 41c4a3014bd820529d63f6b16a7b83d6 files/digest-scanssh-1.6b 63
-MD5 b1cc68d1f6c015808670555fff3da70f files/scanssh-2.0-fix-warnings.diff 1928
-MD5 2541416a54e7fe091fb12c0e95754166 files/digest-scanssh-2.0 62
+MD5 6545951e51cef91d6a8b9121e6108f85 scanssh-2.1.ebuild 712
 MD5 82a68194d8671c58066260fd56901294 files/digest-scanssh-2.1 63
+MD5 b1cc68d1f6c015808670555fff3da70f files/scanssh-2.0-fix-warnings.diff 1928
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8d3cmdTrptrqvGERAjgdAKCa+m+SwbxcAqhCDXKZCzBNtO+cxwCgnJ/k
+Q4TQYrKTQDj02CUxPOdyNqs=
+=4NF7
+-----END PGP SIGNATURE-----
