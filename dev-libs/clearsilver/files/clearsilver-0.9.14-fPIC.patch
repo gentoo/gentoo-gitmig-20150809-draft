@@ -1,0 +1,73 @@
+diff -urN clearsilver-0.9.14.orig/cgi/Makefile clearsilver-0.9.14/cgi/Makefile
+--- clearsilver-0.9.14.orig/cgi/Makefile	2005-01-11 21:55:41.000000000 +0000
++++ clearsilver-0.9.14/cgi/Makefile	2005-08-04 21:53:11.000000000 +0100
+@@ -15,6 +15,7 @@
+ STATIC_OBJ = $(STATIC_SRC:%.c=%.o)
+ STATIC_CSO = $(STATIC_EXE:%.cgi=%.cso)
+ 
++CFLAGS += -fPIC
+ DLIBS += -lneo_cgi -lneo_cs -lneo_utl # -lefence
+ 
+ TARGETS = $(CGI_LIB) $(STATIC_EXE) $(STATIC_CSO)
+diff -urN clearsilver-0.9.14.orig/cs/Makefile clearsilver-0.9.14/cs/Makefile
+--- clearsilver-0.9.14.orig/cs/Makefile	2004-08-05 02:39:01.000000000 +0100
++++ clearsilver-0.9.14/cs/Makefile	2005-08-04 21:54:32.000000000 +0100
+@@ -22,7 +22,7 @@
+ CSDUMP_SRC = csdump.c
+ CSDUMP_OBJ = $(CSDUMP_SRC:%.c=%.o)
+ 
+-CFLAGS += -I$(NEOTONIC_ROOT)
++CFLAGS += -I$(NEOTONIC_ROOT) -fPIC
+ LIBS += -L$(LIB_DIR) -lneo_cs -lneo_utl # -lefence
+ 
+ TARGETS = $(CS_LIB) $(CSTEST_EXE) $(CSR_EXE) test
+diff -urN clearsilver-0.9.14.orig/java-jni/Makefile clearsilver-0.9.14/java-jni/Makefile
+--- clearsilver-0.9.14.orig/java-jni/Makefile	2003-11-05 00:42:27.000000000 +0000
++++ clearsilver-0.9.14/java-jni/Makefile	2005-08-04 21:31:54.000000000 +0100
+@@ -16,7 +16,7 @@
+ NEO_UTIL_OBJ = $(NEO_UTIL_SRC:%.c=%.o)
+ 
+ 
+-CFLAGS += -I$(NEOTONIC_ROOT) -I$(JAVA_PATH)/include -I$(JAVA_PATH)/include/linux
++CFLAGS += -I$(NEOTONIC_ROOT) -I$(JAVA_PATH)/include -I$(JAVA_PATH)/include/linux -fPIC
+ DLIBS += -lneo_cgi -lneo_cs -lneo_utl 
+ LIBS += -L$(LIB_DIR) $(DLIBS)
+ 
+diff -urN clearsilver-0.9.14.orig/python/Makefile clearsilver-0.9.14/python/Makefile
+--- clearsilver-0.9.14.orig/python/Makefile	2004-02-27 03:34:39.000000000 +0000
++++ clearsilver-0.9.14/python/Makefile	2005-08-04 21:30:34.000000000 +0100
+@@ -11,7 +11,7 @@
+ NEO_UTIL_SRC = neo_cgi.c neo_util.c neo_cs.c
+ NEO_UTIL_OBJ = $(NEO_UTIL_SRC:%.c=%.o)
+ 
+-CFLAGS += -I$(NEOTONIC_ROOT) $(PYTHON_INC)
++CFLAGS += -I$(NEOTONIC_ROOT) $(PYTHON_INC) -fPIC
+ DLIBS += -lneo_cgi -lneo_cs -lneo_utl 
+ LIBS += -L$(LIB_DIR) $(DLIBS) $(DB2_LIB)
+ 
+diff -urN clearsilver-0.9.14.orig/rules.mk.in clearsilver-0.9.14/rules.mk.in
+--- clearsilver-0.9.14.orig/rules.mk.in	2004-11-16 23:05:10.000000000 +0000
++++ clearsilver-0.9.14/rules.mk.in	2005-08-04 21:49:50.000000000 +0100
+@@ -78,8 +78,8 @@
+ OUTPUT_OPTION = -o $@
+ LD         = $(CC) -o
+ LDFLAGS    = -L$(LIB_DIR) @LDFLAGS@
+-LDSHARED   = $(CC) -shared -fPic
+-CPPLDSHARED   = $(CPP) -shared -fPic
++LDSHARED   = $(CC) -shared -fPIC
++CPPLDSHARED   = $(CPP) -shared -fPIC
+ AR         = @AR@ cr
+ RANLIB     = @RANLIB@
+ DEP_LIBS   = $(DLIBS:-l%=$(LIB_DIR)lib%.a)
+diff -urN clearsilver-0.9.14.orig/util/Makefile clearsilver-0.9.14/util/Makefile
+--- clearsilver-0.9.14.orig/util/Makefile	2003-07-25 06:46:15.000000000 +0100
++++ clearsilver-0.9.14/util/Makefile	2005-08-04 21:56:12.000000000 +0100
+@@ -13,6 +13,8 @@
+ UTL_OBJ = $(UTL_SRC:%.c=%.o) $(EXTRA_UTL_OBJS)
+ UTL_HDR = $(UTL_SRC:%.c=%.h)
+ 
++CFLAGS += -fPIC
++
+ TARGETS = $(UTL_LIB)
+ 
+ all: $(TARGETS)

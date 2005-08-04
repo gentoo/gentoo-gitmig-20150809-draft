@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.12 2005/08/02 02:09:01 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.13 2005/08/04 21:10:21 herbs Exp $
+
+*clearsilver-0.9.14-r1 (04 Aug 2005)
+
+  04 Aug 2005; Herbie Hopkins <herbs@gentoo.org>
+  +files/clearsilver-0.9.14-fPIC.patch,
+  files/clearsilver-0.9.14-python24.patch, +clearsilver-0.9.14-r1.ebuild:
+  Add patch to compile shared objects with -fPIC, bug #98362. Altered python24
+  patch to not hardcode lib and so be multilib-strict safe.
 
   02 Aug 2005; Renat Lumpau <rl03@gentoo.org>
   +files/clearsilver-0.9.7-python24.patch,

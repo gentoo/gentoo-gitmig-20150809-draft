@@ -14,7 +14,7 @@
      PYTHON_INC="-I$python_inc"
      PYTHON_LIB=$python_lib
 -    PYTHON_SITE=`$python_bin -c "import site; print site.sitedirs[0]"`
-+	PYTHON_SITE=`$python_bin -c "import os,sys; print os.path.join(sys.prefix, 'lib','python'+sys.version[:3],'site-packages')"`
++    PYTHON_SITE=`$python_bin -c "from distutils import sysconfig; print sysconfig.get_python_lib(1,0)"`
      BUILD_WRAPPERS="$BUILD_WRAPPERS python"
    fi
  fi
