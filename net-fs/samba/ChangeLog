@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.188 2005/08/03 14:20:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.189 2005/08/04 12:16:26 seemant Exp $
+
+  04 Aug 2005; Seemant Kulleen <seemant@gentoo.org> -samba-3.0.11.ebuild,
+  -samba-3.0.14a-r1.ebuild:
+  since I moved 14a-r2 to stable x86 finally, we can now remove some of the
+  cruft versions
 
   03 Aug 2005; Seemant Kulleen <seemant@gentoo.org> samba-3.0.14a-r2.ebuild:
   only install smb.conf (blank) if none is currently present in the live
