@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.4 2005/08/03 10:27:54 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.5 2005/08/04 15:05:35 dholm Exp $
+
+  04 Aug 2005; David Holm <dholm@gentoo.org> pyode-1.1.0.ebuild:
+  Added to ~ppc.
 
 *pyode-1.1.0 (03 Aug 2005)
 
