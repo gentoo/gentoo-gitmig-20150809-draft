@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsdl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.84 2005/07/12 05:12:00 geoman Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.85 2005/08/04 03:59:52 vapier Exp $
+
+  04 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/libsdl-1.2.8-no-cxx.patch, +files/libsdl-1.2.8-sdl-config.patch,
+  libsdl-1.2.8-r1.ebuild:
+  Make sure libsdl doesnt link against C++ since we dont need it and cleanup
+  sdl-config output.
 
   12 Jul 2005; Stephen P. Becker <geoman@gentoo.org> libsdl-1.2.8-r1.ebuild:
   stable on mips

@@ -1,0 +1,23 @@
+A little hack to keep C++ crap out of libsdl.
+
+Problem is that autotools isn't smart enough to realize that libarch.la
+should be linked as C++ only for TARGET_BEOS ... otherwise it should be
+linked as a good old fashioned C library.
+
+Since Gentoo doesn't support BEOS [atm], this hack is acceptable considering
+the gain (no more C++ crap !).
+
+--- src/main/Makefile.am
++++ src/main/Makefile.am
+@@ -33,11 +33,7 @@ libSDLmain_a_SOURCES = $(MAINLIB_ARCH_SR
+ # Build an internal library of any special app setup functions
+ noinst_LTLIBRARIES = libarch.la
+ 
+-if TARGET_BEOS
+-ARCH_SRCS = beos/SDL_BeApp.cc beos/SDL_BeApp.h
+-else
+ ARCH_SRCS = arch.c
+-endif
+ 
+ libarch_la_SOURCES = $(ARCH_SRCS)
+ 

@@ -1,0 +1,19 @@
+Only output -L -rpath cruft if using a non-standard install location.
+
+Makes ABI / cross-compiling easier on the soul.
+
+--- sdl-config.in
++++ sdl-config.in
+@@ -51,7 +51,11 @@
+       #echo $includes -I@includedir@/SDL @SDL_CFLAGS@
+       ;;
+ @ENABLE_SHARED_TRUE@    --libs)
+-@ENABLE_SHARED_TRUE@      libdirs="-L@libdir@ @SDL_RLD_FLAGS@"
++@ENABLE_SHARED_TRUE@      if test x"@libdir@" != x"/usr/lib" ; then
++@ENABLE_SHARED_TRUE@          libdirs="-L@libdir@ @SDL_RLD_FLAGS@"
++@ENABLE_SHARED_TRUE@      else
++@ENABLE_SHARED_TRUE@          libdirs=""
++@ENABLE_SHARED_TRUE@      fi
+ @ENABLE_SHARED_TRUE@      echo $libdirs @SDL_LIBS@ @SHARED_SYSTEM_LIBS@
+ @ENABLE_SHARED_TRUE@      ;;
+ @ENABLE_STATIC_TRUE@@ENABLE_SHARED_TRUE@    --static-libs)

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
 MD5 7f079469132865bdd25780277639f098 libsdl-1.2.7-r3.ebuild 3960
 MD5 cbbab78f5125f834ffb0f83be4957736 libsdl-1.2.6-r3.ebuild 3013
@@ -26,3 +29,10 @@ MD5 323ad5b1e83521630dd4d54819c5efbd files/1.2.8-gcc2.patch 743
 MD5 60ecfde6cc7b734ef03b93357c537674 files/1.2.8-keyrepeat.patch 598
 MD5 3dc057b41e366788a5537a65a65ded43 files/libsdl-1.2.8-sdl-config.patch 741
 MD5 206ddd08dd3e33819d03245d11af3014 files/1.2.7-gcc34.patch 8196
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC8ZLMgIKl8Uu19MoRAr1kAJ9yjInAUk/SUuEJco94rSTqLtzNmQCfVVCe
+rX7hjXzLpmuNu9+QmgyoZb0=
+=xYp2
+-----END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.18 2005/07/12 05:12:00 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.19 2005/08/04 03:59:52 vapier Exp $
 
-inherit flag-o-matic toolchain-funcs eutils gnuconfig
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="http://www.libsdl.org/"
@@ -33,7 +33,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
-S="${WORKDIR}/SDL-${PV}"
+S=${WORKDIR}/SDL-${PV}
 
 pkg_setup() {
 	if use noaudio || use novideo || use nojoystick ; then
@@ -56,8 +56,10 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PV}-nobuggy-X.patch #30089
-	epatch "${FILESDIR}"/${PV}-libcaca.patch #40224
+	epatch "${FILESDIR}"/${P}-libcaca.patch #40224
 	epatch "${FILESDIR}"/${PV}-gcc2.patch #75392
+	epatch "${FILESDIR}"/${P}-sdl-config.patch
+	epatch "${FILESDIR}"/${P}-no-cxx.patch
 
 	# This patch breaks compiling >-O0 on gcc4 ; bug #87809
 	[ "`gcc-major-version`" -lt "4" ] && epatch "${FILESDIR}"/${P}-gcc2.patch.bz2 #86481
@@ -69,24 +71,15 @@ src_unpack() {
 	#build with -O0 to get it done)
 	epatch "${FILESDIR}"/${PV}-gcc4.patch
 
-	if use nas && ! use X ; then #32447
-		sed -i \
-			-e 's:-laudio:-laudio -L/usr/X11R6/lib:' \
-			configure.in || die "nas sed hack failed"
-	fi
-
 	./autogen.sh || die "autogen failed"
 	epunt_cxx
-	gnuconfig_update
 }
 
 src_compile() {
 	local myconf=
-
-	if use amd64 ; then
-		replace-flags -O? -O1 # bug #74608
-	fi
 	if use x86 ; then
+		# silly bundled asm triggers TEXTREL ... maybe someday
+		# i'll fix this properly, but for now hide with USE=pic
 		use pic || myconf="${myconf} $(use_enable x86 nasm)"
 	fi
 	use noflagstrip || strip-flags
