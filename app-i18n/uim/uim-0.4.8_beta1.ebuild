@@ -1,22 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r2.ebuild,v 1.9 2005/07/31 09:18:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.8_beta1.ebuild,v 1.1 2005/08/04 00:25:11 usata Exp $
 
-inherit eutils kde-functions
+inherit eutils kde-functions flag-o-matic
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="a simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
-SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz
-	http://lists.sourceforge.jp/mailman/archives/anthy-dev/attachments/20050313/47aab99c/skk-dic-serv.diff2.bin
-	http://prime.sourceforge.jp/src/prime-1.0.0.1.tar.gz"
+SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gtk qt immqt immqt-bc nls X m17n-lib canna"
+#IUSE="${IUSE} scim"
 
 RDEPEND="X? ( virtual/x11 )
 	gtk? ( >=x11-libs/gtk+-2 )
@@ -28,8 +27,8 @@ RDEPEND="X? ( virtual/x11 )
 	immqt-bc? ( $(qt_min_version 3.3.4) )
 	qt? ( $(qt_min_version 3.3.4) )
 	!<app-i18n/prime-0.9.4
-	!app-i18n/uim-kdehelper
-	!app-i18n/uim-qt"
+	!app-i18n/uim-qt
+	!app-i18n/uim-kdehelper"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-perl/XML-Parser
@@ -45,7 +44,6 @@ GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 
 src_unpack() {
 	unpack ${A}
-	cp "${DISTDIR}"/skk-dic-serv.diff2.bin "${WORKDIR}"/skk-dic-serv.diff2.gz
 
 	cd "${S}"
 	# we execute gtk-query-immodules-2.0 in pkg_postinst()
@@ -53,18 +51,15 @@ src_unpack() {
 	sed -i -e "/gtk-query-immodules-2.0/s/.*/	:\\\\/g" \
 		Makefile.am || die
 	use X || sed -i -e '/^SUBDIRS/s/xim//' Makefile.in || die
-	cd uim; epatch "${WORKDIR}"/skk-dic-serv.diff2.gz
-	cd "${S}"; epatch "${FILESDIR}"/${P}-gtk2_4-gentoo.diff
-	cd "${S}/qt"; epatch "${FILESDIR}"/${P}-nls.diff
 }
 
 src_compile() {
 	local myconf
+	use qt && set-qtdir 3
 	if use immqt || use immqt-bc ; then
 		myconf="${myconf} --with-qt-immodule"
-		export CPPFLAGS="${CPPFLAGS} -I${S}/qt"
+		export CPPFLAGS="${CPPFLAGS} -DQT_THREAD_SUPPORT"
 	fi
-	use qt && set-qtdir 3
 
 	myconf="${myconf}
 		$(use_enable nls)
@@ -77,23 +72,13 @@ src_compile() {
 	autoreconf
 	libtoolize --copy --force
 
-	econf ${myconf} || die "econf failed"
+	# --with-scim is not stable enough
+	econf ${myconf} --without-scim || die "econf failed"
 	emake -j1 || die "emake failed"
-
-	if has_version '>=app-i18n/prime-1.0' ; then
-		cd ${WORKDIR}/prime-1.0.0.1
-		econf || die
-	fi
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-
-	if has_version '>=app-i18n/prime-1.0' ; then
-		cd ${WORKDIR}/prime-1.0.0.1
-		make DESTDIR="${D}" install-uim || die "make install-uim failed"
-		cd -
-	fi
 
 	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
 	dodoc doc/{HELPER-CANDWIN,KEY,UIM-SH}
@@ -111,6 +96,7 @@ pkg_postinst() {
 	ewarn "New input method switcher has been introduced. You need to set"
 	ewarn
 	ewarn "% GTK_IM_MODULE=uim ; export GTK_IM_MODULE"
+	ewarn "% QT_IM_MODULE=uim ; export QT_IM_MODULE"
 	ewarn "% XMODIFIERS=@im=uim ; export XMODIFIERS"
 	ewarn
 	ewarn "If you would like to use uim-anthy as default input method, put"
