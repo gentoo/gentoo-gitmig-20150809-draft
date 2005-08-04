@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4257 2005/08/04 04:04:01 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4258 2005/08/04 17:33:50 pythonhead Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Rob Cakebread <pythonhead@gentoo.org> (04 Aug 2005)
+# Needs testing, in particular svn, cvs and darcs control
+dev-util/pida
 
 # Luca Barbato <lu_zero@gentoo.org> (03 Aug 2005)
 # First experimental ebuild with dlloader support, should be fixed
