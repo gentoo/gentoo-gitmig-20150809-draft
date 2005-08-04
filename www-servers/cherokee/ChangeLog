@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.14 2005/07/19 11:43:24 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.15 2005/08/04 09:38:47 bass Exp $
+
+*cherokee-0.4.25 (04 Aug 2005)
+
+  04 Aug 2005; José Alberto Suárez López <bass@gentoo.org>
+  +cherokee-0.4.25.ebuild:
+  Bump version.
+  Fixed PIC bug and index.html overwrite
 
 *cherokee-0.4.24-r1 (19 Jul 2005)
 
