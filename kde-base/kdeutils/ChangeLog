@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.123 2005/07/30 14:10:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.124 2005/08/04 14:58:08 josejx Exp $
+
+  04 Aug 2005; Joseph Jezak <josejx@gentoo.org> kdeutils-3.4.2.ebuild:
+  Added pbbuttonsd dependency for bug #94731.
 
   30 Jul 2005; Dan Armak <danarmak@gentoo.org> kdeutils-3.4.2.ebuild:
   Removed ~mips keyword, because kdelibs-3.4.2 doesn't have it. The mips team
