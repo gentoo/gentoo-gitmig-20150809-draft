@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/gtk-engines-experience
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/ChangeLog,v 1.1 2005/08/04 07:24:14 leonardop Exp $
+
+*gtk-engines-experience-0.9.7 (04 Aug 2005)
+
+  04 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-experience-0.9.7.ebuild:
+  files/gtk-engines-experience-0.9.7-mem_fixes.patch:
+  New package. Reported on bug #78213.

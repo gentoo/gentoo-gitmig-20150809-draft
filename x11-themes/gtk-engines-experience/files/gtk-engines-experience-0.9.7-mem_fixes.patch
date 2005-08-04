@@ -1,0 +1,45 @@
+diff -NurdB experience-0.9.7/src/match.c experience-0.9.7-patched/src/match.c
+--- experience-0.9.7/src/match.c	2005-07-30 16:19:44.000000000 -0500
++++ experience-0.9.7-patched/src/match.c	2005-08-04 02:05:06.000000000 -0500
+@@ -59,8 +59,6 @@
+ 		/* and the struct */
+ 		g_free (pspec);
+ 	}
+-	/* this would happen, if a pspec is unrefed too often */
+-	g_assert (pspec->refcount > 0);
+ }
+ 
+ static void
+@@ -81,6 +79,8 @@
+ 	match->flags = MATCH_NONE;
+ 	
+ 	match->property_list = NULL;
++	match->details = NULL;
++	match->program_names = NULL;
+ 	
+ 	/* no other initialization needed here. */
+ }
+@@ -93,14 +93,16 @@
+ 	
+ 	g_assert(match != NULL);
+ 	
+-	/* destroy the GPatternSpecs */
+-	g_list_foreach (match->details, (GFunc) g_pattern_spec_free, NULL);
+-	g_list_foreach (match->program_names, (GFunc) g_pattern_spec_free, NULL);
++	/* destroy the GPatternSpecs and the lists */
++	if (match->details != NULL) {
++		g_list_foreach (match->details, (GFunc) experience_pattern_spec_unref, NULL);
++		g_list_free (match->details);
++	}
++	if (match->program_names != NULL) {
++		g_list_foreach (match->program_names, (GFunc) experience_pattern_spec_unref, NULL);
++		g_list_free (match->program_names);
++	}
+ 	
+-	/* and the lists */
+-	g_list_free (match->details);
+-	g_list_free (match->program_names);
+-
+ 	item = g_list_first (match->property_list);
+ 	
+ 	while (item != NULL) {
