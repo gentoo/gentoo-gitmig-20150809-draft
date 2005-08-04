@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.2.ebuild,v 1.6 2005/07/24 14:21:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.2.ebuild,v 1.7 2005/08/04 11:23:45 ticho Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ RDEPEND="${DEPEND}
 	dev-perl/BerkeleyDB
 	virtual/mta
 	virtual/antivirus
-	ldap? ( dev-perl/perl-ldap )
+	ldap? ( >=dev-perl/perl-ldap-0.33 )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
 	milter? ( >=mail-mta/sendmail-8.12 )"
