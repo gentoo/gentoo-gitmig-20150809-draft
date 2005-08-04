@@ -1,11 +1,21 @@
-MD5 619f68eca0a05a008c642c26adf404dc ChangeLog 52557
-MD5 3efe043f6d0f2df3a6cdd96d5895663e gaim-1.4.0-r2.ebuild 4354
-MD5 f0320b012e455c11a4ff683409df1309 gaim-1.3.1.ebuild 4275
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fa8181abfe4696b781a2762cf070212e ChangeLog 52663
 MD5 6727d140d07549b6be4b0ca9886e2514 metadata.xml 414
+MD5 f0320b012e455c11a4ff683409df1309 gaim-1.3.1.ebuild 4275
+MD5 9df76a32e4fd5088a67b49fb3a41d7c4 gaim-1.4.0-r2.ebuild 4354
+MD5 1a1937855d7436ad73db7062927a2be2 files/gaim-1.4.0-msn-userlist.diff 729
+MD5 d28b7cad9b42f5e1ecd276003220a0f8 files/gaim-1.4.0-oscar-ssi.diff 1200
 MD5 20166c600c6de257f42af05bea6efd22 files/digest-gaim-1.4.0-r2 64
 MD5 7eeaeb97528ef69941cf3fa3d04dea3e files/gaim-1.3.0-silc-ft.patch 567
 MD5 34466df05198ffffaa36d5469babd2aa files/digest-gaim-1.3.1 64
-MD5 1a1937855d7436ad73db7062927a2be2 files/gaim-1.4.0-msn-userlist.diff 729
 MD5 afc682711efed5d09a9229bd06a7a13b files/gaim-0.76-xinput.patch 644
-MD5 d28b7cad9b42f5e1ecd276003220a0f8 files/gaim-1.4.0-oscar-ssi.diff 1200
 MD5 11f026799a722bb53a2f4cdac2dad2d7 files/gaim-1.4.0-libgg-mem.patch 477
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC8of0Kf2g/qXtneoRAjWOAKC3V6V4ZNpblOwiKogFhC9oyIvaIwCguKh1
+c/yGfbj2pvQiXZ77EWHfShg=
+=ov35
+-----END PGP SIGNATURE-----
