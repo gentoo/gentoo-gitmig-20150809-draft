@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1361 2005/08/03 15:40:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1362 2005/08/04 14:16:54 josejx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -398,7 +398,9 @@ kde-base/kdenetwork:rdesktop - Enable remote desktop functionality
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
 kde-base/kdesdk-meta:subversion - Enable support for the subversion ioslave
 kde-base/kdesdk:subversion - Enable support for the subversion ioslave
+kde-base/kdeutils:pbbuttonsd - Enable support for the Apple PMU daemon pbbuttonsd
 kde-base/kig:kig-scripting - Enable support for python scripting
+kde-base/kmilo:pbbuttonsd - Enable support for the Apple PMU daemon pbbuttonsd
 kde-base/kooka:kadmos - Enable support for the kadmos OCR engine
 kde-base/kpdf:nodrm - Disable DRM support in kpdf
 kde-base/krdc:rdesktop - Enable remote desktop functionality
