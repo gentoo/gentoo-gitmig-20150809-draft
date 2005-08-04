@@ -1,6 +1,18 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.39 2005/04/21 18:27:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.40 2005/08/04 17:15:11 pythonhead Exp $
+
+*scite-1.65 (04 Aug 2005)
+*scite-1.64 (04 Aug 2005)
+*scite-1.63 (04 Aug 2005)
+*scite-1.62 (04 Aug 2005)
+*scite-1.61 (04 Aug 2005)
+
+  04 Aug 2005; Rob Cakebread <pythonhead@gentoo.org> -scite-1.6.1.ebuild,
+  -scite-1.6.2.ebuild, -scite-1.6.3.ebuild, +scite-1.61.ebuild,
+  +scite-1.62.ebuild, +scite-1.63.ebuild, +scite-1.64.ebuild,
+  +scite-1.65.ebuild:
+  Changed to correct license. Switched to upstream versioning. Version bumps.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> scite-1.6.2.ebuild:
   stable on amd64

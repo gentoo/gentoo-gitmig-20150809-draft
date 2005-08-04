@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.2.ebuild,v 1.7 2005/04/21 18:27:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.65.ebuild,v 1.1 2005/08/04 17:15:11 pythonhead Exp $
 
 inherit toolchain-funcs
 
@@ -9,9 +9,9 @@ DESCRIPTION="A very powerful editor for programmers"
 HOMEPAGE="http://www.scintilla.org"
 SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 
-LICENSE="PYTHON"
+LICENSE="Scintilla"
 SLOT="0"
-KEYWORDS="ppc sparc x86 amd64"
+KEYWORDS="~ppc ~sparc ~x86 ~amd64"
 IUSE="gtk2 lua"
 
 RDEPEND="gtk2? ( >=x11-libs/gtk+-2 )
@@ -40,7 +40,6 @@ src_unpack() {
 		-e "s#^CC =\(.*\)#CC = $(tc-getCXX)#" \
 		-e 's#${D}##' \
 		|| die "error patching makefile"
-
 }
 
 src_compile() {
