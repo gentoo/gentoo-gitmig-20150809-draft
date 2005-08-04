@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.2-r1.ebuild,v 1.3 2005/08/04 14:35:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.2-r1.ebuild,v 1.4 2005/08/04 16:44:40 swegener Exp $
 
 inherit webapp eutils
 
@@ -67,7 +67,7 @@ RDEPEND="
 	mysql? ( >=dev-db/mysql-4.0.13 >=dev-perl/DBD-mysql-2.1018 )
 	postgres? ( >=dev-db/postgresql-7.4.2-r1 >=dev-perl/DBD-Pg-1.41 )
 	!lighttpd? (
-		|| ( dev-perl/Apache-Test >=www-apache/mod_perl-2* )
+		|| ( dev-perl/Apache-Test >=www-apache/mod_perl-2 )
 		>=dev-perl/Apache-DBI-0.92
 		apache2? ( >=net-www/apache-2 dev-perl/FCGI net-www/mod_fastcgi )
 		!apache2? ( =net-www/apache-1*
