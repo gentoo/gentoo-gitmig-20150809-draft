@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmilo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.14 2005/07/30 09:54:46 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.15 2005/08/04 14:49:35 josejx Exp $
+
+  04 Aug 2005; Joseph Jezak <josejx@gentoo.org> kmilo-3.4.2.ebuild:
+  Added pbbuttonsd dependency for bug #94731.
 
   30 Jul 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/configure-fix-kdeutils-powerbook.patch, kmilo-3.4.2.ebuild:
