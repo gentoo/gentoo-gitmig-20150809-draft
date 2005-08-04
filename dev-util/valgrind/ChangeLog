@@ -1,6 +1,21 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.49 2005/06/28 20:34:57 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.50 2005/08/04 21:38:19 griffon26 Exp $
+
+*valgrind-3.0.0 (04 Aug 2005)
+*valgrind-2.4.1 (04 Aug 2005)
+
+  04 Aug 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +files/valgrind-2.4.1-dont-trample-cflags.patch,
+  +files/valgrind-2.4.1-static-const.patch,
+  +files/valgrind-3.0.0-pie-fix.patch, +valgrind-2.4.1.ebuild,
+  +valgrind-3.0.0.ebuild:
+  Added two new releases of valgrind. 2.4.1 is mainly a stability release 
+  while 3.0.0 is a release that is much more portable to platforms other 
+  than x86. It should work on amd64 already.
+  I also reevaluated all patches/restrictions that were present in earlier
+  ebuilds, removed the ones that seem no longer necessary and commented 
+  the ones that do.
 
   28 Jun 2005; Maurice van der Pot <griffon26@gentoo.org>
   -files/valgrind-2.1.1-pic.patch,
