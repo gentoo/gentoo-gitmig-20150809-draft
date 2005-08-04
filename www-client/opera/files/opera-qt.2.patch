@@ -1,0 +1,17 @@
+--- opera.org	2005-08-04 10:19:53.000000000 +0200
++++ opera	2005-08-04 10:20:17.000000000 +0200
+@@ -195,6 +195,13 @@
+     fi
+ done
+ 
++if [ -f ~/.qt/qtrc ]; then
++    STYLE="$(grep style= ~/.qt/qtrc | cut -c7-)"
++    if [ ! -z "$STYLE" ]; then
++        STYLE="-style '$STYLE'"
++    fi
++fi
++
+ # Running Opera
+-eval exec "'${OPERA_BINARYDIR}opera' $passflags"
++eval exec "'${OPERA_BINARYDIR}opera' $passflags $STYLE"
+ 
