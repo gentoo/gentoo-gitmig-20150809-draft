@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fluxconf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.28 2005/06/06 16:41:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.29 2005/08/04 08:07:30 blubb Exp $
+
+  04 Aug 2005; Simon Stelling <blubb@gentoo.org> fluxconf-0.9.8.ebuild:
+  stable on amd64
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> fluxconf-0.9.8.ebuild:
   Stable on ppc64

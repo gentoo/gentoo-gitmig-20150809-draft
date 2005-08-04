@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a1030626b2cac9b3b221fe1a2a5588a ChangeLog 3518
+MD5 1ca09a1d7a65cadb2b8b7375670c63cd ChangeLog 3607
+MD5 70a31005472486bbb0f6ca5004845d73 fluxconf-0.9.4.ebuild 736
+MD5 8e49e046cb9d4a0772c402c0b2ade46b fluxconf-0.9.7.ebuild 748
+MD5 1e7ea879200b31e2a96ca05157492fc2 fluxconf-0.9.8.ebuild 744
+MD5 22e52109947a82d41fad666ffc135b75 metadata.xml 243
 MD5 d56bde29e40d1f281eaf6f5ce458798c files/digest-fluxconf-0.9.4 66
 MD5 c9e8e7a1e8bd21c5236b64a73137f74f files/digest-fluxconf-0.9.7 66
 MD5 bc9d203a583f0fabf48d27fb76ca615c files/digest-fluxconf-0.9.8 66
-MD5 70a31005472486bbb0f6ca5004845d73 fluxconf-0.9.4.ebuild 736
-MD5 8e49e046cb9d4a0772c402c0b2ade46b fluxconf-0.9.7.ebuild 748
-MD5 dd009caaa281cf575c1a2af595713676 fluxconf-0.9.8.ebuild 748
-MD5 22e52109947a82d41fad666ffc135b75 metadata.xml 243
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0v1II1lqEGTUzyQRAnLJAKCpChzsJbq2FLf3gl+zjYeq84eLAwCePyQW
-q9yR33rYMjW8V75KD0psUKM=
-=RcHL
------END PGP SIGNATURE-----
