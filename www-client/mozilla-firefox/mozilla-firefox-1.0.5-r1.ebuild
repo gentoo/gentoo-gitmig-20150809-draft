@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.5-r1.ebuild,v 1.2 2005/07/19 03:37:24 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.5-r1.ebuild,v 1.3 2005/08/04 21:51:22 azarah Exp $
 
 inherit makeedit flag-o-matic nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -139,7 +139,7 @@ src_install() {
 	dodir ${PLUGIN_DIR}
 
 	dodir /usr/$(get_libdir)/MozillaFirefox
-	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/$(get_libdir)/MozillaFirefox
+	cp -RL ${S}/dist/bin/* ${D}/usr/$(get_libdir)/MozillaFirefox
 
 	einfo "Installing includes and idl files..."
 	# Copy the include and idl files

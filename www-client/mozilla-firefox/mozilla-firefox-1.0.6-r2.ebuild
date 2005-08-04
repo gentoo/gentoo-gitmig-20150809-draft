@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r2.ebuild,v 1.3 2005/07/23 16:07:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r2.ebuild,v 1.4 2005/08/04 21:51:22 azarah Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -164,7 +164,7 @@ src_install() {
 
 	# Most of the installation happens here
 	dodir ${MOZILLA_FIVE_HOME}
-	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}${MOZILLA_FIVE_HOME}
+	cp -RL ${S}/dist/bin/* ${D}${MOZILLA_FIVE_HOME}
 
 	# Create directory structure to support portage-installed extensions.
 	# See update_chrome() in mozilla-launcher

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.60 2005/08/02 12:48:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.61 2005/08/04 21:51:22 azarah Exp $
+
+  04 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
+  mozilla-firefox-1.0.5-r1.ebuild, mozilla-firefox-1.0.6-r2.ebuild,
+  mozilla-firefox-1.0.6-r3.ebuild, mozilla-firefox-1.0.6-r4.ebuild:
+  Remove --no-preserve=links from cp for bsd compatibility.
 
 *mozilla-firefox-1.0.6-r4 (02 Aug 2005)
 

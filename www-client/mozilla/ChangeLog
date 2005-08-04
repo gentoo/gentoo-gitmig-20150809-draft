@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.52 2005/08/03 17:00:22 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.53 2005/08/04 21:53:06 azarah Exp $
+
+  04 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
+  mozilla-1.7.10-r1.ebuild, mozilla-1.7.10-r2.ebuild,
+  mozilla-1.7.10-r3.ebuild, mozilla-1.7.11.ebuild:
+  Remove --no-preserve=links from cp for bsd compatibility.
 
 *mozilla-1.7.11 (03 Aug 2005)
 
