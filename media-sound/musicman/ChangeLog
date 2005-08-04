@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musicman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.10 2005/01/28 18:25:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.11 2005/08/04 14:54:53 flameeyes Exp $
+
+  04 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  musicman-0.11-r1.ebuild:
+  Cleaned up dependencies.
 
   18 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> musicman-0.11-r1.ebuild:
   Added missing call to need-kde().
