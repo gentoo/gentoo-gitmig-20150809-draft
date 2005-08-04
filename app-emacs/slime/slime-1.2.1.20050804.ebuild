@@ -1,27 +1,31 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.0.20050303.ebuild,v 1.3 2005/04/18 15:53:47 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.2.1.20050804.ebuild,v 1.1 2005/08/04 08:54:16 mkennedy Exp $
 
-inherit elisp cvs eutils
+inherit elisp eutils
 
-MY_PV_CVS=${PV:4:4}-${PV:8:2}-${PV:10:2}
-MY_PV_BASE=${PV:0:3}
+MY_PV_CVS=${PV:6:4}-${PV:10:2}-${PV:12:2}
+MY_PV_BASE=${PV:0:5}
 
 DESCRIPTION="SLIME, the Superior Lisp Interaction Mode (Extended)"
 HOMEPAGE="http://common-lisp.net/project/slime/"
+
 SRC_URI="http://www.common-lisp.net/project/slime/slime-${MY_PV_BASE}.tar.gz
 	mirror://gentoo/slime-${MY_PV_BASE}-CVS-${MY_PV_CVS}-gentoo.patch.bz2"
+# SRC_URI="http://common-lisp.net/project/slime/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="doc"
 
 DEPEND="virtual/emacs
 	dev-lisp/common-lisp-controller
 	virtual/commonlisp
-	doc? ( virtual/tetex sys-apps/texinfo )"
+	doc? ( sys-apps/texinfo )"
 
 S="${WORKDIR}/slime-${MY_PV_BASE}"
+# S="${WORKDIR}/${P}"
 
 CLPACKAGE=swank
 
@@ -31,9 +35,8 @@ src_unpack() {
 }
 
 src_compile() {
-	echo "(add-to-list 'load-path \".\")" >load-path
-	emacs --batch -q -l load-path -f batch-byte-compile *.el || die
-	use doc && make -C doc all slime.pdf
+	elisp-comp *.el || die
+	use doc && make -C doc slime.info
 }
 
 src_install() {
@@ -47,8 +50,8 @@ src_install() {
 	dodir /usr/share/common-lisp/systems
 	dosym /usr/share/common-lisp/source/swank/swank.asd \
 		/usr/share/common-lisp/systems
+	dodoc ${FILESDIR}/${PV}/README.Gentoo
 	if use doc; then
-		dodoc doc/slime.{ps,pdf}
 		doinfo doc/slime.info
 	fi
 }
@@ -67,5 +70,5 @@ pkg_postrm() {
 pkg_postinst() {
 	register-common-lisp-source $CLPACKAGE || die
 	elisp-site-regen || die
-	while read line; do einfo "${line}"; done <${FILESDIR}/${PV}/README.Gentoo
+	zcat /usr/share/doc/${PF}/README.Gentoo |while read line; do einfo "${line}"; done
 }

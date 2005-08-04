@@ -1,6 +1,27 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.19 2005/07/06 17:31:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.20 2005/08/04 08:54:16 mkennedy Exp $
+
+*slime-1.2.1.20050804 (04 Aug 2005)
+
+  04 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/1.0.20050106/swank.asd, -files/1.0.20050106/swank-loader.lisp,
+  -files/1.0.20050207/70slime-gentoo.el, -files/1.0.20050207/README.Gentoo,
+  -files/1.0.20050207/swank.asd, -files/1.0.20050207/swank-loader.lisp,
+  -files/1.0.20050106/70slime-gentoo.el,
+  -files/1.0.20050303/70slime-gentoo.el,
+  -files/1.0.20050106/swank-loader-init.lisp,
+  -files/1.0.20050303/README.Gentoo, -files/1.0.20050303/swank.asd,
+  -files/1.0.20050303/swank-loader.lisp,
+  +files/1.2.1.20050804/70slime-gentoo.el,
+  +files/1.2.1.20050804/README.Gentoo, +files/1.2.1.20050804/swank.asd,
+  +files/1.2.1.20050804/swank-loader.lisp, -files/70slime-gentoo.el,
+  -files/README.Gentoo, -files/swank.asd, -files/swank-loader.lisp,
+  -slime-1.0.ebuild, -slime-1.0.20041010.ebuild, -slime-1.0.20050106.ebuild,
+  -slime-1.0.20050207.ebuild, -slime-1.0.20050303.ebuild,
+  slime-1.2.1.ebuild, slime-1.2.1-r1.ebuild, slime-1.2.1.20050610.ebuild,
+  slime-1.2.1.20050630.ebuild, +slime-1.2.1.20050804.ebuild:
+  New upstream version; Resolves Bug #100729.
 
 *slime-1.2.1.20050630 (30 Jun 2005)
 

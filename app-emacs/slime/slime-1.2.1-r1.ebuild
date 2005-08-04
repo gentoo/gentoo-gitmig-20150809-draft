@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.2.1-r1.ebuild,v 1.2 2005/07/10 00:44:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.2.1-r1.ebuild,v 1.3 2005/08/04 08:54:16 mkennedy Exp $
 
 inherit elisp cvs eutils
 
@@ -32,8 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	echo "(add-to-list 'load-path \".\")" >load-path
-	emacs --batch -q -l load-path -f batch-byte-compile *.el || die
+	elisp-comp *.el || die
 	use doc && make -C doc slime.info
 }
 
