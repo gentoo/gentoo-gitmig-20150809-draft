@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f0b7fe31ab36e77f03143aab33ed2230 ChangeLog 2075
+MD5 7278c57429e445d9a7a0cccb6af3f6e2 ChangeLog 2190
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 dbd15ba893dc4b59e18cb6d4b43c2f22 noteedit-2.6.2.ebuild 966
-MD5 a4d0922e1438376cf568fd0313ea8562 noteedit-2.7.4.ebuild 845
+MD5 7f117de227b731663c575d9cd8d57571 noteedit-2.7.4.ebuild 830
 MD5 872c8c5d5228329ce0f644c2b5a542da files/digest-noteedit-2.6.2 64
-MD5 e4d9e7d1a9ceafde0c6cbe9a7c9692b7 files/noteedit-2.6.2-gcc34.patch 2142
 MD5 59bc45abcb4453ffe5b57bc2ff83c3a8 files/digest-noteedit-2.7.4 67
+MD5 e4d9e7d1a9ceafde0c6cbe9a7c9692b7 files/noteedit-2.6.2-gcc34.patch 2142
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbCX8ArHZZzCEUG0RAqb3AJ0bwiaUSqfhlLkIhBStellik4Tt1gCfTq3z
-5aQwNisiSACFpPR3vmOQe0E=
-=IwXk
+iD8DBQFC8i6ej5H05b2HAEkRAscUAJ9U6s6PTIziijP1fanuMEIfrfoCMgCfVTiR
+BxQSd/83cPnqudgvwSDw2kw=
+=KiQK
 -----END PGP SIGNATURE-----
