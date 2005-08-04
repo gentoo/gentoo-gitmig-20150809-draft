@@ -1,4 +1,4 @@
-MD5 ef6a4dd188afabdb97eca2319279595e ChangeLog 943
-MD5 8c95597f6bc4d13a74814b28a3eccfc5 gtk-engines-gtkstep-2.2-r1.ebuild 653
+MD5 a2f088dcfbd8917c83dda09f8b1918b2 ChangeLog 1149
+MD5 d597b3586c651d0c049c5e8ea667861a gtk-engines-gtkstep-2.0.ebuild 750
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 a4ce6b5c2e036d8ce47e7b96fc5c4231 files/digest-gtk-engines-gtkstep-2.2-r1 66
+MD5 a0a1c72723e0fed2998f80aeb4471381 files/digest-gtk-engines-gtkstep-2.0 66
