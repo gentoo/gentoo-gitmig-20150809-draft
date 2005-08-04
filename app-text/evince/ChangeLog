@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.6 2005/06/27 18:43:16 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.7 2005/08/04 21:37:17 dang Exp $
+
+  04 Aug 2005; <dang@gentoo.org> evince-0.3.2.ebuild:
+  Remove djvu support until new version of djvu is released. bug #101108
 
 *evince-0.3.2 (27 Jun 2005)
 
