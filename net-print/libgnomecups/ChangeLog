@@ -1,6 +1,12 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.42 2005/07/12 03:06:22 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.43 2005/08/04 18:38:33 metalgod Exp $
+
+*libgnomecups-0.2.0-r1 (04 Aug 2005)
+
+  04 Aug 2005; Luis Medinas <metalgod@gentoo.org> +files/enablenet.patch,
+  +libgnomecups-0.2.0-r1.ebuild:
+  Adding a patch that fix network issues. Closes bug #89886 .
 
   12 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
   libgnomecups-0.2.0.ebuild:
