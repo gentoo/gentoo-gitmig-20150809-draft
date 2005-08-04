@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.29 2005/07/04 19:04:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.30 2005/08/04 05:46:19 leonardop Exp $
+
+*workrave-1.8.1 (04 Aug 2005)
+
+  04 Aug 2005; Leonardo Boshell <leonardop@gentoo.org> workrave-1.8.1.ebuild:
+  New bug-fix release, reported on bug #101229.
 
   04 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> workrave-1.8.0.ebuild:
   Temporally dropping unusable support for 'kde' USE flag, see bug #97857.

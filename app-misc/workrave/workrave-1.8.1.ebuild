@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.0.ebuild,v 1.4 2005/07/07 11:54:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.1.ebuild,v 1.1 2005/08/04 05:46:19 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -11,7 +11,6 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-# Local USE flags: distribution
 IUSE="dbus distribution gnome nls xml2"
 
 # KDE support is still untested, please feel free to report bugs/improvements
@@ -41,9 +40,12 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="ABOUT-NLS AUTHORS ChangeLog NEWS README"
 
-G2CONF="${G2CONF} --enable-gconf $(use_enable distribution) $(use_enable nls) \
-$(use_enable xml2 xml) $(use_enable gnome) $(use_enable gnome gnomemm) \
-$(use_enable dbus)" # $(use_enable kde)
+pkg_setup() {
+	G2CONF="${G2CONF} --enable-gconf $(use_enable distribution)  \
+	$(use_enable nls) $(use_enable xml2 xml) $(use_enable gnome) \
+	$(use_enable gnome gnomemm) $(use_enable dbus)"
+	# $(use_enable kde)
+}
 
 src_unpack() {
 	unpack ${A}
