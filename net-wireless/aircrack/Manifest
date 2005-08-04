@@ -1,19 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 193ca713de90d9ad26b6890bed1fdfe5 aircrack-2.1.ebuild 678
+MD5 3f087b59be83c39050b29e3ef2b46e4a aircrack-2.2.ebuild 749
 MD5 30ce62b2f7c51e6a3882a314a996de7f metadata.xml 704
-MD5 40f990a0f28232168ea980ef407270b1 ChangeLog 1388
-MD5 8895755d6d9c9c5e9f3687f213284a11 aircrack-2.1-r1.ebuild 771
-MD5 534985f8b79f8468c4c8f0dd26ff9ef6 aircrack-2.2_beta11.ebuild 756
-MD5 1139ac6f8638d27659d7edc2af1eede2 files/digest-aircrack-2.1 61
+MD5 f2f8b36e7b74a9d3ee08e0288844288d ChangeLog 1622
+MD5 e1a3dc136f67ca8d117ad3dd122f3c63 aircrack-2.1-r1.ebuild 776
 MD5 aab732e55b4c35b04de051d63366656a files/aircrack-2.1-amd64.patch 427
 MD5 1139ac6f8638d27659d7edc2af1eede2 files/digest-aircrack-2.1-r1 61
-MD5 73293e2dfc95e67d678d4a2c37f05f76 files/digest-aircrack-2.2_beta11 68
+MD5 7e261489a70a831737a4a50c8c7a138d files/digest-aircrack-2.2 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6VPamdTrptrqvGERApDXAJwLqEF9hT1N/sObE1PS4VHQYrHiBACeOH7a
-GFfZXLwlRu4PzKEOkDhma3A=
-=05NS
+iD8DBQFC8dYpmdTrptrqvGERAkCOAJ48Dw+YlVHNapf5lZn9Cp9+qV16JACfbXio
+eZYyGl1aC9+grPzMreLgUhI=
+=Ook1
 -----END PGP SIGNATURE-----
