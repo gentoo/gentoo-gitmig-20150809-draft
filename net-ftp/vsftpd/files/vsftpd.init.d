@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 2003-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init.d,v 1.5 2005/06/07 18:34:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init.d,v 1.6 2005/08/04 10:40:15 uberlord Exp $
 
 depend() {
 	need net
@@ -30,7 +30,7 @@ start() {
 	checkconfig || return 1
 	ebegin "Starting vsftpd"
 	start-stop-daemon --start \
-		--exec /usr/sbin/vsftpd ${VSFTPD_CONF}
+		--exec /usr/sbin/vsftpd -- ${VSFTPD_CONF}
 	eend $?
 }
 
