@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Encoding=UTF-8
-StartupNotify=true
+StartupNotify=false
 Name=MPlayer
 Comment=Media Player For Linux
 GenericName=Video Player
