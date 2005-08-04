@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.2.ebuild,v 1.5 2005/08/04 08:55:29 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.2.ebuild,v 1.6 2005/08/04 09:08:24 st_lim Exp $
 
 inherit webapp eutils
 
@@ -13,7 +13,7 @@ IUSE="mysql"
 SRC_URI="http://drupal.org/files/projects/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~ppc ~x86"
+KEYWORDS="~alpha ~ppc ~x86 ~amd64"
 
 DEPEND="virtual/php"
 RDEPEND="mysql? (dev-db/mysql)"
