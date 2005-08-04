@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.6-r1.ebuild,v 1.10 2005/07/16 02:18:13 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.6-r1.ebuild,v 1.11 2005/08/04 11:50:44 allanonjl Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 #IUSE="X aalib altivec debug doc gimpprint jpeg mmx mng png python sse svg tiff wmf"
-IUSE="aalib altivec debug doc gtkhtml gimpprint jpeg mmx mng png python sse svg tiff wmf"
+IUSE="aalib altivec debug doc gtkhtml gimpprint hardened jpeg mmx mng png python sse svg tiff wmf"
 
 # FIXME : some more things can be (local) USE flagged
 # a few options are detection only, fix them to switch
