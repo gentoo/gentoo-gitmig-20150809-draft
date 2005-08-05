@@ -1,8 +1,18 @@
-MD5 3431f8e54998d42944fb8d4ac763ad04 ChangeLog 3728
-MD5 60db1859ccf62d2e5e5df600d25f1326 metadata.xml 256
-MD5 4cc3703c4f6a489c97b7eb19e72f5f31 patchutils-0.2.23.ebuild 633
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 90c5a80c816335923e4da0ca8fa5cb4b patchutils-0.2.29.ebuild 636
-MD5 08ebf8f48e66956555e041d733702d7e patchutils-0.2.30.ebuild 632
-MD5 22be6f937a2129f82c1d22e8b935a964 files/digest-patchutils-0.2.23 70
-MD5 2092e7d99d49c2176a47e872cc84b792 files/digest-patchutils-0.2.29 70
+MD5 4cc3703c4f6a489c97b7eb19e72f5f31 patchutils-0.2.23.ebuild 633
+MD5 60db1859ccf62d2e5e5df600d25f1326 metadata.xml 256
+MD5 c3f7d1b92d33530ac8599220b94ef346 patchutils-0.2.30.ebuild 895
+MD5 d4dac3f1b2322c238bfa87636c88173d ChangeLog 3828
 MD5 43656e651c3eaaf2b1dd96d735417f0b files/digest-patchutils-0.2.30 70
+MD5 2092e7d99d49c2176a47e872cc84b792 files/digest-patchutils-0.2.29 70
+MD5 22be6f937a2129f82c1d22e8b935a964 files/digest-patchutils-0.2.23 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC87aVLLFUmVNQ7rkRAnoEAJ9FE1Gj9wojwiDX3Y97VeAt9bfs6ACfUP8e
+kVkY0GG4WEHiFonh1CumKj4=
+=uNrx
+-----END PGP SIGNATURE-----

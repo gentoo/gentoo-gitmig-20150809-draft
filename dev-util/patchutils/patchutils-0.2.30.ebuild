@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/patchutils-0.2.30.ebuild,v 1.8 2005/04/07 14:43:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/patchutils-0.2.30.ebuild,v 1.9 2005/08/05 18:56:39 ciaranm Exp $
 
 DESCRIPTION="A collection of tools that operate on patch files"
 HOMEPAGE="http://cyberelk.net/tim/patchutils/"
@@ -13,7 +13,17 @@ IUSE=""
 
 DEPEND="virtual/libc"
 
-src_install () {
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	# we don't have gendiff
+	sed -i -e '/gendiff/d' Makefile.am
+	WANT_AUTOMAKE=1.8 aclocal || die "aclocal failed"
+	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
+	WANT_AUTOMAKE=1.8 automake || die "automake failed"
+}
+
+src_install() {
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README TODO
