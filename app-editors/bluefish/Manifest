@@ -1,19 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 10ccf0b5bdc1fa7e624e525f8191d78e bluefish-0.13.ebuild 839
+MD5 9472c82a947444156c0eaf34bd445c6d ChangeLog 6083
 MD5 1b7fcc5c167d3fd3b689b7784866d6a0 bluefish-1.0.ebuild 888
-MD5 933c86977050493cf6e6aa46b6aef967 bluefish-0.12.ebuild 1710
-MD5 661b3f3c7feca4b53ef19c4fab5edb45 ChangeLog 5965
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+MD5 387355913ede91692759147273543555 bluefish-1.0.2.ebuild 897
 MD5 4f4082139d50854cf37bf254207ad1b1 files/digest-bluefish-1.0 66
-MD5 e60836fae74fcfb183148e9df9dc75df files/digest-bluefish-0.12 66
-MD5 870f031f504c06b82c5c85a73b813a02 files/digest-bluefish-0.13 67
-MD5 3b49e1ecdc735c10a145dd6dc9c528ee files/bluefish-make-destdir.patch 2052
+MD5 52bca1b5248301ce7359f135e824a98f files/digest-bluefish-1.0.2 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCrcydViELBEf1JB0RAgoyAJwPj12Rr1NJaEuWK11R58zRbVPi7gCfQgbl
-1weHztEZhVXNuzfOGsycIZY=
-=oUFn
+iD8DBQFC83cer2QksT29OyARAo2iAKCERgFdENVULN7eTmiAR3Vohrtb5ACfX+ol
+4/StW7MXy+M6K2gxtGaIP2k=
+=5Nbd
 -----END PGP SIGNATURE-----
