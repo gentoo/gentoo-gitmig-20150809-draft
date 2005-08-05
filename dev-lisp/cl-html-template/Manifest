@@ -1,6 +1,16 @@
-MD5 9f928a873e4dcf604e2c5a952fd3daa6 ChangeLog 1207
-MD5 c46a8f56df801e83f12e9f03a41d0ef9 cl-html-template-0.1.2-r1.ebuild 767
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bfb56b01697e0aa3ab75d997858b967f ChangeLog 1394
 MD5 0747d2460080585c48ba50648565a98e cl-html-template-0.2.0.ebuild 776
 MD5 62ae8c3eff56ac62a83acdd3a0ab6966 metadata.xml 702
+MD5 a829e752d84caf1d2261b632dcadf3a2 cl-html-template-0.3.1.ebuild 776
 MD5 e3b4118a66058e348837040e345aeb9a files/digest-cl-html-template-0.2.0 75
-MD5 73454c494abcf80a74cbda0937b17070 files/digest-cl-html-template-0.1.2-r1 70
+MD5 91d5f4327e97713306b6c5e489b5c74c files/digest-cl-html-template-0.3.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC88nlyiNZaEAZA+ARAiv9AJ0drNy6s3hMkSuwnGEVkWz9+gRHuACcCswT
+KY5leNqz2zPOygzjGD7lixQ=
+=A97s
+-----END PGP SIGNATURE-----
