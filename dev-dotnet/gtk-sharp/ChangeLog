@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.42 2005/08/05 02:08:20 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.43 2005/08/05 02:25:12 latexer Exp $
+
+  05 Aug 2005; Peter Johanson <latexer@gentoo.org> gtk-sharp-1.0.10.ebuild:
+  Stable on x86.
 
   05 Aug 2005; Peter Johanson <latexer@gentoo.org> gtk-sharp-1.0.6.ebuild,
   gtk-sharp-1.0.8.ebuild, gtk-sharp-1.0.8-r1.ebuild,

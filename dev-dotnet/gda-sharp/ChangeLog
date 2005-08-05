@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gda-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.24 2005/05/24 17:38:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.25 2005/08/05 02:27:42 latexer Exp $
+
+  05 Aug 2005; Peter Johanson <latexer@gentoo.org> gda-sharp-1.0.10.ebuild:
+  Stable on x86.
 
 *gda-sharp-1.0.10 (24 May 2005)
 *gda-sharp-1.0.8-r1 (24 May 2005)
