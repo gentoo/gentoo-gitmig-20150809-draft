@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.4.2.ebuild,v 1.3 2005/08/04 15:00:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.4.2.ebuild,v 1.4 2005/08/05 09:20:11 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="$(use_with snmp)"
+	local myconf="$(use_with snmp) $(use_with pbbuttonsd powerbook)"
 
 	use crypt || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kgpg"
 
