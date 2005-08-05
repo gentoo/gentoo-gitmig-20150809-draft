@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.4 2005/08/04 19:05:26 omkhar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.5 2005/08/05 15:55:41 omkhar Exp $
+
+  05 Aug 2005; <omkhar@gentoo.org> +files/gromacs-ppc64-altivec.patch,
+  gromacs-3.2.1-r1.ebuild:
+  Added patch back as binary due to metatags. Made sure patch only applies when ppc64 && altivec
 
 *gromacs-3.2.1-r1 (04 Aug 2005)
 
