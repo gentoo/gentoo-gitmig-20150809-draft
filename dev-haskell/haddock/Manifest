@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 149071cff87c229ea1de13ab965fc008 haddock-0.7.ebuild 1816
 MD5 128b9a894439f7226495b06aa0ea7b3c haddock-0.6-r2.ebuild 1981
 MD5 c41bbbc2a84938335fa0654c832abc4d haddock-0.6-r3.ebuild 2222
-MD5 40667d822880075c4e001b6b2de98ed2 ChangeLog 3611
+MD5 6dae406b6be0f073a373a59da5d170cf ChangeLog 3726
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 6c35081e22594c96591797459c28da01 files/digest-haddock-0.6-r2 67
 MD5 6c35081e22594c96591797459c28da01 files/digest-haddock-0.6-r3 67
 MD5 bd211a7c5442dadeee6975dbb15f2e45 files/haddock-0.6-gcc3.4.patch 1967
+MD5 574da10760a87f23fa635f37265b7c0c files/digest-haddock-0.7 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjfxhkyZuKN4EQ6YRAnuaAJ4tdBtyMGdphOA71mFvsykJSlUtNACggBst
-Qf8rXfMgRoC3F5uFXiMwgqM=
-=9ivJ
+iD8DBQFC82AvOKSBj1ObwosRAm4IAKCHYfIF7iQib+ZAlg1G9wHDd+kdMgCaAvwV
+X+RZqIEfip2e2zAX4m5CkFo=
+=TCMM
 -----END PGP SIGNATURE-----

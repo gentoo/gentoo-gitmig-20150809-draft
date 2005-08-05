@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.23 2005/05/20 15:01:56 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.24 2005/08/05 12:48:21 kosmikus Exp $
+
+*haddock-0.7 (05 Aug 2005)
+
+  05 Aug 2005; Andres Loeh <kosmikus@gentoo.org> +haddock-0.7.ebuild:
+  New version.
 
   20 May 2005; <duncan@gentoo.org> haddock-0.6-r3.ebuild:
   Added ~sparc to KEYWORDS.
