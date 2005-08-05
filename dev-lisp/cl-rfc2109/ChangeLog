@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-rfc2109
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rfc2109/ChangeLog,v 1.1 2005/08/05 14:31:03 mkennedy Exp $
+
+*cl-rfc2109-0.2.1 (05 Aug 2005)
+
+  05 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-rfc2109-0.2.1.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 762cc9dc33ce998c138cfedb23fa5781 ChangeLog 421
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 68b19ad615f7b8830a015111e1f34ead cl-rfc2109-0.2.1.ebuild 683
+MD5 2cb8256932453704866c777ac6c816a3 files/digest-cl-rfc2109-0.2.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC83hEyiNZaEAZA+ARAh8kAJ0XKSoKguwEiOIyqdEHlxFFceVn0ACfSrPm
+mXl0vRYol8oIq/LPksXUwho=
+=Unym
+-----END PGP SIGNATURE-----
