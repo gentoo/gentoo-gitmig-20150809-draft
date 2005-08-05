@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.2.2.ebuild,v 1.1 2005/08/04 17:34:30 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.2.2.ebuild,v 1.2 2005/08/05 14:10:45 pythonhead Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ IUSE="gvim gnome"
 
 DEPEND=">=dev-lang/python-2.3
 	>=dev-python/pygtk-2.4
-	vim? ( >=app-editors/gvim-6.3 )
+	gvim? ( >=app-editors/gvim-6.3 )
 	gnome? ( >=x11-libs/gtksourceview-1.2.0
 			>=dev-python/gnome-python-2.10 )
 	>=x11-libs/vte-0.11.11-r2
