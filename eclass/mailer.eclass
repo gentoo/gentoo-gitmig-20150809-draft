@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.14 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.15 2005/08/05 08:26:34 slarti Exp $
 
 #
 # Original Authors: Fernando J. Pereda <ferdy@gentoo.org>
@@ -46,7 +46,7 @@ EXPORT_FUNCTIONS pkg_postinst pkg_postrm
 
 # Gets current mailer profile
 mailer_get_current() {
-	echo $(mailer-config --get-current-profile)
+	mailer-config --get-current-profile
 	return $?
 }
 
@@ -116,6 +116,6 @@ mailer_pkg_postrm() {
 		mailer_wipe_confs
 
 		# We are removing the current profile, switch back to default
-		[[ $(mailer_get_current) == ${P} ]] &&	mailer_set_profile default
+		[[ $(mailer_get_current) == ${P} ]] && mailer_set_profile default
 	fi
 }
