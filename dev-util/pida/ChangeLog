@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pida
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.2 2005/08/05 14:10:45 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.3 2005/08/05 19:34:08 pythonhead Exp $
+
+  05 Aug 2005; Rob Cakebread <pythonhead@gentoo.org> pida-0.2.2.ebuild:
+  Added gnome-python-extras as dep bug# 101423
 
   05 Aug 2005; Rob Cakebread <pythonhead@gentoo.org> pida-0.2.2.ebuild:
   Changed vim USE flag to gvim, as vim will be supported in the future.
