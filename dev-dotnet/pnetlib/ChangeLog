@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pnetlib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.25 2005/06/28 21:49:18 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.26 2005/08/05 14:26:00 ferdy Exp $
+
+  05 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> pnetlib-0.6.10.ebuild,
+  pnetlib-0.6.12.ebuild, pnetlib-0.7.0.ebuild:
+  With respect to the keywording policy, this shouldn't be keyworded for alpha
 
   29 Jun 2005; Ilya A. Volynets-Evenbakh <ilya@total-knowledge.com>
   pnetlib-0.6.10.ebuild, pnetlib-0.6.12.ebuild, pnetlib-0.7.0.ebuild:

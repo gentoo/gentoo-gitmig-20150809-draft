@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pnetc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/ChangeLog,v 1.22 2005/06/28 21:50:04 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/ChangeLog,v 1.23 2005/08/05 14:26:49 ferdy Exp $
+
+  05 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> pnetc-0.6.10.ebuild,
+  pnetc-0.6.12.ebuild, pnetc-0.7.0.ebuild:
+  With respect to the keywording policy, this shouldn't be keyworded for alpha
 
   29 Jun 2005; Ilya A. Volynets-Evenbakh <ilya@total-knowledge.com>
   pnetc-0.6.10.ebuild, pnetc-0.6.12.ebuild, pnetc-0.7.0.ebuild:
