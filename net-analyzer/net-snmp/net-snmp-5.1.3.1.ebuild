@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.3.ebuild,v 1.1 2005/07/04 11:59:12 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.3.1.ebuild,v 1.1 2005/08/05 17:59:29 ka0ttic Exp $
 
 inherit eutils fixheadtails perl-module
 

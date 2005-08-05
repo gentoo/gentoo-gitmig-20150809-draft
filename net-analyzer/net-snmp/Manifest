@@ -1,18 +1,28 @@
-MD5 a089a7c3da424bb97b49fa1db93058c6 ChangeLog 18476
-MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7f7e48543a02433b465b31961ac95fc3 net-snmp-5.3.20050624.ebuild 4929
+MD5 2cd948cef6401a46192d1b5eaab196bd net-snmp-5.1.3.1.ebuild 4776
 MD5 b2259070b8a46420311e3ae6d33057ad net-snmp-5.1.1-r1.ebuild 3622
 MD5 9147e4f1138d5e0ed25e19754dee2d80 net-snmp-5.2.1.2.ebuild 4897
 MD5 c8a2626c32745f6ac38463b0a5edaf98 net-snmp-5.2.1-r1.ebuild 5026
-MD5 7f7e48543a02433b465b31961ac95fc3 net-snmp-5.3.20050624.ebuild 4929
-MD5 318dd6febb5aa55bdfa9a501049b5f8b net-snmp-5.1.3.ebuild 4774
-MD5 a31eeb8af378e385491966360f79a5a7 files/digest-net-snmp-5.1.3 67
+MD5 7b2ed98cff7bd1de35aad7fe73fd4930 ChangeLog 18632
+MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1-r1 67
-MD5 cfce6770c86e3e3bc76800c6bd6ee8c6 files/digest-net-snmp-5.2.1.2 69
 MD5 f4562e4c61904b17dab28aae2836ff6e files/digest-net-snmp-5.2.1-r1 67
-MD5 cf7d3f5d505c262b2477f1759b908bad files/digest-net-snmp-5.3.20050624 74
-MD5 82d14deda5805e21a60de03e0a69659c files/net-snmp-5.2.1-conf-elf-rpm-bz2.patch 4734
 MD5 a63107c1d81a8aeb10e84be0658e2794 files/net-snmp-5.2.1-fix-insecure-fixproc.diff 1639
-MD5 25d92c9a7adcbb80240a914a8f6bbfe5 files/net-snmp-lm_sensors.patch 13686
-MD5 ed2e953a9a923caec45eeca95bec2efc files/snmpd-5.1.conf 606
-MD5 0dbde7b1bdd9c9dc988039e676800337 files/snmpd-5.1.rc6 714
 MD5 791cd8d81154f2c1d01e3f87b86faa44 files/snmptrapd.conf 635
+MD5 82d14deda5805e21a60de03e0a69659c files/net-snmp-5.2.1-conf-elf-rpm-bz2.patch 4734
+MD5 9791bf52496848c5613de87a95a3b761 files/digest-net-snmp-5.1.3.1 69
+MD5 cfce6770c86e3e3bc76800c6bd6ee8c6 files/digest-net-snmp-5.2.1.2 69
+MD5 ed2e953a9a923caec45eeca95bec2efc files/snmpd-5.1.conf 606
+MD5 25d92c9a7adcbb80240a914a8f6bbfe5 files/net-snmp-lm_sensors.patch 13686
+MD5 0dbde7b1bdd9c9dc988039e676800337 files/snmpd-5.1.rc6 714
+MD5 cf7d3f5d505c262b2477f1759b908bad files/digest-net-snmp-5.3.20050624 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC86kfEZCkKN40op4RAmQuAKCrFO+Ke1jJUAP82tn0asi3fNCvUwCgrz1F
+JUHf3fDEPomX/ii2z16rx0k=
+=Q6xw
+-----END PGP SIGNATURE-----
