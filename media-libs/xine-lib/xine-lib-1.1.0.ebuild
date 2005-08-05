@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0.ebuild,v 1.4 2005/07/30 10:12:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0.ebuild,v 1.5 2005/08/05 08:22:37 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic toolchain-funcs libtool
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="8"
+PATCHLEVEL="9"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -20,7 +20,7 @@ SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0
-samba dxr3 vidix png mng flac oss v4l xinerama vcd a52 mad"
+samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick"
 RESTRICT="nostrip"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
@@ -40,11 +40,11 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	speex? ( media-libs/speex )
 	libcaca? ( media-libs/libcaca )
 	samba? ( net-fs/samba )
-	png? ( media-libs/libpng )
 	mng? ( media-libs/libmng )
 	vcd? ( media-video/vcdimager )
 	a52? ( >=media-libs/a52dec-0.7.4-r5 )
 	mad? ( media-libs/libmad )
+	imagemagick? ( media-gfx/imagemagick )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
@@ -60,7 +60,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	EPATCH_EXCLUDE="15_all_fbsd-limits.patch 13_all_fbsd-inp-vcd.patch"
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/
 
 	elibtoolize
@@ -86,8 +85,7 @@ src_compile() {
 
 	use x86 && has_pic && append-flags -UHAVE_MMX
 
-	if [ "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -ge "4" ] || \
-	[ "$(gcc-major-version)" -ge "4" ]; then
+	if [[ "$(gcc-major-version)" -eq "3" && "$(gcc-minor-version)" -ge "4" ]] || [[ "$(gcc-major-version)" -ge "4" ]]; then
 		# bugs 49509 and 55202
 		append-flags -fno-web -funit-at-a-time
 		filter-flags -fno-unit-at-a-time #55202
@@ -96,7 +94,7 @@ src_compile() {
 	is-flag -O? || append-flags -O1 #31243
 
 	# fix build errors with sse2 #49482
-	if use x86 && [ $(gcc-major-version) -ge 3 ]; then
+	if [[ $(tc-arch) = "x86" && $(gcc-major-version) -ge 3 ]]; then
 		append-flags -mno-sse2 $(test_flag -mno-sse3)
 		filter-mfpmath sse
 	fi
@@ -109,9 +107,9 @@ src_compile() {
 		|| myconf="${myconf} --disable-asf"
 
 	# enable/disable appropiate optimizations on sparc
-	[ "${PROFILE_ARCH}" == "sparc64" ] \
+	[[ "${PROFILE_ARCH}" == "sparc64" ]] \
 		&& myconf="${myconf} --enable-vis"
-	[ "${PROFILE_ARCH}" == "sparc" ] \
+	[[ "${PROFILE_ARCH}" == "sparc" ]] \
 		&& myconf="${myconf} --disable-vis"
 
 	# Fix compilation-errors on PowerPC #45393 & #55460 & #68251
@@ -132,7 +130,7 @@ src_compile() {
 		use nvidia && count="`expr ${count} + 1`"
 		use i8x0 && count="`expr ${count} + 1`"
 		use cle266 && count="`expr ${count} + 1`"
-		if [ "${count}" -gt "1" ]; then
+		if [[ "${count}" -gt "1" ]]; then
 			eerror "Invalid combination of USE flags"
 			eerror "When building support for xvmc, you may only"
 			eerror "include support for one video card:"
@@ -145,10 +143,10 @@ src_compile() {
 		use i8x0 && xvmclib="I810XvmC"
 		use cle266 && xvmclib="viaXvMC"
 
-		if [ -n "${xvmclib}" ]; then
-			if [ -f "${ROOT}/usr/$(get_libdir)/libXvMC.so" -o -f "${ROOT}/usr/$(get_libdir)/libXvMC.a" ]; then
+		if [[ -n "${xvmclib}" ]]; then
+			if [[ -f "${ROOT}/usr/$(get_libdir)/libXvMC.so" || -f "${ROOT}/usr/$(get_libdir)/libXvMC.a" ]]; then
 				myconf="${myconf} --with-xvmc-path=${ROOT}/usr/$(get_libdir) --with-xxmc-path=${ROOT}/usr/$(get_libdir) --with-xvmc-lib=${xvmclib} --with-xxmc-lib=${xvmclib}"
-			elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXvMC.so" -o -f "${ROOT}/usr/X11R6/$(get_libdir)/libXvMC.a" ]; then
+			elif [[ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXvMC.so" || -f "${ROOT}/usr/X11R6/$(get_libdir)/libXvMC.a" ]]; then
 				myconf="${myconf} --with-xvmc-path=${ROOT}/usr/X11R6/$(get_libdir) --with-xxmc-path=${ROOT}/usr/X11R6/$(get_libdir) --with-xvmc-lib=${xvmclib} --with-xxmc-lib=${xvmclib}"
 			else
 				ewarn "Couldn't find libXvMC.  Disabling xvmc support."
@@ -157,13 +155,13 @@ src_compile() {
 	fi
 
 	if use xv; then
-		if [ -f "${ROOT}/usr/$(get_libdir)/libXv.so" ]; then
+		if [[ -f "${ROOT}/usr/$(get_libdir)/libXv.so" ]]; then
 			myconf="${myconf} --with-xv-path=${ROOT}/usr/$(get_libdir)"
-		elif [ -f "${ROOT}/usr/$(get_libdir)/libXv.a" ]; then
+		elif [[ -f "${ROOT}/usr/$(get_libdir)/libXv.a" ]]; then
 			myconf="${myconf} --enable-static-xv --with-xv-path=${ROOT}/usr/$(get_libdir)"
-		elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.so" ]; then
+		elif [[ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.so" ]]; then
 			myconf="${myconf} --with-xv-path=${ROOT}/usr/X11R6/$(get_libdir)"
-		elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.a" ]; then
+		elif [[ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.a" ]]; then
 			myconf="${myconf} --enable-static-xv --with-xv-path=${ROOT}/usr/X11R6/$(get_libdir)"
 		else
 			eerror "Couldn't find your libXv.  Did you set USE=\"xv\" when you emerged xorg-x11?"
@@ -177,7 +175,7 @@ src_compile() {
 		$(use_enable samba) \
 		\
 		$(use_enable mng) \
-		$(use_enable png) \
+		$(use_enable imagemagick) \
 		\
 		$(use_enable aac faad) \
 		$(use_enable flac) \
@@ -204,14 +202,14 @@ src_compile() {
 		$(use_with mad external-libmad) \
 		--disable-polypaudio \
 		${myconf} \
-		--disable-dependency-tracking || die "Configure failed"
+		--disable-dependency-tracking || die "econf failed"
 
 		#$(use_with dvdnav external-dvdnav) \
 		#$(use_enable macos macosx-video) $(use_enable macos coreaudio) \
 		# This will be added when polypaudio will be added to portage.
 		# $(use_enable polypaudio)
 
-	emake -j1 || die "Parallel make failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
@@ -221,7 +219,7 @@ src_install() {
 	dodir /usr/share/xine/libxine1/fonts
 	mv ${D}/usr/share/*.xinefont.gz ${D}/usr/share/xine/libxine1/fonts/
 
-	dodoc AUTHORS ChangeLog README TODO dataflow.dia doc/README* doc/faq/faq.txt
+	dodoc AUTHORS ChangeLog README TODO doc/README* doc/faq/faq.txt
 	dohtml doc/faq/faq.html doc/hackersguide/*.html doc/hackersguide/*.png
 
 	rm -rf ${D}/usr/share/doc/xine
