@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.97.ebuild,v 1.1 2005/06/15 02:21:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.97.ebuild,v 1.2 2005/08/05 04:02:50 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -89,6 +89,7 @@ src_unpack() {
 	toggle_feature x86 X86_MIPS3_DRC
 	toggle_feature2 x86 mmx EFFECT_MMX_ASM
 	toggle_feature joystick JOY_STANDARD
+	toggle_feature2 joystick X XINPUT_DEVICES
 	use net && ewarn "Network support is currently (${PV}) broken :("
 	#toggle_feature net XMAME_NET # Broken
 	toggle_feature esd SOUND_ESOUND
