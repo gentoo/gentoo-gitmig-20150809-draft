@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1-r2.ebuild,v 1.2 2005/08/01 20:23:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1-r2.ebuild,v 1.3 2005/08/05 03:45:35 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -41,7 +41,6 @@ RDEPEND="pam? ( virtual/pam )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 DEPEND="${RDEPEND}
 	virtual/os-headers
-	!features_noman? ( sys-apps/groff )
 	sys-devel/autoconf"
 PROVIDE="virtual/ssh"
 
