@@ -1,4 +1,16 @@
-MD5 955f3adfe63444fb285571e7c13aab72 ChangeLog 1099
-MD5 8886b7d7a5037909f7ad8bc2c955e9bf metadata.xml 429
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 787e361bdd4867d04f30cb0697e0bd48 doxygen-syntax-1.9.ebuild 961
+MD5 7de2502c7e1b5a1e94387b79bc01daf0 doxygen-syntax-1.12.ebuild 970
+MD5 8886b7d7a5037909f7ad8bc2c955e9bf metadata.xml 429
+MD5 4fda40886723c58d649c1289cb878e76 ChangeLog 1249
 MD5 334c4bab69544a7dc354ed192de3c87b files/digest-doxygen-syntax-1.9 69
+MD5 35a70c649b40a8b1b2ae7d8ee4a5a6f0 files/digest-doxygen-syntax-1.12 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC85UiLLFUmVNQ7rkRAtydAJ0VL57hCnHQ5KRUvkhdq6kdbMJ3cwCgpsdS
+cTUeMt0hY5Ad8GbgsabKkRM=
+=FeG8
+-----END PGP SIGNATURE-----
