@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.59 2005/07/24 15:40:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.60 2005/08/05 19:13:32 wolf31o2 Exp $
+
+*livecd-tools-1.0.24 (05 Aug 2005)
+
+  05 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +livecd-tools-1.0.24.ebuild:
+  Added updated version with new alsa detection routines for multiple sound
+  cards.
 
 *livecd-tools-1.0.23 (24 Jul 2005)
 
