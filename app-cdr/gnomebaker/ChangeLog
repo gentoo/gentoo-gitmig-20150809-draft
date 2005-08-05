@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/gnomebaker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.3 2005/06/17 11:12:25 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.4 2005/08/05 13:28:46 pylon Exp $
+
+*gnomebaker-0.4 (05 Aug 2005)
+
+  05 Aug 2005; Lars Weiler <pylon@gentoo.org> +gnomebaker-0.4.ebuild:
+  Version bump; Bug #99252.
 
   17 Jun 2005; Herbie Hopkins <herbs@gentoo.org> gnomebaker-0.3.ebuild:
   Marked ~amd64 wrt bug #96360.
