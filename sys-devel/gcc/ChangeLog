@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.440 2005/07/30 23:41:59 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.441 2005/08/05 22:15:05 vapier Exp $
+
+  05 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/3.4.4/gcc-3.4.4-softfloat.patch, gcc-3.4.4.ebuild:
+  Merge soft-float support by Yuri Vasilevski #75585.
 
 *gcc-4.1.0_beta20050730 (30 Jul 2005)
 

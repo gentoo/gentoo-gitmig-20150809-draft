@@ -11,12 +11,12 @@ MD5 3e3bc1c3e3953428824c0fd3f206c48b gcc-3.3.2-r7.ebuild 21757
 MD5 9111df8f4b2d0f617ccc1ab9c7755d7f gcc-3.3.5.20050130-r1.ebuild 3209
 MD5 521ca7a790e5ac461503c5aca11f62dd gcc-3.4.3-r1.ebuild 5429
 MD5 1a84ea5c09067bb7da6c8959f13e2154 gcc-3.3.5-r1.ebuild 3777
-MD5 c64e1604f1e261a37f53bff3cde0c84c gcc-3.4.4.ebuild 4914
+MD5 7d11d9fe1a391fb6b14b8b07852a6374 gcc-3.4.4.ebuild 5006
 MD5 1cc5f2fcbc1f6dc2a7ed43ca14b6ed9c gcc-4.1.0_beta20050730.ebuild 1525
 MD5 b5774f75bb651dcfb7654cd186938c99 gcc-3.4.3.20050110-r2.ebuild 5191
 MD5 9718cbc7f6f1b2f19ff801f4c2e62721 gcc-3.2.2.ebuild 511
 MD5 71b180bed94dca00dddf253f7bd6508f gcc-3.2.3-r4.ebuild 19841
-MD5 a82653f5d85c5ebbcb93bccf3fbfb04b ChangeLog 91209
+MD5 cedf6b53ee32cc1ddecc1c208afbed54 ChangeLog 91373
 MD5 3196c90905902891b12b4d08372c0eb5 gcc-2.95.3-r9.ebuild 7524
 MD5 0d683280daf95e6bb9712549352a200c files/digest-gcc-3.1.1-r2 140
 MD5 9e216fb231a24884fe548b31864296b8 files/digest-gcc-3.3.5.20050130-r2 620
@@ -60,8 +60,8 @@ MD5 7cb2138ac2df6f8674d19974e966a45b files/3.4.1/gcc-3.4.1-mips-n32only.patch 61
 MD5 14fec2000fc63536d4cf22195e88e14f files/3.4.1/gcc-3.4.1-r2-gentoo-branding.patch 781
 MD5 cd770c23ece7458db5e6c5067f262ce0 files/3.4.1/gcc-3.4.1-glibc-is-native.patch 760
 MD5 aa8e15a63d797df37bbd4e489ed0267f files/3.4.1/gcc-3.4.1-mips-n64only.patch 614
-MD5 f6e2d11b3bbcf00592a73033be5bd264 files/3.4.4/gcc-3.4_x-avr-news-devs2.patch 5454
 MD5 50f1f564c568b9e28231c592d4df2f36 files/3.4.4/gcc-3.4.4-cross-compile.patch 1728
+MD5 2c355d808b490994c6566b10f3c0ba27 files/3.4.4/gcc-3.4.4-softfloat.patch 5242
 MD5 494d917cc15c81c9cead4a8c17d4d00d files/3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch 926
 MD5 52ef1426cb70a472182503502b768058 files/3.2.3/gcc-3.2.3-mergel-fix.patch 2749
 MD5 c9c45dab64bab25e716859626ad7f94f files/3.2.3/gcc32-c++-classfn-member-template.patch 3219
@@ -96,9 +96,9 @@ MD5 17f15202b98a8dd84d0f4b67eff2d868 files/3.2.2/gcc32-pr7768.patch 1789
 MD5 184cb0a87ee2fa0197dec6f4902ef4c8 files/3.3.5/gcc-3.3.5-no-COPYING-cross-compile.patch 1192
 MD5 7c29f54dd8d50385ac42fae65459c744 files/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch 538
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC7Vv/gIKl8Uu19MoRAsdyAKCEQ6nuLp4p1G04zuuhxNMdPcU+OQCeObT6
-crjU/TnukCwU/tolc2mm+yQ=
-=Bqz9
+iD8DBQFC8+UBgIKl8Uu19MoRArEIAJ97kuRzcCSA2yWkp/gL37QKhIR0AwCfYtMj
+0GxKSHJRtX3KPInu0vEtTCA=
+=FA5b
 -----END PGP SIGNATURE-----
