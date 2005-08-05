@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/gtk-engines-experience-0.9.7.ebuild,v 1.2 2005/08/04 15:15:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/gtk-engines-experience-0.9.7.ebuild,v 1.3 2005/08/05 16:08:13 gustavoz Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="GTK+2 Experience Theme Engine"
 HOMEPAGE="http://art.gnome.org/themes/gtk_engines/1057"
 SRC_URI="http://art.gnome.org/download/themes/gtk_engines/1057/${MY_P}.tar.bz2"
 
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~sparc"
 IUSE="static"
 LICENSE="GPL-2"
 SLOT="2"
