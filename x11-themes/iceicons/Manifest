@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a36fec4c224a6c68c1ab7d80250bb1c4 iceicons-0.10.0.ebuild 1131
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
 MD5 def6df795e17a53bcf7f8acdff9addbb ChangeLog 712
 MD5 90cb05e95177a8c99f26578de8c7dfbd files/digest-iceicons-0.10.0 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC858RKRy60XGEcJIRAuOpAJ9WjPn5APB0xbQVzngwOKtEePRG9QCeKVn+
+tFNlnsizYRyp+gdcqbQjzB0=
+=Kzve
+-----END PGP SIGNATURE-----
