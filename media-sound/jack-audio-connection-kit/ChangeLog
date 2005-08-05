@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.57 2005/07/14 18:44:15 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.58 2005/08/05 20:25:22 kito Exp $
+
+*jack-audio-connection-kit-0.100.0 (05 Aug 2005)
+
+  05 Aug 2005; Kito <kito@gentoo.org>
+  +files/jack-audio-connection-kit-transport.patch, metadata.xml,
+  +jack-audio-connection-kit-0.100.0.ebuild:
+  version bump. add IUSE coreaudio,mmx,pic,sndfile,sse. No more glib DEPEND.
+  Fix altivec for Darwin assembler. Take over maintainership. ~ppc ~ppc-macos
+  keywords until archs can test new drivers
 
 *jack-audio-connection-kit-0.99.0-r3 (14 Jul 2005)
 
