@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-darwin/macos/virtuals,v 1.5 2005/07/23 16:20:30 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-darwin/macos/virtuals,v 1.6 2005/08/05 19:54:15 gongloo Exp $
 
 # Use this virtuals file to either override the Darwin base profile's defined
 # virtuals, or add virtuals that are specific to the Mac OS X profiles
@@ -12,4 +12,4 @@ virtual/x11			x11-base/apple-xfree
 virtual/xft			x11-base/apple-xfree
 virtual/opengl		x11-base/apple-xfree
 virtual/blackbox	x11-wm/fluxbox
-virtual/jdk		dev-java/sun-jdk
+virtual/jdk		dev-java/sun-j2sdk
