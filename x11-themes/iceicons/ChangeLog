@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/iceicons
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.4 2005/03/09 18:26:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.5 2005/08/05 17:16:33 gustavoz Exp $
+
+  05 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  iceicons-0.10.0.ebuild:
+  Keyworded ~sparc
 
   09 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> iceicons-0.10.0.ebuild:
   added ~amd64 KEYWORD to fix #77628
