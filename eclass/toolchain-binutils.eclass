@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.42 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.43 2005/08/05 03:37:45 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
 # then switch the versions on the fly (with `binutils-config`).
 
-inherit eutils libtool flag-o-matic gnuconfig
+inherit eutils libtool flag-o-matic gnuconfig multilib
 EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst pkg_postrm
 
 export CTARGET=${CTARGET:-${CHOST}}
