@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d6dce55f11058ec5a43d09b87e135019 ChangeLog 4959
+MD5 37b31f5d33f81c784f8c71338b57d085 pnet-0.6.10.ebuild 1247
+MD5 84665b0e249f71742329e8c2a6a24db4 pnet-0.6.12.ebuild 1912
+MD5 501c95f2470084ef6171f7113db2b5a9 pnet-0.7.0.ebuild 1983
+MD5 47e2ff54844e9250e423376fdc9f679f ChangeLog 5153
+MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
 MD5 ed42c7e8f78bcd92970a52f7a8ea20b3 files/digest-pnet-0.6.10 64
 MD5 5bc32ed73a56e8d55706286a3d82df06 files/digest-pnet-0.6.12 64
 MD5 7532061c314b285d24bc9feed41f924a files/digest-pnet-0.7.0 63
-MD5 d77c6b7044ab8edb43cde04d4dfc28d9 metadata.xml 218
-MD5 daa3dae2a590580cc30cbc3d1c0c9591 pnet-0.6.10.ebuild 1253
-MD5 4213e7f1eb5537d95a7a959a423d141b pnet-0.6.12.ebuild 1919
-MD5 d6c202c1dae1d8d49704a59d7d24501d pnet-0.7.0.ebuild 1990
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCwdlnI1lqEGTUzyQRAmO3AKDbtvVTPi7i/eWdDbUSU6ceJW1VNQCfVDFp
-8gcqBkAybN28OdU5x9sXVUY=
-=RqDi
------END PGP SIGNATURE-----
