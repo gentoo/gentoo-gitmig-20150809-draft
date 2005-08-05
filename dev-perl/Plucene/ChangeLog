@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Plucene
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/ChangeLog,v 1.7 2005/05/25 14:51:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/ChangeLog,v 1.8 2005/08/05 00:40:05 mcummings Exp $
+
+*Plucene-1.24 (05 Aug 2005)
+
+  05 Aug 2005; Michael Cummings <mcummings@gentoo.org> +Plucene-1.24.ebuild:
+  Version bump upstream
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> Plucene-1.19.ebuild:
   dev-perl/Test-Harness => perl-core/Test-Harness migration

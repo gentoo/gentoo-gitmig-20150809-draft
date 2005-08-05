@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 331a70c2894237616b74573822bc47bf ChangeLog 1076
 MD5 bb52b2e5df913b5792e18770a62f18ca Plucene-1.19.ebuild 833
+MD5 d2bc2148e4399e83a536c044d6bf51e5 ChangeLog 1207
+MD5 e4115a8078b00897194d79f588b25b29 Plucene-1.24.ebuild 833
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 f5ee76add6fb276f84d17c42b5bbaa16 files/digest-Plucene-1.24 64
 MD5 b7cee57981e1f2f5ebb66fffa04f11d3 files/digest-Plucene-1.19 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFClJD0tG5z4I8BtQoRAp7rAJ4yPVFPMi6FdNOqMYOCCxRlqigxuACdHOv7
-n39Eyva/DXgLmxeltPgVUnY=
-=svoH
+iD8DBQFC8rVxtG5z4I8BtQoRAo6IAJ94oU/p5l6zvaYTVvoRHieC5u+W1wCgjfaK
+CBj7A6J10GZ56QAVmLj0P2E=
+=kB5F
 -----END PGP SIGNATURE-----
