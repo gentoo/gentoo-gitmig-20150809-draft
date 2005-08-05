@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5628246587e4cc2c397c78b19a5f38ac ChangeLog 4218
 MD5 9754054b31d29f95ac6c3205d6555c5f bioperl-1.0.2.ebuild 1474
-MD5 9aa1b0f4d576c4dbefbb4af3d47153b3 bioperl-1.2.2.ebuild 2156
 MD5 2f2f6acd4c7b588671c304b486a316f3 bioperl-1.2.3.ebuild 2040
 MD5 75c941eed8e51d0740fd9512567e0a38 bioperl-1.2.ebuild 1522
-MD5 8f888ef73d96de5b076c9ac7f7118e2c bioperl-1.4.ebuild 1160
+MD5 9aa1b0f4d576c4dbefbb4af3d47153b3 bioperl-1.2.2.ebuild 2156
+MD5 c42ad9bf2e50bc8e671ace069fd69ef4 bioperl-1.4.ebuild 1164
+MD5 ef3374b86e96b81eac8cb60a18c25df2 ChangeLog 4317
+MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
 MD5 8f6c3beb108aaa2b78b0b4f8d218187a files/biodbgff-enable-1.2.2.patch 3355
-MD5 8f6c3beb108aaa2b78b0b4f8d218187a files/biodbgff-enable-1.2.3.patch 3355
 MD5 1828ff2ba6225e17a98d27bfbad5c7c9 files/bioperl-1.2-manpage.diff 712
-MD5 dfdb9921cbef92f60e9746a9531d8de7 files/digest-bioperl-1.0.2 66
+MD5 8f6c3beb108aaa2b78b0b4f8d218187a files/biodbgff-enable-1.2.3.patch 3355
 MD5 14b9e16331895fe40e231065f7dda942 files/digest-bioperl-1.2 64
-MD5 d8df3477f72bba80de83cfdb5416ecbf files/digest-bioperl-1.2.2 66
-MD5 a67f149bd10684a4b584bcd23282d5bf files/digest-bioperl-1.2.3 67
 MD5 d5d0bc711fb345c9b91086c5d47e1442 files/digest-bioperl-1.4 65
 MD5 08539f1d1fed6d673140cdc221ae13e6 files/domanpages-1.2.2.patch 412
-MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
+MD5 dfdb9921cbef92f60e9746a9531d8de7 files/digest-bioperl-1.0.2 66
+MD5 d8df3477f72bba80de83cfdb5416ecbf files/digest-bioperl-1.2.2 66
+MD5 a67f149bd10684a4b584bcd23282d5bf files/digest-bioperl-1.2.3 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC0FZqI1lqEGTUzyQRAiSMAKDGULpLvrzpfhqHDvqfC49Pg3e+kACdFQ3u
-2rm95Vnh7g9++3cmin6VQe8=
-=IX9o
+iD8DBQFC844E2G5bA0cA/ScRAiNNAKCNnKR41QfKqdToclsFZw3zS6J9MQCg6gVo
+Jk26+YswCfuKJgxtC3bHxuA=
+=9TrT
 -----END PGP SIGNATURE-----
