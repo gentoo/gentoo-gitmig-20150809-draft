@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kghostview
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.13 2005/07/28 21:16:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kghostview/ChangeLog,v 1.14 2005/08/05 10:53:12 greg_g Exp $
+
+  05 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdegraphics-3.4-gcc4.patch, kghostview-3.4.2.ebuild:
+  Add patch to fix compilation with gcc4 (#101384).
 
 *kghostview-3.4.2 (28 Jul 2005)
 

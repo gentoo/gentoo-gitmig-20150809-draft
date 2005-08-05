@@ -1,0 +1,26 @@
+diff -Nur kdegraphics-3.4.2.orig/kghostview/displayoptions.cpp kdegraphics-3.4.2/kghostview/displayoptions.cpp
+--- kdegraphics-3.4.2.orig/kghostview/displayoptions.cpp	2005-07-20 12:00:39.000000000 +0200
++++ kdegraphics-3.4.2/kghostview/displayoptions.cpp	2005-08-05 12:02:27.000000000 +0200
+@@ -56,7 +56,7 @@
+ 	res.setMagnification( args->getOption( "scale" ).toFloat() );
+ 	res.setPage( args->getOption( "page" ).toInt() - 1 ); // transform from 1-based into 0-based
+ 	//res._overridePageMedia = args->getOption( "paper" );
+-	kdDebug(4500 ) << "Parsed options: " << res << endl;
++	kdDebug(4500 ) << "Parsed options: " << DisplayOptions::toString( res ) << endl;
+ 	return res;
+ }
+ 
+diff -Nur kdegraphics-3.4.2.orig/kghostview/displayoptions.h kdegraphics-3.4.2/kghostview/displayoptions.h
+--- kdegraphics-3.4.2.orig/kghostview/displayoptions.h	2005-05-23 14:06:10.000000000 +0200
++++ kdegraphics-3.4.2/kghostview/displayoptions.h	2005-08-05 12:02:27.000000000 +0200
+@@ -109,10 +109,4 @@
+ 	setMagnification( 1.0 );
+ }
+ 
+-template <typename OutStream>
+-OutStream& operator << ( OutStream& out, const DisplayOptions& obj ) {
+-	out << DisplayOptions::toString( obj ).utf8().data();
+-	return out;
+-}
+-
+ #endif // DISPLAYOPTIONS_H
