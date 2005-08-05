@@ -5,7 +5,7 @@
 <herd>gnome</herd>
 <maintainer>
   <email>tester@gentoo.org</email>
-  <name>Olivier Crête</name> 
+  <name>Olivier CrÃªte</name> 
   <description>GnomeICU upstream maintainer</description>
 </maintainer>
 <longdescription>Gnome ICQ Client</longdescription>
