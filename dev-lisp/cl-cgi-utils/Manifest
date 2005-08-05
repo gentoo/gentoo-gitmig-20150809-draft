@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 07939a427f3339d00ce7dc45dc68baf3 cl-cgi-utils-0.7.ebuild 1124
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 62a8b5399465ce56a95e4169c29d243e ChangeLog 475
+MD5 a4d798bb23b4643157b4cf2f0a09713f files/digest-cl-cgi-utils-0.7 69
+MD5 1d23887d5cc8c1a809febd79ef258fba files/0.7-dont-print-during-make-gentoo.patch 740
+MD5 1d3228539162c60b27db0937990e1ff3 files/0.7-defconstant-gentoo.patch 1887
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC85P/yiNZaEAZA+ARAiVEAKCCUqsEa2JOIxmNAP8PhoXxPqUi7ACdHBEe
+KVJdJu47axz3iKSS46DLI3I=
+=wV3O
+-----END PGP SIGNATURE-----

@@ -1,0 +1,11 @@
+# ChangeLog for dev-lisp/cl-cgi-utils
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cgi-utils/ChangeLog,v 1.1 2005/08/05 16:29:25 mkennedy Exp $
+
+*cl-cgi-utils-0.7 (05 Aug 2005)
+
+  05 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.7-dont-print-during-make-gentoo.patch, +metadata.xml,
+  +cl-cgi-utils-0.7.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
+
