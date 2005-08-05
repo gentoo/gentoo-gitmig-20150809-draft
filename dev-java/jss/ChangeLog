@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jss
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.6 2005/07/12 23:06:43 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.7 2005/08/05 16:06:59 betelgeuse Exp $
+
+  05 Aug 2005; Petteri Räty <betelgeuse@gentoo.org> jss-3.4.ebuild:
+  the ebuild now inherits linux-info.eclass to fix bug 101427
 
   12 Jul 2005; Thomas Matthijs <axxo@gentoo.org> jss-3.4.ebuild:
   fix bug 98374

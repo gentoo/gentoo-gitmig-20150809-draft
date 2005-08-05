@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4.ebuild,v 1.8 2005/07/17 11:26:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4.ebuild,v 1.9 2005/08/05 16:06:59 betelgeuse Exp $
 
-inherit eutils java-pkg versionator
+inherit eutils java-pkg versionator linux-info
 
 RTM_NAME="JSS_${PV//./_}_RTM"
 DESCRIPTION="Network Security Services for Java (JSS)"
@@ -15,12 +15,12 @@ KEYWORDS="x86 amd64 sparc"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4
-	>=dev-libs/nspr-4.3
-	>=dev-libs/nss-3.9.2"
+		>=dev-libs/nspr-4.3
+		>=dev-libs/nss-3.9.2"
 DEPEND=">=virtual/jdk-1.4
-	${RDEPEND}
-	app-arch/zip
-	>=sys-apps/sed-4"
+		${RDEPEND}
+		app-arch/zip
+		>=sys-apps/sed-4"
 
 S=${WORKDIR}/${P}-src
 
