@@ -1,12 +1,22 @@
-MD5 4ff19cc7970bfe6510b42bde782fbaa4 ChangeLog 1618
-MD5 e054f1020f728f17ff8cf5fc3cef0ed3 klibc-1.0.3.ebuild 3939
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 300321e4e9125b68cfc58017ec3949fd klibc-1.0.ebuild 3289
-MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
+MD5 e054f1020f728f17ff8cf5fc3cef0ed3 klibc-1.0.3.ebuild 3939
+MD5 4ff19cc7970bfe6510b42bde782fbaa4 ChangeLog 1618
 MD5 4c2d18245f1ab6071c105bbf744d5d99 klibc-1.0.8.ebuild 4021
 MD5 f4103f6246c6515409cd5e5d2ac21d6e klibc-1.0.14.ebuild 4026
-MD5 d995810231e49d3aee9101cebc8a6a17 files/digest-klibc-1.0 62
+MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
+MD5 d839dab2895dd0e607d19436928be939 files/digest-klibc-1.0.8 64
 MD5 626ed5b2981bf97e3b37743bb3b4cc08 files/digest-klibc-1.0.3 64
 MD5 e70edb40913b7ad07638a7202f773b6f files/klibc-1.0-makeklcc-empty-args.patch 807
-MD5 dfa828b111983dc4ccc9a21dee070b39 files/klibc.m4 3630
-MD5 d839dab2895dd0e607d19436928be939 files/digest-klibc-1.0.8 64
+MD5 790a9f0a9a74e6eac6c6c1dbde2a94b6 files/klibc.m4 3619
+MD5 d995810231e49d3aee9101cebc8a6a17 files/digest-klibc-1.0 62
 MD5 5f74818fe6743d6f26cd199480a6d4ea files/digest-klibc-1.0.14 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC8yF71ZcsMnZjRyIRAmR5AJ9rEGyF5+NEklupL6aSXPdXZRJbyQCgr9G9
+T7SSyQm/49IhO1OGge9N3iE=
+=NuLO
+-----END PGP SIGNATURE-----

@@ -10,10 +10,10 @@
 ## the GNU General Public License or the GNU Library General Public
 ## License but which still want to provide support for the GNU gettext
 ## functionality.
-## Please note that the actual code of the GNU gettext library is covered
-## by the GNU Library General Public License, and the rest of the GNU
-## gettext package package is covered by the GNU General Public License.
-## They are *not* in the public domain.
+## Please note that the actual code of the KLIBC Library is partly covered
+## by the GNU Library General Public License, and party copyrighted by the
+## Regents of The University of California, and the rest is covered by a
+## MIT style license. 
 
 # Authors:
 #   Martin Schlemmer <azarah@nosferatu.za.org>, 2005.
