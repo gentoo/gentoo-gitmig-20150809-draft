@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 e96b4dfc373a1cdf7735aeae52c4cf7e metadata.xml 999
-MD5 cf2dbd7fe2e35dce3bc71d9f502ef872 uclibc-0.9.27.ebuild 10242
-MD5 afce4eaed212a209cf81282b9dfab8f3 ChangeLog 9113
-MD5 d85f94fb6de539496682bac166323b63 uclibc-0.9.27-r1.ebuild 11670
-MD5 c3c4c66a5f75c9af87fa6ae774f8a934 files/digest-uclibc-0.9.27 229
-MD5 e2d1c6e6575b6575b6947eca17ebd8d4 files/digest-uclibc-0.9.27-r1 298
+MD5 eed92173a78bae8732fd3cbcc138bccf uclibc-0.9.27.ebuild 10359
+MD5 1b764d593a86e8666d863afc0d606e58 ChangeLog 9277
+MD5 f493ea04311948a8eadb230403310d6e uclibc-0.9.27-r1.ebuild 11670
+MD5 e84bc74ebe851508f689390fd41fdbbd files/digest-uclibc-0.9.27 229
+MD5 852a30be80c7911de6b861dd4140c05c files/digest-uclibc-0.9.27-r1 298
 MD5 684def72ebc0da73cb8b6d1c53e7e8fb files/getent 1112
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC6q3NgIKl8Uu19MoRAtcSAJwOqjSSwu7ZmolJD97UgHy1WyXqugCeNDZF
-pYC5rHzK0NTlmhjDYVg4Hpw=
-=yaOO
+iD8DBQFC8q2HgIKl8Uu19MoRAqZmAJ9H2gJnjxrMFWINpgCVjrhgonmvuQCfRokA
+ubQ4u0JrpXULA/dQjHvlPPw=
+=1LPF
 -----END PGP SIGNATURE-----

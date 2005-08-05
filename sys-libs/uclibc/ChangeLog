@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.8 2005/07/29 22:27:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.9 2005/08/05 00:06:10 vapier Exp $
+
+  05 Aug 2005; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.27.ebuild,
+  uclibc-0.9.27-r1.ebuild:
+  Add patch by Yuri Vasilevski to fix FPU endian on arm #75585.
 
   29 Jul 2005; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.27.ebuild,
   uclibc-0.9.27-r1.ebuild:

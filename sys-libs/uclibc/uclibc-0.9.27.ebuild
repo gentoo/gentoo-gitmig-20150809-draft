@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.22 2005/07/29 22:27:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.23 2005/08/05 00:06:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -25,7 +25,7 @@ fi
 
 MY_P=${P/ucl/uCl}
 SVN_VER="20050114"
-PATCH_VER="1.2"
+PATCH_VER="1.3"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
@@ -162,6 +162,11 @@ src_unpack() {
 
 	sed -i -e '/ARCH_.*_ENDIAN/d' .config
 	echo "ARCH_$(tc-endian | tr [a-z] [A-Z])_ENDIAN=y" >> .config
+
+	if [[ ${CTARGET} == *-softfloat-* ]] ; then
+		sed -i -e '/^HAS_FPU=y$/d' .config
+		echo 'HAS_FPU=n' >> .config
+	fi
 
 	for def in DO_C99_MATH UCLIBC_HAS_{RPC,CTYPE_CHECKED,WCHAR,HEXADECIMAL_FLOATS,GLIBC_CUSTOM_PRINTF,FOPEN_EXCLUSIVE_MODE,GLIBC_CUSTOM_STREAMS,PRINTF_M_SPEC,FTW} ; do
 		sed -i -e "s:# ${def} is not set:${def}=y:" .config
