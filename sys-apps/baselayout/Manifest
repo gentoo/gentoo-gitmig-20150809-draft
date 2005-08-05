@@ -2,10 +2,7 @@
 Hash: SHA1
 
 MD5 cfcc943fcedad0e2ae199ae479f28b9a baselayout-1.12.0_pre4.ebuild 18709
-MD5 a38f4cd999b43c8904097898ba8bda53 baselayout-1.12.0_pre3-r1.ebuild 18807
 MD5 63063133efc82df82db512614030ba19 baselayout-1.9.4-r6.ebuild 16993
-MD5 6f810c38eb6f522cf0cb299027035955 baselayout-1.12.0_pre3.ebuild 18711
-MD5 b9ae5d2ea880c13cf9ad50e9e7db4ac4 baselayout-1.12.0_pre3-r2.ebuild 18923
 MD5 46658e5fc3b8123889c8d0c990d13296 ChangeLog 60151
 MD5 ff608e6800fc96bfde6ae7fa09c37b56 baselayout-1.11.13.ebuild 18604
 MD5 451f8ce496238c2fd0fa9fa2852ad16c baselayout-1.9.4-r7.ebuild 17999
@@ -26,13 +23,11 @@ MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
 MD5 000da8c75f9d92743df0add40d4c7f15 files/baselayout-1.12.0_pre3-dhclient.patch 1002
 MD5 08ade596f939beaf9f7b3657c5811593 files/rc-scripts-1.6.9-checkfs-lvm.patch 579
 MD5 2d89f41d8e2a27bb9c413ce38c5c95fb files/baselayout-1.11.12-profile.patch 1847
-MD5 f69a22a2120638279fe6d5aa9aa8a835 files/digest-baselayout-1.12.0_pre3 75
 MD5 50816019be7cc03120fa58d075eb07f7 files/sysvinit-2.84-selinux1.patch 3612
 MD5 333c983dc00cb352f4725cacc0378fea files/baselayout-1.11.10-bridge.patch 3547
 MD5 67882892030fed7383fe01d89f9539bd files/baselayout-1.11.12-runscript-boot.patch 670
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r7 134
 MD5 8dae78310577f3fb14c58704d529feb3 files/digest-baselayout-1.11.13 70
-MD5 f69a22a2120638279fe6d5aa9aa8a835 files/digest-baselayout-1.12.0_pre3-r2 75
 MD5 ee24c3f2b233c4b4bb286e3fa8c833ed files/baselayout-1.11.12-exec-dev.patch 545
 MD5 1e3446237df369796294f52358945aed files/baselayout-1.12.0_pre3-iwconfig.patch 559
 MD5 df9f21385df40467a0bff0b3d1e5285f files/baselayout-1.11.10-selinux-udev.patch 413
@@ -40,7 +35,6 @@ MD5 6d37e93641eee6754b93dde3324ae23b files/baselayout-1.11.11-wpa_supplicant.pat
 MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
 MD5 126200ae85bdf0ef43de75411f71aaa8 files/rc-scripts-1.6.9-domainname.patch 380
 MD5 50ccc6f432f5e941daec74f31f2d2a53 files/digest-baselayout-1.11.11-r3 70
-MD5 f69a22a2120638279fe6d5aa9aa8a835 files/digest-baselayout-1.12.0_pre3-r1 75
 MD5 dda9ec9a210692db2fe200ca13101440 files/digest-baselayout-1.12.0_pre4 75
 MD5 7b2f5e48c4d9056df539620299c20641 files/rc-scripts-1.4.16-splash.patch 11251
 MD5 8ab5b01cfcad4c79d822ff31296000be files/baselayout-1.11.12-ifconfig-cidr.patch 1740
@@ -48,7 +42,7 @@ MD5 87842ac605d85289eba63ac1c2e16142 files/baselayout-1.11.10-wireless.patch 321
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC82Hu1ZcsMnZjRyIRAjCWAKCeMDQhjq20dh90lj4TsFAf5R6wAgCggdtY
-sXlQfX8/11K+k5WXcpEBpnQ=
-=I5wD
+iD8DBQFC83Vm1ZcsMnZjRyIRAgNqAJwJqtieU6ZtvNP9R9EEzU07L2xs3QCffOJY
+DpIzuY6qIKturbkP4B8DXJw=
+=Lk/D
 -----END PGP SIGNATURE-----
