@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.15 2005/08/04 09:38:47 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.16 2005/08/05 17:12:33 ka0ttic Exp $
+
+  05 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> cherokee-0.4.25.ebuild:
+  Remove call to epatch as the patch is no longer necessary; also removed
+  commented out line that contained a line continuation character, as it
+  doesnt work for obvious reasons... bug 101407.
 
 *cherokee-0.4.25 (04 Aug 2005)
 
