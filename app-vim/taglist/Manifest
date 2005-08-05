@@ -1,10 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7fb05928e874087802860270d9469758 taglist-3.4-r1.ebuild 592
-MD5 bcc8b8433ef30ca551a8f7979f5ed510 ChangeLog 4633
 MD5 874e01af49bff00528af211abecc5553 taglist-4.0_beta1.ebuild 658
+MD5 821de1b601f60fd10c1b11da704802c4 taglist-4.0_beta2.ebuild 658
 MD5 5cc5a9d33b96a8aa2d45b34429ea5158 taglist-3.4.ebuild 504
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
+MD5 685e6579fc793c064e8e50f9177b09b7 ChangeLog 4775
 MD5 6c7387e0d96db70dfc803f7cfd973a1e files/digest-taglist-3.4-r1 63
-MD5 c7f319a44a948c29f40f341c69126fd9 files/taglist-2.6-exuberant.patch 349
-MD5 d2c2a2110dd2457af6711f93504ca53c files/taglist-3.4-ebuilds.patch 451
 MD5 618b6a1f4723bd8f4f8420e3f41ed1a1 files/digest-taglist-4.0_beta1 69
 MD5 6c7387e0d96db70dfc803f7cfd973a1e files/digest-taglist-3.4 63
+MD5 983c8d15b7d1712106122f3c4282207a files/digest-taglist-4.0_beta2 69
+MD5 d2c2a2110dd2457af6711f93504ca53c files/taglist-3.4-ebuilds.patch 451
+MD5 c7f319a44a948c29f40f341c69126fd9 files/taglist-2.6-exuberant.patch 349
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC842lLLFUmVNQ7rkRAjxLAJ9eMY2NdpjyBq03ZBmHlff+5sNX/QCeJiOm
+iWUHjhB6BTU4CJ/rO6q8rtc=
+=95Lv
+-----END PGP SIGNATURE-----
