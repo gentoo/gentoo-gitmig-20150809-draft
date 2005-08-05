@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/xrestop-0.3.ebuild,v 1.5 2005/07/19 07:23:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/xrestop-0.3.ebuild,v 1.6 2005/08/05 13:05:47 ferdy Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software_2fxrestop"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ppc ~sparc x86"
 
 RDEPEND="virtual/x11"
 
