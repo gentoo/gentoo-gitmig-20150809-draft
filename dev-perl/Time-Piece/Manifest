@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec6e06556e58f8ed5b20f1037a97c594 ChangeLog 584
-MD5 3b635e2f7598a2a868d2088a8e00873b Time-Piece-1.08.ebuild 477
+MD5 3f5b5510efd50c1985e9a270ea9a9ccc ChangeLog 668
+MD5 d8095b99fe1f6fe8a989a155cb1da15a Time-Piece-1.08.ebuild 479
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 2b7f8d49e36592fa2a6ef1a0485e50da files/digest-Time-Piece-1.08 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCiffUKRy60XGEcJIRAhl+AJ9jp/zdvvABVYEtHsU2DUtSl56W7ACgsvHG
-QHF/+24cEHd0uxGj81npPoE=
-=kZOY
------END PGP SIGNATURE-----
