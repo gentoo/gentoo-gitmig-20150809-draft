@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.27 2005/07/12 13:39:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.28 2005/08/05 19:30:05 robbat2 Exp $
+
+*bridge-utils-1.0.6-r3 (05 Aug 2005)
+
+  05 Aug 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/bridge-utils-1.0.6-allow-without-sysfs.patch,
+  +bridge-utils-1.0.6-r3.ebuild:
+  Bug #69292: Make it possible to compile without sysfs, so the new versions
+  work well for 2.4 users.
 
   12 Jul 2005; Simon Stelling <blubb@gentoo.org>
   bridge-utils-1.0.6-r2.ebuild:
