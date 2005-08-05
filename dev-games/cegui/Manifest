@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 c3061025a6fb77f06211ecd6a0cade40 cegui-0.2.0.ebuild 1097
-MD5 9947cf6580572434453f0acea8781bb7 cegui-0.3.0.ebuild 1005
+MD5 cf8f8d6ef623d03062d1943f6bf5aa3d cegui-0.3.0.ebuild 1108
 MD5 7e45a3d82d56eef1762cee83e984db2c ChangeLog 490
 MD5 938129631f2fa1d25d5aa6ca78ae06f0 files/digest-cegui-0.3.0 75
 MD5 8fe1b67f8734fc763fbd2346a15bbde6 files/digest-cegui-0.2.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC8tEygIKl8Uu19MoRAtEFAJ4vBmQzKV0GiiOkCDYhXYp/e2wv1wCfScrl
+9Y5yPMvxUKW3y8t95HlNRC0=
+=LQV7
+-----END PGP SIGNATURE-----

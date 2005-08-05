@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.3.0.ebuild,v 1.1 2005/07/25 23:16:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.3.0.ebuild,v 1.2 2005/08/05 02:38:18 vapier Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="Crazy Eddie's GUI System"
 HOMEPAGE="http://www.cegui.org.uk/"
@@ -22,6 +22,12 @@ DEPEND="${RDEPEND}
 	doc? ( >=app-doc/doxygen-1.3.8 )"
 
 S=${WORKDIR}/cegui_mk2-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	gnuconfig_update #work around symlink bug #101280
+}
 
 src_compile() {
 	econf \
