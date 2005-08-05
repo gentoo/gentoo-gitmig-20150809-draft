@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.8.ebuild,v 1.5 2005/05/16 20:13:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.8.ebuild,v 1.6 2005/08/05 02:08:20 latexer Exp $
 
 inherit eutils mono
 
@@ -12,6 +12,7 @@ HOMEPAGE="http://gtk-sharp.sourceforge.net/"
 LICENSE="LGPL-2.1"
 SLOT="1"
 IUSE=""
+RESTRICT="test"
 
 RDEPEND=">=sys-apps/sed-4.0
 	>=dev-lang/mono-1.0
