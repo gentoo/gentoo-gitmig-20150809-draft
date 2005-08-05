@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 60bb77031d935656070cddda2a911667 ChangeLog 1263
-MD5 6e68c6f8969db95e88c2d534b06489dd metadata.xml 217
-MD5 6fceb8b2b14c7bfe66363ebe3cc612c8 SVG-2.32.ebuild 490
+MD5 4726c5ffdd0ed78fffcb69f94c1b4a3b SVG-2.32.ebuild 497
 MD5 594bb430de66ad6817b5ff779fec71d2 SVG-2.28.ebuild 487
+MD5 4783d5c65748bfb02c4d6999eed9dcd2 ChangeLog 1347
+MD5 6e68c6f8969db95e88c2d534b06489dd metadata.xml 217
 MD5 f5d64055eb535adb84f6404133c5feae files/digest-SVG-2.28 59
 MD5 953d794ae2f4afb8cfde6ac08f4a222a files/digest-SVG-2.32 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCc2fJKf2g/qXtneoRAg89AJ9Dwgo4OqFh5SmDP4W0LBCTib0dswCgqvm+
-K0rItXcfwL2bwsFh68dOM4c=
-=Grtb
------END PGP SIGNATURE-----

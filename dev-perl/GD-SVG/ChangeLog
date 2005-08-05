@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD-SVG
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/ChangeLog,v 1.9 2005/04/25 16:30:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/ChangeLog,v 1.10 2005/08/05 16:01:48 herbs Exp $
+
+  05 Aug 2005; Herbie Hopkins <herbs@gentoo.org> GD-SVG-0.25.ebuild:
+  Marked ~amd64.
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org> GD-SVG-0.25.ebuild:
   cleaning
