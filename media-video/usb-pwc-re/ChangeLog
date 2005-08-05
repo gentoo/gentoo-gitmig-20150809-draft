@@ -1,6 +1,12 @@
 # ChangeLog for media-video/usb-pwc-re
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/ChangeLog,v 1.13 2005/07/28 11:25:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/ChangeLog,v 1.14 2005/08/05 11:56:44 phosphan Exp $
+
+*usb-pwc-re-10.0.7a (05 Aug 2005)
+
+  05 Aug 2005; Patrick Kursawe <phosphan@gentoo.org>
+  +usb-pwc-re-10.0.7a.ebuild:
+  Version bump (uses v4l2)
 
   28 Jul 2005; David Holm <dholm@gentoo.org> usb-pwc-re-10.0.7.ebuild:
   Added to ~ppc.
