@@ -1,24 +1,2 @@
-# Add USE flags that don't work on Mac OS X here
-
-# gtk+ pulls in XML-Parser with USE="nls xml", so Perl issue should
-# be resolved first before keywording them
-gtk
-gtk2
-
-# imlib depends on gtk+-1
-imlib
-
-perl
-
 # tcl ebuild overwrites Apple's tcl, so we mask it (dev-lang/ruby)
 tcltk
-
-# needs a lot of packages ported before its usable.
-xemacs
-
-# this is going to be a hard thing to port, if even doable
-mpi
-sasl
-
-# until we can get mysql keyworded
-mysql
