@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/comix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.7 2005/08/03 18:22:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.8 2005/08/05 11:33:18 greg_g Exp $
+
+*comix-1.3.4 (05 Aug 2005)
+
+  05 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> +comix-1.3.4.ebuild:
+  New version (#101414).
 
   03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> comix-1.3.3.ebuild:
   Keyworded ~sparc
