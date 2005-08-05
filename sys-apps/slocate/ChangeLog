@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.54 2005/07/09 22:41:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.55 2005/08/05 20:45:08 ciaranm Exp $
+
+  05 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org> files/updatedb.conf:
+  Exclude /root/.ccache, bug #90344
 
   09 Jul 2005; Mike Frysinger <vapier@gentoo.org> files/updatedb.conf:
   Clean up updatedb.conf as directed by Nikolai Weibull in #97377.
