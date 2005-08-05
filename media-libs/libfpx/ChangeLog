@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libfpx
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.13 2004/12/29 00:50:15 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.14 2005/08/05 01:24:54 vapier Exp $
+
+*libfpx-1.2.0.12 (05 Aug 2005)
+
+  05 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/libfpx-1.2.0.12-makefile.patch, +libfpx-1.2.0.12.ebuild:
+  Version bump with build fix by Sergey S. Stasyuk #100690.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
