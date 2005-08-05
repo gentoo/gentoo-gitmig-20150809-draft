@@ -1,11 +1,11 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.45 2005/08/05 04:02:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.46 2005/08/05 04:03:47 mr_bones_ Exp $
 
   05 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> -xmame-0.96.ebuild,
   xmame-0.97.ebuild:
   Turn on xinput support if use X and use joystick (bug #101286) with patch
-  from Erik Hovland
+  from Erik Hovland; clean old version
 
 *xmame-0.97 (15 Jun 2005)
 
