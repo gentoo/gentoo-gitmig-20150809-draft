@@ -1,4 +1,6 @@
 MD5 5f769fd057531c884af54fb23ba99f50 mopac7-1.00.ebuild 1332
 MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
-MD5 d0f673021b0f9d49eec18269d02d1c35 ChangeLog 668
+MD5 777c12b9723329c10fbca56750445e6e ChangeLog 873
+MD5 b587431a5b74ca23d7c00b7a765cad37 mopac7-1.00-r1.ebuild 1333
 MD5 87fd0c849cee4758e25fa67f07f7240e files/digest-mopac7-1.00 61
+MD5 87fd0c849cee4758e25fa67f07f7240e files/digest-mopac7-1.00-r1 61

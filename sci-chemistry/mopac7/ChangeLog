@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/mopac7
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.3 2005/07/10 06:01:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.4 2005/08/05 17:53:22 spyderous Exp $
+
+*mopac7-1.00-r1 (05 Aug 2005)
+
+  05 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +mopac7-1.00-r1.ebuild:
+  (#101288) Fix run_mopac7 shell script, courtesy of Mathias Weigt
+  <m.weigt@uni-bonn.de>.
 
   10 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>; mopac7-1.00.ebuild:
   (#98457) Parallel build broken.
