@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eb3745bed7539731abe9747ec0cfb14b ChangeLog 1393
-MD5 bcdee90ae0c569d6e24da4177214866d hevea-1.08.ebuild 673
-MD5 729ea53b7536cfafdbb80f7c9017cad4 metadata.xml 234
+MD5 d107445485d2f43b6e2e6ca6418eead3 ChangeLog 1475
 MD5 f03946f5c5ad19ef9e3ddf5028dbc2c9 hevea-1.07-r1.ebuild 786
+MD5 729ea53b7536cfafdbb80f7c9017cad4 metadata.xml 234
+MD5 bf12ef0e3f10b9a1e0d9346bcbdbc43e hevea-1.08.ebuild 683
 MD5 f7523e0cb3f2d283347a99956ae0f83f files/99hevea 26
 MD5 febb549ec9d6843cb31bfb690df7cad2 files/digest-hevea-1.07-r1 62
 MD5 a0e552bc9be9ad7a59d5da8e0396f7f2 files/digest-hevea-1.08 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC7IZ8VWNWqTUmv+0RAlC0AJoDpBqkreTfrLr8TH+GZMjIG+s0ZwCdGTp5
-nQ5/ND0z+4P+NaHTQwOl41w=
-=Dw7c
------END PGP SIGNATURE-----
