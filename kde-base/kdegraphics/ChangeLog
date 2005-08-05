@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.172 2005/08/03 17:09:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.173 2005/08/05 10:50:18 greg_g Exp $
 
 *kdegraphics-3.4.1-r1 (03 Aug 2005)
 *kdegraphics-3.3.2-r3 (03 Aug 2005)
@@ -10,6 +10,14 @@
   +files/post-3.4.1-kdegraphics-4.diff, +kdegraphics-3.3.2-r3.ebuild,
   +kdegraphics-3.4.1-r1.ebuild:
   Yet another xpdf fix.
+
+*kdegraphics-3.4.2-r1 (05 Aug 2005)
+
+  05 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdegraphics-3.4.2-kpdf-fix.patch,
+  +files/kdegraphics-3.4-gcc4.patch, +kdegraphics-3.4.2-r1.ebuild:
+  Add patch to fix compilation with gcc4 (#101384). Add patch to fix
+  regression in kpdf (#101119).
 
 *kdegraphics-3.4.2 (28 Jul 2005)
 
