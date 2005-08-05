@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvd-slideshow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.5 2005/07/28 10:28:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.6 2005/08/05 19:24:03 sbriesen Exp $
+
+  05 Aug 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  dvd-slideshow-0.7.1.ebuild:
+  adding sox and bash dependency, fixing 'dodoc', installing 'dvd-slideshowrc'
+  into doc dir.
 
   28 Jul 2005; David Holm <dholm@gentoo.org> dvd-slideshow-0.7.1.ebuild:
   Added to ~ppc.
