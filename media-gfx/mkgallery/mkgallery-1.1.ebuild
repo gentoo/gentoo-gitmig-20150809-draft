@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mkgallery/mkgallery-1.1.ebuild,v 1.9 2005/07/09 15:42:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mkgallery/mkgallery-1.1.ebuild,v 1.10 2005/08/05 03:59:28 tester Exp $
 
 DESCRIPTION="Creates thumbnails and a HTML index file for a directory of jpg files"
 HOMEPAGE="http://mkgallery.sourceforge.net/"
 SRC_URI="http://mkgallery.sourceforge.net/${P}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 SLOT="0"
 
