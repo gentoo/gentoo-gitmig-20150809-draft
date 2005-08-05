@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/detectindent
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/detectindent/ChangeLog,v 1.1 2005/08/05 21:27:27 ciaranm Exp $
+
+*detectindent-1.0 (05 Aug 2005)
+
+  05 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +detectindent-1.0.ebuild:
+  New package, bug #79003
+
