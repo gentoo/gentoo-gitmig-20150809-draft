@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/Apache-Gallery
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.10 2005/08/02 20:41:53 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.11 2005/08/05 11:19:44 rl03 Exp $
+
+  05 Aug 2005; Renat Lumpau <rl03@gentoo.org> +files/postinstall-en.txt:
+  Added missing postinstall-en.txt
 
 *Apache-Gallery-0.9.1 (02 Aug 2005)
 
