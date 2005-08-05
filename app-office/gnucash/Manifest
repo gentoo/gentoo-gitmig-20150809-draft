@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 75f62e708b6204d5d7819d0f61aa5dbe ChangeLog 10856
-MD5 cda4007bfba409e082e55b854576d97f files/digest-gnucash-1.8.10 138
-MD5 c9962cd943ec225b72ff0b1c8a40f84c files/digest-gnucash-1.8.11 138
+MD5 23042aa3d0798d7b5df9cdfbe9335ed1 ChangeLog 11082
+MD5 3c20dccad7b705d7e9a379e6831149f9 metadata.xml 252
+MD5 62c0823f30b3adcfc14258f393231dae gnucash-1.8.9.ebuild 3511
+MD5 a7bd58beb5a1fbd8c8386d678356fa0e gnucash-1.8.8.ebuild 3079
+MD5 34a666d3290564a5939c3a7474c9ad90 gnucash-1.8.11.ebuild 3559
 MD5 e7f62a929b825e039b0912ade52c5998 files/digest-gnucash-1.8.8 137
 MD5 401c4d468ff7625a2832b89fde8c4aa4 files/digest-gnucash-1.8.9 137
-MD5 91f473989224018bfcd0f0486e659bcd gnucash-1.8.10.ebuild 3555
-MD5 7ae8a54f2f86e3cb53d7d3e21e7fa829 gnucash-1.8.11.ebuild 3554
-MD5 9a06d59c205081b0a376ae24719bd5eb gnucash-1.8.8.ebuild 3074
-MD5 0447e6de8232e7581642504cdacd54cf gnucash-1.8.9.ebuild 3506
-MD5 3c20dccad7b705d7e9a379e6831149f9 metadata.xml 252
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1SDNI1lqEGTUzyQRAqMhAJwPBCAzGSnH8CW0e4txqEx4txVBVgCgoWdx
-4EtU5usFXs4zULXEOS+7UKs=
-=TbrI
------END PGP SIGNATURE-----
+MD5 c9962cd943ec225b72ff0b1c8a40f84c files/digest-gnucash-1.8.11 138

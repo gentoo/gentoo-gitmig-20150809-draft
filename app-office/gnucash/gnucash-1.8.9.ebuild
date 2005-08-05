@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.16 2005/07/13 14:09:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.17 2005/08/05 12:13:16 seemant Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -60,15 +60,15 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
-	if built_with_use x11-base/xorg-x11 bitmap-fonts
+	if built_with_use virtual/x11 bitmap-fonts
 	then
-		einfo "bitmap-fonts support is enabled in xorg-x11, continuing..."
+		einfo "bitmap-fonts support is enabled in virtual/x11, continuing..."
 	else
-		eerror "Please rebuild xorg-x11 with bitmap font support!"
-		eerror "To do so: USE=\"bitmap-fonts\" emerge xorg-x11"
+		eerror "Please rebuild virtual/x11 with bitmap font support!"
+		eerror "To do so: USE=\"bitmap-fonts\" emerge virtual/x11"
 		eerror "Or, add \"bitmap-fonts\" to your USE string in"
 		eerror "/etc/make.conf"
-		die "Will not build gnucash without bitmap-fonts support in xorg-x11"
+		die "Will not build gnucash without bitmap-fonts support in virtual/x11"
 	fi
 }
 
