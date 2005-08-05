@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ba5eebf90c041b78f5f7b38f2aa30b2 ChangeLog 2304
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 f7bc22b6085ca5d2020f9e5a8169920c kmilo-3.4.1.ebuild 491
-MD5 646080694855557e4795a67b0a07b75e kmilo-3.4.2.ebuild 661
+MD5 3ba5eebf90c041b78f5f7b38f2aa30b2 ChangeLog 2304
+MD5 2707b0b1f56b6a829381b8448659e818 kmilo-3.4.2.ebuild 752
 MD5 5d037ef26f37a68c80d8bf524a4ef444 files/configure-fix-kdeutils-powerbook.patch 949
-MD5 e29bbb2db20451106f7980c7008328fa files/digest-kmilo-3.4.1 212
 MD5 5ec470abb58c9e1fe99f0410cb14dffd files/digest-kmilo-3.4.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8irVcsIHjyDViGQRAjFrAJ9c/WWDfXoFIB/12J1TzZXmOQCK+wCgmoSo
-bzxwR/aZm6XlTspzBxIYd1M=
-=P8Ci
------END PGP SIGNATURE-----
+MD5 e29bbb2db20451106f7980c7008328fa files/digest-kmilo-3.4.1 212
