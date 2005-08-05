@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-202-r1.ebuild,v 1.2 2005/06/10 15:09:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-204.ebuild,v 1.1 2005/08/05 12:03:24 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,6 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}; cd ${S}
-#	epatch ${FILESDIR}/${PN}-no-toolbar-by-default.patch
 }
 
 src_compile() {
@@ -69,8 +68,8 @@ src_install() {
 	sed -i "s:blue2$:blue:" ${D}/etc/X11/app-defaults/XTerm-color
 
 	# Fix for bug #91453 at Thomas Dickey's suggestion:
-	echo "*allowWindowOps: 	false" > ${D}/etc/X11/app-defaults/XTerm
-	echo "*allowWindowOps: 	false" > ${D}/etc/X11/app-defaults/UXTerm
+	echo "*allowWindowOps: 	false" >> ${D}/etc/X11/app-defaults/XTerm
+	echo "*allowWindowOps: 	false" >> ${D}/etc/X11/app-defaults/UXTerm
 
 }
 

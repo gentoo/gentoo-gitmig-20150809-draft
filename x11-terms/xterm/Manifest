@@ -1,21 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 99f9752783bc8c4cc41c72ea1e465fec metadata.xml 294
-MD5 fbef9698628550a847dc76cd497738a9 xterm-202-r1.ebuild 2353
+MD5 b1b458b9df78a00731b363925f3a28d0 ChangeLog 14375
 MD5 735c1b014e14a4d459574885e621c443 xterm-200-r3.ebuild 2243
-MD5 8f9c099f3a13c95bf5eb36e814cf7e3a xterm-200-r1.ebuild 1903
-MD5 3a14369574d72edf7edd635c62a13190 xterm-202-r2.ebuild 2355
-MD5 041cffd1ebd525e7c6ed980613abc089 ChangeLog 14113
-MD5 7b7d35cfdf6b4601d1079f1aca757ab5 files/digest-xterm-200-r1 58
-MD5 5b73666ce15842c6f2bd6cc83e9dd9f2 files/digest-xterm-202-r1 58
-MD5 7b7d35cfdf6b4601d1079f1aca757ab5 files/digest-xterm-200-r3 58
+MD5 16e97392c2081f2d4b562b1d4e4b019e xterm-204.ebuild 2297
 MD5 201c212a3232d830f73261ea29e14f66 files/xterm-no-toolbar-by-default.patch 380
-MD5 5b73666ce15842c6f2bd6cc83e9dd9f2 files/digest-xterm-202-r2 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzHT8gIKl8Uu19MoRAlPXAJ0VuYUhvk66sQ8VIcEnWlEnuGTZDwCfRP67
-ouBhUt5/Ggc+g5z1cJJWlgs=
-=pmhf
------END PGP SIGNATURE-----
+MD5 7b7d35cfdf6b4601d1079f1aca757ab5 files/digest-xterm-200-r3 58
+MD5 8c7c791e44946002c03410f9a6e9fc69 files/digest-xterm-204 58

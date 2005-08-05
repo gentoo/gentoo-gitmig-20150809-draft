@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.94 2005/07/03 03:08:18 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.95 2005/08/05 12:03:24 seemant Exp $
+
+*xterm-204 (05 Aug 2005)
+
+  05 Aug 2005; Seemant Kulleen <seemant@gentoo.org> -xterm-200-r1.ebuild,
+  -xterm-202-r1.ebuild, -xterm-202-r2.ebuild, +xterm-204.ebuild:
+  version bump -- and this one actually works for me now, I'll unmask after a
+  few people test
 
   03 Jul 2005; Hardave Riar <hardave@gentoo.org> xterm-200-r3.ebuild:
   Stable on mips, bug #91453
