@@ -1,34 +1,25 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/libfpx-1.2.0.9.ebuild,v 1.17 2004/11/08 12:39:10 hardave Exp $
-
-MY_PN=libfpx
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/libfpx-1.2.0.9.ebuild,v 1.18 2005/08/05 01:08:37 vapier Exp $
 
 ### uncomment the right variables depending on if we have a patchlevel or not
-#MY_P=${MY_PN}-${PV%.*}-${PV#*.*.*.}
-#MY_P2=${MY_PN}-${PV%.*}
-MY_P=${MY_PN}-${PV}
-MY_P2=${MY_PN}-${PV}
+#MY_P=${PN}-${PV%.*}-${PV#*.*.*.}
+#MY_P2=${PN}-${PV%.*}
+MY_P=${PN}-${PV}
+MY_P2=${PN}-${PV}
 
-S=${WORKDIR}/${MY_P2}
 DESCRIPTION="A library for manipulating FlashPIX images"
+HOMEPAGE="http://www.i3a.org/"
 SRC_URI="ftp://ftp.imagemagick.org/pub/ImageMagick/delegates/${MY_P}.tar.bz2"
-HOMEPAGE=""
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc x86 sparc mips ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
-src_compile() {
-	econf \
-		--prefix=/usr \
-		 || die
-
-	emake || die "compile problem"
-}
+S=${WORKDIR}/${MY_P2}
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc doc/*
 }
