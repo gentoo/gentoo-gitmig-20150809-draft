@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.25 2005/04/24 11:54:56 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.26 2005/08/05 03:57:29 leonardop Exp $
+
+  04 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gnome-themes-extras-0.8.1.ebuild:
+  Stable on x86.
 
   24 Apr 2005; <plasmaroo@gentoo.org> gnome-themes-extras-0.8.0-r1.ebuild:
   Add ~ia64 keyword; bug #89292.
