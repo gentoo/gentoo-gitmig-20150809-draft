@@ -5,7 +5,7 @@ MD5 b0eacbb6edb031d87f33ed0b08f5916d metadata.xml 226
 MD5 0d0237e5ae0c9763cb910716bcbaf00f grub-0.96-r2.ebuild 4552
 MD5 49ae7636425891125ae6cb623a4d6570 grub-0.96-r1.ebuild 4699
 MD5 13da04f31e144cb6235533f9bc93fd98 grub-0.96-r3.ebuild 4533
-MD5 52b747f4b18ebbbf107c529237382dc8 grub-0.94-r1.ebuild 3640
+MD5 1eef54e9c246858e8998857f8ca77e22 grub-0.94-r1.ebuild 3519
 MD5 c8d30bf5c47b6d9cb935d2adb12a9ac9 grub-0.92-r1.ebuild 2629
 MD5 98a644fce6f7b8cf796fe6a79c527b6b ChangeLog 15313
 MD5 97d88870847fafcf5fe4162f6d273e74 files/digest-grub-0.96-r2 193
@@ -14,9 +14,9 @@ MD5 a098fd63c2d2748ecbbfe53aae07ed79 files/digest-grub-0.96-r1 193
 MD5 9b6b79b2fbed61b893a1333b4f0e62c6 files/digest-grub-0.96-r3 191
 MD5 5695c7ea410b6913901208938e05b1ad files/digest-grub-0.92-r1 190
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC8DWLgIKl8Uu19MoRArQHAJ93kJm+Pg16GN/FrTaX9wR6fB71hACeJGHd
-ec5x0joiIsPL6A5ddMMhlKc=
-=6eTa
+iD8DBQFC8tn0gIKl8Uu19MoRAhR5AJ9PyzhZ/PZLVo90jcz2CkbnISfolACfQDHK
+c9CVEwVRQQNJqS76IziaFVU=
+=pPpU
 -----END PGP SIGNATURE-----

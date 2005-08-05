@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.22 2005/07/28 17:53:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.23 2005/08/05 03:15:40 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -55,9 +55,6 @@ src_compile() {
 	append-flags -DNDEBUG
 	[ `gcc-major-version` -eq 3 ] && append-flags -minline-all-stringops
 	use static && append-ldflags -static
-
-	has_pie && CC="${CC} `test_flag -fno-pic` `test_flag -nopie`"
-	has_ssp && CC="${CC} `test_flag -fno-stack-protector`"
 
 	autoconf || die
 	aclocal || die
