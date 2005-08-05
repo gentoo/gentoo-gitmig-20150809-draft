@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.114 2005/07/21 20:39:27 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.115 2005/08/05 20:30:29 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -115,7 +115,6 @@ if [[ $(get_major_version ) -ge 7 ]] ; then
 		# align: bug 79982
 		RDEPEND="${RDEPEND}
 			!<app-vim/align-30-r1
-			!app-vim/latexsuite
 			!app-vim/vimspell
 			!<app-vim/vimbuddy-0.9.1-r1"
 	fi
