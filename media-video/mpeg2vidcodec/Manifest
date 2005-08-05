@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 0c92cd0ff7eeff2e0d0e31adfa7fa0d1 mpeg2vidcodec-12-r1.ebuild 753
+MD5 f0d7a51c9f190dd222c64b5a27f31f38 mpeg2vidcodec-12-r1.ebuild 777
 MD5 e7b5ca6fca7f8dcbb96bd134e8c6b336 ChangeLog 2162
 MD5 ddb2656db72efd82cb2053a7e1eca471 files/digest-mpeg2vidcodec-12-r1 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC8sPQgIKl8Uu19MoRAqeSAJ42MZTQMpWfWcs9JtjJKWMm9QnvXwCdHmke
-E7EetZ/I9dx3eTi0l/7+948=
-=8asa
+iD8DBQFC8sQsgIKl8Uu19MoRAv16AJ9UT63ggKiaH/ik6yrZRLEgrlS6xgCeKgK6
+4bV85ApJ40RwKHI+gc4CxXY=
+=r5ai
 -----END PGP SIGNATURE-----

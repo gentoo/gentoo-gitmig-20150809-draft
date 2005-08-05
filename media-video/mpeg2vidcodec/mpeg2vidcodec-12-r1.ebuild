@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/mpeg2vidcodec-12-r1.ebuild,v 1.25 2005/08/05 01:41:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/mpeg2vidcodec-12-r1.ebuild,v 1.26 2005/08/05 01:42:46 vapier Exp $
 
 MY_P="${PN}_v${PV}"
 DESCRIPTION="MPEG Library"
@@ -26,6 +26,7 @@ src_unpack() {
 }
 
 src_install() {
-	dobin src/mpeg2dec/mpeg2{de,en}code || die "dobin failed"
+	dobin src/mpeg2dec/mpeg2decode src/mpeg2enc/mpeg2encode \
+		|| die "dobin failed"
 	dodoc README doc/*
 }
