@@ -1,8 +1,7 @@
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
-MD5 1632bc9494ef6a6165f7e181e7107487 ChangeLog 33809
+MD5 a0b88f6ef9fa46b67133841e31589c72 ChangeLog 33969
 MD5 68b3132a56538a90b245f3a2fc6d74bf samba-3.0.14a-r2.ebuild 9135
 MD5 7b05dc99e54f0b8f7ac5e128f2090f87 samba-3.0.10.ebuild 16844
-MD5 ed947a290b6af6280e03368eb039e29c samba-3.0.14a-r3.ebuild 9601
 MD5 fa1dcd2c95a81c22c2ad68de6698a85e files/digest-samba-3.0.10 206
 MD5 def157a63ec14450df82373617c7dc4b files/samba-3.0.11-gcc4.patch 485
 MD5 519576a9448b86f1a7baab18204533a5 files/lmhosts 126
@@ -10,7 +9,6 @@ MD5 12df1953c039c5a93939497b0bc0ffba files/nsswitch.conf-winbind 403
 MD5 7ee5edc70bf80888c776f5808f865996 files/nsswitch.conf-wins 392
 MD5 0c0364e7f0bc4cc48d8f9b103e606a93 files/samba-2.2.8-statfs.patch 239
 MD5 d4e9a54f480d846b5b5ba84b4f29c17c files/digest-samba-3.0.14a-r2 216
-MD5 d4e9a54f480d846b5b5ba84b4f29c17c files/digest-samba-3.0.14a-r3 216
 MD5 b836e258befae9d6c66cb3f158769b25 files/samba-3.0.x-libdirsymlink.patch 592
 MD5 e75c2316eced1d80cb2161848581c6a3 files/samba-3.0.x-python-setup.patch 1094
 MD5 8ea7b443dd580aaaaf7e9e896eba54f2 files/samba-3.0.x-smbumount-uid32.patch 425

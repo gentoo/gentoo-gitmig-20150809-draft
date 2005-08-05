@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.190 2005/08/04 14:03:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.191 2005/08/05 14:07:24 seemant Exp $
+
+  05 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
+  -samba-3.0.14a-r3.ebuild:
+  removing -r3 -- the clamav thing was a bad idea.  See the aforementioned bug
 
 *samba-3.0.14a-r3 (04 Aug 2005)
 
