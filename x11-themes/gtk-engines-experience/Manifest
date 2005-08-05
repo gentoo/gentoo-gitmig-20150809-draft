@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 93943e7c2afb973d270b413a50e4a630 metadata.xml 473
 MD5 db55113abf93c8423a537ad5d0bb03ee gtk-engines-experience-0.9.7.ebuild 974
 MD5 a1a996149c685201e51e698b8326b29c ChangeLog 688
 MD5 029d054e95016b666897956880cb4e71 files/gtk-engines-experience-0.9.7-mem_fixes.patch 1358
 MD5 889c7d0375a68627c6dd09f68c755d25 files/digest-gtk-engines-experience-0.9.7 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC848LKRy60XGEcJIRAjJVAJ90j43d+mF7W5A4gj2vJAxxEnZzAQCfVCrf
+V+CaZbRUKlgPVhxRn/stHoc=
+=RIJe
+-----END PGP SIGNATURE-----
