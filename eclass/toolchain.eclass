@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.178 2005/08/05 02:15:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.179 2005/08/05 07:38:17 azarah Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1908,7 +1908,11 @@ should_we_gcc_config() {
 }
 
 do_gcc_config() {
-	should_we_gcc_config || return 0
+	if ! should_we_gcc_config ; then
+		# Just make sure all our LDPATH's are updated
+		gcc-config --use-old --force
+		return 0
+	fi
 
 	# the grep -v is in there to filter out informational messages >_<
 	local current_gcc_config=$(env -i gcc-config -c ${CTARGET} | grep -v ^\ )
