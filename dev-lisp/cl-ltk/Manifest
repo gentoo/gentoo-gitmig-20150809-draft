@@ -1,4 +1,16 @@
-MD5 f4d290b4eb03441938b04c7092ca9cb8 ChangeLog 1472
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 175e1f3bd3b928a344721b738400f175 ChangeLog 1612
+MD5 57f21ff97019ab30e9d207884ecd3845 cl-ltk-0.8.7.8.6.ebuild 864
 MD5 4823d84d7909aea0e09640e969ebdb90 cl-ltk-0.8.7.ebuild 788
 MD5 840a4c510509af0c3d005458d3cc9396 metadata.xml 982
+MD5 bded975fcf42c8837f6bb1058d5cb52e files/digest-cl-ltk-0.8.7.8.6 59
 MD5 e7cd9054732fc3aca193d6d8f6110b5d files/digest-cl-ltk-0.8.7 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC89MoyiNZaEAZA+ARAocsAJ9aNWm0HKLb92v9OsdNYf7xTd72VgCdHagU
+zHSbJuTKnmScQ34Gz2/Opxc=
+=uJGy
+-----END PGP SIGNATURE-----
