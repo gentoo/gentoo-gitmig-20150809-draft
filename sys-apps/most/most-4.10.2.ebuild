@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2.ebuild,v 1.2 2005/07/28 17:21:34 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2.ebuild,v 1.3 2005/08/05 12:37:58 ferdy Exp $
 
 inherit gnuconfig
 
@@ -14,7 +14,7 @@ IUSE=""
 # Note to arch maintainers: you'll need to add to src_install() for your
 # arch, since the app's Makefile does strange things with different
 # directories for each arch. -- ciaranm, 27 June 2004
-KEYWORDS="~amd64 ~mips ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc-macos ~sparc ~x86"
 
 DEPEND=">=sys-libs/slang-1.4.2
 	>=sys-libs/ncurses-5.2-r2"
@@ -51,6 +51,9 @@ src_install() {
 		ppc)
 			# This should also be the case of ppc-macos
 			objsdir=ppcobjs
+		;;
+		alpha)
+			objsdir=alphaobjs
 		;;
 	esac
 	dobin src/${objsdir:-objs}/most || die "Couldn't install binary"

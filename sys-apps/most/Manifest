@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 12b91322bbddea28cec980349b4d75fe most-4.10.2.ebuild 1489
-MD5 b541e9c2bf6aae671f3422c38df7c39b most-4.9.5.ebuild 1487
-MD5 9d17807077a730fc3c811e5c4e51086c most-4.9.2.ebuild 938
-MD5 954c2268502b376ca999de7f4ae0c133 ChangeLog 2432
+MD5 03c865c3d6101f13949ac8ca5bcaed24 most-4.10.2.ebuild 1529
+MD5 3e74aa2449c0ed32ba8d53f04c3fa831 most-4.9.5.ebuild 1527
+MD5 8e44bf156727af67aeeaa8344dc8f278 most-4.9.2.ebuild 935
+MD5 c5a1abdfde80a1b5528ba0e5d8effd42 ChangeLog 2595
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b5f584582bee28ce05fa5aaf8d0f5d8e most-4.9.4.ebuild 939
 MD5 a23dcc37cb7e0fb3d5fde35a36d9f270 files/digest-most-4.9.2 61
@@ -14,7 +14,7 @@ MD5 92687eb187b1e9a13f22c1d593123f14 files/digest-most-4.10.2 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6RQ2EZCkKN40op4RAm67AJ9aKh9/g77hbv78+9MRNXiC0JQkJACgr1cL
-D3zXq2vKo3AjmPmoCNWMyOs=
-=/5GC
+iD8DBQFC8149ViELBEf1JB0RAn0kAJoDoYe3pDC1vSPSom8ruORai7aRhQCaApY8
+N2PYlwYOlpUYhpvpW66MNpI=
+=XH9W
 -----END PGP SIGNATURE-----
