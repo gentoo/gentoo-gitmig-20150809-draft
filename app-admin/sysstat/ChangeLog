@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.37 2005/08/03 13:09:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.38 2005/08/05 12:57:44 ferdy Exp $
+
+  05 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  sysstat-5.0.5-r1.ebuild, sysstat-6.0.0.ebuild, sysstat-6.0.1.ebuild:
+  marked ~alpha, wrt bug #98561
 
   03 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> sysstat-5.0.5-r1.ebuild:
   Added ~mips to 5.0.5-r1. Leaving 6.0.x alone until I can investigate further

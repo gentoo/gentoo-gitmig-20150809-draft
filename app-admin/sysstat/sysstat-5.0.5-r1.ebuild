@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-5.0.5-r1.ebuild,v 1.10 2005/08/03 13:09:51 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-5.0.5-r1.ebuild,v 1.11 2005/08/05 12:57:44 ferdy Exp $
 
 DESCRIPTION="System performance tools for Linux"
 HOMEPAGE="http://perso.wanadoo.fr/sebastien.godard/"
@@ -8,7 +8,7 @@ SRC_URI="http://perso.wanadoo.fr/sebastien.godard/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="nls"
 
 DEPEND="virtual/libc"
