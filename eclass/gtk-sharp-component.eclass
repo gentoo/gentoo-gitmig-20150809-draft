@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.19 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.20 2005/08/05 01:54:07 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -12,6 +12,7 @@ LICENSE="LGPL-2"
 
 HOMEPAGE="http://gtk-sharp.sourceforge.net/"
 LICENSE="LGPL-2.1"
+RESTRICT="test"
 
 ( [ "${PV}" == "1.9.3.1" ] || [ "${PV}" == "1.9.5" ] || [ "${PV:0:1}" == "2" ] ) \
 	&& SOURCE_SERVER="http://www.go-mono.com/sources/gtk-sharp-2.0/"
