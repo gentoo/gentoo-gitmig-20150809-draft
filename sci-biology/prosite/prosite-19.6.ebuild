@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/prosite-19.6.ebuild,v 1.1 2005/07/28 02:05:02 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/prosite-19.6.ebuild,v 1.2 2005/08/06 19:03:21 ribosome Exp $
 
 DESCRIPTION="A protein families and domains database"
 HOMEPAGE="http://ca.expasy.org/prosite"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="swiss-prot"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ppc-macos ~ppc64"
+KEYWORDS="x86 ~ppc ~ppc-macos ~ppc64"
 IUSE="emboss minimal"
 # Minimal build keeps only the indexed files (if applicable) and the documentation.
 # The non-indexed database is not installed.
