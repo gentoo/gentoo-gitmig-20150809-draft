@@ -12,7 +12,7 @@
 +AC_CHECK_PROGS(AS, as, as)
 +AC_CHECK_PROGS(AS, gas, gas)
 +
-+test "$AS" = "as" && as --version | grep GNU >/dev/null && AS=gas
++test "$AS" = "as" && as -v -o /dev/null < /dev/null | grep GNU >/dev/null && AS=gas
 +
 +AM_CONDITIONAL(FLaC__HAS_AS, test "$AS" = "as" )
 +AM_CONDITIONAL(FLaC__HAS_GAS, test "$AS" = "gas" )
