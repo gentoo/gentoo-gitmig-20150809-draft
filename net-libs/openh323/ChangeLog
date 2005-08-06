@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.65 2005/07/27 10:36:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.66 2005/08/06 19:00:49 kloeri Exp $
+
+  06 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
+  openh323-1.13.2-r2.ebuild:
+  Stable on alpha.
 
   27 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>  openh323-1.15.2.ebuild, openh323-1.15.2-r1.ebuild, openh323-1.15.3.ebuild:
   Marked latest versions stable. Used in the Freescale DES. We're Altivec

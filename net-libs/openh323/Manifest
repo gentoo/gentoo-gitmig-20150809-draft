@@ -1,16 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c49b0da97598de05d784522606cba053 ChangeLog 10925
 MD5 5ae9f140fcd4525c88ee9239bd8772a6 metadata.xml 267
 MD5 0fe7f7f9988fabaa2763e35d351fd409 openh323-1.12.0-r1.ebuild 2820
 MD5 52d02159dd3a9eb5727220aa9c8fb417 openh323-1.12.2-r1.ebuild 3102
 MD5 9c59d13d7b06bc4d44c71723173b32c9 openh323-1.12.2-r2.ebuild 3720
 MD5 822d1f8b8e3353d2035fd6ea153f0f71 openh323-1.13.2-r1.ebuild 4098
-MD5 fd9eabb5af0e900cd67948bbc8b04d57 openh323-1.13.2-r2.ebuild 4155
+MD5 a94ddb1d91decd0a0787734fc1e27c9d openh323-1.13.2-r2.ebuild 4163
 MD5 5d90b3301f202500d8e9a8557114726c openh323-1.13.2.ebuild 3705
 MD5 29aa9329620d18452705fa542c6ebfba openh323-1.13.5-r1.ebuild 4188
 MD5 49e33f93bf612d5b48ea3da1d57dd711 openh323-1.13.5.ebuild 4157
 MD5 c37dead260b91dfc038ead49e10e2b7e openh323-1.15.2-r1.ebuild 4100
 MD5 a2b2ddc0266258a7ac712d0eb3a1efb1 openh323-1.15.2.ebuild 3943
 MD5 6629ee663a979089df00f62ca72ee855 openh323-1.15.3.ebuild 3974
-MD5 5fd7bb52787a456a07ba6dc0687effeb ChangeLog 10825
 MD5 238a3a0b91aabce0a61e0dd5c4b9ee68 files/digest-openh323-1.12.0-r1 68
 MD5 2efc1a39c75805caacb974bfa6208dea files/digest-openh323-1.12.2-r1 68
 MD5 2efc1a39c75805caacb974bfa6208dea files/digest-openh323-1.12.2-r2 68
@@ -33,3 +36,10 @@ MD5 2c75f68b5db8444726ae9342b8a02319 files/openh323-1.13.2-ixjuser.diff 285
 MD5 76afb2b1c9c9e4aa4414531ffdd812e9 files/openh323-1.13.5-ffmpeg.diff 1899
 MD5 d63db2246a246adf622afeefabbb1e9d files/openh323-1.13.5-include-order.diff 1027
 MD5 73a8df25ace2235307956d67acecb32d files/openh323-1.15.2-notrace.diff 801
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9Qj/Kf2g/qXtneoRAooIAJ9wf9feNL32uvCRk5WHWkCDki21CgCfd13W
+ybU6VpTnXriRREEjX4KIrUI=
+=PHQv
+-----END PGP SIGNATURE-----
