@@ -1,0 +1,19 @@
+--- vncserver.orig	2004-05-30 17:09:53.000000000 +0200
++++ vncserver	2004-06-19 14:01:21.386221926 +0200
+@@ -36,13 +36,13 @@
+ $geometry = "1024x768";
+ $depth = 24;
+ $desktopName = "X";
+-$vncClasses = "/usr/local/vnc/classes";
++$vncClasses = "/usr/share/tightvnc/classes";
+ $vncUserDir = "$ENV{HOME}/.vnc";
+-$fontPath = "unix/:7100";
++$fontPath = "unix/:-1";
+ $authType = "-rfbauth $vncUserDir/passwd";
+ 
+ # Here is another example of setting the font path:
+-# $fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
++$fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
+ 
+ # X colors database path is optional, uncomment and edit to use:
+ # $colorPath = "/usr/lib/X11/rgb";
