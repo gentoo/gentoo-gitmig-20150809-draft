@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/detox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.10 2005/07/30 15:47:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.11 2005/08/06 15:21:27 ciaranm Exp $
+
+  06 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org> detox-1.1.1-r1.ebuild:
+  Don't install .sample files into /etc
 
   30 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> detox-1.1.1-r1.ebuild:
   Stable on mips.

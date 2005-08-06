@@ -1,11 +1,21 @@
-MD5 66d5ada00136251bcfcf1f85b6849670 detox-1.1.0.ebuild 863
-MD5 c70ef203b471f5b4094ac3ca7c0c61a0 detox-1.1.1-r1.ebuild 836
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b540bef138b11f4192573345545f95f8 detox-1.1.1.ebuild 779
+MD5 66d5ada00136251bcfcf1f85b6849670 detox-1.1.0.ebuild 863
+MD5 eb859fa89aa0c9772342c1b05dddc9e1 detox-1.1.1-r1.ebuild 869
 MD5 59a60cdc8808a819079d812201932f0a metadata.xml 262
-MD5 7e46f31581013b63cad173e8ef33f550 ChangeLog 1599
-MD5 add7e896e354520ac846d697a60a06fc files/detox-1.1.0-destdir.patch 1041
+MD5 15e04b54efd7ac8f01aafc9facb9f5f9 ChangeLog 1715
 MD5 61eb83c84fbace15d61c315160ca0e5e files/detox-1.1.0-parallel_build.patch 564
-MD5 b3e822dc72f5d0721e6c570f0bf3fff8 files/detox-1.1.1-use-correct-type.diff 475
-MD5 1d0744431cb2efc1a65dd1e56b11d41c files/digest-detox-1.1.0 63
-MD5 4a6e35941158ffa59490cb244dd4327d files/digest-detox-1.1.1 63
+MD5 add7e896e354520ac846d697a60a06fc files/detox-1.1.0-destdir.patch 1041
 MD5 4a6e35941158ffa59490cb244dd4327d files/digest-detox-1.1.1-r1 63
+MD5 b3e822dc72f5d0721e6c570f0bf3fff8 files/detox-1.1.1-use-correct-type.diff 475
+MD5 4a6e35941158ffa59490cb244dd4327d files/digest-detox-1.1.1 63
+MD5 1d0744431cb2efc1a65dd1e56b11d41c files/digest-detox-1.1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC9NWBLLFUmVNQ7rkRAuzpAJsEB2WOnChbxZS0R4YCU2UB+iQB4QCfbOMO
+EtE9AW5eg8kzYP2q3WenyAE=
+=gilu
+-----END PGP SIGNATURE-----
