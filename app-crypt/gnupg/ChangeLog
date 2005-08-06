@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.124 2005/08/06 00:03:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.125 2005/08/06 03:50:07 dragonheart Exp $
+
+*gnupg-1.9.18 (06 Aug 2005)
+
+  06 Aug 2005; Daniel Black <dragonheart@gentoo.org> +gnupg-1.9.18.ebuild:
+  smartcard fix with bug #95938 and bug #67656. Version bump as per bug
+  #97710. Thanks to Felix Kurth, Stian Skjelstad, Rouslan Solomakhin, Michael
+  Helmling, Chris White, Benjamin Smee, David Somers and whoever else I
+  missed.
 
 *gnupg-1.4.2-r1 (05 Aug 2005)
 
