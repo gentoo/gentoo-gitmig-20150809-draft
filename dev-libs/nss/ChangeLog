@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.44 2005/04/25 09:36:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.45 2005/08/06 07:18:28 dragonheart Exp $
+
+  06 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/nss-3.8-amd64.patch, -files/nss-3.8-hppa.patch,
+  -files/nss-3.8-mips.patch, metadata.xml, -nss-3.8.ebuild,
+  -nss-3.9.2.ebuild:
+  remove old versions - fixes bug #61166. crypto herd maintaince too.
 
 *nss-3.9.2-r3 (25 Apr 2005)
 

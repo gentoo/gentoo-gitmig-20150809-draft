@@ -1,26 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 71d1c738c99b927ab27d35b4f765c72d nss-3.8.ebuild 2605
-MD5 9c67937af0825aaf6682ae1e73e64735 ChangeLog 5119
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 ce0895de1cbdb062720ab2d65b0724f7 nss-3.9.2.ebuild 2227
+MD5 6bcae02650491a8e27a7c7dcf0f7362f ChangeLog 5386
+MD5 5a175354c5a11c16ce7018948acc98be metadata.xml 218
 MD5 80437a059e77f1ec174f0985632dab5a nss-3.9.2-r2.ebuild 3263
 MD5 70c12077b7e7383d38606366f23b041f nss-3.9.2-r3.ebuild 3324
-MD5 ef044b71f9a324137ddae80c970ea246 files/nss-3.8-hppa.patch 4758
-MD5 80da1f67cfbd587017f411109c5ca57b files/digest-nss-3.8 60
-MD5 c0b014e0fdabd7754008a3112553be18 files/nss-3.8-mips.patch 689
-MD5 d5948dfd93b61198742855ec3d2a254d files/nss-3.8-amd64.patch 8306
-MD5 5b40cac4fbb267e83bdf04c269a7c665 files/digest-nss-3.9.2 62
 MD5 31208c12f404d120fb880b0e8300c175 files/nss-3.9.2-ppc64.patch 526
 MD5 5b40cac4fbb267e83bdf04c269a7c665 files/digest-nss-3.9.2-r2 62
 MD5 8e9778b27c44abf6fb4319b7f5289b21 files/nss-3.9.2-mips64.patch 508
-MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/nss-3.9.2-gcc4.patch 1818
 MD5 5b40cac4fbb267e83bdf04c269a7c665 files/digest-nss-3.9.2-r3 62
+MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/nss-3.9.2-gcc4.patch 1818
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCbLtG1ZcsMnZjRyIRApeHAKCZcgynbARstc8Bh/hLK9bN8l3pQgCfaa2e
-ignVcRGRCDVGzyX6/R7qx64=
-=h/42
+iD8DBQFC9GRYmdTrptrqvGERAi35AJ0S2ULE/FCrW+H4EnMIQxbicki1SACcCKLw
+XFXL4SPiFDZ1wjWi0uceawo=
+=T5Y4
 -----END PGP SIGNATURE-----
