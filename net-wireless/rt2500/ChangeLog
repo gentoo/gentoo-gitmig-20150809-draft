@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rt2500
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.16 2005/08/05 16:53:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.17 2005/08/06 16:52:49 genstef Exp $
+
+  06 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
+  rt2500-1.1.0_beta3.ebuild:
+  Remove !4kstacks check thanks to radek in irc
 
 *rt2500-1.1.0_beta3 (05 Aug 2005)
 
@@ -86,7 +90,7 @@
 
   24 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +rt2500-1.1.0_beta1.ebuild:
-  New ebuild thanks to Stephan Diederich <S.Diederich@gmx.de>, aurélien
+  New ebuild thanks to Stephan Diederich <S.Diederich@gmx.de>, aurÃ©lien
   francillon <aurelien.francillon@libertysurf.fr>, Alexander M. Turek
   <me@derrabus.de>, Michael Panhorst <Michael@untiefe.de>, Harold Aling
   <h.aling@home.nl> and many others in bug 58483
