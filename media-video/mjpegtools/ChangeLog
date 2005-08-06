@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.94 2005/07/28 09:10:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.95 2005/08/06 06:07:39 cardoe Exp $
+
+  06 Aug 2005; Doug Goldstein <cardoe@gentoo.org>
+  -mjpegtools-1.6.2-r3.ebuild:
+  remove old version that had some old stuff that was making the reporter 
+  of bug #100974 angry
 
   28 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
   mjpegtools-1.6.2-r3.ebuild, mjpegtools-1.6.2-r4.ebuild:
