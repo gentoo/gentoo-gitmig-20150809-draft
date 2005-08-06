@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.173 2005/08/05 10:50:18 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.174 2005/08/06 19:43:33 flameeyes Exp $
+
+*kdegraphics-3.4.2-r2 (06 Aug 2005)
+
+  06 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdegraphics-3.4.2-kpdf-contentcrash.patch,
+  +kdegraphics-3.4.2-r2.ebuild:
+  Added patch to fix crashes while expanding content tree. Closes bug #101558.
 
 *kdegraphics-3.4.1-r1 (03 Aug 2005)
 *kdegraphics-3.3.2-r3 (03 Aug 2005)

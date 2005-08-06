@@ -1,0 +1,17 @@
+diff -ur kdegraphics-3.4.2/kpdf/ui/toc.cpp kdegraphics-3.4.2-contentcrash/kpdf/ui/toc.cpp
+--- kdegraphics-3.4.2/kpdf/ui/toc.cpp	2005-07-20 12:00:37.000000000 +0200
++++ kdegraphics-3.4.2-contentcrash/kpdf/ui/toc.cpp	2005-08-06 21:17:27.000000000 +0200
+@@ -121,7 +121,12 @@
+ 
+ void TOC::slotExecuted( QListViewItem *i )
+ {
+-    const QDomElement & e = static_cast< TOCItem* >( i )->element();
++    TOCItem* tocItem = dynamic_cast<TOCItem*>( i ); 
++    // that filters clicks on [+] that for a strange reason don't seem to be TOCItem* 
++    if (tocItem == NULL) 
++        return; 
++    const QDomElement & e = tocItem->element(); 
++     
+     QString externalFileName = e.attribute( "ExternalFileName" );
+     if ( !externalFileName.isEmpty() )
+     {
