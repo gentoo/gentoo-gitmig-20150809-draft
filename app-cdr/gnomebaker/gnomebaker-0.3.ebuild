@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.3.ebuild,v 1.4 2005/06/17 11:12:25 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.3.ebuild,v 1.5 2005/08/06 16:17:38 swegener Exp $
 
-inherit eutils gnome2 flag-o-matic
+inherit gnome2
 
 DESCRIPTION="GnomeBaker is a GTK2-based CD/DVD burning application."
 HOMEPAGE="http://gnomebaker.sf.net"
