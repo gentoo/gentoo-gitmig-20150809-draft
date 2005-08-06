@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.29 2005/08/03 19:03:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.30 2005/08/06 16:15:17 ka0ttic Exp $
+
+  06 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> -chkrootkit-0.43-r3.ebuild,
+  -chkrootkit-0.43-r4.ebuild, -chkrootkit-0.44.ebuild,
+  chkrootkit-0.44-r1.ebuild, chkrootkit-0.45.ebuild:
+  Added ~mips for bug 88425.  Tidy old ebuilds.
 
   03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> chkrootkit-0.45.ebuild:
   Stable on alpha.
