@@ -1,0 +1,28 @@
+Update gcc syntax.
+
+Patch by Yannick Heneault.
+
+http://bugs.gentoo.org/99474
+
+--- common/general/circular_iterator.h
++++ common/general/circular_iterator.h
+@@ -137,7 +137,7 @@
+ inline circular_iterator<It>& circular_iterator<It>::operator += ( circular_iterator<It>::difference_type n )
+ {
+ 	n %= last - first; // put it in range
+-	circular_iterator::difference_type d = last - cur;
++	typename circular_iterator::difference_type d = last - cur;
+ 	if ( d > n ) {
+ 		cur += n;
+ 		return *this;
+--- common/network/message.h
++++ common/network/message.h
+@@ -129,7 +129,7 @@
+ }
+ 
+ template <typename T>
+-inline const T Message::arg( size_t idx ) const
++inline const T Message::arg( unsigned idx ) const
+ {
+ 	QString rep = arg( idx );
+ 	return to<T>( rep );
