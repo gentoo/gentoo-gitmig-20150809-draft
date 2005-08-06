@@ -1,16 +1,26 @@
-MD5 ca6d834ad8775a9f71c0f206ce4b8a0d libsoup-2.2.3-r1.ebuild 758
-MD5 b85e689ae1865138ae9ff41428dfc77b libsoup-2.2.1.ebuild 815
-MD5 89428354354ead79d37795ca8c257e63 libsoup-2.2.3.ebuild 724
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9dc53ea9f218944e9106433f7a278399 ChangeLog 8379
 MD5 0ffa00e57cc842e0c26f596d56daee27 libsoup-1.99.28-r1.ebuild 1451
-MD5 532b43fa1bc3244285ca54425f168ef5 ChangeLog 8279
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ab2763b9426be6cf518c6febf807aca3 libsoup-1.99.28.ebuild 1380
-MD5 09a0c3f27613d90ffeb8abb875598ace files/libsoup-1.99.26-with_ssl.patch 2861
-MD5 ef781f10152707123d5acdcca14603f5 files/digest-libsoup-2.2.3-r1 66
-MD5 dc791ddf4cb75ab5325eea016e52e09b files/libsoup-1.99.28-gnutls.patch 1275
+MD5 b85e689ae1865138ae9ff41428dfc77b libsoup-2.2.1.ebuild 815
+MD5 c88fee7b28c72a4be40d6feb34a24efc libsoup-2.2.3-r1.ebuild 756
+MD5 89428354354ead79d37795ca8c257e63 libsoup-2.2.3.ebuild 724
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28 68
+MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28-r1 68
 MD5 5ba8cbd6308ea46629bb3e6ef7232c4a files/digest-libsoup-2.2.1 66
 MD5 ef781f10152707123d5acdcca14603f5 files/digest-libsoup-2.2.3 66
-MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28-r1 68
-MD5 8236edc0e5949f46d2a27e747c310889 files/libsoup-2.2.2-gnutls.patch 336
+MD5 ef781f10152707123d5acdcca14603f5 files/digest-libsoup-2.2.3-r1 66
 MD5 6128cc7bbf088e07b4040e8296a7c57b files/libsoup-1.99.26-msn.patch 627
-MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28 68
+MD5 09a0c3f27613d90ffeb8abb875598ace files/libsoup-1.99.26-with_ssl.patch 2861
+MD5 dc791ddf4cb75ab5325eea016e52e09b files/libsoup-1.99.28-gnutls.patch 1275
+MD5 8236edc0e5949f46d2a27e747c310889 files/libsoup-2.2.2-gnutls.patch 336
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9QR4Kf2g/qXtneoRAs8MAJ0edej47pPdQy9xkcR/EvzpCakN/QCgpzuC
+IP/K8uyexvr5LuBZ0sExZLw=
+=hGI7
+-----END PGP SIGNATURE-----
