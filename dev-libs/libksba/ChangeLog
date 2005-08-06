@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.27 2005/07/31 14:56:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.28 2005/08/06 02:28:49 dragonheart Exp $
+
+*libksba-0.9.12 (06 Aug 2005)
+
+  06 Aug 2005; Daniel Black <dragonheart@gentoo.org> libksba-0.4.7.ebuild,
+  -libksba-0.9.4.ebuild, libksba-0.9.6.ebuild, libksba-0.9.8.ebuild,
+  libksba-0.9.11.ebuild, +libksba-0.9.12.ebuild:
+  version bump. x86 stable on 0.9.11. readded dropped ppc-macos keyword.
+  changed to mirror://gnupg for previous versions
 
   31 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> libksba-0.9.11.ebuild:
   Added ~mips for bug 79171.
