@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.ebuild,v 1.3 2005/07/27 11:10:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.ebuild,v 1.4 2005/08/06 12:02:19 zzam Exp $
 
 inherit eutils
 
@@ -14,7 +14,10 @@ KEYWORDS="~alpha ~amd64 ~ia64 ppc ~x86"
 IUSE="doc"
 
 DEPEND=">=sys-apps/sed-4
-	>=media-tv/linuxtv-dvb-1.1.1"
+	|| (
+		>=sys-kernel/linux-headers-2.6.11-r2
+		media-tv/linuxtv-dvb
+	)"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
