@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/nucleo-0.1-r1.ebuild,v 1.5 2005/02/10 08:39:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/nucleo-0.1-r1.ebuild,v 1.6 2005/08/06 16:45:37 swegener Exp $
 
 IUSE=""
 
@@ -20,12 +20,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc"
 
-src_compile() {
-	econf || die "configure failed"
-	emake || die "make failed"
-}
-
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README ChangeLog AUTHORS NEWS
 }

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ea22e4607ce4a76279a80317008a733c ChangeLog 1669
 MD5 62ea22d5eff98ff9d6070953441b6b1e files/digest-nucleo-0.1-r1 72
 MD5 fd28d1ef9fa7838bd45810e67b06b92a files/digest-nucleo-0.1_p20041130 72
@@ -7,3 +10,10 @@ MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
 MD5 54af3bf36e34a79f2fa4320811df0e83 nucleo-0.1-r1.ebuild 680
 MD5 f41495a525b64bd97a2e702b9adf8040 nucleo-0.1_p20041130.ebuild 810
 MD5 602ddcdbb1cb56ef3f58226ebb389a65 nucleo-0.1_p20041216.ebuild 810
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9OlLI1lqEGTUzyQRAudoAKCjws6FEyBniKQ+ZYonwVhoMPnC9gCeIiat
+EOhDY26VFdgBTGitlmoaL4M=
+=sOmz
+-----END PGP SIGNATURE-----

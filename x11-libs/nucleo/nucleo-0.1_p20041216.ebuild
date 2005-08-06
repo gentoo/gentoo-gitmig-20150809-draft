@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/nucleo-0.1_p20041216.ebuild,v 1.3 2005/04/23 00:36:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/nucleo-0.1_p20041216.ebuild,v 1.4 2005/08/06 16:45:37 swegener Exp $
 
 inherit eutils
 
@@ -24,16 +24,11 @@ S="${WORKDIR}/${P/_p*/}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/nucleo/gl/texture
-	epatch ${FILESDIR}/${P/_p*/}-nv.patch
-}
-
-src_compile() {
-	econf || die "configure failed"
-	emake || die "make failed"
+	cd "${S}"/nucleo/gl/texture
+	epatch "${FILESDIR}"/${P/_p*/}-nv.patch
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README ChangeLog AUTHORS NEWS
 }
