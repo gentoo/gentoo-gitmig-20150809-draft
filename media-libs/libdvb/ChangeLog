@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libdvb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.13 2005/07/27 11:10:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.14 2005/08/06 11:25:35 zzam Exp $
+
+*libdvb-0.5.5.1 (06 Aug 2005)
+
+  06 Aug 2005; Matthias Schwarzott <zzam@gentoo.org>
+  +files/libdvb-0.5.5.1-gentoo.patch, +libdvb-0.5.5.1.ebuild:
+  Version bump (Thanks to Christoph Brill <egore@gmx.de>, bug #88163).
+  Removed errno-patch, it is now included in upstream.
+  Changed dependency according to bug #98672 comment #4.
 
   27 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
   libdvb-0.5.0-r1.ebuild, libdvb-0.5.5.ebuild:
