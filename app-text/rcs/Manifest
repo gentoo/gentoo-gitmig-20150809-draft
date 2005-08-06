@@ -1,7 +1,17 @@
-MD5 970b16b9cda8a0e7321cca6f173ae464 ChangeLog 2677
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 775f3878eb659ebcd322e7e1356537d3 ChangeLog 2775
 MD5 835ac029b05061adecaac54e2efeae44 metadata.xml 524
 MD5 6d0769b4958bc3213e85126561bc9515 rcs-5.7-r2.ebuild 914
-MD5 2a5c89e96a2fb87a48a8dac72ba605fb rcs-5.7-r3.ebuild 964
+MD5 c1bf22476797cede550eb3e171328dc9 rcs-5.7-r3.ebuild 970
+MD5 aed02535acf1922a9fac6a225508e47c files/conf.diff 591
 MD5 548c484ca9438cdadb3ca5101805f15f files/digest-rcs-5.7-r2 59
 MD5 15742538c19961dd6cec0d5441715fd3 files/digest-rcs-5.7-r3 126
-MD5 aed02535acf1922a9fac6a225508e47c files/conf.diff 591
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC9UFQEZCkKN40op4RArDGAJ9fo62Dv1Ovj9l9SxPfTHpz+lf8BgCgmEP3
+6AyaP/OcbMrRYNKWxKBx/Io=
+=Fa3a
+-----END PGP SIGNATURE-----

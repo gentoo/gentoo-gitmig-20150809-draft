@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rcs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.18 2005/03/30 14:55:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.19 2005/08/06 19:41:24 ka0ttic Exp $
+
+  06 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> rcs-5.7-r3.ebuild:
+  Added ~mips for bug 87904.
 
 *rcs-5.7-r3 (30 Mar 2005)
 
