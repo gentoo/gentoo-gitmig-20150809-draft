@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.36 2005/07/29 23:36:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.37 2005/08/06 16:28:37 ferdy Exp $
+
+  06 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> -maildrop-1.8.1.ebuild,
+  maildrop-1.8.1-r1.ebuild:
+  Block mail-mta/courier (as per bug #99253). Also remove
+  maildrop-1.8.1.ebuild, not usable
 
 *maildrop-1.8.1-r1 (29 Jul 2005)
 

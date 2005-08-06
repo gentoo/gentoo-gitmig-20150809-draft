@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.1-r1.ebuild,v 1.1 2005/07/29 23:36:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.1-r1.ebuild,v 1.2 2005/08/06 16:28:37 ferdy Exp $
 
 inherit eutils gnuconfig
 
@@ -23,7 +23,8 @@ DEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	!gdbm? ( berkdb? ( >=sys-libs/db-3 ) )
 	mysql? ( net-libs/courier-authlib )
 	postgres? ( net-libs/courier-authlib )
-	ldap? ( net-libs/courier-authlib )"
+	ldap? ( net-libs/courier-authlib )
+	!mail-mta/courier"
 
 RDEPEND="${DEPEND}
 	dev-lang/perl"
