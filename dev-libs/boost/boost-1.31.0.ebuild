@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0.ebuild,v 1.11 2005/03/03 11:31:44 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0.ebuild,v 1.12 2005/08/06 04:02:35 ka0ttic Exp $
 
 MyPV=${PV//./_}
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${MyPV}.tar.bz2"
 S=${WORKDIR}/${PN}_${MyPV}
 
 LICENSE="freedist"
-KEYWORDS="x86 ppc amd64 sparc ppc64"
+KEYWORDS="amd64 ~mips ppc ppc64 sparc x86"
 SLOT="1"
 IUSE="icc"
 
