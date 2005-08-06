@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.7.4-r2.ebuild,v 1.1 2005/08/06 03:17:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.7.4-r2.ebuild,v 1.2 2005/08/06 03:21:31 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ipp2p.org/downloads/${P}.tar.gz"
 
 SLOT="${KV}"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 RDEPEND="virtual/modutils
 	 >=net-firewall/iptables-1.2.11"
