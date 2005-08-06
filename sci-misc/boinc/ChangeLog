@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.4 2005/07/22 10:12:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.5 2005/08/06 11:53:21 hansmi Exp $
+
+  06 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> boinc-4.32.ebuild:
+  Added to ~sparc.
 
   22 Jul 2005; Michael Hanselmann <hansmi@gentoo.org> boinc-4.32.ebuild:
   Added to ~ppc.
