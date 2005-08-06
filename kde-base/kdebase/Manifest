@@ -1,4 +1,4 @@
-MD5 8bec4f169b622806e20ff7315efcf7b4 ChangeLog 37305
+MD5 c7b14157ece267484a6f45c1a2767526 ChangeLog 37578
 MD5 771fb9eceec5b0d9c5bae83af47b7882 kdebase-3.2.3-r3.ebuild 3476
 MD5 3e5f9d9151b0e949e220754c4466d29c kdebase-3.3.2-r1.ebuild 3843
 MD5 9ea970c24377c122bfd0d1024d1aed0e kdebase-3.3.2-r2.ebuild 3627
@@ -6,7 +6,7 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1f3aef542247b809fc2b1e96925b7ad2 kdebase-3.4.1-r1.ebuild 3882
 MD5 acf208f77b0607c97763d9f91cb8da35 kdebase-3.3.2-r3.ebuild 3751
 MD5 d97f07ad36c0135703d7d85d89fe8785 kdebase-3.4.2.ebuild 4086
-MD5 9cefb5496cab51c82bd843b4b9ef8e40 kdebase-3.4.2-r1.ebuild 4216
+MD5 23b40c617edadacd8cbd163054f3960d kdebase-3.4.2-r1.ebuild 4220
 MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320
 MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
 MD5 daa284d6a1f62c5c73deb8aeda9df57d files/digest-kdebase-3.2.3-r3 68
