@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4259 2005/08/05 19:12:11 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4260 2005/08/06 11:39:53 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -42,7 +42,7 @@ dev-util/pida
 # I am masking this package for testing.  Please test this and report any
 # bugs with the actual package to https://bugzilla.icculus.org or via email
 # to icculus@icculus.org
-=games-fps/ut2004-3335-r2
+=games-fps/ut2004-3355-r2
 
 # Jeremy Huddleston <eradicator@gentoo.org> (02 Aug 2005)
 # Ebuild still in progress.  Still needs to install the shader library
