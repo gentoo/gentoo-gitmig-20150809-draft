@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.16.ebuild,v 1.5 2005/08/06 05:31:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.16.ebuild,v 1.6 2005/08/06 05:34:19 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,6 +45,7 @@ src_compile() {
 		--enable-agent-only \
 		$(use_with caps capabilities) \
 		$(use_enable threads) \
+		$(use_enable nls) \
 		|| die
 	emake || die
 }
