@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.7.4-r1.ebuild,v 1.2 2005/06/25 11:34:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.0_rc3.ebuild,v 1.1 2005/08/06 03:17:54 eradicator Exp $
 
 IUSE=""
 
@@ -36,9 +36,11 @@ src_unpack() {
 }
 
 src_compile() {
+	emake CFLAGS="${CFLAGS}" libipt_ipp2p.so || die "Failed to build iptables module"
+
 	xarch="${ARCH}"
 	unset ARCH
-	emake KERNEL_SRC="${KV_DIR}" CFLAGS="${CFLAGS}" IPTABLES_SRC="${ROOT}/usr" IPTABLES_VERSION="$(${ROOT}/sbin/iptables --version | cut -f2 -dv)" IPTABLES_BIN="${ROOT}/sbin/iptables" || die "Parallel Make Failed"
+	emake KERNEL_SRC="${KV_DIR}" IPTABLES_SRC="${ROOT}/usr" IPTABLES_VERSION="$(${ROOT}/sbin/iptables --version | cut -f2 -dv)" IPTABLES_BIN="${ROOT}/sbin/iptables" || die "Failed to build kernel modle."
 	ARCH="${xarch}"
 }
 

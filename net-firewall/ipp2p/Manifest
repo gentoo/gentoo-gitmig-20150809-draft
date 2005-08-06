@@ -1,7 +1,19 @@
-MD5 22fb37e12f1911627010f3eaf84403ad ChangeLog 1805
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5b3e6cdc5637347e707a75b12608f2cf ChangeLog 2073
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
 MD5 3189d79995aa9e51c7b68f9279b851e8 ipp2p-0.7.1-r1.ebuild 1134
-MD5 abfaaa48d1f4383bb66012642b6c9fb1 ipp2p-0.7.4-r1.ebuild 1273
-MD5 ab7e8116b2ec2c738835b5facdfbf3d3 files/ipp2p-0.7-Makefile.patch 1069
+MD5 2629b1e6300fda91043b0e8cf26637dd ipp2p-0.8.0_rc3.ebuild 1353
+MD5 5518dad25c1ded368e4b2c0025ea3f1e ipp2p-0.7.4-r2.ebuild 1352
 MD5 09c45d9dd51a824d5f46627efc141020 files/digest-ipp2p-0.7.1-r1 62
-MD5 365ee13da4034ff82a0b8abd6055f9cc files/digest-ipp2p-0.7.4-r1 62
+MD5 365ee13da4034ff82a0b8abd6055f9cc files/digest-ipp2p-0.7.4-r2 62
+MD5 a282b5a7786f803a6d63f41ee34251e2 files/digest-ipp2p-0.8.0_rc3 66
+MD5 ab7e8116b2ec2c738835b5facdfbf3d3 files/ipp2p-0.7-Makefile.patch 1069
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9Cw8ArHZZzCEUG0RAvNQAJ9RDwlvhN0pXdTBj8D8/3Mx1z/bdQCePQ/L
+Bycu6jhhwftDsCXMnZqteHQ=
+=PKuz
+-----END PGP SIGNATURE-----
