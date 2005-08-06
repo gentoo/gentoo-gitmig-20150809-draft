@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.7.1-r1.ebuild,v 1.1 2005/08/06 15:41:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.7.1-r1.ebuild,v 1.2 2005/08/06 16:54:55 swegener Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -86,8 +86,8 @@ src_compile() {
 	filter-flags -fpie -fstack-protector
 
 	myconf=""
-	if ! use sdl ; then 
-		myconf="$myconf --disable-gfx-check" 
+	if ! use sdl ; then
+		myconf="$myconf --disable-gfx-check"
 	fi
 	set_target_list
 #		--interp-prefix=${RUNTIME_PATH}/qemu-%M
