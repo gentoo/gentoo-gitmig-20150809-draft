@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5feb0644a6ce4a54941772a9476c3fec gpg-agent-1.9.15.ebuild 2083
-MD5 e50c2b3ec08264087b967c3cad062bb2 gpg-agent-1.9.14.ebuild 2129
-MD5 eafb2a11a7774eade0a61ceb41c91e1c gpg-agent-1.9.16.ebuild 2228
-MD5 56109e5b0b4e406a3ba8e37a4065d354 ChangeLog 1663
+MD5 2982126a4e3f849166f7f9a31f2bb95d ChangeLog 1891
 MD5 cbb90c3fb885f86a1c6bea0f4493f9ab metadata.xml 250
-MD5 337c9671ff169f922ba7d007a3ceaae6 files/digest-gpg-agent-1.9.14 66
-MD5 e62b7134c5c0c1b3aad6a08bfdf99b48 files/digest-gpg-agent-1.9.15 66
+MD5 ff93508de1ff781c60ff6c8eb7cdc2a9 gpg-agent-1.9.18.ebuild 1932
+MD5 911dfe1cb9f419629bc33edb838589a1 gpg-agent-1.9.16.ebuild 2071
+MD5 7247c8f0379977f0a3dd13568bf283c7 files/digest-gpg-agent-1.9.18 66
 MD5 8c4a537dc8228a95208b0e227c93ed7d files/digest-gpg-agent-1.9.16 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC7OdJEZCkKN40op4RAuUZAKCy/NZuCU4fv2AbDTI3y4uamaIQAQCgiATM
-GPtycACUb2OfMqP51LSrJaE=
-=bAfu
+iD8DBQFC9EssmdTrptrqvGERApXKAJ0fpY7NWGMeFHM/1yLuHWIdOEGt0QCfY4KU
+qLlAJEFt2TkgFMxJSxzoApM=
+=W3zz
 -----END PGP SIGNATURE-----

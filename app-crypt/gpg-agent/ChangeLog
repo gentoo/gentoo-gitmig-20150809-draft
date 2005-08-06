@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gpg-agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.9 2005/07/31 14:58:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.10 2005/08/06 05:31:05 dragonheart Exp $
+
+*gpg-agent-1.9.18 (06 Aug 2005)
+
+  06 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  -gpg-agent-1.9.14.ebuild, -gpg-agent-1.9.15.ebuild,
+  gpg-agent-1.9.16.ebuild, +gpg-agent-1.9.18.ebuild:
+  version bump and cleanout.
 
   31 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> gpg-agent-1.9.16.ebuild:
   Added ~mips.

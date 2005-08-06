@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.14.ebuild,v 1.4 2005/07/09 19:34:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.18.ebuild,v 1.1 2005/08/06 05:31:05 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,68 +10,59 @@ S=${WORKDIR}/${GPG_P}
 
 DESCRIPTION="The GNU Privacy Guard Agent"
 HOMEPAGE="http://www.gnupg.org/"
-SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${GPG_P}.tar.bz2"
+SRC_URI="mirror://gnupg/alpha/gnupg/${GPG_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
-# ~arm ~ia64 ~mips ~s390 ~sparce missing until libassuan gets the keywords
-# ~alpha missing for dev-libs/libksba-0.9.7
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 
-IUSE="nls caps threads"
+IUSE="caps nls smartcard"
 
 RDEPEND="app-crypt/gnupg
 	nls? ( sys-devel/gettext )
-	virtual/libc
-	>=dev-libs/libassuan-0.6.9
+	>=dev-libs/libassuan-0.6.10
 	caps? ( sys-libs/libcap )
-	>=dev-libs/libgpg-error-0.7
+	>=dev-libs/libgpg-error-1.0
 	>=dev-libs/libgcrypt-1.1.94
-	>=dev-libs/libksba-0.9.7
-	threads? ( dev-libs/pth )"
-
+	>=dev-libs/libksba-0.9.12
+	smartcard? ( >=dev-libs/opensc-0.8.0 )
+	>=dev-libs/pth-1.3.7"
 DEPEND="${RDEPEND}
-	dev-lang/perl
-	sys-apps/sed"
-
-src_unpack() {
-	unpack ${A}
-	sed -e 's:GNUPG_LIBEXECDIR:"/usr/lib/gnupg":' -i ${S}/g10/keyserver.c
-}
+	dev-lang/perl"
 
 src_compile() {
+	# We install +s only if USE=-caps and not OS X
 
-	append-ldflags -Wl,-z,now
+	if ! use ppc-macos && ! use caps
+	then
+		append-ldflags '-Wl,-z,now'
+	fi
 	econf \
-		--libexecdir=/usr/lib \
 		--enable-agent-only \
-		`use_with caps capabilities` \
-		`use_enable threads` \
+		--disable-scdaemon \
+		--disable-gpgsm \
+		--enable-symcryptrun \
+		$(use_enable nls) \
+		$(use_with caps capabilities) \
 		|| die
-
 	emake || die
 }
 
 src_test() {
-	einfo "self test is broken"
+	ewarn "self test is broken"
 }
 
 src_install() {
-	cd ${S}
-	emake DESTDIR=${D} libexecdir="/usr/lib/gnupg" install || die
-
-	# keep the documentation in /usr/share/doc/...
-	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
+	make DESTDIR="${D}" install || die
 
 	dodoc README
 
 	if ! use caps ; then
-		fperms u+s /usr/bin/gpg-agent
+		fperms u+s,go-r /usr/bin/gpg-agent
 	fi
 }
 
 pkg_postinst() {
-
 	ewarn "** WARNING ** WARNING ** WARNING ** WARNING ** WARNING ** WARNING **"
 	ewarn " THIS IS _ALPHA_ CODE, IT MAY NOT WORK CORRECTLY OR AT ALL. THERE"
 	ewarn " MAY BE UNDISCOVERED SECURITY OR DATA-LOSS ISSUES, DO NOT USE"
