@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.70 2005/07/28 08:15:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.71 2005/08/06 21:59:48 ka0ttic Exp $
+
+  06 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> libol-0.3.16.ebuild:
+  Stable on mips.
 
   28 Jul 2005; Simon Stelling <blubb@gentoo.org> libol-0.3.16.ebuild:
   stable on amd64

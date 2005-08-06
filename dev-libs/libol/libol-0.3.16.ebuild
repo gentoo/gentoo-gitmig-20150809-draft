@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.16.ebuild,v 1.10 2005/07/28 08:15:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.16.ebuild,v 1.11 2005/08/06 21:59:48 ka0ttic Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.balabit.com/downloads/libol/0.3/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
