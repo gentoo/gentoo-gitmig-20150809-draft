@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/libsvg-cairo-0.1.4.ebuild,v 1.10 2005/07/10 02:53:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/libsvg-cairo-0.1.4.ebuild,v 1.11 2005/08/06 16:43:14 swegener Exp $
 
 inherit eutils
 
@@ -16,14 +16,9 @@ DEPEND="x11-libs/cairo
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/libsvg-cairo-stdarg_h.patch
-}
-
-src_compile() {
-	econf || die
-	emake || die
+	epatch "${FILESDIR}"/libsvg-cairo-stdarg_h.patch
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 }

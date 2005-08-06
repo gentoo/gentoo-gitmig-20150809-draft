@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/libsvg-cairo-0.1.5.ebuild,v 1.2 2005/07/10 02:53:09 vapier Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/libsvg-cairo-0.1.5.ebuild,v 1.3 2005/08/06 16:43:14 swegener Exp $
 
 DESCRIPTION="Render SVG content using cairo"
 HOMEPAGE="http://xsvg.org/"
@@ -14,12 +12,6 @@ IUSE=""
 DEPEND=">=x11-libs/cairo-0.3.0
 	media-libs/libsvg"
 
-
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 }
