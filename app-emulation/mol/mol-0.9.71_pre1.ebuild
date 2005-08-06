@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre1.ebuild,v 1.5 2005/03/28 13:22:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre1.ebuild,v 1.6 2005/08/06 21:05:49 carlo Exp $
 
 inherit flag-o-matic eutils linux-mod
 
 DESCRIPTION="MOL (Mac-on-Linux) lets PPC users run MacOS (X) under Linux (rsync snapshot)"
-HOMEPAGE="http://www.maconlinux.net/"
+HOMEPAGE="http://www.maconlinux.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -113,7 +113,7 @@ pkg_postinst() {
 	einfo "Mac-on-Linux is now installed.  To run, use the command startmol."
 	einfo "You might want to configure video modes first with molvconfig."
 	einfo "Other configuration is in /etc/molrc.  For more info see:"
-	einfo "              http://www.maconlinux.net"
+	einfo "              http://www.maconlinux.org"
 	einfo "Also try man molrc, man molvconfig, man startmol"
 	echo
 	ewarn "For networking and sound you might install the drivers in the"
