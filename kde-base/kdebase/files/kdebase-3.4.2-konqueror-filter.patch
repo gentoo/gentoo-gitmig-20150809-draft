@@ -1,0 +1,19 @@
+--- kdebase-3.4.2/konqueror/konq_mainwindow_old.cc	2005-08-05 17:29:06.000000000 -0400
++++ kdebase-3.4.2/konqueror/konq_mainwindow.cc	2005-08-05 19:05:53.000000000 -0400
+@@ -39,6 +39,7 @@
+ #include <kzip.h>
+ #include <config.h>
+ #include <pwd.h>
++#include <kio/netaccess.h>
+ // we define STRICT_ANSI to get rid of some warnings in glibc
+ #ifndef __STRICT_ANSI__
+ #define __STRICT_ANSI__
+@@ -428,7 +429,7 @@
+         QString fileName = path.mid( lastSlash + 1 );
+         QString testPath = path.left( lastSlash + 1 );
+         if ( ( fileName.find( '*' ) != -1 || fileName.find( '[' ) != -1 || fileName.find( '?' ) != -1 )
+-             && ( !url.isLocalFile() || QFile::exists( testPath ) ) )
++             && ( !url.isLocalFile() || QFile::exists( testPath ) ) && !KIO::NetAccess::exists( url, true ) )
+         {
+             nameFilter = fileName;
+             url.setFileName( QString::null );

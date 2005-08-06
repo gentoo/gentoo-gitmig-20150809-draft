@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.213 2005/07/30 14:05:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.214 2005/08/06 10:27:24 flameeyes Exp $
+
+*kdebase-3.4.2-r1 (06 Aug 2005)
+
+  06 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdebase-3.4.2-konqueror-filter.patch, +kdebase-3.4.2-r1.ebuild:
+  Added patch for bug #101501 (Konqueror considers name filters even when a
+  file with the exact name exists).
 
   30 Jul 2005; Dan Armak <danarmak@gentoo.org> kdebase-3.4.2.ebuild:
   Removed ~mips keyword, because kdelibs-3.4.2 doesn't have it. The mips team
