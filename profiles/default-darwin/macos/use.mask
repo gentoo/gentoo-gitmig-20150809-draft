@@ -8,14 +8,13 @@ gtk2
 # imlib depends on gtk+-1
 imlib
 
-perl
-
 # needs a lot of packages ported before its usable.
 xemacs
 
-# this is going to be a hard thing to port, if even doable
+# Masked until we can get these ported.
+dts
+ieee1394
 mpi
-sasl
-
-# until we can get mysql keyworded
 mysql
+perl
+sasl
