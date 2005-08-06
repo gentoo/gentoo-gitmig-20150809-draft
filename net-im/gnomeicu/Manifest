@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 387ae78ab6c2dabb13d3443fc101e5df metadata.xml 385
-MD5 518b07d02d522020c12dae3979f2bf1d gnomeicu-0.99.5.ebuild 1020
 MD5 9f947a1a1e2516d58f91e16aed4badca ChangeLog 5044
 MD5 29e4934b581a25386aa23afd8f7d65dc files/digest-gnomeicu-0.99.5 69
+MD5 518b07d02d522020c12dae3979f2bf1d gnomeicu-0.99.5.ebuild 1020
+MD5 869761d9110b032988a8417967621a6b metadata.xml 386
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFChlwnmOfEJZHYOKcRAhKNAKCRErzCDTTmZiBCCjQhEjFbVAgRCQCg0/qR
-P2OdPYzbRhH76YkVFfGzIM4=
-=mw8v
+iD8DBQFC9OIlI1lqEGTUzyQRAgfbAJ4m7kc+R7X0bWN+lx5nb1uoHzr9dgCgi/SL
+63CK9UeSjOreCo7LdJuGpvY=
+=a0C+
 -----END PGP SIGNATURE-----
