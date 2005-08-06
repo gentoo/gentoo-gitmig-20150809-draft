@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gccxml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.5 2005/07/25 18:24:31 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.6 2005/08/06 01:17:42 ka0ttic Exp $
+
+  06 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> gccxml-0.6.0.ebuild:
+  Added ~mips.
 
   25 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> gccxml-0.6.0.ebuild:
   Keywording ~sparc.
