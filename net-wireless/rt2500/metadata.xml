@@ -2,4 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mobile</herd>
+<maintainer>
+  <email>radek@gentoo.org</email>
+  <name>Radoslaw Stachowiak</name>
+</maintainer>
+<maintainer>
+  <email>genstef@gentoo.org</email>
+</maintainer>
 </pkgmetadata>
