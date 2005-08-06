@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>net-dialup</herd>
+<longdescription>A Capi 2.0 Isdn CallMonitor with ldap name resolution</longdescription>
+</pkgmetadata>
