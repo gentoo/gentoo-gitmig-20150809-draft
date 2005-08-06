@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/vcdgear-1.6e.ebuild,v 1.11 2004/07/03 09:05:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/vcdgear-1.6e.ebuild,v 1.12 2005/08/06 11:27:03 kugelfang Exp $
 
 MY_V="16"
 MY_VR="e"
@@ -11,7 +11,7 @@ SRC_URI="!static? ( http://www.vcdgear.com/files/vcdgear${MY_V}_static-${MY_VR}.
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* amd64 x86"
 IUSE="static"
 
 DEPEND=""

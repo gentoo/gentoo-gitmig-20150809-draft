@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vcdgear
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/ChangeLog,v 1.10 2004/08/12 21:10:56 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/ChangeLog,v 1.11 2005/08/06 11:27:03 kugelfang Exp $
+
+  06 Aug 2005; Danny van Dyk <kugelfang@gentoo.org> vcdgear-1.6e.ebuild:
+  Marked stable on amd64.
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding missing metadata.xml.
