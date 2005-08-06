@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.15 2005/07/31 14:17:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.16 2005/08/06 02:26:17 dragonheart Exp $
+
+*libassuan-0.6.10 (06 Aug 2005)
+
+  06 Aug 2005; Daniel Black <dragonheart@gentoo.org> libassuan-0.6.9.ebuild,
+  +libassuan-0.6.10.ebuild:
+  version bump and transition to mirror://gnupg. x86 stable on 0.6.9
+
+*libassuan-0.6.9-r1 (06 Aug 2005)
+
+  06 Aug 2005; Daniel Black <dragonheart@gentoo.org>  libassuan-0.6.9-r1.ebuild files/digest-libassuan-0.6.9-r1
+  # INSERT ENTRY HERE
 
   31 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> libassuan-0.6.9.ebuild:
   Added ~mips for bug 76381.
