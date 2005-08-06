@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mopac7
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.4 2005/08/05 17:53:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.5 2005/08/06 09:09:24 dholm Exp $
+
+  06 Aug 2005; David Holm <dholm@gentoo.org> mopac7-1.00-r1.ebuild:
+  Added to ~ppc.
 
 *mopac7-1.00-r1 (05 Aug 2005)
 
