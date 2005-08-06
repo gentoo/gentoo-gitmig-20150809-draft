@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/cmd5checkpw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.29 2005/06/17 21:05:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.30 2005/08/06 20:09:37 hansmi Exp $
+
+*cmd5checkpw-0.30 (06 Aug 2005)
+
+  06 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> +files/euid_030.diff,
+  +files/reloc.diff, metadata.xml, +cmd5checkpw-0.30.ebuild:
+  Changed herd to qmail, added new version 0.30 from bug 100886.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   cmd5checkpw-0.22-r3.ebuild:
