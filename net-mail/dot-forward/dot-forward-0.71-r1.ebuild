@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r1.ebuild,v 1.13 2005/05/30 19:02:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r1.ebuild,v 1.14 2005/08/06 21:51:02 hansmi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,6 +12,9 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
 IUSE=""
+
+# See bug 97850
+RESTRICT="test"
 
 DEPEND="virtual/libc
 	sys-apps/groff"

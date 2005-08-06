@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dot-forward
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.16 2005/07/04 08:28:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.17 2005/08/06 21:51:02 hansmi Exp $
+
+  06 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  dot-forward-0.71-r1.ebuild:
+  Disabled maketest, see bug 97850.
 
   04 Jul 2005; Andrej Kacian <ticho@gentoo.org> metadata.xml:
   Changed herd to qmail in metadata.
