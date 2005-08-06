@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 94175dcd60e2071a4e06ced99ecff740 ChangeLog 1022
-MD5 67175110bc43cce5a0219e924295e9a3 bbcd-0.3.1-r1.ebuild 763
-MD5 41227883928f066e76cc5a5676461e98 bbcd-0.3.1.ebuild 628
-MD5 1fabf567822c7f832e84fc9ffdbfc635 metadata.xml 241
+MD5 383b4f1929e5478c1e9985e6617b4ba7 bbcd-0.3.1-r1.ebuild 717
+MD5 3d600a8a4c6661df79ac8ca93d406d48 bbcd-0.3.1.ebuild 585
 MD5 e9344eb09d7760ae2319499a525e661b files/bbcd-0.3.1-gcc3.3.patch 547
 MD5 17e5480cfc711d70db4bd28885335bb0 files/bbcd-0.3.1_0.3.1a.diff.gz 624
 MD5 b2d736f86e75b80b047b20f6a6a960af files/digest-bbcd-0.3.1 61
 MD5 b2d736f86e75b80b047b20f6a6a960af files/digest-bbcd-0.3.1-r1 61
+MD5 1fabf567822c7f832e84fc9ffdbfc635 metadata.xml 241
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFBXsw/I1lqEGTUzyQRAmVXAKDDUUP2rP1nniA1mdsD6z/BIe58WgCfUUut
-23NI27we4aOiKaCqDPzLbyg=
-=COdi
+iD8DBQFC9OnUI1lqEGTUzyQRAvU/AJwKVQAFLbSVZ1HflMh8CnogT/jztwCeJaZu
+Bnj0aAI7Bk7Yjx0obRBjFtw=
+=q8Au
 -----END PGP SIGNATURE-----
