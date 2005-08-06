@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qtools
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/ChangeLog,v 1.6 2004/12/29 03:29:09 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/ChangeLog,v 1.7 2005/08/06 21:19:05 hansmi Exp $
+
+  06 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  +files/qtools-0.56-head.patch, qtools-0.56.ebuild:
+  Added "head -1"-patch from bug 84458, set conf-cc before compiling.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

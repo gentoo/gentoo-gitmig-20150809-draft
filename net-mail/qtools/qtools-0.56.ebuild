@@ -1,19 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/qtools-0.56.ebuild,v 1.7 2004/07/15 02:00:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/qtools-0.56.ebuild,v 1.8 2005/08/06 21:19:05 hansmi Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Several utilities for use with qmail, typically as part of .qmail command processing"
-
 HOMEPAGE="http://www.superscript.com/qtools/intro.html"
-
 SRC_URI="http://www.superscript.com/qtools/${P}.tar.gz"
-
 LICENSE="as-is"
-
 SLOT="0"
-
 KEYWORDS="x86 ~mips ~hppa alpha ~ppc ~sparc"
 IUSE="static"
 
@@ -23,10 +18,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-errno.patch
+	epatch ${FILESDIR}/${P}-head.patch
 }
 
 src_compile() {
 	use static && LDFLAGS="${LDFLAGS} -static"
+	export CC="$(tc-getCC)"
 	echo "${CC} ${CFLAGS}" > conf-cc
 	echo "${CC} ${LDFLAGS}" > conf-ld
 	echo "/usr" > conf-home
