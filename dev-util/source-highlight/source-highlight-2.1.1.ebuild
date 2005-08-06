@@ -1,17 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.0.ebuild,v 1.3 2005/08/06 04:05:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.1.1.ebuild,v 1.1 2005/08/06 04:05:05 ka0ttic Exp $
 
 inherit bash-completion versionator eutils
 
-MY_P="${PN}-$(replace_version_separator 2 -)"
-S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Generate highlighted source code as an (x)html document"
 HOMEPAGE="http://www.gnu.org/software/src-highlite/source-highlight.html"
-SRC_URI="ftp://ftp.gnu.org/gnu/src-highlite/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.gnu.org/gnu/src-highlite/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~mips ~ppc x86"
+KEYWORDS="~amd64 ~mips ~ppc ~x86"
 SLOT="0"
 IUSE="doc"
 
