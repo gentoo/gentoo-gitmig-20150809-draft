@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 9e3d878e3e7fb2da2653018e16484a82 gnupg-1.9.18.ebuild 3205
-MD5 abc712bab6c7113d61f201a8a422736b ChangeLog 20670
+MD5 395da14250e78e240bf68b189c7ac3bb ChangeLog 20719
 MD5 b47d1016e516b746f7bc12f92ef133e8 gnupg-1.4.2-r1.ebuild 6262
 MD5 921f00a83ce6b1d77190396b4456f05f gnupg-1.2.6.ebuild 3800
 MD5 b507ee36c7487372de42cc9dab034370 metadata.xml 481
@@ -21,7 +21,7 @@ MD5 552b43a0705ea006efa282b7d5645143 files/gnupg-1.4.2-selftest.patch 1358
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC9DOBmdTrptrqvGERAr1BAKCH7T7m8erqQoCjMtrmjTCPnwaoIQCeJCWv
-KUhPRmhehaOPyvcadmxWhBM=
-=mCgn
+iD8DBQFC9DRQmdTrptrqvGERAgs/AJ9sR4WJ0aLIQCULdtXyF5GF5+NYqgCgmbLn
+9T8hP5sbA9Be/Eza65WKe/M=
+=y+j2
 -----END PGP SIGNATURE-----
