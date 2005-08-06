@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.5.ebuild,v 1.1 2005/06/20 14:09:07 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.5.ebuild,v 1.2 2005/08/06 21:38:41 matsuu Exp $
+
+inherit eutils
 
 MY_P=gc${PV/_/}
 S=${WORKDIR}/${MY_P}
@@ -23,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i -e '/^SUBDIRS/s/doc//' Makefile.in || die
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
