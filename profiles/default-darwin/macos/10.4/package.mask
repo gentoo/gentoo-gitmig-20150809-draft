@@ -7,7 +7,6 @@ app-editors/nano
 app-editors/vim-core
 app-shells/bash
 app-shells/zsh
-dev-libs/libprelude
 dev-libs/libxml2
 media-libs/a52dec
 net-misc/curl
