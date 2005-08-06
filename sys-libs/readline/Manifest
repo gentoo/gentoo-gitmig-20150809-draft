@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 6cd733ddd626b706dc68491cab9bb838 readline-4.3-r6.ebuild 3091
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 081ecf008277f55f7d6ecd8f4a7e34c9 readline-5.0-r2.ebuild 2707
+MD5 be9a2fa63a8325c3d705a26cab4d03a6 readline-5.0-r2.ebuild 2724
 MD5 516ee3121f8b89b2de35d72e02bc9a3b readline-4.3-r5.ebuild 2762
 MD5 2c703c8222b128bdf5ecfe1f1248779e ChangeLog 7280
 MD5 cca21eb56279efff8356d028b1b39dd8 files/digest-readline-4.3-r5 348
@@ -18,9 +18,9 @@ MD5 d5f28667389d9681136307274ebc1f28 files/readline-5.0-no_rpath.patch 363
 MD5 b908c05444b4c9edbeefa1977345182e files/readline-5.0-darwin.patch 461
 MD5 b6bf5c9721fc8c623377b40768d18dae files/readline-5.0-del-backspace-policy.patch 1475
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2IqPgIKl8Uu19MoRAmojAJ4ne1HTU6XoWtLXXRX0/NL81C95+QCdG5x2
-2iHL98WiT1wZpBT3o5agjdM=
-=+LCj
+iD8DBQFC9CcygIKl8Uu19MoRAuQpAJ9tUP6CAYjKMOLePnpGrpa12QfmKwCcCTrb
+Gc/jQeoQv0flQxDAz6h/FKk=
+=3SLP
 -----END PGP SIGNATURE-----

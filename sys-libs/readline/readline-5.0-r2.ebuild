@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r2.ebuild,v 1.5 2005/07/16 04:16:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r2.ebuild,v 1.6 2005/08/06 02:57:26 vapier Exp $
 
-inherit eutils gnuconfig
+inherit eutils multilib
 
 # Official patches
 PLEVEL="x001 x002 x003 x004 x005"
@@ -68,7 +68,9 @@ src_install() {
 	docinto ps
 	dodoc doc/*.ps
 	dohtml -r doc
+}
 
+pkg_preinst() {
 	# Backwards compatibility #29865
 	if [[ -e ${ROOT}/$(get_libdir)/libreadline.so.4 ]] ; then
 		cp -a "${ROOT}"/$(get_libdir)/libreadline.so.4* "${D}"/$(get_libdir)/
