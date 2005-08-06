@@ -1,19 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ef2bafc13ebd43092f673c3c44907785 ChangeLog 3843
+MD5 cf0a300d2250cd00fdde899a831bb9c9 swt-3.1-r1.ebuild 5300
+MD5 b2c35bb6b0cf63b52f8f2b09135df879 ChangeLog 4067
 MD5 4dcb6dd494f5e369aed5a367e303aef4 metadata.xml 433
 MD5 76eb2c89532870f7e90b064d8f26d739 swt-3.1.ebuild 5202
 MD5 c964f0ff0b83afdfd76d872821540574 files/build-3.1_pre7.xml 476
 MD5 ad4aa305806513ab198281b6e485fbbc files/SWTMessages.properties 2085
 MD5 bb61f479853836959ad766e10161e80a files/build.xml 2106
+MD5 4d4ba9daee2ceef312b8e18be3ab70ed files/digest-swt-3.1-r1 216
 MD5 c964f0ff0b83afdfd76d872821540574 files/build-3.1.xml 476
 MD5 f33d8fd0bacf2ed4f835b70f6f7836b4 files/cairo.patch 302
 MD5 4d4ba9daee2ceef312b8e18be3ab70ed files/digest-swt-3.1 216
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2+zg/rLF9B432nYRArigAJ9J354DscqUYAr9S/fuOolbs7NumACgpkO5
-ahRmsv82xmZ/zH+F6TjQaj0=
-=6gSB
------END PGP SIGNATURE-----
