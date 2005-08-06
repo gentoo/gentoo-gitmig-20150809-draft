@@ -1,4 +1,16 @@
-MD5 d95760bdcc6b3c1225852f3bc69f4a63 ChangeLog 625
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0db1bb686931cceb286625085482a3cf epbb-0.0.5.20040201.ebuild 425
 MD5 4861da26cff6355f0dd2bf4f755e7474 metadata.xml 339
+MD5 d95760bdcc6b3c1225852f3bc69f4a63 ChangeLog 625
+MD5 bbfd9f1b105d9c9fbee21180c975badc epbb-9999.ebuild 439
 MD5 7cc24fabc897c069b20ad6cd1ec776d2 files/digest-epbb-0.0.5.20040201 72
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-epbb-9999 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9C2fgIKl8Uu19MoRAloMAJwJ9Zp00HHp2w/b8pwbeZoTwqgQZwCeI1NP
+CH3hrZ7XZ+KiDS55Y0xeFVs=
+=13/C
+-----END PGP SIGNATURE-----
