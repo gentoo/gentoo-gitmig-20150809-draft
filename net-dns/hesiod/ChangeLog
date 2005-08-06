@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.15 2005/07/23 06:52:02 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.16 2005/08/06 13:04:15 ka0ttic Exp $
+
+  06 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> hesiod-3.0.2-r1.ebuild:
+  Added ~mips.
 
   23 Jul 2005; Jory A. Pratt <anarchy@gentoo.org> hesiod-3.0.2-r1.ebuild:
   Stable on ppc

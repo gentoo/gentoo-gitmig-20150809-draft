@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 194676d4d8ce4d837caf1e6dccecb75e hesiod-3.0.2-r1.ebuild 1303
+MD5 b257bbb47c1f74f685a98644a29c26e9 ChangeLog 2565
+MD5 41d6d5fa26be12276186f96b4178c8c8 hesiod-3.0.2-r1.ebuild 1310
 MD5 c2560b4653b2ee5b141e8e67138885d1 hesiod-3.0.2.ebuild 1570
-MD5 d5a2fa7887a0a92083705e32bb2a15d8 ChangeLog 2476
-MD5 30c1105fc1f037d97d0dfae4f4f0e065 files/hesiod-3.0.2-str.patch 2039
-MD5 6730c597da6926a28d780afaf5c0109d files/digest-hesiod-3.0.2-r1 63
 MD5 6730c597da6926a28d780afaf5c0109d files/digest-hesiod-3.0.2 63
+MD5 6730c597da6926a28d780afaf5c0109d files/digest-hesiod-3.0.2-r1 63
 MD5 f7cf5631651df4137ae6d25e3641160e files/hesiod-3.0.2-env.patch 896
-MD5 ab2c3c431e03ef4d4fb4582e5f8579a2 files/hesiod-3.0.2-shlib.patch 1767
 MD5 e8b9918c46f98913bbc59dff6e942552 files/hesiod-3.0.2-redhat.patch.gz 2640
+MD5 ab2c3c431e03ef4d4fb4582e5f8579a2 files/hesiod-3.0.2-shlib.patch 1767
+MD5 30c1105fc1f037d97d0dfae4f4f0e065 files/hesiod-3.0.2-str.patch 2039
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6197gIKl8Uu19MoRAjVJAJ9UQAqGZvbfp188rtZYfoDX7fXJFgCff1jj
-uWamovpKT/kDeOSz2V9QIJE=
-=b/iu
+iD8DBQFC9OQ1EZCkKN40op4RAtblAKC0M2AeU1LZctEEaCoLbzT8mP6eOwCfVpKP
+kyM/4v6frUB9V7DLmYx+VvE=
+=d/t+
 -----END PGP SIGNATURE-----
