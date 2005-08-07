@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.0-r1.ebuild,v 1.11 2005/07/17 01:02:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.0-r1.ebuild,v 1.12 2005/08/07 10:47:54 dragonheart Exp $
 
 inherit libtool eutils
 
 DESCRIPTION="Contains error handling functions used by GnuPG software"
 HOMEPAGE="http://www.gnupg.org/(en)/download/index.html#libgpg-error"
-SRC_URI="ftp://ftp.gnupg.org/gcrypt/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gnupg/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
