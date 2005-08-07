@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.3.ebuild,v 1.13 2004/09/15 17:41:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.3.ebuild,v 1.14 2005/08/07 13:01:10 hansmi Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://muth.org/Robert/Trommler/${P/-/.}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha amd64"
+KEYWORDS="~alpha amd64 ppc sparc x86"
 
 DEPEND=">=x11-libs/gtk+-2.0.6-r1"
 

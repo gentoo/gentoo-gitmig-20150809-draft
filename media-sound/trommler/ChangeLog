@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/trommler
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.9 2004/09/15 17:41:33 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.10 2005/08/07 13:01:10 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> trommler-3.3.ebuild:
+  Stable on ppc.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> trommler-3.3.ebuild:
   Stable amd64, sparc.
