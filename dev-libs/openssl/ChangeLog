@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.129 2005/07/08 08:12:32 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.130 2005/08/07 12:21:57 matsuu Exp $
+
+  07 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> files/gentoo.config-0.9.7g,
+  files/openssl-0.9.7g-superh.patch:
+  Fixed compile issue on sh. Bug 98418.
 
   08 Jul 2005; Hardave Riar <hardave@gentoo.org> openssl-0.9.7g.ebuild:
   Marked ~mips, bug #92076.
