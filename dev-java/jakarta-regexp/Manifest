@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78fea13282b656143aef5d650adbaa82 jakarta-regexp-1.3-r2.ebuild 1082
-MD5 7f56c97b39419b006a7f68bb41bd9597 jakarta-regexp-1.3-r1.ebuild 1082
-MD5 215846e9017665216b060928d48d5007 ChangeLog 747
+MD5 89c48d76734984d0da7c602b77158cb5 ChangeLog 1027
+MD5 abac46f0d7f997cc5613a2d5ce6eeac8 jakarta-regexp-1.3-r2.ebuild 1098
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 6eac4bdeb129dbd95c52ac349db33c61 files/digest-jakarta-regexp-1.3-r1 70
 MD5 6eac4bdeb129dbd95c52ac349db33c61 files/digest-jakarta-regexp-1.3-r2 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCz/Vs/rLF9B432nYRAhyVAKCEf1tG7xdcXtseomJp/xXDE9FIKQCeJZ7o
-ZaHK3yui6j7WAZMMJimUK+k=
-=Iqsy
------END PGP SIGNATURE-----
