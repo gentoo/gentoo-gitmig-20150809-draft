@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.0.ebuild,v 1.1 2005/08/06 19:40:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.0.ebuild,v 1.2 2005/08/07 13:00:00 hollow Exp $
 
 inherit apache-module eutils
 
@@ -55,6 +55,7 @@ src_compile() {
 	        --with-min-gid=${SUPHP_MINGID} \
 	        --with-apache-user=${SUPHP_APACHEUSER} \
 	        --with-logfile=${SUPHP_LOGFILE} \
+	        --disable-checkpath \
 	        --with-apxs=${APXS2}"
 
 	CFLAGS="$(apr-config --includes) $(apu-config --includes)" \
@@ -76,14 +77,7 @@ src_install() {
 	doins ${FILESDIR}/suphp.conf
 }
 
-# See: http://forums.gentoo.org/viewtopic.php?t=208570 for the
-# answer to another user
-#pkg_postinst() {
-#	# Due to Apache APR requiring R_OK and X_OK for exec*(), we
-#	# must install suPHP with 4755 permissions or it will not work
-#	# from within Apache.
-#	chmod 4755 /usr/sbin/suphp
-#	einfo "if you (want to) use webapp-config don't forget to uncomment"
-#	einfo "the example suPHP_MinUser entry in the suphp-module file"
-#} 
-
+pkg_postinst() {
+	# make suphp setuid
+	chmod 4755 /usr/sbin/suphp
+}
