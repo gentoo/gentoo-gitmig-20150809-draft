@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.34.ebuild,v 1.13 2004/11/04 22:06:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.34.ebuild,v 1.14 2005/08/07 14:53:43 leonardop Exp $
 
 inherit libtool gnome.org eutils
 
@@ -28,6 +28,9 @@ src_unpack() {
 src_compile() {
 
 	elibtoolize
+
+	# Work-around for old auto-stuff. See bug #99013.
+	export LC_ALL=C
 
 	econf \
 		`use_with tcpd libwrap` \
