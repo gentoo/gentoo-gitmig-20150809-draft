@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1367 2005/08/07 09:28:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1368 2005/08/07 18:15:03 morfic Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -793,6 +793,7 @@ net-misc/sitecopy:sftp - Enables use of sftp for secure ftp transfers.
 net-misc/sitecopy:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support.  This system allows users to collaborate on websites using a web based interface.  See the ebuild for an FAQ page.  Enables neon as well to handle webdav support.
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
 net-misc/vnc:server - Build VNC client
+net-misc/tightvnc:server - Build vncserver. Allows us to only build server on one machine if set, build only viewer otherwise.
 net-misc/yate:fax - Build fax plugin
 net-misc/yate:gsm - Build gsm codec plugin
 net-misc/yate:h323 - Build H.323 Channel plugin
