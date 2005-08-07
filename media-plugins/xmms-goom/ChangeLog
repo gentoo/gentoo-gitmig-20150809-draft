@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-goom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.12 2005/05/28 23:12:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.13 2005/08/07 13:29:08 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  xmms-goom-1.99.4.ebuild:
+  Stable on ppc.
 
 *xmms-goom-2004.0 (28 May 2005)
 
