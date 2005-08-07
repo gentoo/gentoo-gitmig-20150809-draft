@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8d56a2624837830b88a1d167eb15a15f yaws-1.56.ebuild 1081
-MD5 513d6b93d7ae4afffcc52673d5b54990 ChangeLog 401
+MD5 2ecdd07b1a1ad4c48a54e9ea2978fbf5 yaws-1.56.ebuild 1100
+MD5 05f65b701a4cea5fa96742986a2ef8a5 ChangeLog 507
 MD5 29890d8b63da61f44362554db749bf57 metadata.xml 477
 MD5 0a81c233eb053a10cc3c54282aedc610 files/digest-yaws-1.56 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC9UusyiNZaEAZA+ARAkNLAJ4r7TzZ2GjnvAx4DbOKoxwjTXcHtwCbBUJu
-wN1LJVD3wXdZeolidTidN0g=
-=AGkn
+iD8DBQFC9VDUyiNZaEAZA+ARAqxiAJ4pxfwbweoBjylAwzWSad6KOYwlbwCfRzvH
+qn1f79QAhzjyOYqc9ux759A=
+=aGXs
 -----END PGP SIGNATURE-----

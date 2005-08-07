@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/yaws
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/yaws/ChangeLog,v 1.1 2005/08/06 23:45:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/yaws/ChangeLog,v 1.2 2005/08/07 00:07:30 mkennedy Exp $
+
+  07 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org> yaws-1.56.ebuild:
+  Keywording ~sparc, ~amd64, ~ppc
 
 *yaws-1.56 (06 Aug 2005)
 
