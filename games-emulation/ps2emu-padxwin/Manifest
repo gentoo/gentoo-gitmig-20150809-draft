@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 0c9ac610c0776839b869a9896b841d51 ps2emu-padxwin-0.5.ebuild 827
 MD5 95fb0c1f07ab76457f142bb4de80bf56 ps2emu-padxwin-0.9.ebuild 878
 MD5 ee28f29476e72628f6473a3e285f227a ChangeLog 807
 MD5 2cc769f4dde068366068dc754e13b0ed files/digest-ps2emu-padxwin-0.9 57
 MD5 41ecd83628c74719fbb8243301d7e79c files/digest-ps2emu-padxwin-0.5 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9bcYgIKl8Uu19MoRAjU2AJ9fmv7ZxOdHEIKW7zul8+5Wk/yEvACfeq/c
+ALbECTmp84MJWFSUNHnRS/I=
+=BdMj
+-----END PGP SIGNATURE-----

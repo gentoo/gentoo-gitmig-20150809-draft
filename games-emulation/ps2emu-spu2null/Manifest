@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 b1384ceb840da1611146857bd39a64ce ps2emu-spu2null-0.2.1.ebuild 861
 MD5 0deee13fb15ae9b26df98f419556cb05 ps2emu-spu2null-0.4.ebuild 903
 MD5 6d2c020c40ca7f10404c904c453ab5ea ChangeLog 610
 MD5 f11fa136d316089a53ef04bdffe06555 files/digest-ps2emu-spu2null-0.2.1 60
 MD5 8219dc2e3ad0c78989db1ff560c85e3e files/digest-ps2emu-spu2null-0.4 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9bghgIKl8Uu19MoRAnuaAJwOG5B4scjEFlRr6B+uojFJ3a+5JQCfY1Sl
+ezsjPBTWoz2R1ItfnEH6+FQ=
+=3JbR
+-----END PGP SIGNATURE-----
