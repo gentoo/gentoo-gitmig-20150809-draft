@@ -8,6 +8,9 @@ gtk2
 # imlib depends on gtk+-1
 imlib
 
+# wxwindows needs wxGTK which in turn needs gtk+
+wxwindows
+
 # needs a lot of packages ported before its usable.
 xemacs
 
