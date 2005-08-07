@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.33 2005/06/21 09:17:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.34 2005/08/07 11:27:44 dragonheart Exp $
+
+*bestcrypt-1.5_p11 (07 Aug 2005)
+
+  07 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/bestcrypt-1.5_p11-makefile_fix.patch, bestcrypt-1.5_p10.ebuild,
+  +bestcrypt-1.5_p11.ebuild, bestcrypt-1.6_p1.ebuild,
+  bestcrypt-1.6_p1-r1.ebuild:
+  version bump on 1.5 series. added linux-mod_pkg_postinst to pkg_postinst
+  (bug #100582). thanks to Craig for reporting
 
 *bestcrypt-1.6_p1-r1 (21 Jun 2005)
 

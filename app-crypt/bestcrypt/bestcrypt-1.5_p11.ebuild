@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p1.ebuild,v 1.4 2005/08/07 11:27:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p11.ebuild,v 1.1 2005/08/07 11:27:44 dragonheart Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs
 
@@ -8,7 +8,8 @@ MY_PN="bcrypt"
 DESCRIPTION="commercially licensed transparent filesystem encryption"
 HOMEPAGE="http://www.jetico.com/"
 SRC_URI="http://www.jetico.com/linux/BestCrypt-${PV/_p/-}.tar.gz
-	http://www.carceri.dk/files/bcrypt-rc6-serpent.diff.gz"
+	!x86? ( mirror://gentoo/bcrypt-rc6-serpent-c.diff.gz )
+	x86? ( http://www.carceri.dk/files/bcrypt-rc6-serpent.diff.gz )"
 
 LICENSE="bestcrypt"
 SLOT="0"
@@ -30,30 +31,30 @@ MODULE_NAMES="bc(block:${S}/mod)
 		bc_gost(block:${S}/mod/gost)
 		bc_idea(block:${S}/mod/idea)
 		bc_rijn(block:${S}/mod/rijn)
+		bc_serpent(block:${S}/mod/serpent)
+		bc_rc6(block:${S}/mod/rc6)
 		bc_twofish(block:${S}/mod/twofish)"
 
 src_unpack() {
-	unpack BestCrypt-${PV/_p/-}.tar.gz
-	epatch ${FILESDIR}/${P}-makefile_fix.patch
-	cd ${S}
+	unpack "BestCrypt-${PV/_p/-}.tar.gz"
+	cd "${S}"
 
-	if ! use amd64;
+	if use x86;
 	then
-		epatch ${DISTDIR}/bcrypt-rc6-serpent.diff.gz
-		export MODULE_NAMES="${MODULE_NAMES} bc_serpent(block:${S}/mod/serpent) bc_rc6(block:${S}/mod/rc6)"
+		epatch "${DISTDIR}"/bcrypt-rc6-serpent.diff.gz
+	else
+		epatch "${DISTDIR}"/bcrypt-rc6-serpent-c.diff.gz
 	fi
+
+	epatch "${FILESDIR}/${P}"-makefile_fix.patch
 }
 
 src_compile() {
-	if ! use amd64;
-	then
-		export MODULE_NAMES="${MODULE_NAMES} bc_serpent(block:${S}/mod/serpent) bc_rc6(block:${S}/mod/rc6)"
-	fi
 
 	filter-flags -fforce-addr
 
-	emake -C kgsha EXTRA_CXXFLAGS="${CXXFLAGS} -fPIC" || die "library compile failed"
-	emake -C src EXTRA_CFLAGS="${CFLAGS} -I../kgsha256" || die "bctool compile failed"
+	emake -C kgsha EXTRA_CXXFLAGS="${CXXFLAGS}" || die "library compile failed"
+	emake -C src EXTRA_CFLAGS="${CFLAGS}" || die "bctool compile failed"
 
 	# Don't put stack protection in the kernel - it just is bad
 	append-flags -fno-stack-protector-all -fno-stack-protector
@@ -68,11 +69,6 @@ src_compile() {
 }
 
 src_install() {
-	if ! use amd64;
-	then
-		export MODULE_NAMES="${MODULE_NAMES} bc_serpent(block:${S}/mod/serpent) bc_rc6(block:${S}/mod/rc6)"
-	fi
-
 	linux-mod_src_install
 
 	cd ${S}
