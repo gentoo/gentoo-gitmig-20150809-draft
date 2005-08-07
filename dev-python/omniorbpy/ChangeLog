@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/omniorbpy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.9 2005/04/24 09:41:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.10 2005/08/07 13:35:02 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> omniorbpy-2.5.ebuild:
+  Stable on ppc.
 
   24 Apr 2005; Simon Stelling <blubb@gentoo.org> omniorbpy-2.5.ebuild:
   stable on amd64
