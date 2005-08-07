@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.5 2005/07/01 19:18:14 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.6 2005/08/07 13:09:40 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> maxima-5.9.1.ebuild:
+  Stable on ppc.
 
   01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
   +files/5.9.1-sbcl-gentoo.patch, maxima-5.9.1-r2.ebuild:
