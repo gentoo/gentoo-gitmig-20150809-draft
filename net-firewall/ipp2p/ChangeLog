@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipp2p
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ChangeLog,v 1.11 2005/08/06 03:21:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ChangeLog,v 1.12 2005/08/07 17:32:34 eradicator Exp $
+
+  07 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  ipp2p-0.7.4-r2.ebuild, ipp2p-0.8.0_rc3.ebuild:
+  Fix bug #101635.
 
   06 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -files/ipp2p-0.7-Makefile.patch, -ipp2p-0.7.1-r1.ebuild,
