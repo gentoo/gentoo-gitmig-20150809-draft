@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/magicrescue
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/ChangeLog,v 1.2 2005/05/08 21:01:20 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/ChangeLog,v 1.3 2005/08/07 12:02:13 blubb Exp $
+
+  07 Aug 2005; Simon Stelling <blubb@gentoo.org> magicrescue-1.1.4.ebuild:
+  added ~amd64 keyword
 
   08 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   magicrescue-1.1.4.ebuild:
