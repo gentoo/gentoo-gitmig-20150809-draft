@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/phylip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.7 2005/02/19 04:29:39 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.8 2005/08/07 14:14:49 ribosome Exp $
+
+*phylip-3.64 (07 Aug 2005)
+
+  07 Aug 2005; Olivier Fisette <ribosome@gentoo.org> -phylip-3.62.ebuild,
+  +phylip-3.64.ebuild:
+  New version. Removed old version.
 
   18 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> phylip-3.63.ebuild:
   Stable ppc-macos
