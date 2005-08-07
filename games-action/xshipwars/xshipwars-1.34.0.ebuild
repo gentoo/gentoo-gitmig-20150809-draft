@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.13 2005/05/03 08:31:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.14 2005/08/07 12:49:31 hansmi Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${MY_P}.tar.bz2
 
 LICENSE="GPL-2 xshipwars"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="virtual/x11
