@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/wwwoffle
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.4 2005/07/30 09:56:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.5 2005/08/07 23:54:46 weeve Exp $
+
+  07 Aug 2005; Jason Wever <weeve@gentoo.org> wwwoffle-2.8e.ebuild:
+  Stable on SPARC.
 
   30 Jul 2005; Alin Nastac <mrness@gentoo.org> wwwoffle-2.8e.ebuild:
   Stable on x86.
