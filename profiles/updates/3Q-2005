@@ -46,3 +46,4 @@ move net-misc/asterisk-sccp net-misc/asterisk-chan_sccp
 move x11-themes/gtk-qt-engine x11-themes/gtk-engines-qt
 move x11-themes/gtk-engines-geramik x11-themes/geramik
 move x11-themes/qtpixmap x11-themes/gtk-engines-qtpixmap
+slotmove >x11-themes/gtk-engines-2 0 2
