@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f88b22a2d9e1b6f6df4eddb76198112c wmakerconf-2.11.ebuild 1198
-MD5 0b9b3f488714675adc60d20075fce61d wmakerconf-2.9.2.ebuild 1237
+MD5 5c418facc82ed4639af05f715c8e2e8e wmakerconf-2.9.2.ebuild 1234
 MD5 4a739eeb9d5b7428719e0b92edf8e67c wmakerconf-2.8.1-r2.ebuild 1253
+MD5 f88b22a2d9e1b6f6df4eddb76198112c wmakerconf-2.11.ebuild 1198
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
-MD5 a742f73465a977182536b35b0b19f22e ChangeLog 2854
-MD5 1e9fc0f7bee345603a1202c29ea3f14e files/digest-wmakerconf-2.8.1-r2 68
+MD5 0c5abbb0e907f3d677d586fbc46049b7 ChangeLog 2951
 MD5 08460ad64726481d73b93e68c86d20f3 files/digest-wmakerconf-2.11 67
 MD5 9836fda7307d1de81541a6ce1f894070 files/digest-wmakerconf-2.9.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC5+NnKRy60XGEcJIRAiQKAJ9W01bAiRtHhvzmqqYzUI/wl1yFmACePgKF
-O5oJamwe2X9L26KjRikb5mI=
-=EIJQ
------END PGP SIGNATURE-----
+MD5 1e9fc0f7bee345603a1202c29ea3f14e files/digest-wmakerconf-2.8.1-r2 68
