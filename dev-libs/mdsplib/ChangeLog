@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/mdsplib
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/ChangeLog,v 1.1 2005/08/07 07:33:53 dragonheart Exp $
+
+*mdsplib-0.11 (07 Aug 2005)
+
+  07 Aug 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +mdsplib-0.11.ebuild:
+  initial import as per bug #99262. Ebuild based off Brenden Matthews' submition
+
