@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/blwm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blwm/ChangeLog,v 1.3 2005/04/03 14:33:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blwm/ChangeLog,v 1.4 2005/08/07 13:30:06 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> blwm-1.0.4.ebuild:
+  Stable on ppc.
 
   03 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> blwm-1.0.4.ebuild:
   Removed "|| die" from automake; bug #71479 comment #9
