@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7f8a107a53f42bbadcb4c0073fe6326e ChangeLog 3710
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 4d4267d1ff0205ae60322891b822a9ac raggle-0.4.0.ebuild 845
+MD5 b54c1c4082854e3989484be5a46f7d28 raggle-0.3.2.ebuild 680
+MD5 470efcfc756989ce5029e59cd82a4daf files/digest-raggle-0.4.0 64
+MD5 da06143d5c9b9c41be11440425580127 files/raggle-destdir-gentoo.diff 246
+MD5 f4e4945286014d3e084b681fbe8e7829 files/digest-raggle-0.3.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC3Xc5Kf2g/qXtneoRApH3AKCVv764FcBq+3TARG+LnG6u4pVmwwCeK+mY
+4ElYAagTo30Zi3k+evRrAuY=
+=sczE
+-----END PGP SIGNATURE-----
