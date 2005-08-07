@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c41f3fffedce17b2c6327764c0a83df ChangeLog 2316
-MD5 9f6a37617189b75b04a8cee072e12ec0 alltray-0.60.ebuild 817
-MD5 82ca508352d439bb26aab8f2acac7c7c files/digest-alltray-0.60 64
 MD5 9212eb629264546c8d7fcd6e2563073a metadata.xml 596
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8SVNI1lqEGTUzyQRAvhbAKC6ZIGjKKEoTjD8xPGIeXiNXvjP6wCgoA32
-7kvb54SR9TfrlmLqkxCVHgs=
-=JzO9
------END PGP SIGNATURE-----
+MD5 8d8f34355098978e43dbd1f1d9769c2a ChangeLog 2407
+MD5 60e14e981f191d88707ddaed1ec0e1f8 alltray-0.60.ebuild 814
+MD5 82ca508352d439bb26aab8f2acac7c7c files/digest-alltray-0.60 64
