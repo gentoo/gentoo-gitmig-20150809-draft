@@ -1,5 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c2a20621164e994c9de9f1e179e1d2c2 kaffeine-0.7.ebuild 899
+MD5 f7f8bacc269059e9d9dc718781d29883 ChangeLog 4990
 MD5 f252d0d8aaea067fe6be5e09527ab18e metadata.xml 175
-MD5 ea0f21a9d72f74138554e8ace3b533e1 ChangeLog 4787
 MD5 eb11794e0440683d63c7663fe8ae5cdc kaffeine-0.6-r1.ebuild 737
-MD5 3b5f1da0e1ceab40aabee361a20e6ae5 files/kaffeine-0.6-formats.patch 3420
+MD5 368cba8b0be5b6869d8c9f90fabf3852 files/digest-kaffeine-0.7 66
 MD5 0fc6c600e680a127863fc22e097daec4 files/digest-kaffeine-0.6-r1 66
+MD5 3b5f1da0e1ceab40aabee361a20e6ae5 files/kaffeine-0.6-formats.patch 3420
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9hWdj5H05b2HAEkRAr80AKCYNwIuyTEX6SM3iwQ08DSoaL8UmwCfc0Zm
+ICRrjHfB8SBhDKjRfnOm49U=
+=4xlx
+-----END PGP SIGNATURE-----
