@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logsentry
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.20 2005/01/01 11:09:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.21 2005/08/07 20:44:04 ka0ttic Exp $
+
+  07 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> logsentry-1.1.1.ebuild:
+  Added ~mips.
 
   31 Dec 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Taking over as placeholder maintainer.  Fixed some ebuild stuff.
