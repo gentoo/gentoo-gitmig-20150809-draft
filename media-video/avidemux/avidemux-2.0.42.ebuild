@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.42.ebuild,v 1.2 2005/08/07 11:28:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.42.ebuild,v 1.3 2005/08/07 12:31:59 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic fixheadtails
 
 MY_P=${P/_/}
 PATCHLEVEL="9"
@@ -59,6 +59,8 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/patches/
 
 	cp ${WORKDIR}/${PV}/m4/* ${S}/m4 || die "cp m4 failed"
+
+	ht_fix_all
 
 	gmake -f Makefile.dist || die "autotools failed."
 }
