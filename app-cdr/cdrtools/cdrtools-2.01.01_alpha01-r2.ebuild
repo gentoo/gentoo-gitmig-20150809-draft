@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r2.ebuild,v 1.4 2005/07/09 18:52:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r2.ebuild,v 1.5 2005/08/07 00:24:25 pylon Exp $
 
-inherit eutils gnuconfig toolchain-funcs
+inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
 MY_CRYPT_VERS="2.01-encrypt-1.0rc1"
 
@@ -58,6 +58,8 @@ src_unpack() {
 
 src_compile() {
 	gnuconfig_update
+
+	use unicode && append-flags "-finput-charset=ISO-8859-1 -fexec-charset=UTF-8"
 
 	emake CC="$(tc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
 }

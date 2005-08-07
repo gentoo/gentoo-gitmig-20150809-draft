@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.122 2005/06/06 20:17:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.123 2005/08/07 00:24:25 pylon Exp $
+
+  07 Aug 2005; Lars Weiler <pylon@gentoo.org>
+  cdrtools-2.01.01_alpha01-r2.ebuild:
+  Change text output to unicode if requested; Bug 99681.
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> cdrtools-2.01-r3.ebuild:
   Stable on ppc64; bug #83684
