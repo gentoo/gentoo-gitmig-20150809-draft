@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/lsof
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.7 2005/08/05 12:50:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.8 2005/08/07 13:37:36 killerfox Exp $
+
+  07 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org> lsof-4.75.ebuild:
+  Stable on hppa.
 
   05 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> lsof-4.75.ebuild:
   Stable on sparc
