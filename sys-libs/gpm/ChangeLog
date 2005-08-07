@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.42 2005/05/07 23:30:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.43 2005/08/07 22:09:14 vapier Exp $
+
+*gpm-1.20.1-r5 (07 Aug 2005)
+
+  07 Aug 2005; Mike Frysinger <vapier@gentoo.org> +gpm-1.20.1-r5.ebuild:
+  Add mousewheel support by Andrzej Zaborowski #101605.
 
   05 May 2005; Mamoru KOMACHI <usata@gentoo.org> gpm-1.20.1-r4.ebuild:
   Forgot to add emacs to DEPEND when emacs is in USE
