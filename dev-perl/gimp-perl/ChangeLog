@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gimp-perl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/ChangeLog,v 1.1 2005/04/19 17:27:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/ChangeLog,v 1.2 2005/08/07 20:19:49 weeve Exp $
+
+  07 Aug 2005; Jason Wever <weeve@gentoo.org> gimp-perl-2.0.ebuild:
+  Added ~sparc keyword.
 
 *gimp-perl-2.0 (19 Apr 2005)
 

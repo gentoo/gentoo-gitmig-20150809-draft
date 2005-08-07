@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.0.ebuild,v 1.1 2005/04/19 17:27:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.0.ebuild,v 1.2 2005/08/07 20:19:49 weeve Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://cpan/authors/id/S/SJ/SJBURGES/Gimp2/${MY_P}.tar.gz
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8

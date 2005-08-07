@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 573baa90aadce259803f0628fc9e7c3c gimp-perl-2.0.ebuild 961
+MD5 6d1a27b8cb8bacbb4671060a1cce81fd ChangeLog 551
+MD5 705dc4a0e1ee3ac72c15a06c1bc174d4 gimp-perl-2.0.ebuild 964
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 0b290b35df995da4c2eff08d4caa3322 ChangeLog 462
 MD5 1021a7b941f28bd377d81884f166253c files/digest-gimp-perl-2.0 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCZT+UtG5z4I8BtQoRAt28AKCTYF50K4GD+zymscjNrZtlo9YrGwCeKaoM
-PbM/p5zexM0Zr39I5VIEYGw=
-=wgfd
------END PGP SIGNATURE-----
