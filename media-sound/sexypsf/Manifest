@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 911322c78317f34638494b4c6874c6ec ChangeLog 1003
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 11262095c7b27eb6b1cc272b56b8c8f0 ChangeLog 1093
 MD5 16e48240eb45b3d014770cf1a4977226 sexypsf-0.4.5.ebuild 1365
-MD5 5550aa73e869d884689ed5fadf235232 sexypsf-0.4.6.ebuild 1407
-MD5 41f230a0e2debf8b51025a2d796c6e31 files/digest-sexypsf-0.4.5 61
-MD5 ec1912f27a7e4330699ef6addc03a8b0 files/sexypsf-0.4.5-gentoo.patch 1608
-MD5 0ed9b80602e1c597dff882701ce72f64 files/digest-sexypsf-0.4.6 61
+MD5 718f9cbb34b957c7f1045b94c9225c7a sexypsf-0.4.6.ebuild 1402
 MD5 ff39a6a980f10f48a571b23c330a8951 files/sexypsf-0.4.6-gentoo.patch 1519
 MD5 5e7f5501e9177b1f1c3d2cdc084ad6d1 files/sexypsf-0.4.6-xmms.patch 435
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxSMEArHZZzCEUG0RAlC7AJ9DqeP9VrhfECrO2CC22/4+OE0A6QCeLqE0
-VyEhhAiUqy5AaOiftUvZA/U=
-=bhx5
------END PGP SIGNATURE-----
+MD5 ec1912f27a7e4330699ef6addc03a8b0 files/sexypsf-0.4.5-gentoo.patch 1608
+MD5 0ed9b80602e1c597dff882701ce72f64 files/digest-sexypsf-0.4.6 61
+MD5 41f230a0e2debf8b51025a2d796c6e31 files/digest-sexypsf-0.4.5 61
