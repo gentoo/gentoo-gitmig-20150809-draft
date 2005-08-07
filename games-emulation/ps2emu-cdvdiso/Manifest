@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 53c84edbf821b29ba6d3a54318c0a1ec ChangeLog 562
-MD5 5fa0c96ab93425f31def02fc6df9237e ps2emu-cdvdiso-0.3.ebuild 912
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 5fa0c96ab93425f31def02fc6df9237e ps2emu-cdvdiso-0.3.ebuild 912
+MD5 9e475ffbe539eb929907ce6778e472c4 ps2emu-cdvdiso-0.5.ebuild 979
+MD5 a770b8128242cbac1963b9f97fcf6407 ChangeLog 692
 MD5 fec7661eda4bca1577244c61d9d729a3 files/digest-ps2emu-cdvdiso-0.3 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiCOuHTu7gpaalycRAsL/AKDaEpbxSRAPqMPQO9gmwXK0v88ukwCfVkRo
-uyAzOWe8N77z+ZZb3cSoJ3E=
-=1hNA
------END PGP SIGNATURE-----
+MD5 be6f04adf121b428d50efb42e1ebd1e1 files/digest-ps2emu-cdvdiso-0.5 58
