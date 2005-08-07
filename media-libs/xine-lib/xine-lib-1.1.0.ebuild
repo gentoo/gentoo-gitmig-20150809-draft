@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0.ebuild,v 1.5 2005/08/05 08:22:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0.ebuild,v 1.6 2005/08/07 10:27:36 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic toolchain-funcs libtool
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="9"
+PATCHLEVEL="10"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"

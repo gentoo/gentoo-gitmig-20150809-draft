@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.238 2005/08/05 08:22:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.239 2005/08/07 10:27:36 flameeyes Exp $
+
+  07 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> xine-lib-1.1.0.ebuild:
+  Updated 02_all_pic.patch for hardened toolchain.
 
   05 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> xine-lib-1.1.0.ebuild:
   Updated dependencies (dropped libpng dependency, added imagemagick with
