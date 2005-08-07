@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libident/libident-0.22.ebuild,v 1.12 2005/04/24 10:54:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libident/libident-0.22.ebuild,v 1.13 2005/08/07 13:40:47 hansmi Exp $
 
 DESCRIPTION="A small library to interface to the Ident protocol server"
 HOMEPAGE="ftp://ftp.lysator.liu.se/pub/ident/libs"
 SRC_URI="ftp://ftp.lysator.liu.se/pub/ident/libs/${P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="alpha ~hppa ~mips ~sparc x86 ia64 s390 ~ppc amd64"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc s390 ~sparc x86"
 IUSE=""
 DEPEND="virtual/libc"
 
