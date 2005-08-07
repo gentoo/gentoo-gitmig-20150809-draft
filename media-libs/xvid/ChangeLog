@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.45 2005/06/28 22:00:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.46 2005/08/07 01:54:05 gongloo Exp $
+
+  07 Aug 2005; <gongloo@gentoo.org> xvid-1.1.0_beta2-r1.ebuild:
+  Keyworded ~ppc-macos. Closes bug 67507.
 
   28 Jun 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/xvid-1.1.0_beta2-amd64-gcc4.patch, xvid-1.1.0_beta2-r1.ebuild:
