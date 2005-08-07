@@ -1,12 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-spu2null/ps2emu-spu2null-0.21.ebuild,v 1.6 2004/11/03 00:18:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-spu2null/ps2emu-spu2null-0.2.1.ebuild,v 1.1 2005/08/07 07:25:27 vapier Exp $
 
 inherit games
 
+MY_PV=0.21
 DESCRIPTION="PSEmu2 NULL Sound plugin"
 HOMEPAGE="http://www.pcsx2.net/"
-SRC_URI="http://www.pcsx2.net/download/0.5release/SPU2null${PV}.zip"
+SRC_URI="http://www.pcsx2.net/download/0.5release/SPU2null${MY_PV}.zip"
 
 LICENSE="freedist"
 SLOT="0"
@@ -32,6 +33,6 @@ src_compile() {
 src_install() {
 	dodoc ReadMe.txt
 	exeinto ${GAMES_LIBDIR}/ps2emu/plugins
-	newexe Src/libSPU2null.so libSPU2null-${PV}.so
+	newexe Src/libSPU2null.so libSPU2null-${MY_PV}.so
 	prepgamesdirs
 }
