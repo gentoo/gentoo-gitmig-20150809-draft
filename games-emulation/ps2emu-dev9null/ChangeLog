@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/ps2emu-dev9null
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-dev9null/ChangeLog,v 1.2 2004/06/24 22:32:54 agriffis Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-dev9null/ChangeLog,v 1.3 2005/08/07 04:51:24 vapier Exp $
+
+*ps2emu-dev9null-0.3 (07 Aug 2005)
+
+  07 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +ps2emu-dev9null-0.3.ebuild:
+  Version bump #65374.
 
 *ps2emu-dev9null-0.1 (12 Dec 2003)
 
