@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.2 2005/08/07 13:55:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.3 2005/08/07 14:15:10 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -74,7 +74,7 @@ DVB_INCLUDE_DIR="/usr/include"
 
 # this code is from linux-mod.eclass
 update_vdrplugindb() {
-	local VDRPLUGINDB_DIR=${ROOT}/var/lib/vdrplugins-rebuild/
+	local VDRPLUGINDB_DIR=${ROOT}/var/lib/vdrplugin-rebuild/
 
 	if [[ ! -f ${VDRPLUGINDB_DIR}/vdrplugindb ]]; then
 		[[ ! -d ${VDRPLUGINDB_DIR} ]] && mkdir -p ${VDRPLUGINDB_DIR}
@@ -87,7 +87,7 @@ update_vdrplugindb() {
 }
 
 remove_vdrplugindb() {
-	local VDRPLUGINDB_DIR=${ROOT}/var/lib/vdrplugins-rebuild/
+	local VDRPLUGINDB_DIR=${ROOT}/var/lib/vdrplugin-rebuild/
 
 	if [[ -n $(grep ${CATEGORY}/${PN}-${PVR} ${VDRPLUGINDB_DIR}/vdrplugindb) ]]; then
 		einfo "Removing ${CATEGORY}/${PN}-${PVR} from vdrplugindb."
