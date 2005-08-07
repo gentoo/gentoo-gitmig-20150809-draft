@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/cryptplug
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.28 2005/01/02 19:18:15 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.29 2005/08/07 09:46:21 dragonheart Exp $
+
+  07 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  cryptplug-0.3.16-r1.ebuild:
+  change to mirror://gnupg
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

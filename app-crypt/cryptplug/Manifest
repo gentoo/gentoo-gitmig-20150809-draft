@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fd720a05585ed83c7766aded2811ff9d ChangeLog 3362
-MD5 56c7c1f25bc2bc3e86088cd78d552532 cryptplug-0.3.16-r1.ebuild 952
+MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
+MD5 3da456c43f1540d46b3f21d65f2e5e5b ChangeLog 3477
+MD5 10b1bfa5a259ced665c6058cf31b89c7 cryptplug-0.3.16-r1.ebuild 940
+MD5 fcd6801f3b4a1d686f007e21116d0068 files/digest-cryptplug-0.3.16-r1 68
 MD5 cdccd69cf2aa5ae99581ec0f966ba4ed files/cryptplug-0.3.16-64bit.dif 452
 MD5 6768ce3b7b579632728e609be93e902c files/cryptplug-0.3.16-initialize-fix.diff 365
-MD5 fcd6801f3b4a1d686f007e21116d0068 files/digest-cryptplug-0.3.16-r1 68
-MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC0ZWZI1lqEGTUzyQRAo4XAJ9RPmJb6Q5254w4Eva172eQTNP4SgCfc6ic
-SohkDq9L5Snk2ni81A3ovwY=
-=jejh
+iD8DBQFC9diDmdTrptrqvGERAhldAJ4rEHbERU3MQDESX9vw3q3hR41e9wCcDu1S
+N7O/bEICzqqnlVloYYGgxrQ=
+=hE6e
 -----END PGP SIGNATURE-----
