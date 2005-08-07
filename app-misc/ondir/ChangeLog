@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ondir
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.13 2005/06/02 05:49:44 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.14 2005/08/07 13:23:38 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> ondir-0.2.2.ebuild:
+  Stable on ppc.
 
   02 Jun 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   ondir-0.2.2.ebuild:
