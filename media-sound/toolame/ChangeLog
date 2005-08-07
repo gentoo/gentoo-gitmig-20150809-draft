@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/toolame
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.11 2005/06/19 20:47:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.12 2005/08/07 13:39:28 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> toolame-02l.ebuild:
+  Stable on ppc.
 
 *toolame-02l-r1 (19 Jun 2005)
 
