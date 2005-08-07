@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avinfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avinfo/ChangeLog,v 1.7 2005/05/10 13:00:05 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avinfo/ChangeLog,v 1.8 2005/08/07 13:35:30 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  avinfo-1.0_alpha15.ebuild:
+  Stable on ppc.
 
   10 May 2005; David Holm <dholm@gentoo.org> avinfo-1.0_alpha15.ebuild:
   Added to ~ppc.

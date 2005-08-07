@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.2.ebuild,v 1.9 2005/05/08 22:34:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.2.ebuild,v 1.10 2005/08/07 13:40:05 hansmi Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/xine-lib-1_beta8
 IUSE="nls lirc"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 
 SRC_URI="mirror://sourceforge/oxine/${P}.tar.gz"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/oxine
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.8 2005/05/08 22:34:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.9 2005/08/07 13:40:05 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> oxine-0.2.ebuild:
+  Stable on ppc.
 
   08 May 2005; Diego Pettenò <flameeyes@gentoo.org> oxine-0.2.ebuild:
   Added missing dep on popt. Fixes #70477. Removed COPYING from dodoc.
