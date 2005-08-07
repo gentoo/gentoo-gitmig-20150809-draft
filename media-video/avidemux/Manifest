@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 19f9f60ed5d6e54221b4b9551ab4f988 ChangeLog 16228
-MD5 ee5806b95c2dcfc5b397bcf7b64fc053 avidemux-2.0.24.ebuild 2486
-MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 d80cf399435b7b8c6b7eff979d7612ee avidemux-2.0.38-r1.ebuild 2735
 MD5 dac6310c09045540cf8c8ef4518167a4 avidemux-2.0.38.ebuild 2732
-MD5 7ff6a23ad501e8c2fdc37fb6fca5276d avidemux-2.0.40.ebuild 2865
-MD5 4a5a992e60d0ae7add8ac4bf1af425bf avidemux-2.0.42.ebuild 2821
+MD5 8e10cfd8a44d180a792d8e4ec1618995 ChangeLog 16351
+MD5 d80cf399435b7b8c6b7eff979d7612ee avidemux-2.0.38-r1.ebuild 2735
 MD5 b5ead11a870a9dd4c3251549960a7303 avidemux-2.0.40-r1.ebuild 2805
-MD5 4b0dc1a0f1e81197582e817410f8d180 files/2.0.38_rc2-fix-faad.patch 759
-MD5 03b785183df3226642178240a15f5a25 files/digest-avidemux-2.0.24 68
-MD5 cc1b60c4a9838d713cf334342af96a78 files/digest-avidemux-2.0.38 138
+MD5 7ff6a23ad501e8c2fdc37fb6fca5276d avidemux-2.0.40.ebuild 2865
+MD5 ee5806b95c2dcfc5b397bcf7b64fc053 avidemux-2.0.24.ebuild 2486
+MD5 556be20edf0387650b63a9a35e15c31e avidemux-2.0.42.ebuild 2821
+MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
+MD5 2459a69c5ddc080a5cb8b1312cbc90d6 files/digest-avidemux-2.0.42 138
 MD5 2e4c3410be3348fc36b780e6bd9f8683 files/digest-avidemux-2.0.38-r1 138
-MD5 0e47e20e917b79428c097e2920683db3 files/digest-avidemux-2.0.40 138
+MD5 cc1b60c4a9838d713cf334342af96a78 files/digest-avidemux-2.0.38 138
 MD5 be8cda57abb4f10dbe810d2e8565151e files/digest-avidemux-2.0.40-r1 138
-MD5 9e8c43427bfca9b17726ad9f02296787 files/digest-avidemux-2.0.42 138
+MD5 03b785183df3226642178240a15f5a25 files/digest-avidemux-2.0.24 68
+MD5 0e47e20e917b79428c097e2920683db3 files/digest-avidemux-2.0.40 138
+MD5 4b0dc1a0f1e81197582e817410f8d180 files/2.0.38_rc2-fix-faad.patch 759
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC4hXwj5H05b2HAEkRAg29AJ9jtxi/vcC/AK5GghkVevhCqzaWMwCeMVUx
-GgroJVKvSZ1H7HQEmxqvU1E=
-=S9tu
+iD8DBQFC9e+5j5H05b2HAEkRAqI4AJ40oWOC1fDZzCrjDSJyIeA5tdZbLgCgjDsn
+HcFkClXSSlLiuvE7KEA9O68=
+=QUHB
 -----END PGP SIGNATURE-----
