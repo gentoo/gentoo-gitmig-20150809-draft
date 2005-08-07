@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-pool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.26 2005/07/09 20:16:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.27 2005/08/07 13:00:53 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  commons-pool-1.2.ebuild:
+  Stable on ppc.
 
   09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> commons-pool-1.1.ebuild,
   commons-pool-1.2.ebuild:
