@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.133 2005/08/03 17:58:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.134 2005/08/07 18:10:13 kito Exp $
+
+  07 Aug 2005; Kito <kito@gentoo.org> db-4.2.52_p2.ebuild:
+  ~ppc-macos
 
   03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> db-1.85-r2.ebuild,
   db-4.0.14-r3.ebuild:
