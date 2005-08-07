@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6088a515b66dc67f44af49080f897f18 ChangeLog 1550
-MD5 6deb427a4aa783801adae835c3a8ea92 BerkeleyDB-0.26.ebuild 706
+MD5 b06195cd14ada32a84cf83e5ad5a840d BerkeleyDB-0.26.ebuild 705
 MD5 3cf9a8e9b6c21daabc284cd62c32740e metadata.xml 419
+MD5 c410e6d05d956c2b7fa948d3d4378ba8 ChangeLog 1648
 MD5 c34a00ce2826697402d48d40dc6d76be BerkeleyDB-0.25.ebuild 739
 MD5 7087d023559a2843c354a731a21c2ddf files/Gentoo-config-0.26.diff 568
 MD5 7463cf48040ddb011b8d843ee0749c17 files/Gentoo-config.diff 592
 MD5 d0108ca1b395d686172109e68c2ea99a files/digest-BerkeleyDB-0.25 67
 MD5 75d51d96614dc7634de3c7e19a943554 files/digest-BerkeleyDB-0.26 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdQXsCHk4+ZoBpvsRAl04AJ9Goy1VUQT2jSEFswF3VsMIgDd3IgCgv3zz
-rD7ISSeSPJpsnUpv2VwEPj8=
-=+Fzl
------END PGP SIGNATURE-----
