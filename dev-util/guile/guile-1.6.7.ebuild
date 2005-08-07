@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.7.ebuild,v 1.14 2005/07/23 20:30:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.7.ebuild,v 1.15 2005/08/07 18:57:18 kito Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -38,12 +38,10 @@ src_unpack() {
 		replace-flags -O3 -O2
 	fi
 
-	if use ppc-macos ; then
-		elibtoolize
-		epatch ${FILESDIR}/guile-macos-posix.patch
-		epatch ${FILESDIR}/guile-macos-relink.patch
-	fi
-
+	# fix for putenv on Darwin
+	epatch ${FILESDIR}/${P}-posix.patch
+	# fixes sleep/usleep errors on Darwin
+	epatch ${FILESDIR}/${P}-scmsigs.patch
 	# Fix for gcc-4.0
 	epatch ${FILESDIR}/${P}-gcc4.patch
 }
@@ -53,7 +51,7 @@ src_compile() {
 	# -g3, at least on some architectures.  (19 Aug 2003 agriffis)
 	filter-flags -g3
 
-	use ppc-macos && append-flags -no-cpp-precomp -Dmacosx
+	use userland_Darwin && append-flags -Dmacosx
 
 	econf \
 		--with-threads \

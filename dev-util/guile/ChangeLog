@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.47 2005/07/23 20:30:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.48 2005/08/07 18:57:18 kito Exp $
+
+  07 Aug 2005; Kito <kito@gentoo.org> +files/guile-1.6.7-posix.patch,
+  +files/guile-1.6.7-scmsigs.patch, guile-1.6.7.ebuild:
+  updated patches or gcc4/Darwin8
 
   23 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> guile-1.6.7.ebuild:
   Stable on sh.
