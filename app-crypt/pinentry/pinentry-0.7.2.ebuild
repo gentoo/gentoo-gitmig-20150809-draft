@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2.ebuild,v 1.7 2005/07/31 15:01:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2.ebuild,v 1.8 2005/08/07 10:08:36 dragonheart Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol"
 HOMEPAGE="http://www.gnupg.org/aegypten/"
-SRC_URI="ftp://ftp.gnupg.org/gcrypt/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gnupg/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
