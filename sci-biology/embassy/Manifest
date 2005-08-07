@@ -1,4 +1,6 @@
 MD5 6b30f977ca5c10e083dcd5e16fbe4560 embassy-2.10.0.ebuild 1201
-MD5 5914d1c49c6a0401ba6d4953224c5421 ChangeLog 2068
+MD5 2d4dae733b1f05570414a4f3a652467b embassy-3.0.0.ebuild 1345
+MD5 8d29b8fdbfafb1386e8377a2c27cd71b ChangeLog 2265
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-embassy-3.0.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-embassy-2.10.0 0
