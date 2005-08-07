@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/gwiz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/gwiz/ChangeLog,v 1.6 2005/05/09 13:31:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/gwiz/ChangeLog,v 1.7 2005/08/07 12:53:31 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> gwiz-0.8.ebuild:
+  Stable on ppc.
 
   09 May 2005; David Holm <dholm@gentoo.org> gwiz-0.8.ebuild:
   Added to ~ppc.
