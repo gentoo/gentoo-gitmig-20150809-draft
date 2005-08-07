@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tktable
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/ChangeLog,v 1.5 2004/11/06 15:41:39 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/ChangeLog,v 1.6 2005/08/07 12:59:58 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> tktable-2.9.ebuild:
+  Stable on ppc.
 
   06 Nov 2004; <pyrania@gentoo.org> tktable-2.8.ebuild, tktable-2.9.ebuild:
   Marked stable on x86.
