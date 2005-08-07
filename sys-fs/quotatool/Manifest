@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07781a1cff8138ce40e81c8c7017afcc quotatool-1.4.7.ebuild 561
+MD5 198811204c7d0a3d5b493f0bc555658c quotatool-1.4.6.ebuild 552
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a830163f78365027a930e086ca2c0ac0 quotatool-1.4.6.ebuild 552
-MD5 1772c267f3dd825b1b30737465470975 ChangeLog 560
+MD5 93113a40b685072d40a126bb9d393fcc ChangeLog 658
+MD5 07781a1cff8138ce40e81c8c7017afcc quotatool-1.4.7.ebuild 561
 MD5 a6d05970cd9c2ffacc28d2080e2b0848 files/digest-quotatool-1.4.7 67
 MD5 8f0691b13997d72769965653c8a5b24e files/digest-quotatool-1.4.6 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2l1UgIKl8Uu19MoRAvP/AJ9RzIxZTjCnIX3JsZsx2bZL1cVnTACffC16
-vWOxFoPA6oGmv8ux9DRmDH8=
-=5zQk
------END PGP SIGNATURE-----
