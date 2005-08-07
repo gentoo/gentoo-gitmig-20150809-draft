@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-SimpleObject
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SimpleObject/ChangeLog,v 1.7 2005/04/29 16:10:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SimpleObject/ChangeLog,v 1.8 2005/08/07 13:38:08 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  XML-SimpleObject-0.53.ebuild:
+  Stable on ppc.
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   XML-SimpleObject-0.53.ebuild:

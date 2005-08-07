@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Kismet
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.4 2004/11/23 00:07:48 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.5 2005/08/07 13:32:59 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Net-Kismet-0.04.ebuild:
+  Stable on ppc.
 
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
