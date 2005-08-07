@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.14 2005/08/06 16:51:55 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.15 2005/08/07 12:47:37 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> emacspeak-22.ebuild:
+  Stable on ppc.
 
   06 Aug 2005; William Hubbs <williamh@gentoo.org> emacspeak-22.ebuild:
   Moved emacspeak-22 to x86.
