@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/pcsx2
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/ChangeLog,v 1.6 2005/08/04 04:49:29 mr_bones_ Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/ChangeLog,v 1.7 2005/08/07 07:49:02 vapier Exp $
+
+  07 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/pcsx2-0.8.1-amd64.patch, pcsx2-0.8.1.ebuild:
+  Add support for amd64 #65374.
 
 *pcsx2-0.8.1 (04 Aug 2005)
 

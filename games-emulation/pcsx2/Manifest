@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 c682f106baa8968236f43cfed2bc5871 pcsx2-0.6.ebuild 1516
 MD5 1067681697ba11f950f2f50c21581f45 pcsx2-0.8.1.ebuild 1598
@@ -7,3 +10,10 @@ MD5 4117c94231158b69fecb21aa7f049626 files/pcsx2-0.8.1-amd64.patch 609
 MD5 7824dc74e2dffea379d9aa075d6dbecd files/digest-pcsx2-0.6 62
 MD5 4bdc90cba4d2039218051770ee1fff2f files/pcsx2 1368
 MD5 98a9029664c06eed7f435badf6397b4d files/pcsx2.png 11497
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9b0FgIKl8Uu19MoRAuo5AJ96SRBSoWIZDS64Dn3LXj1hyTUtCwCffNGy
+/uS3FpqLA0ZIvLj3mWqa9ek=
+=Wl8G
+-----END PGP SIGNATURE-----
