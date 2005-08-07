@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d31a2823c8fd3148d6032256435cd4 ChangeLog 3000
-MD5 6d027d747689cf90c5d8a92322fc19b5 kpdf-3.4.2-r2.ebuild 813
+MD5 e474deaf7c927dd189ba94dce2c7b7b0 ChangeLog 3109
 MD5 710200655b097652c4ea66ea6e5931db kpdf-3.4.1.ebuild 569
-MD5 da8c7b95896e393c3af5901801f76253 kpdf-3.4.2-r1.ebuild 698
-MD5 9d42c07d0672b69a347a437c76b5e024 kpdf-3.4.2.ebuild 578
-MD5 9c2e65b3a73536bc833276ff370ebbb5 kpdf-3.4.1-r1.ebuild 631
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 a603b1f40c870db682665f57f908df0e files/digest-kpdf-3.4.2-r1 71
+MD5 9d42c07d0672b69a347a437c76b5e024 kpdf-3.4.2.ebuild 578
+MD5 a4d8c8d59a9f3731403f5e2c78e68b9d kpdf-3.4.1-r1.ebuild 626
+MD5 da8c7b95896e393c3af5901801f76253 kpdf-3.4.2-r1.ebuild 698
+MD5 6d027d747689cf90c5d8a92322fc19b5 kpdf-3.4.2-r2.ebuild 813
+MD5 a603b1f40c870db682665f57f908df0e files/digest-kpdf-3.4.2 71
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1 221
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1-r1 221
 MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
+MD5 a603b1f40c870db682665f57f908df0e files/digest-kpdf-3.4.2-r1 71
 MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
-MD5 a603b1f40c870db682665f57f908df0e files/digest-kpdf-3.4.2 71
-MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
 MD5 a603b1f40c870db682665f57f908df0e files/digest-kpdf-3.4.2-r2 71
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9kFlj5H05b2HAEkRAkFVAJ9NcSLvTl1AIspcFnMhPt1QvwQwpQCeI/3x
-icNYPgFnZCh2QlIP1yf9JsQ=
-=0afj
------END PGP SIGNATURE-----
+MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
