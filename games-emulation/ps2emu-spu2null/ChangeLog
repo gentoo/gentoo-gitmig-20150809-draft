@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/ps2emu-spu2null
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-spu2null/ChangeLog,v 1.6 2005/08/07 07:25:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-spu2null/ChangeLog,v 1.7 2005/08/07 07:28:10 vapier Exp $
+
+*ps2emu-spu2null-0.4 (07 Aug 2005)
+
+  07 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +ps2emu-spu2null-0.4.ebuild:
+  Version bump.
 
 *ps2emu-spu2null-0.2.1 (12 Dec 2003)
 
