@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.19.0.ebuild,v 1.2 2005/08/07 12:51:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.19.0.ebuild,v 1.3 2005/08/07 14:54:57 swegener Exp $
 
 inherit eutils versionator
 
@@ -24,7 +24,7 @@ DEPEND="=x11-libs/gtk+-1*
 src_compile(){
 	[[ -f /usr/include/lcms/lcms.h ]] && \
 		append-flags -I/usr/include/lcms
-	
+
 	econf --with-openexr-prefix=/usr || die "econf failed"
 	emake || die "emake failed"
 }
