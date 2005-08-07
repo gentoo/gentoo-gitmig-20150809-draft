@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 70ccdddcbfafe8320a0450ec9b68274a ChangeLog 3241
-MD5 ae750297e34c9a0c4929184c72684260 metadata.xml 181
-MD5 57b2b6a0fa9c9cfe0a3ac430357ebf68 mmpython-0.4.7.ebuild 561
-MD5 9db51e255f9e3f2b4fd0a20136dd4ded mmpython-0.4.8.ebuild 562
 MD5 41f63b6b0b9df0e5293ce7496fbe1922 mmpython-0.4.9.ebuild 564
-MD5 84dd4700bcfc22c0b2169ebdd61e74a0 files/digest-mmpython-0.4.7 66
+MD5 9db51e255f9e3f2b4fd0a20136dd4ded mmpython-0.4.8.ebuild 562
+MD5 ae750297e34c9a0c4929184c72684260 metadata.xml 181
+MD5 0185ff6bf8fc503a31d51344e04894c7 ChangeLog 3336
+MD5 e403f58e01512a817967f171c5ed0d3f mmpython-0.4.7.ebuild 561
 MD5 287823425bfb710ec6983e0e337a13f1 files/digest-mmpython-0.4.8 66
+MD5 84dd4700bcfc22c0b2169ebdd61e74a0 files/digest-mmpython-0.4.7 66
 MD5 d11979d4293466257881b95a5291205a files/digest-mmpython-0.4.9 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC4phs2jLqHNfbg2URAuhHAKDRGKBlmO3Lune+Mrv/Sxrn8lhoIgCguDcP
-huW+XqHj6VCR0r/AvD0eOHc=
-=gXks
------END PGP SIGNATURE-----
