@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javacup
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.9 2005/07/09 16:03:43 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.10 2005/08/07 12:51:39 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> javacup-0.10k.ebuild:
+  Stable on ppc.
 
   09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> javacup-0.10k.ebuild:
   fix deps, and source useflag support
