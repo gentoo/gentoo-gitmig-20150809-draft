@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/prosite-19.7.ebuild,v 1.1 2005/08/06 19:03:21 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/prosite-19.7.ebuild,v 1.2 2005/08/07 16:01:28 ribosome Exp $
 
 DESCRIPTION="A protein families and domains database"
 HOMEPAGE="http://ca.expasy.org/prosite"
@@ -19,7 +19,7 @@ src_compile() {
 		mkdir PROSITE
 		echo
 		einfo "Indexing PROSITE for usage with EMBOSS."
-		EMBOSS_DATA="." prosextract -auto -infdat ${S} || die \
+		EMBOSS_DATA="." prosextract -auto -prositedir ${S} || die \
 			"Indexing PROSITE failed."
 		echo
 	fi
