@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0-r2.ebuild,v 1.10 2005/06/12 12:08:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0-r2.ebuild,v 1.11 2005/08/07 09:48:56 dragonheart Exp $
 
 inherit eutils
 
 DESCRIPTION="Standard GUI for GnuPG"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpa/index.html"
-SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gpa/${P}.tar.gz"
+SRC_URI="mirror://gnupg/alpha/gpa/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +28,7 @@ src_compile() {
 	[ -f "/usr/lib/gnupg/gpgkeys_hkp" ] && myconf="--libexecdir=/usr/lib"
 
 	GPGME_CONFIG=/usr/bin/gpgme-config \
-	econf `use_enable nls` \
+	econf $(use_enable nls) \
 		${myconf} || die "econf failed"
 	emake || die
 }

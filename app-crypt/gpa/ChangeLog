@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.32 2005/06/12 12:08:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.33 2005/08/07 09:48:56 dragonheart Exp $
+
+  07 Aug 2005; Daniel Black <dragonheart@gentoo.org> gpa-0.7.0-r2.ebuild:
+  change to mirror://gnupg + QA (backtick to $()
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> gpa-0.7.0-r2.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.
