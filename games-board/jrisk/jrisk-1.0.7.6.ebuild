@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/jrisk-1.0.7.6.ebuild,v 1.1 2005/06/28 03:25:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/jrisk-1.0.7.6.ebuild,v 1.2 2005/08/07 13:11:53 flameeyes Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/jrisk/Risk_src_${PV}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="jikes"
 
 RDEPEND=">=virtual/jre-1.4"

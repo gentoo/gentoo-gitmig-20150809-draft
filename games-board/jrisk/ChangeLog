@@ -1,6 +1,9 @@
 # ChangeLog for games-board/jrisk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/ChangeLog,v 1.1 2005/06/28 03:25:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/jrisk/ChangeLog,v 1.2 2005/08/07 13:11:53 flameeyes Exp $
+
+  07 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> jrisk-1.0.7.6.ebuild:
+  Marked ~amd64.
 
 *jrisk-1.0.7.6 (28 Jun 2005)
 
