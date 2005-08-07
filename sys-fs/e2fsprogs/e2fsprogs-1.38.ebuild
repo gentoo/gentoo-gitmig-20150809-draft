@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38.ebuild,v 1.7 2005/07/25 19:49:13 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38.ebuild,v 1.8 2005/08/07 06:36:56 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -28,6 +28,8 @@ src_unpack() {
 	chmod u+w po/*.po # Userpriv fix #27348
 	# Clean up makefile to suck less
 	epatch "${FILESDIR}"/e2fsprogs-1.36-makefile.patch
+	# Fix segfault with disconnected inodes #91751
+	epatch "${FILESDIR}"/${P}-disconnected-inodes.patch
 
 	# kernel headers use the same defines as e2fsprogs and can cause issues #48829
 	sed -i \
@@ -68,7 +70,7 @@ src_compile() {
 		$(use_enable nls) \
 		${myconf} \
 		|| die
-	if [[ ${CTARGET} != *-uclibc ]] && grep -qs 'USE_INCLUDED_LIBINTL.*yes' config.{log,status} ; then
+	if [[ ${CTARGET:-${CHOST}} != *-uclibc ]] && grep -qs 'USE_INCLUDED_LIBINTL.*yes' config.{log,status} ; then
 		eerror "INTL sanity check failed, aborting build."
 		eerror "Please post your ${S}/config.log file as an"
 		eerror "attachment to http://bugs.gentoo.org/show_bug.cgi?id=81096"

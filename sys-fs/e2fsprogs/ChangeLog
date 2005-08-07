@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.70 2005/07/25 19:49:13 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.71 2005/08/07 06:36:56 vapier Exp $
+
+  07 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/e2fsprogs-1.38-disconnected-inodes.patch, e2fsprogs-1.38.ebuild:
+  Add patch from upstream to fix segfault #91751 by Christopher Cowart / Ben
+  Schwartz.
 
   25 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> e2fsprogs-1.38.ebuild:
   Stable on hppa.
