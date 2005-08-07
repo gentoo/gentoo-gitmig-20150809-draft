@@ -1,5 +1,5 @@
-MD5 329a149a6d24b6510eb3a80db4e12a2f ChangeLog 660
 MD5 6d78c20ad3324f95c0eb1423059c6fbe os-utils-1.29.ebuild 400
-MD5 5aa691ae0dea0c9a036ba46664c4c26b os-utils-1.30.ebuild 404
+MD5 988647ec5fc97ebcb2bf429ff50052c1 os-utils-1.30.ebuild 399
+MD5 67f0666bd4aa7aad028ba92e3a05b399 ChangeLog 750
 MD5 3cc0791935969058aa67caee2be46d10 files/digest-os-utils-1.29 68
 MD5 e53e04ecc4d93f3a83f3acf04c55f38a files/digest-os-utils-1.30 68

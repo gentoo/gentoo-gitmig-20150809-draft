@@ -1,5 +1,5 @@
-MD5 957aa68e9a2e9dd65d681880ca574e59 ChangeLog 628
+MD5 1028768b5171c2d76b1e230141352a79 leim-1.20.ebuild 466
+MD5 e82bdc38dd4e0dfd2a5a5d9450a37f30 ChangeLog 714
 MD5 de6e06c3aa49e2f053c7b3dee88be752 leim-1.19.ebuild 466
-MD5 daca14b71751aa43db7a73fa45d3d7ca leim-1.20.ebuild 471
 MD5 1c570bf7bec6ea933e067243d1f88975 files/digest-leim-1.19 65
 MD5 350e133b312dc3aaf93bdfdb191726d7 files/digest-leim-1.20 65
