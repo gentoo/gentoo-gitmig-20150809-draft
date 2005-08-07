@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glimmer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/ChangeLog,v 1.14 2005/05/07 14:04:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/ChangeLog,v 1.15 2005/08/07 13:01:49 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  glimmer-1.2.1-r5.ebuild:
+  Stable on ppc.
 
   07 May 2005; David Holm <dholm@gentoo.org> glimmer-1.2.1-r5.ebuild:
   Added to ~ppc.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ctmkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctmkit/ChangeLog,v 1.6 2005/05/03 12:23:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctmkit/ChangeLog,v 1.7 2005/08/07 12:59:45 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ctmkit-19960528.ebuild:
+  Stable on ppc.
 
   03 May 2005; David Holm <dholm@gentoo.org> ctmkit-19960528.ebuild:
   Added to ~ppc.

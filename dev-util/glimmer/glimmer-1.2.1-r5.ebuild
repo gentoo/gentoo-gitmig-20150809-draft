@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r5.ebuild,v 1.8 2005/05/07 14:04:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r5.ebuild,v 1.9 2005/08/07 13:01:49 hansmi Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://glimmer.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="ppc sparc x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	=gnome-base/gnome-vfs-1*

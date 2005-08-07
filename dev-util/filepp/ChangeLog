@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/filepp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/filepp/ChangeLog,v 1.8 2005/05/07 12:36:27 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/filepp/ChangeLog,v 1.9 2005/08/07 13:08:28 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> filepp-1.6.0.ebuild:
+  Stable on ppc.
 
   07 May 2005; David Holm <dholm@gentoo.org> filepp-1.6.0.ebuild:
   Added to ~ppc.
