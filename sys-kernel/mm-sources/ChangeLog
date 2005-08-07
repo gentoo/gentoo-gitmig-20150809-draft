@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.238 2005/07/31 12:23:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.239 2005/08/07 14:05:20 chainsaw Exp $
+
+*mm-sources-2.6.13_rc5-r1 (07 Aug 2005)
+
+  07 Aug 2005; Tony Vroon <chainsaw@gentoo.org>
+  +mm-sources-2.6.13_rc5-r1.ebuild:
+  Version bump. -ia64; this kernel is broken on ia64: the spinlock consolidation patch needs fixing.
 
 *mm-sources-2.6.13_rc4-r1 (31 Jul 2005)
 
