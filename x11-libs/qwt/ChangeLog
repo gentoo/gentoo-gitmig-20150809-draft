@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.22 2005/07/07 05:04:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.23 2005/08/07 13:36:58 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> qwt-4.2.0.ebuild:
+  Stable on ppc.
 
   07 Jul 2005; Caleb Tennis <caleb@gentoo.org> qwt-4.2.0.ebuild:
   Fix qt dep
