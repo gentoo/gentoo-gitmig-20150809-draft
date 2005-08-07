@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.34 2005/07/19 17:31:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.35 2005/08/07 13:42:50 betelgeuse Exp $
+
+  07 Aug 2005; Petteri Räty <betelgeuse@gentoo.org>
+  servletapi-2.2-r2.ebuild, servletapi-2.3-r2.ebuild:
+  Updated DEPEND to >=virtual/jdk-1.4 because package org.xml.sax is needed to
+  compile and it is not provided with 1.3 jdks.
 
 *servletapi-2.2-r2 (19 Jul 2005)
 
