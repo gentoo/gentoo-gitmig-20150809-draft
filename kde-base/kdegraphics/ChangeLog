@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.175 2005/08/06 23:05:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.176 2005/08/07 01:37:41 weeve Exp $
+
+  07 Aug 2005; Jason Wever <weeve@gentoo.org> kdegraphics-3.3.2-r3.ebuild:
+  Stable on SPARC wrt security bug #100263.
 
   06 Aug 2005; Jason Wever <weeve@gentoo.org> kdegraphics-3.4.1-r1.ebuild:
   Stable on SPARC wrt security bug #100263.
