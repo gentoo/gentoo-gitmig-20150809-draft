@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.1 2005/08/06 14:35:11 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.2 2005/08/07 18:22:43 morfic Exp $
 
 inherit eutils toolchain-funcs
 
-IUSE="java tcpd"
+IUSE="java tcpd server"
 
 S="${WORKDIR}/vnc_unixsrc"
 DESCRIPTION="A great client/server software package allowing remote network access to graphical desktops."
@@ -34,26 +34,37 @@ src_unpack() {
 }
 
 src_compile() {
-	local CDEBUGFLAGS="${CFLAGS}"
-
 	xmkmf -a || die "xmkmf failed"
 
-	make CDEBUGFLAGS="${CDEBUGFLAGS}" World || die "make World failed"
-	cd Xvnc && ./configure || die "Configure failed."
+	make CDEBUGFLAGS="${CFLAGS}" World || die
 
-	if use tcpd; then
-		make EXTRA_LIBRARIES="-lwrap -lnss_nis" CDEBUGFLAGS="${CDEBUGFLAGS}" EXTRA_DEFINES="-DUSE_LIBWRAP=1" CC="$(tc-getCC)" || die
-	else
-		make CDEBUGFLAGS="${CDEBUGFLAGS}" CC="$(tc-getCC)" || die
+	if use server; then
+		cd Xvnc && ./configure || die "Configure failed."
+		if use tcpd; then
+			make EXTRA_LIBRARIES="-lwrap -lnss_nis" \
+				CDEBUGFLAGS="${CFLAGS}"  \
+				EXTRA_DEFINES="-DUSE_LIBWRAP=1" || die
+		else
+			make CDEBUGFLAGS="${CFLAGS}" || die
+		fi
 	fi
+
 }
 
 src_install() {
 	# the web based interface and the java viewer need the java class files
-	insinto /usr/share/tightvnc/classes ; doins classes/*
+	if use java; then
+		insinto /usr/share/tightvnc/classes
+		doins classes/*
+	fi
 
 	dodir /usr/share/man/man1 /usr/bin
 	./vncinstall ${D}/usr/bin ${D}/usr/share/man || die "vncinstall failed"
+
+	if ! use server; then
+		rm -f ${D}/usr/bin/vncserver
+		rm -f ${D}/usr/share/man/man1/{Xvnc,vncserver}*
+	fi
 
 	dodoc ChangeLog README WhatsNew
 	use java && dodoc ${FILESDIR}/README.JavaViewer
