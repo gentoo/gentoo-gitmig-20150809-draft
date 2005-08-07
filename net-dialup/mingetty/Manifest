@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5bb2ae6e54a014a13bb8deec2ad3d9b7 mingetty-1.07.3.ebuild 911
-MD5 ff30d091a5748e26535abf0fa05a0b50 ChangeLog 3305
-MD5 acdb7765fc8608543c8f2b6812f1f061 metadata.xml 389
+MD5 fd3bd077cdbd8cf18602da91ebb0f1c1 mingetty-1.07.3.ebuild 911
 MD5 1655dcdddfc2e6dc252ad4929600be08 mingetty-1.00.3.ebuild 983
-MD5 5f50d456f26044f81b45f8ca250ab5c6 files/digest-mingetty-1.00.3 67
-MD5 fb5372b3fc2060c149b422dec808215e files/digest-mingetty-1.07.3 67
+MD5 acdb7765fc8608543c8f2b6812f1f061 metadata.xml 389
+MD5 fe9de54f9c91518ca2b3be8dfa1c2579 ChangeLog 3402
 MD5 2468fd4da2ffd9439faecf5eb7630d85 files/mingetty-1.00-autologin.patch 13742
+MD5 fb5372b3fc2060c149b422dec808215e files/digest-mingetty-1.07.3 67
+MD5 5f50d456f26044f81b45f8ca250ab5c6 files/digest-mingetty-1.00.3 67
 MD5 b45f8ff6a45dabcd3b6d8477912dbd12 files/mingetty-1.00-strerror.patch 1729
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3eVINSP4Vda7IdsRAvQiAJ0V5AVkn3TqlpUVFnlt9+O7c1Z6zACdFcss
-nSvGnsSJAC4XxpZKQFCXf3k=
-=jtye
------END PGP SIGNATURE-----
