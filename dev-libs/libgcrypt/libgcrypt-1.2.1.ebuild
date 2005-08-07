@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1.ebuild,v 1.15 2005/07/09 02:55:55 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1.ebuild,v 1.16 2005/08/07 10:15:10 dragonheart Exp $
 
 inherit eutils
 
 DESCRIPTION="general purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
-SRC_URI="ftp://ftp.gnupg.org/gcrypt/libgcrypt/${P}.tar.gz"
+SRC_URI="mirror://gnupg/libgcrypt/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
