@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1366 2005/08/05 20:24:04 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1367 2005/08/07 09:28:58 dragonheart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -14,6 +14,7 @@ app-accessibility/gnome-speech:freetts - Adds support for the freetts speech dri
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty
 app-admin/apg:cracklib - Support for cracklib strong password checking
 app-admin/conky:seti - include seti monitoring capabilities if the correct config is edited ~/.conkyrc
+app-admin/conky:metar - enable weather monitoring using the dev-libs/mdsplib library
 app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing seperate IRIX passwords
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
