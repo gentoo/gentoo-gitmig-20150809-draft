@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/exmh
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/exmh/ChangeLog,v 1.10 2004/12/17 17:38:30 gustavoz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/exmh/ChangeLog,v 1.11 2005/08/07 12:55:17 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> exmh-2.7.0.ebuild:
+  Stable on ppc.
 
   17 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> exmh-2.7.0.ebuild:
   Stable on sparc
