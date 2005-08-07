@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-padxwin/ps2emu-padxwin-0.9.ebuild,v 1.1 2005/08/07 07:23:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-padxwin/ps2emu-padxwin-0.9.ebuild,v 1.2 2005/08/07 07:36:07 vapier Exp $
 
 inherit games
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/PADwin${PV//.}
 
 src_unpack() {
-	unrar x -idq "${DISTDIR}"/${A}
+	unrar x -idq "${DISTDIR}"/${A} || die
 	cd "${S}"
 	sed -i 's:-O2 -fomit-frame-pointer:$(OPTFLAGS):' Src/Makefile || die
 }
