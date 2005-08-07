@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.110 2005/07/30 05:39:50 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.111 2005/08/07 21:39:05 marineam Exp $
+
+*ck-sources-2.6.12_p5 (07 Aug 2005)
+
+  07 Aug 2005; Michael Marineau <marineam@gentoo.org>
+  -ck-sources-2.6.12_p3-r1.ebuild, -ck-sources-2.6.12_p4.ebuild,
+  +ck-sources-2.6.12_p5.ebuild:
+  Bump to ck6 and genpatches 11. Closes bug #101504 and thanks go to Kerin
+  Millar for fixing the patch conflicts so I didn't have to. :-)
 
   30 Jul 2005; Michael Marineau <marineam@gentoo.org>
   -files/digest-ck-sources-2.6.11_p10:

@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0697ef6c88d727f61f73df5e944897d5 ck-sources-2.6.12_p4.ebuild 1645
-MD5 43f194b4933a7e4b162d4a92e4d4c77a ChangeLog 24809
+MD5 0f90da5698fa8cb145a217f51c7e65c1 ck-sources-2.6.12_p5.ebuild 1581
+MD5 e9d59fbebe91965324ad9fc3d5d1cd89 ChangeLog 25138
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
-MD5 f43a24f403782cc93bfca447107c0022 ck-sources-2.6.12_p3-r1.ebuild 1641
-MD5 7626a3114d307c0453628dd62a8a87f8 files/digest-ck-sources-2.6.12_p3-r1 279
-MD5 c302bdbf2a41cf9ede7fd86ba69485f9 files/digest-ck-sources-2.6.12_p4 279
+MD5 3efb7d411e4d8c57e1a74ded35af486f files/digest-ck-sources-2.6.12_p5 279
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC6xLJnVkA0cTr1F4RAlM8AJ9CuoP5NrapOLrs1iUui8iQkfdO/wCeLlXN
-U13Y2+YaxvkyMhB/6U7nndo=
-=Fgvw
+iD8DBQFC9n+GnVkA0cTr1F4RAlDEAJ98rA+sQFNezMgFd3+pFDIGB55WkQCdHZub
+4sUcLd/l0uicrTolHI66JEs=
+=ZGnD
 -----END PGP SIGNATURE-----
