@@ -1,4 +1,4 @@
-MACOSX_DEPLOYMENT_TARGET=10.4
+export MACOSX_DEPLOYMENT_TARGET=10.4
 
 # <usata@gentoo.org> (23 Sep 2004)
 # /usr/X11R6 is not in our PATH
