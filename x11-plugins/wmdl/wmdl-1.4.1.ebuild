@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/wmdl-1.4.1.ebuild,v 1.11 2005/04/28 21:34:46 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/wmdl-1.4.1.ebuild,v 1.12 2005/08/07 13:00:11 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ibiblio.org/pub/linux/distributions/gentoo/distfiles/${P}.ta
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~sparc ~ppc"
+KEYWORDS="amd64 ppc ~sparc x86"
 
 DEPEND="virtual/libc
 	virtual/x11"

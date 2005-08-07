@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/ChangeLog,v 1.7 2005/04/28 21:34:46 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/ChangeLog,v 1.8 2005/08/07 13:00:11 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> wmdl-1.4.1.ebuild:
+  Stable on ppc.
 
   28 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> wmdl-1.4.1.ebuild:
   mark ~ppc
