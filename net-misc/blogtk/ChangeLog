@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/blogtk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.9 2005/03/02 23:38:26 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.10 2005/08/07 12:58:47 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> blogtk-1.0.ebuild:
+  Stable on ppc.
 
   02 Mar 2005; Gustavo Felisberto <humpback@gentoo.org>; blogtk-1.1.ebuild:
   Adding amd64 dep reported in #82245 thanks to Vermyndax

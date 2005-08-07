@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5f9bc4577441832fcff7850471d2e546 ChangeLog 1637
-MD5 56b5b09d1839ad09d7e3a94ca1d59eb5 blogtk-1.0.ebuild 819
-MD5 2aff7e248c7dcac422725fe5a0d55a59 blogtk-1.1.ebuild 877
+MD5 a129ec6f7f282474ba994a29ced6e536 blogtk-1.0.ebuild 816
 MD5 0720c622dd5394c4d8aceb8a44435e82 metadata.xml 224
-MD5 9c6d63937d69fd3b3cb659ff7f11f70e files/blogtk-1.0-destdir.patch 1029
+MD5 d7081531ff8454e7bdd40770e2f8f48f ChangeLog 1727
+MD5 2aff7e248c7dcac422725fe5a0d55a59 blogtk-1.1.ebuild 877
 MD5 f96e3cc6ede69196d19c7bf411d84065 files/digest-blogtk-1.0 62
+MD5 9c6d63937d69fd3b3cb659ff7f11f70e files/blogtk-1.0-destdir.patch 1029
 MD5 f594344e6d09e0e48b2525de5808cc9f files/digest-blogtk-1.1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJk5r8zY1VwezZiERAl2iAKCTGNov1p8IB4iPeL9t4heo0GEligCfdSId
-uCkVFn3XkHIHXWHH/Aaf7O0=
-=OTGH
------END PGP SIGNATURE-----
