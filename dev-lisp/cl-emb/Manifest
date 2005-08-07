@@ -1,4 +1,14 @@
-MD5 f2e3a294b8e96763501aec9e78e19de2 ChangeLog 1006
-MD5 49f0b853ca4f8c69b2e4a35713c487f0 cl-emb-0.3.1.ebuild 741
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7b6f8a3553acb87588ed27fb7218cf76 ChangeLog 1180
+MD5 6a59fff70fab12cad50221190bed5c8c cl-emb-0.4.1.ebuild 738
 MD5 15cc4d00d59af8b5ee6ffb7d0cc86fc6 metadata.xml 292
-MD5 b37c7e513ac9075e233c758739e00c1d files/digest-cl-emb-0.3.1 63
+MD5 dce003d5d3a23fcb8fd5db8092c308c8 files/digest-cl-emb-0.4.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC9mtVyiNZaEAZA+ARAuWZAJ4qhF+tncaJITvrFY11dUIK9Pjc6ACfbdJD
+MlRVpvGaQJZvC3o/BzFp1Yo=
+=mMWa
+-----END PGP SIGNATURE-----
