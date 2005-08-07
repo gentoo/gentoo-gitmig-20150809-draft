@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kamix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.15 2005/02/18 13:46:58 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.16 2005/08/07 13:08:47 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> kamix-0.5.7.ebuild:
+  Stable on ppc.
 
   18 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> kamix-0.6.1.ebuild:
   Make arts support optional again.
