@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.16 2005/07/02 20:35:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.17 2005/08/07 13:16:39 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> vdk-2.4.0.ebuild:
+  Stable on ppc.
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> vdk-2.4.0.ebuild:
   Stable on alpha.

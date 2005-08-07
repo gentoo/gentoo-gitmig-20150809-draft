@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f91577af87d6dae0ae5e5bf01420f92 ChangeLog 1769
-MD5 4947ebb6ec8d86caf11db3b648b545b4 metadata.xml 226
-MD5 a748574fa3ddf0171fdb4d213c1f94d7 vdk-2.4.0.ebuild 1664
-MD5 362802d08a50735dacc44422c6bf47eb vdk-2.0.2-r1.ebuild 912
 MD5 b3b9904376a77d65cd3050cc74b40e72 vdk-2.0.2.ebuild 885
+MD5 362802d08a50735dacc44422c6bf47eb vdk-2.0.2-r1.ebuild 912
+MD5 4947ebb6ec8d86caf11db3b648b545b4 metadata.xml 226
+MD5 9dd88d3a36a7e1c4248f2fdc701d93b4 ChangeLog 1859
+MD5 d9d8ca82ad206b3cfec22e718b75142f vdk-2.4.0.ebuild 1663
+MD5 99848ddbdb27f9085a04d4be864953c8 files/digest-vdk-2.0.2 61
+MD5 c3617790721213fc5725772e45f7b02b files/vdk-2.4.0-gcc3.4.patch 4695
 MD5 99848ddbdb27f9085a04d4be864953c8 files/digest-vdk-2.0.2-r1 61
 MD5 ce2f3ecb79a589ce3ac4bbd88f7bc2fd files/vdk-2.0.2-makefile.in.patch 445
-MD5 99848ddbdb27f9085a04d4be864953c8 files/digest-vdk-2.0.2 61
 MD5 8bbcc0a70a6e499bd8539275f40e574a files/digest-vdk-2.4.0 62
-MD5 c3617790721213fc5725772e45f7b02b files/vdk-2.4.0-gcc3.4.patch 4695
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxvqjKf2g/qXtneoRAtTbAKCOpQlMmWFuG9HRFm1dZDUN0O/tAgCbBzmM
-UAtM1EzAl7cNbMT7nqXu0Mg=
-=elJb
------END PGP SIGNATURE-----
