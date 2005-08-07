@@ -1,0 +1,8 @@
+--- linc.m4
++++ linc.m4
+@@ -1,4 +1,4 @@
+-AC_DEFUN(AM_PATH_LINC,
++AC_DEFUN([AM_PATH_LINC],
+ [dnl
+ dnl Get the cflags and libs from the linc-config script
+ dnl

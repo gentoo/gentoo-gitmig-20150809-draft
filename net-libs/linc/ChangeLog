@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/linc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.32 2005/04/27 11:31:08 azarah Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.33 2005/08/07 00:53:36 vapier Exp $
+
+  07 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/linc-1.0.3-m4.patch, linc-1.0.3-r1.ebuild:
+  Fix underquoting in m4 file.
 
 *linc-1.0.3-r1 (27 Apr 2005)
 
