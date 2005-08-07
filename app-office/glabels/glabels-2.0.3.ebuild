@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.0.3.ebuild,v 1.1 2005/07/03 14:14:59 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.0.3.ebuild,v 1.2 2005/08/07 13:45:18 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="static"
 
 RDEPEND=">=dev-libs/glib-2.2
@@ -31,8 +31,11 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
-G2CONF="${G2CONF} --disable-update-mimedb --disable-update-desktopdb \
-$(use_enable static)"
+
+pkg_setup() {
+	G2CONF="--disable-update-mimedb --disable-update-desktopdb \
+		$(use_enable static)"
+}
 
 src_unpack() {
 	unpack ${A}
@@ -41,12 +44,8 @@ src_unpack() {
 	# Avoid sandbox violation. See bug #60545.
 	epatch ${FILESDIR}/${P}-update_dbs_switch.patch
 
-	einfo "Running aclocal"
-	aclocal || die "Aclocal failed"
-	einfo "Running autoconf"
-	autoconf || die "Autoconf failed"
-	einfo "Running automake"
-	automake || die "Automake failed"
-	einfo "Running libtoolize"
+	aclocal || die "aclocal failed"
+	autoconf || die "autoconf failed"
+	automake || die "automake failed"
 	libtoolize --copy --force
 }
