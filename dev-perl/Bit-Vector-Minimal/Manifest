@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2b22edf302f4601713d4842179d43f5 ChangeLog 879
-MD5 cb73483be192a252ff2e90d26cadeaa8 Bit-Vector-Minimal-1.0.ebuild 497
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 368ec3fee6a984eec5f5e402029f6450 ChangeLog 981
 MD5 4bd4ede111aac5c59168e58564c1a9d6 Bit-Vector-Minimal-1.1.ebuild 499
-MD5 61fba421f68a1c1fa6e797158bd5ea9e files/digest-Bit-Vector-Minimal-1.1 72
+MD5 02f20e12bc3c48491e14446fe50599a8 Bit-Vector-Minimal-1.0.ebuild 494
 MD5 4a09c20eec97d43dbb19401682acd234 files/digest-Bit-Vector-Minimal-1.0 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2shytG5z4I8BtQoRAlkcAJkBqrESNrfNRZziqeSsoLSQ/O+JTQCZAZxO
-vPKqLSIwidqY9avVJsqd/8I=
-=NHip
------END PGP SIGNATURE-----
+MD5 61fba421f68a1c1fa6e797158bd5ea9e files/digest-Bit-Vector-Minimal-1.1 72
