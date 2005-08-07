@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.1-r1.ebuild,v 1.19 2005/07/29 23:41:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.1-r1.ebuild,v 1.20 2005/08/07 12:51:11 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://tools.openoffice.org/tools/dmake.html"
 
 SLOT="0"
 LICENSE="GPL-1"
-KEYWORDS="x86 sparc ~amd64 ~ppc"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/groff"
