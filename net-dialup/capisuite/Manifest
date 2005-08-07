@@ -1,8 +1,9 @@
 MD5 0294f1d40412a7a1a5e64f10ad4ba22f capisuite-0.4.5-r1.ebuild 2099
 MD5 017f50ded5070f5b725deda3ba7d7e9e capisuite-0.4.5.3.ebuild 1796
+MD5 9f9334b205eb460a81ca7b419df013d5 capisuite-0.4.5-r3.ebuild 2263
 MD5 9a1a55d18f62b4adcfa40bcf19eefba2 capisuite-0.4.5.ebuild 1357
 MD5 705a2e219e311cc3616d8ec94f27bd70 capisuite-0.4.5-r2.ebuild 2193
-MD5 92b884c90e53925920d515a8510a44d8 ChangeLog 3428
+MD5 d8458e3350d9f93cd7b011499e3fa919 ChangeLog 3590
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 63b5890053139f14a3d3baf78812e0bc files/capisuite-fax-compatibility.patch 423
 MD5 a6bdc491a9d9a33c0f41c68f06a320ca files/capisuite 487
@@ -15,4 +16,5 @@ MD5 b89c96393c676a2977e9b0b55b553b9f files/capisuite-0.4.5-capiv3.patch 2151
 MD5 f8cc369b2ad959cf9f00457f2729d5da files/digest-capisuite-0.4.5.3 137
 MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r1 68
 MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r2 68
+MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r3 68
 MD5 78748205ff049b27b92175e818a06e0d files/capisuite.initd 1417
