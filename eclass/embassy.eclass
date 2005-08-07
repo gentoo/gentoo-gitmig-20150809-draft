@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/embassy.eclass,v 1.10 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/embassy.eclass,v 1.11 2005/08/07 20:57:26 ribosome Exp $
 
 # Author Olivier Fisette <ribosome@gentoo.org>
 
@@ -8,13 +8,11 @@
 
 # The inheriting ebuild should provide a "DESCRIPTION", "KEYWORDS" and, if
 # necessary, add "(R|P)DEPEND"encies. Additionnaly, the inheriting ebuild's
-# name must begin by "embassy-".
+# name must begin by "embassy-". Also, before inheriting, the ebuild should
+# specify what version of EMBOSS is required by setting EBOV.
 
-inherit eutils
+inherit eutils multilib
 
-
-# EMBOSS version needed for the EMBASSY packages
-EBOV="2.9.0"
 # The EMBASSY package name, retrieved from the inheriting ebuild's name
 EN=${PN:8}
 # The full name and version of the EMBASSY package (excluding the Gentoo
@@ -23,14 +21,15 @@ EF="$(echo ${EN} | tr "[:lower:]" "[:upper:]")-${PV}"
 
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://emboss.sourceforge.net/"
-LICENSE="GPL-2"
-SRC_URI="ftp://ftp.uk.embnet.org/pub/EMBOSS/EMBOSS-${EBOV}.tar.gz
-	ftp://ftp.uk.embnet.org/pub/EMBOSS/${EF}.tar.gz"
+LICENSE="LGPL-2 GPL-2"
+SRC_URI="ftp://emboss.open-bio.org/pub/EMBOSS/EMBOSS-${EBOV}.tar.gz
+	ftp://emboss.open-bio.org/pub/EMBOSS/${EF}.tar.gz"
 
 SLOT="0"
 IUSE="X png"
 
-DEPEND="=sci-biology/emboss-${EBOV}
+DEPEND="=sci-biology/emboss-${EBOV}*
+	!<sci-biology/emboss-${EBOV}
 	X? ( virtual/x11 )
 	png? ( sys-libs/zlib
 		media-libs/libpng
@@ -47,6 +46,10 @@ embassy_src_unpack() {
 	cp /usr/$(get_libdir)/libajax.la EMBOSS-${EBOV}/ajax/
 	cp /usr/$(get_libdir)/libajaxg.la EMBOSS-${EBOV}/ajax/
 	cp /usr/$(get_libdir)/libnucleus.la EMBOSS-${EBOV}/nucleus/
+	if [ -e ${FILESDIR}/${PF}.patch ]; then
+		cd ${S}
+		epatch ${FILESDIR}/${PF}.patch
+	fi
 }
 
 embassy_src_compile() {
