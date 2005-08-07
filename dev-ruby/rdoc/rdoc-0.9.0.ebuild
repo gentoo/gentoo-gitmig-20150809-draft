@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-0.9.0.ebuild,v 1.8 2004/12/16 09:41:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-0.9.0.ebuild,v 1.9 2005/08/07 13:32:33 hansmi Exp $
 
 DESCRIPTION="Generates structured HTML documentation from Ruby source"
 HOMEPAGE="http://rdoc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/rdoc/${P}.tgz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="x86 ~sparc alpha ia64 ~ppc ppc64"
+KEYWORDS="alpha ia64 ppc ppc64 ~sparc x86"
 IUSE="X"
 DEPEND=">=dev-lang/ruby-1.6.5
 	X? ( >=media-gfx/graphviz-1.7 )"

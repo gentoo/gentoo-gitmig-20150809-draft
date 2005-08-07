@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.11 2004/12/16 09:41:22 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.12 2005/08/07 13:32:33 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> rdoc-0.9.0.ebuild:
+  Stable on ppc.
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> rdoc-0.9.0.ebuild:
   Stable on ppc64
