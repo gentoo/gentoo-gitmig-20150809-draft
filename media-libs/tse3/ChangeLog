@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tse3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.11 2005/07/30 16:56:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.12 2005/08/07 13:29:33 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> tse3-0.2.7.ebuild:
+  Stable on ppc.
 
   30 Jul 2005; Tony Vroon <chainsaw@gentoo.org>
   +files/tse3-0.2.7-gcc4.patch, tse3-0.2.7.ebuild:
