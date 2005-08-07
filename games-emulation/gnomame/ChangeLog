@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gnomame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomame/ChangeLog,v 1.8 2005/05/17 18:12:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomame/ChangeLog,v 1.9 2005/08/07 13:07:50 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gnomame-1.00_beta6.ebuild:
+  Stable on ppc.
 
   17 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
   gnomame-1.00_beta6.ebuild:

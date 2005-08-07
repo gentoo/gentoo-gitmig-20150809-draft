@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomame/gnomame-1.00_beta6.ebuild,v 1.8 2005/05/17 18:12:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomame/gnomame-1.00_beta6.ebuild,v 1.9 2005/08/07 13:07:50 hansmi Exp $
 
 MY_P="${P/_beta/b}"
 DESCRIPTION="GTK+ xmame catalog and frontend"
@@ -9,7 +9,7 @@ SRC_URI="http://gnomame.sourceforge.net/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*
