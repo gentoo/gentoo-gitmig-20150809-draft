@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 69a3a0388ba7b0179f5502dfe937abea ChangeLog 2083
-MD5 ace54fac902749818931aefdb30309f4 lfpfonts-var-0.83-r2.ebuild 563
-MD5 fbbbdeae26473e1396ac251aae78c700 lfpfonts-var-0.84.ebuild 683
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 a2ac4311cdf987bfca07158c701dcc02 ChangeLog 2181
+MD5 ace54fac902749818931aefdb30309f4 lfpfonts-var-0.83-r2.ebuild 563
+MD5 bb7b53cc19882229000c6f9afdd4394a lfpfonts-var-0.84.ebuild 679
 MD5 32cfeb4b05281c2c17c89e92a4effcc9 files/digest-lfpfonts-var-0.83-r2 70
 MD5 1fbd170543bf046084e7f3b9ba74751e files/digest-lfpfonts-var-0.84 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1/Hhj5H05b2HAEkRAi20AJ0cIJVojXiuFbJwSeiUE4Eod+taJgCfatAb
-Qs34WRPkylm1+LJ6JH9B26c=
-=0FnZ
------END PGP SIGNATURE-----
