@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14.ebuild,v 1.5 2005/08/01 17:03:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14.ebuild,v 1.6 2005/08/07 11:34:15 flameeyes Exp $
 
 inherit eutils
 
 DESCRIPTION="Library for overlaying text/glyphs in X-Windows X-On-Screen-Display plus binary for sending text from command line"
 HOMEPAGE="http://www.ignavus.net/"
 SRC_URI="mirror://debian/pool/main/x/xosd/${PN}_${PV}.orig.tar.gz
-	mirror://debian/pool/main/x/xosd/${PN}_${PV}-1.diff.gz"
+	mirror://debian/pool/main/x/xosd/${PN}_${PV}-1.diff.gz
+	http://digilander.libero.it/dgp85/gentoo/${PN}-gentoo-m4-1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -38,7 +39,7 @@ src_unpack() {
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
 	libtoolize --force --copy || die
-	aclocal -I ${FILESDIR}/m4 || die
+	aclocal -I ${WORKDIR}/m4 || die
 	automake -a -f -c || die
 	autoconf || die
 }

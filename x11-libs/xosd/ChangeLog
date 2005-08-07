@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.48 2005/08/01 17:03:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.49 2005/08/07 11:34:15 flameeyes Exp $
+
+  07 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/m4/gdk-pixbuf.m4, xosd-2.2.14.ebuild:
+  Provide xmms and gtk m4 library files in a tarball, to allow building where
+  they are not present.
 
   01 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
   +files/m4/gdk-pixbuf.m4, xosd-2.2.14.ebuild:

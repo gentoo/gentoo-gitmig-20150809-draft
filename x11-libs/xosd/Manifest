@@ -1,23 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b308f73e887113f8a7a3667c8f19bc57 ChangeLog 6384
+MD5 f9a2d26042fe82bd8ec61f6afc5049b7 ChangeLog 6586
+MD5 556c8fc6e7bca931c6883bb62128d8fb xosd-2.2.14.ebuild 1554
+MD5 10956efe64cdc5b4c856238685592839 xosd-2.2.8-r1.ebuild 1033
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 3f2b043bcd5292c5f5834acdbb62d0a4 xosd-2.2.10.ebuild 1038
-MD5 10956efe64cdc5b4c856238685592839 xosd-2.2.8-r1.ebuild 1033
-MD5 3827e13c8d7047aa1e88e87da40a9d14 xosd-2.2.14.ebuild 1488
-MD5 5b6bffe8689739aff9d0eb219cc443d8 files/2.2.8-xmms-trackpos.patch 5167
-MD5 1132764268b2645df6a9a3ba6bf06e4d files/bmp-dlg_config.patch 403
 MD5 c06ab555d3db962ce6e7d8bfe88940b9 files/digest-xosd-2.2.10 64
-MD5 dc6cccd80375fbcc480c1dbfdc651681 files/digest-xosd-2.2.14 132
+MD5 7a327614154b7eb25a641f0ad4bdec90 files/xosd-2.2.14-bmp-fixes.patch 11472
 MD5 5cc83e3e259529faf0fd390e9d8b7d04 files/xosd-2.2.14-m4.patch 242
 MD5 06e494585c2baa22f89b8916515a7741 files/digest-xosd-2.2.8-r1 63
-MD5 7a327614154b7eb25a641f0ad4bdec90 files/xosd-2.2.14-bmp-fixes.patch 11472
-MD5 f081f8eb69df2ec6f097cfece3f356b8 files/m4/gdk-pixbuf.m4 6732
+MD5 1132764268b2645df6a9a3ba6bf06e4d files/bmp-dlg_config.patch 403
+MD5 5b6bffe8689739aff9d0eb219cc443d8 files/2.2.8-xmms-trackpos.patch 5167
+MD5 9ee14940cb0d412247cc9a15d989cd93 files/digest-xosd-2.2.14 199
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC7lYMArHZZzCEUG0RAtTeAJ9J0wEJsfPvx2nB8TF6LgrMG5cy1QCdG4q8
-Wxr6vDxd2oTdUdxUB/5izjI=
-=IpRi
+iD8DBQFC9fEdj5H05b2HAEkRAtwgAJ4xYvrmIEpG5WoUWMriYeXgf2a7wgCfeLnY
+hsLakdy328ayI1tal1k5J78=
+=gXpi
 -----END PGP SIGNATURE-----
