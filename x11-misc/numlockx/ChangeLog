@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/numlockx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.13 2005/06/14 01:39:36 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.14 2005/08/07 12:57:05 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> numlockx-1.0.ebuild:
+  Stable on ppc.
 
   14 Jun 2005; Jonathan Smith <smithj@gentoo.org> numlockx-1.0.ebuild:
   fixed homepage and src_uri for #89353
