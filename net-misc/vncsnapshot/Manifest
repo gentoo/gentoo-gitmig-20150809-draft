@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 11dc28515d702346392f49526c5595f2 ChangeLog 594
-MD5 661487184944a3631ef6e584b05a0119 vncsnapshot-1.1.ebuild 889
-MD5 0e5a5ceddc5dcccf1caac8d55df4710d vncsnapshot-1.2a.ebuild 888
+MD5 503128348c72d05d4b61e63efcec2430 vncsnapshot-1.1.ebuild 886
 MD5 db6edc8a810ccb0d18acaf03e20a677c metadata.xml 259
+MD5 0d21445340f30fa0bff12d51f35457de ChangeLog 693
+MD5 0e5a5ceddc5dcccf1caac8d55df4710d vncsnapshot-1.2a.ebuild 888
 MD5 21841ad97e9ecf1236c69f9999e779d7 files/digest-vncsnapshot-1.1 71
 MD5 5282a9f8749ae599819f873f2c66ccd1 files/digest-vncsnapshot-1.2a 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvbyIxtZcznfol0URAjgiAJ9YcvNqlePxwmx0mcN4jYixdBncdACg9xMl
-PEMtxBnBin84yjZ21ZM146Y=
-=zszh
------END PGP SIGNATURE-----
