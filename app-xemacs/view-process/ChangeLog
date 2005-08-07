@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/view-process
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/view-process/ChangeLog,v 1.8 2005/01/01 17:19:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/view-process/ChangeLog,v 1.9 2005/08/07 13:12:28 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  view-process-1.12.ebuild:
+  Stable on ppc.
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> view-process-1.12.ebuild:
   Stable on ppc64
