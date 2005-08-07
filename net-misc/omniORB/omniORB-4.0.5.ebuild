@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.5.ebuild,v 1.6 2005/06/06 11:21:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.5.ebuild,v 1.7 2005/08/07 13:34:07 hansmi Exp $
 
 DESCRIPTION="A robust, high-performance CORBA 2 ORB"
 SRC_URI="mirror://sourceforge/omniorb/${PF}.tar.gz"
@@ -10,7 +10,7 @@ IUSE="ssl"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ~ppc ppc64 x86"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 x86"
 
 DEPEND="dev-lang/python
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
