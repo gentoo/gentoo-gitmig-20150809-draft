@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qtools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/ChangeLog,v 1.7 2005/08/06 21:19:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/ChangeLog,v 1.8 2005/08/07 13:31:09 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> qtools-0.56.ebuild:
+  Stable on ppc.
 
   06 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   +files/qtools-0.56-head.patch, qtools-0.56.ebuild:
