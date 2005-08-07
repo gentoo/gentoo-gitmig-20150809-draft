@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.4 2005/08/07 09:32:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.5 2005/08/07 22:11:55 dragonheart Exp $
+
+  07 Aug 2005; Daniel Black <dragonheart@gentoo.org> files/digest-conky-1.2,
+  Manifest:
+  digest fix - bug #101678. Thanks Olivier Crete
 
 *conky-1.2 (07 Aug 2005)
 
