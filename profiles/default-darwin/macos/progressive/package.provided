@@ -19,7 +19,6 @@ app-text/texi2html-1.57
 dev-db/mysql-4.1.10a
 dev-java/javascriptcore-96
 dev-java/sun-jdk-1.5
-dev-java/sun-jre-bin-1.5.0.04
 dev-lang/objc4-235
 dev-lang/perl-5.8.6
 dev-lang/python-2.3.5
