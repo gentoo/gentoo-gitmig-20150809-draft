@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b0e28ca1134c84a6edf9c51bb271a519 vlorb-1.2.ebuild 686
-MD5 0bf89c0c6b7c16dcaadbbf9468fee520 ChangeLog 819
+MD5 3dc0553e5b50dc9a3cb3df3dbd288f3c vlorb-1.2.ebuild 682
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 8ab4f29b3e97152a52627b33d6628510 ChangeLog 906
 MD5 95f864aa97c049e9c6f8e66a8ba32272 files/digest-vlorb-1.2 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCmKpM06ebR+OMO78RAloaAJwL0hLw7wk7gnS+tIbBRtH5YhBrawCggqt8
-yRB08blrFGS9VSA3BzogoFA=
-=lNns
------END PGP SIGNATURE-----
