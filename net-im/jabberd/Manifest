@@ -1,8 +1,7 @@
-MD5 80dcceaf6b8b8351d724346acec4f223 ChangeLog 9510
+MD5 e1b59f2ede500e84b9d1d3ebb666a0cb ChangeLog 9669
 MD5 1de04ab5d7e18332a5d73790aadf336f jabberd-1.4.3-r4.ebuild 5813
 MD5 073710b6dd1869d3930f8f2e857341e8 metadata.xml 411
 MD5 dbb285912f47ec8143993f9a79081817 jabberd-1.4.3-r5.ebuild 5813
-MD5 0445152b94712b92ab09cbd0e7667898 jabberd-2.0.8-r2.ebuild 3673
 MD5 b5b6c3f989d6b146b58d39875ae3e7bb jabberd-2.0.9.ebuild 3628
 MD5 1a325b6068e591bc222376a7d70f6e17 files/README.Gentoo 984
 MD5 264b9719c0773f480ee42d8a61c34d0a files/digest-jabberd-1.4.3-r4 201
@@ -22,6 +21,4 @@ MD5 92ba69168d2fb8c1384e8e13e03dcbc2 files/xdb-ldap.xml 985
 MD5 a8408aaabc3453cfd3cbe3df1a65f67e files/xml-stream-patch-00 726
 MD5 264b9719c0773f480ee42d8a61c34d0a files/digest-jabberd-1.4.3-r5 201
 MD5 078528dc08a082b7a0534d4f6c5c5f5e files/jabber.rc6-r8 800
-MD5 5cd694a78ebb4a4fabf831fa52a781c1 files/jabberd-2.0.8-r2-FindBin.patch 1748
-MD5 d8d135b77fd2ec99c355191b584e600a files/digest-jabberd-2.0.8-r2 65
 MD5 4817e867644d7d7bd2e1a0724571fbe9 files/digest-jabberd-2.0.9 65
