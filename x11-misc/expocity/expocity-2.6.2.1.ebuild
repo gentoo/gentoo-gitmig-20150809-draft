@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.4 2005/07/06 23:42:16 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.5 2005/08/07 13:32:06 hansmi Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="xinerama"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 RDEPEND="virtual/x11
 		>=x11-libs/pango-1.2
