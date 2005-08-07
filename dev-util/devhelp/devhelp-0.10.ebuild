@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.10.ebuild,v 1.1 2005/07/01 22:11:43 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.10.ebuild,v 1.2 2005/08/07 12:59:47 leonardop Exp $
 
-inherit gnome2 eutils
+inherit eutils gnome2
 
 DESCRIPTION="An API documentation browser for GNOME 2"
 HOMEPAGE="http://www.imendio.com/projects/devhelp"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE="zlib firefox"
 
 RDEPEND=">=x11-libs/gtk+-2.6
@@ -24,20 +24,20 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS COPYING ChangeLog README NEWS TODO"
 
-G2CONF="${G2CONF} $(use_with zlib)"
+pkg_setup() {
+	G2CONF="$(use_with zlib)"
 
-if use firefox ; then
-	G2CONF="${G2CONF} --with-mozilla=firefox"
-else
-	G2CONF="${G2CONF} --with-mozilla=mozilla"
-fi
+	if use firefox ; then
+		G2CONF="${G2CONF} --with-mozilla=firefox"
+	else
+		G2CONF="${G2CONF} --with-mozilla=mozilla"
+	fi
+}
 
 src_unpack() {
-
 	unpack ${A}
-
 	cd ${S}
+
 	# fix mozilla includes
 	epatch ${FILESDIR}/${P}-fix_includes.patch
-
 }
