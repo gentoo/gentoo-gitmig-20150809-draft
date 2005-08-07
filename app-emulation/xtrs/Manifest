@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 acd8501cd450c14f484908750dfe31b9 xtrs-4.9.ebuild 1362
-MD5 b73cc9a68544775a4777518f52ba603e ChangeLog 834
+MD5 6eb272f88cdd1678808015e5fce8535e xtrs-4.9.ebuild 1359
+MD5 6a6fdf970e2d1134291e198080776f88 ChangeLog 921
 MD5 87c9c445c414fb24d688e0eda2d8363d files/digest-xtrs-4.9 119
 MD5 4bcbf9c6717042e4c3793af452ada659 files/xtrs-4.9-gentoo.diff 4318
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCm1cuI1lqEGTUzyQRApt1AKDAYZzlngefSluHD5Ed2/6y/ri8HQCfWKmi
-oHyyAPvJKK8uuCeor22K1W4=
-=aECE
------END PGP SIGNATURE-----
