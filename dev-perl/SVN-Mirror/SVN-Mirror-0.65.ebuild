@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/SVN-Mirror-0.65.ebuild,v 1.1 2005/08/03 14:05:40 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/SVN-Mirror-0.65.ebuild,v 1.2 2005/08/07 04:37:58 pclouds Exp $
 
 inherit perl-module
 
@@ -19,6 +19,7 @@ DEPEND="${DEPEND}
 	>=dev-perl/TermReadKey-2.21
 	>=dev-perl/SVN-Simple-0.26
 	dev-perl/Class-Accessor
+	dev-perl/TimeDate
 	dev-perl/File-chdir"
 
 
