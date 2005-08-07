@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 bff04080295f4bf58991f54ae1b0ff30 ps2emu-gssoft-0.6.1.ebuild 878
 MD5 bd00f8f9c6309f49596aef361b00f28b ChangeLog 468
 MD5 a1009be2d1e95d9ceaacdb2f481c82fc files/digest-ps2emu-gssoft-0.6.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9ZPxgIKl8Uu19MoRAgvyAJ9wWH2+amreF1sPDQd0BCo82i1cBQCfY83v
+CUFtOLbLMO97sarZnU9tCYk=
+=1ioZ
+-----END PGP SIGNATURE-----
