@@ -1,3 +1,16 @@
-MD5 fa6564e73365a353280ef27cd9619944 ChangeLog 453
-MD5 72242b6296512286d4a0017ee5f99295 dirmngr-0.5.5.ebuild 763
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3c671baab05c360a43b85507f2001487 ChangeLog 666
+MD5 f5ca4eaf4dfaf5072fde043d473e8cec dirmngr-0.5.5.ebuild 752
+MD5 a12c5e190e23ec662968246d10f1091c dirmngr-0.9.2.ebuild 919
+MD5 cbb90c3fb885f86a1c6bea0f4493f9ab metadata.xml 250
 MD5 22e234dadafd204d164688c74f414966 files/digest-dirmngr-0.5.5 65
+MD5 12548a566356d6e9a6d7cb0a05e68305 files/digest-dirmngr-0.9.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9d0zmdTrptrqvGERAq1eAJsEImTSOHcDJoC5nFlJZvWERifVdwCgjg0f
+zG9bG0/Qpc6bFxgUtnw9bzg=
+=sNxF
+-----END PGP SIGNATURE-----
