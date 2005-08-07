@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/bluecloth
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.1 2005/08/07 22:35:18 citizen428 Exp $
+
+*bluecloth-1.0.0 (07 Aug 2005)
+
+  07 Aug 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +bluecloth-1.0.0.ebuild:
+  Initial import. Ebuild submitted by Ben de Groot <ben@stijlstek.nl> in bug
+  #101561.
+
