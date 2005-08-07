@@ -5,7 +5,11 @@
 <maintainer>
   <email>dragonheart@gentoo.org</email>
     <name>Daniel Black</name>
-    <description>A user ebuild that I felt obliged to include. Please take over if you want it</description>
+</maintainer>
+<maintainer>
+  <email>brenden@rty.ca</email>
+    <name>Brenden Matthews</name>
+    <description>Upstream author and gentoo user</description>
 </maintainer>
 <longdescription>
 Conky is a system monitor that sits in the corner of your desktop.
