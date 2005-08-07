@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4381141f7b2870cb40e4539c181afe02 savirc-1.99.ebuild 607
-MD5 782ef0c12b68de74dc26fda52624241c ChangeLog 696
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 5b90d693b0c0b84b72aefa7ea7ff8f9a ChangeLog 786
+MD5 d398563819d9b6f5ee75569421ed3882 savirc-1.99.ebuild 604
 MD5 fce718870194389baf6714aa25440fbf files/digest-savirc-1.99 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCFAGmI1lqEGTUzyQRAs2JAJ4k+JJAzZQG94/qXyf6c7xuv5EtjgCguma2
-RvBUKEJccpFfXrwnM+o4PuM=
-=s4Bn
------END PGP SIGNATURE-----

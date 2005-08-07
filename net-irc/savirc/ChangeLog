@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/savirc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/savirc/ChangeLog,v 1.4 2005/02/17 02:29:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/savirc/ChangeLog,v 1.5 2005/08/07 12:59:16 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> savirc-1.99.ebuild:
+  Stable on ppc.
 
   17 Feb 2005; Sven Wegener <swegener@gentoo.org> savirc-1.99.ebuild:
   Changed tarball from .gz to .bz2.
