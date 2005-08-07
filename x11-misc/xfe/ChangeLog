@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.24 2005/07/05 21:55:45 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.25 2005/08/07 13:17:31 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> xfe-0.72.ebuild:
+  Stable on ppc.
 
 *xfe-0.84 (05 Jul 2005)
 
