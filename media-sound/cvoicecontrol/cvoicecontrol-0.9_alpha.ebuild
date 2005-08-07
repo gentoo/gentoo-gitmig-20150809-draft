@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.14 2005/07/15 13:23:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.15 2005/08/07 12:55:38 hansmi Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc"
 SLOT="0"
 LICENSE="GPL-2"
 
-KEYWORDS="amd64 sparc x86 ~ppc"
+KEYWORDS="amd64 ppc sparc x86"
 
 src_unpack() {
 	unpack ${A}
