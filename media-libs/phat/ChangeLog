@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.6 2005/06/12 12:12:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.7 2005/08/07 13:18:08 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> phat-0.2.3.ebuild:
+  Stable on ppc.
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> phat-0.2.3.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

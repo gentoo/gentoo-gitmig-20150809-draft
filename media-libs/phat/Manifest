@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 46fae7edb512c33d3cadfacd315eecd8 phat-0.2.3.ebuild 698
-MD5 969363013ab68b3b7e852d7b227da964 ChangeLog 989
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 e979f12c7ae50ea2bfb9fcbd8f9e21b1 ChangeLog 1078
+MD5 8a88ec4146d3cc34d681552bb8e85dc2 phat-0.2.3.ebuild 695
 MD5 a188652fea06dc2403bf387d33481386 files/digest-phat-0.2.3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrCbaI1lqEGTUzyQRAhilAKComNBL6Ccyc2zmWJVgMkWmVCVYlgCdENU7
-N8EWGmmjOg9PwOrp5fwhj1M=
-=/oWZ
------END PGP SIGNATURE-----
