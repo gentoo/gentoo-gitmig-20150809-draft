@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.4.ebuild,v 1.11 2004/09/28 20:32:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.4.ebuild,v 1.12 2005/08/07 13:16:15 hansmi Exp $
 
 inherit gnome2 eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mfcn.ilo.de/gnomeradio/"
 IUSE="lirc"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc"
+KEYWORDS="amd64 ppc ~sparc x86"
 
 RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/gconf-1.2
