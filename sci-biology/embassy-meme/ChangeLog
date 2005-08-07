@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/embassy-meme
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-meme/ChangeLog,v 1.10 2005/07/30 00:41:21 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-meme/ChangeLog,v 1.11 2005/08/07 21:41:10 ribosome Exp $
+
+*embassy-meme-2.3.1-r2 (07 Aug 2005)
+
+  07 Aug 2005; Olivier Fisette <ribosome@gentoo.org>
+  embassy-meme-2.3.1-r1.ebuild, +embassy-meme-2.3.1-r2.ebuild:
+  Ported 2.3.1-r1 to the improved embassy.eclass. The new version is part of
+  EMBASSY 3.0.0.
 
   30 Jul 2005; Olivier Fisette <ribosome@gentoo.org>
   embassy-meme-2.3.1-r1.ebuild:

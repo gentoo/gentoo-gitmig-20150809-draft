@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/embassy-esim4
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-esim4/ChangeLog,v 1.9 2005/07/28 02:16:27 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-esim4/ChangeLog,v 1.10 2005/08/07 21:41:10 ribosome Exp $
+
+*embassy-esim4-1.0.0-r2 (07 Aug 2005)
+
+  07 Aug 2005; Olivier Fisette <ribosome@gentoo.org>
+  embassy-esim4-1.0.0-r1.ebuild, +embassy-esim4-1.0.0-r2.ebuild:
+  Ported 1.0.0-r1 to the improved embassy.eclass. The new version is part of
+  EMBASSY 3.0.0.
 
   28 Jul 2005; Olivier Fisette <ribosome@gentoo.org>
   -embassy-esim4-1.0.0.ebuild:

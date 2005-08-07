@@ -1,6 +1,15 @@
 # ChangeLog for sci-biology/embassy-domainatrix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/ChangeLog,v 1.9 2005/07/28 02:12:58 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/ChangeLog,v 1.10 2005/08/07 21:41:10 ribosome Exp $
+
+*embassy-domainatrix-0.1.0 (07 Aug 2005)
+
+  07 Aug 2005; Olivier Fisette <ribosome@gentoo.org>
+  +embassy-domainatrix-0.1.0.ebuild, embassy-domainatrix-1.0.0-r1.ebuild:
+  Ported version 1.0.0-r1 to the improved embassy.eclass. Version 0.1.0 is
+  really an upgrade; it is normal to be required to downgrade from 1.0.0 to
+  0.1.0 to upgrade to EMBASSY 3.0.0. This is an issue with upstream's
+  versionning scheme.
 
   28 Jul 2005; Olivier Fisette <ribosome@gentoo.org>
   -embassy-domainatrix-1.0.0.ebuild:
