@@ -1,6 +1,9 @@
 # ChangeLog for net-im/msnlib
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.13 2004/12/29 03:11:45 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.14 2005/08/07 22:22:51 josejx Exp $
+
+  07 Aug 2005; Joseph Jezak <josejx@gentoo.org> msnlib-3.4.ebuild:
+  Marked ppc stable for bug #101233.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

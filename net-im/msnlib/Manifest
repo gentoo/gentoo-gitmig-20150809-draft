@@ -1,6 +1,16 @@
-MD5 c2076523bb692c41de50fe2f22269bb6 ChangeLog 1752
-MD5 8dd3ce3dd6babaeadb622036e470aa27 msnlib-3.3.ebuild 682
-MD5 e1d0efce98c54481275565bfae1cc327 msnlib-3.4.ebuild 686
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4147e0251fe176c271aaecb24bfb1cce ChangeLog 1856
+MD5 24481030c53a152b59aeb0b14291394f msnlib-3.4.ebuild 684
 MD5 eccd3e44b1e8fc954692d4faf329cf38 metadata.xml 218
-MD5 077f41042bf22094e9a23f2086764ba1 files/digest-msnlib-3.4 62
+MD5 8dd3ce3dd6babaeadb622036e470aa27 msnlib-3.3.ebuild 682
 MD5 84abb721b620625b031d2e35dbd622a3 files/digest-msnlib-3.3 62
+MD5 077f41042bf22094e9a23f2086764ba1 files/digest-msnlib-3.4 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC9om7csIHjyDViGQRAkRgAJ0a74iOG5hRFo47q0SGTLL5jrXvuwCg5MpK
+9kDhxU0r86SFWyc2ceipRYk=
+=ZDIU
+-----END PGP SIGNATURE-----

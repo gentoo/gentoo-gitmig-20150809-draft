@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.4.ebuild,v 1.4 2004/09/27 09:22:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.4.ebuild,v 1.5 2005/08/07 22:22:51 josejx Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://auriga.wearlab.de/~alb/msnlib/files/${P}.tar.bz2"
 
 LICENSE="OSL-1.1"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="ppc ~sparc x86"
 DEPEND=">=dev-lang/python-2.2.2"
 
 DOCS="README INSTALL doc/*"
