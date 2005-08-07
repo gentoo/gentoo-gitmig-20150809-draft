@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Bit-Vector-Minimal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector-Minimal/ChangeLog,v 1.5 2005/07/17 21:07:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector-Minimal/ChangeLog,v 1.6 2005/08/07 13:13:28 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Bit-Vector-Minimal-1.0.ebuild:
+  Stable on ppc.
 
 *Bit-Vector-Minimal-1.1 (17 Jul 2005)
 

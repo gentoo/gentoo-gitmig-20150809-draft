@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/PDF-Create-0.01.ebuild,v 1.10 2005/04/19 10:38:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/PDF-Create-0.01.ebuild,v 1.11 2005/08/07 13:08:58 hansmi Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ HOMEPAGE="http://search.cpan.org/~ftassin/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ~ppc sparc alpha"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
