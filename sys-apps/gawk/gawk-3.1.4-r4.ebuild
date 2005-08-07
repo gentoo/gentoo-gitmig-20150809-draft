@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r4.ebuild,v 1.5 2005/05/14 17:56:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r4.ebuild,v 1.6 2005/08/07 23:53:05 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 
 	# Copy filefuncs module's source over ...
-	cp -PR "${FILESDIR}"/filefuncs "${SFFS}"/ || die "cp failed"
+	cp -pPR "${FILESDIR}"/filefuncs "${SFFS}"/ || die "cp failed"
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-disable-DFA.patch #78227
@@ -38,7 +38,7 @@ src_unpack() {
 
 	if use xml ; then
 		mkdir "${SXML}"
-		cp -a "${S}"/* "${SXML}"/
+		cp -pPR "${S}"/* "${SXML}"/
 		cd "${SXML}"
 		EPATCH_OPTS="-p2 -g0" epatch "${DISTDIR}"/${XML_PATCH} #57857
 	fi
