@@ -1,6 +1,12 @@
 # ChangeLog for media-video/cinepaint
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.7 2005/04/19 09:03:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.8 2005/08/07 12:51:44 flameeyes Exp $
+
+  07 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/cinepaint-lcms.patch, cinepaint-0.19.0.ebuild:
+  Don't apply a patch to use /usr/include/lcms path, just append a -I flag if
+  the file is there (nothing needed for newer version of media-libs/lcms that
+  don't install in /lcms path).
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.19.0.ebuild,v 1.1 2005/03/18 20:06:07 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.19.0.ebuild,v 1.2 2005/08/07 12:51:44 flameeyes Exp $
 
 inherit eutils versionator
 
@@ -21,17 +21,10 @@ DEPEND="=x11-libs/gtk+-1*
 	media-libs/tiff
 	media-libs/jpeg"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# lcms is <lcms/lcms.h> not <lcms.h>
-	# fix that in configure detection
-	# and in source
-	epatch ${FILESDIR}/${PN}-lcms.patch
-}
-
 src_compile(){
+	[[ -f /usr/include/lcms/lcms.h ]] && \
+		append-flags -I/usr/include/lcms
+	
 	econf --with-openexr-prefix=/usr || die "econf failed"
 	emake || die "emake failed"
 }
