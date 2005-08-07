@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 09273003623a0ad500f07cb800b8c861 gaim-snpp-0.8.0.ebuild 633
-MD5 db8d84300b95bdeb38dcacbad4281c6c ChangeLog 2362
+MD5 5202df9bd857f7fffdc188c30e5bed1f gaim-snpp-0.8.0.ebuild 633
 MD5 9b491355156c64a34d2294df5354eaed metadata.xml 354
+MD5 afe7031d9a8c53e75ad19f724f9e7d13 ChangeLog 2461
 MD5 6197af66a1a89a1cf327056548e2dcff files/digest-gaim-snpp-0.8.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3V6s2G5bA0cA/ScRAu7VAKCFLHFNm5hEP0mKLTeMuZOCDjcU0wCgnNeq
-9FuGtOv1QolkGYp0aj626YE=
-=A/nl
------END PGP SIGNATURE-----
