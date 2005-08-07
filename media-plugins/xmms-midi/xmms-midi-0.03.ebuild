@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.15 2004/10/10 20:16:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.16 2005/08/07 13:05:35 hansmi Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://ban.joh.cam.ac.uk/~cr212/xmms-midi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64 sparc"
+KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND="media-sound/xmms
 	media-sound/timidity++"
