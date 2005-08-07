@@ -1,0 +1,15 @@
+# The user to run the MonetDB database as.  It is recommended to
+# leave this as is, portage created this user during installation
+MDB_USER=monetdb
+MDB_GROUP=monetdb
+
+# MonetDB must be started with a startup script which tells it what
+# to do.  Most users will not want to change this startup script
+# as it loads the SQL, XQuery (pathfinder) and Mapi modules which
+# allow for SQL, XQuery and MIL connections.
+# If you have special demands, point this variable to your own script
+# which contains the desired commands.
+# Note: for security reasons by default all listening connections are
+# bound to 127.0.0.1.  If you need connections to be bound at 0.0.0.0
+# have a look at the default startup script to enable this.
+MDB_STARTUPSCRIPTS=~monetdb/monetdb-startup.mil

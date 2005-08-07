@@ -1,0 +1,14 @@
+# ChangeLog for dev-db/monetdb
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.1 2005/08/07 13:23:17 grobian Exp $
+
+*monetdb-4.8.2 (06 Aug 2005)
+
+  06 Aug 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/monetdb.conf-4.8.2, +files/monetdb.init-4.8.2,
+  +files/monetdb-4.8.2-gentoo-MapiClient.patch,
+  +files/monetdb-4.8.2-gentoo-conf.patch, +files/monetdb-4.8.2-startup.mil,
+  +files/monetdb-start.sh, +files/monetdb-stop.sh, +files/monetdb_config.sh,
+  +metadata.xml, +monetdb-4.8.2.ebuild:
+  Initial import of MonetDB 4.8.2 with SQL and XQuery support
+

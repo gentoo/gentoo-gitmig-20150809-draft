@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+	use net
+}
+
+start() {
+	ebegin "Starting MonetDB"
+	start-stop-daemon -c $MDB_USER:$MDB_GROUP --start --exec ~monetdb/monetdb-start.sh -- $MDB_STARTUPSCRIPTS
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping MonetDB"
+	start-stop-daemon -c $MDB_USER:$MDB_GROUP --start --exec ~monetdb/monetdb-stop.sh
+	eend $?
+}

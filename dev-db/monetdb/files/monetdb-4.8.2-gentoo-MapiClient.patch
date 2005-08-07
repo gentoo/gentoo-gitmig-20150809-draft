@@ -1,0 +1,11 @@
+--- MonetDB-4.8.2/src/mapi/clients/C/MapiClient.mx	2005-01-21 17:25:11.000000000 +0100
++++ MapiClient.mx	2005-02-09 13:34:51.251310750 +0100
+@@ -1285,7 +1285,7 @@
+ {
+ 	opt *set = NULL;
+ 	int setlen;
+-	char *language = "mil";
++	char *language = "sql";
+ 	int port = 0;
+ 	char *user = NULL;
+ 	char *passwd = NULL;

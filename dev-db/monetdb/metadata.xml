@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>grobian@gentoo.org</email>
+		<name>Fabian Groffen</name>
+	</maintainer>
+	<longdescription>
+		MonetDB is a main-memory database developed at CWI the
+		Netherlands.  The main-memory focus of the database has resulted
+		in a column based way of dealing with relational tables.  Due to
+		this unconventional approach, MonetDB can be a very fast
+		database for complex queries, and as such in use (and perfectly
+		suitable) for intensive data-mining tasks.
+		MonetDB 4 supports its own kernel language, MIL, the
+		conventional SQL query language and the relatively new XML
+		querying language, XQuery.
+	</longdescription>
+</pkgmetadata>
