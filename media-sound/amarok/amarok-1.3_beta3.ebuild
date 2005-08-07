@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3_beta3.ebuild,v 1.1 2005/08/01 17:07:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3_beta3.ebuild,v 1.2 2005/08/07 19:30:18 carlo Exp $
 
 inherit kde eutils
 
@@ -61,6 +61,11 @@ pkg_setup() {
 
 	# check whether kdelibs was compiled with arts support
 	kde_pkg_setup
+}
+
+src_unpack() {
+	kde_src_unpack
+	sed -i -e "s:postgresql/pgsql/libpq-fe.h:libpq-fe.h:" amarok/src/collectiondb.cpp
 }
 
 src_compile() {

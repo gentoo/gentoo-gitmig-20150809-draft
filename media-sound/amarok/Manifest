@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5635afceb32cd272b00707ddaea0d6e5 amarok-1.2.3.ebuild 2329
-MD5 b23600108f12c98a4fd574d3487ee598 metadata.xml 175
 MD5 1ee3acebe81507e0c32abba7e8b064d4 amarok-1.2.4.ebuild 2398
-MD5 d3b33fd9fcb926b909632ac3906a4db6 amarok-1.3_beta1.ebuild 2616
 MD5 be3b5561aa4735d778bdf2975882d329 amarok-1.3_beta2.ebuild 2887
-MD5 f1eee1db0edb0d0b40ebf822ed089cf7 ChangeLog 9805
-MD5 fa1c2923d76c9963e6a8dfbdc0f1f2b4 amarok-1.3_beta3.ebuild 2885
-MD5 55c15fa0003bd71db5f7e23d750c0b16 files/digest-amarok-1.2.3 66
-MD5 9966964d087dd7c05b7fa2efeff9b1ac files/digest-amarok-1.2.4 66
-MD5 33dc3bd54b4b930141bae88dd6b51bb7 files/digest-amarok-1.3_beta1 70
+MD5 5635afceb32cd272b00707ddaea0d6e5 amarok-1.2.3.ebuild 2329
+MD5 d3b33fd9fcb926b909632ac3906a4db6 amarok-1.3_beta1.ebuild 2616
+MD5 d37e14ba1c2b47fe5494edb379e1a759 ChangeLog 9902
+MD5 b23600108f12c98a4fd574d3487ee598 metadata.xml 175
+MD5 5bd9c65d0d50c1739ec1ec380d92ac09 amarok-1.3_beta3.ebuild 2998
 MD5 32030194ea3f2079d1db17aa160f63a2 files/amarok-gcc4.gz 522
+MD5 33dc3bd54b4b930141bae88dd6b51bb7 files/digest-amarok-1.3_beta1 70
 MD5 95e269be8072f18e8c81a8f7c0036c52 files/digest-amarok-1.3_beta2 70
 MD5 c9909155aef0c42f87e0a3956671fa6e files/digest-amarok-1.3_beta3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC7lbrj5H05b2HAEkRAgsoAJ9dnotN3TegBSifPbs8+eZMTLA9ugCffnfy
-TiOmS1lLuLanqoG4cR8u0YQ=
-=9dnR
------END PGP SIGNATURE-----
+MD5 55c15fa0003bd71db5f7e23d750c0b16 files/digest-amarok-1.2.3 66
+MD5 9966964d087dd7c05b7fa2efeff9b1ac files/digest-amarok-1.2.4 66
