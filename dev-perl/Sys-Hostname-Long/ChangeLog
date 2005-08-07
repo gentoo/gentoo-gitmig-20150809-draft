@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sys-Hostname-Long
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Hostname-Long/ChangeLog,v 1.5 2005/05/30 19:38:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Hostname-Long/ChangeLog,v 1.6 2005/08/07 12:53:14 hansmi Exp $
+
+  07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Sys-Hostname-Long-1.2.ebuild:
+  Stable on ppc.
 
   30 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   Sys-Hostname-Long-1.2.ebuild:
