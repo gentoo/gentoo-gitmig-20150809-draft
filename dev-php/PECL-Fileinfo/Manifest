@@ -1,18 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 805cfbc939000b135e0b277c380a4bc4 PECL-Fileinfo-0.3.ebuild 513
-MD5 a018128e8d0c9f2314dc191c577993ef PECL-Fileinfo-0.2.ebuild 512
-MD5 ce1b6ec440e40daa29803f868b8c238c PECL-Fileinfo-1.0.ebuild 513
-MD5 456408f7ae86413cd8605f7f1dec3db7 ChangeLog 753
+MD5 806ff40396c3fe2aafca415e4d3537a7 PECL-Fileinfo-1.0.ebuild 519
+MD5 240adad45ff7da29ecd79af0794c8aa6 ChangeLog 949
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 40304e43b365e0428613782f30a5ccc7 files/digest-PECL-Fileinfo-0.2 59
-MD5 9bcb5f98980a2831c149c0144a431915 files/digest-PECL-Fileinfo-0.3 59
 MD5 46ba777513035be7795811299fa8bf8c files/digest-PECL-Fileinfo-1.0 59
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCxNN8aGfFFLhbXWkRAtSDAJ0a7AJf3NdIUfjV8HR9kkgvzaW51gCdEoI1
-Iii1q0tppFJDH/PhZo2sKGQ=
-=C1oD
+iD8DBQFC9dPgaGfFFLhbXWkRAv7DAJ9QYTpsop6mPRcpI5x69EaTmlGa8gCff5Cf
+zj1HpE7ie2ZNem9bcUGL6zY=
+=OQ/D
 -----END PGP SIGNATURE-----
