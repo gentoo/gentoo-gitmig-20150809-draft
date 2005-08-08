@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f3710e93deedcf5d9ee60a55c33aa269 mailbase-1.ebuild 1535
-MD5 a5d2b893cb09235e3c253d9d0c50f3fa mailbase-0.00-r7.ebuild 1922
-MD5 f224d58950c57b4f07888966ad00cd9a mailbase-0.00-r5.ebuild 877
-MD5 49503f6e00aba90637484ef6fd9af542 mailbase-0.00-r9.ebuild 2428
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 9199352cf76278406a943618dd4a54ef mailbase-0.00-r8.ebuild 2262
-MD5 d70889cf9ee474b30325789a31c253a9 mailbase-0.00-r6.ebuild 902
+MD5 beceb72afeb6510c6d88ffda5810f6e0 ChangeLog 7264
 MD5 78fc96c16b9dc1d4902c62927e664ce9 mailbase-0.00-r4.ebuild 773
-MD5 78ad6cc1ffd78f3d1cb564f7d65fc526 ChangeLog 7178
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r7 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r8 0
-MD5 a5623a262865054bd43c914e740a2e52 files/aliases 809
-MD5 df65e6e407e866c7e6721e79f731ae6a files/mailcap 2235
+MD5 f224d58950c57b4f07888966ad00cd9a mailbase-0.00-r5.ebuild 877
+MD5 d70889cf9ee474b30325789a31c253a9 mailbase-0.00-r6.ebuild 902
+MD5 a5d2b893cb09235e3c253d9d0c50f3fa mailbase-0.00-r7.ebuild 1922
+MD5 9199352cf76278406a943618dd4a54ef mailbase-0.00-r8.ebuild 2262
+MD5 49503f6e00aba90637484ef6fd9af542 mailbase-0.00-r9.ebuild 2428
+MD5 07c424f61334fc0f5bc09a45391a63f7 mailbase-1.ebuild 1535
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 e75c39fbdac8eec750d84a7183ac6721 files/common-pamd 417
+MD5 a5623a262865054bd43c914e740a2e52 files/aliases 809
+MD5 9850ca185823a3094ae3f6c2a057a3fb files/common-pamd-include 362
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r4 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r5 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r6 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r7 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r8 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r9 0
-MD5 9850ca185823a3094ae3f6c2a057a3fb files/common-pamd-include 362
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9dBMgIKl8Uu19MoRAiikAJ9NnvK8J0NiyOUNjcQsOwCohOFKVwCdFQho
-BI08t5KHkGuk8/mpAxUEKFM=
-=VDU2
------END PGP SIGNATURE-----
+MD5 df65e6e407e866c7e6721e79f731ae6a files/mailcap 2235
