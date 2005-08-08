@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xf86dga
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/ChangeLog,v 1.1 2005/08/08 06:28:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/ChangeLog,v 1.2 2005/08/08 20:14:19 fmccor Exp $
+
+  08 Aug 2005; Ferris McCormick <fmccor@gentoo.org> xf86dga-0.99.0.ebuild:
+  Add ~sparc keyword (Modular X testing).
 
 *xf86dga-0.99.0 (08 Aug 2005)
 
