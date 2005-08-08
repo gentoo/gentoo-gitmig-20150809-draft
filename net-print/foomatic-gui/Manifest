@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 451f41933fe8b401c7ea5fcea163fb37 foomatic-gui-0.6.7.ebuild 661
-MD5 485506680bdb330431c2ec93077fe2bc ChangeLog 600
+MD5 a82aedd25f49cfdf904ddd52a5ae143b ChangeLog 808
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 cd953a3ef1a89126a66c7736d35031fa foomatic-gui-0.7.4.16.ebuild 662
+MD5 87e5dd24b16d9978a6423210aa5b7c69 foomatic-gui-0.6.7.ebuild 670
+MD5 bea02fd656257fbd621d7a1255c21bcb files/digest-foomatic-gui-0.7.4.16 73
 MD5 8b5eb2b262dd26a6855d855ca466f994 files/digest-foomatic-gui-0.6.7 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCpc1IevY57Fted3ERAs6tAKDDpkty2KIpaiTXGLOWLdTXO4fLxQCgiyKw
-mLZfCgOCY5M1txr3auGR9Mo=
-=TpQ1
------END PGP SIGNATURE-----
