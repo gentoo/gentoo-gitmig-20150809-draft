@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r6.ebuild,v 1.3 2005/07/17 18:20:38 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r6.ebuild,v 1.4 2005/08/08 10:55:51 greg_g Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -106,7 +106,7 @@ src_unpack() {
 	fi
 
 	if use ppc-macos ; then
-		epatch ${FILESDIR}/${P}-macos.patch || die "MacOS X11 patch failed!"
+		epatch ${FILESDIR}/${P}-macos.patch
 	fi
 
 	# known working flags wrt #77623
