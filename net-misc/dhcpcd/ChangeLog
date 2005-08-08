@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.55 2005/07/31 13:10:56 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.56 2005/08/08 00:49:45 weeve Exp $
+
+  08 Aug 2005; Jason Wever <weeve@gentoo.org> dhcpcd-2.0.0.ebuild:
+  Added ~sparc keyword as it was dropped against policy.
 
   31 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> dhcpcd-2.0.0.ebuild:
   Added ~mips.
