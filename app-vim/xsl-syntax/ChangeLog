@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/xsl-syntax
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl-syntax/ChangeLog,v 1.6 2005/07/29 13:03:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl-syntax/ChangeLog,v 1.7 2005/08/08 21:45:40 ciaranm Exp $
+
+*xsl-syntax-0.3.11-r1 (08 Aug 2005)
+
+  08 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +xsl-syntax-0.3.11-r1.ebuild:
+  Use hi def link rather than hi link. Bug #101787, bug #101804.
 
   29 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> xsl-syntax-0.3.11.ebuild:
   Added ~mips.
