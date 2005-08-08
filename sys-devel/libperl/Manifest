@@ -1,27 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ddd9af353404e152f72725fde56cdce9 libperl-5.8.7.ebuild 10511
+MD5 faa9f545e3711c37ee78d83eb338eebb libperl-5.8.6.ebuild 10471
+MD5 bf70b069d8a29b1cba1949437f7e8b0c libperl-5.8.5.ebuild 9920
+MD5 be57b8457762771bc4b3018afd55d704 libperl-5.8.6-r1.ebuild 10463
+MD5 635041e9c1d4a39c9269c241a2e0e6df libperl-5.8.7.ebuild 10508
+MD5 e6fae72a5278a66b962a1a6c5daca068 ChangeLog 11658
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 0c4e374212081e6b4ae8f6de28da8732 libperl-5.8.6.ebuild 10474
-MD5 7378f7ed5b20c8d895f14ab9cc130d74 libperl-5.8.6-r1.ebuild 10466
-MD5 f11c46f097b3aac9747c13cd7efb05a4 libperl-5.8.5.ebuild 9923
-MD5 06779bc2a7157616c641b91c9995252c libperl-5.8.5-r1.ebuild 10032
-MD5 cae303346bf6f34ae6e278ce4e9e65d0 ChangeLog 11446
-MD5 0bdca74363c218d91a0db4ad1ea55485 files/libperl-create-libperl-soname.patch 417
-MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-libperl-5.8.5-r1 64
-MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-libperl-5.8.6-r1 64
-MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-libperl-5.8.6 64
-MD5 f7324a62f22aabde3387b7e8a8b2106e files/libperl-reorder-INC.patch 1141
-MD5 ce442db939c59218a16be167f793b817 files/libperl-5.8.2-uclibc.patch 573
+MD5 0875c75155583aa2bec241b36265d371 libperl-5.8.5-r1.ebuild 10029
 MD5 076dcbef37263d6dd7af719b55cfc2de files/libperl-noksh.patch 611
 MD5 ce442db939c59218a16be167f793b817 files/libperl-uclibc.patch 573
+MD5 f7324a62f22aabde3387b7e8a8b2106e files/libperl-reorder-INC.patch 1141
+MD5 0bdca74363c218d91a0db4ad1ea55485 files/libperl-create-libperl-soname.patch 417
 MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-libperl-5.8.5 64
+MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-libperl-5.8.6 64
 MD5 c10e44e47d7f702efe7d4009064a97ca files/digest-libperl-5.8.7 64
+MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-libperl-5.8.5-r1 64
+MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-libperl-5.8.6-r1 64
+MD5 ce442db939c59218a16be167f793b817 files/libperl-5.8.2-uclibc.patch 573
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC7oTEgIKl8Uu19MoRAkvwAJ9NDzjNnOXj/rhVxQeCniywODX0KQCeNDlc
-/E0vz/C/twoEcaUJHm/e1/Q=
-=mZa2
+iQCVAwUBQvdy8J4WFLgrx1GWAQJk+AQAtep8FlLk16k3rV00uWzfwUm4RI45+wR+
+mU3YbN+GDdsCLwTzKm4J3MYe6+R3Ui8w6U0iuCnY6X0BFDiLYjie75ip9n79YlUN
+0FLU7wLwN3VrTr5UNPE1nFtzAmZ3SRjo85yYe3EKg/G8U4MEjYN1vaIEODoiaAhb
+3ZKnChVSqW8=
+=/i2l
 -----END PGP SIGNATURE-----

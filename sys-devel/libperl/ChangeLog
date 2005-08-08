@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.74 2005/07/28 13:42:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.75 2005/08/08 15:01:06 solar Exp $
+
+  08 Aug 2005; <solar.@gentoo.org> libperl-5.8.5-r1.ebuild,
+  libperl-5.8.5.ebuild, libperl-5.8.6-r1.ebuild, libperl-5.8.6.ebuild,
+  libperl-5.8.7.ebuild:
+  - Redisable the groff dep for uclibc (again and again...)
 
   28 Jul 2005; Michael Cummings <mcummings@gentoo.org>
   files/libperl-reorder-INC.patch:
