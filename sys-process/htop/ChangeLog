@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.8 2005/07/28 22:30:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.9 2005/08/08 07:52:25 wschlich Exp $
+
+  08 Aug 2005; Wolfram Schlich <wschlich@gentoo.org> htop-0.5.2.ebuild:
+  fix USE=debug behavior
 
   28 Jul 2005; <dang@gentoo.org> htop-0.5.2.ebuild:
   Stable on amd64 per bug #100619
