@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.119 2005/06/17 20:32:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.120 2005/08/08 09:57:04 flameeyes Exp $
+
+*courier-imap-4.0.4 (08 Aug 2005)
+
+  08 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/courier-imap-4.0.4-courier-imapd.rc6,
+  +files/courier-imap-4.0.4-courier-imapd-ssl.rc6,
+  +files/courier-imap-4.0.4-courier-pop3d.rc6,
+  +files/courier-imap-4.0.4-courier-pop3d-ssl.rc6,
+  +courier-imap-4.0.4.ebuild:
+  Updated to 4.0.4, initd files updated for new baselayout,
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   courier-imap-4.0.1.ebuild:
