@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4263 2005/08/08 02:49:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4264 2005/08/08 11:57:01 seemant Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -580,11 +580,6 @@ dev-php/propel-runtime
 =dev-php/mod_php-5*
 =dev-php/php-cgi-5*
 =dev-php/phpconfig-5*
-
-# Seemant Kullee <seemant@gentoo.org> (10 Jun 2005)
-# above xterm-200 doesn't seem to work very well for us.  Masking until
-# Thomas and I resolve this.
->=x11-terms/xterm-201
 
 # Diego Pettenò <flameeyes@gentoo.org> (10 Jun 2005)
 # Future dependency of VLC +dirac
