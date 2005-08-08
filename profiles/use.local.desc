@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1368 2005/08/07 18:15:03 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1369 2005/08/08 04:19:09 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1039,6 +1039,11 @@ x11-libs/cairo:glitz - Build with glitz support
 x11-libs/evas:cairo - Build the cairo graphical engine
 x11-libs/fltk:noxft - Disables fltk; use for non-english characters
 x11-libs/gtkmathview:t1lib - Enable t1lib support
+x11-libs/libXft:bitmap-fonts - Support the crappy 100 DPI and 75 DPI fonts
+x11-libs/libXft:cid - Support CID fonts -- non-Roman character sets
+x11-libs/libXft:font-server - Support XFS, the X Font Server
+x11-libs/libXft:speedo - Support Speedo fonts, an old type of font
+x11-libs/libXft:type1 - Support Type1 PostScripts fonts
 x11-libs/qt:immqt -Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
 x11-libs/wxGTK:no_wxgtk1 - Disable gtk support. Must be used in combination with gtk2
