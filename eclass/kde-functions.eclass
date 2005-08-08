@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.120 2005/08/08 10:36:26 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.121 2005/08/08 10:38:10 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -495,7 +495,7 @@ deprange-list() {
 				if [ -n "$MINSUFFIX" ]; then
 					BASE="=$PACKAGE-$BASEVER.${MINMINOR}_${MINSUFFIX%-r*}-r"
 				else
-					BASE="=$PACKAGE-$BASEVER.${MINMINOR}-r"
+					BASE="=$PACKAGE-$BASEVER.${MINMINOR%-r*}-r"
 				fi
 				NEWDEP="$NEWDEP
 						$(deprange-iterate-numbers $BASE ${MINREV#r} 99)"
