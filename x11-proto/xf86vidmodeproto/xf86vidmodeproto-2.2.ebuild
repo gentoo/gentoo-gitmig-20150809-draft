@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/xf86vidmodeproto-2.2.ebuild,v 1.1 2005/08/08 03:37:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/xf86vidmodeproto-2.2.ebuild,v 1.2 2005/08/08 18:01:27 fmccor Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -12,7 +12,7 @@ DESCRIPTION="X.Org XF86VidMode protocol headers"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""
 #SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 #IUSE="X gnome"
 #DEPEND=""
 #RDEPEND=""

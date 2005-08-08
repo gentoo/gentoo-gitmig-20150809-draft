@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/compositeproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/compositeproto/ChangeLog,v 1.1 2005/08/08 03:24:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/compositeproto/ChangeLog,v 1.2 2005/08/08 17:52:27 fmccor Exp $
+
+  08 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
+  compositeproto-0.2.ebuild:
+  Add ~sparc keyword (modular X testing on sparc).
 
 *compositeproto-0.2 (08 Aug 2005)
 
