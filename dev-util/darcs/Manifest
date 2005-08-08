@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 06fff654fe3e9c411ab6b8ad9754a1dd darcs-1.0.1.ebuild 1360
-MD5 41d829ca5bc355c6fa682cac952249fc darcs-1.0.3.ebuild 1410
-MD5 7c0242602967e70213d067e10d90814e darcs-1.0.3_rc1.ebuild 1414
+MD5 c4be54b2e961643c27b93178ff04e48d darcs-1.0.3.ebuild 1375
+MD5 f03c9959c3740619ec07544fb7128250 darcs-1.0.3_rc1.ebuild 1379
 MD5 90f87bece03065a1f9cea89962b34258 darcs-1.0.2.ebuild 1391
-MD5 7ecfde83461be6d24ccedc9652b16d6c ChangeLog 5529
+MD5 01f5ed52b2340e143989aa5ebd7a328f ChangeLog 5658
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 4236d74ca440b8b324569c8e00297934 files/digest-darcs-1.0.1 63
 MD5 f575d4994edef2bafd09e0c520feb65f files/digest-darcs-1.0.2 63
@@ -14,7 +14,7 @@ MD5 fd728a88bd0806ea0ca1d3d24a35f0f8 files/digest-darcs-1.0.3_rc1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC5qtNOKSBj1ObwosRAvNxAKCFygPBoiuwQx6ns+sP7BDaLrpuJgCePRQp
-GNnvKeTXJho5e0g2Z29hAXo=
-=6MOf
+iD8DBQFC9vuqOKSBj1ObwosRAok2AJ9zJJujggl2MR+V6dGx8CvK1X9vxACffP5K
+C7YbizpHxKCaiGNmBh6DzkM=
+=i3Mb
 -----END PGP SIGNATURE-----
