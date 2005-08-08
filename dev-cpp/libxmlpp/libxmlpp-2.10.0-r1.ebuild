@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.10.0-r1.ebuild,v 1.8 2005/07/07 07:00:05 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.10.0-r1.ebuild,v 1.9 2005/08/08 09:50:54 ka0ttic Exp $
 
 inherit gnome2 eutils
 
@@ -21,8 +21,7 @@ RDEPEND=">=dev-libs/libxml2-2.6.1
 	>=dev-cpp/glibmm-2.4"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	doc? ( app-doc/doxygen )"
+	dev-util/pkgconfig"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="AUTHORS ChangeLog NEWS README*"
@@ -35,14 +34,6 @@ src_unpack() {
 	# don't waste time building the examples
 	sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || \
 		die "sed Makefile.in failed"
-}
-
-src_compile() {
-	gnome2_src_compile
-	if use doc ; then
-		cd ${S}/docs/reference
-		emake || die "failed to build docs"
-	fi
 }
 
 src_install() {

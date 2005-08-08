@@ -4,10 +4,10 @@ Hash: SHA1
 MD5 f3893471a4182b1fd0340f5f6d9576b8 libxmlpp-0.27.0.ebuild 890
 MD5 6f406de127feaf6d750a665fa85e21b4 libxmlpp-1.0.2.ebuild 893
 MD5 d151ee2e2dbdbe62eb2c5a6326d57654 libxmlpp-1.0.4-r2.ebuild 896
-MD5 743d94f31713109e385d6a823a969874 ChangeLog 5724
+MD5 070319eb927a0914dee067ae80b546e0 ChangeLog 5865
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
-MD5 01d672605a1e96a89cd59358985d3b27 libxmlpp-2.10.0-r1.ebuild 1354
-MD5 2725f93a53655a21ce7bd8dd2d6de41d libxmlpp-2.8.0-r2.ebuild 1348
+MD5 dc2f97c6a0f9cc7d268ce35cf7443a26 libxmlpp-2.10.0-r1.ebuild 1205
+MD5 5c17a05be406dbe943ddd3ef9dc53b52 libxmlpp-2.8.0-r2.ebuild 1197
 MD5 d8908feca35d34dbd88eab2dc2eaa621 files/digest-libxmlpp-1.0.2 67
 MD5 785183ae0a7196fc94879a9cfaa70d1a files/libxmlpp-2.10.0-use-correct-callback.diff 751
 MD5 125040d4312a3a7ab325bc5ea3b974f0 files/libxmlpp-2.8.0-use-correct-callback.diff 749
@@ -17,9 +17,9 @@ MD5 75c55c8635b87718bd39c8c9f169dc1c files/libxmlpp-2.8.0-fix-errant-semicolon.d
 MD5 ddefcfb1e4627340a979fe347b62745e files/digest-libxmlpp-1.0.4-r2 67
 MD5 335a2cd8fe569196d631a0a54d8cac32 files/digest-libxmlpp-2.10.0-r1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC3xCUEZCkKN40op4RAuG9AJ9jC7HfFIP0ZIox1Vxgf33Xx7bquwCfTvzp
-QkBEmKiyau/eVeWh98Cr+Gc=
-=yIoP
+iD8DBQFC9yuuEZCkKN40op4RAlXmAKCGEfFjKE25JskYvetgvQ9WxRJ3DACePjgp
+fDKIVHAiJlgLTbk0UNRUaEE=
+=AKDY
 -----END PGP SIGNATURE-----
