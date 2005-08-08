@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.2 2005/08/07 07:49:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.3 2005/08/08 00:29:48 vapier Exp $
 
 inherit games eutils toolchain-funcs
 
@@ -22,7 +22,8 @@ RDEPEND="virtual/x11
 	>=games-emulation/ps2emu-gssoft-0.6.1
 	>=games-emulation/ps2emu-padxwin-0.5
 	>=games-emulation/ps2emu-spu2null-0.2.1
-	>=games-emulation/ps2emu-dev9null-0.1"
+	>=games-emulation/ps2emu-dev9null-0.1
+	>=games-emulation/ps2emu-usbnull-0.4"
 DEPEND="${RDEPEND}
 	app-arch/p7zip"
 
