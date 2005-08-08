@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/ibm-acpi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.26 2005/06/09 09:29:37 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.27 2005/08/08 17:14:03 brix Exp $
+
+  08 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  ibm-acpi-0.11-r1.ebuild:
+  Fixed bug #101167, sys-apps/acpid => sys-power/acpid.
 
   09 Jun 2005; <brix@gentoo.org> -ibm-acpi-0.10.ebuild,
   -ibm-acpi-0.11.ebuild:

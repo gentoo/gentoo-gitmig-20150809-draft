@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.11-r1.ebuild,v 1.2 2005/05/23 19:15:21 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.11-r1.ebuild,v 1.3 2005/08/08 17:14:03 brix Exp $
 
 inherit linux-mod
 
@@ -55,7 +55,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo ""
-	einfo "You may wish to install sys-apps/acpid to handle the ACPI events generated"
+	einfo "You may wish to install sys-power/acpid to handle the ACPI events generated"
 	einfo "by ${PN}."
 
 	if useq doc; then
