@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/util-macros
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.1 2005/08/08 03:20:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.2 2005/08/08 03:22:49 spyderous Exp $
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  util-macros-0.99.0.ebuild:
+  Fix description and remove xproto from build deps.
 
 *util-macros-0.99.0 (08 Aug 2005)
 
