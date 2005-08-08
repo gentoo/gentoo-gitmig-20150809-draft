@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.69.ebuild,v 1.7 2005/07/26 18:28:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.69.ebuild,v 1.8 2005/08/08 17:20:20 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.bitwizard.nl/mtr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ~s390 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ~ppc-macos ~s390 sparc x86"
 IUSE="gtk gtk2 ipv6"
 
 DEPEND="dev-util/pkgconfig"
@@ -32,7 +32,12 @@ src_compile() {
 	local myconf
 	use gtk || myconf="${myconf} --without-gtk"
 
-	append-ldflags -Wl,-z,now
+	if use ppc-macos;
+	then
+		append-flags "-DBIND_8_COMPAT"
+	else
+		append-ldflags -Wl,-z,now
+	fi
 
 	econf ${myconf} \
 		$(use_enable gtk2) \
