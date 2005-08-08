@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.30 2005/08/03 20:04:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.31 2005/08/08 08:51:29 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> genlop-0.30.3.ebuild:
+  Stable on ppc64
 
   03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> genlop-0.30.3.ebuild:
   Stable on alpha.

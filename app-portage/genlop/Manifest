@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ac54cbd86e3e9051c65eca82cd01bcf0 metadata.xml 394
-MD5 77dd23e68c1902789f5a039966119a73 ChangeLog 3835
+MD5 d1b3cd462c526dc2a87a92227191901f ChangeLog 3926
 MD5 e505cef97d4c7234395a3cdb62d564f3 genlop-0.30.2.ebuild 695
-MD5 456c6b91691a735490ef72d2eab7eb48 genlop-0.30.3.ebuild 698
-MD5 83bcb8342aa07aa298c1b473a2598493 files/digest-genlop-0.30.3 64
+MD5 ba91593d2f65a3bf34aa1a43dd0bea5f genlop-0.30.3.ebuild 698
+MD5 ac54cbd86e3e9051c65eca82cd01bcf0 metadata.xml 394
 MD5 8871845dc6189a9507ffe72c38d15178 files/digest-genlop-0.30.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9dCBgIKl8Uu19MoRAveoAJ9q5p9/o2mJH9qCTkXgHPH9H5Y7EwCZAerX
-uemG6TCRTpV4y9dA3eOMjRA=
-=iyVJ
------END PGP SIGNATURE-----
+MD5 83bcb8342aa07aa298c1b473a2598493 files/digest-genlop-0.30.3 64
