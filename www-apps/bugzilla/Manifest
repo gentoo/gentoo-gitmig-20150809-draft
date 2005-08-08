@@ -2,10 +2,12 @@
 Hash: SHA1
 
 MD5 80ce7aeb494bf824439dd9b58eb16e5c bugzilla-2.20_rc1.ebuild 1836
+MD5 42cd9d1c4f3dfed79968b3a47e1570c2 bugzilla-2.20_rc2.ebuild 1845
 MD5 91653eed08d2b051ea910cad4942c413 bugzilla-2.18.3.ebuild 1799
-MD5 d97c1949fb45b5e543f93cd71c2b0170 ChangeLog 7985
+MD5 b4e634c32fcbbb9ade818efcab7c1a90 ChangeLog 8110
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 dbfa20dc9adfb7a85a47811b12d6d86e files/digest-bugzilla-2.20_rc1 69
+MD5 dcbc8fa7bd349f3357c4758554094552 files/digest-bugzilla-2.20_rc2 69
 MD5 df412a960ab7899d10f4fc42b8a3cc5f files/digest-bugzilla-2.18.3 68
 MD5 b38d67b03726b84833bd8c5f632e4020 files/2.18.1-r1/bugzilla.cron.tab 54
 MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18.1-r1/bugzilla.cron.daily 115
@@ -18,7 +20,7 @@ MD5 7d9b3c0019bbcfd85f9398ecdc2eaa39 files/2.20_rc1/reconfig 5084
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0tPMEzitwsaoONoRAoecAJ9+6F7SIzOpoT0R/vyAWwxV/FjbvQCglGYF
-msV99mRMoQlv7Q7FdXzqb0o=
-=frpx
+iD8DBQFC98+DEzitwsaoONoRAjDDAJ48P0kcnYU66GQA3bVpSlHJnleqGgCfcNWn
+1AzecsUDiTIXR/jtECMVHio=
+=Nr5G
 -----END PGP SIGNATURE-----

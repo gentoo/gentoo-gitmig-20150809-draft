@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.35 2005/07/11 20:16:50 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.36 2005/08/08 21:32:40 rl03 Exp $
+
+*bugzilla-2.20_rc2 (08 Aug 2005)
+
+  08 Aug 2005; Renat Lumpau <rl03@gentoo.org> +bugzilla-2.20_rc2.ebuild:
+  Added 2.20_rc2
 
   11 Jul 2005; Renat Lumpau <rl03@gentoo.org> -files/bugzilla.conf,
   -files/bugzilla.cron.daily, -files/bugzilla.cron.tab, -files/bz.cfg.templ,
