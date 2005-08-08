@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.16 2005/06/12 12:39:44 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.17 2005/08/08 12:31:10 blubb Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -54,5 +54,6 @@ sys-boot/grub
 www-client/opera
 www-client/mozilla-bin
 www-client/mozilla-firefox-bin
+sci-biology/foldingathome
 
 -<media-video/nvidia-glx-1.0.6629-r3
