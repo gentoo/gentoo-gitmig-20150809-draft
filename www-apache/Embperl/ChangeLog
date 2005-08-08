@@ -1,0 +1,10 @@
+# ChangeLog for www-apache/Embperl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/Embperl/ChangeLog,v 1.1 2005/08/08 12:51:39 mcummings Exp $
+
+*Embperl-2.0_rc4 (08 Aug 2005)
+
+  08 Aug 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Embperl-2.0_rc4.ebuild:
+  Bug 5234, ebuild by rendhalver
+

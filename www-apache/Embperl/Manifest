@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ec4f9e1649d511735f3c50275cf40df5 Embperl-2.0_rc4.ebuild 2052
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 5f7f54409f028dad41e2ca9365eca710 ChangeLog 375
+MD5 82d8871b5c822fe921775f3ea65c8686 files/digest-Embperl-2.0_rc4 66
+MD5 4c7ce26a3b5030b2f1386e5cc57c2562 files/78_mod_embperl.conf 685
+MD5 22136f2c88c432c9e2a284531451d2b7 files/Embperl-2.0_rc4-Makefile.PL.patch 1012
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFC91VvtG5z4I8BtQoRAlacAJ4pxULDnffL99+bv4CpUjEgdNINXgCZAYGS
+s/P0GX3YkBEijCdh4p4AJiE=
+=ERRM
+-----END PGP SIGNATURE-----
