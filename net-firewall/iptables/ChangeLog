@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.75 2005/07/12 02:48:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.76 2005/08/08 01:52:12 ka0ttic Exp $
+
+  08 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> iptables-1.3.1-r4.ebuild,
+  iptables-1.3.2.ebuild:
+  Re-added ~mips for bug 91285.
 
 *iptables-1.3.2 (12 Jul 2005)
 
