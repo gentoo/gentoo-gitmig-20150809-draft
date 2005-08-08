@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.2-r1.ebuild,v 1.5 2005/08/08 22:37:13 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.2-r1.ebuild,v 1.6 2005/08/08 22:40:44 rl03 Exp $
 
 inherit webapp eutils
 
@@ -21,7 +21,7 @@ DEPEND="
 	dev-perl/Cache-Cache
 	>=dev-perl/Exception-Class-1.14
 	perl-core/CGI
-	>=dev-perl/HTML-Mason-1.28
+	>dev-perl/HTML-Mason-1.28
 	dev-perl/MLDBM
 	dev-perl/FreezeThaw
 	>=dev-perl/Apache-Session-1.53

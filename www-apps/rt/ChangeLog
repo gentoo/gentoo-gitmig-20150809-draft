@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.16 2005/08/08 22:37:13 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.17 2005/08/08 22:40:44 rl03 Exp $
+
+  08 Aug 2005; Renat Lumpau <rl03@gentoo.org> rt-3.4.2-r1.ebuild:
+  Fixed HTML-Mason dependency
 
   08 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/3.4.2/reconfig,
   rt-3.4.2-r1.ebuild:
