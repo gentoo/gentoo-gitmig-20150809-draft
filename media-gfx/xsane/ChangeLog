@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.34 2005/07/27 19:34:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.35 2005/08/08 14:56:56 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> xsane-0.97.ebuild:
+  Stable on ppc64
 
   27 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> xsane-0.97.ebuild:
   Stable on sparc
