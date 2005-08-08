@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1372 2005/08/08 10:08:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1373 2005/08/08 11:58:03 seemant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -422,7 +422,6 @@ mail-client/muttng:smtp - Enable support for smtp
 mail-client/pine:largeterminal - Add support for large terminals by doubling the size of pine's internal display buffer
 mail-client/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
 mail-client/squirrelmail:virus-scan - Install plugin to support virus scanning of email attachments
-mail-client/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
 mail-client/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
 mail-filter/ask:procmail - Adds support for procmail
 mail-filter/bogofilter:gsl - Use the GNU scientific library for calculations
@@ -678,7 +677,6 @@ net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org projec
 net-fs/samba:quotas - Add support for user quotas
 net-fs/samba:winbind - Add support for the winbind auth daemon
 net-fs/shfs:amd - Enable automounter support
-net-ftp/frox:clamav - ClamAV antivirus support on proxy
 net-ftp/proftpd:authfile - Enable support for auth-file module
 net-ftp/proftpd:noauthunix - Disable support for auth-unix module
 net-ftp/proftpd:sendfile - Enable support for sendfile()
