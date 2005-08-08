@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-0.99.0.ebuild,v 1.1 2005/08/08 04:24:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-0.99.0.ebuild,v 1.2 2005/08/08 19:08:32 fmccor Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -12,7 +12,7 @@ DESCRIPTION="X.Org Xaw library"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""
 #SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="xprint"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxkbfile
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbfile/ChangeLog,v 1.1 2005/08/08 04:31:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbfile/ChangeLog,v 1.2 2005/08/08 19:08:32 fmccor Exp $
+
+  08 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
+  libxkbfile-0.99.0.ebuild:
+  Add ~sparc keyword (modular X testing).
 
 *libxkbfile-0.99.0 (08 Aug 2005)
 
