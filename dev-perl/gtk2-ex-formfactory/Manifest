@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0a309aa33b8c6680c03a2d20c2ae067f gtk2-ex-formfactory-0.57.ebuild 552
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 750cdec91d55a16244162d5e6f55f0fc ChangeLog 445
+MD5 91ca1cbf784bf3a631251d6c3c7aeade files/digest-gtk2-ex-formfactory-0.57 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFC9zbwtG5z4I8BtQoRAkSPAJ94rUv2UqkzquLDHNrbEbXbtwGYfQCeLa4V
++EATxX8iUaJQ/SwtWZwrh88=
+=4Kco
+-----END PGP SIGNATURE-----

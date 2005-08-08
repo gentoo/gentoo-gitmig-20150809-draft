@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/gtk2-ex-formfactory
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/ChangeLog,v 1.1 2005/08/08 10:41:33 mcummings Exp $
+
+*gtk2-ex-formfactory-0.57 (08 Aug 2005)
+
+  08 Aug 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +gtk2-ex-formfactory-0.57.ebuild:
+  Ebuild from Chandler Carruth in bug 101589, new dep for dvdrip
+
