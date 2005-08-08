@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/libXcursor
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.1 2005/08/08 04:25:41 spyderous Exp $
+
+*libXcursor-1.1.3 (08 Aug 2005)
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +libXcursor-1.1.3.ebuild:
+  Initial commit for modular X.
+

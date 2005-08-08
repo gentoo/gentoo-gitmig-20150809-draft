@@ -1,0 +1,9 @@
+# ChangeLog for x11-libs/libdrm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.1 2005/08/08 04:20:22 spyderous Exp $
+
+*libdrm-1.0.1 (08 Aug 2005)
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +libdrm-1.0.1.ebuild:
+  Initial commit for modular X.
+

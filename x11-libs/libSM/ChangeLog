@@ -1,0 +1,9 @@
+# ChangeLog for x11-libs/libSM
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.1 2005/08/08 04:23:16 spyderous Exp $
+
+*libSM-0.99.0 (08 Aug 2005)
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +libSM-0.99.0.ebuild:
+  Initial commit for modular X.
+
