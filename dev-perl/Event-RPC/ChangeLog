@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Event-RPC
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.1 2005/08/08 10:57:23 mcummings Exp $
+
+*Event-RPC-0.84 (08 Aug 2005)
+
+  08 Aug 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Event-RPC-0.84.ebuild:
+  New dep for dvd-rip, ebuild provided by Chandler Carruth in bug 101591
+

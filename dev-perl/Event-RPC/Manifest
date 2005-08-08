@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 1aad44526af9585ac03b62b8cf8d70ec Event-RPC-0.84.ebuild 483
+MD5 897abd149dc4551e85e5671b89ebf413 ChangeLog 413
+MD5 4756c0606f817ff0d282f479712dc66f files/digest-Event-RPC-0.84 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFC9zqltG5z4I8BtQoRAl6mAJ9kw1GlBUjmfycYBuB+5yvqWvSHfwCfbFl/
+oAdKwsPd5ekMFI7pJGRwogI=
+=CMvQ
+-----END PGP SIGNATURE-----
