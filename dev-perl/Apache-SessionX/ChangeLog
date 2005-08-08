@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-SessionX
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SessionX/ChangeLog,v 1.1 2005/08/08 12:37:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SessionX/ChangeLog,v 1.2 2005/08/08 12:51:02 mcummings Exp $
+
+  08 Aug 2005; Michael Cummings <mcummings@gentoo.org>
+  Apache-SessionX-2.00_beta5.ebuild:
+  Tested on a ppc, dep for embperl
 
 *Apache-SessionX-2.00_beta5 (08 Aug 2005)
 
