@@ -1,3 +1,4 @@
-MD5 aa4944ccb4c14a717a48c45f3b6e53eb xf86-video-i810-1.4.0.ebuild 547
+MD5 aa0ad3e4bdb6c42ca4446a1dd29d3039 xf86-video-i810-1.4.0.ebuild 668
+MD5 6d36ea9246cd42ed69e8229cfdcdf7de ChangeLog 407
 MD5 6901df4966e61544a13ba3ac4340e69f files/dri.patch 605
 MD5 d0714780555df4798544d62da8d2324b files/digest-xf86-video-i810-1.4.0 74

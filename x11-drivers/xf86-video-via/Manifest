@@ -1,3 +1,4 @@
-MD5 35fd358faacc8bbd194caf8e11fcae7a xf86-video-via-0.1.31.ebuild 585
+MD5 c167046ef413a2691e60878388aec90e xf86-video-via-0.1.31.ebuild 705
+MD5 7e35e478d045384136da36221cd3d8bb ChangeLog 412
 MD5 d41d8cd98f00b204e9800998ecf8427e files/xf86xvpriv.patch 0
 MD5 99dbc6d3bd0e4c3d071d8af726d5642f files/digest-xf86-video-via-0.1.31 74
