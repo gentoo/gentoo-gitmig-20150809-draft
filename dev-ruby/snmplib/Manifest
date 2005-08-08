@@ -1,8 +1,14 @@
-MD5 22a57610cc6ebcee283c7eb5a97f04d4 ChangeLog 978
-MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
-MD5 6fd0e67e27a9415f624dbbf5c0249170 snmplib-0.3.0.ebuild 729
-MD5 a70146d338936a3bc21bc02068eb1ff3 snmplib-0.4.0.ebuild 650
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b20b5b69720502f676fda1ab77c7cbae snmplib-0.5.1.ebuild 650
-MD5 7307d50707895f91ba2f6360bfebf550 files/digest-snmplib-0.3.0 58
-MD5 e3d5be756343463f838bbb3ad98e8f33 files/digest-snmplib-0.4.0 59
+MD5 c0ed324086691ac3faaa9c58bb413dd6 ChangeLog 1163
+MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
 MD5 4667e2c5e680dcc67a90324f46dd11dc files/digest-snmplib-0.5.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFC979PehlBotwFZuQRAhuCAKCgYXytFS+VDygh1+HRUR46bEEZhwCcCH48
+92tRzY4bDMqVEBD1uSBcNKA=
+=qLMd
+-----END PGP SIGNATURE-----
