@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/matrix/matrix-1.04.ebuild,v 1.1 2005/08/07 15:22:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/matrix/matrix-1.04.ebuild,v 1.2 2005/08/08 10:54:55 dholm Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: Screensaver inspired by the Matrix"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=1189"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\
