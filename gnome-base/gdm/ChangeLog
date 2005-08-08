@@ -1,10 +1,21 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.101 2005/07/24 19:45:44 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.102 2005/08/08 10:37:17 leonardop Exp $
+
+*gdm-2.8.0.1-r1 (08 Aug 2005)
+
+  08 Aug 2005; Leonardo Boshell <leonardop@gentoo.org> gdm-2.8.0.1-r1.ebuild:
+  New revision. Rename old pam.d file from gdmconfig to gdmsetup. Move
+  G2CONF declaration to pkg_setup() so src_compile() doesn't get
+  overwritten. Modify gdm.conf to list available users in gdmsetup by
+  default (bug #101645).
+
+  08 Aug 2005; Leonardo Boshell <leonardop@gentoo.org> gdm-2.6.0.9-r3.ebuild:
+  Stable on x86.
 
 *gdm-2.8.0.1 (24 Jul 2005)
 
-  24 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> gdm-2.8.0.1.ebuild :
+  24 Jul 2005; Leonardo Boshell <leonardop@gentoo.org> gdm-2.8.0.1.ebuild:
   New release. Added 'static' USE flag. Updated HOMEPAGE. Now gentoo
   specific files are distributed in an extra tarball. Adjusted references to
   some binaries installed by GDM, as they are installed in different

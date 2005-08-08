@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.1.ebuild,v 1.1 2005/07/24 19:45:44 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.1-r1.ebuild,v 1.1 2005/08/08 10:37:17 leonardop Exp $
 
 inherit eutils pam versionator gnome2
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
 IUSE="ipv6 pam selinux static tcpd xinerama"
 
 # Name of the tarball with gentoo specific files
-GDM_EXTRA="${PN}-$(get_version_component_range 1-2)-gentoo-files-r1"
+GDM_EXTRA="${PN}-$(get_version_component_range 1-2)-gentoo-files-r2"
 SRC_URI="${SRC_URI}
 	mirror://gentoo/gentoo-gdm-theme-r2.tar.bz2
 	mirror://gentoo/${GDM_EXTRA}.tar.bz2"
@@ -40,6 +40,22 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README* TODO"
 
+
+pkg_setup() {
+	G2CONF="--sysconfdir=/etc/X11 --localstatedir=/var         \
+		--with-pam-prefix=/etc --with-xdmcp $(use_enable ipv6) \
+		$(use_with tcpd tcp-wrappers) $(use_with xinerama)     \
+		$(use_with selinux) $(use_enable static)"
+
+	if use pam; then
+		G2CONF="${G2CONF} --with-pam-prefix=/etc \
+			--enable-authentication-scheme=pam"
+	else
+		G2CONF="${G2CONF} --enable-console-helper=no \
+			--enable-authentication-scheme=shadow"
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -47,27 +63,7 @@ src_unpack() {
 	# remove unneeded linker directive for selinux (#41022)
 	epatch ${FILESDIR}/${PN}-2.4.4-selinux_remove_attr.patch
 
-	einfo "Running autoconf"
 	autoconf || die "autoconf failed"
-}
-
-src_compile() {
-	local myconf="--sysconfdir=/etc/X11 --localstatedir=/var \
-	--with-pam-prefix=/etc --with-xdmcp $(use_enable ipv6) \
-	$(use_with tcpd tcp-wrappers) $(use_with xinerama) $(use_with selinux) \
-	$(use_enable static)"
-
-	if use pam; then
-		myconf="${myconf} --with-pam-prefix=/etc \
-		--enable-authentication-scheme=pam"
-	else
-		myconf="${myconf} --enable-console-helper=no \
-		--enable-authentication-scheme=shadow"
-	fi
-
-	G2CONF="${G2CONF} ${myconf}"
-
-	gnome2_src_compile
 }
 
 src_install() {
@@ -109,6 +105,9 @@ src_install() {
 	# use graphical greeter local
 	dosed "s:#Greeter=/usr/libexec/gdmlogin:Greeter=/usr/libexec/gdmgreeter:" \
 		/etc/X11/gdm/gdm.conf
+	# list available users
+	dosed "s:^#MinimalUID=.*:MinimalUID=1000:" /etc/X11/gdm/gdm.conf
+	dosed "s:^#IncludeAll=.*:IncludeAll=true:" /etc/X11/gdm/gdm.conf
 
 	# Move Gentoo theme in
 	mv ${WORKDIR}/gentoo-*  ${D}/usr/share/gdm/themes
