@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.14 2005/07/28 21:16:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.15 2005/08/08 21:52:10 kloeri Exp $
+
+  08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
+  kdegames-meta-3.4.2.ebuild:
+  Stable on alpha.
 
 *kdegames-meta-3.4.2 (28 Jul 2005)
 
