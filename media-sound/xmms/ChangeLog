@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.183 2005/08/01 18:29:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.184 2005/08/08 14:58:34 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> xmms-1.2.10-r15.ebuild:
+  Stable on ppc64
 
   01 Aug 2005; Guy Martin <gmsoft@gentoo.org> xmms-1.2.10-r15.ebuild:
   Stable on hppa.
