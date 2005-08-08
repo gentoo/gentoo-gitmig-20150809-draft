@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.33 2005/08/07 09:48:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.34 2005/08/08 12:50:24 ferdy Exp $
+
+  08 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> gpa-0.7.0-r2.ebuild:
+  stable on alpha
 
   07 Aug 2005; Daniel Black <dragonheart@gentoo.org> gpa-0.7.0-r2.ebuild:
   change to mirror://gnupg + QA (backtick to $()
