@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.115 2005/08/02 17:39:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.116 2005/08/08 15:07:59 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> metacity-2.10.1.ebuild:
+  Stable on ppc64
 
   02 Aug 2005; Simon Stelling <blubb@gentoo.org> metacity-2.10.1.ebuild:
   stable on amd64
