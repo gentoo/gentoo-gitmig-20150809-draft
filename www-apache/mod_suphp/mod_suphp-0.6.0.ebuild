@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.0.ebuild,v 1.2 2005/08/07 13:00:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.0.ebuild,v 1.3 2005/08/08 11:02:13 dholm Exp $
 
 inherit apache-module eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.suphp.org"
 SRC_URI="http://www.suphp.org/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 SLOT="0"
 
