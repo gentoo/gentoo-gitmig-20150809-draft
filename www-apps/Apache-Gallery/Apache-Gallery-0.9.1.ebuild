@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.9.1.ebuild,v 1.1 2005/08/02 20:41:53 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.9.1.ebuild,v 1.2 2005/08/08 21:54:47 rl03 Exp $
 
 inherit depend.apache perl-module webapp
 
@@ -9,7 +9,7 @@ SRC_URI="http://apachegallery.dk/download/${P}.tar.gz"
 HOMEPAGE="http://apachegallery.dk/"
 
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="apache2"
 
 DEPEND="${DEPEND}
@@ -25,11 +25,10 @@ DEPEND="${DEPEND}
 	dev-perl/text-template
 	>=dev-perl/Inline-0.43-r1
 	virtual/x11
-	>=www-apache/libapreq-1.0
 	!apache2? ( >=net-www/apache-1.3.26-r2
-		=www-apache/mod_perl-1* )
+		=www-apache/libapreq-1* )
 	apache2? ( >=net-www/apache-2.0.43-r1
-		>=www-apache/mod_perl-1.99 ) "
+		=www-apache/libapreq2-2* )"
 
 src_install() {
 	webapp_src_preinst

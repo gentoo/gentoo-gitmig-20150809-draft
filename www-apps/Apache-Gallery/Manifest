@@ -5,8 +5,8 @@ MD5 b5db9e0472430724adea6de9580b41c5 Apache-Gallery-0.8-r2.ebuild 2125
 MD5 bf6743164883be655e68641a09339bd6 Apache-Gallery-0.6.ebuild 1461
 MD5 5600ad85428bca4898ea3db305ba3dcc Apache-Gallery-0.8.ebuild 1525
 MD5 d2ffb46253b5ea9e00e990ec8a90904f Apache-Gallery-0.8-r1.ebuild 2125
-MD5 bfe3863e28c5e78990d9d713ec9c8298 Apache-Gallery-0.9.1.ebuild 1622
-MD5 d897ceb63ae9413951b86d613b27ba34 ChangeLog 3037
+MD5 71f6be212c3aca3f092d4862e17bd531 Apache-Gallery-0.9.1.ebuild 1578
+MD5 52d0de3f7453f67b97f3d4d40057ef08 ChangeLog 3159
 MD5 2a5bdc93be7720976d88be5034a17df2 metadata.xml 444
 MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8-r1 69
 MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8-r2 69
@@ -21,7 +21,7 @@ MD5 862b7db14e194f66c345bdaee71e0d00 files/76_apache-gallery.conf 1461
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC80tlEzitwsaoONoRAsldAJ90qtYsPJdnqfvCilqEcG4yrcr00wCgjpdS
-JuTHYIOYjJwZwsZlW8uck68=
-=x0IT
+iD8DBQFC99SxEzitwsaoONoRAhyVAJ0bX6DHUixAWA/1OgBwkPCwQakmjQCg0Luj
+UDvMsJXqWHHSuFq6dfdqDSg=
+=w5iQ
 -----END PGP SIGNATURE-----
