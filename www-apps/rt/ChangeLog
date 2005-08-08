@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.15 2005/08/04 14:35:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.16 2005/08/08 22:37:13 rl03 Exp $
+
+  08 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/3.4.2/reconfig,
+  rt-3.4.2-r1.ebuild:
+  Fixed libapreq2/mod_perl2 dependency wrt bug #67686, bug #61893, bug #73115.
 
   04 Aug 2005; Michael Cummings <mcummings@gentoo.org> rt-3.4.2-r1.ebuild:
   Corrected Apache-Test dep since mod_perl-2 blocks it - made it an ||

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.2-r1.ebuild,v 1.4 2005/08/04 16:44:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.2-r1.ebuild,v 1.5 2005/08/08 22:37:13 rl03 Exp $
 
 inherit webapp eutils
 
@@ -67,9 +67,10 @@ RDEPEND="
 	mysql? ( >=dev-db/mysql-4.0.13 >=dev-perl/DBD-mysql-2.1018 )
 	postgres? ( >=dev-db/postgresql-7.4.2-r1 >=dev-perl/DBD-Pg-1.41 )
 	!lighttpd? (
-		|| ( dev-perl/Apache-Test >=www-apache/mod_perl-2 )
 		>=dev-perl/Apache-DBI-0.92
-		apache2? ( >=net-www/apache-2 dev-perl/FCGI net-www/mod_fastcgi )
+		apache2? ( >=net-www/apache-2
+			fastcgi? ( dev-perl/FCGI net-www/mod_fastcgi )
+			!fastcgi? ( >=www-apache/libapreq2-2.06 ) )
 		!apache2? ( =net-www/apache-1*
 			fastcgi? ( dev-perl/FCGI net-www/mod_fastcgi )
 			!fastcgi? ( =www-apache/libapreq-1* ) ) )
@@ -186,17 +187,17 @@ src_install() {
 	cd ${D}
 	grep -Rl "${D}" * | xargs dosed
 
-	if ! useq lighttpd; then
-		if ! useq apache2; then
-			webapp_server_configfile apache1 ${FILESDIR}/${PV}/rt_apache.conf
-			webapp_server_configfile apache1 ${FILESDIR}/${PV}/rt_apache1_fcgi.conf
-		else
-			webapp_server_configfile apache2 ${FILESDIR}/${PV}/rt_apache2_fcgi.conf
-		fi
-	else
+	if useq lighttpd; then
 		newinitd ${FILESDIR}/${PV}/${PN}.init.d ${PN}
 		insinto /etc/conf.d
 		newins ${FILESDIR}/${PV}/${PN}.conf.d ${PN}
+	else
+		if useq apache2; then
+			webapp_server_configfile apache2 ${FILESDIR}/${PV}/rt_apache2_fcgi.conf
+		else
+			webapp_server_configfile apache1 ${FILESDIR}/${PV}/rt_apache.conf
+			webapp_server_configfile apache1 ${FILESDIR}/${PV}/rt_apache1_fcgi.conf
+		fi
 	fi
 	webapp_postinst_txt en ${FILESDIR}/${PV}/postinstall-en.txt
 	webapp_hook_script ${FILESDIR}/${PV}/reconfig

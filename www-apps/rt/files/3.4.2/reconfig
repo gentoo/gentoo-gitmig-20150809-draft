@@ -30,9 +30,9 @@ if [ $1 = "install" ]; then
 	ls
 
 elif [ $1 = "clean" ]; then
-	if [[ "${VHOST_ROOT}${PF}" ]]; then 
-		rm -rf ${VHOST_ROOT}/${PF}/bin ${VHOST_ROOT}/${PF}/lib/RT.pm ${VHOST_ROOT}/${PF}/sbin
-	else
-		echo "Variables not set!"
-	fi
+	echo "Please examine the contents of the following directories"
+	echo "and delete anything that is no longer necessary"
+	echo 
+	echo ${VHOST_ROOT}/${PF}
+	echo ${MY_INSTALLDIR}
 fi
