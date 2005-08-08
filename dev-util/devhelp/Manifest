@@ -1,8 +1,18 @@
-MD5 37be88d0bc4fcf6193d8f5c9f50d1f23 ChangeLog 4354
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 89f2230e5e7ee5e293266f3aefdce1cc devhelp-0.9.3.ebuild 822
+MD5 0dc33d7c73c0d24cf27fdf2c297a76dc devhelp-0.10.ebuild 991
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 e22bab202e1d0e54d75c73e428fe0a87 devhelp-0.10.ebuild 993
-MD5 15d29375caa5bdfbdfba36346b77c092 files/devhelp-0.9.3-fix_includes.patch 529
+MD5 2a71dd0d175adeb37b2a20e074aac25a ChangeLog 4447
 MD5 4f7a4b06964d954b632540dbb4263fc4 files/digest-devhelp-0.9.3 66
-MD5 668d7e317ea725c2b81021481519e2d5 files/devhelp-0.10-fix_includes.patch 433
+MD5 15d29375caa5bdfbdfba36346b77c092 files/devhelp-0.9.3-fix_includes.patch 529
 MD5 b8da92ecccae41d2267fc6f9186f64d2 files/digest-devhelp-0.10 65
+MD5 668d7e317ea725c2b81021481519e2d5 files/devhelp-0.10-fix_includes.patch 433
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC92bCKRy60XGEcJIRAo4fAJ0RWPPuroQbn2xQrOxXn0IfIEOGXQCfaCiq
+Xt7sN8kSfsLH9FMLURUd2K4=
+=2UzB
+-----END PGP SIGNATURE-----

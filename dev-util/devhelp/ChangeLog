@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.33 2005/08/07 12:59:47 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.34 2005/08/08 14:05:11 gustavoz Exp $
+
+  08 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> devhelp-0.10.ebuild:
+  Stable on sparc
 
   07 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
   devhelp-0.10.ebuild:
