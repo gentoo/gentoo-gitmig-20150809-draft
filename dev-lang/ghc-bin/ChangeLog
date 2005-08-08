@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.26 2005/07/26 16:31:44 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.27 2005/08/08 14:58:14 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> ghc-bin-6.4.ebuild:
+  Updated binary package for ppc64
 
   26 Jul 2005; <duncan@gentoo.org> ghc-bin-6.2.2-r1.ebuild,
   ghc-bin-6.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.ebuild,v 1.4 2005/07/26 16:31:44 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.ebuild,v 1.5 2005/08/08 14:58:14 corsair Exp $
 
 IUSE="" # use the non-binary version if you want to have more choice
 
@@ -9,7 +9,7 @@ DESCRIPTION="Glasgow Haskell Compiler"
 SRC_URI="x86?  ( mirror://gentoo/${P}-r1-x86.tbz2 )
 		 amd64? ( mirror://gentoo/${P}-r1-amd64.tbz2 )
 		 sparc? ( mirror://gentoo/${P}-r1-sparc.tbz2 )
-		 ppc64? ( mirror://gentoo/${P}-ppc64.tbz2 )"
+		 ppc64? ( mirror://gentoo/${P}-r1-ppc64.tbz2 )"
 HOMEPAGE="http://www.haskell.org"
 
 LICENSE="as-is"
