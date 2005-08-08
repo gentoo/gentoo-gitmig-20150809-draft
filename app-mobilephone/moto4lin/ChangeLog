@@ -1,0 +1,10 @@
+# ChangeLog for app-mobilephone/moto4lin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.1 2005/08/08 19:40:02 r3pek Exp $
+
+*moto4lin-0.3 (08 Aug 2005)
+
+  08 Aug 2005; Carlos Silva <r3pek@gentoo.org> +metadata.xml,
+  +moto4lin-0.3.ebuild:
+  Initial import. thx to Bash in bug #101768
+
