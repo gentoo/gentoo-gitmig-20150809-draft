@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.2 2005/08/08 19:08:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.3 2005/08/08 19:35:17 spyderous Exp $
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  libXfont-0.99.0.ebuild:
+  Get rid of font-server USE, it breaks the server build and isn't used
+  correctly.
 
   08 Aug 2005; Ferris McCormick <fmccor@gentoo.org> libXfont-0.99.0.ebuild:
   Add ~sparc keyword (modular X testing).
