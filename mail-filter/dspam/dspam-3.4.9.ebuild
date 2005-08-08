@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.1.ebuild,v 1.6 2005/07/09 03:16:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.9.ebuild,v 1.1 2005/08/08 07:23:22 st_lim Exp $
 
 inherit eutils
 
@@ -175,6 +175,7 @@ src_install () {
 	insinto ${LOGDIR}
 	touch ${T}/empty.file
 	newins ${T}/empty.file system.log
+	chown dspam:dspam ${D}/${LOGDIR}/system.log
 	dosym ${LOGDIR}/system.log ${HOMEDIR}/system.log
 
 	# ${HOMEDIR}/data is a symlink to ${DATADIR}
