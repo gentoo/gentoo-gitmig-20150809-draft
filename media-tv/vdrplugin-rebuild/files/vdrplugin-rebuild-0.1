@@ -220,7 +220,7 @@ Where action is one of:
 	rebuild  - Rebuild packages.
 	populate - Populate the database with any
 	           packages which currently install
-	           drivers into the running kernel.
+	           plugins for vdr.
 
 EOF
 
@@ -234,7 +234,7 @@ check_validity() {
 	
 	if [[ ${ret} != 0 ]]; then
 		echo "** Please pass the fully qualified package. For example:"
-		echo "** media-video/nvidia-kernel-1.0.7174"
+		echo "** media-plugins/vdr-femon-0.9.1"
 		exit 1
 	fi
 }
