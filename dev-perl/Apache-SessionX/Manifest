@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 06e5225c17c85874aff851ceb795ff9a Apache-SessionX-2.00_beta5.ebuild 676
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 2b28f877e98e954a7a1443cd1bd2c0be ChangeLog 394
+MD5 674d66bc77866022adc5aa9d754ccece files/digest-Apache-SessionX-2.00_beta5 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFC91IvtG5z4I8BtQoRAmN+AJkBe7IZQXu2UP9eDhkRI0ppiRnrugCgiqSg
+w7MF9ZeJxd+7BEMdnVnHM1E=
+=X3Wx
+-----END PGP SIGNATURE-----
