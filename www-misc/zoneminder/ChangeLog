@@ -1,6 +1,11 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.6 2005/07/07 18:42:07 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.7 2005/08/08 21:40:46 rl03 Exp $
+
+*zoneminder-1.21.3 (08 Aug 2005)
+
+  08 Aug 2005; Renat Lumpau <rl03@gentoo.org> +zoneminder-1.21.3.ebuild:
+  Added 1.21.3
 
 *zoneminder-1.21.2 (07 Jul 2005)
 

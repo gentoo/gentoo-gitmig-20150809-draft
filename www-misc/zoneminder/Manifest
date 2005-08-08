@@ -3,15 +3,17 @@ Hash: SHA1
 
 MD5 b16c6293690c9289b1d703d84d79b132 zoneminder-0.9.12.ebuild 2019
 MD5 58f2924433c8e6a154f932ab8b2b6535 zoneminder-1.21.2.ebuild 1543
-MD5 dfadabfb3d9fb5f359d2bdb1417f3f4a ChangeLog 1742
+MD5 adea8bc9d1f939c29f84f199e215e838 zoneminder-1.21.3.ebuild 1543
+MD5 f49ad8060166c6e1a021d405e39a0cd9 ChangeLog 1865
 MD5 cf91c423242d440d538cec3f4cd0940b files/digest-zoneminder-0.9.12 129
 MD5 44a6b30038a444da891e14fd838ae012 files/digest-zoneminder-1.21.2 61
+MD5 2740d7d9d377e510a42f6579336bf11a files/digest-zoneminder-1.21.3 61
 MD5 8c805069c0e1f5731ba4326e5cc3aec6 files/zmconfig-gentoo.txt 505
 MD5 178b73fb9a69073c47336ec2be602549 files/postinstall.txt 487
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzXeXEzitwsaoONoRArzmAJ9hSZnzKT7R7uum3KA5/wi9S/8ZYgCeKHj2
-8Xegkh4DK3Oyt2dMKfw1em4=
-=S/sj
+iD8DBQFC99FpEzitwsaoONoRAnEbAJ4uk/hZpgop3D2pXzGEujZ9D8+4iwCgqAKB
+JC9b8n3/L9LL2dwolNuzhJ0=
+=E1Vl
 -----END PGP SIGNATURE-----
