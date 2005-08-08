@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 8b4b8ebaa759fe2f00e127b9ae2e8cbf ChangeLog 3812
 MD5 c5c83b6b7a826e4c175f9ee35b9571f4 foomatic-db-20040302.ebuild 1408
-MD5 f9c86c12932633ce2afc1fcbe29361ed foomatic-db-20050606.ebuild 1415
 MD5 80806100660517fdbc9d1f708000882d foomatic-db-20041220.ebuild 1407
-MD5 398c3ef77ec29e25601001e773ec8fa3 ChangeLog 3714
-MD5 e7cfdb3e785bbdd23884cdc735f1742f files/digest-foomatic-db-20050606 155
+MD5 66da4a3e920475f12afb0fd0ccd004b8 foomatic-db-20050606.ebuild 1413
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 663216887676d82c4cb8a2483f26e3ea files/digest-foomatic-db-20040302 155
 MD5 41ff1e00ded5cca40749e4b960e1f1f1 files/digest-foomatic-db-20041220 155
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC74ndKRy60XGEcJIRAtSlAJ9jhVk7Jv42lmZWHz8sd2PTknQ6MACfe3Lf
-MduAFixZHWOcXT3B+JOoM+E=
-=TKMd
------END PGP SIGNATURE-----
+MD5 e7cfdb3e785bbdd23884cdc735f1742f files/digest-foomatic-db-20050606 155
