@@ -15,5 +15,8 @@
 	<longdescription lang="nl">
 		De net-dns categorie bevat DNS (Domain Name Service) applicaties.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm net-dns chứa các phần mềm liên quan đến DNS.
+	</longdescription>
 </catmetadata>
 

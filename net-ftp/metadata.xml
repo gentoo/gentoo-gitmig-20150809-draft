@@ -21,5 +21,8 @@
 	<longdescription lang="sk">
 		Kategória net-ftp obsahuje aplikácie vzťahujúce sa k FTP (File Transfer Protocol).
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm net-ftp chứa các phần mềm FTP (File Transfer Protocol).
+	</longdescription>
 </catmetadata>
 

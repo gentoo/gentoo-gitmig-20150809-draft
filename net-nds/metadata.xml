@@ -14,5 +14,8 @@
 	<longdescription lang="nl">
 		De net-nds categorie bevat applicaties voor NDS (NetWare Directory Service).
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm net-nds chứa phần mềm NDS (NetWare Directory Services).
+	</longdescription>
 </catmetadata>
 

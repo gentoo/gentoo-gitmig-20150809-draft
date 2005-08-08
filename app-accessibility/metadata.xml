@@ -20,5 +20,8 @@
 	<longdescription lang="ja">
 	app-accessibilityカテゴリィにはアクセシビリティのために使ったパッケージがあります。
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm app-accessibility chứa các gói trợ giúp về truy nhập (ví dụ, trình đọc màn hình)
+	</longdescription>
 </catmetadata>
 

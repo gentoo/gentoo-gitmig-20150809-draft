@@ -16,5 +16,8 @@
 	<longdescription lang="nl">
 		De net-nntp categorie bevat applicaties voor NNTP (Network News Transfer Protocol).
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm net-nntp chứa các phần mềm NNTP (Network News Transfer Protocol).
+	</longdescription>
 </catmetadata>
 

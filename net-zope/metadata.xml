@@ -11,5 +11,9 @@
 	<longdescription lang="nl">
 		De net-zope categorie bevat alle Zope (zope.org) gerelateerde applicaties.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm net-zope chứa các phần mềm liên quan đến Zope (zope.org)
+		bao gồm các sản phẩm của bên thứ ba.
+	</longdescription>
 </catmetadata>
 

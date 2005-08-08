@@ -13,5 +13,8 @@
 	<longdescription lang="nl">
 		De net-fs categorie bevat netwerk-bestandssystemen.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm net-fs chứa các gói hệ tập tin mạng.
+	</longdescription>
 </catmetadata>
 

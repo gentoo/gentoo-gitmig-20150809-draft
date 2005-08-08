@@ -14,5 +14,8 @@
 	<longdescription lang="nl">
 		De net-firewall categorie bevat firewall-software.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm net-firewall chứa các phần mềm firewall.
+	</longdescription>
 </catmetadata>
 

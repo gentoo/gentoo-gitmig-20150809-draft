@@ -18,5 +18,8 @@
 	<longdescription lang="sk">
 		Kategória net-irc obsahuje klientské a serverové programy pre IRC (Internet Relay Chat).
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm net-irc chứa các client và server IRC (Internet Relay Chat).
+	</longdescription>
 </catmetadata>
 
