@@ -18,5 +18,9 @@
 		De sci-misc categorie bevat pakketten die niet in een andere
 		sci-* categorie passen.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm sci-misc chứa các phần mềm khoa học không thích hợp
+		trong các nhóm sci- khác.
+	</longdescription>
 </catmetadata>
 

@@ -16,5 +16,8 @@
 	<longdescription lang="sk">
 		Kategória www-apache obsahuje moduly pre webserver Apache.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm www-apache chứa các module cho Apache server.
+	</longdescription>
 </catmetadata>
 

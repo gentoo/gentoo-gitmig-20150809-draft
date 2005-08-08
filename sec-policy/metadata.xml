@@ -17,5 +17,9 @@
 		De sec-policy categorie bevat beveilingsrichtlijnen voor toegangscontrole-
 		systemen als SELinux. 
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm sec-policy chứa các chính sách an ninh cho các hệ thống
+		điều khiển quyền truy cập như SELinux.
+	</longdescription>
 </catmetadata>
 

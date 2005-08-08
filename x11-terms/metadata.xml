@@ -16,5 +16,8 @@
 		De x11-terms categorie bevat terminalemulators voor verschillende
 		desktopomgevingen en window managers.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm x11-term chứa các terminal emulator cho X11.
+	</longdescription>
 </catmetadata>
 

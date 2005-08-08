@@ -15,5 +15,8 @@
 		De www-client categorie bevat verschillende client voor het WWW zoals
 		browsers, download-hulpmiddelen en RSS-aggregators.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm www-client chứa các client duyệt web.
+	</longdescription>
 </catmetadata>
 

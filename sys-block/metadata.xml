@@ -16,5 +16,8 @@
 		De sys-block categorie bevat gereedschappen voor het omgaan met blok-apparaten
 		zoals harde schijven, diskettes en CD-ROM's.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm sys-block chứa các gói hoạt động với thiết bị khối (block device).
+	</longdescription>
 </catmetadata>
 

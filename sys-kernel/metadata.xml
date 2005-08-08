@@ -17,5 +17,9 @@
 		De sys-kernel categorie bevat ebuilds voor kernelbroncode en gerelateerde
 		hulpmiddelen.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm sys-kernel chứa ebuild mã nguồn kernel và các công cụ
+		liên quan đến kernel.
+	</longdescription>
 </catmetadata>
 

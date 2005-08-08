@@ -18,5 +18,9 @@
 		De sys-process categorie bevat pakketten voor de omgang met processen. Ook
 		de verschillende cron-daemons behoren tot deze categorie.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm sys-process chứa các phần mềm truy vấn và xử lý tiến trình.
+		Các 'cron' daemon cũng nằm trong đây.
+	</longdescription>
 </catmetadata>
 

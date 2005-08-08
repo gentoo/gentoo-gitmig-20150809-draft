@@ -17,5 +17,8 @@
 		De sys-devel categorie bevat essentiele ontwikkelgereedschappen en
 		bibliotheken.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm sys-devel chứa các phần mềm và thư viện phát triển hệ thống cốt lõi.
+	</longdescription>
 </catmetadata>
 

@@ -14,5 +14,8 @@
 	<longdescription lang="nl">
 		De sys-fs categorie bevat hulpmiddelen om met bestandssystemen te werken.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm sys-fs chứa các công cụ và tiện ích về hệ tập tin.
+	</longdescription>
 </catmetadata>
 

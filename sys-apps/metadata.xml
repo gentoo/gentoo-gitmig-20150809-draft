@@ -20,5 +20,9 @@
 		De sys-apps categorie bevat kerenbestanddelen van het systeem, en bepaalde
 		niet-kern toepassingen die nog niet in andere categorien zijn geplaatst.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm sys-apps chứa các phần mềm hệ thống cốt lõi, và vài phần mềm
+		hệ thống không phải cốt lõi mà chưa được chuyển sang các nhóm sys- khác.
+	</longdescription>
 </catmetadata>
 

@@ -16,5 +16,8 @@
 	<longdescription lang="sk">
 		Kategória x11-wm obsahuje správcov okien (window managers) pre X11.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm x11-wm chứa các trình quản lý cửa sổ X11.
+	</longdescription>
 </catmetadata>
 
