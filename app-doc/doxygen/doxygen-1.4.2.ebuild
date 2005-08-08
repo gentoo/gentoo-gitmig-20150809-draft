@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.2.ebuild,v 1.8 2005/07/28 20:52:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.2.ebuild,v 1.9 2005/08/08 18:01:35 ka0ttic Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc-macos ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 mips ppc ~ppc-macos ppc64 s390 sparc x86"
 IUSE="doc qt tetex"
 
 DEPEND="media-gfx/graphviz
