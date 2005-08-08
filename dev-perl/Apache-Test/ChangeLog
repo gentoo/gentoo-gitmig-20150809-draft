@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.26 2005/07/29 15:52:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.27 2005/08/08 14:39:08 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> Apache-Test-1.23.ebuild:
+  Stable on ppc64
 
 *Apache-Test-1.22 (29 Jul 2005)
 
