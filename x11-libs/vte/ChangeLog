@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.83 2005/08/02 17:35:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.84 2005/08/08 15:04:23 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> vte-0.11.13-r2.ebuild:
+  Stable on ppc64
 
   02 Aug 2005; Simon Stelling <blubb@gentoo.org> vte-0.11.13-r2.ebuild:
   stable on amd64
