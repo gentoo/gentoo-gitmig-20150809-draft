@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.5.ebuild,v 1.7 2005/07/25 17:45:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.5.ebuild,v 1.8 2005/08/08 08:38:49 corsair Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gok.ca/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 hppa ~ia64 ppc ppc64 sparc x86"
 IUSE="doc static"
 
 RDEPEND=">=x11-libs/gtk+-2.3.1
