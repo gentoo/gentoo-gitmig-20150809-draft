@@ -1,4 +1,4 @@
-MD5 f4f1990bf79a7686e6607ffbdcd20efd rstart-0.99.0.ebuild 493
-MD5 13a932f2386271c37f8a7ca199b7972e ChangeLog 378
-MD5 f2e4dcff95e33ac48480e6cf5b315bc0 files/rstart-destdir.patch 3060
+MD5 77e8ca44267a0f9540aaf0f2b40820db ChangeLog 492
+MD5 deb104f470cf20bd3ee64d57eec3076b rstart-0.99.0.ebuild 497
 MD5 cdd5a59500569e6aa3443f33ea500d45 files/digest-rstart-0.99.0 65
+MD5 f2e4dcff95e33ac48480e6cf5b315bc0 files/rstart-destdir.patch 3060
