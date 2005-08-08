@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.13 2005/07/08 04:40:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.14 2005/08/08 21:29:36 kloeri Exp $
+
+  08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> knotes-3.4.1.ebuild:
+  ~alpha keyword.
 
   08 Jul 2005; Jason Wever <weeve@gentoo.org> knotes-3.4.1.ebuild:
   Stable on SPARC.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-audiofile/artsplugin-audiofile-3.4.1.ebuild,v 1.7 2005/07/28 21:16:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-audiofile/artsplugin-audiofile-3.4.1.ebuild,v 1.8 2005/08/08 20:35:16 kloeri Exp $
 
 KMNAME=kdemultimedia
 KMMODULE=audiofile_artsplugin
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="arts audiofile plugin"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 DEPEND="media-libs/audiofile"
 

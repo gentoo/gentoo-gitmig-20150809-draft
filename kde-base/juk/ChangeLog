@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.17 2005/07/29 11:51:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.18 2005/08/08 20:37:39 kloeri Exp $
+
+  08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> juk-3.4.2.ebuild:
+  ~alpha keyword.
 
   29 Jul 2005; Dan Armak <danarmak@gentoo.org> juk-3.4.2.ebuild:
   Use local use flag musicbrainz to determine whether to build musicbrainz

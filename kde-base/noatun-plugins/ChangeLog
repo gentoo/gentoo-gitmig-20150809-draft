@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/noatun-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.12 2005/07/29 10:34:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.13 2005/08/08 20:50:53 kloeri Exp $
+
+  08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
+  noatun-plugins-3.4.2.ebuild:
+  ~alpha keyword.
 
   29 Jul 2005; Dan Armak <danarmak@gentoo.org> noatun-plugins-3.4.2.ebuild:
   Add missing fix from the 3.4.1 ebuild to help configure find the berkdb

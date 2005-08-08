@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmailcvt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.13 2005/07/28 11:31:30 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.14 2005/08/08 21:26:13 kloeri Exp $
+
+  08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
+  kmailcvt-3.4.1-r1.ebuild:
+  ~alpha keyword.
 
 *kmailcvt-3.4.1-r1 (28 Jul 2005)
 

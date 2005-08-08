@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksync
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksync/ChangeLog,v 1.13 2005/07/08 04:42:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksync/ChangeLog,v 1.14 2005/08/08 21:30:00 kloeri Exp $
+
+  08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> ksync-3.4.1.ebuild:
+  ~alpha keyword.
 
   08 Jul 2005; Jason Wever <weeve@gentoo.org> ksync-3.4.1.ebuild:
   Stable on SPARC.
