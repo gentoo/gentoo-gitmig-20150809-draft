@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.44 2005/08/03 20:10:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.45 2005/08/08 08:52:08 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> enchant-1.1.6.ebuild:
+  Stable on ppc64
 
   03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> enchant-1.1.6.ebuild:
   Stable on alpha.
