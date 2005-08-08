@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b58099c0d2446e796496bc6d9134af50 ChangeLog 2080
 MD5 4c2aef939dea6d37d9aa094fc24ea5bc kmathtool-3.4.1.ebuild 420
 MD5 da3e4155954df5b9e8a6229440ba89d7 kmathtool-3.4.2.ebuild 433
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kmathtool-3.4.1 208
 MD5 0a69a5cb72c99f0ecc6f31877d6a228d files/digest-kmathtool-3.4.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC99h7Kf2g/qXtneoRAlJ5AJ4j2h9atT2IW0B7LDNwSkvE9xMDVACdHpHO
+RXseBZ+0ft+TAcz1/XWB6+E=
+=R5A+
+-----END PGP SIGNATURE-----

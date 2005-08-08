@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c47bf7960960015f051e0b9886fd90ad ChangeLog 2124
 MD5 a9a1d3eeb3bf7257eae053ed10ab6910 kmouth-3.4.1.ebuild 425
 MD5 5d4e24e370f2f2ac4b9629b2efb94908 kmouth-3.4.2.ebuild 438
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kmouth-3.4.1 236
 MD5 8340ca34cb0bed2c4acfd82f444a2624 files/digest-kmouth-3.4.2 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC97sPKf2g/qXtneoRAvVzAJ92DQnPBrFxXi+56L1alrFz57Rd/wCeNVOA
+6ZWrrjR5xR4X5R7E1y67/ik=
+=PSPV
+-----END PGP SIGNATURE-----

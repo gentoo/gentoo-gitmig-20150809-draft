@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8df8c2c41703b327f3252f30e44a310f ChangeLog 1950
 MD5 e4c98045cc0b98c069b1202b34c465b1 libksieve-3.4.1.ebuild 473
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libksieve-3.4.1 208
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC983YKf2g/qXtneoRAjsuAJwKkU3Wen0Xd4AUxaC9fykx1HE2pACaAoQr
+meaXoLSE0QTitIrQPrSBR3E=
+=EejO
+-----END PGP SIGNATURE-----

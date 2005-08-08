@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b23c267b7b0598aa09760cdf84a9301f ChangeLog 2023
 MD5 239e7ffa2673e1f9e95485e6850897df kdeaddons-kfile-plugins-3.4.1.ebuild 525
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-kdeaddons-kfile-plugins-3.4.1 215
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98p8Kf2g/qXtneoRAkm0AJ43NoQG8kzHO4NmI+g0DmpqJhYqowCgti3k
+q2ucDpkW3w+ZYx02Hz5Q6G4=
+=PZIo
+-----END PGP SIGNATURE-----

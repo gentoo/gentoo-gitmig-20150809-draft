@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2fd816631fc1845134c884df2f20da3b ChangeLog 1986
 MD5 69cc0bc5f5a27272315add2dba119d23 kdat-3.4.1.ebuild 400
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-kdat-3.4.1 211
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98txKf2g/qXtneoRAh3sAJsE7cFh8RRfEvS+kwal+4qmcO3niwCgvU+b
+fMuwRFzvhmwXfT1kvQv5+OA=
+=1eEd
+-----END PGP SIGNATURE-----

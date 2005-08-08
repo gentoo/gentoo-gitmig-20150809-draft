@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6cf8362bd4d3e90121e45f7de9e0b72c ChangeLog 3309
 MD5 493fdf9a2dc94e56301161f38122b422 kpdf-3.4.1-r1.ebuild 627
 MD5 710200655b097652c4ea66ea6e5931db kpdf-3.4.1.ebuild 569
@@ -13,3 +16,10 @@ MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
 MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
 MD5 a603b1f40c870db682665f57f908df0e files/digest-kpdf-3.4.2-r2 71
 MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98AOKf2g/qXtneoRAubBAKClBqwTLaEtXbeo+JSadB/OUqJpOQCeNo85
+PLCmNQA/yVa4uwOC26GIUgU=
+=59VS
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f53f54c858d24cb7e4fc002c7b3659a3 ChangeLog 2154
 MD5 529ae72a16e0bc3ddbf409b7635d622e lisa-3.4.1.ebuild 1003
 MD5 375c5ed27d74f4028a5305008e772fad lisa-3.4.2.ebuild 1016
@@ -8,3 +11,10 @@ MD5 286554f1aa942a969d3521d60b4f4def files/lisa 532
 MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
 MD5 18120584a2975ce21312780ef0eaf12b files/reslisa 556
 MD5 01dd2bacee59738f96d17c77774a5102 files/reslisa.conf 450
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC994KKf2g/qXtneoRArRjAKC7EQSXh9FSixYJB10gk3MHc66MkACfQP12
+Akdz4Ur5u5/OZpFhhxqCmRE=
+=o5/D
+-----END PGP SIGNATURE-----

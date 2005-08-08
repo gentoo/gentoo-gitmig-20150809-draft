@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ea85ff5d89a2fba0ed797b88ceb063dd ChangeLog 2083
 MD5 060b6137595fbfcf3a23ef196e55008f artsplugin-mpg123-3.4.1.ebuild 605
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-artsplugin-mpg123-3.4.1 227
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98DZKf2g/qXtneoRAodFAKCHV9Jxaipn+yBtLZUDvRpYn41w6QCeK3U/
+2wg9nA1MbddRpFp1CdZFJrc=
+=A8ph
+-----END PGP SIGNATURE-----

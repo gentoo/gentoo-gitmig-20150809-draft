@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0cc03bc72da19209eb070f503b74e3c0 ChangeLog 2005
 MD5 25b339dd695a3b4ffd8c981491b944a8 fifteenapplet-3.4.1.ebuild 415
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-fifteenapplet-3.4.1 208
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98yiKf2g/qXtneoRAvXjAJ9RYl1HFrS09BQYJhvFmWVbkcEomQCfRvhN
+BfWAKIZla6qWKeBan9vlO7c=
+=D0hW
+-----END PGP SIGNATURE-----

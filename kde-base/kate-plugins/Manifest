@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ccf2313d9aaaba0c0c9150f97fe154db ChangeLog 2475
 MD5 ee742e534fe545c6250e9bfcca863ff1 kate-plugins-3.4.1.ebuild 499
 MD5 d717083a99ee39a5a324d9d9a5b91f5d kate-plugins-3.4.2.ebuild 512
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-kate-plugins-3.4.1 215
 MD5 bed9e2e46d8e7de37c5996e1ad3025bd files/digest-kate-plugins-3.4.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98miKf2g/qXtneoRAtVbAJ9n1gEQ/D70DAEWhUIUOrQMTpy6jwCdHlXk
+JN8I7/T7fAJ6saQq08JbmAU=
+=d2PH
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 06e1c1abb3f0559c59543452ddf5c1cb ChangeLog 2134
 MD5 f55e8d95b2f058ed9ee799a3597d5505 artsplugin-audiofile-3.4.1.ebuild 641
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-artsplugin-audiofile-3.4.1 227
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98IgKf2g/qXtneoRAtkdAJ9Y/qIpo6H2tMbmzhbtFT5621BmGACbBCX+
+HoCN8SqEhzpU6MBY0Qh2CQ8=
+=VHYv
+-----END PGP SIGNATURE-----

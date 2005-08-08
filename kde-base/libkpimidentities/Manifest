@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e3d9d16a0137f272a157c5470b770480 ChangeLog 2220
 MD5 a1f0c8ea33cb5b4073224cbe271a0b77 libkpimidentities-3.4.1.ebuild 719
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkpimidentities-3.4.1 208
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98hwKf2g/qXtneoRAnDvAJ47XSFrzV6f2ypyiakcRjknNYI2mQCeMjHV
+zbVnHlolmh9e66UtobzIGLI=
+=O1Lg
+-----END PGP SIGNATURE-----

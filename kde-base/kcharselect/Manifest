@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 470eec31d3a1b7341d017d695b61acf7 ChangeLog 1986
 MD5 07b9d86fa1841b2971aab3170980511d kcharselect-3.4.1.ebuild 440
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kcharselect-3.4.1 212
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC99W+Kf2g/qXtneoRApW3AJ9hl5ZpsrYq1QymAH0rf8YzVR3U6gCePxyY
+c2z1UE+47UB3J+WTJIwuh9g=
+=G0GC
+-----END PGP SIGNATURE-----

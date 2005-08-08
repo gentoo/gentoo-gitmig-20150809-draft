@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f41902307446b8841e3eb8beed9365e4 ChangeLog 2253
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 969a2c2bc2b5ded7593d15d6113fb873 mpeglib-3.4.1.ebuild 529
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-mpeglib-3.4.1 227
 MD5 b7a984a57c27e1e62a606d90d0c39437 files/kdemultimedia-3.4.0-amd64.patch 523
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98DwKf2g/qXtneoRAgoTAJwNIiAoMVH1xFE9GAgRHlxo+mmbSACfUvJL
+1QKlFAdMkULMe4pOKjNi33A=
+=HWkN
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 84e763d62aa28376de6435b6710f1408 ChangeLog 1964
 MD5 f31ba8d68be4b419c1a46a4eae552cc1 kdeartwork-emoticons-3.4.1.ebuild 475
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-emoticons-3.4.1 220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98TGKf2g/qXtneoRAk8iAJ4klsCJ7wjXqLOoWkvpC6D0i7sgTgCgjW/E
+7No9aivjStN/W/H4wfKBQZ4=
+=mq7U
+-----END PGP SIGNATURE-----

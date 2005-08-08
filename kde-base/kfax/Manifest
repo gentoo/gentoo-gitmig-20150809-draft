@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a86ba0482e37ac18917af6885fe82348 ChangeLog 2001
 MD5 ec9ed2c0766fbaf6ab10db80f58bbd2d kfax-3.4.1.ebuild 578
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kfax-3.4.1 221
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9775Kf2g/qXtneoRAo/0AKCWlIAoK9olZk4/yjuRFMrDNCD9yQCgkcaG
+eukSxqycLWKwBmhsX3OZIGE=
+=4RH4
+-----END PGP SIGNATURE-----

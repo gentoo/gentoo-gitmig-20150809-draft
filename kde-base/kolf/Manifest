@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 536d29fe389b6c93a8915d3b47f0d530 ChangeLog 1919
 MD5 f13e44dee96fae9fdd48e09da2c6eacf kolf-3.4.1.ebuild 681
 MD5 657d6fcf1aee7725dc6310fde11f13a5 kolf-3.4.2.ebuild 694
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kolf-3.4.1 212
 MD5 b6a10ce36a18708dd9210e57751a7478 files/digest-kolf-3.4.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC99GuKf2g/qXtneoRAuE7AJ9MArU+gaohW49kizwWewzsHiSGngCgxJTr
+4XD9/e9uANfVnVeWxJwTG0Q=
+=B7wC
+-----END PGP SIGNATURE-----

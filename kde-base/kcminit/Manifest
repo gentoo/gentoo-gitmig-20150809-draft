@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 30fa0b8a5470288e9a3c1b1a3db92459 ChangeLog 1914
 MD5 7cf973d03722755f595fcb4658a12ede kcminit-3.4.1.ebuild 433
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcminit-3.4.1 212
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC970uKf2g/qXtneoRAixWAJ9lA5EWVhNZhuTvNLkzlfiyrTNfNwCgkIt8
+qd+onycQgyRRG62iV9Wngc8=
+=MPvQ
+-----END PGP SIGNATURE-----

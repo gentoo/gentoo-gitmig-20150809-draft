@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dfc479be3ffd02bc5047a2c44c6f4c96 ChangeLog 2084
 MD5 0239358fc632ebb04cb5a8481939c50b kodo-3.4.1.ebuild 412
 MD5 8386a0c00558be1f089f35d692b8c9f0 kodo-3.4.2.ebuild 425
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kodo-3.4.1 208
 MD5 cec4c0358c295f328944405dc17ded2b files/digest-kodo-3.4.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC98v0Kf2g/qXtneoRAoOLAJ9A/fJvNwi+LpxWfysWWWIMfzAXOgCeJzfk
+07cQ2UQ+dJhi1BHXMiMDSfk=
+=rSn4
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0cba8b0889e778202242d54ba828ad91 ChangeLog 2144
 MD5 00a48ff403c655bd021fe3740f04ce9c klipper-3.4.1.ebuild 412
 MD5 9d2381ef0103b302864d2b3ddc7b4d73 klipper-3.4.2.ebuild 425
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-klipper-3.4.1 212
 MD5 ee7ed731fc8a9b896d5888b94febb4fe files/digest-klipper-3.4.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC99ycKf2g/qXtneoRAuaNAJ0faoVZPgkF1c8O1CcdTJ4yfMM9aQCffkzo
+puTWLdshhE33jLG5vXJCnD4=
+=DCnG
+-----END PGP SIGNATURE-----
