@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.44 2005/08/03 18:32:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.45 2005/08/08 08:35:13 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> tmpwatch-2.9.4.1.ebuild:
+  Stable on ppc64
 
   03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   tmpwatch-2.9.4.1.ebuild:
