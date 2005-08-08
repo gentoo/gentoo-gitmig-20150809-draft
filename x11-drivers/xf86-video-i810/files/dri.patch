@@ -1,0 +1,12 @@
+diff -urN xf86-video-i810-0.0_pre20050727.orig/configure.ac xf86-video-i810-0.0_pre20050727/configure.ac
+--- xf86-video-i810-0.0_pre20050727.orig/configure.ac	2005-07-25 17:41:42.000000000 -0700
++++ xf86-video-i810-0.0_pre20050727/configure.ac	2005-07-27 13:41:10.000000000 -0700
+@@ -83,7 +83,7 @@
+ 
+ AM_CONDITIONAL(DRI, test x$DRI = xyes)
+ if test "$DRI" = yes; then
+-        PKG_CHECK_MODULES(DRI, [libdrm])
++        PKG_CHECK_MODULES(DRI, [libdrm xf86driproto])
+         AC_DEFINE(XF86DRI,1,[Enable DRI driver support])
+         AC_DEFINE(XF86DRI_DEVEL,1,[Enable developmental DRI driver support])
+ fi
