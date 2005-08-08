@@ -1,0 +1,9 @@
+# ChangeLog for x11-libs/libXv
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.1 2005/08/08 04:43:50 spyderous Exp $
+
+*libXv-0.99.0 (08 Aug 2005)
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +libXv-0.99.0.ebuild:
+  Initial commit for modular X.
+
