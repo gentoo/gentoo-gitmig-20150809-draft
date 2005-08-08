@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3175396be3091133eb5984645b72a11a lvm2-2.01.09-r1.ebuild 1402
 MD5 6ed3eb62494d37a3b7f7cca090ebde9d lvm2-2.01.13.ebuild 1406
 MD5 678ecb26cc24bf6e25d3e4c2ea3475f7 lvm2-2.01.09.ebuild 1277
@@ -8,3 +11,10 @@ MD5 540e8a304be1860275577f326c7bd0f0 files/digest-lvm2-2.01.09-r1 61
 MD5 fea6b4e78b9e73071f7131169fa9ab6e files/lvm2-stop.sh 1775
 MD5 540e8a304be1860275577f326c7bd0f0 files/digest-lvm2-2.01.09 61
 MD5 d1e295db9aa6771cdc6506033bc98f69 files/digest-lvm2-2.01.13 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC90GvEZCkKN40op4RAj0YAJ982b8whPAyKrk3fPoTX/tgtWZBSQCfeKxK
+s2dX5rC2bDZdGrpjo/Lf5LU=
+=byzA
+-----END PGP SIGNATURE-----
