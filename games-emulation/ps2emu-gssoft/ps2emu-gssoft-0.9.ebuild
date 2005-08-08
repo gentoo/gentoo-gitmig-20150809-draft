@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ps2emu-gssoft-0.9.ebuild,v 1.2 2005/08/07 07:35:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ps2emu-gssoft-0.9.ebuild,v 1.3 2005/08/08 00:36:48 vapier Exp $
 
 inherit games
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cd "${S}"
 	sed -i 's:-O2 -fomit-frame-pointer -ffast-math:$(OPTFLAGS):' Src/Linux/Makefile || die
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-PIC.patch
 }
 
 src_compile() {
