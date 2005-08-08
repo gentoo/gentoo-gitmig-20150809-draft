@@ -7,6 +7,6 @@ MD5 e97ba2fc5180dac248822b8264841013 files/monetdb-start.sh 379
 MD5 be0eaed8b26f07c98efcbb9d59e15a64 files/monetdb-4.8.2-gentoo-conf.patch 1038
 MD5 cae0e46fdfa11ea1f0be120005076b83 files/monetdb.init-4.8.2 328
 MD5 09aa9eafe8a4c3073b669baa9ea6ea6d files/monetdb.conf-4.8.2 768
-MD5 ab73e512460465c2653accc427d52e37 files/digest-monetdb-4.8.2 299
+MD5 d952989ef380ae6c092f7ad1da16e77d files/digest-monetdb-4.8.2 299
 MD5 324a083e56c76f02a3ba9ac34c188066 files/monetdb-4.8.2-gentoo-MapiClient.patch 311
 MD5 07e71d02ee02ca4ebfbc4db68fa4f40e files/monetdb-stop.sh 626
