@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.18 2005/08/08 22:52:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.19 2005/08/08 23:39:13 ranger Exp $
+
+  08 Aug 2005; Brent Baude <ranger@gentoo.org>
+  +files/ncbi-tools-20050605-lop.patch.gz, ncbi-tools-20050605.ebuild:
+  Added patch for 20050506 which when ppc64, will patch the makefile to use
+  gcc instead of the default xlc (IBM compiler) which doesnt exist on gentoo.
 
   08 Aug 2005; Brent Baude <ranger@gentoo.org> ncbi-tools-20050429.ebuild:
   ncbi-tools-20050429.ebuild does not compile on ppc64; will fix later ebuild
