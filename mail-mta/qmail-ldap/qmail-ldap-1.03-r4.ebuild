@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.5 2005/07/13 15:10:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r4.ebuild,v 1.6 2005/08/08 20:20:11 robbat2 Exp $
 
 IUSE="ssl"
 
-inherit eutils fixheadtails
+inherit eutils fixheadtails toolchain-funcs
 
 S=${WORKDIR}/qmail-${PV}
 
@@ -76,8 +76,8 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}-${PR}/tls.patch.bz2 || die "tls+auth patch failed";
 	fi
 
-	echo -n "${CC} ${CFLAGS}" >${S}/conf-cc
-	echo -n "${CC} ${LDFLAGS}" > ${S}/conf-ld
+	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
+	echo -n "$(tc-getCC) ${LDFLAGS}" > ${S}/conf-ld
 	echo "500" > conf-spawn
 
 }

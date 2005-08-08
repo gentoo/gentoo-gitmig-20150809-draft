@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail-ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.7 2005/03/03 18:46:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.8 2005/08/08 20:20:11 robbat2 Exp $
+
+  08 Aug 2005; Robin H. Johnson <robbat2@gentoo.org>
+  qmail-ldap-1.03-r3.ebuild, qmail-ldap-1.03-r4.ebuild:
+  Bug reported via email, CC not set.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   qmail-ldap-1.03-r1.ebuild, qmail-ldap-1.03-r2.ebuild,
