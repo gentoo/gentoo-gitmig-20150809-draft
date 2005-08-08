@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwalletmanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.14 2005/08/08 22:00:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.15 2005/08/08 22:01:42 kloeri Exp $
+
+  08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> ChangeLog:
+  ~alpha keyword.
 
   08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   kwalletmanager-3.4.2.ebuild:

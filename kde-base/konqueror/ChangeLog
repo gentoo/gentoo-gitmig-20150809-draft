@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.15 2005/08/06 10:26:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.16 2005/08/08 22:17:32 kloeri Exp $
+
+  08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
+  konqueror-3.4.2-r1.ebuild:
+  ~alpha keyword.
 
 *konqueror-3.4.2-r1 (06 Aug 2005)
 
