@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.2-r2.ebuild,v 1.1 2005/08/06 19:43:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.2-r2.ebuild,v 1.2 2005/08/08 10:09:03 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -44,7 +44,7 @@ src_unpack() {
 	# Fix regression in kpdf (kde bug 110000). Applied for 3.4.3.
 	epatch "${FILESDIR}/kdegraphics-3.4.2-kpdf-fix.patch"
 
-	# Fix compilation with gcc4. Applied for 3.5.
+	# Fix compilation with gcc4 (kde bug 110249). Applied for 3.4.3.
 	epatch "${FILESDIR}/kdegraphics-3.4-gcc4.patch"
 
 	# Configure patch. Applied for 3.5.
