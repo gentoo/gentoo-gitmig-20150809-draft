@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1.ebuild,v 1.2 2005/08/08 17:18:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1.ebuild,v 1.3 2005/08/08 20:25:14 fmccor Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -17,7 +17,7 @@ PATCHES="${FILESDIR}/xorg-composite.patch"
 SRC_URI="${SRC_URI}
 	glx? ( http://xorg.freedesktop.org/extras/${MESA_P}.tar.gz )"
 DESCRIPTION="X.Org X servers"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="glx dri xinerama ipv6 minimal"
 RDEPEND="x11-libs/libXfont
 	x11-libs/xtrans
