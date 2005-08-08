@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.238 2005/07/19 21:25:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.239 2005/08/08 10:39:36 greg_g Exp $
+
+*qt-3.3.4-r7 (08 Aug 2005)
+
+  08 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/qt-3.3.4-gcc4.patch, +qt-3.3.4-r7.ebuild:
+  Add patch to fix compilation with gcc4 (#87799). Install .prl files
+  (#98481). Install pkg-config file (#97335). Add einfo about bug #81066.
 
   17 Jul 2005; <gongloo@gentoo.org> qt-3.3.4-r6.ebuild:
   Fixes for ppc-macos. Should work now.
