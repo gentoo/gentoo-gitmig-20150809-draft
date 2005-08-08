@@ -1,0 +1,87 @@
+? rstart/commands
+? rstart/contexts
+? rstart/rstart.patch
+? rstart/samples
+Index: rstart/Makefile.am
+===================================================================
+RCS file: /cvs/xorg/app/rstart/Makefile.am,v
+retrieving revision 1.5
+diff -u -b -B -r1.5 Makefile.am
+--- rstart/Makefile.am	28 Jul 2005 15:57:12 -0000	1.5
++++ rstart/Makefile.am	29 Jul 2005 16:53:42 -0000
+@@ -40,7 +40,7 @@
+ config_DATA = config
+ 
+ config: config.cpp
+-	$(CPP) -DPACKAGEname=rstart -DLIBDIR=$(configdir) -DENVPREFIX=RSTART ${srcdir}/config.cpp |	\
++	$(CPP) -DPACKAGEname=rstart -DLIBDIR=$(configdir) -DENVPREFIX=RSTART $(top_srcdir)/config.cpp |	\
+ 		$(SED) -e /^\#.*$$/d  -e s/XCOMM/\#/g   > $@
+ 
+ # wrapper scripts
+@@ -48,12 +48,12 @@
+ bin_SCRIPTS = rstart rstartd
+ 
+ rstart: client.cpp
+-	$(CPP) -DRSHCMD=$(RSH) -DSERVERNAME=rstartd ${srcdir}/client.cpp |	\
++	$(CPP) -DRSHCMD=$(RSH) -DSERVERNAME=rstartd $(top_srcdir)/client.cpp |	\
+ 		$(SED) -e /^\#.*$$/d  -e s/XCOMM/\#/g   > $@
+ 
+ rstartd: server.cpp
+ 	$(CPP) -DBINDIR=$(rstart_serverdir) -DLIBDIR=$(configdir) \
+-		${srcdir}/server.cpp |	\
++		$(top_srcdir)/server.cpp |	\
+ 		$(SED) -e /^\#.*$$/d  -e s/XCOMM/\#/g   > $@
+ 
+ # man pages
+@@ -76,39 +76,39 @@
+ DATA_DIR = $(libdir)/X11/rstart
+ 
+ install-data-hook:
+-	for name in `find ${srcdir}/commands -print | grep -v CVS` ; do	\
++	for name in `find $(top_srcdir)/commands -print | grep -v CVS` ; do	\
+ 	    if test -f $$name; then					\
+-	        sed							\
++	        $(SED)							\
+ 		    -e 's,ENVPREFIX,RSTART,g'				\
+-		        < $$name > $(DATA_DIR)/$$name;			\
+-		case `basename $(DATA_DIR)/$$name` in			\
++		        < $$name > $(DESTDIR)$(DATA_DIR)/$$name;			\
++		case `basename $(DESTDIR)$(DATA_DIR)/$$name` in			\
+ 		@*)							\
+ 		    ;;							\
+ 		*)							\
+-		    chmod a+x $(DATA_DIR)/$$name ;;			\
++		    chmod a+x $(DESTDIR)$(DATA_DIR)/$$name ;;			\
+ 		esac;							\
+ 	    else							\
+ 	        if [ -d $$name ] ; then					\
+-	            mkdir -p $(DATA_DIR)/$$name ;			\
++	            mkdir -p $(DESTDIR)$(DATA_DIR)/$$name ;			\
+ 	        fi;							\
+ 	    fi;								\
+ 	done;								\
+ 									\
+-	for name in `find ${srcdir}/contexts -print | grep -v CVS` ; do	\
++	for name in `find $(top_srcdir)/contexts -print | grep -v CVS` ; do	\
+ 	    if test -f $$name; then					\
+-	        sed							\
++	        $(SED)							\
+ 	            -e 's,_PATH,$(DEFAULT_USER_PATH),g'			\
+ 	            -e 's,_MANPATH,$(DEFAULT_X_MANPATH),g'		\
+-				< $$name > $(DATA_DIR)/$$name ;		\
++				< $$name > $(DESTDIR)$(DATA_DIR)/$$name ;		\
+ 	    else							\
+ 	        if [ -d $$name ] ; then					\
+-	            mkdir -p $(DATA_DIR)/$$name	;			\
++	            mkdir -p $(DESTDIR)$(DATA_DIR)/$$name	;			\
+ 	        fi ;							\
+ 	    fi ;							\
+ 	done;								\
+ 									\
+-	cd $(DATA_DIR)/contexts;					\
+-	sed -e '/^$$/d' -e '/^#/d' ${srcdir}/contexts/@Aliases |	\
++	cd $(DESTDIR)$(DATA_DIR)/contexts;					\
++	$(SED) -e '/^$$/d' -e '/^#/d' @Aliases |	\
+ 	    while read real aliases; do					\
+ 	        for i in $$aliases; do					\
+ 	            $(RM) $$i;						\
