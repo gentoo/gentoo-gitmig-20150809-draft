@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.53 2005/08/04 21:53:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.54 2005/08/08 17:05:58 anarchy Exp $
+
+  08 Aug 2005; Jory A. Pratt <anarchy@gentoo.org> -mozilla-1.7.7.ebuild,
+  -mozilla-1.7.7-r2.ebuild, -mozilla-1.7.8.ebuild, -mozilla-1.7.8-r1.ebuild,
+  -mozilla-1.7.8-r2.ebuild, mozilla-1.7.10-r1.ebuild,
+  mozilla-1.7.10-r2.ebuild, mozilla-1.7.10-r3.ebuild, mozilla-1.7.11.ebuild:
+  cleanup, drop of mozxmlterm as it is expermimental and not supported by us
+  anymore
 
   04 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
   mozilla-1.7.10-r1.ebuild, mozilla-1.7.10-r2.ebuild,
