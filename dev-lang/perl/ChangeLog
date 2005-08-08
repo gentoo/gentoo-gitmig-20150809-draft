@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.143 2005/07/28 13:43:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.144 2005/08/08 14:58:02 koon Exp $
+
+  08 Aug 2005; Thierry Carrez <koon@gentoo.org> perl-5.8.6-r5.ebuild,
+  perl-5.8.7.ebuild:
+  Reverting vapier's features_noman change on the groff dependency, which
+  results in bug 101088.
 
   28 Jul 2005; Michael Cummings <mcummings@gentoo.org>
   files/perl-reorder-INC.patch, -perl-5.8.5-r5.ebuild, -perl-5.8.6-r4.ebuild:
