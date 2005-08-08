@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomeprintui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/ChangeLog,v 1.94 2005/08/02 17:41:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/ChangeLog,v 1.95 2005/08/08 14:44:35 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org>
+  libgnomeprintui-2.10.2.ebuild:
+  Stable on ppc64
 
   02 Aug 2005; Simon Stelling <blubb@gentoo.org>
   libgnomeprintui-2.10.2.ebuild:
