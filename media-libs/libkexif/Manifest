@@ -1,6 +1,19 @@
-MD5 90d69a10112ee9e93e1d7237bd67f1e9 ChangeLog 864
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 978b011d4a31ba0439834a5f5ad68d1a ChangeLog 1017
 MD5 d281168730da1227d5539d2d301767d2 libkexif-0.1.ebuild 548
 MD5 664b6ea08ca197961e436ad0b3704003 libkexif-0.2.1.ebuild 548
+MD5 3d65f4a64fc34c5aca8bbe65d9111761 libkexif-0.2.1-r1.ebuild 638
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 e36a88fab83880a32b9e0da85493b6ca files/digest-libkexif-0.1 65
 MD5 a4bfd1b081257d97d2c1d8a52ccb1c50 files/digest-libkexif-0.2.1 67
+MD5 e36a88fab83880a32b9e0da85493b6ca files/digest-libkexif-0.1 65
+MD5 0cf957abbe3ce8f33e84934b88ed11c8 files/libkexif-0.2.1-gcc4.patch 382
+MD5 a4bfd1b081257d97d2c1d8a52ccb1c50 files/digest-libkexif-0.2.1-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9yMpj5H05b2HAEkRAiNjAJ9eg/X8YsF6/76qAmtgTwpPWjURRQCgmEu5
+K8/JwPpoRzJkUPFZiOSAfbk=
+=C54f
+-----END PGP SIGNATURE-----
