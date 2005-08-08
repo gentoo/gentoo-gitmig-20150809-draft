@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.25.ebuild,v 1.3 2005/08/08 01:14:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.26.ebuild,v 1.1 2005/08/08 01:14:31 nerdboy Exp $
 
 inherit eutils libtool distutils
 
@@ -15,10 +15,9 @@ KEYWORDS="~x86 ~ppc ~amd64 ~ppc64 ~sparc ~arm"
 IUSE="X usb dbus"
 
 DEPEND="X? ( virtual/motif
-		virtual/x11
-	)
+		virtual/x11 )
 	usb? ( sys-apps/hotplug )
-	dbus? ( >=sys-apps/dbus-0.23.4 )
+	dbus? ( sys-apps/dbus )
 	dev-lang/python
 	app-text/xmlto
 	virtual/libc
@@ -27,8 +26,9 @@ DEPEND="X? ( virtual/motif
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# remove patch for >=2.26
-	epatch ${FILESDIR}/${P}-y-format.patch
+	# remove patches for >=2.27
+	epatch ${FILESDIR}/${P}-python.patch
+	epatch ${FILESDIR}/${P}-dbus.patch
 	elibtoolize
 }
 
@@ -44,11 +44,11 @@ src_install() {
 	make DESTDIR=${D} install
 
 	if use usb ; then
-	    sed -i -e "s/gpsd.hotplug/gpsd/g" gpsd.hotplug gpsd.usermap
+#	    sed -i -e "s/gpsd.hotplug/gpsd/g" gpsd.hotplug gpsd.usermap
 	    insinto /etc/hotplug/usb
 	    doins gpsd.usermap
 	    exeinto /etc/hotplug/usb
-	    newexe gpsd.hotplug gpsd
+	    doexe gpsd.hotplug
 	else
 	    newconfd ${FILESDIR}/gpsd.conf gpsd
 	    newinitd ${FILESDIR}/gpsd.init gpsd
