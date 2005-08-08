@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.11 2005/08/02 11:55:38 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.12 2005/08/08 22:00:43 rl03 Exp $
+
+  08 Aug 2005; Renat Lumpau <rl03@gentoo.org> otrs-2.0.1.ebuild:
+  Fixed libapreq2 dependency
 
   02 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/reconfig-2,
   files/reconfig:
