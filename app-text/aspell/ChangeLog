@@ -1,6 +1,10 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.72 2005/07/12 16:14:51 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.73 2005/08/08 11:49:27 seemant Exp $
+
+  08 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/aspell-0.60.3-templateinstantiations.patch, aspell-0.60.3.ebuild:
+  gcc4 patch, as submitted in bug #70582, and requested by flameeyes
 
 *aspell-0.60.3 (12 Jul 2005)
 

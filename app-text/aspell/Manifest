@@ -1,8 +1,8 @@
-MD5 8675ad0125a53728fd13d0722c16f89c ChangeLog 11487
+MD5 6b401e3fb9fbe71cf7e76c7b0db53e71 ChangeLog 11688
 MD5 d40ff6a488da2fdffb038f21cea2aedf aspell-0.50.5-r4.ebuild 1888
 MD5 c80cb44776fc951ad669a37112e50f65 aspell-0.60.2.ebuild 1753
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
-MD5 8098a96164ff4e506bf6ef45ca5d6f65 aspell-0.60.3.ebuild 1751
+MD5 7ad2996cc3d4ce2e8d3f49666be41a9e aspell-0.60.3.ebuild 1809
 MD5 4fa550930c5e5fb38177ac9f77619891 files/01-gcc3.3-assert.patch 309
 MD5 f956a4b48687a0823d0d5d7608b567e9 files/02-gcc3.3-constcast.patch 453
 MD5 d2091b79a60b395e1ce3c496b7e3d45a files/aspell-0.50.5-charcount.patch 2264
@@ -11,3 +11,4 @@ MD5 ec7c300a1661ae94b55736f74a045bab files/aspell-quotechar-fix.patch 473
 MD5 1b5d84b6b88a3dfe388ad2e4b1f48155 files/digest-aspell-0.50.5-r4 66
 MD5 ea58a3b4827dbc2d3a5606ab927de6a6 files/digest-aspell-0.60.2 66
 MD5 1b48dc4c225359e25d93946c0f313adb files/digest-aspell-0.60.3 66
+MD5 fb277ca79b2dcd2aa6a842c8b8ad59e4 files/aspell-0.60.3-templateinstantiations.patch 274
