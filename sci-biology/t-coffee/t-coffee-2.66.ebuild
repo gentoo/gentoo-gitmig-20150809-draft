@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-2.66.ebuild,v 1.1 2005/08/07 14:55:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-2.66.ebuild,v 1.2 2005/08/08 11:00:44 dholm Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 DEPEND="sci-biology/clustalw"
 
