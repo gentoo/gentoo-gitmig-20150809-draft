@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1.ebuild,v 1.1 2005/08/08 06:37:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1.ebuild,v 1.2 2005/08/08 17:18:51 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -46,6 +46,9 @@ DEPEND="${RDEPEND}
 	x11-proto/recordproto
 	x11-proto/resourceproto
 	x11-proto/dmxproto
+	x11-proto/videoproto
+	x11-proto/scrnsaverproto
+	x11-proto/evieext
 	xinerama? ( x11-proto/panoramixproto )
 	glx? ( x11-proto/glproto )
 	dri? ( x11-proto/xf86driproto

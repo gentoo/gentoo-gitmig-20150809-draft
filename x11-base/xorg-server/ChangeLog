@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.1 2005/08/08 06:37:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.2 2005/08/08 17:18:51 spyderous Exp $
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-0.99.1.ebuild:
+  (#101749) Add dependencies on videoproto, scrnsaverproto and evieext.
+  Reported by Georgi Georgiev <chutz@gg3.net>.
 
 *xorg-server-0.99.1 (08 Aug 2005)
 
