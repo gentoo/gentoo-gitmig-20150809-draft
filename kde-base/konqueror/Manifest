@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ea53c9f5a87aee859605f4eaadbf7ad ChangeLog 2557
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 4d3b8e0950d0ff2861be4dd9d5c5b7fe ChangeLog 2655
 MD5 56e97c5040d28b656c9e7c9c6e05a95f konqueror-3.4.1.ebuild 774
+MD5 0451e0225115ecd1a652e2ecfebc180f konqueror-3.4.2-r1.ebuild 969
 MD5 9de0d7f28bcceea80bbdb2a1b1def058 konqueror-3.4.2.ebuild 780
-MD5 d523a1bdc9bfd74fa73fbad7dad79aec konqueror-3.4.2-r1.ebuild 966
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-konqueror-3.4.1 212
 MD5 ee7ed731fc8a9b896d5888b94febb4fe files/digest-konqueror-3.4.2 68
-MD5 3a0e10a5717024b020d970bd121d589a files/kdebase-3.4.2-konqueror-filter.patch 899
 MD5 ee7ed731fc8a9b896d5888b94febb4fe files/digest-konqueror-3.4.2-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9JBlj5H05b2HAEkRAvc5AJ91Qa63cU6x+iIPBbMcpBHcRYGZxwCeLRyH
-AFB8s3g/QP2xCqS8Grmzf/w=
-=hU8+
------END PGP SIGNATURE-----
+MD5 3a0e10a5717024b020d970bd121d589a files/kdebase-3.4.2-konqueror-filter.patch 899
