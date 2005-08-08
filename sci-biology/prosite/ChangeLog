@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/prosite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.36 2005/08/07 19:58:32 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.37 2005/08/08 15:01:12 corsair Exp $
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> prosite-19.6.ebuild:
+  Stable on ppc64
 
   07 Aug 2005; Olivier Fisette <ribosome@gentoo.org> prosite-19.7.ebuild:
   Fixed bug #101667.
