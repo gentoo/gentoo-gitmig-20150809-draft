@@ -1,0 +1,66 @@
+1. Make composite build for Xnest and Xorg by fixing link order
+2. Make Xdmx link properly when building the module with composite
+3. Fix typo of XF86MIS instead of XF86MISC
+4. Require glproto for dmx/glxproxy and for dri+glx
+
+Index: xorg/configure.ac
+===================================================================
+RCS file: /cvs/xorg/xserver/xorg/configure.ac,v
+retrieving revision 1.30
+diff -u -b -B -r1.30 configure.ac
+--- xorg/configure.ac	27 Jul 2005 08:11:26 -0000	1.30
++++ xorg/configure.ac	28 Jul 2005 20:49:35 -0000
+@@ -221,6 +221,9 @@
+ if test "$DMX" = yes; then
+ 	PKG_CHECK_MODULES([DMXMODULES],
+                           [xmuu xext x11 xrender xfont xi dmxproto])
++	if test "$GLX" = yes; then
++		PKG_CHECK_MODULES([GL],[glproto])
++	fi
+ fi
+ AM_CONDITIONAL(DMX, [test x$DMX = xyes])
+ 
+@@ -404,6 +407,9 @@
+ 	AC_SUBST(DRIPROTO_CFLAGS)
+ 	PKG_CHECK_MODULES([LIBDRM], [libdrm])
+ 	AC_SUBST(LIBDRM_CFLAGS)
++	if test "$GLX" = yes; then
++		PKG_CHECK_MODULES([GL],[glproto])
++	fi
+ fi
+ AC_DEFINE(XINPUT,1,[Support X Input extension])
+ EXTENSION_LIBS="$EXTENSION_LIBS "'$(top_builddir)/Xi/libXi.la'
+@@ -541,7 +547,7 @@
+ if test x$XF86VIDMODE = xyes; then
+   AC_DEFINE(XF86VIDMODE,1,[Support XFree86 Video Mode extension])
+ fi
+-if test x$XF86MIS = xyes; then
++if test x$XF86MISC = xyes; then
+   AC_DEFINE(XF86MISC,1,[Support XFree86 miscellaneous extensions])
+ fi
+ # must come first as it uses stuff in Shape -d
+@@ -574,11 +574,6 @@
+ EXTENSION_LIBS="$EXTENSION_LIBS "'$(top_builddir)/damageext/libdamageext.la'
+ EXTENSION_INCS="$EXTENSION_INCS "'-I$(top_srcdir)/damageext'
+ 
+-if test "$COMPOSITE" = yes; then
+-	EXTENSION_LIBS="$EXTENSION_LIBS "'$(top_builddir)/composite/libcomposite.la'" "'$(top_builddir)/miext/cw/libcw.la'
+-	EXTENSION_INCS="$EXTENSION_INCS "'-I$(top_srcdir)/composite'
+-fi
+-
+ DIX_LIB='$(top_builddir)/dix/libdix.la'
+ OS_LIB='$(top_builddir)/os/libos.la'
+ MI_LIB='$(top_builddir)/mi/libmi.la'
+@@ -598,6 +593,12 @@
+ XI_INC='-I$(top_srcdir)/Xi'
+ CORE_INCS='-I$(top_srcdir)/include -I$(top_builddir)/include'
+ 
++if test "$COMPOSITE" = yes; then
++	EXTENSION_LIBS="$EXTENSION_LIBS "'$(top_builddir)/composite/libcomposite.la'
++	DAMAGE_LIB="$DAMAGE_LIB "'$(top_builddir)/miext/cw/libcw.la'
++	EXTENSION_INCS="$EXTENSION_INCS "'-I$(top_srcdir)/composite'" "'-I$(top_srcdir)/miext/cw'
++fi
++
+ PKG_CHECK_MODULES([XSERVER], [$REQUIRED_MODULES])
+ XSERVER_LIBS="${XSERVER_LIBS} -lm -lz"
+ 
