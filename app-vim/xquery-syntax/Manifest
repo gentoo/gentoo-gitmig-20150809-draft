@@ -1,4 +1,16 @@
-MD5 bdad57b8b98aeeede43889886acfaeda ChangeLog 741
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8f3cce7e4253f2c75ab2d935d5850920 xquery-syntax-0.1.ebuild 534
+MD5 0087149f49e21f36de81fd264263a4c4 xquery-syntax-0.1-r1.ebuild 709
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 bcbca7d05d4d33a08da7ccaa5ac69ce1 ChangeLog 930
 MD5 c73e6d5d78dd2898f11ffe6bfd0157a0 files/digest-xquery-syntax-0.1 68
+MD5 c73e6d5d78dd2898f11ffe6bfd0157a0 files/digest-xquery-syntax-0.1-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC99W1LLFUmVNQ7rkRAlzrAKCS4XZ0+QnOtzMBZRqqc/cy9ri9ZQCgkEYG
+MtrLW9Ej4TTvCBEn2qDDt/M=
+=pElj
+-----END PGP SIGNATURE-----
