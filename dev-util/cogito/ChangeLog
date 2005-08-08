@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cogito
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.12 2005/08/08 16:47:04 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.13 2005/08/08 16:55:21 r3pek Exp $
+
+  08 Aug 2005; Carlos Silva <r3pek@gentoo.org> cogito-0.13.ebuild:
+  Forgot to remove the epatch thingy :S
 
 *cogito-0.13 (08 Aug 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.13.ebuild,v 1.1 2005/08/08 16:47:04 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.13.ebuild,v 1.2 2005/08/08 16:55:21 r3pek Exp $
 
 inherit eutils
 
@@ -22,13 +22,6 @@ DEPEND="dev-libs/openssl
 RDEPEND="net-misc/rsync
 		app-text/rcs
 		net-misc/curl"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/cogito-0.12.1-doc.patch
-
-}
 
 src_compile() {
 	if use mozsha1 ; then
