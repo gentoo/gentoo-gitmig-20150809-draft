@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 53c2cf52a85c45d8829eb69353315c25 ChangeLog 10390
+MD5 0fe989294eba7b3f528afa4bd5509299 ChangeLog 10508
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 03b7e719ebc03b0bbdb703ce809b510b mod_perl-1.27-r1.ebuild 1419
 MD5 77e5ef5905ee1527577ba7b9c27328d7 mod_perl-1.27-r2.ebuild 1438
@@ -12,7 +12,7 @@ MD5 8a3282dd3a16deb4647459f81ad70abe mod_perl-1.99.11.ebuild 3789
 MD5 05f614537c52c42b923462192096468e mod_perl-1.99.16.ebuild 3804
 MD5 b2abdb1abcc3c0ce6f3a6277a08194d9 mod_perl-2.0.1-r2.ebuild 4826
 MD5 2415e6be73ba155382b34b5e2fad4951 files/75_mod_perl.conf 247
-MD5 bd8c3a03d35a34c5dc23ffdc76faa5cc files/apache2-mod_perl-startup.pl 811
+MD5 6dbf85f6df302959fc9decf11eb6e5f5 files/apache2-mod_perl-startup.pl 485
 MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r1 65
 MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r2 65
 MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27-r4 65
@@ -29,7 +29,7 @@ MD5 4dcf07748f65bc0682e4d739ec14535d files/2.0.1/75_mod_perl.conf 1527
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFC9yeBtG5z4I8BtQoRAg3bAJ9BLyQ+G1VLuwZoaembzGgmZ6nu3wCdFlEe
-K3wyXfHpzBQLfBO0AG1ma1w=
-=Km+R
+iD8DBQFC9ygqtG5z4I8BtQoRAo34AJ4o4AehpAJt2c/CUmYafpaYXsDGjwCfaKOS
+HTmWmxaWKMw9Fu5jmrAurdU=
+=BFYC
 -----END PGP SIGNATURE-----
