@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 dcb74e47a8b2e4345fb15b30510ecdac ChangeLog 13540
 MD5 4efb73ab43f974bc41253cede90fa6ad gnumeric-1.4.2.ebuild 2536
-MD5 0348bba7635aaa67f756e56b5763d215 gnumeric-1.4.3-r1.ebuild 2614
-MD5 db77b40b3c21259f272efa1ea506e1f7 ChangeLog 13444
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 a3b43a1e9be8b477e946d20839b7e627 gnumeric-1.4.3.ebuild 2509
-MD5 403a9f34b1159b636dec6156951e023d files/gnumeric-1.4.3-makejobs.patch 1591
-MD5 3fab812a68d5849434ba8d7ee3ef2887 files/gnumeric-1.4.3-new_gsf_api.patch 3308
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 77208df58c2c4742e0535d2864dfaee2 gnumeric-1.4.3-r1.ebuild 2615
 MD5 f7eb652589a8e0103264b9d828cf4046 files/digest-gnumeric-1.4.2 69
 MD5 2bff8e6c3d41ceae3d04783899915363 files/digest-gnumeric-1.4.3 69
-MD5 2bff8e6c3d41ceae3d04783899915363 files/digest-gnumeric-1.4.3-r1 69
 MD5 b1c7dc9c30396b4fad208b985e9ade9d files/gnumeric-1.4.2-sheet_object_scroll.patch 3295
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8OihViELBEf1JB0RAga0AJ9rnuqMzKx3EeNCapGotFQramguegCghseI
-ai5sAOAkBOmVTbQF7jGzSHg=
-=ZRUx
------END PGP SIGNATURE-----
+MD5 403a9f34b1159b636dec6156951e023d files/gnumeric-1.4.3-makejobs.patch 1591
+MD5 2bff8e6c3d41ceae3d04783899915363 files/digest-gnumeric-1.4.3-r1 69
+MD5 3fab812a68d5849434ba8d7ee3ef2887 files/gnumeric-1.4.3-new_gsf_api.patch 3308
