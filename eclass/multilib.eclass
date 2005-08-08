@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.30 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.31 2005/08/08 20:07:43 kito Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -83,6 +83,14 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # Example:
 # create_ml_includes /usr/include/asm __sparc__:/usr/include/asm-sparc __sparc64__:/usr/include/asm-sparc64
 # create_ml_includes /usr/include/asm __i386__:/usr/include/asm-i386 __x86_64__:/usr/include/asm-x86_64
+
+# get_libname [version]
+# returns libname with proper suffix {.so,.dylib} and optionally supplied version 
+# for ELF/MACH-O shared objects
+#
+# Example:
+# get_libname libfoo ${PV}
+# Returns: libfoo.so.${PV} (ELF) || libfoo.${PV}.dylib (MACH)
 
 ### END DOCUMENTATION ###
 
@@ -523,3 +531,21 @@ create_ml_includes-sym_for_dir() {
 	# exit because we'll likely be called from a subshell
 	exit 1
 }
+
+get_libname() {
+	local ver=$1
+	if use userland_Darwin ; then
+		if [ -z ${ver} ] ; then
+			echo ".dylib"
+		else
+			echo ".${ver}.dylib"
+		fi
+	else
+		if [ -z ${ver} ] ; then
+			echo ".so"
+		else
+			echo ".so.${ver}"
+		fi
+	fi
+}
+
