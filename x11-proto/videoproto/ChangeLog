@@ -1,0 +1,10 @@
+# ChangeLog for x11-proto/videoproto
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/videoproto/ChangeLog,v 1.1 2005/08/08 03:33:39 spyderous Exp $
+
+*videoproto-2.2 (08 Aug 2005)
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +videoproto-2.2.ebuild:
+  Initial commit for modular X
+

@@ -1,0 +1,10 @@
+# ChangeLog for x11-proto/recordproto
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/ChangeLog,v 1.1 2005/08/08 03:31:14 spyderous Exp $
+
+*recordproto-1.13 (08 Aug 2005)
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +recordproto-1.13.ebuild:
+  Initial commit for modular X
+
