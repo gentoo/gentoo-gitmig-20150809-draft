@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.9.ebuild,v 1.1 2005/08/09 00:48:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.9.ebuild,v 1.2 2005/08/09 01:58:04 swegener Exp $
 
 IUSE="dlloader gtk gtk2 tcltk sdk usb"
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/x11
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
-	sdk? ( sys-devel/libtool 
+	sdk? ( sys-devel/libtool
 	       =sys-devel/automake-1.6*
 	       >=sys-devel/autoconf-2.57 )
 	dev-util/pkgconfig
