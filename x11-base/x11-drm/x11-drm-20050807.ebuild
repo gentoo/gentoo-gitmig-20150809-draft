@@ -1,39 +1,41 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827-r1.ebuild,v 1.5 2005/05/19 04:38:14 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050807.ebuild,v 1.1 2005/08/09 01:56:12 battousai Exp $
 
 inherit eutils x11 linux-mod
 
-IUSE="gatos"
+IUSE=""
 IUSE_VIDEO_CARDS="3dfx ffb i810 i830 i915 mach64 matrox rage128 radeon savage sis via"
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
-GATOSSNAP="20031202"
-PATCHVER="0.2"
+S="${WORKDIR}/drm"
+PATCHVER="0.1"
 PATCHDIR="${WORKDIR}/patch"
 EXCLUDED="${WORKDIR}/excluded"
-S="${WORKDIR}/drm"
+
 DESCRIPTION="DRM Kernel Modules for X11"
 HOMEPAGE="http://dri.sf.net"
 SRC_URI="mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2
-	 mirror://gentoo/linux-drm-${PV}-kernelsource.tar.bz2
-	 gatos? ( mirror://gentoo/linux-drm-gatos-${GATOSSNAP}-kernelsource.tar.bz2 )"
+	 mirror://gentoo/linux-drm-${PV}-kernelsource.tar.bz2"
 
 SLOT="${KV}"
 LICENSE="X11"
-
-# No more ppc until the ioremap thing gets sorted out
-#KEYWORDS="~x86 ~alpha ~ia64 ~ppc ~amd64" 
-KEYWORDS="~x86 ~alpha ~ia64 ~amd64"
+KEYWORDS="~x86 ~alpha ~ia64 ~ppc ~amd64"
 
 DEPEND="virtual/x11
+	>=sys-devel/automake-1.7
+	>=sys-devel/autoconf-2.59
+	>=sys-devel/libtool-1.5.14
+	>=sys-devel/m4-1.4
 	virtual/linux-sources
 	>=sys-apps/portage-2.0.49-r13"
 
 pkg_setup() {
+	get_version
+
 	# Require at least one video card
 	if [ -z "${VIDEO_CARDS}" ]
 	then
@@ -45,36 +47,33 @@ pkg_setup() {
 		die "The ffb driver is for sparc-specific hardware. Please remove it from your VIDEO_CARDS."
 	fi
 
-	# GATOS only works with radeon, rage128. mach64 is provided by drm trunk.
-	if use gatos
+	if linux_chkconfig_builtin "DRM"
 	then
-		if ! use video_cards_radeon && ! use video_cards_rage128
-		then
-			die "Remove gatos from your USE flags. It does not work with cards other than radeon and rage128."
-		fi
-		kernel_is 2 6 && die "GATOS does not work with 2.6 kernels. Only 2.4 is supported at this time."
+		die "Please disable or modularize DRM in the kernel config. (CONFIG_DRM = n or m)"
 	fi
 
-	ewarn "Using koutput kernels is now deprecated. If you use a koutput kernel, please"
-	ewarn "switch to kernel >=2.6.6 with a normal build system."
+	if ! linux_chkconfig_present "AGP"
+	then
+		einfo "AGP support is not enabled in your kernel config. This may be needed for DRM to"
+		einfo "work, so you might want to double-check that setting. (CONFIG_AGP)"
+		echo
+	fi
 
 	# Set video cards to build for.
 	set_vidcards
+
+	# DRM CVS is undergoing changes which require splitting source to support both 2.4
+	# and 2.6 kernels. This determines which to use.
+	get_drm_build_dir
 
 	return 0
 }
 
 src_unpack() {
-	if use gatos
-	then
-		unpack linux-drm-gatos-${GATOSSNAP}-kernelsource.tar.bz2
-	else
-		unpack linux-drm-${PV}-kernelsource.tar.bz2
-	fi
+	unpack linux-drm-${PV}-kernelsource.tar.bz2
 	unpack ${P}-gentoo-${PATCHVER}.tar.bz2
 
 	cd ${S}
-	cp ${PATCHDIR}/Makefile ${S}
 
 	patch_prepare
 
@@ -82,48 +81,66 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 
 	# Substitute new directory under /lib/modules/${KV}
+	cd ${SRC_BUILD}
 	sed -ie "s:/kernel/drivers/char/drm:/${PN}:g" Makefile
-	sed -ie "s:xfree-drm:${PN}:g" Makefile
+
+	cp ${S}/tests/*.c ${SRC_BUILD}
+
+	cd ${S}
+	WANT_AUTOCONF="2.59" WANT_AUTOMAKE="1.7" autoreconf -v --install
 }
 
 src_compile() {
-	einfo "Building DRM..."
+	einfo "Building DRM in ${SRC_BUILD}..."
+	cd ${SRC_BUILD}
 
 	# This now uses an M= build system. Makefile does most of the work.
 	unset ARCH
-	make M="${S}" \
+	make M="${SRC_BUILD}" \
 		LINUXDIR="${ROOT}/usr/src/linux" \
 		DRM_MODULES="${VIDCARDS}" \
-		DRMSRCDIR="${S}" \
 		modules || die_error
 
-	# dristat in GATOS seems busted.
-	if ! use gatos
+	# Building the programs. These are useful for developers and getting info from DRI and DRM.
+	#
+	# libdrm objects are needed for drmstat.
+	cd ${S}
+	econf || die "libdrm configure failed."
+	emake || die "libdrm build failed."
+
+	if linux_chkconfig_present DRM
 	then
-		make dristat || die "Building dristat failed."
+		echo "Please disable in-kernel DRM support to use this package."
 	fi
+
+	cd ${SRC_BUILD}
+	# LINUXDIR is needed to allow Makefiles to find kernel release.
+	make LINUXDIR="${ROOT}/usr/src/linux" dristat || die "Building dristat failed."
+	make LINUXDIR="${ROOT}/usr/src/linux" drmstat || die "Building drmstat failed."
 }
 
 src_install() {
 	einfo "Installing DRM..."
+	cd ${SRC_BUILD}
 
 	unset ARCH
 	make KV="${KV}" \
 		LINUXDIR="${ROOT}/usr/src/linux" \
-		DRM_MODULES="${VIDCARDS}" \
 		DESTDIR="${D}" \
+		RUNNING_REL="${KV}" \
+		MODULE_LIST="${VIDCARDS} drm.${KV_OBJ}" \
 		install || die "Install failed."
 
-	dodoc README*
+	dodoc README.drm
 
-	if ! use gatos
-	then
-		exeinto /usr/X11R6/bin
-		doexe dristat
+	dobin dristat
+	dobin drmstat
 
-		# Strip binaries, leaving /lib/modules untouched (bug #24415)
-		strip_bins \/lib\/modules
-	fi
+	cd ${S}
+	emake DESTDIR=${D} install || die "libdrm install failed."
+
+	# Strip binaries, leaving /lib/modules untouched (bug #24415)
+	strip_bins \/lib\/modules
 
 	# Yoinked from the sys-apps/touchpad ebuild. Thanks to whoever made this.
 	keepdir /etc/modules.d
@@ -188,22 +205,14 @@ set_vidcards() {
 
 patch_prepare() {
 	# Handle exclusions based on the following...
-	#     GATOS (2xx*) vs. Standard trees (1xx*)
+	#     All trees (0**), Standard only (1**), Others (none right now)
 	#     2.4 vs. 2.6 kernels
 
 	kernel_is 2 4 && mv -f ${PATCHDIR}/*kernel-2.6* ${EXCLUDED}
 	kernel_is 2 6 && mv -f ${PATCHDIR}/*kernel-2.4* ${EXCLUDED}
 
-	if use gatos
-	then
-		einfo "Updating for GATOS build..."
-		mv -f ${PATCHDIR}/1* ${EXCLUDED}
-		# Don't bother with dristat, it's broken
-		mv -f ${PATCHDIR}/*dristat* ${EXCLUDED}
-	else
-		einfo "Updating for standard build..."
-		mv -f ${PATCHDIR}/2* ${EXCLUDED}
-	fi
+	# There is only one tree being maintained now. No numeric exclusions need
+	# to be done based on DRM tree.
 }
 
 die_error() {
@@ -212,4 +221,14 @@ die_error() {
 	eerror "2.4 kernels are supported, but only 2.6 kernels at least as new as 2.6.6"
 	eerror "are supported."
 	die "Unable to build DRM modules."
+}
+
+get_drm_build_dir() {
+	if kernel_is 2 4
+	then
+		SRC_BUILD="${S}/linux"
+	elif kernel_is 2 6
+	then
+		SRC_BUILD="${S}/linux-core"
+	fi
 }

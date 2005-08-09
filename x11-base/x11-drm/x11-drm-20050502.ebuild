@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050502.ebuild,v 1.2 2005/05/19 04:38:14 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050502.ebuild,v 1.3 2005/08/09 01:56:12 battousai Exp $
 
 inherit eutils x11 linux-mod
 
@@ -12,7 +12,7 @@ IUSE_VIDEO_CARDS="3dfx ffb i810 i830 i915 mach64 matrox rage128 radeon savage si
 RESTRICT="nostrip"
 
 S="${WORKDIR}/drm"
-PATCHVER="0.1"
+PATCHVER="0.2"
 PATCHDIR="${WORKDIR}/patch"
 EXCLUDED="${WORKDIR}/excluded"
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2
 
 SLOT="${KV}"
 LICENSE="X11"
-KEYWORDS="~x86 ~alpha ~ia64 ~ppc ~amd64"
+KEYWORDS="x86 ~alpha ~ia64 ~ppc ~amd64"
 
 DEPEND="virtual/x11
 	virtual/linux-sources
@@ -125,9 +125,8 @@ src_install() {
 
 	dodoc README.drm
 
-	exeinto /usr/X11R6/bin
-	doexe dristat
-	doexe drmstat
+	dobin dristat
+	dobin drmstat
 
 	# Strip binaries, leaving /lib/modules untouched (bug #24415)
 	strip_bins \/lib\/modules

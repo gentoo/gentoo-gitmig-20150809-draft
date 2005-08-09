@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.20 2005/05/19 04:38:14 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.21 2005/08/09 01:56:12 battousai Exp $
+
+*x11-drm-20050807 (08 Aug 2005)
+
+  08 Aug 2005; Bryan Stine <battousai@gentoo.org> -x11-drm-20040827.ebuild,
+  -x11-drm-20040827-r1.ebuild, x11-drm-20050502.ebuild,
+  +x11-drm-20050807.ebuild:
+  Drop old dated snapshot. Added minor i915 fixes to 20050502 0.2 patchball,
+  marking that snapshot stable. Bumped up to a 20050807 snapshot.
 
   18 May 2005; Bryan Stine <battousai@gentoo.org> x11-drm-4.3.0-r7.ebuild,
   x11-drm-20040827.ebuild, x11-drm-20040827-r1.ebuild,
