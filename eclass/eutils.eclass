@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.193 2005/07/21 02:16:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.194 2005/08/09 22:40:39 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -377,26 +377,24 @@ epatch() {
 # Takes just 1 optional parameter (the directory to create tmpfile in)
 emktemp() {
 	local exe="touch"
-	[ "$1" == "-d" ] && exe="mkdir" && shift
-	local topdir="$1"
+	[[ $1 == -d ]] && exe="mkdir" && shift
+	local topdir=$1
 
-	if [ -z "${topdir}" ]
-	then
-		[ -z "${T}" ] \
+	if [[ -z ${topdir} ]] ; then
+		[[ -z ${T} ]] \
 			&& topdir="/tmp" \
-			|| topdir="${T}"
+			|| topdir=${T}
 	fi
 
-	if [ -z "$(type -p mktemp)" ]
-	then
+	if [[ -z $(type -p mktemp) ]] ; then
 		local tmp=/
-		while [ -e "${tmp}" ] ; do
-			tmp="${topdir}/tmp.${RANDOM}.${RANDOM}.${RANDOM}"
+		while [[ -e ${tmp} ]] ; do
+			tmp=${topdir}/tmp.${RANDOM}.${RANDOM}.${RANDOM}
 		done
-		${exe} "${tmp}"
+		${exe} "${tmp}" || ${exe} -p "${tmp}"
 		echo "${tmp}"
 	else
-		[ "${exe}" == "touch" ] \
+		[[ ${exe} == "touch" ]] \
 			&& exe="-p" \
 			|| exe="-d"
 		mktemp ${exe} "${topdir}"
