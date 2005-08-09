@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/openwebstats/openwebstats-1.1.ebuild,v 1.1 2005/08/09 12:33:40 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/openwebstats/openwebstats-1.1.ebuild,v 1.2 2005/08/09 14:21:21 rl03 Exp $
 
-inherit eutils webapp
+inherit webapp
 
 DESCRIPTION="OpenWebStats is a PHP stats application that reads Apache log files and imports the data to a MySQL database."
 HOMEPAGE="http://openwebstats.sourceforge.net/"
