@@ -1,22 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2a6b77b00535e28127eed64014a86e17 doomsday-1.8.0.ebuild 1135
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 feea21c53273c820d8ea7bd89fc9982d ChangeLog 1342
-MD5 69d0f8582a5683132fa89a336b6ee499 doomsday-1.8.1.ebuild 1189
-MD5 eb1fd30e24ac5398b83b8f29d30a2d82 doomsday-1.8.3.ebuild 1133
 MD5 a56605ab549ada0dc3cc85439131054b doomsday-1.8.6.ebuild 1129
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 d0bb07ee5209b64388e44f009794e254 ChangeLog 1496
 MD5 5f91dc6393ff5aba59c015a5ab9ccbd0 files/1.8.0-filename-case.patch 502
-MD5 5fa792096b783fb6b3cd3bd45c2f709c files/wrapper 136
-MD5 c9f45fe4b0c154013fe56c8915ebd3f1 files/digest-doomsday-1.8.0 63
-MD5 61f292434360c86e2522774cfeb44886 files/digest-doomsday-1.8.1 63
-MD5 37b50d8d186566f81c46ac9054529dd8 files/digest-doomsday-1.8.3 63
 MD5 71acf317b5b79c25ed9aba5de47e4708 files/digest-doomsday-1.8.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB9bOBroRuSHgZdywRAo7aAJkByEBj35W6Iqz6RkL2UQUvwnF9TgCeNoRv
-iBpldZEwc4AMpKtZws+Rmww=
-=/Ojb
------END PGP SIGNATURE-----
+MD5 5fa792096b783fb6b3cd3bd45c2f709c files/wrapper 136
