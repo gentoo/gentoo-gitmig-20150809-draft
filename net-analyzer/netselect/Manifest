@@ -1,6 +1,16 @@
-MD5 014f7fc085d33fcc83dfd27c6c1cad25 ChangeLog 2613
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b54367da063056de6caffbe71b10926c ChangeLog 2706
 MD5 b4a519c8440c3016ab875b1e47ad33e2 metadata.xml 227
-MD5 22ef461ffb2a1844d388c33199de98b3 netselect-0.3-r1.ebuild 1163
+MD5 bd6c85ae59644f70319764132ef7af84 netselect-0.3-r1.ebuild 1162
 MD5 ed9af38651ff81fcae36bbdd710f83de netselect-0.3.ebuild 772
 MD5 7396c62cc3e5735019287ae62229dd48 files/digest-netselect-0.3 64
 MD5 7396c62cc3e5735019287ae62229dd48 files/digest-netselect-0.3-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC+KwwEZCkKN40op4RAnOfAJ9kpIKFfTob58eOyXIhpZA1FREjfACfd02W
+6rH009vht+qlVkuFSTnnyGQ=
+=S0aI
+-----END PGP SIGNATURE-----
