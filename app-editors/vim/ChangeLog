@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.181 2005/07/23 22:02:42 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.182 2005/08/09 22:59:10 ciaranm Exp $
+
+*vim-7.0_alpha20050809 (09 Aug 2005)
+
+  09 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  -vim-7.0_alpha20050622.ebuild, -vim-7.0_alpha20050721.ebuild,
+  +vim-7.0_alpha20050809.ebuild:
+  New vim7 snapshot. Tidy up old snapshots for eclass changes.
 
   23 Jul 2005; Hardave Riar <hardave@gentoo.org> vim-6.3.084.ebuild:
   Stable on mips, bug #99578.
