@@ -7,6 +7,8 @@ app-editors/nano
 app-editors/vim-core
 app-shells/bash
 app-shells/zsh
+dev-lang/perl
+dev-lang/python
 dev-libs/libprelude
 dev-libs/libxml2
 media-libs/a52dec
@@ -21,7 +23,9 @@ sys-devel/automake
 sys-devel/automake-wrapper
 sys-devel/bison
 sys-devel/flex
-sys-libs/ncurses
+sys-devel/libperl
+sys-libs/ncurse
+
 ##
 # end collision-protect
 ##
