@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.6 2004/09/23 08:46:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.7 2005/08/09 23:07:03 mr_bones_ Exp $
 
 inherit games
 
@@ -13,28 +13,25 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/opengl
+DEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/freetype"
 
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
-
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
 		-e "s:/usr/local/share/:${GAMES_DATADIR}/:" \
-			src/{asteroid.cc,audio.cc,config.cc,menu.cc} || \
-				die "sed src/audio.cc failed"
+		src/{asteroid.cc,audio.cc,config.cc,menu.cc} \
+		|| die "sed failed"
 }
 
 src_install () {
-	egamesinstall                            || die
-	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS README TODO
 	prepgamesdirs
 }
 
@@ -47,6 +44,6 @@ pkg_postinst() {
 	einfo "to cut and paste the commands below:"
 	echo
 	einfo "mkdir ~/.ssc/"
-	einfo "cp /usr/share/games/ssc/ssc.conf ~/.ssc/"
+	einfo "cp ${GAMES_DATADIR}/ssc/ssc.conf ~/.ssc/"
 	echo
 }
