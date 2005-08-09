@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hearts/hearts-1.98.ebuild,v 1.1 2005/08/06 03:11:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hearts/hearts-1.98.ebuild,v 1.2 2005/08/09 23:55:47 vapier Exp $
 
-inherit kde
+inherit eutils kde
 
 DESCRIPTION="clone of the hearts game for KDE that comes with Windows"
 HOMEPAGE="http://hearts.luispedro.org/index.php"
@@ -19,7 +19,6 @@ PATCHES="${FILESDIR}/${P}-gcc.patch"
 
 src_install() {
 	kde_src_install
-	insinto /usr/share/applications
-	doins "${D}"/usr/share/applnk/Games/Card/hearts.desktop || die
 	rm -r "${D}"/usr/share/applnk
+	make_desktop_entry hearts Hearts
 }

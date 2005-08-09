@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 5fbdc578e04be20f0403d881ffb9afeb hearts-1.98.ebuild 673
+MD5 2a9282010a748974cacbb41b2c36e07d hearts-1.98.ebuild 617
 MD5 222fc0d1f3856713f0659f8c76b2f3e9 ChangeLog 353
 MD5 f400d638fd3e3879f01904a1cca864c5 files/digest-hearts-1.98 64
 MD5 7ae96bbe4ec91232491891b183247700 files/hearts-1.98-gcc.patch 752
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC9CqSgIKl8Uu19MoRAj7TAJ9+N2/oYRLZ5tAgNzkb/yye0dDwxwCfRmSC
-yWP+76Tnf6zC335YDJUDrjw=
-=vanG
+iD8DBQFC+UKigIKl8Uu19MoRAiaWAKCCS/6VJMQM5Yv0TpESQBK9d4co6QCffGE9
+tlRvUWpIrVj/RLy+xaK5RR8=
+=2RyO
 -----END PGP SIGNATURE-----
