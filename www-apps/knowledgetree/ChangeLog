@@ -1,0 +1,11 @@
+# ChangeLog for www-apps/knowledgetree
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/ChangeLog,v 1.1 2005/08/09 11:35:05 rl03 Exp $
+
+*knowledgetree-2.0.7 (09 Aug 2005)
+
+  09 Aug 2005; Renat Lumpau <rl03@gentoo.org> +files/config-hook-2.0.0.sh,
+  +files/postinstall-en-2.0.7.txt, +metadata.xml,
+  +knowledgetree-2.0.7.ebuild:
+  Initial commit per bug #65083. Thanks to wrobel.
+
