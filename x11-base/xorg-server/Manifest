@@ -1,4 +1,4 @@
-MD5 4bbc53b428902b4b02e1f969a93e7768 ChangeLog 735
-MD5 652a8592dbfb2d7c8bcd3fd42fbc332e xorg-server-0.99.1.ebuild 1962
-MD5 44296a07d7ed76922dd604d93b00ab18 files/digest-xorg-server-0.99.1 137
+MD5 f5e0bc555aa5b95461cf6a662a5fffae ChangeLog 877
+MD5 2bab1877cb1f8df8cb2d6bb8ca3f22ed xorg-server-0.99.1.ebuild 1972
 MD5 139d1af499d5fd30cbb118284544e3f6 files/xorg-composite.patch 2397
+MD5 44296a07d7ed76922dd604d93b00ab18 files/digest-xorg-server-0.99.1 137
