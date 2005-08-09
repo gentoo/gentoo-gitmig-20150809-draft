@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-menus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.20 2005/07/11 23:51:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.21 2005/08/09 05:15:37 leonardop Exp $
+
+*gnome-menus-2.10.2-r1 (08 Aug 2005)
+
+  08 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gnome-menus-2.10.2-r1.ebuild, files/gnome-menus-2.10.2-legacy_dirs.patch:
+  Added patch to include additional LegacyDir entries (bug #97839).
 
   11 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
   gnome-menus-2.10.1.ebuild, gnome-menus-2.10.2.ebuild:
