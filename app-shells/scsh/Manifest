@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 afbe345fef0031a0901e7d9cced4e4bf ChangeLog 2014
+MD5 8222a9cc3b98676d19e82d8dd1252ff4 ChangeLog 2102
 MD5 8c153b306d4485bac0a7bc7f26dea78f metadata.xml 955
 MD5 39e38bf8f13788c6ae47edf076e3a8f4 scsh-0.6.1-r1.ebuild 1223
 MD5 6a2adcb8fc0b070b52ecdb5e6043604f scsh-0.6.3.ebuild 983
@@ -17,7 +17,7 @@ MD5 25a51584ef070208fc80b2b78c9e4bbe files/0.6.6-Makefile.in-doc-dir-gentoo.patc
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC+PORyiNZaEAZA+ARAlmQAJwKyR827BT1X9bSHcwRIYHZ+t3W7ACeNJK+
-GfvYhpmVDIX83PYtCom5/18=
-=BGdS
+iD8DBQFC+Pq/yiNZaEAZA+ARAmP2AJ91AOLsEeAldf3+ZjfMd/nMzGdAFwCfcDA+
+NmnyQqS3LcYPxBr2AZGGz5w=
+=QQMz
 -----END PGP SIGNATURE-----
