@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smoothgnome/smoothgnome-2.0.4.ebuild,v 1.1 2005/08/08 13:13:12 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smoothgnome/smoothgnome-2.0.4.ebuild,v 1.2 2005/08/09 18:00:14 dholm Exp $
 
 inherit gnome2
 
@@ -14,7 +14,7 @@ SRC_URI="http://web.subpop.net/art/${PN}/releases/2/GTK2-${MY_P}.tar.gz
 	http://web.subpop.net/art/${PN}/releases/2/MCity-${MY_P}.tar.gz
 	http://web.subpop.net/art/${PN}/releases/2/GTK2-${MY_PN}-Extras-${PV}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 LICENSE="as-is"
 SLOT="0"
 IUSE="gtk2"
