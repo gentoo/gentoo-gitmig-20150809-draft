@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-ex-formfactory
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/ChangeLog,v 1.1 2005/08/08 10:41:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-ex-formfactory/ChangeLog,v 1.2 2005/08/09 17:52:02 dholm Exp $
+
+  09 Aug 2005; David Holm <dholm@gentoo.org>
+  gtk2-ex-formfactory-0.57.ebuild:
+  Added to ~ppc.
 
 *gtk2-ex-formfactory-0.57 (08 Aug 2005)
 
