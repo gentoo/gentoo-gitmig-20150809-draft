@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.9.ebuild,v 1.1 2005/08/09 01:39:49 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.9.ebuild,v 1.2 2005/08/09 17:58:11 dholm Exp $
 
 DESCRIPTION="mtink is a status monitor and inkjet cartridge changer for some Epson printers"
 HOMEPAGE="http://xwtools.automatix.de/"
 SRC_URI="http://xwtools.automatix.de/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="cups doc X"
 
 DEPEND="X? ( x11-libs/openmotif virtual/x11 )
