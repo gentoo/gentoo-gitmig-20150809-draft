@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 57f1a61bcaa1cfd8cc756934a6955f8f ChangeLog 3298
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 4064ee12fcfb07eef1bfb7f4c9c1a687 uptimed-0.3.1.ebuild 1129
-MD5 3d1df8b5d986d76d9f9b0b79afa0c864 uptimed-0.3.3.ebuild 951
+MD5 539779563fa544864d577ae7f16c2b70 uptimed-0.3.3.ebuild 948
+MD5 0d56cc9fea12afbb09aec9e68de9eae9 ChangeLog 3390
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 d8a64a6a00566bb245d3e2a523ab4191 files/uptimed 520
 MD5 c412374fc67b261ecc1a2c7c9dc7bf04 files/digest-uptimed-0.3.1 66
 MD5 de862272721a735c1b372cd6d6d794e8 files/digest-uptimed-0.3.3 66
-MD5 d8a64a6a00566bb245d3e2a523ab4191 files/uptimed 520
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+NPqEZCkKN40op4RAhRjAKCVilqSWEyP0u7ajKX7OTSK5bdthwCgioJm
-4YASE7RsQNPjnFALPa/Gh38=
-=Wr6s
+iD8DBQFC+SN6ViELBEf1JB0RAm42AJ9Fg1gPbfk9e+TESTKNJMzJDqbAIACfblUt
+KclZdzcR+UAR3z7Xhf7fRME=
+=BAdS
 -----END PGP SIGNATURE-----
