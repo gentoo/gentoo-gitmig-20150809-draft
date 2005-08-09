@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.38 2005/07/09 04:43:37 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.39 2005/08/09 22:43:02 smithj Exp $
+
+  09 Aug 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml:
+  finally adding myself as primary maintainer...
 
 *webalizer-2.01.10-r10 (09 Jul 2005)
 

@@ -1,28 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9040a4924834c460f94d8047ceb0706a ChangeLog 5598
-MD5 8583552359d0c1414cb52fa99fc5578c metadata.xml 284
+MD5 43fc0e45c5bc87b5d16d4785c184cd4d ChangeLog 5712
+MD5 f4ab9f9db4e50708404d47337257cd4e metadata.xml 223
+MD5 db9541cf1c0142945af2a4c72fd78508 webalizer-2.01.10-r10.ebuild 3856
 MD5 5833410c77eec8d9cff653e67949b5a6 webalizer-2.01.10-r4.ebuild 2056
 MD5 d74bed80f6183e16dcbd161ccde1ef3d webalizer-2.01.10-r5.ebuild 2553
 MD5 e07be0b4516c1e9044aa0c668866b570 webalizer-2.01.10-r8.ebuild 2486
-MD5 db9541cf1c0142945af2a4c72fd78508 webalizer-2.01.10-r10.ebuild 3856
+MD5 006af7bcfeb1e8648c1787c63d28470c files/webalizer-db4-with-geoip.patch 574
+MD5 e1a2a43e4148a750fc8ef91e0af3ba99 files/digest-webalizer-2.01.10-r10 157
 MD5 99b845afaf9f7417f82f508992e4a5ab files/digest-webalizer-2.01.10-r4 74
 MD5 e1a2a43e4148a750fc8ef91e0af3ba99 files/digest-webalizer-2.01.10-r5 157
 MD5 e1a2a43e4148a750fc8ef91e0af3ba99 files/digest-webalizer-2.01.10-r8 157
 MD5 05805530b2e87a3d55e0056a45e330f5 files/output.c.patch 8088
-MD5 cc68675ea63960bbc80d15110e41bf74 files/webalizer-db4.patch 574
 MD5 94e47e69398034261ac6d26edab9eafb files/webalizer-language-list.txt 1520
-MD5 006af7bcfeb1e8648c1787c63d28470c files/webalizer-db4-with-geoip.patch 574
+MD5 cc68675ea63960bbc80d15110e41bf74 files/webalizer-db4.patch 574
 MD5 766a26ff1600e3ea5359278a9dcd1025 files/webalizer-readability.patch 8345
-MD5 e1a2a43e4148a750fc8ef91e0af3ba99 files/digest-webalizer-2.01.10-r10 157
 MD5 72cc13055db3923e3b42824671712ed1 files/2.01.10/apache.webalizer 274
 MD5 7f29ecf09808176c22585f5205c6eceb files/2.01.10/reconfig 410
 MD5 d121e2b8e931e69a97c720cf30251959 files/2.01.10/webalizer.conf 23895
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCz1YSl5AvwDPiUowRAoNpAJwK51594hCDU9UYphFnetMgH8dcJQCfT6D2
-U6Crgkzbs5D1Sc5gfUzU31U=
-=0t+X
+iD8DBQFC+TG8l5AvwDPiUowRAuePAJwMedkt7dbTGr5H/YQjHFjb4kgx1gCdE8e7
++O++APNu0sZlNe802kLZmts=
+=vl7m
 -----END PGP SIGNATURE-----
