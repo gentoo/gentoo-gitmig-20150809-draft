@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.20.ebuild,v 1.1 2005/07/07 00:50:16 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.21-r1.ebuild,v 1.1 2005/08/09 02:19:18 leonardop Exp $
 
-inherit flag-o-matic
+inherit elisp-common flag-o-matic
 
 DESCRIPTION="Monotone Distributed Version Control System"
 HOMEPAGE="http://www.venge.net/monotone/"
@@ -12,14 +12,18 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="doc ipv6 nls"
+IUSE="doc emacs ipv6 nls"
 
 RDEPEND=">=dev-libs/boost-1.32"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/gcc-3.2
+	emacs? ( virtual/emacs )
 	nls? ( >=sys-devel/gettext-0.12.1 )
 	doc? ( sys-apps/texinfo )"
+
+SITEFILE="30monotone-gentoo.el"
+
 
 src_compile() {
 	local myconf="$(use_enable nls) $(use_enable ipv6)"
@@ -29,9 +33,12 @@ src_compile() {
 	append-flags -fno-stack-protector-all -fno-stack-protector \
 		-fno-strict-aliasing
 
-	econf ${myconf} || die
+	econf ${myconf} || die "configure failed"
 	emake || die "emake failed"
+
 	use doc && make html
+
+	use emacs && elisp-compile contrib/*.el
 }
 
 src_test() {
@@ -41,29 +48,36 @@ src_test() {
 src_install() {
 	make DESTDIR="${D}" install || die
 
-	if use doc
-	then
+	if use doc; then
 		dohtml -r html/*
 		dohtml -r figures
+	fi
+
+	if use emacs; then
+		elisp-install ${PN} contrib/*.{el,elc}
+		elisp-site-file-install ${FILESDIR}/${SITEFILE}
 	fi
 
 	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README* UPGRADE
 }
 
 pkg_postinst() {
+	use emacs && elisp-site-regen
+
 	einfo
 	einfo "If you are upgrading from:"
+	einfo "  - 0.20 or earlier: you need to run 'db migrate' against each of"
+	einfo "    your databases."
 	einfo "  - 0.19 or earlier: there are some command line and server"
 	einfo "    configuration changes; see /usr/share/doc/${PF}/NEWS.gz"
-	einfo "  - 0.18 or earliear: if you have created a ~/.monotonerc, rename"
+	einfo "  - 0.18 or earlier: if you have created a ~/.monotonerc, rename"
 	einfo "    it to ~/.monotone/monotonerc, so monotone will still find it."
-	einfo "  - 0.17: simply make a backup of your databases, just in case, and"
-	einfo "    run \"db migrate\" on each."
 	einfo
 	einfo "For instructions to upgrade from previous versions, please read"
 	einfo "/usr/share/doc/${PF}/UPGRADE.gz"
 	einfo
-	einfo "Also, please note that 0.19 clients cannot talk to 0.20 servers,"
-	einfo "and vice-versa."
-	einfo
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
