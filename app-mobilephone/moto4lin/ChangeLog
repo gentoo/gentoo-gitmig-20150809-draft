@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/moto4lin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.1 2005/08/08 19:40:02 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.2 2005/08/09 15:41:34 dholm Exp $
+
+  09 Aug 2005; David Holm <dholm@gentoo.org> moto4lin-0.3.ebuild:
+  Added to ~ppc.
 
 *moto4lin-0.3 (08 Aug 2005)
 
