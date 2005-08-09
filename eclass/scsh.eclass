@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scsh.eclass,v 1.2 2005/08/09 18:07:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scsh.eclass,v 1.3 2005/08/09 18:09:33 mkennedy Exp $
 #
 
 inherit eutils
@@ -8,7 +8,7 @@ inherit eutils
 ECLASS=scsh
 INHERITED="$INHERITED $ECLASS"
 
-LICENSE="as-is | BSD"
+LICENSE="|| ( as-is BSD )"
 SLOT="0"
 KEYWORDS="~x86"
 
