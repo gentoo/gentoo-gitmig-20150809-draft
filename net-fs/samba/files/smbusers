@@ -1,4 +1,0 @@
-# Unix_name = SMB_name1 SMB_name2 ...
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/smbusers,v 1.4 2004/07/18 03:55:05 dragonheart Exp $
-root = administrator admin
-nobody = guest pcguest smbguest

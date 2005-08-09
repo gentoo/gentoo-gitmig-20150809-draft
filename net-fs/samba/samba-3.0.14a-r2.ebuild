@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r2.ebuild,v 1.13 2005/08/09 00:13:02 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r2.ebuild,v 1.14 2005/08/09 14:33:05 seemant Exp $
 
 inherit eutils versionator
 
@@ -9,9 +9,9 @@ IUSE="acl cups doc kerberos ldap mysql pam postgres python quotas readline
 winbind xml xml2 libclamav oav selinux"
 
 VSCAN_VER=0.3.6
-PATCH_VER=0.3.2
+PATCH_VER=0.3.3
 MY_P=${PN}-${PV/_/}
-MY_PP=${PN}-$(get_major_version)-gentoo-patches-${PATCH_VER}
+MY_PP=${PN}-$(get_major_version)-gentoo-${PATCH_VER}
 S2=${WORKDIR}/${MY_P}
 S=${S2}/source
 PFVSCAN=${PN}-vscan-${VSCAN_VER}
@@ -20,6 +20,7 @@ HOMEPAGE="http://www.samba.org/
 	http://www.openantivirus.org/projects.php"
 SRC_URI="mirror://samba/${MY_P}.tar.gz
 	oav? ( mirror://sourceforge/openantivirus/${PFVSCAN}.tar.bz2 )
+	http://dev.gentoo.org/~seemant/distfiles/${MY_PP}.tar.bz2
 	mirror://gentoo/${MY_PP}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -45,6 +46,7 @@ DEPEND="${RDEPEND}
 
 PRIVATE_DST=/var/lib/samba/private
 PATCHDIR=${WORKDIR}/gentoo/patches
+CONFDIR=${WORKDIR}/gentoo/configs
 
 src_unpack() {
 	unpack ${A}; cd ${S2}
@@ -199,16 +201,16 @@ src_install() {
 
 	# General config files
 	insinto /etc/samba
-	doins ${FILESDIR}/smbusers
-	newins ${FILESDIR}/smb.conf.example-samba3.gz smb.conf.example.gz
-	doins ${FILESDIR}/lmhosts
+	doins ${CONFDIR}/smbusers
+	newins ${CONFDIR}/smb.conf.example-samba3 smb.conf.example
+	doins ${CONFDIR}/lmhosts
 
-	newpamd ${FILESDIR}/samba.pam samba
-	use winbind && doins ${FILESDIR}/system-auth-winbind
+	newpamd ${CONFDIR}/samba.pam samba
+	use winbind && doins ${CONFDIR}/system-auth-winbind
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/swat.xinetd swat
-	newinitd ${FILESDIR}/samba-init samba
-	newconfd ${FILESDIR}/samba-conf samba
+	newins ${CONFDIR}/swat.xinetd swat
+	newinitd ${CONFDIR}/samba-init samba
+	newconfd ${CONFDIR}/samba-conf samba
 	if use ldap; then
 		insinto /etc/openldap/schema
 		doins ${S2}/examples/LDAP/samba.schema
@@ -222,12 +224,13 @@ src_install() {
 	keepdir /var/{log,run,cache}/samba
 	keepdir /var/lib/samba/{netlogon,profiles}
 	keepdir /var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC}
+	keepdir /usr/$(get_libdir)/samba/{rpc,idmap,auth}
 
 	# docs
 	dodoc ${S2}/{COPYING,Manifest,README,Roadmap,WHATSNEW.txt}
 	docinto examples
-	dodoc ${FILESDIR}/nsswitch.conf-wins
-	use winbind && dodoc ${FILESDIR}/nsswitch.conf-winbind
+	dodoc ${CONFDIR}/nsswitch.conf-wins
+	use winbind && dodoc ${CONFDIR}/nsswitch.conf-winbind
 
 	cp -a ${S2}/examples/* ${D}/usr/share/doc/${PF}/examples
 

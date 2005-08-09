@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.196 2005/08/09 12:52:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.197 2005/08/09 14:33:05 seemant Exp $
+
+  09 Aug 2005; Seemant Kulleen <seemant@gentoo.org> -files/lmhosts,
+  -files/nsswitch.conf-winbind, -files/nsswitch.conf-wins, -files/samba.pam,
+  -files/samba.schema, -files/samba-conf, -files/samba-init,
+  -files/smb.conf.example-samba3.gz, -files/smbusers, -files/swat.xinetd,
+  -files/system-auth-winbind, samba-3.0.14a-r2.ebuild:
+  config files are now moved into the tarball as well. All the patches and
+  configs are under version control under the gentoo/src/patchsets/samba
+  module
 
   09 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/vscan-0.3.5-libclamav.patch, -files/samba-2.2.8-statfs.patch,
