@@ -1,13 +1,15 @@
 # ChangeLog for sci-biology/embassy-phylip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-phylip/ChangeLog,v 1.10 2005/08/07 21:41:10 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-phylip/ChangeLog,v 1.11 2005/08/09 23:46:29 ribosome Exp $
 
 *embassy-phylip-3.6b (07 Aug 2005)
 
   07 Aug 2005; Olivier Fisette <ribosome@gentoo.org>
   +embassy-phylip-3.6b.ebuild, embassy-phylip-3.57c-r1.ebuild:
   Ported 3.57c-r1 to the improved embassy.eclass. The new version is part of
-  EMBASSY 3.0.0.
+  EMBASSY 3.0.0. Version 3.6 is really an upgrade; it is normal to be required
+  to downgrade from 3.57c to 3.6b to upgrade to EMBASSY 3.0.0. This is an
+  issue with upstream's versionning scheme.
 
   28 Jul 2005; Olivier Fisette <ribosome@gentoo.org>
   -embassy-phylip-3.57c.ebuild:
