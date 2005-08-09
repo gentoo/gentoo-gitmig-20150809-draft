@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 b2ddd92edbc173c71a7a26502da80535 openmsx-0.4.0.ebuild 1096
 MD5 7f1f3c0172523729641ba9bc11dcbe55 metadata.xml 248
-MD5 4e3a861e41abbaf7db629dfc004ed688 ChangeLog 1920
+MD5 7603107809577fd57409ce71e3e1eac1 ChangeLog 2019
 MD5 24361274119a89942f828f43ac967f31 openmsx-0.5.2.ebuild 1104
-MD5 885178df9088ec67317a00fb0323eb4d openmsx-0.5.1.ebuild 1104
+MD5 16d9e65fd9185aaacd8a532ca48a6985 openmsx-0.5.1.ebuild 1103
 MD5 21ab36385cf75118ea0d9e5259e1634a openmsx-0.3.4.ebuild 1860
 MD5 b55f13765241896c1c13a29faba65874 files/digest-openmsx-0.4.0 65
 MD5 c9145ee916ff637d0bb770affed4df4d files/0.5.2-custom.mk.patch 793
@@ -16,9 +16,9 @@ MD5 2aa177e70143c6086066c46f58217c69 files/openmsx-0.4.0-symlinking.patch 772
 MD5 7e488066115ef9f2e653d6260cd2499b files/openmsx-0.4.0-custom.mk.patch 377
 MD5 91653dad0231dd7e9a7e3d6e4ec5cd99 files/digest-openmsx-0.5.2 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC3+7fp5vW4rUFj5oRAsbPAJoDNzXRjo4IMeTmz39Gf8u8MjVCoQCfTbcr
-7/8mbrCL4MFs7P7bhIK8mPE=
-=wnD+
+iD8DBQFC+SLwp5vW4rUFj5oRAgOoAJ4imbRZdiXKU0H018LxxmQOrFV3jgCghmm3
+LW2DwbKVOxXSbtqXiCY1/4c=
+=TeRc
 -----END PGP SIGNATURE-----
