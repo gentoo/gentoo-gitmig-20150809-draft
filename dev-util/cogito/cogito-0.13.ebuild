@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.13.ebuild,v 1.2 2005/08/08 16:55:21 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.13.ebuild,v 1.3 2005/08/09 14:16:55 r3pek Exp $
 
 inherit eutils
 
@@ -34,12 +34,16 @@ src_compile() {
 
 	if use doc; then
 		cd ${S}/Documentation
+		sed -i -e "/^MAN7_TXT/s/git.txt/#git.txt/g" Makefile
 		make || die "make documentation failed"
 	fi
 }
 
 src_install() {
 	make install DESTDIR="${D}" prefix="/usr" || die "install failed"
-	dodoc README*
-	doman Documentation/*.1 Documentation/*.7
+	dodoc README* VERSION COPYING
+
+	if use doc; then
+		doman Documentation/*.1 Documentation/*.7
+	fi
 }
