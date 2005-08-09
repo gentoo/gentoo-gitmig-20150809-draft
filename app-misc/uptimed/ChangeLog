@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.27 2005/04/21 16:40:30 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.28 2005/08/09 16:03:06 ka0ttic Exp $
+
+  09 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> uptimed-0.3.3.ebuild:
+  Stable on mips.
 
   21 Apr 2005; Yuta SATOH <nigoro@gentoo.org> uptimed-0.3.3.ebuild:
   Stable on ppc64
