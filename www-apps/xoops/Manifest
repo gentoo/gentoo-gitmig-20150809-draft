@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dfcb8d12632714100b8232d3497620e6 xoops-2.0.13.ebuild 1069
-MD5 ce16ae006311fcdf66a397babfc58051 ChangeLog 1351
+MD5 aefc81ac2dbbae44e2a9c0af742992ba ChangeLog 1567
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 9d3f6311f54b87c63103b72dcef932a3 files/postinstall-en.txt 311
-MD5 324536cbf2f1b6fd03aeea0705783734 files/digest-xoops-2.0.13 65
+MD5 0081040b0a4f44ddd1549079e6ec4243 xoops-2.2.1.ebuild 1108
+MD5 6453c8c079226b69c8adcf6fbdb941a0 files/postinstall-en.txt 392
+MD5 2f616bd832a23798a654ef319e5380cf files/digest-xoops-2.2.1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCx0xLEzitwsaoONoRAhRjAJ9Fg4LuM0JkzemPg5tppHyqIVGN6QCeK8PI
-HNXulxfmii5dRMe5QnQ1UkY=
-=9DZj
+iD8DBQFC+S+bEzitwsaoONoRAqPpAJsF2mbFiFUMRYlMrks9nYsdrpOXTQCgy7lc
+FsWHNX0pDBJx9kB/r7Lxd+8=
+=02Z8
 -----END PGP SIGNATURE-----
