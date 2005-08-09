@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.10 2005/07/18 05:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.11 2005/08/09 17:44:01 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -49,7 +49,7 @@ src_compile() {
 	src_bootstrap_sed
 
 	local myconf=""
-	if use ppc-macos || use x86-fbsd ; then
+	if ! use userland_GNU; then
 		myconf="--program-prefix=g"
 	fi
 	econf \
@@ -64,7 +64,7 @@ src_compile() {
 
 src_install() {
 	into /
-	if use ppc-macos || use x86-fbsd; then
+	if ! use userland_GNU; then
 		newbin sed/sed gsed || die "dobin"
 	else
 		dobin sed/sed || die "dobin"
@@ -79,7 +79,7 @@ src_install() {
 		dodir /usr/bin
 	fi
 
-	if use ppc-macos || use x86-fbsd ; then
+	if ! use userland_GNU; then
 		cd "${D}"
 		rm -f "${D}"/usr/bin/gsed
 		dosym /bin/gsed /usr/bin/gsed
