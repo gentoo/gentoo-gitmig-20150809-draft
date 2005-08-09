@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.3.ebuild,v 1.1 2005/07/21 20:50:48 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.3.ebuild,v 1.2 2005/08/09 17:21:07 killerfox Exp $
 
 inherit distutils fdo-mime
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.bittorrent.com/dl/${MY_P}.tar.gz"
 
 LICENSE="BitTorrent"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~sparc ~alpha"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="X"
 
 RDEPEND="X? (
