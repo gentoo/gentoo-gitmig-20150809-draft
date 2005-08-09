@@ -1,4 +1,4 @@
-MD5 de79084feaa4e1f40ceeaeb5cf3ce904 xf86-video-savage-2.0.0.ebuild 674
-MD5 ec1889f5613514c378ba0b79e9e08496 ChangeLog 415
-MD5 4f3e7a24dd947124c84119267f15d2c3 files/dri.patch 613
+MD5 5a82b5292bd7f05ae2a95434ffdbb2eb ChangeLog 541
+MD5 987ff684cf7a81ddd64292ff39eb87f6 xf86-video-savage-2.0.0.ebuild 678
 MD5 a80ce85f805de23c65207991d67b7fdc files/digest-xf86-video-savage-2.0.0 76
+MD5 4f3e7a24dd947124c84119267f15d2c3 files/dri.patch 613

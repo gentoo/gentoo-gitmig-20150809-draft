@@ -1,4 +1,4 @@
-MD5 407379a47ed002fdceca78d4d41359d3 xf86-video-mga-1.1.2.ebuild 665
-MD5 72150c6ded1118319d3a3be7674dcd29 ChangeLog 403
-MD5 bb7717954901011bff0070e6f263b571 files/dri.patch 601
+MD5 f446e7fe12e298ab215b3b7f461458be ChangeLog 526
+MD5 4bb9f2eb99f5f91d7deb548851904d61 xf86-video-mga-1.1.2.ebuild 669
 MD5 ff04b4939f9600c7503de52349566915 files/digest-xf86-video-mga-1.1.2 73
+MD5 bb7717954901011bff0070e6f263b571 files/dri.patch 601

@@ -1,4 +1,4 @@
-MD5 c6d85ad7047ef6d356822b55808fdaa1 xf86-video-tdfx-1.0.0.ebuild 668
-MD5 6fc75539dc299cd54ccf0ab76edf3ebb ChangeLog 407
-MD5 06bad2463e598cd17c21004439964841 files/dri.patch 605
+MD5 773b91cac7be23ac9d1810f0067b2ad5 ChangeLog 531
+MD5 041573c5d1a9a88e04b91bf08a335019 xf86-video-tdfx-1.0.0.ebuild 672
 MD5 142d1d214ad66990701c0487166a1056 files/digest-xf86-video-tdfx-1.0.0 74
+MD5 06bad2463e598cd17c21004439964841 files/dri.patch 605
