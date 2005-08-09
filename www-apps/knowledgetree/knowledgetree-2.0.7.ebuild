@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-2.0.7.ebuild,v 1.1 2005/08/09 11:35:05 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-2.0.7.ebuild,v 1.2 2005/08/09 13:20:13 swegener Exp $
 
-inherit eutils webapp
+inherit webapp
 
 MY_PN=${PN/tree/Tree}
 MY_P=${MY_PN}-${PV}
@@ -17,8 +17,8 @@ IUSE=""
 DEPEND="
 		virtual/php
 		dev-db/mysql
-		>=PEAR-DB-1.6.4
-		>=PEAR-Log-1.8.3
+		>=dev-php/PEAR-DB-1.6.4
+		>=dev-php/PEAR-Log-1.8.3
 		"
 S=${WORKDIR}/${MY_PN}
 

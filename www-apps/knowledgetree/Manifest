@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f8f1e46fe7faaf7495c72b47c94f2e60 knowledgetree-2.0.7.ebuild 2076
 MD5 031967b814154d961adf79b8bb0c6b00 ChangeLog 459
-MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 16a0ed193f1dce99f774b42840fd947d files/postinstall-en-2.0.7.txt 1847
-MD5 74f02fdd8e803af4673121fe6df90ae4 files/digest-knowledgetree-2.0.7 68
 MD5 3b1ebecb999e40f5b64494b9b9e34096 files/config-hook-2.0.0.sh 251
+MD5 74f02fdd8e803af4673121fe6df90ae4 files/digest-knowledgetree-2.0.7 68
+MD5 16a0ed193f1dce99f774b42840fd947d files/postinstall-en-2.0.7.txt 1847
+MD5 6bd6ef4ff11bf403c2b526fbda762a76 knowledgetree-2.0.7.ebuild 2089
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+JT8EzitwsaoONoRAnYQAJ94pCtnVAHUhFJHSX/uSWI0HjxPCQCfbeji
-xDFY6LriVoSrFYyPGTigTUo=
-=U7UZ
+iD4DBQFC+K2oI1lqEGTUzyQRAu/jAJ9IkhWBXz5qBzxWOKRsrIshOmGRDQCWJW+m
+dhUciSdfgd57h/CeEyQ0mQ==
+=dk5P
 -----END PGP SIGNATURE-----
