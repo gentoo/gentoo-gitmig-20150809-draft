@@ -1,9 +1,22 @@
-MD5 79586075f9a6219189ae8a123aff3c63 ChangeLog 5033
-MD5 086e8fd79eca51dc3b219ade9fbb9a85 metadata.xml 268
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 58b44797c4a6ba5240cc4b985a5002ac ChangeLog 5265
+MD5 a87b5520977e84ffe5706b34f4b22aa2 linuxwacom-0.6.9.ebuild 3320
 MD5 80b71911286cca0ce9148fd3e86fe4d5 linuxwacom-0.6.6.ebuild 3537
+MD5 086e8fd79eca51dc3b219ade9fbb9a85 metadata.xml 268
 MD5 22abf1918269ba9122ed300afd97e325 linuxwacom-0.6.7.ebuild 3304
 MD5 4d1f188a0157fcf3eadb3164b6055573 linuxwacom-0.6.8.ebuild 3306
+MD5 41099e1bdace48c2ccd9fe1ababddbb7 files/digest-linuxwacom-0.6.9 69
 MD5 fe1457589d41bcc4b2407351e6ae2faf files/digest-linuxwacom-0.6.6 69
+MD5 42ab1ee82263c40221f4e5d52f3ce817 files/linuxwacom-0.6.9-dlloader.patch 5459
 MD5 97ebb9a35c19c6f15f8fb9ac4b847d09 files/linuxwacom-0.6.6-nonx86.patch 609
 MD5 c63cfe07a0a7457ddc796feee5501b6a files/digest-linuxwacom-0.6.7 69
 MD5 5cad69052ceddf84cea16c74fef9b805 files/digest-linuxwacom-0.6.8 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC9/3oArHZZzCEUG0RAsZNAKCJAB6fjYYaWkMMG91GOsBdkmkBtwCfSYDP
+0KQ2zBcDieoIf60HE9zGCgk=
+=Jjh3
+-----END PGP SIGNATURE-----
