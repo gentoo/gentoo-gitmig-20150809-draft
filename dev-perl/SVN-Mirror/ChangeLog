@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SVN-Mirror
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/ChangeLog,v 1.14 2005/08/07 04:37:58 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/ChangeLog,v 1.15 2005/08/09 20:02:51 dholm Exp $
+
+  09 Aug 2005; David Holm <dholm@gentoo.org> SVN-Mirror-0.65.ebuild:
+  Readded to ~ppc. Please don't remove it without filing a proper bug report.
 
   07 Aug 2005; <pclouds@gentoo.org> SVN-Mirror-0.65.ebuild:
   Added missing dependency dev-perl/TimeDate
