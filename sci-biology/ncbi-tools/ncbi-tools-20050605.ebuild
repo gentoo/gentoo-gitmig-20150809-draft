@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050605.ebuild,v 1.2 2005/08/08 23:39:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050605.ebuild,v 1.3 2005/08/09 15:52:26 ranger Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -38,7 +38,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	use ppc64 && cd ${S} && epatch ${FILESDIR}/${P}-lop.patch.gz
+	use ppc64 && cd ${S} && epatch ${FILESDIR}/${P}-lop.patch
 
 	if ! use X; then
 		cd ${S}/make

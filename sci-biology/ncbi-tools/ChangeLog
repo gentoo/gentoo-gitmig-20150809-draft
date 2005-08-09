@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.19 2005/08/08 23:39:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.20 2005/08/09 15:52:26 ranger Exp $
+
+  09 Aug 2005; Brent Baude <ranger@gentoo.org>
+  +files/ncbi-tools-20050605-lop.patch,
+  -files/ncbi-tools-20050605-lop.patch.gz, ncbi-tools-20050605.ebuild:
+  For the ebuild ncbi-tools-20050605, I was asked to remove the gz patch and
+  submit it as plain text. This commit will remove the gz patch and replace it
+  with a plain text one. The patch name change is also reflected in the
+  ebuild.
 
   08 Aug 2005; Brent Baude <ranger@gentoo.org>
   +files/ncbi-tools-20050605-lop.patch.gz, ncbi-tools-20050605.ebuild:
