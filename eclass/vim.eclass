@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.116 2005/08/09 18:24:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.117 2005/08/09 22:58:03 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -86,12 +86,8 @@ fi
 # vim7 has some extra options. tcltk is working again, and mzscheme support
 # has been added. netbeans now has its own USE flag, but it's only available
 # under gvim. We have a few new GUI toolkits, and we can also install a
-# vimpager (this is in vim6 as well, but the ebuilds don't handle it). There
-# is now a spellchecker too.
+# vimpager (this is in vim6 as well, but the ebuilds don't handle it).
 if [[ $(get_major_version ) -ge 7 ]] ; then
-	# removed the SPELL use flag support until we have a decent patch
-	IUSE="${IUSE}"
-
 	if [[ "${MY_PN}" != "vim-core" ]] ; then
 		IUSE="${IUSE} tcltk mzscheme"
 		DEPEND="$DEPEND
@@ -214,19 +210,6 @@ vim_pkg_setup() {
 		eerror "and /etc/portage/package.* files."
 		die "${PF} not supported."
 	fi
-
-	#if [[ $(get_major_version ) -ge 7 ]] ; then
-	#	if [[ ${MY_PN} != "vim-core" ]] && use spell ; then
-	#		if ! built_with_use "app-editors/vim-core" spell ; then
-	#			echo
-	#			ewarn "You have asked for spell checking but did not build vim-core"
-	#			ewarn "with USE=\"spell\". This means you will not have any dictionary"
-	#			ewarn "files installed."
-	#			echo
-	#		fi
-	#		epause 5
-	#	fi
-	#fi
 
 	# people with broken alphabets run into trouble. bug 82186.
 	unset LANG LC_ALL
@@ -390,13 +373,6 @@ vim_src_compile() {
 			if [[ "${MY_PN}" == "gvim" ]] ; then
 				myconf="${myconf} `use_enable netbeans`"
 			fi
-
-			# rphillips - removed spell disable until decent patch
-			# spell checking is turned on when we have syntax.
-			#if ! use spell ; then
-			#	sed -i -e '/# \+define FEAT_SPELL/d' src/feature.h || \
-			#		die "couldn't disable spell"
-			#fi
 		fi
 
 		# --with-features=huge forces on cscope even if we --disable it. We need
@@ -629,17 +605,6 @@ vim_src_install() {
 			dobashcompletion ${FILESDIR}/${MY_PN}-completion ${MY_PN}
 		fi
 	fi
-
-	if [[ $(get_major_version ) -ge 7 ]] ; then
-		if ! use spell ; then
-			rm -fr ${D}/usr/share/vim/vim${VIM_VERSION/.}/spell || true
-		else
-			if [[ "${MY_PN}" == "vim-core" ]] ; then
-				insinto /usr/share/vim/vim${VIM_VERSION//./}/spell
-				doins ${S}/runtime/spell/*.spl
-			fi
-		fi
-	fi
 }
 
 # Make convenience symlinks, hopefully without stepping on toes.  Some
@@ -707,14 +672,6 @@ vim_pkg_postinst() {
 			echo
 			# TODO: once we have the GUIs working, display a message explaining
 			# them.
-		fi
-
-		if use spell ; then
-			einfo "You have enabled spell checking support. This is rather, uh,"
-			einfo "experimental at the moment. To enable it, use the following"
-			einfo "command:"
-			einfo "    :setlocal spell spelllang=en"
-			einfo "Currently only en, en_us and en_uk are available."
 		fi
 	fi
 	einfo
