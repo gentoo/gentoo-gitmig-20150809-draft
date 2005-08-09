@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a8ea2b3bbe5fbfbefed52ab37412069 ChangeLog 4916
-MD5 0a94e35606cc2371a8aad69f2bdddcb5 metadata.xml 916
+MD5 ff049fa25f9c5013afecd2e71d8f98d0 ChangeLog 5044
 MD5 2f58c0035f2de3cf16062e7314c6888e fvwm-crystal-1.0.1.ebuild 1988
 MD5 061902112f226e67e8eb4061e28d1c4e fvwm-crystal-1.0.3_pre1.ebuild 1105
 MD5 8a4b3a8431e9cb8de3d930a50fa5bcc1 fvwm-crystal-2.20041128.ebuild 2174
 MD5 c4e793d8ed141203ac5ed4258e06c87e fvwm-crystal-2.20041224.ebuild 1884
 MD5 e45c1335b9fcb21e3bf276392f03b8cd fvwm-crystal-2.20050306.ebuild 1909
-MD5 89bdb517750abd082271590226865d5e fvwm-crystal-3.0_rc1.ebuild 1653
-MD5 282c809ddaa59071830b6c8dd9b0a3a1 files/fvwm-crystal 25
-MD5 aaf4f336df952f8b947853826cd7c392 files/digest-fvwm-crystal-3.0_rc1 73
+MD5 2808acb9d22f18452a9ed591241ddd26 fvwm-crystal-3.0_rc1.ebuild 1662
+MD5 0a94e35606cc2371a8aad69f2bdddcb5 metadata.xml 916
+MD5 d2d23021573eab4cf7108ba429abf1a1 files/digest-fvwm-crystal-1.0.1 70
 MD5 81073a58381613d272d02f2062ba6750 files/digest-fvwm-crystal-1.0.3_pre1 74
 MD5 c0d5410eb95b09d2b26a581ddc9e14d6 files/digest-fvwm-crystal-2.20041128 73
 MD5 2d26e39e4aa7ef4a817c8ed1381493f4 files/digest-fvwm-crystal-2.20041224 73
 MD5 33c0533262c8862823091a907f3099cf files/digest-fvwm-crystal-2.20050306 73
+MD5 aaf4f336df952f8b947853826cd7c392 files/digest-fvwm-crystal-3.0_rc1 73
+MD5 282c809ddaa59071830b6c8dd9b0a3a1 files/fvwm-crystal 25
 MD5 8146e2077293da51342d5f6d09cec37a files/fvwm-crystal-fvwm-version-check.diff 429
-MD5 d2d23021573eab4cf7108ba429abf1a1 files/digest-fvwm-crystal-1.0.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5+fn2jLqHNfbg2URAifRAKCMCrT02Pb9l93CZdUWsfff7IfWMQCggF+G
-eMblUYBbCldfNxrJBlNkNCQ=
-=UZ6y
------END PGP SIGNATURE-----
