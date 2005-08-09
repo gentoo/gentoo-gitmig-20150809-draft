@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-39.ebuild,v 1.1 2005/08/09 00:40:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-39.ebuild,v 1.2 2005/08/09 20:52:56 mr_bones_ Exp $
 
 inherit wxwidgets games
 
@@ -33,6 +33,12 @@ pkg_setup() {
 }
 
 src_compile() {
+	# work around portage bug: described in bug #73527
+	if use gtk2; then
+		need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
+	else
+		need-wxwidgets gtk || die "No gtk1 version of x11-libs/wxGTK found"
+	fi
 	egamesconf \
 		--disable-dependency-tracking \
 		--exec_prefix="${GAMES_PREFIX}" \
