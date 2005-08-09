@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.2.ebuild,v 1.2 2005/07/29 11:53:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.2.ebuild,v 1.3 2005/08/09 10:28:31 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -39,6 +39,7 @@ DEPEND="${DEPEND}
 src_unpack() {
 	kde_src_unpack
 
+	# Fix for 64 bit systems. Applied for 3.5.
 	epatch "${FILESDIR}/kdemultimedia-3.4.0-amd64.patch"
 
 	# Configure patch. Applied for 3.5.
