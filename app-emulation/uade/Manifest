@@ -2,18 +2,20 @@
 Hash: SHA1
 
 MD5 23c18fbfd1469af2dd0ed1c801031e29 uade-1.01.ebuild 1590
+MD5 dcb7318119e088f3f84bcbdb7373efb5 uade-1.03.ebuild 1591
 MD5 8ed4ebd5310ffb6471a51a0c50c01db7 uade-1.00.ebuild 1594
 MD5 8178404b40333b50f20b6e11f6726c8e uade-1.02.ebuild 1589
-MD5 a68471ca0d8ad302d8d8994410c6f2ae ChangeLog 3754
+MD5 fd59e27844faacb4988ea3dea1415116 ChangeLog 3870
 MD5 a715d9de7a6423e88a804a562c2220a9 metadata.xml 219
 MD5 ef3c7fc767538fbeb54e89c600038bdd files/uade-0.91-bmp-fix.patch 1252
 MD5 196ca74d6a4fbf1a5f1faa68af4cba37 files/digest-uade-1.00 63
 MD5 4e65fc223461726956f0f0f80cb9a71d files/digest-uade-1.01 63
 MD5 9225d9e0382965b1b510ceaa9face8bb files/digest-uade-1.02 63
+MD5 0b7f248668fe3389c13d832fd523997a files/digest-uade-1.03 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC26KJchej4aZK9/cRAg4bAJ9msa748K/k/dkWc2PIJj6Ph+BCTgCfVWvp
-Umy07tXu468ZSk/yEg37ReE=
-=1pdr
+iD8DBQFC+PXjchej4aZK9/cRAkqlAJwJF5m51NXuxFsacbZ6ZNDrGpRvDACbBMq5
+h5dRYvNw5KAUycyKS/67p+o=
+=K9/q
 -----END PGP SIGNATURE-----
