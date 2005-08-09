@@ -1,6 +1,12 @@
 # ChangeLog for net-print/mtink
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.14 2005/05/04 05:45:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.15 2005/08/09 01:39:49 metalgod Exp $
+
+*mtink-1.0.9 (09 Aug 2005)
+
+  09 Aug 2005; Luis Medinas <metalgod@gentoo.org> +mtink-1.0.9.ebuild:
+  Version Bump. Added X USE flag thanks to JeR <jer@xs4all.nl> closes bug
+  #99964 .
 
 *mtink-1.0.8 (04 May 2005)
 
