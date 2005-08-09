@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.164 2005/07/23 21:59:06 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.165 2005/08/09 16:26:02 ciaranm Exp $
+
+*vim-core-6.3.084-r1 (09 Aug 2005)
+
+  09 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org> +files/vimrc-r2,
+  +vim-core-6.3.084-r1.ebuild:
+  Update runtime snapshot to 20050809. Include grub syntax highlighting fix
+  from Toralf Förster, bug #96155. Include check for empty &shell, bug
+  #101665. Default sh syntax highlighting mode is now bash rather than ksh,
+  bug #101819.
 
   23 Jul 2005; Hardave Riar <hardave@gentoo.org> vim-core-6.3.084.ebuild:
   Stable on mips, bug #99578.

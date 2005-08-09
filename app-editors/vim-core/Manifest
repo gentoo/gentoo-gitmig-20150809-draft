@@ -2,27 +2,30 @@
 Hash: SHA1
 
 MD5 3dc6ecd27c606a420beb6f7a8f3c76b6 vim-core-7.0_alpha20050622.ebuild 827
-MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 d508e596b3e60137b87bd13e79b547a3 vim-core-6.3.074.ebuild 1059
-MD5 ba6cf7f0e3d94d0e42bf15179b05aa69 vim-core-6.3.084.ebuild 1047
-MD5 88911c9921b102652a3232483dcfc0bb vim-core-7.0_alpha20050721.ebuild 828
 MD5 e3bd3fbd47b779a02d6977dc95fda06b vim-core-6.3.075.ebuild 1049
-MD5 226025732f3ce8d1e1427755c7abd873 ChangeLog 22292
+MD5 14433af0f971d653624f9d78105abb32 vim-core-6.3.084-r1.ebuild 1061
 MD5 fcc1e01f80bdca4b49cd8a54bbafe814 vim-core-6.3.068.ebuild 1046
-MD5 ba542e54d91a04a85435253ae35301b6 files/xxd-completion 461
-MD5 19ec579aa1b1e8a0a37abee13838267c files/digest-vim-core-6.3.074 418
+MD5 88911c9921b102652a3232483dcfc0bb vim-core-7.0_alpha20050721.ebuild 828
+MD5 d508e596b3e60137b87bd13e79b547a3 vim-core-6.3.074.ebuild 1059
+MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
+MD5 ba6cf7f0e3d94d0e42bf15179b05aa69 vim-core-6.3.084.ebuild 1047
+MD5 4eb0dcb1be5d237ed6211975936c9265 ChangeLog 22668
+MD5 3ae8f74f204374b63052295f80bd6fb9 files/vimrc-r2 6071
 MD5 5d338faaea218fdda249b4725aa31f82 files/digest-vim-core-6.3.084 419
+MD5 19ec579aa1b1e8a0a37abee13838267c files/digest-vim-core-6.3.074 418
+MD5 7c733202ff77d34df50039b42d153521 files/digest-vim-core-6.3.084-r1 425
+MD5 2ad354160ca3635ea115beb56e237e7c files/vimrc 3879
+MD5 ba542e54d91a04a85435253ae35301b6 files/xxd-completion 461
+MD5 266f8b682476da0ec6c4d39de5a79264 files/vimrc-r1 5728
 MD5 09ddb27b09622238519d236eee139298 files/digest-vim-core-7.0_alpha20050721 156
 MD5 49f34fea09c3041dba7daa3a6cb05c85 files/digest-vim-core-6.3.075 418
+MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
 MD5 ee43986336dcd1bd970b36075692c1a1 files/digest-vim-core-6.3.068 418
 MD5 99a85c2440380af0bbf6b80277429940 files/digest-vim-core-7.0_alpha20050622 157
-MD5 2ad354160ca3635ea115beb56e237e7c files/vimrc 3879
-MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
-MD5 266f8b682476da0ec6c4d39de5a79264 files/vimrc-r1 5728
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC41qUgIKl8Uu19MoRAo7DAJ9lm1kuVX183eLhzdQDpzINbzM8agCdFsRX
-fiPrN8VzUQ/9jI6hJuUmHyg=
-=HhZH
+iD8DBQFC+NkiLLFUmVNQ7rkRAuUCAKCUGTBsonVrFRxxZhqEcRAS7ulbTwCgoPpo
+1+nNQfzCyS27FMVX14/r0qc=
+=QuyA
 -----END PGP SIGNATURE-----
