@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scsh.eclass,v 1.1 2005/08/09 17:59:50 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scsh.eclass,v 1.2 2005/08/09 18:07:53 mkennedy Exp $
 #
 
 inherit eutils
@@ -12,17 +12,15 @@ LICENSE="as-is | BSD"
 SLOT="0"
 KEYWORDS="~x86"
 
-IUSE="fhs scsh"
+IUSE="scsh"
 
 SCSH_SCSH_PATH=/usr/$(get_libdir)/scsh
 
 set_layout() {
-	if use fhs;	then
-		SCSH_LAYOUT=fhs
-	elif use scsh; then
+	if use scsh; then
 		SCSH_LAYOUT=scsh
 	else
-		ewarn "No layout was specified via USE, defaulting to fhs."
+		ewarn "No layout was specified via USE, defaulting to FHS."
 		SCSH_LAYOUT=fhs
 	fi
 	export SCSH_LAYOUT
