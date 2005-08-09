@@ -1,30 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d70889cf9ee474b30325789a31c253a9 mailbase-0.00-r6.ebuild 902
-MD5 a5d2b893cb09235e3c253d9d0c50f3fa mailbase-0.00-r7.ebuild 1922
-MD5 1d603fcd52dbed4483af846b05c9c1d6 ChangeLog 7358
 MD5 49503f6e00aba90637484ef6fd9af542 mailbase-0.00-r9.ebuild 2428
-MD5 d77e2624e669ea4ddc91be031be31988 mailbase-1.ebuild 1536
-MD5 f224d58950c57b4f07888966ad00cd9a mailbase-0.00-r5.ebuild 877
-MD5 9199352cf76278406a943618dd4a54ef mailbase-0.00-r8.ebuild 2262
 MD5 78fc96c16b9dc1d4902c62927e664ce9 mailbase-0.00-r4.ebuild 773
+MD5 d70889cf9ee474b30325789a31c253a9 mailbase-0.00-r6.ebuild 902
+MD5 9199352cf76278406a943618dd4a54ef mailbase-0.00-r8.ebuild 2262
+MD5 18148496497e91ffb297fc0147ce387a mailbase-1.ebuild 1534
+MD5 f224d58950c57b4f07888966ad00cd9a mailbase-0.00-r5.ebuild 877
+MD5 a5d2b893cb09235e3c253d9d0c50f3fa mailbase-0.00-r7.ebuild 1922
+MD5 1581c9f09232a146c42205da3df1f950 ChangeLog 7443
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r8 0
-MD5 a5623a262865054bd43c914e740a2e52 files/aliases 809
-MD5 df65e6e407e866c7e6721e79f731ae6a files/mailcap 2235
+MD5 e75c39fbdac8eec750d84a7183ac6721 files/common-pamd 417
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r4 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r5 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r9 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r6 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r7 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r8 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r9 0
 MD5 9850ca185823a3094ae3f6c2a057a3fb files/common-pamd-include 362
-MD5 e75c39fbdac8eec750d84a7183ac6721 files/common-pamd 417
+MD5 df65e6e407e866c7e6721e79f731ae6a files/mailcap 2235
+MD5 a5623a262865054bd43c914e740a2e52 files/aliases 809
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mailbase-0.00-r4 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+GTgj5H05b2HAEkRAknSAJ9WV2eTg97rAGZwt/TJ+YYeYIFllgCgjRiQ
-+oH5d3+Hc2v5b1sOEv97sK4=
-=8SSo
+iD8DBQFC+MngEZCkKN40op4RAi6sAJ4uBQBE+Ns1YlRu/ZXZJowaUJETfACgwolI
+eTTY3vTcSHx1yS+5GyemaT0=
+=Q0AA
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.63 2005/08/09 08:12:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.64 2005/08/09 15:20:34 ka0ttic Exp $
+
+  09 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> mailbase-1.ebuild:
+  Stable on mips.
 
   09 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> mailbase-1.ebuild:
   Stable on amd64.
