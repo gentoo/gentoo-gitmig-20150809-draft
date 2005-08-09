@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/atmel-firmware-1.3.ebuild,v 1.2 2005/07/04 18:04:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/atmel-firmware-1.3.ebuild,v 1.3 2005/08/09 18:00:38 dholm Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.thekelleys.org.uk/atmel/"
 SRC_URI="http://www.thekelleys.org.uk/atmel/${P}.tar.gz"
 LICENSE="Atmel"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="pcmcia usb"
 
 RDEPEND=">=sys-apps/hotplug-20040923
