@@ -1,0 +1,22 @@
+diff -Naur xpvm.orig/src/xpvm.tcl xpvm/src/xpvm.tcl
+--- xpvm.orig/src/xpvm.tcl	1998-04-09 16:12:32.000000000 -0500
++++ xpvm/src/xpvm.tcl	2005-07-29 19:02:33.776588864 -0500
+@@ -829,7 +829,17 @@
+ 
+ set tfck [ info exists trace_file ]
+ 
+-if { $tfck == 0 } { set trace_file "/tmp/xpvm.trace.$user" }
++if { $tfck == 0 } {
++	if {$tcl_platform(platform) != "unix"} {
++		puts stderr "fatal error, secure temp file creation not available"
++		exit 1
++	}
++	catch {exec /bin/tempfile} trace_file
++	if {[file exist $trace_file] != 1} {
++		puts stderr "fatal error, secure temp file creation not available"
++		exit 1
++	}
++}
+ 
+ $CTRL.file_entry insert 0 $trace_file
+ 

@@ -1,17 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3c55a9b59e0402fd04bef10354fb978d xpvm-1.2.5-r3.ebuild 1634
-MD5 8a378ff84cd6e0cfd86f7c01ebf0fade xpvm-1.2.5-r2.ebuild 1502
-MD5 06885f8cbfd4fdc9638f7b6a88998f04 ChangeLog 2005
+MD5 6ab70f80e2196cbca85dddbf10c0ebe8 xpvm-1.2.5-r4.ebuild 1681
 MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
+MD5 3c55a9b59e0402fd04bef10354fb978d xpvm-1.2.5-r3.ebuild 1634
+MD5 fa0aaf9403b1790c9bdcc04e5b982c39 ChangeLog 2182
+MD5 8a378ff84cd6e0cfd86f7c01ebf0fade xpvm-1.2.5-r2.ebuild 1502
+MD5 6438da27b6054eb5470d7d647bbea504 files/xpvm-1.2.5-secure-temp.patch 654
 MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5-r2 63
+MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5-r4 63
 MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5-r3 63
 MD5 d35a792494704198c2d97ff3e4b9e033 files/xpvm-1.2.5-gentoo.diff 2904
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBw2lpI1lqEGTUzyQRApKiAKDDndOiaHXN5FmYEpV6U+ljVOIGlACcDXAA
-sXlBVU35CN1GMjD8IxXVJ7s=
-=xp2+
+iD8DBQFC+RgfKtJO8LeSoosRAvx3AJoCH7AHgbHb+W7CZ55SC+ZQtBGKvgCdHDBy
+QSZZZLd2py1e+FdhrkaiOJc=
+=WIQD
 -----END PGP SIGNATURE-----
