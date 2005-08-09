@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ksimus-boolean/ksimus-boolean-0.3.6.ebuild,v 1.3 2005/05/27 11:24:40 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ksimus-boolean/ksimus-boolean-0.3.6.ebuild,v 1.4 2005/08/09 13:03:40 phosphan Exp $
 
-inherit kde eutils
+inherit kde eutils fixheadtails
 
 MYPATCH="${PN}-${PV}-namespaces.patch"
 HOMEPAGE="http://ksimus.berlios.de/"
@@ -24,4 +24,10 @@ src_unpack() {
 	unpack ${MYPATCH}.bz2
 	cd ${S}
 	epatch ${WORKDIR}/${MYPATCH}
+	ht_fix_file acinclude.m4 aclocal.m4 configure \
+			admin/acinclude.m4.in admin/cvs.sh admin/libtool.m4.in
+
+	sed -e 's/.*MISSING_ARTS_ERROR(.*//' -i admin/acinclude.m4.in || \
+			die "could not remove ARTS check"
+	make -f Makefile.dist
 }

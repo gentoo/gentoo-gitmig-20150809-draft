@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/ksimus-boolean
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ksimus-boolean/ChangeLog,v 1.4 2005/05/27 11:24:40 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ksimus-boolean/ChangeLog,v 1.5 2005/08/09 13:03:40 phosphan Exp $
+
+  09 Aug 2005; Patrick Kursawe <phosphan@gentoo.org>
+  ksimus-boolean-0.3.6.ebuild:
+  Removing unnecessary ARTS detection, see bug #100249
 
   27 May 2005; Patrick Kursawe <phosphan@gentoo.org>
   ksimus-boolean-0.3.6.ebuild:
