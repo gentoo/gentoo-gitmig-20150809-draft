@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18-r1.ebuild,v 1.3 2005/04/28 07:53:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18-r1.ebuild,v 1.4 2005/08/09 02:08:55 tester Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="ftp://ftp.cistron.nl/pub/people/svm/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE=""
 DEPEND="sys-libs/ncurses"
 RDEPEND="dev-lang/perl"
