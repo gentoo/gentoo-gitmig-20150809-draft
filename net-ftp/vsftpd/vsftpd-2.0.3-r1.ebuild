@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.3-r1.ebuild,v 1.4 2005/08/08 14:59:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.3-r1.ebuild,v 1.5 2005/08/09 13:03:34 uberlord Exp $
 
 inherit flag-o-matic eutils
 
@@ -70,6 +70,6 @@ pkg_preinst() {
 	# so that our default config works under xinetd - fixes #78347
 	if use xinetd ; then
 		sed -i '/\(background=YES\|listen=YES\)/s/^/#/g' \
-			${IMAGE}/etc/vsftpd/vsftpd.conf.sample
+			${IMAGE}/etc/vsftpd/vsftpd.conf.example
 	fi
 }
