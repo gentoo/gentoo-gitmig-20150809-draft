@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.54 2005/08/08 17:05:58 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.55 2005/08/09 00:19:12 anarchy Exp $
+
+  09 Aug 2005; Jory A. Pratt <anarchy@gentoo.org> mozilla-1.7.10-r1.ebuild:
+  Added ~ppc64 to Keywords
 
   08 Aug 2005; Jory A. Pratt <anarchy@gentoo.org> -mozilla-1.7.7.ebuild,
   -mozilla-1.7.7-r2.ebuild, -mozilla-1.7.8.ebuild, -mozilla-1.7.8-r1.ebuild,
