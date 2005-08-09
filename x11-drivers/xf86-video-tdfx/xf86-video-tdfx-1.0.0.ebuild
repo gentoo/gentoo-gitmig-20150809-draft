@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/xf86-video-tdfx-1.0.0.ebuild,v 1.1 2005/08/08 07:08:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/xf86-video-tdfx-1.0.0.ebuild,v 1.2 2005/08/09 13:51:02 fmccor Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="X.Org driver for tdfx cards"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="dri"
 RDEPEND="x11-base/xorg-server"
 DEPEND="${RDEPEND}
