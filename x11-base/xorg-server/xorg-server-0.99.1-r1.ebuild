@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r1.ebuild,v 1.1 2005/08/10 21:37:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r1.ebuild,v 1.2 2005/08/10 22:07:21 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -61,28 +61,30 @@ DEPEND="${RDEPEND}
 	dri? ( x11-proto/xf86driproto
 		x11-libs/libdrm )"
 
-if use glx; then
-	confopts="${confopts} --with-mesa-source=${WORKDIR}/${MESA_P}"
-fi
+pkg_setup() {
+	if use glx; then
+		confopts="${confopts} --with-mesa-source=${WORKDIR}/${MESA_P}"
+	fi
 
-# localstatedir is used for the log location; we need to override the default
-# from ebuild.sh
-# sysconfdir is used for the xorg.conf location; same applies
-CONFIGURE_OPTIONS="
-	$(use_enable xinerama)
-	$(use_enable ipv6)
-	$(use_enable !minimal dmx)
-	$(use_enable !minimal xvfb)
-	$(use_enable !minimal xnest)
-	$(use_enable glx)
-	$(use_enable dri)
-	--enable-xorg
-	--enable-composite
-	--enable-xtrap
-	--enable-xevie
-	--sysconfdir=/etc/X11
-	--localstatedir=/var
-	${confopts}"
+	# localstatedir is used for the log location; we need to override the default
+	# from ebuild.sh
+	# sysconfdir is used for the xorg.conf location; same applies
+	CONFIGURE_OPTIONS="
+		$(use_enable xinerama)
+		$(use_enable ipv6)
+		$(use_enable !minimal dmx)
+		$(use_enable !minimal xvfb)
+		$(use_enable !minimal xnest)
+		$(use_enable glx)
+		$(use_enable dri)
+		--enable-xorg
+		--enable-composite
+		--enable-xtrap
+		--enable-xevie
+		--sysconfdir=/etc/X11
+		--localstatedir=/var
+		${confopts}"
+}
 
 src_install() {
 	x-modular_src_install
