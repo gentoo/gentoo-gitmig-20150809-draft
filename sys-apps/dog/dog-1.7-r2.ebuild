@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/dog-1.7-r2.ebuild,v 1.7 2005/08/10 09:47:05 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/dog-1.7-r2.ebuild,v 1.8 2005/08/10 19:11:28 ciaranm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,8 +20,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-manpage-touchup.patch
 	epatch ${FILESDIR}/${P}-64bit-goodness.patch
 	sed -i \
-		-e 's/^CFLAGS/#CFLAGS/' \
-		-e "s/gcc/$(tc-getCC)/" \
+		-e 's,^CFLAGS,#CFLAGS,' \
+		-e "s,gcc,$(tc-getCC)," \
 		Makefile || die "sed Makefile failed"
 }
 

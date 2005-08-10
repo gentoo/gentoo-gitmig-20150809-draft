@@ -1,9 +1,19 @@
-MD5 d77afa6a2d3f9169e11b5a4c611236fe ChangeLog 2220
-MD5 224f96a6351e4c5c64db83857c58d6be dog-1.7-r1.ebuild 768
-MD5 780e6a9a10d4ed26b1eaca9dd1b1019f dog-1.7-r2.ebuild 823
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 76c1aa7d0cff0511fcb8a9b1a11c0f73 dog-1.7-r2.ebuild 822
+MD5 548521193355a36e7a16aa46fb2f8dab dog-1.7-r1.ebuild 768
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
-MD5 39566b62f641a9ca7555f7bbea2878d9 files/1.7-manpage-touchup.patch 498
+MD5 8149197131d3bf585429f79a13dc57aa ChangeLog 2381
 MD5 d3467d0ce8367b6b549f383382437b24 files/digest-dog-1.7-r1 58
-MD5 d3467d0ce8367b6b549f383382437b24 files/digest-dog-1.7-r2 58
 MD5 c53d189c92688fe749f4f4376d4727e7 files/dog-1.7-64bit-goodness.patch 791
+MD5 39566b62f641a9ca7555f7bbea2878d9 files/1.7-manpage-touchup.patch 498
 MD5 4af367da579347ba9b87e42418a0c3fd files/dog-1.7-check-ctime.diff 1409
+MD5 d3467d0ce8367b6b549f383382437b24 files/digest-dog-1.7-r2 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC+lFoLLFUmVNQ7rkRAijJAJ9rmv9KILiRyeqPK3PcTm2suOOAhwCgrqjq
+CWLI4JiYGkHf3AtG23O9y+U=
+=bvDE
+-----END PGP SIGNATURE-----

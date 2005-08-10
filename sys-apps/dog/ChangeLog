@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dog
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.18 2005/08/10 09:47:05 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.19 2005/08/10 19:11:28 ciaranm Exp $
+
+  10 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org> dog-1.7-r1.ebuild,
+  dog-1.7-r2.ebuild:
+  Fix sed to work if the compiler path includes slashes, bug #102025
 
   10 Aug 2005; Luis Medinas <metalgod@gentoo.org> dog-1.7-r2.ebuild:
   Marked Stable on AMD64.
