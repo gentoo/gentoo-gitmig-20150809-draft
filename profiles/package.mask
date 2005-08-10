@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4265 2005/08/08 15:36:31 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4266 2005/08/10 05:19:02 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -58,6 +58,7 @@ media-fonts/font-sun-misc
 media-fonts/font-util
 media-fonts/font-winitzki-cyrillic
 media-fonts/font-xfree86-type1
+media-libs/mesa
 x11-apps/appres
 x11-apps/bdftopcf
 x11-apps/beforelight
@@ -1402,18 +1403,6 @@ app-misc/ldapbrowser
 # libwmfun completes compiling but doesn't appear to support PLDrawString
 # functions correctly.  Masking while incompatible pointers are figured out
 =x11-libs/libwmfun-0.0.4
-
-# Only use the mesa and mesa-glu provided with x11-base/xfree,
-# as the external ones gives problems in most cases with DRI/DRM.
-# Nvidia users do not use it anyhow, and tdfx users report that
-# it works fine with the mesa included with xfree.  If you do
-# unmask these, make sure that you know what you are doing, and
-# know that if anything breaks, then you get to keep the pieces.
-#
-# azarah (26 May 2002)
->=media-libs/mesa-3.0
->=media-libs/mesa-glu-3.0
->=media-libs/sgi-oss-glu-1.0
 
 #untested, author mentions an error
 media-libs/id3lib-docs
