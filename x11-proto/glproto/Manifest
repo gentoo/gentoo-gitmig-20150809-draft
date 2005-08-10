@@ -1,3 +1,5 @@
 MD5 7ba9cb373b9cde84843645e27b9b1dbd glproto-1.4.ebuild 1465
-MD5 136bb556bee72f8506137cee1de56e57 ChangeLog 1043
+MD5 b26116c22732f984c3380412eab56269 ChangeLog 1209
+MD5 55afb180eefbabfb5c43dedb717e5fa8 glproto-1.4-r1.ebuild 1468
 MD5 6a9182efc5f985cb40b92436c638034b files/digest-glproto-1.4 63
+MD5 6a9182efc5f985cb40b92436c638034b files/digest-glproto-1.4-r1 63

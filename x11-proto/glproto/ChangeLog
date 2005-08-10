@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.6 2005/08/10 06:50:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.7 2005/08/10 21:35:22 spyderous Exp $
+
+*glproto-1.4-r1 (10 Aug 2005)
+
+  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +glproto-1.4-r1.ebuild:
+  Rev bump to make sure people get working GL setup.
 
   10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; glproto-1.4.ebuild:
   (fd.o #4036) Stop installing glu.h. This and glx.h are already installed by
