@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.83 2005/08/10 20:38:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.84 2005/08/10 20:57:52 hansmi Exp $
+
+  10 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> xpdf-3.00-r10.ebuild:
+  Stable on ppc and hppa.
 
 *xpdf-3.00-r10 (10 Aug 2005)
 
@@ -39,7 +42,7 @@
   21 Jan 2005; Markus Rothe <corsair@gentoo.org> xpdf-3.00-r8.ebuild:
   Stable on ppc64; bug #77888
 
-  20 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> xpdf-3.00-r8.ebuild:
+  20 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org> xpdf-3.00-r8.ebuild:
   Stable on alpha, bug 77888.
 
   19 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> xpdf-3.00-r8.ebuild:
@@ -63,7 +66,7 @@
   27 Dec 2004; <SeJo@gentoo.org> xpdf-3.00-r7.ebuild:
   stable on ppc glsa: 75191
 
-  27 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> xpdf-3.00-r7.ebuild:
+  27 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> xpdf-3.00-r7.ebuild:
   Stable on alpha, bug 75191.
 
   25 Dec 2004; Markus Rothe <corsair@gentoo.org> xpdf-3.00-r7.ebuild:
@@ -100,7 +103,7 @@
   xpdf-3.00-r4.ebuild, xpdf-3.00-r5.ebuild:
   Added version strings to cjk fonts.
 
-  03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> xpdf-3.00-r5.ebuild:
+  03 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> xpdf-3.00-r5.ebuild:
   Stable on alpha, bug 69662.
 
   03 Nov 2004; <SeJo@gentoo.org> xpdf-3.00-r5.ebuild:
@@ -185,7 +188,7 @@
   14 May 2004; Lars Weiler <pylon@gentoo.org> xpdf-3.00-r1.ebuild:
   Stable on ppc
 
-  13 May 2004; Bryan �stergaard <kloeri@gentoo.org> xpdf-3.00-r1.ebuild:
+  13 May 2004; Bryan Østergaard <kloeri@gentoo.org> xpdf-3.00-r1.ebuild:
   Stable on alpha.
 
 *xpdf-3.00-r1 (14 Mar 2004)
@@ -279,7 +282,7 @@
   http://www.foolabs.com/xpdf/problems.html#t1lib-base14 . This adds a dependency on app-text/ghostscript. 
   It also fixes a bug in the current ebuild which misses the xpdfrc.5 manpage.
 
-  ebuild submitted by Jos� Fonseca <j_r_fonseca@yahaoo.co.uk>    
+  ebuild submitted by José Fonseca <j_r_fonseca@yahaoo.co.uk>    
 
 *xpdf-1.01 (22 May 2002)
 
