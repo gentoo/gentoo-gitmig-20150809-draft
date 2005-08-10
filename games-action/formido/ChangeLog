@@ -1,6 +1,9 @@
 # ChangeLog for games-action/formido
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/formido/ChangeLog,v 1.4 2004/12/20 12:50:56 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/formido/ChangeLog,v 1.5 2005/08/10 19:11:58 r3pek Exp $
+
+  10 Aug 2005; Carlos Silva <r3pek@gentoo.org> formido-1.0.ebuild:
+  Adding ~amd64 keyword. closes bug #102033
 
   20 Dec 2004; Joseph Jezak <josejx@gentoo.org> formido-1.0.ebuild:
   Marked ppc stable.
