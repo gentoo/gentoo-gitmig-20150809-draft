@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>graphics</herd>
+<maintainer>
+  <email>halcy0n@gentoo.org</email>
+  <name>Mark Loeser</name>
+</maintainer>
+<longdescription>autopano-sift is a program to automatically find control points
+for stitching together panoramas.</longdescription>
+</pkgmetadata>

@@ -1,0 +1,2 @@
+#!/bin/sh
+exec mono "/usr/lib/autopano-sift/${0##*/}.exe" ${1+"$@"}
