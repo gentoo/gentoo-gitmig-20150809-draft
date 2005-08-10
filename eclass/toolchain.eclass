@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.180 2005/08/06 05:10:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.181 2005/08/10 03:22:29 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -124,7 +124,7 @@ if [[ ${ETYPE} == "gcc-library" ]] ; then
 	IUSE="nls build"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
-	IUSE="static nls bootstrap build multislot multilib gcj gtk fortran nocxx objc hardened n32 n64 ip28 altivec"
+	IUSE="static nls bootstrap build multislot multilib gcj gtk fortran nocxx objc hardened n32 n64 ip28 altivec vanilla"
 	[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
 	[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
 	[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
@@ -882,19 +882,21 @@ gcc_src_unpack() {
 
 	cd ${S:=$(gcc_get_s_dir)}
 
-	if [[ -n ${PATCH_VER}  ]] ; then
-		guess_patch_type_in_dir "${WORKDIR}"/patch
-		EPATCH_MULTI_MSG="Applying Gentoo patches ..." \
-		epatch "${WORKDIR}"/patch
+	if ! use vanilla ; then
+		if [[ -n ${PATCH_VER} ]] ; then
+			guess_patch_type_in_dir "${WORKDIR}"/patch
+			EPATCH_MULTI_MSG="Applying Gentoo patches ..." \
+			epatch "${WORKDIR}"/patch
+		fi
+		if [[ -n ${UCLIBC_VER} ]] ; then
+			guess_patch_type_in_dir "${WORKDIR}"/uclibc
+			EPATCH_MULTI_MSG="Applying uClibc patches ..." \
+			epatch "${WORKDIR}"/uclibc
+		fi
+		do_gcc_HTB_boundschecking_patches
+		do_gcc_SSP_patches
+		do_gcc_PIE_patches
 	fi
-	if [[ -n ${UCLIBC_VER} ]] ; then
-		guess_patch_type_in_dir "${WORKDIR}"/uclibc
-		EPATCH_MULTI_MSG="Applying uClibc patches ..." \
-		epatch "${WORKDIR}"/uclibc
-	fi
-	do_gcc_HTB_boundschecking_patches
-	do_gcc_SSP_patches
-	do_gcc_PIE_patches
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
@@ -1471,13 +1473,21 @@ gcc-compiler_src_install() {
 			mv -f ${D}${STDCXX_INCDIR}/cxxabi.h ${D}${LIBPATH}/include/
 
 		# These should be symlinks
+		dodir /usr/bin
 		cd "${D}"${BINPATH}
 		for x in gcc g++ c++ g77 gcj gcjh gfortran ; do
-			# For some reason, g77 gets made instead of ${CTARGET}-g77... this makes it safe
+			# For some reason, g77 gets made instead of ${CTARGET}-g77...
+			# this should take care of that
 			[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
 
 			if [[ -f ${CTARGET}-${x} ]] && ! is_crosscompile; then
 				ln -sf ${CTARGET}-${x} ${x}
+
+				# Create version-ed symlinks
+				dosym ${BINPATH}/${CTARGET}-${x} \
+					/usr/bin/${CTARGET}-${x}-${GCC_CONFIG_VER}
+				dosym ${BINPATH}/${CTARGET}-${x} \
+					/usr/bin/${x}-${GCC_CONFIG_VER}
 			fi
 
 			if [[ -f ${CTARGET}-${x}-${GCC_CONFIG_VER} ]] ; then
