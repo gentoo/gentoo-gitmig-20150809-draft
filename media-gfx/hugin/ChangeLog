@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/hugin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.1 2005/08/10 22:56:50 halcy0n Exp $
+
+*hugin-0.5_rc1 (10 Aug 2005)
+
+  10 Aug 2005; Mark Loeser <halcy0n@gentoo.org> +metadata.xml,
+  +hugin-0.5_rc1.ebuild:
+  Initial commit of hugin.  Thanks to everyone on bug #48269
+
