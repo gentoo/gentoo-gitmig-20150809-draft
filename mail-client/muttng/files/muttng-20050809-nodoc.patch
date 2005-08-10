@@ -1,0 +1,14 @@
+sgml2html from sgmltools-lite fails miserably trying to build the
+documentation.  Just skip it for now...
+
+--- muttng-20050809/doc/Makefile.in.nodoc	2005-08-06 14:07:10.000000000 -0400
++++ muttng-20050809/doc/Makefile.in	2005-08-10 16:50:11.000000000 -0400
+@@ -62,7 +62,7 @@
+ topsrcdir_DOCFILES = COPYRIGHT GPL INSTALL ChangeLog	\
+ 	UPGRADING README NEWS TODO TODO.mutt-ng README.SSL 
+ 
+-all: muttng.1 muttrc.man try-html try-txt
++all: muttng.1 muttrc.man
+ 
+ try-html: ../makedoc$(EXEEXT)
+ 	test -f manual.html || $(MAKE) manual.html || cp $(srcdir)/manual*.html ./
