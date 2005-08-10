@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.104 2005/08/09 07:29:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.105 2005/08/10 11:27:19 leonardop Exp $
+
+  08 Aug 2005; Leonardo Boshell <leonardop@gentoo.org> gdm-2.8.0.1-r1.ebuild:
+  Fix sandbox violation if 'pam' is not in USE (bug #101934).
 
   09 Aug 2005; Markus Rothe <corsair@gentoo.org> gdm-2.6.0.9-r3.ebuild:
   Stable on ppc64
