@@ -1,8 +1,18 @@
-MD5 dc9bdf4dc3211c19a28303cfe3b3e4e6 advancemame-0.97.0.ebuild 1994
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d279e71c3ff9ab062fd129465eed8df6 ChangeLog 6023
 MD5 972b8c9f939a33a7074e0819fb55455c metadata.xml 962
-MD5 1681108b49a54e95beed131e5452c665 ChangeLog 5898
-MD5 893791a430019a7eb1c0eaf15758a93f files/0.95.0-pic.patch 344
-MD5 893791a430019a7eb1c0eaf15758a93f files/0.97.0-pic.patch 344
-MD5 8c88c68e2c593b19752d0462dd5b8d35 files/digest-advancemame-0.97.0 72
-MD5 893791a430019a7eb1c0eaf15758a93f files/0.94.0-pic.patch 344
+MD5 9fb91056beb8b98def1946df1dd1c091 advancemame-0.97.0.ebuild 1992
 MD5 893791a430019a7eb1c0eaf15758a93f files/0.96.0-pic.patch 344
+MD5 893791a430019a7eb1c0eaf15758a93f files/0.94.0-pic.patch 344
+MD5 893791a430019a7eb1c0eaf15758a93f files/0.97.0-pic.patch 344
+MD5 893791a430019a7eb1c0eaf15758a93f files/0.95.0-pic.patch 344
+MD5 8c88c68e2c593b19752d0462dd5b8d35 files/digest-advancemame-0.97.0 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC+mf/csIHjyDViGQRApFgAKDGkEv6E6pTb7cRCFTHNzCHq+3irQCdELgB
+wop8lRB0lxhIBMPGv2bcMIA=
+=VpMQ
+-----END PGP SIGNATURE-----

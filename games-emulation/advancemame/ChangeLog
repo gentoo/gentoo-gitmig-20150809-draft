@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/advancemame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.31 2005/07/02 06:49:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.32 2005/08/10 20:47:23 josejx Exp $
+
+  10 Aug 2005; Joseph Jezak <josejx@gentoo.org> advancemame-0.97.0.ebuild:
+  Marked -ppc due to a glibc issue, see bug #78030.
 
   02 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
   -advancemame-0.94.0.ebuild, -advancemame-0.95.0.ebuild,
