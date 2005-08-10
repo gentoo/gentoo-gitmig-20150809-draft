@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.36 2005/08/10 15:46:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.37 2005/08/10 23:43:39 ka0ttic Exp $
+
+  10 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> rpm2targz-9.0-r3.ebuild:
+  Stable on mips.
 
   10 Aug 2005; Simon Stelling <blubb@gentoo.org> rpm2targz-9.0-r3.ebuild:
   stable on amd64
