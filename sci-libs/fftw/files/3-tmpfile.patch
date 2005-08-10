@@ -1,0 +1,16 @@
+--- tools/fftw-wisdom-to-conf.in	2003-07-03 23:56:58.000000000 +0200
++++ tools/fftw-wisdom-to-conf.in.new	2005-08-10 14:17:25.000000000 +0200
+@@ -57,7 +57,7 @@
+     extern void ${prefix}solvtab_exec(const struct solvtab_s s[], void *);
+ EOF
+ 
+-tmp=/tmp/fftw-wisdom-to-conf$$
++tmp=$(mktemp -t fftw-wisdom-to-conf.XXXXXX) || exit 1
+ sed 's/ *(//' | cut -d" " -f1 | grep -v -- - | egrep -v '^ *\)*$' > $tmp
+ 
+ cat $tmp | sort | uniq | while read reg_nam; do
+@@ -73,3 +73,4 @@
+ 
+ echo "    ${prefix}solvtab_exec(s, plnr);"
+ echo "}"
++rm $tmp
