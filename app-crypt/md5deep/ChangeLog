@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.14 2005/08/10 16:36:43 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.15 2005/08/10 21:00:51 sbriesen Exp $
+
+  10 Aug 2005; Stefan Briesenick <sbriesen@gentoo.org> md5deep-1.8.ebuild:
+  fixed ebuild, now all the new files are installed also.
 
 *md5deep-1.8 (10 Aug 2005)
 
