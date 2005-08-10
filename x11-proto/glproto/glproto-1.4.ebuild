@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.ebuild,v 1.3 2005/08/10 05:35:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.ebuild,v 1.4 2005/08/10 05:59:56 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -25,6 +25,10 @@ src_install() {
 	dynamic_libgl_install
 }
 
+pkg_postinst() {
+	switch_opengl_implem
+}
+
 dynamic_libgl_install() {
 	# next section is to setup the dynamic libGL stuff
 	ebegin "Moving GL files for dynamic switching"
@@ -39,4 +43,13 @@ dynamic_libgl_install() {
 			fi
 		done
 	eend 0
+}
+
+switch_opengl_implem() {
+		# Switch to the xorg implementation.
+		# Use new opengl-update that will not reset user selected
+		# OpenGL interface ...
+		echo
+		local opengl_implem="$(${ROOT}/usr/sbin/opengl-update --get-implementation)"
+		${ROOT}/usr/sbin/opengl-update --use-old ${OPENGL_DIR}
 }
