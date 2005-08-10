@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.14 2005/08/10 15:20:28 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.15 2005/08/10 20:37:47 fmccor Exp $
+
+  10 Aug 2005; Ferris McCormick <fmccor@gentoo.org> mesa-6.3.1.1.ebuild:
+  1.  Correct echo "$(...)" to echo "\$(...)";
+  2.  When building for sparc, make sure that:
+  	a.  Use sparc assembly versions where appropriate;
+  	b.  Make sure sparc-specific sources are built;
+  	c.  For testing, don't actually build the dri drivers
+  	    because they are known not to work.
+  	d.  TODO:  Figure out why two versions of libGL are built,
+  		and why the install ends up linking to the incorrect
+  		version (the one with the undefined externals).
 
   10 Aug 2005; Ferris McCormick <fmccor@gentoo.org> mesa-6.3.1.1.ebuild:
   Add ~sparc keyword (X modular testing).

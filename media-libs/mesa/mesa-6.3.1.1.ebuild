@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.5 2005/08/10 15:20:28 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.6 2005/08/10 20:37:47 fmccor Exp $
 
 inherit eutils toolchain-funcs
 
@@ -62,6 +62,11 @@ src_unpack() {
 
 	# Set up linux-dri configs
 	echo "OPT_FLAGS = ${CFLAGS}" >> ${HOSTCONF}
+	if use sparc; then
+		echo "ASM_FLAGS = -DUSE_SPARC_ASM" >> ${HOSTCONF}
+		echo "ASM_SOURCES = \$(SPARC_SOURCES) \$(SPARC_API)" >> ${HOSTCONF}
+		echo "DRIVER_DIRS = " >> ${HOSTCONF}
+	fi
 	echo "CC = $(tc-getCC)" >> ${HOSTCONF}
 	echo "CXX = $(tc-getCXX)" >> ${HOSTCONF}
 	echo "DRM_SOURCE_PATH=\$(TOP)/../${LIBDRM_P}" >> ${HOSTCONF}
@@ -72,7 +77,7 @@ src_unpack() {
 	# Documented in configs/default
 	if use motif; then
 		# Add -lXm
-		echo "GLW_LIB_DEPS = -L$(LIB_DIR) -l$(GL_LIB) $(EXTRA_LIB_PATH) -lXt -lX11 -lXm" >> ${HOSTCONF}
+		echo "GLW_LIB_DEPS = -L\$(LIB_DIR) -l\$(GL_LIB) \$(EXTRA_LIB_PATH) -lXt -lX11 -lXm" >> ${HOSTCONF}
 		# Add GLwMDrawA.c
 		echo "GLW_SOURCES = GLwDrawA.c GLwMDrawA.c" >> ${HOSTCONF}
 	fi

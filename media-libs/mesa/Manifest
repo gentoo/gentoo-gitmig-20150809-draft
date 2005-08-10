@@ -1,5 +1,5 @@
-MD5 f4be7ebf5c56d611e87265b28e2e20c0 ChangeLog 2039
-MD5 f9874b5745bc65f9f0146431eb1499b3 mesa-6.3.1.1.ebuild 4028
+MD5 dfab588da3d37aaf543a736f9528a1de ChangeLog 2583
+MD5 2fdcbc1ec50317bac6482389f2a61d74 mesa-6.3.1.1.ebuild 4216
 MD5 327ad9473f146d09e0d0bd9198bb6a99 files/digest-mesa-6.3.1.1 129
 MD5 14a7882e4e2dc41b7ef845dc11bd9a0c files/fix-xthreads-location.patch 1718
 MD5 de65b33347d4dd56da17835ab42daf9a files/use-xthreads.patch 8355
