@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.ebuild,v 1.5 2005/08/10 06:40:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.ebuild,v 1.6 2005/08/10 06:50:08 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -36,7 +36,7 @@ dynamic_libgl_install() {
 		local x=""
 		# glext.h added for #54984
 		# glx.h also provided by mesa, so we don't add it
-		rm ${D}/usr/include/GL/glx.h
+		rm ${D}/usr/include/GL/{glx,glu}.h
 		for x in ${D}/usr/include/GL/{glxtokens.h,glxmd.h,glxproto.h}; do
 			if [ -f ${x} -o -L ${x} ]; then
 				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${OPENGL_DIR}/include
