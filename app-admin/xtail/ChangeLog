@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/xtail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.9 2005/01/01 11:37:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.10 2005/08/10 17:23:14 metalgod Exp $
+
+  10 Aug 2005; Luis Medinas <metalgod@gentoo.org> xtail-2.1.ebuild:
+  Added ~amd64.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   xtail-2.1.ebuild:

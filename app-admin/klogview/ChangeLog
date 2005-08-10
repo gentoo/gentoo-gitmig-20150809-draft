@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/klogview
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.4 2005/07/22 09:24:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.5 2005/08/10 17:20:29 metalgod Exp $
+
+  10 Aug 2005; Luis Medinas <metalgod@gentoo.org> klogview-0.6.ebuild:
+  Added ~amd64.
 
   22 Jul 2005; David Holm <dholm@gentoo.org> klogview-0.6.ebuild:
   Added to ~ppc.
