@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.10 2005/08/10 05:20:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.11 2005/08/10 05:42:06 spyderous Exp $
+
+  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; mesa-6.3.1.1.ebuild:
+  Stop cleaning out /usr/lib/opengl/xorg-x11, now that two other packages also
+  install to it.
 
   10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; -mesa-3.5.ebuild:
   Drop old version.

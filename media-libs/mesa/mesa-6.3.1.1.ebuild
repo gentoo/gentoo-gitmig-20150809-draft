@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.1 2005/08/10 05:17:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.2 2005/08/10 05:42:06 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -102,10 +102,6 @@ src_install() {
 	# as the default libGL.so.1
 }
 
-pkg_preinst() {
-	dynamic_libgl_preinst
-}
-
 pkg_postinst() {
 	switch_opengl_implem
 }
@@ -130,19 +126,6 @@ dynamic_libgl_install() {
 			fi
 		done
 	eend 0
-}
-
-dynamic_libgl_preinst() {
-	# clean the dynamic libGL stuff's home to ensure
-	# we don't have stale libs floating around
-	if [ -d ${ROOT}/usr/$(get_libdir)/opengl/${PN} ]; then
-		rm -rf ${ROOT}/usr/$(get_libdir)/opengl/${PN}/*
-	fi
-
-	# make sure we do not have any stale files lying around
-	# that could break things. Check old and new locations.
-	rm -f ${ROOT}/usr/X11R6/$(get_libdir)/libGL\.* \
-		${ROOT}/usr/$(get_libdir)/libGL\.*
 }
 
 switch_opengl_implem() {
