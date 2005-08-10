@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.13 2005/06/24 13:45:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.14 2005/08/10 16:36:43 kito Exp $
+
+*md5deep-1.8 (10 Aug 2005)
+
+  10 Aug 2005; Kito <kito@gentoo.org> md5deep-1.5-r1.ebuild,
+  +md5deep-1.8.ebuild:
+  version bump. closes bug #101950
 
   24 Jun 2005; Alastair Tse <liquidx@gentoo.org> md5deep-1.5-r1.ebuild:
   make more respectful of CFLAGS (#79072).  thanks Stefan Briesenick
