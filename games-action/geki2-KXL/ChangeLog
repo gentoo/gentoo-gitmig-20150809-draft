@@ -1,6 +1,9 @@
 # ChangeLog for games-action/geki2-KXL
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/ChangeLog,v 1.5 2004/12/28 22:51:13 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/ChangeLog,v 1.6 2005/08/10 19:16:23 r3pek Exp $
+
+  10 Aug 2005; Carlos Silva <r3pek@gentoo.org> geki2-KXL-2.0.3-r1.ebuild:
+  Marked ~amd64. Closes bug #102035
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
