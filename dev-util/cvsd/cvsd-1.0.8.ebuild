@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/cvsd-1.0.8.ebuild,v 1.1 2005/07/26 15:54:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/cvsd-1.0.8.ebuild,v 1.2 2005/08/10 23:39:47 ka0ttic Exp $
 
 inherit eutils
 
 DESCRIPTION="CVS pserver daemon."
-HOMEPAGE="http://tiefighter.et.tudelft.nl/~arthur/cvsd/"
-SRC_URI="http://tiefighter.et.tudelft.nl/~arthur/cvsd/${P}.tar.gz"
+HOMEPAGE="http://ch.tudelft.nl/~arthur/cvsd/"
+SRC_URI="http://ch.tudelft.nl/~arthur/cvsd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
