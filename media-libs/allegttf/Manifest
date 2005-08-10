@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6fbf3f648fb623f062f01bbf3f8ada97 allegttf-2.0.ebuild 1119
 MD5 9fd3666436aba4119f00fce2695f8b4a ChangeLog 769
 MD5 34751ba0e04db6a5f202110aae41250c metadata.xml 367
 MD5 04f31f756935643608f37080dc44fc03 files/digest-allegttf-2.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+kn/omPajV0RnrERAlMSAJ4qe6qYWlAB7T1kjDgvpbbrf5hbjQCdEMKy
+BCFZuai8/IlAMYXSkeZGjI8=
+=F7CJ
+-----END PGP SIGNATURE-----
