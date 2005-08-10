@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.8 2005/05/23 07:19:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.9 2005/08/10 13:21:35 dragonheart Exp $
 
 inherit eutils
 
@@ -21,17 +21,16 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
-	unpack ${A}
-	unshar ${MY_P/-/}.shar
+	gzip -dc ${DISTDIR}/${A} | unshar || die
 	epatch ${FILESDIR}/${PV}-gentoo.patch || die
 
 	cd ${PN}
 
 	sed -i.orig \
-		-e "s:CF =\t\(.*\):CF = \1 $CFLAGS:g" \
+		-e "s:CF =\t\(.*\):CF = \1 ${CFLAGS}:g" \
 		-e "s:-DBSD::g" \
 		-e "s:-DDEBUG::g" \
-		-e "s:/ufs/dik/tmpbin:$D/usr/bin:g" \
+		-e "s:/ufs/dik/tmpbin:${D}/usr/bin:g" \
 		makefile
 }
 
