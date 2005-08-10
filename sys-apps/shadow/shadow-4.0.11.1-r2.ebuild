@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.11.1-r2.ebuild,v 1.1 2005/08/04 10:48:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.11.1-r2.ebuild,v 1.2 2005/08/10 23:24:05 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -67,17 +67,16 @@ src_unpack() {
 	# lock down setuid perms #47208
 	epatch "${FILESDIR}"/${PN}-4.0.11.1-perms.patch
 
-	elibtoolize
-	epunt_cxx
-
 	# Needed by the UCLIBC patches
 	autoconf
+
+	elibtoolize
+	epunt_cxx
 }
 
 src_compile() {
 	append-ldflags -Wl,-z,now
-	[[ ${CTARGET:-${CHOST}} != ${CHOST} ]] \
-		&& export ac_cv_func_setpgrp_void=yes
+	tc-is-cross-compiler && export ac_cv_func_setpgrp_void=yes
 	econf \
 		--disable-desrpc \
 		--with-libcrypt \
