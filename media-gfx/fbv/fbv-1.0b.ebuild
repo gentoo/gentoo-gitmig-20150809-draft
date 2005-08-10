@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-1.0b.ebuild,v 1.6 2005/07/22 18:26:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-1.0b.ebuild,v 1.7 2005/08/10 13:13:06 metalgod Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://s-tech.elsat.net.pl/fbv/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ppc64 x86"
 IUSE="png gif jpeg"
 
 DEPEND="gif? ( media-libs/giflib )
