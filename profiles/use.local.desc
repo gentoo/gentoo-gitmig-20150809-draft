@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1378 2005/08/10 15:25:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1379 2005/08/10 18:09:19 ferdy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -421,6 +421,7 @@ mail-client/muttng:gpgme - Enable support for gpgme
 mail-client/muttng:idn - Enable support for Internalized Domain Names
 mail-client/muttng:nntp - Enable support for nntp
 mail-client/muttng:smtp - Enable support for smtp
+mail-client/nail:net - Enable network (thus enabling SMTP, IMAP and POP3)
 mail-client/pine:largeterminal - Add support for large terminals by doubling the size of pine's internal display buffer
 mail-client/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
 mail-client/squirrelmail:virus-scan - Install plugin to support virus scanning of email attachments
