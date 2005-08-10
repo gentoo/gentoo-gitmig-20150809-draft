@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.17 2005/08/10 22:04:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.18 2005/08/10 22:36:01 spyderous Exp $
+
+  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/fix-include-locations.patch, mesa-6.3.1.1.ebuild:
+  Add fix-include-locations.patch to standardize include locations to
+  <X11/extensions/foo.h> instead of some mixture of <foo.h> and "foo.h."
 
   10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +files/makedepend-location.patch, mesa-6.3.1.1.ebuild:
