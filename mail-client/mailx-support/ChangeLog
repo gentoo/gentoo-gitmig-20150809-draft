@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mailx-support
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/ChangeLog,v 1.7 2004/12/29 00:14:19 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/ChangeLog,v 1.8 2005/08/10 11:26:00 ka0ttic Exp $
+
+  10 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
+  mailx-support-20030215.ebuild:
+  Stable on mips.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
