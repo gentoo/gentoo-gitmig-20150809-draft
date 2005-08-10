@@ -1,24 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9978b552276448a9a6457a9e6da3e87e tomboy-0.3.2.ebuild 1113
 MD5 5f4f41842ff859b9ac623845975743dc tomboy-0.2.2-r1.ebuild 774
-MD5 936f819ac015ed12c012b4e070fa16be tomboy-0.3.2-r1.ebuild 1171
-MD5 e44a33fd7c332cb4c0fb3435ebec1593 tomboy-0.3.1.ebuild 1113
-MD5 5af272518f390aaca217c4ce3728c121 ChangeLog 2196
+MD5 52e2ec5226ff35d7a683f60e99bbeddd ChangeLog 2410
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+MD5 44fb84a5177754b50eb2da2e7d0d1915 tomboy-0.3.2-r1.ebuild 1082
+MD5 b0789a5d9476b1cf4761c175e260b648 tomboy-0.3.3.ebuild 1133
+MD5 63af496a835d4816dc76a26ef1a847ff files/digest-tomboy-0.2.2-r1 64
+MD5 a29ae36c54ef8ad24aad99ede4f6c01a files/tomboy-0.3.1-mono-1.1.4-compat.diff 6562
 MD5 17178389ed36e995fdc0b724a23e0af9 files/tomboy-0.3.2-mono-1.1.7-compat.diff 421
 MD5 b1bd635f28782f712b9b36b5aa2a3804 files/tomboy-0.3.2-1.1.x-compat.diff 567
-MD5 63af496a835d4816dc76a26ef1a847ff files/digest-tomboy-0.2.2-r1 64
-MD5 f9b0cda18b91473b3e94744e50bb93fd files/digest-tomboy-0.3.2-r1 64
 MD5 b5e0ab8c69f352631980ececaee73635 files/tomboy-0.3.2-mono-1.1.8-compat.diff 1076
-MD5 a29ae36c54ef8ad24aad99ede4f6c01a files/tomboy-0.3.1-mono-1.1.4-compat.diff 6562
-MD5 a55d790d6f5b13436c5244a0e9465a27 files/digest-tomboy-0.3.1 64
-MD5 f9b0cda18b91473b3e94744e50bb93fd files/digest-tomboy-0.3.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzRe3BXaUFmZvwyMRAnHxAJ4vN/SoArQW6ucbI+EDT2bW+QhfKQCgsy9V
-PRONl3/RNCbOcIbN0ByQ3HU=
-=jzLf
------END PGP SIGNATURE-----
+MD5 f9b0cda18b91473b3e94744e50bb93fd files/digest-tomboy-0.3.2-r1 64
+MD5 254359107fb454b3ea24427ccd7d534c files/digest-tomboy-0.3.3 64

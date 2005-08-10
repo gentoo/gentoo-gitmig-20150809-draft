@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.3.2-r1.ebuild,v 1.2 2005/07/07 11:53:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.3.2-r1.ebuild,v 1.3 2005/08/10 23:08:57 latexer Exp $
 
 inherit gnome2 mono eutils
 
@@ -27,10 +27,8 @@ DEPEND=">=dev-lang/mono-1.0
 		>=app-text/aspell-0.60.2
 		>=sys-apps/dbus-0.23
 		>=app-text/gtkspell-2"
-# Disable dbus for now, as it's causing some crashes
 
 DOCS="AUTHORS Changelog INSTALL NEWS README"
-#G2CONF="${G2CONF} --disable-dbus"
 
 src_unpack() {
 	unpack ${A}
