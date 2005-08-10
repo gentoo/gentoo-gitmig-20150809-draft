@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.18 2005/08/10 16:42:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.19 2005/08/10 16:51:48 killerfox Exp $
+
+  10 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org> fftw-3.0.1-r2.ebuild:
+  Stable on hppa. bug #101771
 
   10 Aug 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   fftw-3.0.1-r2.ebuild:
