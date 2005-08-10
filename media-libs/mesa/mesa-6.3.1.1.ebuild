@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.6 2005/08/10 20:37:47 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.7 2005/08/10 21:36:40 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,8 @@ RDEPEND="dev-libs/expat
 	>=x11-base/opengl-update-2.2.2
 	motif? ( virtual/motif )"
 DEPEND="${RDEPEND}
-	x11-misc/makedepend"
+	x11-misc/makedepend
+	>=x11-proto/glproto-1.4-r1"
 
 PROVIDE="virtual/opengl virtual/glu"
 
