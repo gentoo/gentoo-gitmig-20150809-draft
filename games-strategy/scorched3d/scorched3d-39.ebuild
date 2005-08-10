@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-39.ebuild,v 1.2 2005/08/09 20:52:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-39.ebuild,v 1.3 2005/08/10 03:35:30 mr_bones_ Exp $
 
 inherit wxwidgets games
 
@@ -30,6 +30,16 @@ pkg_setup() {
 		need-wxwidgets gtk || die "No gtk1 version of x11-libs/wxGTK found"
 	fi
 	games_pkg_setup
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# bug #101903
+	sed -i \
+		-e "s/const possibleChars/const char possibleChars/" \
+		src/common/StatsLoggerMySQL.cpp \
+		|| die "sed failed"
 }
 
 src_compile() {
