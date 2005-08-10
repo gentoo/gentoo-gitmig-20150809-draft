@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1379 2005/08/10 18:09:19 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1380 2005/08/10 20:53:41 kito Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -521,6 +521,7 @@ media-sound/amarok:visualization - Support visualization plugins through media-l
 media-sound/audacity:libsamplerate - Build with libsamplerate support
 media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recommended)
 media-sound/daapd:mpeg4 - Enable AAC metadata support
+media-sound/ecasound:libsamplerate - Build with libsamplerate support
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
 media-sound/gnusound:libsamplerate - Build gnusound with support for converting sample rates using libsamplerate
 media-sound/hydrogen:ladspa - Enables the ability to support ladspa plugins
