@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1377 2005/08/09 18:58:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1378 2005/08/10 15:25:20 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -787,6 +787,7 @@ net-misc/partysip:syslog - Enable syslog support
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/quagga:bgpclassless - Enable classless prefixes for BGP 
 net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessing the OSPF link state database
+net-misc/quagga:realms - Enable realms support (see http://vcalinus.gemenii.ro/quaggarealms.html)
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
 net-misc/sitecopy:gssapi - Enables GSSAPI (Generic Security Services Application Programming Interface).  This is a client-server authentication method that promotes a standard API for authentication systems.  This is included in kerbos distributions and allows vendors to define a specific system with a more generic API layer to coordinate with other authentication systems.
 net-misc/sitecopy:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites.  sftp is a much more secure protocol and is prefered.
