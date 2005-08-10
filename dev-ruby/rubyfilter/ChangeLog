@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/rubyfilter
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyfilter/ChangeLog,v 1.1 2005/08/10 22:24:48 citizen428 Exp $
+
+*rubyfilter-0.12 (10 Aug 2005)
+
+  10 Aug 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +rubyfilter-0.12.ebuild:
+  Initial import. Ebuild submitted by Botykai Zsolt <zsolt.botykai@online.hu>
+  in bug #86385.
+

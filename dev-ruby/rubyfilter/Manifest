@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4a1df8ccfa2a1de6ceb282175dd1eb56 rubyfilter-0.12.ebuild 745
+MD5 4f7b757c3731efeffe63886f44200982 ChangeLog 437
+MD5 51d7fcdd635fd0590ec84b8cfb4d8561 metadata.xml 158
+MD5 722182e90f1f958726ade76d6ef6603e files/digest-rubyfilter-0.12 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFC+n6/ehlBotwFZuQRAuIQAKCGrrNp1aDU/Je3mA1ddaGXx977dQCeOsn9
+TEOEmrijh5QHBwG6Na+J6BE=
+=v57G
+-----END PGP SIGNATURE-----
