@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.14 2005/08/07 04:14:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.15 2005/08/10 01:46:40 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="2.3.5"
 GLIBC_INFOPAGE_VERSION="2.3.5"
 
 # Gentoo patchset
-PATCH_VER="1.8"
+PATCH_VER="1.9"
 
 # C Stubbs addon (contained in fedora, so ignoring)
 #CSTUBS_VER="2.1.2"
