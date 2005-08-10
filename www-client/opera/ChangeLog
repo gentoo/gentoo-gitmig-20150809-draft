@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.16 2005/08/04 08:30:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.17 2005/08/10 15:08:10 blubb Exp $
+
+  10 Aug 2005; Simon Stelling <blubb@gentoo.org> opera-8.02.ebuild:
+  stable on amd64 wrt bug 96273
 
 *opera-8.02 (04 Aug 2005)
 
