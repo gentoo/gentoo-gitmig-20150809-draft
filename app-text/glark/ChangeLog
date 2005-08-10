@@ -1,6 +1,12 @@
 # ChangeLog for app-text/glark
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.30 2005/07/17 12:08:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.31 2005/08/10 18:10:54 ciaranm Exp $
+
+*glark-1.7.4 (10 Aug 2005)
+
+  10 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/1.7.4/glark-completion, +glark-1.7.4.ebuild:
+  Version bump, bug #101989
 
   17 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org> glark-1.7.3.ebuild:
   ppc stable

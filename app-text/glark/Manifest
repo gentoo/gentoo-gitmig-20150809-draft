@@ -1,12 +1,25 @@
-MD5 70092500008e549f46c06e7366928ad3 ChangeLog 3523
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bf854935d15b7a1ace76e0972ba1122b glark-1.7.0.ebuild 671
-MD5 d648bf0b3cbbf9b68ca48956fac22ebb glark-1.7.1.ebuild 675
+MD5 f24956e8d2deba48403cf00b2b01f7cc glark-1.7.4.ebuild 776
 MD5 1e06774f9e45e654f8d5b1bc9123fd03 glark-1.7.2.ebuild 757
-MD5 cc91d79e8dc6f0d1b9727eb83de5f98a metadata.xml 258
 MD5 f4caac3ea71957b649684e3f7823b0bf glark-1.7.3.ebuild 763
-MD5 16965b8cb4e088ce14ac964bf473d124 files/digest-glark-1.7.0 62
-MD5 45ca54fe2662478c83bf160831b2aea9 files/digest-glark-1.7.1 62
+MD5 d648bf0b3cbbf9b68ca48956fac22ebb glark-1.7.1.ebuild 675
+MD5 cc91d79e8dc6f0d1b9727eb83de5f98a metadata.xml 258
+MD5 f92dc7f9e8e9b42c367cec2bebcf4bd8 ChangeLog 3683
 MD5 67bdc0662f2ad93234cf0299b10fb028 files/digest-glark-1.7.2 62
+MD5 c3858c8898d0f209b67621a60f03b331 files/digest-glark-1.7.4 62
+MD5 45ca54fe2662478c83bf160831b2aea9 files/digest-glark-1.7.1 62
+MD5 16965b8cb4e088ce14ac964bf473d124 files/digest-glark-1.7.0 62
 MD5 4695391ede91f1ae074245c8ec21d36a files/digest-glark-1.7.3 62
-MD5 a9e40de0df4455fd6614471416609b42 files/1.7.2/glark-completion 999
 MD5 09c80f210354b38b73388a8e5c43f3b9 files/1.7.3/glark-completion 1054
+MD5 a9e40de0df4455fd6614471416609b42 files/1.7.2/glark-completion 999
+MD5 09c80f210354b38b73388a8e5c43f3b9 files/1.7.4/glark-completion 1054
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC+kM7LLFUmVNQ7rkRAmYQAJ9wzXhKqc3bB68kh8qH9To/OLLDMgCfdS/v
+N+3m838h6rV3TgpJZgekYYc=
+=2rGp
+-----END PGP SIGNATURE-----
