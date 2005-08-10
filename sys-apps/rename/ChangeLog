@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rename
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/ChangeLog,v 1.10 2005/06/13 23:27:30 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/ChangeLog,v 1.11 2005/08/10 19:26:41 ciaranm Exp $
+
+  10 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org> rename-1.3.ebuild:
+  Fix SRC_URI, bug #102038
 
   13 Jun 2005; Andrej Kacian <ticho@gentoo.org> rename-1.3.ebuild:
   Stable on amd64.
