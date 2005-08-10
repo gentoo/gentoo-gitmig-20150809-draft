@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050809.ebuild,v 1.1 2005/08/10 22:01:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050809.ebuild,v 1.2 2005/08/10 22:51:53 agriffis Exp $
 
 inherit eutils
 
 DESCRIPTION="mutt-ng is the next generation of mutt."
 HOMEPAGE="http://www.muttng.org/"
 SRC_URI="http://nion.modprobe.de/mutt-ng/snapshots/${P}.tar.gz"
-IUSE="crypt debug gnutls gdbm gpgme idn imap mbox nls nntp qdbm sasl slang smtp ssl"
+IUSE="berkdb crypt debug gnutls gdbm gpgme idn imap mbox nls nntp pop qdbm sasl slang smtp ssl"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~sparc"
@@ -15,12 +15,20 @@ RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	idn?     ( net-dns/libidn )
 	qdbm?	 ( dev-db/qdbm )
-	!qdbm?	 ( gdbm?  ( sys-libs/gdbm ) 
-	           !gdbm? ( berkdb? ( >=sys-libs/db-4 ) ) )
+	!qdbm?	 (
+		gdbm?  ( sys-libs/gdbm ) 
+		!gdbm? ( berkdb? ( >=sys-libs/db-4 ) ) 
+	)
 	smtp?    ( net-libs/libesmtp )
 	slang?   ( >=sys-libs/slang-1.4.2 )
-	gnutls?  ( >=net-libs/gnutls-1.0.17 )
-	!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
+	imap?     (
+		gnutls?  ( >=net-libs/gnutls-1.0.17 )
+		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
+	)
+	pop?     (
+		gnutls?  ( >=net-libs/gnutls-1.0.17 )
+		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
+	)
 	gpgme?   ( >=app-crypt/gpgme-0.9.0 )
 	sasl?    ( >=dev-libs/cyrus-sasl-2 )"
 DEPEND="${RDEPEND}
@@ -46,6 +54,7 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable gpgme) \
 		$(use_enable imap) \
+		$(use_enable pop) \
 		$(use_with sasl sasl2) \
 		$(use_enable crypt pgp) \
 		$(use_enable nntp) \
@@ -56,7 +65,6 @@ src_compile() {
 		--sysconfdir=/etc/muttng \
 		--with-docdir=/usr/share/doc/muttng-${PVR} \
 		--with-regex \
-		--enable-pop \
 		--disable-fcntl \
 		--enable-flock \
 		--with-mixmaster \
@@ -72,18 +80,26 @@ src_compile() {
 			--with-gdbm --without-qdbm --without-bdb"
 	elif use berkdb; then
 		myconf="${myconf} --enable-hcache \
-			--with-bdb=/usr/include --without-gdbm --without-qdbm"
+			--with-bdb --without-gdbm --without-qdbm"
 	else
-		myconf="--disable-hcache --without-gdbm --without-qdbm --without-bdb"
+		myconf="${myconf} --disable-hcache \
+			--without-gdbm --without-qdbm --without-bdb"
 	fi
 
-	if useq gnutls; then
-		myconf="${myconf} --with-gnutls"
-	elif useq ssl; then
-		myconf="${myconf} --with-ssl"
+	# there's no need for gnutls or ssl without either pop or imap.
+	# in fact mutt's configure will bail if you do:
+	#   --without-pop --without-imap --with-ssl
+	if use pop || use imap; then
+		if use gnutls; then
+			myconf="${myconf} --with-gnutls"
+		elif use ssl; then
+			myconf="${myconf} --with-ssl"
+		fi
+	else
+		myconf="${myconf} --without-gnutls --without-ssl"
 	fi
 
-	if useq slang; then
+	if use slang; then
 		myconf="${myconf} --with-slang"
 		ewarn "To use a transparend background merge muttng with USE=-slang"
 	else
@@ -92,7 +108,7 @@ src_compile() {
 		myconf="${myconf} --with-curses"
 	fi
 
-	if useq mbox; then
+	if use mbox; then
 		myconf="${myconf} --with-maildir=/var/spool/mail"
 	else
 		myconf="${myconf} --with-homespool=Maildir"
@@ -105,7 +121,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
 	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
-	if useq mbox; then
+	if use mbox; then
 		insinto /etc/muttng
 		newins ${FILESDIR}/Muttngrc.mbox Muttngrc
 	else
