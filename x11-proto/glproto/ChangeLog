@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.4 2005/08/10 05:59:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.5 2005/08/10 06:40:59 spyderous Exp $
+
+  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; glproto-1.4.ebuild:
+  Add dep on >=opengl-update-2.2.2.
 
   10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; glproto-1.4.ebuild:
   Add pkg_postinst() to run opengl-update so mesa will build.

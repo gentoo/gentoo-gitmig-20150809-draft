@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.ebuild,v 1.4 2005/08/10 05:59:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.ebuild,v 1.5 2005/08/10 06:40:59 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -16,7 +16,7 @@ DESCRIPTION="X.Org GL protocol headers"
 #SLOT="0"
 KEYWORDS="~sparc ~x86"
 #IUSE="X gnome"
-#DEPEND=""
+DEPEND=">=x11-base/opengl-update-2.2.2"
 #RDEPEND=""
 
 src_install() {
