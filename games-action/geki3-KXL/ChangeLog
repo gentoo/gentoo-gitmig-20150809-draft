@@ -1,6 +1,9 @@
 # ChangeLog for games-action/geki3-KXL
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/geki3-KXL/ChangeLog,v 1.6 2005/06/23 19:06:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki3-KXL/ChangeLog,v 1.7 2005/08/10 19:18:27 r3pek Exp $
+
+  10 Aug 2005; Carlos Silva <r3pek@gentoo.org> geki3-KXL-1.0.3-r1.ebuild:
+  Marked ~amd64. Closes bug #102036
 
   23 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org>
   geki3-KXL-1.0.3-r1.ebuild:
