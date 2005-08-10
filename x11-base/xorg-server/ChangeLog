@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.6 2005/08/10 01:32:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.7 2005/08/10 07:00:04 spyderous Exp $
+
+  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-0.99.1.ebuild:
+  Add GL handling, /usr/lib/opengl, opengl-update, etc.
 
   10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-0.99.1.ebuild:

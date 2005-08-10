@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1.ebuild,v 1.6 2005/08/10 01:32:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1.ebuild,v 1.7 2005/08/10 07:00:04 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
 SNAPSHOT="yes"
 
 inherit x-modular
+
+OPENGL_DIR="xorg-x11"
 
 MESA_PN="Mesa"
 MESA_PV="6.3.1.1"
@@ -29,7 +31,9 @@ RDEPEND="x11-libs/libXfont
 	x11-libs/libXmu
 	x11-libs/libXrender
 	x11-libs/libXi
-	media-libs/freetype"
+	media-libs/freetype
+	glx? ( >=media-libs/mesa-6
+		>=x11-base/opengl-update-2.2.2 )"
 DEPEND="${RDEPEND}
 	x11-proto/randrproto
 	x11-proto/renderproto
@@ -79,3 +83,35 @@ CONFIGURE_OPTIONS="
 	--sysconfdir=/etc/X11
 	--localstatedir=/var
 	${confopts}"
+
+src_install() {
+	x-modular_src_install
+
+	dynamic_libgl_install
+}
+
+pkg_postinst() {
+	switch_opengl_implem
+}
+
+dynamic_libgl_install() {
+	# next section is to setup the dynamic libGL stuff
+	ebegin "Moving GL files for dynamic switching"
+		dodir /usr/$(get_libdir)/opengl/${OPENGL_DIR}/extensions
+		local x=""
+		for x in ${D}/usr/$(get_libdir)/xorg/modules/libglx*; do
+			if [ -f ${x} -o -L ${x} ]; then
+				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${OPENGL_DIR}/extensions
+			fi
+		done
+	eend 0
+}
+
+switch_opengl_implem() {
+		# Switch to the xorg implementation.
+		# Use new opengl-update that will not reset user selected
+		# OpenGL interface ...
+		echo
+		local opengl_implem="$(${ROOT}/usr/sbin/opengl-update --get-implementation)"
+		${ROOT}/usr/sbin/opengl-update --use-old ${OPENGL_DIR}
+}
