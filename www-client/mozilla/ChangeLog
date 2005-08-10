@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.56 2005/08/10 00:37:58 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.57 2005/08/10 02:14:39 hardave Exp $
+
+  10 Aug 2005; Hardave Riar <hardave@gentoo.org> mozilla-1.7.10-r1.ebuild,
+  mozilla-1.7.10-r2.ebuild, mozilla-1.7.10-r3.ebuild, mozilla-1.7.11.ebuild:
+  Removing the ~mips keywords from all ebuilds since it should never have been
+  there at all.
 
   10 Aug 2005; Jory A. Pratt <anarchy@gentoo.org> mozilla-1.7.11.ebuild:
   Stable on ppc and x86

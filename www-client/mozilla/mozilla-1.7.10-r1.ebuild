@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.10-r1.ebuild,v 1.8 2005/08/09 00:19:12 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.10-r1.ebuild,v 1.9 2005/08/10 02:14:39 hardave Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -25,7 +25,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/s
 	mirror://gentoo/mozilla-firefox-1.0.6-nsplugins.patch
 	http://dev.gentoo.org/~agriffis/dist/mozilla-firefox-1.0.6-nsplugins.patch"
 
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc sparc x86 ~ppc64"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="crypt gnome java ldap mozcalendar mozdevelop moznocompose moznoirc moznomail mozsvg postgres ssl"
