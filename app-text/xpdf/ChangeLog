@@ -1,6 +1,13 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.82 2005/06/08 15:30:30 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.83 2005/08/10 20:38:57 metalgod Exp $
+
+*xpdf-3.00-r10 (10 Aug 2005)
+
+  10 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/xpdf-3.00-security-can-2005-2097.patch, +xpdf-3.00-r10.ebuild:
+  Added a patch from Fedora cvs that fix security issue in bug #99769. Stable
+  on AMD64 and x86
 
   08 Jun 2005; Stephen P. Becker <geoman@gentoo.org> xpdf-3.00-r8.ebuild:
   stable on mips - bug 77068
