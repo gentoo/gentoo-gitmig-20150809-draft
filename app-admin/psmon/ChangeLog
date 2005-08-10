@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/psmon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.8 2005/07/30 02:16:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.9 2005/08/10 09:38:03 tove Exp $
+
+  10 Aug 2005; Torsten Veller <tove@gentoo.org> psmon-1.0.4.ebuild,
+  psmon-1.29.ebuild:
+  Fixed HOMEPAGE. Thanks to Chris Rebert for bug #100782.
 
 *psmon-1.29 (30 Jul 2005)
 
