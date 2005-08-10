@@ -24,6 +24,7 @@ dev-lang/perl-5.8.6
 dev-lang/python-2.3.5
 dev-lang/ruby-1.8.2
 dev-lang/tcl-8.4.7
+dev-lang/tk-8.4.7
 dev-libs/icu-3.2
 dev-libs/libedit-2.6.9
 dev-libs/libiconv-1.9
