@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/vlnx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/ChangeLog,v 1.10 2005/01/30 13:24:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/ChangeLog,v 1.11 2005/08/10 14:56:59 blubb Exp $
+
+  10 Aug 2005; Simon Stelling <blubb@gentoo.org> vlnx-432e-r2.ebuild:
+  added ~amd64 keyword
 
   30 Jan 2005; Andrej Kacian <ticho@gentoo.org> vlnx-432e-r2.ebuild:
   Added a RDEPEND on libcompat. Closes #66858, reported by Arnaud Launay

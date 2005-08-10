@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/vlnx-432e-r2.ebuild,v 1.5 2005/01/30 13:24:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/vlnx-432e-r2.ebuild,v 1.6 2005/08/10 14:56:59 blubb Exp $
 
 MY_P="${P/-/}"
 S="${WORKDIR}"
@@ -12,11 +12,13 @@ HOMEPAGE="http://www.mcafeeb2b.com/"
 
 SLOT="0"
 LICENSE="VirusScan"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="sys-libs/lib-compat
+RDEPEND=" || ( sys-libs/lib-compat
+			app-emulation/emul-linux-x86-compat )
+	amd64? ( app-emulation/emul-linux-x86-baselibs )
 	net-misc/wget
 	dev-lang/perl
 	app-arch/unzip"
