@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.20 2005/07/07 16:16:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.21 2005/08/10 22:06:45 swegener Exp $
+
+  10 Aug 2005; Sven Wegener <swegener@gentoo.org>
+  +files/5.0.53-fPIC-configure.patch, ircservices-5.0.53.ebuild:
+  Added -fPIC patch for bug #101542.
 
   07 Jul 2005; Sven Wegener <swegener@gentoo.org>
   -ircservices-5.0.51.ebuild, ircservices-5.0.53.ebuild:

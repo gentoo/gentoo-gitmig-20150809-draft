@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.53.ebuild,v 1.3 2005/07/07 16:16:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.53.ebuild,v 1.4 2005/08/10 22:06:45 swegener Exp $
 
 inherit eutils fixheadtails flag-o-matic toolchain-funcs
 
@@ -20,6 +20,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/5.0.37-fPIC.patch
+	epatch "${FILESDIR}"/5.0.53-fPIC-configure.patch
 
 	ht_fix_file configure
 	sed -i -e "s/HEAD -1/HEAD -n 1/" configure
