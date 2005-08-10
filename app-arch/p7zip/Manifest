@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7000feb0dfd55f5e4b45105e353215b0 ChangeLog 3095
-MD5 70bc09d33b952151161d65ac4ae695db p7zip-4.18.ebuild 942
+MD5 4c46060e69f79489aa14d4c2aebba0ea ChangeLog 3193
 MD5 66daf69a44c4ec8add00f66d8ee0661d metadata.xml 221
-MD5 45baa4c5670acbf28c6500fadcfda64a p7zip-4.16.ebuild 940
-MD5 a4da3c9406c63a65d803934a7a5f445c p7zip-4.20.ebuild 941
 MD5 b24ad5bd1bc43cfc963731afcdbb72de p7zip-0.91.ebuild 733
-MD5 1defb955ab99c1352cd6d52a4839bff6 files/digest-p7zip-4.20 67
-MD5 d59edc8007f0d34689022c8b1e78c1ab files/digest-p7zip-4.18 67
-MD5 dc2c48150a6e3814aad4cb461569dceb files/digest-p7zip-4.16 67
+MD5 45baa4c5670acbf28c6500fadcfda64a p7zip-4.16.ebuild 940
+MD5 70bc09d33b952151161d65ac4ae695db p7zip-4.18.ebuild 942
+MD5 9366cbb83b1cef1ad42a9a45cd46c029 p7zip-4.20.ebuild 942
 MD5 b536ab563901360bd65cae18d088ee5e files/7z 42
 MD5 b447478697ba987040c8a572b2948310 files/digest-p7zip-0.91 63
+MD5 dc2c48150a6e3814aad4cb461569dceb files/digest-p7zip-4.16 67
+MD5 d59edc8007f0d34689022c8b1e78c1ab files/digest-p7zip-4.18 67
+MD5 1defb955ab99c1352cd6d52a4839bff6 files/digest-p7zip-4.20 67
 MD5 5cd8b1eac59c69d93fd0380607d295fc files/p7zip-4.16_x86_static.patch 276
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC+BxUcsIHjyDViGQRAvByAJ0Ql+wf5IwCpnrVvC62SvphKa2ksQCfUAPj
-KINhGT8QJ2IyzK6DTdywK6A=
-=J9HS
------END PGP SIGNATURE-----
