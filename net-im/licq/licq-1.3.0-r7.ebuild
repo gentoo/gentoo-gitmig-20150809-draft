@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0-r7.ebuild,v 1.1 2005/08/03 17:44:30 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0-r7.ebuild,v 1.2 2005/08/10 20:54:40 herbs Exp $
 
-inherit eutils kde-functions
+inherit eutils kde-functions multilib
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
@@ -67,6 +67,12 @@ src_unpack() {
 			eend $?
 		fi
 	fi
+
+	# Install plugins in the correct libdir
+	sed -i -e "s:lib/licq/:$(get_libdir)/licq/:" \
+		${S}/include/licq_constants.h || die "sed failed"
+	sed -i -e 's:$(prefix)/lib:@libdir@:' \
+		${S}/plugins/*/src/Makefile.{in,am} || die "sed failed"
 }
 
 src_compile() {
@@ -101,6 +107,9 @@ src_compile() {
 		set-kdedir 3
 
 		use kde && myconf="${myconf} --with-kde"
+
+		# Problems finding qt on multilib systems
+		myconf="${myconf} --with-qt-libraries=${QTDIR}/$(get_libdir)"
 
 		# note! watch the --prefix=/usr placement;
 		# licq itself installs into /usr, but the

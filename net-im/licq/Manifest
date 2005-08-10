@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1e352af319b2d12a468b4f2fd93dd21e licq-1.3.0-r4.ebuild 4420
 MD5 f30c97a120a37f90edd8abdf612cd52a licq-1.2.7.ebuild 3368
 MD5 0279027e445f3bb8dd80ac12b788e1e5 licq-1.3.0-r6.ebuild 4963
 MD5 0e85dd4498bf89db7c161ae23372341f licq-1.3.0.ebuild 3766
 MD5 33aad642b7982399eceef594de44d7c5 licq-1.3.0-r3.ebuild 4207
 MD5 b66e6263d95baca44239d23a900d565e licq-1.3.0-r5.ebuild 4859
-MD5 379808f7ba9943763b6bb81b5b89225a ChangeLog 9574
-MD5 16eaedee9f0cd7685600b884964a9fae licq-1.3.0-r7.ebuild 5096
+MD5 6ad0423cad3b4fdbea0610f56a569076 ChangeLog 9664
+MD5 0ebf34bdd8d7db53a7dbb99eb7f36412 licq-1.3.0-r7.ebuild 5455
 MD5 6ee65b2e61137a2656ef1d0deb541f1d metadata.xml 254
 MD5 2332f809f740f6e4433631eecda3335d files/digest-licq-1.3.0-r3 145
 MD5 2332f809f740f6e4433631eecda3335d files/digest-licq-1.3.0-r4 145
@@ -24,3 +27,10 @@ MD5 100dc5f1d551dc769a337a71734d0e59 files/1.3.0-suse_bool.patch 191
 MD5 5f64e4b71c311ff7b6489953fc8bf1f9 files/1.2.7-nptl.patch 1178
 MD5 5dbb2a47d1d863a55f564e874c871d30 files/1.3.0-gpgme3_hack.patch 878
 MD5 7613512e9464951b3c3fbb7983aac70c files/1.3.0-missing_chars.patch 316
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+mmw2G5bA0cA/ScRAgHtAKCu4v+8JM31MGfIsuKjcoScsjEDOACeNeeQ
+A+xdoJCMUq9uFU4xNTJnOWs=
+=mhQc
+-----END PGP SIGNATURE-----
