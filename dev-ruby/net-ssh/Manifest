@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 74d5b25477cb98ba5b415c7d45ca6a9c net-ssh-1.0.2.ebuild 531
+MD5 0d933d040abaa8dd53324af28686e9a7 ChangeLog 378
+MD5 361f6d725852fb94bd54b66b6a48cea1 metadata.xml 254
+MD5 6ce03c7b4321ce10473ba867d62c9726 files/digest-net-ssh-1.0.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFC+h04ehlBotwFZuQRAnTSAJ0awR8xoBc8SNSKzhUgXGbwf+ZnnQCfcDjN
+GgmZR7B9JzbeiswXHZQxiHA=
+=3M2t
+-----END PGP SIGNATURE-----
