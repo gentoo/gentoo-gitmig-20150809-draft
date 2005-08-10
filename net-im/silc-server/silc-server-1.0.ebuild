@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-1.0.ebuild,v 1.1 2005/06/08 21:15:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-1.0.ebuild,v 1.2 2005/08/10 21:40:09 swegener Exp $
 
 inherit eutils
 
@@ -25,7 +25,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-banlist-fix.patch
 	epatch "${FILESDIR}"/${PV}-fPIC.patch
 
-	WANT_AUTOMAKE=1.9 automake || die "automake failed"
+	autoreconf || die "autoreconf failed"
+	libtoolize --copy --force || die "libtoolize failed"
 }
 
 src_compile() {

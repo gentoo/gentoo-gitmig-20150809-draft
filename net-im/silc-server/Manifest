@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ef6c532bedbf92c222ac6dcc3852a4df silc-server-1.0.ebuild 1785
-MD5 1e4aacdf746cb72edac611fa8ead78db ChangeLog 1683
-MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 12efb1a14928b8b4e51d9369c2a8bcd3 ChangeLog 1806
 MD5 bc8dbf4b64aee6fb4265bc1834e8fc6f files/1.0-banlist-fix.patch 428
-MD5 e6e284a15d071cfdf8df8a2b7bff775a files/silcd.rc6 519
-MD5 16f7bf5863b8fe1ce3293e158882ee35 files/digest-silc-server-1.0 68
 MD5 1d2c979312a0f446a2c84f2b3a98f76b files/1.0-fPIC.patch 296
+MD5 16f7bf5863b8fe1ce3293e158882ee35 files/digest-silc-server-1.0 68
+MD5 e6e284a15d071cfdf8df8a2b7bff775a files/silcd.rc6 519
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 f0ed44b61dfeb4c69d59c8d9a9d149ec silc-server-1.0.ebuild 1825
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCp2AJI1lqEGTUzyQRAj2/AJwML7fuT5rnx6f/eZ7scJFGpr6gPwCfYi3m
-RWe2kwmtnekupUXJplI8TMQ=
-=BmmN
+iD8DBQFC+nRGI1lqEGTUzyQRAreNAKCMeOHznvLpA2aBWamWZ6Laefo5JgCgnaBq
+/Uz83Yubi6fQTTIXTHHYYbw=
+=H+wC
 -----END PGP SIGNATURE-----
