@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/zodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.18 2005/07/08 21:08:38 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.19 2005/08/10 19:59:32 chrb Exp $
+
+*zodb-3.4.1 (10 Aug 2005)
+
+  10 Aug 2005; Chris Bainbridge <chrb@gentoo.org> +zodb-3.4.1.ebuild:
+  Zodb version bump - this is the version that will ship with Zope 2.8.1. It
+  includes bugfixes for memory leaks and ZEO client cache tracing. It does not
+  support Zope 2.6 or 2.7.
 
 *zodb-3.2.9 (08 Jul 2005)
 
