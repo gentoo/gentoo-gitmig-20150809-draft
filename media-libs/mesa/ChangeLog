@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.8 2004/06/24 23:16:28 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.9 2005/08/10 05:17:10 spyderous Exp $
+
+*mesa-6.3.1.1 (10 Aug 2005)
+
+  10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/fix-xthreads-location.patch, +files/lib/libGL.la,
+  +files/lib/libGLU.la, +files/lib/libOSMesa.la, +files/use-xthreads.patch,
+  +mesa-6.3.1.1.ebuild:
+  Add for modular X.
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> mesa-3.5.ebuild:
   Fix use invocation
