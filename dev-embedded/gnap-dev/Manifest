@@ -1,3 +1,4 @@
+MD5 a5a873297728c97547295f28c722b961 gnap-dev-1.8.ebuild 1034
 MD5 f4b938473c849a13c23fbb520f3f1148 ChangeLog 802
 MD5 1efa026a8d6a0dde12242d80980203ba metadata.xml 250
 MD5 3cdd6f2e7ef6312ab1dcb1473cf8116f gnap-dev-1.6.ebuild 1091
@@ -6,3 +7,4 @@ MD5 fc56ad9dd6ff048a865454c891a4def0 gnap-dev-1.7.ebuild 895
 MD5 6e7e9affa5475e9ea1de0ccc99d10c4a files/digest-gnap-dev-1.7 141
 MD5 8a0ca3498539f98a14a965b434378d19 files/digest-gnap-dev-1.7.1 145
 MD5 924e6479cf77442ff12a6ccca6a61455 files/digest-gnap-dev-1.6 156
+MD5 df7ad920352a4bfb2225da7beae43fda files/digest-gnap-dev-1.8 219

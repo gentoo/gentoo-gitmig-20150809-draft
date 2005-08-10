@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/gnap-ext
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnap-ext/ChangeLog,v 1.2 2005/06/23 13:10:04 koon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnap-ext/ChangeLog,v 1.3 2005/08/10 11:24:23 koon Exp $
+
+*gnap-ext-1.8 (10 Aug 2005)
+
+  10 Aug 2005; Thierry Carrez <koon@gentoo.org> +gnap-ext-1.8.ebuild:
+  New version 1.8
 
 *gnap-ext-1.7.1 (23 Jun 2005)
 
