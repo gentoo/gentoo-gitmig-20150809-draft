@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.41 2005/05/09 00:36:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.42 2005/08/10 18:37:30 dang Exp $
+
+  10 Aug 2005; <dang@gentoo.org> allegro-4.1.18.ebuild:
+  Keyworded ~amd64
 
   08 May 2005; Aron Griffis <agriffis@gentoo.org> allegro-4.1.14.ebuild:
   stable on ia64
