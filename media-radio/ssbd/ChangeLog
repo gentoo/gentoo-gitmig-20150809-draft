@@ -1,0 +1,8 @@
+# ChangeLog for media-radio/ssbd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ssbd/ChangeLog,v 1.1 2005/08/10 21:55:37 killsoft Exp $
+
+  10 Aug 2005; Robb Romans <killsoft@gentoo.org> ChangeLog:
+  New ebuild for ssbd - an SSB Voice Keyer Daemon for tucnak.
+  Thanks to Florian Evers for the ebuild.
+
