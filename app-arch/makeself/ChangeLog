@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/makeself
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.9 2005/01/01 11:48:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.10 2005/08/10 09:44:18 metalgod Exp $
+
+  10 Aug 2005; Luis Medinas <metalgod@gentoo.org> makeself-2.1.3.ebuild:
+  Marked Testing on AMD64. Closes bug #98310 .
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   makeself-2.1.2.ebuild:
