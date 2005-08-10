@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb74ddd35610709bc0f11cb30279b5a5 mscompress-0.3.ebuild 698
 MD5 a3b589deb855e61fe8c4e40b48c4a2a9 ChangeLog 482
-MD5 7b768dc0744a4a6ba0fd75c71b7de6ac mscompress-0.3.ebuild 1024
 MD5 7f7ab8642551c8a36435e1ad28ff8f53 files/digest-mscompress-0.3 66
 MD5 7c1a34dd214eeb0da0efbe4fe1f5fe63 files/mscompress-0.3-makefile.patch 446
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+onfgIKl8Uu19MoRArLCAJ0ap7TdNoVsKFs10X50VDHzL/S24QCfVU59
+8pHA4e2BGXANSgVsyOpXxhY=
+=8sjO
+-----END PGP SIGNATURE-----
