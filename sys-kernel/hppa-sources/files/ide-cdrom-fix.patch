@@ -1,0 +1,12 @@
+diff -uNr linux-2.6.12.4-pa2.orig/drivers/ide/ide-lib.c linux-2.6.12.4-pa2/drivers/ide/ide-lib.c
+--- linux-2.6.12.4-pa2.orig/drivers/ide/ide-lib.c	2005-08-09 18:11:03.000000000 +0200
++++ linux-2.6.12.4-pa2/drivers/ide/ide-lib.c	2005-08-09 18:13:20.000000000 +0200
+@@ -410,7 +410,7 @@
+ {
+ 	u64 addr = BLK_BOUNCE_HIGH;	/* dma64_addr_t */
+ 
+-	if (on && drive->media == ide_disk) {
++	if (on) {
+ 		if (!PCI_DMA_BUS_IS_PHYS)
+ 			addr = BLK_BOUNCE_ANY;
+ 		else if (HWIF(drive)->pci_dev)

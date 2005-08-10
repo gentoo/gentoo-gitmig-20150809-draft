@@ -1,4 +1,4 @@
-MD5 d6bda04b657df48e8852e9e1a2742d46 ChangeLog 10340
+MD5 dd252c1dc3e2f7d602c82227d8205d57 ChangeLog 10526
 MD5 dcf6adc464035c767d3183e5f7774b26 hppa-sources-2.6.10_p1.ebuild 692
 MD5 f176b7d1c3f6ed8055e2d49209e0fa90 hppa-sources-2.6.10_p10.ebuild 781
 MD5 b3f3f3026234e3e4e09eb594357f2883 hppa-sources-2.6.10_p11.ebuild 755
@@ -6,8 +6,9 @@ MD5 074dd720871b3b04b90e6f39c3664c7c hppa-sources-2.6.10_p2.ebuild 717
 MD5 ca691817130aedfb73c935b3cda1e75b hppa-sources-2.6.10_p4.ebuild 717
 MD5 53ec312f4db825cb5bf2971f99f3d35f hppa-sources-2.6.10_p6.ebuild 717
 MD5 8cee23a5c30baa50ce5a342fe4dddd32 hppa-sources-2.6.11_p2.ebuild 685
-MD5 dfb6127d9409cff2c8890e6a9d58a720 hppa-sources-2.6.12.2_p2.ebuild 1242
 MD5 05ed5731534e9423f109cbec1aa7e993 metadata.xml 223
+MD5 dfb6127d9409cff2c8890e6a9d58a720 hppa-sources-2.6.12.2_p2.ebuild 1242
+MD5 67d537d90ccdb5149d39cf9c90d9283b hppa-sources-2.6.12.4_p2.ebuild 1339
 MD5 001b0a631c9fc28133013a1f8f78f74c files/CAN-2004-1056.patch 8458
 MD5 cd0a7533c43364e377348613c6d76bb7 files/CAN-2004-1235.patch 9736
 MD5 b4f71191d0b9bc4439cdb8645ff474a7 files/LKA-20050107.patch 6122
@@ -20,3 +21,5 @@ MD5 47f5d83813a16f62c031edd2e0c1b79b files/digest-hppa-sources-2.6.10_p4 131
 MD5 db1af05869240e3d6499fb4554fa4540 files/digest-hppa-sources-2.6.10_p6 131
 MD5 373e99cd8f21b64a4fbabdd65d7adbe5 files/digest-hppa-sources-2.6.11_p2 131
 MD5 54105c5c37033ed1472d7a747c522e3e files/digest-hppa-sources-2.6.12.2_p2 262
+MD5 fde206859ab9582a5c727d7ccea34305 files/digest-hppa-sources-2.6.12.4_p2 263
+MD5 7b46dd1f32324db5bdffc2b0b822c546 files/ide-cdrom-fix.patch 480
