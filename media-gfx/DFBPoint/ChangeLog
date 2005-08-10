@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/DFBPoint
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/ChangeLog,v 1.9 2004/09/30 00:44:28 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/ChangeLog,v 1.10 2005/08/10 12:29:17 metalgod Exp $
+
+  10 Aug 2005; Luis Medinas <metalgod@gentoo.org> DFBPoint-0.7.2.ebuild:
+  Marked Testing on AMD64.
 
   21 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> DFBPoint-0.7.2.ebuild:
   tidy; error check cp
