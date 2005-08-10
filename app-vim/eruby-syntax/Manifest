@@ -1,4 +1,6 @@
-MD5 c255713351505809208d3cbe2ef87a2f ChangeLog 496
+MD5 c382ba56ba2a66223df08409cf961b68 eruby-syntax-2.0-r1.ebuild 636
 MD5 dd5cb920de4c9bc09f52b9630b01a9aa eruby-syntax-2.0.ebuild 518
 MD5 34acc0250b08e4f3f0b5044e1294aa22 metadata.xml 250
+MD5 c255713351505809208d3cbe2ef87a2f ChangeLog 496
 MD5 fc1242555bc9b8ef91bd7fbbde5d8d91 files/digest-eruby-syntax-2.0 66
+MD5 fc1242555bc9b8ef91bd7fbbde5d8d91 files/digest-eruby-syntax-2.0-r1 66
