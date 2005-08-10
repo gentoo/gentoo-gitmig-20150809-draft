@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.50 2005/07/23 20:43:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.51 2005/08/10 18:10:17 kito Exp $
+
+  10 Aug 2005; Kito <kito@gentoo.org> swig-1.3.24.ebuild:
+  ~ppc-macos keyword.
 
   23 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> swig-1.3.21.ebuild:
   Stable on sh.
