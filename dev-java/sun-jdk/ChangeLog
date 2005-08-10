@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.117 2005/07/26 15:24:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.118 2005/08/10 20:29:01 betelgeuse Exp $
+
+*sun-jdk-1.4.2.09 (10 Aug 2005)
+
+  10 Aug 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +files/sun-jdk-1.4.2.09, +sun-jdk-1.4.2.09.ebuild:
+  Version bump. Resolves bug #102048.
 
   26 Jul 2005; Thomas Matthijs <axxo@gentoo.org> sun-jdk-1.4.2.08-r1.ebuild:
   keyword x86
