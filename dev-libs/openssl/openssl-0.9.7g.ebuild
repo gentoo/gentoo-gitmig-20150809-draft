@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.13 2005/07/31 23:21:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.14 2005/08/10 03:21:28 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -38,6 +38,9 @@ src_unpack() {
 	# allow openssl to be cross-compiled
 	cp "${FILESDIR}"/gentoo.config-0.9.7g gentoo.config || die "cp cross-compile failed"
 	chmod a+rx gentoo.config
+
+	# Don't build manpages if we don't want them
+	has noman FEATURES && sed -i '/^install:/s:install_docs::' Makefile.org
 
 	case $(gcc-version) in
 		3.2)
