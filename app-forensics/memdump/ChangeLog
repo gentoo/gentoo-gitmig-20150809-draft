@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/memdump
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.4 2005/01/01 14:23:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.5 2005/08/10 15:48:53 blubb Exp $
+
+  10 Aug 2005; Simon Stelling <blubb@gentoo.org> memdump-1.0.ebuild:
+  added ~amd64 keyword
 
   01 Dec 2004; Daniel Black <dragonheart@gentoo.org> memdump-1.0.ebuild:
   added ppc keyword. Removed sys-apps/memdump which is the same package. Bug
