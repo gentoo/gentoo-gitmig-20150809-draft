@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.2 2005/08/10 05:42:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.3 2005/08/10 06:17:14 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -85,6 +85,7 @@ src_compile() {
 src_install() {
 	dodir /usr
 	make DESTDIR=${D}/usr install || die "Installation failed"
+	fix_opengl_symlinks
 	dynamic_libgl_install
 
 	# Install libtool archives
@@ -104,6 +105,18 @@ src_install() {
 
 pkg_postinst() {
 	switch_opengl_implem
+}
+
+fix_opengl_symlinks() {
+	# Remove invalid symlinks
+	local LINK
+	for LINK in $(find ${D}/usr/$(get_libdir) \
+		-name libGL.* -type l); do
+		rm -f ${LINK}
+	done
+	# Create required symlinks
+	dosym libGL.so.1.2 /usr/$(get_libdir)/libGL.so
+	dosym libGL.so.1.2 /usr/$(get_libdir)/libGL.so.1
 }
 
 dynamic_libgl_install() {
