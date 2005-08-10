@@ -1,4 +1,6 @@
-MD5 ef8fe39b227bbdd09d30bb98f84ca477 ChangeLog 678
+MD5 e8edeb1e48878ca9b774a08c651f577f ChangeLog 796
 MD5 1132a3b844170de154e81605672cec5e cromwell-2.31.ebuild 647
+MD5 c7b3f94359f9a343a1d9d944dad5c090 cromwell-2.40.ebuild 653
 MD5 6fa4899ddcfd1045cf3db88eeda6ceaa metadata.xml 305
 MD5 5fe7d58e888250525bac16c838cb2cb1 files/digest-cromwell-2.31 67
+MD5 115f47bffab07dc390eebe15170d597c files/digest-cromwell-2.40 66
