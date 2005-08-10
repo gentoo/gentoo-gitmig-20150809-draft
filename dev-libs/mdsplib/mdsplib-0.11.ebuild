@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/mdsplib-0.11.ebuild,v 1.1 2005/08/07 07:33:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/mdsplib-0.11.ebuild,v 1.2 2005/08/10 19:04:29 gustavoz Exp $
 
 DESCRIPTION="METAR Decoder Software Package Library"
 HOMEPAGE="http://limulus.net/mdsplib/"
@@ -8,7 +8,7 @@ SRC_URI="http://limulus.net/mdsplib/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/libc"
 RDEPEND="virtual/libc"

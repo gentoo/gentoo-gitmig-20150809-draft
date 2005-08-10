@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mdsplib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/ChangeLog,v 1.1 2005/08/07 07:33:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/ChangeLog,v 1.2 2005/08/10 19:04:29 gustavoz Exp $
+
+  10 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> mdsplib-0.11.ebuild:
+  Keyworded ~sparc wrt #99262
 
 *mdsplib-0.11 (07 Aug 2005)
 
