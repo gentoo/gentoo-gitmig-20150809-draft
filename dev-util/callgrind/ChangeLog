@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/callgrind
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/ChangeLog,v 1.11 2005/07/19 21:35:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/ChangeLog,v 1.12 2005/08/10 12:38:55 caleb Exp $
+
+*callgrind-0.9.12 (10 Aug 2005)
+
+  10 Aug 2005; Caleb Tennis <caleb@gentoo.org> +callgrind-0.9.12.ebuild:
+  Version bump
 
   19 Jul 2005; Caleb Tennis <caleb@gentoo.org> callgrind-0.9.11-r1.ebuild:
   Don't install docs into stray dir (bug #99370)
