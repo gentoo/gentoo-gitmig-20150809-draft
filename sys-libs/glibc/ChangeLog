@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.377 2005/08/04 19:36:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.378 2005/08/10 22:27:46 eradicator Exp $
+
+  10 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.5-r1.ebuild, glibc-2.3.5.20050421.ebuild,
+  glibc-2.3.5.20050722.ebuild:
+  Fixed USE=profile support... bug #100092.
 
   04 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
   glibc-2.3.4.20050125-r1.ebuild, glibc-2.3.5-r1.ebuild,

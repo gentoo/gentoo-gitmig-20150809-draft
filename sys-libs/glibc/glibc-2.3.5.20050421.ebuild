@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.28 2005/08/07 04:14:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.29 2005/08/10 22:27:46 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -855,7 +855,6 @@ glibc_do_configure() {
 	use erandom || myconf="${myconf} --disable-dev-erandom"
 
 	use glibc-omitfp && myconf="${myconf} --enable-omitfp"
-	use profile && myconf="${myconf} --enable-profile"
 
 	if [ "$1" == "linuxthreads" ] ; then
 		if want_tls ; then
@@ -891,7 +890,7 @@ glibc_do_configure() {
 		--enable-bind-now
 		--build=${CBUILD_OPT:-${CBUILD}}
 		--host=${CTARGET_OPT:-${CTARGET}}
-		--disable-profile
+		$(use_enable profile)
 		--without-gd
 		--with-headers=$(alt_headers)
 		--prefix=$(alt_prefix)
