@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/xconvers-0.8.3.ebuild,v 1.1 2005/03/31 02:34:48 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/xconvers-0.8.3.ebuild,v 1.2 2005/08/10 06:22:33 killsoft Exp $
 
 DESCRIPTION="Hamradio convers client for X/GTK"
 HOMEPAGE="http://www.qsl.net/pg4i/linux/xconvers.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.qsl.net/pg4i/download/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/libc
