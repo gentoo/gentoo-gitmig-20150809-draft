@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.7 2005/08/10 21:36:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.8 2005/08/10 22:04:46 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -60,6 +60,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/fix-xthreads-location.patch
 	epatch ${FILESDIR}/use-xthreads.patch
+	epatch ${FILESDIR}/makedepend-location.patch
 
 	# Set up linux-dri configs
 	echo "OPT_FLAGS = ${CFLAGS}" >> ${HOSTCONF}

@@ -1,0 +1,12 @@
+diff -urN Mesa-6.3.1.1.orig/configs/linux-dri Mesa-6.3.1.1/configs/linux-dri
+--- Mesa-6.3.1.1.orig/configs/linux-dri	2005-07-23 23:29:14.000000000 -0700
++++ Mesa-6.3.1.1/configs/linux-dri	2005-08-10 14:56:16.000000000 -0700
+@@ -9,7 +9,7 @@
+ CC = gcc
+ CXX = g++
+ 
+-MKDEP = /usr/X11R6/bin/makedepend
++MKDEP = /usr/bin/makedepend
+ #MKDEP = gcc -M
+ #MKDEP_OPTIONS = -MF depend
+ 
