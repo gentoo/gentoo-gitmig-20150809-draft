@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/tomsfastmath
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tomsfastmath/ChangeLog,v 1.1 2005/03/17 00:40:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tomsfastmath/ChangeLog,v 1.2 2005/08/10 02:09:48 vapier Exp $
+
+*tomsfastmath-0.05 (10 Aug 2005)
+
+  10 Aug 2005; Mike Frysinger <vapier@gentoo.org> +tomsfastmath-0.05.ebuild:
+  Version bump as notified by Tom St Denis.
 
 *tomsfastmath-0.03 (16 Mar 2005)
 
