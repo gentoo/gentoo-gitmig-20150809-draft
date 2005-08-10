@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.17 2005/08/10 16:02:47 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.18 2005/08/10 16:42:36 dertobi123 Exp $
+
+  10 Aug 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  fftw-3.0.1-r2.ebuild:
+  ppc stable, bug #101771
 
   10 Aug 2005; Ferris McCormick <fmccor@gentoo.org> fftw-3.0.1-r2.ebuild:
   Stable for sparc, Security bug #101771.
