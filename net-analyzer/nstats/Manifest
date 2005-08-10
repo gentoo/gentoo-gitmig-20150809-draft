@@ -1,5 +1,15 @@
-MD5 2203ac3186691578bcbac389ec5db0a8 ChangeLog 1303
-MD5 c6f866c5483c062fb5e7f148aede81f8 nstats-0.4.ebuild 752
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1a84fe6c8d702ae864c2bd947d667ed6 nstats-0.4.ebuild 758
+MD5 db276098478371ceca59d191e518ed51 ChangeLog 1372
 MD5 471824686805ceb0bc7fbffbfe341a4b metadata.xml 266
-MD5 436fb40a1859860df36dbcf6ba534dcc files/digest-nstats-0.4 61
 MD5 9f496f20339069acfc493469277a05bb files/nstats-0.4-makefile.patch 478
+MD5 436fb40a1859860df36dbcf6ba534dcc files/digest-nstats-0.4 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+kifomPajV0RnrERAj0rAJ4z/T1oJi3tQw+q6ybpLJGeJIHqgwCcDZRD
+NTMnWXkG1Q7R8HVU3yjdaVk=
+=kasE
+-----END PGP SIGNATURE-----
