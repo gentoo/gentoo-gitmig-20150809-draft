@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.181 2005/08/10 03:22:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.182 2005/08/10 22:15:15 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1050,7 +1050,7 @@ gcc_do_configure() {
 
 	# All our cross-compile logic goes here !  woo !
 	confgcc="${confgcc} --host=${CHOST}"
-	if is_crosscompile ; then
+	if is_crosscompile || tc-is-cross-compiler ; then
 		# Straight from the GCC install doc:
 		# "GCC has code to correctly determine the correct value for target
 		# for nearly all native systems. Therefore, we highly recommend you
@@ -1092,6 +1092,7 @@ gcc_do_configure() {
 	# disable a bunch of features or gcc goes boom
 	if is_crosscompile && [[ ${GCC_LANG} == "c" ]] ; then
 		confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
+	# If we want to do C++ on avr then we have to punt threads
 	elif is_crosscompile && [[ ${CTARGET} == "avr" ]] ; then
 		confgcc="${confgcc} $(use_enable !static shared) --disable-threads"
 	else
@@ -1104,6 +1105,8 @@ gcc_do_configure() {
 	# so use setjmp/longjmp exceptions by default
 	if is_uclibc ; then
 		confgcc="${confgcc} --disable-__cxa_atexit --enable-sjlj-exceptions --enable-target-optspace"
+		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && \
+			confgcc="${confgcc} --enable-sjlj-exceptions"
 	else
 		confgcc="${confgcc} --enable-__cxa_atexit"
 	fi
@@ -1170,7 +1173,7 @@ gcc_do_make() {
 	# Set make target to $1 if passed
 	[[ -n $1 ]] && GCC_MAKE_TARGET="$1"
 	# default target
-	if is_crosscompile ; then
+	if is_crosscompile || tc-is-cross-compiler ; then
 		# 3 stage bootstrapping doesnt quite work when you cant run the
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-all}
