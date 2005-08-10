@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/callgrind
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/ChangeLog,v 1.12 2005/08/10 12:38:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/ChangeLog,v 1.13 2005/08/10 12:43:13 caleb Exp $
+
+  10 Aug 2005; Caleb Tennis <caleb@gentoo.org>
+  -files/callgrind-sim-pic.patch, -callgrind-0.9.10-r1.ebuild,
+  callgrind-0.9.11-r1.ebuild:
+  Remove old version, make dep set to valgrind 2.0/2.2
 
 *callgrind-0.9.12 (10 Aug 2005)
 
