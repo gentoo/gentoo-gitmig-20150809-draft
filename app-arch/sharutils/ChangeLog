@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.36 2005/08/02 22:10:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.37 2005/08/10 22:05:59 dragonheart Exp $
+
+*sharutils-4.5 (10 Aug 2005)
+
+  10 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/sharutils-4.4-r1-tempfile.patch,
+  -files/sharutils-4.4-uninitalisedvar.patch, -sharutils-4.4-r1.ebuild,
+  +sharutils-4.5.ebuild:
+  version bump as per bug #101904 thanks to Bruce Korb
 
 *sharutils-4.4-r1 (02 Aug 2005)
 

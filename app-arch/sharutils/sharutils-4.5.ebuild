@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.4-r1.ebuild,v 1.1 2005/08/02 22:10:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.5.ebuild,v 1.1 2005/08/10 22:05:59 dragonheart Exp $
 
 inherit eutils
 
@@ -15,15 +15,6 @@ IUSE="nls"
 
 DEPEND="sys-apps/texinfo
 	nls? ( >=sys-devel/gettext-0.10.35 )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	#87939 - thanks to Bruce Korb (maintainer)
-	epatch "${FILESDIR}/${PF}"-tempfile.patch
-	#101100 - thanks to bug #101100 by Ivan Yosifov
-	epatch "${FILESDIR}/${P}"-uninitalisedvar.patch
-}
 
 src_compile() {
 	econf $(use_enable nls) || die
