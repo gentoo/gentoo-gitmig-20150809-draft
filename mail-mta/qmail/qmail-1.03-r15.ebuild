@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.32 2005/08/10 22:11:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.33 2005/08/10 22:16:34 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -502,6 +502,7 @@ pkg_preinst() {
 pkg_setup() {
 	einfo "Creating groups and users"
 	enewgroup qmail 201
+	enewuser alias 200 /bin/false /var/qmail/alias 200
 	enewuser qmaild 201 /bin/false /var/qmail 200
 	enewuser qmaill 202 /bin/false /var/qmail 200
 	enewuser qmailp 203 /bin/false /var/qmail 200
