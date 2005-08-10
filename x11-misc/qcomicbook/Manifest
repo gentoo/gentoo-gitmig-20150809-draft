@@ -1,4 +1,16 @@
-MD5 2b3a2d4b648551c9fa2bc125e997e1c6 qcomicbook-0.2.3-r1.ebuild 965
-MD5 8708eb68a1620ab02528c9a3d602980c ChangeLog 861
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe8038fa87b83c5a38886775fe8b7938 ChangeLog 993
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
+MD5 0e311fdb0c5b5f6b47c8c71ca393855a qcomicbook-0.2.4.ebuild 961
+MD5 2b3a2d4b648551c9fa2bc125e997e1c6 qcomicbook-0.2.3-r1.ebuild 965
+MD5 4494ea5e461f3e48b95473576a188db7 files/digest-qcomicbook-0.2.4 68
 MD5 27d2555a7178e21251900d5be1d6c466 files/digest-qcomicbook-0.2.3-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+VqK6F83T3G/7pURAuPGAJ434y5M2c0dazYCNd3qEFH3w1KdfACeLyc9
+D4yYBfg392rdTPAxD1dg6bg=
+=wRg7
+-----END PGP SIGNATURE-----

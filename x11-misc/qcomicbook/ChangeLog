@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.5 2005/07/28 14:34:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.6 2005/08/10 01:37:06 smithj Exp $
+
+*qcomicbook-0.2.4 (10 Aug 2005)
+
+  10 Aug 2005; Jonathan Smith <smithj@gentoo.org> +qcomicbook-0.2.4.ebuild:
+  minor version bump
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> qcomicbook-0.2.3-r1.ebuild:
   Fix qt dep per bug #100235
