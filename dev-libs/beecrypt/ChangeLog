@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.27 2005/07/03 02:50:11 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.28 2005/08/11 12:45:37 herbs Exp $
+
+  11 Aug 2005; Herbie Hopkins <herbs@gentoo.org> beecrypt-4.1.2.ebuild:
+  Fix install path of python module on multilib systems.
 
   03 Jul 2005; Hardave Riar <hardave@gentoo.org> beecrypt-3.1.0-r2.ebuild:
   Stable on mips, dep for bug #91792.

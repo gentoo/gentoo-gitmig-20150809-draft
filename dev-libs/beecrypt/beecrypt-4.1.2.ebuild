@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2.ebuild,v 1.1 2005/06/26 10:13:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2.ebuild,v 1.2 2005/08/11 12:45:37 herbs Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -21,6 +21,10 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/beecrypt-4.1.2-athlon.patch
 	libtoolize --copy --force
+
+	# Set correct python libdir on multilib systems
+	sed -i -e 's:get_python_lib():get_python_lib(1,0):' \
+		${S}/configure{.ac,} || die "sed failed"
 }
 
 src_compile() {
