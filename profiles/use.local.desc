@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1381 2005/08/10 22:40:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1382 2005/08/11 03:46:31 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -251,6 +251,8 @@ dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/libcdio:cddb - use libcddb for CD database lookups
 dev-libs/libmix:no-net2 - disable libpcap and libnet support
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
+dev-libs/libtomcrypt:libtommath - Use the portable math library
+dev-libs/libtomcrypt:tomsfastmath - Use the optimized math library
 dev-libs/log4cxx:smtp - offer SMTP support via libsmtp
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:v4l2 - Enable video4linux2 support
