@@ -1,4 +1,6 @@
-MD5 21c1510030c178bdeed888bc05d6ee63 ChangeLog 495
+MD5 756444f46b87e9d4ea3a9821b85d736a perl-PBS-0.24.ebuild 847
+MD5 6eb501c1d1c0a8e48fda6c534f49c239 ChangeLog 688
 MD5 3e0ec7886cad647315f5e06db1cda42f perl-PBS-0.23.ebuild 811
 MD5 d3144b04b3b5d1dff21bc506b721e73c metadata.xml 180
 MD5 6a649c192ffbad42d0161205e61bbbaf files/digest-perl-PBS-0.23 64
+MD5 c8b2734a19d8f447f045155b3e28d902 files/digest-perl-PBS-0.24 64
