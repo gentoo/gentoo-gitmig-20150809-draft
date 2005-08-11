@@ -5,8 +5,8 @@ MD5 00cce95a37df57816d9bf357e04c3b73 mozilla-1.7.10-r2.ebuild 11834
 MD5 585e249f746a24ae127ff7a39b12133e mozilla-1.7.10-r3.ebuild 12179
 MD5 1a242e5dd432f1fc4b5396b7593c1cb8 mozilla-1.7.10-r1.ebuild 12594
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 de9e69fefe8059904d5c3a366d7e3e65 ChangeLog 49459
-MD5 26f9f23553dd81d3c6830b2143081b7b mozilla-1.7.11.ebuild 12172
+MD5 19e69fe1c0fb3bb74ddb7d35a2080ec1 ChangeLog 49551
+MD5 aa5d0dc71edbf526bffd72792390dcd1 mozilla-1.7.11.ebuild 12171
 MD5 8f8d70da6eb8cf07acbbb85fb0f08636 files/mozilla-hppa.patch 7863
 MD5 e79634ee1e611182b6c227daa362b20d files/mozilla-1.7.3-4ft2.patch 22360
 MD5 5b22d0e1ea93923e3e66787c286ad86f files/mozilla-1.7.8-objectframefix.diff 673
@@ -30,7 +30,7 @@ MD5 6d52ff4ce4567db1cad08ea40157a65d files/icon/mozilla-icon.png 2350
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC+pofBXaUFmZvwyMRAosAAKCxoBQticjASujykDG+FsXntgp/0ACfQ2p/
-JOLSPBphXx/iGlVY9Uz8KYo=
-=s3F8
+iD8DBQFC+qI/BXaUFmZvwyMRAlqUAKDRXgGZgZtg/QCBfZeQZFTXoYOl9QCcDhJb
+UFk1x9Q3xed4o9xGsLrhwao=
+=pxGk
 -----END PGP SIGNATURE-----

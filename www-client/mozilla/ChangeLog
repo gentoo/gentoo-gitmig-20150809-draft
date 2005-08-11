@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.60 2005/08/10 23:46:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.61 2005/08/11 00:56:19 agriffis Exp $
+
+  11 Aug 2005; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.11.ebuild:
+  stable on alpha
 
   10 Aug 2005; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.11.ebuild:
   stable ia64
