@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/maya
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.17 2005/07/30 20:45:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.18 2005/08/11 08:50:25 eradicator Exp $
+
+*maya-6.5 (02 Aug 2005)
+
+  02 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org> +files/50maya,
+  files/aw_flexlm, maya-5.0.1-r1.ebuild, +maya-6.5.ebuild:
+  Version bump.  Ebuild made by me with support from Depthvfx,
+  http://www.depthvfx.com.
 
   30 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -files/maya-6.0.md5sum, files/aw_flexlm, files/aw_flexlm.conf.d,

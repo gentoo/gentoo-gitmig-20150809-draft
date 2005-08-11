@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/files/aw_flexlm,v 1.4 2005/07/30 21:34:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/files/aw_flexlm,v 1.5 2005/08/11 08:50:25 eradicator Exp $
 
 # description: aw_flexlm controls the Flexlm License Server Daemon for \
 #              Alias|Wavefront Products.
@@ -13,11 +13,11 @@ depend() {
 
 checkconfig() {
 	if [[ -x "/opt/aw/COM/etc/lmgrd" ]]; then
-		if [[ -f "$LICENSE_FILE" ]] ; then
+		if [[ -f "${LICENSE_FILE}" ]] ; then
 			return 0
 		else
 			eerror "ERROR Cannot run FLEXlm Licensing daemon: lmgrd"
-			eerror "$LICENSE_FILE does not exist."
+			eerror "${LICENSE_FILE} does not exist."
 		fi
 	else
 		eerror "ERROR Cannot run FLEXlm Licensing daemon: lmgrd"
@@ -30,7 +30,7 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting FLEXlm License Server Daemon for Alias|Wavefront software"
-	LD_ASSUME_KERNEL=2.4.1 su nobody -c "/opt/aw/COM/etc/lmgrd -c ${LICENSE_FILE} -l ${LOG}"	
+	LD_ASSUME_KERNEL=2.4.1 su nobody -c "/opt/aw/COM/etc/lmgrd -c '${LICENSE_FILE}' -l '${LOG}'"	
         eend $?
 }
 
