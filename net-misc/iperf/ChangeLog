@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/iperf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.14 2005/08/09 19:12:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.15 2005/08/11 03:10:08 ka0ttic Exp $
+
+*iperf-2.0.2 (11 Aug 2005)
+
+  11 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> +iperf-2.0.2.ebuild:
+  Version bump for bug 101960.
 
   09 Aug 2005; Brent Baude <ranger@gentoo.org> iperf-1.7.0.ebuild:
   Adding ~ppc64 keyword to the 1.70 iperf ebuild. This is the "stable" version

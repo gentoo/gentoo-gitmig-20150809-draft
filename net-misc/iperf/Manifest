@@ -1,8 +1,20 @@
-MD5 c712954d21db868dbf6116af107564f7 ChangeLog 1686
-MD5 d86d58b1bf956b911e93a1eb419d6d8c iperf-1.7.0.ebuild 945
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b1383a0b0061257658c30b808affb071 iperf-2.0.2.ebuild 964
 MD5 a9e9a89e537ceb528712d9bffe0f111f iperf-2.0.1.ebuild 961
+MD5 d86d58b1bf956b911e93a1eb419d6d8c iperf-1.7.0.ebuild 945
+MD5 80a0f794af6f6b499eef300099940fc5 ChangeLog 1817
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
-MD5 8d7742f71fada23db6fa1398664a3c2e files/digest-iperf-1.7.0 70
-MD5 99a03cce31fe2b9ff92f82359c48eae5 files/digest-iperf-2.0.1 63
 MD5 fb3cd54b7325d842e3118e6d41503ac0 files/iperf.confd 308
 MD5 670817398ac2d9dc91ce1ae301e62ee1 files/iperf.initd 521
+MD5 8d7742f71fada23db6fa1398664a3c2e files/digest-iperf-1.7.0 70
+MD5 99a03cce31fe2b9ff92f82359c48eae5 files/digest-iperf-2.0.1 63
+MD5 d0b327d4891d45777215270af6210cf1 files/digest-iperf-2.0.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+sHUEZCkKN40op4RAghJAKCsDkWPK8b3VqtZsobGdTPzS4rzbwCfRh7z
+/A2lDR4Cxz6xZZ1nQMEtSKI=
+=670U
+-----END PGP SIGNATURE-----
