@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050809-r1.ebuild,v 1.1 2005/08/11 22:38:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050809-r1.ebuild,v 1.2 2005/08/11 23:32:27 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,13 +24,14 @@ RDEPEND="nls? ( sys-devel/gettext )
 	imap?    (
 		gnutls?  ( >=net-libs/gnutls-1.0.17 )
 		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
+		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
 	pop?     (
 		gnutls?  ( >=net-libs/gnutls-1.0.17 )
 		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
+		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
-	gpgme?   ( >=app-crypt/gpgme-0.9.0 )
-	sasl?    ( >=dev-libs/cyrus-sasl-2 )"
+	gpgme?   ( >=app-crypt/gpgme-0.9.0 )"
 DEPEND="${RDEPEND}
 	sys-devel/automake
 	>=sys-devel/autoconf-2.5
@@ -55,7 +56,6 @@ src_compile() {
 		$(use_enable gpgme) \
 		$(use_enable imap) \
 		$(use_enable pop) \
-		$(use_with sasl sasl2) \
 		$(use_enable crypt pgp) \
 		$(use_enable smime) \
 		$(use_enable cjk default-japanese) \
@@ -96,8 +96,10 @@ src_compile() {
 		elif use ssl; then
 			myconf="${myconf} --with-ssl"
 		fi
+		# not sure if this should be mutually exclusive with the other two
+		myconf="${myconf} $(use_with sasl sasl2)"
 	else
-		myconf="${myconf} --without-gnutls --without-ssl"
+		myconf="${myconf} --without-gnutls --without-ssl --without-sasl2"
 	fi
 
 	# See Bug #11170
@@ -121,7 +123,7 @@ src_compile() {
 	fi
 
 	if use mbox; then
-		myconf="${myconf} --with-maildir=/var/spool/mail"
+		myconf="${myconf} --with-mailpath=/var/spool/mail"
 	else
 		myconf="${myconf} --with-homespool=Maildir"
 	fi
