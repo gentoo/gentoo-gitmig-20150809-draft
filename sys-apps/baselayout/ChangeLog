@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.264 2005/08/05 12:55:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.265 2005/08/11 09:38:22 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.12.0_pre5 (11 Aug 2005)
+
+  11 Aug 2005; Roy Marples <uberlord@gentoo.org>
+  -baselayout-1.12.0_pre4.ebuild, +baselayout-1.12.0_pre5.ebuild:
+  New release. Should finally fix circular init script dependency problems!
 
 *baselayout-1.12.0_pre4 (05 Aug 2005)
 
