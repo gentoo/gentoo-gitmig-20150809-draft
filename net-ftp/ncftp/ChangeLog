@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.37 2005/07/17 11:03:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.38 2005/08/11 01:17:33 ka0ttic Exp $
+
+  11 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> ncftp-3.1.8-r1.ebuild:
+  Stable on mips.
 
 *ncftp-3.1.9 (17 Jul 2005)
 
