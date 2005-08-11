@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation, Inc.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.0_alpha20050718.ebuild,v 1.1 2005/08/11 17:06:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.0_alpha20050718.ebuild,v 1.2 2005/08/11 19:03:22 swegener Exp $
 
 inherit eutils
 
