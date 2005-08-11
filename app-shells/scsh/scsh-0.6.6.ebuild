@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.6.ebuild,v 1.1 2005/08/09 18:18:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.6.ebuild,v 1.2 2005/08/11 14:51:56 gustavoz Exp $
 
 inherit eutils scsh
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.scsh.net/"
 SRC_URI="ftp://ftp.scsh.net/pub/scsh/${MV}/${P}.tar.gz"
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~sparc"
 
 DEPEND=""
 
