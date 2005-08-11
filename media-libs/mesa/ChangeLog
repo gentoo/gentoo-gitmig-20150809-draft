@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.19 2005/08/11 17:38:36 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.20 2005/08/11 22:05:50 spyderous Exp $
+
+  11 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; Manifest:
+  Fix manifest.
 
   11 Aug 2005; Ferris McCormick <fmccor@gentoo.org> mesa-6.3.1.1.ebuild:
   Following changes build a reunning libGL for sparc testing and set
