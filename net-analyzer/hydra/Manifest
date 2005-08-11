@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 81a7d0e7e1d4cf8d1fce351249056785 hydra-4.7.ebuild 1390
+MD5 6f96fb21113bb90cb53ddecd0fcf2301 ChangeLog 2107
+MD5 bdfc31a37a68986dbe9ba554a4c3d49d hydra-4.3.ebuild 1395
 MD5 0853272892387e7f639a5985d000f7a7 hydra-4.4.ebuild 1394
 MD5 8c43a030f5496913d946ba6139c39205 hydra-4.6.ebuild 1389
-MD5 128e39274bd7faade54358ab79e756f4 ChangeLog 2007
+MD5 12042acceeca7f7892a2e9ca66c9ba2d hydra-4.7.ebuild 1395
 MD5 9aa8f98344bb5026af633d7a5d3923cd metadata.xml 227
-MD5 bdfc31a37a68986dbe9ba554a4c3d49d hydra-4.3.ebuild 1395
 MD5 58c771c7306f6836af960f9bd61bc562 files/digest-hydra-4.3 65
 MD5 c03f67e03151a05247574982a5ee590c files/digest-hydra-4.4 65
 MD5 90bd01ab81a3f2ec1e36d85b026511b3 files/digest-hydra-4.6 65
 MD5 9830e2e995d05b91254be642e7c983c5 files/digest-hydra-4.7 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCruYuEZCkKN40op4RAoIHAKC8bsjM1jb0wYdkN6rpFJRMmIf8ywCdGJ9L
-+22mWr78hivJHOM0tKigRQw=
-=fTt7
------END PGP SIGNATURE-----

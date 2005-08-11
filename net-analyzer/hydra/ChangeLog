@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.15 2005/06/14 14:12:32 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.16 2005/08/11 09:58:53 r3pek Exp $
+
+  11 Aug 2005; Carlos Silva <r3pek@gentoo.org> hydra-4.7.ebuild:
+  marked ~amd64. closes bug #102030
 
 *hydra-4.7 (14 Jun 2005)
 
