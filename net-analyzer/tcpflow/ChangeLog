@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpflow
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.8 2005/02/25 12:22:57 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.9 2005/08/11 10:01:18 r3pek Exp $
+
+  11 Aug 2005; Carlos Silva <r3pek@gentoo.org> tcpflow-0.21.ebuild:
+  marked ~amd64. closes bug #102043
 
   25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> tcpflow-0.21.ebuild:
   Marked stable on x86.
