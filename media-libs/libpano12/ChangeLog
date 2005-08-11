@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpano12
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano12/ChangeLog,v 1.6 2005/07/25 20:39:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano12/ChangeLog,v 1.7 2005/08/11 00:10:43 halcy0n Exp $
+
+  11 Aug 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Adding self to metadata.
 
 *libpano12-2.7.0.10 (25 Jul 2005)
 
