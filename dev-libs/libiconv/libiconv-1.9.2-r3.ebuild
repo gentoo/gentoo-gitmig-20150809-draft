@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.9.2-r3.ebuild,v 1.5 2005/06/27 02:50:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.9.2-r3.ebuild,v 1.6 2005/08/11 11:15:34 flameeyes Exp $
 
-inherit eutils multilib
+inherit eutils multilib flag-o-matic
 
 DESCRIPTION="GNU charset conversion library for libc which doesn't implement it"
 SRC_URI="mirror://gnu/libiconv/${P}.tar.gz"
@@ -23,6 +23,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Filter -static as it breaks compilation
+	filter-ldflags -static
+
 	# Install in /lib as utils installed in /lib like gnutar
 	# can depend on this
 
