@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 f307a6673e2e51bb114ba7d6e198992f ChangeLog 889
 MD5 be2e16dbc3a05e4040dd3ed0a028319b koules-1.4-r1.ebuild 2515
 MD5 ccc92d4ab7d61ca482d30192a5ee83ec files/1.4-gcc3.patch 24553
 MD5 a1c0ffbf0eb8f220c9539214524f3275 files/digest-koules-1.4-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC++ZXmOfEJZHYOKcRAlY0AKDdMBQXR+HYNx/QvW0ivR2hQQ/c8wCgxk7a
+5HdEyC6Cm4EX0tl6zhYUR0o=
+=zZfG
+-----END PGP SIGNATURE-----
