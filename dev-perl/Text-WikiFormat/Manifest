@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9b71a75a04a8c2dcc7f0a37770bf6042 Text-WikiFormat-0.76.ebuild 522
+MD5 c4070204376d34f4838434b575212754 ChangeLog 391
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 b90175fbfd65d50e8cbb1b71bc2488d7 files/digest-Text-WikiFormat-0.76 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC++FkEzitwsaoONoRAtsDAJ9++HIFG+3akR0PSXz+dqVgVxkAgwCgiy/3
+QRD3ByTgWhTqd5YSAC5cG7U=
+=1gQH
+-----END PGP SIGNATURE-----
