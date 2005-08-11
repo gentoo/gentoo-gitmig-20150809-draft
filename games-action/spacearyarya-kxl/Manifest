@@ -1,5 +1,15 @@
-MD5 4159c7912e89b5cd19b8c5fde6354cd3 ChangeLog 790
-MD5 bfa5e454b56f7152877dfe5cda62d5df spacearyarya-kxl-1.0.2-r1.ebuild 828
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 bac2ed46bff95bd343d69acc3678022f files/digest-spacearyarya-kxl-1.0.2-r1 74
+MD5 6ab966b5469270a4653fb0b01aa50f37 ChangeLog 942
+MD5 289a54980b92706ea5cd61075eb544a0 spacearyarya-kxl-1.0.2-r1.ebuild 833
 MD5 4e95897069bd3e42fc1cffb5b7182705 files/1.0.2-gentoo-paths.patch 2248
+MD5 bac2ed46bff95bd343d69acc3678022f files/digest-spacearyarya-kxl-1.0.2-r1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC++ODmOfEJZHYOKcRApOGAKCIwK9PqqTC+kQ9hexWPH4pxUaUyACeISsF
+3xyVhn+DnEfnnGhp/oFQ5fI=
+=x9Sh
+-----END PGP SIGNATURE-----
