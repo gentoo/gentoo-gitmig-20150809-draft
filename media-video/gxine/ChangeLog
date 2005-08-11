@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.43 2005/08/01 20:50:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.44 2005/08/11 00:42:57 tester Exp $
+
+  11 Aug 2005; Olivier Crête <tester@gentoo.org> gxine-0.4.5.ebuild:
+  Stable on x86 per bug #100841
 
   01 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/gxine-0.4.6-literals.patch, +files/gxine-0.4.6-mkstemp.patch,
