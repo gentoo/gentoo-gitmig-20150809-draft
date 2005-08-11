@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p5.ebuild,v 1.1 2005/08/11 20:51:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p5.ebuild,v 1.2 2005/08/11 21:57:17 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -53,7 +53,7 @@ src_compile() {
 #	use X || myconf="--disable-gui"
 #	use tcltk && myconf="${myconf} --with-tcl"
 #	use doc && myconf="${myconf} --enable-docs"
-	append-flags -DJOB_DELETE_NANNY 
+	append-flags -DJOB_DELETE_NANNY
 
 	./configure \
 		$(use_enable X gui) \
