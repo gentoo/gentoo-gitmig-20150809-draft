@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pktstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.7 2005/07/19 15:34:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.8 2005/08/11 01:32:54 metalgod Exp $
+
+  11 Aug 2005; Luis Medinas <metalgod@gentoo.org> pktstat-1.7.5.ebuild:
+  Added ~amd64 keywords.
 
   19 Jul 2005; David Holm <dholm@gentoo.org> pktstat-1.7.5.ebuild:
   Added to ~ppc.
