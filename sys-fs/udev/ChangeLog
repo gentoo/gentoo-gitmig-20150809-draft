@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.127 2005/08/02 23:08:14 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.128 2005/08/11 23:16:20 gregkh Exp $
+
+*udev-066 (11 Aug 2005)
+
+  11 Aug 2005; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-066.ebuild:
+  066 release
+  Should fix cdrom permission problem from 065
+  helper programs are moved to /sbin
+  Lots of config file tweaks.
 
 *udev-065 (02 Aug 2005)
 
