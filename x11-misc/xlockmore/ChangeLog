@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.32 2005/08/07 12:05:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.33 2005/08/11 02:41:07 smithj Exp $
+
+*xlockmore-5.19 (11 Aug 2005)
+
+  11 Aug 2005; Jonathan Smith <smithj@gentoo.org> -xlockmore-5.18-r2.ebuild,
+  +xlockmore-5.19.ebuild:
+  version bump (but still masked)
 
   07 Aug 2005; Simon Stelling <blubb@gentoo.org> xlockmore-5.17-r1.ebuild:
   stable on amd64
