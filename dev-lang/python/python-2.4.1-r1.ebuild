@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1-r1.ebuild,v 1.4 2005/08/11 02:53:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1-r1.ebuild,v 1.5 2005/08/11 15:05:43 swegener Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -106,8 +106,6 @@ src_configure() {
 		export PYTHON_DISABLE_MODULES
 		echo $PYTHON_DISABLE_MODULES
 	fi
-
-	
 }
 
 src_compile() {
