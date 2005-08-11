@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6c0f980cf19da23cc2343836d1a77a6a net-sftp-1.0.0.ebuild 477
-MD5 25f8dabe38899c47145ba418676d266f ChangeLog 325
+MD5 678f9b208f7980195cd60bfe7ac8a778 ChangeLog 406
 MD5 361f6d725852fb94bd54b66b6a48cea1 metadata.xml 254
+MD5 33456f82673a49229a76bc6e3875086e net-sftp-1.0.0.ebuild 477
 MD5 3ec6c3531942785bb3f91b1aff8e138f files/digest-net-sftp-1.0.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFC+h63ehlBotwFZuQRApz4AKCMRUcn906Br3ExeQZT+OTZj+mJXwCfTtb6
-xVkMYaf+lehvi5zKf8xKd8k=
-=ayef
------END PGP SIGNATURE-----
