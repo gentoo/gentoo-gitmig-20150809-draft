@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r5.ebuild,v 1.2 2005/08/10 21:03:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r5.ebuild,v 1.3 2005/08/11 02:49:01 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -14,7 +14,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/fi
 	http://dev.gentoo.org/~agriffis/dist/mozilla-1.7.10-nsplugins-v2.patch
 	http://dev.gentoo.org/~anarchy/dist/embed-typeaheadfind.patch"
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="gnome java mozdevelop mozsvg mozcalendar"
