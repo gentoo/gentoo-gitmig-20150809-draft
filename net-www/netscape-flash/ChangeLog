@@ -1,6 +1,11 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.29 2005/05/03 18:49:01 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.30 2005/08/11 20:25:42 flameeyes Exp $
+
+  11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  netscape-flash-6.0.79.ebuild, netscape-flash-6.0.81.ebuild,
+  netscape-flash-7.0.25.ebuild:
+  Call has_multilib_profile from pkg_setup instead of global scope.
 
   03 May 2005; Herbie Hopkins <herbs@gentoo.org>
   netscape-flash-7.0.25.ebuild:
