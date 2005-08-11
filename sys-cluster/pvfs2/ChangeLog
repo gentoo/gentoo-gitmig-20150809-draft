@@ -1,0 +1,11 @@
+# ChangeLog for sys-cluster/pvfs2
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/ChangeLog,v 1.1 2005/08/11 18:00:51 robbat2 Exp $
+
+*pvfs2-1.2.0 (11 Aug 2005)
+
+  11 Aug 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +pvfs2-1.2.0.ebuild:
+  Ebuild by Robin H. Johnson <robbat2@gentoo.org>, with help from Patrick
+  Lougheed <private_email>.
+
