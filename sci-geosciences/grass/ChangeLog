@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.9 2005/08/08 06:38:25 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.10 2005/08/11 02:06:03 nerdboy Exp $
+
+  11 Aug 2005; Steve Arnold <nerdboy@gentoo.org>
+  files/digest-grass-6.0.0-r2, Manifest:
+  Fixing weird digest problem (bug #101719) - old soource tarball?
 
 *grass-5.4.0 (08 Aug 2005)
 
