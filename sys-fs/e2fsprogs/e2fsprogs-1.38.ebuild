@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38.ebuild,v 1.8 2005/08/07 06:36:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38.ebuild,v 1.9 2005/08/11 03:38:51 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -46,10 +46,10 @@ src_unpack() {
 		-e '/^LIB_SUBDIRS/s:lib/ss::' \
 		Makefile.in || die "remove subdirs"
 	ln -s "${ROOT}"/usr/$(get_libdir)/libcom_err.a lib/libcom_err.a
-	ln -s "${ROOT}"/usr/$(get_libdir)/libcom_err.so lib/libcom_err.so
+	ln -s "${ROOT}"/$(get_libdir)/libcom_err.so lib/libcom_err.so
 	ln -s /usr/bin/mk_cmds lib/ss/mk_cmds
 	ln -s "${ROOT}"/usr/include/ss/ss_err.h lib/ss/
-	ln -s "${ROOT}"/usr/$(get_libdir)/libss.so lib/libss.so
+	ln -s "${ROOT}"/$(get_libdir)/libss.so lib/libss.so
 
 	# Keep the package from doing silly things
 	export LDCONFIG=/bin/true
