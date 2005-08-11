@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xkbdata
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbdata/ChangeLog,v 1.2 2005/08/08 22:48:35 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbdata/ChangeLog,v 1.3 2005/08/11 05:07:43 spyderous Exp $
+
+  11 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xkbdata-0.99.0.ebuild:
+  Create /usr/lib/X11/xkb/compiled as a symlink to /var/lib/xkb; also create
+  that. This should make XKB actually work.
 
   08 Aug 2005; Ferris McCormick <fmccor@gentoo.org> xkbdata-0.99.0.ebuild:
   Add ~sparc keyword (X Modular testing).
