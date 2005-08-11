@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.1 2005/08/11 08:50:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.2 2005/08/11 08:55:08 eradicator Exp $
 
 inherit rpm eutils versionator
 
@@ -86,15 +86,15 @@ src_unpack() {
 		popd >& /dev/null
 	fi
 
-	mkdir ${S}/insroot
-	mv ${S}/usr ${S}/insroot/opt
-	rm -rf ${S}/insroot/opt/sbin
+	# Use app-admin/flexlm
+	rm -rf ${S}/usr/COM/{bin/lmutil,etc/lmgrd}
 
 	# Don't need RedHat's init script
 	rm -rf ${S}/etc
 
-	# Use app-admin/flexlm
-	rm -rf ${S}/insroot/opt/COM/{bin/lmutil,etc/lmgrd}
+	mkdir ${S}/insroot
+	mv ${S}/usr ${S}/insroot/opt
+	rm -rf ${S}/insroot/opt/sbin
 
 	cp -a ${CDROM_ROOT}/README.html ${S}
 
@@ -177,6 +177,10 @@ src_install() {
 	find ${D}${AWDIR} -type d -exec chmod 755 {} \;
 
 	dosed 's:tail -1: tail -n 1:g' /opt/aw/maya${SLOT}/bin/Maya${SLOT}
+
+	# For compatibility purposes.  Also, COM/bin/installKey uses
+	# /usr/aw/COM/lib as runtime lib path to find libXm.so.2
+	dosym ../opt/aw /usr/aw
 }
 
 pkg_postinst() {
