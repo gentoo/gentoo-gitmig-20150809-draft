@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.73 2005/08/03 20:01:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.74 2005/08/11 13:03:44 usata Exp $
+
+*scim-1.4.1 (11 Aug 2005)
+
+  11 Aug 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -files/scim-0.6.1-gtk2immodule.patch, -scim-1.2.0.ebuild,
+  +scim-1.4.1.ebuild:
+  Version bumped.
 
   03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> scim-1.2.3.ebuild:
   Stable on alpha.
