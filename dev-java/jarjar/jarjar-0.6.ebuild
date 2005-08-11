@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6.ebuild,v 1.2 2005/08/03 18:08:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6.ebuild,v 1.3 2005/08/11 18:46:15 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -39,9 +39,8 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar dist/${P}.jar
+	java-pkg_newjar dist/${P}.jar ${PN}.jar
 
-	if use doc; then
-		java-pkg_dohtml -r dist/javadoc/*
-	fi
+	use doc && java-pkg_dohtml -r dist/javadoc/*
+
 }
