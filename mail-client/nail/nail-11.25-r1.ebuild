@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r1.ebuild,v 1.1 2005/08/10 18:16:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r1.ebuild,v 1.2 2005/08/11 23:50:02 ferdy Exp $
 
 inherit eutils
 DESCRIPTION="Nail is an enhanced mailx-compatible mail client"
@@ -13,7 +13,7 @@ DEPEND="ssl? ( dev-libs/openssl )
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~alpha ~ia64 ~hppa"
-IUSE="ssl net"
+IUSE="ssl"
 
 src_compile() {
 	# Build config.h and LIBS, neccesary to tweak the config
@@ -25,17 +25,13 @@ src_compile() {
 		sed -i -e 's~-lssl~~' -e 's~-lcrypto~~' LIBS
 	fi
 
-	# And now to remove the IMAP/POP/SMTP stuff
-	use net || \
-		sed -i -e 's~#define HAVE_SOCKETS~#undef HAVE_SOCKETS~' config.h
-
 	# Now really build it
 	emake PREFIX=/usr MAILSPOOL='~/.maildir' || die "emake failed"
 }
 
 src_install () {
 	# Use /usr/lib/sendmail by default and provide an example
-	use net && cat <<- EOSMTP >> nail.rc
+	cat <<- EOSMTP >> nail.rc
 
 		# Use the local sendmail (/usr/lib/sendmail) binary by default.
 		# (Uncomment the following line to use a SMTP server)
