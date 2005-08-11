@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.84 2005/07/23 05:25:50 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.85 2005/08/11 09:04:06 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -275,9 +275,17 @@ php-sapi_src_compile() {
 	libdir="$(get_libdir)"
 
 	# sanity checks
-	[ -x "/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
+	if [ ! -x "/usr/sbin/sendmail" ]; then
+		msg="You need a virtual/mta that provides /usr/sbin/sendmail!"
+		eerror "${msg}"
+		die "${msg}"
+	fi
 
-	[ -f "/proc/self/stat" ] || die "You need /proc mounted for configure to complete correctly!"
+	if [ ! -f "/proc/self/stat" ]; then
+		msg="You need /proc mounted for configure to complete correctly!"
+		eerror "${msg}"
+		die "${msg}"
+	fi
 
 	use java && use !alpha && use !amd64 && php-sapi_check_java_config
 
