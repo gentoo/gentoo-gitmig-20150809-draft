@@ -1,6 +1,9 @@
 # ChangeLog for games-action/chickens
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.6 2005/03/07 06:19:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.7 2005/08/11 09:53:57 r3pek Exp $
+
+  11 Aug 2005; Carlos Silva <r3pek@gentoo.org> chickens-0.2.4.ebuild:
+  marked ~amd64. closes bug #102024
 
   07 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> chickens-0.2.4.ebuild:
   HOMEPAGE update
