@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 46f630f44c232ca4ce3a9c4d35ffc827 ChangeLog 3635
+MD5 137d8e2bdc65456a0c3383ff76894ae8 ChangeLog 3757
 MD5 0dc39b8e38a74a2fca213bf4e2f63d3e files/5.0.37-fPIC.patch 1172
 MD5 4378abfaa42b42cf88d1448f7be7d5ce files/5.0.53-fPIC-configure.patch 635
 MD5 29f1a5443fdb20cb212af83299e49fd8 files/digest-ircservices-5.0.53 71
 MD5 53b4476f6787f6aa0072d2b7374ab4c2 files/ircservices.conf.d 327
 MD5 fd2df3bf979010c19ad2e4ec09853c7f files/ircservices.init.d 700
-MD5 d93afe42ba30cbcb9037a2faaf2c4f78 ircservices-5.0.53.ebuild 2981
+MD5 67e2839da7b8960eec6cf1e208d57ef8 ircservices-5.0.53.ebuild 2991
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+nqCI1lqEGTUzyQRAviKAJ92ncP+c/zGSLdhwjEVnj4E+w5h4gCgv/7f
-Xg2urnIEvfdn17MXrC35pwI=
-=x+KW
+iD8DBQFC+2VEI1lqEGTUzyQRAmGUAJ9RPU/K6PkfrVC4x0mmEjtZ91qhrQCfRaRf
+8hDYotsaS7ZqAwGyeV8QOpw=
+=pN4w
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.53.ebuild,v 1.4 2005/08/10 22:06:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.53.ebuild,v 1.5 2005/08/11 14:48:09 swegener Exp $
 
 inherit eutils fixheadtails flag-o-matic toolchain-funcs
 
@@ -41,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin /{etc,{usr,var}/lib,usr/share}/ircservices || die "dodir failed"
+	dodir /usr/bin /{etc,usr/{$(get_libdir),share},var/lib}/ircservices || die "dodir failed"
 	keepdir /var/log/ircservices || die "keepdir failed"
 	fperms 700 /{etc,var/lib}/ircservices || die "fperms failed"
 
