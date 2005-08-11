@@ -1,6 +1,9 @@
 # ChangeLog for games-action/phobiaii
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/ChangeLog,v 1.5 2004/06/24 21:58:07 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/ChangeLog,v 1.6 2005/08/11 11:58:02 r3pek Exp $
+
+  11 Aug 2005; Carlos Silva <r3pek@gentoo.org> phobiaii-1.1.ebuild:
+  marked ~amd64. closes bug #102056
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> phobiaii-1.1.ebuild:
   Added IUSE.
