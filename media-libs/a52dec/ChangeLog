@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.38 2005/08/11 00:40:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.39 2005/08/11 13:37:27 gustavoz Exp $
+
+  11 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  a52dec-0.7.4-r5.ebuild:
+  Stable on sparc
 
   11 Aug 2005; Olivier Crête <tester@gentoo.org> a52dec-0.7.4-r5.ebuild:
   Stable on x86 to satisfy xine-lib-1.0.1-r3 for bug #98805
