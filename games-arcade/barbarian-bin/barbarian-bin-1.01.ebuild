@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01.ebuild,v 1.2 2005/04/15 11:22:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01.ebuild,v 1.3 2005/08/11 23:53:15 tester Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.pcpages.com/tomberrr/downloads/${MY_PN}${PV/./}_linux.zip"
 
 LICENSE="CCPL-Attribution-NonCommercial-NoDerivs-2.0"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
