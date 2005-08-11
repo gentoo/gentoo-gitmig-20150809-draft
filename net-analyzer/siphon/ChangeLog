@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/siphon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.9 2005/07/19 16:31:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.10 2005/08/11 10:02:55 r3pek Exp $
+
+  11 Aug 2005; Carlos Silva <r3pek@gentoo.org> siphon-666.ebuild:
+  marked ~amd64. closes bug #102047
 
   19 Jul 2005; David Holm <dholm@gentoo.org> siphon-666.ebuild:
   Added to ~ppc.
