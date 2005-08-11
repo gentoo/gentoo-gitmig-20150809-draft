@@ -1,13 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.1 2005/08/08 02:57:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.2 2005/08/11 06:19:16 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
 # This eclass is designed to reduce code duplication in the modularized X11
 # ebuilds.
+#
+# If the ebuild installs fonts, set FONT="yes" at the top and set FONT_DIRS to
+# the subdirectories within /usr/share/fonts to which it installs fonts.
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst
 
 inherit eutils
 
@@ -108,4 +111,107 @@ x-modular_src_install() {
 # einstall forces datadir, so we need to re-force it
 #		datadir=${XDIR}/share \
 #		mandir=${XDIR}/share/man \
+}
+
+x-modular_pkg_postinst() {
+	if [[ -n "${FONT}" ]]; then
+		setup_fonts
+	fi
+}
+
+setup_fonts() {
+	if [[ ! -n "${FONT_DIRS}" ]]; then
+		msg="FONT_DIRS empty. Set it to at least one subdir of /usr/share/fonts."
+		eerror ${msg}
+		die ${msg}
+	fi
+
+	create_fonts_scale
+	create_fonts_dir
+	fix_font_permissions
+	create_font_cache
+}
+
+create_fonts_scale() {
+	ebegin "Creating fonts.scale files"
+		local x
+		for FONT_DIR in ${FONT_DIRS}; do
+			x=${ROOT}/usr/share/fonts/${FONT_DIR}
+			[ -z "$(ls ${x}/)" ] && continue
+			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
+
+			# Only generate .scale files if truetype, opentype or type1
+			# fonts are present ...
+
+			# First truetype (ttf,ttc)
+			# NOTE: ttmkfdir does NOT work on type1 fonts (#53753)
+			# Also, there is no way to regenerate Speedo/CID fonts.scale
+			# <spyderous@gentoo.org> 2 August 2004
+			if [ "${x/encodings}" = "${x}" -a \
+				-n "$(find ${x} -iname '*.tt[cf]' -print)" ]; then
+				if [ -x ${ROOT}/usr/bin/ttmkfdir ]; then
+					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
+					${ROOT}/usr/bin/ttmkfdir -x 2 \
+						-e ${ROOT}/usr/share/fonts/encodings/encodings.dir \
+						-o ${x}/fonts.scale -d ${x}
+					# ttmkfdir fails on some stuff, so try mkfontscale if it does
+					local ttmkfdir_return=$?
+				else
+					# We didn't use ttmkfdir at all
+					local ttmkfdir_return=2
+				fi
+				if [ ${ttmkfdir_return} -ne 0 ]; then
+					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
+					${ROOT}/usr/bin/mkfontscale \
+						-a /usr/share/fonts/encodings/encodings.dir \
+						-- ${x}
+				fi
+			# Next type1 and opentype (pfa,pfb,otf,otc)
+			elif [ "${x/encodings}" = "${x}" -a \
+				-n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]; then
+				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
+				${ROOT}/usr/bin/mkfontscale \
+					-a ${ROOT}/usr/share/fonts/encodings/encodings.dir \
+					-- ${x}
+			fi
+		done
+	eend 0
+}
+
+create_fonts_dir() {
+	ebegin "Generating fonts.dir files"
+		for FONT_DIR in ${FONT_DIRS}; do
+			x=${ROOT}/usr/share/fonts/${FONT_DIR}
+			[ -z "$(ls ${x}/)" ] && continue
+			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
+
+			if [ "${x/encodings}" = "${x}" ]; then
+				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
+				${ROOT}/usr/bin/mkfontdir \
+					-e ${ROOT}/usr/share/fonts/encodings \
+					-e ${ROOT}/usr/share/fonts/encodings/large \
+					-- ${x}
+			fi
+		done
+	eend 0
+}
+
+fix_font_permissions() {
+	ebegin "Fixing permissions"
+		for FONT_DIR in ${FONT_DIRS}; do
+			find ${ROOT}/usr/share/fonts/${FONT_DIR} -type f -name 'font.*' \
+				-exec chmod 0644 {} \;
+		done
+	eend 0
+}
+
+create_font_cache() {
+	# danarmak found out that fc-cache should be run AFTER all the above
+	# stuff, as otherwise the cache is invalid, and has to be run again
+	# as root anyway
+	if [ -x ${ROOT}/usr/bin/fc-cache ]; then
+		ebegin "Creating FC font cache"
+			HOME="/root" ${ROOT}/usr/bin/fc-cache
+		eend 0
+	fi
 }
