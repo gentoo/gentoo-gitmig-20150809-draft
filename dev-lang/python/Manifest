@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5d44cc06438212c3b7db9fe19b425b33 python-2.3.4-r1.ebuild 7190
 MD5 8145ce0144332d6caca98fa5fb648741 metadata.xml 221
 MD5 1b748e39af2b31c2d4eaf7112c05fdd0 python-2.3.5.ebuild 7732
@@ -55,3 +58,10 @@ MD5 2b953054102d344834597bc73b209e12 files/python-2.4-disable_modules_and_ssl.pa
 MD5 5af982af8ad4befbf15567ae399cf2b9 files/python-2.4.1-st_flags.patch 5649
 MD5 849ff6337b70ef28009c90021dfae0da files/digest-python-2.3.5-r1 66
 MD5 07398060a831f18193315973df204cbf files/python-2.2.3-gentoo_py_dontcompile.patch 732
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+r3cgIKl8Uu19MoRAoMiAJ90xOxvfGunUfgypsjf9zt6k7L23ACfX5xX
+uC+P7pQG4QR1tWLRubD2hEk=
+=ziTi
+-----END PGP SIGNATURE-----

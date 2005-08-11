@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1-r1.ebuild,v 1.3 2005/07/19 20:38:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1-r1.ebuild,v 1.4 2005/08/11 02:53:43 vapier Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
 #   in dev-lang/python. It _WILL_ stop people installing from
 #   Gentoo 1.4 images.
 
-inherit eutils flag-o-matic python multilib versionator
+inherit eutils flag-o-matic python multilib versionator toolchain-funcs
 
 # we need this so that we don't depends on python.eclass
 PYVER_MAJOR=$(get_major_version)
@@ -74,10 +74,15 @@ src_unpack() {
 		Makefile.pre.in \
 		Modules/Setup.dist \
 		Modules/getpath.c \
-		setup.py
+		setup.py || die
 
 	# add support for struct stat st_flags attribute (bug 94637)
 	epatch ${FILESDIR}/python-2.4.1-st_flags.patch
+
+	if tc-is-cross-compiler ; then
+		epatch "${FILESDIR}"/python-2.4.1-bindir-libdir.patch
+		epatch "${FILESDIR}"/python-2.4.1-crosscompile.patch
+	fi
 }
 
 src_configure() {
@@ -101,6 +106,8 @@ src_configure() {
 		export PYTHON_DISABLE_MODULES
 		echo $PYTHON_DISABLE_MODULES
 	fi
+
+	
 }
 
 src_compile() {
@@ -133,7 +140,22 @@ src_compile() {
 
 	src_configure
 
-	econf --with-fpectl \
+	if tc-is-cross-compiler ; then
+		OPT="-O1" LDFLAGS="" \
+		./configure --with-cxx=no || die "cross-configure failed"
+		emake python Parser/pgen || die "cross-make failed"
+		mv python hostpython
+		mv Parser/pgen Parser/hostpgen
+		make distclean
+		sed -i \
+			-e '/^HOSTPYTHON/s:=.*:=./hostpython:' \
+			-e '/^HOSTPGEN/s:=.*:=./Parser/hostpgen:' \
+			Makefile.pre.in || die
+	fi
+
+	tc-export CXX
+	econf \
+		--with-fpectl \
 		--enable-shared \
 		`use_enable ipv6` \
 		--infodir='${prefix}'/share/info \
