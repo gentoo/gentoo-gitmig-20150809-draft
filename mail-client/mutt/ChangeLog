@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.54 2005/08/11 23:28:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.55 2005/08/11 23:46:31 agriffis Exp $
+
+  11 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/mutt-1.5.9-sasl.patch, mutt-1.5.9.ebuild:
+  Fix configure.in to work correctly when --without-sasl is specified
 
   11 Aug 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.5.9.ebuild:
   Disable sasl unless pop or imap is specified; it's the same as ssl or gnutls

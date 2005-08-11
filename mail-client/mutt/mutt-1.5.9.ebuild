@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.4 2005/08/11 23:28:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.5 2005/08/11 23:46:31 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -51,7 +51,8 @@ RDEPEND="nls? ( sys-devel/gettext )
 	gpgme?   ( >=app-crypt/gpgme-0.9.0 )"
 DEPEND="${RDEPEND}
 	net-mail/mailbase
-	!vanilla? ( sys-devel/automake sys-devel/autoconf )"
+	sys-devel/autoconf
+	!vanilla? ( sys-devel/automake )"
 
 pkg_setup() {
 	if ! use imap; then
@@ -64,6 +65,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P}i.tar.gz && cd ${S} || die "unpack failed"
+
+	# fix sasl support in configure.in
+	epatch ${FILESDIR}/mutt-1.5.9-sasl.patch
 
 	# disable sgml conversion since it fails with sgml2html
 	epatch ${FILESDIR}/mutt-1.5.9-nodoc.patch
@@ -85,8 +89,9 @@ src_unpack() {
 		autoheader						|| die "autoheader failed"
 		emake -C m4 -f Makefile.am.in	|| die "emake in m4 failed"
 		automake --foreign				|| die "automake failed"
-		WANT_AUTOCONF=2.13 autoconf		|| die "autoconf failed"
 	fi
+
+	WANT_AUTOCONF=2.13 autoconf		|| die "autoconf failed"
 }
 
 src_compile() {
