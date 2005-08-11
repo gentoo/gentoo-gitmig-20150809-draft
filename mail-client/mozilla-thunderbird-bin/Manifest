@@ -1,6 +1,16 @@
-MD5 8fee3f7aac9183f4a4af9d53492d8a4e mozilla-thunderbird-bin-1.0.6-r3.ebuild 2017
-MD5 e9d32c02eeae4acf4e4db9658b2bbd3f ChangeLog 8316
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4ebd24c75bcb24e588402bc60738b6e0 ChangeLog 8482
+MD5 65b5c50d24e74c92313bea84617a363f mozilla-thunderbird-bin-1.0.6-r3.ebuild 2038
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 aff32f49defdbb72570cd9a4a4a992e6 files/digest-mozilla-thunderbird-bin-1.0.6-r3 71
-MD5 a622df770b03edce7d158cfe97e8e315 files/icon/mozillathunderbird-bin.desktop 205
 MD5 04115f0e204444eac76a092a63c89027 files/icon/mozillathunderbird-bin-icon.png 6499
+MD5 a622df770b03edce7d158cfe97e8e315 files/icon/mozillathunderbird-bin.desktop 205
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+7TLj5H05b2HAEkRAv4QAJ4+iu/skIrzI2NSvWenOa2XjR+eWgCghWr3
+c60KEqriUBv25Gj0iTsM6SI=
+=eH6c
+-----END PGP SIGNATURE-----
