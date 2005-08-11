@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.5-r1.ebuild,v 1.3 2005/08/11 09:01:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.5-r1.ebuild,v 1.4 2005/08/11 09:24:42 mrness Exp $
 
 inherit eutils
 
@@ -19,12 +19,7 @@ IUSE="ipv6 snmp pam tcpmd5 ospfapi"
 DEPEND="virtual/libc
 	sys-devel/binutils
 	sys-apps/iproute2
-	>=sys-libs/libcap-1.10-r3
-	!sys-apps/zebra
-	!sys-apps/zebra-ag-svn
-	!sys-apps/zebra-pj-cvs
-	!sys-apps/quagga-ag-svn-HEAD
-	!sys-apps/quagga-svn-HEAD"
+	>=sys-libs/libcap-1.10-r3"
 
 [ -z "${QUAGGA_USER_NAME}" ] && QUAGGA_USER_NAME="quagga"
 [ -z "${QUAGGA_USER_UID}" ] && QUAGGA_USER_UID=441

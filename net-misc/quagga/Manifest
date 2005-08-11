@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 146b8f23689e6b06ef9f7438b2613c24 quagga-0.98.3.ebuild 4890
-MD5 734d8c380149476d5c89f42c486ddde0 quagga-0.98.2.ebuild 4497
+MD5 2e39f787e70f8458c33f4e466c0b402b quagga-0.98.3.ebuild 4873
+MD5 d3ac8b32068063940d926c4af56f7bba quagga-0.98.2.ebuild 4480
 MD5 803658ee40a8ee409d3c1bab569c879d ChangeLog 7503
 MD5 9154e06a6ca2295029fbc3aa6201ffc8 quagga-0.98.4.ebuild 4221
 MD5 f0c8f9afaf3bbefcea71ff3b6fa139c4 metadata.xml 1389
-MD5 2173d77501bdf2b9f0f8eb9220fa9399 quagga-0.96.5-r1.ebuild 3960
+MD5 bf40271e4eafd69744cc6b8143733f88 quagga-0.96.5-r1.ebuild 3838
 MD5 1a1df9fb95d48001187e1f56dc4ff5e5 files/digest-quagga-0.98.2 66
 MD5 ab93cbbeeed343892eea7f9b79217a8b files/digest-quagga-0.98.3 66
 MD5 8550c2f78b4c3ba7ba66c6bcb0bf4913 files/digest-quagga-0.98.4 147
@@ -28,7 +28,7 @@ MD5 e70bf25e2ca5f76efb2c5704234ccc1f files/patches-0.98.3/ht-20040304-classless-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC+xRENSP4Vda7IdsRApeyAJwMn7ygKLZo3W4sK3NV2t2F0HgZ+wCeN1Sa
-a8tazv3YNuc0l7w3aVijQHw=
-=UbQ7
+iD8DBQFC+xmwNSP4Vda7IdsRAmfCAJ40R6jL2syy1qKhlVU2zjsiPUntXgCeIOZz
+ZUhcx7/2aAmkmBOJzC7RxU4=
+=n+Am
 -----END PGP SIGNATURE-----
