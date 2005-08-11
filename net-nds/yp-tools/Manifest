@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 60eb46a0a8d8490c6a079f957fb8b9cc ChangeLog 3442
+MD5 baf865387d7f3904004b9e5e7c5714b4 ChangeLog 3614
 MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
-MD5 2a106c26c00335716cb0d8c335f36300 yp-tools-2.8.ebuild 1129
-MD5 84d90792e6ff3091557f17461fd5fdb4 yp-tools-2.8-r1.ebuild 1231
+MD5 f214fe37166c2604510b090d8d9a2b4b yp-tools-2.9.ebuild 1233
+MD5 3e446e851fbeff94083ad904a5d58c58 yp-tools-2.8.ebuild 1135
+MD5 1f0bec60d1c160be989724b21a3529d3 yp-tools-2.8-r1.ebuild 1235
+MD5 93170676c0bf84aab49b3c165d603ed8 files/digest-yp-tools-2.9 65
 MD5 2b599af2b4904c58b39a22d7043d4de0 files/digest-yp-tools-2.8 65
 MD5 dc93b4cab3c4ad02f965961251138248 files/yp-tools-2.8-bsd.patch 2245
 MD5 2b599af2b4904c58b39a22d7043d4de0 files/digest-yp-tools-2.8-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCd+NxArHZZzCEUG0RArjDAJ9sXcoWBepXtllKSCc9RNJNfcdnhgCfaH6u
-CZLi+Seh9adFN0Ebt17hEvM=
-=WUAb
------END PGP SIGNATURE-----

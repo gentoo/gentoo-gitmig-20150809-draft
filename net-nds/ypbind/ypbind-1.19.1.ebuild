@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2-r1.ebuild,v 1.9 2005/08/11 18:22:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.19.1.ebuild,v 1.1 2005/08/11 18:22:34 eradicator Exp $
 
 MY_P=${PN}-mt-${PV}
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Multithreaded NIS bind service (ypbind-mt)"
 HOMEPAGE="http://www.linux-nis.org/nis/ypbind-mt/index.html"
-SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/OLD/${MY_P}.tar.bz2"
+SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls slp"
 
 RDEPEND="slp? ( net-libs/openslp )

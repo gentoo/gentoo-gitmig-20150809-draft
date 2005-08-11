@@ -1,6 +1,18 @@
-MD5 5e9c444db6f43b6bfc6f2a7c73c0e000 ChangeLog 4225
-MD5 84f05ded26e2d0edba3d174d21c5b7dd ypbind-1.17.2-r1.ebuild 1249
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e4f6342539c17ff5191b86adb79d726c ChangeLog 4396
 MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
+MD5 c790f529fb5b830124b4acb432a42847 ypbind-1.17.2-r1.ebuild 1256
+MD5 b826fd6315b096d55b70ca0fa18bb77a ypbind-1.19.1.ebuild 1256
+MD5 abf5b898fdb40aee7909eb21402b8b16 files/digest-ypbind-1.17.2-r1 69
 MD5 c5aee6bd628cd668314e4879a2cad696 files/ypbind.confd-r1 112
 MD5 4a8f16abe013d049df327a1495db254c files/ypbind.initd 887
-MD5 abf5b898fdb40aee7909eb21402b8b16 files/digest-ypbind-1.17.2-r1 69
+MD5 7454d3d1218b8d4ca8dc5e06a6925f7f files/digest-ypbind-1.19.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+5eJArHZZzCEUG0RAvWYAJ4oglrH+5HiclHokPzy0/iF/5G2/QCfedw1
+NZgfSq6qvs8H9xYWF3j2xZ4=
+=UKf5
+-----END PGP SIGNATURE-----
