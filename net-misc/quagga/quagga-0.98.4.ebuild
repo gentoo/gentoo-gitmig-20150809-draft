@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.2.ebuild,v 1.6 2005/08/11 09:01:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.4.ebuild,v 1.1 2005/08/11 09:01:32 mrness Exp $
 
 inherit eutils
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
-SRC_URI="http://www.quagga.net/download/${P}.tar.gz"
+SRC_URI="http://www.quagga.net/download/${P}.tar.gz
+	mirror://gentoo/${P}-patches-20050811.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ppc ~sparc x86"
-IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
+IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi realms"
 
-RDEPEND="!net-misc/zebra
-	sys-apps/iproute2
+RDEPEND="sys-apps/iproute2
 	sys-libs/libcap
 	snmp? ( net-analyzer/net-snmp )
 	pam? ( sys-libs/pam )"
@@ -22,41 +22,18 @@ DEPEND="${RDEPEND}
 	virtual/libc
 	sys-devel/binutils"
 
-# TCP MD5 for BGP patch for Linux (RFC 2385) 
-MD5_PATCH="ht-20050110-0.98.0-bgp-md5.patch"
-# http://hasso.linux.ee/quagga/ht-20050110-0.98.0-bgp-md5.patch
-
-# Classless prefixes for BGP
-CLASSLESS_PATCH="ht-20040304-classless-bgp.patch"
-# http://hasso.linux.ee/quagga/pending-patches/ht-20040304-classless-bgp.patch
-
-# Connected route fix (Amir)
-CONNECTED_PATCH="amir-connected-route.patch"
-# http://voidptr.sboost.org/quagga/amir-connected-route.patch.bz2
-
-[ -z "${QUAGGA_USER_NAME}" ] && QUAGGA_USER_NAME="quagga"
-[ -z "${QUAGGA_USER_UID}" ] && QUAGGA_USER_UID="-1"
-[ -z "${QUAGGA_GROUP_NAME}" ] && QUAGGA_GROUP_NAME="quagga"
-#[ -z "${QUAGGA_GROUP_GID}" ] && QUAGGA_GROUP_GID=""
-[ -z "${QUAGGA_VTYGROUP}" ] && QUAGGA_VTYGROUP="quagga"
-[ -z "${QUAGGA_USER_SH}" ] && QUAGGA_USER_SH="/bin/false"
-[ -z "${QUAGGA_USER_HOMEDIR}" ] && QUAGGA_USER_HOMEDIR=/var/empty
-[ -z "${QUAGGA_USER_GROUPS}" ] && QUAGGA_USER_GROUPS=${QUAGGA_GROUP_NAME}
-[ -z "${QUAGGA_STATEDIR}" ] && QUAGGA_STATEDIR=/var/run/quagga
-
-pkg_preinst() {
-	enewgroup ${QUAGGA_GROUP_NAME} ${QUAGGA_GROUP_GID}
-	enewuser ${QUAGGA_USER_NAME} ${QUAGGA_USER_UID} ${QUAGGA_USER_SH} ${QUAGGA_USER_HOMEDIR} ${QUAGGA_USER_GROUPS}
-}
-
 src_unpack() {
 	unpack ${A} || die "failed to unpack sources"
 
 	cd ${S} || die "source dir not found"
-	use tcpmd5 && epatch ${FILESDIR}/patches-${PV}/${MD5_PATCH}
-	use bgpclassless && epatch ${FILESDIR}/patches-${PV}/${CLASSLESS_PATCH}
-	# non-upstream connected route patch
-	epatch ${FILESDIR}/patches-${PV}/${CONNECTED_PATCH}
+	# TCP MD5 for BGP patch for Linux (RFC 2385) - http://hasso.linux.ee/quagga/ht-20050110-0.98.0-bgp-md5.patch
+	use tcpmd5 && epatch "${WORKDIR}/patch/ht-20050110-0.98.0-bgp-md5.patch"
+	# Classless prefixes for BGP - http://hasso.linux.ee/quagga/pending-patches/ht-20040304-classless-bgp.patch
+	use bgpclassless && epatch "${WORKDIR}/patch/ht-20040304-classless-bgp.patch"
+	# Connected route fix (Amir) - http://voidptr.sboost.org/quagga/amir-connected-route.patch.bz2
+	epatch "${WORKDIR}/patch/amir-connected-route.patch"
+	# Realms support (Calin Velea) - http://vcalinus.gemenii.ro/quaggarealms.html
+	use realms && epatch "${WORKDIR}/patch/${P}-realms.diff"
 }
 
 src_compile() {
@@ -76,18 +53,19 @@ src_compile() {
 	use snmp && myconf="${myconf} --enable-snmp"
 	use pam && myconf="${myconf} --with-libpam"
 	use tcpmd5 && myconf="${myconf} --enable-tcp-md5"
+	use realms && myconf="${myconf} --enable-realms"
 
 	econf \
 		--enable-tcp-zebra \
 		--enable-nssa \
-		--enable-user=${QUAGGA_USER_NAME} \
-		--enable-group=${QUAGGA_GROUP_NAME} \
-		--enable-vty-group=${QUAGGA_VTYGROUP} \
+		--enable-user=quagga \
+		--enable-group=quagga \
+		--enable-vty-group=quagga \
 		--with-cflags="${CFLAGS}" \
 		--enable-vtysh \
 		--sysconfdir=/etc/quagga \
 		--enable-exampledir=/etc/quagga/samples \
-		--localstatedir=${QUAGGA_STATEDIR} \
+		--localstatedir=/var/run/quagga \
 		--libdir=/usr/lib/quagga \
 		${myconf} \
 		|| die "configure failed"
@@ -96,7 +74,7 @@ src_compile() {
 
 src_install() {
 	einstall \
-		localstatedir=${D}/${QUAGGA_STATEDIR} \
+		localstatedir=${D}/var/run/quagga \
 		sysconfdir=${D}/etc/quagga \
 		exampledir=${D}/etc/quagga/samples \
 		libdir=${D}/usr/lib/quagga || die "make install failed"
@@ -119,13 +97,27 @@ src_install() {
 	newenvd ${FILESDIR}/quagga.env 99quagga
 }
 
+pkg_preinst() {
+	enewgroup quagga
+	enewuser quagga -1 -1 /var/empty quagga
+}
+
 pkg_postinst() {
 	# empty dir for pid files for the new priv separation auth
 	#set proper owner/group/perms even if dir already existed
-	install -d -m0770 -o root -g ${QUAGGA_GROUP_NAME} ${ROOT}/etc/quagga
-	install -d -m0755 -o ${QUAGGA_USER_NAME} -g ${QUAGGA_GROUP_NAME} ${ROOT}/var/run/quagga
+	install -d -m0770 -o root -g quagga ${ROOT}/etc/quagga
+	install -d -m0755 -o quagga -g quagga ${ROOT}/var/run/quagga
 
 	einfo "Sample configuration files can be found in /etc/quagga/samples."
 	einfo "You have to create config files in /etc/quagga before"
 	einfo "starting one of the daemons."
+
+	if use ipv6; then
+		echo
+		ewarn "This version of quagga contains a netlink race condition fix that triggered a kernel bug"
+		ewarn "which affects IPv6 users who have a kernel version < 2.6.13-rc6."
+		ewarn "See following links for more info:"
+		ewarn "   http://lists.quagga.net/pipermail/quagga-dev/2005-June/003507.html"
+		ewarn "   http://bugzilla.quagga.net/show_bug.cgi?id=196"
+	fi
 }

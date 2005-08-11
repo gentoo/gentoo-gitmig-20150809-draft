@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.3.ebuild,v 1.1 2005/06/15 19:45:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.3.ebuild,v 1.2 2005/08/11 09:01:32 mrness Exp $
 
 inherit eutils
 
@@ -125,7 +125,16 @@ pkg_postinst() {
 	install -d -m0770 -o root -g ${QUAGGA_GROUP_NAME} ${ROOT}/etc/quagga
 	install -d -m0755 -o ${QUAGGA_USER_NAME} -g ${QUAGGA_GROUP_NAME} ${ROOT}/var/run/quagga
 
-	einfo "Sample configuration files can be found in /etc/quagga/sample."
+	einfo "Sample configuration files can be found in /etc/quagga/samples."
 	einfo "You have to create config files in /etc/quagga before"
 	einfo "starting one of the daemons."
+
+	if use ipv6; then
+		echo
+		ewarn "This version of quagga contains a netlink race condition fix that triggered a kernel bug"
+		ewarn "which affects IPv6 users who have a kernel version < 2.6.13-rc6."
+		ewarn "See following links for more info:"
+		ewarn "   http://lists.quagga.net/pipermail/quagga-dev/2005-June/003507.html"
+		ewarn "   http://bugzilla.quagga.net/show_bug.cgi?id=196"
+	fi
 }
