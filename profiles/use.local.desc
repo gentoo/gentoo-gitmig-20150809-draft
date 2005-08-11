@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1382 2005/08/11 03:46:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1383 2005/08/11 17:10:37 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -418,11 +418,15 @@ mail-client/mail-notification:gmailtimestamps - Enable support for Gmail timesta
 mail-client/mozilla-thunderbird:mozcalendar - Enable build in calendar (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
+mail-client/mutt:gpgme - Enable support for gpgme
 mail-client/mutt:nntp - Adds support for nntp via patch
+mail-client/mutt:pop - Enable support for pop
+mail-client/mutt:smime - Enable support for smime
 mail-client/muttng:gpgme - Enable support for gpgme
 mail-client/muttng:idn - Enable support for Internalized Domain Names
 mail-client/muttng:nntp - Enable support for nntp
 mail-client/muttng:pop - Enable support for pop
+mail-client/muttng:smime - Enable support for smime
 mail-client/muttng:smtp - Enable support for smtp
 mail-client/nail:net - Enable network (thus enabling SMTP, IMAP and POP3)
 mail-client/pine:largeterminal - Add support for large terminals by doubling the size of pine's internal display buffer
