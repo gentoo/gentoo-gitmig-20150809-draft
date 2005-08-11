@@ -1,3 +1,6 @@
-MD5 7f644a2b56730a7f3ba15ab294c17fe2 ChangeLog 456
+MD5 fd0d5efe6df28b566c569bcab1f62ce9 ChangeLog 688
+MD5 fa397b8a906e39b05cef63b1413cd561 xinit-0.99.0-r1.ebuild 476
 MD5 d479f76a0cb01178c23538f2164bb773 xinit-0.99.0.ebuild 407
 MD5 a2cf0fce1909bbe52e7485c8143baf66 files/digest-xinit-0.99.0 64
+MD5 8d14d094be7182b9870a0727a5d8e87b files/nolisten-tcp-and-black-background.patch 381
+MD5 a2cf0fce1909bbe52e7485c8143baf66 files/digest-xinit-0.99.0-r1 64
