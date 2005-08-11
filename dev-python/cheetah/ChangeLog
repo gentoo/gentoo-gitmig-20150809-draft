@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.16 2005/06/16 14:45:12 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.17 2005/08/11 01:07:29 metalgod Exp $
+
+  11 Aug 2005; Luis Medinas <metalgod@gentoo.org> cheetah-0.9.17.ebuild:
+  Added ~amd64 keywords. Closes bug #102045.
 
   16 Jun 2005; Rob Cakebread <pythonhead@gentoo.org> cheetah-0.9.17.ebuild:
   Examples were removed upstream, cleaned up doc installation

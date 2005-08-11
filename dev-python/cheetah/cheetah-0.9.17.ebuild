@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-0.9.17.ebuild,v 1.2 2005/06/16 14:45:12 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-0.9.17.ebuild,v 1.3 2005/08/11 01:07:29 metalgod Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cheetahtemplate.org/"
 SRC_URI="mirror://sourceforge/cheetahtemplate/${MY_P}.tar.gz"
 LICENSE="PSF-2.2"
 IUSE=""
-KEYWORDS="x86 sparc alpha ppc ppc-macos"
+KEYWORDS="alpha ~amd64 ppc ppc-macos sparc x86"
 SLOT="0"
 DEPEND=">=dev-lang/python-2.2"
 S=${WORKDIR}/${MY_P}
