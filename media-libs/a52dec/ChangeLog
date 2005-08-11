@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.39 2005/08/11 13:37:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.40 2005/08/11 14:36:58 sbriesen Exp $
+
+  11 Aug 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  files/a52dec-0.7.4-freebsd.patch:
+  changing absolute path to relative in freebsd.patch, if you're using a
+  non-standard portage-temp location, patching would fail.
 
   11 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   a52dec-0.7.4-r5.ebuild:
