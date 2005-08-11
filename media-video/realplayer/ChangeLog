@@ -1,6 +1,11 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.41 2005/07/12 16:59:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.42 2005/08/11 20:20:00 flameeyes Exp $
+
+  11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  realplayer-10.0.3.ebuild, realplayer-10.0.3-r1.ebuild,
+  realplayer-10.0.4.ebuild, realplayer-10.0.5.ebuild:
+  Call has_multilib_profile from pkg_setup instead of global scope.
 
   12 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
   realplayer-10.0.2.ebuild, realplayer-10.0.3.ebuild,

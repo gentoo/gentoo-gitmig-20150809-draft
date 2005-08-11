@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.3.ebuild,v 1.7 2005/07/12 16:59:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.3.ebuild,v 1.8 2005/08/11 20:20:00 flameeyes Exp $
 
 inherit nsplugins eutils rpm
 
@@ -25,10 +25,12 @@ RESTRICT="nostrip nomirror"
 
 S=${WORKDIR}/usr/local/${MY_PN}
 
-# This is a binary x86 package => ABI=x86
-# Please keep this in future versions
-# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
-has_multilib_profile && ABI="x86"
+pkg_setup() {
+	# This is a binary x86 package => ABI=x86
+	# Please keep this in future versions
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
+	has_multilib_profile && ABI="x86"
+}
 
 src_install() {
 	dodir /opt/${MY_PN}
