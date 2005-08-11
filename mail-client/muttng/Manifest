@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b7a4c835d5bac2b052ae57669a8249f9 muttng-20050809-r1.ebuild 4476
+MD5 a1323cc708cdb6b4b512c3539f941451 muttng-20050809-r1.ebuild 4495
 MD5 f46d05fe0172cb035a01f40d25242d30 metadata.xml 253
 MD5 c44b8bf6113f22a496a9bae47ae5289f muttng-20050317.ebuild 2741
 MD5 369f1a669b19445a49c3ac5af9b8d4dc ChangeLog 1946
@@ -15,7 +15,7 @@ MD5 04627fce26bec87a8f2ff9a601b92a3a files/digest-muttng-20050809-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC++BEBXaUFmZvwyMRAktrAJ0SvHO36lrjePjoIG/cSs3I/pZiVACg2I8y
-OOvqF9qxVwtPnf5ztsi37rg=
-=NeXE
+iD8DBQFC++XqBXaUFmZvwyMRAoAvAJ91l4JlINQmqYFDMlp1ixsc88cLdQCgzcXW
+sfM5Axs6NoHsZXwTqNeJFnA=
+=S6N5
 -----END PGP SIGNATURE-----

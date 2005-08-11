@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050809-r1.ebuild,v 1.3 2005/08/11 23:33:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050809-r1.ebuild,v 1.4 2005/08/11 23:57:18 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -69,6 +69,7 @@ src_compile() {
 		--with-regex \
 		--disable-fcntl --enable-flock --enable-nfs-fix \
 		--with-mixmaster \
+		--without-sasl \
 		--enable-external-dotlock"
 
 	# muttng prioritizes qdbm over gdbm, so we will too.
