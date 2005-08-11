@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.7 2005/01/01 11:58:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.8 2005/08/11 22:57:29 agriffis Exp $
 
 IUSE="cjk imap mbox nls slang ssl vanilla"
 
@@ -32,7 +32,6 @@ KEYWORDS="x86 ppc sparc alpha hppa ~mips"
 pkg_setup() {
 	if ! use imap; then
 		echo
-		einfo
 		einfo "NOTE: The USE variable 'imap' is not in your USE flags."
 		einfo "For imap support in mutt, you will need to restart the build with USE=imap"
 		echo
@@ -116,6 +115,8 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "The USE variable 'imap' is not set by default on most architectures."
-	einfo "To enable imap support in mutt, make sure you have USE=imap"
+	echo
+	einfo "For information about using mutt, please refer to:"
+	einfo "  http://www.gentoo.org/doc/en/guide-to-mutt.xml"
+	echo
 }

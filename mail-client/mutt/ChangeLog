@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.51 2005/08/11 22:48:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.52 2005/08/11 22:57:29 agriffis Exp $
+
+  11 Aug 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.4.2.1.ebuild,
+  mutt-1.5.8-r1.ebuild, mutt-1.5.8-r2.ebuild, mutt-1.5.9.ebuild:
+  Move imap warning to pkg_setup. Mention quick start guide in pkg_postinst
+  #77315
 
 *mutt-1.5.9 (11 Aug 2005)
 
