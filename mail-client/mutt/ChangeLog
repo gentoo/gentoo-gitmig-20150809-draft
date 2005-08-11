@@ -1,6 +1,19 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.50 2005/08/06 23:33:39 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.51 2005/08/11 22:48:36 agriffis Exp $
+
+*mutt-1.5.9 (11 Aug 2005)
+
+  11 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/muttng-20050809-nodoc.patch, +mutt-1.5.9.ebuild:
+  Bump to 1.5.9, finally!  This includes an update to the nntp patch, and stops
+  trying to use the non-existent auto_decode_patch.
+  
+  Sync with muttng ebuild:
+  - Honor gnutls, gpgme and pop USE-flags
+  - Don't try to build sgml docs
+  - Only use ssl when USE=pop or imap
+  - Disable header-caching unless USE=gdbm or berkdb
 
   06 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> mutt-1.5.8-r2.ebuild:
   Stable on mips.
