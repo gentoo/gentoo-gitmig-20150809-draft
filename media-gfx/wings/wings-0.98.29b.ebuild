@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/wings-0.98.29b.ebuild,v 1.1 2005/07/02 22:39:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/wings-0.98.29b.ebuild,v 1.2 2005/08/11 21:53:33 vapier Exp $
 
 DESCRIPTION="excellent 3D polygon mesh modeler"
 HOMEPAGE="http://www.wings3d.com/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/wings/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/erlang-9c
