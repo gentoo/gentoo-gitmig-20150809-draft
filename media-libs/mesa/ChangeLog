@@ -1,6 +1,26 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.18 2005/08/10 22:36:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.19 2005/08/11 17:38:36 fmccor Exp $
+
+  11 Aug 2005; Ferris McCormick <fmccor@gentoo.org> mesa-6.3.1.1.ebuild:
+  Following changes build a reunning libGL for sparc testing and set
+  a sane set of DRI drivers, depending on USE=dri flag:
+  1.	With dri, sparc assembly appears to be unusable.  This is because
+  	the build and directory structures have been changed so that the
+  	actual initialization code moves to the dri drivers themselves
+  	when sparc assembly is built.  Correcting this is nontrivial,
+  	because the glx build uses hard-defined source names and paths.
+  2.	With USE=dri, on sparc build only a subset of the full complement
+  	of drivers.  For now, DRI_DIRS = fb ffb mach64 mga radeon savage
+  3.  Without USE=dri, change the target to (generic) linux-sparc.  In
+  	this case, architecture is actually set by CFLAGS passed in to the
+  	configure target, and both glx-capable and stand-alone versions
+  	of libGL are built.
+  4.  For testing, and perhaps ultimately for performance, on sparc, unless
+  	USE=dri, do not fix_opengl_symlinks
+  With these changes in place,
+  LD_LIBRARY_PATH=<path-to-libGL>:<path-to-libGLU> some-libGL-program
+  works fine.
 
   10 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +files/fix-include-locations.patch, mesa-6.3.1.1.ebuild:

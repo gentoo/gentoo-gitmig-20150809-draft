@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.9 2005/08/10 22:36:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.10 2005/08/11 17:38:36 fmccor Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ SRC_URI="http://xorg.freedesktop.org/extras/${MY_P}.tar.gz
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~sparc ~x86"
-IUSE="motif"
+IUSE="dri motif"
 
 RDEPEND="dev-libs/expat
 	x11-libs/libX11
@@ -47,6 +47,16 @@ pkg_setup() {
 		CONFIG="linux-dri-x86-64"
 	elif use ppc; then
 		CONFIG="linux-dri-ppc"
+	elif use sparc; then
+		if use dri; then
+			## Is this best for sparc-dri????
+			einfo "Using generic skeleton for sparc dri"
+			CONFIG="linux-dri"
+		else
+			## Use generic sparc; CFLAGS will get the arch. options right.
+			einfo "Basing on generic-sparc, no dri, CFLAGS fix architecture"
+			CONFIG="linux-sparc"
+		fi
 	else
 		CONFIG="linux-dri"
 	fi
@@ -66,9 +76,30 @@ src_unpack() {
 	# Set up linux-dri configs
 	echo "OPT_FLAGS = ${CFLAGS}" >> ${HOSTCONF}
 	if use sparc; then
-		echo "ASM_FLAGS = -DUSE_SPARC_ASM" >> ${HOSTCONF}
-		echo "ASM_SOURCES = \$(SPARC_SOURCES) \$(SPARC_API)" >> ${HOSTCONF}
-		echo "DRIVER_DIRS = " >> ${HOSTCONF}
+		# Kill this; we don't want /usr/X11R6/lib ever to be searched in this
+		# build.
+		echo "EXTRA_LIB_PATH =" >> ${HOSTCONF}
+		 if use dri; then
+			 einfo "Set specific sparc dri drivers"
+		 	 echo "DRI_DIRS = fb ffb mach64 mga radeon savage" >> ${HOSTCONF}
+			 einfo "But if we do this, assembly support seems broken"
+			 # Kill it explicitly.
+			 echo "ASM_FLAGS =" >> ${HOSTCONF}
+			 echo "ASM_SOURCES =" >> ${HOSTCONF}
+		 else
+			 einfo "Not dri; kill DRI_DIRS (we build glx + standalone)"
+			 ## Not needed, most likely, because not used for this target.
+			 echo "DRI_DIRS =" >> ${HOSTCONF}
+			 echo "DRIVER_DIRS =" >> ${HOSTCONF}
+			 ##
+			 # This target tries to build lots of demos, which we don't need.
+			 echo "PROGRAM_DIRS = " >> ${HOSTCONF}
+			 einfo "And, we should be able to use the assembler code"
+			 einfo "But we can't because of mesa restructuring"
+			 # echo "ASM_FLAGS = -DUSE_SPARC_ASM" >> ${HOSTCONF}
+			 # echo "ASM_SOURCES = \$(SPARC_SOURCES) \$(SPARC_API)" >> ${HOSTCONF}
+			 ##
+		fi
 	fi
 	echo "CC = $(tc-getCC)" >> ${HOSTCONF}
 	echo "CXX = $(tc-getCXX)" >> ${HOSTCONF}
@@ -93,7 +124,13 @@ src_compile() {
 src_install() {
 	dodir /usr
 	make DESTDIR=${D}/usr install || die "Installation failed"
-	fix_opengl_symlinks
+	if use sparc; then
+		einfo "Check for sparc; keep old link unless we have a dri interface"
+		if use dri; then
+			einfo "Fixing links."
+			fix_opengl_symlinks
+		fi
+	fi
 	dynamic_libgl_install
 
 	# Install libtool archives
