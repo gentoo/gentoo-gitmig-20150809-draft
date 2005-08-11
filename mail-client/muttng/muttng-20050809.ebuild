@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050809.ebuild,v 1.2 2005/08/10 22:51:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050809.ebuild,v 1.3 2005/08/11 00:13:18 swegener Exp $
 
 inherit eutils
 
@@ -16,8 +16,8 @@ RDEPEND="nls? ( sys-devel/gettext )
 	idn?     ( net-dns/libidn )
 	qdbm?	 ( dev-db/qdbm )
 	!qdbm?	 (
-		gdbm?  ( sys-libs/gdbm ) 
-		!gdbm? ( berkdb? ( >=sys-libs/db-4 ) ) 
+		gdbm?  ( sys-libs/gdbm )
+		!gdbm? ( berkdb? ( >=sys-libs/db-4 ) )
 	)
 	smtp?    ( net-libs/libesmtp )
 	slang?   ( >=sys-libs/slang-1.4.2 )
