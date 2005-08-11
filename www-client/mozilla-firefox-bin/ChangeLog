@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.23 2005/08/02 14:53:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.24 2005/08/11 20:21:37 flameeyes Exp $
+
+  11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  mozilla-firefox-bin-1.0.6-r2.ebuild:
+  Call has_multilib_profile from pkg_setup instead of global scope.
 
 *mozilla-firefox-bin-1.0.6-r2 (02 Aug 2005)
 

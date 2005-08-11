@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.10-r1.ebuild,v 1.1 2005/08/02 14:50:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.10-r1.ebuild,v 1.2 2005/08/11 20:22:54 flameeyes Exp $
 
 inherit eutils mozilla-launcher multilib
 
@@ -30,10 +30,12 @@ RDEPEND="virtual/x11
 
 S=${WORKDIR}/mozilla
 
-# This is a binary x86 package => ABI=x86
-# Please keep this in future versions
-# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
-has_multilib_profile && ABI="x86"
+pkg_setup() {
+	# This is a binary x86 package => ABI=x86
+	# Please keep this in future versions
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
+	has_multilib_profile && ABI="x86"
+}
 
 src_install() {
 	declare MOZILLA_FIVE_HOME=/opt/mozilla
