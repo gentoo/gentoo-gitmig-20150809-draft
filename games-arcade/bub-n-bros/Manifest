@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 43184e36286a885992bfff6a538163f0 bub-n-bros-1.1.ebuild 1683
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 366991b420c4c2740e050008cc0b7a51 ChangeLog 938
 MD5 37372966f62c7ba6a5ea751469f1c031 files/bubnbros-server 45
 MD5 73a5fcc499ac4695104f1c74668cae54 files/digest-bub-n-bros-1.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC++W5mOfEJZHYOKcRAuQiAKCS1E4ZfCpVdvUZ2IizQo8HSeOBRwCcC393
+DyC/T2gqfccyCod9skYT9lM=
+=6Yfi
+-----END PGP SIGNATURE-----
