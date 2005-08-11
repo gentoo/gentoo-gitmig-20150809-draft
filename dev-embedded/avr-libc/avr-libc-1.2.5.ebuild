@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.2.5.ebuild,v 1.1 2005/08/03 23:40:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.2.5.ebuild,v 1.2 2005/08/11 21:47:23 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,7 +25,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export CC=avr-gcc
+	export CC=avr-gcc ABI=retarded
 	strip-flags
 	strip-unsupported-flags
 
