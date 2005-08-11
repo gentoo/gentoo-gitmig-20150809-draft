@@ -1,13 +1,23 @@
-MD5 f3c99192be77b1ca7a069bf099c53e57 ChangeLog 12985
-MD5 e23614bce2d1d77e7df6952b8f3244ca dillo-0.7.3-r7.ebuild 3061
-MD5 30eeb7fe4579a8864d7a1591810820ff dillo-0.8.4-r1.ebuild 3594
-MD5 efac901b41f4e799579c065e66d5d7ed dillo-0.8.4-r2.ebuild 3594
-MD5 ac234645770dda74d31500e237dd1c8a dillo-0.8.5-r1.ebuild 3609
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 37762f6bddfcecc84da47bef66268d43 dillo-0.8.5.ebuild 3622
 MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
-MD5 e257387d2c71e79a44b93b59e5240db3 files/digest-dillo-0.7.3-r7 226
-MD5 b86fffd43a8ba3b6791d459ad012a2e3 files/digest-dillo-0.8.4-r1 226
-MD5 cec29ab3305c35980bc16ecc1eac7b8d files/digest-dillo-0.8.4-r2 226
+MD5 30eeb7fe4579a8864d7a1591810820ff dillo-0.8.4-r1.ebuild 3594
+MD5 ec5377cfc986696c9a724995ed8a8e7f dillo-0.8.5-r1.ebuild 3607
+MD5 f3c99192be77b1ca7a069bf099c53e57 ChangeLog 12985
+MD5 efac901b41f4e799579c065e66d5d7ed dillo-0.8.4-r2.ebuild 3594
+MD5 e23614bce2d1d77e7df6952b8f3244ca dillo-0.7.3-r7.ebuild 3061
 MD5 deb91ab61005bccf824ad864ea0ea66a files/digest-dillo-0.8.5 142
-MD5 8114dfcae2f9f3437c043ed6953f219d files/digest-dillo-0.8.5-r1 226
 MD5 7750091e1346c986eeb58aef81297fd0 files/dillo-format-string-vulnerability.diff 787
+MD5 cec29ab3305c35980bc16ecc1eac7b8d files/digest-dillo-0.8.4-r2 226
+MD5 b86fffd43a8ba3b6791d459ad012a2e3 files/digest-dillo-0.8.4-r1 226
+MD5 8114dfcae2f9f3437c043ed6953f219d files/digest-dillo-0.8.5-r1 226
+MD5 e257387d2c71e79a44b93b59e5240db3 files/digest-dillo-0.7.3-r7 226
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+qoJgIKl8Uu19MoRAvaxAJ9+xas48JRupBPegNHI/RnsTNJWwQCfUM5o
+Qit3yrg+OT5nhxtD7YouS0Y=
+=frlZ
+-----END PGP SIGNATURE-----
