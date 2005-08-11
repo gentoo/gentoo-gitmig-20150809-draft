@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/needle/needle-1.2.1.ebuild,v 1.1 2005/08/10 15:22:38 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/needle/needle-1.2.1.ebuild,v 1.2 2005/08/11 09:58:06 dholm Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/5311/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 USE_RUBY="ruby18"
