@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/svk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.15 2005/08/03 14:07:21 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.16 2005/08/11 01:35:43 metalgod Exp $
+
+  11 Aug 2005; Luis Medinas <metalgod@gentoo.org> svk-1.01.ebuild:
+  Added ~amd64 keywords. Closes bug #100662.
 
 *svk-1.02 (03 Aug 2005)
 

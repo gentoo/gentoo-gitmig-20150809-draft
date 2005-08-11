@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.01.ebuild,v 1.2 2005/08/01 17:08:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.01.ebuild,v 1.3 2005/08/11 01:35:43 metalgod Exp $
 
 inherit eutils perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://svk.elixus.org/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SRC_TEST="do"
 IUSE="crypt"
 S=${WORKDIR}/${MP}
