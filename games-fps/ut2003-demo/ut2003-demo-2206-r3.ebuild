@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.8 2005/04/12 15:44:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.9 2005/08/11 11:59:42 r3pek Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="http://unreal.epicgames.com/linux/ut2003/ut2003demo-lnx-${PV}.sh.bin
 
 LICENSE="ut2003-demo"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 RESTRICT="nostrip"
 
