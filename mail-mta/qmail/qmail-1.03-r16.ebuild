@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.33 2005/08/10 22:16:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.34 2005/08/11 19:39:26 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -254,6 +254,9 @@ src_unpack() {
 	# Sort-of rewritten by hansmi@g.o, because the old patch was heavily broken
 	# (caused qmail-remote to segfault)
 	epatch ${FILESDIR}/${PVR}/virtual-domain-outgoing-IP-address.patch
+
+	# Fixes bug 101532
+	epatch ${FILESDIR}/${PVR}/qmail-remote-auth-log-fix.patch
 
 	# See bug #90631
 	if use logmail; then

@@ -1,0 +1,11 @@
+--- qmail-remote.c.orig	2005-08-11 21:35:35.000000000 +0200
++++ qmail-remote.c	2005-08-11 21:35:44.000000000 +0200
+@@ -672,7 +672,7 @@
+        * James Raftery <james@now.ie>
+        * Log _real_ envelope recipient, post canonicalisation.
+        */
+-      out("r"); out(auth_status.s);
++      out("r"); out("Delivered to ");
+       out("<"); outsafe(&reciplist.sa[i]); out("> "); zero();
+       flagbother = 1;
+     }
