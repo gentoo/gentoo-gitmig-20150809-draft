@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.3.0.ebuild,v 1.4 2005/05/07 13:58:39 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.8.1.ebuild,v 1.1 2005/08/11 22:30:32 dams Exp $
 
 DESCRIPTION="Static HTML photo album generator"
 HOMEPAGE="http://www.zarb.org/~gc/html/booh.html"
@@ -26,10 +26,15 @@ src_compile() {
 	fi
 	ruby setup.rb config
 	ruby setup.rb setup
+	cd ext
+	ruby extconf.rb
+	make
 }
 
 src_install() {
 	ruby setup.rb install --prefix="${D}"
-	dodoc AUTHORS INTERNALS README VERSION
+	cd ext
+	make install DESTDIR=${D} libdir=${D}/`ruby -rrbconfig -e "puts Config::CONFIG['sitelibdir']"` archdir=${D}/`ruby -rrbconfig -e "puts Config::CONFIG['sitearchdir']"`
+	cd ..
+	dodoc AUTHORS INTERNALS README VERSION THEMES
 }
-
