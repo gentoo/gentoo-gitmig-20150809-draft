@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4266 2005/08/10 05:19:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4267 2005/08/11 14:20:21 genone Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Marius Mauch <genone@gentoo.org> (11 Aug 2005)
+# yes, this is a new portage, but not with the long awaited new dep resolver
+# needs a lot of testing
+>=sys-apps/portage-2.1.0_alpha
 
 # Donnie Berkholz <spyderous@gentoo.org> (07 Aug 2005)
 # Modularized X, upstream release candidates
