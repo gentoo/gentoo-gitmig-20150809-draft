@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.7 2005/03/28 15:54:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.8 2005/08/11 20:21:39 flameeyes Exp $
 
 inherit nsplugins eutils
 
@@ -25,9 +25,11 @@ INSTALLDIR=/opt/Acrobat5
 
 S="${WORKDIR}/installers"
 
-# x86 binary package, ABI=x86
-# Danny van Dyk <kugelfang@gentoo.org> 2005/03/25
-has_multilib_profile && ABI="x86"
+pkg_setup() {
+	# x86 binary package, ABI=x86
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/25
+	has_multilib_profile && ABI="x86"
+}
 
 pkg_setup() {
 	if ! use noplugin ; then

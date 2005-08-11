@@ -1,6 +1,10 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.58 2005/08/04 22:50:16 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.59 2005/08/11 20:21:39 flameeyes Exp $
+
+  11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> acroread-5.10.ebuild,
+  acroread-7.0.0.2-r2.ebuild:
+  Call has_multilib_profile from pkg_setup instead of global scope.
 
   04 Aug 2005; Herbie Hopkins <herbs@gentoo.org> acroread-7.0.0.2-r2.ebuild:
   Don't disable security plugin on amd64 any more since we have openldap in

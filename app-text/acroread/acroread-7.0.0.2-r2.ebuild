@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.0.2-r2.ebuild,v 1.5 2005/08/04 22:50:16 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.0.2-r2.ebuild,v 1.6 2005/08/11 20:21:39 flameeyes Exp $
 
 inherit nsplugins eutils rpm versionator
 
@@ -32,9 +32,11 @@ INSTALLDIR=/opt/Acrobat7
 
 S=${WORKDIR}/usr/local/Adobe/Acrobat7.0
 
-# x86 binary package, ABI=x86
-# Danny van Dyk <kugelfang@gentoo.org> 2005/03/25
-has_multilib_profile && ABI="x86"
+pkg_setup() {
+	# x86 binary package, ABI=x86
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/25
+	has_multilib_profile && ABI="x86"
+}
 
 src_unpack() {
 	rpm_src_unpack
