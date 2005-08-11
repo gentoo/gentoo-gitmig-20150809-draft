@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r3.ebuild,v 1.2 2005/07/21 03:38:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p1-r3.ebuild,v 1.3 2005/08/11 18:09:57 robbat2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -116,6 +116,10 @@ src_install() {
 		cp ${ROOT}/etc/pbs_environment ${D}/etc/pbs_environment
 	else
 		touch ${D}/etc/pbs_environment
+	fi
+
+	if [ -f "${ROOT}/usr/spool/PBS/server_name" ]; then
+		cp "${ROOT}/usr/spool/PBS/server_name" "${D}/usr/spool/PBS/server_name"
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.17 2005/07/21 03:38:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.18 2005/08/11 18:09:57 robbat2 Exp $
+
+  11 Aug 2005; Robin H. Johnson <robbat2@gentoo.org>
+  torque-1.2.0_p1-r3.ebuild:
+  Preserve server_name where possible.
 
   21 Jul 2005; Robin H. Johnson <robbat2@gentoo.org>
   torque-1.2.0_p1-r3.ebuild:
