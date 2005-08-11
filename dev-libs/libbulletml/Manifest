@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2b2cbe6f1c6f0cb93896d0abe3c3b5d6 ChangeLog 690
-MD5 827ad560f5cb1c5762f82b78bd3a565b libbulletml-0.0.6.ebuild 832
+MD5 242c41e4c9d104da5cb277a7c739188c ChangeLog 808
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 a5b51fe1dc5fcb54adc39b505050a0a4 libbulletml-0.0.6.ebuild 830
 MD5 3d90babb5f0b30570ef23d7d253a8971 files/digest-libbulletml-0.0.6 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCso4KCHk4+ZoBpvsRAnSzAJ43KbZpIlV32UIT6RK9S1QpFwmw+ACeMuYc
-T9Vph+XgEVb18qda58nUurg=
-=SFfZ
------END PGP SIGNATURE-----

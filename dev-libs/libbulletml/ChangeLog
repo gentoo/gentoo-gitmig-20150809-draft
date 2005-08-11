@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbulletml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.4 2005/06/17 08:46:22 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.5 2005/08/11 12:01:55 r3pek Exp $
+
+  11 Aug 2005; Carlos Silva <r3pek@gentoo.org> libbulletml-0.0.6.ebuild:
+  marked stable on amd64. closes bug #102057
 
   17 Jun 2005; Tom Martin <slarti@gentoo.org> libbulletml-0.0.6.ebuild:
   Marked ~amd64.
