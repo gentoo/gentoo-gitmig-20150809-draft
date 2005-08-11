@@ -1,11 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-utopia-type1/font-adobe-utopia-type1-0.99.0.ebuild,v 1.2 2005/08/09 11:55:59 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-utopia-type1/font-adobe-utopia-type1-0.99.0.ebuild,v 1.3 2005/08/11 06:43:28 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
 
 inherit x-modular
+
+FONT="yes"
+FONT_DIRS="Type1"
 
 DESCRIPTION="BigReqs prototype headers"
 KEYWORDS="~sparc ~x86"

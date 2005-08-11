@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/font-misc-cyrillic
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-cyrillic/ChangeLog,v 1.3 2005/08/11 06:39:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-cyrillic/ChangeLog,v 1.4 2005/08/11 07:01:23 spyderous Exp $
+
+  11 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  font-misc-cyrillic-0.99.0.ebuild:
+  Update to use new x-modular.eclass setup code. See font-misc-misc ChangeLog
+  for more details.
 
   11 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   font-misc-cyrillic-0.99.0.ebuild:

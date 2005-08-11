@@ -1,11 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/font-bh-ttf-0.99.0.ebuild,v 1.2 2005/08/09 11:58:13 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/font-bh-ttf-0.99.0.ebuild,v 1.3 2005/08/11 06:48:31 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
 
 inherit x-modular
+
+FONT="yes"
+FONT_DIRS="TTF"
 
 DESCRIPTION="BigReqs prototype headers"
 KEYWORDS="~sparc ~x86"
