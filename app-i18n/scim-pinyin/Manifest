@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ee5b3ba6995dbc05e13f2aeaf561d4ec ChangeLog 525
+MD5 be23c5715143cc5f8968fbaef316b846 ChangeLog 656
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 819afeb8cde18460f4c6d8e5650c8623 scim-pinyin-0.5.90.ebuild 673
 MD5 9fa526e6799294ef009e520f0c836035 scim-pinyin-0.5.0.ebuild 656
 MD5 aaaf8119fc5aeda2f148f5c98eb12652 files/digest-scim-pinyin-0.5.0 70
+MD5 d1517eebf005461ac156da7eb59ceb20 files/digest-scim-pinyin-0.5.90 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCPou5VWNWqTUmv+0RAtVOAJ9xnCxXyQoybXQgYRPcnmoXA/WbwQCZAce+
-ZA44nVFTKI2oGGX+b0Jh0hQ=
-=t+1j
+iD8DBQFC+1e5VWNWqTUmv+0RAs3YAJ9UBotke/ISS0wF46fxSXO4drqd1gCeLf9G
+6LueByg0QhF6UzajElBW5UY=
+=GiZF
 -----END PGP SIGNATURE-----
