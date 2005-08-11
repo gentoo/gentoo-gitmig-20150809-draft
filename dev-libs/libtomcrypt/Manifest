@@ -4,13 +4,13 @@ Hash: SHA1
 MD5 8e170189f60a2ed2879b9deb471f2e07 metadata.xml 2276
 MD5 d758c166dff9d1c13ac809eb57aa9cd6 libtomcrypt-1.06.ebuild 1362
 MD5 6ec6c6e07cc0cea2dee8bb65a33553e0 libtomcrypt-1.03.ebuild 839
-MD5 c89207b44e24ff0ac1395bb636b92f1a ChangeLog 3052
+MD5 94089af27f074aad91131cf71abd1de5 ChangeLog 3005
 MD5 f863a72ed2f55307b4d3ae668e85da85 files/digest-libtomcrypt-1.06 183
 MD5 1056ea73584ca817d62fb0fc1d20630d files/digest-libtomcrypt-1.03 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+WVRgIKl8Uu19MoRAlVaAJ9I4liEBwRrwnTOUFLAqM/le41siACdG+f7
-DYnSbK6LV0JGwVAORQcbExc=
-=4EAn
+iD8DBQFC+q68gIKl8Uu19MoRAg38AJ9JxDb6eLYaS+OgxTbpFTflCFADCQCfRTjJ
+N8JT8X0Zfl4DsO2a2dW/6k4=
+=6Npq
 -----END PGP SIGNATURE-----
