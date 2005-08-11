@@ -1,0 +1,10 @@
+--- /var/tmp/portage/unionfs-1.0.13/work/unionfs-1.0.13/xattr.c	2005-07-22 19:16:48.000000000 +0200
++++ ../xattr.c	2005-08-04 15:24:16.543918797 +0200
+@@ -133,7 +133,6 @@
+ 				/* Call the ioctl function */
+ 				err =
+ 				    unionfs_ioctl_delbranch(dentry->d_inode,
+-							    NULL,
+ 							    UNIONFS_IOCTL_DELBRANCH,
+ 							    ival);
+ 				goto out;

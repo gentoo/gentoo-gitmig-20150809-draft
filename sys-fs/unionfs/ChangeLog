@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.13 2005/05/18 10:53:22 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.14 2005/08/11 08:59:26 genstef Exp $
+
+*unionfs-1.0.13 (11 Aug 2005)
+
+  11 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
+  -files/unionfs-1.0.12a-amd64.patch,
+  +files/unionfs-1.0.13-delbranch-fix.patch, unionfs-1.0.12a.ebuild,
+  +unionfs-1.0.13.ebuild:
+  Version bump thanks to Hakan Tandogan <hakan@gurkensalat.com> in bug 101324
 
 *unionfs-1.0.12a (18 May 2005)
 
