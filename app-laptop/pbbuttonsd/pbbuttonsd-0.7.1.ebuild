@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.1.ebuild,v 1.2 2005/08/11 00:59:09 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.1.ebuild,v 1.3 2005/08/11 02:03:50 swegener Exp $
 
 inherit eutils linux-info
 
@@ -52,7 +52,7 @@ pkg_postinst() {
 		ewarn "pbbuttonsd won't work."
 	fi
 
-	if use ppc; then 
+	if use ppc; then
 	einfo
 	einfo "This version of pbbuttonsd can replace PMUD functionality."
 	einfo "If you want PMUD installed and running, you should set"
