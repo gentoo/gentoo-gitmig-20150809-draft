@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.19.ebuild,v 1.3 2005/07/10 20:08:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.19.ebuild,v 1.4 2005/08/11 00:55:15 metalgod Exp $
 
 IUSE="gtk"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://sancho-gui.sourceforge.net/"
 SRC_URI="gtk? ( http://sancho-gui.sourceforge.net/tmp/${MY_P}-linux-gtk.tar.bz2 )
 	!gtk? ( http://sancho-gui.sourceforge.net/tmp/${MY_P}-linux-fox.tar.bz2 )"
 
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="CPL-1.0 LGPL-2.1"
 
