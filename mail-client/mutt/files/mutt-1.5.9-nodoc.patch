@@ -1,0 +1,11 @@
+--- mutt-1.5.9/doc/Makefile.in.nosgml	2005-02-15 14:28:24.000000000 -0500
++++ mutt-1.5.9/doc/Makefile.in	2005-08-11 19:17:29.210073879 -0400
+@@ -63,7 +63,7 @@
+ 	ChangeLog.old					\
+ 	README NEWS TODO README.SECURITY README.SSL 
+ 
+-all: muttrc.man try-html try-txt
++all: muttrc.man
+ 
+ try-html: ../makedoc
+ 	test -f manual.html || $(MAKE) manual.html || cp $(srcdir)/manual*.html ./

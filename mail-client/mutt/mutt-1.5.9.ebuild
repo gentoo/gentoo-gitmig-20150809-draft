@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.2 2005/08/11 22:57:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.3 2005/08/11 23:22:39 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -65,7 +65,7 @@ src_unpack() {
 	unpack ${P}i.tar.gz && cd ${S} || die "unpack failed"
 
 	# disable sgml conversion since it fails with sgml2html
-	epatch ${FILESDIR}/muttng-20050809-nodoc.patch
+	epatch ${FILESDIR}/mutt-1.5.9-nodoc.patch
 
 	if ! use vanilla; then
 		epatch ${DISTDIR}/${compressed_patch}
@@ -154,7 +154,7 @@ src_compile() {
 	fi
 
 	if use mbox; then
-		myconf="${myconf} --with-maildir=/var/spool/mail"
+		myconf="${myconf} --with-mailpath=/var/spool/mail"
 	else
 		myconf="${myconf} --with-homespool=Maildir"
 	fi

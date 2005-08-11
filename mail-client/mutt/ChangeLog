@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.52 2005/08/11 22:57:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.53 2005/08/11 23:22:39 agriffis Exp $
+
+  11 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/mutt-1.5.9-nodoc.patch, -files/muttng-20050809-nodoc.patch,
+  mutt-1.5.9.ebuild:
+  Fix the nodoc patch to apply to mutt. The muttng patch didn't apply
+  correctly. Use --with-mailpath instead of --with-maildir #100831
 
   11 Aug 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.4.2.1.ebuild,
   mutt-1.5.8-r1.ebuild, mutt-1.5.8-r2.ebuild, mutt-1.5.9.ebuild:
