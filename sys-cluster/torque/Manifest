@@ -2,13 +2,15 @@ MD5 7dd1a27cf57520610867640d86e91ba3 torque-1.2.0_p1-r1.ebuild 1874
 MD5 c6f3121536e6adce335641c7a3c961ae torque-1.2.0_p1.ebuild 2312
 MD5 f241bd8e1631adacb8f98ea6de70cf99 torque-1.2.0_p1-r3.ebuild 3893
 MD5 38ff4b249a54a78f0a2d720fbf20b534 torque-1.0.1_p6.ebuild 1910
+MD5 e1a954f5f40711c02a127c7e9a1c1a66 torque-1.2.0_p5.ebuild 4520
 MD5 d18ea01c292ee1127343a7143f8af6f7 torque-1.2.0_p1-r2.ebuild 2405
-MD5 b51efd66d2318327681ef764ff2880df ChangeLog 3594
+MD5 199ecd785dc3a12f41d23f5046ef9ba3 ChangeLog 3723
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
 MD5 0358ef5f33cbdf1c0f764f1407677480 files/1.2.0_p1-respect-destdir.patch 21686
 MD5 aa9daa3694ffc472849365fdda73b0f9 files/pbs.rc 2138
 MD5 49d4d243a6dd96ba20531b240a7a32b6 files/digest-torque-1.0.1_p6 67
 MD5 640bc8217559fa4bc7086a9eb9045b1e files/digest-torque-1.2.0_p1 67
+MD5 fecc46e66800def43afc2718cfc6f428 files/digest-torque-1.2.0_p5 379
 MD5 e26e30bb1e82820df08330a7a9755aae files/1.2.0_p1-respect-ldflags.patch 2709
 MD5 640bc8217559fa4bc7086a9eb9045b1e files/digest-torque-1.2.0_p1-r1 67
 MD5 640bc8217559fa4bc7086a9eb9045b1e files/digest-torque-1.2.0_p1-r2 67
