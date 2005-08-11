@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.22 2005/06/30 17:15:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.23 2005/08/11 20:34:55 flameeyes Exp $
+
+  11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  icaclient-8.0-r3.ebuild, icaclient-9.0.ebuild:
+  Call has_multilib_profile from pkg_setup instead of global scope.
 
   30 Jun 2005; Aron Griffis <agriffis@gentoo.org> icaclient-8.0-r3.ebuild:
   Fix use invocation: [ use gnome ] will never work

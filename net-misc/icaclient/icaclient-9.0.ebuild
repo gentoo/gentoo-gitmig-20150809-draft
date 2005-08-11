@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.2 2005/06/28 23:14:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.3 2005/08/11 20:34:55 flameeyes Exp $
 
 inherit multilib
 
@@ -22,8 +22,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/usr"
 
-# Binary x86 package
-has_multilib_profile && ABI="x86"
+pkg_setup() {
+	# Binary x86 package
+	has_multilib_profile && ABI="x86"
+}
 
 pkg_nofetch() {
 	einfo "Please download ${A} yourself from www.citrix.com"

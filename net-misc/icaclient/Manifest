@@ -1,13 +1,23 @@
-MD5 2c5c1624078d5a35f2820981db6f3971 icaclient-9.0.ebuild 2467
-MD5 53bd814649d90e7fabf654aabe9a6261 icaclient-6.30-r1.ebuild 1799
-MD5 6ac9af87c588be5c2b27c8814e421600 icaclient-8.0-r2.ebuild 2043
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8f493eb1f4a1e8c1c6e7c3d63f32a440 icaclient-7.0.ebuild 1792
-MD5 b2f0dfa25cacbef8405c5700aca7e6e1 ChangeLog 3004
+MD5 026723ad4b98eadbb5b6be0a3756e40c ChangeLog 3176
+MD5 53bd814649d90e7fabf654aabe9a6261 icaclient-6.30-r1.ebuild 1799
+MD5 26f3218068bd35baf7652bb3b2fc9b8a icaclient-9.0.ebuild 2486
+MD5 6ac9af87c588be5c2b27c8814e421600 icaclient-8.0-r2.ebuild 2043
+MD5 c279042f1104a38650f13e93422bea02 icaclient-8.0-r3.ebuild 2356
 MD5 d81ef8a7082707d12d1cf8977e79acbb metadata.xml 344
-MD5 23f740e1a427215b6ba626663d5c84dd icaclient-8.0-r3.ebuild 2337
 MD5 8c3ecc1c3852bbc576833ea8c4cc90c0 files/digest-icaclient-6.30-r1 71
-MD5 dc673ffc614ac414129b92d79d6893ea files/digest-icaclient-8.0-r2 70
 MD5 dc673ffc614ac414129b92d79d6893ea files/digest-icaclient-8.0-r3 70
 MD5 6d6282b0502b9927e5d77a1ed6751722 files/digest-icaclient-7.0 71
-MD5 acdf869e56609fbdc8963ae79e838bb8 files/digest-icaclient-9.0 70
 MD5 38e451023d1aed7c8c1351167d4c53b7 files/10ICAClient 67
+MD5 dc673ffc614ac414129b92d79d6893ea files/digest-icaclient-8.0-r2 70
+MD5 acdf869e56609fbdc8963ae79e838bb8 files/digest-icaclient-9.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+7aPj5H05b2HAEkRAhvgAJ9fDXQUCvcYtAq77GFUwBnbivSH1QCeJ1oD
+QS5bjK0VJUZQqaBuHNL7+SE=
+=Unhd
+-----END PGP SIGNATURE-----
