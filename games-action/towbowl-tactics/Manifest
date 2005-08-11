@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 3386da85a98720a076273d387efac18c ChangeLog 675
 MD5 5baa507e1abe0f8000a8eb2576193dec towbowl-tactics-0.5.ebuild 1609
 MD5 cfa388127da9669f2fdc08df6cc8f8db files/digest-towbowl-tactics-0.5 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC++PmmOfEJZHYOKcRAhbdAKCfUtnG+cREg+wr/KXxjXdWtLOj1QCcDF0q
+VWSgwc38wNBdrs5WWHLG3aA=
+=d98W
+-----END PGP SIGNATURE-----
