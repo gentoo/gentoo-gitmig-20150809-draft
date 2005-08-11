@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.18 2005/08/10 15:13:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.19 2005/08/11 00:00:53 tester Exp $
+
+  11 Aug 2005; Olivier Crête <tester@gentoo.org> opera-8.02.ebuild:
+  Stable on x86 per securitu bug #96273
 
   10 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> opera-8.02.ebuild:
   Stable on sparc wrt #96273
