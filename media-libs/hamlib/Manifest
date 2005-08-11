@@ -3,7 +3,7 @@ MD5 3e1f1f7db3caf764c0a039cf22f2f785 hamlib-1.2.1.ebuild 1457
 MD5 28d0c3bb6c80425620241cff231da8d3 metadata.xml 224
 MD5 a6fcfdc57955d648218f4c15f49758ef hamlib-1.2.3.ebuild 1665
 MD5 fc2d858eb15aca465aabc02ff50c57ed hamlib-1.2.2.ebuild 1555
-MD5 e5e92b76536f94d0c2085c5ca21844b1 hamlib-1.2.4.ebuild 1716
+MD5 6519c2de9b2bca4350916d81d6eac246 hamlib-1.2.4.ebuild 1706
 MD5 2d4e1df9c7fa10b146286ef764530f68 files/hamlib-pkgconfig-fix.diff 373
 MD5 570753afff3842b121bff6d6d8db3493 files/digest-hamlib-1.2.1 65
 MD5 69ca0bd558080d50129a3cf613b3583c files/digest-hamlib-1.2.2 65
