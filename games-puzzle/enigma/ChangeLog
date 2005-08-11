@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.21 2005/06/17 00:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.22 2005/08/11 00:11:20 mr_bones_ Exp $
+
+  11 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> -enigma-0.81.ebuild,
+  -enigma-0.91.ebuild:
+  clean old
 
 *enigma-0.92 (17 Jun 2005)
 
