@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6a6fb070b3d26d8430bed87a7c973e42 ChangeLog 4674
 MD5 f4ce3c87d2aca0320c4fb74cef58e610 mozilla-bin-1.7.10-r1.ebuild 1803
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 d364a8d78e0bde072fc1b38931778760 files/mozilla-bin.desktop 188
 MD5 6d52ff4ce4567db1cad08ea40157a65d files/mozilla-bin-icon.png 2350
 MD5 95b88f89e551260cea8f775e958cdc35 files/digest-mozilla-bin-1.7.10-r1 86
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+7O8j5H05b2HAEkRAvs9AKCZfnKaU5zUPBFzyRCHcK11o97vhwCglyVQ
+8ZQqdEi6OpEKa0pwuyv+e/Q=
+=fspW
+-----END PGP SIGNATURE-----
