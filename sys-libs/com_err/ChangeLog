@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/com_err
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/ChangeLog,v 1.18 2005/08/03 03:13:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/ChangeLog,v 1.19 2005/08/11 03:26:22 vapier Exp $
+
+  11 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  files/com_err-1.37-makefile.patch:
+  Clean up cross-compile support.
 
   03 Aug 2005; Mike Frysinger <vapier@gentoo.org> com_err-1.38.ebuild:
   Use bsd-shlibs on Darwin but elf-shlibs on all other systems #99728 by Kito.

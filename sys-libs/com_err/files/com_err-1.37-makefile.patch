@@ -1,9 +1,36 @@
 Fix the symlinks that submakefiles create so that they don't suck at life.
 
---- e2fsprogs-1.37/lib/Makefile.elf-lib
-+++ e2fsprogs-1.37/lib/Makefile.elf-lib
+Don't use target LDFLAGS/CFLAGS when compiling native apps.
+
+--- lib/Makefile.elf-lib
++++ lib/Makefile.elf-lib
 @@ -49,3 +49,3 @@
  	@echo "	SYMLINK $(libdir)/$(ELF_IMAGE).so"
 -	@$(LN_S) -f $(ELF_INSTALL_DIR)/$(ELF_SONAME) \
 +	@$(LN_S) -f $(ELF_SONAME) \
  		$(DESTDIR)$(libdir)/$(ELF_IMAGE).so
+--- util/Makefile.in
++++ util/Makefile.in
+@@ -15,7 +15,7 @@
+ 
+ .c.o:
+ 	@echo "	CC $<"
+-	@$(BUILD_CC) -c $(ALL_CFLAGS) $< -o $@
++	@$(BUILD_CC) -c $(DEFS) $< -o $@
+ 
+ PROGS=		subst
+ 
+@@ -23,11 +23,11 @@
+ 
+ subst: subst.o
+ 	@echo "	LD $@"
+-	@$(BUILD_CC) $(ALL_LDFLAGS) -o subst subst.o
++	@$(BUILD_CC) -o subst subst.o
+ 
+ copy_sparse: copy_sparse.o
+ 	@echo "	LD $@"
+-	@$(BUILD_CC) $(ALL_LDFLAGS) -o copy_sparse copy_sparse.o
++	@$(BUILD_CC) -o copy_sparse copy_sparse.o
+ 
+ gen-tarball: $(srcdir)/gen-tarball.in $(top_builddir)/config.status
+ 	@echo "	CONFIG.STATUS $@"
