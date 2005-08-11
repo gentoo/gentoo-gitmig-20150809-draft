@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.31 2005/07/24 12:28:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.32 2005/08/11 13:13:22 usata Exp $
+
+*skim-1.4.1 (11 Aug 2005)
+
+  11 Aug 2005; Mamoru KOMACHI <usata@gentoo.org> +skim-1.4.1.ebuild:
+  Version bumped.
 
   24 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> skim-1.4.0.ebuild:
   Made multilib-strict compliant.
