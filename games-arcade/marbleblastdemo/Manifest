@@ -1,4 +1,14 @@
-MD5 1ce29b7472ca3671ff4a96dfe42709af marbleblastdemo-1.3.ebuild 939
-MD5 c8fde86eb9fd346210af063d2e2374a1 ChangeLog 362
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 12640282a8ec0bd044aeb5690f876aca metadata.xml 1468
+MD5 248784306effdf2d1297b7123823da49 marbleblastdemo-1.3.ebuild 944
+MD5 0c39f2b4e7cdc8d773f87940adc3be94 ChangeLog 507
 MD5 6691b2eedefff912995a3327da0a3cba files/digest-marbleblastdemo-1.3 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC++MomOfEJZHYOKcRAnGEAJ0XKzD0Qfm9IUTWLt/lSdVkR9HMCQCdFabr
+Y28yDEAv9sHEIqZ8LVYd4HE=
+=D/tl
+-----END PGP SIGNATURE-----
