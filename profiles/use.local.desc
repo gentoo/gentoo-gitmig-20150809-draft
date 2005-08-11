@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1383 2005/08/11 17:10:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1384 2005/08/11 17:15:13 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -422,6 +422,7 @@ mail-client/mutt:gpgme - Enable support for gpgme
 mail-client/mutt:nntp - Adds support for nntp via patch
 mail-client/mutt:pop - Enable support for pop
 mail-client/mutt:smime - Enable support for smime
+mail-client/muttng:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/muttng:gpgme - Enable support for gpgme
 mail-client/muttng:idn - Enable support for Internalized Domain Names
 mail-client/muttng:nntp - Enable support for nntp
