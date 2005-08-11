@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.63_beta3.ebuild,v 1.1 2005/05/26 15:33:15 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.63_beta3.ebuild,v 1.2 2005/08/11 01:48:59 ka0ttic Exp $
 
 inherit eutils bash-completion
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.joedog.org/siege/"
 SRC_URI="ftp://sid.joedog.org/pub/${PN}/beta/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~mips ~ppc ~x86"
 SLOT="0"
 IUSE="ssl"
 
