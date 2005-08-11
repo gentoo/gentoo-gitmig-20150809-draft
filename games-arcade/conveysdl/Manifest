@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ed0a0459f44364c21006aca99dbfa84 ChangeLog 628
 MD5 5a5a56f5a676f73a9564995ed0b1d9ca conveysdl-1.ebuild 1423
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 0b6b9daa99d6ce8e2f4f40b1e4594417 files/digest-conveysdl-1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC++XzmOfEJZHYOKcRAqZ+AJ9e1oJDM6qds1w0+5UoHlJvuj710QCfRE0U
+npoEOr1ffmY7ABJAb9ncngo=
+=TJ6z
+-----END PGP SIGNATURE-----
