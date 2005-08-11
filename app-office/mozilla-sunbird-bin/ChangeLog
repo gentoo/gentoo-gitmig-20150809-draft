@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mozilla-sunbird-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.9 2005/07/27 16:22:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.10 2005/08/11 20:27:54 flameeyes Exp $
+
+  11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  mozilla-sunbird-bin-0.2.ebuild, mozilla-sunbird-bin-0.2.20050724.ebuild:
+  Call has_multilib_profile from pkg_setup instead of global scope.
 
 *mozilla-sunbird-bin-0.2.20050724 (27 Jul 2005)
 

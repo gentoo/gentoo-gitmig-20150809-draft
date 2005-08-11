@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.2.ebuild,v 1.2 2005/07/25 03:49:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.2.ebuild,v 1.3 2005/08/11 20:27:54 flameeyes Exp $
 
 inherit mozilla-launcher multilib
 
@@ -28,10 +28,12 @@ RDEPEND="virtual/x11
 
 S=${WORKDIR}/sunbird
 
-# This is a binary x86 package => ABI=x86
-# Please keep this in future versions
-# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
-has_multilib_profile && ABI="x86"
+pkg_config() {
+	# This is a binary x86 package => ABI=x86
+	# Please keep this in future versions
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
+	has_multilib_profile && ABI="x86"
+}
 
 src_install() {
 	declare MOZILLA_FIVE_HOME=/opt/sunbird

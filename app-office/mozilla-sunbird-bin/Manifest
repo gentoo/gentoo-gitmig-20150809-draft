@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cf64d048ef08a377e7b83b4105681575 mozilla-sunbird-bin-0.2.20050724.ebuild 2010
-MD5 355345b3ea1aca237df7e010998e7e99 ChangeLog 2039
+MD5 2976a36768636c85ac287550400d2472 ChangeLog 2238
+MD5 1eeffcd3ff167327159ba35f72ec0017 mozilla-sunbird-bin-0.2.ebuild 1818
+MD5 f3b96ee305fb7e3d3b082cf90f203c5a mozilla-sunbird-bin-0.2.20050724.ebuild 2032
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 9c8d929107f0f3f041c975dea0a1e9e6 mozilla-sunbird-bin-0.2.ebuild 1796
 MD5 19aa4d6cfb9d80bd12d521ff72517722 files/app-chrome.manifest-0.2.20050724 1288
 MD5 4b0b77beb6e9d3122c6101aa5f37b6a2 files/digest-mozilla-sunbird-bin-0.2 84
 MD5 5a39653cb1d47b96143a679acb9dfd7f files/digest-mozilla-sunbird-bin-0.2.20050724 90
 MD5 4496a3c35ce5936332ac41702c3e32f7 files/icon/mozillasunbird-bin.desktop 199
 MD5 fa424078d248f495300ecc507858beb2 files/icon/mozillasunbird-bin-icon.png 6418
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC57TpBXaUFmZvwyMRAqgZAKCqhNQXQ56KrhYJqy4hlbkVzeUo2ACg3a3S
-8hmQt9t/DMoSrVQrDSxZPyc=
-=bvT9
+iD8DBQFC+7Toj5H05b2HAEkRApLlAKCSHaqWmXSmaehEHIgb+ozo93nCEQCeLPv8
+pl7QTRB+46jA3WtLSlNS9+s=
+=drhG
 -----END PGP SIGNATURE-----
