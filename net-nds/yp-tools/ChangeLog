@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.24 2005/05/03 20:47:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.25 2005/08/11 18:26:19 eradicator Exp $
+
+*yp-tools-2.9 (11 Aug 2005)
+
+  11 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  yp-tools-2.8.ebuild, yp-tools-2.8-r1.ebuild, +yp-tools-2.9.ebuild:
+  Version bump.
 
 *yp-tools-2.8-r1 (03 May 2005)
 
