@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r3.ebuild,v 1.2 2005/07/01 13:04:06 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r3.ebuild,v 1.3 2005/08/11 01:52:59 halcy0n Exp $
 
 inherit gnuconfig eutils
 
 IUSE="nls"
 
-DESCRIPTION="ee"
+DESCRIPTION="Electric Eyes image viewer"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 

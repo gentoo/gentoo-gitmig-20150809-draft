@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/ee
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ChangeLog,v 1.10 2005/07/01 13:04:06 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ChangeLog,v 1.11 2005/08/11 01:52:59 halcy0n Exp $
+
+  11 Aug 2005; Mark Loeser <halcy0n@gentoo.org> +metadata.xml,
+  ee-0.3.12-r2.ebuild, ee-0.3.12-r3.ebuild:
+  Fixed description; bug #92145 and added metadata.xml
 
   01 Jul 2005; Ferris McCormick <fmccor@gentoo.org> ee-0.3.12-r3.ebuild:
   Add ~sparc keyword (after user query); builds without incident and appears
