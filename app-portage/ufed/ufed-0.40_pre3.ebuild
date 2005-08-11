@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40_pre2.ebuild,v 1.1 2005/07/20 09:13:54 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40_pre3.ebuild,v 1.1 2005/08/11 23:49:47 truedfx Exp $
 
 inherit flag-o-matic
 
