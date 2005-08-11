@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.4 2005/04/21 23:33:37 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.5 2005/08/11 01:08:17 halcy0n Exp $
+
+*enblend-2.3 (11 Aug 2005)
+
+  11 Aug 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml,
+  enblend-2.2.ebuild, +enblend-2.3.ebuild:
+  Version bump to enblend-2.3.  bug #93305
+  enblend-2.2 stable on x86
 
   21 Apr 2005; Herbie Hopkins <herbs@gentoo.org> enblend-2.2.ebuild:
   ~amd64 keyword added
