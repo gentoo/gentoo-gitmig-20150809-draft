@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.25 2005/05/18 12:28:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.26 2005/08/11 09:37:37 genstef Exp $
+
+  11 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
+  multisync-0.83_pre20050414-r2.ebuild:
+  change kdepim to || (kdepim kdepim-meta) to make emergeing with
+  kde-meta-ebuilds possible
 
   18 May 2005; Stefan Schweizer <genstef@gentoo.org>
   multisync-0.83_pre20050414-r2.ebuild:

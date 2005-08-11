@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r2.ebuild,v 1.2 2005/05/18 12:28:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r2.ebuild,v 1.3 2005/08/11 09:37:37 genstef Exp $
 
 inherit versionator kde-functions
 
@@ -36,7 +36,7 @@ DEPEND=">=gnome-base/libbonobo-2.2
 				         		>=net-wireless/bluez-utils-2.7 ) )
 		pda? ( >=net-misc/curl-7.10.5
 				app-pda/pilot-link )
-		kdepim? ( kde-base/kdepim )
+		kdepim? (  || ( kde-base/kdepim kde-base/kdepim-meta ))
 		ldap? ( >=net-nds/openldap-2.0.27
 				>=dev-libs/cyrus-sasl-2.1.4 )"
 
