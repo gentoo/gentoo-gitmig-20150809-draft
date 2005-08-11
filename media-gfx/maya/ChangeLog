@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/maya
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.19 2005/08/11 08:55:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.20 2005/08/11 09:23:19 eradicator Exp $
+
+  11 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org> maya-6.5.ebuild:
+  Don't install the aw_flexlm init script. Add support for installing the
+  shader library.
 
   11 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org> maya-6.5.ebuild:
   Create /usr/aw symlink for compatibility and COM/bin/installKey runtime lib
