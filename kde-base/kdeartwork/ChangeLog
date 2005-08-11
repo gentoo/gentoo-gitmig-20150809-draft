@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.128 2005/07/30 14:07:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.129 2005/08/11 17:23:02 greg_g Exp $
+
+  11 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  files/kdeartwork-3.4-configure.patch:
+  Update configure patch to fix compilation problem (#102031).
 
   30 Jul 2005; Dan Armak <danarmak@gentoo.org> kdeartwork-3.4.2.ebuild:
   Removed ~mips keyword, because kdelibs-3.4.2 doesn't have it. The mips team

@@ -1,6 +1,6 @@
 diff -Nur kdeartwork-3.4.2.orig/kscreensaver/configure.in.in kdeartwork-3.4.2/kscreensaver/configure.in.in
 --- kdeartwork-3.4.2.orig/kscreensaver/configure.in.in	2005-07-20 18:40:58.000000000 +0200
-+++ kdeartwork-3.4.2/kscreensaver/configure.in.in	2005-07-26 13:54:39.000000000 +0200
++++ kdeartwork-3.4.2/kscreensaver/configure.in.in	2005-08-11 18:27:34.000000000 +0200
 @@ -36,32 +36,41 @@
  AM_CONDITIONAL(COMPILE_X11_KSAVERS, test "x$ac_x_includes" != x && test "x$ac_x_libraries" != x)
  AM_CONDITIONAL(COMPILE_ARTS_KSAVERS, test x$build_arts = xyes)
@@ -65,7 +65,7 @@ diff -Nur kdeartwork-3.4.2.orig/kscreensaver/configure.in.in kdeartwork-3.4.2/ks
  
 diff -Nur kdeartwork-3.4.2.orig/kscreensaver/kxsconfig/configure.in.bot kdeartwork-3.4.2/kscreensaver/kxsconfig/configure.in.bot
 --- kdeartwork-3.4.2.orig/kscreensaver/kxsconfig/configure.in.bot	2005-07-20 18:40:57.000000000 +0200
-+++ kdeartwork-3.4.2/kscreensaver/kxsconfig/configure.in.bot	2005-07-26 13:54:39.000000000 +0200
++++ kdeartwork-3.4.2/kscreensaver/kxsconfig/configure.in.bot	2005-08-11 18:22:05.000000000 +0200
 @@ -1,4 +1,4 @@
 -if test "$XSCREENSAVER" = "NO"; then
 +if test "x$with_xscreensaver" = xcheck && test "$XSCREENSAVER" = "NO"; then
@@ -74,14 +74,23 @@ diff -Nur kdeartwork-3.4.2.orig/kscreensaver/kxsconfig/configure.in.bot kdeartwo
    echo "Check www.jwz.org/xscreensaver if you're loving to"
 diff -Nur kdeartwork-3.4.2.orig/kscreensaver/kxsconfig/configure.in.in kdeartwork-3.4.2/kscreensaver/kxsconfig/configure.in.in
 --- kdeartwork-3.4.2.orig/kscreensaver/kxsconfig/configure.in.in	2005-07-20 18:40:57.000000000 +0200
-+++ kdeartwork-3.4.2/kscreensaver/kxsconfig/configure.in.in	2005-07-26 13:54:39.000000000 +0200
-@@ -1,4 +1,4 @@
++++ kdeartwork-3.4.2/kscreensaver/kxsconfig/configure.in.in	2005-08-11 18:39:20.000000000 +0200
+@@ -1,4 +1,13 @@
 -AC_DEFUN([KDE_CHECK_XSREENSAVER],
-+AC_DEFUN([KDE_CHECK_XSCREENSAVER],
++AC_DEFUN([KDE_CHECK_XSCREENSAVER_HACKS],
++[
++     XSCREENSAVER_HACKS_DIR=NO
++     AC_FIND_FILE($1/flame, [ $xscreensaver_prefixes ], XSCREENSAVER_HACKS_DIR)
++     if test "$XSCREENSAVER_HACKS_DIR" != NO; then
++	XSCREENSAVER_HACKS_DIR="$XSCREENSAVER_HACKS_DIR/$1"
++     fi
++])
++
++AC_DEFUN([KDE_CHECK_XSCREENSAVER_CONFIG],
  [
       XSCREENSAVER_CONFIG=NO
       AC_FIND_FILE($1/flame.xml, [ $xscreensaver_prefixes ], XSCREENSAVER_CONFIG)
-@@ -22,46 +22,82 @@
+@@ -22,46 +31,80 @@
  done
  IFS=$old_IFS
  
@@ -114,44 +123,41 @@ diff -Nur kdeartwork-3.4.2.orig/kscreensaver/kxsconfig/configure.in.in kdeartwor
 +    [where the xscreensaver config files are])], [])
 +
 +XSCREENSAVER=NO
-+XSCREENSAVER_CONFIG=NO
 +if test "x$with_xscreensaver" != xno; then
++  XSCREENSAVER_HACKS_DIR=NO
++  XSCREENSAVER_CONFIG=NO
++
++  AC_MSG_CHECKING([for xscreensaver])
++
 +  if test -n "$with_xscreensaver_dir" && test -f "$with_xscreensaver_dir/flame"; then
-+    XSCREENSAVER="$with_xscreensaver_dir/flame"
++    XSCREENSAVER_HACKS_DIR="$with_xscreensaver_dir"
 +  fi
 +
-+  if test "x$XSCREENSAVER" = xNO && test -n "$kdelibsuff"; then
-+    KDE_FIND_PATH(lib$kdelibsuff/xscreensaver/flame, XSCREENSAVER, [ $xscreensaver_prefixes ])
++  if test "x$XSCREENSAVER_HACKS_DIR" = xNO; then
++     for subdir in lib$kdelibsuff/xscreensaver \
++		   lib/xscreensaver \
++		   libexec/xscreensaver \
++		   bin/xscreensaver-hacks \
++		   hacks; do
++         KDE_CHECK_XSCREENSAVER_HACKS($subdir)
++         if test "$XSCREENSAVER_HACKS_DIR" != NO; then
++		break
++         fi
++     done
 +  fi
 +
-+  if test "x$XSCREENSAVER" = xNO; then
-+    KDE_FIND_PATH(lib/xscreensaver/flame, XSCREENSAVER, [ $xscreensaver_prefixes ])
-+  fi
-+
-+  if test "x$XSCREENSAVER" = xNO; then
-+    KDE_FIND_PATH(libexec/xscreensaver/flame, XSCREENSAVER, [ $xscreensaver_prefixes ])
-+  fi
-+
-+  if test "x$XSCREENSAVER" = xNO; then
-+    KDE_FIND_PATH(bin/xscreensaver-hacks/flame, XSCREENSAVER, [ $xscreensaver_prefixes ])
-+  fi
-+
-+  if test "x$XSCREENSAVER" = xNO; then
-+    KDE_FIND_PATH(hacks/flame, XSCREENSAVER, [ $xscreensaver_prefixes ])
-+  fi
-+
-+  AC_MSG_CHECKING([for flame.xml])
-+
++  AC_MSG_RESULT([$XSCREENSAVER_HACKS_DIR])
+ 
+-XSCREENSAVER_HACKS_DIR=
++  AC_MSG_CHECKING([for xscreensaver config files])
+ 
+-if test "$XSCREENSAVER" != "NO"; then
+-     XSCREENSAVER_HACKS_DIR=`echo $XSCREENSAVER | sed -e 's,/flame$,,'`
+-     AC_DEFINE_UNQUOTED(XSCREENSAVER_HACKS_DIR, "$XSCREENSAVER_HACKS_DIR", [Defines where xscreensaver stores its graphic hacks])
 +  if test -n "$with_xscreensaver_config" && test -f "$with_xscreensaver_config/flame.xml"; then
 +    XSCREENSAVER_CONFIG="$with_xscreensaver_config"
 +  fi
  
--XSCREENSAVER_HACKS_DIR=
--
--if test "$XSCREENSAVER" != "NO"; then
--     XSCREENSAVER_HACKS_DIR=`echo $XSCREENSAVER | sed -e 's,/flame$,,'`
--     AC_DEFINE_UNQUOTED(XSCREENSAVER_HACKS_DIR, "$XSCREENSAVER_HACKS_DIR", [Defines where xscreensaver stores its graphic hacks])
--
 -     AC_MSG_CHECKING([for flame.xml])
 +  if test "x$XSCREENSAVER_CONFIG" = xNO; then
       for subdir in lib/xscreensaver/config \
@@ -162,7 +168,7 @@ diff -Nur kdeartwork-3.4.2.orig/kscreensaver/kxsconfig/configure.in.in kdeartwor
                     xscreensaver \
  		   config/control-center-2.0; do
 -         KDE_CHECK_XSREENSAVER($subdir)
-+         KDE_CHECK_XSCREENSAVER($subdir)
++         KDE_CHECK_XSCREENSAVER_CONFIG($subdir)
           if test "$XSCREENSAVER_CONFIG" != NO; then
  		break
           fi
@@ -174,17 +180,16 @@ diff -Nur kdeartwork-3.4.2.orig/kscreensaver/kxsconfig/configure.in.in kdeartwor
 +
 +  AC_MSG_RESULT([$XSCREENSAVER_CONFIG])
 +
-+  if test "x$XSCREENSAVER_CONFIG" = xNO; then
-+    XSCREENSAVER=NO
++  if test "x$XSCREENSAVER_HACKS_DIR" != xNO && test "x$XSCREENSAVER_CONFIG" != xNO; then
++    XSCREENSAVER=YES
 +  fi
 +
-+  if test "x$with_xscreensaver" != xcheck && test "x$XSCREENSAVER" = xNO; then
++  if test "x$with_xscreensaver" != xcheck && test "$XSCREENSAVER" != YES; then
 +    AC_MSG_ERROR([--with-xscreensaver was given, but test for xscreensaver failed])
 +  fi
 +fi
 +
 +if test "$XSCREENSAVER" != "NO"; then
-+     XSCREENSAVER_HACKS_DIR=`echo $XSCREENSAVER | sed -e 's,/flame$,,'`
 +     AC_DEFINE_UNQUOTED(XSCREENSAVER_HACKS_DIR, "$XSCREENSAVER_HACKS_DIR", [Defines where xscreensaver stores its graphic hacks])
 +     AC_DEFINE_UNQUOTED(XSCREENSAVER_CONFIG_DIR, "$XSCREENSAVER_CONFIG", [Defines where xscreensaver stores it's config files])
  fi

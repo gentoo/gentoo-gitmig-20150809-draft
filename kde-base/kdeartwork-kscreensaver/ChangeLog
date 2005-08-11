@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-kscreensaver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.18 2005/08/08 20:42:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.19 2005/08/11 17:26:02 greg_g Exp $
+
+  11 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  files/kdeartwork-3.4-configure.patch:
+  Update configure patch to fix compilation problem (#102031).
 
   08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   kdeartwork-kscreensaver-3.4.2.ebuild:
