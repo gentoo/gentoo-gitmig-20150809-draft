@@ -1,9 +1,19 @@
-MD5 859f50226d6b10ac73a57084df989358 ChangeLog 1258
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5abc83605d6e7acb2562cfba296c81f6 ChangeLog 1513
 MD5 cf62eee332524a1feefa6f71aa0a0d14 flexlm-9.2.1.ebuild 1420
-MD5 0aa6c55d8242e4a80c7ad4ea3b7d16eb flexlm-9.5.ebuild 1385
 MD5 5c7d7d954668e2395e1aa050f2c646fb metadata.xml 333
+MD5 20377d2f973c6331fa9db305694cfa3e flexlm-9.5-r1.ebuild 2145
 MD5 1cd702ac8282f4716d4dcaa7bacf0f79 files/90flexlm 70
 MD5 ef848515f7535e89d36b4a423bdb8c5f files/digest-flexlm-9.2.1 162
-MD5 c31922f3a01789438d2b1412fee128da files/digest-flexlm-9.5 162
-MD5 ae792e337eb16321016d96484127d9c8 files/flexlm-conf 396
-MD5 0b69af044c14448bd26e26aa153a4edd files/flexlm-init 463
+MD5 a502d0fc0218c285e9ecff97a4bdd76f files/flexlm-conf 549
+MD5 49414f160b69f21c8f9a21ef0ea5ddf8 files/flexlm-init 470
+MD5 0ed860b182f7388a6f3e3b75db129bd1 files/digest-flexlm-9.5-r1 298
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC+w+GArHZZzCEUG0RAvFjAJ4n1FX4wrvUo9R3m32mdZDEiFL+/QCfTqWg
+AbzM0U9tnrqvyoRh0PpSxnE=
+=frQE
+-----END PGP SIGNATURE-----

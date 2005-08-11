@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/flexlm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.8 2005/04/24 06:53:09 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.9 2005/08/11 08:42:25 eradicator Exp $
+
+*flexlm-9.5-r1 (11 Aug 2005)
+
+  11 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org> files/flexlm-conf,
+  files/flexlm-init, -flexlm-9.5.ebuild, +flexlm-9.5-r1.ebuild:
+  Revbump to add amd64 support, fix enewuser, cleanup init scripts and ebuild.
 
   23 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   flexlm-9.2.1.ebuild, flexlm-9.5.ebuild:
