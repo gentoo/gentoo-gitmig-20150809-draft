@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.4.ebuild,v 1.1 2005/08/08 09:57:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.4.ebuild,v 1.2 2005/08/12 08:02:39 flameeyes Exp $
 
 inherit eutils gnuconfig
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"
@@ -19,7 +19,7 @@ RESTRICT="nouserpriv"
 
 RDEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
-	>=net-libs/courier-authlib-0.50
+	>=net-libs/courier-authlib-0.57
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	fam? ( virtual/fam )

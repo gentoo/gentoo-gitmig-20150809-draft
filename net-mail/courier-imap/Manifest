@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d31bcd1ca16a85261fdd3859a7aa7244 ChangeLog 23618
+MD5 9938c182bc0130035f5ef150565a39df ChangeLog 23743
 MD5 0eb5c2c89ea48e6dc483009b9aa7306b courier-imap-3.0.7.ebuild 9233
 MD5 9302f1ff5a80b25421b0252b2c2123eb courier-imap-3.0.8.ebuild 9388
 MD5 3ab95f40f53eb88e490459836930e68d courier-imap-4.0.1-r2.ebuild 10513
-MD5 d32ad609993a2df2d3da2ba92fa997ae courier-imap-4.0.4.ebuild 9920
+MD5 0d0fc476a6b403d97340392e9a7a06ef courier-imap-4.0.4.ebuild 9920
 MD5 743d0a0a9527e3fa20762b8e0ffd734c courier-imap-4.0.1-r1.ebuild 10408
 MD5 d2628701ad7f82794ffa2e1473dcebb3 courier-imap-4.0.1.ebuild 10121
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
@@ -58,7 +58,7 @@ MD5 5d57e73c7593d5bb37135d3964d6d4c2 files/digest-courier-imap-3.0.7 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC9yyKj5H05b2HAEkRAu9yAJ4pP+ie7nM7BsCSzgBrqSmUMNeTnACgoc2G
-zoiLD+KanxJQgw75Q7ZADR0=
-=tqjg
+iD8DBQFC/Fe7j5H05b2HAEkRAkRTAJ9sDJgKyHt8u+86hO/Dff4bn3GvIwCdG5rv
+AVb3d0l0/v7+kgIkPBxr/QE=
+=Hizd
 -----END PGP SIGNATURE-----
