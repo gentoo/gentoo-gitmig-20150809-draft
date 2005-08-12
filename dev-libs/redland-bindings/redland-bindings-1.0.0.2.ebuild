@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.0.2.ebuild,v 1.1 2005/03/09 00:08:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.0.2.ebuild,v 1.2 2005/08/12 02:03:39 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.redland.opensource.ac.uk/dist/source/${P}.tar.gz"
 LICENSE="LGPL-2 MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="perl python java tcltk php ruby"
+IUSE="perl python java tcltk php ruby mono"
 
 DEPEND=">=dev-libs/redland-1.0.0
 	dev-lang/swig
@@ -20,12 +20,15 @@ DEPEND=">=dev-libs/redland-1.0.0
 	java? ( virtual/jdk )
 	tcltk? ( dev-lang/tcl )
 	php? ( dev-php/php )
-	ruby? ( dev-lang/ruby )"
+	ruby? ( dev-lang/ruby )
+	mono? ( dev-lang/mono )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i 's:$(INSTALL_PROGRAM) $(TCL_PACKAGE):$(INSTALL_PROGRAM) -D $(TCL_PACKAGE):' tcl/Makefile.in
+	epatch "${FILESDIR}"/${P}-configure.patch
+	epatch "${FILESDIR}"/${P}-DESTDIR.patch
 }
 
 src_compile() {
@@ -37,6 +40,7 @@ src_compile() {
 		$(use_with tcltk tcl) \
 		$(use_with php) \
 		$(use_with ruby) \
+		$(use_with mono ecma-cli mono) \
 		|| die
 	emake || die
 }
