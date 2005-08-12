@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.44 2005/07/25 15:38:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.45 2005/08/12 13:25:50 caleb Exp $
+
+  12 Aug 2005; Caleb Tennis <caleb@gentoo.org>
+  +files/unixODBC-2.2.11-Makefile.am.patch, +unixODBC-2.2.11-r1.ebuild:
+  Bump to x86 stable
+
+*unixODBC-2.2.11-r1 (12 Aug 2005)
+
+  12 Aug 2005; Caleb Tennis <caleb@gentoo.org>
+  +files/unixODBC-2.2.11-Makefile.am.patch, +unixODBC-2.2.11-r1.ebuild:
+  Add a patch to fix a compilation issue
 
   25 Jul 2005; Caleb Tennis <caleb@gentoo.org> unixODBC-2.2.11.ebuild:
   Fix qt dep

@@ -4,11 +4,14 @@ MD5 b9f4602957a14f85748533d4f1fcfd4b unixODBC-2.2.6.ebuild 1566
 MD5 7956dac74a0516140e437590070a0150 unixODBC-2.2.6-r1.ebuild 1638
 MD5 83a56fac1dc29fabea067942e93f768f unixODBC-2.2.8.ebuild 2083
 MD5 fa5c8601aa8d0ca9486efb4204c4b962 unixODBC-2.2.11.ebuild 1943
-MD5 128e2ec24f0d8b4ca460563486bc7d70 ChangeLog 5811
+MD5 1b3b90c6b0d8d7fcdbbe5075085303c2 unixODBC-2.2.11-r1.ebuild 1987
+MD5 d52622ee4716be19be4a5b60a1bb433d ChangeLog 6148
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
 MD5 ffd3cee4e2a1f6dffc130557ccda934b files/gentoo-yac.diff 316
+MD5 4baf7bca71abaad73ebb6a576517f435 files/digest-unixODBC-2.2.11-r1 68
 MD5 89baf6f14a595b00635ca0b91ee525de files/unixODBC-2.2.6-configure.in.patch 239
 MD5 4eaaa819fc28ee784da166d14e9f7fad files/digest-unixODBC-2.2.6-r1 67
+MD5 9e8b6228770e807090916883a6903351 files/unixODBC-2.2.11-Makefile.am.patch 1295
 MD5 89baf6f14a595b00635ca0b91ee525de files/unixODBC-2.2.11-configure.in.patch 239
 MD5 4baf7bca71abaad73ebb6a576517f435 files/digest-unixODBC-2.2.11 68
 MD5 f383c7806ba5f687ba55d5f1bc6a36aa files/digest-unixODBC-2.0.8 67
