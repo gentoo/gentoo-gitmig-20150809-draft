@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 0e303cf49620828eff323b0251d0141c xpdf-3.00-r8.ebuild 3622
-MD5 1b910f5669447f268a6e3eb5bc041b79 xpdf-3.00-r10.ebuild 3912
+MD5 5ea611bd7e7a2086cb61d8c00adc979d xpdf-3.00-r10.ebuild 3913
 MD5 4dfde9229c0dfade67d4d1669cf11210 xpdf-3.00-r9.ebuild 3860
-MD5 8c86ff07354d67f28bae1c69a91325c0 ChangeLog 10625
+MD5 b3351d26f48cd1357e93a19991cee710 ChangeLog 10717
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 8aec20a56895c25a8c2c35c16211d731 files/xpdf-3.00-security-can-2005-2097.patch 1612
 MD5 8221707abac9c48b486b8c2b9bc7a7a0 files/xpdf-3.00-empty-bookmark.patch 373
@@ -27,7 +27,7 @@ MD5 ec978d9450f061ea49ee697b39d545bf files/digest-xpdf-3.00-r9 767
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC/J3oViELBEf1JB0RAj6QAJ9Ed5JSUZzkB/DKIOGB2WBcNXXiVQCdHL3B
-o12VtDzVw0qVoQjtlQHv4Gw=
-=vBMn
+iD8DBQFC/KdnEZCkKN40op4RAj2YAJ4mKK2/zQ68kyvE23mGW9LocMreAwCeLWS6
+N99ep2dDoxjJJGLZezSfiio=
+=6JnR
 -----END PGP SIGNATURE-----
