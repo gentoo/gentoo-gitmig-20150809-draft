@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/qtwvdialer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/ChangeLog,v 1.8 2005/02/12 09:40:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/ChangeLog,v 1.9 2005/08/12 17:06:03 dholm Exp $
+
+  12 Aug 2005; David Holm <dholm@gentoo.org> qtwvdialer-0.4.2.ebuild:
+  Added to ~ppc.
 
   12 Feb 2005; Alin Nastac <mrness@gentoo.org> -qtwvdialer-0.3.1-r2.ebuild:
   Remove old ebuild.

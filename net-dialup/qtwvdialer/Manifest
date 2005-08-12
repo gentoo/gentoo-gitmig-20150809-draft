@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 391a6d20c7212a7579999f41c7bcbb6c qtwvdialer-0.4.2.ebuild 887
-MD5 2086bd5b42fa4a2e35e8694b3d4d2300 ChangeLog 1424
+MD5 f3a2bec99f3b80e4da8536d0a9bc7449 ChangeLog 1511
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 7a842eb112207af1d204d1119893a0b9 qtwvdialer-0.4.2.ebuild 891
 MD5 93e6d23d60dfd3c9067ab0d9043c693a files/digest-qtwvdialer-0.4.2 64
 MD5 59c8d2a2966240cc4246a6c295c7fb95 files/g++configure.patch 450
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCDc8BjiC39V7gKu0RAozyAJ9h8eP/rcwcn58kmNOx0+j5XUb9gQCdF4tJ
-PhQrrBufymkr3kDCR7oYy4g=
-=HFsh
------END PGP SIGNATURE-----
