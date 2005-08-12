@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bc4901a0d998c3792286f941109fc352 ChangeLog 1159
-MD5 1a7c6b6c79667d11348ffdf8d45c1287 macutil-2.0_beta3.ebuild 1039
+MD5 9788a10614cace22f4a990f9b129a09b ChangeLog 1335
+MD5 54d6dae69cbf0caf26b034a859033482 macutil-2.0_beta3.ebuild 1006
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 6f82b90c8d88acde1cb4ddbdbaf56c80 files/digest-macutil-2.0_beta3 64
 MD5 21ef82f8cce2374982bfad3dc94e92b2 files/2.0_beta3-gentoo.patch 523
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+f93mdTrptrqvGERArbNAJ9JK7rH/Z21dSb22jQdRdslmfRYLwCcD8vi
-iIxYki9CokO3GJtAlP+7R/I=
-=cr14
+iD8DBQFC/GQ0mdTrptrqvGERAhANAJsHT5xcSabjY1ftOIh5/tdK/5dmVQCgoBJh
+gjO7b4TfSMqlj4g8KoHonjE=
+=45aL
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.9 2005/08/10 13:21:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.10 2005/08/12 08:55:59 dragonheart Exp $
 
 inherit eutils
 
@@ -13,15 +13,12 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
-
-DEPEND="app-arch/sharutils"
-RDEPEND="${DEPEND}
-	>=sys-apps/sed-4"
-
+RDEPEND=""
+DEPEND="sys-apps/sed"
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
-	gzip -dc ${DISTDIR}/${A} | unshar || die
+	gzip -dc ${DISTDIR}/${A} | /bin/sh || die
 	epatch ${FILESDIR}/${PV}-gentoo.patch || die
 
 	cd ${PN}
