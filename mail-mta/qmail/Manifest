@@ -1,5 +1,5 @@
 MD5 e60e7e9ed6a2c7d3a2ebcee6a6af429e metadata.xml 277
-MD5 cf73165693cff42ec721ccba8ce58f41 ChangeLog 31475
+MD5 560a7b0266aa8051a626054259c18310 ChangeLog 31610
 MD5 16dfdae5cae93a2fcd988b3205bc2496 qmail-1.03-r16.ebuild 21423
 MD5 8eb5e85638263cb9b63ea67369b8a886 qmail-1.03-r15.ebuild 18864
 MD5 7db09ceb9337348431fb9f8418e5892e files/dot_qmail-log 276
@@ -57,7 +57,7 @@ MD5 dbfe7d95b274567088123575d5da00ba files/1.03-r16/gentoo-qmail-1.03-r16-loggin
 MD5 a1e8f454e96a2b23e9daae34fa6b6b5e files/1.03-r16/qmail-1.03-accept-5xx.tls.patch 930
 MD5 8f196c7649132af2c0c3745c1a5f1e9c files/1.03-r16/famd-dnotify.patch 555
 MD5 d48eeee899c7999925dd64afd4109269 files/1.03-r16/nullenvsender-recipcount.tls.patch 1479
-MD5 de7443750483557900d6796409084e29 files/1.03-r16/qmail-remote-auth-log-fix.patch 418
+MD5 0f5e8b8c5d8ab208beee57281c7cf215 files/1.03-r16/qmail-remote-auth-log-fix.patch 475
 MD5 72c4027c99c19158d4bbe3ed77efcae6 files/1.03-r16/double-bounce-trim.patch 1662
 MD5 8d015331a1c3f0ad22f40bb6837569ca files/1.03-r16/qmail-logmail.patch 269
 MD5 a8af4cf9b59e294737987624bc917e80 files/1.03-r16/smtpplugins 614

@@ -1,11 +1,11 @@
---- qmail-remote.c.orig	2005-08-11 21:35:35.000000000 +0200
-+++ qmail-remote.c	2005-08-11 21:35:44.000000000 +0200
-@@ -672,7 +672,7 @@
-        * James Raftery <james@now.ie>
-        * Log _real_ envelope recipient, post canonicalisation.
-        */
--      out("r"); out(auth_status.s);
-+      out("r"); out("Delivered to ");
-       out("<"); outsafe(&reciplist.sa[i]); out("> "); zero();
-       flagbother = 1;
-     }
+--- qmail-remote.c.orig	2005-08-12 22:04:43.000000000 +0200
++++ qmail-remote.c	2005-08-12 22:09:01.000000000 +0200
+@@ -638,6 +638,8 @@
+       substdio_put(&smtpto,sender.s,sender.len);
+       substdio_puts(&smtpto,">\r\n");
+       substdio_flush(&smtpto);
++	  if(!stralloc_copys(&auth_status, "Delivered with authenticated connection to \n")) temp_nomem();
++	  if(!stralloc_0(&auth_status)) temp_nomem();
+     } else {
+       no_supported_auth();
+       mail_without_auth();

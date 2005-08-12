@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.57 2005/08/11 19:39:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.58 2005/08/12 20:42:39 hansmi Exp $
+
+  12 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  files/1.03-r16/qmail-remote-auth-log-fix.patch:
+  Fixed patch from yesterday.
 
   11 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   +files/1.03-r16/qmail-remote-auth-log-fix.patch, qmail-1.03-r16.ebuild:
