@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050809-r1.ebuild,v 1.4 2005/08/11 23:57:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050809-r1.ebuild,v 1.5 2005/08/12 02:35:43 agriffis Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="mutt-ng -- fork of mutt with added features"
 HOMEPAGE="http://www.muttng.org/"
 SRC_URI="http://nion.modprobe.de/mutt-ng/snapshots/${P}.tar.gz"
-IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme idn imap mbox nls nntp pop qdbm sasl slang smime smtp ssl"
+IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme idn imap mbox nls nntp pop qdbm sasl slang smime ssl" # smtp
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~sparc"
@@ -19,7 +19,6 @@ RDEPEND="nls? ( sys-devel/gettext )
 		gdbm?  ( sys-libs/gdbm )
 		!gdbm? ( berkdb? ( >=sys-libs/db-4 ) )
 	)
-	smtp?    ( net-libs/libesmtp )
 	slang?   ( >=sys-libs/slang-1.4.2 )
 	imap?    (
 		gnutls?  ( >=net-libs/gnutls-1.0.17 )
@@ -32,6 +31,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
 	gpgme?   ( >=app-crypt/gpgme-0.9.0 )"
+	# smtp?    ( net-libs/libesmtp )
 DEPEND="${RDEPEND}
 	sys-devel/automake
 	>=sys-devel/autoconf-2.5
@@ -61,8 +61,8 @@ src_compile() {
 		$(use_enable cjk default-japanese) \
 		$(use_enable debug) \
 		$(use_enable nntp) \
-		$(use_with smtp libesmtp) \
 		$(use_with idn) \
+		--disable-libesmtp \
 		--enable-compressed \
 		--sysconfdir=/etc/${PN} \
 		--with-docdir=/usr/share/doc/${PN}-${PVR} \
@@ -71,6 +71,7 @@ src_compile() {
 		--with-mixmaster \
 		--without-sasl \
 		--enable-external-dotlock"
+#		$(use_with smtp libesmtp) \
 
 	# muttng prioritizes qdbm over gdbm, so we will too.
 	# hcache feature requires at least one database is in USE.
