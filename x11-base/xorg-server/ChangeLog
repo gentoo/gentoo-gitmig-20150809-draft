@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.16 2005/08/12 21:31:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.17 2005/08/12 22:36:17 spyderous Exp $
+
+  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-0.99.1-r3.ebuild:
+  Add pkg_postrm() to get rid of /usr/lib/xorg/modules. This should make
+  things work better for people crazy enough to downgrade to monolithic.
 
 *xorg-server-0.99.1-r3 (12 Aug 2005)
 
