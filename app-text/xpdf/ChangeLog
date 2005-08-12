@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.88 2005/08/12 13:42:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.89 2005/08/12 21:05:42 kloeri Exp $
+
+  12 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> xpdf-3.00-r10.ebuild:
+  Stable on ia64, bug 99769.
 
   12 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> xpdf-3.00-r10.ebuild:
   Stable on mips.
