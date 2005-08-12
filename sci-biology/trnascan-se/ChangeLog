@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/trnascan-se
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.2 2005/03/02 02:27:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.3 2005/08/12 21:14:38 ribosome Exp $
+
+*trnascan-se-1.23-r1 (12 Aug 2005)
+
+  12 Aug 2005; Olivier Fisette <ribosome@gentoo.org>
+  -trnascan-se-1.23.ebuild, +trnascan-se-1.23-r1.ebuild:
+  Fixed bug #102258: Broken hard-coded paths.
 
   01 Mar 2005; Olivier Fisette <ribosome@gentoo.org>
   trnascan-se-1.23.ebuild:

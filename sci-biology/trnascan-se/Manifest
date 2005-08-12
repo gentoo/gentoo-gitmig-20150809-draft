@@ -1,4 +1,4 @@
-MD5 a369c736e9dc2fc9af75a4a6f8c55bf3 trnascan-se-1.23.ebuild 1001
-MD5 916d043efc71fc37e2eb87527a413abd ChangeLog 466
+MD5 f4ce2e395cfcb90c68d6072d1fd31972 ChangeLog 659
 MD5 7f383d52a94b63930cf35ef743535739 metadata.xml 594
-MD5 9ecd6913936da62c55e691e4123d3f4f files/digest-trnascan-se-1.23 69
+MD5 62114fb094353434577961aac7664182 trnascan-se-1.23-r1.ebuild 1220
+MD5 9ecd6913936da62c55e691e4123d3f4f files/digest-trnascan-se-1.23-r1 69
