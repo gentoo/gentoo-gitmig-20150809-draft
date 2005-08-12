@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/wmii
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.8 2005/06/13 17:15:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.9 2005/08/12 15:36:22 tove Exp $
+
+*wmii-2 (12 Aug 2005)
+
+  12 Aug 2005; Torsten Veller <tove@gentoo.org> +files/wmii-2_050802.patch,
+  +wmii-2.ebuild:
+  New release.
 
 *wmii-1.1 (13 Jun 2005)
 
