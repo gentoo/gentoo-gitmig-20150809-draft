@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 ed66c9a1d1fffdf5b41bf83789ce4f2e jdbc2-stdext-2.0-r1.ebuild 1451
-MD5 0588499fe5dbbf15771fd653da7ab424 ChangeLog 1285
+MD5 dcda9af4272981a0dbcb62006b25e0c1 jdbc2-stdext-2.0-r1.ebuild 1450
+MD5 bc58169dbd955bfd121f94b670eaf98a ChangeLog 1389
 MD5 73087680fc277d629f6a9acdcf03eda6 files/digest-jdbc2-stdext-2.0-r1 133
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC17axKRy60XGEcJIRAizPAKC0qsCa4vGQ8YGxPKytjVpBsKE0wwCfaPfG
-mbF51s1M/60d7O0UPLPwkr0=
-=x7c8
------END PGP SIGNATURE-----
