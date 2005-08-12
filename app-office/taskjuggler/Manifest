@@ -2,12 +2,14 @@
 Hash: SHA1
 
 MD5 d783ab97133eb86959ee788e3d25af55 taskjuggler-2.1.1.ebuild 2105
-MD5 9a7136aa8a0c05459dec5969d953c1d3 ChangeLog 363
+MD5 0f89c1c14bf7523acf0491197636900c ChangeLog 501
+MD5 c0398ee91c8fb0f1d1015260a6fea3a4 taskjuggler-2.1.1-r1.ebuild 2150
 MD5 581699911e03fcfe610df0a2b1efeeb0 files/digest-taskjuggler-2.1.1 71
+MD5 581699911e03fcfe610df0a2b1efeeb0 files/digest-taskjuggler-2.1.1-r1 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC+7JSKtJO8LeSoosRAusZAJ97znr/mPYnq8OV6FX25rPTUiijQACfbGjh
-1c4mJ6eSFbVep6qTOihacNo=
-=qW9A
+iD8DBQFC/SU0KtJO8LeSoosRApt3AJ9ccH7RfvK6v0RMFc+kX9m65HWaiwCdFDg5
+NiBQaA0uFpp7OnRVXKaeWbI=
+=BvKK
 -----END PGP SIGNATURE-----
