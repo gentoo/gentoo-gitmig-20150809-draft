@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.17 2005/08/12 22:36:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.18 2005/08/12 23:21:49 spyderous Exp $
+
+  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-0.99.1-r3.ebuild:
+  Remove xinerama USE flag; building without it causes major issues.
 
   12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-0.99.1-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r3.ebuild,v 1.2 2005/08/12 22:36:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r3.ebuild,v 1.3 2005/08/12 23:21:49 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -23,7 +23,7 @@ SRC_URI="${SRC_URI}
 	http://dev.gentoo.org/~spyderous/xorg-x11/xorg-server-0.99.1-update-to-CVS-HEAD-20050811-1.patch.gz"
 DESCRIPTION="X.Org X servers"
 KEYWORDS="~sparc ~x86"
-IUSE="glx dri xinerama ipv6 minimal"
+IUSE="glx dri ipv6 minimal"
 RDEPEND="x11-libs/libXfont
 	x11-libs/xtrans
 	x11-libs/libXau
@@ -76,7 +76,6 @@ pkg_setup() {
 	# from ebuild.sh
 	# sysconfdir is used for the xorg.conf location; same applies
 	CONFIGURE_OPTIONS="
-		$(use_enable xinerama)
 		$(use_enable ipv6)
 		$(use_enable !minimal dmx)
 		$(use_enable !minimal xvfb)
