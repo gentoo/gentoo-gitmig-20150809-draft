@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.28 2005/05/04 21:49:21 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.29 2005/08/12 15:06:56 dang Exp $
+
+  12 Aug 2005; <dang@gentoo.org> win32codecs-20050412.ebuild:
+  Add multilib support. This makes the libs get installed in the correct spot
+  on amd64 to be used by 32-bit programs. x86 install locations are
+  unaffected.  Also, mark ~amd64
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   -win32codecs-20050115.ebuild, win32codecs-20050412.ebuild:
