@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 f95742779e60225ce40ef3f6844f8f25 ChangeLog 1046
-MD5 a33867d3ba660a9508d5f58660632f20 spacetripper-demo-1.ebuild 849
+MD5 c647a0eb130c5f0ec0fb60f2fe0a90e0 spacetripper-demo-1.ebuild 922
+MD5 32bbe11c9c7881061edca515033f0ef4 ChangeLog 1166
 MD5 6a0fa9710525ff8873539df94f5c3986 files/digest-spacetripper-demo-1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC++OymOfEJZHYOKcRArxMAKCLEqD7vp0iiFNz8ZSwxRMeovOcGQCaAtaA
-Uz7TPBLq3esd/riVdC3bg/c=
-=pVIs
------END PGP SIGNATURE-----
