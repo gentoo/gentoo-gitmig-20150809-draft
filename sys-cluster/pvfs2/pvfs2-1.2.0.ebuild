@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-1.2.0.ebuild,v 1.1 2005/08/11 18:00:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-1.2.0.ebuild,v 1.2 2005/08/12 10:27:56 dholm Exp $
 
 inherit kernel-mod eutils
 
@@ -14,7 +14,7 @@ DEPEND="${RDEPEND}
 		virtual/linux-sources"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 S="${WORKDIR}/${P/_/}"
 
 src_compile() {
