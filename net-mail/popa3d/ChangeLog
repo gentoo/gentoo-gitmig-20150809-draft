@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.17 2005/05/23 18:26:08 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.18 2005/08/12 16:22:40 port001 Exp $
+
+*popa3d-1.0 (12 Aug 2005)
+
+  12 Aug 2005; Ian Leitch <port001@gentoo.org> +popa3d-1.0.ebuild:
+  Version bump. This version uses some silly default values which are way too
+  high for most systems, these have been replaced by some more sensible
+  values.
 
   23 May 2005; Ian Leitch <port001@gentoo.org> -popa3d-0.6.4.1-r1.ebuild,
   popa3d-0.6.4.1-r2.ebuild:
