@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jmi-interface
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmi-interface/ChangeLog,v 1.3 2005/07/19 18:38:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmi-interface/ChangeLog,v 1.4 2005/08/12 22:31:34 betelgeuse Exp $
+
+  12 Aug 2005; Petteri Räty <betelgeuse@gentoo.org>
+  files/jmi-interface-1.0-build.xml, -jmi-interface-1.0.ebuild,
+  jmi-interface-1.0-r1.ebuild:
+  Removed the older version because it does not work with Netbeans.
+  Fixed emerging with a 1.5 jdk.
 
 *jmi-interface-1.0-r1 (19 Jul 2005)
 
