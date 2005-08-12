@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.5 2005/08/12 10:20:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.6 2005/08/12 12:09:37 swegener Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -52,7 +52,7 @@
 #
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
-IUSE="berkdb debug gdbm ithreads userland_Darwin"
+IUSE="berkdb debug gdbm ithreads"
 
 inherit eutils flag-o-matic toolchain-funcs
 
