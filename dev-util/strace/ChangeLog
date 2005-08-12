@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.64 2005/06/30 04:04:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.65 2005/08/12 02:43:59 vapier Exp $
+
+*strace-4.5.12 (12 Aug 2005)
+
+  12 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/strace-dont-use-REG_SYSCALL-for-sh.patch,
+  +files/strace-superh-update.patch, +files/strace-undef-syscall.patch,
+  +strace-4.5.12.ebuild:
+  Version bump and fix SuperH support.
 
   29 Jun 2005; Joshua Kinard <kumba@gentoo.org> strace-4.5.11.ebuild:
   Marked stable on mips.

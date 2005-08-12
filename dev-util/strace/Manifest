@@ -1,17 +1,32 @@
-MD5 3ac2b90c43abdf667377d651a8929d9f ChangeLog 7491
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 85f383eadb2ed8c50c1a494e679bd2a2 strace-4.5.1.ebuild 1294
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4474209bd9ff4ef6827bc37e512e6885 strace-4.5.2.ebuild 1311
-MD5 7a45d471b2608afbcfac7b22f86726ce strace-4.5.7.ebuild 1139
 MD5 c9d8ca6c43099729a9c981ed49e94ce3 strace-4.5.9.ebuild 1429
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 b808bf15821fbf508b3021a17bb6729b strace-4.5.12.ebuild 1820
 MD5 0ad191371a52a40b85dfb14db954593a strace-4.5.11.ebuild 1675
+MD5 85f383eadb2ed8c50c1a494e679bd2a2 strace-4.5.1.ebuild 1294
+MD5 f3d9fe0b3f123bacc95b67a2be78f6ce ChangeLog 7760
+MD5 7a45d471b2608afbcfac7b22f86726ce strace-4.5.7.ebuild 1139
 MD5 38e4a65d3a6a6e39695752ba68b2db78 files/digest-strace-4.5.1 65
-MD5 b2d46a601a4bd117795f40178cf40612 files/digest-strace-4.5.2 65
-MD5 332b30ad46b6f4ee72387a779580f321 files/digest-strace-4.5.7 65
+MD5 ff683dfacf57a09947ca5e6c4406249d files/strace-superh-update.patch 300
 MD5 4cab7a7a05a80b3cc46421302239ab92 files/digest-strace-4.5.9 65
-MD5 b7c93d383818fc6aa8ac330514b866e0 files/strace-4.5.1-2.6.patch 5756
 MD5 3d30271a2e23ac6401b2b54f99b91e5c files/strace-4.5.2-s390-april2004.diff 11986
 MD5 fcfff1ba9d728511b9b5f0aed7dacfba files/strace-4.5.8-ia64.patch 2855
 MD5 fdb191f71c367e18de7f236b17d51401 files/digest-strace-4.5.11 66
+MD5 df94e08f4b2b33edc62a8e700bdb37ca files/strace-dont-use-REG_SYSCALL-for-sh.patch 630
+MD5 661ca5a1974846c6f778c6c47d8b382e files/strace-undef-syscall.patch 656
 MD5 cbd6857cb3c5b57e1364ca621fb1a5b3 files/strace-4.5.11-alpha-stat64.patch 1418
+MD5 332b30ad46b6f4ee72387a779580f321 files/digest-strace-4.5.7 65
+MD5 b7c93d383818fc6aa8ac330514b866e0 files/strace-4.5.1-2.6.patch 5756
+MD5 9b1d73be67c2e1359d1490b62a2bb84e files/digest-strace-4.5.12 66
+MD5 b2d46a601a4bd117795f40178cf40612 files/digest-strace-4.5.2 65
 MD5 3eb9b0a09aef20e2fd45e7f6e73557d1 files/strace-4.5.11-fbsd.patch 4767
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/A0ZgIKl8Uu19MoRAoWrAJ4hZQXq+x/FIo5tHlMo0lCRvCJB1wCbB1SD
+pQNidJp2UkIVcKHlBR2xTNc=
+=5YwI
+-----END PGP SIGNATURE-----
