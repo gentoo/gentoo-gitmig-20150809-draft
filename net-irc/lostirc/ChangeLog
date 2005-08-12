@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/lostirc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.43 2005/07/08 14:35:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.44 2005/08/12 19:17:40 metalgod Exp $
+
+  12 Aug 2005; Luis Medinas <metalgod@gentoo.org> lostirc-0.4.6.ebuild:
+  Marked Stable on AMD64.
 
   08 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> lostirc-0.4.6.ebuild:
   Stable on sparc
