@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/autoproject
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/autoproject/ChangeLog,v 1.5 2005/05/07 09:35:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autoproject/ChangeLog,v 1.6 2005/08/12 19:40:13 metalgod Exp $
+
+  12 Aug 2005; Luis Medinas <metalgod@gentoo.org> autoproject-0.17.ebuild:
+  Add ~amd64 Keywords.
 
   07 May 2005; David Holm <dholm@gentoo.org> autoproject-0.17.ebuild:
   Added to ~ppc.

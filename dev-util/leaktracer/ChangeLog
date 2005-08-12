@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/leaktracer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/ChangeLog,v 1.6 2004/07/02 05:10:03 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/ChangeLog,v 1.7 2005/08/12 19:43:08 metalgod Exp $
+
+  12 Aug 2005; Luis Medinas <metalgod@gentoo.org> leaktracer-2.4.ebuild:
+  Add ~amd64 Keywords.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   leaktracer-2.4.ebuild:
