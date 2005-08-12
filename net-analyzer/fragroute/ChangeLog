@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fragroute
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.9 2005/07/19 13:09:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.10 2005/08/12 00:09:47 tester Exp $
+
+  12 Aug 2005; Olivier Crête <tester@gentoo.org> fragroute-1.2.ebuild:
+  Marked ~amd64, closes bug #102110, thanks to Mike Cvet for testing
 
   19 Jul 2005; David Holm <dholm@gentoo.org> fragroute-1.2.ebuild:
   Added to ~ppc.
