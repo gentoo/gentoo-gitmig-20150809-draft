@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/point2play
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/ChangeLog,v 1.21 2005/07/22 00:03:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/ChangeLog,v 1.22 2005/08/12 23:00:09 vapier Exp $
+
+*point2play-2.0.3 (12 Aug 2005)
+
+  12 Aug 2005; Mike Frysinger <vapier@gentoo.org> +point2play-2.0.3.ebuild:
+  Version bump.
 
   22 Jul 2005; Mike Frysinger <vapier@gentoo.org> point2play-2.0.2.ebuild:
   Add support for Emerald club members #99618 by Paul Varner.

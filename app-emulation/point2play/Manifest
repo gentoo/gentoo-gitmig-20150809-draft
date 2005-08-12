@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 695465b632aeb9ac6a430221ae8759dc point2play-2.0.3.ebuild 1193
 MD5 086d7322b591c18822e6a6ef25213c3b metadata.xml 465
 MD5 3760371f9abee746c28253e464dc209f point2play-2.0.1.ebuild 1008
 MD5 15d1bcecd833e6ed26649dd488d399c3 point2play-1.3.3.ebuild 1075
 MD5 e5b16b52514445f97310ddd611d34dfc point2play-2.0.2.ebuild 1188
-MD5 1e39525564df26d3b8feedcd9f9496be ChangeLog 3144
+MD5 e2dfbc306547fe5db7edf652eba69661 ChangeLog 3270
 MD5 3f9b82889b2f4bb9145ffbb4c6fbfb7f files/digest-point2play-2.0.1 72
 MD5 d7589e80ac0d830c971c8f43268eb558 files/1.3.2-fix-sound-test.patch 1032
 MD5 d6ed9fa9551938b1be6699024149744d files/digest-point2play-2.0.2 152
+MD5 9734745c645e3236c9af9d4e6dcd9efe files/digest-point2play-2.0.3 72
 MD5 f7671ce19e085f88c3681e920d9286cc files/digest-point2play-1.3.3 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC4DfVgIKl8Uu19MoRAr3cAJ9ZUOLtjNv+dB5i3bDSPOTrmlSI+gCcDzFx
-Ef0/DARFRMwr3hqgCWj96jQ=
-=uTef
+iD8DBQFC/SokgIKl8Uu19MoRArgrAJ9ehdMHY68+mYNBGOdj2kB5loSYCgCZAZp/
+jkRA867XdZYhTfmZzbQOR3Q=
+=WGQx
 -----END PGP SIGNATURE-----
