@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3b990b6e1bc49bb0c24190851abe0147 ChangeLog 1750
 MD5 23016d1e8171398fd6c34ea27dba055a HTML-LinkExtractor-0.11.ebuild 609
 MD5 4ed99f61bff4ba6b066e7858eeee8a8a HTML-LinkExtractor-0.12.1.ebuild 672
@@ -6,3 +9,10 @@ MD5 2f9c9cd6eb4c859d192d256dbc63cad7 HTML-LinkExtractor-0.13.ebuild 607
 MD5 17eb4b5bac059ec5e18c0616181e3b62 files/digest-HTML-LinkExtractor-0.11 74
 MD5 c0c9bdd78fc7f92677ad22436d242068 files/digest-HTML-LinkExtractor-0.12.1 75
 MD5 39eb23042780f9ce44004e82250635ca files/digest-HTML-LinkExtractor-0.13 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFC/GMmtG5z4I8BtQoRAjo1AJ0RuD7FdidZBQgNSkIJ0ei24F9tPgCfdlDY
+A5GaW45v02ydxo/pIdx0LTk=
+=hWY2
+-----END PGP SIGNATURE-----

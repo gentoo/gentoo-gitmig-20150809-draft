@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8f0a8bb2ef7f226fdc1345e503cdda52 ChangeLog 3073
 MD5 a365ade7e8047e2b00544df5cda0f6fe Params-Validate-0.24-r1.ebuild 654
 MD5 458c672734d62405aa2e460769253708 Params-Validate-0.24-r2.ebuild 654
@@ -14,3 +17,10 @@ MD5 793df25b36bfb60fd1de2b1a6728d608 files/digest-Params-Validate-0.59 71
 MD5 c4a650e4ee1869690b900ffacdf4ea43 files/digest-Params-Validate-0.72 71
 MD5 9d961a530f6cd3be26e824d4d02f6ea4 files/digest-Params-Validate-0.74 71
 MD5 69581fc5e3a3db6ffd7334fff0176547 files/digest-Params-Validate-0.76 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFC/GOctG5z4I8BtQoRAmMAAJ9BxheybGJKzhGiBxyHKisCqjEv/QCgj15k
+gg2VABseG9jlm4qAD7ouh7w=
+=JE2D
+-----END PGP SIGNATURE-----
