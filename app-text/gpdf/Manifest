@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 afc2e50ffe8f7cb1fc0709c68d484ec4 ChangeLog 10501
 MD5 d094dcab1afd170dae62b054d98e3acb gpdf-0.132-r1.ebuild 1025
-MD5 9e7d830abf4b5afa14f59d9ba62dabd0 gpdf-2.10.0-r1.ebuild 1346
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 b492633bcb5170b71ce72fb7d24545c5 gpdf-2.8.3.ebuild 1153
-MD5 3ec94b0d7a37f7330404f3197c6bfbcd gpdf-2.8.2.ebuild 1130
 MD5 a805385ef63f46517fcdf018fb0e08d9 gpdf-0.132-r2.ebuild 1169
-MD5 fd2183c5aff6bc93ea0719b09675ff89 ChangeLog 10397
-MD5 5bc556bc031d2f6ed2e0b609253e8b93 files/digest-gpdf-2.8.3 64
-MD5 c32a612ce419b9930ff273cf382558bf files/gpdf-xpdf-3.00pl3.patch 346
-MD5 ba500e3211d62fc797db36fdcf1e2b76 files/gpdf-2.10.0-amd64-gcc4.patch 945
-MD5 5e63c86e19a1c1387cab38b7e2902c9e files/gpdf-xpdf_3_CAN-2004-0889.patch 8115
+MD5 3ec94b0d7a37f7330404f3197c6bfbcd gpdf-2.8.2.ebuild 1130
+MD5 b492633bcb5170b71ce72fb7d24545c5 gpdf-2.8.3.ebuild 1153
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 5c9efeded2ee4abef545b8ff62f7e325 gpdf-2.10.0-r1.ebuild 1344
+MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r1 64
 MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r2 64
-MD5 610ea361ff30d6f30e4075d5bdb44806 files/gpdf-2.8.2-CAN-2005-2097.patch 1973
+MD5 2a2fc64147e806f72bdda9e2e66731a0 files/digest-gpdf-2.8.2 64
+MD5 5bc556bc031d2f6ed2e0b609253e8b93 files/digest-gpdf-2.8.3 64
+MD5 9336bbbfbb54ba88fb5e4aba2da1833f files/gpdf-0.112-remove_gtk24_call.patch 607
+MD5 ba500e3211d62fc797db36fdcf1e2b76 files/gpdf-2.10.0-amd64-gcc4.patch 945
+MD5 c32a612ce419b9930ff273cf382558bf files/gpdf-xpdf-3.00pl3.patch 346
+MD5 651529b6e386b3a73ffd9cc0c19e9661 files/gpdf-xpdf-CAN-2004-1125.patch 1666
+MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/gpdf-xpdf2_underflow.patch 2363
+MD5 b32f90fc9249d1f7434659642b36f9d9 files/gpdf-xpdf_2_CAN-2004-0888.patch 2716
+MD5 5e63c86e19a1c1387cab38b7e2902c9e files/gpdf-xpdf_3_CAN-2004-0889.patch 8115
 MD5 2fce5bedd61300fad1566a41f991a782 files/gpdf-xpdf_goo_sizet.patch 1424
 MD5 388d05f1aabd1c48c3536ac69d0d8505 files/digest-gpdf-2.10.0-r1 65
-MD5 9336bbbfbb54ba88fb5e4aba2da1833f files/gpdf-0.112-remove_gtk24_call.patch 607
-MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/gpdf-xpdf2_underflow.patch 2363
-MD5 651529b6e386b3a73ffd9cc0c19e9661 files/gpdf-xpdf-CAN-2004-1125.patch 1666
-MD5 b32f90fc9249d1f7434659642b36f9d9 files/gpdf-xpdf_2_CAN-2004-0888.patch 2716
-MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r1 64
-MD5 2a2fc64147e806f72bdda9e2e66731a0 files/digest-gpdf-2.8.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC/MMfKRy60XGEcJIRAjm/AJ4k20isEmu+J9JUMzTyhS3Bc9TpYgCePAdg
-NPPju+lsqCSiJ+0TM64B44Y=
-=hzg5
------END PGP SIGNATURE-----
+MD5 610ea361ff30d6f30e4075d5bdb44806 files/gpdf-2.8.2-CAN-2005-2097.patch 1973
