@@ -1,16 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec452e2538f37ff40b4483917033a03c ChangeLog 2714
 MD5 df5ff89b3c13c5675d9ab657f295f58a xorg-server-0.99.1-r1.ebuild 3021
+MD5 5f642cdf79637d4dcc2bdc8b0e8f1da8 ChangeLog 2922
 MD5 c0a77bd0dcd1c32a59067a8ddf824ba3 xorg-server-0.99.1.ebuild 2888
-MD5 44296a07d7ed76922dd604d93b00ab18 files/digest-xorg-server-0.99.1 137
+MD5 b71eb46017e92787f1ca202fc58ff445 xorg-server-0.99.1-r2.ebuild 3226
 MD5 139d1af499d5fd30cbb118284544e3f6 files/xorg-composite.patch 2397
+MD5 44296a07d7ed76922dd604d93b00ab18 files/digest-xorg-server-0.99.1 137
 MD5 44296a07d7ed76922dd604d93b00ab18 files/digest-xorg-server-0.99.1-r1 137
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/GZuj5H05b2HAEkRAjuQAKCGtuuqD2FGUJCTQaPW3nvnt55XmgCgiN3e
-o92+IDGCX870/uW+a4+vV9Q=
-=ByjD
------END PGP SIGNATURE-----
+MD5 cda95e8d1c7c9540a7619dbe007c125d files/fix-xf86misc-typo.patch 615
+MD5 b74f0fa343d7769d89aec580ae334f4d files/check-for-glproto.patch 876
+MD5 3abbcfd99744a692a4a89836a43402db files/digest-xorg-server-0.99.1-r2 237

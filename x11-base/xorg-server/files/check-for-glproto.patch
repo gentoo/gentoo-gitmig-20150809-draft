@@ -1,0 +1,27 @@
+Index: xorg/configure.ac
+===================================================================
+RCS file: /cvs/xorg/xserver/xorg/configure.ac,v
+retrieving revision 1.30
+diff -u -b -B -r1.30 configure.ac
+--- xorg/configure.ac	27 Jul 2005 08:11:26 -0000	1.30
++++ xorg/configure.ac	28 Jul 2005 20:49:35 -0000
+@@ -221,6 +221,9 @@
+ if test "$DMX" = yes; then
+ 	PKG_CHECK_MODULES([DMXMODULES],
+                           [xmuu xext x11 xrender xfont xi dmxproto])
++	if test "$GLX" = yes; then
++		PKG_CHECK_MODULES([GL],[glproto])
++	fi
+ fi
+ AM_CONDITIONAL(DMX, [test x$DMX = xyes])
+ 
+@@ -404,6 +407,9 @@
+ 	AC_SUBST(DRIPROTO_CFLAGS)
+ 	PKG_CHECK_MODULES([LIBDRM], [libdrm])
+ 	AC_SUBST(LIBDRM_CFLAGS)
++	if test "$GLX" = yes; then
++		PKG_CHECK_MODULES([GL],[glproto])
++	fi
+ fi
+ AC_DEFINE(XINPUT,1,[Support X Input extension])
+ EXTENSION_LIBS="$EXTENSION_LIBS "'$(top_builddir)/Xi/libXi.la'
