@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2.ebuild,v 1.5 2005/07/10 01:14:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2.ebuild,v 1.6 2005/08/12 15:07:12 cardoe Exp $
 
 inherit linux-mod eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ndiswrapper.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 
 IUSE="debug"
 DEPEND="sys-apps/pciutils"
@@ -28,6 +28,9 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-suspend2.patch || die "suspend2 patch failed"
+
+	einfo "The only kernels that will work are gentoo-sources, vanilla-sources, and suspend2-sources."
+	einfo "No other kernels are supported. Kernels like the mm kernels will NOT work."
 
 	convert_to_m ${S}/driver/Makefile
 }
