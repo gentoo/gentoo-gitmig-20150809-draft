@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2257fed7f433fbc3ce28215bffa9227 ChangeLog 5417
+MD5 71058ef1d11bbf87cfb949d9a4e45193 ChangeLog 5509
 MD5 ec6dcddda50a0138e1f50eb0d1299798 metadata.xml 254
 MD5 3bf1037b4a549bb486b65602e073e0db openal-20040817.ebuild 1942
-MD5 28b485bc407563f68be3675490ec4e91 openal-20050504-r1.ebuild 2115
+MD5 8c6eef2be18e8ca3f5238b09747c96cf openal-20050504-r1.ebuild 2111
 MD5 7a79e920a2131ac669da96c4cf5e66e9 files/digest-openal-20040817 69
-MD5 68ac7979713ff68db71dc5c4c84562d0 files/openal-20050504-alsa_capture.patch 11190
+MD5 cb37c0311b2a968a888b843afb2d6b94 files/digest-openal-20050504-r1 69
 MD5 526498c24d3601f624e025aaa7c46de2 files/openal-20040817-alsa_capture.diff 12172
 MD5 7d1289ab83aa79eaa7e09d5e4ccacc45 files/openal-20040817-destdir.patch 498
-MD5 8072d11c3e5e44c43407bed8c67b4031 files/openalrc 221
+MD5 68ac7979713ff68db71dc5c4c84562d0 files/openal-20050504-alsa_capture.patch 11190
 MD5 fb8620e95bf8f669b19915d079769a6c files/openal-20050504-destdir.patch 539
-MD5 cb37c0311b2a968a888b843afb2d6b94 files/digest-openal-20050504-r1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9/8lArHZZzCEUG0RAnZrAJ4xL9KiTVhvcveb1dyiJ8J9p5lr6ACfbth3
-XlBl0xjJFDVcjkvwuNql3aI=
-=nUdb
------END PGP SIGNATURE-----
+MD5 8072d11c3e5e44c43407bed8c67b4031 files/openalrc 221
