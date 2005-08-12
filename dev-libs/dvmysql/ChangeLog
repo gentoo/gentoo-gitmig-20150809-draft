@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dvmysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/ChangeLog,v 1.9 2005/05/20 12:47:03 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/ChangeLog,v 1.10 2005/08/12 05:34:58 robbat2 Exp $
+
+  12 Aug 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  dvmysql-0.4.11-r1.ebuild:
+  0.4.11-r1 stable on x86, add metadata for mysql herd.
 
 *dvmysql-0.4.11-r1 (20 May 2005)
 
