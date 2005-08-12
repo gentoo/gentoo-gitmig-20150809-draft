@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Sablot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/ChangeLog,v 1.18 2005/05/29 16:10:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/ChangeLog,v 1.19 2005/08/12 08:54:57 mcummings Exp $
+
+  12 Aug 2005; Michael Cummings <mcummings@gentoo.org> XML-Sablot-0.98.ebuild:
+  Marking stable x86
 
   29 May 2005; Markus Rothe <corsair@gentoo.org> XML-Sablot-0.98.ebuild:
   Stable on ppc64
