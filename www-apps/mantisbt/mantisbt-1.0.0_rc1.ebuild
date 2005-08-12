@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.0_rc1.ebuild,v 1.1 2005/07/28 13:56:59 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.0_rc1.ebuild,v 1.2 2005/08/12 19:36:55 metalgod Exp $
 
 inherit webapp
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/mantis-${MY_PV}.tar.gz"
 
 S=${WORKDIR}/mantis-${MY_PV}
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="
 	>=dev-db/mysql-3.23.32
