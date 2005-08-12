@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.130 2005/08/07 12:21:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.131 2005/08/12 13:43:55 caleb Exp $
+
+  12 Aug 2005; Caleb Tennis <caleb@gentoo.org>
+  -files/openssl-0.9.7c-gentoo.diff, -files/openssl-0.9.7c-tempfile.patch,
+  -openssl-0.9.7c-r1.ebuild:
+  remove old version that was package.masked for security reasons
 
   07 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> files/gentoo.config-0.9.7g,
   files/openssl-0.9.7g-superh.patch:
