@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 ea8ea50f7006cb6fc1a46baa759435fe ChangeLog 1658
-MD5 977eacf2f9ffcd8f41a03e86e8aa7d59 longrun-0.9-r1.ebuild 809
+MD5 913f3a4af5def87b1d8b84d4da95559f longrun-0.9-r1.ebuild 817
 MD5 9a98fa2d2ab8debf915160e430f11e1e longrun-0.9-r2.ebuild 1632
 MD5 0f5aca3056f50b06e1f68a87bcc0f999 metadata.xml 443
 MD5 228f07c20b6f385b74e39181c7145f11 files/digest-longrun-0.9-r1 138
@@ -10,7 +10,7 @@ MD5 06f54ba7a3451bfe7d701fb642b64d91 files/digest-longrun-0.9-r2 129
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC/O9JQiJ/wx066S4RAtx2AJ9cBw+FQVgJ11gKLc/fQ/TKIFVegwCfSTti
-MQhIviyXgDcEV4DLl/C/qsk=
-=9yje
+iD8DBQFC/PTUQiJ/wx066S4RAkCXAJ0UHz7zIRvExIS7LluDbcl+ie3vVQCeJeKm
+t28/v4WxGUdoaeiTJxCPj4o=
+=K9sy
 -----END PGP SIGNATURE-----
