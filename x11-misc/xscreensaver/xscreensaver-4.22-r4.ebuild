@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r4.ebuild,v 1.1 2005/07/30 02:58:32 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r4.ebuild,v 1.2 2005/08/12 08:52:35 greg_g Exp $
 
 inherit eutils flag-o-matic pam fixheadtails
 
-IUSE="gnome jpeg kde kerberos krb4 insecure-savers new-login nls offensive opengl pam xinerama"
+IUSE="gnome jpeg kerberos krb4 insecure-savers new-login nls offensive opengl pam xinerama"
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -147,9 +147,6 @@ src_install() {
 		insinto /usr/share/control-center-2.0/capplets
 		newins ${FILESDIR}/desktop_entries/screensaver-properties.desktop
 	fi
-
-	# install symlink to satisfy kde
-	use kde && dosym /usr/share/xscreensaver/config /usr/$(get_libdir)/xscreensaver/config
 
 	# Remove "extra" capplet
 	rm -f ${D}/usr/share/applications/gnome-screensaver-properties.desktop
