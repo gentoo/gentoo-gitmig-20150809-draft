@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.145 2005/08/12 10:21:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.146 2005/08/12 13:53:34 mcummings Exp $
+
+  12 Aug 2005; Michael Cummings <mcummings@gentoo.org> perl-5.8.7.ebuild:
+  Further bug #58931 - mistake on my part for the LIBPERL= syntax
 
   12 Aug 2005; Michael Cummings <mcummings@gentoo.org> perl-5.8.7.ebuild:
   getlibdir changes for 5.8.7, bug #58931
