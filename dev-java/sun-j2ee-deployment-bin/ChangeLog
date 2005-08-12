@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-j2ee-deployment-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee-deployment-bin/ChangeLog,v 1.4 2005/07/19 18:23:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee-deployment-bin/ChangeLog,v 1.5 2005/08/12 14:09:46 betelgeuse Exp $
+
+  12 Aug 2005; Petteri Räty <betelgeuse@gentoo.org>
+  sun-j2ee-deployment-bin-1.1-r1.ebuild:
+  Marked stable on x86.
 
 *sun-j2ee-deployment-bin-1.1-r1 (19 Jul 2005)
 
