@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1bf2dd6061118fe3aca34c3d3762b642 jmi-interface-1.0-r1.ebuild 1344
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 41b714faf1253e1c06640f7452bf07e2 ChangeLog 1031
 MD5 a3afc86e56133eabd4f8206fbf00ffa3 files/digest-jmi-interface-1.0-r1 127
 MD5 1edf4d1017b6758ffd9c2ea3a64f3277 files/jmi-interface-1.0-build.xml 1676
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/SPyQiJ/wx066S4RAidyAJ9AVqX7f1AtVdAQ99q1hzk6zK4TEQCfRiSV
+V0dBZ11tmqAxQrYdtlSpw4U=
+=A/F4
+-----END PGP SIGNATURE-----
