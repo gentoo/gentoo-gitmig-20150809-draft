@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.19.ebuild,v 1.3 2005/08/10 15:09:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.19.ebuild,v 1.4 2005/08/12 10:55:40 r3pek Exp $
 
 IUSE="gtk alsa cups pcmcia dbus"
 
@@ -12,7 +12,7 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 
 RDEPEND=">=net-wireless/bluez-libs-2.19
 	!net-wireless/bluez-pan
