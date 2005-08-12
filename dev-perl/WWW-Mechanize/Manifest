@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 920a9dbe3c59860d0ff448a27e59fdac WWW-Mechanize-1.12.ebuild 649
 MD5 a1463e5113af9a84168239ffbf87dbea WWW-Mechanize-1.04.ebuild 648
@@ -6,3 +9,10 @@ MD5 28124ed8695764880915279c3fd8133f ChangeLog 2403
 MD5 2fc2c1cd70affa9b5f155bdf45766e4a files/digest-WWW-Mechanize-1.12 70
 MD5 8de5e0779143e0430d8d83fe9ed5da9b files/digest-WWW-Mechanize-1.04 69
 MD5 5a16ba0cd4057511b5fb8a0249531014 files/digest-WWW-Mechanize-1.0301 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC/LN6KRy60XGEcJIRAoKxAJ4oLTglHl+A4hc4BH6+xRdRtWcK1gCdH1qg
+lAhA+gSxQkDwbYKyD+I608I=
+=Rato
+-----END PGP SIGNATURE-----
