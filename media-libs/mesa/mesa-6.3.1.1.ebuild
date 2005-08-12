@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.13 2005/08/12 17:16:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.14 2005/08/12 18:53:50 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -92,7 +92,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake ${CONFIG} || die "Build failed"
+	emake -j1 ${CONFIG} || die "Build failed"
 }
 
 src_install() {
