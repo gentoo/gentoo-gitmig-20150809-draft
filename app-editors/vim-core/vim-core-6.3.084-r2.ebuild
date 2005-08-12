@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.3.084-r1.ebuild,v 1.1 2005/08/09 16:26:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.3.084-r2.ebuild,v 1.1 2005/08/12 22:48:37 ciaranm Exp $
 
 inherit vim
 
@@ -8,7 +8,7 @@ VIM_VERSION="6.3"
 VIM_ORG_PATCHES="vim-${PV}-patches.tar.bz2"
 VIM_RUNTIME_SNAP="vim-runtime-20050809.tar.bz2"
 VIM_NETRW_SNAP="vim-${PVR}-netrw.tar.bz2"
-VIM_GENTOO_PATCHES="vim-${PVR}-gentoo-patches.tar.bz2"
+VIM_GENTOO_PATCHES="vim-${PV}-r1-gentoo-patches.tar.bz2"
 VIMRC_FILE_SUFFIX="-r2"
 
 SRC_URI="${SRC_URI}
