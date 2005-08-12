@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 75499a4dae1ff06ec2fec0f1b625384d ChangeLog 857
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 5d6e32cd5b7e84331d58ef358cb59afc sun-j2ee-deployment-bin-1.1-r1.ebuild 882
 MD5 f225a8129f59a9c5ed7517cf247b106a files/digest-sun-j2ee-deployment-bin-1.1-r1 151
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/LKRQiJ/wx066S4RAgceAJ0YHPN3hTg0m8FF0Idy591ZC0rUqwCfdauv
+/RKn5arI1RaTRelrohxcGqs=
+=pLrE
+-----END PGP SIGNATURE-----
