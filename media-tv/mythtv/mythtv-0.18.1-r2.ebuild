@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.8 2005/07/28 14:23:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.9 2005/08/12 07:22:04 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -69,8 +69,12 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-opengl-fix.patch
 
-	# Add support for amd64 --arch options, bug 94664
-	epatch ${FILESDIR}/${P}-x86_64-configure.patch
+	# Add support for --arch options, bug 94696
+	epatch ${FILESDIR}/${P}-cputypes-configure.patch
+
+	# Turn on CC on Mute patch
+#	cd ${S}/libs/libmythtv
+#	epatch ${FILESDIR}/${P}-cc-on-mute.patch
 
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e "s:\$\${PREFIX}/lib/:\$\${PREFIX}/$(get_libdir)/:g" \
