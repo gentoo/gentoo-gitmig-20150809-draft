@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.1-r1.ebuild,v 1.2 2005/06/23 01:57:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.1-r1.ebuild,v 1.3 2005/08/12 07:39:45 nerdboy Exp $
 
 inherit eutils multilib pam
 
@@ -90,6 +90,8 @@ src_compile() {
 
 src_install() {
 	dodir /usr/{bin,sbin} /usr/lib/fax /usr/share/man /var/spool /var/spool/recvq
+	fowners uucp:uucp /var/spool/fax
+	fperms 0600 /var/spool/fax
 	dodir /usr/share/doc/${P}/html /usr/$(get_libdir)
 
 	make \
