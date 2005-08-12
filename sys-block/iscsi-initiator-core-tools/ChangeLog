@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/iscsi-initiator-core-tools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsi-initiator-core-tools/ChangeLog,v 1.1 2005/08/12 20:56:35 robbat2 Exp $
+
+*iscsi-initiator-core-tools-2.3 (12 Aug 2005)
+
+  12 Aug 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +iscsi-initiator-core-tools-2.3.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
