@@ -7,11 +7,10 @@ MD5 9a98fa2d2ab8debf915160e430f11e1e longrun-0.9-r2.ebuild 1632
 MD5 0f5aca3056f50b06e1f68a87bcc0f999 metadata.xml 443
 MD5 228f07c20b6f385b74e39181c7145f11 files/digest-longrun-0.9-r1 138
 MD5 06f54ba7a3451bfe7d701fb642b64d91 files/digest-longrun-0.9-r2 129
-MD5 b924563938144473dbfc5be5e8f8f025 files/longrun-0.9-r1-debian-gcc-3.diff 32094
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC/O6vQiJ/wx066S4RAlSfAJ47TIdsAcnLVenFM4S6YEwevluNjgCfXUkp
-tt/PdVvN56kPfYFw8WDhEjo=
-=jFE8
+iD8DBQFC/O9JQiJ/wx066S4RAtx2AJ9cBw+FQVgJ11gKLc/fQ/TKIFVegwCfSTti
+MQhIviyXgDcEV4DLl/C/qsk=
+=9yje
 -----END PGP SIGNATURE-----
