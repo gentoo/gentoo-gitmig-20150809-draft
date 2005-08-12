@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.75 2005/08/08 15:01:06 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.76 2005/08/12 10:20:13 mcummings Exp $
+
+  12 Aug 2005; Michael Cummings <mcummings@gentoo.org> libperl-5.8.7.ebuild:
+  getlibdir changes for 5.8.7, bug #58931
 
   08 Aug 2005; <solar.@gentoo.org> libperl-5.8.5-r1.ebuild,
   libperl-5.8.5.ebuild, libperl-5.8.6-r1.ebuild, libperl-5.8.6.ebuild,

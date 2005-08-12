@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.4 2005/08/08 15:01:06 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.5 2005/08/12 10:20:13 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -52,7 +52,7 @@
 #
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
-IUSE="berkdb debug gdbm ithreads"
+IUSE="berkdb debug gdbm ithreads userland_Darwin"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -66,9 +66,9 @@ DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 SRC_URI="ftp://ftp.cpan.org/pub/CPAN/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.perl.org"
 SLOT="${PERLSLOT}"
-LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
+LIBPERL="libperl$(get_libname).${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 # rac 2004.08.06
 
@@ -156,6 +156,8 @@ src_compile() {
 
 	if [[ ${KERNEL} == "FreeBSD" && "${ELIBC}" = "FreeBsd" ]]; then
 		osname="freebsd"
+	elif [[ ${USERLAND} == "Darwin" ]]; then
+		osname="darwin"
 	else
 		osname="linux"
 	fi
@@ -228,8 +230,8 @@ src_compile() {
 		-Ud_csh \
 		${myconf} || die
 
-	emake -j1 -f Makefile depend || die "Couldn't make libperl.so depends"
-	emake -j1 -f Makefile LIBPERL=${LIBPERL} ${LIBPERL} || die "Unable to make libperl.so"
+	emake -j1 -f Makefile depend || die "Couldn't make libperl$(get_libname) depends"
+	emake -j1 -f Makefile LIBPERL=${LIBPERL} ${LIBPERL} || die "Unable to make libperl$(get_libname)"
 	mv ${LIBPERL} ${WORKDIR}
 }
 
@@ -247,8 +249,8 @@ src_install() {
 		local coredir="/usr/lib/perl5/${PV}/${myarch}${mythreading}/CORE"
 		dodir ${coredir}
 		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/${LIBPERL}
-		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl.so.${PERLSLOT}
-		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl.so
+		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname).${PERLSLOT}
+		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname)
 
 		# Fix for "stupid" modules and programs
 		dodir /usr/lib/perl5/site_perl/${PV}/${myarch}${mythreading}
@@ -318,19 +320,19 @@ EOF
 pkg_postinst() {
 
 	# Make sure we do not have stale/invalid libperl.so 's ...
-	if [ -f "${ROOT}usr/$(get_libdir)/libperl.so" -a ! -L "${ROOT}usr/$(get_libdir)/libperl.so" ]
+	if [ -f "${ROOT}usr/$(get_libdir)/libperl$(get_libname)" -a ! -L "${ROOT}usr/$(get_libdir)/libperl$(get_libname)" ]
 	then
-		mv -f ${ROOT}usr/$(get_libdir)/libperl.so ${ROOT}usr/$(get_libdir)/libperl.so.old
+		mv -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname) ${ROOT}usr/$(get_libdir)/libperl$(get_libname).old
 	fi
 
 	# Next bit is to try and setup the /usr/lib/libperl.so symlink
 	# properly ...
-	local libnumber="`ls -1 ${ROOT}usr/$(get_libdir)/libperl.so.?.* | grep -v '\.old' | wc -l`"
+	local libnumber="`ls -1 ${ROOT}usr/$(get_libdir)/libperl$(get_libname).?.* | grep -v '\.old' | wc -l`"
 	if [ "${libnumber}" -eq 1 ]
 	then
 		# Only this version of libperl is installed, so just link libperl.so
 		# to the *soname* version of it ...
-		ln -snf libperl.so.${PERLSLOT} ${ROOT}usr/$(get_libdir)/libperl.so
+		ln -snf libperl$(get_libname).${PERLSLOT} ${ROOT}usr/$(get_libdir)/libperl$(get_libname)
 	else
 		if [ -x "${ROOT}/usr/bin/perl" ]
 		then
@@ -341,20 +343,20 @@ pkg_postinst() {
 
 			cd ${ROOT}usr/$(get_libdir)
 			# Link libperl.so to the *soname* versioned lib ...
-			ln -snf `echo libperl.so.?.${perlversion} | cut -d. -f1,2,3` libperl.so
+			ln -snf `echo libperl$(get_libname).?.${perlversion} | cut -d.  -f1,2,3` libperl$(get_libname)
 		else
 			local x latest
 
 			# Nope, we are not so lucky ... try to figure out what version
 			# is the latest, and keep fingers crossed ...
-			for x in `ls -1 ${ROOT}usr/$(get_libdir)/libperl.so.?.*`
+			for x in `ls -1 ${ROOT}usr/$(get_libdir)/libperl$(get_libname).?.*`
 			do
 				latest="${x}"
 			done
 
 			cd ${ROOT}usr/$(get_libdir)
 			# Link libperl.so to the *soname* versioned lib ...
-			ln -snf `echo ${latest##*/} | cut -d. -f1,2,3` libperl.so
+			ln -snf `echo ${latest##*/} | cut -d. -f1,2,3` libperl$(get_libname)
 		fi
 	fi
 }
