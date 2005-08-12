@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.21.ebuild,v 1.1 2005/05/25 16:49:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.21.ebuild,v 1.2 2005/08/12 09:07:28 mcummings Exp $
 
 DESCRIPTION="MakeMaker Perl Module"
 SRC_URI="mirror://cpan/authors/id/M/MS/MSCHWERN/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://search.cpan.org/~mschwern/${P}/"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~mips alpha arm hppa ~amd64 ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc ~mips alpha arm hppa ~amd64 ia64 ppc64 s390"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.8.0-r12
