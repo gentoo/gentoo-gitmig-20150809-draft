@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.366 2005/08/12 14:58:31 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.367 2005/08/12 15:57:36 ka0ttic Exp $
+
+  12 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> gaim-1.5.0.ebuild:
+  Stable on mips for bug #102000.
 
   12 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> gaim-1.5.0.ebuild:
   stable on alpha, wrt bug #102000
