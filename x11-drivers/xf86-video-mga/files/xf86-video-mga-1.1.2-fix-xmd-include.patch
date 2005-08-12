@@ -1,0 +1,12 @@
+diff -urN xf86-video-mga-1.1.2.orig/src/mga_bios.c xf86-video-mga-1.1.2/src/mga_bios.c
+--- xf86-video-mga-1.1.2.orig/src/mga_bios.c	2005-08-12 15:03:30.000000000 -0700
++++ xf86-video-mga-1.1.2/src/mga_bios.c	2005-08-12 15:03:48.000000000 -0700
+@@ -54,7 +54,7 @@
+ /* Drivers that need to access the PCI config space directly need this */
+ #include "xf86Pci.h"
+ 
+-#include "Xmd.h"
++#include <X11/Xmd.h>
+ 
+ #include "mga.h"
+ 
