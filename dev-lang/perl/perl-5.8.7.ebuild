@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.5 2005/08/12 10:21:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.6 2005/08/12 12:10:30 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -18,7 +18,7 @@ LIBPERL="libperl$(get_libname).${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sh ~sparc ~x86"
-IUSE="berkdb debug doc gdbm ithreads perlsuid build minimal userland_Darwin"
+IUSE="berkdb debug doc gdbm ithreads perlsuid build minimal"
 PERL_OLDVERSEN="5.8.0 5.8.2 5.8.4 5.8.5 5.8.6"
 
 DEPEND="!elibc_uclibc? ( sys-apps/groff )
