@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.99 2005/08/10 06:39:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.100 2005/08/12 22:33:47 spyderous Exp $
+
+*opengl-update-2.2.3 (12 Aug 2005)
+
+  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/opengl-update-2.2.3, +opengl-update-2.2.3.ebuild:
+  Another bump for modular X -- install to /usr/lib/xorg/modules instead of
+  /usr/lib/modules if the former exists.
 
 *opengl-update-2.2.2 (10 Aug 2005)
 
