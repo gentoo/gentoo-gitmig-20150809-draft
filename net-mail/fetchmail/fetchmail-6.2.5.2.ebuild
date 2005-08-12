@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.2.ebuild,v 1.10 2005/08/06 13:08:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.2.ebuild,v 1.11 2005/08/12 21:36:56 ferdy Exp $
 
 inherit eutils gnuconfig
 
@@ -16,8 +16,7 @@ IUSE="ssl nls ipv6 kerberos krb4 hesiod"
 
 RDEPEND="hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	kerberos? ( virtual/krb5 )
-	krb4? ( app-crypt/kth-krb )
+	kerberos? ( app-crypt/mit-krb5 )
 	sys-devel/gettext
 	elibc_FreeBSD? ( sys-libs/com_err )"
 

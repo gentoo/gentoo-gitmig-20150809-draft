@@ -7,9 +7,9 @@ MD5 d01bc5cb58cfda170f585b3e89bef8ed fetchmail-5.9.14.ebuild 1894
 MD5 00c01108df1dd1d60f071b2e1b929253 fetchmail-6.2.2-r2.ebuild 2038
 MD5 243728bcac42ad79161b92714363d75d fetchmail-6.2.3.ebuild 1961
 MD5 20841a593098014840ac383e73ef3aa8 fetchmail-6.2.5-r2.ebuild 2699
-MD5 02bf972591920ca6ced672add5f2f911 fetchmail-6.2.5.2.ebuild 2814
+MD5 ffefaeb57885e83adaf648e584209a18 fetchmail-6.2.5.2.ebuild 2789
 MD5 900f6ef3ff4d10ef0668f4d197558e9c fetchmail-6.2.5.ebuild 2609
-MD5 70ff7bc3d8ee477a73431ff8b6906c5c ChangeLog 11022
+MD5 a99aa34d6913eb5ab7ce842de56631d7 ChangeLog 11164
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 e2e0aea60ed02e6393a387a2288ecb6b fetchmail-6.2.5-r1.ebuild 2734
 MD5 4e030c7ea8258e15f970dfd6a6077461 files/digest-fetchmail-6.2.5.2 137
@@ -35,7 +35,7 @@ MD5 256e473e140583f41c7da6ecd9d815be files/digest-fetchmail-6.2.5 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC/RYGViELBEf1JB0RApv4AJwPi5+pnwzRqToZkNeShCti4iFrKACfRtfW
-bnkhlXzkAbS96e28tObVFRI=
-=KjQ9
+iD8DBQFC/RaKViELBEf1JB0RAskKAJ98CrFhbdwZHmTAYJoktb2nYUoYVACfRXpv
+oNuIbQTpMqnQK75E799tM9Q=
+=bFl0
 -----END PGP SIGNATURE-----
