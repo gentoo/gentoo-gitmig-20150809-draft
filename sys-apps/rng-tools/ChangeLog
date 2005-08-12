@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rng-tools
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.8 2004/09/03 21:03:24 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.9 2005/08/12 05:43:09 robbat2 Exp $
+
+  12 Aug 2005; Robin H. Johnson <robbat2@gentoo.org> rng-tools-1.1.ebuild:
+  1.1 stable on x86.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   rng-tools-1.1.ebuild:
