@@ -1,8 +1,18 @@
-MD5 9d8d0189ff1835a0a55670257a243102 sablotron-1.0.1.ebuild 1539
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0fad47f36c897887b336f55aa9bb9121 sablotron-0.97.ebuild 1013
-MD5 a25421d1abee0133c252662a31a206c1 sablotron-1.0.ebuild 1478
-MD5 9ca5c9553c970514fd98328ba510b9e5 ChangeLog 5607
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 42df851a9f037fa853698dbdb7c2b449 files/digest-sablotron-1.0 62
+MD5 a25421d1abee0133c252662a31a206c1 sablotron-1.0.ebuild 1478
+MD5 4c19d1755a36ba0c68adc6d44ca14f55 sablotron-1.0.1.ebuild 1541
+MD5 2b864c634f1418827ae32ae495d86d2a ChangeLog 5709
 MD5 be9d8aaeeda4c615088d8c7998c77bb9 files/digest-sablotron-1.0.1 64
+MD5 42df851a9f037fa853698dbdb7c2b449 files/digest-sablotron-1.0 62
 MD5 47394bfd045510f7f6b74c7828d48502 files/digest-sablotron-0.97 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFC/OEoKRy60XGEcJIRAnOuAKCr+lk8ySS1ObKdnfAPsTwglVUYgQCfefkG
+Lxop4uLDR8E62WysA6TERXQ=
+=UJfP
+-----END PGP SIGNATURE-----
