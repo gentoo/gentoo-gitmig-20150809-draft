@@ -1,6 +1,16 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.11 2005/08/11 07:21:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.12 2005/08/12 04:59:48 spyderous Exp $
+
+*xorg-server-0.99.1-r2 (12 Aug 2005)
+
+  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/check-for-glproto.patch, +files/fix-xf86misc-typo.patch,
+  +files/xorg-server-0.99.1-update-to-CVS-HEAD-20050811.patch,
+  +xorg-server-0.99.1-r2.ebuild:
+  Add xorg-server-0.99.1-update-to-CVS-HEAD-20050811.patch to fix big-endian
+  breakage, composite, some other stuff. Split out non-composite things from
+  xorg-composite.patch to check-for-glproto.patch and fix-xf86misc-typo.patch.
 
   11 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-0.99.1-r1.ebuild:
