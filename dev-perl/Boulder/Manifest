@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 990347788720e5692006a361fe0b8a89 Boulder-1.30.ebuild 509
+MD5 fcd7985828713ac3ad26ef79dc11fafd ChangeLog 444
 MD5 f9bb7926446d20a634a5ba1c78d6ff28 metadata.xml 344
-MD5 b1e9a3a9b04b5ca53956db3fe900ebd1 Boulder-1.30.ebuild 508
-MD5 00f65ab2fc9bf4204d6dc2f612e4d1bb ChangeLog 364
 MD5 289ad8cc41665064755fd3252455d8d1 files/digest-Boulder-1.30 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCpKektG5z4I8BtQoRApLfAJ0a4QgXUYD0Uz17y+UhGsh37FvZAwCfdhRK
-T/W2kSrV8k3rGTUtWap7cJs=
-=bVA3
------END PGP SIGNATURE-----

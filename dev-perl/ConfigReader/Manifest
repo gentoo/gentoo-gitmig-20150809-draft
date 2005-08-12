@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 84c86bb00c9794c8a8da826e735878e6 ConfigReader-0.5.ebuild 804
-MD5 2df452de8ea83153ab60cfbdf9aa8529 ChangeLog 531
+MD5 d925770a14138a435cab993760b23b6d ChangeLog 616
+MD5 71dde7860024bfab7382542be94e8b6f ConfigReader-0.5.ebuild 806
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 723b9490d86dcab40a679d78d412beb7 files/digest-ConfigReader-0.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvefrBXaUFmZvwyMRAounAJ9BkaHsN02KKagmrAy7TNpQfcmbpACfVP8W
-b/Uv1OWCrMhBKbPXNQDiSYU=
-=9Seq
------END PGP SIGNATURE-----
