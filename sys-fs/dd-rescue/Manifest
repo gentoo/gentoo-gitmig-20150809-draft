@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f4907f94f285dcdc31d40eb1804337b ChangeLog 1197
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 c549a5955041724bf94d5cb64fb1707f dd-rescue-1.11.ebuild 774
+MD5 f194efc8f941e884b9a12673ec057bac ChangeLog 1344
 MD5 60be743d669e264097fd3752caf60500 dd-rescue-1.10.ebuild 807
 MD5 6ab24239a4f33ca97a7824173c2ca089 files/digest-dd-rescue-1.10 65
+MD5 b623fca74a35fec98ece54cbab9c51f2 files/digest-dd-rescue-1.11 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFBfdbBHTu7gpaalycRAuqFAJ9UCVQSU0cuZpV/+MYH2HERghi68QCfWBe1
-xXRQv3vKUhtD/TQnwVY0zdA=
-=AgDN
+iD8DBQFC/BswgIKl8Uu19MoRAlgxAJ0U16UjU1k797m85w9aZdp/fYwCxQCeOsV3
+kHc5JEHJ+tnRCnw2OBK9Z9I=
+=H/jN
 -----END PGP SIGNATURE-----
