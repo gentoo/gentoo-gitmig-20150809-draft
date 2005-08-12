@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pscan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/ChangeLog,v 1.4 2005/04/24 13:05:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/ChangeLog,v 1.5 2005/08/12 20:33:44 metalgod Exp $
+
+  12 Aug 2005; Luis Medinas <metalgod@gentoo.org> pscan-20000721.ebuild:
+  Added ~amd64 Keywords.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pscan-20000721.ebuild:
   Stable on ppc.
