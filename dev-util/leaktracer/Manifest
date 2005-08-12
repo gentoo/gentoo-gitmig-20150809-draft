@@ -1,4 +1,4 @@
-MD5 d80b25b9433c586a98ce7150946d49a4 ChangeLog 1247
-MD5 34cad46a76456521e02dd7fe6c6295c7 leaktracer-2.4.ebuild 900
+MD5 0637b745e95f0074b2a44ca0cd6a65b0 ChangeLog 1342
+MD5 9e3ab2cb122b951053d5062d97c1d75c leaktracer-2.4.ebuild 905
 MD5 33c69089859fd02bcf44f3047740462e files/LeakCheck-gentoo.patch 349
 MD5 acf3dc455f0ee43fd7fef44c0822d37c files/digest-leaktracer-2.4 63
