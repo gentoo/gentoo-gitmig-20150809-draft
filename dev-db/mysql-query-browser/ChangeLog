@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-query-browser
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/ChangeLog,v 1.20 2005/06/23 03:42:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/ChangeLog,v 1.21 2005/08/12 02:55:49 swegener Exp $
+
+  12 Aug 2005; Sven Wegener <swegener@gentoo.org>
+  -mysql-query-browser-1.1.7.ebuild, -mysql-query-browser-1.1.9.ebuild:
+  Removed old ebuilds.
 
 *mysql-query-browser-1.1.12 (23 Jun 2005)
 
@@ -14,7 +18,7 @@
   17 Jun 2005; Sven Wegener <swegener@gentoo.org>
   +files/1.1.11-optional-4.1-support.patch,
   mysql-query-browser-1.1.11.ebuild:
-  Also apply the mysql-4.0 patch from mysql-administrator to
+  Also apply the mysql-4.1 patch from mysql-administrator to
   mysql-query-browser, bug #96399.
 
   16 Jun 2005; Sven Wegener <swegener@gentoo.org>

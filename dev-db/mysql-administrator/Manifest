@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea6b0f8b0e1a57f8436d3399dfed88b5 ChangeLog 4034
+MD5 6f06e2f108710aeb83f808d8846ed1a1 ChangeLog 4145
 MD5 a86763ed63c1e913c62e1d3bf05758d7 files/1.0.22a-optional-4.1-support.patch 913
-MD5 34425d10eca1bc9a5e32323e54a909df files/digest-mysql-administrator-1.0.20 79
 MD5 33ebdb0f3afc107d71706f4cfb9aaea6 files/digest-mysql-administrator-1.0.22a 80
 MD5 970601ab1b0fc8165fea73976d248ead metadata.xml 739
-MD5 f6f28e52045aa3f974acf40af748b816 mysql-administrator-1.0.20.ebuild 1271
 MD5 036f53411259d7d8c93c04cbdac66d62 mysql-administrator-1.0.22a.ebuild 1370
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvUgBI1lqEGTUzyQRAtOIAKDYEda4B7V9NSqtUv/m01Le6UHDjQCgju1s
-QAhLXTSO4QIUSBN3U6xy/BU=
-=0DKm
------END PGP SIGNATURE-----
