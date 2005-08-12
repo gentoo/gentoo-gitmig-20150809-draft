@@ -1,4 +1,7 @@
-MD5 0f17a1792ccf0d3aa7e6a8718d13e647 ChangeLog 8479
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a47b68ab50ebf5436f6d6f6b13a6b5ff ChangeLog 8632
 MD5 d259ae434e176df207cba3deab973f61 boost-1.29.0.ebuild 1426
 MD5 34d13e0eeb58e13e1992908d04d51b45 boost-1.30.0.ebuild 2973
 MD5 4759f9391ad73c487d4f6b3dbf8632a8 boost-1.30.2.ebuild 2960
@@ -20,3 +23,10 @@ MD5 1d06245b53e5677556ae22e5f60f0df3 files/digest-boost-1.32.0-r2 67
 MD5 1d06245b53e5677556ae22e5f60f0df3 files/digest-boost-1.32.0-r3 67
 MD5 1d06245b53e5677556ae22e5f60f0df3 files/digest-boost-1.32.0-r4 67
 MD5 612f486fa190f86f9be3a17465036dd0 files/digest-boost-1.33.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/Qks/aM9DdBw91cRAqj6AJwMwFJkAz5oUlP7SmMIcF7MvyujrgCfauoW
+gSaErmRytSX/6Xus2gTZG5U=
+=ivKA
+-----END PGP SIGNATURE-----
