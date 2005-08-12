@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 18093ea3b1ffb69b45afbeda1d72dafa ChangeLog 2046
+MD5 4139e40bf68880e0b85be5ec2ccd5c5d ChangeLog 2149
 MD5 77c6074ac3e9722f48fcc07ad31fbe47 XML-Sablot-0.90-r1.ebuild 563
 MD5 6450c509fa992dac23aa7150dababda2 XML-Sablot-0.90.ebuild 554
-MD5 e614d8f8c969eded80a9fcd5367ce8a2 XML-Sablot-0.98.ebuild 616
+MD5 b04b3a8d7a93243b8a694e156e1f2cff XML-Sablot-0.98.ebuild 616
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 d347e54c54b8de3a8097edb78625f7d4 files/digest-XML-Sablot-0.90 69
 MD5 d347e54c54b8de3a8097edb78625f7d4 files/digest-XML-Sablot-0.90-r1 69
 MD5 6c649e32064af8fe820f53dafb650196 files/digest-XML-Sablot-0.98 69
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0F1/I1lqEGTUzyQRArCzAKCm8tpwcRm98cjaTfTcyHuUHcMVZgCgve85
-sXx8BOs7i2HIjoOtbgcqG0g=
-=mti4
------END PGP SIGNATURE-----
