@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r4.ebuild,v 1.6 2005/08/07 23:53:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r4.ebuild,v 1.7 2005/08/12 03:54:43 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -71,13 +71,15 @@ src_install() {
 		insinto /usr/include/awk
 		doins "${SXML}"/xml_puller.h || die "xml inc failed"
 	fi
-	cd "${SFFS}"
-	make \
-		DESTDIR="${D}" \
-		AWKINCDIR="${S}" \
-		LIBDIR="$(get_libdir)" \
-		install \
-		|| die "filefuncs install failed"
+	if ! use userland_Darwin ; then
+		cd "${SFFS}"
+		make \
+			DESTDIR="${D}" \
+			AWKINCDIR="${S}" \
+			LIBDIR="$(get_libdir)" \
+			install \
+			|| die "filefuncs install failed"
+	fi
 
 	dodir /usr/bin
 	# In some rare cases, (p)gawk gets installed as (p)gawk- and not
