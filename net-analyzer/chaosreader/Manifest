@@ -1,8 +1,18 @@
-MD5 ed4766dfbf5a1c8d8dce935116cba8a9 chaosreader-0.93.ebuild 610
-MD5 70d159c3a6e9ce89a726add6c1c97fd1 chaosreader-0.92.ebuild 605
-MD5 c74948ffc643e89169a527a392b295c1 chaosreader-0.94.ebuild 610
-MD5 368402327964aad62bc6409d6ae9fbf7 ChangeLog 983
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+MD5 70d159c3a6e9ce89a726add6c1c97fd1 chaosreader-0.92.ebuild 605
+MD5 a0ecb146c43529a33c5a50ba8ff596a0 ChangeLog 1126
+MD5 1d7c8b90aa430a6b307c140e663953ad chaosreader-0.94.ebuild 615
+MD5 ed4766dfbf5a1c8d8dce935116cba8a9 chaosreader-0.93.ebuild 610
+MD5 43b51bdb1777364d5237aaebe95995a0 files/digest-chaosreader-0.94 64
 MD5 2b9b223c5673dc0cde3af73f5cae47c3 files/digest-chaosreader-0.92 64
 MD5 9a6fc091a0e89a040692fb7f55d9238e files/digest-chaosreader-0.93 64
-MD5 43b51bdb1777364d5237aaebe95995a0 files/digest-chaosreader-0.94 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC++kZmOfEJZHYOKcRAhhNAKCL4UHkefRPKvPLBzsu+sFTsfvLswCePjYX
+awR+/kr+U7Xjan2sQV7//U8=
+=A8/1
+-----END PGP SIGNATURE-----
