@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5fbdeaf98286f0c36589bc757203c6be jfsutils-1.1.7.ebuild 788
+MD5 661c182dcab1310b0d1dd4624e715a09 ChangeLog 6420
 MD5 71a09d8ebab002be97b27d33d240772f jfsutils-1.1.4.ebuild 796
-MD5 6fc7c5dafd727cfc26e085d7b94d44ed ChangeLog 6325
+MD5 5fbdeaf98286f0c36589bc757203c6be jfsutils-1.1.7.ebuild 788
+MD5 e50e5565354be90b049977b26c8f2f74 jfsutils-1.1.8.ebuild 794
 MD5 11bb989151c2c670d2d486f9b27de9e0 metadata.xml 414
-MD5 14b474ca85fd3dc783669e0f8d4b7f38 jfsutils-1.1.8.ebuild 791
 MD5 fbaccd19a284782bf35b685c7d838b26 files/digest-jfsutils-1.1.4 66
 MD5 c1e5f215a1065684cd31897b775413de files/digest-jfsutils-1.1.7 66
 MD5 5d3d4b20f79aed4d73b8ae57d59fdcaf files/digest-jfsutils-1.1.8 66
 MD5 5b66e6bd95c97fa48f19547a0a59f802 files/jfsutils-1.1.3-gentoo.diff 563
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC+0nkTOXg++0VvJQRAmAFAKCFKMcRyyDm2ihDl7LR7k/ov3RICwCeM2s8
-t8Kow3iiqOusUAuSYUXZBMI=
-=ZYzS
------END PGP SIGNATURE-----
