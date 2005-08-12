@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.16 2005/08/12 04:18:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.17 2005/08/12 08:39:38 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -70,4 +70,6 @@ src_install() {
 		mv "${D}"/usr/sbin/${p}backup{,-tar}
 		mv "${D}"/usr/sbin/${p}restore{,-tar}
 	fi
+
+	rm -f ${D}/usr/$(get_libdir)/charset.alias
 }

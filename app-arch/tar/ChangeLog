@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.51 2005/08/12 04:18:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.52 2005/08/12 08:39:38 flameeyes Exp $
+
+  12 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> tar-1.15.1.ebuild:
+  Remove the charset.alias file (created on non-GNU systems, useless here).
 
   12 Aug 2005; Mike Frysinger <vapier@gentoo.org> tar-1.15.1.ebuild:
   Add support for renaming tar on non-GNU systems #96363.
