@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.132 2005/08/12 13:45:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.133 2005/08/12 17:53:09 stkn Exp $
+
+  12 Aug 2005; <stkn@gentoo.org> +files/openssl-0.9.7c-tempfile.patch:
+  Readding missing patch.
 
   12 Aug 2005; Caleb Tennis <caleb@gentoo.org> -openssl-0.9.7e.ebuild:
   remove stale version
