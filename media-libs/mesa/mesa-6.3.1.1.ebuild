@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.11 2005/08/11 19:08:38 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1.ebuild,v 1.12 2005/08/12 13:23:55 fmccor Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ SRC_URI="http://xorg.freedesktop.org/extras/${MY_P}.tar.gz
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~sparc ~x86"
-IUSE="dri motif"
+IUSE="motif"
 
 RDEPEND="dev-libs/expat
 	x11-libs/libX11
@@ -98,6 +98,15 @@ src_compile() {
 src_install() {
 	dodir /usr
 	make DESTDIR=${D}/usr install || die "Installation failed"
+
+	##
+	# Install the actual drivers --- 'make install' doesn't install them
+	# anywhere.
+	dodir /usr/$(get_libdir)/xorg/modules/dri
+	exeinto /usr/$(get_libdir)/xorg/modules/dri
+	einfo "Installing drivers to ${EXEDESTTREE}."
+	find ${S}/lib -name '*_dri.so' | xargs doexe
+
 	fix_opengl_symlinks
 	dynamic_libgl_install
 

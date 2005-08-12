@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.20 2005/08/11 22:05:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.21 2005/08/12 13:23:55 fmccor Exp $
+
+  12 Aug 2005; Ferris McCormick <fmccor@gentoo.org> mesa-6.3.1.1.ebuild:
+  1. General cleanup for sparc, get rid of the ill-considered
+     IUSE=dri;
+  2. Make sure to install the actual dri drivers as well as the
+     base libGL package.
 
   11 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; Manifest:
   Fix manifest.
