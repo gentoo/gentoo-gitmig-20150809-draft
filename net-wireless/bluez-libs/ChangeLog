@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.45 2005/08/10 15:07:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.46 2005/08/12 07:38:38 corsair Exp $
+
+  12 Aug 2005; Markus Rothe <corsair@gentoo.org> bluez-libs-2.19.ebuild:
+  Stable on ppc64
 
   10 Aug 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   bluez-libs-2.19.ebuild:
