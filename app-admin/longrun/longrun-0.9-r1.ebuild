@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r1.ebuild,v 1.10 2005/01/01 11:09:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r1.ebuild,v 1.11 2005/08/12 18:46:25 betelgeuse Exp $
 
 inherit eutils
 
 DESCRIPTION="A utility to control Transmeta's Crusoe processor"
 HOMEPAGE="http://freshmeat.net/projects/longrun/"
-SRC_URI="mirror://kernel/linux/utils/cpu/crusoe/${P}.tar.bz2"
+GCC3_PATCH="${P}-debian-gcc-3.diff.gz"
+SRC_URI="mirror://kernel/linux/utils/cpu/crusoe/${P}.tar.bz2
+		 mirror://gentoo/${GCC3_PATCH}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,7 +22,7 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PF}-debian-gcc-3.diff
+	epatch ${DISTDIR}/${GCC3_PATCH}
 }
 
 src_compile() {
