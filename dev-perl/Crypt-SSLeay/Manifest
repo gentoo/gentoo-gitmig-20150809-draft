@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 10e5740ea3c2fe1754ee6144364d2962 ChangeLog 2354
-MD5 6887c503bfc5a171e4971e1f89d5ce78 Crypt-SSLeay-0.49.ebuild 650
-MD5 13ff71c37901411465869855909942bf Crypt-SSLeay-0.51.ebuild 774
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 6887c503bfc5a171e4971e1f89d5ce78 Crypt-SSLeay-0.49.ebuild 650
+MD5 ac64666a8e4707f8b7d333c779c20a7e Crypt-SSLeay-0.51.ebuild 772
+MD5 d07cce3cbf4b05159c6bacc18c8d0281 ChangeLog 2454
 MD5 15c0d75072fb09b20cf2a7b3c5987ef6 files/digest-Crypt-SSLeay-0.49 69
 MD5 dfb08ff0befe670c6daa71532b2d80ad files/digest-Crypt-SSLeay-0.51 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFC/GAgtG5z4I8BtQoRAmFFAJ9M9jtSzA0Q9s4CabSm2LtmJwT5gQCaAxxB
-yNzw50bltYKqHesuCxrYlxI=
-=T2Ok
------END PGP SIGNATURE-----

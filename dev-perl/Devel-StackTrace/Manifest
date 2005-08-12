@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba0852130b5c2e2a7b1afd9fb7186794 ChangeLog 1411
-MD5 d96351b56e0971baaa8354845d9f8318 Devel-StackTrace-1.03.ebuild 612
-MD5 1692a6324a9433805e29efdab43d9e41 Devel-StackTrace-1.11.ebuild 610
+MD5 96ba3a2e1ab8e9380b62177f2858ef17 Devel-StackTrace-1.11.ebuild 608
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d96351b56e0971baaa8354845d9f8318 Devel-StackTrace-1.03.ebuild 612
+MD5 2a9984f15248e7876eab7fbbba30c7c0 ChangeLog 1515
 MD5 237365ee0c1b7afa2dc1ddeb0a88fe1a files/digest-Devel-StackTrace-1.03 71
 MD5 63f49967e70cb5aa3f7d5aae447447ef files/digest-Devel-StackTrace-1.11 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFC/GADtG5z4I8BtQoRAo3ZAKCGqEB05bp0EShXrcSP6Cp5W+eqcACePqwS
-PpGFZPrr/PlDFu4ARy0XKaE=
-=3s3f
------END PGP SIGNATURE-----
