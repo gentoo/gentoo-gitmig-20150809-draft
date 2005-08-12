@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5.ebuild,v 1.3 2005/03/15 14:20:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5.ebuild,v 1.4 2005/08/12 16:32:40 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,6 +21,11 @@ DEPEND=">=sys-libs/ncurses-5.1
 PROVIDE="virtual/textbrowser"
 
 S=${WORKDIR}/${PN}${PV//./-}
+
+src_unpack() {
+	unpack ${A}
+	use userland_Darwin && epatch ${FILESDIR}/${P}-darwin.patch
+}
 
 src_compile() {
 	local myconf

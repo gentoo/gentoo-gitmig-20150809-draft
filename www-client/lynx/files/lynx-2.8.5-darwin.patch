@@ -1,0 +1,12 @@
+diff -ur lynx2-8-5/WWW/Library/Implementation/HTTCP.c lynx2-8-5-patched/WWW/Library/Implementation/HTTCP.c
+--- lynx2-8-5/WWW/Library/Implementation/HTTCP.c	2004-01-25 09:51:04.000000000 +0800
++++ lynx2-8-5-patched/WWW/Library/Implementation/HTTCP.c	2005-08-12 12:32:50.000000000 +0800
+@@ -1326,7 +1326,7 @@
+ 	    if (phost->h_length != sizeof soc_in->sin_addr) {
+ 		HTAlwaysAlert(host, gettext("Address length looks invalid"));
+ 	    }
+-	    memcpy((void *)&soc_in->sin_addr, phost->h_addr, phost->h_length);
++	    memcpy((void *)&soc_in->sin_addr, phost->h_addr_list[ 0 ], phost->h_length);
+ #endif /* VMS && CMU_TCP */
+ 	}
+ #endif /* _WINDOWS_NSL */

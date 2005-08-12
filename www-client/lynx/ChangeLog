@@ -1,6 +1,11 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.4 2005/03/15 14:24:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.5 2005/08/12 16:32:40 grobian Exp $
+
+  12 Aug 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/lynx-2.8.5-darwin.patch, lynx-2.8.5.ebuild:
+  Adding a patch that actually allows to compile on ppc-macos (was already
+  marked stable! :( )
 
 *lynx-2.8.5 (15 Mar 2005)
 *lynx-2.8.4.1d-r1 (15 Mar 2005)
