@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.88 2005/06/27 03:27:55 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.89 2005/08/13 12:41:48 chainsaw Exp $
+
+*mpg123-0.59s-r10 (13 Aug 2005)
+
+  13 Aug 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/0.59s-set-terminal-line-settings-once.patch,
+  +mpg123-0.59s-r10.ebuild:
+  Revision bump; only set terminal line settings once, not for every new song
+  (can make terminal unusable after use of -c option). Patch by Andrzej
+  Zaborowski <balrogg@gmail.com>, closes bug #70592.
 
   27 Jun 2005; Lina Pezzella <j4rg0n@gentoo.org> mpg123-0.59s-r9.ebuild:
   Stable ppc-macos

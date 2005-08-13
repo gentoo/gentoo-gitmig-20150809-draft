@@ -1,0 +1,21 @@
+term_init() is called everytime a new song starts playing in -C mode
+so only after the first song finishes, as a side effect the original
+terminal line properties were getting overwritten and therefore were
+not restored to the original value. Also as a side effect term_restore()
+was called as many times as songs were played, at exit. The patch
+fixes this by letting the things be executed only once.
+Andrzej Zaborowski <balrog@zabor.org>
+
+diff -Naur mpg123/term.c mpg123b/term.c
+--- mpg123/term.c	2000-10-30 17:45:14.000000000 +0000
++++ mpg123b/term.c	2005-06-09 17:52:49.764132264 +0000
+@@ -25,7 +25,8 @@
+ {
+   struct termios tio;
+ 
+-  term_enable = 0;
++  if (term_enable || !param.term_ctrl)
++    return;
+ 
+   atexit(term_restore);
+   if(tcgetattr(0,&tio) < 0) {
