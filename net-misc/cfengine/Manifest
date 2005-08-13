@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d3c8e55fc16a6ec3b560f4910d8be56d ChangeLog 8487
-MD5 047b3a63d198f4bf3902d25b49896cef cfengine-2.1.13.ebuild 2062
-MD5 a163894359525be86eb7efca731c9a35 cfengine-2.1.14-r1.ebuild 2257
-MD5 7e19d1885a4c4b9fe42538f2e616b6cc cfengine-2.1.14.ebuild 2063
-MD5 65dea657f2bc459853268c4f3c925368 cfengine-2.1.15-r1.ebuild 2257
 MD5 93f0794d84bdef4e1de7979e366a41b3 cfengine-2.1.15.ebuild 2069
-MD5 a9aa786ac4c8e32d55d8469af8ddf29b files/cfengine-2.1.10-setnetgrent.patch 1037
-MD5 f4fe82c710efac73c0895ad268c54196 files/cfportage.README 2294
-MD5 f1a9344587920c108d487766f61e90cf files/cfservd.rc6 259
-MD5 e34708413b735ba7b5402ee47b2bb62d files/digest-cfengine-2.1.13 68
-MD5 815d5e5ddde6c8fda9da1dbd529181aa files/digest-cfengine-2.1.14 68
-MD5 815d5e5ddde6c8fda9da1dbd529181aa files/digest-cfengine-2.1.14-r1 68
-MD5 1781d04ce20330f0e9b266753eff4c91 files/digest-cfengine-2.1.15 68
-MD5 1781d04ce20330f0e9b266753eff4c91 files/digest-cfengine-2.1.15-r1 68
-MD5 ade9e66709bdb04df3f0beba72f3a008 files/module-cfportage.tbz2 3099
+MD5 0fc2e52b014b73ecd1ecf09bac0aba53 cfengine-2.1.14.ebuild 2063
 MD5 7b6935177932b682ae3a53cd2e6a9cc3 metadata.xml 977
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC+nu3I1lqEGTUzyQRAuHmAJ97Ro2wRFFcj8qDQYafbD1TLhQlCACdFZ+2
-efL1lnZOvKjy8LWKwpeKOcc=
-=OqKP
------END PGP SIGNATURE-----
+MD5 aa04c52fb16fb3bd03643f2651952ade ChangeLog 8586
+MD5 65dea657f2bc459853268c4f3c925368 cfengine-2.1.15-r1.ebuild 2257
+MD5 a163894359525be86eb7efca731c9a35 cfengine-2.1.14-r1.ebuild 2257
+MD5 047b3a63d198f4bf3902d25b49896cef cfengine-2.1.13.ebuild 2062
+MD5 f4fe82c710efac73c0895ad268c54196 files/cfportage.README 2294
+MD5 815d5e5ddde6c8fda9da1dbd529181aa files/digest-cfengine-2.1.14 68
+MD5 ade9e66709bdb04df3f0beba72f3a008 files/module-cfportage.tbz2 3099
+MD5 815d5e5ddde6c8fda9da1dbd529181aa files/digest-cfengine-2.1.14-r1 68
+MD5 e34708413b735ba7b5402ee47b2bb62d files/digest-cfengine-2.1.13 68
+MD5 1781d04ce20330f0e9b266753eff4c91 files/digest-cfengine-2.1.15-r1 68
+MD5 f1a9344587920c108d487766f61e90cf files/cfservd.rc6 259
+MD5 1781d04ce20330f0e9b266753eff4c91 files/digest-cfengine-2.1.15 68
+MD5 a9aa786ac4c8e32d55d8469af8ddf29b files/cfengine-2.1.10-setnetgrent.patch 1037
