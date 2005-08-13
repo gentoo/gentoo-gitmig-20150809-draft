@@ -1,14 +1,24 @@
-MD5 860667e88e462ccdb0c0341550216289 ChangeLog 3093
-MD5 6f0b2d303dcce2b1fb708097a8d29310 metadata.xml 162
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 13e46410fd40100a4d5d3652d42bd9a5 vlnx-414e-r2.ebuild 1022
+MD5 997495e9565a19e5f3748f429ec6368a vlnx-432e-r2.ebuild 1661
 MD5 4442c39304aa42cabda2579cb4690309 vlnx-416e.ebuild 954
-MD5 f221dde77b3bcf14950854a07269aa7f vlnx-432e-r2.ebuild 1482
-MD5 15edffaa6916d8c80256fe7fb6c6317c files/digest-vlnx-414e-r2 119
+MD5 90d7e5368981a3dbfba5228d615d7dda ChangeLog 3301
+MD5 6f0b2d303dcce2b1fb708097a8d29310 metadata.xml 162
+MD5 5a856af918b22adc1ae21917d9910052 files/vlnx-416e-envd 41
 MD5 b3adc49af0bcd712e302e8b8a05d0a16 files/digest-vlnx-416e 119
-MD5 8cb7bbfe89a94249a0dd12b14c0dfcda files/digest-vlnx-432e-r2 121
+MD5 0febf48ea77ff1117e560010868ea848 files/uvscan.sh 43
 MD5 c6c5114b5973447f08b4b4ac397cb05f files/uvscan.conf 141
 MD5 14d478cf7b4ea66119194c77a9c40de2 files/uvscan.cron 89
-MD5 0febf48ea77ff1117e560010868ea848 files/uvscan.sh 43
-MD5 5a856af918b22adc1ae21917d9910052 files/vlnx-414e-envd 41
-MD5 5a856af918b22adc1ae21917d9910052 files/vlnx-416e-envd 41
 MD5 17ffe8062ec618d01bfd603693ed4479 files/vlnx-432e-envd 17
+MD5 5a856af918b22adc1ae21917d9910052 files/vlnx-414e-envd 41
+MD5 15edffaa6916d8c80256fe7fb6c6317c files/digest-vlnx-414e-r2 119
+MD5 8cb7bbfe89a94249a0dd12b14c0dfcda files/digest-vlnx-432e-r2 121
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/kp5QlM6RnzZP+IRApnEAKCY1SYUeYy3FD8gGSaYmpPSC8kS/gCgs7p/
+yZaRYon2+hfYpMEDVmHocsg=
+=2GPw
+-----END PGP SIGNATURE-----
