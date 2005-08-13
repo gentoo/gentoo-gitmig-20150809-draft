@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.14 2005/08/09 16:06:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.15 2005/08/13 11:01:01 ferdy Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Mail delivery agent/filter"
 HOMEPAGE="http://www.procmail.org/"
@@ -19,11 +19,10 @@ RDEPEND="virtual/libc
 	selinux? ( sec-policy/selinux-procmail )"
 
 src_compile() {
-# With gcc-3.1 and newer, there is a bug with aggressive optimization caused by
-# -finline-functions (implied by -O3) that leaves strstr() is an infinite loop.
-# To work around this, we append -fno-inline-functions to CFLAGS disable just
-# that optimization and avoid the bug.
-	CFLAGS="${CFLAGS} -fno-inline-functions"
+	# -finline-functions (implied by -O3) leaves strstr() in an infinite loop.
+	# To work around this, we append -fno-inline-functions to CFLAGS
+	append-flags -fno-inline-functions
+
 	sed -e "s:CFLAGS0 = -O:CFLAGS0 = ${CFLAGS}:" \
 		-e "s:LOCKINGTEST=__defaults__:#LOCKINGTEST=__defaults__:" \
 		-e "s:#LOCKINGTEST=/tmp:LOCKINGTEST=/tmp:" \
