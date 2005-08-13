@@ -1,0 +1,9 @@
+# ChangeLog for app-text/linuxdoc-tools
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/ChangeLog,v 1.1 2005/08/13 10:27:01 leonardop Exp $
+
+*linuxdoc-tools-0.9.21 (12 Aug 2005)
+
+  12 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  linuxdoc-tools-0.9.21.ebuild:
+  New package, requested on bug #88232.
