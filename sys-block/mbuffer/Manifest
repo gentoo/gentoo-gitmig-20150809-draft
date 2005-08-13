@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 369f16921e47b11c451f2965f2eb6a02 mbuffer-20050730.ebuild 933
-MD5 4fa5c0affa7620ad433b82961ec618e6 mbuffer-20050726.ebuild 979
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 edd73f617380f3348b063fe7f2889a5f mbuffer-20050321.ebuild 946
-MD5 248fdcee7fee310d8fdaaf533e8ca937 mbuffer-20011008.ebuild 836
+MD5 4fbb03fa9a48050d75070bfd245f90e0 mbuffer-20050321.ebuild 945
+MD5 25a9d95fd6a58ae46af3e027af1bab66 ChangeLog 1928
+MD5 4fa5c0affa7620ad433b82961ec618e6 mbuffer-20050726.ebuild 979
+MD5 369f16921e47b11c451f2965f2eb6a02 mbuffer-20050730.ebuild 933
 MD5 945a4ac3977317219cba2e662c9bff56 mbuffer-20050510.ebuild 1021
-MD5 52665dee3ca4a6db15760109a641e1e4 ChangeLog 1829
-MD5 2731a15bfb4f3b21e1f653810d4d4132 files/mbuffer-20050321-configure.patch 399
-MD5 82bcd2234960ee105a356be2fd973111 files/digest-mbuffer-20050510 64
+MD5 248fdcee7fee310d8fdaaf533e8ca937 mbuffer-20011008.ebuild 836
 MD5 2fd068ce5b49368d06316e42628d7895 files/digest-mbuffer-20050321 64
-MD5 8102230bc8d3e5733486d5bcfd62f229 files/digest-mbuffer-20050726 64
 MD5 99fb482d24377d87942e30e3ab9c73a9 files/digest-mbuffer-20011008 65
-MD5 009a5d692035ef0f55db183ac9b9d246 files/mbuffer-20050510-md5-type.patch 294
 MD5 05dd9dd233a63e14d348d68569f9516b files/digest-mbuffer-20050730 64
+MD5 009a5d692035ef0f55db183ac9b9d246 files/mbuffer-20050510-md5-type.patch 294
+MD5 8102230bc8d3e5733486d5bcfd62f229 files/digest-mbuffer-20050726 64
 MD5 ad2d89b1203de87c820c4a4a67bc927b files/mbuffer-20050726-DESTDIR.patch 211
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8BlOgIKl8Uu19MoRAoKoAJ9ejbP2ljeGWFMLvyhglnZHKHwV/ACfa2m2
-7H/7dD4BH2MbZvRTdh4oFJE=
-=4xdf
------END PGP SIGNATURE-----
+MD5 82bcd2234960ee105a356be2fd973111 files/digest-mbuffer-20050510 64
+MD5 2731a15bfb4f3b21e1f653810d4d4132 files/mbuffer-20050321-configure.patch 399
