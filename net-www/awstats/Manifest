@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1fbc4e66d7e1abc944d71034654c938d awstats-6.3-r2.ebuild 4042
-MD5 28f5cf5a2d9c0c90e928a80db1107502 awstats-6.5.ebuild 3961
 MD5 11c27ca12bea46405b06a652a5942730 awstats-6.4.ebuild 3896
-MD5 df2cdc46a2a3ce76e88f9911bb56e682 ChangeLog 3696
+MD5 8491f252cee2859f5febb7efd8b332ea awstats-6.5.ebuild 3964
+MD5 1fbc4e66d7e1abc944d71034654c938d awstats-6.3-r2.ebuild 4042
 MD5 6bc2db5b1e135821863e91fa8658ad48 metadata.xml 255
-MD5 803faa3640a7aadd2fadbbd05968a45e files/digest-awstats-6.4 60
-MD5 b73b3e414a6926b8d2e3975ed5628eff files/digest-awstats-6.5 63
+MD5 bcc7b8636f747e68e9497b460300eea1 ChangeLog 3796
 MD5 70a086a2f452243a500aa67b1df7f26f files/digest-awstats-6.3-r2 135
-MD5 7a52d3f65ff7220a519056716d460ecd files/awstats-6.3-gentoo.diff 1219
 MD5 f881494a979cdea82d58e31b589d9a97 files/postinst-en.txt 5049
+MD5 b73b3e414a6926b8d2e3975ed5628eff files/digest-awstats-6.5 63
+MD5 7a52d3f65ff7220a519056716d460ecd files/awstats-6.3-gentoo.diff 1219
 MD5 8f8b0ad336b5066db17452db770ed878 files/awstats-6.3-CAN-2005-0363.diff 1243
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/NbPEZCkKN40op4RAh2vAJ90s3O489Rqp6I/7EPFDxl35DarUQCeInjf
-w+895a9sPZ0umR6+UhDffXg=
-=IJnq
------END PGP SIGNATURE-----
+MD5 803faa3640a7aadd2fadbbd05968a45e files/digest-awstats-6.4 60
