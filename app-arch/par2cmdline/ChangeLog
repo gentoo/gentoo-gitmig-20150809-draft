@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/par2cmdline
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.10 2005/01/01 11:51:08 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.11 2005/08/13 22:25:15 vapier Exp $
+
+*par2cmdline-0.4-r1 (13 Aug 2005)
+
+  13 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/par2cmdline-0.4-gcc4.patch,
+  +files/par2cmdline-0.4-wildcard-fix.patch, +par2cmdline-0.4-r1.ebuild:
+  Fix wildcard expansion of non-regular files by Bardur Arantsson #51817. Also
+  fix building with gcc4 by Dirk-Jan Heijs #102391.
 
   17 Nov 2004; Mike Frysinger <vapier@gentoo.org> par2cmdline-0.4.ebuild:
   Use make install DESTDIR.
