@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 093c893dda20f785528db7571aaaf601 gnome-themes-extras-0.8.1.ebuild 962
 MD5 ac3ae6cc524d818ce7f3cf9609e307e5 gnome-themes-extras-0.7.ebuild 861
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 c3091b3e5949be95cce754b210a665e8 ChangeLog 3873
+MD5 b3e53d355ee61513985d805333d492f2 ChangeLog 3979
+MD5 a8563ea15a85610aca766e0712ad68b0 gnome-themes-extras-0.8.1.ebuild 959
 MD5 9ae6a37c4ea5cf1b24e203cc3d520a00 files/gnome-themes-extras-0.5-industrial_uncorrupt.patch 1488
 MD5 2aa7c7554474bc2ef5f70098577f0f1e files/digest-gnome-themes-extras-0.7 77
 MD5 6456d74d3e998566ec5018dcae9572b0 files/digest-gnome-themes-extras-0.8.1 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD4DBQFC82GyKRy60XGEcJIRAqGeAJ9tWqEaaYTz7lPDxualM5vo4oFGygCY+6zM
-F/vphwQmPcQ9MrIA8W26pw==
-=+hSd
------END PGP SIGNATURE-----
