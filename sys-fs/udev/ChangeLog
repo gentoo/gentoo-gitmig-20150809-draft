@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.128 2005/08/11 23:16:20 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.129 2005/08/13 17:29:05 gregkh Exp $
+
+*udev-067 (13 Aug 2005)
+
+  13 Aug 2005; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-067.ebuild:
+  067 release
+  
+  Fixes persistant name stuff at boot (and the cdrom naming at boot).
+  Fixes build of cdrom_id with older versions of linux-headers.
 
 *udev-066 (11 Aug 2005)
 
