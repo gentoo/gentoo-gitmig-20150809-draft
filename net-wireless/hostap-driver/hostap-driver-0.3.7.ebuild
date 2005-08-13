@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.3.7.ebuild,v 1.4 2005/07/24 12:43:29 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.3.7.ebuild,v 1.5 2005/08/13 16:06:58 brix Exp $
 
-inherit toolchain-funcs eutils pcmcia linux-mod
+inherit toolchain-funcs eutils linux-mod
 
 DESCRIPTION="Driver for Intersil Prism2/2.5/3 based IEEE 802.11b wireless LAN products"
 HOMEPAGE="http://hostap.epitest.fi"
@@ -43,26 +43,22 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-firmware.patch
 
-	# set compiler
-	sed -i "s:gcc:$(tc-getCC):" ${S}/Makefile
+	sed -i \
+		-e "s:gcc:$(tc-getCC):" \
+		-e "s:tail -1:tail -n 1:" \
+		${S}/Makefile
 
-	# unpack the pcmcia-cs sources if needed
-	pcmcia_src_unpack
+	if use pcmcia; then
+		# unpack the pcmcia-cs sources if needed
+		pcmcia_src_unpack
 
-	# fix for new coreutils (#31801)
-	sed -i "s:tail -1:tail -n 1:" ${S}/Makefile
-
-	# set correct pcmcia path (PCMCIA_VERSION gets set from pcmcia_src_unpack)
-	if [ -n "${PCMCIA_VERSION}" ]; then
-		sed -i "s:^\(PCMCIA_PATH\)=:\1=${PCMCIA_SOURCE_DIR}:" ${S}/Makefile
+		# set correct pcmcia path (PCMCIA_VERSION gets set from pcmcia_src_unpack)
+		if [ -n "${PCMCIA_VERSION}" ]; then
+			sed -i "s:^\(PCMCIA_PATH\)=:\1=${PCMCIA_SOURCE_DIR}:" ${S}/Makefile
+		fi
 	fi
 
 	convert_to_m ${S}/Makefile
-}
-
-src_compile() {
-	pcmcia_configure
-	linux-mod_src_compile
 }
 
 src_install() {
