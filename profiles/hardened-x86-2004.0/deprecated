@@ -1,5 +1,0 @@
-hardened/x86
-# emerge -n '>=sys-apps/portage-2.0.51'
-# cd /etc/
-# rm make.profile
-# ln -s ../usr/portage/profiles/hardened/x86 make.profile

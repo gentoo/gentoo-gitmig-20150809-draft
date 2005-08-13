@@ -1,8 +1,0 @@
-# Chris PeBenito <pebenito@gentoo.org>
-# must use a SELinux profile
-selinux
-uclibc
-# aqua USE flag is only valid on Mac OS X
-aqua
-
-emul-linux-x86

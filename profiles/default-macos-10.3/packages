@@ -1,9 +1,0 @@
-### GENTOO/MacOS 10.3 Panther PROFILE ###
-
-# Maintained by Pieter Van den Abeele <pvdabeel@gentoo.org> 
-
-# Things we want emerge system to install
-
-*net-misc/wget
-*virtual/editor
-*sys-apps/sed

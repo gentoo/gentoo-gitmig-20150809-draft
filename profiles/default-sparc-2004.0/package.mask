@@ -1,4 +1,0 @@
-sys-kernel/linux26-headers
->=sys-kernel/gentoo-dev-sources-2.6.8
->=sys-kernel/development-sources-2.6.8
-

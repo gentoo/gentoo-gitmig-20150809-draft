@@ -1,7 +1,0 @@
-# mask 2.6 headers as 2.4 kernels could still be used
->=sys-kernel/linux-headers-2.6.0
-
-## Fernando J. Pereda <ferdy@gentoo.org>
-# cannot mark stable because of gnomemm stuff
-# wrt bug #92494
-app-cdr/cdrdao

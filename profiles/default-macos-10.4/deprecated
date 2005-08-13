@@ -1,4 +1,0 @@
-default-darwin/macos
-# emerge -n '>=sys-apps/portage-2.0.51'
-# sudo rm /etc/make.profile
-# sudo ln -s /usr/portage/profiles/default-darwin/macos/10.4/ /etc/make.profile
