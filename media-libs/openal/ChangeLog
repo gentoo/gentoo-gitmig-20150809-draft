@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.41 2005/08/12 07:38:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.42 2005/08/13 23:44:05 hansmi Exp $
+
+  13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  openal-20050504-r1.ebuild:
+  Stable on ppc.
 
   12 Aug 2005; Markus Rothe <corsair@gentoo.org> openal-20050504-r1.ebuild:
   Stable on ppc64
