@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4271 2005/08/13 09:44:29 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4272 2005/08/13 11:19:49 genone Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1011,10 +1011,6 @@ dev-lisp/cl-imho
 # nagios-*2 is still beta
 >=net-analyzer/nagios-core-2.0b_p1
 >=net-analyzer/nagios-2.0b_p1
-
-# Marius Mauch <genone@gentoo.org> (22 Jan 2005)
-# Segfaulting all over the place, pending tests with gtk2 version
-mail-client/sylpheed-claws-vcalendar
 
 # Christian Parpart <trapni@gentoo.org> (21 Jan 2005)
 # mod_auth_mysql changes versioning scheme from YYMMDD to usual version numbers.
