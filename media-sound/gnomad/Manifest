@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 840e311a04e5c95bc546977b816b9459 gnomad-2.8.0.ebuild 1020
+MD5 66de909fc3d85474c3201a422a89ce2e gnomad-2.8.0.ebuild 1019
 MD5 8eafe6959e135e08fcceaa2db4fa34e5 gnomad-2.5.0.ebuild 932
-MD5 249ef07b026053ebba81f0a0374864f2 ChangeLog 2442
+MD5 fcd52b20a821e287d4155347252b5a5e ChangeLog 2527
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 cc066dd71ec9b6e6d8ff876563b3e439 files/digest-gnomad-2.5.0 65
 MD5 a8c5c20a3bc558a4b463423ffb3468ed files/digest-gnomad-2.8.0 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2XYT/rLF9B432nYRAmJ/AJwIjzIN2OSwDKoKzXNO3/QifZIBGQCfY1WV
-WOWhRx309vBwjYFn6o6+WBg=
-=EP7U
+iD8DBQFC/eju/rLF9B432nYRAhkMAKCDII4Fm3+EEcwoGT39HHywTtksIACgv9pR
+mPPS3ViILNU4PVOBE3DgzcM=
+=ZpAx
 -----END PGP SIGNATURE-----
