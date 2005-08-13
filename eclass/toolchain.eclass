@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.182 2005/08/10 22:15:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.183 2005/08/13 03:52:42 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -96,6 +96,7 @@ if [[ ${GCC_VAR_TYPE} == "versioned" ]] ; then
 	else
 		LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc-lib/${CTARGET}/${GCC_CONFIG_VER}}
 	fi
+	LIBEXECPATH=${TOOLCHAIN_LIBEXE:-${PREFIX}/libexec/gcc/${CTARGET}/${GCC_CONFIG_VER}}
 	INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${LIBPATH}/include}
 	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
 	DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}}
@@ -109,6 +110,7 @@ elif [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
 	# specific gcc targets, like libffi. Note that we dont override the value
 	# returned by get_libdir here.
 	LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/$(get_libdir)}
+	LIBEXECPATH=${TOOLCHAIN_LIBEXE:-${PREFIX}/libexec/gcc/}
 	INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${PREFIX}/include}
 	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/bin/}
 	DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/}
@@ -1056,6 +1058,8 @@ gcc_do_configure() {
 		# for nearly all native systems. Therefore, we highly recommend you
 		# not provide a configure target when configuring a native compiler."
 		confgcc="${confgcc} --target=${CTARGET}"
+
+		is_crosscompile && confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
 	fi
 	[[ -n ${CBUILD} ]] && confgcc="${confgcc} --build=${CBUILD}"
 
@@ -1410,8 +1414,10 @@ gcc-compiler_src_install() {
 	cd ${WORKDIR}/build
 	S=${WORKDIR}/build \
 	make DESTDIR="${D}" install || die
+	# Punt some tools which are really only useful while building gcc
+	rm -r "${D}${LIBEXECPATH}"/install-tools
 	# Now do the fun stripping stuff
-	env RESTRICT="" STRIP=${CHOST}-strip prepstrip "${D}${BINPATH}" "${D}/usr/libexec"
+	env RESTRICT="" STRIP=${CHOST}-strip prepstrip "${D}${BINPATH}" "${D}${LIBEXECPATH}"
 	env RESTRICT="" STRIP=${CTARGET}-strip prepstrip "${D}${LIBPATH}"
 
 	is_crosscompile || [[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
@@ -1548,7 +1554,7 @@ gcc-compiler_src_install() {
 		done
 	fi
 
-	cd ${S}
+	cd "${S}"
 	if use build || is_crosscompile; then
 		rm -rf "${D}"/usr/share/{man,info}
 		rm -rf "${D}"${DATAPATH}/{man,info}
