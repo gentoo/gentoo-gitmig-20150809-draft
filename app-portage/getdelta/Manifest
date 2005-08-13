@@ -1,4 +1,14 @@
-MD5 0b2afcd7fdbff75509b309d7b1d31f9e getdelta-0.7.0.ebuild 681
-MD5 da93678c3e9fff8a54f66f34bf2692a8 ChangeLog 1463
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e87eb62097fb723db03fa85a92059e4 getdelta-0.7.0.ebuild 688
+MD5 ee70dad24734ee7f51090c40ae7c45cd ChangeLog 1592
 MD5 8b3c0a00d01e47f2b1eddab5aa68eca7 metadata.xml 271
 MD5 d836fb13442365d125f86b0e83421541 files/digest-getdelta-0.7.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC/ooh3og80iZgVQgRApmHAJwODaeXSYlGIkeKEkOoV5Jz/vcMLQCfdhvF
+rMznIbyN0I2d1puUIHaevGY=
+=DFGK
+-----END PGP SIGNATURE-----

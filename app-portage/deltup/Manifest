@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8f0d3a1f03af0c8d94258231f6ce3461 ChangeLog 1099
-MD5 d1867deaeaf8a20db7236b0170696935 deltup-0.4.2-r1.ebuild 1363
-MD5 378e8d34dd95cc65b7f65565df5d85f7 files/bzip2-1.0.2-makefile-CFLAGS.patch 841
-MD5 065889a05aed13c33d8d81b75dffa429 files/digest-deltup-0.4.2-r1 126
+MD5 3464fdc910844a98084506fb4562182e ChangeLog 1230
 MD5 8b3c0a00d01e47f2b1eddab5aa68eca7 metadata.xml 271
+MD5 b1679577a47c9230bcce69ce4b8965ef deltup-0.4.2-r1.ebuild 1369
+MD5 065889a05aed13c33d8d81b75dffa429 files/digest-deltup-0.4.2-r1 126
+MD5 378e8d34dd95cc65b7f65565df5d85f7 files/bzip2-1.0.2-makefile-CFLAGS.patch 841
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0ZN1I1lqEGTUzyQRAt3QAKCB4Oo2PyrjslEltY/E0z8IFHSeUwCcDAUa
-ui0fCEzVpXSDAj89Pc8R/Wk=
-=UZZM
+iD8DBQFC/oiC3og80iZgVQgRAjeSAJ9/sPJ6DMJvR4X89m7+yWQnGinfbgCgms6G
+E2euayxHqsok3Q1Q2kz/gdY=
+=K6WG
 -----END PGP SIGNATURE-----
