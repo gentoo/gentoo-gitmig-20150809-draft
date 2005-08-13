@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.7 2005/08/02 15:05:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.8 2005/08/13 23:16:08 hansmi Exp $
+
+  13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  tftp-hpa-0.40-r1.ebuild:
+  Stable on ppc.
 
   02 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   tftp-hpa-0.40-r1.ebuild:
