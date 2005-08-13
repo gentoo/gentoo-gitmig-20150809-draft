@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r5.ebuild,v 1.3 2005/08/11 02:49:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r5.ebuild,v 1.4 2005/08/13 17:34:09 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -190,14 +190,14 @@ src_install() {
 
 	# Most of the installation happens here
 	dodir ${MOZILLA_FIVE_HOME}
-	cp -RL ${S}/dist/bin/* ${D}${MOZILLA_FIVE_HOME}
+	cp -RL ${S}/dist/bin/* ${D}${MOZILLA_FIVE_HOME} || die "Failed to Copy"
 
 	# Create directory structure to support portage-installed extensions.
 	# See update_chrome() in mozilla-launcher
 	keepdir ${MOZILLA_FIVE_HOME}/chrome.d
 	keepdir ${MOZILLA_FIVE_HOME}/extensions.d
 	cp ${D}${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt \
-		${D}${MOZILLA_FIVE_HOME}/chrome.d/0_base-chrome.txt
+		${D}${MOZILLA_FIVE_HOME}/chrome.d/0_base-chrome.txt || die "Failed to Copy"
 
 	# Create /usr/bin/firefox
 	install_mozilla_launcher_stub firefox ${MOZILLA_FIVE_HOME}
@@ -225,8 +225,8 @@ src_install() {
 	einfo "Installing includes and idl files..."
 	dodir ${MOZILLA_FIVE_HOME}/include/idl /usr/include
 	cd ${S}/dist
-	cp -LfR include/* ${D}${MOZILLA_FIVE_HOME}/include
-	cp -LfR idl/* ${D}${MOZILLA_FIVE_HOME}/include/idl
+	cp -LfR include/* ${D}${MOZILLA_FIVE_HOME}/include || die "Failed to Copy"
+	cp -LfR idl/* ${D}${MOZILLA_FIVE_HOME}/include/idl || die "Failed to Copy"
 
 	# Dirty hack to get some applications using this header running
 	dosym ${MOZILLA_FIVE_HOME}/include/necko/nsIURI.h \

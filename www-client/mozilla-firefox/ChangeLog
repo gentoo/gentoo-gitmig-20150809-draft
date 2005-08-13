@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.65 2005/08/11 02:49:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.66 2005/08/13 17:34:09 anarchy Exp $
+
+  13 Aug 2005; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-1.0.6-r5.ebuild:
+  added die wrt bug #102341
 
   11 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-1.0.6-r5.ebuild:
