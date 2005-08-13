@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 81ef64505e3fd8e719bb49005997ab57 ChangeLog 733
-MD5 509bf3692d39ab577136f53c240854c1 apwal-0.4.4.ebuild 1079
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
-MD5 ebc5476a489cc63f29265eda46bc702e apwal-0.4.5.ebuild 1063
+MD5 b295fdb9b7762f4739fb23feb51c95a9 apwal-0.4.5.ebuild 1062
+MD5 249a5ae38254e78f6e9bc44a806cf96a ChangeLog 825
+MD5 509bf3692d39ab577136f53c240854c1 apwal-0.4.4.ebuild 1079
 MD5 ae65ed7cc16b9e9a9d9b4ac49c6a7a32 files/digest-apwal-0.4.4 63
 MD5 b9b76b5a3ce229da2d34474e18dd957a files/digest-apwal-0.4.5 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2UGsl5AvwDPiUowRAhv1AJ4xzY6g1GOz7dU5SITA97DIZrOQFgCg1Qde
-paZ5HzlSdJA2ehj/pPlLeM0=
-=FChI
------END PGP SIGNATURE-----
