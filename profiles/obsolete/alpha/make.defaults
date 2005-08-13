@@ -1,0 +1,3 @@
+ARCH=alpha
+ACCEPT_KEYWORDS=alpha
+CONFIG_PROTECT=/etc

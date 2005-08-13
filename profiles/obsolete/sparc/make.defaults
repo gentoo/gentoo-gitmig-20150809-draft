@@ -1,0 +1,3 @@
+ARCH=sparc
+ACCEPT_KEYWORDS=sparc
+CONFIG_PROTECT=/etc

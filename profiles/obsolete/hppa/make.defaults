@@ -1,0 +1,3 @@
+ARCH=hppa
+ACCEPT_KEYWORDS=hppa
+CONFIG_PROTECT=/etc
