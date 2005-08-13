@@ -1,4 +1,5 @@
-MD5 14a8e1d99249c08ac216e089d1eca03f gentoo-vdr-scripts-0.1_alpha1.ebuild 705
-MD5 42d024dd16158ad03a8e8c06f42c46b7 ChangeLog 424
+MD5 d592479e8704429b4067062679e90006 gentoo-vdr-scripts-0.1_alpha1.ebuild 801
+MD5 54feaeb7bd652757fcd135cfd18eb8a6 ChangeLog 646
 MD5 56a0b0ac7e6c5ab62c3e45c87a2f07d6 metadata.xml 255
+MD5 cc3806f7a39109c105d0603dc651edb4 files/gentoo-vdr-scripts-0.1_alpha1-merge-commands.diff 1785
 MD5 b8fba7f5ebd2c87f79834578f56c2a31 files/digest-gentoo-vdr-scripts-0.1_alpha1 76

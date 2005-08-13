@@ -1,0 +1,58 @@
+--- gentoo-vdr-scripts/usr/lib/vdr/rcscript/pre-start-40-create-commands-conf.sh.old	2005-08-13 13:56:13.000000000 +0200
++++ gentoo-vdr-scripts/usr/lib/vdr/rcscript/pre-start-40-create-commands-conf.sh	2005-08-13 12:46:37.000000000 +0200
+@@ -3,7 +3,7 @@
+ 	local bname="${1}"
+ 	local order="${2}"
+ 	local file="${CONFIG}/${bname}.conf"
+-	local newfile="/var/vdr/${bname}.conf"
++	local mergedfile="/var/vdr/${bname}.conf"
+ 	local sdir="/etc/vdr/${bname}"
+ 
+ 	if [[ ! -L "${file}" ]]; then
+@@ -12,14 +12,16 @@
+ 			einfo "Saved original ${file} as ${file}.backup"
+ 		fi
+ 
+-		ln -s "../../${newfile}" "${file}"
++		ln -s "../../${mergedfile}" "${file}"
+ 	fi
+ 
+-	if ! rm "${newfile}"; then
+-		ewarn "Could not change ${newfile}"
+-		return
++	if [[ -f "${mergedfile}" ]]; then
++		if ! rm "${mergedfile}"; then
++			ewarn "Could not change ${mergedfile}"
++			return
++		fi
+ 	fi
+-	cat > "${newfile}" <<-EOT
++	cat > "${mergedfile}" <<-EOT
+ 	# Warning: Do not change this file.
+ 	# This file is generated automatically by /etc/init.d/vdr.
+ 	# Change the source files under ${sdir}.
+@@ -29,15 +31,17 @@
+ 	SFILES=$(echo /etc/vdr/${bname}/${bname}.*.conf)
+ 	for f in ${SFILES}; do
+ 		[[ -f "${f}" ]] || continue
+-		echo "# source : ${f}" >> "${newfile}"
+-		cat "${f}" >> "${newfile}"
+-		echo >> "${newfile}"
++		echo "# source : ${f}" >> "${mergedfile}"
++		cat "${f}" >> "${mergedfile}"
++		echo >> "${mergedfile}"
+ 	done
+ }
+ 
++ebegin "preparing vdr config files"
+ if [[ ! -d /var/vdr ]]; then
+-	ewarn "directory /var/vdr does not exist"
+-else
+-	create_commands_conf commands "${ORDER_COMMANDS}"
+-	create_commands_conf reccmds "${ORDER_RECCMDS}"
++	mkdir -p /var/vdr
++	ewarn "created /var/vdr"
+ fi
++create_commands_conf commands "${ORDER_COMMANDS}"
++create_commands_conf reccmds "${ORDER_RECCMDS}"
++eend 0
