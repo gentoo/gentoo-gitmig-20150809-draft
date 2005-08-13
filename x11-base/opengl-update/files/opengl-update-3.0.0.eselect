@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-3.0.0.eselect,v 1.1 2005/08/13 07:42:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-3.0.0.eselect,v 1.2 2005/08/13 07:54:39 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -78,6 +78,7 @@ get_implementations() {
 set-new-implementation() {
 	local GL_IMPLEM=${1}
 	local GL_LOCAL
+	local AVAIL_IMPLEMS=$(get_implementations)
 
 	check_version
 	check_user
@@ -86,8 +87,7 @@ set-new-implementation() {
 	umask 022
 
 	if ! hasq ${GL_IMPLEM} ${AVAIL_IMPLEMS}; then
-		eerror "Invalid profile selected."
-		exit 1
+		die -q "Invalid profile selected."
 	fi
 
 	echo -n "Switching to ${GL_IMPLEM} OpenGL interface..."

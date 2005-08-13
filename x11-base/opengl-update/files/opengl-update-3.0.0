@@ -1,12 +1,27 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-3.0.0,v 1.2 2005/08/13 07:43:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-3.0.0,v 1.3 2005/08/13 07:54:39 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
 # Further modifications by Jeremy Huddleston <eradicator@gentoo.org>
 
+. /etc/init.d/functions.sh
+
+hasq() {
+	local x
+
+	local me=${1}
+	shift
+        
+	for x in "${@}"; do
+		if [[ "${x}" == "${me}" ]]; then
+			return 0
+		fi
+	done
+	return 1
+}
 
 print_usage() {
 	cat << FOO
@@ -127,11 +142,11 @@ case ${ACTION} in
 		exit $?
 	;;
 	set-implementation)
-		local myconf = "set ${NEW_GL_IMPLEM} --prefix=\"${PREFIX}\" --dst-prefix=\"${DST_PREFIX}\""
 		if [[ ${USE_PROFILE_HEADERS} == "yes" ]] ; then
-			myconf="${myconf} --impl-headers"
+			eselect opengl set ${NEW_GL_IMPLEM} --prefix="${PREFIX}" --dst-prefix="${DST_PREFIX}" --impl-headers
+		else
+			eselect opengl set ${NEW_GL_IMPLEM} --prefix="${PREFIX}" --dst-prefix="${DST_PREFIX}"
 		fi
-		eselect opengl ${myconf}
 	;;
 	usage)
 		print_usage
