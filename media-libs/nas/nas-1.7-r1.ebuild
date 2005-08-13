@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.6 2005/06/17 20:27:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.7 2005/08/13 13:20:40 chainsaw Exp $
 
 IUSE="static"
 
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.7-header.patch
+	epatch ${FILESDIR}/${P}-header.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {
