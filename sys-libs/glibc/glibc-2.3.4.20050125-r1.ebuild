@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.57 2005/08/04 19:36:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.58 2005/08/13 03:54:31 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -432,6 +432,7 @@ toolchain-glibc_src_install() {
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if is_crosscompile ; then
 		dosym include $(alt_prefix)/sys-include
+		dosym . $(alt_prefix)/usr
 		return 0
 	fi
 

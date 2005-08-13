@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.7 2005/08/05 00:07:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.8 2005/08/13 03:51:14 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -353,6 +353,7 @@ src_install() {
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
 		dosym include $(alt_prefix)/sys-include
+		dosym . $(alt_prefix)/usr
 		return 0
 	fi
 
