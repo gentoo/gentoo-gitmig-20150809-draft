@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gdeskcal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.10 2005/07/20 12:29:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.11 2005/08/13 23:25:40 hansmi Exp $
+
+  13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gdeskcal-0.57.1-r1.ebuild:
+  Stable on ppc.
 
   20 Jul 2005; Markus Rothe <corsair@gentoo.org> gdeskcal-0.57.1-r1.ebuild:
   Stable on ppc64

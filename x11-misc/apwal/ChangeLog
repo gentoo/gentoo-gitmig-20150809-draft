@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/apwal
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/ChangeLog,v 1.5 2005/07/16 17:19:02 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/ChangeLog,v 1.6 2005/08/13 23:26:38 hansmi Exp $
+
+  13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> apwal-0.4.5.ebuild:
+  Stable on ppc.
 
   16 Jul 2005; Jonathan Smith <smithj@gentoo.org> apwal-0.4.5.ebuild:
   x86 stable, ~amd64
