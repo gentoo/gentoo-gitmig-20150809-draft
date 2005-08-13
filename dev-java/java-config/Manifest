@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 750ad711b46f01a27e2d2895b0665594 java-config-1.2.6.ebuild 645
-MD5 ef7ed50bccfdd990bf96dffd374ac245 java-config-1.2.11.ebuild 737
 MD5 85d879eebe40ca9c7e541be9e2c37d53 java-config-1.2.10.ebuild 648
-MD5 16eac93a6de86139eee26067b40a48a8 ChangeLog 12611
 MD5 ff83dbd41edf207798f367c723ab813f metadata.xml 486
+MD5 168bb66945e9f5783eaf9f5b0e8bf6c5 ChangeLog 12714
 MD5 d231ea9914dbb799f673efbf92688ede java-config-1.2.11-r1.ebuild 823
+MD5 750ad711b46f01a27e2d2895b0665594 java-config-1.2.6.ebuild 645
 MD5 c45ffb83f922840acc242b3e8a24ea7f java-config-1.2.9.ebuild 649
-MD5 ad67cc60d7ac3f5053637bfdd519e004 files/digest-java-config-1.2.6 69
+MD5 b1d3ccd9f5d3617c70e71ee360be9795 java-config-1.2.11.ebuild 735
 MD5 331da9a2c9211fda3cb94f0fa682c432 files/digest-java-config-1.2.9 69
+MD5 49e2b6b8988b1dcb838716e5463256f5 files/digest-java-config-1.2.10 70
 MD5 78909db2dd94f5ed1060036b0dfced48 files/digest-java-config-1.2.11-r1 70
 MD5 882665d94cc943f315ec729d990afadf files/java-config-1.2.11-shebang.patch 229
-MD5 49e2b6b8988b1dcb838716e5463256f5 files/digest-java-config-1.2.10 70
 MD5 78909db2dd94f5ed1060036b0dfced48 files/digest-java-config-1.2.11 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1Dwb/rLF9B432nYRAtfqAKDHqze34m3kUefDdGJ70WubUBaZVgCeIalc
-ZwECTHOFIiznJ+HUWMC8YyU=
-=yIxT
------END PGP SIGNATURE-----
+MD5 ad67cc60d7ac3f5053637bfdd519e004 files/digest-java-config-1.2.6 69

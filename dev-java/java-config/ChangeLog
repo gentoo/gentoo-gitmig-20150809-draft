@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.76 2005/06/18 13:52:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.77 2005/08/13 23:27:16 hansmi Exp $
+
+  13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  java-config-1.2.11.ebuild:
+  Stable on ppc.
 
   18 Jun 2005; Thomas Matthijs <axxo@gentoo.org> ChangeLog, +java-config-1.2.10.ebuild:
   revision bump: start the correct python, and ignore python env vars
