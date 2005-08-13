@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/most
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.18 2005/08/05 12:37:58 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.19 2005/08/13 03:38:25 kumba Exp $
+
+  13 Aug 2005; Joshua Kinard <kumba@gentoo.org> metadata.xml,
+  most-4.10.2.ebuild:
+  Moved to shell-tools herd; removed use of gnuconfig eclass (users should
+  enable 'autoconfig' instead); changed configure/make to use econf and emake.
 
   05 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> most-4.9.5.ebuild,
   most-4.10.2.ebuild:
