@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/asterisk-chan_capi-cm-0.5.4.ebuild,v 1.1 2005/07/29 01:25:34 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/asterisk-chan_capi-cm-0.5.4.ebuild,v 1.2 2005/08/13 03:26:55 stkn Exp $
 
 IUSE=""
 
@@ -43,7 +43,7 @@ src_install() {
 	dodoc INSTALL LICENSE README capi.conf
 
 	# fix permissions
-	if [[ -z "$(egetent group asterisk)" ]]; then
+	if [[ -n "$(egetent group asterisk)" ]]; then
 		chown -R root:asterisk ${D}/etc/asterisk/capi.conf
 		chmod -R u=rwX,g=rX,o= ${D}/etc/asterisk/capi.conf
 	fi
