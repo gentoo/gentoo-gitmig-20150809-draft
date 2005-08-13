@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvcgi/dvcgi-0.5.13-r1.ebuild,v 1.2 2005/07/04 12:35:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvcgi/dvcgi-0.5.13-r1.ebuild,v 1.3 2005/08/13 23:14:08 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvcgi/download/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE="doc"
 
 DEPEND="dev-libs/dvutil

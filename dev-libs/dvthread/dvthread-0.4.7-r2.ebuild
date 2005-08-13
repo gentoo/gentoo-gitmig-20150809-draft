@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/dvthread-0.4.7-r2.ebuild,v 1.2 2005/07/22 00:12:57 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/dvthread-0.4.7-r2.ebuild,v 1.3 2005/08/13 23:12:28 hansmi Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="classes for threads and monitors, wrapped around the posix thread l
 SRC_URI="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvthread/download/${P}.tar.gz"
 HOMEPAGE="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvthread/html/"
 
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc"
