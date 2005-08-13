@@ -1,0 +1,10 @@
+# ChangeLog for media-tv/gentoo-vdr-scripts
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.1 2005/08/13 09:03:38 zzam Exp $
+
+*gentoo-vdr-scripts-0.1_alpha1 (13 Aug 2005)
+
+  13 Aug 2005; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +gentoo-vdr-scripts-0.1_alpha1.ebuild:
+  initial import of my vdr scripts package
+
