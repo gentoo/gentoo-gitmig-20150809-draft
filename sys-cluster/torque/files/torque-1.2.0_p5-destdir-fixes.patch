@@ -1,0 +1,11 @@
+--- torque-1.2.0p5.orig/src/gui/Makefile.in	2005-08-12 22:58:34.000000000 -0700
++++ torque-1.2.0p5/src/gui/Makefile.in	2005-08-12 23:02:43.000000000 -0700
+@@ -360,7 +360,7 @@
+ 	#
+ 	@echo Install xpbs
+ 	$(INSTALL) -m 755 xpbs $(DESTDIR)$(bindir)/xpbs
+-	@chmod 755 $(bindir)/xpbs 2> /dev/null
++	chmod 755 $(DESTDIR)$(bindir)/xpbs 2> /dev/null
+ 	#
+ 	$(INSTALL) -m 755 buildindex $(DESTDIR)$(XPBS_LIB)
+ 	$(INSTALL) -m 644 xpbsrc $(DESTDIR)$(XPBS_LIB)

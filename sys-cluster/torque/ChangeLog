@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.19 2005/08/11 20:51:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.20 2005/08/13 06:29:14 robbat2 Exp $
+
+*torque-1.2.0_p5-r1 (13 Aug 2005)
+
+  13 Aug 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/torque-1.2.0_p5-destdir-fixes.patch,
+  +files/torque-1.2.0_p5-setuid-safety.patch, +torque-1.2.0_p5-r1.ebuild:
+  Audit ebuild and package build system, fix more DESTDIR cases (bug #101326),
+  and some setXid linking stuff.
 
 *torque-1.2.0_p5 (11 Aug 2005)
 

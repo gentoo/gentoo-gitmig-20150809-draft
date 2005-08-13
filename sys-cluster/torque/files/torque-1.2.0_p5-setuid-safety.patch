@@ -1,0 +1,22 @@
+--- torque-1.2.0p5.orig/src/mom_rcp/Makefile.in	2005-08-12 23:08:29.000000000 -0700
++++ torque-1.2.0p5/src/mom_rcp/Makefile.in	2005-08-12 23:12:35.000000000 -0700
+@@ -115,7 +115,7 @@
+ 	$(INSTALL) -m 4755 $(TARGET) $(DESTDIR)$(sbindir)
+ 
+ $(TARGET): $(OBJS)
+-	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
++	$(CC) $(LDFLAGS) $(CFLAGS) -Wl,-z,now -o $@ $(OBJS) $(LIBS)
+ 
+ 
+ # needed for make depend
+--- torque-1.2.0p5.orig/src/iff/Makefile.in	2005-08-12 23:14:23.000000000 -0700
++++ torque-1.2.0p5/src/iff/Makefile.in	2005-08-12 23:16:58.000000000 -0700
+@@ -114,7 +114,7 @@
+ 	$(INSTALL) -m 4755 $(TARGET) $(DESTDIR)$(sbindir)
+ 
+ pbs_iff: $(OBJS) $(PBS_LIBS)
+-	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $(OBJS) $(PBS_LIBS) $(LIBS)
++	$(CC) $(LDFLAGS) $(CFLAGS) -Wl,-z,now -o $@ $(OBJS) $(PBS_LIBS) $(LIBS)
+ 
+ @mk_cleanup@
+ @mk_tail@
