@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/potrace
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.10 2005/06/12 17:26:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.11 2005/08/13 11:22:55 metalgod Exp $
+
+  13 Aug 2005; Luis Medinas <metalgod@gentoo.org> potrace-1.7.ebuild:
+  Stable on AMD64.
 
   12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> potrace-1.7.ebuild:
   Stable on alpha.
