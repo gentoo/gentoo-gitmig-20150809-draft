@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.129 2005/08/13 17:29:05 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.130 2005/08/13 21:01:59 gregkh Exp $
+
+  13 Aug 2005; Greg Kroah-Hartman <gregkh@gentoo.org> Manifest:
+  fixed 067 digest md5
 
 *udev-067 (13 Aug 2005)
 
