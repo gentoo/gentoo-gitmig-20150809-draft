@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.101 2005/08/13 07:42:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.102 2005/08/13 20:29:11 eradicator Exp $
+
+  13 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  files/opengl-update-3.0.0.eselect:
+  Some style changes at the suggestion of the eselect guys.
 
 *opengl-update-3.0.0 (13 Aug 2005)
 

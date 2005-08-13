@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-3.0.0.eselect,v 1.2 2005/08/13 07:54:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-3.0.0.eselect,v 1.3 2005/08/13 20:29:11 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -18,23 +18,9 @@ PREFIX="${ROOT}/usr"
 DST_PREFIX="${ROOT}/usr"
 USE_PROFILE_HEADERS="no"
 
-hasq() {
-	local x
-
-	local me=${1}
-	shift
-
-	for x in "${@}"; do
-		if [[ "${x}" == "${me}" ]]; then
-			return 0
-		fi
-	done
-	return 1
-}
-
 check_user() {
 	if [[ $(id -u) -ne 0 ]]; then
-		die -q "${0}: Must be run as root."
+		die -q "Must be run as root."
 	fi
 }
 
@@ -67,7 +53,7 @@ get_current_implem() {
 get_implementations() {
 	local implems
 	for dir in ${PREFIX}/lib{,32,64}/opengl/*; do 
-		if [[ -d "${dir}" && ${dir##*/} != "global" ]] && ! hasq ${dir##*/} ${implems}; then
+		if [[ -d "${dir}" && ${dir##*/} != "global" ]] && ! has ${dir##*/} ${implems}; then
 			implems=${implems:+${implems} }${dir##*/}
 		fi
 	done
@@ -75,7 +61,7 @@ get_implementations() {
 	echo ${implems}
 }
 
-set-new-implementation() {
+set_new_implementation() {
 	local GL_IMPLEM=${1}
 	local GL_LOCAL
 	local AVAIL_IMPLEMS=$(get_implementations)
@@ -86,15 +72,15 @@ set-new-implementation() {
 	# Set a sane umask... bug #83115
 	umask 022
 
-	if ! hasq ${GL_IMPLEM} ${AVAIL_IMPLEMS}; then
+	if ! has ${GL_IMPLEM} ${AVAIL_IMPLEMS}; then
 		die -q "Invalid profile selected."
 	fi
 
 	echo -n "Switching to ${GL_IMPLEM} OpenGL interface..."
 		rm -f ${ENV_D} &> /dev/null
 
-		LIBDIRS="lib32 lib lib64"
-		for LIBDIR in ${LIBDIRS}; do
+		local libdir
+		for LIBDIR in $(list_libdirs); do
 			# Special case handling of lib32 because it can be a symlink to
 			# emul libs
 			if [[ "${LIBDIR}" = "lib32" ]]; then
@@ -279,7 +265,7 @@ do_set() {
 		shift
 		case ${opt} in
 			--use-old)
-				if [[ -n "${CURRENT_GL_IMPLEM}" ]] && hasq ${CURRENT_GL_IMPLEM} ${AVAIL_IMPLEMS}; then
+				if [[ -n "${CURRENT_GL_IMPLEM}" ]] && has ${CURRENT_GL_IMPLEM} ${AVAIL_IMPLEMS}; then
 					ACTION="old-implementation"
 				fi
 			;;
@@ -293,9 +279,6 @@ do_set() {
 			--impl-headers)
 				USE_PROFILE_HEADERS="yes"
 			;;
-			--help|-h|-?)
-				ACION="usage"
-			;;
 			*)
 				if [[ "${ACTION}" != "old-implementation" ]]; then
 					ACTION="set-implementation"
@@ -307,7 +290,7 @@ do_set() {
 					if [[ -z "${NEW_GL_IMPLEM}" ]] ; then
 						die -q "Unrecognized option: ${opt}"
 					fi
-				elif hasq ${opt} ${AVAIL_IMPLEMS}; then
+				elif has ${opt} ${AVAIL_IMPLEMS}; then
 					NEW_GL_IMPLEM="${opt}"
 				else
 					die -q "Unrecognized option: ${opt}"
@@ -318,40 +301,30 @@ do_set() {
 
 	case ${ACTION} in
 		old-implementation)
-			set-new-implementation ${CURRENT_GL_IMPLEM}
+			set_new_implementation ${CURRENT_GL_IMPLEM}
 			return $?
 		;;
 		set-implementation)
 			if [[ -n "${NEW_GL_IMPLEM}" ]]; then
-				set-new-implementation ${NEW_GL_IMPLEM}
+				set_new_implementation ${NEW_GL_IMPLEM}
 				return $?
 			else
 				print_set_usage
 				return 1
 			fi
 		;;
-		usage)
-			print_set_usage
-			return 0
-		;;
 		*)
-			print_set_usage
-			return 1
+			die -q "Invalid usage."
 		;;
 	esac
-
 }
 
-print_set_usage() {
-cat << FOO
-Usage: eselect opengl set [<options>] <GL implementation>
-       Set the opengl implementation.
-       Valid options:
-       --use-old:          If an implementation is already set, use that one.
-       --prefix=<val>:     Set the source prefix (default: /usr)
-       --dst-prefix=<val>: Set the destination prefix (default: /usr)
-       --impl-headers:     Use headers provided by this implementation to
-                           override golbal ones provided by opengl-update.
-                           This was default in <opengl-update-2.2
-FOO
+show_extra_help_text() {
+	write_list_start "Extra options for 'set' action:"
+	write_kv_list_entry "--use-old" "If an implementation is already set, use that one."
+  write_kv_list_entry "--prefix=<val>" "Set the source prefix (default: /usr)"
+  write_kv_list_entry "--dst-prefix=<val>" "Set the destination prefix (default: /usr)"
+  write_kv_list_entry "--impl-headers" "Use headers provided by this implementation to"
+	write_kv_list_entry "" "override golbal ones provided by opengl-update."
+	write_kv_list_entry "" "This was default in <opengl-update-2.2"
 }
