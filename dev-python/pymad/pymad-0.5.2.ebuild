@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/pymad-0.5.2.ebuild,v 1.3 2005/07/24 13:40:35 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/pymad-0.5.2.ebuild,v 1.4 2005/08/13 23:10:48 hansmi Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.spacepants.org/src/pymad/download/${P}.tar.gz"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 
 DEPEND="virtual/python
 	media-sound/madplay"
