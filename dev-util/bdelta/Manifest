@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9733545f69d0274c5dbe0ee5930f6443 bdelta-0.1.0.ebuild 782
-MD5 ff43a8434d607b439f2fbd5aa6195f51 ChangeLog 618
+MD5 842a6832b78a4ced7ddbd50ea0a159f2 bdelta-0.1.0.ebuild 791
+MD5 02e066c2bec3f59f883a9eda359855bd ChangeLog 745
 MD5 8b3c0a00d01e47f2b1eddab5aa68eca7 metadata.xml 271
 MD5 3a550d75ec5151e8003488cc0ddf49f0 files/digest-bdelta-0.1.0 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCgRRW2G5bA0cA/ScRAgxjAKC1sPq6bQHPykH52SK+gzXvB0yFEQCfQjhT
-jN5u6q4eCRLTxx++5jPel2M=
-=Me6b
+iD8DBQFC/oky3og80iZgVQgRAliUAJwJH+KxedRDXjRF5kw6zQHZCu/X9ACfZ6bA
+l42CcECIonv2FuCGgBjnXvI=
+=JTAP
 -----END PGP SIGNATURE-----
