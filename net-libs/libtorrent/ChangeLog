@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.19 2005/08/01 01:09:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.20 2005/08/13 21:53:05 flameeyes Exp $
+
+*libtorrent-0.7.1 (13 Aug 2005)
+
+  13 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +libtorrent-0.7.1.ebuild:
+  Updated to latest upstream version. Dropped patch, dropped AM_CFLAGS
+  workaround.
 
   01 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   libtorrent-0.6.4.ebuild, libtorrent-0.6.7-r1.ebuild,
