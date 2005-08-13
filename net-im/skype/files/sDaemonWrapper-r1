@@ -45,6 +45,8 @@ else
 	fi
 fi
 
+#Going to "homedir"
+cd ${progpath}
 echo "${skypecmd} ${progopts}" >> ${logfile}
 echo "=========================================="
 ${skypecmd} ${progopts} >> ${logfile} 2>> ${logfile}

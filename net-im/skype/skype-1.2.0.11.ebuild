@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.2.0.11.ebuild,v 1.1 2005/07/31 20:30:54 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.2.0.11.ebuild,v 1.2 2005/08/13 00:43:36 humpback Exp $
 
 inherit eutils qt3
 
@@ -78,7 +78,7 @@ src_install() {
 	fowners root:audio /opt/skype/skype
 	fowners root:audio /opt/skype/skype-callto-handler
 	dodir /usr/bin/
-	dosym /opt/skype/skype.bin /usr/bin/skype
+	dosym /opt/skype/skype /usr/bin/skype
 	# Install the Documentation
 	dodoc README LICENSE
 
