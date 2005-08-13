@@ -1,0 +1,39 @@
+Patch by Jason Bucata to fix gcc4 issues.
+
+http://bugs.gentoo.org/102311
+
+--- trek/getpar.h
++++ trek/getpar.h
+@@ -35,6 +35,9 @@
+  *	@(#)getpar.h	8.1 (Berkeley) 5/31/93
+  */
+ 
++#ifndef __GETPAR_H_
++#define __GETPAR_H_
++
+ typedef void (*cmdfun) __P((int));
+ struct cvntab		/* used for getcodpar() paramater list */
+ {
+@@ -52,3 +55,6 @@
+ int testnl __P((void));
+ void skiptonl __P((int));
+ int readdelim __P((int));
++
++#endif /*__GETPAR_H_*/
++
+--- trek/trek.h
++++ trek/trek.h
+@@ -35,6 +35,13 @@
+  *	@(#)trek.h	8.1 (Berkeley) 5/31/93
+  */
+ 
++/* For struct cvntab definition, which is now required for 
++ * Skitab and Lentab below.  gcc 4.0 and later will emit
++ * "array type has incomplete element type" errors otherwise.
++ * -- Jason Bucata (jbucata@tulsaconnect.com), 12-AUG-2005
++ */
++#include "getpar.h"
++
+ /*
+ **  Global Declarations
+ **
