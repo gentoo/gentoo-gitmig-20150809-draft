@@ -1,6 +1,15 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.37 2005/07/15 17:00:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.38 2005/08/13 10:17:34 leonardop Exp $
+
+*sgmltools-lite-3.0.3-r10 (13 Aug 2005)
+
+  13 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  sgmltools-lite-3.0.3-r10.ebuild:
+  Don't install files provided by other packages. In particular, don't
+  create sgml2{html,txt,rtf} scripts, as they are not good substitutes for
+  the real programs in linuxdoc-tools (bug #88232). Don't include the
+  linuxdoc catalog in the system global catalog.
 
   15 Jul 2005; Leonardo Boshell <leonardop@gentoo.org>
   sgmltools-lite-3.0.3-r9.ebuild:

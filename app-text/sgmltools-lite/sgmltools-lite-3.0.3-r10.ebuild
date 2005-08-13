@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r9.ebuild,v 1.2 2005/07/15 17:00:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r10.ebuild,v 1.1 2005/08/13 10:17:34 leonardop Exp $
 
 inherit python sgml-catalog
 
@@ -22,14 +22,11 @@ DEPEND=">=virtual/python-1.5
 	tetex? ( app-text/jadetex )
 	|| (
 		www-client/w3m
-		www-client/lynx
-	)"
+		www-client/lynx )"
 
 
 sgml-catalog_cat_include "/etc/sgml/sgml-lite.cat" \
 	"/usr/share/sgml/stylesheets/sgmltools/sgmltools.cat"
-sgml-catalog_cat_include "/etc/sgml/linuxdoc.cat" \
-	"/usr/share/sgml/dtd/sgmltools/catalog"
 
 src_unpack() {
 	unpack ${A}
@@ -60,13 +57,18 @@ src_install() {
 
 	rm ${D}/etc/sgml/catalog.{suse,rh62}
 
+	# Remove file provided by sgml-common
+	rm ${D}/usr/bin/sgmlwhich
+
 	# Remove the backends that require tetex
 	use tetex || \
 		rm ${D}/usr/share/sgml/misc/sgmltools/python/backends/{Dvi,Ps,Pdf,JadeTeX}.py
 
-	# The list of backends to alias with sgml2* 
-	BACKENDS="html rtf txt"
-	use tetex && BACKENDS="${BACKENDS} ps dvi pdf"
+	# List of backends to alias with sgml2*
+	# Do not provide sgml2{txt,rtf,html} anymore, they are part of
+	# linuxdoc-tools
+	local BACKENDS=""
+	use tetex && BACKENDS="ps dvi pdf"
 
 	# Create simple alias scripts that people are used to
 	# And make the manpages for those link to the sgmltools-lite manpage
