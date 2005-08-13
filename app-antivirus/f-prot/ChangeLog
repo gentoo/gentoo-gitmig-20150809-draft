@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.33 2005/05/03 15:03:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.34 2005/08/13 16:22:38 ticho Exp $
+
+  13 Aug 2005; Andrej Kacian <ticho@gentoo.org> -f-prot-4.5.4.ebuild:
+  Removed obsolete ebuild.
 
   03 May 2005; Andrej Kacian <ticho@gentoo.org> f-prot-4.5.4-r1.ebuild:
   Stable on x86.
