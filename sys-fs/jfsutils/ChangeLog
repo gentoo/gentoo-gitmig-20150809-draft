@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/jfsutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.27 2005/08/12 07:39:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.28 2005/08/13 11:30:53 metalgod Exp $
+
+  13 Aug 2005; Luis Medinas <metalgod@gentoo.org> jfsutils-1.1.8.ebuild:
+  Stable on AMD64.
 
   12 Aug 2005; Markus Rothe <corsair@gentoo.org> jfsutils-1.1.8.ebuild:
   Stable on ppc64
