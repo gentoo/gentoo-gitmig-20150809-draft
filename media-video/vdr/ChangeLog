@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.15 2005/08/13 09:26:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.16 2005/08/13 12:08:21 zzam Exp $
+
+  13 Aug 2005; Matthias Schwarzott <zzam@gentoo.org> vdr-1.3.27.ebuild:
+  create user and group vdr
 
   13 Aug 2005; Matthias Schwarzott <zzam@gentoo.org> vdr-1.3.27.ebuild:
   sorted dependencies and added vdr script package and plugin reemerge package

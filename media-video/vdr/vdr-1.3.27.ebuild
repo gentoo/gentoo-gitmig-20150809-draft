@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.27.ebuild,v 1.2 2005/08/13 09:26:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.27.ebuild,v 1.3 2005/08/13 12:08:21 zzam Exp $
 
 inherit eutils
 
@@ -48,6 +48,11 @@ DVBDIR=/usr/include
 VDRDIR=/usr/include/vdr
 PLUGINDIR=/usr/lib/vdr/plugins
 CONFDIR=/etc/vdr
+
+pkg_setup() {
+	enewgroup vdr
+	enewuser vdr -1 /bin/bash /var/vdr vdr,video
+}
 
 src_unpack() {
 	unpack ${A}
@@ -145,6 +150,7 @@ src_install() {
 	doins *.conf channels.conf.*
 
 	keepdir "${PLUGINDIR}"
+	keepdir /var/vdr
 
 	doman vdr.1 vdr.5
 }
