@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.28 2005/07/28 02:40:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.29 2005/08/13 01:23:33 ka0ttic Exp $
+
+  13 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> abs-guide-3.5.ebuild:
+  Stable on mips.
 
   28 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> abs-guide-3.5.ebuild:
   Added ~mips.
