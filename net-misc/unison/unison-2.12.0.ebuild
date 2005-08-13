@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.12.0.ebuild,v 1.4 2005/08/02 18:05:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.12.0.ebuild,v 1.5 2005/08/13 20:04:00 mattam Exp $
 
 inherit eutils
 
-IUSE="gtk gtk2 doc static debug threads"
+IUSE="gtk gtk2 static debug threads"
 
 DESCRIPTION="Two-way cross-platform file synchronizer"
 HOMEPAGE="http://www.cis.upenn.edu/~bcpierce/unison/"
@@ -18,9 +18,7 @@ DEPEND=">=dev-lang/ocaml-3.04
 RDEPEND="gtk? ( gtk2? ( >=dev-ml/lablgtk-2.2 ) !gtk2? ( =dev-ml/lablgtk-1.2* )
 || ( net-misc/x11-ssh-askpass net-misc/gtk2-ssh-askpass ) )"
 
-SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/${P}.tar.gz
-doc? ( http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/${P}-manual.pdf
-	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/${P}-manual.html )"
+SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/${P}.tar.gz"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -66,9 +64,4 @@ src_install () {
 	dobin unison || die
 	dodoc BUGS.txt CONTRIB COPYING INSTALL NEWS \
 	      README ROADMAP.txt TODO.txt || die
-
-	if use doc; then
-		dohtml ${DISTDIR}/${P}-manual.html || die
-		dodoc ${DISTDIR}/${P}-manual.pdf || die
-	fi
 }

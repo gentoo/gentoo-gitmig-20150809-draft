@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.31 2005/08/02 18:05:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.32 2005/08/13 20:04:00 mattam Exp $
+
+  13 Aug 2005; Matthieu Sozeau <mattam@gentoo.org> unison-2.12.0.ebuild,
+  unison-2.13.0.ebuild:
+  Fixed wrong URL's.
 
   02 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> unison-2.12.0.ebuild,
   unison-2.13.0.ebuild:

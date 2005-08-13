@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.13.0.ebuild,v 1.3 2005/08/02 18:05:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.13.0.ebuild,v 1.4 2005/08/13 20:04:00 mattam Exp $
 
 inherit eutils
 
@@ -18,9 +18,9 @@ DEPEND=">=dev-lang/ocaml-3.04
 RDEPEND="gtk? ( gtk2? ( >=dev-ml/lablgtk-2.2 ) !gtk2? ( =dev-ml/lablgtk-1.2* )
 || ( net-misc/x11-ssh-askpass net-misc/gtk2-ssh-askpass ) )"
 
-SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/releases/beta/${P}.tar.gz
-doc? ( http://www.cis.upenn.edu/~bcpierce/unison/download/releases/beta/${P}-manual.pdf
-	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/beta/${P}-manual.html )"
+SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/releases/${P}/${P}.tar.gz
+doc? ( http://www.cis.upenn.edu/~bcpierce/unison/download/releases/${P}/${P}-manual.pdf
+	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/${P}/${P}-manual.html )"
 
 pkg_setup() {
 	ewarn "This is a beta release, use at your very own risk"
