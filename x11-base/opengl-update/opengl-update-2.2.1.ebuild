@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.2.1.ebuild,v 1.9 2005/07/07 22:51:45 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.2.1.ebuild,v 1.10 2005/08/13 07:42:36 eradicator Exp $
 
 inherit multilib toolchain-funcs eutils
 
@@ -30,6 +30,9 @@ S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
+
+	mv glext.h-${GLEXT} glext.h
+	mv glxext.h-${GLXEXT} glxext.h
 
 	# Bugs #81199, #81472
 	epatch ${FILESDIR}/glxext.h-inttypes.patch
@@ -75,15 +78,15 @@ src_install() {
 		for ABI in $(get_install_abis); do
 			# Install default glext.h
 			insinto /usr/$(get_libdir)/opengl/global/include
-			newins ${WORKDIR}/glext.h-${GLEXT} glext.h || die
-			newins ${WORKDIR}/glxext.h-${GLXEXT} glxext.h || die
+			doins ${WORKDIR}/glext.h || die
+			doins ${WORKDIR}/glxext.h || die
 		done
 		ABI="${OABI}"
 		unset OABI
 	else
 		# Install default glext.h
 		insinto /usr/$(get_libdir)/opengl/global/include
-		newins ${WORKDIR}/glext.h-${GLEXT} glext.h || die
-		newins ${WORKDIR}/glxext.h-${GLXEXT} glxext.h || die
+		doins ${WORKDIR}/glext.h || die
+		doins ${WORKDIR}/glxext.h || die
 	fi
 }

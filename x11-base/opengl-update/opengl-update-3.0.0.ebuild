@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.2.2.ebuild,v 1.1 2005/08/10 06:39:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-3.0.0.ebuild,v 1.1 2005/08/13 07:42:36 eradicator Exp $
 
-inherit multilib toolchain-funcs eutils
+inherit multilib
 
 DESCRIPTION="Utility to change the OpenGL interface being used"
 HOMEPAGE="http://www.gentoo.org/"
@@ -11,8 +11,8 @@ HOMEPAGE="http://www.gentoo.org/"
 # http://oss.sgi.com/projects/ogl-sample/ABI/glext.h
 # http://oss.sgi.com/projects/ogl-sample/ABI/glxext.h
 
-GLEXT="27"
-GLXEXT="10"
+GLEXT="29"
+GLXEXT="11"
 
 SRC_URI="http://dev.gentoo.org/~eradicator/opengl/glext.h-${GLEXT}.bz2
 	 http://dev.gentoo.org/~eradicator/opengl/glxext.h-${GLXEXT}.bz2"
@@ -23,16 +23,16 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 RESTRICT="multilib-pkg-force"
 
-DEPEND="virtual/libc
-	app-arch/bzip2"
+DEPEND="app-arch/bzip2"
+RDEPEND="app-admin/eselect"
 
 S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
 
-	# Bugs #81199, #81472
-	epatch ${FILESDIR}/glxext.h-inttypes.patch
+	mv glext.h-${GLEXT} glext.h
+	mv glxext.h-${GLXEXT} glxext.h
 }
 
 pkg_preinst() {
@@ -59,14 +59,16 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	local impl="$(opengl-update --get-implementation)"
+	local impl="$(eselect opengl show)"
 	if [[ -n "${impl}" ]] ; then
-		opengl-update "${impl}"
+		eselect opengl set "${impl}"
 	fi
 }
 
 src_install() {
 	newsbin ${FILESDIR}/opengl-update-${PV} opengl-update || die
+	insinto /usr/share/eselect/modules
+	newins ${FILESDIR}/opengl-update-${PV}.eselect opengl.eselect
 
 	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
 	local MLTEST=$(type dyn_unpack)
@@ -75,15 +77,15 @@ src_install() {
 		for ABI in $(get_install_abis); do
 			# Install default glext.h
 			insinto /usr/$(get_libdir)/opengl/global/include
-			newins ${WORKDIR}/glext.h-${GLEXT} glext.h || die
-			newins ${WORKDIR}/glxext.h-${GLXEXT} glxext.h || die
+			doins ${WORKDIR}/glext.h || die
+			doins ${WORKDIR}/glxext.h || die
 		done
 		ABI="${OABI}"
 		unset OABI
 	else
 		# Install default glext.h
 		insinto /usr/$(get_libdir)/opengl/global/include
-		newins ${WORKDIR}/glext.h-${GLEXT} glext.h || die
-		newins ${WORKDIR}/glxext.h-${GLXEXT} glxext.h || die
+		doins ${WORKDIR}/glext.h || die
+		doins ${WORKDIR}/glxext.h || die
 	fi
 }
