@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f273db2112bdbba0e78f6eb0266cdc5 HTML-Tree-3.18.ebuild 681
+MD5 72ac2a6a96531412b59b8b82b180d000 HTML-Tree-3.18.ebuild 681
 MD5 365248c9c0b74d1d25ed9c1085f9791f HTML-Tree-3.17.ebuild 648
-MD5 c6ab56ace414c6bb10a758f1b66dae19 ChangeLog 2177
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 8c51fbf556537b33e1b0dd26b00f6ea4 files/digest-HTML-Tree-3.17 66
+MD5 15c9863ee938afb72c53271300de70fa ChangeLog 2273
 MD5 dc00d71c5b3a87e075f25fdc4f2ae5cf files/digest-HTML-Tree-3.18 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/PRtViELBEf1JB0RAluZAJ9YfqAyc3mcYABR5wubVE4gYhJ5ugCeKb0a
-UZjh9IT+GNveQfToRUcdNqc=
-=CbMD
------END PGP SIGNATURE-----
+MD5 8c51fbf556537b33e1b0dd26b00f6ea4 files/digest-HTML-Tree-3.17 66

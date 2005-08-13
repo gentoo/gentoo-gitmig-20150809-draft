@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a647789df02677ff54730ab56b651b9f Filter-1.28-r1.ebuild 494
-MD5 26e257d38d48efe6f3f6d357f2a91cdb Filter-1.29.ebuild 518
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 9a0230a9e554826938333ca16d1da2e4 Filter-1.30.ebuild 532
 MD5 c1018a7348f344deca310e538c34b233 Filter-1.28.ebuild 491
-MD5 9cbedf68441721597ea63249b1266f7d ChangeLog 2005
-MD5 787590b36ce294bc1906cbf073cd90cc files/digest-Filter-1.28 62
-MD5 0f3a524cdacf7133a3761870aeeb4de7 files/digest-Filter-1.29 62
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 c4d4ee4f1a5dc5edb968d37d677f604a ChangeLog 2095
+MD5 26e257d38d48efe6f3f6d357f2a91cdb Filter-1.29.ebuild 518
+MD5 d5f69659b0142ded17ba4cca049221dd Filter-1.30.ebuild 529
 MD5 787590b36ce294bc1906cbf073cd90cc files/digest-Filter-1.28-r1 62
+MD5 0f3a524cdacf7133a3761870aeeb4de7 files/digest-Filter-1.29 62
 MD5 1d022314ef84dc63d05be090f7309520 files/digest-Filter-1.30 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC/K+9KRy60XGEcJIRAi+UAJ4036ItS01tRLJaZT8NMFZwOKwkqgCfT3Y/
-InydzgKj+el9FI5W+opndDQ=
-=SEM/
------END PGP SIGNATURE-----
+MD5 787590b36ce294bc1906cbf073cd90cc files/digest-Filter-1.28 62
