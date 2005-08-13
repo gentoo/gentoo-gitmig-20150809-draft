@@ -1,0 +1,11 @@
+--- mp3info-0.8.4/textfunc.c.orig	2005-08-13 13:54:04.000000000 +0100
++++ mp3info-0.8.4/textfunc.c	2005-08-13 13:55:44.000000000 +0100
+@@ -235,7 +235,7 @@
+ 		if(*code) {
+ 			modlen=code-percent+1;
+ 			if(modlen > 1000) {
+-				printf("Format modifier beginning at position %d too long!\n",percent-format);
++				printf("Format modifier beginning at position %d too long!\n",(int)(percent-format));
+ 				exit(5);
+ 			}
+ 			strncpy(mod,percent,modlen);

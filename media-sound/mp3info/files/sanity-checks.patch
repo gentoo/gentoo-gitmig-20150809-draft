@@ -1,0 +1,14 @@
+--- mp3info-0.8.4/mp3tech.c.orig	2005-08-13 13:56:43.000000000 +0100
++++ mp3info-0.8.4/mp3tech.c	2005-08-13 13:57:31.000000000 +0100
+@@ -244,6 +244,11 @@
+     header->original=(buffer[3] >> 2) & 0x1;
+     header->emphasis=(buffer[3]) & 0x3;
+     
++    /* Final sanity checks: bitrate can not be 1111, frequency can not be 11 */
++    if (header->bitrate == 0x0F || header->freq == 0x3) {
++      return 0;
++    }
++
+     return ((fl=frame_length(header)) >= MIN_FRAME_SIZE ? fl : 0); 
+ }
+ 

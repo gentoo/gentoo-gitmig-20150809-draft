@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mp3info
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.12 2004/12/17 21:32:37 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.13 2005/08/13 13:06:12 chainsaw Exp $
+
+*mp3info-0.8.4-r2 (13 Aug 2005)
+
+  13 Aug 2005; Tony Vroon <chainsaw@gentoo.org> +files/cast.patch,
+  +files/sanity-checks.patch, +mp3info-0.8.4-r2.ebuild:
+  Add sanity checks & fix a cast, based on patches by Ben Bennett
+  <sink@limey.net> in bug #85100.
 
   17 Dec 2004; Markus Rothe <corsair@gentoo.org> mp3info-0.8.4-r1.ebuild:
   Stable on ppc64
