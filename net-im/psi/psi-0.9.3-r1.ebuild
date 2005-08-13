@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r1.ebuild,v 1.11 2005/07/28 14:28:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r1.ebuild,v 1.12 2005/08/13 00:09:22 humpback Exp $
 
 inherit eutils qt3
 
@@ -65,7 +65,7 @@ PATCHDIR="${PATCHBASE}/${VER}"
 
 src_unpack() {
 		unpack ${A}
-		if !(use extras);
+		if ! use extras ;
 			then
 			ewarn "You are going to install the original psi version. You might want to"
 			ewarn "try the version with extra unsuported patches by adding 'extras' to"

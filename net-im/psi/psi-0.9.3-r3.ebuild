@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r3.ebuild,v 1.7 2005/07/28 14:28:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r3.ebuild,v 1.8 2005/08/13 00:09:22 humpback Exp $
 
 inherit eutils qt3
 
@@ -74,7 +74,7 @@ src_unpack() {
 		epatch ${FILESDIR}/psi-desktop.patch
 		epatch ${FILESDIR}/psi-desktop_file_and_icons_directories.patch
 
-		if !(use extras); then
+		if ! use extras ; then
 			ewarn "You are going to install the original psi version. You might want to"
 			ewarn "try the version with extra unsuported patches by adding 'extras' to"
 			ewarn "your use flags."
