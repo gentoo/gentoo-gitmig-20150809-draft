@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4268 2005/08/12 18:38:52 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4269 2005/08/13 07:24:16 eradicator Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jeremy Huddleston <eradicator@gentoo.org> (13 Aug 2005)
+# eselect module version still being tested...
+>=opengl-update-3.0.0
 
 # Marius Mauch <genone@gentoo.org> (11 Aug 2005)
 # yes, this is a new portage, but not with the long awaited new dep resolver
@@ -319,11 +323,6 @@ dev-util/pida
 # Luca Barbato <lu_zero@gentoo.org> (03 Aug 2005)
 # First experimental ebuild with dlloader support, should be fixed
 =media-video/ati-drivers-8.14.13-r3
-
-# Jeremy Huddleston <eradicator@gentoo.org> (03 Aug 2005)
-# With 1.12.0_pre3-r2, your system may be left in an unbootable (or difficult
-# for the normal user to boot) state.
->=sys-apps/baselayout-1.12.0_pre3
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (03 Aug 2005)
 # I am masking this package for testing.  Please test this and report any
