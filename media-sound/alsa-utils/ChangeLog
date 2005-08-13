@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.101 2005/07/29 22:23:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.102 2005/08/13 13:32:20 chainsaw Exp $
+
+*alsa-utils-1.0.9a-r1 (13 Aug 2005)
+
+  13 Aug 2005; Tony Vroon <chainsaw@gentoo.org>
+  +alsa-utils-1.0.9a-r1.ebuild:
+  Compile sources with largefile (>2GB) support, closes bug #91056.
 
   29 Jul 2005; Guy Martin <gmsoft@gentoo.org> alsa-utils-1.0.9a.ebuild:
   Stable on hppa.
