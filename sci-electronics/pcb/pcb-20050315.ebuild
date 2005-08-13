@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20050315.ebuild,v 1.3 2005/06/29 19:50:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20050315.ebuild,v 1.4 2005/08/13 23:36:29 hansmi Exp $
 
 DESCRIPTION="tool for the layout of printed circuit boards"
 HOMEPAGE="http://pcb.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/pcb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 sparc ~ppc"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE="Xaw3d"
 
 RDEPEND="virtual/x11"
