@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.58 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.59 2005/08/13 08:10:53 phreak Exp $
 
 # Current Maintainer: Tal Peer <coredumb@gentoo.org>
 # Original Author:    Dan Armak <danarmak@gentoo.org>
@@ -161,7 +161,7 @@ DEPEND="dev-util/cvs app-admin/sudo"
 
 if [ "$ECVS_AUTH" == "ext" ]; then
 	#default to ssh
-	[ -z "$CVS_RSH" ] && export SSH_RSH="ssh"
+	[ -z "$CVS_RSH" ] && export CVS_RSH="ssh"
 	if [ "$CVS_RSH" != "ssh" ]; then
 		die "Support for ext auth with clients other than ssh has not been implemented yet"
 	fi
