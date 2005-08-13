@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9e60a66ef45657fcce866e4cd6906ec4 netspeed_applet-0.12.1.ebuild 778
-MD5 b61a6b86c62455e32cb91bf8019a830c netspeed_applet-0.13.ebuild 715
 MD5 a36f21bdc65865f0fd99cd9d43c16986 netspeed_applet-0.11.ebuild 775
 MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
+MD5 ccba446a373d3d97cfc92e6842c35e4a ChangeLog 2789
 MD5 2ce736b2ea31988da4bcecef9f7d39d9 netspeed_applet-0.9.2.ebuild 714
+MD5 b61a6b86c62455e32cb91bf8019a830c netspeed_applet-0.13.ebuild 715
 MD5 9f192d53ba8f3c18aa3e8f86b9e0c03f netspeed_applet-0.10.ebuild 709
-MD5 4f48fa4f35e016c0bd730bf433939c00 ChangeLog 2686
-MD5 2019d20d5416ebfdfd84388672c10f6a files/digest-netspeed_applet-0.9.2 73
+MD5 421728f7db7016bc12b5fae1d77dac5f netspeed_applet-0.12.1.ebuild 775
 MD5 2d171fd40348069e9311d40876e07526 files/digest-netspeed_applet-0.11 72
-MD5 ccc684c018f6a25d8d36acbf938dad6c files/digest-netspeed_applet-0.13 72
 MD5 bd43d6190e39ca45432c83350cea73e7 files/digest-netspeed_applet-0.10 72
 MD5 dd886cb9c0213665d512d519348dd1b6 files/digest-netspeed_applet-0.12.1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC7mulKRy60XGEcJIRArfqAJ9GroAhPEvQBb9x68VsVvej5s7HLQCffuO2
-wS4BhkPu3tftYZsMMcRi4dw=
-=7w6H
------END PGP SIGNATURE-----
+MD5 ccc684c018f6a25d8d36acbf938dad6c files/digest-netspeed_applet-0.13 72
+MD5 2019d20d5416ebfdfd84388672c10f6a files/digest-netspeed_applet-0.9.2 73
