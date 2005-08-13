@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomevfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomevfs/ChangeLog,v 1.7 2005/06/26 15:37:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomevfs/ChangeLog,v 1.8 2005/08/13 23:18:36 hansmi Exp $
+
+  13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ruby-gnomevfs-0.12.0.ebuild:
+  Stable on ppc.
 
   26 Jun 2005; Mamoru KOMACHI <usata@gentoo.org>
   ruby-gnomevfs-0.11.0.ebuild, ruby-gnomevfs-0.12.0.ebuild:
