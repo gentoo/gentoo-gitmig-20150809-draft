@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b48eef0a213c68ed714c2202434605b tse3-0.2.7.ebuild 1100
+MD5 06f4503083938c947fde21fc63666522 ChangeLog 1850
 MD5 211609ba67a6a5bffa3a00295eec3dcc tse3-0.2.5.ebuild 928
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 da74b0df19d0cd14ef3c187be8d5650b ChangeLog 1660
-MD5 2b48eef0a213c68ed714c2202434605b tse3-0.2.7.ebuild 1100
-MD5 2e294bceee345f0752585b8114b9f93a files/tse3-0.2.7-size_t-64bit.patch 1079
-MD5 e5b12a211e5880ca3f3a11bd9ec606f4 files/digest-tse3-0.2.7 62
-MD5 350b80bb838405ff815b6be728b7551d files/tse3-0.2.7-gcc4.patch 1387
 MD5 bf413ad8b299236102baab56aff1b7e9 files/tse3-0.2.7-gcc34.patch 3155
+MD5 e5b12a211e5880ca3f3a11bd9ec606f4 files/digest-tse3-0.2.7 62
 MD5 43db7a6f8ef547d1b28951bb81a17542 files/digest-tse3-0.2.5 62
+MD5 7a3c4c8d46dfe16a96514a204d2ebead files/tse3-0.2.7-gcc4.patch 290
+MD5 71287d128bdfd588b7c22645025e4b31 files/tse3-0.2.7-size_t-64bit.patch 1089
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/fq0j5H05b2HAEkRAlONAJ9yYpvqncl/vqnkSZvaukRIuFl1BQCeNzHW
+mayJGsTNfppEW2rbcekJyDg=
+=8WzN
+-----END PGP SIGNATURE-----

@@ -4,7 +4,7 @@
                  void element(const std::string &name, const char        *value);
                  void element(const std::string &name, int                value);
                  void element(const std::string &name, unsigned int       value);
-+                void element(const std::string &name, size_t	         value);
++                void element(const std::string &name, unsigned long      value);
                  void element(const std::string &name, bool               value);
  
                  void comment(const std::string &comment);
@@ -14,7 +14,7 @@
      out << "<" << name << " value=\"" << value << "\"/>\n";
  }
  
-+void TSE3::File::XmlFileWriter::element(const std::string &name, size_t value)
++void TSE3::File::XmlFileWriter::element(const std::string &name, unsigned long value)
 +{
 +    indent(out);
 +    out << "<" << name << " value=\"" << value << "\"/>\n";

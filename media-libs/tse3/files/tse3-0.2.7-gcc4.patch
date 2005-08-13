@@ -8,29 +8,3 @@
  #include "tse3/DisplayParams.h"
  
  #include <vector>
---- ./src/tse3/file/XML.h~	2005-07-29 15:37:31.000000000 +0200
-+++ ./src/tse3/file/XML.h	2005-07-29 15:50:03.000000000 +0200
-@@ -154,7 +154,6 @@
-                 void element(const std::string &name, const char        *value);
-                 void element(const std::string &name, int                value);
-                 void element(const std::string &name, unsigned int       value);
--                void element(const std::string &name, size_t	         value);
-                 void element(const std::string &name, bool               value);
- 
-                 void comment(const std::string &comment);
---- ./src/tse3/file/XML.cpp~	2005-07-29 15:37:31.000000000 +0200
-+++ ./src/tse3/file/XML.cpp	2005-07-29 15:49:55.000000000 +0200
-@@ -116,13 +116,6 @@
-     out << "<" << name << " value=\"" << value << "\"/>\n";
- }
- 
--void TSE3::File::XmlFileWriter::element(const std::string &name, size_t value)
--{
--    indent(out);
--    out << "<" << name << " value=\"" << value << "\"/>\n";
--}
--
--
- void TSE3::File::XmlFileWriter::element(const std::string &name, bool value)
- {
-     indent(out);
