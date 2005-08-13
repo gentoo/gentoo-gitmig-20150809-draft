@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/sylpheed-claws-pgpinline-0.5-r1.ebuild,v 1.4 2005/07/09 00:23:45 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/sylpheed-claws-pgpinline-0.5-r1.ebuild,v 1.5 2005/08/13 05:52:00 genone Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha ~ppc64"
 IUSE=""
 DEPEND=">=mail-client/sylpheed-claws-1.9.12
-		=app-crypt/gpgme-0.3.14-r1"
+		=app-crypt/gpgme-0.3.14-r1
+		!>=mail-client/sylpheed-claws-0.9.13"	# included in main package
 
 S="${WORKDIR}/${MY_P}"
 
