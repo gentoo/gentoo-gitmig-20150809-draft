@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kita
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.25 2005/08/02 09:33:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.26 2005/08/13 23:10:45 hansmi Exp $
+
+  13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> kita-0.176.0.ebuild:
+  Stable on ppc.
 
 *kita-0.177.0 (02 Aug 2005)
 
