@@ -1,41 +1,41 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 faaffbf24a8f1845717127119690cbc9 fetchmail-6.2.1-r1.ebuild 1773
-MD5 fad43483dd30edcc1e3d5da45141a535 fetchmail-6.2.4.ebuild 2138
+MD5 17b5e3cf3637a964aafdd9c9a3841534 ChangeLog 11260
 MD5 d01bc5cb58cfda170f585b3e89bef8ed fetchmail-5.9.14.ebuild 1894
+MD5 faaffbf24a8f1845717127119690cbc9 fetchmail-6.2.1-r1.ebuild 1773
 MD5 00c01108df1dd1d60f071b2e1b929253 fetchmail-6.2.2-r2.ebuild 2038
 MD5 243728bcac42ad79161b92714363d75d fetchmail-6.2.3.ebuild 1961
-MD5 20841a593098014840ac383e73ef3aa8 fetchmail-6.2.5-r2.ebuild 2699
-MD5 ffefaeb57885e83adaf648e584209a18 fetchmail-6.2.5.2.ebuild 2789
-MD5 900f6ef3ff4d10ef0668f4d197558e9c fetchmail-6.2.5.ebuild 2609
-MD5 a99aa34d6913eb5ab7ce842de56631d7 ChangeLog 11164
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 fad43483dd30edcc1e3d5da45141a535 fetchmail-6.2.4.ebuild 2138
 MD5 e2e0aea60ed02e6393a387a2288ecb6b fetchmail-6.2.5-r1.ebuild 2734
-MD5 4e030c7ea8258e15f970dfd6a6077461 files/digest-fetchmail-6.2.5.2 137
+MD5 20841a593098014840ac383e73ef3aa8 fetchmail-6.2.5-r2.ebuild 2699
+MD5 5321e0e013f45f2fcdf97cb2d7926ad0 fetchmail-6.2.5.2.ebuild 2790
+MD5 900f6ef3ff4d10ef0668f4d197558e9c fetchmail-6.2.5.ebuild 2609
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 29d376a1042aeeeba94e911a943d5a7f files/conf.d-fetchmail 347
+MD5 1dd80e46bd5b02949ba0686086a37570 files/configure-5.9.14.diff 2046
+MD5 83f3d182af36573e8d7264ee440445ee files/digest-fetchmail-5.9.14 68
 MD5 5b0a50b0a0193afbcb7eff9ac3d5fcb7 files/digest-fetchmail-6.2.1-r1 68
 MD5 72af1b79f1e6aab29edbdefdcce8c1c7 files/digest-fetchmail-6.2.2-r2 68
-MD5 256e473e140583f41c7da6ecd9d815be files/digest-fetchmail-6.2.5-r1 68
-MD5 256e473e140583f41c7da6ecd9d815be files/digest-fetchmail-6.2.5-r2 68
-MD5 83f3d182af36573e8d7264ee440445ee files/digest-fetchmail-5.9.14 68
-MD5 74bad5b4190b32597543a61ed0c7ec7a files/fetchmail-6.2.2-multiple-return-path.diff 1142
-MD5 19b3a189b664bb1fb0a228c1b2bcd5f2 files/fetchmail-6.1.0-gentoo.diff 542
-MD5 1dd80e46bd5b02949ba0686086a37570 files/configure-5.9.14.diff 2046
-MD5 cd9176a56e402a922bcf53d3ccf15e11 files/fetchmail-6.2.5-broken-headers.patch 288
-MD5 29d376a1042aeeeba94e911a943d5a7f files/conf.d-fetchmail 347
-MD5 c162c209d65c11b6cbdd7c33fd411b90 files/fetchmail-6.2.0-gentoo.diff 1544
-MD5 bc67e24e50b2607de8ed8bbfe8c475ea files/fetchmail-6.2.5-gentoo.patch 1878
-MD5 fa0432a854f2a63b2b6fa0a8e65985f7 files/fetchmail-6.2.5-fetchsizelimit.patch 526
-MD5 44ab8af6373e139c7c4b8b8df77b0658 files/fetchmail 591
-MD5 9fdac9fcc5797bfb643d850abe200105 files/fetchmail-6.2.5-mit-krb5-1.4.patch 406
-MD5 9e74bd5507acf5a39559d76646bac254 files/fetchmail-6.2.5-kerberos.patch 1175
 MD5 b8f3ceb78e16e9c26c34908229893659 files/digest-fetchmail-6.2.3 68
 MD5 c1c69ebb34b0848d22249ae32b770061 files/digest-fetchmail-6.2.4 68
 MD5 256e473e140583f41c7da6ecd9d815be files/digest-fetchmail-6.2.5 68
+MD5 256e473e140583f41c7da6ecd9d815be files/digest-fetchmail-6.2.5-r1 68
+MD5 256e473e140583f41c7da6ecd9d815be files/digest-fetchmail-6.2.5-r2 68
+MD5 4e030c7ea8258e15f970dfd6a6077461 files/digest-fetchmail-6.2.5.2 137
+MD5 44ab8af6373e139c7c4b8b8df77b0658 files/fetchmail 591
+MD5 19b3a189b664bb1fb0a228c1b2bcd5f2 files/fetchmail-6.1.0-gentoo.diff 542
+MD5 c162c209d65c11b6cbdd7c33fd411b90 files/fetchmail-6.2.0-gentoo.diff 1544
+MD5 74bad5b4190b32597543a61ed0c7ec7a files/fetchmail-6.2.2-multiple-return-path.diff 1142
+MD5 cd9176a56e402a922bcf53d3ccf15e11 files/fetchmail-6.2.5-broken-headers.patch 288
+MD5 fa0432a854f2a63b2b6fa0a8e65985f7 files/fetchmail-6.2.5-fetchsizelimit.patch 526
+MD5 bc67e24e50b2607de8ed8bbfe8c475ea files/fetchmail-6.2.5-gentoo.patch 1878
+MD5 9e74bd5507acf5a39559d76646bac254 files/fetchmail-6.2.5-kerberos.patch 1175
+MD5 9fdac9fcc5797bfb643d850abe200105 files/fetchmail-6.2.5-mit-krb5-1.4.patch 406
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC/RaKViELBEf1JB0RAskKAJ98CrFhbdwZHmTAYJoktb2nYUoYVACfRXpv
-oNuIbQTpMqnQK75E799tM9Q=
-=bFl0
+iD8DBQFC/ixPEZCkKN40op4RArIOAKDFlwDjsWgJorrLcjkX09JbXe4Q5ACfY/T+
+BMH19X1m2km8hjkCoeElhY8=
+=6CJ2
 -----END PGP SIGNATURE-----
