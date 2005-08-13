@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b257bbb47c1f74f685a98644a29c26e9 ChangeLog 2565
-MD5 41d6d5fa26be12276186f96b4178c8c8 hesiod-3.0.2-r1.ebuild 1310
+MD5 c9dd7ca5e542b457b3b447639bf443ed ChangeLog 2657
+MD5 197c8cc1df448a28ca105fe2c8727b04 hesiod-3.0.2-r1.ebuild 1309
 MD5 c2560b4653b2ee5b141e8e67138885d1 hesiod-3.0.2.ebuild 1570
 MD5 6730c597da6926a28d780afaf5c0109d files/digest-hesiod-3.0.2 63
 MD5 6730c597da6926a28d780afaf5c0109d files/digest-hesiod-3.0.2-r1 63
@@ -13,7 +13,7 @@ MD5 30c1105fc1f037d97d0dfae4f4f0e065 files/hesiod-3.0.2-str.patch 2039
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC9OQ1EZCkKN40op4RAtblAKC0M2AeU1LZctEEaCoLbzT8mP6eOwCfVpKP
-kyM/4v6frUB9V7DLmYx+VvE=
-=d/t+
+iD8DBQFC/it9EZCkKN40op4RAnLpAJ9nAY3uQ2FUsLoXLCQFO99rTIucXQCgi76x
+D06xKnIkE+bnrF79T8tOJ9Y=
+=gsU0
 -----END PGP SIGNATURE-----
