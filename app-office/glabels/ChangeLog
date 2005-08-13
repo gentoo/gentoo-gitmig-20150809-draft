@@ -1,6 +1,9 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.20 2005/08/13 14:41:41 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.21 2005/08/13 23:31:03 hansmi Exp $
+
+  13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> glabels-2.0.3.ebuild:
+  Stable on ppc.
 
   13 Aug 2005; Luis Medinas <metalgod@gentoo.org> glabels-2.0.3.ebuild:
   Stable on AMD64.
