@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 318c9652c5654dde12f55c7d1ef37c96 ChangeLog 1866
-MD5 f8d6682dcd83816ac1a0d9a801add12a glunarclock-0.32.3.ebuild 960
+MD5 43b29a1ecca896fce9c1d4dbfbbff76d glunarclock-0.32.4.ebuild 1022
 MD5 acc0a08cfd0d0d6369735fd5e04e54a2 metadata.xml 228
-MD5 9226fa3e506d7996bc0800ee53b50387 glunarclock-0.32.4.ebuild 1023
+MD5 f8d6682dcd83816ac1a0d9a801add12a glunarclock-0.32.3.ebuild 960
+MD5 ae070ecc4996b17176e0cbb73cb0793e ChangeLog 1967
 MD5 2dfd9df2501bc79dbda1849bbad81d2d files/digest-glunarclock-0.32.3 70
 MD5 e994a0f551eeb19284783b6f2dd37ccc files/glunarclock-i18n-gentoo.patch 344
 MD5 835e7fa6c6d298e3c72de326c452a436 files/digest-glunarclock-0.32.4 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzz+Dl5AvwDPiUowRAqHvAJ90DL1XOkNc1/auAEGs4wP4iDzhUACgh9qx
-lcDQWkgeQDBKHnIzIqHHxYM=
-=7fXl
------END PGP SIGNATURE-----
