@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.2.ebuild,v 1.1 2005/07/26 21:26:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.2.ebuild,v 1.2 2005/08/13 17:02:57 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -176,6 +176,7 @@ src_compile() {
 	use ffmpeg && myconf="${myconf} --with-external-ffmpeg=/usr"
 
 	econf \
+		$(use_enable gnome) \
 		$(use_enable nls) \
 		$(use_enable ipv6) \
 		$(use_enable samba) \
