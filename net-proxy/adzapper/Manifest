@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1f74de1e6af943ed241edd5d1ff74725 adzapper-20050316.ebuild 1507
-MD5 b70efc71db74844f4b8401df9aa1ebf3 adzapper-20050712.ebuild 1513
+MD5 2d65eaad13520770ef394d66e0d4f8ff adzapper-20050524.ebuild 1510
 MD5 865192a4aa5233381a3358f03460b9be metadata.xml 368
-MD5 c6f92b09e9b98b974c0bad41694d957b adzapper-20050524.ebuild 1513
-MD5 1f6c3f89f75c8c9209fd6be9aaa8c28b ChangeLog 4535
-MD5 2d648a6b3987ab877735484f8fa35b59 files/digest-adzapper-20050316 65
+MD5 1f74de1e6af943ed241edd5d1ff74725 adzapper-20050316.ebuild 1507
+MD5 d7ebf8f3e1289aadbc6e18cf0636c4b7 ChangeLog 4634
+MD5 b70efc71db74844f4b8401df9aa1ebf3 adzapper-20050712.ebuild 1513
 MD5 238922a3c9c8c8a2e886fbcb1eb40328 files/digest-adzapper-20050524 65
 MD5 bcee19293ff3560bd88eeb754c3bd5bc files/digest-adzapper-20050712 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC74/FKRy60XGEcJIRAn1KAJ4/h81jlLzIf9n2B8ZE60V1iwCstwCbBruK
-aRPQioIPxlLNaU8rwc3su48=
-=jD0i
------END PGP SIGNATURE-----
+MD5 2d648a6b3987ab877735484f8fa35b59 files/digest-adzapper-20050316 65
