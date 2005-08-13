@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Filter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filter/ChangeLog,v 1.22 2005/08/12 14:17:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filter/ChangeLog,v 1.23 2005/08/13 23:01:47 hansmi Exp $
+
+  13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> Filter-1.30.ebuild:
+  Stable on ppc.
 
   12 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> Filter-1.30.ebuild:
   Stable on sparc

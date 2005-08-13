@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.51.ebuild,v 1.12 2005/08/12 14:10:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.51.ebuild,v 1.13 2005/08/13 23:07:02 hansmi Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~chamas/${P}/"
 IUSE=""
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 ~amd64 ~alpha ~ppc sparc ~hppa ~mips ia64 ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
 
 # Disabling tests for now. Opening a port always leads to mixed results for
 # folks - bug 59554
