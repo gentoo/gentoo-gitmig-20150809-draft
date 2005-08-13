@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4269 2005/08/13 07:24:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4270 2005/08/13 07:26:52 eradicator Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,7 @@
 
 # Jeremy Huddleston <eradicator@gentoo.org> (13 Aug 2005)
 # eselect module version still being tested...
->=opengl-update-3.0.0
+>=x11-base/opengl-update-3.0.0
 
 # Marius Mauch <genone@gentoo.org> (11 Aug 2005)
 # yes, this is a new portage, but not with the long awaited new dep resolver
