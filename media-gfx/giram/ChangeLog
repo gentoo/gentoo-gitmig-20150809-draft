@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/giram
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/ChangeLog,v 1.5 2004/09/30 00:43:47 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/ChangeLog,v 1.6 2005/08/13 16:04:14 vanquirius Exp $
+
+*giram-0.3.5 (13 Aug 2005)
+
+  13 Aug 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/giram-0.3.4-fbsd.patch, +files/giram-0.3.5-fbsd.patch,
+  giram-0.3.4.ebuild, +giram-0.3.5.ebuild:
+  0.3.5 version bump, using patches from FreeBSD. Also backported patches to
+  0.3.4. Should fix bug 49829. Thanks to Andre Hinrichs
+  <andre.hinrichs@gmx.de> and others for reporting.
 
   18 Nov 2003; Brandy Westcott brandy@gentoo.org giram-0.3.4.ebuild:
   Fixed povfront segfaulting if no config file existed.

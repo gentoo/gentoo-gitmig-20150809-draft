@@ -1,0 +1,121 @@
+diff --exclude='*~' -Naur giram-0.3.4.orig/configure giram-0.3.4/configure
+--- giram-0.3.4.orig/configure	2005-08-13 12:44:04.000000000 -0300
++++ giram-0.3.4/configure	2005-08-13 12:44:56.000000000 -0300
+@@ -5407,6 +5407,7 @@
+ 
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
++$ac_aux_dir/ltconfig $LIBTOOL_DEPS
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+@@ -6029,7 +6030,7 @@
+ fi
+ 
+ 
+-CFLAGS="-g -O2 -Wall -DGTK_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DG_DISABLE_DEPRECATED $CFLAGS"
++CFLAGS="-DGTK_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DG_DISABLE_DEPRECATED $CFLAGS"
+ 
+ if test -n "$DEBUGFLAG"; then
+   CFLAGS="$DEBUGFLAG $CFLAGS"
+diff --exclude='*~' -Naur giram-0.3.4.orig/src/camera.c giram-0.3.4/src/camera.c
+--- giram-0.3.4.orig/src/camera.c	2005-08-13 12:44:04.000000000 -0300
++++ giram-0.3.4/src/camera.c	2005-08-13 12:45:15.000000000 -0300
+@@ -19,6 +19,10 @@
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
++
++#undef GTK_DISABLE_DEPRECATED
++#warning GTK_DISABLE_DEPRECATED
++
+ #include <math.h>
+ #include "giram.h"
+ #include "utils.h"
+diff --exclude='*~' -Naur giram-0.3.4.orig/src/giram.c giram-0.3.4/src/giram.c
+--- giram-0.3.4.orig/src/giram.c	2005-08-13 12:44:04.000000000 -0300
++++ giram-0.3.4/src/giram.c	2005-08-13 12:46:25.000000000 -0300
+@@ -25,6 +25,8 @@
+ 
+ #include <sys/types.h>
+ #include <sys/wait.h>
++#undef GTK_DISABLE_DEPRECATED
++#warning GTK_DISABLE_DEPRECATED
+ 
+ #ifndef  WAIT_ANY
+ #define  WAIT_ANY (-1)
+diff --exclude='*~' -Naur giram-0.3.4.orig/src/giramobjecteditor.c giram-0.3.4/src/giramobjecteditor.c
+--- giram-0.3.4.orig/src/giramobjecteditor.c	2005-08-13 12:44:04.000000000 -0300
++++ giram-0.3.4/src/giramobjecteditor.c	2005-08-13 12:46:50.000000000 -0300
+@@ -19,10 +19,10 @@
+  */
+ 
+ #include <stdlib.h>
++#include "widgets/gtkcolorbutton.h"
+ #include "giram.h"
+ 
+ #include "giramintl.h"
+-#include "widgets/gtkcolorbutton.h"
+ #include "widgets/giramfileselection.h"
+ 
+ #include "widgets/giramvectorframe.h"
+diff --exclude='*~' -Naur giram-0.3.4.orig/src/SavePov.c giram-0.3.4/src/SavePov.c
+--- giram-0.3.4.orig/src/SavePov.c	2005-08-13 12:44:04.000000000 -0300
++++ giram-0.3.4/src/SavePov.c	2005-08-13 12:55:14.000000000 -0300
+@@ -786,6 +786,7 @@
+ 
+     default:
+       /* panic */
++      ;
+   }
+   fprintf(OutFile, "  location <%g, %g, %g>\n", Camera->Location[0],
+                                                 Camera->Location[1],
+diff --exclude='*~' -Naur giram-0.3.4.orig/src/texture.c giram-0.3.4/src/texture.c
+--- giram-0.3.4.orig/src/texture.c	2005-08-13 12:44:04.000000000 -0300
++++ giram-0.3.4/src/texture.c	2005-08-13 12:47:10.000000000 -0300
+@@ -21,10 +21,10 @@
+ #include <string.h>
+ #undef GTK_DISABLE_DEPRECATED
+ #warning GTK_DISABLE_DEPRECATED
+-#include "giram.h"
+-#include "utils.h"
+ #include "widgets/gtkcolorbutton.h"
+ #include "widgets/gtkcolormapbutton.h"
++#include "giram.h"
++#include "utils.h"
+ #include "texture.h"
+ 
+ #include "widgets/giramwidgets.h"
+diff --exclude='*~' -Naur giram-0.3.4.orig/src/view.c giram-0.3.4/src/view.c
+--- giram-0.3.4.orig/src/view.c	2005-08-13 12:44:04.000000000 -0300
++++ giram-0.3.4/src/view.c	2005-08-13 12:48:09.000000000 -0300
+@@ -22,8 +22,11 @@
+ #include <unistd.h>
+ #include <math.h>
+ #include <string.h>
+-#include "giram.h"
++#undef GTK_DISABLE_DEPRECATED
++#warning GTK_DISABLE_DEPRECATED
+ #include <gdk/gdkkeysyms.h>
++#include <gtk/gtkitemfactory.h>
++#include "giram.h"
+ 
+ #include "tools/tools.h"
+ #include "tools/tool_select.h"
+diff --exclude='*~' -Naur giram-0.3.4.orig/src/widgets/gtkcolorbutton.c giram-0.3.4/src/widgets/gtkcolorbutton.c
+--- giram-0.3.4.orig/src/widgets/gtkcolorbutton.c	2005-08-13 12:44:04.000000000 -0300
++++ giram-0.3.4/src/widgets/gtkcolorbutton.c	2005-08-13 12:48:30.000000000 -0300
+@@ -25,12 +25,11 @@
+ #undef GTK_DISABLE_DEPRECATED
+ #warning GTK_DISABLE_DEPRECATED
+ 
++#include "gtkcolorbutton.h"
+ #include "giram.h"
+ 
+ #include "giramintl.h"
+ 
+-#include "gtkcolorbutton.h"
+-
+ static void  gtk_color_button_destroy(GtkObject *object);
+ static void  gtk_color_button_clicked(GtkButton *button);
+ static void  gtk_color_button_paint(GtkColorButton *gcb);

@@ -1,16 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3097c6b5a5dc41b5d2bb3ee73458e181 ChangeLog 820
 MD5 07418c593c0743e711ca51d7ae11e795 giram-0.3.3.ebuild 1004
-MD5 f5e33c1537fab889a6582e5452b00790 giram-0.3.4.ebuild 1150
+MD5 f6d39b52dbe03b91cd9e50df52c68254 giram-0.3.5.ebuild 1199
+MD5 ad713197382ef6ec3abb5556549f95cf giram-0.3.4.ebuild 1198
+MD5 b134a97ea35b22665023bdfd842344de ChangeLog 1195
 MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
+MD5 e74ef6203f46822ded7256cea16f67d9 files/giram-0.3.5-fbsd.patch 5157
 MD5 0b7a883689b1149507702593d3c79ce3 files/digest-giram-0.3.3 64
 MD5 874c146dc51dca7e7230430c342bbd5a files/digest-giram-0.3.4 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW1bKI1lqEGTUzyQRAg98AKCnHoMjO8JxkF7tCuq8bIEbwqXMOwCgogmG
-2zH9u+AN0rImC7w1uDLDoiY=
-=HHoN
------END PGP SIGNATURE-----
+MD5 f91a82238c2ace1ce56e21e992a0a69b files/digest-giram-0.3.5 64
+MD5 8070263059a0d62266339edb32750bfd files/giram-0.3.4-fbsd.patch 4157
