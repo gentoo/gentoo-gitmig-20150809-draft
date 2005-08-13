@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88f79961161186c592762a09abc9c6a6 nikto-1.31.ebuild 1401
-MD5 6026d1de471c6768ddcbd6f34f94eb09 ChangeLog 2307
+MD5 2b4937477bd030fb07f7b9e2815e9a4b ChangeLog 2421
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 2d7e73ba6747967be5086b97e7fb3109 nikto-1.35.ebuild 1383
+MD5 88f79961161186c592762a09abc9c6a6 nikto-1.31.ebuild 1401
 MD5 9ea27fe96303ad70dc9bd8d3b95032d8 nikto-1.32.ebuild 1406
 MD5 6ddd6e4c0c7e2219194b261d95f295f3 nikto-1.34-r1.ebuild 1416
 MD5 c4605db3369dd491dd949abfa6ff3212 nikto-1.34-r2.ebuild 1416
 MD5 0ba7666616307886e40a4241602dd6c1 nikto-1.34.ebuild 1334
-MD5 e54a0b6eeba4b6c3bce790ecdb7cd1a4 files/digest-nikto-1.35 62
+MD5 833219e3d0b858cbdac8c9e1790d814e nikto-1.35.ebuild 1389
 MD5 4fd028ff30a713c4de5e0e295c8e09c8 files/digest-nikto-1.31 62
 MD5 deb58270f313a92987268abc8f75c12c files/digest-nikto-1.32 62
 MD5 d2887f890953869a678a1d24203255cf files/digest-nikto-1.34 62
 MD5 aa2d47ef5e1a6ddb3798a6f6e362adf3 files/digest-nikto-1.34-r1 120
 MD5 aa2d47ef5e1a6ddb3798a6f6e362adf3 files/digest-nikto-1.34-r2 120
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCmyHrtG5z4I8BtQoRArwnAJ4qtkcsPLRXIVJ5nfn5LiGU874aCQCbBay+
-7TZLRQ4kCoM5A7UM7rs2g6U=
-=FBjX
------END PGP SIGNATURE-----
+MD5 e54a0b6eeba4b6c3bce790ecdb7cd1a4 files/digest-nikto-1.35 62
