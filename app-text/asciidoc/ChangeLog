@@ -1,6 +1,9 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.11 2005/08/11 17:42:38 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.12 2005/08/13 10:29:29 r3pek Exp $
+
+  13 Aug 2005; Carlos Silva <r3pek@gentoo.org> asciidoc-7.0.1-r1.ebuild:
+  Marked ~sparc. closes bug #102096
 
 *asciidoc-7.0.1-r1 (11 Aug 2005)
 
