@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9dbf891c760130250424202d63632d1c acct-6.3.5.ebuild 862
-MD5 b6b7e7f12f5b12a7cbcd0a9ba07d1c3a ChangeLog 1763
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 03b20d770df9e02c677ebfd36f88b33d acct-6.3.5-r1.ebuild 962
-MD5 2dbe3e38c54e479bccb31fa6c30f28b6 files/acct-6.3.5-gentoo.diff 371
+MD5 cbde94fe589ca9a0c4a3bf1482f562d1 ChangeLog 1857
+MD5 9dbf891c760130250424202d63632d1c acct-6.3.5.ebuild 862
+MD5 cafe488e6a726b3b928dbe3b0cfe698f acct-6.3.5-r1.ebuild 961
 MD5 679163b80cdf41047198cb6bb75c6408 files/digest-acct-6.3.5-r1 70
 MD5 f57796e717bd96602143f913df4c265b files/acct.rc6 498
 MD5 296bdfcb1fa7634f32846c4f1caee788 files/digest-acct-6.3.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3Y+4Kf2g/qXtneoRAuwiAJ4ybxZ+IS+xn3tgLY4OuvDr0tU4SwCdFN2B
-xgJzH9i0sOx+ieN7A9cPL+A=
-=EWNh
------END PGP SIGNATURE-----
+MD5 2dbe3e38c54e479bccb31fa6c30f28b6 files/acct-6.3.5-gentoo.diff 371
