@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4270 2005/08/13 07:26:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4271 2005/08/13 09:44:29 genone Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,20 @@
 ##
 ##   End example
 ##
+
+# <genone@gentoo.org> (13 Aug 2005)
+# gtk2 versions, going to be unmasked soon
+>=mail-client/sylpheed-claws-1.9
+# <genone@gentoo.org> (13 Aug 2005)
+# Plugins for gtk2 versions.
+>=mail-client/sylpheed-claws-pgpinline-0.5-r1
+>=mail-client/sylpheed-claws-mailmbox-1.2
+>=mail-client/sylpheed-claws-cachesaver-0.5
+>=mail-client/sylpheed-claws-vcalendar-1.6
+>=mail-client/sylpheed-claws-fetchinfo-0.4.6
+>=mail-client/sylpheed-claws-maildir-0.8
+>=mail-client/sylpheed-claws-etpan-privacy-0.9
+>=mail-client/sylpheed-claws-perl-0.3
 
 # Jeremy Huddleston <eradicator@gentoo.org> (13 Aug 2005)
 # eselect module version still being tested...
@@ -930,19 +944,6 @@ gnome-extra/nautilus-media
 # From website: "We know that 0.4.x is a bit buggy on trades :), for people who
 # wish to play a stable game, please use 0.3.2"
 =games-board/gtkatlantic-0.4.1
-
-# <genone@gentoo.org> (25 Aug 2004)
-# Version including CVS snapshots for gtk2 support, masked until
-# it proofs itself usable (modified 13 Feb 2005).
-=mail-client/sylpheed-claws-0.9.12a-r1
-=mail-client/sylpheed-claws-1.0.1.1
->=mail-client/sylpheed-claws-1.9
-# <genone@gentoo.org> (13 Feb 2005)
-# Plugins for gtk2 version.
-=mail-client/sylpheed-claws-pgpinline-0.5-r1
-=mail-client/sylpheed-claws-mailmbox-1.0-r1
-=mail-client/sylpheed-claws-cachesaver-0.5-r1
-=mail-client/sylpheed-claws-vcalendar-0.9-r1
 
 # Matthew Kennedy <mkennedy@gentoo.org> (10 Feb 2005)
 # Masked while waiting on apache module refresh
