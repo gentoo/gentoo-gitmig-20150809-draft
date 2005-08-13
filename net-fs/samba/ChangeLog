@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.197 2005/08/09 14:33:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.198 2005/08/13 10:59:21 satya Exp $
+
+  13 Aug 2005; Christian Andreetta <satya@gentoo.org>
+  +samba-3.0.14a-r3.ebuild:
+  'hide pecial files' option control fix (thanks to Tim Redman, bug #101770)
 
   09 Aug 2005; Seemant Kulleen <seemant@gentoo.org> -files/lmhosts,
   -files/nsswitch.conf-winbind, -files/nsswitch.conf-wins, -files/samba.pam,
