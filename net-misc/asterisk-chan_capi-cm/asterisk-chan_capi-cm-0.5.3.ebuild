@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/asterisk-chan_capi-cm-0.5.3.ebuild,v 1.1 2005/07/01 21:54:22 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/asterisk-chan_capi-cm-0.5.3.ebuild,v 1.2 2005/08/13 03:24:50 stkn Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/chan-capi/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 
 DEPEND="!net-misc/asterisk-chan_capi
 	>=net-misc/asterisk-1.0.5-r2
@@ -43,7 +43,7 @@ src_install() {
 	dodoc INSTALL LICENSE README capi.conf
 
 	# fix permissions
-	if [[ -z "$(egetent group asterisk)" ]]; then
+	if [[ -n "$(egetent group asterisk)" ]]; then
 		chown -R root:asterisk ${D}/etc/asterisk/capi.conf
 		chmod -R u=rwX,g=rX,o= ${D}/etc/asterisk/capi.conf
 	fi
