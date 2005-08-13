@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.2.ebuild,v 1.8 2005/06/04 15:06:58 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.2.ebuild,v 1.9 2005/08/13 07:59:16 grobian Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment
@@ -9,7 +9,7 @@ MY_P=${P/_/-}
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
 HOMEPAGE="http://www.enlightenment.org/Libraries/Imlib2.html"
 
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 sparc x86"
 IUSE="X gif jpeg mmx png tiff"
 
 DEPEND="=media-libs/freetype-2*
