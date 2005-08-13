@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 17aee4adda8f1569c3fef52302062e07 ruby-gnomevfs-0.12.0.ebuild 610
 MD5 fafa46883495229b5d3464c1cfc73728 ruby-gnomevfs-0.11.0.ebuild 610
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 8a6e9df43163275cf4a5289fe5c06659 ChangeLog 1145
 MD5 f8c9287a2ca118d33f63f1ab5af032ac ruby-gnomevfs-0.10.1.ebuild 543
-MD5 ac39267c10c5470a35d0e22ba0a42dd8 ruby-gnomevfs-0.12.0.ebuild 610
-MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gnomevfs-0.11.0 75
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 897efecc5d9229f5122fe51a9662471c ChangeLog 1249
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gnomevfs-0.10.1 74
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gnomevfs-0.12.0 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvsj/VWNWqTUmv+0RAqjoAKCL66mudEJCVEXIfjx1gsweP+OYIACgm3Bx
-zz4fEO9qf3JiR9xwCbkJoDk=
-=G+9H
------END PGP SIGNATURE-----
+MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gnomevfs-0.11.0 75
