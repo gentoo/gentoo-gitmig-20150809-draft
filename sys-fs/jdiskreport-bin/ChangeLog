@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/jdiskreport-bin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jdiskreport-bin/ChangeLog,v 1.1 2005/08/13 05:13:40 compnerd Exp $
+
+*jdiskreport-bin-1.2.2 (13 Aug 2005)
+
+  13 Aug 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +jdiskreport-bin-1.2.2.ebuild:
+  Initial import of JDiskReport.  Resolves Bug #93763.
+
