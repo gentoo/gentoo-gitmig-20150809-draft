@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 602a6a2297a983a3248699f021b0af2e httptunnel-3.0.5.ebuild 749
-MD5 1c835387d4371d5dd27aba31db46c057 httptunnel-3.3.ebuild 738
-MD5 b04b8167548d50a375f0a9344c9bd6c5 ChangeLog 1272
+MD5 5a7094c2e8057145efce5a3f1e1a2e68 httptunnel-3.3.ebuild 735
+MD5 380be11c1cdb3b669d98f9ec2e073658 ChangeLog 1365
 MD5 f1a39229044644910108b779c98a81f2 files/digest-httptunnel-3.0.5 68
 MD5 aa050c974c4bacc83bda01106e79aa81 files/digest-httptunnel-3.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC17lYKRy60XGEcJIRAuRXAJ0TCqAqcvqLOWm2nKSX9iiNQfrH0ACdHtI4
-QF3gkNNccGSyhBgdJeW7sR8=
-=UqjC
------END PGP SIGNATURE-----
