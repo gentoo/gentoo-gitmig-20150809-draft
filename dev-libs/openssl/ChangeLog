@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.133 2005/08/12 17:53:09 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.134 2005/08/13 14:20:47 flameeyes Exp $
+
+  13 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  files/gentoo.config-0.9.7g, +files/openssl-0.9.7g-amd64-fbsd.patch,
+  openssl-0.9.7g.ebuild:
+  Added patch to support amd64-fbsd target. Updated config script.
 
   12 Aug 2005; <stkn@gentoo.org> +files/openssl-0.9.7c-tempfile.patch:
   Readding missing patch.
