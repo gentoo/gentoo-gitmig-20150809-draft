@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/yaboot-static
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.8 2005/07/10 18:39:26 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.9 2005/08/13 01:11:03 ranger Exp $
+
+  13 Aug 2005; Brent Baude <ranger@gentoo.org> yaboot-static-1.3.13.ebuild:
+  Marking yaboot-static-1.3.13 stable ppc64 to pickup the ibm USE flag foo
 
   10 Jul 2005; Daniel Ostrow <dostrow@gentoo.org>
   yaboot-static-1.3.13.ebuild:
