@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5fd0fb969fe181169f3bacc8ea0238ec dvutil-0.13.13.ebuild 874
 MD5 36f32cf88135aa428b40685b955c8c3a dvutil-0.13.15.ebuild 748
-MD5 d0894af2485a629331cb297e91fda2f5 ChangeLog 3294
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 4e101705e9e85f6f04d8e4c48aaae66f dvutil-0.13.15-r2.ebuild 995
-MD5 c811d8de8b8fdf0d0524c1e57e637129 files/digest-dvutil-0.13.13 66
-MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15 66
-MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15-r2 66
+MD5 676fda918e72bee75d76b784c893727a ChangeLog 3393
+MD5 2a76f7294c0d19f0030cf03dd6da9400 dvutil-0.13.15-r2.ebuild 993
+MD5 5fd0fb969fe181169f3bacc8ea0238ec dvutil-0.13.13.ebuild 874
 MD5 75609f1d5318b7d0a9e375ddbca118b3 files/0.13.13-gentoo-doc_distdir.patch 455
+MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15 66
 MD5 fe20149f0cdfcf848443da51c71bb4f0 files/dvutil-0.13.15-fix-underquoted-m4.diff 599
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0+TAEZCkKN40op4RAmxlAJsFUb9TjVYYDhHrJZUCDM8jfPhhwQCeJUzR
-Jc45jxDBRIZG+gC5+iDEcy8=
-=nDU3
------END PGP SIGNATURE-----
+MD5 c811d8de8b8fdf0d0524c1e57e637129 files/digest-dvutil-0.13.13 66
+MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15-r2 66

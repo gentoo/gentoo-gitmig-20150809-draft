@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 54153ab860d8c06b01b0e00c03ce7aad libmcal-0.7-r3.ebuild 1871
-MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
-MD5 0d2106dd953946fad1542111a3946d62 libmcal-0.7.ebuild 691
 MD5 d89164920848a3dd2ce99c2e24dfd7e6 libmcal-0.7-r1.ebuild 791
+MD5 0d2106dd953946fad1542111a3946d62 libmcal-0.7.ebuild 691
+MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
+MD5 6b1830a007d5aec9befff931cec1659b ChangeLog 3937
+MD5 73f8a26448cc4af10290dfd0bc4ba90c libmcal-0.7-r5.ebuild 1958
 MD5 e1f612bfb8da053586d4f9b087793578 libmcal-0.7-r2.ebuild 1788
-MD5 e0f9446fc50be3b3c05096789a30f8e0 libmcal-0.7-r5.ebuild 1961
-MD5 4bcf5276407339b34d70de9761c38e6f ChangeLog 3844
-MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7 62
-MD5 d438648eeab0ea0e90bdf8ea2f3321c6 files/libmcal-0.7-fpic.patch 1302
-MD5 e40f5b90c038f8c8703b83953b10012b files/digest-libmcal-0.7-r3 128
-MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7-r1 62
+MD5 54153ab860d8c06b01b0e00c03ce7aad libmcal-0.7-r3.ebuild 1871
 MD5 e40f5b90c038f8c8703b83953b10012b files/digest-libmcal-0.7-r2 128
+MD5 e40f5b90c038f8c8703b83953b10012b files/digest-libmcal-0.7-r3 128
+MD5 d438648eeab0ea0e90bdf8ea2f3321c6 files/libmcal-0.7-fpic.patch 1302
+MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7 62
+MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7-r1 62
 MD5 e40f5b90c038f8c8703b83953b10012b files/digest-libmcal-0.7-r5 128
 MD5 1c173be1ce6319004277a8847741746c files/libmcal-0.7-libdir.patch 888
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD4DBQFC/OCZKRy60XGEcJIRAn3jAJdHIhXdczP47JWxxsjw5dM1rKCgAJ46nUN5
-DAfeSRnw8pyaLs+lokjrbg==
-=v4T7
------END PGP SIGNATURE-----

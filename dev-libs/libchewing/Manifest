@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d408867729f8d8fa888598c11d8823fa ChangeLog 1336
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 3c809683b432a70959342185360f81f4 libchewing-0.2.3.ebuild 626
-MD5 0fa011d30ba8d9be5f0c0ab1c3e1813a libchewing-0.2.5.ebuild 602
+MD5 d9a7d9cdc784b5722e5ce2caa49c153b libchewing-0.2.5.ebuild 602
 MD5 9d27dd0b3cb40656fd9ace00831697af libchewing-0.2.6.ebuild 603
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 c76be0bbf205d4f993ac1d207a1c3592 ChangeLog 1437
+MD5 3c809683b432a70959342185360f81f4 libchewing-0.2.3.ebuild 626
+MD5 453dc6486fd730286378401ab3673943 files/digest-libchewing-0.2.6 69
 MD5 d4145b679b5c77c59ab66e71800a75d1 files/digest-libchewing-0.2.3 66
 MD5 804d0ffc57d35e063c1da8d1879323fc files/digest-libchewing-0.2.5 69
-MD5 453dc6486fd730286378401ab3673943 files/digest-libchewing-0.2.6 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvsTJVWNWqTUmv+0RAtiBAKCdioL3u4cdSaogYzhdR1fcXxYohwCfU7Nd
-7JtUkzhxVrat0pA/m0dPOY4=
-=yoCa
------END PGP SIGNATURE-----

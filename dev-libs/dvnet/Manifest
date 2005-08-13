@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fce2b1530c5b5cc6b6da89eddbb22d1f dvnet-0.9.4.ebuild 719
+MD5 c35b9333c1c29f74a0647205f893a97e dvnet-0.9.11-r2.ebuild 868
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 d21a67c241cc22cbdc41ec3d6689cd93 ChangeLog 2352
 MD5 49abd5fc36f4aac870d1d0286c2e3471 dvnet-0.9.8.ebuild 600
 MD5 6a70c0a69102b7c1caef9d9cc2103294 dvnet-0.9.11.ebuild 654
-MD5 06b734d50d8dc8241a3561d47b394560 dvnet-0.9.11-r2.ebuild 870
-MD5 00d009f9bae2022687d569f18596cf79 ChangeLog 2255
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 676d76577986d75261447aa6de20d67e files/digest-dvnet-0.9.4 63
-MD5 3f41612d3dcc01f5b4b4ce73f5af1129 files/digest-dvnet-0.9.8 63
-MD5 dcdc6963e7b00c022c8ad8dc2041ceaa files/digest-dvnet-0.9.11-r2 64
+MD5 fce2b1530c5b5cc6b6da89eddbb22d1f dvnet-0.9.4.ebuild 719
 MD5 65c860f38c4defc307d3655bcbcf5d10 files/dvnet-0.9.11-fix-underquoted-m4.diff 518
+MD5 dcdc6963e7b00c022c8ad8dc2041ceaa files/digest-dvnet-0.9.11-r2 64
+MD5 676d76577986d75261447aa6de20d67e files/digest-dvnet-0.9.4 63
 MD5 dcdc6963e7b00c022c8ad8dc2041ceaa files/digest-dvnet-0.9.11 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC4DmCEZCkKN40op4RAn4/AJ41GjQZ239+znLyoVo7nG/0VcvJDQCgtxqa
-MnhxIGTmZGRAeInI4kl7+Fs=
-=40N+
------END PGP SIGNATURE-----
+MD5 3f41612d3dcc01f5b4b4ce73f5af1129 files/digest-dvnet-0.9.8 63

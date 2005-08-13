@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 47d58ceda3d008efefed56b72e92e939 dvthread-0.4.7-r1.ebuild 667
-MD5 fa5ea15e402e10d9ca9ce22041fd4c1b dvthread-0.4.4.ebuild 686
-MD5 31edf3af9d11078bfdb08209fd14cd4d dvthread-0.4.7-r2.ebuild 975
-MD5 8bba5a8666cda27809841afdb2afa309 ChangeLog 1438
+MD5 9f9dbb7f160c9fe5e7942dcdfbe3696a dvthread-0.4.7-r2.ebuild 973
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 47d58ceda3d008efefed56b72e92e939 dvthread-0.4.7-r1.ebuild 667
+MD5 df197c21c75da1a9712c30872b5beef4 ChangeLog 1537
 MD5 ffc31a022a8fe75dbb78edf5d89d655b dvthread-0.4.6a.ebuild 798
-MD5 7592bd7aac99ef4889ad5741ab5782cb files/digest-dvthread-0.4.7-r1 66
+MD5 fa5ea15e402e10d9ca9ce22041fd4c1b dvthread-0.4.4.ebuild 686
 MD5 7592bd7aac99ef4889ad5741ab5782cb files/digest-dvthread-0.4.7-r2 66
-MD5 0100eb4b5b9ee8ac729a91249f1b2c38 files/digest-dvthread-0.4.4 66
+MD5 7592bd7aac99ef4889ad5741ab5782cb files/digest-dvthread-0.4.7-r1 66
 MD5 82b1906ac74ced204768ddfe7e8ef9e6 files/gentoo-0.4.4.patch 397
+MD5 0100eb4b5b9ee8ac729a91249f1b2c38 files/digest-dvthread-0.4.4 66
 MD5 1036571cc334c77e6a509266a62c61fa files/digest-dvthread-0.4.6a 67
 MD5 215740d574e28bb8cb7d7b9cfe1bce3f files/dvthread-0.4.7-fix-underquoted-m4.diff 440
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC4DoUEZCkKN40op4RAiaSAJ9INkcdAA4p0oq6GfmpRf1y3XzKOwCfYifH
-Sw87oU/c9ni4FqAVvsWkbXg=
-=+E8w
------END PGP SIGNATURE-----
