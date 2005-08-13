@@ -1,6 +1,15 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.18 2005/06/07 01:44:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.19 2005/08/13 23:10:51 mkennedy Exp $
+
+*ecls-0.9g (13 Aug 2005)
+
+  13 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/0.9d-texinfo-gentoo.patch, -files/0.9e-headers-gentoo.patch,
+  -files/0.9d-headers-gentoo.patch, -files/0.9e-texinfo-gentoo.patch,
+  +files/0.9g-headers-gentoo.patch, -ecls-0.9d.ebuild, -ecls-0.9e.ebuild,
+  +ecls-0.9g.ebuild:
+  New upstream version; Removed old ebuilds.
 
   07 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> +files/README.Gentoo,
   +files/clc-lite.lisp, ecls-0.9f_p1.ebuild:
