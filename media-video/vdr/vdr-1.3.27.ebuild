@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.27.ebuild,v 1.1 2005/07/23 16:50:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.27.ebuild,v 1.2 2005/08/13 09:26:13 zzam Exp $
 
 inherit eutils
 
@@ -28,16 +28,20 @@ SLOT="0"
 LICENSE="GPL-2"
 
 
-RDEPEND="media-libs/jpeg
+_DEPEND="media-libs/jpeg
 	lirc? ( app-misc/lirc )
-	dev-lang/perl"
+	sys-apps/gawk"
 
-DEPEND="${RDEPEND}
+RDEPEND="${_DEPEND}
+	dev-lang/perl
+	media-tv/vdrplugin-rebuild
+	media-tv/gentoo-vdr-scripts"
+
+DEPEND="${_DEPEND}
 	|| (
 		>=sys-kernel/linux-headers-2.6.11-r2
 		media-tv/linuxtv-dvb
-	)
-	sys-apps/gawk"
+	)"
 
 # Relevant Pathes for vdr on gentoo
 DVBDIR=/usr/include
@@ -140,10 +144,11 @@ src_install() {
 	insinto /etc/vdr
 	doins *.conf channels.conf.*
 
+	keepdir "${PLUGINDIR}"
+
 	doman vdr.1 vdr.5
 }
 
 pkg_postinst() {
-	einfo "Up to now this ebuild does not contain any scripts needed for use"
-	einfo "of vdr as a STB (no scripts for init, shutdown, automatic wakeup, ...)."
+	einfo "It is a good idea to run vdrplugin-rebuild now"
 }
