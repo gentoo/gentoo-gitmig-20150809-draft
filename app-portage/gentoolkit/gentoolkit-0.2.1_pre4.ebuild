@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.1_pre4.ebuild,v 1.3 2005/07/31 01:36:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.1_pre4.ebuild,v 1.4 2005/08/14 03:51:21 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 
 # Previous KEYWORDS:
 # KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~ppc-macos"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 DEPEND=">=sys-apps/portage-2.0.51_pre21
 	>=dev-lang/python-2.0
