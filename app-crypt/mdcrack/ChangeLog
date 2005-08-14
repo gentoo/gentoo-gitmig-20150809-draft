@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/mdcrack
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mdcrack/ChangeLog,v 1.1 2005/08/14 12:48:49 dragonheart Exp $
+
+*mdcrack-1.2 (14 Aug 2005)
+
+  14 Aug 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +mdcrack-1.2.ebuild:
+  Initial import thanks to Minati and Thomas. (bug #34690)
+

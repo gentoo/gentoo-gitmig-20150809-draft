@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 07d7c51baf8a01783cb11c9952b9941a mdcrack-1.2.ebuild 800
+MD5 dbd4c628cc492bee0fd57b8ee8644629 ChangeLog 391
+MD5 243e4cd9809545d12f991b2d417040e1 metadata.xml 159
+MD5 932a24d00b1e543f0fffa0363784f4e4 files/digest-mdcrack-1.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/z3JmdTrptrqvGERAgCOAKCGyca7J9R8ew75oLu74IyPNreoRACfdUoH
+10cqZBnWyryI53OjEi03mYk=
+=aZ4J
+-----END PGP SIGNATURE-----
