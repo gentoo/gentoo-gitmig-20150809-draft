@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1e7adf437d1308d010ca709b066c564d ChangeLog 516
 MD5 4689cd2e871dc885bed0d78dd3ae58fe xf86vidmodeproto-2.2.ebuild 533
 MD5 cc96eb90d5fe07194e773cfc0280bf48 files/digest-xf86vidmodeproto-2.2 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/r9UgIKl8Uu19MoRAvdBAJ90HxjT+CRvcn3Wf3wr35+dBMouEwCeMKnz
+QpvtGLIxFlQuQhqtlNos2KA=
+=HGuL
+-----END PGP SIGNATURE-----

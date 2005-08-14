@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ca7eb306a238513c3c5ea87aef5bfb5e bigreqsproto-1.0.ebuild 521
 MD5 b4b3fd93b9a0bb4d8ba88047da90700c ChangeLog 494
 MD5 c19c0188d1328165973f9efa6b59f076 files/digest-bigreqsproto-1.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/r4zgIKl8Uu19MoRAg49AJ9U0Pen99UrwQkM5NNNEGAEWoOYGwCcCaVJ
+nf9KGv+R38I3lF4rN/oWf3g=
+=WA0w
+-----END PGP SIGNATURE-----
