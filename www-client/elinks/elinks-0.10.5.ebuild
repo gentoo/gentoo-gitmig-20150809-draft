@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.7 2005/08/02 18:30:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5.ebuild,v 1.8 2005/08/14 10:11:48 hansmi Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~mips ~ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~mips ppc ~ppc-macos ppc64 sparc x86"
 
 DEPEND="virtual/libc
 	>=app-arch/bzip2-1.0.2

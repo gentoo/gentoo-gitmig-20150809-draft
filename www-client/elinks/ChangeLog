@@ -1,6 +1,9 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.19 2005/08/02 18:30:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.20 2005/08/14 10:11:48 hansmi Exp $
+
+  14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> elinks-0.10.5.ebuild:
+  Stable on ppc.
 
   02 Aug 2005; Simon Stelling <blubb@gentoo.org> elinks-0.10.5.ebuild:
   stable on amd64
