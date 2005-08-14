@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.32 2005/07/31 23:11:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.33 2005/08/14 14:35:14 greg_g Exp $
+
+*kmymoney2-0.8 (14 Aug 2005)
+
+  14 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> +kmymoney2-0.8.ebuild:
+  New version (#102384).
 
 *kmymoney2-0.7.5 (31 Jul 2005)
 
