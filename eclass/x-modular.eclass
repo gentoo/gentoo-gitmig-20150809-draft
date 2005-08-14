@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.2 2005/08/11 06:19:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.3 2005/08/14 23:04:02 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -32,6 +32,14 @@ if [ -n "${SNAPSHOT}" ]; then
 		>=sys-devel/automake-1.7
 		>=sys-devel/libtool-1.5
 		>=sys-devel/m4-1.4"
+fi
+
+# If we're a font package, but not the font.alias one
+if [[ "${PN/#font}" != "${PN}" ]] && [[ "${PN}" != "font-alias" ]]; then
+	RDEPEND="${RDEPEND}
+		media-fonts/encodings"
+	PDEPEND="${PDEPEND}
+		media-fonts/font-alias"
 fi
 
 DEPEND="${DEPEND}
