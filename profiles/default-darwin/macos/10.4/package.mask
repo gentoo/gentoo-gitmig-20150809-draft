@@ -10,9 +10,12 @@ app-shells/zsh
 dev-lang/perl
 dev-lang/python
 dev-libs/libxml2
+dev-perl/XML-Parser
+dev-util/intltool
 media-libs/a52dec
 net-misc/curl
 sys-apps/diffutils
+sys-apps/gawk
 sys-apps/grep
 sys-apps/texinfo
 sys-devel/gcc-apple
@@ -25,6 +28,7 @@ sys-devel/flex
 sys-devel/libperl
 sys-libs/ncurses
 sys-libs/readline
+x11-libs/gtk+
 ##
 # end collision-protect
 ##

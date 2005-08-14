@@ -11,9 +11,12 @@ dev-lang/perl
 dev-lang/python
 dev-libs/libprelude
 dev-libs/libxml2
+dev-perl/XML-Parser
+dev-util/intltool
 media-libs/a52dec
 net-misc/curl
 sys-apps/diffutils
+sys-apps/gawk
 sys-apps/grep
 sys-apps/texinfo
 sys-devel/gcc-apple
@@ -25,7 +28,7 @@ sys-devel/bison
 sys-devel/flex
 sys-devel/libperl
 sys-libs/ncurse
-
+x11-libs/gtk+
 ##
 # end collision-protect
 ##
