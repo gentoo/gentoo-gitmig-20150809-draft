@@ -1,4 +1,16 @@
-MD5 0f56195260b84d4edb2b2edf41cc451b ChangeLog 3034
-MD5 f74f5fd5dc944071f900b4e5919b5f95 cl-aserve-1.2.42.20050220.ebuild 1072
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e6fe602c8bb1354a095e9049f094316 ChangeLog 3191
+MD5 cf96ff1654929b2a0a7e0f8013bc522a cl-aserve-1.2.42.20050805.ebuild 1082
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 f74f5fd5dc944071f900b4e5919b5f95 cl-aserve-1.2.42.20050220.ebuild 1072
+MD5 4647f20ceef5e201f48238231cc3810a files/digest-cl-aserve-1.2.42.20050805 97
 MD5 da9c8b6af57dbf3f2e1db4347b533f71 files/digest-cl-aserve-1.2.42.20050220 92
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/8bpyiNZaEAZA+ARAlE2AJsG7/dxeW72TRfHQqFVOXiezG31WwCfTNxo
+Fuy4vh/G6Q+M/7unt5N/hjY=
+=fZ++
+-----END PGP SIGNATURE-----
