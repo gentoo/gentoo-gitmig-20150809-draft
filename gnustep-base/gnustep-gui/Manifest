@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 539856071716dea3739a0fc7be46c701 ChangeLog 8668
-MD5 c6c9275a80b7fc7af0686d0875489069 files/digest-gnustep-gui-0.9.4 70
-MD5 c6c9275a80b7fc7af0686d0875489069 files/digest-gnustep-gui-0.9.4-r1 70
-MD5 c6c9275a80b7fc7af0686d0875489069 files/digest-gnustep-gui-0.9.4-r2 70
+MD5 14ddce6d224dd7f10207594843f5e24c gnustep-gui-0.9.5.ebuild 1440
+MD5 649db105cbe2e9ffcca068143f88926f metadata.xml 1355
+MD5 e80f54d57b12815adbef54325c60f9c5 gnustep-gui-0.9.4.ebuild 1375
+MD5 5517702015830b3b49ad4de48d6ca1ba ChangeLog 8766
+MD5 883758ea3654bc3f20f0c6bdf7f8d97c gnustep-gui-0.9.5_pre20050312-r1.ebuild 1775
+MD5 ef75f8ae82920e74d4bb9e9bd80ad6d8 gnustep-gui-0.9.4-r2.ebuild 1619
+MD5 fa604add751f7dba114e52ce6df3832a gnustep-gui-0.9.4-r1.ebuild 1537
 MD5 689d09b413cf86371215ff560ee74009 files/digest-gnustep-gui-0.9.5 70
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-gui-0.9.5_pre20050312-r1 0
+MD5 c6c9275a80b7fc7af0686d0875489069 files/digest-gnustep-gui-0.9.4-r2 70
+MD5 c6c9275a80b7fc7af0686d0875489069 files/digest-gnustep-gui-0.9.4 70
+MD5 a25aeac9ea3688989059cc6eb7edd207 files/gui-use-giflib.patch.bz2 3037
 MD5 6f66904f0ad8d980c653d5c0fdf7d81b files/gnustep-gui-0.9.4-camaelon.patch 4029
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-gui-0.9.5_pre20050312-r1 0
+MD5 c6c9275a80b7fc7af0686d0875489069 files/digest-gnustep-gui-0.9.4-r1 70
 MD5 7bb8ef207dff05d7e80122fcffdcce88 files/gui-def.patch 640
 MD5 de8a4d2ff2308aaa042177ee1bcec78b files/gui-gsspell.patch 650
-MD5 a25aeac9ea3688989059cc6eb7edd207 files/gui-use-giflib.patch.bz2 3037
-MD5 fa604add751f7dba114e52ce6df3832a gnustep-gui-0.9.4-r1.ebuild 1537
-MD5 ef75f8ae82920e74d4bb9e9bd80ad6d8 gnustep-gui-0.9.4-r2.ebuild 1619
-MD5 e80f54d57b12815adbef54325c60f9c5 gnustep-gui-0.9.4.ebuild 1375
-MD5 78c6919e3bdba9b2a36bdd8c388b4ef6 gnustep-gui-0.9.5.ebuild 1443
-MD5 883758ea3654bc3f20f0c6bdf7f8d97c gnustep-gui-0.9.5_pre20050312-r1.ebuild 1775
-MD5 649db105cbe2e9ffcca068143f88926f metadata.xml 1355
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2Sy8I1lqEGTUzyQRAlGlAJ9cgfHFgWKr1suWcIciWjZVFUVY2gCfU1lY
-ON54StdfMQzzaaeF3141dQU=
-=z7DW
------END PGP SIGNATURE-----
