@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.10 2005/06/26 02:11:54 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.11 2005/08/14 10:10:21 hansmi Exp $
+
+  14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> octave-2.1.69.ebuild:
+  Stable on ppc.
 
   26 Jun 2005; Olivier Fisette <ribosome@gentoo.org> octave-2.1.69.ebuild:
   Stable x86 and amd64.
