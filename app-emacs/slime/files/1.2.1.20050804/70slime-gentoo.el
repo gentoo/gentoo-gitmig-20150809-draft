@@ -11,6 +11,6 @@
 ;; this prevents us from requiring the user get dev-lisp/hyperspec
 ;; (which is non-free) as a hard dependency
 
-(if (file-exists-p "/usr/share/doc/hyperspec-6.0/HyperSpec")
-    (setq common-lisp-hyperspec-root "file:///usr/share/doc/hyperspec-6.0/HyperSpec/")
+(if (file-exists-p "/usr/share/doc/hyperspec/HyperSpec")
+    (setq common-lisp-hyperspec-root "file:///usr/share/doc/hyperspec/HyperSpec/")
   (setq common-lisp-hyperspec-root "http://www.lispworks.com/reference/HyperSpec/"))

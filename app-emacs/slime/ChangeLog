@@ -1,6 +1,20 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.20 2005/08/04 08:54:16 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.21 2005/08/14 08:26:36 mkennedy Exp $
+
+  14 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/1.2.1.20050610/70slime-gentoo.el, -files/1.2.1.20050610/swank.asd,
+  -files/1.2.1/70slime-gentoo.el, -files/1.2.1.20050610/README.Gentoo,
+  -files/1.2.1.20050610/swank-loader.lisp,
+  -files/1.2.1.20050630/70slime-gentoo.el,
+  -files/1.2.1.20050630/README.Gentoo, -files/1.2.1.20050630/swank.asd,
+  -files/1.2.1.20050630/swank-loader.lisp,
+  files/1.2.1.20050804/70slime-gentoo.el, -files/1.2.1/README.Gentoo,
+  -files/1.2.1/swank.asd, -files/1.2.1/swank-loader.lisp,
+  -slime-1.2.1.ebuild, -slime-1.2.1-r1.ebuild, -slime-1.2.1.20050610.ebuild,
+  -slime-1.2.1.20050630.ebuild:
+  Use version independent symbolic link to HyperSpec documentation; Remove old
+  ebuilds.
 
 *slime-1.2.1.20050804 (04 Aug 2005)
 

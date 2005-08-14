@@ -1,38 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 25fded7960ff3332eb8f31a256689aba ChangeLog 5208
+MD5 a82a3257b6c40a6c1787b8ad04418768 ChangeLog 5937
 MD5 185b50ff504c7da6807fffb4e73fc017 metadata.xml 1267
 MD5 672b81e68ae0f4dd6dd799319c4fe356 slime-1.2.1.20050804.ebuild 2033
-MD5 7cc6b237d8d74ab65a6ad265c99895a9 slime-1.2.1.ebuild 1972
-MD5 e144c7cdbce58cc6dd16a16d7c8aa914 slime-1.2.1-r1.ebuild 1931
-MD5 1fa31837caa5947e8528217afb395864 slime-1.2.1.20050610.ebuild 1986
-MD5 67de211e8f1edeab16ce61ccbb286e99 slime-1.2.1.20050630.ebuild 2025
 MD5 5dc9040c865b8807c7a2ccb040587b2a files/digest-slime-1.2.1.20050804 150
-MD5 4afafaded4b9fd3dbc6b81b7478bfd1c files/digest-slime-1.2.1 63
-MD5 4afafaded4b9fd3dbc6b81b7478bfd1c files/digest-slime-1.2.1-r1 63
-MD5 cd9fc87fe8d186f9ab37257456abdf35 files/digest-slime-1.2.1.20050610 150
-MD5 58863f1f75ebafcd7a5554a00451f3b4 files/digest-slime-1.2.1.20050630 150
-MD5 910993d2e23f61b956f2df6fad49b657 files/1.2.1.20050804/70slime-gentoo.el 577
+MD5 ee1f66aba753cb513ec91d33210dc246 files/1.2.1.20050804/70slime-gentoo.el 569
 MD5 a6f665debad6ee005b99b5ae3d3aeedb files/1.2.1.20050804/README.Gentoo 349
 MD5 cd3eddef773c2bdc1eac336383f13ec6 files/1.2.1.20050804/swank-loader.lisp 68
 MD5 80cd96bdd0caca9767147a2cf1f08769 files/1.2.1.20050804/swank.asd 2191
-MD5 910993d2e23f61b956f2df6fad49b657 files/1.2.1/70slime-gentoo.el 577
-MD5 a6f665debad6ee005b99b5ae3d3aeedb files/1.2.1/README.Gentoo 349
-MD5 cd3eddef773c2bdc1eac336383f13ec6 files/1.2.1/swank-loader.lisp 68
-MD5 9b1d60c24d3e47f840d95b1913699950 files/1.2.1/swank.asd 2390
-MD5 910993d2e23f61b956f2df6fad49b657 files/1.2.1.20050610/70slime-gentoo.el 577
-MD5 a6f665debad6ee005b99b5ae3d3aeedb files/1.2.1.20050610/README.Gentoo 349
-MD5 cd3eddef773c2bdc1eac336383f13ec6 files/1.2.1.20050610/swank-loader.lisp 68
-MD5 b6d45d0225706ae7fc0f69bc25291f8b files/1.2.1.20050610/swank.asd 2470
-MD5 910993d2e23f61b956f2df6fad49b657 files/1.2.1.20050630/70slime-gentoo.el 577
-MD5 a6f665debad6ee005b99b5ae3d3aeedb files/1.2.1.20050630/README.Gentoo 349
-MD5 cd3eddef773c2bdc1eac336383f13ec6 files/1.2.1.20050630/swank-loader.lisp 68
-MD5 b6d45d0225706ae7fc0f69bc25291f8b files/1.2.1.20050630/swank.asd 2470
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC8dfNyiNZaEAZA+ARAnylAJ9fZd17r6JHlLRY5p5NeyXsnQ09HwCfTdGh
-2O5TFeRhXeMpdPCM/WBUtn4=
-=tb5L
+iD8DBQFC/wCQyiNZaEAZA+ARAkZmAJ9rjk/zz1KbcIFb3HR31OMulZ65wQCfdNOk
+JyUfdLg5xcMNyK6Hm2OOhkM=
+=rbpJ
 -----END PGP SIGNATURE-----
