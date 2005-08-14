@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.3 2005/08/14 23:04:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.4 2005/08/14 23:45:52 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -10,7 +10,7 @@
 # If the ebuild installs fonts, set FONT="yes" at the top and set FONT_DIRS to
 # the subdirectories within /usr/share/fonts to which it installs fonts.
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 inherit eutils
 
@@ -36,6 +36,9 @@ fi
 
 # If we're a font package, but not the font.alias one
 if [[ "${PN/#font}" != "${PN}" ]] && [[ "${PN}" != "font-alias" ]]; then
+	# Activate font code in the rest of the eclass
+	FONT="yes"
+
 	RDEPEND="${RDEPEND}
 		media-fonts/encodings"
 	PDEPEND="${PDEPEND}
@@ -121,6 +124,12 @@ x-modular_src_install() {
 #		mandir=${XDIR}/share/man \
 }
 
+x-modular_pkg_preinst() {
+	if [[ -n "${FONT}" ]]; then
+		discover_font_dirs
+	fi
+}
+
 x-modular_pkg_postinst() {
 	if [[ -n "${FONT}" ]]; then
 		setup_fonts
@@ -138,6 +147,13 @@ setup_fonts() {
 	create_fonts_dir
 	fix_font_permissions
 	create_font_cache
+}
+
+discover_font_dirs() {
+	pushd ${IMAGE}/usr/share/fonts
+	FONT_DIRS="$(find . -maxdepth 1 -mindepth 1 -type d)"
+	FONT_DIRS="$(echo ${FONT_DIRS} | sed -e 's:./::g')"
+	popd
 }
 
 create_fonts_scale() {
