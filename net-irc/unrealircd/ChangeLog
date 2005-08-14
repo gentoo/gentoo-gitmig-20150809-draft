@@ -1,10 +1,18 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.35 2005/08/14 20:32:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.36 2005/08/14 23:37:51 metalgod Exp $
+
+  15 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  unrealircd-3.2.3-r1.ebuild:
+  Added ~amd64 keywords.
 
   14 Aug 2005; Sven Wegener <swegener@gentoo.org>
   unrealircd-3.2.3-r1.ebuild:
   Make ebuild multilib friendly.
+
+  15 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  unrealircd-3.2.3-r1.ebuild:
+  Added ~amd64 keywords.
 
   29 Jun 2005; Sven Wegener <swegener@gentoo.org>
   unrealircd-3.2.3-r1.ebuild:
