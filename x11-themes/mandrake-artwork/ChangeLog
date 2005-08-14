@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mandrake-artwork
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.23 2005/05/05 23:00:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.24 2005/08/14 20:18:16 metalgod Exp $
+
+  14 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  mandrake-artwork-1.0.2.ebuild:
+  Added ~amd64 keywords.
 
   05 May 2005; Sven Wegener <swegener@gentoo.org>
   mandrake-artwork-0.9.ebuild, mandrake-artwork-0.9.1.ebuild,
