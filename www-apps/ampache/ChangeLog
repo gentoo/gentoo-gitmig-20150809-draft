@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.4 2005/07/07 03:33:49 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.5 2005/08/14 23:11:23 marineam Exp $
+
+*ampache-3.3.1.4 (14 Aug 2005)
+
+  14 Aug 2005; Michael Marineau <marineam@gentoo.org>
+  -files/ampache-3.3.1.2-webinstall.txt,
+  -files/ampache-3.3.1.3-webinstall.txt,
+  +files/ampache-3.3.1.4-webinstall.txt, -ampache-3.3.1.2.ebuild,
+  -ampache-3.3.1.3.ebuild, +ampache-3.3.1.4.ebuild:
+  Security update, new xml-rpc expoit.
 
 *ampache-3.3.1.2 (07 Jul 2005)
 
