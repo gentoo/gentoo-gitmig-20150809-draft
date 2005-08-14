@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-XML_RPC
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RPC/ChangeLog,v 1.24 2005/08/08 14:39:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RPC/ChangeLog,v 1.25 2005/08/14 22:22:10 sebastian Exp $
+
+*PEAR-XML_RPC-1.4.0 (14 Aug 2005)
+
+  14 Aug 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -PEAR-XML_RPC-1.3.1.ebuild, -PEAR-XML_RPC-1.3.2.ebuild,
+  -PEAR-XML_RPC-1.3.3.ebuild, +PEAR-XML_RPC-1.4.0.ebuild:
+  Version bump, immediately marked as stable on all ARCHes due to eval()
+  vulnerability and this is portable PHP code. Removing vulnerable versions.
 
   08 Aug 2005; Markus Rothe <corsair@gentoo.org> PEAR-XML_RPC-1.3.3.ebuild:
   Stable on ppc64
