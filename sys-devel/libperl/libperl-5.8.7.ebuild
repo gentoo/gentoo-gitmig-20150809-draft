@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.9 2005/08/14 15:38:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.10 2005/08/14 15:42:37 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -332,12 +332,12 @@ pkg_postinst() {
 
 	# Next bit is to try and setup the /usr/lib/libperl.so symlink
 	# properly ...
-	local libnumber="`ls -1 ${ROOT}usr/$(get_libdir)/libperl$(get_libname).?.* | grep -v '\.old' | wc -l`"
+	local libnumber="`ls -1 ${ROOT}usr/$(get_libdir)/libperl$(get_libname ?.*) | grep -v '\.old' | wc -l`"
 	if [ "${libnumber}" -eq 1 ]
 	then
 		# Only this version of libperl is installed, so just link libperl.so
 		# to the *soname* version of it ...
-		ln -snf libperl$(get_libname).${PERLSLOT} ${ROOT}usr/$(get_libdir)/libperl$(get_libname)
+		ln -snf libperl$(get_libname ${PERLSLOT}) ${ROOT}usr/$(get_libdir)/libperl$(get_libname)
 	else
 		if [ -x "${ROOT}/usr/bin/perl" ]
 		then
@@ -348,13 +348,13 @@ pkg_postinst() {
 
 			cd ${ROOT}usr/$(get_libdir)
 			# Link libperl.so to the *soname* versioned lib ...
-			ln -snf `echo libperl$(get_libname).?.${perlversion} | cut -d.  -f1,2,3` libperl$(get_libname)
+			ln -snf `echo libperl$(get_libname ?.${perlversion}) | cut -d.  -f1,2,3` libperl$(get_libname)
 		else
 			local x latest
 
 			# Nope, we are not so lucky ... try to figure out what version
 			# is the latest, and keep fingers crossed ...
-			for x in `ls -1 ${ROOT}usr/$(get_libdir)/libperl$(get_libname).?.*`
+			for x in `ls -1 ${ROOT}usr/$(get_libdir)/libperl$(get_libname ?.*)`
 			do
 				latest="${x}"
 			done
