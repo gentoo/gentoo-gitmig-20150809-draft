@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/most
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.19 2005/08/13 03:38:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.20 2005/08/14 11:25:03 ka0ttic Exp $
+
+*most-4.10.2-r1 (14 Aug 2005)
+
+  14 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/most-4.10.2-fix-goto-line.diff, -most-4.10.2.ebuild,
+  +most-4.10.2-r1.ebuild:
+  Revision bump; added patch to fix the 'g' (goto line) command. Also removed
+  src_compile() completely since the MOST_SYSINIT defaults to what we were
+  using previously (/etc/most.conf). Also updated the dodoc list to include
+  the sample most.rc.
 
   13 Aug 2005; Joshua Kinard <kumba@gentoo.org> metadata.xml,
   most-4.10.2.ebuild:

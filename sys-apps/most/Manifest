@@ -1,10 +1,21 @@
-MD5 e68ae64e677ea941e092759fdc8dc9a0 ChangeLog 2834
-MD5 e2d614fd87eac1a4402def83a459af86 metadata.xml 164
-MD5 8e44bf156727af67aeeaa8344dc8f278 most-4.9.2.ebuild 935
-MD5 1f3b29668972289ae7d1434746126f96 most-4.9.4.ebuild 936
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3e74aa2449c0ed32ba8d53f04c3fa831 most-4.9.5.ebuild 1527
-MD5 878a8c0268703936011ec711b6f8df28 most-4.10.2.ebuild 1395
+MD5 8e44bf156727af67aeeaa8344dc8f278 most-4.9.2.ebuild 935
+MD5 ae8125909ecf4c64320044ee4c64ab3c most-4.10.2-r1.ebuild 1509
+MD5 3bcf8ba382f0b728c3ebc28d906060b7 ChangeLog 3256
+MD5 e2d614fd87eac1a4402def83a459af86 metadata.xml 164
+MD5 1f3b29668972289ae7d1434746126f96 most-4.9.4.ebuild 936
 MD5 a23dcc37cb7e0fb3d5fde35a36d9f270 files/digest-most-4.9.2 61
 MD5 fca955f15889eb7ffb4639dd1484ccfa files/digest-most-4.9.4 62
 MD5 f50722839e33523b309eda86c46e465d files/digest-most-4.9.5 62
-MD5 92687eb187b1e9a13f22c1d593123f14 files/digest-most-4.10.2 63
+MD5 472794b01f4d3b05bb43788c16776853 files/most-4.10.2-fix-goto-line.diff 529
+MD5 92687eb187b1e9a13f22c1d593123f14 files/digest-most-4.10.2-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/ypPEZCkKN40op4RArCIAJwIQNflLvE7Ynpek7oDi/lwpLFC7wCfda+T
+Q/I0FMhKVZI6d+/BwUEziss=
+=m6x9
+-----END PGP SIGNATURE-----

@@ -1,13 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2.ebuild,v 1.4 2005/08/13 03:38:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2-r1.ebuild,v 1.1 2005/08/14 11:25:03 ka0ttic Exp $
 
+inherit eutils
 
 DESCRIPTION="An extremely excellent text file reader"
 HOMEPAGE="http://freshmeat.net/projects/most/"
-SLOT="0"
-LICENSE="GPL-2"
 SRC_URI="ftp://space.mit.edu/pub/davis/${PN}/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
 IUSE=""
 
 # Note to arch maintainers: you'll need to add to src_install() for your
@@ -18,9 +20,10 @@ KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc-macos ~sparc ~x86"
 DEPEND=">=sys-libs/slang-1.4.2
 	>=sys-libs/ncurses-5.2-r2"
 
-src_compile() {
-	econf || die "econf failed!"
-	emake SYS_INITFILE="/etc/most.conf" || die "emake failed!"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-fix-goto-line.diff
 }
 
 src_install() {
@@ -54,5 +57,12 @@ src_install() {
 
 	dodoc COPYING COPYRIGHT README changes.txt
 	docinto txt
-	dodoc default.rc lesskeys.rc most-fun.txt
+	dodoc most.rc lesskeys.rc most-fun.txt
+}
+
+pkg_postinst() {
+	echo
+	einfo "See /usr/share/doc/${PF}/txt/most.rc.gz"
+	einfo "for an example /etc/most.conf."
+	echo
 }
