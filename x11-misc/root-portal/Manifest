@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c2f65df3224966f092b78c7c5ea66d1 ChangeLog 2337
+MD5 2fa1be3c74a927347c57a41117f73c4e root-portal-0.5.2.ebuild 836
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 5ce8627ad1d92f868e2d96fb6a50a1a9 root-portal-0.5.0.ebuild 780
-MD5 6ee2f7941d3c702858a8134f0f0c0d08 root-portal-0.5.2.ebuild 837
-MD5 8a6d14539df2b912f17d1f78a54a1e4b files/0.4.11-gcc3.patch 2455
-MD5 f9d2acb2ede1a736f915ef1ed10020e2 files/digest-root-portal-0.5.0 69
+MD5 de117b3c5237b07a739de3bf3564a7af ChangeLog 2437
 MD5 f5cee693cdd1bc354e2acaa5d3434a79 files/digest-root-portal-0.5.2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtgMHl5AvwDPiUowRAnRtAJ9ds3ZfL0KrGkn4bNYqxJJM8tMogwCfSv57
-BmsKcyR8YQexjaKKKe/gPbY=
-=ckPF
------END PGP SIGNATURE-----
+MD5 f9d2acb2ede1a736f915ef1ed10020e2 files/digest-root-portal-0.5.0 69
+MD5 8a6d14539df2b912f17d1f78a54a1e4b files/0.4.11-gcc3.patch 2455

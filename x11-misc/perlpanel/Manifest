@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 340ac2e898824b93708f3c4a13403961 perlpanel-0.4.2.ebuild 933
 MD5 2442e8b41641339276c24e6f739de79e perlpanel-0.6.0.ebuild 965
-MD5 893682683784da816f616ba1d8156940 perlpanel-0.7.0.ebuild 1034
-MD5 b8c1a9b6f40c1e261fbacffbc88e46a7 perlpanel-0.9.0.ebuild 1085
 MD5 2bc4dc73ea507662378ccdb76ccf99b1 perlpanel-0.9.1.ebuild 1146
-MD5 32686df89f13c9d7b295bb6b3d0510ea ChangeLog 1671
-MD5 7e521c0a8b36e52832b9287be6b84e58 files/digest-perlpanel-0.4.2 67
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 c8d45e5cdf43e134fd778b3a69693491 perlpanel-0.9.0.ebuild 1081
+MD5 26c4b82635e997a8c8703703ba7c420d ChangeLog 1766
+MD5 893682683784da816f616ba1d8156940 perlpanel-0.7.0.ebuild 1034
+MD5 340ac2e898824b93708f3c4a13403961 perlpanel-0.4.2.ebuild 933
 MD5 970e12664d9587c95b42ff5016fc4e75 files/digest-perlpanel-0.6.0 67
 MD5 ff6ad744e27adfe217e69872a4ed713d files/digest-perlpanel-0.7.0 67
 MD5 f73bebcc7a13536a079367bbafa63dbc files/digest-perlpanel-0.9.0 67
+MD5 7e521c0a8b36e52832b9287be6b84e58 files/digest-perlpanel-0.4.2 67
 MD5 e220e2393cd6cc972a874131cf4676a1 files/digest-perlpanel-0.9.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvofXtG5z4I8BtQoRAn6VAJ932ju9ym76ernB/PCkrmopSm5GUgCeIXMQ
-nwBZ9Td8U6+w4upW0eImL/M=
-=ANey
------END PGP SIGNATURE-----

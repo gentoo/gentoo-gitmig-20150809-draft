@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 ab90da018664d7257397aefdb500c911 fbpanel-4.3.ebuild 730
 MD5 3061965e9cdac2ce09457a36c15f3fb0 fbpanel-3.16.ebuild 732
-MD5 471fd1cac29734c015762decd5939420 fbpanel-4.1.ebuild 730
-MD5 fc5a6ec8684400a227e7e1a541e4a39f ChangeLog 3071
 MD5 ac2bb493f03fce89ad86d22e7d749631 metadata.xml 349
-MD5 44e99041150771f8b7bc085c9e7f49e4 fbpanel-4.3.ebuild 732
-MD5 b2c98a3d8865f13dee3d5375e695d596 files/digest-fbpanel-4.1 59
+MD5 ccb61c8c6e64af2300475638b3a518f4 ChangeLog 3162
+MD5 471fd1cac29734c015762decd5939420 fbpanel-4.1.ebuild 730
 MD5 525e9f0e79b64c43d1fa28ca372e092d files/digest-fbpanel-4.3 59
+MD5 b2c98a3d8865f13dee3d5375e695d596 files/digest-fbpanel-4.1 59
 MD5 e5637a25270c6dc7b42fedf55adb37cb files/digest-fbpanel-3.16 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCy6PwEZCkKN40op4RAmOFAKCawkHR/t9FfmuI+Q+JnlD+czFjFgCghMuF
-ZMr7SHliRjc2HDzIxoJB75k=
-=djln
------END PGP SIGNATURE-----
