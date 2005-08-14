@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 443df9f35f85c5707555f7b34820786c ChangeLog 5586
+MD5 1417ae8a60629256875199edc3d75bd5 ChangeLog 5728
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 ae0e9d609b2eb36d3aa72cdcd85911e6 HTML-Mason-1.20.ebuild 1748
 MD5 5b6e32080ab622b665b04c814491c0e5 HTML-Mason-1.22.ebuild 1749
 MD5 7dc238ab55536fc6f5f6d3d3108749d0 HTML-Mason-1.25.ebuild 1749
 MD5 b54ff85c24be1f71a8faa3c5b408d6a3 HTML-Mason-1.26.ebuild 1749
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 69c8b8d622913bcf7de8134b229f68bb HTML-Mason-1.28.ebuild 2015
 MD5 8b47887d1fe1374e18ea9bb06e791fa3 HTML-Mason-1.29_beta02.ebuild 3028
+MD5 ca773a87fe36a31039ea018b04e1b919 HTML-Mason-1.30.ebuild 1689
+MD5 50c30218ef7dfc3dfc6749a4315ad53d files/digest-HTML-Mason-1.30 67
 MD5 ab2c0618efa7e72fc2bf1f5c32002058 files/digest-HTML-Mason-1.20 67
 MD5 1fc7a530b801966564b7dc476e5146da files/digest-HTML-Mason-1.22 67
 MD5 07de1ec3aa725a31db3b84f7a98cabda files/digest-HTML-Mason-1.25 67
@@ -16,9 +18,9 @@ MD5 3ab48da347fd0409815b3952c646baa6 files/digest-HTML-Mason-1.26 67
 MD5 3666de3807611da57648d2ee49ddeca2 files/digest-HTML-Mason-1.28 67
 MD5 a2bb428fba57ac3e4e9c8789b7fc58ac files/digest-HTML-Mason-1.29_beta02 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC9y9etG5z4I8BtQoRAt28AJ9zULdKFOTXaOnG1qwEx3ZFSx7xwQCcDlV1
-p4r9xKLm5AJFjynx8Iu4090=
-=JlNl
+iD8DBQFC/2N9tG5z4I8BtQoRAplPAJ41btbsYod577QSQ68zaHo9UntHpwCeIzKH
+3lIP0rCHQir8AY/rImc4deI=
+=749e
 -----END PGP SIGNATURE-----
