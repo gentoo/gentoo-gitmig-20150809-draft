@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-sensors
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.4 2005/08/14 20:27:41 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.5 2005/08/14 22:41:13 bcowan Exp $
+
+*xfce4-sensors-0.6.1 (14 Aug 2005)
+
+  14 Aug 2005; Brad Cowan <bcowan@gentoo.org> +xfce4-sensors-0.6.1.ebuild:
+  Updating to latest version.
 
 *xfce4-sensors-0.5.1 (14 Aug 2005)
 
