@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/xf86dgaproto-2.0.ebuild,v 1.2 2005/08/08 18:00:03 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/xf86dgaproto-2.0.ebuild,v 1.3 2005/08/14 03:47:05 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -12,7 +12,7 @@ DESCRIPTION="X.Org XF86DGA protocol headers"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""
 #SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~s390 ~sparc ~x86"
 #IUSE="X gnome"
 #DEPEND=""
 #RDEPEND=""
