@@ -1,6 +1,15 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.5 2005/08/06 11:53:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.6 2005/08/14 00:18:39 ribosome Exp $
+
+*boinc-4.72.20050813 (14 Aug 2005)
+*boinc-4.72.20050725 (14 Aug 2005)
+
+  14 Aug 2005; Olivier Fisette <ribosome@gentoo.org> files/boinc.init,
+  +boinc-4.72.20050725.ebuild, +boinc-4.72.20050813.ebuild:
+  Fixed bug #98342: Boinc is now started using setsid. Fulfilled request in 
+  bug #93744: Boinc ebuilds are now up-to-date. Fixed bug #91930: Boinc now
+  compiles fine with Unicode-enabled wxGTK.
 
   06 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> boinc-4.32.ebuild:
   Added to ~sparc.

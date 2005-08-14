@@ -37,7 +37,7 @@ start() {
 		ARGS="${ARGS} -allow_remote_gui_rpc"
 	fi
 
-	start-stop-daemon --quiet --start --exec ${BOINCBIN} \
+	setsid start-stop-daemon --quiet --start --exec ${BOINCBIN} \
 		--chuid ${USER}:${GROUP} --nicelevel ${NICELEVEL} -- ${ARGS} > ${LOGFILE} 2>&1 &
 
 	eend $?
