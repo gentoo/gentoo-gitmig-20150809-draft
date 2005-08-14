@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.27.ebuild,v 1.3 2005/08/13 12:08:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.27.ebuild,v 1.4 2005/08/14 16:35:49 zzam Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ SRC_URI="ftp://ftp.cadsoft.de/vdr/Developer/${P}.tar.bz2
 	bigpatch? ( http://bigpatch.vdr-developer.org/1.3.27/BETA/${FNAME_BIGPATCH}.bz2 )
 	jumpplay? ( http://www.toms-cafe.de/vdr/download/${FNAME_JUMPPLAY} )"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
