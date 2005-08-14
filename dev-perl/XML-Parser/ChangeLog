@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Parser
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.24 2005/05/24 21:36:26 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.25 2005/08/14 21:05:31 kito Exp $
+
+  14 Aug 2005; Kito <kito@gentoo.org> XML-Parser-2.34.ebuild:
+  ~ppc-macos keyword.
 
   24 May 2005; Herbie Hopkins <herbs@gentoo.org> XML-Parser-2.34.ebuild:
   Multilib fix.
