@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ecdbb0a307a5d7ca1026bf21d7bde076 ChangeLog 41791
+MD5 63a8984537a73a6a987ecebfec7a1ed3 ChangeLog 41904
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 c6957defd2c2523df46f5c9c386de0ed perl-5.8.7.ebuild 19076
+MD5 22aededcaa8a00d4eca042ae00d11eaf perl-5.8.7.ebuild 19076
 MD5 026ffd8b4022d4c2a42f24d5ecc9c5b4 perl-5.8.6-r5.ebuild 17591
 MD5 2bd41aec5e22962224dc9376e27bdde3 files/CAN-2005-0448-rmtree.patch 7629
 MD5 bd75f0242e3b7791803d089c38a3f920 files/CAN-2005-0156-suid.patch 703
@@ -29,7 +29,7 @@ MD5 ec653227d62631d790aed48ee7ccf3dd files/perl-5.8.7-regexp-nossp.patch 458
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC/yLrtG5z4I8BtQoRAu31AJ9OMmOTLICLuIUlzsctqefw5DpSZACdHn6+
-xLqFbmItq9tRJXySJTwVNm8=
-=UIV2
+iD8DBQFC/2dHtG5z4I8BtQoRAoynAJ9kgpnexvLdKpaJfWG94PMDquoUiwCffN7y
+fWggkNH3h++OBCnPQPjfMp0=
+=lzwe
 -----END PGP SIGNATURE-----

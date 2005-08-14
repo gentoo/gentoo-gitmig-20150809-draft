@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.147 2005/08/14 10:54:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.148 2005/08/14 15:45:53 mcummings Exp $
+
+  14 Aug 2005; Michael Cummings <mcummings@gentoo.org> perl-5.8.7.ebuild:
+  The rest of the patch for bug 58931
 
   14 Aug 2005; Michael Cummings <mcummings@gentoo.org> perl-5.8.6-r5.ebuild,
   perl-5.8.7.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.8 2005/08/14 10:54:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.9 2005/08/14 15:45:53 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -266,7 +266,7 @@ src_install() {
 	local coredir="/usr/lib/perl5/${PV}/${myarch}${mythreading}/CORE"
 	dodir ${coredir}
 	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/${LIBPERL}
-	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname).${PERLSLOT}
+	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname ${PERLSLOT})
 	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname)
 
 	# Fix for "stupid" modules and programs
@@ -577,11 +577,11 @@ pkg_postinst() {
 	then
 		# Delete stale symlinks
 		rm -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname)
-		rm -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname).${PERLSLOT}
+		rm -f ${ROOT}usr/$(get_libdir)/libperl$(get_libname ${PERLSLOT})
 		# Regenerate libperl.so.${PERLSLOT}
 		ln -snf ${LIBPERL} ${ROOT}usr/$(get_libdir)/libperl$(get_libname).${PERLSLOT}
 		# Create libperl.so (we use the *soname* versioned lib here ..)
-		ln -snf libperl$(get_libname).${PERLSLOT} ${ROOT}usr/$(get_libdir)/libperl$(get_libname)
+		ln -snf libperl$(get_libname ${PERLSLOT}) ${ROOT}usr/$(get_libdir)/libperl$(get_libname)
 	fi
 
 	INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${PV}'|etc|local|perl$/; print "$line\n" }')
