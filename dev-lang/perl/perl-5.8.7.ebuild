@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.7 2005/08/12 13:53:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.8 2005/08/14 10:54:16 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -40,18 +40,20 @@ pkg_setup() {
 	# in USE if it could break things ...
 	if use ithreads
 	then
-		ewarn "PLEASE NOTE: You are compiling perl-5.8 with"
+		ewarn "PLEASE NOTE: You are compiling ${MY_P} with"
 		ewarn "interpreter-level threading enabled."
 		ewarn "Threading is not supported by all applications "
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
-		epause 10
-	else
-		einfo "PLEASE NOTE: If you want to compile perl-5.8 with"
-		einfo "interpreter-level threading enabled , you must "
-		einfo "restart this emerge with USE=ithreads"
-		einfo "Interpreter-level threading is not supported by "
-		einfo "all applications that compile against perl."
+		epause 5
+	fi
+
+	if use minimal
+	then
+		ewarn "You have the minimal USE flag set. The resulting"
+		ewarn "perl is stripped of most of its module functionality"
+		ewarn "and is intended for minmal use case where you need"
+		ewarn "just the perl interpreter, no extras."
 	fi
 
 	if [ ! -f "${ROOT}/usr/$(get_libdir)/${LIBPERL}" ]
