@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.5-r1.ebuild,v 1.1 2005/07/23 21:18:48 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.5-r1.ebuild,v 1.2 2005/08/14 21:13:19 compnerd Exp $
 
-inherit java-pkg eutils
+inherit java-pkg eutils toolchain-funcs
 
 MY_PN=${PN/-core}
 
@@ -18,11 +18,11 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ppc64"
 IUSE="doc source"
 
 DEPEND="virtual/libc
-	!<dev-java/ant-tasks-${PV}
-	source? ( app-arch/zip )
-	>=virtual/jdk-1.4"
+		>=virtual/jdk-1.4
+		!<dev-java/ant-tasks-${PV}
+		source? ( app-arch/zip )"
 RDEPEND=">=virtual/jdk-1.4
-	>=dev-java/java-config-1.2"
+		 >=dev-java/java-config-1.2"
 
 S="${WORKDIR}/apache-ant-${MY_PV}"
 
@@ -37,7 +37,7 @@ src_unpack() {
 
 src_compile() {
 	addwrite "/proc/self/maps"
-	if [ `arch` == "ppc" ] ; then
+	if [[ $(tc-arch) == "ppc" ]] ; then
 		# We're compiling _ON_ PPC
 		export THREADS_FLAG="green"
 	fi
