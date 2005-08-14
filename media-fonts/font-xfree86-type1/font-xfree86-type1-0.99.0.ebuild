@@ -1,14 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-xfree86-type1/font-xfree86-type1-0.99.0.ebuild,v 1.3 2005/08/11 06:46:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-xfree86-type1/font-xfree86-type1-0.99.0.ebuild,v 1.4 2005/08/14 23:55:21 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
 
 inherit x-modular
 
-FONT="yes"
-FONT_DIRS="Type1"
 
 DESCRIPTION="BigReqs prototype headers"
 KEYWORDS="~sparc ~x86"

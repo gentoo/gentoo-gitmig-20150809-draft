@@ -1,14 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-winitzki-cyrillic/font-winitzki-cyrillic-0.99.0.ebuild,v 1.3 2005/08/11 07:02:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-winitzki-cyrillic/font-winitzki-cyrillic-0.99.0.ebuild,v 1.4 2005/08/14 23:55:10 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
 
 inherit x-modular
 
-FONT="yes"
-FONT_DIRS="cyrillic"
 
 DESCRIPTION="BigReqs prototype headers"
 KEYWORDS="~sparc ~x86"

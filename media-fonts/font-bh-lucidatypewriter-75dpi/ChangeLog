@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bh-lucidatypewriter-75dpi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-lucidatypewriter-75dpi/ChangeLog,v 1.3 2005/08/11 06:53:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-lucidatypewriter-75dpi/ChangeLog,v 1.4 2005/08/14 23:51:17 spyderous Exp $
+
+  14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  font-bh-lucidatypewriter-75dpi-0.99.0.ebuild:
+  Autodiscover fonts instead of specifying them.
 
   11 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   font-bh-lucidatypewriter-75dpi-0.99.0.ebuild:
