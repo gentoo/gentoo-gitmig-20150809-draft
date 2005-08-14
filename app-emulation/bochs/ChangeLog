@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.42 2005/07/10 03:21:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.43 2005/08/14 20:31:28 lu_zero Exp $
+
+  14 Aug 2005; Luca Barbato <lu_zero@gentoo.org> bochs-2.2.1.ebuild:
+  Make it support 2.6 wx
 
 *bochs-2.2.1 (10 Jul 2005)
 

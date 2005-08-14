@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.1.ebuild,v 1.1 2005/07/10 03:21:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.1.ebuild,v 1.2 2005/08/14 20:31:28 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -17,7 +17,7 @@ IUSE="debugger gtk2 readline sdl wxwindows"
 RDEPEND="virtual/libc
 	virtual/x11
 	sdl? ( media-libs/libsdl )
-	wxwindows? ( =x11-libs/wxGTK-2.4* )
+	wxwindows? ( >=x11-libs/wxGTK-2.4 )
 	readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
@@ -33,6 +33,9 @@ src_unpack() {
 		-e 's:BOCHSDIR=:BOCHSDIR=/usr/lib/bochs#:' \
 		-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in || \
 			die "sed Makefile.in failed"
+
+# Make it use the correct path to gtk-2
+	sed -i -e "s/opt/gnome:/usr:" configure
 }
 
 src_compile() {
