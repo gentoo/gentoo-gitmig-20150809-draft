@@ -1,5 +1,15 @@
-MD5 51bb4c415a59163811f4d8294a9d3787 ChangeLog 1291
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ad606e4b3573826bd0ba4359e6e489f7 sux-1.0-r2.ebuild 676
+MD5 cb545051a6bbcabc9e15a9d09b9e280d ChangeLog 1396
 MD5 73306e20ac1b1ef3b82127d6585e9431 metadata.xml 229
-MD5 bc863c5302a6185dd4968b0b3a1efef0 sux-1.0-r2.ebuild 667
-MD5 0f1c62f11288b0303d9c1a9179ec9029 files/digest-sux-1.0-r2 46
 MD5 647cd948286e00f7e1c74e3643471e41 files/sux-1.0-r1.patch 1779
+MD5 0f1c62f11288b0303d9c1a9179ec9029 files/digest-sux-1.0-r2 46
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC/86C3og80iZgVQgRAoqgAJ4+wuhwWa1Gvdz/3QvO1mHrROCxeQCeJXsh
+tCak/kKKTUwe8wsFSTqt03w=
+=qe6D
+-----END PGP SIGNATURE-----
