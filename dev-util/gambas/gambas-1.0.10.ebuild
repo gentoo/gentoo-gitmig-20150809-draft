@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.5.ebuild,v 1.4 2005/07/25 15:42:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.10.ebuild,v 1.1 2005/08/14 20:54:40 genone Exp $
 
 inherit eutils qt3
 
 DESCRIPTION="a RAD tool for BASIC"
 HOMEPAGE="http://gambas.sourceforge.net/"
-SRC_URI="http://gambas.sourceforge.net/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/gambas/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 ~x86"
-IUSE="postgres mysql sdl doc curl debug sqlite xml xsl zlib kde bzip2"
+KEYWORDS="~x86 -amd64"
+IUSE="postgres mysql sdl doc curl sqlite xml xsl zlib kde bzip2"
 
 RDEPEND="$(qt_min_version 3.2)
 	kde? ( >=kde-base/kdelibs-3.2 )
@@ -25,18 +25,20 @@ RDEPEND="$(qt_min_version 3.2)
 	zlib? ( sys-libs/zlib )
 	bzip2? ( app-arch/bzip2 )"
 DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.59
 	>=sys-devel/automake-1.7.5"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i 's:-Os::' configure
+	epatch "${FILESDIR}"/${PN}-1.0.6-configure-CFLAGS.patch
+
 	# replace braindead Makefile (it's getting better, but 
 	# still has the stupid symlink stuff)
 	rm Makefile*
 	cp "${FILESDIR}/Makefile.am-1.0_rc2" ./Makefile.am
 
-	automake
+	aclocal && autoconf && automake || die "autotools failed"
 }
 
 src_compile() {
@@ -54,9 +56,9 @@ src_compile() {
 		$(use_enable xsl xslt) \
 		$(use_enable bzip2 bzlib2) \
 		$(use_enable kde) \
-		$(use_enable !debug optimization) \
-		$(use_enable debug) \
-		$(use_enable debug profiling) \
+		--disable-optimization \
+		--disable-debug \
+		--disable-profiling \
 		|| die
 
 	emake || die
