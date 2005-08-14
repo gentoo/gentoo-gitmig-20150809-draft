@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dcd8d9b5df65a377d0f42f5cd6228010 ChangeLog 905
+MD5 95d92d430b52ad7f64c3870127c330c2 ChangeLog 1006
+MD5 53f23cf44451a9d142efa2d555350677 amsn-skins-20040223.ebuild 744
 MD5 777dd6192cc0e6ca0bc051ab9f92a54a metadata.xml 221
-MD5 18b449ac443b4a54ccb1fbfd7f03f4c1 amsn-skins-20040223.ebuild 744
 MD5 0465bedc73478b5c8ecb92fc24f9540a files/digest-amsn-skins-20040223 322
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBh7cDI7fK2cqeyXkRApSCAKC5r3YL3QoDqvU8nGyYWXtLpdP7kwCfbyf1
-fKZd8MBhsRAtwQmQGD0Cddc=
-=Eyha
------END PGP SIGNATURE-----

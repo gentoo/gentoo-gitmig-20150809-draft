@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/amsn-skins
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.7 2004/11/02 16:34:05 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.8 2005/08/14 18:53:00 metalgod Exp $
+
+  14 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  amsn-skins-20040223.ebuild:
+  Stable on AMD64.
 
   02 Nov 2004; <pyrania@gentoo.org> amsn-skins-20040223.ebuild:
   Added unzip dependency.
