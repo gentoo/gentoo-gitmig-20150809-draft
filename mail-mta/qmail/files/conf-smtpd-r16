@@ -1,5 +1,5 @@
 # Configuration file for qmail-smtpd
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/conf-smtpd-r16,v 1.1 2005/06/19 06:52:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/conf-smtpd-r16,v 1.2 2005/08/14 11:01:44 hansmi Exp $
 
 # Stuff to run before tcpserver
 #QMAIL_TCPSERVER_PRE=""
@@ -33,6 +33,9 @@ TCPSERVER_OPTS="${TCPSERVER_OPTS} -R"
 #PRERUN="${PRERUN} envdir /etc/relay-ctrl relay-ctrl-chdir"
 
 # This next block is for SMTP-AUTH 
+
+# WARNING: If you've installed qmail with USE=noauthcram, and you want to use
+# the following programs, you proably need to install them.
 
 # Example using cmd5checkpw
 # See the manpage for cmd5checkpw for details on the passwords

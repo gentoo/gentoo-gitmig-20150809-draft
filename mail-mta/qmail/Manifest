@@ -1,6 +1,6 @@
 MD5 e60e7e9ed6a2c7d3a2ebcee6a6af429e metadata.xml 277
-MD5 560a7b0266aa8051a626054259c18310 ChangeLog 31610
-MD5 16dfdae5cae93a2fcd988b3205bc2496 qmail-1.03-r16.ebuild 21423
+MD5 c4a45ded213c13f7bca0c31f85f1c11b ChangeLog 31768
+MD5 1bb1c2c7ab27c173654462e2eb461fbf qmail-1.03-r16.ebuild 21485
 MD5 8eb5e85638263cb9b63ea67369b8a886 qmail-1.03-r15.ebuild 18864
 MD5 7db09ceb9337348431fb9f8418e5892e files/dot_qmail-log 276
 MD5 180a513f34e3f00abc609672a190072c files/99qmail 137
@@ -15,7 +15,7 @@ MD5 52892cdf994815c6767ffbafc49df454 files/conf-qmqpd 465
 MD5 4ee8193d6da00d6930ecadb1e91fd964 files/run-qmailqmqpdlog 321
 MD5 05c7891e3fde628aa9aada21a4d6eebe files/run-qmailqmtpd 839
 MD5 9e5d2ac8b47e094d63eb620f5067446f files/conf-qmtpd 557
-MD5 37c08c1ad7423b6625a4dca603fe1df0 files/conf-smtpd-r16 1931
+MD5 5f99cabfe0275b576d8d33c538b676ea files/conf-smtpd-r16 2070
 MD5 9cc72fa27c9643d8b7d8388d6e045d6f files/config-sanity-check 1296
 MD5 ed8621dc81c25323e10609fc05d861df files/rc 284
 MD5 6e7b856c1034c00ee4ff63209c354c25 files/run-qmailsmtpd 839
