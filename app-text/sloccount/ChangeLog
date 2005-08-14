@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sloccount
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.13 2005/08/13 23:15:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.14 2005/08/14 18:05:11 metalgod Exp $
+
+  14 Aug 2005; Luis Medinas <metalgod@gentoo.org> sloccount-2.26-r1.ebuild:
+  Stable on AMD64.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   sloccount-2.26-r1.ebuild:
