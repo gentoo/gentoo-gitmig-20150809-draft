@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Log-Agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.4 2005/04/28 16:50:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.5 2005/08/14 18:09:45 metalgod Exp $
+
+  14 Aug 2005; Luis Medinas <metalgod@gentoo.org> Log-Agent-0.306.ebuild:
+  Added ~amd64 keywords. Closes Bug #97498.
+
+  14 Aug 2005; Luis Medinas <metalgod@gentoo.org> Log-Agent-0.306.ebuild:
+  Added ~amd64 keywords.
 
   28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   Log-Agent-0.306.ebuild:

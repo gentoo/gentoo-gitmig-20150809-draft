@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/Log-Agent-0.306.ebuild,v 1.6 2005/04/28 16:50:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/Log-Agent-0.306.ebuild,v 1.7 2005/08/14 18:09:45 metalgod Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/M/MR/MROGASKI/${P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 ppc"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
