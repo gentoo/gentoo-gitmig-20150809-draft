@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.24 2005/08/12 22:13:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.25 2005/08/14 18:23:18 spyderous Exp $
+
+*mesa-6.3.1.1-r2 (14 Aug 2005)
+
+  14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/change-default-dri-driver-dir.patch,
+  +files/dont-install-gles-headers.patch, +mesa-6.3.1.1-r2.ebuild:
+  Stop building EGL things, because they aren't ready upstream. Also the EGL
+  demos rely on glut, which creates a circular dependency. Change the default
+  DRI driver directory to the one we actually use. This should be enough to
+  get direct rendering working.
 
 *mesa-6.3.1.1-r1 (12 Aug 2005)
 

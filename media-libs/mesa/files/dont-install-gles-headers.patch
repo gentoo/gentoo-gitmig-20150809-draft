@@ -1,0 +1,14 @@
+diff -urN Mesa-6.3.1.1.orig/bin/installmesa Mesa-6.3.1.1/bin/installmesa
+--- Mesa-6.3.1.1.orig/bin/installmesa	2005-06-04 19:10:58.000000000 -0700
++++ Mesa-6.3.1.1/bin/installmesa	2005-08-14 11:01:11.000000000 -0700
+@@ -53,10 +53,8 @@
+ 
+ mkdir ${INCLUDE_DIR}
+ mkdir ${INCLUDE_DIR}/GL
+-mkdir ${INCLUDE_DIR}/GLES
+ mkdir ${LIB_DIR}
+ cp -f ${TOP}/include/GL/*.h ${INCLUDE_DIR}/GL
+-cp -f ${TOP}/include/GLES/*.h ${INCLUDE_DIR}/GLES
+ cp -fd ${TOP}/lib*/lib* ${LIB_DIR}
+ 
+ echo "Done."
