@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.28 2005/08/13 23:29:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.29 2005/08/14 18:02:59 metalgod Exp $
+
+  14 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  gnome-themes-extras-0.8.1.ebuild:
+  Stable on AMD64.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   gnome-themes-extras-0.8.1.ebuild:
