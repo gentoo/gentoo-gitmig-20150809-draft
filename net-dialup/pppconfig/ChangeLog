@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/pppconfig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.13 2005/06/12 12:07:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.14 2005/08/14 18:23:19 metalgod Exp $
+
+  14 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  pppconfig-2.3.11-r1.ebuild:
+  Added ~amd64 keywords. Closes Bug #100042.
 
 *pppconfig-2.3.11-r1 (12 Jun 2005)
 
