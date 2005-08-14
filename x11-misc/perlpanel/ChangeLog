@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/perlpanel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/ChangeLog,v 1.10 2005/06/26 10:50:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/perlpanel/ChangeLog,v 1.11 2005/08/14 10:07:57 hansmi Exp $
+
+  14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  perlpanel-0.9.0.ebuild:
+  Stable on ppc.
 
   26 Jun 2005; Michael Cummings <mcummings@gentoo.org>
   perlpanel-0.9.1.ebuild:

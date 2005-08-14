@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.23 2005/07/06 09:25:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.24 2005/08/14 10:10:34 hansmi Exp $
+
+  14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> fbpanel-4.3.ebuild:
+  Stable on ppc.
 
   06 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> -fbpanel-3.8-r1.ebuild,
   -fbpanel-4.2.ebuild, fbpanel-4.3.ebuild:

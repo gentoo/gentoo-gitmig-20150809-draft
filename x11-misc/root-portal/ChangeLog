@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/root-portal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.19 2005/06/19 23:41:55 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.20 2005/08/14 10:11:43 hansmi Exp $
+
+  14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  root-portal-0.5.2.ebuild:
+  Stable on ppc.
 
   19 Jun 2005; Jonathan Smith <smithj@gentoo.org> root-portal-0.5.2.ebuild:
   stupid sanboxing...
