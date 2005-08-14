@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12-r2.ebuild,v 1.17 2005/03/15 14:22:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12-r2.ebuild,v 1.18 2005/08/14 10:08:32 flameeyes Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ DEPEND=">=dev-lang/perl-5
 	~app-text/docbook-sgml-dtd-4.0
 	~app-text/docbook-sgml-dtd-4.1
 	tetex? ( app-text/jadetex )
-	sys-apps/which
+	userland_GNU? ( sys-apps/which )
 	|| ( www-client/lynx www-client/links virtual/w3m )"
 
 # including both xml-simple-dtd 4.1.2.4 and 1.0, to ease
