@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4272 2005/08/13 11:19:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4273 2005/08/14 16:32:20 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# <genstef@gentoo.org> (14 Aug 2005
+# Does not play nice together with wpa_supplicant
+# http://bugs.gentoo.org/102104
+=net-wireless/madwifi-driver-0.1_pre20050809
 
 # <genone@gentoo.org> (13 Aug 2005)
 # gtk2 versions, going to be unmasked soon
