@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a73be2dea0cb3d974db78418614abd5 ChangeLog 2043
+MD5 10fa197cdedae86a1e3def8891cee845 acidrip-0.14.ebuild 917
+MD5 dafc4f202b45da8b3331ed6bf6469071 ChangeLog 2135
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 470c1487155c2799ab87d148ffb27d3b acidrip-0.14.ebuild 930
 MD5 8975d2ef7a7d50d426d4273702df56ea files/digest-acidrip-0.14 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZMOFKf2g/qXtneoRAiPYAJ9boK5EjVGb413wytDkBJY7ilD2dQCgtnXE
-ss+DhaVSMg0bKUTxpeoMMao=
-=sCph
------END PGP SIGNATURE-----
