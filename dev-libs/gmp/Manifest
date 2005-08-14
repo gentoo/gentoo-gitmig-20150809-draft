@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 bc5274edb31454af0ddfe2f3a0c97ec0 ChangeLog 7153
+MD5 17ab2947eaf54c64165a34f7eaccd15d gmp-4.1.4-r1.ebuild 1931
 MD5 18f4971f6a844a391daab4f169e2c0ae gmp-4.1.4.ebuild 1862
-MD5 a528a68ebfe10d3e928b8601d34674b2 ChangeLog 6956
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 d70b080c2f0efd82a800ba8a1af7b305 files/ppc64-gmp-acinclude.patch 474
-MD5 ee91d8f397ce79dd0ff7e4ae48a47b21 files/gmp-4.1.4-multilib.patch 2864
 MD5 1dbc1772df649dae89ad8e00042c5b46 files/amd64.patch 1166
+MD5 ee91d8f397ce79dd0ff7e4ae48a47b21 files/gmp-4.1.4-multilib.patch 2864
 MD5 8c7f521cf77fb56ab019223cf92a6bca files/digest-gmp-4.1.4 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1tzEBXaUFmZvwyMRAsF4AJ4h66FaFuZ3C9ynm1PZbW/tuzTRcACfQTZ4
-6X18urY+ElvCQa9F1JHzfUg=
-=dliM
------END PGP SIGNATURE-----
+MD5 8c7f521cf77fb56ab019223cf92a6bca files/digest-gmp-4.1.4-r1 62
