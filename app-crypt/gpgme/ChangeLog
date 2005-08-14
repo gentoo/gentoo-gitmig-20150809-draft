@@ -1,6 +1,17 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.77 2005/07/01 23:56:07 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.78 2005/08/14 13:39:31 dragonheart Exp $
+
+*gpgme-1.0.3 (14 Aug 2005)
+
+  14 Aug 2005; Daniel Black <dragonheart@gentoo.org> +gpgme-1.0.3.ebuild:
+  version bump as per bug #97709. thanks to david somers.
+  Make test may fail - http://lists.gnupg.org/pipermail/gnupg-devel/2005-August/022263.html
+
+*gpgme-1.0.2-r1 (16 Jul 2005)
+
+  14 Aug 2005; Daniel Black <dragonheart@gentoo.org>  gpgme-1.0.2-r1.ebuild files/digest-gpgme-1.0.2-r1
+  Changed to mirror://gnupg/
 
   01 Jul 2005; Hardave Riar <hardave@gentoo.org> gpgme-1.0.2.ebuild:
   Stable on mips

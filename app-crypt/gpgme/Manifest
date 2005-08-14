@@ -1,7 +1,19 @@
-MD5 d7167696e913c5fb5bdbddffb62c28de ChangeLog 11855
-MD5 fd80cd1b36d90f6d5efb77c71b6d7b46 gpgme-0.3.14-r1.ebuild 2448
-MD5 50e75c49b86a895b0bcb28e537d20ecb gpgme-1.0.2.ebuild 1874
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 244f7207679d27f07656af10fa206c77 ChangeLog 12277
+MD5 ac726ddaa7e286c884e448e386d9d6f3 gpgme-1.0.2.ebuild 1873
+MD5 4f700f2d91b277e1dc077367561cc1a7 gpgme-1.0.3.ebuild 1778
 MD5 ce0db60fd655ade98789a1643d4fdd9d metadata.xml 314
-MD5 438d865640f00b860f2c3f88b21e621e files/digest-gpgme-0.3.14-r1 64
+MD5 01c6d97b40dda97420a63cb2499101a5 gpgme-0.3.14-r1.ebuild 2436
 MD5 4ca60fb78dc0701418130b3f6f18c18f files/digest-gpgme-1.0.2 63
 MD5 afc6d9e463f4b389eb085af310f8b74f files/gpgme3.m4.patch 482
+MD5 c7fc60919fd40585f41b90da49e9bf3f files/digest-gpgme-1.0.3 63
+MD5 438d865640f00b860f2c3f88b21e621e files/digest-gpgme-0.3.14-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/0mtmdTrptrqvGERAozYAJwNTzfJ68fwupSX6hrlPQIAV8UAiwCgjspe
+M5Ij2CL6/YRYVnts7LM9Z7c=
+=AEy0
+-----END PGP SIGNATURE-----
