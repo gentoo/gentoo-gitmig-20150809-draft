@@ -1,7 +1,17 @@
-MD5 afced6fef75a9c41dcba48120f3892a2 xca-0.5.1.ebuild 1101
-MD5 316c30996fb556ecd1f6486c48f67b4f ChangeLog 807
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6fd77a9b999ec8be46051c045036b5e2 ChangeLog 1107
 MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
-MD5 8bdc8f5dfc26313d6d167f947ce7bd8c files/xca-0.5.1-qt.diff 466
-MD5 824dd090495b970cdbbe37ae02a2aade files/digest-xca-0.5.1 61
-MD5 878557cfb66b6c55e140b22b59a945fe files/configure-db-4.1.patch 485
+MD5 70933334043cd24a67a81e73ba34a48d xca-0.5.1.ebuild 1103
 MD5 a863ab8517d47d6115278df5657a8e6e files/Rules.mak-prefix.patch 317
+MD5 824dd090495b970cdbbe37ae02a2aade files/digest-xca-0.5.1 61
+MD5 8bdc8f5dfc26313d6d167f947ce7bd8c files/xca-0.5.1-qt.diff 466
+MD5 ab7ebbe2a038dc3100f6f4af0923946c files/configure-db.patch 471
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/0KymdTrptrqvGERAlX5AJ4nRHusaYP9hPcQgDqok0rDbe5cyQCeOeSa
+c9/Iwh9NOlv1AmKld+pt1DM=
+=8U2M
+-----END PGP SIGNATURE-----
