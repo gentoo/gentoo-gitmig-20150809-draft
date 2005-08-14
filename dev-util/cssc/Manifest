@@ -1,3 +1,5 @@
+MD5 f27c3abf0a0432c6da1b2b282e29183a ChangeLog 826
 MD5 d4a7a9ec36fa22d780eeceb8bc9209fc cssc-0.15_alpha0.ebuild 685
-MD5 79760fd654a7d567a77b4048c83521c9 ChangeLog 703
+MD5 f7c03b6c7484083d474d9b364f55d920 cssc-1.0.1.ebuild 643
 MD5 8361f81b35233fa20d14209d08b15818 files/digest-cssc-0.15_alpha0 70
+MD5 8d808b6b78bcb3636012ea03b0caf4e0 files/digest-cssc-1.0.1 62
