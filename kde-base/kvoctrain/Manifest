@@ -1,16 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 13b08d00ea3c4f83f8dba7074346116e ChangeLog 2188
 MD5 8284d599d20f0383033231206708527e kvoctrain-3.4.1.ebuild 403
+MD5 a96e66b5dcec36db53b76fc341836f2c kvoctrain-3.4.2-r1.ebuild 455
+MD5 d13fae969ff2bc5e3e1f437dff523378 kvoctrain-3.4.1-r1.ebuild 454
 MD5 ca8c48071edcecf35a1214f245c75ddc kvoctrain-3.4.2.ebuild 416
+MD5 681a6cea771cb98a53005017c607a808 ChangeLog 2432
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kvoctrain-3.4.1 208
 MD5 0a69a5cb72c99f0ecc6f31877d6a228d files/digest-kvoctrain-3.4.2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC99i9Kf2g/qXtneoRAlayAKC3aPXh61ksq7k1j2n5KmDMuNUnmQCgtJLn
-bMYU1FKDvyfUnD9F7U/Lrrg=
-=/ml0
------END PGP SIGNATURE-----
+MD5 0e82c5810df3b04370188ba13cc50203 files/post-3.4.2-kdeedu.diff 1876
+MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kvoctrain-3.4.1-r1 208
+MD5 0a69a5cb72c99f0ecc6f31877d6a228d files/digest-kvoctrain-3.4.2-r1 67
