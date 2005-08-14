@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-acl-compat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/ChangeLog,v 1.20 2005/05/24 18:48:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/ChangeLog,v 1.21 2005/08/14 22:24:57 mkennedy Exp $
+
+*cl-acl-compat-1.2.42.20050805 (14 Aug 2005)
+
+  14 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +cl-acl-compat-1.2.42.20050805.ebuild:
+  New upstream version.
 
   24 May 2005; <mkennedy@gentoo.org> cl-acl-compat-1.2.42.20050220.ebuild:
   Keywording ~sparc

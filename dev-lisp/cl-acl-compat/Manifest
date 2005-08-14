@@ -1,4 +1,6 @@
 MD5 4272a4bd8c422a0124410da90abbc29b ChangeLog 3479
-MD5 cfc7ac03c41e95fe882dcf904e422dd5 cl-acl-compat-1.2.42.20050220.ebuild 1089
 MD5 19a4a5c1772bf21635e0882c459ff60f metadata.xml 398
+MD5 cfc7ac03c41e95fe882dcf904e422dd5 cl-acl-compat-1.2.42.20050220.ebuild 1089
+MD5 be87338205e5492d60f2a496f73da549 cl-acl-compat-1.2.42.20050805.ebuild 1099
+MD5 4647f20ceef5e201f48238231cc3810a files/digest-cl-acl-compat-1.2.42.20050805 97
 MD5 da9c8b6af57dbf3f2e1db4347b533f71 files/digest-cl-acl-compat-1.2.42.20050220 92
