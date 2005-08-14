@@ -21,5 +21,4 @@ sh			default-linux/sh					dev
 sparc		default-linux/sparc/sparc64/2005.0		stable
 x86			default-linux/x86/2005.0			stable
 x86-fbsd	default-bsd/fbsd/x86				dev
-x86-obsd	default-x86-obsd-2004				dev
 x86-od		default-darwin/od/x86				dev
