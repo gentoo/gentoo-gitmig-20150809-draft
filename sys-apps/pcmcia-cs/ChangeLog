@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.99 2005/07/10 18:43:41 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.100 2005/08/14 10:02:07 hansmi Exp $
+
+  14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  pcmcia-cs-3.2.8-r2.ebuild:
+  Stable on ppc.
 
   10 Jul 2005; <brix@gentoo.org> -files/cardinfo-install-3.2.7.patch,
   -pcmcia-cs-3.2.5-r2.ebuild, -pcmcia-cs-3.2.5-r3.ebuild,
