@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.17-r2.ebuild,v 1.5 2005/08/06 18:37:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.17-r2.ebuild,v 1.6 2005/08/14 14:34:38 swegener Exp $
 
 inherit eutils
 
 MY_P="eggdrop${PV}"
-PATCHSET_V="1.2"
+PATCHSET_V="1.3"
 
 DESCRIPTION="An IRC bot extensible with C or Tcl."
 HOMEPAGE="http://www.eggheads.org/"
