@@ -1,6 +1,14 @@
-MD5 b01e690616b5edb2875c399c23999482 ChangeLog 773
-MD5 38e9622890ba833c9589afa340e8a68a hyperspec-6.0.ebuild 1127
-MD5 7b09c7e753ccbe72789a4e8c411c724f hyperspec-7.0.ebuild 1200
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 de2a64aef63f6b2d4501c3a25977b648 ChangeLog 936
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hyperspec-6.0 0
+MD5 6ebff63e7213e109cd69f0497e9cd760 hyperspec-7.0.ebuild 1163
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hyperspec-7.0 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/vp5yiNZaEAZA+ARAv57AJwLJSGkLaxipRzHIgEjZXfbWxSpXQCdF7Py
+lwQggG9CXuAXFkxrPQQc4Uc=
+=+qAH
+-----END PGP SIGNATURE-----
