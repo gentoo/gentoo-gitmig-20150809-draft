@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/checkpassword-pam
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword-pam/ChangeLog,v 1.8 2005/06/17 19:10:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword-pam/ChangeLog,v 1.9 2005/08/14 10:56:04 hansmi Exp $
+
+  14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  checkpassword-pam-0.99.ebuild:
+  Stable on ppc, hppa and x86.
 
 *checkpassword-pam-0.99 (17 Jun 2005)
 
