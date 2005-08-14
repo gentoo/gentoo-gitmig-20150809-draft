@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.138 2005/07/30 14:10:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.139 2005/08/14 23:33:39 carlo Exp $
+
+*kdeedu-3.4.2-r2 (14 Aug 2005)
+*kdeedu-3.4.1-r11 (14 Aug 2005)
+*kdeedu-3.4.1-r1 (14 Aug 2005)
+*kdeedu-3.3.2-r2 (14 Aug 2005)
+
+  14 Aug 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/post-3.4.2-kdeedu.diff, +kdeedu-3.3.2-r2.ebuild,
+  +kdeedu-3.4.1-r1.ebuild, +kdeedu-3.4.1-r11.ebuild,
+  +kdeedu-3.4.2-r2.ebuild:
+  KVoctrain temp file vulnerability, #102151
 
   30 Jul 2005; Dan Armak <danarmak@gentoo.org> kdeedu-3.4.2.ebuild:
   Removed ~mips keyword, because kdelibs-3.4.2 doesn't have it. The mips team
