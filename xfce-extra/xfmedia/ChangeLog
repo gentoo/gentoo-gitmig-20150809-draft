@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfmedia
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.5 2005/03/17 18:26:35 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.6 2005/08/14 19:41:20 bcowan Exp $
+
+*xfmedia-0.8.0 (14 Aug 2005)
+
+  14 Aug 2005; Brad Cowan <bcowan@gentoo.org> +xfmedia-0.8.0.ebuild:
+  Bump version.
 
 *xfmedia-0.7.0 (17 Mar 2005)
 
