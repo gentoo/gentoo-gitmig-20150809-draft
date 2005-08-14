@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-websearch
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-websearch/ChangeLog,v 1.1 2005/08/14 21:55:44 bcowan Exp $
+
+*xfce4-websearch-0.1.0 (14 Aug 2005)
+
+  14 Aug 2005; Brad Cowan <bcowan@gentoo.org> +metadata.xml,
+  +xfce4-websearch-0.1.0.ebuild:
+  Initial import.
+
