@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r3.ebuild,v 1.6 2005/08/14 02:16:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r3.ebuild,v 1.7 2005/08/14 20:51:51 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -16,7 +16,8 @@ MESA_P="${MESA_PN}-${MESA_PV}"
 
 PATCHES="${WORKDIR}/xorg-server-0.99.1-update-to-CVS-HEAD-20050811-1.patch
 	${FILESDIR}/check-for-glproto.patch
-	${FILESDIR}/fix-xf86misc-typo.patch"
+	${FILESDIR}/fix-xf86misc-typo.patch
+	${FILESDIR}/${P}-x86_64-1.patch"
 
 SRC_URI="${SRC_URI}
 	glx? ( http://xorg.freedesktop.org/extras/${MESA_P}.tar.gz )

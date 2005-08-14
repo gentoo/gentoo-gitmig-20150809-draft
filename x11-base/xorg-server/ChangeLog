@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.21 2005/08/14 02:16:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.22 2005/08/14 20:51:51 spyderous Exp $
+
+  14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xorg-server-0.99.1-x86_64-1.patch, xorg-server-0.99.1-r3.ebuild:
+  Add xorg-server-0.99.1-x86_64-1.patch to fix configure.ac on amd64.
 
   14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-0.99.1-r3.ebuild:

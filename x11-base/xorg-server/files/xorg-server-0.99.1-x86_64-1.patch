@@ -1,0 +1,16 @@
+Index: configure.ac
+===================================================================
+RCS file: /cvs/xorg/xserver/xorg/configure.ac,v
+retrieving revision 1.45
+diff -u -r1.45 configure.ac
+--- xorg-server-0.99.1/configure.ac	5 Aug 2005 15:43:31 -0000	1.45
++++ xorg-server-0.99.1/configure.ac	6 Aug 2005 15:57:07 -0000
+@@ -137,7 +137,7 @@
+ 		*bsd*)		xorg_bus_ix86pci="no" ;;
+ 	esac
+         ;;
+-  amd64*)
++  x86_64*)
+ 	xorg_bus_ix86pci="yes"
+ 	;;
+ esac
