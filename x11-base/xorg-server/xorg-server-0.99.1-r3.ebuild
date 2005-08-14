@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r3.ebuild,v 1.5 2005/08/12 23:23:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r3.ebuild,v 1.6 2005/08/14 02:16:17 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -105,8 +105,10 @@ pkg_postinst() {
 
 pkg_postrm() {
 	# Get rid of module dir to ensure opengl-update works properly
-	if [ -e ${ROOT}/usr/$(get_libdir)/xorg/modules ]; then
-		rm -rf ${ROOT}/usr/$(get_libdir)/xorg/modules
+	if ! has_version x11-base/xorg-server; then
+		if [ -e ${ROOT}/usr/$(get_libdir)/xorg/modules ]; then
+			rm -rf ${ROOT}/usr/$(get_libdir)/xorg/modules
+		fi
 	fi
 }
 
