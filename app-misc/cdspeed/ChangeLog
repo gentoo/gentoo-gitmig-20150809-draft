@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdspeed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.14 2005/04/21 19:05:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.15 2005/08/14 13:57:20 pyrania Exp $
+
+  14 Aug 2005; Markus Nigbur <pyrania@gentoo.org> cdspeed-0.4.ebuild:
+  Stable on x86.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> cdspeed-0.3.ebuild:
   stable on amd64

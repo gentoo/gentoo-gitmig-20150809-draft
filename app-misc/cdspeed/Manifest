@@ -1,5 +1,15 @@
-MD5 41581eecaf8187da79a7b7a526610e59 ChangeLog 1451
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 53a3f9c2d937a5c3c23542c6fec4d6b3 ChangeLog 1541
 MD5 a60a9e06d493b8d21a6757dd1071a12d cdspeed-0.3.ebuild 837
-MD5 a6c2da34bdf979d1f80b59c84e1a103e cdspeed-0.4.ebuild 842
+MD5 18d824d1d5040ce251bd48a8cf59cf4b cdspeed-0.4.ebuild 842
 MD5 acc15f5059a345c17e4f3d5a39426826 files/digest-cdspeed-0.3 61
 MD5 08326d5b148c0cae42828eec81c11e2b files/digest-cdspeed-0.4 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFC/03cI7fK2cqeyXkRAkNxAKCUB5ayO9rRU/rZQMkNepkQgwWNGQCg0HJ4
+UDmXEkqFOPdiGwHVQdJLppQ=
+=9Chm
+-----END PGP SIGNATURE-----
