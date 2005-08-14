@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 974bf4938a29fa69478354c8b2a34528 gtk-engines-industrial-0.2.36.ebuild 1230
+MD5 a3c8ac72ffdba58541b1677fb37e5092 ChangeLog 777
+MD5 28d24556c7be64a75b6ec8b7d190ec96 gtk-engines-industrial-0.2.36.ebuild 1237
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 6b425e8be01ce0fd5a7f0257e61c3eb8 ChangeLog 661
-MD5 393af744b755b02a4ef780ec9975b6c1 files/gtk-engines-industrial-0.2.36-gtk1_only.patch 2690
 MD5 58b1ffee4fff97596d2dbe1b91984f1f files/digest-gtk-engines-industrial-0.2.36 82
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC84/NKRy60XGEcJIRAnV1AKCGENydT5fmzUWxq9f1zVyQU+2M+gCgiocf
-a0ufjGpXF6nRQxR6Xy96cNU=
-=h2jI
------END PGP SIGNATURE-----
+MD5 393af744b755b02a4ef780ec9975b6c1 files/gtk-engines-industrial-0.2.36-gtk1_only.patch 2690
